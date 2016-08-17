@@ -1,2 +1,40 @@
-# sp-dev-docs
-[SharePoint Developer Documentation](https://github.com/SharePoint/sp-dev-docs/wiki)
+# Welcome to the SharePoint Framework Developer Preview!
+
+The SharePoint Framework is a Page and Part model that enables client-side development for building SharePoint experiences. It facilitates easy integration with the SharePoint data, and provides support for open source tooling development.
+
+The SharePoint Framework is still in initial Developer Preview, and it's still rough around the edges.  As we work to improve the SharePoint Framework, we'd love your feedback!  If you have feedback, please use [UserVoice](https://sharepoint.uservoice.com/forums/329220-sharepoint-dev-platform).  If you have technical questions about the framework, we’ll be monitoring #spfx, #spfx-webparts, and #spfx-tooling on [SharePoint StackExchange](http://sharepoint.stackexchange.com/).  
+
+## Get Started 
+
+* [Setup your Office 365 Developer Tenant](Setup-SharePoint-Tenant)
+* [Setup your Machine](Setup-your-machine)
+* [Go build Tutorial 1: HelloWorld WebPart](HelloWorld-WebPart)
+* [More Tutorials and Walkthroughs](Tutorials and Walkthroughs)
+
+## Learn More
+
+* [Background and Philosophy](Why-SPFx%3F)
+* [Design Great Web Parts](Design-Great-Webparts)
+
+## Updates & Feedback
+
+To keep track of improvements to the Office 365 Framework, please take a look at:
+* [@OfficeDev](https://twitter.com/officedev) on Twitter
+* [Office Developer Blog](http://dev.office.com/blogs)
+
+Provide Feedback:
+
+* [SharePoint Developer UserVoice](https://sharepoint.uservoice.com/forums/329220-sharepoint-dev-platform)
+* [SharePoint StackExchange](http://sharepoint.stackexchange.com/) (please use #spfx, #spfx-webparts, and #spfx-tooling tags)
+
+## Deployment Status
+
+Note: SharePoint Framework web parts are not supported for production use.
+
+The SharePoint Framework is currently available for use in Classic Pages within Office 365 Developer Tenancies.  We’ll be expanding coverage to more Office 365 Tenancies over the coming months.
+		
+(Of course, you can also get started with our SharePoint Workbench to create and test your web parts locally, on your machine.)
+
+## Have Fun
+
+We look forward to seeing what you build!  Please tweet us at @OfficeDev.
