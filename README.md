@@ -29,7 +29,7 @@ Provide Feedback:
 
 ## Deployment Status
 
-Note: SharePoint Framework web parts are not supported for production use.
+Note: SharePoint Framework web parts during preview are not supported for production use.
 
 The SharePoint Framework is currently available for use in Classic Pages within Office 365 Developer Tenancies.  We’ll be expanding coverage to more Office 365 Tenancies over the coming months.
 		
