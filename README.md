@@ -6,15 +6,15 @@ The SharePoint Framework is still in initial Developer Preview, and it's still r
 
 ## Get Started 
 
-* [Setup your Office 365 Developer Tenant](./wiki/Setup-SharePoint-Tenant)
-* [Setup your Machine](./wiki/Setup-your-machine)
-* [Go build Tutorial 1: HelloWorld WebPart](./wiki/HelloWorld-WebPart)
-* [More Tutorials and Walkthroughs](./wiki/Tutorials and Walkthroughs)
+* [Setup your Office 365 Developer Tenant](../../wiki/Setup-SharePoint-Tenant)
+* [Setup your Machine](../../wiki/Setup-your-machine)
+* [Go build Tutorial 1: HelloWorld WebPart](../../wiki/HelloWorld-WebPart)
+* [More Tutorials and Walkthroughs](../../wiki/Tutorials and Walkthroughs)
 
 ## Learn More
 
-* [Background and Philosophy](Why-SPFx%3F)
-* [Design Great Web Parts](Design-Great-Webparts)
+* [Background and Philosophy](../../wiki/Why-SPFx%3F)
+* [Design Great Web Parts](../../wiki/Design-Great-Webparts)
 
 ## Updates & Feedback
 
