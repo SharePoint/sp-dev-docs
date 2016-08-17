@@ -15,6 +15,7 @@ The SharePoint Framework is still in initial Developer Preview, and it's still r
 
 * [Background and Philosophy](../../wiki/Why-SPFx%3F)
 * [Design Great Web Parts](../../wiki/Design-Great-Webparts)
+* [API Docs](https://sharepoint.github.io/)
 
 ## Updates & Feedback
 
