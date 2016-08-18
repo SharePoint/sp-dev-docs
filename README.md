@@ -2,7 +2,7 @@
 
 The SharePoint Framework is a Page and Part model that enables client-side development for building SharePoint experiences. It facilitates easy integration with the SharePoint data, and provides support for open source tooling development.
 
-The SharePoint Framework is still in initial Developer Preview, and it's still rough around the edges.  As we work to improve the SharePoint Framework, we'd love your feedback!  If you have feedback, please use [UserVoice](https://sharepoint.uservoice.com/forums/329220-sharepoint-dev-platform).  If you have technical questions about the framework, we’ll be monitoring #spfx, #spfx-webparts, and #spfx-tooling on [SharePoint StackExchange](http://sharepoint.stackexchange.com/).  
+The SharePoint Framework is still in initial Developer Preview, and it's still rough around the edges.  As we work to improve the SharePoint Framework, we'd love your feedback!  If you have feedback, please use [UserVoice](https://sharepoint.uservoice.com/forums/329220-sharepoint-dev-platform).  If you have technical questions about the framework, we’ll be monitoring [#spfx](http://sharepoint.stackexchange.com/tags/spfx/), [#spfx-webparts](http://sharepoint.stackexchange.com/tags/spfx-webparts/), and [#spfx-tooling](http://sharepoint.stackexchange.com/tags/spfx-tooling/) on [SharePoint StackExchange](http://sharepoint.stackexchange.com/).  
 
 ## Get Started 
 
@@ -13,7 +13,7 @@ The SharePoint Framework is still in initial Developer Preview, and it's still r
 
 ## Learn More
 
-* [Background and Philosophy](../../wiki/Why-SPFx%3F)
+* [Background and Philosophy](../../wiki/Why-SPFx)
 * [Design Great Web Parts](../../wiki/Design-Great-Webparts)
 * [API Docs](https://sharepoint.github.io/)
 
