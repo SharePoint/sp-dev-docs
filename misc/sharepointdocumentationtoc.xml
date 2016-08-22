@@ -20,4 +20,5 @@
 		<Item text="Use Visual Studio to develop web parts" url="spfx/use-visual-studio" SEODescription="" />
 		<Item text="Add an external library" url="spfx/add-an-external-library" SEODescription="" />
 	</Item>
-</Menu>
+</Item>
+	</Menu>
