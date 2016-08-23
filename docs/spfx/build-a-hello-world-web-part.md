@@ -113,7 +113,7 @@ SharePoint workbench is a developer design surface that enables you to quickly p
 
 One of the new capabilities available to the property pane is to configure its update behavior, which can be set to reactive or non-reactive. By default the update behavior is reactive and enables you to see the changes as you edit the properties. The changes are saved instantly as when the behavior is reactive.  
 
-## Step 5: Web part project structure
+## Web part project structure
 You can use Visual Studio Code to explore the web part project structure. 
 1. In the console, go to the **src\webparts\helloWorld** directory. 
 2. Enter the following command to open the web part project in Visual Studio Code (or use your favorite editor):
@@ -187,7 +187,7 @@ render(): void {
 
 >**Note:** The Yeoman SharePoint generator lets you choose **React** as your framework of choice when adding a new web part to the project. 
 
-#### Web part property pane
+#### Configure the Web part property pane
 The property pane is also defined in the **HelloWorldWebPart** class. The **propertyPaneSettings** property is where you need to define the property pane.
 
 Once the properties are defined, you can access them in your web part using `this.properties.<property-value>`, as shown in the **render** method:
@@ -198,117 +198,115 @@ Once the properties are defined, you can access them in your web part using `thi
 
 Read the [Integrating property pane with a web part](./Integrating-Property-Pane) topic to learn more about how to work with the property pane and property pane field types.
 
-Replace the **propertyPaneSettings** method with the code below which shows how to add property types other than TextField. 
+1. Replace the **propertyPaneSettings** method with the code below which shows how to add property types other than TextField. 
 
-```ts
-protected get propertyPaneSettings(): IPropertyPaneSettings {
-  return {
-    pages: [
-      {
-        header: {
-          description: strings.PropertyPaneDescription
-        },
-        groups: [
-          {
-            groupName: strings.BasicGroupName,
-            groupFields: [
-            PropertyPaneTextField('description', {
-              label: 'Description'
-            }),
-            PropertyPaneTextField('test', {
-              label: 'Multi-line Text Field',
-              multiline: true
-            }),
-            PropertyPaneCheckbox('test1', {
-              text: 'Checkbox'
-            }),
-            PropertyPaneDropdown('test2', {
-              label: 'Dropdown',
-              options: [
-                { key: '1', text: 'One' },
-                { key: '2', text: 'Two' },
-                { key: '3', text: 'Three' },
-                { key: '4', text: 'Four' }
-              ]}),
-            PropertyPaneToggle('test3', {
-              label: 'Toggle',
-              onText: 'On',
-              offText: 'Off'
-            })
-          ]
-          }
-        ]
-      }
-    ]
-  };
-}
-```
+   ```ts
+   protected get propertyPaneSettings(): IPropertyPaneSettings {
+     return {
+       pages: [
+         {
+           header: {
+             description: strings.PropertyPaneDescription
+           },
+           groups: [
+             {
+               groupName: strings.BasicGroupName,
+               groupFields: [
+               PropertyPaneTextField('description', {
+                 label: 'Description'
+               }),
+               PropertyPaneTextField('test', {
+                 label: 'Multi-line Text Field',
+                 multiline: true
+               }),
+               PropertyPaneCheckbox('test1', {
+                 text: 'Checkbox'
+               }),
+               PropertyPaneDropdown('test2', {
+                 label: 'Dropdown',
+                 options: [
+                   { key: '1', text: 'One' },
+                   { key: '2', text: 'Two' },
+                   { key: '3', text: 'Three' },
+                   { key: '4', text: 'Four' }
+                 ]}),
+               PropertyPaneToggle('test3', {
+                 label: 'Toggle',
+                 onText: 'On',
+                 offText: 'Off'
+               })
+             ]
+             }
+           ]
+         }
+       ]
+     };
+   }
+   ```
 
-Since we added new property fields, let's import those from the framework.
+   Since we added new property fields, let's import those from the framework.
 
-Scroll to the top of the file and add the following to the import section from `@microsoft/sp-client-preview`:
+2. Scroll to the top of the file and add the following to the import section from `@microsoft/sp-client-preview`:
 
-```
-PropertyPaneCheckbox,
-PropertyPaneDropdown,
-PropertyPaneToggle
-```
+   ```
+   PropertyPaneCheckbox,
+   PropertyPaneDropdown,
+   PropertyPaneToggle
+   ```
 
-The complete import section will look like the following:
+   The complete import section will look like the following:
 
-```
-import {
-  BaseClientSideWebPart,
-  IPropertyPaneSettings,
-  IWebPartContext,
-  PropertyPaneTextField,
-  PropertyPaneCheckbox,
-  PropertyPaneDropdown,
-  PropertyPaneToggle
-} from '@microsoft/sp-client-preview';
-```
+   ```
+   import {
+     BaseClientSideWebPart,
+     IPropertyPaneSettings,
+     IWebPartContext,
+     PropertyPaneTextField,
+     PropertyPaneCheckbox,
+     PropertyPaneDropdown,
+     PropertyPaneToggle
+   } from '@microsoft/sp-client-preview';
+   ```
 
-Save the file.
+3. Save the file.
 
-Now add these properties to the **IHelloWorldWebPartProps** interface that map to our fields we just added.
+   Now add these properties to the **IHelloWorldWebPartProps** interface that map to our fields we just added.
 
-Open **IHelloWorldWebPartProps.ts** and replace the existing code with the following code:
+4. Open **IHelloWorldWebPartProps.ts** and replace the existing code with the following code:
 
-```ts
-export interface IHelloWorldWebPartProps {
-    description: string;
-    test: string;
-    test1: boolean;
-    test2: string;
-    test3: boolean;
-}
-```
+   ```ts
+   export interface IHelloWorldWebPartProps {
+       description: string;
+       test: string;
+       test1: boolean;
+       test2: string;
+       test3: boolean;
+   }
+   ```
 
-Save the file.
+5. Save the file.
+6. Switch back to the **HelloWorldWebPart.ts** file.
 
-Switch back to the **HelloWorldWebPart.ts** file.
+   Once you added your properties to the web part properties, you can access the property in the same way you accessed the **description** property earlier:
 
-Once you added your properties to the web part properties, you can access the property in the same way you accessed the **description** property earlier:
+   ```ts
+   <p class="ms-font-l ms-fontColor-white">${this.properties.test2}</p>
+   ```
 
-```ts
-<p class="ms-font-l ms-fontColor-white">${this.properties.test2}</p>
-```
+   To set the default value for the property, you will need to update the web part manifest's **properties** property bag:
 
-To set the default value for the property, you will need to update the web part manifest's **properties** property bag:
+7. Open `HelloWorldWebPart.manifest.json`
+8. Modify the `properties` to:
 
-Open `HelloWorldWebPart.manifest.json`
-
-Modify the `properties` to:
-
-```ts
-"properties": {
-  "description": "HelloWorld",
-  "test": "Multi-line text field",
-  "test1": true,
-  "test2": "2",
-  "test3": true
-}
-```
+   ```ts
+   "properties": {
+     "description": "HelloWorld",
+     "test": "Multi-line text field",
+     "test1": true,
+     "test2": "2",
+     "test3": true
+   }
+   ```
 
 ### Web part manifest
 The **HelloWorldWebPart.manifest.json** file defines the web part metadata such as version, id, display name, icon, and description. Every web part should contain this manifest.
@@ -347,29 +345,29 @@ The **HelloWorldWebPart.manifest.json** file defines the web part metadata such 
 ### Preview the web part in SharePoint
 So far, we have previewed the web part in the web part workbench hosted locally in your machine. SharePoint workbench is also hosted in SharePoint to preview and test your local web parts in development. The key advantage is that now you are running in SharePoint context and that you will be able to interact with SharePoint data.
 
-Go to the following URL: 'https://your-sharepoint-site/Shared%20Documents/workbench.aspx'
+1. Go to the following URL: 'https://your-sharepoint-site/Shared%20Documents/workbench.aspx'
 
-By default, your browser is configured not to load scripts from localhost. Workbench will notify you if that is the case.
+   By default, your browser is configured not to load scripts from localhost. Workbench will notify you if that is the case.
 
-![Load unsafe scripts to run scripts from localhost](./images/sp-workbench-o365-unsface-scripts.png) 
+   ![Load unsafe scripts to run scripts from localhost](./images/sp-workbench-o365-unsface-scripts.png) 
 
-In order to execute local scripts, you will need to configure the browser to load scripts from unauthenticated sources. This is due to loading scripts over HTTP while connected to a page via HTTPS. Depending on the browser you use, the options to enable this may vary. For example, in the Chrome browser, you can choose the grey shield in the right side of the address bar to load unsafe scripts. 
+2. In order to execute local scripts, you will need to configure the browser to load scripts from unauthenticated sources. This is due to loading scripts over HTTP while connected to a page via HTTPS. Depending on the browser you use, the options to enable this may vary. For example, in the Chrome browser, you can choose the grey shield in the right side of the address bar to load unsafe scripts. 
 
-![Allow browser to load unsafe scripts to run scripts from localhost](./images/chrome-load-unsafe-scripts.png)
+   ![Allow browser to load unsafe scripts to run scripts from localhost](./images/chrome-load-unsafe-scripts.png)
 
-Once you enable loading scripts, you should see the workbench load. Add the hello world web part to the canvas:
+   Once you enable loading scripts, you should see the workbench load. Add the hello world web part to the canvas:
 
-![SharePoint Workbench running in a SharePoint Online site](./images/sp-workbench-o365.png)
+   ![SharePoint Workbench running in a SharePoint Online site](./images/sp-workbench-o365.png)
 
-Notice that the SharePoint workbench now has the Office 365 Suite navigation bar.
+   Notice that the SharePoint workbench now has the Office 365 Suite navigation bar.
 
-Choose **add icon** in the canvas to reveal the toolbox. The toolbox now shows the web parts available on the site where the SharePoint workbench is hosted along with your **HelloWorldWebPart**.
+3. Choose **add icon** in the canvas to reveal the toolbox. The toolbox now shows the web parts available on the site where the SharePoint workbench is hosted along with your **HelloWorldWebPart**.
 
-![Toolbox in SharePoint Workbench running in SharePoint Online site](./images/sp-workbench-o365-toolbox.png)
+   ![Toolbox in SharePoint Workbench running in SharePoint Online site](./images/sp-workbench-o365-toolbox.png)
 
-Add **HelloWorldWebPart** from the toolbox. Now you are running your web part in a page hosted in SharePoint!
+4. Add **HelloWorldWebPart** from the toolbox. Now you are running your web part in a page hosted in SharePoint!
 
-![HelloWorld web part running in SharePoint Workbench running in a SharePoint Online site](./images/sp-workbench-o365-helloworld-wp.png)
+   ![HelloWorld web part running in SharePoint Workbench running in a SharePoint Online site](./images/sp-workbench-o365-helloworld-wp.png)
 
 Since you are still developing and testing your web part, there is no need to package and deploy your web part to SharePoint. 
 
