@@ -1,4 +1,6 @@
-> This content is Microsoft confidential and should not be shared with anyone outside the organization that has the NDA in place with Microsoft.
+# Client-side web parts in the SharePoint UX Framework
+
+>**Note:** This content is Microsoft confidential and should not be shared with anyone outside the organization that has the NDA in place with Microsoft.
 
 Client-side web parts are client-side components that run inside the context of a SharePoint page. Today, developers can build server-side web parts that are packaged and deployed to SharePoint. However, the server-side web parts are only available to on-premises and cannot be deployed to SharePoint online (Office 365).
 
