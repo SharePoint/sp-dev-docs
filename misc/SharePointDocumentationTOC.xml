@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SupportedProduct="|SharePoint" SupportedVersion="|V1.0|">
   <Item text="SharePoint Framework" url="spfx/sharepoint-framework" SEODescription="The SharePoint Framework provides a modern developer experience for extending SharePoint.">
-    <Item text="SharePoint client-side web parts" url="spfx/sharepoint-client-side-web-parts" SEODescription="Develop SharePoint client-side web parts to provide a better customized experience for SharePoint.">
+    <Item text="SharePoint client-side web parts" url="spfx/client-side-web-parts" SEODescription="Develop SharePoint client-side web parts to provide a better customized experience for SharePoint.">
     </Item>
 	<Item text="Get started" url="spfx/get-started">
 		<Item text="Set up your development environment" url="spfx/set-up-your-development-environment" SEODescription="" />
