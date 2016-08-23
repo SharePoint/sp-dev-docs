@@ -1,24 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SupportedProduct="|SharePoint" SupportedVersion="|V1.0|">
-  <Item text="SharePoint Framework" url="spfx/sharepoint-framework" SEODescription="The SharePoint Framework provides a modern developer experience for extending SharePoint.">
-    <Item text="SharePoint client-side web parts" url="spfx/client-side-web-parts" SEODescription="Develop SharePoint client-side web parts to provide a better customized experience for SharePoint.">
-    </Item>
-	<Item text="Get started" url="spfx/get-started">
-		<Item text="Set up your development environment" url="spfx/set-up-your-development-environment" SEODescription="" />
-		<Item text="Set up your developer tenant" url="spfx/set-up-your-developer-tenant" SEODescription="" />
-		<Item text="Build a hello world web part" url="spfx/build-a-hello-world-web-part" SEODescription="" />
-		<Item text="Connect to SharePoint" url="spfx/connect-to-sharepoint" SEODescription="" />
-		<Item text="Serve your web part in a SharePoint page" url="spfx/serve-your-web-part-in-a-sharepoint-page" SEODescription="" />
-		<Item text="Add jQueryUI According to your web part" url="spfx/add-jqueryui-accordion-to-web-part" SEODescription="" />
-		<Item text="Deploy your web part to SharePoint" url="spfx/deploy-web-part-to-cdn" SEODescription="" />
-		<Item text="Use Office UI Fabric React components" url="spfx/use-office-ui-react-components" SEODescription="" />
+	<Item text="SharePoint Framework" url="spfx/sharepoint-framework" SEODescription="The SharePoint Framework provides a modern developer experience for extending SharePoint.">
+		<Item text="SharePoint client-side web parts" url="spfx/sharepoint-client-side-web-parts" SEODescription="Develop SharePoint client-side web parts to provide a better customized experience for SharePoint.">
+		</Item>
+		<Item text="Get started" url="spfx/get-started">
+			<Item text="Set up your development environment" url="spfx/set-up-your-development-environment" SEODescription="Set up and configure your development environment to build SharePoint client-side web parts" />
+			<Item text="Set up your developer tenant" url="spfx/set-up-your-developer-tenant" SEODescription="Set up a SharePoint developer tenant so that you can test and debug your SharePoint client-side web parts" />
+			<Item text="Build a hello world web part" url="spfx/build-a-hello-world-web-part" SEODescription="Build a hello world SharePoint client-side web part." />
+			<Item text="Connect to SharePoint" url="spfx/connect-to-sharepoint" SEODescription="Connect your SharePoint client-side web part to SharePoint by using page context." />
+			<Item text="Serve your web part in a SharePoint page" url="spfx/serve-your-web-part-in-a-sharepoint-page" SEODescription="Deploy your SharePoint client-side web part to a classic SharePoint page." />
+			<Item text="Add jQueryUI According to your web part" url="spfx/add-jqueryui-accordion-to-web-part" SEODescription="Add the jQueryUI Accordian to your SharePoint client-side web part project." />
+			<Item text="Deploy your web part to SharePoint" url="spfx/deploy-web-part-to-cdn" SEODescription="Deploy your SharePoint client-side web part assets to a CDN instead of using a local host." />
+			<Item text="Use Office UI Fabric React components" url="spfx/use-office-ui-react-components" SEODescription="Build a SharePoint client-side web part that uses the DocumentCard Office UI Fabric component." />
+		</Item>
+		<Item text="Basics" url="spfx/" SEODescription="" >
+			<Item text="Design considerations for web parts" url="spfx/design-considerations-for-web-parts" SEODescription="Design your SharePoint client-side web parts to use Office UI Fabric React components, be responsive, and handle publish and edit modes." />
+			<Item text="Integrate with the property pane" url="spfx/integrate-with-property-pane" SEODescription="Set up properties for your SharePoint client-side web part and manage them through the property pane." />
+			<Item text="Use Visual Studio to develop web parts" url="spfx/use-visual-studio" SEODescription="Configure Visual Studio to open your SharePoint client-side web part project so that you can work with the project in Visual Studio." />
+			<Item text="Add an external library" url="spfx/add-an-external-library" SEODescription="Add an external JavaScript library to your SharePoint client-side web part such as small libaries, non-AMD modules, and localized resources." />
+		</Item>
 	</Item>
-	
-	<Item text="Basics" url="spfx/" SEODescription="" >
-		<Item text="Design considerations for web parts" url="spfx/design-considerations-for-web-parts" SEODescription="" />
-		<Item text="Integrate with the property pane" url="spfx/integrate-with-property-pane" SEODescription="" />
-		<Item text="Use Visual Studio to develop web parts" url="spfx/use-visual-studio" SEODescription="" />
-		<Item text="Add an external library" url="spfx/add-an-external-library" SEODescription="" />
-	</Item>
-</Item>
-	</Menu>
+</Menu>
