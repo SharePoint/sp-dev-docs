@@ -26,8 +26,7 @@ If you are running on a PC, you need to install a couple more things - Visual St
   * [Python 2.7.x](https://www.python.org/downloads/)
 
 
-Here are some tools that might come in handy as well.
-* Optional Tools:
+Here are some tools that might come in handy as well:
   * [Fiddler](http://www.telerik.com/fiddler)
   * [Postman plugin for Chrome](https://www.getpostman.com/docs/introduction)
   * [Cmder for Windows](http://cmder.net/)
