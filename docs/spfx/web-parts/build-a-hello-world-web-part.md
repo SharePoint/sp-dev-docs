@@ -47,13 +47,13 @@ The next set of prompts will ask specific information about your web part:
 * Accept the default `HelloWorld description` as your web part description and press `Enter`.
 * Accept the default `No javascript web framework` as the framework you would like to use and press `Enter`.
 
-![Yeoman SharePoint generator prompts to create a web part client-side solution](../../images/yeoman-sp-prompts.png)
+![Yeoman SharePoint generator prompts to create a web part client-side solution](../../../images/yeoman-sp-prompts.png)
 
 At this point, yeoman will install the required dependencies and scaffold the solution files along with the `HelloWorld` web paart. This might take a few minutes. 
 
 Once the scaffold is complete, you should see the following message indicating a successful scaffold:
 
-![SharePoint client-side solution scaffolded successfully](../../images/yeoman-sp-complete.png)
+![SharePoint client-side solution scaffolded successfully](../../../images/yeoman-sp-complete.png)
 If you get any errors, make sure you read the [known issues](./Known-Issues) document for specific errors and fixes.
 
 ### Using your favorite Code Editor/IDE  
