@@ -3,7 +3,7 @@
 >**Note:** The SharePoint Framework is currently in Preview, and is subject to change based on customer feedback. While we’re in preview, SharePoint Framework web parts are not supported for use in production environments.
 
 ## Introduction
-In your web part, you will likely want to include one or more JavaScript libraries.
+In your web part, you will likely want to include one or more JavaScript libraries. This page shows you how to bundle an external library, share a libraries
 
 
 
