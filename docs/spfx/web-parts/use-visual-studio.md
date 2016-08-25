@@ -85,10 +85,10 @@ Notice how you got a npm package explorer as well (found by extending npm node i
 
 ### Setup Project Startup File
 1. In the project properties, change the following properties to their corresponding values as shown below:For launching the project from within Visual Studio (F5), 
-- **Script (startup file)**: node_modules\gulp\bin\gulp.js
-- **Script arguments**: serve
+   - **Script (startup file)**: node_modules\gulp\bin\gulp.js
+   - **Script arguments**: serve
 
-![Update project settings"](./images/hello-vs-webpart-update-properties.PNG) 
+![Update project settings"](../../../images/hello-vs-webpart-update-properties.PNG) 
 
 ### Build and Debug Project
 Your client-side project is now setup to work with Visual Studio.
@@ -98,14 +98,14 @@ Press F5 to build and debug your project in your favorite browser.
 #### Notes on Debugging
 JavaScript client-side development has relied on browser developer tools which provides a robust environment to debug web applications. While Visual Studio provides the key integration into SharePoint client-side projects, browser developer tools are still used as the primary debugging tool to debug your client-side projects. 
 
-All of the major browsers have their corresponding developer tools. Below are the links to get started with the developer tools.
+All of the major browsers have their corresponding developer tools. The following links get you started with the developer tools.
 
-> We will publish debugging guidance as we progress towards the final release. 
 
 - If you are using Chrome, you have [Chrome Developer Tools](https://developer.chrome.com/devtools)
 - If you are using IE, you have [IE Developer Tools](https://msdn.microsoft.com/en-us/library/gg589507(v=vs.85).aspx)
 - If you are using Edge, you have [Edge Developer Tools](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/f12-devtools-guide/)
 - If you are using Firefox, you have [Firefox Developer Tools](https://developer.mozilla.org/en-US/docs/Tools)
+> **Note:** We will publish debugging guidance as we progress towards the final release. 
 
 #### Task Runner Explorer - Executing Other Tasks
 SharePoint Framework comes with a set of gulp tasks to simplify packaging your client-side solution and uploading your assets to CDN. These commands are usually accessed using the following commands:
@@ -119,7 +119,7 @@ You will use Visual Studio's Task Runner to explore and execute the available co
 - Press *Ctrl+Alt+BkSpace*, or,
 - Navigate to the following menu item: *View->Other Windows->Task Runner Explorer*
 
-![Update project settings"](./images/hello-vs-webpart-task-runner.PNG) 
+![Update project settings"](../../../images/hello-vs-webpart-task-runner.PNG) 
 
 Task Runner Explorer makes is easier to view available gulp commands and run them when needed. Just right click on a gulp command to reveal the context menu to run a specific command. 
 
