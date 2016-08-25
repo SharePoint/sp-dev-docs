@@ -1,11 +1,10 @@
 # Use Office UI Fabric React components in your SharePoint client-side web part
 
->**Note:** The SharePoint Framework is currently in Preview, and is subject to change based on customer feedback.  While we’re in preview, SharePoint Framework web parts are not supported for use in production environments.
+>**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not supported for use in production environments.
 
-## Tutorial 6 Overview
-This tutorial will guide you in building a simple web part that uses one of the [Office UI Fabric components](https://github.com/OfficeDev/office-ui-fabric-react), DocumentCard.
+This article describes how to build a simple web part that uses the DocumentCard component of [Office UI Fabric](https://github.com/OfficeDev/office-ui-fabric-react).
 
->Please note that Office UI Fabric React Components are in *in a pre-v1 state*, so we strongly encourage you to check out the [Roadmap](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/ghdocs/ROADMAP.md) to see what the v1 we're working towards entails and what this means for your usage of the controls set. 
+>**Note:** Office UI Fabric React Components are in *a pre-v1 state*. For information about the v1 release and roadmap, see [Roadmap](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/ghdocs/ROADMAP.md) in the Office UI Fabric React repo in GitHub. 
 
 ![DocumentBaseCard fabric component example](../../../images/fabric-components-doc-card-view-ex.png)
 
