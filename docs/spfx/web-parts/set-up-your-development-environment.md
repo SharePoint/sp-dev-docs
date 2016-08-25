@@ -2,10 +2,10 @@
 
 >**Note:** The SharePoint Framework is currently in Preview, and is subject to change based on customer feedback. While we’re in preview, SharePoint Framework web parts are not supported for use in production environments.
 
-In order to successfully complete the tutorials, you will need to set up your Mac or PC with the right tools.
+In order to successfully complete the tutorials, you will need to setup your Mac or PC with the right tools.
 
-## Mac or PC
-You can use a Mac or PC to complete the tutorials.
+## Mac or PC or Linux
+You can use a Mac or PC or Linux to complete the tutorials.
 
 ## Install Dev Tools
 
@@ -15,7 +15,16 @@ You can use a Mac or PC to complete the tutorials.
 
 * [Visual Studio Code](https://code.visualstudio.com/)
 
-If you are running on a PC, you need to install a couple more things - Visual Studio and Python.
+* Make sure you are running V3 of npm by running the following command
+
+     npm -g install npm@next
+
+### If you are using a PC
+You need to install a couple more things - Visual Studio and Python.
+
+windows-build-tools will install Visual C++ Build Tools 2015, provided free of charge by Microsoft. These tools are required to compile popular native modules. It will also install Python 2.7, configuring your machine and npm appropriately. 
+
+    npm install --global --production windows-build-tools
 
   * If you are using Visual Studio: 
     * [Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=691978&clcid=0x409)
@@ -23,14 +32,30 @@ If you are running on a PC, you need to install a couple more things - Visual St
       - [Visual Studio Update 3](https://www.visualstudio.com/en-us/news/releasenotes/vs2015-update3-vs)
     * [NodeJS Tools for Visual Studio](https://aka.ms/getntvs) 
 
-  * [Python 2.7.x](https://www.python.org/downloads/)
 
 
-Here are some tools that might come in handy as well:
+### If you are using Ubuntu
+You need to install compiler tools using the following command:
+
+```
+sudo apt-get build-essential
+```
+
+### If you are using fedora
+You need to install compiler tools using the following command:
+
+```
+sudo yum install make automake gcc gcc-c++ kernel-devel
+```
+
+### Optional tools
+Here are some tools that might come in handy as well.
+* Optional Tools:
   * [Fiddler](http://www.telerik.com/fiddler)
   * [Postman plugin for Chrome](https://www.getpostman.com/docs/introduction)
   * [Cmder for Windows](http://cmder.net/)
   * [Oh My Zsh for Mac](http://ohmyz.sh/)
+  * [Git source control tools](https://git-scm.com/)
 
 ## Install Yeoman and Gulp
 Now that you have setup your dev environment, it is time to install [Yeoman](http://yeoman.io/). Yeoman helps you to kick start new projects, prescribing best practices and tools to help you stay productive.

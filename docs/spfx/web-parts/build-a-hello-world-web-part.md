@@ -54,6 +54,7 @@ At this point, yeoman will install the required dependencies and scaffold the so
 Once the scaffold is complete, you should see the following message indicating a successful scaffold:
 
 ![SharePoint client-side solution scaffolded successfully](./images/yeoman-sp-complete.png)
+If you get any errors, make sure you read the [known issues](./Known-Issues) document for specific errors and fixes.
 
 ### Using your favorite Code Editor/IDE  
 Since the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor or IDE that supports client-side development to build your web part, such as:

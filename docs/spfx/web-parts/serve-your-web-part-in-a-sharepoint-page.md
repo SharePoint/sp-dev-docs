@@ -104,14 +104,14 @@ Click on the `helloworld-webpart-client-side-solution` app to install the app in
 
 This will install the client-side solution and the web part in your developer site.
 
-Site Contents page will show you the installation status of your cliet-side solution. Make sure the installation is  complete before going to the next step. 
+Site Contents page will show you the installation status of your client-side solution. Make sure the installation is  complete before going to the next step. 
 
 ## Step 5: Preview web part in a classic SharePoint page
 Now that we have deployed and installed the client-side solution, lets add the web part to a classic SharePoint page.
 
 Remember that our resources such as JavaScripts, CSS etc., are available in the local machine.  
 
-Switch to Visual Studio Code and open `<your-webpart-guid>.manifest.json` in `src\webparts\helloWorld\dist` folder.
+Switch to Visual Studio Code and open `<your-webpart-guid>.manifest.json` in `\dist` folder.
 
 Notice the `internalModuleBaseUrls` property in the `loaderConfig` entry:
 

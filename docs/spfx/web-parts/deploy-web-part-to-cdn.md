@@ -13,22 +13,71 @@ As a pre-requisite, you should have completed the following tutorials before you
 
 Each step below will build on the previous so you will need to go through each step one by one to successfully complete this lab.
 
-## Step 1: Configure Azure Storage account 
-For this tutorial, you will need to first configure an Azure Storage account and integrate with CDN.
+## Step 1: Configure Azure storage account 
+For this tutorial, you will need to first configure an Azure storage account and integrate with CDN.
 
-You can follow the instructions [here](https://azure.microsoft.com/en-us/documentation/articles/cdn-create-a-storage-account-with-cdn/) on how to create a Storage account and integrate with CDN.
+You can follow the instructions [here](https://azure.microsoft.com/en-us/documentation/articles/cdn-create-a-storage-account-with-cdn/) along with the detailed steps below on how to create an Azure storage account and integrate with CDN. You will need the following information to complete this tutorials:
 
-Once you have successfully setup the Storage account, you will need the following information to complete this tutorials:
-* Storage account name
-* BLOB Container name
-* Storage account access key
+### Storage account name
+This is the name you used to create your storage account as described in this [step](https://azure.microsoft.com/en-us/documentation/articles/cdn-create-a-storage-account-with-cdn/#step-1-create-a-storage-account).
+
+As an example, in the screenshot below, we have used `spfxsamples` as the storage account name.
+
+![Create new storage account](./images/deploy-create-storage-account.png)
+
+This will create a new storage account endpoint `spfxsamples.blob.core.windows.net`.
+
+>If you get an error that the storage account name is already taken, try a different name.
+
+### BLOB container name
+Once you have created your storage account, create a new Blob service container. This will be available in your storage account dashboard. 
+
+Click the `+ Container` and create a new container with the following:
+* Name: `helloworld-webpart`
+* Access type: Container
+
+>![Option to create blob container](./images/deploy-option-blob-container.png)
+
+### Storage account access key
+In the storage account dashboard, click on `Access Key` in the dashboard and copy one of the access keys.
+
+![Storage account access key](./images/deploy-storag-account-accesskey.png)
+
+### CDN profile and endpoint
+Now that we have the storage account and the BLOB container created, we will create a new CDN profile and associate the CDN endpoint wit this BLOB container:
+
+Create a new CDN profile as described in this [step](https://azure.microsoft.com/en-us/documentation/articles/cdn-create-a-storage-account-with-cdn/#step-2-create-a-new-cdn-profile).
+
+As an example, in the screenshot below, we have used `spfxwebparts` as the CDN profile name:
+
+>If you get an error that the CDN profile name is already taken, try a different name.
+
+<img src="./images/deploy-create-cdn-profile.png" alt="Create a new CDN profile" width="300" height="400" />
+
+Now, create a CDN endpoint as described in this [step](https://azure.microsoft.com/en-us/documentation/articles/cdn-create-a-storage-account-with-cdn/#step-3-create-a-new-cdn-endpoint)
+
+As an example, in the screenshot below, we have used `spfxsamples` as the endpoint name, origin type as `Storage` and selected the previously created `spfxsamples.blob.core.windows.net` storage account:
+
+>If you get an error that the CDN endpoint name is already taken, try a different name.
+
+<img src="./images/deploy-create-cdn-endpoint.png" alt="Create CDN endpoint" width="300" height="400" />
+
+The CDN endpoint will be created with the following URL:
+
+```
+http://spfxsamples.azureedge.net
+```
+Since we associated the CDN endpoint with our storage account, you can also access the BLOB container by the folowing URL:
+
+```
+http://spfxsamples.azureedge.net/helloworld-webpart/
+```
+However, we have not yet deployed the files. 
 
 ## Step 2: Project directory
 Switch to console and make sure you are still in the project directory used in Tutorial 1, 2 and 3. 
 
-If you still have `gulp serve` running, terminate the task by pressing `Ctrl+C`
-
-Else, navigate to your project directory:
+If you still have `gulp serve` running, terminate the task by pressing `Ctrl+C`, else navigate to your project directory:
 
 ```
 cd helloworld-webpart
@@ -41,7 +90,7 @@ Open `deploy-azure-storage.json` in the `config` folder.
 
 This is the file that contains your Azure Storage account details.
 
-```javascript
+```json
 {
   "workingDir": "./temp/deploy/",
   "account": "<!-- STORAGE ACCOUNT NAME -->",
@@ -52,6 +101,17 @@ This is the file that contains your Azure Storage account details.
 Replace the `account`, `container`, `accessKey` with your storage account name, BLOB container and storage account access key respectively. 
 
 `workingDir` is the directory where the web part assets will be located. 
+
+In our example, with the storage account created earlier, this file will look like:
+
+```json
+{
+  "workingDir": "./temp/deploy/",
+  "account": "spfxsamples",
+  "container": "helloworld-webpart",
+  "accessKey": "q1UsGWocj+CnlLuv9ZpriOCj46ikgBvDBCaQ0FfE8+qKVbDTVSbRGj41avlG73rynbvKizZpIKK9XpnpA=="
+}
+```
 
 Save the file.
 
@@ -73,7 +133,7 @@ Build target: SHIP
 [21:23:01] Starting 'default'...
 ```
 
-The minified assets can be found under the `tmp\deploy` directory.
+The minified assets can be found under the `temp\deploy` directory.
 
 ## Step 5: Deploy assets to Azure Storage
 Switch to the console of the `HelloWorld` project directory.
@@ -93,11 +153,22 @@ Switch to Visual Studio Code and open the `write-manifests.json` from the `confi
 
 Type your CDN base path for the `cdnBasePath` property. 
 
-```
+```json
 {
   "cdnBasePath": "<!-- PATH TO CDN -->"
 }
 ```
+
+In our example, with the CDN profile created earlier, this file will look like:
+
+```json
+{
+  "cdnBasePath": "http://spfxsamples.azureedge.net/helloworld-webpart/"
+}
+```
+
+Note that the CDN base path is the CDN endpoint with the BLOB container.
+
 Save the file.
 
 ## Step 6: Deploy the updated package
@@ -110,8 +181,11 @@ Switch to the console of the `HelloWorld` project directory.
 Type the gulp task to package the client-side solution. This time with the `--ship` flag to indiciate to pick uo the CDN base path configured in the previous step:
 
 ```
+gulp bundle --ship
 gulp package-solution --ship
 ```
+
+> Notice. "gulp bundle --ship" is a temporary fix needed with Developer Preview to ensure that files are rebuilt properly for packaging. 
 
 This will create the updated client-side solution package in the `sharepoint\solution` folder.
 
