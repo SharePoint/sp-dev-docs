@@ -2,85 +2,76 @@
 
 >**Note:** The SharePoint Framework is currently in Preview, and is subject to change based on customer feedback. While we’re in preview, SharePoint Framework web parts are not supported for use in production environments.
 
-In order to build and deploy web parts in SharePoint during initial preview, you will need an Office 365 Developer Tenant.  Note that for now, the tenant needs to be a **developer tenant**, not just the site collection. 
-
-> If you are getting following exception when moving to workbench.aspx page, it means that you are not using dev tenant, rather first release or normal tenant: "The requested operation is part of an experimental feature that is not supported in the current environment. The requested operation is part of an experimental feature that is not supported in the current environment." 
+In order to build and deploy web parts in SharePoint during initial preview, you will need an Office 365 Developer Tenant. During preview, the tenant needs to be a **developer tenant**; not just the site collection. 
 
 ## Sign up for Office 365 Developer Tenant
-You can skip to the [next section](#create-app-catalog-site) if you already have an Office 365 developer tenant.
+You can skip to the [next section](#create-app-catalog-site) if you already have an Office 365 Developer Tenant.
 
-If you do not have one, then you can sign up [for the Office Developer Program here](https://profile.microsoft.com/RegSysProfileCenter/wizardnp.aspx?wizid=14b845d0-938c-45af-b061-f798fbb4d170&lcid=1033). You should receive a welcome mail with a link to sign up for an Office 365 developer tenant.  
+If you do not have one, then you can sign up [for the Office Developer Program here](https://profile.microsoft.com/RegSysProfileCenter/wizardnp.aspx?wizid=14b845d0-938c-45af-b061-f798fbb4d170&lcid=1033). You should receive a welcome mail with a link to sign up for an Office 365 Developer Tenant.  
 
-> Please ensure you are signed out of any existing Office 365 tenants to complete the setup successfully.
-
-Once you have signed up for the developer tenant and your SharePoint setup is complete, you can follow the steps below to configure app catalog, developer site collection and upload SharePoint Workbench. We'll be streamlining these steps over the next while.
+>**Note:** Ensure you are signed out of any existing Office 365 tenants to complete the setup successfully.
 
 ## Create app catalog site
-You will need an app catalog setup to be able to upload and deploy client-side solution. You can skip to the [next section](#create-a-new-developer-site-collection) if you already have an app catalog setup.  
+You will need an app catalog to upload and deploy web parts. You can skip to the [next section](#create-a-new-developer-site-collection) if you already have set up an app catalog.  
 
-If you do not have an app catalog setup for your developer tenant, then follow the steps below to create the app catalog.
+1. Go to the **SharePoint Admin Center** by entering the following URL in your browser. Replace **yourtenantprefix** with your Office 365 Developer Tenant prefix.
 
-Navigate to SharePoint Admin Center by typing the following URL in your browser.
+   ```
+   https://yourtenantprefix-admin.sharepoint.com
+   ```
 
->Replace `yourtenantprefix` with your Office 365 developer tenant prefix.
+2. In the left sidebar, choose the **apps** menu item and then choose **App Catalog**.
 
-```
-https://yourtenantprefix-admin.sharepoint.com
-```
+3. Choose **OK** to create a new app catalog site.
 
-In the left sidebar, click on the `apps` menu item and then click on `App Catalog`.
+3. In the next page, enter the following details:
+   * **Title**: Enter **App Catalog**.
+   * **Web Site Address _suffix_**: Enter your preferred suffix for app catalog; for example: **apps**.
+   * **Administrator**: Enter your username and choose the **resolve** button to resolve the username.
 
-Click `OK` button to create a new app catalog site.
+4. Choose **OK** to create the app catalog site.
 
-In the next page, enter the following details:
-* **Title**: App Catalog
-* **Web Site Address _suffix_**: Type your preferred suffix for app catalog, for example: `apps`
-* **Administrator**: Type your username and click the resolve button to resolve the username
-
-Click `OK` button to create the app catalog site.
-
-SharePoint will now create the app catalog site and you will be able to see its progress in the SharePoint admin center.
+SharePoint will create the app catalog site and you will be able to see its progress in the SharePoint admin center.
 
 ## Create a new Developer Site collection
-To complete the tutorials, you will also need a Developer Site. You can skip to the [next section](#create-the-new-column) if you already have a developer site collection.
+You also need a Developer Site. You can skip to the [next section](#create-the-new-column) if you already have a Developer Site collection.
 
-If you do not have a developer site collection, then follow the steps below to create the developer site collection.
+1. Go to the **SharePoint Admin Center** by entering the following URL in your browser. Replace **yourtenantprefix** with your Office 365 Developer Tenant prefix.
 
-Navigate to SharePoint Admin Center by typing the following URL in your browser.
+   ```
+   https://yourtenantprefix-admin.sharepoint.com
+   ```
 
->Replace `yourtenantprefix` with your Office 365 developer tenant prefix.
+2. In the SharePoint ribbon, choose **New** -> **Private Site Collection**.
 
-```
-https://yourtenantprefix-admin.sharepoint.com
-```
+3. In the dialog, enter the following details:
+   * **Title**: Enter a title for your developer site collection; for example: **Developer Site**.
+   * **Web Site Address _suffix_**: Enter a suffix for your developer site collection; for example: **dev**.
+   * **Template Selection**: Select **Developer Site** as the site collection template.
+   * **Administrator**: Enter your username and choose the **resolve** button to resolve the username.
 
-In the SharePoint ribbon, click `New->Private Site Collection`
+4. Choose **OK** to create the site collection.
 
-In the dialog, enter the following:
-* Title: Type a title for your developer site collection, for example: `Developer Site`
-* Web Site Address suffix: Type a suffix for your developer site collection, for example: `dev`
-* Template Selection: Select `Developer Site` as the site collection template
-* Administrator: Type your username and click the resolve button to resolve the username
+SharePoint will create the developer site and you will be able to see its progress in the SharePoint admin center. Once the site is created, you can browse to your developer site collection.
 
-Click `OK` button to create the site collection.
+## Set up a document library
+In order to use the preview features, you will need to set up a document library with a new column and upload SharePoint workbench. Most of this documentation will use the default document library in your developer site collection. This will be called **Documents** in the left navigation.
 
-SharePoint will now create the developer site and you will be able to see its progress in the SharePoint admin center. Once the site is created, you can browse to your developer site collection.
+1. Choose the gears icon on the top right and then choose **Site settings** to open the settings page.
+2. Choose **Site libraries and lists** under the **Site Administration** category.
+3. Choose **Customize Documents**
+4. Choose **Create column** under **Columns**
+5. Enter **ClientSideApplicationId** as the column name and leave the other fields at their current values.
+6. Choose **OK** to create the column.
 
-## Setup document library
-In order to use the preview features, you will need to setup a document library with a new column and upload SharePoint Workbench. For the tutorials, we will work with the default document library in your developer site collection. This will be called `Documents` in the left navigation.
+## Upload the SharePoint workbench
+You need to upload the SharePoint workbench to test your web parts on SharePoint. 
+1. Download the [workbench.aspx](https://github.com/SharePoint/sp-dev-docs/blob/master/workbench.aspx) to your local machine.
+2. Open the file in RAW format, then right-click and choose **Save As** to save as `workbench.aspx` locally on your computer
+3. Upload it to the **Documents** library in the dev site collection.
 
-### Create the new column
-Follow the steps below to add the new field to the `Documents` library:
-
-* Click the gears icon on the top right and the click on `Site settings` to open the settings page.
-* Click on `Site libraries and lists` under the `Site Administration` category.
-* Click on `Customize Documents`
-* Now, click on `Create column` under Columns:
-   * Type `ClientSideApplicationId` as the column name and leave other fields as they are.
-   * Click OK button to create the column.
-
-### Upload SharePoint Workbench
-While we will introduce and talk about the SharePoint Workbench in the tutorials, to get set up, download the [workbench.aspx](https://github.com/SharePoint/sp-dev-docs/blob/master/workbench.aspx) to your local machine. Open the file in RAW format, then right click, choose `Save As` option to save as `workbench.aspx` to your local computer, and upload it to the `Documents` library in the dev site collection.
+##Troubleshooting
+If you are getting the following exception when moving to workbench.aspx page, it means that you are not using a developer tenant, rather first release or normal tenant: "The requested operation is part of an experimental feature that is not supported in the current environment. The requested operation is part of an experimental feature that is not supported in the current environment." 
 
 ## Next steps
-Now that you have configured your SharePoint tenant, lets [setup your machine](./Setup-your-machine) to build client-side web parts.
+Now that you have configured your SharePoint tenant, lets [set up your development environment](./Setup-your-machine) to build client-side web parts.
