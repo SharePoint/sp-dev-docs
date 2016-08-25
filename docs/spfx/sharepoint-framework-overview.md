@@ -20,9 +20,6 @@ The runtime model is similar to the script editor web part, but improved substan
 
 Many developers are already working with C# and Visual Studio, or just JavaScript. You may have to learn a few new skills if you are not familiar with client-side JavaScript development. A large amount of your knowledge is completely transferable. You’ll be using the same REST services that you were likely using (or JSOM if that is more your style). The data model has not changed in any way.  And if you are a C# developer, TypeScript is a nice transition into the JavaScript world. The choice of IDE is up to you. Many developers like to use the cross-platform IDE Visual Studio Code, and there is a plug-in for Visual Studio to work with the new development environment as well.  Many developers also use products like Sublime, and ATOM. Use what works best for you.
 
-## Questions
-If you have any questions, head over to [SharePoint Stackexchange](http://sharepoint.stackexchange.com/) and tag your questions and comments with #spfx, #spfx-webparts, and #spfx-tooling.
- 
 ## History
 SharePoint started as an on-premise product back in 2001. It picked up a lot of users along the way, and a large developer community to extend and shape it in ways that we couldn’t foresee. For the most part, the extensibility that developers engaged in followed the same patterns and practices that the developers in the SharePoint team at Microsoft used. Things like web parts, SharePoint feature XML, and more, were all the same. Also a large majority of the features were written in C#, compiled to DLLs, and deployed to the servers.
  
@@ -44,3 +41,6 @@ Additionally, neither of these solutions work for the SharePoint product team at
 
 ## Moving forward
 This is the first preview release. The SharePoint product team is not finished, and there will be more updates and refinements in the future. While the SharePoint Framework is in preview, there will be occasional breaking changes around API names, flows, and more, based on your feedback and experience. Once the SharePoint Framework is out of preview all future updates will be backwards compatible, so that the solutions you write continue to work in the future without requiring you to make changes.
+
+## Questions
+If you have any questions, head over to [SharePoint Stackexchange](http://sharepoint.stackexchange.com/) and tag your questions and comments with #spfx, #spfx-webparts, and #spfx-tooling.
