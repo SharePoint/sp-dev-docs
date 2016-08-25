@@ -8,7 +8,7 @@ In this tutorial, lets add the jQueryUI Accordion to our web part project. We wi
 
 The completed web part will look like this: 
 
-![jquery-accordion](./images/jquery-accordion-wb.png)
+![jquery-accordion](../../../images/jquery-accordion-wb.png)
 
 ## Tutorial Pre-requisites
 As a pre-requisite, you should have completed the following tutorials before you start this tutorial:
@@ -345,7 +345,7 @@ Add the jQuery web part.
 
 You should see the jQueryUI Accordion now!
 
-![jquery-accordion](./images/jquery-accordion-wb.png)
+![jquery-accordion](../../../images/jquery-accordion-wb.png)
 
 ## Next Steps
 Switch to the console where you have `gulp serve` running and terminate the task by pressing `Ctrl+C`

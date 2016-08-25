@@ -75,7 +75,7 @@ http://localhost:4321/temp/workbench.html
 
 You should see the following in the web part:
 
-![SharePoint page context in localhost](./images/sp-mock-localhost-wp.png)
+![SharePoint page context in localhost](../../../images/sp-mock-localhost-wp.png)
 
 Now navigate to `workbench.aspx` hosted in SharePoint, which should be:
 
@@ -85,15 +85,15 @@ https://your-sharepoint-site-url/Shared%20Documents/workbench.aspx
 
 By default, your browser is configured to not load scripts from localhost. Workbench will notify you if that is the case:
 
-![Load unsafe scripts to run scripts from localhost](./images/sp-workbench-o365-unsface-scripts.png) 
+![Load unsafe scripts to run scripts from localhost](../../../images/sp-workbench-o365-unsface-scripts.png) 
 
 In order to execute local scripts, in the Chrome browser, click the grey shield in the right side of the address bar to load unsafe scripts. This is due to loading scripts over HTTP while connected to a page via HTTPS.
 
-![Allow brwoser to load unsafe scripts to run scripts from localhost](./images/chrome-load-unsafe-scripts.png)
+![Allow brwoser to load unsafe scripts to run scripts from localhost](../../../images/chrome-load-unsafe-scripts.png)
 
 You should now see your SharePoint site URL in the web part as page context is available to you:
 
-![SharePoint page context in SharePoint site](./images/sp-lists-spsiteurl-wp.png)
+![SharePoint page context in SharePoint site](../../../images/sp-lists-spsiteurl-wp.png)
 
 ## Step 3: Define list model
 Lets define our models before proceeding. As we will retrieve the lists, we need two models. 
@@ -354,13 +354,13 @@ Switch to your local workbench and add the HelloWorld web part.
 
 You should see the mock data returned:
 
-![Render lists data from localhost](./images/sp-lists-render-localhost.png)
+![Render lists data from localhost](../../../images/sp-lists-render-localhost.png)
 
 Switch to workbench hosted in SharePoint, refresh the page and add the HelloWorld web part.
 
 You should see lists returned from the current site:
 
-![Render lists data from SharePoint](./images/sp-lists-render-spsite.png)
+![Render lists data from SharePoint](../../../images/sp-lists-render-spsite.png)
 
 ## Next steps
 

@@ -50,11 +50,11 @@ If opening the **.njsproj** doesn't work for you, you can try importing the clie
 1. In the *New Project* dialog, select the *Templates->Other languages->TypeScript->Node.js* and then *From Existing Node.js code* project template.
 Name the project the same name as your SharePoint client-side project, that is, *hello-vs-webpart*, and choose the location of the client-side project as the location, and click *OK*.
 
-![New TypeScript Node.js Project](../../.../images/hello-vs-webpart-new-project-ts-nodejs.PNG) 
+![New TypeScript Node.js Project](../../../images/hello-vs-webpart-new-project-ts-nodejs.PNG) 
 
 2. In the project wizard, choose the client-side project folder as the folder containing your Node.js code, and click *Next* to continue.
 
-![Node.js Project Wizard"](./images/hellow-vs-webpart-step1-wizard.PNG) 
+![Node.js Project Wizard"](../../../images/hellow-vs-webpart-step1-wizard.PNG) 
 
 3. choose *Next* to continue.
 
@@ -62,29 +62,29 @@ Name the project the same name as your SharePoint client-side project, that is, 
 
 5. Choose *Finish* to import the client-side project into Visual Studio.
 
-![Node.js Project Wizard"](./images/hello-vs-webpart-finish-wizard.PNG) 
+![Node.js Project Wizard"](../../../images/hello-vs-webpart-finish-wizard.PNG) 
 
 ## Explore the Project
 Now that Visual Studio has imported your client-side project, take a moment to explore the project in Visual Studio.
 
-![Node.js Project Wizard"](./images/hello-vs-webpart-soln-explorer.PNG) 
+![Node.js Project Wizard"](../../../images/hello-vs-webpart-soln-explorer.PNG) 
 
 Notice how you got a npm package explorer as well (found by extending npm node in the project):
 
-![Node.js NPM Package Explorer"](./images/hello-vs-webpart-npm-explorer.PNG) 
+![Node.js NPM Package Explorer"](../../../images/hello-vs-webpart-npm-explorer.PNG) 
 
 ### Modify gulpfile.js
-Open *gulpfile.js* in the root of the project and change the initial declaration of the variables from *let* to *var*.
+1. Open *gulpfile.js* in the root of the project and change the initial declaration of the variables from *let* to *var*.
 
 ```
-var gulp = require('gulp');
-var build = require('@microsoft/sp-build-web');
+  var gulp = require('gulp');
+  var build = require('@microsoft/sp-build-web');
 ```
 
-> This is a temporary workaround as Visual Studio does not support ES6 yet.
+> **Note:** This is a temporary workaround as Visual Studio does not support ES6 yet.
 
 ### Setup Project Startup File
-For launching the project from within Visual Studio (F5), go to the project properties and change the following properties to its corresponding values as shown below:
+1. In the project properties, change the following properties to their corresponding values as shown below:For launching the project from within Visual Studio (F5), 
 - **Script (startup file)**: node_modules\gulp\bin\gulp.js
 - **Script arguments**: serve
 

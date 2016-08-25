@@ -8,7 +8,7 @@ The property pane allows end users to configure the web part with a bunch of pro
 
 Below is an example of a property pane in SharePoint:
 
-![Property Pane Example](./images/property-pane-example.png)
+![Property Pane Example](../../../images/property-pane-example.png)
 
 Property pane has three key metadata: 
 * Pages
