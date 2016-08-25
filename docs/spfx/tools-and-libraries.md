@@ -1,83 +1,95 @@
 # SharePoint Framework development tools and libraries
 
-SharePoint Framework is possible due to the various client-side JavaScript libraries. A lot of work has gone through to make these different tools work together for you to build client-side solutions. Below is a quick summary on various tools and libraries for you to get started with.
+The SharePoint Framework includes several client-side JavaScript libraries that you can use to build your solutions. This article provides an overview of the tools and libraries that you can use to develop client-side web parts.
 
 ## TypeScript
-TypeScript is the primary language to build SharePoint client-side web parts. TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. SharePoint client-side development tools are built using TypeScript classes, modules and interfaces to help developers build robust client-side web parts. 
-Below are some resources to get started with TypeScript:
+TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. SharePoint client-side development tools are built using TypeScript classes, modules, and interfaces. You can use these to build robust client-side web parts. 
+
+To get started with TypeScript, see the following resources:
 
 * [TypeScript Quick Start](https://www.typescriptlang.org/docs/tutorial.html)
 * [TypeScript Playground](https://www.typescriptlang.org/play/index.html)
 * [TypeScript Handbook](https://www.typescriptlang.org/docs/handbook/basic-types.html)
-* [Engage with TypeScript Community](https://stackoverflow.com/questions/tagged/typescript)
+* [TypeScript community on Stack Overflow](https://stackoverflow.com/questions/tagged/typescript)
 
-## Your Choice of Framework
-There are many JavaScript frameworks available to choose but some of the popular frameworks are, but not limited to:
+## JavaScript frameworks
+You can choose any one of a number of JavaScript frameworks to develop client-side web parts. The following are some of the most popular:
+
 * [React](https://facebook.github.io/react/)
 * [AngularJS 1.x](https://docs.angularjs.org/tutorial)
 * [AngularJS 2.x](https://angular.io/docs/ts/latest/quickstart.html)
 * [Handlebars](http://handlebarsjs.com/)
 
-Client-side web parts should be treated as components that gets dropped in a page. As SharePoint Framework is agnostic of JavaScript framework, you can choose your framework of choice to build your client-side web part. However, it is recommended to choose a JavaScript framework that supports similar component model. Lightweight frameworks such as React, Handlebars and Angular 2 Components all support component model which are well suited to build client-side web parts. That said, it shouldn't limit you from choosing other frameworks though. 
+Because client-side web parts are components that are dropped into a SharePoint page, we recommend that you choose a JavaScript framework that supports a similar component model. Lightweight frameworks such as React, Handlebars, and Angular 2 all support a component model and are well suited to building client-side web parts. 
 
 ## Node Package Manager (npm)
-[npm](https://www.npmjs.com/) is the package manager for JavaScript. It is usually included with Node.js setup. So if you have Node.js installed, chances are you have npm installed as well. SharePoint client-side development tools uses npm as its primary package manager to manage dependencies and other required JavaScript helpers. If you are familiar with [NuGet](https://www.nuget.org/), then you will feel home with npm as they are similar (with respect to package management).
-Below are some resources to get familiar with npm:
-* [npm documentation](https://docs.npmjs.com/)
+
+SharePoint client-side development tools use the [npm](https://www.npmjs.com/) package manager, which is similar to [NuGet](https://www.nuget.org/), to manage dependencies and other required JavaScript helpers. npm is typically included as part of Node.js setup.
+
+For more information about npm, see the [npm documentation](https://docs.npmjs.com/).
 
 ## Node.js
-Node.js is an open source, cross platform runtime environment for developers to host and serve JavaScript code. As a result, node.js is also used to develop server-side web applications written purely in JavaScript. Node.js ecosystem is tightly coupled with npm package manager and task runners such as gulp (described in the next topic) to provide an efficient environment for building JavaScript based applications. If you are familiar with IIS Express or IIS, then you will find node.js similar but backed by various other tools to simplify client-side development. 
 
-Below are some resources to get familiar with Node.js:
-* [Quick Introduction to Node.js](https://nodejs.org/en/about/)
-* [Node.js API Reference Documentation](https://nodejs.org/api/)
-* [Usage and Example](https://nodejs.org/api/synopsis.html)
-* [Node.js at Wikipedia](https://en.wikipedia.org/wiki/Node.js)
+Node.js is an open source, cross-platform runtime environment for hosting and serving JavaScript code. You can use node.js develop server-side web applications written in JavaScript. The Node.js ecosystem is tightly coupled with npm and task runners such as gulp to provide an efficient environment for building JavaScript-based applications. Nodel.js is similar to IIS Express or IIS, but includes tools to simplify client-side development. 
 
-## Gulp Task Runner
-SharePoint client-side development tools use [gulp](http://gulpjs.com/) as its task runner which handles build process such as:
+For more information about Node.js, see the following:
+
+* [About Node.js](https://nodejs.org/en/about/)
+* [Node.js API reference documentation](https://nodejs.org/api/)
+* [Node.js Usage and Example](https://nodejs.org/api/synopsis.html)
+
+## Gulp task runner
+SharePoint client-side development tools use [gulp](http://gulpjs.com/) as the build process task runner to:
+
 * Bundle and minify JavaScript and CSS files.
 * Run tools to call the bundling and minification tasks before each build.
 * Compile LESS or SASS files to CSS.
 * Compile TypeScript files to JavaScript.
 
-Below are some resources to get familiar with gulp:
+For more information about gulp, see the following:
+
 * [Getting started with Gulp](https://github.com/gulpjs/gulp/blob/master/docs/getting-started.md)
-* [TypeScript + Gulp](https://www.typescriptlang.org/docs/handbook/gulp.html)
-* [Useful articles on Gulp](https://github.com/gulpjs/gulp/blob/master/docs/README.md#articles)
+* [TypeScript and Gulp](https://www.typescriptlang.org/docs/handbook/gulp.html)
+* [Articles about Gulp](https://github.com/gulpjs/gulp/blob/master/docs/README.md#articles)
 
 ## Webpack
-Webpack is a module bundler that takes your web part files, its dependencies and generates one or more JavaScript bundles so you can load different bundles for different scenarios.
 
-The development tool chain uses [CommonJS](https://webpack.github.io/docs/commonjs.html) to bundle which enables you to define modules and require them where you want to use those modules. And finally, the tool chain uses [SystemJS](https://github.com/systemjs/systemjs), a universal module loader to load your modules. This benefits the toolchain and runtime in various ways specifically helping to scope your web parts by making sure each web part is executed in its own namespace.
+Webpack is a module bundler that takes your web part files an dependencies and generates one or more JavaScript bundles so you can load different bundles for different scenarios.
 
-Below are some resources to get familiar with webpack:
-* [Webpack Documentation](http://webpack.github.io/docs/what-is-webpack.html)
-* [TypeScript + React + Webpack](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
+The development tool chain uses [CommonJS](https://webpack.github.io/docs/commonjs.html) for bundling. This enables you to define modules and where you want to use them. The tool chain also uses [SystemJS](https://github.com/systemjs/systemjs), a universal module loader, to load your modules. This helps you to scope your web parts by making sure that each web part is executed in its own namespace.
 
-## Yeoman Generators
+Form more information about webpack, see the following:
+
+* [Webpack documentation](http://webpack.github.io/docs/what-is-webpack.html)
+* [TypeScript, React, and Webpack](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
+
+## Yeoman generators
 [Yeoman](http://yeoman.io/) helps you to kickstart new projects, prescribing best practices and tools to help you stay productive.
 SharePoint Yeoman generator will be available as part of the framework to kickstart new client-side web part projects. Once the project is generator, you can use your choice of IDEs like [Visual Studio](https://www.visualstudio.com/products/visual-studio-community-vs) or HTML/JavaScript code editors like [Visual Studio Code](https://code.visualstudio.com/) or [Sublime Text](https://www.sublimetext.com/) or [Atom](https://atom.io/).  
 
-Below are some resources to get familiar with Yeoman:
+For more information about Yeoman, see the following:
+
 * [Scaffold a web app with Yeoman](http://yeoman.io/codelab/index.html)
 * [List of available Yeoman generators](http://yeoman.io/generators/)
 
-Below are some common Yeoman generators that you can try depending on your choice of framework:
+The following are some common Yeoman generators that you can try, depending on your choice of framework:
+
 * [generator-react-webpack](https://github.com/newtriks/generator-react-webpack)
 * [generator-angular](https://www.npmjs.com/package/generator-angular)
 
-## SharePoint APIs
-While the SharePoint Framework provides the key integrations with the SharePoint experiences, APIs are key to interacting with the SharePoint and other workloads that shape your web part functionality. As the framework is targeted towards web development, REST APIs are preferred as the standard model to interact with SharePoint and other workloads. 
+## SharePoint REST APIs
 
-It is recommended you at least get familiar with the following set of REST APIs:
+The SharePoint Framework provides key integrations with SharePoint experiences and targets web development. The SharePoint REST APIs enable you to interact with  SharePoint and other workloads that shape your web part functionality. 
+
+We recommend that you become familiar with the following set of REST APIs:
+
 * [SharePoint List REST APIs](https://msdn.microsoft.com/EN-US/library/office/dn292552.aspx)
 
-## Get familiar with Office Dev PnP / SharePoint PnP
-We will be using [Office Dev Patterns and Practices / SharePoint Pattern and Practices (PnP)](http://aka.ms/officedevpnp) as the channel for sharing upcoming samples and patterns with the SharePoint Framework. PnP has provided similar guidance for add-in/app model development during past years and we want to ensure that you have a needed information for transforming your existing solution to SharePoint Framework, if you chose to do so. 
+## Patterns and Practices
 
-## Next steps
-* [Setup your Office 365 Developer Tenant](Setup-SharePoint-Tenant)
-* [Setup your Machine](Setup-your-machine)
-* [Go build Tutorial 1: HelloWorld WebPart](HelloWorld-WebPart)
-* [More Tutorials and Walkthroughs](Tutorials and Walkthroughs)
+The [Office Dev Patterns and Practices / SharePoint Pattern and Practices (PnP)](http://aka.ms/officedevpnp) initiative provides code samples, patterns, and other resources to help you transform your existing solution to the SharePoint Framework. Be sure to become familiar with the code samples and guidance that is available through the PnP effort.
+
+## Additional resources
+
+* [SharePoint Framework](sharepoint-framework-overview.md)
+* [Build a Hello World client-side web part](web-parts/build-a-hello-world-web-part.md)
