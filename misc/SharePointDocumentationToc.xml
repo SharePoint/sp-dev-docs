@@ -20,7 +20,7 @@
 				<Item text="Add properties to the property pane" url="spfx/web-parts/integrate-with-property-pane" SEODescription="Set up properties for your SharePoint client-side web part and manage them through the property pane." />
 				<Item text="Use Visual Studio" url="spfx/web-parts/use-visual-studio" SEODescription="Configure Visual Studio to open your SharePoint client-side web part project so that you can work with the project in Visual Studio." />
 				<Item text="Add an external library" url="spfx/web-parts/add-an-external-library" SEODescription="Add an external JavaScript library to your SharePoint client-side web part such as small libaries, non-AMD modules, and localized resources." />
-				<Item text="Working with the original __RequestDigest" url="spfx/web-parts/working-with-request-digest" SEODescription="" />
+				<Item text="Working with the original __RequestDigest" url="spfx/web-parts/working-with-requestdigest" SEODescription="" />
 				<Item text="Notes on solution packaging" url="spfx/web-parts/notes-on-solution-packaging" SEODescription="" />
 				<Item text="Use Angular" url="spfx/web-parts/use-angular" SEODescription="" />
 				<Item text="Known issues" url="spfx/web-parts/known-issues" SEODescription="" />
