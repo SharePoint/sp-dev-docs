@@ -79,7 +79,7 @@ code .
 
 If you get an error, you may need to [install the code command in PATH](https://code.visualstudio.com/docs/editor/setup).
     
-![HelloWorld web part project in Visual Studio Code](./images/helloworld-wp-vscode-project.png)
+![HelloWorld web part project in Visual Studio Code](../../../images/helloworld-wp-vscode-project.png)
 
 SharePoint client-side development tools use [gulp](http://gulpjs.com/) as its task runner which handles build process such as:
 * Bundle and minify JavaScript and CSS files.
@@ -102,26 +102,26 @@ gulp serve
 
 This command will execute a series of gulp tasks to create a local, Node-based HTTP server on 'localhost:4321' and launch your default browser to preview web parts from your local dev environment.
 
-![Gulp serve web part project](./images/helloworld-wp-gulp-serve.png)
+![Gulp serve web part project](../../../images/helloworld-wp-gulp-serve.png)
 
 ### SharePoint Workbench
 SharePoint Workbench is a developer design surface to quickly preview and test web parts without needing to deploy them in SharePoint. SharePoint Workbench includes the new client-side page and the new client-side canvas in which you can add, delete and test your web parts in development.
 
-![SharePoint Workbench running locally](./images/sp-workbench.png)
+![SharePoint Workbench running locally](../../../images/sp-workbench.png)
 
 To add the `HelloWorld` web part, click on the add (`plus icon`) button. Add button opens the new `Toolbox` where you can see a list of web parts available for you to add. The list will include the `HelloWorld` web part as well other web parts available locally in your developer environment.
 
-![SharePoint Workbench toolbox in localhost](./images/sp-workbench-toolbox.png)
+![SharePoint Workbench toolbox in localhost](../../../images/sp-workbench-toolbox.png)
 
 Click on the `HelloWorld` to add the webpart to the page:
 
-![HelloWorld web part in SharePoint Workbench](./images/sp-workbench-helloworld-wp.png)
+![HelloWorld web part in SharePoint Workbench](../../../images/sp-workbench-helloworld-wp.png)
 
 Congratulations! You have just added your first client-side web part to a client-side page.
 
 Now, click the `pencil icon` on the far left of the web part to reveal the web part property pane.
 
-![HelloWorld web part property pane](./images/sp-workbench-helloworld-pp.png)
+![HelloWorld web part property pane](../../../images/sp-workbench-helloworld-pp.png)
 
 The property pane is where you can define properties to customize your web part. The property pane is client-side driven and provides a consistent design across SharePoint. 
 
@@ -134,7 +134,7 @@ One of the new capabilities available to the property pane is to configure its u
 ## Step 5: Web part project structure
 Switch back to Visual Studio Code to explore the web part project structure. You can find the web part code under the `src\webparts\helloWorld` directory. 
 
-![HelloWorld project structure](./images/helloworld-wp-vscode-project-structure.png)
+![HelloWorld project structure](../../../images/helloworld-wp-vscode-project-structure.png)
 
 TypeScript is the primary language to build SharePoint client-side web parts. TypeScript is a typed superset of JavaScript that compiles to plain JavaScript. SharePoint client-side development tools are built using TypeScript classes, modules and interfaces to help developers build robust client-side web parts. 
 
@@ -365,25 +365,25 @@ Navigate to the following URL: https://your-sharepoint-site/Shared%20Documents/w
 
 By default, your browser is configured to not load scripts from localhost. Workbench will notify you if that is the case:
 
-![Load unsafe scripts to run scripts from localhost](./images/sp-workbench-o365-unsface-scripts.png) 
+![Load unsafe scripts to run scripts from localhost](../../../images/sp-workbench-o365-unsface-scripts.png) 
 
 In order to execute local scripts, you will need to configure the browser to load scripts from unauthenticated sources. This is due to loading scripts over HTTP while connected to a page via HTTPS. Depending on the browser you use, the options to enable this may vary. For example, in the Chrome browser, you can click the grey shield in the right side of the address bar to load unsafe scripts. 
 
-![Allow brwoser to load unsafe scripts to run scripts from localhost](./images/chrome-load-unsafe-scripts.png)
+![Allow brwoser to load unsafe scripts to run scripts from localhost](../../../images/chrome-load-unsafe-scripts.png)
 
 Once you enable to load the scripts, you should see the workbench load. Add the hello world web part to the canvas:
 
-![SharePoint Workbench running in a SharePoint Online site](./images/sp-workbench-o365.png)
+![SharePoint Workbench running in a SharePoint Online site](../../../images/sp-workbench-o365.png)
 
 Notice that the SharePoint Workbench now has the Office 365 Suite Nav bar.
 
 Click the `add icon` in the canvas to reveal the `toolbox`. The `Toolbox` now sbows the web parts available on the site where the SharePoint Workbench is hosted along with your `HelloWorldWebPart`.
 
-![Toolbox in SharePoint Workbench running in SharePoint Online site](./images/sp-workbench-o365-toolbox.png)
+![Toolbox in SharePoint Workbench running in SharePoint Online site](../../../images/sp-workbench-o365-toolbox.png)
 
 Add the `HelloWorldWebPart` from the toolbox. Now you are running your web part in a page hosted in SharePoint!
 
-![HelloWorld web part running in SharePoint Workbench running in a SharePoint Online site](./images/sp-workbench-o365-helloworld-wp.png)
+![HelloWorld web part running in SharePoint Workbench running in a SharePoint Online site](../../../images/sp-workbench-o365-helloworld-wp.png)
 
 Since you are still developing and testing your web part, there is no need to package and deploy your web part to SharePoint. 
 

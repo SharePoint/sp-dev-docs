@@ -7,7 +7,7 @@ This tutorial will guide you in building a simple web part that uses one of the 
 
 >Please note that Office UI Fabric React Components are in *in a pre-v1 state*, so we strongly encourage you to check out the [Roadmap](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/ghdocs/ROADMAP.md) to see what the v1 we're working towards entails and what this means for your usage of the controls set. 
 
-![DocumentBaseCard fabric component example](./images/fabric-components-doc-card-view-ex.png)
+![DocumentBaseCard fabric component example](../../../images/fabric-components-doc-card-view-ex.png)
 
 The React-based front-end framework for building experiences for Office and Office 365, Fabric React is a responsive, mobile-first collection of robust components designed to make it quick and simple for you to create web experiences using the Office Design Language.
 

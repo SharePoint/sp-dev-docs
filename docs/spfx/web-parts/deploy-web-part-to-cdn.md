@@ -23,7 +23,7 @@ This is the name you used to create your storage account as described in this [s
 
 As an example, in the screenshot below, we have used `spfxsamples` as the storage account name.
 
-![Create new storage account](./images/deploy-create-storage-account.png)
+![Create new storage account](../../../images/deploy-create-storage-account.png)
 
 This will create a new storage account endpoint `spfxsamples.blob.core.windows.net`.
 
@@ -36,12 +36,12 @@ Click the `+ Container` and create a new container with the following:
 * Name: `helloworld-webpart`
 * Access type: Container
 
->![Option to create blob container](./images/deploy-option-blob-container.png)
+>![Option to create blob container](../../../images/deploy-option-blob-container.png)
 
 ### Storage account access key
 In the storage account dashboard, click on `Access Key` in the dashboard and copy one of the access keys.
 
-![Storage account access key](./images/deploy-storag-account-accesskey.png)
+![Storage account access key](../../../images/deploy-storag-account-accesskey.png)
 
 ### CDN profile and endpoint
 Now that we have the storage account and the BLOB container created, we will create a new CDN profile and associate the CDN endpoint wit this BLOB container:
@@ -52,7 +52,7 @@ As an example, in the screenshot below, we have used `spfxwebparts` as the CDN p
 
 >If you get an error that the CDN profile name is already taken, try a different name.
 
-<img src="./images/deploy-create-cdn-profile.png" alt="Create a new CDN profile" width="300" height="400" />
+<img src="../../../images/deploy-create-cdn-profile.png" alt="Create a new CDN profile" width="300" height="400" />
 
 Now, create a CDN endpoint as described in this [step](https://azure.microsoft.com/en-us/documentation/articles/cdn-create-a-storage-account-with-cdn/#step-3-create-a-new-cdn-endpoint)
 
@@ -60,7 +60,7 @@ As an example, in the screenshot below, we have used `spfxsamples` as the endpoi
 
 >If you get an error that the CDN endpoint name is already taken, try a different name.
 
-<img src="./images/deploy-create-cdn-endpoint.png" alt="Create CDN endpoint" width="300" height="400" />
+<img src="../../../images/deploy-create-cdn-endpoint.png" alt="Create CDN endpoint" width="300" height="400" />
 
 The CDN endpoint will be created with the following URL:
 
@@ -194,7 +194,7 @@ Upload or drag & drop the client-side solution package to the App Catalog.
 
 Since we already had deployed the package, you will be prompted asking whether to replace the existing package.
 
-![Replace client-side solution package](./images/sp-app-replace-pkg.png)
+![Replace client-side solution package](../../../images/sp-app-replace-pkg.png)
 
 Click `Replace It`.
 
