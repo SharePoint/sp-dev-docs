@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SupportedProduct="|SharePoint" SupportedVersion="|V1.0|">
 	<Item text="SharePoint Framework" url="spfx/sharepoint-framework" SEODescription="">
-		<Item text="Overview" url="spfx/sharepoint-framework/sharepoint-framework-overview" SEODescription="The SharePoint Framework provides a modern developer experience for extending SharePoint."/>
-		<Item text="Tools and libraries" url="spfx/sharepoint-framework/tools-and-libraries" SEODescription="Learn about the tools and libriaries you will need to use to build your SharePoint Framework solutions."/>
-		<Item text="Web parts" url="spfx/sharepoint-framework/web-parts" SEODescription="">
+		<Item text="Overview" url="spfx/sharepoint-framework-overview" SEODescription="The SharePoint Framework provides a modern developer experience for extending SharePoint."/>
+		<Item text="Tools and libraries" url="spfx/tools-and-libraries" SEODescription="Learn about the tools and libriaries you will need to use to build your SharePoint Framework solutions."/>
+		<Item text="Web parts" url="spfx/web-parts" SEODescription="">
 			<Item text="Overview" url="spfx/web-parts/sharepoint-client-side-web-parts" SEODescription="Develop SharePoint client-side web parts to provide a better customized experience for SharePoint."/>
 			<Item text="Get started" url="spfx/">
 				<Item text="Set up your development environment" url="spfx/web-parts/set-up-your-development-environment" SEODescription="Set up and configure your development environment to build SharePoint client-side web parts" />
