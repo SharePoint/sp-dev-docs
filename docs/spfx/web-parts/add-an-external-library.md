@@ -29,22 +29,22 @@ tsd install {package} --save`
    >**Note:** Some libraries do not have typings. Validator is one of them. In this case you would want to define your own typings definition `.d.ts` file for the library. An incomplete example for
 the validator library is below.
 
-```typescript
+  ```typescript
    declare module "validator" {
      export function isEmail(email: string): boolean;
      export function isAscii(text: string): boolean;
-   }
-```
-
+   }  
+  ```
+  
 3. In your web part file, then import the typings:
 
-```typescript
-import * as validator from 'validator';
-```
+  ```typescript
+  import * as validator from 'validator';
+  ```
 
 4. Use the validator library in your web part code:
 
-```typescript
+  ```typescript
 validator.isEmail('foo@bar.com');
 ```
 
