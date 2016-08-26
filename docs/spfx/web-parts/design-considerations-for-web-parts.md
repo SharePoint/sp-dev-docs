@@ -45,7 +45,7 @@ The new SharePoint page authoring experience has two modes.
 
 #### Add hint and Toolbox
 
-The add hint is a horizontal line with a plus icon that is visible when a web part is selected and on hover to indicate where page authors can add new web parts to their page. The Toolbox opens when a user clicks/taps the plus icon. The Toolbox contains all the web parts that can be added to a page.
+The add hint is a horizontal line with a plus icon that is visible when a web part is selected and on hover to indicate where page authors can add new web parts to their page. The toolbox opens when a user clicks/taps the plus icon. The toolbox contains all the web parts that can be added to a page.
 
 ![Web part add hint and toolbox](../../../images/design-wp-toolbox.png)
 
