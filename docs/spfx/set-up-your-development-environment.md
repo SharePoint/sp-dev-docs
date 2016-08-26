@@ -15,7 +15,7 @@ You can use Visual Studio, or your own custom development environment to build S
 
    ```npm -g install npm@next```
 
-### If you are using a PC
+### If you're using a PC
 1. You need to install Python. Run the following command:
 
    ```npm install --global --production windows-build-tools```
