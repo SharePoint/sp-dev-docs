@@ -1,4 +1,4 @@
-# Known issues with client-side web parts
+# Known Issues with creating client-side web parts
 
 >**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
 
@@ -8,7 +8,7 @@ This article provides information about resolving known issues that can occur wh
 
 ### node-gyp rebuild error
 
-You may get the following error when you do `yo @microsoft/sharepoint`
+You may get the following error when you run `yo @microsoft/sharepoint`
 
 ```
 > bufferutil@1.2.1 install C:\Users\chakkaradeep\apps\helloworld-webpart\node_modules\bufferutil
@@ -17,21 +17,23 @@ You may get the following error when you do `yo @microsoft/sharepoint`
 MSBUILD : error MSB4132: The tools version "2.0" is unrecognized. Available tools versions are "4.0".
 ```
 
-While the console reports an error, it is safe to ignore this error. The dependency `bufferutil` tries to use MSBUILD to compile their tools and if not available, it uses its JavaScript tool instead, though it gives you an error.
+While the console reports an error, it is safe to ignore this error. The dependency `bufferutil` tries to use MSBUILD to compile its tools and if they are not available, it uses its JavaScript tool instead; though it gives you an error.
 
 ### Phantomjs error
+
 In Windows, you may get the following error:
 
 ```
 Failed at the phantomjs-prebuilt@2.1.6 install script 'node install.js'.
 ```
 
-This is because `phantomjs` is not able to find python to run the script. To fix this issue, you will need to add python directory and the python scripts directory to the PATH system environment variable and then close and reopen a new console session. For example, the python folder will be where you installed python `c:\python` and the scripts folder then will be `c:\python\scripts`
+This is because **phantomjs** is not able to find Python to run the script. To fix this issue, you need to add the Python directory and the Python scripts directory to the PATH system environment variable and then close and reopen the console session. For example, the Python folder will be where you installed Python **c:\python** and the scripts folder then will be **c:\python\scripts**.
 
 ## Issues running gulp serve
 
 ### Linux/case-sensitive file systems
-If you are using a linux OS, such as Ubuntu or Fedora, you might encounter the following error when you `gulp serve`:
+
+If you are using a Linux OS, such as Ubuntu or Fedora, you might encounter the following error when you run `gulp serve`:
 
 ```
 [20:59:42] Error - typescript - node_modules/@microsoft/sp-client-base/lib/index.d.ts(37,70): error TS2307: Cannot find module './odataTypes/IOdataNavigationNodeCollection'.
@@ -43,7 +45,7 @@ If you are using a linux OS, such as Ubuntu or Fedora, you might encounter the f
  "TypeScript error(s) occurred."
 ```
 
-This is due to a bug in the preview builds. You can use the following workaround to overcome this issue:
+This is due to a bug in the SharePoint Framework Developer Preview builds. You can use the following workaround to overcome this issue:
 
 In `@microsoft/sp-client-base/lib/index.d.ts`, change:
 
