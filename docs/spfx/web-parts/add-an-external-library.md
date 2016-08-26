@@ -39,13 +39,13 @@ the validator library is below.
 3. In your web part file, then import the typings:
 
 ```typescript
-   import * as validator from 'validator';
+import * as validator from 'validator';
 ```
 
 4. Use the validator library in your web part code:
 
 ```typescript
-   validator.isEmail('foo@bar.com');
+validator.isEmail('foo@bar.com');
 ```
 
 ## Sharing a library among multiple WebParts
