@@ -12,13 +12,13 @@ Be sure you have completed the procedures in the following articles before you s
 
 1. In the console window, go to the web part project directory created in [Build your first SharePoint client-side web part](./build-a-hello-world-web-part).
 
-  ```
-  cd helloworld-webpart
-  ```
+	```
+	cd helloworld-webpart
+	```
 
 2. If `gulp serve` is still running, stop it from running by choosing `Ctrl+C`
 
-  Unlike in the workbench, in order to use client-side web parts on classic SharePoint server-side pages, you need to deploy and register the web part with SharePoint. First you need to package the web part.
+	Unlike in the workbench, in order to use client-side web parts on classic SharePoint server-side pages, you need to deploy and register the web part with SharePoint. First you need to package the web part.
 
 3. Open the **HelloWorldWebPart** web part project in Visual Studio Code, or your preferred IDE.
 
@@ -26,18 +26,18 @@ Be sure you have completed the procedures in the following articles before you s
 
   The **package-solution.json** file defines the package metadata as shown in the following code:
 
-  ```json
-  {
-    "solution": {
-    "name": "helloworld-webpart-client-side-solution",
-    "id": "ed83e452-2286-4ea0-8f98-c79d257acea5",
-    "version": "1.0.0.0"
-    },
-    "paths": {
-    "zippedPackage": "helloworld-webpart.spapp"
-    }
-  }
-  ```
+	```json
+	{
+		"solution": {
+		"name": "helloworld-webpart-client-side-solution",
+		"id": "ed83e452-2286-4ea0-8f98-c79d257acea5",
+		"version": "1.0.0.0"
+		},
+		"paths": {
+		"zippedPackage": "helloworld-webpart.spapp"
+		}
+	}
+	```
 
 5. In the console window, enter the following command to package your client-side solution that contains the web part:
 
