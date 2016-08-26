@@ -20,7 +20,7 @@ The runtime model improves on the script editor web part. It includes a robust c
 
 If you work with C# and Visual Studio, or JavaScript, you might have to learn a little bit about client-side JavaScript development. Most of your knowledge is completely transferable. You’ll use the same REST services (or JSOM if that is more your style). The data model has not changed in any way. And if you are a C# developer, TypeScript is a nice transition into the JavaScript world. The choice of IDE is up to you. Many developers like to use the cross-platform IDE Visual Studio Code, and a plug-in for Visual Studio is available for working with the new development environment. Many developers also use products like Sublime and ATOM. Use what works best for you.
 
-## History of the SharePoint development model
+## Why the SharePoint Framework?
 
 SharePoint was launched as an on-premises product in 2001. Over time, a large developer community has extended and shaped it in many ways. For the most part, the developer community followed the same patterns and practices that the SharePoint product development team used, including web parts, SharePoint feature XML, and more. Many features were written in C#, compiled to DLLs, and deployed to the servers.
  
