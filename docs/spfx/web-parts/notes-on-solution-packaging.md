@@ -1,3 +1,5 @@
+# Notes on solution packaging
+
 >The SharePoint Framework is currently in Preview, and is subject to change based on customer feedback. While we’re in preview, SharePoint Framework web parts are not supported for use in production environments.
 
 ## Packaging
@@ -7,6 +9,7 @@ The **package-solution** gulp task looks at **/config/package-solution.json** fo
 ### The Config File
 
 The schema for the configuration file is as follows:
+
 ```javascript
 interface IPackageSolutionOptions {
   paths?: IPackageSolutionPathOptions;
@@ -17,6 +20,7 @@ interface IPackageSolutionOptions {
 Each package configuration file has some optional settings to override the places where the task will look for various source files & manifests, as well as defining the location to write the package. Additionally, it has a required solution definition, which instructs the packager on the relationships of various components.
 
 #### Solution Definition (_ISolution_)
+
 ```javascript
 interface ISolution {
   name: string;
@@ -26,11 +30,12 @@ interface ISolution {
 }
 ```
 
-Each solution file must have a **name**, which will serve to identify the package in the SharePoint UI. Additionally, each package must contain a globally unique identifier (**id**), which is used internally by SharePoint. Optionally, you may also specify a **version** number in the format "X.X.X.X", which is used to identify various versions of the package when upgrading.
+Each solution file must have a **name**, which identifies the package in the SharePoint UI. Additionally, each package must contain a globally unique identifier (**id**), which is used internally by SharePoint. Optionally, you may also specify a **version** number in the format "X.X.X.X", which is used to identify various versions of the package when upgrading.
 
 The solution definition also optionally contains a list of SharePoint Feature definitions. **Note:** If this is omitted or empty, the task will create a single Feature for every component (a 1:1 mapping).
 
 #### Feature Definition (_IFeature_)
+
 ```javascript
 interface IFeature {
   title: string;
@@ -46,6 +51,7 @@ It's important to note that this is a definition for creating a SharePoint Featu
 Each feature can also contain any number of components, which will be activated when the feature is activated. This is defined via a list of **componentIds**, which are globally unique identifiers that **MUST** match the **ID** in the component's Manifest file. If this list is undefined or empty the packager will include **every** component in the feature.
 
 #### File Paths (_IPackageSolutionPathOptions_)
+
 ```javascript
 interface IPackageSolutionPathOptions {
   rawPackageDir: string;
@@ -54,13 +60,14 @@ interface IPackageSolutionPathOptions {
 }
 ```
 
-* **rawPackageDir** is the directory in which the unzipped package files will be written
-* **zippedPackage** is the name of the zipped package, including extension (.spapp)
-* **featureXmlDir** is the directory in which custom feature xml is located
+* **rawPackageDir** is the directory in which the unzipped package files will be written.
+* **zippedPackage** is the name of the zipped package, including extension (.spapp).
+* **featureXmlDir** is the directory in which custom feature xml is located.
 
 #### Examples
 
 ##### Default Configuration
+
 ```json
 {
   "paths": {
@@ -75,7 +82,9 @@ interface IPackageSolutionPathOptions {
   }
 }
 ```
+
 #### Custom Feature.xml
+
 In order support provisioning of various SharePoint resources (such as List Templates, Pages, or Content Types), custom Feature XML may also be injected into the package. This is used in order to provision resources necessary for applications, but may also be used for WebParts. The documentation for Feature XML is located [here](https://msdn.microsoft.com/en-us/library/office/ms475601.aspx?f=255&MSPPError=-2147217396).
 
-By default, the packaging task looks for the custom Feature XML in `./sharepoint/feature_xml`. Every file in this folder will be included in the final application package. However, the task relies on the contents of the `_rels/` folder to determine which custom features are defined. Essentially, it assumes that each `.xml.rels` file is related to a feature.xml of the same name at the top level of the `feature_xml/`, and will add a relationship to the `AppManifest.xml.rels` file including that Feature in the package.
+By default, the packaging task looks for the custom Feature XML in **./sharepoint/feature_xml**. Every file in this folder will be included in the final application package. However, the task relies on the contents of the  _rels/ folder to determine which custom features are defined. Essentially, it assumes that each **.xml.rels** file is related to a feature.xml of the same name at the top level of the **feature_xml/**, and will add a relationship to the **AppManifest.xml.rels** file including that Feature in the package.
