@@ -3,7 +3,7 @@
 >The SharePoint Framework is currently in Preview, and is subject to change based on customer feedback.  While we’re in preview, SharePoint Framework web parts are not supported for use in production environments.
 
 ## Tutorial 2 Overview
-In this tutorial, we will continue with the web part project we created in the previous tutorial [HelloWorld Web Part](https://github.com/SharePoint/sp-dev-docs/wiki/HelloWorld-WebPart)
+In this tutorial, we will continue with the web part project we created in the previous tutorial [HelloWorld Web Part](./build-a-hello-world-web-part)
 
 Each step below will build on the previous so you will need to go through each step one by one to successfully complete this tutorial.
 
@@ -366,4 +366,4 @@ You should see lists returned from the current site:
 
 Switch to the console and stop `gulp serve`. Just press `Ctrl+C` to terminate the gulp task.
 
-In the next [tutorial](./HelloWorld,-Serving-in-SharePoint-Page), we will deploy and preview the `HelloWorld` web part in a Classic SharePoint server-side page.
+In the next [tutorial](./serve-your-web-part-in-a-sharepoint-page), we will deploy and preview the `HelloWorld` web part in a Classic SharePoint server-side page.

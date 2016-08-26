@@ -7,9 +7,9 @@ In this tutorial, we will deploy the `HelloWorld` assets to a remote CDN instead
 
 ## Tutorial pre-requisites
 As a pre-requisite, you should have completed the following tutorials before you start this tutorial:
-* [Tutorial 1 - HelloWorld Web Part](./HelloWorld-WebPart)
-* [Tutorial 2 - HelloWorld, Talking to SharePoint](./HelloWorld,-Talking-to-SharePoint) 
-* [Tutorial 3 - HelloWorld, Serving in Classic SharePoint Page](./HelloWorld,-Serving-in-SharePoint-Page)
+* [Tutorial 1 - HelloWorld Web Part](./build-a-hello-world-web-part)
+* [Tutorial 2 - HelloWorld, Talking to SharePoint](./connect-to-sharepoint) 
+* [Tutorial 3 - HelloWorld, Serving in Classic SharePoint Page](./serve-your-web-part-in-a-sharepoint-page)
 
 Each step below will build on the previous so you will need to go through each step one by one to successfully complete this lab.
 
@@ -41,7 +41,7 @@ Click the `+ Container` and create a new container with the following:
 ### Storage account access key
 In the storage account dashboard, click on `Access Key` in the dashboard and copy one of the access keys.
 
-![Storage account access key](../../../images/deploy-storag-account-accesskey.png)
+![Storage account access key](../../../images/deploy-storage-account-accesskey.png)
 
 ### CDN profile and endpoint
 Now that we have the storage account and the BLOB container created, we will create a new CDN profile and associate the CDN endpoint wit this BLOB container:
@@ -220,4 +220,4 @@ gulp --ship
 
 ## Next steps
 
-In the next [tutorial](./jQueryUI-Accordion-WebPart), we will see how to load jQuery, jQuery UI and build a jQuery Accordion WebPart.
+In the next [tutorial](./add-jqueryui-accordion-to-web-part), we will see how to load jQuery, jQuery UI and build a jQuery Accordion WebPart.

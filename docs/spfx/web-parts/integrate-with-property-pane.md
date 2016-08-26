@@ -4,7 +4,7 @@
 
 ## Overview
 
-The property pane allows end users to configure the web part with a bunch of properties.  In [Build your first web part](./HelloWorld-WebPart), you saw the property pane defined in the **HelloWorldWebPart** class. **propertyPaneSettings** property is where we defined the property pane properties.
+The property pane allows end users to configure the web part with a bunch of properties.  In [Build your first web part](./build-a-hello-world-web-part), you saw the property pane defined in the **HelloWorldWebPart** class. **propertyPaneSettings** property is where we defined the property pane properties.
 
 The following figure is an example of a property pane in SharePoint:
 
@@ -104,7 +104,7 @@ This is then available in your web part using **this.properties.targetProperty**
 <p class="ms-font-l ms-fontColor-white">${this.properties.description}</p>
 ```
 
-Once the properties are defined, you can then access them in your web part using the **this.properties.<property-value>**, as we do in the [**render** method of the **HelloWorldWebPart**](./HelloWorld-WebPart#web-part-render):
+Once the properties are defined, you can then access them in your web part using the **this.properties.<property-value>**, as we do in the [**render** method of the **HelloWorldWebPart**](./build-a-hello-world-web-part#web-part-render-method):
 
 ## Handling field changes
 
