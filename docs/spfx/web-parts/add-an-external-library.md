@@ -57,33 +57,33 @@ In this example we will share the [marked](https://www.npmjs.com/package/marked)
 
 1. download **marked** package from npm:
 
-```
+   ```
    npm install marked --save
-```
+   ```
 
 2. Download the typings:
 
-```
+   ```
    tsd install marked --save
-```
+   ```
 
 3. Edit the **config/config.json** and add an entry to the **externals** map. This is what tells the bundler to put this in a separate file. This prevents the bundler from bundling this library,
 
-```json
+   ```json
    "marked": "node_modules/marked/marked.min.js"
-```
+   ```
 
 4. Add the statement to import the `marked` library in your web part now that we have added the package and typings for the library, :
 
-```typescript
+   ```typescript
    import * as marked from 'marked';
- ```
+    ```
     
 5. Use the library in your web part:
 
-```typescript
+   ```typescript
    console.log(marked('I am using __markdown__.'));
-```
+   ```
 
 ## Loading a script from a CDN
 Instead of loading the library from a npm package, you may want to load a script from a CDN. To do so, you will edit the **config.json** file to load the library from its CDN URL.
@@ -95,27 +95,27 @@ As we are loading the library from CDN, we do not need to install the npm packag
 
 1. Install the typings for jQuery:
 
-```
+   ```
    tsd install jquery --save
-```
+   ```
 
 2. Update the `config.json` in the `config` folder to load jQuery from CDN. Add an entry to the `externals` field:
 
-```json
+   ```json
   "jquery": "https://code.jquery.com/jquery-3.1.0.min.js"
-```
+   ```
 
 3. Import jQuery in your web part:
 
-```typescript
+   ```typescript
    import * as $ from 'jquery';
-```
+   ```
 
 4. Use it in your web part:
 
-```javascript
+   ```javascript
    alert( $('#foo').val() );
-```
+   ```
 
 ## Loading a non-AMD module
 Some scripts follow the legacy JavaScript pattern of storing the library on the global namespace. This pattern
@@ -138,40 +138,40 @@ var ContosoJS = {
 
 1. create typings for the script in a file called **contoso.d.ts** in the WebPart folder.
 
-```typescript
-  declare module "contoso" {
+   ```typescript
+   declare module "contoso" {
       interface IContoso {
         say(text: string): void;
         sayHello(name: string): void;
       }
       var contoso: IContoso;
       export = contoso;
-  }
-```
+   }
+   ```
 
 
 2. Update the **config.json** file to include this script. Add an entry to the **externals** map:
 
- ```json
-{
-  "contoso": {
-     "path": "https://contoso.com/contoso.js",
-     "globalName": "ContosoJS"
+   ```json
+   {
+     "contoso": {
+        "path": "https://contoso.com/contoso.js",
+        "globalName": "ContosoJS"
+      }
    }
-}
-```
+   ```
 
 3. Add an import to your WebPart code:
 
-```typescript
-  import contoso from 'contoso';
-```
+   ```typescript
+   import contoso from 'contoso';
+   ```
 
 4. Use the contoso library in your code:
 
-```typescript
-  contoso.sayHello(username); 
-```
+   ```typescript
+     contoso.sayHello(username); 
+   ```
 
 ## Loading a library that has a dependency on another library
 Many libraries have dependencies on another library. You can specify such dependencies in the **config.json** file using the **globalDependencies** property.
