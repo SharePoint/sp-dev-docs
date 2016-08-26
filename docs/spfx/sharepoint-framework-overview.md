@@ -36,14 +36,23 @@ There are a couple of downsides to this approach, however. First, while you can 
 
 The current option for solutions that run in NoScript sites is the add-in/app-part model. This implementation creates an **iFrame** where the actual experience resides and executes. The advantage is that because it's external to the system and has no access to the current DOM/connection, it's easier for information workers to trust and deploy. End users can install add-ins on NoScript sites. 
 
-There are a couple of downsides though. First, they run in an **iFrame**. iFrames are slower than the script editor web part, because it requires a new request to another page. The page has to go through authentication and authorization, make its own calls to get SharePoint data, load various JavaScript libraries, and more. A script editor might typically take, for example, 100 milliseconds to load and render while an app-part might take 2 seconds or more. Additionally, the **iFrame** boundary makes it more difficult to create responsive designs, and inherit CSS and theming information. iFrames do have stronger security, which can be useful  for you (your page is inaccessible by other controls on the page) and for the end user (the control has no access to their connection to Office 365).
+There are a some downsides to this approach as well. First, they run in an **iFrame**. iFrames are slower than the script editor web part, because it requires a new request to another page. The page has to go through authentication and authorization, make its own calls to get SharePoint data, load various JavaScript libraries, and more. A script editor might typically take, for example, 100 milliseconds to load and render while an app-part might take 2 seconds or more. Additionally, the **iFrame** boundary makes it more difficult to create responsive designs, and inherit CSS and theming information. iFrames do have stronger security, which can be useful  for you (your page is inaccessible by other controls on the page) and for the end user (the control has no access to their connection to Office 365).
 
-Neither of these solutions work for the SharePoint product development team. Historically, we created web parts as full trust C# assemblies that were installed on the cloud servers. However, current development work is almost entirely JavaScript running in a browser making REST API calls to the SharePoint and Office 365 back-end workloads. C# assemblies don’t work in this world, so we needed a new development model.
+
+### SharePoint Framework 
+
+Historically, we created web parts as full trust C# assemblies that were installed on the cloud servers. However, current development models for the most part involve JavaScript running in a browser making REST API calls to the SharePoint and Office 365 back-end workloads. C# assemblies don’t work in this world. We needed a new development model. The SharePoint Framework is the next evolution in SharePoint development.
 
 ## What's next?
 
-This is the first preview release. We will provide updates and refinements over time based on your feedback and experiences. While the SharePoint Framework is in preview, you might experience occasional breaking changes around API names, flows, and more. After the SharePoint Framework preview release, future updates will be backward compatible, so that your solutions will continue to work.
+This is the first preview release. We will provide updates and refinements over time based on your feedback and experiences. While the SharePoint Framework is in preview, you might experience occasional breaking changes around API names, flows, and more. Future updates to the SharePoint Framework will be backward compatible, so that your solutions will continue to work.
 
 ## Questions?
 
 If you have any questions, post them on [SharePoint StackExchange](http://sharepoint.stackexchange.com/). Tag your questions and comments with #spfx, #spfx-webparts, and #spfx-tooling.
+
+## Additional resources
+
+
+
+- [Overview of SharePoint client-side web parts](web-parts/overview-client-side-web-parts.md)
