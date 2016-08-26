@@ -2,23 +2,26 @@
 
 >**Note:** The SharePoint Framework is currently in Preview, and is subject to change based on customer feedback.  While we’re in preview, SharePoint Framework web parts are not supported for use in production environments.
 
-SharePoint Framework is client-side driven and uses a variety of open source tools to enable SharePoint development. It relies heavily on node and npm to provide you with a local/debug runtime environment and a robust package eco-system respectively. Tools like gulp, webpack etc., depend on the availability of node runtime environment. 
+SharePoint Framework is client-side driven and uses a variety of open source tools to enable SharePoint development. It relies heavily on node and npm to provide you with a local/debug runtime environment and a robust package eco-system respectively. Tools like gulp, webpack etc., depend on the availability of node runtime environment.
 
-## Node.js Tools for Visual Studio 
+## Node.js Tools for Visual Studio
+
 With the help of [Node.js Tools for Visual Studio](https://www.visualstudio.com/en-us/features/node-js-vs.aspx), you can use Visual Studio as your primary IDE for building client-side web parts and applications. Node.js Tools for Visual Studio is a free, open source plugin that turns Visual Studio into a Node.js IDE. It is designed, developed, and supported by Microsoft and the community, just like the SharePoint Framework.
 
 ## Install Required Tools
+
 * [Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=691978&clcid=0x409)
-* Latest Visual Studio Update
-    * [Visual Studio Update 3](https://www.visualstudio.com/en-us/news/releasenotes/vs2015-update3-vs)
+* Latest Visual Studio Update 3 or later: [Visual Studio Update 3](https://www.visualstudio.com/en-us/news/releasenotes/vs2015-update3-vs)
 * [Node.js Tools for Visual Studio](https://aka.ms/getntvs)
 
 ## Load SharePoint Client-side Project in Visual Studio
+
 With little effort, you can load your SharePoint client-side project into Visual Studio. Follow the steps below to use Visual Studio as your development environment for building client-side web parts and applications.
 
 > Please note this applies only to the preview release. It is expected the integration with Visual Studio will be improved as we progress towards the final release.
 
 ### Yo SharePoint
+
 The first step is to create the SharePoint client-side project. We will use the Yeoman SharePoint Generator to create the project.
 
 1. Create a new project directory in your favorite location:
@@ -27,19 +30,20 @@ The first step is to create the SharePoint client-side project. We will use the 
    md hello-vs-webpart
    ```
 
-2. Navigate to the project directory:
+1. Navigate to the project directory:
 
    ```
    cd hello-vs-webpart
    ```
 
-3. Create a new client-side web part project by running the Yeoman SharePoint Generator:
+1. Create a new client-side web part project by running the Yeoman SharePoint Generator:
 
    ```
    yo @microsoft/sharepoint
    ```
 
 ### Import Project into Visual Studio
+
 There are two ways to open your client-side project in Visual Studio. Ideally, we would only have one. To make sure you get the best experience with Visual Studio, use whichever steps works best for you.
 
 If opening the **.njsproj** doesn't work for you, you can try importing the client-side solution project into Visual Studio. We are working on getting project file properly created directly from scaffolding.
@@ -90,7 +94,7 @@ Notice how you got a npm package explorer as well (found by extending npm node i
    * **Script (startup file)**: node_modules\gulp\bin\gulp.js
    * **Script arguments**: serve
 
-![Update project settings"](../../../images/hello-vs-webpart-update-properties.png) 
+![Update project settings](../../../images/hello-vs-webpart-update-properties.png) 
 
 ### Build and Debug Project
 
@@ -124,7 +128,7 @@ You will use Visual Studio's Task Runner to explore and execute the available co
 * Press *Ctrl+Alt+BkSpace*, or,
 * Navigate to the following menu item: *View->Other Windows->Task Runner Explorer*
 
-![Update project settings"](../../../images/hello-vs-webpart-task-runner.png) 
+![Update project settings](../../../images/hello-vs-webpart-task-runner.png) 
 
 Task Runner Explorer makes is easier to view available gulp commands and run them when needed. Just right click on a gulp command to reveal the context menu to run a specific command. 
 
