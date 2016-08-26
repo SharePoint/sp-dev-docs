@@ -4,13 +4,14 @@
 
 ## Overview
 
-The property pane allows end users to configure the web part with a bunch of properties.  In [Tutorial 1](./HelloWorld-WebPart), you saw the property pane defined in the `HelloWorldWebPart` class. `propertyPaneSettings` property is where we defined the property pane properties.
+The property pane allows end users to configure the web part with a bunch of properties.  In [Build your first web part](./HelloWorld-WebPart), you saw the property pane defined in the **HelloWorldWebPart** class. **propertyPaneSettings** property is where we defined the property pane properties.
 
-Below is an example of a property pane in SharePoint:
+The following figure is an example of a property pane in SharePoint:
 
 ![Property Pane Example](../../../images/property-pane-example.png)
 
-Property pane has three key metadata: 
+Property pane has three key metadata:
+
 * Pages
 * Header
 * Groups
@@ -25,7 +26,7 @@ Property fields are then defined inside a group.
 
 ## Using property pane
 
-Here is a sample code to initialize and configure property pane in your web part. We create a method of type `IPropertyPaneSettings` and return a collection of property pane page(s).
+Here is a sample code to initialize and configure property pane in your web part. We create a method of type **IPropertyPaneSettings** and return a collection of property pane page(s).
 
 ```ts
 protected get propertyPaneSettings(): IPropertyPaneSettings {
@@ -49,21 +50,23 @@ protected get propertyPaneSettings(): IPropertyPaneSettings {
     ]
   };
 }
-``` 
+```
+
 ### Property pane fields
 
 The following field types are supported:
+
 * Label
 * Textbox
 * Multi-line Textbox
 * Checkbox
 * Dropdown
-* Link 
+* Link
 * Slider
 * Toggle
-* Custom 
+* Custom
 
-The field types are available as modules in `sp-client-platform` and hence requires an import before you can use them in your code:
+The field types are available as modules in **sp-client-platform** and hence requires an import before you can use them in your code:
 
 ```ts
 import {
@@ -77,14 +80,15 @@ import {
 } from '@microsoft/sp-client-preview';
 ```
 
-Every field type constructor is defined as follows, taking `PropertyPaneTextField` as an example:
+Every field type constructor is defined as follows, taking **PropertyPaneTextField** as an example:
 
 ```ts
 PropertyPaneTextField('targetProperty',{
   //field properties are defined here
 })
 ```
-`targetProperty` defines the associated object for that field type and is also defined in the props interface in your web part.
+
+**targetProperty** defines the associated object for that field type and is also defined in the props interface in your web part.
 
 To assign types to these properties, we define an interface in our web part class that includes one or more target properties.
 
@@ -94,17 +98,18 @@ export interface IHelloWorldWebPartProps {
 }
 ```
 
-This is then available in your web part using `this.properties.targetProperty`.
+This is then available in your web part using **this.properties.targetProperty**.
 
 ```ts
 <p class="ms-font-l ms-fontColor-white">${this.properties.description}</p>
 ```
 
-Once the properties are defined, you can then access them in your web part using the `this.properties.<property-value>`, as we do in the [`render` method of the `HelloWorldWebPart`](./HelloWorld-WebPart#web-part-render):
+Once the properties are defined, you can then access them in your web part using the **this.properties.<property-value>**, as we do in the [**render** method of the **HelloWorldWebPart**](./HelloWorld-WebPart#web-part-render):
 
 ## Handling field changes
 
 Property Pane has two interaction modes:
+
 * Reactive
 * Non-reactive
 
@@ -116,7 +121,7 @@ While reactive mode suffices many scenarios, at times you will need non-reactive
 
 Add the following field definiton in a **groupFields** array.
 
-```ts 
+```ts
 {
   type: IPropertyPaneFieldType.Custom,
   targetProperty: 'custom',
@@ -128,7 +133,7 @@ Add the following field definiton in a **groupFields** array.
 }
 ```
 
-Add the following types to the `@microsoft/sp-client-platform` imports
+Add the following types to the **@microsoft/sp-client-platform** imports
 
 ```ts
 IPropertyPaneFieldType,
@@ -142,7 +147,3 @@ private _customFieldRender(elem: HTMLElement, context: any, onChanged?: IOnCusto
     elem.innerHTML = '<input id="password" type="password" name="password" class="ms-TextField-field">';
 }
 ```
-
- 
-
-
