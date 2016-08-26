@@ -11,7 +11,7 @@ With the help of [Node.js Tools for Visual Studio](https://www.visualstudio.com/
 * [Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=691978&clcid=0x409)
 * Latest Visual Studio Update
     * [Visual Studio Update 3](https://www.visualstudio.com/en-us/news/releasenotes/vs2015-update3-vs)
-* [Node.js Tools for Visual Studio](https://github.com/Microsoft/nodejstools/releases/download/v1.2.Dev-7.20.2016/NTVS.Dev.2016-07-20.VS.2015.msi)
+* [Node.js Tools for Visual Studio](https://aka.ms/getntvs)
 
 ## Load SharePoint Client-side Project in Visual Studio
 With little effort, you can load your SharePoint client-side project into Visual Studio. Follow the steps below to use Visual Studio as your development environment for building client-side web parts and applications.
@@ -49,11 +49,11 @@ If opening the **.njsproj** doesn't work for you, you can try importing the clie
 1. In the **New Project** dialog, select the **Templates->Other languages->TypeScript->Node.js** and then **From Existing Node.js code** project template.
 Name the project the same name as your SharePoint client-side project, that is, *hello-vs-webpart*, and choose the location of the client-side project as the location, and click *OK*.
 
-   ![New TypeScript Node.js Project](../../../images/hello-vs-webpart-new-project-ts-nodejs.PNG)
+   ![New TypeScript Node.js Project](../../../images/hello-vs-webpart-new-project-ts-nodejs.png)
 
 2. In the project wizard, choose the client-side project folder as the folder containing your Node.js code, and click *Next* to continue.
 
-   ![Node.js Project Wizard](../../../images/hellow-vs-webpart-step1-wizard.PNG)
+   ![Node.js Project Wizard](../../../images/hellow-vs-webpart-step1-wizard.png)
 
 3. choose *Next* to continue.
 
@@ -61,17 +61,17 @@ Name the project the same name as your SharePoint client-side project, that is, 
 
 5. Choose *Finish* to import the client-side project into Visual Studio.
 
-   ![Node.js Project Wizard](../../../images/hello-vs-webpart-finish-wizard.PNG)
+   ![Node.js Project Wizard](../../../images/hello-vs-webpart-finish-wizard.png)
 
 ## Explore the Project
 
 Now that Visual Studio has imported your client-side project, take a moment to explore the project in Visual Studio.
 
-![Node.js Project Wizard](../../../images/hello-vs-webpart-soln-explorer.PNG)
+![Node.js Project Wizard](../../../images/hello-vs-webpart-soln-explorer.png)
 
 Notice how you got a npm package explorer as well (found by extending npm node in the project):
 
-![Node.js NPM Package Explorer](../../../images/hello-vs-webpart-npm-explorer.PNG)
+![Node.js NPM Package Explorer](../../../images/hello-vs-webpart-npm-explorer.png)
 
 ### Modify gulpfile.js
 
@@ -86,11 +86,11 @@ Notice how you got a npm package explorer as well (found by extending npm node i
 
 ### Setup Project Startup File
 
-1. In the project properties, change the following properties to their corresponding values as shown below:For launching the project from within Visual Studio (F5), 
+* In the project properties, change the following properties to their corresponding values as shown below:For launching the project from within Visual Studio (F5), 
    * **Script (startup file)**: node_modules\gulp\bin\gulp.js
    * **Script arguments**: serve
 
-![Update project settings"](../../../images/hello-vs-webpart-update-properties.PNG) 
+![Update project settings"](../../../images/hello-vs-webpart-update-properties.png) 
 
 ### Build and Debug Project
 
@@ -124,7 +124,7 @@ You will use Visual Studio's Task Runner to explore and execute the available co
 * Press *Ctrl+Alt+BkSpace*, or,
 * Navigate to the following menu item: *View->Other Windows->Task Runner Explorer*
 
-![Update project settings"](../../../images/hello-vs-webpart-task-runner.PNG) 
+![Update project settings"](../../../images/hello-vs-webpart-task-runner.png) 
 
 Task Runner Explorer makes is easier to view available gulp commands and run them when needed. Just right click on a gulp command to reveal the context menu to run a specific command. 
 
