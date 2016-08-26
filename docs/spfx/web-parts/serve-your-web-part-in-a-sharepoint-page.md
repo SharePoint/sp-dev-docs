@@ -1,210 +1,192 @@
-#Serve your client-side web part in a SharePoint page
+# Deploy your client-side web part to a classic SharePoint page (Hello world part 3)
 
->**Note:** The SharePoint Framework is currently in Preview, and is subject to change based on customer feedback.  While we’re in preview, SharePoint Framework web parts are not supported for use in production environments.
+>**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
 
-## Tutorial 3 Overview
-In this tutorial, we will deploy the client-side web part to SharePoint and see it working on a classic SharePoint server-side page.
+In this article you will learn how to deploy your client-side web part to SharePoint and see it working on a classic SharePoint server-side page. This article continues with the hello world web part built in the previous article [Connect your client-side web part to SharePoint](./connect-to-sharepoint).
 
-## Tutorial pre-requisites
-As a pre-requisite, you should have completed the following tutorials before you start this tutorial:
-* [Tutorial 1 - HelloWorld Web Part](./build-a-hello-world-web-part)
-* [Tutorial 2 - HelloWorld, Talking to SharePoint](./connect-to-sharepoint) 
+Be sure you have completed the procedures in the following articles before you start:
+* [Build your first SharePoint client-side web part](./build-a-hello-world-web-part)
+* [Connect your client-side web part to SharePoint](./connect-to-sharepoint)
 
-Each step below will build on the previous so you will need to go through each step one by one to successfully complete this lab.
+## Package the HelloWorld web part
 
-## Step 1: Project directory
-Switch to console and make sure you are still in the project directory used in Tutorial 1 and 2. 
+1. In the console window, go to the web part project directory created in [Build your first SharePoint client-side web part](./build-a-hello-world-web-part). 
 
-Else, navigate to your project directory:
+   ```
+   cd helloworld-webpart
+   ```
 
-```
-cd helloworld-webpart
-```
+2. If `gulp serve` is still running, stop it from running by choosing `Ctrl+C`
 
-If you still have `gulp serve` running, terminate the ask by pressing `Ctrl+C`
+   Unlike in the workbench, in order to use client-side web parts on classic SharePoint server-side pages, you need to deploy and register the web part with SharePoint. First you need to package the web part.
 
-## Step 2: Package the HelloWorld web part
-Unlike in the workbench, in order to support client-side web parts in classic SharePoint server-side pages, we will need to deploy and register the web part with SharePoint.
+3. Open the **HelloWorldWebPart** web part project in Visual Studio Code, or your preferred IDE.
 
-To do so, we will first need to package the web part.
+4. Open **package-solution.json** from the **config** folder.
 
-Switch to Visual Studio Code. Make sure you have the `HelloWorldWebPart` web part project open. If not, open the project.
+   The `package-solution.json` defines the package metadata as shown in the following code:
 
-Open `package-solution.json` from `config` folder.
+   ```json
+   {
+     "solution": {
+       "name": "helloworld-webpart-client-side-solution",
+       "id": "ed83e452-2286-4ea0-8f98-c79d257acea5",
+       "version": "1.0.0.0"
+     },
+     "paths": {
+       "zippedPackage": "helloworld-webpart.spapp"
+     }
+   }
+   ```
 
-The `package-solution.json` defines the package metadata:
+5. In the console window, enter the following command to package your client-side solution that contains the web part:
 
-```json
-{
-  "solution": {
-    "name": "helloworld-webpart-client-side-solution",
-    "id": "ed83e452-2286-4ea0-8f98-c79d257acea5",
-    "version": "1.0.0.0"
-  },
-  "paths": {
-    "zippedPackage": "helloworld-webpart.spapp"
-  }
-}
-```
+   ```
+   gulp package-solution
+   ```
 
-Switch to the console window, and type the following to package your client-side solution that contains the web part:
+   The command will create the package in the `sharepoint` folder:
 
->If you still have `gulp serve` running, terminate the ask by pressing `Ctrl+C`
-
-```
-gulp package-solution
-```
-
-This will create the package in the `sharepoint` folder:
-
-```
-helloworld-webpart.spapp
-```
+   ```
+   helloworld-webpart.spapp
+   ```
 
 ### Package contents
+
 The package uses SharePoint Feature to package your web part. By default, the gulp task creates the following:
-* Feature for your web part
-* .webpart file for your web part, which is an XML file that describes the Web Part
+* A feature for your web part.
+* A .webpart file for your web part, which is an XML file that describes the Web Part.
 
-You can view the raw package contents in the `sharepoint` folder. 
+You can view the raw package contents in the **sharepoint** folder. 
 
-This is then packaged into an `.spapp` file. The package format is very similar to SharePoint add-ins package and uses Microsoft Open Packaging Conventions to package your solution. 
+The contents are then packaged into an **.spapp** file. The package format is very similar to a SharePoint add-ins package and uses Microsoft Open Packaging Conventions to package your solution. 
 
-As you can see, the JavaScript files, CSS and other assets are not packaged as you will have to deploy them to an external location such as CDNs. In order to test the web part during development, you can load all the assets from your local machine. 
+The JavaScript files, CSS and other assets are not packaged and you will have to deploy them to an external location such as a CDN. In order to test the web part during development, you can load all the assets from your local computer. 
 
-## Step 3: Deploy HelloWorld package to app catalog
-We now need to deploy the package we generated in the previous step to the App Catalog.
+## Deploy the HelloWorld package to app catalog
 
-Navigate to your site's App Catalog.
+Next you need to deploy the package that was generated to the App Catalog.
 
-Upload or drag & drop the `helloworld-webpart.spapp` to the App Catalog.
+1. Go to your site's App Catalog.
 
-![Upload solution to app catalog](../../../images/upload-solution-app-catalog.png) 
+2. Upload or drag and drop the **helloworld-webpart.spapp** to the App Catalog.
 
-This will deploy the client-side solution package. 
+   ![Upload solution to app catalog](../../../images/upload-solution-app-catalog.png) 
 
-Since this is a full trust client-side solution, SharePoint will display a dialog and ask you to trust the client-side solition to deploy.
+   This will deploy the client-side solution package. Since this is a full trust client-side solution, SharePoint will display a dialog and ask you to trust the client-side solution to deploy.
 
-![Trust client-side solution deployment](../../../images/sp-app-deploy-trust.png) 
+   ![Trust client-side solution deployment](../../../images/sp-app-deploy-trust.png) 
 
-Click `Deploy`
+3. Choose **Deploy**
 
-## Step 4: Install the client-side solution in your site
-Navigate to your developer site collection.
+## Install the client-side solution on your site
 
-Click on the `gears` icon on the top bar on the right and click `Add an app` to navigate to your Your Apps page.
+1. Go to your developer site collection.
 
-In the Search box, type `helloworld` and press `Enter` to filter your apps.
+2. Choose the gears icon on the top nav bar on the right and choose **Add an app** to go to your Apps page.
 
-![Add app to site](../../../images/install-app-your-site.png) 
+3. In the **Search** box, enter **helloworld** and choose **Enter** to filter your apps.
 
-Click on the `helloworld-webpart-client-side-solution` app to install the app in the site.
+   ![Add app to site](../../../images/install-app-your-site.png) 
 
-![Trust app](../../../images/app-installed-your-site.png) 
+4. Choose the **helloworld-webpart-client-side-solution** app to install the app on the site.
 
-This will install the client-side solution and the web part in your developer site.
+  ![Trust app](../../../images/app-installed-your-site.png) 
 
-Site Contents page will show you the installation status of your client-side solution. Make sure the installation is  complete before going to the next step. 
+   The client-side solution and the web part are installed on your developer site.
 
-## Step 5: Preview web part in a classic SharePoint page
-Now that we have deployed and installed the client-side solution, lets add the web part to a classic SharePoint page.
+  The **Site Contents** page will show you the installation status of your client-side solution. Make sure the installation is complete before going to the next step.
 
-Remember that our resources such as JavaScripts, CSS etc., are available in the local machine.  
+## Preview the web part in a classic SharePoint page
 
-Switch to Visual Studio Code and open `<your-webpart-guid>.manifest.json` in `\dist` folder.
+Now that you have deployed and installed the client-side solution, add the web part to a classic SharePoint page. Remember that resources such as JavaScripts, and CSS, are available from the local computer.
 
-Notice the `internalModuleBaseUrls` property in the `loaderConfig` entry:
+1. Open the **<your-webpart-guid>.manifest.json** from the **\dist** folder.
 
-```json
-"internalModuleBaseUrls": [
-  "http://`your-local-machine-name`:4321/"
-]
-```
+   Notice that the **internalModuleBaseUrls** property in the **loaderConfig** entry still refers to your local computer:
 
-It still refers to your local machine.
+   ```json
+   "internalModuleBaseUrls": [
+     "http://`your-local-machine-name`:4321/"
+   ]
+   ```
 
-So, before we add the web part to a SharePoint server-side page, lets run the local server.
+   Before adding the web part to a SharePoint server-side page, run the local server.
 
-Switch to the console window that has the `helloworld-webpart` project directory.
+2. In the console window that has the **helloworld-webpart** project directory, run the gulp task to start serving from localhost:
 
-Execute the gulp task to start serving from localhost:
+   ```
+   gulp serve --nobrowser
+   ```
 
-```
-gulp serve --nobrowser
-```
+   >**Note:** `--nobrowser` will not automatically launch the Web Part Workbench.
 
-> `--nobrowser` will not automatically launch the Web Part Workbench.
+## Add the HelloWorld web part to classic page
 
-### Add HelloWorld web part to classic page
-Switch to your browser and navigate to your site collection.
+1. In your browser go to your site collection.
 
-To create a classic page, navigate to `SitePages` library in your site.
-* Click on the `gears` icon on the top bar on the right and click `Site Contents`.
-* Click on `SitePages` library icon to navigate to `SitePages` library.
-* Click `New` to create a classic SharePoint page.
-* Enter `HelloWorld` as the page name.
-* Click `Create` button to create the web part page.
+   In the next steps, create a classic page, and go to the **SitePages** library in your site.
 
-SharePoint will create your page.
+2. Choose the gears icon in the top nav bar on the right and choose **Site Contents**.
 
-In the Ribbon, click `Insert`, then `Web Part` to open the Web Part Gallery.
+3. Choose the **SitePages** library icon to go to the **SitePages** library.
 
-In the Web Part Gallery, click on the category `Custom`.
+4. Choose **New** to create a classic SharePoint page.
 
->For this preview, client-side web parts will be available under the `Custom` category in the web part gallery. 
+5. Enter **HelloWorld** as the page name.
 
-You should see your Hello World web part.
+6. Choose the **Create** button to create the web part page.
 
-![Web Part gallery opened with custom category](../../../images/webpart-gallery-helloworld.png)
+   SharePoint will create your page.
 
-Select the Hello World web part and click `Add` to add it to the page.
+7. In the ribbon, choose **Insert -> Web Part** to open the Web Part Gallery.
 
-Since we are loading the web part assets from local environment, in order to load the scripts hosted in your local machine, we need to enable the browser to load unsafe scripts. Depending on the browser you are using, make sure you enable loading unsafe scripts for this session. 
+8. In the Web Part Gallery, choose the category **Custom**.
 
-You should now see the `HelloWorld` web part we built in Tutorial 2 that retrieves lists from the current site. 
+   >**Note:** During preview, client-side web parts will be available under the **Custom** category in the web part gallery. 
 
-![Hello World web part in classic page](../../../images/sp-wp-classic-page.png)
+   You should see your Hello World web part.
 
-### Edit web part properties
-Click the web part edit menu and click on `Edit Web Part' to open the web part Property Pane.
+   ![Web Part gallery opened with custom category](../../../images/webpart-gallery-helloworld.png)
 
-![Edit Web Part](../../../images/edit-webpart-classic-page.png)
+9. Select the Hello World web part and choose **Add** to add it to the page.
 
-As you can see, this is a server-side web part property pane.
+10. The web part assets will be loaded from the local environment. In order to load the scripts hosted on your local computer, you need to enable the browser to load unsafe scripts. Depending on the browser you are using, make sure you enable loading unsafe scripts for this session.
 
-However, notice you have an option to configure the properties for your client-side web part.
+   You should see the **HelloWorld** web part you built in the previous article that retrieves lists from the current site. 
 
-![Configure web part - Property Pane options](../../../images/webpart-configure-property-pane.png)
+   ![Hello World web part in classic page](../../../images/sp-wp-classic-page.png)
 
-Click `Configure` button to reveal the new client-side Property Pane for your client-side web part.
+## Edit web part properties
 
-This is the same property pane we built and previewed in the workbench. 
+1. Choose the web part edit menu and choose **Edit Web Part** to open the property pane for the web part.
 
-Edit the `Description` property and type `Client-side web parts are awesome!`
+   ![Edit web part](../../../images/edit-webpart-classic-page.png)
 
-![Hello World web part in classic page](../../../images/sp-wp-classic-page-pp.png)
+   The property pane opens as a server-side web part property pane. However, you have an option to configure the properties for your client-side web part.
 
-Notice you still have the same behaviors such as a reactive pane where the web part is updated as you type.
+   ![Configure web part - Property Pane options](../../../images/webpart-configure-property-pane.png)
 
-Click the `x` icon to close the client-side property pane.
+2. Choose the **Configure** button to reveal the new client-side property pane for your client-side web part.
 
->NOTE: You will need to click the `x` icon several times to close the property pane. This is a known issue. 
+   This is the same property pane you built and previewed in the workbench.
 
-Click `Ok' button in the server-side property pane to save and close the web part property pane.
+3. Edit the **Description** property and enter **Client-side web parts are awesome!**
 
-Since this is running in a classic SharePoint page, clicking the `Ok` or `Apply` button will save the web part properties.
+   ![Hello World web part in classic page](../../../images/sp-wp-classic-page-pp.png)
 
-In the Ribbon, click `Save` to save the page.
+   Notice that you still have the same behaviors such as a reactive pane where the web part is updated as you type.
 
-Congratulations! You now have added a client-side web part to a classic SharePoint page. 
+4. Choose the **x** icon to close the client-side property pane.
+
+   >**Note:** You will need to choose the **x** icon several times to close the property pane. This is a known issue.
+
+5. Choose the **Ok** button in the server-side property pane to save and close the web part property pane.
+
+   Since the web part is running in a classic SharePoint page, choosing **Ok** or **Apply** buttons will save the web part properties.
+
+6. In the ribbon, choose **Save** to save the page.
 
 ## Next steps
 
-In the next [tutorial](./deploy-web-part-to-cdn), we will deploy and load the web part assets from CDN instead of localhost.
-
-
-
-
-
-
-
+Congratulations! You have deployed a client-side web part to a classic SharePoint page. You can continue building out your Hello World web part in the next topic, [Deploy your client-side web part source to a CDN](./deploy-web-part-to-cdn). ), where you will learn how to deploy and load the web part assets from a CDN instead of localhost.
