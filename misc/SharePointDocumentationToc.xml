@@ -22,7 +22,6 @@
 				<Item text="Add an external library" url="spfx/web-parts/add-an-external-library" SEODescription="Add an external JavaScript library to your SharePoint client-side web part such as small libaries, non-AMD modules, and localized resources." />
 				<Item text="Working with the original __RequestDigest" url="spfx/web-parts/working-with-requestdigest" SEODescription="" />
 				<Item text="Notes on solution packaging" url="spfx/web-parts/notes-on-solution-packaging" SEODescription="" />
-				<Item text="Use Angular" url="spfx/web-parts/use-angular" SEODescription="" />
 				<Item text="Known issues" url="spfx/web-parts/known-issues" SEODescription="" />
 			</Item>
 		</Item>
