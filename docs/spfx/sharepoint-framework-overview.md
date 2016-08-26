@@ -49,7 +49,9 @@ This is the first preview release. We will provide updates and refinements over 
 
 ## Questions?
 
-If you have any questions, post them on [SharePoint StackExchange](http://sharepoint.stackexchange.com/). Tag your questions and comments with [#spfx](http://sharepoint.stackexchange.com/tags/spfx/), [#spfx-webparts](http://sharepoint.stackexchange.com/tags/spfx-webparts/), and [#spfx-tooling](http://sharepoint.stackexchange.com/tags/spfx-tooling/). You can also post issues, questions, or feedback on the docs in our [GitHub repo](https://github.com/SharePoint/sp-dev-docs/issues).
+If you have any questions, post them on [SharePoint StackExchange](http://sharepoint.stackexchange.com/). Tag your questions and comments with [#spfx](http://sharepoint.stackexchange.com/tags/spfx/), [#spfx-webparts](http://sharepoint.stackexchange.com/tags/spfx-webparts/), and [#spfx-tooling](http://sharepoint.stackexchange.com/tags/spfx-tooling/). 
+
+You can also post issues, questions, or feedback on the docs or the SharePoint Framework in our [GitHub repo](https://github.com/SharePoint/sp-dev-docs/issues).
 
 ## Additional resources
 
