@@ -2,7 +2,7 @@
 
 >**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production enviornments.
 
-ITo build SharePoint client-side web parts you can use Visual Studio, or your own custom development environment. You can use a Mac, PC, or Linux.
+To build SharePoint client-side web parts you can use Visual Studio, or your own custom development environment. You can use a Mac, PC, or Linux.
 
 ## Install developer tools
 
