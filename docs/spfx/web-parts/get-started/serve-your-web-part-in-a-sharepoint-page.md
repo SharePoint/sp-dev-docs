@@ -24,7 +24,7 @@ Be sure you have completed the procedures in the following articles before you s
 
 4. Open **package-solution.json** from the **config** folder.
 
-  The `package-solution.json` defines the package metadata as shown in the following code:
+  The **package-solution.json** file defines the package metadata as shown in the following code:
 
   ```json
   {
@@ -38,7 +38,7 @@ Be sure you have completed the procedures in the following articles before you s
     }
   }
   ```
-  
+
 5. In the console window, enter the following command to package your client-side solution that contains the web part:
 
    ```
