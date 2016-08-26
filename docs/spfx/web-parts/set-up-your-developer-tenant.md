@@ -83,4 +83,4 @@ Follow the steps below to add the new field to the `Documents` library:
 While we will introduce and talk about the SharePoint Workbench in the tutorials, to get set up, download the [workbench.aspx](https://github.com/SharePoint/sp-dev-docs/blob/master/workbench.aspx) to your local machine. To do this, right click on the "raw" link around the middle of the page and select "Save Target As" or "Save Link As" (depending on your browser) to save the file as `workbench.aspx` to your local computer, and upload it to the `Documents` library in the dev site collection.
 
 ## Next steps
-Now that you have configured your SharePoint tenant, lets [setup your machine](./Setup-your-machine) to build client-side web parts.
+Now that you have configured your SharePoint tenant, lets [setup your machine](./set-up-your-development-environment) to build client-side web parts.

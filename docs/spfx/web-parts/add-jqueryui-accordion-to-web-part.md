@@ -352,4 +352,4 @@ Switch to the console where you have `gulp serve` running and terminate the task
 
 This concludes our tutorial. In this tutorial, we saw how to define, load and unbundle external dependencies and successfully built a jQueryUI accordion web part.
 
-In the [next ](./Using-Office-UI-Fabric-Components) tutorial, we will use Office UI Fabric in our client web part.
+In the [next ](./use-office-ui-react-components) tutorial, we will use Office UI Fabric in our client web part.

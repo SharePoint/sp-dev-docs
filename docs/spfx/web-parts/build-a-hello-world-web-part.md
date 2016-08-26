@@ -16,7 +16,7 @@ Client-side web parts will:
 
 ## Step 1: Setup your dev environment
 
-Follow the instructions [here](./Setup-your-machine) if you haven't setup your machine for building web parts.
+Follow the instructions [here](./set-up-your-development-environment) if you haven't setup your machine for building web parts.
 
 ## Step 2: Project Directory
 Create a new project directory in your favorite location:
@@ -54,7 +54,7 @@ At this point, yeoman will install the required dependencies and scaffold the so
 Once the scaffold is complete, you should see the following message indicating a successful scaffold:
 
 ![SharePoint client-side solution scaffolded successfully](../../../images/yeoman-sp-complete.png)
-If you get any errors, make sure you read the [known issues](./Known-Issues) document for specific errors and fixes.
+If you get any errors, make sure you read the [known issues](./known-issues) document for specific errors and fixes.
 
 ### Using your favorite Code Editor/IDE  
 Since the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor or IDE that supports client-side development to build your web part, such as:
@@ -64,7 +64,7 @@ Since the SharePoint client-side solution is HTML/TypeScript based, you can use 
 * [Webstorm](https://www.jetbrains.com/webstorm)
 
 #### Using Visual Studio 2015
-For this preview, support for SharePoint client-side projects in Visual Studio is available through NodeJS Tools for Visual Studio. See [separate tutorial](./Working-with-visual-studio) with Visual Studio 2015 support.
+For this preview, support for SharePoint client-side projects in Visual Studio is available through NodeJS Tools for Visual Studio. See [separate tutorial](./use-visual-studio) with Visual Studio 2015 support.
    
 ## Step 4: Preview web part
 Open the project folder in Visual Studio Code. 
@@ -165,7 +165,7 @@ export interface IHelloWorldWebPartProps {
 
 This property definition is used to define your custom property types for your web part, which we will see in the Property Pane section later below. 
 
-#### Web part render()
+#### Web part render method
 The DOM element where the web part should be rendered is available in the `render` method. This method is used to render the web part inside that DOM element. In our `HelloWorld` web part, we pass in the DIV to the DOM element. The method parameters include the display mode (either Read or Edit) and the configured web part properties if any: 
 
 ```ts
@@ -208,7 +208,7 @@ Once the properties are defined, you can then access them in your web part using
 <p class="ms-font-l ms-fontColor-white">${this.properties.description}</p>
 ```
 
-Visit the [Integrating Property Pane with a Web Part](./Integrating-Property-Pane) topic to get to know more about how to work with property pane and property pane field types.
+Visit the [Integrating Property Pane with a Web Part](./integrate-with-property-pane) topic to get to know more about how to work with property pane and property pane field types.
 
 Replace the `propertyPaneSettings` method with the code below which shows how to add property types other than TextField. 
 
@@ -392,4 +392,4 @@ This concludes our first tutorial in building client-side web parts.
 
 Notice that the `gulp serve` command is still running in your console window (or in Visual Studio Code if you using the editor). Let it run for now as we continue to the next tutorial.
 
-In the [next tutorial](./HelloWorld,-Talking-to-SharePoint), we will use the same Hello World web part project and add the ability to interact with SharePoint List REST APIs. 
+In the [next tutorial](./connect-to-sharepoint), we will use the same Hello World web part project and add the ability to interact with SharePoint List REST APIs. 

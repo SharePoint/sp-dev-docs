@@ -82,4 +82,4 @@ npm i -g @microsoft/generator-sharepoint
 ```
 
 ## Next steps
-You are all set now to [build SharePoint client-side solutions](./HelloWorld-WebPart)!
+You are all set now to [build SharePoint client-side solutions](./build-a-hello-world-web-part)!

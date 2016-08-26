@@ -199,5 +199,5 @@ gulp serve
 
 In the toolbox, select your `DocumentCardExample` web part to add:
 
-![Image of a DocumentCard Fabric component in a SharePoint workbench](./images/fabric-components-doc-card-view-ex.png)
+![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../images/fabric-components-doc-card-view-ex.png)
 

@@ -366,4 +366,4 @@ You should see lists returned from the current site:
 
 Switch to the console and stop `gulp serve`. Just press `Ctrl+C` to terminate the gulp task.
 
-In the next [tutorial](./HelloWorld,-Serving-in-SharePoint-Page), we will deploy and preview the `HelloWorld` web part in a Classic SharePoint server-side page.
+In the next [tutorial](./serve-your-web-part-in-a-sharepoint-page), we will deploy and preview the `HelloWorld` web part in a Classic SharePoint server-side page.

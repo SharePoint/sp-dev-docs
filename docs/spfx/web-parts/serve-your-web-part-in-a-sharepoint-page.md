@@ -7,8 +7,8 @@ In this tutorial, we will deploy the client-side web part to SharePoint and see 
 
 ## Tutorial pre-requisites
 As a pre-requisite, you should have completed the following tutorials before you start this tutorial:
-* [Tutorial 1 - HelloWorld Web Part](./HelloWorld-WebPart)
-* [Tutorial 2 - HelloWorld, Talking to SharePoint](./HelloWorld,-Talking-to-SharePoint) 
+* [Tutorial 1 - HelloWorld Web Part](./build-a-hello-world-web-part)
+* [Tutorial 2 - HelloWorld, Talking to SharePoint](./connect-to-sharepoint) 
 
 Each step below will build on the previous so you will need to go through each step one by one to successfully complete this lab.
 
@@ -200,7 +200,7 @@ Congratulations! You now have added a client-side web part to a classic SharePoi
 
 ## Next steps
 
-In the next [tutorial](./HelloWorld,-Deploy-to-CDN), we will deploy and load the web part assets from CDN instead of localhost.
+In the next [tutorial](./deploy-web-part-to-cdn), we will deploy and load the web part assets from CDN instead of localhost.
 
 
 
