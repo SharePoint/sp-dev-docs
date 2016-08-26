@@ -114,7 +114,7 @@ Create a new CDN profile and associate the CDN endpoint wit this BLOB container.
 
 4. Save the file.
 
-## Step 4: Prepare web part assets to deploy
+## Prepare web part assets to deploy
 
 Before uploading the assets to CDN, you need to build them.
 
