@@ -1,4 +1,4 @@
-# Build your first SharePoint client-side web part (Hello world part 1)
+# Build your first SharePoint client-side web part (Hello World part 1)
 
 >**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production enviornments.
 

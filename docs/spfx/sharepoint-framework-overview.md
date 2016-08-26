@@ -49,10 +49,8 @@ This is the first preview release. We will provide updates and refinements over 
 
 ## Questions?
 
-If you have any questions, post them on [SharePoint StackExchange](http://sharepoint.stackexchange.com/). Tag your questions and comments with #spfx, #spfx-webparts, and #spfx-tooling.
+If you have any questions, post them on [SharePoint StackExchange](http://sharepoint.stackexchange.com/). Tag your questions and comments with [#spfx](http://sharepoint.stackexchange.com/tags/spfx/), [#spfx-webparts](http://sharepoint.stackexchange.com/tags/spfx-webparts/), and [#spfx-tooling](http://sharepoint.stackexchange.com/tags/spfx-tooling/). You can also post issues, questions, or feedback on the docs in our [GitHub repo](https://github.com/SharePoint/sp-dev-docs/issues).
 
 ## Additional resources
-
-
 
 - [Overview of SharePoint client-side web parts](web-parts/overview-client-side-web-parts.md)
