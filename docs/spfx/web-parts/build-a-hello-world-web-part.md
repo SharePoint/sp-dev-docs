@@ -2,38 +2,41 @@
 
 >**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production enviornments.
 
-Client-side web parts are client-side components that run inside the context of a SharePoint page. Client-side web parts can be deployed to SharePoint online, and you can also use modern JavaScript tools and libraries to build them.
+Client-side web parts are client-side components that run inside the context of a SharePoint page. Client-side web parts can be deployed to SharePoint Online, and you can also use modern JavaScript tools and libraries to build them.
 
 Client-side web parts support:
+
 * Building with HTML and JavaScript.
 * Both SharePoint online and on-premises environments.
 
->**Note:** Before following the steps in this topic be sure you have [Set up your development environment](../set-up-your-development-environment).
+>**Note:** Before following the steps in this article, be sure to [Set up your development environment](../set-up-your-development-environment).
     
 ## Create a new web part project
 1. Create a new project directory in your favorite location.
-
-   ```
-   md helloworld-webpart
-   ```
+	
+	   ```
+	   md helloworld-webpart
+	   ```
 
 2. Go to the project directory.
 
-   ```
-   cd helloworld-webpart
-   ```
+	   ```
+	   cd helloworld-webpart
+	   ```
 
 3. Create a new HelloWorld web part by running the Yeoman SharePoint Generator.
 
-   ```
-   yo @microsoft/sharepoint
-   ```
+	   ```
+	   yo @microsoft/sharepoint
+	   ```
     
-   You will be prompted with a series of questions.
+When prompted:
+
 4. Accept the default **helloworld-webpart** as your solution name and choose **Enter**.
 5. Select **Use the current folder** for where to place the files.
 
-   The next set of prompts will ask for specific information about your web part:
+The next set of prompts will ask for specific information about your web part:
+
 6.  Accept the default **HelloWorld** as your web part name and choose **Enter**.
 7.  Accept the default **HelloWorld description** as your web part description and choose **Enter**.
 8.  Accept the default **No javascript web framework** as the framework you would like to use and choose **Enter**.
@@ -49,16 +52,17 @@ When the scaffold is complete, you should see the following message indicating a
 For information about troubleshooting any errors, see [Known issues](./known-issues).
 
 ### Using your favorite Code Editor/IDE  
-Since the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor or IDE that supports client-side development to build your web part, such as:
+Because the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor or IDE that supports client-side development to build your web part, such as:
+
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Sublime](https://www.sublimetext.com/)
 * [Atom](https://atom.io)
 * [Webstorm](https://www.jetbrains.com/webstorm)
 
->**Note:** This topic shows Visual Studio code in the steps and examples. But you can use any IDE that you prefer. 
+>**Note:** This article uses Visual Studio code in the steps and examples. You can use any IDE that you prefer. 
 
 ### Using Visual Studio 2015
-Currently support for SharePoint client-side projects in Visual Studio is available through Node.js Tools for Visual Studio. For more information, see [Use Visual Studio to develop web parts](./use-visual-studio-to-develop-web-parts).
+Currently, support for SharePoint client-side projects in Visual Studio is available through Node.js Tools for Visual Studio. For more information, see [Use Visual Studio to develop web parts](./use-visual-studio-to-develop-web-parts).
    
 ## Preview the web part
 To preview your web part, build and run it on a local web server. 
@@ -76,6 +80,7 @@ This command will execute a series of gulp tasks to create a local, Node-based H
 >**Note:** If you get the error **cannot find module es6-promise**, run the following command in the project folder to install the es-promise npm module: `npm i es6-promise` and then run `gulp serve` again.
 
 SharePoint client-side development tools use [gulp](http://gulpjs.com/) as the task runner to handle build process tasks such as:
+
 * Bundle and minify JavaScript and CSS files.
 * Run tools to call the bundling and minification tasks before each build.
 * Compile SASS files to CSS.
@@ -114,6 +119,7 @@ One of the new capabilities available to the property pane is to configure its u
 
 ## Web part project structure
 You can use Visual Studio Code to explore the web part project structure. 
+
 1. In the console, go to the **src\webparts\helloWorld** directory. 
 2. Enter the following command to open the web part project in Visual Studio Code (or use your favorite editor):
 
@@ -342,7 +348,8 @@ The **HelloWorldWebPart.manifest.json** file defines the web part metadata such 
 }
 ```
 ### Preview the web part in SharePoint
-So far, we have previewed the web part in the web part workbench hosted locally in your machine. SharePoint workbench is also hosted in SharePoint to preview and test your local web parts in development. The key advantage is that now you are running in SharePoint context and that you will be able to interact with SharePoint data.
+
+SharePoint workbench is also hosted in SharePoint to preview and test your local web parts in development. The key advantage is that now you are running in SharePoint context and that you will be able to interact with SharePoint data.
 
 1. Go to the following URL: 'https://your-sharepoint-site/Shared%20Documents/workbench.aspx'
 
@@ -364,11 +371,11 @@ So far, we have previewed the web part in the web part workbench hosted locally 
 
    ![Toolbox in SharePoint Workbench running in SharePoint Online site](../../../images/sp-workbench-o365-toolbox.png)
 
-4. Add **HelloWorldWebPart** from the toolbox. Now you are running your web part in a page hosted in SharePoint!
+4. Add **HelloWorldWebPart** from the toolbox. Now you're running your web part in a page hosted in SharePoint!
 
    ![HelloWorld web part running in SharePoint Workbench running in a SharePoint Online site](../../../images/sp-workbench-o365-helloworld-wp.png)
 
-Since you are still developing and testing your web part, there is no need to package and deploy your web part to SharePoint. 
+Because you are still developing and testing your web part, there is no need to package and deploy your web part to SharePoint. 
 
 ## Next steps
-Congratulations on getting your first Hello World web part running! Now that your web part is running, you can continue building out your Hello World web part in the next topic, [Connect to SharePoint](./connect-to-sharepoint). We will use the same Hello World web part project and add the ability to interact with SharePoint List REST APIs. Notice that the `gulp serve` command is still running in your console window (or in Visual Studio Code if you using the editor). You can continue to let it run while you go to the next topic.
+Congratulations on getting your first Hello World web part running! Now that your web part is running, you can continue building out your Hello World web part in the next topic, [Connect to SharePoint](./connect-to-sharepoint). You will use the same Hello World web part project and add the ability to interact with SharePoint List REST APIs. Notice that the `gulp serve` command is still running in your console window (or in Visual Studio Code if you using the editor). You can continue to let it run while you go to the next article.
