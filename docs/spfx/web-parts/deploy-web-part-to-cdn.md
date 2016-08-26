@@ -141,7 +141,7 @@ The minified assets can be found under the `temp\deploy` directory.
 
 ## Step 5: Deploy assets to Azure Storage
 
-1. Switch to the console of the `HelloWorld` project directory.
+1. Switch to the console of the **HelloWorld** project directory.
 
 2. Enter the gulp task to deploy the assets to your storage account:
 
@@ -183,7 +183,7 @@ In order for the web part to load from your CDN, you will need to tell it your C
 
 Since we have changed the web part bundle, we will need to re-deploy the package to the App Catalog. We used **--ship** to generate minified assets for distribution.
 
-1. Switch to the console of the `HelloWorld` project directory.
+1. Switch to the console of the **HelloWorld** project directory.
 
 2. Enter the gulp task to package the client-side solution. This time with the `--ship` flag set. This forces the task to pick up the CDN base path configured in the previous step:
 
@@ -194,7 +194,7 @@ Since we have changed the web part bundle, we will need to re-deploy the package
 
 > **Note:** "gulp bundle --ship" is a temporary fix needed with Developer Preview to ensure that files are rebuilt properly for packaging.
 
-This will create the updated client-side solution package in the `sharepoint\solution` folder.
+This will create the updated client-side solution package in the **sharepoint\solution** folder.
 
 ### Upload to App Catalog
 
@@ -208,7 +208,7 @@ This will create the updated client-side solution package in the `sharepoint\sol
 
 App Catalog will now have the latest client-side solution package where the web part bundle is loaded from the CDN.
 
-This will update all the instances of our `HelloWorld` web part in SharePoint to now fetch the resources from CDN.
+This will update all the instances of our **HelloWorld** web part in SharePoint to now fetch the resources from CDN.
 
 ## Step 7: Test the HelloWorld web part
 
