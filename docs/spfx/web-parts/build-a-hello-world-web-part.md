@@ -8,7 +8,7 @@ Client-side web parts support:
 * Building with HTML and JavaScript.
 * Both SharePoint online and on-premises environments.
 
->**Note:** Before following the steps in this topic be sure you have [Set up your development environment](./set-up-your-development-environment).
+>**Note:** Before following the steps in this topic be sure you have [Set up your development environment](../set-up-your-development-environment).
     
 ## Create a new web part project
 1. Create a new project directory in your favorite location.
@@ -58,7 +58,7 @@ Since the SharePoint client-side solution is HTML/TypeScript based, you can use 
 >**Note:** This topic shows Visual Studio code in the steps and examples. But you can use any IDE that you prefer. 
 
 ### Using Visual Studio 2015
-Currently support for SharePoint client-side projects in Visual Studio is available through Node.js Tools for Visual Studio. For more information, see [Use Visual Studio to develop web parts](./use-visual-studio-to-develop-web-parts.md).
+Currently support for SharePoint client-side projects in Visual Studio is available through Node.js Tools for Visual Studio. For more information, see [Use Visual Studio to develop web parts](./use-visual-studio-to-develop-web-parts).
    
 ## Preview the web part
 To preview your web part, build and run it on a local web server. 
@@ -152,7 +152,7 @@ export interface IHelloWorldWebPartProps {
 
 This property definition is used to define custom property types for your web part, which is described in the property pane section later. 
 
-#### Web part render()
+#### Web part render method
 The DOM element where the web part should be rendered is available in the **render** method. This method is used to render the web part inside that DOM element. In the **HelloWorld** web part, the DOM element is set to a DIV. The method parameters include the display mode (either Read or Edit) and the configured web part properties if any: 
 
 ```ts
