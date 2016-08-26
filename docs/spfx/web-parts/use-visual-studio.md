@@ -14,7 +14,7 @@ With the help of [Node.js Tools for Visual Studio](https://www.visualstudio.com/
 - [Node.js Tools for Visual Studio](https://github.com/Microsoft/nodejstools/releases/download/v1.2.Dev-7.20.2016/NTVS.Dev.2016-07-20.VS.2015.msi)
 
 ## Load SharePoint Client-side Project in Visual Studio
-With little effort, you are able to load your SharePoint client-side project into Visual Studio. Follow the steps below to use Visual Studio as your development environment for building client-side web parts and applications.
+With little effort, you can load your SharePoint client-side project into Visual Studio. Follow the steps below to use Visual Studio as your development environment for building client-side web parts and applications.
 
 > Please note this applies only to the preview release. It is expected the integration with Visual Studio will be improved as we progress towards the final release.
 
@@ -26,13 +26,11 @@ The first step is to create the SharePoint client-side project. We will use the 
 ```
   md hello-vs-webpart
 ```
-
 2. Navigate to the project directory:
 
 ```
   cd hello-vs-webpart
 ```
-
 3. Create a new client-side web part project by running the Yeoman SharePoint Generator:
 
 ```
