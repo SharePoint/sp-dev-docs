@@ -10,7 +10,8 @@ Be sure you have completed the procedures in the following articles before you s
 
 ## Package the HelloWorld web part
 
-1. In the console window, go to the web part project directory created in [Build your first SharePoint client-side web part](./build-a-hello-world-web-part). 
+1. In the console window, go to the web part project directory created in [Build your first SharePoint client-side web part](./build-a-hello-world-web-part).
+
 
    ```
    cd helloworld-webpart
