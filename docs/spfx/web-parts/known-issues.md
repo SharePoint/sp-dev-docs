@@ -1,6 +1,12 @@
-## Generating new client-side project
+# Known issues with client-side web parts
 
-### node-gyp rebuild error:
+>**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
+
+This article provides information about resolving known issues that can occur when you develop client-side web parts.
+
+## Issues generating a new client-side web part project
+
+### node-gyp rebuild error
 
 You may get the following error when you do `yo @microsoft/sharepoint`
 
