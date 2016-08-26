@@ -109,10 +109,10 @@ JavaScript client-side development has relied on browser developer tools that pr
 
 All major browsers have developer tools:
 
-* Chrome - [Chrome Developer Tools](https://developer.chrome.com/devtools)
-* Internet Explorer - [IE Developer Tools](https://msdn.microsoft.com/en-us/library/gg589507(v=vs.85).aspx)
-* Edge - [Edge Developer Tools](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/f12-devtools-guide/)
-* Firefox - [Firefox Developer Tools](https://developer.mozilla.org/en-US/docs/Tools)
+* Chrome - [Chrome developer tools](https://developer.chrome.com/devtools)
+* Internet Explorer - [IE developer tools](https://msdn.microsoft.com/en-us/library/gg589507(v=vs.85).aspx)
+* Microsoft Edge - [Microsoft Edge developer tools](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/f12-devtools-guide/)
+* Firefox - [Firefox developer tools](https://developer.mozilla.org/en-US/docs/Tools)
 
 
 #### Task runner explorer - executing other tasks
