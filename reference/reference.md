@@ -1,2 +1,2 @@
 # Reference
-See GitHub pages
+The SharePoint Framework API reference documentation is located at https://sharepoint.github.io/.
