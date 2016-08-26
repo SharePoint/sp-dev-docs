@@ -1,89 +1,85 @@
 # Add jQueryUI Accordion to your SharePoint client-side web part
 
->**Note:** The SharePoint Framework is currently in Preview, and is subject to change based on customer feedback.  While we’re in preview, SharePoint Framework web parts are not supported for use in production environments.
+>**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production enviornments.
 
-## Tutorial 5 Overview
+This article describes how to add the jQueryUI Accordion to your web part project. This involves creating a new web part, as shown in the following image. 
 
-In this tutorial, lets add the jQueryUI Accordion to our web part project. We will build on top of the skills from previous tutorials, but will create a new web part for it. 
+![Screenshot of a web part that includes a jQuery Accordion](../../../images/jquery-accordion-wb.png)
 
-The completed web part will look like this: 
+## Prerequisites
+Complete the following steps before you start:
 
-![jquery-accordion](../../../images/jquery-accordion-wb.png)
+* [Build your first web part](build-a-hello-world-web-part.md)
+* [Connect to SharePoint](connect-to-sharepoint.md) 
 
-## Tutorial Pre-requisites
-As a pre-requisite, you should have completed the following tutorials before you start this tutorial:
-* [Tutorial 1 - HelloWorld Web Part](https://github.com/SharePoint/sp-dev-docs/wiki/HelloWorld-WebPart)
-* [Tutorial 2 - HelloWorld, Talking to SharePoint](https://github.com/SharePoint/sp-dev-docs/wiki/HelloWorld,-Talking-to-SharePoint) 
+The developer toolchain uses Webpack, SystemJS and CommonJS to bundle your web parts. This includes loading any external dependencies such as jQuery or jQueryUI. To load external dependencies, at a high level, you will need to:
 
-As explained in the [Tutorial 1](https://github.com/SharePoint/sp-dev-docs/wiki/HelloWorld-WebPart#helloworldmanifestjson), the developer toolchain uses Webpack, SystemJS and CommonJS to bundle your web parts. This also includes loading any external dependencies you have such as jQuery, jQueryUI etc., To load such external dependencies, at a high level, you will need to:
-* Acquire the external library, either via npm or download from the vendor
-* If available, install the respective framework's [TypeScript type definitions](http://definitelytyped.org/)
-* If required, update your solution config to not include the external dependency in your web part bundle by default
+* Acquire the external library, either via npm or download from the vendor.
+* If available, install the respective framework's [TypeScript type definitions](http://definitelytyped.org/).
+* If required, update your solution config to not include the external dependency in your web part bundle by default.
 
-Lets now go build the jQueryUI Accordion in our web part. 
+## Create a new web part project
 
-Each step below will build on the previous so you will need to go through each step one by one to successfully complete this lab.
+1. Create a new project directory in your favorite location:
 
-## Step 1: Project Directory
-Create a new project directory in your favorite location:
-
-```
-md jquery-webpart
-```
+	```
+	md jquery-webpart
+	```
     
-> **Warning!** Make sure to create this directory in a new folder, not as a subdirectory of `helloworld-webpart`.
+	> **Warning:** Make sure to create this directory in a new folder, not as a subdirectory of `helloworld-webpart`.
 
-Navigate to the project directory:
+2. Go to the project directory:
 
-```
-cd jquery-webpart
-```
+	```
+	cd jquery-webpart
+	```
     
-## Step 2: Create a new WebPart Project
-Create a new jQuery webpart by running the Yeoman SharePoint Generator:
+3. Create a new jQuery web part by running the Yeoman SharePoint Generator:
 
-```
-yo @microsoft/sharepoint
-```
+	```
+	yo @microsoft/sharepoint
+	```
 
-You will be prompted with a series of questions:
-* Accept the default `jquery-webpart` as your solution name and press `Enter`.
-* Select "Use the current folder" to place the files.
+When prompted:
 
-The next set of prompts will ask specific information about your web part:
-* Type `jQuery` for the web part name and press `Enter`.
-* Enter `jQuery Web Part` as the description of the web part and press `Enter`.
-* Accept the default `No javascript web framework` option for the framework and press `Enter` to continue.
-* In the next prompt, press `Enter` to continue. We will not select any libraries to add in this tutorial. 
+* Accept the default **jquery-webpart** as your solution name and choose **Enter**.
+* Select **Use the current folder** as the location for the files.
 
-At this point, yeoman will install the required dependencies and scaffold the solution files. This might take a few minutes. Yeoman will scaffold the project to include your `jQueryWebPart` web part as well.
+The next set of prompts will ask for specific information about your web part:
+* Type **jQuery** for the web part name and choose **Enter**.
+* Enter **jQuery Web Part** as the description of the web part and choose **Enter**.
+* Accept the default No **javascript web framework** option for the framework and choose **Enter** to continue.
+* At the next prompt, choose **Enter** to continue. Do not select any libraries to add. 
 
-In the console, type the following to open the web part project in Visual Studio Code:
+At this point, Yeoman will install the required dependencies and scaffold the solution files. This might take a few minutes. Yeoman will scaffold the project to include your **jQueryWebPart** web part as well.
 
-```
-code .
-```
+4. In the console, type the following to open the web part project in Visual Studio Code:
 
-## Step 3: Install jQuery and jQuery UI NPM Packages
-In the console, type the following to install jQuery npm package:
+	```
+	code .
+	```
 
-```
-npm i --save jquery
-```
+## Install jQuery and jQuery UI NPM Packages
 
-Now type the following to install jQueryUI npm package:
+1. In the console, type the following to install jQuery npm package:
 
-```
-npm i --save jqueryui
-```
+	```
+	npm i --save jquery
+	```
 
-TypeScript Definition Manager (TSD) allows you to search and install type definitions for your project. Using TSD we can install the type definitions for jQuery and jQuery UI.
+2. Now type the following to install jQueryUI npm package:
 
-As the web part project is primarily a TypeScript project, it is essential the TypeScript compiler is able to understand the respective types. It also helps to provide the intellisense required in the code editor.
+	```
+	npm i --save jqueryui
+	```
 
-To do, first install [TypeScript definition manager](http://definitelytyped.org/tsd/)
+TypeScript Definition Manager (TSD) allows you to search and install type definitions for your project. Use TSD to install the type definitions for jQuery and jQuery UI.
 
-Open your console and execute the commands:
+Because the web part project is primarily a TypeScript project, the TypeScript compiler has to be able to understand the respective types. It also helps to provide the IntelliSense required in the code editor.
+
+To do that, first install [TypeScript definition manager](http://definitelytyped.org/tsd/).
+
+Open your console and run the commands:
 
 ```
 npm i -g tsd
@@ -95,24 +91,24 @@ Now install jQuery and jQuery UI type definitions:
 tsd install jquery jqueryui --save
 ```
 
-TSD will install the type definitions into the `/typings` folder, where there are few other typings already available which was scaffolded by the Yeoman generator.
+TSD will install the type definitions into the **/typings** folder. This folder also includes other typings that were scaffolded by the Yeoman generator.
 
-Navigate to `/typings/jquery` and `/typings/jqueryui` to find the type definitions for jQuery and jQuery UI respectively.
+Go to **/typings/jquery** and **/typings/jqueryui** to find the type definitions for jQuery and jQuery UI.
 
-For drop 1, there is a workaround needed when loading css files (later on in this tutorial we will show you how).  For now, you need to include one other typing
+Include one other typing:
 
 ```
 tsd install combokeys --save
 ```
 
 ### Unbundle external dependencies from web part bundle
-By default any dependencies you add gets bundled into the web part bundle. While this could be true for some cases, it is not ideal. Hence you can choose to unbundle these dependencies from the web part bundle.
+By default, any dependencies you add are bundled into the web part bundle. In some cases, this is not ideal. You can choose to unbundle these dependencies from the web part bundle.
 
-In Visual Studio Code, open the file `config\config.json`
+In Visual Studio Code, open the file config\config.json.
 
-This `config.json` contains information about your bundle(s) and any external dependencies included. 
+This file contains information about your bundle(s) and any external dependencies. 
 
-The `entries` region contains the default bundle information which in our case is the jQuery web part bundle. You will see one entry per web part once you add more web parts to your solution. 
+The `entries` region contains the default bundle information - in this case, the jQuery web part bundle. When you add more web parts to your solution, you will see one entry per web part.
 
 ```json
 "entries": [
@@ -124,7 +120,7 @@ The `entries` region contains the default bundle information which in our case i
 ]
 ```
 
-The `externals` section contains the libraries information that are not bundled with the default bundle. As you can see, we have a few by default.
+The `externals` section contains the libraries that are not bundled with the default bundle. 
 
 ```json
   "externals": {
@@ -138,23 +134,21 @@ The `externals` section contains the libraries information that are not bundled 
   },
 ```
 
-In order to exclude `jQuery` and `jQueryUI` from the default bundle, we add the modules respectively to the `externals` section:
+To exclude `jQuery` and `jQueryUI` from the default bundle, add the modules to the `externals` section:
 
 ```json
 "jquery":"node_modules/jquery/dist/jquery.min.js",
 "jqueryui":"node_modules/jqueryui/jquery-ui.min.js"
 ```
-Now when you build your project, `jQuery` and `jQueryUI` will not be bundled into your default web part bundle
 
-## Step 4: Build the Accordion
-Now that we have defined our external dependencies, it is time we build the accordion.
+Now when you build your project, `jQuery` and `jQueryUI` will not be bundled into your default web part bundle.
 
-Switch to Visual Studio Code. Your project should have the `jQuery` web part that we added in the steps above under the `/src/webparts/jQuery` folder.
+## Build the Accordion
 
-If you do not have the project open, open the project folder `jquery-webpart` in Visual Studio Code.
+Open the project folder **jquery-webpart** in Visual Studio Code. Your project should have the jQuery web part that you added earlier under the /src/webparts/jQuery folder.
 
 ### Add Accordion HTML
-Add a new file under the `/src/webparts/jQuery` folder called `MyAccordionTemplate.ts`
+Add a new file in the `src/webparts/jQuery`folder called **MyAccordionTemplate.ts**.
 
 Create and export (as a module) a class `MyAccordionTemplate` that holds the HTML code for the accordion.
 
@@ -216,9 +210,7 @@ Save the file.
 
 ### Import Accordion HTML
 
-As we have declared our accordion HTML in a TypeScript class module, it is also necessary to import that module:
-
-Switch to Visual Studio code and open `src\webparts\jQuery\JQueryWebPart.ts`
+In Visual Studio code, open **src\webparts\jQuery\JQueryWebPart.ts**.
 
 At the top of the file, where you can find other imports, add the following import:
 
@@ -227,7 +219,7 @@ import MyAccordionTemplate from './MyAccordionTemplate';
 ```
 
 ### Import jQuery and jQueryUI
-As we have already have jQuery installed as npm modules, we can directly import them in our web part just like we imported MyAccordionTemplate.
+You can import jQuery your web part in the same way that you imported MyAccordionTemplate.
 
 At the top of the file, where you can find other imports, add the following import:
 
@@ -235,23 +227,21 @@ At the top of the file, where you can find other imports, add the following impo
 import * as myjQuery from 'jquery';
 ```
 
-Notice how we are importing the jQuery module into a custom variable name `myjQuery`. You can call it whatever you want to assign the jQuery module into. Preferably something that is related to your web part is always recommended. 
+Notice how you are importing the jQuery module into a custom variable named `myjQuery`. You can call it whatever you want; we recommend that you use a name that is related to your web part. 
 
-As jQuery UI is a plugin, we will load it via a require statement instead of import:
-
-Just below the jQuery import, add the following require:
+Because jQueryUI is a plugin, you load it via a require statement instead of import. Just below the jQuery import, add the following require:
 
 ```ts
 require('jqueryui');
 ```
 
-Next, we'll be loading some external css files.  To do that we need to use the module loader.  Add the following import
+Next, you'll load some external css files. To do that, use the module loader. Add the following import:
 
 ```ts
 import importableModuleLoader from '@microsoft/sp-module-loader';
 ```
 
-To load the jQuery UI styles, in the `JQueryWebPart` web part class, add the following line inside the constructor:
+To load the jQueryUI styles, in the `JQueryWebPart` web part class, add the following line inside the constructor:
 
 ```ts
 importableModuleLoader.loadCss('//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css');
@@ -267,12 +257,14 @@ public constructor(context: IWebPartContext){
 }
 ```
 
-The code above:
-* Calls the parent constructor with the context to initialize the webpart
-* Loads the accordion styles from a CDN asynchronously
+This code does the following:
+
+* Calls the parent constructor with the context to initialize the web part.
+* Loads the accordion styles from a CDN asynchronously.
 
 ### Render Accordion
-In the `jQueryWebPart.ts`, navigate to the `render` method.
+
+In the `jQueryWebPart.ts`, go to the `render` method.
 
 Set the web part's inner HTML to render the accordion HTML:
 
@@ -280,7 +272,7 @@ Set the web part's inner HTML to render the accordion HTML:
 this.domElement.innerHTML = MyAccordionTemplate.templateHtml;
 ```
 
-jQueryUI Accordion has few options that you can set to customize the accordion. Lets define few options for our accordion just below `this.domElement.innerHTML = MyAccordionTemplate.templateHtml;`:
+jQueryUI Accordion has few options that you can set to customize the accordion. Define a few options for your accordion just below `this.domElement.innerHTML = MyAccordionTemplate.templateHtml;`:
 
 ```ts
 const accordionOptions: JQueryUI.AccordionOptions = {
@@ -293,9 +285,9 @@ const accordionOptions: JQueryUI.AccordionOptions = {
 };
 ```
 
-As you can see jQueryUI typed definition allows us to create a typed variable called `JQueryUI.AccordionOptions` and specify the supported properties. 
+As you can see, jQueryUI typed definition allows you to create a typed variable called `JQueryUI.AccordionOptions` and specify the supported properties. 
 
-Play around with the intellisense and you will notice you will get full support for available methods under `JQueryUI.` as well as the method parameters.
+If you play around with the IntelliSense, you will notice you will get full support for available methods under `JQueryUI.` as well as the method parameters.
 
 Finally, initialize the accordion:
 
@@ -303,9 +295,9 @@ Finally, initialize the accordion:
 myjQuery(this.domElement).children('.accordion').accordion(accordionOptions);
 ```
 
-As you can see, we use the variable `myjQuery` we used to import `jquery` module earlier. We then initialize the accordion.
+As you can see, you use the variable `myjQuery` that you used to import the `jquery` module. You then initialize the accordion.
 
-Here is the complete `render` method class looks like after changes above:
+The complete `render` method class looks like this:
 
 ```ts
 public render(): void {
@@ -326,30 +318,20 @@ public render(): void {
 
 Save the file.
 
-## Step 5: Preview the WebPart
-Switch to your console, make sure you are still in the `jquery-webpart` folder and type the following to build and preview your web part:
+## Preview the web part
+
+In your console, make sure you are still in the jquery-webpart folder and type the following to build and preview your web part:
 
 ```
 gulp serve
 ```
 
-> Visual Studio Code provides built-in support for gulp and other task runners. You can press Ctrl+Shift+B if you are in Windows or Cmd+Shift+B if you are in Mac within Visual Studio Code to debug and preview your web part.
+> **Note:** Visual Studio Code provides built-in support for gulp and other task runners. You can choose **Ctrl+Shift+B** in Windows or **Cmd+Shift+B** on a Mac to debug and preview your web part.
 
-Gulp will execute the tasks and open the local SharePoint Web Part Workbench.
+Gulp will execute the tasks and open the local SharePoint web part workbench.
 
-In the page canvas, click the `+` to reveal the list of web parts available. 
+In the page canvas, choose the **+** (plus sign) to show the list of web parts, and add the jQuery web part. You should now see the jQueryUI Accordion!
 
-You should see the jQuery web part.
+![Screenshot of a web part that includes a jQuery Accordion](../../../images/jquery-accordion-wb.png)
 
-Add the jQuery web part.
-
-You should see the jQueryUI Accordion now!
-
-![jquery-accordion](../../../images/jquery-accordion-wb.png)
-
-## Next Steps
-Switch to the console where you have `gulp serve` running and terminate the task by pressing `Ctrl+C`
-
-This concludes our tutorial. In this tutorial, we saw how to define, load and unbundle external dependencies and successfully built a jQueryUI accordion web part.
-
-In the [next ](./use-office-ui-react-components) tutorial, we will use Office UI Fabric in our client web part.
+In the console where you have `gulp serve` running, choose **Ctrl+C** to terminate the task.
