@@ -24,17 +24,19 @@ The first step is to create the SharePoint client-side project. We will use the 
 1. Create a new project directory in your favorite location:
 
 ```
-  md hello-vs-webpart
+md hello-vs-webpart
 ```
+
 2. Navigate to the project directory:
 
 ```
-  cd hello-vs-webpart
+cd hello-vs-webpart
 ```
+
 3. Create a new client-side web part project by running the Yeoman SharePoint Generator:
 
 ```
-  yo @microsoft/sharepoint
+yo @microsoft/sharepoint
 ```
 
 
