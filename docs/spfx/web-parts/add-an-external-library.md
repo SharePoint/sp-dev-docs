@@ -139,6 +139,7 @@ var ContosoJS = {
 };
 ```
 
+
 1. create typings for the script in a file called **contoso.d.ts** in the WebPart folder.
 
 ```typescript
@@ -151,6 +152,7 @@ var ContosoJS = {
       export = contoso;
   }
 ```
+
 
 2. Update the **config.json** file to include this script. Add an entry to the **externals** map:
 
