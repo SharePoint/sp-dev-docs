@@ -1,123 +1,123 @@
 # Use Visual Studio to develop SharePoint client-side web parts
 
->**Note:** The SharePoint Framework is currently in Preview, and is subject to change based on customer feedback.  While we’re in preview, SharePoint Framework web parts are not supported for use in production environments.
+>**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not supported for use in production environments.
 
-SharePoint Framework is client-side driven and uses a variety of open source tools to enable SharePoint development. It relies heavily on node and npm to provide you with a local/debug runtime environment and a robust package eco-system respectively. Tools like gulp, webpack etc., depend on the availability of node runtime environment.
+The SharePoint Framework is client-side driven and uses a variety of open source tools to enable SharePoint development. The framework relies on node and npm to provide you with a local and debug runtime environment and a robust package ecosystem. Tools like gulp and webpack  depend on the availability of node runtime environment.
 
 ## Node.js Tools for Visual Studio
 
 With the help of [Node.js Tools for Visual Studio](https://www.visualstudio.com/en-us/features/node-js-vs.aspx), you can use Visual Studio as your primary IDE for building client-side web parts and applications. Node.js Tools for Visual Studio is a free, open source plugin that turns Visual Studio into a Node.js IDE. It is designed, developed, and supported by Microsoft and the community, just like the SharePoint Framework.
 
-## Install Required Tools
+## Install Visual Studio tools
+
+To use Visual Studio, install the following:
 
 * [Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=691978&clcid=0x409)
-* Latest Visual Studio Update 3 or later: [Visual Studio Update 3](https://www.visualstudio.com/en-us/news/releasenotes/vs2015-update3-vs)
+* [Visual Studio Update 3 or later](https://www.visualstudio.com/en-us/news/releasenotes/vs2015-update3-vs)
 * [Node.js Tools for Visual Studio](https://aka.ms/getntvs)
 
-## Load SharePoint Client-side Project in Visual Studio
+## Load a SharePoint client-side project in Visual Studio
 
-With little effort, you can load your SharePoint client-side project into Visual Studio. Follow the steps below to use Visual Studio as your development environment for building client-side web parts and applications.
+With little effort, you can load your SharePoint client-side project into Visual Studio by using the following steps.
 
-> Please note this applies only to the preview release. It is expected the integration with Visual Studio will be improved as we progress towards the final release.
+>**Note:** This content applies to the SharePoint Framework Developer Preview. Integration with Visual Studio will improve in later releases.
 
 ### Yo SharePoint
 
-The first step is to create the SharePoint client-side project. We will use the Yeoman SharePoint Generator to create the project.
+The first step is to create the SharePoint client-side project. Use the Yeoman SharePoint Generator to create the project.
 
 1. Create a new project directory in your favorite location:
+	
+	   ```
+	   md hello-vs-webpart
+	   ```
 
-   ```
-   md hello-vs-webpart
-   ```
+2. Go to the project directory:
 
-1. Navigate to the project directory:
-
-   ```
-   cd hello-vs-webpart
-   ```
-
-1. Create a new client-side web part project by running the Yeoman SharePoint Generator:
-
-   ```
-   yo @microsoft/sharepoint
+	   ```
+	   cd hello-vs-webpart
    ```
 
-### Import Project into Visual Studio
+3. Create a new client-side web part project by running the Yeoman SharePoint Generator:
 
-There are two ways to open your client-side project in Visual Studio. Ideally, we would only have one. To make sure you get the best experience with Visual Studio, use whichever steps works best for you.
+	   ```
+	   yo @microsoft/sharepoint
+	   ```
 
-If opening the **.njsproj** doesn't work for you, you can try importing the client-side solution project into Visual Studio. We are working on getting project file properly created directly from scaffolding.
+### Import your project into Visual Studio
 
-#### Open Visual Studio and Create a New Project
+There are two ways to open your client-side project in Visual Studio. Use the steps that work best for you.
 
-1. In the **New Project** dialog, select the **Templates->Other languages->TypeScript->Node.js** and then **From Existing Node.js code** project template.
-Name the project the same name as your SharePoint client-side project, that is, *hello-vs-webpart*, and choose the location of the client-side project as the location, and click *OK*.
+If opening the **.njsproj** doesn't work for you, you can try importing the client-side solution project into Visual Studio. 
 
-   ![New TypeScript Node.js Project](../../../images/hello-vs-webpart-new-project-ts-nodejs.png)
+#### Open Visual Studio and create a new project
 
-2. In the project wizard, choose the client-side project folder as the folder containing your Node.js code, and click *Next* to continue.
+1. In the **New Project** dialog box, select the **Templates > Other languages > TypeScript >Node.js** and then **From Existing Node.js code** project template.
+Name the project the same name as your SharePoint client-side project, that is, *hello-vs-webpart*. Choose the location of the client-side project for the location, and choose **OK**.
 
-   ![Node.js Project Wizard](../../../images/hellow-vs-webpart-step1-wizard.png)
+   	![New TypeScript Node.js Project](../../../images/hello-vs-webpart-new-project-ts-nodejs.png)
 
-3. choose *Next* to continue.
+2. In the project wizard, choose the client-side project folder, and choose **Next** to continue.
+
+  	![Node.js Project Wizard](../../../images/hellow-vs-webpart-step1-wizard.png)
+
+3. Choose **Next** to continue.
 
 4. Verify the save location for your project. Visual Studio should show the same client-side project folder as the location to save your Node.js project file.
 
-5. Choose *Finish* to import the client-side project into Visual Studio.
+5. Choose **Finish** to import the client-side project into Visual Studio.
 
    ![Node.js Project Wizard](../../../images/hello-vs-webpart-finish-wizard.png)
 
-## Explore the Project
+## Explore the project
 
 Now that Visual Studio has imported your client-side project, take a moment to explore the project in Visual Studio.
 
 ![Node.js Project Wizard](../../../images/hello-vs-webpart-soln-explorer.png)
 
-Notice how you got a npm package explorer as well (found by extending npm node in the project):
+Notice how you got an npm package explorer as well (found by extending npm node in the project):
 
 ![Node.js NPM Package Explorer](../../../images/hello-vs-webpart-npm-explorer.png)
 
 ### Modify gulpfile.js
 
-1. Open *gulpfile.js* in the root of the project and change the initial declaration of the variables from *let* to *var*.
+1. Open gulpfile.js in the root of the project and change the initial declaration of the variables from *let* to *var*.
 
 ```
   var gulp = require('gulp');
   var build = require('@microsoft/sp-build-web');
 ```
 
-> **Note:** This is a temporary workaround as Visual Studio does not support ES6 yet.
+> **Note:** This is a temporary workaround because Visual Studio does not support ES6 yet.
 
-### Setup Project Startup File
+### Set up the project startup File
 
-* In the project properties, change the following properties to their corresponding values as shown below:For launching the project from within Visual Studio (F5), 
+* In the project properties, change the following properties to their corresponding values as shown to launch the project from within Visual Studio (F5).
+
    * **Script (startup file)**: node_modules\gulp\bin\gulp.js
    * **Script arguments**: serve
 
 ![Update project settings](../../../images/hello-vs-webpart-update-properties.png) 
 
-### Build and Debug Project
+### Build and debug the project
 
-Your client-side project is now setup to work with Visual Studio.
+Your client-side project is now set up to work with Visual Studio. Press F5 to build and debug your project in your favorite browser.
 
-Press F5 to build and debug your project in your favorite browser.
+#### Notes on debugging
 
-#### Notes on Debugging
+JavaScript client-side development has relied on browser developer tools that provide a robust environment to debug web applications. While Visual Studio provides the key integration into SharePoint client-side projects, browser developer tools are still the primary tool to debug your client-side projects. 
 
-JavaScript client-side development has relied on browser developer tools which provides a robust environment to debug web applications. While Visual Studio provides the key integration into SharePoint client-side projects, browser developer tools are still used as the primary debugging tool to debug your client-side projects. 
+All major browsers have developer tools:
 
-All of the major browsers have their corresponding developer tools. The following links get you started with the developer tools.
+* Chrome - [Chrome Developer Tools](https://developer.chrome.com/devtools)
+* Internet Explorer - [IE Developer Tools](https://msdn.microsoft.com/en-us/library/gg589507(v=vs.85).aspx)
+* Edge - [Edge Developer Tools](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/f12-devtools-guide/)
+* Firefox - [Firefox Developer Tools](https://developer.mozilla.org/en-US/docs/Tools)
 
-* If you are using Chrome, you have [Chrome Developer Tools](https://developer.chrome.com/devtools)
-* If you are using IE, you have [IE Developer Tools](https://msdn.microsoft.com/en-us/library/gg589507(v=vs.85).aspx)
-* If you are using Edge, you have [Edge Developer Tools](https://developer.microsoft.com/en-us/microsoft-edge/platform/documentation/f12-devtools-guide/)
-* If you are using Firefox, you have [Firefox Developer Tools](https://developer.mozilla.org/en-US/docs/Tools)
 
-> **Note:** We will publish debugging guidance as we progress towards the final release. 
+#### Task runner explorer - executing other tasks
 
-#### Task Runner Explorer - Executing Other Tasks
-
-SharePoint Framework comes with a set of gulp tasks to simplify packaging your client-side solution and uploading your assets to CDN. These commands are usually accessed using the following commands:
+The SharePoint Framework comes with a set of gulp tasks to simplify packaging your client-side solution and uploading your assets to CDN. You can use the following commands to access them:
 
 ```
 gulp package-solution
@@ -125,10 +125,11 @@ gulp deploy-azure-storage
 ```
 
 You will use Visual Studio's Task Runner to explore and execute the available commands within the client-side project. To open the Task Runner window, either:
-* Press *Ctrl+Alt+BkSpace*, or,
-* Navigate to the following menu item: *View->Other Windows->Task Runner Explorer*
+
+* Choose **Ctrl+Alt+BkSpace**.
+* Go to the following menu item: **View** > **Other Windows **> **Task Runner Explorer**
 
 ![Update project settings](../../../images/hello-vs-webpart-task-runner.png) 
 
-Task Runner Explorer makes is easier to view available gulp commands and run them when needed. Just right click on a gulp command to reveal the context menu to run a specific command. 
+Task Runner Explorer makes is easier to view available gulp commands and run them when needed. Just right-click on a gulp command to reveal the context menu to run a specific command. 
 
