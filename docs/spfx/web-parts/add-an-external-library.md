@@ -208,48 +208,48 @@ var Contoso = {
 
     **contoso.d.ts**
 
-```typescript
-  declare module "contoso" {
-    interface IEventList {
-      alert(): void;
-    }
-    interface IContoso {
-      getEvents(): string[];
-      EventList: IEventList;
-    }
-    var contoso: IContoso;
-    export = contoso;
-  }
-```
+   ```typescript
+     declare module "contoso" {
+       interface IEventList {
+         alert(): void;
+       }
+       interface IContoso {
+         getEvents(): string[];
+         EventList: IEventList;
+       }
+       var contoso: IContoso;
+       export = contoso;
+     }
+   ```
 
 2. Update the **config.json** file. Add two entries to **externals**:
 
-```json
-  {
-          "contoso": {
-              "path": "/src/ContosoCore.js",
-              "globalName": "Contoso"
-          },
-          "contoso-ui": {
-              "path": "/src/ContosoUI.js",
-              "globalName": "Contoso",
-              "globalDependencies": ["contoso"]
-          }
-  }
-```
+   ```json
+     {
+             "contoso": {
+                 "path": "/src/ContosoCore.js",
+                 "globalName": "Contoso"
+             },
+             "contoso-ui": {
+                 "path": "/src/ContosoUI.js",
+                 "globalName": "Contoso",
+                 "globalDependencies": ["contoso"]
+             }
+     }
+   ```
     
 3. Add imports for Contoso and ContosoUI
    
-```typescript
-  import contoso = require('contoso');
-  require('contoso-ui');
-```
+   ```typescript
+     import contoso = require('contoso');
+     require('contoso-ui');
+   ```
 
 4. Use the libraries in your code:
 
-```typescript
-  contoso.EventList.alert();
-```
+   ```typescript
+     contoso.EventList.alert();
+   ```
 
 ## Loading SharePoint JSOM
 Loading SharePoint JSOM is essentially the same scenario as loading non-AMD scripts which have dependencies.
@@ -257,44 +257,44 @@ This means utilizing both the **globalName** and **globalDependency** options.
 
 1. install typings for the JSOM
 
-```
-  tsd install sharepoint --save
-``` 
+   ```
+     tsd install sharepoint --save
+   ``` 
 
 2. Add entries to the `config.json`:
 
-```json
-  {
-    "sp-init": {
-      "path": "https://CONTOSO.sharepoint.com/_layouts/15/init.js",
-      "globalName": "$_global_init"
-    },
-    "microsoft-ajax": {
-      "path": "https://CONTOSO.sharepoint.com/_layouts/15/MicrosoftAjax.js",
-      "globalName": "Sys",
-      "globalDependencies": [ "sp-init" ]
-    },
-    "sp-runtime": {
-      "path": "https://CONTOSO.sharepoint.com/_layouts/15/SP.Runtime.js",
-      "globalName": "SP",
-      "globalDependencies": [ "microsoft-ajax" ]
-    },
-    "sharepoint": {
-      "path": "https://CONTOSO.sharepoint.com/_layouts/15/SP.js",
-      "globalName": "SP",
-      "globalDependencies": [ "sp-runtime" ]
-    }
-  }
-```
+   ```json
+     {
+       "sp-init": {
+         "path": "https://CONTOSO.sharepoint.com/_layouts/15/init.js",
+         "globalName": "$_global_init"
+       },
+       "microsoft-ajax": {
+         "path": "https://CONTOSO.sharepoint.com/_layouts/15/MicrosoftAjax.js",
+         "globalName": "Sys",
+         "globalDependencies": [ "sp-init" ]
+       },
+       "sp-runtime": {
+         "path": "https://CONTOSO.sharepoint.com/_layouts/15/SP.Runtime.js",
+         "globalName": "SP",
+         "globalDependencies": [ "microsoft-ajax" ]
+       },
+       "sharepoint": {
+         "path": "https://CONTOSO.sharepoint.com/_layouts/15/SP.js",
+         "globalName": "SP",
+         "globalDependencies": [ "sp-runtime" ]
+       }
+     }
+   ```
 
 3. In your WebPart, add the require statements:
 
-```typescript
-  require('sp-init');
-  require('microsoft-ajax');
-  require('sp-runtime');
-  require('sharepoint');
-```
+   ```typescript
+     require('sp-init');
+     require('microsoft-ajax');
+     require('sp-runtime');
+     require('sharepoint');
+   ```
 
 ## Load localized resources
 Loading localized resources is simple. There is a map in **config.json** called **localizedResources** with which you can describe how to load localized resources. Paths in this map are relative to the **lib** folder and must not contain a leading slash (**/**).
@@ -313,35 +313,35 @@ In this example, we have a folder **src/strings/**. In this folder are several J
 
 1. Edit the **config.json** file. Add an entry to **localizedResources**. The **{locale}** is a placeholder token for the locale name:
 
-```json
-  {
-    "strings": "strings/{locale}.js"
-  }
-```
+   ```json
+     {
+       "strings": "strings/{locale}.js"
+     }
+  ```
     
 2. Add typings for your strings. In this case, we have a file **MyStrings.d.ts**:
 
-```typescript
-  declare interface IStrings {
-    webpartTitle: string;
-    initialPrompt: string;
-    exitPrompt: string;
-  }
+   ```typescript
+     declare interface IStrings {
+       webpartTitle: string;
+       initialPrompt: string;
+       exitPrompt: string;
+     }
 
-  declare module 'mystrings' {
-    const strings: IStrings;
-    export = strings;
-  }
-```
+     declare module 'mystrings' {
+       const strings: IStrings;
+       export = strings;
+     }
+   ```
     
 3. Add imports for the strings in your project:
 
-```typescript
-  import * as strings from 'strings';
-```
+   ```typescript
+     import * as strings from 'strings';
+   ```
     
-Use the strings in your project:
+   Use the strings in your project:
 
-```typescript
- alert(strings.initialPrompt);
- ```
+   ```typescript
+    alert(strings.initialPrompt);
+    ```
