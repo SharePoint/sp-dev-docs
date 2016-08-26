@@ -1,12 +1,11 @@
 # Notes on solution packaging
 
->The SharePoint Framework is currently in Preview, and is subject to change based on customer feedback. While we’re in preview, SharePoint Framework web parts are not supported for use in production environments.
-
-## Packaging
+>**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not supported for use in production environments.
+>
 
 The **package-solution** gulp task looks at **/config/package-solution.json** for various configuration details, including some generic filepaths, as well as defining the relationship between components (_WebParts_ & _Applications_) in a package.
 
-### The Config File
+## Configuration File
 
 The schema for the configuration file is as follows:
 
@@ -19,7 +18,7 @@ interface IPackageSolutionOptions {
 
 Each package configuration file has some optional settings to override the places where the task will look for various source files & manifests, as well as defining the location to write the package. Additionally, it has a required solution definition, which instructs the packager on the relationships of various components.
 
-#### Solution Definition (_ISolution_)
+### Solution definition (_ISolution_)
 
 ```javascript
 interface ISolution {
@@ -34,7 +33,7 @@ Each solution file must have a **name**, which identifies the package in the Sha
 
 The solution definition also optionally contains a list of SharePoint Feature definitions. **Note:** If this is omitted or empty, the task will create a single Feature for every component (a 1:1 mapping).
 
-#### Feature Definition (_IFeature_)
+### Feature definition (_IFeature_)
 
 ```javascript
 interface IFeature {
@@ -50,7 +49,7 @@ It's important to note that this is a definition for creating a SharePoint Featu
 
 Each feature can also contain any number of components, which will be activated when the feature is activated. This is defined via a list of **componentIds**, which are globally unique identifiers that **MUST** match the **ID** in the component's Manifest file. If this list is undefined or empty the packager will include **every** component in the feature.
 
-#### File Paths (_IPackageSolutionPathOptions_)
+### File paths (_IPackageSolutionPathOptions_)
 
 ```javascript
 interface IPackageSolutionPathOptions {
@@ -64,9 +63,9 @@ interface IPackageSolutionPathOptions {
 * **zippedPackage** is the name of the zipped package, including extension (.spapp).
 * **featureXmlDir** is the directory in which custom feature xml is located.
 
-#### Examples
+### Examples
 
-##### Default Configuration
+#### Default Configuration
 
 ```json
 {
@@ -83,7 +82,7 @@ interface IPackageSolutionPathOptions {
 }
 ```
 
-#### Custom Feature.xml
+### Custom Feature.xml
 
 In order support provisioning of various SharePoint resources (such as List Templates, Pages, or Content Types), custom Feature XML may also be injected into the package. This is used in order to provision resources necessary for applications, but may also be used for WebParts. The documentation for Feature XML is located [here](https://msdn.microsoft.com/en-us/library/office/ms475601.aspx?f=255&MSPPError=-2147217396).
 
