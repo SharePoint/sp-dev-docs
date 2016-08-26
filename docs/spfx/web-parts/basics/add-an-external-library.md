@@ -41,7 +41,7 @@ Include the string validating library [validator](https://www.npmjs.com/package/
 4. Use the validator library in your web part code:
 
    ```typescript
-   validator.isEmail('foo@bar.com');
+   validator.isEmail('someone@example.com');
    ```
 
 ## Sharing a library among multiple WebParts
