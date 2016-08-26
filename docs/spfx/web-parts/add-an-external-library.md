@@ -18,14 +18,12 @@ Let's include the string validating library [validator](https://www.npmjs.com/pa
 1. Download the validator package from npm:
 
   ```
-     npm install validator --save
+  npm install validator --save
   ```
 
   >**Note:** Since TypeScript is our main programming language, we also require typings for the package you add. This is essential when you are writing code because TypeScript is just a superset of JavaScript. All 
 of the TypeScript code is still converted to JavaScript code when you compile. <br>Normally, you would search and find typings using **tsd** package, for example: `
-tsd install {package} --save
-`
-
+tsd install {package} --save`
 2. Create a file in the your WebPart's folder called `validator.d.ts` and add the following:
 
    >**Note:** Some libraries do not have typings. Validator is one of them. In this case you would want to define your own typings definition `.d.ts` file for the library. An incomplete example for
@@ -37,8 +35,6 @@ the validator library is below.
      export function isAscii(text: string): boolean;
    }
 ```
-
-
 
 3. In your web part file, then import the typings:
 
