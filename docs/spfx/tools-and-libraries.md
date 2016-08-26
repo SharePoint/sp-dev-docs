@@ -19,7 +19,7 @@ You can choose any one of a number of JavaScript frameworks to develop client-si
 
 * [React](https://facebook.github.io/react/)
 * [AngularJS 1.x](https://docs.angularjs.org/tutorial)
-* [AngularJS 2.x](https://angular.io/docs/ts/latest/quickstart.html)
+* [Angular 2 for TypeScript 2.x](https://angular.io/docs/ts/latest/quickstart.html)
 * [Handlebars](http://handlebarsjs.com/)
 
 Because client-side web parts are components that are dropped into a SharePoint page, we recommend that you choose a JavaScript framework that supports a similar component model. Lightweight frameworks such as React, Handlebars, and Angular 2 all support a component model and are well suited to building client-side web parts. 
@@ -93,5 +93,5 @@ The [Office Dev Patterns and Practices / SharePoint Pattern and Practices (PnP)]
 
 ## Additional resources
 
-* [SharePoint Framework](sharepoint-framework-overview.md)
-* [Build a Hello World client-side web part](web-parts/build-a-hello-world-web-part.md)
+* [SharePoint Framework](sharepoint-framework-overview)
+* [Build a Hello World client-side web part](web-parts/build-a-hello-world-web-part)
