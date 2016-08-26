@@ -39,7 +39,6 @@ The first step is to create the SharePoint client-side project. We will use the 
    yo @microsoft/sharepoint
    ```
 
-
 ### Import Project into Visual Studio
 There are two ways to open your client-side project in Visual Studio. Ideally, we would only have one. To make sure you get the best experience with Visual Studio, use whichever steps works best for you.
 
