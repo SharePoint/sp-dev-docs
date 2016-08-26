@@ -6,5 +6,5 @@ SharePoint client-side web parts are controls that appear inside a SharePoint pa
 
 ## Additional resources
 
-- [Overview of the SharePoint Framework](../sharepoint-framework-overview.md)
-- [SharePoint Framework development tools and libraries](../tools-and-libraries.md)
+- [Overview of the SharePoint Framework](../sharepoint-framework-overview)
+- [SharePoint Framework development tools and libraries](../tools-and-libraries)
