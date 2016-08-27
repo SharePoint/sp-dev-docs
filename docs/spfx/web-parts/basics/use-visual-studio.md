@@ -55,11 +55,11 @@ If opening the **.njsproj** doesn't work for you, you can try importing the clie
 1. In the **New Project** dialog box, select the **Templates > Other languages > TypeScript >Node.js** and then **From Existing Node.js code** project template.
 Name the project the same name as your SharePoint client-side project, that is, *hello-vs-webpart*. Choose the location of the client-side project for the location, and choose **OK**.
 
-   	![New TypeScript Node.js Project](../../../images/hello-vs-webpart-new-project-ts-nodejs.png)
+   	![New TypeScript Node.js Project](../../../images/hello-vs-webpart-new-project-ts-nodejs.PNG)
 
 2. In the project wizard, choose the client-side project folder, and choose **Next** to continue.
 
-  	![Node.js Project Wizard](../../../images/hellow-vs-webpart-step1-wizard.png)
+  	![Node.js Project Wizard](../../../images/hellow-vs-webpart-step1-wizard.PNG)
 
 3. Choose **Next** to continue.
 
@@ -67,17 +67,17 @@ Name the project the same name as your SharePoint client-side project, that is, 
 
 5. Choose **Finish** to import the client-side project into Visual Studio.
 
-   ![Node.js Project Wizard](../../../images/hello-vs-webpart-finish-wizard.png)
+   ![Node.js Project Wizard](../../../images/hello-vs-webpart-finish-wizard.PNG)
 
 ## Explore the project
 
 Now that Visual Studio has imported your client-side project, take a moment to explore the project in Visual Studio.
 
-![Node.js Project Wizard](../../../images/hello-vs-webpart-soln-explorer.png)
+![Node.js Project Wizard](../../../images/hello-vs-webpart-soln-explorer.PNG)
 
 Notice how you got an npm package explorer as well (found by extending npm node in the project):
 
-![Node.js NPM Package Explorer](../../../images/hello-vs-webpart-npm-explorer.png)
+![Node.js NPM Package Explorer](../../../images/hello-vs-webpart-npm-explorer.PNG)
 
 ### Modify gulpfile.js
 
@@ -97,7 +97,7 @@ In the project properties, change the following properties to their correspondin
 * **Script (startup file)**: node_modules\gulp\bin\gulp.js
 * **Script arguments**: serve
 
-![Update project settings](../../../images/hello-vs-webpart-update-properties.png) 
+![Update project settings](../../../images/hello-vs-webpart-update-properties.PNG)
 
 ### Build and debug the project
 
@@ -129,7 +129,7 @@ You will use Visual Studio's Task Runner to explore and execute the available co
 * Choose **Ctrl+Alt+BkSpace**.
 * Go to the following menu item: **View** > **Other Windows **> **Task Runner Explorer**
 
-![Update project settings](../../../images/hello-vs-webpart-task-runner.png) 
+![Update project settings](../../../images/hello-vs-webpart-task-runner.PNG)
 
 Task Runner Explorer makes is easier to view available gulp commands and run them when needed. Just right-click on a gulp command to reveal the context menu to run a specific command. 
 
