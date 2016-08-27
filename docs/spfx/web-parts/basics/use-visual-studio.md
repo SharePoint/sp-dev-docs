@@ -81,7 +81,7 @@ Notice how you got an npm package explorer as well (found by extending npm node 
 
 ### Modify gulpfile.js
 
-1. Open gulpfile.js in the root of the project and change the initial declaration of the variables from *let* to *var*.
+Open gulpfile.js in the root of the project and change the initial declaration of the variables from *let* to *var*.
 
 ```
   var gulp = require('gulp');
@@ -92,10 +92,10 @@ Notice how you got an npm package explorer as well (found by extending npm node 
 
 ### Set up the project startup File
 
-* In the project properties, change the following properties to their corresponding values as shown to launch the project from within Visual Studio (F5).
+In the project properties, change the following properties to their corresponding values as shown to launch the project from within Visual Studio (F5).
 
-   * **Script (startup file)**: node_modules\gulp\bin\gulp.js
-   * **Script arguments**: serve
+* **Script (startup file)**: node_modules\gulp\bin\gulp.js
+* **Script arguments**: serve
 
 ![Update project settings](../../../images/hello-vs-webpart-update-properties.png) 
 
