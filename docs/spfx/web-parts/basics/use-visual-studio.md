@@ -59,7 +59,7 @@ Name the project the same name as your SharePoint client-side project, that is, 
 
 2. In the project wizard, choose the client-side project folder, and choose **Next** to continue.
 
-  	![Node.js Project Wizard](../../../images/hellow-vs-webpart-step1-wizard.png)
+  	![Node.js Project Wizard](../../../images/hellow-vs-webpart-step1-wizard.PNG)
 
 3. Choose **Next** to continue.
 
