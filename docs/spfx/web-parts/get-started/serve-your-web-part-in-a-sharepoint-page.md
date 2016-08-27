@@ -24,7 +24,7 @@ Be sure you have completed the procedures in the following articles before you s
 
 4. Open **package-solution.json** from the **config** folder.
 
-  The **package-solution.json** file defines the package metadata as shown in the following code:
+	The **package-solution.json** file defines the package metadata as shown in the following code:
 
 	```json
 	{
