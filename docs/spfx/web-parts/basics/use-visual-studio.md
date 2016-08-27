@@ -55,7 +55,7 @@ If opening the **.njsproj** doesn't work for you, you can try importing the clie
 1. In the **New Project** dialog box, select the **Templates > Other languages > TypeScript >Node.js** and then **From Existing Node.js code** project template.
 Name the project the same name as your SharePoint client-side project, that is, *hello-vs-webpart*. Choose the location of the client-side project for the location, and choose **OK**.
 
-   	![New TypeScript Node.js Project](../../../../images/hello-vs-webpart-new-project-ts-nodejs.png)
+   	![New TypeScript Node.js Project](../../../images/hello-vs-webpart-new-project-ts-nodejs.png)
 
 2. In the project wizard, choose the client-side project folder, and choose **Next** to continue.
 
