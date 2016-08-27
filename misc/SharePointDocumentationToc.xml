@@ -3,8 +3,8 @@
 	<Item text="SharePoint Framework" url="spfx" SEODescription="">
 		<Item text="Overview" url="spfx/sharepoint-framework-overview" SEODescription="The SharePoint Framework provides a modern developer experience for extending SharePoint."/>
 		<Item text="Tools and libraries" url="spfx/tools-and-libraries" SEODescription="Learn about the tools and libriaries you will need to use to build your SharePoint Framework solutions."/>
-		<Item text="Set up your Office 365 developer tenant" url="spfx/web-parts/set-up-your-developer-tenant" SEODescription="Set up an Office 365 developer tenant so that you can test and debug your SharePoint client-side web parts" />
-		<Item text="Set up your development environment" url="spfx/web-parts/set-up-your-development-environment" SEODescription="Set up and configure your development environment to build SharePoint client-side web parts" />
+		<Item text="Set up your Office 365 developer tenant" url="spfx/set-up-your-developer-tenant" SEODescription="Set up an Office 365 developer tenant so that you can test and debug your SharePoint client-side web parts" />
+		<Item text="Set up your development environment" url="spfx/set-up-your-development-environment" SEODescription="Set up and configure your development environment to build SharePoint client-side web parts" />
 		<Item text="Web parts" url="spfx/web-parts" SEODescription="">
 			<Item text="Overview" url="spfx/web-parts/overview-client-side-web-parts" SEODescription="Develop SharePoint client-side web parts to provide a better customized experience for SharePoint."/>
 			<Item text="Get started" url="spfx/web-parts/get-started">
