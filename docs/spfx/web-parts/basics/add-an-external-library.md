@@ -54,36 +54,37 @@ import or share the same library. In such cases, instead of bundling the library
 In this example, you will share the [marked](https://www.npmjs.com/package/marked) package - a Markdown compiler - in a separate bundle.
 
 1. Download the **marked** package from npm:
-
-   ```
-   npm install marked --save
-   ```
-
+	
+	```
+	npm install marked --save
+	```
+	
 2. Download the typings:
-
-   ```
-   tsd install marked --save
-   ```
-
+	
+	```
+	tsd install marked --save
+	```
+	
 3. Edit the **config/config.json** and add an entry to the **externals** map. This is what tells the bundler to put this in a separate file. This prevents the bundler from bundling this library:
-
-   ```json
-   "marked": "node_modules/marked/marked.min.js"
-   ```
-
+	
+	```json
+	"marked": "node_modules/marked/marked.min.js"
+	```
+	
 4. Add the statement to import the `marked` library in your web part now that we have added the package and typings for the library:
-
-   ```typescript
-   import * as marked from 'marked';
-    ```
-   
+	
+	```typescript
+	import * as marked from 'marked';
+	```
+  	 
 5. Use the library in your web part:
-
-   ```typescript
-   console.log(marked('I am using __markdown__.'));
-   ```
+	
+	```typescript
+	console.log(marked('I am using __markdown__.'));
+	```
 
 ## Loading a script from a CDN
+
 Instead of loading the library from a npm package, you might want to load a script from a CDN. To do so, edit the **config.json** file to load the library from its CDN URL.
 
 ### Example
