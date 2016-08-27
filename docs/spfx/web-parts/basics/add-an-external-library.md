@@ -91,28 +91,28 @@ Instead of loading the library from a npm package, you might want to load a scri
 In this example, you will load jQuery from CDN. You don't need to install the npm package. However, you still need to install the typings. 
 
 1. Install the typings for jQuery:
-
-   ```
-   tsd install jquery --save
-   ```
-
+	
+	```
+	tsd install jquery --save
+	```
+	
 2. Update the `config.json` in the `config` folder to load jQuery from CDN. Add an entry to the `externals` field:
-
-   ```json
-  "jquery": "https://code.jquery.com/jquery-3.1.0.min.js"
-   ```
-
+	
+	```json
+	"jquery": "https://code.jquery.com/jquery-3.1.0.min.js"
+	```
+	
 3. Import jQuery in your web part:
-
-   ```typescript
-   import * as $ from 'jquery';
-   ```
-
+	
+	```typescript
+	import * as $ from 'jquery';
+	```
+	
 4. Use jQuery in your web part:
-
-   ```javascript
-   alert( $('#foo').val() );
-   ```
+	
+	```javascript
+	alert( $('#foo').val() );
+	```
 
 ## Loading a non-AMD module
 
@@ -136,41 +136,40 @@ var ContosoJS = {
 
 
 1. Create typings for the script in a file called **contoso.d.ts** in the web part folder.
-
-   ```typescript
-   declare module "contoso" {
-      interface IContoso {
-        say(text: string): void;
-        sayHello(name: string): void;
-      }
-      var contoso: IContoso;
-      export = contoso;
-   }
-   ```
-
-
+	
+	```typescript
+	declare module "contoso" {
+		interface IContoso {
+			say(text: string): void;
+			sayHello(name: string): void;
+		}
+		var contoso: IContoso;
+		export = contoso;
+	}
+	```
+	
 2. Update the **config.json** file to include this script. Add an entry to the **externals** map:
-
-   ```json
-   {
-     "contoso": {
-        "path": "https://contoso.com/contoso.js",
-        "globalName": "ContosoJS"
-      }
-   }
-   ```
-
+	
+	```json
+	{
+		"contoso": {
+			"path": "https://contoso.com/contoso.js",
+			"globalName": "ContosoJS"
+		}
+	}
+	```
+	
 3. Add an import to your web part code:
-
-   ```typescript
-   import contoso from 'contoso';
-   ```
-
+	
+	```typescript
+	import contoso from 'contoso';
+	```
+	
 4. Use the contoso library in your code:
-
-   ```typescript
-     contoso.sayHello(username);
-   ```
+	
+	```typescript
+	contoso.sayHello(username);
+	```
 
 ## Loading a library that has a dependency on another library
 
