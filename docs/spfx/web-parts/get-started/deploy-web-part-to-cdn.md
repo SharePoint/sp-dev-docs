@@ -9,9 +9,9 @@ In this article, you will deploy the **HelloWorld** assets to a remote CDN inste
 
 Make sure that you have completed the following tasks before you begin:
 
-* [HelloWorld Web Part](./build-a-hello-world-web-part)
-* [HelloWorld, Talking to SharePoint](./connect-to-sharepoint)
-* [HelloWorld, Serving in Classic SharePoint Page](./serve-your-web-part-in-a-sharepoint-page)
+* [Build your first client-side web part](./build-a-hello-world-web-part)
+* [Connect your client-side web part to SharePoint](./connect-to-sharepoint)
+* [Deploy your client-side web part to a classic SharePoint page](./serve-your-web-part-in-a-sharepoint-page)
 
 ## Configure Azure storage account
 
