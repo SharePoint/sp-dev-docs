@@ -14,35 +14,35 @@ By default, the web part bundler will automatically include any library that is 
 Include the string validating library [validator](https://www.npmjs.com/package/validator) package into a web part.
 
 1. Download the validator package from npm:
-
-   ```
-   npm install validator --save
-   ```
-
-   >**Note:** Because you're using TypeScript, you need typings for the package you add. This is essential when you are writing code because TypeScript is just a superset of JavaScript. All the TypeScript code is still converted to JavaScript code when you compile. You can search  for and find typings by using **tsd** package, for example: `tsd install {package} --save`
-
+	
+	```
+	npm install validator --save
+	```
+	
+	>**Note:** Because you're using TypeScript, you need typings for the package you add. This is essential when you are writing code because TypeScript is just a superset of JavaScript. All the TypeScript code is still converted to JavaScript code when you compile. You can search  for and find typings by using **tsd** package, for example: `tsd install {package} --save`
+	
 2. Create a file in the your web part's folder called `validator.d.ts` and add the following:
-
-   >**Note:** Some libraries do not have typings. Validator is one of them. In this case you would want to define your own typings definition `.d.ts` file for the library. The following code shows an example.
-
-   ```typescript
-    declare module "validator" {
-      export function isEmail(email: string): boolean;
-      export function isAscii(text: string): boolean;
-    }
-   ```
-
+	
+	>**Note:** Some libraries do not have typings. Validator is one of them. In this case you would want to define your own typings definition `.d.ts` file for the library. The following code shows an example.
+	
+	```typescript
+	declare module "validator" {
+		export function isEmail(email: string): boolean;
+		export function isAscii(text: string): boolean;
+	}
+	```
+	
 3. In your web part file, import the typings:
-
-   ```typescript
-   import * as validator from 'validator';
-   ```
-
+	
+	```typescript
+	import * as validator from 'validator';
+	```
+	
 4. Use the validator library in your web part code:
-
-   ```typescript
-   validator.isEmail('someone@example.com');
-   ```
+	
+	```typescript
+	validator.isEmail('someone@example.com');
+	```
 
 ## Sharing a library among multiple WebParts
 
