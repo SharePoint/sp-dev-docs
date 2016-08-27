@@ -5,6 +5,7 @@
 In this article you will learn how to deploy your client-side web part to SharePoint and see it working on a classic SharePoint server-side page. This article continues with the hello world web part built in the previous article [Connect your client-side web part to SharePoint](./connect-to-sharepoint).
 
 Be sure you have completed the procedures in the following articles before you start:
+
 * [Build your first SharePoint client-side web part](./build-a-hello-world-web-part)
 * [Connect your client-side web part to SharePoint](./connect-to-sharepoint)
 
