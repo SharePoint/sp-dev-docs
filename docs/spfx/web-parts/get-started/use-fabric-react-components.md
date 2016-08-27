@@ -31,39 +31,39 @@ The following image shows a DocumentCard component created with Office UI Fabric
 	yo @microsoft/sharepoint
 	```
     
-When prompted:
-
-* Accept the default **documentcardexample-webpart** as your solution name and choose **Enter**.
-* Select **Use the current folder** as the location for the files.
-* Use **DocumentCardExample** for your web part name and choose **Enter**.
-* Accept the default **DocumentCardExample description** and choose **Enter**.
-* Select **React** as the framework and choose **Enter**.
-
-At this point, Yeoman will install the required dependencies and scaffold the solution files. This might take a few minutes. Yeoman will scaffold the project to include your DocumentCardExample web part as well.
-
+	When prompted:
+	
+	* Accept the default **documentcardexample-webpart** as your solution name and choose **Enter**.
+	* Select **Use the current folder** as the location for the files.
+	* Use **DocumentCardExample** for your web part name and choose **Enter**.
+	* Accept the default **DocumentCardExample description** and choose **Enter**.
+	* Select **React** as the framework and choose **Enter**.
+	
+	At this point, Yeoman will install the required dependencies and scaffold the solution files. This might take a few minutes. Yeoman will scaffold the project to include your DocumentCardExample web part as well.
+	
 4. When the scaffold is complete, in the console, type the following to open the web part project in Visual Studio Code:
 
 	```
 	code .
 	```
-
-You now have a web part project with the React framework.
-
-Open **DocumentCardExampleWebPart.ts** from the **src\webparts\documentCardExample** folder. 
-
-As you can see, the `render` method creates a react element and renders it in the web part DOM.
-
-```ts
-public render(mode: DisplayMode, data?: IWebPartData): void {
-  const element: React.ReactElement<IDocumentCardProps> = React.createElement(DocumentCard, {
-    description: this.properties.description
-  });
-
-  ReactDom.render(element, this.domElement);
-}
-```
-
-Open **DocumentCardExample.tsx** from the **src\webparts\documentCardExample\components** folder. 
+	
+	You now have a web part project with the React framework.
+	
+	Open **DocumentCardExampleWebPart.ts** from the **src\webparts\documentCardExample** folder. 
+	
+	As you can see, the `render` method creates a react element and renders it in the web part DOM.
+	
+	```ts
+	public render(mode: DisplayMode, data?: IWebPartData): void {
+		const element: React.ReactElement<IDocumentCardProps> = React.createElement(DocumentCard, {
+			description: this.properties.description
+		});
+	
+	ReactDom.render(element, this.domElement);
+	}
+	```
+	
+5. Open **DocumentCardExample.tsx** from the **src\webparts\documentCardExample\components** folder. 
 
 This is the main react component that Yeoman added to your project that renders in the web part DOM.
 
@@ -101,6 +101,7 @@ export default class DocumentCardExample extends React.Component<IDocumentCardPr
 ```
 
 ## Add an Office UI Fabric component
+
 To use Office UI Fabric components, you need to install the npm package.
 
 In the console window, type the following to install the Office UI Fabric component npm package:
@@ -112,6 +113,7 @@ npm i office-ui-fabric-react --save
 >**Note:** If you're using Windows, you might get the following exception during this installation: "Error: EPERM: operation not permitted,...". To solve the issue, reopen your console application as an administrator. Open the context menu (right-click) and choose **Run as administrator**. 
 
 ## Add the DocumentCard component
+
 After you install the Office UI Fabric React components, you can add the component to your web part. 
 
 1. Open **DocumentCardExample.tsx** from the **src\webparts\components\documentCardExample** folder. 
@@ -163,24 +165,24 @@ After you install the Office UI Fabric React components, you can add the compone
 
 4. Save the file.
 
-In this code, the DocumentCard component includes some extra sections:
-   * DocumentCardPreview
-   * DocumentCardTitle
-   * DocumentCardActivity
-  
-The `previewProps` property includes some properties of the DocumentCardPreview.
-
-Notice the use of relative path with a `require` statement to load images. Currently, you need to use the webpack public path plugin and input the file's relative path from your source file or folder to the `lib` folder. This should be the same as your current working source location.
-
-Open **DocumentCardExampleWebPart.ts** from the **src\webparts\documentCardExample** folder. 
-
-Add the following code at the top of the file to require the webpack public path plugin.
-
-```ts
-require('set-webpack-public-path!');
-```
-
-Save the file.
+	In this code, the DocumentCard component includes some extra sections:
+	* DocumentCardPreview
+	* DocumentCardTitle
+	* DocumentCardActivity
+	
+	The `previewProps` property includes some properties of the DocumentCardPreview.
+	
+	Notice the use of relative path with a `require` statement to load images. Currently, you need to use the webpack public path plugin and input the file's relative path from your source file or folder to the `lib` folder. This should be the same as your current working source location.
+	
+5. Open **DocumentCardExampleWebPart.ts** from the **src\webparts\documentCardExample** folder. 
+	
+6. Add the following code at the top of the file to require the webpack public path plugin.
+	
+	```ts
+	require('set-webpack-public-path!');
+	```
+	
+7. Save the file.
 
 ## Copy the image assets
 
@@ -191,13 +193,14 @@ Copy the following images to your **src\webparts\documentCardExample** folder:
 * [document-preview.png](https://github.com/SharePoint/sp-dev-docs/tree/master/assets/document-preview.png)
 
 ## Preview the web part in workbench
-In the console, type the following to preview your web part in workbench:
 
-```
-gulp serve
-```
-
-In the toolbox, select your `DocumentCardExample` web part to add:
-
-![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../images/fabric-components-doc-card-view-ex.png)
+1. In the console, type the following to preview your web part in workbench:
+	
+	```
+	gulp serve
+	```
+	
+2. In the toolbox, select your `DocumentCardExample` web part to add:
+	
+	![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../images/fabric-components-doc-card-view-ex.png)
 
