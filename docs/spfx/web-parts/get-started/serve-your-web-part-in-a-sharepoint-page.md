@@ -190,4 +190,4 @@ Now that you have deployed and installed the client-side solution, add the web p
 
 ## Next steps
 
-Congratulations! You have deployed a client-side web part to a classic SharePoint page. You can continue building out your Hello World web part in the next topic, [Deploy your client-side web part source to a CDN](./deploy-web-part-to-cdn). ), where you will learn how to deploy and load the web part assets from a CDN instead of localhost.
+Congratulations! You have deployed a client-side web part to a classic SharePoint page. You can continue building out your Hello World web part in the next topic, [Deploy your client-side web part source to a CDN](./deploy-web-part-to-cdn), where you will learn how to deploy and load the web part assets from a CDN instead of localhost.
