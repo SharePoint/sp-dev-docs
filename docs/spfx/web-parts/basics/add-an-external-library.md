@@ -344,6 +344,6 @@ In this example, you have a folder **src/strings/**. In this folder are several 
     
 4. Use the strings in your project:
 
-   ```typescript
-    alert(strings.initialPrompt);
-    ```
+	```typescript
+	alert(strings.initialPrompt);
+	```
