@@ -15,11 +15,11 @@ If you don't have one, sign up for the [Office Developer Program](https://profil
 You will need an app catalog to upload and deploy web parts. If you've already set up an app catalog, see [create a new Developer Site collection](#create-a-new-developer-site-collection).  
 
 1. Go to the **SharePoint Admin Center** by entering the following URL in your browser. Replace **yourtenantprefix** with your Office 365 Developer Tenant prefix.
-
-   ```
-   https://yourtenantprefix-admin.sharepoint.com
-   ```
-
+	
+	```
+	https://yourtenantprefix-admin.sharepoint.com
+	```
+	
 2. In the left sidebar, choose the **apps** menu item and then choose **App Catalog**.
 
 3. Choose **OK** to create a new app catalog site.
@@ -37,11 +37,11 @@ SharePoint will create the app catalog site and you will be able to see its prog
 You also need a Developer Site. If you already have a Developer Site collection, see [Set up a document library](#set-up-a-document-library).
 
 1. Go to the **SharePoint Admin Center** by entering the following URL in your browser. Replace **yourtenantprefix** with your Office 365 Developer Tenant prefix.
-
-   ```
-   https://yourtenantprefix-admin.sharepoint.com
-   ```
-
+	
+	```
+	https://yourtenantprefix-admin.sharepoint.com
+	```
+	
 2. In the SharePoint ribbon, choose **New** -> **Private Site Collection**.
 
 3. In the dialog box, enter the following details:
