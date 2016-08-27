@@ -38,15 +38,15 @@ Be sure you have completed the procedures in the following articles before you s
 		}
 	}
 	```
-	
+
 5. In the console window, enter the following command to package your client-side solution that contains the web part:
-	
+
 	```
 	gulp package-solution
 	```
-	
+
 	The command will create the package in the `sharepoint` folder:
-	
+
 	```
 	helloworld-webpart.spapp
 	```
