@@ -8,7 +8,7 @@ This article describes how to build a simple web part that uses the DocumentCard
 
 The following image shows a DocumentCard component created with Office UI Fabric React.
 
-![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../images/fabric-components-doc-card-view-ex.png)
+![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../../images/fabric-components-doc-card-view-ex.png)
 
 
 ## Create a new web part project
@@ -201,5 +201,5 @@ Copy the following images to your **src\webparts\documentCardExample** folder:
 	
 2. In the toolbox, select your `DocumentCardExample` web part to add:
 	
-	![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../images/fabric-components-doc-card-view-ex.png)
+	![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../../images/fabric-components-doc-card-view-ex.png)
 
