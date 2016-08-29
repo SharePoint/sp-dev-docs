@@ -298,6 +298,7 @@ You can see that in the **render** method of the web part:
 ## Retrieve list data
 
 1. Navigate to the **render** method and replace the code inside the method with the following code:
+
 	```ts
 	this.domElement.innerHTML = `
 	<div class="${styles.helloWorld}">
