@@ -102,7 +102,7 @@ This is then available in your web part using **this.properties.targetProperty**
 <p class="ms-font-l ms-fontColor-white">${this.properties.description}</p>
 ```
 
-When the properties are defined, you can access them in your web part using the **this.properties.<property-value>**. For details, see [**render** method of the **HelloWorldWebPart**](../web-parts/build-a-hello-world-web-part#web-part-render-method):
+When the properties are defined, you can access them in your web part using the **this.properties.<property-value>**. For details, see [**render** method of the **HelloWorldWebPart**](../get-started/build-a-hello-world-web-part#web-part-render-method):
 
 ## Handling field changes
 
