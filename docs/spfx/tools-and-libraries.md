@@ -94,4 +94,4 @@ The [Office Dev Patterns and Practices / SharePoint Pattern and Practices (PnP)]
 ## Additional resources
 
 * [SharePoint Framework](sharepoint-framework-overview)
-* [Build a Hello World client-side web part](web-parts/build-a-hello-world-web-part)
+* [Build a Hello World client-side web part](web-parts/get-started/build-a-hello-world-web-part)
