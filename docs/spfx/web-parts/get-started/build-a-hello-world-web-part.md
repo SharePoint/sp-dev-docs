@@ -62,7 +62,7 @@ Because the SharePoint client-side solution is HTML/TypeScript based, you can us
 >**Note:** This article uses Visual Studio code in the steps and examples. You can use any IDE that you prefer. 
 
 ### Using Visual Studio 2015
-Currently, support for SharePoint client-side projects in Visual Studio is available through Node.js Tools for Visual Studio. For more information, see [Use Visual Studio to develop web parts](../../basics/use-visual-studio-to-develop-web-parts).
+Currently, support for SharePoint client-side projects in Visual Studio is available through Node.js Tools for Visual Studio. For more information, see [Use Visual Studio to develop web parts](../basics/use-visual-studio-to-develop-web-parts).
    
 ## Preview the web part
 To preview your web part, build and run it on a local web server. 
