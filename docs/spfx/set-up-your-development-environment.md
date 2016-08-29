@@ -76,4 +76,4 @@ The Yeoman SharePoint web part generator helps you quickly create a SharePoint c
 
 ## Next steps
 
-You are now ready to [build your first client-side web part](./build-a-hello-world-web-part)!
+You are now ready to [build your first client-side web part](web-parts/build-a-hello-world-web-part)!
