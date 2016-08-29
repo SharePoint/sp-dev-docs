@@ -65,21 +65,21 @@ this.context.pageContext
 
 	You should see the following in the web part:
 
-	![SharePoint page context in localhost](../../../images/sp-mock-localhost-wp.png)
+	![SharePoint page context in localhost](../../../../images/sp-mock-localhost-wp.png)
 
 5. Go to **workbench.aspx** hosted in SharePoint. The full URL is https://your-sharepoint-site-url/Shared%20Documents/workbench.aspx.
 
 	By default, your browser is configured not to load scripts from localhost. Workbench will notify you if that is the case as shown in the following image. This is due to loading scripts over HTTP while connected to a page via HTTPS.
 
-	![Load unsafe scripts to run scripts from localhost](../../../images/sp-workbench-o365-unsface-scripts.png) 
+	![Load unsafe scripts to run scripts from localhost](../../../../images/sp-workbench-o365-unsface-scripts.png) 
 
 6. To execute local scripts, in the Chrome browser, click the grey shield in the right side of the address bar to load unsafe scripts. 
 
-	![Allow browser to load unsafe scripts to run scripts from localhost](../../../images/chrome-load-unsafe-scripts.png)
+	![Allow browser to load unsafe scripts to run scripts from localhost](../../../../images/chrome-load-unsafe-scripts.png)
 
 	You should now see your SharePoint site URL in the web part now that page context is available to the web part.
 
-	![SharePoint page context in SharePoint site](../../../images/sp-lists-spsiteurl-wp.png)
+	![SharePoint page context in SharePoint site](../../../../images/sp-lists-spsiteurl-wp.png)
 
 ## Define list model
 You need a list model to start working with SharePoint list data. Two models As we will retrieve the lists, we need two models. 
@@ -330,13 +330,13 @@ You can see that in the **render** method of the web part:
 
 	You should see the mock data returned.
 
-	![Render lists data from localhost](../../../images/sp-lists-render-localhost.png)
+	![Render lists data from localhost](../../../../images/sp-lists-render-localhost.png)
 
 4. Switch to the workbench hosted in SharePoint. Refresh the page and add the HelloWorld web part.
 
 	You should see lists returned from the current site.
 
-	![Render lists data from SharePoint](../../../images/sp-lists-render-spsite.png)
+	![Render lists data from SharePoint](../../../../images/sp-lists-render-spsite.png)
 
 5. Now you can stop the server from running. Switch to the console and stop `gulp serve`. Choose `Ctrl+C` to terminate the gulp task.
 
