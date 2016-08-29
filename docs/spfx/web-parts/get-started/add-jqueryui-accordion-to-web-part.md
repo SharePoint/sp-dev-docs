@@ -4,7 +4,7 @@
 
 This article describes how to add the jQueryUI Accordion to your web part project. This involves creating a new web part, as shown in the following image. 
 
-![Screenshot of a web part that includes a jQuery Accordion](../../../images/jquery-accordion-wb.png)
+![Screenshot of a web part that includes a jQuery Accordion](../../../../images/jquery-accordion-wb.png)
 
 ## Prerequisites
 Complete the following steps before you start:
@@ -332,6 +332,6 @@ Gulp will execute the tasks and open the local SharePoint web part workbench.
 
 In the page canvas, choose the **+** (plus sign) to show the list of web parts, and add the jQuery web part. You should now see the jQueryUI Accordion!
 
-![Screenshot of a web part that includes a jQuery Accordion](../../../images/jquery-accordion-wb.png)
+![Screenshot of a web part that includes a jQuery Accordion](../../../../images/jquery-accordion-wb.png)
 
 In the console where you have `gulp serve` running, choose **Ctrl+C** to terminate the task.

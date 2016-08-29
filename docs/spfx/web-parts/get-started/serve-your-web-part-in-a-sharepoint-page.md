@@ -72,11 +72,11 @@ Next you need to deploy the package that was generated to the App Catalog.
 
 2. Upload or drag and drop the **helloworld-webpart.spapp** to the App Catalog.
 
-	![Upload solution to app catalog](../../../images/upload-solution-app-catalog.png) 
+	![Upload solution to app catalog](../../../../images/upload-solution-app-catalog.png) 
 	
 	This will deploy the client-side solution package. Since this is a full trust client-side solution, SharePoint will display a dialog and ask you to trust the client-side solution to deploy.
 	
-	![Trust client-side solution deployment](../../../images/sp-app-deploy-trust.png) 
+	![Trust client-side solution deployment](../../../../images/sp-app-deploy-trust.png) 
 	
 3. Choose **Deploy**
 
@@ -88,11 +88,11 @@ Next you need to deploy the package that was generated to the App Catalog.
 
 3. In the **Search** box, enter **helloworld** and choose **Enter** to filter your apps.
 	
-	![Add app to site](../../../images/install-app-your-site.png) 
+	![Add app to site](../../../../images/install-app-your-site.png) 
 	
 4. Choose the **helloworld-webpart-client-side-solution** app to install the app on the site.
 	
-	![Trust app](../../../images/app-installed-your-site.png) 
+	![Trust app](../../../../images/app-installed-your-site.png) 
 	
 	The client-side solution and the web part are installed on your developer site.
 	
@@ -148,7 +148,7 @@ Now that you have deployed and installed the client-side solution, add the web p
 	
 	You should see your Hello World web part.
 	
-	![Web Part gallery opened with custom category](../../../images/webpart-gallery-helloworld.png)
+	![Web Part gallery opened with custom category](../../../../images/webpart-gallery-helloworld.png)
 	
 9. Select the Hello World web part and choose **Add** to add it to the page.
 	
@@ -156,17 +156,17 @@ Now that you have deployed and installed the client-side solution, add the web p
 	
 	You should see the **HelloWorld** web part you built in the previous article that retrieves lists from the current site. 
 	
-	![Hello World web part in classic page](../../../images/sp-wp-classic-page.png)
+	![Hello World web part in classic page](../../../../images/sp-wp-classic-page.png)
 
 ## Edit web part properties
 
 1. Choose the web part edit menu and choose **Edit Web Part** to open the property pane for the web part.
 	
-	![Edit web part](../../../images/edit-webpart-classic-page.png)
+	![Edit web part](../../../../images/edit-webpart-classic-page.png)
 	
 	The property pane opens as a server-side web part property pane. However, you have an option to configure the properties for your client-side web part.
 	
-	![Configure web part - Property Pane options](../../../images/webpart-configure-property-pane.png)
+	![Configure web part - Property Pane options](../../../../images/webpart-configure-property-pane.png)
 	
 2. Choose the **Configure** button to reveal the new client-side property pane for your client-side web part.
 	
@@ -174,7 +174,7 @@ Now that you have deployed and installed the client-side solution, add the web p
 	
 3. Edit the **Description** property and enter **Client-side web parts are awesome!**
 	
-	![Hello World web part in classic page](../../../images/sp-wp-classic-page-pp.png)
+	![Hello World web part in classic page](../../../../images/sp-wp-classic-page-pp.png)
 	
 	Notice that you still have the same behaviors such as a reactive pane where the web part is updated as you type.
 	

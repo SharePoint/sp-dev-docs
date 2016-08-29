@@ -41,13 +41,13 @@ The next set of prompts will ask for specific information about your web part:
 7.  Accept the default **HelloWorld description** as your web part description and choose **Enter**.
 8.  Accept the default **No javascript web framework** as the framework you would like to use and choose **Enter**.
 
-![Yeoman SharePoint generator prompts to create a web part client-side solution](../../../images/yeoman-sp-prompts.png)
+![Yeoman SharePoint generator prompts to create a web part client-side solution](../../../../images/yeoman-sp-prompts.png)
 
 At this point, Yeoman will install the required dependencies and scaffold the solution files along with the **HelloWorld** web part. This might take a few minutes. 
 
 When the scaffold is complete, you should see the following message indicating a successful scaffold:
 
-![SharePoint client-side solution scaffolded successfully](../../../images/yeoman-sp-complete.png)
+![SharePoint client-side solution scaffolded successfully](../../../../images/yeoman-sp-complete.png)
 
 For information about troubleshooting any errors, see [Known issues](../basics/known-issues).
 
@@ -75,7 +75,7 @@ gulp serve
 
 This command will execute a series of gulp tasks to create a local, Node-based HTTP server on 'localhost:4321' and launch your default browser to preview web parts from your local dev environment.
 
-![Gulp serve web part project](../../../images/helloworld-wp-gulp-serve.png)
+![Gulp serve web part project](../../../../images/helloworld-wp-gulp-serve.png)
 
 >**Note:** If you get the error **cannot find module es6-promise**, run the following command in the project folder to install the es-promise npm module: `npm i es6-promise` and then run `gulp serve` again.
 
@@ -93,21 +93,21 @@ Visual Studio Code provides built-in support for gulp and other task runners. Ch
 ### SharePoint workbench
 SharePoint workbench is a developer design surface that enables you to quickly preview and test web parts without deploying them in SharePoint. SharePoint workbench includes the client-side page and the client-side canvas in which you can add, delete and test your web parts in development.
 
-![SharePoint workbench running locally](../../../images/sp-workbench.png)
+![SharePoint workbench running locally](../../../../images/sp-workbench.png)
 
 1. To add the HelloWorld web part, choose the **add** button. The add button opens the toolbox where you can see a list of web parts available for you to add. The list will include the **HelloWorld** web part as well other web parts available locally in your development environment.
    
-   ![SharePoint workbench toolbox in localhost](../../../images/sp-workbench-toolbox.png)
+   ![SharePoint workbench toolbox in localhost](../../../../images/sp-workbench-toolbox.png)
    
 2. Choose **HelloWorld** to add the web part to the page:
    
-   ![HelloWorld web part in SharePoint workbench](../../../images/sp-workbench-helloworld-wp.png)
+   ![HelloWorld web part in SharePoint workbench](../../../../images/sp-workbench-helloworld-wp.png)
    
    Congratulations! You have just added your first client-side web part to a client-side page.
    
 3. Now, choose the pencil icon on the far left of the web part to reveal the web part property pane.
    
-   ![HelloWorld web part property pane](../../../images/sp-workbench-helloworld-pp.png)
+   ![HelloWorld web part property pane](../../../../images/sp-workbench-helloworld-pp.png)
    
    The property pane is where you can define properties to customize your web part. The property pane is client-side driven and provides a consistent design across SharePoint. 
    
@@ -127,7 +127,7 @@ You can use Visual Studio Code to explore the web part project structure.
    code .
    ```
 
-   ![HelloWorld project structure](../../../images/helloworld-wp-vscode-project-structure.png)
+   ![HelloWorld project structure](../../../../images/helloworld-wp-vscode-project-structure.png)
 
    If you get an error, you might need to [install the code command in PATH](https://code.visualstudio.com/docs/editor/setup).
 
@@ -355,25 +355,25 @@ SharePoint workbench is also hosted in SharePoint to preview and test your local
 
    By default, your browser is configured not to load scripts from localhost. Workbench will notify you if that is the case.
 
-   ![Load unsafe scripts to run scripts from localhost](../../../images/sp-workbench-o365-unsface-scripts.png) 
+   ![Load unsafe scripts to run scripts from localhost](../../../../images/sp-workbench-o365-unsface-scripts.png) 
 
 2. In order to execute local scripts, you will need to configure the browser to load scripts from unauthenticated sources. This is due to loading scripts over HTTP while connected to a page via HTTPS. Depending on the browser you use, the options to enable this may vary. For example, in the Chrome browser, you can choose the grey shield in the right side of the address bar to load unsafe scripts. 
 
-   ![Allow browser to load unsafe scripts to run scripts from localhost](../../../images/chrome-load-unsafe-scripts.png)
+   ![Allow browser to load unsafe scripts to run scripts from localhost](../../../../images/chrome-load-unsafe-scripts.png)
 
    After you enable loading scripts, you should see the workbench load. Add the hello world web part to the canvas:
 
-   ![SharePoint Workbench running in a SharePoint Online site](../../../images/sp-workbench-o365.png)
+   ![SharePoint Workbench running in a SharePoint Online site](../../../../images/sp-workbench-o365.png)
 
    Notice that the SharePoint workbench now has the Office 365 Suite navigation bar.
 
 3. Choose **add icon** in the canvas to reveal the toolbox. The toolbox now shows the web parts available on the site where the SharePoint workbench is hosted along with your **HelloWorldWebPart**.
 
-   ![Toolbox in SharePoint Workbench running in SharePoint Online site](../../../images/sp-workbench-o365-toolbox.png)
+   ![Toolbox in SharePoint Workbench running in SharePoint Online site](../../../../images/sp-workbench-o365-toolbox.png)
 
 4. Add **HelloWorldWebPart** from the toolbox. Now you're running your web part in a page hosted in SharePoint!
 
-   ![HelloWorld web part running in SharePoint Workbench running in a SharePoint Online site](../../../images/sp-workbench-o365-helloworld-wp.png)
+   ![HelloWorld web part running in SharePoint Workbench running in a SharePoint Online site](../../../../images/sp-workbench-o365-helloworld-wp.png)
 
 Because you are still developing and testing your web part, there is no need to package and deploy your web part to SharePoint. 
 
