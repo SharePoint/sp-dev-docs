@@ -9,7 +9,7 @@ Client-side web parts support:
 * Building with HTML and JavaScript.
 * Both SharePoint online and on-premises environments.
 
->**Note:** Before following the steps in this article, be sure to [Set up your development environment](../set-up-your-development-environment).
+>**Note:** Before following the steps in this article, be sure to [Set up your development environment](../../set-up-your-development-environment).
     
 ## Create a new web part project
 1. Create a new project directory in your favorite location.
@@ -49,7 +49,7 @@ When the scaffold is complete, you should see the following message indicating a
 
 ![SharePoint client-side solution scaffolded successfully](../../../images/yeoman-sp-complete.png)
 
-For information about troubleshooting any errors, see [Known issues](./known-issues).
+For information about troubleshooting any errors, see [Known issues](../basics/known-issues).
 
 ### Using your favorite Code Editor/IDE  
 Because the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor or IDE that supports client-side development to build your web part, such as:
@@ -62,7 +62,7 @@ Because the SharePoint client-side solution is HTML/TypeScript based, you can us
 >**Note:** This article uses Visual Studio code in the steps and examples. You can use any IDE that you prefer. 
 
 ### Using Visual Studio 2015
-Currently, support for SharePoint client-side projects in Visual Studio is available through Node.js Tools for Visual Studio. For more information, see [Use Visual Studio to develop web parts](./use-visual-studio-to-develop-web-parts).
+Currently, support for SharePoint client-side projects in Visual Studio is available through Node.js Tools for Visual Studio. For more information, see [Use Visual Studio to develop web parts](../basics/use-visual-studio-to-develop-web-parts).
    
 ## Preview the web part
 To preview your web part, build and run it on a local web server. 
@@ -201,7 +201,7 @@ When the properties are defined, you can access them in your web part using `thi
 <p class="ms-font-l ms-fontColor-white">${this.properties.description}</p>
 ```
 
-Read the [Integrating property pane with a web part](./integrate-with-property-pane) article to learn more about how to work with the property pane and property pane field types.
+Read the [Integrating property pane with a web part](../basics/integrate-with-property-pane) article to learn more about how to work with the property pane and property pane field types.
 
 1. Replace the **propertyPaneSettings** method with the code below which shows how to add property types other than TextField. 
 
