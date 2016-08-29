@@ -285,7 +285,7 @@ You can see that in the **render** method of the web part:
            </li>
        </ul>`;
      });
-
+	
      const listContainer: Element = this.domElement.querySelector('#spListContainer');
      listContainer.innerHTML = html;
    }
@@ -298,29 +298,28 @@ You can see that in the **render** method of the web part:
 ## Retrieve list data
 
 1. Navigate to the **render** method and replace the code inside the method with the following code:
-
-   ```ts
-   this.domElement.innerHTML = `
-   <div class="${styles.helloWorld}">
-     <div class="${styles.container}">
-       <div class="ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}">
-         <div class="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
-           <span class="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
-           <p class="ms-font-l ms-fontColor-white">Customize SharePoint experiences using Web Parts.</p>
-           <p class="ms-font-l ms-fontColor-white">${this.properties.description}</p>
-           <p class="ms-font-l ms-fontColor-white">${this.properties.test2}</p>
-           <p class='ms-font-l ms-fontColor-white'>Loading from ${this.context.pageContext.web.title}</p>
-           <a href="https://github.com/SharePoint/sp-dev-docs/wiki" class="ms-Button ${styles.button}">
-             <span class="ms-Button-label">Learn more</span>
-           </a>
-         </div>
-       </div>
-       <div id="spListContainer" />
-     </div>
-   </div>`;
-
-   this._renderListAsync();
-   ```
+	```ts
+	this.domElement.innerHTML = `
+	<div class="${styles.helloWorld}">
+		<div class="${styles.container}">
+			<div class="ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}">
+				<div class="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
+					<span class="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
+					<p class="ms-font-l ms-fontColor-white">Customize SharePoint experiences using Web Parts.</p>
+					<p class="ms-font-l ms-fontColor-white">${this.properties.description}</p>
+					<p class="ms-font-l ms-fontColor-white">${this.properties.test2}</p>
+					<p class='ms-font-l ms-fontColor-white'>Loading from ${this.context.pageContext.web.title}</p>
+					<a href="https://github.com/SharePoint/sp-dev-docs/wiki" class="ms-Button ${styles.button}">
+						<span class="ms-Button-label">Learn more</span>
+					</a>
+				</div>
+			</div>
+		<div id="spListContainer" />
+		</div>
+	</div>`;
+	
+	this._renderListAsync();
+	```
 
 2. Save the file.
 
