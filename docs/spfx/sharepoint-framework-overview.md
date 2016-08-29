@@ -47,6 +47,10 @@ Historically, we created web parts as full trust C# assemblies that were install
 
 This is the first preview release. We will provide updates and refinements over time based on your feedback and experiences. While the SharePoint Framework is in preview, you might experience occasional breaking changes around API names, flows, and more. Future updates to the SharePoint Framework will be backward compatible, so that your solutions will continue to work.
 
+## SharePoint Framework License
+
+The SharePoint Framework components are licensed under this [Microsoft EULA](https://github.com/SharePoint/sp-dev-docs/blob/master/Microsoft%20Sharepoint%20Framework%20Preview%20EULA.DOCX).
+
 ## Questions?
 
 If you have any questions, post them on [SharePoint StackExchange](http://sharepoint.stackexchange.com/). Tag your questions and comments with [#spfx](http://sharepoint.stackexchange.com/tags/spfx/), [#spfx-webparts](http://sharepoint.stackexchange.com/tags/spfx-webparts/), and [#spfx-tooling](http://sharepoint.stackexchange.com/tags/spfx-tooling/). 
