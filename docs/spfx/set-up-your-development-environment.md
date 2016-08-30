@@ -72,7 +72,7 @@ npm i -g yo gulp
 
 The Yeoman SharePoint web part generator helps you quickly create a SharePoint client-side solution project with the right toolchain and project structure.
 
-* Enter the following command to install the Yeoman SharePoint generator:
+Enter the following command to install the Yeoman SharePoint generator:
 	
 ```
 npm i -g @microsoft/generator-sharepoint 
