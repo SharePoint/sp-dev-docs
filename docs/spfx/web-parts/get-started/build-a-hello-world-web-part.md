@@ -31,12 +31,10 @@ yo @microsoft/sharepoint
 ```
     
 When prompted:
-
 * Accept the default **helloworld-webpart** as your solution name and choose **Enter**.
 * Select **Use the current folder** for where to place the files.
 
 The next set of prompts will ask for specific information about your web part:
-
 * Accept the default **HelloWorld** as your web part name and choose **Enter**.
 * Accept the default **HelloWorld description** as your web part description and choose **Enter**.
 * Accept the default **No javascript web framework** as the framework you would like to use and choose **Enter**.
@@ -67,7 +65,7 @@ Currently, support for SharePoint client-side projects in Visual Studio is avail
 ## Preview the web part
 To preview your web part, build and run it on a local web server. 
 
-* Switch to your console, make sure you are still in the **helloworld-webpart** directory and enter the following command to build and preview your web part:
+Switch to your console, make sure you are still in the **helloworld-webpart** directory and enter the following command to build and preview your web part:
 
 ```
 gulp serve

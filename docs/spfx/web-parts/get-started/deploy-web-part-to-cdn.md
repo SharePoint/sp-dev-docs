@@ -34,9 +34,9 @@ This will create a new storage account endpoint **spfxsamples.blob.core.windows.
 
 ### BLOB container name
 
-1. Create a new Blob service container. This will be available in your storage account dashboard.
+Create a new Blob service container. This will be available in your storage account dashboard.
 
-2. Select the **+ Container** and create a new container with the following:
+Select the **+ Container** and create a new container with the following:
 
 * Name: **helloworld-webpart**
 * Access type: Container
@@ -45,7 +45,7 @@ This will create a new storage account endpoint **spfxsamples.blob.core.windows.
 
 ### Storage account access key
 
-3. In the storage account dashboard, choose **Access Key** in the dashboard and copy one of the access keys.
+In the storage account dashboard, choose **Access Key** in the dashboard and copy one of the access keys.
 
 ![Image that shows the storage account access key](../../../../images/deploy-storage-account-accesskey.png)
 
@@ -53,14 +53,13 @@ This will create a new storage account endpoint **spfxsamples.blob.core.windows.
 
 Create a new CDN profile and associate the CDN endpoint wit this BLOB container.
 
-4. Create a new CDN profile as described in [Step 2: Create a new CDN profile](https://azure.microsoft.com/en-us/documentation/articles/cdn-create-a-storage-account-with-cdn/#step-2-create-a-new-cdn-profile).
+Create a new CDN profile as described in [Step 2: Create a new CDN profile](https://azure.microsoft.com/en-us/documentation/articles/cdn-create-a-storage-account-with-cdn/#step-2-create-a-new-cdn-profile).
 
 For example, in the following screenshot, **spfxwebparts** is the CDN profile name.
 
-
 ![Screenshot of create a new CDN profile](../../../../images/deploy-create-cdn-profile.png)
 
-5. Create a CDN endpoint as described in [Step 3: Create a new CDN endpoint](https://azure.microsoft.com/en-us/documentation/articles/cdn-create-a-storage-account-with-cdn/#step-3-create-a-new-cdn-endpoint).
+Create a CDN endpoint as described in [Step 3: Create a new CDN endpoint](https://azure.microsoft.com/en-us/documentation/articles/cdn-create-a-storage-account-with-cdn/#step-3-create-a-new-cdn-endpoint).
 
 For example, in the following screenshot, **spfxsamples** is the endpoint name, **Storage** is the origin type, and **spfxsamples.blob.core.windows.net** is the storage account.
 
@@ -74,7 +73,7 @@ Note, however that you have not yet deployed the files.
 
 ## Project directory
 
-1. Switch to console and make sure you are still in the project directory you used to set up your web part project.
+Switch to console and make sure you are still in the project directory you used to set up your web part project.
 2. End the **gulp serve** task by choosing **Ctrl+C** and go to your project directory:
 
 ```
@@ -83,9 +82,9 @@ cd helloworld-webpart
 
 ## Configure Azure Storage account details
 
-1. Switch to Visual Studio Code and go to your **HelloWorld** web part project.
+Switch to Visual Studio Code and go to your **HelloWorld** web part project.
 
-2. Open **deploy-azure-storage.json** in the **config** folder.
+Open **deploy-azure-storage.json** in the **config** folder.
 
 This is the file that contains your Azure Storage account details.
 
@@ -98,7 +97,7 @@ This is the file that contains your Azure Storage account details.
 }
 ```
 
-3. Replace the **account**, **container**, **accessKey** with your storage account name, BLOB container and storage account access key respectively.
+Replace the **account**, **container**, **accessKey** with your storage account name, BLOB container and storage account access key respectively.
 
 **workingDir** is the directory where the web part assets will be located.
 
@@ -113,13 +112,13 @@ In this example, with the storage account created earlier, this file will look l
 }
 ```
 
-4. Save the file.
+Save the file.
 
 ## Prepare web part assets to deploy
 
 Before uploading the assets to CDN, you need to build them.
 
-1. Switch to the console and execute the following `gulp` task:
+Switch to the console and execute the following `gulp` task:
 
 ```
 gulp --ship
@@ -138,9 +137,9 @@ The minified assets can be found under the `temp\deploy` directory.
 
 ## Deploy assets to Azure Storage
 
-1. Switch to the console of the **HelloWorld** project directory.
+Switch to the console of the **HelloWorld** project directory.
 
-2. Enter the gulp task to deploy the assets to your storage account:
+Enter the gulp task to deploy the assets to your storage account:
 
 ```
 gulp deploy-azure-storage
@@ -152,9 +151,9 @@ This will deploy the web part bundle along with other assets like JavaScript and
 
 In order for the web part to load from your CDN, you will need to tell it your CDN path.
 
-1. Switch to Visual Studio Code and open the **write-manifests.json** from the **config** folder.
+Switch to Visual Studio Code and open the **write-manifests.json** from the **config** folder.
 
-2. Enter your CDN base path for the **cdnBasePath** property.
+Enter your CDN base path for the **cdnBasePath** property.
 
 ```json
 {
@@ -172,7 +171,7 @@ In this example, with the CDN profile created earlier, this file will look like:
 
 >**Note:** The CDN base path is the CDN endpoint with the BLOB container.
 
-3. Save the file.
+Save the file.
 
 ## Deploy the updated package
 
@@ -180,9 +179,9 @@ In this example, with the CDN profile created earlier, this file will look like:
 
 Because you changed the web part bundle, you will need to re-deploy the package to the App Catalog. You used **--ship** to generate minified assets for distribution.
 
-1. Switch to the console of the **HelloWorld** project directory.
+Switch to the console of the **HelloWorld** project directory.
 
-2. Enter the gulp task to package the client-side solution, this time with the `--ship` flag set. This forces the task to pick up the CDN base path configured in the previous step:
+Enter the gulp task to package the client-side solution, this time with the `--ship` flag set. This forces the task to pick up the CDN base path configured in the previous step:
 
 ```
 gulp bundle --ship
@@ -195,13 +194,13 @@ This will create the updated client-side solution package in the **sharepoint\so
 
 ### Upload to your App Catalog
 
-1. Upload or drag & drop the client-side solution package to the App Catalog.
+Upload or drag & drop the client-side solution package to the App Catalog.
 
 Because you already  deployed the package, you will be prompted as to whether to replace the existing package.
 
 ![Screenshot of replace client-side solution package prompt](../../../../images/sp-app-replace-pkg.png)
 
-2. Choose **Replace It**.
+Choose **Replace It**.
 
 The App Catalog will now have the latest client-side solution package where the web part bundle is loaded from the CDN.
 
