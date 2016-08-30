@@ -20,28 +20,27 @@ The developer toolchain uses Webpack, SystemJS and CommonJS to bundle your web p
 
 ## Create a new web part project
 
-1. Create a new project directory in your favorite location:
+Create a new project directory in your favorite location:
 
-	```
-	md jquery-webpart
-	```
+```
+md jquery-webpart
+```
     
 	> **Warning:** Make sure to create this directory in a new folder, not as a subdirectory of `helloworld-webpart`.
 
-2. Go to the project directory:
+Go to the project directory:
 
-	```
-	cd jquery-webpart
-	```
+```
+cd jquery-webpart
+```
     
-3. Create a new jQuery web part by running the Yeoman SharePoint Generator:
+Create a new jQuery web part by running the Yeoman SharePoint Generator:
 
-	```
-	yo @microsoft/sharepoint
-	```
+```
+yo @microsoft/sharepoint
+```
 
 When prompted:
-
 * Accept the default **jquery-webpart** as your solution name and choose **Enter**.
 * Select **Use the current folder** as the location for the files.
 
@@ -53,25 +52,25 @@ The next set of prompts will ask for specific information about your web part:
 
 At this point, Yeoman will install the required dependencies and scaffold the solution files. This might take a few minutes. Yeoman will scaffold the project to include your **jQueryWebPart** web part as well.
 
-4. In the console, type the following to open the web part project in Visual Studio Code:
+In the console, type the following to open the web part project in Visual Studio Code:
 
-	```
-	code .
-	```
+```
+code .
+```
 
 ## Install jQuery and jQuery UI NPM Packages
 
-1. In the console, type the following to install jQuery npm package:
+In the console, type the following to install jQuery npm package:
 
-	```
-	npm i --save jquery
-	```
+```
+npm i --save jquery
+```
 
-2. Now type the following to install jQueryUI npm package:
+ Now type the following to install jQueryUI npm package:
 
-	```
-	npm i --save jqueryui
-	```
+```
+npm i --save jqueryui
+```
 
 TypeScript Definition Manager (TSD) allows you to search and install type definitions for your project. Use TSD to install the type definitions for jQuery and jQuery UI.
 
@@ -258,7 +257,6 @@ public constructor(context: IWebPartContext){
 ```
 
 This code does the following:
-
 * Calls the parent constructor with the context to initialize the web part.
 * Loads the accordion styles from a CDN asynchronously.
 
