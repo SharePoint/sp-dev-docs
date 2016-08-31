@@ -55,6 +55,7 @@ helloworld-webpart.spapp
 ### Package contents
 
 The package uses SharePoint Feature to package your web part. By default, the gulp task creates the following:
+
 * A feature for your web part.
 * A .webpart file for your web part, which is an XML file that describes the Web Part.
 
