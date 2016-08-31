@@ -26,7 +26,7 @@ Create a new project directory in your favorite location:
 md jquery-webpart
 ```
     
-	> **Warning:** Make sure to create this directory in a new folder, not as a subdirectory of `helloworld-webpart`.
+> **Warning:** Make sure to create this directory in a new folder, not as a subdirectory of `helloworld-webpart`.
 
 Go to the project directory:
 
@@ -41,10 +41,12 @@ yo @microsoft/sharepoint
 ```
 
 When prompted:
+
 * Accept the default **jquery-webpart** as your solution name and choose **Enter**.
 * Select **Use the current folder** as the location for the files.
 
 The next set of prompts will ask for specific information about your web part:
+
 * Type **jQuery** for the web part name and choose **Enter**.
 * Enter **jQuery Web Part** as the description of the web part and choose **Enter**.
 * Accept the default No **javascript web framework** option for the framework and choose **Enter** to continue.
@@ -257,6 +259,7 @@ public constructor(context: IWebPartContext){
 ```
 
 This code does the following:
+
 * Calls the parent constructor with the context to initialize the web part.
 * Loads the accordion styles from a CDN asynchronously.
 
