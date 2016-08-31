@@ -19,6 +19,7 @@ gulp serve
 When the workbench is hosted locally, you do not have the SharePoint page context. You can still test your web part in many different ways. For example, you can concentrate on building the web part's UX and use mock data to simulate SharePoint interaction when you don't have the SharePoint context.
 
 However, when the workbench is hosted in SharePoint, you get access to the page context which provides various key properties, such as:
+
 * Web title
 * Web absolute URL
 * Web server-relative URL
@@ -35,27 +36,28 @@ Switch to Visual Studio code (or your preferred IDE) and open **src\webparts\hel
 Inside the **render** method, replace the **innerHTML** code block with the following code:
 
 ```ts
-	this.domElement.innerHTML = `
-	<div class='${styles.helloWorld}'>
-		<div class='${styles.container}'>
-			<div class='ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}'>
-			<div class='ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1'>
-				<span class='ms-font-xl ms-fontColor-white'>Welcome to SharePoint!</span>
-				<p class='ms-font-l ms-fontColor-white'>Customize SharePoint experiences using Web Parts.</p>
-				<p class='ms-font-l ms-fontColor-white'>${this.properties.description}</p>
-				<p class='ms-font-l ms-fontColor-white'>Loading from ${this.context.pageContext.web.title}</p>
-				<a href='https://github.com/SharePoint/sp-dev-docs/wiki' class='ms-Button ${styles.button}'>
-					<span class='ms-Button-label'>Learn more</span>
-				</a>
-			</div>
-			</div>
-	</div>
-	</div>`;
+this.domElement.innerHTML = `
+<div class='${styles.helloWorld}'>
+	<div class='${styles.container}'>
+		<div class='ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}'>
+		<div class='ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1'>
+			<span class='ms-font-xl ms-fontColor-white'>Welcome to SharePoint!</span>
+			<p class='ms-font-l ms-fontColor-white'>Customize SharePoint experiences using Web Parts.</p>
+			<p class='ms-font-l ms-fontColor-white'>${this.properties.description}</p>
+			<p class='ms-font-l ms-fontColor-white'>Loading from ${this.context.pageContext.web.title}</p>
+			<a href='https://github.com/SharePoint/sp-dev-docs/wiki' class='ms-Button ${styles.button}'>
+				<span class='ms-Button-label'>Learn more</span>
+			</a>
+		</div>
+		</div>
+</div>
+</div>`;
 ```
 
 Notice how `${ }` is used to output the variable's value in the HTML block. An extra HTML `p` is used to display `this.context.pageContext.web.title`. Since this web part loads from the local environment, the title will be **Local Workbench**.
 
 Save the file. The `gulp serve` running in your console will detect this save operation and:
+
 * Build and bundle the updated code automatically.
 * Refresh your local workbench page (as the web part code needs to be reloaded).
 
@@ -125,6 +127,7 @@ export default class MockHttpClient {
 ```
 
 Things to note about the code:
+
 * Because there are multiple exports in **HelloWorldWebPart.ts** the specific one to import is specified using `{ }`. In this case, only the data model `ISPList` is required.
 * You do not need to type the file extension when importing from the default module which in this case is **HelloWorldWebPart**. 
 * It exports the **MockHttpClient** class as a default module so that it can be imported in other files.
@@ -265,6 +268,7 @@ private _renderListAsync(): void {
 ```
 
 Things to note about hostType in the **_renderListAsync** method:
+
 * The `this.context.environment.type` property will help you check if you are in a local or SharePoint environment.
 * The correct method is called depending on where your workbench is hosted.
 
