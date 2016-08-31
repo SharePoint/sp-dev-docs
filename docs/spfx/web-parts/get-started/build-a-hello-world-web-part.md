@@ -31,10 +31,12 @@ yo @microsoft/sharepoint
 ```
     
 When prompted:
+
 * Accept the default **helloworld-webpart** as your solution name and choose **Enter**.
 * Select **Use the current folder** for where to place the files.
 
 The next set of prompts will ask for specific information about your web part:
+
 * Accept the default **HelloWorld** as your web part name and choose **Enter**.
 * Accept the default **HelloWorld description** as your web part description and choose **Enter**.
 * Accept the default **No javascript web framework** as the framework you would like to use and choose **Enter**.
