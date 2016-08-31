@@ -93,4 +93,4 @@ Here are some tools that might come in handy as well:
 
 ## Next steps
 
-You are now ready to [build your first client-side web part](web-parts/build-a-hello-world-web-part)!
+You are now ready to [build your first client-side web part](web-parts/get-started/build-a-hello-world-web-part)!
