@@ -132,8 +132,8 @@ import {
 Delete the current `render` method and add the following updated `render` method:
 
 ```ts
-public render() {
-	let previewProps: IDocumentCardPreviewProps = {
+public render(): JSX.Element {
+	const previewProps: IDocumentCardPreviewProps = {
 	previewImages: [
 		{
 		previewImageSrc: require('document-preview.png'),
