@@ -45,6 +45,7 @@ https://yourtenantprefix-admin.sharepoint.com
 In the SharePoint ribbon, choose **New** -> **Private Site Collection**.
 
 In the dialog box, enter the following details:
+
 * **Title**: Enter a title for your developer site collection; for example: **Developer Site**.
 * **Web Site Address _suffix_**: Enter a suffix for your developer site collection; for example: **dev**.
 * **Template Selection**: Select **Developer Site** as the site collection template.
