@@ -78,6 +78,7 @@ This command will execute a series of gulp tasks to create a local, Node-based H
 >**Note:** If you get the error **cannot find module es6-promise**, run the following command in the project folder to install the es-promise npm module: `npm i es6-promise` and then run `gulp serve` again.
 
 SharePoint client-side development tools use [gulp](http://gulpjs.com/) as the task runner to handle build process tasks such as:
+
 * Bundle and minify JavaScript and CSS files.
 * Run tools to call the bundling and minification tasks before each build.
 * Compile SASS files to CSS.
