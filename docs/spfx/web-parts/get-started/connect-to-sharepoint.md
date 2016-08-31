@@ -116,13 +116,13 @@ import { ISPList } from './HelloWorldWebPart';
 
 export default class MockHttpClient {
 
-		private static _items: ISPList[] = [{ Title: 'Mock List', Id: '1' }];
-
-		public static get(restUrl: string, options?: any): Promise<ISPList[]> {
-		return new Promise<ISPList[]>((resolve) => {
-				resolve(MockHttpClient._items);
-			});
-		}
+	private static _items: ISPList[] = [{ Title: 'Mock List', Id: '1' }];
+	
+	public static get(restUrl: string, options?: any): Promise<ISPList[]> {
+	return new Promise<ISPList[]>((resolve) => {
+			resolve(MockHttpClient._items);
+		});
+	}
 }
 ```
 
@@ -149,18 +149,11 @@ Add the following private method that mocks the list retrieval inside the **Hell
 
 ```ts
 private _getMockListData(): Promise<ISPLists> {
-		return MockHttpClient.get(this.context.pageContext.web.absoluteUrl).then(() => {
-			const listData: ISPLists = {
-				value:
-				[
-						{ Title: 'Mock List One', Id: '1' },
-						{ Title: 'Mock List Two', Id: '2' },
-						{ Title: 'Mock List Three', Id: '3' }
-				]
-				};
-
-			return listData;
-		}) as Promise<ISPLists>;
+    return MockHttpClient.get(this.context.pageContext.web.absoluteUrl)
+	    .then((data: ISPList[]) => {
+	         var listData: ISPLists = { value: data };
+	         return listData;
+	     }) as Promise<ISPLists>;
 }
 ```
 
