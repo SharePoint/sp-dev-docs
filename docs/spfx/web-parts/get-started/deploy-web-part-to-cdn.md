@@ -74,7 +74,8 @@ Note, however that you have not yet deployed the files.
 ## Project directory
 
 Switch to console and make sure you are still in the project directory you used to set up your web part project.
-2. End the **gulp serve** task by choosing **Ctrl+C** and go to your project directory:
+
+End the **gulp serve** task by choosing **Ctrl+C** and go to your project directory:
 
 ```
 cd helloworld-webpart
