@@ -165,6 +165,7 @@ public render() {
 Save the file.
 
 In this code, the DocumentCard component includes some extra sections:
+
 * DocumentCardPreview
 * DocumentCardTitle
 * DocumentCardActivity
