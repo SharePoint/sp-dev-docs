@@ -8,6 +8,7 @@ You can use Visual Studio, or your own custom development environment to build S
 
 ### NodeJS
 Install [NodeJS](https://nodejs.org/en/) Long Term Support (LTS) version.
+
 * If you have NodeJS already installed please check you have the latest version using `node -v`. It should return the current [LTS version](https://nodejs.org/en/download/). 
 * If you are using a Mac, it is recommended you use [homebrew](http://brew.sh/) to install and manage NodeJS. 
 
@@ -19,6 +20,7 @@ npm -g install npm@next
 
 ### Code Editors
 Install a code editor. You can use any code editor or IDE that supports client-side development to build your web part, such as:
+
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Sublime](https://www.sublimetext.com/)
 * [Atom](https://atom.io)
@@ -38,6 +40,7 @@ npm install --global --production windows-build-tools
 
 #### If you are using Visual Studio	
 If you want to use Visual Studio as your development environment, install the following required tools and updates:
+
 * [Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=691978&clcid=0x409)
 * [Visual Studio Update 3](https://www.visualstudio.com/en-us/news/releasenotes/vs2015-update3-vs) or later
 * [Node.js Tools for Visual Studio](https://aka.ms/getntvs)
@@ -81,6 +84,7 @@ npm i -g @microsoft/generator-sharepoint
 ## Optional tools
 
 Here are some tools that might come in handy as well:
+
 * [Fiddler](http://www.telerik.com/fiddler)
 * [Postman plugin for Chrome](https://www.getpostman.com/docs/introduction)
 * [Cmder for Windows](http://cmder.net/)
