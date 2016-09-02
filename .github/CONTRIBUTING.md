@@ -40,7 +40,7 @@ Any images associated with the docs should be uploaded into the `spfx\images` fo
 
 The first step is registering yourself on GitHub. Go to https://github.com/ and click on the "Sign up for GitHub" button. Once you're registered ensure you're logged on with your new account and navigate to the Office 365 Developer Patterns and Practices repository at https://github.com/sharepoint/sp-dev-docs. The right top side of the page contains a button called "Fork":
 
-![Fork the sp-dev-docs github repository](./images/contribute-fork-docs-repo.png)
+![Fork the sp-dev-docs github repository](../images/contribute-fork-docs-repo.png)
 
 Clicking on this button will Fork the SharePoint developer documentation repository to your GitHub account. It's actually like taking a copy. Select your personal GitHub account you registered earlier as the account to for this repository.
 
@@ -50,7 +50,7 @@ Once the forking has been done you'll find the docs repo under your account with
 
 Now that you have forked the docs repository, to sync this forked repository to your local machine, you will need to clone the repository. You can find the clone URL in the `Clone or download` dropdown in the repo page. 
 
-![Clone the forked SharePoint developer docs repository](./images/contribute-docs-clone-options.png)
+![Clone the forked SharePoint developer docs repository](../images/contribute-docs-clone-options.png)
 
 If you have any Git Desktop or any git source control installed, you can click the `Open is Desktop`, else follow the steps below:
 
@@ -106,7 +106,7 @@ Navigate to the forked sp-dev-docs repo in your account. Make sure your current 
 
 Once you are in the staging branch, you should see a message to `Compare & pull request`
 
-![Submit a pull request to sp-dev-docs repo](./images/contribute-docs-submit-pr.png)
+![Submit a pull request to sp-dev-docs repo](../images/contribute-docs-submit-pr.png)
 
 This will start a new pull request. Make sure you use the following [template]() to fill in your changes. Make sure you are creating this pull request against the `staging` branch.
 
