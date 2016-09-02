@@ -10,7 +10,9 @@ Client-side web parts support:
 * Both SharePoint online and on-premises environments.
 
 >**Note:** Before following the steps in this article, be sure to [Set up your development environment](../../set-up-your-development-environment).
-    
+
+>**Note:** You can find recorded video of this tutorial from [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=ralspfOBgic&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq).
+
 ## Create a new web part project
 Create a new project directory in your favorite location.
 	

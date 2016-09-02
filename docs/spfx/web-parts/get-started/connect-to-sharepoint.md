@@ -4,6 +4,7 @@
 
 Connect your web part to SharePoint to access functionality and data in SharePoint and provide a more integrated experience for end users. This article continues building the hello world web part built in the previous article [Build your first web part](./build-a-hello-world-web-part).
 
+>**Note:** You can find recorded video of this tutorial from [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=rokWJlXoFWk&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq).
 
 ## Run gulp serve
 

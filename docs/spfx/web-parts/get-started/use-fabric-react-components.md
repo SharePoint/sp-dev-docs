@@ -4,6 +4,8 @@
 
 This article describes how to build a simple web part that uses the DocumentCard component of [Office UI Fabric](https://github.com/OfficeDev/office-ui-fabric-react). Office UI Fabric React is the front-end framework for building experiences for Office and Office 365. Fabric React includes a robust collection of responsive, mobile-first components that make it easy for you to create web experiences using the Office Design Language.
 
+>**Note:** You can find recorded video of this tutorial from [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=P8WmNhcSWHU&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq).
+
 >**Note:** Office UI Fabric React components are in *a pre-v1 state*. For information about the v1 release and roadmap, see [Roadmap](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/ghdocs/ROADMAP.md) in the Office UI Fabric React repo in GitHub. 
 
 The following image shows a DocumentCard component created with Office UI Fabric React.
