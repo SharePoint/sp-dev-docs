@@ -172,7 +172,7 @@ In this example, with the CDN profile created earlier, this file will look like:
 
 ```json
 {
-  "cdnBasePath": "http://spfxsamples.azureedge.net/helloworld-webpart/"
+  "cdnBasePath": "https://spfxsamples.azureedge.net/helloworld-webpart/"
 }
 ```
 
