@@ -26,4 +26,16 @@
 			</Item>
 		</Item>
 	</Item>
+	<Item text="SharePoint APIs" url="apis" SEODescription="">
+		<Item text="SharePoint Webhooks" url="apis/webhooks" SEODescription="">
+			<Item text="Overview" url="apis/webhooks/overview-sharepoint-webhooks" SEODescription="SharePoint webhooks allow developers to build service integrations which subscribe to receive notifications on specific events that occur in SharePoint."/>
+			<Item text="SharePoint Lists" url="apis/webhooks/lists">
+				<Item text="Overview" url="apis/webhooks/lists/overview-sharepoint-list-webhooks" SEODescription="" />
+				<Item text="Create a subscription" url="apis/webhooks/lists/create-subscription" SEODescription="" />
+				<Item text="Update a subscription" url="apis/webhooks/lists/update-subscription" SEODescription="" />
+				<Item text="Delete a subscription" url="apis/webhooks/lists/delete-subscription" SEODescription="" />
+				<Item text="Get subscriptions" url="apis/webhooks/lists/get-subscription" SEODescription="" />
+			</Item>
+		</Item>
+	</Item>
 </Menu>
