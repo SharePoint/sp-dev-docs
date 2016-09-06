@@ -108,7 +108,7 @@ Since multiple notifications may be submitted to your service in a single reques
 #### Example notification
 Below is an example payload notification:
 
-The body of the HTTP request to your service notification URL will contain a [Webhook Notification](webhook-notification.md) similar to the following:
+The body of the HTTP request to your service notification URL will contain a [Webhook Notification](./lists/webhook-notification) similar to the following:
 
 ```json
 {
