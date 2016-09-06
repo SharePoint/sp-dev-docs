@@ -26,8 +26,8 @@
 			</Item>
 		</Item>
 		<Item text="Release notes" url="spfx/release-notes" SEODescription="">
-			<Item text="Developer Preview Drop 2" url="spfx/release-notes/sharepoint-framework-dev-preview-drop2.md" SEODescription="" />
-			<Item text="Developer Preview Drop 1" url="spfx/release-notes/sharepoint-framework-dev-preview-drop1.md" SEODescription="" />			
+			<Item text="Developer Preview Drop 2" url="spfx/release-notes/sharepoint-framework-dev-preview-drop2" SEODescription="" />
+			<Item text="Developer Preview Drop 1" url="spfx/release-notes/sharepoint-framework-dev-preview-drop1" SEODescription="" />			
 		</Item>
 	</Item>
 	<Item text="SharePoint APIs" url="apis" SEODescription="">
