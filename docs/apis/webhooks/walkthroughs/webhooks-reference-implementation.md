@@ -42,7 +42,7 @@ Once you've requested SharePoint to add your webhook SharePoint will validate th
 
 Looking at the reference implementation, you'll see that all webhook CRUD operations are consolidated in the [`WebHookManager`](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks/SharePoint.WebHooks.Common/WebHookManager.cs) class of the SharePoint.WebHooks.Common project. Adding a webhook is done using the `AddListWebHookAsync` method:
 
-```C#
+```csharp
 /// <summary>
 /// This method adds a webhook to a SharePoint list. Note that you need your webhook endpoint being passed into this method to be up and running and reachable from the internet
 /// </summary>
@@ -60,7 +60,7 @@ public async Task<SubscriptionModel> AddListWebHookAsync(string siteUrl, string 
 
 When we make a call to SharePoint we need to provide authentication information and in this case we're using `Bearer` authentication header with an `access token`. To obtain the access token we intercept the token via a `ExecutingWebRequest` event handler:
 
-```C#
+```csharp
 ClientContext cc = null;
 
 // Create SharePoint ClientContext object...
@@ -125,7 +125,7 @@ Webhook subscriptions are set to expire 6 months by default or at the specified 
 
 The actual renewal of a SharePoint list webhook can be done using a [`PATCH /_api/web/lists('list-id')/subscriptions(‘subscriptionID’)`](../lists/update-subscription) REST call. In the reference implementation, updating of webhooks is implemented in the [`WebHookManager`](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks/SharePoint.WebHooks.Common/WebHookManager.cs) class of the SharePoint.WebHooks.Common project. Updating a webhook is done using the `AddListWebHookAsync` method:
 
-```C#
+```csharp
 /// <summary>
 /// Updates the expiration datetime (and notification URL) of an existing SharePoint list webhook
 /// </summary>
