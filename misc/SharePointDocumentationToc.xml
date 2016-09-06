@@ -36,6 +36,10 @@
 				<Item text="Delete a subscription" url="apis/webhooks/lists/delete-subscription" SEODescription="" />
 				<Item text="Get subscriptions" url="apis/webhooks/lists/get-subscription" SEODescription="" />
 			</Item>
+			<Item text="Walkthroughs" url="apis/webhooks/walkthroughs">
+				<Item text="Basic tutorial" url="apis/webhooks/walkthroughs/basic-sharepoint-webhooks-tutorial" SEODescription="" />
+				<Item text="Sample reference implementation" url="apis/webhooks/walkthroughs/webhooks-reference-implementation" SEODescription="" />
+			</Item>
 		</Item>
 	</Item>
 </Menu>

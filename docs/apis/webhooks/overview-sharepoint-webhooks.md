@@ -1,7 +1,7 @@
 >**Note:** SharePoint webhooks is currently in preview and is subject to change. SharePoint webhooks are not currently supported for use in production environments.
 
 # Overview
-SharePoint [webhooks](http://en.wikipedia.org/wiki/Webhook) allow developers to build service integrations which subscribe to receive notifications on specific events that occur in SharePoint. When one of those events are triggered, SharePoint will send a HTTP POST payload to the subscriber. 
+SharePoint [webhooks](http://en.wikipedia.org/wiki/Webhook) allow developers to build service integrations which subscribe to receive notifications on specific events that occur in SharePoint. When one of those events are triggered, SharePoint will send a HTTP POST payload to the subscriber. Webhooks are easier to develop and consume since they're regular HTTP services (web API) in comparison to WCF services used by SharePoint add-in remote event receivers.
 
 The first iteration will deliver webhooks for [SharePoint list items](./lists/overview-sharepoint-list-webhooks). The SharePoint list item webhooks cover the events corresponding to list item changes for a given SharePoint list or a document library. SharePoint webhooks provide a simple notification pipeline so your application can be aware of changes to a SharePoint list without polling the service. 
 
@@ -128,12 +128,19 @@ The body of the HTTP request to your service notification URL will contain a [We
 
 You'll notice that the notification doesn't include any information about the changes that triggered it. Your application is expected to use the [GetChanges API](https://msdn.microsoft.com/EN-US/library/office/dn531433.aspx#bk_ListGetChanges) on the list to query the collection of changes from the change log and store the change token value for the next subsequent call when you are notified.
 
+## Event types
+SharePoint webhooks support only asynchronous events. This means, webhooks are only fired after a change happened (so similar to **-ed** events), and thus synchronous (**-ing** events) are not possible.
+
 ## Error handling
 If an error occurs while sending the notification to your service, SharePoint will follow exponential back-off logic. Any response with an HTTP status code outside of the 200-299 range, or that times out, will be attempted again over the next several minutes. If the request is not successful after 15 minutes, the notification is dropped.
 
 Future notifications will still be attempted to your service, although the service reserves the right to remove the subscription if a sufficient number of failures are detected.
 
 ## Expiration
-Subscriptions are set to expire 6 months by default or at the specified date time from when they are created. 
+Webhook subscriptions are set to expire 6 months by default or at the specified date time from when they are created. 
 
 You need to set an expiration date time when creating the subscription. The expiration date time should not be more than 6 months. Your application is expected to handle the expiration date time according to your application's needs by updating the subscription periodically. 
+
+## Retry mechanism
+
+When a given event occurs in SharePoint and when your service endpoint is not reachable (e.g. due to maintenance) SharePoint will retry sending the notification. Today SharePoint performs a retry of **5 times with a 5 minute wait time** between the attempts. If for some reason your service is down for a longer time, the next time when it's up and gets called by SharePoint the call to `GetChanges()` will get you the changes that were missed when your service was not available.
