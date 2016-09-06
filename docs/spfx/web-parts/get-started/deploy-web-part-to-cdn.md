@@ -1,6 +1,6 @@
 # Deploy your SharePoint client-side web part to a CDN
 
->**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environnments.
+>**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
 
 In this article, you will deploy the **HelloWorld** assets to a remote CDN instead of using the local environment. You'll use an Azure Storage account integrated with a CDN to deploy your assets. SharePoint Framework build tools provide out-of-the-box support for deploying to an Azure Storage account; however, you can also manually upload the files to your favorite CDN provider or to SharePoint.
 
@@ -172,7 +172,7 @@ In this example, with the CDN profile created earlier, this file will look like:
 
 ```json
 {
-  "cdnBasePath": "http://spfxsamples.azureedge.net/helloworld-webpart/"
+  "cdnBasePath": "https://spfxsamples.azureedge.net/helloworld-webpart/"
 }
 ```
 
