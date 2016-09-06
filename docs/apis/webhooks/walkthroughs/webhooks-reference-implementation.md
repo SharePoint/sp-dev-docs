@@ -17,7 +17,7 @@ Microsoft Azure is used to host the various components needed to implement Azure
 You can also follow the needed steps from tutorial recording available from the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=IbVlDkmsh8w).
 
 <a href="https://www.youtube.com/watch?v=IbVlDkmsh8w">
-<img src="../images/youtube-getting-started-with-webhooks.png" alt="PnP webcast - Getting started with SharePoint webhooks" />
+<img src="../docs/apis/webhooks/images/youtube-getting-started-with-webhooks.png" alt="PnP webcast - Getting started with SharePoint webhooks" />
 </a>
 
 ## Source code for this sample
@@ -38,7 +38,7 @@ This reference implementation interacts with a SharePoint list. To add a webhook
 
 Once you've requested SharePoint to add your webhook SharePoint will validate that your webhook service end point does exist. It will do this by sending a validation string to your service endpoint. SharePoint will expect that the endpoint returns the received validation string within 5 seconds. If this fails then the webhook creation is canceled. In you've deployed your service then this will work and SharePoint return a HTTP 201 message on the POST request you issued in step number 1. The payload of the returning message contains the ID of the webhook subscription. This is the ID of the subscription that was created.
 
-![Adding a webhook](../images/webhook-sample-add-process.png)
+![Adding a webhook](../docs/apis/webhooks/images/webhook-sample-add-process.png)
 
 Looking at the reference implementation, you'll see that all webhook CRUD operations are consolidated in the [`WebHookManager`](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks/SharePoint.WebHooks.Common/WebHookManager.cs) class of the SharePoint.WebHooks.Common project. Adding a webhook is done using the `AddListWebHookAsync` method:
 
