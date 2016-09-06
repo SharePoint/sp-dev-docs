@@ -1,6 +1,6 @@
 # SharePoint list webhooks
 
-The SharePoint list webhooks covers the events corresponding to list item changes for a given SharePoint list or a document library. SharePoint webhooks provide a simple notification pipeline so your application can be aware of changes to a SharePoint list without polling the service.
+The SharePoint list webhooks cover the events corresponding to list item changes for a given SharePoint list or a document library. SharePoint webhooks provide a simple notification pipeline so your application can be aware of changes to a SharePoint list without polling the service.
 
 ## Common tasks
 | Task                                                | HTTP method                                                  |

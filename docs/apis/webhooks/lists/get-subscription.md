@@ -1,18 +1,17 @@
 # Get subscriptions
 
-Enumerate one or more subscriptions on a SharePoint resource.
+Enumerate one or more subscriptions on a SharePoint list.
 
-## Prerequisites
+## Permissions
 
 ### Get subscription
-Only the subscription created by the calling application is able to view its subscription information. 
 
-To view its subscription information, your application must have read-write permissions to the SharePoint resource where the subscriptions exist. 
+* Only the subscription created by the calling application is able to view its subscription information. 
+* To view its subscription information, your application must have **read-write permissions** to the SharePoint list where the subscriptions exist. 
 
 ### Get all subscriptions
-To view all subscriptions on a given SharePoint resource, your application must have manage permissions on the SharePoint resource where the subscriptions exist. 
 
-For example: To view all subscriptions on a given list, your application must have  **Manage Lists** permissions.
+* To view all subscriptions on a given SharePoint list, your application must have **manage lists permissions** on the SharePoint list where the subscriptions exist. 
 
 ## HTTP request
 

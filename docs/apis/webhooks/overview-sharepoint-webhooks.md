@@ -3,10 +3,10 @@
 # Overview
 SharePoint [webhooks](http://en.wikipedia.org/wiki/Webhook) allow developers to build service integrations which subscribe to receive notifications on specific events that occur in SharePoint. When one of those events are triggered, SharePoint will send a HTTP POST payload to the subscriber. 
 
-The first iteration will deliver webhooks for SharePoint list items. The SharePoint list item webhooks covers the events corresponding to list item changes for a given SharePoint list or a document library. SharePoint webhooks provide a simple notification pipeline so your application can be aware of changes to a SharePoint list without polling the service. 
+The first iteration will deliver webhooks for [SharePoint list items](./lists/overview-sharepoint-list-webhooks). The SharePoint list item webhooks cover the events corresponding to list item changes for a given SharePoint list or a document library. SharePoint webhooks provide a simple notification pipeline so your application can be aware of changes to a SharePoint list without polling the service. 
 
 ## Creating webhooks
-To create a new SharePoint webhook, you add a new subscription to the specific SharePoint resource, such as SharePoint list. 
+To create a new SharePoint webhook, you add a new subscription to the specific SharePoint resource, such as a SharePoint list. 
 
 The following information is required for creating a new subscription:
 
@@ -26,7 +26,7 @@ You can also include the following additional information if needed:
 
 ## Handling webhook validation requests
 
-When a new subscription is created, SharePoint will validate whether the notification URL supports receiving webhook notifications. This validation is performed during the [create subscription](create-subscription.md) request. The subscription will only be created if your service responds correct.
+When a new subscription is created, SharePoint will validate whether the notification URL supports receiving webhook notifications. This validation is performed during the subscription creation request. The subscription will only be created if your service responds in a timely manner back with the validation token.
 
 When a new subscription is created, SharePoint will POST a request to the registered URL in the following format:
 
