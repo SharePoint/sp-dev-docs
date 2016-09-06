@@ -14,7 +14,7 @@ This sample reference implementation specifically interacts with [SharePoint lis
 Microsoft Azure is used to host the various components needed to implement Azure webhooks.
 
 ## Video recording of this sample
-You can also follow the needed steps from tutorial recording available from the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=j3hWCAI9R20).
+You can also follow the needed steps from sample recording available from the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=j3hWCAI9R20).
 
 <a href="https://www.youtube.com/watch?v=j3hWCAI9R20">
 <img src="../../../../images/youtube-introducing-sharepoint-webhooks.png" alt="PnP webcast - Introducing SharePoint webhooks" />
