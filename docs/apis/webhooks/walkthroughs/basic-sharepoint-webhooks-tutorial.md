@@ -3,7 +3,7 @@
 ## Summary
 This basic tutorial will show you how to add and handle SharePoint webhook requests. We will be using Postman client to construct and execute SharePoint webhook requests quickly while interacting with a simple ASP.NET Web API as the webhook receiver. 
 
-This is a raw version executing plain HTTP requests. It is useful to understand how webhooks work under the hood. If you are looking for an end to end ASP.NET sample, then you can find it [here]().
+This is a raw version executing plain HTTP requests. It is useful to understand how webhooks work under the hood (see also a [recorded demo](https://www.youtube.com/watch?v=IbVlDkmsh8w "Tutorial demo on YouTube") of this tutorial). If you are looking for an end to end ASP.NET sample, then you can find it [here](https://aka.ms/sp-webhooks-sample-reference).
 
 ## Prerequisites
 
@@ -295,7 +295,7 @@ Postman makes it really simple to work with APIs. The first step is to configure
 * Select the option to _Add token to header_.
 * Double click on the _access\_token_ variable to add the token to the header for the request.
 
-![postman get new access token](../images/postman-get-new-access-token.png)
+![postman get new access token](../../../../images/postman-get-new-access-token.png)
 
 ### Get Documents list Id
 We will manage webhooks for the default document library which is provisioned by default in your default site collection under the name `Documents`. Lets get the Id of this list by issuing a `GET` request:
@@ -342,7 +342,7 @@ Now that we have the required information, we can construct the query and the re
 	}
 	```
 
-	![postman add webhook body](../images/postman-add-webhook-body.png)
+	![postman add webhook body](../../../../images/postman-add-webhook-body.png)
 
 > Make sure the expirationDateTime is at most 6 months from today. 
 
@@ -454,4 +454,4 @@ With this data, you can construct the URL and use the GetChanges API to get the 
 ## Next steps
 In this tutorial, we used Postman client and a simple Web API to subscribe and receive webhook notification from SharePoint. 
 
-Next, you can browse an end to end sample walkthrough which uses Azure Storage Queues to process the information, get changes from SharePoint and push those back into a SharePoint list.
+Next, you can browse an [end to end sample walkthrough which uses Azure Storage Queues](https://aka.ms/sp-webhooks-sample-reference "Reference implementation") to process the information, get changes from SharePoint and push those back into a SharePoint list.
