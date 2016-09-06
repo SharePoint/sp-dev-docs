@@ -1,10 +1,11 @@
 # SharePoint webhooks sample reference implementation
 ##### Sample authored by: Bert Jansen (Microsoft), [SharePoint PnP Core Team](https://aka.ms/OfficeDevPnP)
 
+
 ## Summary
 This SharePoint PnP sample reference implementation shows how you can make use of SharePoint webhooks in your applications. The webhooks are implemented in an enterprise ready manner using various Azure components such as Azure Web Jobs, Azure SQL Server and Azure Storage Queues for asynchronous web job notification handling.
 
-This sample reference implementation specifically interacts with [SharePoint list webhooks](../lists/overview-sharepoint-list-webhooks.md). 
+This sample reference implementation specifically interacts with [SharePoint list webhooks](../lists/overview-sharepoint-list-webhooks). 
 
 ## Applies to
 -  Office 365 Multi Tenant (MT) with [First Release enabled](https://support.office.com/en-us/article/Set-up-the-Standard-or-First-Release-options-in-Office-365-3b3adfa4-1777-4ff0-b606-fb8732101f47).
@@ -81,9 +82,7 @@ When SharePoint detects a change in a list for which you've subscribed a webhook
 - **resource**: this is the ID of the list for which the change happened.
 - **siteUrl**: this is the server relative url of the site holding the resource for which the change happened.
 
-> Note:
-- SharePoint is only providing you that a change happened, not what actually was changed. 
-- Since you get information about the web and list that were changed it means that you can perfectly use the same service endpoint to handle webhook events from multiple sites and lists.
+> **Note**: SharePoint is only providing you that a change happened, not what actually was changed. Since you get information about the web and list that were changed it means that you can perfectly use the same service endpoint to handle webhook events from multiple sites and lists.
 
 When your service is called it's important that you reply with a HTTP 200 message within less than 5 seconds. Later on in this article you'll learn more about the why but essentially this comes down to the fact that you need to **asynchronously** handle the notifications. In this sample we'll do this by using Azure Web Jobs and Azure Storage Queues.
 
