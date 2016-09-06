@@ -3,7 +3,8 @@ Thank you for reporting an issue or suggesting an enhancement. We appreciate you
 #### Category
 [ ] Question
 [ ] Typo
-[ ] Mistake
+[ ] Bug
+[ ] Enhancement / Suggestion
 [ ] Additional article idea
 
 #### Expected or Desired Behavior
