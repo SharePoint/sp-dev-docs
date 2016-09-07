@@ -1,13 +1,13 @@
 # Update a subscription
 
-An application can update an existing subscription by using the PATCH verb to change the properties of the subscription.
+Updates a webhook subscription on a SharePoint list.
 
 ## Permissions
 
-* Only the subscription created by the calling application is able to update its subscription. 
-* To update a subscription the application must have **read-write permissions** to the SharePoint list the subscription exists on.
+* A subscription can only be updated by the application that created it. 
+* The application must have **read-write permissions** to the SharePoint list the subscription exists on.
 
-## HTTP Request
+## HTTP request
 
 ```
 PATCH _api/web/lists('list-id')/subscriptions('id')
@@ -25,7 +25,17 @@ Content-Type: application/json
 }
 ```
 
-## HTTP Response
+## Request body
+Include the following properties in the request body.
+
+Name | Type | Description 
+-----|------|------------
+notificationUrl|string|The service URL to send notifications to.
+expirationDateTime|date|The date the notification will expire and be deleted.
+client-clientState|string|Optional. Opaque string passed back to the client on all notifications. You can use this for validating notificaitons, or tagging different subscriptions.
+
+
+## Response
 
 If the subscription is found and successfully updated, then a `204 No Content` response is returned:
 

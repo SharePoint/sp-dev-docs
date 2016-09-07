@@ -5,7 +5,7 @@ Creates a new subscription. In the POST request, include properties to describe 
 
 The application must have **read-write permissions** to the SharePoint list where the subscription will be created.
 
-## HTTP Request
+## HTTP request
 
 ```
 POST /_api/web/lists('list-id')/subscriptions
@@ -19,6 +19,8 @@ Name | Type | Description
 resource|string|The URL of the list to receive notifications from.
 notificationUrl|string|The service URL to send notifications to.
 expirationDateTime|date|The date the notification will expire and be deleted.
+client-clientState|string|Optional. Opaque string passed back to the client on all notifications. You can use this for validating notificaitons, or tagging different subscriptions.
+
 
 ### Example
 

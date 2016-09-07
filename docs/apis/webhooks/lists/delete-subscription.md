@@ -1,13 +1,13 @@
 # Delete a subscription
 
-Remove a subscription from a SharePoint list. After deleting the subscription the subscription will no longer exist and additional notifications will not be delivered.
+Deletes a webhook subscription from a SharePoint list. After deleting the subscription notifications will no longer be delivered.
 
 ## Permissions
 
-* Only the subscription created by the calling application is able to delete its subscription. 
+* A subscription can only be deleted by the application that created it. 
 * To delete a subscription the application must have **read-write permissions** to the SharePoint list the subscription exists on.
 
-## HTTP Request
+## HTTP request
 
 ```
 DELETE _api/web/lists('list-id')/subscriptions('id')
@@ -19,9 +19,12 @@ DELETE _api/web/lists('list-id')/subscriptions('id')
 DELETE _api/web/lists('5C77031A-9621-4DFC-BB5D-57803A94E91D')/subscriptions('6D77031A-2345-5GRT-BV3D-55234B56FR43')
 ```
 
-## HTTP Response
+## Request body
+Do not supply a request body for this method.
 
-If the subscription is found and successfully deleted, then a `204 No Content` response is returned:
+## Response
+
+If the subscription is found and successfully deleted, then a `204 No Content` response is returned.
 
 ### Example
 

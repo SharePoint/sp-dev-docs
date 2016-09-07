@@ -1,21 +1,21 @@
 # Get subscriptions
 
-Enumerate one or more subscriptions on a SharePoint list.
+Gets one or more webhook subscriptions on a SharePoint list.
 
 ## Permissions
 
-### Get subscription
+### Get a single subscription
 
-* Only the subscription created by the calling application is able to view its subscription information. 
-* To view its subscription information, your application must have **read-write permissions** to the SharePoint list where the subscriptions exist. 
+* A subscription can only be retrieved by the application that created it. 
+* To get subscriptions, your application must have the **read-write permissions** to the SharePoint list where the subscriptions exist. 
 
 ### Get all subscriptions
 
-* To view all subscriptions on a given SharePoint list, your application must have **manage lists permissions** on the SharePoint list where the subscriptions exist. 
+* To get all subscriptions on a SharePoint list, your application must have the **manage lists permissions** on the SharePoint list where the subscriptions exist. 
 
 ## HTTP request
 
-### Get subscription
+### Get a single subscription
 
 #### List webhook
 ```
@@ -27,6 +27,9 @@ GET _api/web/lists('list-id')/subscriptions('id')
 ```http
 GET _api/web/lists('5C77031A-9621-4DFC-BB5D-57803A94E91D')/subscriptions('6D77031A-2345-5GRT-BV3D-55234B56FR43')
 ```
+
+#### Request body
+Do not supply a request body for this method.
 
 ##### Response
 This returns the subscription viewable by the calling application.
@@ -60,6 +63,9 @@ GET _api/web/lists('list-id')/subscriptions
 GET _api/web/lists('5C77031A-9621-4DFC-BB5D-57803A94E91D')/subscriptions
 ```
 
+#### Request body
+Do not supply a request body for this method.
+
 ##### Response
 
 This returns a collection of all subscriptions on a SharePoint resource. 
@@ -84,7 +90,3 @@ Content-Type: application/json
   ]
 }
 ```
-
-### Error responses
-
-See [Error Responses](error-responses.md) for more info about how errors are returned.
