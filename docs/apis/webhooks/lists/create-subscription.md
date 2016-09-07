@@ -1,15 +1,25 @@
 # Create a new subscription 
-To add a new subscription to the SharePoint list, your application POSTs a request to the subscription collection of the SharePoint list resource that includes the properties of the subscription you want to have created.
+Creates a new subscription. In the POST request, include properties to describe the subscription you want created.
 
 ## Permissions
 
-* To create a subscription the application must have *read-write permissions* to the SharePoint list the subscription will be created on.
+The application must have **read-write permissions** to the SharePoint list where the subscription will be created.
 
 ## HTTP Request
 
 ```
 POST /_api/web/lists('list-id')/subscriptions
 ```
+
+## Request body
+Include the following properties in the request body.
+
+Name | Type | Description 
+-----|------|------------
+resource|string|The URL of the list to receive notifications from.
+notificationUrl|string|The service URL to send notifications to.
+expirationDateTime|date|The date the notification will expire and be deleted.
+
 ### Example
 
 ```http
@@ -24,7 +34,7 @@ Content-Type: application/json
 }
 ```
 
-## HTTP Response
+## Response
 If the subscription is added, then a `201 Created` response is returned that
 includes the newly created subscription object.
 
@@ -45,6 +55,4 @@ Content-Type: application/json
 ## URL validation
 Before a new subscription is created, SharePoint will send a request with a validation token in the body of the request to the service URL provided. Your service must respond to this request by returning the validation token.
 
-If your service fails to validate the request in this way, the subscription will fail to be created.
-
-See [handling webhook validation requests](../overview-sharepoint-webhooks.md) for detailed information.
+If your service fails to validate the request in this way, the subscription will not be created. See [SharePoint list webhooks](../overview-sharepoint-webhooks.md) for more information.
