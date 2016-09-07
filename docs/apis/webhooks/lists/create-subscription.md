@@ -1,5 +1,5 @@
 # Create a new subscription 
-Creates a new subscription. In the POST request, include properties to describe the subscription you want created.
+Creates a new webhook subscription on a SharePoint list. 
 
 ## Permissions
 
