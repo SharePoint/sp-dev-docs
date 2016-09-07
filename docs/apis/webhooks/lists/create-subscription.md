@@ -5,9 +5,9 @@ Creates a new subscription. In the POST request, include properties to describe 
 
 The application must have at least edit permissions to the SharePoint list where the subscription will be created.
 
-**If your application is an Azure Active Directory (AAD) application:**
+**If your application is a Microsoft Azure Active Directory (AD) application:**
 
-You must grant the AAD app permissions to the folowing SharePoint application and the corresponding permissions:
+You must grant the Azure AD app the permissions specified in the following table:
 
 Application | Permission 
 ------------|------------
@@ -15,7 +15,7 @@ Office 365 SharePoint Online|read and write items and lists in all site collecti
 
 **If your application is a SharePoint add-in:**
 
-You must grant the add-in at least the following permission(s) or higher:
+You must grant the SharePoint add-in the following permission(s) or higher:
 
 Scope | Permission Rights 
 ------|------------
