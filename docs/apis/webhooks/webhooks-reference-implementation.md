@@ -20,7 +20,7 @@ You can also follow these steps by watching the video on the [SharePoint PnP You
 
 Microsoft Azure is used to host the various components needed to implement Azure webhooks.
 
-## Source code for this sample
+## Source code for this reference implementation
 
 Source code and other materials for the reference implementation are available in the [SharePoint developer samples GitHub repository](https://github.com/SharePoint/sp-dev-samples/tree/master/Samples/WebHooks).
 
@@ -43,7 +43,7 @@ The reference implementation works with a SharePoint list. To add a webhook to a
 * The location of your webhook service URL to send the notifications.
 * The expiration date of the webhook. 
 
-Once you've requested SharePoint to add your webhook SharePoint will validate that your webhook service endpoint exists. It sends a validation string to your service endpoint. SharePoint expects that your service endpoint returns the validation string within 5 seconds. If this process fails then the webhook creation is canceled. If you've deployed your service then this will work and SharePoint returns an HTTP 201 message on the POST request the application initially sent. The payload in the response contains the ID of the new webhook subscription.
+After you've requested SharePoint to add your webhook, SharePoint will validate that your webhook service endpoint exists. It sends a validation string to your service endpoint. SharePoint expects that your service endpoint returns the validation string within 5 seconds. If this process fails then the webhook creation is canceled. If you've deployed your service then this will work and SharePoint returns an HTTP 201 message on the POST request the application initially sent. The payload in the response contains the ID of the new webhook subscription.
 
 ![Adding a webhook](../../../images/webhook-sample-add-process.png)
 
@@ -65,7 +65,7 @@ public async Task<SubscriptionModel> AddListWebHookAsync(string siteUrl, string 
 }
 ```
 
-When making a call to SharePoint you need to provide authentication information and in this case you're using a **Bearer** authentication header with an **access token**. To obtain the access token, intercept the token via an **ExecutingWebRequest** event handler:
+When making a call to SharePoint, you need to provide authentication information and in this case you're using a **Bearer** authentication header with an **access token**. To obtain the access token, intercept the token via an **ExecutingWebRequest** event handler:
 
 ```cs
 ClientContext cc = null;
@@ -84,29 +84,29 @@ private void Cc_ExecutingWebRequest(object sender, WebRequestEventArgs e)
 
 ### SharePoint calls out to your webhook service
 
-When SharePoint detects a change in a list for which you've created a webhook subscription, you're service endpoint will be called by SharePoint. When you look at the payload from SharePoint, notice that the following properties are important:
+When SharePoint detects a change in a list for which you've created a webhook subscription, your service endpoint will be called by SharePoint. When you look at the payload from SharePoint, notice that the following properties are important:
 
 Property|Description
 --------|-----------
-**subscriptionId**|This is the ID of the webhook subscription. If you want to update the webhook subscription, for example you prolong the webhook expiration, then you need this ID.
-**resource**|This is the ID of the list for which the change happened.
-**siteUrl**|This is the server relative url of the site holding the resource for which the change happened.
+**subscriptionId**|The ID of the webhook subscription. If you want to update the webhook subscription, for example you prolong the webhook expiration, then you need this ID.
+**resource**|The ID of the list for which the change happened.
+**siteUrl**|The server relative url of the site holding the resource for which the change happened.
 
-> **Note:** SharePoint only sends a notification that a change happened, but the notification does not include what actually changed. Since you get information about the web and list that were changed, this means that you can perfectly use the same service endpoint to handle webhook events from multiple sites and lists.
+> **Note:** SharePoint only sends a notification that a change happened, but the notification does not include what actually changed. Because you get information about the web and list that were changed, this means that you can use the same service endpoint to handle webhook events from multiple sites and lists.
 
-When your service is called it's important that your service replies with an HTTP 200 message in under 5 seconds. Later in this article you'll learn more about the response time, but essentially this requires that you **asynchronously** handle the notifications. In this reference implementation you'll do this by using Azure Web Jobs and Azure Storage Queues.
+When your service is called, it's important that your service replies with an HTTP 200 message in under 5 seconds. Later in this article you'll learn more about the response time, but essentially this requires that you **asynchronously** handle the notifications. In this reference implementation you'll do this by using Azure Web Jobs and Azure Storage Queues.
 
 ![SharePoint calls your webhook endpoint](../../../images/webhook-sample-call-webhook.png)
 
 ### Grab the changes your service needs to act upon
 
-In the previous step your service endpoint was called but SharePoint only provided information about where the change happened, not what was actually changed. To understand what was changed you'll need to use the SharePoint `GetChanges()` API as shown in the following image.
+In the previous step your service endpoint was called but SharePoint only provided information about where the change happened, not what was actually changed. To understand what was changed, you'll need to use the SharePoint `GetChanges()` API, as shown in the following image.
 
 ![Async GetChanges](../../../images/webhook-sample-async-getchanges.png)
 
 You can learn more about the `GetChanges()` implementation in the **ProcessNotification** method in the [ChangeManager](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks/SharePoint.WebHooks.Common/ChangeManager.cs) class of the **SharePoint.WebHooks.Common** project. 
 
-To avoid getting the same change repeatedly it's important that you inform SharePoint from which point you want the changes. This is done by passing a **changeToken** which also implies that your service endpoint needs to persist the last used **changeToken** so that it can be used the next time the service endpoint is called.
+To avoid getting the same change repeatedly, it's important that you inform SharePoint from which point you want the changes. This is done by passing a **changeToken**, which also implies that your service endpoint needs to persist the last used **changeToken** so that it can be used the next time the service endpoint is called.
 
 The following are some key things to note about changes:
 
@@ -135,7 +135,7 @@ Webhook subscriptions are set to expire 6 months by default or at the specified 
 
 ### Basic model
 
-When your service receives a notification it also gets information about the subscription lifetime. If the subscription is about to expire then inside your notification processing logic you simply extend the lifetime of the subscription. This model is implemented in this reference implementation and works fine for most cases. However in a case where there's no change for 6 months on the list you've created a webhook subscription for, then the webhook subscription is never prolonged and will be deleted.
+When your service receives a notification it also gets information about the subscription lifetime. If the subscription is about to expire,  inside your notification processing logic you simply extend the lifetime of the subscription. This model is implemented in this reference implementation and works fine for most cases. However, in a case where there's no change for 6 months on the list you've created a webhook subscription for, the webhook subscription is never prolonged and will be deleted.
 
 ### Reliable but more complex model
 
@@ -164,8 +164,8 @@ public async Task<bool> UpdateListWebHookAsync(string siteUrl, string listId, st
 
 ## Debugging webhooks
 
-Since SharePoint is calling out to your webhook service endpoint it means that your endpoint needs to be reachable by SharePoint. This makes development and debugging slightly more complex. Below are some strategies that you can use to make your life easier:
+Because SharePoint is calling out to your webhook service endpoint, your endpoint needs to be reachable by SharePoint. This makes development and debugging slightly more complex. The following are some strategies that you can use to make your life easier:
 
-* During initial development you provide your own serialized payload to your service processing logic. This will make it possible to completely test your processing logic without deploying the service endpoint (and even without configuring a webhook).
-* If you have access to Azure resources you can deploy your endpoint to Azure using a debug build and configure the Azure App Service for debugging. This will then allow you to set a remote breakpoint and do remote debugging using Visual Studio.
-- If you do not want to deploy your service during development time you'll need to use a secure tunnel for your service. The idea is that you tell SharePoint that the notification service is located on a shared public endpoint. In the client, you install a component that connects to that shared public service and whenever a call is made to the public endpoint the client component is notified and it pushes the payload to your service running on localhost. [ngrok](https://ngrok.com/) is an implementation of such a secure tunnel tool that you can use to debug your webhook service locally.
+* During initial development, you provide your own serialized payload to your service processing logic. This will make it possible to completely test your processing logic without deploying the service endpoint (and even without configuring a webhook).
+* If you have access to Azure resources, you can deploy your endpoint to Azure using a debug build and configure the Azure App Service for debugging. This will then allow you to set a remote breakpoint and do remote debugging using Visual Studio.
+- If you do not want to deploy your service during development time, you'll need to use a secure tunnel for your service. The idea is that you tell SharePoint that the notification service is located on a shared public endpoint. In the client, you install a component that connects to that shared public service and whenever a call is made to the public endpoint, the client component is notified and it pushes the payload to your service running on localhost. [ngrok](https://ngrok.com/) is an implementation of such a secure tunnel tool that you can use to debug your webhook service locally.
