@@ -4,24 +4,23 @@ Updates a webhook subscription on a SharePoint list.
 
 ## Permissions
 
-The application must have at least edit permissions to the SharePoint list where the subscription will be created. A subscription can only be updated by the application that created it. 
+The application must have at least edit permissions to the SharePoint list where the subscription will be created.  
 
 **If your application is an Azure Active Directory (AAD) application:**
 
-You must grant the AAD app permissions to the folowing SharePoint application and the corresponding permissions:
+You must grant the AAD app permissions to the folowing SharePoint application and the corresponding permissions. A subscription can only be updated by the AAD application that created it.
 
 Application | Permission 
 ------------|------------
-Office 365 SharePoint Online|read and write items and lists in all site collections.
+Office 365 SharePoint Online|read and write items and lists in all site collections. 
 
 **If your application is a SharePoint add-in:**
 
-You must grant the add-in at least the following permission(s) or higher:
+You must grant the add-in at least the following permission(s) or higher. A subscription can only be updated by the add-in that created it.
 
 Scope | Permission Rights 
 ------|------------
 List|Manage
-Web|Manage
 
 ## HTTP request
 
