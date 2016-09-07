@@ -6,12 +6,43 @@ Gets one or more webhook subscriptions on a SharePoint list.
 
 ### Get a single subscription
 
-* A subscription can only be retrieved by the application that created it. 
-* To get subscriptions, your application must have the **read-write permissions** to the SharePoint list where the subscriptions exist. 
+The application must have at least edit permissions to the SharePoint list where the subscription will be retreived.
+
+**If your application is a Microsoft Azure Active Directory (AD) application:**
+
+You must grant the Azure AD application the permissions specified in the following table. A subscription can only be retrieved by the Azure AD application that created it. 
+
+Application | Permission 
+------------|------------
+Office 365 SharePoint Online|Read and write items and lists in all site collections.
+
+**If your application is a SharePoint add-in:**
+
+You must grant the SharePoint add-in the following permission(s) or higher. A subscription can only be retrieved by the SharePoint add-in that created it. 
+
+Scope | Permission Rights 
+------|------------
+List|Manage
 
 ### Get all subscriptions
 
-* To get all subscriptions on a SharePoint list, your application must have the **manage lists permissions** on the SharePoint list where the subscriptions exist. 
+The application must have manage list permissions to the SharePoint list where the subscription will be retreived.
+
+**If your application is a Microsoft Azure Active Directory (AD) application:**
+
+You must grant the Azure AD app the permissions specified in the following table. 
+
+Application | Permission 
+------------|------------
+Office 365 SharePoint Online|Have full control of all site collections.
+
+**If your application is a SharePoint add-in:**
+
+You must grant the SharePoint add-in the following permission(s) or higher. 
+
+Scope | Permission Rights 
+------|------------
+List|Full control
 
 ## HTTP request
 

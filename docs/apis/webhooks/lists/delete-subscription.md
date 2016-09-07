@@ -4,8 +4,23 @@ Deletes a webhook subscription from a SharePoint list. After deleting the subscr
 
 ## Permissions
 
-* A subscription can only be deleted by the application that created it. 
-* To delete a subscription the application must have **read-write permissions** to the SharePoint list the subscription exists on.
+The application must have at least edit permissions to the SharePoint list where the subscription will be deleted.
+
+**If your application is a Microsoft Azure Active Directory (AD) application:**
+
+You must grant the Azure AD app the permissions specified in the following table. A subscription can only be deleted by the Azure AD application that created it.
+
+Application | Permission 
+------------|------------
+Office 365 SharePoint Online|Read and write items and lists in all site collections.
+
+**If your application is a SharePoint add-in:**
+
+You must grant the SharePoint add-in the following permission(s) or higher. A subscription can only be deleted by the SharePoint add-in that created it.
+
+Scope | Permission Rights 
+------|------------
+List|Manage
 
 ## HTTP request
 
