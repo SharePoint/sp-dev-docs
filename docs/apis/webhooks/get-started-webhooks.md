@@ -1,76 +1,71 @@
-# Basic SharePoint webhooks tutorial
+# Get started with webhooks
 
-## Summary
-This basic tutorial will show you how to add and handle SharePoint webhook requests. We will be using Postman client to construct and execute SharePoint webhook requests quickly while interacting with a simple ASP.NET Web API as the webhook receiver. 
+Get started and build an application that adds and handles SharePoint webhook requests. You will learn how to use [Postman client](https://www.getpostman.com/) to construct and execute SharePoint webhook requests quickly while interacting with a simple ASP.NET Web API as the webhook receiver.
 
-This is a raw version executing plain HTTP requests. It is useful to understand how webhooks work under the hood (see also a [recorded demo](https://www.youtube.com/watch?v=IbVlDkmsh8w "Tutorial demo on YouTube") of this tutorial). If you are looking for an end to end ASP.NET sample, then you can find it [here](https://aka.ms/sp-webhooks-sample-reference).
+In this article you will use plain HTTP requests, which is useful to understand how webhooks work under the hood. You can also watch a [recorded demo](https://www.youtube.com/watch?v=IbVlDkmsh8w "Tutorial demo on YouTube") of this article). 
 
 ## Prerequisites
 
-To complete this basic SharePoint webhooks tutorial, you will need to download and install the following tools.
+To complete the step-by-step instructions in this article, you need to download and install the following tools.
 
 * [Google Chrome Browser](http://google.com/chrome)
 * [Postman](https://www.getpostman.com/)
 * [Visual Studio Community Edition](https://go.microsoft.com/fwlink/?LinkId=691978&clcid=0x409)
-* [ngrok](https://ngrok.com/)
-  * Follow the instructions [here](https://ngrok.com/download) to install ngrok.
-* Office 365 Subscription with SharePoint Online
+* [ngrok](https://ngrok.com/) - Follow the instructions [here](https://ngrok.com/download) to install ngrok.
+* An Office 365 Subscription with SharePoint Online. If you are new to Office 365, you can also [sign up for an Office 365 developer account](http://dev.office.com/devprogram)
 
-If you are new to Office 365, you can also sign up for an Office 365 developer account: <http://dev.office.com/devprogram>
+## Step 1: Register a Microsoft Azure Active Directory (AD) application for Postman client
+In order for the Postman client to communicate with SharePoint, you will need to register an Azure AD app in your Azure AD tenant associated with your Office 365 tenant. 
 
-## Step 1: Register AAD application for Postman client
-In order for the Postman client to talk to SharePoint, you will need to register an Azure Active Directory (AAD) app in your Azure AD tenant associated with your Office 365 tenant. 
+To access SharePoint online, it's important to grant the Azure AD app permissions to the **Office 365 SharePoint Online** application and select the **read and write items and lists in all site collections** permission.
 
-To access SharePoint online, it's important to grant the AAD app permissions to _Office 365 SharePoint Online_ application and select the following permission:
-* read and write items and lists in all site collections
+> See [Adding an application](https://azure.microsoft.com/en-us/documentation/articles/active-directory-integrating-applications/#adding-an-application) for more information on adding an Azure AD application and granting permissions to applications. 
 
-> Read [here](https://azure.microsoft.com/en-us/documentation/articles/active-directory-integrating-applications/#adding-an-application) for more information on adding an AAD application and granting permissions to applications. 
-
-Enter the following endpoint as the Reply (Redirect) URL for the app. This is the endpoint to which AAD will send the authentication response, including the access token if authentication was successful.
+Enter the following endpoint as the Reply (Redirect) URL for the app. This is the endpoint to which Azure AD will send the authentication response; including the access token if authentication was successful.
 
 ```html
 https://www.getpostman.com/oauth2/callback
 ```
 
-The following properties are required later in the tutorials, so copy them in a safe place:
+The following properties are required in later steps, so copy them to a safe place:
 
 * Client Id
 * Client Secret 
 
-## Step 2: Build webhook receiver
-We will use Visual Studio Web API project to build the webhook receiver.
+## Step 2: Build a webhook receiver
+For this project, use Visual Studio Web API project to build the webhook receiver.
 
 ### Create a new ASP.NET Web API project
-* Open Visual Studio
-* Select New Project from the _File->New->Project_.
-* In the _Templates_ pane, select _Installed Templates_ and expand the _Visual C#_ node. 
-* Under Visual C#, select Web. In the list of project templates, select _ASP.NET Web Application_. 
-* Name the project _SPWebhooksReceiver_ and click _OK_.
-* In the New ASP.NET Project dialog, select the _Web API_ template from _ASP.NET 4.5.\*_ group. 
-* Change the authentication to _No Authentication_ by clicking the _Change Authentication_ button.
-* Click _OK_ to create the Web API project.
+* Open Visual Studio.
+* Choose **File->New->Project**.
+* In the **Templates** pane, select **Installed Templates** and expand the **Visual C#** node. 
+* Under **Visual C#**, select **Web**. In the list of project templates, select **ASP.NET Web Application**. 
+* Name the project **SPWebhooksReceiver** and choose **OK**.
+* In the **New ASP.NET Project** dialog, select the **Web API** template from the **ASP.NET 4.5.\*** group. 
+* Change the authentication to **No Authentication** by choosing the **Change Authentication** button.
+* Choose **OK** to create the Web API project.
 
-> NOTE: You can Un-check the *Host in the cloud* option as we will not deploy the project to the cloud.
+> **Note:** You can uncheck the **Host in the cloud** option since this project will not be deployed to the cloud.
 
-* Visual Studio will create your project.
+Visual Studio will create your project.
 
 ### Webhook receiver
 
 #### Install Nuget packages
-We will use ASP.NET Web API Tracing to log the requests coming from SharePoint. Follow the steps to install the tracing package:
+Use ASP.NET Web API Tracing to log the requests coming from SharePoint. The following steps will install the tracing package:
 
-* Switch to *Solution Explorer* in Visual Studio.
-* Right click on the project and select *Manage Nuget Packages...*.
-* In the search box, type *Microsoft.AspNet.WebApi.Tracing* 
-* In the search results, select *Microsoft.AspNet.WebApi.Tracing*  package and click *Install* to install the package
+* go to the **Solution Explorer** in Visual Studio.
+* Right-click on the project and choose **Manage Nuget Packages...**.
+* In the search box, enter **Microsoft.AspNet.WebApi.Tracing**. 
+* In the search results, select the **Microsoft.AspNet.WebApi.Tracing** package and choose **Install** to install the package.
 
 #### SPWebhookNotification model
-Each notification generated by the service is serialized into a webhookNotifiation instance. Lets build a simple model that represents this notification instance:
+Each notification generated by the service is serialized into a **webhookNotifiation** instance. You need to build a simple model that represents this notification instance.
 
-* Switch to *Solution Explorer* in Visual Studio.
-* Right click on the *Models* folder and select *Add->Class*.
-* Enter `SPWebhookNotification` as the class name and click `Add` to add the class to your project.
-* Add the following to the body of the `SPWebhookNotification` class:
+* Go to **Solution Explorer** in Visual Studio.
+* Right-click on the **Models** folder and choose **Add->Class**.
+* Enter **SPWebhookNotification** as the class name and choose **Add** to add the class to your project.
+* Add the following code to the body of the **SPWebhookNotification** class:
 
 	```cs
 	public string SubscriptionId { get; set; }
@@ -89,55 +84,55 @@ Each notification generated by the service is serialized into a webhookNotifiati
 	```
 
 #### SPWebhookContent model
-Since multiple notifications may be submitted to your webhook receiver in a single request, these are combined together in an object with a single array value. Lets build a simple model that represents this array:
+Since multiple notifications may be submitted to your webhook receiver in a single request, they are combined together in an object with a single array value. Build a simple model that represents the array.
 
-* Switch to *Solution Explorer* in Visual Studio.
-* Right click on the *Models* folder and select *Add->Class*.
-* Enter `SPWebhookContent` as the class name and click `Add` to add the class to your project.
-* Add the following to the body of the `SPWebhookContent` class:
+* Go to **Solution Explorer** in Visual Studio.
+* Right-click on the **Models** folder and choose **Add->Class**.
+* Enter **SPWebhookContent** as the class name and choose **Add** to add the class to your project.
+* Add the following code to the body of the **SPWebhookContent** class:
 
 	```cs
 	 public List<SPWebhookNotification> Value { get; set; }
 	```
 
 #### SharePoint webhook client state
-Webhooks provide the ability to use an optional string value that is passed back in the notification message for your subscription. This can be used to verify if the request is indeed coming from the source you trust, in this case, SharePoint. 
+Webhooks provide the ability to use an optional string value that is passed back in the notification message for your subscription. This can be used to verify if the request is indeed coming from the source you trust; which in this case is SharePoint. 
 
-Lets add a client state value with which we will verify the incoming requests:
+Add a client state value with which the application can verify the incoming requests.
 
-* Switch to *Solution Explorer* in Visual Studio.
-* Open *web.config* file and add the following key as the client state to `<appSettings>` section:
+* Go to **Solution Explorer** in Visual Studio.
+* Open the **web.config** file and add the following key as the client state to the `<appSettings>` section:
 
 	```xml
 	<add key="webhookclientstate" value="A0A354EC-97D4-4D83-9DDB-144077ADB449"/>
 	```
 
 #### Enable tracing
-In the *web.config* file, enable tracing by adding the following key inside the `<system.web>` element in the `<configuration>` section:
+In the **web.config** file, enable tracing by adding the following key inside the `<system.web>` element in the `<configuration>` section:
 
 ```xml
 <trace enabled="true"/>
 ```
 
-Adding a trace writer to the controller configuration (we'll use the one from `System.Diagnostics`) is required:
+A trace writer is required, so you must add a trace writer to the controller configuration (in this case use the one from **System.Diagnostics**).
 
-* Switch to *Solution Explorer* in Visual Studio.
-* Open *WebApiConfig.cs*, which is in the *App_Start* folder.
-* Add the following line inside the `Register` method:
+* Go to **Solution Explorer** in Visual Studio.
+* Open **WebApiConfig.cs** which is in the **App_Start** folder.
+* Add the following line inside the **Register** method:
 
 	```cs
 	config.EnableSystemDiagnosticsTracing();
 	```
 
 #### SharePoint webhook controller
-Now its time to build the webhook receiver controller which will handle the incoming requests from SharePoint and act/respond accordingly.
+Now build the webhook receiver controller which will handle the incoming requests from SharePoint and take action accordingly.
 
-* Switch to *Solution Explorer* in Visual Studio.
-* Right click on the *Controllers* folder and select *Add->Controller*.
-* In the *Add Scaffold* dialog, select *Web API 2 Controller - Empty*.
-* Click *Add*.
-* Name the controller *SPWebhookController* and click *Add* to add the API controller to your project.
-* Replace the `using` statements with the following:
+* Go to **Solution Explorer** in Visual Studio.
+* Right-click on the **Controllers** folder and choose **Add->Controller**.
+* In the **Add Scaffold** dialog, select **Web API 2 Controller - Empty**.
+* Choose **Add**.
+* Name the controller **SPWebhookController** and choose **Add** to add the API controller to your project.
+* Replace the `using` statements with the following code:
 
 	```cs
 	using Newtonsoft.Json;
@@ -153,7 +148,7 @@ Now its time to build the webhook receiver controller which will handle the inco
 	using System.Web.Http.Tracing;
 	```
 
-* Replace the code in the *SPWebhookController* class with the following:
+* Replace the code in the **SPWebhookController** class with the following code:
 
 	```cs
 	[HttpPost]
@@ -247,93 +242,94 @@ Now its time to build the webhook receiver controller which will handle the inco
 	}
 	```
 
-* Save the file
+* Save the file.
 
 ## Step 3: Debug the webhook receiver
-* Press *F5* to debug the webhook receiver.
-* Once you have the browser open, copy the port number in which it is served from the address bar. For example: `http://localhost:port-number`.
+* Choose **F5** to debug the webhook receiver.
+* Once you have the browser open, copy the port number from the address bar. For example: **http://localhost:<_port-number_>**.
 
 ## Step 4: Run ngrok proxy
 
 * Open a console terminal.
-* Navigate to the extracted ngrok folder.
-* Type the following with the *port-number* from the previous step to start ngrok:
+* Go to the extracted ngrok folder.
+* Enter the following with the port number URL from the previous step to start ngrok:
 
 	```
 	./ngrok http port-number --host-header=localhost:port-number
 	```
 
 * You should see ngrok running.
-* Copy the *Forwarding* HTTPS address. We will use this address as our service proxy for SharePoint to send requests. 
+* Copy the **Forwarding** HTTPS address. You will use this address as the service proxy for SharePoint to send requests. 
 
 ## Step 5: Add webhook subscription using Postman
 
 ### Get new access token
-Postman makes it really simple to work with APIs. The first step is to configure Postman to authenticate with AAD so we can send API requests to SharePoint. We will use the AAD app we registered in Step 1.
+Postman makes it really simple to work with APIs. The first step is to configure Postman to authenticate with Azure AD so you can send API requests to SharePoint. You will use the Azure AD app that you registered in Step one.
 
-* Open Postman
-* You will be presented with a _Sidebar_ and _Request Editor_
-* Click _Authorization_ tab in the _Request Editor_
-* Select _OAuth 2.0_ in the Type dropdown
-* Click the *Get New Access Token* button
+* Open Postman.
+* You will be presented with a **Sidebar** and **Request Editor**.
+* Choose the **Authorization** tab in the **Request Editor**.
+* Choose **OAuth 2.0** in the **Type** dropdown list.
+* Choose the **Get New Access Token** button.
 * In the dialog window, enter the following: 
     * Auth URL: 
-       * ```https://login.microsoftonline.com/common/oauth2/authorize?resource=https%3A%2F%2Fpaste-your-sharepoint-site-collection-url-without-https ```
-       * Replace `paste-your-sharepoint-site-collection-url-without-https` with your site collection without the `https` prefix.
+       * **https://login.microsoftonline.com/common/oauth2/authorize?resource=https%3A%2F%2F<_your-sharepoint-site-collection-url-without-https_>**
+       * Replace _your-sharepoint-site-collection-url-without-https_ with your site collection without the **https** prefix.
     * Access Token URL:
-        * ```https://login.microsoftonline.com/common/oauth2/token```
+        * **https://login.microsoftonline.com/common/oauth2/token**
     * Client Id: 
-        * Client Id of the app you registered previously in Step 1.
+        * Client Id of the app you registered previously in Step one.
     * Client Secret: 
-        * Client Secret of the app you registered previously in Step 1.
+        * Client Secret of the app you registered previously in Step one.
     * Token name:
         * sp_webhooks_token
     * Grant type:
         * Authorization Code
-* Click the _Request Token_ to sign in, consent and get the token for the session.
-* Once the token is successfully retrieved, you should see _access\_token_ variable added to the _Authorization_ tab
-* Select the option to _Add token to header_.
-* Double click on the _access\_token_ variable to add the token to the header for the request.
+* Choose the **Request Token** to sign in, consent and get the token for the session.
+* Once the token is successfully retrieved, you should see **access\_token** variable added to the **Authorization** tab
+* Select the option to **Add token to header**.
+* Double-click on the **access\_token** variable to add the token to the header for the request.
 
-![postman get new access token](../../../images/postman-get-new-access-token.png)
+![Postman get new access token](../../../images/postman-get-new-access-token.png)
 
 ### Get Documents list Id
-We will manage webhooks for the default document library which is provisioned by default in your default site collection under the name `Documents`. Lets get the Id of this list by issuing a `GET` request:
 
-* Enter the following request URL
+You need to manage webhooks for the default document library which is provisioned in your default site collection under the name **Documents**. Get the Id of this list by issuing a **GET** request:
 
-> Replace site-collection with your site collection
+* Enter the following request URL:
 
 	```
 	https://site-collection/_api/web/lists/getbytitle('Documents')?$select=Title,Id
 	```
+
+> Replace _site-collection_ with your site collection.
 	
 Postman will execute your request and if successful, you should see the result.
 
-Copy the *Id* from the results.
-
-We will use this *Id* to make webhook requests.   
+Copy the **Id** from the results. Later you will use the **Id** to make webhook requests.   
 
 ### Add webhook subscription
-Now that we have the required information, we can construct the query and the request to add a webhook subscription. In the request editor:
+Now that you have the required information, construct the query and the request to add a webhook subscription. Use the request editor for the following steps:
 
-* Change the request to `POST` from `GET`
+* Change the request to **POST** from **GET**
 * Enter the following as the request URL:
 
 	```
 	https://site-collection/_api/web/lists('list-id')/subscriptions
 	```
 
-* Switch to *Headers* tab
-   * Make sure you still have the *Authorization* header. If not, you wil need to request a new access token.
-   * Add the following header *key -> value* pairs:
-      * Accept -> application/json;odata=nometadata
-      * Content-Type -> application/json
+> Replace _site-collection_ with your site collection.
 
-* Switch to *Body* tab and select *raw* Format
-* Paste the following as the body:
+* Go to the **Headers** tab.
+* Make sure you still have the **Authorization** header. If not, you will need to request a new access token.
+* Add the following header **key -> value** pairs:
+	* Accept -> application/json;odata=nometadata
+	* Content-Type -> application/json
 
-	```
+* Go to the **Body** tab and select **raw** format.
+* Paste the following JSON as the body:
+
+	```json
 	{
 	  "resource": "https://site-collection/_api/web/lists('list-id')",
 	  "notificationUrl": "https://ngrok-forwarding-address/api/spwebhook/handlerequest",
@@ -344,11 +340,11 @@ Now that we have the required information, we can construct the query and the re
 
 	![postman add webhook body](../../../images/postman-add-webhook-body.png)
 
-> Make sure the expirationDateTime is at most 6 months from today. 
+> Make sure the **expirationDateTime** is at most 6 months from today. 
 
-* Make sure you are debugging the webhook receiver as we did in Step 4.
-* Click *Send* to execute the request.
-* If the request is successful, you should see the response from SharePoint that provides the subscription details. Example response below:
+* Make sure you are debugging the webhook receiver as we did in Step four.
+* Choose **Send** to execute the request.
+* If the request is successful, you should see the response from SharePoint that provides the subscription details. The following example shows a response for a newly created subscription:
 
 	```json
 	{
@@ -360,15 +356,15 @@ Now that we have the required information, we can construct the query and the re
 	}
 	```
 
-* Copy the subscription *id* as we will need it in the next set of requests.
-* Switch to webhook receiver project in Visual Studio and notice in the Output window. You should see our trace logs, something like this along with other messages:
+* Copy the subscription **id** since you will need it for the next set of requests.
+* Go to the webhook receiver project in Visual Studio and examine the **Output** window. You should see the trace logs that look similar to the following trace, along with other messages:
 
 	```
 	iisexpress.exe Information: 0 : Message='Received client state: A0A354EC-97D4-4D83-9DDB-144077ADB449'
 	iisexpress.exe Information: 0 : Message='Received validation token: daf2803c-43cf-44c7-8dff-7066eaa40f13'
 	```
 
-This indicates that the webhook received initially received a validation request. If you look at the code, we return the validation token immediately so SharePoint can validate this request:
+The trace indicates that the webhook received initially received a validation request. If you look at the code, you'll see that it returns the validation token immediately so that SharePoint can validate the request:
 
 ```cs
 if (queryStringParams.AllKeys.Contains("validationtoken"))
@@ -385,19 +381,21 @@ if (queryStringParams.AllKeys.Contains("validationtoken"))
 ```
 
 ## Step 6: Get subscription details
-Switch to Postman client. Lets now execute queries to get the subscription details.
+Now you'll run queries in Postman to get the subscription details.
 
-To get the details of all the subscriptions, enter and execute the following query in Postman:
-
-* Change the request to `GET` from `POST`
+* Open the Postman client.
+* Change the request to **GET** from **POST**.
 * Enter the following as the request:
 
 	```
 	https://site-collection/_api/web/lists('list-id')/subscriptions
 	```
 
-* Click *Send* to execute the request
-* If successful, you should see SharePoint return the subscriptions for this list resource. Since we just added one, you should at least see one subscription returned. Example response:
+> Replace _site-collection_ with your site collection.
+
+* Choose **Send** to execute the request.
+
+If successful, you should see SharePoint return the subscriptions for this list resource. Since we just added one, you should at least see one subscription returned. The following example shows a response with one subscription:
 
 	```json
 	{
@@ -413,30 +411,30 @@ To get the details of all the subscriptions, enter and execute the following que
 	}
 	```
 
-You can execute the following query to get details of the specific subscription:
-
-> Replace subscription-id with your subscription id 
+You can run the following query to get details of the specific subscription:
 
 	```
 	https://site-collection/_api/web/lists('list-id')/subscriptions('subscription-id')
 	```
 
-## Step 7: Test webhook notification
-Lets now add a file to the Documents library and test if we get a notification from SharePoint in our webhook receiver.
+> Replace subscription-id with your subscription id 
 
-* Switch to Visual Studio.
-* In the *SPWebhookController* Place a breakpoint in the following line:
+## Step 7: Test webhook notification
+Now add a file to the Documents library and test if you get a notification from SharePoint in the webhook receiver.
+
+* Go to Visual Studio.
+* In the **SPWebhookController** place a breakpoint on the following line of code:
 
 	```cs
 	var requestContent = Request.Content.ReadAsStringAsync().Result;
 	```
 
-* Navigate to the *Documents* library, this will be *Shared Documents* library in your default site collection, and add a new file.
-* Once added, swtich to Visual Studio and wait for the breakpoint to be hit.
-   * In preview, the wait time may vary from few seconds and up to 5 mins.
-* Once the breakpoint is hit, this means, webhook receiver has just received a notification from SharePoint.
-* Press *F5* to continue.
-* To see the notification data, look in the *Output* window for the following as we added the notification data into the trace log. You should see something like this:
+* Go to the **Documents** library. It will be named **Shared Documents** library in your default site collection.
+* Add a new file.
+* Go to Visual Studio and wait for the breakpoint to be hit.
+   * In preview, the wait time may vary from a few seconds up to five minutes. Once the breakpoint is hit, the webhook receiver has just received a notification from SharePoint.
+* Choose **F5** to continue.
+* To see the notification data, look in the **Output** window for the following entires, since you added the notification data into the trace log:
 
 	```
 	iisexpress.exe Information: 0 : Message='Resource: c34420f9-2a67-4e54-94c9-b6770892299b'
@@ -447,11 +445,11 @@ Lets now add a file to the Documents library and test if we get a notification f
 	iisexpress.exe Information: 0 : Message='ExpirationDateTime: 2016-10-27T16:17:57.0000000Z'
 	```
 
-In this tutorial, we are simply writing the information to the trace log. However, in your receiver, you will send this information into a table or a queue that can process the received data to get information from SharePoint. 
+This project just writes the information to the trace log. However, in your receiver, you will send this information into a table or a queue that can process the received data to get information from SharePoint. 
 
-With this data, you can construct the URL and use the GetChanges API to get the latest changes.
+With this data, you can construct the URL and use the [GetChanges](https://msdn.microsoft.com/EN-US/library/office/dn531433.aspx#bk_ListGetChanges) API to get the latest changes.
 
 ## Next steps
-In this tutorial, we used Postman client and a simple Web API to subscribe and receive webhook notification from SharePoint. 
+In this article, you used Postman client and a simple web API to subscribe and receive webhook notifications from SharePoint.
 
-Next, you can browse an [end to end sample walkthrough which uses Azure Storage Queues](https://aka.ms/sp-webhooks-sample-reference "Reference implementation") to process the information, get changes from SharePoint and push those back into a SharePoint list.
+Next, take a look at [SharePoint webhooks sample reference implementation](./webhooks-reference-implementation), which shows an end-to-end sample that uses Azure Storage Queues to process the information, get changes from SharePoint, and push those changes back into a SharePoint list.
