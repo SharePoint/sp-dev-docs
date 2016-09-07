@@ -53,7 +53,7 @@ In the storage account dashboard, choose **Access Key** in the dashboard and cop
 
 ### CDN profile and endpoint
 
-Create a new CDN profile and associate the CDN endpoint wit this BLOB container.
+Create a new CDN profile and associate the CDN endpoint with this BLOB container.
 
 Create a new CDN profile as described in [Step 2: Create a new CDN profile](https://azure.microsoft.com/en-us/documentation/articles/cdn-create-a-storage-account-with-cdn/#step-2-create-a-new-cdn-profile).
 
