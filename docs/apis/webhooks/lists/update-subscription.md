@@ -12,11 +12,11 @@ You must grant the AAD app permissions to the folowing SharePoint application an
 
 Application | Permission 
 ------------|------------
-Office 365 SharePoint Online|read and write items and lists in all site collections. A subscription can only be updated by the add-in that created it.
+Office 365 SharePoint Online|read and write items and lists in all site collections. 
 
 **If your application is a SharePoint add-in:**
 
-You must grant the add-in at least the following permission(s) or higher:
+You must grant the add-in at least the following permission(s) or higher. A subscription can only be updated by the add-in that created it.
 
 Scope | Permission Rights 
 ------|------------
