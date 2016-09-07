@@ -1,5 +1,7 @@
 # Get subscriptions
 
+>**Note:** SharePoint webhooks is currently in preview and is subject to change. SharePoint webhooks are not currently supported for use in production environments.
+
 Gets one or more webhook subscriptions on a SharePoint list.
 
 ## Permissions
@@ -60,9 +62,11 @@ GET _api/web/lists('5C77031A-9621-4DFC-BB5D-57803A94E91D')/subscriptions('6D7703
 ```
 
 #### Request body
+
 Do not supply a request body for this method.
 
 ##### Response
+
 This returns the subscription viewable by the calling application.
 
 ```http
@@ -95,6 +99,7 @@ GET _api/web/lists('5C77031A-9621-4DFC-BB5D-57803A94E91D')/subscriptions
 ```
 
 #### Request body
+
 Do not supply a request body for this method.
 
 ##### Response

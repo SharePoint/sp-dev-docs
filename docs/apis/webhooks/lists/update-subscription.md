@@ -1,5 +1,7 @@
 # Update a subscription
 
+>**Note:** SharePoint webhooks is currently in preview and is subject to change. SharePoint webhooks are not currently supported for use in production environments.
+
 Updates a webhook subscription on a SharePoint list.
 
 ## Permissions
@@ -41,6 +43,7 @@ Content-Type: application/json
 ```
 
 ## Request body
+
 Include the following properties in the request body.
 
 Name | Type | Description 

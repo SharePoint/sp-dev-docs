@@ -1,4 +1,7 @@
 # Create a new subscription 
+
+>**Note:** SharePoint webhooks is currently in preview and is subject to change. SharePoint webhooks are not currently supported for use in production environments.
+
 Creates a new webhook subscription on a SharePoint list. 
 
 ## Permissions
@@ -28,6 +31,7 @@ POST /_api/web/lists('list-id')/subscriptions
 ```
 
 ## Request body
+
 Include the following properties in the request body.
 
 Name | Type | Description 
@@ -53,6 +57,7 @@ Content-Type: application/json
 ```
 
 ## Response
+
 If the subscription is added, then a `201 Created` response is returned that
 includes the newly created subscription object.
 
@@ -71,6 +76,7 @@ Content-Type: application/json
 ```
 
 ## URL validation
+
 Before a new subscription is created, SharePoint will send a request with a validation token in the body of the request to the service URL provided. Your service must respond to this request by returning the validation token.
 
 If your service fails to validate the request in this way, the subscription will not be created. See [SharePoint list webhooks](../overview-sharepoint-webhooks.md) for more information.

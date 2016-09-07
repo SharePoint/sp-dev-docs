@@ -1,5 +1,7 @@
 # Delete a subscription
 
+>**Note:** SharePoint webhooks is currently in preview and is subject to change. SharePoint webhooks are not currently supported for use in production environments.
+
 Deletes a webhook subscription from a SharePoint list. After deleting the subscription notifications will no longer be delivered.
 
 ## Permissions
@@ -35,6 +37,7 @@ DELETE _api/web/lists('5C77031A-9621-4DFC-BB5D-57803A94E91D')/subscriptions('6D7
 ```
 
 ## Request body
+
 Do not supply a request body for this method.
 
 ## Response
