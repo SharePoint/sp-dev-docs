@@ -4,7 +4,7 @@
 
 SharePoint [webhooks](http://en.wikipedia.org/wiki/Webhook) enable developers to build applications that subscribe to receive notifications on specific events that occur in SharePoint. When an event is triggered, SharePoint sends an HTTP POST payload to the subscriber. Webhooks are easier to develop and consume than Windows Communication Foundation (WCF) services used by SharePoint add-in remote event receivers. This is because webhooks are regular HTTP services (web API).
 
-Currently webhooks are only enabled for SharePoint list items. SharePoint list item webhooks cover the events corresponding to list item changes for a given SharePoint list or a document library. SharePoint webhooks provide a simple notification pipeline so your application can be aware of changes to a SharePoint list without polling the service. For more infromation see [SharePoint list webhooks](./lists/overview-sharepoint-list-webhooks). 
+Currently webhooks are only enabled for SharePoint list items. SharePoint list item webhooks cover the events corresponding to list item changes for a given SharePoint list or a document library. SharePoint webhooks provide a simple notification pipeline so your application can be aware of changes to a SharePoint list without polling the service. For more information see [SharePoint list webhooks](./lists/overview-sharepoint-list-webhooks). 
 
 ## Creating webhooks
 To create a new SharePoint webhook, you add a new subscription to the specific SharePoint resource, such as a SharePoint list. 
@@ -102,7 +102,7 @@ Since multiple notifications may be submitted to your service in a single reques
 | **webId**              | String            | Unique identifier of the web where the subscription is registered.                                                                  |
 
 #### Example notification
-The body of the HTTP request to your service notification URL will contain a Webhook Notification. The following example shows a payload with one notification:
+The body of the HTTP request to your service notification URL will contain a webhook notification. The following example shows a payload with one notification:
 
 ```json
 {

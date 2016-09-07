@@ -90,7 +90,7 @@ Property|Description
 --------|-----------
 **subscriptionId**|This is the ID of the webhook subscription. If you want to update the webhook subscription, for example you prolong the webhook expiration, then you need this ID.
 **resource**|This is the ID of the list for which the change happened.
-**siteUrl**|This is the server relative url of the site holding the resource for which the change happened.
+**siteUrl**|This is the server relative URL of the site holding the resource for which the change happened.
 
 > **Note:** SharePoint only sends a notification that a change happened, but the notification does not include what actually changed. Since you get information about the web and list that were changed, this means that you can perfectly use the same service endpoint to handle webhook events from multiple sites and lists.
 

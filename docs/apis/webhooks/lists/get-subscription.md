@@ -28,7 +28,7 @@ List|Manage
 
 ### Get all subscriptions
 
-The application must have manage list permissions to the SharePoint list where the subscription will be retreived.
+The application must have manage list permissions to the SharePoint list where the subscription will be retrieved.
 
 **If your application is a Microsoft Azure Active Directory (AD) application:**
 

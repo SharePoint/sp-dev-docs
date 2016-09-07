@@ -450,7 +450,7 @@ Now add a file to the Documents library and test if you get a notification from 
 * Go to Visual Studio and wait for the breakpoint to be hit.
    * In preview, the wait time may vary from a few seconds up to five minutes. When the breakpoint is hit, the webhook receiver has just received a notification from SharePoint.
 * Choose **F5** to continue.
-* To see the notification data, look in the **Output** window for the following entires, since you added the notification data into the trace log:
+* To see the notification data, look in the **Output** window for the following entries, since you added the notification data into the trace log:
 
 	```
 	iisexpress.exe Information: 0 : Message='Resource: c34420f9-2a67-4e54-94c9-b6770892299b'

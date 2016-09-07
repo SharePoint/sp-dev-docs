@@ -50,7 +50,7 @@ Name | Type | Description
 -----|------|------------
 notificationUrl|string|The service URL to send notifications to.
 expirationDateTime|date|The date the notification will expire and be deleted.
-client-clientState|string|Optional. Opaque string passed back to the client on all notifications. You can use this for validating notificaitons, or tagging different subscriptions.
+client-clientState|string|Optional. Opaque string passed back to the client on all notifications. You can use this for validating notifications, or tagging different subscriptions.
 
 
 ## Response

@@ -2,7 +2,7 @@
 
 We should get into a steady cadence where we make a new drop every week.  Some drops will have more changes, some drops will have minor ones.
  
-It’s been an interesting couple of weeks since we shipped the first preview.  Lots of interest, posts, issues, comments and feedback.  Please continue to give us any and all feedback that you wish.  One of the main pieces of feedback so far has been around the build tools.  It’s a fairly large departure from your typical SharePoint development environment, and to be honest, it’s the first time we’ve really done something like this.  We had been polishing the framework itself, but perhaps not paying enough attention to the toolchain.  This drop should help alleviate some of the original issues around the node packages and sizes.  We’ll have a post up soon describing the modules that we create and consume, and a brief description of what they do.  In the meantime, we have done work to remove the various duplicate entries, and over the past week or two we have made adjustments to the tutorials and getting started pages to ensure that things should be smoother.  You should no longer wind up with 500+ mb folders.  A clean project with a built webpart should be around 165 MB now, with some more work planned to reduce that further, depending on the options that you need in your project.
+It’s been an interesting couple of weeks since we shipped the first preview.  Lots of interest, posts, issues, comments and feedback.  Please continue to give us any and all feedback that you wish.  One of the main pieces of feedback so far has been around the build tools.  It’s a fairly large departure from your typical SharePoint development environment, and to be honest, it’s the first time we’ve really done something like this.  We had been polishing the framework itself, but perhaps not paying enough attention to the toolchain.  This drop should help alleviate some of the original issues around the node packages and sizes.  We’ll have a post up soon describing the modules that we create and consume, and a brief description of what they do.  In the meantime, we have done work to remove the various duplicate entries, and over the past week or two we have made adjustments to the tutorials and getting started pages to ensure that things should be smoother.  You should no longer wind up with 500+ MB folders.  A clean project with a built web part should be around 165 MB now, with some more work planned to reduce that further, depending on the options that you need in your project.
 
 The default is now to run the local server in https mode, which will swap the unsafe mixed mode warnings with certificate warnings.  You'll note when you run gulp serve that a warning appears stating "Warning - [serve] When serving in HTTPS mode, a PFX cert path or a cert path and a key path must be provided. If a SSL certificate isn't provided, a default, self-signed certificate will be used. Expect browser security warnings."
  
@@ -38,7 +38,7 @@ We're working on an update utility for future drops that can do this automatical
 
 5. Run `gulp serve` to build your updated project
 
-## Changes to config files
+## Changes to configuration files
 
 1. Introduction of gulp serve via “https”. To enable, update `config/serve.json` to include: `"https": "true"` and update the `initialPage` property to point to `https`
 
@@ -88,7 +88,7 @@ Wherever possible we will create a new property and deprecate the old one. Occas
 * Add email property to SPUser.
 * Fixing debug locale in globalize compile task.
 * Added isRightToLeft Property to PageContext's CultureInfo class.
-* Updated generator to allow multiple instances of a webpart.
+* Updated generator to allow multiple instances of a web part.
 * Fixing minor bug in debug localization.
 * Downgrade tslint severity from a warning based on customer feedback.
 * Add Permissions to PageContext.
