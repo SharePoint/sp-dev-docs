@@ -12,7 +12,7 @@ You must grant the Azure AD app the permissions specified in the following table
 
 Application | Permission 
 ------------|------------
-Office 365 SharePoint Online|read and write items and lists in all site collections.
+Office 365 SharePoint Online|Read and write items and lists in all site collections.
 
 **If your application is a SharePoint add-in:**
 
