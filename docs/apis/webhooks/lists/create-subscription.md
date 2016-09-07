@@ -20,8 +20,6 @@ You must grant the add-in at least the following permission(s) or higher:
 Scope | Permission Rights 
 ------|------------
 List|Manage
-Web|Manage
-
 
 ## HTTP request
 
