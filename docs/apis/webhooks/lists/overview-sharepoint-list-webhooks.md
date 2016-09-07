@@ -29,4 +29,4 @@ Synchronous events are not supported in webhooks.
 
 ## Additional resources
 
-- [Overview of SharePoint webhooks](../sharepoint-webhooks-overview)
+- [Overview of SharePoint webhooks](../overview-sharepoint-webhooks)

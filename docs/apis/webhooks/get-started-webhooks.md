@@ -295,7 +295,7 @@ Postman makes it really simple to work with APIs. The first step is to configure
 * Select the option to _Add token to header_.
 * Double click on the _access\_token_ variable to add the token to the header for the request.
 
-![postman get new access token](../../../../images/postman-get-new-access-token.png)
+![postman get new access token](../../../images/postman-get-new-access-token.png)
 
 ### Get Documents list Id
 We will manage webhooks for the default document library which is provisioned by default in your default site collection under the name `Documents`. Lets get the Id of this list by issuing a `GET` request:
@@ -342,7 +342,7 @@ Now that we have the required information, we can construct the query and the re
 	}
 	```
 
-	![postman add webhook body](../../../../images/postman-add-webhook-body.png)
+	![postman add webhook body](../../../images/postman-add-webhook-body.png)
 
 > Make sure the expirationDateTime is at most 6 months from today. 
 
