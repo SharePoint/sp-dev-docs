@@ -1,12 +1,12 @@
 # Get started with SharePoint webhooks
 
-Get started and build an application that adds and handles SharePoint webhook requests. You will learn how to use [Postman client](https://www.getpostman.com/) to construct and execute SharePoint webhook requests quickly while interacting with a simple ASP.NET Web API as the webhook receiver.
+This article describes how to build an application that adds and handles SharePoint webhook requests. You will learn how to use [Postman client](https://www.getpostman.com/) to construct and execute SharePoint webhook requests quickly while interacting with a simple ASP.NET Web API as the webhook receiver.
 
-In this article you will use plain HTTP requests, which is useful to understand how webhooks work under the hood. You can also watch a [recorded demo](https://www.youtube.com/watch?v=IbVlDkmsh8w "Tutorial demo on YouTube") of this article). 
+In this article, you will use plain HTTP requests, which is useful for helping you to understand how webhooks work. You can also watch the video [Getting started with SharePoint webhooks](https://www.youtube.com/watch?v=IbVlDkmsh8w "Tutorial demo on YouTube") to follow the steps in this article. 
 
 ## Prerequisites
 
-To complete the step-by-step instructions in this article, you need to download and install the following tools.
+To complete the step-by-step instructions in this article, download and install the following tools:
 
 * [Google Chrome Browser](http://google.com/chrome)
 * [Postman](https://www.getpostman.com/)
