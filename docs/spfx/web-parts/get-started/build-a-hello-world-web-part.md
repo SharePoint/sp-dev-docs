@@ -1,6 +1,6 @@
 # Build your first SharePoint client-side web part (Hello World part 1)
 
->**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production enviornments.
+>**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
 
 Client-side web parts are client-side components that run inside the context of a SharePoint page. Client-side web parts can be deployed to SharePoint Online, and you can also use modern JavaScript tools and libraries to build them.
 
@@ -11,7 +11,12 @@ Client-side web parts support:
 
 >**Note:** Before following the steps in this article, be sure to [Set up your development environment](../../set-up-your-development-environment).
 
->**Note:** You can find recorded video of this tutorial from [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=ralspfOBgic&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq).
+You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=ralspfOBgic&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
+
+<a href="https://www.youtube.com/watch?v=ralspfOBgic&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
+<img src="../../../../images/spfx-youtube-tutorial5.png" alt="Screenshot of the YouTube video player for this tutorial" />
+</a>
+
 
 ## Create a new web part project
 Create a new project directory in your favorite location.
@@ -64,7 +69,7 @@ Because the SharePoint client-side solution is HTML/TypeScript based, you can us
 >**Note:** This article uses Visual Studio code in the steps and examples. You can use any IDE that you prefer. 
 
 ### Using Visual Studio 2015
-Currently, support for SharePoint client-side projects in Visual Studio is available through Node.js Tools for Visual Studio. For more information, see [Use Visual Studio to develop web parts](../basics/use-visual-studio).
+Currently, support for SharePoint client-side projects in Visual Studio is available through NodeJS Tools for Visual Studio. For more information, see [Use Visual Studio to develop web parts](../basics/use-visual-studio).
    
 ## Preview the web part
 To preview your web part, build and run it on a local web server. 
@@ -75,11 +80,11 @@ Switch to your console, make sure you are still in the **helloworld-webpart** di
 gulp serve
 ```
 
-This command will execute a series of gulp tasks to create a local, Node-based HTTP server on 'localhost:4321' and launch your default browser to preview web parts from your local dev environment.
+This command will execute a series of gulp tasks to create a local, Node-based HTTPS server on 'localhost:4321' and launch your default browser to preview web parts from your local dev environment.
+
+The client-side toolchain uses HTTPS endpoint by default. However, since a default certificate is not configured for the local dev environment, your browser will report a certificate error. Depending on the browser you are using, you will need to add exception (for example, Mozilla Firefox) or click Advanced and select to proceed to the website (for example, Microsoft Edge or Google Chrome).
 
 ![Gulp serve web part project](../../../../images/helloworld-wp-gulp-serve.png)
-
->**Note:** If you get the error **cannot find module es6-promise**, run the following command in the project folder to install the es-promise npm module: `npm i es6-promise` and then run `gulp serve` again.
 
 SharePoint client-side development tools use [gulp](http://gulpjs.com/) as the task runner to handle build process tasks such as:
 

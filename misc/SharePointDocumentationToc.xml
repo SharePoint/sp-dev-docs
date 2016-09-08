@@ -25,5 +25,23 @@
 				<Item text="Known issues" url="spfx/web-parts/basics/known-issues" SEODescription="Known issues with web parts in the SharePoint Framework" />
 			</Item>
 		</Item>
+		<Item text="Release notes" url="spfx/release-notes" SEODescription="">
+			<Item text="Developer Preview Drop 2" url="spfx/release-notes/sharepoint-framework-dev-preview-drop2" SEODescription="" />
+			<Item text="Developer Preview Drop 1" url="spfx/release-notes/sharepoint-framework-dev-preview-drop1" SEODescription="" />
+		</Item>
+	</Item>
+	<Item text="SharePoint APIs" url="apis" SEODescription="">
+		<Item text="Webhooks" url="apis/webhooks" SEODescription="">
+			<Item text="Overview" url="apis/webhooks/overview-sharepoint-webhooks" SEODescription="SharePoint webhooks allow developers to build service integrations which subscribe to receive notifications on specific events that occur in SharePoint."/>
+			<Item text="Get started" url="apis/webhooks/get-started-webhooks" SEODescription="Get started building your own application that can add and handle SharePoint webhook requests."/>
+			<Item text="Reference implementation" url="apis/webhooks/webhooks-reference-implementation" SEODescription="A SharePoint PnP sample reference implementation that shows how to use SharePoint webhooks using various Azure components such as Azure Web Jobs, Azure SQL Server and Azure Storage Queues."/>
+			<Item text="SharePoint lists" url="apis/webhooks/lists">
+				<Item text="Overview" url="apis/webhooks/lists/overview-sharepoint-list-webhooks" SEODescription="SharePoint list webhooks notify your application about the events corresponding to list item changes for a given SharePoint list or a document library." />
+				<Item text="Create a subscription" url="apis/webhooks/lists/create-subscription" SEODescription="Create a SharePoint webhook subscription using an HTTP POST request." />
+				<Item text="Update a subscription" url="apis/webhooks/lists/update-subscription" SEODescription="Update a SharePoint webhook subscription using an HTTP PATCH request." />
+				<Item text="Delete a subscription" url="apis/webhooks/lists/delete-subscription" SEODescription="Delete a SharePoint webhook subscription using an HTTP DELETE request." />
+				<Item text="Get subscriptions" url="apis/webhooks/lists/get-subscription" SEODescription="Get one or more SharePoint webhook subscriptions using an HTTP GET request." />
+			</Item>
+		</Item>
 	</Item>
 </Menu>

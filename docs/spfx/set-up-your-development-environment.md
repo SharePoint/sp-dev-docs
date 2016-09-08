@@ -50,7 +50,7 @@ If you want to use Visual Studio as your development environment, install the fo
 You need to install compiler tools using the following command:
 	
 ```
-sudo apt-get build-essential
+sudo apt-get install build-essential
 ```
 
 ### If you are using fedora
