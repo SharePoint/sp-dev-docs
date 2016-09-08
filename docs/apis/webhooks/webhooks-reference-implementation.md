@@ -24,7 +24,7 @@ Microsoft Azure is used to host the various components needed to implement Azure
 
 ## Source code for this reference implementation
 
-Source code and other materials for the reference implementation are available in the [SharePoint developer samples GitHub repository](https://github.com/SharePoint/sp-dev-samples/tree/master/Samples/WebHooks).
+Source code and other materials for the reference implementation are available in the [SharePoint developer samples GitHub repository](https://aka.ms/sp-webhooks-sample-reference).
 
 ## Deploying the reference implementation
 
@@ -32,7 +32,7 @@ The application will show you how to manage webhooks, specifically for a SharePo
 
 ![SharePoint webhook reference implementation application](../../../images/webhook-sample-application.png)
 
-The [SharePoint web hooks reference implementation - Deployment guide](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks/Deployment%20guide.md) lists the deployment steps used to deploy the reference implementation. 
+The [SharePoint web hooks reference implementation - Deployment guide](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks.List/Deployment%20guide.md) lists the deployment steps used to deploy the reference implementation. 
 
 ## Introduction to webhooks
 
@@ -40,7 +40,8 @@ Webhooks notify your application about changes in SharePoint that the applicatio
 
 ### Adding a webhook to your SharePoint list
 
-The reference implementation works with a SharePoint list. To add a webhook to a SharePoint list, your application first creates a webhook subscription by sending a [`POST /_api/web/lists('list-id')/subscriptions`](./create-subscription) request. The request includes the following items:
+The reference implementation works with a SharePoint list. To add a webhook to a SharePoint list, your application first creates a webhook subscription by sending a [`POST /_api/web/lists('list-id')/subscriptions`](./lists/create-subscription) request. The request includes the following items:
+
 * A payload that identifies the list which you're adding the webhook for.
 * The location of your webhook service URL to send the notifications.
 * The expiration date of the webhook. 
@@ -49,7 +50,7 @@ After you've requested SharePoint to add your webhook, SharePoint will validate 
 
 ![Adding a webhook](../../../images/webhook-sample-add-process.png)
 
-Take a look at the reference implementation, and you'll see that all webhook CRUD operations are consolidated in the [WebHookManager](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks/SharePoint.WebHooks.Common/WebHookManager.cs) class of the **SharePoint.WebHooks.Common** project. Adding a webhook is done using the **AddListWebHookAsync** method:
+Take a look at the reference implementation, and you'll see that all webhook CRUD operations are consolidated in the [WebHookManager](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks.List/SharePoint.WebHooks.Common/WebHookManager.cs) class of the **SharePoint.WebHooks.Common** project. Adding a webhook is done using the **AddListWebHookAsync** method:
 
 ```cs
 /// <summary>
@@ -106,7 +107,7 @@ In the previous step your service endpoint was called but SharePoint only provid
 
 ![Async GetChanges](../../../images/webhook-sample-async-getchanges.png)
 
-You can learn more about the `GetChanges()` implementation in the **ProcessNotification** method in the [ChangeManager](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks/SharePoint.WebHooks.Common/ChangeManager.cs) class of the **SharePoint.WebHooks.Common** project. 
+You can learn more about the `GetChanges()` implementation in the **ProcessNotification** method in the [ChangeManager](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks.List/SharePoint.WebHooks.Common/ChangeManager.cs) class of the **SharePoint.WebHooks.Common** project. 
 
 To avoid getting the same change repeatedly, it's important that you inform SharePoint from which point you want the changes. This is done by passing a **changeToken**, which also implies that your service endpoint needs to persist the last used **changeToken** so that it can be used the next time the service endpoint is called.
 
@@ -145,7 +146,7 @@ Create a web job that on a weekly basis reads all the subscription IDs from the 
 
 > **Note:** This web job is not part of this reference implementation.
 
-The actual renewal of a SharePoint list webhook can be done using a [`PATCH /_api/web/lists('list-id')/subscriptions(‘subscriptionID’)`](./update-subscription) REST call. In the reference implementation, updating of webhooks is implemented in the [WebHookManager](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks/SharePoint.WebHooks.Common/WebHookManager.cs) class of the **SharePoint.WebHooks.Common** project. Updating a webhook is done using the **AddListWebHookAsync** method:
+The actual renewal of a SharePoint list webhook can be done using a [`PATCH /_api/web/lists('list-id')/subscriptions(‘subscriptionID’)`](./lists/update-subscription) REST call. In the reference implementation, updating of webhooks is implemented in the [WebHookManager](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks.List/SharePoint.WebHooks.Common/WebHookManager.cs) class of the **SharePoint.WebHooks.Common** project. Updating a webhook is done using the **AddListWebHookAsync** method:
 
 ```csharp
 /// <summary>
