@@ -79,4 +79,4 @@ Content-Type: application/json
 
 Before a new subscription is created, SharePoint will send a request with a validation token in the body of the request to the service URL provided. Your service must respond to this request by returning the validation token.
 
-If your service fails to validate the request in this way, the subscription will not be created. See [SharePoint list webhooks](../overview-sharepoint-webhooks.md) for more information.
+If your service fails to validate the request in this way, the subscription will not be created. See [Overview of SharePoint webhooks](../overview-sharepoint-webhooks.md) for more information.
