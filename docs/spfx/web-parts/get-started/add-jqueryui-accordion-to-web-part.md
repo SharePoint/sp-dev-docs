@@ -6,8 +6,7 @@ This article describes how to add the jQueryUI Accordion to your web part projec
 
 ![Screenshot of a web part that includes a jQuery Accordion](../../../../images/jquery-accordion-wb.png)
 
-## Video recording of the tutorial
-You can also follow the needed steps from tutorial recording available from the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=YcECe5JbAnA&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
+You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=YcECe5JbAnA&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
 
 <a href="https://www.youtube.com/watch?v=YcECe5JbAnA&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
 <img src="../../../../images/spfx-youtube-tutorial5.png" alt="Screenshot of the YouTube video player for this tutorial" />

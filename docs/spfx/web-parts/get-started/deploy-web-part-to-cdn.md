@@ -4,8 +4,7 @@
 
 In this article, you will deploy the **HelloWorld** assets to a remote CDN instead of using the local environment. You'll use an Azure Storage account integrated with a CDN to deploy your assets. SharePoint Framework build tools provide out-of-the-box support for deploying to an Azure Storage account; however, you can also manually upload the files to your favorite CDN provider or to SharePoint.
 
-## Video recording of the tutorial
-You can also follow the needed steps from tutorial recording available from the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=xMQMNtsHDhk&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
+You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=xMQMNtsHDhk&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
 
 <a href="https://www.youtube.com/watch?v=xMQMNtsHDhk&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
 <img src="../../../../images/spfx-youtube-tutorial3.png" alt="Screenshot of the YouTube video player for this tutorial" />
@@ -57,7 +56,7 @@ In the storage account dashboard, choose **Access Key** in the dashboard and cop
 
 ### CDN profile and endpoint
 
-Create a new CDN profile and associate the CDN endpoint wit this BLOB container.
+Create a new CDN profile and associate the CDN endpoint with this BLOB container.
 
 Create a new CDN profile as described in [Step 2: Create a new CDN profile](https://azure.microsoft.com/en-us/documentation/articles/cdn-create-a-storage-account-with-cdn/#step-2-create-a-new-cdn-profile).
 

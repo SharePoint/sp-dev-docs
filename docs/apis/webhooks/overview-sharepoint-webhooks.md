@@ -1,36 +1,32 @@
+# Overview of SharePoint webhooks
+
 >**Note:** SharePoint webhooks is currently in preview and is subject to change. SharePoint webhooks are not currently supported for use in production environments.
 
-# Overview
-SharePoint [webhooks](http://en.wikipedia.org/wiki/Webhook) allow developers to build service integrations which subscribe to receive notifications on specific events that occur in SharePoint. When one of those events are triggered, SharePoint will send a HTTP POST payload to the subscriber. Webhooks are easier to develop and consume since they're regular HTTP services (web API) in comparison to WCF services used by SharePoint add-in remote event receivers.
+SharePoint [webhooks](http://en.wikipedia.org/wiki/Webhook) enable developers to build applications that subscribe to receive notifications on specific events that occur in SharePoint. When an event is triggered, SharePoint sends an HTTP POST payload to the subscriber. Webhooks are easier to develop and consume than Windows Communication Foundation (WCF) services used by SharePoint add-in remote event receivers. This is because webhooks are regular HTTP services (web API).
 
-The first iteration will deliver webhooks for [SharePoint list items](./lists/overview-sharepoint-list-webhooks). The SharePoint list item webhooks cover the events corresponding to list item changes for a given SharePoint list or a document library. SharePoint webhooks provide a simple notification pipeline so your application can be aware of changes to a SharePoint list without polling the service. 
+Currently webhooks are only enabled for SharePoint list items. SharePoint list item webhooks cover the events corresponding to list item changes for a given SharePoint list or a document library. SharePoint webhooks provide a simple notification pipeline so your application can be aware of changes to a SharePoint list without polling the service. For more information see [SharePoint list webhooks](./lists/overview-sharepoint-list-webhooks). 
 
 ## Creating webhooks
 To create a new SharePoint webhook, you add a new subscription to the specific SharePoint resource, such as a SharePoint list. 
 
 The following information is required for creating a new subscription:
 
-- Resource
-  - The resource endpoint URL you are creating the subscription for. For example, SharePoint List API URL.
-- Server Notification URL
-  - This is your service endpoint URL. SharePoint will send a HTTP POST to this endpoint when events in the specified resource.
-- Expiration Date Time
-  - Expiration date time for your subscription. The expiration date time should not be more than 6 months. By default, subscriptions are set to expire 6 months from when they are created. 
+- Resource - The resource endpoint URL you are creating the subscription for. For example a SharePoint List API URL.
+- Server notification URL - Your service endpoint URL. SharePoint will send an HTTP POST to this endpoint when events occur in the specified resource.
+- Expiration date - The expiration date for your subscription. The expiration date should not be more than 6 months. By default, subscriptions are set to expire 6 months from when they are created. 
 
 You can also include the following additional information if needed:
 
-- Client State  
-  - Opaque string passed back to the client on all notifications. You can choose to use this for various reasons, such as, but not limited to:
-     - validate notifications
-     - tag different subscriptions
+- Client State - An opaque string passed back to the client on all notifications. You can use this for validating notifications, tagging different subscriptions, or other reasons.
 
 ## Handling webhook validation requests
 
 When a new subscription is created, SharePoint will validate whether the notification URL supports receiving webhook notifications. This validation is performed during the subscription creation request. The subscription will only be created if your service responds in a timely manner back with the validation token.
 
-When a new subscription is created, SharePoint will POST a request to the registered URL in the following format:
-
 ### Example validation request
+
+When a new subscription is created, SharePoint will send an HTTP POST request to the registered URL in a format similar to the following example:
+
 
 ```http
 POST https://contoso.azurewebsites.net/your/webhook/service?validationToken={randomString}
@@ -39,7 +35,7 @@ Content-Length: 0
 
 ### Response
 
-For the subscription to be created successfully, your service must respond to this request by returning the value of the **validationToken** query string parameter as a plain-text response.
+For the subscription to be created successfully, your service must respond to the request by returning the value of the **validationToken** query string parameter as a plain-text response.
 
 ```http
 HTTP/1.1 200 OK
@@ -48,12 +44,12 @@ Content-Type: text/plain
 {randomString}
 ```
 
-If your application returns a status code other than `200` or fails to respond with the value of the validationToken parameter, the request to create a new subscription will fail.
+If your application returns a status code other than `200` or fails to respond with the value of the **validationToken** parameter, the request to create a new subscription will fail.
 
 ## Receiving notifications
-The notification payload will inform the service that an event occurred in a given resource for a given subscription. Multiple notifications to your service may be batched together into a single request, if multiple changes occurred in the resource within the same time period.
+The notification payload will inform your application that an event occurred in a given resource for a given subscription. Multiple notifications to your application may be batched together into a single request, if multiple changes occurred in the resource within the same time period.
 
-The notification payload body will also contain your client state if you used it when creating the subscription. 
+The notification payload body will also contain your client state if you used it when creating the subscription.
 
 ### Webhook notification resource
 
@@ -106,9 +102,7 @@ Since multiple notifications may be submitted to your service in a single reques
 | **webId**              | String            | Unique identifier of the web where the subscription is registered.                                                                  |
 
 #### Example notification
-Below is an example payload notification:
-
-The body of the HTTP request to your service notification URL will contain a [Webhook Notification](./lists/webhook-notification) similar to the following:
+The body of the HTTP request to your service notification URL will contain a webhook notification. The following example shows a payload with one notification:
 
 ```json
 {
@@ -126,21 +120,21 @@ The body of the HTTP request to your service notification URL will contain a [We
 }
 ```
 
-You'll notice that the notification doesn't include any information about the changes that triggered it. Your application is expected to use the [GetChanges API](https://msdn.microsoft.com/EN-US/library/office/dn531433.aspx#bk_ListGetChanges) on the list to query the collection of changes from the change log and store the change token value for the next subsequent call when you are notified.
+The notification doesn't include any information about the changes that triggered it. Your application is expected to use the [GetChanges API](https://msdn.microsoft.com/EN-US/library/office/dn531433.aspx#bk_ListGetChanges) on the list to query the collection of changes from the change log and store the change token value for any subsequent calls when the application is notified.
 
 ## Event types
-SharePoint webhooks support only asynchronous events. This means, webhooks are only fired after a change happened (so similar to **-ed** events), and thus synchronous (**-ing** events) are not possible.
+SharePoint webhooks only support asynchronous events. This means that webhooks are only fired after a change happened (similar to **-ed** events), and thus synchronous (**-ing** events) are not possible.
 
 ## Error handling
-If an error occurs while sending the notification to your service, SharePoint will follow exponential back-off logic. Any response with an HTTP status code outside of the 200-299 range, or that times out, will be attempted again over the next several minutes. If the request is not successful after 15 minutes, the notification is dropped.
+If an error occurs while sending the notification to your application, SharePoint will follow exponential back-off logic. Any response with an HTTP status code outside of the 200-299 range, or that times out, will be attempted again over the next several minutes. If the request is not successful after 15 minutes, the notification is dropped.
 
-Future notifications will still be attempted to your service, although the service reserves the right to remove the subscription if a sufficient number of failures are detected.
+Future notifications will still be attempted to your application, although the service may remove the subscription if a sufficient number of failures are detected.
 
 ## Expiration
-Webhook subscriptions are set to expire 6 months by default or at the specified date time from when they are created. 
+Webhook subscriptions are set to expire after 6 months by default if an **expirationDateTime** value is not specified. 
 
-You need to set an expiration date time when creating the subscription. The expiration date time should not be more than 6 months. Your application is expected to handle the expiration date time according to your application's needs by updating the subscription periodically. 
+You need to set an expiration date when creating the subscription. The expiration date should be less than 6 months. Your application is expected to handle the expiration date according to your application's needs by updating the subscription periodically. 
 
 ## Retry mechanism
 
-When a given event occurs in SharePoint and when your service endpoint is not reachable (e.g. due to maintenance) SharePoint will retry sending the notification. Today SharePoint performs a retry of **5 times with a 5 minute wait time** between the attempts. If for some reason your service is down for a longer time, the next time when it's up and gets called by SharePoint the call to `GetChanges()` will get you the changes that were missed when your service was not available.
+If an event occurs in SharePoint and your service endpoint is not reachable (e.g., due to maintenance) SharePoint will retry sending the notification. SharePoint performs a retry of **5 times with a 5 minute wait time** between the attempts. If for some reason your service is down for a longer time, the next time when it's up and gets called by SharePoint, the call to the `GetChanges()` will recover the changes that were missed when your service was not available.
