@@ -25,24 +25,31 @@ At this time, contributions are accepted for:
 
 ### SPFx Folder
 
-The `spfx` folder is further classified into `basics` and `get-started`:
+The `spfx` folder contains documentation for SharePoint Framework. It is further classified into component folders, for example: `webparts`. This folder will expand with new components as they are released.
 
 ```
 docs
 --spfx
-----basics
-----get-started
+---webparts
+-----basics
+-----get-started
+-----developer-guide
 ```
 
-`get-started` folder contains walkthroughs and tutorials on how to get started building client-side web parts.
-
-`basics` folder contains client-side web part concept docs that are helpful in building client-side web parts. 
-
+#### Component folder
+Every component folder contains the following folders:
+* basics
+    * `basics` folder contains concept docs that are helpful in building that particular component, for example: `web parts`. 
+* get-started
+    * `get-started` folder contains walkthroughs and tutorials on how to get started building that particular component, for example: `web parts`.
+* developer-guide
+    * `developer-guide` folder contains guides, best practices and reference implementations for that particular component, for example: `web parts`.
+    * 
 Any images associated with the docs should be uploaded into the `sp-dev-docs\images` folder.
 
 ### SharePoint Webhooks 
 
-The `apis\webhooks` folder contains the documentation for SharePoint webhooks. It is further classified into webhook endpoints, for example: lists.
+The `apis\webhooks` folder contains the documentation for SharePoint webhooks. It is further classified into webhook endpoints, for example: `lists`. This folder will expand with new endpoints as they are released.
 
 ```
 docs
