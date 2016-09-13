@@ -16,10 +16,14 @@ The `docs` folder contains the key developer topics:
 ```
 docs
 --spfx
+--apis
 ```
 At this time, contributions are accepted for:
 
 * SharePoint Framework Developer Preview
+* SharePoint Webhooks
+
+### SPFx Folder
 
 The `spfx` folder is further classified into `basics` and `get-started`:
 
@@ -34,8 +38,25 @@ docs
 
 `basics` folder contains client-side web part concept docs that are helpful in building client-side web parts. 
 
-Any images associated with the docs should be uploaded into the `spfx\images` folder.
- 
+Any images associated with the docs should be uploaded into the `sp-dev-docs\images` folder.
+
+### SharePoint Webhooks 
+
+The `apis\webhooks` folder contains the documentation for SharePoint webhooks. It is further classified into webhook endpoints, for example: lists.
+
+```
+docs
+--apis
+----webhooks
+-----lists
+```
+
+`webhooks` folder contains basic documentation around getting started and any other docs that cover webhooks in general.
+
+`webhooks\lists` folder contains API documentation around the list subscription service.
+
+Any images associated with the docs should be uploaded into the `sp-dev-docs\images` folder.
+
 ## Forking SharePoint Developer Docs repository
 
 The first step is registering yourself on GitHub. Go to https://github.com/ and click on the "Sign up for GitHub" button. Once you're registered ensure you're logged on with your new account and navigate to the Office 365 Developer Patterns and Practices repository at https://github.com/sharepoint/sp-dev-docs. The right top side of the page contains a button called "Fork":
