@@ -18,9 +18,9 @@
 			<Item text="WeakMap interface" url="spfx/es6-collections/weakmap" SEODescription=""/>
 		</Item>
 		<Item text="es6-promise module" url="spfx/es6-promise" SEODescription="">
-			<Item text="Promise module" url="spfx/es6-promise/Promise" SEODescription=""/>
+			<Item text="Promise module" url="spfx/es6-promise/'es6-promise'-imodule" SEODescription=""/>
 			<Item text="'es6-promise' module" url="spfx/es6-promise/'es6-promise'-imodule" SEODescription=""/>
-			<Item text="Promise class" url="spfx/es6-promise/es6-promise" SEODescription=""/>
+			<Item text="Promise class" url="spfx/es6-promise/promise" SEODescription=""/>
 			<Item text="Thenable interface" url="spfx/es6-promise/thenable" SEODescription=""/>
 		</Item>
 		<Item text="whatwg-fetch module" url="spfx/whatwg-fetch" SEODescription="">
