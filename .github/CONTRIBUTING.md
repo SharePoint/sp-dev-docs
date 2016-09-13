@@ -16,26 +16,54 @@ The `docs` folder contains the key developer topics:
 ```
 docs
 --spfx
+--apis
 ```
 At this time, contributions are accepted for:
 
 * SharePoint Framework Developer Preview
+* SharePoint Webhooks
 
-The `spfx` folder is further classified into `basics` and `get-started`:
+### SPFx Folder
+
+The `spfx` folder contains documentation for SharePoint Framework. It is further classified into component folders, for example: `webparts`. This folder will expand with new components as they are released.
 
 ```
 docs
 --spfx
-----basics
-----get-started
+---webparts
+-----basics
+-----get-started
+-----developer-guide
 ```
 
-`get-started` folder contains walkthroughs and tutorials on how to get started building client-side web parts.
+#### Component folder
+Every component folder contains the following folders:
+* basics
+    * `basics` folder contains concept docs that are helpful in building that particular component, for example: `web parts`. 
+* get-started
+    * `get-started` folder contains walkthroughs and tutorials on how to get started building that particular component, for example: `web parts`.
+* developer-guide
+    * `developer-guide` folder contains guides, best practices and reference implementations for that particular component, for example: `web parts`.
+    * 
+Any images associated with the docs should be uploaded into the `sp-dev-docs\images` folder.
 
-`basics` folder contains client-side web part concept docs that are helpful in building client-side web parts. 
+### SharePoint Webhooks 
 
-Any images associated with the docs should be uploaded into the `spfx\images` folder.
- 
+The `apis\webhooks` folder contains the documentation for SharePoint webhooks. It is further classified into webhook endpoints, for example: `lists`. This folder will expand with new endpoints as they are released.
+
+```
+docs
+--apis
+----webhooks
+-----lists
+```
+
+`webhooks` folder contains basic documentation around getting started and any other docs that cover webhooks in general.
+
+`webhooks\lists` folder contains API documentation around the list subscription service.
+
+Any images associated with the docs should be uploaded into the `sp-dev-docs\images` folder.
+
 ## Forking SharePoint Developer Docs repository
 
 The first step is registering yourself on GitHub. Go to https://github.com/ and click on the "Sign up for GitHub" button. Once you're registered ensure you're logged on with your new account and navigate to the Office 365 Developer Patterns and Practices repository at https://github.com/sharepoint/sp-dev-docs. The right top side of the page contains a button called "Fork":
