@@ -16,8 +16,6 @@ Math.random() function and may be not be suitable for some applications.
 
 
 
-
-
 ## Methods
 
 | Method	   | Access Modifier | Returns	| Description|

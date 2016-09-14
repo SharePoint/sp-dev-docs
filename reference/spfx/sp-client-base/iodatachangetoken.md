@@ -7,9 +7,7 @@
 Represents an OData SP.ChangeToken object. For more information about this object
 
 
-
-
-### Properties
+## Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|

@@ -5,7 +5,7 @@
 
 | Module	   |  Description |
 |:-------------|:---------------|
-| [es6-collections](es6-collections-imodule.md)     |  |
+| [es6-collections](./es6-collections/es6-collections-imodule.md)     |  |
 
 
 
@@ -14,24 +14,24 @@
 
 | Interface	   |  Description |
 |:-------------|:---------------|
-| [IteratorResult](iteratorresult.md)   |   |
-| [Iterator](iterator.md)   |   |
-| [ForEachable](foreachable.md)   |   |
-| [Map](map.md)   |   |
-| [MapConstructor](mapconstructor.md)   |   |
-| [Set](set.md)   |   |
-| [SetConstructor](setconstructor.md)   |   |
-| [WeakMap](weakmap.md)   |   |
-| [WeakMapConstructor](weakmapconstructor.md)   |   |
-| [WeakSet](weakset.md)   |   |
-| [WeakSetConstructor](weaksetconstructor.md)   |   |
+| [IteratorResult](./es6-collections/iteratorresult.md)   |   |
+| [Iterator](./es6-collections/iterator.md)   |   |
+| [ForEachable](./es6-collections/foreachable.md)   |   |
+| [Map](./es6-collections/map.md)   |   |
+| [MapConstructor](./es6-collections/mapconstructor.md)   |   |
+| [Set](./es6-collections/set.md)   |   |
+| [SetConstructor](./es6-collections/setconstructor.md)   |   |
+| [WeakMap](./es6-collections/weakmap.md)   |   |
+| [WeakMapConstructor](./es6-collections/weakmapconstructor.md)   |   |
+| [WeakSet](./es6-collections/weakset.md)   |   |
+| [WeakSetConstructor](./es6-collections/weaksetconstructor.md)   |   |
 
 
 
 
 
 
-### Variables
+## Variables
 
 | Variable	   | Type|
 |:-----------|:------------|

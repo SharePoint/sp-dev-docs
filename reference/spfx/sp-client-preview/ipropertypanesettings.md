@@ -7,9 +7,7 @@
 Web part configuration settings
 
 
-
-
-### Properties
+## Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|

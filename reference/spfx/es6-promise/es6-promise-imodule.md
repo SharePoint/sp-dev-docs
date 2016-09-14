@@ -12,8 +12,6 @@
 
 
 
-
-
 ## Variables
 
 | Variable	   |  Description|

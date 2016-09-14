@@ -8,9 +8,7 @@ This class is primarily used with the PageContext class. It provides contextual 
 for the SharePoint user that is accessing the page. 
 
 
-
-
-### Properties
+## Properties
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|

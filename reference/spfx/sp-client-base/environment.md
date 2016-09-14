@@ -7,9 +7,7 @@
 This class contains contextual information about the enviroment that is hosting the framework and 
 its components.
 
-
-
-### Properties
+## Properties
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|

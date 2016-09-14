@@ -11,9 +11,7 @@ Providing a default implementation ensures that new dependencies can be safely
 introduced without inadvertently breaking components that are loaded by an older host 
 (that does not provide the new dependency).
 
-
-
-### Properties
+## Properties
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
@@ -29,7 +27,7 @@ introduced without inadvertently breaking components that are loaded by an older
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
 |[`constructor`](#constructor)     | `public` | [`ServiceKey`](../sp-client-base/servicekey.md) | The ServiceKey is a lookup key that is used when calling ServiceScope |
-|[`create<T>`](#create<t>)     | `public, _static_` | [`ServiceKey<T>;`](../sp-client-base/servicekey.md) | The ServiceKey is a lookup key that is used when calling ServiceScope |
+|[`create<T>`](#create<t>)     | `public, _static_` | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | The ServiceKey is a lookup key that is used when calling ServiceScope |
 |[`createCustom<T>`](#createcustom<t>)     | `public, _static_` | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | The ServiceKey is a lookup key that is used when calling ServiceScope |
 
 
@@ -72,10 +70,10 @@ introduced without inadvertently breaking components that are loaded by an older
 (that does not provide the new dependency).
 
 #### Signature
-`create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>;`
+`create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>`
 
 #### Returns
-[`ServiceKey<T>;`](../sp-client-base/servicekey.md)
+[`ServiceKey<T>`](../sp-client-base/servicekey.md)
 - the newly created ServiceKey
 
 #### Parameters

@@ -8,9 +8,7 @@ This interface is passed to the ODataBatch constructor. It specifies options
 that affect the entire batch.
 
 
-
-
-### Properties
+## Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|

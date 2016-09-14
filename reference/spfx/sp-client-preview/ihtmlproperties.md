@@ -26,5 +26,3 @@ img data-sp-prop-name='prop2' href='http://www.contoso.com/image.png'>"
 
 
 
-
-

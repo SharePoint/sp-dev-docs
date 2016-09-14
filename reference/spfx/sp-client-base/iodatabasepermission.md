@@ -7,9 +7,7 @@
 Data used for creating a SPPermission object.
 
 
-
-
-### Properties
+## Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|

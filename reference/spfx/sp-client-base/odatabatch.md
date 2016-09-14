@@ -18,8 +18,6 @@ resolve with a Response object for that particular request.
 
 
 
-
-
 ## Methods
 
 | Method	   | Access Modifier | Returns	| Description|

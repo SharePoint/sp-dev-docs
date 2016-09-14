@@ -15,9 +15,7 @@ Example: "My Application"
 }
 
 
-
-
-### Properties
+## Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|

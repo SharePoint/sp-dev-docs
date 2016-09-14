@@ -8,9 +8,7 @@ BasicHttpClient implements a basic set of features for performing REST operation
 The subclass HttpClient extends this basic functionality with SharePoint-specific 
 enhancements.
 
-
-
-### Properties
+## Properties
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|

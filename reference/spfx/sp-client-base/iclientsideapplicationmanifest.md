@@ -7,9 +7,7 @@ _Extends: [`IClientSideComponentManifest`](../sp-client-base/iclientsidecomponen
 This is is the manifest for a client-side application.
 
 
-
-
-### Properties
+## Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|

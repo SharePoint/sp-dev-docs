@@ -8,9 +8,7 @@ This is the base interface that is extended by the interfaces
 that represent the manifest for each kind of client-side component.
 
 
-
-
-### Properties
+## Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|

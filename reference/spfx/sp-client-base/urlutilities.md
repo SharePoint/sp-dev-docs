@@ -10,8 +10,6 @@ small, and extremely common. Do not add advanced parsing logic to this file.
 
 
 
-
-
 ## Methods
 
 | Method	   | Access Modifier | Returns	| Description|

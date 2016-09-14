@@ -9,8 +9,6 @@ _Type parameters: `<R>`_
 
 
 
-
-
 ## Methods
 
 | Method	   | Access Modifier | Returns	| Description|

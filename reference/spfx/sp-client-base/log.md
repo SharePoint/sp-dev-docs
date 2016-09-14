@@ -12,8 +12,6 @@ which component generated the messages and makes the messages useful and filtera
 
 
 
-
-
 ## Methods
 
 | Method	   | Access Modifier | Returns	| Description|

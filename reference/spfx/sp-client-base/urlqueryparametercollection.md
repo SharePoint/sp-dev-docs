@@ -17,8 +17,6 @@ Query param with only equals (www.example.com/?=&debug=on stores empty string ke
 
 
 
-
-
 ## Methods
 
 | Method	   | Access Modifier | Returns	| Description|

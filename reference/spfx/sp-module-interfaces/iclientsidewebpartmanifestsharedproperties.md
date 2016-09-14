@@ -8,9 +8,7 @@ This interface specifies the set of common properties that are shared between al
 
 
 
-
-
-### Properties
+## Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|

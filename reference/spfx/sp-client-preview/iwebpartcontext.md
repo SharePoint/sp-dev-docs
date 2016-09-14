@@ -7,9 +7,7 @@ _Extends: `IClientSideComponentContext<IClientSideWebPartManifestInstance<any>>`
 Web part context interface.
 
 
-
-
-### Properties
+## Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|

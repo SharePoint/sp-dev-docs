@@ -10,8 +10,6 @@
 
 
 
-
-
 ## Methods
 
 | Method	   |  Returns	| Description|

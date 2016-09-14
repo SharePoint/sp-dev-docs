@@ -10,9 +10,7 @@ parameters that are documented here:
 https://fetch.spec.whatwg.org/
 
 
-
-
-### Properties
+## Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|

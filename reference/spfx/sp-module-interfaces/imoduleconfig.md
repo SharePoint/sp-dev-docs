@@ -8,9 +8,7 @@ This is the base interface for a script module's definition.
 
 
 
-
-
-### Properties
+## Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|

@@ -11,5 +11,3 @@ Configuration event callback
 
 
 
-
-

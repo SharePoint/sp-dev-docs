@@ -48,15 +48,13 @@ serviceScope.whenFinished().
 
 
 
-
-
 ## Methods
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
 |[`constructor`](#constructor)     | `public` | [`ServiceScope`](../sp-client-base/servicescope.md) | ServiceScope provides a formalized way for components to register and consume dependencies  ("services"), and to enable different implementations to be registered in different scopes |
 |[`consume<T>`](#consume<t>)     | `public` | `T` | ServiceScope provides a formalized way for components to register and consume dependencies  ("services"), and to enable different implementations to be registered in different scopes |
-|[`createAndProvide<T>`](#createandprovide<t>)     | `public` | `T;` | ServiceScope provides a formalized way for components to register and consume dependencies  ("services"), and to enable different implementations to be registered in different scopes |
+|[`createAndProvide<T>`](#createandprovide<t>)     | `public` | `T` | ServiceScope provides a formalized way for components to register and consume dependencies  ("services"), and to enable different implementations to be registered in different scopes |
 |[`createDefaultAndProvide<T>`](#createdefaultandprovide<t>)     | `public` | `T` | ServiceScope provides a formalized way for components to register and consume dependencies  ("services"), and to enable different implementations to be registered in different scopes |
 |[`finish`](#finish)     | `public` | `void` | ServiceScope provides a formalized way for components to register and consume dependencies  ("services"), and to enable different implementations to be registered in different scopes |
 |[`getParent`](#getparent)     | `public` | [`ServiceScope`](../sp-client-base/servicescope.md) | ServiceScope provides a formalized way for components to register and consume dependencies  ("services"), and to enable different implementations to be registered in different scopes |
@@ -229,10 +227,10 @@ third parties. To avoid mistakes, it's best to always call consume() inside a ca
 serviceScope.whenFinished().
 
 #### Signature
-`createAndProvide<T>(serviceKey: ServiceKey<T>,simpleServiceClass: { new (serviceScope: ServiceScope) }): T;`
+`createAndProvide<T>(serviceKey: ServiceKey<T>,simpleServiceClass: { new (serviceScope: ServiceScope) }): T`
 
 #### Returns
-`T;`
+`T`
 - a newly constructed instance of simpleServiceClass
 
 #### Parameters

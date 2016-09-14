@@ -11,9 +11,7 @@ the same way as "internal" modules are.
 
 
 
-
-
-### Properties
+## Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|

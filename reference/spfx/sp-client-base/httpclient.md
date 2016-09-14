@@ -14,8 +14,6 @@ class instead.
 
 
 
-
-
 ## Methods
 
 | Method	   | Access Modifier | Returns	| Description|

@@ -12,8 +12,6 @@ that might impact performance.
 
 
 
-
-
 ## Methods
 
 | Method	   | Access Modifier | Returns	| Description|

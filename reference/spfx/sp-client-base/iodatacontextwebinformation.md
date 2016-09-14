@@ -7,9 +7,7 @@
 Represents an OData SP.ContextWebInformation object. For more information about this object
 
 
-
-
-### Properties
+## Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
