@@ -1,4 +1,4 @@
-# Promise <R> class
+# Promise \<R\> class
 
 _Implements: [`Thenable<R>`](../es6-promise/thenable.md)_
 
