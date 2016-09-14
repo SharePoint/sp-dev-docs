@@ -1,15 +1,5 @@
 # WeakMap interface
 
-
-
-
-
-
-
-
-
-
-
 ## Methods
 
 | Method	   |  Returns	| Description|
@@ -20,94 +10,97 @@
 |[`has`](#has)      | `boolean` |  |
 |[`set`](#set)      | [`WeakMap<K,V>`](../es6-collections/weakmap.md) |  |
 
-
-
-
 ### delete
 
-
-
 #### Signature
-`delete(key: K): boolean`
+
+```ts
+delete(key: K): boolean
+```
 
 #### Returns
-`boolean`
 
+```ts
+boolean
+```
 
 #### Parameters
-
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `key`    | `K` |  |
-
 
 ### clear
 
-
-
 #### Signature
-`clear(): void`
+
+```ts
+clear(): void
+```
 
 #### Returns
-`void`
 
+```ts
+void
+```
 
 #### Parameters
-None
 
+None
 
 ### get
 
-
-
 #### Signature
-`get(key: K): V`
+
+```ts
+get(key: K): V
+```
 
 #### Returns
-`V`
 
+```ts
+V
+```
 
 #### Parameters
-
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `key`    | `K` |  |
-
 
 ### has
 
-
-
 #### Signature
-`has(key: K): boolean`
+
+```ts
+has(key: K): boolean
+```
 
 #### Returns
-`boolean`
 
+```ts
+boolean
+```
 
 #### Parameters
-
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `key`    | `K` |  |
 
-
 ### set
 
-
-
 #### Signature
-`set(key: K,value?: V): WeakMap<K,V>`
+
+```ts
+set(key: K,value?: V): WeakMap<K,V>
+```
 
 #### Returns
+
 [`WeakMap<K,V>`](../es6-collections/weakmap.md)
 
-
 #### Parameters
-
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
