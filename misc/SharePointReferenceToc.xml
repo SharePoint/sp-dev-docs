@@ -5,7 +5,7 @@
 			<Item text="BasicHttpClient class" url="spfx/sp-client-base/basichttpclient" SEODescription=""/>
 			<Item text="Compare class" url="spfx/sp-client-base/compare" SEODescription=""/>
 		</Item>
-		<Item text="sp-client-preview" url="spfx/sp-client-preview" SEODescription="">
+		<Item text="sp-client-preview module" url="spfx/sp-client-preview" SEODescription="">
 			<Item text="BaseClientSideWebPart class" url="spfx/sp-client-preview/baseclientsidewebpart" SEODescription=""/>
 			<Item text="MockWebPartContext class" url="spfx/sp-client-preview/mockwebpartcontext" SEODescription=""/>
 		</Item>
