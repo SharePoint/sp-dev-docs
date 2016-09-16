@@ -16,40 +16,13 @@ resolve with a Response object for that particular request.
 
 
 
+## Constructor
 
 
-## Methods
+**Signature:** `constructor(serviceScope: ServiceScope,batchOptions?: IODataBatchOptions)`
 
-| Method	   | Access Modifier | Returns	| Description|
-|:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | [`ODataBatch`](../sp-client-base/odatabatch.md) | The ODataBatch class accumulates a number of REST service calls and  transmits them as a single ODATA batch |
-|[`execute`](#execute)     | `public` | [`Promise<ODataBatch>`](../es6-promise/promise.md) | The ODataBatch class accumulates a number of REST service calls and  transmits them as a single ODATA batch |
-|[`fetch`](#fetch)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | The ODataBatch class accumulates a number of REST service calls and  transmits them as a single ODATA batch |
-|[`get`](#get)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | The ODataBatch class accumulates a number of REST service calls and  transmits them as a single ODATA batch |
-|[`post`](#post)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | The ODataBatch class accumulates a number of REST service calls and  transmits them as a single ODATA batch |
+**Returns**: [`ODataBatch`](../sp-client-base/odatabatch.md)
 
-
-
-
-
-### constructor
-
-The ODataBatch class accumulates a number of REST service calls and 
-transmits them as a single ODATA batch. This protocol is documented here: 
-http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html 
- 
-The usage is to call ODataBatch.fetch() to queue each individual request, 
-and then call ODataBatch.execute() to execute the batch operation. 
-The execute() method returns a promise that resolves when the real REST 
-call has completed. Each call to fetch() also returns a promise that will 
-resolve with a Response object for that particular request. 
-
-
-#### Signature
-`constructor(serviceScope: ServiceScope,batchOptions?: IODataBatchOptions)`
-
-#### Returns
-[`ODataBatch`](../sp-client-base/odatabatch.md)
 
 
 #### Parameters
@@ -61,24 +34,30 @@ resolve with a Response object for that particular request.
 | `batchOptions`    | [`IODataBatchOptions`](../sp-client-base/iodatabatchoptions.md) | _Optional._ |
 
 
+
+
+
+## Methods
+
+| Method	   | Access Modifier | Returns	| Description|
+|:-------------|:----|:-------|:-----------|
+|[`execute`](#execute)     | `public` | [`Promise<ODataBatch>`](../es6-promise/promise.md) | Executes the batched queries that were queued using ODataBatch.fetch(). |
+|[`fetch`](#fetch)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Queues a new request,and returns a promise that can be used to access  the server response (after execute() has completed). The parameters for  this function are basically the same as the WHATWG API standard documented here:  https://fetch.spec.whatwg.org/    However, be aware that certain REST headers are ignored or not allowed inside  a batch. See the ODATA documentation for details.    When execute() is called, it will POST to a URL such as  "http://example.com/sites/sample/_api/$batch". Typically ODataBatch can successfully  guess the appropriate SPWeb URL by looking for a reserved URL segment such as "_api"  in the first URL passed to fetch(). If not, use IODataBatchOptions.webUrl to specify it  explicitly.   |
+|[`get`](#get)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Calls fetch(),but sets the method to 'GET'. |
+|[`post`](#post)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Calls fetch(),but sets the method to 'POST'. |
+
+
+
+
+
 ### execute
 
-The ODataBatch class accumulates a number of REST service calls and 
-transmits them as a single ODATA batch. This protocol is documented here: 
-http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html 
- 
-The usage is to call ODataBatch.fetch() to queue each individual request, 
-and then call ODataBatch.execute() to execute the batch operation. 
-The execute() method returns a promise that resolves when the real REST 
-call has completed. Each call to fetch() also returns a promise that will 
-resolve with a Response object for that particular request. 
+Executes the batched queries that were queued using ODataBatch.fetch().
 
+**Signature:** ``execute(): Promise<ODataBatch>``
 
-#### Signature
-`execute(): Promise<ODataBatch>`
+**Returns**: [`Promise<ODataBatch>`](../es6-promise/promise.md)
 
-#### Returns
-[`Promise<ODataBatch>`](../es6-promise/promise.md)
 
 
 #### Parameters
@@ -87,22 +66,25 @@ None
 
 ### fetch
 
-The ODataBatch class accumulates a number of REST service calls and 
-transmits them as a single ODATA batch. This protocol is documented here: 
-http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html 
+Queues a new request,and returns a promise that can be used to access 
+the server response (after execute() has completed). The parameters for 
+this function are basically the same as the WHATWG API standard documented here: 
+https://fetch.spec.whatwg.org/ 
  
-The usage is to call ODataBatch.fetch() to queue each individual request, 
-and then call ODataBatch.execute() to execute the batch operation. 
-The execute() method returns a promise that resolves when the real REST 
-call has completed. Each call to fetch() also returns a promise that will 
-resolve with a Response object for that particular request. 
+However, be aware that certain REST headers are ignored or not allowed inside 
+a batch. See the ODATA documentation for details. 
+ 
+When execute() is called, it will POST to a URL such as 
+"http://example.com/sites/sample/_api/$batch". Typically ODataBatch can successfully 
+guess the appropriate SPWeb URL by looking for a reserved URL segment such as "_api" 
+in the first URL passed to fetch(). If not, use IODataBatchOptions.webUrl to specify it 
+explicitly. 
 
 
-#### Signature
-`fetch(url: string,options?: IODataBatchRequestOptions): Promise<Response>`
+**Signature:** ``fetch(url: string,options?: IODataBatchRequestOptions): Promise<Response>``
 
-#### Returns
-[`Promise<Response>`](../es6-promise/promise.md)
+**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
+
 a promise that will return the result
 
 #### Parameters
@@ -116,22 +98,12 @@ a promise that will return the result
 
 ### get
 
-The ODataBatch class accumulates a number of REST service calls and 
-transmits them as a single ODATA batch. This protocol is documented here: 
-http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html 
- 
-The usage is to call ODataBatch.fetch() to queue each individual request, 
-and then call ODataBatch.execute() to execute the batch operation. 
-The execute() method returns a promise that resolves when the real REST 
-call has completed. Each call to fetch() also returns a promise that will 
-resolve with a Response object for that particular request. 
+Calls fetch(),but sets the method to 'GET'.
 
+**Signature:** ``get(url: string,options?: IODataBatchRequestOptions): Promise<Response>``
 
-#### Signature
-`get(url: string,options?: IODataBatchRequestOptions): Promise<Response>`
+**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 
-#### Returns
-[`Promise<Response>`](../es6-promise/promise.md)
 a promise that will return the result
 
 #### Parameters
@@ -145,22 +117,12 @@ a promise that will return the result
 
 ### post
 
-The ODataBatch class accumulates a number of REST service calls and 
-transmits them as a single ODATA batch. This protocol is documented here: 
-http://docs.oasis-open.org/odata/odata/v4.0/odata-v4.0-part1-protocol.html 
- 
-The usage is to call ODataBatch.fetch() to queue each individual request, 
-and then call ODataBatch.execute() to execute the batch operation. 
-The execute() method returns a promise that resolves when the real REST 
-call has completed. Each call to fetch() also returns a promise that will 
-resolve with a Response object for that particular request. 
+Calls fetch(),but sets the method to 'POST'.
 
+**Signature:** ``post(url: string,options: IODataBatchRequestOptions): Promise<Response>``
 
-#### Signature
-`post(url: string,options: IODataBatchRequestOptions): Promise<Response>`
+**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
 
-#### Returns
-[`Promise<Response>`](../es6-promise/promise.md)
 a promise that will return the result
 
 #### Parameters

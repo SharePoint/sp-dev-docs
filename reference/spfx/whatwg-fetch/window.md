@@ -10,6 +10,8 @@
 
 
 
+
+
 ## Methods
 
 | Method	   |  Returns	| Description|
@@ -23,11 +25,10 @@
 
 
 
-#### Signature
-`fetch(url: string|Request,init?: RequestInit): Promise<Response>`
+**Signature:** ``fetch(url: string|Request,init?: RequestInit): Promise<Response>``
 
-#### Returns
-[`Promise<Response>`](../es6-promise/promise.md)
+**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
+
 
 
 #### Parameters

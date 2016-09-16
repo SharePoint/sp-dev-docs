@@ -1,4 +1,4 @@
-# ServiceKey `<T>` class
+# ServiceKey <T> class
 
 
 
@@ -11,43 +11,14 @@ Providing a default implementation ensures that new dependencies can be safely
 introduced without inadvertently breaking components that are loaded by an older host 
 (that does not provide the new dependency).
 
-## Properties
 
-| Property	   | Access Modifier | Type	| Description|
-|:-------------|:----|:-------|:-----------|
-|`defaultCreator`     | `public` | `ServiceCreator<T>` | The ServiceKey is a lookup key that is used when calling ServiceScope |
-|`id`     | `public` | `string` | The ServiceKey is a lookup key that is used when calling ServiceScope |
-|`name`     | `public` | `string` | The ServiceKey is a lookup key that is used when calling ServiceScope |
+## Constructor
+PRIVATE - Do not call this from your own code.
 
+**Signature:** `constructor(id: string,name: string,defaultCreator: ServiceCreator<T>)`
 
+**Returns**: [`ServiceKey`](../sp-client-base/servicekey.md)
 
-
-## Methods
-
-| Method	   | Access Modifier | Returns	| Description|
-|:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | [`ServiceKey`](../sp-client-base/servicekey.md) | The ServiceKey is a lookup key that is used when calling ServiceScope |
-|[`create<T>`](#create<t>)     | `public, _static_` | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | The ServiceKey is a lookup key that is used when calling ServiceScope |
-|[`createCustom<T>`](#createcustom<t>)     | `public, _static_` | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | The ServiceKey is a lookup key that is used when calling ServiceScope |
-
-
-
-
-
-### constructor
-
-The ServiceKey is a lookup key that is used when calling ServiceScope.consume() 
-to fetch a dependency. The key also defines a default implementation of the 
-dependency, which will be autocreated by the root scope if the dependency is not found. 
-Providing a default implementation ensures that new dependencies can be safely 
-introduced without inadvertently breaking components that are loaded by an older host 
-(that does not provide the new dependency).
-
-#### Signature
-`constructor(id: string,name: string,defaultCreator: ServiceCreator<T>)`
-
-#### Returns
-[`ServiceKey`](../sp-client-base/servicekey.md)
 
 
 #### Parameters
@@ -60,20 +31,38 @@ introduced without inadvertently breaking components that are loaded by an older
 | `defaultCreator`    | `ServiceCreator<T>` |  |
 
 
+## Properties
+
+| Property	   | Access Modifier | Type	| Description|
+|:-------------|:----|:-------|:-----------|
+|`defaultCreator`     | `public` | `ServiceCreator<T>` |  |
+|`id`     | `public` | `string` |  |
+|`name`     | `public` | `string` |  |
+
+
+
+
+## Methods
+
+| Method	   | Access Modifier | Returns	| Description|
+|:-------------|:----|:-------|:-----------|
+|[`create<T>`](#create<t>)     | `public, static` | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | Constructs a new ServiceKey whose default implementation will be a new instance of  a TypeScript class that accepts the standard constructor parameter. If you want to  specify custom constructor parameters, use createCustom() instead. |
+|[`createCustom<T>`](#createcustom<t>)     | `public, static` | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | Constructs a new ServiceKey whose default implementation will be obtained  by invoking the specified callback. |
+
+
+
+
+
 ### create<T>
 
-The ServiceKey is a lookup key that is used when calling ServiceScope.consume() 
-to fetch a dependency. The key also defines a default implementation of the 
-dependency, which will be autocreated by the root scope if the dependency is not found. 
-Providing a default implementation ensures that new dependencies can be safely 
-introduced without inadvertently breaking components that are loaded by an older host 
-(that does not provide the new dependency).
+Constructs a new ServiceKey whose default implementation will be a new instance of 
+a TypeScript class that accepts the standard constructor parameter. If you want to 
+specify custom constructor parameters, use createCustom() instead.
 
-#### Signature
-`create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>`
+**Signature:** ``create<T>(name: string,serviceClass: { new (serviceScope: ServiceScope) }): ServiceKey<T>``
 
-#### Returns
-[`ServiceKey<T>`](../sp-client-base/servicekey.md)
+**Returns**: [`ServiceKey<T>`](../sp-client-base/servicekey.md)
+
 - the newly created ServiceKey
 
 #### Parameters
@@ -81,24 +70,19 @@ introduced without inadvertently breaking components that are loaded by an older
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | `string` | - A name such as "MyApplication |
-| `serviceClass`    | `{ new (serviceScope: ServiceScope) }` | - the TypeScript class that implements the service |
+| `name`    | `string` | - A name such as "MyApplication.IMyService" which should be unique within  your application. |
+| `serviceClass`    | `{ new (serviceScope: ServiceScope) }` | - the TypeScript class that implements the service. |
 
 
 ### createCustom<T>
 
-The ServiceKey is a lookup key that is used when calling ServiceScope.consume() 
-to fetch a dependency. The key also defines a default implementation of the 
-dependency, which will be autocreated by the root scope if the dependency is not found. 
-Providing a default implementation ensures that new dependencies can be safely 
-introduced without inadvertently breaking components that are loaded by an older host 
-(that does not provide the new dependency).
+Constructs a new ServiceKey whose default implementation will be obtained 
+by invoking the specified callback.
 
-#### Signature
-`createCustom<T>(name: string,defaultCreator: ServiceCreator<T>): ServiceKey<T>`
+**Signature:** ``createCustom<T>(name: string,defaultCreator: ServiceCreator<T>): ServiceKey<T>``
 
-#### Returns
-[`ServiceKey<T>`](../sp-client-base/servicekey.md)
+**Returns**: [`ServiceKey<T>`](../sp-client-base/servicekey.md)
+
 - the newly created ServiceKey
 
 #### Parameters
@@ -106,6 +90,6 @@ introduced without inadvertently breaking components that are loaded by an older
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `name`    | `string` | - A name such as "MyApplication |
+| `name`    | `string` | - A name such as "MyApplication.IMyService" which should be unique within  your application. |
 | `defaultCreator`    | `ServiceCreator<T>` | - A callback that returns an object that implements the T interface |
 

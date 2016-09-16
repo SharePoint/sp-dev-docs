@@ -9,76 +9,14 @@ Specifies the built-in permissions available in SharePoint Foundation
 Derived from OneDriveWeb/ODBNext/odsp-shared 
 https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx
 
-## Properties
 
-| Property	   | Access Modifier | Type	| Description|
-|:-------------|:----|:-------|:-----------|
-|`addAndCustomizePages`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`addDelPrivateWebParts`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`addListItems`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`applyStyleSheets`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`applyThemeAndBorder`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`approveItems`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`browseDirectories`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`browserUserInfo`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`cancelCheckout`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`createAlerts`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`createGroups`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`createSSCSite`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`deleteListItems`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`deleteVersions`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`editListItems`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`editMyUserInfo`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`emptyMask`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`enumeratePermissions`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`fullMask`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`layoutsPage`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`manageAlerts`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`manageLists`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`managePermissions`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`managePersonalViews`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`manageSubwebs`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`manageWeb`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`open`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`openItems`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`updatePersonalWebParts`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`useClientIntegration`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`useRemoteAPIs`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`value`     | `public` | [`IODataBasePermission`](../sp-client-base/iodatabasepermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`viewFormPages`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`viewListItems`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`viewPages`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`viewUsageData`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|`viewVersions`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
+## Constructor
 
 
+**Signature:** `constructor(value: IODataBasePermission)`
 
+**Returns**: [`SPPermission`](../sp-client-base/sppermission.md)
 
-## Methods
-
-| Method	   | Access Modifier | Returns	| Description|
-|:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | This class can be used to determine if the current user has a requested set of permissions |
-|[`hasAllPermissions`](#hasallpermissions)     | `public` | `boolean` | This class can be used to determine if the current user has a requested set of permissions |
-|[`hasAnyPermissions`](#hasanypermissions)     | `public` | `boolean` | This class can be used to determine if the current user has a requested set of permissions |
-|[`hasPermission`](#haspermission)     | `public` | `boolean` | This class can be used to determine if the current user has a requested set of permissions |
-
-
-
-
-
-### constructor
-
-This class can be used to determine if the current user has a requested set of permissions. 
-Specifies the built-in permissions available in SharePoint Foundation 
-Derived from OneDriveWeb/ODBNext/odsp-shared 
-https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx
-
-#### Signature
-`constructor(value: IODataBasePermission)`
-
-#### Returns
-[`SPPermission`](../sp-client-base/sppermission.md)
 
 
 #### Parameters
@@ -89,18 +27,71 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 | `value`    | [`IODataBasePermission`](../sp-client-base/iodatabasepermission.md) |  |
 
 
+## Properties
+
+| Property	   | Access Modifier | Type	| Description|
+|:-------------|:----|:-------|:-----------|
+|`addAndCustomizePages`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Add,change,or delete HTML pages or web part Pages,and edit the Web site using a SharePoint  Foundation–compatible editor. |
+|`addDelPrivateWebParts`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Add or remove personal web parts on a web part Page. |
+|`addListItems`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Add items to lists,add documents to document libraries,and add Web discussion comments. |
+|`applyStyleSheets`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Apply a style sheet (.css file) to the Web site. |
+|`applyThemeAndBorder`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Apply a theme or borders to the entire Web site. |
+|`approveItems`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Approve a minor version of a list item or document. |
+|`browseDirectories`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Enumerate files and folders in a Web site using Microsoft Office SharePoint Designer 2007 and WebDAV interfaces. |
+|`browserUserInfo`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | View information about users of the Web site. |
+|`cancelCheckout`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Discard or check in a document which is checked out to another user. |
+|`createAlerts`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Create e-mail alerts. |
+|`createGroups`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Create a group of users that can be used anywhere within the site collection. |
+|`createSSCSite`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Create a Web site using Self-Service Site Creation. |
+|`deleteListItems`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Delete items from a list,documents from a document library,and Web discussion comments in documents. |
+|`deleteVersions`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Delete past versions of a list item or document. |
+|`editListItems`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Edit items in lists,edit documents in document libraries,edit Web discussion comments in documents,  and customize web part Pages in document libraries. |
+|`editMyUserInfo`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Allows a user to change his or her user information,such as adding a picture. |
+|`emptyMask`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Has no permissions on the Web site. Not available through the user interface. |
+|`enumeratePermissions`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Enumerate permissions on the Web site,list,folder,document,or list item. |
+|`fullMask`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Has all permissions on the Web site. Not available through the user interface. |
+|`layoutsPage`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | View the layouts page? |
+|`manageAlerts`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Manage alerts for all users of the Web site. |
+|`manageLists`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Create and delete lists,add or remove columns in a list,and add or remove public views of a list. |
+|`managePermissions`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Create and change permission levels on the Web site and assign permissions to users and groups. |
+|`managePersonalViews`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Create,change,and delete personal views of lists. |
+|`manageSubwebs`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Create subsites such as team sites,Meeting Workspace sites,and Document Workspace sites. |
+|`manageWeb`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Grant the ability to perform all administration tasks for the Web site as well as manage content.  Activate, deactivate,or edit properties of Web site scoped Features through the object model or  through the user interface (UI). When grantedon the root Web site of a site collection, activate,  deactivate, or edit properties of site collection scoped Features through the object model. To  browse to the Site Collection Features page and activate or deactivate site collection scoped  Features through the UI, you must be a site collection administrator. |
+|`open`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Allow users to open a Web site,list,or folder to access items inside that container. |
+|`openItems`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | View the source of documents with server-side file handlers. |
+|`updatePersonalWebParts`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Update web parts to display personalized information. |
+|`useClientIntegration`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Use features that launch client applications otherwise,users must work on documents locally and upload changes. |
+|`useRemoteAPIs`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | Use SOAP,WebDAV,or Microsoft Office SharePoint Designer 2007 interfaces to access the Web site. |
+|`value`     | `public` | [`IODataBasePermission`](../sp-client-base/iodatabasepermission.md) | Returns the value of this SPPermission object |
+|`viewFormPages`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | View forms,views,and application pages,and enumerate lists. |
+|`viewListItems`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | View items in lists,documents in document libraries,and view Web discussion comments. |
+|`viewPages`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | View pages in a Web site. |
+|`viewUsageData`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | View reports on Web site usage. |
+|`viewVersions`     | `public` | [`SPPermission`](../sp-client-base/sppermission.md) | View past versions of a list item or document. |
+
+
+
+
+## Methods
+
+| Method	   | Access Modifier | Returns	| Description|
+|:-------------|:----|:-------|:-----------|
+|[`hasAllPermissions`](#hasallpermissions)     | `public` | `boolean` | Function for determining if a given permission mask has all of the requested permissions. |
+|[`hasAnyPermissions`](#hasanypermissions)     | `public` | `boolean` | Function for determining if a given permission mask has any of the requested permissions. |
+|[`hasPermission`](#haspermission)     | `public` | `boolean` | Function for checking if a given permission mask has the requested permission. |
+
+
+
+
+
 ### hasAllPermissions
 
-This class can be used to determine if the current user has a requested set of permissions. 
-Specifies the built-in permissions available in SharePoint Foundation 
-Derived from OneDriveWeb/ODBNext/odsp-shared 
-https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx
+Function for determining if a given permission mask has all of the requested permissions.
 
-#### Signature
-`hasAllPermissions(...requestedPerms: SPPermission[]): boolean`
+**Signature:** ``hasAllPermissions(...requestedPerms: SPPermission[]): boolean``
 
-#### Returns
-`boolean`
+**Returns**: `boolean`
+
 
 
 #### Parameters
@@ -113,16 +104,12 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 
 ### hasAnyPermissions
 
-This class can be used to determine if the current user has a requested set of permissions. 
-Specifies the built-in permissions available in SharePoint Foundation 
-Derived from OneDriveWeb/ODBNext/odsp-shared 
-https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx
+Function for determining if a given permission mask has any of the requested permissions.
 
-#### Signature
-`hasAnyPermissions(...requestedPerms: SPPermission[]): boolean`
+**Signature:** ``hasAnyPermissions(...requestedPerms: SPPermission[]): boolean``
 
-#### Returns
-`boolean`
+**Returns**: `boolean`
+
 
 
 #### Parameters
@@ -135,16 +122,12 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 
 ### hasPermission
 
-This class can be used to determine if the current user has a requested set of permissions. 
-Specifies the built-in permissions available in SharePoint Foundation 
-Derived from OneDriveWeb/ODBNext/odsp-shared 
-https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx
+Function for checking if a given permission mask has the requested permission.
 
-#### Signature
-`hasPermission(requestedPerm: SPPermission): boolean`
+**Signature:** ``hasPermission(requestedPerm: SPPermission): boolean``
 
-#### Returns
-`boolean`
+**Returns**: `boolean`
+
 
 
 #### Parameters

@@ -7,6 +7,8 @@
 
 
 
+
+
 ## Properties
 
 | Property	   | Type	| Description|
@@ -37,11 +39,10 @@
 
 
 
-#### Signature
-`clear(): void`
+**Signature:** ``clear(): void``
 
-#### Returns
-`void`
+**Returns**: `void`
+
 
 
 #### Parameters
@@ -52,11 +53,10 @@ None
 
 
 
-#### Signature
-`delete(key: K): boolean`
+**Signature:** ``delete(key: K): boolean``
 
-#### Returns
-`boolean`
+**Returns**: `boolean`
+
 
 
 #### Parameters
@@ -71,11 +71,10 @@ None
 
 
 
-#### Signature
-`forEach(callbackfn: (value: V,index: K,map: Map<K,V>) => void,thisArg?: any): void`
+**Signature:** ``forEach(callbackfn: (value: V,index: K,map: Map<K,V>) => void,thisArg?: any): void``
 
-#### Returns
-`void`
+**Returns**: `void`
+
 
 
 #### Parameters
@@ -91,11 +90,10 @@ None
 
 
 
-#### Signature
-`get(key: K): V`
+**Signature:** ``get(key: K): V``
 
-#### Returns
-`V`
+**Returns**: `V`
+
 
 
 #### Parameters
@@ -110,11 +108,10 @@ None
 
 
 
-#### Signature
-`has(key: K): boolean`
+**Signature:** ``has(key: K): boolean``
 
-#### Returns
-`boolean`
+**Returns**: `boolean`
+
 
 
 #### Parameters
@@ -129,11 +126,10 @@ None
 
 
 
-#### Signature
-`set(key: K,value?: V): Map<K,V>`
+**Signature:** ``set(key: K,value?: V): Map<K,V>``
 
-#### Returns
-[`Map<K,V>`](../es6-collections/map.md)
+**Returns**: [`Map<K,V>`](../es6-collections/map.md)
+
 
 
 #### Parameters
@@ -149,11 +145,10 @@ None
 
 
 
-#### Signature
-`entries(): Iterator<[K,V]>`
+**Signature:** ``entries(): Iterator<[K,V]>``
 
-#### Returns
-[`Iterator<[K,V]>`](../es6-collections/iterator.md)
+**Returns**: [`Iterator<[K,V]>`](../es6-collections/iterator.md)
+
 
 
 #### Parameters
@@ -164,11 +159,10 @@ None
 
 
 
-#### Signature
-`keys(): Iterator<K>`
+**Signature:** ``keys(): Iterator<K>``
 
-#### Returns
-[`Iterator<K>`](../es6-collections/iterator.md)
+**Returns**: [`Iterator<K>`](../es6-collections/iterator.md)
+
 
 
 #### Parameters
@@ -179,11 +173,10 @@ None
 
 
 
-#### Signature
-`values(): Iterator<V>`
+**Signature:** ``values(): Iterator<V>``
 
-#### Returns
-[`Iterator<V>`](../es6-collections/iterator.md)
+**Returns**: [`Iterator<V>`](../es6-collections/iterator.md)
+
 
 
 #### Parameters

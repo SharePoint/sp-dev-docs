@@ -1,4 +1,4 @@
-# BaseClientSideWebPart `<TProperties>` class
+# BaseClientSideWebPart <TProperties> class
 
 
 
@@ -16,58 +16,16 @@ updated implementation. The render() API is the only API that is mandatory to be
 part. All other life cycle APIs have a base implementation and can be overridden based on the needs of the web part. 
 Please refer to the documentation of the individual APIs to make the right decision.
 
-## Properties
 
-| Property	   | Access Modifier | Type	| Description|
-|:-------------|:----|:-------|:-----------|
-|`accessibleTitle`     | `protected` | `string` | _Read-only._ Constructor for the BaseClientSideWebPart class |
-|`context`     | `protected` | [`IWebPartContext`](../sp-client-preview/iwebpartcontext.md) | _Read-only._ Constructor for the BaseClientSideWebPart class |
-|`disableReactivePropertyChanges`     | `protected` | `boolean` | _Read-only._ Constructor for the BaseClientSideWebPart class |
-|`displayMode`     | `protected` | [`DisplayMode`](../sp-client-base/displaymode.md) | _Read-only._ Constructor for the BaseClientSideWebPart class |
-|`domElement`     | `protected` | `HTMLElement` | _Read-only._ Constructor for the BaseClientSideWebPart class |
-|`previewImageUrl`     | `protected` | `string` | _Read-only._ Constructor for the BaseClientSideWebPart class |
-|`properties`     | `protected` | `TProperties` | _Read-only._ Constructor for the BaseClientSideWebPart class |
-|`propertyPaneSettings`     | `protected` | [`IPropertyPaneSettings`](../sp-client-preview/ipropertypanesettings.md) | _Read-only._ Constructor for the BaseClientSideWebPart class |
-|`renderedFromDefaultProperties`     | `protected` | `boolean` | _Read-only._ Constructor for the BaseClientSideWebPart class |
-|`renderedOnce`     | `protected` | `boolean` | _Read-only._ Constructor for the BaseClientSideWebPart class |
-
-
-
-
-## Methods
-
-| Method	   | Access Modifier | Returns	| Description|
-|:-------------|:----|:-------|:-----------|
-|[`constructor`](#constructor)     | `public` | [`BaseClientSideWebPart`](../sp-client-preview/baseclientsidewebpart.md) | Constructor for the BaseClientSideWebPart class |
-|[`clearError`](#clearerror)     | `protected` | `void` | Constructor for the BaseClientSideWebPart class |
-|[`configureStart`](#configurestart)     | `protected` | `void` | Constructor for the BaseClientSideWebPart class |
-|[`deserialize`](#deserialize)     | `protected` | `TProperties` | Constructor for the BaseClientSideWebPart class |
-|[`dispose`](#dispose)     | `protected` | `void` | Constructor for the BaseClientSideWebPart class |
-|[`onBeforeSerialize`](#onbeforeserialize)     | `protected` | [`IHtmlProperties`](../sp-client-preview/ihtmlproperties.md) | Constructor for the BaseClientSideWebPart class |
-|[`onDisplayModeChanged`](#ondisplaymodechanged)     | `protected` | `void` | Constructor for the BaseClientSideWebPart class |
-|[`onInit<T>`](#oninit<t>)     | `protected` | [`Promise<T>`](../es6-promise/promise.md) | Constructor for the BaseClientSideWebPart class |
-|[`onPropertyChange`](#onpropertychange)     | `protected` | `void` | Constructor for the BaseClientSideWebPart class |
-|[`onPropertyConfigurationComplete`](#onpropertyconfigurationcomplete)     | `protected` | `void` | Constructor for the BaseClientSideWebPart class |
-|[`onPropertyPaneRendered`](#onpropertypanerendered)     | `protected` | `void` | Constructor for the BaseClientSideWebPart class |
-|[`onPropertyPaneSave`](#onpropertypanesave)     | `protected` | `void` | Constructor for the BaseClientSideWebPart class |
-|[`render`](#render)     | `public` | `void` | Constructor for the BaseClientSideWebPart class |
-|[`renderError`](#rendererror)     | `protected` | `void` | Constructor for the BaseClientSideWebPart class |
-
-
-
-
-
-### constructor
-
+## Constructor
 Constructor for the BaseClientSideWebPart class. 
 If a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. 
 
 
-#### Signature
-`constructor(ctx: IWebPartContext)`
+**Signature:** `constructor(ctx: IWebPartContext)`
 
-#### Returns
-[`BaseClientSideWebPart`](../sp-client-preview/baseclientsidewebpart.md)
+**Returns**: [`BaseClientSideWebPart`](../sp-client-preview/baseclientsidewebpart.md)
+
 
 
 #### Parameters
@@ -78,17 +36,54 @@ If a sub class overrides the constructor, it needs to call super(context) as the
 | `ctx`    | [`IWebPartContext`](../sp-client-preview/iwebpartcontext.md) |  |
 
 
+## Properties
+
+| Property	   | Access Modifier | Type	| Description|
+|:-------------|:----|:-------|:-----------|
+|`accessibleTitle`     | `protected` | `string` | _Read-only._ This property points to the accessible title of web part made available to screen readers. The base implementation  returns that default title in the manifest. Web parts that want to provide more descriptive title containing  contextual information need to override this API.   |
+|`context`     | `protected` | [`IWebPartContext`](../sp-client-preview/iwebpartcontext.md) | _Read-only._ This property is a pointer to the web part context. |
+|`disableReactivePropertyChanges`     | `protected` | `boolean` | _Read-only._ This property is used to change the web part's PropertyPane interaction from Reactive to NonReactive. The default  behaviour is Reactive. Where,  Reactive implies that changes made in the PropertyPane are transmitted to the web part instantly and the user can  see instant updates. This helps the page creator get instant feedback and decide if they should keep the new  configuration changes or not.  NonReactive implies that the configuraiton changes are transmitted to the web part only after 'Apply' PropertyPane  button is clicked.   |
+|`displayMode`     | `protected` | [`DisplayMode`](../sp-client-base/displaymode.md) | _Read-only._ This property is the current display mode of the web part.   |
+|`domElement`     | `protected` | `HTMLElement` | _Read-only._ This property is a pointer to the root DOM element of the web part. This is a DIV element and contains the whole  DOM subtree of the web part.   |
+|`previewImageUrl`     | `protected` | `string` | _Read-only._ This property points to the preview image for the web part. The base implementation returns undefined. Web parts  that want to provide a valid preview image url need to override this API. The preview image url can be used to  create a preview of the web part or of the page on which the web part is present.   |
+|`properties`     | `protected` | `TProperties` | _Read-only._ This property is the pointer to the custom property bag of the web part.   |
+|`propertyPaneSettings`     | `protected` | [`IPropertyPaneSettings`](../sp-client-preview/ipropertypanesettings.md) | _Read-only._ This property is the pointer to the web part configuration settings. If the web part wants to use the PropertyPane  for configuration, this API needs to be overridden and the web part needs to return the set of properties it wants  to display in the PropertyPane.   |
+|`renderedFromDefaultProperties`     | `protected` | `boolean` | _Read-only._ This property indicates whether the web part was rendered from the default properties,as opposed to using  serialized state from the last time that the web part was saved.   |
+|`renderedOnce`     | `protected` | `boolean` | _Read-only._ This property indicates whether the web part has been rendered once or not. After the first time rendering,  the value of this property is always true. Till a full re-render of the web part happens.   |
+
+
+
+
+## Methods
+
+| Method	   | Access Modifier | Returns	| Description|
+|:-------------|:----|:-------|:-----------|
+|[`clearError`](#clearerror)     | `protected` | `void` | This API should be used to clear the error message from the web part display area. |
+|[`configureStart`](#configurestart)     | `protected` | `void` | This API should be used to invoke the PropertyPane to help configure the web part.   |
+|[`deserialize`](#deserialize)     | `protected` | `TProperties` | This API is called once during the lifetime of the web part during the intial render and just before the onInit  API call. The purpose of this API is to help a web part developer deserialize the web part data and manage the  versioning of their data as the web part code evolves. The web part data may have been persisted with an older  or newer version of the web part code. This API gives the web part developer an opportunity to re-structure their  data to the appropriate data schema. The persisted data contains the version number information. That information  can be used to make decisions on how to re-structure the data.   |
+|[`dispose`](#dispose)     | `protected` | `void` | This API is called at the end of the web part lifecycle. It should be overridden to dispose any  resources that the web part is holding onto. |
+|[`onBeforeSerialize`](#onbeforeserialize)     | `protected` | [`IHtmlProperties`](../sp-client-preview/ihtmlproperties.md) | This API is called before a web part is serialized. The default implementation is a no-op. A web part developer  is expected to override this API when the web part's state is not fully reflected in the property bag i.e.  this.properties. In the overridden method, the web part developer is expected to update the state of the web  part property bag. This way the web part serialization process will use the upto date state of the web part.   |
+|[`onDisplayModeChanged`](#ondisplaymodechanged)     | `protected` | `void` | This API is called when the display mode of a web part is changed. The default implementation of this API calls  the web part render method to re-render the web part with the new display mode. If a web part developer does not  want a full re-render to happen on display mode change, they can override this API and perform specific updates  to the web part DOM to switch its display mode.   |
+|[`onInit<T>`](#oninit<t>)     | `protected` | [`Promise<T>`](../es6-promise/promise.md) | This API should be overridden to perform long running operations e.g. data fetching from a remote service before  the initial rendering of the web part. The loading indicator is displayed during the lifetime of this method.  This API is called only once during the lifecycle of a web part. |
+|[`onPropertyChange`](#onpropertychange)     | `protected` | `void` | This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode.  The base implementation of this API updates the web part property bag and re-render the web part. This API also  invokes the web part host's setDirty API.   |
+|[`onPropertyConfigurationComplete`](#onpropertyconfigurationcomplete)     | `protected` | `void` | This API is called when the current web part configuration process is completed. ConfigurationComplete event  is fired when user switches between web parts while the PropertyPane is open, and this event handler is called  for the previously selected web part.   |
+|[`onPropertyPaneRendered`](#onpropertypanerendered)     | `protected` | `void` | This API is involed when the PropertyPane is rendered. |
+|[`onPropertyPaneSave`](#onpropertypanesave)     | `protected` | `void` | this API is invoked when the the changes are applied on the PropertyPane when the PropertyPane is used in  Non-Reactive mode. This API is not invoked when the PropertyPane is used in Reactive mode. |
+|[`render`](#render)     | `public` | `void` | This API is called to render the web part. There is no base implementation of this API and the web part is  required to override this API. |
+|[`renderError`](#rendererror)     | `protected` | `void` | This API should be used to render an error message in the web part display area. Also logs the error message  using the trace logger.   |
+
+
+
+
+
 ### clearError
 
-Constructor for the BaseClientSideWebPart class. 
-If a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. 
+This API should be used to clear the error message from the web part display area.
 
+**Signature:** ``clearError(): void``
 
-#### Signature
-`clearError(): void`
+**Returns**: `void`
 
-#### Returns
-`void`
 
 
 #### Parameters
@@ -97,15 +92,13 @@ None
 
 ### configureStart
 
-Constructor for the BaseClientSideWebPart class. 
-If a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. 
+This API should be used to invoke the PropertyPane to help configure the web part. 
 
 
-#### Signature
-`configureStart(refreshOnly?: boolean): void`
+**Signature:** ``configureStart(refreshOnly?: boolean): void``
 
-#### Returns
-`void`
+**Returns**: `void`
+
 
 
 #### Parameters
@@ -118,15 +111,18 @@ If a sub class overrides the constructor, it needs to call super(context) as the
 
 ### deserialize
 
-Constructor for the BaseClientSideWebPart class. 
-If a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. 
+This API is called once during the lifetime of the web part during the intial render and just before the onInit 
+API call. The purpose of this API is to help a web part developer deserialize the web part data and manage the 
+versioning of their data as the web part code evolves. The web part data may have been persisted with an older 
+or newer version of the web part code. This API gives the web part developer an opportunity to re-structure their 
+data to the appropriate data schema. The persisted data contains the version number information. That information 
+can be used to make decisions on how to re-structure the data. 
 
 
-#### Signature
-`deserialize(data: IWebPartData): TProperties`
+**Signature:** ``deserialize(data: IWebPartData): TProperties``
 
-#### Returns
-`TProperties`
+**Returns**: `TProperties`
+
 - web part property bag. 
 
 
@@ -135,21 +131,18 @@ If a sub class overrides the constructor, it needs to call super(context) as the
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `data`    | [`IWebPartData`](../sp-client-preview/iwebpartdata.md) | - web part persisted data |
+| `data`    | [`IWebPartData`](../sp-client-preview/iwebpartdata.md) | - web part persisted data. |
 
 
 ### dispose
 
-Constructor for the BaseClientSideWebPart class. 
-If a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. 
+This API is called at the end of the web part lifecycle. It should be overridden to dispose any 
+resources that the web part is holding onto.
 
+**Signature:** ``dispose(): void``
 
-#### Signature
-`dispose(): void`
+**Returns**: `void`
 
-#### Returns
-`void`
-- web part property bag. 
 
 
 #### Parameters
@@ -158,15 +151,16 @@ None
 
 ### onBeforeSerialize
 
-Constructor for the BaseClientSideWebPart class. 
-If a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. 
+This API is called before a web part is serialized. The default implementation is a no-op. A web part developer 
+is expected to override this API when the web part's state is not fully reflected in the property bag i.e. 
+this.properties. In the overridden method, the web part developer is expected to update the state of the web 
+part property bag. This way the web part serialization process will use the upto date state of the web part. 
 
 
-#### Signature
-`onBeforeSerialize(): IHtmlProperties`
+**Signature:** ``onBeforeSerialize(): IHtmlProperties``
 
-#### Returns
-[`IHtmlProperties`](../sp-client-preview/ihtmlproperties.md)
+**Returns**: [`IHtmlProperties`](../sp-client-preview/ihtmlproperties.md)
+
 - reference to searchable properties and properties that need link fixup. Please read 
 the documentation of IHtmlProperties interface for more details.
 
@@ -176,39 +170,37 @@ None
 
 ### onDisplayModeChanged
 
-Constructor for the BaseClientSideWebPart class. 
-If a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. 
+This API is called when the display mode of a web part is changed. The default implementation of this API calls 
+the web part render method to re-render the web part with the new display mode. If a web part developer does not 
+want a full re-render to happen on display mode change, they can override this API and perform specific updates 
+to the web part DOM to switch its display mode. 
 
 
-#### Signature
-`onDisplayModeChanged(oldDisplayMode: DisplayMode): void`
+**Signature:** ``onDisplayModeChanged(oldDisplayMode: DisplayMode): void``
 
-#### Returns
-`void`
-- reference to searchable properties and properties that need link fixup. Please read 
-the documentation of IHtmlProperties interface for more details.
+**Returns**: `void`
+
+
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `oldDisplayMode`    | [`DisplayMode`](../sp-client-base/displaymode.md) | - The old display mode |
+| `oldDisplayMode`    | [`DisplayMode`](../sp-client-base/displaymode.md) | - The old display mode.   |
 
 
 ### onInit<T>
 
-Constructor for the BaseClientSideWebPart class. 
-If a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. 
+This API should be overridden to perform long running operations e.g. data fetching from a remote service before 
+the initial rendering of the web part. The loading indicator is displayed during the lifetime of this method. 
+This API is called only once during the lifecycle of a web part.
+
+**Signature:** ``onInit<T>(): Promise<T>``
+
+**Returns**: [`Promise<T>`](../es6-promise/promise.md)
 
 
-#### Signature
-`onInit<T>(): Promise<T>`
-
-#### Returns
-[`Promise<T>`](../es6-promise/promise.md)
-- reference to searchable properties and properties that need link fixup. Please read 
-the documentation of IHtmlProperties interface for more details.
 
 #### Parameters
 None
@@ -216,40 +208,38 @@ None
 
 ### onPropertyChange
 
-Constructor for the BaseClientSideWebPart class. 
-If a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. 
+This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode. 
+The base implementation of this API updates the web part property bag and re-render the web part. This API also 
+invokes the web part host's setDirty API. 
 
 
-#### Signature
-`onPropertyChange(propertyPath: string,newValue: any): void`
+**Signature:** ``onPropertyChange(propertyPath: string,newValue: any): void``
 
-#### Returns
-`void`
-- reference to searchable properties and properties that need link fixup. Please read 
-the documentation of IHtmlProperties interface for more details.
+**Returns**: `void`
+
+
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `propertyPath`    | `string` | - JSON path of the property in the property bag |
-| `newValue`    | `any` | - New value of the property |
+| `propertyPath`    | `string` | - JSON path of the property in the property bag. |
+| `newValue`    | `any` | - New value of the property. |
 
 
 ### onPropertyConfigurationComplete
 
-Constructor for the BaseClientSideWebPart class. 
-If a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. 
+This API is called when the current web part configuration process is completed. ConfigurationComplete event 
+is fired when user switches between web parts while the PropertyPane is open, and this event handler is called 
+for the previously selected web part. 
 
 
-#### Signature
-`onPropertyConfigurationComplete(): void`
+**Signature:** ``onPropertyConfigurationComplete(): void``
 
-#### Returns
-`void`
-- reference to searchable properties and properties that need link fixup. Please read 
-the documentation of IHtmlProperties interface for more details.
+**Returns**: `void`
+
+
 
 #### Parameters
 None
@@ -257,17 +247,13 @@ None
 
 ### onPropertyPaneRendered
 
-Constructor for the BaseClientSideWebPart class. 
-If a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. 
+This API is involed when the PropertyPane is rendered.
+
+**Signature:** ``onPropertyPaneRendered(): void``
+
+**Returns**: `void`
 
 
-#### Signature
-`onPropertyPaneRendered(): void`
-
-#### Returns
-`void`
-- reference to searchable properties and properties that need link fixup. Please read 
-the documentation of IHtmlProperties interface for more details.
 
 #### Parameters
 None
@@ -275,17 +261,14 @@ None
 
 ### onPropertyPaneSave
 
-Constructor for the BaseClientSideWebPart class. 
-If a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. 
+this API is invoked when the the changes are applied on the PropertyPane when the PropertyPane is used in 
+Non-Reactive mode. This API is not invoked when the PropertyPane is used in Reactive mode.
+
+**Signature:** ``onPropertyPaneSave(): void``
+
+**Returns**: `void`
 
 
-#### Signature
-`onPropertyPaneSave(): void`
-
-#### Returns
-`void`
-- reference to searchable properties and properties that need link fixup. Please read 
-the documentation of IHtmlProperties interface for more details.
 
 #### Parameters
 None
@@ -293,17 +276,14 @@ None
 
 ### render
 
-Constructor for the BaseClientSideWebPart class. 
-If a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. 
+This API is called to render the web part. There is no base implementation of this API and the web part is 
+required to override this API.
+
+**Signature:** ``render(): void``
+
+**Returns**: `void`
 
 
-#### Signature
-`render(): void`
-
-#### Returns
-`void`
-- reference to searchable properties and properties that need link fixup. Please read 
-the documentation of IHtmlProperties interface for more details.
 
 #### Parameters
 None
@@ -311,22 +291,20 @@ None
 
 ### renderError
 
-Constructor for the BaseClientSideWebPart class. 
-If a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. 
+This API should be used to render an error message in the web part display area. Also logs the error message 
+using the trace logger. 
 
 
-#### Signature
-`renderError(error: Error): void`
+**Signature:** ``renderError(error: Error): void``
 
-#### Returns
-`void`
-- reference to searchable properties and properties that need link fixup. Please read 
-the documentation of IHtmlProperties interface for more details.
+**Returns**: `void`
+
+
 
 #### Parameters
 
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `error`    | `Error` | - An error object containing the error message to render |
+| `error`    | `Error` | - An error object containing the error message to render. |
 

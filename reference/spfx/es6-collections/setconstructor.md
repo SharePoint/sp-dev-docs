@@ -7,6 +7,8 @@
 
 
 
+
+
 ## Properties
 
 | Property	   | Type	| Description|
@@ -30,11 +32,10 @@
 
 
 
-#### Signature
-`new<T>(): Set<T>`
+**Signature:** ``new<T>(): Set<T>``
 
-#### Returns
-[`Set<T>`](../es6-collections/set.md)
+**Returns**: [`Set<T>`](../es6-collections/set.md)
+
 
 
 #### Parameters
@@ -45,11 +46,10 @@ None
 
 
 
-#### Signature
-`new<T>(iterable: ForEachable<T>): Set<T>`
+**Signature:** ``new<T>(iterable: ForEachable<T>): Set<T>``
 
-#### Returns
-[`Set<T>`](../es6-collections/set.md)
+**Returns**: [`Set<T>`](../es6-collections/set.md)
+
 
 
 #### Parameters

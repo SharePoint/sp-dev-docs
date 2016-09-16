@@ -10,6 +10,8 @@
 
 
 
+
+
 ## Methods
 
 | Method	   |  Returns	| Description|
@@ -26,11 +28,10 @@
 
 
 
-#### Signature
-`delete(value: T): boolean`
+**Signature:** ``delete(value: T): boolean``
 
-#### Returns
-`boolean`
+**Returns**: `boolean`
+
 
 
 #### Parameters
@@ -45,11 +46,10 @@
 
 
 
-#### Signature
-`clear(): void`
+**Signature:** ``clear(): void``
 
-#### Returns
-`void`
+**Returns**: `void`
+
 
 
 #### Parameters
@@ -60,11 +60,10 @@ None
 
 
 
-#### Signature
-`add(value: T): WeakSet<T>`
+**Signature:** ``add(value: T): WeakSet<T>``
 
-#### Returns
-[`WeakSet<T>`](../es6-collections/weakset.md)
+**Returns**: [`WeakSet<T>`](../es6-collections/weakset.md)
+
 
 
 #### Parameters
@@ -79,11 +78,10 @@ None
 
 
 
-#### Signature
-`has(value: T): boolean`
+**Signature:** ``has(value: T): boolean``
 
-#### Returns
-`boolean`
+**Returns**: `boolean`
+
 
 
 #### Parameters

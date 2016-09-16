@@ -9,12 +9,14 @@ see the MSDN documentation here:
 https://msdn.microsoft.com/en-us/library/office/jj860569.aspx
 
 
+
+
 ## Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`ID`      | `number` | Example: { StrinValue: "0x010100C5 |
-|`Title`      | `string` | Example: { StrinValue: "0x010100C5 |
+|`ID`      | `number` |  |
+|`Title`      | `string` |  |
 |`UniqueId`      | `string` | Example: "/Guid(d5369f3b-bd7a-412a-9c0f-7f0650bb5489)/" |
 
 

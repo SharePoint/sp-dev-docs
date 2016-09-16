@@ -3,9 +3,9 @@
 
 | Member	   | Description|
 |:-------------|:-------|
-|`only-if-cached`:       |  |
-|`only-if-cached`:       |  |
-|`only-if-cached`:       |  |
-|`only-if-cached`:       |  |
-|`only-if-cached`:       |  |
-|`only-if-cached`:       |  |
+|`default`       |  |
+|`no-store`       |  |
+|`reload`       |  |
+|`no-cache`       |  |
+|`force-cache`       |  |
+|`only-if-cached`       |  |

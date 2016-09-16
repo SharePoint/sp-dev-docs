@@ -15,11 +15,13 @@ Example: "My Application"
 }
 
 
+
+
 ## Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`default`      | `string` | Definition: A set of localized strings |
+|`default`      | `string` |  |
 
 
 

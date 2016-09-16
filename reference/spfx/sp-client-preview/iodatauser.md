@@ -9,17 +9,19 @@ see the MSDN documentation here:
 https://msdn.microsoft.com/en-us/library/office/jj860569.aspx
 
 
+
+
 ## Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`Email`      | `string` | Example: "someone@example |
-|`Id`      | `number` | Example: "someone@example |
-|`IsSiteAdmin`      | `boolean` | Example: "someone@example |
-|`LoginName`      | `string` | Example: "i:0# |
-|`PrincipalType`      | `number` | Example: "i:0# |
+|`Email`      | `string` | Example: "someone@example.com" |
+|`Id`      | `number` |  |
+|`IsSiteAdmin`      | `boolean` |  |
+|`LoginName`      | `string` | Example: "i:0#.w|domain\user" |
+|`PrincipalType`      | `number` |  |
 |`Title`      | `string` | Example: "DOMAIN\user" |
-|`UserId`      | [`IOdataUserId`](../sp-client-preview/iodatauserid.md) | Example: "DOMAIN\user" |
+|`UserId`      | [`IOdataUserId`](../sp-client-preview/iodatauserid.md) |  |
 
 
 

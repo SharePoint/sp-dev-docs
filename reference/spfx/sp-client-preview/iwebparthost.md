@@ -27,13 +27,15 @@ event aggregator. But there are possibilities when a page can have multiple host
 and each host may want to scope its event aggregation service.
 
 
+
+
 ## Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`serviceScope`      | [`ServiceScope`](../sp-client-base/servicescope.md) | ServiceScope provides a formalized way for components to register and consume dependencies  ("services"), and to enable different implementations to be registered in different scopes |
-|`setDirty`      | `function` | ServiceScope provides a formalized way for components to register and consume dependencies  ("services"), and to enable different implementations to be registered in different scopes |
-|`webPartConfigurationEventCallback`      | [`IWebPartConfigurationEventCallback`](../sp-client-preview/iwebpartconfigurationeventcallback.md) | Web part configuration event callback |
+|`serviceScope`      | [`ServiceScope`](../sp-client-base/servicescope.md) | ServiceScope provides a formalized way for components to register and consume dependencies  ("services"), and to enable different implementations to be registered in different scopes.  This improves modularity by decoupling components from their dependencies in an extensible way.  serviceScope: ServiceScope; |
+|`setDirty`      | `function` |  |
+|`webPartConfigurationEventCallback`      | [`IWebPartConfigurationEventCallback`](../sp-client-preview/iwebpartconfigurationeventcallback.md) | Web part configuration event callback. |
 
 
 

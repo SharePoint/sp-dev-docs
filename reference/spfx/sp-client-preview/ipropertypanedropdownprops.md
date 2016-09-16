@@ -7,14 +7,16 @@
 
 
 
+
+
 ## Properties
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`isDisabled`      | `boolean` |  |
-|`label`      | `string` |  |
-|`options`      | [`IPropertyPaneDropdownOption[]`](../sp-client-preview/ipropertypanedropdownoption.md) |  |
-|`selectedKey`      | `string `,` number` |  |
+|`isDisabled`      | `boolean` | Whether or not the Dropdown is disabled. |
+|`label`      | `string` | Descriptive label for the Dropdown. |
+|`options`      | [`IPropertyPaneDropdownOption[]`](../sp-client-preview/ipropertypanedropdownoption.md) | Collection of options for this Dropdown. |
+|`selectedKey`      | `string `,` number` | The key of the initially selected option. |
 
 
 

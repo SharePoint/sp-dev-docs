@@ -7,11 +7,13 @@
 This class contains contextual information about the enviroment that is hosting the framework and 
 its components.
 
+
+
 ## Properties
 
 | Property	   | Access Modifier | Type	| Description|
 |:-------------|:----|:-------|:-----------|
-|`type`     | `public` | [`EnvironmentType`](../sp-client-base/environmenttype.md) | This class contains contextual information about the enviroment that is hosting the framework and  its components |
+|`type`     | `public` | [`EnvironmentType`](../sp-client-base/environmenttype.md) | An enum that describes which type of enviroment the framework is running in. |
 
 
 
