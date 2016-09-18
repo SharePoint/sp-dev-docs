@@ -1,8 +1,8 @@
-# PropertyPaneToggle
+# PropertyPaneToggle(targetProperty,properties)
 
 Helper method to create a Toggle on the PropertyPane.
 
-**Signature:** ``PropertyPaneToggle(targetProperty: string,properties: IPropertyPaneToggleProps): IPropertyPaneField<IPropertyPaneToggleProps>``
+**Signature:** _PropertyPaneToggle(targetProperty: string,properties: [IPropertyPaneToggleProps](../sp-client-preview/ipropertypanetoggleprops.md)): [IPropertyPaneField](../sp-client-preview/ipropertypanefield.md)<IPropertyPaneToggleProps>_
 
 **Returns**: [`IPropertyPaneField<IPropertyPaneToggleProps>`](../sp-client-preview/ipropertypanefield.md)
 

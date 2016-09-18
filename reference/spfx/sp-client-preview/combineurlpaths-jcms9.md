@@ -1,8 +1,8 @@
-# combineURLPaths
+# combineURLPaths(...url)
 
 Combines any number of URL paths.
 
-**Signature:** ``combineURLPaths(...url: string[]): string``
+**Signature:** _combineURLPaths(...url: string[]): string_
 
 **Returns**: `string`
 

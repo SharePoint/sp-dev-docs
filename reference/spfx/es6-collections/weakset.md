@@ -16,19 +16,19 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`delete`](#delete)      | `boolean` |  |
-|[`clear`](#clear)      | `void` |  |
-|[`add`](#add)      | [`WeakSet<T>`](../es6-collections/weakset.md) |  |
-|[`has`](#has)      | `boolean` |  |
+|[`delete(value)`](#deletevalue)      | `boolean` |  |
+|[`clear()`](#clear)      | `void` |  |
+|[`add(value)`](#addvalue)      | [`WeakSet<T>`](../es6-collections/weakset.md) |  |
+|[`has(value)`](#hasvalue)      | `boolean` |  |
 
 
 
 
-### delete
+### delete(value)
 
 
 
-**Signature:** ``delete(value: T): boolean``
+**Signature:** _delete(value: T): boolean_
 
 **Returns**: `boolean`
 
@@ -42,11 +42,11 @@
 | `value`    | `T` |  |
 
 
-### clear
+### clear()
 
 
 
-**Signature:** ``clear(): void``
+**Signature:** _clear(): void_
 
 **Returns**: `void`
 
@@ -56,11 +56,11 @@
 None
 
 
-### add
+### add(value)
 
 
 
-**Signature:** ``add(value: T): WeakSet<T>``
+**Signature:** _add(value: T): [WeakSet](../es6-collections/weakset.md)<T>_
 
 **Returns**: [`WeakSet<T>`](../es6-collections/weakset.md)
 
@@ -74,11 +74,11 @@ None
 | `value`    | `T` |  |
 
 
-### has
+### has(value)
 
 
 
-**Signature:** ``has(value: T): boolean``
+**Signature:** _has(value: T): boolean_
 
 **Returns**: `boolean`
 

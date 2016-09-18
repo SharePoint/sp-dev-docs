@@ -16,17 +16,17 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`then<U>`](#then<u>)      | [`Thenable<U>`](../es6-promise/thenable.md) |  |
-|[`then<U>`](#then<u>)      | [`Thenable<U>`](../es6-promise/thenable.md) |  |
+|[`then<U>(onFulfilled,onRejected)`](#then<u>onfulfilledonrejected)      | [`Thenable<U>`](../es6-promise/thenable.md) |  |
+|[`then<U>(onFulfilled,onRejected)`](#then<u>onfulfilledonrejected)      | [`Thenable<U>`](../es6-promise/thenable.md) |  |
 
 
 
 
-### then<U>
+### then<U>(onFulfilled,onRejected)
 
 
 
-**Signature:** ``then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => U | Thenable<U>): Thenable<U>``
+**Signature:** _then<U>(onFulfilled?: (value: R) => U | [Thenable](../es6-promise/thenable.md)<U>,onRejected?: (error: any) => U | Thenable<U>): Thenable<U>_
 
 **Returns**: [`Thenable<U>`](../es6-promise/thenable.md)
 
@@ -41,11 +41,11 @@
 | `onRejected`    | `(error: any) => U `,[` Thenable<U>`](../es6-promise/thenable.md) | _Optional._ |
 
 
-### then<U>
+### then<U>(onFulfilled,onRejected)
 
 
 
-**Signature:** ``then<U>(onFulfilled?: (value: R) => U | Thenable<U>,onRejected?: (error: any) => void): Thenable<U>``
+**Signature:** _then<U>(onFulfilled?: (value: R) => U | [Thenable](../es6-promise/thenable.md)<U>,onRejected?: (error: any) => void): Thenable<U>_
 
 **Returns**: [`Thenable<U>`](../es6-promise/thenable.md)
 

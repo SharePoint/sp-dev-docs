@@ -16,16 +16,16 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`forEach`](#foreach)      | `void` |  |
+|[`forEach(callbackfn)`](#foreachcallbackfn)      | `void` |  |
 
 
 
 
-### forEach
+### forEach(callbackfn)
 
 
 
-**Signature:** ``forEach(callbackfn: (value: T) => void): void``
+**Signature:** _forEach(callbackfn: (value: T) => void): void_
 
 **Returns**: `void`
 

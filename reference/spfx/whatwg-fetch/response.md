@@ -10,7 +10,7 @@ _Implements: [`Body`](../whatwg-fetch/body.md)_
 ## Constructor
 
 
-**Signature:** `constructor(body?: BodyInit,init?: ResponseInit)`
+**Signature:** constructor(body?: BodyInit,init?: [ResponseInit](../whatwg-fetch/responseinit.md))
 
 **Returns**: [`Response`](../whatwg-fetch/response.md)
 
@@ -43,19 +43,19 @@ _Implements: [`Body`](../whatwg-fetch/body.md)_
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`error`](#error)     | `public` | [`Response`](../whatwg-fetch/response.md) |  |
-|[`redirect`](#redirect)     | `public` | [`Response`](../whatwg-fetch/response.md) |  |
-|[`clone`](#clone)     | `public` | [`Response`](../whatwg-fetch/response.md) |  |
+|[`error()`](#error)     | `public` | [`Response`](../whatwg-fetch/response.md) |  |
+|[`redirect(url,status)`](#redirecturlstatus)     | `public` | [`Response`](../whatwg-fetch/response.md) |  |
+|[`clone()`](#clone)     | `public` | [`Response`](../whatwg-fetch/response.md) |  |
 
 
 
 
 
-### error
+### error()
 
 
 
-**Signature:** ``error(): Response``
+**Signature:** _error(): [Response](../whatwg-fetch/response.md)_
 
 **Returns**: [`Response`](../whatwg-fetch/response.md)
 
@@ -65,11 +65,11 @@ _Implements: [`Body`](../whatwg-fetch/body.md)_
 None
 
 
-### redirect
+### redirect(url,status)
 
 
 
-**Signature:** ``redirect(url: string,status: number): Response``
+**Signature:** _redirect(url: string,status: number): [Response](../whatwg-fetch/response.md)_
 
 **Returns**: [`Response`](../whatwg-fetch/response.md)
 
@@ -84,11 +84,11 @@ None
 | `status`    | `number` |  |
 
 
-### clone
+### clone()
 
 
 
-**Signature:** ``clone(): Response``
+**Signature:** _clone(): [Response](../whatwg-fetch/response.md)_
 
 **Returns**: [`Response`](../whatwg-fetch/response.md)
 

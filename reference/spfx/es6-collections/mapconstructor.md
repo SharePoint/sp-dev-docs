@@ -22,17 +22,17 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`constructor<K,V>`](#constructor<k,v>)      | [`Map<K,V>`](../es6-collections/map.md) |  |
-|[`constructor<K,V>`](#constructor<k,v>)      | [`Map<K,V>`](../es6-collections/map.md) |  |
+|[`constructor<K,V>()`](#constructor<kv>)      | [`Map<K,V>`](../es6-collections/map.md) |  |
+|[`constructor<K,V>(iterable)`](#constructor<kv>iterable)      | [`Map<K,V>`](../es6-collections/map.md) |  |
 
 
 
 
-### constructor<K,V>
+### constructor<K,V>()
 
 
 
-**Signature:** ``new<K,V>(): Map<K,V>``
+**Signature:** _new<K,V>(): [Map](../es6-collections/map.md)<K,V>_
 
 **Returns**: [`Map<K,V>`](../es6-collections/map.md)
 
@@ -42,11 +42,11 @@
 None
 
 
-### constructor<K,V>
+### constructor<K,V>(iterable)
 
 
 
-**Signature:** ``new<K,V>(iterable: ForEachable<[K,V]>): Map<K,V>``
+**Signature:** _new<K,V>(iterable: [ForEachable](../es6-collections/foreachable.md)<[K,V]>): [Map](../es6-collections/map.md)<K,V>_
 
 **Returns**: [`Map<K,V>`](../es6-collections/map.md)
 

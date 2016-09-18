@@ -1,8 +1,8 @@
-# PropertyPaneCheckbox
+# PropertyPaneCheckbox(targetProperty,properties)
 
 Helper method to create a Checkbox on the PropertyPane.
 
-**Signature:** ``PropertyPaneCheckbox(targetProperty: string,properties: IPropertyPaneCheckboxProps): IPropertyPaneField<IPropertyPaneCheckboxProps>``
+**Signature:** _PropertyPaneCheckbox(targetProperty: string,properties: [IPropertyPaneCheckboxProps](../sp-client-preview/ipropertypanecheckboxprops.md)): [IPropertyPaneField](../sp-client-preview/ipropertypanefield.md)<IPropertyPaneCheckboxProps>_
 
 **Returns**: [`IPropertyPaneField<IPropertyPaneCheckboxProps>`](../sp-client-preview/ipropertypanefield.md)
 

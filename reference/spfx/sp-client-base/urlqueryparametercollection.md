@@ -18,7 +18,7 @@ Query param with only equals (www.example.com/?=&debug=on stores empty string ke
 ## Constructor
 
 
-**Signature:** `constructor(url: string)`
+**Signature:** constructor(url: string)
 
 **Returns**: [`UrlQueryParameterCollection`](../sp-client-base/urlqueryparametercollection.md)
 
@@ -39,14 +39,14 @@ Query param with only equals (www.example.com/?=&debug=on stores empty string ke
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`getValue`](#getvalue)     | `public` | `string` | Returns the value of the first matching query parameter or undefined if the key doesn't exist.  Examples: this._queryParameterList = [  {key: TEST, value: done},  {key: DEBUG, value: false},  {key: TEST, value: notdone}]  getValue('TEST') ---> 'done'  getValue('debug') ---> 'false'  getValue('lost') ---> undefined |
-|[`getValues`](#getvalues)     | `public` | `string[]` | Returns the values of all of the matching query parameters or undefined if the key doesn't exist.  Examples: this._queryParameterList = [  {key: TEST, value: done},  {key: DEBUG, value: false},  {key: TEST, value: notdone}]  getValues('TEST') ---> ['done', 'notdone']  getValues('debug') ---> ['false']  getValues('lost') ---> undefined |
+|[`getValue(param)`](#getvalueparam)     | `public` | `string` | Returns the value of the first matching query parameter or undefined if the key doesn't exist.  Examples: this._queryParameterList = [  {key: TEST, value: done},  {key: DEBUG, value: false},  {key: TEST, value: notdone}]  getValue('TEST') ---> 'done'  getValue('debug') ---> 'false'  getValue('lost') ---> undefined |
+|[`getValues(param)`](#getvaluesparam)     | `public` | `string[]` | Returns the values of all of the matching query parameters or undefined if the key doesn't exist.  Examples: this._queryParameterList = [  {key: TEST, value: done},  {key: DEBUG, value: false},  {key: TEST, value: notdone}]  getValues('TEST') ---> ['done', 'notdone']  getValues('debug') ---> ['false']  getValues('lost') ---> undefined |
 
 
 
 
 
-### getValue
+### getValue(param)
 
 Returns the value of the first matching query parameter or undefined if the key doesn't exist. 
 Examples: this._queryParameterList = [ 
@@ -57,7 +57,7 @@ getValue('TEST') ---> 'done'
 getValue('debug') ---> 'false' 
 getValue('lost') ---> undefined
 
-**Signature:** ``getValue(param: string): string``
+**Signature:** _getValue(param: string): string_
 
 **Returns**: `string`
 
@@ -71,7 +71,7 @@ getValue('lost') ---> undefined
 | `param`    | `string` | the case insensitive key for the desired query parameter value. |
 
 
-### getValues
+### getValues(param)
 
 Returns the values of all of the matching query parameters or undefined if the key doesn't exist. 
 Examples: this._queryParameterList = [ 
@@ -82,7 +82,7 @@ getValues('TEST') ---> ['done', 'notdone']
 getValues('debug') ---> ['false'] 
 getValues('lost') ---> undefined
 
-**Signature:** ``getValues(param: string): string[]``
+**Signature:** _getValues(param: string): string[]_
 
 **Returns**: `string[]`
 

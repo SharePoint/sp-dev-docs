@@ -1,8 +1,8 @@
-# PropertyPaneDropdown
+# PropertyPaneDropdown(targetProperty,properties)
 
 Helper method to create a Dropdown on the PropertyPane.
 
-**Signature:** ``PropertyPaneDropdown(targetProperty: string,properties: IPropertyPaneDropdownProps): IPropertyPaneField<IPropertyPaneDropdownProps>``
+**Signature:** _PropertyPaneDropdown(targetProperty: string,properties: [IPropertyPaneDropdownProps](../sp-client-preview/ipropertypanedropdownprops.md)): [IPropertyPaneField](../sp-client-preview/ipropertypanefield.md)<IPropertyPaneDropdownProps>_
 
 **Returns**: [`IPropertyPaneField<IPropertyPaneDropdownProps>`](../sp-client-preview/ipropertypanefield.md)
 

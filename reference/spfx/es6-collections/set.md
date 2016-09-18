@@ -22,23 +22,23 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`add`](#add)      | [`Set<T>`](../es6-collections/set.md) |  |
-|[`clear`](#clear)      | `void` |  |
-|[`delete`](#delete)      | `boolean` |  |
-|[`forEach`](#foreach)      | `void` |  |
-|[`has`](#has)      | `boolean` |  |
-|[`entries`](#entries)      | [`Iterator<[T,T]>`](../es6-collections/iterator.md) |  |
-|[`keys`](#keys)      | [`Iterator<T>`](../es6-collections/iterator.md) |  |
-|[`values`](#values)      | [`Iterator<T>`](../es6-collections/iterator.md) |  |
+|[`add(value)`](#addvalue)      | [`Set<T>`](../es6-collections/set.md) |  |
+|[`clear()`](#clear)      | `void` |  |
+|[`delete(value)`](#deletevalue)      | `boolean` |  |
+|[`forEach(callbackfn,thisArg)`](#foreachcallbackfnthisarg)      | `void` |  |
+|[`has(value)`](#hasvalue)      | `boolean` |  |
+|[`entries()`](#entries)      | [`Iterator<[T,T]>`](../es6-collections/iterator.md) |  |
+|[`keys()`](#keys)      | [`Iterator<T>`](../es6-collections/iterator.md) |  |
+|[`values()`](#values)      | [`Iterator<T>`](../es6-collections/iterator.md) |  |
 
 
 
 
-### add
+### add(value)
 
 
 
-**Signature:** ``add(value: T): Set<T>``
+**Signature:** _add(value: T): [Set](../es6-collections/set.md)<T>_
 
 **Returns**: [`Set<T>`](../es6-collections/set.md)
 
@@ -52,11 +52,11 @@
 | `value`    | `T` |  |
 
 
-### clear
+### clear()
 
 
 
-**Signature:** ``clear(): void``
+**Signature:** _clear(): void_
 
 **Returns**: `void`
 
@@ -66,11 +66,11 @@
 None
 
 
-### delete
+### delete(value)
 
 
 
-**Signature:** ``delete(value: T): boolean``
+**Signature:** _delete(value: T): boolean_
 
 **Returns**: `boolean`
 
@@ -84,11 +84,11 @@ None
 | `value`    | `T` |  |
 
 
-### forEach
+### forEach(callbackfn,thisArg)
 
 
 
-**Signature:** ``forEach(callbackfn: (value: T,index: T,set: Set<T>) => void,thisArg?: any): void``
+**Signature:** _forEach(callbackfn: (value: T,index: T,set: [Set](../es6-collections/set.md)<T>) => void,thisArg?: any): void_
 
 **Returns**: `void`
 
@@ -103,11 +103,11 @@ None
 | `thisArg`    | `any` | _Optional._ |
 
 
-### has
+### has(value)
 
 
 
-**Signature:** ``has(value: T): boolean``
+**Signature:** _has(value: T): boolean_
 
 **Returns**: `boolean`
 
@@ -121,11 +121,11 @@ None
 | `value`    | `T` |  |
 
 
-### entries
+### entries()
 
 
 
-**Signature:** ``entries(): Iterator<[T,T]>``
+**Signature:** _entries(): [Iterator](../es6-collections/iterator.md)<[T,T]>_
 
 **Returns**: [`Iterator<[T,T]>`](../es6-collections/iterator.md)
 
@@ -135,11 +135,11 @@ None
 None
 
 
-### keys
+### keys()
 
 
 
-**Signature:** ``keys(): Iterator<T>``
+**Signature:** _keys(): [Iterator](../es6-collections/iterator.md)<T>_
 
 **Returns**: [`Iterator<T>`](../es6-collections/iterator.md)
 
@@ -149,11 +149,11 @@ None
 None
 
 
-### values
+### values()
 
 
 
-**Signature:** ``values(): Iterator<T>``
+**Signature:** _values(): [Iterator](../es6-collections/iterator.md)<T>_
 
 **Returns**: [`Iterator<T>`](../es6-collections/iterator.md)
 

@@ -22,22 +22,22 @@ Math.random() function and may be not be suitable for some applications.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`equals`](#equals)     | `public` | `boolean` | Compare this instance to another Guid instance   |
-|[`isValid`](#isvalid)     | `public, static` | `boolean` | Indicates whether a guid is valid (according to RFC4122).   |
-|[`constructorGuid`](#constructorguid)     | `public, static` | [`Guid`](../sp-client-base/guid.md) | Returns a new Guid instance with a pseudo-randomly generated Guid.   |
-|[`toString`](#tostring)     | `public` | `string` | Object.prototype.toString override   |
-|[`tryParse`](#tryparse)     | `public, static` | [`Guid`](../sp-client-base/guid.md) | Trys to construct a new Guid instance using guid string. The guid argument  is normalized and validated. If the argument is not a valid "version 4" UUID from  RFC 4122, tryParse will return undefined.   |
+|[`equals(guid)`](#equalsguid)     | `public` | `boolean` | Compare this instance to another Guid instance   |
+|[`isValid(guid)`](#isvalidguid)     | `public, static` | `boolean` | Indicates whether a guid is valid (according to RFC4122).   |
+|[`constructorGuid(randomProvider)`](#constructorguidrandomprovider)     | `public, static` | [`Guid`](../sp-client-base/guid.md) | Returns a new Guid instance with a pseudo-randomly generated Guid.   |
+|[`toString()`](#tostring)     | `public` | `string` | Object.prototype.toString override   |
+|[`tryParse(guid)`](#tryparseguid)     | `public, static` | [`Guid`](../sp-client-base/guid.md) | Trys to construct a new Guid instance using guid string. The guid argument  is normalized and validated. If the argument is not a valid "version 4" UUID from  RFC 4122, tryParse will return undefined.   |
 
 
 
 
 
-### equals
+### equals(guid)
 
 Compare this instance to another Guid instance 
 
 
-**Signature:** ``equals(guid: Guid): boolean``
+**Signature:** _equals(guid: [Guid](../sp-client-base/guid.md)): boolean_
 
 **Returns**: `boolean`
 
@@ -52,12 +52,12 @@ represent the same value
 | `guid`    | [`Guid`](../sp-client-base/guid.md) |  |
 
 
-### isValid
+### isValid(guid)
 
 Indicates whether a guid is valid (according to RFC4122). 
 
 
-**Signature:** ``isValid(guid: string): boolean``
+**Signature:** _isValid(guid: string): boolean_
 
 **Returns**: `boolean`
 
@@ -71,12 +71,12 @@ Value indicating whether the guid is valid.
 | `guid`    | `string` | - Test guid. |
 
 
-### constructorGuid
+### constructorGuid(randomProvider)
 
 Returns a new Guid instance with a pseudo-randomly generated Guid. 
 
 
-**Signature:** ``newGuid(randomProvider?: IRandomProvider): Guid``
+**Signature:** _new[Guid](../sp-client-base/guid.md)(randomProvider?: IRandomProvider): Guid_
 
 **Returns**: [`Guid`](../sp-client-base/guid.md)
 
@@ -90,12 +90,12 @@ A new valid unique Guid object
 | `randomProvider`    | `IRandomProvider` | _Optional._ |
 
 
-### toString
+### toString()
 
 Object.prototype.toString override 
 
 
-**Signature:** ``toString(): string``
+**Signature:** _toString(): string_
 
 **Returns**: `string`
 
@@ -106,14 +106,14 @@ Example: 'd5369f3b-bd7a-412a-9c0f-7f0650bb5489'
 None
 
 
-### tryParse
+### tryParse(guid)
 
 Trys to construct a new Guid instance using guid string. The guid argument 
 is normalized and validated. If the argument is not a valid "version 4" UUID from 
 RFC 4122, tryParse will return undefined. 
 
 
-**Signature:** ``tryParse(guid: string): Guid``
+**Signature:** _tryParse(guid: string): [Guid](../sp-client-base/guid.md)_
 
 **Returns**: [`Guid`](../sp-client-base/guid.md)
 

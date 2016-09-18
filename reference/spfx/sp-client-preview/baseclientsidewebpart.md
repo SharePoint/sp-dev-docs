@@ -22,7 +22,7 @@ Constructor for the BaseClientSideWebPart class.
 If a sub class overrides the constructor, it needs to call super(context) as the first line of its constructor. 
 
 
-**Signature:** `constructor(ctx: IWebPartContext)`
+**Signature:** constructor(ctx: [IWebPartContext](../sp-client-preview/iwebpartcontext.md))
 
 **Returns**: [`BaseClientSideWebPart`](../sp-client-preview/baseclientsidewebpart.md)
 
@@ -58,29 +58,29 @@ If a sub class overrides the constructor, it needs to call super(context) as the
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`clearError`](#clearerror)     | `protected` | `void` | This API should be used to clear the error message from the web part display area. |
-|[`configureStart`](#configurestart)     | `protected` | `void` | This API should be used to invoke the PropertyPane to help configure the web part.   |
-|[`deserialize`](#deserialize)     | `protected` | `TProperties` | This API is called once during the lifetime of the web part during the intial render and just before the onInit  API call. The purpose of this API is to help a web part developer deserialize the web part data and manage the  versioning of their data as the web part code evolves. The web part data may have been persisted with an older  or newer version of the web part code. This API gives the web part developer an opportunity to re-structure their  data to the appropriate data schema. The persisted data contains the version number information. That information  can be used to make decisions on how to re-structure the data.   |
-|[`dispose`](#dispose)     | `protected` | `void` | This API is called at the end of the web part lifecycle. It should be overridden to dispose any  resources that the web part is holding onto. |
-|[`onBeforeSerialize`](#onbeforeserialize)     | `protected` | [`IHtmlProperties`](../sp-client-preview/ihtmlproperties.md) | This API is called before a web part is serialized. The default implementation is a no-op. A web part developer  is expected to override this API when the web part's state is not fully reflected in the property bag i.e.  this.properties. In the overridden method, the web part developer is expected to update the state of the web  part property bag. This way the web part serialization process will use the upto date state of the web part.   |
-|[`onDisplayModeChanged`](#ondisplaymodechanged)     | `protected` | `void` | This API is called when the display mode of a web part is changed. The default implementation of this API calls  the web part render method to re-render the web part with the new display mode. If a web part developer does not  want a full re-render to happen on display mode change, they can override this API and perform specific updates  to the web part DOM to switch its display mode.   |
-|[`onInit<T>`](#oninit<t>)     | `protected` | [`Promise<T>`](../es6-promise/promise.md) | This API should be overridden to perform long running operations e.g. data fetching from a remote service before  the initial rendering of the web part. The loading indicator is displayed during the lifetime of this method.  This API is called only once during the lifecycle of a web part. |
-|[`onPropertyChange`](#onpropertychange)     | `protected` | `void` | This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode.  The base implementation of this API updates the web part property bag and re-render the web part. This API also  invokes the web part host's setDirty API.   |
-|[`onPropertyConfigurationComplete`](#onpropertyconfigurationcomplete)     | `protected` | `void` | This API is called when the current web part configuration process is completed. ConfigurationComplete event  is fired when user switches between web parts while the PropertyPane is open, and this event handler is called  for the previously selected web part.   |
-|[`onPropertyPaneRendered`](#onpropertypanerendered)     | `protected` | `void` | This API is involed when the PropertyPane is rendered. |
-|[`onPropertyPaneSave`](#onpropertypanesave)     | `protected` | `void` | this API is invoked when the the changes are applied on the PropertyPane when the PropertyPane is used in  Non-Reactive mode. This API is not invoked when the PropertyPane is used in Reactive mode. |
-|[`render`](#render)     | `public` | `void` | This API is called to render the web part. There is no base implementation of this API and the web part is  required to override this API. |
-|[`renderError`](#rendererror)     | `protected` | `void` | This API should be used to render an error message in the web part display area. Also logs the error message  using the trace logger.   |
+|[`clearError()`](#clearerror)     | `protected` | `void` | This API should be used to clear the error message from the web part display area. |
+|[`configureStart(refreshOnly)`](#configurestartrefreshonly)     | `protected` | `void` | This API should be used to invoke the PropertyPane to help configure the web part.   |
+|[`deserialize(data)`](#deserializedata)     | `protected` | `TProperties` | This API is called once during the lifetime of the web part during the intial render and just before the onInit  API call. The purpose of this API is to help a web part developer deserialize the web part data and manage the  versioning of their data as the web part code evolves. The web part data may have been persisted with an older  or newer version of the web part code. This API gives the web part developer an opportunity to re-structure their  data to the appropriate data schema. The persisted data contains the version number information. That information  can be used to make decisions on how to re-structure the data.   |
+|[`dispose()`](#dispose)     | `protected` | `void` | This API is called at the end of the web part lifecycle. It should be overridden to dispose any  resources that the web part is holding onto. |
+|[`onBeforeSerialize()`](#onbeforeserialize)     | `protected` | [`IHtmlProperties`](../sp-client-preview/ihtmlproperties.md) | This API is called before a web part is serialized. The default implementation is a no-op. A web part developer  is expected to override this API when the web part's state is not fully reflected in the property bag i.e.  this.properties. In the overridden method, the web part developer is expected to update the state of the web  part property bag. This way the web part serialization process will use the upto date state of the web part.   |
+|[`onDisplayModeChanged(oldDisplayMode)`](#ondisplaymodechangedolddisplaymode)     | `protected` | `void` | This API is called when the display mode of a web part is changed. The default implementation of this API calls  the web part render method to re-render the web part with the new display mode. If a web part developer does not  want a full re-render to happen on display mode change, they can override this API and perform specific updates  to the web part DOM to switch its display mode.   |
+|[`onInit<T>()`](#oninit<t>)     | `protected` | [`Promise<T>`](../es6-promise/promise.md) | This API should be overridden to perform long running operations e.g. data fetching from a remote service before  the initial rendering of the web part. The loading indicator is displayed during the lifetime of this method.  This API is called only once during the lifecycle of a web part. |
+|[`onPropertyChange(propertyPath,newValue)`](#onpropertychangepropertypathnewvalue)     | `protected` | `void` | This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode.  The base implementation of this API updates the web part property bag and re-render the web part. This API also  invokes the web part host's setDirty API.   |
+|[`onPropertyConfigurationComplete()`](#onpropertyconfigurationcomplete)     | `protected` | `void` | This API is called when the current web part configuration process is completed. ConfigurationComplete event  is fired when user switches between web parts while the PropertyPane is open, and this event handler is called  for the previously selected web part.   |
+|[`onPropertyPaneRendered()`](#onpropertypanerendered)     | `protected` | `void` | This API is involed when the PropertyPane is rendered. |
+|[`onPropertyPaneSave()`](#onpropertypanesave)     | `protected` | `void` | this API is invoked when the the changes are applied on the PropertyPane when the PropertyPane is used in  Non-Reactive mode. This API is not invoked when the PropertyPane is used in Reactive mode. |
+|[`render()`](#render)     | `public` | `void` | This API is called to render the web part. There is no base implementation of this API and the web part is  required to override this API. |
+|[`renderError(error)`](#rendererrorerror)     | `protected` | `void` | This API should be used to render an error message in the web part display area. Also logs the error message  using the trace logger.   |
 
 
 
 
 
-### clearError
+### clearError()
 
 This API should be used to clear the error message from the web part display area.
 
-**Signature:** ``clearError(): void``
+**Signature:** _clearError(): void_
 
 **Returns**: `void`
 
@@ -90,12 +90,12 @@ This API should be used to clear the error message from the web part display are
 None
 
 
-### configureStart
+### configureStart(refreshOnly)
 
 This API should be used to invoke the PropertyPane to help configure the web part. 
 
 
-**Signature:** ``configureStart(refreshOnly?: boolean): void``
+**Signature:** _configureStart(refreshOnly?: boolean): void_
 
 **Returns**: `void`
 
@@ -109,7 +109,7 @@ This API should be used to invoke the PropertyPane to help configure the web par
 | `refreshOnly`    | `boolean` | _Optional._ |
 
 
-### deserialize
+### deserialize(data)
 
 This API is called once during the lifetime of the web part during the intial render and just before the onInit 
 API call. The purpose of this API is to help a web part developer deserialize the web part data and manage the 
@@ -119,7 +119,7 @@ data to the appropriate data schema. The persisted data contains the version num
 can be used to make decisions on how to re-structure the data. 
 
 
-**Signature:** ``deserialize(data: IWebPartData): TProperties``
+**Signature:** _deserialize(data: [IWebPartData](../sp-client-preview/iwebpartdata.md)): TProperties_
 
 **Returns**: `TProperties`
 
@@ -134,12 +134,12 @@ can be used to make decisions on how to re-structure the data.
 | `data`    | [`IWebPartData`](../sp-client-preview/iwebpartdata.md) | - web part persisted data. |
 
 
-### dispose
+### dispose()
 
 This API is called at the end of the web part lifecycle. It should be overridden to dispose any 
 resources that the web part is holding onto.
 
-**Signature:** ``dispose(): void``
+**Signature:** _dispose(): void_
 
 **Returns**: `void`
 
@@ -149,7 +149,7 @@ resources that the web part is holding onto.
 None
 
 
-### onBeforeSerialize
+### onBeforeSerialize()
 
 This API is called before a web part is serialized. The default implementation is a no-op. A web part developer 
 is expected to override this API when the web part's state is not fully reflected in the property bag i.e. 
@@ -157,7 +157,7 @@ this.properties. In the overridden method, the web part developer is expected to
 part property bag. This way the web part serialization process will use the upto date state of the web part. 
 
 
-**Signature:** ``onBeforeSerialize(): IHtmlProperties``
+**Signature:** _onBeforeSerialize(): [IHtmlProperties](../sp-client-preview/ihtmlproperties.md)_
 
 **Returns**: [`IHtmlProperties`](../sp-client-preview/ihtmlproperties.md)
 
@@ -168,7 +168,7 @@ the documentation of IHtmlProperties interface for more details.
 None
 
 
-### onDisplayModeChanged
+### onDisplayModeChanged(oldDisplayMode)
 
 This API is called when the display mode of a web part is changed. The default implementation of this API calls 
 the web part render method to re-render the web part with the new display mode. If a web part developer does not 
@@ -176,7 +176,7 @@ want a full re-render to happen on display mode change, they can override this A
 to the web part DOM to switch its display mode. 
 
 
-**Signature:** ``onDisplayModeChanged(oldDisplayMode: DisplayMode): void``
+**Signature:** _on[DisplayMode](../sp-client-base/displaymode.md)Changed(oldDisplayMode: DisplayMode): void_
 
 **Returns**: `void`
 
@@ -190,13 +190,13 @@ to the web part DOM to switch its display mode.
 | `oldDisplayMode`    | [`DisplayMode`](../sp-client-base/displaymode.md) | - The old display mode.   |
 
 
-### onInit<T>
+### onInit<T>()
 
 This API should be overridden to perform long running operations e.g. data fetching from a remote service before 
 the initial rendering of the web part. The loading indicator is displayed during the lifetime of this method. 
 This API is called only once during the lifecycle of a web part.
 
-**Signature:** ``onInit<T>(): Promise<T>``
+**Signature:** _onInit<T>(): [Promise](../es6-promise/promise.md)<T>_
 
 **Returns**: [`Promise<T>`](../es6-promise/promise.md)
 
@@ -206,14 +206,14 @@ This API is called only once during the lifecycle of a web part.
 None
 
 
-### onPropertyChange
+### onPropertyChange(propertyPath,newValue)
 
 This API is invoked on property changes in the PropertyPane when the PropertyPane is being used in Reactive mode. 
 The base implementation of this API updates the web part property bag and re-render the web part. This API also 
 invokes the web part host's setDirty API. 
 
 
-**Signature:** ``onPropertyChange(propertyPath: string,newValue: any): void``
+**Signature:** _onPropertyChange(propertyPath: string,newValue: any): void_
 
 **Returns**: `void`
 
@@ -228,14 +228,14 @@ invokes the web part host's setDirty API.
 | `newValue`    | `any` | - New value of the property. |
 
 
-### onPropertyConfigurationComplete
+### onPropertyConfigurationComplete()
 
 This API is called when the current web part configuration process is completed. ConfigurationComplete event 
 is fired when user switches between web parts while the PropertyPane is open, and this event handler is called 
 for the previously selected web part. 
 
 
-**Signature:** ``onPropertyConfigurationComplete(): void``
+**Signature:** _onPropertyConfigurationComplete(): void_
 
 **Returns**: `void`
 
@@ -245,11 +245,11 @@ for the previously selected web part.
 None
 
 
-### onPropertyPaneRendered
+### onPropertyPaneRendered()
 
 This API is involed when the PropertyPane is rendered.
 
-**Signature:** ``onPropertyPaneRendered(): void``
+**Signature:** _onPropertyPaneRendered(): void_
 
 **Returns**: `void`
 
@@ -259,12 +259,12 @@ This API is involed when the PropertyPane is rendered.
 None
 
 
-### onPropertyPaneSave
+### onPropertyPaneSave()
 
 this API is invoked when the the changes are applied on the PropertyPane when the PropertyPane is used in 
 Non-Reactive mode. This API is not invoked when the PropertyPane is used in Reactive mode.
 
-**Signature:** ``onPropertyPaneSave(): void``
+**Signature:** _onPropertyPaneSave(): void_
 
 **Returns**: `void`
 
@@ -274,12 +274,12 @@ Non-Reactive mode. This API is not invoked when the PropertyPane is used in Reac
 None
 
 
-### render
+### render()
 
 This API is called to render the web part. There is no base implementation of this API and the web part is 
 required to override this API.
 
-**Signature:** ``render(): void``
+**Signature:** _render(): void_
 
 **Returns**: `void`
 
@@ -289,13 +289,13 @@ required to override this API.
 None
 
 
-### renderError
+### renderError(error)
 
 This API should be used to render an error message in the web part display area. Also logs the error message 
 using the trace logger. 
 
 
-**Signature:** ``renderError(error: Error): void``
+**Signature:** _renderError(error: Error): void_
 
 **Returns**: `void`
 

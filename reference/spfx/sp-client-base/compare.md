@@ -15,19 +15,19 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`shallowCompare`](#shallowcompare)     | `public, static` | `boolean` | Performs shallow comparison between two objects to determine if they are equal. This method compares  only object types.   |
+|[`shallowCompare(objA,objB)`](#shallowcompareobjaobjb)     | `public, static` | `boolean` | Performs shallow comparison between two objects to determine if they are equal. This method compares  only object types.   |
 
 
 
 
 
-### shallowCompare
+### shallowCompare(objA,objB)
 
 Performs shallow comparison between two objects to determine if they are equal. This method compares 
 only object types. 
 
 
-**Signature:** ``shallowCompare(objA: Object,objB: Object): boolean``
+**Signature:** _shallowCompare(objA: Object,objB: Object): boolean_
 
 **Returns**: `boolean`
 

@@ -1,8 +1,8 @@
-# PropertyPaneLabel
+# PropertyPaneLabel(targetProperty,properties)
 
 Helper method to create a Label on the PropertyPane.
 
-**Signature:** ``PropertyPaneLabel(targetProperty: string,properties: IPropertyPaneLabelProps): IPropertyPaneField<IPropertyPaneLabelProps>``
+**Signature:** _PropertyPaneLabel(targetProperty: string,properties: [IPropertyPaneLabelProps](../sp-client-preview/ipropertypanelabelprops.md)): [IPropertyPaneField](../sp-client-preview/ipropertypanefield.md)<IPropertyPaneLabelProps>_
 
 **Returns**: [`IPropertyPaneField<IPropertyPaneLabelProps>`](../sp-client-preview/ipropertypanefield.md)
 

@@ -16,20 +16,20 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`delete`](#delete)      | `boolean` |  |
-|[`clear`](#clear)      | `void` |  |
-|[`get`](#get)      | `V` |  |
-|[`has`](#has)      | `boolean` |  |
-|[`set`](#set)      | [`WeakMap<K,V>`](../es6-collections/weakmap.md) |  |
+|[`delete(key)`](#deletekey)      | `boolean` |  |
+|[`clear()`](#clear)      | `void` |  |
+|[`get(key)`](#getkey)      | `V` |  |
+|[`has(key)`](#haskey)      | `boolean` |  |
+|[`set(key,value)`](#setkeyvalue)      | [`WeakMap<K,V>`](../es6-collections/weakmap.md) |  |
 
 
 
 
-### delete
+### delete(key)
 
 
 
-**Signature:** ``delete(key: K): boolean``
+**Signature:** _delete(key: K): boolean_
 
 **Returns**: `boolean`
 
@@ -43,11 +43,11 @@
 | `key`    | `K` |  |
 
 
-### clear
+### clear()
 
 
 
-**Signature:** ``clear(): void``
+**Signature:** _clear(): void_
 
 **Returns**: `void`
 
@@ -57,11 +57,11 @@
 None
 
 
-### get
+### get(key)
 
 
 
-**Signature:** ``get(key: K): V``
+**Signature:** _get(key: K): V_
 
 **Returns**: `V`
 
@@ -75,11 +75,11 @@ None
 | `key`    | `K` |  |
 
 
-### has
+### has(key)
 
 
 
-**Signature:** ``has(key: K): boolean``
+**Signature:** _has(key: K): boolean_
 
 **Returns**: `boolean`
 
@@ -93,11 +93,11 @@ None
 | `key`    | `K` |  |
 
 
-### set
+### set(key,value)
 
 
 
-**Signature:** ``set(key: K,value?: V): WeakMap<K,V>``
+**Signature:** _set(key: K,value?: V): [WeakMap](../es6-collections/weakmap.md)<K,V>_
 
 **Returns**: [`WeakMap<K,V>`](../es6-collections/weakmap.md)
 
@@ -110,3 +110,4 @@ None
 |:-------------|:---------------|:------------|
 | `key`    | `K` |  |
 | `value`    | `V` | _Optional._ |
+

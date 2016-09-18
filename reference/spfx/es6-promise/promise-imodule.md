@@ -16,20 +16,20 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`resolve<R>`](#resolve<r>)      | [`Promise<R>`](../es6-promise/promise.md) | Make a new promise from the thenable.  A thenable is promise-like in as far as it has a "then" method. |
-|[`reject`](#reject)      | [`Promise<any>`](../es6-promise/promise.md) | Make a promise that rejects to obj. For consistency and debugging (eg stack traces),obj should be an instanceof Error |
-|[`all<R>`](#all<r>)      | [`Promise<R[]>`](../es6-promise/promise.md) | Make a promise that fulfills when every item in the array fulfills,and rejects if (and when) any item rejects.  the array passed to all can be a mixture of promise-like objects and other objects.  The fulfillment value is an array (in order) of fulfillment values. The rejection value is the first rejection value. |
-|[`race<R>`](#race<r>)      | [`Promise<R>`](../es6-promise/promise.md) | Make a Promise that fulfills when any item fulfills,and rejects if any item rejects. |
+|[`resolve<R>(value)`](#resolve<r>value)      | [`Promise<R>`](../es6-promise/promise.md) | Make a new promise from the thenable.  A thenable is promise-like in as far as it has a "then" method. |
+|[`reject(error)`](#rejecterror)      | [`Promise<any>`](../es6-promise/promise.md) | Make a promise that rejects to obj. For consistency and debugging (eg stack traces),obj should be an instanceof Error |
+|[`all<R>(promises)`](#all<r>promises)      | [`Promise<R[]>`](../es6-promise/promise.md) | Make a promise that fulfills when every item in the array fulfills,and rejects if (and when) any item rejects.  the array passed to all can be a mixture of promise-like objects and other objects.  The fulfillment value is an array (in order) of fulfillment values. The rejection value is the first rejection value. |
+|[`race<R>(promises)`](#race<r>promises)      | [`Promise<R>`](../es6-promise/promise.md) | Make a Promise that fulfills when any item fulfills,and rejects if any item rejects. |
 
 
 
 
-### resolve<R>
+### resolve<R>(value)
 
 Make a new promise from the thenable. 
 A thenable is promise-like in as far as it has a "then" method.
 
-**Signature:** ``resolve<R>(value?: R | Thenable<R>): Promise<R>``
+**Signature:** _resolve<R>(value?: R | [Thenable](../es6-promise/thenable.md)<R>): [Promise](../es6-promise/promise.md)<R>_
 
 **Returns**: [`Promise<R>`](../es6-promise/promise.md)
 
@@ -43,11 +43,11 @@ A thenable is promise-like in as far as it has a "then" method.
 | `value`    | `R `,[` Thenable<R>`](../es6-promise/thenable.md) | _Optional._ |
 
 
-### reject
+### reject(error)
 
 Make a promise that rejects to obj. For consistency and debugging (eg stack traces),obj should be an instanceof Error
 
-**Signature:** ``reject(error: any): Promise<any>``
+**Signature:** _reject(error: any): [Promise](../es6-promise/promise.md)<any>_
 
 **Returns**: [`Promise<any>`](../es6-promise/promise.md)
 
@@ -61,13 +61,13 @@ Make a promise that rejects to obj. For consistency and debugging (eg stack trac
 | `error`    | `any` |  |
 
 
-### all<R>
+### all<R>(promises)
 
 Make a promise that fulfills when every item in the array fulfills,and rejects if (and when) any item rejects. 
 the array passed to all can be a mixture of promise-like objects and other objects. 
 The fulfillment value is an array (in order) of fulfillment values. The rejection value is the first rejection value.
 
-**Signature:** ``all<R>(promises: (R | Thenable<R>)[]): Promise<R[]>``
+**Signature:** _all<R>(promises: (R | [Thenable](../es6-promise/thenable.md)<R>)[]): [Promise](../es6-promise/promise.md)<R[]>_
 
 **Returns**: [`Promise<R[]>`](../es6-promise/promise.md)
 
@@ -81,11 +81,11 @@ The fulfillment value is an array (in order) of fulfillment values. The rejectio
 | `promises`    | `(R `,[` Thenable<R>)[]`](../es6-promise/thenable.md) |  |
 
 
-### race<R>
+### race<R>(promises)
 
 Make a Promise that fulfills when any item fulfills,and rejects if any item rejects.
 
-**Signature:** ``race<R>(promises: (R | Thenable<R>)[]): Promise<R>``
+**Signature:** _race<R>(promises: (R | [Thenable](../es6-promise/thenable.md)<R>)[]): [Promise](../es6-promise/promise.md)<R>_
 
 **Returns**: [`Promise<R>`](../es6-promise/promise.md)
 

@@ -22,17 +22,17 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`constructor<T>`](#constructor<t>)      | [`Set<T>`](../es6-collections/set.md) |  |
-|[`constructor<T>`](#constructor<t>)      | [`Set<T>`](../es6-collections/set.md) |  |
+|[`constructor<T>()`](#constructor<t>)      | [`Set<T>`](../es6-collections/set.md) |  |
+|[`constructor<T>(iterable)`](#constructor<t>iterable)      | [`Set<T>`](../es6-collections/set.md) |  |
 
 
 
 
-### constructor<T>
+### constructor<T>()
 
 
 
-**Signature:** ``new<T>(): Set<T>``
+**Signature:** _new<T>(): [Set](../es6-collections/set.md)<T>_
 
 **Returns**: [`Set<T>`](../es6-collections/set.md)
 
@@ -42,11 +42,11 @@
 None
 
 
-### constructor<T>
+### constructor<T>(iterable)
 
 
 
-**Signature:** ``new<T>(iterable: ForEachable<T>): Set<T>``
+**Signature:** _new<T>(iterable: [ForEachable](../es6-collections/foreachable.md)<T>): [Set](../es6-collections/set.md)<T>_
 
 **Returns**: [`Set<T>`](../es6-collections/set.md)
 

@@ -22,24 +22,24 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`clear`](#clear)      | `void` |  |
-|[`delete`](#delete)      | `boolean` |  |
-|[`forEach`](#foreach)      | `void` |  |
-|[`get`](#get)      | `V` |  |
-|[`has`](#has)      | `boolean` |  |
-|[`set`](#set)      | [`Map<K,V>`](../es6-collections/map.md) |  |
-|[`entries`](#entries)      | [`Iterator<[K,V]>`](../es6-collections/iterator.md) |  |
-|[`keys`](#keys)      | [`Iterator<K>`](../es6-collections/iterator.md) |  |
-|[`values`](#values)      | [`Iterator<V>`](../es6-collections/iterator.md) |  |
+|[`clear()`](#clear)      | `void` |  |
+|[`delete(key)`](#deletekey)      | `boolean` |  |
+|[`forEach(callbackfn,thisArg)`](#foreachcallbackfnthisarg)      | `void` |  |
+|[`get(key)`](#getkey)      | `V` |  |
+|[`has(key)`](#haskey)      | `boolean` |  |
+|[`set(key,value)`](#setkeyvalue)      | [`Map<K,V>`](../es6-collections/map.md) |  |
+|[`entries()`](#entries)      | [`Iterator<[K,V]>`](../es6-collections/iterator.md) |  |
+|[`keys()`](#keys)      | [`Iterator<K>`](../es6-collections/iterator.md) |  |
+|[`values()`](#values)      | [`Iterator<V>`](../es6-collections/iterator.md) |  |
 
 
 
 
-### clear
+### clear()
 
 
 
-**Signature:** ``clear(): void``
+**Signature:** _clear(): void_
 
 **Returns**: `void`
 
@@ -49,11 +49,11 @@
 None
 
 
-### delete
+### delete(key)
 
 
 
-**Signature:** ``delete(key: K): boolean``
+**Signature:** _delete(key: K): boolean_
 
 **Returns**: `boolean`
 
@@ -67,11 +67,11 @@ None
 | `key`    | `K` |  |
 
 
-### forEach
+### forEach(callbackfn,thisArg)
 
 
 
-**Signature:** ``forEach(callbackfn: (value: V,index: K,map: Map<K,V>) => void,thisArg?: any): void``
+**Signature:** _forEach(callbackfn: (value: V,index: K,map: [Map](../es6-collections/map.md)<K,V>) => void,thisArg?: any): void_
 
 **Returns**: `void`
 
@@ -86,11 +86,11 @@ None
 | `thisArg`    | `any` | _Optional._ |
 
 
-### get
+### get(key)
 
 
 
-**Signature:** ``get(key: K): V``
+**Signature:** _get(key: K): V_
 
 **Returns**: `V`
 
@@ -104,11 +104,11 @@ None
 | `key`    | `K` |  |
 
 
-### has
+### has(key)
 
 
 
-**Signature:** ``has(key: K): boolean``
+**Signature:** _has(key: K): boolean_
 
 **Returns**: `boolean`
 
@@ -122,11 +122,11 @@ None
 | `key`    | `K` |  |
 
 
-### set
+### set(key,value)
 
 
 
-**Signature:** ``set(key: K,value?: V): Map<K,V>``
+**Signature:** _set(key: K,value?: V): [Map](../es6-collections/map.md)<K,V>_
 
 **Returns**: [`Map<K,V>`](../es6-collections/map.md)
 
@@ -141,11 +141,11 @@ None
 | `value`    | `V` | _Optional._ |
 
 
-### entries
+### entries()
 
 
 
-**Signature:** ``entries(): Iterator<[K,V]>``
+**Signature:** _entries(): [Iterator](../es6-collections/iterator.md)<[K,V]>_
 
 **Returns**: [`Iterator<[K,V]>`](../es6-collections/iterator.md)
 
@@ -155,11 +155,11 @@ None
 None
 
 
-### keys
+### keys()
 
 
 
-**Signature:** ``keys(): Iterator<K>``
+**Signature:** _keys(): [Iterator](../es6-collections/iterator.md)<K>_
 
 **Returns**: [`Iterator<K>`](../es6-collections/iterator.md)
 
@@ -169,11 +169,11 @@ None
 None
 
 
-### values
+### values()
 
 
 
-**Signature:** ``values(): Iterator<V>``
+**Signature:** _values(): [Iterator](../es6-collections/iterator.md)<V>_
 
 **Returns**: [`Iterator<V>`](../es6-collections/iterator.md)
 

@@ -18,20 +18,20 @@ which component generated the messages and makes the messages useful and filtera
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`error`](#error)     | `public, static` | `void` | Logs an error |
-|[`info`](#info)     | `public, static` | `void` | Logs an informational message |
-|[`verbose`](#verbose)     | `public, static` | `void` | Logs a verbose message |
-|[`warn`](#warn)     | `public, static` | `void` | Logs a warning |
+|[`error(source,error,scope)`](#errorsourceerrorscope)     | `public, static` | `void` | Logs an error |
+|[`info(source,message,scope)`](#infosourcemessagescope)     | `public, static` | `void` | Logs an informational message |
+|[`verbose(source,message,scope)`](#verbosesourcemessagescope)     | `public, static` | `void` | Logs a verbose message |
+|[`warn(source,message,scope)`](#warnsourcemessagescope)     | `public, static` | `void` | Logs a warning |
 
 
 
 
 
-### error
+### error(source,error,scope)
 
 Logs an error
 
-**Signature:** ``error(source: string,error: Error,scope?: ServiceScope): void``
+**Signature:** _error(source: string,error: Error,scope?: [ServiceScope](../sp-client-base/servicescope.md)): void_
 
 **Returns**: `void`
 
@@ -47,11 +47,11 @@ Logs an error
 | `scope`    | [`ServiceScope`](../sp-client-base/servicescope.md) | _Optional._- the service scope that the source uses. A service scope can provide  more context information (e.g., web part information) to the logged error. |
 
 
-### info
+### info(source,message,scope)
 
 Logs an informational message
 
-**Signature:** ``info(source: string,message: string,scope?: ServiceScope): void``
+**Signature:** _info(source: string,message: string,scope?: [ServiceScope](../sp-client-base/servicescope.md)): void_
 
 **Returns**: `void`
 
@@ -67,11 +67,11 @@ Logs an informational message
 | `scope`    | [`ServiceScope`](../sp-client-base/servicescope.md) | _Optional._- the service scope that the source uses. A service scope can provide  more context information (e.g., web part information) to the logged message. |
 
 
-### verbose
+### verbose(source,message,scope)
 
 Logs a verbose message
 
-**Signature:** ``verbose(source: string,message: string,scope?: ServiceScope): void``
+**Signature:** _verbose(source: string,message: string,scope?: [ServiceScope](../sp-client-base/servicescope.md)): void_
 
 **Returns**: `void`
 
@@ -87,11 +87,11 @@ Logs a verbose message
 | `scope`    | [`ServiceScope`](../sp-client-base/servicescope.md) | _Optional._- the service scope that the source uses. A service scope can provide  more context information (e.g., web part information) to the logged message. |
 
 
-### warn
+### warn(source,message,scope)
 
 Logs a warning
 
-**Signature:** ``warn(source: string,message: string,scope?: ServiceScope): void``
+**Signature:** _warn(source: string,message: string,scope?: [ServiceScope](../sp-client-base/servicescope.md)): void_
 
 **Returns**: `void`
 

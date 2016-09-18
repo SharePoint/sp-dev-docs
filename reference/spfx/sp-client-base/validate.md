@@ -18,19 +18,19 @@ that might impact performance.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`isNonemptyString`](#isnonemptystring)     | `public, static` | `void` | Throws an exception if the specified string is null,undefined,or an empty string. |
-|[`isNotNullOrUndefined`](#isnotnullorundefined)     | `public, static` | `void` | Throws an exception if the specified value is null or undefined. |
-|[`isTrue`](#istrue)     | `public, static` | `void` | Throws an exception if the specified value is not true. |
+|[`isNonemptyString(value,variableName)`](#isnonemptystringvaluevariablename)     | `public, static` | `void` | Throws an exception if the specified string is null,undefined,or an empty string. |
+|[`isNotNullOrUndefined(value,variableName)`](#isnotnullorundefinedvaluevariablename)     | `public, static` | `void` | Throws an exception if the specified value is null or undefined. |
+|[`isTrue(value,variableName)`](#istruevaluevariablename)     | `public, static` | `void` | Throws an exception if the specified value is not true. |
 
 
 
 
 
-### isNonemptyString
+### isNonemptyString(value,variableName)
 
 Throws an exception if the specified string is null,undefined,or an empty string.
 
-**Signature:** ``isNonemptyString(value: string,variableName: string): void``
+**Signature:** _isNonemptyString(value: string,variableName: string): void_
 
 **Returns**: `void`
 
@@ -45,11 +45,11 @@ Throws an exception if the specified string is null,undefined,or an empty string
 | `variableName`    | `string` | - the program variable name,which will be mentioned in the error message |
 
 
-### isNotNullOrUndefined
+### isNotNullOrUndefined(value,variableName)
 
 Throws an exception if the specified value is null or undefined.
 
-**Signature:** ``isNotNullOrUndefined(value: any,variableName: string): void``
+**Signature:** _isNotNullOrUndefined(value: any,variableName: string): void_
 
 **Returns**: `void`
 
@@ -64,11 +64,11 @@ Throws an exception if the specified value is null or undefined.
 | `variableName`    | `string` | - the program variable name,which will be mentioned in the error message |
 
 
-### isTrue
+### isTrue(value,variableName)
 
 Throws an exception if the specified value is not true.
 
-**Signature:** ``isTrue(value: boolean,variableName: string): void``
+**Signature:** _isTrue(value: boolean,variableName: string): void_
 
 **Returns**: `void`
 

@@ -21,22 +21,22 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`arrayBuffer`](#arraybuffer)     | `public` | [`Promise<ArrayBuffer>`](../es6-promise/promise.md) |  |
-|[`blob`](#blob)     | `public` | [`Promise<Blob>`](../es6-promise/promise.md) |  |
-|[`formData`](#formdata)     | `public` | [`Promise<FormData>`](../es6-promise/promise.md) |  |
-|[`json`](#json)     | `public` | [`Promise<any>`](../es6-promise/promise.md) |  |
-|[`json<T>`](#json<t>)     | `public` | [`Promise<T>`](../es6-promise/promise.md) |  |
-|[`text`](#text)     | `public` | [`Promise<string>`](../es6-promise/promise.md) |  |
+|[`arrayBuffer()`](#arraybuffer)     | `public` | [`Promise<ArrayBuffer>`](../es6-promise/promise.md) |  |
+|[`blob()`](#blob)     | `public` | [`Promise<Blob>`](../es6-promise/promise.md) |  |
+|[`formData()`](#formdata)     | `public` | [`Promise<FormData>`](../es6-promise/promise.md) |  |
+|[`json()`](#json)     | `public` | [`Promise<any>`](../es6-promise/promise.md) |  |
+|[`json<T>()`](#json<t>)     | `public` | [`Promise<T>`](../es6-promise/promise.md) |  |
+|[`text()`](#text)     | `public` | [`Promise<string>`](../es6-promise/promise.md) |  |
 
 
 
 
 
-### arrayBuffer
+### arrayBuffer()
 
 
 
-**Signature:** ``arrayBuffer(): Promise<ArrayBuffer>``
+**Signature:** _arrayBuffer(): [Promise](../es6-promise/promise.md)<ArrayBuffer>_
 
 **Returns**: [`Promise<ArrayBuffer>`](../es6-promise/promise.md)
 
@@ -46,11 +46,11 @@
 None
 
 
-### blob
+### blob()
 
 
 
-**Signature:** ``blob(): Promise<Blob>``
+**Signature:** _blob(): [Promise](../es6-promise/promise.md)<Blob>_
 
 **Returns**: [`Promise<Blob>`](../es6-promise/promise.md)
 
@@ -60,11 +60,11 @@ None
 None
 
 
-### formData
+### formData()
 
 
 
-**Signature:** ``formData(): Promise<FormData>``
+**Signature:** _formData(): [Promise](../es6-promise/promise.md)<FormData>_
 
 **Returns**: [`Promise<FormData>`](../es6-promise/promise.md)
 
@@ -74,11 +74,11 @@ None
 None
 
 
-### json
+### json()
 
 
 
-**Signature:** ``json(): Promise<any>``
+**Signature:** _json(): [Promise](../es6-promise/promise.md)<any>_
 
 **Returns**: [`Promise<any>`](../es6-promise/promise.md)
 
@@ -88,11 +88,11 @@ None
 None
 
 
-### json<T>
+### json<T>()
 
 
 
-**Signature:** ``json<T>(): Promise<T>``
+**Signature:** _json<T>(): [Promise](../es6-promise/promise.md)<T>_
 
 **Returns**: [`Promise<T>`](../es6-promise/promise.md)
 
@@ -102,11 +102,11 @@ None
 None
 
 
-### text
+### text()
 
 
 
-**Signature:** ``text(): Promise<string>``
+**Signature:** _text(): [Promise](../es6-promise/promise.md)<string>_
 
 **Returns**: [`Promise<string>`](../es6-promise/promise.md)
 

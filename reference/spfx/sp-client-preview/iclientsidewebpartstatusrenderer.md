@@ -16,19 +16,19 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`clearError`](#clearerror)      | `void` | Clear the webpart error message. |
-|[`clearLoadingIndicator`](#clearloadingindicator)      | `void` | Clear the loading indicator. |
-|[`displayLoadingIndicator`](#displayloadingindicator)      | `void` | Display a loading spinner. |
-|[`renderError`](#rendererror)      | `void` | Render the provided error message in the webpart container div. |
+|[`clearError(domElement)`](#clearerrordomelement)      | `void` | Clear the webpart error message. |
+|[`clearLoadingIndicator(domElement)`](#clearloadingindicatordomelement)      | `void` | Clear the loading indicator. |
+|[`displayLoadingIndicator(domElement,loadingMessage)`](#displayloadingindicatordomelementloadingmessage)      | `void` | Display a loading spinner. |
+|[`renderError(domElement,error)`](#rendererrordomelementerror)      | `void` | Render the provided error message in the webpart container div. |
 
 
 
 
-### clearError
+### clearError(domElement)
 
 Clear the webpart error message.
 
-**Signature:** ``clearError(domElement: HTMLElement): void``
+**Signature:** _clearError(domElement: HTMLElement): void_
 
 **Returns**: `void`
 
@@ -42,11 +42,11 @@ Clear the webpart error message.
 | `domElement`    | `HTMLElement` | - the webpart container div. |
 
 
-### clearLoadingIndicator
+### clearLoadingIndicator(domElement)
 
 Clear the loading indicator.
 
-**Signature:** ``clearLoadingIndicator(domElement: Element): void``
+**Signature:** _clearLoadingIndicator(domElement: Element): void_
 
 **Returns**: `void`
 
@@ -60,11 +60,11 @@ Clear the loading indicator.
 | `domElement`    | `Element` | - the webpart container div. |
 
 
-### displayLoadingIndicator
+### displayLoadingIndicator(domElement,loadingMessage)
 
 Display a loading spinner.
 
-**Signature:** ``displayLoadingIndicator(domElement: Element,loadingMessage: string): void``
+**Signature:** _displayLoadingIndicator(domElement: Element,loadingMessage: string): void_
 
 **Returns**: `void`
 
@@ -79,11 +79,11 @@ Display a loading spinner.
 | `loadingMessage`    | `string` | - the message to be displayed when the loading spinner id displayed. |
 
 
-### renderError
+### renderError(domElement,error)
 
 Render the provided error message in the webpart container div.
 
-**Signature:** ``renderError(domElement: HTMLElement,error: Error | string): void``
+**Signature:** _renderError(domElement: HTMLElement,error: Error | string): void_
 
 **Returns**: `void`
 

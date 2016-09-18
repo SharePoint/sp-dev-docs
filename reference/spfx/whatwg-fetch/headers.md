@@ -15,23 +15,23 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`append`](#append)     | `public` | `void` |  |
-|[`delete`](#delete)     | `public` | `void` |  |
-|[`get`](#get)     | `public` | `string` |  |
-|[`getAll`](#getall)     | `public` | `Array<string>` |  |
-|[`has`](#has)     | `public` | `boolean` |  |
-|[`set`](#set)     | `public` | `void` |  |
-|[`forEach`](#foreach)     | `public` | `void` |  |
+|[`append(name,value)`](#appendnamevalue)     | `public` | `void` |  |
+|[`delete(name)`](#deletename)     | `public` | `void` |  |
+|[`get(name)`](#getname)     | `public` | `string` |  |
+|[`getAll(name)`](#getallname)     | `public` | `Array<string>` |  |
+|[`has(name)`](#hasname)     | `public` | `boolean` |  |
+|[`set(name,value)`](#setnamevalue)     | `public` | `void` |  |
+|[`forEach(callback)`](#foreachcallback)     | `public` | `void` |  |
 
 
 
 
 
-### append
+### append(name,value)
 
 
 
-**Signature:** ``append(name: string,value: string): void``
+**Signature:** _append(name: string,value: string): void_
 
 **Returns**: `void`
 
@@ -46,11 +46,11 @@
 | `value`    | `string` |  |
 
 
-### delete
+### delete(name)
 
 
 
-**Signature:** ``delete(name: string):void``
+**Signature:** _delete(name: string):void_
 
 **Returns**: `void`
 
@@ -64,11 +64,11 @@
 | `name`    | `string` |  |
 
 
-### get
+### get(name)
 
 
 
-**Signature:** ``get(name: string): string``
+**Signature:** _get(name: string): string_
 
 **Returns**: `string`
 
@@ -82,11 +82,11 @@
 | `name`    | `string` |  |
 
 
-### getAll
+### getAll(name)
 
 
 
-**Signature:** ``getAll(name: string): Array<string>``
+**Signature:** _getAll(name: string): Array<string>_
 
 **Returns**: `Array<string>`
 
@@ -100,11 +100,11 @@
 | `name`    | `string` |  |
 
 
-### has
+### has(name)
 
 
 
-**Signature:** ``has(name: string): boolean``
+**Signature:** _has(name: string): boolean_
 
 **Returns**: `boolean`
 
@@ -118,11 +118,11 @@
 | `name`    | `string` |  |
 
 
-### set
+### set(name,value)
 
 
 
-**Signature:** ``set(name: string,value: string): void``
+**Signature:** _set(name: string,value: string): void_
 
 **Returns**: `void`
 
@@ -137,11 +137,11 @@
 | `value`    | `string` |  |
 
 
-### forEach
+### forEach(callback)
 
 
 
-**Signature:** ``forEach(callback: (value: string,name: string) => void): void``
+**Signature:** _forEach(callback: (value: string,name: string) => void): void_
 
 **Returns**: `void`
 
