@@ -14,7 +14,7 @@ application cache.
 ## Constructor
 
 
-**Signature:** constructor(serviceScope: [ServiceScope](../sp-client-base/servicescope.md))
+**Signature:** _constructor(serviceScope: [ServiceScope](../sp-client-base/servicescope.md))_
 
 **Returns**: [`PageContext`](../sp-client-base/pagecontext.md)
 

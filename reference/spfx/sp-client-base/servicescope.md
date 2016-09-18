@@ -49,7 +49,7 @@ serviceScope.whenFinished().
 ## Constructor
 PRIVATE CONSTRUCTOR - DO NOT CALL THIS FROM YOUR OWN CODE.
 
-**Signature:** constructor(parent: [ServiceScope](../sp-client-base/servicescope.md))
+**Signature:** _constructor(parent: [ServiceScope](../sp-client-base/servicescope.md))_
 
 **Returns**: [`ServiceScope`](../sp-client-base/servicescope.md)
 

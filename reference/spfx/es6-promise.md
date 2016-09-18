@@ -5,8 +5,8 @@
 
 | Module	   |  Description |
 |:-------------|:---------------|
-| [Promise](./es6-promise/promise-imodule.md)     |  |
-| ['es6-promise'](./es6-promise/es6-promise-imodule.md)     |  |
+| [`Promise`](./es6-promise/promise-imodule.md)     |  |
+| [`'es6-promise'`](./es6-promise/es6-promise-imodule.md)     |  |
 
 
 
@@ -14,7 +14,7 @@
 
 | Class	   |  Description |
 |:-------------|:---------------|
-| [Promise](./es6-promise/promise.md)     |  |
+| [`Promise`](./es6-promise/promise.md)     |  |
 
 
 
@@ -22,7 +22,7 @@
 
 | Interface	   |  Description |
 |:-------------|:---------------|
-| [Thenable](./es6-promise/thenable.md)   |   |
+| [`Thenable`](./es6-promise/thenable.md)   |   |
 
 
 

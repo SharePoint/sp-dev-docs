@@ -14,7 +14,7 @@ If you call reject your promise is rejected with the object passed to resolve.
 For consistency and debugging (eg stack traces), obj should be an instanceof Error. 
 Any errors thrown in the constructor callback will be implicitly passed to reject().
 
-**Signature:** constructor(callback: (resolve: (value?: R | [Thenable](../es6-promise/thenable.md)<R>) => void,reject: (error?: any) => void) => void)
+**Signature:** _constructor(callback: (resolve: (value?: R | [Thenable](../es6-promise/thenable.md)<R>) => void,reject: (error?: any) => void) => void)_
 
 **Returns**: [`Promise`](../es6-promise/promise.md)
 

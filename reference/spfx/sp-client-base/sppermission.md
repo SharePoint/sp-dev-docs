@@ -13,7 +13,7 @@ https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.
 ## Constructor
 
 
-**Signature:** constructor(value: [IODataBasePermission](../sp-client-base/iodatabasepermission.md))
+**Signature:** _constructor(value: [IODataBasePermission](../sp-client-base/iodatabasepermission.md))_
 
 **Returns**: [`SPPermission`](../sp-client-base/sppermission.md)
 

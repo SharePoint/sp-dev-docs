@@ -15,7 +15,7 @@ class instead.
 ## Constructor
 
 
-**Signature:** constructor(serviceScope: [ServiceScope](../sp-client-base/servicescope.md))
+**Signature:** _constructor(serviceScope: [ServiceScope](../sp-client-base/servicescope.md))_
 
 **Returns**: [`HttpClient`](../sp-client-base/httpclient.md)
 

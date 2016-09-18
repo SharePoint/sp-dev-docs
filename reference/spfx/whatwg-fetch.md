@@ -6,10 +6,10 @@
 
 | Class	   |  Description |
 |:-------------|:---------------|
-| [Request](./whatwg-fetch/request.md)     |  |
-| [Headers](./whatwg-fetch/headers.md)     |  |
-| [Body](./whatwg-fetch/body.md)     |  |
-| [Response](./whatwg-fetch/response.md)     |  |
+| [`Request`](./whatwg-fetch/request.md)     |  |
+| [`Headers`](./whatwg-fetch/headers.md)     |  |
+| [`Body`](./whatwg-fetch/body.md)     |  |
+| [`Response`](./whatwg-fetch/response.md)     |  |
 
 
 
@@ -17,9 +17,9 @@
 
 | Interface	   |  Description |
 |:-------------|:---------------|
-| [RequestInit](./whatwg-fetch/requestinit.md)   |   |
-| [ResponseInit](./whatwg-fetch/responseinit.md)   |   |
-| [Window](./whatwg-fetch/window.md)   |   |
+| [`RequestInit`](./whatwg-fetch/requestinit.md)   |   |
+| [`ResponseInit`](./whatwg-fetch/responseinit.md)   |   |
+| [`Window`](./whatwg-fetch/window.md)   |   |
 
 
 
@@ -27,20 +27,20 @@
 
 | Enumeration	   | Description|
 |:-----------|:------------|
-|[RequestContext](./whatwg-fetch/requestcontext.md)    |  |
-|[RequestMode](./whatwg-fetch/requestmode.md)    |  |
-|[RequestCredentials](./whatwg-fetch/requestcredentials.md)    |  |
-|[RequestCache](./whatwg-fetch/requestcache.md)    |  |
-|[ResponseType](./whatwg-fetch/responsetype.md)    |  |
+|[`RequestContext`](./whatwg-fetch/requestcontext.md)    |  |
+|[`RequestMode`](./whatwg-fetch/requestmode.md)    |  |
+|[`RequestCredentials`](./whatwg-fetch/requestcredentials.md)    |  |
+|[`RequestCache`](./whatwg-fetch/requestcache.md)    |  |
+|[`ResponseType`](./whatwg-fetch/responsetype.md)    |  |
 
 
 ## Types
 
 | Name	   |  Type |
 |:-----------|:------------|
-|HeaderInit   |  |
-|BodyInit   |  |
-|RequestInfo   |  |
+|`HeaderInit`   |  |
+|`BodyInit`   |  |
+|`RequestInfo`   |  |
 
 
 
@@ -48,5 +48,5 @@
 
 | Variable	   | Type|
 |:-----------|:------------|
-|fetch   | [`window.fetch`](../whatwg-fetch/window.md#fetch) |
+|`fetch`   | [`window.fetch`](../whatwg-fetch/window.md#fetch) |
 

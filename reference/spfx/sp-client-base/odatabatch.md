@@ -19,7 +19,7 @@ resolve with a Response object for that particular request.
 ## Constructor
 
 
-**Signature:** constructor(serviceScope: [ServiceScope](../sp-client-base/servicescope.md),batchOptions?: [IODataBatchOptions](../sp-client-base/iodatabatchoptions.md))
+**Signature:** _constructor(serviceScope: [ServiceScope](../sp-client-base/servicescope.md),batchOptions?: [IODataBatchOptions](../sp-client-base/iodatabatchoptions.md))_
 
 **Returns**: [`ODataBatch`](../sp-client-base/odatabatch.md)
 
