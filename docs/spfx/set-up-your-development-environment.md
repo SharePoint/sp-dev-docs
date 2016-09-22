@@ -18,6 +18,12 @@ After installing node, make sure you are running V3 or higher of npm by running 
 npm -g install npm@next
 ```
 
+In case of Ubuntu Linux previous command might result in 'permission denied' message, so it should be instead executed as 
+
+```
+sudo npm -g install npm@next
+```
+
 ### Code Editors
 Install a code editor. You can use any code editor or IDE that supports client-side development to build your web part, such as:
 
