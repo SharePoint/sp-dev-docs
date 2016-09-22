@@ -16,9 +16,9 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`next(value)`](#nextvalue)      | [`IteratorResult<T>`](../es6-collections/iteratorresult.md) |  |
-|[`return(value)`](#returnvalue)      | [`IteratorResult<T>`](../es6-collections/iteratorresult.md) |  |
-|[`throw(e)`](#throwe)      | [`IteratorResult<T>`](../es6-collections/iteratorresult.md) |  |
+|[`next(value)`](#nextvalue)      | [`IteratorResult`](../es6-collections/iteratorresult.md)<T> |  |
+|[`return(value)`](#returnvalue)      | [`IteratorResult`](../es6-collections/iteratorresult.md)<T> |  |
+|[`throw(e)`](#throwe)      | [`IteratorResult`](../es6-collections/iteratorresult.md)<T> |  |
 
 
 
@@ -29,7 +29,7 @@
 
 **Signature:** _next(value?: any): [IteratorResult](../es6-collections/iteratorresult.md)<T>_
 
-**Returns**: [`IteratorResult<T>`](../es6-collections/iteratorresult.md)
+**Returns**: [`IteratorResult`](../es6-collections/iteratorresult.md)<T>
 
 
 
@@ -47,7 +47,7 @@
 
 **Signature:** _return?(value?: any): [IteratorResult](../es6-collections/iteratorresult.md)<T>_
 
-**Returns**: [`IteratorResult<T>`](../es6-collections/iteratorresult.md)
+**Returns**: [`IteratorResult`](../es6-collections/iteratorresult.md)<T>
 
 
 
@@ -65,7 +65,7 @@
 
 **Signature:** _throw?(e?: any): [IteratorResult](../es6-collections/iteratorresult.md)<T>_
 
-**Returns**: [`IteratorResult<T>`](../es6-collections/iteratorresult.md)
+**Returns**: [`IteratorResult`](../es6-collections/iteratorresult.md)<T>
 
 
 

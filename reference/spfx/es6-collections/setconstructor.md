@@ -13,7 +13,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`prototype`      | [`Set<any>`](../es6-collections/set.md) |  |
+|`prototype`      | [`Set`](../es6-collections/set.md)<any> |  |
 
 
 
@@ -22,8 +22,8 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`constructor<T>()`](#constructor<t>)      | [`Set<T>`](../es6-collections/set.md) |  |
-|[`constructor<T>(iterable)`](#constructor<t>iterable)      | [`Set<T>`](../es6-collections/set.md) |  |
+|[`constructor<T>()`](#constructor<t>)      | [`Set`](../es6-collections/set.md)<T> |  |
+|[`constructor<T>(iterable)`](#constructor<t>iterable)      | [`Set`](../es6-collections/set.md)<T> |  |
 
 
 
@@ -34,7 +34,7 @@
 
 **Signature:** _new<T>(): [Set](../es6-collections/set.md)<T>_
 
-**Returns**: [`Set<T>`](../es6-collections/set.md)
+**Returns**: [`Set`](../es6-collections/set.md)<T>
 
 
 
@@ -48,7 +48,7 @@ None
 
 **Signature:** _new<T>(iterable: [ForEachable](../es6-collections/foreachable.md)<T>): [Set](../es6-collections/set.md)<T>_
 
-**Returns**: [`Set<T>`](../es6-collections/set.md)
+**Returns**: [`Set`](../es6-collections/set.md)<T>
 
 
 
@@ -57,5 +57,5 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `iterable`    | [`ForEachable<T>`](../es6-collections/foreachable.md) |  |
+| `iterable`    | [`ForEachable`](../es6-collections/foreachable.md)<T> |  |
 

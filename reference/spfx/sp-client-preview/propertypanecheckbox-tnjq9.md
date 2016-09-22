@@ -4,7 +4,7 @@ Helper method to create a Checkbox on the PropertyPane.
 
 **Signature:** _PropertyPaneCheckbox(targetProperty: string,properties: [IPropertyPaneCheckboxProps](../sp-client-preview/ipropertypanecheckboxprops.md)): [IPropertyPaneField](../sp-client-preview/ipropertypanefield.md)<IPropertyPaneCheckboxProps>_
 
-**Returns**: [`IPropertyPaneField<IPropertyPaneCheckboxProps>`](../sp-client-preview/ipropertypanefield.md)
+**Returns**: [`IPropertyPaneField`](../sp-client-preview/ipropertypanefield.md)<[`IPropertyPaneCheckboxProps`](../sp-client-preview/ipropertypanecheckboxprops.md)>
 
 
 

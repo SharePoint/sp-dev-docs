@@ -21,12 +21,12 @@
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`arrayBuffer()`](#arraybuffer)     | `public` | [`Promise<ArrayBuffer>`](../es6-promise/promise.md) |  |
-|[`blob()`](#blob)     | `public` | [`Promise<Blob>`](../es6-promise/promise.md) |  |
-|[`formData()`](#formdata)     | `public` | [`Promise<FormData>`](../es6-promise/promise.md) |  |
-|[`json()`](#json)     | `public` | [`Promise<any>`](../es6-promise/promise.md) |  |
-|[`json<T>()`](#json<t>)     | `public` | [`Promise<T>`](../es6-promise/promise.md) |  |
-|[`text()`](#text)     | `public` | [`Promise<string>`](../es6-promise/promise.md) |  |
+|[`arrayBuffer()`](#arraybuffer)     | `public` | [`Promise`](../es6-promise/promise.md)<ArrayBuffer> |  |
+|[`blob()`](#blob)     | `public` | [`Promise`](../es6-promise/promise.md)<Blob> |  |
+|[`formData()`](#formdata)     | `public` | [`Promise`](../es6-promise/promise.md)<FormData> |  |
+|[`json()`](#json)     | `public` | [`Promise`](../es6-promise/promise.md)<any> |  |
+|[`json<T>()`](#json<t>)     | `public` | [`Promise`](../es6-promise/promise.md)<T> |  |
+|[`text()`](#text)     | `public` | [`Promise`](../es6-promise/promise.md)<string> |  |
 
 
 
@@ -38,7 +38,7 @@
 
 **Signature:** _arrayBuffer(): [Promise](../es6-promise/promise.md)<ArrayBuffer>_
 
-**Returns**: [`Promise<ArrayBuffer>`](../es6-promise/promise.md)
+**Returns**: [`Promise`](../es6-promise/promise.md)<ArrayBuffer>
 
 
 
@@ -52,7 +52,7 @@ None
 
 **Signature:** _blob(): [Promise](../es6-promise/promise.md)<Blob>_
 
-**Returns**: [`Promise<Blob>`](../es6-promise/promise.md)
+**Returns**: [`Promise`](../es6-promise/promise.md)<Blob>
 
 
 
@@ -66,7 +66,7 @@ None
 
 **Signature:** _formData(): [Promise](../es6-promise/promise.md)<FormData>_
 
-**Returns**: [`Promise<FormData>`](../es6-promise/promise.md)
+**Returns**: [`Promise`](../es6-promise/promise.md)<FormData>
 
 
 
@@ -80,7 +80,7 @@ None
 
 **Signature:** _json(): [Promise](../es6-promise/promise.md)<any>_
 
-**Returns**: [`Promise<any>`](../es6-promise/promise.md)
+**Returns**: [`Promise`](../es6-promise/promise.md)<any>
 
 
 
@@ -94,7 +94,7 @@ None
 
 **Signature:** _json<T>(): [Promise](../es6-promise/promise.md)<T>_
 
-**Returns**: [`Promise<T>`](../es6-promise/promise.md)
+**Returns**: [`Promise`](../es6-promise/promise.md)<T>
 
 
 
@@ -108,7 +108,7 @@ None
 
 **Signature:** _text(): [Promise](../es6-promise/promise.md)<string>_
 
-**Returns**: [`Promise<string>`](../es6-promise/promise.md)
+**Returns**: [`Promise`](../es6-promise/promise.md)<string>
 
 
 

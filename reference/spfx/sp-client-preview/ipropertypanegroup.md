@@ -13,7 +13,7 @@ PropertyPane group. Group is part of the PropertyPanePage.
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`groupFields`      | [`IPropertyPaneField<any>[]`](../sp-client-preview/ipropertypanefield.md) | List of PropertyPane fields. |
+|`groupFields`      | [`IPropertyPaneField`](../sp-client-preview/ipropertypanefield.md)<any>[] | List of PropertyPane fields. |
 |`groupName`      | `string` | Display name for the group. |
 
 

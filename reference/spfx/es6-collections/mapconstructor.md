@@ -13,7 +13,7 @@
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`prototype`      | [`Map<any,any>`](../es6-collections/map.md) |  |
+|`prototype`      | [`Map`](../es6-collections/map.md)<any,any> |  |
 
 
 
@@ -22,8 +22,8 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`constructor<K,V>()`](#constructor<kv>)      | [`Map<K,V>`](../es6-collections/map.md) |  |
-|[`constructor<K,V>(iterable)`](#constructor<kv>iterable)      | [`Map<K,V>`](../es6-collections/map.md) |  |
+|[`constructor<K,V>()`](#constructor<kv>)      | [`Map`](../es6-collections/map.md)<K,V> |  |
+|[`constructor<K,V>(iterable)`](#constructor<kv>iterable)      | [`Map`](../es6-collections/map.md)<K,V> |  |
 
 
 
@@ -34,7 +34,7 @@
 
 **Signature:** _new<K,V>(): [Map](../es6-collections/map.md)<K,V>_
 
-**Returns**: [`Map<K,V>`](../es6-collections/map.md)
+**Returns**: [`Map`](../es6-collections/map.md)<K,V>
 
 
 
@@ -48,7 +48,7 @@ None
 
 **Signature:** _new<K,V>(iterable: [ForEachable](../es6-collections/foreachable.md)<[K,V]>): [Map](../es6-collections/map.md)<K,V>_
 
-**Returns**: [`Map<K,V>`](../es6-collections/map.md)
+**Returns**: [`Map`](../es6-collections/map.md)<K,V>
 
 
 
@@ -57,5 +57,5 @@ None
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `iterable`    | [`ForEachable<[K,V]>`](../es6-collections/foreachable.md) |  |
+| `iterable`    | [`ForEachable`](../es6-collections/foreachable.md)<[K,V]> |  |
 

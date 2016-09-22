@@ -22,14 +22,14 @@
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`add(value)`](#addvalue)      | [`Set<T>`](../es6-collections/set.md) |  |
+|[`add(value)`](#addvalue)      | [`Set`](../es6-collections/set.md)<T> |  |
 |[`clear()`](#clear)      | `void` |  |
 |[`delete(value)`](#deletevalue)      | `boolean` |  |
 |[`forEach(callbackfn,thisArg)`](#foreachcallbackfnthisarg)      | `void` |  |
 |[`has(value)`](#hasvalue)      | `boolean` |  |
-|[`entries()`](#entries)      | [`Iterator<[T,T]>`](../es6-collections/iterator.md) |  |
-|[`keys()`](#keys)      | [`Iterator<T>`](../es6-collections/iterator.md) |  |
-|[`values()`](#values)      | [`Iterator<T>`](../es6-collections/iterator.md) |  |
+|[`entries()`](#entries)      | [`Iterator`](../es6-collections/iterator.md)<[T,T]> |  |
+|[`keys()`](#keys)      | [`Iterator`](../es6-collections/iterator.md)<T> |  |
+|[`values()`](#values)      | [`Iterator`](../es6-collections/iterator.md)<T> |  |
 
 
 
@@ -40,7 +40,7 @@
 
 **Signature:** _add(value: T): [Set](../es6-collections/set.md)<T>_
 
-**Returns**: [`Set<T>`](../es6-collections/set.md)
+**Returns**: [`Set`](../es6-collections/set.md)<T>
 
 
 
@@ -127,7 +127,7 @@ None
 
 **Signature:** _entries(): [Iterator](../es6-collections/iterator.md)<[T,T]>_
 
-**Returns**: [`Iterator<[T,T]>`](../es6-collections/iterator.md)
+**Returns**: [`Iterator`](../es6-collections/iterator.md)<[T,T]>
 
 
 
@@ -141,7 +141,7 @@ None
 
 **Signature:** _keys(): [Iterator](../es6-collections/iterator.md)<T>_
 
-**Returns**: [`Iterator<T>`](../es6-collections/iterator.md)
+**Returns**: [`Iterator`](../es6-collections/iterator.md)<T>
 
 
 
@@ -155,7 +155,7 @@ None
 
 **Signature:** _values(): [Iterator](../es6-collections/iterator.md)<T>_
 
-**Returns**: [`Iterator<T>`](../es6-collections/iterator.md)
+**Returns**: [`Iterator`](../es6-collections/iterator.md)<T>
 
 
 

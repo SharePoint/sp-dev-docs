@@ -14,8 +14,8 @@ https://msdn.microsoft.com/en-us/library/office/ee557907.aspx
 
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
-|`quickLaunch`      | [`IODataNavigationNode[]`](../sp-client-base/iodatanavigationnode.md) | Gets an SPNavigationNode object that contains  the nodes in the Quick Launch area of the site. |
-|`topNav`      | [`IODataNavigationNode[]`](../sp-client-base/iodatanavigationnode.md) | Gets an SPNavigationNode object that contains the nodes in the top link bar  for the website. |
+|`quickLaunch`      | [`IODataNavigationNode`](../sp-client-base/iodatanavigationnode.md)[] | Gets an SPNavigationNode object that contains  the nodes in the Quick Launch area of the site. |
+|`topNav`      | [`IODataNavigationNode`](../sp-client-base/iodatanavigationnode.md)[] | Gets an SPNavigationNode object that contains the nodes in the top link bar  for the website. |
 
 
 

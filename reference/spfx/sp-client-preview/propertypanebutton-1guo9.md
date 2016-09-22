@@ -4,7 +4,7 @@ Helper method to create a Button on the PropertyPane.
 
 **Signature:** _PropertyPaneButton(targetProperty: string,properties: [IPropertyPaneButtonProps](../sp-client-preview/ipropertypanebuttonprops.md)): [IPropertyPaneField](../sp-client-preview/ipropertypanefield.md)<IPropertyPaneButtonProps>_
 
-**Returns**: [`IPropertyPaneField<IPropertyPaneButtonProps>`](../sp-client-preview/ipropertypanefield.md)
+**Returns**: [`IPropertyPaneField`](../sp-client-preview/ipropertypanefield.md)<[`IPropertyPaneButtonProps`](../sp-client-preview/ipropertypanebuttonprops.md)>
 
 
 

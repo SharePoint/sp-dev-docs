@@ -24,7 +24,7 @@ of time. For more information, see the MSDN article
 |[`addDigestToCache(webUrl,digestValue,expirationTimestamp)`](#adddigesttocacheweburldigestvalueexpirationtimestamp)      | `void` | Inserts a specific request digest value into the cache. Normally this is unnecessary because  the framework will automatically issue a REST request to fetch the digest when necessary;  however, in advanced scenarios addDigestToCache() can be used to avoid the overhead of the  REST call.   |
 |[`clearAllDigests()`](#clearalldigests)      | `void` | Clears all values from the cache. |
 |[`clearDigest(webUrl)`](#cleardigestweburl)      | `boolean` | Clears the cached digest for the specified SPWeb URL. This operation is useful  e.g. if an error indicates that a digest was invalidated prior to its expiration time.   |
-|[`fetchDigest(webUrl)`](#fetchdigestweburl)      | [`Promise<string>`](../es6-promise/promise.md) | Returns a digest string for the specified SPWeb URL. If the cache already contains a usable value,  the promise is fulfilled immediately. Otherwise, the promise will be pending and resolve after  an HTTP request obtains the digest, which will be added to the cache. |
+|[`fetchDigest(webUrl)`](#fetchdigestweburl)      | [`Promise`](../es6-promise/promise.md)<string> | Returns a digest string for the specified SPWeb URL. If the cache already contains a usable value,  the promise is fulfilled immediately. Otherwise, the promise will be pending and resolve after  an HTTP request obtains the digest, which will be added to the cache. |
 
 
 
@@ -95,7 +95,7 @@ an HTTP request obtains the digest, which will be added to the cache.
 
 **Signature:** _fetchDigest(webUrl: string): [Promise](../es6-promise/promise.md)<string>_
 
-**Returns**: [`Promise<string>`](../es6-promise/promise.md)
+**Returns**: [`Promise`](../es6-promise/promise.md)<string>
 
 A promise that is fulfilled with the digest value.
 

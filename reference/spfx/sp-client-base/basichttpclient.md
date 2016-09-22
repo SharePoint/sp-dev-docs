@@ -39,10 +39,10 @@ enhancements.
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`fetch(url,options)`](#fetchurloptions)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Performs a REST service call. Although the HttpClient subclass adds  additional enhancements, the parameters and semantics for BasicHttpClient.fetch()  are essentially the same as the WHATWG API standard that is documented here:  https://fetch.spec.whatwg.org/ |
-|[`fetchCore(request)`](#fetchcorerequest)     | `protected` | [`Promise<Response>`](../es6-promise/promise.md) |  |
-|[`get(url,options)`](#geturloptions)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Calls fetch(),but sets the method to 'GET'. |
-|[`post(url,options)`](#posturloptions)     | `public` | [`Promise<Response>`](../es6-promise/promise.md) | Calls fetch(),but sets the method to 'POST'. |
+|[`fetch(url,options)`](#fetchurloptions)     | `public` | [`Promise`](../es6-promise/promise.md)<[`Response`](../whatwg-fetch/response.md)> | Performs a REST service call. Although the HttpClient subclass adds  additional enhancements, the parameters and semantics for BasicHttpClient.fetch()  are essentially the same as the WHATWG API standard that is documented here:  https://fetch.spec.whatwg.org/ |
+|[`fetchCore(request)`](#fetchcorerequest)     | `protected` | [`Promise`](../es6-promise/promise.md)<[`Response`](../whatwg-fetch/response.md)> |  |
+|[`get(url,options)`](#geturloptions)     | `public` | [`Promise`](../es6-promise/promise.md)<[`Response`](../whatwg-fetch/response.md)> | Calls fetch(),but sets the method to 'GET'. |
+|[`post(url,options)`](#posturloptions)     | `public` | [`Promise`](../es6-promise/promise.md)<[`Response`](../whatwg-fetch/response.md)> | Calls fetch(),but sets the method to 'POST'. |
 
 
 
@@ -57,7 +57,7 @@ https://fetch.spec.whatwg.org/
 
 **Signature:** _fetch(url: string,options: [IBasicHttpClientOptions](../sp-client-base/ibasichttpclientoptions.md)): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>_
 
-**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
+**Returns**: [`Promise`](../es6-promise/promise.md)<[`Response`](../whatwg-fetch/response.md)>
 
 a promise that will return the result
 
@@ -76,7 +76,7 @@ a promise that will return the result
 
 **Signature:** _fetchCore(request: [Request](../whatwg-fetch/request.md)): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>_
 
-**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
+**Returns**: [`Promise`](../es6-promise/promise.md)<[`Response`](../whatwg-fetch/response.md)>
 
 
 
@@ -94,7 +94,7 @@ Calls fetch(),but sets the method to 'GET'.
 
 **Signature:** _get(url: string,options?: [IBasicHttpClientOptions](../sp-client-base/ibasichttpclientoptions.md)): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>_
 
-**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
+**Returns**: [`Promise`](../es6-promise/promise.md)<[`Response`](../whatwg-fetch/response.md)>
 
 a promise that will return the result
 
@@ -113,7 +113,7 @@ Calls fetch(),but sets the method to 'POST'.
 
 **Signature:** _post(url: string,options: [IBasicHttpClientOptions](../sp-client-base/ibasichttpclientoptions.md)): [Promise](../es6-promise/promise.md)<[Response](../whatwg-fetch/response.md)>_
 
-**Returns**: [`Promise<Response>`](../es6-promise/promise.md)
+**Returns**: [`Promise`](../es6-promise/promise.md)<[`Response`](../whatwg-fetch/response.md)>
 
 a promise that will return the result
 

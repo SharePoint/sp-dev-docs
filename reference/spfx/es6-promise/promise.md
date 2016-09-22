@@ -1,6 +1,6 @@
 # Promise <R> class
 
-_Implements: [`Thenable<R>`](../es6-promise/thenable.md)_
+_Implements: [`Thenable`](../es6-promise/thenable.md)<R>_
 
 _Type parameters: `<R>`_
 
@@ -25,7 +25,7 @@ Any errors thrown in the constructor callback will be implicitly passed to rejec
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `callback`    | `(resolve: (value?: R `,[` Thenable<R>) => void`](../es6-promise/thenable.md) |  |
+| `callback`    | `(resolve: (value?: R `, [`Thenable`](../es6-promise/thenable.md)<R>) => void |  |
 | `reject`    | `(error?: any) => void) => void` |  |
 
 
@@ -36,9 +36,9 @@ Any errors thrown in the constructor callback will be implicitly passed to rejec
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`then<U>(onFulfilled,onRejected)`](#then<u>onfulfilledonrejected)     | `public` | [`Promise<U>`](../es6-promise/promise.md) | onFulfilled is called when/if "promise" resolves. onRejected is called when/if "promise" rejects.  Both are optional, if either/both are omitted the next onFulfilled/onRejected in the chain is called.  Both callbacks have a single parameter , the fulfillment value or rejection reason.  "then" returns a new promise equivalent to the value you return from onFulfilled/onRejected after being passed through Promise.resolve.  If an error is thrown in the callback, the returned promise rejects with that error.   |
-|[`then<U>(onFulfilled,onRejected)`](#then<u>onfulfilledonrejected)     | `public` | [`Promise<U>`](../es6-promise/promise.md) |  |
-|[`catch<U>(onRejected)`](#catch<u>onrejected)     | `public` | [`Promise<U>`](../es6-promise/promise.md) | Sugar for promise.then(undefined,onRejected)   |
+|[`then<U>(onFulfilled,onRejected)`](#then<u>onfulfilledonrejected)     | `public` | [`Promise`](../es6-promise/promise.md)<U> | onFulfilled is called when/if "promise" resolves. onRejected is called when/if "promise" rejects.  Both are optional, if either/both are omitted the next onFulfilled/onRejected in the chain is called.  Both callbacks have a single parameter , the fulfillment value or rejection reason.  "then" returns a new promise equivalent to the value you return from onFulfilled/onRejected after being passed through Promise.resolve.  If an error is thrown in the callback, the returned promise rejects with that error.   |
+|[`then<U>(onFulfilled,onRejected)`](#then<u>onfulfilledonrejected)     | `public` | [`Promise`](../es6-promise/promise.md)<U> |  |
+|[`catch<U>(onRejected)`](#catch<u>onrejected)     | `public` | [`Promise`](../es6-promise/promise.md)<U> | Sugar for promise.then(undefined,onRejected)   |
 
 
 
@@ -55,7 +55,7 @@ If an error is thrown in the callback, the returned promise rejects with that er
 
 **Signature:** _then<U>(onFulfilled?: (value: R) => U | [Thenable](../es6-promise/thenable.md)<U>,onRejected?: (error: any) => U | Thenable<U>): [Promise](../es6-promise/promise.md)<U>_
 
-**Returns**: [`Promise<U>`](../es6-promise/promise.md)
+**Returns**: [`Promise`](../es6-promise/promise.md)<U>
 
 
 
@@ -64,8 +64,8 @@ If an error is thrown in the callback, the returned promise rejects with that er
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `onFulfilled`    | `(value: R) => U `,[` Thenable<U>`](../es6-promise/thenable.md) | _Optional._called when/if "promise" resolves |
-| `onRejected`    | `(error: any) => U `,[` Thenable<U>`](../es6-promise/thenable.md) | _Optional._called when/if "promise" rejects |
+| `onFulfilled`    | `(value: R) => U `, [`Thenable`](../es6-promise/thenable.md)<U> | _Optional._called when/if "promise" resolves |
+| `onRejected`    | `(error: any) => U `, [`Thenable`](../es6-promise/thenable.md)<U> | _Optional._called when/if "promise" rejects |
 
 
 ### then<U>(onFulfilled,onRejected)
@@ -74,7 +74,7 @@ If an error is thrown in the callback, the returned promise rejects with that er
 
 **Signature:** _then<U>(onFulfilled?: (value: R) => U | [Thenable](../es6-promise/thenable.md)<U>,onRejected?: (error: any) => void): [Promise](../es6-promise/promise.md)<U>_
 
-**Returns**: [`Promise<U>`](../es6-promise/promise.md)
+**Returns**: [`Promise`](../es6-promise/promise.md)<U>
 
 
 
@@ -83,7 +83,7 @@ If an error is thrown in the callback, the returned promise rejects with that er
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `onFulfilled`    | `(value: R) => U `,[` Thenable<U>`](../es6-promise/thenable.md) | _Optional._ |
+| `onFulfilled`    | `(value: R) => U `, [`Thenable`](../es6-promise/thenable.md)<U> | _Optional._ |
 | `onRejected`    | `(error: any) => void` | _Optional._ |
 
 
@@ -94,7 +94,7 @@ Sugar for promise.then(undefined,onRejected)
 
 **Signature:** _catch<U>(onRejected?: (error: any) => U | [Thenable](../es6-promise/thenable.md)<U>): [Promise](../es6-promise/promise.md)<U>_
 
-**Returns**: [`Promise<U>`](../es6-promise/promise.md)
+**Returns**: [`Promise`](../es6-promise/promise.md)<U>
 
 
 
@@ -103,5 +103,5 @@ Sugar for promise.then(undefined,onRejected)
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `onRejected`    | `(error: any) => U `,[` Thenable<U>`](../es6-promise/thenable.md) | _Optional._called when/if "promise" rejects |
+| `onRejected`    | `(error: any) => U `, [`Thenable`](../es6-promise/thenable.md)<U> | _Optional._called when/if "promise" rejects |
 

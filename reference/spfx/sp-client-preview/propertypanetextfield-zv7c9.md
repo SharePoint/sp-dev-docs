@@ -4,7 +4,7 @@ Helper method to create a TextField on the PropertyPane.
 
 **Signature:** _PropertyPaneTextField(targetProperty: string,properties: [IPropertyPaneTextFieldProps](../sp-client-preview/ipropertypanetextfieldprops.md)): [IPropertyPaneField](../sp-client-preview/ipropertypanefield.md)<IPropertyPaneTextFieldProps>_
 
-**Returns**: [`IPropertyPaneField<IPropertyPaneTextFieldProps>`](../sp-client-preview/ipropertypanefield.md)
+**Returns**: [`IPropertyPaneField`](../sp-client-preview/ipropertypanefield.md)<[`IPropertyPaneTextFieldProps`](../sp-client-preview/ipropertypanetextfieldprops.md)>
 
 
 

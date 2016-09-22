@@ -20,7 +20,7 @@
 |[`clear()`](#clear)      | `void` |  |
 |[`get(key)`](#getkey)      | `V` |  |
 |[`has(key)`](#haskey)      | `boolean` |  |
-|[`set(key,value)`](#setkeyvalue)      | [`WeakMap<K,V>`](../es6-collections/weakmap.md) |  |
+|[`set(key,value)`](#setkeyvalue)      | [`WeakMap`](../es6-collections/weakmap.md)<K,V> |  |
 
 
 
@@ -99,7 +99,7 @@ None
 
 **Signature:** _set(key: K,value?: V): [WeakMap](../es6-collections/weakmap.md)<K,V>_
 
-**Returns**: [`WeakMap<K,V>`](../es6-collections/weakmap.md)
+**Returns**: [`WeakMap`](../es6-collections/weakmap.md)<K,V>
 
 
 

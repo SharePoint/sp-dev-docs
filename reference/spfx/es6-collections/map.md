@@ -27,10 +27,10 @@
 |[`forEach(callbackfn,thisArg)`](#foreachcallbackfnthisarg)      | `void` |  |
 |[`get(key)`](#getkey)      | `V` |  |
 |[`has(key)`](#haskey)      | `boolean` |  |
-|[`set(key,value)`](#setkeyvalue)      | [`Map<K,V>`](../es6-collections/map.md) |  |
-|[`entries()`](#entries)      | [`Iterator<[K,V]>`](../es6-collections/iterator.md) |  |
-|[`keys()`](#keys)      | [`Iterator<K>`](../es6-collections/iterator.md) |  |
-|[`values()`](#values)      | [`Iterator<V>`](../es6-collections/iterator.md) |  |
+|[`set(key,value)`](#setkeyvalue)      | [`Map`](../es6-collections/map.md)<K,V> |  |
+|[`entries()`](#entries)      | [`Iterator`](../es6-collections/iterator.md)<[K,V]> |  |
+|[`keys()`](#keys)      | [`Iterator`](../es6-collections/iterator.md)<K> |  |
+|[`values()`](#values)      | [`Iterator`](../es6-collections/iterator.md)<V> |  |
 
 
 
@@ -128,7 +128,7 @@ None
 
 **Signature:** _set(key: K,value?: V): [Map](../es6-collections/map.md)<K,V>_
 
-**Returns**: [`Map<K,V>`](../es6-collections/map.md)
+**Returns**: [`Map`](../es6-collections/map.md)<K,V>
 
 
 
@@ -147,7 +147,7 @@ None
 
 **Signature:** _entries(): [Iterator](../es6-collections/iterator.md)<[K,V]>_
 
-**Returns**: [`Iterator<[K,V]>`](../es6-collections/iterator.md)
+**Returns**: [`Iterator`](../es6-collections/iterator.md)<[K,V]>
 
 
 
@@ -161,7 +161,7 @@ None
 
 **Signature:** _keys(): [Iterator](../es6-collections/iterator.md)<K>_
 
-**Returns**: [`Iterator<K>`](../es6-collections/iterator.md)
+**Returns**: [`Iterator`](../es6-collections/iterator.md)<K>
 
 
 
@@ -175,7 +175,7 @@ None
 
 **Signature:** _values(): [Iterator](../es6-collections/iterator.md)<V>_
 
-**Returns**: [`Iterator<V>`](../es6-collections/iterator.md)
+**Returns**: [`Iterator`](../es6-collections/iterator.md)<V>
 
 
 

@@ -101,7 +101,7 @@ instance will be autocreated and registered with the root ServiceScope.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | - the key that was used when provide() was called to register the service |
+| `serviceKey`    | [`ServiceKey`](../sp-client-base/servicekey.md)<T> | - the key that was used when provide() was called to register the service |
 
 
 ### createAndProvide<T>(serviceKey,simpleServiceClass)
@@ -120,7 +120,7 @@ simpleServiceClass, then registering it by calling ServiceScope.provide().
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | - the key that can be used later to consume the service |
+| `serviceKey`    | [`ServiceKey`](../sp-client-base/servicekey.md)<T> | - the key that can be used later to consume the service |
 | `simpleServiceClass`    | `{ new (serviceScope: ServiceScope) }` | - the TypeScript class to be constructed |
 
 
@@ -140,7 +140,7 @@ serviceKey, and then registers it by calling ServiceScope.provide().
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | - the key that can be used later to consume the service |
+| `serviceKey`    | [`ServiceKey`](../sp-client-base/servicekey.md)<T> | - the key that can be used later to consume the service |
 
 
 ### finish()
@@ -194,7 +194,7 @@ state, i.e. before finish() has been called.
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [`ServiceKey<T>`](../sp-client-base/servicekey.md) | - the key that will later be used to consume the service |
+| `serviceKey`    | [`ServiceKey`](../sp-client-base/servicekey.md)<T> | - the key that will later be used to consume the service |
 | `service`    | `T` | - the service instance that is being registered |
 
 
