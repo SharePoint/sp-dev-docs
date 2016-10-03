@@ -2,7 +2,7 @@
 
 > **Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
 
-Angular is one of the most popular and widely adopted frameworks for building client-side solutions. Thanks to its modularity it can be used for anything ranging from complex multi-view Single Page Applications to smaller components such as web parts. Many organizations have been using Angular for building SharePoint solutions in the past. The following tutorial shows how to use Angular v1.x to build a SharePoint Framework client-side web part and have it styled using [ngOfficeUIFabric](http://ngofficeuifabric.com) - Angular directives for Office UI Fabric. During this tutorial you will build a simple web part that manages to do items.
+If you are using Angular, you can also use this extremely popular framework to build client-side web parts. Thanks to its modularity it can be used for anything ranging from complex multi-view Single Page Applications to smaller components such as web parts. Many organizations have been using Angular for building SharePoint solutions in the past. This article shows how to use Angular v1.x to build a SharePoint Framework client-side web part and have it styled using [ngOfficeUIFabric](http://ngofficeuifabric.com) - Angular directives for Office UI Fabric. During this tutorial you will build a simple web part that manages to do items.
 
 ![SharePoint Framework client-side web part built using Angular and ngOfficeUIFabric displayed in SharePoint workbench](../../../../images/ng-intro-hide-finished-tasks.png)
 
@@ -12,7 +12,7 @@ The source of the working web part is available on GitHub at [https://github.com
 
 ## Create new project
 
-Start by creating a new folder for your project:
+Start by creating a new folder for your project
 
 ```sh
 md angular-todo
@@ -24,18 +24,18 @@ Navigate to the project folder:
 cd angular-todo
 ```
 
-In the project folder execute the SharePoint Framework Yeoman generator to scaffold a new SharePoint Framework project:
+In the project folder run the SharePoint Framework Yeoman generator to scaffold a new SharePoint Framework project:
 
 ```sh
 yo @microsoft/sharepoint
 ```
 
-When prompted accept the default values:
+When prompted, define values as follows:
 - **angular-todo** as your solution name
 - **Use the current folder** for the location to place the files
 - **To do** as your web part name
 - **Simple management of to do tasks** as your web part description
-- **No javascript web framework** as the starting point to build the web part
+- **No JavaScript web framework** as the starting point to build the web part
 
 ![SharePoint Framework Yeoman generator with the default choices](../../../../images/ng-intro-yeoman-generator.png)
 
@@ -185,13 +185,13 @@ export default class DataService implements IDataService {
 
 ![The DataService.ts file opened in Visual Studio Code](../../../../images/ng-intro-dataservice.png)
 
-In the previous code snippet you implement three types: the **ITodo** interface which represents a to do item in your application, the **IDataService** interface which defines the signature of the data service and the **DataService** class which is responsible for retrieving and manipulating to do items. The data service implements simple methods for adding and modifying to do items. Even though the operations are instantanenous, for consistency each CRUD function returns a promise. 
+In the previous code snippet you implement three types: the **ITodo** interface which represents a to do item in your application, the **IDataService** interface which defines the signature of the data service and the **DataService** class which is responsible for retrieving and manipulating to do items. The data service implements simple methods for adding and modifying to do items. Even though the operations are instantaneous, for consistency each CRUD function returns a promise. 
 
-Note, that in this tutorial to do items are stored in memory. You could however easily extend the solution to store items in a SharePoint List and use the data service to communicate with SharePoint using its REST API.
+In this tutorial to do items are stored in memory. You could however easily extend the solution to store items in a SharePoint List and use the data service to communicate with SharePoint using its REST API.
 
 ### Implement the controller
 
-Next, implement the controller that will facilitate communication between the view and the data service. In the **app** folder create a new file called **HomeController.ts** and paste the following code:
+Next, implement the controller that will facilitate communication between the view and the data service. In the **app** folder create a new file named **HomeController.ts** and paste the following code:
 
 ```ts
 import { IDataService, ITodo } from './DataService';
@@ -302,7 +302,7 @@ export default class HomeController {
 
 ![The HomeController.ts file opened in Visual Studio Code](../../../../images/ng-intro-homecontroller.png)
 
-You start by loading the previously implemented data service. The controller needs it in order to get the list of items and modify items as requested by the user. Using Angular's dependency injection the service is injected into the controller. The controller implements a number of functions that are exposed to the view model and will be called from the template. Using these functions users will be able to add new items, mark items as finished/to do or delete items.
+You start by loading the previously implemented data service. The controller needs it in order to get the list of items and modify items as requested by the user. Using Angular's dependency injection the service is injected into the controller. The controller implements a number of functions that are exposed to the view model and will be called from the template. Using these functions users will be able to add new items, mark items as finished, to do, or delete items.
 
 ### Implement the main module
 
@@ -328,11 +328,11 @@ todoapp
 
 You start by referencing Angular and ngOfficeUIFabric and by loading previously implemented controller and data service. Next, you define the module for your application and load the **officeuifabric.core** and **officeuifabric.components** modules as depedencies for your application. That way you will be able to use ngOfficeUIFabric directives in your template. Finally, you register the controller and data service with your application.
 
-This concludes implementing the Angular application behind the web part. In the following steps you will register the Angular application with the web part and make it configurable using web part properties.
+Now you've built an Angular application for your web part. In the following steps you will register the Angular application with the web part and make it configurable using web part properties.
 
 ## Register Angular application with web part
 
-With the Angular application implemented the next step is to reference it in the web part. In the code editor open the **ToDoWebPart.ts** file.
+Next step is to add Angular application to the web part. In the code editor open the **ToDoWebPart.ts** file.
 
 Just before the class declaration, add the following lines:
 
@@ -343,7 +343,7 @@ import './app/app-module';
 
 ![Import statements in the ToDoWebPart.ts file highlighted in Visual Studio Code](../../../../images/ng-intro-web-part-import-angular.png)
 
-This allows us to load a reference to Angular and your previously implemented application, both of which you need to bootstrap your Angular application.
+This allows us to load a reference to Angular and your application, both of which you need to bootstrap your Angular application.
 
 Change the web part's **render** function to:
 
@@ -385,7 +385,7 @@ public render(): void {
 
 ![Web part's render function in Visual Studio Code](../../../../images/ng-intro-web-part-render-angular.png)
 
-You start by assigning the template of your application directly to the web part's DOM element. On the root element you specify the name of the controller that will handle events and data binding in the template. Then, you bootstrap your application using the **todoapp** name you used previously when declaring the main module. Using the **renderedOnce** web part property you ensure that your Angular application is bootstrapped only once. Without it, if you changed one of the web part's properties, the **render** function would be invoked again bootstrapping the Angular application again, which would lead to an error.
+The code first assigns the template of your application directly to the web part's DOM element. On the root element you specify the name of the controller that will handle events and data binding in the template. Then, you bootstrap your application using the **todoapp** name you used previously when declaring the main module. Using the **renderedOnce** web part property you ensure that your Angular application is bootstrapped only once. Without it, if you changed one of the web part's properties, the **render** function would be invoked again bootstrapping the Angular application again, which would lead to an error.
 
 You also need to implement CSS styles that you are using the template. In the code editor open the **ToDo.module.scss** file and replace its contents with:
 
@@ -406,7 +406,7 @@ You also need to implement CSS styles that you are using the template. In the co
 
 ## Load newer version of Office UI Fabric
 
-Confirm that everything is working as expected by running in the command line:
+Run the following command to confirm that everything is working as expected:
 
 ```sh
 gulp serve
@@ -416,7 +416,7 @@ In the browser you should see your To do web part showing to do items.
 
 ![To do web part showing to do items rendered using an older version of Office UI Fabric](../../../../images/ng-intro-workbench-old-office-ui-fabric.png)
 
-Looking closely you can notice a bullet sign rendered in front of each item. This has to do with the fact that ngOfficeUIFabric uses a newer version of Office UI Fabric than the version available in the SharePoint workbench. You can fix this issue, by loading a newer version of Office UI Fabric in your web part.
+Looking closely you can notice a bullet sign rendered in front of each item. This is because ngOfficeUIFabric uses a newer version of Office UI Fabric than the version available in the SharePoint workbench. You can fix this issue, by loading a newer version of Office UI Fabric in your web part.
 
 If you haven't stopped the **serve** task yet, open the command line and press `CTRL+C` to stop the **gulp serve** task.
 
@@ -559,7 +559,7 @@ define([], function() {
 
 ![The loc/en-us.js file open in Visual Studio Code](../../../../images/ng-intro-strings.png)
 
-To confirm that everything is working as expected, in the command line run:
+Run the following command to confirm that everything is working as expected:
 
 ```sh
 gulp serve
@@ -573,7 +573,7 @@ At this point clicking the toggle button doesn't have any effect on your web par
 
 ### Make the Angular application configurable using web part properties
 
-In the previous step you defined a web part property that allows users to choose whether to show completed tasks or not. In this step you will pass the value selected by the user into the Angular application so that it can load items accordingly.
+In the previous step you defined a web part property that allows users to choose whether to show completed tasks or not. Next you will pass the value selected by the user into the Angular application so that it can load items accordingly.
 
 #### Broadcast Angular event on web part property change
 
@@ -627,7 +627,7 @@ public render(): void {
 }
 ```
 
-In the above code sample, every time the web part property is changed, it will broadcast an Angular event to which the Angular application will subscribe and handle it accordingly.
+In the above code sample, every time the web part property is changed, it will broadcast an Angular event to which the Angular application will subscribe it. When event is receiverd by the Angular application, it will then handle that accordingly.
 
 #### Subscribe to web part property change event in Angular
 
