@@ -3,7 +3,7 @@
 >**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environnments.
 >
 
-To get started designing web parts, you will need to be familiar with Office UI Fabric. You can use Fabric as a starting point for iconography, font ramp, color usage, animation, and the responsive grid. Building from this foundation is a good starting point even if your goal is to depart visually in order to match your own company’s brand or look and feel.
+To get started designing web parts, you will want to be familiar with [Office UI Fabric](http://dev.office.com/fabric). All of the styles from [Fabric Core](https://github.com/OfficeDev/office-ui-fabric-core) – including icons, typography, color usage, animation, and the responsive grid – are loaded by default and available to your web part. Do not import a copy of Fabric for your web part, as this may conflict with the global copy. These classes provide a foundation to your web part's styling, which you can always depart from if you require different visuals to match your company's brand.
 
 ## Office UI Fabric React Components
 
