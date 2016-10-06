@@ -90,7 +90,7 @@ You should now see your SharePoint site URL in the web part now that page contex
 ![SharePoint page context in SharePoint site](../../../../images/sp-lists-spsiteurl-wp.png)
 
 ## Define list model
-You need a list model to start working with SharePoint list data. Two models As we will retrieve the lists, we need two models. 
+You need a list model to start working with SharePoint list data. To retrieve the lists, you need two models. 
 
 Switch to Visual Studio Code and go to **src\webparts\helloWorld\HelloWorldWebPart.ts**.
 

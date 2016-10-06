@@ -22,9 +22,9 @@ Notifications will be sent to your application for the following asynchronous li
 * ItemCheckedIn
 * ItemUncheckedOut
 * ItemAttachmentAdded
-* ItemAtttachmentDeleted
+* ItemAttachmentDeleted
 * ItemFileMoved
-* ItemVersonDeleted
+* ItemVersionDeleted
 * ItemFileConverted
 
 Synchronous events are not supported in webhooks.
