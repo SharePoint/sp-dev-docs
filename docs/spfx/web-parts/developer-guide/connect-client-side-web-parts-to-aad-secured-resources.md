@@ -230,6 +230,10 @@ Client-side applications are incapable of storing a client secret without reveal
 
 This necessary security measure is a significant limitation for organizations that allow users to add web parts to pages. The recommendation is, to limit the locations to where web parts using OAuth implicit flow can be used, to a few known locations such as home page or specific landing pages and have these locations registered with Azure Active Directory.
 
+### Internet Explorer security zones
+
+Internet Explorer uses security zones to apply security policies to websites you visit. Websites assigned to different security zones run isolated and cannot cooperate. When using OAuth implicit flow in SharePoint Framework client-side web parts, the page with web parts using OAuth and the Azure AD login page (located at https://login.microsoftonline.com) must be in the same security zone. Without such configuration the authentication process will fail and web part won't be able to communicate with Azure AD-secured resources.
+
 ### Regular re-authentication required
 
 When using regular OAuth flow web applications and client applications get a short-lived access token and a refresh token which is valid for a longer period of time. The refresh token can be used to get a new access token once the previously retrieved one expired. Using this approach users don't need to login to AAD frequently and can keep using the application for a longer period of time.
