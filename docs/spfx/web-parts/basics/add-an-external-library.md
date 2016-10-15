@@ -258,6 +258,12 @@ contoso.EventList.alert();
 
 Loading SharePoint JSOM is essentially the same scenario as loading non-AMD scripts that have dependencies. This means using both the **globalName** and **globalDependency** options.
 
+Install typings for Microsoft Ajax which is a dependency for JSOM typings:
+
+```
+tsd install microsoft.ajax --save
+```
+
 Install typings for the JSOM:
 
 ```
