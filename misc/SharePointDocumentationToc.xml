@@ -25,9 +25,9 @@
 				<Item text="Known issues" url="spfx/web-parts/basics/known-issues" SEODescription="Known issues with web parts in the SharePoint Framework" />
 			</Item>
 			<Item text="Guidance" url="spfx/web-parts/guidance" SEODescription="">
-				<Item text="Use existing JavaScript libraries in SharePoint Framework client-side web parts" url="spfx/web-parts/guidance/use-existing-javascript-libraries" SEODescription="Use external JavaScript libraries in your client-side web parts." />
-				<Item text="Build SharePoint Framework client-side web parts with Angular v1.x" url="spfx/web-parts/guidance/build-client-side-web-parts-with-angular-1-x" SEODescription="Use Angular 1.x in your SharePoint Framework client-side web parts." />
-				<Item text="Call the Microsoft Graph API using OAuth from your web part" url="spfx/web-parts/guidance/connect-client-side-web-parts-to-aad-secured-resources" SEODescription="Connect your SharePoint Framework client-side web parts to Microsoft Graph API." />
+				<Item text="Use existing JavaScript libraries" url="spfx/web-parts/guidance/use-existing-javascript-libraries" SEODescription="Best practices for using existing JavaScript libraries in your SharePoint client-side web parts." />
+				<Item text="Build web parts with Angular v1.x" url="spfx/web-parts/guidance/build-client-side-web-parts-with-angular-1-x" SEODescription="Use Angular 1.x to build a simple SharePoint Framework client-side web part." />
+				<Item text="Call the Microsoft Graph API" url="spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part" SEODescription="Call the Microsoft Graph API from your SharePoint Framework client-side web part using OAuth." />
 			</Item>
 		</Item>
 	</Item>

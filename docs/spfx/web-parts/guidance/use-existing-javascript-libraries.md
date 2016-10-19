@@ -1,6 +1,6 @@
 # Use existing JavaScript libraries in SharePoint Framework client-side web parts
 
-When building client-side web parts on the SharePoint Framework you can benefit of existing JavaScript libraries to build powerful solutions. There are however some considerations that you should take into account to ensure that your web parts won't negatively impact the performance of SharePoint pages that they are being used on.
+When building client-side web parts on the SharePoint Framework you can benefit from using existing JavaScript libraries to build powerful solutions. There are however some considerations that you should take into account to ensure that your web parts won't negatively impact the performance of SharePoint pages that they are being used on.
 
 ## Reference existing libraries as packages
 
