@@ -25,8 +25,9 @@ In the left sidebar, choose the **apps** menu item and then choose **App Catalog
 Choose **OK** to create a new app catalog site.
 
 In the next page, enter the following details:
+
 * **Title**: Enter **App Catalog**.
-* **Web Site Address _suffix_**: Enter your preferred suffix for app catalog; for example: **apps**.
+* **Web Site Address _suffix_**: Enter your preferred suffix for the app catalog; for example: **apps**.
 * **Administrator**: Enter your username and choose the **resolve** button to resolve the username.
 
 Choose **OK** to create the app catalog site.
@@ -56,8 +57,9 @@ Choose **OK** to create the site collection.
 SharePoint will create the developer site and you will be able to see its progress in the SharePoint admin center. After the site is created, you can browse to your developer site collection.
 
 ## Set up a document library
-In order to use the preview features, you will need to set up a document library with a new column and upload SharePoint workbench. This procedure uses the default document library in your developer site collection. This will be called **Documents** in the left navigation.
+In order to use the features of the SharePoint Framework, you will need to set up a document library with a new column and upload SharePoint workbench. This procedure uses the default document library in your developer site collection. This will be called **Documents** in the left navigation.
 
+* Go to your developer site in a browser.
 * Choose the gears icon on the top right and then choose **Site settings** to open the settings page.
 * Choose **Site libraries and lists** under the **Site Administration** category.
 * Choose **Customize Documents**
@@ -65,12 +67,14 @@ In order to use the preview features, you will need to set up a document library
 * Enter **ClientSideApplicationId** as the column name and leave the other fields at their current values.
 * Choose **OK** to create the column.
 
-## Upload the SharePoint workbench
-You need to upload the SharePoint workbench to test your web parts on SharePoint. 
+## Put the SharePoint workbench in the document library
+You need the SharePoint workbench on your developer site to test your web parts on SharePoint. 
 
 * Download the [workbench.aspx](https://github.com/SharePoint/sp-dev-docs/blob/master/workbench.aspx) file to your local computer. To do this:
-	- Open the context menu (right-click) on the "raw" link in the middle of the page and choose **Save Target As** or **Save Link As** (depending on your browser) to save the file as **workbench.aspx** to your local computer. 
-* Upload the file to the **Documents** library in the dev site collection.
+	- Open the context menu (right-click) on the file content in the middle of the page and choose **Save Target As** or **Save Link As** (depending on your browser) to save the file as **workbench.aspx** to your local computer. 
+* Upload the file to the **Documents** library in the developer site collection. To do this:
+	- Open the **Documents** library on SharePoint.
+	- Drag and drop the workbench.aspx to the **Documents** library. Or you can choose **Upload** from the **Documents** library and locate and upload the workbench.aspx file.
 
 ##Troubleshooting
 If you get the following exception when moving to the workbench.aspx page: 
