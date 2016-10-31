@@ -36,20 +36,13 @@ The following list of common build tools packages are in the SharePoint Framewor
 
 ## Scaffolding a new client-side project
 
-## Scaffolding a new client-side project
-### Packages installation
-
 ### Packages installation
 As the packages are installed locally, npm also installs the dependencies associated with each package. You can find the packages installed under the `node_modules` folder in your project folder. This folder contains the packages along with all of their dependencies. It is ideal that this folder contains dozens to hundreds of folders as npm packages are always broken down to smaller modules and thus resulting in dozens to hundreds of packages being installed. The key SharePoint Framework packages are located under the `node_modules\@microsoft` folder. The `@microsoft` is an npm scope that collectively represents [packages published by Microsoft](https://www.npmjs.com/~microsoft).
 
 Every time you create a new project using the generator, the generator installs the SharePoint Framework packages along with its dependencies for that specific project locally. In this way, npm makes it easier to manage your web part projects without affecting other projects that are in the local dev environment. 
 
 ### package.json
-
-### package.json
 Below is the `package.json` of the [helloworld-webpart](web-parts/get-started/build-a-hello-world-web-part):
-
-```json 
 
 ```json 
 {
@@ -78,15 +71,10 @@ Below is the `package.json` of the [helloworld-webpart](web-parts/get-started/bu
 ```
 
 ### Working with source control systems
-
-### Working with source control systems
 When you check out, or clone, the web part project from your source control system the first time, run the command to initialize and install all the project dependencies locally:
 
 ```
-npm i
-
-```
-npm i
+npm install
 ```
 
 SharePoint Framework uses [gulp](http://gulpjs.com/) as its task runner to handle processes like the following:
@@ -107,28 +95,17 @@ SharePoint Framework uses [gulp](http://gulpjs.com/) as its task runner to handl
 - package-solution
 - deploy-azure-storage
 
-gulp serve
-
 ```
 gulp serve
 ```
-
-
-
 
 ### Build targets
 ![gulp serve task](../../images/toolchain-gulp-serve-task.png)
 
 ### Build targets
-Build target: DEBUG
 
 ```
 Build target: DEBUG
 ```
-
-```
-
-```
-
 
 In SHIP mode, the build tasks copy all of the web part assets, including the web part bundle, into the `temp\deploy` folder.
