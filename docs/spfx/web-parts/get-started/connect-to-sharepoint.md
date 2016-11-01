@@ -69,7 +69,7 @@ Save the file. The `gulp serve` running in your console will detect this save op
 
 >**Note:** Keep the console window and VS Code side by side to see gulp automatically compile as you save changes in VS Code.
 
-In your browser, go to **workbench.html** locally. If you have already closed the tab, the URL is http://localhost:4321/temp/workbench.html.
+In your browser, go to **workbench.html** locally. If you have already closed the tab, the URL is https://localhost:4321/temp/workbench.html.
 
 You should see the following in the web part:
 
