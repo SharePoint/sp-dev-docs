@@ -109,19 +109,28 @@ npm i
 
 ## Build tasks
 SharePoint Framework uses [gulp](http://gulpjs.com/) as its task runner to handle processes like the following:
-- Bundle and minify JavaScript and CSS files.
-- Run tools to call the bundling and minification tasks before each build.
-- Compile LESS or SASS files to CSS.
-- Compile TypeScript files to JavaScript.
+
+* Bundle and minify JavaScript and CSS files.
+* Run tools to call the bundling and minification tasks before each build.
+* Compile LESS or SASS files to CSS.
+* Compile TypeScript files to JavaScript.
 
 The toolchain consists of the following gulp tasks defined in the [@microsoft/sp-build-core-tasks](https://www.npmjs.com/package/@microsoft/sp-build-core-tasks) package:
-- build
-- bundle
-- serve
-- nuke
-- test
-- package-solution
-- deploy-azure-storage
+
+* build
+  * Builds the client-side solution project.
+* bundle
+  * Bundles the client-side solution project entry point and all its dependencies into a single JavaScript file.
+* serve
+  * Serves the client-side solution project and assets from the local machine.
+* nuke
+  * Cleans the client-side solution project's build artifacts from the previous build and from the build target directories (lib and dist)
+* test
+  * Runs unit tests, if available, for the client-side solution project. 
+* package-solution
+  * Packages the client-side solution into a SharePoint package.
+* deploy-azure-storage
+  * Deploys client-side solution project assets to Azure Storage. 
 
 To initiate different tasks, append the task name with the gulp command. For example, to compile and then preview your web part in the SharePoint Workbench, run the following command:
 
