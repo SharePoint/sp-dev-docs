@@ -3,7 +3,7 @@
 >**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
 
 ## Overview
-The SharePoint Framework toolchain is the set of build tools, framework packages, and other items that manage building and deploying your client side projects. The toolchain helps you build client-side components like web parts. It also helps you test them in your local development environment with tools such as the SharePoint Workbench. And you can use the toolchain to package and deploy to SharePoint. The toolchain also provides you with a set of build commands that help you to complete key build tasks such as code compilation, packaging the client-side project into a SharePoint app package and more.
+The SharePoint Framework toolchain is the set of build tools, framework packages, and other items that manage building and deploying your client side projects. The toolchain helps you build client-side components like web parts. It also helps you test them in your local development environment with tools such as the SharePoint Workbench. And you can use the toolchain to package and deploy to SharePoint. The toolchain also provides you with a set of build commands that help you to complete key build tasks such as code compilation, packaging the client-side project into a SharePoint app package and more. 
 
 ## npm
 Before diving into the various toolchain components, it’s important to understand how the SharePoint Framework uses [npm](https://www.npmjs.com/), to manage different modules in the project. npm is one of the preferred open source package managers for JavaScript client-side development. 
