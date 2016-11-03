@@ -76,12 +76,14 @@ You need the SharePoint workbench on your developer site to test your web parts 
 	- Open the **Documents** library on SharePoint.
 	- Drag and drop the workbench.aspx to the **Documents** library. Or you can choose **Upload** from the **Documents** library and locate and upload the workbench.aspx file.
 
-##Troubleshooting
+## Troubleshooting
+
 If you get the following exception when moving to the workbench.aspx page: 
 
-"The requested operation is part of an experimental feature that is not supported in the current environment. The requested operation is part of an experimental feature that is not supported in the current environment." 
+- "The requested operation is part of an experimental feature that is not supported in the current environment. The requested operation is part of an experimental feature that is not supported in the current environment." 
+- You are not using a developer tenant. You might be using a first release or normal tenant
 
-You are not using a developer tenant. You might be using a first release or normal tenant
+During developer preview also "Custom Script" feature will need to be enabled in site collections where you will be using the client-side web parts. 
 
 ## Next steps
 Now that you have configured your SharePoint tenant, [set up your development environment](./set-up-your-development-environment) to build client-side web parts.
