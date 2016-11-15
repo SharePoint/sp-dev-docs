@@ -1,13 +1,13 @@
-# Set up your Office 365 developer tenant
+# Set up your Office 365 tenant
 
 >**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
 
-To build and deploy client-side web parts using the preview release of the SharePoint Framework, you will need an Office 365 Developer Tenant. Your tenant must be a **developer tenant**, not just a site collection. 
+To build and deploy client-side web parts using the preview release of the SharePoint Framework, you will need an Office 365 tenant with [First Release](https://support.office.com/en-us/article/Set-up-the-Standard-or-First-Release-options-in-Office-365-3b3adfa4-1777-4ff0-b606-fb8732101f47) options enabled. 
 
-## Sign up for an Office 365 Developer Tenant
-If you already have an Office 365 Developer Tenant, see [create your app catalog site](#create-app-catalog-site).
+## Sign up for an Office 365 tenant
+If you already have an Office 365 tenant, see [create your app catalog site](#create-app-catalog-site). Make sure you have [First Release](https://support.office.com/en-us/article/Set-up-the-Standard-or-First-Release-options-in-Office-365-3b3adfa4-1777-4ff0-b606-fb8732101f47) options enabled. 
 
-If you don't have one, sign up for the [Office Developer Program](https://profile.microsoft.com/RegSysProfileCenter/wizardnp.aspx?wizid=14b845d0-938c-45af-b061-f798fbb4d170&lcid=1033). You will receive a welcome mail with a link to sign up for an Office 365 Developer Tenant.  
+If you don't have one, sign up for the [Office Developer Program](https://profile.microsoft.com/RegSysProfileCenter/wizardnp.aspx?wizid=14b845d0-938c-45af-b061-f798fbb4d170&lcid=1033). You will receive a welcome mail with a link to sign up for an Office 365 Developer Tenant. First Release options are enabled already for your Office 365 Developer Tenant. 
 
 >**Note:** Make sure that you are signed out of any existing Office 365 tenants before you sign up.
 
@@ -68,7 +68,7 @@ In order to use the features of the SharePoint Framework, you will need to set u
 * Choose **OK** to create the column.
 
 ## Put the SharePoint workbench in the document library
-You need the SharePoint workbench on your developer site to test your web parts on SharePoint. 
+You need the SharePoint Workbench on your developer site to test your web parts on SharePoint. This procedure uses the default document library in your site collection. This will be called **Documents** in the left navigation.
 
 * Download the [workbench.aspx](https://github.com/SharePoint/sp-dev-docs/blob/master/workbench.aspx) file to your local computer. To do this:
 	- Open the context menu (right-click) on the file content in the middle of the page and choose **Save Target As** or **Save Link As** (depending on your browser) to save the file as **workbench.aspx** to your local computer. 
@@ -78,10 +78,14 @@ You need the SharePoint workbench on your developer site to test your web parts 
 
 ## Troubleshooting
 
+You will get an error If you are using a SharePoint site that was provisioned using a self-service site creation. We recommend using a developer site collection or a SharePoint site that was not created using a self-service site creation.
+
 If you get the following exception when moving to the workbench.aspx page: 
 
-- "The requested operation is part of an experimental feature that is not supported in the current environment. The requested operation is part of an experimental feature that is not supported in the current environment." 
-- You are not using a developer tenant. You might be using a first release or normal tenant
+```
+"The requested operation is part of an experimental feature that is not supported in the current environment. The requested operation is part of an experimental feature that is not supported in the current environment." 
+```
+Then, you are not using a tenant with First Release options enabled. You might be using a normal tenant
 
 During developer preview also "Custom Script" feature will need to be enabled in site collections where you will be using the client-side web parts. 
 
