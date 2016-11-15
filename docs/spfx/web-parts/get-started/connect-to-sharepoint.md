@@ -77,13 +77,7 @@ You should see the following in the web part:
 
 Go to **workbench.aspx** hosted in SharePoint. The full URL is https://your-sharepoint-site-url/Shared%20Documents/workbench.aspx.
 
-By default, your browser is configured not to load scripts from localhost. Workbench will notify you if that is the case as shown in the following image. This is due to loading scripts over HTTP while connected to a page via HTTPS.
-
-![Load unsafe scripts to run scripts from localhost](../../../../images/sp-workbench-o365-unsface-scripts.png) 
-
-To execute local scripts, in the Chrome browser, click the grey shield in the right side of the address bar to load unsafe scripts. 
-
-![Allow browser to load unsafe scripts to run scripts from localhost](../../../../images/chrome-load-unsafe-scripts.png)
+>**Note:** If you do not have the SPFx developer certificate installed, then Workbench will notify you that it is configured not to load scripts from localhost. Execute `gulp trust-dev-cert` command in your project directory console to install the developer certificate.
 
 You should now see your SharePoint site URL in the web part now that page context is available to the web part.
 

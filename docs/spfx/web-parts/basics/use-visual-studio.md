@@ -46,12 +46,6 @@ The first step is to create the SharePoint client-side project. Use the Yeoman S
 
 ### Import your project into Visual Studio
 
-There are two ways to open your client-side project in Visual Studio. Use the steps that work best for you.
-
-If opening the **.njsproj** doesn't work for you, you can try importing the client-side solution project into Visual Studio. 
-
-#### Open Visual Studio and create a new project
-
 1. In the **New Project** dialog box, select the **Templates > Other languages > TypeScript >Node.js** and then **From Existing Node.js code** project template.
 Name the project the same name as your SharePoint client-side project, that is, *hello-vs-webpart*. Choose the location of the client-side project for the location, and choose **OK**.
 
@@ -101,7 +95,17 @@ In the project properties, change the following properties to their correspondin
 
 ### Build and debug the project
 
-Your client-side project is now set up to work with Visual Studio. Press F5 to build and debug your project in your favorite browser.
+Your client-side project is now set up to work with Visual Studio. 
+
+To preview your web part, build and run it on a local web server. The client-side toolchain uses HTTPS endpoint by default. However, since a default certificate is not configured for the local dev environment, your browser will report a certificate error. The SPFx toolchain comes with a developer certificate that you can install for building web parts.
+
+To install the developer certificate for use with SPFx development, switch to your console, make sure you are still in the **helloworld-webpart** directory and enter the following command:
+
+```
+gulp trust-dev-cert
+```
+
+Press F5 to build and debug your project in your favorite browser.
 
 #### Notes on debugging
 
@@ -120,6 +124,7 @@ All major browsers have developer tools:
 The SharePoint Framework comes with a set of gulp tasks to simplify packaging your client-side solution and uploading your assets to CDN. You can use the following commands to access them:
 
 ```
+gulp trust-dev-cert
 gulp package-solution
 gulp deploy-azure-storage
 ```

@@ -88,6 +88,8 @@ This will deploy the client-side solution package. Since this is a full trust cl
 	
 Choose **Deploy**
 
+>**Note:** If package deployment fails, then you may be using a normal tenant. Make sure you [set up your Office 365 tenant](../../set-up-your-developer-tenant) to have First Release options enabled or use a Office 365 Developer Tenant. 
+
 ## Install the client-side solution on your site
 
 Go to your developer site collection.
