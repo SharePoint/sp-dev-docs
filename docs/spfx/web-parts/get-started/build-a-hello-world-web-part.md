@@ -58,7 +58,7 @@ When the scaffold is complete, you should see the following message indicating a
 
 For information about troubleshooting any errors, see [Known issues](../basics/known-issues).
 
-### Using your favorite Code Editor/IDE  
+### Using your favorite Code Editor
 Because the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor or IDE that supports client-side development to build your web part, such as:
 
 * [Visual Studio Code](https://code.visualstudio.com/)
@@ -66,23 +66,24 @@ Because the SharePoint client-side solution is HTML/TypeScript based, you can us
 * [Atom](https://atom.io)
 * [Webstorm](https://www.jetbrains.com/webstorm)
 
->**Note:** This article uses Visual Studio code in the steps and examples. You can use any IDE that you prefer. 
-
-### Using Visual Studio 2015
-Currently, support for SharePoint client-side projects in Visual Studio is available through NodeJS Tools for Visual Studio. For more information, see [Use Visual Studio to develop web parts](../basics/use-visual-studio).
+>**Note:** This article uses Visual Studio code in the steps and examples. You can use any code editor that you prefer. 
    
 ## Preview the web part
-To preview your web part, build and run it on a local web server. 
+To preview your web part, build and run it on a local web server. The client-side toolchain uses HTTPS endpoint by default. However, since a default certificate is not configured for the local dev environment, your browser will report a certificate error. The SPFx toolchain comes with a developer certificate that you can install for building web parts.
 
-Switch to your console, make sure you are still in the **helloworld-webpart** directory and enter the following command to build and preview your web part:
+To install the developer certificate for use with SPFx development, switch to your console, make sure you are still in the **helloworld-webpart** directory and enter the following command:
+
+```
+gulp trust-dev-cert
+```
+
+Now that we have installed the developer certificate, enter the following command in the console to build and preview your web part:
 
 ```
 gulp serve
 ```
 
 This command will execute a series of gulp tasks to create a local, Node-based HTTPS server on 'localhost:4321' and launch your default browser to preview web parts from your local dev environment.
-
-The client-side toolchain uses HTTPS endpoint by default. However, since a default certificate is not configured for the local dev environment, your browser will report a certificate error. Depending on the browser you are using, you will need to add exception (for example, Mozilla Firefox) or click Advanced and select to proceed to the website (for example, Microsoft Edge or Google Chrome).
 
 ![Gulp serve web part project](../../../../images/helloworld-wp-gulp-serve.png)
 
