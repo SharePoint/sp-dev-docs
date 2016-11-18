@@ -98,14 +98,14 @@ If you are new to gulp, you can read [Using Gulp](http://docs.asp.net/en/latest/
 
 Visual Studio Code provides built-in support for gulp and other task runners. Choose **Ctrl+Shift+B** on Windows or **Cmd+Shift+B** on Mac to debug and preview your web part. 
 
-### SharePoint workbench
-SharePoint workbench is a developer design surface that enables you to quickly preview and test web parts without deploying them in SharePoint. SharePoint workbench includes the client-side page and the client-side canvas in which you can add, delete and test your web parts in development.
+### SharePoint Workbench
+SharePoint Workbench is a developer design surface that enables you to quickly preview and test web parts without deploying them in SharePoint. SharePoint Workbench includes the client-side page and the client-side canvas in which you can add, delete and test your web parts in development.
 
-![SharePoint workbench running locally](../../../../images/sp-workbench.png)
+![SharePoint Workbench running locally](../../../../images/sp-workbench.png)
 
 To add the HelloWorld web part, choose the **add** button. The add button opens the toolbox where you can see a list of web parts available for you to add. The list will include the **HelloWorld** web part as well other web parts available locally in your development environment.
    
-![SharePoint workbench toolbox in localhost](../../../../images/sp-workbench-toolbox.png)
+![SharePoint Workbench toolbox in localhost](../../../../images/sp-workbench-toolbox.png)
    
 Choose **HelloWorld** to add the web part to the page:
    
@@ -189,19 +189,10 @@ public render(): void {
 }
 ```
 
-This model is flexible enough so that web parts can be built in any JavaScript framework and loaded into the DOM element. The following is an example of how you would load a React component instead of plain HTML.
-
-```ts
-render(): void {
-    let e = React.createElement(TodoComponent, this.properties);
-    ReactDom.render(e, this.domElement);
-}
-```
-
->**Note:** The Yeoman SharePoint generator lets you choose **React** as your framework of choice when adding a new web part to the project. 
+This model is flexible enough so that web parts can be built in any JavaScript framework and loaded into the DOM element. 
 
 #### Configure the Web part property pane
-The property pane is also defined in the **HelloWorldWebPart** class. The **propertyPaneSettings** property is where you need to define the property pane.
+The property pane is defined in the **HelloWorldWebPart** class. The **propertyPaneConfiguration** property is where you need to define the property pane.
 
 When the properties are defined, you can access them in your web part using `this.properties.<property-value>`, as shown in the **render** method:
 
@@ -211,10 +202,54 @@ When the properties are defined, you can access them in your web part using `thi
 
 Read the [Integrating property pane with a web part](../basics/integrate-with-property-pane) article to learn more about how to work with the property pane and property pane field types.
 
-Replace the **propertyPaneSettings** method with the code below which shows how to add property types other than TextField. 
+Lets now add few more properties - a checkbox, dropdown and a toggle - to the property pane. We first start by importing the respective property pane fields from the framework.
+
+Scroll to the top of the file and add the following to the import section from `@microsoft/sp-webpart-base`:
 
 ```ts
-protected get propertyPaneSettings(): IPropertyPaneSettings {
+PropertyPaneCheckbox,
+PropertyPaneDropdown,
+PropertyPaneToggle
+```
+
+The complete import section will look like the following:
+
+```ts
+import {
+  BaseClientSideWebPart,
+  IPropertyPaneSettings,
+  IWebPartContext,
+  PropertyPaneTextField,
+  PropertyPaneCheckbox,
+  PropertyPaneDropdown,
+  PropertyPaneToggle
+} from '@microsoft/sp-webpart-base';
+```
+
+Save the file.
+
+Next, update the web part properties to include the new properties. This maps the fields to typed objects.
+
+Open **IHelloWorldWebPartProps.ts** and replace the existing code with the following code. 
+
+```ts
+export interface IHelloWorldWebPartProps {
+    description: string;
+    test: string;
+    test1: boolean;
+    test2: string;
+    test3: boolean;
+}
+```
+
+Save the file.
+
+Switch back to the **HelloWorldWebPart.ts** file.
+
+Replace the **propertyPaneConfiguration** method with the code below which adds the new property pane fields and maps them to their respective typed objects.
+
+```ts
+protected get propertyPaneConfiguration(): IPropertyPaneConfiguration {
   return {
     pages: [
       {
@@ -257,57 +292,14 @@ protected get propertyPaneSettings(): IPropertyPaneSettings {
 }
 ```
 
-Since we added new property fields, let's import those from the framework.
 
-Scroll to the top of the file and add the following to the import section from `@microsoft/sp-client-preview`:
-
-```ts
-PropertyPaneCheckbox,
-PropertyPaneDropdown,
-PropertyPaneToggle
-```
-
-The complete import section will look like the following:
-
-```ts
-import {
-  BaseClientSideWebPart,
-  IPropertyPaneSettings,
-  IWebPartContext,
-  PropertyPaneTextField,
-  PropertyPaneCheckbox,
-  PropertyPaneDropdown,
-  PropertyPaneToggle
-} from '@microsoft/sp-client-preview';
-```
-
-Save the file.
-
-Now add these properties to the **IHelloWorldWebPartProps** interface that map to our fields we just added.
-
-Open **IHelloWorldWebPartProps.ts** and replace the existing code with the following code:
-
-```ts
-export interface IHelloWorldWebPartProps {
-    description: string;
-    test: string;
-    test1: boolean;
-    test2: string;
-    test3: boolean;
-}
-```
-
-Save the file.
-
-Switch back to the **HelloWorldWebPart.ts** file.
-
-After you add your properties to the web part properties, you can access the property in the same way you accessed the **description** property earlier:
+After you add your properties to the web part properties, you can now access the properties in the same way you accessed the **description** property earlier:
 
 ```ts
 <p class="ms-font-l ms-fontColor-white">${this.properties.test2}</p>
 ```
 
-To set the default value for the property, you will need to update the web part manifest's **properties** property bag:
+To set the default value for the properties, you will need to update the web part manifest's **properties** property bag:
 
 Open `HelloWorldWebPart.manifest.json` and modify the `properties` to:
 
@@ -320,6 +312,8 @@ Open `HelloWorldWebPart.manifest.json` and modify the `properties` to:
   "test3": true
 }
 ```
+
+The web part property pane will now have these default values for those properties.
 
 ### Web part manifest
 The **HelloWorldWebPart.manifest.json** file defines the web part metadata such as version, id, display name, icon, and description. Every web part should contain this manifest.
@@ -355,21 +349,14 @@ The **HelloWorldWebPart.manifest.json** file defines the web part metadata such 
   ]
 }
 ```
+
 ### Preview the web part in SharePoint
 
-SharePoint workbench is also hosted in SharePoint to preview and test your local web parts in development. The key advantage is that now you are running in SharePoint context and that you will be able to interact with SharePoint data.
+SharePoint Workbench is also hosted in SharePoint to preview and test your local web parts in development. The key advantage is that now you are running in SharePoint context and that you will be able to interact with SharePoint data.
 
 Go to the following URL: 'https://your-sharepoint-site/Shared%20Documents/workbench.aspx'
 
-By default, your browser is configured not to load scripts from localhost. Workbench will notify you if that is the case.
-
-![Load unsafe scripts to run scripts from localhost](../../../../images/sp-workbench-o365-unsface-scripts.png) 
-
-In order to execute local scripts, you will need to configure the browser to load scripts from unauthenticated sources. This is due to loading scripts over HTTP while connected to a page via HTTPS. Depending on the browser you use, the options to enable this may vary. For example, in the Chrome browser, you can choose the grey shield in the right side of the address bar to load unsafe scripts. 
-
-![Allow browser to load unsafe scripts to run scripts from localhost](../../../../images/chrome-load-unsafe-scripts.png)
-
-After you enable loading scripts, you should see the workbench load. Add the hello world web part to the canvas:
+>**Note:** If you do not have the SPFx developer certificate installed, then Workbench will notify you that it is configured not to load scripts from localhost. Execute `gulp trust-dev-cert` command in your project directory console to install the developer certificate.
 
 ![SharePoint Workbench running in a SharePoint Online site](../../../../images/sp-workbench-o365.png)
 
