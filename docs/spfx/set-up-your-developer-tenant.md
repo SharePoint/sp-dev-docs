@@ -70,9 +70,9 @@ In order to use the features of the SharePoint Framework, you will need to set u
 ## Put the SharePoint workbench in the document library
 You need the SharePoint Workbench on your developer site to test your web parts on SharePoint. This procedure uses the default document library in your site collection. This will be called **Documents** in the left navigation.
 
-* Download the [workbench.aspx](https://github.com/SharePoint/sp-dev-docs/blob/master/workbench.aspx) file to your local computer. To do this:
-	- Open the context menu (right-click) on the file content in the middle of the page and choose **Save Target As** or **Save Link As** (depending on your browser) to save the file as **workbench.aspx** to your local computer. 
-* Upload the file to the **Documents** library in the developer site collection. To do this:
+* Download the [workbench.aspx](https://raw.githubusercontent.com/SharePoint/sp-dev-docs/master/workbench.aspx) file to your local computer. To do this:
+	- Save opened workbench.aspx to your computer. Typically you'd do this by right clicking the page and chosing "Save as..."  
+* Upload the file to the **Documents** library in the developer site collection from your computer. To do this:
 	- Open the **Documents** library on SharePoint.
 	- Drag and drop the workbench.aspx to the **Documents** library. Or you can choose **Upload** from the **Documents** library and locate and upload the workbench.aspx file.
 
