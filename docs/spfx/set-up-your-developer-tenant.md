@@ -60,7 +60,7 @@ SharePoint will create the developer site and you will be able to see its progre
 You need the SharePoint Workbench on your developer site to test your web parts on SharePoint. SharePoint workbench is a developer design surface that enables you to quickly preview and test web parts without deploying them in SharePoint. This procedure uses the default document library in your site collection. This will be called **Documents** in the left navigation.
 
 * Download the [workbench.aspx](https://raw.githubusercontent.com/SharePoint/sp-dev-docs/master/workbench.aspx) file to your local computer. To do this:
-	- Save opened workbench.aspx to your computer. Typically you'd do this by right clicking the page and chosing "Save as..."  
+	- Save opened workbench.aspx to your computer. Typically you'd do this by right clicking the page and chosing *"Save as..."* 
 * Upload the file to the **Documents** library in the developer site collection from your computer. To do this:
 	- Open the **Documents** library on SharePoint.
 	- Drag and drop the workbench.aspx to the **Documents** library. Or you can choose **Upload** from the **Documents** library and locate and upload the workbench.aspx file.
