@@ -17,13 +17,13 @@ Install [NodeJS](https://nodejs.org/en/) Long Term Support (LTS) v4.x.x version.
 After installing node, make sure you are running V3 of npm by running the following command:
 	
 ```
-npm -g install npm@3
+npm install -g npm@3
 ```
 
 In case of Ubuntu Linux previous command might result in 'permission denied' message, so it should be instead executed as 
 
 ```
-sudo npm -g install npm@3
+sudo npm install -g npm@3
 ```
 
 ### Code Editors
@@ -43,7 +43,7 @@ You need to install *windows-build-tools*. windows-build-tools will install Visu
 Run the following command:
 	
 ```
-npm install --global --production windows-build-tools
+npm install -g --production windows-build-tools
 ```
 
 #### If you are using Visual Studio	
@@ -76,7 +76,7 @@ sudo yum install make automake gcc gcc-c++ kernel-devel
 Enter the following command to install Yeoman and gulp:
 	
 ```
-npm i -g yo gulp
+npm install -g yo gulp
 ```
 
 ## Install Yeoman SharePoint generator
@@ -86,7 +86,7 @@ The Yeoman SharePoint web part generator helps you quickly create a SharePoint c
 Enter the following command to install the Yeoman SharePoint generator:
 	
 ```
-npm i -g @microsoft/generator-sharepoint 
+npm install -g @microsoft/generator-sharepoint 
 ```
 
 ## Optional tools
