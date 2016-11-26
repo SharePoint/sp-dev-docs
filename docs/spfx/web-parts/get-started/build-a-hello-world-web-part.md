@@ -249,7 +249,7 @@ Switch back to the **HelloWorldWebPart.ts** file.
 Replace the **propertyPaneConfiguration** method with the code below which adds the new property pane fields and maps them to their respective typed objects.
 
 ```ts
-protected get propertyPaneConfiguration(): IPropertyPaneConfiguration {
+protected get propertyPaneConfiguration(): IPropertyPaneSettings {
   return {
     pages: [
       {
