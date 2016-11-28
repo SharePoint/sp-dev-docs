@@ -6,6 +6,9 @@ The SharePoint Framework is still in initial Developer Preview, and it's still r
 
 ## Developer Preview Releases
 
+* **Nov 22, 2016**
+   *  **Drop 6 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-Drop-6)
+
 * **Oct 17, 2016**
    *  **Drop 5 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-Drop-5)
 
@@ -44,13 +47,14 @@ Provide Feedback:
 
 * If you find issues or have new ideas and suggestions for SharePoint Framework, make sure you submit them [here](https://github.com/SharePoint/sp-dev-docs/issues).
 * [SharePoint StackExchange](http://sharepoint.stackexchange.com/) (please use [#spfx](http://sharepoint.stackexchange.com/tags/spfx/), [#spfx-webparts](http://sharepoint.stackexchange.com/tags/spfx-webparts/), and [#spfx-tooling](http://sharepoint.stackexchange.com/tags/spfx-tooling/) tags)
+* [SharePoint Developer](https://techcommunity.microsoft.com/t5/SharePoint-Developer/bd-p/SharePointDev) group at Microsoft Tech Community
 * [SharePoint Developer UserVoice](https://sharepoint.uservoice.com/forums/329220-sharepoint-dev-platform)
 
 ## Deployment Status
 
 Note: SharePoint Framework web parts are not supported for production use.
 
-The SharePoint Framework is currently available for use in Classic Pages within Office 365 Developer Tenancies.  We’ll be expanding coverage to more Office 365 Tenancies over the coming months.
+The SharePoint Framework is currently available for use in Classic Pages within Office 365 Developer  and First Release Tenancies as a developer review release.
 		
 Of course, you can also get started with our SharePoint Workbench to create and test your web parts locally, on your machine.
 
