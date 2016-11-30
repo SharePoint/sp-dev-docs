@@ -69,13 +69,13 @@ Save the file. The `gulp serve` running in your console will detect this save op
 
 >**Note:** Keep the console window and VS Code side by side to see gulp automatically compile as you save changes in VS Code.
 
-In your browser, go to **workbench.html** locally. If you have already closed the tab, the URL is https://localhost:4321/temp/workbench.html.
+In your browser, switch to the local SharePoint Workbench tab. If you have already closed the tab, the URL is `https://localhost:4321/temp/workbench.html`.
 
 You should see the following in the web part:
 
 ![SharePoint page context in localhost](../../../../images/sp-mock-localhost-wp.png)
 
-Go to **workbench.aspx** hosted in SharePoint. The full URL is https://your-sharepoint-site-url/Shared%20Documents/workbench.aspx.
+Now, navigate to the SharePoint Workbench hosted in SharePoint. The full URL is `https://your-sharepoint-site-url/_layouts/workbench.aspx`.
 
 >**Note:** If you do not have the SPFx developer certificate installed, then Workbench will notify you that it is configured not to load scripts from localhost. Execute `gulp trust-dev-cert` command in your project directory console to install the developer certificate.
 
@@ -234,7 +234,7 @@ You can see that in the **render** method of the web part:
 
 Open the **HelloWorldWebPart** class.
 
-SharePoint workbench gives you the flexibility to test web parts in your local environment and from a SharePoint site. SharePoint Framework aids this capability by helping you understand which environment your web part is running from by using the **EnvironmentType** module. 
+SharePoint Workbench gives you the flexibility to test web parts in your local environment and from a SharePoint site. SharePoint Framework aids this capability by helping you understand which environment your web part is running from by using the **EnvironmentType** module. 
 
 To use the module, you first need to import **EnvironmentType** module from the **@microsoft/sp-client-base** bundle. Add it to the **import** section at the top as shown in the following code:
 

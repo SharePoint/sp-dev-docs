@@ -130,7 +130,7 @@ In the console window that has the **helloworld-webpart** project directory, run
 gulp serve --nobrowser
 ```
 
->**Note:** `--nobrowser` will not automatically launch the Web Part Workbench.
+>**Note:** `--nobrowser` will not automatically launch the SharePoint Workbench.
 
 ## Add the HelloWorld web part to classic page
 

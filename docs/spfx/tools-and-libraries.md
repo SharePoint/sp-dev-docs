@@ -68,8 +68,7 @@ Form more information about webpack, see the following:
 * [TypeScript, React, and Webpack](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
 
 ## Yeoman generators
-[Yeoman](http://yeoman.io/) helps you to kickstart new projects, prescribing best practices and tools to help you stay productive.
-SharePoint Yeoman generator will be available as part of the framework to kickstart new client-side web part projects. Once the project is generator, you can use your choice of IDEs like [Visual Studio](https://www.visualstudio.com/products/visual-studio-community-vs) or HTML/JavaScript code editors like [Visual Studio Code](https://code.visualstudio.com/) or [Sublime Text](https://www.sublimetext.com/) or [Atom](https://atom.io/).  
+[Yeoman](http://yeoman.io/) helps you to kickstart new projects, prescribing best practices and tools to help you stay productive. SharePoint Yeoman generator will be available as part of the framework to kickstart new client-side web part projects. 
 
 For more information about Yeoman, see the following:
 
@@ -80,6 +79,15 @@ The following are some common Yeoman generators that you can try, depending on y
 
 * [generator-react-webpack](https://github.com/newtriks/generator-react-webpack)
 * [generator-angular](https://www.npmjs.com/package/generator-angular)
+
+## Source code editors
+SharePoint Framework is client-side driven and thus you can use your choice of HTML/JavaScript code editors, such as:
+
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [Atom](https://atom.io)
+* [Webstorm](https://www.jetbrains.com/webstorm)
+
+SharePoint Framework documentation uses Visual Studio code in the docs and examples. Visual Studio Code is a lightweight but powerful source code editor from Microsoft which runs on your desktop and is available for Windows, Mac and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Python, PHP) and runtimes.
 
 ## SharePoint REST APIs
 

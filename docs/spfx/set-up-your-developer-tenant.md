@@ -56,20 +56,18 @@ Choose **OK** to create the site collection.
 
 SharePoint will create the developer site and you will be able to see its progress in the SharePoint admin center. After the site is created, you can browse to your developer site collection.
 
-## Put the SharePoint Workbench in the document library
-You need the SharePoint Workbench on your developer site to test your web parts on SharePoint. SharePoint workbench is a developer design surface that enables you to quickly preview and test web parts without deploying them in SharePoint. This procedure uses the default document library in your site collection. This will be called **Documents** in the left navigation.
+## SharePoint Workbench
+SharePoint Workbench is a developer design surface that enables you to quickly preview and test web parts without deploying them in SharePoint. SharePoint Framework developer toolchain contains a version of the Workbench that works locally and helps you quickly test and validate solutions you are building. It is also hosted in your tenancy to preview and test your local web parts in development. You can access the SharePoint Workbench from any SharePoint site in your tenancy by browsing to the following URL:
 
-* Download the [workbench.aspx](https://raw.githubusercontent.com/SharePoint/sp-dev-docs/master/workbench.aspx) file to your local computer. To do this:
-	- Save opened workbench.aspx to your computer. Typically you'd do this by right clicking the page and chosing *"Save as..."* 
-* Upload the file to the **Documents** library in the developer site collection from your computer. To do this:
-	- Open the **Documents** library on SharePoint.
-	- Drag and drop the workbench.aspx to the **Documents** library. Or you can choose **Upload** from the **Documents** library and locate and upload the workbench.aspx file.
+```
+https://your-sharepoint-site/_layouts/workbench.aspx
+```
 
 ## Troubleshooting
 
 You will get an error If you are using a SharePoint site that was provisioned using a self-service site creation. We recommend using a developer site collection or a SharePoint site that was not created using a self-service site creation.
 
-If you get the following exception when moving to the `workbench.aspx` page: 
+If you get the following exception accessing the SharePoint Workbench: 
 
 ```
 "The requested operation is part of an experimental feature that is not supported in the current environment. The requested operation is part of an experimental feature that is not supported in the current environment." 
