@@ -59,14 +59,13 @@ When the scaffold is complete, you should see the following message indicating a
 For information about troubleshooting any errors, see [Known issues](../basics/known-issues).
 
 ### Using your favorite Code Editor
-Because the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor or IDE that supports client-side development to build your web part, such as:
+Because the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor that supports client-side development to build your web part, such as:
 
 * [Visual Studio Code](https://code.visualstudio.com/)
-* [Sublime](https://www.sublimetext.com/)
 * [Atom](https://atom.io)
 * [Webstorm](https://www.jetbrains.com/webstorm)
 
->**Note:** This article uses Visual Studio code in the steps and examples. You can use any code editor that you prefer. 
+SharePoint Framework documentation uses Visual Studio code in the steps and examples. Visual Studio Code is a lightweight but powerful source code editor from Microsoft which runs on your desktop and is available for Windows, Mac and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Python, PHP) and runtimes.. 
    
 ## Preview the web part
 To preview your web part, build and run it on a local web server. The client-side toolchain uses HTTPS endpoint by default. However, since a default certificate is not configured for the local dev environment, your browser will report a certificate error. The SPFx toolchain comes with a developer certificate that you can install for building web parts.
@@ -354,7 +353,7 @@ The **HelloWorldWebPart.manifest.json** file defines the web part metadata such 
 
 SharePoint Workbench is also hosted in SharePoint to preview and test your local web parts in development. The key advantage is that now you are running in SharePoint context and that you will be able to interact with SharePoint data.
 
-Go to the following URL: 'https://your-sharepoint-site/Shared%20Documents/workbench.aspx'
+Go to the following URL: 'https://your-sharepoint-site/_layouts/workbench.aspx'
 
 >**Note:** If you do not have the SPFx developer certificate installed, then Workbench will notify you that it is configured not to load scripts from localhost. Execute `gulp trust-dev-cert` command in your project directory console to install the developer certificate.
 

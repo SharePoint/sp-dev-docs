@@ -30,7 +30,6 @@ sudo npm install -g npm@3
 Install a code editor. You can use any code editor or IDE that supports client-side development to build your web part, such as:
 
 * [Visual Studio Code](https://code.visualstudio.com/)
-* [Sublime](https://www.sublimetext.com/)
 * [Atom](https://atom.io)
 * [Webstorm](https://www.jetbrains.com/webstorm) 
 
@@ -45,13 +44,6 @@ Run the following command:
 ```
 npm install -g --production windows-build-tools
 ```
-
-#### If you are using Visual Studio	
-If you want to use Visual Studio as your development environment, install the following required tools and updates:
-
-* [Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=691978&clcid=0x409)
-* [Visual Studio Update 3](https://www.visualstudio.com/en-us/news/releasenotes/vs2015-update3-vs) or later
-* [Node.js Tools for Visual Studio](https://aka.ms/getntvs)
 
 ### If you are using Ubuntu
 

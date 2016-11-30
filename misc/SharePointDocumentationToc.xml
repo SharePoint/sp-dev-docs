@@ -18,12 +18,10 @@
 			</Item>
 			<Item text="Basics" url="spfx/web-parts/basics" SEODescription="">
 				<Item text="Design considerations" url="spfx/web-parts/basics/design-considerations-for-web-parts" SEODescription="Design your SharePoint client-side web parts to use Office UI Fabric React components, be responsive, and handle publish and edit modes." />
-				<Item text="Add properties to the property pane" url="spfx/web-parts/basics/integrate-with-property-pane" SEODescription="Set up properties for your SharePoint client-side web part and manage them through the property pane." />
-				<Item text="Use Visual Studio" url="spfx/web-parts/basics/use-visual-studio" SEODescription="Configure Visual Studio to open your SharePoint client-side web part project so that you can work with the project in Visual Studio." />
+				<Item text="Add properties to the property pane" url="spfx/web-parts/basics/integrate-with-property-pane" SEODescription="Set up properties for your SharePoint client-side web part and manage them through the property pane." />				
 				<Item text="Add an external library" url="spfx/web-parts/basics/add-an-external-library" SEODescription="Add an external JavaScript library to your SharePoint client-side web part such as small libraries, non-AMD modules, and localized resources." />
 				<Item text="Working with the original __RequestDigest" url="spfx/web-parts/basics/working-with-requestdigest" SEODescription="Learn how to use the __REQUESTDIGEST form field in a web part in the SharePoint Framework" />
-				<Item text="Notes on solution packaging" url="spfx/web-parts/basics/notes-on-solution-packaging" SEODescription="Understand definition details for files used for packaging web parts in solutions in the SharePoint Framework" />
-				<Item text="Known issues" url="spfx/web-parts/basics/known-issues" SEODescription="Known issues with web parts in the SharePoint Framework" />
+				<Item text="Notes on solution packaging" url="spfx/web-parts/basics/notes-on-solution-packaging" SEODescription="Understand definition details for files used for packaging web parts in solutions in the SharePoint Framework" />				
 			</Item>
 			<Item text="Guidance" url="spfx/web-parts/guidance" SEODescription="">
 				<Item text="Use existing JavaScript libraries" url="spfx/web-parts/guidance/use-existing-javascript-libraries" SEODescription="Best practices for using existing JavaScript libraries in your SharePoint client-side web parts." />
