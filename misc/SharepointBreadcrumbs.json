@@ -1,0 +1,41 @@
+﻿{
+  "Cat": "SharePoint",
+  "parentLink": "/sharepoint",
+  "DropdownOptions": [
+    {
+      "Title": "SharePoint Framework Docs",
+      "URL": "/sharepoint/docs/spfx/sharepoint-framework-overview",
+      "Index": "/sharepoint/docs/spfx"
+    },
+    {
+      "Title": "SharePoint Framework API Reference",
+      "URL": "/sharepoint/reference/sharepoint-framework-reference",
+      "Index": "/sharepoint/reference/"
+    },
+    {
+      "Title": "Webhooks",
+      "URL": "/sharepoint/docs/apis/webhooks/overview-sharepoint-webhooks",
+      "Index": "/sharepoint/docs/apis/webhooks/"
+    },
+    {
+      "Title": "SharePoint Add-ins Docs",
+      "URL": "https://msdn.microsoft.com/en-us/library/office/fp179930.aspx",
+      "Index": "NA"
+    },
+    {
+      "Title": "SharePoint REST APIs",
+      "URL": "https://msdn.microsoft.com/en-us/library/office/jj860569.aspx",
+      "Index": "NA"
+    },
+    {
+      "Title": "Submit to Office Store Docs",
+      "URL": "https://msdn.microsoft.com/en-us/library/office/jj220037.aspx",
+      "Index": "NA"
+    },
+    {
+      "Title": "Patterns and Practices",
+      "URL": "https://msdn.microsoft.com/en-us/pnp_articles/office-365-development-patterns-and-practices-solution-guidance",
+      "Index": "NA"
+    }
+  ]
+}
