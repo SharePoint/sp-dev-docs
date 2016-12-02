@@ -45,6 +45,6 @@
 		</Item>
 	</Item>
 	<Item text="Additional SharePoint Resources" url="" SEODescription="">
-		<Item text="SharePoint Add-ins Docs" url="https://msdn.microsoft.com/en-us/library/office/fp179930.aspx" isExternal="true" SEODescription="" />
+		<Item text="SharePoint Add-ins Docs" url="https://msdn.microsoft.com/en-us/library/office/fp179930.aspx" IsExternal="true" SEODescription="" />
 	</Item>
 </Menu>
