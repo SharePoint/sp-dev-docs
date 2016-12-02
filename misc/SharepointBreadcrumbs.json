@@ -3,22 +3,12 @@
   "parentLink": "/sharepoint",
   "DropdownOptions": [
     {
-      "Title": "SharePoint Framework Docs",
+      "Title": "SharePoint Framework",
       "URL": "/sharepoint/docs/spfx/sharepoint-framework-overview",
       "Index": "/sharepoint/docs/spfx"
     },
     {
-      "Title": "SharePoint Framework API Reference",
-      "URL": "/sharepoint/reference/sharepoint-framework-reference",
-      "Index": "/sharepoint/reference/"
-    },
-    {
-      "Title": "Webhooks",
-      "URL": "/sharepoint/docs/apis/webhooks/overview-sharepoint-webhooks",
-      "Index": "/sharepoint/docs/apis/webhooks/"
-    },
-    {
-      "Title": "SharePoint Add-ins Docs",
+      "Title": "SharePoint Add-ins",
       "URL": "https://msdn.microsoft.com/en-us/library/office/fp179930.aspx",
       "Index": "NA"
     },
@@ -28,7 +18,7 @@
       "Index": "NA"
     },
     {
-      "Title": "Submit to Office Store Docs",
+      "Title": "Submit to Office store",
       "URL": "https://msdn.microsoft.com/en-us/library/office/jj220037.aspx",
       "Index": "NA"
     },
