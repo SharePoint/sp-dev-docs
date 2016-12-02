@@ -10,22 +10,22 @@
     {
       "Title": "SharePoint Add-ins",
       "URL": "https://msdn.microsoft.com/en-us/library/office/fp179930.aspx",
-      "Index": ""
+      "Index": "NA"
     },
     {
       "Title": "SharePoint REST APIs",
       "URL": "https://msdn.microsoft.com/en-us/library/office/jj860569.aspx",
-      "Index": ""
+      "Index": "NA"
     },
     {
       "Title": "Submit to Office store",
       "URL": "https://msdn.microsoft.com/en-us/library/office/jj220037.aspx",
-      "Index": ""
+      "Index": "NA"
     },
     {
       "Title": "Patterns and Practices",
       "URL": "https://msdn.microsoft.com/en-us/pnp_articles/office-365-development-patterns-and-practices-solution-guidance",
-      "Index": ""
+      "Index": "NA"
     }
   ]
 }
