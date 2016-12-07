@@ -1,0 +1,31 @@
+﻿{
+  "Cat": "SharePoint",
+  "parentLink": "/sharepoint",
+  "DropdownOptions": [
+    {
+      "Title": "SharePoint Framework",
+      "URL": "/sharepoint/docs/spfx/sharepoint-framework-overview",
+      "Index": "/sharepoint/docs"
+    },
+    {
+      "Title": "SharePoint Framework Reference",
+      "URL": "https://sharepoint.github.io",
+      "Index": "external"
+    },    
+    {
+      "Title": "SharePoint Add-ins",
+      "URL": "https://msdn.microsoft.com/en-us/library/office/fp179930.aspx",
+      "Index": "external"
+    },
+    {
+      "Title": "SharePoint REST APIs",
+      "URL": "https://msdn.microsoft.com/en-us/library/office/jj860569.aspx",
+      "Index": "external"
+    },
+    {
+      "Title": "Patterns and Practices",
+      "URL": "https://msdn.microsoft.com/en-us/pnp_articles/office-365-development-patterns-and-practices-solution-guidance",
+      "Index": "external"
+    }
+  ]
+}
