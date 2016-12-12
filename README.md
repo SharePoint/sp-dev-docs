@@ -4,12 +4,16 @@ The SharePoint Framework is a Page and Part model that enables client-side devel
 
 The SharePoint Framework is still in initial Developer Preview, and it's still rough around the edges.  As we work to improve the SharePoint Framework, we'd love your feedback!  If you have feedback, please use [UserVoice](https://sharepoint.uservoice.com/forums/329220-sharepoint-dev-platform).  If you have technical questions about the framework, we’ll be monitoring [#spfx](http://sharepoint.stackexchange.com/tags/spfx/), [#spfx-webparts](http://sharepoint.stackexchange.com/tags/spfx-webparts/), and [#spfx-tooling](http://sharepoint.stackexchange.com/tags/spfx-tooling/) on [SharePoint StackExchange](http://sharepoint.stackexchange.com/).  
 
-## Get Started 
+## Get Started
 
 * [Setup your Office 365 Developer Tenant](../../wiki/Setup-SharePoint-Tenant)
 * [Setup your Machine](../../wiki/Setup-your-machine)
 * [Go build Tutorial 1: HelloWorld WebPart](../../wiki/HelloWorld-WebPart)
 * [More Tutorials and Walkthroughs](../../wiki/Tutorials and Walkthroughs)
+
+## Reference
+* [sp-component-base](reference/spdx/sp-component-base.md)
+* [sp-core-library](reference/spdx/sp-core-library.md)
 
 ## Learn More
 
@@ -33,7 +37,7 @@ Provide Feedback:
 Note: SharePoint Framework web parts during preview are not supported for production use.
 
 The SharePoint Framework is currently available for use in Classic Pages within Office 365 Developer Tenancies.  We’ll be expanding coverage to more Office 365 Tenancies over the coming months.
-		
+
 (Of course, you can also get started with our SharePoint Workbench to create and test your web parts locally, on your machine.)
 
 ## Have Fun
