@@ -14,6 +14,13 @@ The SharePoint Framework is still in initial Developer Preview, and it's still r
 ## Reference
 * [sp-component-base](reference/spdx/sp-component-base.md)
 * [sp-core-library](reference/spdx/sp-core-library.md)
+* [sp-http](reference/spdx/sp-http.md)
+* [sp-loader](reference/spdx/sp-loader.md)
+* [sp-odata-types](reference/spdx/sp-odata-types.md)
+* [sp-page-context](reference/spdx/sp-page-context.md)
+* [sp-webpart-base](reference/spdx/sp-webpart-base.md)
+
+
 
 ## Learn More
 
