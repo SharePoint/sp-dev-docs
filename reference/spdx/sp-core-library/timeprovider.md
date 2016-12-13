@@ -30,8 +30,8 @@ None
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`getDate()`](getdate.md)     | `public` | `Date` |  |
-|[`getTimestamp()`](gettimestamp.md)     | `public` | `number` |  |
+|[`getDate()`](getdate-pevi9.md)     | `public` | `Date` |  |
+|[`getTimestamp()`](gettimestamp-6xzy9.md)     | `public` | `number` |  |
 
 
 

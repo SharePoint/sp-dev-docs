@@ -15,9 +15,9 @@ This class implements provides a standard way to validate properties and functio
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`isNonemptyString(value,variableName)`](isnonemptystring.md)     | `public, static` | `void` | Throws an exception if the specified string is null, undefined, or an empty string. |
-|[`isNotNullOrUndefined(value,variableName)`](isnotnullorundefined.md)     | `public, static` | `void` | Throws an exception if the specified value is null or undefined. |
-|[`isTrue(value,variableName)`](istrue.md)     | `public, static` | `void` | Throws an exception if the specified value is not true. |
+|[`isNonemptyString(value,variableName)`](isnonemptystring-p7xu9.md)     | `public, static` | `void` | Throws an exception if the specified string is null, undefined, or an empty string. |
+|[`isNotNullOrUndefined(value,variableName)`](isnotnullorundefined-v0mm9.md)     | `public, static` | `void` | Throws an exception if the specified value is null or undefined. |
+|[`isTrue(value,variableName)`](istrue-1ea89.md)     | `public, static` | `void` | Throws an exception if the specified value is not true. |
 
 
 

@@ -24,13 +24,13 @@ This class represents versions that follow the string format of MAJOR.MINOR[.PAT
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`equals(compareWith)`](equals.md)     | `public` | `boolean` | Checks if this version is equal to the input parameter. Missing patch number is treated as zero. Examples: 1.0.0 equals 1.0.0 -> true 2.0.1 equals 2.0.0 -> false 3.0 equals 3.0.0 -> true 04.01 equals 4.1 -> true |
-|[`greaterThan(compareWith)`](greaterthan.md)     | `public` | `boolean` | Checks if this version is greater (i.e. newer) than the input parameter. Missing patch number is treated as zero Examples: 1.0.0 greaterThan 0.0.9 -> true 2.0 greaterThan 2.0.0 -> false 3.0.1 greaterThan 3.0 -> true |
-|[`isValid(versionString)`](isvalid.md)     | `public, static` | `boolean` | Indicates whether a version string is valid |
-|[`lessThan(compareWith)`](lessthan.md)     | `public` | `boolean` | Checks if this version is less (i.e. older) than the input parameter. Missing patch number is treated as zero Examples: 0.9.9 lessThan 1.0.0 -> true 2.0 lessThan 2.0.0 -> false 3.0 lessThan 3.0.1 -> true 04.01 lessThan 4.1 -> false |
-|[`parse(versionString)`](parse.md)     | `public, static` | [`Version`](../sp-core-library/version.md) | Constructs a new Version instance using the version string. tryParse validates the input version string and throws error if it is invalid |
-|[`toString()`](tostring.md)     | `public` | `string` | Object.prototype.toString override The version string in MAJOR.MINOR[.PATCH[.REVISION]] |
-|[`tryParse(versionString)`](tryparse.md)     | `public, static` | [`Version`](../sp-core-library/version.md) | Tries to construct a new Version instance using the version string. Returns undefined if not successful. |
+|[`equals(compareWith)`](equals-nhlc9.md)     | `public` | `boolean` | Checks if this version is equal to the input parameter. Missing patch number is treated as zero. Examples: 1.0.0 equals 1.0.0 -> true 2.0.1 equals 2.0.0 -> false 3.0 equals 3.0.0 -> true 04.01 equals 4.1 -> true |
+|[`greaterThan(compareWith)`](greaterthan-zq3k9.md)     | `public` | `boolean` | Checks if this version is greater (i.e. newer) than the input parameter. Missing patch number is treated as zero Examples: 1.0.0 greaterThan 0.0.9 -> true 2.0 greaterThan 2.0.0 -> false 3.0.1 greaterThan 3.0 -> true |
+|[`isValid(versionString)`](isvalid-hbtk9.md)     | `public, static` | `boolean` | Indicates whether a version string is valid |
+|[`lessThan(compareWith)`](lessthan-7xdg9.md)     | `public` | `boolean` | Checks if this version is less (i.e. older) than the input parameter. Missing patch number is treated as zero Examples: 0.9.9 lessThan 1.0.0 -> true 2.0 lessThan 2.0.0 -> false 3.0 lessThan 3.0.1 -> true 04.01 lessThan 4.1 -> false |
+|[`parse(versionString)`](parse-9eyg9.md)     | `public, static` | [`Version`](../sp-core-library/version.md) | Constructs a new Version instance using the version string. tryParse validates the input version string and throws error if it is invalid |
+|[`toString()`](tostring-qlki9.md)     | `public` | `string` | Object.prototype.toString override The version string in MAJOR.MINOR[.PATCH[.REVISION]] |
+|[`tryParse(versionString)`](tryparse-rx2e9.md)     | `public, static` | [`Version`](../sp-core-library/version.md) | Tries to construct a new Version instance using the version string. Returns undefined if not successful. |
 
 
 

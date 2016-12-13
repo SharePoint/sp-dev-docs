@@ -36,7 +36,7 @@ None
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`generate()`](generate.md)     | `public` | `number` |  |
+|[`generate()`](generate-rfss9.md)     | `public` | `number` |  |
 
 
 

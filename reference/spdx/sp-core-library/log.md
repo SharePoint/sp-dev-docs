@@ -15,10 +15,10 @@ The Log class provides static methods for logging messages at different levels (
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`error(source,error,scope)`](error.md)     | `public, static` | `void` | Logs an error |
-|[`info(source,message,scope)`](info.md)     | `public, static` | `void` | Logs an informational message |
-|[`verbose(source,message,scope)`](verbose.md)     | `public, static` | `void` | Logs a verbose message |
-|[`warn(source,message,scope)`](warn.md)     | `public, static` | `void` | Logs a warning |
+|[`error(source,error,scope)`](error-o8xg9.md)     | `public, static` | `void` | Logs an error |
+|[`info(source,message,scope)`](info-z4ee9.md)     | `public, static` | `void` | Logs an informational message |
+|[`verbose(source,message,scope)`](verbose-j0n09.md)     | `public, static` | `void` | Logs a verbose message |
+|[`warn(source,message,scope)`](warn-l5949.md)     | `public, static` | `void` | Logs a warning |
 
 
 

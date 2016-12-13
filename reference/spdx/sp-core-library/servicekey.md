@@ -38,8 +38,8 @@ None
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`create(name,serviceClass)`](create.md)     | `public, static` | [`ServiceKey`](../sp-core-library/servicekey.md)<T> | Constructs a new ServiceKey whose default implementation will be a new instance of a TypeScript class that accepts the standard constructor parameter. If you want to specify custom constructor parameters, use createCustom() instead. |
-|[`createCustom(name,defaultCreator)`](createcustom.md)     | `public, static` | [`ServiceKey`](../sp-core-library/servicekey.md)<T> | Constructs a new ServiceKey whose default implementation will be obtained by invoking the specified callback. |
+|[`create(name,serviceClass)`](create-6n5k9.md)     | `public, static` | [`ServiceKey`](../sp-core-library/servicekey.md)<T> | Constructs a new ServiceKey whose default implementation will be a new instance of a TypeScript class that accepts the standard constructor parameter. If you want to specify custom constructor parameters, use createCustom() instead. |
+|[`createCustom(name,defaultCreator)`](createcustom-eilw9.md)     | `public, static` | [`ServiceKey`](../sp-core-library/servicekey.md)<T> | Constructs a new ServiceKey whose default implementation will be obtained by invoking the specified callback. |
 
 
 

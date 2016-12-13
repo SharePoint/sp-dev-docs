@@ -16,7 +16,7 @@ This is a ServiceScope interface that enables unit tests to provide a determinis
 
 | Method	   |  Returns	| Description|
 |:-------------|:-------|:-----------|
-|[`generate()`](generate.md)      | `number` | Returns a psuedorandom number between 0 (inclusive) and 1 (exclusive), following the contract of Math.random(). |
+|[`generate()`](generate-rfss9.md)      | `number` | Returns a psuedorandom number between 0 (inclusive) and 1 (exclusive), following the contract of Math.random(). |
 
 
 
