@@ -242,12 +242,18 @@ To use the module, you first need to import **EnvironmentType** module from the 
 import { EnvironmentType } from '@microsoft/sp-client-base';
 ```
 
+You also need to import **Environment** from the **@microsoft/sp-client-base** bundle to be able to check **EnvironmentType**. Add it to the **import** section at the top as shown in the following code:
+
+```ts
+import { Environment } from '@microsoft/sp-client-base';
+```
+
 Add the following private method inside the **HelloWorldWebPart** class to call the respective methods to retrieve list data:
 
 ```ts
 private _renderListAsync(): void {
 	// Local environment
-	if (this.context.environment.type === EnvironmentType.Local) {
+	if (Environment.type === EnvironmentType.Local) {
 		this._getMockListData().then((response) => {
 		this._renderList(response.value);
 		}); }
@@ -262,7 +268,7 @@ private _renderListAsync(): void {
 
 Things to note about hostType in the **_renderListAsync** method:
 
-* The `this.context.environment.type` property will help you check if you are in a local or SharePoint environment.
+* The `Environment.type` property will help you check if you are in a local or SharePoint environment.
 * The correct method is called depending on where your workbench is hosted.
 
 Save the file.
