@@ -1,30 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SupportedProduct="|SharePoint" SupportedVersion="|V1.0|">
-	<Item text="SharePoint Framework Reference" url="spfx" SEODescription="Reference documentation for the SharePoint Framework">
-		<Item text="sp-client-base module" url="spfx/sp-client-base" SEODescription="">
-			<Item text="BasicHttpClient class" url="spfx/sp-client-base/basichttpclient" SEODescription=""/>
-			<Item text="Compare class" url="spfx/sp-client-base/compare" SEODescription=""/>
+	<Item text="SharePoint Framework Reference" url="spdx" SEODescription="Reference documentation for the SharePoint Framework">
+		<Item text="sp-component-base module" url="spdx/sp-component-base" SEODescription="">
+			<Item text="IClientSideComponentContext interface" url="spdx/sp-component-base/iclientsidecomponentcontext" SEODescription=""/>
 		</Item>
-		<Item text="sp-client-preview module" url="spfx/sp-client-preview" SEODescription="">
-			<Item text="BaseClientSideWebPart class" url="spfx/sp-client-preview/baseclientsidewebpart" SEODescription=""/>
-			<Item text="MockWebPartContext class" url="spfx/sp-client-preview/mockwebpartcontext" SEODescription=""/>
+		<Item text="sp-core-library module" url="spdx/sp-core-library" SEODescription="">
+			<Item text="Environment class" url="spdx/sp-core-library/environment" SEODescription=""/>
+			<Item text="Guid class" url="spdx/sp-core-library/guid" SEODescription=""/>
 		</Item>
-		<Item text="sp-module-interfaces module" url="spfx/sp-module-interfaces" SEODescription="">
-			<Item text="IBundleReference interface" url="spfx/sp-module-interfaces/ibundlereference" SEODescription=""/>
-			<Item text="IClientSideComponentLoaderConfig interface" url="spfx/sp-module-interfaces/iclientsidecomponentloaderconfig" SEODescription=""/>
-		</Item>
-		<Item text="es6-collections module" url="spfx/es6-collections" SEODescription="">
-			<Item text="ForEachable interface" url="spfx/es6-collections/foreachable" SEODescription=""/>
-			<Item text="WeakMap interface" url="spfx/es6-collections/weakmap" SEODescription=""/>
-		</Item>
-		<Item text="es6-promise module" url="spfx/es6-promise" SEODescription="">
-			<Item text="Promise module" url="spfx/es6-promise/promise-imodule" SEODescription=""/>
-			<Item text="Promise class" url="spfx/es6-promise/promise" SEODescription=""/>
-			<Item text="Thenable interface" url="spfx/es6-promise/thenable" SEODescription=""/>
-		</Item>
-		<Item text="whatwg-fetch module" url="spfx/whatwg-fetch" SEODescription="">
-			<Item text="Request class" url="spfx/whatwg-fetch/request" SEODescription=""/>
-			<Item text="Headers class" url="spfx/whatwg-fetch/headers" SEODescription=""/>
+		<Item text="horizontalline" url="/" IsSeparation="true" />
+		<Item text="sp-http external module" url="spdx/sp-http" SEODescription="">
+			<Item text="HttpClient class" url="spdx/sp-http/httpclient" SEODescription=""/>
+			<Item text="HttpClientConfiguration class" url="spdx/sp-http/httpclientconfiguration" SEODescription=""/>
 		</Item>
 	</Item>
 </Menu>
