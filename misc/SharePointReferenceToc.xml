@@ -13,5 +13,21 @@
 			<Item text="HttpClient class" url="spdx/sp-http/httpclient" SEODescription=""/>
 			<Item text="HttpClientConfiguration class" url="spdx/sp-http/httpclientconfiguration" SEODescription=""/>
 		</Item>
+		<Item text="sp-loader external module" url="spdx/sp-loader" SEODescription="">
+			<Item text="SPComponentLoader class" url="spdx/sp-loader/spcomponentloader" SEODescription=""/>
+			<Item text="ILoadScriptOptions interface" url="spdx/sp-loader/iloadscriptoptions" SEODescription=""/>
+		</Item>
+		<Item text="sp-odata-types external module" url="spdx/sp-odata-types" SEODescription="">
+			<Item text="IODataBasePermission interface" url="spdx/sp-odata-types/iodatabasepermission" SEODescription=""/>
+			<Item text="IODataChangeToken interface" url="spdx/sp-odata-types/iodatachangetoken" SEODescription=""/>
+		</Item>
+		<Item text="sp-page-context external module" url="spdx/sp-page-context" SEODescription="">
+			<Item text="CultureInfo class" url="spdx/sp-page-context/cultureinfo" SEODescription=""/>
+			<Item text="PageContext class" url="spdx/sp-page-context/pagecontext" SEODescription=""/>
+		</Item>
+		<Item text="sp-webpart-base external module" url="spdx/sp-webpart-base" SEODescription="">
+			<Item text="BaseClientSideWebPart class" url="spdx/sp-webpart-base/baseclientsidewebpart" SEODescription=""/>
+			<Item text="IClientSideWebPartStatusRenderer class" url="spdx/sp-webpart-base/iclientsidewebpartstatusrenderer" SEODescription=""/>
+		</Item>
 	</Item>
 </Menu>
