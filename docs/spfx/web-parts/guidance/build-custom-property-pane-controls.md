@@ -1,8 +1,10 @@
-# Build custom property pane controls
+# Build custom controls for the property pane
 
 > **Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
 
-The SharePoint Framework offers you a number of standard controls to be used for configuring web part properties in the property pane. If your web part requires a specific user interface for its configuration, beyond what is available in the SharePoint Framework, you can build a custom property pane control and use it in your web part. Custom property pane controls allow you to provide your users with an intuitive and rich interface for configuring how the web part should work. In this article you will learn how to build a custom property pane control that is a custom dropdown control that loads its data asynchronously from an external service without blocking the user interface in the web part.
+The SharePoint Framework contains a set of standard controls for the property pane. But sometimes you need additional functionality beyond the basic controls. You might need asynchronous updates to the data on a control, or a specific user interface. Build a custom control for the property pane to get the functionality you need.
+
+In this article you will learn how to build a custom control for the property pane. You will build a custom dropdown control that loads its data asynchronously from an external service without blocking the user interface of the web part.
 
 ![Item dropdown loading available items after selecting a list in the list dropdown](../../../../images/custom-property-pane-control-cascading-loading-items.png)
 
