@@ -48,17 +48,17 @@ Once the scaffolding completes, open your project folder in your code editor. Th
 
 ## Define web part property for storing the selected list
 
-The Web part you are building will show list items from the selected SharePoint list. Users will be able to select a list in the web part properties. To store the selected list create a new web part property named **list**.
+The Web part you are building will show list items from the selected SharePoint list. Users will be able to select a list in the web part properties. To store the selected list create a new web part property named **listName**.
 
-In the code editor open the **src/webparts/listItems/ListItemsWebPartManifest.json** file. Replace the default **description** property with a new property named `list`.
+In the code editor open the **src/webparts/listItems/ListItemsWebPartManifest.json** file. Replace the default **description** property with a new property named `listName`.
 
-![Web part manifest with the 'list' web part property highlighted](../../../../images/custom-property-pane-control-list-property-web-part-manifest.png)
+![Web part manifest with the 'listName' web part property highlighted](../../../../images/custom-property-pane-control-list-property-web-part-manifest.png)
 
 Next, open the **src/webparts/listItems/IListItemsWebPartProps.ts** file and replace its contents with:
 
 ```ts
 export interface IListItemsWebPartProps {
-  list: string;
+  listName: string;
 }
 ```
 
@@ -69,7 +69,7 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
   // ...
   public render(): void {
     const element: React.ReactElement<IListItemsProps> = React.createElement(ListItems, {
-      list: this.properties.list
+      listName: this.properties.listName
     });
 
     ReactDom.render(element, this.domElement);
@@ -94,7 +94,7 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
             {
               groupName: strings.BasicGroupName,
               groupFields: [
-                PropertyPaneTextField('list', {
+                PropertyPaneTextField('listName', {
                   label: strings.ListFieldLabel
                 })
               ]
@@ -147,7 +147,7 @@ export default class ListItems extends React.Component<IListItemsProps, {}> {
                 Customize SharePoint experiences using web parts.
               </p>
               <p className='ms-font-l ms-fontColor-white'>
-                {this.props.list}
+                {this.props.listName}
               </p>
               <a
                 className={css('ms-Button', styles.button)}
@@ -172,7 +172,7 @@ gulp serve
 
 In the web browser, add the **List items** web part to the canvas and open its properties. Verify that the value set for the **List** property is displayed in the web part body.
 
-![Web part showing the value of the 'list' property](../../../../images/custom-property-pane-control-web-part-first-run.png)
+![Web part showing the value of the 'listName' property](../../../../images/custom-property-pane-control-web-part-first-run.png)
 
 ## Create asynchronous dropdown property pane control
 
@@ -445,7 +445,7 @@ export interface IListInfo {
 }
 ```
 
-### Use the asynchronous dropdown property pane control to render the list web part property
+### Use the asynchronous dropdown property pane control to render the listName web part property
 
 #### Reference required types
 
@@ -509,7 +509,7 @@ After selecting a list in the list dropdown, the selected value should be persis
 
 #### Render the list web part property using the asynchronous dropdown property pane control 
 
-In the **ListItemsWebPart** class change the **propertyPaneSettings** getter to use the asynchronous dropdown property pane control to render the **list** web part property.
+In the **ListItemsWebPart** class change the **propertyPaneSettings** getter to use the asynchronous dropdown property pane control to render the **listName** web part property.
 
 ```ts
 export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
@@ -525,11 +525,11 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
             {
               groupName: strings.BasicGroupName,
               groupFields: [
-                new PropertyPaneAsyncDropdown('list', {
+                new PropertyPaneAsyncDropdown('listName', {
                   label: strings.ListFieldLabel,
                   loadOptions: this.loadLists.bind(this),
                   onPropertyChange: this.onListChange.bind(this),
-                  selectedKey: this.properties.list
+                  selectedKey: this.properties.listName
                 })
               ]
             }
@@ -563,9 +563,9 @@ In the code editor open the **src/webparts/listItems/ListItemsWebPart.manifest.j
 ```ts
 // ...
 "properties": {
-   "list: "",
+   "listName": "",
    "item": ""
-   }
+}
 // ...
 ```
 
@@ -575,7 +575,7 @@ Change the code in the **src/webparts/listItems/IListItemsWebPartProps.ts** file
 
 ```ts
 export interface IListItemsWebPartProps {
-  list: string;
+  listName: string;
   item: string;
 }
 ```
@@ -587,7 +587,7 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
   // ...
   public render(): void {
     const element: React.ReactElement<IListItemsProps> = React.createElement(ListItems, {
-      list: this.properties.list,
+      listName: this.properties.listName,
       item: this.properties.item
     });
 
@@ -608,7 +608,7 @@ declare interface IListItemsStrings {
 }
 ```
 
-In the **src/webparts/listItems/loc/en-us.js** file add the missing definition for the **ListFieldLabel** string.
+In the **src/webparts/listItems/loc/en-us.js** file add the missing definition for the **ItemFieldLabel** string.
 
 ```js
 define([], function() {
@@ -640,7 +640,7 @@ export default class ListItems extends React.Component<IListItemsProps, {}> {
                 Customize SharePoint experiences using web parts.
               </p>
               <p className='ms-font-l ms-fontColor-white'>
-                {this.props.list}
+                {this.props.listName}
               </p>
               <p className='ms-font-l ms-fontColor-white'>
                 {this.props.item}
@@ -668,7 +668,7 @@ In the **src/webparts/listItems/ListItemsWebPart.ts** file, in the **ListItemsWe
 export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
   // ...
   private loadItems(): Promise<IDropdownOption[]> {
-    if (!this.properties.list) {
+    if (!this.properties.listName) {
       // resolve to empty options since no list has been selected
       return Promise.resolve();
     }
@@ -699,7 +699,7 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
             }
           ]
         };
-        resolve(items[wp.properties.list]);
+        resolve(items[wp.properties.listName]);
       }, 2000);
     });
   }
@@ -751,7 +751,7 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
       onPropertyChange: this.onListItemChange.bind(this),
       selectedKey: this.properties.item,
       // should be disabled if no list has been selected
-      disabled: !this.properties.list
+      disabled: !this.properties.listName
     });
 
     return {
@@ -764,7 +764,7 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
             {
               groupName: strings.BasicGroupName,
               groupFields: [
-                new PropertyPaneAsyncDropdown('list', {
+                new PropertyPaneAsyncDropdown('listName', {
                   label: strings.ListFieldLabel,
                   loadOptions: this.loadLists.bind(this),
                   onPropertyChange: this.onListChange.bind(this),
@@ -782,7 +782,7 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
 }
 ```
 
-The dropdown for the item property is initialized similarly to the dropdown for the list property. The only difference is that because after selecting a list the items dropdown has to be refreshed, an instance of the control has to be assigned to the class variable.
+The dropdown for the item property is initialized similarly to the dropdown for the listName property. The only difference is that because after selecting a list the items dropdown has to be refreshed, an instance of the control has to be assigned to the class variable.
 
 ### Load items for the selected list
 
