@@ -37,7 +37,7 @@ None
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`initializeFlags()`](initializeflags-whd89.md)     | `protected` | `void` | Child classes should override this method to initialize the flags object. |
+|[`initializeFlags()`](httpclientconfiguration/initializeflags-whd89.md)     | `protected` | `void` | Child classes should override this method to initialize the flags object. |
 |[`overrideWith()`](overridewith-6lrm9.md)     | `public` | [`HttpClientConfiguration`](../sp-http/httpclientconfiguration.md) | Child classes should override this method to construct the child class type, rather than the base class type. |
 
 
