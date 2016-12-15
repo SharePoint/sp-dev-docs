@@ -145,12 +145,6 @@ The following are some key files in the project.
 ### Web part class
 **HelloWorldWebPart.ts** defines the main entry point for the web part. The web part class **HelloWorldWebPart** extends the **BaseClientSideWebPart**. Any client-side web part should extend the **BaseClientSideWebPart** class in order to be defined as a valid web part.
 
-```ts
-public constructor(context: IWebPartContext) {
-    super(context);
-}
-```
-
 **BaseClientSideWebPart** implements the minimal functionality that is required to build a web part. This class also provides many parameters to validate and access to read-only properties such as **displayMode**, web part properties, web part context, web part **instanceId**, the web part **domElement** and much more.
 
 Notice that the web part class is defined to accept a property type **IHelloWorldWebPartProps**.
@@ -183,22 +177,20 @@ public render(): void {
             </a>
           </div>
         </div>
-    </div>
-  </div>`;
-}
-```
+      </div>
+    </div>`;
+}```
 
 This model is flexible enough so that web parts can be built in any JavaScript framework and loaded into the DOM element. 
 
 #### Configure the Web part property pane
-The property pane is defined in the **HelloWorldWebPart** class. The **propertyPaneConfiguration** property is where you need to define the property pane.
+The property pane is defined in the **HelloWorldWebPart** class. The **propertyPaneSettings** property is where you need to define the property pane.
 
 When the properties are defined, you can access them in your web part using `this.properties.<property-value>`, as shown in the **render** method:
 
 ```ts
-<p class="ms-font-l ms-fontColor-white">${this.properties.description}</p>
+<p class="${styles.description}">${this.properties.description}</p>
 ```
-
 Read the [Integrating property pane with a web part](../basics/integrate-with-property-pane) article to learn more about how to work with the property pane and property pane field types.
 
 Lets now add few more properties - a checkbox, dropdown and a toggle - to the property pane. We first start by importing the respective property pane fields from the framework.
@@ -245,10 +237,10 @@ Save the file.
 
 Switch back to the **HelloWorldWebPart.ts** file.
 
-Replace the **propertyPaneConfiguration** method with the code below which adds the new property pane fields and maps them to their respective typed objects.
+Replace the **propertyPaneSettings** method with the code below which adds the new property pane fields and maps them to their respective typed objects.
 
 ```ts
-protected get propertyPaneConfiguration(): IPropertyPaneConfiguration {
+protected get propertyPaneSettings(): IPropertyPaneSettings {
   return {
     pages: [
       {
@@ -295,7 +287,7 @@ protected get propertyPaneConfiguration(): IPropertyPaneConfiguration {
 After you add your properties to the web part properties, you can now access the properties in the same way you accessed the **description** property earlier:
 
 ```ts
-<p class="ms-font-l ms-fontColor-white">${this.properties.test2}</p>
+<p class="ms-font-l ms-fontColor-white">${this.properties.test2}</p>
 ```
 
 To set the default value for the properties, you will need to update the web part manifest's **properties** property bag:
@@ -317,35 +309,26 @@ The web part property pane will now have these default values for those properti
 ### Web part manifest
 The **HelloWorldWebPart.manifest.json** file defines the web part metadata such as version, id, display name, icon, and description. Every web part should contain this manifest.
 
-```ts
+```json
 {
   "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
-  "id": "2f1ef3e2-5f37-4da8-b1ff-52c468a28ae2",
+
+  "id": "6dbf7881-64d4-47cf-bb07-83e5365a8e0d",
+  "alias": "HelloWorldWebPart",
   "componentType": "WebPart",
   "version": "0.0.1",
   "manifestVersion": 2,
-  "preconfiguredEntries": [
-    {
-      "groupId": "2f1ef3e2-5f37-4da8-b1ff-52c468a28ae2",
-      "group": {
-        "default": "Under Development"
-      },
-      "title": {
-        "default": "HelloWorld"
-      },
-      "description": {
-        "default": "HelloWorld description"
-      },
-      "officeFabricIconFontName": "Page",
-      "properties": {
-        "description": "HelloWorld",
-        "test": "Multi-line text field",
-        "test1": true,
-        "test2": "2",
-        "test3": true
-      }
+
+  "preconfiguredEntries": [{
+    "groupId": "6dbf7881-64d4-47cf-bb07-83e5365a8e0d",
+    "group": { "default": "Under Development" },
+    "title": { "default": "HelloWorld" },
+    "description": { "default": "HelloWorld description" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+      "description": "HelloWorld"
     }
-  ]
+  }]
 }
 ```
 

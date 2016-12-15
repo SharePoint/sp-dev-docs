@@ -150,14 +150,10 @@ Choose the **Create** button to create the web part page. SharePoint will create
 	
 In the ribbon, choose **Insert -> Web Part** to open the Web Part Gallery.
 	
-In the Web Part Gallery, choose the category **Custom**.
+In the Web Part Gallery, choose the category **Under Development**.
 	
->**Note:** During preview, client-side web parts will be available under the **Custom** category in the web part gallery. 
+>**Note:** During preview, client-side web parts will be available under the **Under Development** category in the web part gallery. You may also notice the web part available under the **Custom** category during the developer preview.
 
-You should see your Hello World web part.
-
-![Web Part gallery opened with custom category](../../../../images/webpart-gallery-helloworld.png)
-	
 Select the Hello World web part and choose **Add** to add it to the page.
 	
 The web part assets will be loaded from the local environment. In order to load the scripts hosted on your local computer, you need to enable the browser to load unsafe scripts. Depending on the browser you are using, make sure you enable loading unsafe scripts for this session.

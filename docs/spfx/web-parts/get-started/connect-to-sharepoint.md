@@ -236,16 +236,13 @@ Open the **HelloWorldWebPart** class.
 
 SharePoint Workbench gives you the flexibility to test web parts in your local environment and from a SharePoint site. SharePoint Framework aids this capability by helping you understand which environment your web part is running from by using the **EnvironmentType** module. 
 
-To use the module, you first need to import **EnvironmentType** module from the **@microsoft/sp-client-base** bundle. Add it to the **import** section at the top as shown in the following code:
+To use the module, you first need to import the **Environment** and the ***EnvironmentType** modules from the **@microsoft/sp-client-base** bundle. Add it to the **import** section at the top as shown in the following code:
 
 ```ts
-import { EnvironmentType } from '@microsoft/sp-client-base';
-```
-
-You also need to import **Environment** from the **@microsoft/sp-client-base** bundle to be able to check **EnvironmentType**. Add it to the **import** section at the top as shown in the following code:
-
-```ts
-import { Environment } from '@microsoft/sp-client-base';
+import {
+  Environment,
+  EnvironmentType
+} from '@microsoft/sp-client-base';
 ```
 
 Add the following private method inside the **HelloWorldWebPart** class to call the respective methods to retrieve list data:
@@ -257,7 +254,7 @@ private _renderListAsync(): void {
 		this._getMockListData().then((response) => {
 		this._renderList(response.value);
 		}); }
-		else {
+		else if (Environment.type == EnvironmentType.SharePoint) {
 		this._getListData()
 		.then((response) => {
 			this._renderList(response.value);
