@@ -179,7 +179,8 @@ public render(): void {
         </div>
       </div>
     </div>`;
-}```
+}
+```
 
 This model is flexible enough so that web parts can be built in any JavaScript framework and loaded into the DOM element. 
 
@@ -313,23 +314,33 @@ The **HelloWorldWebPart.manifest.json** file defines the web part metadata such 
 {
   "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
 
-  "id": "6dbf7881-64d4-47cf-bb07-83e5365a8e0d",
+  "id": "922a9623-f92f-4971-8574-185b31554e44",
   "alias": "HelloWorldWebPart",
   "componentType": "WebPart",
   "version": "0.0.1",
   "manifestVersion": 2,
 
   "preconfiguredEntries": [{
-    "groupId": "6dbf7881-64d4-47cf-bb07-83e5365a8e0d",
+    "groupId": "922a9623-f92f-4971-8574-185b31554e44",
     "group": { "default": "Under Development" },
     "title": { "default": "HelloWorld" },
     "description": { "default": "HelloWorld description" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "HelloWorld"
+      "description": "HelloWorld",
+      "test": "Multi-line text field",
+      "test1": true,
+      "test2": "2",
+      "test3": true
     }
   }]
 }
+```
+
+Now that we have introduced new properties, make sure that you are again hosting the web part from the local developement environment by executing following command. This will also ensure that the above changes were correctly applied.
+
+```
+gulp serve
 ```
 
 ### Preview the web part in SharePoint
