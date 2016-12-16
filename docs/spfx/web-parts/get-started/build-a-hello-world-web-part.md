@@ -288,7 +288,7 @@ protected get propertyPaneSettings(): IPropertyPaneSettings {
 After you add your properties to the web part properties, you can now access the properties in the same way you accessed the **description** property earlier:
 
 ```ts
-<p class="ms-font-l ms-fontColor-white">${this.properties.test2}</p>
+<p class="ms-font-l ms-fontColor-white">${this.properties.test}</p>
 ```
 
 To set the default value for the properties, you will need to update the web part manifest's **properties** property bag:

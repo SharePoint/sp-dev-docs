@@ -152,7 +152,7 @@ In the ribbon, choose **Insert -> Web Part** to open the Web Part Gallery.
 	
 In the Web Part Gallery, choose the category **Custom**.
 	
->**Note:** During preview, client-side web parts will be available under the **Custom** category in the web part gallery. 
+>**Note:** During preview, client-side web parts will be available under the **Custom** or **Under Development** category in the web part gallery. 
 
 Select the Hello World web part and choose **Add** to add it to the page.
 	

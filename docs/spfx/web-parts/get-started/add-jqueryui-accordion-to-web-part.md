@@ -89,12 +89,6 @@ npm install --save @types/jquery
 npm install --save @types/jqueryui
 ```
 
-Include one other typing:
-
-```
-npm install -- save @types/combokeys
-```
-
 ### Unbundle external dependencies from web part bundle
 By default, any dependencies you add are bundled into the web part bundle. In some cases, this is not ideal. You can choose to unbundle these dependencies from the web part bundle.
 
