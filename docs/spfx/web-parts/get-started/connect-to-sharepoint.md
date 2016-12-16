@@ -42,22 +42,22 @@ Switch to Visual Studio code (or your preferred IDE) and open **src\webparts\hel
 Inside the **render** method, replace the **innerHTML** code block with the following code:
 
 ```ts
-this.domElement.innerHTML = `
-<div class='${styles.helloWorld}'>
-	<div class='${styles.container}'>
-		<div class='ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}'>
-		<div class='ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1'>
-			<span class='ms-font-xl ms-fontColor-white'>Welcome to SharePoint!</span>
-			<p class='ms-font-l ms-fontColor-white'>Customize SharePoint experiences using Web Parts.</p>
-			<p class='ms-font-l ms-fontColor-white'>${this.properties.description}</p>
-			<p class='ms-font-l ms-fontColor-white'>Loading from ${this.context.pageContext.web.title}</p>
-			<a href='https://github.com/SharePoint/sp-dev-docs/wiki' class='ms-Button ${styles.button}'>
-				<span class='ms-Button-label'>Learn more</span>
-			</a>
-		</div>
-		</div>
-</div>
-</div>`;
+    this.domElement.innerHTML = `
+    <div class='${styles.helloWorld}'>
+      <div class='${styles.container}'>
+        <div class='ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}'>
+          <div class='ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1'>
+            <span class='ms-font-xl ms-fontColor-white'>Welcome to SharePoint!</span>
+            <p class='ms-font-l ms-fontColor-white'>Customize SharePoint experiences using Web Parts.</p>
+            <p class='ms-font-l ms-fontColor-white'>${this.properties.description}</p>
+            <p class='ms-font-l ms-fontColor-white'>Loading from ${this.context.pageContext.web.title}</p>
+            <a href='https://github.com/SharePoint/sp-dev-docs/wiki' class='ms-Button ${styles.button}'>
+              <span class='ms-Button-label'>Learn more</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>`;
 ```
 
 Notice how `${ }` is used to output the variable's value in the HTML block. An extra HTML `p` is used to display `this.context.pageContext.web.title`. Since this web part loads from the local environment, the title will be **Local Workbench**.
@@ -75,11 +75,11 @@ You should see the following in the web part:
 
 ![SharePoint page context in localhost](../../../../images/sp-mock-localhost-wp.png)
 
-Now, navigate to the SharePoint Workbench hosted in SharePoint. The full URL is `https://your-sharepoint-site-url/_layouts/workbench.aspx`.
+Now, navigate to the SharePoint Workbench hosted in SharePoint. The full URL is `https://your-sharepoint-site-url/_layouts/workbench.aspx`. Notice that in the SharePoint Online side, you'll need to refresh the page to see the changes.
 
 >**Note:** If you do not have the SPFx developer certificate installed, then Workbench will notify you that it is configured not to load scripts from localhost. Execute `gulp trust-dev-cert` command in your project directory console to install the developer certificate.
 
-You should now see your SharePoint site URL in the web part now that page context is available to the web part.
+You should now see your SharePoint site title in the web part now that page context is available to the web part.
 
 ![SharePoint page context in SharePoint site](../../../../images/sp-lists-spsiteurl-wp.png)
 
@@ -116,7 +116,9 @@ import { ISPList } from './HelloWorldWebPart';
 
 export default class MockHttpClient {
 
-	private static _items: ISPList[] = [{ Title: 'Mock List', Id: '1' }];
+	private static _items: ISPList[] = [{ Title: 'Mock List', Id: '1' },
+										{ Title: 'Mock List 2', Id: '2' },
+										{ Title: 'Mock List 3', Id: '3' }];
 	
 	public static get(restUrl: string, options?: any): Promise<ISPList[]> {
 	return new Promise<ISPList[]>((resolve) => {
@@ -148,13 +150,13 @@ import MockHttpClient from './MockHttpClient';
 Add the following private method that mocks the list retrieval inside the **HelloWorldWebPart** class.
 
 ```ts
-private _getMockListData(): Promise<ISPLists> {
+  private _getMockListData(): Promise<ISPLists> {
     return MockHttpClient.get(this.context.pageContext.web.absoluteUrl)
-	    .then((data: ISPList[]) => {
-	         var listData: ISPLists = { value: data };
-	         return listData;
-	     }) as Promise<ISPLists>;
-}
+      .then((data: ISPList[]) => {
+        var listData: ISPLists = { value: data };
+        return listData;
+      }) as Promise<ISPLists>;
+  }
 ```
 
 Save the file.
@@ -166,12 +168,12 @@ Next you need to retrieve lists from the current site. You will use SharePoint R
 Add the following private method to retrieve lists from SharePoint inside the **HelloWorldWebPart** class.
 
 ```ts
-private _getListData(): Promise<ISPLists> {
-return this.context.httpClient.get(this.context.pageContext.web.absoluteUrl + `/_api/web/lists?$filter=Hidden eq false`)
-		.then((response: Response) => {
-		return response.json();
-		});
-}
+  private _getListData(): Promise<ISPLists> {
+    return this.context.httpClient.get(this.context.pageContext.web.absoluteUrl + `/_api/web/lists?$filter=Hidden eq false`)
+      .then((response: Response) => {
+        return response.json();
+      });
+  }
 ```
 
 The previous method uses a helper class **httpClient** that is available in the SharePoint client-side platform to execute the REST API. It uses the **ISPLists** model and also applies a filter to not retrieve hidden lists.
@@ -236,34 +238,33 @@ Open the **HelloWorldWebPart** class.
 
 SharePoint Workbench gives you the flexibility to test web parts in your local environment and from a SharePoint site. SharePoint Framework aids this capability by helping you understand which environment your web part is running from by using the **EnvironmentType** module. 
 
-To use the module, you first need to import **EnvironmentType** module from the **@microsoft/sp-client-base** bundle. Add it to the **import** section at the top as shown in the following code:
+To use the module, you first need to import the **Environment** and the ***EnvironmentType** modules from the **@microsoft/sp-client-base** bundle. Add it to the **import** section at the top as shown in the following code:
 
 ```ts
-import { EnvironmentType } from '@microsoft/sp-client-base';
-```
-
-You also need to import **Environment** from the **@microsoft/sp-client-base** bundle to be able to check **EnvironmentType**. Add it to the **import** section at the top as shown in the following code:
-
-```ts
-import { Environment } from '@microsoft/sp-client-base';
+import {
+  Environment,
+  EnvironmentType
+} from '@microsoft/sp-client-base';
 ```
 
 Add the following private method inside the **HelloWorldWebPart** class to call the respective methods to retrieve list data:
 
 ```ts
-private _renderListAsync(): void {
-	// Local environment
-	if (Environment.type === EnvironmentType.Local) {
-		this._getMockListData().then((response) => {
-		this._renderList(response.value);
-		}); }
-		else {
-		this._getListData()
-		.then((response) => {
-			this._renderList(response.value);
-		});
-	}
-}
+  private _renderListAsync(): void {
+    // Local environment
+    if (Environment.type === EnvironmentType.Local) {
+      this._getMockListData().then((response) => {
+        this._renderList(response.value);
+      });
+    }
+    else if (Environment.type == EnvironmentType.SharePoint || 
+              Environment.type == EnvironmentType.ClassicSharePoint) {
+      this._getListData()
+        .then((response) => {
+          this._renderList(response.value);
+        });
+    }
+  }
 ```
 
 Things to note about hostType in the **_renderListAsync** method:
@@ -278,20 +279,20 @@ Now you need to render the list data with the value fetched from the REST API.
 Add the following private method inside the **HelloWorldWebPart** class:
 
 ```ts
-private _renderList(items: ISPList[]): void {
-	let html: string = '';
-	items.forEach((item: ISPList) => {
-		html += `
+  private _renderList(items: ISPList[]): void {
+    let html: string = '';
+    items.forEach((item: ISPList) => {
+      html += `
 		<ul class="${styles.list}">
 			<li class="${styles.listItem}">
 				<span class="ms-font-l">${item.Title}</span>
 			</li>
 		</ul>`;
-	});
+    });
 
-	const listContainer: Element = this.domElement.querySelector('#spListContainer');
-	listContainer.innerHTML = html;
-}
+    const listContainer: Element = this.domElement.querySelector('#spListContainer');
+    listContainer.innerHTML = html;
+  }
 ```
 
 The previous method references the new CSS styles added earlier by using the **styles** variable. 

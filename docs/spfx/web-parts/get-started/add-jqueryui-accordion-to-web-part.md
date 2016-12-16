@@ -71,41 +71,28 @@ code .
 In the console, type the following to install jQuery npm package:
 
 ```
-npm i --save jquery
+npm install --save jquery
 ```
 
  Now type the following to install jQueryUI npm package:
 
 ```
-npm i --save jqueryui
+npm install --save jqueryui
 ```
 
-TypeScript Definition Manager (TSD) allows you to search and install type definitions for your project. Use TSD to install the type definitions for jQuery and jQuery UI.
+Next we'll need to install the typings for our project. Starting from TypeScript 2.0, we can use npm to install needed typings.
 
-Because the web part project is primarily a TypeScript project, the TypeScript compiler has to be able to understand the respective types. It also helps to provide the IntelliSense required in the code editor.
-
-To do that, first install [TypeScript definition manager](http://definitelytyped.org/tsd/).
-
-Open your console and run the commands:
+Open your console and install needed types:
 
 ```
-npm i -g tsd
+npm install --save @types/jquery
+npm install --save @types/jqueryui
 ```
-
-Now install jQuery and jQuery UI type definitions:
-
-```
-tsd install jquery jqueryui --save
-```
-
-TSD will install the type definitions into the **/typings** folder. This folder also includes other typings that were scaffolded by the Yeoman generator.
-
-Go to **/typings/jquery** and **/typings/jqueryui** to find the type definitions for jQuery and jQuery UI.
 
 Include one other typing:
 
 ```
-tsd install combokeys --save
+npm install -- save @types/combokeys
 ```
 
 ### Unbundle external dependencies from web part bundle
@@ -149,6 +136,43 @@ To exclude `jQuery` and `jQueryUI` from the default bundle, add the modules to t
 ```
 
 Now when you build your project, `jQuery` and `jQueryUI` will not be bundled into your default web part bundle.
+
+In drop 6 we will also need to add following entry on the externals, if we want to load external files dynamically using module loader. Let's add this under the jquery entries.
+
+```json
+"@microsoft/sp-module-loader": "node_modules/@microsoft/sp-module-loader/dist/sp-module-loader.js"
+```
+
+Full content of the config.json file as currently as follows
+
+```json
+{
+  "entries": [
+    {
+      "entry": "./lib/webparts/jQuery/JQueryWebPart.js",
+      "manifest": "./src/webparts/jQuery/JQueryWebPart.manifest.json",
+      "outputPath": "./dist/j-query.bundle.js"
+    }
+  ],
+  "externals": {
+    "microsoft/sp-client-base": "node_modules/@microsoft/sp-client-base/dist/sp-client-base.js",
+    "@microsoft/sp-webpart-base": "node_modules/@microsoft/sp-webpart-base/dist/sp-webpart-base.js",
+    "@microsoft/sp-client-preview": "node_modules/@microsoft/sp-client-preview/dist/sp-client-preview.js",
+    "@microsoft/sp-lodash-subset": "node_modules/@microsoft/sp-lodash-subset/dist/sp-lodash-subset.js",
+    "office-ui-fabric-react": "node_modules/office-ui-fabric-react/dist/office-ui-fabric-react.js",
+    "react": "node_modules/react/dist/react.min.js",
+    "react-dom": "node_modules/react-dom/dist/react-dom.min.js",
+    "react-dom/server": "node_modules/react-dom/dist/react-dom-server.min.js",
+    "jquery":"node_modules/jquery/dist/jquery.min.js",
+    "jqueryui":"node_modules/jqueryui/jquery-ui.min.js",
+    "@microsoft/sp-module-loader": "node_modules/@microsoft/sp-module-loader/dist/sp-module-loader.js"
+  },
+  "localizedResources": {
+    "jQueryStrings": "webparts/jQuery/loc/{locale}.js"
+  }
+}
+```
+
 
 ## Build the Accordion
 
@@ -228,18 +252,11 @@ import MyAccordionTemplate from './MyAccordionTemplate';
 ### Import jQuery and jQueryUI
 You can import jQuery your web part in the same way that you imported MyAccordionTemplate.
 
-At the top of the file, where you can find other imports, add the following import:
-
-```
-import * as myjQuery from 'jquery';
-```
-
-Notice how you are importing the jQuery module into a custom variable named `myjQuery`. You can call it whatever you want; we recommend that you use a name that is related to your web part. 
-
-Because jQueryUI is a plugin, you load it via a require statement instead of import. Just below the jQuery import, add the following require:
+At the top of the file, where you can find other imports, add the following imports:
 
 ```ts
-require('jqueryui');
+import * as myjQuery from 'jquery';
+import 'jqueryui';
 ```
 
 Next, you'll load some external css files. To do that, use the module loader. Add the following import:

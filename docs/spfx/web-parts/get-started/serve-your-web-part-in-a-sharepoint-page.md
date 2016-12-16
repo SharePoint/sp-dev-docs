@@ -42,7 +42,7 @@ The **package-solution.json** file defines the package metadata as shown in the 
 	"version": "1.0.0.0"
 	},
 	"paths": {
-	"zippedPackage": "helloworld-webpart.spapp"
+	"zippedPackage": "solution/helloworld-webpart.spapp"
 	}
 }
 ```
@@ -53,7 +53,7 @@ In the console window, enter the following command to package your client-side s
 gulp package-solution
 ```
 
-The command will create the package in the `sharepoint` folder:
+The command will create the package in the `sharepoint/solution` folder:
 
 ```
 helloworld-webpart.spapp
@@ -118,7 +118,7 @@ Notice that the **internalModuleBaseUrls** property in the **loaderConfig** entr
 
 ```json
 "internalModuleBaseUrls": [
-	"http://`your-local-machine-name`:4321/"
+	"https://`your-local-machine-name`:4321/"
 ]
 ```
 
@@ -154,10 +154,6 @@ In the Web Part Gallery, choose the category **Custom**.
 	
 >**Note:** During preview, client-side web parts will be available under the **Custom** category in the web part gallery. 
 
-You should see your Hello World web part.
-
-![Web Part gallery opened with custom category](../../../../images/webpart-gallery-helloworld.png)
-	
 Select the Hello World web part and choose **Add** to add it to the page.
 	
 The web part assets will be loaded from the local environment. In order to load the scripts hosted on your local computer, you need to enable the browser to load unsafe scripts. Depending on the browser you are using, make sure you enable loading unsafe scripts for this session.
@@ -195,6 +191,8 @@ Choose the **Ok** button in the server-side property pane to save and close the 
 Since the web part is running in a classic SharePoint page, choosing **Ok** or **Apply** buttons will save the web part properties.
 	
 In the ribbon, choose **Save** to save the page.
+
+>**Note:** Starting from drop 6, client-side web parts work also properly with modern pages.
 
 ## Next steps
 

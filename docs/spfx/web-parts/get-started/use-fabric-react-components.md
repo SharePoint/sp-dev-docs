@@ -112,7 +112,7 @@ To use Office UI Fabric components, you need to install the npm package.
 In the console window, type the following to install the Office UI Fabric component npm package:
 
 ```
-npm i office-ui-fabric-react --save
+npm install office-ui-fabric-react --save
 ```
 
 >**Note:** If you're using Windows, you might get the following exception during this installation: "Error: EPERM: operation not permitted,...". To solve the issue, reopen your console application as an administrator. Open the context menu (right-click) and choose **Run as administrator**. 
