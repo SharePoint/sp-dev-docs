@@ -4,7 +4,7 @@
 
 You can use Visual Studio, or your own custom development environment to build SharePoint client-side web parts. You can use a Mac, PC, or Linux.
 
->**Note:** Before following the steps in this article, be sure to [Set up your Office 365 Tenant](../../set-up-your-developer-tenant).
+>**Note:** Before following the steps in this article, be sure to [Set up your Office 365 Tenant](./set-up-your-developer-tenant).
 
 ## Install developer tools
 
