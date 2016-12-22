@@ -62,7 +62,7 @@ Webpack is a module bundler that takes your web part files an dependencies and g
 
 The development tool chain uses [CommonJS](https://webpack.github.io/docs/commonjs.html) for bundling. This enables you to define modules and where you want to use them. The tool chain also uses [SystemJS](https://github.com/systemjs/systemjs), a universal module loader, to load your modules. This helps you to scope your web parts by making sure that each web part is executed in its own namespace.
 
-Form more information about webpack, see the following:
+For more information about webpack, see the following:
 
 * [Webpack documentation](http://webpack.github.io/docs/what-is-webpack.html)
 * [TypeScript, React, and Webpack](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
