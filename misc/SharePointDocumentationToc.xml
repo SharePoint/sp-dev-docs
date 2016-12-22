@@ -27,6 +27,7 @@
 				<Item text="Use existing JavaScript libraries" url="spfx/web-parts/guidance/use-existing-javascript-libraries" SEODescription="Best practices for using existing JavaScript libraries in your SharePoint client-side web parts." />
 				<Item text="Build web parts with Angular v1.x" url="spfx/web-parts/guidance/build-client-side-web-parts-with-angular-1-x" SEODescription="Use Angular 1.x to build a simple SharePoint Framework client-side web part." />
 				<Item text="Call the Microsoft Graph API" url="spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part" SEODescription="Call the Microsoft Graph API from your SharePoint Framework client-side web part using OAuth." />
+				<Item text="Build custom controls for the property pane" url="spfx/web-parts/guidance/build-custom-property-pane-controls" SEODescription="Build custom controls for additional functionality for the property pane of your SharePoint Framework client-side web part." />
 			</Item>
 		</Item>
 	</Item>
