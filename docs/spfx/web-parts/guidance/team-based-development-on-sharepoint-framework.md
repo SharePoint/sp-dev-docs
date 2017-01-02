@@ -4,7 +4,16 @@ SharePoint Framework is a new development model for building SharePoint customiz
 
 SharePoint Framework is a development model, and despite the differences in the underlying technology, the same concepts apply when using it for building solutions, as to other development models SharePoint developers used in the past. Developers use the SharePoint Framework toolchain to build and test their solutions and once ready, they hand over the solution package to be deployed on the SharePoint tenant for further testing and release.
 
-SharePoint Framework consists of a few different packages. A set of these packages, each in its own specific version, make up a version of the SharePoint Framework. For a project to target a specific version of the SharePoint Framework it has to reference all the different packages in the correct versions. When scaffolding new projects, the SharePoint Framework Yeoman generator automatically adds the necessary references to the package from the corresponding version of the SharePoint Framework. But when upgrading the project to a newer version of the SharePoint Framework developers have to pay extra attention to correctly update version numbers of the SharePoint Framework packages.
+SharePoint Framework consists of a few different packages. These packages, each in its own specific version, make up a release of the SharePoint Framework. For example the drop 6 release of the SharePoint Framework consists of the following package versions:
+
+- @microsoft/sp-client-base v0.5.1
+- @microsoft/sp-client-preview v0.7.1
+- @microsoft/sp-webpart-base v0.2.1
+- @microsoft/sp-build-web v0.8.1
+- @microsoft/sp-module-interfaces v0.5.1
+- @microsoft/sp-webpart-workbench v0.6.1
+
+For a project to target a specific release of the SharePoint Framework it has to reference all the different packages in the correct versions. When scaffolding new projects, the SharePoint Framework Yeoman generator automatically adds the necessary references to the package from the corresponding release of the SharePoint Framework. But when upgrading the project to a newer version of the SharePoint Framework developers have to pay extra attention to correctly update version numbers of the SharePoint Framework packages.
 
 ## Preparing the development environment
 
@@ -16,9 +25,11 @@ There are a few different ways in which developers can configure their developme
 
 Building SharePoint Framework solutions requires developers to use a certain set of tools. Following list covers the basic set of tools required on every SharePoint Framework development environment.
 
-#### Node.js v4 LTS
+#### Node.js
 
-SharePoint Framework requires Node.js v4 LTS to be installed on the developer machine. Node.js is used as the runtime for design-time tools used to build and package the project. While other Node.js versions might work as well, v4 is the only officially supported version. Node.js is installed globally on the developer machine and there are solutions available to support running multiple versions of Node.js side-by-side if necessary.
+SharePoint Framework requires Node.js to be installed on the developer machine. Node.js is used as the runtime for design-time tools used to build and package the project. Node.js is installed globally on the developer machine and there are solutions available to support running multiple versions of Node.js side-by-side if necessary.
+
+> More information about installing Node.js and the supported versions is available at [https://dev.office.com/sharepoint/docs/spfx/set-up-your-development-environment](https://dev.office.com/sharepoint/docs/spfx/set-up-your-development-environment).
 
 #### Npm
 
@@ -54,7 +65,7 @@ In the past it was challenging for many organizations to justify providing Share
 
 #### Developing on the host
 
-Probably the easiest option to setup a development environment for SharePoint Framework projects is to install all the tools directly on the host machine. If your team is working only on SharePoint Framework projects, then they can install Node.js v4 LTS on their machines. If they work on other Node.js projects as well then they could use third party solutions such as [nvm](https://github.com/creationix/nvm) to run multiple versions of Node.js side-by-side.
+Probably the easiest option to setup a development environment for SharePoint Framework projects is to install all the tools directly on the host machine. If your team is working only on SharePoint Framework projects, then they can install Node.js on their machines. If they work on other Node.js projects as well then they could use third party solutions such as [nvm](https://github.com/creationix/nvm) to run multiple versions of Node.js side-by-side.
 
 Following the tools required by the SharePoint Framework toolchain, developers would install Yeoman and the SharePoint Framework Yeoman generator. Typically both these tools are installed globally. Given however, that the SharePoint Framework Yeoman generator is tied to a specific version of the SharePoint Framework and developers might need to work with projects created using a different version, they would have to uninstall and install the version of the generator specific for the particular project they are working on at the moment. A more viable approach would be to install both Yeoman and the SharePoint Framework Yeoman generator locally in the given project. While it introduces some overhead it helps developers ensure that should they need to add new elements to the project in the future they would be compatible with the rest of the project.
 
@@ -66,7 +77,7 @@ In the past the most common approach amongst SharePoint developers was to use vi
 
 When building solutions on the SharePoint Framework organizations can use the same benefits as they used with building SharePoint solutions in the past. Using virtual machines they can isolate the development software from the host operating system which is a common requirement particularly in large organizations. By creating a separate virtual machine for each project developers can ensure that the toolchain they use is compatible with the project even if they need to pick up the particular project in the future.
 
-Using virtual machines is not without drawbacks. Virtual machines are big and require developers to use computers powerful enough to run them with acceptable performance to allow developers to be productive. Additionally, particularly over longer periods of time, developers have to keep the operating system up-to-date and ensure they run all the necessary security updates. As developers work in a virtual machine they either have to spend some time at the beginning of a new project to configure the standard virtual machine to their preferences or have to give in to the standard setup at the cost of their productivity. Because virtual machines run a complete operating system with all its components it's much harder to ensure that all virtual machines used by all developers on the team are consistent.
+Using virtual machines is not without drawbacks. Virtual machines are big and require developers to use computers powerful enough to run them with acceptable performance to be productive. Additionally, particularly over longer periods of time, developers have to keep the operating system up-to-date and ensure they run all the necessary security updates. As developers work in a virtual machine they either have to spend some time at the beginning of a new project to configure the standard virtual machine to their preferences or have to give in to the standard setup at the cost of their productivity. Because virtual machines run a complete operating system with all its components it's much harder to ensure that all virtual machines used by all developers on the team are consistent. Comparing to other types of development environments, using virtual machines for building SharePoint Framework solutions is expensive both from the cost and time point of view.
 
 #### Developing using Docker
 
@@ -90,13 +101,15 @@ A new SharePoint Framework project scaffolded by the SharePoint Framework Yeoman
 
 A common solution to avoid the risk of dependencies changing during the project, in projects built on the open source toolchain, is to lock the version of all dependencies. When adding a dependency to the project developers can choose to install the dependency with a specific version rather than a version range by calling the `npm install` command with the `--save-exact` argument. This however doesn't affect the child dependencies of the particular package. To effectively lock the version of all dependencies and their children in the project, developers can use the `npm shrinkwrap` command. Once executed, it will generate a list of all dependencies and their versions at the moment of execution and record it in the **npm-shrinkwrap.json** file which should be included in the source control. When restoring dependencies npm will use the exact versions from this file rather than the latest version satisfying the particular version range.
 
-> Note: if you have any packages installed in the **node_modules** folder that are not listed as dependencies in the **package.json** file or are not a dependency of one of the packages, you will likely see an error when generating the **npm-shrinkwrap.json** file. In this case you can either see which packages are causing the error and add them to the **packacge.json** or remove them from the **node_modules** folder, or you can delete the **node_modules** folder altogether, restore all dependencies and generate the shrinkwrap file then.
+> Note: if you have any packages installed in the **node_modules** folder that are not listed as dependencies in the **package.json** file or are not a dependency of one of the packages, you will likely see an error when generating the **npm-shrinkwrap.json** file. In this case you can either see which packages are causing the error and add them to the **package.json** or remove them from the **node_modules** folder, or you can delete the **node_modules** folder altogether, restore all dependencies and generate the shrinkwrap file then.
 
 ### Add the project to source control
 
 To allow the rest of the team to work on the same project add it to the source control system that your team is using. The exact steps will differ depending on the system used by your team.
 
-SharePoint Framework projects are scaffolded with the **.gitignore** file which describes which files should be excluded from the source control. If your team is using a source control system other than Git (such as Visual Studio Team System with Team Foundation System repositories), you should ensure that you are including the correct files from the project in the source control. Also excluding the dependencies and autogenerated files during the build process allows you to ensure that your team will work efficiently.
+SharePoint Framework projects are scaffolded with the **.gitignore** file which describes which files should be excluded from the source control. If your team is using a source control system other than Git (such as Visual Studio Team System with Team Foundation System repositories), you should ensure that you are including correct files from the project in the source control. Also excluding the dependencies and autogenerated files during the build process allows you to ensure that your team will work efficiently.
+
+One location developers should particularly pay attention not to include in the source control is the **node_modules** folder. This folder contains packages on which the project depends and which are automatically installed when restoring dependencies using the `npm install` command. Some packages compile to binaries where the compilation process depends on the operating system. If the team is working on different operating system then including the **node_modules** folder in the source control will likely break the build for some team members.
 
 ### Get the project from source control
 
@@ -130,6 +143,12 @@ When using private package registries organizations can choose between different
 
 Using a private package registry allows organizations to centrally manage common code used across the different projects. By defining a separate governance plan around contributing changes to the shared code base, organizations can ensure that the code library is of high quality and that it offers all developers benefits as intended rather than being a burden slowing projects down.
 
+A popular private registry hosted in the cloud is [npm Enterprise](https://www.npmjs.com/enterprise). Organizations that are interested in hosting their registry themselves can choose from a number of open source implementations such as [Sinopia](https://github.com/rlidwka/sinopia) or its fork [Verdaccio](https://github.com/verdaccio/verdaccio) or [Nexus](https://www.sonatype.com/nexus-repository-oss).
+
+> Note: Different engines for hosting private package registries are in different development stages and you should carefully evaluate that the particular engine meets your requirements, both from the functionality, license and support point of view.
+
+To simplify the installation and management of a private package registry, most engines offer ready-to-use Docker images.
+
 ### Linking packages using npm link
 
 An alternative to using a private registry is linking packages. While it doesn't involve setting up a registry, it requires careful coordination on all developer machines and the build server.
@@ -151,13 +170,15 @@ As the code of the shared library stabilizes over time and fewer changes are nee
 
 Software development teams often struggle with maintaining consistency and high quality of their projects. Different developers have different coding styles and preferences. In every team there are more skilled individuals as well as developers who are less experienced in the particular domain. Also, many organizations or verticals have specific regulations with which the software must comply. All these challenges make it harder for developers to stay on track. Particularly when the deadline is nearby developers tend to get things done at the cost of the quality which in the long run is more harmful than not meeting the deadline.
 
-### Choose JavaScript framework for your team and use coding standards
+### Choose JavaScript library for your team and use coding standards
 
 If your team has been building SharePoint customizations in the past, you very likely have coding standards that describe how you build customizations and which tools and libraries you use in your projects. Using coding standards allows you to eliminate the personal preferences of the individual developers from the code which makes it significantly easier to be picked up by other members of your team. Also your coding standards reflect the experience your team gathered over the years allowing you to build customizations more efficiently and of better quality.
 
 Unlike other SharePoint customization models available to date, SharePoint Framework focuses on client-side development. While not strictly required, SharePoint Framework recommends using TypeScript to help developers write better code and catch any inconsistencies already in the build process. There are also hundreds of client-side libraries available to accomplish the same task. If your team has done client-side development in the past, you might already have preference for a particular library. If not, it would be highly beneficial for you to research a few of the most popular libraries and pick one for your team or preferably the whole organization.
 
 By using the same library in all your projects you make it easier to onboard new team members and exchange team members between projects. As you gain more experience with client-side development, your organization will be able to benefit of it across all its projects. Standardizing your projects across the whole organization also shortens the time of delivery and lowers the costs of maintenance of your projects. New libraries are published on the internet every day and if you keep switching between the latest libraries you will find yourself working inefficiently delivering solutions of poor quality.
+
+Standardizing which libraries are used across your organization additionally helps you optimize the performance of your solutions. Because the same library is used across the whole organization, users only need to download it once, what significantly decreases the loading time of the solutions improving the user experience as the result.
 
 Choosing one of the most popular libraries allows you to reuse the knowledge and experience of other developers who have been using that library for a longer period of time and have already solved many of the issues you will likely experience yourself. Also for the most popular libraries there are coding standards available that your team could adopt. By using existing market standards for the particular library you make it easier for your organization to grow your team by hiring developers and helping them become productive faster.
 
