@@ -68,7 +68,8 @@ export default class JQueryAccordionWebPart extends BaseClientSideWebPart<IJQuer
             walking across lava fields, and caving (spelunking) in caves
             left behind by the lava.
             </p>
-          </div><h3>Snow permit</h3>
+          </div>
+          <h3>Snow permit</h3>
           <div>
             <p>
             The Northern region has snow in the mountains during winter.
@@ -143,7 +144,7 @@ gulp serve
 
 After adding the web part to the canvas you should see the accordion working.
 
-![jQuery UI accordion without styles rendered by a SharePoint Framework client-side web part](../../../../images/thirdpartycss-accordion-unstyled.png)
+![jQuery UI accordion without styles rendered by a SharePoint Framework client-side web part](../../../../images/thirdpartycss-accordion-not-styled.png)
 
 At this point you have referenced only the jQuery UI scripts which explains why the accordion is not styled. Next you will add the missing CSS stylesheets to brand the accordion.
 
@@ -239,7 +240,7 @@ gulp serve
 
 After adding the web part to the canvas you should see the accordion working.
 
-![jQuery UI accordion without styles rendered by a SharePoint Framework client-side web part](../../../../images/thirdpartycss-accordion-unstyled.png)
+![jQuery UI accordion without styles rendered by a SharePoint Framework client-side web part](../../../../images/thirdpartycss-accordion-not-styled.png)
 
 In your web browser, open the developer tools, switch to the tab showing the network requests, and reload the page. You should see how both jQuery and jQuery UI are loaded from the CDN.
 
