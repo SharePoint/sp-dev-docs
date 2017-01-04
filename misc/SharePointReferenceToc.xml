@@ -26,8 +26,13 @@
 			<Item text="PageContext class" url="spdx/sp-page-context/pagecontext" SEODescription=""/>
 		</Item>
 		<Item text="sp-webpart-base external module" url="spdx/sp-webpart-base" SEODescription="">
-			<Item text="BaseClientSideWebPart class" url="spdx/sp-webpart-base/baseclientsidewebpart" SEODescription=""/>
-			<Item text="IClientSideWebPartStatusRenderer class" url="spdx/sp-webpart-base/iclientsidewebpartstatusrenderer" SEODescription=""/>
+			<Item text="Classes" url="spdx/sp-webpart-base" SEODescription="">
+				<Item text="BaseClientSideWebPart" url="spdx/sp-webpart-base/baseclientsidewebpart" SEODescription=""/>
+			</Item>
+			<Item text="Interfaces" url="spdx/sp-webpart-base" SEODescription="">
+				<Item text="IClientSideWebPartStatusRenderer" url="spdx/sp-webpart-base/iclientsidewebpartstatusrenderer" SEODescription=""/>
+				<Item text="IPlaceholderProps" url="spdx/sp-webpart-base/iplaceholderprops" SEODescription=""/>
+			</Item>
 		</Item>
 	</Item>
 </Menu>
