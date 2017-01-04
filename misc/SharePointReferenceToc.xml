@@ -1,37 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SupportedProduct="|SharePoint" SupportedVersion="|V1.0|">
 	<Item text="SharePoint Framework Reference" url="spdx" SEODescription="Reference documentation for the SharePoint Framework">
-		<Item text="sp-component-base module" url="spdx/sp-component-base" SEODescription="">
-			<Item text="IClientSideComponentContext interface" url="spdx/sp-component-base/iclientsidecomponentcontext" SEODescription=""/>
+		<Item text="sp-component-base module" url="spdx/sp-component-base-module" SEODescription="">
+			<Item text="Interfaces" url="spdx/sp-component-base" SEODescription="">
+				<Item text="IClientSideComponentContext" url="spdx/sp-component-base/IClientSideComponentContext" SEODescription=""/>
+			</Item>
 		</Item>
-		<Item text="sp-core-library module" url="spdx/sp-core-library" SEODescription="">
-			<Item text="Environment class" url="spdx/sp-core-library/environment" SEODescription=""/>
-			<Item text="Guid class" url="spdx/sp-core-library/guid" SEODescription=""/>
+		<Item text="sp-core-library module" url="spdx/sp-core-library-module" SEODescription="">
+			<Item text="Classes" url="spdx/sp-core-library" SEODescription="">
+				<Item text="Environment" url="spdx/sp-core-library/Environment" SEODescription=""/>
+				<Item text="Guid" url="spdx/sp-core-library/Guid" SEODescription=""/>
+				<Item text="Log" url="spdx/sp-core-library/Log" SEODescription=""/>
+				<Item text="RandomNumberGenerator" url="spdx/sp-core-library/RandomNumberGenerator" SEODescription=""/>
+				<Item text="ServiceKey" url="spdx/sp-core-library/ServiceKey" SEODescription=""/>
+				<Item text="ServiceScope" url="spdx/sp-core-library/ServiceScope" SEODescription=""/>
+				<Item text="TimeProvider" url="spdx/sp-core-library/TimeProvider" SEODescription=""/>
+				<Item text="UrlQueryParameterCollection" url="spdx/sp-core-library/UrlQueryParameterCollection" SEODescription=""/>
+				<Item text="UrlUtilities" url="spdx/sp-core-library/UrlUtilities" SEODescription=""/>
+				<Item text="Validate" url="spdx/sp-core-library/Validate" SEODescription=""/>
+				<Item text="Version" url="spdx/sp-core-library/Version" SEODescription=""/>
+			</Item>
+			<Item text="Enumerations" url="spdx/sp-core-library" SEODescription="">
+				<Item text="DisplayMode" url="spdx/sp-core-library/DisplayMode" SEODescription=""/>
+				<Item text="EnvironmentType" url="spdx/sp-core-library/EnvironmentType" SEODescription=""/>
+			</Item>
+			<Item text="Interfaces" url="spdx/sp-core-library" SEODescription="">
+				<Item text="IRandomNumberGenerator" url="spdx/sp-core-library/IRandomNumberGenerator" SEODescription=""/>
+				<Item text="IServiceCollection" url="spdx/sp-core-library/IServiceCollection" SEODescription=""/>
+				<Item text="ITimeProvider" url="spdx/sp-core-library/ITimeProvider" SEODescription=""/>
+			</Item>
 		</Item>
-		<Item text="horizontalline" url="/" IsSeparation="true" />
-		<Item text="sp-http external module" url="spdx/sp-http" SEODescription="">
-			<Item text="HttpClient class" url="spdx/sp-http/httpclient" SEODescription=""/>
-			<Item text="HttpClientConfiguration class" url="spdx/sp-http/httpclientconfiguration" SEODescription=""/>
+		<Item text="sp-http module" url="spdx/sp-http-module" SEODescription="">
+			<Item text="Classes" url="spdx/sp-http" SEODescription="">
+				<Item text="HttpClient" url="spdx/sp-http/HttpClient" SEODescription=""/>
+				<Item text="HttpClientConfiguration" url="spdx/sp-http/HttpClientConfiguration" SEODescription=""/>
+				<Item text="HttpClientConfigurations" url="spdx/sp-http/HttpClientConfigurations" SEODescription=""/>
+				<Item text="HttpClientResponse" url="spdx/sp-http/HttpClientResponse" SEODescription=""/>
+				<Item text="ODataVersion" url="spdx/sp-http/ODataVersion" SEODescription=""/>
+				<Item text="SPHttpClient" url="spdx/sp-http/SPHttpClient" SEODescription=""/>
+				<Item text="SPHttpClientCommonConfiguration" url="spdx/sp-http/SPHttpClientCommonConfiguration" SEODescription=""/>
+				<Item text="SPHttpClientConfiguration" url="spdx/sp-http/SPHttpClientConfiguration" SEODescription=""/>
+				<Item text="SPHttpClientConfigurations" url="spdx/sp-http/SPHttpClientConfigurations" SEODescription=""/>
+				<Item text="SPHttpClientResponse" url="spdx/sp-http/SPHttpClientResponse" SEODescription=""/>
+			</Item>
+			<Item text="Interfaces" url="spdx/sp-http" SEODescription="">
+				<Item text="IHttpClientConfiguration" url="spdx/sp-http/IHttpClientConfiguration" SEODescription=""/>
+				<Item text="IHttpClientOptions" url="spdx/sp-http/IHttpClientOptions" SEODescription=""/>
+				<Item text="ISPHttpClientCommonConfiguration" url="spdx/sp-http/ISPHttpClientCommonConfiguration" SEODescription=""/>
+				<Item text="ISPHttpClientConfiguration" url="spdx/sp-http/ISPHttpClientConfiguration" SEODescription=""/>
+				<Item text="ISPHttpClientOptions" url="spdx/sp-http/ISPHttpClientOptions" SEODescription=""/>
+			</Item>
 		</Item>
-		<Item text="sp-loader external module" url="spdx/sp-loader" SEODescription="">
-			<Item text="SPComponentLoader class" url="spdx/sp-loader/spcomponentloader" SEODescription=""/>
-			<Item text="ILoadScriptOptions interface" url="spdx/sp-loader/iloadscriptoptions" SEODescription=""/>
+		<Item text="sp-loader module" url="spdx/sp-loader-module" SEODescription="">
+			<Item text="Classes" url="spdx/sp-loader" SEODescription="">
+				<Item text="SPComponentLoader" url="spdx/sp-loader/SPComponentLoader" SEODescription=""/>
+			</Item>
+			<Item text="Interfaces" url="spdx/sp-loader" SEODescription="">
+				<Item text="ILoadScriptOptions" url="spdx/sp-loader/ILoadScriptOptions" SEODescription=""/>
+				<Item text="ISPComponentLoader" url="spdx/sp-loader/ISPComponentLoader" SEODescription=""/>
+			</Item>
 		</Item>
-		<Item text="sp-odata-types external module" url="spdx/sp-odata-types" SEODescription="">
-			<Item text="IODataBasePermission interface" url="spdx/sp-odata-types/iodatabasepermission" SEODescription=""/>
-			<Item text="IODataChangeToken interface" url="spdx/sp-odata-types/iodatachangetoken" SEODescription=""/>
+		<Item text="sp-odata-types module" url="spdx/sp-odata-types-module" SEODescription="">
+			<Item text="Interfaces" url="spdx/sp-odata-types" SEODescription="">
+				<Item text="IODataBasePermission" url="spdx/sp-odata-types/IODataBasePermission" SEODescription=""/>
+				<Item text="IODataChangeToken" url="spdx/sp-odata-types/IODataChangeToken" SEODescription=""/>
+				<Item text="IODataContextWebInformation" url="spdx/sp-odata-types/IODataContextWebInformation" SEODescription=""/>
+				<Item text="IODataList" url="spdx/sp-odata-types/IODataList" SEODescription=""/>
+				<Item text="IODataListItem" url="spdx/sp-odata-types/IODataListItem" SEODescription=""/>
+				<Item text="IODataNavigationNode" url="spdx/sp-odata-types/IODataNavigationNode" SEODescription=""/>
+				<Item text="IODataNavigationNodeCollection" url="spdx/sp-odata-types/IODataNavigationNodeCollection" SEODescription=""/>
+				<Item text="IODataUser" url="spdx/sp-odata-types/IODataUser" SEODescription=""/>
+				<Item text="IODataWeb" url="spdx/sp-odata-types/IODataWeb" SEODescription=""/>
+			</Item>
 		</Item>
-		<Item text="sp-page-context external module" url="spdx/sp-page-context" SEODescription="">
-			<Item text="CultureInfo class" url="spdx/sp-page-context/cultureinfo" SEODescription=""/>
-			<Item text="PageContext class" url="spdx/sp-page-context/pagecontext" SEODescription=""/>
+		<Item text="sp-page-context module" url="spdx/sp-page-context-module" SEODescription="">
+			<Item text="Classes" url="spdx/sp-page-context" SEODescription="">
+				<Item text="CultureInfo" url="spdx/sp-page-context/CultureInfo" SEODescription=""/>
+				<Item text="PageContext" url="spdx/sp-page-context/PageContext" SEODescription=""/>
+				<Item text="SPList" url="spdx/sp-page-context/SPList" SEODescription=""/>
+				<Item text="SPListItem" url="spdx/sp-page-context/SPListItem" SEODescription=""/>
+				<Item text="SPPermission" url="spdx/sp-page-context/SPPermission" SEODescription=""/>
+				<Item text="SPSite" url="spdx/sp-page-context/SPSite" SEODescription=""/>
+				<Item text="SPUser" url="spdx/sp-page-context/SPUser" SEODescription=""/>
+				<Item text="SPWeb" url="spdx/sp-page-context/SPWeb" SEODescription=""/>
+			</Item>
 		</Item>
-		<Item text="sp-webpart-base external module" url="spdx/sp-webpart-base" SEODescription="">
+		<Item text="sp-webpart-base module" url="spdx/sp-webpart-base-module" SEODescription="">
 			<Item text="Classes" url="spdx/sp-webpart-base" SEODescription="">
-				<Item text="BaseClientSideWebPart" url="spdx/sp-webpart-base/baseclientsidewebpart" SEODescription=""/>
+				<Item text="BaseClientSideWebPart" url="spdx/sp-webpart-base/BaseClientSideWebPart" SEODescription=""/>
+			</Item>
+			<Item text="Enumerations" url="spdx/sp-webpart-base" SEODescription="">
+				<Item text="PropertyPaneButtonType" url="spdx/sp-webpart-base/PropertyPaneButtonType" SEODescription=""/>
+				<Item text="PropertyPaneFieldType" url="spdx/sp-webpart-base/PropertyPaneFieldType" SEODescription=""/>
+			</Item>
+			<Item text="Functions" url="spdx/sp-webpart-base" SEODescription="">
+				<Item text="PropertyPaneButton" url="spdx/sp-webpart-base/PropertyPaneButton" SEODescription=""/>
+				<Item text="PropertyPaneCheckbox" url="spdx/sp-webpart-base/PropertyPaneCheckbox" SEODescription=""/>
+				<Item text="PropertyPaneChoiceGroup" url="spdx/sp-webpart-base/PropertyPaneChoiceGroup" SEODescription=""/>
+				<Item text="PropertyPaneDropdown" url="spdx/sp-webpart-base/PropertyPaneDropdown" SEODescription=""/>
+				<Item text="PropertyPaneHorizontalRule" url="spdx/sp-webpart-base/PropertyPaneHorizontalRule" SEODescription=""/>
+				<Item text="PropertyPaneLabel" url="spdx/sp-webpart-base/PropertyPaneLabel" SEODescription=""/>
+				<Item text="PropertyPaneLink" url="spdx/sp-webpart-base/PropertyPaneLink" SEODescription=""/>
+				<Item text="PropertyPaneSlider" url="spdx/sp-webpart-base/PropertyPaneSlider" SEODescription=""/>
+				<Item text="PropertyPaneTextField" url="spdx/sp-webpart-base/PropertyPaneTextField" SEODescription=""/>
+				<Item text="PropertyPaneToggle" url="spdx/sp-webpart-base/PropertyPaneToggle" SEODescription=""/>
 			</Item>
 			<Item text="Interfaces" url="spdx/sp-webpart-base" SEODescription="">
-				<Item text="IClientSideWebPartStatusRenderer" url="spdx/sp-webpart-base/iclientsidewebpartstatusrenderer" SEODescription=""/>
-				<Item text="IPlaceholderProps" url="spdx/sp-webpart-base/iplaceholderprops" SEODescription=""/>
+				<Item text="IClientSideWebPartStatusRenderer" url="spdx/sp-webpart-base/IClientSideWebPartStatusRenderer" SEODescription=""/>
+				<Item text="IPlaceholderProps" url="spdx/sp-webpart-base/IPlaceholderProps" SEODescription=""/>
+				<Item text="IPlaceholderSpinnerProps" url="spdx/sp-webpart-base/IPlaceholderSpinnerProps" SEODescription=""/>
+				<Item text="IPropertyPaneButtonProps" url="spdx/sp-webpart-base/IPropertyPaneButtonProps" SEODescription=""/>
+				<Item text="IPropertyPaneCheckboxProps" url="spdx/sp-webpart-base/IPropertyPaneCheckboxProps" SEODescription=""/>
+				<Item text="IPropertyPaneChoiceGroupOption" url="spdx/sp-webpart-base/IPropertyPaneChoiceGroupOption" SEODescription=""/>
+				<Item text="IPropertyPaneChoiceGroupProps" url="spdx/sp-webpart-base/IPropertyPaneChoiceGroupProps" SEODescription=""/>
+				<Item text="IPropertyPaneConfiguration" url="spdx/sp-webpart-base/IPropertyPaneConfiguration" SEODescription=""/>
+				<Item text="IPropertyPaneCustomFieldProps" url="spdx/sp-webpart-base/IPropertyPaneCustomFieldProps" SEODescription=""/>
+				<Item text="IPropertyPaneDropdownOption" url="spdx/sp-webpart-base/IPropertyPaneDropdownOption" SEODescription=""/>
+				<Item text="IPropertyPaneDropdownProps" url="spdx/sp-webpart-base/IPropertyPaneDropdownProps" SEODescription=""/>
+				<Item text="IPropertyPaneField" url="spdx/sp-webpart-base/IPropertyPaneField" SEODescription=""/>
+				<Item text="IPropertyPaneGroup" url="spdx/sp-webpart-base/IPropertyPaneGroup" SEODescription=""/>
+				<Item text="IPropertyPaneLabelProps" url="spdx/sp-webpart-base/IPropertyPaneLabelProps" SEODescription=""/>
+				<Item text="IPropertyPaneLinkProps" url="spdx/sp-webpart-base/IPropertyPaneLinkProps" SEODescription=""/>
+				<Item text="IPropertyPanePage" url="spdx/sp-webpart-base/IPropertyPanePage" SEODescription=""/>
+				<Item text="IPropertyPanePageHeader" url="spdx/sp-webpart-base/IPropertyPanePageHeader" SEODescription=""/>
+				<Item text="IPropertyPaneSliderProps" url="spdx/sp-webpart-base/IPropertyPaneSliderProps" SEODescription=""/>
+				<Item text="IPropertyPaneTextFieldProps" url="spdx/sp-webpart-base/IPropertyPaneTextFieldProps" SEODescription=""/>
+				<Item text="IPropertyPaneToggleProps" url="spdx/sp-webpart-base/IPropertyPaneToggleProps" SEODescription=""/>
+				<Item text="ISerializedServerProcessedData" url="spdx/sp-webpart-base/ISerializedServerProcessedData" SEODescription=""/>
+				<Item text="ISerializedWebPartData" url="spdx/sp-webpart-base/ISerializedWebPartData" SEODescription=""/>
+				<Item text="IWebPartContext" url="spdx/sp-webpart-base/IWebPartContext" SEODescription=""/>
+				<Item text="IWebPartData" url="spdx/sp-webpart-base/IWebPartData" SEODescription=""/>
+				<Item text="IWebPartPropertiesMetadata" url="spdx/sp-webpart-base/IWebPartPropertiesMetadata" SEODescription=""/>
 			</Item>
 		</Item>
 	</Item>
