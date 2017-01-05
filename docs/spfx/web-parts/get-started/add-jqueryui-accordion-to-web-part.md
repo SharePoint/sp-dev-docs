@@ -108,18 +108,10 @@ The `entries` region contains the default bundle information - in this case, the
 ]
 ```
 
-The `externals` section contains the libraries that are not bundled with the default bundle. 
+You can use the `externals` section contains the libraries that are not bundled with the default bundle. 
 
 ```json
-  "externals": {
-    "@microsoft/sp-client-base": "node_modules/@microsoft/sp-client-base/dist/sp-client-base.js",
-    "@microsoft/sp-webpart-base": "node_modules/@microsoft/sp-webpart-base/dist/sp-webpart-base.js",
-    "@microsoft/sp-lodash-subset": "node_modules/@microsoft/sp-lodash-subset/dist/sp-lodash-subset.js",
-    "office-ui-fabric-react": "node_modules/office-ui-fabric-react/dist/office-ui-fabric-react.js",
-    "react": "node_modules/react/dist/react.min.js",
-    "react-dom": "node_modules/react-dom/dist/react-dom.min.js",
-    "react-dom/server": "node_modules/react-dom/dist/react-dom-server.min.js"
-  },
+  "externals": {},
 ```
 
 To exclude `jQuery` and `jQueryUI` from the default bundle, add the modules to the `externals` section:
@@ -130,12 +122,6 @@ To exclude `jQuery` and `jQueryUI` from the default bundle, add the modules to t
 ```
 
 Now when you build your project, `jQuery` and `jQueryUI` will not be bundled into your default web part bundle.
-
-In drop 6 we will also need to add following entry on the externals, if we want to load external files dynamically using module loader. Let's add this under the jquery entries.
-
-```json
-"@microsoft/sp-module-loader": "node_modules/@microsoft/sp-module-loader/dist/sp-module-loader.js"
-```
 
 Full content of the config.json file as currently as follows
 
@@ -149,17 +135,8 @@ Full content of the config.json file as currently as follows
     }
   ],
   "externals": {
-    "microsoft/sp-client-base": "node_modules/@microsoft/sp-client-base/dist/sp-client-base.js",
-    "@microsoft/sp-webpart-base": "node_modules/@microsoft/sp-webpart-base/dist/sp-webpart-base.js",
-    "@microsoft/sp-client-preview": "node_modules/@microsoft/sp-client-preview/dist/sp-client-preview.js",
-    "@microsoft/sp-lodash-subset": "node_modules/@microsoft/sp-lodash-subset/dist/sp-lodash-subset.js",
-    "office-ui-fabric-react": "node_modules/office-ui-fabric-react/dist/office-ui-fabric-react.js",
-    "react": "node_modules/react/dist/react.min.js",
-    "react-dom": "node_modules/react-dom/dist/react-dom.min.js",
-    "react-dom/server": "node_modules/react-dom/dist/react-dom-server.min.js",
     "jquery":"node_modules/jquery/dist/jquery.min.js",
-    "jqueryui":"node_modules/jqueryui/jquery-ui.min.js",
-    "@microsoft/sp-module-loader": "node_modules/@microsoft/sp-module-loader/dist/sp-module-loader.js"
+    "jqueryui":"node_modules/jqueryui/jquery-ui.min.js"
   },
   "localizedResources": {
     "jQueryStrings": "webparts/jQuery/loc/{locale}.js"
@@ -173,7 +150,7 @@ Full content of the config.json file as currently as follows
 Open the project folder **jquery-webpart** in Visual Studio Code. Your project should have the jQuery web part that you added earlier under the /src/webparts/jQuery folder.
 
 ### Add Accordion HTML
-Add a new file in the `src/webparts/jQuery`folder called **MyAccordionTemplate.ts**.
+Add a new file in the `src/webparts/jQuery` folder called **MyAccordionTemplate.ts**.
 
 Create and export (as a module) a class `MyAccordionTemplate` that holds the HTML code for the accordion.
 
@@ -249,30 +226,24 @@ You can import jQuery your web part in the same way that you imported MyAccordio
 At the top of the file, where you can find other imports, add the following imports:
 
 ```ts
-import * as myjQuery from 'jquery';
+import * as jQuery from 'jquery';
 import 'jqueryui';
 ```
 
 Next, you'll load some external css files. To do that, use the module loader. Add the following import:
 
 ```ts
-import importableModuleLoader from '@microsoft/sp-module-loader';
+import { SPComponentLoader } from '@microsoft/sp-loader';
 ```
 
-To load the jQueryUI styles, in the `JQueryWebPart` web part class, add the following line inside the constructor:
+To load the jQueryUI styles, in the `JQueryWebPart` web part class, you'll need to add a constructor and use the newly imported SPComponentLoader. Add following constructor to your web part. 
 
 ```ts
-importableModuleLoader.loadCss('//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css');
-```
+  public constructor() {
+    super();
 
-The constructor should look like this now:
-
-```ts
-public constructor(context: IWebPartContext){
-    super(context);
-    
-    importableModuleLoader.loadCss('//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css');
-}
+    SPComponentLoader.loadCss('//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css');
+  }
 ```
 
 This code does the following:
@@ -310,12 +281,12 @@ If you play around with the IntelliSense, you will notice you will get full supp
 Finally, initialize the accordion:
 
 ```ts
-myjQuery(this.domElement).children('.accordion').accordion(accordionOptions);
+jQuery('.accordion', this.domElement).accordion(accordionOptions);
 ```
 
-As you can see, you use the variable `myjQuery` that you used to import the `jquery` module. You then initialize the accordion.
+As you can see, you use the variable `jQuery` that you used to import the `jquery` module. You then initialize the accordion.
 
-The complete `render` method class looks like this:
+The complete `render` method looks like this:
 
 ```ts
 public render(): void {
@@ -330,7 +301,7 @@ public render(): void {
     }
   };
 
-  myjQuery(this.domElement).children('.accordion').accordion(accordionOptions);
+  jQuery('.accordion', this.domElement).accordion(accordionOptions);
 }
 ```
 
