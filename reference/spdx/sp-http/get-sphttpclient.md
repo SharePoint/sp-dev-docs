@@ -21,6 +21,6 @@ a promise that will return the result
 |:-------------|:---------------|:------------|
 | `url`    | `string` | the URL to fetch |
 | `configuration`    | [`SPHttpClientConfiguration`](../sp-http/sphttpclientconfiguration.md) | determines the default behavior of SPHttpClient; normally this should be the latest version number from SPHttpClientConfigurations |
-| `options`    | [`ISPHttpClientOptions`](../sp-http/isphttpclientoptions.md) | Optional.additional options that affect the request |
+| `options`    | [`ISPHttpClientOptions`](../sp-http/isphttpclientoptions.md) | __Optional.__ additional options that affect the request |
 
 

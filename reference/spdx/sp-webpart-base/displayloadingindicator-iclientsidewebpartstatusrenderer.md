@@ -20,6 +20,6 @@ Display a loading spinner.
 |:-------------|:---------------|:------------|
 | `domElement`    | `Element` | the webpart container div. |
 | `loadingMessage`    | `string` | the message to be displayed when the loading spinner id displayed. |
-| `timeout`    | `number` | Optional.timeout to render the loading indicator. Default is 900ms. |
+| `timeout`    | `number` | __Optional.__ timeout to render the loading indicator. Default is 900ms. |
 
 

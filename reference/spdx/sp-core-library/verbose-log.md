@@ -20,6 +20,6 @@ Logs a verbose message
 |:-------------|:---------------|:------------|
 | `source`    | `string` | the source from where the message is logged, e.g., the class name. The source provides context information for the logged message. If the source's length is more than 20, only the first 20 characters are kept. |
 | `message`    | `string` | the message to be logged If the message's length is more than 100, only the first 100 characters are kept. |
-| `scope`    | [`ServiceScope`](../sp-core-library/servicescope.md) | Optional.the service scope that the source uses. A service scope can provide more context information (e.g., web part information) to the logged message. |
+| `scope`    | [`ServiceScope`](../sp-core-library/servicescope.md) | __Optional.__ the service scope that the source uses. A service scope can provide more context information (e.g., web part information) to the logged message. |
 
 

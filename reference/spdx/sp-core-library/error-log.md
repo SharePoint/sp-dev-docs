@@ -20,6 +20,6 @@ Logs an error
 |:-------------|:---------------|:------------|
 | `source`    | `string` | the source from where the error is logged, e.g., the class name. The source provides context information for the logged error. If the source's length is more than 20, only the first 20 characters are kept. |
 | `error`    | `Error` | the error to be logged |
-| `scope`    | [`ServiceScope`](../sp-core-library/servicescope.md) | Optional.the service scope that the source uses. A service scope can provide more context information (e.g., web part information) to the logged error. |
+| `scope`    | [`ServiceScope`](../sp-core-library/servicescope.md) | __Optional.__ the service scope that the source uses. A service scope can provide more context information (e.g., web part information) to the logged error. |
 
 

@@ -19,6 +19,6 @@ A promise containing the loaded module.
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `url`    | `string` | The script URL. |
-| `options`    | [`ILoadScriptOptions`](../sp-loader/iloadscriptoptions.md) | Optional.globalExportsName: If the script isn't an AMD module and loads a global member on the page, specify the global member's name. |
+| `options`    | [`ILoadScriptOptions`](../sp-loader/iloadscriptoptions.md) | __Optional.__ globalExportsName: If the script isn't an AMD module and loads a global member on the page, specify the global member's name. |
 
 
