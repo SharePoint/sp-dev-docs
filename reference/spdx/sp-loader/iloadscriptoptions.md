@@ -4,6 +4,8 @@
 
 
 
+
+
 Options for the loadScript() method in ISPComponentLoader
 
 
@@ -14,6 +16,7 @@ Options for the loadScript() method in ISPComponentLoader
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
 |`globalExportsName`      | `string` | If set, the loaded script will be stored in a global variable under this name. |
+
 
 
 

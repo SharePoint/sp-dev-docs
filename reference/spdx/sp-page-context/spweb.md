@@ -4,6 +4,8 @@
 
 
 
+
+
 This class is primarily used with the PageContext class. It provides contextual information for the SharePoint site ("web") that hosts the page.
 
 
@@ -21,6 +23,7 @@ This class is primarily used with the PageContext class. It provides contextual 
 |`serverRelativeUrl`     | `public` | `string` | _Read-only._ Returns the server-relative URL for this SPWeb. Example: "/sites/PubSite/SubWeb" |
 |`templateName`     | `public` | `string` | _Read-only._ Returns the name of the site definition or site template that was used to create the site. Example: "BLOG" represents the Blog template when creating a new site on SharePoint. |
 |`title`     | `public` | `string` | _Read-only._ Returns the title of the current SPWeb. |
+
 
 
 

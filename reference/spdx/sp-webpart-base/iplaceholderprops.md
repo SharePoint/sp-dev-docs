@@ -4,6 +4,8 @@
 
 
 
+
+
 Used to display a placeholder in case of no or temporary content. Button is optional.
 
 
@@ -19,6 +21,7 @@ Used to display a placeholder in case of no or temporary content. Button is opti
 |`icon`      | `string` | Icon className from the MDL2 set. Example: 'ms-Icon--Add'. |
 |`iconText`      | `string` | Heading displayed against the Icon. |
 |`onAdd`      | `() => void` | onClick handler for the button. Optional: As the button is optional. |
+
 
 
 

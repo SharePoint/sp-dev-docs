@@ -4,6 +4,8 @@ _Implements: [`ITimeProvider`](../sp-core-library/itimeprovider.md)_
 
 
 
+
+
 This is the default implementation of ITimeProvider that simply calls the real browser APIs.
 
 
@@ -19,9 +21,6 @@ This is the default implementation of ITimeProvider that simply calls the real b
 #### Parameters
 None
 
-| Parameter	   | Type    | Description |
-|:-------------|:---------------|:------------|
-
 
 
 
@@ -30,8 +29,9 @@ None
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`getDate()`](getdate-pevi9.md)     | `public` | `Date` |  |
-|[`getTimestamp()`](gettimestamp-6xzy9.md)     | `public` | `number` |  |
+|[`getDate()`](getdate-timeprovider.md)     | `public` | `Date` |  |
+|[`getTimestamp()`](gettimestamp-timeprovider.md)     | `public` | `number` |  |
+
 
 
 

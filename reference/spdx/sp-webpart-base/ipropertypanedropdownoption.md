@@ -4,6 +4,8 @@
 
 
 
+
+
 PropertyPane drop down options.
 
 
@@ -16,6 +18,7 @@ PropertyPane drop down options.
 |`index`      | `number` | Index for this option. |
 |`key`      | `string `,` number` | A key to uniquely identify this option. |
 |`text`      | `string` | Text to render for this option. |
+
 
 
 

@@ -4,6 +4,8 @@
 
 
 
+
+
 The page context provides standard definitions for common SharePoint objects that need to be shared between the client-side application, web parts, and other components. Typically the data is fetched via REST queries when navigating to a new page, but it can also be preloaded by the web server, or filled from a custom application cache.
 
 
@@ -19,9 +21,6 @@ The page context provides standard definitions for common SharePoint objects tha
 #### Parameters
 None
 
-| Parameter	   | Type    | Description |
-|:-------------|:---------------|:------------|
-
 
 ## Properties
 
@@ -36,6 +35,7 @@ None
 |`site`     | `public` | [`SPSite`](../sp-page-context/spsite.md) | _Read-only._ Contextual information for the SharePoint site collection ("site") that is hosting the page. |
 |`user`     | `public` | [`SPUser`](../sp-page-context/spuser.md) | _Read-only._ It provides contextual information for the SharePoint user that is accessing the page. This class is primarily used with the PageContext class. |
 |`web`     | `public` | [`SPWeb`](../sp-page-context/spweb.md) | _Read-only._ Contextual information for the SharePoint site ("web") that is hosting the page. |
+
 
 
 

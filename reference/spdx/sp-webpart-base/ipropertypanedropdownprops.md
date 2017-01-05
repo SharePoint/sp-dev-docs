@@ -4,6 +4,8 @@
 
 
 
+
+
 PropertyPane drop down component props.
 
 
@@ -17,6 +19,7 @@ PropertyPane drop down component props.
 |`label`      | `string` | Descriptive label for the Dropdown. |
 |`options`      | [`IPropertyPaneDropdownOption`](../sp-webpart-base/ipropertypanedropdownoption.md)[] | Collection of options for this Dropdown. |
 |`selectedKey`      | `string `,` number` | The key of the initially selected option. |
+
 
 
 

@@ -4,6 +4,8 @@ _Implements: [`IRandomNumberGenerator`](../sp-core-library/irandomnumbergenerato
 
 
 
+
+
 This is the default implementation of IRandomNumberGenerator that simply calls Math.random().
 
 
@@ -19,9 +21,6 @@ This is the default implementation of IRandomNumberGenerator that simply calls M
 #### Parameters
 None
 
-| Parameter	   | Type    | Description |
-|:-------------|:---------------|:------------|
-
 
 ## Properties
 
@@ -36,7 +35,8 @@ None
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`generate()`](generate-rfss9.md)     | `public` | `number` |  |
+|[`generate()`](generate-randomnumbergenerator.md)     | `public` | `number` |  |
+
 
 
 

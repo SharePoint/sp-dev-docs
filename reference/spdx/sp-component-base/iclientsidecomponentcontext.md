@@ -4,6 +4,8 @@
 
 
 
+This is in beta mode
+
 The base context interface for client-side components.
 
 
@@ -19,4 +21,9 @@ The base context interface for client-side components.
 
 
 
+
+
+### Remarks
+
+A "context" object is a collection of well-known services and other objects that are likely to be needed by any business logic working with a component. Each component type has its own specialized extension of this interface, e.g. IWebPartContext for web parts, ICodePartContext for code parts, etc.
 

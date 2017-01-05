@@ -4,6 +4,8 @@
 
 
 
+
+
 Flags interface for HttpClientConfiguration.
 
 
@@ -14,6 +16,7 @@ Flags interface for HttpClientConfiguration.
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
 |`consoleLogging`      | `boolean` | Specifies whether HttpClient should log each request to the debugger console. |
+
 
 
 

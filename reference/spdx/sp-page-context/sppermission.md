@@ -4,6 +4,8 @@
 
 
 
+
+
 This class can be used to determine if the current user has a requested set of permissions. Specifies the built-in permissions available in SharePoint Foundation Derived from OneDriveWeb/ODBNext/odsp-shared https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spbasepermissions.aspx
 
 
@@ -18,9 +20,6 @@ This class can be used to determine if the current user has a requested set of p
 
 #### Parameters
 None
-
-| Parameter	   | Type    | Description |
-|:-------------|:---------------|:------------|
 
 
 ## Properties
@@ -72,9 +71,10 @@ None
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`hasAllPermissions(...requestedPerms)`](hasallpermissions-9qqk9.md)     | `public` | `boolean` | Function for determining if a given permission mask has all of the requested permissions. |
-|[`hasAnyPermissions(...requestedPerms)`](hasanypermissions-kl1k9.md)     | `public` | `boolean` | Function for determining if a given permission mask has any of the requested permissions. |
-|[`hasPermission(requestedPerm)`](haspermission-s9ly9.md)     | `public` | `boolean` | Function for checking if a given permission mask has the requested permission. |
+|[`hasAllPermissions(...requestedPerms)`](hasallpermissions-sppermission.md)     | `public` | `boolean` | Function for determining if a given permission mask has all of the requested permissions. |
+|[`hasAnyPermissions(...requestedPerms)`](hasanypermissions-sppermission.md)     | `public` | `boolean` | Function for determining if a given permission mask has any of the requested permissions. |
+|[`hasPermission(requestedPerm)`](haspermission-sppermission.md)     | `public` | `boolean` | Function for checking if a given permission mask has the requested permission. |
+
 
 
 

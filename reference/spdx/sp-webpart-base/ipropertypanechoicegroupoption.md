@@ -4,6 +4,8 @@
 
 
 
+
+
 PropertyPane ChoiceGroup option props.
 
 
@@ -20,6 +22,7 @@ PropertyPane ChoiceGroup option props.
 |`key`      | `string `,` number` | A required key to uniquely identify the option. |
 |`selectedImageSrc`      | `string` | The src of image for choice field which is selected. |
 |`text`      | `string` | The text string for the option. |
+
 
 
 

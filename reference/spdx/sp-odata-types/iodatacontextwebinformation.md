@@ -4,6 +4,8 @@
 
 
 
+
+
 Represents an OData SP.ContextWebInformation object. For more information about this object
 
 
@@ -19,6 +21,7 @@ Represents an OData SP.ContextWebInformation object. For more information about 
 |`SiteFullUrl`      | `string` | Example: "http:\u002f\u002fexample.com\u002fsites\u002fPubSite" |
 |`SupportedSchemaVersions`      | `string[]` | Example: [ "14.0.0.0", "15.0.0.0" ] |
 |`WebFullUrl`      | `string` | Example: "http:\u002f\u002fexample.com\u002fsites\u002fPubSite" |
+
 
 
 

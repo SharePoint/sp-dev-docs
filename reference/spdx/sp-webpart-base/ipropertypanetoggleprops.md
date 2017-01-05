@@ -4,6 +4,8 @@
 
 
 
+
+
 PropertyPaneToggle component props.
 
 
@@ -19,6 +21,7 @@ PropertyPaneToggle component props.
 |`label`      | `string` | A label for the toggle. |
 |`offText`      | `string` | Test display when toggle is OFF. |
 |`onText`      | `string` | Text to display when toggle is ON. |
+
 
 
 

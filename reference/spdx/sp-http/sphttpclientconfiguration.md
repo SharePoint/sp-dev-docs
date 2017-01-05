@@ -4,6 +4,8 @@ _Implements: [`ISPHttpClientConfiguration`](../sp-http/isphttpclientconfiguratio
 
 
 
+
+
 The SPHttpClientConfiguration object provides a set of switches for enabling/disabling various features of the SPHttpClient class. Normally these switches are set (e.g. when calling SPHttpClient.fetch()) by providing one of the predefined defaults from SPHttpClientConfigurations, however switches can also be changed via the SPHttpClientConfiguration.overrideWith() method.
 
 
@@ -18,9 +20,6 @@ Constructs a new instance of SPHttpClientConfiguration with the specified flags.
 
 #### Parameters
 None
-
-| Parameter	   | Type    | Description |
-|:-------------|:---------------|:------------|
 
 
 ## Properties
@@ -39,8 +38,9 @@ None
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`initializeFlags()`](initializeflags-whd89.md)     | `protected` | `void` |  |
-|[`overrideWith()`](overridewith-6lrm9.md)     | `public` | [`SPHttpClientConfiguration`](../sp-http/sphttpclientconfiguration.md) |  |
+|[`initializeFlags()`](initializeflags-sphttpclientconfiguration.md)     | `protected` | `void` |  |
+|[`overrideWith()`](overridewith-sphttpclientconfiguration.md)     | `public` | [`SPHttpClientConfiguration`](../sp-http/sphttpclientconfiguration.md) |  |
+
 
 
 

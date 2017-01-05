@@ -4,6 +4,8 @@
 
 
 
+
+
 PropertyPaneTextField component props.
 
 
@@ -25,6 +27,7 @@ PropertyPaneTextField component props.
 |`resizable`      | `boolean` | Whether or not the multiline textfield is resizable. Default value is true. |
 |`underlined`      | `boolean` | Whether or not the textfield is underlined. Default value is false. |
 |`value`      | `string` | Current value of the textfield. Only provide this if the textfield is a controlled component where you are maintaining its current state. |
+
 
 
 

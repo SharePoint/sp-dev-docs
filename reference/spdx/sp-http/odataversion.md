@@ -4,6 +4,8 @@
 
 
 
+
+
 Represents supported version of the 'OData-Version' header, which is part of the Open Data Protocol standard.
 
 
@@ -22,8 +24,9 @@ Represents supported version of the 'OData-Version' header, which is part of the
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`toString()`](tostring-qlki9.md)     | `public` | `string` | Returns the 'OData-Version' value, for example '4.0'. |
-|[`tryParseFromHeaders()`](tryparsefromheaders-ead49.md)     | `public, static` | [`ODataVersion`](../sp-http/odataversion.md) | If the 'OData-Version' header is present, this returns the corresponding ODataVersion constant. An error is thrown if the version number is not supported. If the header is missing, then undefined is returned. |
+|[`toString()`](tostring-odataversion.md)     | `public` | `string` | Returns the 'OData-Version' value, for example '4.0'. |
+|[`tryParseFromHeaders()`](tryparsefromheaders-odataversion.md)     | `public, static` | [`ODataVersion`](../sp-http/odataversion.md) | If the 'OData-Version' header is present, this returns the corresponding ODataVersion constant. An error is thrown if the version number is not supported. If the header is missing, then undefined is returned. |
+
 
 
 

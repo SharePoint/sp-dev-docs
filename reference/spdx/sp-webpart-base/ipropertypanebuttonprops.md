@@ -4,6 +4,8 @@
 
 
 
+
+
 PropertyPane button props.
 
 
@@ -21,6 +23,7 @@ PropertyPane button props.
 |`icon`      | `string` | The button icon shown in command or hero type. |
 |`onClick`      | `(value: any) => any` | A callback which is invoked on the button click, which takes in the existing value for the bound property and returns the new value and which is then used to update the properties bag. This update will result in the re-render of the PropertyPane with the new props. |
 |`text`      | `string` | Display text of the element. |
+
 
 
 

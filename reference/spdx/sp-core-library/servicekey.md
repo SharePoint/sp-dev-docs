@@ -4,6 +4,8 @@
 
 _Type parameters: `<T>`_
 
+
+
 The ServiceKey is a lookup key that is used when calling ServiceScope.consume() to fetch a dependency. The key also defines a default implementation of the dependency, which will be autocreated by the root scope if the dependency is not found. Providing a default implementation ensures that new dependencies can be safely introduced without inadvertently breaking components that are loaded by an older host (that does not provide the new dependency).
 
 
@@ -18,9 +20,6 @@ PRIVATE - Do not call this from your own code.
 
 #### Parameters
 None
-
-| Parameter	   | Type    | Description |
-|:-------------|:---------------|:------------|
 
 
 ## Properties
@@ -38,8 +37,9 @@ None
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`create(name,serviceClass)`](create-6n5k9.md)     | `public, static` | [`ServiceKey`](../sp-core-library/servicekey.md)<T> | Constructs a new ServiceKey whose default implementation will be a new instance of a TypeScript class that accepts the standard constructor parameter. If you want to specify custom constructor parameters, use createCustom() instead. |
-|[`createCustom(name,defaultCreator)`](createcustom-eilw9.md)     | `public, static` | [`ServiceKey`](../sp-core-library/servicekey.md)<T> | Constructs a new ServiceKey whose default implementation will be obtained by invoking the specified callback. |
+|[`create(name,serviceClass)`](create-servicekey.md)     | `public, static` | [`ServiceKey`](../sp-core-library/servicekey.md)<T> | Constructs a new ServiceKey whose default implementation will be a new instance of a TypeScript class that accepts the standard constructor parameter. If you want to specify custom constructor parameters, use createCustom() instead. |
+|[`createCustom(name,defaultCreator)`](createcustom-servicekey.md)     | `public, static` | [`ServiceKey`](../sp-core-library/servicekey.md)<T> | Constructs a new ServiceKey whose default implementation will be obtained by invoking the specified callback. |
+
 
 
 

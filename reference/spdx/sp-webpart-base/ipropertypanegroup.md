@@ -4,6 +4,8 @@
 
 
 
+
+
 PropertyPane group. Group is part of the PropertyPanePage.
 
 
@@ -15,6 +17,7 @@ PropertyPane group. Group is part of the PropertyPanePage.
 |:-------------|:-------|:-----------|
 |`groupFields`      | [`IPropertyPaneField`](../sp-webpart-base/ipropertypanefield.md)<any>[] | List of PropertyPane fields. |
 |`groupName`      | `string` | Display name for the group. |
+
 
 
 

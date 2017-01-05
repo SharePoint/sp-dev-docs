@@ -4,6 +4,8 @@ _Implements: [`ISPHttpClientCommonConfiguration`](../sp-http/isphttpclientcommon
 
 
 
+
+
 Common base class for SPHttpClientConfiguration and SPHttpClientBatchConfiguration.
 
 
@@ -18,9 +20,6 @@ Constructs a new instance of SPHttpClientCommonConfiguration with the specified 
 
 #### Parameters
 None
-
-| Parameter	   | Type    | Description |
-|:-------------|:---------------|:------------|
 
 
 ## Properties
@@ -38,8 +37,9 @@ None
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`initializeFlags()`](initializeflags-whd89.md)     | `protected` | `void` |  |
-|[`overrideWith()`](overridewith-6lrm9.md)     | `public` | [`SPHttpClientCommonConfiguration`](../sp-http/sphttpclientcommonconfiguration.md) |  |
+|[`initializeFlags()`](initializeflags-sphttpclientcommonconfiguration.md)     | `protected` | `void` |  |
+|[`overrideWith()`](overridewith-sphttpclientcommonconfiguration.md)     | `public` | [`SPHttpClientCommonConfiguration`](../sp-http/sphttpclientcommonconfiguration.md) |  |
+
 
 
 

@@ -4,6 +4,8 @@
 
 
 
+
+
 Represents an OData SP.Web object. For more information about this object see the MSDN documentation here: https://msdn.microsoft.com/en-us/library/office/jj860569.aspx
 
 
@@ -31,6 +33,7 @@ Represents an OData SP.Web object. For more information about this object see th
 |`UIVersion`      | `number` | Gets or sets the user interface (UI) version of the Web site. Example: 15 |
 |`Url`      | `string` | Gets the absolute URL for the website. Example: "http://example.com/sites/PubSite" |
 |`WebTemplate`      | `string` | Gets the name of the site definition or site template that was used to create the site. Example: "BLANKINTERNET" |
+
 
 
 

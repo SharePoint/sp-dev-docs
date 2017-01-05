@@ -4,6 +4,8 @@
 
 
 
+
+
 Data used for creating a SPPermission object.
 
 
@@ -15,6 +17,7 @@ Data used for creating a SPPermission object.
 |:-------------|:-------|:-----------|
 |`High`      | `number` |  |
 |`Low`      | `number` |  |
+
 
 
 

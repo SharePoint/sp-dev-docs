@@ -4,6 +4,8 @@
 
 
 
+
+
 This class is primarily used with the PageContext class. It provides contextual information for the SharePoint site collection ("site") that hosts the page.
 
 
@@ -22,6 +24,7 @@ This class is primarily used with the PageContext class. It provides contextual 
 |`serverRelativeUrl`     | `public` | `string` | _Read-only._ Returns the server-relative URL for this SPSite. Example: "/sites/PubSite" |
 |`serverRequestPath`     | `public` | `string` | _Read-only._ Returns serverRelativeUrl of the original request. Example: "/teams/SPClientTest/SitePages/Home.aspx" |
 |`sitePagesEnabled`     | `public` | `boolean` | _Read-only._ Returns true if SitePages are enabled on this SPSite. |
+
 
 
 

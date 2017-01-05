@@ -4,6 +4,8 @@ _Implements: `Response`_
 
 
 
+
+
 The Response subclass returned by methods such as HttpClient.fetch().
 
 
@@ -28,15 +30,20 @@ The Response subclass returned by methods such as HttpClient.fetch().
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`arrayBuffer()`](arraybuffer-3xbq9.md)     | `public` | `Promise<ArrayBuffer>` | {@inheritdoc Body.arrayBuffer} |
-|[`blob()`](blob-gulg9.md)     | `public` | `Promise<Blob>` | {@inheritdoc Body.blob} |
-|[`clone()`](clone-mtkw9.md)     | `public` | [`HttpClientResponse`](../sp-http/httpclientresponse.md) |  |
-|[`error()`](error-o8xg9.md)     | `public, static` | `Response` | {@inheritdoc Response.error} |
-|[`formData()`](formdata-zxna9.md)     | `public` | `Promise<FormData>` | {@inheritdoc Body.formData} |
-|[`json()`](json-kjno9.md)     | `public` | `Promise<any>` | {@inheritdoc Body.json} |
-|[`redirect()`](redirect-ikt49.md)     | `public, static` | `Response` | {@inheritdoc Response.redirect} |
-|[`text()`](text-yyde9.md)     | `public` | `Promise<string>` | {@inheritdoc Body.text} |
+|[`arrayBuffer()`](arraybuffer-httpclientresponse.md)     | `public` | `Promise<ArrayBuffer>` | {@inheritdoc Body.arrayBuffer} |
+|[`blob()`](blob-httpclientresponse.md)     | `public` | `Promise<Blob>` | {@inheritdoc Body.blob} |
+|[`clone()`](clone-httpclientresponse.md)     | `public` | [`HttpClientResponse`](../sp-http/httpclientresponse.md) |  |
+|[`error()`](error-httpclientresponse.md)     | `public, static` | `Response` | {@inheritdoc Response.error} |
+|[`formData()`](formdata-httpclientresponse.md)     | `public` | `Promise<FormData>` | {@inheritdoc Body.formData} |
+|[`json()`](json-httpclientresponse.md)     | `public` | `Promise<any>` | {@inheritdoc Body.json} |
+|[`redirect()`](redirect-httpclientresponse.md)     | `public, static` | `Response` | {@inheritdoc Response.redirect} |
+|[`text()`](text-httpclientresponse.md)     | `public` | `Promise<string>` | {@inheritdoc Body.text} |
 
 
 
+
+
+### Remarks
+
+This is a placeholder. In the future, additional HttpClient-specific functionality may be added to this class.
 

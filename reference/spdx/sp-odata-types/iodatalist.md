@@ -4,6 +4,8 @@
 
 
 
+
+
 Represents an OData SP.List object. For more information about this object see the MSDN documentation here: https://msdn.microsoft.com/en-us/library/office/jj860569.aspx
 
 
@@ -26,6 +28,7 @@ Represents an OData SP.List object. For more information about this object see t
 |`ParentWebUrl`      | `string` | Example: "/sites/PubSite" |
 |`TemplateFeatureId`      | `string` | Example: "/Guid(22a9ef51-737b-4ff2-9346-694633fe4416)/" |
 |`Title`      | `string` | Example: "Pages" |
+
 
 
 

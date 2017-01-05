@@ -4,6 +4,8 @@
 
 
 
+
+
 PropertyPane ChoiceGroup props.
 
 
@@ -15,6 +17,7 @@ PropertyPane ChoiceGroup props.
 |:-------------|:-------|:-----------|
 |`label`      | `string` | Descriptive label for the choice group. |
 |`options`      | [`IPropertyPaneChoiceGroupOption`](../sp-webpart-base/ipropertypanechoicegroupoption.md)[] | The options for the choice group. |
+
 
 
 

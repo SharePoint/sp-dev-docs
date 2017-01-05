@@ -4,6 +4,8 @@
 
 
 
+
+
 Represents an OData SP.ListItem object. For more information about this object see the MSDN documentation here: https://msdn.microsoft.com/en-us/library/office/jj860569.aspx
 
 
@@ -17,6 +19,7 @@ Represents an OData SP.ListItem object. For more information about this object s
 |`ID`      | `number` |  |
 |`Title`      | `string` | Title of the List Item |
 |`UniqueId`      | `string` | Example: "/Guid(d5369f3b-bd7a-412a-9c0f-7f0650bb5489)/" |
+
 
 
 

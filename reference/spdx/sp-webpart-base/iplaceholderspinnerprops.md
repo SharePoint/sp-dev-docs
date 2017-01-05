@@ -4,6 +4,8 @@
 
 
 
+
+
 Interface for properties used to display the loading spinner in the web part display area.
 
 
@@ -14,6 +16,7 @@ Interface for properties used to display the loading spinner in the web part dis
 | Property	   | Type	| Description|
 |:-------------|:-------|:-----------|
 |`label`      | `string` | Label associated with the spinner. |
+
 
 
 

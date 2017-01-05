@@ -4,6 +4,8 @@
 
 
 
+
+
 This class is primarily used with the PageContext class. It provides contextual information for the SharePoint user that is accessing the page.
 
 
@@ -17,6 +19,7 @@ This class is primarily used with the PageContext class. It provides contextual 
 |`isAnonymousGuestUser`     | `public` | `boolean` | _Read-only._ Returns if the current user is an anonymous guest. |
 |`isExternalGuestUser`     | `public` | `boolean` | _Read-only._ Returns true if the current user is an external guest. |
 |`loginName`     | `public` | `string` | _Read-only._ The login name for current user. Example: "i:0#.w|domain\user" |
+
 
 
 

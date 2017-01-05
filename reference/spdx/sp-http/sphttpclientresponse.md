@@ -4,6 +4,8 @@
 
 
 
+
+
 The Response subclass returned by methods such as SPHttpClient.fetch().
 
 
@@ -19,9 +21,6 @@ The Response subclass returned by methods such as SPHttpClient.fetch().
 #### Parameters
 None
 
-| Parameter	   | Type    | Description |
-|:-------------|:---------------|:------------|
-
 
 
 
@@ -30,8 +29,13 @@ None
 
 | Method	   | Access Modifier | Returns	| Description|
 |:-------------|:----|:-------|:-----------|
-|[`clone()`](clone-mtkw9.md)     | `public` | [`SPHttpClientResponse`](../sp-http/sphttpclientresponse.md) |  |
+|[`clone()`](clone-sphttpclientresponse.md)     | `public` | [`SPHttpClientResponse`](../sp-http/sphttpclientresponse.md) |  |
 
 
 
+
+
+### Remarks
+
+This is a placeholder. In the future, additional SPHttpClient-specific functionality may be added to this class.
 
