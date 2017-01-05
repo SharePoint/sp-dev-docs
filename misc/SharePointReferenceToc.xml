@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SupportedProduct="|SharePoint" SupportedVersion="|V1.0|">
 	<Item text="SharePoint Framework Reference" url="spdx" SEODescription="Reference documentation for the SharePoint Framework">
+	<Item text="Internal modules" url="spdx" SEODescription=""/>
 		<Item text="sp-component-base module" url="spdx/sp-component-base-module" SEODescription="">
 			<Item text="Interfaces" url="spdx/sp-component-base" SEODescription="">
 				<Item text="IClientSideComponentContext" url="spdx/sp-component-base/IClientSideComponentContext" SEODescription=""/>
@@ -85,6 +86,8 @@
 				<Item text="SPWeb" url="spdx/sp-page-context/SPWeb" SEODescription=""/>
 			</Item>
 		</Item>
+		<Item text="horizontalline" url="/" IsSeparation="true" /> 
+		<Item text="External modules" url="spdx" SEODescription=""/>
 		<Item text="sp-webpart-base module" url="spdx/sp-webpart-base-module" SEODescription="">
 			<Item text="Classes" url="spdx/sp-webpart-base" SEODescription="">
 				<Item text="BaseClientSideWebPart" url="spdx/sp-webpart-base/BaseClientSideWebPart" SEODescription=""/>
