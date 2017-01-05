@@ -37,12 +37,12 @@ The **package-solution.json** file defines the package metadata as shown in the 
 ```json
 {
 	"solution": {
-	"name": "helloworld-webpart-client-side-solution",
-	"id": "ed83e452-2286-4ea0-8f98-c79d257acea5",
-	"version": "1.0.0.0"
+		"name": "helloworld-webpart-client-side-solution",
+		"id": "ed83e452-2286-4ea0-8f98-c79d257acea5",
+		"version": "1.0.0.0"
 	},
 	"paths": {
-	"zippedPackage": "solution/helloworld-webpart.spapp"
+		"zippedPackage": "solution/helloworld-webpart.sppkg"
 	}
 }
 ```
@@ -56,7 +56,7 @@ gulp package-solution
 The command will create the package in the `sharepoint/solution` folder:
 
 ```
-helloworld-webpart.spapp
+helloworld-webpart.sppkg
 ```
 
 ### Package contents
@@ -68,7 +68,7 @@ The package uses SharePoint Feature to package your web part. By default, the gu
 
 You can view the raw package contents in the **sharepoint** folder. 
 
-The contents are then packaged into an **.spapp** file. The package format is very similar to a SharePoint add-ins package and uses Microsoft Open Packaging Conventions to package your solution. 
+The contents are then packaged into an **.sppkg** file. The package format is very similar to a SharePoint add-ins package and uses Microsoft Open Packaging Conventions to package your solution. 
 
 The JavaScript files, CSS and other assets are not packaged and you will have to deploy them to an external location such as a CDN. In order to test the web part during development, you can load all the assets from your local computer. 
 
@@ -78,7 +78,7 @@ Next you need to deploy the package that was generated to the App Catalog.
 
 Go to your site's App Catalog.
 
-Upload or drag and drop the **helloworld-webpart.spapp** to the App Catalog.
+Upload or drag and drop the **helloworld-webpart.sppkg** to the App Catalog.
 
 ![Upload solution to app catalog](../../../../images/upload-solution-app-catalog.png) 
 

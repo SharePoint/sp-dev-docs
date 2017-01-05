@@ -165,22 +165,23 @@ The DOM element where the web part should be rendered is available in the **rend
 ```ts
 public render(): void {
   this.domElement.innerHTML = `
-    <div class="${styles.helloWorld}">
-      <div class="${styles.container}">
-        <div class="ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}">
-          <div class="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
-            <span class="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
-            <p class="ms-font-l ms-fontColor-white">Customize SharePoint experiences using Web Parts.</p>
-            <p class="ms-font-l ms-fontColor-white">${this.properties.description}</p>
-            <a href="https://github.com/SharePoint/sp-dev-docs/wiki" class="ms-Button ${styles.button}">
-              <span class="ms-Button-label">Learn more</span>
-            </a>
-          </div>
-        </div>
+    <div class="${styles.row}">
+      <div class="${styles.column}">
+        <span class="${styles.title}">
+          Welcome to SharePoint!
+        </span>
+        <p class="${styles.subtitle}">
+          Customize SharePoint experiences using Web Parts.
+        </p>
+        <p class="${styles.description}">${escape(this.properties.description)}</p>
+        <a class="ms-Button ${styles.button}" href="https://github.com/SharePoint/sp-dev-docs/wiki">
+          <span class="ms-Button-label">
+            Learn more
+          </span>
+        </a>
       </div>
     </div>`;
-}
-```
+}```
 
 This model is flexible enough so that web parts can be built in any JavaScript framework and loaded into the DOM element. 
 
@@ -190,8 +191,11 @@ The property pane is defined in the **HelloWorldWebPart** class. The **propertyP
 When the properties are defined, you can access them in your web part using `this.properties.<property-value>`, as shown in the **render** method:
 
 ```ts
-<p class="${styles.description}">${this.properties.description}</p>
+<p class="${styles.description}">${escape(this.properties.description)}</p>
 ```
+
+Notice that we are performing a HTML escape on the property's value to ensure a valid string.
+
 Read the [Integrating property pane with a web part](../basics/integrate-with-property-pane) article to learn more about how to work with the property pane and property pane field types.
 
 Lets now add few more properties - a checkbox, dropdown and a toggle - to the property pane. We first start by importing the respective property pane fields from the framework.
@@ -238,10 +242,10 @@ Save the file.
 
 Switch back to the **HelloWorldWebPart.ts** file.
 
-Replace the **propertyPaneSettings** method with the code below which adds the new property pane fields and maps them to their respective typed objects.
+Replace the **getPropertyPaneConfiguration** method with the code below which adds the new property pane fields and maps them to their respective typed objects.
 
 ```ts
-protected get propertyPaneSettings(): IPropertyPaneSettings {
+protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
   return {
     pages: [
       {
@@ -288,7 +292,7 @@ protected get propertyPaneSettings(): IPropertyPaneSettings {
 After you add your properties to the web part properties, you can now access the properties in the same way you accessed the **description** property earlier:
 
 ```ts
-<p class="ms-font-l ms-fontColor-white">${this.properties.test}</p>
+<p class="ms-font-l ms-fontColor-white">${escape(this.properties.test)}</p>
 ```
 
 To set the default value for the properties, you will need to update the web part manifest's **properties** property bag:
