@@ -182,8 +182,7 @@ Copy and paste the following code just below `import MockHttpClient from './Mock
 
 ```ts
 import {
-  SPHttpClient,  
-  SPHttpClientConfigurations
+  SPHttpClient
 } from '@microsoft/sp-http'
 ```
 
@@ -191,7 +190,7 @@ Add the following private method to retrieve lists from SharePoint inside the **
 
 ```ts
 private _getListData(): Promise<ISPLists> {
-  return this.context.spHttpClient.get(this.context.pageContext.web.absoluteUrl + `/_api/web/lists?$filter=Hidden eq false`, SPHttpClientConfigurations.v1)
+  return this.context.spHttpClient.get(this.context.pageContext.web.absoluteUrl + `/_api/web/lists?$filter=Hidden eq false`, SPHttpClient.configurations.v1)
     .then((response: Response) => {
       return response.json();
     });
