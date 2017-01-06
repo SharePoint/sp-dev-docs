@@ -449,6 +449,385 @@ If you open the web part property pane you can confirm that all strings and thei
 
 ![Web part property pane open when testing the web part in the local workbench using the base pseudo locale](../../../../images/localization-web-part-property-pane-qps-ploc.png)
 
+## Localize web part settings values
+
+Microsoft SharePoint supports Multilingual User Interface (MUI) where site administrator can enable multiple languages for the user interface. When the user visits the site, its UI will automatically be displayed using the preferred language based on that user's preferences.
+
+Web parts used on multilingual sites should automatically detect the currently used language and display their contents in that language. SharePoint Framework simplifies this process by automatically loading the resource file corresponding to the currently used language. Additionally, when testing SharePoint Framework web parts using the hosted version of the SharePoint workbench, the workbench also automatically uses the language preferred by the user.
+
+Values configured through web part properties are not stored in resource files. By default the configured value is used as-is which might lead to inconsistencies such as greeting the user in English while her preferred language is Dutch.
+
+![Greeting message displayed in US English despite the workbench being set to use Dutch (Netherlands)](../../../../images/localization-english-greeting-dutch-workbench.png)
+
+Using the building blocks provided with the SharePoint Framework, you can extend your web part with support for storing web part configuration values in multiple languages. For each of the supported languages the property pane will display a separate text field in which the user can enter the translated value for that property.
+
+![Multiple text fields rendered in the web part property pane to allow translation of the web part values](../../../../images/localization-multilingual-properties.png)
+
+> SharePoint site used to test the web part in this tutorial is a multilingual site with the US English, Dutch and German languages enabled. For more information about enabling additional languages in SharePoint sites see the [Choose the languages you want to make available for a site’s user interface](https://support.office.com/en-us/article/Choose-the-languages-you-want-to-make-available-for-a-site-s-user-interface-16d3a83c-05ab-4b50-8fbb-ff576a3351e8) support article.
+
+### Add list of languages supported by SharePoint Online
+
+The list of languages enabled on a multilingual SharePoint site is returned as an array of locale identifiers (LCID number, for example **1033** for US English). The currently used language is however returned as a string, for example **en-US** for US English. As JavaScript doesn't have a native way of converting the LCID number to the locale name and vice versa, you have to do it yourself.
+
+In the code editor open the **./src/webparts/greeting/GreetingWebPart.ts** file and add a new class variable named **locales** with the following code:
+
+```ts
+export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
+  private locales = {
+    1025: 'ar-SA',
+    1026: 'bg-BG',
+    1027: 'ca-ES',
+    1028: 'zh-TW',
+    1029: 'cs-CZ',
+    1030: 'da-DK',
+    1031: 'de-DE',
+    1032: 'el-GR',
+    1033: 'en-US',
+    1035: 'fi-FI',
+    1036: 'fr-FR',
+    1037: 'he-IL',
+    1038: 'hu-HU',
+    1040: 'it-IT',
+    1041: 'ja-JP',
+    1042: 'ko-KR',
+    1043: 'nl-NL',
+    1044: 'nb-NO',
+    1045: 'pl-PL',
+    1046: 'pt-BR',
+    1048: 'ro-RO',
+    1049: 'ru-RU',
+    1050: 'hr-HR',
+    1051: 'sk-SK',
+    1053: 'sv-SE',
+    1054: 'th-TH',
+    1055: 'tr-TR',
+    1057: 'id-ID',
+    1058: 'uk-UA',
+    1060: 'sl-SI',
+    1061: 'et-EE',
+    1062: 'lv-LV',
+    1063: 'lt-LT',
+    1066: 'vi-VN',
+    1068: 'az-Latn-AZ',
+    1069: 'eu-ES',
+    1071: 'mk-MK',
+    1081: 'hi-IN',
+    1086: 'ms-MY',
+    1087: 'kk-KZ',
+    1106: 'cy-GB',
+    1110: 'gl-ES',
+    1164: 'prs-AF',
+    2052: 'zh-CN',
+    2070: 'pt-PT',
+    2074: 'sr-Latn-CS',
+    2108: 'ga-IE',
+    3082: 'es-ES',
+    5146: 'bs-Latn-BA',
+    9242: 'sr-Latn-RS',
+    10266: 'sr-Cyrl-RS',
+  };
+
+  // ...
+}
+```
+
+The **locales** variable lists all languages supported by SharePoint Online.
+
+Next, add two class methods that will allow you to get the LCID from the locale name and the locale name from the LCID:
+
+```ts
+export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
+  // ...
+
+  private getLocaleId(localeName: string): number {
+    const pos: number = (Object as any).values(this.locales).indexOf(localeName);
+    if (pos > -1) {
+      return parseInt(Object.keys(this.locales)[pos]);
+    }
+    else {
+      return 0;
+    }
+  }
+
+  private getLocaleName(localeId: number): string {
+    const pos: number = Object.keys(this.locales).indexOf(localeId.toString());
+    if (pos > -1) {
+      return (Object as any).values(this.locales)[pos];
+    }
+    else {
+      return '';
+    }
+  }
+}
+```
+
+### Remove the standard greeting web part property
+
+Originally, the Greeting web part had the **greeting** property defined where the user could specify the greeting to be displayed on the screen. While adapting the web part to support multilingual SharePoint sites, you need to store multiple values - one for each language. Because you cannot know upfront which languages will be enabled on the particular site, rather than using one static web part property you will dynamically generate web part properties on runtime.
+
+In the code editor open the **./src/webparts/greeting/GreetingWebPart.manifest.json** file and from the **properties** property remove the **greeting** property:
+
+```json
+{
+  // ...
+
+  "preconfiguredEntries": [{
+    "groupId": "edbc4e31-6085-4ffa-85f4-eeffcb0ea2d4",
+    "group": { "default": "Under Development", "nl-nl": "In ontwikkeling" },
+    "title": { "default": "Greeting", "nl-nl": "Begroeting" },
+    "description": { "default": "Greets the user", "nl-nl": "Begroet de gebruiker" },
+    "officeFabricIconFontName": "Page",
+    "properties": {
+    }
+  }]
+}
+```
+
+Next, open the **./src/webparts/greeting/IGreetingWebPartProps.ts** file and remove the **greeting** property from the interface definition:
+
+```ts
+export interface IGreetingWebPartProps {
+}
+```
+
+Because the main React component should display a greeting, open the **./src/webparts/greeting/components/Greeting.tsx** file and change the **IGreetingProps** interface to:
+
+```ts
+export interface IGreetingProps extends IGreetingWebPartProps {
+  greeting: string;
+}
+```
+
+With this modification you can pass the greeting to be displayed from the web part to the React component.
+
+### Display property pane text fields for all enabled languages
+
+Initially, using the web part configuration the user could configure a welcome message. The web part allowed the user to configure a single value which was displayed to all users no matter their language preference. By retrieving the list of languages enabled in the current site, you can dynamically display text fields to allow the user to provide translations for all the languages enabled in the particular site.
+
+#### Load information about languages enabled in the current site
+
+The first step is to load the information about all languages enabled in the current site. In the code editor open the **./src/webparts/greeting/GreetingWebPart.ts** file and add a new class variable named **supportedLanguageIds**:
+
+```ts
+export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
+  // ...
+  private supportedLanguageIds: number[];
+  // ...
+}
+```
+
+Next, in the **GreetingWebPart** class add a new method named **getSupportedLanguageIds**:
+
+```ts
+export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
+  // ...
+
+  private getSupportedLanguageIds(): Promise<number[]> {
+    return new Promise<number[]>((resolve: (supportedLanguageIds: number[]) => void, reject: (error: any) => void): void => {
+      if (this.supportedLanguageIds) {
+        resolve(this.supportedLanguageIds);
+        return;
+      }
+
+      this.context.httpClient.get(this.context.pageContext.web.absoluteUrl + '/_api/web?$select=SupportedUILanguageIds', {
+        headers: {
+          'Accept': 'application/json;odata=nometadata',
+          'odata-version': ''
+        }
+      }).then((response: Response): Promise<{ SupportedUILanguageIds: number[] }> => {
+        return response.json();
+      }).then((siteInfo: { SupportedUILanguageIds: number[] }): void => {
+        this.supportedLanguageIds = siteInfo.SupportedUILanguageIds;
+        resolve(siteInfo.SupportedUILanguageIds);
+      }, (error: any): void => {
+        reject(error);
+      });
+    });
+  }
+}
+```
+
+The list of languages enabled in the current site should be loaded only once. If the information about the languages hasn't been loaded yet, the method uses the standard SharePoint Framework HTTP Client to call the SharePoint REST API and retrieve the information about languages enabled on the current site.
+
+#### Dynamically render text fields for all languages
+
+Now that you can retrieve the information about the languages enabled on the current site, you will display text fields for each of these languages so that the user can specify translated values for the greeting message.
+
+In the code editor open the **./src/webparts/greeting/GreetingWebPart.ts** file and to the **GreetingWebPart** class add a new class variable named **greetingFields**:
+
+```ts
+export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
+  // ...
+  private greetingFields: IPropertyPaneField<any>[] = [];
+  // ...
+}
+```
+
+Change the **import** statement for the **@microsoft/sp-webpart-base** package to:
+
+```ts
+import {
+  BaseClientSideWebPart,
+  IPropertyPaneSettings,
+  IWebPartContext,
+  PropertyPaneTextField,
+  IPropertyPaneField
+} from '@microsoft/sp-webpart-base';
+```
+
+Change the **propertyPaneSettings** getter to get the list of text fields from the newly added **greetingFields** class variable:
+
+```ts
+export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
+  // ...
+
+  protected get propertyPaneSettings(): IPropertyPaneSettings {
+    return {
+      pages: [
+        {
+          header: {
+            description: strings.PropertyPaneDescription
+          },
+          groups: [
+            {
+              groupName: strings.GreetingGroupName,
+              groupFields: this.greetingFields
+            }
+          ]
+        }
+      ]
+    };
+  }
+
+  // ...
+}
+```
+
+If the particular site has multiple languages enabled, the web part will render multiple fields for the user to enter the greeting message. To make it clear that these fields belong together put them in a separate group. In the code editor open the **./src/webparts/greeting/loc/mystrings.d.ts** file and change its code to:
+
+```ts
+declare interface IGreetingStrings {
+  PropertyPaneDescription: string;
+  GreetingGroupName: string;
+  LearnMoreButtonLabel: string;
+}
+
+declare module 'greetingStrings' {
+  const strings: IGreetingStrings;
+  export = strings;
+}
+```
+
+Update the resource files accordingly to provide values for the **GreetingGroupName** string.
+
+**./src/webparts/greeting/loc/en-us.js**:
+
+```js
+define([], function() {
+  return {
+    "PropertyPaneDescription": "Greeting web part configuration",
+    "GreetingGroupName": "Greeting to show in the web part",
+    "LearnMoreButtonLabel": "Learn more"
+  }
+});
+```
+
+**./src/webparts/greeting/loc/nl-nl.js**:
+
+```js
+define([], function() {
+  return {
+    "PropertyPaneDescription": "Instellingen van het begroeting webonderdeel",
+    "GreetingGroupName": "Begroeting die in het webonderdeel getoond wordt",
+    "LearnMoreButtonLabel": "Meer informatie"
+  }
+});
+```
+
+**./src/webparts/greeting/loc/qps-ploc.js**:
+
+```js
+define([], function() {
+  return {
+    "PropertyPaneDescription": "[!!! Gřèèƭïñϱ ωèβ ƥářƭ çôñƒïϱúřáƭïôñ ℓôřè₥ ïƥƨú !!!]",
+    "GreetingGroupName": "[!!! Gřèèƭïñϱ ƭô ƨλôω ïñ ƭλè ωèβ ƥářƭ ℓôřè₥ ïƥƨú !!!]",
+    "LearnMoreButtonLabel": "[!!! £èářñ ₥ôřè ℓôř !!!]"
+  }
+});
+```
+
+In the **./src/webparts/greeting/GreetingWebPart.ts** file override the **onPropertyPaneConfigurationStart** method using the code:
+
+```ts
+export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
+  // ... 
+  protected onPropertyPaneConfigurationStart(): void {
+    this.context.statusRenderer.displayLoadingIndicator(this.domElement, 'languages');
+
+    this.getSupportedLanguageIds()
+      .then((supportedLanguageIds: number[]): void => {
+        this.greetingFields = [];
+        supportedLanguageIds.forEach(localeId => {
+          this.greetingFields.push(PropertyPaneTextField(`greeting_${localeId}`, {
+            label: this.getLocaleName(localeId)
+          }));
+        });
+
+        this.refreshPropertyPane();
+        this.context.statusRenderer.clearLoadingIndicator(this.domElement);
+        this.render();
+      });
+  }
+}
+```
+
+When the user opens the web part property pane, the method will load the information about the languages enabled in the current site. Because loading this information might take a moment, the method displays a loading indicator communicating its status to the user. Once the information about the enabled languages is loaded, the method creates a new property pane text field linked to a dynamic web part property named **greeting__lcid_**, for example **greeting_1033** for US English.
+
+Once text fields for all enabled languages are constructed, the method refreshes the property pane by calling the **refreshPropertyPane** method. Finally, the method clears the web part loading indicator and re-renders the web part body.
+
+![Text fields for all enabled languages displayed in the web part property pane](../../../../images/localization-multilingual-properties.png)
+
+### Show the greeting for the preferred user language
+
+Originally the web part showed the same greeting for all users no matter their preferred language. Now that the web part has different translations of the welcome message stored, it should display the greeting using the language preferred by the current user.
+
+In the **./src/webparts/greeting/GreetingWebPart.ts** file, change the web part's **render** method to:
+
+```ts
+export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
+  // ...
+
+  public render(): void {
+    const element: React.ReactElement<IGreetingProps> = React.createElement(Greeting, {
+      greeting: this.getGreeting()
+    });
+
+    ReactDom.render(element, this.domElement);
+  }
+}
+```
+
+Next, in the **GreetingWebPart** add a new method named **getGreeting**:
+
+```ts
+export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
+  // ...
+
+  private getGreeting(): string {
+    let localeId: number = this.getLocaleId(this.context.pageContext.cultureInfo.currentUICultureName);
+    if (localeId === 0) {
+      localeId = 1033;
+    }
+
+    return this.properties[`greeting_${localeId}`];
+  }
+
+  // ...
+}
+```
+
+This method gets the currently used language and converts it to a locale ID. Then it returns the value of the greeting property translated to that particular language.
+
 ## Localization in different build types
 
 Depending on the selected build mode, the SharePoint Framework handles localization files differently. Following are some of the differences between the files generated in a debug and a release build.
