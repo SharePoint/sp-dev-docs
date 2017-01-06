@@ -42,22 +42,29 @@ Switch to Visual Studio code (or your preferred IDE) and open **src\webparts\hel
 Inside the **render** method, replace the **innerHTML** code block with the following code:
 
 ```ts
-    this.domElement.innerHTML = `
-    <div class='${styles.helloWorld}'>
-      <div class='${styles.container}'>
-        <div class='ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}'>
-          <div class='ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1'>
-            <span class='ms-font-xl ms-fontColor-white'>Welcome to SharePoint!</span>
-            <p class='ms-font-l ms-fontColor-white'>Customize SharePoint experiences using Web Parts.</p>
-            <p class='ms-font-l ms-fontColor-white'>${this.properties.description}</p>
-            <p class='ms-font-l ms-fontColor-white'>Loading from ${this.context.pageContext.web.title}</p>
-            <a href='https://github.com/SharePoint/sp-dev-docs/wiki' class='ms-Button ${styles.button}'>
-              <span class='ms-Button-label'>Learn more</span>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>`;
+this.domElement.innerHTML = `
+  <div class="${styles.row}">
+    <div class="${styles.column}">
+      <span class="${styles.title}">
+        Welcome to SharePoint!
+      </span>
+      <p class="${styles.subtitle}">
+        Customize SharePoint experiences using Web Parts.
+      </p>
+      <p class="${styles.description}">
+        ${escape(this.properties.description)}
+      </p>
+      <p class="${styles.description}">
+            ${escape(this.properties.description)}
+      </p>
+      <p class="ms-font-l ms-fontColor-white">Loading from ${this.context.pageContext.web.title}</p>
+      <a class="ms-Button ${styles.button}" href="https://github.com/SharePoint/sp-dev-docs/wiki">
+        <span class="ms-Button-label">
+          Learn more
+        </span>
+      </a>
+    </div>
+  </div>`;
 ```
 
 Notice how `${ }` is used to output the variable's value in the HTML block. An extra HTML `p` is used to display `this.context.pageContext.web.title`. Since this web part loads from the local environment, the title will be **Local Workbench**.
@@ -141,7 +148,7 @@ You can now use the **MockHttpClient** class in the **HelloWorldWebPart** class.
 
 Open the **HelloWorldWebPart.ts** file.
 
-Copy and paste the following code to just below `import { IHelloWorldWebPartProps } from './IHelloWorldWebPartProps';`.
+Copy and paste the following code just below `import { IHelloWorldWebPartProps } from './IHelloWorldWebPartProps';`.
 
 ```ts
 import MockHttpClient from './MockHttpClient';
@@ -165,18 +172,32 @@ Save the file.
 
 Next you need to retrieve lists from the current site. You will use SharePoint REST APIs to retrieve the lists from the site, which are located at https://yourtenantprefix.sharepoint.com/_api/web/lists.
 
+SharePoint Framework includes a helper class **spHttpClient** to execute REST API requests against SharePoint. It adds default headers, manages the digest needed for writes, and collects telemetry that helps the service to monitor the performance of an application.
+
+To use this helper class, you will first need to import them from the **@microsoft/sp-http** module.
+
+Scroll to the top of the **HelloWorldWebPart.ts** file. 
+
+Copy and paste the following code just below `import MockHttpClient from './MockHttpClient';` :
+
+```ts
+import {
+  SPHttpClient
+} from '@microsoft/sp-http'
+```
+
 Add the following private method to retrieve lists from SharePoint inside the **HelloWorldWebPart** class.
 
 ```ts
-  private _getListData(): Promise<ISPLists> {
-    return this.context.httpClient.get(this.context.pageContext.web.absoluteUrl + `/_api/web/lists?$filter=Hidden eq false`)
-      .then((response: Response) => {
-        return response.json();
-      });
-  }
+private _getListData(): Promise<ISPLists> {
+  return this.context.spHttpClient.get(this.context.pageContext.web.absoluteUrl + `/_api/web/lists?$filter=Hidden eq false`, SPHttpClient.configurations.v1)
+    .then((response: Response) => {
+      return response.json();
+    });
+}
 ```
 
-The previous method uses a helper class **httpClient** that is available in the SharePoint client-side platform to execute the REST API. It uses the **ISPLists** model and also applies a filter to not retrieve hidden lists.
+The method uses the **spHttpClient** helper class and issues a `get` request. It uses the **ISPLists** model and also applies a filter to not retrieve hidden lists.
 
 Save the file. 
 
@@ -229,7 +250,7 @@ gulp rebuilds the code in the console as soon as you save the file. This will ge
 You can see that in the **render** method of the web part:
 
 ```html
-<div class="${styles.container}">
+<div class="${styles.row}">
 ```
 
 ## Method to render lists information
@@ -238,13 +259,13 @@ Open the **HelloWorldWebPart** class.
 
 SharePoint Workbench gives you the flexibility to test web parts in your local environment and from a SharePoint site. SharePoint Framework aids this capability by helping you understand which environment your web part is running from by using the **EnvironmentType** module. 
 
-To use the module, you first need to import the **Environment** and the ***EnvironmentType** modules from the **@microsoft/sp-client-base** bundle. Add it to the **import** section at the top as shown in the following code:
+To use the module, you first need to import the **Environment** and the ***EnvironmentType** modules from the **@microsoft/sp-core-library** bundle. Add it to the **import** section at the top as shown in the following code:
 
 ```ts
 import {
   Environment,
   EnvironmentType
-} from '@microsoft/sp-client-base';
+} from '@microsoft/sp-core-library';
 ```
 
 Add the following private method inside the **HelloWorldWebPart** class to call the respective methods to retrieve list data:
@@ -267,7 +288,7 @@ Add the following private method inside the **HelloWorldWebPart** class to call 
   }
 ```
 
-Things to note about hostType in the **_renderListAsync** method:
+Things to note about hostType in the ** _renderListAsync ** method:
 
 * The `Environment.type` property will help you check if you are in a local or SharePoint environment.
 * The correct method is called depending on where your workbench is hosted.
@@ -305,25 +326,31 @@ Navigate to the **render** method and replace the code inside the method with th
 
 ```ts
 this.domElement.innerHTML = `
-<div class="${styles.helloWorld}">
-	<div class="${styles.container}">
-		<div class="ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}">
-			<div class="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
-				<span class="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
-				<p class="ms-font-l ms-fontColor-white">Customize SharePoint experiences using Web Parts.</p>
-				<p class="ms-font-l ms-fontColor-white">${this.properties.description}</p>
-				<p class="ms-font-l ms-fontColor-white">${this.properties.test2}</p>
-				<p class='ms-font-l ms-fontColor-white'>Loading from ${this.context.pageContext.web.title}</p>
-				<a href="https://github.com/SharePoint/sp-dev-docs/wiki" class="ms-Button ${styles.button}">
-					<span class="ms-Button-label">Learn more</span>
-				</a>
-			</div>
-		</div>
-	<div id="spListContainer" />
-	</div>
-</div>`;
+  <div class="${styles.row}">
+    <div class="${styles.column}">
+      <span class="${styles.title}">
+        Welcome to SharePoint!
+      </span>
+      <p class="${styles.subtitle}">
+        Customize SharePoint experiences using Web Parts.
+      </p>
+      <p class="${styles.description}">
+        ${escape(this.properties.description)}
+      </p>
+      <p class="${styles.description}">
+        ${escape(this.properties.test2)}
+      </p>
+      <p class="ms-font-l ms-fontColor-white">Loading from ${this.context.pageContext.web.title}</p>
+      <a class="ms-Button ${styles.button}" href="https://github.com/SharePoint/sp-dev-docs/wiki">
+        <span class="ms-Button-label">
+          Learn more
+        </span>
+      </a>
+    </div>        
+  </div>
+  <div id="spListContainer" />`;
 
-this._renderListAsync();
+  this._renderListAsync();
 ```
 
 Save the file.
