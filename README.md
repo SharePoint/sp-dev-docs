@@ -6,6 +6,9 @@ The SharePoint Framework is still in initial Developer Preview, and it's still r
 
 ## Developer Preview Releases
 
+* **Jan 9, 2017**
+   *  **RC0 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-RC0)
+
 * **Nov 22, 2016**
    *  **Drop 6 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-Drop-6)
 
