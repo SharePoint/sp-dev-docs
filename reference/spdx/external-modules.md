@@ -6,5 +6,5 @@ External modules are typings provided for 3rd party libraries that the SharePoin
 
 | External module   | Description                                             |
 |-------------------|---------------------------------------------------------|
-| [sp-data-types](sp-data-types-module.md)     | Provides access to data types.                          |
+| [sp-odata-types](sp-odata-types-module.md)     | Provides access to data types.                          |
 | [sp-page-context](sp-page-context-module.md)   | Provides access to the page context.                    |
