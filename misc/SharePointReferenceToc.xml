@@ -3,14 +3,14 @@
 	<Item text="SharePoint Framework Reference" url="spdx" SEODescription="Reference documentation for the SharePoint Framework">
 		<Item text="Internal modules" url="spdx/internal-modules" SEODescription=""/>
 		<Item text="sp-webpart-base" url="spdx/sp-webpart-base-module" SEODescription="">
-			<Item text="Classes" url="spdx/sp-webpart-base" SEODescription="">
+			<Item text="Classes" url="spdx" SEODescription="">
 				<Item text="BaseClientSideWebPart" url="spdx/sp-webpart-base/baseclientsidewebpart" SEODescription=""/>
 			</Item>
-			<Item text="Enumerations" url="spdx/sp-webpart-base" SEODescription="">
+			<Item text="Enumerations" url="spdx" SEODescription="">
 				<Item text="PropertyPaneButtonType" url="spdx/sp-webpart-base/propertypanebuttontype" SEODescription=""/>
 				<Item text="PropertyPaneFieldType" url="spdx/sp-webpart-base/propertypanefieldtype" SEODescription=""/>
 			</Item>
-			<Item text="Functions" url="spdx/sp-webpart-base" SEODescription="">
+			<Item text="Functions" url="spdx" SEODescription="">
 				<Item text="PropertyPaneButton" url="spdx/sp-webpart-base/propertypanebutton" SEODescription=""/>
 				<Item text="PropertyPaneCheckbox" url="spdx/sp-webpart-base/propertypanecheckbox" SEODescription=""/>
 				<Item text="PropertyPaneChoiceGroup" url="spdx/sp-webpart-base/propertypanechoicegroup" SEODescription=""/>
@@ -22,7 +22,7 @@
 				<Item text="PropertyPaneTextField" url="spdx/sp-webpart-base/propertypanetextfield" SEODescription=""/>
 				<Item text="PropertyPaneToggle" url="spdx/sp-webpart-base/propertypanetoggle" SEODescription=""/>
 			</Item>
-			<Item text="Interfaces" url="spdx/sp-webpart-base" SEODescription="">
+			<Item text="Interfaces" url="spdx" SEODescription="">
 				<Item text="IClientSideWebPartStatusRenderer" url="spdx/sp-webpart-base/iclientsidewebpartstatusrenderer" SEODescription=""/>
 				<Item text="IPlaceholderProps" url="spdx/sp-webpart-base/iplaceholderprops" SEODescription=""/>
 				<Item text="IPlaceholderSpinnerProps" url="spdx/sp-webpart-base/iplaceholderspinnerprops" SEODescription=""/>
