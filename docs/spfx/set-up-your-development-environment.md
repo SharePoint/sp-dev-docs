@@ -9,7 +9,7 @@ You can use Visual Studio, or your own custom development environment to build S
 ## Install developer tools
 
 ### NodeJS
-Install [NodeJS](https://nodejs.org/en/) Long Term Support (LTS) v4.x.x version.
+Install [NodeJS](https://nodejs.org/en/) Long Term Support (LTS) version.
 
 * If you have NodeJS already installed please check you have the latest version using `node -v`. It should return the current [LTS version](https://nodejs.org/en/download/). 
 * If you are using a Mac, it is recommended you use [homebrew](http://brew.sh/) to install and manage NodeJS. 
