@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SupportedProduct="|SharePoint" SupportedVersion="|V1.0|">
 	<Item text="SharePoint Framework Reference" url="spfx" SEODescription="">
-	<Item text="Overview" url="spfx/sharepoint-framework-reference" SEODescription="Reference documentation for the SharePoint Framework"/>
+	<Item text="Overview" url="spfx/sharepoint-framework-reference-overview" SEODescription="Reference documentation for the SharePoint Framework"/>
 		<Item text="sp-webpart-base" url="spfx/sp-webpart-base-module" SEODescription="">
 			<Item text="Classes" url="spfx/sp-webpart-base" SEODescription="">
 				<Item text="BaseClientSideWebPart" url="spfx/sp-webpart-base/baseclientsidewebpart" SEODescription=""/>
