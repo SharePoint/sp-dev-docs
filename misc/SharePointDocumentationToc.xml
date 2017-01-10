@@ -34,7 +34,7 @@
 				<Item text="Call the Microsoft Graph API" url="spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part" SEODescription="Call the Microsoft Graph API from your SharePoint Framework client-side web part using OAuth." />
 			</Item>
 		</Item>
-		<Item text="SharePoint Framework Reference" url="/sharepoint/reference/spdx/internal-modules" SEODescription="" />
+		<Item text="SharePoint Framework Reference" url="https://dev.office.com/sharepoint/reference/spdx/internal-modules" IsExternal="true" SEODescription="" />
 	</Item>
 	<Item text="SharePoint APIs" url="apis" SEODescription="">
 		<Item text="Webhooks" url="apis/webhooks" SEODescription="">
