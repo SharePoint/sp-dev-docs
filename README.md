@@ -4,7 +4,6 @@ The SharePoint Framework (SPFx) is a page and part model that enables client-sid
 
 The SharePoint Framework is still in initial Developer Preview, and it's still rough around the edges.  As we work to improve the SharePoint Framework, we'd love your feedback!  If you find issues or have new ideas and suggestions for SharePoint Framework, make sure you submit them [here](https://github.com/SharePoint/sp-dev-docs/issues). We’ll also be monitoring [#spfx](http://sharepoint.stackexchange.com/tags/spfx/), [#spfx-webparts](http://sharepoint.stackexchange.com/tags/spfx-webparts/), and [#spfx-tooling](http://sharepoint.stackexchange.com/tags/spfx-tooling/) at [SharePoint StackExchange](http://sharepoint.stackexchange.com/) as well.
 
-<<<<<<< HEAD
 ## Developer Preview Releases
 
 * **Jan 9, 2017**
@@ -28,10 +27,7 @@ The SharePoint Framework is still in initial Developer Preview, and it's still r
 * **Aug 17, 2016**
    * **Drop 1 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Drop-1)
    
-## Get Started 
-=======
 ## Get Started
->>>>>>> reference
 
 * [Setup your Office 365 Developer Tenant](http://dev.office.com/sharepoint/docs/spfx/set-up-your-developer-tenant)
 * [Setup your Machine](http://dev.office.com/sharepoint/docs/spfx/set-up-your-development-environment)
@@ -72,15 +68,8 @@ Provide Feedback:
 
 Note: SharePoint Framework web parts are not supported for production use.
 
-<<<<<<< HEAD
-The SharePoint Framework is currently available for use in Classic Pages within Office 365 Developer  and First Release Tenancies as a developer review release.
-		
+The SharePoint Framework is currently available for use in Classic Pages within Office 365 Developer  and First Release Tenancies as a developer review release.		
 Of course, you can also get started with our SharePoint Workbench to create and test your web parts locally, on your machine.
-=======
-The SharePoint Framework is currently available for use in Classic Pages within Office 365 Developer Tenancies.  We’ll be expanding coverage to more Office 365 Tenancies over the coming months.
-
-(Of course, you can also get started with our SharePoint Workbench to create and test your web parts locally, on your machine.)
->>>>>>> reference
 
 ## Have Fun
 
