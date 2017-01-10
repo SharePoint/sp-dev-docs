@@ -12,13 +12,13 @@ The SharePoint Framework is still in initial Developer Preview, and it's still r
 * [More Tutorials and Walkthroughs](../../wiki/Tutorials and Walkthroughs)
 
 ## Reference
-* [sp-component-base](reference/spdx/sp-component-base-module.md)
-* [sp-core-library](reference/spdx/sp-core-library-module.md)
-* [sp-http](reference/spdx/sp-http-module.md)
-* [sp-loader](reference/spdx/sp-loader-module.md)
-* [sp-odata-types](reference/spdx/sp-odata-types-module.md)
-* [sp-page-context](reference/spdx/sp-page-context-module.md)
-* [sp-webpart-base](reference/spdx/sp-webpart-base-module.md)
+* [sp-component-base](reference/spfx/sp-component-base-module.md)
+* [sp-core-library](reference/spfx/sp-core-library-module.md)
+* [sp-http](reference/spfx/sp-http-module.md)
+* [sp-loader](reference/spfx/sp-loader-module.md)
+* [sp-odata-types](reference/spfx/sp-odata-types-module.md)
+* [sp-page-context](reference/spfx/sp-page-context-module.md)
+* [sp-webpart-base](reference/spfx/sp-webpart-base-module.md)
 
 
 
