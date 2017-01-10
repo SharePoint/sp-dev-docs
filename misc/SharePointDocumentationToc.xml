@@ -52,5 +52,5 @@
 	<Item text="Additional SharePoint Resources" url="external" SEODescription="">
 		<Item text="SharePoint Add-ins Docs" url="https://msdn.microsoft.com/en-us/library/office/fp179930.aspx" IsExternal="true" SEODescription="" />
 	</Item>
-	<Item text="SharePoint Framework Reference" url="https://dev.office.com/sharepoint/reference/spdx/internal-modules" IsExternal="true" SEODescription="SharePoint Framework API reference" />
+	<Item text="SharePoint Framework Reference" url="https://dev.office.com/sharepoint/reference/spfx/sharepoint-reference-overview" IsExternal="true" SEODescription="SharePoint Framework API reference" />
 </Menu>
