@@ -35,6 +35,7 @@
 			</Item>
 		</Item>
 	</Item>
+	<Item text="SharePoint Framework Reference" url="spdx/internal-modules" SEODescription="" />
 	<Item text="SharePoint APIs" url="apis" SEODescription="">
 		<Item text="Webhooks" url="apis/webhooks" SEODescription="">
 			<Item text="Overview" url="apis/webhooks/overview-sharepoint-webhooks" SEODescription="SharePoint webhooks allow developers to build service integrations which subscribe to receive notifications on specific events that occur in SharePoint."/>
