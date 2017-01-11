@@ -11,7 +11,12 @@
       "Title": "SharePoint Framework Reference",
       "URL": "https://dev.office.com/sharepoint/reference/spfx/sharepoint-framework-reference-overview",
       "Index": "external"
-    },    
+    },
+    {
+      "Title": "SharePoint Framework Code Samples",
+      "URL": "http://aka.ms/spfx-samples",
+      "Index": "external"
+    },      
     {
       "Title": "SharePoint Add-ins",
       "URL": "https://msdn.microsoft.com/en-us/library/office/fp179930.aspx",
