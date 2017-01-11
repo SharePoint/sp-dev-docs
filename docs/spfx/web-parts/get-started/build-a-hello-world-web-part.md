@@ -181,7 +181,8 @@ public render(): void {
         </a>
       </div>
     </div>`;
-}```
+}
+```
 
 This model is flexible enough so that web parts can be built in any JavaScript framework and loaded into the DOM element. 
 
