@@ -288,7 +288,7 @@ Add the following private method inside the **HelloWorldWebPart** class to call 
   }
 ```
 
-Things to note about hostType in the ** _renderListAsync ** method:
+Things to note about hostType in the **_renderListAsync** method:
 
 * The `Environment.type` property will help you check if you are in a local or SharePoint environment.
 * The correct method is called depending on where your workbench is hosted.

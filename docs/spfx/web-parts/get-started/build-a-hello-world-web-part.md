@@ -173,7 +173,9 @@ public render(): void {
         <p class="${styles.subtitle}">
           Customize SharePoint experiences using Web Parts.
         </p>
-        <p class="${styles.description}">${escape(this.properties.description)}</p>
+        <p class="${styles.description}">
+          ${escape(this.properties.description)}
+        </p>
         <a class="ms-Button ${styles.button}" href="https://github.com/SharePoint/sp-dev-docs/wiki">
           <span class="ms-Button-label">
             Learn more
@@ -214,8 +216,7 @@ The complete import section will look like the following:
 ```ts
 import {
   BaseClientSideWebPart,
-  IPropertyPaneSettings,
-  IWebPartContext,
+  IPropertyPaneConfiguration,
   PropertyPaneTextField,
   PropertyPaneCheckbox,
   PropertyPaneDropdown,

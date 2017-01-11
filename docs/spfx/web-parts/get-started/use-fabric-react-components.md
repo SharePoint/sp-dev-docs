@@ -4,7 +4,7 @@
 
 This article describes how to build a simple web part that uses the DocumentCard component of [Office UI Fabric](https://github.com/OfficeDev/office-ui-fabric-react). Office UI Fabric React is the front-end framework for building experiences for Office and Office 365. Fabric React includes a robust collection of responsive, mobile-first components that make it easy for you to create web experiences using the Office Design Language.
 
->**Note:** Office UI Fabric React components are in *a pre-v1 state*. For information about the v1 release and roadmap, see [Roadmap](https://github.com/OfficeDev/office-ui-fabric-react/blob/master/ghdocs/ROADMAP.md) in the Office UI Fabric React repo in GitHub. 
+>**Note:** Office UI Fabric React components are in *a pre-v1 state*. For information about the v1 release and roadmap, see [Roadmap](https://github.com/OfficeDev/office-ui-fabric-react#roadmap) in the Office UI Fabric React repo in GitHub. 
 
 The following image shows a DocumentCard component created with Office UI Fabric React.
 
@@ -74,34 +74,32 @@ Open **DocumentCardExample.tsx** from the **src\webparts\documentCardExample\com
 This is the main react component that Yeoman added to your project that renders in the web part DOM.
 
 ```ts
-export default class DocumentCardExample extends React.Component<IDocumentCardProps, {}> {
-public render(): JSX.Element {
-	return (
-		<div className={styles.documentcard}>
-			<div className={styles.container}>
-				<div className={css('ms-Grid-row ms-bgColor-themeDark ms-fontColor-white', styles.row)}>
-					<div className='ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1'>
-						<span className='ms-font-xl ms-fontColor-white'>
-							Welcome to SharePoint!
-						</span>
-						<p className='ms-font-l ms-fontColor-white'>
-							Customize SharePoint experiences using Web Parts.
-						</p>
-						<p className='ms-font-l ms-fontColor-white'>
-							{this.props.description}
-						</p>
-						<a
-							className={css('ms-Button', styles.button)}
-							href='https://github.com/SharePoint/sp-dev-docs/wiki'
-						>
-							<span className='ms-Button-label'>Learn more</span>
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-		);
-	}
+export default class DocumentCardExample extends React.Component<IDocumentCardExampleProps, void> {
+  public render(): React.ReactElement<IDocumentCardExampleProps> {
+    return (
+      <div className={styles.helloWorld}>
+        <div className={styles.container}>
+          <div className={css('ms-Grid-row ms-bgColor-themeDark ms-fontColor-white', styles.row)}>
+            <div className='ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1'>
+              <span className='ms-font-xl ms-fontColor-white'>
+                Welcome to SharePoint!
+              </span>
+              <p className='ms-font-l ms-fontColor-white'>
+                Customize SharePoint experiences using Web Parts.
+              </p>
+              <p className='ms-font-l ms-fontColor-white'>
+                {this.props.description}
+              </p>
+              <a className={css('ms-Button', styles.button)}
+                 href='https://github.com/SharePoint/sp-dev-docs/wiki'>
+                <span className='ms-Button-label'>Learn more</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 ```
 
@@ -140,29 +138,29 @@ Delete the current `render` method and add the following updated `render` method
 ```ts
 public render(): JSX.Element {
 	const previewProps: IDocumentCardPreviewProps = {
-	previewImages: [
+		previewImages: [
 		{
-		previewImageSrc: require('document-preview.png'),
-		iconSrc: require('icon-ppt.png'),
-		width: 318,
-		height: 196,
-		accentColor: '#ce4b1f'
+			previewImageSrc: String(require('document-preview.png')),
+			iconSrc: String(require('icon-ppt.png')),
+			width: 318,
+			height: 196,
+			accentColor: '#ce4b1f'
 		}
-	],
+		],
 	};
 
 	return (
 		<DocumentCard onClickHref='http://bing.com'>
 		<DocumentCardPreview { ...previewProps } />
-		<DocumentCardTitle title='Revenue stream proposal fiscal year 2016 version02.pptx'/>
+		<DocumentCardTitle title='Revenue stream proposal fiscal year 2016 version02.pptx' />
 		<DocumentCardActivity
 			activity='Created Feb 23, 2016'
 			people={
 			[
-				{ name: 'Kat Larrson', profileImageSrc: require('avatar-kat.png') }
+				{ name: 'Kat Larrson', profileImageSrc: String(require('avatar-kat.png')) }
 			]
 			}
-		/>
+			/>
 		</DocumentCard>
 	);
 }
