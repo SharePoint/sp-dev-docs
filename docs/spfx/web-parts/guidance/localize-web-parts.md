@@ -2,7 +2,7 @@
 
 > **Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
 
-When building web parts developers might need to localize them to different locales to support a broader group of users. This article illustrates how you can localize SharePoint Framework client-side web parts and verify that the localized values are displayed correctly. Following this tutorial you will localize a SharePoint Framework client-side web part to the Dutch (Netherlands) locale and verify that the localization is working correctly.
+You can broaden the appeal of your SharePoint Framework client-side web part by localizing it for different languages spoken by SharePoint users all over the world. In this article, you will localize a web part to the Dutch (Netherlands) locale, and verify that the localized values are displayed correctly.
 
 > **Note:** Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment).
 
@@ -30,11 +30,11 @@ yo @microsoft/sharepoint
 
 When prompted, enter the following values:
 
-- **react-localization** as your solution name
-- **Use the current folder** for the location to place the files
-- **Greeting** as your web part name
-- **Greets the user** as your web part description
-- **React** as the starting point to build the web part
+- **react-localization** as your solution name.
+- **Use the current folder** for the location to place the files.
+- **Greeting** as your web part name.
+- **Greets the user** as your web part description.
+- **React** as the starting point to build the web part.
 
 ![The SharePoint Framework Yeoman generator with the default choices](../../../../images/localization-yo-sharepoint.png)
 
@@ -193,13 +193,13 @@ In the SharePoint workbench add the web part to the page and open its configurat
 
 ## Localize the web part manifest
 
-Every SharePoint Framework client-side web part consists of code and a manifest, that provides information about the web part such as its title, description and icon. When adding a web part to the page, the information from the web part manifest is displayed to users. Using this information users decide if the particular web part is the one that they are looking for. Providing a descriptive title and description that correctly reflect the web part's functionality is essential if you want your web part to be used. If your web part will be used in non-English sites then localizing its metadata can help you improve the user experience even further.
+Every SharePoint Framework client-side web part consists of code, and a manifest. The manifest provides information about the web part such as its title, description, and icon. When adding a web part to the page, the information from the web part manifest is displayed to users. Using this information users decide if the web part is the one that they are looking for. Providing a title and description that correctly reflect the web part's functionality is essential if you want your web part to be used. If your web part will be used in non-English sites, then localizing its metadata can improve the user experience even further.
 
 Some properties defined in the web part manifest, such as title or description, support specifying localized values. For the complete list of all web part manifest properties that support localization read the [Simplify adding web parts with preconfigured entries](./simplify-adding-web-parts-with-preconfigured-entries#properties-of-a-preconfiguredentries-array-item) article. Properties that support localization are of type **ILocalizedString**. Each localized string must specify at least the default value and optionally values for other locales.
 
-### Add localized values for title, description and group name
+### Add localized values for title, description, and group name
 
-In the code editor op the **./src/webparts/greeting/GreetingWebPart.manifest.json** file. In the **preconfiguredEntries** array add translations for the **title**, **description** and **group** properties in Dutch (Netherlands), by changing the code to:
+In the code editor open the **./src/webparts/greeting/GreetingWebPart.manifest.json** file. In the **preconfiguredEntries** array add translations for the **title**, **description**, and **group** properties in Dutch (Netherlands), by changing the code to:
 
 ```json
 {
@@ -224,33 +224,33 @@ Run the following command to verify that the project is working:
 gulp serve
 ```
 
-> Unfortunately at this moment moment, the SharePoint workbench doesn't support previewing the localized values from the web part manifest and it always uses the default translation.
+>**Note:** Unfortunately, the SharePoint workbench doesn't currently support previewing the localized values from the web part manifest. It always uses the default translation.
 
-## Localize web part property pane
+## Localize the web part property pane
 
-When working with web parts users often need to configure it to their specific needs. Providing descriptive labels for the different configuration settings improves the usability of the web part and decreases the number of support cases required to help users to configure web parts.
+When working with web parts users often need to configure it for their specific needs. Providing descriptive labels for the different configuration settings improves the usability of the web part, and decreases the number of support requests from users for help configuring web parts.
 
-Web part property pane consists of sections. Each section has a header and one or more controls allowing users to configure the web part. Each of these elements contains a label that describes its purpose. By default, SharePoint Framework client-side web parts load these strings from a JavaScript resource file, which, if you've built classic web parts with full-trust solutions, resembles .resx resource files. While it's not required to use these resource files and you could include the strings directly in code, it's highly recommended that you use resource files, because the little additional overhead they add, outweighs the effort required to extract all labels afterwards should you need to translate the web part later on.
+The web part property pane consists of sections. Each section has a header and one or more controls allowing users to configure the web part. Each of these controls contains a label that describes its purpose. By default, web parts load the string labels from a JavaScript resource file. If you've built classic web parts with full-trust solutions, they resemble .resx resource files. It's not required to use these resource files and you could include the strings directly in code. However, it's highly recommended that you use resource files. The little additional overhead they add outweighs the effort required to extract all labels afterwards should you need to translate the web part later on.
 
 The localization files used by the web part are stored in the **./src/webparts/greeting/loc** folder.
 
 ![Localization files used by a SharePoint Framework client-side web part highlighted in Visual Studio Code](../../../../images/localization-loc-folder.png)
 
-The **loc** folder contains a TypeScript type definition file (**./src/webpart/greeting/loc/mystrings.d.ts**) that informs TypeScript of the different strings included in the localized files. Using the information from this file your code editor can provide you with intellisense when working with strings in code. Additionally, while building your project, TypeScript can verify that you're not referring to a string that hasn't been defined.
+The **loc** folder contains a TypeScript type definition file (**./src/webpart/greeting/loc/mystrings.d.ts**) that informs TypeScript of the different strings included in the localized files. Using the information from this file, your code editor can provide you with IntelliSense when working with strings in code. Additionally, while building your project, TypeScript can verify that you're not referring to a string that hasn't been defined.
 
-![Intellisense for localized strings in Visual Studio Code](../../../../images/localization-intellisense.png)
+![IntelliSense for localized strings in Visual Studio Code](../../../../images/localization-intellisense.png)
 
-For each locale supported by your web part, there is also a plain-JavaScript file (not TypeScript!) named in lowercase after the locale (for example **en-us.js**) containing the translated strings.
+For each locale supported by your web part, there is also a plain JavaScript file (not TypeScript) named in lowercase after the locale (for example **en-us.js**) containing the translated strings.
 
 ![Standard localization file scaffolded with a new SharePoint Framework project](../../../../images/localization-standard-locale-file.png)
 
 > **Important:** You should pay extra attention to verifying that all keys specified in the TypeScript type definition file for localization have translations in all localization JavaScript files.
 
-en-US is the default locale used by the SharePoint Framework. If your web part is used on a site using a locale not supported by your web part, SharePoint Framework will fallback to the default locale, which by default is en-US. You can override this behavior by creating a locale file named **default.js** with the translations in your preferred language. While the name **default.js** doesn't follow the locale name convention, it is understood by the SharePoint Framework build process as a signal to use that particular locale file as the fallback locale instead of the standard US English locale.
+en-US is the default locale used by the SharePoint Framework. If your web part is used on a site using a locale not supported by your web part, the SharePoint Framework will use en-US as the default locale. You can override this behavior by creating a locale file named **default.js** with the translations in your preferred language. While the name **default.js** doesn't follow the locale naming convention, it signals to the SharePoint Framework build process to use that particular locale file as the fallback locale instead of the standard US English locale.
 
 ### Add localized values for web part property pane strings
 
-In the **./src/webparts/greetings/loc** folder create new file named **nl-nl.js** and paste the following code:
+In the **./src/webparts/greetings/loc** folder create new file named **nl-nl.js** and enter the following code:
 
 ```js
 define([], function() {
@@ -268,11 +268,11 @@ Verify that the keys in the TypeScript type definition file for localization mat
 
 ### Verify the localized web part property pane strings
 
-When testing web parts using the hosted version of the SharePoint workbench or team sites on a developer tenant the locale of the context site expressed by the **spPageContextInfo.currentUICultureName** property is used as the default locale. When testing web parts using the local SharePoint workbench, SharePoint Framework uses by default the en-US locale to display web part property pane strings. There are two ways in which you can test the values from other locales supported by your web part.
+When testing web parts using the hosted version of the SharePoint workbench or team sites on a developer tenant the locale of the context site expressed by the **spPageContextInfo.currentUICultureName** property is used as the default locale. When testing web parts using the local SharePoint workbench, the SharePoint Framework uses by default the en-US locale to display web part property pane strings. There are two ways in which you can test the values from other locales supported by your web part.
 
 #### Specify the locale to be tested in the project configuration
 
-One way to specify the locale to be tested in the SharePoint workbench is by editing the project configuration. This approach is useful if you and your team members are working with the particular locale for a longer period of time or if you're building a web part that doesn't support US English. In the code editor open the **./config/write-manifests.json** file and change its code to:
+One way to specify the locale to be tested in the SharePoint workbench is by editing the project configuration. This approach is useful if you and your team members are working with a locale for a longer period of time or if you're building a web part that doesn't support US English. In the code editor open the **./config/write-manifests.json** file and change its code to:
 
 ```json
 {
@@ -299,19 +299,19 @@ Another way to specify the locale to be used by the local SharePoint workbench i
 gulp serve --locale=nl-nl
 ```
 
-Once again, when you open your web part's configuration you will see that all property pane strings are displayed in Dutch (Netherlands) rather than the standard US English.
+Once again, when you open your web part's configuration you will see that all property pane strings are displayed in Dutch (Netherlands) rather than the default US English.
 
 ![Web part property pane string displayed in Dutch (Netherlands)](../../../../images/localization-property-pane-nl-nl.png)
 
 ## Localize web part contents
 
-The same way you localize web part property pane strings, you should localize all strings displayed by the web part in its body. In this process you can use exactly the same approach that you use when localizing web part property pane strings: for every string to be localized add a key in the localization TypeScript definition file and then translate the string to each of the supported locales in the corresponding locale JavaScript file.
+The same way you localize web part property pane strings, you should localize all strings displayed by the web part in its body. You can use the same approach that you use when localizing web part property pane strings. For every string to be localized, add a key in the localization TypeScript definition file, and then translate the string to each of the supported locales in the corresponding locale JavaScript file.
 
 ### Globalize the web part strings
 
 The default web part provided with the scaffolded SharePoint Framework project has its strings embedded in the code. Before you can localize these strings you have to replace them with references to the localized strings. This process is often referred to as **globalization** or **internationalization** (or **i18n** for short).
 
-In the code editor open the **./src/webparts/greeting/components/Greetings.tsx** file. In the top section of the file, directly after the last `import` statement add reference to the localized strings:
+In the code editor, open the **./src/webparts/greeting/components/Greetings.tsx** file. In the top section of the file, directly after the last `import` statement, add a reference to the localized strings:
 
 ```ts
 import * as strings from 'greetingStrings';
@@ -352,9 +352,9 @@ export default class Greeting extends React.Component<IGreetingProps, {}> {
 }
 ```
 
-### Add new string to the localization TypeScript type definition file
+### Add the new string to the localization TypeScript type definition file
 
-Having replaced the string with a reference, the next step is to add that string to the localization files used by the web part. In the code editor open the **./src/webparts/greetings/loc/mystrings.d.ts** file and change its code to:
+Having replaced the string with a reference, the next step is to add that string to the localization files used by the web part. In the code editor open the **./src/webparts/greetings/loc/mystrings.d.ts** file, and change its code to:
 
 ```ts
 declare interface IGreetingStrings {
@@ -372,7 +372,7 @@ declare module 'greetingStrings' {
 
 ### Add localized values for the new string
 
-The last step is to provide localized versions for the new string in all locales supported by the web part. In the code editor open the **./src/webparts/greeting/loc/en-us.js** file and change its code to:
+The last step is to provide localized versions for the new string in all locales supported by the web part. In the code editor, open the **./src/webparts/greeting/loc/en-us.js** file and change its code to:
 
 ```js
 define([], function() {
@@ -404,23 +404,23 @@ Confirm that the translated string is correctly displayed by running the followi
 gulp serve --locale=nl-nl
 ```
 
-![The label of the learn more button displayed in Dutch Netherlands instead of the standard US English](../../../../images/localization-learn-more-nl-nl.png)
+![The label of the learn more button displayed in Dutch Netherlands instead of the default US English](../../../../images/localization-learn-more-nl-nl.png)
 
-## Improve globalizing and localizing web parts using pseudo locales
+## Improve globalizing and localizing web parts using pseudo-locales
 
 Using localization when building web parts offers clear benefits but is also something that developers overlook easily. Often, translations to other locales are provided later in the project and it's hard for testers to verify that all code will properly support the different locales.
 
-The same words in different locales have different lengths. For example, the same sentence translated from English to German or Dutch can become 35% longer. Without all translations available upfront it's hard for developers and designers to ensure that the user interface can properly accommodate longer strings.
+The same words in different locales have different lengths. For example, the same sentence translated from English to German or Dutch can become 35% longer. Without all translations available up front, it's hard for developers and designers to ensure that the user interface can properly accommodate longer strings.
 
-Some languages use special characters beyond the standard ASCII character set. If designers chose to use a non-standard font it could happen, that this font doesn't properly support some special characters.
+Some languages use special characters beyond the standard ASCII character set. If designers use a non-standard font, it is possible that the font doesn't properly support some special characters.
 
-Finding out about all these issues late in the project will likely lead to delays and costly fixes. SharePoint Framework allows developers to use pseudo locales to address these issues while building web parts.
+Finding out about all these issues late in the project will likely lead to delays and costly fixes. The SharePoint Framework allows developers to use pseudo-locales to address these issues while building web parts.
 
-> **What are pseudo locales?** Pseudo locales are locales designed to test software for proper support of the different aspects of the localization process such as support for special characters, right-to-left languages or accommodating longer strings in the user interface.
+> **What are pseudo-locales?** Pseudo-locales are locales designed to test software for proper support of the different aspects of the localization process such as support for special characters, right-to-left languages, or accommodating longer strings in the user interface.
 
-### Add the base pseudo locale
+### Add the base pseudo-locale
 
-In the **./src/webparts/greeting/loc** folder add a new file named **qps-ploc.js** and paste the following code:
+In the **./src/webparts/greeting/loc** folder, add a new file named **qps-ploc.js** and paste the following code:
 
 ```js
 define([], function() {
@@ -433,29 +433,29 @@ define([], function() {
 });
 ```
 
-> **Tip:** you can convert US English strings to their base pseudo locale equivalent at [http://www.pseudolocalize.com](http://www.pseudolocalize.com). By increasing the length of the generated string with 35% you should be able to simulate the length of strings translated to longer locales such as German or Dutch. Additionally, by surrounding the translations with brackets and exclamation marks you can more easily see if the whole string is displayed on the screen.
+> **Tip:** you can convert US English strings to their base pseudo-locale equivalent at [http://www.pseudolocalize.com](http://www.pseudolocalize.com). By increasing the length of the generated string with 35% you should be able to simulate the length of strings translated to longer locales such as German or Dutch. Additionally, by surrounding the translations with brackets and exclamation marks you can more easily see if the whole string is displayed on the screen.
 
-Test the project using the base pseudo locale by running the following command:
+Test the project using the base pseudo-locale by running the following command:
 
 ```sh
 gulp serve --locale=qps-ploc
 ```
 
-After adding the web part to the page you can quickly see that there are two strings in the web part body that have not been internationalized and are still displayed in US English rather than in the base pseudo locale.
+After adding the web part to the page, you can quickly see that there are two strings in the web part body that have not been internationalized and are still displayed in US English rather than in the base pseudo-locale.
 
-![Two strings in the web part body displayed in US English despite testing using the base pseudo locale](../../../../images/localization-web-part-body-qps-ploc.png)
+![Two strings in the web part body displayed in US English despite testing using the base pseudo-locale](../../../../images/localization-web-part-body-qps-ploc.png)
 
-If you open the web part property pane you can confirm that all strings and their special characters are displayed properly and that they fit in the available space correctly.
+If you open the web part property pane, you can confirm that all strings and their special characters are displayed properly and that they fit in the available space correctly.
 
-![Web part property pane open when testing the web part in the local workbench using the base pseudo locale](../../../../images/localization-web-part-property-pane-qps-ploc.png)
+![Web part property pane open when testing the web part in the local workbench using the base pseudo-locale](../../../../images/localization-web-part-property-pane-qps-ploc.png)
 
 ## Localize web part settings values
 
-Microsoft SharePoint supports Multilingual User Interface (MUI) where site administrator can enable multiple languages for the user interface. When the user visits the site, its UI will automatically be displayed using the preferred language based on that user's preferences.
+Microsoft SharePoint supports Multilingual User Interface (MUI) where the site administrator can enable multiple languages for the user interface. When the user visits the site, its UI will automatically be displayed using the preferred language based on that user's preferences.
 
-Web parts used on multilingual sites should automatically detect the currently used language and display their contents in that language. SharePoint Framework simplifies this process by automatically loading the resource file corresponding to the currently used language. Additionally, when testing SharePoint Framework web parts using the hosted version of the SharePoint workbench, the workbench also automatically uses the language preferred by the user.
+Web parts used on multilingual sites should automatically detect the currently used language and display their contents in that language. The SharePoint Framework simplifies this process by automatically loading the resource file corresponding to the currently used language. Additionally, when testing SharePoint Framework web parts using the hosted version of the SharePoint workbench, the workbench also automatically uses the language preferred by the user.
 
-Values configured through web part properties are not stored in resource files. By default the configured value is used as-is which might lead to inconsistencies such as greeting the user in English while her preferred language is Dutch.
+Values configured through web part properties are not stored in resource files. By default, the configured value is used as-is, which might lead to inconsistencies such as greeting the user in English when the user's preferred language is Dutch.
 
 ![Greeting message displayed in US English despite the workbench being set to use Dutch (Netherlands)](../../../../images/localization-english-greeting-dutch-workbench.png)
 
@@ -463,13 +463,13 @@ Using the building blocks provided with the SharePoint Framework, you can extend
 
 ![Multiple text fields rendered in the web part property pane to allow translation of the web part values](../../../../images/localization-multilingual-properties.png)
 
-> SharePoint site used to test the web part in this tutorial is a multilingual site with the US English, Dutch and German languages enabled. For more information about enabling additional languages in SharePoint sites see the [Choose the languages you want to make available for a site’s user interface](https://support.office.com/en-us/article/Choose-the-languages-you-want-to-make-available-for-a-site-s-user-interface-16d3a83c-05ab-4b50-8fbb-ff576a3351e8) support article.
+> **Note:** The SharePoint site used to test the web part shown in this article is a multilingual site with the US English, Dutch, and German languages enabled. For more information about enabling additional languages in SharePoint sites see the [Choose the languages you want to make available for a site’s user interface](https://support.office.com/en-us/article/Choose-the-languages-you-want-to-make-available-for-a-site-s-user-interface-16d3a83c-05ab-4b50-8fbb-ff576a3351e8) support article.
 
 ### Add list of languages supported by SharePoint Online
 
-The list of languages enabled on a multilingual SharePoint site is returned as an array of locale identifiers (LCID number, for example **1033** for US English). The currently used language is however returned as a string, for example **en-US** for US English. As JavaScript doesn't have a native way of converting the LCID number to the locale name and vice versa, you have to do it yourself.
+The list of languages enabled on a multilingual SharePoint site is returned as an array of locale identifiers (LCID). For example, **1033** for US English. The currently used language is however returned as a string. For example, **en-US** for US English. As JavaScript doesn't have a native way of converting the LCID number to the locale name, and vice-versa, you have to do it yourself.
 
-In the code editor open the **./src/webparts/greeting/GreetingWebPart.ts** file and add a new class variable named **locales** with the following code:
+In the code editor, open the **./src/webparts/greeting/GreetingWebPart.ts** file and add a new class variable named **locales** with the following code:
 
 ```ts
 export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
@@ -533,7 +533,7 @@ export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebP
 
 The **locales** variable lists all languages supported by SharePoint Online.
 
-Next, add two class methods that will allow you to get the LCID from the locale name and the locale name from the LCID:
+Next, add two class methods that will allow you to get the LCID from the locale name, and the locale name from the LCID:
 
 ```ts
 export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
@@ -563,9 +563,9 @@ export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebP
 
 ### Remove the standard greeting web part property
 
-Originally, the Greeting web part had the **greeting** property defined where the user could specify the greeting to be displayed on the screen. While adapting the web part to support multilingual SharePoint sites, you need to store multiple values - one for each language. Because you cannot know upfront which languages will be enabled on the particular site, rather than using one static web part property you will dynamically generate web part properties on runtime.
+Originally, the Greeting web part had the **greeting** property defined where the user could specify the greeting to be displayed on the screen. To adapt the web part to support multilingual SharePoint sites, you need to store multiple values; one for each language. Because you cannot know up front which languages will be enabled on the site, rather than using one static web part property, you will dynamically generate web part properties at runtime.
 
-In the code editor open the **./src/webparts/greeting/GreetingWebPart.manifest.json** file and from the **properties** property remove the **greeting** property:
+In the code editor open the **./src/webparts/greeting/GreetingWebPart.manifest.json** file, and remove the **greeting** property from the **properties** property:
 
 ```json
 {
@@ -583,14 +583,14 @@ In the code editor open the **./src/webparts/greeting/GreetingWebPart.manifest.j
 }
 ```
 
-Next, open the **./src/webparts/greeting/IGreetingWebPartProps.ts** file and remove the **greeting** property from the interface definition:
+Next, open the **./src/webparts/greeting/IGreetingWebPartProps.ts** file, and remove the **greeting** property from the interface definition:
 
 ```ts
 export interface IGreetingWebPartProps {
 }
 ```
 
-Because the main React component should display a greeting, open the **./src/webparts/greeting/components/Greeting.tsx** file and change the **IGreetingProps** interface to:
+Because the main React component should display a greeting, open the **./src/webparts/greeting/components/Greeting.tsx** file, and change the **IGreetingProps** interface to:
 
 ```ts
 export interface IGreetingProps extends IGreetingWebPartProps {
@@ -598,15 +598,15 @@ export interface IGreetingProps extends IGreetingWebPartProps {
 }
 ```
 
-With this modification you can pass the greeting to be displayed from the web part to the React component.
+With this modification, you can pass the greeting to be displayed from the web part to the React component.
 
 ### Display property pane text fields for all enabled languages
 
-Initially, using the web part configuration the user could configure a welcome message. The web part allowed the user to configure a single value which was displayed to all users no matter their language preference. By retrieving the list of languages enabled in the current site, you can dynamically display text fields to allow the user to provide translations for all the languages enabled in the particular site.
+Initially, by using the web part configuration the user could configure a welcome message. The web part allowed the user to configure a single value which was displayed to all users no matter their language preference. By retrieving the list of languages enabled in the current site, you can dynamically display text fields to allow the user to provide translations for all the languages enabled in the site.
 
 #### Load information about languages enabled in the current site
 
-The first step is to load the information about all languages enabled in the current site. In the code editor open the **./src/webparts/greeting/GreetingWebPart.ts** file and add a new class variable named **supportedLanguageIds**:
+The first step is to load the information about all languages enabled in the current site. In the code editor, open the **./src/webparts/greeting/GreetingWebPart.ts** file, and add a new class variable named **supportedLanguageIds**:
 
 ```ts
 export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
@@ -616,7 +616,7 @@ export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebP
 }
 ```
 
-Next, in the **GreetingWebPart** class add a new method named **getSupportedLanguageIds**:
+Next, in the **GreetingWebPart** class, add a new method named **getSupportedLanguageIds**:
 
 ```ts
 export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
@@ -653,7 +653,7 @@ The list of languages enabled in the current site should be loaded only once. If
 
 Now that you can retrieve the information about the languages enabled on the current site, you will display text fields for each of these languages so that the user can specify translated values for the greeting message.
 
-In the code editor open the **./src/webparts/greeting/GreetingWebPart.ts** file and to the **GreetingWebPart** class add a new class variable named **greetingFields**:
+In the code editor, open the **./src/webparts/greeting/GreetingWebPart.ts** file, and add a new class variable named **greetingFields** to the **GreetingWebPart** class:
 
 ```ts
 export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
@@ -703,7 +703,7 @@ export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebP
 }
 ```
 
-If the particular site has multiple languages enabled, the web part will render multiple fields for the user to enter the greeting message. To make it clear that these fields belong together put them in a separate group. In the code editor open the **./src/webparts/greeting/loc/mystrings.d.ts** file and change its code to:
+If the site has multiple languages enabled, the web part will render multiple fields for the user to enter the greeting message. To make it clear that these fields belong together, put them in a separate group. In the code editor, open the **./src/webparts/greeting/loc/mystrings.d.ts** file, and change its code to:
 
 ```ts
 declare interface IGreetingStrings {
@@ -781,7 +781,7 @@ export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebP
 }
 ```
 
-When the user opens the web part property pane, the method will load the information about the languages enabled in the current site. Because loading this information might take a moment, the method displays a loading indicator communicating its status to the user. Once the information about the enabled languages is loaded, the method creates a new property pane text field linked to a dynamic web part property named **greeting__lcid_**, for example **greeting_1033** for US English.
+When the user opens the web part property pane, the method will load the information about the languages enabled in the current site. Because loading this information might take a moment, the method displays a loading indicator communicating its status to the user. Once the information about the enabled languages is loaded, the method creates a new property pane text field linked to a dynamic web part property named **greeting__lcid_**. For example, **greeting_1033** for US English.
 
 Once text fields for all enabled languages are constructed, the method refreshes the property pane by calling the **refreshPropertyPane** method. Finally, the method clears the web part loading indicator and re-renders the web part body.
 
@@ -826,7 +826,7 @@ export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebP
 }
 ```
 
-This method gets the currently used language and converts it to a locale ID. Then it returns the value of the greeting property translated to that particular language.
+This method gets the currently used language and converts it to a locale ID. Then it returns the value of the greeting property translated to that language.
 
 ## Localization in different build types
 
@@ -834,9 +834,9 @@ Depending on the selected build mode, the SharePoint Framework handles localizat
 
 ### Localization files in the debug build
 
-When building SharePoint Framework projects in debug mode, only the information about the default locale is included in the generated web part manifest. In debug mode SharePoint Framework either uses the default en-US locale or the locale that has been specified in the project configuration or using the **locale** argument in command line. Resource files with translated strings are not included in the output **dist** folder. Instead they are loaded on runtime from the intermediate **lib** folder using the path in the generated web part manifest.
+When building SharePoint Framework projects in debug mode, only the information about the default locale is included in the generated web part manifest. In debug mode SharePoint Framework either uses the default en-US locale or the locale that has been specified in the project configuration or using the **locale** argument in command line. Resource files with translated strings are not included in the output **dist** folder. Instead they are loaded at runtime from the intermediate **lib** folder using the path in the generated web part manifest.
 
-Looking at the information about the **greetingStrings** module in the web part manifest generated during a debug build you can see that despite the different locales supported by the web part (en-US, nl-NL and qps-ploc) the path to the en-US resource file stored in the intermediate location has been assigned as the default path of the localization module.
+Looking at the information about the **greetingStrings** module in the web part manifest generated during a debug build, you can see that despite the different locales supported by the web part (en-US, nl-NL and qps-ploc) the path to the en-US resource file stored in the intermediate location has been assigned as the default path of the localization module.
 
 ```json
 {
@@ -870,9 +870,9 @@ Looking at the information about the **greetingStrings** module in the web part 
 
 When building SharePoint Framework projects in release mode, the information about all available locales is included in the generated web part manifest. Additionally, resources for each locale are stored in a separate file. These resource files are copied, along with the web part manifest and the web part bundle to the **./temp/deploy** folder.
 
-> **Important:** In release builds resource files are copied only to the **./temp/deploy** folder and not to the **./dist** folder. When deploying your web part to production you should therefore always use files from the **./temp/deploy** folder to ensure that you are deploying all files required by your web part.
+> **Important:** In release builds resource files are copied only to the **./temp/deploy** folder and not to the **./dist** folder. When deploying your web part to production you should always use files from the **./temp/deploy** folder to ensure that you are deploying all files required by your web part.
 
-Comparing the web part manifest generated in a release build you can see that now the **greetingStrings** module contains references to all supported locales.
+Examining the latest web part manifest generated in a release build, you can see that now the **greetingStrings** module contains references to all supported locales.
 
 ```json
 {
@@ -907,4 +907,4 @@ Comparing the web part manifest generated in a release build you can see that no
 }
 ```
 
-When loading the web part on the page, using the information from the context site, the SharePoint Framework will automatically load the resource file for the corresponding locale. If no matching resource file is found, the SharePoint Framework will load the file specified in the **defaultPath** property. By keeping the resource files separate, the SharePoint Framework minimizes the amount of data loaded on the page to the locale that is actually being used in the particular site.
+When loading the web part on the page, the SharePoint Framework will automatically load the resource file for the corresponding locale by using the information from the context site. If no matching resource file is found, the SharePoint Framework will load the file specified in the **defaultPath** property. By keeping the resource files separate, the SharePoint Framework minimizes the amount of data loaded on the page to the locale that matches the one used in the site.
