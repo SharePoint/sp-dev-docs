@@ -22,7 +22,7 @@ Microsoft Azure is used to host the various components needed to implement Azure
 
 ## Source code for this reference implementation
 
-Source code and other materials for the reference implementation are available in the [SharePoint developer samples GitHub repository](https://aka.ms/sp-webhooks-sample-reference).
+Source code and other materials for the reference implementation are available in two flavors: we do have a SharePoint provider hosted application version and an Office 365 Azure AD application which can be found in the [SharePoint developer samples GitHub repository](https://aka.ms/sp-webhooks-sample-reference). 
 
 ## Deploying the reference implementation
 
@@ -30,7 +30,7 @@ The application will show you how to manage webhooks, specifically for a SharePo
 
 ![SharePoint webhook reference implementation application](../../../images/webhook-sample-application.png)
 
-The [SharePoint web hooks reference implementation - Deployment guide](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks.List/Deployment%20guide.md) lists the deployment steps used to deploy the reference implementation. 
+The [SharePoint web hooks reference implementation - Deployment guide](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks.List/Deployment%20guide.md) lists the deployment steps used to deploy the SharePoint Provider hosted reference implementation. To deploy the Office 365 Azure AD application use the steps described [here](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks.List.AzureAD/Deployment%20guide.md).
 
 ## Introduction to webhooks
 
