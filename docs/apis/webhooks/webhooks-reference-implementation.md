@@ -14,7 +14,7 @@ You can also follow these steps by watching the video on the [SharePoint PnP You
 
 ## Applies to
 
--  Office 365 Multi Tenant (MT) with [First Release enabled](https://support.office.com/en-us/article/Set-up-the-Standard-or-First-Release-options-in-Office-365-3b3adfa4-1777-4ff0-b606-fb8732101f47).
+-  Office 365 Multi Tenant (MT).
 
 ## Prerequisites
 
