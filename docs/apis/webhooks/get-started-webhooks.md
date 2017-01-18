@@ -1,7 +1,5 @@
 # Get started with SharePoint webhooks
 
->**Note:** SharePoint webhooks is currently in preview and is subject to change. SharePoint webhooks are not currently supported for use in production environments.
-
 This article describes how to build an application that adds and handles SharePoint webhook requests. You will learn how to use [Postman client](https://www.getpostman.com/) to construct and execute SharePoint webhook requests quickly while interacting with a simple ASP.NET Web API as the webhook receiver.
 
 In this article, you will use plain HTTP requests, which is useful for helping you to understand how webhooks work.  

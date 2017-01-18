@@ -2,8 +2,6 @@
 
 **Contributor(s)**: Bert Jansen (Microsoft), SharePoint PnP Core Team
 
->**Note:** SharePoint webhooks is currently in preview and is subject to change. SharePoint webhooks are not currently supported for use in production environments.
-
 The SharePoint Patterns and Practices (PnP) reference implementation shows how you can use SharePoint webhooks in your application. The webhooks are implemented in an enterprise ready manner using various Microsoft Azure components such as Azure Web Jobs, Azure SQL Server, and Azure Storage Queues for asynchronous web job notification handling.
 
 The reference implementation only works with [SharePoint list webhooks](./lists/overview-sharepoint-list-webhooks). 
