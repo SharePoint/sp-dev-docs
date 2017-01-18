@@ -1,7 +1,5 @@
 # Get subscriptions
 
->**Note:** SharePoint webhooks is currently in preview and is subject to change. SharePoint webhooks are not currently supported for use in production environments.
-
 Gets one or more webhook subscriptions on a SharePoint list.
 
 ## Permissions
