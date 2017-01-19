@@ -14,7 +14,7 @@ You can also follow these steps by watching the video on the [SharePoint PnP You
 
 ## Applies to
 
--  Office 365 Multi Tenant (MT)
+-  Office 365 Multi Tenant (MT).
 
 ## Prerequisites
 
