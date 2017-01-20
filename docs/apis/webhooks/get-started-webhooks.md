@@ -284,8 +284,8 @@ Postman makes it really simple to work with APIs. The first step is to configure
 * Choose the **Get New Access Token** button.
 * In the dialog window, enter the following: 
     * Auth URL: 
-       * **https://login.microsoftonline.com/common/oauth2/authorize?resource=https%3A%2F%2F<_your-sharepoint-site-collection-url-without-https_>**
-       * Replace _your-sharepoint-site-collection-url-without-https_ with your site collection without the **https** prefix.
+       * **https://login.microsoftonline.com/common/oauth2/authorize?resource=https%3A%2F%2F<_your-sharepoint-tenant-url-without-https_>**
+       * Replace _your-sharepoint-tenant-url-without-https_ with your tenant url without the **https** prefix.
     * Access Token URL:
         * **https://login.microsoftonline.com/common/oauth2/token**
     * Client Id: 
