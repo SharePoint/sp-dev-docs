@@ -2,8 +2,6 @@
 
 **Contributor(s)**: Bert Jansen (Microsoft), SharePoint PnP Core Team
 
->**Note:** SharePoint webhooks is currently in preview and is subject to change. SharePoint webhooks are not currently supported for use in production environments.
-
 The SharePoint Patterns and Practices (PnP) reference implementation shows how you can use SharePoint webhooks in your application. The webhooks are implemented in an enterprise ready manner using various Microsoft Azure components such as Azure Web Jobs, Azure SQL Server, and Azure Storage Queues for asynchronous web job notification handling.
 
 The reference implementation only works with [SharePoint list webhooks](./lists/overview-sharepoint-list-webhooks). 
@@ -16,7 +14,7 @@ You can also follow these steps by watching the video on the [SharePoint PnP You
 
 ## Applies to
 
--  Office 365 Multi Tenant (MT) with [First Release enabled](https://support.office.com/en-us/article/Set-up-the-Standard-or-First-Release-options-in-Office-365-3b3adfa4-1777-4ff0-b606-fb8732101f47).
+-  Office 365 Multi Tenant (MT).
 
 ## Prerequisites
 
@@ -24,7 +22,7 @@ Microsoft Azure is used to host the various components needed to implement Azure
 
 ## Source code for this reference implementation
 
-Source code and other materials for the reference implementation are available in the [SharePoint developer samples GitHub repository](https://aka.ms/sp-webhooks-sample-reference).
+Source code and other materials for the reference implementation are available in two flavors: we do have a SharePoint provider hosted application version and an Office 365 Azure AD application which can be found in the [SharePoint developer samples GitHub repository](https://aka.ms/sp-webhooks-sample-reference). 
 
 ## Deploying the reference implementation
 
@@ -32,7 +30,7 @@ The application will show you how to manage webhooks, specifically for a SharePo
 
 ![SharePoint webhook reference implementation application](../../../images/webhook-sample-application.png)
 
-The [SharePoint web hooks reference implementation - Deployment guide](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks.List/Deployment%20guide.md) lists the deployment steps used to deploy the reference implementation. 
+The [SharePoint web hooks reference implementation - Deployment guide](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks.List/Deployment%20guide.md) lists the deployment steps used to deploy the SharePoint Provider hosted reference implementation. To deploy the Office 365 Azure AD application use the steps described [here](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks.List.AzureAD/Deployment%20guide.md).
 
 ## Introduction to webhooks
 
@@ -146,7 +144,7 @@ Create a web job that on a weekly basis reads all the subscription IDs from the 
 
 > **Note:** This web job is not part of this reference implementation.
 
-The actual renewal of a SharePoint list webhook can be done using a [`PATCH /_api/web/lists('list-id')/subscriptions(‘subscriptionID’)`](./lists/update-subscription) REST call. In the reference implementation, updating of webhooks is implemented in the [WebHookManager](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks.List/SharePoint.WebHooks.Common/WebHookManager.cs) class of the **SharePoint.WebHooks.Common** project. Updating a webhook is done using the **AddListWebHookAsync** method:
+The actual renewal of a SharePoint list webhook can be done using a [`PATCH /_api/web/lists('list-id')/subscriptions(‘subscriptionID’)`](./lists/update-subscription) REST call. In the reference implementation, updating of webhooks is implemented in the [WebHookManager](https://github.com/SharePoint/sp-dev-samples/blob/master/Samples/WebHooks.List/SharePoint.WebHooks.Common/WebHookManager.cs) class of the **SharePoint.WebHooks.Common** project. Updating a webhook is done using the **UpdateListWebHookAsync** method:
 
 ```csharp
 /// <summary>

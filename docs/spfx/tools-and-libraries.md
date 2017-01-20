@@ -24,6 +24,8 @@ You can choose any one of a number of JavaScript frameworks to develop client-si
 
 Because client-side web parts are components that are dropped into a SharePoint page, we recommend that you choose a JavaScript framework that supports a similar component model. Lightweight frameworks such as React, Handlebars, and Angular 2 all support a component model and are well suited to building client-side web parts. 
 
+We also recommend you to have a look on [SharePoint PnP JavaScript Core library](https://github.com/SharePoint/PnP-JS-Core), which is a community driven effort targeted for providing easy access on SharePoint REST APIs. 
+
 ## Node Package Manager (npm)
 
 SharePoint client-side development tools use the [npm](https://www.npmjs.com/) package manager, which is similar to [NuGet](https://www.nuget.org/), to manage dependencies and other required JavaScript helpers. npm is typically included as part of Node.js setup.
@@ -60,14 +62,13 @@ Webpack is a module bundler that takes your web part files an dependencies and g
 
 The development tool chain uses [CommonJS](https://webpack.github.io/docs/commonjs.html) for bundling. This enables you to define modules and where you want to use them. The tool chain also uses [SystemJS](https://github.com/systemjs/systemjs), a universal module loader, to load your modules. This helps you to scope your web parts by making sure that each web part is executed in its own namespace.
 
-Form more information about webpack, see the following:
+For more information about webpack, see the following:
 
 * [Webpack documentation](http://webpack.github.io/docs/what-is-webpack.html)
 * [TypeScript, React, and Webpack](https://www.typescriptlang.org/docs/handbook/react-&-webpack.html)
 
 ## Yeoman generators
-[Yeoman](http://yeoman.io/) helps you to kickstart new projects, prescribing best practices and tools to help you stay productive.
-SharePoint Yeoman generator will be available as part of the framework to kickstart new client-side web part projects. Once the project is generator, you can use your choice of IDEs like [Visual Studio](https://www.visualstudio.com/products/visual-studio-community-vs) or HTML/JavaScript code editors like [Visual Studio Code](https://code.visualstudio.com/) or [Sublime Text](https://www.sublimetext.com/) or [Atom](https://atom.io/).  
+[Yeoman](http://yeoman.io/) helps you to kickstart new projects, prescribing best practices and tools to help you stay productive. SharePoint Yeoman generator will be available as part of the framework to kickstart new client-side web part projects. 
 
 For more information about Yeoman, see the following:
 
@@ -78,6 +79,15 @@ The following are some common Yeoman generators that you can try, depending on y
 
 * [generator-react-webpack](https://github.com/newtriks/generator-react-webpack)
 * [generator-angular](https://www.npmjs.com/package/generator-angular)
+
+## Source code editors
+SharePoint Framework is client-side driven and thus you can use your choice of HTML/JavaScript code editors, such as:
+
+* [Visual Studio Code](https://code.visualstudio.com/)
+* [Atom](https://atom.io)
+* [Webstorm](https://www.jetbrains.com/webstorm)
+
+SharePoint Framework documentation uses Visual Studio code in the docs and examples. Visual Studio Code is a lightweight but powerful source code editor from Microsoft which runs on your desktop and is available for Windows, Mac and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Python, PHP) and runtimes.
 
 ## SharePoint REST APIs
 

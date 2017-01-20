@@ -37,12 +37,12 @@ The **package-solution.json** file defines the package metadata as shown in the 
 ```json
 {
 	"solution": {
-	"name": "helloworld-webpart-client-side-solution",
-	"id": "ed83e452-2286-4ea0-8f98-c79d257acea5",
-	"version": "1.0.0.0"
+		"name": "helloworld-webpart-client-side-solution",
+		"id": "ed83e452-2286-4ea0-8f98-c79d257acea5",
+		"version": "1.0.0.0"
 	},
 	"paths": {
-	"zippedPackage": "helloworld-webpart.spapp"
+		"zippedPackage": "solution/helloworld-webpart.sppkg"
 	}
 }
 ```
@@ -53,10 +53,10 @@ In the console window, enter the following command to package your client-side s
 gulp package-solution
 ```
 
-The command will create the package in the `sharepoint` folder:
+The command will create the package in the `sharepoint/solution` folder:
 
 ```
-helloworld-webpart.spapp
+helloworld-webpart.sppkg
 ```
 
 ### Package contents
@@ -68,7 +68,7 @@ The package uses SharePoint Feature to package your web part. By default, the gu
 
 You can view the raw package contents in the **sharepoint** folder. 
 
-The contents are then packaged into an **.spapp** file. The package format is very similar to a SharePoint add-ins package and uses Microsoft Open Packaging Conventions to package your solution. 
+The contents are then packaged into an **.sppkg** file. The package format is very similar to a SharePoint add-ins package and uses Microsoft Open Packaging Conventions to package your solution. 
 
 The JavaScript files, CSS and other assets are not packaged and you will have to deploy them to an external location such as a CDN. In order to test the web part during development, you can load all the assets from your local computer. 
 
@@ -78,7 +78,7 @@ Next you need to deploy the package that was generated to the App Catalog.
 
 Go to your site's App Catalog.
 
-Upload or drag and drop the **helloworld-webpart.spapp** to the App Catalog.
+Upload or drag and drop the **helloworld-webpart.sppkg** to the App Catalog.
 
 ![Upload solution to app catalog](../../../../images/upload-solution-app-catalog.png) 
 
@@ -87,6 +87,8 @@ This will deploy the client-side solution package. Since this is a full trust cl
 ![Trust client-side solution deployment](../../../../images/sp-app-deploy-trust.png) 
 	
 Choose **Deploy**
+
+>**Note:** If package deployment fails, then you may be using a normal tenant. Make sure you [set up your Office 365 tenant](../../set-up-your-developer-tenant) to have First Release options enabled or use a Office 365 Developer Tenant. 
 
 ## Install the client-side solution on your site
 
@@ -116,7 +118,7 @@ Notice that the **internalModuleBaseUrls** property in the **loaderConfig** entr
 
 ```json
 "internalModuleBaseUrls": [
-	"http://`your-local-machine-name`:4321/"
+	"https://`your-local-machine-name`:4321/"
 ]
 ```
 
@@ -128,7 +130,7 @@ In the console window that has the **helloworld-webpart** project directory, run
 gulp serve --nobrowser
 ```
 
->**Note:** `--nobrowser` will not automatically launch the Web Part Workbench.
+>**Note:** `--nobrowser` will not automatically launch the SharePoint Workbench.
 
 ## Add the HelloWorld web part to classic page
 
@@ -150,12 +152,8 @@ In the ribbon, choose **Insert -> Web Part** to open the Web Part Gallery.
 	
 In the Web Part Gallery, choose the category **Custom**.
 	
->**Note:** During preview, client-side web parts will be available under the **Custom** category in the web part gallery. 
+>**Note:** During preview, client-side web parts will be available under the **Custom** or **Under Development** category in the web part gallery. 
 
-You should see your Hello World web part.
-
-![Web Part gallery opened with custom category](../../../../images/webpart-gallery-helloworld.png)
-	
 Select the Hello World web part and choose **Add** to add it to the page.
 	
 The web part assets will be loaded from the local environment. In order to load the scripts hosted on your local computer, you need to enable the browser to load unsafe scripts. Depending on the browser you are using, make sure you enable loading unsafe scripts for this session.
@@ -193,6 +191,8 @@ Choose the **Ok** button in the server-side property pane to save and close the 
 Since the web part is running in a classic SharePoint page, choosing **Ok** or **Apply** buttons will save the web part properties.
 	
 In the ribbon, choose **Save** to save the page.
+
+>**Note:** Starting from drop 6, client-side web parts work also properly with modern pages.
 
 ## Next steps
 

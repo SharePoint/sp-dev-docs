@@ -1,7 +1,5 @@
 # Delete a subscription
 
->**Note:** SharePoint webhooks is currently in preview and is subject to change. SharePoint webhooks are not currently supported for use in production environments.
-
 Deletes a webhook subscription from a SharePoint list. After deleting the subscription notifications will no longer be delivered.
 
 ## Permissions

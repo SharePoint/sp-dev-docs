@@ -4,6 +4,8 @@
 
 You can use Visual Studio, or your own custom development environment to build SharePoint client-side web parts. You can use a Mac, PC, or Linux.
 
+>**Note:** Before following the steps in this article, be sure to [Set up your Office 365 Tenant](./set-up-your-developer-tenant).
+
 ## Install developer tools
 
 ### NodeJS
@@ -12,17 +14,22 @@ Install [NodeJS](https://nodejs.org/en/) Long Term Support (LTS) version.
 * If you have NodeJS already installed please check you have the latest version using `node -v`. It should return the current [LTS version](https://nodejs.org/en/download/). 
 * If you are using a Mac, it is recommended you use [homebrew](http://brew.sh/) to install and manage NodeJS. 
 
-After installing node, make sure you are running V3 or higher of npm by running the following command:
+After installing node, make sure you are running V3 of npm by running the following command:
 	
 ```
-npm -g install npm@next
+npm install -g npm@3
+```
+
+In case of Ubuntu Linux previous command might result in 'permission denied' message, so it should be instead executed as 
+
+```
+sudo npm install -g npm@3
 ```
 
 ### Code Editors
 Install a code editor. You can use any code editor or IDE that supports client-side development to build your web part, such as:
 
 * [Visual Studio Code](https://code.visualstudio.com/)
-* [Sublime](https://www.sublimetext.com/)
 * [Atom](https://atom.io)
 * [Webstorm](https://www.jetbrains.com/webstorm) 
 
@@ -35,15 +42,8 @@ You need to install *windows-build-tools*. windows-build-tools will install Visu
 Run the following command:
 	
 ```
-npm install --global --production windows-build-tools
+npm install -g --production windows-build-tools
 ```
-
-#### If you are using Visual Studio	
-If you want to use Visual Studio as your development environment, install the following required tools and updates:
-
-* [Visual Studio 2015](https://go.microsoft.com/fwlink/?LinkId=691978&clcid=0x409)
-* [Visual Studio Update 3](https://www.visualstudio.com/en-us/news/releasenotes/vs2015-update3-vs) or later
-* [Node.js Tools for Visual Studio](https://aka.ms/getntvs)
 
 ### If you are using Ubuntu
 
@@ -68,7 +68,7 @@ sudo yum install make automake gcc gcc-c++ kernel-devel
 Enter the following command to install Yeoman and gulp:
 	
 ```
-npm i -g yo gulp
+npm install -g yo gulp
 ```
 
 ## Install Yeoman SharePoint generator
@@ -78,7 +78,7 @@ The Yeoman SharePoint web part generator helps you quickly create a SharePoint c
 Enter the following command to install the Yeoman SharePoint generator:
 	
 ```
-npm i -g @microsoft/generator-sharepoint 
+npm install -g @microsoft/generator-sharepoint 
 ```
 
 ## Optional tools
