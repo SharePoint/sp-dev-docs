@@ -11,7 +11,7 @@
 			<Item text="Get started" url="spfx/web-parts/get-started">
 				<Item text="Build your first web part" url="spfx/web-parts/get-started/build-a-hello-world-web-part" SEODescription="Build a hello world SharePoint client-side web part." />
 				<Item text="Connect to SharePoint" url="spfx/web-parts/get-started/connect-to-sharepoint" SEODescription="Connect your SharePoint client-side web part to SharePoint by using page context." />
-				<Item text="Deploy your web part to a classic SharePoint page" url="spfx/web-parts/get-started/serve-your-web-part-in-a-sharepoint-page" SEODescription="Deploy your SharePoint client-side web part to a classic SharePoint page." />
+				<Item text="Deploy your web part to a SharePoint page" url="spfx/web-parts/get-started/serve-your-web-part-in-a-sharepoint-page" SEODescription="Deploy your SharePoint client-side web part to a SharePoint page." />
 				<Item text="Deploy to a CDN" url="spfx/web-parts/get-started/deploy-web-part-to-cdn" SEODescription="Deploy your SharePoint client-side web part assets to a CDN instead of using a local host." />
 				<Item text="Add jQueryUI Accordion" url="spfx/web-parts/get-started/add-jqueryui-accordion-to-web-part" SEODescription="Add the jQueryUI Accordian to your SharePoint client-side web part project." />
 				<Item text="Use Office UI Fabric React components" url="spfx/web-parts/get-started/use-fabric-react-components" SEODescription="Build a SharePoint client-side web part that uses the DocumentCard Office UI Fabric component." />
@@ -31,6 +31,7 @@
 				<Item text="Build custom controls for the property pane" url="spfx/web-parts/guidance/build-custom-property-pane-controls" SEODescription="Build custom controls for additional functionality for the property pane of your SharePoint Framework client-side web part." />
 				<Item text="Build web parts with Angular v1.x" url="spfx/web-parts/guidance/build-client-side-web-parts-with-angular-1-x" SEODescription="Use Angular 1.x to build a simple SharePoint Framework client-side web part." />
 				<Item text="Migrating Angular applications" url="spfx/web-parts/guidance/migrate-angular-1-x-applications-to-sharepoint-framework" SEODescription="Migrating existing Angular v1.x applications to SharePoint Framework client-side web parts." />
+				<Item text="Localization" url="spfx/web-parts/guidance/localize-web-parts" SEODescription="Localize SharePoint Framework client-side web parts." />
 				<Item text="Call the Microsoft Graph API" url="spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part" SEODescription="Call the Microsoft Graph API from your SharePoint Framework client-side web part using OAuth." />
 			</Item>
 		</Item>

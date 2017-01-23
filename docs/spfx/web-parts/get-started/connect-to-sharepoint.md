@@ -54,8 +54,8 @@ this.domElement.innerHTML = `
       <p class="${styles.description}">
         ${escape(this.properties.description)}
       </p>
-      <p class="${styles.description}">
-            ${escape(this.properties.description)}
+      <p class='ms-font-l ms-fontColor-white'>
+        Loading from ${this.context.pageContext.web.title}
       </p>
       <p class="ms-font-l ms-fontColor-white">Loading from ${this.context.pageContext.web.title}</p>
       <a class="ms-Button ${styles.button}" href="https://github.com/SharePoint/sp-dev-docs/wiki">
@@ -373,4 +373,4 @@ Now you can stop the server from running. Switch to the console and stop `gulp s
 
 ## Next steps
 
-Congratulations on connecting your web part to SharePoint list data! You can continue building out your Hello World web part in the next topic [Deploy your web part to a classic SharePoint page](./serve-your-web-part-in-a-sharepoint-page). You will learn how to deploy and preview the Hello World web part in a classic SharePoint server-side page.
+Congratulations on connecting your web part to SharePoint list data! You can continue building out your Hello World web part in the next topic [Deploy your web part to a SharePoint page](./serve-your-web-part-in-a-sharepoint-page). You will learn how to deploy and preview the Hello World web part in a classic SharePoint server-side page.
