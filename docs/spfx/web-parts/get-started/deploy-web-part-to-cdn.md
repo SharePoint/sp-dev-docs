@@ -222,11 +222,13 @@ Notice that you are no longer running **gulp serve**, and therefore nothing is s
 
 ## Deploying to other CDNs
 
-In order to deploy the assets to your favorite CDN provider, you can copy the files from **tmp\deploy** folder. To generate assets for distribution you will run the following gulp command as we did before with the **--ship** parameter:
+In order to deploy the assets to your favorite CDN provider, you can copy the files from **temp\deploy** folder. To generate assets for distribution you will run the following gulp command as we did before with the **--ship** parameter:
 
 ```
 gulp --ship
 ```
+
+As long as you are updaging the **cdnBasePath** accordingly, your files are being properly loaded.
 
 ## Next steps
 
