@@ -28,6 +28,7 @@ To identify the SharePoint Framework packages, look for the package names that s
 ```
 @microsoft/sp-
 ```
+Along with the framework packages, you may also need to update `react` and `office-ui-fabric-react` packages. Make sure you read the [release notes](https://aka.ms/spfx-release-notes) for that specific release to infer which packages require updates and plan accordingly.
 
 ### Update packages
 To update one or more packages to the latest version, you will need to edit the package(s) information in the `package.json` file and then fetch the latest packages.
@@ -64,12 +65,21 @@ Now, execute the following command to fetch the latest packages from the npm reg
 npm install
 ```
 
-This command will create the `node_modules` folder and install all the packages your project depends on based on the information available in the `package.json` file. As we updated the file with the latest versions, npm will now have the latest packages installed. 
+This command will create the `node_modules` folder and install all the packages your project depends on and its dependencies based on the information available in the `package.json` file. As we updated the file with the latest versions, npm will now have the latest packages and their dependencies installed. 
 
 Once the packages are installed, execute the following command to clean up any old build artifacts:
 
 ```
 gulp clean
+```
+
+### Update your code
+Depending on breaking API changes, you may have to update your existing project code and config files. For each release, the [release notes](https://aka.ms/spfx-release-notes) will highlight any such breaking changes and the modifications required to your existing code. You will need to make sure you update your code with those fixes.
+
+You can always build the project to see if you have any errors and warnings by running the command in a console in your project directory:
+
+```
+gulp build
 ```
 
 ## Update yeoman generator for SharePoint
@@ -95,14 +105,14 @@ To identify the generator package, look for the following package name:
 @microsoft/generator-sharepoint
 ```
 
-### Update package
+### Update generator package
 Open your favorite console and execute the following command to update the generator to its latest published version:
 
 ```
 npm install @microsoft/generator-sharepoint@latest -g
 ```
 
-The command will update the yeoman generator for SharePoint to the latest published version. You can validate this by executing the following command in the console:
+The command will update the yeoman generator for SharePoint to the latest published version along with its depedencies. You can validate this by executing the following command in the console:
 
 ```
 npm ls @microsoft/generator-sharepoint -g --depth=0
