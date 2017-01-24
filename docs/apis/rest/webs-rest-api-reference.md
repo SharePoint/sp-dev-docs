@@ -34,7 +34,7 @@ The examples in this article use jQuery AJAX requests. Before you try to use the
  
 - If you're using the cross-domain library, you'll have to change the request format. For example, it might look like the following.
     
-  ```
+```
   executor.executeAsync({
   url: "<app web url>/_api/SP.AppContextSite(@target)/web/getchanges?@target='<host web url>'",
   method: "POST",
@@ -46,7 +46,7 @@ The examples in this article use jQuery AJAX requests. Before you try to use the
   success: successHandler,
   error: errorHandler
 });
-  ```
+```
 
 - If you're using OAuth, add an  **Authorization** header ( `"Authorization": "Bearer " + <access token>`) to send the OAuth access token.
     
