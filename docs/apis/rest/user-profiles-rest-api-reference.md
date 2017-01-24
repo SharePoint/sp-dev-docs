@@ -1,12 +1,3 @@
----
-title: User profiles REST API reference
-ms.prod: SHAREPOINT
-ms.assetid: 10757ed1-6e86-474f-89e0-6dec6aa66a2b
-ms.locale: en-US
----
-
-
-
 # User profiles REST API reference
 Learn about  **PeopleManager**,  **ProfileLoader**,  **UserProfile**, and other user profile-related resources and endpoints in the REST API.
  
@@ -16,10 +7,6 @@ Learn about  **PeopleManager**,  **ProfileLoader**,  **UserProfile**, and other 
 
  * **Applies to:** apps for SharePoint | SharePoint Online | SharePoint Server 2013* 
  
-
-
- 
-
 
 ## About the request examples in this article
 <a name="bk_AboutTheExamples"> </a>

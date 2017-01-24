@@ -1,12 +1,3 @@
----
-title: Webs REST API reference
-ms.prod: MULTIPLEPRODUCTS
-ms.assetid: 73b8a37a-c005-46f6-9ab0-18cdf47830af
-ms.locale: en-US
----
-
-
-
 # Webs REST API reference
 Learn about site-related resources and endpoints in the SharePoint REST API.
  
@@ -16,10 +7,6 @@ Learn about site-related resources and endpoints in the SharePoint REST API.
 
  * **Applies to:** apps for SharePoint | SharePoint Online | SharePoint Server 2013* 
  
-
-
- 
-
 
 ## About the request examples in this article
 <a name="bk_AboutTheExamples"> </a>

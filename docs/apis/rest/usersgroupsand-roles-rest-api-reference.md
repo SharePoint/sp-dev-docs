@@ -1,12 +1,3 @@
----
-title: Users, groups, and roles REST API reference
-ms.prod: MULTIPLEPRODUCTS
-ms.assetid: c5e49290-78d4-4167-b4de-da32376bbf90
-ms.locale: en-US
----
-
-
-
 # Users, groups, and roles REST API reference
 Learn about the REST API for the  **User**,  **Group**,  **RoleAssigment**,  **RoleDefinition**,  **UserCustomAction** and related resources.
  

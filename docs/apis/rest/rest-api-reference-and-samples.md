@@ -1,11 +1,3 @@
----
-title: REST API reference and samples
-ms.prod: SHAREPOINT
-ms.assetid: 02128c70-9d27-4388-9374-a11bce68fdb8
-ms.locale: en-US
----
-
-
 # REST API reference and samples
 Find documentation on MSDN about the SharePoint 2013 representational state transfer (REST) interface.
  
@@ -17,23 +9,6 @@ This page contains links to commonly used REST resources that are available for 
 
  * **Applies to:** apps for SharePoint | SharePoint Foundation 2013 | SharePoint Server 2013* 
  
-
-**Watch the video: SharePoint 2013 REST and OData fundamentals**
-
- 
-
- 
-![Videos](images/mod_icon_video.png)
- 
-
- 
-
- 
-
- **Tip**  The SharePoint Online REST service supports combining multiple requests into a single call to the service by using the OData  `$batch` query option. For details and links to code samples, see [Make batch requests with the REST APIs](http://msdn.microsoft.com/library/make-batch-requests-with-the-rest-apis%28Office.15%29.aspx). This option is not yet supported for on-premise SharePoint.
- 
-
-
 ## SharePoint 2013 REST reference
 <a name="Reference"> </a>
 

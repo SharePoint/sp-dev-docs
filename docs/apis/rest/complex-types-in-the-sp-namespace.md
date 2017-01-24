@@ -1,12 +1,3 @@
----
-title: Complex types in the SP namespace
-ms.prod: MULTIPLEPRODUCTS
-ms.assetid: f50f8700-a307-4a67-958d-51388cbb3cb4
-ms.locale: en-US
----
-
-
-
 # Complex types in the SP namespace
 Find complex types from the  **SP** namespace that are used by the SharePoint REST interface.
  

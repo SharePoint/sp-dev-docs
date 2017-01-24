@@ -1,12 +1,3 @@
----
-title: Files and folders REST API reference
-ms.prod: SHAREPOINT
-ms.assetid: 2c3d2545-1cd7-497e-b535-12199d8edfbb
-ms.locale: en-US
----
-
-
-
 # Files and folders REST API reference
 Learn about the REST API for  **File**,  **FileVersion**,  **Folder**, and related resources.
  

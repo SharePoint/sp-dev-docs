@@ -1,12 +1,3 @@
----
-title: Fields REST API reference
-ms.prod: MULTIPLEPRODUCTS
-ms.assetid: 0f418ceb-8064-46c1-a149-ba1eae3d9fc7
-ms.locale: en-US
----
-
-
-
 # Fields REST API reference
 Learn about field-related resources and endpoints in the SharePoint REST API.
  

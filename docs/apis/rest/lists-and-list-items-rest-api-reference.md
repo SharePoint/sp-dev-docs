@@ -1,12 +1,3 @@
----
-title: Lists and list items REST API reference
-ms.prod: MULTIPLEPRODUCTS
-ms.assetid: a1ddb750-e4e2-40a8-90a9-d62c576648dd
-ms.locale: en-US
----
-
-
-
 # Lists and list items REST API reference
 Learn about lists, list items, views, and other list-related resources and endpoints in the REST API.
  
