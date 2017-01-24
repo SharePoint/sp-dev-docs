@@ -10,10 +10,10 @@ The following image shows a DocumentCard component created with Office UI Fabric
 
 ![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../../images/fabric-components-doc-card-view-ex.png)
 
-You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=P8WmNhcSWHU&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
+You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=1N6kNvLxyg4&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
 
-<a href="https://www.youtube.com/watch?v=P8WmNhcSWHU&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
-<img src="../../../../images/spfx-youtube-tutorial3.png" alt="Screenshot of the YouTube video player for this tutorial" />
+<a href="https://www.youtube.com/watch?v=1N6kNvLxyg4&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
+<img src="../../../../images/spfx-youtube-tutorial6.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
 

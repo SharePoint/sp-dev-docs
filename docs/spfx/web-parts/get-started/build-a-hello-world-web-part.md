@@ -11,10 +11,10 @@ Client-side web parts support:
 
 >**Note:** Before following the steps in this article, be sure to [Set up your development environment](../../set-up-your-development-environment).
 
-You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=ralspfOBgic&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
+You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=QbDtsMg88Js&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
 
-<a href="https://www.youtube.com/watch?v=ralspfOBgic&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
-<img src="../../../../images/spfx-youtube-tutorial5.png" alt="Screenshot of the YouTube video player for this tutorial" />
+<a href="https://www.youtube.com/watch?v=QbDtsMg88Js&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
+<img src="../../../../images/spfx-youtube-tutorial1.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
 
