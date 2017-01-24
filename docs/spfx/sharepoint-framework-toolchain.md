@@ -31,7 +31,7 @@ The following packages are in the SharePoint Framework:
 
 * [@microsoft/sp-tslint-rules](https://www.npmjs.com/package/@microsoft/sp-tslint-rules) - Defines custom tslint rules for usage with SharePoint client-side projects.
 
-* [@microsoft/office-ui-react-bundle](https://www.npmjs.com/package/@microsoft/office-ui-fabric-react-bundle) - Provides a custom bundle of  [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) that is optimized for use with the SharePoint Framework's module loader.
+* [@microsoft/office-ui-fabric-react-bundle](https://www.npmjs.com/package/@microsoft/office-ui-fabric-react-bundle) - Provides a custom bundle of  [office-ui-fabric-react](https://www.npmjs.com/package/office-ui-fabric-react) that is optimized for use with the SharePoint Framework's module loader.
 
 ### Common build tools packages
 Along with the SharePoint Framework packages described previously, a common set of build tools are also used to perform build tasks such as compiling TypeScript code to JavaScript, and converting SCSS to CSS.

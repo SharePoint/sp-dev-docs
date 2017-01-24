@@ -26,8 +26,8 @@ The result will be a "default" Azure Function written in C#
 ![The default Azure Function](../../../images/webhook-azure-function4.png)
 
 In our case we want this Azure Function to behave as a SharePoint webhook service, so we'll need to implement the following in C#:
-- Return the validationtoken if specified as URL parameter to the call. This is needed as described [here](./lists/create-subscription)
-- Process the JSON webhook notification. In below sample we've opted to store the JSON in a storage queue so that an Azure Web Job can pick it up and process it asynchronously. Depending on your needs you could also process the notification directly in your webhook service
+- Return the validationtoken if specified as URL parameter to the call. This is needed as described [here](./lists/create-subscription) and SharePoint expects the reply to happen within 5 seconds. 
+- Process the JSON webhook notification. In below sample we've opted to store the JSON in a storage queue so that an Azure Web Job can pick it up and process it asynchronously. Depending on your needs you could also process the notification directly in your webhook service, but keep in mind that all webhook service calls need to complete in 5 seconds, hence using an asynchronous model is recommended
 
 You can achieve above by replacing the default code by below code (please enter your storage account connection string and update the queue name if you're using a different one):
 
@@ -144,7 +144,7 @@ public class SubscriptionModel
 ```
 
 ## Configure your Azure Function
-Since we've chosen the correct template to start from our configuration is almost complete, the only thing you need to still do is to switch the **Allowed HTTP methods** to **Selected methods** and then only allow the **PUT** HTTP method. Also cross check that **Mode** is equal to **Standard** and **Authorization level** is set to **Anonymous**.
+Since we've chosen the correct template to start from our configuration is almost complete, the only thing you need to still do is to switch the **Allowed HTTP methods** to **Selected methods** and then only allow the **POST** HTTP method. Also cross check that **Mode** is equal to **Standard** and **Authorization level** is set to **Anonymous**.
 
 ![Azure Function settings](../../../images/webhook-azure-function5.png)
 

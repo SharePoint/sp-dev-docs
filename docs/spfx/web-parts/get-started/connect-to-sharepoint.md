@@ -4,9 +4,9 @@
 
 Connect your web part to SharePoint to access functionality and data in SharePoint and provide a more integrated experience for end users. This article continues building the hello world web part built in the previous article [Build your first web part](./build-a-hello-world-web-part).
 
-You can also follow follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=rokWJlXoFWk&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
+You can also follow follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=9VMwjb2pbQ8&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
 
-<a href="https://www.youtube.com/watch?v=rokWJlXoFWk&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
+<a href="https://www.youtube.com/watch?v=9VMwjb2pbQ8&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
 <img src="../../../../images/spfx-youtube-tutorial2.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
@@ -54,8 +54,8 @@ this.domElement.innerHTML = `
       <p class="${styles.description}">
         ${escape(this.properties.description)}
       </p>
-      <p class='ms-font-l ms-fontColor-white'>
-        Loading from ${this.context.pageContext.web.title}
+      <p class="${styles.description}">
+        ${escape(this.properties.test2)}
       </p>
       <p class="ms-font-l ms-fontColor-white">Loading from ${this.context.pageContext.web.title}</p>
       <a class="ms-Button ${styles.button}" href="https://github.com/SharePoint/sp-dev-docs/wiki">
