@@ -5,7 +5,11 @@
 		<Item text="Tools and libraries" url="spfx/tools-and-libraries" SEODescription="Learn about the tools and libriaries you will need to use to build your SharePoint Framework solutions."/>
 		<Item text="Set up your Office 365 tenant" url="spfx/set-up-your-developer-tenant" SEODescription="Set up an Office 365 tenant so that you can test and debug your SharePoint client-side web parts" />
 		<Item text="Set up your development environment" url="spfx/set-up-your-development-environment" SEODescription="Set up and configure your development environment to build SharePoint client-side web parts" />
-		<Item text="SharePoint Framework Toolchain" url="spfx/sharepoint-framework-toolchain" SEODescription="The SharePoint Framework toolchain is the set of build tools, framework packages, and other items that manage building and deploying your client side projects." />
+		<Item text="Toolchain" url="spfx/toolchain/sharepoint-framework-toolchain" SEODescription="">
+			<Item text="SharePoint Framework Toolchain" url="spfx/toolchain/sharepoint-framework-toolchain" SEODescription="The SharePoint Framework toolchain is the set of build tools, framework packages, and other items that manage building and deploying your client side projects." />
+			<Item text="SharePoint Framework Toolchain" url="spfx/toolchain/update-latest-packages" SEODescription="Process how to update SharePoint Framework packages to latest versions in your solutions." />
+			<Item text="SharePoint Framework Toolchain" url="spfx/toolchain/extending-webpack-in-build-pipeline" SEODescription="Extend Webpack in the build pipeline used in SharePoint Framework solutions." />
+		</Item>
 		<Item text="Web parts" url="spfx/web-parts" SEODescription="">
 			<Item text="Overview" url="spfx/web-parts/overview-client-side-web-parts" SEODescription="Develop SharePoint client-side web parts to provide a better customized experience for SharePoint."/>
 			<Item text="Get started" url="spfx/web-parts/get-started">

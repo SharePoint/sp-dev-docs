@@ -156,11 +156,11 @@ You're now all set for your first Azure Function test: navigate to the **Develop
 ## Grab the webhook URL to use in your implementation
 We'll need to let SharePoint now what webhook URL we're using. To so let's start by copying the Azure Function URL:
 
-![Azure Function webhook URL](../../../images/webhook-azure-function7.png)
+![Azure Function authorization codes](../../../images/webhook-azure-function8.png)
 
 To avoid unathorized usage of your Azure Function the caller will need to specify a code when calling your function. This code can be retreived via the **Manage** screen:
 
-![Azure Function authorization codes](../../../images/webhook-azure-function8.png)
+![Azure Function webhook URL](../../../images/webhook-azure-function7.png)
 
 So in our case the webhook URL to use is the following: `https://pnp-functions.azurewebsites.net/api/spwebhookfunction?code=wyx9iAxp3o7fdGFZTbnp9Kfc5o2UhlzwgSOT/XGGM6QZcdYYa/o9aw==`
 
