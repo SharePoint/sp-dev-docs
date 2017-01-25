@@ -4,7 +4,7 @@
 
 As part of the SPFX tooling, we have tried to stick closely to using common open source tooling.  We've wrapped some of it up into a build pipeline that we use internally, and have [published it to GitHub] (https://github.com/Microsoft/web-build-tools).  One common request that has been made is to extend the [Webpack](https://webpack.github.io/) step of the build.
 
-## What is a Webpack loader?
+## What is a Webpack loader
 There are many cases where one would like to import and utilize a non-JavaScript resource during development, typically this is done with images or templates. A [Webpack loader](https://webpack.github.io/docs/loaders.html) will convert the resource into something that can be utilized by your JS application. For example, a Markdown template may be compiled and converted to a text string, while a image resource may be converted to Base64 or the `require()` statement might return a path to that particular file.
 
 There are a number of useful loaders, several of which are already used by the standard SPFx webpack configuration:
@@ -16,13 +16,14 @@ Writing loaders is a straightforward process which is [documented here](https://
 
 > You can find more details on the Webpack loader from [webpack documentation](https://webpack.github.io/docs/loaders.html)
 
-### Using the Markdown-loader package
+## Using the Markdown-loader package
 As an example, let's use the [markdown-loader package](https://www.npmjs.com/package/markdown-loader).  It's a loader which allows you to reference an .md file and output it as HTML.
 
-#### Step 1 - Install the package
+### Step 1 - Install the package
 Let's reference markdown-loader in our project.
 `npm i --save markdown-loader `
-#### Step 2 - Configure Webpack 
+
+### Step 2 - Configure Webpack 
 In the documentation of markdown-loader, it shows how to extend the Webpack configuration. 
 
 ```JavaScript
@@ -53,7 +54,7 @@ build.configureWebpack.mergeConfig({
 
 Notice that we simply push the loader config onto the list of existing loaders in the toolchain. It's important to ensure that your `additionalConfiguration` function ends with the `return generatedConfiguration` line, as this function allows you to completely replace the Webpack configuration. Completely replacing the Webpack configuration is not recommended except in very advanced scenarios, however.
 
-#### Step 3 - Update your code
+### Step 3 - Update your code
 Create a file (say `readme.md`) in your `src/webparts/helloworld` folder (or whatever your folder name is) with some Markdown in it.
 
 Next, add the following `require()` line at the top of you `HelloWorldWebPart.ts` file after your imports:
@@ -72,10 +73,10 @@ public render(): void {
 ```
 
 
-#### Step 4 - Go!
+### Step 4 - Go!
 run `gulp serve` and see your new part in action.
 
-#### Step 5 - One more thing
+### Step 5 - One more thing
 So that require statement is pretty ugly. Webpack will look in the `lib` folder for the file, but by default `.md` files don't get copied to the `lib` folder, meaning we need to create a rather ugly relative path. There is a better way though.
 
 Create a file `copy-static-assets.json` in the `config` directory to tell the build system to copy some additional files from `src` to `lib`. By default, this build task copies files with extensions that the default SPFx Webpack configuration understands (like `png` and `json`), so we just need to tell it to also copy `md` files.
