@@ -1,7 +1,10 @@
-## Extending Webpack in the build pipeline used in SPFX
+# Extending Webpack in the build pipeline used in SPFX
+
+>**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
+
 As part of the SPFX tooling, we have tried to stick closely to using common open source tooling.  We've wrapped some of it up into a build pipeline that we use internally, and have [published it to GitHub] (https://github.com/Microsoft/web-build-tools).  One common request that has been made is to extend the [Webpack](https://webpack.github.io/) step of the build.
 
-## What is a [Webpack loader](https://webpack.github.io/docs/loaders.html)?
+## What is a Webpack loader?
 There are many cases where one would like to import and utilize a non-JavaScript resource during development, typically this is done with images or templates. A [Webpack loader](https://webpack.github.io/docs/loaders.html) will convert the resource into something that can be utilized by your JS application. For example, a Markdown template may be compiled and converted to a text string, while a image resource may be converted to Base64 or the `require()` statement might return a path to that particular file.
 
 There are a number of useful loaders, several of which are already used by the standard SPFx webpack configuration:
@@ -10,6 +13,8 @@ There are a number of useful loaders, several of which are already used by the s
 * `loader-load-themed-styles`
 
 Writing loaders is a straightforward process which is [documented here](https://webpack.github.io/docs/loaders.html#writing-a-loader).
+
+> You can find more details on the Webpack loader from [webpack documentation](https://webpack.github.io/docs/loaders.html)
 
 ### Using the Markdown-loader package
 As an example, let's use the [markdown-loader package](https://www.npmjs.com/package/markdown-loader).  It's a loader which allows you to reference an .md file and output it as HTML.
