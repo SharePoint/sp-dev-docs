@@ -260,6 +260,7 @@ function errorHandler(xhr, ajaxOptions, thrownError) {
 
 ## Additional resources
 <a name="bk_addresources"> </a>
+
 -  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md) 
 -  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md)
 -  [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest.md)
