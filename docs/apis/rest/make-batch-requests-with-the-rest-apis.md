@@ -2,51 +2,31 @@
 Learn how to use the  `$batch` query option with the REST/OData APIs.
  
 This article describes how you can batch queries and operations against the REST/OData API of Microsoft SharePoint Online (and on-premise SharePoint 2016 and later) and the  [Files and folders subset](http://msdn.microsoft.com/en-us/office/office365/api/files-rest-operations) of the Office 365 REST APIs. With this technique you can improve the performance of your add-in by combining many operations into a single request to the server and a single response back.
- 
 
 ## Executive summary of the $batch option
-
 SharePoint Online (and on-premise SharePoint 2016 and later) and the Office 365 APIs implement the OData  `$batch` query option, so you can rely on [the official documentation](http://www.odata.org/documentation/odata-version-3-0/batch-processing) for details about how to use it. (Another option is to see Andrew Connell's blog posts on the subject beginning at [Part 1 - SharePoint REST API Batching](http://www.andrewconnell.com/blog/part-1-sharepoint-rest-api-batching-understanding-batching-requests).) The following is only a reminder of the major points:
  
-
- 
-
 - The request URL consists of the root service URL and the  `$batch` option; for example, `https://fabrikam.sharepoint.com/_api/$batch` or `https://fabrikam.office365.com/api/v1.0/me/$batch`.
     
- 
 - The HTTP request body is MIME type  *multipart/mixed*  .
     
- 
 - The body of the request is divided into parts that are separated from each other by a boundary string that is specified in the header of the request.
     
- 
 - Each part of the body has its own HTTP verb and REST URL, and its own internal body when applicable.
     
- 
 - A part can be a read operation (or function invocation), or a ChangeSet of one or more write operations (or function invocations). A ChangeSet is itself a MIME type  *multipart/mixed*  with subparts that contain insert, update, or delete operations.
     
      **Important**  At this time, SharePoint and Office 365 APIs do not support "all or nothing" functionality for ChangeSets that have more than one operation within them. If any of the child operations fails, the others still complete and are not rolled back.
 
 ## Code samples
-
-Samples of code that uses the  `$batch` query option against the SharePoint REST/OData APIs:
- 
-
- 
+Samples of code that uses the  `$batch` query option against the SharePoint REST/OData APIs: 
 
 -  **C#:** [OfficeDev/Core.ODataBatch](https://github.com/OfficeDev/PnP/tree/master/Samples/Core.ODataBatch)
-    
- 
 -  **JavaScript:** [andrewconnell/sp-o365-rest](https://github.com/andrewconnell/sp-o365-rest/blob/master/SpRestBatchSample/Scripts/App.js)
     
- 
 
 ## Example requests and responses
-
 The following is an example of a raw HTTP request that batches two GET operations that retrieve the titles of all the items in two different lists.
- 
-
- 
 
 ```
 POST https://fabrikam.sharepoint.com/_api/$batch HTTP/1.1
@@ -74,11 +54,6 @@ GET https://fabrikam.sharepoint.com/_api/Web/lists/getbytitle('User%20Informatio
 
 The following is an example of the body of a raw HTTP request that batches a DELETE of a list and a GET of the SharePoint list-of-lists.
  
-
- 
-
-
-
 ```
 POST https://fabrikam.sharepoint.com/_api/$batch HTTP/1.1
 Authorization: Bearer <access token omitted>
@@ -109,16 +84,7 @@ GET https://fabrikam.sharepoint.com/_api/Web/lists HTTP/1.1
 
 
 ## Links to helpful libraries
-
 There are OData libraries that support OData batching for many languages. Two examples are below. For a more complete list, see  [OData Libraries](http://www.odata.org/libraries/).
- 
-
- 
 
 -  [.NET OData library](http://msdn.microsoft.com/en-us/office/microsoft.data.odata%28v=vs.90%29). See especially the  **ODataBatch*** classes.
-    
- 
 -  [Datajs library](http://datajs.codeplex.com/documentation). See especially  [Batch operations](http://datajs.codeplex.com/wikipage?title=datajs%20OData%20API&amp;referringTitle=Documentation#Batch).
-    
- 
-

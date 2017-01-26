@@ -1,22 +1,13 @@
 # Synchronize SharePoint items using the REST service
 Learn how to synchronize items between SharePoint and your add-ins or services by using the  **GetListItemChangesSinceToken** resource, part of the SharePoint REST service.
 
-
 ## Synchronizing SharePoint items using the GetListItemChangesSinceToken resource
-
 If you want to synchronize items between SharePoint and your add-ins or services, you can use the  **GetListItemChangesSinceToken** resource to do so. The **GetListItemChangesSinceToken**, part of the SharePoint REST service, corresponds to the  **Lists.GetListItemChangesSinceToken** web service call.
- 
-
  
 Perform a  **POST** request that includes a [SP.ChangeLogItemQuery object properties](#bk_props) object in the request body.
  
-
- 
 The request returns ADO  **rowset** XML which includes rows corresponding to any list item change matching the specified query. For more information on these properties, including property data structures, CAML element descriptions, and return values, see **Lists.GetListItemChangesSinceToken**.
  
-
- 
-
 ||
 |:-----|
 |**Example request**|
@@ -52,10 +43,7 @@ The request returns ADO  **rowset** XML which includes rows corresponding to any
 
 ## SP.ChangeLogItemQuery object properties
 <a name="bk_props"> </a>
-
-
 ****
-
 
 |**Property**|**Description**|
 |:-----|:-----|
@@ -68,32 +56,14 @@ The request returns ADO  **rowset** XML which includes rows corresponding to any
 
 ## Additional resources
 <a name="bk_addresources"> </a>
-
-
--  [Get to know the SharePoint 2013 REST service](get-to-know-the-sharepoint-2013-rest-service.md)
-    
- 
--  [Complete basic operations using SharePoint 2013 REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md)
-    
- 
+-  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
+-  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md)
 -  [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest.md)
-    
- 
 -  [Working with folders and files with REST](working-with-folders-and-files-with-rest.md)
-    
- 
 -  [Navigate the SharePoint data structure represented in the REST service](navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md)
-    
- 
 -  [Determine SharePoint REST service endpoint URIs](determine-sharepoint-rest-service-endpoint-uris.md)
-    
- 
 -  [Use OData query operations in SharePoint REST requests](use-odata-query-operations-in-sharepoint-rest-requests.md)
-    
- 
 -  [REST API reference and samples](http://msdn.microsoft.com/library/02128c70-9d27-4388-9374-a11bce68fdb8%28Office.15%29.aspx)
-    
- 
 -  [Use ETag values through the REST service to get document list item versioning](http://msdn.microsoft.com/library/use-etag-values-through-the-rest-service-to-get-document-list-item-versioning%28Office.15%29.aspx)
     
  
