@@ -65,7 +65,7 @@ The figure below shows the supported OData query options.
  
 **Supported OData query options**
 
-![SharePoint REST service query option syntax](images/SPF15Con_REST_queryOptionSyntax.png)
+![SharePoint REST service query option syntax](images/REST_queryOptionSyntax.png)
 
 ## Additional resources
 <a name="bk_addresources"> </a>
