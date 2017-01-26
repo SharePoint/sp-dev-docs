@@ -1,30 +1,42 @@
-# Extending Webpack in the build pipeline used in SPFX
+# Extending webpack in the SharePoint Framework toolchain
 
 >**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
 
-As part of the SPFX tooling, we have tried to stick closely to using common open source tooling.  We've wrapped some of it up into a build pipeline that we use internally, and have [published it to GitHub] (https://github.com/Microsoft/web-build-tools).  One common request that has been made is to extend the [Webpack](https://webpack.github.io/) step of the build.
+[Webpack](https://webpack.github.io/) is a JavaScript module bundler that takes your JavaScript files and its dependencies and generates one or more JavaScript bundles so you can load different bundles for different scenarios.
 
-## What is a Webpack loader
-There are many cases where one would like to import and utilize a non-JavaScript resource during development, typically this is done with images or templates. A [Webpack loader](https://webpack.github.io/docs/loaders.html) will convert the resource into something that can be utilized by your JS application. For example, a Markdown template may be compiled and converted to a text string, while a image resource may be converted to Base64 or the `require()` statement might return a path to that particular file.
+The framework tool chain uses CommonJS for bundling. This enables you to define modules and where you want to use them. The tool chain also uses SystemJS, a universal module loader, to load your modules. This helps you to scope your web parts by making sure that each web part is executed in its own namespace.
 
-There are a number of useful loaders, several of which are already used by the standard SPFx webpack configuration:
-* `html-loader`
-* `json-loader`
-* `loader-load-themed-styles`
+One common task you would want to add to the SharePoint Framework toolchain is to extend the webpack configuration with custom loaders and plugins.
 
-Writing loaders is a straightforward process which is [documented here](https://webpack.github.io/docs/loaders.html#writing-a-loader).
+## Using webpack loaders
+There are many cases where one would like to import and utilize a non-JavaScript resource during development, typically this is done with images or templates. A [webpack loader](https://webpack.github.io/docs/loaders.html) will convert the resource into something that can be utilized by your JavaScript application. For example, a Markdown template may be compiled and converted to a text string, while a image resource may be converted to Base64 image.
 
-> You can find more details on the Webpack loader from [webpack documentation](https://webpack.github.io/docs/loaders.html)
+There are a number of useful loaders, several of which are already used by the standard SharePoint Framework webpack configuration, such as:
 
-## Using the Markdown-loader package
-As an example, let's use the [markdown-loader package](https://www.npmjs.com/package/markdown-loader).  It's a loader which allows you to reference an .md file and output it as HTML.
+- html-loader
+- json-loader
+- loader-load-themed-styles
+
+Extending the framework webpack configuration with custom loaders is a straightforward process which is documented [here in the webpack documentation](https://webpack.github.io/docs/loaders.html#writing-a-loader).
+
+> You can find more details on the loaders from [webpack loaders documentation](https://webpack.github.io/docs/loaders.html)
+
+## Example: Using the markdown-loader package
+As an example, let's use the [markdown-loader package](https://www.npmjs.com/package/markdown-loader).  It's a loader which allows you to reference an `.md` file and output it as HTML string.
+
+You can download the completed sample [here](https://aka.ms/spfx-extend-webpack-sample).
 
 ### Step 1 - Install the package
 Let's reference markdown-loader in our project.
-`npm i --save markdown-loader `
+
+```
+npm i --save markdown-loader 
+```
 
 ### Step 2 - Configure Webpack 
-In the documentation of markdown-loader, it shows how to extend the Webpack configuration. 
+Now that we have the package installed, lets now configure the SharePoint Framework webpack configuration to include the markdown-loader. 
+
+In the [documentation of markdown-loader](https://github.com/peerigon/markdown-loader), it shows how to extend the webpack configuration to include the loader:
 
 ```JavaScript
 {
@@ -36,11 +48,13 @@ In the documentation of markdown-loader, it shows how to extend the Webpack conf
 }
 ```
 
- Here's how to do that in the SPFX toolchain:
+We will use this information to configure it in our project. 
+
+In order to add this custom loader into the SharePoint Framework webpack configuration, we will need to instruct the build task to configure webpack. The build tasks are defined in the gulp file - `gulpfile.js` - which is located at the root of your project. SharePoint Framework uses [gulp](http://gulpjs.com/) as its task runner and hence we use it to define and register custom tasks with the gulp task runner.
 
 Edit the `gulpfile.js` and add the following code right before `build.initialize(gulp);`:
 
-```javascript
+```JavaScript 
 build.configureWebpack.mergeConfig({ 
   additionalConfiguration: (generatedConfiguration) => { 
     generatedConfiguration.module.loaders.push([ 
@@ -52,34 +66,33 @@ build.configureWebpack.mergeConfig({
 });
 ```
 
-Notice that we simply push the loader config onto the list of existing loaders in the toolchain. It's important to ensure that your `additionalConfiguration` function ends with the `return generatedConfiguration` line, as this function allows you to completely replace the Webpack configuration. Completely replacing the Webpack configuration is not recommended except in very advanced scenarios, however.
+Notice that we simply push the loader config onto the list of existing loaders in the toolchain. It's important to ensure that your `additionalConfiguration` function ends with the `return generatedConfiguration` line, as this ensures that it  returns the loader configuration to the toolchain. 
+
+> While you are able to completely replace the toolchain's default webpack configuration using this approach, to get the maximum benefit with performance and optimization, it is not recommended to do so unless stated otherwise in the documentation. 
 
 ### Step 3 - Update your code
-Create a file (say `readme.md`) in your `src/webparts/helloworld` folder (or whatever your folder name is) with some Markdown in it.
+Now that we have configured the loader, lets update our code and add few files to test the scenario. 
 
-Next, add the following `require()` line at the top of you `HelloWorldWebPart.ts` file after your imports:
+Create a file `my-markdown.md` in the `src` directory of your project folder with some Markdown text in it.
+
+```md
+#Hello Markdown
+
+*Markdown* is a simple markup format to write content. 
+
+You can also format text as **bold** or *italics* or ***bold italics***  
+```
+
+When you build the project, the webpack markdown-loader will convert this markdown text to a HTML string. To use this HTML string in any of your source `*.ts` files, add the following `require()` line at the top of the file after your imports, for example:
 
 
 ```TypeScript
-const html : string = require("../../../src/webparts/helloworld/readme.md");
+const strMarkdownString = require("../../../../src/readme.md") as string;
 ```
 
-Then reference it in your render method:
+Webpack by default will look in the `lib` folder for the file, but by default `.md` files don't get copied to the `lib` folder, meaning we need to create a rather lengthy relative path. We can control this setting by defining a config file to tell the toolchain to copy `md` files to the lib folder. 
 
-``` TypeScript
-public render(): void {
-  this.domElement.innerHTML = html;
-}
-```
-
-
-### Step 4 - Go!
-run `gulp serve` and see your new part in action.
-
-### Step 5 - One more thing
-So that require statement is pretty ugly. Webpack will look in the `lib` folder for the file, but by default `.md` files don't get copied to the `lib` folder, meaning we need to create a rather ugly relative path. There is a better way though.
-
-Create a file `copy-static-assets.json` in the `config` directory to tell the build system to copy some additional files from `src` to `lib`. By default, this build task copies files with extensions that the default SPFx Webpack configuration understands (like `png` and `json`), so we just need to tell it to also copy `md` files.
+Create a file `copy-static-assets.json` in the `config` directory to tell the build system to copy some additional files from `src` to `lib`. By default, this build task copies files with extensions that the default toolchain webpack configuration understands (like `png` and `json`), so we just need to tell it to also copy `md` files.
 
 ```JSON
 {
@@ -89,12 +102,23 @@ Create a file `copy-static-assets.json` in the `config` directory to tell the bu
 }
 ```
 
-This says "copy everything in the source directory with a .md extension to the lib directory, and keep the same directory structure."
-
-Next, clean up your require statement to look like:
+Now instead of using the relative path, you can use the file path in your `require` statement, for example:
 
 ```TypeScript
-const html: string = require("./readme.md");
+const strMarkdownString = require("../../readme.md") as string;
+```
+ 
+You can then reference this string in your code, for example:
+
+``` TypeScript
+public render(): void {
+  this.domElement.innerHTML = strMarkdownString;
+}
 ```
 
-`ctrl+c` any running `gulp serve` task and rebuild (`gulp serve`) your project again. You should see a `readme.md` file in your lib directory under `webparts\helloworld`.
+### Step 4 - Build and test your code
+To build and test your code, execute the following command in a console in the root of your project directory:
+
+```
+gulp serve
+```
