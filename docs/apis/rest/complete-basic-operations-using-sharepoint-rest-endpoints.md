@@ -1,5 +1,5 @@
 # Complete basic operations using SharePoint REST endpoints
-Learn how to perform basic create, read, update, and delete (CRUD) operations with the SharePoint 2013 REST interface.
+Learn how to perform basic create, read, update, and delete (CRUD) operations with the SharePoint REST interface.
 
 ## Developing with the SharePoint client APIs and REST
 <a name="ClientAPIs"> </a>
@@ -36,8 +36,7 @@ To read information from a REST endpoint, you must know both the URL of the endp
  
 The following C# code demonstrates how to make this  **GET** request that returns a JSON representation of all of a site's lists by using JQuery. It also assumes that you have a valid OAuth access token that is stored in the **accessToken** variable. You do not need the access token if you make this call from inside an add-in web, as you would in a SharePoint-hosted add-in. Note that you cannot obtain an access token from code that is running on a browser client. You must obtain the access token from code that is running on a server. [Context Token OAuth flow for SharePoint Add-ins](https://msdn.microsoft.com/en-us/library/office/fp142382.aspx) and [Authorization Code OAuth flow for SharePoint Add-ins](https://msdn.microsoft.com/en-us/library/office/jj687470.aspx) explain how you can obtain an access token.
 
-```C#
-
+```
 HttpWebRequest endpointRequest =
   (HttpWebRequest)HttpWebRequest.Create(
   "http://<site url>/_api/web/lists");
@@ -69,7 +68,7 @@ executor.executeAsync(
 
 The code in the following example shows you how to request a JSON representation of all of the lists in a site by using C#. It assumes that you have an OAuth access token that you are storing in the  `accessToken` variable.
 
-```C#
+```
 HttpWebRequest endpointRequest = (HttpWebRequest)HttpWebRequest.Create(sharepointUrl.ToString() + "/_api/web/lists");
 endpointRequest.Method = "GET";
 endpointRequest.Accept = "application/json;odata=verbose";
@@ -97,8 +96,7 @@ You can create and update SharePoint entities by constructing RESTful HTTP reque
  
 Another important consideration when creating, updating, and deleting SharePoint entities is that if you aren't using OAuth to authorize your requests, these operations require the server's request form digest value as the value of the  **X-RequestDigest** header. You can retrieve this value by making a **POST** request with an empty body to `http://<site url>/_api/contextinfo` and extracting the value of the `d:FormDigestValue` node in the XML that the **contextinfo** endpoint returns. The following example shows an HTTP request to the **contextinfo** endpoint in C#.
  
-```C#
-
+```
 HttpWebRequest endpointRequest =
   (HttpWebRequest)HttpWebRequest.Create(
   "http://<site url>/_api/contextinfo");
@@ -106,7 +104,7 @@ endpointRequest.Method = "POST";
 endpointRequest.Accept = "application/json;odata=verbose";
 HttpWebResponse endpointResponse =
   (HttpWebResponse)endpointRequest.GetResponse();
-
+  
 ```
 
 If you're using the authentication and authorization flow described in  [Authorization and authentication of SharePoint Add-ins](https://msdn.microsoft.com/en-us/library/office/fp142384.aspx), you don't need to include the request digest in your requests.

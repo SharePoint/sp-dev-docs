@@ -68,6 +68,7 @@ Navigation that is supported by the REST service:
 
 ## SPContextWebInformation object properties
 <a name="bk_props"> </a>
+
 |**SPContextWebInformation Property**|**Description**|
 |:-----|:-----|
 |**webFullUrl**|Gets the server-relative URL of the nearest site.|
@@ -78,6 +79,7 @@ Navigation that is supported by the REST service:
 
 ## WebInfo object
 <a name="bk_webinfo"> </a>
+
 |**WebInfo property**|**Description**|
 |:-----|:-----|
 |**Created**|Gets a value that specifies when the site was created.|

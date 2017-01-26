@@ -2,10 +2,12 @@
 Learn general guidelines for determining SharePoint REST endpoint URIs from the signature of the corresponding client object model APIs.
  
  **Before you start**
+
 -  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
 -  [Navigate the SharePoint data structure represented in the REST service](navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md)
     
  **Next steps**
+
 -  [Use OData query operations in SharePoint REST requests](use-odata-query-operations-in-sharepoint-rest-requests.md)
 
 ## SharePoint REST endpoint URI structure
@@ -13,13 +15,14 @@ Before you can access a SharePoint resource using the REST service, you first ha
  
  *Client object model method:* 
 
-```C#
+```
 List.GetByTitle(listname).GetItems()
 ```
  
  *REST endpoint:* 
-  
- `http://server/site/_api/lists/getbytitle('listname')/items`
+```
+ http://server/site/_api/lists/getbytitle('listname')/items
+```
  
 In some cases, however, the endpoint URI differs from the corresponding client object model signature, in order to comply with REST or OData conventions.
  
