@@ -4,7 +4,7 @@ Learn how to perform basic create, read, update, and delete (CRUD) operations on
  **Tip**  The SharePoint Online (and on-premise SharePoint 2016 and later) REST service supports combining multiple requests into a single call to the service by using the OData  `$batch` query option. For details and links to code samples, see [Make batch requests with the REST APIs](make-batch-requests-with-the-rest-apis.md).
  
 ## Prerequisites
-This topic assumes that you are already familiar with the topics  [Get to know the SharePoint 2013 REST service](get-to-know-the-sharepoint-2013-rest-service.md) and [Complete basic operations using SharePoint 2013 REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md). It does not provide code snippets.
+This topic assumes that you are already familiar with the topics  [Get to know the SharePoint 2013 REST service](get-to-know-the-sharepoint-rest-service.md) and [Complete basic operations using SharePoint 2013 REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md). It does not provide code snippets.
 
 ## Retrieving lists and list properties with REST
 <a name="RetrieveLists"> </a>
