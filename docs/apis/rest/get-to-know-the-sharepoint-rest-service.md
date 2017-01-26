@@ -14,14 +14,16 @@ To access SharePoint resources using REST, construct a RESTful HTTP request, usi
  
  *Client object model method:* 
 
-```C#
+```
 List.GetByTitle(listname) 
 ``` 
 
  *REST endpoint:* 
  
- `http://server/site/_api/lists/getbytitle('listname')`
- 
+ ```
+ http://server/site/_api/lists/getbytitle('listname')
+ ```
+
 The client.svc web service in SharePoint handles the HTTP request, and serves the appropriate response in either Atom or JSON (JavaScript Object Notation) format. Your client application must then parse that response. The figure below shows a high-level view of the SharePoint REST architecture.
  
 **SharePoint REST service architecture**
