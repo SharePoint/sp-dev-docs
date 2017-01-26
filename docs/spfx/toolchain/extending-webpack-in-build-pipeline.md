@@ -24,6 +24,8 @@ Extending the framework webpack configuration with custom loaders is a straightf
 ## Example: Using the markdown-loader package
 As an example, let's use the [markdown-loader package](https://www.npmjs.com/package/markdown-loader).  It's a loader which allows you to reference an `.md` file and output it as HTML string.
 
+You can download the completed sample [here](https://aka.ms/spfx-extend-webpack-sample).
+
 ### Step 1 - Install the package
 Let's reference markdown-loader in our project.
 
