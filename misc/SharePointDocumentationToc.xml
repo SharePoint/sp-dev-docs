@@ -42,6 +42,19 @@
 		</Item>
 	</Item>
 	<Item text="SharePoint APIs" url="apis" SEODescription="">
+		<Item text="REST" url="apis/rest" SEODescription="">
+			<Item text="SharePoint REST service" url="apis/rest/get-to-know-the-sharepoint-rest-service" SEODescription="Get to know the SharePoint REST service."/>
+			<Item text="Basic operations" url="apis/rest/complete-basic-operations-using-sharepoint-rest-endpoints" SEODescription="Complete basic operations using SharePoint REST endpoints."/>
+			<Item text="Lists and list items" url="apis/rest/working-with-lists-and-list-items-with-rest" SEODescription="Working with lists and list items with SharePoint REST."/>
+			<Item text="Folders and files" url="apis/rest/working-with-folders-and-files-with-rest" SEODescription="Working with folders and files with SharePoint REST."/>
+			<Item text="REST endpoint URIs" url="apis/rest/determine-sharepoint-rest-service-endpoint-uris" SEODescription="Determine SharePoint REST service endpoint URIs."/>
+			<Item text="OData query operations" url="apis/rest/use-odata-query-operations-in-sharepoint-rest-requests" SEODescription="Use OData query operations in SharePoint REST requests."/>
+			<Item text="Navigate data structure" url="apis/rest/navigate-the-sharepoint-data-structure-represented-in-the-rest-service" SEODescription="Navigate the SharePoint data structure represented in the REST service."/>
+			<Item text="Synchronize SharePoint items" url="apis/rest/synchronize-sharepoint-items-using-the-rest-service" SEODescription="Synchronize SharePoint items using the REST service."/>
+			<Item text="Upload a file" url="apis/rest/upload-a-file-by-using-the-rest-api-and-jquery" SEODescription="Upload a file by using the REST API and jQuery."/>
+			<Item text="Manage permissions" url="apis/rest/set-custom-permissions-on-a-list-by-using-the-rest-interface" SEODescription="Set custom permissions son a list by using the REST interface."/>
+			<Item text="Batch requests" url="apis/rest/make-batch-requests-with-the-rest-apis" SEODescription="Make batch requests with the SharePoint REST APIs."/>					
+		</Item>
 		<Item text="Webhooks" url="apis/webhooks" SEODescription="">
 			<Item text="Overview" url="apis/webhooks/overview-sharepoint-webhooks" SEODescription="SharePoint webhooks allow developers to build service integrations which subscribe to receive notifications on specific events that occur in SharePoint."/>
 			<Item text="Get started" url="apis/webhooks/get-started-webhooks" SEODescription="Get started building your own application that can add and handle SharePoint webhook requests."/>
