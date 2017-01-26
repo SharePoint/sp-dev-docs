@@ -255,6 +255,7 @@ headers:
 ```
 ## Additional resources
 <a name="bk_addresources"> </a>
+
 -  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md)
 -  [Files and folders REST API reference](http://msdn.microsoft.com/library/2c3d2545-1cd7-497e-b535-12199d8edfbb%28Office.15%29.aspx)
 -  [Upload a file by using the REST API and jQuery](upload-a-file-by-using-the-rest-api-and-jquery.md)

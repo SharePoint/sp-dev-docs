@@ -1,5 +1,5 @@
 # Working with lists and list items with REST
-Learn how to perform basic create, read, update, and delete (CRUD) operations on lists and list items with the SharePoint 2013 REST interface.
+Learn how to perform basic create, read, update, and delete (CRUD) operations on lists and list items with the SharePoint REST interface.
  
  **Tip**  The SharePoint Online (and on-premise SharePoint 2016 and later) REST service supports combining multiple requests into a single call to the service by using the OData  `$batch` query option. For details and links to code samples, see [Make batch requests with the REST APIs](make-batch-requests-with-the-rest-apis.md).
  
@@ -243,6 +243,7 @@ Within SharePoint, ETags apply only to SharePoint lists and list items.
 
 ## Additional resources
 <a name="bk_addresources"> </a>
+
 -  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md)
 -  [Working with folders and files with REST](working-with-folders-and-files-with-rest.md)
 -  [SharePoint-Add-in-REST-OData-BasicDataOperations](https://github.com/OfficeDev/SharePoint-Add-in-REST-OData-BasicDataOperations)

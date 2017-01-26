@@ -28,16 +28,16 @@ To use the examples in this article, you'll need the following:
 - Browser support for the  **FileReader** API (HTML5)
 - A reference to the jQuery library in your page markup. For example:
     
-  ```HTML
+  ```
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js" type="text/javascript"></script>
   ```
 
 - The following controls in your page markup.
     
-  ```HTML
+  ```
   <input id="getFile" type="file"/><br />
-<input id="displayName" type="text" value="Enter a unique name" /><br />
-<input id="addFileButton" type="button" value="Upload" onclick="uploadFile()"/>
+  <input id="displayName" type="text" value="Enter a unique name" /><br />
+  <input id="addFileButton" type="button" value="Upload" onclick="uploadFile()"/>
   ```
 
 
@@ -358,6 +358,7 @@ function onError(error) {
 
 ## Additional resources
 <a name="bk_addresources"> </a>
+
 -  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
 -  [Working with folders and files with REST](working-with-folders-and-files-with-rest.md)
 -  [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest.md)

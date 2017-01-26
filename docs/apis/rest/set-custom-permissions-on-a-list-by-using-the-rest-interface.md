@@ -263,6 +263,7 @@ function errorHandler(xhr, ajaxOptions, thrownError) {
 -  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md) 
 -  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md)
 -  [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest.md)
+
 - REST resources:
      - [GroupCollection resource](http://msdn.microsoft.com/library/c5e49290-78d4-4167-b4de-da32376bbf90%28Office.15%29.aspx#bk_GroupCollection)
      - [Group resource](http://msdn.microsoft.com/library/c5e49290-78d4-4167-b4de-da32376bbf90%28Office.15%29.aspx#bk_Group) 
