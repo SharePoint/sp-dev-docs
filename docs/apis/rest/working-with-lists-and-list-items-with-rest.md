@@ -34,45 +34,45 @@ The following XML shows an example of the list properties that are returned when
 
 ```XML
   <content type="application/xml">
-  <m:properties>
-  <d:AllowContentTypes m:type="Edm.Boolean">true</d:AllowContentTypes> 
-  <d:BaseTemplate m:type="Edm.Int32">100</d:BaseTemplate> 
-  <d:BaseType m:type="Edm.Int32">0</d:BaseType> 
-  <d:ContentTypesEnabled m:type="Edm.Boolean">false</d:ContentTypesEnabled> 
-  <d:Created m:type="Edm.DateTime">2012-06-26T23:15:58Z</d:Created> 
-  <d:DefaultContentApprovalWorkflowId m:type="Edm.Guid">00000000-0000-0000-0000-000000000000</d:DefaultContentApprovalWorkflowId> 
-  <d:Description>A list created by Project Based Retention used to store Project Policy Items.</d:Description> 
-  <d:Direction>none</d:Direction> 
-  <d:DocumentTemplateUrl m:null="true" /> 
-  <d:DraftVersionVisibility m:type="Edm.Int32">0</d:DraftVersionVisibility> 
-  <d:EnableAttachments m:type="Edm.Boolean">true</d:EnableAttachments> 
-  <d:EnableFolderCreation m:type="Edm.Boolean">false</d:EnableFolderCreation> 
-  <d:EnableMinorVersions m:type="Edm.Boolean">false</d:EnableMinorVersions> 
-  <d:EnableModeration m:type="Edm.Boolean">false</d:EnableModeration> 
-  <d:EnableVersioning m:type="Edm.Boolean">false</d:EnableVersioning> 
-  <d:EntityTypeName>ProjectPolicyItemList</d:EntityTypeName> 
-  <d:ForceCheckout m:type="Edm.Boolean">false</d:ForceCheckout> 
-  <d:HasExternalDataSource m:type="Edm.Boolean">false</d:HasExternalDataSource> 
-  <d:Hidden m:type="Edm.Boolean">true</d:Hidden> 
-  <d:Id m:type="Edm.Guid">74de3ff3-029c-42f9-bd2a-1e9463def69d</d:Id> 
-  <d:ImageUrl>/_layouts/15/images/itgen.gif</d:ImageUrl> 
-  <d:IrmEnabled m:type="Edm.Boolean">false</d:IrmEnabled> 
-  <d:IrmExpire m:type="Edm.Boolean">false</d:IrmExpire> 
-  <d:IrmReject m:type="Edm.Boolean">false</d:IrmReject> 
-  <d:IsApplicationList m:type="Edm.Boolean">false</d:IsApplicationList> 
-  <d:IsCatalog m:type="Edm.Boolean">false</d:IsCatalog> 
-  <d:IsPrivate m:type="Edm.Boolean">false</d:IsPrivate> 
-  <d:ItemCount m:type="Edm.Int32">0</d:ItemCount> 
-  <d:LastItemDeletedDate m:type="Edm.DateTime">2012-06-26T23:15:58Z</d:LastItemDeletedDate> 
-  <d:LastItemModifiedDate m:type="Edm.DateTime">2012-06-26T23:15:59Z</d:LastItemModifiedDate> 
-  <d:ListItemEntityTypeFullName>SP.Data.ProjectPolicyItemListItem</d:ListItemEntityTypeFullName> 
-  <d:MultipleDataList m:type="Edm.Boolean">false</d:MultipleDataList> 
-  <d:NoCrawl m:type="Edm.Boolean">true</d:NoCrawl> 
-  <d:ParentWebUrl>/</d:ParentWebUrl> 
-  <d:ServerTemplateCanCreateFolders m:type="Edm.Boolean">true</d:ServerTemplateCanCreateFolders> 
-  <d:TemplateFeatureId m:type="Edm.Guid">00bfea71-de22-43b2-a848-c05709900100</d:TemplateFeatureId> 
-  <d:Title>Project Policy Item List</d:Title> 
-  </m:properties>
+    <m:properties>
+        <d:AllowContentTypes m:type="Edm.Boolean">true</d:AllowContentTypes> 
+        <d:BaseTemplate m:type="Edm.Int32">100</d:BaseTemplate> 
+        <d:BaseType m:type="Edm.Int32">0</d:BaseType> 
+        <d:ContentTypesEnabled m:type="Edm.Boolean">false</d:ContentTypesEnabled> 
+        <d:Created m:type="Edm.DateTime">2012-06-26T23:15:58Z</d:Created> 
+        <d:DefaultContentApprovalWorkflowId m:type="Edm.Guid">00000000-0000-0000-0000-000000000000</d:DefaultContentApprovalWorkflowId> 
+        <d:Description>A list created by Project Based Retention used to store Project Policy Items.</d:Description> 
+        <d:Direction>none</d:Direction> 
+        <d:DocumentTemplateUrl m:null="true" /> 
+        <d:DraftVersionVisibility m:type="Edm.Int32">0</d:DraftVersionVisibility> 
+        <d:EnableAttachments m:type="Edm.Boolean">true</d:EnableAttachments> 
+        <d:EnableFolderCreation m:type="Edm.Boolean">false</d:EnableFolderCreation> 
+        <d:EnableMinorVersions m:type="Edm.Boolean">false</d:EnableMinorVersions> 
+        <d:EnableModeration m:type="Edm.Boolean">false</d:EnableModeration> 
+        <d:EnableVersioning m:type="Edm.Boolean">false</d:EnableVersioning> 
+        <d:EntityTypeName>ProjectPolicyItemList</d:EntityTypeName> 
+        <d:ForceCheckout m:type="Edm.Boolean">false</d:ForceCheckout> 
+        <d:HasExternalDataSource m:type="Edm.Boolean">false</d:HasExternalDataSource> 
+        <d:Hidden m:type="Edm.Boolean">true</d:Hidden> 
+        <d:Id m:type="Edm.Guid">74de3ff3-029c-42f9-bd2a-1e9463def69d</d:Id> 
+        <d:ImageUrl>/_layouts/15/images/itgen.gif</d:ImageUrl> 
+        <d:IrmEnabled m:type="Edm.Boolean">false</d:IrmEnabled> 
+        <d:IrmExpire m:type="Edm.Boolean">false</d:IrmExpire> 
+        <d:IrmReject m:type="Edm.Boolean">false</d:IrmReject> 
+        <d:IsApplicationList m:type="Edm.Boolean">false</d:IsApplicationList> 
+        <d:IsCatalog m:type="Edm.Boolean">false</d:IsCatalog> 
+        <d:IsPrivate m:type="Edm.Boolean">false</d:IsPrivate> 
+        <d:ItemCount m:type="Edm.Int32">0</d:ItemCount> 
+        <d:LastItemDeletedDate m:type="Edm.DateTime">2012-06-26T23:15:58Z</d:LastItemDeletedDate> 
+        <d:LastItemModifiedDate m:type="Edm.DateTime">2012-06-26T23:15:59Z</d:LastItemModifiedDate> 
+        <d:ListItemEntityTypeFullName>SP.Data.ProjectPolicyItemListItem</d:ListItemEntityTypeFullName> 
+        <d:MultipleDataList m:type="Edm.Boolean">false</d:MultipleDataList> 
+        <d:NoCrawl m:type="Edm.Boolean">true</d:NoCrawl> 
+        <d:ParentWebUrl>/</d:ParentWebUrl> 
+        <d:ServerTemplateCanCreateFolders m:type="Edm.Boolean">true</d:ServerTemplateCanCreateFolders> 
+        <d:TemplateFeatureId m:type="Edm.Guid">00bfea71-de22-43b2-a848-c05709900100</d:TemplateFeatureId> 
+        <d:Title>Project Policy Item List</d:Title> 
+    </m:properties>
   </content>
 ```
  **Note**  The  **ListItemEntityTypeFullName** property ( **SP.Data.ProjectPolicyItemListItem** in the previous example) is especially important if you want to create and update list items. This value must be passed as the **type** property in the metadata that you pass in the body of the HTTP request whenever you create and update list items.

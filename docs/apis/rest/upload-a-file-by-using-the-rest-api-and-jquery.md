@@ -28,17 +28,17 @@ To use the examples in this article, you'll need the following:
 - Browser support for the  **FileReader** API (HTML5)
 - A reference to the jQuery library in your page markup. For example:
     
-  ```
+```
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js" type="text/javascript"></script>
-  ```
+```
 
 - The following controls in your page markup.
     
-  ```
+```
   <input id="getFile" type="file"/><br />
   <input id="displayName" type="text" value="Enter a unique name" /><br />
   <input id="addFileButton" type="button" value="Upload" onclick="uploadFile()"/>
-  ```
+```
 
 
 ## Code example 1: Upload a file across SharePoint domains by using the REST API and jQuery
