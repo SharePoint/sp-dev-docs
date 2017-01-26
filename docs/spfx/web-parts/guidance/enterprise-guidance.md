@@ -143,7 +143,7 @@ The administrator can also modify other properties on the package in the App Cat
 
 If there is a need to update the solution package, which are required if new SharePoint Framework artifacts or other package level changes are made, then the administrator only need to upload a new version of the package to the library.
 
-A tenant admin can also monitor the SharePoint Framework solutions, just as with SharePoint Add-ins. In the SharePoint Admin center under *apps* the SharePoint admin can add the SharePoint Framework solutions and then see how many installed locations there are of a specific solution.
+A tenant admin can also monitor the SharePoint Framework solutions, just as with SharePoint Add-ins. In the SharePoint Admin center under *apps* the SharePoint admin can add the SharePoint Framework solutions and then see how many installed locations there are of a specific solution, for both SharePoint Add-ins as well as SharePoint Framework solutions.
 
 To enable a SharePoint Framework solution on a Site Collection, the Site Collection administrator must add it to the Site Collection. This is done in the same way as for SharePoint Add-ins, by selecting to add a new *Add a new app* on the Site Collection, then choosing the solution from the list of apps. Once the app is added it is available for use in the Site Collection. The Site Collection administrator can also remove the SharePoint Framework from the Site Collection. This is done by going into *Site Contents* and then choose *Remove* on the app.
 
@@ -155,7 +155,7 @@ The SharePoint Framework does not have a store, which SharePoint Add-ins have. F
 
 ### Backing up and restoring SharePoint Framework components
 
-SharePoint Framework solutions does not have any specific backup and restore features. The only thing that is recommended from an administrative perspective is that it might be a good idea to have a copy of all installed solution package files (`.spapp`), if a solution package is by mistake removed from the app catalog. However, the app catalog is a SharePoint library and have the same capabilities as any document library, with major versioning turned on and the recycle bin.
+SharePoint Framework solutions does not have any specific backup and restore features. The only thing that is recommended from an administrative perspective is that it might be a good idea to have a copy of all installed solution package files (`.sppkg`), if a solution package is by mistake removed from the app catalog. However, the app catalog is a SharePoint library and have the same capabilities as any document library, with major versioning turned on and the recycle bin.
 
 What you cannot backup is the actual solution artefacts such as script bundles and assets, that are hosted in a CDN. However, if you have control of the CDN or the CDN is a SharePoint site you can back them up. On the other hand, if you are using SharePoint Framework solutions provided by a third party, there may be no way for your organization to back them up.
 
