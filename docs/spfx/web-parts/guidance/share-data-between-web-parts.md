@@ -1,8 +1,8 @@
-# Share data between web parts
+# Share data between client-side web parts
 
 > **Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
 
-When building web parts, loading the data once and reusing them across the different web parts will help you improve the performance of your pages and decrease the load on your network. This article describes a number of approaches that you can use to share the data across multiple web parts.
+When building clien-side web parts, loading the data once and reusing them across the different web parts will help you improve the performance of your pages and decrease the load on your network. This article describes a number of approaches that you can use to share the data across multiple web parts.
 
 ## Why sharing data between web parts
 

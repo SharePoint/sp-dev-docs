@@ -4,14 +4,15 @@ SharePoint Framework is a new development model for building SharePoint customiz
 
 SharePoint Framework is a development model, and despite the differences in the underlying technology, the same concepts apply when using it for building solutions, as to other development models SharePoint developers used in the past. Developers use the SharePoint Framework toolchain to build and test their solutions and once ready, they hand over the solution package to be deployed on the SharePoint tenant for further testing and release.
 
-SharePoint Framework consists of a few different packages. These packages, each in its own specific version, make up a release of the SharePoint Framework. For example the drop 6 release of the SharePoint Framework consists of the following package versions:
+SharePoint Framework consists of a few different packages. These packages, each in its own specific version, make up a release of the SharePoint Framework. For example the Release Candidate (RC0) of the SharePoint Framework consists of the following package versions:
 
-- @microsoft/sp-client-base v0.5.1
-- @microsoft/sp-client-preview v0.7.1
-- @microsoft/sp-webpart-base v0.2.1
-- @microsoft/sp-build-web v0.8.1
-- @microsoft/sp-module-interfaces v0.5.1
-- @microsoft/sp-webpart-workbench v0.6.1
+- @microsoft/sp-client-base v0.7.0
+- @microsoft/sp-client-preview v0.9.0
+- @microsoft/sp-core-library v0.1.2
+- @microsoft/sp-webpart-base v0.4.0
+- @microsoft/sp-build-web v0.9.0
+- @microsoft/sp-module-interfaces v0.7.0
+- @microsoft/sp-webpart-workbench v0.8.0
 
 For a project to target a specific release of the SharePoint Framework it has to reference all the different packages in the correct versions. When scaffolding new projects, the SharePoint Framework Yeoman generator automatically adds the necessary references to the package from the corresponding release of the SharePoint Framework. But when upgrading the project to a newer version of the SharePoint Framework developers have to pay extra attention to correctly update version numbers of the SharePoint Framework packages.
 
