@@ -1,5 +1,7 @@
 # Integrate gulp tasks in SharePoint Framework toolchain
 
+>**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
+
 SharePoint client-side development tools use [gulp](http://gulpjs.com/) as the build process task runner to:
 
 * Bundle and minify JavaScript and CSS files.
@@ -37,8 +39,10 @@ To add your custom tasks, you will define the custom tasks in the `gulpfile.js`.
 To add your custom gulp task, you will add a new sub task to the SharePoint Framework build pipeline using the [`build.subTask`](https://github.com/Microsoft/gulp-core-build#defining-a-custom-task) function:
 
 ```js
-let helloWorldSubtask = build.subTask('log-hello-world-subtask', function(gulp, buildOptions, done) {  this.log('Hello, World!');   
-  // use functions from gulp task here  });
+let helloWorldSubtask = build.subTask('log-hello-world-subtask', function(gulp, buildOptions, done) {
+  this.log('Hello, World!');   
+  // use functions from gulp task here  
+});
 ```
 
 In the case of a stream, you will return the stream:
@@ -54,7 +58,8 @@ let helloWorldSubtask = build.subTask('log-hello-world-subtask', function(gulp, 
 Once the custom task is defined, you can then register this custom task with the gulp command line using the `build.task` function:
 
 ```js
-// Register the task with gulp command linelet helloWorldTask = build.task('hello-world', helloWorldSubtask);
+// Register the task with gulp command line
+let helloWorldTask = build.task('hello-world', helloWorldSubtask);
 ```
 
 >Note: Any custom tasks added should be defined before initializing the global `gulp` instance, that is before the following line of code: `build.initialize(gulp);`

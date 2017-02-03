@@ -5,6 +5,8 @@
 		<Item text="Tools and libraries" url="spfx/tools-and-libraries" SEODescription="Learn about the tools and libriaries you will need to use to build your SharePoint Framework solutions."/>
 		<Item text="Set up your Office 365 tenant" url="spfx/set-up-your-developer-tenant" SEODescription="Set up an Office 365 tenant so that you can test and debug your SharePoint client-side web parts" />
 		<Item text="Set up your development environment" url="spfx/set-up-your-development-environment" SEODescription="Set up and configure your development environment to build SharePoint client-side web parts" />
+		<Item text="Enterprise Guidance" url="spfx/enterprise-guidance" SEODescription="SharePoint Framework Enterprise architecture and development guidance." />
+		<Item text="Team-based development" url="spfx/team-based-development-on-sharepoint-framework" SEODescription="Team-based development on SharePoint Framework." />
 		<Item text="Toolchain" url="spfx/toolchain/sharepoint-framework-toolchain" SEODescription="">
 			<Item text="SharePoint Framework Toolchain" url="spfx/toolchain/sharepoint-framework-toolchain" SEODescription="The SharePoint Framework toolchain is the set of build tools, framework packages, and other items that manage building and deploying your client side projects." />
 			<Item text="Update SharePoint Framework packages" url="spfx/toolchain/update-latest-packages" SEODescription="Process how to update SharePoint Framework packages to latest versions in your solutions." />
@@ -40,8 +42,6 @@
 				<Item text="Migrating Angular applications" url="spfx/web-parts/guidance/migrate-angular-1-x-applications-to-sharepoint-framework" SEODescription="Migrating existing Angular v1.x applications to SharePoint Framework client-side web parts." />
 				<Item text="Localization" url="spfx/web-parts/guidance/localize-web-parts" SEODescription="Localize SharePoint Framework client-side web parts." />
 				<Item text="Call the Microsoft Graph API" url="spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part" SEODescription="Call the Microsoft Graph API from your SharePoint Framework client-side web part using OAuth." />
-				<Item text="Enterprise Guidance" url="spfx/web-parts/guidance/enterprise-guidance" SEODescription="SharePoint Framework Enterprise architecture and development guidance." />
-				<Item text="Team-based development" url="spfx/web-parts/guidance/team-based-development-on-sharepoint-framework" SEODescription="Team-based development on SharePoint Framework." />
 			</Item>
 		</Item>
 	</Item>
