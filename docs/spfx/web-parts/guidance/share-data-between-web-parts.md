@@ -281,3 +281,98 @@ export class DocumentsService {
 ```
 
 The implementation of this service is very similar to when using cookies. One thing, that you should keep in mind, is that the browser storage can be disabled by the user, and you should always check for its availability, before performing operations on it. Just as cookies, local storage is persisted in the web browser and you shouldn't use it to store any confidential information.
+
+## Share data through a SharePoint Framework service
+
+Another approach to share data between web parts, is by building a SharePoint Framework service and using it to centrally load and manage data. SharePoint Framework services are standalone components, built separately from web parts and distributed as separate Node packages. SharePoint Framework web parts can reference services and use them to perform specific operations supported by these services, such as loading data.
+
+> For more information about SharePoint Framework services see [https://github.com/SharePoint/sp-dev-docs/wiki/Tech-Note:-ServiceScope-API](https://github.com/SharePoint/sp-dev-docs/wiki/Tech-Note:-ServiceScope-API).
+
+The existing service, demonstrated in previous examples, with a few modifications can be transformed into a SharePoint Framework service.
+
+First, it needs to implement an interface that represents the operations and properties it supports:
+
+```ts
+export interface IDocumentsService {
+    getRecentDocument(): Promise<IDocument>;
+    getRecentDocuments(startFrom: number): Promise<IDocument[]>;
+}
+
+export class DocumentsService implements IDocumentsService {
+    // ...
+}
+```
+
+Next, it needs to specify a [service key](https://dev.office.com/sharepoint/reference/spfx/sp-core-library/servicekey) used to register the service with the SharePoint Framework and consume it by web parts.
+
+```ts
+import { ServiceScope, ServiceKey } from '@microsoft/sp-core-library';
+
+export class DocumentsService implements IDocumentsService {
+    public static readonly serviceKey: ServiceKey<IDocumentsService> = ServiceKey.create<IDocumentsService>('contoso:DocumentsService', DocumentsService);
+    // ...
+
+    constructor(serviceScope: ServiceScope) {
+    }
+
+    // ...
+}
+```
+
+Each SharePoint Framework service must also have a constructor that accepts an instance of the [ServiceScope](https://dev.office.com/sharepoint/reference/spfx/sp-core-library/servicescope) class as a parameter.
+
+SharePoint Framework services can be built using the same project build system as SharePoint Framework client-side web parts. Similarly to a client-side web part, a SharePoint Framework service has a manifest. The main difference with the web part manifest is, that the **componentType** property is set to **Library**:
+
+```json
+{
+  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+
+  "id": "69b1aacd-68f2-4147-8433-8efb08eae331",
+  "alias": "DocumentsService",
+  "componentType": "Library",
+  "version": "0.0.1",
+  "manifestVersion": 2
+}
+```
+
+Once ready, you can consume the SharePoint Framework service from a web part by referencing its package, and retrieving the service using its key.
+
+```ts
+// ...
+import { DocumentsService, IDocumentsService, IDocument } from 'react-recentdocuments-service';
+import { ServiceScope } from '@microsoft/sp-core-library';
+
+export default class RecentDocumentsWebPart extends BaseClientSideWebPart<IRecentDocumentsWebPartProps> {
+  private documentsService: IDocumentsService;
+
+  protected onInit(): Promise<void> {
+    return new Promise<void>((resolve: () => void, reject: (error: any) => void): void => {
+      const serviceScope: ServiceScope = this.context.serviceScope.getParent();
+      serviceScope.whenFinished((): void => {
+        this.documentsService = serviceScope.consume(DocumentsService.serviceKey as any) as IDocumentsService;
+        resolve();
+      });
+    });
+  }
+
+  public render(): void {
+    this.context.statusRenderer.displayLoadingIndicator(this.domElement, 'documents');
+
+    this.documentsService.getRecentDocuments(this.properties.startFrom)
+      .then((documents: IDocument[]): void => {
+        const element: React.ReactElement<IRecentDocumentsProps> = React.createElement(
+          RecentDocuments,
+          {
+            documents: documents
+          }
+        );
+
+        this.context.statusRenderer.clearLoadingIndicator(this.domElement);
+        ReactDom.render(element, this.domElement);
+      });
+  }
+  // ...
+}
+```
+
+Even if there are multiple web parts on the page referencing the same service, its bundle will be downloaded only once and SharePoint Framework will create only one instance of the service on the page. This offers you a convenient mechanism for centralizing processing and storing data on a page. While working with SharePoint Framework services is more complex than the previously described approaches, it offers you a great benefit of isolating the data from other components on the page and better handling of its integrity.
