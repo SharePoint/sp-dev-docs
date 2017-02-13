@@ -4,8 +4,6 @@
 
 This article describes how to build a simple web part that uses the DocumentCard component of [Office UI Fabric](https://github.com/OfficeDev/office-ui-fabric-react). Office UI Fabric React is the front-end framework for building experiences for Office and Office 365. Fabric React includes a robust collection of responsive, mobile-first components that make it easy for you to create web experiences using the Office Design Language.
 
->**Note:** Office UI Fabric React components are in *a pre-v1 state*. For information about the v1 release and roadmap, see [Roadmap](https://github.com/OfficeDev/office-ui-fabric-react#roadmap) in the Office UI Fabric React repo in GitHub. 
-
 The following image shows a DocumentCard component created with Office UI Fabric React.
 
 ![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../../images/fabric-components-doc-card-view-ex.png)
@@ -105,19 +103,11 @@ export default class DocumentCardExample extends React.Component<IDocumentCardEx
 
 ## Add an Office UI Fabric component
 
-To use Office UI Fabric components, you need to install the npm package.
+The *new modern experiences* in SharePoint use Office UI Fabric and Office UI Fabric React as the default front-end framework for building the new experiences. As a result, SharePoint Framework ships with a default version of Office UI Fabric and Fabric React which matches the version available in SharePoint. This ensures the web part you are building uses the right version of the Fabric styles and components when deployed to SharePoint. 
 
-In the console window, type the following to install the Office UI Fabric component npm package:
+Since we chose React as our framework when creating the solution, the generator installed the right version of Office UI Fabric React as well. You can directly import the Fabric components in your react components without any additional work. 
 
-```
-npm install office-ui-fabric-react --save
-```
-
->**Note:** If you're using Windows, you might get the following exception during this installation: "Error: EPERM: operation not permitted,...". To solve the issue, reopen your console application as an administrator. Open the context menu (right-click) and choose **Run as administrator**. 
-
-## Add the DocumentCard component
-
-After you install the Office UI Fabric React components, you can add the component to your web part. 
+>**Note:** During the SharePoint Framework preview, it is recommended to use the Office UI Fabric and Fabric React that ships with the generator. It is not recommended to update the Office UI Fabric and Fabric React packages independently as it might conflict with the already available version in SharePoint and as a result your web part may fail to function as expected. 
 
 Open **DocumentCardExample.tsx** from the **src\webparts\components\documentCardExample** folder. 
 
