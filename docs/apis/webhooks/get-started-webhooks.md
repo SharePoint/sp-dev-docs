@@ -18,6 +18,8 @@ To complete the step-by-step instructions in this article, download and install 
 
 In order for the Postman client to communicate with SharePoint, you will need to register an Azure AD app in your Azure AD tenant associated with your Office 365 tenant. 
 
+Ensure that you register the application as a "Web Application".
+
 To access SharePoint Online, it's important to grant the Azure AD app permissions to the **Office 365 SharePoint Online** application and select the **read and write items and lists in all site collections** permission.
 
 > For more information about adding an Azure AD application and granting permissions to applications, see [Adding an application](https://azure.microsoft.com/en-us/documentation/articles/active-directory-integrating-applications/#adding-an-application). 
@@ -27,6 +29,8 @@ Enter the following endpoint as the Reply (Redirect) URL for the app. This is th
 ```html
 https://www.getpostman.com/oauth2/callback
 ```
+
+Also generate a "Key", which will be the client secret.
 
 The following properties are required in later steps, so copy them to a safe place:
 
