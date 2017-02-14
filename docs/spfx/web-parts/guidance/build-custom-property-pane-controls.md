@@ -345,7 +345,7 @@ The **label** property defines the label displayed next to the dropdown. The **l
 In the **src/controls/PropertyPaneAsyncDropdown** folder create a new file named **IPropertyPaneAsyncDropdownInternalProps.ts** and enter the following code:
 
 ```ts
-import { IPropertyPaneCustomFieldProps } from '@microsoft/sp-client-preview';
+import { IPropertyPaneCustomFieldProps } from '@microsoft/sp-webpart-base';
 import { IPropertyPaneAsyncDropdownProps } from './IPropertyPaneAsyncDropdownProps';
 
 export interface IPropertyPaneAsyncDropdownInternalProps extends IPropertyPaneAsyncDropdownProps, IPropertyPaneCustomFieldProps {
