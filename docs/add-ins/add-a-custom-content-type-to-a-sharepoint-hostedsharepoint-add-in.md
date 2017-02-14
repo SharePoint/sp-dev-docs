@@ -4,7 +4,6 @@ ms.prod: SHAREPOINT
 ms.assetid: b52e5622-bf87-4bb1-a99a-ac1389de6651
 ---
 
-
 # Add a custom content type to a SharePoint-hostedSharePoint Add-in
 Learn how to include custom content types in an SharePoint Add-ins.
  
@@ -33,11 +32,6 @@ In this article you add a custom content type to the Employee Orientation ShareP
 
 ## Create the custom content type
 
-
- 
-
- 
-
 1. In  **Solution Explorer**, right-click the project and choose  **Add** > **New Folder**. Name the folder Content Types.
     
  
@@ -65,28 +59,17 @@ In this article you add a custom content type to the Employee Orientation ShareP
     
     **Content Type Tab**
 
+     ![The Content Type Designer showing 'NewEmployee' as the type name, 'Represents a new employee' as the description, and 'Employee Orientation' as the group.](../../images/8a9768f4-315d-45c0-88d7-687dbf84495c.PNG)
  
-
-     ![The Content Type Designer showing "NewEmployee" as the type name, "Represents a new employee" as the description, and "Employee Orientation" as the group.](images/8a9768f4-315d-45c0-88d7-687dbf84495c.PNG)
- 
-
-    
-    
  
 7. Open the  **Columns** tab in the designer.
-    
- 
+     
 8. In the gird, choose  **Click here to add a column** to open a drop down list of columns, and add the **Division** column. It is listed in the drop-down list by its display name: **Division**. Do the same for the  **Orientation Stage** column. (If they are not listed, you may not have started with the correct Visual Studio solution. Start with BeforeContentType.sln.) When your are finished the grid should look like the following:
     
     **Columns Tab**
 
+    ![The Columns tab of the Content Type Designer with "Employee", "Division", and "Orientation Stage" listed in the grid.](../../images/835e78b3-a073-45b2-b4ee-3f9be9d88495.PNG)
  
-
-     ![The Columns tab of the Content Type Designer with "Employee", "Division", and "Orientation Stage" listed in the grid.](images/835e78b3-a073-45b2-b4ee-3f9be9d88495.PNG)
- 
-
-    
-    
  
 9. Save the file and close the designer.
     
@@ -127,28 +110,17 @@ In this article you add a custom content type to the Employee Orientation ShareP
     
     **Content Type Settings dialog box**
 
- 
-
-     ![The Content Type Settings dialog with just a single content type, named NewEmployee, listed.](images/b90699f4-40de-4f50-ad47-3e8773d0eb92.PNG)
- 
-
-    
-    
+    ![The Content Type Settings dialog with just a single content type, named NewEmployee, listed.](../../images/b90699f4-40de-4f50-ad47-3e8773d0eb92.PNG)
  
 19.  Choose **OK** to close the dialog box, and then save and close the file.
     
- 
 20. Open the schema.xml file.
     
- 
 21. Find the  **Fields** element. It should have three **Field** elements: **Title**, Division, and OrientationStage. (These elements may be on a single line in this generated file. If so, separate them with line breaks.)
-    
  
 22. Leave the file open and in  **Solution Explorer**, expand the  **Site Columns** folder and theDivision node, and then open the elements.xml file forDivision. The  **Field** element forDivision in schema.xml should exactly duplicate the **Field** element in theDivision elements.xml. If there is not an exact match, copy the **Field** element from the site column elements.xml file and paste it in place of the mismatched **Field** element in the schema.xml file. Then close the element.xml file.
     
- 
 23. Open the elements.xml file for OrientationStage. Here, too, there must be an exact match of the  **Field** elements in the two files forOrientationStage, including all child elements, such as the  **CHOICES** and **MAPPINGS** elements. If there isn't, copy the **Field** in the elements.xml file and paste it in place of the mismatched **Field** element in the schema.xml file. Then close the element.xml file.
-    
  
 24. Still in the schema.xml file, in the  **View** element whose **BaseViewID** value is "1", find the child **ViewFields** element and then add the following two **FieldRef** elements as children of it. They may already be there, but missing an **ID** attribute. If so, add the ID attribute.
     
@@ -202,28 +174,15 @@ In this article you add a custom content type to the Employee Orientation ShareP
 
 ## Run and test the add-in
 
-
- 
-
- 
-
 1. Use the F5 key to deploy and run your add-in. Visual Studio makes a temporary installation of the add-in on your test SharePoint site and immediately runs the add-in. 
-    
- 
+     
 2. When the add-in's default page opens, choose the  **New Employees in Seattle** link to open the custom list instance.
-    
  
 3. The list page opens and the Division andOrientationStage columns are on it. It is not necessary for a user to add them manually because they are part of the list's content type. The top item has the data you added.
     
     **New Employees in Seattle list**
 
- 
-
-     ![The "New Employees in Seattle" list with the Division and Orientation Stage columns already present.](images/b654af45-663e-425c-b7c7-b8b5524cb316.PNG)
- 
-
-    
-    
+    ![The "New Employees in Seattle" list with the Division and Orientation Stage columns already present.](../../images/b654af45-663e-425c-b7c7-b8b5524cb316.PNG) 
  
 4. Try adding new items to the list and editing existing items.
     
@@ -232,14 +191,8 @@ In this article you add a custom content type to the Employee Orientation ShareP
     
  
 6. You will work with this add-in and Visual Studio solution in other articles, and it's a good practice to retract the add-in one last time when you are done working with it for a while. Right-click the project in  **Solution Explorer** and choose **Retract**.
-    
- 
 
 ## 
 <a name="Nextsteps"> </a>
 
 In the next article in this series, you'll add a list view Web Part to the default page of the SharePoint Add-in:  [Add a Web Part to a page in a SharePoint-hosted SharePoint Add-in](add-a-web-part-to-a-page-in-a-sharepoint-hosted-sharepoint-add-in.md).
- 
-
- 
-
