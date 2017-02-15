@@ -1,9 +1,3 @@
----
-title: Add a custom content type to a SharePoint-hostedSharePoint Add-in
-ms.prod: SHAREPOINT
-ms.assetid: b52e5622-bf87-4bb1-a99a-ac1389de6651
----
-
 # Add a custom content type to a SharePoint-hostedSharePoint Add-in
 Learn how to include custom content types in an SharePoint Add-ins.
  
