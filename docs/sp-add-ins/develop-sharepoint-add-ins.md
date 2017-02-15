@@ -66,7 +66,7 @@ When you are familiar with the capabilities and features of SharePoint Add-ins, 
 
 |**Topic**|**Description**|
 |:-----|:-----|
-| [Create a provider-hosted add-in that includes a custom SharePoint list and content type](create-a-provider-hosted-add-in-that-includes-a-custom-sharepoint-list-and-content-type.md)|Explains how to create SharePoint Add-ins that are hosted in the cloud and that include custom SharePoint lists and content types.|
+| [Create a provider-hosted add-in that includes a custom SharePoint list and content type](create-a-provider-hosted-add-in-that-includes-a-custom-sharepoint-list-and-conte.md)|Explains how to create SharePoint Add-ins that are hosted in the cloud and that include custom SharePoint lists and content types.|
 
 ## Additional resources
 <a name="bk_addresources"> </a>
