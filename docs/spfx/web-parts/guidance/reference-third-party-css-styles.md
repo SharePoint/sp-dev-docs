@@ -53,7 +53,7 @@ export default class JQueryAccordionWebPart extends BaseClientSideWebPart<IJQuer
   // ...
   public render(): void {
     this.domElement.innerHTML = `
-      <div class="${styles.jQueryAccordion}">
+      <div>
         <div class="accordion">
           <h3>Information</h3>
           <div>
@@ -252,39 +252,23 @@ At this point you have referenced only the jQuery UI scripts which explains why 
 
 Adding references to third-party CSS stylesheets from a URL is different than referencing resources from project packages. While the project configuration in the **config.json** file allows you to specify external resources, it applies only to scripts. To reference CSS stylesheets from a URL you have to use the **SPModuleLoader** instead.
 
-#### Define SPModuleLoader as external resource
-
-In the code editor open the **./config/config.json** file. In the **externals** section add the following JSON:
-
-```json
-{
-  // ...
-  "externals": {
-    // ...
-    "@microsoft/sp-module-loader": "node_modules/@microsoft/sp-module-loader/dist/sp-module-loader.js"
-  }
-  // ...
-}
-```
-
-This line specifies that the **@microsoft/sp-module-loader** package is an external package and shouldn't be included in the bundle. **sp-module-loader** is a part of the SharePoint Framework and doesn't need to be loaded by your web part. Without including this line, you would get errors when trying to build the project.
-
-#### Load CSS from the URL using the SPModuleLoader
+#### Load CSS from the URL using the SPComponentLoader
 
 In the code editor open the **./src/webparts/jQueryAccordion/JQueryAccordionWebPart.ts** file. In the top section of the file, just after the last **import** statement, add the following code:
 
 ```ts
-import SPModuleLoader from '@microsoft/sp-module-loader';
+import { SPComponentLoader } from '@microsoft/sp-loader';
 ```
 
-In the same file change the web part constructor to:
+In the same file add web part constructor as follows:
 
 ```ts
 export default class JQueryAccordionWebPart extends BaseClientSideWebPart<IJQueryAccordionWebPartProps> {
-  public constructor(context: IWebPartContext) {
-    super(context);
 
-    SPModuleLoader.loadCss('https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css');
+  public constructor() {
+    super();
+
+    SPComponentLoader.loadCss('https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css');
   }
 
   // ...
