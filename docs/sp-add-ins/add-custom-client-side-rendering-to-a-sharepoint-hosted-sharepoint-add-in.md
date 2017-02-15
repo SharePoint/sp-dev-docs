@@ -1,10 +1,3 @@
----
-title: Add custom client-side rendering to a SharePoint-hosted SharePoint Add-in
-ms.prod: SHAREPOINT
-ms.assetid: 6e0e530a-7d8b-48ab-8d0c-a878ddbf5be1
----
-
-
 # Add custom client-side rendering to a SharePoint-hosted SharePoint Add-in
 Customize the rendering and validation of controls in SharePoint Add-ins pages.
  
@@ -181,7 +174,7 @@ customRenderingOverride.Templates.Fields = {
 
  
 
-     ![New employees in Seattle list with Orientation Stage values of "Not started" in red and values of "Completed" in green. Other values in black.](images/dc8e2b7d-1747-4b65-aab4-6fc93c6867d4.PNG)
+     ![New employees in Seattle list with Orientation Stage values of "Not started" in red and values of "Completed" in green. Other values in black.](../../images/dc8e2b7d-1747-4b65-aab4-6fc93c6867d4.PNG)
  
 
  
