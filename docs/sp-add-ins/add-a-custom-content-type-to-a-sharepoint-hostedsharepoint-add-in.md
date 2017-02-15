@@ -1,4 +1,4 @@
-# Add a custom content type to a SharePoint-hostedSharePoint Add-in
+# Add a custom content type to a SharePoint-hosted SharePoint Add-in
 Learn how to include custom content types in an SharePoint Add-ins.
  
 
