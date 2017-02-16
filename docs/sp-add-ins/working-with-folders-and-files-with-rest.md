@@ -1,9 +1,3 @@
----
-title: Working with folders and files with REST
-ms.prod: MULTIPLEPRODUCTS
-ms.assetid: 4c051a49-6393-4a08-868a-4a51408842cf
----
-
 
 # Working with folders and files with REST
 Learn how to perform basic create, read, update, and delete (CRUD) operations on folders and files with the SharePoint 2013 REST interface.

@@ -1,8 +1,4 @@
----
-title: Working with lists and list items with REST
-ms.prod: MULTIPLEPRODUCTS
-ms.assetid: 956f3a09-bddc-4154-9cba-6143c914d60f
----
+
 
 
 # Working with lists and list items with REST
