@@ -320,7 +320,7 @@ The next step is to define the custom property pane control. This control is use
 
 A custom property pane control has two sets of properties. The first set of properties are exposed publicly and are used to define the web part property inside the web part. These properties are component-specific properties, such as the label displayed next to the control, minimum and maximum values for a spinner, or available options for a dropdown. When defining a custom property pane control, the type describing these properties must be passed as the **TProperties** type when implementing the **IPropertyPaneField<TProperties>** interface.
 
-The second set of properties are private properties used internally inside the custom property pane control. These properties have to adhere to the SharePoint Framework APIs for the custom control to render correctly. These properties must implement the **IPropertyPaneCustomFieldProps** interface from the **@microsoft/sp-client-preview** package.
+The second set of properties are private properties used internally inside the custom property pane control. These properties have to adhere to the SharePoint Framework APIs for the custom control to render correctly. These properties must implement the **IPropertyPaneCustomFieldProps** interface from the **@microsoft/sp-webpart-base** package.
 
 ##### Define the public properties for the asynchronous dropdown property pane control
 
@@ -345,7 +345,7 @@ The **label** property defines the label displayed next to the dropdown. The **l
 In the **src/controls/PropertyPaneAsyncDropdown** folder create a new file named **IPropertyPaneAsyncDropdownInternalProps.ts** and enter the following code:
 
 ```ts
-import { IPropertyPaneCustomFieldProps } from '@microsoft/sp-client-preview';
+import { IPropertyPaneCustomFieldProps } from '@microsoft/sp-webpart-base';
 import { IPropertyPaneAsyncDropdownProps } from './IPropertyPaneAsyncDropdownProps';
 
 export interface IPropertyPaneAsyncDropdownInternalProps extends IPropertyPaneAsyncDropdownProps, IPropertyPaneCustomFieldProps {
@@ -363,8 +363,8 @@ import * as React from 'react';
 import * as ReactDom from 'react-dom';
 import {
   IPropertyPaneField,
-  IPropertyPaneFieldType
-} from '@microsoft/sp-client-preview';
+  PropertyPaneFieldType
+} from '@microsoft/sp-webpart-base';
 import { IDropdownOption } from 'office-ui-fabric-react';
 import { IPropertyPaneAsyncDropdownProps } from './IPropertyPaneAsyncDropdownProps';
 import { IPropertyPaneAsyncDropdownInternalProps } from './IPropertyPaneAsyncDropdownInternalProps';
@@ -372,7 +372,7 @@ import AsyncDropdown from './components/AsyncDropdown';
 import { IAsyncDropdownProps } from './components/IAsyncDropdownProps';
 
 export class PropertyPaneAsyncDropdown implements IPropertyPaneField<IPropertyPaneAsyncDropdownProps> {
-  public type: IPropertyPaneFieldType = IPropertyPaneFieldType.Custom;
+  public type: PropertyPaneFieldType = PropertyPaneFieldType.Custom;
   public targetProperty: string;
   public properties: IPropertyPaneAsyncDropdownInternalProps;
   private elem: HTMLElement;
@@ -422,7 +422,7 @@ export class PropertyPaneAsyncDropdown implements IPropertyPaneField<IPropertyPa
 
 The **PropertyPaneAsyncDropdown** class implements the standard SharePoint Framework **IPropertyPaneField** interface using the **IPropertyPaneAsyncDropdownProps** interface as a contract for its public properties that can be set from inside the web part. The class contains the following three public properties defined by the **IPropertyPaneField** interface:
 
- * **type**: Must be set to **IPropertyPaneFieldType.Custom** for a custom property pane control.
+ * **type**: Must be set to **PropertyPaneFieldType.Custom** for a custom property pane control.
  * **targetProperty**: Used to specify the name of the web part property to be used with the control.
  * **properties**: Used to define control-specific properties.
 
