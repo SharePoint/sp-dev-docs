@@ -125,7 +125,7 @@ An add-in web can contain specific kinds of SP components. For more information 
 
  
 
-     ![A localized custom list](images/LocSPApp_AppwebList.png)
+     ![A localized custom list](../../images/LocSPApp_AppwebList.png)
  
 
  
