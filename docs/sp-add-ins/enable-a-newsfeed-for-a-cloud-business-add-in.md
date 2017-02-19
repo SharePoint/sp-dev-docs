@@ -1,10 +1,3 @@
----
-title: Enable a newsfeed for a cloud business add-in
-ms.prod: SHAREPOINT
-ms.assetid: 3eec1f65-addb-4bfa-940c-dae3ac1e0c8a
----
-
-
 # Enable a newsfeed for a cloud business add-in
 Social and collaboration features in SharePoint for Office 365 allow users to track activity on a list and add comments. You can easily create a newsfeed for your Cloud Business Add-in by enabling a couple of properties.
  
@@ -31,7 +24,7 @@ To host the newsfeed, you'll need a SharePoint Developer site on Office 365, whi
  
 2. In the  **Properties** window, select the **Post when Created** and/or **Post when Updated** check boxes.
     
-     ![Social properties](images/CBAsocial.PNG)
+     ![Social properties](../../images/CBAsocial.PNG)
  
 
      **Post when Created** adds a thread to the newsfeed for each new list item. **Post when Updated** adds a thread when the value for an item in the list is changed. Post triggers determine which fields in the item will trigger a post.
@@ -59,7 +52,7 @@ To host the newsfeed, you'll need a SharePoint Developer site on Office 365, whi
  
 3. On the SharePoint chrome bar, choose the  **Newsfeed** link.
     
-     ![The SharePoint chrome bar](images/CBAnewsfeed.PNG)
+     ![The SharePoint chrome bar](../../images/CBAnewsfeed.PNG)
  
 
     The  **Newsfeed** page opens in a new browser window with entries for the added and/or updated items. You can choose the **Like** link for a post, or you can choose the **Reply** link to add a comment.
