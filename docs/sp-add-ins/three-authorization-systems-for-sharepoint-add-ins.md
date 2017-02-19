@@ -1,10 +1,3 @@
----
-title: Three authorization systems for SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: 623fdab7-856e-4a89-9f5d-748a2ba1ef2e
----
-
-
 # Three authorization systems for SharePoint Add-ins
 Learn the three systems that SharePoint Add-ins can use to get authorization to SharePoint resources.
  
