@@ -1,10 +1,3 @@
----
-title: Develop cloud business add-ins
-ms.prod: SHAREPOINT
-ms.assetid: 8cd707ff-e3b9-4cc7-a733-46e399d690c8
----
-
-
 # Develop cloud business add-ins
  Cloud business add-ins are based on Visual Studio LightSwitch technologies. Some of the tasks for developing cloud business add-ins are unique to the Cloud Business Add-in template, but most are the same as for LightSwitch HTML Client add-ins.
  
