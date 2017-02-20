@@ -1,10 +1,3 @@
----
-title: Create a custom proxy page for the cross-domain library in SharePoint 2013
-ms.prod: SHAREPOINT
-ms.assetid: f3f87cdf-5cbf-47c9-9ce1-1ab65cd598de
----
-
-
 # Create a custom proxy page for the cross-domain library in SharePoint 2013
 Learn how to create a custom proxy page to access data in a remote service from a SharePoint webpage by using the cross domain library in SharePoint. 
  
@@ -344,7 +337,7 @@ Response.End();
 
  
 
-     ![SharePoint page with data from a remote service](images/CustomProxy_result.jpg)
+     ![SharePoint page with data from a remote service](../../images/CustomProxy_result.jpg)
  
 
  
