@@ -1,10 +1,3 @@
----
-title: Create a SharePoint Add-in that contains a document template and a task pane add-in
-ms.prod: MULTIPLEPRODUCTS
-ms.assetid: 6c27681b-8667-48b2-b5b4-d460b4e1d2db
----
-
-
 # Create a SharePoint Add-in that contains a document template and a task pane add-in
 Use Visual Studio to develop an Office Add-in that appears in a document that is opened from a SharePoint Add-in.
  
