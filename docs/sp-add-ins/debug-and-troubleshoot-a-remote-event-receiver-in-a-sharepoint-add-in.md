@@ -1,10 +1,3 @@
----
-title: Debug and troubleshoot a remote event receiver in a SharePoint Add-in
-ms.prod: SHAREPOINT
-ms.assetid: 21de092e-27f2-4000-bbb7-cb5cbfeaf195
----
-
-
 # Debug and troubleshoot a remote event receiver in a SharePoint Add-in
 Set up the your development environment to debug remote events in by using Visual Studio.
  
@@ -153,7 +146,7 @@ If you have a remote event in your project and have not configured remote event 
  
 
  
-![Notifications in remote event receivers](images/SP15Con_Remote_Event_Receivers_FAQ_fig3.png)
+![Notifications in remote event receivers](../../images/SP15Con_Remote_Event_Receivers_FAQ_fig3.png)
  
 
  
@@ -173,7 +166,7 @@ After you press F5 and trust the add-in, go to the Service Bus namespace in your
  
 
  
-![Browsing to the service bus namespace](images/SP15Con_Remote_Event_Receivers_FAQ_fig4.PNG)
+![Browsing to the service bus namespace](../../images/SP15Con_Remote_Event_Receivers_FAQ_fig4.PNG)
  
 
  
