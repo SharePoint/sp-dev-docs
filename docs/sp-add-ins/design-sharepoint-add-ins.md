@@ -1,10 +1,3 @@
----
-title: Design SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: f7ece24a-1684-4a3c-b9ef-814cbf206ca1
----
-
-
 # Design SharePoint Add-ins
 Get an overview of the design and architecture options that are available in SharePoint Add-ins, and learn how to make the right decisions to ease the development of your add-in in SharePoint 2013.
  
