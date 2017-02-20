@@ -1,11 +1,3 @@
----
-title: Add-in permissions in SharePoint 2013
-ms.prod: SHAREPOINT
-ms.assetid: 5f7a8440-3c09-4cf8-83ec-c236bfa2d6c4
----
-
-
-
 # Add-in permissions in SharePoint 2013
 Learn about add-in permissions in SharePoint, including types of add-in permissions, permission request scopes, and managing permissions. This article also discusses the differences in add-in permission rights, user rights, and Office Store app rights.
  
@@ -13,20 +5,7 @@ Learn about add-in permissions in SharePoint, including types of add-in permissi
  **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
-You should first be familiar with the topic  [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md) before you read this article.
- 
-
-**Watch a video about add-in permissions.**
-
- 
-
- 
-![Videos](images/mod_icon_video.png)
- 
-
- 
-
- 
+You should first be familiar with the topic  [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md) before you read this article. 
 
 ## Get an overview of add-in permissions in SharePoint
 <a name="Perm_intro"> </a>
@@ -408,7 +387,7 @@ SharePoint Add-ins that are installed to SharePoint are granted permissions when
  
 
  
-![Regranting permissions to an app](images/RegrantPermissionsToAnApp.png)
+![Regranting permissions to an app](../../images/RegrantPermissionsToAnApp.png)
  
 When you are developing an add-in or troubleshooting an add-in, there may be occasions when you want to change, or regrant, the permissions of an add-in that has already been installed. You can do so with these steps:
  
