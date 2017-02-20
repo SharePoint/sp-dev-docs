@@ -1,10 +1,3 @@
----
-title: Create UX components in SharePoint 2013
-ms.prod: SHAREPOINT
-ms.assetid: bfdd0a58-2cc5-4805-ac89-4bd2fe6f3b09
----
-
-
 # Create UX components in SharePoint 2013
 Learn how to create UX components for your add-ins in SharePoint 2013.
  
