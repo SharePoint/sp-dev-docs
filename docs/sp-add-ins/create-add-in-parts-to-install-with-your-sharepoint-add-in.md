@@ -239,14 +239,14 @@ After completing the tasks, your add-in part should look similar to Figure 2 whe
 |2nd|Second option|
 |3rd|Third option|
 
-    The dialog should look like the following when you are finished:
+The dialog should look like the following when you are finished:
     
 
-    **ClientWebPartEnumItem Collection Editor**
+**ClientWebPartEnumItem Collection Editor**
 
  
 
-     ![The Client Web Part Enum Item Collection Editor with 3 items listed and each one having a Value attribute and a Web Display Name attribute.](../../images/1b21d968-bd58-4f30-a019-84df6181b81a.PNG)
+![The Client Web Part Enum Item Collection Editor with 3 items listed and each one having a Value attribute and a Web Display Name attribute.](../../images/1b21d968-bd58-4f30-a019-84df6181b81a.PNG)
  
 
  
