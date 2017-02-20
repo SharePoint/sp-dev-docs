@@ -1,10 +1,3 @@
----
-title: Deploying and installing SharePoint Add-ins: methods and options
-ms.prod: SHAREPOINT
-ms.assetid: d15a74a7-3c10-485a-9885-7ef11aaa0d90
----
-
-
 # Deploying and installing SharePoint Add-ins: methods and options
 Learn about the methods for publishing, installing, and uninstalling a SharePoint Add-in.
  
