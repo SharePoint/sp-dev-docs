@@ -1,10 +1,3 @@
----
-title: Customize a list view in SharePoint Add-ins using client-side rendering
-ms.prod: SHAREPOINT
-ms.assetid: 8d5cabb2-70d0-46a0-bfe0-9e21f8d67d86
----
-
-
 # Customize a list view in SharePoint Add-ins using client-side rendering
 Learn how to customize a list view in a SharePoint-hosted add-in by using the client-side rendering technology in SharePoint 2013.
  
@@ -77,7 +70,7 @@ Figure 1 shows a client-side rendered view of an announcements list.
  
 
  
-![Custom view of an announcements list](images/CSRListView_result.png)
+![Custom view of an announcements list](../../images/CSRListView_result.png)
  
 
 ### To create the SharePoint Add-in project
@@ -95,7 +88,7 @@ Figure 1 shows a client-side rendered view of an announcements list.
 
  
 
-     ![App for SharePoint 2013 Visual Studio template](images/AppForSharePointVSTemplate.PNG)
+     ![App for SharePoint 2013 Visual Studio template](../../images/AppForSharePointVSTemplate.PNG)
  
 
  
