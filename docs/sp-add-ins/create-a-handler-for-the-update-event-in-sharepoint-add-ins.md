@@ -1,10 +1,3 @@
----
-title: Create a handler for the update event in SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: 0fa088c5-54c6-482c-84ed-51c4f77c4127
----
-
-
 # Create a handler for the update event in SharePoint Add-ins
 Create and use a handler for the update event of a SharePoint Add-in.
  
