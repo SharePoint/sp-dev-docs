@@ -1,10 +1,3 @@
----
-title: Create an add-in event receiver in SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: f40c910f-12a2-4caa-8e91-c7a61ae540db
----
-
-
 # Create an add-in event receiver in SharePoint Add-ins
 Create handlers for the SharePoint Add-in install and uninstall events in SharePoint Add-ins.
  
@@ -58,7 +51,7 @@ If you work through the continuing example in this article, you will have a fini
 
  
 
-     ![App events in the properties window](images/SP_VS_Properties_Window_AppEvents.PNG)
+     ![App events in the properties window](../../images/SP_VS_Properties_Window_AppEvents.PNG)
  
 
     The Office Developer Tools for Visual Studio will do the following:
