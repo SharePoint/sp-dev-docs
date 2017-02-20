@@ -1,10 +1,3 @@
----
-title: Creating SharePoint Add-ins that use high-trust authorization
-ms.prod: SHAREPOINT
-ms.assetid: 135bf6be-b118-4d2c-8d40-27f5060b06f3
----
-
-
 # Creating SharePoint Add-ins that use high-trust authorization
 Learn about high-trust SharePoint Add-ins, which use digital certificates to establish trust between SharePoint and the remote components that access SharePoint.
  
@@ -15,20 +8,7 @@ Learn about high-trust SharePoint Add-ins, which use digital certificates to est
  **Provided by:**
  
 Steve Peschka, Microsoft Corporation
- 
 Siew Moi Khor, Microsoft Corporation
- 
-
-**Watch a video about creating high-trust SharePoint Add-ins.**
-
- 
-
- 
-![Videos](images/mod_icon_video.png)
- 
-
- 
-
  
 
 ## Overview of high-trust SharePoint Add-ins
