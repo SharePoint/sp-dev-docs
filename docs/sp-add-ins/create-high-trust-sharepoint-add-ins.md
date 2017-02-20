@@ -334,7 +334,7 @@ In this section, you learn how to create a high-trust SharePoint Add-in using Vi
 
  
 
-     ![Sample app retrieving web title](images/SP15HighTrustLaunchNew.gif)
+     ![Sample app retrieving web title](../../images/SP15HighTrustLaunchNew.gif)
  
 
  
