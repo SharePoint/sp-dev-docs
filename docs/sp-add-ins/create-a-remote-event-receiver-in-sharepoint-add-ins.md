@@ -1,10 +1,3 @@
----
-title: Create a remote event receiver in SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: 628c6103-52f9-4d85-9464-4a6862b36640
----
-
-
 # Create a remote event receiver in SharePoint Add-ins
 Create a remote event receiver (RER) that handles list and list item events in a SharePoint Add-in.
  
@@ -307,7 +300,7 @@ Test your handler with the following procedure.
 
  
 
-     ![SharePoint remote events in Visual Studio](images/SP_VS_Properties_Window_RemoteEvents.PNG)
+     ![SharePoint remote events in Visual Studio](../../images/SP_VS_Properties_Window_RemoteEvents.PNG)
  
 
  
