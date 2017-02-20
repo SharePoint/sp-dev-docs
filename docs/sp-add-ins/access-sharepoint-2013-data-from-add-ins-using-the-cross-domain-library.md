@@ -1,11 +1,3 @@
----
-title: Access SharePoint 2013 data from add-ins using the cross-domain library
-ms.prod: SHAREPOINT
-ms.assetid: bc37ff5c-1285-40af-98ae-01286696242d
----
-
-
-
 # Access SharePoint 2013 data from add-ins using the cross-domain library
 Learn how to access data in a SharePoint website from your add-in by using the cross domain library in SharePoint 2013.
  
@@ -83,7 +75,7 @@ Figure 2 shows a webpage that displays the data on the add-in web.
  
 
  
-![Cross domain read items sample result screen](images/CrossDomainReadItemsResult.png)
+![Cross domain read items sample result screen](../../images/CrossDomainReadItemsResult.png)
  
 
 ### Create a SharePoint Add-in and web projects
