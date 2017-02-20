@@ -1,10 +1,3 @@
----
-title: Add a Web Part to a page in a SharePoint-hosted SharePoint Add-in
-ms.prod: SHAREPOINT
-ms.assetid: 6179527d-8452-4cbc-a560-6104dd09e358
----
-
-
 # Add a Web Part to a page in a SharePoint-hosted SharePoint Add-in
 Learn how to include Web Parts in a page in an SharePoint Add-ins.
  
@@ -132,7 +125,7 @@ In this article you add a Web Part to the default page of the Employee Orientati
 
  
 
-     ![Default page of the add-in with the "New Employees in Seattle" list displayed in a Web Part.](images/31e8e4b1-e2e6-416b-b360-9979a1f16fc7.PNG)
+     ![Default page of the add-in with the "New Employees in Seattle" list displayed in a Web Part.](../../images/31e8e4b1-e2e6-416b-b360-9979a1f16fc7.PNG)
  
 
     
