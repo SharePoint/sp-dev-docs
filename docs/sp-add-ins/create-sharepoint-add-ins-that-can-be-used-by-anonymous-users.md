@@ -14,13 +14,9 @@ Learn how to create SharePoint Add-ins that can be used by anonymous users on pu
 
 Anonymous access is possible for SharePoint-hosted and provider-hosted SharePoint Add-ins. Depending on which type you create, review one of the following sets of prerequisites:
  
-
- 
-
--  [](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md#SP15SPhostedapps_bk_prereqs)
+-  [Get Started Creating SharePoint Hosted SharePoint add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md#SP15SPhostedapps_bk_prereqs)
     
- 
--  [](get-started-creating-provider-hosted-sharepoint-add-ins.md#SP15createselfhostapp_bk_prereq)
+-  [Get Started Creating Provider-Hosted SharePoint add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md#SP15createselfhostapp_bk_prereq)
     
  
 You will also need a site collection in your test SharePoint 2013 installation that is configured for anonymous access. If you have an Office 365 Developer Site, there is already a public site collection associated with it that uses a special Public Website site definition. (For more information about the use of Public Websites in Microsoft SharePoint Online, see  [Public Website help for Office 365](http://office.microsoft.com/en-gb/office365-sharepoint-online-enterprise-help/public-website-help-for-office-365-HA102891740.aspx?CTT=1).) That site definition is not available for on premises SharePoint 2013 installations. So if your test installation is on-premises, you will need:
