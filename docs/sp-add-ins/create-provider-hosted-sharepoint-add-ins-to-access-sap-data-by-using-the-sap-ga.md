@@ -1,10 +1,3 @@
----
-title: Create provider-hosted SharePoint Add-ins to access SAP data by using the SAP Gateway for Microsoft
-ms.prod: SHAREPOINT
-ms.assetid: 6091c7e8-2301-48cb-9400-a882b80f6309
----
-
-
 # Create provider-hosted SharePoint Add-ins to access SAP data by using the SAP Gateway for Microsoft
 Learn how you can build a SharePoint Add-in that can access SAP data.
  
