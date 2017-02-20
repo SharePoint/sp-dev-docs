@@ -1,10 +1,3 @@
----
-title: Create a provider-hosted add-in that includes a custom SharePoint list and content type
-ms.prod: SHAREPOINT
-ms.assetid: d97ab62e-129f-43f4-a825-fb5c3229d7c7
----
-
-
 # Create a provider-hosted add-in that includes a custom SharePoint list and content type
 Create a SharePoint Add-in that combines a cloud-hosted web application with custom SharePoint-hosted list templates, list instances, and custom content types by using the Office Developer Tools for Visual Studio 2012. Learn how to interact with SharePoint 2013 add-in webs by using the REST/OData web service, and how to implement OAuth in a SharePoint Add-in.
  
