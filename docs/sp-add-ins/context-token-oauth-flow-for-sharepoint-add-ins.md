@@ -1,10 +1,3 @@
----
-title: Context Token OAuth flow for SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: 526c8c4a-5cbb-4efc-87d9-23ac73655cf4
----
-
-
 # Context Token OAuth flow for SharePoint Add-ins
 Learn about the OAuth authentication and authorization flow for low-trust, provider-hosted add-ins in SharePoint.
  
@@ -73,7 +66,7 @@ The OAuth authentication and authorization flow for a SharePoint provider-hosted
  
 
  
-![OAuth authorization process flow](images/833fcdcc-1755-438b-9ada-dce9646564c0.gif)
+![OAuth authorization process flow](../../images/833fcdcc-1755-438b-9ada-dce9646564c0.gif)
  
 These are the steps that correspond to the numbers in the figure:
  
