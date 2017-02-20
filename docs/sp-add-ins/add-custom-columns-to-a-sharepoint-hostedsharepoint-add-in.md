@@ -116,7 +116,7 @@ In this article we get back to coding by adding some site columns to the Employe
 
  
 
-     ![New Employee in Seattle list with callout button and Create View item highlighted as step one. Then arrow to Create View page with Settings breadcrumb highlighted.](images/6c119cae-adf8-42ff-9890-f3aa1e11719d.png)
+     ![New Employee in Seattle list with callout button and Create View item highlighted as step one. Then arrow to Create View page with Settings breadcrumb highlighted.](../../images/6c119cae-adf8-42ff-9890-f3aa1e11719d.png)
  
 
     
