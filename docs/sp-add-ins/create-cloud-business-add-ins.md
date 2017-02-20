@@ -1,10 +1,3 @@
----
-title: Create cloud business add-ins
-ms.prod: SHAREPOINT
-ms.assetid: 7ee26ca1-eece-4c55-9864-af546c86f07c
----
-
-
 # Create cloud business add-ins
 By using the Cloud Business Add-in template in Visual Studio, you can quickly and easily create line-of-business add-ins that are hosted on SharePoint for Office 365 or SharePoint 2013 and based on Visual Studio LightSwitch technologies. Users can download and run cloud business add-ins on desktop computers and most mobile devices.
  
