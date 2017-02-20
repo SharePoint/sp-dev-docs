@@ -1,10 +1,3 @@
----
-title: Creating SharePoint Add-ins that use the cross-domain library
-ms.prod: SHAREPOINT
-ms.assetid: e63411ef-7137-4f1c-aac5-a3414ec88154
----
-
-
 # Creating SharePoint Add-ins that use the cross-domain library
 Learn about the SharePoint cross-domain JavaScript library.
  
