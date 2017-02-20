@@ -8,6 +8,7 @@ Learn about high-trust SharePoint Add-ins, which use digital certificates to est
  **Provided by:**
  
 Steve Peschka, Microsoft Corporation
+
 Siew Moi Khor, Microsoft Corporation
  
 
