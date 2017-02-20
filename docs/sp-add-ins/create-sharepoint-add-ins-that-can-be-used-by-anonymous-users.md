@@ -1,10 +1,3 @@
----
-title: Create SharePoint Add-ins that can be used by anonymous users
-ms.prod: SHAREPOINT
-ms.assetid: e858fce6-7a8f-4b1e-b053-64dc75345801
----
-
-
 # Create SharePoint Add-ins that can be used by anonymous users
 Learn how to create SharePoint Add-ins that can be used by anonymous users on public-facing Microsoft SharePoint 2013 sites.
  
