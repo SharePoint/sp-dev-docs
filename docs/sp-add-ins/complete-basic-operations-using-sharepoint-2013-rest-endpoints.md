@@ -1,10 +1,3 @@
----
-title: Complete basic operations using SharePoint 2013 REST endpoints
-ms.prod: SHAREPOINT
-ms.assetid: e3000415-50a0-426e-b304-b7de18f2f7d9
----
-
-
 # Complete basic operations using SharePoint 2013 REST endpoints
 Learn how to perform basic create, read, update, and delete (CRUD) operations with the SharePoint 2013 REST interface.
  
