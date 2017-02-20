@@ -1,10 +1,3 @@
----
-title: Deploy and install a SharePoint-hosted SharePoint Add-in
-ms.prod: SHAREPOINT
-ms.assetid: 3a3875d6-13e3-4411-904f-4f39acf88b95
----
-
-
 # Deploy and install a SharePoint-hosted SharePoint Add-in
 Learn how SharePoint Add-ins are deployed and installed.
  
@@ -38,7 +31,7 @@ You'll find it a lot easier to develop SharePoint-hosted SharePoint Add-ins if y
 
  
 
-     ![Office 365 App Launcher](images/ec60797c-d329-4922-a811-70c64598f4d5.PNG)
+     ![Office 365 App Launcher](../../images/ec60797c-d329-4922-a811-70c64598f4d5.PNG)
  
 
     
