@@ -1,10 +1,3 @@
----
-title: Add custom columns to a SharePoint-hostedSharePoint Add-in
-ms.prod: SHAREPOINT
-ms.assetid: 0fbc9a8b-d652-44a8-b821-578afd8f33dc
----
-
-
 # Add custom columns to a SharePoint-hostedSharePoint Add-in
 Learn how to include custom columns in an SharePoint Add-ins.
  
@@ -135,7 +128,7 @@ In this article we get back to coding by adding some site columns to the Employe
 
  
 
-     ![The list instance settings page with the link for Add Columns from Site Columns highlighted.](images/a8698b77-b9d2-40f6-89f6-ccc3c6e06073.png)
+     ![The list instance settings page with the link for Add Columns from Site Columns highlighted.](../../images/a8698b77-b9d2-40f6-89f6-ccc3c6e06073.png)
  
 
     
@@ -147,7 +140,7 @@ In this article we get back to coding by adding some site columns to the Employe
 
  
 
-     ![The SharePoint column selection control, with Employee Orientation selected in the drop down labelled Select site columns.](images/3b33c622-c52a-45fd-8ea1-d7f307539753.png)
+     ![The SharePoint column selection control, with Employee Orientation selected in the drop down labelled Select site columns.](../../images/3b33c622-c52a-45fd-8ea1-d7f307539753.png)
  
 
     
@@ -165,7 +158,7 @@ In this article we get back to coding by adding some site columns to the Employe
 
  
 
-     ![The list with the new Division and Orientation Stage columns.](images/d4e17424-c06b-4635-aab8-4912cee5fe35.png)
+     ![The list with the new Division and Orientation Stage columns.](../../images/d4e17424-c06b-4635-aab8-4912cee5fe35.png)
  
 
     
