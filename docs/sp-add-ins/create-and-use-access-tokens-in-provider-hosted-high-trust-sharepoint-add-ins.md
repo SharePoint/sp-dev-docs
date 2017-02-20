@@ -1,10 +1,3 @@
----
-title: Create and use access tokens in provider-hosted high-trust SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: cb3264d4-41a6-498f-a408-75b077566051
----
-
-
 # Create and use access tokens in provider-hosted high-trust SharePoint Add-ins
 Learn about the role of access tokens in high-trust SharePoint Add-ins and how your code works with them.
  
