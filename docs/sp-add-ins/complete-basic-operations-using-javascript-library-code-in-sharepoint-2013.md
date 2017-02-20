@@ -1,10 +1,3 @@
----
-title: Complete basic operations using JavaScript library code in SharePoint 2013
-ms.prod: SHAREPOINT
-ms.assetid: 29089af8-dbc0-49b7-a1a0-9e311f49c826
----
-
-
 # Complete basic operations using JavaScript library code in SharePoint 2013
 Learn how to write code to perform basic operations using the JavaScript client object model in SharePoint 2013.
  
