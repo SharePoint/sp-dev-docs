@@ -1,10 +1,3 @@
----
-title: Determine SharePoint REST service endpoint URIs
-ms.prod: SHAREPOINT
-ms.assetid: 3eb5c797-c395-4661-88ca-f7800306d781
----
-
-
 # Determine SharePoint REST service endpoint URIs
 Learn general guidelines for determining SharePoint REST endpoint URIs from the signature of the corresponding client object model APIs.
  
@@ -21,7 +14,7 @@ Learn general guidelines for determining SharePoint REST endpoint URIs from the 
 -  [Navigate the SharePoint data structure represented in the REST service](navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md)
     
  
- **Next steps**
+**Next steps**
  
 
 -  [Use OData query operations in SharePoint REST requests](use-odata-query-operations-in-sharepoint-rest-requests.md)
@@ -64,7 +57,7 @@ The following figure shows the general syntax structure of SharePoint REST URIs.
  
 
  
-![SharePoint REST request syntax](images/SPF15Con_REST_OverallSyntax.png)
+![SharePoint REST request syntax](../../images/SPF15Con_REST_OverallSyntax.png)
  
 Some endpoints for SharePoint resources deviate from this syntax structure:
  
@@ -203,7 +196,7 @@ The following figure shows the SharePoint REST parameter syntax.
  
 
  
-![SharePoint REST service method parameter syntax](images/SPF15Con_REST_parameterSyntax.png)
+![SharePoint REST service method parameter syntax](../../images/SPF15Con_REST_parameterSyntax.png)
  
 
 ### Complex types as parameters for the REST service
@@ -285,7 +278,7 @@ However, the SharePoint REST service does not support passing complex types via 
  
 
  
-![SharePoint REST service parameter aliasing syntax](images/SPF15Con_REST_parameterAliasSyntax.png)
+![SharePoint REST service parameter aliasing syntax](../../images/SPF15Con_REST_parameterAliasSyntax.png)
  
 
  
@@ -304,7 +297,7 @@ For REST endpoints that correspond to methods that take  `Dictionary<String, Str
  
 
  
-![REST service syntax for Dictionary parameters](images/SPF15Con_REST_parameterDictionarySyntax.png)
+![REST service syntax for Dictionary parameters](../../images/SPF15Con_REST_parameterDictionarySyntax.png)
  
 A  `Dictionary<String, object>` is represented as a multi-value object, named KeyedPropertyValue, with the following string properties:
  
@@ -343,7 +336,7 @@ the figure below shows the REST service syntax for parameters in query string.
  
 
  
-![REST service syntax for parameters in query string](images/SPF15Con_REST_parameterQuerySyntax.png)
+![REST service syntax for parameters in query string](../../images/SPF15Con_REST_parameterQuerySyntax.png)
  
 
  
@@ -386,7 +379,7 @@ The figure below shows the SharePoint REST service static member syntax.
  
 
  
-![REST service syntax for parameters in query string](images/SPF15Con_REST_parameterQuerySyntax.png)
+![REST service syntax for parameters in query string](../../images/SPF15Con_REST_parameterQuerySyntax.png)
  
 
  
