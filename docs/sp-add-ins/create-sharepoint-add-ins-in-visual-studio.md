@@ -1,11 +1,3 @@
----
-title: Create SharePoint Add-ins in Visual Studio
-ms.prod: SHAREPOINT
-ms.assetid: f1b9c858-907c-4558-b671-3b488ece40a0
----
-
-
-
 # Create SharePoint Add-ins in Visual Studio
 Learn to develop SharePoint Add-ins by using templates for projects and project items in Visual Studio.
  
