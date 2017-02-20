@@ -1,10 +1,3 @@
----
-title: Create a developer site on an existing Office 365 subscription
-ms.prod: SHAREPOINT
-ms.assetid: 2ec857d5-dc6f-4cf6-ba45-adc845ef2a25
----
-
-
 # Create a developer site on an existing Office 365 subscription
 An Office 365 Developer Site makes it easier to get set up and start creating, testing, and deploying your Office and SharePoint Add-ins more quickly. Many Office 365 Business, Enterprise, Education, and Government subscriptions include a site template you can use to create a Developer Site.
  
@@ -61,7 +54,7 @@ An Office 365 Developer Site makes it easier to get set up and start creating, t
  
 5. In the  **SharePoint admin center**, on the **Site Collections** tab, click **New > Private Site Collection**.
     
-     ![SharePoint Admin Center new site collection option](images/SPAdminCenter_newSiteCollection.png)
+     ![SharePoint Admin Center new site collection option](../../images/SPAdminCenter_newSiteCollection.png)
  
 
  
@@ -83,7 +76,7 @@ An Office 365 Developer Site makes it easier to get set up and start creating, t
     
     You'll see the new developer site URL in the  **Site Collections** list. When the site creation is finished, you can navigate to the URL to open your Developer Site.
     
-     ![New site collection provisioning](images/SPAdminCenter_newSiteCollection_provisioning.png)
+     ![New site collection provisioning](../../images/SPAdminCenter_newSiteCollection_provisioning.png)
  
 
  
