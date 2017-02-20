@@ -1,10 +1,3 @@
----
-title: Localize SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: 907a9189-7ce3-469a-8c87-4cef26f03c73
----
-
-
 # Localize SharePoint Add-ins
 Localize a SharePoint Add-in by using resource files, JavaScript resource files, and other techniques.
  
@@ -132,7 +125,7 @@ An add-in web can contain specific kinds of SP components. For more information 
 
  
 
-     ![A localized custom list](images/LocSPApp_AppwebList.png)
+     ![A localized custom list](../../images/LocSPApp_AppwebList.png)
  
 
  
@@ -288,7 +281,7 @@ var step07 = "Review the localized <a href=\"../Lists/Orders\">Orders</a>" +
 
  
 
-     ![A SharePoint page using localized strings](images/LocSPApp_AppwebPage.png)
+     ![A SharePoint page using localized strings](../../images/LocSPApp_AppwebPage.png)
  
 
  
@@ -532,7 +525,7 @@ Test your add-in by deploying it to a SharePoint website that is provisioned in 
  
 
  
-![Create site collection page](images/LocSPApp_TestCreatesite.png)
+![Create site collection page](../../images/LocSPApp_TestCreatesite.png)
  
 
 ### To test your add-in an on-premises website
@@ -563,16 +556,9 @@ Test your add-in by deploying it to a SharePoint website that is provisioned in 
 ## Additional resources
 <a name="SP15Localizeapp_addlresources"> </a>
 
-
 -  [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
-    
- 
 -  [Localization for Office Add-ins](http://msdn.microsoft.com/library/5a1a1cd7-b716-4597-b51f-fa70357d0833%28Office.15%29.aspx)
-    
- 
 -  [ASP.NET Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d.aspx)
-    
- 
 -  [SharePoint-Add-in-Localization](https://github.com/OfficeDev/SharePoint-Add-in-Localization)
     
  
