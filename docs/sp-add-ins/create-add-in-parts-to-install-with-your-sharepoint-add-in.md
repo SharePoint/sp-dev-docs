@@ -1,11 +1,3 @@
----
-title: Create add-in parts to install with your SharePoint Add-in
-ms.prod: SHAREPOINT
-ms.assetid: a2664289-6c56-4cb1-987a-22367fad55eb
----
-
-
-
 # Create add-in parts to install with your SharePoint Add-in
 Learn how to create an add-in part in SharePoint 2013 that is available in the Web Part gallery of the host web when you install your SharePoint Add-in.
  
@@ -33,7 +25,7 @@ Figure 1 shows how the add-in part content is displayed in a SharePoint page.
  
 
  
-![App part content displayed in a SharePoint page](images/AppParts_ConceptualArchitecture.png)
+![App part content displayed in a SharePoint page](../../images/AppParts_ConceptualArchitecture.png)
  
 An add-in part is implemented with the  **ClientWebPart** class, and like all Web Parts it is a available in the Web Part gallery after a user installs the SharePoint Add-in that includes it. Your users can further customize the add-in part using the properties that you provide. (See figure 2 below for an example of configurable properties in an add-in part.)
  
@@ -89,7 +81,7 @@ After completing the tasks, your add-in part should look similar to Figure 2 whe
  
 
  
-![Web part page hosting a basic app part](images/BasicAppPart_result.png)
+![Web part page hosting a basic app part](../../images/BasicAppPart_result.png)
  
 
 ### Add a form for the add-in part content
@@ -219,7 +211,7 @@ After completing the tasks, your add-in part should look similar to Figure 2 whe
 
  
 
-     ![The Client Web Part Custom Properties Dialog with 4 properties listed on the left, and each one having 5 attributes set on the right.](images/6a0f0a56-3184-490a-af19-b51b7545671d.PNG)
+     ![The Client Web Part Custom Properties Dialog with 4 properties listed on the left, and each one having 5 attributes set on the right.](../../images/6a0f0a56-3184-490a-af19-b51b7545671d.PNG)
  
 
  
@@ -260,7 +252,7 @@ After completing the tasks, your add-in part should look similar to Figure 2 whe
 
  
 
-     ![The Client Web Part Enum Item Collection Editor with 3 items listed and each one having a Value attribute and a Web Display Name attribute.](images/1b21d968-bd58-4f30-a019-84df6181b81a.PNG)
+     ![The Client Web Part Enum Item Collection Editor with 3 items listed and each one having a Value attribute and a Web Display Name attribute.](../../images/1b21d968-bd58-4f30-a019-84df6181b81a.PNG)
  
 
  
@@ -364,7 +356,7 @@ After completing the tasks, your add-in part should look similar to Figure 2 whe
 
  
 
-     ![Basic app part in the web part gallery](images/BasicAppPart_gallery.jpg)
+     ![Basic app part in the web part gallery](../../images/BasicAppPart_gallery.jpg)
  
 
  
@@ -416,7 +408,7 @@ In most cases, a webpage can't be displayed in a frame if it sends an  **X-Frame
  
 
  
-![App part that can't display its content in a frame](images/AppParts_IFrameError.png)
+![App part that can't display its content in a frame](../../images/AppParts_IFrameError.png)
  
 Be aware that certain scenarios are susceptible to " [ClickJacking](http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx)" attacks when the webpages are displayed in a frame. Carefully evaluate your add-in part scenarios to make sure there is no risk of  **ClickJacking** attacks.
  
