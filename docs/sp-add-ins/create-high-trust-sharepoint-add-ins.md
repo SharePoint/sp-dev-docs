@@ -1,10 +1,3 @@
----
-title: Create high-trust SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: 33294041-48ae-4ee3-846c-acb57b5409cb
----
-
-
 # Create high-trust SharePoint Add-ins
 Learn how to create a high-trust SharePoint Add-in. A high-trust add-in uses digital certificates to establish a trust between the remote web application and SharePoint 2013. High-trust add-ins can only be installed to on premises SharePoint, not to Microsoft SharePoint Online, and they are primarily intended for use with an on premises, rather than cloud-based, web application.
  
@@ -115,7 +108,7 @@ You'll create a test .pfx certificate file first, and then a corresponding test 
 
  
 
-     ![Server Certificates option in IIS](images/e38f9b7f-59a3-468c-bcde-a48272f1f217.gif)
+     ![Server Certificates option in IIS](../../images/e38f9b7f-59a3-468c-bcde-a48272f1f217.gif)
  
 
  
@@ -127,7 +120,7 @@ You'll create a test .pfx certificate file first, and then a corresponding test 
 
  
 
-     ![Create Self-Signed Cerificate link](images/3f0aae5a-e58b-4ec8-b67f-0024abfa2dab.gif)
+     ![Create Self-Signed Cerificate link](../../images/3f0aae5a-e58b-4ec8-b67f-0024abfa2dab.gif)
  
 
  
@@ -142,7 +135,7 @@ You'll create a test .pfx certificate file first, and then a corresponding test 
 
  
 
-     ![Exporting a test certificate](images/997021de-c60c-46b0-961f-7e1e63c0f619.gif)
+     ![Exporting a test certificate](../../images/997021de-c60c-46b0-961f-7e1e63c0f619.gif)
  
 
  
