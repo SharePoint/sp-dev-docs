@@ -1,10 +1,3 @@
----
-title: Creating SharePoint Add-ins that use low-trust authorization
-ms.prod: SHAREPOINT
-ms.assetid: c33966ab-1515-407c-b1ac-8c653eab10dc
----
-
-
 # Creating SharePoint Add-ins that use low-trust authorization
 Learn about the low-trust authorization system for SharePoint Add-ins.
  
