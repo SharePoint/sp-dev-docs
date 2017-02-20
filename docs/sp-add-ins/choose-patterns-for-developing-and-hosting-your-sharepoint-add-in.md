@@ -1,13 +1,3 @@
----
-title: Choose patterns for developing and hosting your SharePoint Add-in
-keywords: vs.sharepointtools.sharepointapp.hostingtypes
-f1_keywords:
-- vs.sharepointtools.sharepointapp.hostingtypes
-ms.prod: SHAREPOINT
-ms.assetid: 05ce5435-0a03-4ddc-976b-c33b08d03457
----
-
-
 # Choose patterns for developing and hosting your SharePoint Add-in
 Learn about the different ways that you can host the components of SharePoint Add-ins.
  
@@ -39,7 +29,7 @@ Start with the simplest option: SharePoint-hosted add-ins, or add-ins where all 
  
 
  
-![The components of a SharePoint-hosted app are hosted on the appweb of a SharePoint farm.](images/SP15_hosting_SPhosted.gif)
+![The components of a SharePoint-hosted app are hosted on the appweb of a SharePoint farm.](../../images/SP15_hosting_SPhosted.gif)
  
 You can combine a SharePoint-hosted add-in with add-ins that have remotely hosted components, but any add-in or portion of an add-in that runs on an add-in web has the following set of requirements for three key components: where the add-in is hosted, how the add-in gets authorization, and what language it can use.
  
@@ -80,7 +70,7 @@ Provider-hosted SharePoint Add-ins include components that are deployed and host
  
 
  
-![The components of a provider-hosted app are hosted on any web server or hosting service.](images/SP15_hosting_Provider.gif)
+![The components of a provider-hosted app are hosted on any web server or hosting service.](../../images/SP15_hosting_Provider.gif)
  
 The following table shows how the requirements for hosting location, add-in authorization, and languages are much less fixed for provider-hosted add-ins than they are for SharePoint-hosted add-ins.
  
@@ -179,7 +169,7 @@ You can also build add-ins that include both SharePoint-hosted and cloud-hosted 
  
 
  
-![Server to server communication restrictions](images/SP15HelloWorldSPApp_Fig01.png)
+![Server to server communication restrictions](../../images/SP15HelloWorldSPApp_Fig01.png)
  
  [Learn how to create an add-in that combines cloud hosting and SharePoint hosting.](create-a-provider-hosted-add-in-that-includes-a-custom-sharepoint-list-and-content-type.md)
  
