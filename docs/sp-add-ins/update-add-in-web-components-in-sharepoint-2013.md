@@ -1,9 +1,3 @@
----
-title: Update add-in web components in SharePoint 2013
-ms.prod: SHAREPOINT
-ms.assetid: 6da6ac25-53b7-4dd2-8637-a86e7ca1f3ff
----
-
 
 # Update add-in web components in SharePoint 2013
 Update pages, lists, content types, and other add-in web components in a SharePoint Add-in.
@@ -89,7 +83,7 @@ The Microsoft Office Developer Tools for Visual Studio are oriented to creating 
 
  
 
-     ![Steps to open the Feature XML editor](images/UpdateAppOpenFeatureXML.png)
+     ![Steps to open the Feature XML editor](../../images/UpdateAppOpenFeatureXML.png)
  
 
  
