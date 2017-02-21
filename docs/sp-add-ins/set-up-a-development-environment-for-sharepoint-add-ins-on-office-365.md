@@ -1,10 +1,3 @@
----
-title: Set up a development environment for SharePoint Add-ins on Office 365
-ms.prod: MULTIPLEPRODUCTS
-ms.assetid: b22ce52a-ae9e-4831-9b68-c9210af6dc54
----
-
-
 # Set up a development environment for SharePoint Add-ins on Office 365
 Set up a development environment for SharePoint Add-ins on an Office 365 Developer Site.
  
@@ -78,7 +71,7 @@ Three ways to get an Office 365 plan.
  
 
  
-![Page 2 of Sign up form for Office 365 account](images/ff384c69-56bf-4ceb-81c3-8b874e2407f0.png)
+![Page 2 of Sign up form for Office 365 account](../../images/ff384c69-56bf-4ceb-81c3-8b874e2407f0.png)
  
 
  
@@ -116,7 +109,7 @@ After you finish the signup process, your browser will opens the Office 365 inst
  
 
  
-![Screenshot that shows the Office 365 admin center.](images/SP15_Office365AdminInset_border.png)
+![Screenshot that shows the Office 365 admin center.](../../images/SP15_Office365AdminInset_border.png)
  
 
  
@@ -136,7 +129,7 @@ After you finish the signup process, your browser will opens the Office 365 inst
  
 
  
-![Screenshot that shows the Developer site homepage.](images/SP15_DeveloperSiteHome_border.png)
+![Screenshot that shows the Developer site homepage.](../../images/SP15_DeveloperSiteHome_border.png)
  
 
  
