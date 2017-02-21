@@ -1,9 +1,3 @@
----
-title: SharePoint Add-ins update process
-ms.prod: SHAREPOINT
-ms.assetid: 3dba209d-cb98-4e5d-b4b2-fad31e667ca1
----
-
 
 # SharePoint Add-ins update process
 Learn about the process for updating SharePoint Add-ins.
@@ -36,7 +30,7 @@ Within 24 hours after you upload your update to an organization's add-in catalog
  
 
  
-![The UI steps for updating an app](images/UpdatingApp_AppTileUpdateNotice.png)
+![The UI steps for updating an app](../../images/UpdatingApp_AppTileUpdateNotice.png)
  
 
     
