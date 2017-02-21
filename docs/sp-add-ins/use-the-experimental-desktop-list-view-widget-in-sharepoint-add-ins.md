@@ -1,8 +1,3 @@
----
-title: Use the experimental Desktop List View widget in SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: b1e26543-9d03-4759-80bf-e6ce729a1b19
----
 
 
 # Use the experimental Desktop List View widget in SharePoint Add-ins
@@ -26,7 +21,7 @@ You can use the List View widget to display the data in a SharePoint list simila
  
 
  
-![Desktop List View experimental control on a page](images/DesktopListView_basic.png)
+![Desktop List View experimental control on a page](../../images/DesktopListView_basic.png)
  
 
  
