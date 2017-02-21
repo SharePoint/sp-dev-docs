@@ -1,10 +1,3 @@
----
-title: Get a quick overview of the SharePoint object model
-ms.prod: SHAREPOINT
-ms.assetid: 6b8b55f8-9370-43a0-af8d-e07d1028a075
----
-
-
 # Get a quick overview of the SharePoint object model
 Get a quick introduction to some of the major classes in the SharePoint object model.
  
