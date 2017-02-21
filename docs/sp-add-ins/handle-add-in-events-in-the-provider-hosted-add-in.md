@@ -1,10 +1,3 @@
----
-title: Handle add-in events in the provider-hosted add-in
-ms.prod: SHAREPOINT
-ms.assetid: d5679867-083f-46c8-a2bd-00a43f042c24
----
-
-
 # Handle add-in events in the provider-hosted add-in
 Learn how to customize the installation of a provider-hosted SharePoint Add-in.
  
@@ -288,7 +281,7 @@ catch (Exception e)
  
 3. On the  **Accounts** page, press the **Show Add-in Version** button. The version shows as0000.0000.0000.0000.
     
-     ![The Accounts page with the heading "Account settings". A button named "Show Add-in Version" and below this a line of text reading "Registered version: zero zero zero zero dot zero zero zero zero dot zero zero zero zero dot zero zero zero zero".](images/2a905b7d-89c7-456a-8456-21a9b7e9efc5.PNG)
+     ![The Accounts page with the heading "Account settings". A button named "Show Add-in Version" and below this a line of text reading "Registered version: zero zero zero zero dot zero zero zero zero dot zero zero zero zero dot zero zero zero zero".](../../images/2a905b7d-89c7-456a-8456-21a9b7e9efc5.PNG)
  
 
  
