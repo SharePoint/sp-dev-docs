@@ -1,12 +1,3 @@
----
-title: SharePoint Add-ins
-keywords: vs.sharepointtools.spe.appwizardprojectpage
-f1_keywords:
-- vs.sharepointtools.spe.appwizardprojectpage
-ms.prod: SHAREPOINT
-ms.assetid: cd1eda9e-8e54-4223-93a9-a6ea0d18df70
----
-
 
 # SharePoint Add-ins
 SharePoint Add-ins are self-contained extensions of SharePoint websites that you create, and that run without custom code on the SharePoint server.
@@ -46,9 +37,9 @@ There are two basic kinds of SharePoint Add-ins — SharePoint-hosted and provid
     
 |||
 |:-----|:-----|
-|![Immersive Full Page SharePoint app experience](images/7298a25b-ed54-4953-a781-26c3f633866a.jpg)|**As an immersive full-page experience** that can have the look and feel of a SharePoint page.|
-|![App Part experience for SharePoint app](images/90cd4b6e-462e-442e-92de-86b2d98282d0.jpg)|**As part of a webpage, using a special kind of control, called an add-in part**, to surface an iframe element that contains the add-in.|
-|![Custom action experience of SharePoint app](images/3a14cfdc-51e1-446f-82d9-acb4f2bcbc0e.jpg)|**As UI commands that extend ribbons and menus** for lists, documents, and more.|
+|![Immersive Full Page SharePoint app experience](../../images/7298a25b-ed54-4953-a781-26c3f633866a.jpg)|**As an immersive full-page experience** that can have the look and feel of a SharePoint page.|
+|![App Part experience for SharePoint app](../../images/90cd4b6e-462e-442e-92de-86b2d98282d0.jpg)|**As part of a webpage, using a special kind of control, called an add-in part**, to surface an iframe element that contains the add-in.|
+|![Custom action experience of SharePoint app](../../images/3a14cfdc-51e1-446f-82d9-acb4f2bcbc0e.jpg)|**As UI commands that extend ribbons and menus** for lists, documents, and more.|
 -  **All SharePoint Add-ins that users install get a tile on the  **Site Contents** page of the SharePoint website.** Clicking the tile runs the add-in.
     
  
@@ -103,7 +94,7 @@ When you need to update an add-in to fix a bug or to add functionality, make the
 
 
  
-![Comparison SharePoint-hosted and provider-hosted apps](images/eb5b0e2b-4b96-46a4-bd74-faafd7717e26.png)
+![Comparison SharePoint-hosted and provider-hosted apps](../../images/eb5b0e2b-4b96-46a4-bd74-faafd7717e26.png)
  
 
 ### SharePoint-hosted SharePoint Add-ins
