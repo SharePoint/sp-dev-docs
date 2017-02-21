@@ -1,10 +1,3 @@
----
-title: Get to know the SharePoint 2013 REST service
-ms.prod: SHAREPOINT
-ms.assetid: 2de035a0-ac75-43bd-9665-5c5a59c4c590
----
-
-
 # Get to know the SharePoint 2013 REST service
 Get the basics of using the SharePoint 2013 REST service to access and update SharePoint data, using the REST and OData web protocol standards.
  
@@ -59,7 +52,7 @@ The client.svc web service in SharePoint handles the HTTP request, and serves th
  
 
  
-![SharePoint REST service architecture](images/SPF15Con_REST_RESTStructure.png)
+![SharePoint REST service architecture](../../images/SPF15Con_REST_RESTStructure.png)
  
 Because of the functionality and ease of use that client object models provide, they remain the primary development option for communicating with SharePoint sites by using .NET Framework managed code, Silverlight, or JavaScript.
  
