@@ -1,9 +1,3 @@
----
-title: Publish a cloud business add-in to SharePoint
-ms.prod: SHAREPOINT
-ms.assetid: b528a23f-72c3-42cb-8265-1c5b9238d404
----
-
 
 # Publish a cloud business add-in to SharePoint
 You can publish your cloud business add-in as a provider-hosted SharePoint add-in. A provider-hosted add-in gives you the flexibility of deploying your web app and database to an on-premise SharePoint site, to Microsoft Azure, or to a third-party hosting site. After you publish your add-in, others can run it from SharePoint on their computers and mobile devices.
@@ -25,7 +19,7 @@ You can publish your add-in directly to a site using WebDeploy, or you can creat
 
  
 
-     ![The IncidentManager node](images/CBA_IM_18.PNG)
+     ![The IncidentManager node](../../images/CBA_IM_18.PNG)
  
 
  
@@ -113,7 +107,7 @@ You can publish your add-in directly to a site using WebDeploy, or you can creat
 
  
 
-     ![The IncidentManager node](images/CBA_IM_18.PNG)
+     ![The IncidentManager node](../../images/CBA_IM_18.PNG)
  
 
     
