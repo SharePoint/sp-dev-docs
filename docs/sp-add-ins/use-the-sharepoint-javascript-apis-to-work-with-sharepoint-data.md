@@ -1,9 +1,3 @@
----
-title: Use the SharePoint JavaScript APIs to work with SharePoint data
-ms.prod: SHAREPOINT
-ms.assetid: 5c8767c2-317f-4bdb-8f4f-885d06da7feb
----
-
 
 # Use the SharePoint JavaScript APIs to work with SharePoint data
 Use the SharePoint JavaScript object model to work with SharePoint data from JavaScript on pages in the add-in web.
