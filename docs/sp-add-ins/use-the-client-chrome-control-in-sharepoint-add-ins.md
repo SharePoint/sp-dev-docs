@@ -1,9 +1,3 @@
----
-title: Use the client chrome control in SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: 7c2d0812-76e8-44c1-88bf-4a75eb6f82b1
----
-
 
 # Use the client chrome control in SharePoint Add-ins
 Learn how to use the chrome control in add-ins in SharePoint 2013.
