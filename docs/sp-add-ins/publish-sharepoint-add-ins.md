@@ -1,9 +1,3 @@
----
-title: Publish SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: f5a92b98-5520-4bba-9131-b56d2a21a321
----
-
 
 # Publish SharePoint Add-ins
 Find articles and resources to help you publish your SharePoint Add-ins.
