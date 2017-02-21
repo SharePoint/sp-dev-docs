@@ -1,10 +1,3 @@
----
-title: Get started creating SharePoint-hosted SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: 1b992485-6efe-4ea4-a18c-221689b0b66f
----
-
-
 # Get started creating SharePoint-hosted SharePoint Add-ins
 Set up a development environment and create your first SharePoint-hosted SharePoint Add-in.
  
