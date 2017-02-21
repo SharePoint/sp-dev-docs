@@ -1,10 +1,3 @@
----
-title: Explore the app manifest structure and the package of a SharePoint Add-in
-ms.prod: SHAREPOINT
-ms.assetid: 7cd5850f-cbf3-48d2-bcb7-59b8f4ed0e63
----
-
-
 # Explore the app manifest structure and the package of a SharePoint Add-in
 Learn about the add-in package structure and the manifest file for a SharePoint Add-in.
  
