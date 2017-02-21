@@ -1,9 +1,3 @@
----
-title: Use the client-side People Picker control in SharePoint-hosted SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: 383f265f-ed44-4d09-b2f6-366f13d52347
----
-
 
 # Use the client-side People Picker control in SharePoint-hosted SharePoint Add-ins
 Learn how to use the client-side People Picker control in SharePoint-hosted SharePoint Add-ins.
