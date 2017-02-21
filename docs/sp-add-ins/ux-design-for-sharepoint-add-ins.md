@@ -1,9 +1,3 @@
----
-title: UX design for SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: d60f409a-b292-4c06-8128-88629091b753
----
-
 
 # UX design for SharePoint Add-ins
 Learn about the user experience (UX) options that you have when you build add-ins in SharePoint 2013.
@@ -42,7 +36,7 @@ The following diagram shows the main scenarios and options to consider when you 
  
 
  
-![App UX main scenarios](images/AppUX_landscape.png)
+![App UX main scenarios](../../images/AppUX_landscape.png)
  
 In choosing your design, you should fundamentally consider which parts of your add-in are hosted in SharePoint and which are not. You should also consider how your add-in interacts with the host web.
  
