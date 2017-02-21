@@ -1,10 +1,3 @@
----
-title: Get started developing cloud business add-ins
-ms.prod: SHAREPOINT
-ms.assetid: 64d59df8-ba89-4653-bdeb-47bbd70beda2
----
-
-
 # Get started developing cloud business add-ins
 The best way to learn to develop a Cloud Business Add-in for SharePoint is to jump in and try it. The following tutorials and associate samples walk you through the process step-by-step. Go ahead - it's much easier than you might imagine.
  
