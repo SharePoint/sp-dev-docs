@@ -1,10 +1,3 @@
----
-title: Handle list item events in the provider-hosted add-in
-ms.prod: SHAREPOINT
-ms.assetid: 4534e0f5-61ef-4145-a63b-a9fa70f51391
----
-
-
 # Handle list item events in the provider-hosted add-in
 Learn how to handle list item events in a provider-hosted SharePoint Add-in.
  
@@ -571,7 +564,7 @@ expectedShipmentsList.EventReceivers.Add(receiver);
  
 3. Ensure that the  **Define DEBUG constant** box is checked. (It usually is by default.) The following screen shot shows the proper setting.
     
-     ![The Build sub-tab of the Properties tab in Visual Studio. The Configuration drop down is set to Debug. The check box for "Define DEBUG constant" is checked.](images/4f81174f-d875-4a9e-bff4-adea0f176f00.PNG)
+     ![The Build sub-tab of the Properties tab in Visual Studio. The Configuration drop down is set to Debug. The check box for "Define DEBUG constant" is checked.](../../images/4f81174f-d875-4a9e-bff4-adea0f176f00.PNG)
  
 
  
@@ -579,7 +572,7 @@ expectedShipmentsList.EventReceivers.Add(receiver);
  
 4. Change the  **Configuration** drop down to **Release**, and then ensure that the  **Define DEBUG constant** box is ** *not* ** checked. (It usually is not by default.) The following screen shot shows the proper setting.
     
-     ![The Build sub-tab of the Properties tab. The Configuration drop down says Release. The check box for "Define DEBUG constant" is not checked.](images/7fd942de-a324-4f70-a750-f5304c993832.PNG)
+     ![The Build sub-tab of the Properties tab. The Configuration drop down says Release. The check box for "Define DEBUG constant" is not checked.](../../images/7fd942de-a324-4f70-a750-f5304c993832.PNG)
  
 
  
@@ -619,7 +612,7 @@ The add-in event and list item event receivers are Windows Communication Service
  
 5. When the breakpoint is hit, hover the cursor over the  `debugEndpoint` variable. When the Visual Studio Data Tip appears, click the down arrow and select **Text Visualizer**.
     
-     ![A Visual Studio text visualizer with an Azure Service Bus URL in it.](images/494cf01e-3e17-4092-b239-9312ac4ab258.PNG)
+     ![A Visual Studio text visualizer with an Azure Service Bus URL in it.](../../images/494cf01e-3e17-4092-b239-9312ac4ab258.PNG)
  
 
  
