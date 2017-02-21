@@ -1,9 +1,3 @@
----
-title: Set up an on-premises development environment for SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: b0878c12-27c9-4eea-ae3b-7e79e5a8838d
----
-
 
 # Set up an on-premises development environment for SharePoint Add-ins
 Learn how to set up a development environment that is specifically suited to developing SharePoint Add-ins with an on-premises installation of SharePoint.
@@ -59,7 +53,7 @@ Depending on your specific requirements and budget, you can choose from the foll
 
  
 
-     ![SharePoint 2013 Installation Server Type](images/SP15_app_ServerType.gif)
+     ![SharePoint 2013 Installation Server Type](../../images/SP15_app_ServerType.gif)
  
 
  
@@ -81,7 +75,7 @@ dir /od *.log
 
  
 
-     ![Site template page](images/SP15_appChooseSiteTemplate.gif)
+     ![Site template page](../../images/SP15_appChooseSiteTemplate.gif)
  
 
  
