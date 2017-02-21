@@ -1,9 +1,3 @@
----
-title: Set custom permissions on a list by using the REST interface
-ms.prod: SHAREPOINT
-ms.assetid: d5fcc26c-4e44-404b-aacf-e9351af8cc7d
----
-
 
 # Set custom permissions on a list by using the REST interface
 Learn how to define custom, fine-grained permissions on a SharePoint list by using the REST interface and JavaScript.
