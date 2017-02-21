@@ -1,10 +1,3 @@
----
-title: Get started creating provider-hosted SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: 3038dd73-41ee-436f-8c78-ef8e6869bf7b
----
-
-
 # Get started creating provider-hosted SharePoint Add-ins
 Set up a development environment and create your first provider-hosted SharePoint Add-in.
  
@@ -21,11 +14,11 @@ Provider-hosted add-ins are one of the two major types of SharePoint Add-ins. Fo
 - The custom business logic in the add-in has to run on either the external components or in JavaScript on custom SharePoint pages.
     
  
- [![Step 1 Set up your dev environment](images/6d3bbe0a-399e-4747-9e1a-01d42954ce32.png)
+ [![Step 1 Set up your dev environment](../../images/6d3bbe0a-399e-4747-9e1a-01d42954ce32.png)
  
-](get-started-creating-provider-hosted-sharepoint-add-ins.md#Setup) [![Step 2 Create the app project](images/d69871f6-c503-463b-bf96-4b6d7306c313.png)
+](get-started-creating-provider-hosted-sharepoint-add-ins.md#Setup) [![Step 2 Create the app project](../../images/d69871f6-c503-463b-bf96-4b6d7306c313.png)
  
-](get-started-creating-provider-hosted-sharepoint-add-ins.md#Create) [![Step 3 Code your app](images/e5f8a9a2-e5fb-42d1-b19a-300178c626fb.png)
+](get-started-creating-provider-hosted-sharepoint-add-ins.md#Create) [![Step 3 Code your app](../../images/e5f8a9a2-e5fb-42d1-b19a-300178c626fb.png)
  
 ](get-started-creating-provider-hosted-sharepoint-add-ins.md#Code)
  
@@ -79,7 +72,7 @@ There are three ways to get an Office 365 plan.
  
 
  
-![Page 2 of Sign up form for Office 365 account](images/ff384c69-56bf-4ceb-81c3-8b874e2407f0.png)
+![Page 2 of Sign up form for Office 365 account](../../images/ff384c69-56bf-4ceb-81c3-8b874e2407f0.png)
  
 
  
@@ -117,7 +110,7 @@ After you finish the signup process, your browser opens the Office 365 installat
  
 
  
-![Screenshot that shows the Office 365 admin center.](images/SP15_Office365AdminInset_border.png)
+![Screenshot that shows the Office 365 admin center.](../../images/SP15_Office365AdminInset_border.png)
  
 
  
@@ -137,7 +130,7 @@ After you finish the signup process, your browser opens the Office 365 installat
  
 
  
-![Screenshot that shows the Developer site homepage.](images/SP15_DeveloperSiteHome_border.png)
+![Screenshot that shows the Developer site homepage.](../../images/SP15_DeveloperSiteHome_border.png)
  
 
  
@@ -501,7 +494,7 @@ namespace SampleAddInWeb
 
  
 
-     ![Basic self-hosted app launch page](images/SP15_basicself-hostedapp.gif)
+     ![Basic self-hosted app launch page](../../images/SP15_basicself-hostedapp.gif)
  
 
  
