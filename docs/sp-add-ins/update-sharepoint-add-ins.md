@@ -1,9 +1,3 @@
----
-title: Update SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: 3edcb33c-fa9e-4e9e-82d6-5519fd981324
----
-
 
 # Update SharePoint Add-ins
 Learn how to create and deploy an update for a SharePoint Add-in.
@@ -20,7 +14,7 @@ You can update your SharePoint Add-in by using the updating support built into S
  
 
  
-![The UI steps for updating an app](images/UpdatingApp_AppTileUpdateNotice.png)
+![The UI steps for updating an app](../../images/UpdatingApp_AppTileUpdateNotice.png)
  
 A user can install the update without first uninstalling the earlier version. The update infrastructure tests the update installation and rolls it back if there are any errors.
  
@@ -184,7 +178,7 @@ Figure 2 illustrates these steps.
  
 
  
-![Immediate app upgrade process](images/UpdatingApp_ImmediateUpgradeProcess.png)
+![Immediate app upgrade process](../../images/UpdatingApp_ImmediateUpgradeProcess.png)
  
 
     
