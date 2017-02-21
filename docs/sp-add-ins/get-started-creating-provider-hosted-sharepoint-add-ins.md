@@ -14,15 +14,12 @@ Provider-hosted add-ins are one of the two major types of SharePoint Add-ins. Fo
 - The custom business logic in the add-in has to run on either the external components or in JavaScript on custom SharePoint pages.
     
  
- [![Step 1 Set up your dev environment](../../images/6d3bbe0a-399e-4747-9e1a-01d42954ce32.png)
- 
-](get-started-creating-provider-hosted-sharepoint-add-ins.md#Setup) [![Step 2 Create the app project](../../images/d69871f6-c503-463b-bf96-4b6d7306c313.png)
- 
-](get-started-creating-provider-hosted-sharepoint-add-ins.md#Create) [![Step 3 Code your app](../../images/e5f8a9a2-e5fb-42d1-b19a-300178c626fb.png)
- 
-](get-started-creating-provider-hosted-sharepoint-add-ins.md#Code)
- 
+- [Step 1 - Set up your dev environment](get-started-creating-provider-hosted-sharepoint-add-ins.md#Setup) 
 
+- [Step 2 - Create the app project](get-started-creating-provider-hosted-sharepoint-add-ins.md#Create) 
+
+- [Step 3 - Code your app](get-started-creating-provider-hosted-sharepoint-add-ins.md#Code)
+ 
 ## Set up your dev environment
 <a name="Setup"> </a>
 
