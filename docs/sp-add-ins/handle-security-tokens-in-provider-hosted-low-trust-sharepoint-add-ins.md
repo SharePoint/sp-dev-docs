@@ -1,9 +1,3 @@
----
-title: Handle security tokens in provider-hosted low-trust SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: b437181d-bc70-4838-b43d-9f1bb744f0cb
----
-
 
 # Handle security tokens in provider-hosted low-trust SharePoint Add-ins
 Learn about the context, access, and refresh tokens that are used for authorization by low-trust, provider-hosted SharePoint Add-ins, and how to work with them in your code.
