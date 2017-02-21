@@ -1,10 +1,3 @@
----
-title: Register SharePoint Add-ins 2013
-ms.prod: SHAREPOINT
-ms.assetid: be41a5dc-2af9-4fd9-bf4e-ad6dfa849524
----
-
-
 
 # Register SharePoint Add-ins 2013
 Register your SharePoint Add-ins in Azure ACS by using Visual Studio, the Seller Dashboard, or an AppRegNew.aspx page, and retrieve registration information.
