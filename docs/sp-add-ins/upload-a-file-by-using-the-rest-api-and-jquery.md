@@ -1,9 +1,3 @@
----
-title: Upload a file by using the REST API and jQuery
-ms.prod: SHAREPOINT
-ms.assetid: b48a9cb8-131a-4bd4-af4c-a98017ee2e5a
----
-
 
 # Upload a file by using the REST API and jQuery
 Learn how to upload a local file to a SharePoint folder by using the REST API and jQuery AJAX requests.
