@@ -1,9 +1,3 @@
----
-title: Update host web components in SharePoint 2013
-ms.prod: SHAREPOINT
-ms.assetid: 9c383a69-c2f6-4702-bd64-e77c9bd026b7
----
-
 
 # Update host web components in SharePoint 2013
 Update add-in parts and custom actions in the host web of a SharePoint Add-in.
