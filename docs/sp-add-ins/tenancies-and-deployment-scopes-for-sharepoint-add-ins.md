@@ -1,9 +1,3 @@
----
-title: Tenancies and deployment scopes for SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: 1ceb3142-a7a5-453e-920f-5f953a79401a
----
-
 
 # Tenancies and deployment scopes for SharePoint Add-ins
  Learn about the concept of tenancies and the differences between deploying SharePoint Add-ins at tenant scope and web scope.
