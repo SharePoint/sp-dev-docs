@@ -1,9 +1,3 @@
----
-title: Troubleshooting document libraries
-ms.prod: SHAREPOINT
-ms.assetid: d5380139-996e-4693-8a1a-5882165fa529
----
-
 
 # Troubleshooting document libraries
 In this topic, you can learn about problems that may occur when you access a SharePoint document library from a cloud business add-in and the techniques that you can use to resolve those problems.
@@ -34,7 +28,7 @@ When attempting to upload a document to an associated document library in a clou
 
  
 
-     ![Selections in the Manage NuGet Packages dialog box](images/NuGet.PNG)
+     ![Selections in the Manage NuGet Packages dialog box](../../images/NuGet.PNG)
  
 
  
