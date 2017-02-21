@@ -1,9 +1,3 @@
----
-title: Publish cloud business add-ins
-ms.prod: SHAREPOINT
-ms.assetid: 85bc228c-44bd-4f9a-a24f-92b988f02d52
----
-
 
 # Publish cloud business add-ins
 Cloud business add-ins can be published to SharePoint for Office 365 or to your own SharePoint 2013 site. After you publish your add-in, others can start it from SharePoint on their computers and mobile devices.
