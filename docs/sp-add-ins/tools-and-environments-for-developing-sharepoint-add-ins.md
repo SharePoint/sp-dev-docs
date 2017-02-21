@@ -1,9 +1,3 @@
----
-title: Tools and environments for developing SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: 6906eb86-8270-4098-8106-1e8d0d3c212e
----
-
 
 # Tools and environments for developing SharePoint Add-ins
 Learn your options for creating a development environment for SharePoint Add-ins.
