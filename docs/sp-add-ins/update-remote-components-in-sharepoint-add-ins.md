@@ -1,9 +1,3 @@
----
-title: Update remote components in SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: 53679118-61af-4f25-91f4-a69af38ee6d0
----
-
 
 # Update remote components in SharePoint Add-ins
 Update the remote web applications and databases in a SharePoint Add-in.
