@@ -1,9 +1,3 @@
----
-title: Replace an expiring client secret in a SharePoint Add-in
-ms.prod: SHAREPOINT
-ms.assetid: 369d14f0-75c1-4383-8a2d-05b4030c44ea
----
-
 
 # Replace an expiring client secret in a SharePoint Add-in
 Learn how to add a new client secret for a SharePoint Add-in that is registered with AppRegNew.aspx.
