@@ -1,12 +1,3 @@
----
-title: Publish SharePoint Add-ins by using Visual Studio
-keywords: vs.sharepointtools.project.sharepointprojectpropertytab
-f1_keywords:
-- vs.sharepointtools.project.sharepointprojectpropertytab
-ms.prod: SHAREPOINT
-ms.assetid: 8137d0fa-52e2-4771-8639-60af80f693bb
----
-
 
 # Publish SharePoint Add-ins by using Visual Studio
 Learn how to publish your SharePoint Add-in by using Microsoft Visual Studio 2013 or Visual Studio 2012. If the add-in has an associated web application, you deploy it first. Then, as for all SharePoint Add-ins, you package the SharePoint Add-in and then publish it. You can also optionally choose to submit your add-in for inclusion on the Office Store.
