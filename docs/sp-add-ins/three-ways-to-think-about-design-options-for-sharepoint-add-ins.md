@@ -1,9 +1,3 @@
----
-title: Three ways to think about design options for SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: 0942fdce-3227-496a-8873-399fc1dbb72c
----
-
 
 # Three ways to think about design options for SharePoint Add-ins
 Get an overview of the design and architecture options that are available with SharePoint Add-ins. You should first be familiar with the article  [SharePoint Add-ins](sharepoint-add-ins.md).
