@@ -1,13 +1,3 @@
----
-title: Handle events in SharePoint Add-ins
-keywords: vs.sharepointtools.spe.remoteeventreceiver
-f1_keywords:
-- vs.sharepointtools.spe.remoteeventreceiver
-ms.prod: SHAREPOINT
-ms.assetid: c050d056-8548-4496-a053-016779d723d9
----
-
-
 # Handle events in SharePoint Add-ins
 
  **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
@@ -255,7 +245,7 @@ Installation and updating errors can be seen in the SharePoint UI, as shown in t
  
 
  
-![Steps to see add-in installation errors in SharePoint.](images/1edb644e-b3d4-4a9b-b92e-4ae2c07341c2.png)
+![Steps to see add-in installation errors in SharePoint.](../../images/1edb644e-b3d4-4a9b-b92e-4ae2c07341c2.png)
  
 
 #### Add-in event handler architecture strategies
@@ -434,7 +424,7 @@ Figure 1 shows how remote event receivers work:
  
 
  
-![How remote event receivers work in SharePoint 2013](images/SP15Con_Remote_Event_Receivers_FAQ_fig1.png)
+![How remote event receivers work in SharePoint 2013](../../images/SP15Con_Remote_Event_Receivers_FAQ_fig1.png)
  
 
  
