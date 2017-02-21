@@ -1,9 +1,3 @@
----
-title: Troubleshooting high-trust SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: f464c89e-f318-4051-8589-07cc6b34241f
----
-
 
 # Troubleshooting high-trust SharePoint Add-ins
 Get some help with problems developing high-trust SharePoint Add-ins.
