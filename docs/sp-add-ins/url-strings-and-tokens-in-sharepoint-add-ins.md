@@ -1,9 +1,3 @@
----
-title: URL strings and tokens in SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: 800ec8cd-a448-46bc-b41e-d4030eeb4048
----
-
 
 # URL strings and tokens in SharePoint Add-ins
 Learn which URL tokens are available for use in SharePoint Add-ins.
