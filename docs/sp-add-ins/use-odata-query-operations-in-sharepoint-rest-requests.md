@@ -1,10 +1,3 @@
----
-title: Use OData query operations in SharePoint REST requests
-ms.prod: SHAREPOINT
-ms.assetid: d4b5c277-ed50-420c-8a9b-860342284b72
----
-
-
 
 # Use OData query operations in SharePoint REST requests
 Learn how to use a wide range of OData query string operators to select, filter, and order the data you request from the SharePoint REST service. 
@@ -145,7 +138,7 @@ The figure below shows the supported OData query options.
  
 
  
-![SharePoint REST service query option syntax](images/SPF15Con_REST_queryOptionSyntax.png)
+![SharePoint REST service query option syntax](../../images/SPF15Con_REST_queryOptionSyntax.png)
  
 
  
