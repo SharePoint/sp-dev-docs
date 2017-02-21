@@ -1,9 +1,3 @@
----
-title: Use the experimental People Picker widget in SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: edc60550-67d2-4230-8e27-06a328c0d1f1
----
-
 
 # Use the experimental People Picker widget in SharePoint Add-ins
 Learn how to use the People Picker widget on any web page, even if the page is not hosted in SharePoint. Use the People Picker widget in your add-ins to help users find and select people and groups.
@@ -26,7 +20,7 @@ You can use the experimental People Picker widget in add-ins to help your users 
  
 
  
-![People Picker experimental control on a page](images/PeoplePicker_basic.png)
+![People Picker experimental control on a page](../../images/PeoplePicker_basic.png)
  
 
  
@@ -422,7 +416,7 @@ As a developer, you might want to customize the look &amp; feel of the widget. T
  
 
  
-![HTML hierarchy in the People Picker control](images/PeoplePicker_HTMLHierarchy.png)
+![HTML hierarchy in the People Picker control](../../images/PeoplePicker_HTMLHierarchy.png)
  
 The widget defines many classes prefixed by  **office-peoplepicker**, which you can find and customize in the **Office.Controls.css** style sheet.
  
