@@ -1,9 +1,3 @@
----
-title: Use a SharePoint website's style sheet in SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: 25d84ac5-d2b3-40c7-962d-1408aacf14ed
----
-
 
 # Use a SharePoint website's style sheet in SharePoint Add-ins
 Learn how to use a SharePoint website's style sheet in a SharePoint Add-in.
@@ -77,7 +71,7 @@ Figure 1 shows a SharePoint webpage that is using the style sheet.
  
 
  
-![A web page using the stylesheet control](images/StylesheetControl_result.png)
+![A web page using the stylesheet control](../../images/StylesheetControl_result.png)
  
 
 ### To create the SharePoint Add-in and remote web projects
@@ -254,7 +248,7 @@ Figure 1 shows a SharePoint webpage that is using the style sheet.
 
  
 
-     ![Stylesheet control used in a web page](images/StylesheetControl_result2.png)
+     ![Stylesheet control used in a web page](../../images/StylesheetControl_result2.png)
  
 
  
