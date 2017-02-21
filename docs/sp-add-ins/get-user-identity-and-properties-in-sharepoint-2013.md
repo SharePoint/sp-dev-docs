@@ -1,10 +1,3 @@
----
-title: Get user identity and properties in SharePoint 2013
-ms.prod: SHAREPOINT
-ms.assetid: 9d7805e5-5ea8-4309-ba6a-d629281535af
----
-
-
 # Get user identity and properties in SharePoint 2013
 Retrieve user identity and user information in SharePoint 2013.
  
