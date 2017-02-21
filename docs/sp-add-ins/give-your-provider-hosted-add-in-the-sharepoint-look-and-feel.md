@@ -314,7 +314,7 @@ href="<%= spContext.SPHostUrl.ToString() + "_layouts/15/defaultcss.ashx" %>" />
  
 10. Navigate to the  **Site Contents** page and launch the Chain Store app from its tile. Your custom pages have taken on the chosen look. The following screenshots show how they appear in the **Nature** composed look.
     
-     ![The add-in's start page and order form with the greenish colors of the Nature composed look.](../..images/25ba5677-f530-432a-9980-64b5eb33119c.png)
+     ![The add-in's start page and order form with the greenish colors of the Nature composed look.](../../images/25ba5677-f530-432a-9980-64b5eb33119c.png)
  
 
 11. Change the site's look back to the default, which is called  **Office**.
