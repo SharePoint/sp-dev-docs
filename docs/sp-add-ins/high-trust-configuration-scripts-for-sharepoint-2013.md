@@ -1,9 +1,3 @@
----
-title: High-trust configuration scripts for SharePoint 2013
-ms.prod: SHAREPOINT
-ms.assetid: ebc9eb42-cca8-436f-a035-0c4c9e7d8305
----
-
 
 # High-trust configuration scripts for SharePoint 2013
 Get customizable Windows PowerShell scripts that configure a Microsoft SharePoint 2013 farm to use a high-trust SharePoint Add-in.
