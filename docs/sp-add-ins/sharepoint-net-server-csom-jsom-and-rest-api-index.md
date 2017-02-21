@@ -1,9 +1,3 @@
----
-title: SharePoint .NET Server, CSOM, JSOM, and REST API index
-ms.prod: SHAREPOINT
-ms.assetid: fddbb75f-9f6c-46d3-8d95-1d4a5e791dfa
----
-
 
 # SharePoint .NET Server, CSOM, JSOM, and REST API index
 
