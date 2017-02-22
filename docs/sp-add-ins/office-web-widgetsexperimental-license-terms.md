@@ -1,10 +1,3 @@
----
-title: Office Web Widgets - Experimental License Terms
-ms.prod: SHAREPOINT
-ms.assetid: 2f346d82-fd09-47d4-a2b3-e2b3cc59ee1d
----
-
-
 # Office Web Widgets - Experimental License Terms
 Learn about the license terms to use the Office Web Widgets - Experimental.
  
