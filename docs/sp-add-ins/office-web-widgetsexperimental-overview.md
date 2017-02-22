@@ -1,10 +1,3 @@
----
-title: Office Web Widgets - Experimental overview
-ms.prod: SHAREPOINT
-ms.assetid: 6ce01956-6bda-45bf-9b4a-cffc0687a913
----
-
-
 
 # Office Web Widgets - Experimental overview
 Learn about the Office Web Widgets - Experimental that you can use in Office Add-ins, SharePoint Add-ins, and websites.
@@ -43,7 +36,7 @@ Client controls, such as the Office Web Widgets - Experimental, can greatly redu
  
 
  
-![Office Web Widgets - Experimental demo](images/OfficeWebWidgetsOverview_demo.png)
+![Office Web Widgets - Experimental demo](../../images/OfficeWebWidgetsOverview_demo.png)
  
 You can use the widgets by installing the  **Office Web Widgets - Experimental** NuGet package from Visual Studio For more information, see [Managing NuGet Packages Using the Dialog](http://docs.nuget.org/docs/start-here/managing-nuget-packages-using-the-dialog). You can also browse the  [NuGet gallery page](http://www.nuget.org/packages/Microsoft.Office.WebWidgets.Experimental/).
  
@@ -64,7 +57,7 @@ You can use the experimental People Picker widget in add-ins to help your users 
  
 
  
-![People Picker experimental control on a page](images/PeoplePicker_basic.png)
+![People Picker experimental control on a page](../../images/PeoplePicker_basic.png)
  
 You can declare the widget in the HTML markup or programmatically using JavaScript. In either case, you use a  **div** element as a placeholder for the widget. You can also set properties and event handlers for the People Picker widget. The following table shows the available properties and events in the People Picker widget.
  
@@ -107,7 +100,7 @@ Your users can benefit from the List View widget and display the data in a list 
  
 
  
-![Desktop List View experimental control on a page](images/DesktopListView_basic.png)
+![Desktop List View experimental control on a page](../../images/DesktopListView_basic.png)
  
 You can specify an existing view on the list, the widget renders the fields in the order that they appear in the view.
  
