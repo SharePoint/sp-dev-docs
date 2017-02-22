@@ -1,9 +1,3 @@
----
-title: Programmatically deploy a custom button in the provider-hosted add-in
-ms.prod: SHAREPOINT
-ms.assetid: 4d75d113-8dc8-4026-a297-c47b6d4d7008
----
-
 
 # Programmatically deploy a custom button in the provider-hosted add-in
 Learn how to programmatically register a custom ribbon button with a custom list in the same provider-hosted SharePoint Add-in.
@@ -59,7 +53,7 @@ In the previous article you removed the custom  **AddEmployeeToCorpDB** ribbon b
 
 1. In  **Solution Explorer**, press the  **Show All Files** button on the small toolbar at the top of **Solution Explorer**.
     
-     ![The Solution Explorer toolbar with a box drawn around the "Show All Files" button.](images/f6b035f5-1aa7-452a-8f59-9dd44b062d06.PNG)
+     ![The Solution Explorer toolbar with a box drawn around the "Show All Files" button.](../../images/f6b035f5-1aa7-452a-8f59-9dd44b062d06.PNG)
  
 
  
