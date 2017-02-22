@@ -2,7 +2,7 @@
 
 First release of the SharePoint Framework will contain support for client-side web parts. This is however just a start on the journey for providing additional modern customization capabilities to SharePoint. This article lists the different areas which are in our backlog for the future releases of SharePoint Framework.
 
-> Notice. This is the list areas which SharePoint engineering is having in the backlog and are looking into. This does **NOT** mean that all of them will be necessarily delivered, but we are looking for getting these topics gradually released with the future releases of SharePoint Framework.  
+> Notice. This is a list areas which SharePoint engineering is having in the backlog and are looking into. This does **NOT** mean that all of them will be necessarily delivered, but we are looking for getting items and topics from this list gradually released with the future releases of SharePoint Framework.  
 
 ## On-premises support
 
