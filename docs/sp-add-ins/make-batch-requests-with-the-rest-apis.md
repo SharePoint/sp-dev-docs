@@ -1,9 +1,3 @@
----
-title: Make batch requests with the REST APIs
-ms.prod: OFFICE365
-ms.assetid: d6aab58f-77d2-4f0d-a007-6d55ba865d07
----
-
 
 # Make batch requests with the REST APIs
 Learn how to use the  `$batch` query option with the REST/OData APIs.
