@@ -1,9 +1,3 @@
----
-title: Host webs, add-in webs, and SharePoint components in SharePoint 2013
-ms.prod: SHAREPOINT
-ms.assetid: b791cdf5-8aa2-47fa-bc4c-aee437354759
----
-
 
 # Host webs, add-in webs, and SharePoint components in SharePoint 2013
 Learn about the distinction between host webs and add-in webs. Also find out which SharePoint 2013 components can be included in a SharePoint Add-in, which are deployed to the host web, which are deployed to the add-in web, and how the add-in web is deployed in an isolated domain.
@@ -30,7 +24,7 @@ Figure 1 shows a host web with two SharePoint Add-ins installed. Add-in 1 has re
  
 
  
-![Host web, app web, and their components.](images/HostWebAndAppWeb.png)
+![Host web, app web, and their components.](../../images/HostWebAndAppWeb.png)
  
 For example, suppose that an add-in, with SharePoint components beyond just the UI elements that can be deployed to a host web, is installed on a host website at the following URL:
  
