@@ -84,12 +84,12 @@ Before you can publish the add-in, it has to be registered with the SharePoint f
 ## Choose a strategy for obtaining, maintaining and deploying certificates for high-trust SharePoint Add-ins
 <a name="Certificate"> </a>
 
-When a developer is using  **F5** in Visual Studio to develop and debug a high-trust SharePoint Add-in, the developer can use a self-signed certificate, as described in [Create high-trust SharePoint Add-ins](create-high-trust-sharepoint-add-ins.md). However, when the add-in is  *published*  , using a self-signed certificate causes the browser to display a warning page before it will open the remote web application's start page. The user has to choose whether to proceed. Figure 3 shows examples of such warnings.
+When a developer is using  **F5** in Visual Studio to develop and debug a high-trust SharePoint Add-in, the developer can use a self-signed certificate, as described in [Create high-trust SharePoint Add-ins](create-high-trust-sharepoint-add-ins.md). However, when the add-in is  *published*  , using a self-signed certificate causes the browser to display a warning page before it will open the remote web application's start page. The user has to choose whether to proceed. Figure 2 shows examples of such warnings.
  
 
  
 
-**Figure 3. Warnings for self-signed certificates**
+**Figure 2. Warnings for self-signed certificates**
 
  
 
@@ -177,9 +177,9 @@ Skip the next procedure if you are using ISS Manager 8.
 3. Double-click the  **Server Certificates** icon.
     
  
-4. In the  **Server Certificates** list, right-click the certificate, and then select **Export**, as shown in Figure 4.
+4. In the  **Server Certificates** list, right-click the certificate, and then select **Export**, as shown in Figure 3.
     
-    **Figure 4. Exporting a certificate**
+    **Figure 3. Exporting a certificate**
 
  
 
