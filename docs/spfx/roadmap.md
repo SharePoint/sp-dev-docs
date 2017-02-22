@@ -74,5 +74,5 @@ First release of the SharePoint Framework will contain support for client-side w
 ## Additional resources
 Please use following resources to stay up to date on the new releases and capabilities being released for SharePoint Framework.
 
-* [dev.office.com blog posts](sharepoint-framework-overview)
-* [OfficeDev Twitter account](web-parts/get-started/build-a-hello-world-web-part)
+* [dev.office.com blog](https://dev.office.com/blogs)
+* [OfficeDev Twitter account](https://twitter.com/officedev)
