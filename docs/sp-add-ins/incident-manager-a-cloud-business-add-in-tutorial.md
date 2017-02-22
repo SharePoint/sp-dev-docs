@@ -184,13 +184,9 @@ You will build the mobile add-in that will be used to enter basic information ab
 |7|Service Call|
 |||
 
-    At run time, a list of the display names will be presented to the user. When they make a choice, the corresponding  **Integer** value will be stored in the database.
+At run time, a list of the display names will be presented to the user. When they make a choice, the corresponding  **Integer** value will be stored in the database.
     
-    
- 
-
-    
-    In the next step, you'll add a Patient entity. Many of the fire department's incidents involve medical aid, and a single incident often involves multiple patients.
+In the next step, you'll add a Patient entity. Many of the fire department's incidents involve medical aid, and a single incident often involves multiple patients.
     
  
 
