@@ -1,7 +1,8 @@
 # Use sp-pnp-js with SharePoint Framework Web Parts
 
 You may opt to use the [sp-pnp-js](https://www.npmjs.com/package/sp-pnp-js) library when building your SharePoint Framework web parts. This library 
-provides a fluent API to make building your REST queries intuitive and supports batching and caching. You can see more on the [project's homepage](https://github.com/SharePoint/PnP-JS-Core).
+provides a fluent API to make building your REST queries intuitive and supports batching and caching. You can learn more on the [project's homepage](https://github.com/SharePoint/PnP-JS-Core) 
+which has links to documentation, samples, and other resources to help you get started.
 
 While sp-pnp-js was designed to work easily with SPFx there are a few things to keep in mind.
 
