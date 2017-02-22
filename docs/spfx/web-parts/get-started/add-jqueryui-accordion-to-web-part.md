@@ -53,10 +53,9 @@ When prompted:
 
 The next set of prompts will ask for specific information about your web part:
 
-* Type **jQuery** for the web part name and choose **Enter**.
-* Enter **jQuery Web Part** as the description of the web part and choose **Enter**.
 * Accept the default No **javascript web framework** option for the framework and choose **Enter** to continue.
-* At the next prompt, choose **Enter** to continue. Do not select any libraries to add. 
+* Type **jQuery** for the web part name and choose **Enter**.
+* Enter **jQuery Web Part** as the description of the web part and choose **Enter**. 
 
 At this point, Yeoman will install the required dependencies and scaffold the solution files. This might take a few minutes. Yeoman will scaffold the project to include your **jQueryWebPart** web part as well.
 
