@@ -1,9 +1,3 @@
----
-title: Include a Web Part in a webpage on the add-in web
-ms.prod: OFFICE365
-ms.assetid: dd525e64-2472-4bc7-91be-86950f638ce4
----
-
 
 # Include a Web Part in a webpage on the add-in web
 Learn how to include a Web Part on a page in a SharePoint Add-in.
