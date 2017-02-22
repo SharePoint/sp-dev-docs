@@ -1,9 +1,3 @@
----
-title: Important aspects of the SharePoint Add-in architecture and development landscape
-ms.prod: SHAREPOINT
-ms.assetid: ae96572b-8f06-4fd3-854f-fc312f7f2d88
----
-
 
 # Important aspects of the SharePoint Add-in architecture and development landscape
 Learn about aspects of the architecture of SharePoint Add-ins and the model for SharePoint Add-ins, including the add-in hosting options, user interface options, deployment system, security system, and lifecycle. This article supplements the information in the article  [SharePoint Add-ins](sharepoint-add-ins.md).
