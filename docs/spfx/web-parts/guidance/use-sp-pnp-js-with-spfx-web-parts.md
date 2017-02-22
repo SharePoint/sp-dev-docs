@@ -1,11 +1,13 @@
-# Use sp-pnp-js with SharePoint Framework webparts
+# Use sp-pnp-js with SharePoint Framework Web Parts
 
-You may opt to use the [sp-pnp-js](https://www.npmjs.com/package/sp-pnp-js) library when building your SharePoint Framework web parts to simplify REST operations. 
+You may opt to use the [sp-pnp-js](https://www.npmjs.com/package/sp-pnp-js) library when building your SharePoint Framework web parts. This library 
+provides a fluent API to make building your REST queries intuitive and supports batching and caching. You can see more on the [project's homepage](https://github.com/SharePoint/PnP-JS-Core).
+
 While sp-pnp-js was designed to work easily with SPFx there are a few things to keep in mind.
 
 ## Install the library
 
-After running the yeoman generator for your SPFx web part you need to install sp-pnp-js:
+After running the yeoman generator for your SPFx web part you need to install sp-pnp-js. This is done from within your project's directory.
 
 ```
 npm install sp-pnp-js --save
@@ -13,14 +15,15 @@ npm install sp-pnp-js --save
 
 ## Setup
 
-Because the sp-pnp-js library constructs REST requests it needs to know the URL to which these requests should be sent. When operating within classic sites and pages 
-we can make use of the global _spPageContextInfo variable. Within SPFx this is not available, or if it is may not be correct. So we need to rely on the [context](https://dev.office.com/sharepoint/reference/spfx/sp-webpart-base/iwebpartcontext) object 
-supplied by the framework. There are two ways to ensure you have the correct urls for your requests.
+Because the sp-pnp-js library constructs REST requests it needs to know the URL to send these requests. When operating within classic sites and pages 
+we can make use of the global _spPageContextInfo variable. Within SPFx this is not available, or if it is may not be correct. So we need to rely on the 
+[context](https://dev.office.com/sharepoint/reference/spfx/sp-webpart-base/iwebpartcontext) object 
+supplied by the framework. There are two ways to ensure you have correctly setup your requests.
 
 ### Using the onInit web part method
 
-You can add an onInit handler or extend a custom existing handler in your web part to supply the context using the setup's spfxContext property. This is the recommended way as it 
-will handle cases in the future where we need to pull additional settings or configuration from the context.
+You can add an onInit handler or extend a custom existing handler in your web part to supply the context using the setup's spfxContext property. This is the recommended method as it 
+will handle cases in the future where we need to pull additional information from the context.
 
 ```TypeScript
 import pnp from "sp-pnp-js";
@@ -75,8 +78,8 @@ the configuration. This is done by updating the SPFx config/config.js to include
 "sp-pnp-js": "https://cdnjs.cloudflare.com/ajax/libs/sp-pnp-js/2.0.1/pnp.min.js"
 ```
 
-Here we are using the public CDN but the URL can be internal or any location where you would like to use. Be sure to update the 
-version number in the url to match the version you would like to use.
+Here we are using the public CDN but the URL can be internal or any location you would like to use. Be sure to update the 
+version number in the url to match the version you want.
 
 ## Provide Feedback / Report Issues
 
