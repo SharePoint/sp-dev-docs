@@ -39,9 +39,9 @@ When prompted:
 
 * Accept the default **documentcardexample-webpart** as your solution name and choose **Enter**.
 * Select **Use the current folder** as the location for the files.
+* Select **React** as the framework and choose **Enter**.
 * Use **DocumentCardExample** for your web part name and choose **Enter**.
 * Accept the default **DocumentCardExample description** and choose **Enter**.
-* Select **React** as the framework and choose **Enter**.
 
 At this point, Yeoman will install the required dependencies and scaffold the solution files. This might take a few minutes. Yeoman will scaffold the project to include your DocumentCardExample web part as well.
 	

@@ -44,9 +44,9 @@ When prompted:
 
 The next set of prompts will ask for specific information about your web part:
 
+* Accept the default **No javascript web framework** as the framework you would like to use and choose **Enter**.
 * Accept the default **HelloWorld** as your web part name and choose **Enter**.
 * Accept the default **HelloWorld description** as your web part description and choose **Enter**.
-* Accept the default **No javascript web framework** as the framework you would like to use and choose **Enter**.
 
 ![Yeoman SharePoint generator prompts to create a web part client-side solution](../../../../images/yeoman-sp-prompts.png)
 
@@ -163,27 +163,27 @@ This property definition is used to define custom property types for your web pa
 The DOM element where the web part should be rendered is available in the **render** method. This method is used to render the web part inside that DOM element. In the **HelloWorld** web part, the DOM element is set to a DIV. The method parameters include the display mode (either Read or Edit) and the configured web part properties if any: 
 
 ```ts
-public render(): void {
-  this.domElement.innerHTML = `
-    <div class="${styles.row}">
-      <div class="${styles.column}">
-        <span class="${styles.title}">
-          Welcome to SharePoint!
-        </span>
-        <p class="${styles.subtitle}">
-          Customize SharePoint experiences using Web Parts.
-        </p>
-        <p class="${styles.description}">
-          ${escape(this.properties.description)}
-        </p>
-        <a class="ms-Button ${styles.button}" href="https://github.com/SharePoint/sp-dev-docs/wiki">
-          <span class="ms-Button-label">
-            Learn more
+  public render(): void {
+    this.domElement.innerHTML = `
+      <div class="${styles.row}">
+        <div class="${styles.column}">
+          <span class="${styles.title}">
+            Welcome to SharePoint!
           </span>
-        </a>
-      </div>
-    </div>`;
-}
+          <p class="${styles.subtitle}">
+            Customize SharePoint experiences using Web Parts.
+          </p>
+          <p class="${styles.description}">
+            ${escape(this.properties.description)}
+          </p>
+          <a class="ms-Button ${styles.button}" href="https://aka.ms/spfx">
+            <span class="ms-Button-label">
+              Learn more
+            </span>
+          </a>
+        </div>
+      </div>`;
+  }
 ```
 
 This model is flexible enough so that web parts can be built in any JavaScript framework and loaded into the DOM element. 
