@@ -1,10 +1,3 @@
----
-title: SharePoint Add-ins UX design guidelines
-ms.prod: SHAREPOINT
-ms.assetid: a4a8f53c-27d7-43dc-b6db-aa7b1f1c7d45
----
-
-
 # SharePoint Add-ins UX design guidelines
 Learn about general user experience (UX) design guidelines for add-ins in SharePoint 2013, including choosing the chrome, using CSS, managing user licenses, and other design tasks.
  
@@ -46,7 +39,7 @@ The add-in template can be used only for SharePoint-hosted ASPX pages. The templ
  
 
  
-![A SharePoint-hosted page using the app template](images/AppUXGuidelines_AppTemplate.png)
+![A SharePoint-hosted page using the app template](../../images/AppUXGuidelines_AppTemplate.png)
  
 The add-in template is the default in Visual Studio when you create an add-in web and pages within that web.
  
@@ -66,7 +59,7 @@ If you're not building SharePoint-hosted ASPX pages, but you still want your add
  
 
  
-![Chrome control in a webpage](images/AppUXGuidelines_ChromeControl.png)
+![Chrome control in a webpage](../../images/AppUXGuidelines_ChromeControl.png)
  
 
  
@@ -78,7 +71,7 @@ If you're not building SharePoint-hosted ASPX pages, but you still want your add
  
 
  
-![Videos](images/mod_icon_video.png)
+![Videos](../../images/mod_icon_video.png)
  
 
  
@@ -192,97 +185,97 @@ The first thing to do when you are styling your add-in is to use semantic HTML a
 
 |**Example**|**Used for**|**Style**|
 |:-----|:-----|:-----|
-|![ms-textXLarge](images/AppUXGuidelines_ms-textxlarge.png)|Extra large body text|.ms-textXLarge|
-|![ms-textlarge](images/AppUXGuidelines_ms-textlarge.png)|Large body text|.ms-textLarge|
-|![body](images/AppUXGuidelines_body.png)|Normal body text|Inherited automatically|
-|![ms-textsmall](images/AppUXGuidelines_ms-textsmall.png)|Small body text|.ms-textSmall|
-|![ms-metadata](images/AppUXGuidelines_ms-metadata.png)|Metadata text|.ms-metadata|
+|![ms-textXLarge](../../images/AppUXGuidelines_ms-textxlarge.png)|Extra large body text|.ms-textXLarge|
+|![ms-textlarge](../../images/AppUXGuidelines_ms-textlarge.png)|Large body text|.ms-textLarge|
+|![body](../../images/AppUXGuidelines_body.png)|Normal body text|Inherited automatically|
+|![ms-textsmall](../../images/AppUXGuidelines_ms-textsmall.png)|Small body text|.ms-textSmall|
+|![ms-metadata](../../images/AppUXGuidelines_ms-metadata.png)|Metadata text|.ms-metadata|
 
 **Table 2. Title and header styles**
 
 
 |**Example**|**Used for**|**Style**|
 |:-----|:-----|:-----|
-|![ms-core-pagetitle](images/AppUXGuidelines_ms-core-pagetitle.png)|Main title on the page|.ms-core-pageTitle|
-|![h1](images/AppUXGuidelines_h1.png)|Title for dialog boxes, forms, blogs, and discussion posts. It's an alternative "primary" title for special content types or add-ins that take up the entire pagethat you want to be different from a regular wiki or Web Parts page.|H1|
-|![h2](images/AppUXGuidelines_h2.png)|Secondary heading in relation to H1. For example, Communities uses H1 Accent for the title of a post, and H2 Accent for the best "response" to the post.|H2|
-|![h3](images/AppUXGuidelines_h3.png)|Generally a subheading under H2.|H3|
-|![h4](images/AppUXGuidelines_h4.png)|Subheadings under H3.|H4|
-|![ms-webpart-titletext](images/AppUXGuidelines_ms-webpart-titletext.png)|Title of the main/primary Web Part on a page, or for main section headers.|.ms-webpart-titleText|
-|![ms-dlg-heading](images/AppUXGuidelines_ms-dlg-heading.png)|Title for headings within dialog boxes or callouts.|.ms-dlg-heading|
+|![ms-core-pagetitle](../../images/AppUXGuidelines_ms-core-pagetitle.png)|Main title on the page|.ms-core-pageTitle|
+|![h1](../../images/AppUXGuidelines_h1.png)|Title for dialog boxes, forms, blogs, and discussion posts. It's an alternative "primary" title for special content types or add-ins that take up the entire pagethat you want to be different from a regular wiki or Web Parts page.|H1|
+|![h2](../../images/AppUXGuidelines_h2.png)|Secondary heading in relation to H1. For example, Communities uses H1 Accent for the title of a post, and H2 Accent for the best "response" to the post.|H2|
+|![h3](../../images/AppUXGuidelines_h3.png)|Generally a subheading under H2.|H3|
+|![h4](../../images/AppUXGuidelines_h4.png)|Subheadings under H3.|H4|
+|![ms-webpart-titletext](../../images/AppUXGuidelines_ms-webpart-titletext.png)|Title of the main/primary Web Part on a page, or for main section headers.|.ms-webpart-titleText|
+|![ms-dlg-heading](../../images/AppUXGuidelines_ms-dlg-heading.png)|Title for headings within dialog boxes or callouts.|.ms-dlg-heading|
 
 **Table 3. Navigation styles**
 
 
 |**Example**|**Used for**|**Style**|
 |:-----|:-----|:-----|
-|![QuickLaunchHeading](images/AppUXGuidelines_QuickLaunchHeading.png)|Heading of the left navigation bar.|.ms-core-listMenu-verticalBox > .ms-core-listMenu-root > li > .ms-core-listMenu-item|
-|![QuickLaunchLink](images/AppUXGuidelines_QuickLaunchLink.png)|Link in the left navigation bar.|.ms-core-listMenu-verticalBox|
-|![QuickLaunchSelected](images/AppUXGuidelines_QuickLaunchSelected.png)|Selected item in the left navigation bar.|.ms-core-listMenu-verticalBox + .ms-accentText|
-|![TopNav](images/AppUXGuidelines_TopNav.png)|Item in the top navigation bar.||
-|![TopNavSelected](images/AppUXGuidelines_TopNavSelected.png)|Selected item in the top navigation bar.||
+|![QuickLaunchHeading](../../images/AppUXGuidelines_QuickLaunchHeading.png)|Heading of the left navigation bar.|.ms-core-listMenu-verticalBox > .ms-core-listMenu-root > li > .ms-core-listMenu-item|
+|![QuickLaunchLink](../../images/AppUXGuidelines_QuickLaunchLink.png)|Link in the left navigation bar.|.ms-core-listMenu-verticalBox|
+|![QuickLaunchSelected](../../images/AppUXGuidelines_QuickLaunchSelected.png)|Selected item in the left navigation bar.|.ms-core-listMenu-verticalBox + .ms-accentText|
+|![TopNav](../../images/AppUXGuidelines_TopNav.png)|Item in the top navigation bar.||
+|![TopNavSelected](../../images/AppUXGuidelines_TopNavSelected.png)|Selected item in the top navigation bar.||
 
 **Table 4. Command styles**
 
 
 |**Example**|**Used for**|**Style**|
 |:-----|:-----|:-----|
-|![ms-commandlink](images/AppUXGuidelines_ms-commandlink.png)|Primary action links you expect the user to take within a given container or page. For example, this would be used to style the commands underneath a callout. This will always be the same color for visited and non-visited commands.|.ms-commandLink|
-|![ms-secondarycommandlink](images/AppUXGuidelines_ms-secondarycommandlink.png)|Also used to style action links, but for actions that are secondary to the content. This style is used for these secondary actions, so they don't compete with content for attention.|.ms-secondaryCommandLink|
-|![ms-calloutlink](images/AppUXGuidelines_ms-calloutlink.png)|Links in the callout.|.ms-calloutLink|
+|![ms-commandlink](../../images/AppUXGuidelines_ms-commandlink.png)|Primary action links you expect the user to take within a given container or page. For example, this would be used to style the commands underneath a callout. This will always be the same color for visited and non-visited commands.|.ms-commandLink|
+|![ms-secondarycommandlink](../../images/AppUXGuidelines_ms-secondarycommandlink.png)|Also used to style action links, but for actions that are secondary to the content. This style is used for these secondary actions, so they don't compete with content for attention.|.ms-secondaryCommandLink|
+|![ms-calloutlink](../../images/AppUXGuidelines_ms-calloutlink.png)|Links in the callout.|.ms-calloutLink|
 
 **Table 5. Modifier styles**
 
 
 |**Example**|**Used for**|**Style**|
 |:-----|:-----|:-----|
-|![ms-accenttext](images/AppUXGuidelines_ms-accenttext.png)|Helper class that will provide the accent color from the current theme for text.|.ms-accentText|
-|![hyperlink](images/AppUXGuidelines_hyperlink.png)|Links in the content should inherit from default hyperlink styling and behavior. Hyperlink styling applies a color and a hover effect to indicate that it's a link instead of normal text.|Inherited from using <a>.|
-|![ms-error](images/AppUXGuidelines_ms-error.png)|Error messages that occur in forms.|.ms-error|
-|![ms-soften](images/AppUXGuidelines_ms-soften.png)|Helper class that provides a softened gray for text that should be less emphasized than normal body text.|.ms-soften|
-|![ms-disabled](images/AppUXGuidelines_ms-disabled.png)|Helper class that applies the "disabled" color to text, which is used for denoting disabled states.|.ms-disabled|
-|![ms-uppercase](images/AppUXGuidelines_ms-uppercase.png)|Helper class that transforms the text to all caps.|.ms-uppercase|
-|![ms-helper](images/AppUXGuidelines_ms-helper.png)|Helper class to style text like forms.|.ms-helper|
-|![hr](images/AppUXGuidelines_hr.png)|Dashed line divider that is used to divide sections in the Quick Launch and in menus.|HR|
+|![ms-accenttext](../../images/AppUXGuidelines_ms-accenttext.png)|Helper class that will provide the accent color from the current theme for text.|.ms-accentText|
+|![hyperlink](../../images/AppUXGuidelines_hyperlink.png)|Links in the content should inherit from default hyperlink styling and behavior. Hyperlink styling applies a color and a hover effect to indicate that it's a link instead of normal text.|Inherited from using <a>.|
+|![ms-error](../../images/AppUXGuidelines_ms-error.png)|Error messages that occur in forms.|.ms-error|
+|![ms-soften](../../images/AppUXGuidelines_ms-soften.png)|Helper class that provides a softened gray for text that should be less emphasized than normal body text.|.ms-soften|
+|![ms-disabled](../../images/AppUXGuidelines_ms-disabled.png)|Helper class that applies the "disabled" color to text, which is used for denoting disabled states.|.ms-disabled|
+|![ms-uppercase](../../images/AppUXGuidelines_ms-uppercase.png)|Helper class that transforms the text to all caps.|.ms-uppercase|
+|![ms-helper](../../images/AppUXGuidelines_ms-helper.png)|Helper class to style text like forms.|.ms-helper|
+|![hr](../../images/AppUXGuidelines_hr.png)|Dashed line divider that is used to divide sections in the Quick Launch and in menus.|HR|
 
 **Table 6. Part user interface styles**
 
 
 |**Example**|**Used for**|**Style**|
 |:-----|:-----|:-----|
-|![drag files](images/AppUXGuidelines_dragfiles.png)|Main inline text at the top of a part.|.ms-textXLarge + .ms-soften|
-|![ms-herocommandlink](images/AppUXGuidelines_ms-herocommandlink.png)|Commands in the top line of a part; at most there should be only one or two of these per part.|.ms-heroCommandLink|
-|![ms-attractmode](images/AppUXGuidelines_ms-attractmode.png)|Text shown to entice the user to interact with the part when it doesn't contain data.|.ms-attractMode|
-|![ms-emptymode](images/AppUXGuidelines_ms-emptymode.png)|Text shown to the user when there is no data available.|.ms-emptyMode|
-|![mspivotlink](images/AppUXGuidelines_mspivotlink.png)|View controls, such as a pivot.|.ms-pivot-link|
-|![ms-listlink](images/AppUXGuidelines_ms-listlink.png)|List items that are also links.|.ms-listLink|
+|![drag files](../../images/AppUXGuidelines_dragfiles.png)|Main inline text at the top of a part.|.ms-textXLarge + .ms-soften|
+|![ms-herocommandlink](../../images/AppUXGuidelines_ms-herocommandlink.png)|Commands in the top line of a part; at most there should be only one or two of these per part.|.ms-heroCommandLink|
+|![ms-attractmode](../../images/AppUXGuidelines_ms-attractmode.png)|Text shown to entice the user to interact with the part when it doesn't contain data.|.ms-attractMode|
+|![ms-emptymode](../../images/AppUXGuidelines_ms-emptymode.png)|Text shown to the user when there is no data available.|.ms-emptyMode|
+|![mspivotlink](../../images/AppUXGuidelines_mspivotlink.png)|View controls, such as a pivot.|.ms-pivot-link|
+|![ms-listlink](../../images/AppUXGuidelines_ms-listlink.png)|List items that are also links.|.ms-listLink|
 
 **Table 7. Background and border styles**
 
 
 |**Example**|**Used for**|**Style**|
 |:-----|:-----|:-----|
-|![ms-emphasis](images/AppUXGuidelines_ms-emphasis.png)|To style a rectangle that should be heavily emphasized on the page.|.ms-emphasis|
-|![ms-emphasisborder](images/AppUXGuidelines_ms-emphasisborder.png)|Border of an emphasized element.|.ms-emphasisBorder|
-|![ms-subtleemphasis](images/AppUXGuidelines_ms-subtleemphasis.png)|A more subtle emphasis of an element.|.ms-subtleEmphasis|
-|![ms-subtleemphasiscommand](images/AppUXGuidelines_ms-subtleemphasiscommand.png)|Commands in an element styled with ms-subtleEmphasis.|.ms-subtleEmphasisCommand|
-|![ms-subtleemphasiscommand-disabled](images/AppUXGuidelines_ms-subtleemphasiscommand-disabled.png)|Disabled command in an element styled with ms-subtleEmphasis.|.ms-subtleEmphasisCommand-disabled|
-|![ms-sidenav](images/AppUXGuidelines_ms-sidenav.png)|Side navigation elements.|.ms-sideNav|
-|![ms-sidenav-selected](images/AppUXGuidelines_ms-sidenav-selected.png)|To style the selected side navigation element.|.ms-sideNav-selected|
-|![ms-lines](images/AppUXGuidelines_ms-lines.png)|To emphasize an element using a border.|.ms-lines|
-|![ms-subtlelines](images/AppUXGuidelines_ms-subtlelines.png)|To emphasize an element using a subtle border.|.ms-subtleLines|
-|![ms-stronglines](images/AppUXGuidelines_ms-stronglines.png)|To emphasize an element using a strong or colored border.|.ms-strongLines|
-|![ms-disabledlines](images/AppUXGuidelines_ms-disabledlines.png)|To emphasize a disabled element using a border.|.ms-disabledLines|
-|![ms-accentlines](images/AppUXGuidelines_ms-accentlines.png)|To emphasize an element using an accent border.|.ms-accentLines|
-|![ms-popupborder](images/AppUXGuidelines_ms-popupborder.png)|To contain pop-up windows.|.ms-popupBorder|
-|![ms-bgoverlay](images/AppUXGuidelines_ms-bgoverlay.png)|To apply an overlay on the background element.|.ms-bgOverlay|
-|![bgdisabled](images/AppUXGuidelines_bgdisabled.png)|To make the background of an element appear disabled.|.ms-bgDisabled|
-|![ms-bgheader](images/AppUXGuidelines_ms-bgheader.png)|To apply the header background color.|.ms-bgHeader|
-|![ms-bgfooter](images/AppUXGuidelines_ms-bgfooter.png)|To apply the footer background color.|.ms-bgFooter|
-|![md-bghoverable normal](images/AppUXGuidelines_md-bghoverable-normal.png)|Elements that should have a highlighted color on hover. The example shows the element when the mouse is not hovering over it.|.ms-bgHoverable|
-|![ms-bghoverable-onhover](images/AppUXGuidelines_ms-bghoverable-onhover.png)|Elements that should have a highlighted color on hover. The example shows the element when the mouse is hovering over it.|.ms-bgHoverable|
-|![ms-bgselected](images/AppUXGuidelines_ms-bgselected.png)|To show selection on an element.|.ms-bgSelected|
-|![ms-topbar](images/AppUXGuidelines_ms-topbar.png)|Elements in the top bar of the page.|.ms-topBar|
+|![ms-emphasis](../../images/AppUXGuidelines_ms-emphasis.png)|To style a rectangle that should be heavily emphasized on the page.|.ms-emphasis|
+|![ms-emphasisborder](../../images/AppUXGuidelines_ms-emphasisborder.png)|Border of an emphasized element.|.ms-emphasisBorder|
+|![ms-subtleemphasis](../../images/AppUXGuidelines_ms-subtleemphasis.png)|A more subtle emphasis of an element.|.ms-subtleEmphasis|
+|![ms-subtleemphasiscommand](../../images/AppUXGuidelines_ms-subtleemphasiscommand.png)|Commands in an element styled with ms-subtleEmphasis.|.ms-subtleEmphasisCommand|
+|![ms-subtleemphasiscommand-disabled](../../images/AppUXGuidelines_ms-subtleemphasiscommand-disabled.png)|Disabled command in an element styled with ms-subtleEmphasis.|.ms-subtleEmphasisCommand-disabled|
+|![ms-sidenav](../../images/AppUXGuidelines_ms-sidenav.png)|Side navigation elements.|.ms-sideNav|
+|![ms-sidenav-selected](../../images/AppUXGuidelines_ms-sidenav-selected.png)|To style the selected side navigation element.|.ms-sideNav-selected|
+|![ms-lines](../../images/AppUXGuidelines_ms-lines.png)|To emphasize an element using a border.|.ms-lines|
+|![ms-subtlelines](../../images/AppUXGuidelines_ms-subtlelines.png)|To emphasize an element using a subtle border.|.ms-subtleLines|
+|![ms-stronglines](../../images/AppUXGuidelines_ms-stronglines.png)|To emphasize an element using a strong or colored border.|.ms-strongLines|
+|![ms-disabledlines](../../images/AppUXGuidelines_ms-disabledlines.png)|To emphasize a disabled element using a border.|.ms-disabledLines|
+|![ms-accentlines](../../images/AppUXGuidelines_ms-accentlines.png)|To emphasize an element using an accent border.|.ms-accentLines|
+|![ms-popupborder](../../images/AppUXGuidelines_ms-popupborder.png)|To contain pop-up windows.|.ms-popupBorder|
+|![ms-bgoverlay](../../images/AppUXGuidelines_ms-bgoverlay.png)|To apply an overlay on the background element.|.ms-bgOverlay|
+|![bgdisabled](../../images/AppUXGuidelines_bgdisabled.png)|To make the background of an element appear disabled.|.ms-bgDisabled|
+|![ms-bgheader](../../images/AppUXGuidelines_ms-bgheader.png)|To apply the header background color.|.ms-bgHeader|
+|![ms-bgfooter](../../images/AppUXGuidelines_ms-bgfooter.png)|To apply the footer background color.|.ms-bgFooter|
+|![md-bghoverable normal](../../images/AppUXGuidelines_md-bghoverable-normal.png)|Elements that should have a highlighted color on hover. The example shows the element when the mouse is not hovering over it.|.ms-bgHoverable|
+|![ms-bghoverable-onhover](../../images/AppUXGuidelines_ms-bghoverable-onhover.png)|Elements that should have a highlighted color on hover. The example shows the element when the mouse is hovering over it.|.ms-bgHoverable|
+|![ms-bgselected](../../images/AppUXGuidelines_ms-bgselected.png)|To show selection on an element.|.ms-bgSelected|
+|![ms-topbar](../../images/AppUXGuidelines_ms-topbar.png)|Elements in the top bar of the page.|.ms-topBar|
 For more information, see  [Use a SharePoint website's style sheet in SharePoint Add-ins](use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins.md).
  
 
@@ -453,7 +446,7 @@ Parts are a way for your add-in to surface some information or a small interacti
  
 
  
-![Tag cloud part](images/AppUXGuidelines_part.png)
+![Tag cloud part](../../images/AppUXGuidelines_part.png)
  
 In Figure 3, the  **Tag Cloud from UX Design add-in** is the title of the part. The tag cloud itself is served from the add-in content, and it is hosted in an **iframe** element and fully isolated from the hosting page. Because the add-in content is using the host web's CSS file, it fits in seamlessly with the host page.
  
@@ -625,7 +618,7 @@ If you have functionality that would make sense to surface in the context of lis
  
 
  
-![A custom action in the contextual menu](images/AppUXGuidelines_ECBcustomaction.png)
+![A custom action in the contextual menu](../../images/AppUXGuidelines_ECBcustomaction.png)
  
 The code for custom actions that are surfaced in the host web is the same as in previous versions of SharePoint, with the following restrictions:
  
