@@ -1,9 +1,3 @@
----
-title: Package and publish high-trust SharePoint Add-ins
-ms.prod: SHAREPOINT
-ms.assetid: 3c28aed8-c037-407c-9154-39a74073e170
----
-
 
 # Package and publish high-trust SharePoint Add-ins
 Learn how to package and publish a high-trust SharePoint Add-in for on-premises use.
@@ -77,7 +71,7 @@ Before you can publish the add-in, it has to be registered with the SharePoint f
 
  
 
-     ![Register app on appregnew.aspx](images/SP15_RegisterApp.png)
+     ![Register app on appregnew.aspx](../../images/SP15_RegisterApp.png)
  
 
  
@@ -100,7 +94,7 @@ When a developer is using  **F5** in Visual Studio to develop and debug a high-t
  
 
  
-![IE and Chrome warnings for self-signed certificate](images/BrowserWarnings4SelfSignedCerts.png)
+![IE and Chrome warnings for self-signed certificate](../../images/BrowserWarnings4SelfSignedCerts.png)
  
 This annoyance might be acceptable for a developer, but it would be unacceptable for customers. So before final publication to a production environment, the customer has to get a certificate that is signed by a trusted third party. The third party can be a commercial Certificate Authority (CA) or an on-premises CA. In regard to commercial CAs, note that the industry is phasing out "intranet-only" certificates for web servers. They can still be purchased, but all such certificates will expire in November, 2016, or sooner. It is not necessary to have this kind of certificate for a high-trust SharePoint Add-in, because certificates that can be used for internet-facing web servers can also be used for intranet web servers, but the latter generally cost more. 
  
@@ -189,7 +183,7 @@ Skip the next procedure if you are using ISS Manager 8.
 
  
 
-     ![Exporting a test certificate](images/997021de-c60c-46b0-961f-7e1e63c0f619.gif)
+     ![Exporting a test certificate](../../images/997021de-c60c-46b0-961f-7e1e63c0f619.gif)
  
 
  
