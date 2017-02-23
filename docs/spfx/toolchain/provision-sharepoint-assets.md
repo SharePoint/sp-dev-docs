@@ -263,3 +263,25 @@ And the corresponding `element-v2.xml` which defines a new Currency Field to be 
             Group="Financial Columns" />
 </Elements>
 ```
+
+Upgrade actions in client-side solutions support the following sub elements:
+
+
+**AddContentTypeField**
+
+Adds a new field to an existing provisioned content type. Propagates the change from the site content type to all child lists and content types within the site. For example:
+
+```xml
+<AddContentTypeField 
+     ContentTypeId="0x010100A6F9CE1AFE2A48f0A3E6CB5BB770B0F7" 
+     FieldId="{B250DCFD-9310-4e2d-85F2-BE2DA37A57D2}" 
+     PushDown="TRUE" />
+```
+
+**ApplyElementManifests**
+
+Adds a new element to an existing Feature. When a Feature is upgraded, provisions all non-declarative elements that are referenced in the specified element manifests.
+
+**VersionRange**
+
+Specifies a version range to which specified upgrade actions apply.
