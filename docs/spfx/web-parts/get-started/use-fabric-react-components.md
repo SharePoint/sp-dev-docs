@@ -1,77 +1,190 @@
-# Welcome to the SharePoint Framework Developer Preview!
+# Use Office UI Fabric React components in your SharePoint client-side web part
 
-The SharePoint Framework (SPFx) is a page and part model that enables client-side development for building SharePoint experiences. It facilitates easy integration with the SharePoint data, and provides support for open source tooling development.
+This article describes how to build a simple web part that uses the DocumentCard component of [Office UI Fabric](https://github.com/OfficeDev/office-ui-fabric-react). Office UI Fabric React is the front-end framework for building experiences for Office and Office 365. Fabric React includes a robust collection of responsive, mobile-first components that make it easy for you to create web experiences using the Office Design Language.
 
-The SharePoint Framework now generally available. Please check more release details either from the [GA release notes](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-GA) or from the [Office Blog post](https://blogs.office.com/2017/02/23/sharepoint-framework-reaches-general-availability-build-and-deploy-engaging-web-parts-today/) around the GA release. If you find issues or have new ideas and suggestions for SharePoint Framework, make sure you submit them [here](https://github.com/SharePoint/sp-dev-docs/issues). We’ll also be monitoring [#spfx](http://sharepoint.stackexchange.com/tags/spfx/), [#spfx-webparts](http://sharepoint.stackexchange.com/tags/spfx-webparts/), and [#spfx-tooling](http://sharepoint.stackexchange.com/tags/spfx-tooling/) at [SharePoint StackExchange](http://sharepoint.stackexchange.com/) as well.
+The following image shows a DocumentCard component created with Office UI Fabric React.
 
-## Developer Preview Releases
+![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../../images/fabric-components-doc-card-view-ex.png)
 
-* **Feb 22, 2017**
-   *  **GA is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-GA)
+You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=1N6kNvLxyg4&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
 
-* **Jan 9, 2017**
-   *  **RC0 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-RC0)
-
-* **Nov 22, 2016**
-   *  **Drop 6 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-Drop-6)
-
-* **Oct 17, 2016**
-   *  **Drop 5 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-Drop-5)
-
-* **Sept 21, 2016**
-   *  **Drop 4 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-Drop-4-and-MDL2)
-
-* **Sep 14, 2016**
-   *  **Drop 3 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-Drop-3)
-   
-* **Sep 1, 2016**
-   * **Drop 2 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-Drop-2)
-
-* **Aug 17, 2016**
-   * **Drop 1 is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Drop-1)
-   
-## Get Started
-
-* [Setup your Office 365 Developer Tenant](http://dev.office.com/sharepoint/docs/spfx/set-up-your-developer-tenant)
-* [Setup your Machine](http://dev.office.com/sharepoint/docs/spfx/set-up-your-development-environment)
-* [Go build your first web part](http://dev.office.com/sharepoint/docs/spfx/web-parts/get-started/build-a-hello-world-web-part)
-
-## Reference
-* [sp-component-base](reference/spfx/sp-component-base-module.md)
-* [sp-core-library](reference/spfx/sp-core-library-module.md)
-* [sp-http](reference/spfx/sp-http-module.md)
-* [sp-loader](reference/spfx/sp-loader-module.md)
-* [sp-odata-types](reference/spfx/sp-odata-types-module.md)
-* [sp-page-context](reference/spfx/sp-page-context-module.md)
-* [sp-webpart-base](reference/spfx/sp-webpart-base-module.md)
+<a href="https://www.youtube.com/watch?v=1N6kNvLxyg4&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
+<img src="../../../../images/spfx-youtube-tutorial6.png" alt="Screenshot of the YouTube video player for this tutorial" />
+</a>
 
 
+## Create a new web part project
 
-## Learn More
+Create a new project directory in your favorite location:
 
-* [Background and Philosophy](http://dev.office.com/sharepoint/docs/spfx/sharepoint-framework-overview)
-* [Design Great Web Parts](http://dev.office.com/sharepoint/docs/spfx/web-parts/basics/design-considerations-for-web-parts)
-* [API Docs](https://sharepoint.github.io/)
+```
+md documentcardexample-webpart
+```
+    
+Got to the project directory:
 
-## Updates & Feedback
+```
+cd documentcardexample-webpart
+```
 
-To keep track of improvements to the Office 365 Framework, please take a look at:
+Create a new web part by running the Yeoman SharePoint generator:
 
-* [@SharePoint](https://twitter.com/sharepoint) and [@OfficeDev](https://twitter.com/officedev) on Twitter
-* [Office Developer Blog](http://dev.office.com/blogs)
+```
+yo @microsoft/sharepoint
+```
+    
+When prompted:
 
-Provide Feedback:
+* Accept the default **documentcardexample-webpart** as your solution name and choose **Enter**.
+* Select **Use the current folder** as the location for the files.
+* Select **React** as the framework and choose **Enter**.
+* Use **DocumentCardExample** for your web part name and choose **Enter**.
+* Accept the default **DocumentCardExample description** and choose **Enter**.
 
-* If you find issues or have new ideas and suggestions for SharePoint Framework, make sure you submit them [here](https://github.com/SharePoint/sp-dev-docs/issues).
-* [SharePoint StackExchange](http://sharepoint.stackexchange.com/) (please use [#spfx](http://sharepoint.stackexchange.com/tags/spfx/), [#spfx-webparts](http://sharepoint.stackexchange.com/tags/spfx-webparts/), and [#spfx-tooling](http://sharepoint.stackexchange.com/tags/spfx-tooling/) tags)
-* [SharePoint Developer](https://techcommunity.microsoft.com/t5/SharePoint-Developer/bd-p/SharePointDev) group at Microsoft Tech Community
-* [SharePoint Developer UserVoice](https://sharepoint.uservoice.com/forums/329220-sharepoint-dev-platform)
+At this point, Yeoman will install the required dependencies and scaffold the solution files. This might take a few minutes. Yeoman will scaffold the project to include your DocumentCardExample web part as well.
+	
+When the scaffold is complete, in the console, type the following to open the web part project in Visual Studio Code:
 
-## Deployment Status
-The SharePoint Framework is now generally available at Office 365.
+```
+code .
+```
+	
+You now have a web part project with the React framework.
 
-- [SharePoint Framework reaches general availability—build and deploy engaging web parts today](https://blogs.office.com/2017/02/23/sharepoint-framework-reaches-general-availability-build-and-deploy-engaging-web-parts-today/)
+Open **DocumentCardExampleWebPart.ts** from the **src\webparts\documentCardExample** folder. 
 
-## Have Fun
+As you can see, the `render` method creates a react element and renders it in the web part DOM.
 
-We look forward to seeing what you build! Please tweet us at @OfficeDev or @SharePoint with the #SPFx tag!
+```ts
+  public render(): void {
+    const element: React.ReactElement<IDocumentCardExampleProps > = React.createElement(
+      DocumentCardExample,
+      {
+        description: this.properties.description
+      }
+    );
+```
+	
+Open **DocumentCardExample.tsx** from the **src\webparts\documentCardExample\components** folder. 
+	
+This is the main react component that Yeoman added to your project that renders in the web part DOM.
+
+```ts
+export default class DocumentCardExample extends React.Component<IDocumentCardExampleProps, void> {
+  public render(): React.ReactElement<IDocumentCardExampleProps> {
+    return (
+      <div className={styles.helloWorld}>
+        <div className={styles.container}>
+          <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
+            <div className="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
+              <span className="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
+              <p className="ms-font-l ms-fontColor-white">Customize SharePoint experiences using Web Parts.</p>
+              <p className="ms-font-l ms-fontColor-white">{escape(this.props.description)}</p>
+              <a href="https://aka.ms/spfx" className={styles.button}>
+                <span className={styles.label}>Learn more</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
+}
+```
+
+## Add an Office UI Fabric component
+
+The *new modern experiences* in SharePoint use Office UI Fabric and Office UI Fabric React as the default front-end framework for building the new experiences. As a result, SharePoint Framework ships with a default version of Office UI Fabric and Fabric React which matches the version available in SharePoint. This ensures the web part you are building uses the right version of the Fabric styles and components when deployed to SharePoint. 
+
+Since we chose React as our framework when creating the solution, the generator installed the right version of Office UI Fabric React as well. You can directly import the Fabric components in your react components without any additional work. 
+
+>**Note:** With the initial release of the SharePoint Framework, it is recommended to use the Office UI Fabric and Fabric React that ships with the generator. It is not recommended to update the Office UI Fabric and Fabric React packages independently as it might conflict with the already available version in SharePoint and as a result your web part may fail to function as expected. There will be updates on this area after GA.
+
+Open **DocumentCardExample.tsx** from the **src\webparts\documentCardExample\components** folder. 
+
+Add the following `import` statement to to the top of the file to import fabric react components that we want to use.
+
+```ts
+import {
+	DocumentCard,
+	DocumentCardPreview,
+	DocumentCardTitle,
+	DocumentCardActivity,
+	IDocumentCardPreviewProps
+} from 'office-ui-fabric-react/lib/DocumentCard';
+```
+
+Delete the current `render` method and add the following updated `render` method:
+
+```ts
+public render(): JSX.Element {
+	const previewProps: IDocumentCardPreviewProps = {
+		previewImages: [
+		{
+			previewImageSrc: String(require('document-preview.png')),
+			iconSrc: String(require('icon-ppt.png')),
+			width: 318,
+			height: 196,
+			accentColor: '#ce4b1f'
+		}
+		],
+	};
+
+	return (
+		<DocumentCard onClickHref='http://bing.com'>
+		<DocumentCardPreview { ...previewProps } />
+		<DocumentCardTitle title='Revenue stream proposal fiscal year 2016 version02.pptx' />
+		<DocumentCardActivity
+			activity='Created Feb 23, 2016'
+			people={
+			[
+				{ name: 'Kat Larrson', profileImageSrc: String(require('avatar-kat.png')) }
+			]
+			}
+			/>
+		</DocumentCard>
+	);
+}
+```
+Save the file.
+
+In this code, the DocumentCard component includes some extra sections:
+
+* DocumentCardPreview
+* DocumentCardTitle
+* DocumentCardActivity
+
+The `previewProps` property includes some properties of the DocumentCardPreview.
+
+Notice the use of relative path with a `require` statement to load images. Currently, you need to use the webpack public path plugin and input the file's relative path from your source file or folder to the `lib` folder. This should be the same as your current working source location.
+	
+Open **DocumentCardExampleWebPart.ts** from the **src\webparts\documentCardExample** folder. 
+	
+Add the following code at the top of the file to require the webpack public path plugin.
+	
+```ts
+require('set-webpack-public-path!');
+```
+	
+Save the file.
+
+## Copy the image assets
+
+Copy the following images to your **src\webparts\documentCardExample** folder:
+
+* [avatar-kat.png](https://github.com/SharePoint/sp-dev-docs/blob/master/assets/avatar-kat.png)
+* [icon-ppt.png](https://github.com/SharePoint/sp-dev-docs/tree/master/assets/icon-ppt.png)
+* [document-preview.png](https://github.com/SharePoint/sp-dev-docs/tree/master/assets/document-preview.png)
+
+## Preview the web part in workbench
+
+In the console, type the following to preview your web part in workbench:
+	
+```
+gulp serve
+```
+	
+In the toolbox, select your `DocumentCardExample` web part to add:
+	
+![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../../images/fabric-components-doc-card-view-ex.png)
+

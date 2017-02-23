@@ -2,7 +2,7 @@
 
 The SharePoint Framework (SPFx) is a page and part model that enables client-side development for building SharePoint experiences. It facilitates easy integration with the SharePoint data, and provides support for open source tooling development.
 
-The SharePoint Framework is still in initial Developer Preview, and it's still rough around the edges.  As we work to improve the SharePoint Framework, we'd love your feedback!  If you find issues or have new ideas and suggestions for SharePoint Framework, make sure you submit them [here](https://github.com/SharePoint/sp-dev-docs/issues). We’ll also be monitoring [#spfx](http://sharepoint.stackexchange.com/tags/spfx/), [#spfx-webparts](http://sharepoint.stackexchange.com/tags/spfx-webparts/), and [#spfx-tooling](http://sharepoint.stackexchange.com/tags/spfx-tooling/) at [SharePoint StackExchange](http://sharepoint.stackexchange.com/) as well.
+The SharePoint Framework now generally available. Please check more release details either from the [GA release notes](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-GA) or from the [Office Blog post](https://blogs.office.com/2017/02/23/sharepoint-framework-reaches-general-availability-build-and-deploy-engaging-web-parts-today/) around the GA release. If you find issues or have new ideas and suggestions for SharePoint Framework, make sure you submit them [here](https://github.com/SharePoint/sp-dev-docs/issues). We’ll also be monitoring [#spfx](http://sharepoint.stackexchange.com/tags/spfx/), [#spfx-webparts](http://sharepoint.stackexchange.com/tags/spfx-webparts/), and [#spfx-tooling](http://sharepoint.stackexchange.com/tags/spfx-tooling/) at [SharePoint StackExchange](http://sharepoint.stackexchange.com/) as well.
 
 ## Developer Preview Releases
 
@@ -68,11 +68,9 @@ Provide Feedback:
 * [SharePoint Developer UserVoice](https://sharepoint.uservoice.com/forums/329220-sharepoint-dev-platform)
 
 ## Deployment Status
+The SharePoint Framework is now generally available at Office 365.
 
-Note: SharePoint Framework web parts are not supported for production use.
-
-The SharePoint Framework is currently available for use in Classic Pages within Office 365 Developer  and First Release Tenancies as a developer review release.		
-Of course, you can also get started with our SharePoint Workbench to create and test your web parts locally, on your machine.
+- [SharePoint Framework reaches general availability—build and deploy engaging web parts today](https://blogs.office.com/2017/02/23/sharepoint-framework-reaches-general-availability-build-and-deploy-engaging-web-parts-today/)
 
 ## Have Fun
 
