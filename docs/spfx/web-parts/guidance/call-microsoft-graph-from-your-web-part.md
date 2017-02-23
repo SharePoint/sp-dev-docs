@@ -1,5 +1,7 @@
 # Call the Microsoft Graph API using OAuth from your web part
 
+> Note. This article has not yet been verified with SPFx GA version, so you might have challenges on making this work as such with the latest release.
+
 You can add lots of great functionality such as email, documents, and calendar to your web part by integrating with the Microsoft Graph. To call APIs on Microsoft Graph you will need to use the Active Directory Authentication Library (ADAL) for JavaScript library and authenticate using the OAuth flow. There are some design considerations and code modifications to make for your web part to use ADAL JS and call Microsoft Graph APIs correctly and securely.
 
 ## Azure Active Directory authorization flows

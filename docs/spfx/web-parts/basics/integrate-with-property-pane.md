@@ -1,7 +1,5 @@
 # Integrate your SharePoint client-side web part with the property pane
 
->**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environnments.
-
 The property pane allows end users to configure the web part with a bunch of properties. The article [Build your first web part](../get-started/build-a-hello-world-web-part) describes how the property pane is defined in the **HelloWorldWebPart** class. The property pane properties are defined in  **propertyPaneSettings**.
 
 The following figure shows an example of a property pane in SharePoint.

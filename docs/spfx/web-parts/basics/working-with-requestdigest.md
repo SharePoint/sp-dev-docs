@@ -1,7 +1,5 @@
 # Working with the original __RequestDigest
 
->**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not supported for use in production environments.
-
 There is a lot of code written to work with the classic SharePoint pages that you can use with the SharePoint Framework, but sometimes certain components or variables aren't there. One example is the __REQUESTDIGEST form field.  In an ideal world, you wouldn't use a global variable to access the digest, you'd just use the updated **HttpRequest** object to make your SharePoint call, and it will handle all the digest / auth logic for you (including things like expired tokens).  The [Connect your client-side web part to SharePoint (Hello world part 2)](https://github.com/SharePoint/sp-dev-docs/wiki/HelloWorld,-Talking-to-SharePoint) article shows you how to do this.
 
 However, if your existing code uses some older constructs, through the power of client side code and DOM manipulation, it's fairly easy to add these back to a page.  The key is to hook into the **onInit** method in the base web part class, and pull the create the DOM element that you expect to be there.  Here's an example that creates the __REQESTDIGEST form element.

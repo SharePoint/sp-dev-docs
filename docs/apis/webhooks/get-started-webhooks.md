@@ -450,7 +450,7 @@ Now add a file to the Documents library and test if you get a notification from 
 * Go to the **Documents** library. It will be named **Shared Documents** library in your default site collection.
 * Add a new file.
 * Go to Visual Studio and wait for the breakpoint to be hit.
-   * In preview, the wait time may vary from a few seconds up to five minutes. When the breakpoint is hit, the webhook receiver has just received a notification from SharePoint.
+   * Wait time may vary from a few seconds up to five minutes. When the breakpoint is hit, the webhook receiver has just received a notification from SharePoint.
 * Choose **F5** to continue.
 * To see the notification data, look in the **Output** window for the following entries, since you added the notification data into the trace log:
 

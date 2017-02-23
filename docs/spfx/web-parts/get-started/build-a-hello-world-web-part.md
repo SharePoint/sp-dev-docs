@@ -1,7 +1,5 @@
 # Build your first SharePoint client-side web part (Hello World part 1)
 
->**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
-
 Client-side web parts are client-side components that run inside the context of a SharePoint page. Client-side web parts can be deployed to SharePoint Online, and you can also use modern JavaScript tools and libraries to build them.
 
 Client-side web parts support:
@@ -165,22 +163,18 @@ The DOM element where the web part should be rendered is available in the **rend
 ```ts
   public render(): void {
     this.domElement.innerHTML = `
-      <div class="${styles.row}">
-        <div class="${styles.column}">
-          <span class="${styles.title}">
-            Welcome to SharePoint!
-          </span>
-          <p class="${styles.subtitle}">
-            Customize SharePoint experiences using Web Parts.
-          </p>
-          <p class="${styles.description}">
-            ${escape(this.properties.description)}
-          </p>
-          <a class="ms-Button ${styles.button}" href="https://aka.ms/spfx">
-            <span class="ms-Button-label">
-              Learn more
-            </span>
-          </a>
+      <div class="${styles.helloWorld}">
+        <div class="${styles.container}">
+          <div class="ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}">
+            <div class="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
+              <span class="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
+              <p class="ms-font-l ms-fontColor-white">Customize SharePoint experiences using Web Parts.</p>
+              <p class="ms-font-l ms-fontColor-white">${escape(this.properties.description)}</p>
+              <a href="https://aka.ms/spfx" class="${styles.button}">
+                <span class="${styles.label}">Learn more</span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>`;
   }

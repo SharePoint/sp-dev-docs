@@ -1,7 +1,5 @@
 # SharePoint Framework Toolchain
 
->**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
-
 ## Overview
 The SharePoint Framework toolchain is the set of build tools, framework packages, and other items that manage building and deploying your client side projects. The toolchain helps you build client-side components like web parts. It also helps you test them in your local development environment with tools such as the SharePoint Workbench. And you can use the toolchain to package and deploy to SharePoint. The toolchain also provides you with a set of build commands that help you to complete key build tasks such as code compilation, packaging the client-side project into a SharePoint app package and more. 
 
@@ -18,8 +16,6 @@ The following packages are in the SharePoint Framework:
 * [@microsoft/generator-sharepoint](https://www.npmjs.com/package/@microsoft/generator-sharepoint) - A [Yeoman](http://yeoman.io/) plug-in for use with the SharePoint Framework. Using this generator, developers can quickly set up a new client-side web part project with sensible defaults and best practices.
 
 * [@microsoft/sp-client-base](https://www.npmjs.com/package/@microsoft/sp-client-base) - Defines the core libraries for client-side applications built using the SharePoint Framework
-
-* [@microsoft/sp-client-preview](https://www.npmjs.com/package/@microsoft/sp-client-preview) - Contains SharePoint Framework libraries that are still under development. Once they are finalized, they will be refactored into separate npm packages.
 
 * [@microsoft/sp-webpart-workbench](https://www.npmjs.com/package/@microsoft/sp-webpart-workbench) - The SharePoint Workbench is a standalone environment for testing and debugging client-side web parts.
 
@@ -82,18 +78,22 @@ Below is the `package.json` of the [helloworld-webpart](web-parts/get-started/bu
     "node": ">=0.10.0"
   },
   "dependencies": {
-    "@microsoft/sp-client-base": "~0.1.12",
-    "@microsoft/sp-client-preview": "~0.1.12"
+    "@microsoft/sp-client-base": "~1.0.0",
+    "@microsoft/sp-core-library": "~1.0.0",
+    "@microsoft/sp-webpart-base": "~1.0.0",
+    "@types/webpack-env": ">=1.12.1 <1.14.0"
   },
   "devDependencies": {
-    "@microsoft/sp-build-web": "~0.4.32",
-    "@microsoft/sp-module-interfaces": "~0.1.8",
-    "@microsoft/sp-webpart-workbench": "~0.1.12",
-    "gulp": "~3.9.1"
+    "@microsoft/sp-build-web": "~1.0.0",
+    "@microsoft/sp-module-interfaces": "~1.0.0",
+    "@microsoft/sp-webpart-workbench": "~1.0.0",
+    "gulp": "~3.9.1",
+    "@types/chai": ">=3.4.34 <3.6.0",
+    "@types/mocha": ">=2.2.33 <2.6.0"
   },
   "scripts": {
     "build": "gulp bundle",
-    "clean": "gulp nuke",
+    "clean": "gulp clean",
     "test": "gulp test"
   }
 }

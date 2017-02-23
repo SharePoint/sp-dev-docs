@@ -1,6 +1,6 @@
 # Build custom controls for the property pane
 
-> **Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
+> Note. This article has not yet been verified with SPFx GA version, so you might have challenges on making this work as such with the latest release.
 
 The SharePoint Framework contains a set of standard controls for the property pane. But sometimes you need additional functionality beyond the basic controls. You might need asynchronous updates to the data on a control, or a specific user interface. Build a custom control for the property pane to get the functionality you need.
 

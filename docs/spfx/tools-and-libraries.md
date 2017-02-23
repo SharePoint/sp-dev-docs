@@ -1,7 +1,5 @@
 # SharePoint Framework development tools and libraries
 
->**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
-
 The SharePoint Framework includes several client-side JavaScript libraries that you can use to build your solutions. This article provides an overview of the tools and libraries that you can use to develop client-side web parts.
 
 ## TypeScript

@@ -1,7 +1,5 @@
 # Deploy your client-side web part to a SharePoint page (Hello world part 3)
 
->**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
-
 In this article you will learn how to deploy your client-side web part to SharePoint and see it working on a modern SharePoint server-side page. This article continues with the hello world web part built in the previous article [Connect your client-side web part to SharePoint](./connect-to-sharepoint).
 
 Be sure you have completed the procedures in the following articles before you start:

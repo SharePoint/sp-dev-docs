@@ -1,5 +1,7 @@
 # Migrate Angular v1.x applications to SharePoint Framework
 
+> Note. This article has not yet been verified with SPFx GA version, so you might have challenges on making this work as such with the latest release.
+
 Many organizations have been using Angular for building SharePoint solutions in the past. This article shows how to migrate an existing Angular v1.x application styled using [ngOfficeUIFabric](http://ngofficeuifabric.com) - Angular directives for Office UI Fabric, to a SharePoint Framework client-side web part. The sample application used for this tutorial manages to do items stored in a SharePoint list.
 
 ![Angular application for managing to do items stored in a SharePoint list](../../../../images/ng-migration-original-angular-application.png)

@@ -1,7 +1,5 @@
 # Use Office UI Fabric React components in your SharePoint client-side web part
 
->**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not supported for use in production environments.
-
 This article describes how to build a simple web part that uses the DocumentCard component of [Office UI Fabric](https://github.com/OfficeDev/office-ui-fabric-react). Office UI Fabric React is the front-end framework for building experiences for Office and Office 365. Fabric React includes a robust collection of responsive, mobile-first components that make it easy for you to create web experiences using the Office Design Language.
 
 The following image shows a DocumentCard component created with Office UI Fabric React.
@@ -58,13 +56,13 @@ Open **DocumentCardExampleWebPart.ts** from the **src\webparts\documentCardExamp
 As you can see, the `render` method creates a react element and renders it in the web part DOM.
 
 ```ts
-public render(mode: DisplayMode, data?: IWebPartData): void {
-	const element: React.ReactElement<IDocumentCardProps> = React.createElement(DocumentCard, {
-		description: this.properties.description
-	});
-
-ReactDom.render(element, this.domElement);
-}
+  public render(): void {
+    const element: React.ReactElement<IDocumentCardExampleProps > = React.createElement(
+      DocumentCardExample,
+      {
+        description: this.properties.description
+      }
+    );
 ```
 	
 Open **DocumentCardExample.tsx** from the **src\webparts\documentCardExample\components** folder. 
@@ -77,20 +75,13 @@ export default class DocumentCardExample extends React.Component<IDocumentCardEx
     return (
       <div className={styles.helloWorld}>
         <div className={styles.container}>
-          <div className={css('ms-Grid-row ms-bgColor-themeDark ms-fontColor-white', styles.row)}>
-            <div className='ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1'>
-              <span className='ms-font-xl ms-fontColor-white'>
-                Welcome to SharePoint!
-              </span>
-              <p className='ms-font-l ms-fontColor-white'>
-                Customize SharePoint experiences using Web Parts.
-              </p>
-              <p className='ms-font-l ms-fontColor-white'>
-                {this.props.description}
-              </p>
-              <a className={css('ms-Button', styles.button)}
-                 href='https://github.com/SharePoint/sp-dev-docs/wiki'>
-                <span className='ms-Button-label'>Learn more</span>
+          <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
+            <div className="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
+              <span className="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
+              <p className="ms-font-l ms-fontColor-white">Customize SharePoint experiences using Web Parts.</p>
+              <p className="ms-font-l ms-fontColor-white">{escape(this.props.description)}</p>
+              <a href="https://aka.ms/spfx" className={styles.button}>
+                <span className={styles.label}>Learn more</span>
               </a>
             </div>
           </div>
@@ -107,9 +98,9 @@ The *new modern experiences* in SharePoint use Office UI Fabric and Office UI Fa
 
 Since we chose React as our framework when creating the solution, the generator installed the right version of Office UI Fabric React as well. You can directly import the Fabric components in your react components without any additional work. 
 
->**Note:** During the SharePoint Framework preview, it is recommended to use the Office UI Fabric and Fabric React that ships with the generator. It is not recommended to update the Office UI Fabric and Fabric React packages independently as it might conflict with the already available version in SharePoint and as a result your web part may fail to function as expected. 
+>**Note:** With the initial release of the SharePoint Framework, it is recommended to use the Office UI Fabric and Fabric React that ships with the generator. It is not recommended to update the Office UI Fabric and Fabric React packages independently as it might conflict with the already available version in SharePoint and as a result your web part may fail to function as expected. There will be updates on this area after GA.
 
-Open **DocumentCardExample.tsx** from the **src\webparts\components\documentCardExample** folder. 
+Open **DocumentCardExample.tsx** from the **src\webparts\documentCardExample\components** folder. 
 
 Add the following `import` statement to to the top of the file to import fabric react components that we want to use.
 
@@ -155,7 +146,6 @@ public render(): JSX.Element {
 	);
 }
 ```
-
 Save the file.
 
 In this code, the DocumentCard component includes some extra sections:

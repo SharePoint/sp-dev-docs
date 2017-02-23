@@ -1,6 +1,6 @@
 # Build SharePoint Framework client-side web parts with Angular v1.x
 
-> **Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
+> Note. This article has not yet been verified with SPFx GA version, so you might have challenges on making this work as such with the latest release.
 
 If you are using Angular, you can also use this extremely popular framework to build client-side web parts. Thanks to its modularity it can be used for anything ranging from complex multi-view Single Page Applications to smaller components such as web parts. Many organizations have been using Angular for building SharePoint solutions in the past. This article shows how to use Angular v1.x to build a SharePoint Framework client-side web part and have it styled using [ngOfficeUIFabric](http://ngofficeuifabric.com) - Angular directives for Office UI Fabric. During this tutorial you will build a simple web part that manages to do items.
 

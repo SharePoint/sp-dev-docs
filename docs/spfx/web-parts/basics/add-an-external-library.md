@@ -1,7 +1,5 @@
 # Add an external library to your SharePoint client-side web part
 
->**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not supported for use in production environments.
-
 You might want to include one or more JavaScript libraries in your web part. This article shows you how to bundle an external library and share libraries.
 
 

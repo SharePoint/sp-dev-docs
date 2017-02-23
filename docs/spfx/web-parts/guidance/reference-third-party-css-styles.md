@@ -1,6 +1,6 @@
 # Reference third-party CSS styles in SharePoint Framework web parts
 
-> **Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
+> Note. This article has not yet been verified with SPFx GA version, so you might have challenges on making this work as such with the latest release.
 
 There are many third-party libraries that you can leverage to build rich SharePoint Framework client-side web parts. In addition to scripts, these libraries often contain additional assets such as stylesheets. This article shows two different approaches to include third-party CSS styles in web parts and how each approach affects the resulting web part bundle. The example web part discussed in this article uses jQuery and jQuery UI to display an accordion.
 

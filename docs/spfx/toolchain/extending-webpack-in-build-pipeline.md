@@ -1,7 +1,5 @@
 # Extending webpack in the SharePoint Framework toolchain
 
->**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
-
 [Webpack](https://webpack.github.io/) is a JavaScript module bundler that takes your JavaScript files and its dependencies and generates one or more JavaScript bundles so you can load different bundles for different scenarios.
 
 The framework tool chain uses CommonJS for bundling. This enables you to define modules and where you want to use them. The tool chain also uses SystemJS, a universal module loader, to load your modules. This helps you to scope your web parts by making sure that each web part is executed in its own namespace.

@@ -1,7 +1,5 @@
 # Connect your client-side web part to SharePoint (Hello world part 2)
 
->**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
-
 Connect your web part to SharePoint to access functionality and data in SharePoint and provide a more integrated experience for end users. This article continues building the hello world web part built in the previous article [Build your first web part](./build-a-hello-world-web-part).
 
 You can also follow follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=9VMwjb2pbQ8&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
@@ -42,29 +40,23 @@ Switch to Visual Studio code (or your preferred IDE) and open **src\webparts\hel
 Inside the **render** method, replace the **innerHTML** code block with the following code:
 
 ```ts
-this.domElement.innerHTML = `
-  <div class="${styles.row}">
-    <div class="${styles.column}">
-      <span class="${styles.title}">
-        Welcome to SharePoint!
-      </span>
-      <p class="${styles.subtitle}">
-        Customize SharePoint experiences using Web Parts.
-      </p>
-      <p class="${styles.description}">
-        ${escape(this.properties.description)}
-      </p>
-      <p class="${styles.description}">
-        ${escape(this.properties.test2)}
-      </p>
-      <p class="ms-font-l ms-fontColor-white">Loading from ${this.context.pageContext.web.title}</p>
-      <a class="ms-Button ${styles.button}" href="https://github.com/SharePoint/sp-dev-docs/wiki">
-        <span class="ms-Button-label">
-          Learn more
-        </span>
-      </a>
-    </div>
-  </div>`;
+    this.domElement.innerHTML = `
+      <div class="${styles.helloWorld}">
+        <div class="${styles.container}">
+          <div class="ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}">
+            <div class="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
+              <span class="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
+              <p class="ms-font-l ms-fontColor-white">Customize SharePoint experiences using Web Parts.</p>
+              <p class="ms-font-l ms-fontColor-white">${escape(this.properties.description)}</p>
+              <p class="ms-font-l ms-fontColor-white">${escape(this.properties.test2)}</p>
+              <p class="ms-font-l ms-fontColor-white">Loading from ${escape(this.context.pageContext.web.title)}</p>
+              <a href="https://aka.ms/spfx" class="${styles.button}">
+                <span class="${styles.label}">Learn more</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>`;
 ```
 
 Notice how `${ }` is used to output the variable's value in the HTML block. An extra HTML `p` is used to display `this.context.pageContext.web.title`. Since this web part loads from the local environment, the title will be **Local Workbench**.
@@ -121,17 +113,17 @@ Copy the following code into **MockHttpClient.ts**:
 ```ts
 import { ISPList } from './HelloWorldWebPart';
 
-export default class MockHttpClient {
+export default class MockHttpClient  {
 
-	private static _items: ISPList[] = [{ Title: 'Mock List', Id: '1' },
-										{ Title: 'Mock List 2', Id: '2' },
-										{ Title: 'Mock List 3', Id: '3' }];
-	
-	public static get(restUrl: string, options?: any): Promise<ISPList[]> {
-	return new Promise<ISPList[]>((resolve) => {
-			resolve(MockHttpClient._items);
-		});
-	}
+    private static _items: ISPList[] = [{ Title: 'Mock List', Id: '1' },
+                                        { Title: 'Mock List 2', Id: '2' },
+                                        { Title: 'Mock List 3', Id: '3' }];
+    
+    public static get(): Promise<ISPList[]> {
+    return new Promise<ISPList[]>((resolve) => {
+            resolve(MockHttpClient._items);
+        });
+    }
 }
 ```
 
@@ -158,7 +150,7 @@ Add the following private method that mocks the list retrieval inside the **Hell
 
 ```ts
   private _getMockListData(): Promise<ISPLists> {
-    return MockHttpClient.get(this.context.pageContext.web.absoluteUrl)
+    return MockHttpClient.get()
       .then((data: ISPList[]) => {
         var listData: ISPLists = { value: data };
         return listData;
@@ -183,7 +175,7 @@ Copy and paste the following code just below `import MockHttpClient from './Mock
 ```ts
 import {
   SPHttpClient
-} from '@microsoft/sp-http'
+} from '@microsoft/sp-http';
 ```
 
 Add the following private method to retrieve lists from SharePoint inside the **HelloWorldWebPart** class.
@@ -211,7 +203,7 @@ To add new styles, open **HelloWorld.module.scss**. This is the SCSS file where 
 
 By default, the styles are scoped to your web part. You can see that as the styles are defined under **.helloWorld**.
 
-Add the following styles after the `.button` style:
+Add the following styles after the `.button` style, but still inside of the main `.helloWorld` style section:
 
 ```css
 .list {

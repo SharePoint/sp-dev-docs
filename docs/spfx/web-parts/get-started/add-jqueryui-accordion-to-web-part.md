@@ -1,7 +1,5 @@
 # Add jQueryUI Accordion to your SharePoint client-side web part
 
->**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
-
 This article describes how to add the jQueryUI Accordion to your web part project. This involves creating a new web part, as shown in the following image. 
 
 ![Screenshot of a web part that includes a jQuery Accordion](../../../../images/jquery-accordion-wb.png)
@@ -211,7 +209,7 @@ Save the file.
 
 ### Import Accordion HTML
 
-In Visual Studio code, open **src\webparts\jQuery\JQueryWebPart.ts**.
+In Visual Studio Code, open **src\webparts\jQuery\JQueryWebPart.ts**.
 
 At the top of the file, where you can find other imports, add the following import:
 

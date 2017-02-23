@@ -1,7 +1,5 @@
 # Integrate gulp tasks in SharePoint Framework toolchain
 
->**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
-
 SharePoint client-side development tools use [gulp](http://gulpjs.com/) as the build process task runner to:
 
 * Bundle and minify JavaScript and CSS files.
