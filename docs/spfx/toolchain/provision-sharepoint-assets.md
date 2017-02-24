@@ -1,6 +1,6 @@
 # Provision SharePoint items with your solution package
 
-At times, you may need to provision a SharePoint list or a document library along with your client-side solution package so that that list or library is available for your client-side components, such as web parts. SharePoint Framework toolchain allows you to package and deploy SharePoint assets with your client-side solution package. These assets are then provisioned when the client-side solution is installed on a site. 
+At times, you may need to provision a SharePoint list or a document library along with your client-side solution package so that that list or library is available for your client-side components, such as web parts. SharePoint Framework toolchain allows you to package and deploy SharePoint items with your client-side solution package. These items are then provisioned when the client-side solution is installed on a site. 
 
 ## Provisioning items using JavaScript code
 
