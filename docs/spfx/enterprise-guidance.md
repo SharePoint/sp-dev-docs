@@ -13,7 +13,7 @@ This new model is built from ground-up using a modern web stack using TypeScript
 
 ## Current status of SharePoint Framework
 
-The SharePoint Framework is at the time of writing this in Release Candidate 0 (RC), available in First Release tenants.
+The SharePoint Framework reached the [General Available (GA) milestone](https://blogs.office.com/2017/02/23/sharepoint-framework-reaches-general-availability-build-and-deploy-engaging-web-parts-today/), with version 1.0.0, in February 2017.
 
 ## From a developers point of view
 
@@ -161,7 +161,7 @@ What you cannot backup is the actual solution artifacts such as script bundles a
 
 ## SharePoint Framework Roadmap
 
-In 2017, the first priority is reaching General Availability (GA) for the framework. General Availability means that IT and developers can supportably use SharePoint Framework in production. General Availability of SharePoint Framework is anticipated to happen in early 2017. Beyond General Availability, we woul expect that the set of scenarios where we would see SharePoint Framework-based components are built and used will expand beyond web parts scenarios, and into areas like list and site customizations. Also, the SharePoint team is looking to bring the SharePoint Framework to SharePoint 2016 on-premises in 2017.
+The SharePoint Framework reached General Availability (GA) in February 2017. General Availability means that IT and developers can supportably use SharePoint Framework in production. Beyond General Availability, we would expect that the set of scenarios where we would see SharePoint Framework-based components are built and used will expand beyond web parts scenarios, and into areas like list and site customizations. For more information about the SharePoint Framework see the dedicated [SharePoint Framework Roadmap article](https://dev.office.com/sharepoint/docs/spfx/roadmap). Also, the SharePoint team is looking to bring the SharePoint Framework to SharePoint 2016 on-premises during 2017, as part of a future Feature Pack.
 
 Major changes or introduction of new major features will be announced through the Office 365 Message Center, found in your tenant admin - something that an Office 365 administrator already should have on their daily routine to check. Another important resource is the [Office Developer blog](http://dev.office.com/blogs) where you will find even more details and updates.
 
