@@ -1,11 +1,11 @@
 # Set up your Office 365 tenant
 
-To build and deploy client-side web parts using the preview release of the SharePoint Framework, you will need an Office 365 tenant with [First Release](https://support.office.com/en-us/article/Set-up-the-Standard-or-First-Release-options-in-Office-365-3b3adfa4-1777-4ff0-b606-fb8732101f47) options enabled. 
+To build and deploy client-side web parts using the preview release of the SharePoint Framework, you will need a normal Office 365 tenant. 
 
 ## Sign up for an Office 365 tenant
-If you already have an Office 365 tenant, see [create your app catalog site](#create-app-catalog-site). Make sure you have [First Release](https://support.office.com/en-us/article/Set-up-the-Standard-or-First-Release-options-in-Office-365-3b3adfa4-1777-4ff0-b606-fb8732101f47) options enabled. 
+If you already have an Office 365 tenant, see [create your app catalog site](#create-app-catalog-site).
 
-If you don't have one, sign up for the [Office Developer Program](https://profile.microsoft.com/RegSysProfileCenter/wizardnp.aspx?wizid=14b845d0-938c-45af-b061-f798fbb4d170&lcid=1033). You will receive a welcome mail with a link to sign up for an Office 365 Developer Tenant. First Release options are enabled already for your Office 365 Developer Tenant. 
+If you don't have one, you can create a trial tenant or for example sign up for the [Office Developer Program](https://profile.microsoft.com/RegSysProfileCenter/wizardnp.aspx?wizid=14b845d0-938c-45af-b061-f798fbb4d170&lcid=1033). You will receive a welcome mail with a link to sign up for an Office 365 Developer Tenant. 
 
 >**Note:** Make sure that you are signed out of any existing Office 365 tenants before you sign up.
 
@@ -60,19 +60,6 @@ SharePoint Workbench is a developer design surface that enables you to quickly p
 ```
 https://your-sharepoint-site/_layouts/workbench.aspx
 ```
-
-## Troubleshooting
-
-You will get an error If you are using a SharePoint site that was provisioned using a self-service site creation. We recommend using a developer site collection or a SharePoint site that was not created using a self-service site creation.
-
-If you get the following exception accessing the SharePoint Workbench: 
-
-```
-"The requested operation is part of an experimental feature that is not supported in the current environment. The requested operation is part of an experimental feature that is not supported in the current environment." 
-```
-Then, you are not using a tenant with First Release options enabled. You might be using a normal tenant
-
-During developer preview also "Custom Script" feature will need to be enabled in site collections where you will be using the client-side web parts. 
 
 ## Next steps
 Now that you have configured your SharePoint tenant, [set up your development environment](./set-up-your-development-environment) to build client-side web parts.
