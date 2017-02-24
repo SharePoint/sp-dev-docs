@@ -10,10 +10,12 @@
 		<Item text="Team-based development" url="spfx/team-based-development-on-sharepoint-framework" SEODescription="Team-based development on SharePoint Framework." />
 		<Item text="Toolchain" url="spfx/toolchain/sharepoint-framework-toolchain" SEODescription="">
 			<Item text="SharePoint Framework Toolchain" url="spfx/toolchain/sharepoint-framework-toolchain" SEODescription="The SharePoint Framework toolchain is the set of build tools, framework packages, and other items that manage building and deploying your client side projects." />
+			<Item text="Yeoman Sharepoint generator" url="spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator" SEODescription="Create new client-side solution projects using yeoman SharePoint generator." />
 			<Item text="Update SharePoint Framework packages" url="spfx/toolchain/update-latest-packages" SEODescription="Process how to update SharePoint Framework packages to latest versions in your solutions." />
 			<Item text="Optimize builds for production" url="spfx/toolchain/optimize-builds-for-production" SEODescription="Optimizing SharePoint Framework builds for production deployment." />
 			<Item text="Integrate gulp tasks in SharePoint Framework toolchain" url="spfx/toolchain/integrate-gulp-tasks-in-build-pipeline" SEODescription="Integrate custom gulp tasks in the build pipeline used in SharePoint Framework solutions." />
 			<Item text="Extending Webpack in SharePoint Framework toolchain" url="spfx/toolchain/extending-webpack-in-build-pipeline" SEODescription="Extend Webpack in the build pipeline used in SharePoint Framework solutions." />
+			<Item text="Provision SharePoint items" url="spfx/toolchain/provision-sharepoint-assets" SEODescription="SharePoint Framework toolchain allows you to package and deploy SharePoint fields, content types, list instances with your client-side solution package." />
 		</Item>
 		<Item text="Web parts" url="spfx/web-parts" SEODescription="">
 			<Item text="Overview" url="spfx/web-parts/overview-client-side-web-parts" SEODescription="Develop SharePoint client-side web parts to provide a better customized experience for SharePoint."/>
