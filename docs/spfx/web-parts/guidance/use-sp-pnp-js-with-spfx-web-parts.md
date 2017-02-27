@@ -4,7 +4,52 @@ You may opt to use the [sp-pnp-js](https://www.npmjs.com/package/sp-pnp-js) libr
 provides a fluent API to make building your REST queries intuitive and supports batching and caching. You can learn more on the [project's homepage](https://github.com/SharePoint/PnP-JS-Core) 
 which has links to documentation, samples, and other resources to help you get started.
 
-While sp-pnp-js was designed to work easily with SPFx there are a few things to keep in mind.
+You can download the full source for this article from the samples site.
+
+## Setup your Environment
+
+Before you can complete this guide you will need to ensure you have [setup your environment](https://dev.office.com/sharepoint/docs/spfx/set-up-your-development-environment) for development 
+using SharePoint Framework.
+
+## Create a New Project
+
+Start by creating a new folder for the project using your console of choice:
+
+```
+md spfx-sp-pnp-js-example
+```
+
+And enter that folder
+
+```
+cd spfx-sp-pnp-js-example
+```
+
+The run the Yeoman generator for SPFx
+
+```
+yo @microsoft/sharepoint
+```
+
+Enter the following values when prompted during the setup of your new project:
+
+- #spfx-sp-pnp-js-example# as solution name (keep default)
+- #Current Folder# as the solution location
+- #Kockout# as the framework
+- #SPPnPJSExample# as the name of the web part
+- #Example of using sp-pnp-js within SPFx# as the description
+
+![Completed Project Scaffolding](../../../../images/sp-pnp-js-guide-completed-setup.png)
+
+
+Once the scaffolding completes open the project in your code editor of choice, the screen shots here show [Visual Studio Code](https://code.visualstudio.com/).
+
+
+
+
+
+
+
 
 ## Install the library
 
