@@ -15,19 +15,19 @@ using SharePoint Framework.
 
 Start by creating a new folder for the project using your console of choice:
 
-```
+```sh
 md spfx-sp-pnp-js-example
 ```
 
 And enter that folder
 
-```
+```sh
 cd spfx-sp-pnp-js-example
 ```
 
 The run the Yeoman generator for SPFx
 
-```
+```sh
 yo @microsoft/sharepoint
 ```
 
@@ -44,72 +44,68 @@ Enter the following values when prompted during the setup of your new project:
 
 Once the scaffolding completes open the project in your code editor of choice, the screen shots here show [Visual Studio Code](https://code.visualstudio.com/).
 
-
-
-
-
-
-
-
-## Install the library
-
-After running the yeoman generator for your SPFx web part you need to install sp-pnp-js. This is done from within your project's directory.
-
+```sh
+code .
 ```
+
+![Project as first opened in visual studio code](../../../../images/sp-pnp-js-guide-first-open.png)
+
+## Install And Setup sp-pnp-js
+
+Once your project is created you will need to install and setup sp-pnp-js, starting with installing the package.
+
+```sh
 npm install sp-pnp-js --save
 ```
 
-## Setup
+### Setup
 
 Because the sp-pnp-js library constructs REST requests it needs to know the URL to send these requests. When operating within classic sites and pages 
 we can make use of the global _spPageContextInfo variable. Within SPFx this is not available, or if it is may not be correct. So we need to rely on the 
 [context](https://dev.office.com/sharepoint/reference/spfx/sp-webpart-base/iwebpartcontext) object 
-supplied by the framework. There are two ways to ensure you have correctly setup your requests.
+supplied by the framework. There are [two ways](https://github.com/SharePoint/PnP-JS-Core/wiki/Using-sp-pnp-js-in-SharePoint-Framework#establish-context) to ensure you have correctly setup your requests, 
+we'll use the onInit method in this example.
 
-### Using the onInit web part method
+#### Update onInit
 
-You can add an onInit handler or extend a custom existing handler in your web part to supply the context using the setup's spfxContext property. This is the recommended method as it 
-will handle cases in the future where we need to pull additional information from the context.
+Open the src\webparts\spPnPjsExample\SpPnPjsExampleWebPart.ts file and add the import for the pnp setup function.
 
 ```TypeScript
 import pnp from "sp-pnp-js";
+```
 
-// ...
+In the onInit method update the code to appear as below. We are adding the block after the super.onInit() call.
 
-public onInit(): Promise<void> {
+```TypeScript
+/**
+ * Initialize the web part.
+ */
+protected onInit(): Promise<void> {
+  this._id = _instance++;
+
+  const tagName: string = `ComponentElement-${this._id}`;
+  this._componentElement = this._createComponentElement(tagName);
+  this._registerComponent(tagName);
+
+  // When web part description is changed, notify view model to update.
+  this._koDescription.subscribe((newValue: string) => {
+    this._shouter.notifySubscribers(newValue, 'description');
+  });
+
+  const bindings: ISpPnPjsExampleBindingContext = {
+    description: this.properties.description,
+    shouter: this._shouter
+  };
+
+  ko.applyBindings(bindings, this._componentElement);
 
   return super.onInit().then(_ => {
-
     pnp.setup({
       spfxContext: this.context
     });
-
-  });
-}
-
-// ...
-```
-### Supply the Absolute Web URL
-
-The other option is to import the Web object directly and supply the absolute url in the constructor.
-
-```TypeScript
-import { Web } from "sp-pnp-js";
-
-// ...
-
-public render(): void {
-
-  let web = new Web(this.context.pageContext.web.absoluteUrl);
-
-  web.select("Title").getAs<{ Title: string }>().then(w => {
-
-    this.domElement.innerHTML = `Web Title: ${w.Title}`;
   });
 }
 ```
-
-Now you can use the library as normal and the requests will always go to the correct web based on the web part's context.
 
 ## Development
 
