@@ -317,32 +317,25 @@ Save the file.
 Navigate to the **render** method and replace the code inside the method with the following code:
 
 ```ts
-this.domElement.innerHTML = `
-  <div class="${styles.row}">
-    <div class="${styles.column}">
-      <span class="${styles.title}">
-        Welcome to SharePoint!
-      </span>
-      <p class="${styles.subtitle}">
-        Customize SharePoint experiences using Web Parts.
-      </p>
-      <p class="${styles.description}">
-        ${escape(this.properties.description)}
-      </p>
-      <p class="${styles.description}">
-        ${escape(this.properties.test2)}
-      </p>
-      <p class="ms-font-l ms-fontColor-white">Loading from ${this.context.pageContext.web.title}</p>
-      <a class="ms-Button ${styles.button}" href="https://github.com/SharePoint/sp-dev-docs/wiki">
-        <span class="ms-Button-label">
-          Learn more
-        </span>
-      </a>
-    </div>        
-  </div>
-  <div id="spListContainer" />`;
+    this.domElement.innerHTML = `
+      <div class="${styles.helloWorld}">
+        <div class="${styles.container}">
+          <div class="ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}">
+            <div class="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
+              <span class="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
+              <p class="ms-font-l ms-fontColor-white">Customize SharePoint experiences using Web Parts.</p>
+              <p class="ms-font-l ms-fontColor-white">${escape(this.properties.description)}</p>
+              <p class="ms-font-l ms-fontColor-white">Loading from ${escape(this.context.pageContext.web.title)}</p>
+              <a href="https://aka.ms/spfx" class="${styles.button}">
+                <span class="${styles.label}">Learn more</span>
+              </a>
+            </div>
+          </div>
+        </div>  
+        <div id="spListContainer" />
+      </div>`;
 
-  this._renderListAsync();
+    this._renderListAsync();
 ```
 
 Save the file.
