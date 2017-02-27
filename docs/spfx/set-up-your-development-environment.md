@@ -19,16 +19,16 @@ Install [NodeJS](https://nodejs.org/en/) Long Term Support (LTS) version.
 * If you have NodeJS already installed please check you have the latest version using `node -v`. It should return the current [LTS version](https://nodejs.org/en/download/). 
 * If you are using a Mac, it is recommended you use [homebrew](http://brew.sh/) to install and manage NodeJS. 
 
-After installing node, make sure you are running V3 of npm by running the following command:
+After installing node, make sure npm is up to date by running following command:
 	
 ```
-npm install -g npm@3
+npm install -g npm
 ```
 
 In case of Ubuntu Linux previous command might result in 'permission denied' message, so it should be instead executed as 
 
 ```
-sudo npm install -g npm@3
+sudo npm install -g npm
 ```
 
 ### Code Editors
