@@ -40,16 +40,6 @@ Install a code editor. You can use any code editor or IDE that supports client-s
 
 The steps and examples in this documentation use [Visual Studio Code](https://code.visualstudio.com/), but you can use any editor of your choice. 
 
-### If you're using a PC
-
-You need to install *windows-build-tools*. windows-build-tools will install Visual C++ Build Tools 2015, provided free of charge by Microsoft. These tools are required to compile popular native modules. It will also install Python 2.7, configuring your computer and npm appropriately. 
-
-Run the following command:
-	
-```
-npm install -g --production windows-build-tools
-```
-
 ### If you are using Ubuntu
 
 You need to install compiler tools using the following command:
