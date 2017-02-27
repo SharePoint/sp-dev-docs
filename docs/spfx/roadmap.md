@@ -48,7 +48,7 @@ First release of the SharePoint Framework will contain support for client-side w
 
 
 ## Developer Experience
-- SharePoint Framework Workbench 2.0: Development story beyond web parts with support for new componen types on top of client-side web parts
+- SharePoint Framework Workbench 2.0: Development story beyond web parts with support for new component types on top of client-side web parts
 - Tool Chain Components
 - Additional Yeoman Templates
 
