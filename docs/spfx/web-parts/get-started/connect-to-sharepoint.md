@@ -335,7 +335,7 @@ Navigate to the **render** method and replace the code inside the method with th
         <div id="spListContainer" />
       </div>`;
 
-    this._renderListAsync();
+    this._renderListAsync(); 
 ```
 
 Save the file.
