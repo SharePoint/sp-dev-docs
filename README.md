@@ -1,10 +1,14 @@
-# Welcome to the SharePoint Framework Developer Preview!
+# Welcome to the SharePoint Framework !
 
 The SharePoint Framework (SPFx) is a page and part model that enables client-side development for building SharePoint experiences. It facilitates easy integration with the SharePoint data, and provides support for open source tooling development.
 
+* [Official SharePoint Framework Documentation](http://dev.office.com/sharepoint/docs/spfx/sharepoint-framework-overview)
+
+This repository contains the raw documents published to dev.office.com site. Feel free to use [Issues]((https://github.com/SharePoint/sp-dev-docs/issues)) list to report us findings or also submit pull requests around the existing documentation. 
+
 The SharePoint Framework now generally available. Please check more release details either from the [GA release notes](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-GA) or from the [Office Blog post](https://blogs.office.com/2017/02/23/sharepoint-framework-reaches-general-availability-build-and-deploy-engaging-web-parts-today/) around the GA release. If you find issues or have new ideas and suggestions for SharePoint Framework, make sure you submit them [here](https://github.com/SharePoint/sp-dev-docs/issues). We’ll also be monitoring [#spfx](http://sharepoint.stackexchange.com/tags/spfx/), [#spfx-webparts](http://sharepoint.stackexchange.com/tags/spfx-webparts/), and [#spfx-tooling](http://sharepoint.stackexchange.com/tags/spfx-tooling/) at [SharePoint StackExchange](http://sharepoint.stackexchange.com/) as well.
 
-## Developer Preview Releases
+## SharePoint Framework Releases
 
 * **Feb 22, 2017**
    *  **GA is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-GA)
@@ -44,8 +48,6 @@ The SharePoint Framework now generally available. Please check more release deta
 * [sp-odata-types](reference/spfx/sp-odata-types-module.md)
 * [sp-page-context](reference/spfx/sp-page-context-module.md)
 * [sp-webpart-base](reference/spfx/sp-webpart-base-module.md)
-
-
 
 ## Learn More
 
