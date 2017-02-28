@@ -66,7 +66,7 @@ we'll use the onInit method in this example.
 
 ### Update onInit in SpPnPjsExampleWebPart.ts
 
-Open the src\webparts\spPnPjsExample\SpPnPjsExampleWebPart.ts file and add the import for the pnp setup function.
+Open the src\webparts\spPnPjsExample\SpPnPjsExampleWebPart.ts file and add the import for the pnp root object.
 
 ```TypeScript
 import pnp from "sp-pnp-js";
@@ -98,18 +98,18 @@ protected onInit(): Promise<void> {
 
   ko.applyBindings(bindings, this._componentElement);
 
-  return super.onInit()**.then(_ => {
+  return super.onInit().then(_ => {
     pnp.setup({
       spfxContext: this.context
     });
-  });**
+  });
 }
 ```
 
 ## Update the ViewModel
 
 Next you will want to replace the contents of the SpPnPjsExampleViewModel.ts file with the below. We are adding an import for the pnp items, an interface to define our list item's fields, 
-some observables to track both out list of items and our new item form, and methods to support getting, adding, and deleting items. We have also added an ensureList method which 
+some observables to track both our list of items and new item form, and methods to support getting, adding, & deleting items. We also added an ensureList method which 
 uses the sp-pnp-js lists.ensure method to always make sure we have the list. There are many ways to provision resources but this was done to demonstrate both creating a list, field, 
 and items using batching in a single method.
 
