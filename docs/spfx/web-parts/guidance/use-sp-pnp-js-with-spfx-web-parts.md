@@ -109,13 +109,17 @@ protected onInit(): Promise<void> {
 ## Update the ViewModel
 
 Next you will want to replace the contents of the SpPnPjsExampleViewModel.ts file with the below. We are adding an import for the pnp items, an interface to define our list item's fields, 
-some observables to track both out list of items and our new item form, and methods to support the functionality 
+some observables to track both out list of items and our new item form, and methods to support getting, adding, and deleting items. We have also added an ensureList method which 
+uses the sp-pnp-js lists.ensure method to always make sure we have the list. There are many ways to provision resources but this was done to demonstrate both creating a list, field, 
+and items using batching in a single method.
+
+The takeaway is that using sp-pnp-js we write much less code to handle the requests and can focus on our business logic.
 
 ```TypeScript
 import * as ko from 'knockout';
 import styles from './SpPnPjsExample.module.scss';
 import { ISpPnPjsExampleWebPartProps } from './ISpPnPjsExampleWebPartProps';
-**import pnp, { List, ListEnsureResult, ItemAddResult } from "sp-pnp-js";**
+import pnp, { List, ListEnsureResult, ItemAddResult } from "sp-pnp-js";
 
 export interface ISpPnPjsExampleBindingContext extends ISpPnPjsExampleWebPartProps {
   shouter: KnockoutSubscribable<{}>;
@@ -124,18 +128,18 @@ export interface ISpPnPjsExampleBindingContext extends ISpPnPjsExampleWebPartPro
 /**
  * Interface which defines the fields in our list items
  */
-**export interface OrderListItem {
+export interface OrderListItem {
   Id: number;
   Title: string;
   OrderNumber: string;
-}**
+}
 
 export default class SpPnPjsExampleViewModel {
 
-  **public newItemTitle: KnockoutObservable<string> = ko.observable('');**
-  **public newItemNumber: KnockoutObservable<string> = ko.observable('');**
   public description: KnockoutObservable<string> = ko.observable('');
-  **public items: KnockoutObservableArray<OrderListItem> = ko.observableArray([]);**
+  public newItemTitle: KnockoutObservable<string> = ko.observable('');
+  public newItemNumber: KnockoutObservable<string> = ko.observable('');
+  public items: KnockoutObservableArray<OrderListItem> = ko.observableArray([]);
 
   public labelClass: string = styles.label;
   public helloWorldClass: string = styles.helloWorld;
@@ -152,16 +156,16 @@ export default class SpPnPjsExampleViewModel {
     }, this, 'description');
 
     // call the load the items
-    **this.getItems().then(items => {
+    this.getItems().then(items => {
 
       this.items(items);
-    });**
+    });
   }
 
   /**
    * Gets the items from the list
    */
-  **private getItems(): Promise<OrderListItem[]> {
+  private getItems(): Promise<OrderListItem[]> {
 
     return this.ensureList().then(list => {
 
@@ -273,25 +277,87 @@ export default class SpPnPjsExampleViewModel {
 
       }).catch(e => reject(e));
     });
-  }**
+  }
 }
 ```
+## Update the Template
 
+Finally we need to update the template to match the functionality we have added into the ViewModel. Copy the below code into the SpPnPjsExample.template.html file. We have added a title row, a foreach repeater 
+for the items collection, and a form allowing you to add new items to the list.
 
+```html
+<div data-bind="attr: {class:helloWorldClass}">
+  <div data-bind="attr: {class:containerClass}">
 
+    <div data-bind="attr: {class:rowClass}">
+      <div class="ms-Grid-col ms-u-sm12">
+        <span class="ms-font-xl ms-fontColor-white ms-fontWeight-semibold" data-bind="text: description"></span>
+      </div>
+    </div>
 
+    <div data-bind="attr: {class:rowClass}">
+      <div class="ms-Grid-col ms-u-sm6">
+        <span class="ms-font-l ms-fontColor-white ms-fontWeight-semibold">Title</span>
+      </div>
+      <div class="ms-Grid-col  ms-u-sm6">
+        <span class="ms-font-l ms-fontColor-white ms-fontWeight-semibold">Order Number</span>
+      </div>
+    </div>
 
+    <!-- ko foreach: items -->
+    <div data-bind="attr: {class:$parent.rowClass}">
+      <div class="ms-Grid-col ms-u-sm6">
+        <span class="ms-font-l ms-fontColor-white" data-bind="text: Title"></span>
+      </div>
+      <div class="ms-Grid-col  ms-u-sm5">
+        <span class="ms-font-l ms-fontColor-white" data-bind="text: OrderNumber"></span>
+      </div>
+      <div class="ms-Grid-col  ms-u-sm1">
+        <i class="ms-Icon ms-Icon--Delete" aria-hidden="true" data-bind="click: $parent.deleteItem.bind($parent, $data)"></i>
+      </div>
+    </div>
+    <!-- /ko -->
 
+    <div data-bind="attr: {class:rowClass}">
+      <div class="ms-Grid-col  ms-u-sm12">
+        <span class="ms-font-l ms-fontColor-white ms-fontWeight-semibold">Add New</span>
+      </div>
+    </div>
 
+    <div data-bind="attr: {class:rowClass}">
+      <form data-bind="submit: addItem">
+        <div class="ms-Grid-col ms-u-sm5">
+          <input class="ms-TextField-field" placeholder="Title" data-bind='value: newItemTitle, valueUpdate: "afterkeydown"' />
+        </div>
+        <div class="ms-Grid-col ms-u-sm5">
+          <input class="ms-TextField-field" placeholder="Order Number" data-bind='value: newItemNumber, valueUpdate: "afterkeydown"'
+          />
+        </div>
+        <div class="ms-Grid-col ms-u-sm2">
+          <button class="ms-Button--default ms-Button" type="submit" data-bind="enable: newItemTitle().length > 0 && newItemNumber().length > 0"><span class="ms-Button-label">Add</span></button>
+        </div>
+      </form>
+    </div>
 
+  </div>
+</div>
+```
+## Run the Example
 
+If you now start the sample and add then add the web part to your site's /_layouts/workbench.aspx you can see it in action.
 
+```sh
+gulp serve
+```
 
+![Project as it appears on first run](../../../../images/sp-pnp-js-guide-first-run.png)
 
+You can delete existing items by clicking on the trashcan icon, or add items by putting values in both fields and clicking the add button.
 
-## Development
+## Next Steps
 
-Please check out the [developer guide](https://github.com/SharePoint/PnP-JS-Core/wiki/Developer-Guide) for samples, guidance, and hints on using and configuring the library.
+The sp-pnp-js library contains a great range of functionality and extensibility. Please check out the [developer guide](https://github.com/SharePoint/PnP-JS-Core/wiki/Developer-Guide) for samples, 
+guidance, and hints on using and configuring the library.
 
 ## Production Deployment
 
@@ -305,7 +371,149 @@ the configuration. This is done by updating the SPFx config/config.js to include
 Here we are using the public CDN but the URL can be internal or any location you would like to use. Be sure to update the 
 version number in the url to match the version you want.
 
+## Improving the Example - Mock Data
+
+Ideally the sample will work in both the local workbench as well as the SharePoint hosted. To enable this we need to mock our ViewModel and make an update to the web part code as outlined below.
+
+### Mock ViewModel
+
+Add a new file named MockSpPnPjsExampleViewModel.ts along side the other web part files, then update the content to match the below. This will provide the same set of functionality but does not 
+rely on SharePoint being available and will work in the local environment.
+
+```TypeScript
+import * as ko from 'knockout';
+import styles from './SpPnPjsExample.module.scss';
+import { ISpPnPjsExampleWebPartProps } from './ISpPnPjsExampleWebPartProps';
+import pnp, { List, ListEnsureResult, ItemAddResult } from "sp-pnp-js";
+import { ISpPnPjsExampleBindingContext, OrderListItem } from './SpPnPjsExampleViewModel';
+
+export default class MockSpPnPjsExampleViewModel {
+
+    public description: KnockoutObservable<string> = ko.observable('');
+    public newItemTitle: KnockoutObservable<string> = ko.observable('');
+    public newItemNumber: KnockoutObservable<string> = ko.observable('');
+    public items: KnockoutObservableArray<OrderListItem> = ko.observableArray([]);
+
+    public labelClass: string = styles.label;
+    public helloWorldClass: string = styles.helloWorld;
+    public containerClass: string = styles.container;
+    public rowClass: string = `ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`;
+    public buttonClass: string = `ms-Button ${styles.button}`;
+
+    constructor(bindings: ISpPnPjsExampleBindingContext) {
+        this.description(bindings.description);
+
+        // When web part description is updated, change this view model's description.
+        bindings.shouter.subscribe((value: string) => {
+            this.description(value);
+        }, this, 'description');
+
+        // call the load the items
+        this.getItems().then(items => {
+
+            this.items(items);
+        });
+    }
+
+    /**
+     * Gets the items from the list
+     */
+    private getItems(): Promise<OrderListItem[]> {
+        return Promise.resolve([{
+            Id: 1,
+            Title: "Mock Item 1",
+            OrderNumber: "12345"
+        },
+        {
+            Id: 2,
+            Title: "Mock Item 2",
+            OrderNumber: "12345"
+        },
+        {
+            Id: 3,
+            Title: "Mock Item 3",
+            OrderNumber: "12345"
+        }]);
+    }
+
+    /**
+     * Adds an item to the list
+     */
+    public addItem(): void {
+
+        if (this.newItemTitle() !== "" && this.newItemNumber() !== "") {
+
+            // add the new item to the display
+            this.items.push({
+                Id: this.items.length,
+                OrderNumber: this.newItemNumber(),
+                Title: this.newItemTitle(),
+            });
+
+            // clear the form
+            this.newItemTitle("");
+            this.newItemNumber("");
+        }
+    }
+
+    /**
+     * Deletes an item from the list
+     */
+    public deleteItem(data): void {
+
+        if (confirm("Are you sure you want to delete this item?")) {
+            this.items.remove(data);
+        }
+    }
+}
+```
+### Update Webpart
+
+Finally we need to update the webpart to use the mock data when appropriate, to do so start by opening the SpPnPjsExampleWebPart.ts file. Start by importing the mock ViewModel web just created.
+
+```TypeScript
+import MockSpPnPjsExampleViewModel from './MockSpPnPjsExampleViewModel';
+```
+Then locate the _registerComponent method and update it as shown below.
+
+```TypeScript
+private _registerComponent(tagName: string): void {
+
+  if (Environment.type === EnvironmentType.Local) {
+    console.log("here I am.")
+    ko.components.register(
+      tagName,
+      {
+        viewModel: MockSpPnPjsExampleViewModel,
+        template: require('./SpPnPjsExample.template.html'),
+        synchronous: false
+      }
+    );
+  } else {
+    ko.components.register(
+      tagName,
+      {
+        viewModel: SpPnPjsExampleViewModel,
+        template: require('./SpPnPjsExample.template.html'),
+        synchronous: false
+      }
+    );
+  }
+}
+```
+Finally type gulp serve in the console to bring up the local workbench, which now will work with the mock data. (If you already have the server running stop it using Ctrl+C and then restart it)
+
+```sh
+gulp serve
+```
+
+![Project as it appears running in the local workbench with mock data](../../../../images/sp-pnp-js-guide-with-mock-data.png)
+
+
+## Download Example
+
+Remember you can find the full sample.
+
 ## Provide Feedback / Report Issues
 
-If you have any feedback or need to report as issue with sp-pnp-js please use the [issues list](https://github.com/SharePoint/PnP-JS-Core/issues) in that repo, not the 
-main SPFx repo.
+If you have any feedback or need to report as issue with sp-pnp-js please use the [issues list](https://github.com/SharePoint/PnP-JS-Core/issues) in that repo.
