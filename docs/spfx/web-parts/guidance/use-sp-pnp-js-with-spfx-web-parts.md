@@ -4,7 +4,7 @@ You may opt to use the [sp-pnp-js](https://www.npmjs.com/package/sp-pnp-js) libr
 provides a fluent API to make building your REST queries intuitive and supports batching and caching. You can learn more on the [project's homepage](https://github.com/SharePoint/PnP-JS-Core) 
 which has links to documentation, samples, and other resources to help you get started.
 
-You can download the full source for this article from the samples site.
+You can download the [full source](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/knockout-sp-pnp-js) for this article from the samples site.
 
 ## Setup your Environment
 
@@ -510,9 +510,9 @@ gulp serve
 ![Project as it appears running in the local workbench with mock data](../../../../images/sp-pnp-js-guide-with-mock-data.png)
 
 
-## Download Example
+## Download Full Example Code
 
-Remember you can find the full sample.
+Remember you can find the full sample [here](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/knockout-sp-pnp-js).
 
 ## Provide Feedback / Report Issues
 
