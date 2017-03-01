@@ -28,7 +28,7 @@ First release of the SharePoint Framework will contain support for client-side w
 
 - The same tool chain and deployment model as client side web parts.
 - Derive from a strongly typed base class wherever possible rather than manipulating the page DOM directly.
-- Replacing custom actions and JSLinks with "Code Parts"
+- Replacing custom actions and JSLinks with SharePoint Framework-based extensions
 - Work with NoScript via tenant app catalog
 - Work in site collection app catalog
 - PnP community driven migration best practices and tools
