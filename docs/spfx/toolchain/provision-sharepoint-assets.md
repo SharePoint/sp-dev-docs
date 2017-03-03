@@ -205,6 +205,7 @@ In order to include the XML files, you will need to first define the feature con
       "title": "hello-world-client-side-solution",
       "description": "hello-world-client-side-solution",
       "id": "d46cd9d6-87fc-473b-a4c0-db9ad9162b64",
+      "version": "1.1.0.0",
       "assets": {        
         "elementManifests": [
           "elements.xml"
