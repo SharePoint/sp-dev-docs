@@ -1,7 +1,5 @@
 # Use existing JavaScript libraries in SharePoint Framework client-side web parts
 
-> Note. This article has not yet been verified with SPFx GA version, so you might have challenges on making this work as such with the latest release.
-
 When building client-side web parts on the SharePoint Framework you can benefit from using existing JavaScript libraries to build powerful solutions. There are however some considerations that you should take into account to ensure that your web parts won't negatively impact the performance of SharePoint pages that they are being used on.
 
 ## Reference existing libraries as packages
@@ -12,21 +10,22 @@ The most common way of referencing existing JavaScript libraries in SharePoint F
 npm install angular --save
 ```
 
-Next, to use Angular with TypeScript, you would install typings using **tsd**:
+Next, to use Angular with TypeScript, you would install typings using **npm**:
 
 ```sh
-tsd install angular --save
+npm install @types/angular --save-dev
 ```
 
 Finally, you would reference Angular in your web part using the `import` statement:
 
 ```ts
+import { Version } from '@microsoft/sp-core-library';
 import {
   BaseClientSideWebPart,
-  IPropertyPaneSettings,
-  IWebPartContext,
+  IPropertyPaneConfiguration,
   PropertyPaneTextField
-} from '@microsoft/sp-client-preview';
+} from '@microsoft/sp-webpart-base';
+import { escape } from '@microsoft/sp-lodash-subset';
 
 import styles from './HelloWorld.module.scss';
 import * as strings from 'helloWorldStrings';
@@ -35,11 +34,6 @@ import { IHelloWorldWebPartProps } from './IHelloWorldWebPartProps';
 import * as angular from 'angular';
 
 export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
-
-  public constructor(context: IWebPartContext) {
-    super(context);
-  }
-
   public render(): void {
     this.domElement.innerHTML = `
       <div class="${styles.helloWorld}">
@@ -81,10 +75,10 @@ A better approach, to leverage existing libraries in SharePoint Framework client
 
 Referencing existing JavaScript libraries in the SharePoint Framework is easy and doesn't require any specific changes in the code. Because the library is loaded on runtime from the specified URL, it doesn't need to be installed as a package in the project.
 
-Using Angular as an example, in order to reference it as an external resource in your client-side web part, you start by installing its TypeScript typings using **tsd**:
+Using Angular as an example, in order to reference it as an external resource in your client-side web part, you start by installing its TypeScript typings using **npm**:
 
 ```sh
-tsd install angular --save
+npm install @types/angular --save-dev
 ```
 
 Next, in the **config/config.json** file, to the **externals** property you add the following entry:
@@ -108,13 +102,6 @@ The complete **config/config.json** file would then look similar to:
     }
   ],
   "externals": {
-    "@microsoft/sp-client-base": "node_modules/@microsoft/sp-client-base/dist/sp-client-base.js",
-    "@microsoft/sp-client-preview": "node_modules/@microsoft/sp-client-preview/dist/sp-client-preview.js",
-    "@microsoft/sp-lodash-subset": "node_modules/@microsoft/sp-lodash-subset/dist/sp-lodash-subset.js",
-    "office-ui-fabric-react": "node_modules/office-ui-fabric-react/dist/office-ui-fabric-react.js",
-    "react": "node_modules/react/dist/react.min.js",
-    "react-dom": "node_modules/react-dom/dist/react-dom.min.js",
-    "react-dom/server": "node_modules/react-dom/dist/react-dom-server.min.js",
     "angular": {
       "path": "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js",
       "globalName": "angular"
@@ -129,12 +116,13 @@ The complete **config/config.json** file would then look similar to:
 Finally, you reference Angular in your web part, just like you did previously:
 
 ```ts
+import { Version } from '@microsoft/sp-core-library';
 import {
   BaseClientSideWebPart,
-  IPropertyPaneSettings,
-  IWebPartContext,
+  IPropertyPaneConfiguration,
   PropertyPaneTextField
-} from '@microsoft/sp-client-preview';
+} from '@microsoft/sp-webpart-base';
+import { escape } from '@microsoft/sp-lodash-subset';
 
 import styles from './HelloWorld.module.scss';
 import * as strings from 'helloWorldStrings';
@@ -143,11 +131,6 @@ import { IHelloWorldWebPartProps } from './IHelloWorldWebPartProps';
 import * as angular from 'angular';
 
 export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
-
-  public constructor(context: IWebPartContext) {
-    super(context);
-  }
-
   public render(): void {
     this.domElement.innerHTML = `
       <div class="${styles.helloWorld}">
@@ -191,13 +174,13 @@ Some organizations don't allow access to public CDNs from the corporate network.
 
 ## JavaScript libraries formats
 
-Different JavaScript libraries are built and packaged in a different way. Some are packaged as modules while others are plain scripts that run in the global scope (these scripts are often referred to as non-AMD scripts). When loading JavaScript libraries from a URL, how you register an external script in a SharePoint Framework project depends on the format of the script. There are multiple module formats, such as AMD, UMD or CommonJS but the only thing that you have to know is if the particular script is a module or not.
+Different JavaScript libraries are built and packaged in a different way. Some are packaged as modules while others are plain scripts that run in the global scope (these scripts are often referred to as non-module scripts). When loading JavaScript libraries from a URL, how you register an external script in a SharePoint Framework project depends on the format of the script. There are multiple module formats, such as AMD, UMD or CommonJS but the only thing that you have to know is if the particular script is a module or not.
 
 When registering scripts packaged as modules the only thing that you have to specify, is the URL where the particular script should be downloaded from. Dependencies to other scripts are handled already inside the script's module construct.
 
-Non-AMD scripts on the other hand require at minimum the URL from where the script should be downloaded and the name of the variable with which the script will be registered in the global scope. If the non-AMD script depends on other scripts, they can be listed as dependencies. To illustrate this, let's have a look at a few examples.
+Non-module scripts on the other hand require at minimum the URL from where the script should be downloaded and the name of the variable with which the script will be registered in the global scope. If the non-module script depends on other scripts, they can be listed as dependencies. To illustrate this, let's have a look at a few examples.
 
-Angular v1.x is a non-AMD script. You register it as an external resource in a SharePoint Framework project by specifying its URL and the name of the global variable it should register with:
+Angular v1.x is a non-module script. You register it as an external resource in a SharePoint Framework project by specifying its URL and the name of the global variable it should register with:
 
 ```json
 "angular": {
@@ -218,9 +201,9 @@ jQuery is an AMD script. To register it you could simply use:
 
 ```json
 "jquery": "https://code.jquery.com/jquery-2.2.4.js"
-``` 
+```
 
-Imagine now, that you wanted to use jQuery with a jQuery plugin that itself is distributed as a non-AMD script. If you registered both scripts using:
+Imagine now, that you wanted to use jQuery with a jQuery plugin that itself is distributed as a non-module script. If you registered both scripts using:
 
 ```json
 "jquery": "https://code.jquery.com/jquery-2.2.4.js",
@@ -232,9 +215,9 @@ Imagine now, that you wanted to use jQuery with a jQuery plugin that itself is d
 
 loading the web part would very likely result in an error: there is a chance that both scripts would be loaded in parallel and the plugin wouldn't be able to register itself with jQuery.
 
-![Error when trying to load a web part using a non-AMD jQuery plugin](../../../../images/external-scripts-non-amd-no-deps-error.png)
+![Error when trying to load a web part using a non-module jQuery plugin](../../../../images/external-scripts-non-amd-no-deps-error.png)
 
-As mentioned before, SharePoint Framework allows you to specify dependencies for non-AMD plugins. These dependencies are specified using the **globalDependencies** property:
+As mentioned before, SharePoint Framework allows you to specify dependencies for non-module plugins. These dependencies are specified using the **globalDependencies** property:
 
 ```json
 "jquery": "https://code.jquery.com/jquery-2.2.4.js",
@@ -247,11 +230,11 @@ As mentioned before, SharePoint Framework allows you to specify dependencies for
 
 Each dependency specified in the **globalDependencies** property must point to another dependency in the **externals** section of the **config/config.json** file.
 
-If you would try to build the project now, you would get another error, this time stating that you can't specify a dependency to a non-AMD script.
+If you would try to build the project now, you would get another error, this time stating that you can't specify a dependency to a non-module script.
 
-![Error while trying to build a SharePoint Framework with a non-AMD script specifying a dependency to a script that is a module](../../../../images/external-scripts-non-amd-deps-error.png)
+![Error while trying to build a SharePoint Framework with a non-module script specifying a dependency to a script that is a module](../../../../images/external-scripts-non-amd-deps-error.png)
 
-To solve this problem, all you need to do is to register jQuery as a non-AMD module:
+To solve this problem, all you need to do is to register jQuery as a non-module script:
 
 ```json
 "jquery": {
@@ -269,11 +252,11 @@ This way you specify that the **simpleWeather** script should be loaded after jQ
 
 > Note how the entry for registering jQuery uses **jquery** for the external resource name but **jQuery** as the global variable name. The name of the external resource is the name that you use in the `import` statements in your code. This is also the name that must match TypeScript typings. The global variable name, specified using the **globalName** property, is the name known to other scripts like plugins built on top of the library. While for some libraries these names might be the same, it's not required and you should carefully check that you are using correct names to avoid any problems. 
 
-## Non-AMD scripts considerations
+## Non-module scripts considerations
 
-Many JavaScript libraries and scripts developed in the past are distributed as non-AMD scripts. While the SharePoint Framework supports loading non-AMD scripts, you should strive to avoid using them whenever possible.
+Many JavaScript libraries and scripts developed in the past are distributed as non-module scripts. While the SharePoint Framework supports loading non-module scripts, you should strive to avoid using them whenever possible.
 
-Non-AMD scripts are registered in the global scope of the page: script loaded by one web part is available to all other web parts on the page. If you had two web parts using different versions of jQuery, both loaded as non-AMD scripts, the web part that loaded the last would overwrite all previously registered versions of jQuery. As you can imagine, this could lead to unpredictable results and very hard to debug issues that would occur only in certain scenarios - only with other web parts using a different version of jQuery on the page and only when they load in particular order. The module architecture solves this problem by isolating scripts and preventing them from affecting each other.
+Non-module scripts are registered in the global scope of the page: script loaded by one web part is available to all other web parts on the page. If you had two web parts using different versions of jQuery, both loaded as non-module scripts, the web part that loaded the last would overwrite all previously registered versions of jQuery. As you can imagine, this could lead to unpredictable results and very hard to debug issues that would occur only in certain scenarios - only with other web parts using a different version of jQuery on the page and only when they load in particular order. The module architecture solves this problem by isolating scripts and preventing them from affecting each other.
 
 ## When you should consider bundling
 
