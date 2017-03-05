@@ -5,7 +5,7 @@ To build and deploy client-side web parts using the preview release of the Share
 ## Sign up for an Office 365 tenant
 If you already have an Office 365 tenant, see [create your app catalog site](#create-app-catalog-site).
 
-If you don't have one, you can create a trial tenant or for example sign up for the [Office Developer Program](https://profile.microsoft.com/RegSysProfileCenter/wizardnp.aspx?wizid=14b845d0-938c-45af-b061-f798fbb4d170&lcid=1033). You will receive a welcome mail with a link to sign up for an Office 365 Developer Tenant. 
+If you don't have one, you can create a trial tenant or for example sign up for the [Office Developer Program](https://profile.microsoft.com/RegSysProfileCenter/wizardnp.aspx?wizid=7a6e3d71-b057-49cc-b2aa-158ff23432f3&lcid=1033&culture=en-us&dir=LTR). You will receive a welcome mail with a link to sign up for an Office 365 Developer Tenant. 
 
 >**Note:** Make sure that you are signed out of any existing Office 365 tenants before you sign up.
 
