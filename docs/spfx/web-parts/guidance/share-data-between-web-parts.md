@@ -64,6 +64,8 @@ To improve the loading time of the page and decrease the traffic on your network
 
 ## Store the retrieved data in a globally-scoped variable
 
+> Note. globally-scoped variables are generally a bad idea. But for illustration and simplicity purposes, we are using them here as "demo code". There are many patterns around this issue, including importing/exporting modules using TypeScript concepts.
+
 Web parts built using the SharePoint Framework are isolated into separate modules. This way, one web part cannot directly access data and properties stored by another web part. One way to overcome this design characteristic and make data loaded by one web part available to other web parts on the page, is to assign the retrieved data to a globally-scoped variable.
 
 Considering the data access service mentioned above, it would be changed as follows:
