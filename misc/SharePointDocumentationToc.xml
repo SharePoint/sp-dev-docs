@@ -26,6 +26,7 @@
 				<Item text="Deploy to a CDN" url="spfx/web-parts/get-started/deploy-web-part-to-cdn" SEODescription="Deploy your SharePoint client-side web part assets to a CDN instead of using a local host." />
 				<Item text="Add jQueryUI Accordion" url="spfx/web-parts/get-started/add-jqueryui-accordion-to-web-part" SEODescription="Add the jQueryUI Accordian to your SharePoint client-side web part project." />
 				<Item text="Use Office UI Fabric React components" url="spfx/web-parts/get-started/use-fabric-react-components" SEODescription="Build a SharePoint client-side web part that uses the DocumentCard Office UI Fabric component." />
+				<Item text="Provisioning assets from solution" url="spfx/web-parts/get-started/provision-sp-assets-from-package" SEODescription="How to use SharePoint Framework to provision SharePoint assets to sites when solution is installed." />
 			</Item>
 			<Item text="Basics" url="spfx/web-parts/basics" SEODescription="">
 				<Item text="Design considerations" url="spfx/web-parts/basics/design-considerations-for-web-parts" SEODescription="Design your SharePoint client-side web parts to use Office UI Fabric React components, be responsive, and handle publish and edit modes." />
