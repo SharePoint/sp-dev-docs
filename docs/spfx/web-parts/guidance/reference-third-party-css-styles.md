@@ -1,7 +1,5 @@
 # Reference third-party CSS styles in SharePoint Framework web parts
 
-> Note. This article has not yet been verified with SPFx GA version, so you might have challenges on making this work as such with the latest release.
-
 There are many third-party libraries that you can leverage to build rich SharePoint Framework client-side web parts. In addition to scripts, these libraries often contain additional assets such as stylesheets. This article shows two different approaches to include third-party CSS styles in web parts and how each approach affects the resulting web part bundle. The example web part discussed in this article uses jQuery and jQuery UI to display an accordion.
 
 ![jQuery UI accordion rendered by a SharePoint Framework client-side web part](../../../../images/thirdpartycss-accordion-styled.png)
@@ -34,9 +32,9 @@ When prompted, enter the following values:
 
 - **js-thirdpartycss** as your solution name
 - **Use the current folder** for the location to place the files
+- **no javaScript web framework** as the starting point to build the web part
 - **jQuery accordion** as your web part name
 - **Shows jQuery accordion** as your web part description
-- **no javaScript web framework** as the starting point to build the web part
 
 ![The SharePoint Framework Yeoman generator with the default choices](../../../../images/thirdpartycss-yeoman.png)
 
@@ -176,7 +174,7 @@ The accordion should be displayed correctly and branded using the standard jQuer
 
 The easiest way to use third-party libraries and their resources is by including them in the generated web part bundle. In this approach Webpack will automatically resolve all dependencies between the different libraries and will ensure that all scripts are loaded in the correct order. The downside of this approach is that all referenced resources are loaded separately with every web part. So if you have multiple web parts in your project, all using jQuery UI, each web part will load its own copy of jQuery UI and slow down the page.
 
-To see the impact of the libraries on the size of the generated web part bundle, after bundling the project open the **./dist/js-thirdpartycss.stats.html** file in the web browser. Move your mouse over the chart and you will see, for example, that the jQuery UI CSS files referenced by the web part make up over 6% of the total web part bundle size.
+To see the impact of the libraries on the size of the generated web part bundle, after bundling the project open the **./temp/stats/js-thirdpartycss.stats.html** file in the web browser. Move your mouse over the chart and you will see, for example, that the jQuery UI CSS files referenced by the web part make up over 6% of the total web part bundle size.
 
 ![jQuery UI CSS highlighted in the chart illustrating the size of the different pieces of the generated web part bundle](../../../../images/thirdpartycss-jquery-ui-css-size.png)
 
@@ -289,4 +287,4 @@ The accordion should be displayed correctly and branded using the standard jQuer
 
 ### Analyze the contents of the generated web part bundle loading resources from URL
 
-After building the project in the web browser open the **./dist/js-thirdpartycss.stats.html** file. Notice how the overall bundle is significantly smaller (19KB compared to over 300KB when including jQuery and jQuery UI in the bundle) and how jQuery and jQuery UI are not listed in the chart since they are loaded at runtime.
+After building the project in the web browser open the **./temp/stats/js-thirdpartycss.stats.html** file. Notice how the overall bundle is significantly smaller (7KB compared to over 300KB when including jQuery and jQuery UI in the bundle) and how jQuery and jQuery UI are not listed in the chart since they are loaded at runtime.
