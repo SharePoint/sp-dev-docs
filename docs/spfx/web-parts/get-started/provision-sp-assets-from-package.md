@@ -41,11 +41,11 @@ When prompted:
 
 The next set of prompts will ask for specific information about your web part:
 
-* Accept the default **No javascript web framework** option for the framework and choose **Enter** to continue.
+* Accept the default **No JavaScipt web framework** option for the framework and choose **Enter** to continue.
 * Type **AssetDeployment** for the web part name and choose **Enter**.
 * Enter **AssetDeployment Web Part** as the description of the web part and choose **Enter**. 
 
-At this point, Yeoman will install the required dependencies and scaffold the solution files. This might take a few minutes. Yeoman will scaffold the project to include your **jQueryWebPart** web part as well.
+At this point, Yeoman will install the required dependencies and scaffold the solution files. This might take a few minutes. Yeoman will scaffold the project to include your **AssetDeployment** web part as well.
 
 In the console, type the following to open the web part project in Visual Studio Code:
 
@@ -55,7 +55,7 @@ code .
 
 ## Create folder structure for your SharePoint assets
 
-We'll first need to create a **assets** folder where we will place all feature framework assets used to provision SharePoint structures when package is installed.
+We'll first need to create an **assets** folder where we will place all feature framework assets used to provision SharePoint structures when package is installed.
 
 * Create folder called **sharepoint** to the root of the solution
 * Create folder called **assets** as a sub folder for the just created **sharepoint** folder
@@ -139,7 +139,7 @@ Things to note about the pasted xml structure:
 > More details on the used schema structures can be found from [Feature Framework documentation](https://msdn.microsoft.com/en-us/library/office/ms460318(v=office.14).aspx) at MSDN.
 
 ### Add schema.xml file for defining list structure
-In previous step we referenced **schema.xml** file in the **CustomSchema** attribute of the **ListInstance** element, so we'll need to include that in our package. 
+In previous step, we referenced **schema.xml** file in the **CustomSchema** attribute of the **ListInstance** element, so we'll need to include that in our package. 
 
 Create a new file inside the **sharepoint\assets** folder named as **schema.xml**
 
@@ -237,10 +237,10 @@ To ensure that our newly added Feature Framework files are taken into account wh
 Things to note in the added json definitions:
 * You can technically have multiple features in the package since **features** is a collection, which is not however recommended
 * **elements.xml** is referenced under elementManifests, so that it's packaged properly for the actual feature xml structure as element manifest file
-* You can have multiple element.xml files in the definition and they would be executed in the order they are mentioned in the JSON definition. Typically you should avoid usage of multiple element.xml since it adds unnecessary complexity. You can define all needed assets in single element.xml file
+* You can have multiple element.xml files in the definition and they would be executed in the order they are mentioned in the JSON definition. Typically, you should avoid usage of multiple element.xml since it adds unnecessary complexity. You can define all needed assets in single element.xml file
 
 ## Deploy and test asset provisioning
-Now you are ready to deploy the solution to SharePoint. Since in this case we are provisioning assets directly to the SharePoint sites when the solution is installed, you cannot test the capability in local or in on-line workbench.
+Now you are ready to deploy the solution to SharePoint. Since in this case we are provisioning assets directly to the SharePoint sites when the solution is installed, you cannot test the capability in local or in online workbench.
 
 In the console window, enter the following command to package your client-side solution that contains the web part, so that we get the basic structure ready for packaging:
 
@@ -273,7 +273,7 @@ Upload or drag and drop the asset-deployment-webpart.sppkg located in the `share
 
 Go to the site where you want to test SharePoint asset provisioning. This could be any site collection in the tenant where you deployed this solution package. 
 
-Chose the gears icon on the topi nav bar on teh right and choose **Add an app** to go to your Apps page.
+Chose the gears icon on the top nav bar on the right and choose **Add an app** to go to your Apps page.
 
 In the **Search** box, enter **deployment** and choose **Enter** to filter your apps. 
 
@@ -340,7 +340,7 @@ Next we'll need to update both solution version and the feature version responsi
 
 Open **package-solution.json** from the config folder and update version values for both solution and feature to "2.0.0.0". We will also need to include **elements-v2.xml** under the elementManifest section and also to include upgradeActions element with a pointer to just created **upgrade-actions-v2.xml** file. 
 
-Here's a complete **package-solution.json** file with needed changes. Notice that identifiers for your solution could be slightly different, so concentrate on adding only the missign pieces.
+Here's a complete **package-solution.json** file with needed changes. Notice that identifiers for your solution could be slightly different, so concentrate on adding only the missing pieces.
 
 ```json
 {
