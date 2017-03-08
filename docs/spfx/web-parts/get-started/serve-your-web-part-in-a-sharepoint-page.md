@@ -62,9 +62,8 @@ helloworld-webpart.sppkg
 The package uses SharePoint Feature to package your web part. By default, the gulp task creates the following:
 
 * A feature for your web part.
-* A .webpart file for your web part, which is an XML file that describes the Web Part.
 
-You can view the raw package contents in the **sharepoint** folder. 
+You can view the raw package contents in the **sharepoint/debug** folder. 
 
 The contents are then packaged into an **.sppkg** file. The package format is very similar to a SharePoint add-ins package and uses Microsoft Open Packaging Conventions to package your solution. 
 

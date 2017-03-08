@@ -118,6 +118,33 @@ In this example, with the storage account created earlier, this file will look l
 
 Save the file.
 
+## Configuring web part to load from CDN
+
+In order for the web part to load from your CDN, you will need to tell it your CDN path.
+
+Switch to Visual Studio Code and open the **write-manifests.json** from the **config** folder.
+
+Enter your CDN base path for the **cdnBasePath** property.
+
+```json
+{
+  "cdnBasePath": "<!-- PATH TO CDN -->"
+}
+```
+
+In this example, with the CDN profile created earlier, this file will look like:
+
+```json
+{
+  "cdnBasePath": "https://spfxsamples.azureedge.net/helloworld-webpart/"
+}
+```
+
+>**Note:** The CDN base path is the CDN endpoint with the BLOB container.
+
+Save the file.
+
+
 ## Prepare web part assets to deploy
 
 Before uploading the assets to CDN, you need to build them.
@@ -150,32 +177,6 @@ gulp deploy-azure-storage
 ```
 
 This will deploy the web part bundle along with other assets like JavaScript and CSS files to the CDN.
-
-### Configuring web part to load from CDN
-
-In order for the web part to load from your CDN, you will need to tell it your CDN path.
-
-Switch to Visual Studio Code and open the **write-manifests.json** from the **config** folder.
-
-Enter your CDN base path for the **cdnBasePath** property.
-
-```json
-{
-  "cdnBasePath": "<!-- PATH TO CDN -->"
-}
-```
-
-In this example, with the CDN profile created earlier, this file will look like:
-
-```json
-{
-  "cdnBasePath": "https://spfxsamples.azureedge.net/helloworld-webpart/"
-}
-```
-
->**Note:** The CDN base path is the CDN endpoint with the BLOB container.
-
-Save the file.
 
 ## Deploy the updated package
 
