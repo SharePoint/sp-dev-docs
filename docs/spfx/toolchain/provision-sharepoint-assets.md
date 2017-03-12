@@ -2,6 +2,13 @@
 
 At times, you may need to provision a SharePoint list or a document library along with your client-side solution package so that that list or library is available for your client-side components, such as web parts. SharePoint Framework toolchain allows you to package and deploy SharePoint items with your client-side solution package. These items are then provisioned when the client-side solution is installed on a site. 
 
+You can also find details on the provisioning options from a SharePoint PnP webcast available from [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=r-UdJhhHlEQ&list=PLR9nK3mnD-OUnJytlXlO84fQnYt50iTmS). 
+
+<a href="https://www.youtube.com/watch?v=r-UdJhhHlEQ&list=PLR9nK3mnD-OUnJytlXlO84fQnYt50iTmS">
+<img src="../../../images/spfx-webcast-youtube-provision-feature-elements.png" alt="Screenshot of the YouTube video player for this tutorial" />
+</a>
+
+
 ## Provisioning items using JavaScript code
 
 While it is possible to create SharePoint items using JavaScript code in your component, such as web parts, it is limited to context of the current user using that component. If the user doesn't have sufficient permissions to create or modify SharePoint items, the JavaScript code will not provision those items. In such cases, when you want to provision SharePoint items in an elevated context, you will need to package and deploy the items along with your solution package.
@@ -262,6 +269,8 @@ You may include new SharePoint items or update existing SharePoint items when yo
 
 The `upgradeActions` JSON object array in the `package-solution.json` references the feature XML file(s) associated with the upgrade actions for your feature. At the least, an upgrade action file will define the element manifest XML file that will be executed when upgrading the feature. 
 
+When you are upgrading a SharePoint Framework solution, you will need to update also version attributes for both solution and feature, where the upgrade actions have been included. Solution version increase will indicate SharePoint and end users that there is a new version of the package available. Feature element version increase will ensure that the tasks defined in the upgrade actions are being processed as part of the solution upgrade. 
+
 Below is an example of an upgrade action file that applies an element manifest file during the upgrade:
 
 ```xml
@@ -307,3 +316,20 @@ Adds a new element to an existing Feature. When a Feature is upgraded, provision
 **VersionRange**
 
 Specifies a version range to which specified upgrade actions apply.
+
+## Additional resources
+<a name="bk_addresources"> </a>
+
+-  [SharePoint PnP Webcast - Provisioning SharePoint assets for your SPFx solution](https://www.youtube.com/watch?v=r-UdJhhHlEQ&list=PLR9nK3mnD-OUnJytlXlO84fQnYt50iTmS)
+    
+-  [Tutorial - Provisioning SharePoint assets from your SharePoint client-side web part](https://dev.office.com/sharepoint/docs/spfx/web-parts/get-started/provision-sp-assets-from-package)
+
+-  [SharePoint Building Block: Features](https://msdn.microsoft.com/en-us/library/ee537350.aspx)
+
+-  [Feature Framework - UpgradeAcctions element usage](https://msdn.microsoft.com/en-us/library/office/ee537575.aspx)
+
+-  [Feature Framework - Field Element](https://msdn.microsoft.com/en-us/library/aa979575.aspx)
+
+-  [Feature Framework - ContentType Element](https://msdn.microsoft.com/en-us/library/aa544268.aspx).aspx)
+
+-  [Feature Framework - ListInstance Element](https://msdn.microsoft.com/en-us/library/office/ms476062.aspx)
