@@ -21,7 +21,7 @@ Create a new project directory in your favorite location:
 md documentcardexample-webpart
 ```
     
-Got to the project directory:
+Go to the project directory:
 
 ```
 cd documentcardexample-webpart
