@@ -1,7 +1,5 @@
 # Call the Microsoft Graph API using OAuth from your web part
 
-> Note. This article has not yet been verified with SPFx GA version, so you might have challenges on making this work as such with the latest release.
-
 You can add lots of great functionality such as email, documents, and calendar to your web part by integrating with the Microsoft Graph. To call APIs on Microsoft Graph you will need to use the Active Directory Authentication Library (ADAL) for JavaScript library and authenticate using the OAuth flow. There are some design considerations and code modifications to make for your web part to use ADAL JS and call Microsoft Graph APIs correctly and securely.
 
 ## Azure Active Directory authorization flows
@@ -50,12 +48,14 @@ After the authentication completes, Azure AD redirects you back to your applicat
 
 You can overcome the limitations in ADAL JS to implement OAuth successfully in your SharePoint Framework client-side web part.
 
+> **Important:** The following guidance is based on ADAL JS v1.0.12. When adding ADAL JS to your SharePoint Framework projects, ensure that you're installing ADAL JS v1.0.12 or the guidance mentioned in this article will not work as expected.
+
 ### Load ADAL JS in your web part
 
 Web parts are built using TypeScript and distributed as AMD modules. Their modular architecture allows you to isolate the different resources used by the web part. ADAL JS is designed to register itself in the global scope, but you can load it in a web part by using the following code:
 
 ```ts
-const AuthenticationContext = require('adal-angular');
+import * as AuthenticationContext from 'adal-angular';
 ```
 
 This statement imports the `AuthenticationContext` class that exposes the ADAL JS functionality for use in web parts. Despite the name of the module, the `AuthenticationContext` class works with every JavaScript library.
@@ -173,7 +173,7 @@ The `popUp` property and the `callback` function are both already implemented in
 Next load the ADAL JS patch, the custom configuration interface, and your configuration object into the main component of your web part.
 
 ```tsx
-const AuthenticationContext = require('adal-angular');
+import * as AuthenticationContext from 'adal-angular';
 import adalConfig from '../AdalConfig';
 import { IAdalConfig } from '../../IAdalConfig';
 import '../../WebPartAuthenticationContext';
