@@ -92,7 +92,7 @@ In this example, you will load jQuery from CDN. You don't need to install the np
 Install the typings for jQuery:
 	
 ```
-tsd install jquery --save
+npm install --save @types/jquery
 ```
 	
 Update the `config.json` in the `config` folder to load jQuery from CDN. Add an entry to the `externals` field:
