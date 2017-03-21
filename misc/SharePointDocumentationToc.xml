@@ -50,7 +50,6 @@
 				<Item text="Migrating Angular applications" url="spfx/web-parts/guidance/migrate-angular-1-x-applications-to-sharepoint-framework" SEODescription="Migrating existing Angular v1.x applications to SharePoint Framework client-side web parts." />
 				<Item text="Localization" url="spfx/web-parts/guidance/localize-web-parts" SEODescription="Localize SharePoint Framework client-side web parts." />
 				<Item text="Call the Microsoft Graph API" url="spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part" SEODescription="Call the Microsoft Graph API from your SharePoint Framework client-side web part using OAuth." />
-				<Item text="Using Office UI Fabric" url="spfx/web-parts/guidance/office-ui-fabric-integration" SEODescription="Using Office UI Fabric Core and Fabric React in SharePoint Framework client-side web parts." />
 			</Item>
 		</Item>
 	</Item>
