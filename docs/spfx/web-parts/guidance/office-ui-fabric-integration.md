@@ -121,21 +121,15 @@ Here are some additional insights on the other approaches which were considered,
 
 **Office UI Fabric Core**
 
-- The web part developer will not be required to do anything explicitly to get the scoping to work.
-- We plan to solve this problem through CSS specificity and descendant selector. The Fabric Core team will ship 
-  multiple copies of Fabric Core css. e.g. fabric-6.css, fabric-6-scoped.css, fabric-6.0.0.css,
-  fabric-6.0.0-scoped.css.
-- All the styles in the scoped css files are inside a descendant selector e.g. "ms-Fabric-core--v6 ms-Icon--list".
-- At compile time tooling will collect the version of the Office UI Fabric Core the web part was built with. This  
-  version can be the one that comes with SPFx. Alternatively, web part developers could take an explicit dependency
-  on a specific version if Office UI Fabric Core in their package.json file.
-- The web part div will be assigned this scope i.e. <div data-sp-webpart class="ms-Fabric-core--v6">
-- The framework will load the specific major version of the Fabric core scoped css file. If the web part is built  
-  with version 6.0.0 of Fabric core css, the framework will download fabric-6-scoped.css at web part load time.
-- The rest of the page will contain unscoped Office UI Fabric Core.
-- This way, as per CSS specificity rules, the scoped CSS take precedence inside the web part div.
-- The whole web part and its contents will allign to a specific version of Office UI Fabric Core the developer has chosen.
-- **Overriding** Fabric Core styles is not supported.  
+The web part developer will not be required to do anything explicitly to get the scoping to work. We plan to solve this problem through CSS specificity and descendant selector. The Fabric Core team will ship multiple copies of Fabric Core css. e.g. `fabric-6.css`, `fabric-6-scoped.css`, `fabric-6.0.0.css`, `fabric-6.0.0-scoped.css`.
+
+All the styles in the scoped css files are inside a descendant selector e.g. "ms-Fabric-core--v6 ms-Icon--list". At compile time tooling will collect the version of the Office UI Fabric Core the web part was built with. This version can be the one that comes with SPFx. Alternatively, web part developers could take an explicit dependency on a specific version if Office UI Fabric Core in their package.json file.
+
+The web part div will be assigned this scope i.e. `<div data-sp-webpart class="ms-Fabric-core--v6">`. The framework will load the specific major version of the Fabric core scoped css file. If the web part is built with version 6.0.0 of Fabric core css, the framework will download fabric-6-scoped.css at web part load time.
+
+The rest of the page will contain unscoped Office UI Fabric Core. This way, as per CSS specificity rules, the scoped CSS take precedence inside the web part div.The whole web part and its contents will allign to a specific version of Office UI Fabric Core the developer has chosen.
+
+**Overriding** Fabric Core styles is not supported.  
 
 ```Javascript
 // Sample of how the scoping would work.
@@ -172,8 +166,9 @@ following example, only ms-Fabric-core--v6 will get applied.
 </div>
 ```
 
-  To explain this with a simpler example,
-  ```HTML
+Here's a more simplistic sample demonstrating the challenge.
+
+```HTML
   <html>
   <head>
   <title>CSS specifity test</title>
