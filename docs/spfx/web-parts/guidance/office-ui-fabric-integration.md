@@ -1,4 +1,4 @@
-# Using Office UI Fabric Core and Fabric React in SPFx web parts
+# Using Office UI Fabric Core and Fabric React in SPFx client-side web parts
 
 Office UI Fabric is the official front-end framework for building experiences in Office 365 and SharePoint. SharePoint provides a seamless integration with Fabric that enables Microsoft to deliver robust and consistent design language across various SharePoint experiences such as modern team sites, modern pages and modern lists. Additionally, we want Office UI Fabric to be available for developers in SharePoint Framework to build custom SharePoint solutions.
 
@@ -36,7 +36,7 @@ Here's a summary of currently supported options to use Office UI Fabric with Sha
 
 > Challenge with Global CSS styles in well explained in the following presentation in the context of React and JSS  - [React CSS in JS](https://speakerdeck.com/vjeux/react-css-in-js).
 
-## How to use Office UI Fabric React in safe ways in your web part
+## How to use Office UI Fabric React in safe way in your web part
 
 Here are recommendations to use Fabric in React based web parts in safe and reliable way. 
 
@@ -49,7 +49,8 @@ Following code snippet shows how to perform static and dynamic linking of librar
 
 ```Javascript
   // This sample demonstrates how static linking should be done for Fabric React components.
-  // Remember to explicitly add a dependency on a specific version of office-ui-fabric-react in your package.json file.
+  // Remember to explicitly add a dependency on a specific version of 
+  // office-ui-fabric-react in your package.json file.
 
   // correct - static linking.
   import { Button } from 'office-ui-fabric-react/lib/Button';
