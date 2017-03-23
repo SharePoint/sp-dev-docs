@@ -14,6 +14,7 @@ First release of the SharePoint Framework will contain support for client-side w
 
 ## Client-side web parts++ and add-ins
 
+- Easy access to Graph API to access user specific information
 - Supporting more complex scenarios and interactions with web parts
     - Part-to-part communication
 	- JS Framework isolation
