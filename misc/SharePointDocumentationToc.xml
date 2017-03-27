@@ -36,6 +36,7 @@
 				<Item text="Notes on solution packaging" url="spfx/web-parts/basics/notes-on-solution-packaging" SEODescription="Understand definition details for files used for packaging web parts in solutions in the SharePoint Framework" />				
 			</Item>
 			<Item text="Guidance" url="spfx/web-parts/guidance" SEODescription="">
+				<Item text="SharePoint Framework solutions governance considerations" url="spfx/web-parts/guidance/governance-considerations" SEODescription="Governance considerations for organizations around SharePoint Framework." />
 				<Item text="Use existing JavaScript libraries" url="spfx/web-parts/guidance/use-existing-javascript-libraries" SEODescription="Best practices for using existing JavaScript libraries in your SharePoint client-side web parts." />
 				<Item text="Reference third-party CSS styles" url="spfx/web-parts/guidance/reference-third-party-css-styles" SEODescription="Reference third party CSS styles in your SharePoint Framework client-side web parts." />
 				<Item text="Using preconfigured entries" url="spfx/web-parts/guidance/simplify-adding-web-parts-with-preconfigured-entries" SEODescription="Simplify adding web parts with preconfigured entries." />
