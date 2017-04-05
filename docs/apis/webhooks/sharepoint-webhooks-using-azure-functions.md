@@ -31,7 +31,7 @@ In our case we want this Azure Function to behave as a SharePoint webhook servic
 
 You can achieve above by replacing the default code by below code (please enter your storage account connection string and update the queue name if you're using a different one):
 
-```C#
+```
 #r "Newtonsoft.Json"
 #r "Microsoft.WindowsAzure.Storage"
 
