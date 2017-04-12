@@ -15,7 +15,9 @@ You can also follow these steps by watching the video on the [SharePoint PnP You
 </a>
 
 
-## Create a new web part project
+### With a new webpart project
+
+Make sure you're using the latest version of . Run `yo` and follow the prompts to create a skeleton project,.
 
 Create a new project directory in your favorite location:
 
@@ -29,7 +31,7 @@ Go to the project directory:
 cd documentcardexample-webpart
 ```
 
-Create a new web part by running the Yeoman SharePoint generator:
+Make sure you have the latest version of `@microsoft/generator-sharepoint` installed and create a new web part by running the Yeoman SharePoint generator:
 
 ```
 yo @microsoft/sharepoint
@@ -94,7 +96,7 @@ export default class DocumentCardExample extends React.Component<IDocumentCardEx
 }
 ```
 
-## Add an Office UI Fabric component
+### Add an Office UI Fabric component
 
 The *new modern experiences* in SharePoint use Office UI Fabric and Office UI Fabric React as the default front-end framework for building the new experiences. As a result, SharePoint Framework ships with a default version of Office UI Fabric and Fabric React which matches the version available in SharePoint. This ensures the web part you are building uses the right version of the Fabric styles and components when deployed to SharePoint. 
 
@@ -170,7 +172,7 @@ require('set-webpack-public-path!');
 	
 Save the file.
 
-## Copy the image assets
+### Copy the image assets
 
 Copy the following images to your **src\webparts\documentCardExample** folder:
 
@@ -178,7 +180,7 @@ Copy the following images to your **src\webparts\documentCardExample** folder:
 * [icon-ppt.png](https://github.com/SharePoint/sp-dev-docs/tree/master/assets/icon-ppt.png)
 * [document-preview.png](https://github.com/SharePoint/sp-dev-docs/tree/master/assets/document-preview.png)
 
-## Preview the web part in workbench
+### Preview the web part in workbench
 
 In the console, type the following to preview your web part in workbench:
 	
@@ -190,3 +192,7 @@ In the toolbox, select your `DocumentCardExample` web part to add:
 	
 ![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../../images/fabric-components-doc-card-view-ex.png)
 
+
+## Updating an existing project
+
+In your project's `package.json`, update the `@microsoft/sp-build-web` dependency to at least version 1.0.1, delete your project's `node_modules` directory, and run `npm install`.
