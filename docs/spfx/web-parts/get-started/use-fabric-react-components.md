@@ -1,6 +1,6 @@
 # Use Office UI Fabric React components in your SharePoint client-side web part
 
-#### **Important:** You must upgrade your project to use @microsoft/sp-build-web@1.0.1 or later to use Office UI Fabric React.
+#### **Important:** You must upgrade existing projects to use @microsoft/sp-build-web@1.0.1 or later to use Office UI Fabric React. See instructions at the end of this article.
 
 This article describes how to build a simple web part that uses the DocumentCard component of [Office UI Fabric React](https://github.com/OfficeDev/office-ui-fabric-react). Office UI Fabric React is the front-end framework for building experiences for Office and Office 365. Fabric React includes a robust collection of responsive, mobile-first components that make it easy for you to create web experiences using the Office Design Language.
 
@@ -15,7 +15,7 @@ You can also follow these steps by watching the video on the [SharePoint PnP You
 </a>
 
 
-### With a new webpart project
+## Creating a new Webpart project
 
 Make sure you're using the latest version of . Run `yo` and follow the prompts to create a skeleton project,.
 
@@ -31,7 +31,7 @@ Go to the project directory:
 cd documentcardexample-webpart
 ```
 
-Make sure you have the latest version of `@microsoft/generator-sharepoint` installed and create a new web part by running the Yeoman SharePoint generator:
+Make sure you have the latest version of `@microsoft/generator-sharepoint` installed and create a new webpart by running the Yeoman SharePoint generator:
 
 ```
 yo @microsoft/sharepoint
