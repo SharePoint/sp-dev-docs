@@ -1,5 +1,7 @@
 # Using Office UI Fabric Core and Fabric React in SPFx client-side web parts
 
+#### **Important:** You must upgrade existing projects to use @microsoft/sp-build-web@1.0.1 or later to use Office UI Fabric React. See instructions at the end of this article.
+
 Office UI Fabric is the official front-end framework for building experiences in Office 365 and SharePoint. SharePoint provides a seamless integration with Fabric that enables Microsoft to deliver robust and consistent design language across various SharePoint experiences such as modern team sites, modern pages and modern lists. Additionally, we want Office UI Fabric to be available for developers in SharePoint Framework to build custom SharePoint solutions.
 
 > Integration and usage of Office UI Fabric is still a work in progress. The purpose of this document is to provide a status update to SPFx developers. Very soon we plan to publish a final plan.
@@ -224,3 +226,8 @@ Here's a more simplistic sample demonstrating the challenge.
 ```
 
 **Leakage from unscoped classes** - There is another problem with descendant selectors. Note in the above example, the height and the width styles from the unscoped myButton class are applied to all the buttons. This implies that a change in that style could inadvertently break html using scoped markup. Say for example, for some reason at the app level we decide to make height 0px on the myButton class. That will result in all 3rd party web parts using the myButton class to have a height of 0 i.e. a serious regression in the user experience.
+
+## Updating an existing project
+
+In your project's `package.json`, update the `@microsoft/sp-build-web` dependency to at least version 1.0.1, delete your project's `node_modules` directory, and run `npm install`.
+
