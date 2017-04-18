@@ -15,7 +15,7 @@ You can also follow these steps by watching the video on the [SharePoint PnP You
 </a>
 
 
-## Creating a new Webpart project
+## Creating a new Web Part project
 
 Make sure you're using the latest version of . Run `yo` and follow the prompts to create a skeleton project,.
 
@@ -31,7 +31,7 @@ Go to the project directory:
 cd documentcardexample-webpart
 ```
 
-Make sure you have the latest version of `@microsoft/generator-sharepoint` installed and create a new webpart by running the Yeoman SharePoint generator:
+Make sure you have the latest version of `@microsoft/generator-sharepoint` installed and create a new web part by running the Yeoman SharePoint generator:
 
 ```
 yo @microsoft/sharepoint
