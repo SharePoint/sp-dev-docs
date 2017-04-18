@@ -25,7 +25,7 @@ Microsoft uses Fabric Core and Fabric React in SharePoint. Microsoft keeps pushi
 
 In order to achieve reliability, one of the main problems we need to solve is that of **Global CSS styles**. Both Fabric Core and fabric.component.css use global styles at the current time.
 
-For the above mentioned reasons, at the current time, customer solutions cannot yet safely use parts of Fabric. That said, we do understand that developers need Fabric Core and Fabric React to build their solutions. We are working to resolve this as quickly as possible.
+For the above-mentioned reasons, at the current time, customer solutions cannot yet safely use parts of Fabric. That said, we do understand that developers need Fabric Core and Fabric React to build their solutions. We are working to resolve this as quickly as possible.
 
 Here's a summary of currently supported options to use Office UI Fabric with SharePoint Framework solution based on used JavaScript framework
 
@@ -70,7 +70,7 @@ Following code snippet shows how to perform static and dynamic linking of librar
 ***Understanding this approach and its shortcomings***
 
 - Components in your web part are locked to a version of Fabric React you used when you built the web part. They will not automatically evolve with the surrounding page. You will need to manually update your web part to adapt to newer versions of Fabric React.
-- The page may be less performant as it may load more css, but it will be reliable.
+- The page may be less performant as it may load more CSS, but it will be reliable.
 - The static linking bloats up your web part bundle, but dynamic linking is too fragile with future updates introduced in SharePoint Online. Static linking is the only approach that is officially supported when Office UI Fabric React is being used in the SharePoint Framework solutions.
 
 ### Currently unsupported features
@@ -82,7 +82,7 @@ Following code snippet shows how to perform static and dynamic linking of librar
 
 ## Using Office UI Fabric with non-React based web parts
 
-This is currently not supported and possible implementations could have unexpected issues when newer version of the Office UI Fabric is released. We are working to on creating a reliable integration story for **Office UI Fabric Core**, **fabric.component.css** and **Non React based web parts**. 
+This is currently not supported and possible implementations could have unexpected issues when newer version of the Office UI Fabric is released. We are working to on creating a reliable integration story for **Office UI Fabric Core**, **fabric.component.css** and **Non-React based web parts**. 
 
 ## Additional details on the CSS challenge with Office UI Fabric
 Following concepts and references provide insights on the challenge with Office UI Fabric usage in the context of client-side web parts. 
@@ -123,11 +123,11 @@ Here are some additional insights on the other approaches which were considered,
 
 The web part developer will not be required to do anything explicitly to get the scoping to work. We plan to solve this problem through CSS specificity and descendant selector. The Fabric Core team will ship multiple copies of Fabric Core css. e.g. `fabric-6.css`, `fabric-6-scoped.css`, `fabric-6.0.0.css`, `fabric-6.0.0-scoped.css`.
 
-All the styles in the scoped css files are inside a descendant selector e.g. "ms-Fabric-core--v6 ms-Icon--list". At compile time tooling will collect the version of the Office UI Fabric Core the web part was built with. This version can be the one that comes with SPFx. Alternatively, web part developers could take an explicit dependency on a specific version if Office UI Fabric Core in their package.json file.
+All the styles in the scoped CSS files are inside a descendant selector e.g. "ms-Fabric-core--v6 ms-Icon--list". At compile time tooling will collect the version of the Office UI Fabric Core the web part was built with. This version can be the one that comes with SPFx. Alternatively, web part developers could take an explicit dependency on a specific version if Office UI Fabric Core in their package.json file.
 
-The web part div will be assigned this scope i.e. `<div data-sp-webpart class="ms-Fabric-core--v6">`. The framework will load the specific major version of the Fabric core scoped css file. If the web part is built with version 6.0.0 of Fabric core css, the framework will download fabric-6-scoped.css at web part load time.
+The web part div will be assigned this scope i.e. `<div data-sp-webpart class="ms-Fabric-core--v6">`. The framework will load the specific major version of the Fabric core scoped CSS file. If the web part is built with version 6.0.0 of Fabric core CSS, the framework will download fabric-6-scoped.css at web part load time.
 
-The rest of the page will contain unscoped Office UI Fabric Core. This way, as per CSS specificity rules, the scoped CSS take precedence inside the web part div.The whole web part and its contents will allign to a specific version of Office UI Fabric Core the developer has chosen.
+The rest of the page will contain unscoped Office UI Fabric Core. This way, as per CSS specificity rules, the scoped CSS take precedence inside the web part div. The whole web part and its contents will align to a specific version of Office UI Fabric Core the developer has chosen.
 
 **Overriding** Fabric Core styles is not supported.  
 
@@ -152,7 +152,7 @@ protected render(): void {
 
 After analyzing for a while we decided that the descendant selector approach has two serious shortcomings because of which it is impossible to build a web part that will never break.
 
-**Lack of reliable nesting support** - This approach only works if the Microsoft user experience (i.e. page and first party web parts) use uncoped version of Office UI Fabric Core. i.e. ms-Icon--list and the third paty web parts use only the scoped Office UI Fabric Core css as explained above. The reason being that the specificity of the scoped CSS applied on the web part overrides unscoped CSS on the page. Please note, as explained above, if CSS spcificity of two classes is the same then their loading order plays a role in how the css classes will be applied. The class that loads later will take precedence. Hence, the higher specificity of the scoped css is important in getting a consistent experience.
+**Lack of reliable nesting support** - This approach only works if the Microsoft user experience (i.e. page and first party web parts) use uncoped version of Office UI Fabric Core. i.e. ms-Icon--list and the third party web parts use only the scoped Office UI Fabric Core css as explained above. The reason being that the specificity of the scoped CSS applied on the web part overrides unscoped CSS on the page. Please note, as explained above, if CSS specificity of two classes is the same then their loading order plays a role in how the CSS classes will be applied. The class that loads later will take precedence. Hence, the higher specificity of the scoped CSS is important in getting a consistent experience.
 
 Further, multiple extensions, one contained in the other, cannot use different Fabric Core versions. i.e. in the 
 following example, only ms-Fabric-core--v6 will get applied.
@@ -206,7 +206,7 @@ Here's a more simplistic sample demonstrating the challenge.
     <div>
       <br/>
       <span>This test depicts that a descendant selector with the same specificity do not allow nesting.
-      All buttons below do not take the innermost scope i.e. they should be different colors but they are red.
+      All buttons below do not take the innermost scope i.e. they should be different colors, but they are red.
       Further, if you change the ordering of the style tags, the colors will change. i.e. the UI is load order dependant.</span> 
       <div class='scope1'>
         <button class='myButton'</button>
