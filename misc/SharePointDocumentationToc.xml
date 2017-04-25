@@ -89,9 +89,6 @@
 	</Item>
 	<Item text="SharePoint Framework Reference" url="https://dev.office.com/sharepoint/reference/spfx/sharepoint-framework-reference-overview" IsExternal="true" SEODescription="SharePoint Framework API reference" />
 	<Item text="SharePoint Framework Code Samples" url="http://aka.ms/spfx-samples" IsExternal="true" SEODescription="SharePoint Framework Code Samples" />
-
-
-
 	<Item text="SharePoint development overview" url="general-development/sharepoint-development-overview" SEODescription="">
 		<Item text="What's new for developers in SharePoint" url="general-development/what-s-new-for-developers-in-sharepoint" SEODescription=""/>
 		<Item text="Protocol handler error due to deprecated interface SharePoint 2016" url="general-development/protocol-handler-error-due-to-deprecated-interface-in-sharepoint-2016" SEODescription=""/>
@@ -483,9 +480,6 @@
 			<Item text="How to: Back up and restore a search service application in SharePoint using VSS" url="general-development/how-to-back-up-and-restore-a-search-service-application-in-sharepoint-using" SEODescription=""/>
 		</Item>
 	</Item>
-
-
-	
 	<Item text="SharePoint Add-ins" url="sp-add-ins/sharepoint-add-ins" SEODescription="">
 		<Item text="New name for apps for SharePoint" url="sp-add-ins/new-name-for-apps-for-sharepoint" SEODescription=""/>
 		<Item text="Get started creating SharePoint-hosted SharePoint Add-ins" url="sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins" SEODescription="">
