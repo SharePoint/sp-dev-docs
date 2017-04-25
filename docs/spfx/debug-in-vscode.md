@@ -56,7 +56,9 @@ Replace the contents of the generated **launch.json** file with:
             "webRoot": "${workspaceRoot}",
             "sourceMaps": true,
             "sourceMapPathOverrides": {
-                "webpack:///../../../../*": "${webRoot}/*"
+                "webpack:///../../../../*": "${webRoot}/*",
+                "webpack:///../../../../src/*": "${webRoot}/src/*",
+                "webpack:///../../../../../src/*": "${webRoot}/src/*"
             },
             "runtimeArgs": [
                 "--remote-debugging-port=9222"
@@ -132,7 +134,9 @@ In Visual Studio Code open the **./.vscode/launch.json** file. Copy the existing
             "webRoot": "${workspaceRoot}",
             "sourceMaps": true,
             "sourceMapPathOverrides": {
-                "webpack:///../../../../*": "${webRoot}/*"
+                "webpack:///../../../../*": "${webRoot}/*",
+                "webpack:///../../../../src/*": "${webRoot}/src/*",
+                "webpack:///../../../../../src/*": "${webRoot}/src/*"
             },
             "runtimeArgs": [
                 "--remote-debugging-port=9222"
@@ -146,7 +150,9 @@ In Visual Studio Code open the **./.vscode/launch.json** file. Copy the existing
             "webRoot": "${workspaceRoot}",
             "sourceMaps": true,
             "sourceMapPathOverrides": {
-                "webpack:///../../../../*": "${webRoot}/*"
+                "webpack:///../../../../*": "${webRoot}/*",
+                "webpack:///../../../../src/*": "${webRoot}/src/*",
+                "webpack:///../../../../../src/*": "${webRoot}/src/*"
             },
             "runtimeArgs": [
                 "--remote-debugging-port=9222"
