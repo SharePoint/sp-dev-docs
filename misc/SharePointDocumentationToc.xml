@@ -218,16 +218,16 @@
 					<Item text="Understanding how to package and deploy workflow in SharePoint" url="general-development/understanding-how-to-package-and-deploy-workflow-in-sharepoint" SEODescription=""/>
 					<Item text="Create a workflow with elevated permissions by using the SharePoint Workflow platform" url="general-development/create-a-workflow-with-elevated-permissions-by-using-the-sharepoint-workflo" SEODescription=""/>
 					<Item text="Matching the SharePoint Designer version with the farm version" url="general-development/matching-the-sharepoint-designer-version-with-the-farm-version" SEODescription=""/>
-					<Item text="Transfer a workflow between SharePoint Designer 2013 and Visio Professional 2013 (SharePoint 2010 Workflow platform)" url="SharePoint 2010 Workflow platform" SEODescription=""/>
+					<Item text="Transfer a workflow between SharePoint Designer 2013 and Visio Professional 2013 (SharePoint 2010 Workflow platform)" url="general-development/transfer-a-workflow-between-sharepoint-designer-and-visio-professional" SEODescription=""/>
 				</Item>
 				<Item text="Workflow actions and activities reference" url="general-development/workflow-actions-and-activities-reference-for-sharepoint" SEODescription="">
 					<Item text="Workflow activity classes" url="general-development/workflow-activity-classes-in-sharepoint" SEODescription=""/>
-					<Item text="Workflow actions quick reference (SharePoint Workflow platform)" url="SharePoint Workflow platform" SEODescription=""/>
+					<Item text="Workflow actions quick reference (SharePoint Workflow platform)" url="general-development/workflow-actions-quick-reference-sharepoint-workflow-platform" SEODescription=""/>
 					<Item text="Workflow actions available using the workflow interop bridge" url="general-development/workflow-actions-available-using-the-workflow-interop-bridge" SEODescription=""/>
-					<Item text="Workflow conditions quick reference (SharePoint 2010 Workflow platform)" url="SharePoint 2010 Workflow platform" SEODescription=""/>
-					<Item text="Workflow actions quick reference (SharePoint 2010 Workflow platform)" url="SharePoint 2010 Workflow platform" SEODescription=""/>
-					<Item text="Visio shapes in SharePoint Designer 2013: A quick reference guide (SharePoint 2010 Workflow platform)" url="SharePoint 2010 Workflow platform" SEODescription=""/>
-					<Item text="Validation issues in Visio (SharePoint 2010 Workflow platform)" url="SharePoint 2010 Workflow platform" SEODescription=""/>
+					<Item text="Workflow conditions quick reference (SharePoint 2010 Workflow platform)" url="general-development/workflow-conditions-quick-reference-sharepoint-2010-workflow-platform" SEODescription=""/>
+					<Item text="Workflow actions quick reference (SharePoint 2010 Workflow platform)" url="general-development/workflow-actions-quick-reference-sharepoint-2010-workflow-platform" SEODescription=""/>
+					<Item text="Visio shapes in SharePoint Designer 2013: A quick reference guide (SharePoint 2010 Workflow platform)" url="general-development/visio-shapes-in-sharepoint-designer-a-quick-reference-guide-sharepoint-2010" SEODescription=""/>
+					<Item text="Validation issues in Visio (SharePoint 2010 Workflow platform)" url="general-development/validation-issues-in-visio-sharepoint-2010-workflow-platform" SEODescription=""/>
 				</Item>
 			</Item>
 			<Item text="Social and collaboration" url="general-development/social-and-collaboration-features-in-sharepoint" SEODescription="">
@@ -271,7 +271,7 @@
 					<Item text="Search connector framework" url="general-development/search-connector-framework-in-sharepoint" SEODescription="">
 						<Item text="Enhancing the BDC model file for Search" url="general-development/enhancing-the-bdc-model-file-for-search-in-sharepoint" SEODescription=""/>
 						<Item text="How to: Crawl associated external content types" url="general-development/how-to-crawl-associated-external-content-types-in-sharepoint" SEODescription=""/>
-						<Item text="How to: Crawl binary large objects (BLOBs)" url="BLOBs" SEODescription=""/>
+						<Item text="How to: Crawl binary large objects (BLOBs)" url="general-development/how-to-crawl-binary-large-objects-blobs-in-sharepoint" SEODescription=""/>
 						<Item text="How to: Configure item-level security" url="general-development/how-to-configure-item-level-security-in-sharepoint" SEODescription=""/>
 					</Item>
 				</Item>
@@ -283,8 +283,8 @@
 					</Item>
 				</Item>
 				<Item text="Building search queries in SharePoint" url="general-development/building-search-queries-in-sharepoint" SEODescription="">
-					<Item text="Keyword Query Language (KQL) syntax reference" url="KQL" SEODescription=""/>
-					<Item text="FAST Query Language (FQL) syntax reference" url="FQL" SEODescription=""/>
+					<Item text="Keyword Query Language (KQL) syntax reference" url="general-development/keyword-query-language-kql-syntax-reference" SEODescription=""/>
+					<Item text="FAST Query Language (FQL) syntax reference" url="general-development/fast-query-language-fql-syntax-reference" SEODescription=""/>
 					<Item text="Using the SharePoint search Query APIs" url="general-development/using-the-sharepoint-search-query-apis" SEODescription=""/>
 				</Item>
 				<Item text="SharePoint Search REST API overview" url="general-development/sharepoint-search-rest-api-overview" SEODescription="">
@@ -385,7 +385,7 @@
 						<Item text="How to: Programmatically Add an Excel Web Access Web Part to a Page" url="general-development/how-to-programmatically-add-an-excel-web-access-web-part-to-a-page" SEODescription=""/>
 						<Item text="How to: Locate and Copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll" url="general-development/how-to-locate-and-copy-microsoft-office-excel-webui-dll-and-microsoft-office-exc" SEODescription=""/>
 					</Item>
-					<Item text="Excel Services ECMAScript (JavaScript, JScript)" url="JavaScript, JScript" SEODescription="">
+					<Item text="Excel Services ECMAScript (JavaScript, JScript)" url="general-development/excel-services-ecmascript-javascript-jscript" SEODescription="">
 						<Item text="Walkthrough: Developing Using the Content Editor Web Part" url="general-development/walkthrough-developing-using-the-content-editor-web-part" SEODescription="">
 							<Item text="Step 1: Creating a ECMAScript Text File" url="general-development/step-1-creating-a-ecmascript-text-file" SEODescription=""/>
 							<Item text="Step 2: Adding the Content Editor and Excel Services Web Parts" url="general-development/step-2-adding-the-content-editor-and-excel-services-web-parts" SEODescription=""/>
