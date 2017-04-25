@@ -486,156 +486,156 @@
 
 
 	
-	<Item text="SharePoint Add-ins" url="sp-add-ins/sharepoint-add-ins.md" SEODescription="">
-		<Item text="New name for apps for SharePoint" url="sp-add-ins/new-name-for-apps-for-sharepoint.md" SEODescription=""/>
-		<Item text="Get started creating SharePoint-hosted SharePoint Add-ins" url="sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins.md" SEODescription="">
-			<Item text="1. Deploy and install a SharePoint-hosted SharePoint Add-in" url="sp-add-ins/deploy-and-install-a-sharepoint-hosted-sharepoint-add-in.md" SEODescription=""/>
-			<Item text="2. Add custom columns to a SharePoint-hosted SharePoint Add-in" url="sp-add-ins/add-custom-columns-to-a-sharepoint-hostedsharepoint-add-in.md" SEODescription=""/>
-			<Item text="3. Add a custom content type to a SharePoint-hosted SharePoint Add-in" url="sp-add-ins/add-a-custom-content-type-to-a-sharepoint-hostedsharepoint-add-in.md" SEODescription=""/>
-			<Item text="4. Add a Web Part to a page in a SharePoint-hosted SharePoint Add-in" url="sp-add-ins/add-a-web-part-to-a-page-in-a-sharepoint-hosted-sharepoint-add-in.md" SEODescription=""/>
-			<Item text="5. Add a workflow to a SharePoint-hosted SharePoint Add-in" url="sp-add-ins/add-a-workflow-to-a-sharepoint-hosted-sharepoint-add-in.md" SEODescription=""/>
-			<Item text="6. Add a custom page and style to a SharePoint-hosted SharePoint Add-in" url="sp-add-ins/add-a-custom-page-and-style-to-a-sharepoint-hosted-sharepoint-add-in.md" SEODescription=""/>
-			<Item text="7. Add custom client-side rendering to a SharePoint-hosted SharePoint Add-in" url="sp-add-ins/add-custom-client-side-rendering-to-a-sharepoint-hosted-sharepoint-add-in.md" SEODescription=""/>
-			<Item text="8. Create a custom ribbon button in the host web of a SharePoint Add-in" url="sp-add-ins/create-a-custom-ribbon-button-in-the-host-web-of-a-sharepoint-add-in.md" SEODescription=""/>
-			<Item text="9. Use the SharePoint JavaScript APIs to work with SharePoint data" url="sp-add-ins/use-the-sharepoint-javascript-apis-to-work-with-sharepoint-data.md" SEODescription=""/>
-			<Item text="10. Work with host web data from JavaScript in the add-in web" url="sp-add-ins/work-with-host-web-data-from-javascript-in-the-add-in-web.md" SEODescription=""/>
+	<Item text="SharePoint Add-ins" url="sp-add-ins/sharepoint-add-ins" SEODescription="">
+		<Item text="New name for apps for SharePoint" url="sp-add-ins/new-name-for-apps-for-sharepoint" SEODescription=""/>
+		<Item text="Get started creating SharePoint-hosted SharePoint Add-ins" url="sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins" SEODescription="">
+			<Item text="1. Deploy and install a SharePoint-hosted SharePoint Add-in" url="sp-add-ins/deploy-and-install-a-sharepoint-hosted-sharepoint-add-in" SEODescription=""/>
+			<Item text="2. Add custom columns to a SharePoint-hosted SharePoint Add-in" url="sp-add-ins/add-custom-columns-to-a-sharepoint-hostedsharepoint-add-in" SEODescription=""/>
+			<Item text="3. Add a custom content type to a SharePoint-hosted SharePoint Add-in" url="sp-add-ins/add-a-custom-content-type-to-a-sharepoint-hostedsharepoint-add-in" SEODescription=""/>
+			<Item text="4. Add a Web Part to a page in a SharePoint-hosted SharePoint Add-in" url="sp-add-ins/add-a-web-part-to-a-page-in-a-sharepoint-hosted-sharepoint-add-in" SEODescription=""/>
+			<Item text="5. Add a workflow to a SharePoint-hosted SharePoint Add-in" url="sp-add-ins/add-a-workflow-to-a-sharepoint-hosted-sharepoint-add-in" SEODescription=""/>
+			<Item text="6. Add a custom page and style to a SharePoint-hosted SharePoint Add-in" url="sp-add-ins/add-a-custom-page-and-style-to-a-sharepoint-hosted-sharepoint-add-in" SEODescription=""/>
+			<Item text="7. Add custom client-side rendering to a SharePoint-hosted SharePoint Add-in" url="sp-add-ins/add-custom-client-side-rendering-to-a-sharepoint-hosted-sharepoint-add-in" SEODescription=""/>
+			<Item text="8. Create a custom ribbon button in the host web of a SharePoint Add-in" url="sp-add-ins/create-a-custom-ribbon-button-in-the-host-web-of-a-sharepoint-add-in" SEODescription=""/>
+			<Item text="9. Use the SharePoint JavaScript APIs to work with SharePoint data" url="sp-add-ins/use-the-sharepoint-javascript-apis-to-work-with-sharepoint-data" SEODescription=""/>
+			<Item text="10. Work with host web data from JavaScript in the add-in web" url="sp-add-ins/work-with-host-web-data-from-javascript-in-the-add-in-web" SEODescription=""/>
 		</Item>
-		<Item text="Get started creating provider-hosted SharePoint Add-ins" url="sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins.md" SEODescription="">
-			<Item text="1. Give your provider-hosted add-in the SharePoint look-and-feel" url="sp-add-ins/give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md" SEODescription=""/>
-			<Item text="2. Include a custom button in the provider-hosted add-in" url="sp-add-ins/include-a-custom-button-in-the-provider-hosted-add-in.md" SEODescription=""/>
-			<Item text="3. Get a quick overview of the SharePoint object model" url="sp-add-ins/get-a-quick-overview-of-the-sharepoint-object-model.md" SEODescription=""/>
-			<Item text="4. Add SharePoint write operations to the provider-hosted add-in" url="sp-add-ins/add-sharepoint-write-operations-to-the-provider-hosted-add-in.md" SEODescription=""/>
-			<Item text="5. Include an add-in part in the provider-hosted add-in" url="sp-add-ins/include-an-add-in-part-in-the-provider-hosted-add-in.md" SEODescription=""/>
-			<Item text="6. Handle add-in events in the provider-hosted add-in" url="sp-add-ins/handle-add-in-events-in-the-provider-hosted-add-in.md" SEODescription=""/>
-			<Item text="7. Add first-run logic to the provider-hosted add-in" url="sp-add-ins/add-first-run-logic-to-the-provider-hosted-add-in.md" SEODescription=""/>
-			<Item text="8. Programmatically deploy a custom button in the provider-hosted add-in" url="sp-add-ins/programmatically-deploy-a-custom-button-in-the-provider-hosted-add-in.md" SEODescription=""/>
-			<Item text="9. Handle list item events in the provider-hosted add-in" url="sp-add-ins/handle-list-item-events-in-the-provider-hosted-add-in.md" SEODescription=""/>
+		<Item text="Get started creating provider-hosted SharePoint Add-ins" url="sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins" SEODescription="">
+			<Item text="1. Give your provider-hosted add-in the SharePoint look-and-feel" url="sp-add-ins/give-your-provider-hosted-add-in-the-sharepoint-look-and-feel" SEODescription=""/>
+			<Item text="2. Include a custom button in the provider-hosted add-in" url="sp-add-ins/include-a-custom-button-in-the-provider-hosted-add-in" SEODescription=""/>
+			<Item text="3. Get a quick overview of the SharePoint object model" url="sp-add-ins/get-a-quick-overview-of-the-sharepoint-object-model" SEODescription=""/>
+			<Item text="4. Add SharePoint write operations to the provider-hosted add-in" url="sp-add-ins/add-sharepoint-write-operations-to-the-provider-hosted-add-in" SEODescription=""/>
+			<Item text="5. Include an add-in part in the provider-hosted add-in" url="sp-add-ins/include-an-add-in-part-in-the-provider-hosted-add-in" SEODescription=""/>
+			<Item text="6. Handle add-in events in the provider-hosted add-in" url="sp-add-ins/handle-add-in-events-in-the-provider-hosted-add-in" SEODescription=""/>
+			<Item text="7. Add first-run logic to the provider-hosted add-in" url="sp-add-ins/add-first-run-logic-to-the-provider-hosted-add-in" SEODescription=""/>
+			<Item text="8. Programmatically deploy a custom button in the provider-hosted add-in" url="sp-add-ins/programmatically-deploy-a-custom-button-in-the-provider-hosted-add-in" SEODescription=""/>
+			<Item text="9. Handle list item events in the provider-hosted add-in" url="sp-add-ins/handle-list-item-events-in-the-provider-hosted-add-in" SEODescription=""/>
 		</Item>
-		<Item text="Design" url="sp-add-ins/design-sharepoint-add-ins.md" SEODescription="">
-			<Item text="Three ways to think about design options for SharePoint Add-ins" url="sp-add-ins/three-ways-to-think-about-design-options-for-sharepoint-add-ins.md" SEODescription=""/>
-			<Item text="Important aspects of the SharePoint Add-in architecture and development landscape" url="sp-add-ins/important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md" SEODescription="">
-				<Item text="Choose patterns for developing and hosting your SharePoint Add-in" url="sp-add-ins/choose-patterns-for-developing-and-hosting-your-sharepoint-add-in.md" SEODescription=""/>
-				<Item text="Host webs, add-in webs, and SharePoint components" url="sp-add-ins/host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md" SEODescription=""/>
+		<Item text="Design" url="sp-add-ins/design-sharepoint-add-ins" SEODescription="">
+			<Item text="Three ways to think about design options for SharePoint Add-ins" url="sp-add-ins/three-ways-to-think-about-design-options-for-sharepoint-add-ins" SEODescription=""/>
+			<Item text="Important aspects of the SharePoint Add-in architecture and development landscape" url="sp-add-ins/important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap" SEODescription="">
+				<Item text="Choose patterns for developing and hosting your SharePoint Add-in" url="sp-add-ins/choose-patterns-for-developing-and-hosting-your-sharepoint-add-in" SEODescription=""/>
+				<Item text="Host webs, add-in webs, and SharePoint components" url="sp-add-ins/host-webs-add-in-webs-and-sharepoint-components-in-sharepoint" SEODescription=""/>
 			</Item>
-			<Item text="Secure data access and client object models for SharePoint Add-ins" url="sp-add-ins/secure-data-access-and-client-object-models-for-sharepoint-add-ins.md" SEODescription=""/>
-			<Item text="UX design for SharePoint Add-ins" url="sp-add-ins/ux-design-for-sharepoint-add-ins.md" SEODescription="">
-				<Item text="SharePoint Add-ins UX design guidelines" url="sp-add-ins/sharepoint-add-ins-ux-design-guidelines.md" SEODescription=""/>
+			<Item text="Secure data access and client object models for SharePoint Add-ins" url="sp-add-ins/secure-data-access-and-client-object-models-for-sharepoint-add-ins" SEODescription=""/>
+			<Item text="UX design for SharePoint Add-ins" url="sp-add-ins/ux-design-for-sharepoint-add-ins" SEODescription="">
+				<Item text="SharePoint Add-ins UX design guidelines" url="sp-add-ins/sharepoint-add-ins-ux-design-guidelines" SEODescription=""/>
 			</Item>
 		</Item>
-		<Item text="Develop" url="sp-add-ins/develop-sharepoint-add-ins.md" SEODescription="">
-			<Item text="Explore the app manifest structure and the package of a SharePoint Add-in" url="sp-add-ins/explore-the-app-manifest-structure-and-the-package-of-a-sharepoint-add-in.md" SEODescription="">
-				<Item text="URL strings and tokens in SharePoint Add-ins" url="sp-add-ins/url-strings-and-tokens-in-sharepoint-add-ins.md" SEODescription=""/>
+		<Item text="Develop" url="sp-add-ins/develop-sharepoint-add-ins" SEODescription="">
+			<Item text="Explore the app manifest structure and the package of a SharePoint Add-in" url="sp-add-ins/explore-the-app-manifest-structure-and-the-package-of-a-sharepoint-add-in" SEODescription="">
+				<Item text="URL strings and tokens in SharePoint Add-ins" url="sp-add-ins/url-strings-and-tokens-in-sharepoint-add-ins" SEODescription=""/>
 			</Item>
-			<Item text="SharePoint .NET Server, CSOM, JSOM, and REST API index" url="sp-add-ins/sharepoint-net-server-csom-jsom-and-rest-api-index.md" SEODescription=""/>
-			<Item text="Complete basic operations using SharePoint client library code" url="sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code.md" SEODescription=""/>
-			<Item text="Complete basic operations using JavaScript library code in SharePoint" url="sp-add-ins/complete-basic-operations-using-javascript-library-code-in-sharepoint.md" SEODescription=""/>
-			<Item text="Get to know the SharePoint REST service" url="sp-add-ins/get-to-know-the-sharepoint-rest-service.md" SEODescription="">
-				<Item text="Complete basic operations using SharePoint REST endpoints" url="sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md" SEODescription=""/>
-				<Item text="Working with lists and list items with REST" url="sp-add-ins/working-with-lists-and-list-items-with-rest.md" SEODescription=""/>
-				<Item text="Working with folders and files with REST" url="sp-add-ins/working-with-folders-and-files-with-rest.md" SEODescription=""/>
-				<Item text="Determine SharePoint REST service endpoint URIs" url="sp-add-ins/determine-sharepoint-rest-service-endpoint-uris.md" SEODescription=""/>
-				<Item text="Use OData query operations in SharePoint REST requests" url="sp-add-ins/use-odata-query-operations-in-sharepoint-rest-requests.md" SEODescription=""/>
-				<Item text="Navigate the SharePoint data structure represented in the REST service" url="sp-add-ins/navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md" SEODescription=""/>
-				<Item text="Synchronize SharePoint items using the REST service" url="sp-add-ins/synchronize-sharepoint-items-using-the-rest-service.md" SEODescription=""/>
-				<Item text="Upload a file by using the REST API and jQuery" url="sp-add-ins/upload-a-file-by-using-the-rest-api-and-jquery.md" SEODescription=""/>
-				<Item text="Set custom permissions on a list by using the REST interface" url="sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-interface.md" SEODescription=""/>
-				<Item text="Make batch requests with the REST APIs" url="sp-add-ins/make-batch-requests-with-the-rest-apis.md" SEODescription=""/>
+			<Item text="SharePoint .NET Server, CSOM, JSOM, and REST API index" url="sp-add-ins/sharepoint-net-server-csom-jsom-and-rest-api-index" SEODescription=""/>
+			<Item text="Complete basic operations using SharePoint client library code" url="sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code" SEODescription=""/>
+			<Item text="Complete basic operations using JavaScript library code in SharePoint" url="sp-add-ins/complete-basic-operations-using-javascript-library-code-in-sharepoint" SEODescription=""/>
+			<Item text="Get to know the SharePoint REST service" url="sp-add-ins/get-to-know-the-sharepoint-rest-service" SEODescription="">
+				<Item text="Complete basic operations using SharePoint REST endpoints" url="sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints" SEODescription=""/>
+				<Item text="Working with lists and list items with REST" url="sp-add-ins/working-with-lists-and-list-items-with-rest" SEODescription=""/>
+				<Item text="Working with folders and files with REST" url="sp-add-ins/working-with-folders-and-files-with-rest" SEODescription=""/>
+				<Item text="Determine SharePoint REST service endpoint URIs" url="sp-add-ins/determine-sharepoint-rest-service-endpoint-uris" SEODescription=""/>
+				<Item text="Use OData query operations in SharePoint REST requests" url="sp-add-ins/use-odata-query-operations-in-sharepoint-rest-requests" SEODescription=""/>
+				<Item text="Navigate the SharePoint data structure represented in the REST service" url="sp-add-ins/navigate-the-sharepoint-data-structure-represented-in-the-rest-service" SEODescription=""/>
+				<Item text="Synchronize SharePoint items using the REST service" url="sp-add-ins/synchronize-sharepoint-items-using-the-rest-service" SEODescription=""/>
+				<Item text="Upload a file by using the REST API and jQuery" url="sp-add-ins/upload-a-file-by-using-the-rest-api-and-jquery" SEODescription=""/>
+				<Item text="Set custom permissions on a list by using the REST interface" url="sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-interface" SEODescription=""/>
+				<Item text="Make batch requests with the REST APIs" url="sp-add-ins/make-batch-requests-with-the-rest-apis" SEODescription=""/>
 			</Item>
-			<Item text="Create UX components in SharePoint" url="sp-add-ins/create-ux-components-in-sharepoint.md" SEODescription="">
-				<Item text="Use a SharePoint website's style sheet in add-ins" url="sp-add-ins/use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins.md" SEODescription=""/>
-				<Item text="Use the client chrome control in add-ins" url="sp-add-ins/use-the-client-chrome-control-in-sharepoint-add-ins.md" SEODescription=""/>
-				<Item text="Create add-in parts to install with your SharePoint Add-in" url="sp-add-ins/create-add-in-parts-to-install-with-your-sharepoint-add-in.md" SEODescription=""/>
-				<Item text="Create custom actions to deploy with SharePoint Add-ins" url="sp-add-ins/create-custom-actions-to-deploy-with-sharepoint-add-ins.md" SEODescription=""/>
-				<Item text="Customize a list view in SharePoint Add-ins using client-side rendering" url="sp-add-ins/customize-a-list-view-in-sharepoint-add-ins-using-client-side-rendering.md" SEODescription=""/>
-				<Item text="Use the client-side People Picker control in SharePoint-hosted SharePoint Add-ins" url="sp-add-ins/use-the-client-side-people-picker-control-in-sharepoint-hosted-sharepoint-add-in.md" SEODescription=""/>
-				<Item text="Highlight content and enhance the functionality of SharePoint-hosted SharePoint Add-ins with the callout control" url="sp-add-ins/highlight-content-and-enhance-the-functionality-of-sharepoint-hosted-sharepoint-.md" SEODescription=""/>
-				<Item text="Include a Web Part in a webpage on the add-in web" url="sp-add-ins/include-a-web-part-in-a-webpage-on-the-add-in-web.md" SEODescription=""/>
-				<Item text="Office Web Widgets - Experimental overview" url="sp-add-ins/office-web-widgetsexperimental-overview.md" SEODescription="">
-					<Item text="Use the experimental People Picker widget in SharePoint Add-ins" url="sp-add-ins/use-the-experimental-people-picker-widget-in-sharepoint-add-ins.md" SEODescription=""/>
-					<Item text="Use the experimental Desktop List View widget in SharePoint Add-ins" url="sp-add-ins/use-the-experimental-desktop-list-view-widget-in-sharepoint-add-ins.md" SEODescription=""/>
-					<Item text="Office Web Widgets - Experimental License Terms" url="sp-add-ins/office-web-widgetsexperimental-license-terms.md" SEODescription=""/>
+			<Item text="Create UX components in SharePoint" url="sp-add-ins/create-ux-components-in-sharepoint" SEODescription="">
+				<Item text="Use a SharePoint website's style sheet in add-ins" url="sp-add-ins/use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins" SEODescription=""/>
+				<Item text="Use the client chrome control in add-ins" url="sp-add-ins/use-the-client-chrome-control-in-sharepoint-add-ins" SEODescription=""/>
+				<Item text="Create add-in parts to install with your SharePoint Add-in" url="sp-add-ins/create-add-in-parts-to-install-with-your-sharepoint-add-in" SEODescription=""/>
+				<Item text="Create custom actions to deploy with SharePoint Add-ins" url="sp-add-ins/create-custom-actions-to-deploy-with-sharepoint-add-ins" SEODescription=""/>
+				<Item text="Customize a list view in SharePoint Add-ins using client-side rendering" url="sp-add-ins/customize-a-list-view-in-sharepoint-add-ins-using-client-side-rendering" SEODescription=""/>
+				<Item text="Use the client-side People Picker control in SharePoint-hosted SharePoint Add-ins" url="sp-add-ins/use-the-client-side-people-picker-control-in-sharepoint-hosted-sharepoint-add-in" SEODescription=""/>
+				<Item text="Highlight content and enhance the functionality of SharePoint-hosted SharePoint Add-ins with the callout control" url="sp-add-ins/highlight-content-and-enhance-the-functionality-of-sharepoint-hosted-sharepoint-" SEODescription=""/>
+				<Item text="Include a Web Part in a webpage on the add-in web" url="sp-add-ins/include-a-web-part-in-a-webpage-on-the-add-in-web" SEODescription=""/>
+				<Item text="Office Web Widgets - Experimental overview" url="sp-add-ins/office-web-widgetsexperimental-overview" SEODescription="">
+					<Item text="Use the experimental People Picker widget in SharePoint Add-ins" url="sp-add-ins/use-the-experimental-people-picker-widget-in-sharepoint-add-ins" SEODescription=""/>
+					<Item text="Use the experimental Desktop List View widget in SharePoint Add-ins" url="sp-add-ins/use-the-experimental-desktop-list-view-widget-in-sharepoint-add-ins" SEODescription=""/>
+					<Item text="Office Web Widgets - Experimental License Terms" url="sp-add-ins/office-web-widgetsexperimental-license-terms" SEODescription=""/>
 				</Item>
 			</Item>
-			<Item text="Work with external data in SharePoint" url="sp-add-ins/work-with-external-data-in-sharepoint.md" SEODescription="">
-				<Item text="Create a custom proxy page for the cross-domain library" url="sp-add-ins/create-a-custom-proxy-page-for-the-cross-domain-library-in-sharepoint.md" SEODescription=""/>
-				<Item text="Query a remote service using the web proxy" url="sp-add-ins/query-a-remote-service-using-the-web-proxy-in-sharepoint.md" SEODescription=""/>
+			<Item text="Work with external data in SharePoint" url="sp-add-ins/work-with-external-data-in-sharepoint" SEODescription="">
+				<Item text="Create a custom proxy page for the cross-domain library" url="sp-add-ins/create-a-custom-proxy-page-for-the-cross-domain-library-in-sharepoint" SEODescription=""/>
+				<Item text="Query a remote service using the web proxy" url="sp-add-ins/query-a-remote-service-using-the-web-proxy-in-sharepoint" SEODescription=""/>
 			</Item>
-			<Item text="Handle events in SharePoint Add-ins" url="sp-add-ins/handle-events-in-sharepoint-add-ins.md" SEODescription="">
-				<Item text="Create a remote event receiver" url="sp-add-ins/create-a-remote-event-receiver-in-sharepoint-add-ins.md" SEODescription=""/>
-				<Item text="Create an add-in event receiver" url="sp-add-ins/create-an-add-in-event-receiver-in-sharepoint-add-ins.md" SEODescription=""/>
-				<Item text="Debug and troubleshoot a remote event receiver" url="sp-add-ins/debug-and-troubleshoot-a-remote-event-receiver-in-a-sharepoint-add-in.md" SEODescription=""/>
+			<Item text="Handle events in SharePoint Add-ins" url="sp-add-ins/handle-events-in-sharepoint-add-ins" SEODescription="">
+				<Item text="Create a remote event receiver" url="sp-add-ins/create-a-remote-event-receiver-in-sharepoint-add-ins" SEODescription=""/>
+				<Item text="Create an add-in event receiver" url="sp-add-ins/create-an-add-in-event-receiver-in-sharepoint-add-ins" SEODescription=""/>
+				<Item text="Debug and troubleshoot a remote event receiver" url="sp-add-ins/debug-and-troubleshoot-a-remote-event-receiver-in-a-sharepoint-add-in" SEODescription=""/>
 			</Item>
-			<Item text="Create a provider-hosted add-in that includes a custom SharePoint list and content type" url="sp-add-ins/create-a-provider-hosted-add-in-that-includes-a-custom-sharepoint-list-and-conte.md" SEODescription=""/>
-			<Item text="Get user identity and properties in SharePoint" url="sp-add-ins/get-user-identity-and-properties-in-sharepoint.md" SEODescription=""/>
-			<Item text="Localize SharePoint Add-ins" url="sp-add-ins/localize-sharepoint-add-ins.md" SEODescription=""/>
-			<Item text="Authorization and authentication of SharePoint Add-ins" url="sp-add-ins/authorization-and-authentication-of-sharepoint-add-ins.md" SEODescription="">
-				<Item text="Add-in permissions in SharePoint" url="sp-add-ins/add-in-permissions-in-sharepoint.md" SEODescription=""/>
-				<Item text="Register SharePoint Add-ins" url="sp-add-ins/register-sharepoint-add-ins.md" SEODescription=""/>
-				<Item text="Add-in authorization policy types in SharePoint" url="sp-add-ins/add-in-authorization-policy-types-in-sharepoint.md" SEODescription=""/>
-				<Item text="Three authorization systems for SharePoint Add-ins" url="sp-add-ins/three-authorization-systems-for-sharepoint-add-ins.md" SEODescription="">
-					<Item text="Creating SharePoint Add-ins that use low-trust authorization" url="sp-add-ins/creating-sharepoint-add-ins-that-use-low-trust-authorization.md" SEODescription="">
-						<Item text="Context Token OAuth flow for SharePoint Add-ins" url="sp-add-ins/context-token-oauth-flow-for-sharepoint-add-ins.md" SEODescription=""/>
-						<Item text="Authorization Code OAuth flow for SharePoint Add-ins" url="sp-add-ins/authorization-code-oauth-flow-for-sharepoint-add-ins.md" SEODescription=""/>
-						<Item text="Handle security tokens in provider-hosted low-trust SharePoint Add-ins" url="sp-add-ins/handle-security-tokens-in-provider-hosted-low-trust-sharepoint-add-ins.md" SEODescription=""/>
-						<Item text="Use an Office 365 SharePoint site to authorize provider-hosted add-ins on an on-premises SharePoint site" url="sp-add-ins/use-an-office-365-sharepoint-site-to-authorize-provider-hosted-add-ins-on-an-on-.md" SEODescription=""/>
-						<Item text="Replace an expiring client secret in a SharePoint Add-in" url="sp-add-ins/replace-an-expiring-client-secret-in-a-sharepoint-add-in.md" SEODescription=""/>
+			<Item text="Create a provider-hosted add-in that includes a custom SharePoint list and content type" url="sp-add-ins/create-a-provider-hosted-add-in-that-includes-a-custom-sharepoint-list-and-conte" SEODescription=""/>
+			<Item text="Get user identity and properties in SharePoint" url="sp-add-ins/get-user-identity-and-properties-in-sharepoint" SEODescription=""/>
+			<Item text="Localize SharePoint Add-ins" url="sp-add-ins/localize-sharepoint-add-ins" SEODescription=""/>
+			<Item text="Authorization and authentication of SharePoint Add-ins" url="sp-add-ins/authorization-and-authentication-of-sharepoint-add-ins" SEODescription="">
+				<Item text="Add-in permissions in SharePoint" url="sp-add-ins/add-in-permissions-in-sharepoint" SEODescription=""/>
+				<Item text="Register SharePoint Add-ins" url="sp-add-ins/register-sharepoint-add-ins" SEODescription=""/>
+				<Item text="Add-in authorization policy types in SharePoint" url="sp-add-ins/add-in-authorization-policy-types-in-sharepoint" SEODescription=""/>
+				<Item text="Three authorization systems for SharePoint Add-ins" url="sp-add-ins/three-authorization-systems-for-sharepoint-add-ins" SEODescription="">
+					<Item text="Creating SharePoint Add-ins that use low-trust authorization" url="sp-add-ins/creating-sharepoint-add-ins-that-use-low-trust-authorization" SEODescription="">
+						<Item text="Context Token OAuth flow for SharePoint Add-ins" url="sp-add-ins/context-token-oauth-flow-for-sharepoint-add-ins" SEODescription=""/>
+						<Item text="Authorization Code OAuth flow for SharePoint Add-ins" url="sp-add-ins/authorization-code-oauth-flow-for-sharepoint-add-ins" SEODescription=""/>
+						<Item text="Handle security tokens in provider-hosted low-trust SharePoint Add-ins" url="sp-add-ins/handle-security-tokens-in-provider-hosted-low-trust-sharepoint-add-ins" SEODescription=""/>
+						<Item text="Use an Office 365 SharePoint site to authorize provider-hosted add-ins on an on-premises SharePoint site" url="sp-add-ins/use-an-office-365-sharepoint-site-to-authorize-provider-hosted-add-ins-on-an-on-" SEODescription=""/>
+						<Item text="Replace an expiring client secret in a SharePoint Add-in" url="sp-add-ins/replace-an-expiring-client-secret-in-a-sharepoint-add-in" SEODescription=""/>
 					</Item>
-					<Item text="Creating SharePoint Add-ins that use high-trust authorization" url="sp-add-ins/creating-sharepoint-add-ins-that-use-high-trust-authorization.md" SEODescription="">
-						<Item text="Create high-trust add-ins" url="sp-add-ins/create-high-trust-sharepoint-add-ins.md" SEODescription=""/>
-						<Item text="Create and use access tokens in provider-hosted high-trust SharePoint Add-ins" url="sp-add-ins/create-and-use-access-tokens-in-provider-hosted-high-trust-sharepoint-add-ins.md" SEODescription=""/>
-						<Item text="Troubleshooting high-trust SharePoint Add-ins" url="sp-add-ins/troubleshooting-high-trust-sharepoint-add-ins.md" SEODescription=""/>
-						<Item text="Package and publish high-trust SharePoint Add-ins" url="sp-add-ins/package-and-publish-high-trust-sharepoint-add-ins.md" SEODescription="">
-							<Item text="High-trust configuration scripts for SharePoint" url="sp-add-ins/high-trust-configuration-scripts-for-sharepoint.md" SEODescription=""/>
+					<Item text="Creating SharePoint Add-ins that use high-trust authorization" url="sp-add-ins/creating-sharepoint-add-ins-that-use-high-trust-authorization" SEODescription="">
+						<Item text="Create high-trust add-ins" url="sp-add-ins/create-high-trust-sharepoint-add-ins" SEODescription=""/>
+						<Item text="Create and use access tokens in provider-hosted high-trust SharePoint Add-ins" url="sp-add-ins/create-and-use-access-tokens-in-provider-hosted-high-trust-sharepoint-add-ins" SEODescription=""/>
+						<Item text="Troubleshooting high-trust SharePoint Add-ins" url="sp-add-ins/troubleshooting-high-trust-sharepoint-add-ins" SEODescription=""/>
+						<Item text="Package and publish high-trust SharePoint Add-ins" url="sp-add-ins/package-and-publish-high-trust-sharepoint-add-ins" SEODescription="">
+							<Item text="High-trust configuration scripts for SharePoint" url="sp-add-ins/high-trust-configuration-scripts-for-sharepoint" SEODescription=""/>
 						</Item>
 					</Item>
-					<Item text="Creating SharePoint Add-ins that use the cross-domain library" url="sp-add-ins/creating-sharepoint-add-ins-that-use-the-cross-domain-library.md" SEODescription="">
-						<Item text="Access SharePoint data from add-ins using the cross-domain library" url="sp-add-ins/access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md" SEODescription=""/>
-						<Item text="Work with the cross-domain library across different Internet Explorer security zones in SharePoint Add-ins" url="sp-add-ins/work-with-the-cross-domain-library-across-different-internet-explorer-security-z.md" SEODescription=""/>
+					<Item text="Creating SharePoint Add-ins that use the cross-domain library" url="sp-add-ins/creating-sharepoint-add-ins-that-use-the-cross-domain-library" SEODescription="">
+						<Item text="Access SharePoint data from add-ins using the cross-domain library" url="sp-add-ins/access-sharepoint-data-from-add-ins-using-the-cross-domain-library" SEODescription=""/>
+						<Item text="Work with the cross-domain library across different Internet Explorer security zones in SharePoint Add-ins" url="sp-add-ins/work-with-the-cross-domain-library-across-different-internet-explorer-security-z" SEODescription=""/>
 					</Item>
 				</Item>
 			</Item>
-			<Item text="Create SharePoint Add-ins that can be used by anonymous users" url="sp-add-ins/create-sharepoint-add-ins-that-can-be-used-by-anonymous-users.md" SEODescription=""/>
-			<Item text="Convert an autohosted SharePoint Add-in to a provider-hosted add-in" url="sp-add-ins/convert-an-autohosted-sharepoint-add-in-to-a-provider-hosted-add-in.md" SEODescription=""/>
-			<Item text="Create SharePoint Add-ins for the SAP Gateway for Microsoft" url="sp-add-ins/create-provider-hosted-sharepoint-add-ins-to-access-sap-data-by-using-the-sap-ga.md" SEODescription=""/>
-			<Item text="Create a SharePoint Add-in that contains a document template and a task pane add-in" url="sp-add-ins/create-a-sharepoint-add-in-that-contains-a-document-template-and-a-task-pane-add.md" SEODescription=""/>
+			<Item text="Create SharePoint Add-ins that can be used by anonymous users" url="sp-add-ins/create-sharepoint-add-ins-that-can-be-used-by-anonymous-users" SEODescription=""/>
+			<Item text="Convert an autohosted SharePoint Add-in to a provider-hosted add-in" url="sp-add-ins/convert-an-autohosted-sharepoint-add-in-to-a-provider-hosted-add-in" SEODescription=""/>
+			<Item text="Create SharePoint Add-ins for the SAP Gateway for Microsoft" url="sp-add-ins/create-provider-hosted-sharepoint-add-ins-to-access-sap-data-by-using-the-sap-ga" SEODescription=""/>
+			<Item text="Create a SharePoint Add-in that contains a document template and a task pane add-in" url="sp-add-ins/create-a-sharepoint-add-in-that-contains-a-document-template-and-a-task-pane-add" SEODescription=""/>
 		</Item>
-		<Item text="Publish" url="sp-add-ins/publish-sharepoint-add-ins.md" SEODescription="">
-			<Item text="Deploying and installing SharePoint Add-ins: methods and options" url="sp-add-ins/deploying-and-installing-sharepoint-add-ins-methods-and-options.md" SEODescription=""/>
-			<Item text="Tenancies and deployment scopes for SharePoint Add-ins" url="sp-add-ins/tenancies-and-deployment-scopes-for-sharepoint-add-ins.md" SEODescription=""/>
-			<Item text="SharePoint Add-ins update process" url="sp-add-ins/sharepoint-add-ins-update-process.md" SEODescription="">
-				<Item text="Update SharePoint Add-ins" url="sp-add-ins/update-sharepoint-add-ins.md" SEODescription="">
-					<Item text="Update add-in web components in SharePoint" url="sp-add-ins/update-add-in-web-components-in-sharepoint.md" SEODescription=""/>
-					<Item text="Update host web components in SharePoint" url="sp-add-ins/update-host-web-components-in-sharepoint.md" SEODescription=""/>
-					<Item text="Update remote components in SharePoint Add-ins" url="sp-add-ins/update-remote-components-in-sharepoint-add-ins.md" SEODescription=""/>
-					<Item text="Create a handler for the update event in SharePoint Add-ins" url="sp-add-ins/create-a-handler-for-the-update-event-in-sharepoint-add-ins.md" SEODescription=""/>
+		<Item text="Publish" url="sp-add-ins/publish-sharepoint-add-ins" SEODescription="">
+			<Item text="Deploying and installing SharePoint Add-ins: methods and options" url="sp-add-ins/deploying-and-installing-sharepoint-add-ins-methods-and-options" SEODescription=""/>
+			<Item text="Tenancies and deployment scopes for SharePoint Add-ins" url="sp-add-ins/tenancies-and-deployment-scopes-for-sharepoint-add-ins" SEODescription=""/>
+			<Item text="SharePoint Add-ins update process" url="sp-add-ins/sharepoint-add-ins-update-process" SEODescription="">
+				<Item text="Update SharePoint Add-ins" url="sp-add-ins/update-sharepoint-add-ins" SEODescription="">
+					<Item text="Update add-in web components in SharePoint" url="sp-add-ins/update-add-in-web-components-in-sharepoint" SEODescription=""/>
+					<Item text="Update host web components in SharePoint" url="sp-add-ins/update-host-web-components-in-sharepoint" SEODescription=""/>
+					<Item text="Update remote components in SharePoint Add-ins" url="sp-add-ins/update-remote-components-in-sharepoint-add-ins" SEODescription=""/>
+					<Item text="Create a handler for the update event in SharePoint Add-ins" url="sp-add-ins/create-a-handler-for-the-update-event-in-sharepoint-add-ins" SEODescription=""/>
 				</Item>
 			</Item>
-			<Item text="Publish SharePoint Add-ins by using Visual Studio" url="sp-add-ins/publish-sharepoint-add-ins-by-using-visual-studio.md" SEODescription=""/>
+			<Item text="Publish SharePoint Add-ins by using Visual Studio" url="sp-add-ins/publish-sharepoint-add-ins-by-using-visual-studio" SEODescription=""/>
 		</Item>
-		<Item text="Tools" url="sp-add-ins/tools-and-environments-for-developing-sharepoint-add-ins.md" SEODescription="">
-			<Item text="Set up a development environment for SharePoint Add-ins on Office 365" url="sp-add-ins/set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md" SEODescription=""/>
-			<Item text="Create a developer site on an existing Office 365 subscription" url="sp-add-ins/create-a-developer-site-on-an-existing-office-365-subscription.md" SEODescription=""/>
-			<Item text="Set up an on-premises development environment for add-ins" url="sp-add-ins/set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md" SEODescription=""/>
-			<Item text="Create SharePoint Add-ins in Visual Studio" url="sp-add-ins/create-sharepoint-add-ins-in-visual-studio.md" SEODescription=""/>
-			<Item text="Create a basic SharePoint-hosted add-in by using Napa" url="sp-add-ins/create-a-basic-sharepoint-hosted-add-in-by-using-napa-office-365-development-too.md" SEODescription=""/>
-			<Item text="What's new in Office Developer Tools for Visual Studio 2013" url="sp-add-ins/what-s-new-in-office-developer-tools-for-visual-studio-2013.md" SEODescription=""/>
+		<Item text="Tools" url="sp-add-ins/tools-and-environments-for-developing-sharepoint-add-ins" SEODescription="">
+			<Item text="Set up a development environment for SharePoint Add-ins on Office 365" url="sp-add-ins/set-up-a-development-environment-for-sharepoint-add-ins-on-office-365" SEODescription=""/>
+			<Item text="Create a developer site on an existing Office 365 subscription" url="sp-add-ins/create-a-developer-site-on-an-existing-office-365-subscription" SEODescription=""/>
+			<Item text="Set up an on-premises development environment for add-ins" url="sp-add-ins/set-up-an-on-premises-development-environment-for-sharepoint-add-ins" SEODescription=""/>
+			<Item text="Create SharePoint Add-ins in Visual Studio" url="sp-add-ins/create-sharepoint-add-ins-in-visual-studio" SEODescription=""/>
+			<Item text="Create a basic SharePoint-hosted add-in by using Napa" url="sp-add-ins/create-a-basic-sharepoint-hosted-add-in-by-using-napa-office-365-development-too" SEODescription=""/>
+			<Item text="What's new in Office Developer Tools for Visual Studio 2013" url="sp-add-ins/what-s-new-in-office-developer-tools-for-visual-studio-2013" SEODescription=""/>
 		</Item>
-		<Item text="Create cloud business add-ins" url="sp-add-ins/create-cloud-business-add-ins.md" SEODescription="">
-			<Item text="Start" url="sp-add-ins/get-started-developing-cloud-business-add-ins.md" SEODescription="">
-				<Item text="Incident manager: A cloud business add-in tutorial" url="sp-add-ins/incident-manager-a-cloud-business-add-in-tutorial.md" SEODescription=""/>
-				<Item text="Create a cloud business add-in with a social newsfeed" url="sp-add-ins/create-a-cloud-business-add-in-with-a-social-newsfeed.md" SEODescription=""/>
+		<Item text="Create cloud business add-ins" url="sp-add-ins/create-cloud-business-add-ins" SEODescription="">
+			<Item text="Start" url="sp-add-ins/get-started-developing-cloud-business-add-ins" SEODescription="">
+				<Item text="Incident manager: A cloud business add-in tutorial" url="sp-add-ins/incident-manager-a-cloud-business-add-in-tutorial" SEODescription=""/>
+				<Item text="Create a cloud business add-in with a social newsfeed" url="sp-add-ins/create-a-cloud-business-add-in-with-a-social-newsfeed" SEODescription=""/>
 			</Item>
-			<Item text="Develop" url="sp-add-ins/develop-cloud-business-add-ins.md" SEODescription="">
-				<Item text="Create a cloud business add-in" url="sp-add-ins/create-a-cloud-business-add-in.md" SEODescription=""/>
-				<Item text="Associate a document library with an entity" url="sp-add-ins/associate-a-document-library-with-an-entity.md" SEODescription="">
-					<Item text="Troubleshooting document libraries" url="sp-add-ins/troubleshooting-document-libraries.md" SEODescription=""/>
+			<Item text="Develop" url="sp-add-ins/develop-cloud-business-add-ins" SEODescription="">
+				<Item text="Create a cloud business add-in" url="sp-add-ins/create-a-cloud-business-add-in" SEODescription=""/>
+				<Item text="Associate a document library with an entity" url="sp-add-ins/associate-a-document-library-with-an-entity" SEODescription="">
+					<Item text="Troubleshooting document libraries" url="sp-add-ins/troubleshooting-document-libraries" SEODescription=""/>
 				</Item>
-				<Item text="Enable a newsfeed for a cloud business add-in" url="sp-add-ins/enable-a-newsfeed-for-a-cloud-business-add-in.md" SEODescription=""/>
-				<Item text="Provide a template for a document library in a cloud business add-in" url="sp-add-ins/provide-a-template-for-a-document-library-in-a-cloud-business-add-in.md" SEODescription=""/>
-				<Item text="Create a cloud business add-in that uses the SAP Gateway" url="sp-add-ins/create-a-cloud-business-add-in-that-uses-the-sap-gateway.md" SEODescription=""/>
+				<Item text="Enable a newsfeed for a cloud business add-in" url="sp-add-ins/enable-a-newsfeed-for-a-cloud-business-add-in" SEODescription=""/>
+				<Item text="Provide a template for a document library in a cloud business add-in" url="sp-add-ins/provide-a-template-for-a-document-library-in-a-cloud-business-add-in" SEODescription=""/>
+				<Item text="Create a cloud business add-in that uses the SAP Gateway" url="sp-add-ins/create-a-cloud-business-add-in-that-uses-the-sap-gateway" SEODescription=""/>
 			</Item>
-			<Item text="Publish" url="sp-add-ins/publish-cloud-business-add-ins.md" SEODescription="">
-				<Item text="Publish a cloud business add-in to SharePoint" url="sp-add-ins/publish-a-cloud-business-add-in-to-sharepoint.md" SEODescription=""/>
+			<Item text="Publish" url="sp-add-ins/publish-cloud-business-add-ins" SEODescription="">
+				<Item text="Publish a cloud business add-in to SharePoint" url="sp-add-ins/publish-a-cloud-business-add-in-to-sharepoint" SEODescription=""/>
 			</Item>
 		</Item>
 	</Item>
