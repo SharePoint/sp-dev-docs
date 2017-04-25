@@ -122,7 +122,7 @@ A numeric token expression can be a single value or a value range expression.
 
 ### Wildcard expressions
 
-A wildcard expression indicates a single term or phrase that includes the Asterisk (" *****") character; asterisk implies a match of zero or more characters, excluding whitespace. FQL supports prefix search for individual text managed properties and full-text indexes.
+A wildcard expression indicates a single term or phrase that includes the Asterisk ("**\***") character; asterisk implies a match of zero or more characters, excluding whitespace. FQL supports prefix search for individual text managed properties and full-text indexes.
   
     
     
