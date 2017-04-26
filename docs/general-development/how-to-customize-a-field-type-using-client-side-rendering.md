@@ -330,7 +330,7 @@ function favoriteColorViewTemplate(ctx) {
 
 |**Problem**|**Solution**|
 |:-----|:-----|
-|Field type **FavoriteColorField** is not installed properly. Go to the list settings page to delete this field. <br/> |Execute the following command from an elevated command prompt: **iisreset /noforce**. <br/> > [!CAUTION]> If you are deploying the solution to a production environment, wait for an appropriate time to reset the web server using **iisreset /noforce**.          |
+|Field type **FavoriteColorField** is not installed properly. Go to the list settings page to delete this field. <br/> |Execute the following command from an elevated command prompt: **iisreset /noforce**. <br/> **Caution:** If you are deploying the solution to a production environment, wait for an appropriate time to reset the web server using **iisreset /noforce**.          |
    
 
 ## Next steps
