@@ -186,7 +186,7 @@ After you convert your master page and successfully preview it, you are ready to
   
 3. Preview and style snippets by using CSS.
     
-    For more information, see  [SharePoint 2013 Design Manager snippets](sharepoint-design-manager-snippets.md).
+For more information, see  [SharePoint 2013 Design Manager snippets](sharepoint-design-manager-snippets.md).
     
   
 
