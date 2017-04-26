@@ -42,7 +42,7 @@ With a page field control, you can define the styles used by the content. Author
   
     
     
-In the HTML page layout, each page field is wrapped in a **<div>** tag. To apply a style to a page field, you can simply add a style to the **<div>**—for example,  `<div style="font-weight:bold"`. But the more common and useful scenario is that you add an **id** attribute to the **<div>** for each page field in the page layout, and then use the **id** as a selector for styles that reside in an external style sheet. This way, if you have multiple device channels, and each channel has its own style sheet, you can apply different styles to each page field for each channel. For example, the following page field of the type TextField (also called Multiple Lines of Text) might have only an **id** attribute on the **<div>** tag.
+In the HTML page layout, each page field is wrapped in a **\<div\>** tag. To apply a style to a page field, you can simply add a style to the **\<div\>**—for example,  `<div style="font-weight:bold"`. But the more common and useful scenario is that you add an **id** attribute to the **\<div\>** for each page field in the page layout, and then use the **id** as a selector for styles that reside in an external style sheet. This way, if you have multiple device channels, and each channel has its own style sheet, you can apply different styles to each page field for each channel. For example, the following page field of the type TextField (also called Multiple Lines of Text) might have only an **id** attribute on the **\<div\>** tag.
   
     
     
