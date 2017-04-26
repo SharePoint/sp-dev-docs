@@ -118,7 +118,7 @@ The simplest way to create a category page layout is to let SharePoint create th
 5. To customize the category page layout, edit the HTML file that resides directly on the server by using an HTML editor to open and edit the HTML file in the mapped drive. Each time that you save the HTML file, any changes are synched to the associated .aspx file.
     
   
-6. In the **<head>** tag, replace the content placeholder that has **id="PlaceHolderPageTitle"** with:
+6. In the **\<head\>** tag, replace the content placeholder that has **id="PlaceHolderPageTitle"** with:
     
   ```HTML
   
