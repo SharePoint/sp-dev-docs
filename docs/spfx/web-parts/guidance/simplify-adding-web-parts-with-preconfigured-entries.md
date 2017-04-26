@@ -1,7 +1,5 @@
 # Simplify adding web parts with preconfigured entries
 
-> Note. This article has not yet been verified with SPFx GA version, so you might have challenges on making this work as such with the latest release.
-
 More complex SharePoint Framework client-side web parts will likely have many properties that the user must configure. You can help users by adding preconfigured property entries for specific scenarios. A preconfigured entry will initialize the web part with preset values. In this article you will learn how you to use preconfigured entries in a SharePoint Framework client-side web part to provide users with preconfigured versions of your web part.
 
 > **Note:** Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment).
@@ -173,14 +171,9 @@ Update the main React component to display the values of the properties. If the 
 
 ```ts
 import * as React from 'react';
-import { css } from 'office-ui-fabric-react';
+import styles from './Gallery.module.scss';
+import { IGalleryProps } from './IGalleryProps';
 import { Placeholder } from '@microsoft/sp-webpart-base';
-
-import styles from '../Gallery.module.scss';
-import { IGalleryWebPartProps } from '../IGalleryWebPartProps';
-
-export interface IGalleryProps extends IGalleryWebPartProps {
-}
 
 export default class Gallery extends React.Component<IGalleryProps, {}> {
   public render(): JSX.Element {
@@ -192,27 +185,24 @@ export default class Gallery extends React.Component<IGalleryProps, {}> {
     }
     else {
       return (
-        <div className={styles.gallery}>
+        <div className={styles.helloWorld}>
           <div className={styles.container}>
-            <div className={css('ms-Grid-row ms-bgColor-themeDark ms-fontColor-white', styles.row)}>
+            <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
               <div className='ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1'>
-                <span className='ms-font-xl ms-fontColor-white'>
+                <span className="ms-font-xl ms-fontColor-white">
                   Welcome to SharePoint!
-              </span>
+                </span>
                 <p className='ms-font-l ms-fontColor-white'>
                   Customize SharePoint experiences using Web Parts.
-              </p>
+                </p>
                 <p className='ms-font-l ms-fontColor-white'>
                   List: {this.props.listName}<br />
                   Order: {this.props.order}<br />
                   Number of items: {this.props.numberOfItems}<br />
                   Style: {this.props.style}
                 </p>
-                <a
-                  className={css('ms-Button', styles.button)}
-                  href='https://github.com/SharePoint/sp-dev-docs/wiki'
-                  >
-                  <span className='ms-Button-label'>Learn more</span>
+                <a href="https://aka.ms/spfx" className={styles.button}>
+                  <span className={styles.label}>Learn more</span>
                 </a>
               </div>
             </div>
@@ -236,6 +226,15 @@ export default class Gallery extends React.Component<IGalleryProps, {}> {
 }
 ```
 
+Update the main React component Interface to match on the web part property Interface, since we are bypassing all the web part properties to this component. In the code editor, open the **./src/webparts/gallery/components/IGalleryProps.ts** file and change its code to:
+
+```ts
+import { IGalleryWebPartProps } from '../IGalleryWebPartProps';
+
+export interface IGalleryProps extends IGalleryWebPartProps {
+}
+```
+
 ### Render web part properties in the property pane
 
 For users to be able to use the newly defined properties to configure the web part, the properties must be displayed in the web part property pane. In the code editor, open the **./src/webparts/gallery/GalleryWebPart.ts** file. In the top section of the file change the **@microsoft/sp-webpart-base** import statement to:
@@ -243,8 +242,7 @@ For users to be able to use the newly defined properties to configure the web pa
 ```ts
 import {
   BaseClientSideWebPart,
-  IPropertyPaneSettings,
-  IWebPartContext,
+  IPropertyPaneConfiguration,
   PropertyPaneDropdown,
   PropertyPaneSlider,
   PropertyPaneChoiceGroup
@@ -256,7 +254,7 @@ Next, change the **propertyPaneSettings** getter to:
 ```ts
 export default class GalleryWebPart extends BaseClientSideWebPart<IGalleryWebPartProps> {
   // ...
-  protected get propertyPaneSettings(): IPropertyPaneSettings {
+  protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {
       pages: [
         {
