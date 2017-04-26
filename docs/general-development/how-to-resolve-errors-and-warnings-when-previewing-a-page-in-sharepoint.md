@@ -27,24 +27,24 @@ Here are the preview errors and warnings that you might encounter, and help for 
     
     
 
-## HTML file cannot contain <form> tags
+## HTML file cannot contain \<form\> tags
 <a name="FormTags"> </a>
 
 
 ### Message
 
- **Your Master Page has one or more HTML <FORM> tags. For your master page to work, remove the tags (but you can leave the content in them).**
+ **Your Master Page has one or more HTML \<FORM\> tags. For your master page to work, remove the tags (but you can leave the content in them).**
   
     
     
 
 ### Resolution
 
-SharePoint 2013 pages are already wrapped in a **<form>** tag so that ASP.NET can do post-backs (specifically, a SharePoint 2013.master page contains the **<SharePoint:SharePointForm>** tag that creates an actual **<form>** tag when an associated content page is rendered). So, including a **<form>** tag on your master page or page layout means that there would be nested **<form>** tags on the final rendering of the page, which is not valid in HTML. In your HTML editor, delete any **<form>** tags, save the page, and then refresh the preview.
+SharePoint 2013 pages are already wrapped in a **\<form\>** tag so that ASP.NET can do post-backs (specifically, a SharePoint 2013.master page contains the **<SharePoint:SharePointForm>** tag that creates an actual **\<form\>** tag when an associated content page is rendered). So, including a **\<form\>** tag on your master page or page layout means that there would be nested **\<form\>** tags on the final rendering of the page, which is not valid in HTML. In your HTML editor, delete any **\<form\>** tags, save the page, and then refresh the preview.
   
     
     
-If you want an HTML **<form>** tag in the page layout, you should put the form within a content placeholder with the ID **PlaceHolderUtilityContent** by adding this code to your HTML page layout:
+If you want an HTML **\<form\>** tag in the page layout, you should put the form within a content placeholder with the ID **PlaceHolderUtilityContent** by adding this code to your HTML page layout:
   
     
     
