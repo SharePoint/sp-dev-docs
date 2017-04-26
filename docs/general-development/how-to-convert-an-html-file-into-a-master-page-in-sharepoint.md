@@ -6,7 +6,7 @@ ms.assetid: a76ab289-3256-45de-ac63-d5112a74e3c7
 
 
 # How to: Convert an HTML file into a master page in SharePoint 2013
-With Design Manager, you can convert an.html file into a SharePoint 2013 master page, a .master file. After the conversion, the HTML file and master page are associated, so that when you edit and save the HTML file, the changes are synced to the associated master page.
+With Design Manager, you can convert an .html file into a SharePoint 2013 master page, a .master file. After the conversion, the HTML file and master page are associated, so that when you edit and save the HTML file, the changes are synced to the associated master page.
 ## Introduction to converting a master page
 <a name="Introduction"> </a>
 
@@ -29,7 +29,7 @@ When you convert an HTML file into a master page:
 - All markup required by SharePoint 2013 is added to the .master file so that the master page renders correctly.
     
   
-- Markup such as comments, **<div>** tags, snippets, and content placeholders are added to your original HTML file.
+- Markup such as comments, **\<div\>** tags, snippets, and content placeholders are added to your original HTML file.
     
   
 - The HTML file and master page are associated, so that any later edits to the HTML file are synced to the .master file when the HTML file is saved.
@@ -62,21 +62,21 @@ Before you convert your HTML file, here are some best practices and guidance to 
 - Consider the SharePoint page model. For more information, see  [Overview of the SharePoint 2013 page model](overview-of-the-sharepoint-page-model.md). As you design the HTML mockups of your site, you'll probably have several HTML files for different types of pages, such as an article page or a category page that contains Web Parts that display a category of items from a catalog. But, only one HTML file will be converted into the master page. An HTML file can be converted into a master page, but an HTML file can't be converted directly into a page layout because a page layout requires page fields.
     
   
-- Make sure your HTML file is XML-compliant. For the conversion to work, the HTML file must be XML-compliant. Unfortunately, this requirement overrides some HTML 5 standards—for example, in HTML 5 you can specify the **doctype** in lowercase, but in XML the **doctype** must be uppercase. Also, you should remove any **<form>** tags from your HTML file. Consider running your HTML file through an external XML validator to identify XML errors before conversion.
+- Make sure your HTML file is XML-compliant. For the conversion to work, the HTML file must be XML-compliant. Unfortunately, this requirement overrides some HTML 5 standards—for example, in HTML 5 you can specify the **doctype** in lowercase, but in XML the **doctype** must be uppercase. Also, you should remove any **\<form\>** tags from your HTML file. Consider running your HTML file through an external XML validator to identify XML errors before conversion.
     
   
 - Consider these important guidelines for your CSS references:
     
-  - Don't put **<style>** blocks in the **<head>** tag. These styles are removed during conversion. Instead, link from your HTML file to an external CSS file.
+  - Don't put **\<style\>** blocks in the **\<head\>** tag. These styles are removed during conversion. Instead, link from your HTML file to an external CSS file.
     
   
   - Add  `ms-design-css-conversion="no"` to the **<CSS link>** tag if you're using a web font.
     
   
-  - Be cautious about applying styles to general HTML tags like **<body>**, **<div>**, and **< img>**. Everything within your SharePoint design, including the ribbon, is within the **<body>** tag. For styles that you would usually apply to the **<body>** tag, consider applying them instead to **<div id="s4-bodyContainer">**, which is a tag that SharePoint 2013 uses for the main body of the page. Also, SharePoint 2013 uses many images that are affected by whatever styles you apply to the **<img>** tag.
+  - Be cautious about applying styles to general HTML tags like **\<body\>**, **\<div\>**, and **\< img\>**. Everything within your SharePoint design, including the ribbon, is within the **\<body\>** tag. For styles that you would usually apply to the **\<body\>** tag, consider applying them instead to **\<div id="s4-bodyContainer"\>**, which is a tag that SharePoint 2013 uses for the main body of the page. Also, SharePoint 2013 uses many images that are affected by whatever styles you apply to the **\<img\>** tag.
     
   
-  - Many designers style the navigation by applying classes to **<ul>** and **<li>** elements. But, SharePoint 2013 uses a dynamic navigation control, which you can add to your master page from the Snippet Gallery. SharePoint 2013 navigation controls have styles applied by default that you have to override.
+  - Many designers style the navigation by applying classes to **\<ul\>** and **\<li\>** elements. But, SharePoint 2013 uses a dynamic navigation control, which you can add to your master page from the Snippet Gallery. SharePoint 2013 navigation controls have styles applied by default that you have to override.
     
   
 - Consider these potential issues about file naming:
@@ -87,9 +87,9 @@ Before you convert your HTML file, here are some best practices and guidance to 
   - If you have Design/Index.html and Design/SubDesign/Index.html, both of those files are available for conversion into their own, separate .master files, but they'll both show up as Index.html in the master page list in Design Manager. To disambiguate them, click or select the ellipsis button for each file to see the full path.
     
   
-- If you're adding a JavaScript widget, make sure the **<script>** start tag is on its own line.
+- If you're adding a JavaScript widget, make sure the **\<script\>** start tag is on its own line.
     
-  ```
+```
   
 <script>
 (function( …
@@ -104,9 +104,9 @@ Before you convert your HTML file, here are some best practices and guidance to 
   ```
   
 <Script> (function( …
-  ```
+```
 
-- A reference to the JQuery library (an external reference) should go before the **</head>** tag.
+- A reference to the JQuery library (an external reference) should go before the **\</head\>** tag.
     
   
 
@@ -163,9 +163,9 @@ Before you convert an HTML file, you first have to upload all of your design fil
 8. To fix any errors, edit the HTML file that resides directly on the server by using an HTML editor to open and edit the HTML file in the mapped drive. Each time you save the HTML file, any changes are synced to the associated .master file.
     
   
-9. After your master page previews successfully, you will see a **<div>** tag that gets added to your HTML file. You may have to scroll to the bottom of the page to see the **<div>** tag.
+9. After your master page previews successfully, you will see a **\<div\>** tag that gets added to your HTML file. You may have to scroll to the bottom of the page to see the **\<div\>** tag.
     
-    This **<div>** is the main content block. It resides inside a content placeholder named **ContentPlaceHolderMain**. At run time, when a visitor browses your site and requests a page, this content placeholder gets filled with content from a page layout that contains content in a matching content region. You should position this **<div>** where you want your page layouts to appear on the master page.
+    This **\<div\>** is the main content block. It resides inside a content placeholder named **ContentPlaceHolderMain**. At run time, when a visitor browses your site and requests a page, this content placeholder gets filled with content from a page layout that contains content in a matching content region. You should position this **\<div\>** where you want your page layouts to appear on the master page.
     
     If your HTML file contains static or mockup content in the body of the page, now you begin the process of removing that static content from the HTML master page and applying those styles to other elements of the SharePoint page model, such as page layouts, page field controls, snippets, and display templates. For an example, see  [How to: Create a page layout in SharePoint 2013](how-to-create-a-page-layout-in-sharepoint.md).
     
@@ -178,7 +178,7 @@ When you convert an HTML file into a master page, many lines of markup get added
   
     
     
-The markup that gets added includes tags before and in the **<head>** tag, snippets, and content placeholders. Most of the markup is enclosed within comment tags: Whenever you save a change to the HTML file, the conversion process strips out the comments to use the ASP.NET markup within.
+The markup that gets added includes tags before and in the **\<head\>** tag, snippets, and content placeholders. Most of the markup is enclosed within comment tags: Whenever you save a change to the HTML file, the conversion process strips out the comments to use the ASP.NET markup within.
   
     
     
@@ -190,7 +190,7 @@ The following is a breakdown of the types of markup that are added to the HTML f
     
     
 
-- **Document properties** The **<mso>** tag contains SharePoint metadata, including information about the file itself and some properties needed for the successful conversion to the .master file.
+- **Document properties** The **\<mso\>** tag contains SharePoint metadata, including information about the file itself and some properties needed for the successful conversion to the .master file.
     
   ```HTML
   
@@ -203,7 +203,7 @@ The following is a breakdown of the types of markup that are added to the HTML f
 </mso:CustomDocumentProperties>
   ```
 
-- **SharePoint namespace registration** The **<SPM>** tag ("SharePoint markup") provides a line registering a SharePoint namespace.
+- **SharePoint namespace registration** The **\<SPM\>** tag ("SharePoint markup") provides a line registering a SharePoint namespace.
     
   ```HTML
   
@@ -211,7 +211,7 @@ The following is a breakdown of the types of markup that are added to the HTML f
         <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
   ```
 
-- **Comments** The **<CS>** and **<CE>** ("Comment start" and "comment end") tags are ignored during the conversion process. These tags are to help you parse the lines of markup.
+- **Comments** The **\<CS\>** and **\<CE\>** ("Comment start" and "comment end") tags are ignored during the conversion process. These tags are to help you parse the lines of markup.
     
   ```HTML
   
@@ -228,7 +228,7 @@ The following is a breakdown of the types of markup that are added to the HTML f
 <!--CE: End PlaceHolderMain Snippet-->
   ```
 
-- **Snippets** The **<MS>** and **<ME>** ("markup start" and "markup end") tags denote the beginning and end of a SharePoint control or a snippet. A snippet is a SharePoint control that adds SharePoint functionality to your page. You can add snippets yourself by using the Snippet Gallery. For more information, see [SharePoint 2013 Design Manager snippets](sharepoint-design-manager-snippets.md).
+- **Snippets** The **\<MS\>** and **\<ME\>** ("markup start" and "markup end") tags denote the beginning and end of a SharePoint control or a snippet. A snippet is a SharePoint control that adds SharePoint functionality to your page. You can add snippets yourself by using the Snippet Gallery. For more information, see [SharePoint 2013 Design Manager snippets](sharepoint-design-manager-snippets.md).
     
   ```HTML
   
@@ -278,7 +278,7 @@ The following is a breakdown of the types of markup that are added to the HTML f
         <!--ME:</SharePoint:AjaxDelta>-->
   ```
 
-- **Preview blocks** The **<PS>** and **<PE>** ("Preview start" and "preview end") tags surround a section of HTML code that you shouldn't edit because this section affects only the design-time preview. These preview sections are a snapshot in time of the SharePoint control that snippet is inserting. A preview makes it possible for you to work more meaningfully on the HTML file in a client-side HTML editor. But, changing the content or styling within that preview has no lasting effect on the .master file, which is what SharePoint is ultimately using. To style a snippet, you have to identify and override the SharePoint styles with your own custom CSS.
+- **Preview blocks** The **\<PS\>** and **\<PE\>** ("Preview start" and "preview end") tags surround a section of HTML code that you shouldn't edit because this section affects only the design-time preview. These preview sections are a snapshot in time of the SharePoint control that snippet is inserting. A preview makes it possible for you to work more meaningfully on the HTML file in a client-side HTML editor. But, changing the content or styling within that preview has no lasting effect on the .master file, which is what SharePoint is ultimately using. To style a snippet, you have to identify and override the SharePoint styles with your own custom CSS.
     
   ```HTML
   
@@ -314,9 +314,9 @@ It's important to know about two of the snippets that are added to your HTML fil
 <!--ME:</SharePoint:SPSecurityTrimmedControl>-->
   ```
 
-- **ContentPlaceHolderMain** At the bottom of the **<div id="s4-bodyContainer">** tag, before the closing **</body>** tag, the conversion process inserts a content placeholder named **PlaceHolderMain**. Inside this snippet is the black-bordered, yellow **<div>** that appears in the design view of your HTML editor, or in the server-side preview in Design Manager.
+- **ContentPlaceHolderMain** At the bottom of the **\<div id="s4-bodyContainer"\>** tag, before the closing **\</body\>** tag, the conversion process inserts a content placeholder named **PlaceHolderMain**. Inside this snippet is the black-bordered, yellow **\<div\>** that appears in the design view of your HTML editor, or in the server-side preview in Design Manager.
     
-    This **<div>** represents the area where the content specified by your page layouts and pages will go. You should move the **PlaceHolderMain** snippet to the place within your master page that will be filled by your page layouts—the area of your site design that isn't the same across all pages of your site.
+    This **\<div\>** represents the area where the content specified by your page layouts and pages will go. You should move the **PlaceHolderMain** snippet to the place within your master page that will be filled by your page layouts—the area of your site design that isn't the same across all pages of your site.
     
 
 

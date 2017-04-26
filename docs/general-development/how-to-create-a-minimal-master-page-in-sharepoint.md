@@ -71,9 +71,9 @@ Starting with a minimal master page is useful when:
     
     The preview page also contains a **Snippets** link in the upper-right corner. This link opens the Snippet Gallery, where you can begin replacing static or mock-up controls in your design with dynamic SharePoint controls. For more information, see [SharePoint 2013 Design Manager snippets](sharepoint-design-manager-snippets.md).
     
-    After your master page previews successfully, you will see a **<div>** tag that gets added to your HTML file. You may have to scroll to the bottom of the page to see the **<div>** tag.
+    After your master page previews successfully, you will see a **\<div\>** tag that gets added to your HTML file. You may have to scroll to the bottom of the page to see the **\<div\>** tag.
     
-    This **<div>** is the main content block. It resides inside a content placeholder named **ContentPlaceHolderMain**. At run time, when a visitor browses your site and requests a page, this content placeholder gets filled with content from a page layout that contains content in a matching content region. You should position this **<div>** where you want your page layouts to appear on the master page.
+    This **\<div\>** is the main content block. It resides inside a content placeholder named **ContentPlaceHolderMain**. At run time, when a visitor browses your site and requests a page, this content placeholder gets filled with content from a page layout that contains content in a matching content region. You should position this **\<div\>** where you want your page layouts to appear on the master page.
     
   
 7. You can edit the HTML file that resides directly on the server by using an HTML editor to open and edit the HTML file in a mapped drive. Each time you save the HTML file, any changes are synced to the associated .master file. For more information, see  [How to: Map a network drive to the SharePoint 2013 Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md).

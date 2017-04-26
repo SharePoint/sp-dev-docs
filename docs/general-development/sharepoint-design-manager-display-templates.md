@@ -142,9 +142,8 @@ The HTML file that is used for a display template is a fully-formed HTML documen
 
 ### Title tag
 
-The text in the **<title>** tag in a display template file is used as the display name in the **Display Templates** section of the Web Part edit pane when the Search Web Part is in edit mode. The following example is for the item display template named Item_Picture3Lines.html:
+The text in the **\<title\>** tag in a display template file is used as the display name in the **Display Templates** section of the Web Part edit pane when the Search Web Part is in edit mode. The following example is for the item display template named Item_Picture3Lines.html:
   
-    
     
 
 ```HTML
@@ -155,7 +154,7 @@ The text in the **<title>** tag in a display template file is used as the displa
 
 ### Header properties
 
-Immediately after the **<title>** tag, there is a set of custom elements bounded by the following markup:
+Immediately after the **\<title\>** tag, there is a set of custom elements bounded by the following markup:
   
     
     
@@ -199,7 +198,7 @@ These elements and their properties provide important information to the SharePo
 ### Script block
 <a name="bk_scriptblock"> </a>
 
-Inside the **<body>** tag, you can see the following **<script>** tag:
+Inside the **\<body\>** tag, you can see the following **\<script\>** tag:
   
     
     
@@ -211,12 +210,12 @@ Inside the **<body>** tag, you can see the following **<script>** tag:
 </script>
 ```
 
-By default, this line is included in all display templates. You can add more lines of code inside the **<script>** tag to reference CSS files or other JavaScript files outside your main display template HTML file. Table 2 shows examples for how to include other resources.
+By default, this line is included in all display templates. You can add more lines of code inside the **\<script\>** tag to reference CSS files or other JavaScript files outside your main display template HTML file. Table 2 shows examples for how to include other resources.
   
     
     
 
-**Table 2. Examples for including external resources in the <script> tag**
+**Table 2. Examples for including external resources in the \<script\> tag**
 
 
 |**If you want to include the following:**|**Use the following code:**|
@@ -237,18 +236,18 @@ By default, this line is included in all display templates. You can add more lin
 ### DIV block
 <a name="bk_scriptblock"> </a>
 
-Following the **<script>** tag is a **<div>** tag with an ID. By default, the ID for this **<div>** tag matches the name of the HTML file. Any HTML or code that you want the display template to provide must be included inside this **<div>** tag. But, the tag itself is not included in the markup that is rendered on the webpage at run time.
+Following the **\<script\>** tag is a **\<div\>** tag with an ID. By default, the ID for this **\<div\>** tag matches the name of the HTML file. Any HTML or code that you want the display template to provide must be included inside this **\<div\>** tag. But, the tag itself is not included in the markup that is rendered on the webpage at run time.
   
     
     
 
 > [!NOTE]
-> If you want to assign a CSS style or an ID to the block of HTML that is rendered on the page at run time, you can add a new tag inside the first **<div>** tag. You can also assign a CSS style or an ID to the HTML that surrounds the variable `_#= ctx.RenderGroups(ctx) =#_` in the control template. The variable `_#= ctx.RenderGroups(ctx) =#_` is used to render the HTML that surrounds the query results that are rendered by the item template.
+> If you want to assign a CSS style or an ID to the block of HTML that is rendered on the page at run time, you can add a new tag inside the first **\<div\>** tag. You can also assign a CSS style or an ID to the HTML that surrounds the variable `_#= ctx.RenderGroups(ctx) =#_` in the control template. The variable `_#= ctx.RenderGroups(ctx) =#_` is used to render the HTML that surrounds the query results that are rendered by the item template.
   
     
     
 
-In the first **<div>** tag you'll see code inside comment blocks that begin with **<!--#_** and end with **_#-->**. You use JavaScript code inside these blocks, and HTML outside the blocks. You can also use these blocks to control the HTML with conditional statements. To do this, use a comment block with the conditional statement and opening bracket, followed by HTML, followed by another comment block with the closing bracket. In the following example, the anchor tag is rendered on the page only if the value for the **linkURL** object is not empty.
+In the first **\<div\>** tag you'll see code inside comment blocks that begin with **<!--#_** and end with **_#-->**. You use JavaScript code inside these blocks, and HTML outside the blocks. You can also use these blocks to control the HTML with conditional statements. To do this, use a comment block with the conditional statement and opening bracket, followed by HTML, followed by another comment block with the closing bracket. In the following example, the anchor tag is rendered on the page only if the value for the **linkURL** object is not empty.
   
     
     

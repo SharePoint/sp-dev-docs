@@ -11,7 +11,7 @@ Learn how to build and export the visual design of a SharePoint site collection 
 ## Overview of Design Packages
 <a name="int"> </a>
 
-InSharePoint 2013, Design Manager can help web developers and designers build and export the visual design of a SharePoint site collection as a package. This package can easily be distributed to customers, or other designated groups, for installation on their site collections. This new feature reduces the complexity of transporting designs, and makes it easier for customers to outsource the visual design of their sites. For example, some usage scenarios can include the following:
+In SharePoint 2013, Design Manager can help web developers and designers build and export the visual design of a SharePoint site collection as a package. This package can easily be distributed to customers, or other designated groups, for installation on their site collections. This new feature reduces the complexity of transporting designs, and makes it easier for customers to outsource the visual design of their sites. For example, some usage scenarios can include the following:
   
     
     
