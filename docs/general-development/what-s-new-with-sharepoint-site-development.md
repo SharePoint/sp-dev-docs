@@ -78,7 +78,7 @@ SharePoint 2013 contains many ready-to-use components—like Web Parts and contr
   
     
     
-On the ribbon, in the **Snippet Gallery** group,, you can select a component, configure its properties and update the snippet, copy the HTML snippet that's generated, and paste that HTML snippet into your HTML file. The HTML snippet gives you a high-fidelity preview of that component, both in the server-side preview and in your HTML editor of choice. After you add SharePoint components to your HTML files, you can use CSS to fully brand them. And just like any update to the HTML file, after you add SharePoint components and brand them, the changes are automatically synchronized to the associated master page or page layout. The HTML snippets are automatically converted into SharePoint components.
+On the ribbon, in the **Snippet Gallery** group, you can select a component, configure its properties and update the snippet, copy the HTML snippet that's generated, and paste that HTML snippet into your HTML file. The HTML snippet gives you a high-fidelity preview of that component, both in the server-side preview and in your HTML editor of choice. After you add SharePoint components to your HTML files, you can use CSS to fully brand them. And just like any update to the HTML file, after you add SharePoint components and brand them, the changes are automatically synchronized to the associated master page or page layout. The HTML snippets are automatically converted into SharePoint components.
   
     
     
