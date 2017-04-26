@@ -135,11 +135,10 @@ Figure 1 shows a view form with a custom-rendered field type.
   
   - Overrides the **JSLink** property.
     
-    > [!NOTE]
+    > **Note:**
       > The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list. 
 
-  ```cs
-  
+```cs
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -204,7 +203,7 @@ namespace Microsoft.SDK.SharePoint.Samples.WebControls
     }
 }            
 
-  ```
+```
 
 
 ### To add an XML definition for the custom field type
