@@ -56,7 +56,7 @@ Replace the contents of the generated **launch.json** file with:
             "webRoot": "${workspaceRoot}",
             "sourceMaps": true,
             "sourceMapPathOverrides": {
-                "webpack:///../../../../*": "${webRoot}/*",
+                "webpack:///../../../src/*": "${webRoot}/src/*",
                 "webpack:///../../../../src/*": "${webRoot}/src/*",
                 "webpack:///../../../../../src/*": "${webRoot}/src/*"
             },
@@ -134,7 +134,7 @@ In Visual Studio Code open the **./.vscode/launch.json** file. Copy the existing
             "webRoot": "${workspaceRoot}",
             "sourceMaps": true,
             "sourceMapPathOverrides": {
-                "webpack:///../../../../*": "${webRoot}/*",
+                "webpack:///../../../src/*": "${webRoot}/src/*",
                 "webpack:///../../../../src/*": "${webRoot}/src/*",
                 "webpack:///../../../../../src/*": "${webRoot}/src/*"
             },
@@ -150,7 +150,7 @@ In Visual Studio Code open the **./.vscode/launch.json** file. Copy the existing
             "webRoot": "${workspaceRoot}",
             "sourceMaps": true,
             "sourceMapPathOverrides": {
-                "webpack:///../../../../*": "${webRoot}/*",
+                "webpack:///../../../src/*": "${webRoot}/src/*",
                 "webpack:///../../../../src/*": "${webRoot}/src/*",
                 "webpack:///../../../../../src/*": "${webRoot}/src/*"
             },
