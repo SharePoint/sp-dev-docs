@@ -48,7 +48,7 @@ In order to validate the value of a web part property, you have to implement the
 
 In this step you will verify that the description web part property is specified and its value is not longer than 40 characters. You will do this using the inline validation process.
 
-In the code editor open the **./src/webparts/listInfo/ListInfoWebPart.ts** file. In the **ListInfo** class, add the **validateDescription** method with the following code:
+In the code editor open the **./src/webparts/listInfo/ListInfoWebPart.ts** file. In the **ListInfoWebPart** class, add the **validateDescription** method with the following code:
 
 ```ts
 export default class ListInfoWebPart extends BaseClientSideWebPart<IListInfoWebPartProps> {
