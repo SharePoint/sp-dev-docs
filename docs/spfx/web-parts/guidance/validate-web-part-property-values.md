@@ -1,7 +1,5 @@
 # Validate web part property values
 
-> Note. This article has not yet been verified with SPFx GA version, so you might have challenges on making this work as such with the latest release.
-
 When working with web parts, users can configure them to meet their needs using their properties. By validating the provided configuration values you can make it easier for users to configure the web part and improve the overall user experience of working with your web part. In this article you will learn how to validate web part property values in SharePoint Framework client-side web parts.
 
 > **Note:** Before following the steps in this article, be sure to [set up your development environment](../../set-up-your-development-environment) for building SharePoint Framework solutions.
@@ -30,9 +28,9 @@ When prompted, enter the following values:
 
 - **react-listinfo** as your solution name
 - **Use the current folder** for the location to place the files
+- **React** as the starting point to build the web part
 - **List info** as your web part name
 - **Shows information about the selected list** as your web part description
-- **React** as the starting point to build the web part
 
 ![SharePoint Framework Yeoman generator with the default choices](../../../../images/property-validation-yeoman-generator.png)
 
