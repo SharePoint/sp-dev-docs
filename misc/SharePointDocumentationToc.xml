@@ -542,7 +542,7 @@
 				<Item text="Create custom actions to deploy with SharePoint Add-ins" url="sp-add-ins/create-custom-actions-to-deploy-with-sharepoint-add-ins" SEODescription=""/>
 				<Item text="Customize a list view in SharePoint Add-ins using client-side rendering" url="sp-add-ins/customize-a-list-view-in-sharepoint-add-ins-using-client-side-rendering" SEODescription=""/>
 				<Item text="Use the client-side People Picker control in SharePoint-hosted SharePoint Add-ins" url="sp-add-ins/use-the-client-side-people-picker-control-in-sharepoint-hosted-sharepoint-add-in" SEODescription=""/>
-				<Item text="Highlight content and enhance the functionality of SharePoint-hosted SharePoint Add-ins with the callout control" url="sp-add-ins/highlight-content-and-enhance-the-functionality-of-sharepoint-hosted-sharepoint-" SEODescription=""/>
+				<Item text="Highlight content and enhance the functionality of SharePoint-hosted SharePoint Add-ins with the callout control" url="sp-add-ins/highlight-content-and-enhance-the-functionality-of-sharepoint-hosted-sharepoint" SEODescription=""/>
 				<Item text="Include a Web Part in a webpage on the add-in web" url="sp-add-ins/include-a-web-part-in-a-webpage-on-the-add-in-web" SEODescription=""/>
 				<Item text="Office Web Widgets - Experimental overview" url="sp-add-ins/office-web-widgetsexperimental-overview" SEODescription="">
 					<Item text="Use the experimental People Picker widget in SharePoint Add-ins" url="sp-add-ins/use-the-experimental-people-picker-widget-in-sharepoint-add-ins" SEODescription=""/>
