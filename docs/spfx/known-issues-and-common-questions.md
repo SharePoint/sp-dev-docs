@@ -7,7 +7,7 @@ This page is for listing any known issues or to answer any frequently asked ques
 **Dev certificate issue with Chrome (v58-)**
 *Date - 28th of April*
 
-If you are using a Chrome as your development browser, you might have challenges with the developer certificate regardless of executing *gulp trust-dev-cert* command. Chrome has changed it's model for certificate validation and you might see "Your connection is not private" warning when you are accessing local workbench.
+If you are using a Chrome as your development browser, you might have challenges with the developer certificate regardless of executing *gulp trust-dev-cert* command. Chrome has changed it's model for certificate validation starting from version 58 and you might see "Your connection is not private" warning when you are accessing local workbench.
 
 We are working on a solution for this. 
 
