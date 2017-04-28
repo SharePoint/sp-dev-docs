@@ -571,7 +571,7 @@
 						<Item text="Context Token OAuth flow for SharePoint Add-ins" url="sp-add-ins/context-token-oauth-flow-for-sharepoint-add-ins" SEODescription=""/>
 						<Item text="Authorization Code OAuth flow for SharePoint Add-ins" url="sp-add-ins/authorization-code-oauth-flow-for-sharepoint-add-ins" SEODescription=""/>
 						<Item text="Handle security tokens in provider-hosted low-trust SharePoint Add-ins" url="sp-add-ins/handle-security-tokens-in-provider-hosted-low-trust-sharepoint-add-ins" SEODescription=""/>
-						<Item text="Use an Office 365 SharePoint site to authorize provider-hosted add-ins on an on-premises SharePoint site" url="sp-add-ins/use-an-office-365-sharepoint-site-to-authorize-provider-hosted-add-ins-on-an-on-" SEODescription=""/>
+						<Item text="Use an Office 365 SharePoint site to authorize provider-hosted add-ins on an on-premises SharePoint site" url="sp-add-ins/use-an-office-365-sharepoint-site-to-authorize-provider-hosted-add-ins-on-an-on" SEODescription=""/>
 						<Item text="Replace an expiring client secret in a SharePoint Add-in" url="sp-add-ins/replace-an-expiring-client-secret-in-a-sharepoint-add-in" SEODescription=""/>
 					</Item>
 					<Item text="Creating SharePoint Add-ins that use high-trust authorization" url="sp-add-ins/creating-sharepoint-add-ins-that-use-high-trust-authorization" SEODescription="">
