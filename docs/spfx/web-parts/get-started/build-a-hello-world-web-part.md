@@ -70,6 +70,8 @@ To preview your web part, build and run it on a local web server. The client-sid
 
 To install the developer certificate for use with SPFx development, switch to your console, make sure you are still in the **helloworld-webpart** directory and enter the following command:
 
+> Notice that if you hare using Chrome v58 or newer as your browser, below command does not generate valid certificate for your environment and you will see a certificate exception in local workbench
+
 ```
 gulp trust-dev-cert
 ```
