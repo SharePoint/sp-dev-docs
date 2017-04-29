@@ -26,7 +26,7 @@ When working with third party libraries, you should always consider loading them
 
 ## Verify the contents of your bundle
 
-When building your project in the debug mode, the SharePoint Framework provides you with the [Webpack Visualizer](https://chrisbateman.github.io/webpack-visualizer/) chart showing the different scripts included in the generated bundle. You can find this chart in the **./dist/[solution-name].stats.html** file.
+When building your project in the debug mode, the SharePoint Framework provides you with the [Webpack Visualizer](https://chrisbateman.github.io/webpack-visualizer/) chart showing the different scripts included in the generated bundle. You can find this chart in the **./temp/stats/[solution-name].stats.html** file.
 
 ![Webpack Visualizer chart illustrating the contents of a sample SharePoint Framework bundle](../../../images/guidance-productionbuilds-webpack-visualizer-angular.png)
 
