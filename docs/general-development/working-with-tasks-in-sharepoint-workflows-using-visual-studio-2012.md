@@ -86,7 +86,7 @@ This new **Workflow Task** content type differs from the earlier **Task** conten
 
   
 
-     ![WorkingWithTasksSharePointWorkflowsFig1](../../images/WorkingWithTasksSharePointWorkflowsFig1.png)
+  ![WorkingWithTasksSharePointWorkflowsFig1](../../images/WorkingWithTasksSharePointWorkflowsFig1.png)
   
 
   
@@ -206,7 +206,7 @@ We are going to create a task in our workflow and assign it to the person who cr
 
   
 
-     ![WorkingWithTasksSharePointWorkflowsFig4](../../images/WorkingWithTasksSharePointWorkflowsFig5.png)
+  ![WorkingWithTasksSharePointWorkflowsFig4](../../images/WorkingWithTasksSharePointWorkflowsFig5.png)
   
 
   
@@ -236,7 +236,7 @@ We are going to create a task in our workflow and assign it to the person who cr
 
   
 
-     ![WorkingWithTasksSharePointWorkflowsFig5](../../images/WorkingWithTasksSharePointWorkflowsFig6.png)
+  ![WorkingWithTasksSharePointWorkflowsFig5](../../images/WorkingWithTasksSharePointWorkflowsFig6.png)
   
 
   
@@ -265,7 +265,7 @@ At this point we can create and assign the task to the author of the announcemen
 
   
 
-     ![WorkingWithTasksSharePointWorkflowsFig7](../../images/WorkingWithTasksSharePointWorkflowsFig7.png)
+  ![WorkingWithTasksSharePointWorkflowsFig7](../../images/WorkingWithTasksSharePointWorkflowsFig7.png)
   
 
   
@@ -390,7 +390,7 @@ To test the workflow, do the following:
 
   
 
-     ![WorkingWithTasksSharePointWorkflowsFig13](../../images/WorkingWithTasksSharePointWorkflowsFig12.png)
+  ![WorkingWithTasksSharePointWorkflowsFig13](../../images/WorkingWithTasksSharePointWorkflowsFig12.png)
   
 
   
@@ -402,7 +402,7 @@ To test the workflow, do the following:
 
   
 
-     ![WorkingWithTasksSharePointWorkflowsFig13](../../images/WorkingWithTasksSharePointWorkflowsFig13.png)
+  ![WorkingWithTasksSharePointWorkflowsFig13](../../images/WorkingWithTasksSharePointWorkflowsFig13.png)
   
 
   
@@ -575,7 +575,7 @@ Now we create a workflow so we can test the custom site column and content type.
 
   
 
-     ![WorkingWithTasksSharePointWorkflowsFig15](../../images/WorkingWithTasksSharePointWorkflowsFig15.png)
+  ![WorkingWithTasksSharePointWorkflowsFig15](../../images/WorkingWithTasksSharePointWorkflowsFig15.png)
   
 
   
@@ -610,7 +610,7 @@ Now we collect the list item properties.
 
   
 
-     ![WorkingWithTasksSharePointWorkflowsFig16](../../images/WorkingWithTasksSharePointWorkflowsFig16.png)
+  ![WorkingWithTasksSharePointWorkflowsFig16](../../images/WorkingWithTasksSharePointWorkflowsFig16.png)
   
 
   
@@ -639,7 +639,7 @@ Now we can create the single task.
 
   
 
-     ![WorkingWithTasksSharePointWorkflowsFig17](../../images/WorkingWithTasksSharePointWorkflowsFig17.png)
+  ![WorkingWithTasksSharePointWorkflowsFig17](../../images/WorkingWithTasksSharePointWorkflowsFig17.png)
   
 
   
@@ -654,7 +654,7 @@ Now we can create the single task.
 
   
 
-     ![WorkingWithTasksSharePointWorkflowsFig18](../../images/WorkingWithTasksSharePointWorkflowsFig18.png)
+  ![WorkingWithTasksSharePointWorkflowsFig18](../../images/WorkingWithTasksSharePointWorkflowsFig18.png)
   
 
   
@@ -721,7 +721,7 @@ Now let's test the workflow.
 
   
 
-     ![WorkingWithTasksSharePointWorkflowsFig19](../../images/WorkingWithTasksSharePointWorkflowsFig.png)
+  ![WorkingWithTasksSharePointWorkflowsFig19](../../images/WorkingWithTasksSharePointWorkflowsFig.png)
   
 
   

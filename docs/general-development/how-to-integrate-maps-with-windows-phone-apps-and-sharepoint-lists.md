@@ -85,7 +85,7 @@ The Geolocation column is not available by default in SharePoint lists. You have
 
   
 
-     ![Adding the SharePoint list using the wizard](../../images/SP15Con_HowToCreateMapBasedPhoneApp_Fig1.png)
+  ![Adding the SharePoint list using the wizard](../../images/SP15Con_HowToCreateMapBasedPhoneApp_Fig1.png)
   
 
   
@@ -241,7 +241,7 @@ In this step, you can run your app and validate it.
 
   
 
-     ![Allow privacy policy for maps](../../images/SP15Con_HowToCreateMapBasedPhoneApp_Fig2.png)
+  ![Allow privacy policy for maps](../../images/SP15Con_HowToCreateMapBasedPhoneApp_Fig2.png)
   
 
     The map view is displayed, as shown in Figure 3.
@@ -251,7 +251,7 @@ In this step, you can run your app and validate it.
 
   
 
-     ![Map view on mobile app](../../images/SP15Con_HowToCreateMapBasedPhoneApp_Fig3.png)
+  ![Map view on mobile app](../../images/SP15Con_HowToCreateMapBasedPhoneApp_Fig3.png)
   
 
   

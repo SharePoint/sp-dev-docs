@@ -94,7 +94,7 @@ In your Windows Phone SharePoint list app, you can access most of the lists that
 
   
 
-     ![SPList Wizard Error](../../images/SP15Con_CreateSharePointListAppsForWindowsPhoneFig3.png)
+  ![SPList Wizard Error](../../images/SP15Con_CreateSharePointListAppsForWindowsPhoneFig3.png)
   
 
     You can resolve this error by giving sufficient privileges to the account with which the developer is running the SPList wizard. Rerun **Splist wizard** after sufficient rights are given.

@@ -51,7 +51,7 @@ If you work through the continuing example in this article, you will have a fini
 
  
 
-     ![App events in the properties window](../../images/SP_VS_Properties_Window_AppEvents.PNG)
+  ![App events in the properties window](../../images/SP_VS_Properties_Window_AppEvents.PNG)
  
 
     The Office Developer Tools for Visual Studio will do the following:

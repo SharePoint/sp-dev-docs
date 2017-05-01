@@ -76,7 +76,7 @@ You must have the following:
 
   
 
-     ![SharePoint 2013 Project Visual Studio template](../../images/SharePointSolutionVSTemplate.png)
+  ![SharePoint 2013 Project Visual Studio template](../../images/SharePointSolutionVSTemplate.png)
   
 
   
@@ -525,7 +525,7 @@ After you deploy a custom field to the SharePoint server, a new custom column is
 
   
 
-     ![Creating a new custom Geolocation field type](../../images/SP15Con_HowToExtendGeolocationFieldTypeUsingClientSideRenderingFig2.png)
+  ![Creating a new custom Geolocation field type](../../images/SP15Con_HowToExtendGeolocationFieldTypeUsingClientSideRenderingFig2.png)
   
 
   

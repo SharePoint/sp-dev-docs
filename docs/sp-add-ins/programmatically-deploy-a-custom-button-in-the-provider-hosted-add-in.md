@@ -53,7 +53,7 @@ In the previous article you removed the custom  **AddEmployeeToCorpDB** ribbon b
 
 1. In  **Solution Explorer**, press the  **Show All Files** button on the small toolbar at the top of **Solution Explorer**.
     
-     ![The Solution Explorer toolbar with a box drawn around the "Show All Files" button.](../../images/f6b035f5-1aa7-452a-8f59-9dd44b062d06.PNG)
+  ![The Solution Explorer toolbar with a box drawn around the "Show All Files" button.](../../images/f6b035f5-1aa7-452a-8f59-9dd44b062d06.PNG)
  
 
  

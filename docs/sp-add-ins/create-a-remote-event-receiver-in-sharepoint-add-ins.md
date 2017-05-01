@@ -300,7 +300,7 @@ Test your handler with the following procedure.
 
  
 
-     ![SharePoint remote events in Visual Studio](../../images/SP_VS_Properties_Window_RemoteEvents.PNG)
+  ![SharePoint remote events in Visual Studio](../../images/SP_VS_Properties_Window_RemoteEvents.PNG)
  
 
  

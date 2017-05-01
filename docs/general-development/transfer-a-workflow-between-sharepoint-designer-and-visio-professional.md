@@ -89,7 +89,7 @@ To import a SharePoint workflow, do the following:
   
 2. On the **Workflows** tab, in the **Manage** group, click **Import from Visio**.
     
-     ![Import workflow](../../images/spd15-ImportFromVisio.JPG)
+  ![Import workflow](../../images/spd15-ImportFromVisio.JPG)
   
 
   

@@ -286,7 +286,7 @@ Follow these steps to create a custom action in the host web document libraries:
 
  
 
-     ![Document library with callout for a document open, the menu that that the callout button on the callout opens, and the Advanced menu open.](../../images/477cecf5-03ff-46ff-9c25-a5f9a86d43f4.png)
+  ![Document library with callout for a document open, the menu that that the callout button on the callout opens, and the Advanced menu open.](../../images/477cecf5-03ff-46ff-9c25-a5f9a86d43f4.png)
  
 
  
@@ -307,7 +307,7 @@ Follow these steps to create a custom action in the host web document libraries:
 
  
 
-     ![Web page with parameters from a custom action](../../images/CustomActions_target.png)
+  ![Web page with parameters from a custom action](../../images/CustomActions_target.png)
  
 
  
@@ -319,7 +319,7 @@ Follow these steps to create a custom action in the host web document libraries:
 
  
 
-     ![A document library with a document selected, the File tab open on the ribbon, and the custom button on the ribbon.](../../images/b315cb68-ff6a-4770-a1dc-738696ab71d2.png)
+  ![A document library with a document selected, the File tab open on the ribbon, and the custom button on the ribbon.](../../images/b315cb68-ff6a-4770-a1dc-738696ab71d2.png)
  
 
  

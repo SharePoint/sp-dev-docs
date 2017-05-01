@@ -92,7 +92,7 @@ In this article, you add a special kind of Web Part, called an add-in part to th
  
   4. On the Web Part insertion control that opens, select the  **Place Order** add-in part. The control will look similar to the following.
     
-     ![SharePoint's Web Part insertion control. The part called "Place Order" is highlighted. Its name and description appears in a box at the right.](../../images/aae61f89-2e9e-4808-8b0c-2439dad7c701.PNG)
+  ![SharePoint's Web Part insertion control. The part called "Place Order" is highlighted. Its name and description appears in a box at the right.](../../images/aae61f89-2e9e-4808-8b0c-2439dad7c701.PNG)
  
 
  
@@ -109,7 +109,7 @@ In this article, you add a special kind of Web Part, called an add-in part to th
  
 3. The order form now appears on the page and it has the look-and-feel of the rest of the page. It should look like the following: 
     
-     ![The Place Order add-in part on the page with text boxes for Product, Supplier, and Quantity. There is also a "Place Order" button.](../../images/beae2e3c-c1f4-4334-8ab8-0c42252cb2a2.PNG)
+  ![The Place Order add-in part on the page with text boxes for Product, Supplier, and Quantity. There is also a "Place Order" button.](../../images/beae2e3c-c1f4-4334-8ab8-0c42252cb2a2.PNG)
  
 
  

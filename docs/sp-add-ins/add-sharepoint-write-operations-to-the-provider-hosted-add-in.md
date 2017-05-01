@@ -175,7 +175,7 @@ The next improvement to the Chain Store add-in is to create new items in a list,
  
 10. Click  **new item**. The item creation form should look exactly like the following, including the two asterisks that indicate required fields.:
     
-     ![The item creation form for the Expected Shipments list. With fields for Product, Supplier, Quantity, Arrived, and "Added to Inventory". Asterisks by the titles of Product and Quantity and default value of one for Quantity.](../../images/e552b5c9-8baa-4e53-9295-4d85a79d7734.PNG)
+  ![The item creation form for the Expected Shipments list. With fields for Product, Supplier, Quantity, Arrived, and "Added to Inventory". Asterisks by the titles of Product and Quantity and default value of one for Quantity.](../../images/e552b5c9-8baa-4e53-9295-4d85a79d7734.PNG)
  
 
  
@@ -327,7 +327,7 @@ Recall that when an add-in requests Read or Write permission with the scope of L
  
 5. From the home page of the Hong Kong store, navigate to  **Site Contents** and open the **Expected Shipments** list. There is now an item on the list corresponding to the order. The following screenshot is an example.
     
-     ![The Expected Shipments list with a single item. There Product and Supplier fields have names. The Quantity field has a number. The two Yes/No fields are both set to "No".](../../images/e4285084-d31e-4e79-a469-ddebbc7dfb18.PNG)
+  ![The Expected Shipments list with a single item. There Product and Supplier fields have names. The Quantity field has a number. The two Yes/No fields are both set to "No".](../../images/e4285084-d31e-4e79-a469-ddebbc7dfb18.PNG)
  
 
  

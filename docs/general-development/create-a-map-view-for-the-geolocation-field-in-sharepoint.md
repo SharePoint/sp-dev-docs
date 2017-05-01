@@ -69,7 +69,7 @@ The following steps demonstrate how to create a map view from the SharePoint 201
 
   
 
-     ![Edit Control Box menu for SharePoint list](../../images/SPCon15_CreateMapView_ECB_Menu__fig1.png)
+  ![Edit Control Box menu for SharePoint list](../../images/SPCon15_CreateMapView_ECB_Menu__fig1.png)
   
 
   
@@ -81,7 +81,7 @@ The following steps demonstrate how to create a map view from the SharePoint 201
 
   
 
-     ![Choose Map View from the list of view types](../../images/SPCon15_CreateMapView_ChooseViewType__fig2.png)
+  ![Choose Map View from the list of view types](../../images/SPCon15_CreateMapView_ChooseViewType__fig2.png)
   
 
   
@@ -93,7 +93,7 @@ The following steps demonstrate how to create a map view from the SharePoint 201
 
   
 
-     ![Select fields to appear in the view](../../images/SPCon15_CreateMapView_SelectFieldsForView__fig3.png)
+  ![Select fields to appear in the view](../../images/SPCon15_CreateMapView_SelectFieldsForView__fig3.png)
   
 
     
@@ -105,7 +105,7 @@ The following steps demonstrate how to create a map view from the SharePoint 201
 
   
 
-     ![Completed map view](../../images/SPCon15_CreateMapView_MyMapView__fig4.png)
+  ![Completed map view](../../images/SPCon15_CreateMapView_MyMapView__fig4.png)
   
 
   

@@ -88,7 +88,7 @@ Figure 1 shows a client-side rendered view of an announcements list.
 
  
 
-     ![App for SharePoint 2013 Visual Studio template](../../images/AppForSharePointVSTemplate.PNG)
+  ![App for SharePoint 2013 Visual Studio template](../../images/AppForSharePointVSTemplate.PNG)
  
 
  

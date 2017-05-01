@@ -71,7 +71,7 @@ Before you can publish the add-in, it has to be registered with the SharePoint f
 
  
 
-     ![Register app on appregnew.aspx](../../images/SP15_RegisterApp.png)
+  ![Register app on appregnew.aspx](../../images/SP15_RegisterApp.png)
  
 
  
@@ -183,7 +183,7 @@ Skip the next procedure if you are using ISS Manager 8.
 
  
 
-     ![Exporting a test certificate](../../images/997021de-c60c-46b0-961f-7e1e63c0f619.gif)
+  ![Exporting a test certificate](../../images/997021de-c60c-46b0-961f-7e1e63c0f619.gif)
  
 
  

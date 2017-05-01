@@ -25,7 +25,7 @@ While you are editing inside a workflow step, do one of the following:
   
 - Double-click inside the workflow step. In the search box that appears, type text that appears in the name of the action that you want (such as "add"), and then press Enter. Actions and conditions that contain the text that you typed appear below the text box.
     
-     ![Enter keywords to see list of related actions.](../../images/SPD15-wf-step1.png)
+  ![Enter keywords to see list of related actions.](../../images/SPD15-wf-step1.png)
   
 
   

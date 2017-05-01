@@ -67,7 +67,7 @@ Let's walk through the process depicted in Figure 1. Use the letters to referenc
 
   
 
-     ![Start a 2010 workflow](../../images/wfInterop_Stage1.png)
+  ![Start a 2010 workflow](../../images/wfInterop_Stage1.png)
   
 
     
@@ -90,7 +90,7 @@ Let's walk through the process depicted in Figure 1. Use the letters to referenc
 
   
 
-     ![Setting properties on a Start Workflow activity](../../images/wfInterop_.png)
+  ![Setting properties on a Start Workflow activity](../../images/wfInterop_.png)
   
 
   

@@ -117,7 +117,7 @@ Before you begin, you need to know which content type and master page the page l
 
   
 
-     ![The menu that opens when the gear icon is clicked on a publishing site. One item is Design Manager.](../../images/43a35ca2-2c93-4323-a169-769c3a54fa38.PNG)
+  ![The menu that opens when the gear icon is clicked on a publishing site. One item is Design Manager.](../../images/43a35ca2-2c93-4323-a169-769c3a54fa38.PNG)
   
 
   

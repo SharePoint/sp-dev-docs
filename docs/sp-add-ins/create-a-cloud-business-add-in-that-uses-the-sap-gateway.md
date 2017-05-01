@@ -178,7 +178,7 @@ This studio includes all of the components needed to interact with SAP Gateway f
     
     This is the real CRUD implementation for BoxXDataService. The following image shows the main code architecture of CarInventoryBoxXDataOperation. The CRUD namespace is used to implement the CRUD operations, and the Util namespace is the helper code for the CRUD namespace.
     
-     ![CarInventoryBoxDataOperation](../../images/a9baa59c-4459-4f0d-935d-456f0ca7791e.jpg)
+  ![CarInventoryBoxDataOperation](../../images/a9baa59c-4459-4f0d-935d-456f0ca7791e.jpg)
  
 
  
@@ -218,7 +218,7 @@ SellerDashboardStudio includes standard LightSwitch SharePoint add-in components
     
  
 - 
-     ![SellerDashboard.HTMLClient](../../images/89aa8c23-f8f2-410e-b021-7b0959e11586.jpg)
+  ![SellerDashboard.HTMLClient](../../images/89aa8c23-f8f2-410e-b021-7b0959e11586.jpg)
  
 
     SellerDashboard.HTML.Client includes these four screens:
@@ -247,7 +247,7 @@ SellerDashboardStudio includes standard LightSwitch SharePoint add-in components
     
     This component includes the WCF RIA data source, the SharePoint data source, and the photo-upload Web API. The following image shows its main components.
     
-     ![SellerDashboard.Server](../../images/43e92a09-180d-4adf-9ae2-8f6212d297c9.jpg)
+  ![SellerDashboard.Server](../../images/43e92a09-180d-4adf-9ae2-8f6212d297c9.jpg)
  
 
     The SharePointContext.cs and TokenHelper.cs are the helper classes that provide the client context to authenticate to SharePoint. This enables the photo upload Web API to be used to upload photos of cars to the picture library. The PhotoListHelper.cs and PhotosController.cs files implement the photo-upload Web API. For more information about how the photo-upload Web API is used by LightSwitch, see the article  [Walkthrough: Creating an Add-in for SharePoint by Using LightSwitch](http://msdn.microsoft.com/en-us/library/jj969621.aspx).
@@ -410,7 +410,7 @@ xmlns:edmx:"http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
  
 -  *Data source consumed by the LightSwitch server side* 
     
-     ![InventoryItem](../../images/b08243f7-3fa3-48b3-bf6c-e3ff49f2e2a2.jpg)
+  ![InventoryItem](../../images/b08243f7-3fa3-48b3-bf6c-e3ff49f2e2a2.jpg)
  
 
     In the SellerDashboard server, when you add the WCF RIA Service (BoxXDataService), the data model that's defined in CarInventoryModel is included, and you get the relevant data table. You can change the type of some of the properties. For example, you can change the  **BuyerEmail** type from **String** to **Email Address**, and LightSwitch will support the email format check on the client side.
@@ -798,7 +798,7 @@ An empty SharePoint add-in is used to grant the SharePoint add-in the read permi
  
 3. Set the Read permission in the application's manifest.
     
-     ![Manifest](../../images/746bcfe7-7f51-4f5d-a072-12c577e5fa2f.jpg)
+  ![Manifest](../../images/746bcfe7-7f51-4f5d-a072-12c577e5fa2f.jpg)
  
 
  

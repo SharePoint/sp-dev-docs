@@ -100,7 +100,7 @@ The most common causes of per-user throttling in SharePoint Online are client-si
     
   - For example, after migrating files to SharePoint Online, you run a custom CSOM or REST script to update metadata on the files. The CSOM/REST script is updating a large number of files at a very high frequency, which triggers throttling. Similarly, an autocomplete UI widget using REST services, making too many calls to lists during each end user operation, may also cause throttling, depending on what other operations are consuming resources at the same time.
     
-     ![Sporadic throttling](../../images/a61afe25-9597-403f-b3fa-d3f630155021.png)
+  ![Sporadic throttling](../../images/a61afe25-9597-403f-b3fa-d3f630155021.png)
   
 
   
@@ -118,7 +118,7 @@ The most common causes of per-user throttling in SharePoint Online are client-si
   
   - You customized your team site on SharePoint Online, for example, by adding a status indicator on the Home page. This status indicator updates frequently, which causes the page to make too many calls to the SharePoint Online service - this triggered throttling.
     
-     ![Steady throttling](../../images/7849d413-381f-4558-9e50-b3cc9990d3e3.png)
+  ![Steady throttling](../../images/7849d413-381f-4558-9e50-b3cc9990d3e3.png)
   
 
   

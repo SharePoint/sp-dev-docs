@@ -208,7 +208,7 @@ For your first SharePoint-hosted SharePoint Add-in, we'll include the classic Sh
 
  
 
-     ![List folder with child NewEmployeeOrientation template, which itself has three children; a NewEmployeeOrientationInstance, an elements.xml file, and a schema.xml file. The instance itself has a child named elements.xml.](../../images/10e5d116-d24b-4a44-bfff-cfbf2f971b1e.PNG)
+  ![List folder with child NewEmployeeOrientation template, which itself has three children; a NewEmployeeOrientationInstance, an elements.xml file, and a schema.xml file. The instance itself has a child named elements.xml.](../../images/10e5d116-d24b-4a44-bfff-cfbf2f971b1e.PNG)
  
 
     
@@ -342,7 +342,7 @@ For your first SharePoint-hosted SharePoint Add-in, we'll include the classic Sh
 
  
 
-     ![The add-in's default page is shown with its title New Employees by Location. There is a link labeled New Employees in Seattle. An arrow from this link points to the list view page for the list. It is titled New Employees in Seattle, with the list below.](../../images/9dc5cefe-083a-4807-bee6-473001f23db9.png)
+  ![The add-in's default page is shown with its title New Employees by Location. There is a link labeled New Employees in Seattle. An arrow from this link points to the list view page for the list. It is titled New Employees in Seattle, with the list below.](../../images/9dc5cefe-083a-4807-bee6-473001f23db9.png)
  
 
     

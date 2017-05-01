@@ -124,7 +124,7 @@ In this article you add a help page to the Employee Orientation SharePoint Add-i
 
  
 
-     ![A SharePoint page with title "Help". There is a header line in black, followed by two text lines in green.](../../images/2df51ab0-5b24-4a37-8b6a-6e95dbb1aeaa.PNG)
+  ![A SharePoint page with title "Help". There is a header line in black, followed by two text lines in green.](../../images/2df51ab0-5b24-4a37-8b6a-6e95dbb1aeaa.PNG)
  
 
     

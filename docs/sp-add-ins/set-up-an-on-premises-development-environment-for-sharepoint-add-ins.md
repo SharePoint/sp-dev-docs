@@ -53,7 +53,7 @@ Depending on your specific requirements and budget, you can choose from the foll
 
  
 
-     ![SharePoint 2013 Installation Server Type](../../images/SP15_app_ServerType.gif)
+  ![SharePoint 2013 Installation Server Type](../../images/SP15_app_ServerType.gif)
  
 
  
@@ -75,7 +75,7 @@ dir /od *.log
 
  
 
-     ![Site template page](../../images/SP15_appChooseSiteTemplate.gif)
+  ![Site template page](../../images/SP15_appChooseSiteTemplate.gif)
  
 
  

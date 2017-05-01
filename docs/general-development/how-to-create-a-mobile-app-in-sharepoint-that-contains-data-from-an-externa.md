@@ -99,7 +99,7 @@ Next you need to set permissions on the BDC model to specify who can execute the
 
   
 
-     ![Choosing permissions for BDC model](../../images/SPCon15_BDC_SetPermissions_ODataWebNorthWind.png)
+  ![Choosing permissions for BDC model](../../images/SPCon15_BDC_SetPermissions_ODataWebNorthWind.png)
   
 
   
@@ -117,7 +117,7 @@ Next you need to set permissions on the BDC model to specify who can execute the
 
   
 
-     ![Setting BDC object permissions](../../images/SPCon15_Setting_BDCObjectPermission_DialogueBox.png)
+  ![Setting BDC object permissions](../../images/SPCon15_Setting_BDCObjectPermission_DialogueBox.png)
   
 
   
@@ -201,7 +201,7 @@ Your external list is ready and you can now create a Windows Phone 7 app that co
 
   
 
-     ![SharePoint list mobile app template](../../images/SP15Con_VisualStudioMobileSPListTemplate.png)
+  ![SharePoint list mobile app template](../../images/SP15Con_VisualStudioMobileSPListTemplate.png)
   
 
   
@@ -252,7 +252,7 @@ Now that the app is ready to run, you can test it using phone emulator.
 
   
 
-     ![BDC Mobile App Demo](../../images/SPCon15_BDCMobileAppDemo.png)
+  ![BDC Mobile App Demo](../../images/SPCon15_BDCMobileAppDemo.png)
   
 
   

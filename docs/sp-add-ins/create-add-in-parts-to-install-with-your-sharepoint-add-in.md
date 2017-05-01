@@ -350,7 +350,7 @@ The dialog should look like the following when you are finished:
 
  
 
-     ![Basic app part in the web part gallery](../../images/BasicAppPart_gallery.jpg)
+  ![Basic app part in the web part gallery](../../images/BasicAppPart_gallery.jpg)
  
 
  

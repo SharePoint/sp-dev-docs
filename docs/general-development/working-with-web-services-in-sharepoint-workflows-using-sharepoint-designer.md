@@ -174,7 +174,7 @@ The following walkthrough demonstrates how to create a custom workflow that call
 
   
 
-     ![Figure 2. Creating the Customers list in SP](../../images/ngWSSP2013WorkflowSPD201302.png)
+  ![Figure 2. Creating the Customers list in SP](../../images/ngWSSP2013WorkflowSPD201302.png)
   
 
   
@@ -199,7 +199,7 @@ The following walkthrough demonstrates how to create a custom workflow that call
 
   
 
-     ![Figure 3. Creating a new List Workflow using SP](../../images/ngWSSP2013WorkflowSPD201303.png)
+  ![Figure 3. Creating a new List Workflow using SP](../../images/ngWSSP2013WorkflowSPD201303.png)
   
 
   
@@ -234,7 +234,7 @@ Now that we've created the workflow, we want to enable it to call a web service,
 
   
 
-     ![Figure 4. Dynamically Creating the URL for the Web](../../images/ngWSSP2013WorkflowSPD201304.png)
+  ![Figure 4. Dynamically Creating the URL for the Web](../../images/ngWSSP2013WorkflowSPD201304.png)
   
 
   
@@ -256,7 +256,7 @@ Now that we've created the workflow, we want to enable it to call a web service,
 
   
 
-     ![Figure 5. Writing the Web Service Response Code to](../../images/ngWSSP2013WorkflowSPD201305.png)
+  ![Figure 5. Writing the Web Service Response Code to](../../images/ngWSSP2013WorkflowSPD201305.png)
   
 
   
@@ -292,7 +292,7 @@ To do this, we're going to add two **Get item from dictionary** actions to the w
 
   
 
-     ![Figure 6. Extracting Values from the Web Service D](../../images/ngWSSP2013WorkflowSPD201306.png)
+  ![Figure 6. Extracting Values from the Web Service D](../../images/ngWSSP2013WorkflowSPD201306.png)
   
 
   
@@ -357,7 +357,7 @@ And finally, we complete the **Transition to stage** section of the workflow sta
 
   
 
-     ![Figure 8. List Items Updated by Custom Workflow](../../images/ngWSSP2013WorkflowSPD201308.png)
+  ![Figure 8. List Items Updated by Custom Workflow](../../images/ngWSSP2013WorkflowSPD201308.png)
   
 
   

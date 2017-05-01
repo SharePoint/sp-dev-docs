@@ -53,7 +53,7 @@ In this article you add a custom content type to the Employee Orientation ShareP
     
     **Content Type Tab**
 
-     ![The Content Type Designer showing 'NewEmployee' as the type name, 'Represents a new employee' as the description, and 'Employee Orientation' as the group.](../../images/8a9768f4-315d-45c0-88d7-687dbf84495c.PNG)
+  ![The Content Type Designer showing 'NewEmployee' as the type name, 'Represents a new employee' as the description, and 'Employee Orientation' as the group.](../../images/8a9768f4-315d-45c0-88d7-687dbf84495c.PNG)
  
  
 7. Open the  **Columns** tab in the designer.

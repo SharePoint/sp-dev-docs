@@ -70,7 +70,7 @@ The first step is to allow workflow to use app permissions. You configure workfl
 
   
 
-     ![Settings menu](../../images/SPD15-WFAppPermissions1.png)
+  ![Settings menu](../../images/SPD15-WFAppPermissions1.png)
   
 
   
@@ -91,7 +91,7 @@ The first step is to allow workflow to use app permissions. You configure workfl
 
   
 
-     ![Workflow can use app permissions feature](../../images/SPD15-WFAppPermissions2.png)
+  ![Workflow can use app permissions feature](../../images/SPD15-WFAppPermissions2.png)
   
 
   
@@ -121,7 +121,7 @@ In order for the workflow to function properly it must be granted full control i
 
   
 
-     ![Settings menu](../../images/SPD15-WFAppPermissions1.png)
+  ![Settings menu](../../images/SPD15-WFAppPermissions1.png)
   
 
   
@@ -139,7 +139,7 @@ In order for the workflow to function properly it must be granted full control i
 
   
 
-     ![Selecting App Identifier](../../images/SPD15-WFAppPermissions3.png)
+  ![Selecting App Identifier](../../images/SPD15-WFAppPermissions3.png)
   
 
   

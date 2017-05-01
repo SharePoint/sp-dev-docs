@@ -129,7 +129,7 @@ Visual Studio 2012 has SharePoint 2013 workflow project types built in. To creat
 
   
 
-     ![New Project dialog box](../../images/wfNewProject_b2.png)
+  ![New Project dialog box](../../images/wfNewProject_b2.png)
   
 
   
@@ -141,7 +141,7 @@ Visual Studio 2012 has SharePoint 2013 workflow project types built in. To creat
 
   
 
-     ![Add New Item dialog box](../../images/wfAddNewItemDialog_b2.png)
+  ![Add New Item dialog box](../../images/wfAddNewItemDialog_b2.png)
   
 
   
@@ -153,7 +153,7 @@ Visual Studio 2012 has SharePoint 2013 workflow project types built in. To creat
 
   
 
-     ![Workflow toolbox](../../images/wfToolbox_b2.png)
+  ![Workflow toolbox](../../images/wfToolbox_b2.png)
   
 
   

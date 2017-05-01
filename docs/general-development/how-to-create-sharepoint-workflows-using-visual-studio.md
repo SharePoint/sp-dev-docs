@@ -217,7 +217,7 @@ To create a custom workflow using Visual Studio 2012 or later, ensure that you h
 
   
 
-     ![Figure 4. Default designer surface](../../images/ngWfFig04.png)
+  ![Figure 4. Default designer surface](../../images/ngWfFig04.png)
   
 
   
@@ -336,7 +336,7 @@ The point, of course, is to get some values from the list item that triggered th
 
   
 
-     ![Figure 7. Extracting values from list items](../../images/ngWfFig07.png)
+  ![Figure 7. Extracting values from list items](../../images/ngWfFig07.png)
   
 
   
@@ -376,7 +376,7 @@ To get user information, do the following:
 
   
 
-     ![Figure 8. Changing variable scope](../../images/ngWfFig08.png)
+  ![Figure 8. Changing variable scope](../../images/ngWfFig08.png)
   
 
   
@@ -394,7 +394,7 @@ To get user information, do the following:
 
   
 
-     ![Figure 9. Updating LookupSPUser output](../../images/ngWfFig09.png)
+  ![Figure 9. Updating LookupSPUser output](../../images/ngWfFig09.png)
   
 
   
@@ -406,7 +406,7 @@ To get user information, do the following:
 
   
 
-     ![Figure 10. Retrieving values from LookupSPUser](../../images/ngWfFig10.png)
+  ![Figure 10. Retrieving values from LookupSPUser](../../images/ngWfFig10.png)
   
 
   

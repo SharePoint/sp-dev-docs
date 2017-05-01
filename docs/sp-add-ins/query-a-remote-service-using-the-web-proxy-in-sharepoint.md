@@ -102,7 +102,7 @@ Figure 1 shows the browser window with data from the remote service in a SharePo
 
  
 
-     ![App for SharePoint 2013 Visual Studio template](../../images/AppForSharePointVSTemplate.PNG)
+  ![App for SharePoint 2013 Visual Studio template](../../images/AppForSharePointVSTemplate.PNG)
  
 
  
@@ -413,7 +413,7 @@ Figure 1 shows the browser window with data from the remote service in a SharePo
 
  
 
-     ![SharePoint page with data from the remote service](../../images/WebProxy_result.png)
+  ![SharePoint page with data from the remote service](../../images/WebProxy_result.png)
  
 
  
