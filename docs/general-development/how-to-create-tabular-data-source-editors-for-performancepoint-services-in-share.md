@@ -78,7 +78,7 @@ We recommend that you use the sample editor as a template. The sample shows how 
   
 8. Retrieve the parameters from the query string and set them as values for local variables, as shown in the following code example.
     
-  ```cs
+cs
   
 // The URL of the site collection that contains the PerformancePoint Services repository.
 string server = Request.QueryString[ClickOnceLaunchKeys.SiteCollectionUrl];
@@ -88,7 +88,7 @@ string itemLocation = Request.QueryString[ClickOnceLaunchKeys.ItemLocation];
 
 // The operation to perform: OpenItem or CreateItem.
 string action = Request.QueryString[ClickOnceLaunchKeys.LaunchOperation];
-  ```
+
 
 
     For information about the query string parameters, see  [Editors for Custom PerformancePoint Services Objects](http://msdn.microsoft.com/library/7c5924f1-91f3-436a-9d94-2e0dc454c8cc%28Office.15%29.aspx).
@@ -96,16 +96,16 @@ string action = Request.QueryString[ClickOnceLaunchKeys.LaunchOperation];
   
 9. Retrieve the **DataSourceRepositoryHelper** object that is used to make calls to the repository, as shown in the following code example.
     
-  ```cs
+cs
   
 DataSourceRepositoryHelper = new DataSourceRepositoryHelper();
-  ```
+
 
 10. Set the data source location based on the query string parameter, as shown in the following code example.
     
-  ```cs
+cs
   RepositoryLocation repositoryDataSourceLocation = RepositoryLocation.CreateFromUriString(itemLocation);
-  ```
+
 
 11. Retrieve the operation to perform ( _OpenItem_ or _CreateItem_) from the query string, and then retrieve or create the custom data source.
     
@@ -117,7 +117,7 @@ DataSourceRepositoryHelper = new DataSourceRepositoryHelper();
     > [!NOTE]
       > The sample data source editor does not include logic to create a data source object. For examples of creating a custom object, see  [How to: Create report editors for PerformancePoint Services in SharePoint 2013](how-to-create-report-editors-for-performancepoint-services-in-sharepoint.md) or [How to: Create filter editors for PerformancePoint Services in SharePoint 2013](how-to-create-filter-editors-for-performancepoint-services-in-sharepoint.md). 
 
-  ```cs
+cs
   if (ClickOnceLaunchValues.OpenItem.Equals(action, StringComparison.OrdinalIgnoreCase))
 {
     // Use the repository-helper object to retrieve the data source.
@@ -133,7 +133,7 @@ else
     displayError("Invalid Action.");
     return;
 }
-  ```
+
 
 
     > [!NOTE]

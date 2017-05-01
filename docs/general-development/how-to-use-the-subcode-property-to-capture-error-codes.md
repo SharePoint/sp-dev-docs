@@ -28,39 +28,39 @@ For a list of error codes, see  [Excel Services Error Codes](excel-services-erro
 
 1. After adding a Web reference to the Excel Web Services, add the following using directive so that you can use the **SoapException** class without having to qualify it with a full namespace:
     
-  ```cs
+cs
   
 using System.Web.Services.Protocols;
-  ```
 
 
-  ```VB.net
+
+VB.net
   Imports System.Web.Services.Protocols
-  ```
+
 
 2. To capture the Excel Services error codes using the **SubCode** property, you must use the SOAP12 protocol version. After instantiating the Excel Web Services proxy class, set the SOAP protocol version as follows:
     
-  ```cs
+cs
   // Instantiate the Web service.
  ExcelService xlservice = new ExcelService();
 
 // Set the SOAP protocol version.           
 xlservice.SoapVersion = SoapProtocolVersion.Soap12;
-  ```
 
 
-  ```VB.net
+
+VB.net
   
 ' Instantiate the Web service.
  Dim xlservice As New ExcelService()
 
 ' Set the SOAP protocol version.           
 xlservice.SoapVersion = SoapProtocolVersion.Soap12
-  ```
+
 
 3. To catch the error codes using the **SubCode** property, add a SOAP exception catch block to your code, for example:
     
-  ```cs
+cs
   
 catch (SoapException e)
 {
@@ -68,16 +68,16 @@ catch (SoapException e)
     Console.WriteLine("SOAP Exception Error Code: {0}", 
         e.SubCode.Code.Name);
 }
-  ```
 
 
-  ```VB.net
+
+VB.net
   
 Catch e As SoapException
     Console.WriteLine("SOAP Exception Message: {0}", e.Message)
     Console.WriteLine("SOAP Exception Error Code: {0}", e.SubCode.Code.Name)
 End Try
-  ```
+
 
 
 ### To capture error codes when using direct linking
@@ -88,38 +88,38 @@ End Try
   
 2. After you add a reference, add the following **using** directive to your code so that you can use the **SoapException** class without having to qualify it with a full namespace:
     
-  ```cs
+cs
   
 using System.Web.Services.Protocols;
-  ```
 
 
-  ```VB.net
+
+VB.net
   Imports System.Web.Services.Protocols
-  ```
+
 
 3. Unlike using SOAP over HTTP, in the direct linking scenario, you won't need to set the SOAP protocol version. 
     
   
 4. To catch the error codes using the **SubCode** property, add a SOAP exception catch block to your code, for example:
     
-  ```cs
+cs
   catch (SoapException e)
 {
     Console.WriteLine("SOAP Exception Message: {0}", e.Message);
     Console.WriteLine("SOAP Exception Error Code: {0}", 
         e.SubCode.Code.Name);
 }
-  ```
 
 
-  ```VB.net
+
+VB.net
   
 Catch e As SoapException
     Console.WriteLine("SOAP Exception Message: {0}", e.Message)
     Console.WriteLine("SOAP Exception Error Code: {0}", e.SubCode.Code.Name)
 End Try
-  ```
+
 
 
 ## Example

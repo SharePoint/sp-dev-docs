@@ -120,7 +120,7 @@ The simplest way to create a category page layout is to let SharePoint create th
   
 6. In the **\<head\>** tag, replace the content placeholder that has **id="PlaceHolderPageTitle"** with:
     
-  ```HTML
+HTML
   
 <!--MS:<asp:ContentPlaceHolder id="PlaceHolderPageTitle" runat="server">-->
 <!--CS: Start Taxonomy TermProperty Snippet-->
@@ -128,16 +128,16 @@ The simplest way to create a category page layout is to let SharePoint create th
 <!--MS:<Taxonomy:TermProperty Property="Name" runat="server">-->
 <!--ME:</Taxonomy:TermProperty>-->
 <!--ME:</asp:ContentPlaceHolder>-->
-  ```
+
 
 7. Find the content placeholder that has the **id="PlaceHolderPageTitleInTitleArea"** and replace it with:
     
-  ```HTML
+HTML
   
 <!--MS:<asp:ContentPlaceHolder id="PlaceHolderPageTitleInTitleArea" runat="server">-->
 <!--SPM:<asp:SiteMapPath runat="server" ParentLevelsDisplayed="1" SiteMapProvider="CurrentNavigationSwitchableProvider"/>-->
 <!--ME:</asp:ContentPlaceHolder>-->
-  ```
+
 
 8. Replace the markup inside the content placeholder that has **id="PlaceHolderMain"** with the markup that you want to use in the page layout.
     

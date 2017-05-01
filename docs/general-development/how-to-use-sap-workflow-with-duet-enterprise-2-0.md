@@ -149,7 +149,7 @@ In order to provide a way for the user to work with the new functionality added 
     
   
 
-  ```XML
+XML
   
 <?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
@@ -197,7 +197,7 @@ In order to provide a way for the user to work with the new functionality added 
     </CommandUIExtension>
   </CustomAction>
 </Elements>
-  ```
+
 
 3. Add a new page, ViewDetails.aspx page to the project.
     
@@ -241,7 +241,7 @@ Duet Enterprise Single Sign-On will allow users to be authenticated so that they
 
 1. Create an OData connection by executing the following command on the SharePoint Management Shell.
     
-  ```XML
+XML
   
 New-SPODataConnectionSetting -Name SAPWorkflow
 -ServiceContext "http://localhost" -ExtensionProvider 
@@ -251,7 +251,7 @@ Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"
 "https://<<DUETGATEWAY>>:<<PORT>>/sap/opu/odata/IWWRK/
 DUET_WORKFLOW_CORE;mo;c=SHAREPOINT_DE"
 
-  ```
+
 
 2. Double click on **WorkflowTaskCollection.ect**.
     
@@ -297,7 +297,7 @@ Since SharePoint Add-ins must use client code to communicate with SharePoint, th
   
 2. Paste the following HTML in the  `PlaceHolderAdditionalPageHead` section. This will set the style sheet reference, load the script and then return the related workflow tasks from SAP.
     
-  ```XML
+XML
   
 <link
     rel="Stylesheet" 
@@ -317,7 +317,7 @@ Since SharePoint Add-ins must use client code to communicate with SharePoint, th
     type="text/javascript">
 </script>
 
-  ```
+
 
 3. Right-click the **Scripts** folder and add a JavaScript file. Name it **ViewDetails.js**.
     
@@ -344,7 +344,7 @@ Since SharePoint Add-ins must use client code to communicate with SharePoint, th
   
 5. The following is the complete HTML and JavaScript for the page.
     
-  ```
+
   
 // This code runs when the DOM is ready. It ensures the SharePoint
 // script files are loaded and then executes execOperation().
@@ -519,7 +519,7 @@ function getQueryStringParameter(paramToRetrieve) {
   }
 }
 
-  ```
+
 
 6. Open the **AppManifest.xml** file.
     
@@ -580,7 +580,7 @@ Here is one option for your custom user interface. Adding a Lync control will gi
     
 
 
-  ```
+
   
 var presenceControlCount = 0;
 var appWebURL = '';
@@ -771,7 +771,7 @@ function RegisterCallOut(divId, displayName, aboutme, userUrl, isFollowed) {
   }));
 }
 
-  ```
+
 
 
     > [!NOTE]
@@ -784,16 +784,16 @@ function RegisterCallOut(divId, displayName, aboutme, userUrl, isFollowed) {
   
 5. Copy the following markup and paste it in the  `PlaceHolderAdditionalPageHead` section in **ViewDetails.aspx**.
     
-  ```HTML
+HTML
   
 <script src="../Scripts/People.js" type="text/javascript"></script>
-  ```
+
 
 6. To add the presence control for a participant, call the following: 
     
-  ```
+
   AddPeopleControl(userName);
-  ```
+
 
 
 ## Additional resources

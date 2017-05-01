@@ -1550,7 +1550,7 @@ You can configure search to support Search REST queries from anonymous users. Si
   
 3. Create an XML file named queryparametertemplate.xml, and copy the following XML to the file.
     
-  ```XML
+XML
   
 <QueryPropertiesTemplate xmlns="http://www.microsoft.com/sharepoint/search/KnownTypes/2008/08" xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
     <QueryProperties i:type="KeywordQueryProperties">
@@ -1609,7 +1609,7 @@ You can configure search to support Search REST queries from anonymous users. Si
         <a:string>QueryTemplate</a:string>
     </WhiteList>
 </QueryPropertiesTemplate>
-  ```
+
 
 4. Update the  _SiteId_,  _FarmId_, and  _WebId_ elements with the values for your farm, website and publishing site collection.
     

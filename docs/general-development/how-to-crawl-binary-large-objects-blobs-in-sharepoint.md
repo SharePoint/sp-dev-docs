@@ -84,7 +84,7 @@ After you create the BLOB external content type, you are ready to modify the BDC
     > [!NOTE]
       > The table name in this example is Attachment. 
 
-  ```XML
+XML
   
 <Method Name="GetData">
   <Properties>
@@ -134,7 +134,7 @@ After you create the BLOB external content type, you are ready to modify the BDC
     </MethodInstance>
   </MethodInstances>
 </Method>
-  ```
+
 
 
     If the MIME type is the same for all the BLOBs, you can replace this line of code from the previous example: 

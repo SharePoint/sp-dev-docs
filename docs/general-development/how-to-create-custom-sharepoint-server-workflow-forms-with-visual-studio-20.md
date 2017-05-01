@@ -189,10 +189,10 @@ Once the new form is added to the project, Visual Studio automatically opens it.
   
 2. Locate the server control shown in the following code snipped:
     
-  ```
+
   
 <WorkflowServices:WorkflowAssociationFormContextControl ID="WorkflowAssociationFormContextControl1" runat="server" />
-  ```
+
 
 
     This server control performs two important tasks. First, it adds the JavaScript libraries needed by the association form. Second, it takes the form values that were submitted by the preceding form and writes them to the page as hidden HTML input controls. The preceding page was the default SharePoint association form, the one where the user specified the workflow definition, association name, workflow task and history list, and the start options. This form used an HTTP POST to move to the custom association form that has been added to the workflow. Because it is an HTTP POST, the values are not accessible in the form, since all custom logic must be implemented without server-side code. Therefore SharePoint provides this server control to extract those values from the HTTP request pipeline and add them to this page.
@@ -200,7 +200,7 @@ Once the new form is added to the project, Visual Studio automatically opens it.
   
 3. Scroll down in the source file until you locate the sample HTML table and replace it with the following:
     
-  ```XML
+XML
   <table>
     <tr>
       <td colspan="2">
@@ -213,7 +213,7 @@ Once the new form is added to the project, Visual Studio automatically opens it.
     </tr>
 </table>
 
-  ```
+
 
 
     This table displays a simple HTML textbox which is used to pass information into the workflow association. Note that the form has two buttons These buttons are used to save or cancel the workflow. When you click the **Save** button, the workflow calls the JavaScript function, **runAssocWfTask()**, which is located a few lines farther down in the source file. We need to modify that next.
@@ -253,13 +253,13 @@ The critical part that you need to be concerned with when creating the custom as
   
 3. Next, add a collection of name-value pairs representing your form fields that you wish to pass into SharePoint. For the custom form in this walkthrough, all you need is the following JavaScript, so update the block that sets the **metadata** variable as follows:
     
-  ```XML
+XML
   
 var strInputValue = document.getElementById("strInput").value;
 if (strInputValue) {
   metadata['AssociationFormValue'] = strInputValue;
 }
-  ```
+
 
 4. At this point the custom association form is complete.
     
@@ -490,7 +490,7 @@ When you added the new initiation form to the project, Visual Studio 2012 automa
   
 2. Update this HTML table by replacing it with the following:
     
-  ```
+
   
 <table>
   <tr>
@@ -514,7 +514,7 @@ When you added the new initiation form to the project, Visual Studio 2012 automa
   </tr>
 </table>
 
-  ```
+
 
 The table now contains two input controls. The first is a standard HTML text box whose ID is **strInput**. The second is a SharePoint people picker control whose ID is **peoplePicker**. This latter is a server-side control; however, it is allowed on the page because it has been deployed to every SharePoint Server 2013 computer. Further, the control is referenced at the top of the initiation form.
   
@@ -538,14 +538,14 @@ Now notice the two buttons on the form, **Start** ("startWorkflowButton") and **
   
 3. Immediately following this line, replace the existing code with your own code to pull values from the two HTML form fields that we created a few moments ago: **strInput** and **peoplePicker**. To do this, add the following reference to the jQuery library to the **PlaceHolderAdditionalPageHead** element in the HTML markup. This makes it easier to grab values from the form.
     
-  ```
+
   
 <script type="text/javascript" src="../Scripts/jquery-1.8.2.min.js"></script>
-  ```
+
 
 4. Now, return to the portion of the JSOM script block where the parameters are collected from the form. Replace the existing JavaScript with the following code:
     
-  ```
+
   var wfParams = new Object();
 // get people picker value
 var html = $("ctl00_PlaceHolderMain_peoplePicker_upLevelDiv");
@@ -555,7 +555,7 @@ wfParams['UserLoginName'] = $("#divEntityData", html).attr("key");
 var strInputValue = $("strInput").value;
 wfParams['SomeRandomString'] = strInputValue
 
-  ```
+
 
 5. Save your changes.
     

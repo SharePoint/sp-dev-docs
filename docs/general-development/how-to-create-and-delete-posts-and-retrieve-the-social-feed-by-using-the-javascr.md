@@ -71,24 +71,24 @@ To create an application page that uses the JavaScript object model to work with
   
 9. In the markup for the SocialFeed.aspx page, define controls inside the "Main" **asp:Content** tags, as shown in the following code.
     
-  ```HTML
+HTML
 <table width="100%" id="tblPosts"></table><br/>
 <button id="btnDelete" type="button"></button><br />
 <span id="spanMessage" style="color: #FF0000;"></span>
-  ```
+
 
   > Note: These controls may not be used in every scenario. For example, the "Publish posts and replies" scenario only uses the **span** control.
 
 10. After the closing **span** tag, add **SharePoint:ScriptLink** controls, a **SharePoint:FormDigest** control, and **script** tags, as shown in the following code. The **SharePoint:ScriptLink** tags reference the class library files that define the JavaScript object model that you can use for My Site Social development. The **SharePoint:FormDigest** tag generates a message digest for security validation when required by operations that update server content.
     
-  ```HTML
+HTML
 <SharePoint:ScriptLink ID="ScriptLink1" name="SP.js" runat="server" ondemand="false" localizable="false" loadafterui="true" />
 <SharePoint:ScriptLink ID="ScriptLink2" name="SP.UserProfiles.js" runat="server" ondemand="false" localizable="false" loadafterui="true" />
 <SharePoint:FormDigest id="FormDigest" runat="server"/>
 <script type="text/javascript">
     // Replace this comment with the code for your scenario.
 </script>
-  ```
+
 
 11. To add the logic to work with feeds, replace the comment between the **script** tags with the code example from one of the following scenarios:
     

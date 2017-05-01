@@ -527,7 +527,7 @@ After creating the site column, the next step is to create a specialized content
   
 3. Next, add the custom outcome column to the list of available columns and also remove the default outcome column so the markup of the content type looks like the following example.
     
-  ```XML
+XML
   
 <?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
@@ -550,7 +550,7 @@ After creating the site column, the next step is to create a specialized content
       </FieldRefs>
   </ContentType>
 </Elements>
-  ```
+
 
 
 ### Create a workflow

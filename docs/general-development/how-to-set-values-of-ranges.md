@@ -54,7 +54,7 @@ If you are getting values from multiple adjacent cells, you may want to consider
 
 1. Use the **SetCell** method to set a value in a cell in the open workbook by using numeric range coordinates:
     
-  ```cs
+cs
   
 // Instantiate the Web service and make a status array object.
 ExcelService xlservice = new ExcelService();
@@ -76,10 +76,10 @@ string sessionId = xlservice.OpenWorkbook(targetWorkbookPath, "en-US", "en-US", 
 // Call the SetCell method to set the cell's value to 28.
 // The cell is in the ninth row and second column, which is cell B9.
 xlservice.SetCell(sessionId, sheetName, 8, 1, 28);
-  ```
 
 
-  ```
+
+
   
 ' Instantiate the Web service and make a status array object.
 Dim xlservice As New ExcelService()
@@ -102,11 +102,11 @@ Dim sessionId As String = xlservice.OpenWorkbook(targetWorkbookPath, "en-US", "e
 ' The cell is in the ninth row and second column, which is cell B9.
 xlservice.SetCell(sessionId, sheetName, 8, 1, 28)
 
-  ```
+
 
 2. Use the **SetRange** method to set values in a range in the open workbook by using numeric range coordinates:
     
-  ```cs
+cs
   
 // Instantiate the Web service and make a status array object.
 ExcelService xlservice = new ExcelService();
@@ -172,10 +172,10 @@ GenerateToolErrorMessage("While calling SetRange", exc);
 }
 }
 
-  ```
 
 
-  ```VB.net
+
+VB.net
   
 ' Instantiate the Web service and make a status array object.
 Private xlservice As New ExcelService()
@@ -223,7 +223,7 @@ StopTimer("SetRange")
 GenerateToolErrorMessage("While calling SetRange", exc)
 End Try
 End Sub
-  ```
+
 
 
 ### To set values by using the SetCellA1 and SetRangeA1 methods
@@ -231,28 +231,28 @@ End Sub
 
 1. Use the **SetCellA1** method to set a value in a cell in the open workbook, using the Excel "A1" range specification:
     
-  ```cs
+cs
   
 // Instantiate the Web service and make a status array object.
 ExcelService xlservice = new ExcelService();
 Status[] outStatus;
 
 xlservice.SetCellA1(sessionId, String.Empty, "InterestRateParam", 8);
-  ```
 
 
-  ```VB.net
+
+VB.net
   
 ' Instantiate the Web service and make a status array object.
 Dim xlservice As New ExcelService()
 Dim outStatus() As Status
 
 xlservice.SetCellA1(sessionId, String.Empty, "InterestRateParam", 8)
-  ```
+
 
 2. Use the **SetRangeA1** method to get a value from a range in the open workbook, using the Excel "A1" range specification:
     
-  ```cs
+cs
   
 // Instantiate the Web service and make a status array object.
 ExcelService xlservice = new ExcelService();
@@ -297,10 +297,10 @@ void SetRangeA1Button_ServerClick(object sender, EventArgs e)
     }
 
 }
-  ```
 
 
-  ```VB.net
+
+VB.net
   
 ' Instantiate the Web service and make a status array object.
 Private xlservice As New ExcelService()
@@ -331,7 +331,7 @@ Private Sub SetRangeA1Button_ServerClick(ByVal sender As Object, ByVal e As Even
     End Try
 
 End Sub
-  ```
+
 
 
 ## See also

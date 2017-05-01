@@ -24,37 +24,37 @@ A range specification must contain a sheet name; Excel Web Services does not rec
 
 - As part of the range address—for example, "Sheet3!B12:D18"—in which case the sheet name argument can be empty:
     
-  ```cs
+cs
   
 object[] rangeResult1 = xlservice.GetRangeA1(sessionId, String.Empty, "Sheet2!A12:G18", true, out outStatus);
-  ```
 
 
-  ```VB.net
+
+VB.net
   Dim rangeResult1() As Object = xlservice.GetRangeA1(sessionId, String.Empty, "Sheet2!A12:G18", True, outStatus)
-  ```
+
 
 - In a separate sheet name argument, in which case the range address argument does not have to include the sheet name:
     
-  ```cs
+cs
   xlservice.SetCell(sessionId, "Sheet3", 0, 11, 1000);
-  ```
 
 
-  ```VB.net
+
+VB.net
   xlservice.SetCell(sessionId, "Sheet3", 0, 11, 1000)
-  ```
+
 
 - In both the sheet name and range address, in which case the name of the sheet must match:
     
-  ```cs
+cs
   object[] rangeResult = xlservice.GetCellA1(sessionId, "Sheet3", "Sheet3!G18", true, out outStatus);
-  ```
 
 
-  ```VB.net
+
+VB.net
   Dim rangeResult() As Object = xlservice.GetCellA1(sessionId, "Sheet3", "Sheet3!G18", True, outStatus)
-  ```
+
 
 The only case that does not require a sheet name is a named range, because some named ranges have a workbook scope. For example, you can refer to named ranges without specifying the sheet name argument:
 

@@ -89,10 +89,10 @@ Table 1 contains links to articles that describe core concepts you should know b
   
 7. In the Program.cs file, add the following **using** statements.
     
-  ```cs
+cs
 using Microsoft.SharePoint.Client;
 using Microsoft.SharePoint.Client.Social;
-  ```
+
 
 
 ## Retrieve the social feed for a target user by using the SharePoint 2013 .NET client object model
@@ -101,41 +101,41 @@ using Microsoft.SharePoint.Client.Social;
 
 1. Declare variables for the server URL and target user's account credentials.
     
-  ```cs
+cs
 const string serverUrl = "http://serverName/";
 const string targetUser = "domainName\\userName";
-  ```
+
 
    > [!NOTE]
    > Remember to replace the  `http://serverName/` and `domainName\\userName` placeholder values before you run the code.
    
 2. In the **Main** method, initialize the SharePoint client context.
     
-  ```cs
+cs
 ClientContext clientContext = new ClientContext(serverUrl);
-  ```
+
 
 3. Create the  [SocialFeedManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.aspx) instance.
     
-  ```cs
+cs
 SocialFeedManager feedManager = new SocialFeedManager(clientContext);
-  ```
+
 
 4. Specify the parameters for the feed content that you want to retrieve.
     
-  ```cs
+cs
   SocialFeedOptions feedOptions = new SocialFeedOptions();
 feedOptions.MaxThreadCount = 10;
-  ```
+
 
     The default options return the first 20 threads in the feed, sorted by last modified date.
   
 5. Get the target user's feed.
     
-  ```cs 
+cs 
 ClientResult<SocialFeed> feed = feedManager.GetFeedFor(targetUser, feedOptions);
 clientContext.ExecuteQuery();
-  ```
+
 
      [GetFeedFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.GetFeedFor.aspx) returns a **ClientResult<T>** object that stores the collection of threads in its [Value](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.ClientResult`1.Value.aspx) property.
     
@@ -167,36 +167,36 @@ for (int i = 0; i < feed.Value.Threads.Length; i++)
 
 1. (UI-related only) Get the thread to reply to and prompt for the user's reply.
     
-  ```cs
+cs
 Console.Write("Which post number do you want to reply to?  ");
 string threadToReplyTo = "";
 int threadNumber = int.Parse(Console.ReadLine()) - 1;
 idDictionary.TryGetValue(threadNumber, out threadToReplyTo);
 Console.Write("Type your reply:  ");
-  ```
+
 
 2. Define the reply. The following code gets the reply's text from the console application.
     
-  ```cs
+cs
 SocialPostCreationData postCreationData = new SocialPostCreationData();
 postCreationData.ContentText = Console.ReadLine();
-  ```
+
 
 3. Publish the reply. The  _threadToReplyTo_ parameter represents of the thread's [Id](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThread.Id.aspx) property.
     
-  ```cs
+cs
 feedManager.CreatePost(threadToReplyTo, postCreationData);
 clientContext.ExecuteQuery();
-  ```
+
 
    > [!NOTE]
    > The  [CreatePost](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.CreatePost.aspx) method is also used to publish a root post to the current user's feed by passing **null** for the first parameter.
 4. (UI-related only) Exit the program.
     
-  ```cs
+cs
 Console.WriteLine("Your reply was published.");
 Console.ReadKey(false);
-  ```
+
 
 5. To test the console application, on the menu bar, choose **Debug**, **Start Debugging**.
     

@@ -72,7 +72,7 @@ Next, add a class file to the project and create a couple of classes to encapsul
   
 4. Replace the contents of the file with the following code.
     
-  ```cs
+cs
   
 using System;
 using System.Collections.Generic;
@@ -255,7 +255,7 @@ namespace PushNotificationsList
         }
     }
 }
-  ```
+
 
 5. Save the file.
     
@@ -283,7 +283,7 @@ Now create an event receiver class that will send push notifications to devices 
   
 4. Replace the contents of the file with the following code.
     
-  ```cs
+cs
   
 using System;
 using System.Security.Permissions;
@@ -369,7 +369,7 @@ namespace PushNotificationsList
         }
     }
 }
-  ```
+
 
 5. Save the file.
     
@@ -424,7 +424,7 @@ In the following procedure, you create a class, **ListCreator**, that includes a
   
 4. Replace the contents of the file with the following code.
     
-  ```cs
+cs
   
 using System;
 using System.Collections.Generic;
@@ -558,7 +558,7 @@ namespace PushNotificationsList
         }
     }
 }
-  ```
+
 
 
     Be sure to specify the appropriate Public Key Token value for particular your assembly. To add a tool to Visual Studio for getting the Public Key Token value for your assembly, see  [How to: Create a Tool to Get the Public Key of an Assembly](http://msdn.microsoft.com/en-us/library/ee539398.aspx) in the MSDN Library. Note that you will have to compile your project at least once to be able to get the Public Key Token value for your output assembly.
@@ -590,10 +590,10 @@ Next you add a Feature to your project in order to perform initialization operat
   
 4. Within the implementation (demarcated by opening and closing braces) of the **Feature1EventReceiver** class, add the following code.
     
-  ```cs
+cs
   
 internal const string PushNotificationFeatureId = "41E1D4BF-B1A2-47F7-AB80-D5D6CBBA3092";
-  ```
+
 
 
     This string variable stores the identifier for the Push Notification Feature on the server.
@@ -602,7 +602,7 @@ internal const string PushNotificationFeatureId = "41E1D4BF-B1A2-47F7-AB80-D5D6C
       > You can obtain a list of unique identifiers for the Features on a SharePoint Server by executing the following Windows PowerShell cmdlet: >  `Get-SPFeature | Sort -Property DisplayName`> The Push Notification Feature appears as "PhonePNSubscriber" in the results returned by this cmdlet. 
 5. The event receiver class file is created with some default method declarations for handling Feature events. The method declarations in the file are initially commented out. Replace the **FeatureActivated** method in the file with the following code.
     
-  ```cs
+cs
   public override void FeatureActivated(SPFeatureReceiverProperties properties)
 {
     base.FeatureActivated(properties);
@@ -616,11 +616,11 @@ internal const string PushNotificationFeatureId = "41E1D4BF-B1A2-47F7-AB80-D5D6C
     // The Push Notification Feature is not activated by default in a SharePoint Server installation.
     spWeb.Features.Add(new Guid(PushNotificationFeatureId), false);
 }
-  ```
+
 
 6. Replace the **FeatureDeactivating** method in the file with the following code.
     
-  ```cs
+cs
   
 public override void FeatureDeactivating(SPFeatureReceiverProperties properties)
 {
@@ -631,7 +631,7 @@ public override void FeatureDeactivating(SPFeatureReceiverProperties properties)
     // when the PushNotificationsList Feature is deactivated.
     spWeb.Features.Remove(new Guid(PushNotificationFeatureId), false);
 }
-  ```
+
 
 7. Save the file.
     
@@ -667,7 +667,7 @@ To follow the procedures in this section, first perform the steps in the procedu
   
 4. Replace the contents of the file with the following code.
     
-  ```cs
+cs
   
 using System;
 using System.Linq;
@@ -989,7 +989,7 @@ namespace SPListAppForNotifications
         }
     }
 }
-  ```
+
 
 5. Save the file.
     
@@ -1033,7 +1033,7 @@ Next, add a page to the app with controls that allow a user to register for or u
   
 4. In the XAML view for the page, replace the content between the closing bracket of the XML tag that defines the **PhoneApplicationPage** element and the closing tag of the element ( `</phone:PhoneApplicationPage>`), with the following markup.
     
-  ```
+
   
 <Grid x:Name="LayoutRoot" Background="Transparent">
     <Grid.RowDefinitions>
@@ -1072,14 +1072,14 @@ Next, add a page to the app with controls that allow a user to register for or u
         <shell:ApplicationBarIconButton x:Name="btnOK" IconUri="/Images/appbar.check.rest.png" Text="OK" Click="OnOKButtonClick" />
     </shell:ApplicationBar>
 </phone:PhoneApplicationPage.ApplicationBar>
-  ```
+
 
 5. With the Settings.xaml file selected in **Solution Explorer**, press F7 to open its associated code-behind file, Settings.xaml.cs, for editing.
     
   
 6. Replace the contents of the code-behind file with the following code.
     
-  ```cs
+cs
   
 using System;
 using System.Collections.Generic;
@@ -1133,7 +1133,7 @@ namespace SPListAppForNotifications
         }
     }
 }
-  ```
+
 
 7. Save the file.
     
@@ -1167,7 +1167,7 @@ Next, add a button to the List form (List.xaml) in the project and implement the
   
 2. Add markup to declare an additional button in the **ApplicationBar** element of the file, as in the following example.
     
-  ```
+
   
 ...
     <phone:PhoneApplicationPage.ApplicationBar>
@@ -1182,24 +1182,24 @@ Next, add a button to the List form (List.xaml) in the project and implement the
         </shell:ApplicationBar>
     </phone:PhoneApplicationPage.ApplicationBar>
 ...
-  ```
+
 
 3. With the List.xaml file selected in **Solution Explorer**, press F7 to open its associated code-behind file, List.xaml.cs, for editing.
     
   
 4. Within the code block (demarcated by opening and closing braces) that implements the **ListForm** partial class, add the following event handler to the file.
     
-  ```cs
+cs
   
 private void OnSettingsButtonClick(object sender, EventArgs e)
 {
     NavigationService.Navigate(new Uri("/Settings.xaml", UriKind.Relative));
 }
-  ```
+
 
 5. Locate the **OnViewModelInitialization** in the List.xaml.cs file and add a call to the **OpenNotificationChannel** method of the **Notifications** class created earlier. The modified implementation of the handler should resemble the following code.
     
-  ```cs
+cs
   
 private void OnViewModelInitialization(object sender, InitializationCompletedEventArgs e)
 {
@@ -1220,7 +1220,7 @@ private void OnViewModelInitialization(object sender, InitializationCompletedEve
     if (Notifications.GetRegistrationStatus() == true)
         Notifications.OpenNotificationChannel(false);
 }
-  ```
+
 
 6. Save the file.
     
@@ -1259,7 +1259,7 @@ Finally, add code to the **Application_Launching** event hander in the App.xaml.
   
 4. Replace the **Application_Launching** event handler with the following code.
     
-  ```cs
+cs
   
 private void Application_Launching(object sender, LaunchingEventArgs e)
 {
@@ -1267,7 +1267,7 @@ private void Application_Launching(object sender, LaunchingEventArgs e)
     Notifications.Context = App.DataProvider.Context;
     Notifications.SaveDeviceAppIdToStorage();
 }
-  ```
+
 
 5. Save the file.
     

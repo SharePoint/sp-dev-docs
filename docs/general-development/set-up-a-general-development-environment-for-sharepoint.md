@@ -98,11 +98,11 @@ SharePoint requires your operating system to have certain prerequisites installe
   
 5. If any errors occur in the installation, review the log file. To find the log file, open a Command Prompt window, and then type the following commands at the command prompt. A link to the log file also appears when the installation is complete.
     
-  ```
+
   
 cd %temp
 dir /od *.log
-  ```
+
 
 6. After the installation is complete, you are prompted to start the SharePoint Products and Technologies Configuration Wizard.
     

@@ -399,20 +399,20 @@ The last step is to configure SharePoint to trust the Fiddler certificate that w
   
 3. Load the SharePoint 2013 Snap-In.
     
-  ```powershell
+powershell
   
 PS C:\\> Add-PSSnapIn Microsoft.SharePoint.PowerShell
-  ```
+
 
 4. Use the certificate utility to install the Fiddler certificate.
     
-  ```powershell
+powershell
   PS C:\\> $fidderCertificatePath = [full path to exported FiddlerRoot.cer certificate file]
 PS C:\\> certutil.exe -addstore -enterprise -f -v root $fidderCertificatePath
 PS C:\\> $fiddlerCertificate = Get-PfxCertificate -FilePath $fidderCertificatePath
 PS C:\\> New-SPTrustedRootAuthority -Name "Fiddler" -Certificate $fiddlerCertificate
 
-  ```
+
 
 5. Run IISRESET to make sure that SharePoint picks up the certificate trust change.
     
@@ -451,11 +451,11 @@ This walkthrough has the following prerequisites:
   
 2. Start Fiddler. While Fiddler will now intercept traffic from the current user, if there are any existing connections or processes running, Fiddler may miss those as it was not running when the connections were initially established. To force both Workflow Manager and SharePoint Server to recycle and have their traffic to each other get intercepted by Fiddler, recycle SharePoint by running an IISRESET and recycle Workflow Manager by stopping and starting the Windows service **Workflow Manager Backend**. This can be done with the following two commands at an administrative command prompt.
     
-  ```powershell  
+powershell  
 PS C:\\> IISRESET
 PS C:\\> net stop WorkflowServiceBackend
 PS C:\\> net start WorkflowServiceBackend
-  ```
+
 
 3. Start the workflow.
     

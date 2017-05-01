@@ -93,13 +93,13 @@ The SharePoint-hosted app that you create in this article uses JavaScript to bui
 
 1. In the App.js file, declare a global variable for the URL of the **SocialFeedManager** endpoint.
     
-  ```
+
 var feedManagerEndpoint;
-  ```
+
 
 2. Add the following code, which gets the **SPAppWebUrl** parameter from the query string and uses it to build the **SocialFeedManager** endpoint.
     
-  ```
+
   $(document).ready(function () {
     var appweburl;
     var params = document.URL.split("?")[1].split("&amp;");
@@ -110,7 +110,7 @@ var feedManagerEndpoint;
     feedManagerEndpoint = decodeURIComponent(appweburl) + "/_api/social.feed";
     postToMyFeed();
 });
-  ```
+
 
 3. Add the following code, which builds the HTTP **POST** request for the `/my/Feed/Post` endpoint, defines the post's creation data, and publishes the post.
     
@@ -118,7 +118,7 @@ var feedManagerEndpoint;
     
 
 
-  ```
+
   
 function postToMyFeed() {
     $.ajax( {
@@ -151,7 +151,7 @@ function postToMyFeed() {
     });
 }
 
-  ```
+
 
 
 ## Retrieve the social feed for the current user by using the SharePoint 2013 REST service

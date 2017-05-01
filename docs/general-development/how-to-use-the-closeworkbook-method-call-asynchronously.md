@@ -34,16 +34,16 @@ To close the workbook asynchronously, you must do two things:
   
 - Call the **CloseWorkbookAsync** method instead of the **CloseWorkbook** method. The signature for the **CloseWorkbookAsync** method is:
     
-  ```
+
   
 public void CloseWorkbookAsync(string sessionId)
-  ```
 
 
-  ```VB.net
+
+VB.net
   Public Sub CloseWorkbookAsync(ByVal sessionId As String)
 End Sub
-  ```
+
 
 You don't have to implement the event that is called when the **CloseWorkbookAsync** method is called.You can find the signature in the "Reference.cs" file in your project "Web References" directory. 
 > [!NOTE]

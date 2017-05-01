@@ -89,7 +89,7 @@ To create an application page that uses the JavaScript object model to retrieve 
   
 9. In the markup for the UserProfiles.aspx page, paste the following code inside the "Main" **asp:Content** tags. This code adds a **span** control that displays the results of the query, **SharePoint:ScriptLink** controls that reference SharePoint JavaScript class library files, and **script** tags to contain your custom logic.
     
-  ```HTML
+HTML
 <span id="results"></span><br />
 <SharePoint:ScriptLink ID="ScriptLink1" name="SP.js" runat="server"
     ondemand="false" localizable="false" loadafterui="true" />
@@ -98,7 +98,7 @@ To create an application page that uses the JavaScript object model to retrieve 
 <script type="text/javascript">
     // Replace this comment with the code for your scenario.
 </script>
-  ```
+
 
 10. To add logic to retrieve user profile properties, replace the comment between the **script** tags with the code example from one of the following scenarios:
     

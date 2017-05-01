@@ -53,7 +53,7 @@ To enable the Duet reporting features, the sequence of activation must be carefu
   
 2. Add the following code to the **Elements** file.
     
-  ```
+
   
 <?xml version="1.0" encoding="utf-8"?>
 <Feature xmlns="http://schemas.microsoft.com/sharepoint/" Title="AddDuetReporting" Id="6a55705c-af12-455a-914b-8cf3a31c820e" Scope="Web">
@@ -63,7 +63,7 @@ To enable the Duet reporting features, the sequence of activation must be carefu
   </ActivationDependencies>
 </Feature>
 
-  ```
+
 
 Please note that the sequence in activation dependency is important. First, you must create the external content type and then activate the **SAPReportingForApps** feature. Also, note that the second feature (ID: **9b60ccba-ebfd-4e38-87c8-3dea9cc2680a**) is shipped with Duet Enterprise 2.0, but it is marked as hidden. With this approach, a developer can make use of this feature and can bring in Duet Reporting capabilities to an app.
   

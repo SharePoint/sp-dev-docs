@@ -53,7 +53,7 @@ The following project uses Microsoft Visual Studio 2005.
   
 8. You should see the following code in the Class1.cs file:
     
-  ```cs
+cs
   
 using System;
 using System.Collections.Generic;
@@ -65,10 +65,10 @@ namespace SampleUdf
     {
     }
 }
-  ```
 
 
-  ```VB.net
+
+VB.net
   
 Imports System
 Imports System.Collections.Generic
@@ -78,7 +78,7 @@ Namespace SampleUdf
 Public Class Class1
 End Class
 End Namespace
-  ```
+
 
 
 ## Adding a Reference

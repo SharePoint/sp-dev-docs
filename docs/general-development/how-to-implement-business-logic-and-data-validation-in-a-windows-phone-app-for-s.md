@@ -175,15 +175,15 @@ Again, for the purposes of this example, assume that the following simple valida
   
 3. Add the following **using** directives to the list of directives at the top of the file.
     
-  ```cs
+cs
   
 using System.Globalization;
 using System.Text.RegularExpressions;
-  ```
+
 
 4. Replace the default implementation of the **Validate** method in the file with the following code.
     
-  ```cs
+cs
   
 public override void Validate(string fieldName, object value)
 {
@@ -263,7 +263,7 @@ public override void Validate(string fieldName, object value)
     //And then proceed with default validation from base class.
     base.Validate(fieldName, value);
 }
-  ```
+
 
 
     Keep in mind that the field names specified in this code sample are based on properties of the sample Product Orders list specified in Table 1. (Notice that in the XML schema for list fields in SharePoint Server, spaces in the names of fields are replaced with the string "_x0020_" for the **Name** attribute of the **Field** element that defines a given field. The template uses the **Name** attribute for a **Field** element as it is defined in the XML schema on the server, not the **DisplayName** attribute.) You can identify the field names of those fields for which you want to implement validation logic by looking at the **Binding** declarations of the **Text** properties for the **TextBox** objects defined in EditForm.xaml or by examining the **ViewFields** string of the **CamlQueryBuilder** class in the ListProvider.cs file.

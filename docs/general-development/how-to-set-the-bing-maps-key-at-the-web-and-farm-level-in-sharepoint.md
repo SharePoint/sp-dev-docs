@@ -105,7 +105,7 @@ The Bing Maps key can be set at the farm or web level. To set the Bing Maps key 
   
 7. Add the following code to the Main method in the .cs file.
     
-  ```cs
+cs
   
 class Program
     {
@@ -125,7 +125,7 @@ class Program
         }    
     }
 
-  ```
+
 
 8. Replace the <Site Url> and  _<Valid Bing Maps Key>_ with valid values.
     
