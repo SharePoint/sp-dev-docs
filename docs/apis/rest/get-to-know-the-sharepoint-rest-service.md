@@ -74,7 +74,7 @@ The following table contains typical REST endpoint URL examples to get you start
 
 |**Description**|**URL endpoint**|**HTTP method**|**Body content**|
 |:-----|:-----|:-----|:-----|
-|Retrieves the title of a list| `web/title`|GET|Not applicable|
+|Retrieves the title of a site| `web/title`|GET|Not applicable|
 |Retrieves all lists on a site| `lists`|GET|Not applicable|
 |Retrieves a single 'list's metadata| `lists/getbytitle('listname')`|GET|Not applicable|
 |Retrieves items within a list| `lists/getbytitle('listname')/items`|GET|Not applicable|
