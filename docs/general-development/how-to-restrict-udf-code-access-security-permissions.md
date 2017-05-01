@@ -93,7 +93,7 @@ For more information about configuring code groups, see the following articles o
     This displays the **Permission Settings** dialog box.
     
   
-17. Select ** assemblies the following security permissions**.
+17. Select **assemblies the following security permissions**.
     
   
 18. Select **Enable assembly execution**.

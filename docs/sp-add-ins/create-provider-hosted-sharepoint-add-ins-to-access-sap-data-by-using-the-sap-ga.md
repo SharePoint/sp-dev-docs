@@ -137,7 +137,7 @@ For a detailed description and diagram of the OAuth flow used by OAuth 2.0 in Az
 8. Choose  **Web Application And/Or Web API** as the application type, and then click the right arrow button.
     
  
-9. On the second page of the dialog, use the SSL debugging URL from the ASP.NET project in the Visual Studio solution as the  **SIGN-ON URL**. You can find the URL using the following steps.  ** *(You need to register the add-in initially with the debugging URL so that you can run the Visual Studio debugger (F5). When your add-in is ready for staging, you will re-register it with its staging Azure Web Site URL.  [Modify the add-in and stage it to Azure and Office 365](#Stage).)* **
+9. On the second page of the dialog, use the SSL debugging URL from the ASP.NET project in the Visual Studio solution as the  **SIGN-ON URL**. You can find the URL using the following steps.  ***(You need to register the add-in initially with the debugging URL so that you can run the Visual Studio debugger (F5). When your add-in is ready for staging, you will re-register it with its staging Azure Web Site URL.  [Modify the add-in and stage it to Azure and Office 365](#Stage).)***
     
       1. Highlight the ASP.NET project in  **Solution Explorer**. 
     

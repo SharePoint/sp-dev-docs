@@ -102,7 +102,7 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
  
 
 
-1. Open the  **Toolbox** pane in Visual Studio, expand the ** SP - List** node, and then drag **LookupSPListItem** into the **Sequence** in the designer.
+1. Open the  **Toolbox** pane in Visual Studio, expand the **SP - List** node, and then drag **LookupSPListItem** into the **Sequence** in the designer.
     
  
 2. Select the  **LookupSPListItem** so that its properties appear in the Visual Studio **Properties** pane. Set the following properties to these values:
@@ -185,7 +185,7 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
 11. In the  **Condition** box of the **If**, enter OrientationStage=="HR paperwork".
     
  
-12. Open the  **Toolbox** pane in Visual Studio, expand the ** SP - Utilities** node, and then drag **Email** into the **Then** box of the **If** activity.
+12. Open the  **Toolbox** pane in Visual Studio, expand the **SP - Utilities** node, and then drag **Email** into the **Then** box of the **If** activity.
     
  
 13. Select the  **Email** activity. In the **Properties** pane, set the values of the Body, Subject, and To properties. In each case, choose the callout button, **. . .**, for the property and use the  **Expression Editor** that opens to set the property's value as in the following table. These are C# string expressions, so use quotation marks exactly as shown. The `Title` here is a variable that you assigned earlier to the **Title** field of the list item (which holds the name of the employee).

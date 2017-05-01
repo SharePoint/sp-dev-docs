@@ -43,7 +43,7 @@ There are two basic kinds of SharePoint Add-ins — SharePoint-hosted and provid
 -  **All SharePoint Add-ins that users install get a tile on the  **Site Contents** page of the SharePoint website.** Clicking the tile runs the add-in.
     
  
--  **A SharePoint Add-in is configured using an  *add-in manifest* ** —an XML file that declares the add-in's basic properties, where it runs, and what SharePoint should do when the add-in starts. Among other things, the manifest can specify what languages the add-in supports, what SharePoint services and functionality it depends on, and the permissions to thehost web that the add-in needs. (SharePoint Add-ins have full control of their ownadd-in web.)
+-  **A SharePoint Add-in is configured using an  *add-in manifest*** —an XML file that declares the add-in's basic properties, where it runs, and what SharePoint should do when the add-in starts. Among other things, the manifest can specify what languages the add-in supports, what SharePoint services and functionality it depends on, and the permissions to thehost web that the add-in needs. (SharePoint Add-ins have full control of their ownadd-in web.)
     
  
 -  **You distribute SharePoint Add-ins in add-in packages** that always include at least the add-in manifest. (If there are no SharePoint components, the add-in manifest may be the only thing in the add-in package. ) If the add-in has SharePoint components in an add-in web, these are included in the package as a set of XML files. Remote components that are hosted outside of SharePoint, such as a remote web application or database, are not included in the package and are deployed separately from the add-in package. (However, the add-in manifest does specify the URLs of the remote components.)
@@ -53,7 +53,7 @@ There are two basic kinds of SharePoint Add-ins — SharePoint-hosted and provid
     
  
 
- **Tip**   **Take a look at a few SharePoint Add-ins in the** [Office Store](https://store.office.com/appshome.aspx?productgroup=SharePoint) to get a sense of what you can develop. Or open a SharePoint 2013 website and install some of the free SharePoint Add-ins. Just navigate to ** Site Contents | add an add-in | SharePoint Store**. 
+ **Tip**   **Take a look at a few SharePoint Add-ins in the** [Office Store](https://store.office.com/appshome.aspx?productgroup=SharePoint) to get a sense of what you can develop. Or open a SharePoint 2013 website and install some of the free SharePoint Add-ins. Just navigate to **Site Contents \| add an add-in \| SharePoint Store**.
  
 
 

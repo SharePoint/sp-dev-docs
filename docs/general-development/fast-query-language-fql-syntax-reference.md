@@ -973,7 +973,7 @@ If a token in the matching segment matches more than one operand to the **NEAR**
   
     
     
- ** **NEAR** or **ONEAR** with **NOT****
+**NEAR or ONEAR with NOT**
   
     
     

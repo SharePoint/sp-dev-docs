@@ -570,7 +570,7 @@ expectedShipmentsList.EventReceivers.Add(receiver);
  
 
  
-4. Change the  **Configuration** drop down to **Release**, and then ensure that the  **Define DEBUG constant** box is ** *not* ** checked. (It usually is not by default.) The following screen shot shows the proper setting.
+4. Change the  **Configuration** drop down to **Release**, and then ensure that the  **Define DEBUG constant** box is ***not*** checked. (It usually is not by default.) The following screen shot shows the proper setting.
     
      ![The Build sub-tab of the Properties tab. The Configuration drop down says Release. The check box for "Define DEBUG constant" is not checked.](../../images/7fd942de-a324-4f70-a750-f5304c993832.PNG)
  

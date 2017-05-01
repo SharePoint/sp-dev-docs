@@ -89,7 +89,7 @@ In this section, you include markup in the add-in that will deploy a button to t
 2. Right-click the  **ChainStore** project in **Solution Explorer** and choose **Add | New Item**. 
     
  
-3. In the  **Add New Item** dialog, select ** Ribbon Custom Action**, give it the name AddEmployeeToCorpDB, and then click  **Add**.
+3. In the  **Add New Item** dialog, select **Ribbon Custom Action**, give it the name AddEmployeeToCorpDB, and then click  **Add**.
     
  
 4. The dialog that opens asks three questions. Give the following answers:
@@ -121,7 +121,7 @@ In this section, you include markup in the add-in that will deploy a button to t
   - A few query parameters have been added to the  **CommandAction** value with placeholder values in braces "{ }". These placeholders are resolved at runtime. Note that one of them is the ID of the list item that is selected by the user before she presses the custom button on the ribbon.
     
  
-7. In the  **ChainStoreWeb** project, open the **Pages/EmployeeAdder.aspx** file. Notice that it doesn't have any UI. The add-in is going to use this page as a kind of web service. This is possible because the ASP.NET **System.Web.UI.Page** class implements **System.Web.IHttpHandler** and because the ** Page_Load** event runs automatically when the page is requested.
+7. In the  **ChainStoreWeb** project, open the **Pages/EmployeeAdder.aspx** file. Notice that it doesn't have any UI. The add-in is going to use this page as a kind of web service. This is possible because the ASP.NET **System.Web.UI.Page** class implements **System.Web.IHttpHandler** and because the **Page\_Load** event runs automatically when the page is requested.
     
  
 8. Open the code behind file  **Pages/EmployeeAdder.aspx.cs**. The method that adds the employee to the remote database,  `AddLocalEmployeeToCorpDB`, is already present. It uses the  **SharePointContext** object to get the host web's URL, which the add-in uses as its tenant discriminator. So the first thing the **Page_Load** method needs to do is initialize this object. The object is created and cached in the Session when the add-in's start page loads, so add the following code to the **Page_Load** method. (The **SharePointContext** object is defined in the SharePointContext.cs file that the Office Developer Tools for Visual Studio generate when the add-in solution is created.)

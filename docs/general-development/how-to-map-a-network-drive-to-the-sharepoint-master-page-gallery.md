@@ -42,7 +42,7 @@ On the computer that runs your design tool or HTML editor, map a network drive t
 - If the computer is running Windows XP, follow the steps that are described in the article  [How to connect and disconnect a network drive in Windows XP](http://support.microsoft.com/kb/308582).
     
   
-- ** *If the computer is running another operating system, follow the instructions for creating a shortcut to a new location for that operating system.* ** You might have to provide different credentials for connecting to the SharePoint site, and you might have to specify that the connection be re-established every time that you log on to the computer.
+- ***If the computer is running another operating system, follow the instructions for creating a shortcut to a new location for that operating system.*** You might have to provide different credentials for connecting to the SharePoint site, and you might have to specify that the connection be re-established every time that you log on to the computer.
     
   
 

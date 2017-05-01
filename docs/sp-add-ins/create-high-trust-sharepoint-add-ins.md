@@ -227,7 +227,7 @@ $certificate = New-Object System.Security.Cryptography.X509Certificates.X509Cert
 
 ```
 
-4. Your remote web application will use an access token to get access to SharePoint data. The access token must be issued by a token issuer that SharePoint trusts. In a high-trust SharePoint Add-in, the certificate is the token issuer. Add the following lines to construct an issuer ID in the format that SharePoint requires:  ** _specific_issuer_GUID_@ _realm_GUID_**.
+4. Your remote web application will use an access token to get access to SharePoint data. The access token must be issued by a token issuer that SharePoint trusts. In a high-trust SharePoint Add-in, the certificate is the token issuer. Add the following lines to construct an issuer ID in the format that SharePoint requires:  **\_specific\_issuer\_GUID\_@\_realm\_GUID\_**.
     
 ```
   $specificIssuerId = "11111111-1111-1111-1111-111111111111"

@@ -467,7 +467,7 @@ This section provides an overview of how the add-in implements OAuth in Azure AD
  
 
  
- ** Overview**
+ **Overview**
  
 
  

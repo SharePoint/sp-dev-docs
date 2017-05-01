@@ -33,7 +33,7 @@ A SharePoint Composite combines data, documents, and business process in a "do-i
   
     
     
- ** IT friendly** Ease the struggle between trying to be responsive to users without affecting IT control and governance. SharePoint Composites help you create business solutions that are visible and integrated into your organization's information infrastructure. These no-code solutions are easier to deploy, manage, and maintain.
+ **IT friendly** Ease the struggle between trying to be responsive to users without affecting IT control and governance. SharePoint Composites help you create business solutions that are visible and integrated into your organization's information infrastructure. These no-code solutions are easier to deploy, manage, and maintain.
   
     
     

@@ -97,9 +97,9 @@ Figure 1 shows a view form with a custom-rendered field type.
 1. Open Visual Studio 2012 as administrator (right-click the Visual Studio 2012 icon in the **Start** menu, and then choose **Run as administrator** ).
     
   
-2. Create a new project using the ** SharePoint 2013 Project** template
+2. Create a new project using the **SharePoint 2013 Project** template
     
-    Figure 2 shows the location of the ** SharePoint 2013 Project** template in Visual Studio 2012, under **Templates**, **Visual C#**, **Office SharePoint**, **SharePoint Solutions**.
+    Figure 2 shows the location of the **SharePoint 2013 Project** template in Visual Studio 2012, under **Templates**, **Visual C#**, **Office SharePoint**, **SharePoint Solutions**.
     
 
    **Figure 2. SharePoint 2013 project Visual Studio template**

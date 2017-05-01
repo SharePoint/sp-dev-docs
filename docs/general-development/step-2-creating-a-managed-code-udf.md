@@ -28,7 +28,7 @@ The **Microsoft.Office.Excel.Server.Udf.UdfMethod** attribute has an **IsVolatil
 ### To add directives
 
 
-- The types to use are defined in the ** Microsoft.Office.Excel.Server.Udf** namespace. Adding a **using** (or **Imports**) directive at the top of the Class1.cs file will allow you to use the types in **Microsoft.Office.Excel.Server.Udf** without having to fully qualify the types in the namespace.
+- The types to use are defined in the **Microsoft.Office.Excel.Server.Udf** namespace. Adding a **using** (or **Imports**) directive at the top of the Class1.cs file will allow you to use the types in **Microsoft.Office.Excel.Server.Udf** without having to fully qualify the types in the namespace.
     
     To add this directive, add the following code to the beginning of your code in the Class1.cs file, after  `using System.Text:`
     

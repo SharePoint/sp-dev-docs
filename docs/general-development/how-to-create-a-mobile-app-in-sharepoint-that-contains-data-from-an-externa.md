@@ -51,7 +51,7 @@ A BDC model is the core of Business Connectivity Services. It's an XML file that
 2. Choose **Application Management**, and then choose **Manage Service Applications**.
     
   
-3. On the Service Application page, choose ** Business Data Connectivity Service**.
+3. On the Service Application page, choose **Business Data Connectivity Service**.
     
   
 4. On the ribbon in the BDC Service application, choose **Import**.
@@ -168,7 +168,7 @@ Now that you've uploaded the BDC model and set permissions, you can create an ex
 5. In the **Adding an External List** dialog box, enter a name such asCustomers in the **Name** field.
     
   
-6. In the ** External Content Type** box, specify the external data source that you uploaded in step 1.
+6. In the **External Content Type** box, specify the external data source that you uploaded in step 1.
     
   
 7. Choose the **OK** button.
