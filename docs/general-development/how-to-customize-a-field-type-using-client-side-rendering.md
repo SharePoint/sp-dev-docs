@@ -106,7 +106,7 @@ Figure 1 shows a view form with a custom-rendered field type.
 
   
 
-     ![SharePoint 2013 Project Visual Studio template](images/SharePointSolutionVSTemplate.png)
+  ![SharePoint 2013 Project Visual Studio template](images/SharePointSolutionVSTemplate.png)
   
 
   
