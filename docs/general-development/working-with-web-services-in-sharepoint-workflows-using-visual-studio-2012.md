@@ -17,7 +17,7 @@ Demonstrates how to use web services in SharePoint 2013 workflows using Visual S
     
     
 
-> [!NOTE]
+> **Note:**
 > This article is accompanied by an end-to-end code sample that you can use to follow the article, or as a starter for your own SharePoint workflow projects. You can find the downloadable code in the MSDN Code Gallery, here:  [Working with Web Services in SharePoint 2013 Workflows using Visual Studio 2012](http://code.msdn.microsoft.com/Working-with-Web-in-46148199). 
   
     
@@ -237,7 +237,7 @@ The first thing the workflow needs to do is retrieve the customer ID, as entered
     
   - **CustomerItemProperties** (data type = **DynamicValue**; scope = **Init**). Use this variable to store the result set returned by the activity that gets all properties from the list item.
     
-    > [!NOTE]
+    > **Note:**
       > The **DynamicValue** data type is not shown by default. To find it, select the **Browse for Types** option in the **Variable Type** column. In the search box at the top of the dialog, enter **DynamicValue**, and then select the **Microsoft.Activities.DynamicValue**. 
   - **CustomerId** (data type = **String**; scope = **Root**): Use this variable to store the customer ID entered by the user.
     

@@ -19,14 +19,14 @@ Claims can be displayed in the people picker control through claims picking. Cla
     
 
 
-> [!NOTE]
+> **Note:**
 > A people picker with claims picking functionality is sometimes referred to as a claims picker. For more information, see  [People picker and claims provider planning](http://technet.microsoft.com/en-us/library/gg602063.aspx). 
   
     
     
 
 To write a claims provider, your first step is to create a class that derives from the **SPClaimProvider** class.
-> [!TIP]
+> **Tip:**
 > For a code example and more information about the **SPClaimProvider** class and its members, see [SPClaimProvider](https://msdn.microsoft.com/library/Microsoft.SharePoint.Administration.Claims.SPClaimProvider.aspx) . For walkthroughs, tips, and code samples, see [Claims and Security: Technical articles and code samples on MSDN](http://msdn.microsoft.com/library/f773fd4a-53ec-4656-bd08-e6c435e6f103%28Office.15%29.aspx). 
   
     

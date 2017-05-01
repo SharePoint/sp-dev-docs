@@ -50,7 +50,7 @@ Both actions are designed to start a workflow built on the SharePoint 2010 Workf
     
 
     
-> [!IMPORTANT]
+> **Important:**
 > The coordination actions only support starting a workflow based on the SharePoint 2010 Workflow platform from a workflow based on the SharePoint 2013 Workflow platform. Starting a workflow built on the SharePoint 2013 Workflow platform from within a workflow built on the same platform is not supported. 
   
     

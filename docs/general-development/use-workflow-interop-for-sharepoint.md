@@ -13,7 +13,7 @@ Provides a discussion of using SharePoint workflow Interop in the Visual Studio 
     
 
 
-> [!IMPORTANT]
+> **Important:**
 > To learn about using SharePoint workflow interop functionality in SharePoint Designer 2013, see  [Understanding Coordination actions in SharePoint Designer 2013](understanding-coordination-actions-in-sharepoint-designer.md). 
   
     

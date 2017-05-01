@@ -70,7 +70,7 @@ This article focuses on the Workflow Services CSOM API and thus, by extension, t
     
     
 
-> [!NOTE]
+> **Note:**
 > There is one additional service that is not present in the CSOM, but is present instead with the server-side API. This is the Messaging Service, which is used to manage message queuing and message transport. 
   
     
@@ -280,7 +280,7 @@ However, to provide backward compatibility, Microsoft retained the legacy model 
     
     
 
-> [!NOTE]
+> **Note:**
 > The **InvokeSharePointWorkflow** activity is a wrapper for the CSOM method, [StartWorkflow](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.WorkflowServices.InteropService.StartWorkflow.aspx) .
   
     

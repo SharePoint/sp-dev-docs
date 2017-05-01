@@ -48,7 +48,7 @@ The query suggestion parameters are specified in the URL. You can construct the 
     
   
 
-> [!NOTE]
+> **Note:**
 > The Search REST service doesn't support anonymous requests to the **Suggest** endpoint.
   
     

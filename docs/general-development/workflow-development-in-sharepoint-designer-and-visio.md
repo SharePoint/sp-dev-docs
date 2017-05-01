@@ -15,7 +15,7 @@ Visio 2013 and SharePoint Designer 2013 make it easy for business analysts, proc
     
     
 
-> [!NOTE]
+> **Note:**
 > For guidance on setting up and configuring SharePoint Server 2013 and the Workflow Manager server, see  [Configure workflow in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj658586.aspx). 
   
     
@@ -49,7 +49,7 @@ The SharePoint 2013 Workflow template that is included in Visio 2013 also uses s
     
     
 
-> [!IMPORTANT]
+> **Important:**
 > Because of the underlying differences between the Microsoft SharePoint 2010 Workflow template and the SharePoint 2013 Workflow template, you cannot use shapes from one template within a diagram created by the other. Only shapes from the SharePoint 2013 Workflow Actions, SharePoint 2013 Workflow Conditions, and SharePoint 2013 Workflow Terminators stencils can be used to build a SharePoint 2013 workflow. 
   
     
@@ -159,7 +159,7 @@ With the SharePoint 2013 Workflow template open, drag actions, conditions, and o
     
     
 
-> [!TIP]
+> **Tip:**
 >  When designing a workflow, keep the following additional considerations in mind:
 >  - To quickly build a workflow, drop action and condition shapes onto the internal connector that is contained by new stage shapes. Visio 2013 automatically splits the connector into additional connectors, keeping the workflow connected from the Enter shape to the Exit shape.
 >  - Do not use any shapes from a stencil other than the SharePoint 2013 Workflow Actions, SharePoint 2013 Workflow Conditions, and SharePoint 2013 Workflow Terminators stencils. Use only the Connector tool provided by the SharePoint 2013 Workflow template to add connections between shapes. All other connector shapes are not valid within a SharePoint 2013 workflow.
@@ -304,7 +304,7 @@ When you open a .vsdx file in SharePoint Designer 2013, the file is displayed in
     
     
 
-> [!NOTE]
+> **Note:**
 > To switch between the Visual Designer and the Declarative Designer in SharePoint Designer 2013, on the **Workflow** tab, in the **Manage** group, choose **Views**. This process may take a few moments, as SharePoint Designer 2013 validates the workflow and then converts the workflow information from one format to another. During this process, another shape level validation will occur. If any errors are detected with the diagram, the errors will be displayed in an error pane at the bottom of the canvas (just like in Visio). 
   
     
@@ -319,7 +319,7 @@ For example, the **Send an email** shape has two properties associated with it: 
     
     
 
-> [!NOTE]
+> **Note:**
 > For more information about individual actions, shapes, and their properties, see the articles  [Shapes in the SharePoint Server workflow template in Visio](shapes-in-the-sharepoint-server-workflow-template-in-visio.md) and [Workflow actions quick reference (SharePoint 2013 Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md). 
   
     

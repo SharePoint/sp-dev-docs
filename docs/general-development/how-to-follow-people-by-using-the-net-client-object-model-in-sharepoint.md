@@ -14,7 +14,7 @@ In SharePoint Server 2013, when a user follows people, the posts and activities 
     
     
 
-> [!NOTE]
+> **Note:**
 > We focus on  [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx) because it consolidates the core functionality for following people and content. However, the [PeopleManager](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PeopleManager.aspx) object contains additional functionality for following people, such as the [AmIFollowedBy(String)](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.AmIFollowedBy.aspx) method and methods that obtain the following status of other users.
   
     
@@ -38,7 +38,7 @@ To create a console application that uses the .NET client object model to work w
     
   
 
-> [!NOTE]
+> **Note:**
 > If you're not developing on the computer that is running SharePoint Server 2013, get the  [SharePoint Client Components](http://www.microsoft.com/en-us/download/details.aspx?id=35585) download that contains SharePoint 2013 client assemblies.
   
     
@@ -103,7 +103,7 @@ This code example uses the  [SocialFollowResult](https://msdn.microsoft.com/libr
     
     
 
-> [!NOTE]
+> **Note:**
 > Change the placeholder values for the **serverUrl** and **targetUser** variables before you run the code.
   
     
@@ -220,7 +220,7 @@ The following code example gets the people who the current user is following, ge
     
   
 
-> [!NOTE]
+> **Note:**
 > Change the placeholder values for the **serverUrl** and **targetUser** variables before you run the code.
   
     

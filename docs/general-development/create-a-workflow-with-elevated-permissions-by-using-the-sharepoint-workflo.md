@@ -15,7 +15,7 @@ This article describes how to create SharePoint 2013 workflows that access objec
     
     
 
-> [!IMPORTANT]
+> **Important:**
 > This article assumes that the SharePoint 2013 Workflow platform has been installed and configured and that SharePoint 2013 has been configured for apps. For more information on SharePoint 2013 Workflow and apps for SharePoint 2013, including installation and configuration, see  [Workflow in SharePoint 2013](http://technet.microsoft.com/sharepoint/jj556245.aspx) and [Install and manage apps for SharePoint 2013](http://msdn.microsoft.com/library/733647a3-a5d3-475b-967d-3bb627c2a0c2.aspx). 
   
     
@@ -54,7 +54,7 @@ The first step is to allow workflow to use app permissions. You configure workfl
     
     
 
-> [!IMPORTANT]
+> **Important:**
 > The procedure must be completed by a user that has **Site Owner** permissions.
   
     
@@ -84,7 +84,7 @@ The first step is to allow workflow to use app permissions. You configure workfl
   
 4. Locate the feature called **Workflows can use app permissions**, as shown in the figure, and then click **Activate**.
     
-    > [!CAUTION]
+    > **Caution:**
       > This feature will not activate unless you have properly configured the SharePoint 2013 Workflow platform and also apps for SharePoint. 
 
    **Figure: The site feature, 'Workflows can use app permissions'**
@@ -105,7 +105,7 @@ In order for the workflow to function properly it must be granted full control i
     
     
 
-> [!IMPORTANT]
+> **Important:**
 >  The procedure assumes the following:>  The procedure must be completed by a user that has **Site Owner** permissions.>  The workflow must already be published to the SharePoint Server 2013 site.
   
     
@@ -149,7 +149,7 @@ In order for the workflow to function properly it must be granted full control i
     
     Example: http://{hostname}/{the Site Collection}/_layouts/15/appinv.aspx. 
     
-    > [!NOTE]
+    > **Note:**
       > The 'app' in this step refers to the Workflow app in general and not just a specific workflow. Individual workflows cannot be access controlled. When you enable app permissions you are enabling for all workflows within the Site Collection. 
 
     For more information about setting up a workflow, see  [Blog article from Sympraxis Consulting: Looping Through Content in a SharePoint 2013 Site Workflow](http://sympmarc.com/2016/01/14/looping-through-content-in-a-sharepoint-site-workflow-part-1-introduction)
@@ -178,7 +178,7 @@ In order for the workflow to function properly it must be granted full control i
 ```
 
 
-> [!CAUTION]
+> **Caution:**
 > There are no placeholders in the **Scope** value above. It is a literal value. Enter it exactly as it appears here.
 
   The following figure shows an example of the completed page.

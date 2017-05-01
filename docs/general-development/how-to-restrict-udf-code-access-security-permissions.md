@@ -119,10 +119,10 @@ For more information about configuring code groups, see the following articles o
   
 3. Click **Apply**, and then click **OK**.
     
-    > [!NOTE]
+    > **Note:**
       > If the UDF method throws an exception because it cannot make the Web service call, you should receive a **#VALUE!** error in the Excel formula that called the UDF.
 
-    > [!NOTE]
+    > **Note:**
       >  If you want to enable Web access for your UDF assembly for testing, you must add the appropriate permission to your custom permission set. To do this, in Step 11 of the "To create a new code group" procedure, select **Web Access**. 
 
 ## See also

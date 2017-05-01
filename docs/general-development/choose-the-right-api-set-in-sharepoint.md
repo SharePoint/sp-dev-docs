@@ -95,7 +95,7 @@ The following table provides guidance on which set of APIs to use for a selected
 |Create a timer job  <br/> |Server object model  <br/> |
 |Create an extension of Central Administration  <br/> |Server object model  <br/> |
 |Create consistent branding across an entire SharePoint farm  <br/> |Server object model  <br/> |
-|Create a custom Web Part, application page, or ASP.NET user control  <br/> |Server object model  <br/> > [!IMPORTANT]> If the functionality you want to offer customers is not oriented to SharePoint administration at a scope broader than site collection, we recommend that, instead of using the server object model, you create an SharePoint Add-in that includes a remote ASP.NET web application with custom Web Parts and user controls as needed. See the top two rows of this table.           |
+|Create a custom Web Part, application page, or ASP.NET user control  <br/> |Server object model  <br/> > **Important:**> If the functionality you want to offer customers is not oriented to SharePoint administration at a scope broader than site collection, we recommend that, instead of using the server object model, you create an SharePoint Add-in that includes a remote ASP.NET web application with custom Web Parts and user controls as needed. See the top two rows of this table.           |
    
 
 ## Server object model
@@ -118,7 +118,7 @@ The assemblies that define the built-in server-side classes are installed to the
     
     
 
-> [!NOTE]
+> **Note:**
 > Developing new sandboxed solutions against SharePoint 2013 is deprecated in favor of developing SharePoint Add-ins, but sandboxed solutions can still be installed to site collections on SharePoint 2013. The assemblies of these solutions remain in the package except when they are actually in use, at which time they are temporarily installed to a folder on the server. For more information, see  [Where are Assemblies in Sandboxed Solutions Deployed?](http://msdn.microsoft.com/library/dadbb20b-1bf7-442c-9eeb-bd9f01dbda45%28Office.15%29.aspx). 
   
     
@@ -177,7 +177,7 @@ For examples of using the .NET Framework object model, see  [Complete basic oper
     
     
 
-> [!NOTE]
+> **Note:**
 > You can also use the SharePoint REST/OData endpoints in a .NET Framework application. For a comparison of the .NET Framework client object model with the SharePoint REST/OData endpoints, see the section  [REST/OData endpoints](#RESTOData) later in this article.
   
     
@@ -199,7 +199,7 @@ Silverlight .xap files can be included in SharePoint Add-ins, including SharePoi
     
     
 
-> [!NOTE]
+> **Note:**
 > You can also use the SharePoint REST/OData endpoints in a Silverlight application. For a comparison of the Silverlight client object model with the SharePoint REST/OData endpoints, see the section  [REST/OData endpoints](#RESTOData) later in this article.
   
     
@@ -237,7 +237,7 @@ For examples of using the .NET Framework object model, see  [Complete basic oper
     
     
 
-> [!NOTE]
+> **Note:**
 > You can also use the SharePoint REST/OData endpoints in a JavaScript application. For a comparison of the JavaScript client object model with SharePoint's REST/OData endpoints, see the following section,  [REST/OData endpoints](#RESTOData). 
   
     

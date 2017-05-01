@@ -21,7 +21,7 @@ This example shows you how to:
   
 2. Save the workbook to a SharePoint document library that is a trusted location.
     
-    > [!NOTE]
+    > **Note:**
       > It is assumed that you have already created a SharePoint document library and made it a trusted location. For more information, see  [How to: Trust a Location](how-to-trust-a-location.md). 
 3. Change values in a workbook by using the parameters pane in Excel Web Access.
     

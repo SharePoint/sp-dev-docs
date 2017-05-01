@@ -31,7 +31,7 @@ Elements that can be used in a trigger expression are:
     
   
 
-> [!NOTE]
+> **Note:**
 > The string " **Null**" is reserved for the value **Null**. 
   
     

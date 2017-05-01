@@ -13,7 +13,7 @@ In a Windows Phone app intended for production use, you likely need to validate 
     
 
 
-> [!IMPORTANT]
+> **Important:**
 > If you are developing an app for Windows Phone 8, you must use Visual Studio Express 2012 instead of Visual Studio 2010 Express. Except for the development environment, all information in this article applies to creating apps for both Windows Phone 8 and Windows Phone 7. > For more information, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md). 
   
     
@@ -28,7 +28,7 @@ Some data types for fields in SharePoint lists are associated by default with si
     
     
 
-> [!NOTE]
+> **Note:**
 > Date input validation is with respect to SharePoint date format. If the date format of the phone locale is required, customize the field and add validations accordingly. 
   
     
@@ -93,7 +93,7 @@ You can validate data entered by users of your Windows Phone app in several ways
     
     
 
-> [!NOTE]
+> **Note:**
 > The SharePoint list templates do not include default validations (such as percentage complete in a SharePoint task list, post check for a team discussion list, and SP decimal field type validation), but you can implement such validations. 
   
     

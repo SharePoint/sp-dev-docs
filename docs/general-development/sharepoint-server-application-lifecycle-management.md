@@ -19,7 +19,7 @@ Applies common application lifecycle management (ALM) concepts and practices to 
     
 
 
-> [!IMPORTANT]
+> **Important:**
 > This topic refers to autohosted SharePoint Add-ins. The preview program for autohosted apps has ended. Please disregard all references to autohosted SharePoint Add-ins. 
   
     

@@ -79,7 +79,7 @@ For more information about creating editors, see the following topics:
     
   
 
-> [!NOTE]
+> **Note:**
 > PerformancePoint Dashboard Designer can create and delete custom objects, so your editor does not need to provide logic for creating or deleting objects. 
   
     
@@ -113,7 +113,7 @@ For more information about scorecard transforms, see  [How to: Create scorecard 
     
     
 
-> [!NOTE]
+> **Note:**
 > If a transform modifies the data values in a scorecard, the changes propagate directly to Strategy Map reports that use the scorecard as a data source. In addition, changes to scorecards may affect KPI Details reports. 
   
     

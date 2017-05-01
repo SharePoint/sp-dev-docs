@@ -42,7 +42,7 @@ To follow the steps in this example, you should have the following:
   
 - A valid Bing Maps key, which you can obtain from the  [Bing Maps Account Center](https://www.bingmapsportal.com/).
     
-    > [!IMPORTANT]
+    > **Important:**
       > Please note that you are responsible for compliance with terms and conditions applicable to your use of the Bing Maps key, and any necessary disclosures to users of your application regarding data passed to the Bing Maps service. 
 
 ## Code example: Set the Bing Maps key at the farm or web level
@@ -53,7 +53,7 @@ The Bing Maps key can be set at the farm or web level. To set the Bing Maps key 
     
     
 
-> [!TIP]
+> **Tip:**
 > The Bing Maps key set at web level has higher precedence order than the Bing Maps key set at farm level. 
   
     
@@ -72,7 +72,7 @@ The Bing Maps key can be set at the farm or web level. To set the Bing Maps key 
     
     The Bing Maps key is now set at the farm level in SharePoint Server 2013. 
     
-    > [!NOTE]
+    > **Note:**
       > When you use Windows PowerShell, the Bing Maps key can be set only at the farm level. If you want to set the Bing Maps key at the web level, you can set the key programmatically, as shown in the following section. 
 
 ### To set the Bing Maps key at the farm or web level using the client object model

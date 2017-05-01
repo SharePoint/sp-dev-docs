@@ -21,7 +21,7 @@ This example shows how to save an Excel workbook to the server to to prepare it 
   
 2. Save the workbook to a trusted SharePoint library location. 
     
-    > [!NOTE]
+    > **Note:**
       > It is assumed that you have already created a SharePoint document library and made it a trusted location. For more information, see  [How to: Trust a Location](how-to-trust-a-location.md). 
 3. Programmatically specify values for the worksheet, named range, and cell value by using the Excel Web Services **SetCellA1** method. The values are passed in as arguments—that is, _args [1]_ and _args [2]_:
     
@@ -188,7 +188,7 @@ status = xlSrv.SetCellA1(sessionId, String.Empty, args[1], args[2]);
     
   
 
-> [!NOTE]
+> **Note:**
 > For more information about snapshots, see  [How to: Get an Entire Workbook or a Snapshot](how-to-get-an-entire-workbook-or-a-snapshot.md). For more information about the **SetCellA1** method, see the Excel Web Services reference documentation. The namespace of the Web service is [Microsoft.Office.Excel.Server.WebServices](https://msdn.microsoft.com/library/Microsoft.Office.Excel.Server.WebServices.aspx) .
   
     

@@ -18,7 +18,7 @@ In this step, you will test the SampleUdf.dll assembly you created, deployed, an
   
 2. Save the workbook to a SharePoint document library that is a trusted location.
     
-    > [!NOTE]
+    > **Note:**
       > It is assumed that you have already created a SharePoint document library and made it a trusted location. For information about how to trust a location, see the "Trusting a Location" section in  [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md). 
 3. Change parameters to recalculate the workbook.
     
@@ -35,10 +35,10 @@ In this step, you will test the SampleUdf.dll assembly you created, deployed, an
   
 2. In cell A1, type the formula to call the  `MyDouble` function in SampleUdf.dll. The `MyDouble` function takes an argument of type **double**. In this example, you will take the argument from cell B1. In cell A1, type =MyDouble(B1).
     
-    > [!NOTE]
+    > **Note:**
       > The formula will evaluate to "#NAME?" in Excel. The formula will be evaluated only when the workbook is displayed in Excel Services. 
 
-    > [!NOTE]
+    > **Note:**
       > You can run UDFs on both the client and server. A future article published on MSDN will explain the details. They are omitted here for the sake of simplicity. 
 3. In cell B1, type the number 8.
     
@@ -94,7 +94,7 @@ In this step, you will test the SampleUdf.dll assembly you created, deployed, an
   
 10. Click **Save**. You should see TestSampleUdf.xlsx in Excel Web Access. In cell A1, you should see the number "72" because cell B1 * 9 = 8 * 9, which is 72. In cell A2 you should see a number. In cell A3, you should see the current date. 
     
-    > [!NOTE]
+    > **Note:**
       > In cell A2, the number represents the number of days since 1/1/1900 (or 1/1/1904 if you have "Use 1904 Date System" turned on). It's how Excel represents dates internally. 
 
 ### To change parameters to test the UDF

@@ -14,7 +14,7 @@ You can use the SharePoint 2013 Representational State Transfer (REST) service t
     
 
 The endpoint URI for most Following tasks begins with the **SocialRestFollowingManager** resource ( `social.following`) and ends with the resource that performs the specific task. For example, you use the URI  `http://www.contoso.com/_api/social.following/follow` to make the current user start following people or content, and the URI `https://www.contoso.com/sites/devSite/_api/social.following/followed` to get the people or content the current user is following.
-> [!NOTE]
+> **Note:**
 > This article shows the endpoint URI and parameter components of HTTP requests. For examples of complete requests, see  [How to: Follow documents, sites, and tags by using the REST service in SharePoint 2013](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md). 
   
     
@@ -970,7 +970,7 @@ Gets users who the current user might want to follow.
     
     
 
-> [!NOTE]
+> **Note:**
 > People Suggestions functionality depends on users' following activities, search crawls, and search analytics. See  [How People Suggestions works on SharePoint Online](follow-people-in-sharepoint.md#bk_PeopleSuggestions). 
   
     
@@ -1014,7 +1014,7 @@ Gets users who the current user might want to follow.
     
     
 
-> [!NOTE]
+> **Note:**
 > People Suggestions functionality depends on users' following activities, search crawls, and search analytics. See  [How People Suggestions works on SharePoint Online](follow-people-in-sharepoint.md#bk_PeopleSuggestions). 
   
     

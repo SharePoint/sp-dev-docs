@@ -15,7 +15,7 @@ SharePoint Designer 2013 includes a new workflow design surface called Visual De
     
     
 
-> [!IMPORTANT]
+> **Important:**
 > In order to work with the Visual Designer, you must have Visio Professional 2013 installed on the same computer as SharePoint Designer 2013. If you do not have Visio installed you will receive an error, as shown in the figure. 
   
     
@@ -51,7 +51,7 @@ The **Shapes** pane on the left contains workflow shapes that you can drag to th
   
 
     
-> [!TIP]
+> **Tip:**
 > For a complete list of shapes available in SharePoint Designer 2013, see  [Shapes in the SharePoint Server workflow template in Visio](shapes-in-the-sharepoint-server-workflow-template-in-visio.md)
   
     

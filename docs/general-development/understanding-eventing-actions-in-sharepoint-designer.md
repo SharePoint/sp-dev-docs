@@ -29,7 +29,7 @@ The Eventing actions are accessed in the **Action** drop-down menu of the ShareP
     
     
 
-> [!NOTE]
+> **Note:**
 > The **Project Web App Actions** are only available when working with a Project Web App site.
   
     

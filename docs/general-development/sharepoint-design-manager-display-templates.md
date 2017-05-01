@@ -15,7 +15,7 @@ Display templates in SharePoint Server 2013 are templates used in Web Parts that
     
     
 
-> [!NOTE]
+> **Note:**
 > Only Search Web Parts can use display templates. The Content Query Web Part is not search-driven, and so does not use display templates. 
   
     
@@ -31,7 +31,7 @@ You can view existing display templates in Design Manager, but you don't create 
   
 - Open one of the four folders in the **Display Templates** folder.
     
-    > [!NOTE]
+    > **Note:**
       > The folder you choose depends on the type of display template you want to use. For example, if your site uses cross-site publishing, copy a display template from the **Content Web Parts** folder. For more information, see [Display template reference in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj944947.aspx). 
 - Copy the HTML file for an existing display template that's similar to what you want. The exact location that you copy the file to does not matter, as long as it is in the **Master Page Gallery**.
     
@@ -58,7 +58,7 @@ When you create a display template by copying the HTML file for an existing disp
     
   
 
-> [!NOTE]
+> **Note:**
 > The syncing goes in one direction only. Changes to the HTML display template are synched to the associated .js file. Unlike master pages and page layouts, when working with display templates you can't choose to work only with the .js file by breaking the association between the files. You must enter all the HTML and JavaScript in the HTML file. 
   
     
@@ -173,7 +173,7 @@ These elements and their properties provide important information to the SharePo
     
     
 
-> [!NOTE]
+> **Note:**
 > Not all custom properties are used in every display template. Also, some properties can be changed by editing the display template file properties in Design Manager. 
   
     
@@ -226,7 +226,7 @@ By default, this line is included in all display templates. You can add more lin
 |A CSS file that is in a location relative to the current display template  <br/> | `$includeCSS(this.url,"../../MyStyles/MyCSS.css");` <br/> |
    
 
-> [!NOTE]
+> **Note:**
 > If **Content Approval** is required for items in the Master Page Gallery, all resource files (including CSS and .js files) must be published before they are available to master pages and page layouts. For more information, see [Require approval of items in a site list or library](http://office.microsoft.com/en-us/sharepoint-help/require-approval-of-items-in-a-site-list-or-library-HA102853936.aspx?CTT=1). 
   
     
@@ -241,7 +241,7 @@ Following the **\<script\>** tag is a **\<div\>** tag with an ID. By default, th
     
     
 
-> [!NOTE]
+> **Note:**
 > If you want to assign a CSS style or an ID to the block of HTML that is rendered on the page at run time, you can add a new tag inside the first **\<div\>** tag. You can also assign a CSS style or an ID to the HTML that surrounds the variable `_#= ctx.RenderGroups(ctx) =#_` in the control template. The variable `_#= ctx.RenderGroups(ctx) =#_` is used to render the HTML that surrounds the query results that are rendered by the item template.
   
     
@@ -363,7 +363,7 @@ Before you can create a display template by using the following procedure, you m
     
   
 
-    > [!NOTE]
+    > **Note:**
       > Unlike master pages and page layouts, you can't use the preview page to see a live server-side preview of your display template. To preview the display template, you must add a Content Search Web Part to a page, and then apply the display template in the Content Search Web Part edit pane. If there are any errors in the display template, the Content Search Web Part displays an error message. Errors must be fixed before the display template can display correctly. 
 8. To fix any errors, edit the HTML file that resides on the server by using an HTML editor to open and edit the HTML file on the mapped drive. Save the display template, and then reload the page that contains the Content Search Web Part that uses the display template.
     

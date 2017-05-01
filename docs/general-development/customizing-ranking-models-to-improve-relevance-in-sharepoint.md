@@ -47,7 +47,7 @@ SharePoint Server 2013 provides 14 ranking models by default. See  [What is a ra
     
     
 
-> [!IMPORTANT]
+> **Important:**
 > If you install the SharePoint Server 2013 cumulative update of August 2013, we recommend using the **Search Ranking Model with Two Linear Stages** as the base model for your custom ranking model. The **Search Ranking Model with Two Linear Stages** is a copy of the **Default Search Model** with a linear second stage instead of a neural network second stage.
   
     
@@ -162,7 +162,7 @@ $newrm = New-SPEnterpriseSearchRankingModel -SearchApplication $ssa -Owner $owne
 ### Rank detail
 
 
-> [!IMPORTANT]
+> **Important:**
 > We provide the rank detail and the accompanying ExplainRank page as a convenience and only to assist you in tuning and debugging your own custom ranking models. The contents of the rank detail and the accompanying ExplainRank page are not supported, and are subject to change without notice in future software patches and updates. 
   
     
@@ -278,7 +278,7 @@ The BM25 rank feature ranks items based on the appearance of query terms in the 
     
     
 
-> [!NOTE]
+> **Note:**
 > The BM25 rank feature used in this context is the fielded version, BM25F. 
   
     
@@ -650,7 +650,7 @@ The dynamic rank feature ranks an item depending on whether the query property m
     
     
 
-> [!NOTE]
+> **Note:**
 > The dynamic rank feature is not customizable; it's for internal use only. However, if you install the SharePoint Server 2013 cumulative update of August 2013, the AnchortextComplete rank feature is a customizable dynamic rank feature that is part of the default ranking model. 
   
     
@@ -777,7 +777,7 @@ However, to ensure that the search engine re-sorts the items accurately, items f
     
     
 
-> [!NOTE]
+> **Note:**
 > If you install the SharePoint Server 2013 cumulative update of August 2013, the default ranking model uses a linear first stage and a neural network second stage. **The Search Ranking Model with Two Linear Stages** is a copy of the **Default Search Model** with two linear stages. We recommend using this model as the base model for your custom ranking model because it is easier to tune a linear model than a model containing a neural network.
   
     
@@ -1005,7 +1005,7 @@ This ranking model with one linear stage contains these four rank features:
   
 -  `InternalFileType` This rank feature boosts documents of type HTML, DOC, XLS, or PPT. The names of the buckets in the definition of the rank model are provided for readability only.
     
-    > [!NOTE]
+    > **Note:**
       > The  `InternalFileType` managed property, available by default, uses the value zero ( `0`) to encode HTML documents, value  `1` for DOC, value `2` for XLS and so on. See the definition of the Default SharePoint rank model for a list of all file types used for the **FileType** managed property.
 
 ```xml

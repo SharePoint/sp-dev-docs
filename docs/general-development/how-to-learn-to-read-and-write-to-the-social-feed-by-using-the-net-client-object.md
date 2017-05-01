@@ -29,7 +29,7 @@ To create the console application, you'll need the following:
     
   
 
-> [!NOTE]
+> **Note:**
 > If you're not developing on the computer that is running SharePoint Server 2013, get the  [SharePoint Client Components](http://www.microsoft.com/en-us/download/details.aspx?id=35585) download that contains SharePoint 2013 client assemblies.
   
     
@@ -106,7 +106,7 @@ const string serverUrl = "http://serverName/";
 const string targetUser = "domainName\\userName";
 
 
-   > [!NOTE]
+   > **Note:**
    > Remember to replace the  `http://serverName/` and `domainName\\userName` placeholder values before you run the code.
    
 2. In the **Main** method, initialize the SharePoint client context.
@@ -189,7 +189,7 @@ feedManager.CreatePost(threadToReplyTo, postCreationData);
 clientContext.ExecuteQuery();
 
 
-   > [!NOTE]
+   > **Note:**
    > The  [CreatePost](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.CreatePost.aspx) method is also used to publish a root post to the current user's feed by passing **null** for the first parameter.
 4. (UI-related only) Exit the program.
     

@@ -98,7 +98,7 @@ After you configure these properties in the Snippet Gallery and then update the 
 ```
 
 
-> [!NOTE]
+> **Note:**
 > If you set **AllowFonts** to **False**, content authors can still use keyboard shortcuts such as CTRL+B (strong) to format text. To prevent authors from adding any styles to text, you can set **AllowTextMarkup** to **False**. With this setting, when content authors attempt to save content that contains styles applied to text, the HTML editor in the browser returns an error and prompts the author to remove the markup that is not valid. 
   
     
@@ -148,7 +148,7 @@ When you change the value of the **PrefixStyleSheet** property, none of the exis
     
     
 
-> [!NOTE]
+> **Note:**
 > The **PrefixStyleSheet** property is defined per each RichHtmlField page field, but multiple page fields can use the same value for this property. So, if multiple page layouts reference the same style sheet, it's possible for multiple RichHtmlFields on those page layouts to have the same style prefix and reference the same styles.
   
     
@@ -178,7 +178,7 @@ When you change the value of the **PrefixStyleSheet** property, none of the exis
   
 7. In the property grid, expand the **Misc** section, and then change the **PrefixStyleSheet** property to a value other than **ms-rte**—for example, change the value to be **customstyle**.
     
-    > [!IMPORTANT]
+    > **Important:**
       > This property value must be all lowercase. 
 8. Choose **Update**.
     
@@ -188,7 +188,7 @@ When you change the value of the **PrefixStyleSheet** property, none of the exis
   
 10. In the mapped network drive on your computer, open the HTML page layout in your HTML editor.
     
-    > [!NOTE]
+    > **Note:**
       > For more information, see  [How to: Map a network drive to the SharePoint 2013 Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md). 
 11. In the HTML page layout, paste the HTML snippet inside **PlaceHolderMain**.
     
@@ -204,7 +204,7 @@ When you change the value of the **PrefixStyleSheet** property, none of the exis
     
     It's useful to view the default styles, understand how they're written, and possibly reuse some of them by copying them to your style sheet and then modifying them. If you do this, replace the default **ms-rte** prefix with your own prefix.
     
-    > [!IMPORTANT]
+    > **Important:**
       > Do not modify the default style sheet, HtmlEditorStyles.css. This style sheet provides styles for every RichHtmlField in the farm. Also, service updates or an upgrade may overwrite this file, causing you to lose any changes. 
 14. In your style sheet, create a list of new styles that start with the new prefix.
     

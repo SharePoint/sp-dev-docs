@@ -13,7 +13,7 @@ In a social feed, the simplest form of post content contains only text, but you 
     
 
 
-> [!NOTE]
+> **Note:**
 > To add embedded pictures, videos, or documents to a post's content, you add a  [SocialAttachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialAttachment.aspx) object to the [SocialPostCreationData.Attachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.Attachment.aspx) property. For more information, see [How to: Embed images, videos, and documents in posts in SharePoint Server 2013](how-to-embed-images-videos-and-documents-in-posts-in-sharepoint-server.md). 
   
     
@@ -66,7 +66,7 @@ The following code example publishes a post that contains links to a website, a 
     
   
 
-> [!NOTE]
+> **Note:**
 > Currently, SharePoint Server 2013 handles links to websites, SharePoint sites, and documents in the same way, but as a best practice, choose the  [Site](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItemType.Site.aspx) type and the [Document](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItemType.Document.aspx) type for SharePoint sites and documents.
   
     
@@ -77,7 +77,7 @@ In the social feed, clicking a link to a website, SharePoint site, or document o
     
     
 
-> [!NOTE]
+> **Note:**
 > Change the placeholder values for the URL variables before you run the code. 
   
     
@@ -191,7 +191,7 @@ In the social feed, clicking a mention redirects to the mentioned person's **Abo
     
     
 
-> [!NOTE]
+> **Note:**
 > Change the placeholder values for the **serverURL** and **accountName** variables before you run the code.
   
     
@@ -283,7 +283,7 @@ In the social feed, clicking a tag redirects to the tag's **About** page. If the
     
     
 
-> [!NOTE]
+> **Note:**
 > Change the placeholder values for the **serverURL** and **tagName** variables before you run the code.
   
     

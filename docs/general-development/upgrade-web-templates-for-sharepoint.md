@@ -130,7 +130,7 @@ To add the default functionality back to the template, you must modify the Onet.
     
   
 
-> [!NOTE]
+> **Note:**
 > You may also need to activate these features in the Central Administration utility. 
   
     

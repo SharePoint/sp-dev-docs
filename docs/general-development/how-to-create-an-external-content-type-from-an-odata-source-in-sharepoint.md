@@ -32,7 +32,7 @@ For information about how to set up your SharePoint development environment, see
     
     
 
-> [!NOTE]
+> **Note:**
 > SharePoint Designer 2013 can't be used to autogenerate BDC models from an OData source. You can use Visual Studio 2012 instead. 
   
     
@@ -93,7 +93,7 @@ After the project is created, you use the new autogeneration tooling for OData s
   
 2. The first page of the wizard is used to collect the URL of the data service. On the **Specify OData Source** page, enter the URL of the OData service that you want to connect to. The URL should resemble the following: `http://services.odata.org/Northwind/Northwind.svc/`.
     
-    > [!NOTE]
+    > **Note:**
       > You will show the Northwind service that is available from the producers list found on the  [Open Data Protocol website](http://www.odata.org/ecosystem#liveservices). 
 3. Choose a name for your OData source, and then choose **Next**.
     

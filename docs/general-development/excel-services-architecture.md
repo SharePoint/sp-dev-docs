@@ -35,7 +35,7 @@ Excel Services is part of Microsoft SharePoint Server 2010. Excel Services is bu
     
   
 
-> [!NOTE]
+> **Note:**
 > Microsoft Excel Online, part of Office Online, also supports Excel workbooks in the browser. For more information about Excel Online, see  [documentation about Office Web Apps](https://technet.microsoft.com/en-us/library/ee855124.aspx). 
   
     
@@ -97,7 +97,7 @@ Excel Web Services is the Excel Services component that provides programmatic ac
     
     
 
-> [!NOTE]
+> **Note:**
 > When you make changes to a workbook—for example, by setting values to a range by using Excel Web Services—the changes to the workbook are preserved only for that session. The changes are not saved or persisted back to the original workbook. When the current workbook session ends (for example, when you call the **CloseWorkbook** method, or when the session times out), the changes that you made are lost.> If you want to save changes that you make to a workbook, you can use the **GetWorkbook** method, and then save the workbook. For more information, see [Microsoft.Office.Excel.Server.WebServices](https://msdn.microsoft.com/library/Microsoft.Office.Excel.Server.WebServices.aspx) . You can also open the workbook in edit mode and save the changes.
   
     

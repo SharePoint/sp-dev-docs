@@ -33,7 +33,7 @@ The following table shows some benefits of using MDS.
 |:-----|:-----|
 |Fewer amounts of data downloaded per page request.  <br/> |No browser flashing caused by full page reload.  <br/> |
 |Browser needs to update only the regions of the page that changed since the last request.  <br/> |Easy to identify animations.  <br/> |
-|Small amount of processing required on the client.  <br/> > [!NOTE]> Half of client Page-Load-Time 1 (PLT1) is due to chrome cascading style sheet (CSS) rendering and JavaScript parsing and execution.           |Changes in the page attract user's attention.  <br/> |
+|Small amount of processing required on the client.  <br/> > **Note:**> Half of client Page-Load-Time 1 (PLT1) is due to chrome cascading style sheet (CSS) rendering and JavaScript parsing and execution.           |Changes in the page attract user's attention.  <br/> |
    
 Both AJAX and MDS are technologies that request only sections of the page to minimize data download and improve page responsiveness. The following figure shows the MDS architecture.
   
@@ -186,7 +186,7 @@ Controls that have content dependent on the current URL must be wrapped in a **S
 ```
 
 
-> [!NOTE]
+> **Note:**
 > The **SharePoint:AjaxDelta** control should not be nested within itself. Specify this control at the highest required level.
   
     
@@ -206,7 +206,7 @@ If you need to include a cascading style sheet (CSS) file, you need to use the *
 ```
 
 
-> [!CAUTION]
+> **Caution:**
 > You can have only one **SharePoint:CssLink** control per page. In MDS mode, you get an error if you have more than one **SharePoint:CssLink** control in a page. Including a CSS file using an HTML style element is not supported in MDS mode, because the server logic cannot identify the file as a required resource when the response is rendered.
   
     
@@ -225,7 +225,7 @@ To include a JavaScript file, use the **SharePoint:ScriptLink** control. The fol
 ```
 
 
-> [!CAUTION]
+> **Caution:**
 > Including a JavaScript file using the HTML script tag is not supported in MDS mode, because the server logic cannot identify the file as a required resource when the response is rendered. 
   
     
@@ -246,7 +246,7 @@ To render the title element inside the head element in the page, we use a specia
 ```
 
 
-> [!NOTE]
+> **Note:**
 > Each individual page must override the title by providing a replacement for the **asp:ContentPlaceHolder** control inside the **SharePoint:PageTitle** control.
   
     
@@ -314,7 +314,7 @@ The introduction of the **SharePoint:ScriptBlock** in the page can change the sc
     
     
 
-> [!NOTE]
+> **Note:**
 > The MDS infrastructure does not support VBScript, because it cannot be registered as a script in ASP.NET. Scripts have to be converted to JavaScript. 
   
     
@@ -439,7 +439,7 @@ SPPageContentManager.RegisterClientScriptBlock(this, typeof(MyType), "MyKey", "v
 |
    
 
-> [!NOTE]
+> **Note:**
 > The **RegisterHiddenField** and **RegisterClientScriptBlock** functions in the **SPPageContentManager** object expect an object of type **Control** or **Page** in the first parameter.
   
     
@@ -493,7 +493,7 @@ Table 7 shows example loading times that illustrate the difference between the f
 |Subsequent page loads  <br/> |1 second  <br/> |
    
 
-> [!NOTE]
+> **Note:**
 > Loading times might be different in your particular scenario. Loading times are affected by many variables, including, but not limited to, page size, latency, and server load. 
   
     

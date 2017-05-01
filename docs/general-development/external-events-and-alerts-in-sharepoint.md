@@ -59,7 +59,7 @@ To accommodate this, two stereotypes have been added to the schema of the BDC mo
     
     
 
-> [!NOTE]
+> **Note:**
 > Event receivers are not supported in sandboxed solutions. 
   
     
@@ -441,7 +441,7 @@ In constructing the notification, the LOB system has to create an HTTP payload t
     
   
 
-> [!NOTE]
+> **Note:**
 > The full item is only supported when you use the OData connector. 
   
     

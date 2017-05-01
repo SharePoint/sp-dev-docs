@@ -10,7 +10,7 @@ ms.assetid: a2643cd7-474d-4e4c-85bb-00f0b6685a1d
 
 # Get started with workflows in SharePoint 2013
 Learn about the newly engineered Workflow Manager Client 1.0, which provides the infrastructure for workflows in SharePoint 2013, and how SharePoint workflows are integrated with the new model for SharePoint Add-ins.
-> [!IMPORTANT]
+> **Important:**
 > For instructions on setting up and configuring SharePoint Server 2013 and Microsoft Azure, see  [Set up and configure SharePoint 2013 Workflow Manager](set-up-and-configure-sharepoint-workflow-manager.md). 
   
     

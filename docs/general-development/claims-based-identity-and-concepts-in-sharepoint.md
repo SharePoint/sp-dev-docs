@@ -134,7 +134,7 @@ Suppose that you have a web farm that consists of a server that runs an ASP.NET 
     
     
 
-> [!NOTE]
+> **Note:**
 > To allow an application to access resources on a different server, a domain administrator must configure the Active Directory directory service to enable constrained delegation. For information about how to enable constrained delegation, see  [How to: Use protocol transition and constrained eelegation in ASP.NET 2.0](http://msdn.microsoft.com/en-us/library/ms998355.aspx). 
   
     

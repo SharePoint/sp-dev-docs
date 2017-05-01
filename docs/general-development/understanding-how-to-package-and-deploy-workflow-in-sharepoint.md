@@ -33,7 +33,7 @@ SharePoint Designer 2013 provides the capability to save a workflow as a templat
     
     
 
-> [!NOTE]
+> **Note:**
 > SharePoint Server 2013 contains two different workflow platforms: the SharePoint 2010 Workflow platform and the SharePoint 2013 Workflow platform. Both platforms are available in SharePoint Server 2013. For more information about the two workflow, see  [Getting started with SharePoint Server 2013 workflow.](http://msdn.microsoft.com/library/cc73be76-a329-449f-90ab-86822b1c2ee8.aspx)
   
     
@@ -86,7 +86,7 @@ The process for packaging a workflow involves saving the workflow to a template 
     
     
 
-> [!TIP]
+> **Tip:**
 > A workflow template automatically saves to the **Site Assets** library of the site collection in which the workflow resides.
   
     
@@ -153,7 +153,7 @@ To deploy a workflow package follow this procedure.
   
 3. In the **Web Design Galleries** section click **Solutions**.
     
-    > [!NOTE]
+    > **Note:**
       > You must be on the **Site Settings** page for the site collection in order to see the **Solutions** gallery. If you are on the **Site Settings** page for a sub-site then the **Solutions** gallery is not visible.
 4. Click the **Upload Solution** button to upload the solution as shown in the figure.
     

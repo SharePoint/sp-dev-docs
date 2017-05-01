@@ -13,7 +13,7 @@ One of the most important considerations in the development of Windows Phone app
     
 
 
-> [!IMPORTANT]
+> **Important:**
 > If you are developing an app for Windows Phone 8, you must use Visual Studio Express 2012 instead of Visual Studio 2010 Express. Except for the development environment, all information in this article applies to creating apps for both Windows Phone 8 and Windows Phone 7. > For more information, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md). 
   
     
@@ -56,7 +56,7 @@ The **Application_Launching** and **Application_Closing** handlers for these eve
     
     
 
-> [!TIP]
+> **Tip:**
 > Data should be encrypted before you save it to a local device. For more information about how to encrypt the data, see  [How to: Encrypt Data in a Windows Phone Application](http://msdn.microsoft.com/en-us/library/hh487164%28v=vs.92%29.aspx)
   
     
@@ -710,7 +710,7 @@ namespace SPListAppLocalStorage
   
 11. In the browser that opens, navigate to the folder in which the standard Windows Phone icon images were installed by the Windows Phone SDK 7.1.
     
-    > [!NOTE]
+    > **Note:**
       > The images with a light foreground and a dark background are in  `%PROGRAMFILES%(x86)\\Microsoft SDKs\\Windows Phone\\v7.1\\Icons\\dark` in a standard installation of the SDK.
 12. Choose the image file named appbar.back.rest.png, and choose **Add**. The image is added to the project under the **Images** node.
     
@@ -810,7 +810,7 @@ private void OnSaveDraftButtonClick(object sender, EventArgs e)
   
 5. In the browser that opens, navigate to the folder in which the standard Windows Phone icon images were installed by the Windows Phone SDK 7.1.
     
-    > [!NOTE]
+    > **Note:**
       > The images with a light foreground and a dark background are in  `%PROGRAMFILES%(x86)\\Microsoft SDKs\\Windows Phone\\v7.1\\Icons\\dark` in a standard installation of the SDK.
 6. Choose the image file named appbar.folder.rest.png, and then choose **Add**. 
     

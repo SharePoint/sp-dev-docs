@@ -49,7 +49,7 @@ Each API includes a manager object that you use to perform core tasks for follow
     
     
 
-> [!NOTE]
+> **Note:**
 > The same APIs are used to follow content. See  [Follow content in SharePoint 2013](follow-content-in-sharepoint.md) for an overview of Following Content tasks.
   
     
@@ -60,7 +60,7 @@ Table 1 shows the manager and other key objects (or REST resources) in the APIs 
     
     
 
-> [!NOTE]
+> **Note:**
 > The Silverlight and mobile client object models are not explicitly included in Table 1 or Table 2 because they provide the same core functionality as the .NET client object model and use the same signatures. The Silverlight client object model is defined in Microsoft.SharePoint.Client.UserProfiles.Silverlight.dll, and the mobile client object model is defined in Microsoft.SharePoint.Client.UserProfiles.Phone.dll. 
   
     
@@ -85,7 +85,7 @@ Table 2 shows common programming tasks for following people and the members that
     
     
 
-> [!NOTE]
+> **Note:**
 > The same APIs are used to follow content. See  [Follow content in SharePoint 2013](follow-content-in-sharepoint.md) for an overview of Following Content tasks.
   
     

@@ -32,7 +32,7 @@ The **Social** namespace contains the primary API for working with feeds and mic
     
     
 
-> [!NOTE]
+> **Note:**
 > The API in the  [Microsoft.Office.Server.ActivityFeed](https://msdn.microsoft.com/library/Microsoft.Office.Server.ActivityFeed.aspx) namespace is deprecated. See [Deprecated and removed My Site Social API and features](#bkmk_DeprecatedAPI). 
   
     
@@ -66,7 +66,7 @@ The following code example uses the .NET client object model in a console applic
     
     
 
-> [!NOTE]
+> **Note:**
 > To get the required client DLLs, download the  [SharePoint Online Client Components SDK](http://www.microsoft.com/en-us/download/details.aspx?id=42038). 
   
     
@@ -179,7 +179,7 @@ SharePoint Server 2013 includes new objects that represent users and user proper
     
   
 
-> [!NOTE]
+> **Note:**
 > Server object model versions are the  [SPSocialActor](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialActor.aspx) object and the [PersonProperties](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PersonProperties.aspx) object.
   
     
@@ -214,7 +214,7 @@ The following My Site Social API and features are deprecated in SharePoint Serve
   
 - The **Recent Activities** Web Part is replaced with a new **Newsfeed** Web Part that supports multithreaded conversations and dynamic feed retrieval.
     
-    > [!NOTE]
+    > **Note:**
       > We don't support customizations of the Newsfeed Web Part or other feed Web Parts (such as the Site Feed Web Part on team sites). If you do customize these Web Parts, for example by using JavaScript overrides, be aware that your customizations may break in updates to SharePoint. 
 - The **Social Comments** Web Part is deprecated.
     

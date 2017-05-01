@@ -37,7 +37,7 @@ To create a console application that uses the .NET client object model to work w
     
   
 
-> [!NOTE]
+> **Note:**
 > If you are not developing on the computer that is running SharePoint Server 2013, get the  [SharePoint Client Components](http://www.microsoft.com/en-us/download/details.aspx?id=35585) download that contains SharePoint 2013 client assemblies.
   
     
@@ -100,7 +100,7 @@ The following code example publishes a post and a reply from the current user. I
     
   
 
-> [!NOTE]
+> **Note:**
 > Change the placeholder value for the **serverUrl** variable before you run the code.
   
     
@@ -228,7 +228,7 @@ For more information about feed types, see  [Overview of feed types](work-with-s
     
     
 
-> [!NOTE]
+> **Note:**
 > Change the placeholder values for the **serverUrl** and **targetUser** variables before you run the code.
   
     
@@ -352,7 +352,7 @@ The following code example deletes a post or a reply from the current user's per
     
   
 
-> [!NOTE]
+> **Note:**
 > Change the placeholder value for the **serverUrl** variable before you run the code.
   
     

@@ -20,7 +20,7 @@ The following project uses Microsoft Visual Studio 2003.
     
     
 
-> [!NOTE]
+> **Note:**
 >  If you are using Microsoft Visual Studio 2005 or Microsoft Visual Studio 2008, the process to create a new project is slightly different depending on which settings you use in the Visual Studio integrated development environment (IDE).
   
     

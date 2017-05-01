@@ -53,7 +53,7 @@ Working with external data requires several prerequisite tasks to enable secure 
   
 3. In the **Navigation** pane, under **Site Objects**, select **External Content Types**.
     
-    > [!NOTE]
+    > **Note:**
       > SharePoint Designer 2013 groups external content types by the namespace in the initial window of the External Content Type Designer. 
 4. To open the External Content Type Designer, on the ribbon, click **External Content Type**.
     
@@ -81,10 +81,10 @@ Working with external data requires several prerequisite tasks to enable secure 
   
 2. In the **Offline Sync for External List** check box, make sure **Enabled** is selected, which is the default.
     
-    > [!NOTE]
+    > **Note:**
       > If you disable this option, then the **SharePoint Connect to Outlook** command is not available for an external list.
 
-> [!NOTE]
+> **Note:**
 > The Farm and Site feature, **Offline Synchronization for External Lists**, must also be active. This feature is active by default at the Farm level, but not active by default at the site level. 
   
     
@@ -145,7 +145,7 @@ SharePoint Designer 2013 validates and tests the connection information. If you 
     
   - **Create All Operations** Defines a create item, delete item, read item, read list, and update item operation.
     
-    > [!NOTE]
+    > **Note:**
       > **Create All Operations** is available only for tables and views. Routines require specific operations.
   - **New Read Item Operation** Defines a read item operation.
     
@@ -189,13 +189,13 @@ SharePoint Designer 2013 validates and tests the connection information. If you 
   
 2. In the **Parameters Configuration** dialog box, by default all columns (known as **Data Source Elements**) are selected. To remove unnecessary columns, clear the corresponding check boxes.
     
-    > [!NOTE]
+    > **Note:**
       > Unlike a native SharePoint list, you cannot change the column name of an external list. Consider using an SQL column alias to provide a more meaningful name or a shorter name. 
 3. To select an identifier field, click and highlight a field (typically a unique-valued field), and then under **Properties**, click **Map to Identifier**.
     
   
 
-> [!IMPORTANT]
+> **Important:**
 > To prevent specific fields from being updated, such as an ID or primary key field, clear the **Required** check box, but select the **Read-Only** check box, which is needed to retrieve items so you can update other fields.
   
     
@@ -206,7 +206,7 @@ SharePoint Designer 2013 validates and tests the connection information. If you 
     
 
 
-> [!TIP]
+> **Tip:**
 > Always carefully read the messages in the **Errors and Warnings** pane. They provide useful information to confirm your actions or troubleshoot any issues. Periodically click the **Errors and Warnings** pane and make sure that there are no more errors or warnings.
   
     
@@ -230,7 +230,7 @@ If your external content type maps to an Outlook item type, you must map one or 
     
   
 
-> [!NOTE]
+> **Note:**
 > You do not need to map all the corresponding fields. However, the fields shown in the following table must be mapped. 
   
     
@@ -274,7 +274,7 @@ The external item picker control allows users to select a field, such as an ID f
     
   
 
-> [!NOTE]
+> **Note:**
 > All filters that you define are displayed in the external item picker control. Although you cannot remove specific filters from the external item picker control, you can define a default filter by clicking **Is Default** in the **Filter configuration** dialog box when you are creating or modifying the filter.
   
     
@@ -419,7 +419,7 @@ You can create several different types of filters. For each filter that you crea
     
   
 
-    > [!NOTE]
+    > **Note:**
       > The SQL Server database administrator might want to create specific tables, views, indexes, and optimized queries to limit the results to just what is needed and to help improve performance. 
 
     
@@ -484,7 +484,7 @@ You can create several different types of filters. For each filter that you crea
   
 2. In the **Fields** section, under **Field Name**, select a field.
     
-    > [!IMPORTANT]
+    > **Important:**
       > In general, it's a good idea to make the Title a field that has a unique value. The Title field is used to display list or InfoPath forms. Once you set the Title field, you cannot change it. 
 3. On the ribbon, click **Set as Title**.
     
@@ -498,7 +498,7 @@ You can create several different types of filters. For each filter that you crea
     
   
 
-> [!NOTE]
+> **Note:**
 > To provide better performance, Business Data Connectivity caches all the objects in the metadata store and updates changes by using a timer job that runs every minute. It might take up to one minute for changes to propagate to all the servers in the farm, but changes are immediate on the server where you make the change. 
   
     

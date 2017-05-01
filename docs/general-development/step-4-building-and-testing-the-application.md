@@ -31,7 +31,7 @@ In this step, you will build and test your application. Visual Studio offers sev
   
 2. The application prints the following output to the console.
     
-    > [!NOTE]
+    > **Note:**
       > These values vary depending on the values you have in your workbook, session ID, and so on. 
 
 

@@ -45,7 +45,7 @@ During a recovery, the backup/restore application instructs the SPF-VSS Writer t
     
 
     
-> [!NOTE]
+> **Note:**
 > See "Restoring" in  [VSS requestors and SharePoint 2013](vss-requestors-and-sharepoint.md) for important information about restorations.
   
     

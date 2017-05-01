@@ -49,7 +49,7 @@ If the resource endpoint takes a parameter, the parameter metadata is specified 
 | [Post/Unlock](social-feed-rest-api-reference-for-sharepoint.md#bk_postUnlock)|Unlocks the specified thread.|
    
 
-> [!NOTE]
+> **Note:**
 >  The following feed-related REST resources use the same pattern as the other SharePoint REST APIs to construct the endpoint URI.>  For **CreateImageAttachment**, send a **POST** request to `http://<siteCollection>/<site>/_api/SP.Social.SocialFeedManager/CreateImageAttachment`>  For **GetPreview**, send a **POST** request to `http://<siteCollection>/<site>/_api/SP.Social.SocialFeedManager/GetPreview`>  For **SuppressThreadNotifications**, send a **POST** request to `http://<siteCollection>/<site>/_api/SP.Social.SocialFeedManager/SuppressThreadNotifications`
   
     
@@ -149,7 +149,7 @@ You can post only in the context of the current user. You cannot create a root p
     
     
 
-> [!NOTE]
+> **Note:**
 > Don't confuse this  `Post` resource with the `Post` resource that represents a specific thread or post.
   
     
@@ -1707,7 +1707,7 @@ Gets information about the specified user and the current user.
     
     
 
-> [!NOTE]
+> **Note:**
 > The  `actor` endpoint sets the specified user or site feed as the context for any subsequent resource in the URI. For example, `http://contoso.com/_api/social.feed/actor(item='domain\\user')/feed` gets the personal feed for the specified user and `http://contoso.com/_api/social.feed/actor(item=@v)/feed?@v='http://<server>/<teamSite>/newsfeed.aspx'` gets the site feed for the specified team site.
   
     
@@ -2064,7 +2064,7 @@ You can post only in the context of the current user. You cannot create a root p
     
     
 
-> [!NOTE]
+> **Note:**
 > Don't confuse this  `Post` resource with the `Post` resource that represents a specific thread or post.
   
     
@@ -3278,7 +3278,7 @@ The following response example represents the unlocked thread. The **Attributes*
     
     
 
-> [!NOTE]
+> **Note:**
 > The values of thread and post **Id** properties are too long to send in a URL, so you have to send them in the request body. As a result, even read-only operations that are logically **GET** requests must be sent as **POST** requests. For example, to get a thread, you have to send a **POST** request and pass the thread **Id** as an entity in the request body.
   
     

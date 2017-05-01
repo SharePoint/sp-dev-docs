@@ -81,7 +81,7 @@ We recommend that you use the sample data provider as a template. The sample sho
   
   - **IsDefault** This value is used for filter persistence.
     
-    > [!TIP]
+    > **Tip:**
       > You can add more columns to extend the filter's functionality. 
 
      [GetDisplayDataInternal](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Server.Extensions.CustomParameterDataProvider.GetDisplayDataInternal.aspx) calls the [DataSourceRegistry.GetDataSource(DataSource)](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceRegistry.GetDataSource.aspx) method to verify the data source type by name, as follows:

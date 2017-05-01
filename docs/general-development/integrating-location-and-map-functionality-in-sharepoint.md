@@ -16,7 +16,7 @@ SharePoint 2013 introduces a new field type named Geolocation that enables you t
     
     
 
-> [!NOTE]
+> **Note:**
 > An MSI package named SQLSysClrTypes.msi must be installed on every SharePoint front-end web server to view the geolocation field value or data in a list. This package installs components that implement the new geometry, geography, and hierarchy ID types in SQL Server 2008. By default, this file is installed for SharePoint Online. However, it is not for an on-premises deployment of SharePoint Server 2013. You must be a member of the Farm Administrators group to perform this operation. To download SQLSysClrTypes.msi, see  [Microsoft SQL Server 2008 R2 SP1 Feature Pack](http://www.microsoft.com/en-us/download/details.aspx?id=26728) for SQL Server 2008, or [Microsoft SQL Server 2012 Feature Pack](http://www.microsoft.com/en-us/download/details.aspx?id=29065)for SQL Server 2012 in the Microsoft Download Center. 
   
     
@@ -60,7 +60,7 @@ The location and map features in SharePoint 2013 provide unique opportunities fo
 |:-----|:-----|
 | [How to: Set the Bing Maps key at the web and farm level in SharePoint 2013](how-to-set-the-bing-maps-key-at-the-web-and-farm-level-in-sharepoint.md) <br/> |SharePoint 2013 uses Bings Maps to render the map of the location. To be able to use the Bing Maps feature, you need to create a Bing Maps key and set the key at the web or farm level. The article shows the various ways you can set the key in SharePoint 2013 and when to choose which option. You see an error message on the map if you do not use a valid Bing Maps key or if a key is not set at the web that contains the list or at the farm level.  <br/> |
 | [How to: Add a Geolocation column to a list programmatically in SharePoint 2013](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint.md) <br/> |The Geolocation column is not available in SharePoint lists for users, by default. To add the column to a SharePoint list, you need to write code. In this topic, learn how to add the Geolocation field to a list programmatically.  <br/> |
-| [How to: Extend the Geolocation field type using client-side rendering](how-to-extend-the-geolocation-field-type-using-client-side-rendering.md) <br/> |You can provide your own rendering to default user interface (UI), logic, and behavior of the Geolocation field by creating custom field types that derive from the Geolocation field. SharePoint 2013 simplifies the creation of custom field types by enabling you to run JavaScript by providing a new JSLink property in the Geolocation field class, which points to a custom .js file that renders the field.  <br/> > [!NOTE]> The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list.           |
+| [How to: Extend the Geolocation field type using client-side rendering](how-to-extend-the-geolocation-field-type-using-client-side-rendering.md) <br/> |You can provide your own rendering to default user interface (UI), logic, and behavior of the Geolocation field by creating custom field types that derive from the Geolocation field. SharePoint 2013 simplifies the creation of custom field types by enabling you to run JavaScript by providing a new JSLink property in the Geolocation field class, which points to a custom .js file that renders the field.  <br/> > **Note:**> The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list.           |
    
 
 ## Additional resources

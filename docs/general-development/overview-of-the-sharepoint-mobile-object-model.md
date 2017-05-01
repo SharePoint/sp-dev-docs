@@ -946,7 +946,7 @@ Gets or sets the name of the JavaScript file that renders the fields of the **SP
     
     
 
-> [!NOTE]
+> **Note:**
 > The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list. 
   
     
@@ -1750,7 +1750,7 @@ public SPPhoneNotificationSubscriberCollection GetPhoneNotificationSubscribers(s
 ```
 
 
-> [!NOTE]
+> **Note:**
 > Client object model name is **GetPhoneNotificationSubscribersByArgs**. 
   
     
@@ -1765,7 +1765,7 @@ public SPPhoneNotificationSubscriberCollection GetPhoneNotificationSubscribers(s
 ```
 
 
-> [!NOTE]
+> **Note:**
 > Client object model name is **GetPhoneNotificationSubscribersByUser**. 
   
     

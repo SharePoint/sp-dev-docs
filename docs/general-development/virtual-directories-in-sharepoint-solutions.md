@@ -22,7 +22,7 @@ If you need to make your solution compatible with site collections of either mod
     
     
 
-> [!NOTE]
+> **Note:**
 > If the file in the virtual path is *.aspx, SharePoint will automatically detect the mode of the current site collection and return the file from the appropriate hive. So you do not have to insert the "/15" into the virtual path. 
   
     

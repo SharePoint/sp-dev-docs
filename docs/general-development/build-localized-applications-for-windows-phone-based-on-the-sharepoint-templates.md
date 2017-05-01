@@ -13,7 +13,7 @@ The SharePoint SDK for Windows Phone 7.1 installs Windows Phone project template
     
 
 Visual Studio uses language-specific resource files to create assemblies that allow your mobile application to support many languages. For more information about this process, see  [Packaging and Deploying Resources in Desktop Apps](http://msdn.microsoft.com/library/b224d7c0-35f8-4e82-a705-dd76795e8d16%28Office.15%29.aspx).
-> [!IMPORTANT]
+> **Important:**
 > If you plan to localize your application for East Asian languages, be sure to read the "Fonts and Your Application" section of  [Font Support for Windows Phone](http://msdn.microsoft.com/library/b0d855ad-3fd2-4872-9a88-7f5d0a270ff9%28Office.15%29.aspx)
   
     

@@ -13,7 +13,7 @@ Installing the Windows Phone SharePoint SDK makes two Windows Phone SharePoint A
     
 
 
-> [!IMPORTANT]
+> **Important:**
 > If you are developing an app for Windows Phone 8, you must use Visual Studio Express 2012 instead of Visual Studio 2010 Express. Except for the development environment, all information in this article applies to creating apps for both Windows Phone 8 and Windows Phone 7. > For more information, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md). 
   
     
@@ -83,7 +83,7 @@ In your Windows Phone SharePoint list app, you can access most of the lists that
   
 3. In the **New Project** dialog box, expand the **Visual C#** node, and then choose the **Silverlight for Window Phone** node. (Ensure that the target .NET Framework version is set to 4.)
     
-    > [!NOTE]
+    > **Note:**
       > The templates installed by the Windows Phone SharePoint SDK work only in C# projects. The templates are not available for Visual Basic projects. 
 4. In the **Templates** pane, choose the **Windows Phone SharePoint List Application** template and give the project a name, such asContosoSPListApp.
     
@@ -130,11 +130,11 @@ In your Windows Phone SharePoint list app, you can access most of the lists that
   
 14. Choose **Next**. The wizard displays the fields associated with the selected list on the SharePoint site.
     
-    > [!NOTE]
+    > **Note:**
       > A custom field will not be available to select from the SharePoint List wizard for mobile devices. However, you can write custom code to access any custom field. A field cannot be associated with its content type. However if multiple content types are enabled for the list, all the fields will be available for developers to consume in their phone apps. 
 15. Select the check box next to each field you want to include in the list as it will appear in your Windows Phone app.
     
-    > [!NOTE]
+    > **Note:**
       > List fields that are designated in SharePoint Server as requiring information are selected already; they can't be cleared in the wizard. 
 16. Choose **Next**. The wizard gives you the opportunity to order the fields you selected in the previous step.
     

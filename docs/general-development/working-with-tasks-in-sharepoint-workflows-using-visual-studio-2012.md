@@ -17,7 +17,7 @@ Learn about the new and revised workflow task framework that was introduced in S
     
     
 
-> [!NOTE]
+> **Note:**
 > This article is accompanied by an end-to-end code sample that you can use to follow the article, or as a starter for your own SharePoint workflow projects. You can find the downloadable code  [here](http://assets.andrewconnell.com/media/Default/Downloads/SP2013Wf-CustomTasks.zip). 
   
     

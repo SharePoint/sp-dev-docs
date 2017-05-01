@@ -233,7 +233,7 @@ The URL attribute of a URL-based action can receive parameters by using the **Ac
     
     
 
-> [!IMPORTANT]
+> **Important:**
 > **ActionParameters** can either represent identifier values, or values that correspond to **TypeDescriptors** in a **SpecificFinder** of the **Entity**. The **ActionParameter** represents an identifier value when the **IdOrdinal** property is present. The value of the property specifies the index of the identifier whose value this **ActionParameter** represents. If the **IdOrdinal** property is not specified, the **ActionParameter** represents a **TypeDescriptor**, and the **Name** attribute specifies which type descriptor is being represented. The **Name** attribute is specified as a **Dotted Path**. 
   
     
@@ -244,7 +244,7 @@ The **ActionParameter** element accepts the following property.
     
     
 
-> [!IMPORTANT]
+> **Important:**
 > Properties are case-sensitive. 
   
     
@@ -442,7 +442,7 @@ The Association element links related external content types within a system. Fo
     
     
 
-> [!IMPORTANT]
+> **Important:**
 > Properties are case-sensitive. 
   
     
@@ -720,7 +720,7 @@ The Convert element specifies the rule to convert the data type of a data value 
     
     
 
-> [!CAUTION]
+> **Caution:**
 > **ConvertType** does not support non-Gregorian calendars for conversions between **System.String** and **System.DateTime**. 
   
     
@@ -1032,11 +1032,11 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**Namespace** <br/> |Required.  <br/> The namespace that this external content type belongs to.  <br/> Attribute type: **String** <br/> > [!NOTE]> The namespace should not contain the asterisk special character " *****".           |
-|**Version** <br/> |Required.  <br/> The version number of this external content type.  <br/> Attribute type: **String** <br/> > [!CAUTION]> When the BDC model changes, you must increase the version number of the external content type. If the structure of an external content type changes, you should increase the major number. Examples of structural changes include adding a field to a **SpecificFinder** or changing an identifier field. If the change does not affect the structure of the external content type, for example, when adding a creator method, changing connection information, or when changing names of **LobSystems** and type descriptors, you should change the build number and revision number.          |
+|**Namespace** <br/> |Required.  <br/> The namespace that this external content type belongs to.  <br/> Attribute type: **String** <br/> > **Note:**> The namespace should not contain the asterisk special character " *****".           |
+|**Version** <br/> |Required.  <br/> The version number of this external content type.  <br/> Attribute type: **String** <br/> > **Caution:**> When the BDC model changes, you must increase the version number of the external content type. If the structure of an external content type changes, you should increase the major number. Examples of structural changes include adding a field to a **SpecificFinder** or changing an identifier field. If the change does not affect the structure of the external content type, for example, when adding a creator method, changing connection information, or when changing names of **LobSystems** and type descriptors, you should change the build number and revision number.          |
 |**EstimatedInstanceCount** <br/> |Optional.  <br/> The estimated number of external items contained by the external system.  <br/> Default value: 10000  <br/> Attribute type: **Integer** <br/> |
 |**DefaultOperationMode** <br/> |Optional.  <br/> Specifies the default behavior when interacting with the external system while creating, deleting, updating, or reading external items.  <br/> Default value: Default  <br/> The following table lists the possible values for this attribute.  <br/> <table width="50%" cellspacing="2" cellpadding="5" frame="lhs"><thead><tr><th><p>Value</p></th><th><p>Description</p></th></tr></thead><tbody><tr><td><p>Online</p></td><td><p>Bypass the cached external items for all operations and interact with the external system directly.</p></td></tr><tr><td><p>Cached</p></td><td><p>Perform <b>Create</b>, <b>Read</b>, <b>Update</b>, and <b>Delete</b> operations directly against the cached external items. For <b>Read</b> operations, if the requested external items are available in the cache, use the external items in the cache. Otherwise, bypass the cache to obtain the external items from the external system, and put it in the cache for later use.</p></td></tr><tr><td><p>Offline</p></td><td><p>Perform <b>Create</b>, <b>Read</b>, <b>Update</b>, and <b>Delete</b> operations against only the cached external items.</p></td></tr><tr><td><p>Default</p></td><td><p>Use the System default behavior. This uses Cached mode if the environment supports caching external items.</p></td></tr></tbody></table>|
-|Name  <br/> |Required.  <br/> The name of the external content type.  <br/> Attribute type: **String** <br/> > [!NOTE]> The name of an external content type should not contain the asterisk special character " *****".           |
+|Name  <br/> |Required.  <br/> The name of the external content type.  <br/> Attribute type: **String** <br/> > **Note:**> The name of an external content type should not contain the asterisk special character " *****".           |
 |DefaultDisplayName  <br/> |Optional.  <br/> The default display name of the external content type.  <br/> Attribute type: **String** <br/> |
 |IsCached  <br/> |Optional.  <br/> Specifies whether this external content type will be frequently used. If set to true, Business Data Connectivity (BDC) service will cache this external content type in memory.  <br/> Default value: **true** <br/> Attribute type: **Boolean** <br/> |
    
@@ -1208,7 +1208,7 @@ Specifies an identifier of an external content type.
     
     
 
-> [!NOTE]
+> **Note:**
 > Business Data Connectivity (BDC) service enables the mapping of identifiers to fields with nullable data types. However, for primary identifiers, BDC will cause an error when the value of these identifiers are **null**. 
   
     
@@ -2650,7 +2650,7 @@ The following sections describe attributes, child elements, and parent elements.
 |**UpdaterField** <br/> |Optional.  <br/> Specifies whether the **TypeDescriptor** represents a field for **MethodInstances** of type **Updater** that are contained by the **Method** that contains the **Parameter** containing the **TypeDescriptor**. When this attribute is specified, a **PreUpdaterField** attribute must not be specified. <br/> Default value: **false** <br/> Attribute type: **Boolean** <br/> |
 |**PreUpdaterField** <br/> |Optional.  <br/> Specifies whether data structure represented by the **TypeDescriptor** stores the latest data value received from the external system of a field for **MethodInstances** of type **Updater**. When this attribute is specified, a **UpdaterField** attribute must not be specified. <br/> Default value: **false** <br/> Attribute type: **Boolean** <br/> |
 |**Significant** <br/> |Optional.  <br/> Specifies whether values stored by the data structure represented by this **TypeDescriptor** are included in calculating a hash code or comparing values stored in the data structures. For example, a **TypeDescriptor** representing a customer's last name is taken into account when determining whether a record has been modified, and so it is significant, whereas the **TypeDescriptor** representing the date on which the customer record is last modified typically is not taken into account to determine whether a record has been modified, and so it is not significant. <br/> Default value: **true** <br/> Attribute type: **Boolean** <br/> |
-|**Name** <br/> |Required.  <br/> The name of the **TypeDescriptor**.  <br/> Attribute type: **String** <br/> > [!NOTE]> The name of a **TypeDescriptor** should not contain the special characters for forward slash ("/"), period ("."), or opening bracket ("[").          |
+|**Name** <br/> |Required.  <br/> The name of the **TypeDescriptor**.  <br/> Attribute type: **String** <br/> > **Note:**> The name of a **TypeDescriptor** should not contain the special characters for forward slash ("/"), period ("."), or opening bracket ("[").          |
 |**DefaultDisplayName** <br/> |Optional.  <br/> The display name of the **TypeDescriptor**.  <br/> Attribute type: **String** <br/> |
 |**IsCached** <br/> |Optional.  <br/> Specifies whether the **TypeDescriptor** is used frequently. <br/> Default value: **true** <br/> Attribute type: **Boolean** <br/> |
    

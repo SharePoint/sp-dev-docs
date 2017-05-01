@@ -19,7 +19,7 @@ When deciding which feature to support, priorities are given to features that ar
     
 
 
-> [!NOTE]
+> **Note:**
 > This topic assumes that you are familiar with what is supported and unsupported in Microsoft Office SharePoint Server 2007. You can find more information about the unsupported features in Office SharePoint Server 2007 in  [Unsupported Features in Excel Services](http://msdn.microsoft.com/en-us/library/ms496823.aspx). 
   
     
@@ -144,7 +144,7 @@ Cropped images are not displayed (that is, missing features).
     
 
     
-> [!NOTE]
+> **Note:**
 > For workbooks that contain ignored or missing unsupported features that loaded in view mode with a notification bar, attempting to save a copy of the workbook involves removing the unsupported features. A dialog box alerts the user of this. 
   
     
@@ -158,14 +158,14 @@ All other unsupported features continue to behave as they do in Office SharePoin
     
     
 
-> [!NOTE]
+> **Note:**
 > The  [Unsupported Features in Excel Services](http://msdn.microsoft.com/en-us/library/ms496823.aspx) topic contains more details about these unsupported features.
   
     
     
 
 
-> [!CAUTION]
+> **Caution:**
 > The information bar with the list of unsupported features is not displayed if the file is loaded from a Web Part. 
   
     

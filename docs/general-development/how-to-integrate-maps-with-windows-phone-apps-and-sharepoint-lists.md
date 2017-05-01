@@ -13,7 +13,7 @@ SharePoint 2013 introduces a new field type named Geolocation that enables you t
     
 
 
-> [!IMPORTANT]
+> **Important:**
 > If you are developing an app for Windows Phone 8, you must use Visual Studio Express 2012 instead of Visual Studio 2010 Express. Except for the development environment, all information in this article applies to creating apps for both Windows Phone 8 and Windows Phone 7. > For more information, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md). 
   
     
@@ -258,7 +258,7 @@ In this step, you can run your app and validate it.
 
   
 
-> [!NOTE]
+> **Note:**
 > The user's experience of the Geolocation field can be different on mobile devices than in browsers. The **Use Specific Location** option, available in the browser, is not available for mobile devices. For mobile devices, only one option is available: **Use my location**. 
   
     

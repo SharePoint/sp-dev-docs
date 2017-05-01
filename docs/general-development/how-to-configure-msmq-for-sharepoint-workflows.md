@@ -18,7 +18,7 @@ MSMQ is provided as a "Feature" in Windows Server. To enable MSMQ, do the follow
     
     
 
-> [!IMPORTANT]
+> **Important:**
 > The screen shots included here are from Windows Server 2008 R2. The UI may change for enabling this feature in Windows Server 2012. 
   
     
@@ -48,7 +48,7 @@ MSMQ is provided as a "Feature" in Windows Server. To enable MSMQ, do the follow
   
 5. Once restarted, open **Server Manager** and then open **Message Queuing** icon in the left pane. Notice that it now contains a **Message Queuing** folder and subdirectories, as depicted in Figure 2.
     
-    > [!NOTE]
+    > **Note:**
       > In Windows Server 2012 you will not find the queues in **Server Manager**. Instead, go to **Computer Management**, then select **Services and applications**. 
 6. Select the subdirectory named **Private Queues**. This is the directory in which your workflow event messages are stored.
     
@@ -62,7 +62,7 @@ MSMQ is provided as a "Feature" in Windows Server. To enable MSMQ, do the follow
     
     
     
-    > [!NOTE]
+    > **Note:**
       > When you first add the **Message Queuing** feature, the **Private Queues** folder is empty. However, after a workflow runs that fires an event (or a workflow triggered by a SharePoint content change event runs), the **Private Queues** folder is populated as shown in Figure 2.
 7. To complete the installation, you must set the **SPWorkflowServiceApplicationProxy.AllowQueue** property to **true** using a Windows PowerShell script. In the **SharePoint Administration shell**, run the following:
     

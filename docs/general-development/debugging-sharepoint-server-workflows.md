@@ -378,7 +378,7 @@ This process will configure Windows to trust the certificate, although SharePoin
   
     
     
- >[!NOTE]
+ >**Note:**
  > If a security WRning appears with a message instructing not to trust the Fiddler certificate, click **Yes** to continue installing the certificate.
   
     
@@ -443,7 +443,7 @@ This walkthrough has the following prerequisites:
   
 - SharePoint Server 2013 and Workflow Manager 1.0 are configured to allow OAuth over HTTP.
     
-    > [!CAUTION]
+    > **Caution:**
       > This should never be done on the production server, but only for testing and debugging. 
 
 1. Log on to the server where Workflow Manager and SharePoint 2013 are installed with the Windows identity configured as the Workflow Manager 1.0 farm account and SharePoint 2013 application pool identity.

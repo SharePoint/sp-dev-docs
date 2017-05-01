@@ -153,7 +153,7 @@ The following code example creates a **PreQuery** transform that applies a grey 
     
     
 
-> [!NOTE]
+> **Note:**
 > Before you can compile this code example, you must configure your development environment as described in  [Create transforms for PerformancePoint Services scorecards](#BKMK_CreateClass). In addition, you must add a reference to the **System.Drawing** assembly to your project.
   
     

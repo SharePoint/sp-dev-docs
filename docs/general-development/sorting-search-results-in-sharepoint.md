@@ -187,7 +187,7 @@ The formula is evaluated left to right and uses standard mathematical-operator p
     
     
 
-> [!IMPORTANT]
+> **Important:**
 > The final result of a formula must be in the value range of a 32-bit signed integer. Otherwise, the sorting may be incorrect. 
   
     
@@ -209,7 +209,7 @@ In the format,  _<sort-formula>_ is the sort formula expression.
     
     
 
-> [!NOTE]
+> **Note:**
 > The square brackets are part of the sort specification syntax. 
   
     
@@ -291,7 +291,7 @@ Table 1 lists the functions you can use in the sort formula expression. The expr
 |**+** <br/> |Specifies addition.  <br/> |
 |**-** <br/> |Specifies subtraction.  <br/> |
 |* <br/> |Specifies multiplication.  <br/> |
-|**/** <br/> |Specifies division.  <br/> > [!NOTE]> By default, a division by zero results in an exception, and the query returns with an error. By using the **errtolast** operator, you can avoid the query error and instead place the failing items at the end of the result set.          |
+|**/** <br/> |Specifies division.  <br/> > **Note:**> By default, a division by zero results in an exception, and the query returns with an error. By using the **errtolast** operator, you can avoid the query error and instead place the failing items at the end of the result set.          |
 |**rank** <br/> |A special keyword that represents the dynamic rank of an item.  <br/> Example:  `abs(rank-100)` will use the distance from rank value 100 as the sorting criteria. <br/> |
 |**[0-9.]+** <br/> |Specifies that numbers can be given as integer or double values.  <br/> Examples: 503, 3.14, 5.4352262  <br/> |
 |**[a-z0-9]+]** <br/> |Specifies that any character sequence not recognized as a function name is treated as a managed property name. You must enable sorting for the specified managed property in the search schema.  <br/> Example: You can define a managed property named **height** with sorting enabled. This enables you to use "height" as an expression in the formula. The formula will use the value of the **height** managed property. <br/> |
@@ -309,9 +309,9 @@ Table 1 lists the functions you can use in the sort formula expression. The expr
 |**asin(n)** <br/> |The arcsine, in radians, of  _n_.  <br/> |
 |**acos(n)** <br/> |The arccosine, in radians, of  _n_.  <br/> |
 |**atan(n)** <br/> |The arctangent, in radians, of  _n_.  <br/> |
-|**pow(x,y)** <br/> |The value of  _x_ raised to the power of _y_.  <br/> > [!NOTE]> The value of  _y_ must be a real number.          |
+|**pow(x,y)** <br/> |The value of  _x_ raised to the power of _y_.  <br/> > **Note:**> The value of  _y_ must be a real number.          |
 |**atan2(y,x)** <br/> |A two-argument arctangent of the angle in radians between the positive x axis and the specified Cartesian coordinate (x,y).  <br/> |
-|**bucket(b,n1,n2,…)** <br/> |An operator that can be used to provide discrete values for given value distribution ranges for an expression.  <br/> The expression  _b_ can be a managed property or any other formula expression. The arguments _n1, n2, …_ represent numeric thresholds. You can specify an arbitrary number of bucket thresholds. <br/> > [!NOTE]> You must arrange the arguments  _n1, n2, n3, …_ in the following order: `n1 < n2 < n3 < ...` with `n1 >= 0`.           A given value for the input expression  _b_ is rounded down to the closest numeric threshold given. If lower than the lowest threshold given, the resulting value is zero. <br/> |
+|**bucket(b,n1,n2,…)** <br/> |An operator that can be used to provide discrete values for given value distribution ranges for an expression.  <br/> The expression  _b_ can be a managed property or any other formula expression. The arguments _n1, n2, …_ represent numeric thresholds. You can specify an arbitrary number of bucket thresholds. <br/> > **Note:**> You must arrange the arguments  _n1, n2, n3, …_ in the following order: `n1 < n2 < n3 < ...` with `n1 >= 0`.           A given value for the input expression  _b_ is rounded down to the closest numeric threshold given. If lower than the lowest threshold given, the resulting value is zero. <br/> |
 |**errtolast(x)** <br/> |An operator that can be used to control how to handle formula exceptions;  _x_ can be any formula expression. If the calculation of this formula expression leads to a mathematical exception for an item in the result set, such as division by zero, these items appear at the end of the sort list, regardless of specified sort direction. <br/> |
    
 
@@ -347,7 +347,7 @@ For example, you can use one of the following standard formulas:
     
   
 
-> [!IMPORTANT]
+> **Important:**
 > Use managed properties of type **Decimal** or **Float** to represent the latitude and longitude values.
   
     
@@ -479,7 +479,7 @@ The random sort specification has the following format:  `[random:seed=<seed>:ha
     
     
 
-> [!NOTE]
+> **Note:**
 > The square brackets are part of the sort specification syntax. 
   
     

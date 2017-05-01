@@ -230,7 +230,7 @@ Use **TrimDuplicatesOnProperty** to specify whether to use a non-default managed
     
     
 
-> [!NOTE]
+> **Note:**
 > In SharePoint Server 2013, use **CollapseSpecification** wherever possible. **TrimDuplicatesOnProperty** is available for backward compatibility only.
   
     
@@ -273,7 +273,7 @@ The document ID,  _docid_, is used to retrieve the duplicates of a particular do
     
     
 
-> [!NOTE]
+> **Note:**
 > The  _fcoid_ managed property in FAST Search Server 2010 for SharePoint has been replaced with the _docid_ managed property in SharePoint Server 2013.
   
     

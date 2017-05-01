@@ -96,7 +96,7 @@ The option that you choose for the second **value** in the condition also depend
     
     
 
-> [!NOTE]
+> **Note:**
 > You can use logical operators such as**||**(or) or **&amp;&amp;** (and) in the condition.
   
     
@@ -141,7 +141,7 @@ The option that you choose for **value** also depends to some extent on what **f
     
     
 
-> [!NOTE]
+> **Note:**
 > You can use logical operators such as**||**(or) or **&amp;&amp;** (and) in the condition.
   
     
@@ -166,7 +166,7 @@ This condition is initially displayed in a workflow step as **If created by spec
     
     
 
-> [!NOTE]
+> **Note:**
 > Because both the user name and the e-mail address are case sensitive, it is recommended that you use the latter method to ensure correct cases. If you must enter a user name or e-mail address manually, be careful to match the cases precisely. For example, the condition **If created by contoso\\molly** does not evaluate as true if the user account is registered as Contoso\\Molly.
   
     
@@ -203,7 +203,7 @@ This condition is initially displayed in a workflow step as **If modified by spe
     
     
 
-> [!NOTE]
+> **Note:**
 > The user name and e-mail address are case sensitive. It is recommended that you select a user name or e-mail address to help ensure that you use the correct case. If you type a user name or e-mail address, you must match the case of the account. For example, **If modified by contoso\\molly** will not evaluate as true if the user account is Contoso\\Molly.
   
     
@@ -263,7 +263,7 @@ This condition is initially displayed in a workflow step as **If title field con
     
     
 
-> [!NOTE]
+> **Note:**
 > When using the **Title field contains keywords** condition, you cannot search for more than a single keyword text. To search for multiple, alternative keyword texts, you can use logical operators such as**||**( or) and **&amp;&amp;** (and) in either of the following two conditions: **If any value equals value** and **If current item field equals value**. (Use the latter condition if you want to search in the **Title** field only). For an example, see the following image:> 
   
     
@@ -298,7 +298,7 @@ In such cases, you can use one or more impersonation steps in the workflow. An i
     
     
 
-> [!NOTE]
+> **Note:**
 >  For both of these conditions, *all*  of the specified users and groups must pass the comparison in order for the condition to evaluate to True.>  For both of these conditions, it does not matter whether the specified permissions have been assigned *explicitly*  to the specified individual users or whether the permissions are held by those individual users only *implicitly*  (as members of a group to which the permissions have been assigned, for instance).For specified *groups*  , on the other hand, the permissions must have been assigned *explicitly*  and *not*  inherited from a parent group.
   
     
@@ -391,7 +391,7 @@ Following is an example of what the condition might look like in a workflow step
     
   
 
-> [!NOTE]
+> **Note:**
 > The specified upper and lower limits are not included in the defined range. In the example given here, a file that is 1023 KB would evaluate as false because it is not between 1023 and 1048577. 
   
     

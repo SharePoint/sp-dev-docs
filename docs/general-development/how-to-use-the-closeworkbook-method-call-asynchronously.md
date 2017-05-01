@@ -22,7 +22,7 @@ Because a failed **CloseWorkbook** method call is not actionable, you do not nee
     
 
 
-> [!NOTE]
+> **Note:**
 > If your application makes some calls to Excel Services and then exits, you may want to close a workbook synchronously instead of asynchronously. In this case, you call the **CloseWorkbook** method instead of the **CloseWorkbookAsync** method. The reason is if you immediately exit the process after issuing an asynchronous call, there is a good chance the call might not get through.
   
     
@@ -46,7 +46,7 @@ End Sub
 
 
 You don't have to implement the event that is called when the **CloseWorkbookAsync** method is called.You can find the signature in the "Reference.cs" file in your project "Web References" directory. 
-> [!NOTE]
+> **Note:**
 > You can find the **CloseWorkbookAsync** method in the proxy class that is generated when you add a Web reference using Microsoft Visual Studio 2005. If you are using Visual Studio 2003, you call the **BeginCloseWorkbook** method to close a workbook asynchronously instead.
   
     

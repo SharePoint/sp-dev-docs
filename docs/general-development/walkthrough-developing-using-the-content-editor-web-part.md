@@ -23,7 +23,7 @@ During this walkthrough, you will learn how to:
     
   
 
-> [!NOTE]
+> **Note:**
 > For information about how to trust a location, see  [How to: Trust a Location](how-to-trust-a-location.md). 
   
     

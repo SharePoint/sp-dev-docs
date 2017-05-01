@@ -13,7 +13,7 @@ In projects based on the Windows Phone SharePoint List Application template, the
     
 
 
-> [!IMPORTANT]
+> **Important:**
 > If you are developing an app for Windows Phone 8, you must use Visual Studio Express 2012 instead of Visual Studio 2010 Express. Except for the development environment, all information in this article applies to creating apps for both Windows Phone 8 and Windows Phone 7. > For more information, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md). 
   
     
@@ -119,7 +119,7 @@ Projects based on the Windows Phone SharePoint List Application template impleme
     
     
 
-> [!TIP]
+> **Tip:**
 > The currency symbol shown in the display form is from SharePoint locale, even if the Windows Phone locale is different. Developers can customize this behavior by using **Converter** objects.
   
     
@@ -386,7 +386,7 @@ Assume you are creating a Windows Phone app based on a SharePoint list named Pro
     
     
 
-> [!NOTE]
+> **Note:**
 > SharePoint lists with **Guid** fields must be created programmatically or from a list template that includes **Guid** fields.
   
     

@@ -83,7 +83,7 @@ For an HTML file to be converted into the corresponding ASP.NET file, the HTML f
     
     
 
-> [!NOTE]
+> **Note:**
 > This requirement overrides some HTML 5 standards. For example, in HTML 5 you can specify the doctype in lowercase, but in XML the doctype must be uppercase. 
   
     

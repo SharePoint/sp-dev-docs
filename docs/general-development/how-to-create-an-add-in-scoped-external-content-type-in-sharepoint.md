@@ -82,7 +82,7 @@ For complete steps for creating SharePoint Add-ins, see the following:
     
     Specify a name for your OData source.
     
-    > [!NOTE]
+    > **Note:**
       > For this example, you will use the Northwind service that is available from the producers list located on the  [Open Data Protocol website](http://www.odata.org). 
 3. A list appears showing data entities that are being exposed by the OData Service. Select one or more of the entities, and choose **Finish**.
     

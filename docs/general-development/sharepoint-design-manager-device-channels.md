@@ -50,7 +50,7 @@ You can create and configure a device channel from the **Site Settings** menu un
 |**Field**|**Required Value**|**Value**|
 |:-----|:-----|:-----|
 |Name  <br/> |Yes  <br/> |This is the name of your design channel. It can be a friendly name to identify the channel.  <br/> |
-|Alias  <br/> |Yes  <br/> |The alias name enables you to identify your device channel in code, device channel panels (discussed later in this article), previews, and other contexts.  <br/> > [!IMPORTANT]> If you later change the channel alias, you'll have to manually update master page mappings, device channel panels, and any custom code or markup.           |
+|Alias  <br/> |Yes  <br/> |The alias name enables you to identify your device channel in code, device channel panels (discussed later in this article), previews, and other contexts.  <br/> > **Important:**> If you later change the channel alias, you'll have to manually update master page mappings, device channel panels, and any custom code or markup.           |
 |Description  <br/> |No  <br/> |A field for supplying a general description for the device channel.  <br/> |
 |Device Inclusion Rules  <br/> |Yes  <br/> |A field for supplying the user agent substring such as Windows Phone OS. Device redirection to a specific master page depends on what is entered for this value. For more information about what values to supply in this field, see the section  [User agent substrings and device channel rankings](#PlanDeviceChannels_UserAgentSubstrings) in this article. <br/> |
 |Active  <br/> |No  <br/> |Selecting this check box activates your device channel. If you are working on a live site, you should not activate the channel before you have finished designing it. For testing, you can use the query string  `?DeviceChannel=alias` within a browser to preview your site for a specific channel. <br/> |
@@ -61,7 +61,7 @@ You can create and configure a device channel from the **Site Settings** menu un
     
 
     
-> [!NOTE]
+> **Note:**
 > For more information and steps for creating a device channel, see the  [Create a device channel](sharepoint-design-manager-device-channels.md#create) section of this article.
   
     
@@ -113,7 +113,7 @@ In the **Device Inclusion Rules** field, you add just the substring value or val
     
     
 
-> [!IMPORTANT]
+> **Important:**
 > User agent substring values differ from device manufacturer to device manufacturer, and possibly throughout a set of similarly branded devices, as seen above with Windows Phone. To achieve successful traffic redirection to a specific pool, you must provide a unique identifier for the user agent substring. For more information about how to isolate a substring across different devices, see the  [Planning your device channels experience](sharepoint-design-manager-device-channels.md#plan) section of this article.
   
     
@@ -124,7 +124,7 @@ After they are created, device channels are ordered and stored in a list. It is 
     
     
 
-> [!NOTE]
+> **Note:**
 > For more information about how to reorder device channels see the  [Create a device channel](sharepoint-design-manager-device-channels.md#create) section of this article.
   
     
@@ -145,7 +145,7 @@ If you choose Order 1, where the device inclusion rule substring is set to **Win
     
     
 
-> [!NOTE]
+> **Note:**
 > For more information and steps for ordering device channels, see the  [Change the order of device channels](sharepoint-design-manager-device-channels.md#reorder) section of this article.
   
     
@@ -230,7 +230,7 @@ There are some generic manufacturer user agent substrings that you can use for d
     
     
 
-> [!NOTE]
+> **Note:**
 > The below strings are examples, and not genuine strings for the covered Windows devices. They are provided to illustrate the point of isolating a substring if needed. 
   
     
@@ -321,7 +321,7 @@ Use this procedure to change an existing device channel.
     
     
 
-> [!NOTE]
+> **Note:**
 > You cannot modify the Default channel. 
   
     
@@ -348,7 +348,7 @@ Use this procedure to change an existing device channel.
   
 6. To change the alias of the device channel, enter a new alias in the **Alias** text box.
     
-    > [!NOTE]
+    > **Note:**
       > If you change a device channel's alias, you must manually change the alias in other places where you use it. For example, you must manually change the alias in custom code or markup, and you must manually change the mappings between the device channel and master pages. 
 7. To change the description of the device channel, enter a new description in the **Description** text box.
     
@@ -371,7 +371,7 @@ Use this procedure to delete an existing device channel.
     
     
 
-> [!NOTE]
+> **Note:**
 > You cannot delete the Default channel. 
   
     

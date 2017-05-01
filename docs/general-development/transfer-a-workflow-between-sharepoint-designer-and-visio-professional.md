@@ -134,7 +134,7 @@ Once you have created or edited a workflow in SharePoint Designer 2013, you can 
     
     
 
-> [!NOTE]
+> **Note:**
 > Visio Professional 2013 does not support steps. Step information that has been added in SharePoint Designer may be lost when the workflow is viewed in Visio and then re-imported into SharePoint Designer. 
   
     

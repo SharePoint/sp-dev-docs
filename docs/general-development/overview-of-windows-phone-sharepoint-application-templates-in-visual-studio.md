@@ -26,7 +26,7 @@ Currently, these templates are designed to be used only in C# projects. They are
     
     
 
-> [!NOTE]
+> **Note:**
 > Windows Phone SharePoint templates don't appear in the **New Project** menu of Expression Blend. However, you can edit a project in Expression Blend by choosing **Open in Expression Blend** from a shortcut menu in Visual Studio.
   
     
@@ -45,7 +45,7 @@ When you create a project based on either one of these templates, you are not gi
 ```
 
 
-> [!NOTE]
+> **Note:**
 > For more information about settings in the WMAppManifest.xml file, see  [Application Manifest File for Windows Phone](http://msdn.microsoft.com/en-us/library/ff769509.aspx). 
   
     
@@ -60,7 +60,7 @@ If you create a Visual Studio project based on the Windows Phone Empty SharePoin
     
     
 
-> [!NOTE]
+> **Note:**
 > The same templates are available for Windows Phone 8 in Visual Studio Express 2012. 
   
     
@@ -93,7 +93,7 @@ The Windows Phone SharePoint List Application template is considerably more powe
     
     
 
-> [!NOTE]
+> **Note:**
 > The same templates are available for Windows Phone 8 in Visual Studio Express 2012. 
   
     

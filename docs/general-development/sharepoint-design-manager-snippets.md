@@ -36,7 +36,7 @@ After you paste a snippet into your HTML file, you get a design-time preview fro
     
     
 
-> [!NOTE]
+> **Note:**
 > A snippet contains HTML markup that gives you a design-time preview in your HTML editor, but the HTML markup contained in "start preview" and "end preview" comments should not be edited because it affects only the design-time preview, not how SharePoint ultimately renders that snippet. Instead, to style your snippet, you typically have to identify and override the default SharePoint styles that are applied to the snippet. 
   
     
@@ -84,7 +84,7 @@ The Snippet Gallery displays different options depending on the file that you're
     
     
     
-    > [!NOTE]
+    > **Note:**
       > If the property grid has a header that ends with AjaxDelta, you should ignore those properties because they apply to the controls related to the Minimal Download Strategy, which is disabled for master pages and page layouts created through Design Manager. 
 8. After you configure any properties, choose **Update**. This updates both the preview and the HTML snippet on the left side of the page, so that the markup reflects your custom settings. You can always choose **Reset** to return all properties to their default settings.
     
@@ -184,7 +184,7 @@ The following is the default markup for a Top Navigation snippet, which is more 
     
     
 
-> [!NOTE]
+> **Note:**
 > Some of the controls, such as the content placeholder, contain empty tags for an HTML preview because that element does not require a visual representation on the page. 
   
     

@@ -157,7 +157,7 @@ Although apps and solutions access SharePoint differently, after you do access S
 | [Server object model](http://msdn.microsoft.com/library/87c5118c-ac0e-4bd9-a75f-7452a9eb0e41%28Office.15%29.aspx)|Microsoft.Office.Server.UserProfiles.dll<br/>in %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\ISAPI|
    
 
-> [!NOTE]
+> **Note:**
 > Not all server-side functionality in the Microsoft.Office.Server.UserProfiles assembly is available from client APIs. To see which APIs are available, see the  [Microsoft.SharePoint.Client.Social](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.aspx) namespace and the [Microsoft.SharePoint.Client.UserProfiles](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.aspx) namespace.
   
     

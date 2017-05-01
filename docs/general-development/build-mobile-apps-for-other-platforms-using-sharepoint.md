@@ -214,7 +214,7 @@ The following example shows how to **create** a list item.
     
     
 
-> [!NOTE]
+> **Note:**
 > To do this operation, you must know the **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body.
   
     
@@ -243,7 +243,7 @@ The following example shows how to **update** a list item.
     
     
 
-> [!NOTE]
+> **Note:**
 > To do this operation, you must know the **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body.
   
     

@@ -30,7 +30,7 @@ User profile properties from client APIs are read-only (except the profile pictu
     
     
 
-> [!NOTE]
+> **Note:**
 > The client version of the  [UserProfile](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.UserProfile.aspx) object doesn't contain all of the user properties as the server-side version. However, the client-side version does provide the methods for creating a personal site for the current user. To retrieve the client-side [UserProfile](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.UserProfile.aspx) for the current user, use the [ProfileLoader.GetUserProfile](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.ProfileLoader.GetUserProfile.aspx) method.
   
     
@@ -59,7 +59,7 @@ To create a console application that uses the .NET client object model to retrie
     
   
 
-> [!NOTE]
+> **Note:**
 > If you're not developing on the computer that is running SharePoint Server 2013, get the  [SharePoint Client Components](http://www.microsoft.com/en-us/download/details.aspx?id=35585) download that contains SharePoint 2013 client assemblies.
   
     
@@ -144,7 +144,7 @@ The following code example shows how to retrieve and iterate through all the use
     
     
 
-> [!NOTE]
+> **Note:**
 > Replace the  `http://serverName/` and `domainName\\\\userName` placeholder values before you run the code.
   
     
@@ -242,7 +242,7 @@ The following code example shows how to retrieve a specific set of user profile 
     
     
 
-> [!NOTE]
+> **Note:**
 > To retrieve the value for only one user profile property, use the  [GetUserProfilePropertyFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.GetUserProfilePropertyFor.aspx) method.
   
     
@@ -253,7 +253,7 @@ Unlike the previous code example that retrieves a  [PersonProperties](https://ms
     
     
 
-> [!NOTE]
+> **Note:**
 > Replace the  `http://serverName/` and `domainName\\\\userName` placeholder values before you run the code.
   
     

@@ -34,7 +34,7 @@ SharePoint 2013 parses URL strings to determine the form of URL based on a speci
     
   
 
-> [!NOTE]
+> **Note:**
 > There is no concept of a "site collection-relative URL"; passing such a URL may cause the code to fail. 
   
     

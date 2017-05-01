@@ -33,7 +33,7 @@ This development scenario presumes that a SharePoint Server 2013 farm and a Work
   
   - Office Developer Tools for Visual Studio 2013.
     
-    > [!NOTE]
+    > **Note:**
       > Office Developer Tools for Visual Studio 2013 is only required when using Visual Studio 2012. Later versions of Visual Studio include the Office Developer Tools. 
 For assistance setting up and configuring your SharePoint workflow development environment, see the following:
   
@@ -98,7 +98,7 @@ In summary, the workflow does the following:
   
 
     
-> [!IMPORTANT]
+> **Important:**
 > Before you start this walkthrough, ensure that you have a properly installed and configured workflow development environment. For more information, see  [Prepare to set up and configure a SharePoint workflow development environment](prepare-to-set-up-and-configure-a-sharepoint-workflow-development-environment.md). Also, ensure that you have a SharePoint Server 2013 instance that you can develop your workflow against. For more information, see  [Install SharePoint 2013](http://technet.microsoft.com/en-us/library/cc303424.aspx). 
   
     
@@ -115,7 +115,7 @@ The first step is preparing our SharePoint site with document libraries that our
 
 1. Launch Visual Studio 2012 and create a new project using the **App for SharePoint 2013** template, as depicted in Figure 2.
     
-    > [!NOTE]
+    > **Note:**
       > In this walkthrough, the solution file is named "DocApprovalWorkflow1". It is recommended that you use the same name. However, if you name your solution differently, be sure that you make necessary adjustments in the instructions that follow. 
 
    **Figure 2. Create new project in Visual Studio 2012**
@@ -242,7 +242,7 @@ Now we're ready to create the workflow itself.
   
 
     
-    > [!NOTE]
+    > **Note:**
       > You can change the workflow association type after the workflow has been created by using the property grid with the workflow selected in **Solution Explorer** (see Figure 9). Then click **Finish**. 
 
    **Figure 9. The workflow property grid.**
@@ -402,7 +402,7 @@ Now that we have our SharePoint Server set up and our basic workflow created, we
     
     Note the name of the **Outcome** variable: _outcome_0_ (or similar). We use this variable to check the outcome of the task - that is, whether the approver has approved or rejected the document.
     
-    > [!NOTE]
+    > **Note:**
       > The **Outcome** out-argument returns an **Int32** value corresponding to the index of the outcome - that is, **0** for "Approved" and **1** for "Rejected". These integers are the default values provided in the out-of-box SharePoint site column named "Task Outcome."
 8. Now, in order for the workflow to check the outcome of the task, we need to add another **If** activity and place it following the **SingleTask** activity, but inside the **Then** area, as shown in Figure 17. Setting the **If** condition to " `outcome_0 == 0`" tells us whether the document was approved.
     
@@ -459,7 +459,7 @@ Now that we have our SharePoint Server set up and our basic workflow created, we
   
 
     
-    > [!NOTE]
+    > **Note:**
       > For the purpose of this walkthrough we are going to assume that all of our published documents come out of the Draft Documents library; therefore, we do not need to worry about controlling for duplicate file names. 
 11. Finally, we need to add an activity to handle the case where the reviewer rejects the document. We do this by adding an **UpdateListItem** activity to the **Else** area of our current **If** activity. Configure this **UpdateListItem** activity just as you did the prior one in step 9(c), except that now we want to set the document status to "Rejected," as shown in Figure 21.
     
@@ -518,7 +518,7 @@ Following are resources that provide guidance for packaging and deploying your w
     
   
 
-> [!CAUTION]
+> **Caution:**
 > SharePoint Add-ins that contain integrated workflows (which can be associated with lists on the parent web) are differentiated from normal workflow apps by changing the following tag to **true** in the `workflowmanifest.xml` file in the app package:
   
     

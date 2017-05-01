@@ -33,7 +33,7 @@ The following settings combination gives anonymous users access to any files in 
     
   
 
-> [!NOTE]
+> **Note:**
 > The **Process account** is a global Excel Services setting that affects all trusted locations.
   
     

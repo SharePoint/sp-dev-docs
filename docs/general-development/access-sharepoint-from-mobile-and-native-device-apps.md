@@ -13,7 +13,7 @@ SharePoint Add-ins, farm solutions, and "no code" sandboxed solutions are all ru
     
 
 
-> [!IMPORTANT]
+> **Important:**
 > To test and debug on any platform, you need a **developer account on Office 365**. More info: [Set up a development environment for SharePoint Add-ins on Office 365](http://msdn.microsoft.com/library/b22ce52a-ae9e-4831-9b68-c9210af6dc54%28Office.15%29.aspx) or [Create a developer site on an existing Office 365 subscription](http://msdn.microsoft.com/library/2ec857d5-dc6f-4cf6-ba45-adc845ef2a25%28Office.15%29.aspx). 
   
     

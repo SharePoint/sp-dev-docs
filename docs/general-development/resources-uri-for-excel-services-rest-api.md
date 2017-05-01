@@ -13,7 +13,7 @@ You can link to entities directly by using the REST API in Excel Services.
     
 
 
-> [!NOTE]
+> **Note:**
 > The Excel Services REST API applies to SharePoint 2013 and SharePoint 2016 on-premises. For Office 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/en-us/docs/api-reference/v1.0/resources/excel
 ) endpoint.
   
@@ -94,7 +94,7 @@ Table 1 shows all the accessible resources in the Excel Services REST API. To ac
 |/model/PivotTables('[Name]')  <br/> |Atom  <br/> |/model/PivotTables('MyPivotTable')?$format=atom  <br/> |An Atom entry that contains an XML representation of the data within the PivotTables.  <br/> |
    
 
-> [!NOTE]
+> **Note:**
 > Excel Services limits the number of ranges that you can include in a URL to 10. If you include more than 10 Ranges in a URL, you will get an error that indicates that the service is unavailable. 
   
     

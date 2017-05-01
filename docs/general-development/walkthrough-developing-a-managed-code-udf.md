@@ -38,7 +38,7 @@ In order to complete this walkthrough, you will need:
 
 - Microsoft SharePoint Server 2010. 
     
-    > [!NOTE]
+    > **Note:**
       > The easiest way to get all you need on the server is to do a basic, stand-alone install. All you need to add on top of that is a trusted location. 
 - Excel.
     
@@ -57,14 +57,14 @@ In order to complete this walkthrough, you will need:
   
 - Permissions to view and publish a workbook to a SharePoint document library. 
     
-    > [!NOTE]
+    > **Note:**
       > For more information about setting permissions, see the Windows SharePoint Services 3.0 documentation. 
 - To create the workbook using Excel.
     
   
 - To save the workbook as an .xlsx or .xlsb file.
     
-    > [!NOTE]
+    > **Note:**
       > For more information about how to trust a location, how to enable UDFs, and how to set the **AllowUdfs** flag, see [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md). 
 
 ## See also

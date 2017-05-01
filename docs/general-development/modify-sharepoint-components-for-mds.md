@@ -48,7 +48,7 @@ The master page provides a template that lets MDS identify the content regions t
     
 
     
-> [!NOTE]
+> **Note:**
 > There are many more components in the Seattle.master master page that change from page to page, such as style sheets and JavaScript files. Figure 1 shows only a few examples. 
   
     

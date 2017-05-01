@@ -151,7 +151,7 @@ The **UseClientCachingForSearch** property improves the speed of full crawls by 
     
     
 
-> [!IMPORTANT]
+> **Important:**
 > If items are larger than 30 kilobytes on average, do not set this property, as it will lead to a significant number of cache misses and negate performance gains. 
   
     
@@ -170,7 +170,7 @@ Profile pages may require that you use the Secure Store Service because of the m
     
     
 
-> [!NOTE]
+> **Note:**
 > This requires that you set the **ShowInSearchUI** property at the **LobSystemInstance** level instead of at the **LobSystem** level.
   
     

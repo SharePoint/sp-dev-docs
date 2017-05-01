@@ -39,7 +39,7 @@ When you create a page layout:
     
   
 
-> [!NOTE]
+> **Note:**
 > The syncing goes in one direction only. Changes to the HTML page layout are synced to the associated .aspx file, but if you choose to edit the .aspx file directly, those changes are not synced to the HTML file. Every HTML page layout (and every HTML master page) has a property named **Associated File** that is set to **True** by default, which creates the association and syncing between files.
   
     
@@ -136,7 +136,7 @@ Before you begin, you need to know which content type and master page the page l
     
     The master page that you choose here will be shown in the preview for this page layout. This master page also determines what content placeholders get added to the page layout.
     
-    > [!NOTE]
+    > **Note:**
       > After you choose this master page, you cannot preview the page layout with a different master page, even after you apply a different master page to the live site. 
 7. Select a content type. The content type for this page layout determines what page fields will be available for this page layout in the Snippet Gallery.
     
@@ -183,7 +183,7 @@ You can simply put the styles for one or more page layouts into the same style s
     
     
 
-> [!NOTE]
+> **Note:**
 > In this markup, the attribute  `ms-design-css-conversion="no"` excludes the style sheet from theming. Also, the link to the style sheet should appear after the lines commented **<!--SPM**. 
   
     

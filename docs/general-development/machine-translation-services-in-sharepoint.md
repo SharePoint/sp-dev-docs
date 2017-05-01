@@ -11,7 +11,7 @@ Learn about the Machine Translation Service, which is a new service application 
 <a name="TranslationSvc_Overview"> </a>
 
 
-> [!NOTE]
+> **Note:**
 > Using machine translation will allow users to send content to Microsoft for translation. Microsoft may use content users send us to improve the quality of translations. If you use the Machine Translation Service in your application, you are responsible for informing users that this application will allow users to send content to Microsoft for translation and that Microsoft may use content users send us to improve the quality of translations. See Microsoft Translator Privacy for more information. 
   
     

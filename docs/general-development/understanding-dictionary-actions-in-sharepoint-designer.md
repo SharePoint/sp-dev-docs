@@ -160,7 +160,7 @@ A **Dictionary** can contain any type of variable available in the SharePoint 20
   
 
     
-> [!IMPORTANT]
+> **Important:**
 > The **Dictionary** variable type is critical when you are using the **Call HTTP Web Service** action.
   
     
@@ -168,7 +168,7 @@ A **Dictionary** can contain any type of variable available in the SharePoint 20
 
 
     
-> [!CAUTION]
+> **Caution:**
 > Using the **Name** field as a lookup is only supported when you are setting a value in a dictionary. Using the **Name** field as a lookup is not supported when you are building a dictionary.
   
     
@@ -176,7 +176,7 @@ A **Dictionary** can contain any type of variable available in the SharePoint 20
 
 
     
-> [!NOTE]
+> **Note:**
 > A **Dictionary** variable can contain a variable of type **Dictionary**. The ability to store **Dictionary** variables within a **Dictionary** provides a number of benefits. For example, you might create a **Dictionary** to store information about employees. Within the **Dictionary** you might create another **Dictionary** entry for each employee. As you build the workflow you can use the **Dictionary** variable instead of constantly creating new stand-alone variables for each piece of information about each employee. As this example shows, a **Dictionary** can be used to organize complex information within the workflow.
   
     

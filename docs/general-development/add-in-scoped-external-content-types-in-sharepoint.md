@@ -129,7 +129,7 @@ The following example shows how to set the **MetadataCatalogFileName** property 
 ```
 
 
-> [!NOTE]
+> **Note:**
 > Site administrators can install add-ins that use App-Scoped-ECTs, but only SiteCollection administrators can grant permissions for Apps to Use BCS Connections. 
   
     
@@ -154,14 +154,14 @@ You can include a BDC model in a WSP file for deployment. The following example 
 ```
 
 
-> [!IMPORTANT]
+> **Important:**
 > Only one BDC model file can be included per add-in. While the file name in this example is BDCMetadata.bdcm, the model file can actually be any name you choose as long as the file name matches that is in the **Path** attribute of the BDC model file.
   
     
     
 
 
-> [!NOTE]
+> **Note:**
 > Only Open Data protocol (OData) connections are allowed for add-in-scoped external content types. 
   
     

@@ -30,7 +30,7 @@ User profile properties from client APIs are read-only (except the profile pictu
     
     
 
-> [!NOTE]
+> **Note:**
 > The client-side  [UserProfile](http://msdn.microsoft.com/library/f8c4a219-fbaa-2e50-1bd5-fdc80051b33d%28Office.15%29.aspx) object doesn't contain all of the user properties as the server-side version. However, the client-side version does provide the methods for creating a personal site for the current user. To retrieve it, use the [ProfileLoader.getUserProfile](http://msdn.microsoft.com/library/8e30e811-5da1-b6d0-a8b5-befea9b22496%28Office.15%29.aspx) method.
   
     
@@ -128,7 +128,7 @@ The following code example shows how to get user profile properties for a target
     
   
 
-> [!NOTE]
+> **Note:**
 > Paste the following code between the **script** tags that you added to the UserProfiles.aspx file in the [Create the application page](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in.md#bk_CreateAppPage) procedure. Replace the `domainName\\userName` placeholder value before you run the code. (This code example does not use the code-behind class file.)
   
     
@@ -199,7 +199,7 @@ The following code example retrieves the values for a specified set of user prof
     
   
 
-> [!NOTE]
+> **Note:**
 > Paste the following code between the **script** tags that you added to the UserProfiles.aspx file in the [Create the application page](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in.md#bk_CreateAppPage) procedure. Replace the `domainName\\\\userName` placeholder value before you run the code. (This code example does not use the code-behind class file.)
   
     

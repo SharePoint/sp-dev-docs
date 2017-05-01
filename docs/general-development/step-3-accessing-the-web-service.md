@@ -90,7 +90,7 @@ VB.net
 
 
 
-    > [!NOTE]
+    > **Note:**
       > Make sure the workbook you want to open has a worksheet called "Sheet1" that contains values. Alternatively, you can change "Sheet1" in the code to the name of your worksheet. 
 4.  `Add the following code to point to the workbook you want to open`:
     
@@ -104,14 +104,14 @@ VB.net
 
 
 
-    > [!IMPORTANT]
+    > **Important:**
       > Change the workbook path to match the location of the workbook you are using for this walkthrough. Make sure the workbook exists and that the location where the workbook is saved is a trusted location. Using an HTTP URL to point to the location of a workbook allows you to access it remotely. 
 
-    > [!NOTE]
+    > **Note:**
       > You can get the path to a workbook in Microsoft SharePoint Server 2010 by right-clicking the workbook and selecting **Copy Shortcut**. Alternatively, you can select **Properties** and copy the path to the workbook from there.
 5. Add the following code to set the credentials for the request. 
     
-    > [!NOTE]
+    > **Note:**
       > You have to explicitly set the credentials even if you intend to use the default credentials. 
 
 cs
@@ -169,7 +169,7 @@ Console.WriteLine("Value in range is: " &amp; (CType(rangeResult1(5), Object()))
 
 8. Add code to close the workbook and close the current session. Also add a close bracket to end the **try** block.
     
-    > [!IMPORTANT]
+    > **Important:**
       > It is good practice to close the workbook if you are done using the session. This will close the session and free resources. 
 
 cs
@@ -209,7 +209,7 @@ The following code sample is the complete code in the Class1.cs example file des
     
     
 
-> [!IMPORTANT]
+> **Important:**
 > Make changes to the workbook path, sheet name, and so on, as appropriate. 
   
     

@@ -35,7 +35,7 @@ SharePoint Server 2010 introduced the REST API for use in getting and setting in
 <a name="xlsOdata"> </a>
 
 
-> [!NOTE]
+> **Note:**
 > The Excel Interactive View feature has been disabled. For information about removing this feature from your website, see  [Removing Excel Interactive View from a webpage](removing-excel-interactive-view-from-a-webpage.md). 
   
     

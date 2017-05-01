@@ -118,7 +118,7 @@ In this step, you will create the service implementation project and then add th
   
 2. Choose **Browse** and locate the **Microsoft.Office.Server.Search.ContentProcessingEnrichment** assembly in your SharePoint installation folder under _Installation Path_\\Microsoft Office Servers\\15.0\\Search\\Applications\\External. 
     
-    > [!NOTE]
+    > **Note:**
       > If SharePoint is installed on a machine other than your development machine, copy the assembly over to your development machine and reference it from there. 
 
 ## Create a content enrichment service

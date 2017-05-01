@@ -80,7 +80,7 @@ A term is a word or a phrase that can be associated with an item in SharePoint 2
     
     
 
-> [!NOTE]
+> **Note:**
 >  See the following topics for detailed instructions on how to use the Term Store Management Tool to create your term set:>  [Set up a new term set](http://office.microsoft.com/en-us/sharepoint-help/set-up-a-new-term-set-HA102922634.aspx)>  [Create and manage terms in a term set](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/create-and-manage-terms-in-a-term-set-HA102771989.aspx)
   
     
@@ -142,7 +142,7 @@ In Visual Studio 2012, create a custom Web Part by using the Visual Web Parts te
     
     
 
-> [!NOTE]
+> **Note:**
 > This article assumes that you have experience with developing Web Parts in SharePoint. For more information on developing Web Parts, refer to  [Building Block: Web Parts](http://msdn.microsoft.com/en-us/library/ee535520%28v=office.14%29.aspx)
   
     

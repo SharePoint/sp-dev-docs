@@ -49,7 +49,7 @@ SharePoint 2013 supports security for user access at the website, list, list or 
     
     
 
-> [!NOTE]
+> **Note:**
 > For information about authorization related to SharePoint Add-ins, see  [Authorization and authentication of SharePoint Add-ins](http://msdn.microsoft.com/library/bde5647a-fff1-4b51-b67b-2139de79ce4a%28Office.15%29.aspx). 
   
     
@@ -68,7 +68,7 @@ SharePoint 2013 supports the following types of authentication:
     
     For information about signing in to SharePoint by using Windows claims mode, see  [Incoming claims: Signing into SharePoint 2013](incoming-claims-signing-into-sharepoint.md).
     
-    > [!IMPORTANT]
+    > **Important:**
       >  For information about suspending impersonation, see [Avoid suspending impersonation of the calling user](http://msdn.microsoft.com/en-us/library/ff407852.aspx). 
 - **ASP.NET Forms:** A non-Windows identity management system that uses the pluggable ASP.NET forms-based authentication system is supported. This mode enables SharePoint 2013 to work with a variety of identity management systems, including externally defined groups or roles such as Lightweight Directory Access Protocol (LDAP) and light-weight database identity management systems. Forms authentication allows ASP.NET to perform the authentication for SharePoint 2013, often involving a redirect to a log-on page. In SharePoint 2013, ASP.NET forms are supported only under claims authentication. A forms provider must be registered within a web application that is configured for claims.
     
@@ -76,7 +76,7 @@ SharePoint 2013 supports the following types of authentication:
     
   
 
-> [!NOTE]
+> **Note:**
 > SharePoint 2013 does not support working with a case-sensitive membership provider. It uses case-insensitive SQL storage for all users in the database, regardless of the membership provider. 
   
     
@@ -108,7 +108,7 @@ When a user signs in to SharePoint 2013, the user's token is validated and then 
     
   
 
-> [!NOTE]
+> **Note:**
 > For more information about signing into SharePoint and the different sign-in modes, see  [Incoming claims: Signing into SharePoint 2013](incoming-claims-signing-into-sharepoint.md). 
   
     
@@ -140,7 +140,7 @@ Under this model, your application makes identity-related decisions based on cla
     
     
 
-> [!NOTE]
+> **Note:**
 > For more information about claims-based identity and claims providers, see  [Claims-based identity and concepts in SharePoint 2013](claims-based-identity-and-concepts-in-sharepoint.md) and [Claims provider in SharePoint 2013](claims-provider-in-sharepoint.md). 
   
     
@@ -159,7 +159,7 @@ The membership provider is responsible for validating the credential information
     
     
 
-> [!NOTE]
+> **Note:**
 > For more information about STS, see  [Claims-based identity and concepts in SharePoint 2013](claims-based-identity-and-concepts-in-sharepoint.md). 
   
     
@@ -170,7 +170,7 @@ The role manager is optional. If a custom authentication system does not support
     
     
 
-> [!NOTE]
+> **Note:**
 > For more information about claims-based identity and claims providers, see  [Claims-based identity and concepts in SharePoint 2013](claims-based-identity-and-concepts-in-sharepoint.md) and [Claims provider in SharePoint 2013](claims-provider-in-sharepoint.md). 
   
     
@@ -181,7 +181,7 @@ In ASP.NET membership and role passive sign-in, the sign-in happens by redirecti
     
     
 
-> [!NOTE]
+> **Note:**
 > For more information about signing into SharePoint, see  [Incoming claims: Signing into SharePoint 2013](incoming-claims-signing-into-sharepoint.md). 
   
     
@@ -196,7 +196,7 @@ For information about the pluggable authentication framework provided by ASP.NET
     
     
 
-> [!NOTE]
+> **Note:**
 > For more information about forms-based authentication, see  [Forms authentication in SharePoint products and technologies (Part 1): Introduction](http://msdn.microsoft.com/library/e5efd4d7-b369-49f0-a6f7-431d21daff20%28Office.15%29.aspx). 
   
     

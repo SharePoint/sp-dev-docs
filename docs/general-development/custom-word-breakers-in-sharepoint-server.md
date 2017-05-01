@@ -24,7 +24,7 @@ For information on how to write a word breaker refer to the following articles
 <a name="SP15wordbreaker_howto"> </a>
 
 
-> [!CAUTION]
+> **Caution:**
 > When you replace existing word breakers, you modify the registry at your own risk. Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system. Microsoft cannot ensure that these problems can be solved. Switching to a different word breaker might also cause serious problems during indexing and querying. Before you modify the registry, back up the registry and ensure that you know how to restore the registry if a problem occurs. 
   
     

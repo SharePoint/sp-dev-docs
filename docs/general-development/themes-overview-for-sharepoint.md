@@ -19,7 +19,7 @@ The theming experience in SharePoint 2013 was redesigned to simplify the process
     
     
 
-> [!NOTE]
+> **Note:**
 > Themes created in SharePoint 2010 cannot be used on SharePoint 2013 sites. But, themes created in SharePoint 2010 can still be used on site collections that have not been upgraded or on site collections that use the 2010 experience version. 
   
     

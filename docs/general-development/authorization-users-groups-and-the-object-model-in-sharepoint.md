@@ -67,7 +67,7 @@ In policy roles, the users and groups are identified by both their security iden
     
     
 
-> [!NOTE]
+> **Note:**
 > Central administration policy roles differ from the role definitions for a site collection. 
   
     

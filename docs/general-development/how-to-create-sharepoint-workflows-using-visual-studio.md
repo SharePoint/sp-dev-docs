@@ -17,7 +17,7 @@ Learn the basics of creating a SharePoint workflow in the new SharePoint 2013 wo
     
     
 
-> [!NOTE]
+> **Note:**
 > This article is accompanied by an end-to-end code sample that you can use to follow the article, or as a starter for your own SharePoint workflow projects. You can find the downloadable code here: LINK. 
   
     
@@ -77,7 +77,7 @@ The stage construct within a SharePoint Designer 2013 based workflow is based on
     
 
     
-> [!NOTE]
+> **Note:**
 > You can find the workflow depicted in Figure 1 as a workflow sample on MSDN here:  [SharePoint 2013: Approval workflow that uses a custom initiation form](http://code.msdn.microsoft.com/officeapps/SharePoint-Approval-f5ac5eb2). 
   
     
@@ -106,7 +106,7 @@ State machine workflows, like flowchart workflows, do not typically follow a spe
     
 
     
-> [!NOTE]
+> **Note:**
 > You can find the workflow depicted in Figure 1 as a workflow sample on MSDN here:  [SharePoint 2013: Route workflows to states depending on actions and events](http://code.msdn.microsoft.com/officeapps/SharePoint-Route-25a25d87). 
   
     
@@ -369,7 +369,7 @@ To get user information, do the following:
 
 1. Rename our first sequence ( **Child Sequence 1**) to "Get Item Properties" and name the second sequence to "Get Author Properties".
     
-    > [!NOTE]
+    > **Note:**
       > Make certain the variable that contains the user ID is scoped to the whole workflow and not just to the sequence we were working on. Let's change the scope of the variable now, as shown in Figure 8. 
 
    **Figure 8. Changing the scope of variables**

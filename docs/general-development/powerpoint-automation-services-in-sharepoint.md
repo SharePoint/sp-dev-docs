@@ -25,7 +25,7 @@ Using PowerPoint Automation Services, you can convert from the PowerPoint binary
     
     
 
-> [!NOTE]
+> **Note:**
 > PowerPoint Automation Services takes advantage of facilities of SharePoint 2013 and is a feature of it. You must have SharePoint Server 2013 installed to use PowerPoint Automation Services. If you are using SharePoint Server 2013 in a server farm, you must explicitly enable PowerPoint Automation Services. 
   
     
@@ -103,7 +103,7 @@ PowerPoint Automation Services uses the asynchronous pattern method for sending 
     
     
 
-> [!NOTE]
+> **Note:**
 > For more information about how to work with the asynchronous design pattern, see the  [Asynchronous Programming Overview](http://msdn.microsoft.com/en-us/library/ms228963.aspx). 
   
     
@@ -155,7 +155,7 @@ The **PresentationRequest** class has a single overload for its constructor meth
     
     
 
-> [!TIP]
+> **Tip:**
 > When converting the output  [Stream](https://msdn.microsoft.com/library/System.IO.Stream.aspx) object back to an [SPFile](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfile.aspx) object, check that the extension given to the resulting file matches the extension of the file type that you want (.ppt or .pptx).
   
     
@@ -177,7 +177,7 @@ The **PdfRequest** class also has a single overload for its constructor method t
     
     
 
-> [!TIP]
+> **Tip:**
 > When converting the output  [Stream](https://msdn.microsoft.com/library/System.IO.Stream.aspx) object back to an [SPFile](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfile.aspx) object, check that the extension given to the resulting file matches the extension of the file type that you want (.pdf).
   
     
@@ -199,7 +199,7 @@ The **PictureRequest** class does not have any overloads for its constructor met
     
     
 
-> [!TIP]
+> **Tip:**
 > The **PictureRequest** class returns a stream that contains a package of image files. When converting the output [Stream](https://msdn.microsoft.com/library/System.IO.Stream.aspx) object back to an [SPFile](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.spfile.aspx) object, check that the extension given to the resulting file is .zip.
   
     
@@ -214,7 +214,7 @@ The easiest way to show how to write code that uses PowerPoint Automation Servic
     
     
 
-> [!NOTE]
+> **Note:**
 > Because PowerPoint Automation Services is a service of SharePoint Server 2013, you can use it only in an application that runs directly on a SharePoint Server. You must build the application as a farm solution. You cannot use PowerPoint Automation Services from a sandboxed solution. 
   
     
@@ -238,7 +238,7 @@ The easiest way to show how to write code that uses PowerPoint Automation Servic
   
 5. Be sure that the project in Visual Studio targets .NET Framework 4.
     
-    > [!NOTE]
+    > **Note:**
       > Previous versions of SharePoint Server required that you target .NET Framework 3.5. The Microsoft.SharePoint libraries now reference assemblies in .NET Framework 4. Also make sure that your project targets the full .NET Framework 4 and not the .NET Framework 4 Client Profile. 
 6. In the **Name** box, type the name that you want to use for your project, such as PAS_Sample.
     
@@ -470,7 +470,7 @@ PowerPoint Automation Services on SharePoint Server 2013 provides businesses wit
     
     
 
-> [!NOTE]
+> **Note:**
 >  Before you run the example, make sure that PowerPoint Automation Services has been enabled in the SharePoint Central Administration console.>  To verify that PowerPoint Automation Services is enabled, do the following:>  In the Central Administration console, under **System Settings**, choose **Manage services on server**, and then make sure that the **PowerPoint Conversion Service** is set to **Started**. >  Also in the Central Administration console, under **Application Management**, choose **Manage service applications**, and then make sure that the **PowerPoint Conversion Service Application** and **PowerPoint Conversion Service Application Proxy** are set to Started.
   
     

@@ -1084,7 +1084,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;properties='termid
 ```
 
 
-> [!NOTE]
+> **Note:**
 >  [QueryPropertyValueType](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.QueryPropertyValueType.aspx) specifies the type for the property; each type has a specific index value.
   
     

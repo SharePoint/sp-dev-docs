@@ -16,14 +16,14 @@ This example shows how to programmatically add an Excel Web Access Web Part to a
     
 
 The following project uses Microsoft Visual Studio.
-> [!NOTE]
+> **Note:**
 > Depending on the Visual Studio version and the Visual Studio integrated development environment (IDE) settings that you are using, the process and steps to create a Visual Studio project could be slightly different from the procedures shown in this topic. 
   
     
     
 
 
-> [!NOTE]
+> **Note:**
 > It is assumed that you have already created a SharePoint document library and made it a trusted location. For more information, see  [How to: Trust a Location](how-to-trust-a-location.md). 
   
     
@@ -37,7 +37,7 @@ The following steps show how to locate Microsoft.Office.Excel.WebUI.dll and how 
     
     
 
-> [!NOTE]
+> **Note:**
 > It is assumed that you have already copied Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll from the global assembly cache to a folder of your choice. For more information about how to locate and copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll, see  [How to: Locate and Copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll](how-to-locate-and-copy-microsoft-office-excel-webui-dll-and-microsoft-office-exc.md). 
   
     
@@ -52,7 +52,7 @@ The following steps show how to locate Microsoft.Office.Excel.WebUI.dll and how 
   
 2. In the **Add Reference** dialog box, click **Browse**.
     
-    > [!NOTE]
+    > **Note:**
       > You can also open the **Add Reference** dialog box in the **Solution Explorer** pane by right-clicking **References** and selecting **Add Reference**. 
 3. Browse to the location of Microsoft.Office.Excel.WebUI.dll.
     
@@ -149,7 +149,7 @@ End Sub
 
 
 
-    > [!IMPORTANT]
+    > **Important:**
       > Ensure that the location where the workbook is saved is a trusted location. 
 2. You can display an Excel workbook programmatically by using the following code.
     

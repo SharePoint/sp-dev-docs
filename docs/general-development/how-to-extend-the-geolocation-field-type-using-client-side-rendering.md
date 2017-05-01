@@ -47,7 +47,7 @@ The Geolocation field type is not available in the default content type of any l
     
 
 After you add the Geolocation field type to SharePoint 2013, you can use it to render maps by using Bing Maps. The built-in Geolocation field can render only with Bing Maps. However, you can create a custom field by using the Geolocation field as a parent field type. Custom rendering can be provided through the **JSLink** property in the client-side rendering framework. The client-side rendering framework is introduced in SharePoint 2013. For more information, see [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering.md). 
-> [!NOTE]
+> **Note:**
 > The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list. 
   
     
@@ -162,7 +162,7 @@ You must have the following:
     
     
 
-> [!NOTE]
+> **Note:**
 > In this example, the class and solution are named **CustomGeolocationField**; you can specify the name of the class and project that you want as you create your Visual Studio project. 
   
     
@@ -543,7 +543,7 @@ After you deploy a custom field to the SharePoint server, a new custom column is
 
 1. Choose the F5 key.
     
-    > [!NOTE]
+    > **Note:**
       > When you choose F5, Visual Studio builds the solution, deploys the solution, and opens the SharePoint website where the solution is deployed. 
 2. Create a custom list and add a new Custom Geolocation field column.
     

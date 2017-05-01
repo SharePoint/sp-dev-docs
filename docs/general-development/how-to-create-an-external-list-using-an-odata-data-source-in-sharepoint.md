@@ -63,7 +63,7 @@ The following procedures will show you how to create a new external list, bind i
     
     
 
-> [!NOTE]
+> **Note:**
 > The first step assumes that you have successfully created an external content type, as described in  [How to: Create an external content type from an OData source in SharePoint 2013](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md). 
   
     

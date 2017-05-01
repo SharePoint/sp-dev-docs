@@ -149,7 +149,7 @@ Actions such as **Start Approval Process** and **Start Feedback Process** can be
     
     
 
-> [!NOTE]
+> **Note:**
 > If these actions do not fully meet your needs, you can customize them in the browser, in SharePoint Designer 2013, and in development environments that are compatible with SharePoint, including Visual Studio. You can also customize the **Start Custom Task Process** action by using the same tools. This action is a template that you can use to define a new task process for your organization.
   
     
@@ -160,7 +160,7 @@ When you customize task behavior inside actions such as **Start Approval Process
     
     
 
-> [!NOTE]
+> **Note:**
 > Which actions in this category are available varies depending on where in the workflow you are currently working. 
   
     
@@ -252,7 +252,7 @@ Some list actions are available only inside an impersonation step in. Impersonat
     
     
 
-> [!NOTE]
+> **Note:**
 >  The "workflow author" is the person who last published the workflow.>  An impersonation step cannot be nested inside of another step of any kind.
   
     

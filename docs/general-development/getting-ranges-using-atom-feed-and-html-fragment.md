@@ -13,7 +13,7 @@ This topic describes two ways to access ranges—Atom feed and HTML fragment, by
     
 
 
-> [!NOTE]
+> **Note:**
 > The Excel Services REST API applies to SharePoint 2013 and SharePoint 2016 on-premises. For Office 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/en-us/docs/api-reference/v1.0/resources/excel
 ) endpoint.
   
@@ -55,14 +55,14 @@ Using the discovery mechanism described in  [Discovery in Excel Services REST AP
     
     
 
-> [!IMPORTANT]
+> **Important:**
 > You can also specify arbitrary ranges, and not just the ranges returned by discovery. Colon ":" must be replaced with "|". For example use "A1|G5" instead of "A1:G5". 
   
     
     
 
 
-> [!NOTE]
+> **Note:**
 > Characters like "?" and "#" are unsupported. To correctly reference sheet names that contain special characters, the basic guideline is "see what the Excel client does" when referencing a formula to a sheet with special characters and follow that example. 
   
     
@@ -227,7 +227,7 @@ In Internet Explorer, the page looks similar to the following figure.
     
     
 
-> [!NOTE]
+> **Note:**
 > This HTML can be directly consumed in an **IFRAME**, or it can be used in JavaScript to create a more seamless experience. 
   
     

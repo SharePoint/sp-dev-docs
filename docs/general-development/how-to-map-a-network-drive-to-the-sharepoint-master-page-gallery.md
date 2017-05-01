@@ -18,7 +18,7 @@ First, find the location of the Master Page Gallery.
 
 1. On the site for which you are creating a design, start Design Manager. (For example, on the **Settings** menu, choose **Design Manager**.)
     
-    > [!IMPORTANT]
+    > **Important:**
       > If your site is hosted in SharePoint Online, when you sign in to the site by using your Office 365 credentials, make sure that you select the **Keep me signed in** check box. For more information, see [How to configure and to troubleshoot mapped network drives that connect to SharePoint Online sites in Office 365 for enterprises](http://support.microsoft.com/kb/2616712). 
 2. In the numbered list, select **Upload Design Files**.
     

@@ -16,7 +16,7 @@ Each Excel Services trusted location in the Shared Services Provider (SSP) has a
     
 
 
-> [!NOTE]
+> **Note:**
 > The **AllowUdfs** flag is denoted by the **User-defined functions allowed** option on the Excel Services Trusted File Locations page.
   
     
@@ -29,7 +29,7 @@ The default **AllowUdfs** value is **false**. If the **AllowUdfs** value is set 
     
 
 In order to allow UDFs to be called from a specific trusted location, you set the **AllowUdfs** value to **true**.If the **AllowUdfs** value is **false** when a session is started on a workbook that has UDF calls in this trusted location, the UDF calls will fail. If you change the **AllowUdfs** value to **true** after a session has started, the UDF calls will also fail. This is because changes in the **AllowUdfs** flag take effect on the next session, after the configuration database has been updated.You can get around this by restarting the session—for example, by selecting **Reload Workbook** in Excel Web Access.
-> [!CAUTION]
+> **Caution:**
 > If you choose to reset Microsoft Internet Information Services (IIS) instead, it will end all current sessions. 
   
     
@@ -66,7 +66,7 @@ To do the following steps, you need a computer that has Microsoft SharePoint Ser
   
 7. Under **Assembly Location**, click **Local file**.
     
-    > [!NOTE]
+    > **Note:**
       >  The **Local file** option will be replaced with **File path** in future releases of Excel Services. If you see **File path**, select that instead. 
 8. Under **Enable Assembly**, the **Assembly enabled** check box should be selected by default.
     
@@ -83,7 +83,7 @@ To do the following steps, you need a computer that has Microsoft SharePoint Ser
 
 1. Open the Excel Services Add Trusted File Location page (if you are adding a new trusted location) or Excel Services Edit Trusted File Location page (if you are editing an existing trusted location). 
     
-    > [!NOTE]
+    > **Note:**
       > For more information about trusting a location, see  [How to: Trust a Location](how-to-trust-a-location.md). 
 2. Under **Allow User-Defined Functions**, select **User-defined functions allowed** to allow UDFs to be called from workbooks stored in this trusted location.
     

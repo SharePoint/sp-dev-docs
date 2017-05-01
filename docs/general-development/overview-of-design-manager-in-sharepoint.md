@@ -37,7 +37,7 @@ At a high level, the designer will perform the following tasks:
     
   
 
-> [!NOTE]
+> **Note:**
 > The design elements that you can create for a public-facing website in SharePoint Online are different from the design elements for other publishing sites. Also, you cannot create design packages in the version of Design Manager that is available in the public-facing website in SharePoint Online. 
   
     
@@ -153,7 +153,7 @@ After the conversion, your HTML file and the SharePoint master page are associat
     
     
 
-> [!NOTE]
+> **Note:**
 > Design Manager also provides an option to begin your design by using a minimal master page. In this scenario, you don't have to begin with an HTML design; instead, you can create an HTML master page that contains the minimum page elements necessary to render the master page correctly in SharePoint, and then build out your design by editing the HTML master page. 
   
     
@@ -308,7 +308,7 @@ A design package is a .wsp file, a SharePoint solution file, which is basically 
     
     
 
-> [!NOTE]
+> **Note:**
 > Design packages are not available in the public-facing website in Office 365. To implement a fully custom design with Design Manager, you can invite a designer into your site by temporarily granting that person the Designer permission level. 
   
     

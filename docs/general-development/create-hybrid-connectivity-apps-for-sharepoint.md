@@ -23,7 +23,7 @@ For a complete description of how to configure a working hybrid solution, see  [
     
     
 
-> [!CAUTION]
+> **Caution:**
 > To configure a hybrid SharePoint environment, you need a combination of expert skills and significant hands-on experience with SharePoint Server 2013, SharePoint Online, and related products and technologies. We recommend that you engage Microsoft Consulting Services to provide technical guidance and support during the design and deployment of your hybrid environment. > For more information, see  [Microsoft Services](http://www.microsoft.com/en-us/microsoftservices/deploy.aspx). 
   
     
@@ -80,7 +80,7 @@ To create an OData endpoint, you will need to follow these steps for creating a 
 
 1. Create an IIS website running at least Microsoft .NET Framework 4. Secure the site using basic authentication.
     
-    > [!NOTE]
+    > **Note:**
       > It's not necessary for SharePoint to be installed on this server. In fact, for the sake of simplicity and performance, it's better if SharePoint is not installed on the server that hosts the WCF data service. 
 2. Create a new project in Visual Studio 2012 using the **ASP.NET Empty Web Application** template.
     

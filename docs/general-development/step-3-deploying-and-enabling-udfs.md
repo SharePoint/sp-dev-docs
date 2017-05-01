@@ -118,7 +118,7 @@ If the **AllowUdfs** value is **false** when a session is started on a workbook 
     
     
 
-> [!NOTE]
+> **Note:**
 > The **AllowUdfs** flag is denoted by the **User-defined functions allowed** option (see step 9 in the "Trusting a Location" section).
   
     

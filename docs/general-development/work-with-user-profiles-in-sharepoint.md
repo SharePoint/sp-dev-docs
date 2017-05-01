@@ -41,7 +41,7 @@ As a best practice in SharePoint 2013 development, use client APIs when you can.
     
     
 
-> [!NOTE]
+> **Note:**
 > Not all functionality that you find in the **Microsoft.Office.Server.UserProfiles** assembly is available from client APIs. For example, you have to use the server object model to create or change user profiles because they're read-only from client APIs (except the user profile picture). Also, there's no client-side access to some namespaces, such as [Microsoft.Office.Server.Audience](https://msdn.microsoft.com/library/Microsoft.Office.Server.Audience.aspx) , [Microsoft.Office.Server.ReputationModel](https://msdn.microsoft.com/library/Microsoft.Office.Server.ReputationModel.aspx) , or [Microsoft.Office.Server.SocialData](https://msdn.microsoft.com/library/Microsoft.Office.Server.SocialData.aspx) . To see what's supported functionality for the client APIs, see [Microsoft.SharePoint.Client.Social](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.aspx) and [Microsoft.SharePoint.Client.UserProfiles](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.aspx) .
   
     
@@ -52,7 +52,7 @@ Each API includes a manager object that you use to perform core profile-related 
     
     
 
-> [!NOTE]
+> **Note:**
 > The Silverlight and mobile client object models are not included in Table 1 or Table 2 because they provide the same core functionality as the .NET client object model and use the same signatures. The Silverlight client object model is defined in Microsoft.SharePoint.Client.UserProfiles.Silverlight.dll, and the mobile client object model is defined in Microsoft.SharePoint.Client.UserProfiles.Phone.dll. 
   
     
@@ -114,7 +114,7 @@ SharePoint Server 2013 includes the following new objects that represent users a
     
   
 
-> [!NOTE]
+> **Note:**
 > Server object model versions are the  [SPSocialActor](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialActor.aspx) object and the [PersonProperties](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PersonProperties.aspx) object.
   
     

@@ -195,7 +195,7 @@ In previous versions of SharePoint, if you wanted to reuse a design, you had to 
     
     
 
-> [!NOTE]
+> **Note:**
 > A design package does not include pages, navigation settings, or the term store. 
   
     

@@ -14,7 +14,7 @@ In SharePoint 2013, user profiles represent SharePoint users. User profile prope
     
     
 
-> [!NOTE]
+> **Note:**
 > For more information about common programming tasks for working with user profiles and the API that you use to perform the tasks, see  [Work with user profiles in SharePoint 2013](work-with-user-profiles-in-sharepoint.md). 
   
     
@@ -89,7 +89,7 @@ The following code example creates a  [UserProfile](https://msdn.microsoft.com/l
     
     
 
-> [!NOTE]
+> **Note:**
 > Change the domain\\username andservername placeholder values before you run the code.
   
     
@@ -160,7 +160,7 @@ The following code example creates a  [CoreProperty](https://msdn.microsoft.com/
     
     
 
-> [!NOTE]
+> **Note:**
 > Change the servername placeholder value before you run the code.
   
     
@@ -256,7 +256,7 @@ The following code example retrieves all user profiles within the context and ch
     
     
 
-> [!NOTE]
+> **Note:**
 > Change the domain\\username andservername placeholder values before you run the code.
   
     
@@ -329,7 +329,7 @@ The following code example retrieves the set of properties that represent a spec
     
     
 
-> [!NOTE]
+> **Note:**
 > Change the servername placeholder value before you run the code.
   
     
@@ -407,7 +407,7 @@ The following code example retrieves all **UserProfile** type properties and ret
     
     
 
-> [!NOTE]
+> **Note:**
 > Change the domain\\username, http://servername/docLib/pic.jpg, and servername placeholder values before you run the code.
   
     

@@ -13,7 +13,7 @@ The palette of activity classes has been revised for SharePoint 2013. Table 1 li
     
 
 
-> [!NOTE]
+> **Note:**
 > In future releases, the activities listed in this table will provide links to the API reference documentation for their respective managed classes. 
   
     

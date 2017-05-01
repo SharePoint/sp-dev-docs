@@ -28,14 +28,14 @@ The new Suite Navigation control supports any theme applied to the site. If you 
     
     
 
-> [!IMPORTANT]
+> **Important:**
 > When customizing a site, the best practice is to apply a theme. While you can apply custom CSS to the site, custom CSS may break in the future if the Suite Navigation control is updated again in the service. 
   
     
     
 
 
-> [!CAUTION]
+> **Caution:**
 > If you do not want to use the new control, remove the Suite Navigation markup from your master page and add custom markup. However, be aware that customized master pages run the risk of not picking up updates to default master page controls or new functionality that is added to uncustomized master pages. Using a customized master page introduces the risk that service updates will break the functionality or style of your site. 
   
     

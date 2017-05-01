@@ -81,7 +81,7 @@ After you create the BLOB external content type, you are ready to modify the BDC
   
 2. Create a new method that returns the BLOB field. You should define a **StreamAccessor** type method instance for this method, as shown in the following example.
     
-    > [!NOTE]
+    > **Note:**
       > The table name in this example is Attachment. 
 
 XML

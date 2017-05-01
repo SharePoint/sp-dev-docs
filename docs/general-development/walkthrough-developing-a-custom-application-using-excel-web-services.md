@@ -41,14 +41,14 @@ In order to complete this walkthrough, you will need:
   
 - Sufficient permissions (at the very least, "view" permissions) to be able to access Excel Web Services on the computer where SharePoint Server 2010 is located. 
     
-    > [!NOTE]
+    > **Note:**
       > For more information about workbook permissions, see the following section, "Workbook Permissions." 
 - A sample workbook installed on a local drive or local SharePoint document library. 
     
   
 - A trusted location to store the workbooks that you want to access using Excel Web Services. If the workbooks are not stored in a trusted location, the Excel Web Services calls to open the workbook will fail. This walkthrough assumes the workbook is present on the local computer. 
     
-    > [!NOTE]
+    > **Note:**
       > For information about how to trust a location, see  [How to: Trust a Location](how-to-trust-a-location.md) and [How to: Trust Workbook Locations Using Script](http://msdn.microsoft.com/library/79ab6ced-7a0c-4275-b852-bb246fc6be57%28Office.15%29.aspx). 
 - To create the workbook using Excel.
     
@@ -72,7 +72,7 @@ The workbook used in this example has a worksheet named "Sheet1". The worksheet 
   
 - For the rest of the Excel Web Services methods, the caller needs "view" permission (in Microsoft SharePoint Foundation) or "read" permission (on a file share) for the workbook.
     
-    > [!NOTE]
+    > **Note:**
       > For more information about setting permissions, see the SharePoint Foundation documentation. 
 
 ## See also

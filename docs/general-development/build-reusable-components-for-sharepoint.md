@@ -15,7 +15,7 @@ Using SharePoint 2013, you can build a variety of components, such as lists, Web
     
     
 
-> [!NOTE]
+> **Note:**
 > There are some restrictions on which components you can use in SharePoint Add-ins. For more information, see  [Host webs, add-in webs, and SharePoint components in SharePoint 2013](http://msdn.microsoft.com/library/b791cdf5-8aa2-47fa-bc4c-aee437354759%28Office.15%29.aspx). 
   
     

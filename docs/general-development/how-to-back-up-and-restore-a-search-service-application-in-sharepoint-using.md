@@ -35,7 +35,7 @@ The following procedures are intended to help developers with creating a backup/
     
     
 
-> [!TIP]
+> **Tip:**
 > For details about the Windows PowerShell cmdlets mentioned in this article, see  [Windows PowerShell for SharePoint 2013 reference](http://technet.microsoft.com/en-us/library/ee890108.aspx). 
   
     
@@ -85,7 +85,7 @@ XML
 
 2. Replace the 10 placeholders in this file with appropriate values from the writer.txt file that you generated in the first step. Use the following table as a guide. 
     
-    > [!NOTE]
+    > **Note:**
       > In the right-hand column,  _SSA_ is itself a placeholder for the name of the Search Service Application.
 
    **Table 2. SSA manifest file placeholders and values from writers.txt**
@@ -201,7 +201,7 @@ betest.exe /v /r /d "destination backup folder" /s "backup log file" /x SSA_mani
 
 3. On the same server, open a SharePoint Management Shell and execute the following lines to restore the SSA, where  _application pool name_ is the name of the new pool, _domain\\user_ is the domain name of the user that the application pool logs in as, _name of the search service application_ is the name of the SSA, and _topology_file_name_ is the path and name of the typology file you created when the SSA was backed up.
     
-    > [!TIP]
+    > **Tip:**
       > This code creates a new application pool identity to run the restored SSA, but you can also use an existing account with the **Get-SPServiceApplicationPool** cmdlet.
 
 
