@@ -86,7 +86,7 @@ Figure 1 shows a view form with a custom-rendered field type.
   
     
     
-![Custom client-side rendered field in a View form](images/CSRFieldType_result.png)
+![Custom client-side rendered field in a View form](../../images/CSRFieldType_result.png)
   
     
     
