@@ -86,7 +86,7 @@ Figure 1 shows a view form with a custom-rendered field type.
   
     
     
-![Custom client-side rendered field in a View form](../../images/CSRFieldType_result.png)
+  ![Custom client-side rendered field in a View form](../../images/CSRFieldType_result.png)
   
     
     
@@ -227,8 +227,7 @@ namespace Microsoft.SDK.SharePoint.Samples.WebControls
     
   
 
-XML
-  
+```XML
 <?xml version="1.0" encoding="utf-8" ?>
 <FieldTypes>
   <FieldType>
@@ -246,7 +245,7 @@ XML
     <Field Name="ShowOnColumnTemplateCreate">TRUE</Field>
   </FieldType>
 </FieldTypes>
-
+```
 
 
 ### To add a JavaScript file for the rendering logic of the custom field type
@@ -271,7 +270,7 @@ XML
   
 
 
-  
+```
 (function () {
     var favoriteColorContext = {};
 
@@ -296,7 +295,7 @@ function favoriteColorViewTemplate(ctx) {
     return "<span style='background-color : " + color +
         "' >&amp;nbsp;&amp;nbsp;&amp;nbsp;&amp;nbsp;</span>&amp;nbsp;" + color;
 }
-
+```
 
 
 ### To build and run the solution
@@ -318,7 +317,7 @@ function favoriteColorViewTemplate(ctx) {
 
   
 
-     ![Creating a new custom field type column](../../images/CSRFieldType_addcolumn.png)
+  ![Creating a new custom field type column](../../images/CSRFieldType_addcolumn.png)
   
 
   
