@@ -119,7 +119,7 @@ Figure 1 shows a high-level view of the SharePoint Server security management sy
   
     
     
-![Authorization object relations](images/4a1e594e-cc3b-4bd6-bfe7-27568e30bb2b.gif)
+![Authorization object relations](../../images/4a1e594e-cc3b-4bd6-bfe7-27568e30bb2b.gif)
   
     
     

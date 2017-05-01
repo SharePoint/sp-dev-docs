@@ -42,7 +42,7 @@ The master page provides a template that lets MDS identify the content regions t
   
     
     
-![Components that require updates in master page](images/MDS_SeattleMaster.png)
+![Components that require updates in master page](../../images/MDS_SeattleMaster.png)
   
     
     

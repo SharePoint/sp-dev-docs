@@ -82,7 +82,7 @@ Another debugging option is to take advantage of breakpoints. Breakpoints are av
   
     
     
-![Figure 1 Starting workflow](images/ngDebuggingSP2013Workflows01.png)
+![Figure 1 Starting workflow](../../images/ngDebuggingSP2013Workflows01.png)
   
     
     
@@ -100,7 +100,7 @@ Visual Studio will deploy the workflow to the target SharePoint environment and 
   
     
     
-![Figure 2. Workflow breakpoint](images/ngDebuggingSP2013Workflows02.png)
+![Figure 2. Workflow breakpoint](../../images/ngDebuggingSP2013Workflows02.png)
   
     
     
@@ -129,7 +129,7 @@ The introduction of Workflow Manager to the SharePoint 2013 workflow story intro
   
     
     
-![Figure 3. WriteLine activity](images/ngDebuggingSP2013Workflows.png)
+![Figure 3. WriteLine activity](../../images/ngDebuggingSP2013Workflows.png)
   
     
     
@@ -147,7 +147,7 @@ This activity will write the message that resembles the **System.Diagnostics.Deb
   
     
     
-![Figure 4. Messages for WriteLine activity](images/ngDebuggingSP2013Workflows04.png)
+![Figure 4. Messages for WriteLine activity](../../images/ngDebuggingSP2013Workflows04.png)
   
     
     
@@ -305,7 +305,7 @@ The next step is to configure Fiddler to intercept encrypted traffic and decrypt
   
     
     
-![Figure 5. UI for utilizing local HOSTS file](images/ngDebuggingSP2013Workflows05.png)
+![Figure 5. UI for utilizing local HOSTS file](../../images/ngDebuggingSP2013Workflows05.png)
   
     
     
@@ -333,7 +333,7 @@ Next, configure Fiddler's connection options.
 
   
 
-  ![Figure 6. Fiddler connection options](images/ngDebuggingSP2013Workflows06.png)
+  ![Figure 6. Fiddler connection options](../../images/ngDebuggingSP2013Workflows06.png)
   
 
   
@@ -374,7 +374,7 @@ This process will configure Windows to trust the certificate, although SharePoin
   
     
     
-![Figure 7. HTTPS tab](images/ngDebuggingSP2013Workflows07.png)
+![Figure 7. HTTPS tab](../../images/ngDebuggingSP2013Workflows07.png)
   
     
     
@@ -474,7 +474,7 @@ In the figure below, notice that sessions #18-36 originated from SharePoint 2013
   
     
     
-![Figure 8. Starting Workflow](images/ngDebuggingSP2013Workflows08.png)
+![Figure 8. Starting Workflow](../../images/ngDebuggingSP2013Workflows08.png)
   
     
     
@@ -492,7 +492,7 @@ Notice that in session #36, SharePoint Server 2013 is requesting that Workflow M
   
     
     
-![Figure 10. Success message](images/ngDebuggingSP2013Workflows10.png)
+![Figure 10. Success message](../../images/ngDebuggingSP2013Workflows10.png)
   
     
     
@@ -510,7 +510,7 @@ Session #40 is where Workflow Manager is retrieving the list item ID and GUID fr
   
     
     
-![Figure 10. Retrieving list item ID and GUID](images/ngDebuggingSP2013Workflows11.png)
+![Figure 10. Retrieving list item ID and GUID](../../images/ngDebuggingSP2013Workflows11.png)
   
     
     
@@ -528,7 +528,7 @@ Session #43 is where Workflow Manager is updating the list item in SharePoint wi
   
     
     
-![Figure 11. Updating the list item in SharePoint](images/ngDebuggingSP2013Workflows12.png)
+![Figure 11. Updating the list item in SharePoint](../../images/ngDebuggingSP2013Workflows12.png)
   
     
     

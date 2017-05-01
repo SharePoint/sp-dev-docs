@@ -14,15 +14,15 @@ SharePoint 2013 introduces a Cloud Add-in Model that enables you to create add-i
   
     
     
- [![Apps for SharePoint](images/wn_cloud_1.png)
+ [![Apps for SharePoint](../../images/wn_cloud_1.png)
   
     
     
-](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx) [![SharePoint Store](images/wn_cloud_2.png)
+](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx) [![SharePoint Store](../../images/wn_cloud_2.png)
   
     
     
-](http://msdn.microsoft.com/library/d15a74a7-3c10-485a-9885-7ef11aaa0d90%28Office.15%29.aspx) [![App Catalog](images/wn_cloud_3.png)
+](http://msdn.microsoft.com/library/d15a74a7-3c10-485a-9885-7ef11aaa0d90%28Office.15%29.aspx) [![App Catalog](../../images/wn_cloud_3.png)
   
     
     
@@ -38,19 +38,19 @@ SharePoint 2013 makes it easy for any web developer, including those who work on
   
     
     
- [![HTML/JavaScript](images/wn_WebStandards_1.png)
+ [![HTML/JavaScript](../../images/wn_WebStandards_1.png)
   
     
     
-](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx) [![OData](images/wn_WebStandards_2.png)
+](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx) [![OData](../../images/wn_WebStandards_2.png)
   
     
     
-](using-odata-sources-with-business-connectivity-services-in-sharepoint.md) [![REST](images/wn_WebStandards_3.png)
+](using-odata-sources-with-business-connectivity-services-in-sharepoint.md) [![REST](../../images/wn_WebStandards_3.png)
   
     
     
-](http://msdn.microsoft.com/library/2de035a0-ac75-43bd-9665-5c5a59c4c590%28Office.15%29.aspx) [![OAuth](images/wn_WebStandards_4.png)
+](http://msdn.microsoft.com/library/2de035a0-ac75-43bd-9665-5c5a59c4c590%28Office.15%29.aspx) [![OAuth](../../images/wn_WebStandards_4.png)
   
     
     
@@ -66,15 +66,15 @@ The current release reflects enormous strides in optimizing the existing develop
   
     
     
- [![Napa Office 365 Development Tools](images/wn_DevTools_1.png)
+ [![Napa Office 365 Development Tools](../../images/wn_DevTools_1.png)
   
     
     
-](http://msdn.microsoft.com/library/82a3645c-0911-4926-9176-236ac8d28bdd%28Office.15%29.aspx) [![Visual Studio](images/wn_DevTools_2.png)
+](http://msdn.microsoft.com/library/82a3645c-0911-4926-9176-236ac8d28bdd%28Office.15%29.aspx) [![Visual Studio](../../images/wn_DevTools_2.png)
   
     
     
-](http://msdn.microsoft.com/library/e00dc63f-b4a4-4c08-b058-729fcb09af41%28Office.15%29.aspx) [![SharePoint Designer](images/wn_DevTools_3.png)
+](http://msdn.microsoft.com/library/e00dc63f-b4a4-4c08-b058-729fcb09af41%28Office.15%29.aspx) [![SharePoint Designer](../../images/wn_DevTools_3.png)
   
     
     
@@ -90,19 +90,19 @@ On a broader scale, SharePoint 2013 has been improved and enhanced to support th
   
     
     
- [![REST endpoints](images/wn_Platform_1.png)
+ [![REST endpoints](../../images/wn_Platform_1.png)
   
     
     
-](http://msdn.microsoft.com/library/e1ff2979-1c16-4cb0-a57e-9168dfe20a7c.aspx) [![New client and server APIs](images/wn_Platform_2.png)
+](http://msdn.microsoft.com/library/e1ff2979-1c16-4cb0-a57e-9168dfe20a7c.aspx) [![New client and server APIs](../../images/wn_Platform_2.png)
   
     
     
-](choose-the-right-api-set-in-sharepoint.md) [![Client-side rendering](images/wn_Platform_3.png)
+](choose-the-right-api-set-in-sharepoint.md) [![Client-side rendering](../../images/wn_Platform_3.png)
   
     
     
-](how-to-customize-a-field-type-using-client-side-rendering.md) [![Remote event receivers](images/wn_Platform_4.png)
+](how-to-customize-a-field-type-using-client-side-rendering.md) [![Remote event receivers](../../images/wn_Platform_4.png)
   
     
     
@@ -118,15 +118,15 @@ With SharePoint 2013, you can combine Windows Phone 7 applications with on-premi
   
     
     
- [![Visual Studio app templates](images/wn_Mobility_.png)
+ [![Visual Studio app templates](../../images/wn_Mobility_.png)
   
     
     
-](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio.md) [![Push notifications](images/wn_Mobility_2.png)
+](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio.md) [![Push notifications](../../images/wn_Mobility_2.png)
   
     
     
-](how-to-configure-and-use-push-notifications-in-sharepoint-apps-for-windows.md) [![Location and maps](images/wn_Mobility_3.png)
+](how-to-configure-and-use-push-notifications-in-sharepoint-apps-for-windows.md) [![Location and maps](../../images/wn_Mobility_3.png)
   
     
     
@@ -142,19 +142,19 @@ New and improved social and collaboration features make it easy for users to com
   
     
     
- [![Interactive feed](images/wn_Social_1.png)
+ [![Interactive feed](../../images/wn_Social_1.png)
   
     
     
-](work-with-social-feeds-in-sharepoint.md) [![Community site](images/wn_Social_2.png)
+](work-with-social-feeds-in-sharepoint.md) [![Community site](../../images/wn_Social_2.png)
   
     
     
-](what-s-new-for-developers-in-social-and-collaboration-features-in-sharepoint-201.md#bkmk_Collab) [![Follow people](images/wn_Social_3.png)
+](what-s-new-for-developers-in-social-and-collaboration-features-in-sharepoint-201.md#bkmk_Collab) [![Follow people](../../images/wn_Social_3.png)
   
     
     
-](follow-people-in-sharepoint.md) [![Follow sites](images/wn_Social_4.png)
+](follow-people-in-sharepoint.md) [![Follow sites](../../images/wn_Social_4.png)
   
     
     
@@ -170,15 +170,15 @@ Search functionality in SharePoint 2013 includes several enhancements, custom co
   
     
     
- [![Consolidated search platform](images/wn_search_1.png)
+ [![Consolidated search platform](../../images/wn_search_1.png)
   
     
     
-](custom-content-processing-with-the-content-enrichment-web-service-callout.md) [![Rich results framework](images/wn_search_2.png)
+](custom-content-processing-with-the-content-enrichment-web-service-callout.md) [![Rich results framework](../../images/wn_search_2.png)
   
     
     
-](what-s-new-in-sharepoint-search-for-developers.md) [![KQL enhnacements](images/wn_search_3.png)
+](what-s-new-in-sharepoint-search-for-developers.md) [![KQL enhnacements](../../images/wn_search_3.png)
   
     
     
@@ -194,19 +194,19 @@ Workflow Manager Client 1.0 is a redesigned workflow infrastructure that is buil
   
     
     
- [![Executin in the cloud](images/wn_workflow_1.png)
+ [![Executin in the cloud](../../images/wn_workflow_1.png)
   
     
     
-](what-s-new-in-workflows-for-sharepoint.md) [![Workflow 4-based infrastructure](images/wn_workflow_2.png)
+](what-s-new-in-workflows-for-sharepoint.md) [![Workflow 4-based infrastructure](../../images/wn_workflow_2.png)
   
     
     
-](sharepoint-workflow-fundamentals.md) [![Declarative authoring](images/wn_workflow_3.png)
+](sharepoint-workflow-fundamentals.md) [![Declarative authoring](../../images/wn_workflow_3.png)
   
     
     
-](workflow-development-in-sharepoint-designer-and-visio.md) [![Designer and project templates](images/wn_workflow_4.png)
+](workflow-development-in-sharepoint-designer-and-visio.md) [![Designer and project templates](../../images/wn_workflow_4.png)
   
     
     
@@ -222,19 +222,19 @@ In SharePoint 2013, you can now use .NET client, Silverlight, Windows Phone, and
   
     
     
- [![Design Manager](images/wn_ecm_1.png)
+ [![Design Manager](../../images/wn_ecm_1.png)
   
     
     
-](what-s-new-with-sharepoint-site-development.md) [![Managed navigation](images/wn_ecm_2.png)
+](what-s-new-with-sharepoint-site-development.md) [![Managed navigation](../../images/wn_ecm_2.png)
   
     
     
-](managed-navigation-in-sharepoint.md) [![Cross-site publishing](images/wn_ecm_3.png)
+](managed-navigation-in-sharepoint.md) [![Cross-site publishing](../../images/wn_ecm_3.png)
   
     
     
-](cross-site-publishing-in-sharepoint.md) [![EDiscovery](images/wn_ecm_4.png)
+](cross-site-publishing-in-sharepoint.md) [![EDiscovery](../../images/wn_ecm_4.png)
   
     
     
@@ -250,15 +250,15 @@ Business Connectivity Services (BCS) enables SharePoint to access data from exte
   
     
     
- [![OData connector](images/wn_bcs_1.png)
+ [![OData connector](../../images/wn_bcs_1.png)
   
     
     
-](using-odata-sources-with-business-connectivity-services-in-sharepoint.md) [![External data in apps](images/wn_bcs_2.png)
+](using-odata-sources-with-business-connectivity-services-in-sharepoint.md) [![External data in apps](../../images/wn_bcs_2.png)
   
     
     
-](add-in-scoped-external-content-types-in-sharepoint.md) [![External events in SharePoint](images/wn_bcs_3.png)
+](add-in-scoped-external-content-types-in-sharepoint.md) [![External events in SharePoint](../../images/wn_bcs_3.png)
   
     
     
@@ -274,19 +274,19 @@ SharePoint Server 2013 includes several services for working with data in your S
   
     
     
- [![Translation Services](images/wn_appServices_1.png)
+ [![Translation Services](../../images/wn_appServices_1.png)
   
     
     
-](machine-translation-services-in-sharepoint.md) [![PowerPoint Automation Services](images/wn_appServices_2.png)
+](machine-translation-services-in-sharepoint.md) [![PowerPoint Automation Services](../../images/wn_appServices_2.png)
   
     
     
-](powerpoint-automation-services-in-sharepoint.md) [![Enhanced Access Services](images/wn_appServices_3.png)
+](powerpoint-automation-services-in-sharepoint.md) [![Enhanced Access Services](../../images/wn_appServices_3.png)
   
     
     
-](what-s-new-in-access.md) [![Enhanced Excel Services](images/wn_appServices_4.png)
+](what-s-new-in-access.md) [![Enhanced Excel Services](../../images/wn_appServices_4.png)
   
     
     

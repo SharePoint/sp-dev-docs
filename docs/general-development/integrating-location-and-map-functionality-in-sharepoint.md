@@ -32,7 +32,7 @@ SharePoint 2013 introduces a new field type named Geolocation that enables you t
   
     
     
-![Default location and map features](images/SP15Con_HowToAddGeolocationColumn_fig.png)
+![Default location and map features](../../images/SP15Con_HowToAddGeolocationColumn_fig.png)
   
     
     

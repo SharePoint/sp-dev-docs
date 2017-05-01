@@ -249,7 +249,7 @@ function onDeleteCompletedItemsFail(sender, args) {
 
  
 
-     ![The "New Employees in Seattle" list with the "Orientation Stage" column for two items set to Completed. There is a button labelled "Purge Completed Items" below the list.](images/e5e4eef8-a218-4797-aabc-c52adbd2d96d.PNG)
+     ![The "New Employees in Seattle" list with the "Orientation Stage" column for two items set to Completed. There is a button labelled "Purge Completed Items" below the list.](../../images/e5e4eef8-a218-4797-aabc-c52adbd2d96d.PNG)
  
 
  
@@ -264,7 +264,7 @@ function onDeleteCompletedItemsFail(sender, args) {
 
  
 
-     ![The "New Employees in Seattle" list with two fewer items than before and none of them have "Orientation Stage" set to Completed.](images/a0330fad-1473-4fde-9df2-8be0b37df1a1.PNG)
+     ![The "New Employees in Seattle" list with two fewer items than before and none of them have "Orientation Stage" set to Completed.](../../images/a0330fad-1473-4fde-9df2-8be0b37df1a1.PNG)
  
 
  

@@ -16,7 +16,7 @@ As you interact with the page, you might do something that causes SharePoint to 
   
     
     
-![The Change Preview Page and Reset Preview buttons](images/design-manager-preview-UI.jpg)
+![The Change Preview Page and Reset Preview buttons](../../images/design-manager-preview-UI.jpg)
   
     
     

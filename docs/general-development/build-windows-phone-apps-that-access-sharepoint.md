@@ -28,7 +28,7 @@ The new mobility features offered by SharePoint 2013 are built on existing Micro
   
     
     
-![SharePoint list items in a Windows Phone app](images/9159345c-ce12-41a6-8994-fc2e9aa26fd6.gif)
+![SharePoint list items in a Windows Phone app](../../images/9159345c-ce12-41a6-8994-fc2e9aa26fd6.gif)
   
     
     
@@ -120,7 +120,7 @@ In SharePoint Foundation 2010, the client object models provide APIs that enable
   
     
     
-![SharePoint client object model architecture](images/SP15Con_BuildSharePointAppsForMobileDevices_Fig3.png)
+![SharePoint client object model architecture](../../images/SP15Con_BuildSharePointAppsForMobileDevices_Fig3.png)
   
     
     
@@ -145,7 +145,7 @@ To use the REST capabilities that are built into SharePoint 2013, you can constr
   
     
     
-![SharePoint REST architecture](images/SP15Con_BuildSharePointAppsForMobileDevices_Fig2.png)
+![SharePoint REST architecture](../../images/SP15Con_BuildSharePointAppsForMobileDevices_Fig2.png)
   
     
     

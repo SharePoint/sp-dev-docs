@@ -49,7 +49,7 @@ Both AJAX and MDS are technologies that request only sections of the page to min
   
     
     
-![MDS architecture](images/OptimizePage_Fig01_MDSArchitecture.png)
+![MDS architecture](../../images/OptimizePage_Fig01_MDSArchitecture.png)
   
     
     
@@ -67,7 +67,7 @@ The MDS framework assumes that a master page defines a chrome and content region
   
     
     
-![Page chrome and regions in a SharePoint page](images/OptimizePage_Fig02_PageStructure.png)
+![Page chrome and regions in a SharePoint page](../../images/OptimizePage_Fig02_PageStructure.png)
   
     
     
@@ -653,7 +653,7 @@ You should minimize the number of images in your site. To help with that effort,
   
     
     
-![Single image file that contains multiple images](images/OptimizePage_Fig03_SingleImage.png)
+![Single image file that contains multiple images](../../images/OptimizePage_Fig03_SingleImage.png)
   
     
     
@@ -671,7 +671,7 @@ Figure 4 shows how the image file is subsequently changed to display as individu
   
     
     
-![Multiple images displayed in a table](images/OptimizePage_Fig04_ImageTable.png)
+![Multiple images displayed in a table](../../images/OptimizePage_Fig04_ImageTable.png)
   
     
     
@@ -836,7 +836,7 @@ Figure 5 shows the Developer Dashboard.
   
     
     
-![Developer dashboard](images/OptimizePage_Fig05_DevDashboard.png)
+![Developer dashboard](../../images/OptimizePage_Fig05_DevDashboard.png)
   
     
     

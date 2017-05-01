@@ -70,7 +70,7 @@ The first step is to allow workflow to use app permissions. You configure workfl
 
   
 
-     ![Settings menu](images/SPD15-WFAppPermissions1.png)
+     ![Settings menu](../../images/SPD15-WFAppPermissions1.png)
   
 
   
@@ -91,7 +91,7 @@ The first step is to allow workflow to use app permissions. You configure workfl
 
   
 
-     ![Workflow can use app permissions feature](images/SPD15-WFAppPermissions2.png)
+     ![Workflow can use app permissions feature](../../images/SPD15-WFAppPermissions2.png)
   
 
   
@@ -121,7 +121,7 @@ In order for the workflow to function properly it must be granted full control i
 
   
 
-     ![Settings menu](images/SPD15-WFAppPermissions1.png)
+     ![Settings menu](../../images/SPD15-WFAppPermissions1.png)
   
 
   
@@ -139,7 +139,7 @@ In order for the workflow to function properly it must be granted full control i
 
   
 
-     ![Selecting App Identifier](images/SPD15-WFAppPermissions3.png)
+     ![Selecting App Identifier](../../images/SPD15-WFAppPermissions3.png)
   
 
   
@@ -161,7 +161,7 @@ In order for the workflow to function properly it must be granted full control i
 
   
 
-  ![The appinv.aspx URL example and page.](images/SPD15-WFAppPermissions4.png)
+  ![The appinv.aspx URL example and page.](../../images/SPD15-WFAppPermissions4.png)
   
 
   
@@ -188,7 +188,7 @@ In order for the workflow to function properly it must be granted full control i
 
   
 
-  ![Looking up an App Id.](images/SPD15-WFAppPermissions5.png)
+  ![Looking up an App Id.](../../images/SPD15-WFAppPermissions5.png)
 
 
 8. Click **Create**.
@@ -198,7 +198,7 @@ In order for the workflow to function properly it must be granted full control i
     
   **Figure: Trust the Workflow app**
 
-  ![Trust the Workflow app.](images/SPD15-WFAppPermissions6.png)
+  ![Trust the Workflow app.](../../images/SPD15-WFAppPermissions6.png)
   
 ### Wrapping actions inside an App Step
 
@@ -225,7 +225,7 @@ Finally, you need to wrap the workflow actions inside an App Step. The following
 
   
 
-  ![Create a new List workflow.](images/SPD15-WFAppPermissions7.png)
+  ![Create a new List workflow.](../../images/SPD15-WFAppPermissions7.png)
   
 
   
@@ -237,7 +237,7 @@ Finally, you need to wrap the workflow actions inside an App Step. The following
 
   
 
-  ![Adding an App Step.](images/SPD15-WFAppPermissions8.png)
+  ![Adding an App Step.](../../images/SPD15-WFAppPermissions8.png)
   
 
   
@@ -250,14 +250,14 @@ Finally, you need to wrap the workflow actions inside an App Step. The following
     
   **Figure: Select Workflow lookup for a user**
 
-  ![Select Workflow lookup for a user.](images/SPD15-WFAppPermissions9.png)
+  ![Select Workflow lookup for a user.](../../images/SPD15-WFAppPermissions9.png)
   
 
 8. Enter the **Created By** field as the lookup value, as shown in the figure.
     
   **Figure: Lookup for Person dialog box**
 
-  ![Lookup for Person dialog.](images/SPD15-WFAppPermissions10.png)
+  ![Lookup for Person dialog.](../../images/SPD15-WFAppPermissions10.png)
   
 9. Enter Email from App Demo list in the email message body.
     
@@ -266,7 +266,7 @@ Finally, you need to wrap the workflow actions inside an App Step. The following
     
   **Figure: Email action in App Step**
 
-  ![Email action in App Step.](images/SPD15-WFAppPermissions11.png)
+  ![Email action in App Step.](../../images/SPD15-WFAppPermissions11.png)
     
 11. Click the **Workflow Settings** icon in the ribbon, as shown in the figure.
     
@@ -274,7 +274,7 @@ Finally, you need to wrap the workflow actions inside an App Step. The following
 
   
 
-  ![Workflow Settings icon in ribbon.](images/SPD15-WFAppPermissions12.png)
+  ![Workflow Settings icon in ribbon.](../../images/SPD15-WFAppPermissions12.png)
   
 
   
@@ -286,7 +286,7 @@ Finally, you need to wrap the workflow actions inside an App Step. The following
 
   
 
-  ![Clear automatic updates check mark and publish.](images/SPD15-WFAppPermissions13.png)
+  ![Clear automatic updates check mark and publish.](../../images/SPD15-WFAppPermissions13.png)
   
 
 
@@ -305,7 +305,7 @@ To understand why elevating permissions for a workflow is required, consider tha
   
     
     
-![Permissions diagram.](images/SPD15-WFAppPermissions14.png)
+![Permissions diagram.](../../images/SPD15-WFAppPermissions14.png)
   
     
     
@@ -338,7 +338,7 @@ The following diagram illustrates the change in permissions
   
     
     
-![Permissions matrix.](images/SPD15-WFAppPermissions15.png)
+![Permissions matrix.](../../images/SPD15-WFAppPermissions15.png)
   
     
     

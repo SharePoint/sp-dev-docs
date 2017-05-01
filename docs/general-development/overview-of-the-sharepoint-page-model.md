@@ -42,7 +42,7 @@ SharePoint uses templates to define and render the pages that a site displays. T
   
     
     
-![Master page, page layout, and page](images/101_page_model_overview.gif)
+![Master page, page layout, and page](../../images/101_page_model_overview.gif)
   
     
     
@@ -63,7 +63,7 @@ A master page defines the chrome (the shared framing elements) of your site. The
   
     
     
-![Master page](images/102_master_page.gif)
+![Master page](../../images/102_master_page.gif)
   
     
     
@@ -81,7 +81,7 @@ A master page also defines regions called content placeholders that are filled i
   
     
     
-![Master page with page layout outlined](images/103_master_page_with_page_layout_outlined.gif)
+![Master page with page layout outlined](../../images/103_master_page_with_page_layout_outlined.gif)
   
     
     
@@ -99,7 +99,7 @@ When you preview a master page in Design Manager, you see the following message.
   
     
     
-![Master page preview message](images/104_master_page_preview_message.gif)
+![Master page preview message](../../images/104_master_page_preview_message.gif)
   
     
     
@@ -128,7 +128,7 @@ A page layout is a template for a specific type of page in your site, such as an
   
     
     
-![Page layout](images/105_page_layout.gif)
+![Page layout](../../images/105_page_layout.gif)
   
     
     
@@ -146,7 +146,7 @@ Page layouts define regions or content areas that map to content placeholders on
   
     
     
-![Content region and content placeholder](images/106_content_region_and_content_placeholder.gif)
+![Content region and content placeholder](../../images/106_content_region_and_content_placeholder.gif)
   
     
     
@@ -179,7 +179,7 @@ With a page field control, you can define the styles used by the content. Author
   
     
     
-![Page layout with page field controls](images/107_page_layout_with_page_fields.gif)
+![Page layout with page field controls](../../images/107_page_layout_with_page_fields.gif)
   
     
     
@@ -204,7 +204,7 @@ Together, a master page and a page layout create a content page.
   
     
     
-![Master page with page layout](images/108_master_page_with_page_layout.gif)
+![Master page with page layout](../../images/108_master_page_with_page_layout.gif)
   
     
     
@@ -222,7 +222,7 @@ The master page defines the chrome for all pages in the site so, often many page
   
     
     
-![One master page tied to three page layouts](images/109_one_master_many_layouts.gif)
+![One master page tied to three page layouts](../../images/109_one_master_many_layouts.gif)
   
     
     
@@ -251,7 +251,7 @@ Authors can create pages and add content to the page fields, and they can add We
   
     
     
-![Page with authored content](images/110_page_with_authored_content.gif)
+![Page with authored content](../../images/110_page_with_authored_content.gif)
   
     
     
@@ -269,7 +269,7 @@ The rendered page is what site visitors see. When a page is requested by the bro
   
     
     
-![Rendered page in browser](images/111_rendered_page.gif)
+![Rendered page in browser](../../images/111_rendered_page.gif)
   
     
     
@@ -283,7 +283,7 @@ The rendered page is what site visitors see. When a page is requested by the bro
   
     
     
-![Master page, page layout, and page](images/112_master_plus_layout_plus_page.gif)
+![Master page, page layout, and page](../../images/112_master_plus_layout_plus_page.gif)
   
     
     
@@ -343,7 +343,7 @@ In the search-driven pages scenario, a SharePoint page contains these main eleme
   
     
     
-![Master page, page layout, and page with Web Part](images/113_114_master_and_layout_and_page_and_web_part_closeup.gif)
+![Master page, page layout, and page with Web Part](../../images/113_114_master_and_layout_and_page_and_web_part_closeup.gif)
   
     
     
@@ -368,7 +368,7 @@ SharePoint Server 2013 includes several ready-to-use display templates such as l
   
     
     
-![Tool pane of Content Search Web Part](images/115_content_search_web_part_tool_pane.gif)
+![Tool pane of Content Search Web Part](../../images/115_content_search_web_part_tool_pane.gif)
   
     
     
@@ -386,7 +386,7 @@ Content Search Web Parts use two types of display templates, control and item. A
   
     
     
-![Two diagrams of Content Search Web Parts](images/116_117_control_templates_1_and_2.gif)
+![Two diagrams of Content Search Web Parts](../../images/116_117_control_templates_1_and_2.gif)
   
     
     
@@ -419,7 +419,7 @@ The control template also includes functionality common to all the search result
   
     
     
-![Control template outlined on Web Part and webpage](images/118_119_control_template_outlined_on_web_part_and_page.gif)
+![Control template outlined on Web Part and webpage](../../images/118_119_control_template_outlined_on_web_part_and_page.gif)
   
     
     
@@ -452,7 +452,7 @@ The item display template also determines which managed properties and values ar
   
     
     
-![Item templates outlined on Web Part and webpage](images/120_121_item_templates_outlined_on_web_part_and_page.gif)
+![Item templates outlined on Web Part and webpage](../../images/120_121_item_templates_outlined_on_web_part_and_page.gif)
   
     
     
@@ -510,7 +510,7 @@ When you create a device channel, you specify the user agent substrings for the 
   
     
     
-![Two device channels with separate master pages](images/122_123_two_channels_two_master_pages.gif)
+![Two device channels with separate master pages](../../images/122_123_two_channels_two_master_pages.gif)
   
     
     
@@ -539,7 +539,7 @@ This is one of the primary benefits of device channels: the design changes (the 
   
     
     
-![One page layout working with two master pages](images/124_one_layout_many_masters.gif)
+![One page layout working with two master pages](../../images/124_one_layout_many_masters.gif)
   
     
     
@@ -572,7 +572,7 @@ Perhaps the most common scenario for using channel panels is to selectively incl
   
     
     
-![Page layout with channel panels](images/125_126_page_layout_with_channel_panels.gif)
+![Page layout with channel panels](../../images/125_126_page_layout_with_channel_panels.gif)
   
     
     
@@ -594,7 +594,7 @@ Or, you can use a channel panel inside the item display template of a Content Se
   
     
     
-![Page layout and item templates with channel panels](images/127_128_item_display_templates_with_channel_panel.gif)
+![Page layout and item templates with channel panels](../../images/127_128_item_display_templates_with_channel_panel.gif)
   
     
     

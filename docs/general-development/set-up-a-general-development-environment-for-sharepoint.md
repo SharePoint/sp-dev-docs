@@ -90,7 +90,7 @@ SharePoint requires your operating system to have certain prerequisites installe
 
   
 
-     ![SharePoint 2013 Installation Server Type](images/SP15_app_ServerType.gif)
+     ![SharePoint 2013 Installation Server Type](../../images/SP15_app_ServerType.gif)
   
 
   
@@ -114,7 +114,7 @@ dir /od *.log
 
   
 
-     ![SharePoint 2013 site templates](images/SP15_app_ChooseSiteTemplates.gif)
+     ![SharePoint 2013 site templates](../../images/SP15_app_ChooseSiteTemplates.gif)
   
 
   

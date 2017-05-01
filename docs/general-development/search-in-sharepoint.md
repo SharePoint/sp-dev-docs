@@ -63,7 +63,7 @@ These areas consist of components and databases that work cohesively to perform 
   
     
     
-![Search Component Interaction](images/SearchComponentInteraction.jpg)
+![Search Component Interaction](../../images/SearchComponentInteraction.jpg)
   
     
     

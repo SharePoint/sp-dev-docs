@@ -573,7 +573,7 @@ If you start the project and deploy the app to the Windows Phone Emulator to run
   
     
     
-![Displaying Guid fields](images/eb20da0e-793f-43af-aa5e-67f85cdfa2df.gif)
+![Displaying Guid fields](../../images/eb20da0e-793f-43af-aa5e-67f85cdfa2df.gif)
   
     
     

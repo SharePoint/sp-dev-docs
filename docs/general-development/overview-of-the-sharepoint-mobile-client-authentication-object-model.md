@@ -106,7 +106,7 @@ If the SharePoint URL has basic or forms-based authentication support, the **Exe
   
     
     
-![SharePointClientAuthentication](images/SP15Con_SharePointClientAuthenticationFig1.png)
+![SharePointClientAuthentication](../../images/SP15Con_SharePointClientAuthenticationFig1.png)
   
     
     

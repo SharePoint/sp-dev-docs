@@ -145,7 +145,7 @@ In this walkthrough we demonstrate how to create a custom association form and u
 
   
 
-     ![SharePoint Customization Wizard](images/CreateSharePoint2013Workflows.png)
+     ![SharePoint Customization Wizard](../../images/CreateSharePoint2013Workflows.png)
   
 
   
@@ -160,7 +160,7 @@ In this walkthrough we demonstrate how to create a custom association form and u
 
   
 
-     ![The Add New Item dialog box.](images/CreateSharePoint2013WorkflowsFig2.png)
+     ![The Add New Item dialog box.](../../images/CreateSharePoint2013WorkflowsFig2.png)
   
 
   
@@ -278,7 +278,7 @@ With the form complete, the next step is to configure the workflow to use the va
 
   
 
-     ![Creating a string variable.](images/CreatSharePoint2013WorkflowsFig4.png)
+     ![Creating a string variable.](../../images/CreatSharePoint2013WorkflowsFig4.png)
   
 
   
@@ -290,7 +290,7 @@ With the form complete, the next step is to configure the workflow to use the va
 
   
 
-     ![Set the Result property.](images/CreateSharePoint2013WorkflowsFig5.png)
+     ![Set the Result property.](../../images/CreateSharePoint2013WorkflowsFig5.png)
   
 
   
@@ -326,7 +326,7 @@ With the form complete, the next step is to configure the workflow to use the va
 
   
 
-     ![Figure 5. Custom workflow association form](images/ngFormsFig5.png)
+     ![Figure 5. Custom workflow association form](../../images/ngFormsFig5.png)
   
 
   
@@ -341,7 +341,7 @@ With the form complete, the next step is to configure the workflow to use the va
 
   
 
-     ![Figure 6. Association form: Status pane](images/ngFormsFig6.png)
+     ![Figure 6. Association form: Status pane](../../images/ngFormsFig6.png)
   
 
   
@@ -383,7 +383,7 @@ This walkthrough demonstrates creating a custom association form and using it to
 
   
 
-     ![Figure 7. Solution Explorer view of the project](images/ngFormsFig7.png)
+     ![Figure 7. Solution Explorer view of the project](../../images/ngFormsFig7.png)
   
 
   
@@ -403,7 +403,7 @@ The workflow initiation form prompts users for two pieces of information that it
 
   
 
-     ![Figure 8. Configuring initiation form arguments](images/ngFormsFig8.png)
+     ![Figure 8. Configuring initiation form arguments](../../images/ngFormsFig8.png)
   
 
   
@@ -423,7 +423,7 @@ The workflow initiation form prompts users for two pieces of information that it
 
   
 
-     ![Figure 9. Configuring a WriteToHistory activity](images/ngFormsFig9.png)
+     ![Figure 9. Configuring a WriteToHistory activity](../../images/ngFormsFig9.png)
   
 
   
@@ -477,7 +477,7 @@ When you added the new initiation form to the project, Visual Studio 2012 automa
   
     
     
-![Figure 10. Code comment to disregard](images/ngFormsFig10.png)
+![Figure 10. Code comment to disregard](../../images/ngFormsFig10.png)
   
     
     
@@ -617,7 +617,7 @@ Because the workflow definition contains a reference to an initiation form, the 
   
     
     
-![Starting the workflow instance.](images/CreateSharePoint2013WorkflowsFig7.png)
+![Starting the workflow instance.](../../images/CreateSharePoint2013WorkflowsFig7.png)
   
     
     
@@ -635,7 +635,7 @@ After starting the workflow, the page redirects the user back to the originating
   
     
     
-![The sample workflow.](images/CreateSharePoint2013WorkflowsFig8.png)
+![The sample workflow.](../../images/CreateSharePoint2013WorkflowsFig8.png)
   
     
     

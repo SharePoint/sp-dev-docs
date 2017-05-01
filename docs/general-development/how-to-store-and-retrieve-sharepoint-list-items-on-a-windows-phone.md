@@ -850,7 +850,7 @@ If you start the project and deploy it to a Windows Phone Emulator, you see a **
   
     
     
-![Modified List Form with View Drafts button](images/921bd9ab-d9a4-4cb6-b168-9ae53401d6d6.gif)
+![Modified List Form with View Drafts button](../../images/921bd9ab-d9a4-4cb6-b168-9ae53401d6d6.gif)
   
     
     
@@ -868,7 +868,7 @@ At first, because no drafts are saved, the page to display drafts will be empty.
   
     
     
-![Modified Edit Form with Save Draft button](images/ce88b78d-5d41-406f-bf51-bee45ad2fe8f.gif)
+![Modified Edit Form with Save Draft button](../../images/ce88b78d-5d41-406f-bf51-bee45ad2fe8f.gif)
   
     
     
@@ -886,7 +886,7 @@ When the server becomes available again, you can choose the **View Drafts** butt
   
     
     
-![Drafts page displaying list items saved as drafts](images/99ff6118-ed5d-4a21-9c11-3aabec8df1e5.gif)
+![Drafts page displaying list items saved as drafts](../../images/99ff6118-ed5d-4a21-9c11-3aabec8df1e5.gif)
   
     
     
@@ -904,7 +904,7 @@ If you choose an item on the Drafts page, the Draft Item Edit form (DraftItemEdi
   
     
     
-![The Draft Item Edit Form](images/e3718687-682a-41a8-92b5-4eff9070348d.gif)
+![The Draft Item Edit Form](../../images/e3718687-682a-41a8-92b5-4eff9070348d.gif)
   
     
     

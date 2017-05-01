@@ -91,7 +91,7 @@ Excel Services also enables you to calculate data on the server. Excel Services 
   
     
     
-![Dashboard with filtering and Excel content](images/17740d96-b5cf-4a0f-938d-a0d0d1e91f1e.GIF)
+![Dashboard with filtering and Excel content](../../images/17740d96-b5cf-4a0f-938d-a0d0d1e91f1e.GIF)
   
     
     
@@ -121,7 +121,7 @@ If you want to use certain functionalities in Excel or if you want to analyze a 
   
     
     
-![Using the Parameters pane](images/65926095-d833-4eb2-b899-9efe40e2d540.GIF)
+![Using the Parameters pane](../../images/65926095-d833-4eb2-b899-9efe40e2d540.GIF)
   
     
     

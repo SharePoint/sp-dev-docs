@@ -62,7 +62,7 @@ The following UX resources are available for cloud-hosted add-ins in SharePoint 
  
 
  
-![Videos](images/mod_icon_video.png)
+![Videos](../../images/mod_icon_video.png)
  
 
  
@@ -81,7 +81,7 @@ Figure 2 shows the resources in the model for SharePoint Add-ins for cloud-hoste
  
 
  
-![App UX resources for developer-hosted apps](images/AppUX_devhosted.png)
+![App UX resources for developer-hosted apps](../../images/AppUX_devhosted.png)
  
 
  
@@ -136,7 +136,7 @@ Figure 3 shows the resources in the model for SharePoint Add-ins to connect your
  
 
  
-![App UX resources for the host web](images/AppUX_hostweb.png)
+![App UX resources for the host web](../../images/AppUX_hostweb.png)
  
 
  

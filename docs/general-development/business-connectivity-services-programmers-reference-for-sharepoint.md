@@ -10,7 +10,7 @@ ms.assetid: cfc9bdf8-ddf3-40e1-83d9-dbd304cebd57
   
     
     
-![Class libraries and references](images/mod_icon_badge_reference.png)
+![Class libraries and references](../../images/mod_icon_badge_reference.png)
   
     
     

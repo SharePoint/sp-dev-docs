@@ -89,7 +89,7 @@ You can also access the chart by using the discovery user interface. To learn ho
   
     
     
-![Excel Services REST model URL](images/SharePointServer14Con_XLSvcs_RESTModel.gif)
+![Excel Services REST model URL](../../images/SharePointServer14Con_XLSvcs_RESTModel.gif)
   
     
     

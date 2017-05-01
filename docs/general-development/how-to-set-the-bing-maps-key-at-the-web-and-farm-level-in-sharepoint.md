@@ -10,7 +10,7 @@ ms.assetid: 507ed9de-c349-44b5-b182-e838795dd862
   
     
     
-![How to topic](images/mod_icon_howto.png)
+![How to topic](../../images/mod_icon_howto.png)
   
     
     

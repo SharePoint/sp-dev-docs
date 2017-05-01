@@ -10,7 +10,7 @@ ms.assetid: ca78b080-0be4-4da4-b112-b86b1bde66e4
   
     
     
-![SharePoint](images/mod_logo_sharepoint.png)
+![SharePoint](../../images/mod_logo_sharepoint.png)
   
     
     

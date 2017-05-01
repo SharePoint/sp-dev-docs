@@ -13,7 +13,7 @@ Learn the basics of what Business Connectivity Services (BCS) provides to develo
 
 |||
 |:-----|:-----|
-|Business Connectivity Services (BCS) was introduced in SharePoint Server 2010 as an evolution of the Business Data Catalog released in Office SharePoint Server 2007. BCS enables SharePoint 2013 to work with data that is hosted externally. Possible sources can include databases, web services, Windows Communication Foundation (WCF) services, Open Data Protocol (OData) sources, and other proprietary data that is accessed by using custom .NET assemblies. [![Get set up](images/mod_icon_getstartbox.gif)          ](get-started-with-business-connectivity-services-in-sharepoint.md#SP15GettingStartedBCS_WhatDoYouNeed) [![Get to work](images/mod_icon_dobox.gif)          ](get-started-with-business-connectivity-services-in-sharepoint.md#SP15GettingStartedBCS_WhatCanYouDo) [![Learn more](images/mod_icon_startbox.gif)          ](get-started-with-business-connectivity-services-in-sharepoint.md#SP15GettingStartedBCS_LearnMore)|
+|Business Connectivity Services (BCS) was introduced in SharePoint Server 2010 as an evolution of the Business Data Catalog released in Office SharePoint Server 2007. BCS enables SharePoint 2013 to work with data that is hosted externally. Possible sources can include databases, web services, Windows Communication Foundation (WCF) services, Open Data Protocol (OData) sources, and other proprietary data that is accessed by using custom .NET assemblies. [![Get set up](../../images/mod_icon_getstartbox.gif)          ](get-started-with-business-connectivity-services-in-sharepoint.md#SP15GettingStartedBCS_WhatDoYouNeed) [![Get to work](../../images/mod_icon_dobox.gif)          ](get-started-with-business-connectivity-services-in-sharepoint.md#SP15GettingStartedBCS_WhatCanYouDo) [![Learn more](../../images/mod_icon_startbox.gif)          ](get-started-with-business-connectivity-services-in-sharepoint.md#SP15GettingStartedBCS_LearnMore)|
 **Watch the video: SharePoint 2013 business connectivity services and OData services overview**
 
   
@@ -23,7 +23,7 @@ Learn the basics of what Business Connectivity Services (BCS) provides to develo
   
     
     
-![Videos](images/mod_icon_video.png)
+![Videos](../../images/mod_icon_video.png)
   
     
     

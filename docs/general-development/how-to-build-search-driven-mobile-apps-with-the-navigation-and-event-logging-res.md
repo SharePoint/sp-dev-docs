@@ -47,7 +47,7 @@ Typically the **Home** page is displayed when the app starts up. The **Home** pa
   
     
     
-![Build search-driven mobile apps](images/SP15_Buildsearch-drivenmobileappspages_home.gif)
+![Build search-driven mobile apps](../../images/SP15_Buildsearch-drivenmobileappspages_home.gif)
   
     
     
@@ -89,7 +89,7 @@ The **Category** page displays many items in a selected category. Each item list
   
     
     
-![Build search-driven mobile apps](images/Buildsearch-drivenmobileappspages.gif)
+![Build search-driven mobile apps](../../images/Buildsearch-drivenmobileappspages.gif)
   
     
     
@@ -135,7 +135,7 @@ If you select an item in a category, the **Item details** page appears. On this 
   
     
     
-![Build search driven](images/Buildsearch-drivenmobileappspages_item_details.gif)
+![Build search driven](../../images/Buildsearch-drivenmobileappspages_item_details.gif)
   
     
     

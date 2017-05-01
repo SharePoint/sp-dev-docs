@@ -23,7 +23,7 @@ The following figure shows the main components in the system: Microsoft Windows 
   
     
     
-![SharePoint to VSS Relationships](images/77a290e8-e4aa-4c54-b1ec-3d74bf3962b6.gif)
+![SharePoint to VSS Relationships](../../images/77a290e8-e4aa-4c54-b1ec-3d74bf3962b6.gif)
   
     
     

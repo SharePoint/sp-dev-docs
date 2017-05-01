@@ -1286,7 +1286,7 @@ If you compile the project and deploy the app to the Windows Phone Emulator to r
   
     
     
-![Settings page for notification registration](images/bee8bbc5-a93d-4695-927b-c10e0e63ddf9.gif)
+![Settings page for notification registration](../../images/bee8bbc5-a93d-4695-927b-c10e0e63ddf9.gif)
   
     
     
@@ -1304,7 +1304,7 @@ If you have deployed and activated the PushNotificationsList solution (developed
   
     
     
-![Toast notification (app running)](images/19b38f1b-8f98-4e91-8384-ba0e2d3da744.gif)
+![Toast notification (app running)](../../images/19b38f1b-8f98-4e91-8384-ba0e2d3da744.gif)
   
     
     
@@ -1322,7 +1322,7 @@ The message displayed when your app received a toast notification while it's run
   
     
     
-![Raw notification](images/2e5dc58a-55d2-48c6-a162-974199ff5e5c.gif)
+![Raw notification](../../images/2e5dc58a-55d2-48c6-a162-974199ff5e5c.gif)
   
     
     
@@ -1340,7 +1340,7 @@ If the app is not running when the item is added to the list, the phone should s
   
     
     
-![Toast notification (app not running)](images/c046bc5c-1e31-4ac6-9cba-05482cc36915.gif)
+![Toast notification (app not running)](../../images/c046bc5c-1e31-4ac6-9cba-05482cc36915.gif)
   
     
     

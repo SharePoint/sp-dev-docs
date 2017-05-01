@@ -86,7 +86,7 @@ Following is a screen shot of the model page.
   
     
     
-![Excel Services REST model URL](images/SharePointServer14Con_XLSvcs_RESTModel.gif)
+![Excel Services REST model URL](../../images/SharePointServer14Con_XLSvcs_RESTModel.gif)
   
     
     
@@ -109,7 +109,7 @@ For example, to access the chart in the workbook by using discovery, do the foll
 
   
 
-     ![Excel Services REST discovery chart list](images/19126dce-b896-4623-8686-92f2fa807283.gif)
+     ![Excel Services REST discovery chart list](../../images/19126dce-b896-4623-8686-92f2fa807283.gif)
   
 
   
@@ -121,7 +121,7 @@ For example, to access the chart in the workbook by using discovery, do the foll
 
   
 
-     ![Viewing chart using REST](images/11734dcf-1b57-40cc-b1e8-8b10b7e5d5cb.gif)
+     ![Viewing chart using REST](../../images/11734dcf-1b57-40cc-b1e8-8b10b7e5d5cb.gif)
   
 
   

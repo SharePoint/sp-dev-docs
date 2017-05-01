@@ -60,7 +60,7 @@ The process for packaging a workflow involves saving the workflow to a template 
 
   
 
-     ![Packaging workflow in SPD 2013](images/SPD15-PackagingWorkflow1.png)
+     ![Packaging workflow in SPD 2013](../../images/SPD15-PackagingWorkflow1.png)
   
 
   
@@ -75,7 +75,7 @@ The process for packaging a workflow involves saving the workflow to a template 
 
   
 
-     ![Workflow template in Site Assets.](images/SPD15-PackagingWorkflow2.png)
+     ![Workflow template in Site Assets.](../../images/SPD15-PackagingWorkflow2.png)
   
 
   
@@ -131,7 +131,7 @@ Before you can deploy a workflow you must first export the workflow template fro
 
   
 
-     ![Export workflow file from SPD.](images/SPD15-PackagingWorkflow3.png)
+     ![Export workflow file from SPD.](../../images/SPD15-PackagingWorkflow3.png)
   
 
   
@@ -161,7 +161,7 @@ To deploy a workflow package follow this procedure.
 
   
 
-     ![Upload solution button.](images/SPD15-PackagingWorkflow4.png)
+     ![Upload solution button.](../../images/SPD15-PackagingWorkflow4.png)
   
 
   
@@ -173,7 +173,7 @@ To deploy a workflow package follow this procedure.
 
   
 
-     ![Activate solution after upload.](images/SPD15-PackagingWorkflow5.png)
+     ![Activate solution after upload.](../../images/SPD15-PackagingWorkflow5.png)
   
 
   
@@ -206,7 +206,7 @@ After a workflow solution has been activated for a site collection, it is availa
   
     
     
-![Activate site feature.](images/SPD15-PackagingWorkflow6.png)
+![Activate site feature.](../../images/SPD15-PackagingWorkflow6.png)
   
     
     

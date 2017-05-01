@@ -213,7 +213,7 @@ By default, an image rendition is generated from the center of the image. You ca
   
     
     
-![Original image rendition](images/ImgRendition_orig.PNG)
+![Original image rendition](../../images/ImgRendition_orig.PNG)
   
     
     
@@ -227,7 +227,7 @@ By default, an image rendition is generated from the center of the image. You ca
   
     
     
-![Cropped image rendition](images/ImgRendition_crop.PNG)
+![Cropped image rendition](../../images/ImgRendition_crop.PNG)
   
     
     

@@ -34,7 +34,7 @@ MSMQ is provided as a "Feature" in Windows Server. To enable MSMQ, do the follow
 
   
 
-     ![Figure 1. Adding the Message Queuing feature.](images/ng_MsmqFeature.png)
+     ![Figure 1. Adding the Message Queuing feature.](../../images/ng_MsmqFeature.png)
   
 
   
@@ -56,7 +56,7 @@ MSMQ is provided as a "Feature" in Windows Server. To enable MSMQ, do the follow
 
   
 
-     ![Figure 2. The Message Queuing feature added to Ser](images/ng_MsmqQueues.png)
+     ![Figure 2. The Message Queuing feature added to Ser](../../images/ng_MsmqQueues.png)
   
 
     

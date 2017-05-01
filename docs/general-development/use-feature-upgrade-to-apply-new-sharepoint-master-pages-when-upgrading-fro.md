@@ -77,7 +77,7 @@ XML
 
   
 
-     ![After you create an event receiver to your feature, a code file appears under the feature.](images/SP15_FeatureReceiverVS.png)
+     ![After you create an event receiver to your feature, a code file appears under the feature.](../../images/SP15_FeatureReceiverVS.png)
   
 
     This file contains a commented and empty  `FeatureUpgrading` method. You'll use this method in the following step.

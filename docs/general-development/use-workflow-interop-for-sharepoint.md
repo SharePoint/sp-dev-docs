@@ -41,7 +41,7 @@ SharePoint workflow interop enables SharePoint 2010 workflows (built on Windows 
   
     
     
-![Workflow interop bridge](images/wfInteropBridge.png)
+![Workflow interop bridge](../../images/wfInteropBridge.png)
   
     
     
@@ -67,7 +67,7 @@ Let's walk through the process depicted in Figure 1. Use the letters to referenc
 
   
 
-     ![Start a 2010 workflow](images/wfInterop_Stage1.png)
+     ![Start a 2010 workflow](../../images/wfInterop_Stage1.png)
   
 
     
@@ -90,7 +90,7 @@ Let's walk through the process depicted in Figure 1. Use the letters to referenc
 
   
 
-     ![Setting properties on a Start Workflow activity](images/wfInterop_.png)
+     ![Setting properties on a Start Workflow activity](../../images/wfInterop_.png)
   
 
   
@@ -145,7 +145,7 @@ The activity is in fact a sequence of messages that take place between the Workf
   
     
     
-![Workflow interop messaging](images/wfInteropMessaging.png)
+![Workflow interop messaging](../../images/wfInteropMessaging.png)
   
     
     

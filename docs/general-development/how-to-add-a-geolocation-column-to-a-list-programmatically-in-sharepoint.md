@@ -102,7 +102,7 @@ class Program
 
   
 
-     ![Default Geolocation and Map feature](images/SP15Con_HowToAddGeolocationColumnUpdated_Fig1.png)
+     ![Default Geolocation and Map feature](../../images/SP15Con_HowToAddGeolocationColumnUpdated_Fig1.png)
   
 
   

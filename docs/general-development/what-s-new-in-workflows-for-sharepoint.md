@@ -34,7 +34,7 @@ Perhaps the most prominent feature of the new workflow infrastructure is the int
   
     
     
-![High-level workflow architecture](images/wfArchitecture1.png)
+![High-level workflow architecture](../../images/wfArchitecture1.png)
   
     
     

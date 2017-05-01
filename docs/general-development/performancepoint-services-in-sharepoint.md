@@ -137,7 +137,7 @@ Supported extensions run within a PerformancePoint Services application instance
   
     
     
-![PerformancePoint Services extensibility points](images/SPS14_PerfPoint_ArchOverview.gif)
+![PerformancePoint Services extensibility points](../../images/SPS14_PerfPoint_ArchOverview.gif)
   
     
     

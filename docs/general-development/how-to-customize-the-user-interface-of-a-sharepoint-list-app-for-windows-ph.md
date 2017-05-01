@@ -191,7 +191,7 @@ If you start the project (by pressing F5) to deploy it to the Windows Phone Emul
   
     
     
-![Edit form with DatePicker control](images/787df903-833d-4a12-a692-716ceaf54c10.gif)
+![Edit form with DatePicker control](../../images/787df903-833d-4a12-a692-716ceaf54c10.gif)
   
     
     
@@ -209,7 +209,7 @@ The **DatePicker** control (highlighted for the **Order Date** field in Figure 1
   
     
     
-![Date chooser page](images/21aebcdb-d7e6-4a61-ac6e-6ae266b1b55d.gif)
+![Date chooser page](../../images/21aebcdb-d7e6-4a61-ac6e-6ae266b1b55d.gif)
   
     
     

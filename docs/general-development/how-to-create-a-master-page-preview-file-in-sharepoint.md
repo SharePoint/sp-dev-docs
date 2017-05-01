@@ -184,7 +184,7 @@ The tokens listed in Table 4 are used in the HTML section of the master page pre
   
     
     
-![Preinstalled theme](images/theme_.PNG)
+![Preinstalled theme](../../images/theme_.PNG)
   
     
     

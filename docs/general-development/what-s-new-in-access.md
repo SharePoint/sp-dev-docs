@@ -40,7 +40,7 @@ Figure 1 provides an overview of Access 2013 architecture.
   
     
     
-![Access 2013 architecture](images/odc_Office15_Access15OverviewDK2_Figure07.jpg)
+![Access 2013 architecture](../../images/odc_Office15_Access15OverviewDK2_Figure07.jpg)
   
     
     

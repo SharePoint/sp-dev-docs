@@ -62,7 +62,7 @@ You can register your add-in in one of three ways, depending on where you are in
 
  
 
-     ![The form on the App Reg New page with boxes for client ID, client secret, title, app domain, &amp; redirect URL. Buttons named "generate" are beside the first two. In the corner are Create and Cancel buttons.](images/9a38d876-2189-418c-9314-ae493a4cab61.PNG)
+     ![The form on the App Reg New page with boxes for client ID, client secret, title, app domain, &amp; redirect URL. Buttons named "generate" are beside the first two. In the corner are Create and Cancel buttons.](../../images/9a38d876-2189-418c-9314-ae493a4cab61.PNG)
  
 
  

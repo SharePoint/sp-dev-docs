@@ -1475,7 +1475,7 @@ Boosts the dynamic rank of items based on certain term occurrences within the  _
   
     
     
-![Formula for XRANK operator](images/XRANKFormula.gif)
+![Formula for XRANK operator](../../images/XRANKFormula.gif)
   
     
     

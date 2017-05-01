@@ -76,7 +76,7 @@ If you create a Visual Studio project based on the Windows Phone Empty SharePoin
   
     
     
-![Windows Phone Empty SharePoint Application project](images/SP15_OverviewOfWinPhoneSPTemplatesInVisualStudio_fig1.PNG)
+![Windows Phone Empty SharePoint Application project](../../images/SP15_OverviewOfWinPhoneSPTemplatesInVisualStudio_fig1.PNG)
   
     
     
@@ -116,7 +116,7 @@ The files generated for a Visual Studio project using the Windows Phone SharePoi
   
     
     
-![Windows Phone SharePoint List Application project](images/1a9680d3-7a96-4d82-b0b9-9a9384bf96c2.gif)
+![Windows Phone SharePoint List Application project](../../images/1a9680d3-7a96-4d82-b0b9-9a9384bf96c2.gif)
   
     
     

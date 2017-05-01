@@ -36,7 +36,7 @@ To use the REST capabilities that are built into SharePoint 2013, you can constr
   
     
     
-![SharePoint REST architecture](images/SP15Con_BuildSharePointAppsForMobileDevices_Fig2.png)
+![SharePoint REST architecture](../../images/SP15Con_BuildSharePointAppsForMobileDevices_Fig2.png)
   
     
     

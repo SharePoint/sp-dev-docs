@@ -318,7 +318,7 @@ function favoriteColorViewTemplate(ctx) {
 
   
 
-     ![Creating a new custom field type column](images/CSRFieldType_addcolumn.png)
+     ![Creating a new custom field type column](../../images/CSRFieldType_addcolumn.png)
   
 
   

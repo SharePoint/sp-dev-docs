@@ -71,7 +71,7 @@ The stage construct within a SharePoint Designer 2013 based workflow is based on
   
     
     
-![Figure 1. Flowchart workflow](images/ngWfFig01.png)
+![Figure 1. Flowchart workflow](../../images/ngWfFig01.png)
   
     
     
@@ -100,7 +100,7 @@ State machine workflows, like flowchart workflows, do not typically follow a spe
   
     
     
-![Figure 2. State machine workflow](images/ngWfFig02.png)
+![Figure 2. State machine workflow](../../images/ngWfFig02.png)
   
     
     
@@ -142,7 +142,7 @@ Before building a custom workflow, developers should have a good understanding o
   
     
     
-![Figure 3. Workflow authoring interface](images/ngWfFig03.png)
+![Figure 3. Workflow authoring interface](../../images/ngWfFig03.png)
   
     
     
@@ -217,7 +217,7 @@ To create a custom workflow using Visual Studio 2012 or later, ensure that you h
 
   
 
-     ![Figure 4. Default designer surface](images/ngWfFig04.png)
+     ![Figure 4. Default designer surface](../../images/ngWfFig04.png)
   
 
   
@@ -244,7 +244,7 @@ This workflow sample will illustrate this practice of segmenting your workflows.
   
     
     
-![Figure 5. Adding child sequences](images/ngWfFig05.png)
+![Figure 5. Adding child sequences](../../images/ngWfFig05.png)
   
     
     
@@ -277,7 +277,7 @@ You can comment a given workflow activity by selecting the activity, the selecti
   
     
     
-![Figure 6. Annotation on an activity](images/ngWfFig06.png)
+![Figure 6. Annotation on an activity](../../images/ngWfFig06.png)
   
     
     
@@ -336,7 +336,7 @@ The point, of course, is to get some values from the list item that triggered th
 
   
 
-     ![Figure 7. Extracting values from list items](images/ngWfFig07.png)
+     ![Figure 7. Extracting values from list items](../../images/ngWfFig07.png)
   
 
   
@@ -376,7 +376,7 @@ To get user information, do the following:
 
   
 
-     ![Figure 8. Changing variable scope](images/ngWfFig08.png)
+     ![Figure 8. Changing variable scope](../../images/ngWfFig08.png)
   
 
   
@@ -394,7 +394,7 @@ To get user information, do the following:
 
   
 
-     ![Figure 9. Updating LookupSPUser output](images/ngWfFig09.png)
+     ![Figure 9. Updating LookupSPUser output](../../images/ngWfFig09.png)
   
 
   
@@ -406,7 +406,7 @@ To get user information, do the following:
 
   
 
-     ![Figure 10. Retrieving values from LookupSPUser](images/ngWfFig10.png)
+     ![Figure 10. Retrieving values from LookupSPUser](../../images/ngWfFig10.png)
   
 
   
@@ -429,7 +429,7 @@ Finally, let's test the workflow. Start by adding two **WriteLine** activities. 
   
     
     
-![Figure 11. Testing the workflow](images/ngWfFig11.png)
+![Figure 11. Testing the workflow](../../images/ngWfFig11.png)
   
     
     

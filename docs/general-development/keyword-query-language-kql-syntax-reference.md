@@ -594,7 +594,7 @@ The **XRANK** operator's dynamic ranking calculation is based on this formula:
   
     
     
-![Formula for XRANK operator](images/XRANKFormula.gif)
+![Formula for XRANK operator](../../images/XRANKFormula.gif)
   
     
     

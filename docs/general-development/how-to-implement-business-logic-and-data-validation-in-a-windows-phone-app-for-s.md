@@ -48,7 +48,7 @@ Some of these basic validation rules are also enforced by default in a Windows P
   
     
     
-![Validation error cue in a Windows Phone app](images/49a93d59-6755-4afc-a703-ca8469b6fa74.gif)
+![Validation error cue in a Windows Phone app](../../images/49a93d59-6755-4afc-a703-ca8469b6fa74.gif)
   
     
     
@@ -109,7 +109,7 @@ You can validate data entered by users of your Windows Phone app in several ways
   
     
     
-![Template files in ViewModel component](images/2df9591d-a837-4130-98e4-5863d0c717e8.gif)
+![Template files in ViewModel component](../../images/2df9591d-a837-4130-98e4-5863d0c717e8.gif)
   
     
     
@@ -290,7 +290,7 @@ If you build the project and deploy it to Windows Phone Emulator to run it, you 
   
     
     
-![Custom validation error cues](images/fada902b-fa38-4ac8-8566-3693b736ac35.gif)
+![Custom validation error cues](../../images/fada902b-fa38-4ac8-8566-3693b736ac35.gif)
   
     
     

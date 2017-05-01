@@ -44,7 +44,7 @@ The Task Actions are accessed in the **Action** drop-down menu of the SharePoint
   
     
     
-![Task Actions are available from the Action drop-down menu of the SharePoint Designer 2013 Preview ribbon](images/spd15-TaskActions1.png)
+![Task Actions are available from the Action drop-down menu of the SharePoint Designer 2013 Preview ribbon](../../images/spd15-TaskActions1.png)
   
     
     
@@ -85,7 +85,7 @@ The **Assign a task** action is shown in the figure.
   
     
     
-!["Assign a task" action in SharePoint Designer 2013.](images/SPD15-TaskActions2.png)
+!["Assign a task" action in SharePoint Designer 2013.](../../images/SPD15-TaskActions2.png)
   
     
     
@@ -121,7 +121,7 @@ The **Assign a task** action takes three inputs: the user to assign a task, the 
   
     
     
-![Use the "Assign a task" dialog box to set the participant, task title, description, due date, task options, email options, and outcome options.](images/SPD15-TaskActions3.png)
+![Use the "Assign a task" dialog box to set the participant, task title, description, due date, task options, email options, and outcome options.](../../images/SPD15-TaskActions3.png)
   
     
     
@@ -150,7 +150,7 @@ The **Start a task process** action is shown in the figure.
   
     
     
-![The "Start a task process" action takes two inputs: "users" and an "outcome" variable](images/SPD15-TaskActions4.png)
+![The "Start a task process" action takes two inputs: "users" and an "outcome" variable](../../images/SPD15-TaskActions4.png)
   
     
     
@@ -183,7 +183,7 @@ The **Start a task process** action takes two inputs: the users that will partic
   
     
     
-![Use the "Start a Task Process" dialog box to set the participants, task title, description, due date, task options, email options, and outcome options.](images/SPD15-TaskActions5.png)
+![Use the "Start a Task Process" dialog box to set the participants, task title, description, due date, task options, email options, and outcome options.](../../images/SPD15-TaskActions5.png)
   
     
     

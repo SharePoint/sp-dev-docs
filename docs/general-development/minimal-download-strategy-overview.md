@@ -22,7 +22,7 @@ Minimal Download Strategy (MDS) is a new technology in SharePoint 2013 that redu
   
     
     
-![Page processed with MDS](images/MDS_UpdateSections.png)
+![Page processed with MDS](../../images/MDS_UpdateSections.png)
   
     
     
@@ -110,7 +110,7 @@ The basic mechanics of MDS are pretty simple. The main components of MDS are two
   
     
     
-![MDS flow when a user navigates the site](images/MDS_GeneralFlow.png)
+![MDS flow when a user navigates the site](../../images/MDS_GeneralFlow.png)
   
     
     

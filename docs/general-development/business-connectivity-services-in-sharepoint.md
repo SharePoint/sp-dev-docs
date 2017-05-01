@@ -54,7 +54,7 @@ Figure 1 shows the features that are included in SharePoint 2013 and Office 2013
   
     
     
-![Business Connectivity Services feature set](images/BCSin2013FeatureSet.jpg)
+![Business Connectivity Services feature set](../../images/BCSin2013FeatureSet.jpg)
   
     
     

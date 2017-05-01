@@ -35,7 +35,7 @@ Figure 1. Using device channels across different device platforms
   
     
     
-![Using device channels across device platforms](images/sp15Con_DeviceChannels_Fig1.png)
+![Using device channels across device platforms](../../images/sp15Con_DeviceChannels_Fig1.png)
   
     
     
@@ -81,7 +81,7 @@ After a device channel is created and activated, device redirection to a specifi
   
     
     
-![Setting master pages for mobile device and desktop](images/sp15Con_SiteMasterPage_Figure2.png)
+![Setting master pages for mobile device and desktop](../../images/sp15Con_SiteMasterPage_Figure2.png)
   
     
     

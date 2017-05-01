@@ -65,7 +65,7 @@ This topic provides an overview of the various API sets that are provided by Sha
   
     
     
-![Venn diagram of API sets and SharePoint app types](images/SharePointAPIsetsandselectedSharePointextensions.png)
+![Venn diagram of API sets and SharePoint app types](../../images/SharePointAPIsetsandselectedSharePointextensions.png)
   
     
     
@@ -298,7 +298,7 @@ Figure 2 illustrates the relationship of the various client APIs, various types 
   
     
     
-![Programming model for apps for SharePoint](images/Sp15_app_.png)
+![Programming model for apps for SharePoint](../../images/Sp15_app_.png)
   
     
     

@@ -66,7 +66,7 @@ Using the server object model, you can submit requests to the Machine Translatio
   
     
     
-![Related code snippets and sample apps](images/mod_icon_links_samples.png)
+![Related code snippets and sample apps](../../images/mod_icon_links_samples.png)
   
     
     
@@ -270,7 +270,7 @@ For the .NET managed CSOM, get a **ClientContext** instance (located in the **Mi
   
     
     
-![Related code snippets and sample apps](images/mod_icon_links_samples.png)
+![Related code snippets and sample apps](../../images/mod_icon_links_samples.png)
   
     
     
@@ -286,7 +286,7 @@ For the Silverlight CSOM, get a **ClientContext** instance (located in the **Mic
   
     
     
-![Related code snippets and sample apps](images/mod_icon_links_samples.png)
+![Related code snippets and sample apps](../../images/mod_icon_links_samples.png)
   
     
     
@@ -488,7 +488,7 @@ For the JavaScript CSOM, get an **SP.ClientContext** instance, and then use the 
   
     
     
-![Related code snippets and sample apps](images/mod_icon_links_samples.png)
+![Related code snippets and sample apps](../../images/mod_icon_links_samples.png)
   
     
     

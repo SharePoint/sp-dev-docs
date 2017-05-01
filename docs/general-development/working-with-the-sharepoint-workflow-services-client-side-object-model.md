@@ -150,7 +150,7 @@ When you create custom workflows using Visual Studio 2012, either using a soluti
   
     
     
-![Figure 1. Add a workflow association](images/ngSP2013WorkflowCSOM01.png)
+![Figure 1. Add a workflow association](../../images/ngSP2013WorkflowCSOM01.png)
   
     
     
@@ -677,7 +677,7 @@ To receive the message in the workflow, add a **WaitForCustomEvent** activity an
   
     
     
-![Figure 2. Input EventName and Output Result](images/ngSP2013WorkflowCSOM02.png)
+![Figure 2. Input EventName and Output Result](../../images/ngSP2013WorkflowCSOM02.png)
   
     
     

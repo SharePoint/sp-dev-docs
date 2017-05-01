@@ -70,7 +70,7 @@ Figure 1 depicts a high-level view of the SharePoint 2013 workflow framework. No
   
     
     
-![High-level workflow architecture](images/wfArchitecture1.png)
+![High-level workflow architecture](../../images/wfArchitecture1.png)
   
     
     

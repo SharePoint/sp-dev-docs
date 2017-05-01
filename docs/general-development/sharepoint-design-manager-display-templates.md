@@ -97,7 +97,7 @@ After you add a Search Web Part (such as the Content Search Web Part) to a page,
   
     
     
-![Tool pane of Content Search Web Part](images/115_content_search_web_part_tool_pane.gif)
+![Tool pane of Content Search Web Part](../../images/115_content_search_web_part_tool_pane.gif)
   
     
     
@@ -123,7 +123,7 @@ When used together in this way, the control display template and the item displa
   
     
     
-![Combined HTML output of a control display template and item display template](images/sp15Con_CreateDisplayTemplateSP2013_Figure02.png)
+![Combined HTML output of a control display template and item display template](../../images/sp15Con_CreateDisplayTemplateSP2013_Figure02.png)
   
     
     

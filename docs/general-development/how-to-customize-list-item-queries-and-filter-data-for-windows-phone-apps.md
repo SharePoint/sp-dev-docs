@@ -221,7 +221,7 @@ When you start your project (by pressing F5), the **Pivot** control for the app 
   
     
     
-![All orders (list items) in a sample list](images/e9cf225a-7040-4545-8db2-9e6f04e7a6eb.gif)
+![All orders (list items) in a sample list](../../images/e9cf225a-7040-4545-8db2-9e6f04e7a6eb.gif)
   
     
     
@@ -239,7 +239,7 @@ And the custom view, as defined in the preceding procedure, displays a filtered 
   
     
     
-![Only the big orders](images/0d28b4f9-7f81-47c0-976e-247c2b9544d4.gif)
+![Only the big orders](../../images/0d28b4f9-7f81-47c0-976e-247c2b9544d4.gif)
   
     
     

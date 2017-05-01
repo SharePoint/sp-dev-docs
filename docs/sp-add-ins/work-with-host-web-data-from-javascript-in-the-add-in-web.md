@@ -367,7 +367,7 @@ Your add-in automatically has full control permission to its own add-in web, so 
 
  
 
-     ![The Properties dialog for list permissions in Visual Studio with property name set to "Base List ID" and the Value set to "106".](images/13773fdd-5606-4f35-b8d5-14aad54cffb7.PNG)
+     ![The Properties dialog for list permissions in Visual Studio with property name set to "Base List ID" and the Value set to "106".](../../images/13773fdd-5606-4f35-b8d5-14aad54cffb7.PNG)
  
 
     Choose  **OK**. The  **Permissions** tab should now look similar to the following:

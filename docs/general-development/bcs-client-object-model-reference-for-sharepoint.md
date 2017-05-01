@@ -11,7 +11,7 @@ ms.assetid: fe7d12a3-6ea9-47f9-b69e-f66da9e661dc
   
     
     
-![Class libraries and references](images/mod_icon_badge_reference.png)
+![Class libraries and references](../../images/mod_icon_badge_reference.png)
   
     
     

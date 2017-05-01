@@ -59,7 +59,7 @@ Figure 1 shows the basic steps to add user segmentation functionality to your Sh
   
     
     
-![Steps to add user segmentation functionality](images/SP15_User_Segmentation_with_ContentBySearchWebPart.jpg)
+![Steps to add user segmentation functionality](../../images/SP15_User_Segmentation_with_ContentBySearchWebPart.jpg)
   
     
     

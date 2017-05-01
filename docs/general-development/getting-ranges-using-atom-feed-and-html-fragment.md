@@ -78,7 +78,7 @@ Using the discovery mechanism described in  [Discovery in Excel Services REST AP
   
     
     
-![Excel Services REST named range discovery](images/159f676e-421e-4190-94a6-cf311f7db2ca.gif)
+![Excel Services REST named range discovery](../../images/159f676e-421e-4190-94a6-cf311f7db2ca.gif)
   
     
     
@@ -108,7 +108,7 @@ Note that, in Internet Explorer, the resulting page looks like an error, as show
   
     
     
-![Excel Services REST range discovery using Atom](images/2d011e17-953f-42b1-97d3-2525372296c1.gif)
+![Excel Services REST range discovery using Atom](../../images/2d011e17-953f-42b1-97d3-2525372296c1.gif)
   
     
     
@@ -237,7 +237,7 @@ In Internet Explorer, the page looks similar to the following figure.
   
     
     
-![Excel Services REST Discovery Get Range Using HTML](images/558e6305-5a42-4b5c-9a70-1116ddcf6637.gif)
+![Excel Services REST Discovery Get Range Using HTML](../../images/558e6305-5a42-4b5c-9a70-1116ddcf6637.gif)
   
     
     

@@ -48,7 +48,7 @@ SharePoint Designer 2013 is a free download. To download and install SharePoint 
   
     
     
-![The SharePoint Designer 2013 Download page.](images/SPD15-install-connect-1.png)
+![The SharePoint Designer 2013 Download page.](../../images/SPD15-install-connect-1.png)
   
     
     
@@ -125,7 +125,7 @@ SharePoint Designer 2013 can be used for many important tasks. The navigational 
   
     
     
-![SharePoint Designer 2013 - New List Workflow](images/SPD15-install-connect-2.png)
+![SharePoint Designer 2013 - New List Workflow](../../images/SPD15-install-connect-2.png)
   
     
     
@@ -147,7 +147,7 @@ SharePoint Designer 2013 can be used for many important tasks. The navigational 
   
     
     
-![Workflow Creation Dialog](images/SPD15-install-connect-3.png)
+![Workflow Creation Dialog](../../images/SPD15-install-connect-3.png)
   
     
     
@@ -173,7 +173,7 @@ Now that the workflow is created, you can add Actions, Conditions, Stages, Steps
   
     
     
-![Workflow items in the ribbon.](images/SPD15-install-connect-4.png)
+![Workflow items in the ribbon.](../../images/SPD15-install-connect-4.png)
   
     
     

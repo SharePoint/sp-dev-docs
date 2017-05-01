@@ -81,7 +81,7 @@ Visual Studio 2012 now provides a "workflow custom activity" item type within Sh
 
   
 
-     ![New Project Dialog](images/wfVS_NewProjectDialog.JPG)
+     ![New Project Dialog](../../images/wfVS_NewProjectDialog.JPG)
   
 
   
@@ -93,7 +93,7 @@ Visual Studio 2012 now provides a "workflow custom activity" item type within Sh
 
   
 
-     ![New Item Dialog Box](images/wfVS_NewItem.JPG)
+     ![New Item Dialog Box](../../images/wfVS_NewItem.JPG)
   
 
     
@@ -108,7 +108,7 @@ Visual Studio 2012 now provides a "workflow custom activity" item type within Sh
 
   
 
-     ![Workflow Toolbox](images/wfVS_WorkflowToolbox.jpg)
+     ![Workflow Toolbox](../../images/wfVS_WorkflowToolbox.jpg)
   
 
     
@@ -131,7 +131,7 @@ After you create your actions module and add your action and activity files, you
   
     
     
-![Activity node in Solution Explorer](images/wfVS_ActivityNode.jpg)
+![Activity node in Solution Explorer](../../images/wfVS_ActivityNode.jpg)
   
     
     

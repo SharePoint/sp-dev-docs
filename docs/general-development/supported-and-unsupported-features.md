@@ -134,7 +134,7 @@ In the following figure, clicking **Learn more about unsupported features** prov
   
     
     
-![Unsupported feature error message for VBA](images/aebc97ae-c886-4d50-94ff-238049a259c7.gif)
+![Unsupported feature error message for VBA](../../images/aebc97ae-c886-4d50-94ff-238049a259c7.gif)
   
     
     
@@ -181,7 +181,7 @@ All other unsupported features continue to behave as they do in Office SharePoin
   
     
     
-![Unsupported feature error message for XML maps](images/7745688c-c612-4a38-b8aa-b5fdb5e4eeb8.gif)
+![Unsupported feature error message for XML maps](../../images/7745688c-c612-4a38-b8aa-b5fdb5e4eeb8.gif)
   
     
     

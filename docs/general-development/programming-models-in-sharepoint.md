@@ -26,7 +26,7 @@ Get a quick overview of the different kinds of SharePoint development projects.
   
     
     
-![Videos](images/mod_icon_video.png)
+![Videos](../../images/mod_icon_video.png)
   
     
     

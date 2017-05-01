@@ -847,7 +847,7 @@ If you build the solution and deploy it to the Windows Phone Emulator, the List 
   
     
     
-![Customers Display form](images/70d5a602-b349-4791-bf05-d61635d0fc91.gif)
+![Customers Display form](../../images/70d5a602-b349-4791-bf05-d61635d0fc91.gif)
   
     
     
@@ -865,7 +865,7 @@ When you choose the **Get Orders** button on this Display form, the orders for t
   
     
     
-![Orders List form](images/884d6dcb-c690-4b43-9bb2-d1bcaf4b7a31.gif)
+![Orders List form](../../images/884d6dcb-c690-4b43-9bb2-d1bcaf4b7a31.gif)
   
     
     

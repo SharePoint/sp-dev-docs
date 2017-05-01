@@ -10,7 +10,7 @@ ms.assetid: b66d4ec1-a2ef-49cc-8ca5-a6b516bff02e
   
     
     
-![Conceptual overview topic](images/mod_icon_badge_conoverview.png)
+![Conceptual overview topic](../../images/mod_icon_badge_conoverview.png)
   
     
     

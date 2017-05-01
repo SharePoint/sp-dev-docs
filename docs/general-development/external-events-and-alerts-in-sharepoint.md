@@ -178,7 +178,7 @@ In Figure 1, notice that there are three distinct steps involved when using exte
   
     
     
-![Data flow for external event notifications](images/ExtEvtsAndAlrts_Figure1.jpg)
+![Data flow for external event notifications](../../images/ExtEvtsAndAlrts_Figure1.jpg)
   
     
     
@@ -212,7 +212,7 @@ Figure 2 demonstrates the flow of information between SharePoint and the externa
   
     
     
-![External eventing Subscribe method process flow](images/ExtEvtsAndAlerts_Figure2.jpg)
+![External eventing Subscribe method process flow](../../images/ExtEvtsAndAlerts_Figure2.jpg)
   
     
     
@@ -408,7 +408,7 @@ Figure 3 shows the communication flow between the external system and SharePoint
   
     
     
-![External event notification process](images/ExtEvtsAndAlerts_Figure3.jpg)
+![External event notification process](../../images/ExtEvtsAndAlerts_Figure3.jpg)
   
     
     
@@ -499,7 +499,7 @@ The **Unsubscribe** operation removes a subscription from the notifications list
   
     
     
-![External notifications unsubscribe process](images/ExternalEventsAndAlerts_UnsubscribeFlow.jpg)
+![External notifications unsubscribe process](../../images/ExternalEventsAndAlerts_UnsubscribeFlow.jpg)
   
     
     

@@ -292,7 +292,7 @@ The BM25 rank feature calculates the relevance rank score using the following fo
   
     
     
-![BM25 formula for the BM25 rank feature](images/sp15_BM25_formula.gif)
+![BM25 formula for the BM25 rank feature](../../images/sp15_BM25_formula.gif)
   
     
     
@@ -446,7 +446,7 @@ Before the static rank feature can be aggregated with other rank features, each 
 
     
     
-![Transform functions supported for rank features](images/sp15_transform_table_ranking_model.gif)
+![Transform functions supported for rank features](../../images/sp15_transform_table_ranking_model.gif)
   
     
     
@@ -688,7 +688,7 @@ The freshness transform is based on the following formula:
   
     
     
-![Freshness formula for ranking models](images/sp15_freshness_formula.gif)
+![Freshness formula for ranking models](../../images/sp15_freshness_formula.gif)
   
     
     
@@ -798,7 +798,7 @@ The rank score provided by linear models is computed using the following formula
   
     
     
-![Linear model formula for ranking models](images/sp15_linear_model_formula.gif)
+![Linear model formula for ranking models](../../images/sp15_linear_model_formula.gif)
   
     
     
@@ -845,7 +845,7 @@ The ranking score produced by a neural network is computed using the following f
   
     
     
-![Neural network formula for ranking models](images/sp15_neural_network_formula.gif)
+![Neural network formula for ranking models](../../images/sp15_neural_network_formula.gif)
   
     
     
@@ -900,7 +900,7 @@ The overall schema of rank score computation with a two-layer neural network is 
   
     
     
-![Neural network in ranking models](images/sp15neuralnetworkinrankingmodels.gif)
+![Neural network in ranking models](../../images/sp15neuralnetworkinrankingmodels.gif)
   
     
     

@@ -29,7 +29,7 @@ While you are editing inside a workflow step, do one of the following:
   
     
     
-![Enter keywords to see list of related conditions.](images/spd15-wf-step1a.JPG)
+![Enter keywords to see list of related conditions.](../../images/spd15-wf-step1a.JPG)
   
     
     
@@ -41,7 +41,7 @@ Which conditions are available to you while you are creating or modifying a work
   
     
     
-![Available conditions in SharePoint Designer 2013](images/spd15-.JPG)
+![Available conditions in SharePoint Designer 2013](../../images/spd15-.JPG)
   
     
     
@@ -268,7 +268,7 @@ This condition is initially displayed in a workflow step as **If title field con
   
     
     
-![Logical operators  used to search for keywords](images/spd15-wf-logical-ops.JPG)
+![Logical operators  used to search for keywords](../../images/spd15-wf-logical-ops.JPG)
   
     
     

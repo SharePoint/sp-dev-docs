@@ -68,7 +68,7 @@ Figure 1 provides a high-level overview of the SharePoint 2013 indexing connecto
   
     
     
-![SharePoint 2013 indexing connectors](images/SP15Con_CF_IndexingConnectors.jpg)
+![SharePoint 2013 indexing connectors](../../images/SP15Con_CF_IndexingConnectors.jpg)
   
     
     
@@ -102,7 +102,7 @@ BCS is the umbrella of tools and infrastructure that enables you to connect to e
   
     
     
-![BCS architecture](images/SP15Con_CF_BCS_Overview.jpg)
+![BCS architecture](../../images/SP15Con_CF_BCS_Overview.jpg)
   
     
     
@@ -193,7 +193,7 @@ Figure 3 shows a high-level view of the search connector framework architecture.
   
     
     
-![Search connector framework architecture](images/SP15Con_CF_ConnFrwkArch.jpg)
+![Search connector framework architecture](../../images/SP15Con_CF_ConnFrwkArch.jpg)
   
     
     

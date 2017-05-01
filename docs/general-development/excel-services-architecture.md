@@ -51,7 +51,7 @@ The Excel Web Access, Excel Web Services, UDFs, JavaScript, the REST service, an
   
     
     
-![A Web front end and a back-end application server](images/ed480e23-e0e8-4896-93b1-98a94f50b9a0.gif)
+![A Web front end and a back-end application server](../../images/ed480e23-e0e8-4896-93b1-98a94f50b9a0.gif)
   
     
     

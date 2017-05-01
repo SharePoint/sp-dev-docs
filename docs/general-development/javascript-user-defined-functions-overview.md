@@ -80,7 +80,7 @@ You could then call the JavaScript UDF, StockInfo, in a formula from a cell insi
   
     
     
-![JavaScript UDF being invoked in Excel Online](images/SPS15CON_xls_JsUdfinWebApp.jpg)
+![JavaScript UDF being invoked in Excel Online](../../images/SPS15CON_xls_JsUdfinWebApp.jpg)
   
     
     

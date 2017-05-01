@@ -38,7 +38,7 @@ The three main components or layers of the MVVM pattern are the View, the Model,
   
     
     
-![Template files in MVVM pattern](images/96681da7-ceab-40f3-8d08-441aea9b4a6f.gif)
+![Template files in MVVM pattern](../../images/96681da7-ceab-40f3-8d08-441aea9b4a6f.gif)
   
     
     
@@ -123,7 +123,7 @@ Figure 2 shows a simplified representation of the class inheritance hierarchy fo
   
     
     
-![The EditItemViewModel and EditForm classes](images/9faa4fbc-5fd6-4960-ba25-8a8cc0195562.gif)
+![The EditItemViewModel and EditForm classes](../../images/9faa4fbc-5fd6-4960-ba25-8a8cc0195562.gif)
   
     
     

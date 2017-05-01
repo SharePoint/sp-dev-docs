@@ -34,7 +34,7 @@ Figure 1. CMIS 1.0 capabilities implemented in SharePoint 2013.
   
     
     
-![CMIS capabilities in SharePoint 2013](images/SP15_CMISCapabilities.jpg)
+![CMIS capabilities in SharePoint 2013](../../images/SP15_CMISCapabilities.jpg)
   
     
     
@@ -99,7 +99,7 @@ Figure 2. Examples of the CMIS document object-type and folder object-type
   
     
     
-![Examples of CMIS object-types in SharePoint 2013](images/SP15_CMISObjectTypeExamples.png)
+![Examples of CMIS object-types in SharePoint 2013](../../images/SP15_CMISObjectTypeExamples.png)
   
     
     

@@ -31,7 +31,7 @@ SharePoint Designer 2013 includes a new workflow design surface called Visual De
   
     
     
-![Visual Designer not available without Visio](images/SPD15-VisualDesigner1.png)
+![Visual Designer not available without Visio](../../images/SPD15-VisualDesigner1.png)
   
     
     
@@ -71,7 +71,7 @@ The figure shows a workflow in Visual Designer.
   
     
     
-![Visual Designer in SharePoint Designer 2013](images/SPD15-VisualDesigner2.png)
+![Visual Designer in SharePoint Designer 2013](../../images/SPD15-VisualDesigner2.png)
   
     
     
@@ -115,7 +115,7 @@ You can switch between **Views** in the **Manage** portion of the **Workflow** r
   
     
     
-![Switching between design views.](images/SPD15-VisualDesigner3.png)
+![Switching between design views.](../../images/SPD15-VisualDesigner3.png)
   
     
     

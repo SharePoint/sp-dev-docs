@@ -48,7 +48,7 @@ Figure 1 shows the option in Design Manager for naming and creating the design p
   
     
     
-![Exporting a design package](images/sp15Con_DesignPackageExp_Figure1.png)
+![Exporting a design package](../../images/sp15Con_DesignPackageExp_Figure1.png)
   
     
     

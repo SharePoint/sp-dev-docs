@@ -22,7 +22,7 @@ Search in SharePoint 2013 enables users to modify the managed properties of craw
   
     
     
-![Content enrichment within content processing](images/SP15_Content_Enrichment.gif)
+![Content enrichment within content processing](../../images/SP15_Content_Enrichment.gif)
   
     
     

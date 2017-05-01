@@ -54,7 +54,7 @@ Figure 1 shows a typical identity delegation scenario in which a Fabrikam employ
   
     
     
-![Claims identity delegation scenario](images/44928b39-5683-4bce-8ddf-31d886243b87.gif)
+![Claims identity delegation scenario](../../images/44928b39-5683-4bce-8ddf-31d886243b87.gif)
   
     
     
@@ -116,7 +116,7 @@ Federated authentication allows a security token service (STS) in one trust doma
   
     
     
-![Claims federation authentication](images/f0a9be9a-434a-4650-ad57-1fb90b016dd1.gif)
+![Claims federation authentication](../../images/f0a9be9a-434a-4650-ad57-1fb90b016dd1.gif)
   
     
     
@@ -153,7 +153,7 @@ This scenario describes a sign-on experience for a partner employee when she tri
   
     
     
-![Claims federation scenario](images/903d3109-d567-4156-a44f-29793c42ae45.gif)
+![Claims federation scenario](../../images/903d3109-d567-4156-a44f-29793c42ae45.gif)
   
     
     

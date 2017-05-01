@@ -32,7 +32,7 @@ One way to think about the difference between on demand file conversion requests
   
     
     
-![Word Automation Services 2013 architecture](images/SPS15CON_WAS_Architecture.png)
+![Word Automation Services 2013 architecture](../../images/SPS15CON_WAS_Architecture.png)
   
     
     

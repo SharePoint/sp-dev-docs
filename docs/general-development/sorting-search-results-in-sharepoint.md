@@ -11,7 +11,7 @@ ms.assetid: 66af835e-2c8f-405e-8bed-cb1e5436e190
   
     
     
-![Conceptual overview topic](images/mod_icon_badge_conoverview.png)
+![Conceptual overview topic](../../images/mod_icon_badge_conoverview.png)
   
     
     

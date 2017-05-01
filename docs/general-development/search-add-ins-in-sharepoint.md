@@ -175,7 +175,7 @@ Search add-ins send query requests to the Search service application (SSA), and 
   
     
     
-![Search app permission configuration with VS](images/SP15_search_apps_permission_Visual_Studio.PNG)
+![Search app permission configuration with VS](../../images/SP15_search_apps_permission_Visual_Studio.PNG)
   
     
     
@@ -197,7 +197,7 @@ Search add-ins send query requests to the Search service application (SSA), and 
   
     
     
-![Search app permission configuration through Napa](images/SP15_search_app_permission_Napa.gif)
+![Search app permission configuration through Napa](../../images/SP15_search_app_permission_Napa.gif)
   
     
     

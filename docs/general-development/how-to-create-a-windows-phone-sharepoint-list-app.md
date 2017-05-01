@@ -35,7 +35,7 @@ If you'd like to see a demo of creating a mobile app before you start this how-t
   
     
     
-![Videos](images/mod_icon_video.png)
+![Videos](../../images/mod_icon_video.png)
   
     
     
@@ -65,7 +65,7 @@ In your Windows Phone SharePoint list app, you can access most of the lists that
   
     
     
-![Contacts list for Contoso marketing team](images/8d56d824-d96a-4f1e-9040-ce1da9a734d8.gif)
+![Contacts list for Contoso marketing team](../../images/8d56d824-d96a-4f1e-9040-ce1da9a734d8.gif)
   
     
     
@@ -94,7 +94,7 @@ In your Windows Phone SharePoint list app, you can access most of the lists that
 
   
 
-     ![SPList Wizard Error](images/SP15Con_CreateSharePointListAppsForWindowsPhoneFig3.png)
+     ![SPList Wizard Error](../../images/SP15Con_CreateSharePointListAppsForWindowsPhoneFig3.png)
   
 
     You can resolve this error by giving sufficient privileges to the account with which the developer is running the SPList wizard. Rerun **Splist wizard** after sufficient rights are given.
@@ -167,7 +167,7 @@ The deployment target for the solution is set to Windows Phone Emulator by defau
   
     
     
-![SharePoint list items in a Windows Phone app](images/9159345c-ce12-41a6-8994-fc2e9aa26fd6.gif)
+![SharePoint list items in a Windows Phone app](../../images/9159345c-ce12-41a6-8994-fc2e9aa26fd6.gif)
   
     
     
@@ -185,7 +185,7 @@ While running a Windows Phone app, the authentication error shown in Figure 4 ca
   
     
     
-![Mobile App Error](images/SP15Con_CreateSharePointListAppsForWindowsPhoneFig4.png)
+![Mobile App Error](../../images/SP15Con_CreateSharePointListAppsForWindowsPhoneFig4.png)
   
     
     
@@ -232,7 +232,7 @@ If you based your Windows Phone app on the data from a Contacts list, as shown i
   
     
     
-![DisplayForm view of a Contacts list item](images/e2cf6848-bd29-416b-b397-a1d670bd2910.gif)
+![DisplayForm view of a Contacts list item](../../images/e2cf6848-bd29-416b-b397-a1d670bd2910.gif)
   
     
     
