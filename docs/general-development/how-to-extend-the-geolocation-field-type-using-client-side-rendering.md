@@ -7,38 +7,6 @@ ms.assetid: 7360633a-a7cf-4194-8bbd-8dd7c323e80b
 
 # How to: Extend the Geolocation field type using client-side rendering
 Learn how to customize the SharePoint 2013 Geolocation field type programmatically using client-side rendering.
-In this article
-  
-    
-    
- [Prerequisites for creating a custom Geolocation field](#CreatingCustomGeolocation_prereq)
-  
-    
-    
- [Step 1: Set up the Visual Studio project](#CreatingCustomGeolocationStep_1)
-  
-    
-    
- [Step 2: Create a custom field class](#CreatingCustomGeolocationStep_2)
-  
-    
-    
- [Step 3: Create rendering for the new custom field](#CreatingCustomGeolocationStep_3)
-  
-    
-    
- [Step 4: Create a field type definition](#CreatingCustomGeolocationStep_4)
-  
-    
-    
- [Step 5: Build and test the custom field type](#CreatingCustomGeolocationStep_5)
-  
-    
-    
- [Additional resources](#SP15Createcustomgeo_addlresources)
-  
-    
-    
 
 SharePoint 2013 introduces a new field type named Geolocation that enables you to annotate SharePoint lists with location information. In columns of type Geolocation, you can enter location information as a pair of latitude and longitude coordinates in decimal degrees, or retrieve the coordinates of the user's current location from the browser if it implements the W3C Geolocation API. For more information about the Geolocation field, see  [Integrating location and map functionality in SharePoint 2013](integrating-location-and-map-functionality-in-sharepoint.md). 
 The Geolocation field type is not available in the default content type of any list or document library in SharePoint 2013. The Geolocation field type is included in SharePoint 2013 but isn't visible on the create column page for the list; you must add the Geolocation field type programmatically. For more information, see  [How to: Add a Geolocation column to a list programmatically in SharePoint 2013](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint.md). 

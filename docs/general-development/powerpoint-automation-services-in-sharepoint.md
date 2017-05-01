@@ -8,11 +8,6 @@ ms.assetid: 168c7dc0-fbdc-41a2-84db-65d211d3d673
 # PowerPoint Automation Services in SharePoint 2013
 Learn to use Microsoft PowerPoint Automation Services to do server-side presentation conversions to and from a variety of file formats. 
 
-  
-    
-    
-
- * **Applies to:*** *Microsoft SharePoint Server 2013*  | *Microsoft PowerPoint Automation Services* 
 ## Introduction
 <a name="PAS_Intro"> </a>
 

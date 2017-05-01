@@ -8,10 +8,6 @@ ms.assetid: 161418d7-8123-4c4e-91a1-97e43c17f0e6
 
 # URLs and tokens in SharePoint 2013
 Learn how to formulate URLs and how to use URL tokens in SharePoint 2013.
-|||
-|:-----|:-----|
-|**In this article**          [Types of URLs in SharePoint 2013](#TypesOfURLs)           [Good practice for image URLs](#GoodPracticeImageURL)           [URL tokens in SharePoint 2013](#URLtokens)           [Additional resources](#SP15URLS_addlresources)||
-   
 
 ## Types of URLs in SharePoint 2013
 <a name="TypesOfURLs"> </a>

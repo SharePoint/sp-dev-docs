@@ -7,9 +7,6 @@ ms.assetid: 0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8
 
 # SharePoint Add-ins compared with SharePoint solutions
 Learn about when to develop your SharePoint 2013 extension as a SharePoint Add-in and when to develop it as a SharePoint farm solution or a no-code sandboxed solution.
- * **Applies to: *** 
-  
-    
     
 
 This article compares the use cases of SharePoint Add-ins, farm solutions, and no-code sandboxed solutions (NCSSs).
