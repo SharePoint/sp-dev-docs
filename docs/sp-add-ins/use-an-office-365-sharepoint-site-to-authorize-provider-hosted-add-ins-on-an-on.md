@@ -175,27 +175,27 @@ The function below does all the work to configure your on-premises SharePoint 20
  
 2. Open the SharePoint Management Shell as an administrator and run the following cmdlet to verify that the MySharePointFunctions module is listed.
     
-  ```
+```
   Get-Module -listavailable
-  ```
+```
 
 3. Run the following cmdlet to import the module.
     
-  ```
+```
   Import-Module MySharePointFunctions
-  ```
+```
 
 4. Run the following cmdlet to verify that the Connect-SPFarmToAAD function is listed as part of the module:
     
-  ```
+```
   Get-Command -module MySharePointFunctions
-  ```
+```
 
 5. Run the following cmdlet to verify that the Connect-SPFarmToAAD function is loaded.
     
-  ```
+```
   ls function:\ | where {$_.Name -eq "Connect-SPFarmToAAD"}
-  ```
+```
 
 6. Run the  `Connect-SPFarmToAAD` function. Be sure to provide the required parameters and any optional parameters that apply to your developer environment. See the next section for details and examples.
     

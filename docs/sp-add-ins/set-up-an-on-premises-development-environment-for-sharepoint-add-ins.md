@@ -61,10 +61,10 @@ Depending on your specific requirements and budget, you can choose from the foll
  
 5. If any errors occur in the installation, review the log file. To find the log file, open a Command Prompt window, and then type the following commands at the command prompt. A link to the log file also appears when the installation is complete.
     
-  ```
+```
   cd %temp%
 dir /od *.log
-  ```
+```
 
 6. After the installation is complete, you're prompted to start the SharePoint Products and Technologies Configuration Wizard.
     
@@ -200,38 +200,38 @@ Perform the steps in the following procedure to create an isolated add-in domain
 
 1. Ensure that the spadmin and sptimer services are running by opening a command prompt and typing the following commands.
     
-  ```
+```
   net start spadminv4
 net start sptimerv4
-  ```
+```
 
 2. Create your isolated add-in domain by running the SharePoint Management Shell as an administrator and typing the following command. Replace the  _contosoaddins.com_ with your add-in domain. It should *not*  be a subdomain of the host SharePoint domain. Doing so largely defeats the security advantages of having isolated add-in domains. For example, if the host domain is contoso.com, do not use addins.contoso.com as the add-in domain.
     
-  ```
+```
   Set-SPAppDomain "contosoaddins.com"
-  ```
+```
 
 3. Ensure that the SPSubscriptionSettingsService and AppManagementServiceInstance services are running by typing the following command in the SharePoint Management Shell.
     
-  ```
+```
   Get-SPServiceInstance | where{$_.GetType().Name -eq "AppManagementServiceInstance" -or $_.GetType().Name -eq "SPSubscriptionSettingsServiceInstance"} | Start-SPServiceInstance
-  ```
+```
 
 4. Verify that the SPSubscriptionSettingsService and AppManagementServiceInstance services are running by typing the following command in the SharePoint Management Shell. The output will indicate whether each service is online.
     
-  ```
+```
   Get-SPServiceInstance | where{$_.GetType().Name -eq "AppManagementServiceInstance" -or $_.GetType().Name -eq "SPSubscriptionSettingsServiceInstance"}
-  ```
+```
 
 5. You must specify an account under which the SPSubscriptionService and AppManagementServiceInstance service instances will run. This account must be an SPManagedAccount. You can create an SPManagedAccount by typing the following command in the SharePoint Management Shell. (You'll be prompted for the account domain\user and password.)
     
-  ```
+```
   $account = New-SPManagedAccount
-  ```
+```
 
 6. Specify an account, application pool, and database settings for the SPSubscriptionService and AppManagementServiceInstance services by typing the following code in the SharePoint Management Shell. If you created a SPManagedAccount in the preceding step, use that account name here.
     
-  ```
+```
   $account = Get-SPManagedAccount "domain\user" 
 $appPoolSubSvc = New-SPServiceApplicationPool -Name SettingsServiceAppPool -Account $account
 $appPoolAppSvc = New-SPServiceApplicationPool -Name AppServiceAppPool -Account $account
@@ -240,13 +240,13 @@ $proxySubSvc = New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplica
 $appAppSvc = New-SPAppManagementServiceApplication -ApplicationPool $appPoolAppSvc -Name AppServiceApp -DatabaseName AppServiceDB
 $proxyAppSvc = New-SPAppManagementServiceApplicationProxy -ServiceApplication $appAppSvc
 
-  ```
+```
 
 7. Specify your add-in prefix (see  [Host webs, add-in webs, and the isolated domain](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md#IsolatedDomain)) by typing the following code in the SharePoint Management Shell.
     
-  ```
+```
   Set-SPAppSiteSubscriptionName -Name "add-in" -Confirm:$false
-  ```
+```
 
  **Carry out the following procedure only if your environment uses a proxy server.** After you create your isolated add-in domain, perform the steps in the following procedure to add that domain to your bypass list in Internet Explorer. This ensures that you can navigate to this domain after you deploy a SharePoint-hosted add-in or a provider-hosted add-in that includes an add-in web.
  

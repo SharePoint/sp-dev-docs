@@ -124,7 +124,7 @@ Before you create your first add-in, you should have a basic understanding of wh
  
 2. In the elements.xml file for the new site column, edit the  **Field** element so that it has the attributes and values shown in the following example, except that you should not change the GUID for the **ID** attribute from the value Visual Studio 2012 generated for it. Don't forget the framing braces "{}".
     
-  ```
+```
   <Field ID="{generated GUID}" 
        Name="Actor" 
        Title="Actor" 
@@ -133,14 +133,14 @@ Before you create your first add-in, you should have a basic understanding of wh
        Description="The person cast, perhaps tentatively, in the role" 
        Type="Text" 
 />
-  ```
+```
 
 3. Add another  **Site Column** to the project namedCastingStatus.
     
  
 4. In the elements.xml file for the new site column, edit the  **Field** element so that it has the attributes and values shown in the following example, except that you should not change the GUID for the **ID** attribute from the value Visual Studio 2012 generated for it.
     
-  ```
+```
   <Field ID="{generated GUID}" 
        Name="CastingStatus" 
        Title="CastingStatus"
@@ -149,11 +149,11 @@ Before you create your first add-in, you should have a basic understanding of wh
        Description="The current casting status of the role" 
        Type="Choice">
 </Field>
-  ```
+```
 
 5. Because this is a Choice field, you must specify the possible choices, the order in which they should appear in the drop-down list when a user is making a choice, and the default choice. Add the following child markup to the  **Field** element.
     
-  ```
+```
   <CHOICES>
       <CHOICE>Not Started</CHOICE>
       <CHOICE>Audition Scheduled</CHOICE>
@@ -169,7 +169,7 @@ Before you create your first add-in, you should have a basic understanding of wh
       <MAPPING Value="5">Committed to Role</MAPPING>
 </MAPPINGS>
 <Default>Not Started</Default>
-  ```
+```
 
 
 ### To create the custom content type
@@ -209,10 +209,10 @@ Before you create your first add-in, you should have a basic understanding of wh
  
 9. There are already  **FieldRef** elements in the file for the two columns that you added. Add **FieldRef** elements for two built-in SharePoint 2013 columns as peers of the two that are already there. The following is the markup for the elements. *You must use these same GUIDs for the ID attribute because these are built-in field types with fixed IDs.*  Add these *above*  the two **FieldRef** elements for the custom site columns.
     
-  ```
+```
   <FieldRef Name="LinkTitle" ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" DisplayName="Character" />
 <FieldRef Name="Title" ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" DisplayName="Character" />
-  ```
+```
 
 
     Note that we have given these fields a custom display name:  **Character**, in the sense of a character in a play or movie.
@@ -292,24 +292,24 @@ Before you create your first add-in, you should have a basic understanding of wh
  
 19. Still in the schema.xml file, in the  **View** element whose BaseViewID value is "0", replace the existing **ViewFields** element with the following markup. (Use exactly this GUID for the **FieldRef** named `LinkTitle`.)
     
-  ```
+```
   <ViewFields>
   <FieldRef Name="Title" ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" DisplayName="Character" />
   <FieldRef Name="Actor" ID="{GUID from the site column elements.xml}" />
   <FieldRef Name="CastingStatus" ID="{GUID from the site column elements.xml}" />
 </ViewFields>
-  ```
+```
 
 20. Replace the two missing ID attribute values with the GUIDs in the respective site column elements.xml files. Don't forget the framing braces "{}". 
     
  
 21. Still in the schema.xml file, in the  **View** element whose BaseViewID value is "1", replace the existing **ViewFields** element with the following markup. (Use exactly this GUID for the **FieldRef** named `LinkTitle`.)
     
-  ```
+```
   <ViewFields>
   <FieldRef Name="LinkTitle" ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" DisplayName="Character" />
 </ViewFields>
-  ```
+```
 
 22. Copy the two  **FieldRef** elements for `Actor` and `CastingStatus` that you added to the previous view to this **ViewFields** element as siblings of the `LinkTitle` **FieldRef**.
     
@@ -322,7 +322,7 @@ Before you create your first add-in, you should have a basic understanding of wh
  
 25. Populate the list with some initial data by adding the following markup as a child of the  **ListInstance** element.
     
-  ```
+```
   <Data>
   <Rows>
     <Row>
@@ -352,7 +352,7 @@ Before you create your first add-in, you should have a basic understanding of wh
     </Row>
   </Rows>
 </Data>
-  ```
+```
 
 2. In  **Solution Explorer**, choose  **Feature1** to open the Feature designer. In the designer, set the **Title** toTheater and Movie Data Components and set the **Description** toSite columns, content types, and list instances for data about theater and movies.. Save the file, and close the designer.
     
@@ -372,7 +372,7 @@ Before you create your first add-in, you should have a basic understanding of wh
     
       1. Open the Default.aspx file and replace the body element of the file with the following markup. The markup adds a  **Get the Cast** button that, when chosen, reads the **Characters in Hamlet** list that is in the add-in web and presents its data in a [GridView](http://msdn2.microsoft.com/EN-US/library/4w7ya1ts) control that appears only after the button is pressed.
     
-  ```HTML
+```HTML
   <body >
     <form id="form1" runat="server">
     <div>
@@ -387,11 +387,11 @@ Before you create your first add-in, you should have a basic understanding of wh
     <asp:GridView ID="GridView1" runat="server" Caption="The Cast" ></asp:GridView>
     </form>
 </body>
-  ```
+```
 
   2. Open the Default.aspx.cs file and add the following  **using** statements to it.
     
-  ```C#
+```C#
   using Microsoft.SharePoint.Client;
 using Microsoft.IdentityModel.S2S.Tokens;
 using System.Net;
@@ -401,7 +401,7 @@ using System.Data;
 using System.Xml.Linq;
 using System.Xml.XPath;
 using Microsoft.SharePoint.Samples;
-  ```
+```
 
 
     The last of these statements refers to the namespace that is declared in the TokenHelper.cs file.
@@ -409,15 +409,15 @@ using Microsoft.SharePoint.Samples;
  
   3. Add the following fields to the  **Default** class.
     
-  ```C#
+```C#
   SharePointContextToken contextToken;
 string accessToken;
 Uri sharepointUrl;
-  ```
+```
 
   4. Replace the  **Page_Load** method with the following code that uses the **TokenHelper** class to obtain tokens from the OAuth-compliant secure token server. The access token is then stored in the [CommandArgument](http://msdn2.microsoft.com/EN-US/library/hykdabtx) property of the button for later retrieval by the button's click event handler.
     
-  ```C#
+```C#
   protected void Page_Load(object sender, EventArgs e)
 {
     TokenHelper.TrustAllCertificates();
@@ -436,38 +436,38 @@ Uri sharepointUrl;
         Button1.CommandArgument = accessToken;
     }
 }
-  ```
+```
 
   5. Add the following event handler to the  **Default** class. The handler begins by retrieving the access token that was stored in the button's [CommandArgument](http://msdn2.microsoft.com/EN-US/library/hykdabtx) property.
     
-  ```C#
+```C#
   protected void Button1_Click(object sender, EventArgs e)
 {
     // Retrieve the access token that the Page_Load method stored
     // in the button's command argument.
     string accessToken = ((Button)sender).CommandArgument;
 }
-  ```
+```
 
   6. The handler needs to reacquire the modified add-in web URL on postbacks, so add the following code.
     
-  ```C#
+```C#
   if (IsPostBack)
 {
     sharepointUrl = new Uri(Request.QueryString["SPAppWebUrl"]);
 }
-  ```
+```
 
   7. Add the following line that uses one of the SharePoint 2013 REST/OData endpoints to obtain list data. In this example, the code reads the  **Characters in Hamlet** list that is deployed to the add-in web. The APIs for this service make it easy, in a single line of code, to select a list and specify three fields from the list to return. Note that in the OData URL you must use the internal names of the fields (columns) rather than the display names, so the code uses `Title`,  `Actor`, and  `CastingStatus` rather than `Character`,  `Actor/Actress`, and  `Casting Status.` For more information about the REST/OData web service, see [Use OData query operations in SharePoint REST requests](use-odata-query-operations-in-sharepoint-rest-requests.md).
     
-  ```C#
+```C#
   // REST/OData URL section
  string oDataUrl = "/_api/Web/lists/getbytitle('Characters In Hamlet')/items?$select=Title,Actor,CastingStatus";
-  ```
+```
 
   8. Add the following code that uses the  [HttpWebRequest](http://msdn2.microsoft.com/EN-US/library/8y7x3zz2) and [HttpWebResponse](http://msdn2.microsoft.com/EN-US/library/ww5755y6) classes of the [System.Net](http://msdn2.microsoft.com/EN-US/library/btdf6a7e) namespace to construct the HTTP request and response objects.
     
-  ```C#
+```C#
   // HTTP Request and Response construction section
 HttpWebRequest request = (HttpWebRequest)HttpWebRequest.Create(sharepointUrl.ToString() + oDataUrl);
 request.Method = "GET";
@@ -475,11 +475,11 @@ request.Accept = "application/atom+xml";
 request.ContentType = "application/atom+xml;type=entry";
 request.Headers.Add("Authorization", "Bearer " + accessToken);
 HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-  ```
+```
 
   9. Add the following code to parse the ATOM-formatted response XML. It uses the classes of the  [System.Xml.Linq](http://msdn2.microsoft.com/EN-US/library/bb299195) namespace to parse the data that is returned and construct a [List<T>](http://msdn2.microsoft.com/EN-US/library/6sh2ey19) of the items from the SharePoint list. (You could also use the classes of the [System.Xml](http://msdn2.microsoft.com/EN-US/library/y3y47afh) namespace.) Note that, in the XML that SharePoint returns, the child elements of the **entry** element hold metadata about the list item. The actual row data of a SharePoint list item is nested two layers down in the **properties** element. For that reason the [Elements<T>](http://msdn2.microsoft.com/EN-US/library/bb348465) extension method is used twice to filter out the higher levels.
     
-  ```C#
+```C#
   // Response markup parsing section
 XDocument oDataXML = XDocument.Load(response.GetResponseStream(), LoadOptions.None);
 XNamespace atom = "http://www.w3.org/2005/Atom";
@@ -490,25 +490,25 @@ List<XElement> entries = oDataXML.Descendants(atom + "entry")
                          .Elements(atom + "content")
                          .Elements(m + "properties")
                          .ToList();
-  ```
+```
 
   10. Add the following LINQ query to construct an  [IEnumerable<T>](http://msdn2.microsoft.com/EN-US/library/9eekhta0) collection of an anonymous type that has just the properties you need and no others. Note that although the code must refer to the item title field by its internal name `Title`, the property name in the anonymous type, to which the value is assigned, can be named  `Character`. One effect of this is that when the collection is bound to a grid control, the more appropriate name  **Character** appears on the page.
     
-  ```C#
+```C#
   var entryFieldValues = from entry in entries
                        select new { Character=entry.Element(d + "Title").Value, 
                                     Actor=entry.Element(d + "Actor").Value, 
                                     CastingStatus=entry.Element(d + "CastingStatus").Value };
 
-  ```
+```
 
   11. Finish the handler with the following code to bind the data to a  [GridView](http://msdn2.microsoft.com/EN-US/library/4w7ya1ts) control on the page. The column headers in the grid default to the property names of the anonymous type: `Character`,  `Actor`, and  `CastingStatus`. The  [GridView](http://msdn2.microsoft.com/EN-US/library/4w7ya1ts) control has properties that enable you to control the name and formatting column headers, so you could have **Actor/Actress** and **Casting Status** to match the column headers in SharePoint. For simplicity, these techniques are not described here. (You could also use a [DataGrid](http://msdn2.microsoft.com/EN-US/library/e1zk1ey1) control.)
     
-  ```C#
+```C#
   GridView1.DataSource = entryFieldValues;
 GridView1.DataBind();
 
-  ```
+```
 
   12. Save all files.
     

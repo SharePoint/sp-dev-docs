@@ -61,23 +61,23 @@ In this article you add code to the start page of the Chain Store SharePoint Add
  
 5. Add the following  **using** statements to the top of the file.
     
-  ```
+```
   using System.Web;
 using System.Linq;
 using System.Collections.Generic;
 using Microsoft.SharePoint.Client;
-  ```
+```
 
 6. At the top of the  `SharePointComponentDeployer` class, add the following two static fields. Both of these will be initialized in the **Page_Load** method of the add-in's start page. You add that code in a later step. The first field will hold the **SharePointContext** object that is needed to make CRUD operations on SharePoint. The second will hold the version number of the add-in that is installed on the host web. This value will initially be different from the default value ( **0000.0000.0000.0000** ) that is recorded in the corporate **Tenants** table when the installation handler registers the tenant. For example, the first version of the add-in will be **1.0.0.0**.
     
-  ```C#
+```C#
   internal static SharePointContext sPContext;
 internal static Version localVersion;
-  ```
+```
 
 7. Create the following static property to hold the version of the add-in that is currently recorded in the corporate  **Tenants** table. It uses the two methods that were already in the file to get and set this value.
     
-  ```C#
+```C#
   internal static Version RemoteTenantVersion
 {
     get
@@ -89,7 +89,7 @@ internal static Version localVersion;
         SetTenantVersion(value);
     }
 }
-  ```
+```
 
 8. Now create the following  `IsDeployed` property. Note the following about this code:
     
@@ -100,7 +100,7 @@ internal static Version localVersion;
     
  
 
-  ```C#
+```C#
   public static bool IsDeployed
 {
     get
@@ -111,18 +111,18 @@ internal static Version localVersion;
             return true; 
     }
 }
-  ```
+```
 
 9. Add the following method to the  `SharePointComponentDeployer` class. Note that the last thing the method does is update the registered tenant version in the corporate database ( **0000.0000.0000.0000** ) to match the actual version of the add-in on the host web ( **1.0.0.0** ). You will complete this method in a later step.
     
-  ```C#
+```C#
   internal static void DeployChainStoreComponentsToHostWeb(HttpRequest request)
 {
     // TODO4: Deployment code goes here.
 
     RemoteTenantVersion = localVersion;
 }
-  ```
+```
 
 
  **Note**  You may wonder now why the add-in uses version numbers and a "less than" test to determine the answer to a simple yes/no question: is the add-in running for the first time? We could just as well have a simple string field in the  **Tenants** table that is set to "not run yet" in the installation handler, and then changed to "already run once" by the first-run logic after the SharePoint components are deployed.For the Chain Store add-in, a simple test would work. However, it is generally a good practice to use version numbers. This is because a production add-in is likely to be updated-in-place in the future; that is, updated after it is already installed. When that time comes, your add-in logic will need to be sensitive to more than the two possibilities not-yet-run andalready-run-once. Suppose, for example, that you want to add an additional list to the host web in the upgrade from version 1.0.0.0 to 2.0.0.0. You could do this in an update event handler, or in "first run after update" logic. Either way, your deployment logic will need to deploy new components, but it will also need to avoid trying to redeploy components that were deployed in a previous version of the add-in. A version number of 1.0.0.0 would signal that the components of version 1.0.0.0 have been deployed but that the first-run-after-update logic has not yet run.
@@ -153,7 +153,7 @@ internal static Version localVersion;
     
  
 
-  ```C#
+```C#
   SharePointComponentDeployer.sPContext = spContext;
 SharePointComponentDeployer.localVersion = new Version(Request.QueryString["SPAddInVersion"]);
 
@@ -161,7 +161,7 @@ if (!SharePointComponentDeployer.IsDeployed)
 {
     SharePointComponentDeployer.DeployChainStoreComponentsToHostWeb(Request);
 }
-  ```
+```
 
 
 ## Programmatically deploy a SharePoint list
@@ -173,9 +173,9 @@ if (!SharePointComponentDeployer.IsDeployed)
 
 1. In the SharePointComponentDeployer.cs file, replace the  `TODO4` with the following line. You create this method in the next step.
     
-  ```C#
+```C#
   CreateLocalEmployeesList();
-  ```
+```
 
 2. Add the following method to the  `SharePointComponentDeployer` class. Note the following about this code:
     
@@ -186,7 +186,7 @@ if (!SharePointComponentDeployer.IsDeployed)
     
  
 
-  ```C#
+```C#
   private static void CreateLocalEmployeesList()
 {
     using (var clientContext = sPContext.CreateUserClientContextForSPHost())
@@ -209,7 +209,7 @@ if (!SharePointComponentDeployer.IsDeployed)
         }
     }
 }
-  ```
+```
 
 3. Replace  `TODO5` with the following code. Note the following about this code:
     
@@ -223,21 +223,21 @@ if (!SharePointComponentDeployer.IsDeployed)
     
  
 
-  ```C#
+```C#
   ListCreationInformation listInfo = new ListCreationInformation();
 listInfo.Title = "Local Employees";
 listInfo.TemplateType = (int)ListTemplateType.GenericList;
 listInfo.Url = "Lists/Local Employees";
 List localEmployeesList = clientContext.Web.Lists.Add(listInfo);
-  ```
+```
 
 4. Replace  `TODO6` with the following code which changes the public name of the "Title" field (column) from "Title" to "Name". This is what you did on the **List Settings** page when you created the list manually.
     
-  ```C#
+```C#
   Field field = localEmployeesList.Fields.GetByInternalNameOrTitle("Title");
 field.Title = "Name";
 field.Update();
-  ```
+```
 
 5. You also manually created a field named  **Added to Corporate DB**. To do that programmatically add the following code in place of  `TODO7`. Note the following about this code:
     
@@ -251,17 +251,17 @@ field.Update();
     
  
 
-  ```C#
+```C#
   localEmployeesList.Fields.AddFieldAsXml("<Field DisplayName='Added to Corporate DB'"
                                          +"Type='Boolean'>"
                                          + "<Default>FALSE</Default></Field>",
                                          true,
                                          AddFieldOptions.DefaultValue);
-  ```
+```
 
 6. Recall that the  **Added to Corporate DB** is **No** (that is, false) by default, but the custom ribbon button in the add-in sets it to **Yes** after it adds the employee to the corporate database. This system only works best if users cannot manually change the value of the field. To ensure that they don't, make the field invisible in the forms for creating and editing items on the **Local Employees** list. We do this by adding two more attributes to the first parameter, as shown in the following.
     
-  ```C#
+```C#
   localEmployeesList.Fields.AddFieldAsXml("<Field DisplayName='Added to Corporate DB'" 
                                          + " Type='Boolean'"  
                                          + " ShowInEditForm='FALSE' "
@@ -269,14 +269,14 @@ field.Update();
                                          + "<Default>FALSE</Default></Field>",
                                          true,
                                          AddFieldOptions.DefaultValue);
-  ```
+```
 
 
     The entire  `CreateLocalEmployeesList` should now look like the following.
     
 
 
-  ```C#
+```C#
   private static void CreateLocalEmployeesList()
 {
     using (var clientContext = sPContext.CreateUserClientContextForSPHost())
@@ -310,7 +310,7 @@ field.Update();
         }
     }
 }
-  ```
+```
 
 
 ## Temporarily remove the custom button from the project

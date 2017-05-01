@@ -89,25 +89,25 @@ If you're not building SharePoint-hosted ASPX pages, but you still want your add
     
       - Point to the library at the root of the layouts folder, as shown in the following example.
     
-  ```
+```
   <script 
     type="text/javascript" 
     src="http://{server URL}/_layouts/15/sp.ui.controls.js">
 </script>
-  ```
+```
 
   - Copy the library to your own website, and reference it from there.
     
      **Caution**  If you opt for this alternative your add-in will not benefit from updates to the control.
 2. Add the placeholder DOM element where the control will be rendered, as shown in this example.
     
-  ```
+```
   <div id='chromeControlContainer'></div>
-  ```
+```
 
 3. Instantiate the control.
     
-  ```
+```
   function addchromecontrol(){
     var options = {};
     options.siteTitle ="{host site title}";
@@ -118,13 +118,13 @@ If you're not building SharePoint-hosted ASPX pages, but you still want your add
     nav = new SP.UI.Controls.Navigation("chromeControlContainer", options);
     nav.setVisible(true);
 }
-  ```
+```
 
 4. (Optional) If you don't want to have the title area on your page, you can remove it by running the following JavaScript code.
     
-  ```
+```
   nav.setBottomHeaderVisible(false);
-  ```
+```
 
 The chrome control provides for two optional add-in icons: one on the top navigation bar and one in the title area. The add-in icon on the top navigation bar is 24 x 24 pixels (px), and the icon in the title area is the same size as SharePoint site icons—up to 64 px high by up to 180 px long. We recommend you use a PNG image that you have tested on white, black, gray, bright, and muted backgrounds because users and admins can change the site theme. For more information about using the chrome control, see  [Use the client chrome control in SharePoint Add-ins](use-the-client-chrome-control-in-sharepoint-add-ins.md).
  
@@ -159,17 +159,17 @@ To get the CSS styles from the host web, you have to reference its CSS file. You
  
 2. If you're inside the add-in web, you can use the  **CssRegistration** and **CssLink** controls to reference the CSS file by putting the following code on either your master page or ASPX page:
     
-  ```HTML
+```HTML
   <SharePoint:CssRegistration runat="server" name="default" />
 <SharePoint:CssLink runat="server />
 
-  ```
+```
 
 3. You can use a <link> element to reference the CSS file by building a URL off of the host web's URL, as shown in this example.
     
-  ```HTML
+```HTML
   <link rel="stylesheet" href="{host web URL}/_layouts/15/defaultcss.ashx" />
-  ```
+```
 
 
     If you use this approach, you have to run JavaScript in the page to get the host web's URL off the query string. Then you can insert the host web's URL into the  **link** element before you write the element to the page's DOM.

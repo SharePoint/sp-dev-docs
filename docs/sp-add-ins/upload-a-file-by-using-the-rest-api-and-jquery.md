@@ -55,17 +55,17 @@ To use the examples in this article, you'll need the following:
  
 - A reference to the jQuery library in your page markup. For example:
     
-  ```HTML
+```HTML
   <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js" type="text/javascript"></script>
-  ```
+```
 
 - The following controls in your page markup.
     
-  ```HTML
+```HTML
   <input id="getFile" type="file"/><br />
 <input id="displayName" type="text" value="Enter a unique name" /><br />
 <input id="addFileButton" type="button" value="Upload" onclick="uploadFile()"/>
-  ```
+```
 
 
 ## Code example 1: Upload a file across SharePoint domains by using the REST API and jQuery

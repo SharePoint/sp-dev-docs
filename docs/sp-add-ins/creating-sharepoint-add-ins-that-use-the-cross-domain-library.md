@@ -48,11 +48,11 @@ Of course, the remote components of the SharePoint Add-in still have to have aut
  
 - In a SharePoint-hosted add-in, you can leave the add-in principal type set to its default, which is  **Internal**. Then set the  **AllowedRemoteHostUrl** attribute of the **Internal** element to the URL of the remote web application, as in the following example.
     
-  ```
+```
   <AppPrincipal>
   <Internal AllowedRemoteHostUrl="https://example.com/Home.html" />
 </AppPrincipal>
-  ```
+```
 
 
  **Note**  If you use the second option (an  **Internal** add-in principal), then you can use only JavaScript and the cross-domain library to access SharePoint. The SharePoint client object model is blocked for **Internal**SharePoint Add-ins, so you cannot have a dual authorization system that uses both the cross-domain library and either the low-trust or high-trust systems.

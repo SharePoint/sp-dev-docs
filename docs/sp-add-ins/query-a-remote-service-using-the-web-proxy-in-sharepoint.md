@@ -145,7 +145,7 @@ Figure 1 shows the browser window with data from the remote service in a SharePo
     
  
 
-  ```
+```
   Categories from the Northwind database exposed as an OData service: 
     
 <!-- Placeholder for the remote content -->
@@ -235,7 +235,7 @@ Figure 1 shows the browser window with data from the remote service in a SharePo
     }
 })();
 </script>
-  ```
+```
 
 
 ### (Optional) To modify the Default.aspx page to use the web proxy by using the REST endpoint
@@ -268,7 +268,7 @@ Figure 1 shows the browser window with data from the remote service in a SharePo
     
  
 
-  ```
+```
   Categories from the Northwind database exposed as an OData service: 
     
 <!-- Placeholder for the remote content -->
@@ -373,7 +373,7 @@ Figure 1 shows the browser window with data from the remote service in a SharePo
 })();
 </script>
 
-  ```
+```
 
 
 ### To edit the add-in manifest file
@@ -384,11 +384,11 @@ Figure 1 shows the browser window with data from the remote service in a SharePo
  
 2. Copy the following  **RemoteEndPoints** definition as a child of the **App** node.
     
-  ```XML
+```XML
   <RemoteEndpoints>
     <RemoteEndpoint Url=" http://services.odata.org" />
 </RemoteEndpoints>
-  ```
+```
 
 
     The  **RemoteEndpoint** element is used to specify the remote domain. The web proxy validates that the requests issued to remote domains are declared in the add-in manifest. You can create up to 20 entries in the **RemoteEndpoints** element. Only the authority part is considered; `http://domain:port` and `http://domain:port/website` are considered the same endpoint. You can issue calls to many different endpoints within the same domain with just one **RemoteEndpoint** definition.

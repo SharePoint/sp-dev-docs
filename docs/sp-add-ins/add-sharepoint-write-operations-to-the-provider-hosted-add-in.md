@@ -43,10 +43,10 @@ Our add-in has a custom ribbon button that adds an employee from the Hong Kong s
  
 2. Add the following line to the  **Page_Load** methodbetween the call of `AddLocalEmployeeToCorpDB` and the call of **Response.Redirect**. You will create the  `SetLocalEmployeeSyncStatus` method in the next step.
     
-  ```C#
+```C#
   // Write to SharePoint 
 SetLocalEmployeeSyncStatus();
-  ```
+```
 
 3. Add the following new method to the  `EmployeeAdder` class. Note the following about this code:
     
@@ -60,7 +60,7 @@ SetLocalEmployeeSyncStatus();
     
  
 
-  ```C#
+```C#
   private void SetLocalEmployeeSyncStatus()
 {
     using (var clientContext = spContext.CreateUserClientContextForSPHost())
@@ -72,7 +72,7 @@ SetLocalEmployeeSyncStatus();
         clientContext.ExecuteQuery();
     }
 }
-  ```
+```
 
 
 ## Request permission to write to the host web list
@@ -200,9 +200,9 @@ Now you add a function to the add-in that creates an item in the  **Expected Shi
  
 3. In the  `btnCreateOrder_Click` method, add the following line just below the call to `CreateOrder`. You'll create the CreateExpectedShipment method in the next step.
     
-  ```C#
+```C#
   CreateExpectedShipment(txtBoxSupplier.Text, txtBoxItemName.Text, quantity);
-  ```
+```
 
 4. Add the following method to the  `OrderForm` class. Note the following about this code:
     
@@ -216,7 +216,7 @@ Now you add a function to the add-in that creates an item in the  **Expected Shi
     
  
 
-  ```
+```
   private void CreateExpectedShipment(string supplier, string product, UInt16 quantity)
 {
     using (var clientContext = spContext.CreateUserClientContextForSPHost())
@@ -231,7 +231,7 @@ Now you add a function to the add-in that creates an item in the  **Expected Shi
         clientContext.ExecuteQuery();
     }
 }
-  ```
+```
 
 
 ## Checking for deleted components

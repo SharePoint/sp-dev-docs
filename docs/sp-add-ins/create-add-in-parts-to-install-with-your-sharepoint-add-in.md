@@ -106,7 +106,7 @@ After completing the tasks, your add-in part should look similar to Figure 2 whe
     
 
 
-  ```HTML
+```HTML
   <html>
     <body>
         <div id="content">
@@ -148,7 +148,7 @@ After completing the tasks, your add-in part should look similar to Figure 2 whe
     </script>
     </body>
 </html>
-  ```
+```
 
 4. Save and close the file.
     
@@ -257,7 +257,7 @@ The dialog should look like the following when you are finished:
  
 10. Visual Studio generates the following XML code in the elements.xml file of the add-in part (line breaks added for clarity). Note that the  **Title** attribute of the **ClientWebPart** element is set to "Basic add-in part Title" and the Description is set to "Basic add-in part Description". Delete the word "Title" from the first, and replace the second withA basic add-in part. 
     
-  ```XML
+```XML
   <?xml version="1.0" encoding="UTF-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
     <ClientWebPart
@@ -314,7 +314,7 @@ The dialog should look like the following when you are finished:
     </ClientWebPart>
 </Elements>               
 
-  ```
+```
 
 
 ### Set the add-in start page to the host web home page

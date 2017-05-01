@@ -80,7 +80,7 @@ Follow these steps to create a custom action in the host web document libraries:
 
      **Important**  The ItemURL and ItemID tokens only get passed when there is an item selected. In a production quality SharePoint Add-in, your code needs to handle situations where no item is selected. In this example the code alerts the user that no item has been selected. 
 
-  ```HTML
+```HTML
   <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
     <title>Custom action target</title>
@@ -117,7 +117,7 @@ Follow these steps to create a custom action in the host web document libraries:
     </script>
 </body>
 </html>
-  ```
+```
 
 
 ### To add a menu item custom action to the SharePoint Add-in project
@@ -147,7 +147,7 @@ Follow these steps to create a custom action in the host web document libraries:
     
 
 
-  ```XML
+```XML
   <?xml version="1.0" encoding="utf-8"?>
 <Elements 
     xmlns="http://schemas.microsoft.com/sharepoint/">
@@ -170,7 +170,7 @@ Follow these steps to create a custom action in the host web document libraries:
   </CustomAction>
 </Elements>
 
-  ```
+```
 
 5. Add the following query parameters to the end of the  **Url** attribute of the **UrlAction** element:
     
@@ -210,7 +210,7 @@ Follow these steps to create a custom action in the host web document libraries:
 |Where does the custom action navigate to?|Choose the  **CustomActionAppWeb\CustomActionTarget.aspx** page.|
 4. Visual Studio generates the following markup in the elements.xml file of the Ribbon custom action feature:
     
-  ```XML
+```XML
   <?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <CustomAction Id="85691508-c076-4f43-93d4-96b4d5253a09.RibbonCustomAction1"
@@ -244,7 +244,7 @@ Follow these steps to create a custom action in the host web document libraries:
   </CustomAction>
 </Elements> 
 
-  ```
+```
 
 5. Add the following query parameters to the end of the  **CommandAction** attribute of the **CommandUIHandler** element:
     

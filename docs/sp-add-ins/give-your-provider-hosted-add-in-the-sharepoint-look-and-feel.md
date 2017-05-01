@@ -140,7 +140,7 @@ In some scenarios, you want your remote pages to have their own branding, but in
  
 2. In the  **head** section, you'll see a script that loads a couple of JavaScript libraries. Add the following additional script below it. This script loads the SP.UI.Controls.js file which is in every SharePoint website at the /_layouts/15/ folder. Among other things, this file will load the SharePoint CSS library.
     
-  ```
+```
   <script type="text/javascript">
     var hostweburl;
 
@@ -174,11 +174,11 @@ In some scenarios, you want your remote pages to have their own branding, but in
         }
     }
 </script>
-  ```
+```
 
 3. At the top of the body section of the page, add the following markup. This will insert the SharePoint top bar, called the chrome control, onto the page. The details of this markup will become clearer when we test the revised add-in later in this article. (The string "app" appears in some of the property names because add-ins used to be called "apps".)
     
-  ```
+```
   <!-- Chrome control placeholder. Options are declared inline.  -->
 <div 
     id="chrome_ctrl_container"
@@ -200,14 +200,14 @@ In some scenarios, you want your remote pages to have their own branding, but in
             ]
          }'>
 </div>
-  ```
+```
 
 4. The  **H1** headers and the hyperlink in the body of the page will automatically use styles defined in SharePoint's CSS library, so they don't need to be changed. To illustrate how you can use the SharePoint styles, set the column headings in the three **GridView** controls to SharePoint's "all caps" style by adding the **HeaderStyle-CssClass** attribute to each of the controls and setting its value to " `ms-uppercase`". The following is an example. Make the same change to all three  **GridView** controls.
     
-  ```XML
+```XML
   <asp:GridView ID="ordersGridView" runat="server" CellPadding="5" GridLines="None" 
 HeaderStyle-CssClass="ms-uppercase" />
-  ```
+```
 
 5. The chrome control uses the add-in's icon, so we need a second copy of the icon file on the remote web server. In  **Solution Explorer**, right-click the AppIcon.png file in the  **ChainStore** project and choose **Copy**. 
     
@@ -224,12 +224,12 @@ HeaderStyle-CssClass="ms-uppercase" />
     
 
 
-  ```C#
+```C#
   protected void Page_Load(object sender, EventArgs e)
 {
     spContext = SharePointContextProvider.Current.GetSharePointContext(Context);
 }
-  ```
+```
 
 9. There are four other ASP.NET files that need the SharePoint UI: 
     
@@ -252,33 +252,33 @@ HeaderStyle-CssClass="ms-uppercase" />
     
 
 
-  ```XML
+```XML
   <link type="text/css" rel="stylesheet" 
 href="<%= spContext.SPHostUrl.ToString() + "_layouts/15/defaultcss.ashx" %>" />
-  ```
+```
 
 10. This step and the next one have already been done for the Order Form page and the Account page, so they apply only to the Contact, and Help pages. To get the  `spContext` object onto each of the pages, open the *.aspx.cs code behind files for the three aspx pages. In each of them, add the following member to the **Page** class.
     
-  ```C#
+```C#
   protected SharePointContext spContext;
-  ```
+```
 
 11. Replace the  **Page_Load** method with the following version. The object is being retrieved from the Session cache. It was cached there when it was first created by the **Page_Load** method of the add-in's start page.
     
-  ```C#
+```C#
   protected void Page_Load(object sender, EventArgs e)
 {
     spContext = Session["SPContext"] as SharePointContext;
 }
-  ```
+```
 
 12. Open the OrderForm.aspx page. In the top  **Label** element, replace the **<b>** element on the phrase **Place Order** with span tags that reference the `ms-accentText` CSS class. The entire **Label** control should look like this when you are done.
     
-  ```XML
+```XML
   <asp:Label ID="lblOrderPrompt" runat="server"
          Text="Enter a supplier, product, and quantity; and then press <span class='ms-accentText'>Place Order</span>.">
 </asp:Label>
-  ```
+```
 
 
 ## Run the add-in and test the new SharePoint UI

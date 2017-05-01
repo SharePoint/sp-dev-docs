@@ -177,7 +177,7 @@ Figure 1 shows a remote webpage with the chrome control.
     
  
 
-  ```HTML
+```HTML
   <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -296,7 +296,7 @@ function getQueryStringParameter(paramToRetrieve) {
     </div>
 </body>
 </html>
-  ```
+```
 
 3. You can also use the chrome control in a declarative way. In the following code example, the HTML markup declares the control without using JavaScript code to configure and initialize the control. The following markup performs the following tasks:
     
@@ -310,7 +310,7 @@ function getQueryStringParameter(paramToRetrieve) {
     
  
 
-  ```HTML
+```HTML
   <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -395,7 +395,7 @@ function getQueryStringParameter(paramToRetrieve) {
     </div>
 </body>
 </html>
-  ```
+```
 
 
     The SP.UI.Controls.js library automatically renders the control if it finds the  **data-ms-control="SP.UI.Controls.Navigation"** attribute in a **div** element.

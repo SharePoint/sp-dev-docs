@@ -336,18 +336,18 @@ In many business add-ins you'll want to restrict access to certain functionality
  
 3. In the Code Editor, add the following code to the  **Candidates_Validate** method:
     
-  ```VB.net
+```VB.net
   If Not Application.User.Department = "Hiring Managers" Then
                 results.AddEntityError("Permission denied")
             End If
-  ```
+```
 
 
-  ```C#
+```C#
   if (!(Application.User.Department == "Hiring Managers")) {
 results.AddEntityError("Permission denied");
 }
-  ```
+```
 
 
     The  **Validate** method is run when a user tries to save a record. If the user is a member of the Hiring Managers security group, the record is saved, otherwise a "Permission denied" error message is displayed and the record is discarded.

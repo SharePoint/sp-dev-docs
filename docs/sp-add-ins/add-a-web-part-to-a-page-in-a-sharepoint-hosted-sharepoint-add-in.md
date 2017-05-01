@@ -42,11 +42,11 @@ In this article you add a Web Part to the default page of the Employee Orientati
  
 3. Inside the same  **<asp:Content>** element, add the following **WebPartZone**. 
     
-  ```XML
+```XML
   <WebPartPages:WebPartZone runat="server" FrameType="TitleBarOnly" 
       ID="HomePage1" Title="loc:full" />
 
-  ```
+```
 
 4. Save and close the file.
     
@@ -59,7 +59,7 @@ In this article you add a Web Part to the default page of the Employee Orientati
  
 7. In the  **File** element, add a child **AllUsersWebPart** element and set its **WebPartZoneID** to the ID of the Web Part zone that you created on the page. The file's contents should now look like the following. This markup tells SharePoint to insert an **AllUsersWebPart** into the Web Part zone that is named "HomePage1".
     
-  ```
+```
   <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Module Name="Pages">
     <File Path="Pages\Default.aspx" Url="Pages/Default.aspx" ReplaceContent="TRUE" >
@@ -70,11 +70,11 @@ In this article you add a Web Part to the default page of the Employee Orientati
   </Module>
 </Elements>
 
-  ```
+```
 
 8. Add a  **CDATA** element as a child of the **AllUsersWebPart**, then add a  **webParts** element as a child of the **CDATA**, as shown in the following markup. 
     
-  ```
+```
   <AllUsersWebPart WebPartZoneID="HomePage1" WebPartOrder="1">
   <![CDATA[
     <webParts>
@@ -82,11 +82,11 @@ In this article you add a Web Part to the default page of the Employee Orientati
     </webParts>
   ]]>
 </AllUsersWebPart>
-  ```
+```
 
 9. Add the following  **webPart** markup as a child of the **webParts** element. This markup adds an **XsltListViewWebPart** and tells the Web Part to show theNew Employees in Seattle list. Note that the **ViewContentTypeId** property value is just "0x", not the actual ID of theNewEmployee content type.
     
-  ```
+```
   
   <webPart xmlns="http://schemas.microsoft.com/WebPart/v3">
     <metaData>
@@ -106,7 +106,7 @@ In this article you add a Web Part to the default page of the Employee Orientati
       </properties>
     </data>
   </webPart>
-  ```
+```
 
 
 ## Run and test the add-in

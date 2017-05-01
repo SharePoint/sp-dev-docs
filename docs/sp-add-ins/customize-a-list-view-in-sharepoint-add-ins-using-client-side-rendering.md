@@ -116,7 +116,7 @@ Figure 1 shows a client-side rendered view of an announcements list.
     
      **Note**  The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list.
 
-  ```XML
+```XML
   <View BaseViewID="2" 
       Name="8d2719f3-c3c3-415b-989d-33840d8e2ddb" 
       DisplayName="Overridable" 
@@ -133,7 +133,7 @@ Figure 1 shows a client-side rendered view of an announcements list.
   <XslLink>main.xsl</XslLink>
   <JSLink Default="TRUE">~site/Scripts/CSRListView.js</JSLink>
 </View>
-  ```
+```
 
 
 ### To provide the custom rendering logic in a JavaScript file
@@ -154,7 +154,7 @@ Figure 1 shows a client-side rendered view of an announcements list.
     
  
 
-  ```
+```
   (function () {
     // Initialize the variable that stores the objects.
     var overrideCtx = {};
@@ -220,7 +220,7 @@ function postRenderHandler(ctx) {
         }
     }
 }
-  ```
+```
 
 
 ### To build and run the solution

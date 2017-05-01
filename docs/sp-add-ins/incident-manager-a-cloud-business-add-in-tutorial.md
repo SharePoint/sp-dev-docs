@@ -1141,7 +1141,7 @@ The Contoso Fire Department is pleased with the additions to the Incident Manage
  
 4. In the Code Editor, add the following code to the  **Insured_render** method:
     
-  ```
+```
   // Create the checkbox and add it to the DOM.
     var checkbox = $("<input type='checkbox'/>")
             .css({
@@ -1164,7 +1164,7 @@ The Contoso Fire Department is pleased with the additions to the Incident Manage
             checkbox[0].checked = newValue;
         }
     });
-  ```
+```
 
 
     This code creates a  **CheckBox** control when the screen is rendered. You'll also need to add code to set an initial value.
@@ -1181,10 +1181,10 @@ The Contoso Fire Department is pleased with the additions to the Incident Manage
  
 8. In the Code Editor, add the following code to the  **created** method:
     
-  ```
+```
   entity.Insured = new Boolean();
     entity.Insured = 'true';
-  ```
+```
 
 
     This code sets the initial value of the control to checked (true) when the screen is created.
@@ -1208,14 +1208,14 @@ The Contoso Fire Department is pleased with the additions to the Incident Manage
  
 3. In the Code Editor, add the following code to the  **ViewIncidents_created** method:
     
-  ```
+```
   screen.getPatients().then(function (results) {
         var queryCount = results.count;
         if (queryCount == 0 ) {
             screen.findContentItem("Patients").isVisible = false;
         }
     });
-  ```
+```
 
 
     This code runs the  **GetPatients** query to get a count of **Patients**. If the result is zero, the  **findContentItem** method sets the **isVisible** property of the **Patients** tab to false, hiding it.

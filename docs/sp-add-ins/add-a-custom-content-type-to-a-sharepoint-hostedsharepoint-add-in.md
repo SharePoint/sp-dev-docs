@@ -73,10 +73,10 @@ In this article you add a custom content type to the Employee Orientation ShareP
  
 11. There are already  **FieldRef** elements in the file for the two columns that you added. Add **FieldRef** elements for two built-in SharePoint columns as peers of the two that are already there. The following is the markup for the elements. *You must use these same GUIDs for the ID attribute because these are built-in field types with fixed IDs.*  Add these *above*  the two **FieldRef** elements for the custom site columns.
     
-  ```
+```
   <FieldRef Name="LinkTitle" ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" DisplayName="Employee" />
 <FieldRef Name="Title" ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" DisplayName="Employee" />
-  ```
+```
 
 
     Note that we have given these fields a custom display name:  **Employee**.
@@ -118,11 +118,11 @@ In this article you add a custom content type to the Employee Orientation ShareP
  
 24. Still in the schema.xml file, in the  **View** element whose **BaseViewID** value is "1", find the child **ViewFields** element and then add the following two **FieldRef** elements as children of it. They may already be there, but missing an **ID** attribute. If so, add the ID attribute.
     
-  ```
+```
   <FieldRef Name="Division" ID="{GUID from the Field element}" />
 <FieldRef Name="OrientationStage" ID="{GUID from the Field element}" />
 
-  ```
+```
 
 25. Replace the two placeholder  **ID** attribute values with the GUIDs from the corresponding **Field** elements in the **ContentType** element for **NewEmployee** that is earlier in the schema.xml file. Don't forget the framing braces "{}".
     
@@ -130,13 +130,13 @@ In this article you add a custom content type to the Employee Orientation ShareP
     
 
 
-  ```
+```
   <ViewFields>
    <FieldRef Name="LinkTitle" ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" DisplayName="Employee" />
    <FieldRef Name="Division" ID="{509d2d67-9a96-4596-9b3b-58449cdcc6ff}" />
    <FieldRef Name="OrientationStage" ID="{38a3b54c-acf3-4ddf-b748-55c7c28d4cc2}" />        
 </ViewFields>
-  ```
+```
 
 26. Still in the schema.xml file, find the  **View** element whose **BaseViewID** value is "0". find the **ViewFields** element with in it.
     
@@ -152,7 +152,7 @@ In this article you add a custom content type to the Employee Orientation ShareP
  
 30. Add two  **Field** elements to the first **Row** element, so that the **Row** element looks like the following.
     
-  ```
+```
   
 <Row>
   <Field Name="Title">Tom Higginbotham</Field>
@@ -160,7 +160,7 @@ In this article you add a custom content type to the Employee Orientation ShareP
   <Field Name="OrientationStage">Tour of building</Field>
 </Row>
    
-  ```
+```
 
 31. Save and close the file.
     

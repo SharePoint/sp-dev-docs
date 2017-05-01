@@ -108,7 +108,7 @@ When you are working in Visual Studio, and you add a RER to a SharePoint Add-in 
  
 - A project item for the remote event receiver is added to the SharePoint Add-in project. The Elements.xml file for the remote event receiver references the web service in the web application and the remote events that you specified. The following example shows an Elements.xml file that handles the addition or deletion of a list item.
     
-  ```XML
+```XML
   <?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <Receivers ListTemplateId="104">
@@ -126,7 +126,7 @@ When you are working in Visual Studio, and you add a RER to a SharePoint Add-in 
       </Receiver>
   </Receivers>
 </Elements>
-  ```
+```
 
 To change the events that the remote event receiver handles, open  **Solution Explorer**, open the  **Properties** window for the remote event receiver, expand the **SharePoint Events** node, and then set only the events that you want to handle to **True**.
  

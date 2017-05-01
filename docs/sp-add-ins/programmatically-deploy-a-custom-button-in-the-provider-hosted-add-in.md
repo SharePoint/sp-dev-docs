@@ -106,15 +106,15 @@ The following procedure shows how to implement this strategy.
 
 1. In the  **ChainStore** project, expand **AddEmployeeToCorpDB** and then open the elements.xml file, and then change the value of the **RegistrationId** attribute of the **CustomAction** element to "100". This is the ID of a type of list. Even if there are no instances of lists of this type on the website, the list *type*  is on every SharePoint website. The attribute should now look like the following.
     
-  ```XML
+```XML
   RegistrationId="100"
-  ```
+```
 
 2. In the file SharePointComponentDeployer.cs, add the following line to the  `DeployChainStoreComponentsToHostWeb` method, just below the line that calls `CreateLocalEmployeesList`. You will create this method in the next step.
     
-  ```C#
+```C#
   ChangeCustomActionRegistration();
-  ```
+```
 
 3. Add the following method to the  `SharePointComponentDeployer` class. Note the following about this code:
     
@@ -125,7 +125,7 @@ The following procedure shows how to implement this strategy.
     
      **Important**   **You must change the  `action.Name` value in the code below to match the value in your elements.xml file.** The GUID part of the name will be different. Note that there is a "." character between the GUID and the rest of the name. The following is an example of the line. `where action.Name == "4a926a42-3577-4e02-9d06-fef78586b1bc.AddEmployeeToCorpDB"`
 
-  ```C#
+```C#
   private static void ChangeCustomActionRegistration()
 {
     using (var clientContext = sPContext.CreateUserClientContextForSPHost())
@@ -151,7 +151,7 @@ The following procedure shows how to implement this strategy.
           clientContext.ExecuteQuery();
     }
 }
-  ```
+```
 
 4. Replace  `TODO8` with the following code.
     
@@ -159,7 +159,7 @@ The following procedure shows how to implement this strategy.
     
 
 
-  ```C#
+```C#
   var queryForList = from list in clientContext.Web.Lists
                    where list.Title == "Local Employees"
                    select list;
@@ -170,13 +170,13 @@ List employeeList = matchingLists.First();
 var listActions = employeeList.UserCustomActions;
 clientContext.Load(listActions);
 listActions.Clear();
-  ```
+```
 
 5. Replace  `TODO9` with the following line, which adds an undefined custom action to the **Local Employees** list.
     
-  ```C#
+```C#
   var listScopedEmployeeAction = listActions.Add();
-  ```
+```
 
 6. Replace  `TODO10` with the following code. Note the following about this code:
     
@@ -187,26 +187,26 @@ listActions.Clear();
     
  
 
-  ```C#
+```C#
   listScopedEmployeeAction.Title = webScopedEmployeeAction.Title;
 listScopedEmployeeAction.Location = webScopedEmployeeAction.Location;
 listScopedEmployeeAction.Sequence = webScopedEmployeeAction.Sequence;
 listScopedEmployeeAction.CommandUIExtension = webScopedEmployeeAction.CommandUIExtension;
 listScopedEmployeeAction.Update();
-  ```
+```
 
 7. Replace  `TODO11` with the following line, which deletes the original descriptively-defined button. If we did not have this line, every list on the website that uses list template "100" would have the custom button on it. Since the button's functionality is closely tied to the **Local Employees** list, it would make no sense to have the button on any other list. Also, without this line, the button would appear *twice*  on the **Local Employees** list, because that list uses template "100".
     
-  ```C#
+```C#
   webScopedEmployeeAction.DeleteObject();
-  ```
+```
 
 
     The entire method should now look like the following (except there should be a GUID in place of the placeholder).
     
 
 
-  ```C#
+```C#
   private static void ChangeCustomActionRegistration()
 {
     using (var clientContext = SPContext.CreateUserClientContextForSPHost())
@@ -243,7 +243,7 @@ listScopedEmployeeAction.Update();
         clientContext.ExecuteQuery();
     }
 }
-  ```
+```
 
 
 ## Request full control of the host web

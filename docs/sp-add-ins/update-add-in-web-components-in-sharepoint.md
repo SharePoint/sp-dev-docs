@@ -125,7 +125,7 @@ Use the following steps to update the add-in web Feature.
 
 
 
-  ```XML
+```XML
   <Feature <!-- Some attributes omitted --> 
                Version="2.0.0.0">
   <ElementManifests>
@@ -139,7 +139,7 @@ Use the following steps to update the add-in web Feature.
    </VersionRange>
   </UpgradeActions>
 </Feature>
-  ```
+```
 
 
 ### To add components to the add-in
@@ -153,15 +153,15 @@ Use the following steps to update the add-in web Feature.
  
 3. For each new element manifest, add an  [ElementManifest](http://msdn.microsoft.com/library/5a6a2865-5d31-45a2-a402-6da6e0f5567a%28Office.15%29.aspx) element as a child to both the **ElementManifests** and the **ApplyElementManifests** elements of the feature xml. (The exact same **ElementManifest** element in both places.) The **Location** attribute of the element should point to the relative path of the elements.2.0.0.0.xml file. For example, if you added a list named MyCustomList, the **ElementManifest** element would look like the following.
     
-  ```XML
+```XML
   <ElementManifest Location="MyCustomList\elements.2.0.0.0.xml" />
-  ```
+```
 
 4. Some kinds of components add files to the project. For example, a schema.xml file is created when you add a list; and when you add a page, a page file is created. For each such file, add an  [ElementFile](http://msdn.microsoft.com/library/bd43638e-8f18-4a0d-b122-1c055f97aa71%28Office.15%29.aspx) element as a child to the **ElementManifests** element. (Do not add it to the **ApplyElementManifests** element.) The **Location** attribute should point to the relative path of the file. For example, if you added a list, the **ElementFile** element for the schema.xml would look like the following.
     
-  ```XML
+```XML
   <ElementFile Location="MyCustomList\Schema.xml" />
-  ```
+```
 
 5. When you add another item of a type that was already in the previous version of the add-in, the Office Developer Tools for Visual Studio may add a reference to the new item to an existing elements manifest instead of creating a new one. For example, the standard way to add a page to an add-in web is to right-click the  **Pages** node in **Solution Explorer** and then navigate through **Add | New Item | Page | Add**. The Office Developer Tools for Visual Studio will add a new  **File** element to the **Pages** module in the existing elements manifest file (usually called elements.xml) rather than create a new element manifest.
     
@@ -188,7 +188,7 @@ Use the following steps to update the add-in web Feature.
  
 6. If you add a field to a content type in the Feature, add an  [AddContentTypeField](http://msdn.microsoft.com/library/cb04a3ac-f41a-4ffe-aaa1-d4bf3fb6347d%28Office.15%29.aspx) element to the **VersionRange** section. Be sure to assign the correct values to the **ContentTypeId** and **FieldId** attributes. Optionally, use the **PushDown** attribute to specify whether the new field should be added to any derived content types. The following is an example.
     
-  ```XML
+```XML
   <VersionRange>
   <AddContentTypeField 
     ContentTypeId="0x0101000728167cd9c94899925ba69c4af6743e"
@@ -196,7 +196,7 @@ Use the following steps to update the add-in web Feature.
     PushDown="TRUE" />
   <!-- Other child elements of VersionRange -->
 </VersionRange>
-  ```
+```
 
 
 ### To modify existing components of the add-in
@@ -217,25 +217,25 @@ Use the following steps to update the add-in web Feature.
  
   4. Add an  **ElementManifest** element to the **ApplyElementManifests** section that references the new manifest file such as in this example.
     
-  ```XML
+```XML
   <ElementManifest Location="Pages\elements.2.0.0.0.xml" />
-  ```
+```
 
 
      **Note**   Do not delete the original manifest. The Feature XML is using both of the old and new ones. Do not copy any **ElementFile** elements from the **ElementManifests** section to the **ApplyElementManifests** section even if the file that is referenced in the **ElementFile** has been changed.
 2. Open every element manifest file that is referenced in the  **ApplyElementManifests** section and ensure that any [File](http://msdn.microsoft.com/library/c270e4ce-8110-4da7-b0e7-c223604bfce7%28Office.15%29.aspx) elements have a **ReplaceContents** attribute and that it is set to **TRUE**. The following is an example. The Office Developer Tools for Visual Studio may have done this already, but you should verify it. Do this even for the element manifests from previous versions of the add-in. This is one of the few ways in which it is a good practice to edit an existing element manifest file.
     
-  ```XML
+```XML
   <Module Name="Pages">
   <File Path="Pages\Default.aspx" Url="Pages/Default.aspx" ReplaceContent="TRUE" />
 </Module>
-  ```
+```
 
 3. Pages can have Web Parts embedded in them as explained in  [Include a Web Part in a webpage on the add-in web](include-a-web-part-in-a-webpage-on-the-add-in-web.md). If you change a page that has a Web Part on it (or change the properties of the Web Part), then there is an additional step: you have to add the following markup to the page to prevent the SharePoint from adding a second copy of the Web Part onto the page. The markup should be added to the  **asp:Content** element with the ID `PlaceHolderAdditionalPageHead`. (The Office Developer Tools for Visual Studio may have already added it when the page was first created, but you should verify that it is there.)
     
-  ```XML
+```XML
   <meta name="WebPartPageExpansion" content="full" />
-  ```
+```
 
 
      **Note**   If the page was configured to allow users to customize it, then this markup has the side effect of removing those customizations. Users will have to repeat them. If the Web Part was added to the page following the guidance in [Include a Web Part in a webpage on the add-in web](include-a-web-part-in-a-webpage-on-the-add-in-web.md), then the Web Part markup is in the elements manifest, so changing the Web Part's properties is an exception to the general rule that you should not edit an element manifest file as part of an add-in update. 
@@ -249,12 +249,12 @@ Use the following steps to update the add-in web Feature.
  
   3. Add the following markup to the  **asp:Content** element, and then replace _{RelativePathToNewPageFile}_ with the new path and filename. This script will redirect the browser to the new page and include the query parameters. It will also keep the old page out of the browser history.
     
-  ```
+```
   <script type="text/javascript">
         var queryString = window.location.search.substring(1);
         window.location.replace("{RelativePathToNewPageFile}" + "?" + queryString);
 </script>
-  ```
+```
 
   4. Delete any other  **asp:Content** elements on the page.
     
@@ -325,7 +325,7 @@ When you update a SharePoint Add-in for the second (or third, and so on) time, y
  
 4. Go to the previous  **VersionRange** element—the one you added the last time you updated the add-in (from 1.0.0.0 to 2.0.0.0 in the continuing example)—and add an **EndVersion** attribute to it. You want the upgrade actions in this **VersionRange** to be applied to any versions of the add-in to which they haven't already been applied (version 1.0.0.0), but you don't want them to be reapplied to versions to which they were already applied (version 2.0.0.0). The **EndVersion** value is *exclusive*  , so you set it to the lowest version to which you do *not*  want the upgrade actions applied. In the continuing example, you set it to 2.0.0.0. Your file should now resemble the following.
     
-  ```XML
+```XML
   <Feature <!-- Some attributes omitted --> 
                Version="3.0.0.0">
   <ElementManifests>
@@ -340,14 +340,14 @@ When you update a SharePoint Add-in for the second (or third, and so on) time, y
    </VersionRange>
   </UpgradeActions>
 </Feature>
-  ```
+```
 
 
     Each time that you upgrade the Feature, follow the same pattern. Add a new  **VersionRange** for the latest update actions. Then add an **EndVersion** element to the *previous*  **VersionRange** element and set it to the previous version number. In the continuing example, the file would resemble the following for the update from 3.0.0.0 to 4.0.0.0.
     
 
 
-  ```XML
+```XML
   <Feature <!-- Some attributes omitted --> 
                Version="4.0.0.0">
   <ElementManifests>
@@ -365,7 +365,7 @@ When you update a SharePoint Add-in for the second (or third, and so on) time, y
     </VersionRange>
   </UpgradeActions>
 </Feature>
-  ```
+```
 
 
     Notice that the most recent  **VersionRange** element has no **BeginVersion** or **EndVersion** attributes. This ensures that the upgrade actions that go into this **VersionRange** element are applied to all previous versions of the Feature, which is what you want because all the latest changes are referenced in this **VersionRange**, and none of them have already occurred for any instance of the Feature.

@@ -169,7 +169,7 @@ To use the List View widget, you must do the following:
     
  
 
-  ```
+```
   <!DOCTYPE html>
 <html>
 <head>
@@ -298,7 +298,7 @@ To use the List View widget, you must do the following:
     </script>
 </body>
 </html>
-  ```
+```
 
 
  **Note**  The code example above explicitly specifies the host web and add-in web URLs to initialize the Office controls runtime. However, if the add-in web and host web URLs are specified in the  **SPAppWebUrl** and **SPHostUrl** query string parameters, respectively; you can pass an empty object and the code will attempt to get the parameters automatically. The **SPAppWebUrl** and **SPHostUrl** parameters are included in the query string when you use the **{StandardTokens}** token.

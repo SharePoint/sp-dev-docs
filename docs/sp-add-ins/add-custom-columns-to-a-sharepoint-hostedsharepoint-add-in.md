@@ -39,7 +39,7 @@ In this article we get back to coding by adding some site columns to the Employe
  
 4. In the elements.xml file for the new site column, edit the  **Field** element so that it has the attributes and values shown in the following example, except that *you should  **not** change the GUID*  for the **ID** attribute from the value that Visual Studio generated for it, *so be careful if you are using copy-and-paste*  .
     
-  ```
+```
   <Field ID="{generated GUID}" 
        Name="Division" 
        Title="Division" 
@@ -49,14 +49,14 @@ In this article we get back to coding by adding some site columns to the Employe
        Type="Text" 
        Required ="FALSE">
 </Field>
-  ```
+```
 
 5. Add another  **Site Column** to the same folder namedOrientationStage.
     
  
 6. In the elements.xml file for the new site column, edit the  **Field** element so that it has the attributes and values shown in the following example, except that you should not change the GUID for the **ID** attribute from the value that Visual Studio generated for it.
     
-  ```
+```
   <Field ID="{generated GUID}" 
        Name="OrientationStage" 
        Title="OrientationStage"
@@ -66,11 +66,11 @@ In this article we get back to coding by adding some site columns to the Employe
        Type="Choice"
        Required ="TRUE">
 </Field>
-  ```
+```
 
 7. Because this is a Choice field, you must specify the possible choices and the order in which they should appear in the drop-down list when a user is making a choice. And because it is a required field, you must specify a default value. Add the following child markup to the  **Field** element.
     
-  ```
+```
   <CHOICES>
       <CHOICE>Not Started</CHOICE>
       <CHOICE>Tour of building</CHOICE>
@@ -86,7 +86,7 @@ In this article we get back to coding by adding some site columns to the Employe
       <MAPPING Value="5">Completed</MAPPING>
 </MAPPINGS>
 <Default>Not Started</Default>
-  ```
+```
 
 8. Save all files.
     

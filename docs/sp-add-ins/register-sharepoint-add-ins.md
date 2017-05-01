@@ -131,12 +131,12 @@ Before you package the SharePoint Add-in and before you deploy its remote compon
     
 
 
-  ```XML
+```XML
   <appSettings>
   <add key="ClientId" value="a044e184-7de2-4d05-aacf-52118008c44e " />
    .  .  .
 </appSettings>
-  ```
+```
 
 2. Enter the add-in secret value as the  **ClientSecret** value (replacing the temporary value that the tools entered).
     
@@ -144,12 +144,12 @@ Before you package the SharePoint Add-in and before you deploy its remote compon
     
 
 
-  ```XML
+```XML
   <appSettings>
   <add key="ClientId" value="a044e184-7de2-4d05-aacf-52118008c44e " />
   <add key="ClientSecret" value="l0z/8TzWN0yQBzMBSEZtYts2Vt3Eo/oE3rfCdPaogKQ= " />
 </appSettings>
-  ```
+```
 
 3. In the AppManifest.xml file in your Visual Studio project, enter the add-in ID value as the  **ClientId** value, *with lower case letters*  .
     
@@ -159,17 +159,17 @@ Before you package the SharePoint Add-in and before you deploy its remote compon
     
 
 
-  ```XML
+```XML
   <AppPrincipal>
   <RemoteWebApplication ClientId="a044e184-7de2-4d05-aacf-52118008c44e "/>
 </AppPrincipal>
-  ```
+```
 
 4. The Office Developer Tools for Visual Studio use the token  `~remoteAppUrl` in **StartPage** element. (For example, `<StartPage>~remoteAppUrl/Pages/Default.aspx?{StandardTokens}</StartPage>`.) This token resolves to the URL of the remote component if you are using the  **Publish** wizard in Visual Studio. If you don't use the wizard (or if you do but you are publishing the remote component to Azure), you have to manually replace the token with the **Add-in Domain** value that you used when registering the add-in. It must be *exactly*  the same value, including port number, if any, except that you include the HTTPS protocol as well. The following is an example.
     
-  ```XML
+```XML
   <StartPage>https://www.contoso.com/Pages/Default.aspx?{StandardTokens}</StartPage>
-  ```
+```
 
 5. Consider using the same value for the  **Title** element in the AppManifest.xml file that you used for the **Title** field in AppRegNew.aspx. The **Title** element value is the name of the add-in that users see after it is installed. It might be confusing to users for the add-in to have a different name in the consent dialog than it has in the SharePoint UI.
     
@@ -177,12 +177,12 @@ Before you package the SharePoint Add-in and before you deploy its remote compon
     
 
 
-  ```XML
+```XML
   <Properties>
   <Title>Contoso photo printing app</Title>
   <StartPage>https://www.contoso.com/Pages/Default.aspx?{StandardTokens}</StartPage>
 </Properties>
-  ```
+```
 
 
 ## Use the redirect URL in an add-in that asks for permissions on the fly

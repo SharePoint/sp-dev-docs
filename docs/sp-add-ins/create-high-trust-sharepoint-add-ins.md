@@ -207,61 +207,61 @@ The Windows PowerShell script that you create in this section is intended to sup
 
 1. In a text editor or Windows PowerShell editor, start a new file and add the following lines to it to create a certificate object:
     
-  ```
+```
   $publicCertPath = "C:\Certs\HighTrustSampleCert.cer"
 $certificate = New-Object System.Security.Cryptography.X509Certificates.X509Certificate2($publicCertPath)
 
-  ```
+```
 
 2. Add the following line to ensure that SharePoint treats the certificate as a root authority.
     
-  ```
+```
   New-SPTrustedRootAuthority -Name "HighTrustSampleCert" -Certificate $certificate 
 
-  ```
+```
 
 3. Add the following line to get the ID of the authorization realm.
     
-  ```
+```
   $realm = Get-SPAuthenticationRealm
 
-  ```
+```
 
 4. Your remote web application will use an access token to get access to SharePoint data. The access token must be issued by a token issuer that SharePoint trusts. In a high-trust SharePoint Add-in, the certificate is the token issuer. Add the following lines to construct an issuer ID in the format that SharePoint requires:  ** _specific_issuer_GUID_@ _realm_GUID_**.
     
-  ```
+```
   $specificIssuerId = "11111111-1111-1111-1111-111111111111"
 $fullIssuerIdentifier = $specificIssuerId + '@' + $realm 
 
-  ```
+```
 
 
      **Note**  The  `$specificIssuerId` value must be a GUID because in a production environment each certificate must have a unique issuer. However, in this context, where you use the same certificate to debug all your high-trust add-ins, you can hard code the value. If for any reason, you use a different GUID from the one used here, * **be sure that any letters in the GUID are lower case***  . The SharePoint infrastructure currently requires lower case for certificate issuer GUIDs.
 5. Add the following lines to register the certificate as a trusted token issuer. The  `-Name` parameter must be unique so in a production configuration, it is common to use a GUID as part (or all) of the name, but in this context, you can use a friendly name. The `-IsTrustBroker` switch is needed to ensure that you can use the same certificate for all the high-trust add-ins you develop. The `iisreset` command is required to make your token issuer registered immediately. Without it, you might have to wait as long as 24 hours for the new issuer to be registered.
     
-  ```
+```
   New-SPTrustedSecurityTokenIssuer -Name "High Trust Sample Cert" -Certificate $certificate -RegisteredIssuerName $fullIssuerIdentifier -IsTrustBroker
 iisreset 
 
-  ```
+```
 
 6. SharePoint 2013 does not normally accept self-signed certificates. So when you are using a self-signed certificate for debugging, add the following lines to turn off SharePoint's normal requirement that HTTPS be used when remote web applications call into SharePoint. If you don't, then you'll get a  **403 (forbidden)** message when the remote web application calls SharePoint using a self-signed certificate. You will reverse this step in a later procedure. Turning off the HTTPS requirement means that requests from the remote web application to SharePoint are not encrypted, but the certificate is still used as a trusted issuer of access tokens which is its main purpose in high-trust SharePoint Add-ins.
     
-  ```
+```
   $serviceConfig = Get-SPSecurityTokenServiceConfig
 $serviceConfig.AllowOAuthOverHttp = $true
 $serviceConfig.Update()
 
-  ```
+```
 
 7. Save the file with the name HighTrustConfig-ForDebugOnly.ps1.
     
  
 8. Open the  **SharePoint Management Shell** as an administrator and run the file with the following line:
     
-  ```
+```
   ./HighTrustConfig-ForDebugOnly.ps1
-  ```
+```
 
 
 ## Create a high-trust SharePoint Add-in
@@ -427,9 +427,9 @@ When you have obtained the new certificate, you need to add a password to it, if
  
 3. Open the  **SharePoint Management Shell** as an administrator and run the file with the following line:
     
-  ```
+```
   ./HighTrustConfig-ForDebugOnly.ps1
-  ```
+```
 
 
 ### To reconfigure the remote web application

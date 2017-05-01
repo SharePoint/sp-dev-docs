@@ -158,10 +158,10 @@ For the code to work:
  
 - You must add the following permission scope for social features in the add-in manifest:
     
-  ```XML
+```XML
   <AppPermissionRequest Right="Read" Scope="http://sharepoint/social/tenant" />
 
-  ```
+```
 
 The APIs are in Microsoft.SharePoint.Client.UserProfiles.dll.
  

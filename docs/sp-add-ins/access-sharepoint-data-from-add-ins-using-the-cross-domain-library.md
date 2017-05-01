@@ -107,7 +107,7 @@ Figure 2 shows a webpage that displays the data on the add-in web.
  
 3. Double click  **Announcements** **>** **Elements.xml**. Paste the following XML nodes as children of the  **ListInstance** element.
     
-  ```
+```
   <Data>
     <Rows>
         <Row>
@@ -120,7 +120,7 @@ Figure 2 shows a webpage that displays the data on the add-in web.
         </Row>
     </Rows>
 </Data>
-  ```
+```
 
 
 ### To add a new page that uses the cross-domain library
@@ -158,7 +158,7 @@ Figure 2 shows a webpage that displays the data on the add-in web.
     
  
 
-  ```
+```
   
 <html>
     <head>
@@ -262,7 +262,7 @@ Figure 2 shows a webpage that displays the data on the add-in web.
         </script>
     </body>
 </html>
-  ```
+```
 
 
 ### To build and run the solution
