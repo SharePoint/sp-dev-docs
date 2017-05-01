@@ -95,7 +95,7 @@ The following table provides guidance on which set of APIs to use for a selected
 |Create a timer job  <br/> |Server object model  <br/> |
 |Create an extension of Central Administration  <br/> |Server object model  <br/> |
 |Create consistent branding across an entire SharePoint farm  <br/> |Server object model  <br/> |
-|Create a custom Web Part, application page, or ASP.NET user control  <br/> |Server object model  <br/> > **Important:**> If the functionality you want to offer customers is not oriented to SharePoint administration at a scope broader than site collection, we recommend that, instead of using the server object model, you create an SharePoint Add-in that includes a remote ASP.NET web application with custom Web Parts and user controls as needed. See the top two rows of this table.           |
+|Create a custom Web Part, application page, or ASP.NET user control  <br/> |Server object model  <br/> **Important:** If the functionality you want to offer customers is not oriented to SharePoint administration at a scope broader than site collection, we recommend that, instead of using the server object model, you create an SharePoint Add-in that includes a remote ASP.NET web application with custom Web Parts and user controls as needed. See the top two rows of this table.           |
    
 
 ## Server object model

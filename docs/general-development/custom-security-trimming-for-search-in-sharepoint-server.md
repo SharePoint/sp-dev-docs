@@ -234,7 +234,7 @@ The following table describes the parameters that the cmdlet uses.
 |:-----|:-----|
 | _SearchApplication_ <br/> |Required. The name of the Search service application, for example "Search Service Application".  <br/> |
 | _typeName_ <br/> |Required. The strong name of the custom security trimmer assembly.  <br/> |
-| _RulePath_ <br/> |Required for post-trimmers; optional for pre-trimmers. The crawl rule for the security trimmer.  <br/> > **Note:**> We recommend using one crawl rule per content source.           |
+| _RulePath_ <br/> |Required for post-trimmers; optional for pre-trimmers. The crawl rule for the security trimmer.  <br/> **Note:** We recommend using one crawl rule per content source.           |
 | _id_ <br/> |Required. The security trimmer identifier (ID). This value is unique; if a security trimmer is registered with an ID that is already registered for another security trimmer, the registration for the first trimmer is overwritten with the registration for the second trimmer.  <br/> |
 | _properties_ <br/> |Optional. The name-value pairs specifying the configuration properties. Must be in the following format:  `Name1~Value1~Name2~Value~…` <br/> |
    

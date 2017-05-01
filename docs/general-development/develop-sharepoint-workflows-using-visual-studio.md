@@ -102,13 +102,13 @@ The following table provides a side-by-side comparison of the features and requi
 |Enables reuse of workflows  <br/> |A workflow can be used only by the list or library on which it was developed. However, SharePoint Designer provides reusable workflows that can be used multiple times within the same site.  <br/> |A workflow can be written as a template so that after it is deployed, it can be reused and associated with any list or library.  <br/> |
 |Allows you to include a workflow as part of a SharePoint solution or SharePoint Add-in  <br/> |No  <br/> |Yes  <br/> |
 |Allows you to create custom actions  <br/> |No. However, SharePoint Designer can consume and implement custom actions that are created and deployed by using Visual Studio.  <br/> |Yes. However, be aware that in Visual Studio, the underlying activities, not their corresponding actions, are used.  <br/> |
-|Allows you to write custom code  <br/> |No  <br/> |No  <br/> > **Note:**> This is changed from previous versions. In SharePoint 2013, workflows are declarative only and Visual Studio relies on the visual design surface for workflow development.           |
+|Allows you to write custom code  <br/> |No  <br/> |No  <br/> **Note:** This is changed from previous versions. In SharePoint 2013, workflows are declarative only and Visual Studio relies on the visual design surface for workflow development.           |
 |Can use Visio Professional to create workflow logic  <br/> |Yes  <br/> |No  <br/> |
 |Deployment  <br/> |Deployed automatically to list, library, or site on which they were created.  <br/> |Create a SharePoint solution package (.wsp) file and deploy the solution package to the site (SPWeb).  <br/> |
 |One-click publishing available for workflows  <br/> |Yes  <br/> |Yes  <br/> |
 |Workflows can be packaged and deployed to a remote server  <br/> |Yes  <br/> |Yes  <br/> |
 |Debugging  <br/> |Cannot be debugged.  <br/> |Workflow can be debugged by using Visual Studio.  <br/> |
-|Can use only actions that are approved by site administrator  <br/> |Yes  <br/> |Yes  <br/> > **Note:**> This is changed from previous versions. Previously, workflows and actions that were authored by using Visual Studio were code-based and deployed at the farm scope, so administrator approval was not required.           |
+|Can use only actions that are approved by site administrator  <br/> |Yes  <br/> |Yes  <br/> **Note:** This is changed from previous versions. Previously, workflows and actions that were authored by using Visual Studio were code-based and deployed at the farm scope, so administrator approval was not required.           |
    
 
 ## Developing workflows using Visual Studio
