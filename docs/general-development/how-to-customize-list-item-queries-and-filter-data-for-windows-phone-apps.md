@@ -92,23 +92,23 @@ In a project based on the Windows Phone SharePoint List Application template, th
     
 1. Gets the CAML query string associated with a given view.
     
-cs
+  ```cs
   
 CamlQuery query = CamlQueryBuilder.GetCamlQuery(ViewName);
-
+  ```
 
 2. Registers with the client object model the list to be retrieved.
     
-cs
+  ```cs
   ListItemCollection items = Context.Web.Lists.GetByTitle(ListTitle).GetItems(query);
-
+  ```
 
 3. Indicates to the client object model that it should return the list items and the fields of those list items (as text values).
     
-cs
+  ```cs
   Context.Load(items);
 Context.Load(items, listItems => listItems.Include(item => item.FieldValuesAsText));
-
+  ```
 
 4. Calls **ExecuteQueryAsync** to send the requests to SharePoint Server and retrieve the data (asynchronously).
     
@@ -138,7 +138,7 @@ For the following code sample, assume again that the target installation of Shar
   
 2. Update the definition of the **ViewXmls** **Dictionary** type in the static **CamlQueryBuilder** class to include an additional CAML query, with a WHERE clause stipulating the appropriate filtering condition.
     
-cs
+  ```cs
   
 static Dictionary<string, string> ViewXmls = new Dictionary<string, string>()
 {   
@@ -151,14 +151,14 @@ static Dictionary<string, string> ViewXmls = new Dictionary<string, string>()
              </Query><RowLimit>30</RowLimit>
                <ViewFields>{0}</ViewFields></View>"}
 };
-
+  ```
 
 3. Double-click the List.xaml file to open the file for editing.
     
   
 4. Add markup to define an additional child **PivotItem** control within the main **Pivot** control. The **Grid** element in which the UI elements that define the main application page are declared should resemble the following code.
     
-XML
+  ```XML
   
 <Grid x:Name="LayoutRoot" Background="Transparent"
  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" 
@@ -198,7 +198,7 @@ XML
         </controls:Pivot>
     </Grid>
 </Grid>
-
+  ```
 
 
     > **Note:**

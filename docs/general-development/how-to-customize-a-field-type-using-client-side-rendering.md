@@ -202,7 +202,6 @@ namespace Microsoft.SDK.SharePoint.Samples.WebControls
         }
     }
 }            
-
 ```
 
 
@@ -226,27 +225,25 @@ namespace Microsoft.SDK.SharePoint.Samples.WebControls
   - Provides additional attributes for the field type.
     
   
-
-```XML
-<?xml version="1.0" encoding="utf-8" ?>
-<FieldTypes>
-  <FieldType>
-    <Field Name="TypeName">FavoriteColorField</Field>
-    <Field Name="TypeDisplayName">Favorite color field</Field>
-    <Field Name="TypeShortDescription">Favorite color field</Field>
-    <Field Name="FieldTypeClass">Microsoft.SDK.SharePoint.Samples.WebControls.FavoriteColorField, $SharePoint.Project.AssemblyFullName$</Field>
-    <Field Name="ParentType">Text</Field>
-    <Field Name="Sortable">TRUE</Field>
-    <Field Name="Filterable">TRUE</Field>
-    <Field Name="UserCreatable">TRUE</Field>
-    <Field Name="ShowOnListCreate">TRUE</Field>
-    <Field Name="ShowOnSurveyCreate">TRUE</Field>
-    <Field Name="ShowOnDocumentLibrary">TRUE</Field>
-    <Field Name="ShowOnColumnTemplateCreate">TRUE</Field>
-  </FieldType>
-</FieldTypes>
-```
-
+    ```XML
+    <?xml version="1.0" encoding="utf-8" ?>
+    <FieldTypes>
+      <FieldType>
+        <Field Name="TypeName">FavoriteColorField</Field>
+        <Field Name="TypeDisplayName">Favorite color field</Field>
+        <Field Name="TypeShortDescription">Favorite color field</Field>
+        <Field Name="FieldTypeClass">Microsoft.SDK.SharePoint.Samples.WebControls.FavoriteColorField, $SharePoint.Project.AssemblyFullName$</Field>
+        <Field Name="ParentType">Text</Field>
+        <Field Name="Sortable">TRUE</Field>
+        <Field Name="Filterable">TRUE</Field>
+        <Field Name="UserCreatable">TRUE</Field>
+        <Field Name="ShowOnListCreate">TRUE</Field>
+        <Field Name="ShowOnSurveyCreate">TRUE</Field>
+        <Field Name="ShowOnDocumentLibrary">TRUE</Field>
+        <Field Name="ShowOnColumnTemplateCreate">TRUE</Field>
+      </FieldType>
+    </FieldTypes>
+    ```
 
 ### To add a JavaScript file for the rendering logic of the custom field type
 
@@ -269,8 +266,7 @@ namespace Microsoft.SDK.SharePoint.Samples.WebControls
     
   
 
-
-```
+```javascript
 (function () {
     var favoriteColorContext = {};
 
@@ -297,7 +293,6 @@ function favoriteColorViewTemplate(ctx) {
 }
 ```
 
-
 ### To build and run the solution
 
 
@@ -323,8 +318,6 @@ function favoriteColorViewTemplate(ctx) {
   
 
   
-
-****
 
 
 |**Problem**|**Solution**|

@@ -458,7 +458,7 @@ Creating a new workflow association, which can also be referred to as a subscrip
 
 1. To create a custom association, first use the  [GetWorkflowSubscriptionService](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.WorkflowServices.WorkflowServicesManager.GetWorkflowSubscriptionService.aspx) method to get a reference to the subscription service.
     
-
+  ```
   
 // connect to the deployment service
 var workflowDeploymentService = workflowServicesManager.GetWorkflowDeploymentService();
@@ -474,7 +474,7 @@ var firstWorkflowDefinition = publishedWorkflowDefinitions.First();
 // connect to the subscription service
 var workflowSubscriptionService = workflowServicesManager.GetWorkflowSubscriptionService();
 
-
+  ```
 
 2. Create a new object instance of the  [WorkflowSubscription](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.WorkflowServices.WorkflowSubscription.aspx) class.
     
@@ -492,7 +492,7 @@ var workflowSubscriptionService = workflowServicesManager.GetWorkflowSubscriptio
   
 4. Once created, the subscription must be published to SharePoint using the  [PublishSubscriptionForList](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.WorkflowServices.WorkflowSubscriptionService.PublishSubscriptionForList.aspx) method, as demonstrated in the following code example:
     
-
+  ```
   
 // create a new association / subscription
 WorkflowSubscription newSubscription = new WorkflowSubscription(clientContext) {
@@ -525,7 +525,7 @@ newSubscription.SetProperty("Prop2","Value2");
 workflowSubscriptionService.PublishSubscriptionForList(newSubscription, listId);
 clientContext.ExecuteQuery();
 
-
+  ```
 
 
 ### Get all workflow instances

@@ -137,7 +137,7 @@ You can deploy a theme by implementing a feature receiver.
     
 
 
-cs
+  ```cs
   
 // Get the SPColor file. Replace with the path to your SPColor file.
 SPFile colorPaletteFile = Web.GetFile("path to .spcolor file");
@@ -166,7 +166,7 @@ SPTheme theme = SPTheme.Open("NewTheme", colorPaletteFile, fontSchemeFile);
 // of the site collection. To specify that the files should be stored in the _themes folder within the root 
 // web, pass false to the ApplyTo method.
 theme.ApplyTo(Web, true);
-
+  ```
 
 
     > **Note:**
@@ -176,7 +176,7 @@ theme.ApplyTo(Web, true);
     
 
 
-cs
+  ```cs
   
 SPList designGallery = Web.GetCatalog(SPListTemplateType.DesignCatalog);
 if (null == designGallery)
@@ -221,7 +221,7 @@ currentItem["FontSchemeUrl"] = "path to .spfont file";
 currentItem["DisplayOrder"] = 0;
 currentItem.Update();
 
-
+  ```
 
 
 ## Additional resources

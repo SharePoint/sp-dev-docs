@@ -245,12 +245,12 @@ void OnSendingRequest(object sender, SendingRequestEventArgs e)
     
 
 
-cs
+  ```cs
   
 Authenticator at = new Authenticator();
 at.AuthenticationMode = ClientAuthenticationMode.MicrosoftOnline;                          
 
-
+  ```
 
 2. Authentication type can be set accordingly. By default, basic authentication is used.
     

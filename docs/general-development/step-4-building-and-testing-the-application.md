@@ -34,12 +34,12 @@ In this step, you will build and test your application. Visual Studio offers sev
     > **Note:**
       > These values vary depending on the values you have in your workbook, session ID, and so on. 
 
-
+  ```
   
 The Credential is: System.Net.SystemNetworkCredential
 Total rows in range: 18
 Value in range is: 4245.955129
-
+  ```
 
 3. Press any key to close SampleApplication.exe.
     
@@ -50,29 +50,29 @@ Value in range is: 4245.955129
 
 1. If the path to the workbook you provided is wrong, you will get a "file not found" exception, which is caught by the following code:
     
-cs
+  ```cs
   
 catch (SoapException e)
 {
     Console.WriteLine("SOAP Exception Message: {0}", e.Message);
 }
+  ```
 
 
-
-VB.net
+  ```VB.net
   
 Catch e As SoapException
 Console.WriteLine("SOAP Exception Message: {0}", e.Message)
 End Try
-
+  ```
 
 2. The application prints the following SOAP exception output to the console:
     
-
+  ```
   
 SOAP Exception Message: The file you selected could not be found. Check the spelling of the file name and verify that the location is correct.
 
-
+  ```
 
 
 ### Index Out Of Range Exception
@@ -80,40 +80,40 @@ SOAP Exception Message: The file you selected could not be found. Check the spel
 
 1. If you try to get a value from outside the range, you will get a **System.IndexOutOfRangeException** exception. The application prints the following output to the console:
     
-
+  ```
   
 The Credential is: System.Net.SystemNetworkCredential
 The sessionID is : 64.28e58e90-b757-4658-b1c4-890ad68ef6cbRmqR4IINXfkMeOJRG8Iq0Y
 27tVk=110.33d3R6fqv7tr2jPyYiPwRu|!@en-US|en-US|+0480#0000-10-00-05T02:00:00:0000
 #+0000#0000-04-00-01T02:00:00:0000#-0060
 Total rows in range: 18
-
+  ```
 
 2. Then you will get an unhandled exception that says:
     
-
+  ```
   
 An unhandled exception of type 'System.IndexOutOfRangeException' occurred in SampleApplication.exe
 Additional information: Index was outside the bounds of the array.
-
+  ```
 
 3. You can handle the above unhandled exception by adding another **catch** block to catch the exception after the SOAP exception **catch** block as shown here:
     
-cs
+  ```cs
   
 catch (Exception e)
 {
     Console.WriteLine("Exception Message: {0}", e.Message);
 }
+  ```
 
 
-
-VB.net
+  ```VB.net
   
 Catch e As Exception
 Console.WriteLine("Exception Message: {0}", e.Message)
 End Try
-
+  ```
 
 
 ### To run the application using F5
@@ -121,15 +121,15 @@ End Try
 
 1. You can run your application by clicking **Start** on the **Debug** menu, or by pressing **F5**. To ensure that the console window remains open after the program has finished executing, you could add the following line of code at the end of your code (after the **catch** block):
     
-cs
+  ```cs
   
 Console.ReadLine();
+  ```
 
 
-
-VB.net
+  ```VB.net
   Console.ReadLine()
-
+  ```
 
 2. Press any key to close SampleApplication.exe.
     

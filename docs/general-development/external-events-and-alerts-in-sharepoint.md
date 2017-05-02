@@ -249,7 +249,7 @@ The following describes the general flow of the subscription process:
     
 
 
-XML
+  ```XML
   FunctionImport
  
 <EntityType Name="EntitySubscribe">
@@ -273,7 +273,7 @@ XML
       Unicode="true" />
 </EntityType>
 
-
+  ```
 
 
 ### Code example: BDC model with Subscribe

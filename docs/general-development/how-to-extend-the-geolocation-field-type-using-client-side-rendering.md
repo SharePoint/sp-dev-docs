@@ -142,19 +142,19 @@ You must have the following:
 
 1. Open the CustomGeolocationField.cs file, and add a **using** directive as follows.
     
-cs
+  ```cs
   
 using System;
 using Microsoft.SharePoint;
 using Microsoft.SharePoint.WebControls;
-
+  ```
 
 2. Ensure that the namespace is **CustomGeolocationField**. 
     
   
 3. Be sure that the class is named **CustomGeolocationField**, and change its declaration to specify that it inherits from **SPFieldGeolocation**. Add the following required constructors for the class.
     
-cs
+  ```cs
   
 public class CustomGeolocationField : SPFieldGeolocation
     {
@@ -180,11 +180,11 @@ public class CustomGeolocationField : SPFieldGeolocation
             : base(fields, typeName, displayName)
         {
         }
-
+  ```
 
 4. Add the following override of the **JSLink** method to the class. CustomGeolocationControl.js is a JavaScript file that you create in the following step. By providing your own JavaScript file, you are overriding the default rendering of Bing Maps. If you do not override this method, the default rendering will be from Bing Maps. The **JSLink** property is introduced in SharePoint 2013. For more information about the **JSLink** property, see [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering.md).
     
-cs
+  ```cs
   
 /// <summary>
         /// Override JSLink property.
@@ -201,11 +201,11 @@ public override string JSLink
                 base.JSLink = value;
             }
         }
-
+  ```
 
 5. The **GetFieldValue** method converts the specified value into a field type value. For more information about the **GetFieldValue** method, see [GetFieldValue(String)](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPField.GetFieldValue.aspx) . Add the following override of the **GetFieldValue** method to the **CustomGeolocationField** class.
     
-cs
+  ```cs
   
 /// <summary>
         /// get the field values
@@ -217,11 +217,11 @@ cs
         {
             return base.GetFieldValue(value);
         }
-
+  ```
 
 6. Add the following override of the  [GetValidatedString](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPField.GetValidatedString.aspx) method to the **CustomGeolocationField** class:
     
-cs
+  ```cs
   
 /// <summary>
         /// get validated string
@@ -233,7 +233,7 @@ cs
         {
             return base.GetValidatedString(value);
         }
-
+  ```
 
 
 ## Step 3: Create rendering for the new custom field
@@ -286,7 +286,7 @@ The following code example creates new rendering for a new custom field for new 
   
 2. Copy the following code into the .js file.
     
-
+  ```
   
 (function () {
         if (typeof CustomGeolocationFieldTemplate == "object") {
@@ -452,7 +452,7 @@ The following code example creates new rendering for a new custom field for new 
         }
         ExecuteOrDelayUntilScriptLoaded(_registerCustomGeolocationFieldTemplate, 'clienttemplates.js');
     })();
-
+  ```
 
 
 ## Step 4: Create a field type definition
@@ -471,7 +471,7 @@ A field type definition is an XML file with a name like  _fldtypes*.xml_ that is
   
 2. Open the fldtypes_CustomGeolocationControl.xml file, and replace its contents with the following markup.
     
-XML
+  ```XML
   
 ?xml version="1.0" encoding="utf-8" ?>
 
@@ -491,7 +491,7 @@ XML
   </FieldType>
 </FieldTypes>
 
-
+  ```
 
 
     This file defines the custom field type for SharePoint 2013. For details about the purpose and meaning of its elements, see  [Custom Field Type Definition](http://msdn.microsoft.com/library/b3315997-671f-4c29-9518-48cc4592f205%28Office.15%29.aspx),  [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6%28Office.15%29.aspx),  [FieldTypes Element (Field Types)](http://msdn.microsoft.com/library/ebac779f-c7c5-401b-8503-e514cd96f5a7%28Office.15%29.aspx),  [FieldType Element (Field Types)](http://msdn.microsoft.com/library/9ab89988-3462-422f-9808-40618da7316b%28Office.15%29.aspx), and  [Field Element (Field Types)](http://msdn.microsoft.com/library/c168e8bc-8aba-4b72-a9c4-a0ad7a4aff9a%28Office.15%29.aspx). Note that the **<Field Name="FieldTypeClass">** element must be entirely on one line.

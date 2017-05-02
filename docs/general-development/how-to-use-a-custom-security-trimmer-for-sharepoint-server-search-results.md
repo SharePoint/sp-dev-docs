@@ -115,7 +115,7 @@ Your custom security trimmer must implement the **ISecurityTrimmerPre** interfac
 
 1. Add the following **using** directives at the beginning of the class.
     
-cs
+  ```cs
   
 using System;
 using System.Collections;
@@ -126,14 +126,14 @@ using Microsoft.IdentityModel.Claims;
 using Microsoft.Office.Server.Search.Query;
 using Microsoft.Office.Server.Search.Administration;
 
-
+  ```
 
 2. Specify that the **CustomSecurityPreTrimmer** class implements the [ISecurityTrimmerPre](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre.aspx) interface in the class declaration, as shown in the following code.
     
-cs
+  ```cs
   
 public class CustomSecurityPreTrimmer : ISecurityTrimmerPre
-
+  ```
 
 
 ### To implement the ISecurityTrimmerPre interface methods
@@ -141,12 +141,12 @@ public class CustomSecurityPreTrimmer : ISecurityTrimmerPre
 
 1. Add the following code for the  [Initialize()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre.Initialize.aspx) method declaration.
     
-cs
+  ```cs
   public void Initialize(NameValueCollection staticProperties, SearchServiceApplication searchApplication)
 {
 
 }
-
+  ```
 
 
     The basic version of this sample does not include any code in the **Initialize** method.
@@ -154,18 +154,18 @@ cs
   
 2. Add the following code for the  [AddAccess()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre.AddAccess.aspx) method declaration.
     
-cs
+  ```cs
   
 public IEnumerable<Tuple<Claim, bool>> AddAccess(
                 IDictionary<string, object> sessionProperties, IIdentity passedUserIdentity)
 {
 //AddAccess method implementation, see steps 3-5.
 }
-
+  ```
 
 3. For the first part of the **AddAccess** method implementation, we find out who the user is by looking at the _passedUserIdentity_.
     
-cs
+  ```cs
   
 if (passedUserIdentity == null)
 {
@@ -204,11 +204,11 @@ if (passedUserIdentity == null)
       }
 }            
 
-
+  ```
 
 4. Create a list, populate the list with claims and return the list, as shown in the following code.
     
-cs
+  ```cs
   
 var claims = new LinkedList<Tuple<Claim, bool>>();
 if (!string.IsNullOrEmpty(strUser))
@@ -228,7 +228,7 @@ if (!string.IsNullOrEmpty(strUser))
    return claims;
 }
 
-
+  ```
 
 
     The **GetMembership** method contains the custom logic of your trimmer.
@@ -264,7 +264,7 @@ Your custom security trimmer must implement the **ISecurityTrimmerPost** interfa
 
 1. Add the following **using** directives at the beginning of the class:
     
-cs
+  ```cs
   
 using System;
 using System.Collections;
@@ -275,14 +275,14 @@ using Microsoft.IdentityModel.Claims;
 using Microsoft.Office.Server.Search.Query;
 using Microsoft.Office.Server.Search.Administration;
 
-
+  ```
 
 2. Specify that the **CustomSecurityPostTrimmer** class implements the [ISecurityTrimmerPost](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPost.aspx) interface in the class declaration, as follows:
     
-cs
+  ```cs
   
 public class CustomSecurityPostTrimmer : ISecurityTrimmerPost
-
+  ```
 
 
 ### To implement the ISecurityTrimmerPost interface methods
@@ -290,12 +290,12 @@ public class CustomSecurityPostTrimmer : ISecurityTrimmerPost
 
 1. Add the following code for the  [Initialize()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPost.Initialize.aspx) method declaration.
     
-cs
+  ```cs
   public void Initialize(NameValueCollection staticProperties, SearchServiceApplication searchApplication)
 {
 
 }
-
+  ```
 
 
     The basic version of this sample does not include any code in the Initialize method.
@@ -303,17 +303,17 @@ cs
   
 2. Add the following code for the  [CheckAccess()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPost.CheckAccess.aspx) method declaration.
     
-cs
+  ```cs
   
 public BitArray CheckAccess(IList<string> documentCrawlUrls, IList<string> documentAcls, IDictionary<string, object> sessionProperties, IIdentity passedUserIdentity)
 {
 //CheckAccess method implementation, see steps 3-5.
 }
-
+  ```
 
 3. For the first part of the **CheckAccess** method implementation, declare and initialize a **BitArray** variable to store the results of the access check for each URL in the **documentCrawlUrls** collection, and retrieve the user who submitted the query, as shown in the following code.
     
-cs
+  ```cs
   
 if (documentCrawlUrls == null)
 {
@@ -331,11 +331,11 @@ if (passedUserIdentity == null)
    parameter", "passedUserIdentity");
 }
 
-
+  ```
 
 4. Loop through each crawl URL in the collection, and perform the access check to determine if the user who submitted the query can access the crawl URL's associated content item, as shown in the following code. 
     
-cs
+  ```cs
   
 // Initialize the bit array with TRUE value which means all results are visible by default.
 var urlStatusArray = new BitArray(documentCrawlUrls.Count, true);
@@ -353,7 +353,7 @@ if (claimsIdentity != null)
    }
 }
 
-
+  ```
 
 
     If the user has access to the content item, set the value of the **BitArray** item at that index, **urlStatusArray[i]**, to **true**; otherwise, set it to **false**.
@@ -361,10 +361,10 @@ if (claimsIdentity != null)
   
 5. Set the return value of the **CheckAccess** method to **urlStatusArray**, as shown in the following code.
     
-cs
+  ```cs
   
 return urlStatusArray;
-
+  ```
 
 
 ## Register the custom security trimmer
@@ -406,11 +406,11 @@ You use the SharePoint Management Shell to register a custom security trimmer wi
   
 5. At the command prompt, type the following command.
     
-
+  ```
   New-SPEnterpriseSearchSecurityTrimmer -SearchApplication "Search Service Application"
 -typeName "CustomSecurityTrimmerSample.ClassName, CustomSecurityTrimmerSample, 
 Version=1.0.0.0, Culture=neutral, PublicKeyToken=token" -RulePath "xmldoc://*"
-
+  ```
 
 
     In the command, replace  _ClassName_ either with **CustomSecurityPreTrimmer** or **CustomSecurityPostTrimmer** and _token_ with the Public Key Token for the CustomSecurityTrimmerSample.dll file. You must associate all post-trimmers with a crawl rule, _"xmldoc://*"_; but this is optional for pre-trimmers.
@@ -419,11 +419,11 @@ Version=1.0.0.0, Culture=neutral, PublicKeyToken=token" -RulePath "xmldoc://*"
       > If you have multiple front-end web servers, you must deploy your security trimmer to the global assembly cache on all the front-end web servers in the farm. 
 6. Verify that your security trimmer is registered with the following PowerShell cmdlets.
     
-
+  ```
   
 $searchApp = Get-SPEnterpriseSearchServiceApplication
 $searchApp | Get-SPEnterpriseSearchSecurityTrimmer
-
+  ```
 
 
     Your security trimmer must be visible in the results.
@@ -435,11 +435,11 @@ $searchApp | Get-SPEnterpriseSearchSecurityTrimmer
 
 - You can restart the Search Service by typing the following PowerShell cmdlet.
     
-
+  ```
   
 net restart sphostcontrollerservice
 
-
+  ```
 
 
 ## Additional resources

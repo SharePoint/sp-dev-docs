@@ -189,7 +189,7 @@ Assume for the purposes of the following code example that you have created a Wi
   
 5. Replace the contents of the file with the following code.
     
-cs
+  ```cs
   
 using System;
 using Microsoft.SharePoint.Client;  // Added for ListItem.
@@ -293,7 +293,7 @@ namespace ContosoSPListApp
         }
     }
 }
-
+  ```
 
 6. Save the file.
     
@@ -318,14 +318,14 @@ It remains now to register these data-conversion functions with the **Converter*
   
 3. Add the following private variable declaration to the top of the code block that implements the **ListForm** partial class, after the opening brace in the code block and before the `ListForm()` constructor.
     
-cs
+  ```cs
   
 private bool _isConversionRegistered;
-
+  ```
 
 4. Add the following method, **RegisterTextFieldValueConverters**, to the file, within the code block (demarcated by opening and closing braces) that implements the **ListForm** partial class.
     
-cs
+  ```cs
   private void RegisterTextFieldValueConverters()
 {
     Converter.RegisterEditFieldValueConverter(FieldType.Text, 
@@ -336,7 +336,7 @@ cs
                           ContosoConverter.GetConvertedTextFieldValue, 
                           ContosoConverter.SetConvertedTextFieldValue);
 }
-
+  ```
 
 
     This method simply calls the appropriate registration methods of the **Converter** class. It is assumed for this code that the custom class containing the **get** and **set** functions created in the preceding procedure is named "ContosoConverter". If you specified a different name for your class, change the code here accordingly.
@@ -344,7 +344,7 @@ cs
   
 5. Modify the implementation of the **OnNavigatedTo** event handler in the file by adding a check for the value of the **_isConversionRegistered** flag and a call to the **RegisterTextFieldValueConverters** function added in the previous step. The modified handler should be as follows.
     
-cs
+  ```cs
   
 protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventArgs e)
 {
@@ -364,7 +364,7 @@ protected override void OnNavigatedTo(System.Windows.Navigation.NavigationEventA
         _isConversionRegistered = true;
     }
 }
-
+  ```
 
 6. Save the file.
     
@@ -411,7 +411,7 @@ In a Windows Phone app created using the template and based on this simple list,
   
 4. Replace the contents of the file with the following code.
     
-cs
+  ```cs
   
 using System;
 using Microsoft.SharePoint.Phone.Application;
@@ -489,7 +489,7 @@ namespace SPListAppGuidConversion
         }
     }
 }
-
+  ```
 
 
     In this custom class, the **RegisterDisplayFieldValueConverter** and the **RegisterNewFieldValueConverter** methods of the **Converter** class are called using anonymous functions (defined by a statement lambda) to implement the **get** and **set** routines for the delegates required by the registration methods. The optional argument labels here (for example, "getConvertedFieldValue:") are included in this code only to clarify which delegates are defined.)
@@ -508,7 +508,7 @@ namespace SPListAppGuidConversion
   
 8. Locate the implementation of the **Application_Launching** event handler (which is empty in a new project created from the Windows Phone SharePoint List Application template) and replace it with the following code.
     
-cs
+  ```cs
   
 private void Application_Launching(object sender, LaunchingEventArgs e)
 {
@@ -517,11 +517,11 @@ private void Application_Launching(object sender, LaunchingEventArgs e)
     GuidConversion.RegisterDisplayFieldGuidConverter();
     GuidConversion.RegisterNewFieldGuidConverter();
 }
-
+  ```
 
 9. For the converter logic to work for new list items (that is, to generate GUID values when items are added to the list), you need to ensure that the Identifier field of the **NewItemViewModel** is bound to the New form. One way of doing this is by adding a hidden **TextBlock** control to NewForm.xaml with a **Binding** declaration for its **Text** property set to the Identifier field. You can add the **TextBlock** control to the **StackPanel** container control that includes the **TextBox** control for the Title field, as in the following section of the markup in the NewForm.xaml file.
     
-
+  ```
   
 ...
     <Grid x:Name="LayoutRoot" Background="Transparent" 
@@ -553,7 +553,7 @@ private void Application_Launching(object sender, LaunchingEventArgs e)
         </StackPanel>
     </Grid>
 ...
-
+  ```
 
 
     Save the file.

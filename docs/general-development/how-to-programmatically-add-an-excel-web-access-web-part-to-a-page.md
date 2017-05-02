@@ -72,28 +72,28 @@ The following steps show how to locate Microsoft.Office.Excel.WebUI.dll and how 
 
 1. Add the Microsoft.Office.Excel.WebUI namespace as a directive to your code, so that when you use the types in this namespace, you do not need to fully qualify them:
     
-cs
+  ```cs
   
 using Microsoft.Office.Excel.WebUI;
+  ```
 
 
-
-VB.net
+  ```VB.net
   Imports Microsoft.Office.Excel.WebUI
-
+  ```
 
 2. Instantiate and initialize the Excel Web Access Web Part, as follows:
     
-cs
+  ```cs
   
  ExcelWebRenderer ewaWebPart = new ExcelWebRenderer();
+  ```
 
 
-
-VB.net
+  ```VB.net
   
 Dim ewaWebPart As New ExcelWebRenderer()
-
+  ```
 
 
 ### To display a workbook programmatically
@@ -105,7 +105,7 @@ Dim ewaWebPart As New ExcelWebRenderer()
     
 
 
-cs
+  ```cs
   
 public bool AddWebPart(string sitename, string book)
 {
@@ -127,12 +127,12 @@ public bool AddWebPart(string sitename, string book)
                     progressBar1.Value = 1;
                 }
             }
+  ```
 
 
 
 
-
-VB.net
+  ```VB.net
   
 Public Function AddWebPart(ByVal sitename As String, ByVal book As String) As Boolean
 ...
@@ -146,7 +146,7 @@ Private Sub AddEWAButton_Click(ByVal sender As Object, ByVal e As EventArgs)
             progressBar1.Value = 1
         End If
 End Sub
-
+  ```
 
 
     > **Important:**
@@ -157,7 +157,7 @@ End Sub
     
 
 
-cs
+  ```cs
   
 ...
 // Instantiate Excel Web Access Web Part.
@@ -180,12 +180,12 @@ catch (Exception exc)
     progressBar1.Value = 1;
     return b;
 
+  ```
 
 
 
 
-
-VB.net
+  ```VB.net
   
 'Instantiate Excel Web Access Web Part.
 'Add an Excel Web Access Web Part in a shared view.
@@ -201,7 +201,7 @@ Catch exc As Exception
     progressBar1.Value = 1
     Return b
 End Try
-
+  ```
 
 
 ## Example

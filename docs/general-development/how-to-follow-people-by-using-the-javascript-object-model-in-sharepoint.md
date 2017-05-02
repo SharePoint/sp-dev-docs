@@ -77,7 +77,7 @@ To create the farm solution that uses the JavaScript object model to work with F
   
 9. In the markup of the FollowPeople.aspx file, paste the following code between the "Main" **asp:Content** tags. This code defines controls and script references.
     
-HTML
+  ```HTML
 <span id="followResults"></span><br/><br />
 <button id="sendRequest" type="button"></button><br/>
 <span id="message" style="color: #FF0000;"></span>
@@ -88,7 +88,7 @@ HTML
 <script type="text/javascript">
     // Replace this comment with the code for your scenario. 
 </script>
-
+  ```
 
    > **Note:**
    > The "Get followers and followed people" example doesn't use the button control or the form digest control, which is only required for operations that update server content. A form digest generates a message digest used for security validation. 

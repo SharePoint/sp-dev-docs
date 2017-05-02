@@ -70,7 +70,7 @@ To export the **Name** field and access attachments from a document library, you
 
 - In DisplayItemViewModel.cs, add the following code to **DisplayVM**.
     
-cs
+  ```cs
   
 public string m_fileUrl;
         public string FileUrl
@@ -116,7 +116,7 @@ public string m_fileUrl;
                 RaisePropertyChanged("FileName");
             }
         }
-
+  ```
 
 
 ### Step 3: Add a hyperlink to the DisplayForm that binds to FileUrl and FileName
@@ -124,7 +124,7 @@ public string m_fileUrl;
 
 - Add the following changes to the Display form.
     
-XML
+  ```XML
   
 <StackPanel HorizontalAlignment="Left" Orientation="Horizontal" Margin="0,5,0,5">
   <TextBlock TextWrapping="Wrap" Width="150" HorizontalAlignment="Left" 
@@ -135,7 +135,7 @@ XML
    x:Name="hypFile" TargetName="_blank" />
 </StackPanel>
 
-
+  ```
 
 
 ## Additional resources

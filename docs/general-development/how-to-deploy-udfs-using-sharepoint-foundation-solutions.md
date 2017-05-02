@@ -79,7 +79,7 @@ For more information on how to enable UDFs and add UDFs to the trusted UDF list,
   
 4. Add the following content to the file:
     
-XML
+  ```XML
   
 <?xml version="1.0" encoding="utf-8" ?>
 <Solution xmlns="http://schemas.microsoft.com/sharepoint/" SolutionId="{57568687-2CC0-45bf-B66A-2D50D57108CA}" DeploymentServerType="ApplicationServer">
@@ -87,7 +87,7 @@ XML
     <Assembly DeploymentTarget="GlobalAssemblyCache" Location="EcsUdfsCommonSet.dll"/>
   </Assemblies>
 </Solution>
-
+  ```
 
 
     > **Note:**

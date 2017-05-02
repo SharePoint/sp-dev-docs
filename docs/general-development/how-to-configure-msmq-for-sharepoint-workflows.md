@@ -66,13 +66,13 @@ MSMQ is provided as a "Feature" in Windows Server. To enable MSMQ, do the follow
       > When you first add the **Message Queuing** feature, the **Private Queues** folder is empty. However, after a workflow runs that fires an event (or a workflow triggered by a SharePoint content change event runs), the **Private Queues** folder is populated as shown in Figure 2.
 7. To complete the installation, you must set the **SPWorkflowServiceApplicationProxy.AllowQueue** property to **true** using a Windows PowerShell script. In the **SharePoint Administration shell**, run the following:
     
-
+  ```
   
 $proxy = Get-SPWorkflowServiceApplicationProxy
 $proxy.AllowQueue = $true;
 $proxy.Update();
 
-
+  ```
 
 
 ## Troubleshooting MSMQ

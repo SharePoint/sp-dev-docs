@@ -150,7 +150,7 @@ Follow these steps to create a map view for a SharePoint list programmatically.
     > **Note:**
       > The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list. 
 
-cs
+  ```cs
   
 class Program
     {
@@ -174,7 +174,7 @@ class Program
             context.ExecuteQuery();
         } 
     }
-
+  ```
 
 8. Replace  _<Site Url>_ and _<List Title>_ with valid values.
     

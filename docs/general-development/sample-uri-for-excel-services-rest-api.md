@@ -33,10 +33,10 @@ In the following examples, each URI references a workbook named  *sampleWorkbook
   
 - The sampleWorkbook.xlsx file is saved to a trusted SharePoint document library. In this example, the path to the location of sampleWorkbook.xlsx is:
     
-
+  ```
   
 http://<ServerName>/Docs/Documents/sampleWorkbook.xlsx
-
+  ```
 
 
 ### Sample URI
@@ -58,71 +58,71 @@ The following are example URIs to access the sampleWorkbook.xlsx workbook by usi
 
 - Top-level model for the workbook (only ranges and charts in the current build):
     
-
+  ```
   
 http://<ServerName>/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model
 
-
+  ```
 
 - Get the full workbook:
     
-
+  ```
   
 http://<ServerName>/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model?$format=workbook
 
-
+  ```
 
 - Return a range (default html). The following two URI examples are equivalent:
     
-
+  ```
   
 http://<ServerName>/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model/Ranges('Sheet1!A1|G5')
 
+  ```
 
 
-
-
+  ```
   
 http://<ServerName>/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model/Ranges('Sheet1!A1|G5')?$format=html
-
+  ```
 
 - Get a named range:
     
-
+  ```
   http://<ServerName>/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model/Ranges('nameOfTheNamedRange')
 
-
+  ```
 
 - Return an Atom XML feed:
     
-
+  ```
   
 http://<ServerName>/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model?$format=atom
 
-
+  ```
 
 - Set a cell and return it:
     
-
+  ```
   
 http://<ServerName>/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model/Ranges('Sheet1!A1|G5')?Ranges('Sheet1!C3')=demo
 
-
+  ```
 
 - Get a chart:
     
-
+  ```
   
 http://<ServerName>/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model/Charts('Chart 1')
 
-
+  ```
 
 - Set a value and get a chart:
     
-
+  ```
   
 http://<ServerName>/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model/Charts('Chart%201')?Ranges('Sheet1!A1')=5.5
 
-
+  ```
 
 

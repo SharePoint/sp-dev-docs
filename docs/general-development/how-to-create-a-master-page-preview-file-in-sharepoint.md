@@ -67,7 +67,7 @@ In the master page preview file:
   
 -  _CSS_ is the section that contains cascading style sheets (CSS). All CSS classes must be prefixed with[ID]. The following example shows a portion of the CSS section in a master page preview file.
     
-
+  ```
   
 [ID] #dgp-pageContainer
 {
@@ -79,7 +79,7 @@ In the master page preview file:
     background-size: cover;
     font-family: [T_BODY_FONT];   
 }
-
+  ```
 
 -  _HTML_ is the HTML section that defines the HTML structure of the preview.
     
