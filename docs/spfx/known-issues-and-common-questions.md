@@ -5,6 +5,7 @@ This page is for listing any known issues or to answer any frequently asked ques
 ## Known issues
 
 **Dev certificate issue with Chrome (v58-)**
+
 - *Date - 28th of April*
 - *Updated - 2nd of May*
 
@@ -15,11 +16,13 @@ You should updated your Yeoman template packages. We have updated certification 
 ## Frequently asked questions
 
 **When will custom actions and JSLink be available in the SharePoint Framework?**
+
 - *Date - 28th of April*
 
 We do not have public date for this currently. We are working on providing modern customization story for user custom actions and JSLink capabilities, which will be supported in both classic and modern experiences. 
 
 **Will SharePoint Framework be available in on-premises?**
+
 - *Date - 28th of April*
 
 We are working getting SharePoint Framework released to SharePoint 2016 during 2017 calendar year. We do not have other public dates currently available. 
