@@ -19,7 +19,7 @@ You can publish your add-in directly to a site using WebDeploy, or you can creat
 
  
 
-     ![The IncidentManager node](../../images/CBA_IM_18.PNG)
+  ![The IncidentManager node](../../images/CBA_IM_18.PNG)
  
 
  
@@ -107,7 +107,7 @@ You can publish your add-in directly to a site using WebDeploy, or you can creat
 
  
 
-     ![The IncidentManager node](../../images/CBA_IM_18.PNG)
+  ![The IncidentManager node](../../images/CBA_IM_18.PNG)
  
 
     

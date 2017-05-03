@@ -102,13 +102,13 @@ Table 1 lists the most frequently used, core APIs, which are in most cases based
 <a name="bk_addresources"> </a>
 
 
--  [Complete basic operations using SharePoint 2013 client library code](complete-basic-operations-using-sharepoint-2013-client-library-code.md)
+-  [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-2013-client-library-code.md)
     
  
--  [Complete basic operations using JavaScript library code in SharePoint 2013](complete-basic-operations-using-javascript-library-code-in-sharepoint-2013.md)
+-  [Complete basic operations using JavaScript library code in SharePoint](complete-basic-operations-using-javascript-library-code-in-sharepoint-2013.md)
     
  
--  [Complete basic operations using JavaScript library code in SharePoint 2013](complete-basic-operations-using-javascript-library-code-in-sharepoint-2013.md)
+-  [Complete basic operations using JavaScript library code in SharePoint](complete-basic-operations-using-javascript-library-code-in-sharepoint-2013.md)
     
  
 

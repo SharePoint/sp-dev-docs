@@ -80,7 +80,7 @@ Open the host web -- your developer test website -- and verify that there is a c
 
  
 
-     ![A calendar named Employee Orientation Schedule with an item on June 1st that says "Orient Cassie Hicks"](../../images/d2066862-41c1-424d-9bfb-b6c5342bcf2c.PNG)
+  ![A calendar named Employee Orientation Schedule with an item on June 1st that says "Orient Cassie Hicks"](../../images/d2066862-41c1-424d-9bfb-b6c5342bcf2c.PNG)
  
 
  
@@ -105,11 +105,11 @@ Open the host web -- your developer test website -- and verify that there is a c
     
  
 
-  ```
+```
   var notStartedItems;
 var calendarList;
 var scheduledItems;
-  ```
+```
 
 3. When a SharePoint Add-in is run, SharePoint calls its start page and adds some query parameters to the start page URL. One of these is  `SPHostUrl` which is, of course, the URL of the host web. The add-in needs this information in order to make calls to host web data, so near the top of the Add-in.js file, just under the variable declaration for `scheduledItems`, add the following line. Note the following about this code:
     
@@ -120,13 +120,13 @@ var scheduledItems;
     
  
 
-  ```
+```
   var hostWebURL = decodeURIComponent(getQueryStringParameter("SPHostUrl"));
-  ```
+```
 
 4. Add the following code to the bottom of the file. This function can be used to read the query parameters. 
     
-  ```
+```
   // Utility functions
 
 function getQueryStringParameter(paramToRetrieve) {
@@ -139,7 +139,7 @@ function getQueryStringParameter(paramToRetrieve) {
         }
      }
  }
-  ```
+```
 
 5. Add the following function to the Add-in.js file somewhere above the failure callbacks section. Note the following about this code:
     
@@ -150,7 +150,7 @@ function getQueryStringParameter(paramToRetrieve) {
     
  
 
-  ```
+```
   function ensureOrientationScheduling() {
 
     var camlQuery = new SP.CamlQuery();
@@ -164,13 +164,13 @@ function getQueryStringParameter(paramToRetrieve) {
     clientContext.executeQueryAsync(getScheduledOrientations, onGetNotStartedItemsFail);
     return false;
 }
-  ```
+```
 
 6. Add the following function to the Add-in.js file just below the preceding function. Notice that it uses the  `hostWebContext` object to identify the list that is queried.
     
      **Note**  Notice that no query markup is added to the CAML query. The effect of having no actual query in the query object is to ensure that  *all*  of the list times will be retrieved. If the list was very large this might cause the request to the server to be unacceptably long-running. In that case, we'd want to find some other way of accomplishing our goal. But in this sample situation with a very small list (and calendar lists are almost always small), getting the whole list, so that we can iterate through it on the client will actually help us minimize the number of calls to the server; that is, calls of **executeQueryAsync**.
 
-  ```
+```
   function getScheduledOrientations() {
 
     var hostWebContext = new SP.AppContextSite(clientContext, hostWebURL);
@@ -182,7 +182,7 @@ function getQueryStringParameter(paramToRetrieve) {
     clientContext.load(scheduledItems);
     clientContext.executeQueryAsync(scheduleAsNeeded, onGetScheduledItemsFail);
 }
-  ```
+```
 
 7. Add the following function to the file. Note the following about this code:
     
@@ -205,7 +205,7 @@ function getQueryStringParameter(paramToRetrieve) {
     
  
 
-  ```
+```
   function scheduleAsNeeded() {
 
     var unscheduledItems = false;
@@ -255,20 +255,20 @@ function getQueryStringParameter(paramToRetrieve) {
         clientContext.executeQueryAsync(onScheduleItemsSuccess, onScheduleItemsFail);
     }
 }
-  ```
+```
 
 8. Add the following success handler that is called when the previously unscheduled items are added to the calendar.
     
-  ```
+```
   function onScheduleItemsSuccess() {
     alert('There was one or more unscheduled orientations and they have been added to the '
               + 'Employee Orientation Schedule calendar.');
 }
-  ```
+```
 
 9. Add the following failure functions to the Failure callbacks section of the file.
     
-  ```
+```
   function onGetNotStartedItemsFail(sender, args) {
     alert('Unable to get the not-started items. Error:' 
         + args.get_message() + '\n' + args.get_stackTrace());
@@ -283,17 +283,17 @@ function onScheduleItemsFail(sender, args) {
     alert('Unable to schedule items on host web calendar. Error:' 
         + args.get_message() + '\n' + args.get_stackTrace());
 }
-  ```
+```
 
 10. Open the default.aspx file and find the  **asp:Content** element with the ID **PlaceHolderMain**.
     
  
 11. Add the following markup just below the  `purgeCompletedItems` button.
     
-  ```HTML
+```HTML
   <p><asp:Button runat="server" OnClientClick="return ensureOrientationScheduling()" 
   ID="ensureorientationschedulingbutton" Text="Ensure all items are on the Calendar" /></p>
-  ```
+```
 
 12. Rebuild the project in Visual Studio.
     
@@ -304,7 +304,7 @@ function onScheduleItemsFail(sender, args) {
     
 
 
-  ```
+```
   <Rows>
   <Row>
     <Field Name="Title">Tom Higginbotham</Field>
@@ -321,7 +321,7 @@ function onScheduleItemsFail(sender, args) {
     <Field Name="Title">Lertchai Treetawatchaiwong</Field>
   </Row>
 </Rows>
-  ```
+```
 
 
 ## Specify the permissions to the host web that the add-in needs
@@ -352,7 +352,7 @@ Your add-in automatically has full control permission to its own add-in web, so 
 
  
 
-     ![The list of permissionson the Permissions tab in the Visual Studio add-in manifest designer with the Edit button visible in the cell of the Properties column.](../../images/03780b79-aca8-44d1-b0bf-d80833d08627.PNG)
+  ![The list of permissionson the Permissions tab in the Visual Studio add-in manifest designer with the Edit button visible in the cell of the Properties column.](../../images/03780b79-aca8-44d1-b0bf-d80833d08627.PNG)
  
 
  
@@ -367,7 +367,7 @@ Your add-in automatically has full control permission to its own add-in web, so 
 
  
 
-     ![The Properties dialog for list permissions in Visual Studio with property name set to "Base List ID" and the Value set to "106".](images/13773fdd-5606-4f35-b8d5-14aad54cffb7.PNG)
+  ![The Properties dialog for list permissions in Visual Studio with property name set to "Base List ID" and the Value set to "106".](../../images/13773fdd-5606-4f35-b8d5-14aad54cffb7.PNG)
  
 
     Choose  **OK**. The  **Permissions** tab should now look similar to the following:
@@ -377,7 +377,7 @@ Your add-in automatically has full control permission to its own add-in web, so 
 
  
 
-     ![The Permissions tab of the add-in manifest designer in Visual Studio showing that the add-in wants Manage permission to lists that have base type 106.](../../images/14d5a820-ab44-4d12-98de-6672884bf344.PNG)
+  ![The Permissions tab of the add-in manifest designer in Visual Studio showing that the add-in wants Manage permission to lists that have base type 106.](../../images/14d5a820-ab44-4d12-98de-6672884bf344.PNG)
  
 
  
@@ -406,7 +406,7 @@ Your add-in automatically has full control permission to its own add-in web, so 
 
  
 
-     ![The SharePoint add-in consent prompt with brief description of the permissions the add-in needs and buttons to "Trust It" or "Cancel".](../../images/99209248-8927-4fc2-abfc-53d530376516.PNG)
+  ![The SharePoint add-in consent prompt with brief description of the permissions the add-in needs and buttons to "Trust It" or "Cancel".](../../images/99209248-8927-4fc2-abfc-53d530376516.PNG)
  
 
  
@@ -418,7 +418,7 @@ Your add-in automatically has full control permission to its own add-in web, so 
 
  
 
-     ![The Employee Orientation home page with a new button added which has the label "Ensure Items are Scheduled".](../../images/72b78f79-78c0-41db-90d5-8f67e1c17b0e.PNG)
+  ![The Employee Orientation home page with a new button added which has the label "Ensure Items are Scheduled".](../../images/72b78f79-78c0-41db-90d5-8f67e1c17b0e.PNG)
  
 
  
@@ -436,7 +436,7 @@ Your add-in automatically has full control permission to its own add-in web, so 
 
  
 
-     ![Employee Orientation calendar with new events added for the orientation of two employees on the 10th and 11th of the month](../../images/f8037509-4bf1-4c69-a673-ee6fe0f0dcb7.PNG)
+  ![Employee Orientation calendar with new events added for the orientation of two employees on the 10th and 11th of the month](../../images/f8037509-4bf1-4c69-a673-ee6fe0f0dcb7.PNG)
  
 
  

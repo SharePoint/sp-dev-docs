@@ -85,7 +85,7 @@ To follow the examples in this article, you need the following:
 - NuGet Package Manager. For more information, see  [Installing NuGet](http://go.microsoft.com/fwlink/?LinkId=271465).
     
  
-- A SharePoint 2013 development environment (app isolation required for on-premises scenarios). 
+- A SharePoint development environment (app isolation required for on-premises scenarios). 
     
  
 - Office Web Widgets - Experimental NuGet package. For more information about how to install a NuGet package, see  [Managing NuGet Packages Using the Dialog](http://docs.nuget.org/docs/start-here/managing-nuget-packages-using-the-dialog). You can also browse the  [NuGet gallery page](http://www.nuget.org/packages/Microsoft.Office.WebWidgets.Experimental/).
@@ -169,7 +169,7 @@ To use the List View widget, you must do the following:
     
  
 
-  ```
+```
   <!DOCTYPE html>
 <html>
 <head>
@@ -298,7 +298,7 @@ To use the List View widget, you must do the following:
     </script>
 </body>
 </html>
-  ```
+```
 
 
  **Note**  The code example above explicitly specifies the host web and add-in web URLs to initialize the Office controls runtime. However, if the add-in web and host web URLs are specified in the  **SPAppWebUrl** and **SPHostUrl** query string parameters, respectively; you can pass an empty object and the code will attempt to get the parameters automatically. The **SPAppWebUrl** and **SPHostUrl** parameters are included in the query string when you use the **{StandardTokens}** token.

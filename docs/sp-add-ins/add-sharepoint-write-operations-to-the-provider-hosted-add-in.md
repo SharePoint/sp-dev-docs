@@ -43,10 +43,10 @@ Our add-in has a custom ribbon button that adds an employee from the Hong Kong s
  
 2. Add the following line to the  **Page_Load** methodbetween the call of `AddLocalEmployeeToCorpDB` and the call of **Response.Redirect**. You will create the  `SetLocalEmployeeSyncStatus` method in the next step.
     
-  ```C#
+```C#
   // Write to SharePoint 
 SetLocalEmployeeSyncStatus();
-  ```
+```
 
 3. Add the following new method to the  `EmployeeAdder` class. Note the following about this code:
     
@@ -60,7 +60,7 @@ SetLocalEmployeeSyncStatus();
     
  
 
-  ```C#
+```C#
   private void SetLocalEmployeeSyncStatus()
 {
     using (var clientContext = spContext.CreateUserClientContextForSPHost())
@@ -72,7 +72,7 @@ SetLocalEmployeeSyncStatus();
         clientContext.ExecuteQuery();
     }
 }
-  ```
+```
 
 
 ## Request permission to write to the host web list
@@ -175,7 +175,7 @@ The next improvement to the Chain Store add-in is to create new items in a list,
  
 10. Click  **new item**. The item creation form should look exactly like the following, including the two asterisks that indicate required fields.:
     
-     ![The item creation form for the Expected Shipments list. With fields for Product, Supplier, Quantity, Arrived, and "Added to Inventory". Asterisks by the titles of Product and Quantity and default value of one for Quantity.](../../images/e552b5c9-8baa-4e53-9295-4d85a79d7734.PNG)
+  ![The item creation form for the Expected Shipments list. With fields for Product, Supplier, Quantity, Arrived, and "Added to Inventory". Asterisks by the titles of Product and Quantity and default value of one for Quantity.](../../images/e552b5c9-8baa-4e53-9295-4d85a79d7734.PNG)
  
 
  
@@ -200,9 +200,9 @@ Now you add a function to the add-in that creates an item in the  **Expected Shi
  
 3. In the  `btnCreateOrder_Click` method, add the following line just below the call to `CreateOrder`. You'll create the CreateExpectedShipment method in the next step.
     
-  ```C#
+```C#
   CreateExpectedShipment(txtBoxSupplier.Text, txtBoxItemName.Text, quantity);
-  ```
+```
 
 4. Add the following method to the  `OrderForm` class. Note the following about this code:
     
@@ -216,7 +216,7 @@ Now you add a function to the add-in that creates an item in the  **Expected Shi
     
  
 
-  ```
+```
   private void CreateExpectedShipment(string supplier, string product, UInt16 quantity)
 {
     using (var clientContext = spContext.CreateUserClientContextForSPHost())
@@ -231,7 +231,7 @@ Now you add a function to the add-in that creates an item in the  **Expected Shi
         clientContext.ExecuteQuery();
     }
 }
-  ```
+```
 
 
 ## Checking for deleted components
@@ -327,7 +327,7 @@ Recall that when an add-in requests Read or Write permission with the scope of L
  
 5. From the home page of the Hong Kong store, navigate to  **Site Contents** and open the **Expected Shipments** list. There is now an item on the list corresponding to the order. The following screenshot is an example.
     
-     ![The Expected Shipments list with a single item. There Product and Supplier fields have names. The Quantity field has a number. The two Yes/No fields are both set to "No".](../../images/e4285084-d31e-4e79-a469-ddebbc7dfb18.PNG)
+  ![The Expected Shipments list with a single item. There Product and Supplier fields have names. The Quantity field has a number. The two Yes/No fields are both set to "No".](../../images/e4285084-d31e-4e79-a469-ddebbc7dfb18.PNG)
  
 
  

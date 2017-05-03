@@ -54,7 +54,7 @@ An Office 365 Developer Site makes it easier to get set up and start creating, t
  
 5. In the  **SharePoint admin center**, on the **Site Collections** tab, click **New > Private Site Collection**.
     
-     ![SharePoint Admin Center new site collection option](../../images/SPAdminCenter_newSiteCollection.png)
+  ![SharePoint Admin Center new site collection option](../../images/SPAdminCenter_newSiteCollection.png)
  
 
  
@@ -76,7 +76,7 @@ An Office 365 Developer Site makes it easier to get set up and start creating, t
     
     You'll see the new developer site URL in the  **Site Collections** list. When the site creation is finished, you can navigate to the URL to open your Developer Site.
     
-     ![New site collection provisioning](../../images/SPAdminCenter_newSiteCollection_provisioning.png)
+  ![New site collection provisioning](../../images/SPAdminCenter_newSiteCollection_provisioning.png)
  
 
  

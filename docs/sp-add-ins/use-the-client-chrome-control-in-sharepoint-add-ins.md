@@ -1,12 +1,12 @@
 
 # Use the client chrome control in SharePoint Add-ins
-Learn how to use the chrome control in add-ins in SharePoint 2013.
+Learn how to use the chrome control in add-ins in SharePoint.
  
 
  **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
-The chrome control in SharePoint 2013 enables you to use the header styling of a specific SharePoint site in your add-in without needing to register a server library or use a specific technology or tool. To use this functionality, you must register a SharePoint JavaScript library through a standard <script> tag. You can provide a placeholder by using an HTML **div** element and further customize the control by using the available options. The control inherits its appearance from the specified SharePoint website.
+The chrome control in SharePoint enables you to use the header styling of a specific SharePoint site in your add-in without needing to register a server library or use a specific technology or tool. To use this functionality, you must register a SharePoint JavaScript library through a standard <script> tag. You can provide a placeholder by using an HTML **div** element and further customize the control by using the available options. The control inherits its appearance from the specified SharePoint website.
  
 
 ## Prerequisites for using the examples in this article
@@ -20,7 +20,7 @@ To follow the steps in this example, you need the following:
 - Visual Studio 2015
     
  
-- A SharePoint 2013 development environment (add-in isolation required for on-premises scenarios)
+- A SharePoint development environment (add-in isolation required for on-premises scenarios)
     
  
 For guidance on how to set up a development environment that fits your needs, see  [Start building Office and SharePoint Add-ins](http://msdn.microsoft.com/library/187f8c8c-1b15-471c-80b5-69a40e67deea.aspx).
@@ -40,9 +40,9 @@ The following table lists useful articles that can help you understand the conce
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [SharePoint Add-ins](sharepoint-add-ins.md)|Learn about the new add-in model in SharePoint 2013 that enables you to create add-ins, which are small, easy-to-use solutions for end users.|
+| [SharePoint Add-ins](sharepoint-add-ins.md)|Learn about the new add-in model in SharePoint that enables you to create add-ins, which are small, easy-to-use solutions for end users.|
 | [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md)|Learn about the user experience (UX) options and alternatives that you have when building SharePoint Add-ins.|
-| [Host webs, add-in webs, and SharePoint components in SharePoint 2013](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md)|Learn about the distinction between host webs and add-in webs. Find out which SharePoint 2013 components can be included in a SharePoint Add-in, which components are deployed to the host web, which components are deployed to the add-in web, and how the add-in web is deployed in an isolated domain.|
+| [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md)|Learn about the distinction between host webs and add-in webs. Find out which SharePoint components can be included in a SharePoint Add-in, which components are deployed to the host web, which components are deployed to the add-in web, and how the add-in web is deployed in an isolated domain.|
 
 ## Code example: Use the chrome control in your cloud-hosted add-in
 <a name="SP15Usechromecontrol_Codeexample"> </a>
@@ -71,7 +71,7 @@ Figure 1 shows a remote webpage with the chrome control.
  
 
  
-![A remote web page with the chrome control](images/ChromeControl_result.png)
+![A remote web page with the chrome control](../../images/ChromeControl_result.png)
  
 
 ### To create the SharePoint Add-in and remote web projects
@@ -89,7 +89,7 @@ Figure 1 shows a remote webpage with the chrome control.
 
  
 
-     ![App for SharePoint 2013 Visual Studio template](images/AppForSharePointVSTemplate.PNG)
+  ![App for SharePoint Visual Studio template](../../images/AppForSharePointVSTemplate.PNG)
  
 
  
@@ -107,7 +107,7 @@ Figure 1 shows a remote webpage with the chrome control.
 
  
 
-     ![App for SharePoint projects in Solution Explorer](images/AppVSTemplateSolutionExplorer.jpg)
+  ![App for SharePoint projects in Solution Explorer](../../images/AppVSTemplateSolutionExplorer.jpg)
  
 
  
@@ -126,7 +126,7 @@ Figure 1 shows a remote webpage with the chrome control.
 
  
 
-     ![Manifest editor with query string parameters](images/ChromeControl_manifest.PNG)
+  ![Manifest editor with query string parameters](../../images/ChromeControl_manifest.PNG)
  
 
     The chrome control automatically takes the following values from the query string:
@@ -177,7 +177,7 @@ Figure 1 shows a remote webpage with the chrome control.
     
  
 
-  ```HTML
+```HTML
   <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -296,7 +296,7 @@ function getQueryStringParameter(paramToRetrieve) {
     </div>
 </body>
 </html>
-  ```
+```
 
 3. You can also use the chrome control in a declarative way. In the following code example, the HTML markup declares the control without using JavaScript code to configure and initialize the control. The following markup performs the following tasks:
     
@@ -310,7 +310,7 @@ function getQueryStringParameter(paramToRetrieve) {
     
  
 
-  ```HTML
+```HTML
   <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
@@ -395,7 +395,7 @@ function getQueryStringParameter(paramToRetrieve) {
     </div>
 </body>
 </html>
-  ```
+```
 
 
     The SP.UI.Controls.js library automatically renders the control if it finds the  **data-ms-control="SP.UI.Controls.Navigation"** attribute in a **div** element.
@@ -433,7 +433,7 @@ function getQueryStringParameter(paramToRetrieve) {
 
  
 
-     ![SharePoint website stylesheet used in a page](images/ChromControl_stylesheet.png)
+  ![SharePoint website stylesheet used in a page](../../images/ChromControl_stylesheet.png)
  
 
  
@@ -489,7 +489,7 @@ This article demonstrated how to use the chrome control in a SharePoint Add-in. 
 -  [SharePoint Add-ins UX design guidelines](sharepoint-add-ins-ux-design-guidelines.md)
     
  
--  [Create UX components in SharePoint 2013](create-ux-components-in-sharepoint-2013.md)
+-  [Create UX components in SharePoint](create-ux-components-in-sharepoint-2013.md)
     
  
 -  [Three ways to think about design options for SharePoint Add-ins](three-ways-to-think-about-design-options-for-sharepoint-add-ins.md)

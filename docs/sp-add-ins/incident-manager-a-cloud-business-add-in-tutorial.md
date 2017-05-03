@@ -20,7 +20,7 @@ To host the add-in, you'll also need a SharePoint Developer site on Office 365, 
 
  
 
- **Note**  You can also host a Cloud Business Add-in on a SharePoint 2013 site.
+ **Note**  You can also host a Cloud Business Add-in on a SharePoint site.
  
 
 
@@ -50,7 +50,7 @@ You will build the mobile add-in that will be used to enter basic information ab
 
  
 
-     ![Cloud Business App template](../../images/CBA_IM1.PNG)
+  ![Cloud Business App template](../../images/CBA_IM1.PNG)
  
 
  
@@ -146,7 +146,7 @@ You will build the mobile add-in that will be used to enter basic information ab
 
  
 
-     ![The Incident entity](../../images/CBA_IM_2.PNG)
+  ![The Incident entity](../../images/CBA_IM_2.PNG)
  
 
     
@@ -205,7 +205,7 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
 
  
 
-     ![The Patient entity](../../images/CBA_IM_2a.PNG)
+  ![The Patient entity](../../images/CBA_IM_2a.PNG)
  
 
     
@@ -242,7 +242,7 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
 
  
 
-     ![The relationship between Incident and Patient](../../images/CBA_IM_3.PNG)
+  ![The relationship between Incident and Patient](../../images/CBA_IM_3.PNG)
  
 
     This creates a zero or one to many relationship between incidents and patients. An incident record doesn't have to have a patient, but every patient has to have a related incident record.
@@ -284,7 +284,7 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
 
  
 
-     ![The Incidents screen set](../../images/CBA_IM_4.PNG)
+  ![The Incidents screen set](../../images/CBA_IM_4.PNG)
  
 
     Browse, View Details, and Add/Edit screens are added to the HTMLClient project. The Browse screen is automatically set as the home screen for the application, and the necessary commands for launching the View and Add/Edit screens are automatically provided.
@@ -332,7 +332,7 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
 
  
 
-     ![Browse screen layout](../../images/CBA_IM4a.PNG)
+  ![Browse screen layout](../../images/CBA_IM4a.PNG)
  
 
     At run time the screen will display a tile for each incident, and each tile will display the incident number, date, and address.
@@ -365,7 +365,7 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
 
  
 
-     ![The Add Patients link](../../images/CBA_IM_5.PNG)
+  ![The Add Patients link](../../images/CBA_IM_5.PNG)
  
 
  
@@ -380,7 +380,7 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
 
  
 
-     ![Add/Edit screen layout](../../images/CBA_IM_5a.PNG)
+  ![Add/Edit screen layout](../../images/CBA_IM_5a.PNG)
  
 
     
@@ -424,7 +424,7 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
 
  
 
-     ![Add/Edit screen layout](../../images/CBA_IM_6.PNG)
+  ![Add/Edit screen layout](../../images/CBA_IM_6.PNG)
  
 
     
@@ -450,7 +450,7 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
 
  
 
-     ![The Add Incident Popup](../../images/CBA_IM_7.PNG)
+  ![The Add Incident Popup](../../images/CBA_IM_7.PNG)
  
 
  
@@ -484,7 +484,7 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
 
  
 
-     ![The Add Patient Popup](../../images/CBA_IM_8.PNG)
+  ![The Add Patient Popup](../../images/CBA_IM_8.PNG)
  
 
  
@@ -587,7 +587,7 @@ The first step is to add a couple of pre-populated list templates to your develo
 
  
 
-     ![Navigate to the SharePoint developer site](../../images/CBA_IM_8a.PNG)
+  ![Navigate to the SharePoint developer site](../../images/CBA_IM_8a.PNG)
  
 
  
@@ -602,7 +602,7 @@ The first step is to add a couple of pre-populated list templates to your develo
 
  
 
-     ![Site Settings link](../../images/CBA_IM_8b.PNG)
+  ![Site Settings link](../../images/CBA_IM_8b.PNG)
  
 
  
@@ -614,7 +614,7 @@ The first step is to add a couple of pre-populated list templates to your develo
 
  
 
-     ![List templates list](../../images/CBA_IM_8c.PNG)
+  ![List templates list](../../images/CBA_IM_8c.PNG)
  
 
  
@@ -638,7 +638,7 @@ The first step is to add a couple of pre-populated list templates to your develo
 
  
 
-     ![The Contoso templates](../../images/CBA_IM_8d.PNG)
+  ![The Contoso templates](../../images/CBA_IM_8d.PNG)
  
 
  
@@ -680,7 +680,7 @@ The first step is to add a couple of pre-populated list templates to your develo
 
  
 
-     ![SharePoint data source](../../images/CBA_IM_9.PNG)
+  ![SharePoint data source](../../images/CBA_IM_9.PNG)
  
 
  
@@ -695,7 +695,7 @@ The first step is to add a couple of pre-populated list templates to your develo
 
  
 
-     ![SharePoint lists](../../images/CBA_IM_9a.PNG)
+  ![SharePoint lists](../../images/CBA_IM_9a.PNG)
  
 
     The entities are added to a new  **Developer Data** node under the **Data Sources** node in **Solution Explorer**, and the  **ContosoApparatus** entity opens in the entity designer.
@@ -735,7 +735,7 @@ The first step is to add a couple of pre-populated list templates to your develo
 
  
 
-     ![The AvailableApparatus query](../../images/CBA_IM_10.PNG)
+  ![The AvailableApparatus query](../../images/CBA_IM_10.PNG)
  
 
     
@@ -769,7 +769,7 @@ The first step is to add a couple of pre-populated list templates to your develo
 
  
 
-     ![The Relationship dialog](../../images/CBA_IM_10a.PNG)
+  ![The Relationship dialog](../../images/CBA_IM_10a.PNG)
  
 
     
@@ -806,7 +806,7 @@ The first step is to add a couple of pre-populated list templates to your develo
 
  
 
-     ![Add a query](../../images/CBA_IM_11.PNG)
+  ![Add a query](../../images/CBA_IM_11.PNG)
  
 
     The  **AvailableApparatus** collection is added to the left pane of the screen designer.
@@ -839,7 +839,7 @@ The first step is to add a couple of pre-populated list templates to your develo
 
  
 
-     ![The Resources tab layout](../../images/CBA_IM_11a.PNG)
+  ![The Resources tab layout](../../images/CBA_IM_11a.PNG)
  
 
  
@@ -875,7 +875,7 @@ On the scene of an incident the Incident Commander has to document many things, 
 
  
 
-     ![Navigate to the SharePoint developer site](../../images/CBA_IM_8a.PNG)
+  ![Navigate to the SharePoint developer site](../../images/CBA_IM_8a.PNG)
  
 
  
@@ -908,7 +908,7 @@ On the scene of an incident the Incident Commander has to document many things, 
 
  
 
-     ![Document library with IncidentNumber column](../../images/CBA_IM_12.PNG)
+  ![Document library with IncidentNumber column](../../images/CBA_IM_12.PNG)
  
 
     In order to associate the document library with your add-in, the document library must contain a custom column that maps to a unique field in your entity. In this case the  **IncidentNumber** column maps to the **IncidentNumber** field in the **Incidents** entity.
@@ -933,7 +933,7 @@ On the scene of an incident the Incident Commander has to document many things, 
 
  
 
-     ![Select the document library](../../images/CBA_IM_13.PNG)
+  ![Select the document library](../../images/CBA_IM_13.PNG)
  
 
     An  **IncidentDocuments.lsml** node is added to Solution Explorer.
@@ -961,7 +961,7 @@ On the scene of an incident the Incident Commander has to document many things, 
 
  
 
-     ![The relationship between entities](../../images/CBA_IM_11b.PNG)
+  ![The relationship between entities](../../images/CBA_IM_11b.PNG)
  
 
  
@@ -979,7 +979,7 @@ On the scene of an incident the Incident Commander has to document many things, 
 
  
 
-     ![The associated fields](../../images/CBA_IM_11c.PNG)
+  ![The associated fields](../../images/CBA_IM_11c.PNG)
  
 
     
@@ -1017,7 +1017,7 @@ On the scene of an incident the Incident Commander has to document many things, 
 
  
 
-     ![Button to create or upload documents](../../images/CBA_IM_14.PNG)
+  ![Button to create or upload documents](../../images/CBA_IM_14.PNG)
  
 
  
@@ -1041,7 +1041,7 @@ On the scene of an incident the Incident Commander has to document many things, 
 
  
 
-     ![The SharePoint Create a new file dialog](../../images/CBA_IM_15.PNG)
+  ![The SharePoint Create a new file dialog](../../images/CBA_IM_15.PNG)
  
 
  
@@ -1063,7 +1063,7 @@ On the scene of an incident the Incident Commander has to document many things, 
 
  
 
-     ![The file name](../../images/CBA_IM_16.PNG)
+  ![The file name](../../images/CBA_IM_16.PNG)
  
 
     This will be used as the file name for the document.
@@ -1103,7 +1103,7 @@ The Contoso Fire Department is pleased with the additions to the Incident Manage
 
  
 
-     ![The logo and splash screen files](../../images/CBA_IM_17.PNG)
+  ![The logo and splash screen files](../../images/CBA_IM_17.PNG)
  
 
  
@@ -1141,7 +1141,7 @@ The Contoso Fire Department is pleased with the additions to the Incident Manage
  
 4. In the Code Editor, add the following code to the  **Insured_render** method:
     
-  ```
+```
   // Create the checkbox and add it to the DOM.
     var checkbox = $("<input type='checkbox'/>")
             .css({
@@ -1164,7 +1164,7 @@ The Contoso Fire Department is pleased with the additions to the Incident Manage
             checkbox[0].checked = newValue;
         }
     });
-  ```
+```
 
 
     This code creates a  **CheckBox** control when the screen is rendered. You'll also need to add code to set an initial value.
@@ -1181,10 +1181,10 @@ The Contoso Fire Department is pleased with the additions to the Incident Manage
  
 8. In the Code Editor, add the following code to the  **created** method:
     
-  ```
+```
   entity.Insured = new Boolean();
     entity.Insured = 'true';
-  ```
+```
 
 
     This code sets the initial value of the control to checked (true) when the screen is created.
@@ -1208,14 +1208,14 @@ The Contoso Fire Department is pleased with the additions to the Incident Manage
  
 3. In the Code Editor, add the following code to the  **ViewIncidents_created** method:
     
-  ```
+```
   screen.getPatients().then(function (results) {
         var queryCount = results.count;
         if (queryCount == 0 ) {
             screen.findContentItem("Patients").isVisible = false;
         }
     });
-  ```
+```
 
 
     This code runs the  **GetPatients** query to get a count of **Patients**. If the result is zero, the  **findContentItem** method sets the **isVisible** property of the **Patients** tab to false, hiding it.
@@ -1251,7 +1251,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
 
  
 
-     ![The IncidentManager node](../../images/CBA_IM_18.PNG)
+  ![The IncidentManager node](../../images/CBA_IM_18.PNG)
  
 
     The  **LightSwitch Publish Application Wizard** appears.
@@ -1263,7 +1263,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
 
  
 
-     ![The Publish wizard](../../images/CBA_IM_19.PNG)
+  ![The Publish wizard](../../images/CBA_IM_19.PNG)
  
 
     When your add-in is published,  **File Explorer** appears and displays the **Publish** folder for your project.
@@ -1272,13 +1272,13 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
 4. In the browser, navigate to your SharePoint Developer site
     
  
-5. In the  **Add-ins in Testing** list, choose the ellipsis (…) link next to **IncidentManager**, and then choose the  **Remove** link, as shown in Figure 33.
+5. In the  **Add-ins in Testing** list, choose the ellipsis (???) link next to **IncidentManager**, and then choose the  **Remove** link, as shown in Figure 33.
     
     **Figure 33. The Remove link**
 
  
 
-     ![The Apps in Test list](../../images/CBA_IM_20.PNG)
+  ![The Apps in Test list](../../images/CBA_IM_20.PNG)
  
 
  
@@ -1293,7 +1293,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
 
  
 
-     ![The Deploy App dialog](../../images/CBA_IM_20a.PNG)
+  ![The Deploy App dialog](../../images/CBA_IM_20a.PNG)
  
 
     The  **Upload Add-in** dialog box opens.
@@ -1318,7 +1318,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
 
  
 
-     ![App is installing](../../images/CBA_IM_21.PNG)
+  ![App is installing](../../images/CBA_IM_21.PNG)
  
 
  
@@ -1333,7 +1333,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
 
  
 
-     ![App is installing](../../images/CBA_IM_22.PNG)
+  ![App is installing](../../images/CBA_IM_22.PNG)
  
 
  
@@ -1348,7 +1348,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
 
  
 
-     ![The app is ready to run](../../images/CBA_IM_23.PNG)
+  ![The app is ready to run](../../images/CBA_IM_23.PNG)
  
 
     The add-in opens in the browser and looks exactly the same as when you ran the add-in in Debug mode. Notice that the data you entered during development is gone. When deploying the add-in, the database is deployed but not the data.
@@ -1363,7 +1363,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
 
  
 
-     ![Layout in desktop browser](../../images/CBA_IM_24.PNG)
+  ![Layout in desktop browser](../../images/CBA_IM_24.PNG)
  
 
     You can also verify your add-in on a mobile device. Sign in to your SharePoint site from the web browser on your device, and then start the add-in.
@@ -1375,7 +1375,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
 
  
 
-     ![Layout on mobile device](../../images/CBA_IM_25.PNG)
+  ![Layout on mobile device](../../images/CBA_IM_25.PNG)
  
 
  

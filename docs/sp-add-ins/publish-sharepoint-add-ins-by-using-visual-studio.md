@@ -22,7 +22,7 @@ Learn how to publish your SharePoint Add-in by using Microsoft Visual Studio 201
      [Visual Studio 2012](https://www.microsoft.com/en-us/download/details.aspx?id=30682) and the Office Developer Tools for Visual Studio. To download the tools, see "Tools" on the [Download page](http://go.microsoft.com/fwlink/?LinkId=234393). (The new Publish Manager is not available in Visual Studio 2012 or earlier versions.)
     
  
-- Microsoft SharePoint 2013
+- Microsoft SharePoint
     
  
 

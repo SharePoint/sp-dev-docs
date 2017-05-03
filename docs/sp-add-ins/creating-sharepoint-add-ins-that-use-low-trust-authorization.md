@@ -49,7 +49,7 @@ A SharePoint Add-in can be designed to use either of two authorization policies:
 -  **App-only Policy:** Add-ins that use this policy can perform any action that it has permission to do, even if the user does not have permission for the action. The developer must request that this policy be used in the add-in manifest of the add-in. The request must be approved by the user who installs the add-in. This policy is allowed for only provider-hosted SharePoint Add-ins.
     
  
-For more information about authorization policies, see  [Add-in authorization policy types in SharePoint 2013](add-in-authorization-policy-types-in-sharepoint-2013.md).
+For more information about authorization policies, see  [Add-in authorization policy types in SharePoint](add-in-authorization-policy-types-in-sharepoint-2013.md).
  
 
  
@@ -57,7 +57,7 @@ For more information about authorization policies, see  [Add-in authorization po
 ## Two OAuth runtime flows
 <a name="Flows"> </a>
 
-Each time a cloud-hosted SharePoint Add-in or external application that is accessing SharePoint is run, a flow -- a series of interactions between the add-in, SharePoint 2013, ACS, and sometimes the end user -- occurs. The end result of the flow is that SharePoint receives an access token included with each create, update, delete (CRUD) request that the application makes to SharePoint.
+Each time a cloud-hosted SharePoint Add-in or external application that is accessing SharePoint is run, a flow -- a series of interactions between the add-in, SharePoint, ACS, and sometimes the end user -- occurs. The end result of the flow is that SharePoint receives an access token included with each create, update, delete (CRUD) request that the application makes to SharePoint.
  
 
  

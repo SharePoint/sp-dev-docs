@@ -69,7 +69,7 @@ The custom button is going to be on the ribbon of a specific list that records t
  
 10. Click  **new item** and on the create item form, enter a name, but do *not*  check **Added to Corporate DB**. Then click  **Save**. The list should look similar to the following:
     
-     ![The Local Employees list with a single item. Name is Brayden Sawtell. The value of the "Added to Corporate DB" column is No.](../../images/a3371859-e42f-49ea-8f17-48d8a248b075.PNG)
+  ![The Local Employees list with a single item. Name is Brayden Sawtell. The value of the "Added to Corporate DB" column is No.](../../images/a3371859-e42f-49ea-8f17-48d8a248b075.PNG)
  
 
  
@@ -89,7 +89,7 @@ In this section, you include markup in the add-in that will deploy a button to t
 2. Right-click the  **ChainStore** project in **Solution Explorer** and choose **Add | New Item**. 
     
  
-3. In the  **Add New Item** dialog, select ** Ribbon Custom Action**, give it the name AddEmployeeToCorpDB, and then click  **Add**.
+3. In the  **Add New Item** dialog, select **Ribbon Custom Action**, give it the name AddEmployeeToCorpDB, and then click  **Add**.
     
  
 4. The dialog that opens asks three questions. Give the following answers:
@@ -121,35 +121,35 @@ In this section, you include markup in the add-in that will deploy a button to t
   - A few query parameters have been added to the  **CommandAction** value with placeholder values in braces "{ }". These placeholders are resolved at runtime. Note that one of them is the ID of the list item that is selected by the user before she presses the custom button on the ribbon.
     
  
-7. In the  **ChainStoreWeb** project, open the **Pages/EmployeeAdder.aspx** file. Notice that it doesn't have any UI. The add-in is going to use this page as a kind of web service. This is possible because the ASP.NET **System.Web.UI.Page** class implements **System.Web.IHttpHandler** and because the ** Page_Load** event runs automatically when the page is requested.
+7. In the  **ChainStoreWeb** project, open the **Pages/EmployeeAdder.aspx** file. Notice that it doesn't have any UI. The add-in is going to use this page as a kind of web service. This is possible because the ASP.NET **System.Web.UI.Page** class implements **System.Web.IHttpHandler** and because the **Page\_Load** event runs automatically when the page is requested.
     
  
 8. Open the code behind file  **Pages/EmployeeAdder.aspx.cs**. The method that adds the employee to the remote database,  `AddLocalEmployeeToCorpDB`, is already present. It uses the  **SharePointContext** object to get the host web's URL, which the add-in uses as its tenant discriminator. So the first thing the **Page_Load** method needs to do is initialize this object. The object is created and cached in the Session when the add-in's start page loads, so add the following code to the **Page_Load** method. (The **SharePointContext** object is defined in the SharePointContext.cs file that the Office Developer Tools for Visual Studio generate when the add-in solution is created.)
     
-  ```C#
+```C#
   spContext = Session["SPContext"] as SharePointContext;
-  ```
+```
 
 9. The  `AddLocalEmployeeToCorpDB` method takes the employee's name as a parameter, so add the following line to the **Page_Load** method. You'll create the `GetLocalEmployeeName` method in a later step.
     
-  ```C#
+```C#
   // Read from SharePoint 
 string employeeName = GetLocalEmployeeName();
-  ```
+```
 
 10. Below this line, add the call to the  `AddLocalEmployeeToCorpDB` method.
     
-  ```C#
+```C#
   // Write to remote database 
 AddLocalEmployeeToCorpDB(employeeName);
-  ```
+```
 
 11. Add a  **using** statement to file for the namespace `Microsoft.SharePoint.Client`. (The Office Developer Tools for Visual Studio included the Microsoft.SharePoint.Client assembly in the  **ChainStoreWeb** project when it was created.)
     
  
 12. Now add the following method to the  `EmployeeAdder` class. The SharePoint .NET Client-side Object Model (CSOM) is documented in detail elsewhere on MSDN and we encourage you to explore it when you are finished with this series of articles. For this article, note that the **ListItem** class represents an item in a SharePoint list and that the value of a field in the item can be referenced with "indexer" syntax. Notice also, that the code refers to the field as "Title" even though you changed the field name to "Name". This is because fields are always referred to in code by their *internal*  name, not their display name. The internal name of a field is set when the field is created and can never change. You complete the `TODO1` in a later step.
     
-  ```C#
+```C#
   private string GetLocalEmployeeName()
 {
     ListItem localEmployee;
@@ -159,34 +159,34 @@ AddLocalEmployeeToCorpDB(employeeName);
  
     return localEmployee["Title"].ToString();
 }
-  ```
+```
 
 13. Our code will need the list item's ID before it can retrieve it from SharePoint. Add the following declaration to the  `EmployeeAdder` class just below the declaration for the `spContext` object.
     
-  ```C#
+```C#
   private int listItemID;
-  ```
+```
 
 14. Now add the following method to the  `EmployeeAdder` class to get the list item's ID from the query parameter.
     
-  ```C#
+```C#
   private int GetListItemIDFromQueryParameter()
 {
     int result;
     Int32.TryParse(Request.QueryString["SPListItemId"], out result);
     return result;
 }
-  ```
+```
 
 15. To initialize the  `listItemID` variable, add the following line to the **Page_Load** method just below the line that initializes the `spContext` variable.
     
-  ```C#
+```C#
   listItemID = GetListItemIDFromQueryParameter();
-  ```
+```
 
 16. In the  `GetLocalEmployeeName`, replace the  `TODO1` with the following code. For the time being, just treat this code as a black box while we concentrate on getting the custom button working. We'll learn more about this code in the next article in this series, which is all about the SharePoint client-side object model.
     
-  ```C#
+```C#
   using (var clientContext = spContext.CreateUserClientContextForSPHost())
 {
     List localEmployeesList = clientContext.Web.Lists.GetByTitle("Local Employees");
@@ -195,14 +195,14 @@ AddLocalEmployeeToCorpDB(employeeName);
     clientContext.ExecuteQuery();
 }
 
-  ```
+```
 
 
     The whole method should now look like the following.
     
 
 
-  ```C#
+```C#
   private string GetLocalEmployeeName()
 {
     ListItem localEmployee;
@@ -216,22 +216,22 @@ AddLocalEmployeeToCorpDB(employeeName);
     }
     return localEmployee["Title"].ToString();
 }
-  ```
+```
 
 17. The EmployeeAdder page should not actually render, so add the following as the last line in the  **Page_Load** method. This will redirect the browser back to the list view page for the **Local Employees** list.
     
-  ```C#
+```C#
   // Go back to the Local Employees page
 Response.Redirect(spContext.SPHostUrl.ToString() + "Lists/LocalEmployees/AllItems.aspx", true);
 
-  ```
+```
 
 
     The whole  **Page_Load** method should now look like the following.
     
 
 
-  ```C#
+```C#
   protected void Page_Load(object sender, EventArgs e)
 {
     spContext = Session["SPContext"] as SharePointContext;
@@ -246,7 +246,7 @@ Response.Redirect(spContext.SPHostUrl.ToString() + "Lists/LocalEmployees/AllItem
     // Go back to the preceding page
     Response.Redirect(spContext.SPHostUrl.ToString() + "Lists/LocalEmployees/AllItems.aspx", true);
 }
-  ```
+```
 
 
 ## Request permission to read the host web list
@@ -267,7 +267,7 @@ As you have seen, SharePoint prompts you to grant the add-in permissions to the 
  
 4. Leave the  **Properties** field empty and save the file. The **Permission** tab should look similar to the following:
     
-     ![The Permissions tab of the add-in manifest designer show the Scope to List and the Permission to be Read.](../../images/8dd2a25f-103a-42af-aa88-c8ec796315db.PNG)
+  ![The Permissions tab of the add-in manifest designer show the Scope to List and the Permission to be Read.](../../images/8dd2a25f-103a-42af-aa88-c8ec796315db.PNG)
  
 
  
@@ -283,7 +283,7 @@ As you have seen, SharePoint prompts you to grant the add-in permissions to the 
 
 1. Use the F5 key to deploy and run your add-in. Visual Studio hosts the remote web application in IIS Express and hosts the SQL database in a SQL Express. It also makes a temporary installation of the add-in on your test SharePoint site and immediately runs the add-in. You are prompted to grant permissions to the add-in before it's start page opens. This time the prompt has a drop down where you select the list that the app needs to read as seen in the following screenshot. 
     
-     ![The SharePoint add-in permission prompt with the list named Local Employees selected in a drop down that is labelled "Let it read items in the list""](../../images/84e8b42c-4800-4947-acbd-21c6f096f4ea.PNG)
+  ![The SharePoint add-in permission prompt with the list named Local Employees selected in a drop down that is labelled "Let it read items in the list""](../../images/84e8b42c-4800-4947-acbd-21c6f096f4ea.PNG)
  
 
  
@@ -306,7 +306,7 @@ As you have seen, SharePoint prompts you to grant the add-in permissions to the 
  
 7. Select an item on the list. The page and ribbon should look similar to the following:
     
-     ![The Local Employees list. One item is highlighted. Above it is the ribbon and a button named "Add To Corporate DB" is in the Actions section.](../../images/797a5ceb-7291-4b62-8075-2bb6a1b8e8a1.PNG)
+  ![The Local Employees list. One item is highlighted. Above it is the ribbon and a button named "Add To Corporate DB" is in the Actions section.](../../images/797a5ceb-7291-4b62-8075-2bb6a1b8e8a1.PNG)
  
 
  
@@ -323,7 +323,7 @@ As you have seen, SharePoint prompts you to grant the add-in permissions to the 
  
 11. Click  **Show Employees** and the list of employees will be populated with the employee that you added. It should look similar to the following:
     
-     ![The corporate employees list on the add-in start page showing the same employee that was selected in the earlier step.](../../images/4a300a4e-f479-4f63-b536-6315c5d9ba4d.PNG)
+  ![The corporate employees list on the add-in start page showing the same employee that was selected in the earlier step.](../../images/4a300a4e-f479-4f63-b536-6315c5d9ba4d.PNG)
  
 
  

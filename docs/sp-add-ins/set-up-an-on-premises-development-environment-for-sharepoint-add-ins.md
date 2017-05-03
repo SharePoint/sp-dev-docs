@@ -10,7 +10,7 @@ Learn how to set up a development environment that is specifically suited to dev
 ## Install the operating system for your development environment for SharePoint Add-ins
 <a name="bk_installOS"> </a>
 
-The requirements for a development environment are less stringent and costly than the requirements for a production environment, and the guidelines described here do not support a production environment installation. See  [Overview of SharePoint 2013 installation and configuration](http://technet.microsoft.com/en-us/library/ee667264%28v=office.15%29),  [Hardware and software requirements for SharePoint 2013](http://technet.microsoft.com/en-us/library/cc262485%28v=office.15%29), and  [Configure an environment for SharePoint Add-ins](http://technet.microsoft.com/en-us/library/fp161236%28office.15%29.aspx) for the instructions to set up a production environment installation of SharePoint.
+The requirements for a development environment are less stringent and costly than the requirements for a production environment, and the guidelines described here do not support a production environment installation. See  [Overview of SharePoint installation and configuration](http://technet.microsoft.com/en-us/library/ee667264%28v=office.15%29),  [Hardware and software requirements for SharePoint](http://technet.microsoft.com/en-us/library/cc262485%28v=office.15%29), and  [Configure an environment for SharePoint Add-ins](http://technet.microsoft.com/en-us/library/fp161236%28office.15%29.aspx) for the instructions to set up a production environment installation of SharePoint.
  
 
  
@@ -26,7 +26,7 @@ Depending on your specific requirements and budget, you can choose from the foll
 - Install SharePoint on Windows Server 2008 R2 Service Pack 1 x64 or Windows Server 2012.
     
  
-- Use Microsoft Hyper-V and install SharePoint on a virtual machine running a Windows Server 2008 R2 Service Pack 1 x64 or Windows Server 2012 guest operating system. See  [Use best practice configurations for the SharePoint 2013 virtual machines and Hyper-V environment](http://technet.microsoft.com/en-US/library/ff621103%28v=office.15%29.aspx) for guidance on setting up a Microsoft Hyper-V virtual machine for SharePoint.
+- Use Microsoft Hyper-V and install SharePoint on a virtual machine running a Windows Server 2008 R2 Service Pack 1 x64 or Windows Server 2012 guest operating system. See  [Use best practice configurations for the SharePoint virtual machines and Hyper-V environment](http://technet.microsoft.com/en-US/library/ff621103%28v=office.15%29.aspx) for guidance on setting up a Microsoft Hyper-V virtual machine for SharePoint.
     
  
 
@@ -53,7 +53,7 @@ Depending on your specific requirements and budget, you can choose from the foll
 
  
 
-     ![SharePoint 2013 Installation Server Type](../../images/SP15_app_ServerType.gif)
+  ![SharePoint Installation Server Type](../../images/SP15_app_ServerType.gif)
  
 
  
@@ -61,10 +61,10 @@ Depending on your specific requirements and budget, you can choose from the foll
  
 5. If any errors occur in the installation, review the log file. To find the log file, open a Command Prompt window, and then type the following commands at the command prompt. A link to the log file also appears when the installation is complete.
     
-  ```
+```
   cd %temp%
 dir /od *.log
-  ```
+```
 
 6. After the installation is complete, you're prompted to start the SharePoint Products and Technologies Configuration Wizard.
     
@@ -75,7 +75,7 @@ dir /od *.log
 
  
 
-     ![Site template page](../../images/SP15_appChooseSiteTemplate.gif)
+  ![Site template page](../../images/SP15_appChooseSiteTemplate.gif)
  
 
  
@@ -200,38 +200,38 @@ Perform the steps in the following procedure to create an isolated add-in domain
 
 1. Ensure that the spadmin and sptimer services are running by opening a command prompt and typing the following commands.
     
-  ```
+```
   net start spadminv4
 net start sptimerv4
-  ```
+```
 
 2. Create your isolated add-in domain by running the SharePoint Management Shell as an administrator and typing the following command. Replace the  _contosoaddins.com_ with your add-in domain. It should *not*  be a subdomain of the host SharePoint domain. Doing so largely defeats the security advantages of having isolated add-in domains. For example, if the host domain is contoso.com, do not use addins.contoso.com as the add-in domain.
     
-  ```
+```
   Set-SPAppDomain "contosoaddins.com"
-  ```
+```
 
 3. Ensure that the SPSubscriptionSettingsService and AppManagementServiceInstance services are running by typing the following command in the SharePoint Management Shell.
     
-  ```
+```
   Get-SPServiceInstance | where{$_.GetType().Name -eq "AppManagementServiceInstance" -or $_.GetType().Name -eq "SPSubscriptionSettingsServiceInstance"} | Start-SPServiceInstance
-  ```
+```
 
 4. Verify that the SPSubscriptionSettingsService and AppManagementServiceInstance services are running by typing the following command in the SharePoint Management Shell. The output will indicate whether each service is online.
     
-  ```
+```
   Get-SPServiceInstance | where{$_.GetType().Name -eq "AppManagementServiceInstance" -or $_.GetType().Name -eq "SPSubscriptionSettingsServiceInstance"}
-  ```
+```
 
 5. You must specify an account under which the SPSubscriptionService and AppManagementServiceInstance service instances will run. This account must be an SPManagedAccount. You can create an SPManagedAccount by typing the following command in the SharePoint Management Shell. (You'll be prompted for the account domain\user and password.)
     
-  ```
+```
   $account = New-SPManagedAccount
-  ```
+```
 
 6. Specify an account, application pool, and database settings for the SPSubscriptionService and AppManagementServiceInstance services by typing the following code in the SharePoint Management Shell. If you created a SPManagedAccount in the preceding step, use that account name here.
     
-  ```
+```
   $account = Get-SPManagedAccount "domain\user" 
 $appPoolSubSvc = New-SPServiceApplicationPool -Name SettingsServiceAppPool -Account $account
 $appPoolAppSvc = New-SPServiceApplicationPool -Name AppServiceAppPool -Account $account
@@ -240,13 +240,13 @@ $proxySubSvc = New-SPSubscriptionSettingsServiceApplicationProxy -ServiceApplica
 $appAppSvc = New-SPAppManagementServiceApplication -ApplicationPool $appPoolAppSvc -Name AppServiceApp -DatabaseName AppServiceDB
 $proxyAppSvc = New-SPAppManagementServiceApplicationProxy -ServiceApplication $appAppSvc
 
-  ```
+```
 
 7. Specify your add-in prefix (see  [Host webs, add-in webs, and the isolated domain](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md#IsolatedDomain)) by typing the following code in the SharePoint Management Shell.
     
-  ```
+```
   Set-SPAppSiteSubscriptionName -Name "add-in" -Confirm:$false
-  ```
+```
 
  **Carry out the following procedure only if your environment uses a proxy server.** After you create your isolated add-in domain, perform the steps in the following procedure to add that domain to your bypass list in Internet Explorer. This ensures that you can navigate to this domain after you deploy a SharePoint-hosted add-in or a provider-hosted add-in that includes an add-in web.
  

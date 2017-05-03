@@ -14,7 +14,7 @@ This walkthrough requires Visual Studio 2013.
  
 
  
-To host the add-in, you'll also need a SharePoint 2013 site or a SharePoint Developer site on Office 365, which you can get from the  [Sign up for an Office 365 Developer Site](http://go.microsoft.com/fwlink/?LinkId=263490).
+To host the add-in, you'll also need a SharePoint site or a SharePoint Developer site on Office 365, which you can get from the  [Sign up for an Office 365 Developer Site](http://go.microsoft.com/fwlink/?LinkId=263490).
  
 
  
@@ -41,7 +41,7 @@ To host the add-in, you'll also need a SharePoint 2013 site or a SharePoint Deve
 
  
 
-     ![Cloud Business App project template](../../images/CBAtemplate.PNG)
+  ![Cloud Business App project template](../../images/CBAtemplate.PNG)
  
 
  
@@ -114,7 +114,7 @@ The candidate tracker add-in needs a database table, which you'll create in the 
 
  
 
-     ![Candidates table](../../images/CBAentity.PNG)
+  ![Candidates table](../../images/CBAentity.PNG)
  
 
  
@@ -143,7 +143,7 @@ The candidate tracker add-in needs a database table, which you'll create in the 
 
  
 
-     ![The BrowseCandidates screen designer](../../images/CBAscreen.PNG)
+  ![The BrowseCandidates screen designer](../../images/CBAscreen.PNG)
  
 
     This will display the  **Candidate** information in a tabular format instead of the default list format.
@@ -164,7 +164,7 @@ The candidate tracker add-in needs a database table, which you'll create in the 
 
  
 
-     ![Add Button dialog box](../../images/CBAadd.PNG)
+  ![Add Button dialog box](../../images/CBAadd.PNG)
  
 
     The  **Add New Screen** dialog box opens.
@@ -190,7 +190,7 @@ A new screen designer window opens.
 
  
 
-     ![Item Tap property](../../images/CBAproperty.PNG)
+  ![Item Tap property](../../images/CBAproperty.PNG)
  
 
     The  **Edit Item Tap Action** dialog box opens.
@@ -202,7 +202,7 @@ A new screen designer window opens.
 
  
 
-     ![Edit ItemTap Action dialog box](../../images/CBAaction.PNG)
+  ![Edit ItemTap Action dialog box](../../images/CBAaction.PNG)
  
 
  
@@ -276,7 +276,7 @@ One of the features of SharePoint for Office 365 is the ability to add newsfeeds
 
  
 
-     ![Social properties](../../mages/CBAsocial.PNG)
+  ![Social properties](../../mages/CBAsocial.PNG)
  
 
  
@@ -336,18 +336,18 @@ In many business add-ins you'll want to restrict access to certain functionality
  
 3. In the Code Editor, add the following code to the  **Candidates_Validate** method:
     
-  ```VB.net
+```VB.net
   If Not Application.User.Department = "Hiring Managers" Then
                 results.AddEntityError("Permission denied")
             End If
-  ```
+```
 
 
-  ```C#
+```C#
   if (!(Application.User.Department == "Hiring Managers")) {
 results.AddEntityError("Permission denied");
 }
-  ```
+```
 
 
     The  **Validate** method is run when a user tries to save a record. If the user is a member of the Hiring Managers security group, the record is saved, otherwise a "Permission denied" error message is displayed and the record is discarded.

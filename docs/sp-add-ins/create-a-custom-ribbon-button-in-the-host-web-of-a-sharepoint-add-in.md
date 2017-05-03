@@ -64,7 +64,7 @@ You will add the button to the ribbon of a calendar on the host web. Take the fo
 
  
 
-     ![A calendar named Employee Orientation Schedule with an item on June 1st that says "Orient Cassie Hicks"](../../images/d2066862-41c1-424d-9bfb-b6c5342bcf2c.PNG)
+  ![A calendar named Employee Orientation Schedule with an item on June 1st that says "Orient Cassie Hicks"](../../images/d2066862-41c1-424d-9bfb-b6c5342bcf2c.PNG)
  
 
  
@@ -145,7 +145,7 @@ Notice that the custom action that you created,  **RunOrientationAdd-in**, is li
 
  
 
-     ![The Events ribbon with a custom button named "Employee Orientation"](../../images/916ecbba-11ff-45b6-a8e9-ba717ae6fe0b.png)
+  ![The Events ribbon with a custom button named "Employee Orientation"](../../images/916ecbba-11ff-45b6-a8e9-ba717ae6fe0b.png)
  
 
  

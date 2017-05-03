@@ -162,7 +162,7 @@ For more information, see  [Building Block: Columns and Field Types](http://msdn
 
 ### Workflow
 
-Adds a project item for a Microsoft Azure workflow to your SharePoint Add-in. For more information, see  [Workflows in SharePoint 2013](http://msdn.microsoft.com/library/e0602371-ae22-44be-8a7e-9e47e9f046d6%28Office.15%29.aspx). When you add this type of item, you specify a name for the workflow and whether it's a list or site workflow. As the names suggest, a list workflow works only with a list, and a site workflow works only with the SharePoint site. When you're creating the workflow, you also specify whether to automatically associate the workflow with lists and libraries, and if so, which ones. For every association that you add, a file for it is added to the workflow project. A workflow contains the following files.
+Adds a project item for a Microsoft Azure workflow to your SharePoint Add-in. For more information, see  [Workflows in SharePoint](http://msdn.microsoft.com/library/e0602371-ae22-44be-8a7e-9e47e9f046d6%28Office.15%29.aspx). When you add this type of item, you specify a name for the workflow and whether it's a list or site workflow. As the names suggest, a list workflow works only with a list, and a site workflow works only with the SharePoint site. When you're creating the workflow, you also specify whether to automatically associate the workflow with lists and libraries, and if so, which ones. For every association that you add, a file for it is added to the workflow project. A workflow contains the following files.
  
 
  
@@ -180,7 +180,7 @@ Adds a project item for a Microsoft Azure workflow to your SharePoint Add-in. Fo
 
 ### Workflow Custom Activity
 
-Adds a project item for a workflow custom activity to your SharePoint Add-in. By adding a workflow custom activity, you can create additional workflow actions that you can then import as custom actions in SharePoint Designer 2013. The workflow custom activity contains an Elements.xml file, which defines the properties of the action, and a .xaml file for the workflow designer. For more information, see  [Workflows in SharePoint 2013](http://msdn.microsoft.com/library/e0602371-ae22-44be-8a7e-9e47e9f046d6%28Office.15%29.aspx).
+Adds a project item for a workflow custom activity to your SharePoint Add-in. By adding a workflow custom activity, you can create additional workflow actions that you can then import as custom actions in SharePoint Designer 2013. The workflow custom activity contains an Elements.xml file, which defines the properties of the action, and a .xaml file for the workflow designer. For more information, see  [Workflows in SharePoint](http://msdn.microsoft.com/library/e0602371-ae22-44be-8a7e-9e47e9f046d6%28Office.15%29.aspx).
  
 
  

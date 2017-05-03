@@ -102,7 +102,7 @@ The following are the steps in the Authentication Code Flow.
 ## Understand permission scope aliases and the use of the OAuthAuthorize.aspx page
 <a name="Scope"> </a>
 
-This section assumes you are familiar with the article  [Add-in permissions in SharePoint 2013](add-in-permissions-in-sharepoint-2013.md). Table 1 shows the same add-in permission request scope URIs that are shown in that article, except it has one additional column ( **Scope Alias** ) and the FullControl right is not available in the **Available Rights** column, because an add-in that request permission to access SharePoint resources on the fly can't request full control right.
+This section assumes you are familiar with the article  [Add-in permissions in SharePoint](add-in-permissions-in-sharepoint-2013.md). Table 1 shows the same add-in permission request scope URIs that are shown in that article, except it has one additional column ( **Scope Alias** ) and the FullControl right is not available in the **Available Rights** column, because an add-in that request permission to access SharePoint resources on the fly can't request full control right.
  
 
  
@@ -137,7 +137,7 @@ If you are not using managed code, the scope aliases are used in the scope field
 
  
 
- **Note**  For a description of the scopes, see  [Add-in permissions in SharePoint 2013](add-in-permissions-in-sharepoint-2013.md).
+ **Note**  For a description of the scopes, see  [Add-in permissions in SharePoint](add-in-permissions-in-sharepoint-2013.md).
  
 
 

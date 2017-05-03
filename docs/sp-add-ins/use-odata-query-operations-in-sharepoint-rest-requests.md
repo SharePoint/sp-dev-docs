@@ -9,7 +9,7 @@ Learn how to use a wide range of OData query string operators to select, filter,
  **Before you start**
  
 
--  [Get to know the SharePoint 2013 REST service](get-to-know-the-sharepoint-2013-rest-service.md)
+-  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-2013-rest-service.md)
     
  
 -  [Navigate the SharePoint data structure represented in the REST service](navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md)
@@ -149,10 +149,10 @@ The figure below shows the supported OData query options.
 <a name="bk_addresources"> </a>
 
 
--  [Get to know the SharePoint 2013 REST service](get-to-know-the-sharepoint-2013-rest-service.md)
+-  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-2013-rest-service.md)
     
  
--  [Complete basic operations using SharePoint 2013 REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md)
+-  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md)
     
  
 -  [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest.md)

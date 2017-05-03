@@ -6,7 +6,7 @@ Learn how to create and deploy an update for a SharePoint Add-in.
  **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
-You can update your SharePoint Add-in by using the updating support built into SharePoint 2013. Within 24 hours after you upload an updated version of the add-in to the organization's add-in catalog or the add-in is accepted at the Office Store, a notification that an update is available appears next to the add-in on  **Site Contents** page of every website where it is installed. As you can see in Figure 1, a link is provided for users to immediately install the update.
+You can update your SharePoint Add-in by using the updating support built into SharePoint. Within 24 hours after you upload an updated version of the add-in to the organization's add-in catalog or the add-in is accepted at the Office Store, a notification that an update is available appears next to the add-in on  **Site Contents** page of every website where it is installed. As you can see in Figure 1, a link is provided for users to immediately install the update.
  
 
 **Figure 1. Add-in for SharePoint update process**
@@ -32,7 +32,7 @@ A user can install the update without first uninstalling the earlier version. Th
 
  
 
-- A test SharePoint 2013 installation that is configured for add-in isolation. See  [Set up a development environment for SharePoint Add-ins on Office 365](set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md) for instructions on how to set up an Office 365 Developer Site.
+- A test SharePoint installation that is configured for add-in isolation. See  [Set up a development environment for SharePoint Add-ins on Office 365](set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md) for instructions on how to set up an Office 365 Developer Site.
     
  
 - Tools that are used in creating a SharePoint Add-in are usually also used in updating it. For example, most developers use Visual Studio and Microsoft Office Developer Tools for Visual Studio to create SharePoint Add-ins.
@@ -55,7 +55,7 @@ A user can install the update without first uninstalling the earlier version. Th
 | [SharePoint Add-ins update process](sharepoint-add-ins-update-process.md)|Learn about the process for updating SharePoint Add-ins.|
 | [Upgrading Features](http://msdn.microsoft.com/library/e917f709-6491-4d50-adbe-2ab8f35da990%28Office.15%29.aspx)|Learn how to update Features (SharePoint 2010 SDK).|
 | [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options.md)|Learn about the methods for publishing, installing, and uninstalling a SharePoint Add-in.|
-| [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins.md)|Learn about remote event receivers in SharePoint 2013.|
+| [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins.md)|Learn about remote event receivers in SharePoint.|
 
 ## Major steps in updating an add-in
 <a name="MajorAppUpgradeSteps"> </a>
@@ -80,10 +80,10 @@ The following are the major steps that may be needed when you create an update f
     For more information, see  [Update the add-in version, permission requests, and prerequisites](#UpdateManifest).
     
  
-- Add or update the markup for add-in web components. For more information, see  [Update add-in web components in SharePoint 2013](update-add-in-web-components-in-sharepoint-2013.md).
+- Add or update the markup for add-in web components. For more information, see  [Update add-in web components in SharePoint](update-add-in-web-components-in-sharepoint-2013.md).
     
  
-- Add or update the markup for host web components. For more information, see  [Update host web components in SharePoint 2013](update-host-web-components-in-sharepoint-2013.md).
+- Add or update the markup for host web components. For more information, see  [Update host web components in SharePoint](update-host-web-components-in-sharepoint-2013.md).
     
  
 - Add custom logic to an  [UpgradedEventEndpoint](http://msdn.microsoft.com/library/09a93d44-d295-47bb-f91c-d243178b0f53%28Office.15%29.aspx) and register it in the appmanifest.xml file. For more information, see [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins.md).
@@ -210,10 +210,10 @@ Continue with the next bullet in the section  [Major steps in updating an add-in
 
  
 
--  [Update add-in web components in SharePoint 2013](update-add-in-web-components-in-sharepoint-2013.md)
+-  [Update add-in web components in SharePoint](update-add-in-web-components-in-sharepoint-2013.md)
     
  
--  [Update host web components in SharePoint 2013](update-host-web-components-in-sharepoint-2013.md)
+-  [Update host web components in SharePoint](update-host-web-components-in-sharepoint-2013.md)
     
  
 -  [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins.md)

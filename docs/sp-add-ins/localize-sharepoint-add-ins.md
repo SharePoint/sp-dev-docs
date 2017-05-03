@@ -31,7 +31,7 @@ Also, be aware of the following:
 
 -  The procedures in this article assume that you are using the most recent version of [Office Developer Tools for Visual Studio 2013](http://aka.ms/OfficeDevToolsForVS2013), or  [Office Developer Tools for Visual Studio 2015](http://aka.ms/OfficeDevToolsForVS2015).
     
-     **Note**  If your test SharePoint website is an on premise SharePoint farm instead of a Microsoft SharePoint Online Developer Site, you may need to install the language packs for the languages in which you are translating your SharePoint Add-in. For more information, see  [Install or uninstall language packs for SharePoint 2013](http://technet.microsoft.com/en-us/library/cc262108%28v=office.15%29.aspx) and [Language packs in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/ff463597%28v=office.15%29.aspx), and the download links in the latter.
+     **Note**  If your test SharePoint website is an on premise SharePoint farm instead of a Microsoft SharePoint Online Developer Site, you may need to install the language packs for the languages in which you are translating your SharePoint Add-in. For more information, see  [Install or uninstall language packs for SharePoint](http://technet.microsoft.com/en-us/library/cc262108%28v=office.15%29.aspx) and [Language packs in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/ff463597%28v=office.15%29.aspx), and the download links in the latter.
 - The screen shots and code examples in this article reflect the sample  [SharePoint-Add-in-Localization](https://github.com/OfficeDev/SharePoint-Add-in-Localization). You can download the sample to see the results of the procedures described in this article.
     
  
@@ -104,7 +104,7 @@ An add-in web can contain specific kinds of SP components. For more information 
  
 3. Use the  **Description** attribute to call the string resource of the list description in the same way—for example,$Resources:OrdersListInstance_Description. The following is the markup that uses the localized strings in the Elements.xml file of the instance of a list.
     
-  ```XML
+```XML
   <?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
   <ListInstance 
@@ -115,7 +115,7 @@ An add-in web can contain specific kinds of SP components. For more information 
       Description="$Resources:OrdersListInstance_Description">
   </ListInstance>
 </Elements>
-  ```
+```
 
 
     The following image shows the localized custom list in English.
@@ -125,7 +125,7 @@ An add-in web can contain specific kinds of SP components. For more information 
 
  
 
-     ![A localized custom list](../../images/LocSPApp_AppwebList.png)
+  ![A localized custom list](../../images/LocSPApp_AppwebList.png)
  
 
  
@@ -146,7 +146,7 @@ An add-in web can contain specific kinds of SP components. For more information 
  
 4. In the  **Schema.xml** file of your custom list, remove the **DisplayName** attribute of every **Field** node that you previously copied. The following is an example markup that uses the localized strings in the **Elements.xml** file of the list definition.
     
-  ```
+```
   <?xml version="1.0" encoding="utf-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
     <ListTemplate
@@ -180,7 +180,7 @@ An add-in web can contain specific kinds of SP components. For more information 
         List="Lists/Order status"
         ShowField="Title" />
 </Elements>
-  ```
+```
 
 
 ### To create JavaScript resource files for custom pages
@@ -199,7 +199,7 @@ An add-in web can contain specific kinds of SP components. For more information 
  
 4. For each localizable string in each of your custom pages, declare a variable in the file with a name that identifies the purpose of the string and assign it a value that is appropriate for the language. The following is the contents of the Resources.en-US.js file.
     
-  ```
+```
   var instructionstitle = "Instructions:";
 var step01 = "Go to any document library in the host web.";
 var step02 = "Go to the Library tab.";
@@ -211,7 +211,7 @@ var step06 = "Go to any SharePoint page in the host web and add the" +
 var step07 = "Review the localized <a href=\"../Lists/Orders\">Orders</a>" +
     " and <a href=\"../Lists/Order status\">Order status</a> custom lists.";
 
-  ```
+```
 
 5. Copy the contents of the file into each of the remaining JavaScript files, and then save all files.
     
@@ -228,9 +228,9 @@ var step07 = "Review the localized <a href=\"../Lists/Orders\">Orders</a>" +
  
 2. Make sure that only one of the localized JavaScript files is loaded when your page loads, and it should be the one that is appropriate for the language of the SharePoint add-in web. To do this, add the following markup to the  **asp:content** element of the page that has a `ContentPlaceholderId` with the value `PlaceholderAdditionalPageHead`.  *There are no placeholders in the following markup. Enter the markup exactly as it appears here.* 
     
-  ```HTML
+```HTML
   <script type="text/javascript" src="../scripts/Resources.<SharePoint:EncodedLiteral runat='server' text='<%$Resources:wss,language_value%>' EncodeMethod='HtmlEncode' />.js"></script>
-  ```
+```
 
 
     This markup loads one of your JavaScript files. It determines which language file to load by reading the SharePoint resource named "language_value." This resource resolves to a language-culture name in the pattern  _LL_- _CC_ that was described in an earlier procedure. Specifically, it resolves to the language of the add-in web.
@@ -240,7 +240,7 @@ var step07 = "Review the localized <a href=\"../Lists/Orders\">Orders</a>" +
     
      **Tip**  The word "INVARIANT" has been added to the first of the invariant strings. You would not do this in a production add-in, but while you are testing, it is a useful way of seeing at a glance whether invariant language strings are being used or whether the Resources. _LL_- _CC_.js file for the language that happens to be your invariant language was loaded.
 
-  ```HTML
+```HTML
   <h2 id="instructionsheading">INVARIANT Instructions</h2>
 <ol>
     <li id="step01">Go to any document library in the host web.</li>
@@ -271,7 +271,7 @@ var step07 = "Review the localized <a href=\"../Lists/Orders\">Orders</a>" +
     }
 </script>
 
-  ```
+```
 
 
     The following image gives a preview of how the English version of the page will look when the add-in is completed. 
@@ -281,7 +281,7 @@ var step07 = "Review the localized <a href=\"../Lists/Orders\">Orders</a>" +
 
  
 
-     ![A SharePoint page using localized strings](../../images/LocSPApp_AppwebPage.png)
+  ![A SharePoint page using localized strings](../../images/LocSPApp_AppwebPage.png)
  
 
  
@@ -333,9 +333,9 @@ The essential method for localizing host web components is the same as for local
 
 1. Open the AppManifest.xml file and replace the  **Title** element value with a call to the appropriate resource string. For example, if you named the stringAddin_Title, the  **Title** element should look like the following:
     
-  ```XML
+```XML
   <Title>$Resources:Addin_Title;</Title>
-  ```
+```
 
 
      **Caution**  The value of  **Title** can contain *only*  the call to the resource. There can be no other text, symbols, or white space.
@@ -396,7 +396,7 @@ If there are localizable string values in your web application's JavaScript, you
 
 1. After you have the chrome control working, return to the  `renderChrome` method where you set the chrome options.
     
-  ```
+```
   function renderChrome() {
     var options = {
         "appIconUrl": "siteicon.png",
@@ -418,11 +418,11 @@ If there are localizable string values in your web application's JavaScript, you
         ]
     };
 
-  ```
+```
 
 2. As noted in the comments, there are at least three localizable strings. Replace each of these with a variable name that you declare in a later step. 
     
-  ```
+```
   function renderChrome() {
     var options = {
         "appIconUrl": "siteicon.png",
@@ -444,43 +444,43 @@ If there are localizable string values in your web application's JavaScript, you
         ]
     };
 
-  ```
+```
 
 3. Add a JavaScript file named ChromeStrings.js to the web application project. It should declare the variables you used in the preceding step and assign them each a value in the invariant language. 
     
-  ```
+```
   var chromeAppTitle = "My SharePoint add-in";
 var chromeAccountLinkName = "Account settings";
 var chromeContactUsLinkName = "Contact us";
 
-  ```
+```
 
 4. For each language for which you are localizing the add-in, add another JavaScript file with the name ChromeStrings. _LL-CC_.js, where  _LL-CC_ is the language ID. *The base of the file name, in this case "ChromeStrings," must be exactly the same as you used for the invariant language file.*  Copy the contents of the invariant language file into each of the localized files and replace the values with translated versions.
     
-  ```
+```
   var chromeAppTitle = "Mi aplicación SharePoint";
 var chromeAccountLinkName = "Preferencias";
 var chromeContactUsLinkName = "Contacto";
 
-  ```
+```
 
 5. In any page file where the script SP.UI.controls.js is called, add a call to the ChromeStrings.js above it. For example, if the call to SP.UI.controls.js is loaded in an intermediate file called ChromeLoader.js, the markup in the page at this point should look similar to the following.
     
-  ```
+```
   <Scripts>
   <asp:ScriptReference Path="Scripts/ChromeStrings.js" />
   <asp:ScriptReference Path="Scripts/ChromeLoader.js" />
 </Scripts>
-  ```
+```
 
 6. Add a  **ResourceUICultures** attribute to the **ScriptReference** element that calls your strings. Its value is a comma-delimited list of the languages that you are supporting.
     
-  ```
+```
   <Scripts>
   <asp:ScriptReference Path="Scripts/ChromeStrings.js" ResourceUICultures="en-US,es-ES" />
   <asp:ScriptReference Path="Scripts/ChromeLoader.js" />
 </Scripts>
-  ```
+```
 
 
     The effect of the  **ResourceUICultures** attribute is that ASP.NET will look for a file with the name ChromeStrings. _LL-CC_.js, where  _LL-CC_ is the language of the page and load it. If it doesn't find such a file, it will load the ChromeStrings.js file.
@@ -531,7 +531,7 @@ Test your add-in by deploying it to a SharePoint website that is provisioned in 
 ### To test your add-in an on-premises website
 
 
-1. Install the language pack in which you want to test your add-in. For more information, see  [Install or uninstall language packs for SharePoint 2013](http://technet.microsoft.com/library/cc262108.aspx) and [Language packs in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/ff463597%28v=office.15%29.aspx).
+1. Install the language pack in which you want to test your add-in. For more information, see  [Install or uninstall language packs for SharePoint](http://technet.microsoft.com/library/cc262108.aspx) and [Language packs in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/ff463597%28v=office.15%29.aspx).
     
  
 2. Open Central Administration for the farm.

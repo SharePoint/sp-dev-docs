@@ -220,7 +220,7 @@ When the add-in is in Microsoft SharePoint Online, but the remote event receiver
 -  [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins.md)
     
  
--  [Debugging SharePoint 2013 remote events using Visual Studio 2012](http://blogs.msdn.com/b/officeapps/archive/2013/03/21/update-to-debugging-sharepoint-2013-remote-events-using-visual-studio-2012.aspx)
+-  [Debugging SharePoint remote events using Visual Studio 2012](http://blogs.msdn.com/b/officeapps/archive/2013/03/21/update-to-debugging-sharepoint-2013-remote-events-using-visual-studio-2012.aspx)
     
  
 
