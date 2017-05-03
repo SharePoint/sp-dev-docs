@@ -44,7 +44,7 @@ To use the examples in this article, you'll need the following:
 
  
 
-- SharePoint Server 2013 or SharePoint Online
+- SharePoint Server or SharePoint Online
     
  
 -  **Write** permissions to the **Documents** library for the user running the code. If you're developing a SharePoint Add-in, you can specify **Write** add-in permissions at the **List** scope
@@ -82,7 +82,7 @@ You need to meet  [these requirements](upload-a-file-by-using-the-rest-api-and-j
 
 
 
-```
+```javascript
 'use strict';
 
 var appWebUrl, hostWebUrl;
@@ -262,7 +262,7 @@ You need to meet  [these requirements](upload-a-file-by-using-the-rest-api-and-j
 
 
 
-```
+```javascript
 'use strict';
 
 jQuery(document).ready(function () {

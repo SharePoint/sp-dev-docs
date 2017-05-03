@@ -14,8 +14,8 @@ SharePoint introduces a Cloud Add-in Model that enables you to create add-ins. S
   
     
     
- [![Apps for SharePoint](../../images/wn_cloud_1.png)
-  
+
+<a href="http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70(Office.15).aspx" target="_blank"><img alt="Apps for SharePoint" src="../../images/wn_cloud_1.png" /></a>
     
     
 ](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx) [![SharePoint Store](../../images/wn_cloud_2.png)
