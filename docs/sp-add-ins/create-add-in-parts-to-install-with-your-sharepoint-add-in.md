@@ -1,5 +1,5 @@
 # Create add-in parts to install with your SharePoint Add-in
-Learn how to create an add-in part in SharePoint 2013 that is available in the Web Part gallery of the host web when you install your SharePoint Add-in.
+Learn how to create an add-in part in SharePoint that is available in the Web Part gallery of the host web when you install your SharePoint Add-in.
  
 
  **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
@@ -106,7 +106,7 @@ After completing the tasks, your add-in part should look similar to Figure 2 whe
     
 
 
-  ```HTML
+```HTML
   <html>
     <body>
         <div id="content">
@@ -148,7 +148,7 @@ After completing the tasks, your add-in part should look similar to Figure 2 whe
     </script>
     </body>
 </html>
-  ```
+```
 
 4. Save and close the file.
     
@@ -257,7 +257,7 @@ The dialog should look like the following when you are finished:
  
 10. Visual Studio generates the following XML code in the elements.xml file of the add-in part (line breaks added for clarity). Note that the  **Title** attribute of the **ClientWebPart** element is set to "Basic add-in part Title" and the Description is set to "Basic add-in part Description". Delete the word "Title" from the first, and replace the second withA basic add-in part. 
     
-  ```XML
+```XML
   <?xml version="1.0" encoding="UTF-8"?>
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
     <ClientWebPart
@@ -314,7 +314,7 @@ The dialog should look like the following when you are finished:
     </ClientWebPart>
 </Elements>               
 
-  ```
+```
 
 
 ### Set the add-in start page to the host web home page
@@ -350,7 +350,7 @@ The dialog should look like the following when you are finished:
 
  
 
-     ![Basic app part in the web part gallery](../../images/BasicAppPart_gallery.jpg)
+  ![Basic app part in the web part gallery](../../images/BasicAppPart_gallery.jpg)
  
 
  
@@ -504,7 +504,7 @@ The  **_editMode_** token lets your content page determine if the add-in part is
 -  [SharePoint Add-ins UX design guidelines](sharepoint-add-ins-ux-design-guidelines.md)
     
  
--  [Create UX components in SharePoint 2013](create-ux-components-in-sharepoint-2013.md)
+-  [Create UX components in SharePoint](create-ux-components-in-sharepoint-2013.md)
     
  
 -  [Three ways to think about design options for SharePoint Add-ins](three-ways-to-think-about-design-options-for-sharepoint-add-ins.md)

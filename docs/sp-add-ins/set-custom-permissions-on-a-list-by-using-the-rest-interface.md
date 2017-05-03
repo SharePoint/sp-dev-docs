@@ -39,7 +39,7 @@ To use the example in this article, you'll need:
 
  
 
-- A SharePoint 2013 development environment (app isolation required for on-premises scenarios)
+- A SharePoint development environment (app isolation required for on-premises scenarios)
     
  
 - Visual Studio 2012 or Visual Studio 2013 with Office Developer Tools for Visual Studio 2012, or
@@ -301,10 +301,10 @@ function errorHandler(xhr, ajaxOptions, thrownError) {
 <a name="bk_addresources"> </a>
 
 
--  [Get to know the SharePoint 2013 REST service](get-to-know-the-sharepoint-2013-rest-service.md)
+-  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-2013-rest-service.md)
     
  
--  [Complete basic operations using SharePoint 2013 REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md)
+-  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md)
     
  
 -  [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest.md)
@@ -331,7 +331,7 @@ function errorHandler(xhr, ajaxOptions, thrownError) {
     
      [Best practices for using fine-grained permissions in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/gg128955.aspx)
     
-     [User permissions and permission levels in SharePoint 2013](http://technet.microsoft.com/en-us/library/cc721640.aspx)
+     [User permissions and permission levels in SharePoint](http://technet.microsoft.com/en-us/library/cc721640.aspx)
     
  
 

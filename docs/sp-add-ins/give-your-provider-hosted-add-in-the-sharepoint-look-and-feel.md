@@ -31,7 +31,7 @@ We are not going to teach you ASP.NET or T-SQL programming in this series, but y
  
 2. On the  **New SharePoint Site** page, fill out the form for a new team site by using the values in the following screen shot.
     
-     ![The form for creating a new SharePoint subsite with "Fabrikam Hong Kong Store" in the Title textbox and "hongkong" in the URL textbox.](../../images/7639578e-3d3f-40cf-8f53-355bb19c539b.png)
+  ![The form for creating a new SharePoint subsite with "Fabrikam Hong Kong Store" in the Title textbox and "hongkong" in the URL textbox.](../../images/7639578e-3d3f-40cf-8f53-355bb19c539b.png)
  
 
  
@@ -72,7 +72,7 @@ We are not going to teach you ASP.NET or T-SQL programming in this series, but y
  
 7. The add-in's start page looks like the one in the screen shot below. At the very top is the name of the SharePoint website where the add-in is installed. This is a side effect of some sample code that the Office Developer Tools for Visual Studio generate. You'll change this in a later step. The page has areas where data from the corporate  **Inventory**,  **Orders**, and  **Employees** SQL database tables can be seen. These tables are empty initially.
     
-     ![The start page of the chain store add-in with labelled areas and buttons for viewing the store's inventory, orders, and employees.](../../images/9c836899-8f21-4e0f-9260-69b8171a303c.PNG)
+  ![The start page of the chain store add-in with labelled areas and buttons for viewing the store's inventory, orders, and employees.](../../images/9c836899-8f21-4e0f-9260-69b8171a303c.PNG)
  
 
  
@@ -80,7 +80,7 @@ We are not going to teach you ASP.NET or T-SQL programming in this series, but y
  
 8. Open the  **Order Form** link at the bottom of the page to open an order form. Enter some values in the form and press **Place Order**. The following screenshot shows an example. It won't appear that anything has nappened, but the code behind the button passes the values to a parameterized stored procedure in the SQL database. Using parameterized stored procedures protects the database from SQL injection attacks.
     
-     ![Order form with text boxes for supplier, product, and quantity; with a button labelled Place Order.](../../images/5ce3e68b-1bcf-4a24-9153-b9164af77a6b.PNG)
+  ![Order form with text boxes for supplier, product, and quantity; with a button labelled Place Order.](../../images/5ce3e68b-1bcf-4a24-9153-b9164af77a6b.PNG)
  
 
  
@@ -92,7 +92,7 @@ We are not going to teach you ASP.NET or T-SQL programming in this series, but y
     
     The remote web application obtains the host web URL from a query string parameter that SharePoint adds to the URL of the start page when it launches the add-in. Since SSL is being used, this query string is encrypted as it goes across the Internet to the remote web application. 
     
-     ![The section of the start page for orders with one order showing in an HTML table. It has columns for ID, Tenant, Supplier, Product, and Quantity.](../../images/6a82c6eb-4a46-4a97-94f9-c1f4a7605d1f.PNG)
+  ![The section of the start page for orders with one order showing in an HTML table. It has columns for ID, Tenant, Supplier, Product, and Quantity.](../../images/6a82c6eb-4a46-4a97-94f9-c1f4a7605d1f.PNG)
  
 
  
@@ -103,7 +103,7 @@ We are not going to teach you ASP.NET or T-SQL programming in this series, but y
  
 11. By default the add-in remains installed on the SharePoint host web in between debugging sessions in Visual Studio. To see how end users would launch it after it is installed, open the Fabrikam Hong Kong SharePoint website in your browser and navigate to the  **Site Contents** page. You'll see the tile for the add-in as it is in the following screenshot:
     
-     ![The launch tile for the Chain Store add-in on the site contents page with the add-in's icon and name.](../../images/f16e6360-c511-431f-b2c5-9e5541e64d4b.PNG)
+  ![The launch tile for the Chain Store add-in on the site contents page with the add-in's icon and name.](../../images/f16e6360-c511-431f-b2c5-9e5541e64d4b.PNG)
  
 
     
@@ -140,7 +140,7 @@ In some scenarios, you want your remote pages to have their own branding, but in
  
 2. In the  **head** section, you'll see a script that loads a couple of JavaScript libraries. Add the following additional script below it. This script loads the SP.UI.Controls.js file which is in every SharePoint website at the /_layouts/15/ folder. Among other things, this file will load the SharePoint CSS library.
     
-  ```
+```
   <script type="text/javascript">
     var hostweburl;
 
@@ -174,11 +174,11 @@ In some scenarios, you want your remote pages to have their own branding, but in
         }
     }
 </script>
-  ```
+```
 
 3. At the top of the body section of the page, add the following markup. This will insert the SharePoint top bar, called the chrome control, onto the page. The details of this markup will become clearer when we test the revised add-in later in this article. (The string "app" appears in some of the property names because add-ins used to be called "apps".)
     
-  ```
+```
   <!-- Chrome control placeholder. Options are declared inline.  -->
 <div 
     id="chrome_ctrl_container"
@@ -200,14 +200,14 @@ In some scenarios, you want your remote pages to have their own branding, but in
             ]
          }'>
 </div>
-  ```
+```
 
 4. The  **H1** headers and the hyperlink in the body of the page will automatically use styles defined in SharePoint's CSS library, so they don't need to be changed. To illustrate how you can use the SharePoint styles, set the column headings in the three **GridView** controls to SharePoint's "all caps" style by adding the **HeaderStyle-CssClass** attribute to each of the controls and setting its value to " `ms-uppercase`". The following is an example. Make the same change to all three  **GridView** controls.
     
-  ```XML
+```XML
   <asp:GridView ID="ordersGridView" runat="server" CellPadding="5" GridLines="None" 
 HeaderStyle-CssClass="ms-uppercase" />
-  ```
+```
 
 5. The chrome control uses the add-in's icon, so we need a second copy of the icon file on the remote web server. In  **Solution Explorer**, right-click the AppIcon.png file in the  **ChainStore** project and choose **Copy**. 
     
@@ -224,12 +224,12 @@ HeaderStyle-CssClass="ms-uppercase" />
     
 
 
-  ```C#
+```C#
   protected void Page_Load(object sender, EventArgs e)
 {
     spContext = SharePointContextProvider.Current.GetSharePointContext(Context);
 }
-  ```
+```
 
 9. There are four other ASP.NET files that need the SharePoint UI: 
     
@@ -252,33 +252,33 @@ HeaderStyle-CssClass="ms-uppercase" />
     
 
 
-  ```XML
+```XML
   <link type="text/css" rel="stylesheet" 
 href="<%= spContext.SPHostUrl.ToString() + "_layouts/15/defaultcss.ashx" %>" />
-  ```
+```
 
 10. This step and the next one have already been done for the Order Form page and the Account page, so they apply only to the Contact, and Help pages. To get the  `spContext` object onto each of the pages, open the *.aspx.cs code behind files for the three aspx pages. In each of them, add the following member to the **Page** class.
     
-  ```C#
+```C#
   protected SharePointContext spContext;
-  ```
+```
 
 11. Replace the  **Page_Load** method with the following version. The object is being retrieved from the Session cache. It was cached there when it was first created by the **Page_Load** method of the add-in's start page.
     
-  ```C#
+```C#
   protected void Page_Load(object sender, EventArgs e)
 {
     spContext = Session["SPContext"] as SharePointContext;
 }
-  ```
+```
 
 12. Open the OrderForm.aspx page. In the top  **Label** element, replace the **<b>** element on the phrase **Place Order** with span tags that reference the `ms-accentText` CSS class. The entire **Label** control should look like this when you are done.
     
-  ```XML
+```XML
   <asp:Label ID="lblOrderPrompt" runat="server"
          Text="Enter a supplier, product, and quantity; and then press <span class='ms-accentText'>Place Order</span>.">
 </asp:Label>
-  ```
+```
 
 
 ## Run the add-in and test the new SharePoint UI
@@ -288,13 +288,13 @@ href="<%= spContext.SPHostUrl.ToString() + "_layouts/15/defaultcss.ashx" %>" />
     
 2. When the add-in's start page opens, it now looks like a SharePoint page. Click the  **Order Form** link. It also now looks like a SharePoint form.
     
-     ![The Order Form again. Now it uses Segoe fonts and the phrase "Place Order" is highlighted in blue.](../../images/a35fd1af-7194-4c99-b298-bac97025b981.PNG)
+  ![The Order Form again. Now it uses Segoe fonts and the phrase "Place Order" is highlighted in blue.](../../images/a35fd1af-7194-4c99-b298-bac97025b981.PNG)
  
 3. Create an order and press  **Place Order**.
     
 4.  Use the browser's back button to navigate back to the add-in start page, and then press **Show Orders**. The page should now look similar like the following. Note that the column headings are now all caps. 
     
-     ![The start page with the chrome control across the top. All of the text and controls have SharePoint styling.](../../images/e56e4b80-1f1c-4a83-9ac0-3005ceea7c3a.PNG)
+  ![The start page with the chrome control across the top. All of the text and controls have SharePoint styling.](../../images/e56e4b80-1f1c-4a83-9ac0-3005ceea7c3a.PNG)
  
 
 5. Press the  **?** icon on the end of the chrome control. A simple help page opens. Click the browser's back button.
@@ -314,7 +314,7 @@ href="<%= spContext.SPHostUrl.ToString() + "_layouts/15/defaultcss.ashx" %>" />
  
 10. Navigate to the  **Site Contents** page and launch the Chain Store app from its tile. Your custom pages have taken on the chosen look. The following screenshots show how they appear in the **Nature** composed look.
     
-     ![The add-in's start page and order form with the greenish colors of the Nature composed look.](../../images/25ba5677-f530-432a-9980-64b5eb33119c.png)
+  ![The add-in's start page and order form with the greenish colors of the Nature composed look.](../../images/25ba5677-f530-432a-9980-64b5eb33119c.png)
  
 
 11. Change the site's look back to the default, which is called  **Office**.

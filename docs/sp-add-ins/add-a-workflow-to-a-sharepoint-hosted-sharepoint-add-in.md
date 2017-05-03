@@ -102,7 +102,7 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
  
 
 
-1. Open the  **Toolbox** pane in Visual Studio, expand the ** SP - List** node, and then drag **LookupSPListItem** into the **Sequence** in the designer.
+1. Open the  **Toolbox** pane in Visual Studio, expand the **SP - List** node, and then drag **LookupSPListItem** into the **Sequence** in the designer.
     
  
 2. Select the  **LookupSPListItem** so that its properties appear in the Visual Studio **Properties** pane. Set the following properties to these values:
@@ -124,7 +124,7 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
 
  
 
-     ![The Properties pane of the Lookup List Item workflow activity with ItemID, ListID, and DisplayName properties set.](../../images/60f3302e-ca9c-45be-b785-0c9f636181da.PNG)
+  ![The Properties pane of the Lookup List Item workflow activity with ItemID, ListID, and DisplayName properties set.](../../images/60f3302e-ca9c-45be-b785-0c9f636181da.PNG)
  
 
     Click anywhere outside the pane to save your changes and the designer surface should now look like this.
@@ -134,7 +134,7 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
 
  
 
-     ![The workflow designer with a Sequence box and, inside it, an activity named Lookup Current New Employee.](../../images/c8fbf801-e8e4-444a-9d2e-c14e29f537de.PNG)
+  ![The workflow designer with a Sequence box and, inside it, an activity named Lookup Current New Employee.](../../images/c8fbf801-e8e4-444a-9d2e-c14e29f537de.PNG)
  
 
     
@@ -161,7 +161,7 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
 
  
 
-     ![The Properties dialog for the "Get Dynamic Values" activity, with the Entity Type set to items of the New Employees list, and variables named Title and OrientationStage assigned to the fields of the same names.](../../images/36a841e7-ce1b-444c-9bfe-7cdc56399ec1.PNG)
+  ![The Properties dialog for the "Get Dynamic Values" activity, with the Entity Type set to items of the New Employees list, and variables named Title and OrientationStage assigned to the fields of the same names.](../../images/36a841e7-ce1b-444c-9bfe-7cdc56399ec1.PNG)
  
 
  
@@ -173,7 +173,7 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
 
  
 
-     ![The workflow designer with two activities: a List Item Lookup and a Get Dynamic Values.](../../images/cd8eb456-d883-491a-b171-38c1b9f64018.PNG)
+  ![The workflow designer with two activities: a List Item Lookup and a Get Dynamic Values.](../../images/cd8eb456-d883-491a-b171-38c1b9f64018.PNG)
  
 
     
@@ -185,7 +185,7 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
 11. In the  **Condition** box of the **If**, enter OrientationStage=="HR paperwork".
     
  
-12. Open the  **Toolbox** pane in Visual Studio, expand the ** SP - Utilities** node, and then drag **Email** into the **Then** box of the **If** activity.
+12. Open the  **Toolbox** pane in Visual Studio, expand the **SP - Utilities** node, and then drag **Email** into the **Then** box of the **If** activity.
     
  
 13. Select the  **Email** activity. In the **Properties** pane, set the values of the Body, Subject, and To properties. In each case, choose the callout button, **. . .**, for the property and use the  **Expression Editor** that opens to set the property's value as in the following table. These are C# string expressions, so use quotation marks exactly as shown. The `Title` here is a variable that you assigned earlier to the **Title** field of the list item (which holds the name of the employee).
@@ -210,7 +210,7 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
 
  
 
-     ![The workflow designer with activities for "List Item Lookup", "Get Dynamic Value", and an "If Then Else" structure. Email is the activity in the Then part and Terminate Worklow is the activity in the Else.](../../images/c1230e3b-d149-413c-aa66-d258250a4512.PNG)
+  ![The workflow designer with activities for "List Item Lookup", "Get Dynamic Value", and an "If Then Else" structure. Email is the activity in the Then part and Terminate Worklow is the activity in the Else.](../../images/c1230e3b-d149-413c-aa66-d258250a4512.PNG)
  
 
  
@@ -236,7 +236,7 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
 
  
 
-     ![The workflow Test Service Host window with a line saying that the workflow has started, followed by a line saying that it has completed. The GUID of the workflow instance is at the beginning of each line.](../../images/2422936d-7ef6-4c90-a03f-30053fbb9743.PNG)
+  ![The workflow Test Service Host window with a line saying that the workflow has started, followed by a line saying that it has completed. The GUID of the workflow instance is at the beginning of each line.](../../images/2422936d-7ef6-4c90-a03f-30053fbb9743.PNG)
  
 
     
@@ -249,7 +249,7 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
 
  
 
-     ![An email message in Outlook from the workflow with subject "Cassie Hicks is ready for HR paperwork" and body "Cassie Hicks is waiting in the lobby to fill out benefits and employement forms."](../../images/7b1d8f47-9c34-441e-af6a-3af4a8c65533.PNG)
+  ![An email message in Outlook from the workflow with subject "Cassie Hicks is ready for HR paperwork" and body "Cassie Hicks is waiting in the lobby to fill out benefits and employement forms."](../../images/7b1d8f47-9c34-441e-af6a-3af4a8c65533.PNG)
  
 
     

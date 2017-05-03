@@ -31,7 +31,7 @@ You'll find it a lot easier to develop SharePoint-hosted SharePoint Add-ins if y
 
  
 
-     ![Office 365 App Launcher](../../images/ec60797c-d329-4922-a811-70c64598f4d5.PNG)
+  ![Office 365 App Launcher](../../images/ec60797c-d329-4922-a811-70c64598f4d5.PNG)
  
 
     

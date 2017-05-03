@@ -91,7 +91,7 @@ This studio includes all of the components needed to interact with SAP Gateway f
     
 
 
-  ```C#
+```C#
   // Use the auth code, acquire the refresh token and access token, and store them in the current session
         public bool AcquireTokenFromAuthCode(string authCode, string redirectUrl = "redirectUrl")
         {
@@ -131,7 +131,7 @@ This studio includes all of the components needed to interact with SAP Gateway f
                 return accessToken.Item1;
             }
   }
-  ```
+```
 
 -  **BoxXDataService**
     
@@ -141,7 +141,7 @@ This studio includes all of the components needed to interact with SAP Gateway f
     
 
 
-  ```C#
+```C#
   [Query(IsDefault = true)]
         public IQueryable<InventoryItem> GetAllCarInventory()
         {
@@ -172,13 +172,13 @@ This studio includes all of the components needed to interact with SAP Gateway f
         {
             BoxXDataDeleter.DeleteInventoryItem(carInventoryItem.ID);
  }
-  ```
+```
 
 -  **CarInventoryBoxXDataOperation**
     
     This is the real CRUD implementation for BoxXDataService. The following image shows the main code architecture of CarInventoryBoxXDataOperation. The CRUD namespace is used to implement the CRUD operations, and the Util namespace is the helper code for the CRUD namespace.
     
-     ![CarInventoryBoxDataOperation](../../images/a9baa59c-4459-4f0d-935d-456f0ca7791e.jpg)
+  ![CarInventoryBoxDataOperation](../../images/a9baa59c-4459-4f0d-935d-456f0ca7791e.jpg)
  
 
  
@@ -218,7 +218,7 @@ SellerDashboardStudio includes standard LightSwitch SharePoint add-in components
     
  
 - 
-     ![SellerDashboard.HTMLClient](../../images/89aa8c23-f8f2-410e-b021-7b0959e11586.jpg)
+  ![SellerDashboard.HTMLClient](../../images/89aa8c23-f8f2-410e-b021-7b0959e11586.jpg)
  
 
     SellerDashboard.HTML.Client includes these four screens:
@@ -247,7 +247,7 @@ SellerDashboardStudio includes standard LightSwitch SharePoint add-in components
     
     This component includes the WCF RIA data source, the SharePoint data source, and the photo-upload Web API. The following image shows its main components.
     
-     ![SellerDashboard.Server](../../images/43e92a09-180d-4adf-9ae2-8f6212d297c9.jpg)
+  ![SellerDashboard.Server](../../images/43e92a09-180d-4adf-9ae2-8f6212d297c9.jpg)
  
 
     The SharePointContext.cs and TokenHelper.cs are the helper classes that provide the client context to authenticate to SharePoint. This enables the photo upload Web API to be used to upload photos of cars to the picture library. The PhotoListHelper.cs and PhotosController.cs files implement the photo-upload Web API. For more information about how the photo-upload Web API is used by LightSwitch, see the article  [Walkthrough: Creating an Add-in for SharePoint by Using LightSwitch](http://msdn.microsoft.com/en-us/library/jj969621.aspx).
@@ -302,7 +302,7 @@ LightSwitch supports the data mashup by adding a relationship between the two da
     
 
 
-  ```XML
+```XML
   
 <?xml version="1.0" encoding="UTF-8"?> 
 - <edmx:Edmx xmlns:sap="http://www.sap.com/Protocols/SAPData" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" 
@@ -341,7 +341,7 @@ xmlns:edmx:"http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
 </edmx:DataServices>
 </edms:Edmx>               
 
-  ```
+```
 
 
     This is our test data base, and the Property Type and Nullable value is based on the scenario. The ID is the PropertyRef and the OData CRUD operation is based on ID. The StockNo property is used to mash data with the car picture that is stored in SharePoint picture library.
@@ -349,7 +349,7 @@ xmlns:edmx:"http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
  
 -  *Data model defined for RIA service* 
     
-  ```C#
+```C#
   public interface IInventoryItem
     	{
         IEnumerable<InventoryPropertyName> ValidPropertyNames { get; }
@@ -396,7 +396,7 @@ xmlns:edmx:"http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
         bool CopyFrom(IInventoryCollection other);
 }
 
-  ```
+```
 
 
     Any property that isn't included in the SAP database schema can be ignored. For example, the  **Images** property was added here for scalability considerations. This data model is a middle layer between the real SAP database and the SellerDashboard.Server data source. The LightSwitch project has two components: View and Server. When you add an external data source on the Server side, LightSwitch helps you build an abstract data layer that is added to the data source on the Server side.
@@ -410,7 +410,7 @@ xmlns:edmx:"http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
  
 -  *Data source consumed by the LightSwitch server side* 
     
-     ![InventoryItem](../../images/b08243f7-3fa3-48b3-bf6c-e3ff49f2e2a2.jpg)
+  ![InventoryItem](../../images/b08243f7-3fa3-48b3-bf6c-e3ff49f2e2a2.jpg)
  
 
     In the SellerDashboard server, when you add the WCF RIA Service (BoxXDataService), the data model that's defined in CarInventoryModel is included, and you get the relevant data table. You can change the type of some of the properties. For example, you can change the  **BuyerEmail** type from **String** to **Email Address**, and LightSwitch will support the email format check on the client side.
@@ -467,7 +467,7 @@ This section provides an overview of how the add-in implements OAuth in Azure AD
  
 
  
- ** Overview**
+ **Overview**
  
 
  
@@ -798,7 +798,7 @@ An empty SharePoint add-in is used to grant the SharePoint add-in the read permi
  
 3. Set the Read permission in the application's manifest.
     
-     ![Manifest](../../images/746bcfe7-7f51-4f5d-a072-12c577e5fa2f.jpg)
+  ![Manifest](../../images/746bcfe7-7f51-4f5d-a072-12c577e5fa2f.jpg)
  
 
  
@@ -806,19 +806,19 @@ An empty SharePoint add-in is used to grant the SharePoint add-in the read permi
  
 4. Set the add-in as a StartUp project, and run the project. You can find the ClientID and ClientSecret values in the ContosoMotorsCarInventoryWeb/Web.config file. The code should resemble the following:
     
-  ```XML
+```XML
   <add key="ClientId" value="06af1059-8916-4851-a271-2705e8cf53c6"/>
 <add key="ClientSecret" value="LypZu2yVajlHfPLRn5J2hBrwCk5aBOHxE4PtKCjIQkk="/>
-  ```
+```
 
 5. Replace the values of ClientID and ClientSecret at "Hosted add-in configuration" in ContosoMotorsCarInventoryWeb/TokenHelper.cs with above values. The code should resemble the following:
     
-  ```C#
+```C#
   
 private static readonly string ClientId = "06af1059-8916-4851-a271-2705e8cf53c6";
 private static readonly string ClientSecret = "LypZu2yVajlHfPLRn5J2hBrwCk5aBOHxE4PtKCjIQkk=";
 
-  ```
+```
 
 
 ### Register your web application with Azure AD
@@ -907,13 +907,13 @@ Configure the settings for the new application that you created in the previous 
 
 1. Locate SellerDashboardHTMLClient/UserCode.js, and find the following code placeholder:
     
-  ```C#
+```C#
   sharePointUrl: "Replace with your SharePoint host site", 
 // https://fake_domain.sharepoint.com/sites/Developer
 SharePointRootUrl: "Replace with your SharePoint root site"
  // https://fake_domain.sharepoint.com/ 
 
-  ```
+```
 
 
       1. Replace the sharePointUrl value with your SharePoint site, the one to which the add-in will be installed and that also contains the picture library.
@@ -924,7 +924,7 @@ SharePointRootUrl: "Replace with your SharePoint root site"
  
 2. Locate SellerDashboard.Server/Web.config in the SellerDashboard solution and find the following configuration placeholder:
     
-  ```XML
+```XML
   <add key="ClientSecret" value="MwMp1yxOyy8BGhfD5d9VvuqlRbhaqWESxVNLzgpYNHU=" />
 <add key="ClientId" value="ed138b32-c89d-4f22-b74d-7d9d5044b260" />
 <add key="Ida:ClientId" value="Replace with Azure register add-in client id" />
@@ -944,7 +944,7 @@ SharePointRootUrl: "Replace with your SharePoint root site"
 <add key="Ida:DefaultID" value="1024" />
 <add key="Ida:DefaultStockNo" value="2048" />
 <add key="Ida:SPPicLib" value="Replace with you picture library name, for example ContosoMotorsPictureLibrary" />
-  ```
+```
 
 
       1. Replace the ClientId and ClientSecret values with the values you got in the previous procedure.
@@ -979,14 +979,14 @@ SharePointRootUrl: "Replace with your SharePoint root site"
     
 
 
-  ```XML
+```XML
   ZCAR_POC_SRV.ContosoMotors
 
 <EntityContainer Name="ZCAR_POC_SRV_Entities" m:IsDefaultEntityContainer="true">
      <EntitySet sap:content-version="1" Name="ContosoMotorsCollection" sap:searchable="true" EntityType="ZCAR_POC_SRV.ContosoMotors"/>
 </EntityContainer>
 <atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="http://contoso.cloudapp.net:8080/perf/sap/opu/odata/sap/ZCAR_POC_SRV.ContosoMotors"/>
-  ```
+```
 
   10. Replace the Ida:SPPicLib value with the picture library name, which you created in the SharePoint host site.
     

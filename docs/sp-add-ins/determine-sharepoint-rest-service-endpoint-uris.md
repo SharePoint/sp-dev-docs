@@ -8,7 +8,7 @@ Learn general guidelines for determining SharePoint REST endpoint URIs from the 
  **Before you start**
  
 
--  [Get to know the SharePoint 2013 REST service](get-to-know-the-sharepoint-2013-rest-service.md)
+-  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-2013-rest-service.md)
     
  
 -  [Navigate the SharePoint data structure represented in the REST service](navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md)
@@ -77,7 +77,7 @@ Some endpoints for SharePoint resources deviate from this syntax structure:
     
  
 
-## Determine SharePoint 2013 REST service endpoints
+## Determine SharePoint REST service endpoints
 
 To construct a REST endpoint for a SharePoint resource, follow these steps:
  
@@ -100,14 +100,14 @@ To construct a REST endpoint for a SharePoint resource, follow these steps:
     
  
 
-### Reference the SharePoint 2013 REST service in your endpoint URI
+### Reference the SharePoint REST service in your endpoint URI
 
-Use  `_api` to denote the SharePoint 2013 REST service in your endpoint URIs. The REST service is part of the client.svc web service. However, to make REST URI construction easier and to shorten the base REST URI path, the REST service uses `_api` to abstract away the need to explicitly reference the client.svc web service. The REST service still recognizes and accepts URIs that reference the client.svc web service. For example, you can use `http://server/site/_vti_bin/client.svc/web/lists` instead of `http://server/site/_api/web/lists`. However, using  `_api` is the preferred convention. URLs have a 256 character limit, so using `_api` shortens the base URI, leaving more characters for use in constructing the rest of the URL.
+Use  `_api` to denote the SharePoint REST service in your endpoint URIs. The REST service is part of the client.svc web service. However, to make REST URI construction easier and to shorten the base REST URI path, the REST service uses `_api` to abstract away the need to explicitly reference the client.svc web service. The REST service still recognizes and accepts URIs that reference the client.svc web service. For example, you can use `http://server/site/_vti_bin/client.svc/web/lists` instead of `http://server/site/_api/web/lists`. However, using  `_api` is the preferred convention. URLs have a 256 character limit, so using `_api` shortens the base URI, leaving more characters for use in constructing the rest of the URL.
  
 
  
 
-### Specify entry points for the SharePoint 2013 REST service
+### Specify entry points for the SharePoint REST service
 
 The main entry points for the REST service represent the site collection and site of the specified context. In this way, these entry points correspond to the  **ClientContext.Site** property and **ClientContext.Web** property in the client object models.
  
@@ -166,7 +166,7 @@ Endpoint URIs are case-insensitive. In the previous table, for example, use  `/g
 
 ## Specify parameters in REST endpoint URIs
 
-SharePoint 2013 extends the OData specification to enable you to use parentheses to specify method parameters and index values. This prevents potential disambiguation issues in URIs that contain multiple parameters with the same name. For example, the following two URIs contain parameters that have the same name:
+SharePoint extends the OData specification to enable you to use parentheses to specify method parameters and index values. This prevents potential disambiguation issues in URIs that contain multiple parameters with the same name. For example, the following two URIs contain parameters that have the same name:
  
 
  
@@ -397,10 +397,10 @@ If you want to select, filter, or order the data you requested from an endpoint,
 <a name="bk_addresources"> </a>
 
 
--  [Get to know the SharePoint 2013 REST service](get-to-know-the-sharepoint-2013-rest-service.md)
+-  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-2013-rest-service.md)
     
  
--  [Complete basic operations using SharePoint 2013 REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md)
+-  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md)
     
  
 -  [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest.md)

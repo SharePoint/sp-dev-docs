@@ -14,7 +14,7 @@ This article looks at the architectural choices for SharePoint Add-ins in three 
  
 
  
-But the first decision to make is whether your SharePoint extension should be a SharePoint Add-in or a classic SharePoint farm solution or sandboxed solution. Some parts of the SharePoint object model, mainly connected with customizing SharePoint administration and security, are not accessible from clients. Only custom code running on the SharePoint server can access them, and custom server-side code is not allowed in a SharePoint Add-in. (A rich set of client object models and a REST/OData service make it possible for SharePoint Add-ins to do almost any end-user-oriented SharePoint extension.) For more information about deciding between classic solutions and add-ins, see  [SharePoint Add-ins compared with SharePoint solutions](http://msdn.microsoft.com/library/0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8%28Office.15%29.aspx). Also helpful for making this decision is  [Choose the right API set in SharePoint 2013](http://msdn.microsoft.com/library/f36645da-77c5-47f1-a2ca-13d4b62b320d%28Office.15%29.aspx).
+But the first decision to make is whether your SharePoint extension should be a SharePoint Add-in or a classic SharePoint farm solution or sandboxed solution. Some parts of the SharePoint object model, mainly connected with customizing SharePoint administration and security, are not accessible from clients. Only custom code running on the SharePoint server can access them, and custom server-side code is not allowed in a SharePoint Add-in. (A rich set of client object models and a REST/OData service make it possible for SharePoint Add-ins to do almost any end-user-oriented SharePoint extension.) For more information about deciding between classic solutions and add-ins, see  [SharePoint Add-ins compared with SharePoint solutions](http://msdn.microsoft.com/library/0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8%28Office.15%29.aspx). Also helpful for making this decision is  [Choose the right API set in SharePoint](http://msdn.microsoft.com/library/f36645da-77c5-47f1-a2ca-13d4b62b320d%28Office.15%29.aspx).
  
 
  
@@ -32,26 +32,26 @@ There are three major categories of choices that need to be made when a SharePoi
       -  **Provider-hosted** add-ins have their primary data storage and business logic deployed and hosted by you—the developer—outside of SharePoint in servers or a cloud account that you provide. You are responsible for enforcing isolation between the accounts of the various customers who purchase your add-in. Such add-ins can have SharePoint components too. These are hosted in the customer's SharePoint farm. This type of add-in provides you with the most flexibility in the other categories of design choices. It also enables you to use non-Microsoft platforms for the external data, logic, and web user interface (UI). (Within the category of provider-hosted add-ins, you also need to distinguish between add-ins whose remote components are within the same corporate firewall as the SharePoint farm and those whose remote components are outside of that firewall. The authorization systems for these two scenarios are different, which, in turn, makes a difference in which programming language you use to access the SharePoint data..)
     
  
-  -  **SharePoint-hosted** add-ins consist entirely of SharePoint 2013 components, such as lists, content types, workflows, and Web Parts. There are no external components. For more information about the kinds of SharePoint components that can be included in SharePoint Add-ins, see [Host webs, add-in webs, and SharePoint components in SharePoint 2013](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md).
+  -  **SharePoint-hosted** add-ins consist entirely of SharePoint components, such as lists, content types, workflows, and Web Parts. There are no external components. For more information about the kinds of SharePoint components that can be included in SharePoint Add-ins, see [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md).
     
  
 
     For more detailed information about the hosting options of SharePoint Add-ins, see  [Choose patterns for developing and hosting your SharePoint Add-in](choose-patterns-for-developing-and-hosting-your-sharepoint-add-in.md).
     
  
--  **Connectivity:** SharePoint 2013 supports three kinds of secure create/read/update/delete (CRUD) access to data.
+-  **Connectivity:** SharePoint supports three kinds of secure create/read/update/delete (CRUD) access to data.
     
       - External web applications in an add-in use the OAuth protocol to access SharePoint data. For more information, see  [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md).
     
  
-  - JavaScript can access data in a SharePoint add-in web and data on other websites within the same tenancy by using a special JavaScript library that enables secure cross-domain scripting. For more information, see  [Access SharePoint 2013 data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library.md).
+  - JavaScript can access data in a SharePoint add-in web and data on other websites within the same tenancy by using a special JavaScript library that enables secure cross-domain scripting. For more information, see  [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library.md).
     
  
-  - A SharePoint Add-in can also access external data through Business Connectivity Services (BCS) or a web service proxy. For more information, see  [Business Connectivity Services in SharePoint 2013](http://msdn.microsoft.com/library/64b7d032-4b83-4e9e-bc08-f0a161af5457%28Office.15%29.aspx) and [Query a remote service using the web proxy in SharePoint 2013](query-a-remote-service-using-the-web-proxy-in-sharepoint-2013.md).
+  - A SharePoint Add-in can also access external data through Business Connectivity Services (BCS) or a web service proxy. For more information, see  [Business Connectivity Services in SharePoint](http://msdn.microsoft.com/library/64b7d032-4b83-4e9e-bc08-f0a161af5457%28Office.15%29.aspx) and [Query a remote service using the web proxy in SharePoint](query-a-remote-service-using-the-web-proxy-in-sharepoint-2013.md).
     
  
 
-    For more information on data storage and access in SharePoint Add-ins, see  [Data storage in SharePoint Add-ins](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscape.md#Data),  [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md), and  [Work with external data in SharePoint 2013](work-with-external-data-in-sharepoint-2013.md).
+    For more information on data storage and access in SharePoint Add-ins, see  [Data storage in SharePoint Add-ins](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscape.md#Data),  [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md), and  [Work with external data in SharePoint](work-with-external-data-in-sharepoint-2013.md).
     
  
 -  **UI:** There are three ways to surface a SharePoint Add-in in SharePoint: at a minimum, all add-ins are surfaced in a full web page. Optionally, an add-in can also be surfaced through an add-in part, and through a menu item or ribbon button. For more information, see [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md).
@@ -89,13 +89,13 @@ Another way to think about your add-in architecture options is to think of the a
 
 |**Tier**|**Options**|**Good for**|
 |:-----|:-----|:-----|
-|UI|Custom views of SharePoint 2013 lists and libraries on add-in web pages. |Maximizing integration with SharePoint appearance and behavior.|
+|UI|Custom views of SharePoint lists and libraries on add-in web pages. |Maximizing integration with SharePoint appearance and behavior.|
 ||Silverlight application hosted in a Web Part (or within <object> tags) on an add-in web page.|Leveraging existing Silverlight development experience.Rich user interface.|
 |Business logic|A SharePoint workflow.|Implementing business processes.|
 ||Client-side JavaScript supplemented with the SharePoint cross-domain library.|Accessing SharePoint data in the add-in web.Accessing data in other websites within the tenancy.|
 ||A remote event handler.|Handling CRUD events in SharePoint lists and libraries using externally hosted logic.|
-|Data|SharePoint 2013 lists and libraries that are queried through Collaborative Application Markup Language (CAML), or LINQ, queries with one of the SharePoint client object models.|Leveraging existing SharePoint and .NET Framework development experience.|
-||SharePoint 2013 lists and libraries that are queried through the SharePoint REST/OData web service.|Accessing SharePoint data from non-Microsoft platforms.Leveraging existing OData query experience.|
+|Data|SharePoint lists and libraries that are queried through Collaborative Application Markup Language (CAML), or LINQ, queries with one of the SharePoint client object models.|Leveraging existing SharePoint and .NET Framework development experience.|
+||SharePoint lists and libraries that are queried through the SharePoint REST/OData web service.|Accessing SharePoint data from non-Microsoft platforms.Leveraging existing OData query experience.|
 ||A BCS Model.|Surfacing external data in SharePoint as a SharePoint list.|
 
 ## Factors to consider when making your design decisions

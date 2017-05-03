@@ -52,11 +52,11 @@ Even though SharePoint-hosted SharePoint Add-ins cannot have server-side code, y
     
 
 
-  ```
+```
   <script type="text/javascript" src="/_layouts/15/sp.runtime.js"></script> 
 <script type="text/javascript" src="/_layouts/15/sp.js"></script> 
 
-  ```
+```
 
 
     Then search the file for any other markup that also loads one or the other of these files and remove the redundant markup. Save and close the file.
@@ -88,13 +88,13 @@ Even though SharePoint-hosted SharePoint Add-ins cannot have server-side code, y
     
  
 
-  ```
+```
   'use strict';
 
 var clientContext = SP.ClientContext.get_current(); 
 var employeeList = clientContext.get_web().get_lists().getByTitle('New Employees In Seattle'); 
 var completedItems; 
-  ```
+```
 
 5. To minimize messages between the client browser and the SharePoint server, the JSOM uses a batching system. Only one function,  **SP.ClientContext.executeQueryAsync**, actually sends messages to the server (and receives replies) . Calls to the JSOM APIs that come in between calls of  **executeQueryAsync** are bundled up and sent to the server in a batch the next time **executeQueryAsync** is called. However, it is not generally possible to call a method of a JSOM object unless the object has been brought down to the client in a previous call of **executeQueryAsync**. Your script is going to call the  **SP.ListItem.deleteObject** method of each completed item on the list, so it has to make two calls of **executeQueryAsync**; one to get a collection of the completed list items, and then a second to batch the calls of  **deleteObject** and send them to the server for execution.
     
@@ -102,7 +102,7 @@ var completedItems;
     
 
 
-  ```
+```
   function purgeCompletedItems() {
 
    var camlQuery = new SP.CamlQuery(); 
@@ -112,25 +112,25 @@ var completedItems;
          '</Eq></Where></Query></View>'); 
      completedItems = employeeList.getItems(camlQuery); 
 }
-  ```
+```
 
 6. When these lines are sent to server and executed there, they create a collection of list items, but the script must bring that collection down to the client. This is done with a call to the  **SP.ClientContext.load** function, so add the following line to the method to the end of the method.
     
-  ```
+```
   clientContext.load(completedItems);
-  ```
+```
 
 7. Add a call of  **executeQueryAsync**. This method has two parameters, both of which are callback functions. The first runs if server successfully executes all the commands in the batch. The second runs if the server fails for any reason. You create these two functions in later steps. Add the following line to the end of the method.
     
-  ```
+```
   clientContext.executeQueryAsync(deleteCompletedItems, onGetCompletedItemsFail);
-  ```
+```
 
 8. Finally, add the following line to the end of the method. By returning  **false** to the ASP.NET button that will call the function, we cancel the default behavior of ASP.NET buttons, which is to reload the page. A reload of the page would cause a reload of the Add-in.js file. That, in turn, would reinitialize the `clientContext` object. If this reload completed between the time the **executeQueryAsync** sends its request and the time the SharePoint server sends back the response, then the original `clientContext` object is no longer in existence to process the response. The function would halt with neither the success nor the failure callbacks executed. (Exact behavior might vary depending on the browser.)
     
-  ```
+```
   return false;
-  ```
+```
 
 9. Add the following function,  `deleteCompletedItems`, to the file. This is the function that runs if the  `purgeCompletedItems` function is successful. Note the following about this code:
     
@@ -147,7 +147,7 @@ var completedItems;
     
  
 
-  ```
+```
   function deleteCompletedItems() {
 
     var itemArray = new Array();
@@ -165,20 +165,20 @@ var completedItems;
 
     clientContext.executeQueryAsync(onDeleteCompletedItemsSuccess, onDeleteCompletedItemsFail);
 }
-  ```
+```
 
 10. Add the following function,  `onDeleteCompletedItemsSuccess`, to the file. This is the function that runs if the completed items are successfully deleted (or there aren't any completed items on the list). The second line,  `location.reload(true);`, causes the page to reload from the server. This is a convenience because the list view Web Part on the page still shows the completed items until the page is refreshed. (The Add-in.js file is reloaded too, but that doesn't cause a problem because it won't do so in a way that interrupts an ongoing JavaScript function.
     
-  ```
+```
   function onDeleteCompletedItemsSuccess() {
     alert('Completed orientations have been deleted.');
     location.reload(true);
 }
-  ```
+```
 
 11. Add the following two callback-on-failure functions to the file. 
     
-  ```
+```
   // Failure callbacks
 
 function onGetCompletedItemsFail(sender, args) {
@@ -188,17 +188,17 @@ function onGetCompletedItemsFail(sender, args) {
 function onDeleteCompletedItemsFail(sender, args) {
     alert('Unable to delete completed items. Error:' + args.get_message() + '\n' + args.get_stackTrace());
 }
-  ```
+```
 
 12. Open the default.aspx file and find the  **asp:Content** element with the ID **PlaceHolderMain**.
     
  
 13. Add the following markup between the  **WebPartPages:WebPartZone** element and the first of the two **asp:Hyperlink** elements. Note that the value of the **OnClientClick** handler is `return purgeCompletedItems()` instead of just `purgeCompletedItems()`. The  `false` that is returned from the function tells ASP.NET not to reload the page.
     
-  ```HTML
+```HTML
   <p><asp:Button runat="server" OnClientClick="return purgeCompletedItems()" 
   ID="purgecompleteditemsbutton" Text="Purge Completed Items" /></p>
-  ```
+```
 
 14. Rebuild the project in Visual Studio.
     
@@ -209,7 +209,7 @@ function onDeleteCompletedItemsFail(sender, args) {
     
 
 
-  ```
+```
   <Rows>
   <Row>
     <Field Name="Title">Tom Higginbotham</Field>
@@ -227,7 +227,7 @@ function onDeleteCompletedItemsFail(sender, args) {
     <Field Name="Title">Lertchai Treetawatchaiwong</Field>
   </Row>
 </Rows>
-  ```
+```
 
 
 ## Run and test the add-in
@@ -249,7 +249,7 @@ function onDeleteCompletedItemsFail(sender, args) {
 
  
 
-     ![The "New Employees in Seattle" list with the "Orientation Stage" column for two items set to Completed. There is a button labelled "Purge Completed Items" below the list.](images/e5e4eef8-a218-4797-aabc-c52adbd2d96d.PNG)
+  ![The "New Employees in Seattle" list with the "Orientation Stage" column for two items set to Completed. There is a button labelled "Purge Completed Items" below the list.](../../images/e5e4eef8-a218-4797-aabc-c52adbd2d96d.PNG)
  
 
  
@@ -264,7 +264,7 @@ function onDeleteCompletedItemsFail(sender, args) {
 
  
 
-     ![The "New Employees in Seattle" list with two fewer items than before and none of them have "Orientation Stage" set to Completed.](images/a0330fad-1473-4fde-9df2-8be0b37df1a1.PNG)
+  ![The "New Employees in Seattle" list with two fewer items than before and none of them have "Orientation Stage" set to Completed.](../../images/a0330fad-1473-4fde-9df2-8be0b37df1a1.PNG)
  
 
  
