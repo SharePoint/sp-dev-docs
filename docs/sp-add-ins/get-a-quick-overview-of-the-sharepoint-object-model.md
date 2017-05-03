@@ -29,10 +29,6 @@ In this article you'll take a brief break from coding to get a quick overview of
 The table below shows the hierarchy of content in SharePoint and the CSOM classes that represent them. Each of these entities has children of the type just below it.
  
 
- 
-
-|
-|
 |**Entity**|**Class**|**Remarks**|
 |:-----|:-----|:-----|
 |SharePoint on-premises farm or SharePoint Online subscription (also called a tenant)||There is only limited programmatic access to this level in CSOM. There is no Farm or Subscription or Tenant class, for example. (SharePoint's server-side object model, which cannot be used in add-ins, enables programmatic access to these entities.)|
