@@ -32,7 +32,7 @@ For more information about npm, see the [npm documentation](https://docs.npmjs.c
 
 ## Node.js
 
-Node.js is an open source, cross-platform runtime environment for hosting and serving JavaScript code. You can use node.js develop server-side web applications written in JavaScript. The Node.js ecosystem is tightly coupled with npm and task runners such as gulp to provide an efficient environment for building JavaScript-based applications. Nodel.js is similar to IIS Express or IIS, but includes tools to simplify client-side development. 
+Node.js is an open source, cross-platform runtime environment for hosting and serving JavaScript code. You can use node.js develop server-side web applications written in JavaScript. The Node.js ecosystem is tightly coupled with npm and task runners such as gulp to provide an efficient environment for building JavaScript-based applications. Node.js is similar to IIS Express or IIS, but includes tools to simplify client-side development. 
 
 For more information about Node.js, see the following:
 
