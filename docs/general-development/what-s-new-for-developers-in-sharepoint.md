@@ -15,15 +15,8 @@ SharePoint introduces a Cloud Add-in Model that enables you to create add-ins. S
     
     
 
-<a href="http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70(Office.15).aspx" target="_blank"><img alt="Apps for SharePoint" src="../../images/wn_cloud_1.png" /></a>
-    
-    
-](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx) [![SharePoint Store](../../images/wn_cloud_2.png)
-  
-    
-    
-](http://msdn.microsoft.com/library/d15a74a7-3c10-485a-9885-7ef11aaa0d90%28Office.15%29.aspx) [![App Catalog](../../images/wn_cloud_3.png)
-  
+<a href="http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70(Office.15).aspx" target="_blank"><img alt="SharePoint Add-ins" src="../../images/wn_cloud_1.png" /></a>&nbsp;&nbsp;<a href="http://msdn.microsoft.com/library/d15a74a7-3c10-485a-9885-7ef11aaa0d90(Office.15).aspx" target="_blank"><img alt="SharePoint Store" src="../../images/wn_cloud_2.png" /></a>&nbsp;&nbsp;<a href="http://msdn.microsoft.com/library/d15a74a7-3c10-485a-9885-7ef11aaa0d90(Office.15).aspx" target="_blank"><img alt="Add-ins Catalog" src="../../images/wn_cloud_3.png" /></a>
+
     
     
 ](http://msdn.microsoft.com/library/d15a74a7-3c10-485a-9885-7ef11aaa0d90%28Office.15%29.aspx)
