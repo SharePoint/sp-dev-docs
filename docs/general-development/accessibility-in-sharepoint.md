@@ -112,7 +112,7 @@ SharePoint administrators and users depend on the accessibility features that we
 -  [SharePoint Add-ins UX design guidelines](http://msdn.microsoft.com/library/a4a8f53c-27d7-43dc-b6db-aa7b1f1c7d45%28Office.15%29.aspx)
     
   
--  [Develop SharePoint Add-ins](http://msdn.microsoft.com/library/71ddde4b-fac4-4d8c-aa2e-524f9c2c4c99%28Office.15%29.aspx)
+-  [Develop SharePoint Add-ins](../sp-add-ins/sharepoint-add-ins)
     
   
 -  [Programming models in SharePoint](programming-models-in-sharepoint.md)

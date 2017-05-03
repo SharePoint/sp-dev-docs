@@ -12,7 +12,7 @@ Learn about new features and functionality in SharePoint, including the new Clou
 
 SharePoint introduces a Cloud Add-in Model that enables you to create add-ins. SharePoint Add-ins are self-contained pieces of functionality that extend the capabilities of a SharePoint website. An add-in may include SharePoint components such as lists, workflows, and site pages, but it can also surface a remote web application and remote data in SharePoint. An add-in has few or no dependencies on any other software on the device or platform where it is installed, other than what is built into the platform. This characteristic enables add-ins to be installed simply and uninstalled cleanly. Add-ins have no custom code that runs on the SharePoint servers. Instead, all custom logic moves "up" to the cloud or "down" to client computers. Additionally, SharePoint introduces an innovative delivery model for SharePoint Add-ins that includes components like the Office Store and the Add-in Catalog.
 
-<a href="../sp-add-ins/sharepoint-add-ins" target="_blank"><img alt="SharePoint Add-ins" src="../../images/wn_cloud_1.png" /></a>&nbsp;&nbsp;<a href="../sp-add-ins/deploy-and-install-a-sharepoint-hosted-sharepoint-add-in" target="_blank"><img alt="SharePoint Store" src="../../images/wn_cloud_2.png" /></a>&nbsp;&nbsp;<a href="../sp-add-ins/deploy-and-install-a-sharepoint-hosted-sharepoint-add-in" target="_blank"><img alt="Add-ins Catalog" src="../../images/wn_cloud_3.png" /></a>
+<a href="../sp-add-ins/sharepoint-add-ins"><img alt="SharePoint Add-ins" src="../../images/wn_cloud_1.png" /></a>&nbsp;&nbsp;<a href="../sp-add-ins/deploy-and-install-a-sharepoint-hosted-sharepoint-add-in" target="_blank"><img alt="SharePoint Store" src="../../images/wn_cloud_2.png" /></a>&nbsp;&nbsp;<a href="../sp-add-ins/deploy-and-install-a-sharepoint-hosted-sharepoint-add-in" target="_blank"><img alt="Add-ins Catalog" src="../../images/wn_cloud_3.png" /></a>
 
 ## Familiar programming model using web standards
 <a name="bmWebStandards"> </a>
@@ -98,7 +98,7 @@ SharePoint includes several services for working with data in your SharePoint si
 -  [SharePoint development overview](sharepoint-development-overview.md)
     
   
--  [Develop SharePoint Add-ins](http://msdn.microsoft.com/library/71ddde4b-fac4-4d8c-aa2e-524f9c2c4c99%28Office.15%29.aspx)
+-  [Develop SharePoint Add-ins](../sp-add-ins/sharepoint-add-ins)
     
   
 -  [SharePoint Add-ins compared with SharePoint solutions](sharepoint-add-ins-compared-with-sharepoint-solutions.md)
