@@ -15,7 +15,7 @@ SharePoint introduces a Cloud Add-in Model that enables you to create add-ins. S
     
     
 
-<a href="http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70(Office.15).aspx" target="_blank"><img alt="SharePoint Add-ins" src="../../images/wn_cloud_1.png" /></a>&nbsp;&nbsp;<a href="http://msdn.microsoft.com/library/d15a74a7-3c10-485a-9885-7ef11aaa0d90(Office.15).aspx" target="_blank"><img alt="SharePoint Store" src="../../images/wn_cloud_2.png" /></a>&nbsp;&nbsp;<a href="http://msdn.microsoft.com/library/d15a74a7-3c10-485a-9885-7ef11aaa0d90(Office.15).aspx" target="_blank"><img alt="Add-ins Catalog" src="../../images/wn_cloud_3.png" /></a>
+<a href="../sp-add-ins/sharepoint-add-ins" target="_blank"><img alt="SharePoint Add-ins" src="../../images/wn_cloud_1.png" /></a>&nbsp;&nbsp;<a href="../sp-add-ins/deploy-and-install-a-sharepoint-hosted-sharepoint-add-in" target="_blank"><img alt="SharePoint Store" src="../../images/wn_cloud_2.png" /></a>&nbsp;&nbsp;<a href="../sp-add-ins/deploy-and-install-a-sharepoint-hosted-sharepoint-add-in" target="_blank"><img alt="Add-ins Catalog" src="../../images/wn_cloud_3.png" /></a>
 
 
     
