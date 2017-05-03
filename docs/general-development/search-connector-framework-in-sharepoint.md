@@ -1,16 +1,16 @@
 ---
-title: Search connector framework in SharePoint 2013
+title: Search connector framework in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 38560a3b-69c6-4a56-97ca-3625bbd5755e
 ---
 
 
-# Search connector framework in SharePoint 2013
-Learn about the SharePoint 2013 indexing connectors, the connector framework, and how you can create custom BCS indexing connectors to search external systems.
-## Making content available for search in SharePoint 2013
+# Search connector framework in SharePoint
+Learn about the SharePoint indexing connectors, the connector framework, and how you can create custom BCS indexing connectors to search external systems.
+## Making content available for search in SharePoint
 <a name="SP15searchconnect_make"> </a>
 
-Search in SharePoint 2013 provides two approaches for processing queries to return search results—federated search and content crawling.
+Search in SharePoint provides two approaches for processing queries to return search results—federated search and content crawling.
   
     
     
@@ -19,7 +19,7 @@ Search in SharePoint 2013 provides two approaches for processing queries to retu
     
     
 
-- You require no additional capacity requirements for the content index, because content is not crawled by Search in SharePoint 2013.
+- You require no additional capacity requirements for the content index, because content is not crawled by Search in SharePoint.
     
   
 - You can take advantage of a repository's existing search engine. For example, you can federate to an Internet search engine to search the web.
@@ -49,26 +49,18 @@ Search in SharePoint 2013 provides two approaches for processing queries to retu
     
   
 
-## Crawling content with indexing connectors in SharePoint 2013
+## Crawling content with indexing connectors in SharePoint
 <a name="ConnectorFramework_SPIndexingConnectors"> </a>
 
 The crawler uses indexing connectors to access the content to crawl. The indexing connector is the component that knows how to connect to the content source, what to crawl, and how to crawl it. In earlier versions of SharePoint, these were known as protocol handlers, components that are based on custom interfaces running unmanaged C++ code. 
   
     
     
-Search in SharePoint 2013 includes a connector framework, introduced in SharePoint Server 2010 and built on Microsoft Business Connectivity Services (BCS), which provides a simpler approach to developing indexing connectors. With the connector framework, the crawler uses indexing connectors based on BCS to crawl external content. SharePoint 2013 uses both protocol handler-based indexing connectors and BCS indexing connectors to crawl content.
+Search in SharePoint includes a connector framework, introduced in SharePoint Server 2010 and built on Microsoft Business Connectivity Services (BCS), which provides a simpler approach to developing indexing connectors. With the connector framework, the crawler uses indexing connectors based on BCS to crawl external content. SharePoint uses both protocol handler-based indexing connectors and BCS indexing connectors to crawl content.
   
     
     
-Figure 1 provides a high-level overview of the SharePoint 2013 indexing connector story.
-  
-    
-    
-
-  
-    
-    
-![SharePoint 2013 indexing connectors](../../images/SP15Con_CF_IndexingConnectors.jpg)
+Figure 1 provides a high-level overview of the SharePoint indexing connector story.
   
     
     
@@ -76,12 +68,20 @@ Figure 1 provides a high-level overview of the SharePoint 2013 indexing connecto
   
     
     
+![SharePoint indexing connectors](../../images/SP15Con_CF_IndexingConnectors.jpg)
+  
+    
+    
 
   
     
     
 
-## BCS overview for Search in SharePoint 2013
+  
+    
+    
+
+## BCS overview for Search in SharePoint
 <a name="ConnectorFramework_BCSOverview"> </a>
 
 BCS is the umbrella of tools and infrastructure that enables you to connect to external systems from SharePoint. Figure 2 shows a high-level view of the BCS architecture, with the relevant areas for Search highlighted.
@@ -209,22 +209,22 @@ Figure 3 shows a high-level view of the search connector framework architecture.
 ### BCS indexing connectors
 <a name="ConnectorFramework_BCSIndexingConnectors"> </a>
 
-SharePoint 2013 supports the following types of BCS indexing connectors:
+SharePoint supports the following types of BCS indexing connectors:
   
     
     
 
-- **Database connector** SharePoint 2013 includes a predefined BCS connector that supports connecting to databases, so you can create a database BCS indexing connector without writing any code—just create the BDC model file for the connector.
+- **Database connector** SharePoint includes a predefined BCS connector that supports connecting to databases, so you can create a database BCS indexing connector without writing any code—just create the BDC model file for the connector.
     
   
-- **WCF (web services) connector** SharePoint 2013 includes a predefined BCS connector that supports connecting to web services, so you can create a web service BCS indexing connector without writing any code—just create the BDC model file for the connector.
+- **WCF (web services) connector** SharePoint includes a predefined BCS connector that supports connecting to web services, so you can create a web service BCS indexing connector without writing any code—just create the BDC model file for the connector.
     
     > **Note:**
       > Although you don't have to write code to create a connector for web services, the web service must include methods that provide the same functionality that the .NET BCS connector provides, to pass the external business data to BCS. For information about creating a web service, see  [Creating .NET Connectivity Assemblies and Web Services](http://msdn.microsoft.com/library/9a6c6712-868a-4a9c-9645-3aa448ad5092%28Office.15%29.aspx). For code examples, see  [Sample Orders ASP.NET Web Service Sample](http://msdn.microsoft.com/library/10e46860-788f-4ed0-a4d8-1e17ada58e83%28Office.15%29.aspx) and [Sample Orders WCF Service Sample](http://msdn.microsoft.com/library/535277c8-9d5c-41eb-ab23-0ae141d726c5%28Office.15%29.aspx). 
-- **.NET BCS connector** SharePoint 2013 does not include a predefined BCS connector for .NET connectors, so in addition to creating a BDC model file, you must also create a .NET component for the BCS indexing connector. You must implement the required stereotyped operations to support crawling the data, and implement methods for parsing the access URLs and BDC identifiers.
+- **.NET BCS connector** SharePoint does not include a predefined BCS connector for .NET connectors, so in addition to creating a BDC model file, you must also create a .NET component for the BCS indexing connector. You must implement the required stereotyped operations to support crawling the data, and implement methods for parsing the access URLs and BDC identifiers.
     
   
-- **Custom BCS connector** SharePoint 2013 does not include a predefined BCS connector for custom .NET connectors, so in addition to creating a BDC model file, you must also create a .NET component for the BCS indexing connector, just as you must for the .NET BCS connector. You must implement the required stereotyped operations to support crawling the data, and implement methods for parsing the access URLs and BDC identifiers. You must also implement the **ISystemUtility** interface.
+- **Custom BCS connector** SharePoint does not include a predefined BCS connector for custom .NET connectors, so in addition to creating a BDC model file, you must also create a .NET component for the BCS indexing connector, just as you must for the .NET BCS connector. You must implement the required stereotyped operations to support crawling the data, and implement methods for parsing the access URLs and BDC identifiers. You must also implement the **ISystemUtility** interface.
     
   
 
@@ -248,12 +248,12 @@ When you develop a BCS indexing connector—whether you're just creating the BDC
 - **Securing data** In most scenarios, not all data is accessible to all users. It's important that this also works with search, so when a user searches by using the search UI, the user can see only the results he or she has access to. This means the connector must know how to read the security of the external system, and bring that security-related information back during the crawl into the index. For example, you could implement crawl-time storage of Windows NT access control lists (ACLs).
     
   
-Table 2 describes the stereotyped operations that apply when you create a BCS indexing connector for SharePoint 2013.
+Table 2 describes the stereotyped operations that apply when you create a BCS indexing connector for SharePoint.
   
     
     
 
-**Table 2. BCS stereotyped operations supported by Search in SharePoint 2013**
+**Table 2. BCS stereotyped operations supported by Search in SharePoint**
 
 
 |**Operation**|**Description**|
@@ -291,10 +291,10 @@ You can use Visual Studio to create the component for .NET BCS connectors and cu
     
     
 
-## Connector framework enhancements in SharePoint 2013
+## Connector framework enhancements in SharePoint
 <a name="SP15searchconnect_enhancements"> </a>
 
-In SharePoint 2013 the connector framework supports BCS connectors retrieving claims information for content that is stored in custom external data repositories.
+In SharePoint the connector framework supports BCS connectors retrieving claims information for content that is stored in custom external data repositories.
   
     
     
@@ -307,22 +307,22 @@ The connector framework also provides improved exception capturing and logging t
 <a name="SP15searchconnect_addlresources"> </a>
 
 
--  [Enhancing the BDC model file for Search in SharePoint 2013](enhancing-the-bdc-model-file-for-search-in-sharepoint.md)
+-  [Enhancing the BDC model file for Search in SharePoint](enhancing-the-bdc-model-file-for-search-in-sharepoint.md)
     
   
--  [SharePoint 2013: MyFileConnector custom BCS indexing connector sample](http://code.msdn.microsoft.com/SharePoint-MyFileConne-79d2ea26)
+-  [SharePoint: MyFileConnector custom BCS indexing connector sample](http://code.msdn.microsoft.com/SharePoint-MyFileConne-79d2ea26)
     
   
--  [How to: Crawl associated external content types in SharePoint 2013](how-to-crawl-associated-external-content-types-in-sharepoint.md)
+-  [How to: Crawl associated external content types in SharePoint](how-to-crawl-associated-external-content-types-in-sharepoint.md)
     
   
--  [How to: Crawl binary large objects (BLOBs) in SharePoint 2013](how-to-crawl-binary-large-objects-blobs-in-sharepoint.md)
+-  [How to: Crawl binary large objects (BLOBs) in SharePoint](how-to-crawl-binary-large-objects-blobs-in-sharepoint.md)
     
   
--  [How to: Crawl associated external content types in SharePoint 2013](how-to-crawl-associated-external-content-types-in-sharepoint.md)
+-  [How to: Crawl associated external content types in SharePoint](how-to-crawl-associated-external-content-types-in-sharepoint.md)
     
   
--  [How to: Configure item-level security in SharePoint 2013](how-to-configure-item-level-security-in-sharepoint.md)
+-  [How to: Configure item-level security in SharePoint](how-to-configure-item-level-security-in-sharepoint.md)
     
   
 

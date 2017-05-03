@@ -1,16 +1,16 @@
 ---
-title: Overview of the SharePoint 2013 page model
+title: Overview of the SharePoint page model
 ms.prod: SHAREPOINT
 ms.assetid: 808b1af3-89ab-4f02-89cc-ea86cb1f9a6e
 ---
 
 
-# Overview of the SharePoint 2013 page model
-Learn about the revised page model—including master pages and page layouts—redesigned for SharePoint 2013.
+# Overview of the SharePoint page model
+Learn about the revised page model—including master pages and page layouts—redesigned for SharePoint.
 ## Introduction to the page model
 <a name="bk_Introduction"> </a>
 
-Before you design or brand a SharePoint site, you need a basic understanding of the parts of a SharePoint site and how a SharePoint page is put together. This article gives you a visual overview of the pieces to think about as you plan how to brand your site. This article applies specifically to publishing sites in SharePoint 2013.
+Before you design or brand a SharePoint site, you need a basic understanding of the parts of a SharePoint site and how a SharePoint page is put together. This article gives you a visual overview of the pieces to think about as you plan how to brand your site. This article applies specifically to publishing sites in SharePoint.
   
     
     
@@ -354,7 +354,7 @@ With search-driven Web Parts, you can dynamically present information stored in 
   
     
     
-SharePoint Server 2013 includes several ready-to-use display templates such as lists and slideshows for your Content Search Web Parts. When you configure a Content Search Web Part in the browser, you choose which display templates to use.
+SharePoint includes several ready-to-use display templates such as lists and slideshows for your Content Search Web Parts. When you configure a Content Search Web Part in the browser, you choose which display templates to use.
   
     
     
@@ -468,7 +468,7 @@ The item display template also determines which managed properties and values ar
 ## Device channels and device channel panels
 <a name="bk_DeviceChannels"> </a>
 
-In SharePoint 2013, you can use device channels to render a single publishing site in multiple ways by using different designs that target different devices. You create a single site and author the content in it a single time. Then, that site and content can be mapped to use different master pages and style sheets to target a specific device or group of devices.
+In SharePoint, you can use device channels to render a single publishing site in multiple ways by using different designs that target different devices. You create a single site and author the content in it a single time. Then, that site and content can be mapped to use different master pages and style sheets to target a specific device or group of devices.
   
     
     
@@ -611,16 +611,16 @@ Or, you can use a channel panel inside the item display template of a Content Se
 <a name="bk_AdditionalResources"> </a>
 
 
--  [Overview of Design Manager in SharePoint 2013](overview-of-design-manager-in-sharepoint.md)
+-  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md)
     
   
 -  [Build sites for SharePoint](build-sites-for-sharepoint.md)
     
   
--  [SharePoint 2013 Design Manager display templates](sharepoint-design-manager-display-templates.md)
+-  [SharePoint Design Manager display templates](sharepoint-design-manager-display-templates.md)
     
   
--  [SharePoint 2013 Design Manager device channels](sharepoint-design-manager-device-channels.md)
+-  [SharePoint Design Manager device channels](sharepoint-design-manager-device-channels.md)
     
   
 

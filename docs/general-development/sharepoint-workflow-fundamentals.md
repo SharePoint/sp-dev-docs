@@ -1,16 +1,16 @@
 ---
-title: SharePoint 2013 workflow fundamentals
+title: SharePoint workflow fundamentals
 ms.prod: SHAREPOINT
 ms.assetid: 1e622296-f78b-4e3a-a1e7-8effa24111a8
 ---
 
 
-# SharePoint 2013 workflow fundamentals
-Provides a high-level overview of the workflow infrastructure in SharePoint 2013, including a view of the platform architecture and the workflow interop bridge.
-## Overview of workflows in SharePoint 2013
+# SharePoint workflow fundamentals
+Provides a high-level overview of the workflow infrastructure in SharePoint, including a view of the platform architecture and the workflow interop bridge.
+## Overview of workflows in SharePoint
 <a name="bkm_overview"> </a>
 
-SharePoint 2013 workflows are powered by Windows Workflow Foundation 4, which was substantially redesigned from earlier versions. Windows Workflow Foundation (WF), in turn, is built on the messaging functionality that is provided by  [Windows Communication Foundation (WCF)](http://msdn.microsoft.com/en-us/library/vstudio/ms735119%28v=vs.90%29.aspx).
+SharePoint workflows are powered by Windows Workflow Foundation 4, which was substantially redesigned from earlier versions. Windows Workflow Foundation (WF), in turn, is built on the messaging functionality that is provided by  [Windows Communication Foundation (WCF)](http://msdn.microsoft.com/en-us/library/vstudio/ms735119%28v=vs.90%29.aspx).
   
     
     
@@ -18,7 +18,7 @@ Conceptually, workflows model structured business processes. Therefore, Windows 
   
     
     
-The workflow platform in SharePoint 2013 uses the Windows Workflow Foundation 4 activity model to represent a SharePoint-based business process. Additionally, SharePoint 2013 introduces a higher-level stage-gate model on which to create workflows.
+The workflow platform in SharePoint uses the Windows Workflow Foundation 4 activity model to represent a SharePoint-based business process. Additionally, SharePoint introduces a higher-level stage-gate model on which to create workflows.
   
     
     
@@ -34,11 +34,11 @@ Workflow activities are invoked using loosely coupled web services that use mess
   
     
     
-The messaging framework is very flexible and supports virtually any messaging pattern that you need. Note that on a SharePoint 2013 farm, Windows Workflow Foundation and WCF are hosted in Workflow Manager Client 1.0.
+The messaging framework is very flexible and supports virtually any messaging pattern that you need. Note that on a SharePoint farm, Windows Workflow Foundation and WCF are hosted in Workflow Manager Client 1.0.
   
     
     
-Workflow Manager Client 1.0, SharePoint 2013, and SharePoint Designer 2013 each provide significant parts of the new infrastructure:
+Workflow Manager Client 1.0, SharePoint, and SharePoint Designer 2013 each provide significant parts of the new infrastructure:
   
     
     
@@ -46,7 +46,7 @@ Workflow Manager Client 1.0, SharePoint 2013, and SharePoint Designer 2013 each 
 - **Workflow Manager Client 1.0** provides the management of workflow definitions. It also hosts the execution processes for workflow instances.
     
   
-- **SharePoint 2013** provides the framework for SharePoint workflows, which model SharePoint-based business processes that involve SharePoint documents, lists, users, and tasks. Additionally, SharePoint workflows, associations, activities, and other workflow metadata are stored and managed in SharePoint 2013.
+- **SharePoint** provides the framework for SharePoint workflows, which model SharePoint-based business processes that involve SharePoint documents, lists, users, and tasks. Additionally, SharePoint workflows, associations, activities, and other workflow metadata are stored and managed in SharePoint.
     
   
 - **SharePoint Designer 2013** is the primary business-user tool for creating workflow definitions and publishing them, as it was in previous versions. It can also be used to package a workflow definition with or without associated SharePoint components.
@@ -56,7 +56,7 @@ Workflow Manager Client 1.0, SharePoint 2013, and SharePoint Designer 2013 each 
 ## Platform architecture
 <a name="bkm_Architecture"> </a>
 
-Figure 1 depicts a high-level view of the SharePoint 2013 workflow framework. Notice, first, how the new workflow infrastructure introduces Workflow Manager Client 1.0 as the new workflow execution host. Whereas in previous versions workflow execution was hosted in SharePoint itself, this has changed in SharePoint 2013. Workflow Manager Client 1.0 is external to SharePoint and communicates using common protocols over the Microsoft Azure service bus, mediated by OAuth. Otherwise, SharePoint includes the feature that you would expect to see: content items, events, apps, and so on. But notice that there is also an implementation of the SharePoint 2010 workflow host (that is, the Windows Workflow Foundation 3 engine) for backward compatibility. You can read more about this in  [Use workflow interop for SharePoint 2013](use-workflow-interop-for-sharepoint.md).
+Figure 1 depicts a high-level view of the SharePoint workflow framework. Notice, first, how the new workflow infrastructure introduces Workflow Manager Client 1.0 as the new workflow execution host. Whereas in previous versions workflow execution was hosted in SharePoint itself, this has changed in SharePoint. Workflow Manager Client 1.0 is external to SharePoint and communicates using common protocols over the Microsoft Azure service bus, mediated by OAuth. Otherwise, SharePoint includes the feature that you would expect to see: content items, events, apps, and so on. But notice that there is also an implementation of the SharePoint 2010 workflow host (that is, the Windows Workflow Foundation 3 engine) for backward compatibility. You can read more about this in  [Use workflow interop for SharePoint](use-workflow-interop-for-sharepoint.md).
   
     
     
@@ -74,7 +74,7 @@ Figure 1 depicts a high-level view of the SharePoint 2013 workflow framework. No
   
     
     
-Workflow Manager Client 1.0 is represented in SharePoint 2013 in the form of the Workflow Manager Client 1.0 Service Application Proxy. This component allows SharePoint to communicate and interact with the Workflow Manager Client 1.0 server. Server-to-server authentication is provided using OAuth.
+Workflow Manager Client 1.0 is represented in SharePoint in the form of the Workflow Manager Client 1.0 Service Application Proxy. This component allows SharePoint to communicate and interact with the Workflow Manager Client 1.0 server. Server-to-server authentication is provided using OAuth.
   
     
     
@@ -86,7 +86,7 @@ There are also additions to the SharePoint workflow object model, called collect
   
     
     
-Finally, there is the workflow authoring component. SharePoint Designer can now create and deploy both SharePoint 2010 and SharePoint 2013 workflows. Visual Studio 2012 not only provides a designer surface for creating declarative workflows, but it can also create SharePoint Add-ins and solutions that fully integrate Workflow Manager Client 1.0 functionality.
+Finally, there is the workflow authoring component. SharePoint Designer can now create and deploy both SharePoint 2010 and SharePoint workflows. Visual Studio 2012 not only provides a designer surface for creating declarative workflows, but it can also create SharePoint Add-ins and solutions that fully integrate Workflow Manager Client 1.0 functionality.
   
     
     
@@ -94,7 +94,7 @@ Finally, there is the workflow authoring component. SharePoint Designer can now 
 ## Workflow subscriptions and associations
 <a name="bkm_Subscriptions"> </a>
 
-Because the most significant change to SharePoint 2013 workflows is the moving of workflow processing onto external workflow hosts like Microsoft Azure, it was essential for SharePoint messages and events to connect to the workflow infrastructure in Microsoft Azure. In addition, it was necessary for Microsoft Azure to connect the infrastructure to customer data. Workflow associations (which are built on the WF concept of subscriptions) are the SharePoint infrastructure pieces that support these requirements.
+Because the most significant change to SharePoint workflows is the moving of workflow processing onto external workflow hosts like Microsoft Azure, it was essential for SharePoint messages and events to connect to the workflow infrastructure in Microsoft Azure. In addition, it was necessary for Microsoft Azure to connect the infrastructure to customer data. Workflow associations (which are built on the WF concept of subscriptions) are the SharePoint infrastructure pieces that support these requirements.
   
     
     
@@ -134,7 +134,7 @@ By default, the messaging infrastructure supports workflows at the following sco
 -  [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) (for site workflows)
     
   
-Unlike previous versions, SharePoint 2013 does not support workflows that are scoped to a content type ( [SPContentType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPContentType.aspx) ). However, the messaging infrastructure is extensible, so it can support any arbitrary scope. As a developer, you can set the [EventSourceId](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowSubscription.EventSourceId.aspx) property on a given [WorkflowSubscription](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowSubscription.aspx) instance to any **guid**. You can then use that **EventSourceId** value to call **PublishEvent(Guid, String, IDictionary<String, Object>)**, which triggers a new workflow instance of the specified **WorkflowSubscription**.
+Unlike previous versions, SharePoint does not support workflows that are scoped to a content type ( [SPContentType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPContentType.aspx) ). However, the messaging infrastructure is extensible, so it can support any arbitrary scope. As a developer, you can set the [EventSourceId](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowSubscription.EventSourceId.aspx) property on a given [WorkflowSubscription](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowSubscription.aspx) instance to any **guid**. You can then use that **EventSourceId** value to call **PublishEvent(Guid, String, IDictionary<String, Object>)**, which triggers a new workflow instance of the specified **WorkflowSubscription**.
   
     
     
@@ -209,11 +209,11 @@ The natural complement to associations are subscriptions, which allow the workfl
   
     
     
-The signatures of the methods that create the subscription and instantiate the workflow specify the parameters—both optional and required. The list of parameters is determined by the workflow author, so they may differ from one workflow definition to another. The list of subscription parameters is specified as metadata of the workflow definitions. The subscription parameters are provided when the subscription is created. The list of initialization parameters is specified in XAML as part of the workflow definition. The initialization parameters are provided when the workflow is instantiated.
+The signatures of the methods that create the subscription and instantiate the workflow specify the parameters???both optional and required. The list of parameters is determined by the workflow author, so they may differ from one workflow definition to another. The list of subscription parameters is specified as metadata of the workflow definitions. The subscription parameters are provided when the subscription is created. The list of initialization parameters is specified in XAML as part of the workflow definition. The initialization parameters are provided when the workflow is instantiated.
   
     
     
-Subscriptions are bound to a specific SharePoint object—either an **SPList** instance or an **SPWeb** instance. The subscription object type is passed in as a value of a required parameter when the subscription is created. The object type defines the subscription scope so that a subscription can only respond to events that occur on the object to which they are subscribed.
+Subscriptions are bound to a specific SharePoint object???either an **SPList** instance or an **SPWeb** instance. The subscription object type is passed in as a value of a required parameter when the subscription is created. The object type defines the subscription scope so that a subscription can only respond to events that occur on the object to which they are subscribed.
   
     
     
@@ -221,15 +221,15 @@ Subscriptions are bound to a specific SharePoint object—either an **SPList** i
 ## SharePoint workflow interop
 <a name="bkm_InteropBridge"> </a>
 
-SharePoint workflow interop enables SharePoint 2010 workflows (which are built on Windows Workflow Foundation 3) to be called from SharePoint 2013 workflows, which are based on Windows Workflow Foundation 4. This allows you to execute 2010 workflows from within 2013 workflows.
+SharePoint workflow interop enables SharePoint 2010 workflows (which are built on Windows Workflow Foundation 3) to be called from SharePoint workflows, which are based on Windows Workflow Foundation 4. This allows you to execute 2010 workflows from within 2013 workflows.
   
     
     
-This is important because you may have SharePoint 2010 that you may use to reuse in conjunction with your SharePoint 2013 workflows. Additionally, you may wish to use activities or features from SharePoint 2010, which are not yet implemented in SharePoint 2013
+This is important because you may have SharePoint 2010 that you may use to reuse in conjunction with your SharePoint workflows. Additionally, you may wish to use activities or features from SharePoint 2010, which are not yet implemented in SharePoint
   
     
     
-For a full discussion of SharePoint workflow interop, see  [Use workflow interop for SharePoint 2013](use-workflow-interop-for-sharepoint.md).
+For a full discussion of SharePoint workflow interop, see  [Use workflow interop for SharePoint](use-workflow-interop-for-sharepoint.md).
   
     
     
@@ -238,22 +238,22 @@ For a full discussion of SharePoint workflow interop, see  [Use workflow interop
 <a name="bk_additional"> </a>
 
 
--  [Get started with workflows in SharePoint 2013](get-started-with-workflows-in-sharepoint.md)
+-  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint.md)
     
   
--  [Workflow actions and activities reference for SharePoint 2013](workflow-actions-and-activities-reference-for-sharepoint.md)
+-  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint.md)
     
   
--  [Develop SharePoint 2013 workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
+-  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
     
   
 -  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)
     
   
--  [Workflows in SharePoint 2013](workflows-in-sharepoint.md)
+-  [Workflows in SharePoint](workflows-in-sharepoint.md)
     
   
--  [Use workflow interop for SharePoint 2013](use-workflow-interop-for-sharepoint.md)
+-  [Use workflow interop for SharePoint](use-workflow-interop-for-sharepoint.md)
     
   
 

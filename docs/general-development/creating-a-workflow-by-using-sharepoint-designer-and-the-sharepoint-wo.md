@@ -1,12 +1,12 @@
 ---
-title: Creating a workflow by using SharePoint Designer 2013 and the SharePoint 2013 Workflow platform
+title: Creating a workflow by using SharePoint Designer 2013 and the SharePoint Workflow platform
 ms.prod: SHAREPOINTDESIGNER
 ms.assetid: c05e0127-c6f5-48b8-b8f2-cbcc30149c8b
 ---
 
 
-# Creating a workflow by using SharePoint Designer 2013 and the SharePoint 2013 Workflow platform
-Learn how to install, open, and create a workflow by using SharePoint Designer 2013 and the SharePoint 2013 Workflow platform. 
+# Creating a workflow by using SharePoint Designer 2013 and the SharePoint Workflow platform
+Learn how to install, open, and create a workflow by using SharePoint Designer 2013 and the SharePoint Workflow platform. 
    
 
 ## Install SharePoint Designer 2013
@@ -61,15 +61,15 @@ SharePoint Designer 2013 is a free download. To download and install SharePoint 
     
     
 
-## Open SharePoint Designer 2013 and connect to a SharePoint 2013 site
+## Open SharePoint Designer 2013 and connect to a SharePoint site
 <a name="section2"> </a>
 
-SharePoint Designer 2013 installs as an Office 2013 application. To open SharePoint Designer 2013 and connect to a SharePoint 2013 site follow these steps: 
+SharePoint Designer 2013 installs as an Office 2013 application. To open SharePoint Designer 2013 and connect to a SharePoint site follow these steps: 
   
     
     
 
-### To open SharePoint Designer 2013 and connect to a SharePoint 2013 site
+### To open SharePoint Designer 2013 and connect to a SharePoint site
 
 
 1. Open SharePoint Designer 2013 by selecting it on the **Start** menu. Click **Start** icon, click **All Programs**, click **Microsoft Office 2013**, and then click **SharePoint Designer 2013**. 
@@ -78,25 +78,25 @@ SharePoint Designer 2013 installs as an Office 2013 application. To open SharePo
 2. Click **Open Site** on the SharePoint Designer 2013 start page.
     
   
-3. Enter the SharePoint 2013 site that you want to connect to. For example, http://www.contoso.com/sites/a-sharepoint-site.
+3. Enter the SharePoint site that you want to connect to. For example, http://www.contoso.com/sites/a-sharepoint-site.
     
   
 4. Click **Open** to open the site.
     
   
-5. Enter your credentials, if prompted. (If security is not integrated with the computer you signed in on then you are prompted to enter your credentials.) Make sure to use credentials that have access to the SharePoint 2013 site.
+5. Enter your credentials, if prompted. (If security is not integrated with the computer you signed in on then you are prompted to enter your credentials.) Make sure to use credentials that have access to the SharePoint site.
     
   
 
-## Create a List workflow based on the SharePoint 2013 Workflow platform
+## Create a List workflow based on the SharePoint Workflow platform
 <a name="section3"> </a>
 
-SharePoint Designer 2013 can be used for many important tasks. The navigational pane is used to switch between different aspects of SharePoint Designer 2013. To create a new List workflow based on the SharePoint 2013 Workflow platform, follow these steps:
+SharePoint Designer 2013 can be used for many important tasks. The navigational pane is used to switch between different aspects of SharePoint Designer 2013. To create a new List workflow based on the SharePoint Workflow platform, follow these steps:
   
     
     
 
-### To create a workflow based on the SharePoint 2013 Workflow platform
+### To create a workflow based on the SharePoint Workflow platform
 
 
 1. Click the Workflows node in the Navigation pane.
@@ -108,10 +108,10 @@ SharePoint Designer 2013 can be used for many important tasks. The navigational 
 3. Select the list that you want to associate with the new workflow.
     
   
-4. On the **Create List Workflow** dialog box, enter a name and description for the workflow and then make sure that the **Platform Type** is set to **SharePoint 2013 Workflow**, as shown in the figure.
+4. On the **Create List Workflow** dialog box, enter a name and description for the workflow and then make sure that the **Platform Type** is set to **SharePoint Workflow**, as shown in the figure.
     
     > **Note:**
-      > If you do not see SharePoint 2013 Workflow as an available platform type then Workflow Manager is not configured to work with the SharePoint Server 2013 farm. 
+      > If you do not see SharePoint Workflow as an available platform type then Workflow Manager is not configured to work with the SharePoint farm. 
 5. Click **OK** to create the workflow.
     
   
@@ -164,7 +164,7 @@ Now that the workflow is created, you can add Actions, Conditions, Stages, Steps
     
     
 
-**Figure: Workflow items for the SharePoint 2013 Workflow platform**
+**Figure: Workflow items for the SharePoint Workflow platform**
 
   
     
@@ -185,7 +185,7 @@ Now that the workflow is created, you can add Actions, Conditions, Stages, Steps
     
     
 
-To learn more about the available components of workflow development, see  [Workflow actions quick reference (SharePoint 2013 Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md).
+To learn more about the available components of workflow development, see  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md).
   
     
     
@@ -194,10 +194,10 @@ To learn more about the available components of workflow development, see  [Work
 <a name="bk_addresources"> </a>
 
 
--  [What's new in workflow in SharePoint Server 2013](http://msdn.microsoft.com/library/6ab8a28b-fa2f-4530-8b55-a7f663bf15ea.aspx)
+-  [What's new in workflow in SharePoint](http://msdn.microsoft.com/library/6ab8a28b-fa2f-4530-8b55-a7f663bf15ea.aspx)
     
   
--  [Getting started with SharePoint Server 2013 workflow](http://msdn.microsoft.com/library/cc73be76-a329-449f-90ab-86822b1c2ee8.aspx)
+-  [Getting started with SharePoint workflow](http://msdn.microsoft.com/library/cc73be76-a329-449f-90ab-86822b1c2ee8.aspx)
     
   
 -  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)

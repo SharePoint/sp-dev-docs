@@ -1,12 +1,12 @@
 ---
-title: BCS REST API reference for SharePoint 2013
+title: BCS REST API reference for SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 364fb8d7-87d9-4be7-affd-90caba3cd0c0
 ---
 
 
 
-# BCS REST API reference for SharePoint 2013
+# BCS REST API reference for SharePoint
 
   
     
@@ -23,11 +23,11 @@ ms.assetid: 364fb8d7-87d9-4be7-affd-90caba3cd0c0
   
     
     
-Contains reference information for constructing Representational State Transfer (REST) URLs to access and manipulate external data sources using Business Connectivity Services (BCS) in SharePoint 2013.
-## Using RESTful APIs to access external data in SharePoint 2013
+Contains reference information for constructing Representational State Transfer (REST) URLs to access and manipulate external data sources using Business Connectivity Services (BCS) in SharePoint.
+## Using RESTful APIs to access external data in SharePoint
 <a name="bkmk_Overview"> </a>
 
-The REST interface provided by SharePoint 2013 enables you to access most SharePoint 2013 resources through specially constructed URLs. Business Connectivity Services (BCS) uses this architecture to provide access to external data.
+The REST interface provided by SharePoint enables you to access most SharePoint resources through specially constructed URLs. Business Connectivity Services (BCS) uses this architecture to provide access to external data.
   
     
     
@@ -96,21 +96,21 @@ In order to limit the amount of data returned, or make it more relevant to the u
 <a name="bkmk_AdditionalResources"> </a>
 
 
--  [Business Connectivity Services in SharePoint 2013](business-connectivity-services-in-sharepoint.md)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
     
   
--  [Complete basic operations using SharePoint 2013 REST endpoints](http://msdn.microsoft.com/library/e3000415-50a0-426e-b304-b7de18f2f7d9%28Office.15%29.aspx)
+-  [Complete basic operations using SharePoint REST endpoints](http://msdn.microsoft.com/library/e3000415-50a0-426e-b304-b7de18f2f7d9%28Office.15%29.aspx)
     
   
 -  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)
     
   
--  [SharePoint 2013: Perform basic data access operations by using REST in apps](http://code.msdn.microsoft.com/SharePoint-Perform-335d925b)
+-  [SharePoint: Perform basic data access operations by using REST in apps](http://code.msdn.microsoft.com/SharePoint-Perform-335d925b)
     
   
--  [Choose the right API set in SharePoint 2013](choose-the-right-api-set-in-sharepoint.md)
+-  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md)
     
   
--  [Complete basic operations using JavaScript library code in SharePoint 2013](http://msdn.microsoft.com/library/29089af8-dbc0-49b7-a1a0-9e311f49c826%28Office.15%29.aspx)
+-  [Complete basic operations using JavaScript library code in SharePoint](http://msdn.microsoft.com/library/29089af8-dbc0-49b7-a1a0-9e311f49c826%28Office.15%29.aspx)
     
   

@@ -1,6 +1,6 @@
 
 # Use an Office 365 SharePoint site to authorize provider-hosted add-ins on an on-premises SharePoint site
-Use an Office 365 SharePoint site to create an environment where you can use ACS to establish trust between a provider-hosted add-in and an on-premises SharePoint 2013 farm, just as you would if you were developing add-ins for an Office 365 SharePoint site.
+Use an Office 365 SharePoint site to create an environment where you can use ACS to establish trust between a provider-hosted add-in and an on-premises SharePoint farm, just as you would if you were developing add-ins for an Office 365 SharePoint site.
  
 
  **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
@@ -15,29 +15,29 @@ Be sure that you have the following.
 
  
 
-- An on-premises SharePoint 2013 development environment. See  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md).
+- An on-premises SharePoint development environment. See  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md).
     
  
 - An Office 365 SharePoint site. If don't have one yet and you want to set up a development environment quickly, you can  [Set up a development environment for SharePoint Add-ins on Office 365](set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md).
     
  
--  [Visual Studio 2012](https://www.microsoft.com/en-us/download/details.aspx?id=30682) installed either remotely or on the computer where you installed SharePoint 2013.
+-  [Visual Studio 2012](https://www.microsoft.com/en-us/download/details.aspx?id=30682) installed either remotely or on the computer where you installed SharePoint.
     
  
 -  [Microsoft Office Developer Tools for Visual Studio 2012](https://msdn.microsoft.com/en-us/office/aa905340.aspx) .
     
  
-- The 64-bit edition of  [Microsoft Online Services Sign-In Assistant.](http://www.microsoft.com/en-us/download/details.aspx?id=41950) installed on the computer where you installed SharePoint 2013.
+- The 64-bit edition of  [Microsoft Online Services Sign-In Assistant.](http://www.microsoft.com/en-us/download/details.aspx?id=41950) installed on the computer where you installed SharePoint.
     
  
--  [Microsoft Online Services Module for Windows Powershell (64-bit)](http://go.microsoft.com/fwlink/p/?linkid=236297) installed on the computer where you installed SharePoint 2013.
+-  [Microsoft Online Services Module for Windows Powershell (64-bit)](http://go.microsoft.com/fwlink/p/?linkid=236297) installed on the computer where you installed SharePoint.
     
  
 
-## Create a certificate and make it the security token service (STS) certificate of your on-premises installation of SharePoint 2013
+## Create a certificate and make it the security token service (STS) certificate of your on-premises installation of SharePoint
 <a name="Certificate"> </a>
 
-You'll need to replace the default security token service (STS) certificate of your on-premises installation of SharePoint 2013 with your own certificate. This article gives you an example of how to create and export a test certificate by using the  **Create Self Signed Certificate** option in IIS. You can also use a commercial certificate issued by a certificate authority.
+You'll need to replace the default security token service (STS) certificate of your on-premises installation of SharePoint with your own certificate. This article gives you an example of how to create and export a test certificate by using the  **Create Self Signed Certificate** option in IIS. You can also use a commercial certificate issued by a certificate authority.
  
 
  
@@ -99,7 +99,7 @@ You'll need to replace the default security token service (STS) certificate of y
     
  
 
-## Make your certificate the STS certificate for your on-premises installation of SharePoint 2013
+## Make your certificate the STS certificate for your on-premises installation of SharePoint
 <a name="STSCertificate"> </a>
 
 Now that you have a certificate, you make it the STS certificate for your on-premises SharePoint farm. 
@@ -122,11 +122,11 @@ Set-SPSecurityTokenServiceConfig -ImportSigningCertificate $stsCertificate -conf
 ```
 
 
- **Note**  The  [Configure a one-way hybrid environment with SharePoint Server 2013 and Office 365](http://download.microsoft.com/download/6/4/4/644BA525-96CB-4739-B08F-18949A9BDADC/sps-2013-config-one-way-hybrid-environment.docx) document that is available for download on the [SharePoint 2013 hybrid resources page](http://www.microsoft.com/en-us/download/details.aspx?id=35593) explains in greater detail how to replace the default STS certificate of your on-premises farm with a certificate from a well-known certification authority or a self-signed certificate.
+ **Note**  The  [Configure a one-way hybrid environment with SharePoint Server 2013 and Office 365](http://download.microsoft.com/download/6/4/4/644BA525-96CB-4739-B08F-18949A9BDADC/sps-2013-config-one-way-hybrid-environment.docx) document that is available for download on the [SharePoint hybrid resources page](http://www.microsoft.com/en-us/download/details.aspx?id=35593) explains in greater detail how to replace the default STS certificate of your on-premises farm with a certificate from a well-known certification authority or a self-signed certificate.
  
 
 
-## Configure your on-premises installation of SharePoint 2013 to use ACS
+## Configure your on-premises installation of SharePoint to use ACS
 <a name="ConnectAAD"> </a>
 
 Figure 4 shows the four steps to enable the connections you need within the overall architecture of a provider-hosted add-in that runs on an on-premises site. It also shows the flow of OAuth tokens when the add-in is running.
@@ -144,19 +144,19 @@ Figure 4 shows the four steps to enable the connections you need within the over
 
  
 
-1. Create an ACS proxy in your on-premises SharePoint 2013 farm.
+1. Create an ACS proxy in your on-premises SharePoint farm.
     
  
 2. Install the signing certificate of your on-premises server to your Office 365 tenancy.
     
  
-3. Add the fully qualified domain names of the sites on your SharePoint 2013 farm where you want to run add-ins to the service principal name collection in your Office 365 tenancy.
+3. Add the fully qualified domain names of the sites on your SharePoint farm where you want to run add-ins to the service principal name collection in your Office 365 tenancy.
     
  
-4. Create an add-in management proxy on your SharePoint 2013 farm.
+4. Create an add-in management proxy on your SharePoint farm.
     
  
-The function below does all the work to configure your on-premises SharePoint 2013 site to use ACS. You can also use this function to do some cleanup tasks if you need to remove previous configurations. There are a variety of ways to run the function in PowerShell. The following is one method:
+The function below does all the work to configure your on-premises SharePoint site to use ACS. You can also use this function to do some cleanup tasks if you need to remove previous configurations. There are a variety of ways to run the function in PowerShell. The following is one method:
  
 
  

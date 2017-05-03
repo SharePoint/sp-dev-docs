@@ -1,15 +1,15 @@
 ---
-title: How to Follow people by using the .NET client object model in SharePoint 2013
+title: How to Follow people by using the .NET client object model in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 0fdb7ca5-d408-4256-b52b-886c4bc3b5b8
 ---
 
 
-# How to: Follow people by using the .NET client object model in SharePoint 2013
-Learn how to work with Following People features by using the SharePoint Server 2013 .NET client object model.
-## Why use Following People features in SharePoint Server 2013?
+# How to: Follow people by using the .NET client object model in SharePoint
+Learn how to work with Following People features by using the SharePoint .NET client object model.
+## Why use Following People features in SharePoint?
 
-In SharePoint Server 2013, when a user follows people, the posts and activities of the followed people show up in the user's newsfeed. By using Following People features to focus on the people who users care about, you can improve the relevance of your app or solution. In the .NET client object model, people that you follow are represented by  [SocialActor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActor.aspx) objects. To perform core Following People tasks in the .NET client object model, you use the [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx) object. This article shows how to use the .NET client object model to work with Following People features.
+In SharePoint, when a user follows people, the posts and activities of the followed people show up in the user's newsfeed. By using Following People features to focus on the people who users care about, you can improve the relevance of your app or solution. In the .NET client object model, people that you follow are represented by  [SocialActor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActor.aspx) objects. To perform core Following People tasks in the .NET client object model, you use the [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx) object. This article shows how to use the .NET client object model to work with Following People features.
   
     
     
@@ -21,14 +21,14 @@ In SharePoint Server 2013, when a user follows people, the posts and activities 
     
 
 
-## Prerequisites for setting up your development environment to work with Following People features by using the SharePoint 2013 .NET client object model
+## Prerequisites for setting up your development environment to work with Following People features by using the SharePoint .NET client object model
 
 To create a console application that uses the .NET client object model to work with Following People features, you'll need the following:
   
     
     
 
-- SharePoint Server 2013 with My Site configured, and with user profiles and personal sites created for the current user and a target user
+- SharePoint with My Site configured, and with user profiles and personal sites created for the current user and a target user
     
   
 - Visual Studio 2012
@@ -39,7 +39,7 @@ To create a console application that uses the .NET client object model to work w
   
 
 > **Note:**
-> If you're not developing on the computer that is running SharePoint Server 2013, get the  [SharePoint Client Components](http://www.microsoft.com/en-us/download/details.aspx?id=35585) download that contains SharePoint 2013 client assemblies.
+> If you're not developing on the computer that is running SharePoint, get the  [SharePoint Client Components](http://www.microsoft.com/en-us/download/details.aspx?id=35585) download that contains SharePoint client assemblies.
   
     
     
@@ -78,7 +78,7 @@ To create a console application that uses the .NET client object model to work w
     
   
 
-## Code example: Start or stop following people by using the SharePoint 2013 .NET client object model
+## Code example: Start or stop following people by using the SharePoint .NET client object model
 <a name="bkmk_FollowPeople"> </a>
 
 The following code example makes the current user start following or stop following a target user. It shows how to:
@@ -196,7 +196,7 @@ namespace FollowPeopleCSOM
 ```
 
 
-## Code example: Get followers and followed people by using the SharePoint 2013 .NET client object model
+## Code example: Get followers and followed people by using the SharePoint .NET client object model
 <a name="bkmk_GetFollowednFollowers"> </a>
 
 The following code example gets the people who the current user is following, gets the people who are followed by the current user, and gets information about the current user's Following People status. It shows how to:
@@ -303,13 +303,13 @@ namespace FollowPeopleCSOM
 <a name="bkmk_AdditionalResources"> </a>
 
 
--  [Follow people in SharePoint 2013](follow-people-in-sharepoint.md)
+-  [Follow people in SharePoint](follow-people-in-sharepoint.md)
     
   
--  [How to: Follow people by using the JavaScript object model in SharePoint 2013](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint.md)
+-  [How to: Follow people by using the JavaScript object model in SharePoint](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint.md)
     
   
--  [How to: Follow documents and sites by using the .NET client object model in SharePoint 2013](how-to-follow-documents-and-sites-by-using-the-net-client-object-model-in-sharep.md)
+-  [How to: Follow documents and sites by using the .NET client object model in SharePoint](how-to-follow-documents-and-sites-by-using-the-net-client-object-model-in-sharep.md)
     
   
 

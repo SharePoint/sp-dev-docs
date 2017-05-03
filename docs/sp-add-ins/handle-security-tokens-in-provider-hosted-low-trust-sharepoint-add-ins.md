@@ -51,7 +51,7 @@ In the low-trust authorization system, the access tokens are created by Azure AC
 - Optionally, forward the access token to back end systems so they can directly access SharePoint.
     
  
-These tasks must be done with server-side code. If you are using managed code, sample code for some of these tasks is in the SharePointContext.cs (or .vb) and TokenHelper.cs (or .vb) files that are part of Microsoft Office Developer Tools for Visual Studio. For an example of PHP code that carries out some of these tasks, see  [Understanding and Using the SharePoint 2013 REST Interface](http://msdn.microsoft.com/en-us/magazine/dn198245.aspx).
+These tasks must be done with server-side code. If you are using managed code, sample code for some of these tasks is in the SharePointContext.cs (or .vb) and TokenHelper.cs (or .vb) files that are part of Microsoft Office Developer Tools for Visual Studio. For an example of PHP code that carries out some of these tasks, see  [Understanding and Using the SharePoint REST Interface](http://msdn.microsoft.com/en-us/magazine/dn198245.aspx).
  
 
  
@@ -255,7 +255,7 @@ SharePointContextToken contextToken =
     Request.Url.Authority);
 ```
 
-For an example of how to do some of these tasks with PHP, see the sample  [SharePoint 2013: Perform operations on SharePoint Document Library from PHP site](https://code.msdn.microsoft.com/SharePoint-2013-Perform-8a78b8ef).
+For an example of how to do some of these tasks with PHP, see the sample  [SharePoint: Perform operations on SharePoint Document Library from PHP site](https://code.msdn.microsoft.com/SharePoint-2013-Perform-8a78b8ef).
  
 
  
@@ -325,7 +325,7 @@ Your application does not have to use the same cache for everything it is cachin
 - The realm GUID of the SharePoint farm or SharePoint Online tenancy to which the add-in is seeking access.
     
  
-The TokenHelper.cs (or .vb) file has code that creates this request. For an example of PHP code that does this, see  [SharePoint 2013: Perform operations on SharePoint Document Library from PHP site](http://code.msdn.microsoft.com/office/SharePoint-2013-Perform-8a78b8ef/sourcecode?fileId=117521&amp;pathId=1932320454).
+The TokenHelper.cs (or .vb) file has code that creates this request. For an example of PHP code that does this, see  [SharePoint: Perform operations on SharePoint Document Library from PHP site](http://code.msdn.microsoft.com/office/SharePoint-2013-Perform-8a78b8ef/sourcecode?fileId=117521&amp;pathId=1932320454).
  
 
  
@@ -419,7 +419,7 @@ The  **aud**, **iss**, **nbf**, and **exp** claims are exactly the same as in an
 |appctx|Short for "add-in context". It is a JSON object that contains the  **CacheKey** and **SecurityTokenServiceURI**.|\"CacheKey\":\"KQAIUpDUD0sm5Tr83U+jZGYVuPPCPu8BGwoWiAACqNw=\", \"SecurityTokenServiceUri\":\"https://accounts.accesscontrol.windows-int-sn1-004.accesscontrol.aadint.windows-int.net/tokens/OAuth/2\"|
 |CacheKey|A unique value that can be used as the key in any key/value structured cache to store and retrieve the context token. It could also be used as the value of a key column in a row of a database.|KQAIUpDUD0sm5Tr83U+jZGYVuPPCPu8BGwoWiAACqNw=|
 |SecurityTokenServiceURI|The URI of the token issuing service.|https://accounts.accesscontrol.windows-int-sn1-004.accesscontrol.aadint.windows-int.net/tokens/OAuth/2|
-|refreshtoken|The refresh token for the add-in.|IAAAAC1Lv5w0OrcFAmJx0xk6…|
+|refreshtoken|The refresh token for the add-in.|IAAAAC1Lv5w0OrcFAmJx0xk6???|
 |isbrowserhostedapp|A  **Boolean** field that specifies whether the request to the add-in that contains the context token is coming from a browser (true) or from a remote event receiver (false).|true|
 
 ### Use the context token to limit access to only SharePoint users
@@ -498,10 +498,10 @@ The free  [Fiddler tool](http://www.telerik.com/fiddler) can be used to capture 
 -  [Creating SharePoint Add-ins that use low-trust authorization](creating-sharepoint-add-ins-that-use-low-trust-authorization.md)
     
  
-- For code samples that use managed code and TokenHelper, see  [SharePoint 2013: Hello World remote add-in using CSOM](http://code.msdn.microsoft.com/SharePoint-2013-Hello-0fd15fbf) and [SharePoint Add-ins sample pack](http://code.msdn.microsoft.com/office/Apps-for-SharePoint-sample-64c80184)
+- For code samples that use managed code and TokenHelper, see  [SharePoint: Hello World remote add-in using CSOM](http://code.msdn.microsoft.com/SharePoint-2013-Hello-0fd15fbf) and [SharePoint Add-ins sample pack](http://code.msdn.microsoft.com/office/Apps-for-SharePoint-sample-64c80184)
     
  
-- For a code sample that uses REST calls from a PHP add-in:  [SharePoint 2013: Perform operations on SharePoint Document Library from PHP site](https://code.msdn.microsoft.com/SharePoint-2013-Perform-8a78b8ef)
+- For a code sample that uses REST calls from a PHP add-in:  [SharePoint: Perform operations on SharePoint Document Library from PHP site](https://code.msdn.microsoft.com/SharePoint-2013-Perform-8a78b8ef)
     
  
 

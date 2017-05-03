@@ -1,17 +1,17 @@
 ---
-title: Workflow actions quick reference (SharePoint 2013 Workflow platform)
+title: Workflow actions quick reference (SharePoint Workflow platform)
 ms.prod: SHAREPOINTDESIGNER
 ms.assetid: eb3434e5-bc75-4474-8873-4980062fd29c
 ---
 
 
 
-# Workflow actions quick reference (SharePoint 2013 Workflow platform)
+# Workflow actions quick reference (SharePoint Workflow platform)
 This reference lists the workflow actions that are supported in the current build of SharePoint Designer 2013, in addition to those that are not available.
 ## Workflow actions in SharePoint Designer 2013
 <a name="bkm_WorkflowActions"> </a>
 
-The following is a reference for workflow actions available for the SharePoint 2013 Workflow platform. In addition to the SharePoint 2013 Workflow platform, SharePoint Designer 2013 also supports the SharePoint 2010 Workflow platform. To view workflow actions for the 2010 platform, see  [Workflow actions quick reference (SharePoint 2010 Workflow platform)](workflow-actions-quick-reference-sharepoint-2010-workflow-platform.md)
+The following is a reference for workflow actions available for the SharePoint Workflow platform. In addition to the SharePoint Workflow platform, SharePoint Designer 2013 also supports the SharePoint 2010 Workflow platform. To view workflow actions for the 2010 platform, see  [Workflow actions quick reference (SharePoint 2010 Workflow platform)](workflow-actions-quick-reference-sharepoint-2010-workflow-platform.md)
   
     
     
@@ -34,7 +34,7 @@ Core actions are those that are most commonly performed, and they are grouped to
 |Build Dictionary  <br/> |Builds a Dictionary variable of key/value pairs.  <br/> **Note:** The Dictionary uses JSON notation to store data.           For more information on the Dictionary variable, see  [Understanding Dictionary actions in SharePoint Designer 2013](understanding-dictionary-actions-in-sharepoint-designer.md) <br/> |
 |Call HTTP Web Service  <br/> |Functions as a method call to an HTTP web service and returns data using the JSON format. Basic authentication is supported through the RequestHeader.  <br/> For more information on the Dictionary variable, see  [Understanding Dictionary actions in SharePoint Designer 2013](understanding-dictionary-actions-in-sharepoint-designer.md) <br/> |
 |Count Items in a Dictionary  <br/> |Returns a count of the number of items in a specified dictionary.  <br/> |
-|Do Calculation  <br/> |Performs an arithmetic calculation and stores the output value in a variable.  <br/> **Note:** For SharePoint 2013, this action supports only the **Double** numeric type. Integers are not supported. Use of the "+" operator (concatenation) for strings is not supported.          |
+|Do Calculation  <br/> |Performs an arithmetic calculation and stores the output value in a variable.  <br/> **Note:** For SharePoint, this action supports only the **Double** numeric type. Integers are not supported. Use of the "+" operator (concatenation) for strings is not supported.          |
 |Get an Item from a Dictionary  <br/> |Returns a particular item from a dictionary variable.  <br/> |
 |Log to History List  <br/> |Writes a message from a list of predefined message items to the workflow history list.  <br/> |
 |Pause for Duration  <br/> |Causes a workflow to pause executing for a specified time interval, in days, hours, and minutes.  <br/> |
@@ -112,7 +112,7 @@ Project actions support the integration of Microsoft Project. They are used to b
 ### Task actions
 <a name="bkm_TaskActions"> </a>
 
-Task actions provide the ability to invoke a workflow based on the SharePoint 2010 Workflow platform from within a workflow based on the SharePoint 2013 Workflow platform.
+Task actions provide the ability to invoke a workflow based on the SharePoint 2010 Workflow platform from within a workflow based on the SharePoint Workflow platform.
   
     
     
@@ -150,10 +150,10 @@ Utility actions are actions that manipulate strings or find the interval between
 |Trim String  <br/> |Removes white spaces from the beginning and end of a string.  <br/> |
    
 
-## Workflow actions that are deprecated in SharePoint 2013
+## Workflow actions that are deprecated in SharePoint
 <a name="bkm_NotAvailable"> </a>
 
-For a list of actions from SharePoint 2010 that are deprecated and will not appear in SharePoint 2013, see  [Workflow actions available using the workflow interop bridge](workflow-actions-available-using-the-workflow-interop-bridge.md).
+For a list of actions from SharePoint 2010 that are deprecated and will not appear in SharePoint, see  [Workflow actions available using the workflow interop bridge](workflow-actions-available-using-the-workflow-interop-bridge.md).
   
     
     
@@ -162,13 +162,13 @@ For a list of actions from SharePoint 2010 that are deprecated and will not appe
 <a name="bkm_addlresource"> </a>
 
 
--  [Workflow actions and activities reference for SharePoint 2013](workflow-actions-and-activities-reference-for-sharepoint.md)
+-  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint.md)
     
   
--  [SharePoint 2013 workflow fundamentals](sharepoint-workflow-fundamentals.md)
+-  [SharePoint workflow fundamentals](sharepoint-workflow-fundamentals.md)
     
   
--  [Get started with workflows in SharePoint 2013](get-started-with-workflows-in-sharepoint.md)
+-  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint.md)
     
   
 -  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)

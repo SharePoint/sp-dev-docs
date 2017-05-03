@@ -1,12 +1,12 @@
 ---
-title: Overview of the SharePoint 2013 mobile object model
+title: Overview of the SharePoint mobile object model
 ms.prod: SHAREPOINT
 ms.assetid: 72319846-d02d-49e7-b830-48eb8f5715cb
 ---
 
 
-# Overview of the SharePoint 2013 mobile object model
-Learn about the new public classes in the SharePoint 2013 server object model and Silverlight client object model that are used to develop integrated solutions for SharePoint 2013 and Windows Phone 7.5.
+# Overview of the SharePoint mobile object model
+Learn about the new public classes in the SharePoint server object model and Silverlight client object model that are used to develop integrated solutions for SharePoint and Windows Phone 7.5.
 ## Client object model for mobile Silverlight
 <a name="SP15OM_ClientOM"> </a>
 
@@ -776,7 +776,7 @@ No non-derived public properties are introduced with this class. There are stand
     
 
 
-|**Method**|**This override…**|
+|**Method**|**This override???**|
 |:-----|:-----|
 |CreateChildControls  <br/> |Creates the child controls including a JavaScript map control for Display mode.  <br/> |
 |Focus  <br/> |Gives focus to the longitude textbox child control.  <br/> |
@@ -2268,16 +2268,16 @@ public string MessageId
 <a name="SP15MobileOM_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint 2013](build-windows-phone-apps-that-access-sharepoint.md)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
--  [How to: Configure and use push notifications in SharePoint 2013 apps for Windows Phone](how-to-configure-and-use-push-notifications-in-sharepoint-apps-for-windows.md)
+-  [How to: Configure and use push notifications in SharePoint apps for Windows Phone](how-to-configure-and-use-push-notifications-in-sharepoint-apps-for-windows.md)
     
   
--  [Integrating location and map functionality in SharePoint 2013](integrating-location-and-map-functionality-in-sharepoint.md)
+-  [Integrating location and map functionality in SharePoint](integrating-location-and-map-functionality-in-sharepoint.md)
     
   
--  [Overview of the SharePoint 2013 mobile client authentication object model](overview-of-the-sharepoint-mobile-client-authentication-object-model.md)
+-  [Overview of the SharePoint mobile client authentication object model](overview-of-the-sharepoint-mobile-client-authentication-object-model.md)
     
   
 

@@ -1,12 +1,12 @@
 ---
-title: Customizing search results in SharePoint 2013
+title: Customizing search results in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 1b30f6df-643a-4570-ae5c-d3d8df5609b8
 ---
 
 
-# Customizing search results in SharePoint 2013
-Learn how to group similar items or remove duplicate items in a search result set in SharePoint Server 2013 so you can display these results in a concise, readable way.
+# Customizing search results in SharePoint
+Learn how to group similar items or remove duplicate items in a search result set in SharePoint so you can display these results in a concise, readable way.
 In search results, grouping collapses two or more similar items in a search result set to make their display more readable for a user. Duplicate removal of search results is a part of grouping, where items that are identical or nearly identical are removed from the result set. Depending on the settings set by the SharePoint administrator, the user might be able to expand the search result set later and see the individual results that were collapsed.
   
     
@@ -231,7 +231,7 @@ Use **TrimDuplicatesOnProperty** to specify whether to use a non-default managed
     
 
 > **Note:**
-> In SharePoint Server 2013, use **CollapseSpecification** wherever possible. **TrimDuplicatesOnProperty** is available for backward compatibility only.
+> In SharePoint, use **CollapseSpecification** wherever possible. **TrimDuplicatesOnProperty** is available for backward compatibility only.
   
     
     
@@ -274,7 +274,7 @@ The document ID,  _docid_, is used to retrieve the duplicates of a particular do
     
 
 > **Note:**
-> The  _fcoid_ managed property in FAST Search Server 2010 for SharePoint has been replaced with the _docid_ managed property in SharePoint Server 2013.
+> The  _fcoid_ managed property in FAST Search Server 2010 for SharePoint has been replaced with the _docid_ managed property in SharePoint.
   
     
     
@@ -287,7 +287,7 @@ The document ID,  _docid_, is used to retrieve the duplicates of a particular do
 -  [KeywordQuery](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.KeywordQuery.aspx)
     
   
--  [Overview of the search schema in SharePoint 2013](http://technet.microsoft.com/en-us/library/jj219669%28office.15%29.aspx)
+-  [Overview of the search schema in SharePoint](http://technet.microsoft.com/en-us/library/jj219669%28office.15%29.aspx)
     
   
 

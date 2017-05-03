@@ -1,22 +1,22 @@
 ---
-title: Overview of the SharePoint 2013 mobile client authentication object model
+title: Overview of the SharePoint mobile client authentication object model
 ms.prod: SHAREPOINT
 ms.assetid: 00ee657f-a32a-495e-80b4-83ac0f60df44
 ---
 
 
-# Overview of the SharePoint 2013 mobile client authentication object model
-Get an overview of development with the authentication APIs of the SharePoint 2013 client object model for Silverlight.
+# Overview of the SharePoint mobile client authentication object model
+Get an overview of development with the authentication APIs of the SharePoint client object model for Silverlight.
 ## Authentication and client context on a Windows Phone
 <a name="SP15Mobileclientauth_auth"> </a>
 
-The process of authenticating a SharePoint user on a Windows Phone 7.5 is a little different from the same process on a client computer. Client code on a Windows Phone 7.5 first creates an object of the **Authenticator** class or **ODataAuthenticator** class, which were added to the SharePoint 2013client object model for Microsoft Silverlight for Windows Phone. It then uses this object as the user's credentials.
+The process of authenticating a SharePoint user on a Windows Phone 7.5 is a little different from the same process on a client computer. Client code on a Windows Phone 7.5 first creates an object of the **Authenticator** class or **ODataAuthenticator** class, which were added to the SharePointclient object model for Microsoft Silverlight for Windows Phone. It then uses this object as the user's credentials.
   
     
     
 
 > **Note:**
-> For more information about the APIs that are discussed in this section, see  [Overview of the SharePoint 2013 mobile object model](overview-of-the-sharepoint-mobile-object-model.md). For more information about the SharePoint client object model for Silverlight, see  [Managed Client Object Model](http://msdn.microsoft.com/en-us/library/ee537247.aspx) and [Using the Silverlight Object Model](http://msdn.microsoft.com/en-us/library/ee538971.aspx). 
+> For more information about the APIs that are discussed in this section, see  [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model.md). For more information about the SharePoint client object model for Silverlight, see  [Managed Client Object Model](http://msdn.microsoft.com/en-us/library/ee537247.aspx) and [Using the Silverlight Object Model](http://msdn.microsoft.com/en-us/library/ee538971.aspx). 
   
     
     
@@ -304,7 +304,7 @@ ClientContext ctx = new ClientContext("SiteUrl");
 ## Cookie caching
 <a name="SP15Mobileclientauth_cookie"> </a>
 
-The **Authenticator** class also includes members that you can use to enable and manage caching of cookies or credentials or both. For information about these members of the **Authenticator** class and their uses, see [Overview of the SharePoint 2013 mobile object model](overview-of-the-sharepoint-mobile-object-model.md).
+The **Authenticator** class also includes members that you can use to enable and manage caching of cookies or credentials or both. For information about these members of the **Authenticator** class and their uses, see [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model.md).
   
     
     
@@ -313,10 +313,10 @@ The **Authenticator** class also includes members that you can use to enable and
 <a name="SP15Mobileclientauth_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint 2013](build-windows-phone-apps-that-access-sharepoint.md)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
--  [Overview of the SharePoint 2013 mobile object model](overview-of-the-sharepoint-mobile-object-model.md)
+-  [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model.md)
     
   
 

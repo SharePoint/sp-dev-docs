@@ -1,11 +1,11 @@
 ---
-title: Managed navigation in SharePoint 2013
+title: Managed navigation in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: c9da5011-3c73-4b83-8e00-e7a03a71ed02
 ---
 
 
-# Managed navigation in SharePoint 2013
+# Managed navigation in SharePoint
 
   
     
@@ -22,11 +22,11 @@ ms.assetid: c9da5011-3c73-4b83-8e00-e7a03a71ed02
   
     
     
-Learn about the taxonomy-driven managed navigation feature in SharePoint 2013.
+Learn about the taxonomy-driven managed navigation feature in SharePoint.
 ## Introducing managed navigation
 <a name="SP15_ManagedNav_Introducing"> </a>
 
-A well-designed navigation tells your site's users a lot about the business, products, and services that the website offers. By updating the taxonomy behind the navigation, businesses can drive and keep up with change without having to recreate their site navigation in the process. In SharePoint 2013, the managed navigation feature enables you to design site navigation that is driven by managed metadata and create SEO-friendly URLs that are derived from the managed navigation structure. Managed navigation provides an alternative to the traditional SharePoint navigation feature—structured navigation—that is based on the structure of SharePoint. Because managed navigation is driven by taxonomy, you can use it to design site navigation around important business concepts without changing the structure of your sites or site components.
+A well-designed navigation tells your site's users a lot about the business, products, and services that the website offers. By updating the taxonomy behind the navigation, businesses can drive and keep up with change without having to recreate their site navigation in the process. In SharePoint, the managed navigation feature enables you to design site navigation that is driven by managed metadata and create SEO-friendly URLs that are derived from the managed navigation structure. Managed navigation provides an alternative to the traditional SharePoint navigation feature—structured navigation—that is based on the structure of SharePoint. Because managed navigation is driven by taxonomy, you can use it to design site navigation around important business concepts without changing the structure of your sites or site components.
   
     
     
@@ -38,7 +38,7 @@ Managed navigation provides a framework for dynamically generated pages and prov
   
     
     
-Managed navigation APIs are built into the taxonomy and publishing libraries in SharePoint 2013. Managed metadata components like term sets and the term store are used to enable taxonomy-driven navigation for your site. In the .NET server class library, the  [Microsoft.SharePoint.Publishing.Navigation](https://msdn.microsoft.com/library/Microsoft.SharePoint.Publishing.Navigation.aspx) namespace contains term, term set, and other class objects that mirror the **Term** class and **TermSet** class in the [Microsoft.SharePoint.Taxonomy](https://msdn.microsoft.com/library/Microsoft.SharePoint.Taxonomy.aspx) navigation namespace, providing methods and properties specifically designed to associate those metadata items with navigation elements. Other classes, like [TaxonomySiteMapNode](https://msdn.microsoft.com/library/Microsoft.SharePoint.Publishing.Navigation.TaxonomySiteMapNode.aspx) , enable you to provide metadata with various site navigation elements, such as site map nodes and other parts of your site's navigation. Other classes enable caching and context for managed navigation.
+Managed navigation APIs are built into the taxonomy and publishing libraries in SharePoint. Managed metadata components like term sets and the term store are used to enable taxonomy-driven navigation for your site. In the .NET server class library, the  [Microsoft.SharePoint.Publishing.Navigation](https://msdn.microsoft.com/library/Microsoft.SharePoint.Publishing.Navigation.aspx) namespace contains term, term set, and other class objects that mirror the **Term** class and **TermSet** class in the [Microsoft.SharePoint.Taxonomy](https://msdn.microsoft.com/library/Microsoft.SharePoint.Taxonomy.aspx) navigation namespace, providing methods and properties specifically designed to associate those metadata items with navigation elements. Other classes, like [TaxonomySiteMapNode](https://msdn.microsoft.com/library/Microsoft.SharePoint.Publishing.Navigation.TaxonomySiteMapNode.aspx) , enable you to provide metadata with various site navigation elements, such as site map nodes and other parts of your site's navigation. Other classes enable caching and context for managed navigation.
   
     
     
@@ -50,7 +50,7 @@ You can display taxonomy-driven navigation links in the Global Navigation. The G
 ## Friendly URLs and the managed navigation provider
 <a name="SP15_ManagedNav_FriendlyURLs"> </a>
 
-When you browse to a SharePoint 2013 site for the first time, you may notice that the URL format has changed. Instead of an address with a  `/Pages/default.aspx` extension, the page URL ends with only `/`. Managed navigation provides a scheme for friendly URLs that is consistent across site, category, and item pages.
+When you browse to a SharePoint site for the first time, you may notice that the URL format has changed. Instead of an address with a  `/Pages/default.aspx` extension, the page URL ends with only `/`. Managed navigation provides a scheme for friendly URLs that is consistent across site, category, and item pages.
   
     
     
@@ -66,7 +66,7 @@ Any page, including your site's Welcome Page, can have a friendly URL. Depending
 ## Managed Navigation APIs
 <a name="SP15_ManagedNav_ManagedNavAPIs"> </a>
 
-The taxonomy API provides several new methods and properties in SharePoint 2013 that you can use to customize terms, term sets, and other metadata elements in the term store for use in site navigation scenarios. These APIs are available in the .NET client, .NET server, Silverlight, and JavaScript programming models.
+The taxonomy API provides several new methods and properties in SharePoint that you can use to customize terms, term sets, and other metadata elements in the term store for use in site navigation scenarios. These APIs are available in the .NET client, .NET server, Silverlight, and JavaScript programming models.
   
     
     
@@ -250,7 +250,7 @@ using (SPSite site = new SPSite(TestConfig.ServerUrl))
 <a name="SP15_ManagedNav_AdditionalResources"> </a>
 
 
--  [Content Search Web Part in SharePoint 2013](content-search-web-part-in-sharepoint.md)
+-  [Content Search Web Part in SharePoint](content-search-web-part-in-sharepoint.md)
     
   
 

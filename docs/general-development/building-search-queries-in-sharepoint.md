@@ -1,16 +1,16 @@
 ---
-title: Building search queries in SharePoint 2013
+title: Building search queries in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: c4372fcc-4574-4c81-a345-a1bb282ca8f7
 ---
 
 
-# Building search queries in SharePoint 2013
-Learn about the search syntax supported in SharePoint Server 2013 for building query rules and search queries.
-## Supported search syntax in SharePoint Server 2013 for building search queries
+# Building search queries in SharePoint
+Learn about the search syntax supported in SharePoint for building query rules and search queries.
+## Supported search syntax in SharePoint for building search queries
 <a name="SP15Buildquery_support"> </a>
 
-SharePoint Server 2013 search supports Keyword Query Language (KQL) and FAST Query Language (FQL) search syntax for building search queries.
+SharePoint search supports Keyword Query Language (KQL) and FAST Query Language (FQL) search syntax for building search queries.
   
     
     
@@ -41,7 +41,7 @@ To enable FQL, use the **EnableFQL** property. Then, copy the default result sou
 - Replace the Query Transformation string with an FQL equivalent, such as  `{?andnot({searchTerms},filter(contentclass:"urn:content-class:SPSPeople*"))}`.
     
   
-For more information about result sources and how they work, see to:  [Understanding result sources](http://office.microsoft.com/en-us/support/sharepoint/sharepointsearch/understanding-result-sources-HA102848849.aspx) and [Configure result sources for search in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj683115%28v=office.15%29.aspx).
+For more information about result sources and how they work, see to:  [Understanding result sources](http://office.microsoft.com/en-us/support/sharepoint/sharepointsearch/understanding-result-sources-HA102848849.aspx) and [Configure result sources for search in SharePoint](http://technet.microsoft.com/en-us/library/jj683115%28v=office.15%29.aspx).
   
     
     
@@ -56,7 +56,7 @@ For more information about result sources and how they work, see to:  [Understan
 -  [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference.md)
     
   
--  [Using the SharePoint 2013 search Query APIs](using-the-sharepoint-search-query-apis.md)
+-  [Using the SharePoint search Query APIs](using-the-sharepoint-search-query-apis.md)
     
   
 
@@ -64,13 +64,13 @@ For more information about result sources and how they work, see to:  [Understan
 <a name="SP15Buildquery_addlresources"> </a>
 
 
--  [Search in SharePoint 2013](search-in-sharepoint.md)
+-  [Search in SharePoint](search-in-sharepoint.md)
     
   
--  [Overview of query processing in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj219620%28v=office.15%29.aspx)
+-  [Overview of query processing in SharePoint](http://technet.microsoft.com/en-us/library/jj219620%28v=office.15%29.aspx)
     
   
--  [Query variables in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj683123.aspx)
+-  [Query variables in SharePoint](http://technet.microsoft.com/en-us/library/jj683123.aspx)
     
   
 

@@ -1,16 +1,16 @@
 ---
-title: How to Follow people by using the JavaScript object model in SharePoint 2013
+title: How to Follow people by using the JavaScript object model in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 2643c286-47c9-4a7a-9273-7474394477d6
 ---
 
 
-# How to: Follow people by using the JavaScript object model in SharePoint 2013
-Learn how to work with Following People features by using the SharePoint Server 2013 JavaScript object model.
-## Why use Following People features in SharePoint Server 2013?
+# How to: Follow people by using the JavaScript object model in SharePoint
+Learn how to work with Following People features by using the SharePoint JavaScript object model.
+## Why use Following People features in SharePoint?
 <a name="bk_FollowingPeopleFeatures"> </a>
 
-In SharePoint Server 2013, Following People features help users to stay connected with each other. For example, when a user follows someone, that person's posts and activities show up in the user's newsfeed. By using Following People features to focus on the people who users care about, you can improve the relevance of your app or solution. In the JavaScript object model, people that you follow are represented by  [SocialActor](http://msdn.microsoft.com/library/4e369fd5-b9b0-9804-957e-b3e39c559cd4%28Office.15%29.aspx) objects. To perform core Following People tasks in the JavaScript object model, you use the [SocialFollowingManager](http://msdn.microsoft.com/library/9ee1c0c0-b864-f0c3-f0cb-4dd4f1870dfa%28Office.15%29.aspx) object. This article shows how to use the JavaScript object model to work with Following People features.
+In SharePoint, Following People features help users to stay connected with each other. For example, when a user follows someone, that person's posts and activities show up in the user's newsfeed. By using Following People features to focus on the people who users care about, you can improve the relevance of your app or solution. In the JavaScript object model, people that you follow are represented by  [SocialActor](http://msdn.microsoft.com/library/4e369fd5-b9b0-9804-957e-b3e39c559cd4%28Office.15%29.aspx) objects. To perform core Following People tasks in the JavaScript object model, you use the [SocialFollowingManager](http://msdn.microsoft.com/library/9ee1c0c0-b864-f0c3-f0cb-4dd4f1870dfa%28Office.15%29.aspx) object. This article shows how to use the JavaScript object model to work with Following People features.
   
     
     
@@ -21,7 +21,7 @@ In SharePoint Server 2013, Following People features help users to stay connecte
     
 
 
-## Prerequisites for setting up your development environment to work with Following People features by using the SharePoint 2013 JavaScript object model
+## Prerequisites for setting up your development environment to work with Following People features by using the SharePoint JavaScript object model
 <a name="bk_Prereqs"> </a>
 
 To create the farm solution that uses the JavaScript object model to work with Following People features, you'll need:
@@ -29,7 +29,7 @@ To create the farm solution that uses the JavaScript object model to work with F
     
     
 
-- SharePoint Server 2013 with My Site configured, and with user profiles and personal sites created for the current user and a target user
+- SharePoint with My Site configured, and with user profiles and personal sites created for the current user and a target user
     
   
 - Visual Studio 2012
@@ -55,7 +55,7 @@ To create the farm solution that uses the JavaScript object model to work with F
 2. In the **New Project** dialog box, choose **.NET Framework 4.5** from the drop-down list at the top of the dialog box.
     
   
-3. In the **Templates** list, expand **Office/SharePoint**, choose **SharePoint Solutions**, and then choose the **SharePoint 2013 - Empty Project** template.
+3. In the **Templates** list, expand **Office/SharePoint**, choose **SharePoint Solutions**, and then choose the **SharePoint - Empty Project** template.
     
   
 4. Name the project FollowPeopleJSOM, and then choose the **OK** button.
@@ -102,7 +102,7 @@ To create the farm solution that uses the JavaScript object model to work with F
     
   
 
-## Code example: Start or stop following people by using the SharePoint 2013 JavaScript object model
+## Code example: Start or stop following people by using the SharePoint JavaScript object model
 <a name="bk_FollowPeople"> </a>
 
 The following code example makes the current user start following or stop following a target user. It shows how to:
@@ -201,7 +201,7 @@ function requestFailed(sender, args) {
 ```
 
 
-## Code example: Get followers and followed people by using the SharePoint 2013 JavaScript object model
+## Code example: Get followers and followed people by using the SharePoint JavaScript object model
 <a name="bk_GetFollowers"> </a>
 
 The following code example gets the people who the current user is following and gets the people who are followed by the current user. It shows how to:
@@ -293,10 +293,10 @@ function requestFailed(sender, args) {
 <a name="bk_AdditionalResources"> </a>
 
 
--  [Follow people in SharePoint 2013](follow-people-in-sharepoint.md)
+-  [Follow people in SharePoint](follow-people-in-sharepoint.md)
     
   
--  [How to: Follow people by using the .NET client object model in SharePoint 2013](how-to-follow-people-by-using-the-net-client-object-model-in-sharepoint.md)
+-  [How to: Follow people by using the .NET client object model in SharePoint](how-to-follow-people-by-using-the-net-client-object-model-in-sharepoint.md)
     
   
 

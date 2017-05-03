@@ -161,7 +161,7 @@ For expired client secrets, first you must delete all of the expired secrets for
 
  
 
-1. Connect to MSOnline using the tenant admin user with the below markup using SharePoint 2013 Windows PowerShell.
+1. Connect to MSOnline using the tenant admin user with the below markup using SharePoint Windows PowerShell.
     
 ```
   import-module MSOnline

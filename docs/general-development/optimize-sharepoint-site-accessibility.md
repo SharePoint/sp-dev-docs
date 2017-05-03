@@ -41,7 +41,7 @@ Alternative text is required for screen readers to read non-text content on the 
 -  [Build sites for SharePoint](build-sites-for-sharepoint.md)
     
   
--  [Accessibility in SharePoint 2013](accessibility-in-sharepoint.md)
+-  [Accessibility in SharePoint](accessibility-in-sharepoint.md)
     
   
 -  [Microsoft Accessibility](https://www.microsoft.com/enable)

@@ -7,8 +7,8 @@ ms.assetid: bd98a41b-623c-41d4-a15d-26c0d4ba4311
 
 
 # FAST Query Language (FQL) syntax reference
-Learn about constructing complex search queries for Search in SharePoint 2013 using the FAST Query Language (FQL). This reference describes the elements of an FQL query and how to use property specifications, token expressions, and operators in your FQL queries.
-## Introduction to FQL and query language subexpressions and expressions in SharePoint Server 2013
+Learn about constructing complex search queries for Search in SharePoint using the FAST Query Language (FQL). This reference describes the elements of an FQL query and how to use property specifications, token expressions, and operators in your FQL queries.
+## Introduction to FQL and query language subexpressions and expressions in SharePoint
 <a name="SP15FQL_about"> </a>
 
 The FAST Query Language (FQL) is a powerful query language that enables developers to perform exact searches and to narrow the scope of your search to values that belong to a specific managed property or a full-text index.
@@ -356,7 +356,7 @@ Table 4 provides a list of the supported operators.
    
 
 > **Note:**
-> In SharePoint 2013, the **RANK** operator is deprecated and will no longer have any effect. Use **XRANK** instead.
+> In SharePoint, the **RANK** operator is deprecated and will no longer have any effect. Use **XRANK** instead.
   
     
     
@@ -441,7 +441,7 @@ Not applicable.
 
 
 > **Note:**
-> In SharePoint Server 2013, the **ANY** operator is deprecated. Use the **OR** operator instead.
+> In SharePoint, the **ANY** operator is deprecated. Use the **OR** operator instead.
   
     
     
@@ -833,7 +833,7 @@ The **INT** operator can also be used to express a set of integer values as argu
   
     
     
- `int("value, value, … , value")`
+ `int("value, value, ??? , value")`
   
     
     
@@ -1279,7 +1279,7 @@ The **STRING** operator can also be used as a type conversion. The query `string
    
 
 > **Note:**
-> In SharePoint 2013 the  _minexpansion_,  _maxexpansion_ and _annotation_class_ parameters for the **STRING** operator are obsolete.
+> In SharePoint the  _minexpansion_,  _maxexpansion_ and _annotation_class_ parameters for the **STRING** operator are obsolete.
   
     
     
@@ -1456,7 +1456,7 @@ Boosts the dynamic rank of items based on certain term occurrences within the  _
     
 
 > **Note:**
-> In SharePoint Server 2010, the **XRANK** operator had two parameters: _boost_ and _boostall_, as well as the following syntax:  `xrank(operand, rank-operand [, rank-operand]* [,boost=n] [,boostall=yes])`. This syntax along with its parameters is deprecated in SharePoint Server 2013. We recommend the use of the new syntax and parameters instead. 
+> In SharePoint Server 2010, the **XRANK** operator had two parameters: _boost_ and _boostall_, as well as the following syntax:  `xrank(operand, rank-operand [, rank-operand]* [,boost=n] [,boostall=yes])`. This syntax along with its parameters is deprecated in SharePoint. We recommend the use of the new syntax and parameters instead. 
   
     
     
@@ -1568,6 +1568,6 @@ The following advanced parameters are also available. However, typically they ar
 <a name="SP15FQL_addlresources"> </a>
 
 
--  [Building search queries in SharePoint 2013](building-search-queries-in-sharepoint.md)
+-  [Building search queries in SharePoint](building-search-queries-in-sharepoint.md)
     
   

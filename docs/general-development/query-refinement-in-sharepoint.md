@@ -1,13 +1,13 @@
 ---
-title: Query Refinement in SharePoint 2013
+title: Query Refinement in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: ec31782e-1bc5-4dc3-8df7-c29cd5f7f05c
 ---
 
 
 
-# Query Refinement in SharePoint 2013
-Learn how to use SharePoint Server 2013 query refinement features programmatically when you are working with search queries and results.
+# Query Refinement in SharePoint
+Learn how to use SharePoint query refinement features programmatically when you are working with search queries and results.
 You can use query refinement features to provide end users with refinement options that are relevant for their queries. These features let the end user drill down into search results by using refinement data computed for the results. Refinement data is calculated by the index component, based on the aggregation of managed property statistics for all of the results of a search query.
   
     
@@ -174,7 +174,7 @@ Table 3 below contains two rows of refinement data. The first row holds refineme
 
 |**RefinerName**|**RefinementName**|**RefinementValue**|**RefinementToken**|**RefinementCount**|
 |:-----|:-----|:-----|:-----|:-----|
-|FileType  <br/> |Html  <br/> |Html  <br/> |"ǂǂ68746d6c"  <br/> |50553  <br/> |
+|FileType  <br/> |Html  <br/> |Html  <br/> |"????68746d6c"  <br/> |50553  <br/> |
 |Write  <br/> |From 2013-09-21T00:00:00Z up to 2013-09-22T00:00:00Z  <br/> |From 2013-09-21T00:00:00Z up to 2013-09-22T00:00:00Z  <br/> |range(2013-09-21T00:00:00Z, 2013-09-22T00:00:00Z)  <br/> |37  <br/> |
    
 
@@ -200,7 +200,7 @@ You can provide one or more refinement filters for a refined query by adding ref
 
 ### Example 1: Creating a refined query for HTML file types
 
-The following CSOM example shows how to programmatically perform a refinement, to limit the search results to those of HTML file type only. As mentioned in  [Example: Refinement data](#SP15_Example_refinement_data), refinement data related to this refinement option has **RefinerName** set to _Filetype_ and **RefinementToken** set to _"ǂǂ68746d6c"_.
+The following CSOM example shows how to programmatically perform a refinement, to limit the search results to those of HTML file type only. As mentioned in  [Example: Refinement data](#SP15_Example_refinement_data), refinement data related to this refinement option has **RefinerName** set to _Filetype_ and **RefinementToken** set to _"????68746d6c"_.
   
     
     
@@ -214,7 +214,7 @@ using (var context = new ClientContext("http://<serverName>/<siteCollectionPath>
         QueryText = "home"
     };
     
-    query.RefinementFilters.Add("FileType:\\"ǂǂ68746d6c\\"");
+    query.RefinementFilters.Add("FileType:\\"????68746d6c\\"");
     var executor = new SearchExecutor(context);
     var results = executor.ExecuteQuery(query);
 
@@ -321,10 +321,10 @@ query.Refiners);
 <a name="SP15_Query_refinement_addresources"> </a>
 
 
--  [Configure properties of the Refinement Web Part in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/gg549985.aspx)
+-  [Configure properties of the Refinement Web Part in SharePoint](http://technet.microsoft.com/en-us/library/gg549985.aspx)
     
   
--  [Overview of the search schema in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj219669%28office.15%29.aspx)
+-  [Overview of the search schema in SharePoint](http://technet.microsoft.com/en-us/library/jj219669%28office.15%29.aspx)
     
   
 

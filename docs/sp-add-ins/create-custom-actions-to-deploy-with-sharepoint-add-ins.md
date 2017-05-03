@@ -30,7 +30,7 @@ The following table lists useful articles that can help you understand the conce
 |:-----|:-----|
 | [SharePoint Add-ins](sharepoint-add-ins.md)|Learn about the new add-in model in SharePoint that enables you to create add-ins, which are small, easy-to-use solutions for end users.|
 | [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md)|Learn about the user experience (UX) options that you have when you are building SharePoint Add-ins.|
-| [Host webs, add-in webs, and SharePoint components in SharePoint 2013](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md)|Learn about the difference between host webs and add-in webs. Find out which SharePoint components can be included in a SharePoint Add-in, which components are deployed to the host web, which components are deployed to the add-in web, and how the add-in web is deployed in an isolated domain.|
+| [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md)|Learn about the difference between host webs and add-in webs. Find out which SharePoint components can be included in a SharePoint Add-in, which components are deployed to the host web, which components are deployed to the add-in web, and how the add-in web is deployed in an isolated domain.|
 
 ## Code example: Create a custom action in the host web document libraries
 <a name="SP15Createcustomactionsapps_Codeexample"> </a>
@@ -383,7 +383,7 @@ This article demonstrated how to create a custom action in a SharePoint Add-in. 
 -  [SharePoint Add-ins UX design guidelines](sharepoint-add-ins-ux-design-guidelines.md)
     
  
--  [Create UX components in SharePoint 2013](create-ux-components-in-sharepoint-2013.md)
+-  [Create UX components in SharePoint](create-ux-components-in-sharepoint-2013.md)
     
  
 -  [Three ways to think about design options for SharePoint Add-ins](three-ways-to-think-about-design-options-for-sharepoint-add-ins.md)

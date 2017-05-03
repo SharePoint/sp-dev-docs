@@ -26,7 +26,7 @@ Access 2013 features a new application model that is designed to allow users to 
   
     
     
-Access 2013 uses Microsoft SharePoint 2013 to host the front end of your application while it is using SQL Server for data storage. Access 2013, through the Office 365 and SQL Azure services, provides a method to deploy an Access application to the Internet. Sharing an Access 2013 app is as easy as sending the URL of the app to the intended users.
+Access 2013 uses Microsoft SharePoint to host the front end of your application while it is using SQL Server for data storage. Access 2013, through the Office 365 and SQL Azure services, provides a method to deploy an Access application to the Internet. Sharing an Access 2013 app is as easy as sending the URL of the app to the intended users.
   
     
     
@@ -38,7 +38,7 @@ For more information about what's new in Access 2013 apps, see  [What's new in A
 ## Creating an Access 2013 application
 <a name="dk2_DevelopingAccess15WebApps_CreatingAnAccess15App"> </a>
 
-Unlike many of the SharePoint Server 2013application services, Access Services 2013 doesn't expose an API that you can use to develop Access apps in Visual Studio. Access 2013 is the environment that you use to develop Access 2013 apps.
+Unlike many of the SharePointapplication services, Access Services 2013 doesn't expose an API that you can use to develop Access apps in Visual Studio. Access 2013 is the environment that you use to develop Access 2013 apps.
   
     
     

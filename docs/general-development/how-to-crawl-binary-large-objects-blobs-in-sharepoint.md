@@ -1,12 +1,12 @@
 ---
-title: How to Crawl binary large objects (BLOBs) in SharePoint 2013
+title: How to Crawl binary large objects (BLOBs) in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 99b3dd51-1651-4300-a2de-33681f4cc258
 ---
 
 
-# How to: Crawl binary large objects (BLOBs) in SharePoint 2013
-Learn how to modify the BDC model file for a database BCS indexing connector to enable the Search in SharePoint 2013 crawler to crawl binary large object (BLOB) data stored in a SQL Server database.
+# How to: Crawl binary large objects (BLOBs) in SharePoint
+Learn how to modify the BDC model file for a database BCS indexing connector to enable the Search in SharePoint crawler to crawl binary large object (BLOB) data stored in a SQL Server database.
 ## Crawling BLOB data
 <a name="HowToCrawlBlobs_CrawlingBlobData"> </a>
 
@@ -166,7 +166,7 @@ with the following line of code:
 <a name="SP15Crawlblobs_addlresources"> </a>
 
 
--  [Search connector framework in SharePoint 2013](search-connector-framework-in-sharepoint.md)
+-  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint.md)
     
   
 -  [How to: Create External Content Types](http://msdn.microsoft.com/library/811b458c-e209-46df-ba02-8db02bc658db%28Office.15%29.aspx)

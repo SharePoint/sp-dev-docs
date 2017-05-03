@@ -1,13 +1,13 @@
 ---
-title: How to Learn to read and write to the social feed by using the .NET client object model in SharePoint 2013
+title: How to Learn to read and write to the social feed by using the .NET client object model in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 3c15ede5-8a59-47e6-a0b2-c17ec6bf4ae1
 ---
 
 
-# How to: Learn to read and write to the social feed by using the .NET client object model in SharePoint 2013
-Create a console application that reads and writes to the social feed by using the SharePoint 2013 .NET client object model.
-## Prerequisites for creating a console application that reads and writes to the social feed by using the SharePoint 2013 .NET client object model
+# How to: Learn to read and write to the social feed by using the .NET client object model in SharePoint
+Create a console application that reads and writes to the social feed by using the SharePoint .NET client object model.
+## Prerequisites for creating a console application that reads and writes to the social feed by using the SharePoint .NET client object model
 <a name="bkmk_Prereqs"> </a>
 
 The console application that you'll create retrieves a target user's feed and prints the root post from each thread in a numbered list. Then, it publishes a simple text reply to the selected thread. The same method ( [CreatePost](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.CreatePost.aspx) ) is used to publish both posts and replies to the feed.
@@ -19,7 +19,7 @@ To create the console application, you'll need the following:
     
     
 
-- SharePoint Server 2013 with My Site configured, with personal sites created for the current user and a target user, and with a few posts written by the target user
+- SharePoint with My Site configured, with personal sites created for the current user and a target user, and with a few posts written by the target user
     
   
 - Visual Studio 2012
@@ -30,13 +30,13 @@ To create the console application, you'll need the following:
   
 
 > **Note:**
-> If you're not developing on the computer that is running SharePoint Server 2013, get the  [SharePoint Client Components](http://www.microsoft.com/en-us/download/details.aspx?id=35585) download that contains SharePoint 2013 client assemblies.
+> If you're not developing on the computer that is running SharePoint, get the  [SharePoint Client Components](http://www.microsoft.com/en-us/download/details.aspx?id=35585) download that contains SharePoint client assemblies.
   
     
     
 
 
-### Core concepts to know about working with SharePoint 2013 social feeds
+### Core concepts to know about working with SharePoint social feeds
 <a name="bkmk_CoreConcepts"> </a>
 
 Table 1 contains links to articles that describe core concepts you should know before you get started.
@@ -44,13 +44,13 @@ Table 1 contains links to articles that describe core concepts you should know b
     
     
 
-**Table 1. Core concepts for working with SharePoint 2013 social feeds**
+**Table 1. Core concepts for working with SharePoint social feeds**
 
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [Get started developing with social features in SharePoint 2013](get-started-developing-with-social-features-in-sharepoint.md) <br/> |Find out how to get started programming with social feeds and microblog posts, following people and content (documents, sites, and tags), and working with user profiles.  <br/> |
-| [Work with social feeds in SharePoint 2013](work-with-social-feeds-in-sharepoint.md) <br/> |Learn about common programming tasks for working with social feeds and the API that you use to perform the tasks.  <br/> |
+| [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint.md) <br/> |Find out how to get started programming with social feeds and microblog posts, following people and content (documents, sites, and tags), and working with user profiles.  <br/> |
+| [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint.md) <br/> |Learn about common programming tasks for working with social feeds and the API that you use to perform the tasks.  <br/> |
    
 
 ## Create the console application in Visual Studio 2012 and add references to client assemblies
@@ -84,7 +84,7 @@ Table 1 contains links to articles that describe core concepts you should know b
     
      - **Microsoft.SharePoint.Client.UserProfiles**  
 
-   If you are developing on the computer that is running SharePoint Server 2013, the assemblies are in the **Extensions** category. Otherwise, browse to the location that has the client assemblies you downloaded (see [SharePoint Client Components](http://www.microsoft.com/downloads/details.aspx?FamilyID=66da4a3e-e3b0-45d9-9e84-a84946fbf239)).
+   If you are developing on the computer that is running SharePoint, the assemblies are in the **Extensions** category. Otherwise, browse to the location that has the client assemblies you downloaded (see [SharePoint Client Components](http://www.microsoft.com/downloads/details.aspx?FamilyID=66da4a3e-e3b0-45d9-9e84-a84946fbf239)).
     
   
 7. In the Program.cs file, add the following **using** statements.
@@ -95,7 +95,7 @@ using Microsoft.SharePoint.Client.Social;
 ```
 
 
-## Retrieve the social feed for a target user by using the SharePoint 2013 .NET client object model
+## Retrieve the social feed for a target user by using the SharePoint .NET client object model
 <a name="bkmk_RetrieveFeed"> </a>
 
 
@@ -141,7 +141,7 @@ clientContext.ExecuteQuery();
     
   
 
-## Iterate through and read from the social feed by using the SharePoint 2013 .NET client object model
+## Iterate through and read from the social feed by using the SharePoint .NET client object model
 <a name="bkmk_ReadFeed"> </a>
 
 The following code iterates through the threads in the feed. It checks whether each thread has the  [CanReply](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThreadAttributes.CanReply.aspx) attribute and then gets the thread identifier and the text of the root post. The code also creates a dictionary to store the thread identifier (which is used to reply to a thread) and writes the text of the root post to the console.
@@ -161,7 +161,7 @@ for (int i = 0; i < feed.Value.Threads.Length; i++)
 ```
 
 
-## Post a reply to the social feed by using the SharePoint 2013 .NET client object model
+## Post a reply to the social feed by using the SharePoint .NET client object model
 <a name="bkmk_WriteFeed"> </a>
 
 
@@ -202,7 +202,7 @@ Console.ReadKey(false);
     
   
 
-## Code example: Retrieve a feed and reply to a post by using the SharePoint 2013 .NET client object model
+## Code example: Retrieve a feed and reply to a post by using the SharePoint .NET client object model
 <a name="bkmk_CodeExample"> </a>
 
 The following example is the complete code from the Program.cs file.
@@ -291,7 +291,7 @@ To learn how to do more read tasks and write tasks with the social feed by using
     
     
 
--  [How to: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint 2013](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-net-cli.md)
+-  [How to: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-net-cli.md)
     
   
 
@@ -299,10 +299,10 @@ To learn how to do more read tasks and write tasks with the social feed by using
 <a name="SP15ReadWriteSocial_addlresources"> </a>
 
 
--  [Get started developing with social features in SharePoint 2013](get-started-developing-with-social-features-in-sharepoint.md)
+-  [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint.md)
     
   
--  [Work with social feeds in SharePoint 2013](work-with-social-feeds-in-sharepoint.md)
+-  [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint.md)
     
   
 

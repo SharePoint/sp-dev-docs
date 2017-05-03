@@ -1,11 +1,11 @@
 ---
-title: How to Create tabular data source providers for PerformancePoint Services in SharePoint 2013
+title: How to Create tabular data source providers for PerformancePoint Services in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 8d734ed6-7636-40c5-a99b-bc038362cffe
 ---
 
 
-# How to: Create tabular data source providers for PerformancePoint Services in SharePoint 2013
+# How to: Create tabular data source providers for PerformancePoint Services in SharePoint
 Learn how to create the data source provider component in a custom tabular data source extension for PerformancePoint Services.
 ## What are custom data source providers for PerformancePoint Services?
 <a name="bk_intro"> </a>
@@ -18,7 +18,7 @@ The main function of a tabular data source provider is to create and populate a 
   
     
     
-The procedures and code examples in this topic are based on the **WSTabularDataSourceProvider** class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The provider retrieves stock quotes from an external web service for specified stock symbols. It stores historical stock quote data in a cache file, which enables the data to be sliced by time. For the complete code for the class, see  [Code example: Create a data source provider for custom PerformancePoint Services tabular data sources in SharePoint Server 2013](#bk_example).
+The procedures and code examples in this topic are based on the **WSTabularDataSourceProvider** class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The provider retrieves stock quotes from an external web service for specified stock symbols. It stores historical stock quote data in a cache file, which enables the data to be sliced by time. For the complete code for the class, see  [Code example: Create a data source provider for custom PerformancePoint Services tabular data sources in SharePoint](#bk_example).
   
     
     
@@ -97,7 +97,7 @@ We recommend that you use the sample data source provider as a template. The sam
     
   
 
-## Code example: Create a data source provider for custom PerformancePoint Services tabular data sources in SharePoint Server 2013
+## Code example: Create a data source provider for custom PerformancePoint Services tabular data sources in SharePoint
 <a name="bk_example"> </a>
 
 The class in the following code example creates a tabular data source provider that retrieves stock quotes from an external Web service and then transforms the data into a tabular format.
@@ -421,10 +421,10 @@ After you create a data source provider and a data source editor (including its 
 <a name="bk_addResources"> </a>
 
 
--  [How to: Create tabular data source editors for PerformancePoint Services in SharePoint 2013](how-to-create-tabular-data-source-editors-for-performancepoint-services-in-share.md)
+-  [How to: Create tabular data source editors for PerformancePoint Services in SharePoint](how-to-create-tabular-data-source-editors-for-performancepoint-services-in-share.md)
     
   
--  [PerformancePoint Services in SharePoint 2013](performancepoint-services-in-sharepoint.md)
+-  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint.md)
     
   
 

@@ -1,18 +1,18 @@
 ---
-title: Changes in the BDC model schema for SharePoint 2013
+title: Changes in the BDC model schema for SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 882ea867-9acb-4313-99c9-865a523b72fd
 ---
 
 
-# Changes in the BDC model schema for SharePoint 2013
-Learn what has changed in SharePoint 2013 for the BDC model schema.
-The number of changes in the schema (BDCMetadata.xsd) for creating BDC models in SharePoint 2013 is relatively small. But these changes have significant impact on the feature set offerings of Business Connectivity Services (BCS).
+# Changes in the BDC model schema for SharePoint
+Learn what has changed in SharePoint for the BDC model schema.
+The number of changes in the schema (BDCMetadata.xsd) for creating BDC models in SharePoint is relatively small. But these changes have significant impact on the feature set offerings of Business Connectivity Services (BCS).
   
     
     
 
-For more information about the BDCMetadata schema, see  [BDC model schema reference for SharePoint 2013](bdc-model-schema-reference-for-sharepoint.md).
+For more information about the BDCMetadata schema, see  [BDC model schema reference for SharePoint](bdc-model-schema-reference-for-sharepoint.md).
 ## Changes to complex type elements in BDCMetadata.xsd
 <a name="bkmk_ChangesToElements"> </a>
 
@@ -66,19 +66,19 @@ The following table lists the changes to the attributes of each element.
 <a name="bkmk_AdditionalResources"> </a>
 
 
--  [Business Connectivity Services in SharePoint 2013](business-connectivity-services-in-sharepoint.md)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
     
   
--  [What's new in Business Connectivity Services in SharePoint 2013](what-s-new-in-business-connectivity-services-in-sharepoint.md)
+-  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint.md)
     
   
--  [Get started with Business Connectivity Services in SharePoint 2013](get-started-with-business-connectivity-services-in-sharepoint.md)
+-  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint.md)
     
   
--  [Business Connectivity Services programmers reference for SharePoint 2013](business-connectivity-services-programmers-reference-for-sharepoint.md)
+-  [Business Connectivity Services programmers reference for SharePoint](business-connectivity-services-programmers-reference-for-sharepoint.md)
     
   
--  [BDC model schema reference for SharePoint 2013](bdc-model-schema-reference-for-sharepoint.md)
+-  [BDC model schema reference for SharePoint](bdc-model-schema-reference-for-sharepoint.md)
     
   
 

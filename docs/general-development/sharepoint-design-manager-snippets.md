@@ -1,11 +1,11 @@
 ---
-title: SharePoint 2013 Design Manager snippets
+title: SharePoint Design Manager snippets
 ms.prod: SHAREPOINT
 ms.assetid: 68caef4c-5941-4a88-b34b-f88122801cef
 ---
 
 
-# SharePoint 2013 Design Manager snippets
+# SharePoint Design Manager snippets
 A snippet is an HTML representation of a SharePoint component or control such as a navigation bar or a Web Part. By using the Snippet Gallery in Design Manager, you can quickly add SharePoint functionality to your HTML master page or page layout.
 ## Introduction to snippets and the Snippet Gallery
 <a name="Introduction"> </a>
@@ -404,16 +404,16 @@ Here is a breakdown of the types of markup that are included in a snippet.
 <a name="Resources"> </a>
 
 
--  [How to: Convert an HTML file into a master page in SharePoint 2013](how-to-convert-an-html-file-into-a-master-page-in-sharepoint.md)
+-  [How to: Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint.md)
     
   
--  [How to: Create a page layout in SharePoint 2013](how-to-create-a-page-layout-in-sharepoint.md)
+-  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md)
     
   
--  [How to: Add an Edit Mode Panel snippet in SharePoint 2013](how-to-add-an-edit-mode-panel-snippet-in-sharepoint.md)
+-  [How to: Add an Edit Mode Panel snippet in SharePoint](how-to-add-an-edit-mode-panel-snippet-in-sharepoint.md)
     
   
--  [How to: Add a Security Trim snippet in SharePoint 2013](how-to-add-a-security-trim-snippet-in-sharepoint.md)
+-  [How to: Add a Security Trim snippet in SharePoint](how-to-add-a-security-trim-snippet-in-sharepoint.md)
     
   
 

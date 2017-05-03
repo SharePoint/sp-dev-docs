@@ -1,11 +1,11 @@
 ---
-title: How to Create report editors for PerformancePoint Services in SharePoint 2013
+title: How to Create report editors for PerformancePoint Services in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: b42b4452-90f8-464c-828f-d3abac40670c
 ---
 
 
-# How to: Create report editors for PerformancePoint Services in SharePoint 2013
+# How to: Create report editors for PerformancePoint Services in SharePoint
 Learn how to create the editor component of a custom report extension for PerformancePoint Services.
 ## What are custom report editors for PerformancePoint Services?
 <a name="bi_intro"> </a>
@@ -14,7 +14,7 @@ In PerformancePoint Services, custom report editors enable users to set properti
   
     
     
-The following procedures and examples are based on the **SampleReportViewEditor** class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The editor is a thin web application that enables users to modify the report's name and description. For the complete code for the class, see  [Code example: Create, retrieve, and update custom PerformancePoint Services reports in SharePoint Server 2013](#bk_example).
+The following procedures and examples are based on the **SampleReportViewEditor** class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The editor is a thin web application that enables users to modify the report's name and description. For the complete code for the class, see  [Code example: Create, retrieve, and update custom PerformancePoint Services reports in SharePoint](#bk_example).
   
     
     
@@ -73,7 +73,7 @@ We recommend that you use the sample editor as a template. The sample shows how 
   
 
     > **Note:**
-      > The sample report obtains data from a filter, so it does not use **DataSourceConsumerHelper** or **IDataSourceConsumer** objects. However, if your report obtains data from a PerformancePoint Services data source, you can use the methods that are exposed by the **DataSourceConsumerHelper** class to retrieve data sources as described in [How to: Create filter editors for PerformancePoint Services in SharePoint 2013](how-to-create-filter-editors-for-performancepoint-services-in-sharepoint.md). 
+      > The sample report obtains data from a filter, so it does not use **DataSourceConsumerHelper** or **IDataSourceConsumer** objects. However, if your report obtains data from a PerformancePoint Services data source, you can use the methods that are exposed by the **DataSourceConsumerHelper** class to retrieve data sources as described in [How to: Create filter editors for PerformancePoint Services in SharePoint](how-to-create-filter-editors-for-performancepoint-services-in-sharepoint.md). 
 5. In your editor class, add **using** directives for the following PerformancePoint Services namespaces:
     
   - **Microsoft.PerformancePoint.Scorecards**
@@ -202,7 +202,7 @@ if (0 == reportview.EndPoints.Count)
     > **Note:**
       > Users can edit a custom object's  [Name](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Name.aspx) , [Description](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Description.aspx) , and [Owner](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Owner.aspx) ( **Person Responsible**) properties and delete custom objects directly from Dashboard Designer and the PerformancePoint Services repository. 
 
-## Code example: Create, retrieve, and update custom PerformancePoint Services reports in SharePoint Server 2013
+## Code example: Create, retrieve, and update custom PerformancePoint Services reports in SharePoint
 <a name="bk_example"> </a>
 
 The following code example creates, retrieves, and updates custom reports. This code is from the editor's code-behind class, which provides the programming logic for controls that are defined in an ASPX page.
@@ -475,10 +475,10 @@ After you create a report editor (including its user interface, if required) and
 <a name="bk_addResources"> </a>
 
 
--  [How to: Create report renderers for PerformancePoint Services in SharePoint 2013](how-to-create-report-renderers-for-performancepoint-services-in-sharepoint.md)
+-  [How to: Create report renderers for PerformancePoint Services in SharePoint](how-to-create-report-renderers-for-performancepoint-services-in-sharepoint.md)
     
   
--  [PerformancePoint Services in SharePoint 2013](performancepoint-services-in-sharepoint.md)
+-  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint.md)
     
   
 

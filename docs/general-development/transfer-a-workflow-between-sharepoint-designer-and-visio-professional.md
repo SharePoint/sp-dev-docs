@@ -53,7 +53,7 @@ You can visualize workflows in SharePoint Designer in two ways:
     
     
 
-- If Visio Services is installed on the server that is running SharePoint 2013, you can create a workflow visualization on the workflow status page that displays progress and assignments.
+- If Visio Services is installed on the server that is running SharePoint, you can create a workflow visualization on the workflow status page that displays progress and assignments.
     
   
 - You can export the workflow to Visio to create a workflow drawing that can be used for feedback and approval.
@@ -159,10 +159,10 @@ To export a workflow, do the following:
 <a name="bk_addresources"> </a>
 
 
--  [What's new in workflows for SharePoint 2013](what-s-new-in-workflows-for-sharepoint.md)
+-  [What's new in workflows for SharePoint](what-s-new-in-workflows-for-sharepoint.md)
     
   
--  [Get started with workflows in SharePoint 2013](get-started-with-workflows-in-sharepoint.md)
+-  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint.md)
     
   
 -  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)

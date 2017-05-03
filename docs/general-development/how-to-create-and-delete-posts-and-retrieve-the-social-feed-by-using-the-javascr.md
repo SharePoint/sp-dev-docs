@@ -1,25 +1,25 @@
 ---
-title: How to Create and delete posts and retrieve the social feed by using the JavaScript object model in SharePoint 2013
+title: How to Create and delete posts and retrieve the social feed by using the JavaScript object model in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: e8c21960-6ea0-43c0-821e-2db2a0ecec90
 ---
 
 
-# How to: Create and delete posts and retrieve the social feed by using the JavaScript object model in SharePoint 2013
-Learn how to create and delete microblog posts and retrieve social feeds by using the SharePoint 2013 JavaScript object model.
-## What are social feeds in SharePoint Server 2013?
+# How to: Create and delete posts and retrieve the social feed by using the JavaScript object model in SharePoint
+Learn how to create and delete microblog posts and retrieve social feeds by using the SharePoint JavaScript object model.
+## What are social feeds in SharePoint?
 <a name="bk_intro"> </a>
 
-In SharePoint Server 2013, a social feed is a collection of threads that represent conversations, single microblog posts, or notifications. Threads contain a root post and a collection of reply posts. In the JavaScript object model, feeds are represented by  [SocialFeed](http://msdn.microsoft.com/library/356c5475-2fd6-a655-c271-5d7f21af45e2%28Office.15%29.aspx) objects, threads are represented by [SocialThread](http://msdn.microsoft.com/library/46aa4beb-d708-f20e-471e-626c8a7efab7%28Office.15%29.aspx) objects, and post and replies are represented by [SocialPost](http://msdn.microsoft.com/library/a761ce71-d3d7-420a-1e06-962674124dfa%28Office.15%29.aspx) objects. To perform core feed-related tasks, you use the [SocialFeedManager](http://msdn.microsoft.com/library/651fdf0f-841d-88f9-1e07-fcb3ad8c9410%28Office.15%29.aspx) object. In this article, we'll show you how to create an application page that uses the JavaScript object model to work with social feeds.
+In SharePoint, a social feed is a collection of threads that represent conversations, single microblog posts, or notifications. Threads contain a root post and a collection of reply posts. In the JavaScript object model, feeds are represented by  [SocialFeed](http://msdn.microsoft.com/library/356c5475-2fd6-a655-c271-5d7f21af45e2%28Office.15%29.aspx) objects, threads are represented by [SocialThread](http://msdn.microsoft.com/library/46aa4beb-d708-f20e-471e-626c8a7efab7%28Office.15%29.aspx) objects, and post and replies are represented by [SocialPost](http://msdn.microsoft.com/library/a761ce71-d3d7-420a-1e06-962674124dfa%28Office.15%29.aspx) objects. To perform core feed-related tasks, you use the [SocialFeedManager](http://msdn.microsoft.com/library/651fdf0f-841d-88f9-1e07-fcb3ad8c9410%28Office.15%29.aspx) object. In this article, we'll show you how to create an application page that uses the JavaScript object model to work with social feeds.
   
     
     
-For more information about working with  [SocialFeedManager](http://msdn.microsoft.com/library/651fdf0f-841d-88f9-1e07-fcb3ad8c9410%28Office.15%29.aspx) or for information about using other APIs to work with social feeds, see [Work with social feeds in SharePoint 2013](work-with-social-feeds-in-sharepoint.md).
+For more information about working with  [SocialFeedManager](http://msdn.microsoft.com/library/651fdf0f-841d-88f9-1e07-fcb3ad8c9410%28Office.15%29.aspx) or for information about using other APIs to work with social feeds, see [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint.md).
   
     
     
 
-## Prerequisites for setting up your development environment to work with social feeds in the SharePoint 2013 JavaScript object model
+## Prerequisites for setting up your development environment to work with social feeds in the SharePoint JavaScript object model
 <a name="bkmk_SetUpDevEnv"> </a>
 
 To create an application page that uses the JavaScript object model to work with social feeds, you'll need:
@@ -27,7 +27,7 @@ To create an application page that uses the JavaScript object model to work with
     
     
 
-- SharePoint Server 2013 with My Site configured as public, with personal sites created for the current user and a target user, with the current user following the target user, and with a few posts written by the target user
+- SharePoint with My Site configured as public, with personal sites created for the current user and a target user, with the current user following the target user, and with a few posts written by the target user
     
   
 - Visual Studio 2012 or Visual Studio 2013 with Office Developer Tools for Visual Studio 2013
@@ -40,7 +40,7 @@ To create an application page that uses the JavaScript object model to work with
     
   
 
-## Create an application page that works with social feeds by using the SharePoint 2013 JavaScript object model
+## Create an application page that works with social feeds by using the SharePoint JavaScript object model
 <a name="bk_CreateApp"> </a>
 
 
@@ -50,7 +50,7 @@ To create an application page that uses the JavaScript object model to work with
 2. In the **New Project** dialog box, choose **.NET Framework 4.5** from the drop-down list at the top of the dialog box.
     
   
-3. In the **Templates** list, expand **Office SharePoint**, choose the **SharePoint Solutions** category, and then choose the **SharePoint 2013 Project** template.
+3. In the **Templates** list, expand **Office SharePoint**, choose the **SharePoint Solutions** category, and then choose the **SharePoint Project** template.
     
   
 4. Name the project SocialFeedJSOM, and then choose the **OK** button.
@@ -103,7 +103,7 @@ To create an application page that uses the JavaScript object model to work with
     
   
 
-## Code example: Publish posts and replies to the social feed by using the SharePoint 2013 JavaScript object model
+## Code example: Publish posts and replies to the social feed by using the SharePoint JavaScript object model
 <a name="bkmk_PubPosts"> </a>
 
 The following code example publishes a post and a reply. It shows how to:
@@ -178,7 +178,7 @@ function PostFailed(sender, args) {
 ```
 
 
-## Code example: Retrieve social feeds by using the SharePoint 2013 JavaScript object model
+## Code example: Retrieve social feeds by using the SharePoint JavaScript object model
 <a name="bkmk_GetFeeds"> </a>
 
 The following code example retrieves feeds for the current user and a target user. It shows how to:
@@ -195,7 +195,7 @@ The following code example retrieves feeds for the current user and a target use
 - Iterate through the feeds to find all non-reference threads and to get information about threads and posts. Reference threads represent notifications that contain information about another thread. For example, if a user mentions someone in a post, the server generates a **MentionReference**-type thread that contains the link to the original post and other metadata about the post.
     
   
-For more information about feed types, see  [Overview of feed types in the My Site Social API](work-with-social-feeds-in-sharepoint.md#bkmk_FeedTypes). For more information about reference threads, see  [Reference threads and digest threads in SharePoint Server 2013 social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md).
+For more information about feed types, see  [Overview of feed types in the My Site Social API](work-with-social-feeds-in-sharepoint.md#bkmk_FeedTypes). For more information about reference threads, see  [Reference threads and digest threads in SharePoint social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md).
   
     
     
@@ -314,7 +314,7 @@ function RequestFailed(sender, args) {
 ```
 
 
-## Code example: Delete posts and replies from the social feed by using the SharePoint 2013 JavaScript object model
+## Code example: Delete posts and replies from the social feed by using the SharePoint JavaScript object model
 <a name="bkmk_DeletePosts"> </a>
 
 The following code example deletes a post or a reply. It shows how to:
@@ -425,19 +425,19 @@ function RequestFailed(sender, args) {
 <a name="bk_addResources"> </a>
 
 
--  [Work with social feeds in SharePoint 2013](work-with-social-feeds-in-sharepoint.md)
+-  [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint.md)
     
   
 -  [SP.Social namespace (sp.userprofiles)](http://msdn.microsoft.com/library/43d47f01-c085-0e77-bd01-48bcb7d5bb35%28Office.15%29.aspx)
     
   
--  [How to: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint 2013](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-net-cli.md)
+-  [How to: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-net-cli.md)
     
   
--  [How to: Learn to read and write to the social feed by using the REST service in SharePoint 2013](how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-rest-service-in-s.md)
+-  [How to: Learn to read and write to the social feed by using the REST service in SharePoint](how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-rest-service-in-s.md)
     
   
--  [Reference threads and digest threads in SharePoint Server 2013 social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md)
+-  [Reference threads and digest threads in SharePoint social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md)
     
   
 

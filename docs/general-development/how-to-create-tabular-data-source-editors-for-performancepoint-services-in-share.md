@@ -1,11 +1,11 @@
 ---
-title: How to Create tabular data source editors for PerformancePoint Services in SharePoint 2013
+title: How to Create tabular data source editors for PerformancePoint Services in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 3136420a-f8a2-4677-8b69-1d5d9705d96f
 ---
 
 
-# How to: Create tabular data source editors for PerformancePoint Services in SharePoint 2013
+# How to: Create tabular data source editors for PerformancePoint Services in SharePoint
 Learn how to create the editor component of a custom tabular data source extension for PerformancePoint Services.
 ## What are custom data source editors for PerformancePoint Services?
 <a name="bk_intro"> </a>
@@ -115,7 +115,7 @@ DataSourceRepositoryHelper = new DataSourceRepositoryHelper();
   - To create the custom data source, use the **DataSource()** constructor and then define the data source's [Name](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Name.aspx) and [SubTypeId](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSource.SubTypeId.aspx) properties. [SubTypeId](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSource.SubTypeId.aspx) is the unique identifier for the data source, and it must match the **subType** attribute that you specify for your custom data source in the PerformancePoint Services web.config file.
     
     > **Note:**
-      > The sample data source editor does not include logic to create a data source object. For examples of creating a custom object, see  [How to: Create report editors for PerformancePoint Services in SharePoint 2013](how-to-create-report-editors-for-performancepoint-services-in-sharepoint.md) or [How to: Create filter editors for PerformancePoint Services in SharePoint 2013](how-to-create-filter-editors-for-performancepoint-services-in-sharepoint.md). 
+      > The sample data source editor does not include logic to create a data source object. For examples of creating a custom object, see  [How to: Create report editors for PerformancePoint Services in SharePoint](how-to-create-report-editors-for-performancepoint-services-in-sharepoint.md) or [How to: Create filter editors for PerformancePoint Services in SharePoint](how-to-create-filter-editors-for-performancepoint-services-in-sharepoint.md). 
 
 ```cs
   if (ClickOnceLaunchValues.OpenItem.Equals(action, StringComparison.OrdinalIgnoreCase))
@@ -150,7 +150,7 @@ else
     
   
 
-## Code example: Retrieve and update custom PerformancePoint Services tabular data sources in SharePoint Server 2013
+## Code example: Retrieve and update custom PerformancePoint Services tabular data sources in SharePoint
 <a name="bk_example"> </a>
 
 The following code example retrieves and updates custom tabular data sources. This code is from the editor's code-behind class, which provides the programming logic for controls that are defined in an ASPX page.
@@ -438,10 +438,10 @@ After you create a data source editor (including its user interface, if required
 <a name="bk_next"> </a>
 
 
--  [How to: Create tabular data source providers for PerformancePoint Services in SharePoint 2013](how-to-create-tabular-data-source-providers-for-performancepoint-services-in-sha.md)
+-  [How to: Create tabular data source providers for PerformancePoint Services in SharePoint](how-to-create-tabular-data-source-providers-for-performancepoint-services-in-sha.md)
     
   
--  [PerformancePoint Services in SharePoint 2013](performancepoint-services-in-sharepoint.md)
+-  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint.md)
     
   
 

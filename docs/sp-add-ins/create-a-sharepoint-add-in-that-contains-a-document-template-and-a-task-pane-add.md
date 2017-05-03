@@ -8,7 +8,7 @@ Use Visual Studio to develop an Office Add-in that appears in a document that is
 You can create a SharePoint Add-in that includes a document template (for example, an expense report). The document can include a task pane add-in that interacts with SharePoint data. For example, users can populate fields of an invoice by using data from the Business Connectivity Services (BCS) or create an expense report by selecting an expense category from a SharePoint list.
  
 
-This walkthrough shows you how to create a SharePoint Add-in that includes an Excel workbook. The Excel workbook contains a task pane add-in that uses the REST interface provided by SharePoint 2013 to populate a drop-down list box with SharePoint date in the task pane add-in.
+This walkthrough shows you how to create a SharePoint Add-in that includes an Excel workbook. The Excel workbook contains a task pane add-in that uses the REST interface provided by SharePoint to populate a drop-down list box with SharePoint date in the task pane add-in.
  
 
 
@@ -65,7 +65,7 @@ Install the following components before you get started:
 6. In the  **How do you want to host your SharePoint Add-in?** drop-down list, choose **SharePoint-hosted** and then choose **Next**.
     
      **Note**  This scenario works only with the SharePoint-hosted and provider-hosted options presented in the  **How do you want to host your SharePoint Add-in?** drop-down list.
-7. On the next page, select  **SharePoint 2013** and then choose the **Finish** button to close the dialog box.
+7. On the next page, select  **SharePoint** and then choose the **Finish** button to close the dialog box.
     
  
 
@@ -151,7 +151,7 @@ In this procedure, you will add a document library and make the workbook the def
 ## Consume SharePoint data in the task pane
 <a name="Consume"> </a>
 
-In this procedure, you'll show a list of site users by using the REST interface provided by SharePoint 2013.
+In this procedure, you'll show a list of site users by using the REST interface provided by SharePoint.
  
 
  
@@ -160,10 +160,10 @@ In this example, the SharePoint list data is only displayed, but you might use t
 
  
 
--  [Complete basic operations using SharePoint 2013 REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md)
+-  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md)
     
  
--  [Complete basic operations using JavaScript library code in SharePoint 2013](complete-basic-operations-using-javascript-library-code-in-sharepoint-2013.md)
+-  [Complete basic operations using JavaScript library code in SharePoint](complete-basic-operations-using-javascript-library-code-in-sharepoint-2013.md)
     
  
 -  [Persisting add-in state and settings](http://msdn.microsoft.com/library/407df6e8-c237-4d6a-b357-3000fe3de9ff%28Office.15%29.aspx)
@@ -213,7 +213,7 @@ In this example, the SharePoint list data is only displayed, but you might use t
 
 6. Add the following code to the bottom of the Home.js file.
     
-    This code obtains a list of website users by using the REST interface provided by SharePoint 2013. Then, this code populates a drop-down list with the name and ID of each user.
+    This code obtains a list of website users by using the REST interface provided by SharePoint. Then, this code populates a drop-down list with the name and ID of each user.
     
 
 

@@ -66,7 +66,7 @@ To host the newsfeed, you'll need a SharePoint Developer site on Office 365, whi
 -  [Develop cloud business add-ins](develop-cloud-business-add-ins.md)
     
  
--  [Social and collaboration features in SharePoint 2013](http://msdn.microsoft.com/en-us/library/office/jj163280.aspx)
+-  [Social and collaboration features in SharePoint](http://msdn.microsoft.com/en-us/library/office/jj163280.aspx)
     
  
 -  [Create a cloud business add-in with a social newsfeed](create-a-cloud-business-add-in-with-a-social-newsfeed.md)

@@ -1,12 +1,12 @@
 ---
-title: Color palettes and fonts in SharePoint 2013
+title: Color palettes and fonts in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: c17d375b-151f-48ae-ac32-f2ce9e68d63f
 ---
 
 
-# Color palettes and fonts in SharePoint 2013
-Use this reference to define the color palette or font scheme that is used in a SharePoint 2013 site.
+# Color palettes and fonts in SharePoint
+Use this reference to define the color palette or font scheme that is used in a SharePoint site.
 ## Color palettes
 <a name="color"> </a>
 
@@ -17,7 +17,7 @@ A color palette is the combination of colors that are used in a SharePoint site.
 
 - **Color palette file (.spcolor)**
     
-    Color palette files are used in the **Change the look** wizard, which enables users to change the look and feel of their site by using the SharePoint themes user interface. By default, 32 color palette files are installed with SharePoint 2013. You can also create additional color palette files. The following example shows the format of a color palette file.
+    Color palette files are used in the **Change the look** wizard, which enables users to change the look and feel of their site by using the SharePoint themes user interface. By default, 32 color palette files are installed with SharePoint. You can also create additional color palette files. The following example shows the format of a color palette file.
     
 
 ```xml  
@@ -73,7 +73,7 @@ A color palette is the combination of colors that are used in a SharePoint site.
 ```
 
 
-  For more information, see  [How to: Create a master page preview file in SharePoint 2013](how-to-create-a-master-page-preview-file-in-sharepoint.md)
+  For more information, see  [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint.md)
     
   
 
@@ -198,7 +198,7 @@ Table 1 describes the color slots that are available and where color slots are u
 ## Font schemes
 <a name="font"> </a>
 
-Fonts are defined in the font scheme (.spfont file) and the master page preview (.preview file) for a given SharePoint site. The font scheme defines the fonts that are used in four areas: title, navigation, heading, and body. Seven font schemes are included in SharePoint 2013. You can create additional font schemes. The font scheme files are located in the **15** subfolder of the Theme Gallery of the root site of the site collection (http:// _SiteCollectionName_/_catalogs/theme/15/). To access the Theme Gallery from the SharePoint user interface, on the **Site Settings** page, under **Web Designer Galleries**, select **Themes**, and then select **15**.
+Fonts are defined in the font scheme (.spfont file) and the master page preview (.preview file) for a given SharePoint site. The font scheme defines the fonts that are used in four areas: title, navigation, heading, and body. Seven font schemes are included in SharePoint. You can create additional font schemes. The font scheme files are located in the **15** subfolder of the Theme Gallery of the root site of the site collection (http:// _SiteCollectionName_/_catalogs/theme/15/). To access the Theme Gallery from the SharePoint user interface, on the **Site Settings** page, under **Web Designer Galleries**, select **Themes**, and then select **15**.
   
     
     
@@ -303,10 +303,10 @@ The following example shows a portion of an .spfont file.
             <s:font script="Tibt" typeface="Cordia New" />
             <s:font script="Yiii" typeface="Microsoft Yi Baiti" />
         </s:fontSlot>
-…
+???
 ```
 
-SharePoint 2013 includes support for web fonts. You must provide additional information to use web fonts in your font scheme. For more information, see the  [Web fonts](#webFont) section in this article.
+SharePoint includes support for web fonts. You must provide additional information to use web fonts in your font scheme. For more information, see the  [Web fonts](#webFont) section in this article.
   
     
     
@@ -323,7 +323,7 @@ Web-safe fonts are a set of fonts that are widely used and available on most dev
 
 <s:fontSlot name="title">
   <s:latin typeface="Georgia"/>
-…
+???
 </s:fontSlot>
 ```
 
@@ -407,22 +407,22 @@ Table 1 describes the available font slots and where they are used in a page.
 <a name="bk_addresources"> </a>
 
 
--  [Themes overview for SharePoint 2013](themes-overview-for-sharepoint.md)
+-  [Themes overview for SharePoint](themes-overview-for-sharepoint.md)
     
   
--  [How to: Deploy a custom theme in SharePoint 2013](how-to-deploy-a-custom-theme-in-sharepoint.md)
+-  [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint.md)
     
   
--  [Upgrade custom themes and CSS to SharePoint 2013](upgrade-custom-themes-and-css-to-sharepoint.md)
+-  [Upgrade custom themes and CSS to SharePoint](upgrade-custom-themes-and-css-to-sharepoint.md)
     
   
--  [How to: Create a master page preview file in SharePoint 2013](how-to-create-a-master-page-preview-file-in-sharepoint.md)
+-  [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint.md)
     
   
 -  [SharePoint Team Blog: Show off your style with SharePoint theming](http://blogs.office.com/b/sharepoint/archive/2012/10/29/show-off-your-style-with-sharepoint-theming.aspx)
     
   
--  [SharePoint 2013 Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md)
+-  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md)
     
   
 

@@ -1,13 +1,13 @@
 ---
-title: Cross-site publishing in SharePoint 2013
+title: Cross-site publishing in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 33f49e69-c1d3-4a6e-8887-5df683cba022
 ---
 
 
-# Cross-site publishing in SharePoint 2013
+# Cross-site publishing in SharePoint
 
-SharePoint 2013 introduces a cross-site publishing feature that enables you to reuse content across multiple site collections. It uses built-in search capabilities to enable publishing scenarios and architectures. For the first time, you can design sites that cross SharePoint farms—enabling your sites to span the boundary between intranets and the Internet.
+SharePoint introduces a cross-site publishing feature that enables you to reuse content across multiple site collections. It uses built-in search capabilities to enable publishing scenarios and architectures. For the first time, you can design sites that cross SharePoint farms—enabling your sites to span the boundary between intranets and the Internet.
   
     
     
@@ -32,7 +32,7 @@ Cross-site publishing was designed with some common scenarios in mind, including
 ## Catalogs
 <a name="SP15_CrossSitePublising_Catalog"> </a>
 
-Catalogs, introduced in SharePoint 2013, include a list or library that is shared out to search for consumption on publishing sites. Catalogs enable content to be published across site collections—the cross-site publishing features depend on catalogs. You can use catalogs to really reuse content across your sites and across the boundary between your intranet sites, extranet sites, and Internet sites. For predefined search queries, catalogs are flagged in search. You can surface content stored in catalogs across site collections by using the  [Content Search Web Part in SharePoint 2013](content-search-web-part-in-sharepoint.md).
+Catalogs, introduced in SharePoint, include a list or library that is shared out to search for consumption on publishing sites. Catalogs enable content to be published across site collections—the cross-site publishing features depend on catalogs. You can use catalogs to really reuse content across your sites and across the boundary between your intranet sites, extranet sites, and Internet sites. For predefined search queries, catalogs are flagged in search. You can surface content stored in catalogs across site collections by using the  [Content Search Web Part in SharePoint](content-search-web-part-in-sharepoint.md).
   
     
     
@@ -60,7 +60,7 @@ There are some cases where cross-site publishing is not efficient or appropriate
 ## How can I set up a catalog?
 <a name="SP15_CrossSitePublising_WhenShouldIUseCrossSitePublishing"> </a>
 
-Category pages and catalog item pages are page layouts that you can use to show structured catalog content consistently across a site. SharePoint 2013 enables you to create and customize page layouts for SharePoint Server 2013 and above. For more information, see  [Customize page layouts for a catalog-based site in SharePoint 2013](https://msdn.microsoft.com/en-us/library/office/dn144674.aspx 
+Category pages and catalog item pages are page layouts that you can use to show structured catalog content consistently across a site. SharePoint enables you to create and customize page layouts for SharePoint and above. For more information, see  [Customize page layouts for a catalog-based site in SharePoint](https://msdn.microsoft.com/en-us/library/office/dn144674.aspx 
 ).
   
     
@@ -69,7 +69,7 @@ Category pages and catalog item pages are page layouts that you can use to show 
 ## Cross-site publishing APIs
 <a name="SP15_CrossSitePublising_CrossSitePublishingAPIs"> </a>
 
-SharePoint 2013 introduces classes that you can use to support cross-site publishing implementation in your code. These APIs are available in the .NET server publishing library. Use them to customize how SharePoint 2013 shares lists as catalogs for content reuse or consumes a catalog from search. You can use the members of the following classes in custom code to support cross-site publishing tasks:
+SharePoint introduces classes that you can use to support cross-site publishing implementation in your code. These APIs are available in the .NET server publishing library. Use them to customize how SharePoint shares lists as catalogs for content reuse or consumes a catalog from search. You can use the members of the following classes in custom code to support cross-site publishing tasks:
   
     
     
@@ -184,7 +184,7 @@ public CatalogConnectionSettings GetCatalogConnectionSettings(string catalogPath
 <a name="bk_addresources"> </a>
 
 
--  [Publish SharePoint 2013 sites](publish-sharepoint-sites.md)
+-  [Publish SharePoint sites](publish-sharepoint-sites.md)
     
   
 

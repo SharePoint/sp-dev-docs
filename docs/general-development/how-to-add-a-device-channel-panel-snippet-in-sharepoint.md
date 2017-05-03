@@ -1,11 +1,11 @@
 ---
-title: How to Add a Device Channel Panel snippet in SharePoint 2013
+title: How to Add a Device Channel Panel snippet in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 612780a8-6267-49f6-a32d-33600bb5f6b4
 ---
 
 
-# How to: Add a Device Channel Panel snippet in SharePoint 2013
+# How to: Add a Device Channel Panel snippet in SharePoint
 A Device Channel Panel is a snippet that you can add to a master page or page layout to control what content is rendered for each channel that you create. The primary purpose of a Device Channel Panel is to selectively display different page fields on different channels from a single page layout.
 ## Introduction to the Device Channel Panel snippet
 <a name="Introduction"> </a>
@@ -77,7 +77,7 @@ Like all snippets, you add a Device Channel Panel snippet from the Snippet Galle
   
 10. In your HTML editor, open the mapped network drive on your computer, and then open the HTML file for the master page or page layout that you're adding the snippet to.
     
-    For more information, see  [How to: Map a network drive to the SharePoint 2013 Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md).
+    For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md).
     
   
 11. In the HTML file, paste the snippet where you want the markup to appear.
@@ -139,16 +139,16 @@ The **<div>** where `class="DefaultContentBlock"` should be replaced with whatev
 <a name="AdditionalResources"> </a>
 
 
--  [SharePoint 2013 Design Manager snippets](sharepoint-design-manager-snippets.md)
+-  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md)
     
   
--  [SharePoint 2013 Design Manager device channels](sharepoint-design-manager-device-channels.md)
+-  [SharePoint Design Manager device channels](sharepoint-design-manager-device-channels.md)
     
   
 -  [Build sites for SharePoint](build-sites-for-sharepoint.md)
     
   
--  [Develop the site design in SharePoint 2013](develop-the-site-design-in-sharepoint.md)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
     
   
 

@@ -1,11 +1,11 @@
 # Customize a list view in SharePoint Add-ins using client-side rendering
-Learn how to customize a list view in a SharePoint-hosted add-in by using the client-side rendering technology in SharePoint 2013.
+Learn how to customize a list view in a SharePoint-hosted add-in by using the client-side rendering technology in SharePoint.
  
 
  **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
-In SharePoint 2013, client-side rendering provides a way for you to produce your own output for a set of controls that are hosted in a SharePoint page. It enables you to use well-known technologies, such as HTML and JavaScript, to define the rendering logic of SharePoint list views. With client-side rendering, you can specify your own JavaScript resources and host them in the data storage options that are available to your add-ins, such as in a document library. A SharePoint-hosted add-in includes only SharePoint components. A SharePoint-hosted add-in has its resources in an isolated subsite of the host web, called the add-in web.
+In SharePoint, client-side rendering provides a way for you to produce your own output for a set of controls that are hosted in a SharePoint page. It enables you to use well-known technologies, such as HTML and JavaScript, to define the rendering logic of SharePoint list views. With client-side rendering, you can specify your own JavaScript resources and host them in the data storage options that are available to your add-ins, such as in a document library. A SharePoint-hosted add-in includes only SharePoint components. A SharePoint-hosted add-in has its resources in an isolated subsite of the host web, called the add-in web.
  
 
 ## Prerequisites for using the examples in this article
@@ -19,7 +19,7 @@ To follow the steps in this example, you will need the following:
 -  [Visual Studio 2015 and the latest Microsoft Office Developer Tools ](https://www.visualstudio.com/features/office-tools-vs)
     
  
-- A SharePoint 2013 development environment (add-in isolation required for on-premises scenarios)
+- A SharePoint development environment (add-in isolation required for on-premises scenarios)
     
  
 For guidance on how to set up a development environment that fits your needs, see  [Start building Office and SharePoint Add-ins](http://msdn.microsoft.com/library/187f8c8c-1b15-471c-80b5-69a40e67deea.aspx).
@@ -39,9 +39,9 @@ The following table lists useful articles that can help you understand the conce
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [SharePoint Add-ins](sharepoint-add-ins.md)|Learn about the new add-in model in Microsoft SharePoint 2013 that enables you to create add-ins, which are small, easy-to-use solutions for end users.|
+| [SharePoint Add-ins](sharepoint-add-ins.md)|Learn about the new add-in model in Microsoft SharePoint that enables you to create add-ins, which are small, easy-to-use solutions for end users.|
 | [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md)|Learn about the UX options that you have when you are building SharePoint Add-ins.|
-| [Host webs, add-in webs, and SharePoint components in SharePoint 2013](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md)|Learn about the difference between host webs and add-in webs. Find out which SharePoint 2013 components can be included in a SharePoint Add-in, which components are deployed to the host web, which components are deployed to the add-in web, and how the add-in web is deployed in an isolated domain.|
+| [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md)|Learn about the difference between host webs and add-in webs. Find out which SharePoint components can be included in a SharePoint Add-in, which components are deployed to the host web, which components are deployed to the add-in web, and how the add-in web is deployed in an isolated domain.|
 
 ## Code example: Customize a list view by using client-side rendering
 <a name="SP15CSRlistview_Codeexample"> </a>
@@ -84,11 +84,11 @@ Figure 1 shows a client-side rendered view of an announcements list.
     Figure 2 shows the location of the  **SharePoint Add-in** template in Visual Studio 2015, under **Templates**,  **Visual C#**,  **Office/SharePoint**,  **Office Add-ins**.
     
 
-    **Figure 2. Add-in for SharePoint 2013 Visual Studio template**
+    **Figure 2. Add-in for SharePoint Visual Studio template**
 
  
 
-  ![App for SharePoint 2013 Visual Studio template](../../images/AppForSharePointVSTemplate.PNG)
+  ![App for SharePoint Visual Studio template](../../images/AppForSharePointVSTemplate.PNG)
  
 
  
@@ -270,7 +270,7 @@ This article demonstrated how to customize a list view in a SharePoint Add-in by
 -  [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md)
     
  
--  [Create UX components in SharePoint 2013](create-ux-components-in-sharepoint-2013.md)
+-  [Create UX components in SharePoint](create-ux-components-in-sharepoint-2013.md)
     
  
 -  [Three ways to think about design options for SharePoint Add-ins](three-ways-to-think-about-design-options-for-sharepoint-add-ins.md)

@@ -58,7 +58,7 @@ Of course, the remote components of the SharePoint Add-in still have to have aut
  **Note**  If you use the second option (an  **Internal** add-in principal), then you can use only JavaScript and the cross-domain library to access SharePoint. The SharePoint client object model is blocked for **Internal**SharePoint Add-ins, so you cannot have a dual authorization system that uses both the cross-domain library and either the low-trust or high-trust systems.
  
 
-For details on how to use the library, see  [Access SharePoint 2013 data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library.md).
+For details on how to use the library, see  [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library.md).
  
 
  
@@ -66,7 +66,7 @@ For details on how to use the library, see  [Access SharePoint 2013 data from ad
 ## Access remote data from a SharePoint page
 <a name="ReverseDirection"> </a>
 
-The SharePoint cross-domain library can also be used in the reverse direction; that is, JavaScript on a SharePoint page can use the library to get data from the remote components of the add-in. To do this, you reverse the cross-domain architecture: you create a proxy page in the remote web application. The library is called from a SharePoint page where it creates an iFrame to host the proxy page. For details on how to use the library in this way, see  [Create a custom proxy page for the cross-domain library in SharePoint 2013](create-a-custom-proxy-page-for-the-cross-domain-library-in-sharepoint-2013.md).
+The SharePoint cross-domain library can also be used in the reverse direction; that is, JavaScript on a SharePoint page can use the library to get data from the remote components of the add-in. To do this, you reverse the cross-domain architecture: you create a proxy page in the remote web application. The library is called from a SharePoint page where it creates an iFrame to host the proxy page. For details on how to use the library in this way, see  [Create a custom proxy page for the cross-domain library in SharePoint](create-a-custom-proxy-page-for-the-cross-domain-library-in-sharepoint-2013.md).
  
 
  
@@ -75,7 +75,7 @@ The SharePoint cross-domain library can also be used in the reverse direction; t
 <a name="ReverseDirection"> </a>
 
 
--  [Access SharePoint 2013 data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library.md)
+-  [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library.md)
     
  
 -  [Work with the cross-domain library across different Internet Explorer security zones in SharePoint Add-ins](work-with-the-cross-domain-library-across-different-internet-explorer-security-zones-in-sharepoint-add-ins.md)

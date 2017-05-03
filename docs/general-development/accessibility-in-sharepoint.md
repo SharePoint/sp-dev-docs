@@ -1,26 +1,26 @@
 ---
-title: Accessibility in SharePoint 2013
+title: Accessibility in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: c9106d47-c523-49c1-b9f1-cdd7420abd5e
 ---
 
 
-# Accessibility in SharePoint 2013
-Learn about the features, products, and services that make SharePoint 2013 accessible for people with disabilities, and find developer resources that can help you design and build apps and websites that support key accessibility scenarios.
+# Accessibility in SharePoint
+Learn about the features, products, and services that make SharePoint accessible for people with disabilities, and find developer resources that can help you design and build apps and websites that support key accessibility scenarios.
 Accessible technology enables users to interact with computers and applications in different ways to help meet their visual, hearing, speech, dexterity, and cognitive needs. Accessible technology includes features, options, and utilities that are built into the Windows operating system and other Microsoft products, in addition to third-party hardware and software add-ons (also known asassistive technology).
   
     
     
 
 Microsoft strives to build products that are accessible to everyone. For information about these efforts, see the  [Microsoft Accessibility](http://www.microsoft.com/enable/default.aspx) site.
-## Accessibility features in SharePoint 2013
+## Accessibility features in SharePoint
 <a name="bkmk_AccessibilitySP2013"> </a>
 
-SharePoint 2013 supports the accessibility features of common web browsers to enable you to access and manage SharePoint sites. Web browsers provide support for keyboard interactions so that users who don't use a mouse can use a keyboard to navigate the user interface and perform actions in SharePoint 2013.
+SharePoint supports the accessibility features of common web browsers to enable you to access and manage SharePoint sites. Web browsers provide support for keyboard interactions so that users who don't use a mouse can use a keyboard to navigate the user interface and perform actions in SharePoint.
   
     
     
-For more information about accessibility features in SharePoint 2013, see the following articles:
+For more information about accessibility features in SharePoint, see the following articles:
   
     
     
@@ -31,7 +31,7 @@ For more information about accessibility features in SharePoint 2013, see the fo
 -  [Keyboard shortcuts for SharePoint products](http://office.microsoft.com/en-us/sharepoint-foundation-help/keyboard-shortcuts-for-sharepoint-products-HA102772894.aspx?CTT=5&amp;origin=HA102772892)
     
   
-Users who have site administrator responsibilities typically use the SharePoint Central Administration site to manage deployments. A mouse and keyboard are the typical devices that you use to interact with Central Administration. For more information about accessibility for administrators and other IT pros in SharePoint, see  [Accessibility for SharePoint 2013](http://technet.microsoft.com/en-us/library/jj219681.aspx).
+Users who have site administrator responsibilities typically use the SharePoint Central Administration site to manage deployments. A mouse and keyboard are the typical devices that you use to interact with Central Administration. For more information about accessibility for administrators and other IT pros in SharePoint, see  [Accessibility for SharePoint](http://technet.microsoft.com/en-us/library/jj219681.aspx).
   
     
     
@@ -43,7 +43,7 @@ Users who have devices that support touch can use gestures to complete operation
 ## Developing accessible apps and websites
 <a name="bkmk_DevAccessibleApps"> </a>
 
-As you design and build apps and solutions for SharePoint 2013, you should implement markup and code to support key accessibility scenarios, including keyboard accessibility, proper text contrast, and screen reading.
+As you design and build apps and solutions for SharePoint, you should implement markup and code to support key accessibility scenarios, including keyboard accessibility, proper text contrast, and screen reading.
   
     
     
@@ -80,7 +80,7 @@ If you build solutions and apps for SharePoint in Visual Studio, you will find t
 ## Accessibility in web browsers
 <a name="bkmk_AccessBrowsers"> </a>
 
-SharePoint administrators and users depend on the accessibility features that web browsers provide. SharePoint 2013 supports the accessibility features of typical browsers. Table 1 contains links to resources that describe the accessibility features that typical browsers support.
+SharePoint administrators and users depend on the accessibility features that web browsers provide. SharePoint supports the accessibility features of typical browsers. Table 1 contains links to resources that describe the accessibility features that typical browsers support.
   
     
     
@@ -121,7 +121,7 @@ SharePoint administrators and users depend on the accessibility features that we
 -  [Accessibility in Microsoft Products](http://www.microsoft.com/enable/products/default.aspx)
     
   
--  [Accessibility for SharePoint 2013](http://technet.microsoft.com/en-us/library/jj219681.aspx)
+-  [Accessibility for SharePoint](http://technet.microsoft.com/en-us/library/jj219681.aspx)
     
   
 

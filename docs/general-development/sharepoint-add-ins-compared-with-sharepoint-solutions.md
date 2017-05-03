@@ -6,7 +6,7 @@ ms.assetid: 0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8
 
 
 # SharePoint Add-ins compared with SharePoint solutions
-Learn about when to develop your SharePoint 2013 extension as a SharePoint Add-in and when to develop it as a SharePoint farm solution or a no-code sandboxed solution.
+Learn about when to develop your SharePoint extension as a SharePoint Add-in and when to develop it as a SharePoint farm solution or a no-code sandboxed solution.
     
 
 This article compares the use cases of SharePoint Add-ins, farm solutions, and no-code sandboxed solutions (NCSSs).
@@ -70,7 +70,7 @@ SharePoint Add-ins and NCSSs use one of the SharePoint client object models or R
   
     
     
-The server object model also has APIs for create, read, update, and delete (CRUD) operations on lists, libraries, and websites, and for operations on other SharePoint components. This means that the server object model can be used for extensions that are intended for end users, but for reasons given in the previous section, farm solutions are not usually the best choice for such extensions. Thus, it is no surprise that farm solutions cannot be installed on Microsoft SharePoint Online. Because Microsoft handles all the management of SharePoint Online, there is no need for administrative extensions. For more information about the different sets of APIs in SharePoint and where they overlap, see  [Choose the right API set in SharePoint 2013](choose-the-right-api-set-in-sharepoint.md).
+The server object model also has APIs for create, read, update, and delete (CRUD) operations on lists, libraries, and websites, and for operations on other SharePoint components. This means that the server object model can be used for extensions that are intended for end users, but for reasons given in the previous section, farm solutions are not usually the best choice for such extensions. Thus, it is no surprise that farm solutions cannot be installed on Microsoft SharePoint Online. Because Microsoft handles all the management of SharePoint Online, there is no need for administrative extensions. For more information about the different sets of APIs in SharePoint and where they overlap, see  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md).
   
     
     
@@ -104,7 +104,7 @@ For information about how to expand the possibilities of SharePoint Add-ins, see
 ## Doing things the add-in way
 <a name="Questions"> </a>
 
-As noted earlier, custom code that runs on the SharePoint servers is not allowed in SharePoint Add-ins. This is  *not*  a significant limitation. It simply means that your custom business logic moves either "down" to the client device or "up" to the cloud. In either case, you can use the [SharePoint REST/OData service](http://msdn.microsoft.com/library/f60ed19e-9840-4f39-911e-4676751a2f6b%28Office.15%29.aspx) to accessSharePoint sites, lists, and other data. You can also remotely access SharePoint data through the [SharePoint JavaScript, Silverlight, or .NET Framework client object models](http://msdn.microsoft.com/library/8c086b11-2b8b-41ec-82ae-cd4fef0aeac6%28Office.15%29.aspx). Finally, on Windows Phones, you can access SharePoint through the SharePointWindows Phone object model. For more information about the various sets of APIs in SharePoint 2013, see  [Choose the right API set in SharePoint 2013](choose-the-right-api-set-in-sharepoint.md).
+As noted earlier, custom code that runs on the SharePoint servers is not allowed in SharePoint Add-ins. This is  *not*  a significant limitation. It simply means that your custom business logic moves either "down" to the client device or "up" to the cloud. In either case, you can use the [SharePoint REST/OData service](http://msdn.microsoft.com/library/f60ed19e-9840-4f39-911e-4676751a2f6b%28Office.15%29.aspx) to accessSharePoint sites, lists, and other data. You can also remotely access SharePoint data through the [SharePoint JavaScript, Silverlight, or .NET Framework client object models](http://msdn.microsoft.com/library/8c086b11-2b8b-41ec-82ae-cd4fef0aeac6%28Office.15%29.aspx). Finally, on Windows Phones, you can access SharePoint through the SharePointWindows Phone object model. For more information about the various sets of APIs in SharePoint, see  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md).
   
     
     
@@ -178,7 +178,7 @@ For more information about add-in event handlers, see the SDK node  [Handle even
 ### Add-ins that create extensions
 <a name="ExtensionFactories"> </a>
 
-Another way to use the SharePoint client object model -- or its REST APIs -- to resolve component deployment issues with SharePoint Add-ins, is to have CRUD code inside the add-in itself, instead of in an add-in event handler. The add-in then becomes a kind of factory for a type of custom extension. For example, a SharePoint-hosted add-in could use the SharePointJavaScript object model to perform deployment and other CRUD operations on the host web or elsewhere in the tenancy or web application. For another example, see the **Quick introduction to remote provisioning** section of [Site provisioning techniques and remote provisioning in SharePoint 2013](http://blogs.msdn.com/b/vesku/archive/2013/08/23/site-provisioning-techniques-and-remote-provisioning-in-sharepoint.aspx), which describes how a provider-hosted SharePoint Add-in is used to provide subweb provisioning a lot like SharePoint's in-the-box subweb provisioning. There is, however, a lot of wheel-reinvention, and hence a lot of work in creating a factory SharePoint Add-in. In addition, this kind of add-in cannot be sold through the Office Store because the add-in requires Full Control of the host web.
+Another way to use the SharePoint client object model -- or its REST APIs -- to resolve component deployment issues with SharePoint Add-ins, is to have CRUD code inside the add-in itself, instead of in an add-in event handler. The add-in then becomes a kind of factory for a type of custom extension. For example, a SharePoint-hosted add-in could use the SharePointJavaScript object model to perform deployment and other CRUD operations on the host web or elsewhere in the tenancy or web application. For another example, see the **Quick introduction to remote provisioning** section of [Site provisioning techniques and remote provisioning in SharePoint](http://blogs.msdn.com/b/vesku/archive/2013/08/23/site-provisioning-techniques-and-remote-provisioning-in-sharepoint.aspx), which describes how a provider-hosted SharePoint Add-in is used to provide subweb provisioning a lot like SharePoint's in-the-box subweb provisioning. There is, however, a lot of wheel-reinvention, and hence a lot of work in creating a factory SharePoint Add-in. In addition, this kind of add-in cannot be sold through the Office Store because the add-in requires Full Control of the host web.
   
     
     
@@ -187,7 +187,7 @@ Another way to use the SharePoint client object model -- or its REST APIs -- to 
 <a name="bk_addresources"> </a>
 
 
--  [Programming models in SharePoint 2013](programming-models-in-sharepoint.md)
+-  [Programming models in SharePoint](programming-models-in-sharepoint.md)
     
   
 -  [Using Solutions in SharePoint Foundation](http://msdn.microsoft.com/library/0da0518c-24eb-48e0-89bd-21282fdeef94%28Office.15%29.aspx)

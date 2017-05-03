@@ -1,16 +1,16 @@
 ---
-title: Build farm solutions in SharePoint 2013
+title: Build farm solutions in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 96c32f08-ad93-49af-b8d0-9d194a48cc79
 ---
 
 
-# Build farm solutions in SharePoint 2013
-Get an overview of our documentation about developing, packaging, and deploying administrative extensions to SharePoint 2013 using farm solutions.
+# Build farm solutions in SharePoint
+Get an overview of our documentation about developing, packaging, and deploying administrative extensions to SharePoint using farm solutions.
 ## What are farm solutions?
 <a name="WhatAreFarmSolutions"> </a>
 
-SharePoint 2013 has its own system for installing extensions to SharePoint administrative functions that is different from other Windows applications and platforms. No MSI file or ClickOnce technology is involved. Instead, the assemblies, XML, and other files in the extension are bundled into a single file, which is called a solution package. A solution package has a .cab-based format but a .wsp file extension. The package can contain SharePoint Features and all their child components in addition to certain kinds of components that are not deployed in Features. Farm administrators upload the packages to a farm-wide storage location from where they can be deployed and their Features activated.
+SharePoint has its own system for installing extensions to SharePoint administrative functions that is different from other Windows applications and platforms. No MSI file or ClickOnce technology is involved. Instead, the assemblies, XML, and other files in the extension are bundled into a single file, which is called a solution package. A solution package has a .cab-based format but a .wsp file extension. The package can contain SharePoint Features and all their child components in addition to certain kinds of components that are not deployed in Features. Farm administrators upload the packages to a farm-wide storage location from where they can be deployed and their Features activated.
   
     
     
@@ -22,21 +22,21 @@ Unlike SharePoint Add-ins, farm solutions contain code that is deployed to the S
 ## Guide to the developer documentation for farm solutions
 <a name="Guide"> </a>
 
-Development of farm solutions has changed very little since SharePoint 2010, so this section contains links to the SharePoint 2010 SDK. To avoid confusion, keep the following points in mind at all times when using the SharePoint 2010 SDK to develop against SharePoint 2013:
+Development of farm solutions has changed very little since SharePoint 2010, so this section contains links to the SharePoint 2010 SDK. To avoid confusion, keep the following points in mind at all times when using the SharePoint 2010 SDK to develop against SharePoint:
   
     
     
 
-- You will see many references to "sandboxed solutions" in the SharePoint 2010 SDK. Sandboxed solutions with custom code are deprecated in SharePoint 2013. "no code" sandboxed solutions are still viable.
+- You will see many references to "sandboxed solutions" in the SharePoint 2010 SDK. Sandboxed solutions with custom code are deprecated in SharePoint. "no code" sandboxed solutions are still viable.
     
   
 - Our recommendation that farm solutions be used primarily for administrative extensions did not apply in SharePoint 2010. Therefore, many of the samples and other documentation in the SharePoint 2010 SDK may be about end-user extensions that are deployed as farm solutions.
     
   
-- The terms "server-side" or "server code" in the SharePoint 2010 SDK refer to code that calls the SharePoint server object model. These terms do  *not*  refer to code that runs on remote web servers (that is, web servers external to the SharePoint farm). Code that calls SharePoint from remote web servers, in both SharePoint 2010 and SharePoint 2013, always uses one of the SharePoint *client*  object models. In the SharePoint 2010 SDK, such code would be called "client-side" or "client code."
+- The terms "server-side" or "server code" in the SharePoint 2010 SDK refer to code that calls the SharePoint server object model. These terms do  *not*  refer to code that runs on remote web servers (that is, web servers external to the SharePoint farm). Code that calls SharePoint from remote web servers, in both SharePoint 2010 and SharePoint, always uses one of the SharePoint *client*  object models. In the SharePoint 2010 SDK, such code would be called "client-side" or "client code."
     
   
-- The assemblies in a farm solution in SharePoint 2010 could be deployed with Custom Access Security (CAS) policies. Such policies are ignored in SharePoint 2013; all assemblies in farm solutions in SharePoint 2013 run with full trust.
+- The assemblies in a farm solution in SharePoint 2010 could be deployed with Custom Access Security (CAS) policies. Such policies are ignored in SharePoint; all assemblies in farm solutions in SharePoint run with full trust.
     
   
 
@@ -65,10 +65,10 @@ The topics in this section describe the ways in which development of SharePoint 
 -  [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering.md)
     
   
--  [URLs and tokens in SharePoint 2013](urls-and-tokens-in-sharepoint.md)
+-  [URLs and tokens in SharePoint](urls-and-tokens-in-sharepoint.md)
     
   
--  [Virtual directories in SharePoint 2013 solutions](virtual-directories-in-sharepoint-solutions.md)
+-  [Virtual directories in SharePoint solutions](virtual-directories-in-sharepoint-solutions.md)
     
   
 
@@ -76,7 +76,7 @@ The topics in this section describe the ways in which development of SharePoint 
 <a name="SP15buildfarm_addlresources"> </a>
 
 
--  [Programming models in SharePoint 2013](programming-models-in-sharepoint.md)
+-  [Programming models in SharePoint](programming-models-in-sharepoint.md)
     
   
 

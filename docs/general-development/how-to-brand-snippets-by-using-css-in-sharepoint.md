@@ -1,11 +1,11 @@
 ---
-title: How to Brand snippets by using CSS in SharePoint 2013
+title: How to Brand snippets by using CSS in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: d18d07b6-1a6b-4589-a65c-932b67cef595
 ---
 
 
-# How to: Brand snippets by using CSS in SharePoint 2013
+# How to: Brand snippets by using CSS in SharePoint
 To style a snippet, you override the default styles with custom CSS. You can use CSS IDs and element selectors to override all the default styles applied to elements, or you can use an HTML editor or a tool such as the F12 developer tools in Internet Explorer to identify and override specific default styles.
 ## Introduction to styling snippets with CSS
 <a name="Introduction"> </a>
@@ -20,12 +20,12 @@ After you copy a snippet into the HTML file in your mapped drive and then save t
     
 
 > **Note:**
-> For more information about mapping a network drive, see  [How to: Map a network drive to the SharePoint 2013 Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md). 
+> For more information about mapping a network drive, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md). 
   
     
     
 
-By default, snippets inherit their styles from SharePoint 2013 style sheets such as corev15.css. To style a snippet, you have to override these default styles with your custom CSS. To do this, you can:
+By default, snippets inherit their styles from SharePoint style sheets such as corev15.css. To style a snippet, you have to override these default styles with your custom CSS. To do this, you can:
   
     
     
@@ -43,7 +43,7 @@ To identify the default styles by using the developer tools in Internet Explorer
   
     
     
-The default SharePoint 2013 style sheets contain many styles, which can make it challenging to identify specific styles. As an alternative to browser-based tools, and depending on your HTML editor, you may find it easier to copy the snippet from the Snippet Gallery into your HTML file, and then use the HTML editor to identify the styles. In the Snippet Gallery, when you choose **Update** and then choose **Copy to Clipboard**, the snippet contains an HTML preview of that snippet. After you copy the snippet into your HTML file, you can inspect the styles used in the read-only preview contained in the snippet. This way, you are parsing a smaller subset of the default styles.
+The default SharePoint style sheets contain many styles, which can make it challenging to identify specific styles. As an alternative to browser-based tools, and depending on your HTML editor, you may find it easier to copy the snippet from the Snippet Gallery into your HTML file, and then use the HTML editor to identify the styles. In the Snippet Gallery, when you choose **Update** and then choose **Copy to Clipboard**, the snippet contains an HTML preview of that snippet. After you copy the snippet into your HTML file, you can inspect the styles used in the read-only preview contained in the snippet. This way, you are parsing a smaller subset of the default styles.
   
     
     
@@ -55,7 +55,7 @@ Depending on the snippet and the extent of your customization, you may want to u
 ## Example: Style the top navigation snippet
 <a name="Example"> </a>
 
-The top navigation snippet is one of the most commonly used snippets, so it's also one of the most commonly branded snippets. In a SharePoint 2013 site, you can select an option to use managed navigation, so that a term store becomes the data source for the top navigation snippet. This way, you can use the Term Store Management tool in **Site Settings** to add or delete navigation terms and to manage the navigation taxonomy that is displayed by the Top Navigation snippet.
+The top navigation snippet is one of the most commonly used snippets, so it's also one of the most commonly branded snippets. In a SharePoint site, you can select an option to use managed navigation, so that a term store becomes the data source for the top navigation snippet. This way, you can use the Term Store Management tool in **Site Settings** to add or delete navigation terms and to manage the navigation taxonomy that is displayed by the Top Navigation snippet.
   
     
     
@@ -331,19 +331,19 @@ Instead of using only custom styles, you may have a scenario where you want to o
 <a name="Additional"> </a>
 
 
--  [SharePoint 2013 Design Manager snippets](sharepoint-design-manager-snippets.md)
+-  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md)
     
   
--  [Overview of Design Manager in SharePoint 2013](overview-of-design-manager-in-sharepoint.md)
+-  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md)
     
   
--  [How to: Convert an HTML file into a master page in SharePoint 2013](how-to-convert-an-html-file-into-a-master-page-in-sharepoint.md)
+-  [How to: Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint.md)
     
   
--  [How to: Create a page layout in SharePoint 2013](how-to-create-a-page-layout-in-sharepoint.md)
+-  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md)
     
   
--  [Develop the site design in SharePoint 2013](develop-the-site-design-in-sharepoint.md)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
     
   
 

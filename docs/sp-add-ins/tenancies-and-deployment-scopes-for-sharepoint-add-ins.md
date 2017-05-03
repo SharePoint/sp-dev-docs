@@ -10,7 +10,7 @@
 ## Tenancies and add-in scope
 <a name="AppScope"> </a>
 
-A SharePoint 2013 tenancy is a set of site collections in either a SharePoint farm or in SharePoint Online. In SharePoint Online, the site collections belong to a single customer account. In a SharePoint farm, the site collections can be all the site collections in a SharePoint web application or a subset of them, or it can be a set of site collections from across multiple web applications in the farm. A tenancy can have a SharePoint Add-in add-in catalog just as a SharePoint web application can.
+A SharePoint tenancy is a set of site collections in either a SharePoint farm or in SharePoint Online. In SharePoint Online, the site collections belong to a single customer account. In a SharePoint farm, the site collections can be all the site collections in a SharePoint web application or a subset of them, or it can be a set of site collections from across multiple web applications in the farm. A tenancy can have a SharePoint Add-in add-in catalog just as a SharePoint web application can.
  
 
  
@@ -27,7 +27,7 @@ When new site collections are created in the tenancy, add-ins that were previous
 
  
 
- **Note**  Add-in scope should not be confused with Feature scope. Feature scope determines where the elements in a Feature are deployed. The possibilities include  **Farm**,  **WebApplication**,  **Site** (that is, site collection), and **Web**. Only  **Web** is permitted for Features in SharePoint Add-ins (both host web Features and Features inside a .wsp in an add-in package).Add-in scope should also not be confused with add-in permission levels. SharePoint Add-ins can request permissions to all or selected parts of SharePoint content at the levels of list, web, site collection, and tenancy. Installing an add-in with tenant scope does not give it permissions that it would not otherwise have, nor does it cancel key provisions of the SharePoint security model. For more information about add-in permissions, see  [Add-in permissions in SharePoint 2013](add-in-permissions-in-sharepoint-2013.md).
+ **Note**  Add-in scope should not be confused with Feature scope. Feature scope determines where the elements in a Feature are deployed. The possibilities include  **Farm**,  **WebApplication**,  **Site** (that is, site collection), and **Web**. Only  **Web** is permitted for Features in SharePoint Add-ins (both host web Features and Features inside a .wsp in an add-in package).Add-in scope should also not be confused with add-in permission levels. SharePoint Add-ins can request permissions to all or selected parts of SharePoint content at the levels of list, web, site collection, and tenancy. Installing an add-in with tenant scope does not give it permissions that it would not otherwise have, nor does it cancel key provisions of the SharePoint security model. For more information about add-in permissions, see  [Add-in permissions in SharePoint](add-in-permissions-in-sharepoint-2013.md).
  
 
 

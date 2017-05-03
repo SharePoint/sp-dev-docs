@@ -6,7 +6,7 @@ ms.assetid: fee38837-1985-4319-ba4e-b99c6ec66336
 
 
 # JavaScript user-defined functions overview
-JavaScript user-defined functions (UDFs) are new in Excel Services in SharePoint Server 2013. This article provides a high-level look at JavaScript UDFs, including basic information on how they work in Excel Services.
+JavaScript user-defined functions (UDFs) are new in Excel Services in SharePoint. This article provides a high-level look at JavaScript UDFs, including basic information on how they work in Excel Services.
 ## What are UDFs?
 <a name="xlsWhatAreUdfs"> </a>
 
@@ -96,7 +96,7 @@ You could then call the JavaScript UDF, StockInfo, in a formula from a cell insi
 ## Where can I use JavaScript UDFs?
 <a name="xlsWhereUseJsUdfs"> </a>
 
-You can create and use JavaScript UDFs either on workbooks displayed in SharePoint Server 2013 Excel Web Access Web Parts or on a host webpage that has an embedded workbook. The workbook must be stored on Microsoft OneDrive. The main difference is that JavaScript UDFs added to Excel Web Access Web Parts require a SharePoint server. JavaScript UDFs added to host webpages that have embedded workbooks require only that the workbook be stored on OneDrive.
+You can create and use JavaScript UDFs either on workbooks displayed in SharePoint Excel Web Access Web Parts or on a host webpage that has an embedded workbook. The workbook must be stored on Microsoft OneDrive. The main difference is that JavaScript UDFs added to Excel Web Access Web Parts require a SharePoint server. JavaScript UDFs added to host webpages that have embedded workbooks require only that the workbook be stored on OneDrive.
   
     
     
@@ -116,7 +116,7 @@ You can create and use JavaScript UDFs either on workbooks displayed in SharePoi
 <a name="bk_addresources"> </a>
 
 
--  [Excel Services in SharePoint 2013](excel-services-in-sharepoint.md)
+-  [Excel Services in SharePoint](excel-services-in-sharepoint.md)
     
   
 -  [What's new in Excel Services for developers](http://msdn.microsoft.com/library/09e96c8b-cb55-4fd1-a797-b50fbf0f9296.aspx)

@@ -1,21 +1,21 @@
 ---
-title: SharePoint 2013 Design Manager device channels
+title: SharePoint Design Manager device channels
 ms.prod: SHAREPOINT
 ms.assetid: a924bd7b-a5e3-41bf-b0a7-3e43945fa951
 ---
 
 
 
-# SharePoint 2013 Design Manager device channels
-Learn about, plan and configure a device channels experience on a SharePoint 2013 site.
+# SharePoint Design Manager device channels
+Learn about, plan and configure a device channels experience on a SharePoint site.
 ## Introduction to device channels
 <a name="Int"> </a>
 
-Browsing the web on a mobile device is now so common that a SharePoint site must be optimized for readability and ease of use on smartphones and other mobile devices such as tablets. With device channels in SharePoint 2013, you can render a single publishing site in multiple ways by using different designs that target different devices. This article can help you plan for using the device channels feature in SharePoint 2013. It provides a detailed overview of the feature itself, and provides the necessary information for creating a device channel. Also, after reading this article, you'll know what device channels you need to implement, and how to implement those channels.
+Browsing the web on a mobile device is now so common that a SharePoint site must be optimized for readability and ease of use on smartphones and other mobile devices such as tablets. With device channels in SharePoint, you can render a single publishing site in multiple ways by using different designs that target different devices. This article can help you plan for using the device channels feature in SharePoint. It provides a detailed overview of the feature itself, and provides the necessary information for creating a device channel. Also, after reading this article, you'll know what device channels you need to implement, and how to implement those channels.
   
     
     
-Device channels are available only for SharePoint 2013 publishing sites. Before you implement device channels, you should already have a general understanding of the parts of a SharePoint site, how a SharePoint page is put together, and a general understanding of design manager. For more information about the SharePoint page model, including master page and page layouts, see  [Overview of the SharePoint 2013 page model](overview-of-the-sharepoint-page-model.md). For more information about design manager, see  [Overview of Design Manager in SharePoint 2013](overview-of-design-manager-in-sharepoint.md).
+Device channels are available only for SharePoint publishing sites. Before you implement device channels, you should already have a general understanding of the parts of a SharePoint site, how a SharePoint page is put together, and a general understanding of design manager. For more information about the SharePoint page model, including master page and page layouts, see  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md). For more information about design manager, see  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md).
   
     
     
@@ -23,7 +23,7 @@ Device channels are available only for SharePoint 2013 publishing sites. Before 
 ## What is a device channel?
 <a name="WhatDev"> </a>
 
-A device channel is part of the SharePoint 2013 publishing infrastructure that enables you to render certain site content, style your content, and even change images—while maintaining the same URL across a pool of different devices. Compared to the desktop version of the SharePoint site, a mobile rendering can be formatted with a smaller width, have better navigation with wider touch targets, and show a reduced amount of information for better usability. You can create a single site, and author and edit the content a single time for all your different mobile devices. When a user browses a SharePoint site from a mobile device such as a smartphone or tablet, the mobile browser submits to the site an HTTP GET request that includes a user agent string. This string contains information about the type of device that is trying to access the site. Based on that device substring, the device browser can be redirected to a specific master page view. For example, if you have a collection of Windows Phone and iPad devices, you can provide each pool with a unique rendering of the SharePoint publishing site by using device channels. These device channels can each be given a different master page and thus CSS file to give users a more optimal viewing experience. Figure 1 shows the use of two device channels to provide two unique site renderings for a phone and tablet device.
+A device channel is part of the SharePoint publishing infrastructure that enables you to render certain site content, style your content, and even change images—while maintaining the same URL across a pool of different devices. Compared to the desktop version of the SharePoint site, a mobile rendering can be formatted with a smaller width, have better navigation with wider touch targets, and show a reduced amount of information for better usability. You can create a single site, and author and edit the content a single time for all your different mobile devices. When a user browses a SharePoint site from a mobile device such as a smartphone or tablet, the mobile browser submits to the site an HTTP GET request that includes a user agent string. This string contains information about the type of device that is trying to access the site. Based on that device substring, the device browser can be redirected to a specific master page view. For example, if you have a collection of Windows Phone and iPad devices, you can provide each pool with a unique rendering of the SharePoint publishing site by using device channels. These device channels can each be given a different master page and thus CSS file to give users a more optimal viewing experience. Figure 1 shows the use of two device channels to provide two unique site renderings for a phone and tablet device.
   
     
     
@@ -119,7 +119,7 @@ In the **Device Inclusion Rules** field, you add just the substring value or val
     
     
 
-After they are created, device channels are ordered and stored in a list. It is possible to support up to 10 device channels per site in SharePoint 2013, so it may be necessary to rank your channels for proper traffic routing. You should order the most specific rules at the top for higher priority. For example, you may have multiple OS versions for Windows Phone devices in your organization, and want a unique master page rendering for Windows Phone 7.5 devices. All other Windows Phone devices would receive another mobile master page view. Table 3 shows two ordering schemes that could be applied, and the effects on the routing decision.
+After they are created, device channels are ordered and stored in a list. It is possible to support up to 10 device channels per site in SharePoint, so it may be necessary to rank your channels for proper traffic routing. You should order the most specific rules at the top for higher priority. For example, you may have multiple OS versions for Windows Phone devices in your organization, and want a unique master page rendering for Windows Phone 7.5 devices. All other Windows Phone devices would receive another mobile master page view. Table 3 shows two ordering schemes that could be applied, and the effects on the routing decision.
   
     
     
@@ -184,7 +184,7 @@ This paragraph of content shows up only in the default channel, which means that
 </div>
 ```
 
-If you want the content to be displayed on more than one channel, the aliases should be separated by commas within the quotation marks:  `IncludedChannels="alias1, alias2"` For more information about the device channel panel container, see [Overview of the SharePoint 2013 page model](overview-of-the-sharepoint-page-model.md). For more information about using Design Manager snippets, see  [SharePoint 2013 Design Manager snippets](sharepoint-design-manager-snippets.md).
+If you want the content to be displayed on more than one channel, the aliases should be separated by commas within the quotation marks:  `IncludedChannels="alias1, alias2"` For more information about the device channel panel container, see [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md). For more information about using Design Manager snippets, see  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md).
   
     
     
@@ -203,7 +203,7 @@ Like most organizations, there will be unique usability requirements based on yo
   
     
     
-One first task should be to write down what has to be achieved functionally to create a successful user experience across devices. What does the user base expect to be able to do with your SharePoint 2013 publishing site on their desktop, phone, tablet? You may discover various issues including possible limitations, and individual device considerations that have to be considered. Record all of this information in any format; it will help you understand your specific objectives with the device channel feature, and help you answer successive questions listed below, like what devices you are willing to support and how many device channels you should implement.
+One first task should be to write down what has to be achieved functionally to create a successful user experience across devices. What does the user base expect to be able to do with your SharePoint publishing site on their desktop, phone, tablet? You may discover various issues including possible limitations, and individual device considerations that have to be considered. Record all of this information in any format; it will help you understand your specific objectives with the device channel feature, and help you answer successive questions listed below, like what devices you are willing to support and how many device channels you should implement.
   
     
     
@@ -434,12 +434,12 @@ Use this procedure to change the order of device channels.
 <a name="PlanDeviceChannels_addresources"> </a>
 
 
--  [Develop the site design in SharePoint 2013](develop-the-site-design-in-sharepoint.md)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
     
   
--  [Overview of the SharePoint 2013 page model](overview-of-the-sharepoint-page-model.md)
+-  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md)
     
   
--  [Overview of Design Manager in SharePoint 2013](overview-of-design-manager-in-sharepoint.md)
+-  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md)
     
   

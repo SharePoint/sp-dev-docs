@@ -1,16 +1,16 @@
 ---
-title: How to Detect the installed SKU of SharePoint 2013
+title: How to Detect the installed SKU of SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: d5d84d6f-6a8e-4ead-9296-7025baf1e154
 ---
 
 
-# How to: Detect the installed SKU of SharePoint 2013
-If the behavior of your solutions depends on the locally installed SKU of SharePoint 2013 or Project Server 2013, use the code example in this article to find the SKU information you need.
-## Detect the installed SKU of SharePoint 2013 or Project Server 2013 by using code
+# How to: Detect the installed SKU of SharePoint
+If the behavior of your solutions depends on the locally installed SKU of SharePoint or Project Server 2013, use the code example in this article to find the SKU information you need.
+## Detect the installed SKU of SharePoint or Project Server 2013 by using code
 <a name="SP15DetectSKU_detect"> </a>
 
-The following code example demonstrates how to retrieve the registry key of the installed SKU of SharePoint 2013, Microsoft Project Server 2013, and other Office server products, and how to match the SKU with a hash table that stores the names and keys for all of the known SKUs of these products. The console output displays the name of the installed SKU.
+The following code example demonstrates how to retrieve the registry key of the installed SKU of SharePoint, Microsoft Project Server 2013, and other Office server products, and how to match the SKU with a hash table that stores the names and keys for all of the known SKUs of these products. The console output displays the name of the installed SKU.
   
     
     
@@ -39,10 +39,10 @@ namespace GetInstalledSharePointSku
                     _products.Add("35466B1A-B17B-4DFB-A703-F74E2A1F5F5E", "Project Server 2013");
                     _products.Add("BC7BAF08-4D97-462C-8411-341052402E71", " Project Server 2013 Preview");
 
-                    _products.Add("C5D855EE-F32B-4A1C-97A8-F0A28CE02F9C", "SharePoint Server 2013");
-                    _products.Add("CBF97833-C73A-4BAF-9ED3-D47B3CFF51BE", "SharePoint Server 2013 Preview");
-                    _products.Add("B7D84C2B-0754-49E4-B7BE-7EE321DCE0A9", "SharePoint Server 2013 Enterprise");
-                    _products.Add("298A586A-E3C1-42F0-AFE0-4BCFDC2E7CD0", "SharePoint Server 2013 Enterprise Preview");
+                    _products.Add("C5D855EE-F32B-4A1C-97A8-F0A28CE02F9C", "SharePoint");
+                    _products.Add("CBF97833-C73A-4BAF-9ED3-D47B3CFF51BE", "SharePoint Preview");
+                    _products.Add("B7D84C2B-0754-49E4-B7BE-7EE321DCE0A9", "SharePoint Enterprise");
+                    _products.Add("298A586A-E3C1-42F0-AFE0-4BCFDC2E7CD0", "SharePoint Enterprise Preview");
 
                     _products.Add("D6B57A0D-AE69-4A3E-B031-1F993EE52EDC ", "Microsoft Office Online");
                     _products.Add("9FF54EBC-8C12-47D7-854F-3865D4BE8118", "SharePoint Foundation 2013");
@@ -100,10 +100,10 @@ namespace GetInstalledSharePointSku
 <a name="bk_SP15DetectSKUaddresources"> </a>
 
 
--  [SharePoint 2013 development overview](sharepoint-development-overview.md)
+-  [SharePoint development overview](sharepoint-development-overview.md)
     
   
--  [What's new for developers in SharePoint 2013](what’s-new-for-developers-in-sharepoint.md)
+-  [What's new for developers in SharePoint](what’s-new-for-developers-in-sharepoint.md)
     
   
 -  [SharePoint Developer Blog](http://blogs.msdn.com/b/sharepointdev/)

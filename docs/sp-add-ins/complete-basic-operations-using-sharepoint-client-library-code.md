@@ -1,5 +1,5 @@
-# Complete basic operations using SharePoint 2013 client library code
-Learn how to write code to perform basic operations with the SharePoint 2013 .NET Framework client object model (CSOM).
+# Complete basic operations using SharePoint client library code
+Learn how to write code to perform basic operations with the SharePoint .NET Framework client object model (CSOM).
  
 
  **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
@@ -9,7 +9,7 @@ Learn how to write code to perform basic operations with the SharePoint 2013 .NE
 ## SharePoint client APIs
 <a name="ClientAPIs"> </a>
 
-You can use the SharePoint client object model (CSOM) to retrieve, update, and manage data in SharePoint 2013. SharePoint 2013 makes the CSOM available in several forms. 
+You can use the SharePoint client object model (CSOM) to retrieve, update, and manage data in SharePoint. SharePoint makes the CSOM available in several forms. 
  
 
  
@@ -29,11 +29,11 @@ You can use the SharePoint client object model (CSOM) to retrieve, update, and m
 - Silverlight redistributable assemblies
     
  
-For more details about the sets of APIs available on the SharePoint 2013 platform, see  [Choose the right API set in SharePoint 2013](http://msdn.microsoft.com/library/f36645da-77c5-47f1-a2ca-13d4b62b320d%28Office.15%29.aspx). 
+For more details about the sets of APIs available on the SharePoint platform, see  [Choose the right API set in SharePoint](http://msdn.microsoft.com/library/f36645da-77c5-47f1-a2ca-13d4b62b320d%28Office.15%29.aspx). 
  
 
  
-This article is shows how to perform basic operations using the .NET Framework object model, which is available as a redistributable package on the Microsoft Download Center. Search for "SharePoint Server 2013 Client Components SDK" or "SharePoint Online Client Components SDK". For information about how to use the other client APIs see,  [Complete basic operations using JavaScript library code in SharePoint 2013](complete-basic-operations-using-javascript-library-code-in-sharepoint-2013.md),  [Complete basic operations using SharePoint 2013 REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md),  [Build Windows Phone apps that access SharePoint 2013](http://msdn.microsoft.com/library/36681335-f772-4499-8445-f94481bc18e7%28Office.15%29.aspx), and  [Using the Silverlight Object Model](http://msdn.microsoft.com/library/cea7829d-f360-4052-8b76-91d90bcefd2a%28Office.15%29.aspx) in the SharePoint 2010 SDK.
+This article is shows how to perform basic operations using the .NET Framework object model, which is available as a redistributable package on the Microsoft Download Center. Search for "SharePoint Server 2013 Client Components SDK" or "SharePoint Online Client Components SDK". For information about how to use the other client APIs see,  [Complete basic operations using JavaScript library code in SharePoint](complete-basic-operations-using-javascript-library-code-in-sharepoint-2013.md),  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md),  [Build Windows Phone apps that access SharePoint](http://msdn.microsoft.com/library/36681335-f772-4499-8445-f94481bc18e7%28Office.15%29.aspx), and  [Using the Silverlight Object Model](http://msdn.microsoft.com/library/cea7829d-f360-4052-8b76-91d90bcefd2a%28Office.15%29.aspx) in the SharePoint 2010 SDK.
  
 
  
@@ -45,7 +45,7 @@ The following sections describe tasks that you can complete programmatically, an
  
 
  
-When you create an  **Add-in for SharePoint 2013** project in Visual Studio 2012, references to the .NET Framework assemblies, **Microsoft.SharePoint.Client.Runtime.dll** and **Microsoft.SharePoint.Client.dll**, are automatically added to the project. For other kinds of projects, such as .NET Framework applications or console applications, you should add these references. The files are located on any SharePoint 2013 server at %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\ISAPI.
+When you create an  **Add-in for SharePoint** project in Visual Studio 2012, references to the .NET Framework assemblies, **Microsoft.SharePoint.Client.Runtime.dll** and **Microsoft.SharePoint.Client.dll**, are automatically added to the project. For other kinds of projects, such as .NET Framework applications or console applications, you should add these references. The files are located on any SharePoint server at %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\ISAPI.
  
 
  
@@ -65,7 +65,7 @@ Except where specified otherwise, you can assume that each of these examples is 
 
  
 
- **Note**  When you are making a provider-hosted SharePoint Add-in with an ASP.NET web application and you add a reference to an assembly to the web application project in Visual Studio, set the  **Copy Local** property of the assembly to **True**, unless you know that the assembly is already installed on the web server, or you can ensure that it is installed before you deploy your add-in. The .NET Framework is installed on Microsoft Azure Web Roles and Azure Web Sites. But the SharePoint 2013 client assemblies and the various Microsoft managed code extensions and foundations are not installed. Office Developer Tools for Visual Studio 2012 automatically adds references to some assemblies commonly used in SharePoint Add-ins and sets the  **Copy Local** property.
+ **Note**  When you are making a provider-hosted SharePoint Add-in with an ASP.NET web application and you add a reference to an assembly to the web application project in Visual Studio, set the  **Copy Local** property of the assembly to **True**, unless you know that the assembly is already installed on the web server, or you can ensure that it is installed before you deploy your add-in. The .NET Framework is installed on Microsoft Azure Web Roles and Azure Web Sites. But the SharePoint client assemblies and the various Microsoft managed code extensions and foundations are not installed. Office Developer Tools for Visual Studio 2012 automatically adds references to some assemblies commonly used in SharePoint Add-ins and sets the  **Copy Local** property.
  
 
 
@@ -1039,7 +1039,7 @@ context.ExecuteQuery();
 <a name="bk_addresources"> </a>
 
 
--  [Complete basic operations using JavaScript library code in SharePoint 2013](complete-basic-operations-using-javascript-library-code-in-sharepoint-2013.md)
+-  [Complete basic operations using JavaScript library code in SharePoint](complete-basic-operations-using-javascript-library-code-in-sharepoint-2013.md)
     
  
 -  [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)

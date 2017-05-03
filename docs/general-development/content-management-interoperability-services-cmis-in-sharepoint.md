@@ -1,16 +1,16 @@
 ---
-title: Content Management Interoperability Services (CMIS) in SharePoint 2013
+title: Content Management Interoperability Services (CMIS) in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: a1def24c-b2db-4bf9-8d2c-02f5628832f8
 ---
 
 
-# Content Management Interoperability Services (CMIS) in SharePoint 2013
-Learn about the SharePoint 2013 implementation of version 1.0 of the OASIS Content Management Interoperability Services (CMIS) standard.
-## Introduction to CMIS in SharePoint 2013
+# Content Management Interoperability Services (CMIS) in SharePoint
+Learn about the SharePoint implementation of version 1.0 of the OASIS Content Management Interoperability Services (CMIS) standard.
+## Introduction to CMIS in SharePoint
 <a name="SP15CMIS_Intro"> </a>
 
-SharePoint Server compliance with version 1.0 of the  [OASIS Content Management Interoperability Services (CMIS) standard](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cmis) enables integration between SharePoint Server content repositories and other enterprise content management (ECM) repositories in an enterprise. CMIS enables information to be shared across Internet protocols among and between document systems, publishers, and repositories, within the enterprise, and between companies—all in a vendor-neutral format. The CMIS standard supports basic document management operations such as create, read, update, delete, check in, and check out. The standard supports managing versions of documents and their metadata. CMIS is available on any on-premises SharePoint 2013 site after the **Content Management Interoperability Services (CMIS) Producer** feature is activated in the **Manage Site Features** section of **Site Settings**. In SharePoint 2013, the SharePoint CMIS Producer is available but turned off by default on all on-premises sites.
+SharePoint Server compliance with version 1.0 of the  [OASIS Content Management Interoperability Services (CMIS) standard](https://www.oasis-open.org/committees/tc_home.php?wg_abbrev=cmis) enables integration between SharePoint Server content repositories and other enterprise content management (ECM) repositories in an enterprise. CMIS enables information to be shared across Internet protocols among and between document systems, publishers, and repositories, within the enterprise, and between companies—all in a vendor-neutral format. The CMIS standard supports basic document management operations such as create, read, update, delete, check in, and check out. The standard supports managing versions of documents and their metadata. CMIS is available on any on-premises SharePoint site after the **Content Management Interoperability Services (CMIS) Producer** feature is activated in the **Manage Site Features** section of **Site Settings**. In SharePoint, the SharePoint CMIS Producer is available but turned off by default on all on-premises sites.
   
     
     
@@ -19,14 +19,14 @@ CMIS provides interoperability between the APIs that support it, but it is not a
     
     
 
-## A detailed look at the CMIS implementation in SharePoint 2013
+## A detailed look at the CMIS implementation in SharePoint
 <a name="SP15CMIS_DetailedLook"> </a>
 
-Some parts of the CMIS spec are mandatory, but many others are optional. Many vendors, including Microsoft, implement the mandatory portions of the standard and some of its optional components. Figure 1 shows capabilities specified in the CMIS 1.0 specification that are implemented in SharePoint 2013.
+Some parts of the CMIS spec are mandatory, but many others are optional. Many vendors, including Microsoft, implement the mandatory portions of the standard and some of its optional components. Figure 1 shows capabilities specified in the CMIS 1.0 specification that are implemented in SharePoint.
   
     
     
-Figure 1. CMIS 1.0 capabilities implemented in SharePoint 2013.
+Figure 1. CMIS 1.0 capabilities implemented in SharePoint.
   
     
     
@@ -34,7 +34,7 @@ Figure 1. CMIS 1.0 capabilities implemented in SharePoint 2013.
   
     
     
-![CMIS capabilities in SharePoint 2013](../../images/SP15_CMISCapabilities.jpg)
+![CMIS capabilities in SharePoint](../../images/SP15_CMISCapabilities.jpg)
   
     
     
@@ -45,7 +45,7 @@ The CMIS data model defines a repository that contains the other CMIS data types
 
 ### CMIS repositories and SharePoint document libraries
 
-The CMIS repository is the container for the rest of the CMIS data model. In SharePoint 2013, the document library is equivalent to the CMIS repository (lists are not supported in the SharePoint 2013 CMIS Producer). Accessing the repository is usually the launching point for a client application. For example, consider a SharePoint Server site that contains multiple document libraries, which are equivalent to repositories in CMIS. The CMIS specification describes a mandatory service, **getRepositories**, that in SharePoint Server obtains all of the valid repositories (document libraries) in the current  [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) object. A developer can connect to repositories by calling either the **getRepositories** service or the **getRepositoryInfo** service; **getRepositoryInfo** obtains the repository specified by the developer.
+The CMIS repository is the container for the rest of the CMIS data model. In SharePoint, the document library is equivalent to the CMIS repository (lists are not supported in the SharePoint CMIS Producer). Accessing the repository is usually the launching point for a client application. For example, consider a SharePoint Server site that contains multiple document libraries, which are equivalent to repositories in CMIS. The CMIS specification describes a mandatory service, **getRepositories**, that in SharePoint Server obtains all of the valid repositories (document libraries) in the current  [SPWeb](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPWeb.aspx) object. A developer can connect to repositories by calling either the **getRepositories** service or the **getRepositoryInfo** service; **getRepositoryInfo** obtains the repository specified by the developer.
   
     
     
@@ -56,7 +56,7 @@ The CMIS repository contains the other CMIS capabilities that SharePoint Server 
 
 ### CMIS documents, folders, and other object types
 
-CMIS defines an object-type capability that is equivalent to the idea of content types in SharePoint Server (specifically, the [SPContentType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPContentType.aspx) class). Each read-only CMIS object-type consists of attributes and property definitions. Attributes define whether an object can be, for example, queried or versioned. CMIS supports property definitions for properties that are associated with equivalent object types in SharePoint 2013, where applicable. For example, a document object or a folder object in CMIS may have a **LastModifiedBy** property, which uses this syntax: `cmis:LastModifiedBy`. An **Author** property associated with a **Document** object is written as `cmis:Author`. The CMIS standard defines four object-types, which serve as base types. Table 1 describes the CMIS object-types, whether they are supported in SharePoint 2013, and their equivalent functionality in SharePoint, if any.
+CMIS defines an object-type capability that is equivalent to the idea of content types in SharePoint Server (specifically, the [SPContentType](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPContentType.aspx) class). Each read-only CMIS object-type consists of attributes and property definitions. Attributes define whether an object can be, for example, queried or versioned. CMIS supports property definitions for properties that are associated with equivalent object types in SharePoint, where applicable. For example, a document object or a folder object in CMIS may have a **LastModifiedBy** property, which uses this syntax: `cmis:LastModifiedBy`. An **Author** property associated with a **Document** object is written as `cmis:Author`. The CMIS standard defines four object-types, which serve as base types. Table 1 describes the CMIS object-types, whether they are supported in SharePoint, and their equivalent functionality in SharePoint, if any.
   
     
     
@@ -65,10 +65,10 @@ CMIS defines an object-type capability that is equivalent to the idea of content
     
     
 
-**Table 1. CMIS object-type values and their SharePoint 2013 equivalents**
+**Table 1. CMIS object-type values and their SharePoint equivalents**
 
 
-|**CMIS object-type**|**Supported in SharePoint Server?**|**SharePoint 2013 equivalent functionality**|**Description**|
+|**CMIS object-type**|**Supported in SharePoint Server?**|**SharePoint equivalent functionality**|**Description**|
 |:-----|:-----|:-----|:-----|
 |document  <br/> |yes  <br/> |**Document** objects <br/> |The CMIS document object-type maps directly to the **Document** object in SharePoint Server. <br/> Documents have properties and a content stream attached to them, can be versioned, and support basic create, read, update, and delete (CRUD) operations.  <br/> |
 |folder  <br/> |yes  <br/> | [SPFolder](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPFolder.aspx) objects <br/> |The CMIS folder object-type maps directly to the **SPFolder** object in SharePoint Server. <br/> Folders can contain documents and other folders, and must have a single parent folder. Folders have properties attached to them, and they support the same CRUD operations that the document object supports.  <br/> CMIS folders cannot be versioned.  <br/> |
@@ -99,7 +99,7 @@ Figure 2. Examples of the CMIS document object-type and folder object-type
   
     
     
-![Examples of CMIS object-types in SharePoint 2013](../../images/SP15_CMISObjectTypeExamples.png)
+![Examples of CMIS object-types in SharePoint](../../images/SP15_CMISObjectTypeExamples.png)
   
     
     
@@ -112,7 +112,7 @@ Figure 2. Examples of the CMIS document object-type and folder object-type
     
     
 
-### CMIS query in SharePoint 2013
+### CMIS query in SharePoint
 
 Query is an optional part of the CMIS specification that SharePoint Server supports. The CMIS query uses a simplified, SQL-like syntax. Every query in CMIS is scoped to one repository, so all query results are returned from the single repository to which the query is scoped. Running multiple queries against multiple repositories returns results from one repository for each query that is run, which has the effect of returning results from multiple repositories. Table 2 presents some examples of basic CMIS query statements.
   
@@ -159,7 +159,7 @@ CMIS specifies a change log concept. CMIS change logs support basic create, upda
     
     
 
-## Authentication and CMIS in SharePoint 2013
+## Authentication and CMIS in SharePoint
 <a name="SP15CMIS_Authentication"> </a>
 
 By default, SharePoint Server supports authentication for Anonymous AuthN, Basic AuthN, NTLM AuthN, Digest AuthN, Kerberos Protocol Transitioning/Constrained Delegation, Windows-Claims, Claims MultiAuth, and Claims Mixed Mode.
@@ -171,7 +171,7 @@ Inbound OAuth is not supported.
     
     
 
-## The CMIS Producer in SharePoint 2013
+## The CMIS Producer in SharePoint
 <a name="SP15CMIS_CMISProducer"> </a>
 
 The CMIS Producer is available by default in SharePoint Server for on-premises deployment. The Producer creates CMIS-compliant endpoints with which CMIS-compliant consumer web services can interoperate. CMIS support and the CMIS Producer feature are available on any on-premises SharePoint Server implementation where the CMIS Producer feature is activated. CMIS is not supported in SharePoint Online.
@@ -182,7 +182,7 @@ The CMIS Producer is available by default in SharePoint Server for on-premises d
 ## CMIS scenarios and application ideas
 <a name="SP15CMIS_Scenarios"> </a>
 
-With CMIS capabilities in SharePoint 2013, developers can create applications that incorporate CMIS-compliant data from both SharePoint Server and other CMIS-compliant applications. Because CMIS is a vendor-neutral format, developers can write code that produces CMIS-compliant endpoints that can be shared with CMIS-compliant consumer applications without having to write code against the native application's API. For example, the default SharePoint 2013 CMIS Producer can share a CMIS repository (for example, a SharePoint Server document library) with another vendor's photo-editing application. A user can open an image file that is stored in the photo-editing application producer's CMIS repository and check it out in SharePoint Server from within the photo-editing application. After making and saving changes, the user can, from the photo-editing application, check in the latest version into the SharePoint Server document library. Because the CMIS specification defines versioning in terms of major and minor versions the same way that SharePoint does, the photo-editing application user saves changes to a version in the CMIS repository using versioning logic identical to logic found in SharePoint Server.
+With CMIS capabilities in SharePoint, developers can create applications that incorporate CMIS-compliant data from both SharePoint Server and other CMIS-compliant applications. Because CMIS is a vendor-neutral format, developers can write code that produces CMIS-compliant endpoints that can be shared with CMIS-compliant consumer applications without having to write code against the native application's API. For example, the default SharePoint CMIS Producer can share a CMIS repository (for example, a SharePoint Server document library) with another vendor's photo-editing application. A user can open an image file that is stored in the photo-editing application producer's CMIS repository and check it out in SharePoint Server from within the photo-editing application. After making and saving changes, the user can, from the photo-editing application, check in the latest version into the SharePoint Server document library. Because the CMIS specification defines versioning in terms of major and minor versions the same way that SharePoint does, the photo-editing application user saves changes to a version in the CMIS repository using versioning logic identical to logic found in SharePoint Server.
   
     
     
@@ -243,7 +243,7 @@ Developers can write CMIS clients in any language. For example, a SharePoint dev
 ## Finding and interoperating with open source CMIS implementations
 <a name="SP15CMIS_OpenSource"> </a>
 
-Many open source projects exist and can be tested with the SharePoint 2013 implementation of the CMIS 1.0 standard. Some examples include the  [Apache Chemistry Project](http://chemistry.apache.org); the  [Open CMIS project](http://chemistry.apache.org/java/opencmis.html), which tests both client and server CMIS implementations with Java; the  [DotCMIS](http://chemistry.apache.org/dotnet/dotcmis.mdl) project for .NET client, the [cmislib, a CMIS client library for Python](http://chemistry.apache.org/python/cmislib.html) project; and the [phpclient, a CMIS client library for PHP](http://chemistry.apache.org/php/phpclient.html).
+Many open source projects exist and can be tested with the SharePoint implementation of the CMIS 1.0 standard. Some examples include the  [Apache Chemistry Project](http://chemistry.apache.org); the  [Open CMIS project](http://chemistry.apache.org/java/opencmis.html), which tests both client and server CMIS implementations with Java; the  [DotCMIS](http://chemistry.apache.org/dotnet/dotcmis.mdl) project for .NET client, the [cmislib, a CMIS client library for Python](http://chemistry.apache.org/python/cmislib.html) project; and the [phpclient, a CMIS client library for PHP](http://chemistry.apache.org/php/phpclient.html).
   
     
     
@@ -255,7 +255,7 @@ The  [CMIS Workbench](http://chemistry.apache.org/java/developing/tools/dev-tool
 ## CMIS 1.1 features
 <a name="SP15CMIS_Features"> </a>
 
-CMIS 1.1 is not supported in SharePoint 2013, but the newer version of the CMIS specification will include some new features that are worth being aware of. Some highlights include:
+CMIS 1.1 is not supported in SharePoint, but the newer version of the CMIS specification will include some new features that are worth being aware of. Some highlights include:
   
     
     
@@ -289,7 +289,7 @@ CMIS 1.1 is not supported in SharePoint 2013, but the newer version of the CMIS 
 <a name="SP15CMIS_AdditionalResources"> </a>
 
 
--  [Add SharePoint 2013 capabilities](add-sharepoint-capabilities.md)
+-  [Add SharePoint capabilities](add-sharepoint-capabilities.md)
     
   
 -  [Manage blocked file types](http://technet.microsoft.com/en-us/library/cc262496.aspx)
@@ -298,7 +298,7 @@ CMIS 1.1 is not supported in SharePoint 2013, but the newer version of the CMIS 
 -  [OASIS Content Management Interoperability Specification (CMIS) version 1.0](http://docs.oasis-open.org/cmis/CMIS/v1.0/os/cmis-spec-v1.0.html)
     
   
--  [OASIS Content Management Interoperability Specification (CMIS) version 1.1](http://docs.oasis-open.org/cmis/CMIS/v1.1/cs01/CMIS-v1.1-cs01.html) (not supported in SharePoint 2013)
+-  [OASIS Content Management Interoperability Specification (CMIS) version 1.1](http://docs.oasis-open.org/cmis/CMIS/v1.1/cs01/CMIS-v1.1-cs01.html) (not supported in SharePoint)
     
   
 

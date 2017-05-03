@@ -9,7 +9,7 @@ ms.assetid: 2f846e96-6c9e-4ed2-9602-4081ad0ab135
 # Requesting Excel workbook data from SharePoint Server using OData
 
 > **Note:**
-> The Excel Services REST API applies to SharePoint 2013 and SharePoint 2016 on-premises. For Office 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/en-us/docs/api-reference/v1.0/resources/excel
+> The Excel Services REST API applies to SharePoint and SharePoint 2016 on-premises. For Office 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/en-us/docs/api-reference/v1.0/resources/excel
 ) endpoint.
   
     
@@ -24,7 +24,7 @@ http://contoso1/_vti_bin/ExcelRest.aspx/Documents/ProductSales.xlsx/OData/Table1
 This sample OData request is structured so that it gets the first 20 rows from a table named Table1 in the workbook ProductSales.xlsx which is stored in the Documents folder on the contoso1 server. The URL uses the system query option **$top** to specify the number of rows to return.Looking closely at the URL, you can see its three part structure: the service root URI; the resource path; and the query options.
 ## Service root URI
 
-The initial part of the URL is called the service root and remains the same for every OData request that you make to a SharePoint 2013 server except for the name of the server. It includes the name of the SharePoint server where the workbook is stored and the path, _vti_bin/ExcelRest.aspx, as in the following example.
+The initial part of the URL is called the service root and remains the same for every OData request that you make to a SharePoint server except for the name of the server. It includes the name of the SharePoint server where the workbook is stored and the path, _vti_bin/ExcelRest.aspx, as in the following example.
   
     
     
@@ -88,7 +88,7 @@ The Excel Services implementation of OData supports a number of the standard ODa
 <a name="xlsAdditionalResources"> </a>
 
 
--  [Using OData with Excel Services REST in SharePoint 2013](using-odata-with-excel-services-rest-in-sharepoint.md)
+-  [Using OData with Excel Services REST in SharePoint](using-odata-with-excel-services-rest-in-sharepoint.md)
     
   
 -  [What's new in Excel Services for developers](http://msdn.microsoft.com/library/09e96c8b-cb55-4fd1-a797-b50fbf0f9296.aspx)

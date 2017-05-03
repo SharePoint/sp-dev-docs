@@ -20,7 +20,7 @@ To host the add-in, you'll also need a SharePoint Developer site on Office 365, 
 
  
 
- **Note**  You can also host a Cloud Business Add-in on a SharePoint 2013 site.
+ **Note**  You can also host a Cloud Business Add-in on a SharePoint site.
  
 
 
@@ -1272,7 +1272,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
 4. In the browser, navigate to your SharePoint Developer site
     
  
-5. In the  **Add-ins in Testing** list, choose the ellipsis (…) link next to **IncidentManager**, and then choose the  **Remove** link, as shown in Figure 33.
+5. In the  **Add-ins in Testing** list, choose the ellipsis (???) link next to **IncidentManager**, and then choose the  **Remove** link, as shown in Figure 33.
     
     **Figure 33. The Remove link**
 

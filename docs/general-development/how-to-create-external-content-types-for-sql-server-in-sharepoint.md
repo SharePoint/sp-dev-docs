@@ -1,12 +1,12 @@
 ---
-title: How to Create external content types for SQL Server in SharePoint 2013
+title: How to Create external content types for SQL Server in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 7fe2fbf0-546b-4a16-b02e-a0960bfb3842
 ---
 
 
-# How to: Create external content types for SQL Server in SharePoint 2013
-Learn how to create an external content type for SQL Server in SharePoint 2013.
+# How to: Create external content types for SQL Server in SharePoint
+Learn how to create an external content type for SQL Server in SharePoint.
 Creating an external content type is a pivotal task when you are working with external data. An external content type contains important information about connections, access, methods of operation, columns, filters, and other metadata that is used to retrieve the data from the external data source.
   
     
@@ -342,7 +342,7 @@ You can create several different types of filters. For each filter that you crea
 4. If you want values entered by the user to match by case, click **Case Sensitive**.
     
   
-5. If you want to display a list of possible matches ¡n the external item picker control when there is more than one matching item, select **Use to create match list in external item picker**.
+5. If you want to display a list of possible matches ??n the external item picker control when there is more than one matching item, select **Use to create match list in external item picker**.
     
   
 6. Click **OK**.
@@ -377,7 +377,7 @@ You can create several different types of filters. For each filter that you crea
 3. If you want values entered by the user to match by case, click **Case Sensitive**.
     
   
-4. If you want to display a list of possible matches ¡n the external item picker control when there is more than one matching item, select **Use to create match list in external item picker**.
+4. If you want to display a list of possible matches ??n the external item picker control when there is more than one matching item, select **Use to create match list in external item picker**.
     
   
 5. Click **OK**.
@@ -405,7 +405,7 @@ You can create several different types of filters. For each filter that you crea
 2. In the **Number** box, enter a number.
     
   
-3. If you want to display a list of possible matches ¡n the external item picker control when there is more than one matching item, select **Use to create match list in external item picker**.
+3. If you want to display a list of possible matches ??n the external item picker control when there is more than one matching item, select **Use to create match list in external item picker**.
     
   
 4. Under **Properties**, next to **Default Value**, enter the initial value that you want to filter by, if the user does not enter a value. If you do not enter a value, the external list does not display any items.
@@ -513,16 +513,16 @@ The external content type is now available for use in SharePoint and Office 2013
 <a name="AR"> </a>
 
 
--  [External content types in SharePoint 2013](external-content-types-in-sharepoint.md)
+-  [External content types in SharePoint](external-content-types-in-sharepoint.md)
     
   
--  [Deploy a Business Connectivity Services on-premises solution in SharePoint 2013](http://msdn.microsoft.com/library/4692ebba-90eb-4d72-ac12-e90c4d4ee7ae.aspx)
+-  [Deploy a Business Connectivity Services on-premises solution in SharePoint](http://msdn.microsoft.com/library/4692ebba-90eb-4d72-ac12-e90c4d4ee7ae.aspx)
     
   
--  [Using OData sources with Business Connectivity Services in SharePoint 2013](using-odata-sources-with-business-connectivity-services-in-sharepoint.md)
+-  [Using OData sources with Business Connectivity Services in SharePoint](using-odata-sources-with-business-connectivity-services-in-sharepoint.md)
     
   
--  [Configure the Secure Store Service in SharePoint 2013](http://msdn.microsoft.com/library/29C0BC76-D835-401B-A2FB-ABB069E84125.aspx)
+-  [Configure the Secure Store Service in SharePoint](http://msdn.microsoft.com/library/29C0BC76-D835-401B-A2FB-ABB069E84125.aspx)
     
   
 

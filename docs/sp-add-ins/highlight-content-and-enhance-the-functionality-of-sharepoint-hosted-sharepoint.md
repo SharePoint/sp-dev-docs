@@ -2,15 +2,15 @@
 # Highlight content and enhance the functionality of SharePoint-hosted SharePoint Add-ins with the callout control
 The SharePoint callout control provides a flexible way to engage your user and showcase your SharePoint-hosted app's functionality. You can configure it in a variety of ways to suit your app's UI. This article shows you how to construct this control, add it to your page, and customize its appearance and behavior.
  
-When you do searches in a SharePoint 2013 site, you'll see examples of the callout control in action, as it pops up whenever you hover over a search result. Figure 1 shows the callout for a single search result and shows a few of the typical things in a content control: a title, some information about the item on the page, and actions ( **Open** and **Send**) that you can take on the item. In this case, the information and actions are relatively simple, but you can already see two advantages to using it. First, it lets you show additional information about elements in a page when that's needed, and second, it gives you an elegant way of adding functionality to the page. 
+When you do searches in a SharePoint site, you'll see examples of the callout control in action, as it pops up whenever you hover over a search result. Figure 1 shows the callout for a single search result and shows a few of the typical things in a content control: a title, some information about the item on the page, and actions ( **Open** and **Send**) that you can take on the item. In this case, the information and actions are relatively simple, but you can already see two advantages to using it. First, it lets you show additional information about elements in a page when that's needed, and second, it gives you an elegant way of adding functionality to the page. 
  
 
-**Figure 1. Example of the callout control on a SharePoint 2013 search results page**
+**Figure 1. Example of the callout control on a SharePoint search results page**
 
  
 
  
-![Example of the callout control on a SharePoint 2013 search results page](../../images/S15_CalloutControlExample.png)
+![Example of the callout control on a SharePoint search results page](../../images/S15_CalloutControlExample.png)
  
 
  
@@ -400,7 +400,7 @@ callout.set({positionAlgorithm: tryDownAndRightThenGoDefault});
 <a name="bk_addresources"> </a>
 
 
--  [SharePoint 2013: Use list views, callouts, and dialogs in SharePoint-hosted add-ins](http://code.msdn.microsoft.com/officeapps/SharePoint-2013-Use-list-cb3e4e14)
+-  [SharePoint: Use list views, callouts, and dialogs in SharePoint-hosted add-ins](http://code.msdn.microsoft.com/officeapps/SharePoint-2013-Use-list-cb3e4e14)
     
  
 -  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md)

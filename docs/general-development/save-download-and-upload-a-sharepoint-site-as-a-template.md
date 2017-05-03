@@ -1,13 +1,13 @@
 ---
-title: Save, download, and upload a SharePoint 2013 site as a template
+title: Save, download, and upload a SharePoint site as a template
 ms.prod: SHAREPOINT
 ms.assetid: 2e637172-ddac-4a70-bd77-55a1645a3db1
 ---
 
 
-# Save, download, and upload a SharePoint 2013 site as a template
+# Save, download, and upload a SharePoint site as a template
 Learn how to design and build robust applications by using SharePoint site templates.
-You can design and build robust SharePoint 2013 applications that include a rich set of data sources, customer-facing views and forms, highly customized workflows, and more. Once you've built your business solution site, you can start to use it immediately in your SharePoint environment. Or, you can turn your solution into a template and deploy it in another environment, make it available to users so they can create new sites from it, or hand it off for additional development in Visual Studio.
+You can design and build robust SharePoint applications that include a rich set of data sources, customer-facing views and forms, highly customized workflows, and more. Once you've built your business solution site, you can start to use it immediately in your SharePoint environment. Or, you can turn your solution into a template and deploy it in another environment, make it available to users so they can create new sites from it, or hand it off for additional development in Visual Studio.
   
     
     
@@ -178,10 +178,10 @@ After you add a site template to the solutions gallery and the template is activ
 -  [Site Types: WebTemplates and Site Definitions](http://msdn.microsoft.com/en-us/library/ms434313.aspx)
     
   
--  [Understanding how to package and deploy workflow in SharePoint 2013](http://msdn.microsoft.com/en-us/library/jj819316%28v=office.15%29.aspx)
+-  [Understanding how to package and deploy workflow in SharePoint](http://msdn.microsoft.com/en-us/library/jj819316%28v=office.15%29.aspx)
     
   
--  [Build farm solutions in SharePoint 2013](http://msdn.microsoft.com/en-us/library/jj163902%28v=office.15%29.aspx)
+-  [Build farm solutions in SharePoint](http://msdn.microsoft.com/en-us/library/jj163902%28v=office.15%29.aspx)
     
   
 -  [Copy or move lists by using list templates](http://office.com/redir/HA101782479.aspx)

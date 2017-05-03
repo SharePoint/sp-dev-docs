@@ -1,13 +1,13 @@
 ---
-title: Office 2013 and SharePoint 2013 application services
+title: Office 2013 and SharePoint application services
 ms.prod: SHAREPOINT
 ms.assetid: f962922c-2967-492f-9a89-5ad10a1a6dd3
 ---
 
 
-# Office 2013 and SharePoint 2013 application services
+# Office 2013 and SharePoint application services
 Learn about Access Services, Excel Services, Machine Translation Service, PerformancePoint Services, PowerPoint Automation Services, Visio Services, and Word Automation Services.
-## Overview and usage scenarios for Office and SharePoint services in SharePoint 2013
+## Overview and usage scenarios for Office and SharePoint services in SharePoint
 <a name="bkmk_servicesOverview"> </a>
 
 Office and SharePoint services run on individual application servers in the farm and provide a wide range of functionality. The services that are described in this section provide functionality across the following scenarios:
@@ -32,7 +32,7 @@ The following table shows high-level scenarios that apply to the services descri
     
     
 
-**Table 1. Scenarios for Office and SharePoint services in SharePoint 2013**
+**Table 1. Scenarios for Office and SharePoint services in SharePoint**
 
 
 ||**BI/Insights**|**Simple apps**|**File conversion**|**Translation**|
@@ -67,11 +67,11 @@ Use the links in Table 2 to learn more about developing with the Office and Shar
 |**Service**|**Description**|
 |:-----|:-----|
 |Access Services  <br/> See  [Develop Access web apps](develop-access-web-apps.md) <br/> |Enables users to create, deploy, and manage collaborative web-based Access applications.  <br/> |
-|Excel Services  <br/> See  [Excel Services in SharePoint 2013](excel-services-in-sharepoint.md) <br/> |Enables users to load, calculate, and display Excel workbooks on SharePoint sites.  <br/> |
-|Machine Translation Service  <br/> See  [Machine Translation Services in SharePoint 2013](machine-translation-services-in-sharepoint.md) <br/> |Provides automatic machine translation of sites, documents, and sites.  <br/> |
-|PerformancePoint Services  <br/> See  [PerformancePoint Services in SharePoint 2013](performancepoint-services-in-sharepoint.md) <br/> |Creates and publishes dashboards that contain interactive data visualizations (such as scorecards and reports) that enable people to monitor and analyze their business performance.  <br/> |
-|PowerPoint Automation Services  <br/>  [PowerPoint Automation Services in SharePoint 2013](powerpoint-automation-services-in-sharepoint.md) <br/> |Provides unattended, server-side conversion of PowerPoint presentations into other formats.  <br/> |
-|Visio Services  <br/> See  [Visio Services in SharePoint 2013](visio-services-in-sharepoint.md) <br/> |Enables users to view and interact with Visio drawings stored on SharePoint sites.  <br/> |
+|Excel Services  <br/> See  [Excel Services in SharePoint](excel-services-in-sharepoint.md) <br/> |Enables users to load, calculate, and display Excel workbooks on SharePoint sites.  <br/> |
+|Machine Translation Service  <br/> See  [Machine Translation Services in SharePoint](machine-translation-services-in-sharepoint.md) <br/> |Provides automatic machine translation of sites, documents, and sites.  <br/> |
+|PerformancePoint Services  <br/> See  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint.md) <br/> |Creates and publishes dashboards that contain interactive data visualizations (such as scorecards and reports) that enable people to monitor and analyze their business performance.  <br/> |
+|PowerPoint Automation Services  <br/>  [PowerPoint Automation Services in SharePoint](powerpoint-automation-services-in-sharepoint.md) <br/> |Provides unattended, server-side conversion of PowerPoint presentations into other formats.  <br/> |
+|Visio Services  <br/> See  [Visio Services in SharePoint](visio-services-in-sharepoint.md) <br/> |Enables users to view and interact with Visio drawings stored on SharePoint sites.  <br/> |
 |Word Automation Services  <br/> See  [What's new in Word Automation Services for developers](what-s-new-in-word-automation-services-for-developers.md) <br/> |Provides unattended, server-side conversion of documents that are supported by Word.  <br/> |
    
 Not all services and scenarios are represented in this section. For links to developer documentation for other services, see  [Additional resources](#bkmk_Resources).
@@ -83,13 +83,13 @@ Not all services and scenarios are represented in this section. For links to dev
 <a name="bkmk_Resources"> </a>
 
 
--  [Add SharePoint 2013 capabilities](add-sharepoint-capabilities.md)
+-  [Add SharePoint capabilities](add-sharepoint-capabilities.md)
     
   
--  [Business Connectivity Services in SharePoint 2013](business-connectivity-services-in-sharepoint.md)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
     
   
--  [Search in SharePoint 2013](search-in-sharepoint.md)
+-  [Search in SharePoint](search-in-sharepoint.md)
     
   
 -  [Install SQL Server BI Features with SharePoint (PowerPivot and Reporting Services)](http://msdn.microsoft.com/en-us/library/hh231671)

@@ -6,7 +6,7 @@ ms.assetid: 5b313130-500c-4ccf-80ea-b102f30e5afb
 
 
 # How to: Build search-driven mobile apps with the Navigation and Event Logging REST interfaces
-SharePoint Server 2013 introduces the Navigation and Event Logging REST interfaces, enabling you to create a search-driven mobile app for mobile devices such as phones and tablets that run on operating systems other than Windows—for example, Android and iOS.
+SharePoint introduces the Navigation and Event Logging REST interfaces, enabling you to create a search-driven mobile app for mobile devices such as phones and tablets that run on operating systems other than Windows—for example, Android and iOS.
 ## How apps work with the product catalog
 <a name="mobile_app_and_product_catalog"> </a>
 
@@ -114,7 +114,7 @@ A matching response is shown in  [Example response for a Search REST query for a
   
     
     
-The query processing component in SharePoint Server 2013 returns search results that contain data for a particular category, and the app presents the data in the **Category** page. If there is a Best Bet associated with the selected category, the query processing component detects this association and extracts the Best Bet data from the Best Bet database, labeled **BB** in the diagram. The search results are then mixed with results from the Best Bet database and sent back to the app in a result table. The app is responsible for extracting the different parts of the results from the table and displaying the Best Bet in a dedicated location.
+The query processing component in SharePoint returns search results that contain data for a particular category, and the app presents the data in the **Category** page. If there is a Best Bet associated with the selected category, the query processing component detects this association and extracts the Best Bet data from the Best Bet database, labeled **BB** in the diagram. The search results are then mixed with results from the Best Bet database and sent back to the app in a result table. The app is responsible for extracting the different parts of the results from the table and displaying the Best Bet in a dedicated location.
   
     
     
@@ -316,7 +316,7 @@ The service follows standard HTTP return codes: an HTTP 200 response indicates a
 <a name="bk_addresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint 2013](build-windows-phone-apps-that-access-sharepoint.md)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
 -  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)

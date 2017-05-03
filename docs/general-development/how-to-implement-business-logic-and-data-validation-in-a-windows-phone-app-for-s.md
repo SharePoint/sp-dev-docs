@@ -1,11 +1,11 @@
 ---
-title: How to Implement business logic and data validation in a Windows Phone app for SharePoint 2013
+title: How to Implement business logic and data validation in a Windows Phone app for SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: fbbedc38-9651-4cd6-b523-d93cbf1cd39d
 ---
 
 
-# How to: Implement business logic and data validation in a Windows Phone app for SharePoint 2013
+# How to: Implement business logic and data validation in a Windows Phone app for SharePoint
 Implement data validation in a Windows Phone app created by using the Windows Phone SharePoint List Application template.
 In a Windows Phone app intended for production use, you likely need to validate data entered by users to, for example, enforce business logic relevant to your particular circumstances, or to ensure appropriate formatting of entered values, or simply to catch mistakes before saving values to a SharePoint list. Projects based on the Windows Phone SharePoint List Application template include default data validation logic, but such projects also provide a mechanism for developers to implement custom data validation.
   
@@ -167,7 +167,7 @@ Again, for the purposes of this example, assume that the following simple valida
 ### To implement custom validation rules
 
 
-1. Assuming you have created a SharePoint list based on the Custom List template that includes the columns and types specified in Table 1, create a Windows Phone app by using the Windows Phone SharePoint List Application template in Visual Studio by following the steps detailed in  [How to: Create a Windows Phone SharePoint 2013 list app](how-to-create-a-windows-phone-sharepoint-list-app.md).
+1. Assuming you have created a SharePoint list based on the Custom List template that includes the columns and types specified in Table 1, create a Windows Phone app by using the Windows Phone SharePoint List Application template in Visual Studio by following the steps detailed in  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app.md).
     
   
 2. In **Solution Explorer**, in the ViewModels folder for the project, double-click the EditItemViewModel.cs file (or choose the file and press F7) to open the file for editing.
@@ -298,7 +298,7 @@ The code in this sample, if it is included in the EditItemViewModel.cs file only
   
     
     
-The validation logic in this sample enforces given business rules by indicating to the user that entered data is not in a format permitted by the rules, but the entered data is not intercepted and changed by this code. To intercept and, for example, format phone numbers in a consistent way before saving the data to the SharePoint list, you can implement custom data conversion for entered phone numbers. For an explanation of custom data conversion for list item fields, see  [How to: Support and convert SharePoint 2013 field types for Windows Phone apps](how-to-support-and-convert-sharepoint-field-types-for-windows-phone-apps.md).
+The validation logic in this sample enforces given business rules by indicating to the user that entered data is not in a format permitted by the rules, but the entered data is not intercepted and changed by this code. To intercept and, for example, format phone numbers in a consistent way before saving the data to the SharePoint list, you can implement custom data conversion for entered phone numbers. For an explanation of custom data conversion for list item fields, see  [How to: Support and convert SharePoint field types for Windows Phone apps](how-to-support-and-convert-sharepoint-field-types-for-windows-phone-apps.md).
   
     
     
@@ -307,7 +307,7 @@ The validation logic in this sample enforces given business rules by indicating 
 <a name="SP15Implementbuslogic_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint 2013](build-windows-phone-apps-that-access-sharepoint.md)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
 -  [Silverlight Data Binding](http://msdn.microsoft.com/en-us/library/cc278072.aspx)

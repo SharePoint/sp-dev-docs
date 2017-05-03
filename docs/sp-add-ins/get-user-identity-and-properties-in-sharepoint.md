@@ -1,5 +1,5 @@
-# Get user identity and properties in SharePoint 2013
-Retrieve user identity and user information in SharePoint 2013.
+# Get user identity and properties in SharePoint
+Retrieve user identity and user information in SharePoint.
  
 
  **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
@@ -36,9 +36,9 @@ The following table lists some useful articles that can help you to understand t
 
 |**Article **|**Description**|
 |:-----|:-----|
-| [Add-in permissions in SharePoint 2013](add-in-permissions-in-sharepoint-2013.md)|Learn about SharePoint add-in permissions for working with SharePoint 2013, including types of add-in permissions, permission request scopes, and managing permissions. This article also discusses the differences in add-in permission rights, and user rights.|
+| [Add-in permissions in SharePoint](add-in-permissions-in-sharepoint-2013.md)|Learn about SharePoint add-in permissions for working with SharePoint, including types of add-in permissions, permission request scopes, and managing permissions. This article also discusses the differences in add-in permission rights, and user rights.|
 | [Context Token OAuth flow for SharePoint Add-ins](context-token-oauth-flow-for-sharepoint-add-ins.md)|Learn about the OAuth authentication and authorization flow for cloud-hosted add-ins.|
-| [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)|Learn how to create a basic provider-hosted SharePoint Add-in with the Office Developer Tools for Visual Studio 2012, how to interact with Microsoft SharePoint 2013 sites by using the SharePoint CSOM, and how to implement OAuth in a SharePoint Add-in.|
+| [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)|Learn how to create a basic provider-hosted SharePoint Add-in with the Office Developer Tools for Visual Studio 2012, how to interact with Microsoft SharePoint sites by using the SharePoint CSOM, and how to implement OAuth in a SharePoint Add-in.|
 
 ## Retrieving current website user identity
 <a name="WebsiteUserID"> </a>
@@ -73,10 +73,10 @@ ClientContext clientContext =
 - If you are using Office 365, the login name you get is similar to  `i:0#.f|membership|adam@contoso.com`.
     
  
-- If you are using Microsoft SharePoint 2013 on-premises and the user is logged in as a normal user using NTLM, the login name you get is similar to  `i:0#.w|contoso\adam`.
+- If you are using Microsoft SharePoint on-premises and the user is logged in as a normal user using NTLM, the login name you get is similar to  `i:0#.w|contoso\adam`.
     
  
-- If you are using SharePoint 2013 on-premises and the user is logged in using a farm account, the login name you get is  `SHAREPOINT\System`.
+- If you are using SharePoint on-premises and the user is logged in using a farm account, the login name you get is  `SHAREPOINT\System`.
     
  
 
@@ -153,7 +153,7 @@ For the code to work:
 
  
 
-- The user profile shared service should be configured and synced on SharePoint 2013 for the users.
+- The user profile shared service should be configured and synced on SharePoint for the users.
     
  
 - You must add the following permission scope for social features in the add-in manifest:
@@ -189,7 +189,7 @@ clientContext.ExecuteQuery();
 <a name="AdditionalResources"> </a>
 
 
--  [Add-in permissions in SharePoint 2013](add-in-permissions-in-sharepoint-2013.md)
+-  [Add-in permissions in SharePoint](add-in-permissions-in-sharepoint-2013.md)
     
  
 -  [Context Token OAuth flow for SharePoint Add-ins](context-token-oauth-flow-for-sharepoint-add-ins.md)

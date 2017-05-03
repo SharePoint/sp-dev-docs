@@ -1,16 +1,16 @@
 ---
-title: SharePoint 2013 workflow object model
+title: SharePoint workflow object model
 ms.prod: SHAREPOINT
 ms.assetid: be615a89-3201-4cd8-bbc7-15f3abf9f668
 ---
 
 
-# SharePoint 2013 workflow object model
-Get a brief introduction to the workflow object model in SharePoint 2013.
-## SharePoint 2013 workflow object model
+# SharePoint workflow object model
+Get a brief introduction to the workflow object model in SharePoint.
+## SharePoint workflow object model
 <a name="bk_SPwfom"> </a>
 
-The SharePoint 2013 object model is built on top of the .NET Framework 4 object model for Windows Workflow Foundation 4, but with innovations that enable workflow functionality in SharePoint generally, and in SharePoint Add-ins in particular. The native .NET Framework 4 object model for Windows Workflow Foundation 4 is located in the .NET Framework  [System.Workflow namespaces](http://msdn.microsoft.com/en-us/library/gg145026.aspx).
+The SharePoint object model is built on top of the .NET Framework 4 object model for Windows Workflow Foundation 4, but with innovations that enable workflow functionality in SharePoint generally, and in SharePoint Add-ins in particular. The native .NET Framework 4 object model for Windows Workflow Foundation 4 is located in the .NET Framework  [System.Workflow namespaces](http://msdn.microsoft.com/en-us/library/gg145026.aspx).
   
     
     
@@ -84,7 +84,7 @@ The SharePoint workflow object model, on the other hand, is contained in ten nam
 
 ### SharePoint workflow schemas
 
-Reference content for SharePoint 2013 schemas is contained in the reference node entitled  [Workflow schemas](http://msdn.microsoft.com/library/b36ded16-3ffd-4931-811e-c402c1e35b07%28Office.15%29.aspx), and contain the following:
+Reference content for SharePoint schemas is contained in the reference node entitled  [Workflow schemas](http://msdn.microsoft.com/library/b36ded16-3ffd-4931-811e-c402c1e35b07%28Office.15%29.aspx), and contain the following:
   
     
     
@@ -115,10 +115,10 @@ Reference content for SharePoint 2013 schemas is contained in the reference node
 -  [Windows Workflow Foundation (WF) Screencasts](http://msdn.microsoft.com/en-us/netframework/dd733248)
     
   
--  [Workflow actions and activities reference for SharePoint 2013](workflow-actions-and-activities-reference-for-sharepoint.md)
+-  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint.md)
     
   
--  [Develop SharePoint 2013 workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
+-  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
     
   
 

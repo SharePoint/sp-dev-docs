@@ -1,20 +1,20 @@
 ---
-title: How to Convert an HTML file into a master page in SharePoint 2013
+title: How to Convert an HTML file into a master page in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: a76ab289-3256-45de-ac63-d5112a74e3c7
 ---
 
 
-# How to: Convert an HTML file into a master page in SharePoint 2013
-With Design Manager, you can convert an .html file into a SharePoint 2013 master page, a .master file. After the conversion, the HTML file and master page are associated, so that when you edit and save the HTML file, the changes are synced to the associated master page.
+# How to: Convert an HTML file into a master page in SharePoint
+With Design Manager, you can convert an .html file into a SharePoint master page, a .master file. After the conversion, the HTML file and master page are associated, so that when you edit and save the HTML file, the changes are synced to the associated master page.
 ## Introduction to converting a master page
 <a name="Introduction"> </a>
 
- With Design Manager, you can convert an.html file into a SharePoint 2013 master page, a .master file. After the conversion, the HTML file and master page are associated, so that when you edit and save the HTML file, the changes are synced to the associated master page.
+ With Design Manager, you can convert an.html file into a SharePoint master page, a .master file. After the conversion, the HTML file and master page are associated, so that when you edit and save the HTML file, the changes are synced to the associated master page.
   
     
     
-Why do you want to convert an HTML file, instead of creating a .master file from scratch? In SharePoint 2013, master pages work exactly as they do in ASP.NET, but SharePoint also requires that certain elements, such as controls and content placeholders that are specific to SharePoint, must be present on the page for SharePoint to correctly render that master page. By using Design Manager to convert an HTML file into a fully functioning SharePoint master page, you don't have to know about ASP.NET or the SharePoint-specific markup; instead, you can focus on designing your site in HTML, CSS, and JavaScript.
+Why do you want to convert an HTML file, instead of creating a .master file from scratch? In SharePoint, master pages work exactly as they do in ASP.NET, but SharePoint also requires that certain elements, such as controls and content placeholders that are specific to SharePoint, must be present on the page for SharePoint to correctly render that master page. By using Design Manager to convert an HTML file into a fully functioning SharePoint master page, you don't have to know about ASP.NET or the SharePoint-specific markup; instead, you can focus on designing your site in HTML, CSS, and JavaScript.
   
     
     
@@ -26,7 +26,7 @@ When you convert an HTML file into a master page:
 - A .master file with the same name as your HTML file is created in the Master Page Gallery.
     
   
-- All markup required by SharePoint 2013 is added to the .master file so that the master page renders correctly.
+- All markup required by SharePoint is added to the .master file so that the master page renders correctly.
     
   
 - Markup such as comments, **\<div\>** tags, snippets, and content placeholders are added to your original HTML file.
@@ -59,7 +59,7 @@ Before you convert your HTML file, here are some best practices and guidance to 
     
     
 
-- Consider the SharePoint page model. For more information, see  [Overview of the SharePoint 2013 page model](overview-of-the-sharepoint-page-model.md). As you design the HTML mockups of your site, you'll probably have several HTML files for different types of pages, such as an article page or a category page that contains Web Parts that display a category of items from a catalog. But, only one HTML file will be converted into the master page. An HTML file can be converted into a master page, but an HTML file can't be converted directly into a page layout because a page layout requires page fields.
+- Consider the SharePoint page model. For more information, see  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md). As you design the HTML mockups of your site, you'll probably have several HTML files for different types of pages, such as an article page or a category page that contains Web Parts that display a category of items from a catalog. But, only one HTML file will be converted into the master page. An HTML file can be converted into a master page, but an HTML file can't be converted directly into a page layout because a page layout requires page fields.
     
   
 - Make sure your HTML file is XML-compliant. For the conversion to work, the HTML file must be XML-compliant. Unfortunately, this requirement overrides some HTML 5 standards—for example, in HTML 5 you can specify the **doctype** in lowercase, but in XML the **doctype** must be uppercase. Also, you should remove any **\<form\>** tags from your HTML file. Consider running your HTML file through an external XML validator to identify XML errors before conversion.
@@ -73,10 +73,10 @@ Before you convert your HTML file, here are some best practices and guidance to 
   - Add  `ms-design-css-conversion="no"` to the **<CSS link>** tag if you're using a web font.
     
   
-  - Be cautious about applying styles to general HTML tags like **\<body\>**, **\<div\>**, and **\< img\>**. Everything within your SharePoint design, including the ribbon, is within the **\<body\>** tag. For styles that you would usually apply to the **\<body\>** tag, consider applying them instead to **\<div id="s4-bodyContainer"\>**, which is a tag that SharePoint 2013 uses for the main body of the page. Also, SharePoint 2013 uses many images that are affected by whatever styles you apply to the **\<img\>** tag.
+  - Be cautious about applying styles to general HTML tags like **\<body\>**, **\<div\>**, and **\< img\>**. Everything within your SharePoint design, including the ribbon, is within the **\<body\>** tag. For styles that you would usually apply to the **\<body\>** tag, consider applying them instead to **\<div id="s4-bodyContainer"\>**, which is a tag that SharePoint uses for the main body of the page. Also, SharePoint uses many images that are affected by whatever styles you apply to the **\<img\>** tag.
     
   
-  - Many designers style the navigation by applying classes to **\<ul\>** and **\<li\>** elements. But, SharePoint 2013 uses a dynamic navigation control, which you can add to your master page from the Snippet Gallery. SharePoint 2013 navigation controls have styles applied by default that you have to override.
+  - Many designers style the navigation by applying classes to **\<ul\>** and **\<li\>** elements. But, SharePoint uses a dynamic navigation control, which you can add to your master page from the Snippet Gallery. SharePoint navigation controls have styles applied by default that you have to override.
     
   
 - Consider these potential issues about file naming:
@@ -113,7 +113,7 @@ Before you convert your HTML file, here are some best practices and guidance to 
 ## Convert the HTML file into a master page
 <a name="Convert"> </a>
 
-Before you convert an HTML file, you first have to upload all of your design files, including your HTML file. For more information, see  [How to: Map a network drive to the SharePoint 2013 Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md).
+Before you convert an HTML file, you first have to upload all of your design files, including your HTML file. For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md).
   
     
     
@@ -139,7 +139,7 @@ Before you convert an HTML file, you first have to upload all of your design fil
       > When you upload your design files, you should keep all files that are related to a single design in their own folder in the Master Page Gallery. When you copy your design folder into the mapped network drive, the Master Page Gallery retains whatever folder structure you created. 
 6. Choose **Insert**.
     
-    At this point, SharePoint 2013 converts your HTML file into a .master file with the same name.
+    At this point, SharePoint converts your HTML file into a .master file with the same name.
     
     In Design Manager, your HTML file now appears with a Status column that shows one of two possible statuses:
     
@@ -153,11 +153,11 @@ Before you convert an HTML file, you first have to upload all of your design fil
     
     The preview page is a live server-side preview of your master page. The top of the preview displays any warnings or errors that you may have to resolve by editing the HTML file in an HTML editor. Errors must be fixed before the preview will display the master page correctly.
     
-    For more information about resolving errors and warnings, see  [How to: Resolve errors and warnings when previewing a page in SharePoint 2013](how-to-resolve-errors-and-warnings-when-previewing-a-page-in-sharepoint.md).
+    For more information about resolving errors and warnings, see  [How to: Resolve errors and warnings when previewing a page in SharePoint](how-to-resolve-errors-and-warnings-when-previewing-a-page-in-sharepoint.md).
     
-    For more information about previewing the master page with different pages, see  [How to: Change the preview page in SharePoint 2013 Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager.md).
+    For more information about previewing the master page with different pages, see  [How to: Change the preview page in SharePoint Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager.md).
     
-    The preview page also contains a Snippets link in the upper-right corner. This link opens the Snippet Gallery, where you can begin replacing static or mockup controls in your design with dynamic SharePoint controls. For more information, see  [SharePoint 2013 Design Manager snippets](sharepoint-design-manager-snippets.md).
+    The preview page also contains a Snippets link in the upper-right corner. This link opens the Snippet Gallery, where you can begin replacing static or mockup controls in your design with dynamic SharePoint controls. For more information, see  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md).
     
   
 8. To fix any errors, edit the HTML file that resides directly on the server by using an HTML editor to open and edit the HTML file in the mapped drive. Each time you save the HTML file, any changes are synced to the associated .master file.
@@ -167,7 +167,7 @@ Before you convert an HTML file, you first have to upload all of your design fil
     
     This **\<div\>** is the main content block. It resides inside a content placeholder named **ContentPlaceHolderMain**. At run time, when a visitor browses your site and requests a page, this content placeholder gets filled with content from a page layout that contains content in a matching content region. You should position this **\<div\>** where you want your page layouts to appear on the master page.
     
-    If your HTML file contains static or mockup content in the body of the page, now you begin the process of removing that static content from the HTML master page and applying those styles to other elements of the SharePoint page model, such as page layouts, page field controls, snippets, and display templates. For an example, see  [How to: Create a page layout in SharePoint 2013](how-to-create-a-page-layout-in-sharepoint.md).
+    If your HTML file contains static or mockup content in the body of the page, now you begin the process of removing that static content from the HTML master page and applying those styles to other elements of the SharePoint page model, such as page layouts, page field controls, snippets, and display templates. For an example, see  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md).
     
   
 
@@ -228,7 +228,7 @@ The following is a breakdown of the types of markup that are added to the HTML f
 <!--CE: End PlaceHolderMain Snippet-->
 ```
 
-- **Snippets** The **\<MS\>** and **\<ME\>** ("markup start" and "markup end") tags denote the beginning and end of a SharePoint control or a snippet. A snippet is a SharePoint control that adds SharePoint functionality to your page. You can add snippets yourself by using the Snippet Gallery. For more information, see [SharePoint 2013 Design Manager snippets](sharepoint-design-manager-snippets.md).
+- **Snippets** The **\<MS\>** and **\<ME\>** ("markup start" and "markup end") tags denote the beginning and end of a SharePoint control or a snippet. A snippet is a SharePoint control that adds SharePoint functionality to your page. You can add snippets yourself by using the Snippet Gallery. For more information, see [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md).
     
 ```HTML
   
@@ -304,7 +304,7 @@ It's important to know about two of the snippets that are added to your HTML fil
     
     
 
-- **The Ribbon** For content authors to be able to create pages and author content on your SharePoint site, your master page needs the ribbon and the "suite navigation" that is new to SharePoint 2013. The ribbon is contained in a security-trimming snippet, so that when a visitor browses your site, the ribbon is displayed only to authenticated users, not anonymous users. You can move the ribbon to a different position on the page or style it by overriding the default CSS classes, but we do not recommend moving or reordering the components (such as the Site Actions menu) that are contained inside the ribbon.
+- **The Ribbon** For content authors to be able to create pages and author content on your SharePoint site, your master page needs the ribbon and the "suite navigation" that is new to SharePoint. The ribbon is contained in a security-trimming snippet, so that when a visitor browses your site, the ribbon is displayed only to authenticated users, not anonymous users. You can move the ribbon to a different position on the page or style it by overriding the default CSS classes, but we do not recommend moving or reordering the components (such as the Site Actions menu) that are contained inside the ribbon.
     
 ```HTML
   
@@ -498,13 +498,13 @@ The following is an example of markup added to an HTML file after it is converte
 <a name="Additional"> </a>
 
 
--  [Overview of Design Manager in SharePoint 2013](overview-of-design-manager-in-sharepoint.md)
+-  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md)
     
   
--  [How to: Create a page layout in SharePoint 2013](how-to-create-a-page-layout-in-sharepoint.md)
+-  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md)
     
   
--  [SharePoint 2013 Design Manager snippets](sharepoint-design-manager-snippets.md)
+-  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md)
     
   
 

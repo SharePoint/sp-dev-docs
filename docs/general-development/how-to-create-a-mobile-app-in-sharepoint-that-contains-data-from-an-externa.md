@@ -1,13 +1,13 @@
 ---
-title: How to Create a mobile app in SharePoint 2013 that contains data from an external data source
+title: How to Create a mobile app in SharePoint that contains data from an external data source
 ms.prod: SHAREPOINT
 ms.assetid: f1d62256-aca0-4a59-8145-0add9e68a449
 ---
 
 
-# How to: Create a mobile app in SharePoint 2013 that contains data from an external data source
-Learn how to create a simple mobile app in SharePoint 2013 that contains data from external data source by using Business Connectivity Services and connecting to an external list.
-SharePoint 2013 enables you to build mobile applications that can access external data from databases, enterprise applications, and Web 2.0 services using Business Connectivity Services. You can also provide complete interaction with the external data including write-back capabilities from your mobile device. You do this by creating apps that connect to external lists, which are a special type of lists in SharePoint that are based on external content types and contain data from an external system. The new Windows Phone SharePoint List template in Visual Studio 2010 Express enables you to quickly and easily create apps for the Windows Phone that connects to external lists. For example, you can build a Windows phone app that brings the product catalog for an inventory list in SharePoint to the phone for the sales people. This topic shows how to create a Windows Phone app that displays external data from the Northwind sample database by connecting to an external list in SharePoint. Notice that in this example, the external list connects to the Northwind database using a custom OData service; however, it's possible to connect to databases directly as well as any external system that is supported by Business Connectivity Services, using external lists. With the new SharePoint List template in Visual Studio, you can create a mobile app that can access an external list on a SharePoint site. This article provides a step-by-step procedure that begins with uploading an external Business Data Connectivity (BDC) service model and ends with testing your new mobile app.
+# How to: Create a mobile app in SharePoint that contains data from an external data source
+Learn how to create a simple mobile app in SharePoint that contains data from external data source by using Business Connectivity Services and connecting to an external list.
+SharePoint enables you to build mobile applications that can access external data from databases, enterprise applications, and Web 2.0 services using Business Connectivity Services. You can also provide complete interaction with the external data including write-back capabilities from your mobile device. You do this by creating apps that connect to external lists, which are a special type of lists in SharePoint that are based on external content types and contain data from an external system. The new Windows Phone SharePoint List template in Visual Studio 2010 Express enables you to quickly and easily create apps for the Windows Phone that connects to external lists. For example, you can build a Windows phone app that brings the product catalog for an inventory list in SharePoint to the phone for the sales people. This topic shows how to create a Windows Phone app that displays external data from the Northwind sample database by connecting to an external list in SharePoint. Notice that in this example, the external list connects to the Northwind database using a custom OData service; however, it's possible to connect to databases directly as well as any external system that is supported by Business Connectivity Services, using external lists. With the new SharePoint List template in Visual Studio, you can create a mobile app that can access an external list on a SharePoint site. This article provides a step-by-step procedure that begins with uploading an external Business Data Connectivity (BDC) service model and ends with testing your new mobile app.
   
     
     
@@ -24,16 +24,16 @@ SharePoint 2013 enables you to build mobile applications that can access externa
 <a name="SP15Createmobileapp_prereq"> </a>
 
 
-- A SharePoint 2013 installation with administrative privileges to upload the BDC model for the Northwind database and a SharePoint site where you create the external list
+- A SharePoint installation with administrative privileges to upload the BDC model for the Northwind database and a SharePoint site where you create the external list
     
   
-- Microsoft Visual Studio Express with the new SharePoint 2013 phone templates from  [Microsoft SharePoint SDK for Windows Phone 7.1](http://www.microsoft.com/en-us/download/details.aspx?id=30476)
+- Microsoft Visual Studio Express with the new SharePoint phone templates from  [Microsoft SharePoint SDK for Windows Phone 7.1](http://www.microsoft.com/en-us/download/details.aspx?id=30476)
     
   
-- The BDC model for our exampleNorthwind_oData.bdmc (download from  [SharePoint 2013: Create a simple external list-based phone app](http://code.msdn.microsoft.com/sharepoint/SharePoint-Create-a-88800202))
+- The BDC model for our exampleNorthwind_oData.bdmc (download from  [SharePoint: Create a simple external list-based phone app](http://code.msdn.microsoft.com/sharepoint/SharePoint-Create-a-88800202))
     
   
-- A SharePoint 2013 installation with administrative privileges to upload the BDC model for the Northwind database and a SharePoint site where you create the external list
+- A SharePoint installation with administrative privileges to upload the BDC model for the Northwind database and a SharePoint site where you create the external list
     
   
 
@@ -274,16 +274,16 @@ Now that the app is ready to run, you can test it using phone emulator.
     
     
 
--  [Build Windows Phone apps that access SharePoint 2013](build-windows-phone-apps-that-access-sharepoint.md)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
--  [Overview of Windows Phone SharePoint 2013 application templates in Visual Studio](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio.md)
+-  [Overview of Windows Phone SharePoint application templates in Visual Studio](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio.md)
     
   
 -  [How to: Create External Lists in SharePoint](http://msdn.microsoft.com/en-us/library/ee558778.aspx)
     
   
--  [How to: Create a Windows Phone SharePoint 2013 list app](how-to-create-a-windows-phone-sharepoint-list-app.md)
+-  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app.md)
     
   
 -  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)

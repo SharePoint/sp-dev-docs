@@ -1,25 +1,25 @@
 ---
-title: How to Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint 2013
+title: How to Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: c8d68632-1b55-454c-961a-f3ddad731bf6
 ---
 
 
-# How to: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint 2013
-Learn how to create and delete microblog posts and retrieve social feeds by using the SharePoint 2013 .NET client object model.
-## What are social feeds in SharePoint Server 2013?
+# How to: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint
+Learn how to create and delete microblog posts and retrieve social feeds by using the SharePoint .NET client object model.
+## What are social feeds in SharePoint?
 <a name="bk_intro"> </a>
 
-In SharePoint Server 2013, a social feed is a collection of threads that represent conversations, single microblog posts, or notifications. Threads contain a root post and a collection of reply posts, and they represent conversations, single microblog posts, or notifications. In the .NET client object model, feeds are represented by  [SocialFeed](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeed.aspx) objects, threads are represented by [SocialThread](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThread.aspx) objects, and posts and replies are represented by [SocialPost](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPost.aspx) objects. To perform core feed-related tasks in the .NET client object model, you use the [SocialFeedManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.aspx) object. In this article, we'll show you how to create a console application that uses the .NET client object model to work with social feeds.
+In SharePoint, a social feed is a collection of threads that represent conversations, single microblog posts, or notifications. Threads contain a root post and a collection of reply posts, and they represent conversations, single microblog posts, or notifications. In the .NET client object model, feeds are represented by  [SocialFeed](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeed.aspx) objects, threads are represented by [SocialThread](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThread.aspx) objects, and posts and replies are represented by [SocialPost](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPost.aspx) objects. To perform core feed-related tasks in the .NET client object model, you use the [SocialFeedManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.aspx) object. In this article, we'll show you how to create a console application that uses the .NET client object model to work with social feeds.
   
     
     
-For more information about working with  [SocialFeedManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.aspx) or for information about using other APIs to work with social feeds, see [Work with social feeds in SharePoint 2013](work-with-social-feeds-in-sharepoint.md).
+For more information about working with  [SocialFeedManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.aspx) or for information about using other APIs to work with social feeds, see [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint.md).
   
     
     
 
-## Prerequisites for setting up your development environment to work with social feeds by using the SharePoint 2013 .NET client object model
+## Prerequisites for setting up your development environment to work with social feeds by using the SharePoint .NET client object model
 <a name="bkmk_SetUpDevEnv"> </a>
 
 To create a console application that uses the .NET client object model to work with social feeds, you'll need:
@@ -27,7 +27,7 @@ To create a console application that uses the .NET client object model to work w
     
     
 
-- SharePoint Server 2013 with My Site configured, with personal sites created for the current user and a target user, with the current user following the target user, and with a few posts written by the target user
+- SharePoint with My Site configured, with personal sites created for the current user and a target user, with the current user following the target user, and with a few posts written by the target user
     
   
 - Visual Studio 2012
@@ -38,13 +38,13 @@ To create a console application that uses the .NET client object model to work w
   
 
 > **Note:**
-> If you are not developing on the computer that is running SharePoint Server 2013, get the  [SharePoint Client Components](http://www.microsoft.com/en-us/download/details.aspx?id=35585) download that contains SharePoint 2013 client assemblies.
+> If you are not developing on the computer that is running SharePoint, get the  [SharePoint Client Components](http://www.microsoft.com/en-us/download/details.aspx?id=35585) download that contains SharePoint client assemblies.
   
     
     
 
 
-## Create a console application that works with social feeds by using the SharePoint 2013 .NET client object model
+## Create a console application that works with social feeds by using the SharePoint .NET client object model
 <a name="bk_createconsole"> </a>
 
 
@@ -76,7 +76,7 @@ To create a console application that uses the .NET client object model to work w
     
   
 
-## Code example: Publish posts and replies to the social feed by using the SharePoint 2013 .NET client object model
+## Code example: Publish posts and replies to the social feed by using the SharePoint .NET client object model
 <a name="bkmk_PubPosts"> </a>
 
 The following code example publishes a post and a reply from the current user. It shows how to:
@@ -206,7 +206,7 @@ namespace SocialFeedCSOM
 ```
 
 
-## Code example: Retrieve social feeds by using the SharePoint 2013 .NET client object model
+## Code example: Retrieve social feeds by using the SharePoint .NET client object model
 <a name="bkmk_GetFeeds"> </a>
 
 The following code example retrieves feeds for the current user and a target user. It shows how to:
@@ -223,7 +223,7 @@ The following code example retrieves feeds for the current user and a target use
 - Iterate through the feeds to find all non-reference threads and to get information about threads and posts. Reference threads represent notifications that contain information about another thread. For example, if a user mentions someone in a post, the server generates a **MentionReference**-type thread that contains the link to the original post and other metadata about the post.
     
   
-For more information about feed types, see  [Overview of feed types](work-with-social-feeds-in-sharepoint.md#bkmk_FeedTypes). For more information about reference threads, see  [Reference threads and digest threads in SharePoint Server 2013 social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md).
+For more information about feed types, see  [Overview of feed types](work-with-social-feeds-in-sharepoint.md#bkmk_FeedTypes). For more information about reference threads, see  [Reference threads and digest threads in SharePoint social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md).
   
     
     
@@ -334,7 +334,7 @@ namespace SocialFeedCSOM
 ```
 
 
-## Code example: Delete posts and replies from the social feed by using the SharePoint 2013 .NET client object model
+## Code example: Delete posts and replies from the social feed by using the SharePoint .NET client object model
 <a name="bkmk_DeletePosts"> </a>
 
 The following code example deletes a post or a reply from the current user's personal feed. It shows how to:
@@ -468,7 +468,7 @@ namespace SocialFeedCSOM
 ## Next steps
 <a name="bkmk_DeletePosts"> </a>
 
- [How to: Include mentions, tags, and links to sites and documents in posts in SharePoint Server 2013](how-to-include-mentions-tags-and-links-to-sites-and-documents-in-posts-in-sharep.md)
+ [How to: Include mentions, tags, and links to sites and documents in posts in SharePoint](how-to-include-mentions-tags-and-links-to-sites-and-documents-in-posts-in-sharep.md)
   
     
     
@@ -477,16 +477,16 @@ namespace SocialFeedCSOM
 <a name="bk_addResources"> </a>
 
 
--  [Work with social feeds in SharePoint 2013](work-with-social-feeds-in-sharepoint.md)
+-  [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint.md)
     
   
--  [How to: Create and delete posts and retrieve the social feed by using the JavaScript object model in SharePoint 2013](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md)
+-  [How to: Create and delete posts and retrieve the social feed by using the JavaScript object model in SharePoint](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md)
     
   
--  [How to: Learn to read and write to the social feed by using the REST service in SharePoint 2013](how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-rest-service-in-s.md)
+-  [How to: Learn to read and write to the social feed by using the REST service in SharePoint](how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-rest-service-in-s.md)
     
   
--  [Reference threads and digest threads in SharePoint Server 2013 social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md)
+-  [Reference threads and digest threads in SharePoint social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md)
     
   
 

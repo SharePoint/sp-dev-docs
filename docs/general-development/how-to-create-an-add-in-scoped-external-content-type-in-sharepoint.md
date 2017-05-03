@@ -1,11 +1,11 @@
 ---
-title: How to Create an add-in-scoped external content type in SharePoint 2013
+title: How to Create an add-in-scoped external content type in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: de4b50a3-84da-48ce-9ba0-fe06571e52a8
 ---
 
 
-# How to: Create an add-in-scoped external content type in SharePoint 2013
+# How to: Create an add-in-scoped external content type in SharePoint
 Learn how to create external content types that can be installed, secured, and used in an SharePoint Add-in.
 ## Prerequisites for developing add-in-scoped external content types
 <a name="bkmk_Prerequisites"> </a>
@@ -15,7 +15,7 @@ To get started developing add-in-scoped external content types, you need the fol
     
     
 
-- SharePoint 2013
+- SharePoint
     
   
 - Visual Studio 2012
@@ -27,7 +27,7 @@ To get started developing add-in-scoped external content types, you need the fol
 - A published OData service available through the Internet
     
   
-For information about setting up a SharePoint development environment, see  [Set up a general development environment for SharePoint 2013](set-up-a-general-development-environment-for-sharepoint.md).
+For information about setting up a SharePoint development environment, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md).
   
     
     
@@ -46,7 +46,7 @@ The following steps show how to create an external content type based on an Open
 1. Open Visual Studio 2012.
     
   
-2. Create an **Add-in for SharePoint 2013** project.
+2. Create an **Add-in for SharePoint** project.
     
   
 3. Specify the add-in settings, including add-in name, the site URL for debugging the add-in, and how you would like to host the add-in (Autohosted, Provider-hosted, or SharePoint-hosted). For more information, see  [Choose patterns for developing and hosting your SharePoint Add-in](http://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx).
@@ -99,7 +99,7 @@ For complete steps for creating SharePoint Add-ins, see the following:
 <a name="bk_addresources"> </a>
 
 
--  [Add-in-scoped external content types in SharePoint 2013](add-in-scoped-external-content-types-in-sharepoint.md)
+-  [Add-in-scoped external content types in SharePoint](add-in-scoped-external-content-types-in-sharepoint.md)
     
   
 -  [Choose patterns for developing and hosting your SharePoint Add-in](http://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx)
@@ -108,13 +108,13 @@ For complete steps for creating SharePoint Add-ins, see the following:
 -  [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)
     
   
--  [External content types in SharePoint 2013](external-content-types-in-sharepoint.md)
+-  [External content types in SharePoint](external-content-types-in-sharepoint.md)
     
   
--  [Get started with Business Connectivity Services in SharePoint 2013](get-started-with-business-connectivity-services-in-sharepoint.md)
+-  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint.md)
     
   
--  [Business Connectivity Services in SharePoint 2013](business-connectivity-services-in-sharepoint.md)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
     
   
 

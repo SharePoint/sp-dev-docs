@@ -1,21 +1,21 @@
 ---
-title: Work with social feeds in SharePoint 2013
+title: Work with social feeds in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 39f2163e-15cc-43bc-b131-041d5afdcd90
 ---
 
 
 
-# Work with social feeds in SharePoint 2013
-Learn about common programming tasks for working with social feeds and microblog posts in SharePoint Server 2013.
-## APIs for working with social feeds in SharePoint Server 2013
+# Work with social feeds in SharePoint
+Learn about common programming tasks for working with social feeds and microblog posts in SharePoint.
+## APIs for working with social feeds in SharePoint
 <a name="bkmk_APIversions"> </a>
 
-In SharePoint Server 2013 on-premises farms, interactive social feeds are designed to encourage people to share information and to stay connected with people and content. You can see many of the feed features on the **Newsfeed** page on a user's personal site. Feeds contain collections of threads that represent microblog posts, conversations, status updates, and other notifications.
+In SharePoint on-premises farms, interactive social feeds are designed to encourage people to share information and to stay connected with people and content. You can see many of the feed features on the **Newsfeed** page on a user's personal site. Feeds contain collections of threads that represent microblog posts, conversations, status updates, and other notifications.
   
     
     
-SharePoint Server 2013 provides the following APIs that you can use to programmatically work with social feeds:
+SharePoint provides the following APIs that you can use to programmatically work with social feeds:
   
     
     
@@ -40,7 +40,7 @@ SharePoint Server 2013 provides the following APIs that you can use to programma
 - Server object model
     
   
-As a best practice in SharePoint 2013 development, use client APIs when you can. Client APIs include the client object models, the JavaScript object model, and the REST service. For more information about the APIs in SharePoint 2013 and when to use them, see  [Choose the right API set in SharePoint 2013](choose-the-right-api-set-in-sharepoint.md).
+As a best practice in SharePoint development, use client APIs when you can. Client APIs include the client object models, the JavaScript object model, and the REST service. For more information about the APIs in SharePoint and when to use them, see  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md).
   
     
     
@@ -56,13 +56,13 @@ Each API includes a manager object that you use to perform core feed-related tas
     
 
 
-**Table 1. SharePoint 2013 APIs used for working with social feeds programmatically**
+**Table 1. SharePoint APIs used for working with social feeds programmatically**
 
 |**API**|**Key objects**|
 |:-----|:-----|
-|.NET client object model  <br/> See:  [How to: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint 2013](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-net-cli.md)|Manager object:            [SocialFeedManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.aspx) <br/> Primary namespace:            [Microsoft.SharePoint.Client.Social](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.aspx) <br/> Other key objects:            [SocialFeed](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeed.aspx) , [SocialThread](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThread.aspx) , [SocialPost](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPost.aspx) , [SocialPostCreationData](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.aspx) , [SocialFeedOptions](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedOptions.aspx) , [SocialActor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActor.aspx) <br/> Class library:           Microsoft.SharePoint.Client.UserProfiles.dll|
-|JavaScript object model  <br/> See  [How to: Create and delete posts and retrieve the social feed by using the JavaScript object model in SharePoint 2013](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md)|Manager object:            [SocialFeedManager](http://msdn.microsoft.com/library/651fdf0f-841d-88f9-1e07-fcb3ad8c9410%28Office.15%29.aspx) <br/> Primary namespace:            [SP.Social](http://msdn.microsoft.com/library/43d47f01-c085-0e77-bd01-48bcb7d5bb35%28Office.15%29.aspx) <br/> Other key objects:            [SocialFeed](http://msdn.microsoft.com/library/356c5475-2fd6-a655-c271-5d7f21af45e2%28Office.15%29.aspx),  [SocialThread](http://msdn.microsoft.com/library/46aa4beb-d708-f20e-471e-626c8a7efab7%28Office.15%29.aspx),  [SocialPost](http://msdn.microsoft.com/library/a761ce71-d3d7-420a-1e06-962674124dfa%28Office.15%29.aspx),  [SocialPostCreationData](http://msdn.microsoft.com/library/f0e1fa3e-6fc9-48e0-5570-92091abfef33%28Office.15%29.aspx),  [SocialFeedOptions](http://msdn.microsoft.com/library/65caf283-6e7a-50dc-ef8e-a4e12bd237ac%28Office.15%29.aspx),  [SocialActor](http://msdn.microsoft.com/library/4e369fd5-b9b0-9804-957e-b3e39c559cd4%28Office.15%29.aspx) <br/> Class library:           SP.UserProfiles.js|
-|REST service  <br/> See  [How to: Learn to read and write to the social feed by using the REST service in SharePoint 2013](how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-rest-service-in-s.md)|Manager resource:            [social.feed](social-feed-rest-api-reference-for-sharepoint.md) (SocialRestFeedManager) <br/> Primary namespace (OData):           **SP.Social** <br/> Other key resources:           SocialFeed,  [SocialRestFeed](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestFeed), SocialThread,  [SocialRestThread](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestThread), SocialPost, SocialPostCreationData,  [SocialRestPostCreationData](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestPostCreationData),  [SocialFeedOptions](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialFeedOptions), SocialActor,  [SociaRestActor](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestActor) <br/> Access point:            `<siteUri>/_api/social.feed`|
+|.NET client object model  <br/> See:  [How to: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-net-cli.md)|Manager object:            [SocialFeedManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.aspx) <br/> Primary namespace:            [Microsoft.SharePoint.Client.Social](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.aspx) <br/> Other key objects:            [SocialFeed](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeed.aspx) , [SocialThread](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThread.aspx) , [SocialPost](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPost.aspx) , [SocialPostCreationData](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.aspx) , [SocialFeedOptions](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedOptions.aspx) , [SocialActor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActor.aspx) <br/> Class library:           Microsoft.SharePoint.Client.UserProfiles.dll|
+|JavaScript object model  <br/> See  [How to: Create and delete posts and retrieve the social feed by using the JavaScript object model in SharePoint](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md)|Manager object:            [SocialFeedManager](http://msdn.microsoft.com/library/651fdf0f-841d-88f9-1e07-fcb3ad8c9410%28Office.15%29.aspx) <br/> Primary namespace:            [SP.Social](http://msdn.microsoft.com/library/43d47f01-c085-0e77-bd01-48bcb7d5bb35%28Office.15%29.aspx) <br/> Other key objects:            [SocialFeed](http://msdn.microsoft.com/library/356c5475-2fd6-a655-c271-5d7f21af45e2%28Office.15%29.aspx),  [SocialThread](http://msdn.microsoft.com/library/46aa4beb-d708-f20e-471e-626c8a7efab7%28Office.15%29.aspx),  [SocialPost](http://msdn.microsoft.com/library/a761ce71-d3d7-420a-1e06-962674124dfa%28Office.15%29.aspx),  [SocialPostCreationData](http://msdn.microsoft.com/library/f0e1fa3e-6fc9-48e0-5570-92091abfef33%28Office.15%29.aspx),  [SocialFeedOptions](http://msdn.microsoft.com/library/65caf283-6e7a-50dc-ef8e-a4e12bd237ac%28Office.15%29.aspx),  [SocialActor](http://msdn.microsoft.com/library/4e369fd5-b9b0-9804-957e-b3e39c559cd4%28Office.15%29.aspx) <br/> Class library:           SP.UserProfiles.js|
+|REST service  <br/> See  [How to: Learn to read and write to the social feed by using the REST service in SharePoint](how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-rest-service-in-s.md)|Manager resource:            [social.feed](social-feed-rest-api-reference-for-sharepoint.md) (SocialRestFeedManager) <br/> Primary namespace (OData):           **SP.Social** <br/> Other key resources:           SocialFeed,  [SocialRestFeed](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestFeed), SocialThread,  [SocialRestThread](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestThread), SocialPost, SocialPostCreationData,  [SocialRestPostCreationData](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestPostCreationData),  [SocialFeedOptions](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialFeedOptions), SocialActor,  [SociaRestActor](social-feed-rest-api-reference-for-sharepoint.md#bk_SocialRestActor) <br/> Access point:            `<siteUri>/_api/social.feed`|
 |Server object model <br/>Note: Code that uses the server object model to access feed data and runs remotely must use an  [SPServiceContextScope](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPServiceContextScope.aspx) object.|Manager object:            [SPSocialFeedManager](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFeedManager.aspx) <br/> Primary namespace:            [Microsoft.Office.Server.Social](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.aspx) <br/> Other key objects:            [SPSocialFeed](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFeed.aspx) , [SPSocialThread](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialThread.aspx) , [SPSocialPost](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialPost.aspx) , [SPSocialFeedOptions](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFeedOptions.aspx) , [SPSocialActor](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialActor.aspx) <br/> Class library:           Microsoft.Office.Server.UserProfiles.dll|
    
 If you're using the server object model to access feed content and your code isn't running in a SharePoint instance (in other words, if your extension is not installed in the LAYOUTS folder on the application server), use an  [SPServiceContextScope](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPServiceContextScope.aspx) object in your code. The following code example shows one way to incorporate the [SPServiceContextScope](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPServiceContextScope.aspx) object into your code.
@@ -85,7 +85,7 @@ using (SPSite site = new SPSite(<siteURL>))
 ```
 
 
-## Common programming tasks for working with social feeds in SharePoint Server 2013
+## Common programming tasks for working with social feeds in SharePoint
 <a name="bkmk_CommonTasks"> </a>
 
 Table 2 shows common programming tasks for working with social feeds and the members that you use to perform them. Members are from the .NET client object model (CSOM), JavaScript object model (JSOM), REST service, and server object model (SSOM).
@@ -93,7 +93,7 @@ Table 2 shows common programming tasks for working with social feeds and the mem
     
     
 
-**Table 2. API for common programming tasks for working with social feeds in SharePoint Server 2013**
+**Table 2. API for common programming tasks for working with social feeds in SharePoint**
 
 
 |**Task**|**Members**|
@@ -122,7 +122,7 @@ Table 2 shows common programming tasks for working with social feeds and the mem
     
     
 
-SharePoint Server 2013 does not provide an API to customize the layout or rendering of microblog posts directly. SharePoint Server 2013 only provides the data and allows cross-platform and cross-device client applications to define layouts that are appropriate for their form factors and needs. In SharePoint 2013 development, you can use JavaScript overrides in client-side rendering, as described in  [Customize a list view in SharePoint Add-ins using client-side rendering](http://msdn.microsoft.com/library/8d5cabb2-70d0-46a0-bfe0-9e21f8d67d86%28Office.15%29.aspx).
+SharePoint does not provide an API to customize the layout or rendering of microblog posts directly. SharePoint only provides the data and allows cross-platform and cross-device client applications to define layouts that are appropriate for their form factors and needs. In SharePoint development, you can use JavaScript overrides in client-side rendering, as described in  [Customize a list view in SharePoint Add-ins using client-side rendering](http://msdn.microsoft.com/library/8d5cabb2-70d0-46a0-bfe0-9e21f8d67d86%28Office.15%29.aspx).
   
     
     
@@ -173,28 +173,28 @@ If a thread contains more than two replies, the server returns a digest of the t
 - **Conceptual and how-to articles**
     
   
--  [Social and collaboration features in SharePoint 2013](social-and-collaboration-features-in-sharepoint.md)
+-  [Social and collaboration features in SharePoint](social-and-collaboration-features-in-sharepoint.md)
     
   
--  [Get started developing with social features in SharePoint 2013](get-started-developing-with-social-features-in-sharepoint.md)
+-  [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint.md)
     
   
--  [How to: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint 2013](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-net-cli.md)
+-  [How to: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-net-cli.md)
     
   
--  [How to: Create and delete posts and retrieve the social feed by using the JavaScript object model in SharePoint 2013](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md)
+-  [How to: Create and delete posts and retrieve the social feed by using the JavaScript object model in SharePoint](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md)
     
   
--  [How to: Learn to read and write to the social feed by using the REST service in SharePoint 2013](how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-rest-service-in-s.md)
+-  [How to: Learn to read and write to the social feed by using the REST service in SharePoint](how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-rest-service-in-s.md)
     
   
--  [How to: Include mentions, tags, and links to sites and documents in posts in SharePoint Server 2013](how-to-include-mentions-tags-and-links-to-sites-and-documents-in-posts-in-sharep.md)
+-  [How to: Include mentions, tags, and links to sites and documents in posts in SharePoint](how-to-include-mentions-tags-and-links-to-sites-and-documents-in-posts-in-sharep.md)
     
   
--  [How to: Embed images, videos, and documents in posts in SharePoint Server 2013](how-to-embed-images-videos-and-documents-in-posts-in-sharepoint-server.md)
+-  [How to: Embed images, videos, and documents in posts in SharePoint](how-to-embed-images-videos-and-documents-in-posts-in-sharepoint-server.md)
     
   
--  [Reference threads and digest threads in SharePoint Server 2013 social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md)
+-  [Reference threads and digest threads in SharePoint social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md)
     
   
 - **API reference documentation**
@@ -206,7 +206,7 @@ If a thread contains more than two replies, the server returns a digest of the t
 -  [SP.Social namespace](http://msdn.microsoft.com/library/43d47f01-c085-0e77-bd01-48bcb7d5bb35%28Office.15%29.aspx) (JavaScript object model)
     
   
--  [Social feed REST API reference for SharePoint 2013](social-feed-rest-api-reference-for-sharepoint.md)
+-  [Social feed REST API reference for SharePoint](social-feed-rest-api-reference-for-sharepoint.md)
     
   
 -  [Microsoft.Office.Server.Social](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.aspx) (server object model)

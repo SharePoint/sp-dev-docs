@@ -1,12 +1,12 @@
 ---
-title: Machine Translation Services in SharePoint 2013
+title: Machine Translation Services in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 15a81428-da94-40b8-8ed4-6a12f05661e2
 ---
 
 
-# Machine Translation Services in SharePoint 2013
-Learn about the Machine Translation Service, which is a new service application in SharePoint 2013 that provides automatic machine translation of files and sites.
+# Machine Translation Services in SharePoint
+Learn about the Machine Translation Service, which is a new service application in SharePoint that provides automatic machine translation of files and sites.
 ## Machine Translation Service overview
 <a name="TranslationSvc_Overview"> </a>
 
@@ -17,7 +17,7 @@ Learn about the Machine Translation Service, which is a new service application 
     
     
 
-Machine Translation Service is a new service application in SharePoint 2013 that provides automatic machine translation of files and sites. When the Machine Translation Service application processes a translation request, it forwards the request to the  [Microsoft Translator](http://www.microsoft.com/en-us/translator/) cloud-hosted machine translation service, where the actual translation work is performed. This cloud-service also powers the Microsoft Office, Lync, Yammer and Bing translation features.
+Machine Translation Service is a new service application in SharePoint that provides automatic machine translation of files and sites. When the Machine Translation Service application processes a translation request, it forwards the request to the  [Microsoft Translator](http://www.microsoft.com/en-us/translator/) cloud-hosted machine translation service, where the actual translation work is performed. This cloud-service also powers the Microsoft Office, Lync, Yammer and Bing translation features.
   
     
     
@@ -54,7 +54,7 @@ The Machine Translation Service object model is modeled after the Word Automatio
 ## Using the Machine Translation Service server object model
 <a name="TranslationSvc_ServerOM"> </a>
 
-Applications that use the server object model must run directly on a server that is running SharePoint 2013. For information about creating applications that can be hosted remotely, see  [Using the Machine Translation Services client object model](#TranslationSvc_UsingCSOM) later in this topic. The Machine Translation Service server object model resides in the **Microsoft.Office.TranslationServices** namespace, which is located in Microsoft.Office.TranslationServices.dll.
+Applications that use the server object model must run directly on a server that is running SharePoint. For information about creating applications that can be hosted remotely, see  [Using the Machine Translation Services client object model](#TranslationSvc_UsingCSOM) later in this topic. The Machine Translation Service server object model resides in the **Microsoft.Office.TranslationServices** namespace, which is located in Microsoft.Office.TranslationServices.dll.
   
     
     
@@ -70,7 +70,7 @@ Using the server object model, you can submit requests to the Machine Translatio
   
     
     
-For sample code demonstrating how to use the server object model from a console application, see  [SharePoint 2013: Access Machine Translation Service using server object model](http://code.msdn.microsoft.com/SharePoint-Access-86639c3d ).
+For sample code demonstrating how to use the server object model from a console application, see  [SharePoint: Access Machine Translation Service using server object model](http://code.msdn.microsoft.com/SharePoint-Access-86639c3d ).
   
     
     
@@ -234,7 +234,7 @@ Machine Translation Service also includes a client object model (CSOM) that enab
   
     
     
-The Machine Translation Service CSOM includes a .NET managed client-side object model and Microsoft Silverlight and JavaScript object models. It is built on the SharePoint 2013 CSOM. Therefore, client code first accesses the SharePoint 2013 CSOM and then accesses the Machine Translation Service CSOM. 
+The Machine Translation Service CSOM includes a .NET managed client-side object model and Microsoft Silverlight and JavaScript object models. It is built on the SharePoint CSOM. Therefore, client code first accesses the SharePoint CSOM and then accesses the Machine Translation Service CSOM. 
   
     
     
@@ -274,7 +274,7 @@ For the .NET managed CSOM, get a **ClientContext** instance (located in the **Mi
   
     
     
-For sample code demonstrating how to use the .NET Managed CSOM, see  [SharePoint 2013: Access Machine Translation Service using the client object model](http://code.msdn.microsoft.com/SharePoint-Perform-a-8e53b06a).
+For sample code demonstrating how to use the .NET Managed CSOM, see  [SharePoint: Access Machine Translation Service using the client object model](http://code.msdn.microsoft.com/SharePoint-Perform-a-8e53b06a).
   
     
     
@@ -290,7 +290,7 @@ For the Silverlight CSOM, get a **ClientContext** instance (located in the **Mic
   
     
     
-For sample code demonstrating how to use the Silverlight CSOM, see  [SharePoint 2013: Access Machine Translation Service from Silverlight application](http://code.msdn.microsoft.com/SharePoint-Access-cdaff6b2).
+For sample code demonstrating how to use the Silverlight CSOM, see  [SharePoint: Access Machine Translation Service from Silverlight application](http://code.msdn.microsoft.com/SharePoint-Access-cdaff6b2).
   
     
     
@@ -492,7 +492,7 @@ For the JavaScript CSOM, get an **SP.ClientContext** instance, and then use the 
   
     
     
-For sample code demonstrating how to use the JavaScript CSOM, see  [SharePoint 2013: Accessing the Machine Translation Service with JavaScript](http://code.msdn.microsoft.com/SharePoint-Accessing-647f6dd9).
+For sample code demonstrating how to use the JavaScript CSOM, see  [SharePoint: Accessing the Machine Translation Service with JavaScript](http://code.msdn.microsoft.com/SharePoint-Accessing-647f6dd9).
   
     
     
@@ -646,7 +646,7 @@ clientContext.executeQueryAsync(Function.createDelegate(this, this.onQuerySuccee
 ## Machine Translation Service REST service
 <a name="TranslationSvc_REST"> </a>
 
-SharePoint 2013 includes a Representational State Transfer (REST) service that enables you to remotely interact with the Machine Translation Service application by using any technology that supports REST web requests. For general information about REST in SharePoint 2013, see  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx).
+SharePoint includes a Representational State Transfer (REST) service that enables you to remotely interact with the Machine Translation Service application by using any technology that supports REST web requests. For general information about REST in SharePoint, see  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx).
   
     
     
@@ -801,7 +801,7 @@ SharePoint Machine Translation Service uses the paragraph language as the Source
 <a name="TranslationSvc_AR"> </a>
 
 
--  [Office 2013 and SharePoint 2013 application services](office-and-sharepoint-application-services.md)
+-  [Office 2013 and SharePoint application services](office-and-sharepoint-application-services.md)
     
   
 

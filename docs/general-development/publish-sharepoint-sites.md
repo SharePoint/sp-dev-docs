@@ -1,11 +1,11 @@
 ---
-title: Publish SharePoint 2013 sites
+title: Publish SharePoint sites
 ms.prod: SHAREPOINT
 ms.assetid: 46b5a79c-962f-4a07-8316-d5005eabd0e0
 ---
 
 
-# Publish SharePoint 2013 sites
+# Publish SharePoint sites
 
 After you design or develop site components and content, you can deploy them to the current site collection and other site collections—even to site collections that cross the intranet/Internet boundary.
   
@@ -58,7 +58,7 @@ Different markets have different tastes. The variations feature helps accommodat
 -  [Build sites for SharePoint](build-sites-for-sharepoint.md)
     
   
--  [What's new with SharePoint 2013 site development](what-s-new-with-sharepoint-site-development.md)
+-  [What's new with SharePoint site development](what-s-new-with-sharepoint-site-development.md)
     
   
 

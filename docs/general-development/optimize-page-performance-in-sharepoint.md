@@ -1,19 +1,19 @@
 ---
-title: Optimize page performance in SharePoint 2013
+title: Optimize page performance in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 262caeef-64fd-4e02-b947-d772faf01159
 ---
 
 
 
-# Optimize page performance in SharePoint 2013
-Learn about features to improve performance in pages in SharePoint 2013. These features can be used to enhance the experience in geographically distributed implementations.
+# Optimize page performance in SharePoint
+Learn about features to improve performance in pages in SharePoint. These features can be used to enhance the experience in geographically distributed implementations.
  * **Provided by: *** David Crawford, Microsoft Corporation
   
     
     
 
-This article provides instructions that will help optimize performance in SharePoint. SharePoint 2013 includes features that help optimize page loading over a Wide Area Network (WAN). Designing pages to make them as small and responsive as possible complements these performance improvements.
+This article provides instructions that will help optimize performance in SharePoint. SharePoint includes features that help optimize page loading over a Wide Area Network (WAN). Designing pages to make them as small and responsive as possible complements these performance improvements.
 ## Minimal Download Strategy (MDS)
 <a name="MDS"> </a>
 
@@ -459,7 +459,7 @@ The MDS engine uses the first parameter to filter the scripts. Here are the rule
 - If the first argument is a Web Part, the scripts will execute in the browser.
     
   
-Many APIs in previous versions of SharePoint did not provide the current control as an argument. The public object model in SharePoint 2013 was designed to provide an alternate method to register the resources. The methods that do not provide the current control as an argument are still in the API for backward compatibility.
+Many APIs in previous versions of SharePoint did not provide the current control as an argument. The public object model in SharePoint was designed to provide an alternate method to register the resources. The methods that do not provide the current control as an argument are still in the API for backward compatibility.
   
     
     
@@ -475,7 +475,7 @@ You must update the XSLT used by Web Parts because all the resources must be add
 ## Optimize page downloads
 <a name="MDS"> </a>
 
-Once you understand the composition of a page, you can use different methods to optimize the download experience for that page. In general, the goal is to minimize the number of round trips between client and server computers and to reduce the amount of data that goes over the network. The guidance in this article includes recommendations that you can apply broadly to a variety of different implementations of SharePoint 2013.
+Once you understand the composition of a page, you can use different methods to optimize the download experience for that page. In general, the goal is to minimize the number of round trips between client and server computers and to reduce the amount of data that goes over the network. The guidance in this article includes recommendations that you can apply broadly to a variety of different implementations of SharePoint.
   
     
     
@@ -791,7 +791,7 @@ The following table describes customizations that will increase the time that is
 ## Developer Dashboard
 <a name="DeveloperDashboard"> </a>
 
-The Developer Dashboard is rebuilt for SharePoint 2013 to provide more information, including MDS. It runs in a separate window to avoid affecting rendering of the actual page, and it provides detailed request information per page with a chart view. It also includes a dedicated tab for Unified Logging System (ULS) log entries for a particular request. Additional detailed information is included for request analysis. It uses a dedicated Windows Communication Foundation (WCF) service (diagnosticsdata.svc) designed to provide tracing information.
+The Developer Dashboard is rebuilt for SharePoint to provide more information, including MDS. It runs in a separate window to avoid affecting rendering of the actual page, and it provides detailed request information per page with a chart view. It also includes a dedicated tab for Unified Logging System (ULS) log entries for a particular request. Additional detailed information is included for request analysis. It uses a dedicated Windows Communication Foundation (WCF) service (diagnosticsdata.svc) designed to provide tracing information.
   
     
     
@@ -800,7 +800,7 @@ To learn more about the Developer Dashboard:
     
     
 
--  [Overview of the SharePoint 2013 renewed developer dashboard](http://www.microsoft.com/resources/technet/en-us/office/media/video/video.mdl?cid=stc&amp;amp;from=mscomstc&amp;amp;VideoID=505bdd61-1fcc-4125-97fc-b5f0dda72cbc) (video).
+-  [Overview of the SharePoint renewed developer dashboard](http://www.microsoft.com/resources/technet/en-us/office/media/video/video.mdl?cid=stc&amp;amp;from=mscomstc&amp;amp;VideoID=505bdd61-1fcc-4125-97fc-b5f0dda72cbc) (video).
     
   
 -  [Renewed Developer Dashboard](http://download.microsoft.com/download/7/7/3/773CA2C2-579B-408C-808E-A6F561194E20/Ig15_SP_IT_M10V3_devdash.pptx) (PowerPoint slide deck).
@@ -840,7 +840,7 @@ Figure 5 shows the Developer Dashboard.
   
     
     
-It is important to understand how these requests and the number of images and queries affect performance. There are similarities when it comes to server-side rendered list views (XSL or CAML) as they follow the same size recommendations as client-side rendered list views. However, server list view guidance is to create only list views necessary to accomplish your requirements when your goal is optimal performance, as thousands of views will cause greater degradation in performance due to compilation cache management. The physical characteristics of the computer, such as memory and processor speed, will factor into the overall speed. There is also consideration for where the requests route or how they are distributed. To better understand how SharePoint routes and distributes requests, you can use the Request Manager tool. However, discussing request distribution is beyond the scope of this article. For more information, see  [Configure Request Manager in SharePoint Server 2013](http://technet.microsoft.com/library/jj712708.aspx).
+It is important to understand how these requests and the number of images and queries affect performance. There are similarities when it comes to server-side rendered list views (XSL or CAML) as they follow the same size recommendations as client-side rendered list views. However, server list view guidance is to create only list views necessary to accomplish your requirements when your goal is optimal performance, as thousands of views will cause greater degradation in performance due to compilation cache management. The physical characteristics of the computer, such as memory and processor speed, will factor into the overall speed. There is also consideration for where the requests route or how they are distributed. To better understand how SharePoint routes and distributes requests, you can use the Request Manager tool. However, discussing request distribution is beyond the scope of this article. For more information, see  [Configure Request Manager in SharePoint](http://technet.microsoft.com/library/jj712708.aspx).
   
     
     
@@ -848,7 +848,7 @@ It is important to understand how these requests and the number of images and qu
 ## Conclusion
 <a name="bk_conclusion"> </a>
 
-Much of the guidance for SharePoint 2010 page performance optimization applies to SharePoint 2013. This article provides some of the elements of guidance for SharePoint 2010 while diving into new areas that would specifically benefit performance. We covered some obvious changes or enhancements, for example, MDS and the enhanced Developer Dashboard. We wrapped up with the classic guidance: crunch down JavaScript and cascading style sheets, use a CDN for common JavaScript libraries if possible for caching, combine and compress images as much as possible, limit or remove unnecessary data from view, and construct list views judiciously. The techniques and features discussed in this article contribute to supporting your performance goals.
+Much of the guidance for SharePoint 2010 page performance optimization applies to SharePoint. This article provides some of the elements of guidance for SharePoint 2010 while diving into new areas that would specifically benefit performance. We covered some obvious changes or enhancements, for example, MDS and the enhanced Developer Dashboard. We wrapped up with the classic guidance: crunch down JavaScript and cascading style sheets, use a CDN for common JavaScript libraries if possible for caching, combine and compress images as much as possible, limit or remove unnecessary data from view, and construct list views judiciously. The techniques and features discussed in this article contribute to supporting your performance goals.
   
     
     
@@ -860,12 +860,12 @@ Much of the guidance for SharePoint 2010 page performance optimization applies t
 -  [Build sites for SharePoint](build-sites-for-sharepoint.md)
     
   
--  [SharePoint 2013 Design Manager image renditions](sharepoint-design-manager-image-renditions.md)
+-  [SharePoint Design Manager image renditions](sharepoint-design-manager-image-renditions.md)
     
   
--  [Overview of Design Manager in SharePoint 2013](overview-of-design-manager-in-sharepoint.md)
+-  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md)
     
   
--  [Overview of the SharePoint 2013 page model](overview-of-the-sharepoint-page-model.md)
+-  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md)
     
   

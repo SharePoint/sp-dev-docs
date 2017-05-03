@@ -1,6 +1,6 @@
 
 # UX design for SharePoint Add-ins
-Learn about the user experience (UX) options that you have when you build add-ins in SharePoint 2013.
+Learn about the user experience (UX) options that you have when you build add-ins in SharePoint.
  
 
  **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
@@ -9,7 +9,7 @@ Learn about the user experience (UX) options that you have when you build add-in
 As a developer, you should always give high priority to the user experience (UX) when you are creating add-ins. The model for SharePoint Add-ins offers many UX components and mechanisms that help you build a great user experience. The user experience in the add-in model is also flexible enough to let you use the techniques and platforms that best adapt to the needs of end users.
  
 
-## High-level overview of add-in UX in SharePoint 2013
+## High-level overview of add-in UX in SharePoint
 <a name="SP15_UXdesignapps_overview"> </a>
 
 As the add-in developer, you have to know the architecture of your add-in. After you determine how your add-in will be distributed in remote and SharePoint platforms, you can decide among the available alternatives for building your add-in UX. You might ask yourself the following questions:
@@ -23,7 +23,7 @@ As the add-in developer, you have to know the architecture of your add-in. After
 - What can I use if I am creating a SharePoint-hosted add-in? For more information, see  [Choose patterns for developing and hosting your SharePoint Add-in](choose-patterns-for-developing-and-hosting-your-sharepoint-add-in.md).
     
  
-- How can I connect my UX to the host web? For more information, see  [Host webs, add-in webs, and SharePoint components in SharePoint 2013](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md).
+- How can I connect my UX to the host web? For more information, see  [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md).
     
  
 The following diagram shows the main scenarios and options to consider when you are designing your add-in UX.
@@ -50,14 +50,14 @@ Suppose that you determine that some of your user experience is not hosted in Sh
  
 
  
-The following UX resources are available for cloud-hosted add-ins in SharePoint 2013:
+The following UX resources are available for cloud-hosted add-ins in SharePoint:
  
 
  
 
 -  **Chrome control:** Thechrome control enables you to use the navigation header of a specific SharePoint site in your add-in without needing to register a server library or use a specific technology or tool. To use this functionality, you must register a SharePoint JavaScript library through standard <script> tags. You can provide a placeholder by using an HTML **div** element and further customize the control by using the available options. The control inherits its appearance from the specified SharePoint website. For more information, see [Use the client chrome control in SharePoint Add-ins](use-the-client-chrome-control-in-sharepoint-add-ins.md).
     
-    **Watch the video: SharePoint 2013 chrome control**
+    **Watch the video: SharePoint chrome control**
 
  
 
@@ -163,13 +163,13 @@ To learn how to use the add-in UX options in SharePoint Add-ins, see the followi
 -  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscape.md)
     
  
--  [Host webs, add-in webs, and SharePoint components in SharePoint 2013](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md)
+-  [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md)
     
  
 -  [SharePoint Add-ins UX design guidelines](sharepoint-add-ins-ux-design-guidelines.md)
     
  
--  [Create UX components in SharePoint 2013](create-ux-components-in-sharepoint-2013.md)
+-  [Create UX components in SharePoint](create-ux-components-in-sharepoint-2013.md)
     
  
 -  [Use a SharePoint website's style sheet in SharePoint Add-ins](use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins.md)

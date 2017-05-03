@@ -1,5 +1,5 @@
 # Design SharePoint Add-ins
-Get an overview of the design and architecture options that are available in SharePoint Add-ins, and learn how to make the right decisions to ease the development of your add-in in SharePoint 2013.
+Get an overview of the design and architecture options that are available in SharePoint Add-ins, and learn how to make the right decisions to ease the development of your add-in in SharePoint.
  
 
  **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
@@ -11,7 +11,7 @@ Let's say you have a killer idea for an add-in. In this section, we'll guide you
 ## Start designing SharePoint Add-ins
 <a name="SP15Design_Startdesigning"> </a>
 
-Because the Cloud Add-in Model in SharePoint 2013 makes so many design options possible, SharePoint Add-ins can come in many shapes and sizes. This section contains helpful guidance for some of the most important decisions that you need to make as you are planning and designing the architecture and user experience of your add-in—including how you will host your add-in, how your add-in will efficiently and securely access data, and what the user experience will be.
+Because the Cloud Add-in Model in SharePoint makes so many design options possible, SharePoint Add-ins can come in many shapes and sizes. This section contains helpful guidance for some of the most important decisions that you need to make as you are planning and designing the architecture and user experience of your add-in—including how you will host your add-in, how your add-in will efficiently and securely access data, and what the user experience will be.
  
 
  
@@ -53,7 +53,7 @@ You must ensure that your add-in accesses data efficiently and securely. Various
 ## Design the UX for your add-in
 <a name="SP15Design_UX"> </a>
 
-As you design your add-in, your real goal should be to create an experience that enables users to complete the scenarios that you intend for them to accomplish. In Table 3, discover the resources and design guidance that you need to build great add-ins that follow best practices for user experience design and have the familiar appearance and behavior of SharePoint 2013.
+As you design your add-in, your real goal should be to create an experience that enables users to complete the scenarios that you intend for them to accomplish. In Table 3, discover the resources and design guidance that you need to build great add-ins that follow best practices for user experience design and have the familiar appearance and behavior of SharePoint.
  
 
  

@@ -7,11 +7,11 @@ ms.assetid: f35bdf5d-c102-4e2d-8a23-1d2df17155b9
 
 
 # Shapes in the SharePoint Server workflow template in Visio
-Learn about the shapes in the SharePoint 2013 Workflow template in Visio 2013.
+Learn about the shapes in the SharePoint Workflow template in Visio 2013.
 ## Introduction
 <a name="VSSPD_Shapes_Intro"> </a>
 
-This article lists the shapes contained in the SharePoint 2013 Workflow template in Visio 2013 and in the Visual Designer in SharePoint Designer 2013. When the template is opened, also opens the SharePoint 2013 Workflow Actions, SharePoint 2013 Workflow Conditions, and SharePoint 2013 Workflow Terminators stencils. Many of the shapes listed in the stencils correspond to specific actions, conditions, or other logical constructs in the Declarative Designer for building workflows in SharePoint Designer 2013.
+This article lists the shapes contained in the SharePoint Workflow template in Visio 2013 and in the Visual Designer in SharePoint Designer 2013. When the template is opened, also opens the SharePoint Workflow Actions, SharePoint Workflow Conditions, and SharePoint Workflow Terminators stencils. Many of the shapes listed in the stencils correspond to specific actions, conditions, or other logical constructs in the Declarative Designer for building workflows in SharePoint Designer 2013.
   
     
     
@@ -26,7 +26,7 @@ This article lists the shapes contained in the SharePoint 2013 Workflow template
 ## Action shapes
 <a name="VSSDP_Actions"> </a>
 
-The following table shows a list of all the shapes that are contained in the SharePoint 2013 Actions stencil in the SharePoint 2013 Workflow template in Visio 2013.
+The following table shows a list of all the shapes that are contained in the SharePoint Actions stencil in the SharePoint Workflow template in Visio 2013.
   
     
     
@@ -53,7 +53,7 @@ The following table shows a list of all the shapes that are contained in the Sha
 |Create List Item  <br/> |**Create List Item** <br/> |**Item** <br/> **Output Variable** <br/> |Creates a new list item in the list that you specify. You can supply the fields and values in the new item. You can use this action whenever you want a new item to be created with specific information.  <br/> |
 |Delete Item  <br/> |**Delete Item** <br/> |**Item** <br/> |Deletes an item.  <br/> **Note:** This action is terminated on the computer running the Workflow Manager workflow engine and throws a **System.InvalidOperationException** exception. There is no workaround.          |
 |Discard Check Out  <br/> |**Discard Check Out Item** <br/> |**Item** <br/> |Discards the changes and checks the item back in if an item is checked out and changes have been made to it.  <br/> **Caution:** The workflow crashes if you try to check in an item that is not checked out.           |
-|Do Calculation  <br/> |**Do Calculation** <br/> |**LeftOperand** <br/> **Operator** <br/> **RightOperand** <br/> **To** <br/> |Performs an arithmetic calculation and stores the output value in a variable.  <br/> **Note:** For SharePoint 2013, this action supports only the **Double** numeric type. Integers are not supported. Use of the "+" operator (concatenation) for strings is not supported.          |
+|Do Calculation  <br/> |**Do Calculation** <br/> |**LeftOperand** <br/> **Operator** <br/> **RightOperand** <br/> **To** <br/> |Performs an arithmetic calculation and stores the output value in a variable.  <br/> **Note:** For SharePoint, this action supports only the **Double** numeric type. Integers are not supported. Use of the "+" operator (concatenation) for strings is not supported.          |
 |Extract Substring from End of String  <br/> |**Extract Substring from End of String** <br/> |**Number of Characters** <br/> **String** <br/> **Output** <br/> |Copies a specified number of characters starting from the end of a string and stores the output in a variable.  <br/> |
 |Extract Substring from Index of String  <br/> |**Extract Substring from Index of String** <br/> |**String** <br/> **Index** <br/> **Output** <br/> |Copies a substring starting at a specified index in the string and places the value in a variable.  <br/> **Note:** Be aware that although the index value in the present Technical Preview build of SharePoint Designer is zero-based, values in SharePoint Designer 2010 were indexed starting at 1.           |
 |Extract Substring from Start of String  <br/> |**Extract Substring from Start of String** <br/> |**Number of Characters** <br/> **String** <br/> **Output** <br/> |Copies a specified number of characters beginning at the start of a string and stores the output in a variable.  <br/> |
@@ -87,7 +87,7 @@ The following table shows a list of all the shapes that are contained in the Sha
 ## Condition shapes
 <a name="VSSPD_Conditions"> </a>
 
-The following table shows a list of all the shapes that are contained in the SharePoint 2013 Conditions stencil in the SharePoint 2013 Workflow template.
+The following table shows a list of all the shapes that are contained in the SharePoint Conditions stencil in the SharePoint Workflow template.
   
     
     
@@ -103,7 +103,7 @@ The following table shows a list of all the shapes that are contained in the Sha
 ## Terminator shapes
 <a name="VSSPD_Terminators"> </a>
 
-The following table shows a list of all the shapes that are contained in the SharePoint 2013 Terminators stencil in the SharePoint 2013 Workflow template.
+The following table shows a list of all the shapes that are contained in the SharePoint Terminators stencil in the SharePoint Workflow template.
   
     
     
@@ -111,7 +111,7 @@ The following table shows a list of all the shapes that are contained in the Sha
 
 |**Shape in Visio 2013 and SharePoint Designer 2013 Visual Designer**|**Action in the SharePoint Designer 2013 Declarative Designer**|**Properties in SharePoint Designer 2013 Visual Designer**|**Description**|
 |:-----|:-----|:-----|:-----|
-|Start  <br/> |NA  <br/> |NA  <br/> |Begins the workflow. Every SharePoint 2013 workflow diagram must have only one Start shape.  <br/> |
+|Start  <br/> |NA  <br/> |NA  <br/> |Begins the workflow. Every SharePoint workflow diagram must have only one Start shape.  <br/> |
 |Stage  <br/> |**Stage** <br/> |NA  <br/> |Contains any number of shapes and may include branching. All actions in the workflow must be contained by a stage. Stage shapes are visualized by using container shapes. A Stage shape requires that an Enter and an Exit shape be added to the edges of the container to define the paths in and out of the stage.  <br/> For more information, see the section titled "Stages, loops, and steps" in the article  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md).  <br/> |
 |Step  <br/> |**Step** <br/> |NA  <br/> |Represents a grouped series of sequential actions. Steps must be contained by a stage. A step shape must also have an Enter and Exit shape, which are added when the shape is dropped onto the canvas.  <br/> For more information, see the section titled "Stages, loops, and steps" in the article  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md).  <br/> |
 |Simple Stage  <br/> |**Stage** <br/> |NA  <br/> |Adds new stages to the top level of the workflow when in Stage View in Visio 2013.  <br/> |
@@ -128,7 +128,7 @@ The following table shows a list of all the shapes that are contained in the Sha
 -  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)
     
   
--  [Workflow actions quick reference (SharePoint 2013 Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
+-  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
     
   
 -  [SharePoint Workflow template shapes guide](http://office.microsoft.com/en-us/visio-help/sharepoint-workflow-template-shapes-guide-HA101903894.aspx)

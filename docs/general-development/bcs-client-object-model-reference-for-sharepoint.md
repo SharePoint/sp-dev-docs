@@ -1,12 +1,12 @@
 ---
-title: BCS client object model reference for SharePoint 2013
+title: BCS client object model reference for SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: fe7d12a3-6ea9-47f9-b69e-f66da9e661dc
 ---
 
 
 
-# BCS client object model reference for SharePoint 2013
+# BCS client object model reference for SharePoint
 
   
     
@@ -23,8 +23,8 @@ ms.assetid: fe7d12a3-6ea9-47f9-b69e-f66da9e661dc
   
     
     
-Learn about the objects that are available for creating client-side scripts using the SharePoint 2013 client object model to access external data exposed by Business Connectivity Services (BCS).
-The following objects are available for creating client-side scripts using the SharePoint 2013 client object model to access external data that is exposed by Business Connectivity Services (BCS). The BCS object model components that are exposed to the client object model are located in Microsoft.SharePoint.Client.dll.
+Learn about the objects that are available for creating client-side scripts using the SharePoint client object model to access external data exposed by Business Connectivity Services (BCS).
+The following objects are available for creating client-side scripts using the SharePoint client object model to access external data that is exposed by Business Connectivity Services (BCS). The BCS object model components that are exposed to the client object model are located in Microsoft.SharePoint.Client.dll.
   
     
     
@@ -493,21 +493,21 @@ The namespace is **Microsoft.BusinessData.MetadataModel**.
 <a name="bkmk_Addres"> </a>
 
 
--  [Business Connectivity Services programmers reference for SharePoint 2013](business-connectivity-services-programmers-reference-for-sharepoint.md)
+-  [Business Connectivity Services programmers reference for SharePoint](business-connectivity-services-programmers-reference-for-sharepoint.md)
     
   
 -  [.NET client API reference for SharePoint Online](http://msdn.microsoft.com/library/88e5e1b9-eab2-4f3b-a3f2-75c96b86f1f4%28Office.15%29.aspx)
     
   
--  [Get started using the client object model with external data in SharePoint 2013](get-started-using-the-client-object-model-with-external-data-in-sharepoint.md)
+-  [Get started using the client object model with external data in SharePoint](get-started-using-the-client-object-model-with-external-data-in-sharepoint.md)
     
   
--  [How to: Use the client code library to access external data in SharePoint 2013](how-to-use-the-client-code-library-to-access-external-data-in-sharepoint.md)
+-  [How to: Use the client code library to access external data in SharePoint](how-to-use-the-client-code-library-to-access-external-data-in-sharepoint.md)
     
   
--  [What's new in Business Connectivity Services in SharePoint 2013](what-s-new-in-business-connectivity-services-in-sharepoint.md)
+-  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint.md)
     
   
--  [Get started with Business Connectivity Services in SharePoint 2013](get-started-with-business-connectivity-services-in-sharepoint.md)
+-  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint.md)
     
   

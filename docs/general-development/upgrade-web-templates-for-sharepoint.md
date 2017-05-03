@@ -1,13 +1,13 @@
 ---
-title: Upgrade web templates for SharePoint 2013
+title: Upgrade web templates for SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 69048e4c-6d6d-4e4e-b74c-7c72ae444354
 ---
 
 
-# Upgrade web templates for SharePoint 2013
-Learn about updating customized SharePoint 2010 web templates for use in SharePoint 2013 after a self-service upgrade.
-SharePoint 2013 has significantly changed the underlying components it uses to render the appearance of SharePoint sites. For customizations made to default components in SharePoint 2010, these new changes include styles, page layouts, master pages and themes.
+# Upgrade web templates for SharePoint
+Learn about updating customized SharePoint 2010 web templates for use in SharePoint after a self-service upgrade.
+SharePoint has significantly changed the underlying components it uses to render the appearance of SharePoint sites. For customizations made to default components in SharePoint 2010, these new changes include styles, page layouts, master pages and themes.
   
     
     
@@ -46,14 +46,14 @@ The following sections detail what you need to update in the web template.
 
 ### Update master page references
 
-After an upgrade to SharePoint 2013, any custom master page references that your web template contains will be set to the default master page named **seattle.master**. If you customized the default master page in SharePoint 2010, you will need to change the reference to that custom page in order for your customizations to appear.
+After an upgrade to SharePoint, any custom master page references that your web template contains will be set to the default master page named **seattle.master**. If you customized the default master page in SharePoint 2010, you will need to change the reference to that custom page in order for your customizations to appear.
   
     
     
 
 ### Update available features
 
-When you upgrade a site to use SharePoint 2013 web templates, features that are attached to the template by default are removed. As a consequence, the available functionality of an upgraded web template is reduced.
+When you upgrade a site to use SharePoint web templates, features that are attached to the template by default are removed. As a consequence, the available functionality of an upgraded web template is reduced.
   
     
     
@@ -141,7 +141,7 @@ To add the default functionality back to the template, you must modify the Onet.
 <a name="bk_addresources"> </a>
 
 
--  [Upgrade site customizations for SharePoint 2013](upgrade-site-customizations-for-sharepoint.md)
+-  [Upgrade site customizations for SharePoint](upgrade-site-customizations-for-sharepoint.md)
     
   
 -  [SharePoint 2010 and web templates](http://blogs.msdn.com/b/vesku/archive/2010/10/14/sharepoint-2010-and-web-templates.aspx)
@@ -150,7 +150,7 @@ To add the default functionality back to the template, you must modify the Onet.
 -  [Plan to upgrade a site collection](https://technet.microsoft.com/en-us/library/ff191199.aspx)
     
   
--  [Plan for site collection upgrades in SharePoint 2013](http://technet.microsoft.com/en-us/library/ff191199.aspx)
+-  [Plan for site collection upgrades in SharePoint](http://technet.microsoft.com/en-us/library/ff191199.aspx)
     
   
 

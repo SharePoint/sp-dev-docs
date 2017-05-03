@@ -1,12 +1,12 @@
 ---
-title: How to Deploy a claims provider in SharePoint 2013
+title: How to Deploy a claims provider in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 3a5fcedc-aa9a-4ff4-95c0-0e0a7dea9d1f
 ---
 
 
-# How to: Deploy a claims provider in SharePoint 2013
-Learn how to deploy a SharePoint 2013 claims provider by using the features infrastructure and creating a class that inherits from  [SPClaimProviderFeatureReceiver](https://msdn.microsoft.com/library/Microsoft.SharePoint.Administration.Claims.SPClaimProviderFeatureReceiver.aspx) .
+# How to: Deploy a claims provider in SharePoint
+Learn how to deploy a SharePoint claims provider by using the features infrastructure and creating a class that inherits from  [SPClaimProviderFeatureReceiver](https://msdn.microsoft.com/library/Microsoft.SharePoint.Administration.Claims.SPClaimProviderFeatureReceiver.aspx) .
 ## Deploying a claims provider as part of a setup
 <a name="SP15_HowToDeployClaimsProvider_DeployingClaimsSetup"> </a>
 
@@ -157,16 +157,16 @@ namespace MySample.Sample.Server.SampleClaimsProvider
 <a name="SP15_HowToDeployClaimsProvider_AdditionalResources"> </a>
 
 
--  [Claims-based identity in SharePoint 2013](claims-based-identity-in-sharepoint.md)
+-  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint.md)
     
   
--  [Incoming claims: Signing into SharePoint 2013](incoming-claims-signing-into-sharepoint.md)
+-  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint.md)
     
   
--  [Claims provider in SharePoint 2013](claims-provider-in-sharepoint.md)
+-  [Claims provider in SharePoint](claims-provider-in-sharepoint.md)
     
   
--  [How to: Create a claims provider in SharePoint 2013](how-to-create-a-claims-provider-in-sharepoint.md)
+-  [How to: Create a claims provider in SharePoint](how-to-create-a-claims-provider-in-sharepoint.md)
     
   
 

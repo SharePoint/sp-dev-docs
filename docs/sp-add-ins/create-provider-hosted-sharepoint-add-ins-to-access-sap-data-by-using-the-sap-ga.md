@@ -42,7 +42,7 @@ The following are prerequisites to the procedures in this article:
 -  **A basic familiarity OAuth 2.0 in Azure AD**. See  [OAuth 2.0 in Azure AD](http://msdn.microsoft.com/library/azure/dn645545.aspx) and its child topics.
     
  
- **Code sample:** [SharePoint 2013: Using the SAP Gateway to Microsoft in a SharePoint Add-in](http://code.msdn.microsoft.com/SharePoint-2013-Using-the-0931abce)
+ **Code sample:** [SharePoint: Using the SAP Gateway to Microsoft in a SharePoint Add-in](http://code.msdn.microsoft.com/SharePoint-2013-Using-the-0931abce)
  
 
  
@@ -532,7 +532,7 @@ using Newtonsoft.Json.Linq;
 ## Optionally, add SharePoint access to the ASP.NET application
 <a name="SharePoint"> </a>
 
-Of course, your SharePoint Add-in doesn't have to expose only SAP data in a web page launched from SharePoint. It can also create, read, update, and delete (CRUD) SharePoint data. Your code behind can do this using either the SharePoint client object model (CSOM) or the REST APIs of SharePoint. The CSOM is deployed as a pair of assemblies that the Office Developer Tools for Visual Studio automatically included in the ASP.NET project and set to  **Copy Local** in Visual Studio so that they are included in the ASP.NET application package. For information about using CSOM, start with [Complete basic operations using SharePoint 2013 client library code](complete-basic-operations-using-sharepoint-2013-client-library-code.md). For information about using the REST APIs, start with  [Understanding and Using the SharePoint 2013 REST Interface](http://msdn.microsoft.com/en-us/magazine/dn198245.aspx). 
+Of course, your SharePoint Add-in doesn't have to expose only SAP data in a web page launched from SharePoint. It can also create, read, update, and delete (CRUD) SharePoint data. Your code behind can do this using either the SharePoint client object model (CSOM) or the REST APIs of SharePoint. The CSOM is deployed as a pair of assemblies that the Office Developer Tools for Visual Studio automatically included in the ASP.NET project and set to  **Copy Local** in Visual Studio so that they are included in the ASP.NET application package. For information about using CSOM, start with [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-2013-client-library-code.md). For information about using the REST APIs, start with  [Understanding and Using the SharePoint REST Interface](http://msdn.microsoft.com/en-us/magazine/dn198245.aspx). 
  
 
  

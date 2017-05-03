@@ -1,5 +1,5 @@
-# Access SharePoint 2013 data from add-ins using the cross-domain library
-Learn how to access data in a SharePoint website from your add-in by using the cross domain library in SharePoint 2013.
+# Access SharePoint data from add-ins using the cross-domain library
+Learn how to access data in a SharePoint website from your add-in by using the cross domain library in SharePoint.
  
 
  **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
@@ -40,7 +40,7 @@ To follow the examples in this article, you need the following:
 -  [Microsoft Office Developer Tools for Visual Studio 2012](https://msdn.microsoft.com/en-us/office/aa905340.aspx)
     
  
-- A SharePoint 2013 development environment (app isolation required for on-premises scenarios)
+- A SharePoint development environment (app isolation required for on-premises scenarios)
     
  
 
@@ -84,9 +84,9 @@ Figure 2 shows a webpage that displays the data on the add-in web.
 1. Open Visual Studio 2012 as administrator. (To do this, right-click the Visual Studio 2012 icon on the  **Start** menu, and choose **Run as administrator**.)
     
  
-2. Create a new project using the  **Add-in for SharePoint 2013** template.
+2. Create a new project using the  **Add-in for SharePoint** template.
     
-    The  **Add-in for SharePoint 2013** template in Visual Studio 2012 is located under **Templates** **>** **Visual C#**,  **Office SharePoint** **>** **Add-ins**.
+    The  **Add-in for SharePoint** template in Visual Studio 2012 is located under **Templates** **>** **Visual C#**,  **Office SharePoint** **>** **Add-ins**.
     
  
 3. Provide the SharePoint website URL that you want to use for debugging.
@@ -510,10 +510,10 @@ To download a sample of a SharePoint-hosted add-in that uses the cross-domain li
 -  [Work with the cross-domain library across different Internet Explorer security zones in SharePoint Add-ins](work-with-the-cross-domain-library-across-different-internet-explorer-security-zones-in-sharepoint-add-ins.md)
     
  
--  [Create a custom proxy page for the cross-domain library in SharePoint 2013](create-a-custom-proxy-page-for-the-cross-domain-library-in-sharepoint-2013.md)
+-  [Create a custom proxy page for the cross-domain library in SharePoint](create-a-custom-proxy-page-for-the-cross-domain-library-in-sharepoint-2013.md)
     
  
--  [Query a remote service using the web proxy in SharePoint 2013](query-a-remote-service-using-the-web-proxy-in-sharepoint-2013.md)
+-  [Query a remote service using the web proxy in SharePoint](query-a-remote-service-using-the-web-proxy-in-sharepoint-2013.md)
     
  
 -  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md)

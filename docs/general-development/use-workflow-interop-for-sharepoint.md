@@ -1,12 +1,12 @@
 ---
-title: Use workflow interop for SharePoint 2013
+title: Use workflow interop for SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 6c70e941-3836-4cf5-b848-f192fefddbd4
 ---
 
 
-# Use workflow interop for SharePoint 2013
-Provides a discussion of using SharePoint workflow Interop in the Visual Studio 2012 workflow designer. Workflow interop allows you to invoke a SharePoint 2010 workflow from within a SharePoint 2013 workflow. This is an important feature that allows you to reuse existing workflow features, and to call on workflow activities that are not integrated into SharePoint 2013.
+# Use workflow interop for SharePoint
+Provides a discussion of using SharePoint workflow Interop in the Visual Studio 2012 workflow designer. Workflow interop allows you to invoke a SharePoint 2010 workflow from within a SharePoint workflow. This is an important feature that allows you to reuse existing workflow features, and to call on workflow activities that are not integrated into SharePoint.
 
   
     
@@ -23,11 +23,11 @@ Provides a discussion of using SharePoint workflow Interop in the Visual Studio 
 ## SharePoint workflow interop
 <a name="bkm_interop"> </a>
 
-Here's the problem. You have legacy SharePoint 2010 workflows that you wish to reuse on your SharePoint 2013 platform. Or, worse, you are creating new SharePoint 2013 workflows and you need to invoke activities that are only available in the SharePoint 2010 platform. And you don't know what to do. Actually, the solution is simple: use SharePoint workflow Interop.
+Here's the problem. You have legacy SharePoint 2010 workflows that you wish to reuse on your SharePoint platform. Or, worse, you are creating new SharePoint workflows and you need to invoke activities that are only available in the SharePoint 2010 platform. And you don't know what to do. Actually, the solution is simple: use SharePoint workflow Interop.
   
     
     
-SharePoint workflow interop enables SharePoint 2010 workflows (built on Windows Workflow Foundation 3) to work smoothly with the SharePoint 2013 workflow engine, which is based on Windows Workflow Foundation 4. While the new Windows Workflow Foundation 4 execution engine is hosted in Workflow Manager, which runs as an external service, SharePoint 2013 still contains the legacy SharePoint workflow host which it uses to process SharePoint 2010 workflows. SharePoint workflow interop negotiates the two execution environments, as depicted in Figure 1.
+SharePoint workflow interop enables SharePoint 2010 workflows (built on Windows Workflow Foundation 3) to work smoothly with the SharePoint workflow engine, which is based on Windows Workflow Foundation 4. While the new Windows Workflow Foundation 4 execution engine is hosted in Workflow Manager, which runs as an external service, SharePoint still contains the legacy SharePoint workflow host which it uses to process SharePoint 2010 workflows. SharePoint workflow interop negotiates the two execution environments, as depicted in Figure 1.
   
     
     
@@ -54,14 +54,14 @@ Let's walk through the process depicted in Figure 1. Use the letters to referenc
   
     
     
-> ( **A** ) An instance of a SharePoint 2013 workflow starts to run in then Windows Workflow Foundation 4-based Workflow Manager. Note that the Workflow Manager is not in SharePoint, but instead runs as an external service.
+> ( **A** ) An instance of a SharePoint workflow starts to run in then Windows Workflow Foundation 4-based Workflow Manager. Note that the Workflow Manager is not in SharePoint, but instead runs as an external service.
     
   
 
   
     
     
-> ( **B** ) You reach a point in the SharePoint 2013 workflow - step number 3 in the Workflow Manager - where you wish to invoke a SharePoint 2010 workflow. In the Visual Studio 2012 workflow designer, you do this by implementing the **Start 2010 WF** activity, as shown in Figure 2.
+> ( **B** ) You reach a point in the SharePoint workflow - step number 3 in the Workflow Manager - where you wish to invoke a SharePoint 2010 workflow. In the Visual Studio 2012 workflow designer, you do this by implementing the **Start 2010 WF** activity, as shown in Figure 2.
     
    **Figure 2. Stage tile for starting a SharePoint 2010 workflow.**
 
@@ -131,7 +131,7 @@ To support workflow interop, the workflow design surface in SharePoint Designer 
   
     
     
-The activity is in fact a sequence of messages that take place between the Workflow Manager and the SharePoint 2010 Workflow Host that is running inside SharePoint 2013. These two are mediated by a messaging layer, as shown in Figure 4. The sequence begins in the SharePoint 2013 workflow manager with an invocation of the **StartWorkflow** method. The "start" message goes to the workflow service inside of SharePoint, where in turn it launches the workflow inside the SharePoint 2010 workflow host. When execution of the 2010 workflow is complete, an event is fired that sends a "completed" message through the event publisher back to the 2013 workflow manager.
+The activity is in fact a sequence of messages that take place between the Workflow Manager and the SharePoint 2010 Workflow Host that is running inside SharePoint. These two are mediated by a messaging layer, as shown in Figure 4. The sequence begins in the SharePoint workflow manager with an invocation of the **StartWorkflow** method. The "start" message goes to the workflow service inside of SharePoint, where in turn it launches the workflow inside the SharePoint 2010 workflow host. When execution of the 2010 workflow is complete, an event is fired that sends a "completed" message through the event publisher back to the 2013 workflow manager.
   
     
     
@@ -162,10 +162,10 @@ The activity is in fact a sequence of messages that take place between the Workf
 <a name="bk_addresources"> </a>
 
 
--  [Get started with workflows in SharePoint 2013](get-started-with-workflows-in-sharepoint.md)
+-  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint.md)
     
   
--  [SharePoint 2013 workflow fundamentals](sharepoint-workflow-fundamentals.md)
+-  [SharePoint workflow fundamentals](sharepoint-workflow-fundamentals.md)
     
   
 -  [Understanding Coordination actions in SharePoint Designer 2013](understanding-coordination-actions-in-sharepoint-designer.md)

@@ -1,11 +1,11 @@
-# Add-in authorization policy types in SharePoint 2013
+# Add-in authorization policy types in SharePoint
 Learn about the different authorization policies for add-ins in SharePoint: add-in-only policy, user+add-in policy, and user-only policy. It also provides guidelines for using add-in-only policy.
  
 
  **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
-Before reading this article, you should first be familiar with the articles  [Add-in permissions in SharePoint 2013](add-in-permissions-in-sharepoint-2013.md) and [Context Token OAuth flow for SharePoint Add-ins](context-token-oauth-flow-for-sharepoint-add-ins.md).
+Before reading this article, you should first be familiar with the articles  [Add-in permissions in SharePoint](add-in-permissions-in-sharepoint-2013.md) and [Context Token OAuth flow for SharePoint Add-ins](context-token-oauth-flow-for-sharepoint-add-ins.md).
  
 
 ## Get an overview of add-in authorization policies types
@@ -70,7 +70,7 @@ To be able to make add-in-only calls to SharePoint, your add-in must request per
  **Note**  SharePoint Add-ins used to be called "apps for SharePoint". To maintain backward compatibility, the app manifest schema was not changed, so the string "app" appears in may element and attribute names.
  
 
-A user installing the add-in will be prompted to approve this request. If the add-in asks for tenant-scoped permissions, then only a tenant administrator can grant use of the add-in-only policy, so only a tenant administrator can install the add-in. If the add-in does not ask for any permissions scoped higher than site collection, then a site collection administrator can install the add-in. For more information about permission scopes, see  [Add-in permissions in SharePoint 2013](add-in-permissions-in-sharepoint-2013.md).
+A user installing the add-in will be prompted to approve this request. If the add-in asks for tenant-scoped permissions, then only a tenant administrator can grant use of the add-in-only policy, so only a tenant administrator can install the add-in. If the add-in does not ask for any permissions scoped higher than site collection, then a site collection administrator can install the add-in. For more information about permission scopes, see  [Add-in permissions in SharePoint](add-in-permissions-in-sharepoint-2013.md).
  
 
  
@@ -142,7 +142,7 @@ Since add-in-only calls effectively elevate user privileges, you should be conse
 -  [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md)
     
  
--  [Add-in permissions in SharePoint 2013](add-in-permissions-in-sharepoint-2013.md)
+-  [Add-in permissions in SharePoint](add-in-permissions-in-sharepoint-2013.md)
     
  
 -  [Context Token OAuth flow for SharePoint Add-ins](context-token-oauth-flow-for-sharepoint-add-ins.md)

@@ -1,21 +1,21 @@
 ---
-title: Follow people in SharePoint 2013
+title: Follow people in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 0fa2e235-63d0-41b1-9eed-4aeb2f59a14d
 ---
 
 
 
-# Follow people in SharePoint 2013
-Learn about common programming tasks for following people in SharePoint Server 2013.
-## APIs for following people in SharePoint Server 2013
+# Follow people in SharePoint
+Learn about common programming tasks for following people in SharePoint.
+## APIs for following people in SharePoint
 <a name="bkmk_APIversions"> </a>
 
-When a user follows people in SharePoint Server 2013, microblog posts that the people publish and notifications about their activities show up in the user's newsfeed. The features related to following people can be seen on the **Newsfeed** and **People I'm following** pages.
+When a user follows people in SharePoint, microblog posts that the people publish and notifications about their activities show up in the user's newsfeed. The features related to following people can be seen on the **Newsfeed** and **People I'm following** pages.
   
     
     
-SharePoint Server 2013 provides the following APIs that you can use to programmatically follow people:
+SharePoint provides the following APIs that you can use to programmatically follow people:
   
     
     
@@ -40,7 +40,7 @@ SharePoint Server 2013 provides the following APIs that you can use to programma
 - Server object model
     
   
-As a best practice in SharePoint 2013 development, use client APIs when you can. Client APIs include the client object models, a JavaScript object model, and a REST service. For more information about the APIs in SharePoint 2013 and when to use them, see  [Choose the right API set in SharePoint 2013](choose-the-right-api-set-in-sharepoint.md).
+As a best practice in SharePoint development, use client APIs when you can. Client APIs include the client object models, a JavaScript object model, and a REST service. For more information about the APIs in SharePoint and when to use them, see  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md).
   
     
     
@@ -50,7 +50,7 @@ Each API includes a manager object that you use to perform core tasks for follow
     
 
 > **Note:**
-> The same APIs are used to follow content. See  [Follow content in SharePoint 2013](follow-content-in-sharepoint.md) for an overview of Following Content tasks.
+> The same APIs are used to follow content. See  [Follow content in SharePoint](follow-content-in-sharepoint.md) for an overview of Following Content tasks.
   
     
     
@@ -67,17 +67,17 @@ Table 1 shows the manager and other key objects (or REST resources) in the APIs 
     
 
 
-**Table 1. SharePoint 2013 APIs used for following people programmatically**
+**Table 1. SharePoint APIs used for following people programmatically**
 
 |**API**|**Key objects**|
 |:-----|:-----|
-|.NET client object model  <br/> See:  [How to: Follow people by using the .NET client object model in SharePoint 2013](how-to-follow-people-by-using-the-net-client-object-model-in-sharepoint.md)|Manager object:            [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx) <br/> Primary namespace:            [Microsoft.SharePoint.Client.Social](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.aspx) <br/> Other key objects:            [SocialActor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActor.aspx) , [SocialActorInfo](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActorInfo.aspx) , [SocialActorType](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActorType.aspx) , [SocialActorTypes](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActorTypes.aspx) <br/> Class library:           Microsoft.SharePoint.Client.UserProfiles.dll |
-|JavaScript object model  <br/> See:  [How to: Follow people by using the JavaScript object model in SharePoint 2013](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint.md)|Manager object:            [SocialFollowingManager](http://msdn.microsoft.com/library/9ee1c0c0-b864-f0c3-f0cb-4dd4f1870dfa%28Office.15%29.aspx) <br/> Primary namespace:           **SP.Social** <br/> Other key objects:            [SocialActor](http://msdn.microsoft.com/library/4e369fd5-b9b0-9804-957e-b3e39c559cd4%28Office.15%29.aspx),  [SocialActorInfo](http://msdn.microsoft.com/library/d940db32-1561-c868-bb66-0612e2031f17%28Office.15%29.aspx),  [SocialActorType](http://msdn.microsoft.com/library/fbde74da-f292-dc87-0b7e-81bc5b7a880c%28Office.15%29.aspx),  [SocialActorTypes](http://msdn.microsoft.com/library/a460c3e6-ed88-117d-6755-4c5803a154a0%28Office.15%29.aspx) <br/> Class library:           SP.UserProfiles.js |
-|REST service  <br/> See:  [Following people and content REST API reference for SharePoint 2013](following-people-and-content-rest-api-reference-for-sharepoint.md)|Manager resource:            [social.following](following-people-and-content-rest-api-reference-for-sharepoint.md) <br/> Endpoint URI:            `<siteUri>/_api/social.following` <br/> Primary namespace (OData):           **sp.social.SocialRestFollowingManager** <br/> Other key resources:           **SocialActor**, **SocialActorInfo**, **SocialActorType**, **SocialActorTypes**|
+|.NET client object model  <br/> See:  [How to: Follow people by using the .NET client object model in SharePoint](how-to-follow-people-by-using-the-net-client-object-model-in-sharepoint.md)|Manager object:            [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx) <br/> Primary namespace:            [Microsoft.SharePoint.Client.Social](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.aspx) <br/> Other key objects:            [SocialActor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActor.aspx) , [SocialActorInfo](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActorInfo.aspx) , [SocialActorType](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActorType.aspx) , [SocialActorTypes](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActorTypes.aspx) <br/> Class library:           Microsoft.SharePoint.Client.UserProfiles.dll |
+|JavaScript object model  <br/> See:  [How to: Follow people by using the JavaScript object model in SharePoint](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint.md)|Manager object:            [SocialFollowingManager](http://msdn.microsoft.com/library/9ee1c0c0-b864-f0c3-f0cb-4dd4f1870dfa%28Office.15%29.aspx) <br/> Primary namespace:           **SP.Social** <br/> Other key objects:            [SocialActor](http://msdn.microsoft.com/library/4e369fd5-b9b0-9804-957e-b3e39c559cd4%28Office.15%29.aspx),  [SocialActorInfo](http://msdn.microsoft.com/library/d940db32-1561-c868-bb66-0612e2031f17%28Office.15%29.aspx),  [SocialActorType](http://msdn.microsoft.com/library/fbde74da-f292-dc87-0b7e-81bc5b7a880c%28Office.15%29.aspx),  [SocialActorTypes](http://msdn.microsoft.com/library/a460c3e6-ed88-117d-6755-4c5803a154a0%28Office.15%29.aspx) <br/> Class library:           SP.UserProfiles.js |
+|REST service  <br/> See:  [Following people and content REST API reference for SharePoint](following-people-and-content-rest-api-reference-for-sharepoint.md)|Manager resource:            [social.following](following-people-and-content-rest-api-reference-for-sharepoint.md) <br/> Endpoint URI:            `<siteUri>/_api/social.following` <br/> Primary namespace (OData):           **sp.social.SocialRestFollowingManager** <br/> Other key resources:           **SocialActor**, **SocialActorInfo**, **SocialActorType**, **SocialActorTypes**|
 |Server object model |Manager object:            [SPSocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFollowingManager.aspx) <br/> Primary namespace:            [Microsoft.Office.Server.Social](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.aspx) <br/> Other key objects:            [SPSocialActor](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialActor.aspx) , [SPSocialActorInfo](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialActorInfo.aspx) , [SPSocialActorType](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialActorType.aspx) , [SPSocialActorTypes](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialActorTypes.aspx) <br/> Class library:           Microsoft.Office.Server.UserProfiles.dll |
    
 
-## Common programming tasks for following people in SharePoint Server 2013
+## Common programming tasks for following people in SharePoint
 <a name="bkmk_CommonTasks"> </a>
 
 Table 2 shows common programming tasks for following people and the members that you use to perform them. Members are from the .NET client object model (CSOM), JavaScript object model (JSOM), REST service, and server object model (SSOM).
@@ -86,7 +86,7 @@ Table 2 shows common programming tasks for following people and the members that
     
 
 > **Note:**
-> The same APIs are used to follow content. See  [Follow content in SharePoint 2013](follow-content-in-sharepoint.md) for an overview of Following Content tasks.
+> The same APIs are used to follow content. See  [Follow content in SharePoint](follow-content-in-sharepoint.md) for an overview of Following Content tasks.
   
     
     
@@ -147,24 +147,24 @@ When a user opens the **People I'm following** page, the [PeopleManager.GetMySug
 <a name="bk_addResources"> </a>
 
 
--  [Social and collaboration features in SharePoint 2013](social-and-collaboration-features-in-sharepoint.md)
+-  [Social and collaboration features in SharePoint](social-and-collaboration-features-in-sharepoint.md)
     
   
--  [Get started developing with social features in SharePoint 2013](get-started-developing-with-social-features-in-sharepoint.md)
+-  [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint.md)
     
   
--  [Follow content in SharePoint 2013](follow-content-in-sharepoint.md)
+-  [Follow content in SharePoint](follow-content-in-sharepoint.md)
     
   
 -  [User profiles REST API reference](http://msdn.microsoft.com/library/10757ed1-6e86-474f-89e0-6dec6aa66a2b%28Office.15%29.aspx)
     
   
--  [How to: Follow people by using the .NET client object model in SharePoint 2013](how-to-follow-people-by-using-the-net-client-object-model-in-sharepoint.md)
+-  [How to: Follow people by using the .NET client object model in SharePoint](how-to-follow-people-by-using-the-net-client-object-model-in-sharepoint.md)
     
   
--  [How to: Follow people by using the JavaScript object model in SharePoint 2013](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint.md)
+-  [How to: Follow people by using the JavaScript object model in SharePoint](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint.md)
     
   
--  [Following people and content REST API reference for SharePoint 2013](following-people-and-content-rest-api-reference-for-sharepoint.md)
+-  [Following people and content REST API reference for SharePoint](following-people-and-content-rest-api-reference-for-sharepoint.md)
     
   

@@ -1,21 +1,21 @@
 ---
-title: Following people and content REST API reference for SharePoint 2013
+title: Following people and content REST API reference for SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: c05755df-846d-4a39-941d-950d066cc6d4
 ---
 
 
 
-# Following people and content REST API reference for SharePoint 2013
+# Following people and content REST API reference for SharePoint
 Find SharePoint REST endpoints for following people and content by using the **SocialRestFollowingManager** resource and the **PeopleManager** resource.
-You can use the SharePoint 2013 Representational State Transfer (REST) service to do the same tasks you can do when you use the .NET client object models and the JavaScript object model. To use the REST service, you build and send HTTP **GET** and **POST** requests to the resource endpoints that represent the tasks you want to do. These resource endpoints correspond to SharePoint objects, properties, and methods.
+You can use the SharePoint Representational State Transfer (REST) service to do the same tasks you can do when you use the .NET client object models and the JavaScript object model. To use the REST service, you build and send HTTP **GET** and **POST** requests to the resource endpoints that represent the tasks you want to do. These resource endpoints correspond to SharePoint objects, properties, and methods.
   
     
     
 
 The endpoint URI for most Following tasks begins with the **SocialRestFollowingManager** resource ( `social.following`) and ends with the resource that performs the specific task. For example, you use the URI  `http://www.contoso.com/_api/social.following/follow` to make the current user start following people or content, and the URI `https://www.contoso.com/sites/devSite/_api/social.following/followed` to get the people or content the current user is following.
 > **Note:**
-> This article shows the endpoint URI and parameter components of HTTP requests. For examples of complete requests, see  [How to: Follow documents, sites, and tags by using the REST service in SharePoint 2013](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md). 
+> This article shows the endpoint URI and parameter components of HTTP requests. For examples of complete requests, see  [How to: Follow documents, sites, and tags by using the REST service in SharePoint](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md). 
   
     
     
@@ -1565,15 +1565,15 @@ The following response represents a user who is following the specified user.
 <a name="bk_addresources"> </a>
 
 
--  [How to: Follow documents, sites, and tags by using the REST service in SharePoint 2013](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md)
+-  [How to: Follow documents, sites, and tags by using the REST service in SharePoint](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md)
     
   
--  [Social feed REST API reference for SharePoint 2013](social-feed-rest-api-reference-for-sharepoint.md)
+-  [Social feed REST API reference for SharePoint](social-feed-rest-api-reference-for-sharepoint.md)
     
   
 -  [SharePoint User Profiles JavaScript Reference (sp.userprofiles.js)](http://msdn.microsoft.com/library/80cf5436-6aa2-6f11-a782-66a04f6e2fb0%28Office.15%29.aspx)
     
   
--  [Get started developing with social features in SharePoint 2013](get-started-developing-with-social-features-in-sharepoint.md)
+-  [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint.md)
     
   

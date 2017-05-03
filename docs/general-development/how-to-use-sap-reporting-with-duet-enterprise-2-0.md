@@ -101,10 +101,10 @@ Inside an app, a developer can also create his own custom UI (using HTML/JavaScr
 -  [Developing with Duet Enterprise 2.0](developing-with-duet-enterprise-2-0.md)
     
   
--  [How to: Create an external content type from an OData source in SharePoint 2013](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md)
+-  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md)
     
   
--  [Using OData sources with Business Connectivity Services in SharePoint 2013](using-odata-sources-with-business-connectivity-services-in-sharepoint.md)
+-  [Using OData sources with Business Connectivity Services in SharePoint](using-odata-sources-with-business-connectivity-services-in-sharepoint.md)
     
   
 

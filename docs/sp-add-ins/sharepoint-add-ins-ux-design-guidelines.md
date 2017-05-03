@@ -1,11 +1,11 @@
 # SharePoint Add-ins UX design guidelines
-Learn about general user experience (UX) design guidelines for add-ins in SharePoint 2013, including choosing the chrome, using CSS, managing user licenses, and other design tasks.
+Learn about general user experience (UX) design guidelines for add-ins in SharePoint, including choosing the chrome, using CSS, managing user licenses, and other design tasks.
  
 
  **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
-Add-ins are a new concept for SharePoint 2013, empowering end users to add new functionality to their sites while still ensuring reliability for the SharePoint site itself. Creating a good add-in requires not only making great functionality (although that's obviously important), but also ensuring that the add-in looks right and fits seamlessly into the site where it's installed.
+Add-ins are a new concept for SharePoint, empowering end users to add new functionality to their sites while still ensuring reliability for the SharePoint site itself. Creating a good add-in requires not only making great functionality (although that's obviously important), but also ensuring that the add-in looks right and fits seamlessly into the site where it's installed.
  
 
 ## Choosing the chrome for your add-in
@@ -66,7 +66,7 @@ If you're not building SharePoint-hosted ASPX pages, but you still want your add
 
  
 
-**Watch the video: SharePoint 2013 chrome control**
+**Watch the video: SharePoint chrome control**
 
  
 
@@ -798,7 +798,7 @@ Due to upgrades or site maintenance, there might be times when SharePoint is in 
 -  [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md)
     
  
--  [Create UX components in SharePoint 2013](create-ux-components-in-sharepoint-2013.md)
+-  [Create UX components in SharePoint](create-ux-components-in-sharepoint-2013.md)
     
  
 -  [Use a SharePoint website's style sheet in SharePoint Add-ins](use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins.md)

@@ -1,14 +1,14 @@
 ---
-title: Social feed REST API reference for SharePoint 2013
+title: Social feed REST API reference for SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: f1cb914f-1e91-4e23-bf53-d2ab323eac13
 ---
 
 
 
-# Social feed REST API reference for SharePoint 2013
+# Social feed REST API reference for SharePoint
 Find SharePoint REST endpoints for reading and writing to social feeds by using the **SocialRestFeedManager** resource.
-You can use the SharePoint 2013 Representational State Transfer (REST) service to do the same things that you can do with the .NET client object models and the JavaScript object model. The REST service exposes resources that correspond to SharePoint objects, properties, and methods. To use the REST service, you build and send HTTP **GET** and **POST** requests to the resource endpoints that represent the tasks you want to do.
+You can use the SharePoint Representational State Transfer (REST) service to do the same things that you can do with the .NET client object models and the JavaScript object model. The REST service exposes resources that correspond to SharePoint objects, properties, and methods. To use the REST service, you build and send HTTP **GET** and **POST** requests to the resource endpoints that represent the tasks you want to do.
   
     
     
@@ -1066,7 +1066,7 @@ The following response example represents the current user's timeline feed, whic
 ## My/Likes
 <a name="bk_myLikes"> </a>
 
-Gets the feed of microblog posts that the current user likes, represented by **LikeReference** thread types. See [Reference threads and digest threads in SharePoint Server 2013 social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md).
+Gets the feed of microblog posts that the current user likes, represented by **LikeReference** thread types. See [Reference threads and digest threads in SharePoint social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md).
   
     
     
@@ -1267,7 +1267,7 @@ The following response example represents a reference to a post that the current
 ## My/MentionFeed
 <a name="bk_myMentionFeed"> </a>
 
-Gets the feed of microblog posts that mention the current user, represented by **MentionReference** thread types. See [Reference threads and digest threads in SharePoint Server 2013 social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md).
+Gets the feed of microblog posts that mention the current user, represented by **MentionReference** thread types. See [Reference threads and digest threads in SharePoint social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md).
   
     
     
@@ -1461,7 +1461,7 @@ The following response example represents one thread that mentions the current u
 ## My/MentionFeed/ClearUnreadMentionCount
 <a name="bk_myMentionFeedClearUnreadMentionCount"> </a>
 
-Gets the feed of microblog posts that mention the current user, represented by **MentionReference** thread types, and sets the user's unread mention count to 0. See [Reference threads and digest threads in SharePoint Server 2013 social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md).
+Gets the feed of microblog posts that mention the current user, represented by **MentionReference** thread types, and sets the user's unread mention count to 0. See [Reference threads and digest threads in SharePoint social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md).
   
     
     
@@ -3571,18 +3571,18 @@ The following properties belong to the **SocialThread** object.
 <a name="bk_addresources"> </a>
 
 
--  [Get started developing with social features in SharePoint 2013](get-started-developing-with-social-features-in-sharepoint.md)
+-  [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint.md)
     
   
--  [How to: Learn to read and write to the social feed by using the REST service in SharePoint 2013](how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-rest-service-in-s.md)
+-  [How to: Learn to read and write to the social feed by using the REST service in SharePoint](how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-rest-service-in-s.md)
     
   
--  [Work with social feeds in SharePoint 2013](work-with-social-feeds-in-sharepoint.md)
+-  [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint.md)
     
   
--  [Following people and content REST API reference for SharePoint 2013](following-people-and-content-rest-api-reference-for-sharepoint.md)
+-  [Following people and content REST API reference for SharePoint](following-people-and-content-rest-api-reference-for-sharepoint.md)
     
   
-- To see the members in the **SP.Social** OData schema used by the SharePoint 2013 REST service, browse to `http://<siteUri>/_api/$metadata`.
+- To see the members in the **SP.Social** OData schema used by the SharePoint REST service, browse to `http://<siteUri>/_api/$metadata`.
     
   

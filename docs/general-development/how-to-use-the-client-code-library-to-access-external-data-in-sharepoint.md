@@ -1,19 +1,19 @@
 ---
-title: How to Use the client code library to access external data in SharePoint 2013
+title: How to Use the client code library to access external data in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: c280ae92-c52b-4658-b0f3-805fb215ef8e
 ---
 
 
-# How to: Use the client code library to access external data in SharePoint 2013
-Learn how to use the SharePoint 2013 client object model to work with Business Connectivity Services (BCS) objects in SharePoint 2013 using browser-based scripting.
-This article demonstrates how to set up an external list that retrieves data from an Open Data protocol (OData) source using the client object model in SharePoint 2013.
+# How to: Use the client code library to access external data in SharePoint
+Learn how to use the SharePoint client object model to work with Business Connectivity Services (BCS) objects in SharePoint using browser-based scripting.
+This article demonstrates how to set up an external list that retrieves data from an Open Data protocol (OData) source using the client object model in SharePoint.
   
     
     
 
 
-## Prerequisites for accessing external data using the SharePoint 2013 client object model
+## Prerequisites for accessing external data using the SharePoint client object model
 <a name="bkmk_Prerequisites"> </a>
 
 The following are requirements for being able to develop apps using the SharePoint client object model:
@@ -21,7 +21,7 @@ The following are requirements for being able to develop apps using the SharePoi
     
     
 
-- SharePoint 2013
+- SharePoint
     
   
 - Visual Studio 2012
@@ -30,16 +30,16 @@ The following are requirements for being able to develop apps using the SharePoi
 - Office Developer Tools for Visual Studio 2012
     
   
-- A functioning SharePoint Add-ins development environment: Follow the instructions in  [Set up a general development environment for SharePoint 2013](set-up-a-general-development-environment-for-sharepoint.md).
+- A functioning SharePoint Add-ins development environment: Follow the instructions in  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md).
     
   
 - Access to the public OData.org producers
     
   
 
-### Core concepts to know when accessing external data with the SharePoint 2013 client object model
+### Core concepts to know when accessing external data with the SharePoint client object model
 
-The SharePoint 2013 client object model provides a way to access external data using client-side calls that mimic the server-side APIs. To understand how it works and how to use it, see the articles in Table 1.
+The SharePoint client object model provides a way to access external data using client-side calls that mimic the server-side APIs. To understand how it works and how to use it, see the articles in Table 1.
   
     
     
@@ -49,7 +49,7 @@ The SharePoint 2013 client object model provides a way to access external data u
 
 |**Article**|**Description**|
 |:-----|:-----|
-| [Complete basic operations using SharePoint 2013 client library code](http://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx) <br/> |Learn how to write code to peform basic operations with the SharePoint 2013 .NET Framework client object model (CSOM).  <br/> |
+| [Complete basic operations using SharePoint client library code](http://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx) <br/> |Learn how to write code to peform basic operations with the SharePoint .NET Framework client object model (CSOM).  <br/> |
    
 
 ## Create an SharePoint Add-in to access external data using the client object model
@@ -66,7 +66,7 @@ The following procedures show how to set up an SharePoint Add-in and configure a
 1. Open Visual Studio 2012.
     
   
-2. Create an **App for SharePoint 2013** project.
+2. Create an **App for SharePoint** project.
     
   
 3. Specify the app settings, including app name, the site URL for debugging the app, and how you want to host the app (Autohosted, Provider-hosted, SharePoint-hosted). For more information about hosting options, see  [Choose patterns for developing and hosting your SharePoint Add-in](http://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx).
@@ -200,10 +200,10 @@ Press F5 to deploy the app to SharePoint. Browse to the Default.aspx page in the
 <a name="bkmk_Addresources"> </a>
 
 
--  [Business Connectivity Services in SharePoint 2013](business-connectivity-services-in-sharepoint.md)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
     
   
--  [Get started using the client object model with external data in SharePoint 2013](get-started-using-the-client-object-model-with-external-data-in-sharepoint.md)
+-  [Get started using the client object model with external data in SharePoint](get-started-using-the-client-object-model-with-external-data-in-sharepoint.md)
     
   
 -  [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)
@@ -212,13 +212,13 @@ Press F5 to deploy the app to SharePoint. Browse to the Default.aspx page in the
 -  [Choose patterns for developing and hosting your SharePoint Add-in](http://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx)
     
   
--  [BCS client object model reference for SharePoint 2013](bcs-client-object-model-reference-for-sharepoint.md)
+-  [BCS client object model reference for SharePoint](bcs-client-object-model-reference-for-sharepoint.md)
     
   
--  [What's new in Business Connectivity Services in SharePoint 2013](what-s-new-in-business-connectivity-services-in-sharepoint.md)
+-  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint.md)
     
   
--  [Complete basic operations using SharePoint 2013 client library code](http://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx)
+-  [Complete basic operations using SharePoint client library code](http://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx)
     
   
 

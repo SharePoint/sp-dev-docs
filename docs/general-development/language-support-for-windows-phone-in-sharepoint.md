@@ -1,11 +1,11 @@
 ---
-title: Language support for Windows Phone in SharePoint 2013
+title: Language support for Windows Phone in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 2c396a91-0fc1-4e25-942b-fffad49bd2c6
 ---
 
 
-# Language support for Windows Phone in SharePoint 2013
+# Language support for Windows Phone in SharePoint
 Learn about language support for the Visual Studio templates that are installed by the SharePoint Software Development Kit (SDK) for Windows Phone for mobile app development.
 To develop your mobile application for more than one language, you need to globalize and localize the application. Most of the globalization and localization functionality that you need to implement is already built into the .NET Framework. By using this functionality, you can reach customers in many other countries and regions.
   
@@ -18,11 +18,11 @@ After you set up your development environment and install the SharePoint SDK for
     
     
 
-For more information about the SharePoint templates for Windows Phone, see  [Overview of Windows Phone SharePoint 2013 application templates in Visual Studio](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio.md).
+For more information about the SharePoint templates for Windows Phone, see  [Overview of Windows Phone SharePoint application templates in Visual Studio](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio.md).
 ## Templates and libraries installed by the SharePoint SDK for Windows Phone
 <a name="LanguageSupportForWindowsPhoneForSharePoint2013_TemplatesInstalledBySharePointSDKForWindowsPhone"> </a>
 
-The SharePoint SDK for Windows Phone 7.1 installs the client object model (CSOM) libraries for Windows Phone, the SharePoint Auth library for Windows Phone, and the Windows Phone project templates, which you can use to build Windows Phone 7.1 applications against SharePoint 2013 or SharePoint 2010.
+The SharePoint SDK for Windows Phone 7.1 installs the client object model (CSOM) libraries for Windows Phone, the SharePoint Auth library for Windows Phone, and the Windows Phone project templates, which you can use to build Windows Phone 7.1 applications against SharePoint or SharePoint 2010.
   
     
     
@@ -117,10 +117,10 @@ Although you have programmatic access to nine languages, you can run your ShareP
 <a name="bk_addresources"> </a>
 
 
--  [Overview of Windows Phone SharePoint 2013 application templates in Visual Studio](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio.md)
+-  [Overview of Windows Phone SharePoint application templates in Visual Studio](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio.md)
     
   
--  [Build Windows Phone apps that access SharePoint 2013](build-windows-phone-apps-that-access-sharepoint.md)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
 -  [Windows Phone SDK 8.0](http://www.microsoft.com/en-us/download/details.aspx?id=35471)

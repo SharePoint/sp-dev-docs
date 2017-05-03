@@ -7,7 +7,7 @@ ms.assetid: acaf556d-e20d-478d-8c59-2efd8efb9dcb
 
 # How to: Set up an environment for developing mobile apps for SharePoint
 Learn about the system requirements and configuring a development environment for SharePoint mobility projects.
-A minimal configuration for working with SharePoint mobility projects requires a server running SharePoint 2013 (or a SharePoint Online account) and a development environment on a separate client operating system. Installing SharePoint 2013 on client operating systems (such as Windows 7) is not supported, and installing the tools necessary for Windows Phone development is not supported on server operating systems (such as Windows Server 2008).
+A minimal configuration for working with SharePoint mobility projects requires a server running SharePoint (or a SharePoint Online account) and a development environment on a separate client operating system. Installing SharePoint on client operating systems (such as Windows 7) is not supported, and installing the tools necessary for Windows Phone development is not supported on server operating systems (such as Windows Server 2008).
   
     
     
@@ -16,11 +16,11 @@ A minimal configuration for working with SharePoint mobility projects requires a
 ## Windows Phone development projects and SharePoint Server
 <a name="SP15Setupmobile_winphone"> </a>
 
-To create and test Windows Phone apps that interact with SharePoint, you need access to a server running SharePoint 2013 or a SharePoint Online account, and you need sufficient permissions on the sites and lists you intend to use in your solutions. We recommend that you use an installation of SharePoint Server that is dedicated to testing and development as a target server while you develop your projects. Use SharePoint Server in a production environment as your target server only after your developed solution has undergone sufficient testing.
+To create and test Windows Phone apps that interact with SharePoint, you need access to a server running SharePoint or a SharePoint Online account, and you need sufficient permissions on the sites and lists you intend to use in your solutions. We recommend that you use an installation of SharePoint Server that is dedicated to testing and development as a target server while you develop your projects. Use SharePoint Server in a production environment as your target server only after your developed solution has undergone sufficient testing.
   
     
     
-For information on installing and configuring SharePoint 2013, see the documentation in the  [SharePoint Products](http://technet.microsoft.com/en-us/library/ee428287.aspx) section of the Microsoft TechNet Library. For information on using SharePoint Online in your development solutions, visit the [SharePoint Online Developer Resource Center](http://msdn.microsoft.com/en-us/sharepoint/gg153540.aspx).
+For information on installing and configuring SharePoint, see the documentation in the  [SharePoint Products](http://technet.microsoft.com/en-us/library/ee428287.aspx) section of the Microsoft TechNet Library. For information on using SharePoint Online in your development solutions, visit the [SharePoint Online Developer Resource Center](http://msdn.microsoft.com/en-us/sharepoint/gg153540.aspx).
   
     
     
@@ -52,7 +52,7 @@ To develop SharePoint Add-ins for use on Windows Phone 8, you need to set up you
       > If your computer meets the hardware and operating system requirements, but does not meet the requirements for the Windows Phone 8 Emulator, the Windows Phone SDK 8.0 will install and run. However, the Windows Phone 8 Emulator will not function and you will not be able to deploy or test apps on the Windows Phone 8 Emulator. For information about the system requirements for running the Windows Phone Emulator, see  [Setup and System Requirements for Windows Phone Emulator](http://msdn.microsoft.com/en-us/library/ff626524). 
 2. Install  [Microsoft SharePoint SDK for Windows Phone 8](http://www.microsoft.com/en-us/download/details.aspx?id=36818).
     
-    The SharePoint SDK for Windows Phone installs two Silverlight for Windows Phone templates (in addition to those installed by the Windows Phone SDK): the Windows Phone Empty SharePoint Application template and the Windows Phone SharePoint List Application template. The SDK also installs SharePoint CSOM libraries, an authentication library, and Windows Phone project templates, and it now supports NTLM authentication. You can use the bundled APIs and templates to build Windows Phone 8 applications against SharePoint 2013.
+    The SharePoint SDK for Windows Phone installs two Silverlight for Windows Phone templates (in addition to those installed by the Windows Phone SDK): the Windows Phone Empty SharePoint Application template and the Windows Phone SharePoint List Application template. The SDK also installs SharePoint CSOM libraries, an authentication library, and Windows Phone project templates, and it now supports NTLM authentication. You can use the bundled APIs and templates to build Windows Phone 8 applications against SharePoint.
     
     Additionally, the SharePoint SDK for Windows Phone installs several supporting run-time assemblies (in  `%ProgramFiles(x86)%\\Microsoft SDKs\\SharePoint\\v15.0\\Phone\\v8.0\\Libraries` for a standard installation).
     
@@ -71,7 +71,7 @@ To develop SharePoint Add-ins for use on Windows Phone 8, you need to set up you
 
     > **Note:**
       > The templates in the SharePoint SDK for Windows Phone are currently available for C# projects only. 
-For more information about the templates in SharePoint SDK for Windows Phone, see  [Overview of Windows Phone SharePoint 2013 application templates in Visual Studio](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio.md).
+For more information about the templates in SharePoint SDK for Windows Phone, see  [Overview of Windows Phone SharePoint application templates in Visual Studio](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio.md).
   
     
     
@@ -114,7 +114,7 @@ To develop SharePoint Add-ins for use on Windows Phone 7, you need to set up you
 
     > **Note:**
       > The templates in the SharePoint SDK for Windows Phone are currently available for C# projects only. 
-For more information about the templates in SharePoint SDK for Windows Phone, see  [Overview of Windows Phone SharePoint 2013 application templates in Visual Studio](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio.md).
+For more information about the templates in SharePoint SDK for Windows Phone, see  [Overview of Windows Phone SharePoint application templates in Visual Studio](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio.md).
   
     
     
@@ -123,7 +123,7 @@ For more information about the templates in SharePoint SDK for Windows Phone, se
 <a name="SP15Setupmobile_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint 2013](build-windows-phone-apps-that-access-sharepoint.md)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
 -  [Windows Phone SDK 8.0](http://www.microsoft.com/en-us/download/details.aspx?id=35471)

@@ -1,12 +1,12 @@
 ---
-title: Trigger expressions syntax in SharePoint 2013
+title: Trigger expressions syntax in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: d50536f6-d02e-4060-9286-634dfd06206c
 ---
 
 
-# Trigger expressions syntax in SharePoint 2013
-Learn about trigger expressions you can use to create trigger conditions to configure the web service callout in SharePoint Server 2013. 
+# Trigger expressions syntax in SharePoint
+Learn about trigger expressions you can use to create trigger conditions to configure the web service callout in SharePoint. 
 ## Elements used in the syntax of trigger expressions
 <a name="SP15triggerex_elements"> </a>
 
@@ -233,7 +233,7 @@ There are two sets of constants that can be used with specific functions: **Date
     
     
 
-**Table 2. Trigger expression constants and usage in SharePoint 2013**
+**Table 2. Trigger expression constants and usage in SharePoint**
 
 
 |**Group of constants**|**Examples**|**Usage**|

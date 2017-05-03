@@ -15,7 +15,7 @@ Learn to use Task Actions in SharePoint Designer 2013.
 ## Overview of Task Actions in SharePoint Designer 2013
 <a name="section1"> </a>
 
-A task in SharePoint Server 2013 is used to assign work to a person or group and then track the progress of that work over time. There are two workflow actions in SharePoint Designer 2013 designed for working with tasks.
+A task in SharePoint is used to assign work to a person or group and then track the progress of that work over time. There are two workflow actions in SharePoint Designer 2013 designed for working with tasks.
   
     
     
@@ -24,7 +24,7 @@ These actions are:
     
     
 
-- **Assign a task** is used to create a SharePoint 2013 task and assign it to a single participant.
+- **Assign a task** is used to create a SharePoint task and assign it to a single participant.
     
   
 - **Start a task process** is used to assign a task to multiple participants.
@@ -57,7 +57,7 @@ The Task Actions are accessed in the **Action** drop-down menu of the SharePoint
     
     
 
-## Using Task Actions in SharePoint 2013
+## Using Task Actions in SharePoint
 <a name="section2"> </a>
 
 A business process often consists of tasks that must be performed by people. A workflow orchestrates the steps of a process. A workflow uses Task Actions to assign tasks to people. For example, when a new employee is hired a number of tasks need to be performed. One such task might be a new employee orientation. The task might need to be performed by a member of the Human Resources department.
@@ -200,16 +200,16 @@ The **Start a task process** action takes two inputs: the users that will partic
 <a name="bk_addresources"> </a>
 
 
--  [What's new in workflow in SharePoint Server 2013](http://msdn.microsoft.com/library/6ab8a28b-fa2f-4530-8b55-a7f663bf15ea.aspx)
+-  [What's new in workflow in SharePoint](http://msdn.microsoft.com/library/6ab8a28b-fa2f-4530-8b55-a7f663bf15ea.aspx)
     
   
--  [Getting started with SharePoint Server 2013 workflow](http://msdn.microsoft.com/library/cc73be76-a329-449f-90ab-86822b1c2ee8.aspx)
+-  [Getting started with SharePoint workflow](http://msdn.microsoft.com/library/cc73be76-a329-449f-90ab-86822b1c2ee8.aspx)
     
   
 -  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)
     
   
--  [Workflow actions quick reference (SharePoint 2013 Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
+-  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
     
   
 

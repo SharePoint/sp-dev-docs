@@ -1,19 +1,19 @@
 ---
-title: Custom security trimming for Search in SharePoint Server 2013
+title: Custom security trimming for Search in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: fbbf0cc4-e135-426a-9996-34eb954dbd5a
 ---
 
 
 
-# Custom security trimming for Search in SharePoint Server 2013
+# Custom security trimming for Search in SharePoint
 Learn about the two kinds of custom security trimmer interfaces, **ISecurityTrimmerPre** and **ISecurityTrimmerPost**, and the steps you must take to create a custom security trimmer.
-At query time, Search in SharePoint 2013 performs security trimming of search results that are based on the identity of the user submitting the query, by using the security information obtained from the crawl component.
+At query time, Search in SharePoint performs security trimming of search results that are based on the identity of the user submitting the query, by using the security information obtained from the crawl component.
   
     
     
 
-You might have certain scenarios, however, in which the built-in security trimming results aren't sufficient for your requirements. In such scenarios, you need to implement custom security trimming. Search in SharePoint 2013 provides support for custom security trimming through the  [ISecurityTrimmerPre](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre.aspx) interface, [ISecurityTrimmerPost](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPost.aspx) interface, and [ISecurityTrimmer2](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmer2.aspx) interface (deprecated) in the [Microsoft.Office.Server.Search.Query](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.aspx) namespace.
+You might have certain scenarios, however, in which the built-in security trimming results aren't sufficient for your requirements. In such scenarios, you need to implement custom security trimming. Search in SharePoint provides support for custom security trimming through the  [ISecurityTrimmerPre](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre.aspx) interface, [ISecurityTrimmerPost](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPost.aspx) interface, and [ISecurityTrimmer2](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmer2.aspx) interface (deprecated) in the [Microsoft.Office.Server.Search.Query](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.aspx) namespace.
  **Note:** Custom pre-trimmers don't support Windows SIDs in ACLs, only claims. If any of the SID claim types are returned from a custom pre-trimmer, the resulting ACEs in the index will be encoded as a claim, not as SID. Hence they do not match Windows user identities that are based on SIDs.
   
     
@@ -162,7 +162,7 @@ You can also retrieve the identity of the user from the **CheckAccess** method's
 
 #### Passing document ACLs from the connector to your security trimmers
 
-A connector, as the name implies, is a communication bridge between SharePoint 2013 and the external system that hosts the external data. If you are working with custom connectors, you can pass the document's ACL information directly to the post-trimmer by setting the **docaclmeta** document property. As long as the configured connectors and post-trimmers have the same format and interpretation of the field, you are free to use it to pass custom data.
+A connector, as the name implies, is a communication bridge between SharePoint and the external system that hosts the external data. If you are working with custom connectors, you can pass the document's ACL information directly to the post-trimmer by setting the **docaclmeta** document property. As long as the configured connectors and post-trimmers have the same format and interpretation of the field, you are free to use it to pass custom data.
   
     
     
@@ -236,7 +236,7 @@ The following table describes the parameters that the cmdlet uses.
 | _typeName_ <br/> |Required. The strong name of the custom security trimmer assembly.  <br/> |
 | _RulePath_ <br/> |Required for post-trimmers; optional for pre-trimmers. The crawl rule for the security trimmer.  <br/> **Note:** We recommend using one crawl rule per content source.           |
 | _id_ <br/> |Required. The security trimmer identifier (ID). This value is unique; if a security trimmer is registered with an ID that is already registered for another security trimmer, the registration for the first trimmer is overwritten with the registration for the second trimmer.  <br/> |
-| _properties_ <br/> |Optional. The name-value pairs specifying the configuration properties. Must be in the following format:  `Name1~Value1~Name2~Value~…` <br/> |
+| _properties_ <br/> |Optional. The name-value pairs specifying the configuration properties. Must be in the following format:  `Name1~Value1~Name2~Value~???` <br/> |
    
 For an example of a basic command for registering a custom security trimmer and a sample that specifies the configuration properties, see  [How to: Use a custom security trimmer for SharePoint Server search results](how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results.md).
   
@@ -256,6 +256,6 @@ For an example of a basic command for registering a custom security trimmer and 
 -  [ISecurityTrimmerPost](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPost.aspx)
     
   
--  [Overview of Business Connectivity Services in SharePoint 2013](http://technet.microsoft.com/en-us/library/ee661740.aspx)
+-  [Overview of Business Connectivity Services in SharePoint](http://technet.microsoft.com/en-us/library/ee661740.aspx)
     
   

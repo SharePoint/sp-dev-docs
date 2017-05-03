@@ -1,18 +1,18 @@
 ---
-title: URLs and tokens in SharePoint 2013
+title: URLs and tokens in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 161418d7-8123-4c4e-91a1-97e43c17f0e6
 ---
 
 
 
-# URLs and tokens in SharePoint 2013
-Learn how to formulate URLs and how to use URL tokens in SharePoint 2013.
+# URLs and tokens in SharePoint
+Learn how to formulate URLs and how to use URL tokens in SharePoint.
 
-## Types of URLs in SharePoint 2013
+## Types of URLs in SharePoint
 <a name="TypesOfURLs"> </a>
 
-SharePoint 2013 parses URL strings to determine the form of URL based on a specified protocol (for example, **http:**) or on the placement of a forward slash (/) within the string. Depending on the particular member, you can use the following URL forms:
+SharePoint parses URL strings to determine the form of URL based on a specified protocol (for example, **http:**) or on the placement of a forward slash (/) within the string. Depending on the particular member, you can use the following URL forms:
   
     
     
@@ -45,10 +45,10 @@ When you create a URL to an image file that is located in the %ProgramFiles%\\Co
     
     
 
-## URL tokens in SharePoint 2013
+## URL tokens in SharePoint
 <a name="URLtokens"> </a>
 
-SharePoint 2013 supports the tokens listed in the following tables for use in either SharePoint Add-ins or farm solutions. In addition, some tokens are usable only in apps. For more information about them, see  [URL strings and tokens in SharePoint Add-ins](http://msdn.microsoft.com/library/800ec8cd-a448-46bc-b41e-d4030eeb4048%28Office.15%29.aspx).
+SharePoint supports the tokens listed in the following tables for use in either SharePoint Add-ins or farm solutions. In addition, some tokens are usable only in apps. For more information about them, see  [URL strings and tokens in SharePoint Add-ins](http://msdn.microsoft.com/library/800ec8cd-a448-46bc-b41e-d4030eeb4048%28Office.15%29.aspx).
   
     
     
@@ -97,7 +97,7 @@ Except where indicated otherwise, none of these tokens in the next table can be 
 <a name="SP15URLS_addlresources"> </a>
 
 
--  [Build farm solutions in SharePoint 2013](build-farm-solutions-in-sharepoint.md)
+-  [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint.md)
     
   
 -  [Advanced Extranet Support](http://msdn.microsoft.com/library/21d67796-23c5-4339-8f0e-124208d21ab2%28Office.15%29.aspx)

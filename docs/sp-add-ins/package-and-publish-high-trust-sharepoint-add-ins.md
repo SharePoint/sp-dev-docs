@@ -15,13 +15,13 @@ You need the following:
 
  
 
-- An on-premises SharePoint 2013 development environment. See  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md) for the setup instructions.
+- An on-premises SharePoint development environment. See  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md) for the setup instructions.
     
  
 - An IIS web server to host the remote web application. IIS Manager should be installed.
     
  
-- Visual Studio installed either remotely or on the computer where you have installed SharePoint 2013.
+- Visual Studio installed either remotely or on the computer where you have installed SharePoint.
     
  
 - Microsoft Office Developer Tools for Visual Studio
@@ -287,7 +287,7 @@ The following procedure configures the certificate as a trusted token issuer in 
 ### To configure the certificate
 
 
-1. If you have not done so already, create the high-trust configuration Windows PowerShell script or scripts that you need, as described in  [High-trust configuration scripts for SharePoint 2013](high-trust-configuration-scripts-for-sharepoint-2013.md).
+1. If you have not done so already, create the high-trust configuration Windows PowerShell script or scripts that you need, as described in  [High-trust configuration scripts for SharePoint](high-trust-configuration-scripts-for-sharepoint-2013.md).
     
  
 2. Copy the scripts to the SharePoint server.
@@ -330,7 +330,7 @@ Edit the web.config file so that it contains new values for the following keys i
       - If the high-trust SharePoint Add-in has its own certificate that it is not sharing with other SharePoint Add-ins, the  `IssuerId` is the same as the `ClientId`.
     
  
-  - If the SharePoint Add-in is sharing the same certificate that other SharePoint Add-ins are using, the  `IssuerId` is an arbitrary GUID. The script for this scenario that you can find in [High-trust configuration scripts for SharePoint 2013](high-trust-configuration-scripts-for-sharepoint-2013.md) generates a text file with this GUID in it. The IT staff can pass the outputted file to the add-in developer for insertion as the `IssuerId` in the web.config file.
+  - If the SharePoint Add-in is sharing the same certificate that other SharePoint Add-ins are using, the  `IssuerId` is an arbitrary GUID. The script for this scenario that you can find in [High-trust configuration scripts for SharePoint](high-trust-configuration-scripts-for-sharepoint-2013.md) generates a text file with this GUID in it. The IT staff can pass the outputted file to the add-in developer for insertion as the `IssuerId` in the web.config file.
     
  
 
@@ -579,7 +579,7 @@ private static X509Certificate2 GetCertificateFromStore()
 1. Upload the *.app package file of the SharePoint Add-in to the organization add-in catalog. (High-trust SharePoint Add-ins cannot be distributed through the Office Store.) For details, see  [Add add-ins to the Add-in Catalog](http://technet.microsoft.com/en-us/library/fp161234.aspx#AddApps).
     
  
-2. Install the add-in on any website within the same parent SharePoint web application that contains the add-in catalog. For details about uploading and installing the SharePoint Add-in, see  [Add SharePoint Add-ins to a SharePoint 2013 site](http://technet.microsoft.com/en-us/library/fp161231).
+2. Install the add-in on any website within the same parent SharePoint web application that contains the add-in catalog. For details about uploading and installing the SharePoint Add-in, see  [Add SharePoint Add-ins to a SharePoint site](http://technet.microsoft.com/en-us/library/fp161231).
     
  
 

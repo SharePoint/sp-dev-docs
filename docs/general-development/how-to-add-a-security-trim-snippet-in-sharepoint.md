@@ -1,11 +1,11 @@
 ---
-title: How to Add a Security Trim snippet in SharePoint 2013
+title: How to Add a Security Trim snippet in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 4beaab08-760b-408a-b768-906312779379
 ---
 
 
-# How to: Add a Security Trim snippet in SharePoint 2013
+# How to: Add a Security Trim snippet in SharePoint
 You can use a Security Trim snippet to display content only to specific users, based on a specific permission that those users must have and whether the users are authenticated or anonymous.
 ## Introduction to the Security Trim snippet
 <a name="Introduction"> </a>
@@ -44,7 +44,7 @@ A Security Trim panel has two important property settings, one for authenticatio
     
     > **Note:**
       > You are selecting an individual permission, not a permission level. (A permission level is a set of granted permissions.) 
-Of course, if you restrict the authentication to only anonymous users, it's typically not necessary to specify a specific permission because anonymous users have usually not been given any SharePoint 2013 permissions. It makes sense to use permissions only with all users or with all authenticated users.
+Of course, if you restrict the authentication to only anonymous users, it's typically not necessary to specify a specific permission because anonymous users have usually not been given any SharePoint permissions. It makes sense to use permissions only with all users or with all authenticated users.
   
     
     
@@ -170,13 +170,13 @@ The **<div>** where `class="DefaultContentBlock"` is what you replace with your 
 -  [Understanding permission levels](http://office.microsoft.com/en-us/products/default-permission-levels-HA102772313.aspx?CTT=5&amp;origin=HA102771919)
     
   
--  [SharePoint 2013 Design Manager snippets](sharepoint-design-manager-snippets.md)
+-  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md)
     
   
 -  [Build sites for SharePoint](build-sites-for-sharepoint.md)
     
   
--  [Develop the site design in SharePoint 2013](develop-the-site-design-in-sharepoint.md)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
     
   
 

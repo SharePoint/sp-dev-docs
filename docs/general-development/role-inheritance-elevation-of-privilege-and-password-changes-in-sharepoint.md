@@ -1,11 +1,11 @@
 ---
-title: Role, inheritance, elevation of privilege, and password changes in SharePoint 2013
+title: Role, inheritance, elevation of privilege, and password changes in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: a72c6cad-9e3d-4d57-bf26-24cd1ad7f020
 ---
 
 
-# Role, inheritance, elevation of privilege, and password changes in SharePoint 2013
+# Role, inheritance, elevation of privilege, and password changes in SharePoint
 
 ## Roles, role definitions, and role assignments
 <a name="SP15_RoleInheritance_Role"> </a>
@@ -18,7 +18,7 @@ The role definition, or permission level, is the list of rights associated with 
   
     
     
-The role assignment is the relationship among the role definition, the users and groups, and the scope (for example, one user may be a reader on list 1, while another user is a reader on list 2). The relationship expressed through the role assignment is the key to making SharePoint 2013 security management role-based. All permissions are managed through roles; you never assign rights directly to a user. You assign only meaningful collections of rights (role definitions) that are well-defined and consistent. You manage unique permissions by adding or removing users and groups to or from role definitions through role assignments.
+The role assignment is the relationship among the role definition, the users and groups, and the scope (for example, one user may be a reader on list 1, while another user is a reader on list 2). The relationship expressed through the role assignment is the key to making SharePoint security management role-based. All permissions are managed through roles; you never assign rights directly to a user. You assign only meaningful collections of rights (role definitions) that are well-defined and consistent. You manage unique permissions by adding or removing users and groups to or from role definitions through role assignments.
   
     
     
@@ -30,11 +30,11 @@ The website administrator can customize the default role definitions and create 
 ## Role definition inheritance
 <a name="SP15_RoleInheritance_RoleDefInheritance"> </a>
 
-SharePoint 2013 supports inheriting role definitions similarly to how it supports inheriting permissions, and breaking role definition inheritance requires also breaking permissions inheritance.
+SharePoint supports inheriting role definitions similarly to how it supports inheriting permissions, and breaking role definition inheritance requires also breaking permissions inheritance.
   
     
     
-Each SharePoint object can have its own set of permissions or inherit its permissions from its parent container. SharePoint 2013 does not support partial inheritance, where an object would inherit all the permissions of its parent and also have some of its own permissions. Permissions are either unique or inherited. SharePoint 2013 does not support directed inheritance. For example, an object can inherit only from its parent container, not from some other object or container.
+Each SharePoint object can have its own set of permissions or inherit its permissions from its parent container. SharePoint does not support partial inheritance, where an object would inherit all the permissions of its parent and also have some of its own permissions. Permissions are either unique or inherited. SharePoint does not support directed inheritance. For example, an object can inherit only from its parent container, not from some other object or container.
   
     
     
@@ -147,7 +147,7 @@ Although elevation of privilege provides a powerful technique for managing secur
 ## Automatic password changes
 <a name="SP15_RoleInheritance_AutomaticPasswordChange"> </a>
 
-The automatic password change feature enables you to update and deploy passwords without performing manual password update tasks across multiple accounts, services, and web applications. This makes managing password in SharePoint 2013 simpler. You can use the automatic password change feature to determine whether a password is about to expire and to reset the password by using a long, cryptographically strong random string.
+The automatic password change feature enables you to update and deploy passwords without performing manual password update tasks across multiple accounts, services, and web applications. This makes managing password in SharePoint simpler. You can use the automatic password change feature to determine whether a password is about to expire and to reset the password by using a long, cryptographically strong random string.
   
     
     
@@ -171,7 +171,7 @@ You use managed accounts to implement the automatic password change feature. Man
 - Create multiple accounts in Active Directory Domain Services (AD DS), and then register each of these accounts in SharePoint.
     
   
-You can also register managed accounts and enable SharePoint 2013 to control account passwords. Users have to be notified about planned password changes and related service interruptions, but the accounts used by a SharePoint farm, web applications, and various services can be automatically reset and deployed within the farm as necessary, based on individually configured password reset schedules.
+You can also register managed accounts and enable SharePoint to control account passwords. Users have to be notified about planned password changes and related service interruptions, but the accounts used by a SharePoint farm, web applications, and various services can be automatically reset and deployed within the farm as necessary, based on individually configured password reset schedules.
   
     
     
@@ -214,19 +214,19 @@ For more information about the managed account API, see the following links:
 <a name="SP15_RoleInheritance_AdditionalResources"> </a>
 
 
--  [Authentication, authorization, and security in SharePoint 2013](authentication-authorization-and-security-in-sharepoint.md)
+-  [Authentication, authorization, and security in SharePoint](authentication-authorization-and-security-in-sharepoint.md)
     
   
--  [Authorization, users, groups, and the object model in SharePoint 2013](authorization-users-groups-and-the-object-model-in-sharepoint.md)
+-  [Authorization, users, groups, and the object model in SharePoint](authorization-users-groups-and-the-object-model-in-sharepoint.md)
     
   
--  [Claims-based identity in SharePoint 2013](claims-based-identity-in-sharepoint.md)
+-  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint.md)
     
   
--  [Claims-based identity and concepts in SharePoint 2013](claims-based-identity-and-concepts-in-sharepoint.md)
+-  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint.md)
     
   
--  [Configuration, administration, and resources in SharePoint 2013](configuration-administration-and-resources-in-sharepoint.md)
+-  [Configuration, administration, and resources in SharePoint](configuration-administration-and-resources-in-sharepoint.md)
     
   
 

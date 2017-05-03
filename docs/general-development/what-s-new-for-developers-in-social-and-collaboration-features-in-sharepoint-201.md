@@ -1,26 +1,26 @@
 ---
-title: What's new for developers in social and collaboration features in SharePoint 2013
+title: What's new for developers in social and collaboration features in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 65365b1d-cde5-47cd-8b04-1b76be0e3490
 ---
 
 
-# What's new for developers in social and collaboration features in SharePoint 2013
-Learn about new and changed social and collaboration features for My Site and Community Site development scenarios in SharePoint 2013.
-Social and collaboration features in SharePoint 2013 make it easy for users to communicate and to stay engaged and informed. The improved social feed on personal sites and team sites helps users to keep up-to-date with the people and content that they care about. The new Community Site feature provides a rich community experience that lets users easily find and share information and find people who have similar interests.
+# What's new for developers in social and collaboration features in SharePoint
+Learn about new and changed social and collaboration features for My Site and Community Site development scenarios in SharePoint.
+Social and collaboration features in SharePoint make it easy for users to communicate and to stay engaged and informed. The improved social feed on personal sites and team sites helps users to keep up-to-date with the people and content that they care about. The new Community Site feature provides a rich community experience that lets users easily find and share information and find people who have similar interests.
   
     
     
 
-For an in-depth overview of the new social and collaboration features in SharePoint 2013, see  [What's new in social computing in SharePoint 2013](http://technet.microsoft.com/en-us/library/jj219766%28v=office.15%29) on TechNet. For more information about programming with social and collaboration features, see [Social and collaboration features in SharePoint 2013](social-and-collaboration-features-in-sharepoint.md).
-## New and changed My Site features in SharePoint Server 2013
+For an in-depth overview of the new social and collaboration features in SharePoint, see  [What's new in social computing in SharePoint](http://technet.microsoft.com/en-us/library/jj219766%28v=office.15%29) on TechNet. For more information about programming with social and collaboration features, see [Social and collaboration features in SharePoint](social-and-collaboration-features-in-sharepoint.md).
+## New and changed My Site features in SharePoint
 <a name="bkmk_Social"> </a>
 
 The My Site Social API, which includes user profiles and social data, contains many new and changed features. New functionality for My Sites and team sites provides an interactive, conversational experience within feeds that makes it easier for users to stay connected to the people and content that matter to them.
   
     
     
-The **Newsfeed** page on SharePoint Server 2013 displays several of these improvements, including a text box that enables users to quickly publish microblog posts and an interactive, conversational feed of posts and updates from the people and content that the user is following.
+The **Newsfeed** page on SharePoint displays several of these improvements, including a text box that enables users to quickly publish microblog posts and an interactive, conversational feed of posts and updates from the people and content that the user is following.
   
     
     
@@ -39,9 +39,9 @@ The **Social** namespace contains the primary API for working with feeds and mic
     
 
 
-### New client APIs for social feeds, following people and content, and user properties in SharePoint 2013
+### New client APIs for social feeds, following people and content, and user properties in SharePoint
 
-SharePoint 2013 includes new client APIs that you can use to work with social feeds, follow people and content, and retrieve user properties in online, on-premises, and mobile development. When possible, you should use client APIs for SharePoint 2013 development instead of using the server object model or web services. Client APIs include managed client object models, a JavaScript object model, and a Representational State Transfer (REST) service. If you are developing an SharePoint Add-in, you must use a client API.
+SharePoint includes new client APIs that you can use to work with social feeds, follow people and content, and retrieve user properties in online, on-premises, and mobile development. When possible, you should use client APIs for SharePoint development instead of using the server object model or web services. Client APIs include managed client object models, a JavaScript object model, and a Representational State Transfer (REST) service. If you are developing an SharePoint Add-in, you must use a client API.
   
     
     
@@ -49,7 +49,7 @@ Not all server-side functionality in the Microsoft.Office.Server.UserProfiles as
   
     
     
-For information about how to access the My Site Social client APIs, see  [Get started developing with social features in SharePoint 2013](get-started-developing-with-social-features-in-sharepoint.md). For more information about the API sets in SharePoint 2013 and when to use them, see  [Choose the right API set in SharePoint 2013](choose-the-right-api-set-in-sharepoint.md).
+For information about how to access the My Site Social client APIs, see  [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint.md). For more information about the API sets in SharePoint and when to use them, see  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md).
   
     
     
@@ -159,15 +159,15 @@ $loader.CreatePersonalSiteEnqueueBulk(@("user1@domain.com"))
 $loader.Context.ExecuteQuery()
 ```
 
-For more information, see  [So you want to programmatically provision Personal Sites (One Drive for Business) in Office 365?](http://blogs.msdn.com/b/frank_marasco/archive/2014/03/25/so-you-want-to-programmatically-provision-personal-sites-one-drive-for-business-in-office-365.aspx) and [Use Windows PowerShell to administer SharePoint 2013](http://technet.microsoft.com/en-us/library/ee806878%28v=office.15%29.aspx).
+For more information, see  [So you want to programmatically provision Personal Sites (One Drive for Business) in Office 365?](http://blogs.msdn.com/b/frank_marasco/archive/2014/03/25/so-you-want-to-programmatically-provision-personal-sites-one-drive-for-business-in-office-365.aspx) and [Use Windows PowerShell to administer SharePoint](http://technet.microsoft.com/en-us/library/ee806878%28v=office.15%29.aspx).
   
     
     
 
-### New objects for users and user properties in SharePoint 2013
+### New objects for users and user properties in SharePoint
 <a name="bkmk_NewUserObjects"> </a>
 
-SharePoint Server 2013 includes new objects that represent users and user properties:
+SharePoint includes new objects that represent users and user properties:
   
     
     
@@ -185,7 +185,7 @@ SharePoint Server 2013 includes new objects that represent users and user proper
     
     
 
-SharePoint Server 2013 also includes a new client-side  [UserProfile](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.UserProfile.aspx) object that provides methods you can use to create a personal site for the current user. However, it does not contain all the user properties that the server-side [UserProfile](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.UserProfile.aspx) object contains. To access all user properties from client-side code, use the [PeopleManager.GetMyProperties](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.GetMyProperties.aspx) method or [PeopleManager.GetPropertiesFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.GetPropertiesFor.aspx) method (user profile properties are stored in the [PersonProperties.UserProfileProperties](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PersonProperties.UserProfileProperties.aspx) property) or use the [PeopleManager.GetUserProfilePropertiesFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.GetUserProfilePropertiesFor.aspx) method or [PeopleManager.GetUserProfilePropertyFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.GetUserProfilePropertyFor.aspx) method.
+SharePoint also includes a new client-side  [UserProfile](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.UserProfile.aspx) object that provides methods you can use to create a personal site for the current user. However, it does not contain all the user properties that the server-side [UserProfile](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.UserProfile.aspx) object contains. To access all user properties from client-side code, use the [PeopleManager.GetMyProperties](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.GetMyProperties.aspx) method or [PeopleManager.GetPropertiesFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.GetPropertiesFor.aspx) method (user profile properties are stored in the [PersonProperties.UserProfileProperties](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PersonProperties.UserProfileProperties.aspx) property) or use the [PeopleManager.GetUserProfilePropertiesFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.GetUserProfilePropertiesFor.aspx) method or [PeopleManager.GetUserProfilePropertyFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.GetUserProfilePropertyFor.aspx) method.
   
     
     
@@ -201,12 +201,12 @@ The client-side People Picker control is an HTML and JavaScript control that pro
 ### Deprecated and removed My Site Social API and features
 <a name="bkmk_DeprecatedAPI"> </a>
 
-The following My Site Social API and features are deprecated in SharePoint Server 2013:
+The following My Site Social API and features are deprecated in SharePoint:
   
     
     
 
-- The API in the  [Microsoft.Office.Server.ActivityFeed](https://msdn.microsoft.com/library/Microsoft.Office.Server.ActivityFeed.aspx) namespace is deprecated. The **Social** namespace provides the API for programmatically working with social feeds in SharePoint 2013. For backward compatibility, **ActivityEvent** items from SharePoint 2010 are displayed in SharePoint 2013 feeds as events that cannot be replied to. (Legacy event migration must be enabled in Central Administration.)
+- The API in the  [Microsoft.Office.Server.ActivityFeed](https://msdn.microsoft.com/library/Microsoft.Office.Server.ActivityFeed.aspx) namespace is deprecated. The **Social** namespace provides the API for programmatically working with social feeds in SharePoint. For backward compatibility, **ActivityEvent** items from SharePoint 2010 are displayed in SharePoint feeds as events that cannot be replied to. (Legacy event migration must be enabled in Central Administration.)
     
   
 - The My Site RSS feed (ActivityFeed.aspx) is replaced with new APIs in the REST service, the client object model, and the JavaScript object model. To migrate custom SharePoint 2010 code that uses this API (preferably a client API), replace all requests to ActivityFeed.aspx with calls to the new API and handle feed data that is returned in JavaScript Object Notation (JSON) format.
@@ -222,20 +222,20 @@ The following My Site Social API and features are deprecated in SharePoint Serve
 - The following activity events no longer automatically inform the feed: profile update, upcoming birthday, upcoming workplace anniversary, new membership, and change of manager. However, you can create custom event receivers for these activities. No new social events have been added.
     
   
-- The following fields in the  [Privacy](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.Privacy.aspx) enumeration are deprecated: **Contacts**, **Organization**, and **Manager**. SharePoint 2013 offers only **Private** ( **Only Me**) and **Public** ( **Everyone**) privacy settings. Existing privacy settings are retained until they are changed by the user. To migrate custom SharePoint 2010 code that uses this API, replace all references to the deprecated privacy fields.
+- The following fields in the  [Privacy](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.Privacy.aspx) enumeration are deprecated: **Contacts**, **Organization**, and **Manager**. SharePoint offers only **Private** ( **Only Me**) and **Public** ( **Everyone**) privacy settings. Existing privacy settings are retained until they are changed by the user. To migrate custom SharePoint 2010 code that uses this API, replace all references to the deprecated privacy fields.
     
   
 - The **Following People** API that is accessed from the **SocialFollowingManager** replaces the **Colleagues** functionality from SharePoint Server 2010. The **Colleagues** page is replaced with the **People I'm following** page. The **Groups** feature that enabled users to organize colleagues into groups is no longer available.
     
   
-- Organization profiles are obsolete in SharePoint 2013, and the following types are deprecated: **OrganizationProfile**, **OrganizationProfileManager**, **OrganizationMembershipType**, **OrganizationNotFoundException**, **OrganizationProfileChange**, **OrganizationProfileChangeQuery**, **OrganizationProfileMembershipChange**, and **OrganizationProfileValueCollection**.
+- Organization profiles are obsolete in SharePoint, and the following types are deprecated: **OrganizationProfile**, **OrganizationProfileManager**, **OrganizationMembershipType**, **OrganizationNotFoundException**, **OrganizationProfileChange**, **OrganizationProfileChangeQuery**, **OrganizationProfileMembershipChange**, and **OrganizationProfileValueCollection**.
     
   
-- The **My Links** feature is deprecated in SharePoint 2013.
+- The **My Links** feature is deprecated in SharePoint.
     
   
 
-## New Community Site feature in SharePoint 2013
+## New Community Site feature in SharePoint
 <a name="bkmk_Collab"> </a>
 
 The new Community Site feature includes a new site template and improved discussion experience. Features such as reputation, categories, featured discussions, a question-post type, and best replies let community members easily find popular discussions, relevant information, and people with similar interests. Members build reputation as they participate in communities.
@@ -257,7 +257,7 @@ The following list contains information for developing with Community Site featu
 - Activating the **Community Site** feature activates the **CommunityEventReceiver** event receiver.
     
   
-- To customize the client-side rendered list view, you must use JavaScript overrides to replace the view. List views cannot be extended through the SharePoint 2013 API. For more information, see  [Customize a list view in SharePoint Add-ins using client-side rendering](http://msdn.microsoft.com/library/8d5cabb2-70d0-46a0-bfe0-9e21f8d67d86%28Office.15%29.aspx).
+- To customize the client-side rendered list view, you must use JavaScript overrides to replace the view. List views cannot be extended through the SharePoint API. For more information, see  [Customize a list view in SharePoint Add-ins using client-side rendering](http://msdn.microsoft.com/library/8d5cabb2-70d0-46a0-bfe0-9e21f8d67d86%28Office.15%29.aspx).
     
   
 - Community Sites use asynchronous events to update objects. If asynchronous events run in the background, you may encounter  *Save*  conflicts when you attempt to update lists or list items, and your handle to the object may become stale.
@@ -293,16 +293,16 @@ while (retries <= 10)
 <a name="SP15NewSocial_addlresources"> </a>
 
 
--  [Social and collaboration features in SharePoint 2013](social-and-collaboration-features-in-sharepoint.md)
+-  [Social and collaboration features in SharePoint](social-and-collaboration-features-in-sharepoint.md)
     
   
--  [Get started developing with social features in SharePoint 2013](get-started-developing-with-social-features-in-sharepoint.md)
+-  [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint.md)
     
   
--  [What's new for developers in SharePoint 2013](what’s-new-for-developers-in-sharepoint.md)
+-  [What's new for developers in SharePoint](what???s-new-for-developers-in-sharepoint.md)
     
   
--  [What's new in social computing in SharePoint 2013](http://technet.microsoft.com/en-us/library/jj219766%28v=office.15%29)
+-  [What's new in social computing in SharePoint](http://technet.microsoft.com/en-us/library/jj219766%28v=office.15%29)
     
   
 

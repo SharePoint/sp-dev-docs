@@ -6,7 +6,7 @@ ms.assetid: 63d9c867-0c5e-4f89-bc61-eeefb0320844
 
 
 # SharePoint workflow development best practices
-Provides a collection of best practices for developers using Visual Studio to create workflows in SharePoint 2013.
+Provides a collection of best practices for developers using Visual Studio to create workflows in SharePoint.
 ## Workflow development best practices
 
 To develop error-free workflows for SharePoint, it is best to follow some general guidelines, or "best practices." This is the case whether you are using SharePoint Designer 2013 or Visual Studio 2012 for workflow development.
@@ -150,7 +150,7 @@ When using impersonation steps in a workflow, you should author the workflow usi
   
     
     
-For more information, see  [Create a workflow with elevated permissions by using the SharePoint 2013 Workflow platform](create-a-workflow-with-elevated-permissions-by-using-the-sharepoint-workflo.md).
+For more information, see  [Create a workflow with elevated permissions by using the SharePoint Workflow platform](create-a-workflow-with-elevated-permissions-by-using-the-sharepoint-workflo.md).
   
     
     
@@ -183,13 +183,13 @@ Where possible, instead of creating multiple **Approval** actions, it is more ef
 <a name="bk_addresources"> </a>
 
 
--  [Workflows in SharePoint 2013](workflows-in-sharepoint.md)
+-  [Workflows in SharePoint](workflows-in-sharepoint.md)
     
   
--  [SharePoint 2013 workflow fundamentals](sharepoint-workflow-fundamentals.md)
+-  [SharePoint workflow fundamentals](sharepoint-workflow-fundamentals.md)
     
   
--  [Develop SharePoint 2013 workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
+-  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
     
   
 

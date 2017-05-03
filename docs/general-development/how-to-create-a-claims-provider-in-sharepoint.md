@@ -1,12 +1,12 @@
 ---
-title: How to Create a claims provider in SharePoint 2013
+title: How to Create a claims provider in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 8f3228ca-57fd-4253-a07d-abeb63298c58
 ---
 
 
-# How to: Create a claims provider in SharePoint 2013
-Learn how to create and implement a SharePoint 2013 claims provider that fulfills the requirements for claims augmentation and claims picking.
+# How to: Create a claims provider in SharePoint
+Learn how to create and implement a SharePoint claims provider that fulfills the requirements for claims augmentation and claims picking.
 A claims provider issues claims and packages claims into security tokens. A claims provider has two roles: augmentation and picking.
   
     
@@ -158,16 +158,16 @@ protected SPClaim CreateClaim(String claimType, String value, String valueType)
 <a name="SP15_HowToCreateClaimsProvider_AdditionalResources"> </a>
 
 
--  [Claims-based identity in SharePoint 2013](claims-based-identity-in-sharepoint.md)
+-  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint.md)
     
   
--  [Incoming claims: Signing into SharePoint 2013](incoming-claims-signing-into-sharepoint.md)
+-  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint.md)
     
   
--  [Claims provider in SharePoint 2013](claims-provider-in-sharepoint.md)
+-  [Claims provider in SharePoint](claims-provider-in-sharepoint.md)
     
   
--  [How to: Deploy a claims provider in SharePoint 2013](how-to-deploy-a-claims-provider-in-sharepoint.md)
+-  [How to: Deploy a claims provider in SharePoint](how-to-deploy-a-claims-provider-in-sharepoint.md)
     
   
 

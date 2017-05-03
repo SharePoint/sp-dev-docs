@@ -1,16 +1,16 @@
 ---
-title: How to Follow documents, sites, and tags by using the REST service in SharePoint 2013
+title: How to Follow documents, sites, and tags by using the REST service in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 989a5873-49f9-49e4-8d0f-439dde891cc2
 ---
 
 
-# How to: Follow documents, sites, and tags by using the REST service in SharePoint 2013
+# How to: Follow documents, sites, and tags by using the REST service in SharePoint
 Create SharePoint-hosted apps that use the REST service to follow content (documents, sites, and tags) and to get followed content.
-## How do I use the SharePoint Server 2013 REST service to follow content?
+## How do I use the SharePoint REST service to follow content?
 <a name="bk_intro"> </a>
 
-SharePoint Server 2013 users can follow documents, sites, and tags to get updates about the items in their newsfeeds and to quickly open followed documents and sites. You can use the SharePoint Server 2013 REST API in your app or solution to start following content, stop following content, and get followed content on behalf of the current user.
+SharePoint users can follow documents, sites, and tags to get updates about the items in their newsfeeds and to quickly open followed documents and sites. You can use the SharePoint REST API in your app or solution to start following content, stop following content, and get followed content on behalf of the current user.
   
     
     
@@ -53,13 +53,13 @@ To perform Following Content tasks by using the REST API, you send HTTP **GET** 
   
 
 > **Note:**
-> You also use these endpoints for Following People tasks, but the **followers** and **suggestions** resources available from **SocialRestFollowingManager** only support following people, not content. For more information about how you can use **SocialRestFollowingManager**, see  [Follow content in SharePoint 2013](follow-content-in-sharepoint.md) and [Follow people in SharePoint 2013](follow-people-in-sharepoint.md). 
+> You also use these endpoints for Following People tasks, but the **followers** and **suggestions** resources available from **SocialRestFollowingManager** only support following people, not content. For more information about how you can use **SocialRestFollowingManager**, see  [Follow content in SharePoint](follow-content-in-sharepoint.md) and [Follow people in SharePoint](follow-people-in-sharepoint.md). 
   
     
     
 
 
-## Prerequisites for creating a SharePoint-hosted app that manages followed content by using the SharePoint 2013 REST service
+## Prerequisites for creating a SharePoint-hosted app that manages followed content by using the SharePoint REST service
 <a name="bkmk_Prereqs"> </a>
 
 This article assumes that you create the SharePoint Add-in by using Napa on an Office 365 Developer Site. If you're using this development environment, you've already met the prerequisites.
@@ -78,7 +78,7 @@ If you're not using Napa on an Office 365 Developer Site, you'll need to meet th
     
     
 
-- A SharePoint 2013 development environment that is configured for app isolation. If you're developing remotely, the server must support sideloading of apps or you must install the app on a Developer Site.
+- A SharePoint development environment that is configured for app isolation. If you're developing remotely, the server must support sideloading of apps or you must install the app on a Developer Site.
     
   
 - The My Site host configured, with a personal site created for the current user.
@@ -151,7 +151,7 @@ If you're not using Napa on an Office 365 Developer Site, you'll need to meet th
     
   
 
-## Code example: Start following and stop following a document by using the SharePoint 2013 REST service
+## Code example: Start following and stop following a document by using the SharePoint REST service
 <a name="bkmk_FollowDocs"> </a>
 
 The following code example represents the contents of the App.js file and shows how to:
@@ -313,7 +313,7 @@ function requestFailed(xhr, ajaxOptions, thrownError) {
 ```
 
 
-## Code example: Start following and stop following a site by using the SharePoint 2013 REST service
+## Code example: Start following and stop following a site by using the SharePoint REST service
 <a name="bkmk_FollowSites"> </a>
 
 The following code example represents the contents of the App.js file and shows how to:
@@ -475,7 +475,7 @@ function requestFailed(xhr, ajaxOptions, thrownError) {
 ```
 
 
-## Code example: Start following and stop following a tag by using the SharePoint 2013 REST service
+## Code example: Start following and stop following a tag by using the SharePoint REST service
 <a name="bkmk_FollowTags"> </a>
 
 The following code example represents the contents of the App.js file and shows how to:
@@ -637,7 +637,7 @@ function requestFailed(xhr, ajaxOptions, thrownError) {
 ```
 
 
-## Code example: Get followed content by using the SharePoint 2013 REST service
+## Code example: Get followed content by using the SharePoint REST service
 <a name="bkmk_GetFollowed"> </a>
 
 The following code example represents the contents of the App.js file and shows how to:
@@ -906,13 +906,13 @@ The following response represents a count of three followed documents, sites, an
 <a name="bkmk_AddtionalResources"> </a>
 
 
--  [Follow content in SharePoint 2013](follow-content-in-sharepoint.md)
+-  [Follow content in SharePoint](follow-content-in-sharepoint.md)
     
   
--  [Following people and content REST API reference for SharePoint 2013](following-people-and-content-rest-api-reference-for-sharepoint.md)
+-  [Following people and content REST API reference for SharePoint](following-people-and-content-rest-api-reference-for-sharepoint.md)
     
   
--  [How to: Follow documents and sites by using the .NET client object model in SharePoint 2013](how-to-follow-documents-and-sites-by-using-the-net-client-object-model-in-sharep.md)
+-  [How to: Follow documents and sites by using the .NET client object model in SharePoint](how-to-follow-documents-and-sites-by-using-the-net-client-object-model-in-sharep.md)
     
   
 

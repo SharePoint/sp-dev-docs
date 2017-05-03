@@ -1,27 +1,27 @@
 ---
-title: How to Work with user profiles and organization profiles by using the server object model in SharePoint 2013
+title: How to Work with user profiles and organization profiles by using the server object model in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 13f16dc3-f652-4fb3-996b-5f2166236d2b
 ---
 
 
-# How to: Work with user profiles and organization profiles by using the server object model in SharePoint 2013
-Learn how to create, retrieve, and change SharePoint 2013 user profiles and user profile properties programmatically by using the SharePoint 2013 server object model.
-## What are user profiles in SharePoint 2013?
+# How to: Work with user profiles and organization profiles by using the server object model in SharePoint
+Learn how to create, retrieve, and change SharePoint user profiles and user profile properties programmatically by using the SharePoint server object model.
+## What are user profiles in SharePoint?
 
-In SharePoint 2013, user profiles represent SharePoint users. User profile properties represent information about the users and also about the properties themselves. For example, properties include the account name or email address of a user and the data type of a property. You can use the server object model to programmatically create, retrieve, and change user profiles, profile subtypes, and profile properties.
+In SharePoint, user profiles represent SharePoint users. User profile properties represent information about the users and also about the properties themselves. For example, properties include the account name or email address of a user and the data type of a property. You can use the server object model to programmatically create, retrieve, and change user profiles, profile subtypes, and profile properties.
   
     
     
 
 > **Note:**
-> For more information about common programming tasks for working with user profiles and the API that you use to perform the tasks, see  [Work with user profiles in SharePoint 2013](work-with-user-profiles-in-sharepoint.md). 
+> For more information about common programming tasks for working with user profiles and the API that you use to perform the tasks, see  [Work with user profiles in SharePoint](work-with-user-profiles-in-sharepoint.md). 
   
     
     
 
 
-## Prerequisites for setting up your development environment to work with user profiles by using the SharePoint 2013 server object model
+## Prerequisites for setting up your development environment to work with user profiles by using the SharePoint server object model
 <a name="bkmk_Prereqs"> </a>
 
 To create a console application that uses the server object model to work with user profiles and user profile properties, you'll need:
@@ -29,7 +29,7 @@ To create a console application that uses the server object model to work with u
     
     
 
-- SharePoint Server 2013 with the profile created for the current user.
+- SharePoint with the profile created for the current user.
     
   
 - Visual Studio 2012.
@@ -39,7 +39,7 @@ To create a console application that uses the server object model to work with u
     
   
 
-## Create a console application that works with user profiles by using the SharePoint 2013 server object model
+## Create a console application that works with user profiles by using the SharePoint server object model
 <a name="bkmk_CreateConsoleApp"> </a>
 
 
@@ -77,10 +77,10 @@ To create a console application that uses the server object model to work with u
     
   
 
-## Code example: Create user profiles by using the SharePoint 2013 server object model
+## Code example: Create user profiles by using the SharePoint server object model
 <a name="bkmk_CreateUP"> </a>
 
-In SharePoint 2013, user profiles represent SharePoint users. Profile types and subtypes help categorize profiles into groups, such as employees or customers. Profile types and subtypes are used to set common profile properties and attributes at the subtype level. SharePoint Server includes a default user profile subtype.
+In SharePoint, user profiles represent SharePoint users. Profile types and subtypes help categorize profiles into groups, such as employees or customers. Profile types and subtypes are used to set common profile properties and attributes at the subtype level. SharePoint Server includes a default user profile subtype.
   
     
     
@@ -144,7 +144,7 @@ namespace UserProfilesSSOM
 ```
 
 
-## Code example: Create user profile properties by using the SharePoint 2013 server object model
+## Code example: Create user profile properties by using the SharePoint server object model
 <a name="bkmk_CreateUPProp"> </a>
 
 User profile properties describe personal and organizational information about users. You can create and add a custom profile property to the default set of SharePoint profile properties.
@@ -248,7 +248,7 @@ namespace UserProfilesSSOM
 ```
 
 
-## Code example: Retrieve and change user profiles by using the SharePoint 2013 server object model
+## Code example: Retrieve and change user profiles by using the SharePoint server object model
 <a name="bkmk_GetChangeUP"> </a>
 
 The following code example retrieves all user profiles within the context and changes the value of a user's  [DisplayName](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.UserProfile.DisplayName.aspx) property. Most profile properties are accessed by using the [UserProfile.Item](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.UserProfile.Item.aspx) accessor.
@@ -321,7 +321,7 @@ namespace UserProfilesSSOM
 ```
 
 
-## Code example: Retrieve and change attributes for user profile properties by using the SharePoint 2013 server object model
+## Code example: Retrieve and change attributes for user profile properties by using the SharePoint server object model
 <a name="bkmk_GetChangePropAttributes"> </a>
 
 The following code example retrieves the set of properties that represent a specific user property and its attributes, and then it changes the  [CoreProperty.DisplayName](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.CoreProperty.DisplayName.aspx) attribute, [ProfileTypeProperty.IsVisibleOnViewer](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfileTypeProperty.IsVisibleOnViewer.aspx) attribute, and [ProfileSubtypeProperty.PrivacyPolicy](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfileSubtypeProperty.PrivacyPolicy.aspx) attribute. These changes apply globally to the property set. [ProfileSubtypeProperty.PrivacyPolicy](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfileSubtypeProperty.PrivacyPolicy.aspx) specifies whether users are required to provide a value for the property. [PrivacyPolicy](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfileSubtypeProperty.PrivacyPolicy.aspx) applies to user profile properties only.
@@ -399,7 +399,7 @@ namespace UserProfilesSSOM
 ```
 
 
-## Code example: Retrieve and change values for user properties by using the SharePoint 2013 server object model
+## Code example: Retrieve and change values for user properties by using the SharePoint server object model
 <a name="bkmk_GetChangePropValues"> </a>
 
 The following code example retrieves all **UserProfile** type properties and retrieves the property values for a specific user. Then, it changes the single-value [PictureUrl](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PropertyConstants.PictureUrl.aspx) property and the multivalue [PastProjects](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PropertyConstants.PastProjects.aspx) property. For the complete list of profile property name constants, see [PropertyConstants](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PropertyConstants.aspx) .
@@ -498,13 +498,13 @@ namespace UserProfilesSSOM
 <a name="bk_addresources"> </a>
 
 
--  [Work with user profiles in SharePoint 2013](work-with-user-profiles-in-sharepoint.md)
+-  [Work with user profiles in SharePoint](work-with-user-profiles-in-sharepoint.md)
     
   
--  [How to: Retrieve user profile properties by using the .NET client object model in SharePoint 2013](how-to-retrieve-user-profile-properties-by-using-the-net-client-object-model-in.md)
+-  [How to: Retrieve user profile properties by using the .NET client object model in SharePoint](how-to-retrieve-user-profile-properties-by-using-the-net-client-object-model-in.md)
     
   
--  [How to: Retrieve user profile properties by using the JavaScript object model in SharePoint 2013](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in.md)
+-  [How to: Retrieve user profile properties by using the JavaScript object model in SharePoint](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in.md)
     
   
 -  [Microsoft.Office.Server.UserProfiles](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.aspx)

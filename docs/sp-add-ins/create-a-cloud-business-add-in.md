@@ -6,7 +6,7 @@ By using the Cloud Business Add-in template in Visual Studio, you can create Sha
  
 
 
- **Note**  You can also build a SharePoint Add-in by using the Add-in for SharePoint 2013 template.
+ **Note**  You can also build a SharePoint Add-in by using the Add-in for SharePoint template.
  
 
 

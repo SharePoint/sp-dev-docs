@@ -77,7 +77,7 @@ For more details about how to create a handler for the add-in event, see  [Handl
 
 ```
 
-4. To use the REST interface, your code uses other methods in the  **TokenHelper** class to get an access token, which is then included in the requests it makes to SharePoint. For more information, see [Complete basic operations using SharePoint 2013 REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md). Your code should be structured similarly to the following.
+4. To use the REST interface, your code uses other methods in the  **TokenHelper** class to get an access token, which is then included in the requests it makes to SharePoint. For more information, see [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md). Your code should be structured similarly to the following.
     
 ```C#
   if (properties.EventType == SPRemoteEventType.AppUpgraded)
@@ -156,7 +156,7 @@ if (properties.AppEventProperties.PreviousVersion < ver3OOO)
 ## Add rollback logic to the handler
 <a name="AddRollbackLogic"> </a>
 
-If an error occurs when an add-in is being updated, the SharePoint 2013 infrastructure stops the update process and rolls back the add-in instance and all its components to the previous version of the add-in instance. But the infrastructure has no way of knowing what your  **UpgradedEventEndpoint** handler logic does, so it can't always undo it. An unhandled exception thrown while your **UpgradedEventEndpoint** handler is executing almost certainly indicates that the entire add-in update process should be rolled back, but it won't be because the infrastructure doesn't know how to undo some things your **UpgradedEventEndpoint** code might have done. For this reason, the **UpgradedEventEndpoint** code must:
+If an error occurs when an add-in is being updated, the SharePoint infrastructure stops the update process and rolls back the add-in instance and all its components to the previous version of the add-in instance. But the infrastructure has no way of knowing what your  **UpgradedEventEndpoint** handler logic does, so it can't always undo it. An unhandled exception thrown while your **UpgradedEventEndpoint** handler is executing almost certainly indicates that the entire add-in update process should be rolled back, but it won't be because the infrastructure doesn't know how to undo some things your **UpgradedEventEndpoint** code might have done. For this reason, the **UpgradedEventEndpoint** code must:
  
 
  
@@ -167,7 +167,7 @@ If an error occurs when an add-in is being updated, the SharePoint 2013 infrastr
 2. Branch to custom rollback code to undo what it has been done to that point.
     
  
-3. Signal to the SharePoint 2013 infrastructure that the entire add-in update should be rolled back.
+3. Signal to the SharePoint infrastructure that the entire add-in update should be rolled back.
     
  
 4. Pass on an error message to the infrastructure.
@@ -203,7 +203,7 @@ catch (Exception e)
 }
 ```
 
-The last things your error handling should do is assign an error message and a cancel status to the  **SPRemoteEventResult** object that the **ProcessEvent** method returns to the SharePoint 2013 update infrastructure. The following is an example. In this code, _result_ is an **SPRemoteEventResult** object that has been declared earlier in the **ProcessEvent** method.
+The last things your error handling should do is assign an error message and a cancel status to the  **SPRemoteEventResult** object that the **ProcessEvent** method returns to the SharePoint update infrastructure. The following is an example. In this code, _result_ is an **SPRemoteEventResult** object that has been declared earlier in the **ProcessEvent** method.
  
 
  
@@ -241,10 +241,10 @@ Return to  [Major steps in updating an add-in](update-sharepoint-add-ins.md#Majo
 
  
 
--  [Update add-in web components in SharePoint 2013](update-add-in-web-components-in-sharepoint-2013.md)
+-  [Update add-in web components in SharePoint](update-add-in-web-components-in-sharepoint-2013.md)
     
  
--  [Update host web components in SharePoint 2013](update-host-web-components-in-sharepoint-2013.md)
+-  [Update host web components in SharePoint](update-host-web-components-in-sharepoint-2013.md)
     
  
 -  [Update remote components in SharePoint Add-ins](update-remote-components-in-sharepoint-add-ins.md)

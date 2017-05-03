@@ -6,7 +6,7 @@ ms.assetid: 496780d5-47d6-4a43-bf14-70aefb8d820c
 
 
 # Workflow development in SharePoint Designer and Visio
-Learn to use Visio 2013 and SharePoint Designer 2013 to create and publish workflows to a SharePoint 2013 site without needing any code.
+Learn to use Visio 2013 and SharePoint Designer 2013 to create and publish workflows to a SharePoint site without needing any code.
 ## Introduction
 <a name="VSSPD_Intro"> </a>
 
@@ -16,7 +16,7 @@ Visio 2013 and SharePoint Designer 2013 make it easy for business analysts, proc
     
 
 > **Note:**
-> For guidance on setting up and configuring SharePoint Server 2013 and the Workflow Manager server, see  [Configure workflow in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj658586.aspx). 
+> For guidance on setting up and configuring SharePoint and the Workflow Manager server, see  [Configure workflow in SharePoint](http://technet.microsoft.com/en-us/library/jj658586.aspx). 
   
     
     
@@ -33,7 +33,7 @@ This is ideal for business analysts and process consultants who are already fami
 ## About creating SharePoint Workflows in Visio 2013 and SharePoint Designer 2013
 <a name="VSSPD_About"> </a>
 
-Visio 2013 includes a SharePoint 2013 Workflow template that can be used to build SharePoint 2013 workflows. The SharePoint 2013 Workflow template is associated with three stencils: SharePoint 2013 Workflow Actions, SharePoint 2013 Workflow Conditions, and SharePoint 2013 Workflow Terminators. The shapes in these stencils correspond to specific actions and conditions that can be used within a SharePoint 2013 workflow. To build a workflow, you need only to drag shapes onto the drawing canvas in Visio 2013 to model the business logic behind the workflow.
+Visio 2013 includes a SharePoint Workflow template that can be used to build SharePoint workflows. The SharePoint Workflow template is associated with three stencils: SharePoint Workflow Actions, SharePoint Workflow Conditions, and SharePoint Workflow Terminators. The shapes in these stencils correspond to specific actions and conditions that can be used within a SharePoint workflow. To build a workflow, you need only to drag shapes onto the drawing canvas in Visio 2013 to model the business logic behind the workflow.
   
     
     
@@ -44,13 +44,13 @@ Workflows in SharePoint Designer 2013 now include the notions of stages, loops, 
   
     
     
-The SharePoint 2013 Workflow template that is included in Visio 2013 also uses stages, loops, and steps as logical building blocks for creating a workflow. 
+The SharePoint Workflow template that is included in Visio 2013 also uses stages, loops, and steps as logical building blocks for creating a workflow. 
   
     
     
 
 > **Important:**
-> Because of the underlying differences between the Microsoft SharePoint 2010 Workflow template and the SharePoint 2013 Workflow template, you cannot use shapes from one template within a diagram created by the other. Only shapes from the SharePoint 2013 Workflow Actions, SharePoint 2013 Workflow Conditions, and SharePoint 2013 Workflow Terminators stencils can be used to build a SharePoint 2013 workflow. 
+> Because of the underlying differences between the Microsoft SharePoint 2010 Workflow template and the SharePoint Workflow template, you cannot use shapes from one template within a diagram created by the other. Only shapes from the SharePoint Workflow Actions, SharePoint Workflow Conditions, and SharePoint Workflow Terminators stencils can be used to build a SharePoint workflow. 
   
     
     
@@ -67,7 +67,7 @@ Stages also have the following rules:
     
     
 
-- All diagrams must have at least one stage. A stage, complete with Enter, Exit, and Start shapes are present as part of the default SharePoint 2013 Workflow template.
+- All diagrams must have at least one stage. A stage, complete with Enter, Exit, and Start shapes are present as part of the default SharePoint Workflow template.
     
   
 - When you add a new stage to the drawing canvas, Visio 2013 will add Start and End connectors when the stage is dropped.
@@ -128,16 +128,16 @@ Steps represent a grouped series of sequential actions. Steps must be contained 
 ## Creating a workflow in Visio 2013
 <a name="VSSPD_Creating"> </a>
 
-All of the master shapes in the SharePoint 2013 Workflow stencils correspond to actions, conditions, and other logical constructs within a SharePoint 2013 workflow. To build a workflow, you can drag shapes onto the drawing canvas, just like any other flowchart in Visio. After you have finished building the workflow in Visio 2013, save the workflow before SharePoint Designer 2013 can open it.
+All of the master shapes in the SharePoint Workflow stencils correspond to actions, conditions, and other logical constructs within a SharePoint workflow. To build a workflow, you can drag shapes onto the drawing canvas, just like any other flowchart in Visio. After you have finished building the workflow in Visio 2013, save the workflow before SharePoint Designer 2013 can open it.
   
     
     
-To open the SharePoint 2013 Workflow template in Visio 2013, do the following:
+To open the SharePoint Workflow template in Visio 2013, do the following:
   
     
     
 
-### To open the SharePoint 2013 Workflow template in Visio 2013
+### To open the SharePoint Workflow template in Visio 2013
 
 
 1. Open Visio 2013.
@@ -149,12 +149,12 @@ To open the SharePoint 2013 Workflow template in Visio 2013, do the following:
 3. Under **Template Categories**, choose **Flowchart**.
     
   
-4. Under **Choose a Template**, choose **SharePoint 2013 Workflow** and then choose **Create**.
+4. Under **Choose a Template**, choose **SharePoint Workflow** and then choose **Create**.
     
     The template opens and the drawing canvas is prepopulated with Start, and Stage shapes. The Stage shape contains an Enter and an Exit shape, joined by a single connector.
     
   
-With the SharePoint 2013 Workflow template open, drag actions, conditions, and other shapes onto the drawing canvas to design a workflow. For more information about individual shapes and what they mean, see the article  [Shapes in the SharePoint Server workflow template in Visio](shapes-in-the-sharepoint-server-workflow-template-in-visio.md).
+With the SharePoint Workflow template open, drag actions, conditions, and other shapes onto the drawing canvas to design a workflow. For more information about individual shapes and what they mean, see the article  [Shapes in the SharePoint Server workflow template in Visio](shapes-in-the-sharepoint-server-workflow-template-in-visio.md).
   
     
     
@@ -162,7 +162,7 @@ With the SharePoint 2013 Workflow template open, drag actions, conditions, and o
 > **Tip:**
 >  When designing a workflow, keep the following additional considerations in mind:
 >  - To quickly build a workflow, drop action and condition shapes onto the internal connector that is contained by new stage shapes. Visio 2013 automatically splits the connector into additional connectors, keeping the workflow connected from the Enter shape to the Exit shape.
->  - Do not use any shapes from a stencil other than the SharePoint 2013 Workflow Actions, SharePoint 2013 Workflow Conditions, and SharePoint 2013 Workflow Terminators stencils. Use only the Connector tool provided by the SharePoint 2013 Workflow template to add connections between shapes. All other connector shapes are not valid within a SharePoint 2013 workflow.
+>  - Do not use any shapes from a stencil other than the SharePoint Workflow Actions, SharePoint Workflow Conditions, and SharePoint Workflow Terminators stencils. Use only the Connector tool provided by the SharePoint Workflow template to add connections between shapes. All other connector shapes are not valid within a SharePoint workflow.
 >  - Action shapes, steps, and loops must always be contained within a Stage shape. Some conditional shapes can be outside of a stage.
 >  - A Stage shape must have exactly one Enter shape and one Exit shape. The workflow sub-process that is contained within the stage must start with the Enter shape and end with the Exit shape.
 >  - A condition shape must have two connectors leaving the shape, one labeled "Yes" and the other labeled "No." You can right-click a connector to choose **Yes** or **No**. 
@@ -181,7 +181,7 @@ Validating the workflow in Visio 2013 is like validating any other connected dia
     
     
 
-### To validate a SharePoint 2013 workflow in Visio 2013
+### To validate a SharePoint workflow in Visio 2013
 
 
 1. On the **Process** tab, in the **Diagram Validation** group, choose **Check Diagram**.
@@ -196,11 +196,11 @@ Validating the workflow in Visio 2013 is like validating any other connected dia
 4. If no errors are found in the workflow, Visio displays a message stating that the diagram validation is complete and that no issues were found.
     
   
-After the workflow has been successfully validated in Visio 2013, you can save the file and import it into SharePoint Designer 2013. Unlike the Microsoft SharePoint 2010 Workflow template, you can save a copy of the SharePoint 2013 Workflow diagram as the default Visio 2013 file format (.vsdx) and SharePoint Designer 2013 can open the file. 
+After the workflow has been successfully validated in Visio 2013, you can save the file and import it into SharePoint Designer 2013. Unlike the Microsoft SharePoint 2010 Workflow template, you can save a copy of the SharePoint Workflow diagram as the default Visio 2013 file format (.vsdx) and SharePoint Designer 2013 can open the file. 
   
     
     
-Use the following procedure to save a SharePoint 2013 workflow in Visio 2013 as a Visio 2013 .vsdx file that can be opened in SharePoint Designer 2013:
+Use the following procedure to save a SharePoint workflow in Visio 2013 as a Visio 2013 .vsdx file that can be opened in SharePoint Designer 2013:
   
     
     
@@ -224,16 +224,16 @@ Use the following procedure to save a SharePoint 2013 workflow in Visio 2013 as 
 ## Customizing and publishing a workflow in SharePoint Designer 2013
 <a name="VSSPD_Customizing"> </a>
 
-Once you have created the underlying business logic for a SharePoint 2013 workflow in Visio 2013 and saved the diagram, you can open the Visio .vsdx file in SharePoint Designer 2013 and begin tailoring the workflow to your SharePoint 2013 site. The .vsdx file package contains XML documents that SharePoint Designer 2013 can translate into workflows.
+Once you have created the underlying business logic for a SharePoint workflow in Visio 2013 and saved the diagram, you can open the Visio .vsdx file in SharePoint Designer 2013 and begin tailoring the workflow to your SharePoint site. The .vsdx file package contains XML documents that SharePoint Designer 2013 can translate into workflows.
   
     
     
-Use the following procedure to open a SharePoint 2013 site in SharePoint Designer 2013:
+Use the following procedure to open a SharePoint site in SharePoint Designer 2013:
   
     
     
 
-### To open a SharePoint 2013 site in SharePoint Designer 2013
+### To open a SharePoint site in SharePoint Designer 2013
 
 
 1. Open SharePoint Designer 2013.
@@ -248,7 +248,7 @@ Use the following procedure to open a SharePoint 2013 site in SharePoint Designe
 4. Choose **Open**.
     
   
-Once the SharePoint 2013 site is open, you can open the Visio 2013 .vsdx diagram within SharePoint Designer 2013.
+Once the SharePoint site is open, you can open the Visio 2013 .vsdx diagram within SharePoint Designer 2013.
   
     
     
@@ -267,7 +267,7 @@ Once the SharePoint 2013 site is open, you can open the Visio 2013 .vsdx diagram
 2. In the left pane under **List Workflow**, type a name for your workflow (My First SP2013 Workflow) and select the list on the site that you want to publish the workflow to.
     
   
-3. In the **Choose the workflow platform for the new workflow** list, select **SharePoint 2013 Workflow**.
+3. In the **Choose the workflow platform for the new workflow** list, select **SharePoint Workflow**.
     
   
 4. Choose **Create**.
@@ -281,7 +281,7 @@ Once the SharePoint 2013 site is open, you can open the Visio 2013 .vsdx diagram
 2. In the left pane, under **Site Workflow**, type a name for your workflow (My First SP2013 Workflow).
     
   
-3. In the **Choose the workflow platform for the new workflow** list, select **SharePoint 2013 Workflow**.
+3. In the **Choose the workflow platform for the new workflow** list, select **SharePoint Workflow**.
     
   
 4. Choose **Create**.
@@ -320,7 +320,7 @@ For example, the **Send an email** shape has two properties associated with it: 
     
 
 > **Note:**
-> For more information about individual actions, shapes, and their properties, see the articles  [Shapes in the SharePoint Server workflow template in Visio](shapes-in-the-sharepoint-server-workflow-template-in-visio.md) and [Workflow actions quick reference (SharePoint 2013 Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md). 
+> For more information about individual actions, shapes, and their properties, see the articles  [Shapes in the SharePoint Server workflow template in Visio](shapes-in-the-sharepoint-server-workflow-template-in-visio.md) and [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md). 
   
     
     
@@ -329,7 +329,7 @@ Once you have set the properties within the workflow and are ready to publish, y
   
     
     
-Use the following procedure to check the SharePoint 2013 workflow in SharePoint Designer 2013:
+Use the following procedure to check the SharePoint workflow in SharePoint Designer 2013:
   
     
     
@@ -362,7 +362,7 @@ For more information, see the following resources:
     
     
 
--  [Workflow actions quick reference (SharePoint 2013 Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
+-  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
     
   
 -  [Shapes in the SharePoint Server workflow template in Visio](shapes-in-the-sharepoint-server-workflow-template-in-visio.md)

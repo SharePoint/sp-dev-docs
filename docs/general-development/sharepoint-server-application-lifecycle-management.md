@@ -1,12 +1,12 @@
 ---
-title: SharePoint Server 2013 Application Lifecycle Management
+title: SharePoint Application Lifecycle Management
 ms.prod: SHAREPOINT
 ms.assetid: caaf9a09-2e6a-49e3-a8d6-aaf7f93a842a
 ---
 
 
-# SharePoint Server 2013 Application Lifecycle Management
-Applies common application lifecycle management (ALM) concepts and practices to application development using SharePoint Server 2013 technologies.
+# SharePoint Application Lifecycle Management
+Applies common application lifecycle management (ALM) concepts and practices to application development using SharePoint technologies.
  * **Provided by: *** Eric Charran, Microsoft Corporation
   
     
@@ -29,7 +29,7 @@ Applies common application lifecycle management (ALM) concepts and practices to 
 ## Overview of application lifecycle management (ALM)
 <a name="Overview"> </a>
 
-Microsoft SharePoint Server 2013 gives developers several options for creating and deploying applications that are based on SharePoint technologies, for both on-premises and in hosted or public cloud platforms. SharePoint Server 2013 offers increased flexibility in the shape applications can take as well as new options for using standards-based technologies with applications. Although these application capabilities and deployment options afforded by the new application model inSharePoint provide an effective means for developers to create new and immersive applications, developers must be able to infuse quality, testing and ALM considerations into the development process. This article applies common ALM concepts and practices to application development using SharePoint Server 2013 technologies.
+Microsoft SharePoint gives developers several options for creating and deploying applications that are based on SharePoint technologies, for both on-premises and in hosted or public cloud platforms. SharePoint offers increased flexibility in the shape applications can take as well as new options for using standards-based technologies with applications. Although these application capabilities and deployment options afforded by the new application model inSharePoint provide an effective means for developers to create new and immersive applications, developers must be able to infuse quality, testing and ALM considerations into the development process. This article applies common ALM concepts and practices to application development using SharePoint technologies.
   
     
     
@@ -37,19 +37,19 @@ Microsoft SharePoint Server 2013 gives developers several options for creating a
 ### What's new
 <a name="WhatsNew"> </a>
 
-SharePoint Server 2013 establishes a new paradigm for implementing applications. Because of this shift in application development with SharePoint technologies, developers and architects should have a thorough understanding of the new application development patterns, practices, and deployment models for SharePoint Server 2013. It's important to note that while the application model for developing solutions with SharePoint has changed, many of the patterns used for solution development including choice of technologies, implementation techniques are in line with existing web application development technologies.
+SharePoint establishes a new paradigm for implementing applications. Because of this shift in application development with SharePoint technologies, developers and architects should have a thorough understanding of the new application development patterns, practices, and deployment models for SharePoint. It's important to note that while the application model for developing solutions with SharePoint has changed, many of the patterns used for solution development including choice of technologies, implementation techniques are in line with existing web application development technologies.
   
     
     
-The following resources outline the application types that can be constructed using SharePoint Server 2013 technologies and contain considerations for both on-premises and cloud applications. To understand hosting options for SharePoint Add-ins, see  [Choose patterns for developing and hosting your SharePoint Add-in](http://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx).
+The following resources outline the application types that can be constructed using SharePoint technologies and contain considerations for both on-premises and cloud applications. To understand hosting options for SharePoint Add-ins, see  [Choose patterns for developing and hosting your SharePoint Add-in](http://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx).
   
     
     
-Additionally, Microsoft advises customers to evaluate the technologies used when developing applications with SharePoint Server 2013 as there is a wider set of choices for solution implementation. When creating applications, customers can focus on leveraging standards-based technologies such as HTML5 and JavaScript for presentation and user experience layers, while OData and OAuth can be leveraged for service-based access to back end services including SharePoint. Customers should consider carefully whether full trust code (that is, compiled assemblies deployed to SharePoint) are required. although continuing to use that development paradigm, while still valid and required in some situations, does impose significant overhead on the ALM process.
+Additionally, Microsoft advises customers to evaluate the technologies used when developing applications with SharePoint as there is a wider set of choices for solution implementation. When creating applications, customers can focus on leveraging standards-based technologies such as HTML5 and JavaScript for presentation and user experience layers, while OData and OAuth can be leveraged for service-based access to back end services including SharePoint. Customers should consider carefully whether full trust code (that is, compiled assemblies deployed to SharePoint) are required. although continuing to use that development paradigm, while still valid and required in some situations, does impose significant overhead on the ALM process.
   
     
     
-For more information about the new flexible development technologies for applications on SharePoint Server 2013, see  [SharePoint 2013 development overview](sharepoint-development-overview.md).
+For more information about the new flexible development technologies for applications on SharePoint, see  [SharePoint development overview](sharepoint-development-overview.md).
   
     
     
@@ -57,15 +57,15 @@ For more information about the new flexible development technologies for applica
 ### Benefits and changes
 <a name="Benefits"> </a>
 
-Because SharePoint-supported application development technologies now offer a more flexible assortment of languages and programming architectures, developers need to adapt existing ALM practices around mainstream development techniques to accommodate for their presence within SharePoint. Concepts such as testing, build establishment, deployment, and quality control, can be expanded to include deployment to SharePoint as a SharePoint application. This may mean that although many developers that are accustomed to writing and deploying server-side farm solutions that extend the core capabilities of SharePoint, common ALM practices for the new flexible development model facilitated by SharePoint Server 2013 applications must be applied to the implementation process.
+Because SharePoint-supported application development technologies now offer a more flexible assortment of languages and programming architectures, developers need to adapt existing ALM practices around mainstream development techniques to accommodate for their presence within SharePoint. Concepts such as testing, build establishment, deployment, and quality control, can be expanded to include deployment to SharePoint as a SharePoint application. This may mean that although many developers that are accustomed to writing and deploying server-side farm solutions that extend the core capabilities of SharePoint, common ALM practices for the new flexible development model facilitated by SharePoint applications must be applied to the implementation process.
   
     
     
-As customers continue the transition to cloud-hosted implementations of SharePoint Server 2013, developers will need to understand how to extend ALM concepts to include development, testing, and deployment target environments that sit outside the physical boundaries of the organization. This includes evaluating the technology strategy for conducting application development, testing, and deployment.
+As customers continue the transition to cloud-hosted implementations of SharePoint, developers will need to understand how to extend ALM concepts to include development, testing, and deployment target environments that sit outside the physical boundaries of the organization. This includes evaluating the technology strategy for conducting application development, testing, and deployment.
   
     
     
-Developers and architects alike can become well-versed in synthesizing solutions that consist of multiple application components that span or combine different types of hosting options. During this adaptation process, ALM procedures should be applied unilaterally to these applications. For example, developers may need to deploy an application that spans on-premises services deployment (that is, IIS, ASP.NET, MVC, WebAPI, and WCF), Microsoft Azure, SharePoint Server 2013, and SQL Azure, while also being able to test the application components to determine quality or whether any regressions have been introduced since a previous build. These requirements may signify a significant shift in how developers and teams regard the daily build and deployment process that is a well-known procedure for on-premises or server-side solutions.
+Developers and architects alike can become well-versed in synthesizing solutions that consist of multiple application components that span or combine different types of hosting options. During this adaptation process, ALM procedures should be applied unilaterally to these applications. For example, developers may need to deploy an application that spans on-premises services deployment (that is, IIS, ASP.NET, MVC, WebAPI, and WCF), Microsoft Azure, SharePoint, and SQL Azure, while also being able to test the application components to determine quality or whether any regressions have been introduced since a previous build. These requirements may signify a significant shift in how developers and teams regard the daily build and deployment process that is a well-known procedure for on-premises or server-side solutions.
   
     
     
@@ -73,7 +73,7 @@ Developers and architects alike can become well-versed in synthesizing solutions
 ### Development team considerations
 <a name="DevTeam"> </a>
 
-For organizations that have more than one application developer or architect, team development for SharePoint Server 2013 should be carefully planned to provide the highest-quality applications as well as support sufficient developer productivity. Because the method for conducting application development has increased in flexibility, teams will need to be clear and confident not only on ALM practices and patterns, but also on how each developer will write code and ensure that quality code becomes part of the application build process.
+For organizations that have more than one application developer or architect, team development for SharePoint should be carefully planned to provide the highest-quality applications as well as support sufficient developer productivity. Because the method for conducting application development has increased in flexibility, teams will need to be clear and confident not only on ALM practices and patterns, but also on how each developer will write code and ensure that quality code becomes part of the application build process.
   
     
     
@@ -115,11 +115,11 @@ The selection of a development environment should be made based on multiple fact
 ### Development environment philosophy
 <a name="DevPhilosophy"> </a>
 
-Because of the investments made in how applications can be designed and implemented using SharePoint Server 2013, developers should determine if there is a need to conduct development using server-side code. As developers create applications that use the cloud-hosted model, the requirement to conduct development that relies on virtualized environments, specifically for SharePoint, diminishes. Developers should seek to build solutions with the remote-development model that uses existing cloud-based (both public and private) infrastructure. If development environments can be quickly and easily provisioned without having to create and orchestrate virtualization, developers can invest more time in focusing on development productivity and quality, rather than infrastructure management.
+Because of the investments made in how applications can be designed and implemented using SharePoint, developers should determine if there is a need to conduct development using server-side code. As developers create applications that use the cloud-hosted model, the requirement to conduct development that relies on virtualized environments, specifically for SharePoint, diminishes. Developers should seek to build solutions with the remote-development model that uses existing cloud-based (both public and private) infrastructure. If development environments can be quickly and easily provisioned without having to create and orchestrate virtualization, developers can invest more time in focusing on development productivity and quality, rather than infrastructure management.
   
     
     
-The decision to require a virtualized instance of SharePoint Server 2013 versus the new SharePoint development site template will depend on whether or not the application requires full trust code to be deployed to SharePoint and run there. If no full trust code is required, we recommend using the developer site template, which can be found in Office 365 development tenants or within an organization's implementation of on-premises SharePoint. Developer site templates are designed for developers to deploy applications directly to SharePoint from Visual Studio. Office 365 developer sites are preconfigured for application isolation and OAuth so that developers can begin writing and testing applications right away.
+The decision to require a virtualized instance of SharePoint versus the new SharePoint development site template will depend on whether or not the application requires full trust code to be deployed to SharePoint and run there. If no full trust code is required, we recommend using the developer site template, which can be found in Office 365 development tenants or within an organization's implementation of on-premises SharePoint. Developer site templates are designed for developers to deploy applications directly to SharePoint from Visual Studio. Office 365 developer sites are preconfigured for application isolation and OAuth so that developers can begin writing and testing applications right away.
   
     
     
@@ -153,7 +153,7 @@ Developers with MSDN subscriptions can obtain a development tenant that contains
   
     
     
-Developers can start creating applications that will be hosted in Office 365, on-premises or on other infrastructure in a provider-hosted model. The benefit of this environment is that infrastructure, virtualization and other hosting considerations for a SharePoint development environment are abstracted by Office 365, allowing developers to create applications instantly. A prime consideration for this type of development environment is that applications that require full trust code to be deployed toSharePoint cannot be accommodated. Microsoft recommends using the SharePoint client-side object model (CSOM) and client-side technologies such asJavaScript as much as possible. In the event that full trust code is required (but deployment of the code to run on SharePoint is not required), we recommend deploying the server-side code in an autohosted or provider-hosted model. Note that these full trust code solutions that are deployed to provider-hosted infrastructure also use the CSOM but can use languages such as C#. It's also important to note that these applications deployed in a provider-hosted model can use other technology stacks and still use the CSOM to interact with SharePoint Server 2013.
+Developers can start creating applications that will be hosted in Office 365, on-premises or on other infrastructure in a provider-hosted model. The benefit of this environment is that infrastructure, virtualization and other hosting considerations for a SharePoint development environment are abstracted by Office 365, allowing developers to create applications instantly. A prime consideration for this type of development environment is that applications that require full trust code to be deployed toSharePoint cannot be accommodated. Microsoft recommends using the SharePoint client-side object model (CSOM) and client-side technologies such asJavaScript as much as possible. In the event that full trust code is required (but deployment of the code to run on SharePoint is not required), we recommend deploying the server-side code in an autohosted or provider-hosted model. Note that these full trust code solutions that are deployed to provider-hosted infrastructure also use the CSOM but can use languages such as C#. It's also important to note that these applications deployed in a provider-hosted model can use other technology stacks and still use the CSOM to interact with SharePoint.
   
     
     
@@ -203,7 +203,7 @@ For organizations or developers who choose not to use Office 365 developer sites
   
     
     
- [![Build apps for SharePoint in an on-premises deployment of SharePoint 2013 with the developer site template](../../images/OnPremDevSites.png)
+ [![Build apps for SharePoint in an on-premises deployment of SharePoint with the developer site template](../../images/OnPremDevSites.png)
   
     
     
@@ -219,7 +219,7 @@ TheSharePoint farm that hosts Developer Site instances must be monitored and mee
   
     
     
-Customers can decide to use infrastructure as a service (IaaS) capabilities like Microsoft Azure to host theSharePoint farms that contain and host developer sites, or their own on-premises virtual or physical environments. Note that using this model does not require a SharePoint installation for each developer. Remote application development will only require Visual Studio and Office and SharePoint 2013 development tools on the developer work station.
+Customers can decide to use infrastructure as a service (IaaS) capabilities like Microsoft Azure to host theSharePoint farms that contain and host developer sites, or their own on-premises virtual or physical environments. Note that using this model does not require a SharePoint installation for each developer. Remote application development will only require Visual Studio and Office and SharePoint development tools on the developer work station.
   
     
     
@@ -231,7 +231,7 @@ Developers must establish provider-hosted infrastructure to deploy the provider-
 ### Self-contained farm environments (virtualized farm development)
 <a name="SelfContained"> </a>
 
-For those solutions that require the deployment of full trust code to run on a SharePoint farm a full (often virtualized) implementation of SharePoint Server 2013 will be required. For guidance on how to create an on-premises development environment for SharePoint, see  [Set up an on-premises development environment for SharePoint Add-ins](http://msdn.microsoft.com/library/b0878c12-27c9-4eea-ae3b-7e79e5a8838d%28Office.15%29.aspx).
+For those solutions that require the deployment of full trust code to run on a SharePoint farm a full (often virtualized) implementation of SharePoint will be required. For guidance on how to create an on-premises development environment for SharePoint, see  [Set up an on-premises development environment for SharePoint Add-ins](http://msdn.microsoft.com/library/b0878c12-27c9-4eea-ae3b-7e79e5a8838d%28Office.15%29.aspx).
   
     
     
@@ -405,7 +405,7 @@ To achieve continuous integration, the build definition can be triggered when de
   
     
     
-ForSharePoint applications, developers should use the  [Office/SharePoint 2013 Continuous Integration with TFS 2012](http://officesharepointci.codeplex.com/) build definitions project to achieve scheduled builds or continuous integration. This project provides build definitions, Windows PowerShell scripts, and process instructions on how to configure Visual Studio Online or an on-premises version of TFS to build and deploy SharePoint applications in a continuous integration model. Developers should download the components in this project and configure their instance of TFS accordingly. For instructions on how to configure TFS with the provided build definition for SharePoint applications and configure the build definition to use the Windows PowerShell scripts to deploy the SharePoint application to a target environment, see the [Office/SharePoint 2013 Continuous Integration with TFS 2012 documentation](http://officesharepointci.codeplex.com/documentation).
+ForSharePoint applications, developers should use the  [Office/SharePoint Continuous Integration with TFS 2012](http://officesharepointci.codeplex.com/) build definitions project to achieve scheduled builds or continuous integration. This project provides build definitions, Windows PowerShell scripts, and process instructions on how to configure Visual Studio Online or an on-premises version of TFS to build and deploy SharePoint applications in a continuous integration model. Developers should download the components in this project and configure their instance of TFS accordingly. For instructions on how to configure TFS with the provided build definition for SharePoint applications and configure the build definition to use the Windows PowerShell scripts to deploy the SharePoint application to a target environment, see the [Office/SharePoint Continuous Integration with TFS 2012 documentation](http://officesharepointci.codeplex.com/documentation).
   
     
     
@@ -611,7 +611,7 @@ In order to test the application, all of the development components should be as
   
     
     
-For this type of testing, the ALM platform will build and deploy the SharePoint application and any required components to the target environments. For SharePoint-hosted applications, this will either be an Office 365 site or an on-premises/IaaS SharePoint Server 2013 site collection specifically established for integration and systems testing. For SharePoint cloud-hosted applications, TFS will also deploy the components to a centralized Microsoft Azure subscription where the services will be configured specifically for integration/systems testing. TFS will then execute coded UI or unit tests against the SharePoint application, as well as any components that the solution requires on hosted infrastructure.
+For this type of testing, the ALM platform will build and deploy the SharePoint application and any required components to the target environments. For SharePoint-hosted applications, this will either be an Office 365 site or an on-premises/IaaS SharePoint site collection specifically established for integration and systems testing. For SharePoint cloud-hosted applications, TFS will also deploy the components to a centralized Microsoft Azure subscription where the services will be configured specifically for integration/systems testing. TFS will then execute coded UI or unit tests against the SharePoint application, as well as any components that the solution requires on hosted infrastructure.
   
     
     
@@ -693,7 +693,7 @@ A release manager or a separate TFS build definition, manually invoked in most c
 ## Application patching and upgrades
 <a name="AppPatching"> </a>
 
-Microsoft has specific guidance on how application developers can upgrade applications. The SharePoint Server 2013 platform supports the notification of new application versions to users.
+Microsoft has specific guidance on how application developers can upgrade applications. The SharePoint platform supports the notification of new application versions to users.
   
     
     
@@ -723,7 +723,7 @@ The information in  [SharePoint Add-ins update process](http://msdn.microsoft.co
 -  [Use an Office 365 SharePoint site to authorize provider-hosted add-ins on an on-premises SharePoint site](http://msdn.microsoft.com/library/2f65ba3f-b246-4064-b4fb-ad18399d387a%28Office.15%29.aspx)
     
   
--  [SharePoint 2013 development overview](sharepoint-development-overview.md)
+-  [SharePoint development overview](sharepoint-development-overview.md)
     
   
 -  [What is the Open Data Protocol?](http://www.odata.org/)

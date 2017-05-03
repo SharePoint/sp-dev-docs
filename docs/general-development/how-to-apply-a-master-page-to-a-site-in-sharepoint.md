@@ -1,21 +1,21 @@
 ---
-title: How to Apply a master page to a site in SharePoint 2013
+title: How to Apply a master page to a site in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 04861390-84d5-40ea-b0db-6c0748eff196
 ---
 
 
-# How to: Apply a master page to a site in SharePoint 2013
-Learn how to map a master page to a SharePoint 2013 site.
+# How to: Apply a master page to a site in SharePoint
+Learn how to map a master page to a SharePoint site.
 ## Mapping a master page to a site
 
-In SharePoint 2013, a master page defines the shared framing elements such as the chrome for all pages in your site. After a master page is created, it can be mapped to a site. This could be for all publishing pages designated for all users, or for the administrative pages used for site maintenance. Alternatively, if you are configuring a child site of a parent site, you can inherit the master page from the parent. This article provides the steps to map a created master page to a site, inherit the master page from a parent site, or map a master page to a specific device channel.
+In SharePoint, a master page defines the shared framing elements such as the chrome for all pages in your site. After a master page is created, it can be mapped to a site. This could be for all publishing pages designated for all users, or for the administrative pages used for site maintenance. Alternatively, if you are configuring a child site of a parent site, you can inherit the master page from the parent. This article provides the steps to map a created master page to a site, inherit the master page from a parent site, or map a master page to a specific device channel.
   
     
     
 
 > **Note:**
-> For more information about Design Manager and master pages, see  [Overview of Design Manager in SharePoint 2013](overview-of-design-manager-in-sharepoint.md). For more information about how to create device channels, see  [SharePoint 2013 Design Manager device channels](sharepoint-design-manager-device-channels.md). 
+> For more information about Design Manager and master pages, see  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md). For more information about how to create device channels, see  [SharePoint Design Manager device channels](sharepoint-design-manager-device-channels.md). 
   
     
     
@@ -46,13 +46,13 @@ In SharePoint 2013, a master page defines the shared framing elements such as th
 <a name="bk_addresources"> </a>
 
 
--  [Develop the site design in SharePoint 2013](develop-the-site-design-in-sharepoint.md)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
     
   
--  [Overview of Design Manager in SharePoint 2013](overview-of-design-manager-in-sharepoint.md)
+-  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md)
     
   
--  [What's new with SharePoint 2013 site development](what-s-new-with-sharepoint-site-development.md)
+-  [What's new with SharePoint site development](what-s-new-with-sharepoint-site-development.md)
     
   
 

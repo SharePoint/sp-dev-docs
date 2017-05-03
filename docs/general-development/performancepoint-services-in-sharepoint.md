@@ -1,22 +1,22 @@
 ---
-title: PerformancePoint Services in SharePoint 2013
-keywords: accessing fco definitions in sharepoint 2013,bi in sharepoint 2013 using performancepoint services,business intelligence in sharepoint 2013,business intelligence using performancepoint services in sharepoint 2013,create scorecard transforms using performancepoint in sharepoint 2013,custom filter control in sharepoint 2013,custom performancepoint extensions,customize performancepoint in sharepoint,data source creation in sharepoint 2013,dlls used for performancepoint development,extending performancepoint services for sharepoint,fcos in sharepoint performancepoint,filter creation in sharepoint 2013,filters as fcos in pps performancepoint,getting started with performancepoint services,integration of performancepoint services in sharepoint,performancepoint assemblies used in development,performancepoint custom data sources,performancepoint custom filters,performancepoint custom reports,performancepoint custom scorecard transforms,performancepoint development scenarios,performancepoint services development,performancepoint services development scenarios,performancepoint services programming,performancepoint services sdk,pps custom dashboards in sharepoint 2013,pps development,pps programming,pps sdk,report creation in sharepoint 2013,report renderer in sharepoint 2013,SharePoint 2013 service application PerformancePoint
+title: PerformancePoint Services in SharePoint
+keywords: accessing fco definitions in SharePoint,bi in SharePoint using performancepoint services,business intelligence in SharePoint,business intelligence using performancepoint services in SharePoint,create scorecard transforms using performancepoint in SharePoint,custom filter control in SharePoint,custom performancepoint extensions,customize performancepoint in sharepoint,data source creation in SharePoint,dlls used for performancepoint development,extending performancepoint services for sharepoint,fcos in sharepoint performancepoint,filter creation in SharePoint,filters as fcos in pps performancepoint,getting started with performancepoint services,integration of performancepoint services in sharepoint,performancepoint assemblies used in development,performancepoint custom data sources,performancepoint custom filters,performancepoint custom reports,performancepoint custom scorecard transforms,performancepoint development scenarios,performancepoint services development,performancepoint services development scenarios,performancepoint services programming,performancepoint services sdk,pps custom dashboards in SharePoint,pps development,pps programming,pps sdk,report creation in SharePoint,report renderer in SharePoint,SharePoint service application PerformancePoint
 f1_keywords:
-- accessing fco definitions in sharepoint 2013,bi in sharepoint 2013 using performancepoint services,business intelligence in sharepoint 2013,business intelligence using performancepoint services in sharepoint 2013,create scorecard transforms using performancepoint in sharepoint 2013,custom filter control in sharepoint 2013,custom performancepoint extensions,customize performancepoint in sharepoint,data source creation in sharepoint 2013,dlls used for performancepoint development,extending performancepoint services for sharepoint,fcos in sharepoint performancepoint,filter creation in sharepoint 2013,filters as fcos in pps performancepoint,getting started with performancepoint services,integration of performancepoint services in sharepoint,performancepoint assemblies used in development,performancepoint custom data sources,performancepoint custom filters,performancepoint custom reports,performancepoint custom scorecard transforms,performancepoint development scenarios,performancepoint services development,performancepoint services development scenarios,performancepoint services programming,performancepoint services sdk,pps custom dashboards in sharepoint 2013,pps development,pps programming,pps sdk,report creation in sharepoint 2013,report renderer in sharepoint 2013,SharePoint 2013 service application PerformancePoint
+- accessing fco definitions in SharePoint,bi in SharePoint using performancepoint services,business intelligence in SharePoint,business intelligence using performancepoint services in SharePoint,create scorecard transforms using performancepoint in SharePoint,custom filter control in SharePoint,custom performancepoint extensions,customize performancepoint in sharepoint,data source creation in SharePoint,dlls used for performancepoint development,extending performancepoint services for sharepoint,fcos in sharepoint performancepoint,filter creation in SharePoint,filters as fcos in pps performancepoint,getting started with performancepoint services,integration of performancepoint services in sharepoint,performancepoint assemblies used in development,performancepoint custom data sources,performancepoint custom filters,performancepoint custom reports,performancepoint custom scorecard transforms,performancepoint development scenarios,performancepoint services development,performancepoint services development scenarios,performancepoint services programming,performancepoint services sdk,pps custom dashboards in SharePoint,pps development,pps programming,pps sdk,report creation in SharePoint,report renderer in SharePoint,SharePoint service application PerformancePoint
 ms.prod: SHAREPOINT
 ms.assetid: fb159708-d6b4-40c1-b5cc-4bb2071a7930
 ---
 
 
-# PerformancePoint Services in SharePoint 2013
-Learn about supported development scenarios and the extensibility architecture for PerformancePoint Services in SharePoint Server 2013.
-PerformancePoint Services is a SharePoint Server 2013 service application. It enables users to create business intelligence (BI) dashboards that provide insight into an organization's performance. You can create custom reports, filters, tabular data sources, and scorecard transforms to extend the native functionality of PerformancePoint Services. For example, you can create a custom report visualization that is optimized for the medical industry and then integrate it into a reusable vertical solution.
+# PerformancePoint Services in SharePoint
+Learn about supported development scenarios and the extensibility architecture for PerformancePoint Services in SharePoint.
+PerformancePoint Services is a SharePoint service application. It enables users to create business intelligence (BI) dashboards that provide insight into an organization's performance. You can create custom reports, filters, tabular data sources, and scorecard transforms to extend the native functionality of PerformancePoint Services. For example, you can create a custom report visualization that is optimized for the medical industry and then integrate it into a reusable vertical solution.
   
     
     
 
 
-## Custom PerformancePoint Services reports, filters, and tabular data sources in SharePoint Server 2013
+## Custom PerformancePoint Services reports, filters, and tabular data sources in SharePoint
 <a name="bkmk_CreateCustomObjects"> </a>
 
 You can extend native PerformancePoint Services  [ReportView](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.ReportView.aspx) , [Filter](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Filter.aspx) , and tabular [DataSource](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSource.aspx) objects by defining custom values for their properties. Custom report, filter, and tabular data source extensions typically include three components: a renderer or provider, an editor application, and extension metadata.
@@ -48,17 +48,17 @@ For more information, see the following topics about creating renderers and prov
     
     
 
--  [How to: Create report renderers for PerformancePoint Services in SharePoint 2013](how-to-create-report-renderers-for-performancepoint-services-in-sharepoint.md)
+-  [How to: Create report renderers for PerformancePoint Services in SharePoint](how-to-create-report-renderers-for-performancepoint-services-in-sharepoint.md)
     
   
--  [How to: Create filter data providers for PerformancePoint Services in SharePoint 2013](how-to-create-filter-data-providers-for-performancepoint-services-in-sharepoint.md)
+-  [How to: Create filter data providers for PerformancePoint Services in SharePoint](how-to-create-filter-data-providers-for-performancepoint-services-in-sharepoint.md)
     
   
--  [How to: Create tabular data source providers for PerformancePoint Services in SharePoint 2013](how-to-create-tabular-data-source-providers-for-performancepoint-services-in-sha.md)
+-  [How to: Create tabular data source providers for PerformancePoint Services in SharePoint](how-to-create-tabular-data-source-providers-for-performancepoint-services-in-sha.md)
     
   
 
-### Editor applications for PerformancePoint Services extensions in SharePoint Server 2013
+### Editor applications for PerformancePoint Services extensions in SharePoint
 
 Custom editors enable users to define properties for a custom object, interact with objects in the repository, and initialize endpoints for custom reports and filters. Your editor should expose the properties that you want to enable users to view and modify. Editors can be opened from objects in PerformancePoint Dashboard Designer or from items in the PerformancePoint Content List or PerformancePoint Data Connections Library. To integrate into the Dashboard Designer authoring experience, your editor must be able to open from a uniform resource identifier (URI), and the URI must be registered for the custom object in the PerformancePoint Services web.config file.
   
@@ -69,13 +69,13 @@ For more information about creating editors, see the following topics:
     
     
 
--  [How to: Create report editors for PerformancePoint Services in SharePoint 2013](how-to-create-report-editors-for-performancepoint-services-in-sharepoint.md)
+-  [How to: Create report editors for PerformancePoint Services in SharePoint](how-to-create-report-editors-for-performancepoint-services-in-sharepoint.md)
     
   
--  [How to: Create filter editors for PerformancePoint Services in SharePoint 2013](how-to-create-filter-editors-for-performancepoint-services-in-sharepoint.md)
+-  [How to: Create filter editors for PerformancePoint Services in SharePoint](how-to-create-filter-editors-for-performancepoint-services-in-sharepoint.md)
     
   
--  [How to: Create tabular data source editors for PerformancePoint Services in SharePoint 2013](how-to-create-tabular-data-source-editors-for-performancepoint-services-in-share.md)
+-  [How to: Create tabular data source editors for PerformancePoint Services in SharePoint](how-to-create-tabular-data-source-editors-for-performancepoint-services-in-share.md)
     
   
 
@@ -86,7 +86,7 @@ For more information about creating editors, see the following topics:
     
 
 
-### Configuration metadata for PerformancePoint Services extensions in SharePoint Server 2013
+### Configuration metadata for PerformancePoint Services extensions in SharePoint
 
 You must specify metadata for your extension in the PerformancePoint Services web.config file during the installation process. The metadata includes **type**, **subType**, **RendererClass**, **EditorURI**, and **Resources** attributes.
   
@@ -101,14 +101,14 @@ For more information about extension metadata, see  [How to: Manually Register P
     
     
 
-## Custom transforms for PerformancePoint Services scorecards in SharePoint Server 2013
+## Custom transforms for PerformancePoint Services scorecards in SharePoint
 <a name="bkmk_CreateCustomObjects"> </a>
 
 Transforms change the appearance, contents, or functionality of scorecards before querying the data source, after querying the data source, or before rendering the scorecard in the Web Part. For example, PerformancePoint Services uses transforms to perform several operations before rendering a scorecard view, such as expanding named sets, computing rollups, and computing aggregations. These changes are applied at run time and they do not modify the definition of the scorecard object.
   
     
     
-For more information about scorecard transforms, see  [How to: Create scorecard transforms for PerformancePoint Services in SharePoint 2013](how-to-create-scorecard-transforms-for-performancepoint-services-in-sharepoint-2.md).
+For more information about scorecard transforms, see  [How to: Create scorecard transforms for PerformancePoint Services in SharePoint](how-to-create-scorecard-transforms-for-performancepoint-services-in-sharepoint-2.md).
   
     
     
@@ -120,7 +120,7 @@ For more information about scorecard transforms, see  [How to: Create scorecard 
     
 
 
-## Extensibility architecture for PerformancePoint Services in SharePoint Server 2013
+## Extensibility architecture for PerformancePoint Services in SharePoint
 <a name="bkmk_PerfPointArch"> </a>
 
 Supported extensions run within a PerformancePoint Services application instance, either on the front-end web server or on the application server, as shown in the following diagram.
@@ -142,7 +142,7 @@ Supported extensions run within a PerformancePoint Services application instance
     
     
 
-### PerformancePoint Services extensions that run on the SharePoint Server 2013 front-end web server
+### PerformancePoint Services extensions that run on the SharePoint front-end web server
 
 Custom editors (and other supported custom applications) run on the front-end web server within a PerformancePoint Services application instance. Editors are typically deployed as .aspx pages and are installed in the path  `%ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\TEMPLATE\\LAYOUTS`. Editors call the  [BIMonitoringServiceApplicationProxy](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.BIMonitoringServiceApplicationProxy.aspx) object or [SPDataStore](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Store.SPDataStore.aspx) object to author or process content, as follows:
   
@@ -156,7 +156,7 @@ Custom editors (and other supported custom applications) run on the front-end we
     
   
 
-### PerformancePoint Services extensions that run on the SharePoint Server 2013 application server
+### PerformancePoint Services extensions that run on the SharePoint application server
 
 Custom renderers, providers, and scorecard transforms run on the application server. The application server hosts the middle-tier business logic for the PerformancePoint Services instance.
   

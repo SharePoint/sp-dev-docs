@@ -11,7 +11,7 @@ Learn how to use the client-side People Picker control in SharePoint-hosted Shar
  
 
 
-## What is the client-side People Picker control in SharePoint 2013?
+## What is the client-side People Picker control in SharePoint?
 <a name="bk_whatIs"> </a>
 
 The client-side People Picker control lets users quickly search for and select valid user accounts for people, groups, and claims in their organization. The picker is an HTML and JavaScript control that provides cross-browser support. Adding the picker to your add-in is easy: In your markup, add a container element for the control and references for the control and its dependencies. Then in your script, call the  **SPClientPeoplePicker_InitStandaloneControlWrapper** global function to render and initialize the picker.
@@ -60,7 +60,7 @@ If you're not using Napa on a Developer Site, you'll need the following:
 
  
 
-- SharePoint 2013 with at least one target user
+- SharePoint with at least one target user
     
  
 - Visual Studio 2012 or Visual Studio 2013
@@ -246,13 +246,13 @@ function onFail(sender, args) {
 <a name="bk_addresources"> </a>
 
 
--  [Create UX components in SharePoint 2013](create-ux-components-in-sharepoint-2013.md)
+-  [Create UX components in SharePoint](create-ux-components-in-sharepoint-2013.md)
     
  
--  [People Picker and claims providers overview (SharePoint 2013)](http://technet.microsoft.com/library/gg602078.aspx)
+-  [People Picker and claims providers overview (SharePoint)](http://technet.microsoft.com/library/gg602078.aspx)
     
  
--  [Configure People Picker in SharePoint 2013](http://technet.microsoft.com/library/gg602075.aspx)
+-  [Configure People Picker in SharePoint](http://technet.microsoft.com/library/gg602075.aspx)
     
  
 

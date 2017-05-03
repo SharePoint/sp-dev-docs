@@ -6,7 +6,7 @@ ms.assetid: f1cd30c9-9a73-428d-9151-f1813b43b020
 
 
 # What's changed in SharePoint Designer 2013
-Learn about features that are deprecated in or removed from SharePoint Designer 2013. Features that are deprecated are included in the SharePoint 2013 release for compatibility with previous product versions but will be removed from future versions.
+Learn about features that are deprecated in or removed from SharePoint Designer 2013. Features that are deprecated are included in the SharePoint release for compatibility with previous product versions but will be removed from future versions.
 ## Discontinued features in SharePoint Designer 2013
 <a name="WhatsChangedSharePointDesigner2013_DiscontinuedFeatures"> </a>
 
@@ -18,11 +18,11 @@ The following features are deprecated in SharePoint Designer 2013 or have been r
 ### SharePoint 2010 Workflow platform
 <a name="WhatsChangedSharePointDesigner2013_WorkflowPlatform"> </a>
 
- **Description of the change.** Some features of the SharePoint 2010 Workflow platform that are dependent on Windows Workflow Foundation 3.0 are deprecated in SharePoint 2013.
+ **Description of the change.** Some features of the SharePoint 2010 Workflow platform that are dependent on Windows Workflow Foundation 3.0 are deprecated in SharePoint.
   
     
     
- **Reason for the change.**SharePoint 2013 introduces a new SharePoint 2013 Workflow platform that is built upon Windows Workflow Foundation 4.0 and that is integrated with Workflow Manager 1.0.
+ **Reason for the change.**SharePoint introduces a new SharePoint Workflow platform that is built upon Windows Workflow Foundation 4.0 and that is integrated with Workflow Manager 1.0.
   
     
     
@@ -30,7 +30,7 @@ The following features are deprecated in SharePoint Designer 2013 or have been r
   
     
     
-You can also integrate features from the SharePoint 2010 Workflow platform into the new SharePoint 2013 Workflow platform. To do this, create a SharePoint 2010 Workflow by choosing the SharePoint 2010 Workflow platform; create a SharePoint 2013 Workflow by choosing the SharePoint 2013 Workflow platform; and then use the **Start a list workflow** and **Start a site workflow** actions in the SharePoint 2013 Workflow to call the SharePoint 2010 Workflow.
+You can also integrate features from the SharePoint 2010 Workflow platform into the new SharePoint Workflow platform. To do this, create a SharePoint 2010 Workflow by choosing the SharePoint 2010 Workflow platform; create a SharePoint Workflow by choosing the SharePoint Workflow platform; and then use the **Start a list workflow** and **Start a site workflow** actions in the SharePoint Workflow to call the SharePoint 2010 Workflow.
   
     
     
@@ -146,7 +146,7 @@ The following features are available only on the SharePoint 2010 Workflow platfo
 ### SharePoint page-design features
 <a name="WhatsChangedSharePointDesigner2013_PageDesignFeatures"> </a>
 
-The following feature is not available in SharePoint 2013.
+The following feature is not available in SharePoint.
   
     
     
@@ -166,7 +166,7 @@ The following feature is not available in SharePoint 2013.
   
     
     
-If you want to visually design or brand your site, and you want a WYSIWYG ("what you see is what you get") page-editing experience, you can use any professional HTML editor, such as Microsoft Expression Web. Then you can import your HTML files into SharePoint Server 2013 by using the new Design Manager, which is a feature included in publishing sites, such as the Publishing Portal Site Collection site template.
+If you want to visually design or brand your site, and you want a WYSIWYG ("what you see is what you get") page-editing experience, you can use any professional HTML editor, such as Microsoft Expression Web. Then you can import your HTML files into SharePoint by using the new Design Manager, which is a feature included in publishing sites, such as the Publishing Portal Site Collection site template.
   
     
     
@@ -175,13 +175,13 @@ If you want to visually design or brand your site, and you want a WYSIWYG ("what
 <a name="WhatsChangedSharePointDesigner2013_AdditionalResources"> </a>
 
 
--  [Workflow actions quick reference (SharePoint 2013 Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
+-  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
     
   
--  [Changes from SharePoint 2010 to SharePoint 2013](http://technet.microsoft.com/en-us/library/ff607742%28v=office.15%29.aspx)
+-  [Changes from SharePoint 2010 to SharePoint](http://technet.microsoft.com/en-us/library/ff607742%28v=office.15%29.aspx)
     
   
--  [What's new in workflow in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj219638%28v=office.15%29.aspx)
+-  [What's new in workflow in SharePoint](http://technet.microsoft.com/en-us/library/jj219638%28v=office.15%29.aspx)
     
   
 

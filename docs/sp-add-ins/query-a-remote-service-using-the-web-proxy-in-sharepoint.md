@@ -1,6 +1,6 @@
 
-# Query a remote service using the web proxy in SharePoint 2013
-Learn how to access data in a remote domain from a page that is hosted in SharePoint 2013 by using the web proxy.
+# Query a remote service using the web proxy in SharePoint
+Learn how to access data in a remote domain from a page that is hosted in SharePoint by using the web proxy.
  
 
  **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
@@ -36,7 +36,7 @@ To follow the steps in this example, you need the following:
 -  [Visual Studio 2015 and the latest Microsoft Office Developer Tools](https://www.visualstudio.com/features/office-tools-vs.aspx)
     
  
-- A SharePoint 2013 development environment (add-in isolation required for on-premises scenarios)
+- A SharePoint development environment (add-in isolation required for on-premises scenarios)
     
  
 
@@ -52,9 +52,9 @@ The following table lists some useful articles that can help you understand the 
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [SharePoint Add-ins](sharepoint-add-ins.md)|Learn about the new add-in model in SharePoint 2013 that enables you to create add-ins, which are small, easy-to-use solutions for end users.|
+| [SharePoint Add-ins](sharepoint-add-ins.md)|Learn about the new add-in model in SharePoint that enables you to create add-ins, which are small, easy-to-use solutions for end users.|
 | [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md)|Learn about data access options in SharePoint Add-ins. This article provides guidance on the high-level alternatives you have to choose from when working with data in your add-in.|
-| [Host webs, add-in webs, and SharePoint components in SharePoint 2013](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md)|Learn about the difference between host webs and add-in webs. Find out which SharePoint 2013 components can be included in a SharePoint Add-in, which components are deployed to the host web, which components are deployed to the add-in web, and how the add-in web is deployed in an isolated domain.|
+| [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md)|Learn about the difference between host webs and add-in webs. Find out which SharePoint components can be included in a SharePoint Add-in, which components are deployed to the host web, which components are deployed to the add-in web, and how the add-in web is deployed in an isolated domain.|
 | [Client-side Cross-domain Security](http://msdn.microsoft.com/en-us/library/cc709423%28v=vs.85%29.aspx)|Explore cross-domain threats and use cases, security principles for cross-origin requests, and weigh the risks for developers to enhance cross-domain access from web applications that run in the browser.|
 
 ## Code example: Access data in a remote service using the web proxy
@@ -102,7 +102,7 @@ Figure 1 shows the browser window with data from the remote service in a SharePo
 
  
 
-  ![App for SharePoint 2013 Visual Studio template](../../images/AppForSharePointVSTemplate.PNG)
+  ![App for SharePoint Visual Studio template](../../images/AppForSharePointVSTemplate.PNG)
  
 
  
@@ -450,13 +450,13 @@ This article demonstrated how to read data in a remote service from a SharePoint
 -  [Code sample: Get data from a remote service using the web proxy](http://code.msdn.microsoft.com/SharePoint-2013-Get-data-705bdcd5)
     
  
--  [Create a custom proxy page for the cross-domain library in SharePoint 2013](create-a-custom-proxy-page-for-the-cross-domain-library-in-sharepoint-2013.md)
+-  [Create a custom proxy page for the cross-domain library in SharePoint](create-a-custom-proxy-page-for-the-cross-domain-library-in-sharepoint-2013.md)
     
  
--  [Access SharePoint 2013 data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library.md)
+-  [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library.md)
     
  
--  [How to: Access external data with REST in SharePoint 2013](http://msdn.microsoft.com/library/0663cc8c-a736-434d-9858-6ce12ce7f748%28Office.15%29.aspx)
+-  [How to: Access external data with REST in SharePoint](http://msdn.microsoft.com/library/0663cc8c-a736-434d-9858-6ce12ce7f748%28Office.15%29.aspx)
     
  
 
@@ -467,7 +467,7 @@ This article demonstrated how to read data in a remote service from a SharePoint
 -  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md)
     
  
--  [Work with external data in SharePoint 2013](work-with-external-data-in-sharepoint-2013.md)
+-  [Work with external data in SharePoint](work-with-external-data-in-sharepoint-2013.md)
     
  
 -  [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md)

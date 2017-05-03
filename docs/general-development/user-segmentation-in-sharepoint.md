@@ -1,18 +1,18 @@
 ---
-title: User segmentation in SharePoint 2013
+title: User segmentation in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 85eabab0-4b8a-4849-9cba-80fd06732183
 ---
 
 
-# User segmentation in SharePoint 2013
-Display content you tailor for user segments you define—for example, based on locale, interests, gender, or referral links—by using a combination of term sets, the Content Search Web Part, and query rules in SharePoint Server 2013.
-SharePoint Server 2013 provides the building blocks to tailor content you show on a SharePoint 2013 site, depending on certain attributes of end-users, for example their gender, where they live, their interests, or referral links. These groupings of user attributes are known as user segments. 
+# User segmentation in SharePoint
+Display content you tailor for user segments you define—for example, based on locale, interests, gender, or referral links—by using a combination of term sets, the Content Search Web Part, and query rules in SharePoint.
+SharePoint provides the building blocks to tailor content you show on a SharePoint site, depending on certain attributes of end-users, for example their gender, where they live, their interests, or referral links. These groupings of user attributes are known as user segments. 
   
     
     
 
-In SharePoint 2013, this user segmentation functionality can be beneficial in many scenarios, such as:
+In SharePoint, this user segmentation functionality can be beneficial in many scenarios, such as:
 - Displaying different banners on a page depending on the end-user's gender 
     
   
@@ -31,7 +31,7 @@ Before you get started implementing user segmentation in SharePoint, be sure to 
     
     
 
-- SharePoint Server 2013
+- SharePoint
     
   
 - Visual Studio 2012
@@ -75,7 +75,7 @@ Figure 1 shows the basic steps to add user segmentation functionality to your Sh
 ## Create a term set
 <a name="SP15_Create_a_term_set"> </a>
 
-A term is a word or a phrase that can be associated with an item in SharePoint 2013. Aterm set is a collection of related terms. For more information, see [Overview of managed metadata in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/ee424402.aspx). You can create term sets either through the SharePoint Term Store Management Tool, or programmatically. 
+A term is a word or a phrase that can be associated with an item in SharePoint. Aterm set is a collection of related terms. For more information, see [Overview of managed metadata in SharePoint](http://technet.microsoft.com/en-us/library/ee424402.aspx). You can create term sets either through the SharePoint Term Store Management Tool, or programmatically. 
   
     
     
@@ -137,7 +137,7 @@ static void CreateNavigationTermSet(string siteUrl)
 ## Create a custom Web Part for user segmentation
 <a name="SP15_Create_a_custom_web_part_user_segmentation"> </a>
 
-In Visual Studio 2012, create a custom Web Part by using the Visual Web Parts template from the SharePoint Server 2013 category. Your custom Web Part must inherit from the  [ContentBySearchWebPart](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart.aspx) object.
+In Visual Studio 2012, create a custom Web Part by using the Visual Web Parts template from the SharePoint category. Your custom Web Part must inherit from the  [ContentBySearchWebPart](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart.aspx) object.
   
     
     
@@ -157,7 +157,7 @@ In your custom Web Part, you can re-implement either the  [OnLoad()](https://msd
     
     
 
-### Example 1: Add Male and Female user segments to your SharePoint Server 2013 site
+### Example 1: Add Male and Female user segments to your SharePoint site
 
 To add **Male** and **Female** user segments, you can re-implement the [OnLoad()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart.OnLoad.aspx) method as shown in the following code.
   
@@ -221,7 +221,7 @@ private void AddMycustomProperties(object sender, BeforeSerializeToClientEventAr
 
 ### Example 2: Create user segments based on the type of Web browser your end-user is using when
 
-To create user segments based on the type of web browser the end-user is using, to view your SharePoint Server 2013 site, re-implement the **OnLoad** method as shown in the following code.
+To create user segments based on the type of web browser the end-user is using, to view your SharePoint site, re-implement the **OnLoad** method as shown in the following code.
   
     
     
@@ -376,7 +376,7 @@ You need to add your custom Web Part to your SharePoint page.
 -  [Build sites for SharePoint](build-sites-for-sharepoint.md)
     
   
--  [Set up User Segmentation to drive adaptive experiences in a Product Catalog in SharePoint 2013](http://blogs.msdn.com/b/adaptive_experiences_in_sharepoint_2013/archive/2012/11/14/set-up-user-segmentation-to-drive-adaptive-experiences-in-a-product-catalog-in-sharepoint.aspx)
+-  [Set up User Segmentation to drive adaptive experiences in a Product Catalog in SharePoint](http://blogs.msdn.com/b/adaptive_experiences_in_sharepoint_2013/archive/2012/11/14/set-up-user-segmentation-to-drive-adaptive-experiences-in-a-product-catalog-in-sharepoint.aspx)
     
   
 

@@ -1,11 +1,11 @@
 ---
-title: Overview of Windows Phone SharePoint 2013 application templates in Visual Studio
+title: Overview of Windows Phone SharePoint application templates in Visual Studio
 ms.prod: SHAREPOINT
 ms.assetid: 6ae27957-fa41-4e6f-92e3-db11dae1f6c2
 ---
 
 
-# Overview of Windows Phone SharePoint 2013 application templates in Visual Studio
+# Overview of Windows Phone SharePoint application templates in Visual Studio
 Learn about the Visual Studio templates installed by the Windows Phone SharePoint Software Development Kit for mobile app development.
 ## Templates installed by the Windows Phone SharePoint Software Development Kit
 <a name="BKMK_TemplatesInstalled"> </a>
@@ -32,7 +32,7 @@ Currently, these templates are designed to be used only in C# projects. They are
     
     
 
-When you create a project based on either one of these templates, you are not given the option of choosing a target Windows Phone platform. As for projects created from Visual Studio Express 2012 using these templates target Windows Phone 8 applications against SharePoint 2013 ; And projects created from Visual Studio 2010 Express using these templates target Windows Phone OS version 7.1 by default That is, the **AppPlatformVersion** attribute of the **Deployment** element in the WMAppManifest.xml file has a value of 7.1.
+When you create a project based on either one of these templates, you are not given the option of choosing a target Windows Phone platform. As for projects created from Visual Studio Express 2012 using these templates target Windows Phone 8 applications against SharePoint ; And projects created from Visual Studio 2010 Express using these templates target Windows Phone OS version 7.1 by default That is, the **AppPlatformVersion** attribute of the **Deployment** element in the WMAppManifest.xml file has a value of 7.1.
   
     
     
@@ -146,7 +146,7 @@ The project files for are described in Table 1.
 |ListViewModel.cs  <br/> |Serves as the data source for the List.xaml file.  <br/> |
 |NewItemViewModel.cs  <br/> |Serves as the data source for the NewForm.xaml file. You write code in this file to validate data entered by users when adding a new list item.  <br/> |
    
-For the details of the steps involved in creating a Windows Phone app by using the Windows Phone SharePoint List Application template, see  [How to: Create a Windows Phone SharePoint 2013 list app](how-to-create-a-windows-phone-sharepoint-list-app.md).
+For the details of the steps involved in creating a Windows Phone app by using the Windows Phone SharePoint List Application template, see  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app.md).
   
     
     
@@ -155,7 +155,7 @@ For the details of the steps involved in creating a Windows Phone app by using t
 <a name="SP15winphoneover_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint 2013](build-windows-phone-apps-that-access-sharepoint.md)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
 -  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)

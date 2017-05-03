@@ -7,7 +7,7 @@ ms.assetid: d8489f59-522f-433c-b9c1-69e597be51c7
 
 
 # Keyword Query Language (KQL) syntax reference
-Learn to construct KQL queries for Search in SharePoint 2013. This syntax reference describes KQL query elements and how to use property restrictions and operators in KQL queries.
+Learn to construct KQL queries for Search in SharePoint. This syntax reference describes KQL query elements and how to use property restrictions and operators in KQL queries.
 ## Elements of a KQL query
 <a name="SP15KQL_elements"> </a>
 
@@ -41,7 +41,7 @@ If the KQL query contains only operators or is empty, it isn't valid. KQL querie
 ## Constructing free-text queries using KQL
 <a name="SP15KQL_constructing_freetext_queries"> </a>
 
-When you construct your KQL query by using free-text expressions, Search in SharePoint 2013 matches results for the terms you chose for the query based on terms stored in the full-text index. This includes managed property values where  [FullTextQueriable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.FullTextQueriable.aspx) is set to **true**.
+When you construct your KQL query by using free-text expressions, Search in SharePoint matches results for the terms you chose for the query based on terms stored in the full-text index. This includes managed property values where  [FullTextQueriable](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Administration.ManagedProperty.FullTextQueriable.aspx) is set to **true**.
   
     
     
@@ -63,7 +63,7 @@ To construct complex queries, you can combine multiple free-text expressions wit
 
 ### Using words in the free-text KQL query
 
-When you use words in a free-text KQL query, Search in SharePoint 2013 returns results based on exact matches of your words with the terms stored in the full-text index. You can use just a part of a word, from the beginning of the word, by using the wildcard operator (*) to enable prefix matching. In prefix matching, Search in SharePoint 2013 matches results with terms that contain the word followed by zero or more characters.
+When you use words in a free-text KQL query, Search in SharePoint returns results based on exact matches of your words with the terms stored in the full-text index. You can use just a part of a word, from the beginning of the word, by using the wildcard operator (*) to enable prefix matching. In prefix matching, Search in SharePoint matches results with terms that contain the word followed by zero or more characters.
   
     
     
@@ -90,7 +90,7 @@ KQL queries don't support suffix matching.
 
 ### Using phrases in the free-text KQL query
 
-When you use phrases in a free-text KQL query, Search in SharePoint 2013 returns only the items in which the words in your phrase are located next to each other. To specify a phrase in a KQL query, you must use double quotation marks. 
+When you use phrases in a free-text KQL query, Search in SharePoint returns only the items in which the words in your phrase are located next to each other. To specify a phrase in a KQL query, you must use double quotation marks. 
   
     
     
@@ -162,7 +162,7 @@ In other words, the previous property restrictions are equivalent to the followi
 
 ### Specifying property names for property restrictions
 
-You must specify a valid managed property name for the property restriction. By default, Search in SharePoint 2013 includes several managed properties for documents.
+You must specify a valid managed property name for the property restriction. By default, Search in SharePoint includes several managed properties for documents.
   
     
     
@@ -177,7 +177,7 @@ The managed property must be  [Queryable](https://msdn.microsoft.com/library/Mic
 
 ### Property operators that are supported in property restrictions
 
-Search in SharePoint 2013 supports several property operators for property restrictions, as shown in Table 2. 
+Search in SharePoint supports several property operators for property restrictions, as shown in Table 2. 
   
     
     
@@ -361,7 +361,7 @@ KQL enables you to build search queries that support relative "day" range query,
 
 ### Using multiple property restrictions within a KQL query
 
-Search in SharePoint 2013 supports the use of multiple property restrictions within the same KQL query. You can use either the same property for more than one property restriction, or a different property for each property restriction. 
+Search in SharePoint supports the use of multiple property restrictions within the same KQL query. You can use either the same property for more than one property restriction, or a different property for each property restriction. 
   
     
     
@@ -474,7 +474,7 @@ If you need a smaller distance between the terms, you can specify it. The follow
     
 
 > **Note:**
-> In SharePoint 2013 the **NEAR** operator no longer preserves the ordering of tokens. In addition, the **NEAR** operator now receives an optional parameter that indicates maximum token distance. However, the default value is still **8**. If you must use the previous behavior, use **ONEAR** instead.
+> In SharePoint the **NEAR** operator no longer preserves the ordering of tokens. In addition, the **NEAR** operator now receives an optional parameter that indicates maximum token distance. However, the default value is still **8**. If you must use the previous behavior, use **ONEAR** instead.
   
     
     
@@ -688,6 +688,6 @@ You can combine different parts of a keyword query by using the opening parenthe
 <a name="SP15KQL_addlresources"> </a>
 
 
--  [Building search queries in SharePoint 2013](building-search-queries-in-sharepoint.md)
+-  [Building search queries in SharePoint](building-search-queries-in-sharepoint.md)
     
   

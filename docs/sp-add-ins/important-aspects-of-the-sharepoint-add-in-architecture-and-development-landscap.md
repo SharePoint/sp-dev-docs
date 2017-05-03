@@ -10,7 +10,7 @@ Learn about aspects of the architecture of SharePoint Add-ins and the model for 
 ## SharePoint Add-ins hosting options
 <a name="SPAppModelArch_SPCenteredVsCloudCentered"> </a>
 
-The SharePoint 2013 add-in model provides the following ways to host the components of a SharePoint Add-in: 
+The SharePoint add-in model provides the following ways to host the components of a SharePoint Add-in: 
  
 
  
@@ -33,7 +33,7 @@ The website to which a SharePoint Add-in is installed is called the host web. Ho
  
 
  
-As a general rule, any SharePoint component that does not include custom code that runs on the SharePoint servers can be included in a SharePoint Add-in (and be deployed to the add-in web). There are, however, some exceptions and some nuances to how and where the components are deployed. For more information about these nuances and about host webs, the isolated add-in webs, and Features in add-ins, see  [Host webs, add-in webs, and SharePoint components in SharePoint 2013](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md).
+As a general rule, any SharePoint component that does not include custom code that runs on the SharePoint servers can be included in a SharePoint Add-in (and be deployed to the add-in web). There are, however, some exceptions and some nuances to how and where the components are deployed. For more information about these nuances and about host webs, the isolated add-in webs, and Features in add-ins, see  [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md).
  
 
  
@@ -45,7 +45,7 @@ When a SharePoint Add-in is installed on a website, the add-in is listed on the 
  
 
  
-Another way that a SharePoint Add-in can be surfaced is through an add-in part, a type of Web Part that is represented by the  **ClientWebPart** class. This kind of Web Part is essentially a wrapper for an IFrame that would host a page of the add-in. In the simplest case, the only significant property of the Web Part is a URL that points to the page. But Web Parts can have custom properties that users can set in a Tool Part. Such properties could be used, for example, to set context information such as the user's ZIP Code or Postal Code. To include such an add-in part in your add-in, you create a host web Feature in the add-in and add declarative Web Part markup. Like any other Web Part, it appears in the SharePoint 2013 UI from which users add Web Parts. You can have more than one add-in part deployed with your add-in if you need even more variability. For example, a weather add-in can have an add-in part that shows current weather and a second add-in part that shows a weekly forecast. The two parts can have different sizes and functionality.
+Another way that a SharePoint Add-in can be surfaced is through an add-in part, a type of Web Part that is represented by the  **ClientWebPart** class. This kind of Web Part is essentially a wrapper for an IFrame that would host a page of the add-in. In the simplest case, the only significant property of the Web Part is a URL that points to the page. But Web Parts can have custom properties that users can set in a Tool Part. Such properties could be used, for example, to set context information such as the user's ZIP Code or Postal Code. To include such an add-in part in your add-in, you create a host web Feature in the add-in and add declarative Web Part markup. Like any other Web Part, it appears in the SharePoint UI from which users add Web Parts. You can have more than one add-in part deployed with your add-in if you need even more variability. For example, a weather add-in can have an add-in part that shows current weather and a second add-in part that shows a weekly forecast. The two parts can have different sizes and functionality.
  
 
  
@@ -57,11 +57,11 @@ We recommend that you try to give your add-ins a SharePoint appearance to the ex
  
 
  
-There is, for example, a special master page called app.master. This page is optimized for use by the pages of add-ins. The app.master page is part of a new site definition that is included in SharePoint 2013. 
+There is, for example, a special master page called app.master. This page is optimized for use by the pages of add-ins. The app.master page is part of a new site definition that is included in SharePoint. 
  
 
  
-Another tool you can use to help your add-ins maintain a consistent look and feel with SharePoint is the chrome control that ships with SharePoint 2013. This control enables you to add the SharePoint navigation header area to your add-in pages, including pages hosted externally. For more information about UX design in SharePoint Add-ins, see  [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md). For more information about the chrome control, see  [Use the client chrome control in SharePoint Add-ins](use-the-client-chrome-control-in-sharepoint-add-ins.md).
+Another tool you can use to help your add-ins maintain a consistent look and feel with SharePoint is the chrome control that ships with SharePoint. This control enables you to add the SharePoint navigation header area to your add-in pages, including pages hosted externally. For more information about UX design in SharePoint Add-ins, see  [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md). For more information about the chrome control, see  [Use the client chrome control in SharePoint Add-ins](use-the-client-chrome-control-in-sharepoint-add-ins.md).
  
 
  
@@ -77,7 +77,7 @@ A SharePoint Add-in package is a file that has an ".app" extension and that comp
 ## Permissions, authentication, and authorization for SharePoint add-ins
 <a name="SPAppModelArch_Running"> </a>
 
-SharePoint 2013 introduces a new add-in permissions and security system.
+SharePoint introduces a new add-in permissions and security system.
  
 
  
@@ -93,7 +93,7 @@ You must request, in the add-in manifest file, the permissions that an add-in ne
  
 
  
-For more information about add-in permissions, see  [Add-in permissions in SharePoint 2013](add-in-permissions-in-sharepoint-2013.md).
+For more information about add-in permissions, see  [Add-in permissions in SharePoint](add-in-permissions-in-sharepoint-2013.md).
  
 
  
@@ -101,7 +101,7 @@ For more information about add-in permissions, see  [Add-in permissions in Share
 ### Selective delegation and authorization
 <a name="SelectiveAuthorization"> </a>
 
-Neither users who are launching an add-in, nor resource owners who are granting an add-in permission to access a resource, need to provide the add-in their credentials or password. Instead, SharePoint 2013 enables users and resource owners to grant only the specific permissions that the add-in requests. What makes this possible is the use by SharePoint 2013 of the transaction protocol  [OAuth 2.0](http://tools.ietf.org/html/draft-ietf-oauth-v2-22). For more information about OAuth in SharePoint 2013, see  [Context Token OAuth flow for SharePoint Add-ins](context-token-oauth-flow-for-sharepoint-add-ins.md).
+Neither users who are launching an add-in, nor resource owners who are granting an add-in permission to access a resource, need to provide the add-in their credentials or password. Instead, SharePoint enables users and resource owners to grant only the specific permissions that the add-in requests. What makes this possible is the use by SharePoint of the transaction protocol  [OAuth 2.0](http://tools.ietf.org/html/draft-ietf-oauth-v2-22). For more information about OAuth in SharePoint, see  [Context Token OAuth flow for SharePoint Add-ins](context-token-oauth-flow-for-sharepoint-add-ins.md).
  
 
  
@@ -109,7 +109,7 @@ Neither users who are launching an add-in, nor resource owners who are granting 
 ### Cross-domain access
 <a name="SelectiveAuthorization"> </a>
 
-A SharePoint Add-in that includes a remote web application that uses JavaScript for its data access logic can use a JavaScript cross domain library to get authorized access to SharePoint data within the tenancy where the add-in is installed. For more information, see  [Access SharePoint 2013 data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library.md).
+A SharePoint Add-in that includes a remote web application that uses JavaScript for its data access logic can use a JavaScript cross domain library to get authorized access to SharePoint data within the tenancy where the add-in is installed. For more information, see  [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library.md).
  
 
  
@@ -133,7 +133,7 @@ SharePoint Add-ins can create and access any kind of data, including structured 
 ### Structured data storage options
 <a name="StructuredData"> </a>
 
-A SharePoint Add-in can use almost any kind of structured data storage, both inside and out of SharePoint 2013 and on Microsoft and non-Microsoft platforms. The following are  *some*  locations where you can store structured data for a SharePoint Add-in:
+A SharePoint Add-in can use almost any kind of structured data storage, both inside and out of SharePoint and on Microsoft and non-Microsoft platforms. The following are  *some*  locations where you can store structured data for a SharePoint Add-in:
  
 
  
@@ -201,7 +201,7 @@ For more information about managing add-ins, see  [Install and manage SharePoint
 ### Monitoring add-ins
 <a name="SPAppModelArch_Monitoring"> </a>
 
-SharePoint 2013 provides health monitoring of add-ins and makes this information available in the UI to website owners, tenant administrators, and farm administrators. Most documentation for the monitoring system is on TechNet; for example  [Monitor SharePoint Add-ins](http://technet.microsoft.com/library/3adafdd2-f276-4a9d-8a74-e06b8916bbc2). This section is just a quick introduction to explain how add-ins that you sell are monitored.
+SharePoint provides health monitoring of add-ins and makes this information available in the UI to website owners, tenant administrators, and farm administrators. Most documentation for the monitoring system is on TechNet; for example  [Monitor SharePoint Add-ins](http://technet.microsoft.com/library/3adafdd2-f276-4a9d-8a74-e06b8916bbc2). This section is just a quick introduction to explain how add-ins that you sell are monitored.
  
 
  
@@ -222,7 +222,7 @@ Some kinds of data are reported per-app and other kinds are reported per-app-ins
 - An overall health indicator for each add-in instance of green, yellow, and red.
     
  
-If the add-in includes Azure Web Site components, the monitoring framework also polls Microsoft Azure hourly for its error data and reports critical errors and storage quota data in the SharePoint 2013 UI. Microsoft Azure SQL Database errors are not reported.
+If the add-in includes Azure Web Site components, the monitoring framework also polls Microsoft Azure hourly for its error data and reports critical errors and storage quota data in the SharePoint UI. Microsoft Azure SQL Database errors are not reported.
  
 
  
@@ -355,7 +355,7 @@ The following is an example of raw  **AppPrerequisites** markup that registers t
 -  [Choose patterns for developing and hosting your SharePoint Add-in](choose-patterns-for-developing-and-hosting-your-sharepoint-add-in.md)
     
  
--  [Host webs, add-in webs, and SharePoint components in SharePoint 2013](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md)
+-  [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md)
     
  
 
@@ -369,7 +369,7 @@ The following is an example of raw  **AppPrerequisites** markup that registers t
 -  [SharePoint Add-ins compared with SharePoint solutions](http://msdn.microsoft.com/library/0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8%28Office.15%29.aspx)
     
  
--  [Add-in permissions in SharePoint 2013](add-in-permissions-in-sharepoint-2013.md)
+-  [Add-in permissions in SharePoint](add-in-permissions-in-sharepoint-2013.md)
     
  
 -  [Context Token OAuth flow for SharePoint Add-ins](context-token-oauth-flow-for-sharepoint-add-ins.md)

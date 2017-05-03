@@ -85,7 +85,7 @@ To follow the examples in this article, you need the following:
 - NuGet Package Manager. For more information, see  [Installing NuGet](http://go.microsoft.com/fwlink/?LinkId=271465).
     
  
-- A SharePoint 2013 development environment (app isolation required for on-premises scenarios). 
+- A SharePoint development environment (app isolation required for on-premises scenarios). 
     
  
 - Office Web Widgets - Experimental NuGet package. For more information about how to install a NuGet package, see  [Managing NuGet Packages Using the Dialog](http://docs.nuget.org/docs/start-here/managing-nuget-packages-using-the-dialog). You can also browse the  [NuGet gallery page](http://www.nuget.org/packages/Microsoft.Office.WebWidgets.Experimental/).

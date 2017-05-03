@@ -1,13 +1,13 @@
 ---
-title: Customizing ranking models to improve relevance in SharePoint 2013
+title: Customizing ranking models to improve relevance in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: c166ecdd-7f93-4bbb-b543-2687992dd2bc
 ---
 
 
-# Customizing ranking models to improve relevance in SharePoint 2013
-Improve search relevance by customizing ranking models to calculate rank scores (relevance rank) accurately using rank features in SharePoint Server 2013.
-You can  [sort search results in SharePoint 2013](sorting-search-results-in-sharepoint.md) in four ways, one of which is by rank score. When you sort search results by rank score, SharePoint Server 2013 places the most relevant results on top in the search result set.
+# Customizing ranking models to improve relevance in SharePoint
+Improve search relevance by customizing ranking models to calculate rank scores (relevance rank) accurately using rank features in SharePoint.
+You can  [sort search results in SharePoint](sorting-search-results-in-sharepoint.md) in four ways, one of which is by rank score. When you sort search results by rank score, SharePoint places the most relevant results on top in the search result set.
   
     
     
@@ -38,17 +38,17 @@ The ranking model defines how the search engine calculates the relevance rank us
 ## Start your ranking model customization based on a SharePoint ranking model template
 <a name="sp15_using_custom_ranking_model"> </a>
 
-To make your customization easier, start by using one of the default ranking models in SharePoint Server 2013 as a template. Then, modify that ranking model to suit your data set.
+To make your customization easier, start by using one of the default ranking models in SharePoint as a template. Then, modify that ranking model to suit your data set.
   
     
     
-SharePoint Server 2013 provides 14 ranking models by default. See  [What is a ranking model?](http://technet.microsoft.com/library/7c8ddec1-c8ff-4a90-afae-387b27a653f1.aspx#Ranking_Models) (on TechNet) for detailed information about these ranking models and their purpose.
+SharePoint provides 14 ranking models by default. See  [What is a ranking model?](http://technet.microsoft.com/library/7c8ddec1-c8ff-4a90-afae-387b27a653f1.aspx#Ranking_Models) (on TechNet) for detailed information about these ranking models and their purpose.
   
     
     
 
 > **Important:**
-> If you install the SharePoint Server 2013 cumulative update of August 2013, we recommend using the **Search Ranking Model with Two Linear Stages** as the base model for your custom ranking model. The **Search Ranking Model with Two Linear Stages** is a copy of the **Default Search Model** with a linear second stage instead of a neural network second stage.
+> If you install the SharePoint cumulative update of August 2013, we recommend using the **Search Ranking Model with Two Linear Stages** as the base model for your custom ranking model. The **Search Ranking Model with Two Linear Stages** is a copy of the **Default Search Model** with a linear second stage instead of a neural network second stage.
   
     
     
@@ -104,7 +104,7 @@ $defaultRankingModel.RankingModelXML > filename.xml
 
 ```
 
-If you install the SharePoint Server 2013 cumulative update of August 2013, you can use the following procedure to retrieve the search ranking model with two linear stages to use as a template for your custom ranking model.
+If you install the SharePoint cumulative update of August 2013, you can use the following procedure to retrieve the search ranking model with two linear stages to use as a template for your custom ranking model.
   
     
     
@@ -232,7 +232,7 @@ $resultTables[([Microsoft.Office.Server.Search.Query.ResultType]::RelevantResult
 
 ### Understanding the rank score calculation via the ExplainRank page
 
-SharePoint Server 2013 provides the **ExplainRank** page that is located in the layouts folder ( `<searchCenter>/_layouts/15/`). This page contains detailed information on the rank score for each rank feature based on a given search query, a document ID, and an optional ranking model ID. The information is obtained and parsed from the rank detail.
+SharePoint provides the **ExplainRank** page that is located in the layouts folder ( `<searchCenter>/_layouts/15/`). This page contains detailed information on the rank score for each rank feature based on a given search query, a document ID, and an optional ranking model ID. The information is obtained and parsed from the rank detail.
   
     
     
@@ -266,7 +266,7 @@ Just like with the rank detail, to view the **ExplainRank** page, you need to be
 ## Tune your ranking model with rank features
 <a name="sp15_rank_features"> </a>
 
-Rank features work like tuning dials for a ranking model. The following sections describe the rank features that are available in the default SharePoint Server 2013 ranking model and how they contribute to relevance rank calculation.
+Rank features work like tuning dials for a ranking model. The following sections describe the rank features that are available in the default SharePoint ranking model and how they contribute to relevance rank calculation.
   
     
     
@@ -310,10 +310,10 @@ Where:
 -  _S_ defines the list of fields that contribute to relevance ranking; this list is defined by the ranking model.
     
   
--  _w_f is a numeric value that defines the relative weight of the field _f_ ∈ _S_; this value is defined by the ranking model.
+-  _w_f is a numeric value that defines the relative weight of the field _f_ ??? _S_; this value is defined by the ranking model.
     
   
--  _b_f is a numeric value that defines the document length normalization for each field _f_ ∈ _S_.
+-  _b_f is a numeric value that defines the document length normalization for each field _f_ ??? _S_.
     
   
 -  _TF_f _(t,D)_ is the number of occurrences of query term _t_ in the field _f_ of document _D_.
@@ -338,7 +338,7 @@ You must map the managed properties used for the BM25 rank feature to the defaul
   
     
     
-Within a user query, query terms that are part of the following operators are excluded from relevance rank calculations:  `NOT(…)` in FQL, `NOT(…)` in KQL, and `FILTER(…)` in FQL.
+Within a user query, query terms that are part of the following operators are excluded from relevance rank calculations:  `NOT(???)` in FQL, `NOT(???)` in KQL, and `FILTER(???)` in FQL.
   
     
     
@@ -572,7 +572,7 @@ At query time, information about the user's language is written to the search en
 
 ### Proximity
 
-The proximity rank feature ranks items depending on the distance between query terms inside the full-text index. The rank score is boosted if two query terms appear in the same managed properties within the full-text index. Proximity calculations are expensive in terms of disk activity and CPU consumption; as a result, proximity boost is carried out only during the second stage of the default SharePoint Server 2013 rank model (if available).
+The proximity rank feature ranks items depending on the distance between query terms inside the full-text index. The rank score is boosted if two query terms appear in the same managed properties within the full-text index. Proximity calculations are expensive in terms of disk activity and CPU consumption; as a result, proximity boost is carried out only during the second stage of the default SharePoint rank model (if available).
   
     
     
@@ -597,7 +597,7 @@ You can evaluate the proximity rank feature by using several different options, 
   
     
     
-The following example is an excerpt from the default SharePoint Server 2013 rank model. In this model, the proximity feature is only part of the second stage calculation, which involves a neural network. Therefore, the example contains multiple weight elements,  `<LayerWeights>`, which correspond to the number of neurons in the hidden layer of the neural network.
+The following example is an excerpt from the default SharePoint rank model. In this model, the proximity feature is only part of the second stage calculation, which involves a neural network. Therefore, the example contains multiple weight elements,  `<LayerWeights>`, which correspond to the number of neurons in the hidden layer of the neural network.
   
     
     
@@ -651,7 +651,7 @@ The dynamic rank feature ranks an item depending on whether the query property m
     
 
 > **Note:**
-> The dynamic rank feature is not customizable; it's for internal use only. However, if you install the SharePoint Server 2013 cumulative update of August 2013, the AnchortextComplete rank feature is a customizable dynamic rank feature that is part of the default ranking model. 
+> The dynamic rank feature is not customizable; it's for internal use only. However, if you install the SharePoint cumulative update of August 2013, the AnchortextComplete rank feature is a customizable dynamic rank feature that is part of the default ranking model. 
   
     
     
@@ -676,7 +676,7 @@ The dynamic rank feature ranks an item depending on whether the query property m
 
 ### Freshness
 
-The default SharePoint 2013 ranking model doesn't boost the rank of search results based on their freshness. You can achieve this by adding a new static rank feature that combines information from the **LastModifiedTime** managed property with the **DateTimeUtcNow** query property, using the freshness transform function. The freshness transform function is the only transform that you can use for this freshness rank feature, because it converts the age of the item from an internal representation into days.
+The default SharePoint ranking model doesn't boost the rank of search results based on their freshness. You can achieve this by adding a new static rank feature that combines information from the **LastModifiedTime** managed property with the **DateTimeUtcNow** query property, using the freshness transform function. The freshness transform function is the only transform that you can use for this freshness rank feature, because it converts the age of the item from an internal representation into days.
   
     
     
@@ -764,7 +764,7 @@ A ranking model can have two rank stages. In the first stage, the ranking model 
   
     
     
-The SharePoint Server 2013 default ranking model is an example of two-stage ranking model. In this model, the second stage works with the top 1000 items with the highest rank score that result from the first stage.
+The SharePoint default ranking model is an example of two-stage ranking model. In this model, the second stage works with the top 1000 items with the highest rank score that result from the first stage.
   
     
     
@@ -778,7 +778,7 @@ However, to ensure that the search engine re-sorts the items accurately, items f
     
 
 > **Note:**
-> If you install the SharePoint Server 2013 cumulative update of August 2013, the default ranking model uses a linear first stage and a neural network second stage. **The Search Ranking Model with Two Linear Stages** is a copy of the **Default Search Model** with two linear stages. We recommend using this model as the base model for your custom ranking model because it is easier to tune a linear model than a model containing a neural network.
+> If you install the SharePoint cumulative update of August 2013, the default ranking model uses a linear first stage and a neural network second stage. **The Search Ranking Model with Two Linear Stages** is a copy of the **Default Search Model** with two linear stages. We recommend using this model as the base model for your custom ranking model because it is easier to tune a linear model than a model containing a neural network.
   
     
     
@@ -833,7 +833,7 @@ Where:
 
 #### Neural network
 
-The neural network defines a nonlinear combination of rank scores from rank features. Currently, SharePoint Server 2013 supports neural networks that are limited to one hidden layer with up to eight neurons.
+The neural network defines a nonlinear combination of rank scores from rank features. Currently, SharePoint supports neural networks that are limited to one hidden layer with up to eight neurons.
   
     
     
@@ -1080,7 +1080,7 @@ This ranking model with one linear stage contains these four rank features:
 <a name="bk_addresources"> </a>
 
 
--  [Search in SharePoint 2013](search-in-sharepoint.md)
+-  [Search in SharePoint](search-in-sharepoint.md)
     
   
 -  [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference.md)
@@ -1089,7 +1089,7 @@ This ranking model with one linear stage contains these four rank features:
 -  [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference.md)
     
   
--  [Overview of search result ranking in SharePoint Server 2013](http://technet.microsoft.com/library/7c8ddec1-c8ff-4a90-afae-387b27a653f1.aspx)
+-  [Overview of search result ranking in SharePoint](http://technet.microsoft.com/library/7c8ddec1-c8ff-4a90-afae-387b27a653f1.aspx)
     
   
 -  [Create a custom ranking model by using the Ranking Model Tuning App](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/create-a-custom-ranking-model-by-using-the-ranking-model-tuning-app-HA104104860.aspx?CTT=1)

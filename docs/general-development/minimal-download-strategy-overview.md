@@ -6,8 +6,8 @@ ms.assetid: 9caa7d99-1e74-4889-96c7-ba5a10772ad7
 
 
 # Minimal Download Strategy overview
-Learn about Minimal Download Strategy (MDS), a new feature in SharePoint 2013 that reduces page load time by sending only the differences when users navigate to a new page.
-Minimal Download Strategy (MDS) is a new technology in SharePoint 2013 that reduces the amount of data that the browser has to download when users navigate from one page to another in a SharePoint site. When users browse an MDS-enabled site, the client processes only the differences (or delta) between the current page and the requested page. Figure 1 shows the sections that change from page to page and therefore require an update. The delta usually includes the data in the (1) content areas, as well as other components such as (2) navigation controls.
+Learn about Minimal Download Strategy (MDS), a new feature in SharePoint that reduces page load time by sending only the differences when users navigate to a new page.
+Minimal Download Strategy (MDS) is a new technology in SharePoint that reduces the amount of data that the browser has to download when users navigate from one page to another in a SharePoint site. When users browse an MDS-enabled site, the client processes only the differences (or delta) between the current page and the requested page. Figure 1 shows the sections that change from page to page and therefore require an update. The delta usually includes the data in the (1) content areas, as well as other components such as (2) navigation controls.
   
     
     

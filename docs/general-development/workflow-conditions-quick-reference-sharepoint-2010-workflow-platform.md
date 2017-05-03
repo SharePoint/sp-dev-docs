@@ -6,7 +6,7 @@ ms.assetid: 71fab25b-d4f3-4871-b9ad-08d3537098fc
 
 
 # Workflow conditions quick reference (SharePoint 2010 Workflow platform)
-Learn about the workflow conditions that are available in the SharePoint 2010 Workflow Platform in Microsoft SharePoint Designer 2013.Use this article  *only*  if you are working in SharePoint Designer 2013, but want to continue to use the SharePoint 2010 Workflow Platform.If instead you want to use the SharePoint 2013 Workflow Platform, see  [Workflow actions and activities reference for SharePoint 2013](workflow-actions-and-activities-reference-for-sharepoint.md), and other articles listed in the "Additional resources" section, which describe new features that are available in the newer platform.To begin creating a workflow by using the 2010 Workflow Platform, select **SharePoint 2010 Workflow** in the **Platform Type** box in the **Create Workflow** dialog box.
+Learn about the workflow conditions that are available in the SharePoint 2010 Workflow Platform in Microsoft SharePoint Designer 2013.Use this article  *only*  if you are working in SharePoint Designer 2013, but want to continue to use the SharePoint 2010 Workflow Platform.If instead you want to use the SharePoint Workflow Platform, see  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint.md), and other articles listed in the "Additional resources" section, which describe new features that are available in the newer platform.To begin creating a workflow by using the 2010 Workflow Platform, select **SharePoint 2010 Workflow** in the **Platform Type** box in the **Create Workflow** dialog box.
 ## Where to find the workflow conditions
 <a name="section1"> </a>
 
@@ -293,7 +293,7 @@ By default, when a workflow is started manually it uses the permissions of the p
   
     
     
-In such cases, you can use one or more impersonation steps in the workflow. An impersonation step uses the permissions of the person who most recently saved the workflow template—typically the author of the template, who would typically have the needed permissions for all of the workflow's operations, including in this case permission to archive the document to the appropriate library. 
+In such cases, you can use one or more impersonation steps in the workflow. An impersonation step uses the permissions of the person who most recently saved the workflow template???typically the author of the template, who would typically have the needed permissions for all of the workflow's operations, including in this case permission to archive the document to the appropriate library. 
   
     
     
@@ -450,10 +450,10 @@ For more information about conditions, see the  [General conditions](workflow-co
 <a name="bk_addresources"> </a>
 
 
--  [What's new in workflows for SharePoint 2013](what-s-new-in-workflows-for-sharepoint.md)
+-  [What's new in workflows for SharePoint](what-s-new-in-workflows-for-sharepoint.md)
     
   
--  [Get started with workflows in SharePoint 2013](get-started-with-workflows-in-sharepoint.md)
+-  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint.md)
     
   
 -  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)

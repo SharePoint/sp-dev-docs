@@ -1,12 +1,12 @@
 ---
-title: How to Back up and restore SharePoint 2013 using a VSS requestor
+title: How to Back up and restore SharePoint using a VSS requestor
 ms.prod: SHAREPOINT
 ms.assetid: cab5ba90-bd23-4cec-82d7-529e3f86ba88
 ---
 
 
-# How to: Back up and restore SharePoint 2013 using a VSS requestor
- **Summary:** Learn how to back and restore using a Volume Shadow Copy Service (VSS) requestor for Microsoft SharePoint 2013.
+# How to: Back up and restore SharePoint using a VSS requestor
+ **Summary:** Learn how to back and restore using a Volume Shadow Copy Service (VSS) requestor for Microsoft SharePoint.
 ## Backing up and restoring with the requestor
 
 Use the following procedure to back up and restore Microsoft SharePoint Foundation data using your VSS requestor.
@@ -62,7 +62,7 @@ Also, to be hosted by the SharePoint Foundation Timer service (owstimer.exe), th
 <a name="bk_addresources"> </a>
 
 
--  [Overview of SharePoint 2013 and the Volume Shadow Copy Service](overview-of-sharepoint-and-the-volume-shadow-copy-service.md)
+-  [Overview of SharePoint and the Volume Shadow Copy Service](overview-of-sharepoint-and-the-volume-shadow-copy-service.md)
     
   
 

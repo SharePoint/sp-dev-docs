@@ -6,15 +6,15 @@ ms.assetid: 00d2cf8d-93b0-4aab-8e76-31a6bb2f0dcb
 
 
 # What's new in Word Automation Services for developers
-This topic provides a high-level overview of the additions and enhancements for developers in Word Automation Services. In Microsoft SharePoint 2013 the primary addition to Word Automation Services is support for "on demand" file conversion requests. The most significant enhancement to Word Automation Services is added support for using streams as input to and output from conversion jobs.
+This topic provides a high-level overview of the additions and enhancements for developers in Word Automation Services. In Microsoft SharePoint the primary addition to Word Automation Services is support for "on demand" file conversion requests. The most significant enhancement to Word Automation Services is added support for using streams as input to and output from conversion jobs.
 ## Create an on demand file conversion
 <a name="was15CreateOnDemandConversion"> </a>
 
-In Word Automation Services in Microsoft SharePoint 2013 you can now create on demand file conversion requests that result in file conversionthat are processed immediately. In SharePoint 2010, you would create a file conversion job in your code and then start the conversion using the ConversionJob.Start method. The conversion job would then start based on the interval set in Word Automation Services for how often to start conversion jobs. At the interval, the SharePoint Timer Job would start the conversion job. Using the Timer Job based method, the soonest you can start a conversion job is 1 minute. 
+In Word Automation Services in Microsoft SharePoint you can now create on demand file conversion requests that result in file conversionthat are processed immediately. In SharePoint 2010, you would create a file conversion job in your code and then start the conversion using the ConversionJob.Start method. The conversion job would then start based on the interval set in Word Automation Services for how often to start conversion jobs. At the interval, the SharePoint Timer Job would start the conversion job. Using the Timer Job based method, the soonest you can start a conversion job is 1 minute. 
   
     
     
-Now, in Word Automation Services in Microsoft SharePoint 2013, you have the added option to create a file conversion request that's processed as soon as you submit it and the conversion is started immediately and does not depend on the SharePoint Timer Job. 
+Now, in Word Automation Services in Microsoft SharePoint, you have the added option to create a file conversion request that's processed as soon as you submit it and the conversion is started immediately and does not depend on the SharePoint Timer Job. 
   
     
     
@@ -48,7 +48,7 @@ In contrast, the SharePoint Timer Job-based conversion jobs are placed in the Ti
 ### Key points
 
 
-- An on demand file conversion request is an additional feature and doesn't replace the existing SharePoint Timer Job-based conversion job. That means that solutions that compiled and ran in SharePoint 2010 will continue to compile and run in SharePoint 2013.
+- An on demand file conversion request is an additional feature and doesn't replace the existing SharePoint Timer Job-based conversion job. That means that solutions that compiled and ran in SharePoint 2010 will continue to compile and run in SharePoint.
     
   
 - You can make on demand file conversion requests for only one file at a time
@@ -61,7 +61,7 @@ In contrast, the SharePoint Timer Job-based conversion jobs are placed in the Ti
 ## Perform file conversions on streams
 <a name="was15PerformStreamConversion"> </a>
 
-The other new feature in Word Automation Services in Microsoft SharePoint 2013 is support for converting streams. In SharePoint 2010, you could only convert files that were stored in SharePoint libraries. Now you can also convert files that are stored outside SharePoint using streams.
+The other new feature in Word Automation Services in Microsoft SharePoint is support for converting streams. In SharePoint 2010, you could only convert files that were stored in SharePoint libraries. Now you can also convert files that are stored outside SharePoint using streams.
   
     
     

@@ -1,11 +1,11 @@
 ---
-title: How to Create filter data providers for PerformancePoint Services in SharePoint 2013
+title: How to Create filter data providers for PerformancePoint Services in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 25508ec6-86bf-4eea-acf0-00f88e4faa55
 ---
 
 
-# How to: Create filter data providers for PerformancePoint Services in SharePoint 2013
+# How to: Create filter data providers for PerformancePoint Services in SharePoint
 Learn how to create the data provider component in a custom filter extension for PerformancePoint Services.
 ## What are custom data providers for PerformancePoint Services?
 <a name="bk_introduction"> </a>
@@ -14,7 +14,7 @@ In PerformancePoint Services, custom data providers retrieve data from a filter'
   
     
     
-The following procedures and examples that show you how to create, configure, and define a filter data provider are based on the **SampleFilterDataProvider** class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The editor is a thin web application that enables users to modify the report's name and description. For the complete code for the class, see  [Code example: Create a data provider for custom PerformancePoint Services filters in SharePoint Server 2013](#bk_example).
+The following procedures and examples that show you how to create, configure, and define a filter data provider are based on the **SampleFilterDataProvider** class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The editor is a thin web application that enables users to modify the report's name and description. For the complete code for the class, see  [Code example: Create a data provider for custom PerformancePoint Services filters in SharePoint](#bk_example).
   
     
     
@@ -96,7 +96,7 @@ We recommend that you use the sample data provider as a template. The sample sho
     
   
 
-## Code example: Create a data provider for custom PerformancePoint Services filters in SharePoint Server 2013
+## Code example: Create a data provider for custom PerformancePoint Services filters in SharePoint
 <a name="bk_example"> </a>
 
 The following code example shows how a data provider retrieves values from a web service or an Excel worksheet and returns  [DataTable](https://msdn.microsoft.com/library/System.Data.DataTable.aspx) objects for the filter's display data and message data.
@@ -305,10 +305,10 @@ After you create a data provider and a filter editor (including its user interfa
 <a name="bk_next"> </a>
 
 
--  [How to: Create filter editors for PerformancePoint Services in SharePoint 2013](how-to-create-filter-editors-for-performancepoint-services-in-sharepoint.md)
+-  [How to: Create filter editors for PerformancePoint Services in SharePoint](how-to-create-filter-editors-for-performancepoint-services-in-sharepoint.md)
     
   
--  [PerformancePoint Services in SharePoint 2013](performancepoint-services-in-sharepoint.md)
+-  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint.md)
     
   
 

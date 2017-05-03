@@ -6,7 +6,7 @@ ms.assetid: c967be7c-f29f-481a-9ce2-915ead315dcd
 
 
 # Modify SharePoint components for MDS
-Learn how to modify the components in your SharePoint project to take advantage of Minimal Download Strategy (MDS) in SharePoint 2013.
+Learn how to modify the components in your SharePoint project to take advantage of Minimal Download Strategy (MDS) in SharePoint.
 Minimal Download Strategy (MDS) improves the user experience by returning from the server only the portions of a page required to render it properly in the browser. Because the fully-rendered page is not returned to the client, the server must be able to accurately identify the portions that are required to render the page. You might need to modify the components in your SharePoint project so that they are identified as MDS-compliant and can work with the MDS engine. Learn more about MDS in  [Minimal Download Strategy overview](minimal-download-strategy-overview.md).
   
     

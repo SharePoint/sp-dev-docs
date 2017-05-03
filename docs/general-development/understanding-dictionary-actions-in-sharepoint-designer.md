@@ -6,7 +6,7 @@ ms.assetid: 73df233e-bad8-4ea1-b05d-61ecab597924
 
 
 # Understanding Dictionary actions in SharePoint Designer 2013
-The Dictionary variable type is a new variable type in the SharePoint 2013 Workflow platform that you can use with SharePoint Designer 2013. 
+The Dictionary variable type is a new variable type in the SharePoint Workflow platform that you can use with SharePoint Designer 2013. 
 ||
 |:-----|
 ||
@@ -132,7 +132,7 @@ The figure shows the **Build a Dictionary** dialog box. Notice that three variab
   
     
     
-A **Dictionary** can contain any type of variable available in the SharePoint 2013 Workflow platform. The following list defines the variable types available:
+A **Dictionary** can contain any type of variable available in the SharePoint Workflow platform. The following list defines the variable types available:
   
     
     
@@ -253,13 +253,13 @@ The figure shows the **Get an Item from a Dictionary** workflow action. Notice t
 <a name="bk_addresources"> </a>
 
 
--  [Workflow in SharePoint 2013](http://technet.microsoft.com/en-us/sharepoint/jj556245.aspx)
+-  [Workflow in SharePoint](http://technet.microsoft.com/en-us/sharepoint/jj556245.aspx)
     
   
--  [What's new in workflow in SharePoint Server 2013](http://msdn.microsoft.com/library/6ab8a28b-fa2f-4530-8b55-a7f663bf15ea.aspx)
+-  [What's new in workflow in SharePoint](http://msdn.microsoft.com/library/6ab8a28b-fa2f-4530-8b55-a7f663bf15ea.aspx)
     
   
--  [Getting started with SharePoint Server 2013 workflow](http://msdn.microsoft.com/library/cc73be76-a329-449f-90ab-86822b1c2ee8.aspx)
+-  [Getting started with SharePoint workflow](http://msdn.microsoft.com/library/cc73be76-a329-449f-90ab-86822b1c2ee8.aspx)
     
   
 

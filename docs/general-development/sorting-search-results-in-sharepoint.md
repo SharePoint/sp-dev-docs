@@ -1,12 +1,12 @@
 ---
-title: Sorting search results in SharePoint 2013
+title: Sorting search results in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 66af835e-2c8f-405e-8bed-cb1e5436e190
 ---
 
 
 
-# Sorting search results in SharePoint 2013
+# Sorting search results in SharePoint
 
   
     
@@ -23,8 +23,8 @@ ms.assetid: 66af835e-2c8f-405e-8bed-cb1e5436e190
   
     
     
-Sort search results programmatically—by rank, by managed property value, by a formula expression, or in random order—by using the Query object model in SharePoint Server 2013. 
-You can sort the search results for SharePoint Server 2013 in four ways:
+Sort search results programmatically—by rank, by managed property value, by a formula expression, or in random order—by using the Query object model in SharePoint. 
+You can sort the search results for SharePoint in four ways:
   
     
     
@@ -43,7 +43,7 @@ You can sort the search results for SharePoint Server 2013 in four ways:
     
   
 
-This article focuses on sorting search results programmatically. To learn how to sort search results using SharePoint Server 2013 query rules, see the following articles:
+This article focuses on sorting search results programmatically. To learn how to sort search results using SharePoint query rules, see the following articles:
   
     
     
@@ -71,7 +71,7 @@ If you have multiple values in  [SortList](https://msdn.microsoft.com/library/Mi
   
     
     
-Apart from the Query object model, SharePoint Server 2013 also provides a Search REST service that you can use to query the search index with your client or mobile applications. The Search REST service supports both HTTP POST and HTTP GET requests. For more information on how to construct URIs for these requests, see  [Querying with the Search REST service](sharepoint-search-rest-api-overview.md#bk_queryrest).
+Apart from the Query object model, SharePoint also provides a Search REST service that you can use to query the search index with your client or mobile applications. The Search REST service supports both HTTP POST and HTTP GET requests. For more information on how to construct URIs for these requests, see  [Querying with the Search REST service](sharepoint-search-rest-api-overview.md#bk_queryrest).
   
     
     
@@ -79,7 +79,7 @@ Apart from the Query object model, SharePoint Server 2013 also provides a Search
 ## Sort search results by rank
 <a name="SP15_Sort_search_resuilts_by_rank"> </a>
 
-By default, search results are sorted by relevance rank. This means that SharePoint Server 2013 places the most relevant results on top in the search result set. If you sort by rank, the results are always sorted in descending order. But you can change the sort order to ascending by using  [SortDirection()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.SortDirection.aspx) .
+By default, search results are sorted by relevance rank. This means that SharePoint places the most relevant results on top in the search result set. If you sort by rank, the results are always sorted in descending order. But you can change the sort order to ascending by using  [SortDirection()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.SortDirection.aspx) .
   
     
     
@@ -98,7 +98,7 @@ You can also influence the rank calculation in the query string, in one of two w
 ## Sort search results by managed property value
 <a name="SP15_Sort_search_results_by_managed_property_value"> </a>
 
-You can specify search result sorting based on the value of one or more managed properties. This means that SharePoint Server 2013 performs the sorting based on all results that match the query.
+You can specify search result sorting based on the value of one or more managed properties. This means that SharePoint performs the sorting based on all results that match the query.
   
     
     
@@ -583,7 +583,7 @@ using (var context = new ClientContext("http://localhost"))
 <a name="bk_addresources"> </a>
 
 
--  [Search in SharePoint 2013](search-in-sharepoint.md)
+-  [Search in SharePoint](search-in-sharepoint.md)
     
   
 -  [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference.md)
@@ -595,7 +595,7 @@ using (var context = new ClientContext("http://localhost"))
 -  [SharePoint Search REST API overview](sharepoint-search-rest-api-overview.md)
     
   
--  [Overview of crawled and managed properties in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj219630%28office.15%29.aspx)
+-  [Overview of crawled and managed properties in SharePoint](http://technet.microsoft.com/en-us/library/jj219630%28office.15%29.aspx)
     
   
 

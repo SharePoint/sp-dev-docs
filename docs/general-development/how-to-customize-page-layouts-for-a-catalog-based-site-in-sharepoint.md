@@ -1,12 +1,12 @@
 ---
-title: How to Customize page layouts for a catalog-based site in SharePoint 2013
+title: How to Customize page layouts for a catalog-based site in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 21d8db99-73b3-4429-b6cb-04e375af9f55
 ---
 
 
-# How to: Customize page layouts for a catalog-based site in SharePoint 2013
-Learn how to create and customize category page and catalog-item page layouts for a SharePoint Server 2013 cross-site publishing site.
+# How to: Customize page layouts for a catalog-based site in SharePoint
+Learn how to create and customize category page and catalog-item page layouts for a SharePoint cross-site publishing site.
 ## Prerequisites for creating and customizing page layouts for a catalog-based site
 <a name="bk_prereqs"> </a>
 
@@ -18,10 +18,10 @@ To follow the steps in this example, you must have the following:
 - An HTML editor
     
   
-- A SharePoint Server 2013 cross-site publishing environment
+- A SharePoint cross-site publishing environment
     
   
-For information about how to set up a SharePoint cross-site publishing environment, see  [Configure cross-site publishing in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj656774.aspx).
+For information about how to set up a SharePoint cross-site publishing environment, see  [Configure cross-site publishing in SharePoint](http://technet.microsoft.com/en-us/library/jj656774.aspx).
   
     
     
@@ -38,16 +38,16 @@ Table 1 lists useful articles that can help you understand the concepts and step
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [Overview of cross-site publishing in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj635883.aspx) <br/> |Learn about how to use cross-site publishing and Search Web Parts to create adaptive SharePoint Internet, intranet, and extranet sites.  <br/> |
-| [How to: Create a page layout in SharePoint 2013](how-to-create-a-page-layout-in-sharepoint.md) <br/> |Learn about how to create page layouts in SharePoint Server 2013.  <br/> |
-| [How to: Resolve errors and warnings when previewing a page in SharePoint 2013](how-to-resolve-errors-and-warnings-when-previewing-a-page-in-sharepoint.md) <br/> |Learn about how to resolve any issues that prevent the server-side preview from rendering your page.  <br/> |
-| [SharePoint 2013 Design Manager snippets](sharepoint-design-manager-snippets.md) <br/> |Learn about how to use snippets to add SharePoint functionality to your HTML master page or page layout.  <br/> |
+| [Overview of cross-site publishing in SharePoint](http://technet.microsoft.com/en-us/library/jj635883.aspx) <br/> |Learn about how to use cross-site publishing and Search Web Parts to create adaptive SharePoint Internet, intranet, and extranet sites.  <br/> |
+| [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md) <br/> |Learn about how to create page layouts in SharePoint.  <br/> |
+| [How to: Resolve errors and warnings when previewing a page in SharePoint](how-to-resolve-errors-and-warnings-when-previewing-a-page-in-sharepoint.md) <br/> |Learn about how to resolve any issues that prevent the server-side preview from rendering your page.  <br/> |
+| [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md) <br/> |Learn about how to use snippets to add SharePoint functionality to your HTML master page or page layout.  <br/> |
    
 
 ## Introduction to category page layouts and catalog item page layouts
 <a name="bk_introduction"> </a>
 
-Category pages and catalog item pages are page layouts that you can use to show structured catalog content consistently across a site. By default, SharePoint Server 2013 can automatically create one category page layout and one catalog item page layout per catalog connection. Pages based on these layouts are created in the Pages library of a publishing site when you connect the site to a catalog. For more information about page layouts, see  [How to: Create a page layout in SharePoint 2013](how-to-create-a-page-layout-in-sharepoint.md). For more information about features that are specific to category page layouts and catalog item page layouts, see  [Overview of cross-site publishing in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj635883.aspx).
+Category pages and catalog item pages are page layouts that you can use to show structured catalog content consistently across a site. By default, SharePoint can automatically create one category page layout and one catalog item page layout per catalog connection. Pages based on these layouts are created in the Pages library of a publishing site when you connect the site to a catalog. For more information about page layouts, see  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md). For more information about features that are specific to category page layouts and catalog item page layouts, see  [Overview of cross-site publishing in SharePoint](http://technet.microsoft.com/en-us/library/jj635883.aspx).
   
     
     
@@ -59,7 +59,7 @@ By default, category page layouts and catalog item page layouts are created auto
 ## Create a category page layout
 <a name="bk_createCategoryPage"> </a>
 
-Before you can create or customize a category page layout, we recommend that you create a mapped network drive that points to the **Master Page Gallery**. For more information, see  [How to: Map a network drive to the SharePoint 2013 Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md).
+Before you can create or customize a category page layout, we recommend that you create a mapped network drive that points to the **Master Page Gallery**. For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md).
   
     
     
@@ -81,20 +81,20 @@ The simplest way to create a category page layout is to let SharePoint create th
     
     > **Important:**
       > You must keep the Content Search Snippet markup so that the category page can display search results. 
-4. To configure and copy the HTML for any snippets you want to add to the page, follow step 1 through step 11 in the "Insert a snippet from the Snippet Gallery" section of  [SharePoint 2013 Design Manager snippets](sharepoint-design-manager-snippets.md).
+4. To configure and copy the HTML for any snippets you want to add to the page, follow step 1 through step 11 in the "Insert a snippet from the Snippet Gallery" section of  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md).
     
   
 5. Make any other required changes to the markup, and then save the file.
     
   
-6. Follow step 9 through step 11 in the "Create a page layout" section of  [How to: Create a page layout in SharePoint 2013](how-to-create-a-page-layout-in-sharepoint.md) to check the status of the file, preview the page layout, and fix any errors.
+6. Follow step 9 through step 11 in the "Create a page layout" section of  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md) to check the status of the file, preview the page layout, and fix any errors.
     
   
 
 ### To create a category page layout by using Design Manager
 
 
-1. Follow step 1 through step 6 in the "Create a page layout" section of  [How to: Create a page layout in SharePoint 2013](how-to-create-a-page-layout-in-sharepoint.md).
+1. Follow step 1 through step 6 in the "Create a page layout" section of  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md).
     
   
 2. In step 7, choose the **Article Page** content type.
@@ -142,14 +142,14 @@ The simplest way to create a category page layout is to let SharePoint create th
 8. Replace the markup inside the content placeholder that has **id="PlaceHolderMain"** with the markup that you want to use in the page layout.
     
   
-9. To configure and copy the HTML for the Content Search Snippet and any other snippets you want to add to the page, follow step 1 through step 11 in the "Insert a snippet from the Snippet Gallery" section of  [SharePoint 2013 Design Manager snippets](sharepoint-design-manager-snippets.md).
+9. To configure and copy the HTML for the Content Search Snippet and any other snippets you want to add to the page, follow step 1 through step 11 in the "Insert a snippet from the Snippet Gallery" section of  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md).
     
     > **Note:**
-      > When you add the Content Search Snippet to the page layout, be sure to change the query to use the result source that was created when you connected the publishing site to a catalog. For more information, see  [Configure result sources for web content management in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj715262.aspx). 
+      > When you add the Content Search Snippet to the page layout, be sure to change the query to use the result source that was created when you connected the publishing site to a catalog. For more information, see  [Configure result sources for web content management in SharePoint](http://technet.microsoft.com/en-us/library/jj715262.aspx). 
 10. Make any other required changes to the markup, and then save the file.
     
   
-11. Follow step 9 through step 11 in the "Create a page layout" section of  [How to: Create a page layout in SharePoint 2013](how-to-create-a-page-layout-in-sharepoint.md) to check the status of the file, preview the page layout, and fix any errors.
+11. Follow step 9 through step 11 in the "Create a page layout" section of  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md) to check the status of the file, preview the page layout, and fix any errors.
     
   
 
@@ -233,7 +233,7 @@ WebPart="true" Height="" Width="" Title="$Resources:cms,WebPartZoneTitle_Dynamic
 ## Create a catalog item page layout
 <a name="bk_createCatItemPage"> </a>
 
-Before you can create or customize a catalog item page layout, we recommend that you create a mapped network drive that points to the Master Page Gallery. For more information, see  [How to: Map a network drive to the SharePoint 2013 Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md).
+Before you can create or customize a catalog item page layout, we recommend that you create a mapped network drive that points to the Master Page Gallery. For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md).
   
     
     
@@ -258,20 +258,20 @@ As with the category page layout, the simplest way to create a catalog item page
     
     > **Caution:**
       > By default, a Web Part Zone Snippet that contains a Catalog-Item Reuse Snippet is added to the page layout. This snippet contains the data provider that returns query results that are used by all other snippets on the page. We recommend that you keep the Catalog-Item Reuse Snippet in this default Web Part Zone Snippet. (You can move the Catalog-Item Reuse Snippet outside the Web Part Zone, and you can change the property that it displays. But, you must keep the Catalog-Item Reuse Snippet in the page layout.) For more information, see  [Page fields](how-to-customize-page-layouts-for-a-catalog-based-site-in-sharepoint.md#bk_pagefields), later in this article. 
-5. To configure and copy the HTML snippet for any snippets you want to use in the page, follow step 1 through step 11 in the "Insert a snippet from the Snippet Gallery" section of  [SharePoint 2013 Design Manager snippets](sharepoint-design-manager-snippets.md).
+5. To configure and copy the HTML snippet for any snippets you want to use in the page, follow step 1 through step 11 in the "Insert a snippet from the Snippet Gallery" section of  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md).
     
   
 6. Make any other required changes to the markup, and then save the file.
     
   
-7. Follow step 9 through step 11 in the "Create a page layout" section of  [How to: Create a page layout in SharePoint 2013](how-to-create-a-page-layout-in-sharepoint.md) to check the status of the file, preview the page layout, and fix any errors.
+7. Follow step 9 through step 11 in the "Create a page layout" section of  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md) to check the status of the file, preview the page layout, and fix any errors.
     
   
 
 ### To create a catalog item page layout by using Design Manager
 
 
-1. Follow step 1 through step 6 in the "Create a page layout" section of  [How to: Create a page layout in SharePoint 2013](how-to-create-a-page-layout-in-sharepoint.md).
+1. Follow step 1 through step 6 in the "Create a page layout" section of  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md).
     
   
 2. In step 7, choose **Remote Catalog**, and then choose the catalog that contains the data to appear on the page.
@@ -302,13 +302,13 @@ As with the category page layout, the simplest way to create a catalog item page
     
     > **Caution:**
       > By default, a Web Part Zone Snippet that contains a Catalog-Item Reuse Snippet is added to the page layout. This snippet contains the data provider that returns query results that are used by all other snippets on the page. We recommend that you keep the Catalog-Item Reuse Snippet in this default Web Part Zone Snippet. (You can move the Catalog-Item Reuse Snippet outside the Web Part Zone, and you can change the property that it displays. But, you must keep the Catalog-Item Reuse Snippet in the page layout.) For more information, see  [Page fields](how-to-customize-page-layouts-for-a-catalog-based-site-in-sharepoint.md#bk_pagefields), later in this article. 
-8. To configure and copy the HTML snippet for any snippets you want to use in the page, follow step 1 through step 11 in the "Insert a snippet from the Snippet Gallery" section of  [SharePoint 2013 Design Manager snippets](sharepoint-design-manager-snippets.md).
+8. To configure and copy the HTML snippet for any snippets you want to use in the page, follow step 1 through step 11 in the "Insert a snippet from the Snippet Gallery" section of  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md).
     
   
 9. Make any other required changes to the markup, and then save the file.
     
   
-10. Follow step 9 through step 11 in the "Create a page layout" section of  [How to: Create a page layout in SharePoint 2013](how-to-create-a-page-layout-in-sharepoint.md) to check the status of the file, preview the page layout, and fix any errors.
+10. Follow step 9 through step 11 in the "Create a page layout" section of  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md) to check the status of the file, preview the page layout, and fix any errors.
     
   
 
@@ -478,7 +478,7 @@ If the catalog item page layout was created automatically when the publishing si
 |**PublishingPageLayoutOWSURLH** <br/> |The URL to the page layout that was used to create the page.  <br/> |Pages library only  <br/> |
 |**Title** <br/> |The title of the page or list item.  <br/> |Pages library and list  <br/> |
    
-The managed properties for custom columns that you add to the Pages library or list are also included in Catalog-Item Reuse Snippets. The managed property name will vary, based on the site column type that you use when you create the site column. For more information, see  [Automatically created managed properties in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj613136.aspx), and  [Overview of the search schema in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj219669.aspx).
+The managed properties for custom columns that you add to the Pages library or list are also included in Catalog-Item Reuse Snippets. The managed property name will vary, based on the site column type that you use when you create the site column. For more information, see  [Automatically created managed properties in SharePoint](http://technet.microsoft.com/en-us/library/jj613136.aspx), and  [Overview of the search schema in SharePoint](http://technet.microsoft.com/en-us/library/jj219669.aspx).
   
     
     
@@ -601,19 +601,19 @@ __WebPartId="{22e39e9d-1b25-42c7-bf2a-7ebca37616d4}">-->
 <a name="bk_addresources"> </a>
 
 
--  [Develop the site design in SharePoint 2013](develop-the-site-design-in-sharepoint.md)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
     
   
--  [Overview of Design Manager in SharePoint 2013](overview-of-design-manager-in-sharepoint.md)
+-  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md)
     
   
--  [Overview of the SharePoint 2013 page model](overview-of-the-sharepoint-page-model.md)
+-  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md)
     
   
--  [How to: Create a page layout in SharePoint 2013](how-to-create-a-page-layout-in-sharepoint.md)
+-  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md)
     
   
--  [SharePoint 2013 Design Manager display templates](sharepoint-design-manager-display-templates.md)
+-  [SharePoint Design Manager display templates](sharepoint-design-manager-display-templates.md)
     
   
 

@@ -7,20 +7,20 @@ ms.assetid: 91fca6c2-60ca-4177-8560-2b310dac0e2c
 
 
 # Using the pairing cmdlet Register-SPWorkflowService
-Learn how to use the cmdlet **Register-SPWorkflowService** to successfully pair SharePoint Server 2013 with Workflow Manager.
-Installing and configuring Microsoft SharePoint Server 2013 to support workflow development requires "pairing" your installations of SharePoint Server 2013 and Workflow Manager. In most scenarios, this pairing is easily done by using the cmdlet **Register-SPWorkflowService**, which is included with your SharePoint installation.
+Learn how to use the cmdlet **Register-SPWorkflowService** to successfully pair SharePoint with Workflow Manager.
+Installing and configuring Microsoft SharePoint to support workflow development requires "pairing" your installations of SharePoint and Workflow Manager. In most scenarios, this pairing is easily done by using the cmdlet **Register-SPWorkflowService**, which is included with your SharePoint installation.
   
     
     
 
 Importantly, this cmdlet is not useful for every pairing scenario. **Register-SPWorkflowService** is useful only in the following pairing scenarios:
-- One-computer server farm where SharePoint Server 2013 and Workflow Manager are co-located on the server box.
+- One-computer server farm where SharePoint and Workflow Manager are co-located on the server box.
     
   
-- Three-computer server farm where SharePoint Server 2013 and Workflow Manager are co-located on all three computers. (Add a fourth computer is search needs to be on a separate computer and Workflow Manager HA is required. If the latter is required, it must be installed on all three machines.
+- Three-computer server farm where SharePoint and Workflow Manager are co-located on all three computers. (Add a fourth computer is search needs to be on a separate computer and Workflow Manager HA is required. If the latter is required, it must be installed on all three machines.
     
   
-- Three-computer SharePoint Server 2013 farm paired with a non-co-located Workflow Manager server farm.
+- Three-computer SharePoint farm paired with a non-co-located Workflow Manager server farm.
     
   
 Also note that **Register-SPWorkflowService** uses the credentials of the current user.
@@ -66,10 +66,10 @@ PS> Register-SPWorkflowService -SPSite "https://myserver/mysitecollection" -Work
 <a name="bk_addresources"> </a>
 
 
--  [Install and configure workflow for SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj658588.aspx)
+-  [Install and configure workflow for SharePoint](http://technet.microsoft.com/en-us/library/jj658588.aspx)
     
   
--  [Video series: Install and configure Workflow in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/dn201724.aspx)
+-  [Video series: Install and configure Workflow in SharePoint](http://technet.microsoft.com/en-us/library/dn201724.aspx)
     
   
 -  [Workflow Manager 1.0](http://msdn.microsoft.com/en-us/library/jj193528%28Azure.10%29)

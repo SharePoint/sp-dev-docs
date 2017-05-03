@@ -1,12 +1,12 @@
 ---
-title: How to Create Custom SharePoint Server 2013 Workflow Forms with Visual Studio 2012
+title: How to Create Custom SharePoint Workflow Forms with Visual Studio 2012
 ms.prod: SHAREPOINT
 ms.assetid: 26873259-330c-493f-b935-297a7a5a086d
 ---
 
 
-# How to: Create Custom SharePoint Server 2013 Workflow Forms with Visual Studio 2012
-Presents workflow forms in SharePoint Server 2013. This article uses SharePoint Server 2013 with the March 2013 Public Update applied and Office Developer tools for Visual Studio 2012. Everything in this article applies to both SharePoint Server 2013 on-premises deployments as well as Office 365.
+# How to: Create Custom SharePoint Workflow Forms with Visual Studio 2012
+Presents workflow forms in SharePoint. This article uses SharePoint with the March 2013 Public Update applied and Office Developer tools for Visual Studio 2012. Everything in this article applies to both SharePoint on-premises deployments as well as Office 365.
  **Provided by:** [Andrew Connell](http://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [www.AndrewConnell.com](http://www.andrewconnell.com)
   
     
@@ -23,35 +23,35 @@ Since the release of Microsoft SharePoint 2007, the SharePoint platform has supp
 ## Workflow forms in SharePoint 2007 and SharePoint 2010
 <a name="sec1"> </a>
 
-The implementation of workflows in SharePoint 2007 and SharePoint 2010 provided steady improvements from version to version. In particular, Microsoft added new functionality in SharePoint 2010, such as the ability to associate workflows with sites. It also improved the workflow authoring tools, SharePoint Designer 2010 and Visual Studio 2010, over their predecessors. However, in SharePoint 2013, the implementation of workflow tasks and workflow forms remained largely unchanged.
+The implementation of workflows in SharePoint 2007 and SharePoint 2010 provided steady improvements from version to version. In particular, Microsoft added new functionality in SharePoint 2010, such as the ability to associate workflows with sites. It also improved the workflow authoring tools, SharePoint Designer 2010 and Visual Studio 2010, over their predecessors. However, in SharePoint, the implementation of workflow tasks and workflow forms remained largely unchanged.
   
     
     
-Prior to SharePoint Server 2013, developers were presented with two options for creating workflow forms. In SharePoint 2007, InfoPath forms and ASP.NET Web Forms were both recommended equally. Each had advantages and disadvantages. In SharePoint 2010, developers were encouraged to use ASP.NET Web Forms as that is what the SharePoint developer tools in Visual Studio 2010 created using the association and initiation workflow form project item templates, but the implementation was very similar to that in SharePoint 2007.
+Prior to SharePoint, developers were presented with two options for creating workflow forms. In SharePoint 2007, InfoPath forms and ASP.NET Web Forms were both recommended equally. Each had advantages and disadvantages. In SharePoint 2010, developers were encouraged to use ASP.NET Web Forms as that is what the SharePoint developer tools in Visual Studio 2010 created using the association and initiation workflow form project item templates, but the implementation was very similar to that in SharePoint 2007.
   
     
     
 
-## Changes to workflow forms in SharePoint 2013
+## Changes to workflow forms in SharePoint
 <a name="sec2"> </a>
 
-SharePoint Server 2013 introduced a new workflow architecture and platform that reflects some fundamental shifts in the thinking about SharePoint. The primary change is that workflows in SharePoint Server 2013 are no longer managed and executed by the SharePoint runtime engine. Instead, SharePoint Server 2013 utilizes a new component called Workflow Manager, which hosts the Windows Workflow Foundation runtime and necessary services required by Workflow Foundation. The important point is that Workflow Manager runs outside of SharePoint. When a workflow is published, or a new instance of a published workflow is started, SharePoint notifies Workflow Manager, which in turn processes the workflow episodes. When the workflow needs to access information in SharePoint, such as list item properties or user properties, it authenticates the user with the OAuth authorization model and communicates over the REST APIs that were introduced in the SharePoint Server 2013 release.
+SharePoint introduced a new workflow architecture and platform that reflects some fundamental shifts in the thinking about SharePoint. The primary change is that workflows in SharePoint are no longer managed and executed by the SharePoint runtime engine. Instead, SharePoint utilizes a new component called Workflow Manager, which hosts the Windows Workflow Foundation runtime and necessary services required by Workflow Foundation. The important point is that Workflow Manager runs outside of SharePoint. When a workflow is published, or a new instance of a published workflow is started, SharePoint notifies Workflow Manager, which in turn processes the workflow episodes. When the workflow needs to access information in SharePoint, such as list item properties or user properties, it authenticates the user with the OAuth authorization model and communicates over the REST APIs that were introduced in the SharePoint release.
   
     
     
-The overall direction for doing customizations on the SharePoint platform also changed in the SharePoint Server 2013 release, although this change actually started with SharePoint 2010 and sandboxed solutions. In SharePoint Server 2013, Microsoft introduced features that moved customizations away from SharePoint server and moved them to the client browser or to other external resources. These features include the new SharePoint App Model, support for assigning apps an identity, authentication using the OAuth authorization model, and improvements to the client-side object model (CSOM) and REST APIs.
+The overall direction for doing customizations on the SharePoint platform also changed in the SharePoint release, although this change actually started with SharePoint 2010 and sandboxed solutions. In SharePoint, Microsoft introduced features that moved customizations away from SharePoint server and moved them to the client browser or to other external resources. These features include the new SharePoint App Model, support for assigning apps an identity, authentication using the OAuth authorization model, and improvements to the client-side object model (CSOM) and REST APIs.
   
     
     
-How does this affect workflow forms? Recall that starting in SharePoint 2010 Microsoft began encouraging developers to use ASP.NET Web Forms when creating forms in workflows authored using Visual Studio. Of course, this approach requires server-side code to process the form and handled communication between the form and the workflow engine. However, in SharePoint Server 2013, this is only possible in the solution-style development (that is, deployment of *.WSP packages). The new SharePoint App Model introduced in SharePoint Server 2013 does not allow server-side code to run in the SharePoint process.
+How does this affect workflow forms? Recall that starting in SharePoint 2010 Microsoft began encouraging developers to use ASP.NET Web Forms when creating forms in workflows authored using Visual Studio. Of course, this approach requires server-side code to process the form and handled communication between the form and the workflow engine. However, in SharePoint, this is only possible in the solution-style development (that is, deployment of *.WSP packages). The new SharePoint App Model introduced in SharePoint does not allow server-side code to run in the SharePoint process.
   
     
     
-To alleviate this limitation, Microsoft extended CSOM to include an API for interacting with the workflow engine. To connect a SharePoint Server 2013 farm to the Workflow Manager farm, you must install the Workflow Manager Client on the SharePoint servers. This component serves as a proxy that SharePoint uses to communicate with the Workflow Manager farm. The Workflow Services CSOM API is effectively the client-side component that you use to interact with the new workflow engine. For more information about SharePoint Server 2013 Workflow Services CSOM, see  [Working with the SharePoint 2013 Workflow Services Client Side Object Model](working-with-the-sharepoint-workflow-services-client-side-object-model.md).
+To alleviate this limitation, Microsoft extended CSOM to include an API for interacting with the workflow engine. To connect a SharePoint farm to the Workflow Manager farm, you must install the Workflow Manager Client on the SharePoint servers. This component serves as a proxy that SharePoint uses to communicate with the Workflow Manager farm. The Workflow Services CSOM API is effectively the client-side component that you use to interact with the new workflow engine. For more information about SharePoint Workflow Services CSOM, see  [Working with the SharePoint Workflow Services Client Side Object Model](working-with-the-sharepoint-workflow-services-client-side-object-model.md).
   
     
     
-How, then, does this benefit SharePoint workflow forms? Well, when authoring SharePoint Server 2013 workflows using Visual Studio 2012, you create workflow forms using ASP.NET Web Forms. You can deploy these forms as a SharePoint solution or (and this is the important part) within . This gives you access to all the server controls that are already deployed to the server, such as the ASP.NET Web Controls and other useful (and required at times) SharePoint controls. You can also use the new Workflow Services CSOM to perform all necessary tasks from association and initiation forms including, but not limited to, the following:
+How, then, does this benefit SharePoint workflow forms? Well, when authoring SharePoint workflows using Visual Studio 2012, you create workflow forms using ASP.NET Web Forms. You can deploy these forms as a SharePoint solution or (and this is the important part) within . This gives you access to all the server controls that are already deployed to the server, such as the ASP.NET Web Controls and other useful (and required at times) SharePoint controls. You can also use the new Workflow Services CSOM to perform all necessary tasks from association and initiation forms including, but not limited to, the following:
   
     
     
@@ -73,11 +73,11 @@ The Workflow Services CSOM is very robust and gives you a lot of room for innova
 ## Workflow forms available in SharePoint Sever 2013
 <a name="sec3"> </a>
 
-Prior the release of SharePoint Server 2013, there were three types of custom workflow forms you could create: **Initiation**, **Association**, and **Task Edit** forms. Of these three types of forms, task edit forms have been de-emphasized as a custom forms solution. The de-emphasis of Task Edit forms started with SharePoint 2010 because the Visual Studio 2010 SharePoint development tools lacked a project item for task forms, relying instead on the standard list display and edit forms to render tasks.
+Prior the release of SharePoint, there were three types of custom workflow forms you could create: **Initiation**, **Association**, and **Task Edit** forms. Of these three types of forms, task edit forms have been de-emphasized as a custom forms solution. The de-emphasis of Task Edit forms started with SharePoint 2010 because the Visual Studio 2010 SharePoint development tools lacked a project item for task forms, relying instead on the standard list display and edit forms to render tasks.
   
     
     
-SharePoint Server 2013 improves how you work with workflow tasks in that you can create custom outcome buttons for specific scenarios. You can also customize the rendering and behavior of specific columns in task items using the new Client Side Rendering (CSR), which was introduced in SharePoint Server 2013. Note that CSR uses JavaScript executed in the client. These topics are covered in the article  [Working with Tasks in SharePoint 2013 Workflows using Visual Studio 2012](working-with-tasks-in-sharepoint-workflows-using-visual-studio-2012.md). You can also get more information in the article  [Customize a list view in SharePoint Add-ins using client-side rendering](http://msdn.microsoft.com/library/8d5cabb2-70d0-46a0-bfe0-9e21f8d67d86%28Office.15%29.aspx).
+SharePoint improves how you work with workflow tasks in that you can create custom outcome buttons for specific scenarios. You can also customize the rendering and behavior of specific columns in task items using the new Client Side Rendering (CSR), which was introduced in SharePoint. Note that CSR uses JavaScript executed in the client. These topics are covered in the article  [Working with Tasks in SharePoint Workflows using Visual Studio 2012](working-with-tasks-in-sharepoint-workflows-using-visual-studio-2012.md). You can also get more information in the article  [Customize a list view in SharePoint Add-ins using client-side rendering](http://msdn.microsoft.com/library/8d5cabb2-70d0-46a0-bfe0-9e21f8d67d86%28Office.15%29.aspx).
   
     
     
@@ -119,7 +119,7 @@ Then, in the initiation form, these default values would be present when startin
 ## Walkthrough: Create and deploy a custom association form
 <a name="sec4"> </a>
 
-In this walkthrough we demonstrate how to create a custom association form and use it to collect information that is then passed to the workflow. Before you begin, ensure that you have access to a SharePoint Server 2013 developer site.
+In this walkthrough we demonstrate how to create a custom association form and use it to collect information that is then passed to the workflow. Before you begin, ensure that you have access to a SharePoint developer site.
   
     
     
@@ -130,7 +130,7 @@ In this walkthrough we demonstrate how to create a custom association form and u
 1. Create a custom workflow using Visual Studio 2012. 
     
   
-2. In Visual Studio, create a new SharePoint Server 2013 app project and configure it as a SharePoint-hosted app.
+2. In Visual Studio, create a new SharePoint app project and configure it as a SharePoint-hosted app.
     
   
 3. Add a new **Announcement** list to the project. This list will be associated with the workflow and events on this list will trigger the workflow.
@@ -222,7 +222,7 @@ Once the new form is added to the project, Visual Studio automatically opens it.
 
 ### Update the Workflow Services JSOM to create the workflow association
 
-Immediately following the HTML form section in the source file there is a  _ecmascriptshort_ block of code that is about 200 lines long. This code block illustrates the new Workflow Services JavaScript Client Side Object Model (JSOM) API implementation in SharePoint Server 2013. For the most part, this JavaScript code should be left unchanged because it does some important things:
+Immediately following the HTML form section in the source file there is a  _ecmascriptshort_ block of code that is about 200 lines long. This code block illustrates the new Workflow Services JavaScript Client Side Object Model (JSOM) API implementation in SharePoint. For the most part, this JavaScript code should be left unchanged because it does some important things:
   
     
     
@@ -308,7 +308,7 @@ With the form complete, the next step is to configure the workflow to use the va
 ### Test the custom association form
 
 
-1. To test the workflow, press **F5**, or click the **Start** button in Visual Studio. This walkthrough presumes an on-premises, local installation of SharePoint Server 2013, so Visual Studio launches the Workflow Manager Test Service Host utility and deploys the workflow to the developer site.
+1. To test the workflow, press **F5**, or click the **Start** button in Visual Studio. This walkthrough presumes an on-premises, local installation of SharePoint, so Visual Studio launches the Workflow Manager Test Service Host utility and deploys the workflow to the developer site.
     
   
 2. Create the association by navigating to the **Announcements** list, then on the ribbon select the **List** tab and click the **Workflow Settings**, **Workflow Settings** button, then click the **Add a workflow** link. At this point you are presented with the SharePoint association form.
@@ -359,7 +359,7 @@ This walkthrough demonstrates creating a custom association form and using it to
 ### Create a new workflow project
 
 
-1. Start by creating a custom workflow using Visual Studio 2012, ensuring you have access to a SharePoint Server 2013 developer site.
+1. Start by creating a custom workflow using Visual Studio 2012, ensuring you have access to a SharePoint developer site.
     
   
 2. Create a new SharePoint project that is configured as a SharePoint-hosted app.
@@ -462,7 +462,7 @@ When you added the new initiation form to the project, Visual Studio 2012 automa
   
 
 > **Note:**
-> In the source file, note that first ASP.NET content placeholder, **PlaceHolderAdditionalPageHead**, contains references to the Workflow Services CSOM library ( **sp.workflowservices.js** ) and the core SharePoint Server 2013 CSOM libraries ( **sp.js** and **sp.runtime.js** ). Immediately following this section of code, there is a server-side comment that contains a commented note. Be mindful that this note, shown in Figure 10, is irrelevant and should be ignored.
+> In the source file, note that first ASP.NET content placeholder, **PlaceHolderAdditionalPageHead**, contains references to the Workflow Services CSOM library ( **sp.workflowservices.js** ) and the core SharePoint CSOM libraries ( **sp.js** and **sp.runtime.js** ). Immediately following this section of code, there is a server-side comment that contains a commented note. Be mindful that this note, shown in Figure 10, is irrelevant and should be ignored.
   
     
     
@@ -516,7 +516,7 @@ When you added the new initiation form to the project, Visual Studio 2012 automa
 
 ```
 
-The table now contains two input controls. The first is a standard HTML text box whose ID is **strInput**. The second is a SharePoint people picker control whose ID is **peoplePicker**. This latter is a server-side control; however, it is allowed on the page because it has been deployed to every SharePoint Server 2013 computer. Further, the control is referenced at the top of the initiation form.
+The table now contains two input controls. The first is a standard HTML text box whose ID is **strInput**. The second is a SharePoint people picker control whose ID is **peoplePicker**. This latter is a server-side control; however, it is allowed on the page because it has been deployed to every SharePoint computer. Further, the control is referenced at the top of the initiation form.
   
     
     
@@ -530,7 +530,7 @@ Now notice the two buttons on the form, **Start** ("startWorkflowButton") and **
 
 1. Locate the JavaScript code block that immediately follows the HTML table that we just modified. We'll leave the code in the script block largely unchanged.
     
-    This code demonstrates enormous power and flexibility available in the Workflow Services JavaScript Client Side Object Model (JSOM) API that has been implemented in SharePoint Server 2013. From a high level, the code performs the following steps.
+    This code demonstrates enormous power and flexibility available in the Workflow Services JavaScript Client Side Object Model (JSOM) API that has been implemented in SharePoint. From a high level, the code performs the following steps.
     
   
 2. Locate the following line of code:  `var wfParams = new Object();`
@@ -595,7 +595,7 @@ The code that we've modified in the preceding procedure does a large amount of w
 
 ### Test the custom initiation form
 
-Test the workflow by pressing F5 or by clicking the **Start** button in Visual Studio 2012. If you are testing in an on-premises local installation of SharePoint Server 2013, Visual Studio 2012 will start the Workflow Manager Test Service Host utility and deploy the workflow to the developer site. After a moment, the developer site will open.
+Test the workflow by pressing F5 or by clicking the **Start** button in Visual Studio 2012. If you are testing in an on-premises local installation of SharePoint, Visual Studio 2012 will start the Workflow Manager Test Service Host utility and deploy the workflow to the developer site. After a moment, the developer site will open.
   
     
     
@@ -651,7 +651,7 @@ After starting the workflow, the page redirects the user back to the originating
 ## Conclusion
 <a name="sec6"> </a>
 
-SharePoint 2013 introduced several improvements to workflows. This article detailed the changes related to workflow forms that were driven from changes to the workflow architecture in SharePoint Server 2013. This article also demonstrated how to create both custom association forms and initiation forms that can be used to meet the demanding requirements in automating today's business process using Visual Studio 2012.
+SharePoint introduced several improvements to workflows. This article detailed the changes related to workflow forms that were driven from changes to the workflow architecture in SharePoint. This article also demonstrated how to create both custom association forms and initiation forms that can be used to meet the demanding requirements in automating today's business process using Visual Studio 2012.
   
     
     
@@ -663,7 +663,7 @@ SharePoint 2013 introduced several improvements to workflows. This article detai
 -  [Workflow Association and Initiation Forms (SharePoint Foundation)](http://msdn.microsoft.com/en-us/library/office/ms481192%28v=office.14%29.aspx)
     
   
--  [Working with the SharePoint 2013 Workflow Services Client Side Object Model](working-with-the-sharepoint-workflow-services-client-side-object-model.md)
+-  [Working with the SharePoint Workflow Services Client Side Object Model](working-with-the-sharepoint-workflow-services-client-side-object-model.md)
     
   
 -  [Customize a list view in SharePoint Add-ins using client-side rendering](http://msdn.microsoft.com/library/8d5cabb2-70d0-46a0-bfe0-9e21f8d67d86%28Office.15%29.aspx)

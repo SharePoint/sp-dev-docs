@@ -12,7 +12,7 @@ External event receivers are classes that enable SharePoint Add-ins to respond t
     
     
 
-This article accompanies the code sample  [SharePoint 2013: Create a remote event receiver for external data](http://code.msdn.microsoft.com/SharePoint-Create-a-095c594c). It shows how to create all the components needed to configure and use external system event notifications.
+This article accompanies the code sample  [SharePoint: Create a remote event receiver for external data](http://code.msdn.microsoft.com/SharePoint-Create-a-095c594c). It shows how to create all the components needed to configure and use external system event notifications.
 In this example, you will do the following:
   
     
@@ -25,7 +25,7 @@ In this example, you will do the following:
 2. Expose the sample data through OData by creating a Windows Communication Foundation (WCF) service.
     
   
-3. Create a polling service that will monitor for changes in the data and notify SharePoint 2013 of those changes.
+3. Create a polling service that will monitor for changes in the data and notify SharePoint of those changes.
     
   
 4. Create an external event receiver that executes when items are added to the external data and, as a result, creates a new list item on a notifications list.
@@ -49,7 +49,7 @@ To complete this example, you will need the following prerequisites:
 - SQL Server
     
   
-- SharePoint 2013
+- SharePoint
     
   
 - Internet Information Services 7.0
@@ -98,7 +98,7 @@ However, if you don't have Northwind installed, see  [Installing the Northwind S
   
     
     
-The database is also included with the code sample:  [SharePoint 2013: Create a remote event receiver for external data](http://code.msdn.microsoft.com/SharePoint-Create-a-095c594c).
+The database is also included with the code sample:  [SharePoint: Create a remote event receiver for external data](http://code.msdn.microsoft.com/SharePoint-Create-a-095c594c).
   
     
     
@@ -496,7 +496,7 @@ public string Subscribe(string deliveryUrl, string eventType)
 ## Create the polling service
 <a name="bkmk_CreateThePollingService"> </a>
 
-The polling service is a Windows service that is responsible for querying the change table and creating and sending notifications to SharePoint 2013 or SharePoint Online at the specific delivery address.
+The polling service is a Windows service that is responsible for querying the change table and creating and sending notifications to SharePoint or SharePoint Online at the specific delivery address.
   
     
     
@@ -651,7 +651,7 @@ The next step is to build an executable file that can be added to the running se
 ## Required SharePoint components
 <a name="bkmk_SharePointComponents"> </a>
 
-To complete the whole system, the following components are required on the server that is running SharePoint 2013.
+To complete the whole system, the following components are required on the server that is running SharePoint.
   
     
     
@@ -659,7 +659,7 @@ To complete the whole system, the following components are required on the serve
 - **External content type:** The external content type is basically an XML definition of the external data source. For this scenario, you will use the new autogeneration tools in Visual Studio 2012 to discover the data source and create the external content type automatically.
     
   
-- **External event receiver:** The remote or external event receiver is the thing that makes actions on external data changes possible in SharePoint 2013. You can create event receivers for external lists and for entities.
+- **External event receiver:** The remote or external event receiver is the thing that makes actions on external data changes possible in SharePoint. You can create event receivers for external lists and for entities.
     
     An event receiver that is created for an external list is similar to other event receivers for SharePoint lists. You create the code and attach it to the list. When an action is performed on the data that is represented by the list, the event receiver executes.
     
@@ -699,7 +699,7 @@ Office Developer Tools for Visual Studio 2013 added an autogeneration wizard tha
     
     This starts the **SharePoint Customization Wizard**, which is used to build the external content type automatically.
     
-    For more information about how to create external content types, see  [How to: Create an external content type from an OData source in SharePoint 2013](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md).
+    For more information about how to create external content types, see  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md).
     
   
 You will now modify the XML that was generated in the previous step to add a method for Subscribe. This will allow BCS to communicate with the external system when someone subscribes to be notified about external data changes.
@@ -959,22 +959,22 @@ Now you can see the app in action.
 <a name="bkmk_additionalresources"> </a>
 
 
--  [External events and alerts in SharePoint 2013](external-events-and-alerts-in-sharepoint.md)
+-  [External events and alerts in SharePoint](external-events-and-alerts-in-sharepoint.md)
     
   
--  [How to: Create an add-in-scoped external content type in SharePoint 2013](how-to-create-an-add-in-scoped-external-content-type-in-sharepoint.md)
+-  [How to: Create an add-in-scoped external content type in SharePoint](how-to-create-an-add-in-scoped-external-content-type-in-sharepoint.md)
     
   
--  [Get started using the client object model with external data in SharePoint 2013](get-started-using-the-client-object-model-with-external-data-in-sharepoint.md)
+-  [Get started using the client object model with external data in SharePoint](get-started-using-the-client-object-model-with-external-data-in-sharepoint.md)
     
   
--  [Business Connectivity Services in SharePoint 2013](business-connectivity-services-in-sharepoint.md)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
     
   
--  [What's new in Business Connectivity Services in SharePoint 2013](what-s-new-in-business-connectivity-services-in-sharepoint.md)
+-  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint.md)
     
   
--  [Get started with Business Connectivity Services in SharePoint 2013](get-started-with-business-connectivity-services-in-sharepoint.md)
+-  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint.md)
     
   
 

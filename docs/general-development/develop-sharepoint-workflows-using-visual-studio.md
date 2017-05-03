@@ -1,24 +1,24 @@
 ---
-title: Develop SharePoint 2013 workflows using Visual Studio
+title: Develop SharePoint workflows using Visual Studio
 ms.prod: SHAREPOINT
 ms.assetid: 28f5d3b1-6fe8-4b1f-8c4e-b11105fe6f46
 ---
 
 
 
-# Develop SharePoint 2013 workflows using Visual Studio
-SharePoint 2013 supports two primary workflow development environments for authoring workflows: SharePoint Designer and Visual Studio. This article summarizes both and discusses the advantages and disadvantages of each.
+# Develop SharePoint workflows using Visual Studio
+SharePoint supports two primary workflow development environments for authoring workflows: SharePoint Designer and Visual Studio. This article summarizes both and discusses the advantages and disadvantages of each.
 ## Authoring basics for SharePoint workflows
 <a name="bkm_AuthoringBasics"> </a>
 
 
 > **Note:**
-> For guidance on setting up and configuring Microsoft SharePoint Server 2013 and the Workflow Manager Client 1.0 server, see  [Set up and configure SharePoint 2013 Workflow Manager](set-up-and-configure-sharepoint-workflow-manager.md). 
+> For guidance on setting up and configuring Microsoft SharePoint and the Workflow Manager Client 1.0 server, see  [Set up and configure SharePoint Workflow Manager](set-up-and-configure-sharepoint-workflow-manager.md). 
   
     
     
 
-As with previous versions, Microsoft SharePoint 2013 provides two primary workflow development environments for authoring workflows: Microsoft SharePoint Designer and Microsoft Visual Studio. However, what differs from previous versions is that using Visual Studio no longer provides a code-based authoring strategy. Instead, both SharePoint Designer and Visual Studio provide a fully declarative, no-code authoring environment regardless of the development tool you select.
+As with previous versions, Microsoft SharePoint provides two primary workflow development environments for authoring workflows: Microsoft SharePoint Designer and Microsoft Visual Studio. However, what differs from previous versions is that using Visual Studio no longer provides a code-based authoring strategy. Instead, both SharePoint Designer and Visual Studio provide a fully declarative, no-code authoring environment regardless of the development tool you select.
   
     
     
@@ -44,7 +44,7 @@ The XAML is derived (or inferred) from the workflow building blocks that you man
 ## Decision tree: SharePoint Designer vs. Visual Studio
 <a name="bkm_DecisionTree"> </a>
 
-Among the greatest advantages of the workflow framework in SharePoint 2013 is the ease with which information workers can use the no-code environment of SharePoint Designer to create rich and powerful workflows. Additionally, a high degree of flexibility and customization is available in a declarative authoring environment such as Visual Studio.
+Among the greatest advantages of the workflow framework in SharePoint is the ease with which information workers can use the no-code environment of SharePoint Designer to create rich and powerful workflows. Additionally, a high degree of flexibility and customization is available in a declarative authoring environment such as Visual Studio.
   
     
     
@@ -102,7 +102,7 @@ The following table provides a side-by-side comparison of the features and requi
 |Enables reuse of workflows  <br/> |A workflow can be used only by the list or library on which it was developed. However, SharePoint Designer provides reusable workflows that can be used multiple times within the same site.  <br/> |A workflow can be written as a template so that after it is deployed, it can be reused and associated with any list or library.  <br/> |
 |Allows you to include a workflow as part of a SharePoint solution or SharePoint Add-in  <br/> |No  <br/> |Yes  <br/> |
 |Allows you to create custom actions  <br/> |No. However, SharePoint Designer can consume and implement custom actions that are created and deployed by using Visual Studio.  <br/> |Yes. However, be aware that in Visual Studio, the underlying activities, not their corresponding actions, are used.  <br/> |
-|Allows you to write custom code  <br/> |No  <br/> |No  <br/> **Note:** This is changed from previous versions. In SharePoint 2013, workflows are declarative only and Visual Studio relies on the visual design surface for workflow development.           |
+|Allows you to write custom code  <br/> |No  <br/> |No  <br/> **Note:** This is changed from previous versions. In SharePoint, workflows are declarative only and Visual Studio relies on the visual design surface for workflow development.           |
 |Can use Visio Professional to create workflow logic  <br/> |Yes  <br/> |No  <br/> |
 |Deployment  <br/> |Deployed automatically to list, library, or site on which they were created.  <br/> |Create a SharePoint solution package (.wsp) file and deploy the solution package to the site (SPWeb).  <br/> |
 |One-click publishing available for workflows  <br/> |Yes  <br/> |Yes  <br/> |
@@ -114,11 +114,11 @@ The following table provides a side-by-side comparison of the features and requi
 ## Developing workflows using Visual Studio
 <a name="bkm_Developing"> </a>
 
-Unlike earlier versions, workflows in SharePoint 2013 are entirely declarative. Built now on Windows Workflow Foundation 4, Visual Studio provides a visual workflow designer surface that lets you create custom workflows, workflow templates, forms, and custom workflow activities entirely in the designer environment. Your workflow is then packaged and deployed as a SharePoint Feature. For information about Feature packaging, see  [Using Features in SharePoint Foundation](http://msdn.microsoft.com/en-us/library/ms461324.aspx).
+Unlike earlier versions, workflows in SharePoint are entirely declarative. Built now on Windows Workflow Foundation 4, Visual Studio provides a visual workflow designer surface that lets you create custom workflows, workflow templates, forms, and custom workflow activities entirely in the designer environment. Your workflow is then packaged and deployed as a SharePoint Feature. For information about Feature packaging, see  [Using Features in SharePoint Foundation](http://msdn.microsoft.com/en-us/library/ms461324.aspx).
   
     
     
-Perhaps the most significant change for Visual Studio developers is that custom workflows are no longer compiled and deployed as .NET Framework assemblies. Furthermore, SharePoint 2013 no longer uses Microsoft InfoPath forms; instead, forms generation relies on Microsoft ASP.NET forms. 
+Perhaps the most significant change for Visual Studio developers is that custom workflows are no longer compiled and deployed as .NET Framework assemblies. Furthermore, SharePoint no longer uses Microsoft InfoPath forms; instead, forms generation relies on Microsoft ASP.NET forms. 
   
     
     

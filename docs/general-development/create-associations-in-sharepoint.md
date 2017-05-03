@@ -1,11 +1,11 @@
 ---
-title: Create associations in SharePoint 2013
+title: Create associations in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 202599e3-232e-4b3a-9da5-c11f6e972283
 ---
 
 
-# Create associations in SharePoint 2013
+# Create associations in SharePoint
 
 An association is a way to create a relationship between external data entities. You create an association between two external content types so that you can join the data together over foreign keys. For example, while viewing a customer profile, you might want to see the latest orders placed by that customer and the items in each order.
   
@@ -15,7 +15,7 @@ An association is a way to create a relationship between external data entities.
 
 ## Basic tasks for working with associations
 
-The following articles were written for SharePoint Server 2010 and SharePoint Designer 2010. The content is still appropriate for SharePoint Server 2013 and SharePoint Designer 2013, although there might be some variations in the user interface.
+The following articles were written for SharePoint Server 2010 and SharePoint Designer 2010. The content is still appropriate for SharePoint and SharePoint Designer 2013, although there might be some variations in the user interface.
   
     
     
@@ -32,10 +32,10 @@ The following articles were written for SharePoint Server 2010 and SharePoint De
 ## Additional resources
 
 
--  [External content types in SharePoint 2013](external-content-types-in-sharepoint.md)
+-  [External content types in SharePoint](external-content-types-in-sharepoint.md)
     
   
--  [Business Connectivity Services in SharePoint 2013](business-connectivity-services-in-sharepoint.md)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
     
   
 

@@ -6,18 +6,18 @@ ms.assetid: 0989bf64-ff2a-4ad4-b0da-43901040da98
 
 
 # SharePoint Composites Handbook
-Without using code, SharePoint Composites can help you create effective business solutions rapidly by assembling, connecting, and configuring the basic functionality available in SharePoint 2013 and Office 2013. Download the  [SharePoint Composites Handbook, Version 2.0](http://www.microsoft.com/en-us/download/details.aspx?id=36055) (approximately 90 pages) for in-depth guidance.
+Without using code, SharePoint Composites can help you create effective business solutions rapidly by assembling, connecting, and configuring the basic functionality available in SharePoint and Office 2013. Download the  [SharePoint Composites Handbook, Version 2.0](http://www.microsoft.com/en-us/download/details.aspx?id=36055) (approximately 90 pages) for in-depth guidance.
 ## What is a SharePoint Composite?
 
-A SharePoint Composite combines data, documents, and business process in a "do-it-yourself" business solution. A SharePoint Composite could be as simple as a custom Web Page that uses a site list and several connected Web Parts to track mileage in a small business. Or, a SharePoint Composite could be as sophisticated as a corporate-wide absence reporting system connected to a Human Resource database by using Business Connectivity Services. A SharePoint Composite bears close resemblance to a mashup, a quick Web application that incorporates data into a simple, visual, and interactive solution. However, the term "composite" emphasizes the breadth and depth of solutions you can build on the SharePoint 2013 platform.
+A SharePoint Composite combines data, documents, and business process in a "do-it-yourself" business solution. A SharePoint Composite could be as simple as a custom Web Page that uses a site list and several connected Web Parts to track mileage in a small business. Or, a SharePoint Composite could be as sophisticated as a corporate-wide absence reporting system connected to a Human Resource database by using Business Connectivity Services. A SharePoint Composite bears close resemblance to a mashup, a quick Web application that incorporates data into a simple, visual, and interactive solution. However, the term "composite" emphasizes the breadth and depth of solutions you can build on the SharePoint platform.
   
     
     
- **Leverage existing software investments** Just using out-of-the-box SharePoint 2013 saves you time, money, and resources. These are the tangible benefits for which you can readily see the cost savings to your business. But creating a SharePoint composite can make you and your workforce more productive. Those are the intangible benefits that affect your bottom line and success every day.
+ **Leverage existing software investments** Just using out-of-the-box SharePoint saves you time, money, and resources. These are the tangible benefits for which you can readily see the cost savings to your business. But creating a SharePoint composite can make you and your workforce more productive. Those are the intangible benefits that affect your bottom line and success every day.
   
     
     
- **Eliminate content and data silos** SharePoint 2013 is all about connection, collaboration, and helping to create a "shared brain" within your organization. The more you work in a cross-functional way, the more you use the resources you already have, the more you realize the benefits of synergy and unification.
+ **Eliminate content and data silos** SharePoint is all about connection, collaboration, and helping to create a "shared brain" within your organization. The more you work in a cross-functional way, the more you use the resources you already have, the more you realize the benefits of synergy and unification.
   
     
     
@@ -63,7 +63,7 @@ The SharePoint Composites Handbook provides:
     
     
 
-- A detailed overview of all pertinent SharePoint 2013 and Office 2013 features, products, and components.
+- A detailed overview of all pertinent SharePoint and Office 2013 features, products, and components.
     
   
 - Guidance on how to design a practical solution with no code.
@@ -93,4 +93,4 @@ The download provides the handbook in both.docx and .pdf file formats.
   
     
     
- [No code solutions using SharePoint 2013 Composites](http://msdn.microsoft.com/en-us/sharepoint/fp161345)
+ [No code solutions using SharePoint Composites](http://msdn.microsoft.com/en-us/sharepoint/fp161345)

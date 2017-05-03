@@ -1,5 +1,5 @@
 
-# Update host web components in SharePoint 2013
+# Update host web components in SharePoint
 Update add-in parts and custom actions in the host web of a SharePoint Add-in.
  
 
@@ -43,7 +43,7 @@ Go to  [Major steps in updating an add-in](update-sharepoint-add-ins.md#MajorApp
 
  
 
--  [Update add-in web components in SharePoint 2013](update-add-in-web-components-in-sharepoint-2013.md)
+-  [Update add-in web components in SharePoint](update-add-in-web-components-in-sharepoint-2013.md)
     
  
 -  [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins.md)
@@ -60,7 +60,7 @@ Go to  [Major steps in updating an add-in](update-sharepoint-add-ins.md#MajorApp
 -  [Update SharePoint Add-ins](update-sharepoint-add-ins.md)
     
  
--  [Host webs, add-in webs, and SharePoint components in SharePoint 2013](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md)
+-  [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md)
     
  
 

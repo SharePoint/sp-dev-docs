@@ -1,5 +1,5 @@
 
-# Update add-in web components in SharePoint 2013
+# Update add-in web components in SharePoint
 Update pages, lists, content types, and other add-in web components in a SharePoint Add-in.
  
 
@@ -323,7 +323,7 @@ When you update a SharePoint Add-in for the second (or third, and so on) time, y
 3. Populate the  **VersionRange** element as described in the procedure **To update the add-in web Feature the first time** earlier in this article to account for the changes that you have made in this updated version of the Feature. Whenever that procedure refers to the **ApplyElementManifests** section, treat this as referring to the **ApplyElementManifests** element that is a child of the **VersionRange** element that you just added; that is, the *lowest*  one in the Feature XML file.
     
  
-4. Go to the previous  **VersionRange** element—the one you added the last time you updated the add-in (from 1.0.0.0 to 2.0.0.0 in the continuing example)—and add an **EndVersion** attribute to it. You want the upgrade actions in this **VersionRange** to be applied to any versions of the add-in to which they haven't already been applied (version 1.0.0.0), but you don't want them to be reapplied to versions to which they were already applied (version 2.0.0.0). The **EndVersion** value is *exclusive*  , so you set it to the lowest version to which you do *not*  want the upgrade actions applied. In the continuing example, you set it to 2.0.0.0. Your file should now resemble the following.
+4. Go to the previous  **VersionRange** element???the one you added the last time you updated the add-in (from 1.0.0.0 to 2.0.0.0 in the continuing example)???and add an **EndVersion** attribute to it. You want the upgrade actions in this **VersionRange** to be applied to any versions of the add-in to which they haven't already been applied (version 1.0.0.0), but you don't want them to be reapplied to versions to which they were already applied (version 2.0.0.0). The **EndVersion** value is *exclusive*  , so you set it to the lowest version to which you do *not*  want the upgrade actions applied. In the continuing example, you set it to 2.0.0.0. Your file should now resemble the following.
     
 ```XML
   <Feature <!-- Some attributes omitted --> 
@@ -372,7 +372,7 @@ When you update a SharePoint Add-in for the second (or third, and so on) time, y
     
     Notice also that the  **BeginVersion** attribute is not used in any of the **VersionRange**s. This is because the default value for the  **BeginVersion** attribute is 0.0.0.0, and that is the value that you want because you want all upgrade actions applied to every instance of the add-in that is earlier than the version that is specified in the **EndVersion** attribute.
     
-     **Important**   The **VersionRange** element determines only which versions of the Feature the upgrades are applied to. It does not determine which versions of the add-in get a notification that an update is available—the notification is triggered only by the add-in version number. Within 24 hours of a new version of the add-in being available in the organization's add-in catalog or the Office Store, every installed instance of the add-in, regardless of version, has the notification that an update is available appear on its tile in the **Site Contents** page. The **VersionRange** does not affect the new version number of the newly upgraded Feature or the newly updated add-in. Those two numbers are always changed to the latest version number, regardless of what version range the Feature was in before the upgrade. This provides another good reason to avoid using a **BeginVersion** attribute. The **BeginVersion** attribute can be used to block some upgrade actions from ever occurring on some add-in instances. But it cannot block the Feature or add-in versions from being raised to the latest version. So the use of a **BeginVersion** attribute could create a situation in which two instances of your add-in could have the same add-in version number and the same add-in web Feature version number, but have different components in their add-in webs.
+     **Important**   The **VersionRange** element determines only which versions of the Feature the upgrades are applied to. It does not determine which versions of the add-in get a notification that an update is available???the notification is triggered only by the add-in version number. Within 24 hours of a new version of the add-in being available in the organization's add-in catalog or the Office Store, every installed instance of the add-in, regardless of version, has the notification that an update is available appear on its tile in the **Site Contents** page. The **VersionRange** does not affect the new version number of the newly upgraded Feature or the newly updated add-in. Those two numbers are always changed to the latest version number, regardless of what version range the Feature was in before the upgrade. This provides another good reason to avoid using a **BeginVersion** attribute. The **BeginVersion** attribute can be used to block some upgrade actions from ever occurring on some add-in instances. But it cannot block the Feature or add-in versions from being raised to the latest version. So the use of a **BeginVersion** attribute could create a situation in which two instances of your add-in could have the same add-in version number and the same add-in web Feature version number, but have different components in their add-in webs.
 
 ## Verify deployment of add-in web components
 <a name="VerifyDeployAppWebComp"> </a>
@@ -421,7 +421,7 @@ Return to  [Major steps in updating an add-in](update-sharepoint-add-ins.md#Majo
 
  
 
--  [Update host web components in SharePoint 2013](update-host-web-components-in-sharepoint-2013.md)
+-  [Update host web components in SharePoint](update-host-web-components-in-sharepoint-2013.md)
     
  
 -  [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins.md)

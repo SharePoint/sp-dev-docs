@@ -1,20 +1,20 @@
 ---
-title: What's new in SharePoint 2013 search for developers
+title: What's new in SharePoint search for developers
 ms.prod: SHAREPOINT
 ms.assetid: b8d69685-3612-421e-b011-50b4d580d461
 ---
 
 
-# What's new in SharePoint 2013 search for developers
-Learn about the new features available for developers in Search in SharePoint 2013.
+# What's new in SharePoint search for developers
+Learn about the new features available for developers in Search in SharePoint.
 ## Search client object model for access to Query object model functionality for online, on-premises, and mobile development
 <a name="SPSearchnew_clientOM"> </a>
 
-SharePoint 2013 Search includes a client object model (CSOM) that enables access to most of the Query object model functionality for online, on-premises, and mobile development. You can use the Search CSOM to create client applications that run on a machine that does not have SharePoint 2013 installed to return SharePoint 2013 search results.
+SharePoint Search includes a client object model (CSOM) that enables access to most of the Query object model functionality for online, on-premises, and mobile development. You can use the Search CSOM to create client applications that run on a machine that does not have SharePoint installed to return SharePoint search results.
   
     
     
-The Search CSOM includes a Microsoft .NET Framework managed client object model and JavaScript object model, and it is built on SharePoint 2013. First, client code accesses the SharePoint CSOM. Then, client code accesses the Search CSOM. 
+The Search CSOM includes a Microsoft .NET Framework managed client object model and JavaScript object model, and it is built on SharePoint. First, client code accesses the SharePoint CSOM. Then, client code accesses the Search CSOM. 
   
     
     
@@ -30,7 +30,7 @@ The Search CSOM returns the search results data from the server in JavaScript Ob
 ## SQL Syntax Support Removed
 <a name="SP15Searchnew_support"> </a>
 
-Custom search solutions in SharePoint Server 2013 do not support  [SQL syntax](http://msdn.microsoft.com/en-us/library/ee558869). Search in SharePoint 2013 supports FQL syntax and KQL syntax for custom search solutions. You cannot use SQL syntax in custom search solutions using any technologies, including the Query server object model, the client object model, and the Search REST service. Custom search solutions that use SQL syntax with the Query server object model and the Query web service that were created in earlier versions of SharePoint Server will not work when you upgrade them to SharePoint Server 2013. Queries submitted via these applications will return an error. For more information about using FQL syntax and KQL syntax, see  [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference.md) and [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference.md).
+Custom search solutions in SharePoint do not support  [SQL syntax](http://msdn.microsoft.com/en-us/library/ee558869). Search in SharePoint supports FQL syntax and KQL syntax for custom search solutions. You cannot use SQL syntax in custom search solutions using any technologies, including the Query server object model, the client object model, and the Search REST service. Custom search solutions that use SQL syntax with the Query server object model and the Query web service that were created in earlier versions of SharePoint Server will not work when you upgrade them to SharePoint. Queries submitted via these applications will return an error. For more information about using FQL syntax and KQL syntax, see  [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference.md) and [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference.md).
   
     
     
@@ -38,7 +38,7 @@ Custom search solutions in SharePoint Server 2013 do not support  [SQL syntax](h
 ## Search REST service for remote execution of queries from client applications
 <a name="SP15Searchnew_support"> </a>
 
-SharePoint Server 2013 includes a Representational State Transfer (REST) service that enables you to remotely execute queries against the SharePoint 2013 Search service from client applications by using any technology that supports REST web requests. The Search REST service exposes two endpoints, **query** and **suggest**, and will support both **GET** and **POST** operations. Results are returned in either XML or JSON format.
+SharePoint includes a Representational State Transfer (REST) service that enables you to remotely execute queries against the SharePoint Search service from client applications by using any technology that supports REST web requests. The Search REST service exposes two endpoints, **query** and **suggest**, and will support both **GET** and **POST** operations. Results are returned in either XML or JSON format.
   
     
     
@@ -58,7 +58,7 @@ Use the following access point to access the service metadata:
   
     
     
-For general information about the REST service in SharePoint 2013, see  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx).
+For general information about the REST service in SharePoint, see  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx).
   
     
     
@@ -66,7 +66,7 @@ For general information about the REST service in SharePoint 2013, see  [Use ODa
 ## SharePoint Search Query web service is deprecated
 <a name="SP15Searchnew_support"> </a>
 
-The Query web service (located in the path  `http://server/site/_vti_bin/search.asmx`) is deprecated in SharePoint 2013. If you write new applications, avoid using this deprecated feature and instead use the new Query CSOM or Query REST service. If you modify existing applications, we strongly encourage you to remove any dependency on this feature.
+The Query web service (located in the path  `http://server/site/_vti_bin/search.asmx`) is deprecated in SharePoint. If you write new applications, avoid using this deprecated feature and instead use the new Query CSOM or Query REST service. If you modify existing applications, we strongly encourage you to remove any dependency on this feature.
   
     
     
@@ -74,7 +74,7 @@ The Query web service (located in the path  `http://server/site/_vti_bin/search.
 ## SharePoint Search Query object model enhancements
 <a name="SP15Searchnew_support"> </a>
 
-Query properties provide information about a search query. In SharePoint 2013 Search, a property bag was added to the query and result classes to enable user-defined query properties. You can access existing query properties via the property on one of the query classes, as follows: 
+Query properties provide information about a search query. In SharePoint Search, a property bag was added to the query and result classes to enable user-defined query properties. You can access existing query properties via the property on one of the query classes, as follows: 
   
     
     
@@ -98,7 +98,7 @@ You can access user-defined properties only by using the property bag, as follow
   
     
     
-SharePoint 2013 Search includes query properties in the property bag, including new query properties such as:
+SharePoint Search includes query properties in the property bag, including new query properties such as:
   
     
     
@@ -120,14 +120,14 @@ You can specify any property in the property bag, including user-defined propert
 ## Keyword query language enhancements
 <a name="SP15Searchnew_support"> </a>
 
-SharePoint 2013 includes improvements to the Keyword query language, which are described in this section. 
+SharePoint includes improvements to the Keyword query language, which are described in this section. 
   
     
     
 
 ### Improved NEAR operator
 
-In SharePoint Server 2010, the **NEAR** operator implied a maximum token distance of **8** and preserved the ordering of the input tokens. In SharePoint 2013, the **NEAR** operator no longer preserves the ordering of tokens. In addition, the **NEAR** operator now receives an optional parameter that indicates maximum token distance. However, the default value is still **8**. If you must use the previous behavior, use **ONEAR** instead.
+In SharePoint Server 2010, the **NEAR** operator implied a maximum token distance of **8** and preserved the ordering of the input tokens. In SharePoint, the **NEAR** operator no longer preserves the ordering of tokens. In addition, the **NEAR** operator now receives an optional parameter that indicates maximum token distance. However, the default value is still **8**. If you must use the previous behavior, use **ONEAR** instead.
   
     
     
@@ -193,7 +193,7 @@ This query matches items where the two tokens "acquisition" and "debt" appear wi
 
 ### New XRANK operator
 
-In SharePoint Server 2010, the **XRANK** operator was available only with FAST Query language (FQL). SharePoint 2013 introduces a new and powerful **XRANK** operator.
+In SharePoint Server 2010, the **XRANK** operator was available only with FAST Query language (FQL). SharePoint introduces a new and powerful **XRANK** operator.
   
     
     
@@ -205,7 +205,7 @@ The **XRANK** operator provides dynamic control of ranking. This operator boosts
 ## Rich results framework for customizing search results UI
 <a name="SP15Searchnew_support"> </a>
 
-SharePoint 2013 Search includes a new results framework that makes it easy to customize the appearance (look and feel) of the search results user interface (UI). Now, instead of writing a custom XSLT to change how search results are displayed, you can customize the appearance of important types of results by using display templates and result types.
+SharePoint Search includes a new results framework that makes it easy to customize the appearance (look and feel) of the search results user interface (UI). Now, instead of writing a custom XSLT to change how search results are displayed, you can customize the appearance of important types of results by using display templates and result types.
   
     
     
@@ -241,11 +241,11 @@ Administrators can create and manage result types at the site level or service a
 ## Connector framework enhancements
 <a name="SP15Searchnew_support"> </a>
 
-SharePoint 2013 Search enables you to retrieve claims information for content stored in custom external data sources that are crawled by using the connector framework.
+SharePoint Search enables you to retrieve claims information for content stored in custom external data sources that are crawled by using the connector framework.
   
     
     
-The connector framework also provides improved exception capturing and logging to help you troubleshoot errors encountered when crawling content sources using custom connectors that are built on top of the connector framework. For information about the connector framework, see  [Search connector framework in SharePoint 2013](search-connector-framework-in-sharepoint.md).
+The connector framework also provides improved exception capturing and logging to help you troubleshoot errors encountered when crawling content sources using custom connectors that are built on top of the connector framework. For information about the connector framework, see  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint.md).
   
     
     
@@ -257,10 +257,10 @@ The connector framework also provides improved exception capturing and logging t
 -  [Searching new content with SharePoint Search](searching-new-content-with-sharepoint-search.md)
     
   
--  [Configure search in SharePoint 2013](configure-search-in-sharepoint.md)
+-  [Configure search in SharePoint](configure-search-in-sharepoint.md)
     
   
--  [Building search queries in SharePoint 2013](building-search-queries-in-sharepoint.md)
+-  [Building search queries in SharePoint](building-search-queries-in-sharepoint.md)
     
   
 -  [How to: Use a custom security trimmer for SharePoint Server search results](how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results.md)

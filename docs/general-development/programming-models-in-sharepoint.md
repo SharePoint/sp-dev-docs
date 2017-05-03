@@ -1,14 +1,14 @@
 ---
-title: Programming models in SharePoint 2013
+title: Programming models in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 061985ec-6129-4e91-991b-a72488ce1d34
 ---
 
 
 
-# Programming models in SharePoint 2013
+# Programming models in SharePoint
 
-You can develop applications for the SharePoint 2013 platform in many ways. These applications can be usefully categorized into the following groups based on the tools used to create them, the programming models used to develop them, the methods by which they are packaged and deployed, the methods by which they are marketed, and the devices on which they run.
+You can develop applications for the SharePoint platform in many ways. These applications can be usefully categorized into the following groups based on the tools used to create them, the programming models used to develop them, the methods by which they are packaged and deployed, the methods by which they are marketed, and the devices on which they run.
   
     
     
@@ -37,7 +37,7 @@ A SharePoint Add-in is similar to an add-in on a mobile device. It is a stand-al
   
     
     
-For an introduction to the model for SharePoint Add-ins, see  [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx). For more information, see  [SharePoint Add-ins compared with SharePoint solutions](sharepoint-add-ins-compared-with-sharepoint-solutions.md), and  [Choose the right API set in SharePoint 2013](choose-the-right-api-set-in-sharepoint.md).
+For an introduction to the model for SharePoint Add-ins, see  [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx). For more information, see  [SharePoint Add-ins compared with SharePoint solutions](sharepoint-add-ins-compared-with-sharepoint-solutions.md), and  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md).
   
     
     
@@ -53,7 +53,7 @@ SharePoint publishing sites provide large-scale content publishing with a high d
 ## SharePoint farm solutions
 <a name="Solutions"> </a>
 
-SharePoint farm solutions are trusted SharePoint extensions whose custom logic calls the SharePoint server object model and runs with full trust on the SharePoint servers. These solutions are primarily for custom administrative extensions of SharePoint, such as timer jobs, custom Windows PowerShell commands, and extensions of Central Administration. Farm solutions are distributed as SharePoint solution packages that farm administrators upload to a farm-wide storage location from which they can be deployed. Components in farm solutions can have farm, web application, site collection, or website scope. For more information, see  [Build farm solutions in SharePoint 2013](build-farm-solutions-in-sharepoint.md).
+SharePoint farm solutions are trusted SharePoint extensions whose custom logic calls the SharePoint server object model and runs with full trust on the SharePoint servers. These solutions are primarily for custom administrative extensions of SharePoint, such as timer jobs, custom Windows PowerShell commands, and extensions of Central Administration. Farm solutions are distributed as SharePoint solution packages that farm administrators upload to a farm-wide storage location from which they can be deployed. Components in farm solutions can have farm, web application, site collection, or website scope. For more information, see  [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint.md).
   
     
     
@@ -61,7 +61,7 @@ SharePoint farm solutions are trusted SharePoint extensions whose custom logic c
 ## Mobile add-ins for SharePoint
 <a name="Mobile"> </a>
 
-Windows Phone apps, and apps built on non-Microsoft mobile platforms, can access SharePoint websites and data. Tools for building Windows Phone apps that interact with SharePoint 2013 are available for installation on Visual Studio 2010 and Visual Studio 2012. A SharePoint client managed API just for use on Windows Phone devices is available. Mobile devices, including non-Microsoft devices, can also access SharePoint data through SharePoint REST/OData endpoints. For more information, see  [Build Windows Phone apps that access SharePoint 2013](build-windows-phone-apps-that-access-sharepoint.md).
+Windows Phone apps, and apps built on non-Microsoft mobile platforms, can access SharePoint websites and data. Tools for building Windows Phone apps that interact with SharePoint are available for installation on Visual Studio 2010 and Visual Studio 2012. A SharePoint client managed API just for use on Windows Phone devices is available. Mobile devices, including non-Microsoft devices, can also access SharePoint data through SharePoint REST/OData endpoints. For more information, see  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md).
   
     
     
@@ -69,7 +69,7 @@ Windows Phone apps, and apps built on non-Microsoft mobile platforms, can access
 ## Reusable components for SharePoint
 <a name="Reuse"> </a>
 
-The SharePoint 2013 platform and Visual Studio 2012 enable encapsulation and reuse of application elements, including elements created with code, script, and XML markup. For more information, see  [Build reusable components for SharePoint 2013](build-reusable-components-for-sharepoint.md).
+The SharePoint platform and Visual Studio 2012 enable encapsulation and reuse of application elements, including elements created with code, script, and XML markup. For more information, see  [Build reusable components for SharePoint](build-reusable-components-for-sharepoint.md).
   
     
     
@@ -81,13 +81,13 @@ The SharePoint 2013 platform and Visual Studio 2012 enable encapsulation and reu
 -  [Build sites for SharePoint](build-sites-for-sharepoint.md)
     
   
--  [Build farm solutions in SharePoint 2013](build-farm-solutions-in-sharepoint.md)
+-  [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint.md)
     
   
--  [Build Windows Phone apps that access SharePoint 2013](build-windows-phone-apps-that-access-sharepoint.md)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
--  [Build reusable components for SharePoint 2013](build-reusable-components-for-sharepoint.md)
+-  [Build reusable components for SharePoint](build-reusable-components-for-sharepoint.md)
     
   
 
@@ -95,12 +95,12 @@ The SharePoint 2013 platform and Visual Studio 2012 enable encapsulation and reu
 <a name="SP15devinSP_addlresources"> </a>
 
 
--  [Set up a general development environment for SharePoint 2013](set-up-a-general-development-environment-for-sharepoint.md)
+-  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md)
     
   
--  [Add SharePoint 2013 capabilities](add-sharepoint-capabilities.md)
+-  [Add SharePoint capabilities](add-sharepoint-capabilities.md)
     
   
--  [Accessibility in SharePoint 2013](accessibility-in-sharepoint.md)
+-  [Accessibility in SharePoint](accessibility-in-sharepoint.md)
     
   

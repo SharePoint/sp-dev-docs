@@ -1,12 +1,12 @@
 ---
-title: SharePoint 2013 VSS Writer
+title: SharePoint VSS Writer
 ms.prod: SHAREPOINT
 ms.assetid: f83577e4-ebb8-44e5-8dec-a3ca5878b7fd
 ---
 
 
-# SharePoint 2013 VSS Writer
- **Summary:** Learn about the characteristics and features of the Volume Shadow Copy Service (VSS) writer for Microsoft SharePoint 2013.
+# SharePoint VSS Writer
+ **Summary:** Learn about the characteristics and features of the Volume Shadow Copy Service (VSS) writer for Microsoft SharePoint.
 The VSS included with Windows Server is the infrastructure that provides built-in shadow copy capabilities. Shadow copies created by VSS augment the storage administrator's tape backup archival solutions, providing high fidelity point-in-time copies that can be created and restored easily and effectively, thereby helping to simplify several aspects of storage and data management. Microsoft SharePoint Foundation uses VSS to simplify backup and restore operations. 
   
     
@@ -47,7 +47,7 @@ Following are the SharePoint Foundation VSS solution features and characteristic
 - **Full rollback.** The SPF-VSS Writer handles all components within a SharePoint Foundation deployment, including the configuration database and the content databases and the Search database and index. As mentioned previously, the writer also has a dependency on the Search writer, which handles all the Search index files for backup and recovery. At the time of recovery, the writer can roll back the entire SharePoint Foundation deployment by restoring a previous farm backup. (The IIS configuration store is not included. It must be backed up and restored separately.)
     
     > **Note:**
-      > See "Restoring" in  [VSS requestors and SharePoint 2013](vss-requestors-and-sharepoint.md) for important information about restorations.
+      > See "Restoring" in  [VSS requestors and SharePoint](vss-requestors-and-sharepoint.md) for important information about restorations.
 - **Post-restore synchronization of databases.** To ensure that all databases are synchronized with the farm after a restore operation is complete, each of the databases are automatically detached and reattached to the farm post recovery. Administrators do not need to run additional procedures to resynchronize the restored databases.
     
   
@@ -112,12 +112,12 @@ The SPF-VSS Writer performs the following functions:
 ## Next steps
 <a name="Next"> </a>
 
-Learn how to create and use a VSS requestor for SharePoint 2013:
+Learn how to create and use a VSS requestor for SharePoint:
   
     
     
 
--  [VSS requestors and SharePoint 2013](vss-requestors-and-sharepoint.md)
+-  [VSS requestors and SharePoint](vss-requestors-and-sharepoint.md)
     
   
 
@@ -125,7 +125,7 @@ Learn how to create and use a VSS requestor for SharePoint 2013:
 <a name="bk_addresources"> </a>
 
 
--  [Overview of SharePoint 2013 and the Volume Shadow Copy Service](overview-of-sharepoint-and-the-volume-shadow-copy-service.md)
+-  [Overview of SharePoint and the Volume Shadow Copy Service](overview-of-sharepoint-and-the-volume-shadow-copy-service.md)
     
   
 

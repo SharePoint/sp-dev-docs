@@ -1,11 +1,11 @@
 ---
-title: How to Create filter editors for PerformancePoint Services in SharePoint 2013
+title: How to Create filter editors for PerformancePoint Services in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 51354c88-4330-40f0-bffa-1ce73f9ff298
 ---
 
 
-# How to: Create filter editors for PerformancePoint Services in SharePoint 2013
+# How to: Create filter editors for PerformancePoint Services in SharePoint
 Learn how to create the editor component of a custom filter extension for PerformancePoint Services.
 ## What are custom filter editors for PerformancePoint Services?
 <a name="bk_intro"> </a>
@@ -14,7 +14,7 @@ In PerformancePoint Services, custom filter editors enable users to set properti
   
     
     
-The following procedures and examples are based on the **SampleFilterEditor** class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The editor is a thin web application that enables users to modify the filter's name and description and to select the underlying data source. For the complete code for the class, see  [Code example: Create, retrieve, and update custom PerformancePoint Services filters in SharePoint Server 2013](#bk_example).
+The following procedures and examples are based on the **SampleFilterEditor** class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The editor is a thin web application that enables users to modify the filter's name and description and to select the underlying data source. For the complete code for the class, see  [Code example: Create, retrieve, and update custom PerformancePoint Services filters in SharePoint](#bk_example).
   
     
     
@@ -340,7 +340,7 @@ End If
     > **Note:**
       > Users can set a custom object's  [Name](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Name.aspx) , [Description](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Description.aspx) , and [Owner](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Owner.aspx) ( **Person Responsible**) properties and delete custom objects directly from Dashboard Designer and the PerformancePoint Services repository. 
 
-## Code example: Create, retrieve, and update custom PerformancePoint Services filters in SharePoint Server 2013
+## Code example: Create, retrieve, and update custom PerformancePoint Services filters in SharePoint
 <a name="bk_example"> </a>
 
 The following code example creates, retrieves, and updates custom filters. This code is from the editor's code-behind class, which provides the programming logic for controls that are defined in an ASPX page.
@@ -1174,10 +1174,10 @@ After you create a filter editor (including its user interface, if required) and
 <a name="bk_addResources"> </a>
 
 
--  [How to: Create filter data providers for PerformancePoint Services in SharePoint 2013](how-to-create-filter-data-providers-for-performancepoint-services-in-sharepoint.md)
+-  [How to: Create filter data providers for PerformancePoint Services in SharePoint](how-to-create-filter-data-providers-for-performancepoint-services-in-sharepoint.md)
     
   
--  [PerformancePoint Services in SharePoint 2013](performancepoint-services-in-sharepoint.md)
+-  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint.md)
     
   
 

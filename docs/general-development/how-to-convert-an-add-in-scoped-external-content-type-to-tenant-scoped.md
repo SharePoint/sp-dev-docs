@@ -23,7 +23,7 @@ The following steps show you how to create the OData-based external content type
 ### To create a BDC model file from an OData source
 
 
-1. In Visual Studio 2012, create an **Add-in for SharePoint 2013** project.
+1. In Visual Studio 2012, create an **Add-in for SharePoint** project.
     
   
 2. Specify the add-in settings, including add-in name, the site URL for debugging the add-in, and how you want to host the add-in ( **Autohosted**, **Provider-hosted**, or **SharePoint-hosted**). For more information, see  [Choose patterns for developing and hosting your SharePoint Add-in](http://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx).
@@ -88,7 +88,7 @@ The following steps show you how to create the OData-based external content type
 ### To import the model file using SharePoint Central Administration pages
 
 
-1. Open SharePoint Online or SharePoint 2013 on-premises Central Administration pages.
+1. Open SharePoint Online or SharePoint on-premises Central Administration pages.
     
   
 2. Choose **Manage serve applications**.
@@ -111,16 +111,16 @@ The following steps show you how to create the OData-based external content type
 <a name="bk_addresources"> </a>
 
 
--  [External content types in SharePoint 2013](external-content-types-in-sharepoint.md)
+-  [External content types in SharePoint](external-content-types-in-sharepoint.md)
     
   
--  [How to: Create an add-in-scoped external content type in SharePoint 2013](how-to-create-an-add-in-scoped-external-content-type-in-sharepoint.md)
+-  [How to: Create an add-in-scoped external content type in SharePoint](how-to-create-an-add-in-scoped-external-content-type-in-sharepoint.md)
     
   
--  [How to: Create an external content type from an OData source in SharePoint 2013](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md)
+-  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md)
     
   
--  [Get started with Business Connectivity Services in SharePoint 2013](get-started-with-business-connectivity-services-in-sharepoint.md)
+-  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint.md)
     
   
 -  [Open Data Protocol](http://www.odata.org)

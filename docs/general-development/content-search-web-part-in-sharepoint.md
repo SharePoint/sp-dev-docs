@@ -1,11 +1,11 @@
 ---
-title: Content Search Web Part in SharePoint 2013
+title: Content Search Web Part in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 6fb4bf41-0846-4dca-ad9e-906afdfd3d2b
 ---
 
 
-# Content Search Web Part in SharePoint 2013
+# Content Search Web Part in SharePoint
 
   
     
@@ -22,11 +22,11 @@ ms.assetid: 6fb4bf41-0846-4dca-ad9e-906afdfd3d2b
   
     
     
-Learn about the Content Search Web Part (CSWP) in SharePoint 2013.
+Learn about the Content Search Web Part (CSWP) in SharePoint.
 ## Introducing the Content Search Web Part (CSWP)
 <a name="SP15_CSWP_IntroducingCSWP"> </a>
 
-The Content Search Web Part (CSWP) is a Web Part introduced in SharePoint 2013 that uses various styling options to display dynamic content on SharePoint pages.
+The Content Search Web Part (CSWP) is a Web Part introduced in SharePoint that uses various styling options to display dynamic content on SharePoint pages.
   
     
     
@@ -46,7 +46,7 @@ You can use display templates to change how search results appear on the page. D
 ## When to use the Content Search Web Part (CSWP) or the Content Query Web Part (CQWP)
 <a name="SP15_CSWP_WhenToUseCSWPorCQWP"> </a>
 
-The CSWP can return any content from the search index. Use it on your SharePoint 2013 sites when you are connecting to a search service and want to return indexed search results in your pages. 
+The CSWP can return any content from the search index. Use it on your SharePoint sites when you are connecting to a search service and want to return indexed search results in your pages. 
   
     
     
@@ -67,10 +67,10 @@ Some site collection administrators mark sites to not be indexed. Content marked
 <a name="SP15_CSWP_AdditionalResources"> </a>
 
 
--  [Managed navigation in SharePoint 2013](managed-navigation-in-sharepoint.md)
+-  [Managed navigation in SharePoint](managed-navigation-in-sharepoint.md)
     
   
--  [What's new in SharePoint 2013 search for developers](what-s-new-in-sharepoint-search-for-developers.md)
+-  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers.md)
     
   
 

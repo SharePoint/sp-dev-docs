@@ -7,12 +7,12 @@ ms.assetid: 5fa22ebb-e507-4ffc-a425-e755502feae2
 
 # Excel Services Overview
 
-Excel Services is a service application that enables you to load, calculate, and display Microsoft Excel workbooks on Microsoft SharePoint 2013. Excel Services was first introduced in Microsoft Office SharePoint Server 2007.
+Excel Services is a service application that enables you to load, calculate, and display Microsoft Excel workbooks on Microsoft SharePoint. Excel Services was first introduced in Microsoft Office SharePoint Server 2007.
   
     
     
 
-By using Excel Services, you can reuse and share Excel workbooks on SharePoint 2013 portals and dashboards. For example, financial analysts, business planners, or engineers can create content in Excel and share it with others by using an SharePoint 2013 portal and dashboard—without writing custom code. You can control what data is displayed, and you can maintain a single version of your Excel workbook. 
+By using Excel Services, you can reuse and share Excel workbooks on SharePoint portals and dashboards. For example, financial analysts, business planners, or engineers can create content in Excel and share it with others by using an SharePoint portal and dashboard—without writing custom code. You can control what data is displayed, and you can maintain a single version of your Excel workbook. 
 There are four primary interfaces for Excel Services: 
   
     
@@ -52,7 +52,7 @@ By using Excel Services, you can view live, interactive workbooks by using only 
     
     
 
-Excel Services also has a Web service. You can use Excel Web Services to load workbooks, set values in cells and ranges, refresh external data connections, calculate worksheets, and extract calculated results (including cell values, the entire calculated workbook, or a snapshot of the workbook). In SharePoint 2013, you can also save, save a copy, and participate in collaborative editing sessions by using Excel Web Services.
+Excel Services also has a Web service. You can use Excel Web Services to load workbooks, set values in cells and ranges, refresh external data connections, calculate worksheets, and extract calculated results (including cell values, the entire calculated workbook, or a snapshot of the workbook). In SharePoint, you can also save, save a copy, and participate in collaborative editing sessions by using Excel Web Services.
 > **Note:**
 > For more information about snapshots, see  [How to: Get an Entire Workbook or a Snapshot](how-to-get-an-entire-workbook-or-a-snapshot.md). 
   
@@ -129,7 +129,7 @@ You can also analyze, pivot, and interact with data by using Excel Web Access.
   
     
     
-For more information about Excel Services and business intelligence capability in SharePoint 2013, see the business intelligence documentation in SharePoint Server Help. 
+For more information about Excel Services and business intelligence capability in SharePoint, see the business intelligence documentation in SharePoint Server Help. 
   
     
     
@@ -196,7 +196,7 @@ You can also use the JavaScript object model in Excel Services to automate, cust
 
 ### JavaScript user-defined functions (UDFs)
 
-New in Microsoft Excel Services and Microsoft SharePoint 2013, ECMAScript (JavaScript, JScript) UDFs enable you to add custom functions to Excel when you are using an embedded Excel workbook with OneDrive or an Excel Web AccessExcel Web Access Web Part in SharePoint. Besides the built-in functions that you use in Excel, you can add your own, custom functions using JavaScript UDFs that you can call from inside formulas in .
+New in Microsoft Excel Services and Microsoft SharePoint, ECMAScript (JavaScript, JScript) UDFs enable you to add custom functions to Excel when you are using an embedded Excel workbook with OneDrive or an Excel Web AccessExcel Web Access Web Part in SharePoint. Besides the built-in functions that you use in Excel, you can add your own, custom functions using JavaScript UDFs that you can call from inside formulas in .
   
     
     
@@ -241,7 +241,7 @@ For more information about the REST API in Excel Services, see  [Excel Services 
 
 ### REST ODATA
 
-New in Microsoft Excel Services and Microsoft SharePoint 2013, by using the new OData functionality in the Excel Services REST API, you can request the tables inside an Excel workbook as OData. For example, to request Excel metadata about available resources in the SampleWorkbook.xlsx workbook using a REST call, you use the following syntax.
+New in Microsoft Excel Services and Microsoft SharePoint, by using the new OData functionality in the Excel Services REST API, you can request the tables inside an Excel workbook as OData. For example, to request Excel metadata about available resources in the SampleWorkbook.xlsx workbook using a REST call, you use the following syntax.
   
     
     
@@ -249,7 +249,7 @@ http://\<ServerName\>/_vti_bin/ExcelRest.aspx/Docs/Documents/SampleWorkbook.xlsx
   
     
     
- [Excel Services 2010 REST API](http://msdn.microsoft.com/en-us/library/ee556413.aspx) documentation in the SharePoint 2013 SDK documentation.
+ [Excel Services 2010 REST API](http://msdn.microsoft.com/en-us/library/ee556413.aspx) documentation in the SharePoint SDK documentation.
   
     
     
@@ -278,7 +278,7 @@ From there you can use OData system query options to get specific information ab
 -  [JavaScript user-defined functions overview](javascript-user-defined-functions-overview.md)
     
   
--  [Using OData with Excel Services REST in SharePoint 2013](using-odata-with-excel-services-rest-in-sharepoint.md)
+-  [Using OData with Excel Services REST in SharePoint](using-odata-with-excel-services-rest-in-sharepoint.md)
     
   
 -  [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)

@@ -37,17 +37,17 @@ Within 24 hours after you upload your update to an organization's add-in catalog
  **Tip**   When you are developing an update, you don't want to wait 24 hours every time you upload a new version to your test SharePoint add-in catalog. See [Update an add-in without waiting 24 hours ](update-sharepoint-add-ins.md#ImmediateUpdateNotice) for information about how to immediately update an add-in. By default, SharePoint checks every 24 hours for updates to installed add-ins. A farm administrator can set this to another value by using the following SharePoint Management Shell command, wheren is the number of hours between checks. `Set-SPInternalAppStateUpdateInterval -AppStateSyncHours n` If the value is set to 0, then the check is made every time the built-in timer job **Internal Add-in State Update** executes, which by default is every hour. Farm administrators can use Central Admin to change the frequency of the timer job or run it immediately.
  
 
-SharePoint 2013 will do the following when a user installs an update to a SharePoint Add-in. These events do not necessarily occur in exactly this order, and some of them may occur in parallel. Also, if update fails, there is a complete rollback.
+SharePoint will do the following when a user installs an update to a SharePoint Add-in. These events do not necessarily occur in exactly this order, and some of them may occur in parallel. Also, if update fails, there is a complete rollback.
  
 
  
 
  
 
-- SharePoint 2013 prompts the user to approve permissions requested by the add-in.
+- SharePoint prompts the user to approve permissions requested by the add-in.
     
  
-- SharePoint 2013 makes the add-in unavailable to users temporarily.
+- SharePoint makes the add-in unavailable to users temporarily.
     
  
 - If the add-in contains a SharePoint solution package (.wsp), and the contents of the solution package have changed in any way, SharePoint does the following:
@@ -58,13 +58,13 @@ SharePoint 2013 will do the following when a user installs an update to a ShareP
   - Tests the update of the backup.
     
  
-  - If the test succeeds, updates the original add-in web. Note that the new .wsp file in the add-in package is used to update the Features and other elements in the add-in web. (The update parts of the Feature schema have been expanded in SharePoint 2013.)
+  - If the test succeeds, updates the original add-in web. Note that the new .wsp file in the add-in package is used to update the Features and other elements in the add-in web. (The update parts of the Feature schema have been expanded in SharePoint.)
     
  
-- SharePoint 2013 executes the  **UpgradedEventEndpoint** web service, if any is registered in the add-in manifest.
+- SharePoint executes the  **UpgradedEventEndpoint** web service, if any is registered in the add-in manifest.
     
      **Note**  If the add-in is provider-hosted, you provide the update logic for all the non-SharePoint components of the add-in. For the most part, you update these components separately from the update of the SharePoint Add-in itself, just as you installed these components separately from the installation of the add-in. But there may be some changes that should only happen when a user is updating the SharePoint Add-in. This logic can go in an  **UpgradedEventEndpoint** web service or in "first run after update" logic of the add-in itself.
-- SharePoint 2013 makes the add-in and its components available again.
+- SharePoint makes the add-in and its components available again.
     
  
 
@@ -92,7 +92,7 @@ If your old data is somewhere that can be accessed by a remote event handler, yo
  
 
  
-In principle, you can reuse an external data source, compute component, or other external component in the new add-in that was used in the old add-in. Consider, however, that when a SharePoint Add-in is uninstalled, the SharePoint 2013 infrastructure will uninstall everything that it installed. Accordingly, it is generally a good practice for a SharePoint Add-in to depend on only components that it installed or external components that were not installed by the SharePoint 2013 infrastructure.
+In principle, you can reuse an external data source, compute component, or other external component in the new add-in that was used in the old add-in. Consider, however, that when a SharePoint Add-in is uninstalled, the SharePoint infrastructure will uninstall everything that it installed. Accordingly, it is generally a good practice for a SharePoint Add-in to depend on only components that it installed or external components that were not installed by the SharePoint infrastructure.
  
 
  
@@ -100,7 +100,7 @@ In principle, you can reuse an external data source, compute component, or other
  **Note**  We recommend that if you implement an  **InstalledEventEndpoint** or an **UpgradedEventEndpoint** that installs components, you should also implement an **UninstallingEventEndpoint** that uninstalls those same components. Doing so conforms to the design principles that add-ins should be self-contained and uninstall cleanly. However, data that would still be useful to users after the add-in is uninstalled should not be deleted. Websites created by an add-in, other than the add-in web, should usually be considered data.
  
 
-If the old and new add-ins each contain an add-in web, consider that a new add-in web is created when your new add-in is installed. For this reason, you should not use the update-related XML markup in the SharePoint 2013 Feature schema. Such markup does not work because you are not updating existing SharePoint components; you are replacing an old add-in with a new one.
+If the old and new add-ins each contain an add-in web, consider that a new add-in web is created when your new add-in is installed. For this reason, you should not use the update-related XML markup in the SharePoint Feature schema. Such markup does not work because you are not updating existing SharePoint components; you are replacing an old add-in with a new one.
  
 
  
@@ -112,10 +112,10 @@ If the old and new add-ins each contain an add-in web, consider that a new add-i
 -  [Update SharePoint Add-ins](update-sharepoint-add-ins.md)
     
  
--  [Update add-in web components in SharePoint 2013](update-add-in-web-components-in-sharepoint-2013.md)
+-  [Update add-in web components in SharePoint](update-add-in-web-components-in-sharepoint-2013.md)
     
  
--  [Update host web components in SharePoint 2013](update-host-web-components-in-sharepoint-2013.md)
+-  [Update host web components in SharePoint](update-host-web-components-in-sharepoint-2013.md)
     
  
 -  [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins.md)

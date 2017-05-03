@@ -14,7 +14,7 @@ This walkthrough requires Visual Studio 2013.
  
 
  
-To host the add-in, you'll also need a SharePoint 2013 site or a SharePoint Developer site on Office 365, which you can get from the  [Sign up for an Office 365 Developer Site](http://go.microsoft.com/fwlink/?LinkId=263490).
+To host the add-in, you'll also need a SharePoint site or a SharePoint Developer site on Office 365, which you can get from the  [Sign up for an Office 365 Developer Site](http://go.microsoft.com/fwlink/?LinkId=263490).
  
 
  

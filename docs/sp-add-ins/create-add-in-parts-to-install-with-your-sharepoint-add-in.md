@@ -1,5 +1,5 @@
 # Create add-in parts to install with your SharePoint Add-in
-Learn how to create an add-in part in SharePoint 2013 that is available in the Web Part gallery of the host web when you install your SharePoint Add-in.
+Learn how to create an add-in part in SharePoint that is available in the Web Part gallery of the host web when you install your SharePoint Add-in.
  
 
  **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
@@ -504,7 +504,7 @@ The  **_editMode_** token lets your content page determine if the add-in part is
 -  [SharePoint Add-ins UX design guidelines](sharepoint-add-ins-ux-design-guidelines.md)
     
  
--  [Create UX components in SharePoint 2013](create-ux-components-in-sharepoint-2013.md)
+-  [Create UX components in SharePoint](create-ux-components-in-sharepoint-2013.md)
     
  
 -  [Three ways to think about design options for SharePoint Add-ins](three-ways-to-think-about-design-options-for-sharepoint-add-ins.md)

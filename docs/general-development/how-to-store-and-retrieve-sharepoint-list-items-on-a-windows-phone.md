@@ -66,7 +66,7 @@ The **Application_Launching** and **Application_Closing** handlers for these eve
 ### To implement event handlers for storing and retrieving application state
 
 
-1. Create a Windows Phone app by using the Windows Phone SharePoint List Application template in Visual Studio by following the steps in  [How to: Create a Windows Phone SharePoint 2013 list app](how-to-create-a-windows-phone-sharepoint-list-app.md).
+1. Create a Windows Phone app by using the Windows Phone SharePoint List Application template in Visual Studio by following the steps in  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app.md).
     
   
 2. In **Solution Explorer**, choose the App.xaml file.
@@ -917,7 +917,7 @@ Notice the similarity between the Draft Item Edit form (Figure 4) and the standa
 <a name="SP15StoreSPlist_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint 2013](build-windows-phone-apps-that-access-sharepoint.md)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
 -  [Local Data Storage for Windows Phone](http://msdn.microsoft.com/library/fdf7e973-5de5-4cfa-bf63-1e65c90744cc%28Office.15%29.aspx)

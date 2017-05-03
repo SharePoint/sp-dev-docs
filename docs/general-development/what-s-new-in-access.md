@@ -10,7 +10,7 @@ Learn about the features in Access 2013 makes it easy to create, deploy, and man
 ## Introduction
 <a name="SP15_access15overview_Introduction"> </a>
 
-Access 2013 features a new application model that is designed for one purpose―to simplify web development much like earlier versions of Access with Windows development. Access 2013 enables subject matter experts to quickly create an application that can be used to run their business. By using Microsoft SharePoint 2013 to host the front end of the app and Microsoft SQL Server 2012 as its data storage technology, Access 2013 significantly improves the manageability and scalability of Access applications. Compatibility with Office 365 and SQL Azure significantly expand the reach of Access applications.
+Access 2013 features a new application model that is designed for one purpose―to simplify web development much like earlier versions of Access with Windows development. Access 2013 enables subject matter experts to quickly create an application that can be used to run their business. By using Microsoft SharePoint to host the front end of the app and Microsoft SQL Server 2012 as its data storage technology, Access 2013 significantly improves the manageability and scalability of Access applications. Compatibility with Office 365 and SQL Azure significantly expand the reach of Access applications.
   
     
     
@@ -18,7 +18,7 @@ Access 2013 features a new application model that is designed for one purpose―
 ## Architecture
 <a name="SP15_access15overview_Architecture"> </a>
 
-In an on-premise environment, Access 2013 apps are hosted by SharePoint 2013 while the data is stored in SQL Server 2012. SharePoint 2013 provides authentication, authorization, and security for Access 2013 apps. The back-end tables, views, macros, and queries are stored in an SQL Server 2012 database.
+In an on-premise environment, Access 2013 apps are hosted by SharePoint while the data is stored in SQL Server 2012. SharePoint provides authentication, authorization, and security for Access 2013 apps. The back-end tables, views, macros, and queries are stored in an SQL Server 2012 database.
   
     
     
@@ -44,7 +44,7 @@ Figure 1 provides an overview of Access 2013 architecture.
   
     
     
-When a new Access application is created, Access Services in SharePoint Server 2013 creates a new Application database that stores the data, view, queries and macros contained in the app. The Access Services 2013 System database can be configured to create new Application databases on a separate SQL Server 2012 server.
+When a new Access application is created, Access Services in SharePoint creates a new Application database that stores the data, view, queries and macros contained in the app. The Access Services 2013 System database can be configured to create new Application databases on a separate SQL Server 2012 server.
   
     
     
@@ -60,7 +60,7 @@ An Access 2013 app is online the moment it's created. You can decide to share th
 ## Developing Access apps
 <a name="SP15_access15overview_DevelopingAccessapps"> </a>
 
-Unlike many of the SharePoint Server 2013application services, Access Services 2013 doesn't expose an API that you can use to develop Access apps in Visual Studio. Access 2013 is the environment that you use to develop Access 2013 apps.
+Unlike many of the SharePointapplication services, Access Services 2013 doesn't expose an API that you can use to develop Access apps in Visual Studio. Access 2013 is the environment that you use to develop Access 2013 apps.
   
     
     

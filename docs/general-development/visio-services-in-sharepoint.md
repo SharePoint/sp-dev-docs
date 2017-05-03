@@ -1,17 +1,17 @@
 ---
-title: Visio Services in SharePoint 2013
+title: Visio Services in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: ed8c5d12-e17d-4ceb-b195-601c26824370
 ---
 
 
 
-# Visio Services in SharePoint 2013
-Visio Services in Microsoft SharePoint Server 2013 enables you to load, display, and interact programmatically with Visio .vsdx, .vsdm files and Visio Web Drawings (.vdw) on Microsoft SharePoint Server 2013 and Microsoft SharePoint Online.
-## What's new in Visio Services in SharePoint Server 2013
+# Visio Services in SharePoint
+Visio Services in Microsoft SharePoint enables you to load, display, and interact programmatically with Visio .vsdx, .vsdm files and Visio Web Drawings (.vdw) on Microsoft SharePoint and Microsoft SharePoint Online.
+## What's new in Visio Services in SharePoint
 <a name="visserv15_WhatsNew"> </a>
 
-Visio Services in Microsoft SharePoint Server 2013 and in Microsoft SharePoint Online includes several new features, including support for the new Microsoft Visio 2013 file format, support for Microsoft Business Connectivity Services (BCS) data sources, and programmatic access to comments.
+Visio Services in Microsoft SharePoint and in Microsoft SharePoint Online includes several new features, including support for the new Microsoft Visio 2013 file format, support for Microsoft Business Connectivity Services (BCS) data sources, and programmatic access to comments.
   
     
     
@@ -31,7 +31,7 @@ Visio Services in Microsoft SharePoint Server 2013 and in Microsoft SharePoint O
 
 |||
 |:-----|:-----|
-|![In the cloud behavior note](../../images/mod_icon_incloud.gif)           <br/> ![On-premises behavior note](../../images/mod_icon_onpremises.gif)|Visio 2013 diagrams can now be connected to external lists created using Microsoft Business Connectivity Services (BCS) on SharePoint Server 2013 servers and in SharePoint Online. Visio Services supports the ability to refresh the Visio diagrams as the data updates.  <br/> **Note:** Visio Services does not support SQL, SQL Azure, OLEDC, ODBC, and custom data providers as data sources in SharePoint Online.           |
+|![In the cloud behavior note](../../images/mod_icon_incloud.gif)           <br/> ![On-premises behavior note](../../images/mod_icon_onpremises.gif)|Visio 2013 diagrams can now be connected to external lists created using Microsoft Business Connectivity Services (BCS) on SharePoint servers and in SharePoint Online. Visio Services supports the ability to refresh the Visio diagrams as the data updates.  <br/> **Note:** Visio Services does not support SQL, SQL Azure, OLEDC, ODBC, and custom data providers as data sources in SharePoint Online.           |
    
 
 ### Commenting
@@ -85,7 +85,7 @@ Visio Services in Microsoft SharePoint Server 2013 and in Microsoft SharePoint O
 
 |||
 |:-----|:-----|
-|![On-premises behavior note](../../images/mod_icon_onpremises.gif)|You can use the Visio Services class library, in the  [Microsoft.Office.Visio.Server](https://msdn.microsoft.com/library/Microsoft.Office.Visio.Server.aspx) namespace, to build custom Visio Services data providers. These data providers permit you to programmatically refresh data derived from custom data sources in Visio 2013 diagrams hosted on a SharePoint Server 2013 site. <br/> For more information about creating a custom data provider and to work through a complete end-to-end solution, see  [Creating a Custom Data Provider with Visio Services](http://msdn.microsoft.com/en-us/library/ff394595.aspx).  <br/> |
+|![On-premises behavior note](../../images/mod_icon_onpremises.gif)|You can use the Visio Services class library, in the  [Microsoft.Office.Visio.Server](https://msdn.microsoft.com/library/Microsoft.Office.Visio.Server.aspx) namespace, to build custom Visio Services data providers. These data providers permit you to programmatically refresh data derived from custom data sources in Visio 2013 diagrams hosted on a SharePoint site. <br/> For more information about creating a custom data provider and to work through a complete end-to-end solution, see  [Creating a Custom Data Provider with Visio Services](http://msdn.microsoft.com/en-us/library/ff394595.aspx).  <br/> |
    
 
 ## Additional Resources

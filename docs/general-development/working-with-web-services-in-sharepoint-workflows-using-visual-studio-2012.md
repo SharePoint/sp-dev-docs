@@ -1,12 +1,12 @@
 ---
-title: Working with Web Services in SharePoint 2013 Workflows using Visual Studio 2012
+title: Working with Web Services in SharePoint Workflows using Visual Studio 2012
 ms.prod: SHAREPOINT
 ms.assetid: 5ffaa585-a872-4e14-bc0e-4a38c6a16b04
 ---
 
 
-# Working with Web Services in SharePoint 2013 Workflows using Visual Studio 2012
-Demonstrates how to use web services in SharePoint 2013 workflows using Visual Studio 2012.
+# Working with Web Services in SharePoint Workflows using Visual Studio 2012
+Demonstrates how to use web services in SharePoint workflows using Visual Studio 2012.
  **Provided by:** [Andrew Connell](http://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [AndrewConnell.com](http://www.andrewconnell.com)
   
     
@@ -18,7 +18,7 @@ Demonstrates how to use web services in SharePoint 2013 workflows using Visual S
     
 
 > **Note:**
-> This article is accompanied by an end-to-end code sample that you can use to follow the article, or as a starter for your own SharePoint workflow projects. You can find the downloadable code in the MSDN Code Gallery, here:  [Working with Web Services in SharePoint 2013 Workflows using Visual Studio 2012](http://code.msdn.microsoft.com/Working-with-Web-in-46148199). 
+> This article is accompanied by an end-to-end code sample that you can use to follow the article, or as a starter for your own SharePoint workflow projects. You can find the downloadable code in the MSDN Code Gallery, here:  [Working with Web Services in SharePoint Workflows using Visual Studio 2012](http://code.msdn.microsoft.com/Working-with-Web-in-46148199). 
   
     
     
@@ -27,19 +27,19 @@ Demonstrates how to use web services in SharePoint 2013 workflows using Visual S
   
     
     
-Microsoft has taken a very different approach to workflow in SharePoint Server 2013 than in previous versions of SharePoint. The workflow team worked with the Azure team to create a new product called Workflow Manager. Workflow Manager serves the role of hosting the latest version of the Windows Workflow Foundation (version 4) runtime and all the necessary services in a highly available and scalable way. It takes advantage of Microsoft Azure Service Bus for performance and scalability, and when deployed, it runs the same whether in an on-premises deployment or a deployment in the cloud. SharePoint 2013 is then connected and configured to hand off all workflow execution and related tasks to the Workflow Manager farm.One of the more important changes in the new workflow architecture is that all custom workflows in SharePoint 2013 completely declarative, including those built using Visual Studio 2012. In previous versions of SharePoint, workflows developed with Visual Studio 2012 were not exclusively declarative. Instead, they were a pairing of declarative XAML with a compiled assembly. The managed assembly contained the workflow's business logic.This might come as a shock to seasoned SharePoint developers who may be asking, "so how do I implement my custom business logic without a compiled assembly?". Microsoft suggests that instead you create a custom web service, ideally a WCF, OData, or RESTful web service that returns data in the JavaScript Object Notation (JSON) format, and to use some of the new activities and objects in this new version. 
-## Scenarios for using web services in SharePoint 2013 workflows
+Microsoft has taken a very different approach to workflow in SharePoint than in previous versions of SharePoint. The workflow team worked with the Azure team to create a new product called Workflow Manager. Workflow Manager serves the role of hosting the latest version of the Windows Workflow Foundation (version 4) runtime and all the necessary services in a highly available and scalable way. It takes advantage of Microsoft Azure Service Bus for performance and scalability, and when deployed, it runs the same whether in an on-premises deployment or a deployment in the cloud. SharePoint is then connected and configured to hand off all workflow execution and related tasks to the Workflow Manager farm.One of the more important changes in the new workflow architecture is that all custom workflows in SharePoint completely declarative, including those built using Visual Studio 2012. In previous versions of SharePoint, workflows developed with Visual Studio 2012 were not exclusively declarative. Instead, they were a pairing of declarative XAML with a compiled assembly. The managed assembly contained the workflow's business logic.This might come as a shock to seasoned SharePoint developers who may be asking, "so how do I implement my custom business logic without a compiled assembly?". Microsoft suggests that instead you create a custom web service, ideally a WCF, OData, or RESTful web service that returns data in the JavaScript Object Notation (JSON) format, and to use some of the new activities and objects in this new version. 
+## Scenarios for using web services in SharePoint workflows
 <a name="sec1"> </a>
 
-It is not difficult to conceive of scenarios where you would leverage a custom web services in a SharePoint 2013 workflow. Developers who authored workflows using SharePoint 2007 or SharePoint 2010 are accustomed to working with custom code, since these workflows were inherently programmatic. You were not required to add custom code to these workflows, but doing so was quite common.
+It is not difficult to conceive of scenarios where you would leverage a custom web services in a SharePoint workflow. Developers who authored workflows using SharePoint 2007 or SharePoint 2010 are accustomed to working with custom code, since these workflows were inherently programmatic. You were not required to add custom code to these workflows, but doing so was quite common.
   
     
     
-With SharePoint 2013 workflows to being purely declarative, many cases where you may have written custom code must now be handled with code written in an external web service that is called and consumed by the workflow. 
+With SharePoint workflows to being purely declarative, many cases where you may have written custom code must now be handled with code written in an external web service that is called and consumed by the workflow. 
   
     
     
-SharePoint 2013 workflows can consume any sort of web service. That said, it is easiest for workflows to interact with web services that pass data using the Open Data protocol ( **OData** ), as provided in either of the formats **Atom** or **json**. OData is the best approach because it is fully supported by the SharePoint 2013 workflow authoring tools (both SharePoint Designer 2013 and Visual Studio 2012).
+SharePoint workflows can consume any sort of web service. That said, it is easiest for workflows to interact with web services that pass data using the Open Data protocol ( **OData** ), as provided in either of the formats **Atom** or **json**. OData is the best approach because it is fully supported by the SharePoint workflow authoring tools (both SharePoint Designer 2013 and Visual Studio 2012).
   
     
     
@@ -51,7 +51,7 @@ In addition, both anonymous web services as well as those protected with differe
 ## Leveraging web services in workflows
 <a name="sec2"> </a>
 
-Working with web services in SharePoint 2013 workflows involves two stages. The first is simply calling the web service, which you do by using a new **HttpSend** activity introduced with SharePoint 2013. **HttpSend** lets you call into the simplest web services or, for more complex tasks, provides HTTP verbs and provides specific HTTP headers. Figure 1 shows many of the properties that are available on the **HttpSend** activity.
+Working with web services in SharePoint workflows involves two stages. The first is simply calling the web service, which you do by using a new **HttpSend** activity introduced with SharePoint. **HttpSend** lets you call into the simplest web services or, for more complex tasks, provides HTTP verbs and provides specific HTTP headers. Figure 1 shows many of the properties that are available on the **HttpSend** activity.
   
     
     
@@ -86,10 +86,10 @@ The second stage of working with web services that we're going to cover involves
     
     
 
-## Creating web services for SharePoint 2013 workflows
+## Creating web services for SharePoint workflows
 <a name="sec3"> </a>
 
-With the support for calling web services and the lack of supporting custom code within workflows, developers will now need to know how to create services. There are plenty of options for creating custom web services for use in SharePoint 2013 workflows. The **HttpSend** activity and **DynamicValue** data type are best suited for RESTful services and those that conform to the OData Protocol.
+With the support for calling web services and the lack of supporting custom code within workflows, developers will now need to know how to create services. There are plenty of options for creating custom web services for use in SharePoint workflows. The **HttpSend** activity and **DynamicValue** data type are best suited for RESTful services and those that conform to the OData Protocol.
   
     
     
@@ -97,14 +97,14 @@ OData is a protocol for creating and consuming data based on the principles of R
   
     
     
-The RESTful services implemented by SharePoint 2013 actually support OData because they were built using WCF Data Services, specifically WCF Data Services 5.0, which implements the OData 3.0 specification.
+The RESTful services implemented by SharePoint actually support OData because they were built using WCF Data Services, specifically WCF Data Services 5.0, which implements the OData 3.0 specification.
   
     
     
 
 ### Implement OData Service CRUD-Q operations
 
-A common use for web services is performing simple create, read, update, delete, and query (CRUD-Q) operations on data within a database. Creating an OData service for use with a SharePoint 2013 workflow is quite simple using WCF. Assuming you have an existing database there are four short steps that require very little coding:
+A common use for web services is performing simple create, read, update, delete, and query (CRUD-Q) operations on data within a database. Creating an OData service for use with a SharePoint workflow is quite simple using WCF. Assuming you have an existing database there are four short steps that require very little coding:
   
     
     
@@ -128,7 +128,7 @@ Another task you'll want to accomplish using web services is running business lo
   
     
     
-OData and WCF data services support this scenario by providing you with  [service operations](http://msdn.microsoft.com/en-us/library/cc668788%28v=vs.110%29.aspx). Service operations are common and are even used within SharePoint 2013 services, for instance, when retrieving a specific list using the address  `http://[..]/_api/web/lists/GetByTitle('ListTitle')`. The **GetByTitle** method is a service operator the SharePoint 2013 team created. Developers create their own custom service operations in custom web services created using WCF Data Services.
+OData and WCF data services support this scenario by providing you with  [service operations](http://msdn.microsoft.com/en-us/library/cc668788%28v=vs.110%29.aspx). Service operations are common and are even used within SharePoint services, for instance, when retrieving a specific list using the address  `http://[..]/_api/web/lists/GetByTitle('ListTitle')`. The **GetByTitle** method is a service operator the SharePoint team created. Developers create their own custom service operations in custom web services created using WCF Data Services.
   
     
     
@@ -257,7 +257,7 @@ The first thing the workflow needs to do is retrieve the customer ID, as entered
 3. Retrieve the customer ID from the list item by clicking the Get Properties link in the **LookupSpListItem** activity. Doing this adds a **GetDynamicValueProperties** activity to the design surface.
     
   
-4. In the **Properties** dialog box, click the ellipsis ( **…**) to open the Property selector, shown in Figure 4. In the wizard, set the **Entity Type** to **List Item of Customers**, then add a single property, CustomerId, with the Path set to CustomerId and Assign To set to CustomerId (the variable previously created), as shown in the following figure.
+4. In the **Properties** dialog box, click the ellipsis ( **???**) to open the Property selector, shown in Figure 4. In the wizard, set the **Entity Type** to **List Item of Customers**, then add a single property, CustomerId, with the Path set to CustomerId and Assign To set to CustomerId (the variable previously created), as shown in the following figure.
     
   
 5. Click **Create Property** and enter **CustomerId** in the **Path** column.
@@ -364,7 +364,7 @@ Once the web service request has been made and the results are stored in a local
 5. In the **Properties** window, set the **Source** value to **NorthwindServiceResponse**, as shown in Figure 7.
     
   
-6. Click the ellipsis button ( **…**) button on the **Properties** property and then provide values in the **Path** and **Assign To** columns as shown in Figure 7. Notice that the values in the **Assign To** column are the variable you created for each of the **Customers** list fields.
+6. Click the ellipsis button ( **???**) button on the **Properties** property and then provide values in the **Path** and **Assign To** columns as shown in Figure 7. Notice that the values in the **Assign To** column are the variable you created for each of the **Customers** list fields.
     
    **Figure 7. Properties tool window for GetDynamicValueProperties and contents for Properties dialog**
 
@@ -392,7 +392,7 @@ The last step is to update the list item.
   - **ItemId**: (current item)
     
   
-2. Click the ellipsis button ( **…**) button on the **ListItemPropertiesDynamicValues** property and in the resulting dialog box, set **Entity Type** to **List Item of Customers**. 
+2. Click the ellipsis button ( **???**) button on the **ListItemPropertiesDynamicValues** property and in the resulting dialog box, set **Entity Type** to **List Item of Customers**. 
     
   
 3. Finally, for each of the values extracted from the web service, set the values on the list item to the variables in the workflow, as shown in Figure 8.
@@ -446,11 +446,11 @@ The workflow is now complete and should function properly. To confirm its stabil
 ## Conclusion
 <a name="sec5"> </a>
 
-SharePoint 2013 introduced a new workflow architecture facilitated by a new product: Workflow Manager 1.0. To ensure that all custom workflows worked regardless of the SharePoint 2013 deployment choice, either on-premises or hosted in Office 365, all workflows are now 100-percent declarative. Therefore, custom business logic previously implemented as custom code in Visual Studio-authored workflows in previous versions of SharePoint are no longer supported. 
+SharePoint introduced a new workflow architecture facilitated by a new product: Workflow Manager 1.0. To ensure that all custom workflows worked regardless of the SharePoint deployment choice, either on-premises or hosted in Office 365, all workflows are now 100-percent declarative. Therefore, custom business logic previously implemented as custom code in Visual Studio-authored workflows in previous versions of SharePoint are no longer supported. 
   
     
     
- Microsoft introduced support for calling web services in Workflow Manager using the new **HttpSend** activity. Workflow Manager also introduced support for creating structures to submit to web services as well as consuming their responses called the **DynamicValue** data type. When creating workflows, use this data type and associated actions to facilitate creating and leveraging robust business processes in SharePoint 2013 workflows by using external web services.
+ Microsoft introduced support for calling web services in Workflow Manager using the new **HttpSend** activity. Workflow Manager also introduced support for creating structures to submit to web services as well as consuming their responses called the **DynamicValue** data type. When creating workflows, use this data type and associated actions to facilitate creating and leveraging robust business processes in SharePoint workflows by using external web services.
   
     
     
@@ -462,7 +462,7 @@ SharePoint 2013 introduced a new workflow architecture facilitated by a new prod
 -  [Working with complex data in a workflow](http://msdn.microsoft.com/en-us/library/windowsazure/jj193446%28v=azure.10%29.aspx)
     
   
--  [Workflows in SharePoint 2013](http://msdn.microsoft.com/en-us/library/jj163986.aspx)
+-  [Workflows in SharePoint](http://msdn.microsoft.com/en-us/library/jj163986.aspx)
     
   
 

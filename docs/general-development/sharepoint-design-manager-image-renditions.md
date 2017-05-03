@@ -1,11 +1,11 @@
 ---
-title: SharePoint 2013 Design Manager image renditions
+title: SharePoint Design Manager image renditions
 ms.prod: SHAREPOINT
 ms.assetid: d08a74c0-5674-4f26-8646-11ea1f081c85
 ---
 
 
-# SharePoint 2013 Design Manager image renditions
+# SharePoint Design Manager image renditions
 Learn how to create an image rendition, how to add it to a page, and how to crop it. An image rendition defines the dimensions that are used to display images in SharePoint publishing sites.
 Image renditions enable you to display differently sized versions of an image on different pages in a publishing site, based on the same source image. When you create an image rendition, you specify the width and/or height for all images that use that image rendition. The image renditions are available for every image that is uploaded to a library in that site collection. For example, designers can create an image rendition to display thumbnail images and another image rendition to display banner images. When an image is added to a page, the author can specify the image rendition to use on that image. Authors can also crop the image rendition to specify the portion of the image to use in the image rendition. The correct image size is displayed when the page is rendered.
   
@@ -16,7 +16,7 @@ Image renditions enable you to render a single image in multiple ways. An image 
 ## Prerequisites for managing image renditions
 <a name="Prerequisites"> </a>
 
-Because image renditions have dependencies on other features in SharePoint Server 2013, make sure that you meet the prerequisites in this section before you perform the procedures in this topic. Prerequisites include:
+Because image renditions have dependencies on other features in SharePoint, make sure that you meet the prerequisites in this section before you perform the procedures in this topic. Prerequisites include:
   
     
     
@@ -34,7 +34,7 @@ Because image renditions have dependencies on other features in SharePoint Serve
 ## Create an image rendition
 <a name="Create"> </a>
 
-When an image rendition is created, SharePoint Server 2013 creates a unique ID that identifies that image rendition. An image is generated when SharePoint Server first receives a request for the image rendition.
+When an image rendition is created, SharePoint creates a unique ID that identifies that image rendition. An image is generated when SharePoint Server first receives a request for the image rendition.
   
     
     
@@ -353,10 +353,10 @@ When an image rendition is deleted, that image rendition is no longer generated 
 <a name="Additional"> </a>
 
 
--  [Develop the site design in SharePoint 2013](develop-the-site-design-in-sharepoint.md)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
     
   
--  [SharePoint 2013 Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md)
+-  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md)
     
   
 -  [Build sites for SharePoint](build-sites-for-sharepoint.md)

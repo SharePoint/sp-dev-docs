@@ -1,13 +1,13 @@
 ---
-title: Use Feature upgrade to apply new SharePoint 2013 master pages when upgrading from SharePoint 2010
+title: Use Feature upgrade to apply new SharePoint master pages when upgrading from SharePoint 2010
 ms.prod: SHAREPOINT
 ms.assetid: de3169f1-715e-4f80-bfbf-caea744e2a0b
 ---
 
 
-# Use Feature upgrade to apply new SharePoint 2013 master pages when upgrading from SharePoint 2010
-Learn how to reset a custom master page during the  `FeatureUpgrading` event when you're upgrading a SharePoint 2013 site from the 2010 to the 2013 compatibility mode.
-When you upgrade your SharePoint 2010 customizations to SharePoint 2013, any references to custom master pages you've created switch back to the default.master page. If you've deployed a feature that contains one or more custom master pages to an upgraded SharePoint 2013 site collection that is running in SharePoint 2010 compatibility mode you'll need to reset your SharePoint 2013 master pages when you upgrade to the 2013 compatibility mode. This topic explains how to use a feature receiver to make sure that your SharePoint 2013 custom master pages get reset when you upgrade from SharePoint 2010. 
+# Use Feature upgrade to apply new SharePoint master pages when upgrading from SharePoint 2010
+Learn how to reset a custom master page during the  `FeatureUpgrading` event when you're upgrading a SharePoint site from the 2010 to the 2013 compatibility mode.
+When you upgrade your SharePoint 2010 customizations to SharePoint, any references to custom master pages you've created switch back to the default.master page. If you've deployed a feature that contains one or more custom master pages to an upgraded SharePoint site collection that is running in SharePoint 2010 compatibility mode you'll need to reset your SharePoint master pages when you upgrade to the 2013 compatibility mode. This topic explains how to use a feature receiver to make sure that your SharePoint custom master pages get reset when you upgrade from SharePoint 2010. 
   
     
     
@@ -15,7 +15,7 @@ When you upgrade your SharePoint 2010 customizations to SharePoint 2013, any ref
 
 ## Use custom upgrade code to reset a master page
 
-As the guidance in  [Deploy custom features to upgraded site collections in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/dn673579%28v=office.15%29.aspx) explains, when you upgrade from SharePoint 2010 to SharePoint 2013, the site collections in your farm will run in SharePoint 2010 compatibility mode by default. Depending on the approach to upgrading your custom features that you've taken, you'll have deployed any given feature by using either one or two solution packages:
+As the guidance in  [Deploy custom features to upgraded site collections in SharePoint](http://technet.microsoft.com/en-us/library/dn673579%28v=office.15%29.aspx) explains, when you upgrade from SharePoint 2010 to SharePoint, the site collections in your farm will run in SharePoint 2010 compatibility mode by default. Depending on the approach to upgrading your custom features that you've taken, you'll have deployed any given feature by using either one or two solution packages:
   
     
     
@@ -125,7 +125,7 @@ public override void FeatureUpgrading(SPFeatureReceiverProperties properties, st
 
 ```
 
-Once you're done with the upgrade, you'll want to think about the future and long-term maintenance of your feature. Refer to  [Application Lifecycle Management in SharePoint 2010](http://msdn.microsoft.com/en-us/library/office/gg604045%28v=office.14%29.aspx) for guidance on maintaining full-trust code. Although this article refers to SharePoint 2010 specifically, it applies equally well to full-trust code in SharePoint 2013. If you aren't familiar with feature versioning and upgrade actions, refer to the [Models for Solution Lifecycle Management](http://msdn.microsoft.com/en-us/library/office/gg604045%28v=office.14%29.aspx#sectionSection7) section of this article. You should also look at [Best Practices for Using Feature Versions](http://msdn.microsoft.com/en-us/library/office/ee535064%28v=office.14%29.aspx).
+Once you're done with the upgrade, you'll want to think about the future and long-term maintenance of your feature. Refer to  [Application Lifecycle Management in SharePoint 2010](http://msdn.microsoft.com/en-us/library/office/gg604045%28v=office.14%29.aspx) for guidance on maintaining full-trust code. Although this article refers to SharePoint 2010 specifically, it applies equally well to full-trust code in SharePoint. If you aren't familiar with feature versioning and upgrade actions, refer to the [Models for Solution Lifecycle Management](http://msdn.microsoft.com/en-us/library/office/gg604045%28v=office.14%29.aspx#sectionSection7) section of this article. You should also look at [Best Practices for Using Feature Versions](http://msdn.microsoft.com/en-us/library/office/ee535064%28v=office.14%29.aspx).
   
     
     
@@ -134,19 +134,19 @@ Once you're done with the upgrade, you'll want to think about the future and lon
 <a name="bk_addresources"> </a>
 
 
--  [Deploy custom features to upgraded site collections in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/dn673579%28v=office.15%29.aspx)
+-  [Deploy custom features to upgraded site collections in SharePoint](http://technet.microsoft.com/en-us/library/dn673579%28v=office.15%29.aspx)
     
   
--  [Upgrade site customizations for SharePoint 2013](upgrade-site-customizations-for-sharepoint.md)
+-  [Upgrade site customizations for SharePoint](upgrade-site-customizations-for-sharepoint.md)
     
   
--  [Upgrade to SharePoint 2013](http://technet.microsoft.com/en-us/library/cc303420%28v=office.15%29.aspx)
+-  [Upgrade to SharePoint](http://technet.microsoft.com/en-us/library/cc303420%28v=office.15%29.aspx)
     
   
--  [SharePoint 2013 and SharePoint Online solution pack for branding and site provisioning](http://www.microsoft.com/en-us/download/details.aspx?id=42030)
+-  [SharePoint and SharePoint Online solution pack for branding and site provisioning](http://www.microsoft.com/en-us/download/details.aspx?id=42030)
     
   
--  [Install and manage solutions for SharePoint 2013](http://technet.microsoft.com/en-us/library/cc263205%28v=office.15%29.aspx)
+-  [Install and manage solutions for SharePoint](http://technet.microsoft.com/en-us/library/cc263205%28v=office.15%29.aspx)
     
   
 

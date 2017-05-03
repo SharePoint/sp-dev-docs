@@ -1,11 +1,11 @@
 ---
-title: Sample delegation, federation, and authentication scenario in SharePoint 2013
+title: Sample delegation, federation, and authentication scenario in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: c50ef989-ed11-4aad-bc02-2c7a8a387ebb
 ---
 
 
-# Sample delegation, federation, and authentication scenario in SharePoint 2013
+# Sample delegation, federation, and authentication scenario in SharePoint
 This article provides sample scenarios for identity delegation and identity federation.
 ## Sample scenarios
 <a name="SP15_SampleDelegation_SampleScenarios"> </a>
@@ -196,7 +196,7 @@ As shown in Figure 3, the flow in this scenario is:
 <a name="SP15_SampleDelegation_AdditionalResources"> </a>
 
 
--  [Claims-based identity and concepts in SharePoint 2013](claims-based-identity-and-concepts-in-sharepoint.md)
+-  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint.md)
     
   
 -  [Claims-based identity term definitions](claims-based-identity-term-definitions.md)

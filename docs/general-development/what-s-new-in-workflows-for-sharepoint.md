@@ -1,13 +1,13 @@
 ---
-title: What's new in workflows for SharePoint 2013
+title: What's new in workflows for SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 1d51421b-61ac-46b6-a865-52f968ddc5b3
 ---
 
 
-# What's new in workflows for SharePoint 2013
-Learn about the capabilities and features that are new to workflows in SharePoint 2013.
-The workflow framework in SharePoint 2013 is significantly changed from previous versions. The following sections provide brief summaries of the most significant updates and enhancements to the workflow infrastructure.
+# What's new in workflows for SharePoint
+Learn about the capabilities and features that are new to workflows in SharePoint.
+The workflow framework in SharePoint is significantly changed from previous versions. The following sections provide brief summaries of the most significant updates and enhancements to the workflow infrastructure.
   
     
     
@@ -16,11 +16,11 @@ The workflow framework in SharePoint 2013 is significantly changed from previous
 ## Completely redesigned workflow infrastructure
 <a name="SP15Whatsnewinworflow_infrastructure"> </a>
 
-SharePoint 2013 workflows are powered by Windows Workflow Foundation 4 (WF), which was substantially redesigned from previous versions. Windows Workflow Foundation, in turn, is built on the messaging functionality that is provided by  [Windows Communication Foundation (WCF)](http://msdn.microsoft.com/en-us/netframework/aa663324).
+SharePoint workflows are powered by Windows Workflow Foundation 4 (WF), which was substantially redesigned from previous versions. Windows Workflow Foundation, in turn, is built on the messaging functionality that is provided by  [Windows Communication Foundation (WCF)](http://msdn.microsoft.com/en-us/netframework/aa663324).
   
     
     
-Perhaps the most prominent feature of the new workflow infrastructure is the introduction of Microsoft Azure as the new workflow execution host. The workflow execution engine now lives outside of SharePoint, in Microsoft Azure. Figure 1 provides a generalized, high-level view of the new workflow infrastructure. For a more thorough discussion of the concepts presented in Figure 1, see  [SharePoint 2013 workflow fundamentals](sharepoint-workflow-fundamentals.md).
+Perhaps the most prominent feature of the new workflow infrastructure is the introduction of Microsoft Azure as the new workflow execution host. The workflow execution engine now lives outside of SharePoint, in Microsoft Azure. Figure 1 provides a generalized, high-level view of the new workflow infrastructure. For a more thorough discussion of the concepts presented in Figure 1, see  [SharePoint workflow fundamentals](sharepoint-workflow-fundamentals.md).
   
     
     
@@ -70,7 +70,7 @@ In short, the needs of both the information worker (the "power user") and the de
 ## Visual Studio 2012 workflow project type support
 <a name="SP15Whatsnewinworflow_VSworkflow"> </a>
 
-To make collaboration easier between information worker and software developer, Visual Studio 2012 provides SharePoint workflow project types and a workflow custom action-item type. For more information about developing workflows by using Visual Studio 2012, and for information about differentiating between SharePoint Designer 2013 and Visual Studio 2012 in workflow development, see  [Develop SharePoint 2013 workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md).
+To make collaboration easier between information worker and software developer, Visual Studio 2012 provides SharePoint workflow project types and a workflow custom action-item type. For more information about developing workflows by using Visual Studio 2012, and for information about differentiating between SharePoint Designer 2013 and Visual Studio 2012 in workflow development, see  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md).
   
     
     
@@ -86,7 +86,7 @@ A lot of effort has gone into anticipating the business requirements of workflow
 ## Tools support for SharePoint workflows
 <a name="SP15Whatsnewinworflow_Tools"> </a>
 
-Visual Studio 2012 provides templates and support for creating workflows on the SharePoint 2013 workflow framework. SharePoint 2013 workflows are similar to previous versions of workflows except that they are powered by WF 4 and run in Microsoft Azure. They are also declarative-only (XAML) and designed to interact with the cloud and work with SharePoint Add-ins. One of their primary benefits is that they enable you to remotely host and run workflows outside SharePoint Server.
+Visual Studio 2012 provides templates and support for creating workflows on the SharePoint workflow framework. SharePoint workflows are similar to previous versions of workflows except that they are powered by WF 4 and run in Microsoft Azure. They are also declarative-only (XAML) and designed to interact with the cloud and work with SharePoint Add-ins. One of their primary benefits is that they enable you to remotely host and run workflows outside SharePoint Server.
   
     
     
@@ -94,12 +94,12 @@ Visual Studio 2012 provides templates and support for creating workflows on the 
 ## New workflow actions
 <a name="SP15Whatsnewinworflow_Newwfactions"> </a>
 
-Following are new workflow actions that are provided in SharePoint 2013. For a full detailing of both new and deprecated actions, see  [Workflow actions and activities reference for SharePoint 2013](workflow-actions-and-activities-reference-for-sharepoint.md). New to workflows in SharePoint 2013 are a set of workflow actions that allow you to integrate with Project 2013 and let you create Project-based workflows.
+Following are new workflow actions that are provided in SharePoint. For a full detailing of both new and deprecated actions, see  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint.md). New to workflows in SharePoint are a set of workflow actions that allow you to integrate with Project 2013 and let you create Project-based workflows.
   
     
     
 
-**Table 1. New workflow actions in SharePoint 2013**
+**Table 1. New workflow actions in SharePoint**
 
 
 |**Action**|**Description**|
@@ -129,16 +129,16 @@ Following are new workflow actions that are provided in SharePoint 2013. For a f
 <a name="SP15Whatsnewinworflow_Addresources"> </a>
 
 
--  [Get started with workflows in SharePoint 2013](get-started-with-workflows-in-sharepoint.md)
+-  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint.md)
     
   
--  [What's new for developers in SharePoint 2013](what’s-new-for-developers-in-sharepoint.md)
+-  [What's new for developers in SharePoint](what’s-new-for-developers-in-sharepoint.md)
     
   
--  [Workflow actions and activities reference for SharePoint 2013](workflow-actions-and-activities-reference-for-sharepoint.md)
+-  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint.md)
     
   
--  [Workflow actions quick reference (SharePoint 2013 Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
+-  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
     
   
 

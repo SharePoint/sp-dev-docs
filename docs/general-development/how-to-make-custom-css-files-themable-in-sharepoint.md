@@ -1,16 +1,16 @@
 ---
-title: How to Make custom CSS files themable in SharePoint 2013
+title: How to Make custom CSS files themable in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: b8c82c77-c836-47f9-a11e-6c9c656d436b
 ---
 
 
-# How to: Make custom CSS files themable in SharePoint 2013
-Learn how to add comment-style markup to a CSS file so that it can be used in the SharePoint 2013 theming engine.
+# How to: Make custom CSS files themable in SharePoint
+Learn how to add comment-style markup to a CSS file so that it can be used in the SharePoint theming engine.
 ## Introduction to annotations
 <a name="Intro"> </a>
 
-Annotations are special comment-style markup that tell the SharePoint theming engine how to theme properties in a CSS file. When a theme is applied to a site, the theming engine replaces the CSS property values with the appropriate theme values. In SharePoint 2013, you can use annotations to change the color, font, or background image. You can also recolor an image. If you are using custom CSS files, you must add these annotations to the CSS files if you want to use them with the SharePoint theming engine. If you apply a theme to a site that uses custom CSS files, and you haven't added annotations, the CSS properties remain unchanged. This can result in a site that has a mismatched design.
+Annotations are special comment-style markup that tell the SharePoint theming engine how to theme properties in a CSS file. When a theme is applied to a site, the theming engine replaces the CSS property values with the appropriate theme values. In SharePoint, you can use annotations to change the color, font, or background image. You can also recolor an image. If you are using custom CSS files, you must add these annotations to the CSS files if you want to use them with the SharePoint theming engine. If you apply a theme to a site that uses custom CSS files, and you haven't added annotations, the CSS properties remain unchanged. This can result in a site that has a mismatched design.
   
     
     
@@ -18,7 +18,7 @@ This article describes the available annotations and how to register CSS files.
   
     
     
-For more information about custom themes, see  [How to: Deploy a custom theme in SharePoint 2013](how-to-deploy-a-custom-theme-in-sharepoint.md) and [How to: Create a master page preview file in SharePoint 2013](how-to-create-a-master-page-preview-file-in-sharepoint.md).
+For more information about custom themes, see  [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint.md) and [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint.md).
   
     
     
@@ -51,7 +51,7 @@ The following shows the format for the **ReplaceColor** annotation.
 
 ```
 
-Replace  _ColorSlot_ with the annotation name of the color slot to use. To see a list of available color slots, see the [Color slot mapping](color-palettes-and-fonts-in-sharepoint.md#colorSlots) section in [Color palettes and fonts in SharePoint 2013](color-palettes-and-fonts-in-sharepoint.md).
+Replace  _ColorSlot_ with the annotation name of the color slot to use. To see a list of available color slots, see the [Color slot mapping](color-palettes-and-fonts-in-sharepoint.md#colorSlots) section in [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md).
   
     
     
@@ -101,7 +101,7 @@ The following shows the format for the **ReplaceFont** annotation.
 /* [ReplaceFont(themeFont:"FontSlot")] */
 ```
 
-Replace  _FontSlot_ with the name of the font slot to use. To see a list of available font slots, see the [Font slots](color-palettes-and-fonts-in-sharepoint.md#fontSlot) section in [Color palettes and fonts in SharePoint 2013](color-palettes-and-fonts-in-sharepoint.md).
+Replace  _FontSlot_ with the name of the font slot to use. To see a list of available font slots, see the [Font slots](color-palettes-and-fonts-in-sharepoint.md#fontSlot) section in [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md).
   
     
     
@@ -152,7 +152,7 @@ The following describes the format of the **RecolorImage** annotation.
 
 ```
 
-Replace  _ColorSlot_ with the annotation name of the color slot. To see a list of available color slots, see the [Color slot mapping](color-palettes-and-fonts-in-sharepoint.md#colorSlots) section in [Color palettes and fonts in SharePoint 2013](color-palettes-and-fonts-in-sharepoint.md).
+Replace  _ColorSlot_ with the annotation name of the color slot. To see a list of available color slots, see the [Color slot mapping](color-palettes-and-fonts-in-sharepoint.md#colorSlots) section in [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md).
   
     
     
@@ -238,25 +238,25 @@ The following is an example of an **<SharePoint:CssRegistration>** element.
 <a name="addresources"> </a>
 
 
--  [Themes overview for SharePoint 2013](themes-overview-for-sharepoint.md)
+-  [Themes overview for SharePoint](themes-overview-for-sharepoint.md)
     
   
--  [How to: Deploy a custom theme in SharePoint 2013](how-to-deploy-a-custom-theme-in-sharepoint.md)
+-  [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint.md)
     
   
--  [Upgrade custom themes and CSS to SharePoint 2013](upgrade-custom-themes-and-css-to-sharepoint.md)
+-  [Upgrade custom themes and CSS to SharePoint](upgrade-custom-themes-and-css-to-sharepoint.md)
     
   
--  [How to: Create a master page preview file in SharePoint 2013](how-to-create-a-master-page-preview-file-in-sharepoint.md)
+-  [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint.md)
     
   
--  [Color palettes and fonts in SharePoint 2013](color-palettes-and-fonts-in-sharepoint.md)
+-  [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md)
     
   
 -  [SharePoint Team Blog: Show off your style with SharePoint theming](http://blogs.office.com/b/sharepoint/archive/2012/10/29/show-off-your-style-with-sharepoint-theming.aspx)
     
   
--  [SharePoint 2013 Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md)
+-  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md)
     
   
 

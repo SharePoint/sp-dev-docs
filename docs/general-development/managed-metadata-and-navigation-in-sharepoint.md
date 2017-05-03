@@ -1,11 +1,11 @@
 ---
-title: Managed metadata and navigation in SharePoint 2013
+title: Managed metadata and navigation in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: b66d4ec1-a2ef-49cc-8ca5-a6b516bff02e
 ---
 
 
-# Managed metadata and navigation in SharePoint 2013
+# Managed metadata and navigation in SharePoint
 
   
     
@@ -22,11 +22,11 @@ ms.assetid: b66d4ec1-a2ef-49cc-8ca5-a6b516bff02e
   
     
     
-Learn about enterprise managed metadata (EMM) and navigation features in SharePoint 2013.
-## Managed metadata feature enhancements in SharePoint 2013 for developers
+Learn about enterprise managed metadata (EMM) and navigation features in SharePoint.
+## Managed metadata feature enhancements in SharePoint for developers
 <a name="SP15_ManagedMetadataAndNav_ManagedMetadataFeatureEnhancements"> </a>
 
-You can use managed metadata to build taxonomies and tagging strategies that meet specific, detailed business needs. In SharePoint 2013, the basic managed metadata API set is expanded and enhanced to provide more capabilities and scenario support.
+You can use managed metadata to build taxonomies and tagging strategies that meet specific, detailed business needs. In SharePoint, the basic managed metadata API set is expanded and enhanced to provide more capabilities and scenario support.
   
     
     
@@ -34,7 +34,7 @@ You can use managed metadata to build taxonomies and tagging strategies that mee
 ## .NET client object model (CSOM) support for managed metadata APIs
 <a name="SP15_ManagedMetadataAndNav_CSOMSupport"> </a>
 
-The SharePoint 2013 CSOM supports taxonomy customization and development. Taxonomy is available in .NET client (CSOM), Silverlight, and JavaScript programming models. Developing with it is logically similar to developing with the .NET server programming model. You may find it useful to develop CSOM solutions to support scenarios where reading content is more common than authoring or administering it. You need to use CSOM to enable taxonomy use in a cloud scenario like SharePoint Online or for a subset of scenarios that are available on premises.
+The SharePoint CSOM supports taxonomy customization and development. Taxonomy is available in .NET client (CSOM), Silverlight, and JavaScript programming models. Developing with it is logically similar to developing with the .NET server programming model. You may find it useful to develop CSOM solutions to support scenarios where reading content is more common than authoring or administering it. You need to use CSOM to enable taxonomy use in a cloud scenario like SharePoint Online or for a subset of scenarios that are available on premises.
   
     
     
@@ -164,7 +164,7 @@ You can use the following code examples to complete basic operations with the ta
 ## Pinning
 <a name="SP15_ManagedMetadataAndNav_Pinning"> </a>
 
-In Microsoft SharePoint Server 2010, users could reuse terms (and all terms nested under the reused terms) in other locations in the term hierarchy. After these terms were reused, they could be modified and changes would be seen everywhere the terms were reused. SharePoint 2013 introduces term pinning. A pinned term is just like a term that is reused, except it is read only and cannot be changed in the locations where the term is reused. For an example, see  [How to: Use code to pin terms to navigation term sets in SharePoint 2013](how-to-use-code-to-pin-terms-to-navigation-term-sets-in-sharepoint.md).
+In Microsoft SharePoint Server 2010, users could reuse terms (and all terms nested under the reused terms) in other locations in the term hierarchy. After these terms were reused, they could be modified and changes would be seen everywhere the terms were reused. SharePoint introduces term pinning. A pinned term is just like a term that is reused, except it is read only and cannot be changed in the locations where the term is reused. For an example, see  [How to: Use code to pin terms to navigation term sets in SharePoint](how-to-use-code-to-pin-terms-to-navigation-term-sets-in-sharepoint.md).
   
     
     
@@ -176,7 +176,7 @@ In Microsoft SharePoint Server 2010, users could reuse terms (and all terms nest
 ## Datasheet view support for managed metadata column types
 <a name="SP15_ManagedMetadataAndNav_DatasheetViewSupport"> </a>
 
-In SharePoint 2013, the datasheet view functionality has changed. Now, the datasheet uses a double-click action to open standard view for grid editing. You can now edit metadata columns using the same features that are available when you edit individual items. This includes access to the term set that is behind the column. This feature is all about bringing the metadata modification functionality available when editing an individual item to datasheet editing.
+In SharePoint, the datasheet view functionality has changed. Now, the datasheet uses a double-click action to open standard view for grid editing. You can now edit metadata columns using the same features that are available when you edit individual items. This includes access to the term set that is behind the column. This feature is all about bringing the metadata modification functionality available when editing an individual item to datasheet editing.
   
     
     
@@ -184,7 +184,7 @@ In SharePoint 2013, the datasheet view functionality has changed. Now, the datas
 ## Managed navigation
 <a name="SP15_ManagedMetadataAndNav_ManagedNav"> </a>
 
-Managed navigation uses managed metadata features, such as the ability to tag items with terms and manage terms in a term store, to provide highly customized site navigation. The structured navigation that depends on the SharePoint infrastructure is also still available in SharePoint 2013.
+Managed navigation uses managed metadata features, such as the ability to tag items with terms and manage terms in a term store, to provide highly customized site navigation. The structured navigation that depends on the SharePoint infrastructure is also still available in SharePoint.
   
     
     
@@ -219,10 +219,10 @@ A term store manager can enhance and expand term usage models based on more flex
 <a name="SP15_ManagedMetadataAndNav_UnsupportedScenarios"> </a>
 
 
-- SharePoint 2013 does not support creating taxonomy fields (managed metadata site columns) declaratively by way of XML definition.
+- SharePoint does not support creating taxonomy fields (managed metadata site columns) declaratively by way of XML definition.
     
   
-- SharePoint 2013 does not support the use of taxonomy fields (managed metadata site columns) in site templates.
+- SharePoint does not support the use of taxonomy fields (managed metadata site columns) in site templates.
     
   
 - For more information, see Microsoft Support Article #898631:  [Supported and unsupported scenarios](http://support2.microsoft.com/default.aspx?scid=kb;EN-US;898631
@@ -234,10 +234,10 @@ A term store manager can enhance and expand term usage models based on more flex
 <a name="SP15_ManagedMetadataAndNav_AdditionalResources"> </a>
 
 
--  [Managed navigation in SharePoint 2013](managed-navigation-in-sharepoint.md)
+-  [Managed navigation in SharePoint](managed-navigation-in-sharepoint.md)
     
   
--  [Content Search Web Part in SharePoint 2013](content-search-web-part-in-sharepoint.md)
+-  [Content Search Web Part in SharePoint](content-search-web-part-in-sharepoint.md)
     
   
 

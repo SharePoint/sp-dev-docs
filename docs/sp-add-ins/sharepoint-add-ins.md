@@ -53,7 +53,7 @@ There are two basic kinds of SharePoint Add-ins — SharePoint-hosted and provid
     
  
 
- **Tip**   **Take a look at a few SharePoint Add-ins in the** [Office Store](https://store.office.com/appshome.aspx?productgroup=SharePoint) to get a sense of what you can develop. Or open a SharePoint 2013 website and install some of the free SharePoint Add-ins. Just navigate to **Site Contents \| add an add-in \| SharePoint Store**.
+ **Tip**   **Take a look at a few SharePoint Add-ins in the** [Office Store](https://store.office.com/appshome.aspx?productgroup=SharePoint) to get a sense of what you can develop. Or open a SharePoint website and install some of the free SharePoint Add-ins. Just navigate to **Site Contents \| add an add-in \| SharePoint Store**.
  
 
 
@@ -63,7 +63,7 @@ We've deprecated sandboxed solutions that contain custom server-side code. We st
  
 
  
-SharePoint Add-ins don't use the server-side SharePoint object model. The client-side object models are greatly expanded in SharePoint 2013. Although some APIs in the SharePoint server object model aren't available in the client object models, these are almost entirely administrative and security-related classes. Custom SharePoint logic that addresses these areas is more appropriate for a Windows PowerShell script or classic SharePoint farm solution. To learn how to choose among SharePoint Add-ins, classic SharePoint farm solutions, and sandboxed solutions, see  [SharePoint Add-ins compared with SharePoint solutions](http://msdn.microsoft.com/library/0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8%28Office.15%29.aspx).
+SharePoint Add-ins don't use the server-side SharePoint object model. The client-side object models are greatly expanded in SharePoint. Although some APIs in the SharePoint server object model aren't available in the client object models, these are almost entirely administrative and security-related classes. Custom SharePoint logic that addresses these areas is more appropriate for a Windows PowerShell script or classic SharePoint farm solution. To learn how to choose among SharePoint Add-ins, classic SharePoint farm solutions, and sandboxed solutions, see  [SharePoint Add-ins compared with SharePoint solutions](http://msdn.microsoft.com/library/0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8%28Office.15%29.aspx).
  
 
  
@@ -204,10 +204,10 @@ Ready to get started?
  
   - Your add-in will use SharePoint's REST/OData APIs to perform CRUD operations on SharePoint data:
     
-      - Find our explanatory documentation in the article  [Get to know the SharePoint 2013 REST service](get-to-know-the-sharepoint-2013-rest-service.md) and other articles to which it links.
+      - Find our explanatory documentation in the article  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-2013-rest-service.md) and other articles to which it links.
     
  
-  - Find reference documentation at  [REST API reference for SharePoint 2013](http://msdn.microsoft.com/library/3514e753-19f9-4b41-a1ae-f35c5ffc17d2%28Office.15%29.aspx).
+  - Find reference documentation at  [REST API reference for SharePoint](http://msdn.microsoft.com/library/3514e753-19f9-4b41-a1ae-f35c5ffc17d2%28Office.15%29.aspx).
     
  
   - If you are not using Visual Studio, you have to create the add-in manifest file and the add-in package. For information, see  [Explore the app manifest structure and the package of a SharePoint Add-in](explore-the-app-manifest-structure-and-the-package-of-a-sharepoint-add-in.md). There are a lot of time-saving advantages to using Visual Studio and Microsoft Office Developer Tools for Visual Studio to make your manifest and package. We recommend that you consider them, even if you use another tool to create the remote web application itself. The  [Community edition of Visual Studio](https://www.visualstudio.com/news/vs2013-community-vs.aspx) is free.
@@ -217,7 +217,7 @@ Ready to get started?
     
  
 
- **Note**  If you're a beginner at both SharePoint and web development, you'd benefit most by starting with the free course at Microsoft's Virtual Academy, or working through a book about SharePoint 2013 development.
+ **Note**  If you're a beginner at both SharePoint and web development, you'd benefit most by starting with the free course at Microsoft's Virtual Academy, or working through a book about SharePoint development.
  
 
 

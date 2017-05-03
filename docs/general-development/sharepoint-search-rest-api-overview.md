@@ -6,11 +6,11 @@ ms.assetid: 8a4f7863-e4c1-4099-9189-a1894db36930
 
 
 # SharePoint Search REST API overview
-Add search functionality to client and mobile applications using the Search REST service in SharePoint Server 2013 and any technology that supports REST web requests.
+Add search functionality to client and mobile applications using the Search REST service in SharePoint and any technology that supports REST web requests.
 ## Querying with the Search REST service
 <a name="bk_queryrest"> </a>
 
-Search in SharePoint 2013 includes a Search REST service you can use to add search functionality to your client and mobile applications by using any technology that supports REST web requests. You can use the Search REST service to submit Keyword Query Language (KQL) or FAST Query Language (FQL) queries in your SharePoint Add-ins, remote client applications, mobile applications, and other applications.
+Search in SharePoint includes a Search REST service you can use to add search functionality to your client and mobile applications by using any technology that supports REST web requests. You can use the Search REST service to submit Keyword Query Language (KQL) or FAST Query Language (FQL) queries in your SharePoint Add-ins, remote client applications, mobile applications, and other applications.
   
     
     
@@ -97,7 +97,7 @@ Use **POST** requests in the following scenarios:
 ## Using query parameters with the Search REST service
 <a name="bk_UsingQueryParams"> </a>
 
-When you make a call to the Search REST service, you specify query parameters with the request. Search in SharePoint 2013 uses these query parameters to construct the search query. With a **GET** request, you specify the query parameters in the URL. For **POST** requests, you pass the query parameters in the body in JavaScript Object Notation (JSON) format.
+When you make a call to the Search REST service, you specify query parameters with the request. Search in SharePoint uses these query parameters to construct the search query. With a **GET** request, you specify the query parameters in the URL. For **POST** requests, you pass the query parameters in the body in JavaScript Object Notation (JSON) format.
   
     
     
@@ -1542,7 +1542,7 @@ You can configure search to support Search REST queries from anonymous users. Si
 ### To enable anonymous Search REST queries
 
 
-1. Enable anonymous access on the web application and publishing site. For more information about how to do this, see  [Manage permission policies for a web application in SharePoint 2013](http://technet.microsoft.com/en-us/library/ff608071.aspx) and [Plan for user authentication methods in SharePoint 2013](http://technet.microsoft.com/en-us/library/cc262350.aspx) on [TechNet](http://technet.microsoft.com/en-US/).
+1. Enable anonymous access on the web application and publishing site. For more information about how to do this, see  [Manage permission policies for a web application in SharePoint](http://technet.microsoft.com/en-us/library/ff608071.aspx) and [Plan for user authentication methods in SharePoint](http://technet.microsoft.com/en-us/library/cc262350.aspx) on [TechNet](http://technet.microsoft.com/en-US/).
     
   
 2. Add a new document library named QueryPropertiesTemplate to the publishing site.
@@ -1659,13 +1659,13 @@ When an anonymous Search REST query is submitted, the query object is constructe
 <a name="bk_addresources"> </a>
 
 
--  [Search in SharePoint 2013](search-in-sharepoint.md)
+-  [Search in SharePoint](search-in-sharepoint.md)
     
   
--  [SharePoint 2013: Using the search REST service from an app for SharePoint](http://code.msdn.microsoft.com/sharepoint/SharePoint-Perform-a-1bf3e87d)
+-  [SharePoint: Using the search REST service from an app for SharePoint](http://code.msdn.microsoft.com/sharepoint/SharePoint-Perform-a-1bf3e87d)
     
   
--  [What's new in SharePoint 2013 search for developers](what-s-new-in-sharepoint-search-for-developers.md)
+-  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers.md)
     
   
 -  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)

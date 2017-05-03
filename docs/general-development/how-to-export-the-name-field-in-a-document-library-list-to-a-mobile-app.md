@@ -7,7 +7,7 @@ ms.assetid: 901c2012-18c6-4dbd-a787-f8650a0cc7a8
 
 # How to: Export the Name field in a Document Library list to a mobile app
 Export the Name field of a Document Library list to a mobile app by using the Visual Studio SharePoint List wizard. The Name field does not appear automatically when a user creates a mobile app for a document library in SharePoint.
-In a Document Library list, a user can upload various documents. A list item for a document typically has **Title**, **Name**, and a link to the document as properties. If a developer creates a Windows Phone 7 app against the document library, the **Name** field is not exported in the IDE wizard. Thus the developer has no easy way of knowing the document name. (This is because SharePoint 2013 does not support fields of type "FILE" by default.)
+In a Document Library list, a user can upload various documents. A list item for a document typically has **Title**, **Name**, and a link to the document as properties. If a developer creates a Windows Phone 7 app against the document library, the **Name** field is not exported in the IDE wizard. Thus the developer has no easy way of knowing the document name. (This is because SharePoint does not support fields of type "FILE" by default.)
   
     
     
@@ -36,7 +36,7 @@ So if you want to fetch a document, build the full URL of the document, and open
 ## Prerequisites for exporting the Name field of a document library
 
 
-- SharePoint 2013
+- SharePoint
     
   
 - Visual Studio Express 2010 with the new SharePoint templates
@@ -142,10 +142,10 @@ public string m_fileUrl;
 <a name="SP15StoreSPlist_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint 2013](build-windows-phone-apps-that-access-sharepoint.md)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
--  [How to: Create a Windows Phone SharePoint 2013 list app](how-to-create-a-windows-phone-sharepoint-list-app.md)
+-  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app.md)
     
   
 -  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)

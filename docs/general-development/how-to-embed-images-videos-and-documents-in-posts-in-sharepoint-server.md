@@ -1,12 +1,12 @@
 ---
-title: How to Embed images, videos, and documents in posts in SharePoint Server 2013
+title: How to Embed images, videos, and documents in posts in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 9927b9e7-daea-4261-80fa-4cc25f489e22
 ---
 
 
-# How to: Embed images, videos, and documents in posts in SharePoint Server 2013
-Learn how to add  [SocialAttachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialAttachment.aspx) objects to microblog posts, which render as embedded pictures, videos, and documents in SharePoint Server 2013 social feeds.
+# How to: Embed images, videos, and documents in posts in SharePoint
+Learn how to add  [SocialAttachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialAttachment.aspx) objects to microblog posts, which render as embedded pictures, videos, and documents in SharePoint social feeds.
 In a social feed, the simplest form of post content contains only text, but you can also add embedded pictures, videos, and documents. To do this, you use the  [Attachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.Attachment.aspx) property on the [SocialPostCreationData](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.aspx) object that defines the post. Posts can contain one attachment, which is represented by a [SocialAttachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialAttachment.aspx) object.
   
     
@@ -14,7 +14,7 @@ In a social feed, the simplest form of post content contains only text, but you 
 
 
 > **Note:**
-> To add a mention, tag, or link to a post's content, you add a  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) object to the [SocialPostCreationData.ContentItems](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.ContentItems.aspx) property. For more information, see [How to: Include mentions, tags, and links to sites and documents in posts in SharePoint Server 2013](how-to-include-mentions-tags-and-links-to-sites-and-documents-in-posts-in-sharep.md). 
+> To add a mention, tag, or link to a post's content, you add a  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) object to the [SocialPostCreationData.ContentItems](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.ContentItems.aspx) property. For more information, see [How to: Include mentions, tags, and links to sites and documents in posts in SharePoint](how-to-include-mentions-tags-and-links-to-sites-and-documents-in-posts-in-sharep.md). 
   
     
     
@@ -43,16 +43,16 @@ The code examples in this article show how to add image, video, and document att
 - Microsoft.SharePoint.Client.UserProfilies
     
   
-To use the examples in this article, you'll need to upload an image, a video, and a document. To use the video example, the video feature must be enabled on the server and the video file must be stored in an asset library. To use the document example in an on-premises environment, Office Online must be configured in the environment. For more information, see  [Plan digital asset libraries in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/ee414275.aspx) and [Configure SharePoint 2013 to use Office Online](http://technet.microsoft.com/en-us/library/ff431687.aspx).
+To use the examples in this article, you'll need to upload an image, a video, and a document. To use the video example, the video feature must be enabled on the server and the video file must be stored in an asset library. To use the document example in an on-premises environment, Office Online must be configured in the environment. For more information, see  [Plan digital asset libraries in SharePoint](http://technet.microsoft.com/en-us/library/ee414275.aspx) and [Configure SharePoint to use Office Online](http://technet.microsoft.com/en-us/library/ff431687.aspx).
   
     
     
-For instructions about how to set up your development environment and create a console application, see  [How to: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint 2013](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-net-cli.md).
+For instructions about how to set up your development environment and create a console application, see  [How to: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-net-cli.md).
   
     
     
 
-## Example: Embed an image in a post in SharePoint Server 2013
+## Example: Embed an image in a post in SharePoint
 <a name="bkmk_addImage"> </a>
 
 The following code example publishes a post that contains an embedded image. It shows how to:
@@ -132,7 +132,7 @@ namespace EmbedImageInPost
 ```
 
 
-## Embed a video in a post in SharePoint Server 2013
+## Embed a video in a post in SharePoint
 <a name="bkmk_addVideo"> </a>
 
 The following code example publishes a post that contains an embedded video. It shows how to:
@@ -212,7 +212,7 @@ namespace EmbedVideoInPost
 ```
 
 
-## Example: Embed a document in a post in SharePoint Server 2013
+## Example: Embed a document in a post in SharePoint
 <a name="bkmk_addDoc"> </a>
 
 The following code example publishes a post that contains an embedded document. It shows how to:
@@ -226,7 +226,7 @@ The following code example publishes a post that contains an embedded document. 
 - Add the document attachment to the  [Attachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.Attachment.aspx) property of the [SocialPostCreationData](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.aspx) object that's used to create the post.
     
   
-To use this example in an on-premises environment, your environment must be configured to use Office Online. See the  [prerequisites for using the code examples](how-to-embed-images-videos-and-documents-in-posts-in-sharepoint-server.md#bk_preReqs) for more information. Otherwise, you can post a link to the document as described in [How to: Include mentions, tags, and links to sites and documents in posts in SharePoint Server 2013](how-to-include-mentions-tags-and-links-to-sites-and-documents-in-posts-in-sharep.md).
+To use this example in an on-premises environment, your environment must be configured to use Office Online. See the  [prerequisites for using the code examples](how-to-embed-images-videos-and-documents-in-posts-in-sharepoint-server.md#bk_preReqs) for more information. Otherwise, you can post a link to the document as described in [How to: Include mentions, tags, and links to sites and documents in posts in SharePoint](how-to-include-mentions-tags-and-links-to-sites-and-documents-in-posts-in-sharep.md).
   
     
     
@@ -295,10 +295,10 @@ namespace EmbedDocumentInPost
 <a name="bk_addresources"> </a>
 
 
--  [Work with social feeds in SharePoint 2013](work-with-social-feeds-in-sharepoint.md)
+-  [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint.md)
     
   
--  [How to: Include mentions, tags, and links to sites and documents in posts in SharePoint Server 2013](how-to-include-mentions-tags-and-links-to-sites-and-documents-in-posts-in-sharep.md)
+-  [How to: Include mentions, tags, and links to sites and documents in posts in SharePoint](how-to-include-mentions-tags-and-links-to-sites-and-documents-in-posts-in-sharep.md)
     
   
 -  [SocialPostCreationData](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.aspx) and [SocialAttachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialAttachment.aspx) in the client object models
@@ -307,7 +307,7 @@ namespace EmbedDocumentInPost
 -  [SocialPostCreationData](http://msdn.microsoft.com/library/f0e1fa3e-6fc9-48e0-5570-92091abfef33%28Office.15%29.aspx) and [SocialAttachment](http://msdn.microsoft.com/library/dfdee790-a1b0-19c8-0e92-5a6e058ba4db%28Office.15%29.aspx) in the JavaScript object model
     
   
--  [Social feed REST API reference for SharePoint 2013](social-feed-rest-api-reference-for-sharepoint.md)
+-  [Social feed REST API reference for SharePoint](social-feed-rest-api-reference-for-sharepoint.md)
     
   
 -  [SPSocialPostCreationData](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialPostCreationData.aspx) and [SPSocialAttachment](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialAttachment.aspx) in the server object model

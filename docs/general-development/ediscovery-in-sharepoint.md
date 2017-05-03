@@ -1,13 +1,13 @@
 ---
-title: eDiscovery in SharePoint 2013
+title: eDiscovery in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 45cb324a-75f5-444d-a0fa-5c223df19016
 ---
 
 
-# eDiscovery in SharePoint 2013
-Learn about eDiscovery features in SharePoint 2013. You can use eDiscovery to provide litigators the ability to discover content in electronic format.
-## Introduction to eDiscovery in SharePoint 2013
+# eDiscovery in SharePoint
+Learn about eDiscovery features in SharePoint. You can use eDiscovery to provide litigators the ability to discover content in electronic format.
+## Introduction to eDiscovery in SharePoint
 <a name="SP15_eDiscoveryInSP_IntroductionToeDiscovery"> </a>
 
 eDiscovery is how records managers and litigators discover content in electronic format. Typically, eDiscovery requires searching for documents, websites, and email messages spread across laptops, email servers, file servers, and other sources, and collecting and acting on content that meets the criteria for a legal case.
@@ -18,7 +18,7 @@ In SharePoint Server 2010, Microsoft added the Hold and eDiscovery feature, whic
   
     
     
-eDiscovery in SharePoint 2013 and includes new ways to reduce the cost and complexity of discovery. These include:
+eDiscovery in SharePoint and includes new ways to reduce the cost and complexity of discovery. These include:
   
     
     
@@ -36,7 +36,7 @@ eDiscovery in SharePoint 2013 and includes new ways to reduce the cost and compl
     
   
 
-## How eDiscovery works in SharePoint 2013
+## How eDiscovery works in SharePoint
 <a name="SP15_eDiscoveryInSP_HoweDiscoveryWorks"> </a>
 
 eDiscovery uses search service applications (SSAs) to crawl SharePoint farms. You can configure SSAs in many ways, but the most common way is to have a central search services farm that crawls multiple SharePoint farms. You can use this one search service to crawl all SharePoint content, or you can use it to crawl specific regions—for example, all SharePoint content in Europe.
@@ -83,7 +83,7 @@ If multiple holds are placed on a site, the next edit of a document is copied ag
 ## eDiscovery programming model
 <a name="SP15_eDiscoveryInSP_eDiscoveryProgrammingModel"> </a>
 
-SharePoint 2013 provides a Microsoft .NET server programming model that you can use to build custom solutions and apps that include eDiscovery functionality. Table 1 lists the types in the **Microsoft.Office.Server.Discovery** namespace.
+SharePoint provides a Microsoft .NET server programming model that you can use to build custom solutions and apps that include eDiscovery functionality. Table 1 lists the types in the **Microsoft.Office.Server.Discovery** namespace.
   
     
     
@@ -116,10 +116,10 @@ SharePoint 2013 provides a Microsoft .NET server programming model that you can 
 <a name="SP15_eDiscoveryInSP_AdditionalResources"> </a>
 
 
--  [What's new in SharePoint 2013 eDiscovery and compliance](what-s-new-in-sharepoint-ediscovery-and-compliance.md)
+-  [What's new in SharePoint eDiscovery and compliance](what-s-new-in-sharepoint-ediscovery-and-compliance.md)
     
   
--  [Complete basic operations using SharePoint 2013 client library code](http://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx)
+-  [Complete basic operations using SharePoint client library code](http://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx)
     
   
 

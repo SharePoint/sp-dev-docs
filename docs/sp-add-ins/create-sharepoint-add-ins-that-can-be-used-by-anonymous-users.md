@@ -1,12 +1,12 @@
 # Create SharePoint Add-ins that can be used by anonymous users
-Learn how to create SharePoint Add-ins that can be used by anonymous users on public-facing Microsoft SharePoint 2013 sites.
+Learn how to create SharePoint Add-ins that can be used by anonymous users on public-facing Microsoft SharePoint sites.
  
 
  **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 
- **Important**  Wherever  *on-premise*  SharePoint 2013 is mentioned in this article, we assume that Service Pack 1 for SharePoint 2013 has been installed.
+ **Important**  Wherever  *on-premise*  SharePoint is mentioned in this article, we assume that Service Pack 1 for SharePoint has been installed.
  
 
 
@@ -19,7 +19,7 @@ Anonymous access is possible for SharePoint-hosted and provider-hosted SharePoin
 -  [Get Started Creating Provider-Hosted SharePoint add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md#SP15createselfhostapp_bk_prereq)
     
  
-You will also need a site collection in your test SharePoint 2013 installation that is configured for anonymous access. If you have an Office 365 Developer Site, there is already a public site collection associated with it that uses a special Public Website site definition. (For more information about the use of Public Websites in Microsoft SharePoint Online, see  [Public Website help for Office 365](http://office.microsoft.com/en-gb/office365-sharepoint-online-enterprise-help/public-website-help-for-office-365-HA102891740.aspx?CTT=1).) That site definition is not available for on premises SharePoint 2013 installations. So if your test installation is on-premises, you will need:
+You will also need a site collection in your test SharePoint installation that is configured for anonymous access. If you have an Office 365 Developer Site, there is already a public site collection associated with it that uses a special Public Website site definition. (For more information about the use of Public Websites in Microsoft SharePoint Online, see  [Public Website help for Office 365](http://office.microsoft.com/en-gb/office365-sharepoint-online-enterprise-help/public-website-help-for-office-365-HA102891740.aspx?CTT=1).) That site definition is not available for on premises SharePoint installations. So if your test installation is on-premises, you will need:
  
 
  
@@ -88,10 +88,10 @@ For details about the add-in-only policy (with code snippets), add-in permission
 
  
 
--  [Add-in authorization policy types in SharePoint 2013](add-in-authorization-policy-types-in-sharepoint-2013.md)
+-  [Add-in authorization policy types in SharePoint](add-in-authorization-policy-types-in-sharepoint-2013.md)
     
  
--  [Add-in permissions in SharePoint 2013](add-in-permissions-in-sharepoint-2013.md)
+-  [Add-in permissions in SharePoint](add-in-permissions-in-sharepoint-2013.md)
     
  
 -  [Explore the app manifest structure and the package of a SharePoint Add-in](explore-the-app-manifest-structure-and-the-package-of-a-sharepoint-add-in.md)
@@ -101,7 +101,7 @@ For details about the add-in-only policy (with code snippets), add-in permission
 ## Creating SharePoint-hosted add-ins that are anonymously accessible
 <a name="SP-hosted"> </a>
 
-Creating a SharePoint-hosted add-in that can be run by anonymous users does not require any special techniques. You create it the same way you would create any SharePoint-hosted add-in. For details, see  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md) and [Complete basic operations using JavaScript library code in SharePoint 2013](complete-basic-operations-using-javascript-library-code-in-sharepoint-2013.md).
+Creating a SharePoint-hosted add-in that can be run by anonymous users does not require any special techniques. You create it the same way you would create any SharePoint-hosted add-in. For details, see  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md) and [Complete basic operations using JavaScript library code in SharePoint](complete-basic-operations-using-javascript-library-code-in-sharepoint-2013.md).
  
 
  
@@ -158,7 +158,7 @@ If your test SharePoint installation is on-premises, you must carry out the firs
 1. In  **Central Administration**, choose  **Application Management**, and then  **Manage Web Applications**.
     
  
-2. (Optional) If you don't want to allow anonymous access for any of the existing SharePoint web applications, create a new web application. (Although the web application creation form gives you the option of allowing anonymous access,  *do not use this option*  . Anonymous access should not be enabled until *after*  the SharePoint Add-in is installed.) For details, see [Create a web application in SharePoint 2013](http://msdn.microsoft.com/library/121c8d83-a508-4437-978b-303096aa59df.aspx).
+2. (Optional) If you don't want to allow anonymous access for any of the existing SharePoint web applications, create a new web application. (Although the web application creation form gives you the option of allowing anonymous access,  *do not use this option*  . Anonymous access should not be enabled until *after*  the SharePoint Add-in is installed.) For details, see [Create a web application in SharePoint](http://msdn.microsoft.com/library/121c8d83-a508-4437-978b-303096aa59df.aspx).
     
  
 3. On the list of web applications, select the one that is to be accessible by anonymous users, and select  **Authentication Providers** on the ribbon.

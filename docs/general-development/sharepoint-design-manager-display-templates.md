@@ -1,16 +1,16 @@
 ---
-title: SharePoint 2013 Design Manager display templates
+title: SharePoint Design Manager display templates
 ms.prod: SHAREPOINT
 ms.assetid: 1a782bac-48ee-4baf-8751-0f943a306e0f
 ---
 
 
-# SharePoint 2013 Design Manager display templates
-Learn about display templates, including: how they relate to Search Web Parts, how the templates are structured, how to map properties and use variables and jQuery, and how to create a custom display template in SharePoint Server 2013.
+# SharePoint Design Manager display templates
+Learn about display templates, including: how they relate to Search Web Parts, how the templates are structured, how to map properties and use variables and jQuery, and how to create a custom display template in SharePoint.
 ## Introduction to display templates
 <a name="bk_introduction"> </a>
 
-Display templates in SharePoint Server 2013 are templates used in Web Parts that use search technology (referred to in this article as Search Web Parts) to show the results of a query made to the search index. Display templates control which managed properties are shown in the search results, and how they appear in the Web Part. Each display template is made of two files: an HTML version of the display template that you can edit in your HTML editor, and a .js file that SharePoint uses.
+Display templates in SharePoint are templates used in Web Parts that use search technology (referred to in this article as Search Web Parts) to show the results of a query made to the search index. Display templates control which managed properties are shown in the search results, and how they appear in the Web Part. Each display template is made of two files: an HTML version of the display template that you can edit in your HTML editor, and a .js file that SharePoint uses.
   
     
     
@@ -32,7 +32,7 @@ You can view existing display templates in Design Manager, but you don't create 
 - Open one of the four folders in the **Display Templates** folder.
     
     > **Note:**
-      > The folder you choose depends on the type of display template you want to use. For example, if your site uses cross-site publishing, copy a display template from the **Content Web Parts** folder. For more information, see [Display template reference in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj944947.aspx). 
+      > The folder you choose depends on the type of display template you want to use. For example, if your site uses cross-site publishing, copy a display template from the **Content Web Parts** folder. For more information, see [Display template reference in SharePoint](http://technet.microsoft.com/en-us/library/jj944947.aspx). 
 - Copy the HTML file for an existing display template that's similar to what you want. The exact location that you copy the file to does not matter, as long as it is in the **Master Page Gallery**.
     
   
@@ -51,7 +51,7 @@ When you create a display template by copying the HTML file for an existing disp
 - A .js file that has the same name is created in the location where you copied the HTML file.
     
   
-- All markup required by SharePoint Server 2013 is added to the .js file so that the display template displays correctly.
+- All markup required by SharePoint is added to the .js file so that the display template displays correctly.
     
   
 - The HTML file and the .js file are associated, so that any later edits to the HTML file are synched to the .js file when the HTML file is saved.
@@ -79,7 +79,7 @@ There are two primary types of display templates:
 - **Item templates** determine how each result in the set is displayed. Includes images, text, video, and other items.
     
   
-For more information about these and other display templates, see  [Display template reference in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj944947.aspx).
+For more information about these and other display templates, see  [Display template reference in SharePoint](http://technet.microsoft.com/en-us/library/jj944947.aspx).
   
     
     
@@ -127,7 +127,7 @@ When used together in this way, the control display template and the item displa
   
     
     
-For more information about display templates, see the "Search-driven Web Parts and display templates" section in  [Overview of the SharePoint 2013 page model](overview-of-the-sharepoint-page-model.md).
+For more information about display templates, see the "Search-driven Web Parts and display templates" section in  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md).
   
     
     
@@ -326,7 +326,7 @@ You can use jQuery with your display templates. But, be aware of two important f
 ## Create a display template
 <a name="bk_createDT"> </a>
 
-Before you can create a display template by using the following procedure, you must have a mapped network drive that points to the **Master Page Gallery**. For more information, see  [How to: Map a network drive to the SharePoint 2013 Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md).
+Before you can create a display template by using the following procedure, you must have a mapped network drive that points to the **Master Page Gallery**. For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md).
   
     
     
@@ -340,9 +340,9 @@ Before you can create a display template by using the following procedure, you m
 2. Open the **Display Templates** folder, and then open the **Content Web Parts** folder.
     
   
-3. Copy the HTML file for a display template that is similar to what you want to create. For a list of the default display templates and their descriptions, see  [Display template reference in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj944947.aspx).
+3. Copy the HTML file for a display template that is similar to what you want to create. For a list of the default display templates and their descriptions, see  [Display template reference in SharePoint](http://technet.microsoft.com/en-us/library/jj944947.aspx).
     
-    At this point, SharePoint Server 2013 copies the HTML file into a .js file that has the same name. For example, if the copied HTML file is named Item_Picture3Line_copy.html, a corresponding .js file named Item_Picture3Lines_copy.js is also created. If you choose to rename the file, the corresponding .js file name also changes.
+    At this point, SharePoint copies the HTML file into a .js file that has the same name. For example, if the copied HTML file is named Item_Picture3Line_copy.html, a corresponding .js file named Item_Picture3Lines_copy.js is also created. If you choose to rename the file, the corresponding .js file name also changes.
     
   
 4. To customize the display template, edit the HTML file that resides on the server by using an HTML editor to open and edit the HTML file in the mapped drive. Each time that you save the HTML file, any changes are synched to the associated .js file.
@@ -373,19 +373,19 @@ Before you can create a display template by using the following procedure, you m
 <a name="bk_addresources"> </a>
 
 
--  [Overview of Design Manager in SharePoint 2013](overview-of-design-manager-in-sharepoint.md)
+-  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md)
     
   
--  [Develop the site design in SharePoint 2013](develop-the-site-design-in-sharepoint.md)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
     
   
--  [How to: Convert an HTML file into a master page in SharePoint 2013](how-to-convert-an-html-file-into-a-master-page-in-sharepoint.md)
+-  [How to: Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint.md)
     
   
--  [How to: Create a page layout in SharePoint 2013](how-to-create-a-page-layout-in-sharepoint.md)
+-  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md)
     
   
--  [SharePoint 2013 Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md)
+-  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md)
     
   
 

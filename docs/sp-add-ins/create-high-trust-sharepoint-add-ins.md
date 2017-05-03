@@ -1,5 +1,5 @@
 # Create high-trust SharePoint Add-ins
-Learn how to create a high-trust SharePoint Add-in. A high-trust add-in uses digital certificates to establish a trust between the remote web application and SharePoint 2013. High-trust add-ins can only be installed to on premises SharePoint, not to Microsoft SharePoint Online, and they are primarily intended for use with an on premises, rather than cloud-based, web application.
+Learn how to create a high-trust SharePoint Add-in. A high-trust add-in uses digital certificates to establish a trust between the remote web application and SharePoint. High-trust add-ins can only be installed to on premises SharePoint, not to Microsoft SharePoint Online, and they are primarily intended for use with an on premises, rather than cloud-based, web application.
  
 
  **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
@@ -14,13 +14,13 @@ To follow the procedures in this article, be sure you have the following:
 
  
 
-- An on-premises SharePoint 2013 development environment. See  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md) for the setup instructions. In particular, be sure you have completed the steps in the section [Configure services in SharePoint for server-to-server add-in use](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md#Servertoserver).
+- An on-premises SharePoint development environment. See  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md) for the setup instructions. In particular, be sure you have completed the steps in the section [Configure services in SharePoint for server-to-server add-in use](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md#Servertoserver).
     
  
 - Experience creating a provider-hosted SharePoint Add-in. See  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md).
     
  
-- Visual Studio installed either remotely or on the computer where you have installed SharePoint 2013.
+- Visual Studio installed either remotely or on the computer where you have installed SharePoint.
     
  
 - Microsoft Office Developer Tools for Visual Studio.
@@ -34,12 +34,12 @@ Read the following articles to get a better understanding of SharePoint Add-ins 
 
  
 
-**Table 1. Core concepts for setting up SharePoint 2013 to run high-trust add-ins**
+**Table 1. Core concepts for setting up SharePoint to run high-trust add-ins**
 
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)|Learn how to create a basic provider-hosted SharePoint Add-in with the Office Developer Tools for Visual Studio, how to interact with SharePoint 2013 sites by using the SharePoint CSOM.|
+| [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)|Learn how to create a basic provider-hosted SharePoint Add-in with the Office Developer Tools for Visual Studio, how to interact with SharePoint sites by using the SharePoint CSOM.|
 | [Digital Certificates](http://msdn.microsoft.com/library/e523b335-0156-4f47-b55c-b80495587c4f.aspx) and [Working with Certificates](http://msdn.microsoft.com/library/6ffb8682-8f07-4a45-afbb-8d2487e9dbc3.aspx)|Learn the basic ideas behind digital certificates.|
 
 ## Introduction to running high-trust add-ins
@@ -57,12 +57,12 @@ A high-trust add-in uses a certificate instead of a context token to establish t
  
 
  
-In SharePoint 2013, the server-to-server security token service (STS) provides access tokens for server-to-server authentication. The server-to-server STS enables temporary access tokens to access other application services such as Exchange 2013, Lync 2013, and add-ins for SharePoint 2013. You establish a trust relationship between the application services (for example, establishing trust between SharePoint and a remote add-in) by using Windows PowerShell cmdlets and a certificate.
+In SharePoint, the server-to-server security token service (STS) provides access tokens for server-to-server authentication. The server-to-server STS enables temporary access tokens to access other application services such as Exchange 2013, Lync 2013, and add-ins for SharePoint. You establish a trust relationship between the application services (for example, establishing trust between SharePoint and a remote add-in) by using Windows PowerShell cmdlets and a certificate.
  
 
  
 
- **Note**  The server-to-server STS isn't intended for user authentication. Therefore, you won't see the server-to-server STS listed on the user sign-in page, in the  **Authentication Provider** section in Central Administration, or in the People Picker in SharePoint 2013.
+ **Note**  The server-to-server STS isn't intended for user authentication. Therefore, you won't see the server-to-server STS listed on the user sign-in page, in the  **Authentication Provider** section in Central Administration, or in the People Picker in SharePoint.
  
 
 This article shows you how to create a high-trust add-in and provides setup instructions for running it within Visual Studio by pressing  **F5**. You'll learn to:
@@ -73,7 +73,7 @@ This article shows you how to create a high-trust add-in and provides setup inst
 - Configure an add-in for use as a high-trust add-in.
     
  
-- Configure SharePoint 2013 to use high-trust add-ins.
+- Configure SharePoint to use high-trust add-ins.
     
  
 - Create a basic high-trust add-in.
@@ -190,7 +190,7 @@ You'll create a test .pfx certificate file first, and then a corresponding test 
     
  
 
-## Configure SharePoint 2013 to use certificates and configure trust for your add-in
+## Configure SharePoint to use certificates and configure trust for your add-in
 <a name="Configure2"> </a>
 
 The Windows PowerShell script that you create in this section is intended to support the use of  **F5** in Visual Studio. It will *not*  properly configure a staging or production SharePoint installation. For instructions on configuring a production SharePoint to use certificates, see [Package and publish high-trust SharePoint Add-ins](package-and-publish-high-trust-sharepoint-add-ins.md).
@@ -245,7 +245,7 @@ iisreset
 
 ```
 
-6. SharePoint 2013 does not normally accept self-signed certificates. So when you are using a self-signed certificate for debugging, add the following lines to turn off SharePoint's normal requirement that HTTPS be used when remote web applications call into SharePoint. If you don't, then you'll get a  **403 (forbidden)** message when the remote web application calls SharePoint using a self-signed certificate. You will reverse this step in a later procedure. Turning off the HTTPS requirement means that requests from the remote web application to SharePoint are not encrypted, but the certificate is still used as a trusted issuer of access tokens which is its main purpose in high-trust SharePoint Add-ins.
+6. SharePoint does not normally accept self-signed certificates. So when you are using a self-signed certificate for debugging, add the following lines to turn off SharePoint's normal requirement that HTTPS be used when remote web applications call into SharePoint. If you don't, then you'll get a  **403 (forbidden)** message when the remote web application calls SharePoint using a self-signed certificate. You will reverse this step in a later procedure. Turning off the HTTPS requirement means that requests from the remote web application to SharePoint are not encrypted, but the certificate is still used as a trusted issuer of access tokens which is its main purpose in high-trust SharePoint Add-ins.
     
 ```
   $serviceConfig = Get-SPSecurityTokenServiceConfig
@@ -405,7 +405,7 @@ When you have obtained the new certificate, you need to add a password to it, if
     
  
 
-### To configure SharePoint 2013 to use the new certificate
+### To configure SharePoint to use the new certificate
 
 
 1. Open the HighTrustConfig-ForDebugOnly.ps1file for editing and make the following changes:
@@ -465,7 +465,7 @@ Office Developer Tools for Visual Studio includes a TokenHelper.cs (or .vb) file
 - Configure .NET to trust certificates when making network calls. 
     
  
-- Retrieve a server-to-server access token that is signed by the remote web application's private certificate on behalf of the specified  **WindowsIdentity** object and that the SharePoint 2013 uses to establish trust.
+- Retrieve a server-to-server access token that is signed by the remote web application's private certificate on behalf of the specified  **WindowsIdentity** object and that the SharePoint uses to establish trust.
     
  
 - Get the SharePoint security token service (STS) certificate.
@@ -482,7 +482,7 @@ In a high-trust add-in, there is no context token. The context token is specific
  
 
  
-When you are debugging in Visual Studio with  **F5**, Microsoft Office Developer Tools for Visual Studio uses Windows Authentication, and the two generated code files use the Windows identity of the person running the add-in to create the access token. When your add-in is published, you need to configure the remote web application in IIS Manager to use Windows Authentication if you want to use the two generated files without modification. If your add-in will not use Windows Authentication on the production environment, you will need to customize the generated code files, TokenHelper and/or SharePointContext, to use a different authentication system. You would also customize these files if your remote web application accesses SharePoint in an identity other than the user who is running the SharePoint Add-in. Finally, if the remote web application is PHP, node.js, Java, or some other non-ASP.NET platform, then your code needs to obtain the user's ID from whatever authentication system is being used, and then add that ID into the access token it constructs. For more information, see  [Package and publish high-trust SharePoint Add-ins](package-and-publish-high-trust-sharepoint-add-ins.md),  [Create and use access tokens in provider-hosted high-trust SharePoint Add-ins](create-and-use-access-tokens-in-provider-hosted-high-trust-sharepoint-add-ins.md) and [Using SharePoint Add-ins with SAML and FBA Sites in SharePoint 2013](http://blogs.technet.com/b/speschka/archive/2012/12/07/using-sharepoint-apps-with-saml-and-fba-sites-in-sharepoint-2013.aspx).
+When you are debugging in Visual Studio with  **F5**, Microsoft Office Developer Tools for Visual Studio uses Windows Authentication, and the two generated code files use the Windows identity of the person running the add-in to create the access token. When your add-in is published, you need to configure the remote web application in IIS Manager to use Windows Authentication if you want to use the two generated files without modification. If your add-in will not use Windows Authentication on the production environment, you will need to customize the generated code files, TokenHelper and/or SharePointContext, to use a different authentication system. You would also customize these files if your remote web application accesses SharePoint in an identity other than the user who is running the SharePoint Add-in. Finally, if the remote web application is PHP, node.js, Java, or some other non-ASP.NET platform, then your code needs to obtain the user's ID from whatever authentication system is being used, and then add that ID into the access token it constructs. For more information, see  [Package and publish high-trust SharePoint Add-ins](package-and-publish-high-trust-sharepoint-add-ins.md),  [Create and use access tokens in provider-hosted high-trust SharePoint Add-ins](create-and-use-access-tokens-in-provider-hosted-high-trust-sharepoint-add-ins.md) and [Using SharePoint Add-ins with SAML and FBA Sites in SharePoint](http://blogs.technet.com/b/speschka/archive/2012/12/07/using-sharepoint-apps-with-saml-and-fba-sites-in-sharepoint-2013.aspx).
  
 
  
@@ -494,7 +494,7 @@ When you are debugging in Visual Studio with  **F5**, Microsoft Office Developer
 -  [Package and publish high-trust SharePoint Add-ins](package-and-publish-high-trust-sharepoint-add-ins.md)
     
  
--  [Troubleshooting Tips for High Trust Add-ins on SharePoint 2013](http://blogs.technet.com/b/speschka/archive/2012/11/01/more-troubleshooting-tips-for-high-trust-apps-on-sharepoint-2013.aspx)
+-  [Troubleshooting Tips for High Trust Add-ins on SharePoint](http://blogs.technet.com/b/speschka/archive/2012/11/01/more-troubleshooting-tips-for-high-trust-apps-on-sharepoint-2013.aspx)
     
  
 -  [Register SharePoint Add-ins 2013](register-sharepoint-add-ins-2013.md)
@@ -506,7 +506,7 @@ When you are debugging in Visual Studio with  **F5**, Microsoft Office Developer
 -  [Announcing the new SharePointContext helper in SharePoint Add-ins 2013](http://blogs.msdn.com/b/officeapps/archive/2013/11/07/announcing-the-new-sharepointcontext-helper-in-apps-for-sharepoint-2013.aspx)
     
  
--  [Add-in permissions in SharePoint 2013](add-in-permissions-in-sharepoint-2013.md)
+-  [Add-in permissions in SharePoint](add-in-permissions-in-sharepoint-2013.md)
     
  
 -  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)

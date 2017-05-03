@@ -23,12 +23,12 @@ A high-trust add-in is a provider-hosted SharePoint Add-in that is installed to 
  **Note**   This topic helps you understand the high-trust authorization system for SharePoint Add-ins. For practical information about creating and deploying high-trust add-ins, see the following topics: [Create high-trust SharePoint Add-ins](create-high-trust-sharepoint-add-ins.md) [Package and publish high-trust SharePoint Add-ins](package-and-publish-high-trust-sharepoint-add-ins.md)
  
 
-In SharePoint 2013, the security token service (STS) provides access tokens for server-to-server authentication. The STS enables temporary access tokens to access other application services such as Exchange 2013, Lync 2013, and SharePoint Add-ins. A farm administrator establishes trust between SharePoint and the other application or add-in by using Windows PowerShell cmdlets and a certificate. Each certificate that is used must be trusted by SharePoint 2013 using the  `New-SPTrustedRootAuthority` cmdlet. Also each certificate must be registered with SharePoint as a token issuer using the `New-SPTrustedSecurityTokenIssuer` cmdlet.
+In SharePoint, the security token service (STS) provides access tokens for server-to-server authentication. The STS enables temporary access tokens to access other application services such as Exchange 2013, Lync 2013, and SharePoint Add-ins. A farm administrator establishes trust between SharePoint and the other application or add-in by using Windows PowerShell cmdlets and a certificate. Each certificate that is used must be trusted by SharePoint using the  `New-SPTrustedRootAuthority` cmdlet. Also each certificate must be registered with SharePoint as a token issuer using the `New-SPTrustedSecurityTokenIssuer` cmdlet.
  
 
  
 
- **Note**  The STS isn't intended for user authentication. So, you won't see the STS listed on the user sign-in page, in the  **Authentication Provider** section in Central Administration, or in the People Picker in SharePoint 2013.
+ **Note**  The STS isn't intended for user authentication. So, you won't see the STS listed on the user sign-in page, in the  **Authentication Provider** section in Central Administration, or in the People Picker in SharePoint.
  
 
 
@@ -62,7 +62,7 @@ $fullIssuerIdentifier = "<client_ID_of_SP_app> " + "@" + "<realm_GUID> "
 New-SPTrustedSecurityTokenIssuer -RegisteredIssuerName $fullIssuerIdentifier --other parameters omitted--
 ```
 
-Typically, the  `New-SPTrustedSecurityTokenIssuer` cmdlet is used in a script that performs other tasks to configure SharePoint for high-trust add-ins. For more information about such scripts and complete examples of the `New-SPTrustedSecurityTokenIssuer` cmdlet, see [High-trust configuration scripts for SharePoint 2013](high-trust-configuration-scripts-for-sharepoint-2013.md).
+Typically, the  `New-SPTrustedSecurityTokenIssuer` cmdlet is used in a script that performs other tasks to configure SharePoint for high-trust add-ins. For more information about such scripts and complete examples of the `New-SPTrustedSecurityTokenIssuer` cmdlet, see [High-trust configuration scripts for SharePoint](high-trust-configuration-scripts-for-sharepoint-2013.md).
  
 
  
@@ -93,7 +93,7 @@ To get the still trustworthy SharePoint Add-ins working again, the administrator
  
 
  
-The benefit of using one certificate per add-in is that it makes it easier to break trust with a particular add-in, because the certificates that are used by the still trustworthy add-ins are not affected when the administrator breaks trust with the certificate of the one add-in. The disadvantage in this strategy is that an administrator has more certificates to acquire and SharePoint must be configured to use each of them, which can be done with a reusable script as shown in  [High-trust configuration scripts for SharePoint 2013](high-trust-configuration-scripts-for-sharepoint-2013.md).
+The benefit of using one certificate per add-in is that it makes it easier to break trust with a particular add-in, because the certificates that are used by the still trustworthy add-ins are not affected when the administrator breaks trust with the certificate of the one add-in. The disadvantage in this strategy is that an administrator has more certificates to acquire and SharePoint must be configured to use each of them, which can be done with a reusable script as shown in  [High-trust configuration scripts for SharePoint](high-trust-configuration-scripts-for-sharepoint-2013.md).
  
 
  
@@ -124,7 +124,7 @@ New-SPTrustedRootAuthority -Name "<name_of_certificate>" -Certificate $certifica
 
 ```
 
-The root and intermediate certificates should be added only once on a SharePoint farm. Typically, the web application's certificate is added in a separate script that does other configuration too, such as the call to  `New-SPTrustedSecurityTokenIssuer`. For examples, see  [High-trust configuration scripts for SharePoint 2013](high-trust-configuration-scripts-for-sharepoint-2013.md).
+The root and intermediate certificates should be added only once on a SharePoint farm. Typically, the web application's certificate is added in a separate script that does other configuration too, such as the call to  `New-SPTrustedSecurityTokenIssuer`. For examples, see  [High-trust configuration scripts for SharePoint](high-trust-configuration-scripts-for-sharepoint-2013.md).
  
 
  
@@ -197,7 +197,7 @@ Developers will have to understand the requirements for application security as 
 -  [Package and publish high-trust SharePoint Add-ins](package-and-publish-high-trust-sharepoint-add-ins.md)
     
  
--  [Troubleshooting tips for high trust add-ins on SharePoint 2013](http://blogs.technet.com/b/speschka/archive/2012/11/01/more-troubleshooting-tips-for-high-trust-apps-on-sharepoint-2013.aspx)
+-  [Troubleshooting tips for high trust add-ins on SharePoint](http://blogs.technet.com/b/speschka/archive/2012/11/01/more-troubleshooting-tips-for-high-trust-apps-on-sharepoint-2013.aspx)
     
  
 -  [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md)

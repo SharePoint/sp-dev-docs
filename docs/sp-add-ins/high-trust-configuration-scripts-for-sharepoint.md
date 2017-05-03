@@ -1,6 +1,6 @@
 
-# High-trust configuration scripts for SharePoint 2013
-Get customizable Windows PowerShell scripts that configure a Microsoft SharePoint 2013 farm to use a high-trust SharePoint Add-in.
+# High-trust configuration scripts for SharePoint
+Get customizable Windows PowerShell scripts that configure a Microsoft SharePoint farm to use a high-trust SharePoint Add-in.
  
 
  **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
@@ -10,7 +10,7 @@ Get customizable Windows PowerShell scripts that configure a Microsoft SharePoin
 ## How to use the scripts
 <a name="Usage"> </a>
 
-The scripts below are used to designate one or more X.509 digital certificates as trusted issuers of access tokens in a staging or production Microsoft SharePoint 2013 farm. (For a script that is more appropriate for an SharePoint Add-ins development environment, see  [Create high-trust SharePoint Add-ins](create-high-trust-sharepoint-add-ins.md).) No single set of scripts can work for every SharePoint farm because there are too many different ways that the certificates can be acquired and stored. For that reason, please note the following:
+The scripts below are used to designate one or more X.509 digital certificates as trusted issuers of access tokens in a staging or production Microsoft SharePoint farm. (For a script that is more appropriate for an SharePoint Add-ins development environment, see  [Create high-trust SharePoint Add-ins](create-high-trust-sharepoint-add-ins.md).) No single set of scripts can work for every SharePoint farm because there are too many different ways that the certificates can be acquired and stored. For that reason, please note the following:
  
 
  
@@ -50,7 +50,7 @@ See specific usage notes for each script in the sections below.
 ## AddSPRootAuthority.ps1
 <a name="RootScript"> </a>
 
-The certificate of the remote web application component of the high-trust SharePoint Add-in is obtained from either a commercial Certificate Authority (CA) or a domain CA. In either case, the certificate is the lowest link in a chain of certificates, each trusting the one above it, which originates with a root CA (commercial or domain). SharePoint 2013 requires that  *all*  the certificates in the chain be added to SharePoint's list of trusted root authorities. The script below can be used to add each certificate in the chain *except the lowest one*  to the list. The lowest certificate in the chain, the certificate that is directly bound to the remote web application, is added to the root authorities in one of the major scripts described in later sections.
+The certificate of the remote web application component of the high-trust SharePoint Add-in is obtained from either a commercial Certificate Authority (CA) or a domain CA. In either case, the certificate is the lowest link in a chain of certificates, each trusting the one above it, which originates with a root CA (commercial or domain). SharePoint requires that  *all*  the certificates in the chain be added to SharePoint's list of trusted root authorities. The script below can be used to add each certificate in the chain *except the lowest one*  to the list. The lowest certificate in the chain, the certificate that is directly bound to the remote web application, is added to the root authorities in one of the major scripts described in later sections.
  
 
  

@@ -1,19 +1,19 @@
 ---
-title: Authorization, users, groups, and the object model in SharePoint 2013
+title: Authorization, users, groups, and the object model in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: aacf3398-f0b5-48cb-9071-440b4c3a9dd1
 ---
 
 
-# Authorization, users, groups, and the object model in SharePoint 2013
+# Authorization, users, groups, and the object model in SharePoint
 
-In SharePoint 2013, access to websites, lists, folders, and list items is controlled through a role-based membership system by which users are assigned to roles that authorize their access to SharePoint 2013 objects.
+In SharePoint, access to websites, lists, folders, and list items is controlled through a role-based membership system by which users are assigned to roles that authorize their access to SharePoint objects.
   
     
     
 
 To give a user access to an object, you can add the user to a group that already has permissions to the object, or you can create a role assignment object, set the user for the role assignment, optionally bind the role assignment to the appropriate role definition with base permissions, and then add the assignment to the collection of role assignments for the list item, folder, list, or website. If you do not bind the role assignment to a role definition when assigning a user to a role, the user has no permission.
-Following are ways that SharePoint 2013 provides to control access to its objects:
+Following are ways that SharePoint provides to control access to its objects:
   
     
     
@@ -25,7 +25,7 @@ Following are ways that SharePoint 2013 provides to control access to its object
 - Sites, lists, folders, and items each provide role assignment collections, enabling fine management of user access to objects.
     
   
-- Groups consist of users and may or may not be assigned to roles. SharePoint 2013 includes the following three groups by default:
+- Groups consist of users and may or may not be assigned to roles. SharePoint includes the following three groups by default:
     
   - **owners** (administrator)
     
@@ -46,11 +46,11 @@ Following are ways that SharePoint 2013 provides to control access to its object
 - Site creation rights ( **CreateSSCSite** and **ManageSubwebs**) control whether users can create top-level websites, subsites, or workspaces.
     
   
-Users become members of a SharePoint object indirectly through a group that has a role assignment, or directly through a role assignment. Users also can be members of a Microsoft Windows NT Domain Group that is added to a group or to a role. A role definition associates a user or group with a single right or set of rights corresponding to values of the  [Microsoft.SharePoint.SPBasePermissions](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPBasePermissions.aspx) enumeration. Each user or group has a unique member [ID](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPMember.ID.aspx) .You can use the object model to create or modify role assignments and definitions differently than the way you can through the functionality of the addrole.aspx file and the editrole.aspx file. Unlike these pages, which are presented in the user interface, the object model does not enforce rights dependency, so you can create a role definition with an arbitrary combination of rights. But, plan carefully when using the object model to customize role definitions and permissions, because a poorly planned role definition and inappropriately assigned rights can lead to a bad user experience.For more information about SharePoint 2013 rights, see  [SPBasePermissions](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPBasePermissions.aspx) .
+Users become members of a SharePoint object indirectly through a group that has a role assignment, or directly through a role assignment. Users also can be members of a Microsoft Windows NT Domain Group that is added to a group or to a role. A role definition associates a user or group with a single right or set of rights corresponding to values of the  [Microsoft.SharePoint.SPBasePermissions](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPBasePermissions.aspx) enumeration. Each user or group has a unique member [ID](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPMember.ID.aspx) .You can use the object model to create or modify role assignments and definitions differently than the way you can through the functionality of the addrole.aspx file and the editrole.aspx file. Unlike these pages, which are presented in the user interface, the object model does not enforce rights dependency, so you can create a role definition with an arbitrary combination of rights. But, plan carefully when using the object model to customize role definitions and permissions, because a poorly planned role definition and inappropriately assigned rights can lead to a bad user experience.For more information about SharePoint rights, see  [SPBasePermissions](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPBasePermissions.aspx) .
 ## Security policy
 <a name="SP15_AuthorizationUsersGroupsAndObjectModel_SecurityPolicy"> </a>
 
-A security policy provides a way to enforce uniform security throughout all site collections within a web application (virtual server). Through policy, you can assign a role, or collection of rights, to individual SharePoint 2013 users, and to domain groups using Windows authentication or pluggable authentication systems, but not to SharePoint groups. Each policy entry specifies rights for a user or group in the web application.
+A security policy provides a way to enforce uniform security throughout all site collections within a web application (virtual server). Through policy, you can assign a role, or collection of rights, to individual SharePoint users, and to domain groups using Windows authentication or pluggable authentication systems, but not to SharePoint groups. Each policy entry specifies rights for a user or group in the web application.
   
     
     
@@ -163,7 +163,7 @@ An ACL is a binary object that determines the rights that users and groups have 
 ## Object model changes: obsolete but backward-compatible security objects
 <a name="SP15_AuthorizationUsersGroupsAndObjectModel_ObjectModel"> </a>
 
-In SharePoint 2013, all object scopes share the same basic permissions management experience. SharePoint 2013 manages permissions through role definitions, which enable a consistent experience at the list, folder, and item level. The following security objects used in Windows SharePoint Services 2.0 are obsolete, but continue to function for backward-compatibility:
+In SharePoint, all object scopes share the same basic permissions management experience. SharePoint manages permissions through role definitions, which enable a consistent experience at the list, folder, and item level. The following security objects used in Windows SharePoint Services 2.0 are obsolete, but continue to function for backward-compatibility:
   
     
     
@@ -249,19 +249,19 @@ The only way to remove a user from all scopes is to delete that user from the si
 <a name="SP15_AuthorizationUsersGroupsAndObjectModel_AdditionalResources"> </a>
 
 
--  [Authentication, authorization, and security in SharePoint 2013](authentication-authorization-and-security-in-sharepoint.md)
+-  [Authentication, authorization, and security in SharePoint](authentication-authorization-and-security-in-sharepoint.md)
     
   
--  [Role, inheritance, elevation of privilege, and password changes in SharePoint 2013](role-inheritance-elevation-of-privilege-and-password-changes-in-sharepoint.md)
+-  [Role, inheritance, elevation of privilege, and password changes in SharePoint](role-inheritance-elevation-of-privilege-and-password-changes-in-sharepoint.md)
     
   
--  [Claims-based identity in SharePoint 2013](claims-based-identity-in-sharepoint.md)
+-  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint.md)
     
   
--  [Claims-based identity and concepts in SharePoint 2013](claims-based-identity-and-concepts-in-sharepoint.md)
+-  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint.md)
     
   
--  [Configuration, administration, and resources in SharePoint 2013](configuration-administration-and-resources-in-sharepoint.md)
+-  [Configuration, administration, and resources in SharePoint](configuration-administration-and-resources-in-sharepoint.md)
     
   
 

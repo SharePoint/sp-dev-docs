@@ -1,11 +1,11 @@
 ---
-title: How to Create report renderers for PerformancePoint Services in SharePoint 2013
+title: How to Create report renderers for PerformancePoint Services in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 642175cb-8fcb-4210-8d1e-626ad1f58bb0
 ---
 
 
-# How to: Create report renderers for PerformancePoint Services in SharePoint 2013
+# How to: Create report renderers for PerformancePoint Services in SharePoint
 Learn how to create the renderer component in a custom report extension for PerformancePoint Services.
 ## What are custom report renderers for PerformancePoint Services?
 <a name="bk_intro"> </a>
@@ -14,7 +14,7 @@ In PerformancePoint Services, custom report renderers are web server controls th
   
     
     
-The following procedures and code examples are based on the **SampleReportRenderer** class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The renderer renders a table and populates it with values received from a linked filter. For the complete code for the class, see  [Code example: Create a renderer for custom PerformancePoint Services reports in SharePoint Server 2013](#bk_example).
+The following procedures and code examples are based on the **SampleReportRenderer** class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The renderer renders a table and populates it with values received from a linked filter. For the complete code for the class, see  [Code example: Create a renderer for custom PerformancePoint Services reports in SharePoint](#bk_example).
   
     
     
@@ -82,7 +82,7 @@ We recommend that you use the sample report renderer as a template. The sample s
     
   
 
-## Code example: Create a renderer for custom PerformancePoint Services reports in SharePoint Server 2013
+## Code example: Create a renderer for custom PerformancePoint Services reports in SharePoint
 <a name="bk_example"> </a>
 
 The class in the following code example creates a report renderer that displays stock information passed in from the sample filter.
@@ -269,10 +269,10 @@ After you create a report renderer and a report editor (including its user inter
 <a name="bk_addResources"> </a>
 
 
--  [How to: Create report renderers for PerformancePoint Services in SharePoint 2013](how-to-create-report-renderers-for-performancepoint-services-in-sharepoint.md)
+-  [How to: Create report renderers for PerformancePoint Services in SharePoint](how-to-create-report-renderers-for-performancepoint-services-in-sharepoint.md)
     
   
--  [PerformancePoint Services in SharePoint 2013](performancepoint-services-in-sharepoint.md)
+-  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint.md)
     
   
 

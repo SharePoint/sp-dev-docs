@@ -1,11 +1,11 @@
 ---
-title: Incoming claims Signing into SharePoint 2013
+title: Incoming claims Signing into SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 08c687aa-e485-4269-aea8-4333da3588a5
 ---
 
 
-# Incoming claims: Signing into SharePoint 2013
+# Incoming claims: Signing into SharePoint
 
 ## Signing in to SharePoint
 
@@ -95,16 +95,16 @@ SharePoint Server then does claims augmentation. Win32 clients must support the 
 <a name="bk_addresources"> </a>
 
 
--  [Claims-based identity in SharePoint 2013](claims-based-identity-in-sharepoint.md)
+-  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint.md)
     
   
--  [Claims provider in SharePoint 2013](claims-provider-in-sharepoint.md)
+-  [Claims provider in SharePoint](claims-provider-in-sharepoint.md)
     
   
--  [How to: Create a claims provider in SharePoint 2013](how-to-create-a-claims-provider-in-sharepoint.md)
+-  [How to: Create a claims provider in SharePoint](how-to-create-a-claims-provider-in-sharepoint.md)
     
   
--  [How to: Deploy a claims provider in SharePoint 2013](how-to-deploy-a-claims-provider-in-sharepoint.md)
+-  [How to: Deploy a claims provider in SharePoint](how-to-deploy-a-claims-provider-in-sharepoint.md)
     
   
 

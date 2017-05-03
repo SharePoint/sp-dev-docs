@@ -1,12 +1,12 @@
 ---
-title: External content types in SharePoint 2013
+title: External content types in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 11d7adb5-5388-4517-ae03-beb7be1c6981
 ---
 
 
-# External content types in SharePoint 2013
-Learn what you can do with external content types and what you need to start creating them in SharePoint 2013.
+# External content types in SharePoint
+Learn what you can do with external content types and what you need to start creating them in SharePoint.
 ## What is an external content type?
 <a name="SP15ectoverview_what"> </a>
 
@@ -53,7 +53,7 @@ To get started creating external content types, you will need the following:
     
     
 
-- SharePoint 2013
+- SharePoint
     
   
 - Visual Studio 2012
@@ -67,7 +67,7 @@ To get started creating external content types, you will need the following:
 - SharePoint Designer 2013
     
   
-To set up a development environment for creating external content types, see  [Set up a general development environment for SharePoint 2013](set-up-a-general-development-environment-for-sharepoint.md).
+To set up a development environment for creating external content types, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md).
   
     
     
@@ -96,7 +96,7 @@ When SharePoint is configured to communicate with the external system, you can u
   
 - **Business Data Web Parts**
     
-    SharePoint 2013 provides five different Web Parts for working with external data: Business Data List, Business Data Item, Business Data Item Builder, Business Data Related List, and Business Data Actions.
+    SharePoint provides five different Web Parts for working with external data: Business Data List, Business Data Item, Business Data Item Builder, Business Data Related List, and Business Data Actions.
     
   
 - **External Content Type Picker**
@@ -111,12 +111,12 @@ When SharePoint is configured to communicate with the external system, you can u
   
 - **Profile Pages**
     
-    Profile Pages are SharePoint pages in SharePoint 2013 that display the details about an external item. Just like any other SharePoint Web Parts page, you can customize this page to show details of an external item.
+    Profile Pages are SharePoint pages in SharePoint that display the details about an external item. Just like any other SharePoint Web Parts page, you can customize this page to show details of an external item.
     
   
 - **Custom pages and applications**
     
-    You can use the SharePoint 2013 programmability options, such as the SharePoint object model, client object model, and Representational State Transfer (REST) URLs.
+    You can use the SharePoint programmability options, such as the SharePoint object model, client object model, and Representational State Transfer (REST) URLs.
     
   
 Table 1 contains examples of tasks that illustrate working with external content types.
@@ -129,27 +129,27 @@ Table 1 contains examples of tasks that illustrate working with external content
 
 |**Task**|**Description**|
 |:-----|:-----|
-| [How to: Create an external content type from an OData source in SharePoint 2013](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md) <br/> |Learn how to use Visual Studio 2012 to discover a published OData source, and create a reusable external content type for use in SharePoint 2013 Business Connectivity Services (BCS).  <br/> |
-| [How to: Create external content types for SQL Server in SharePoint 2013](how-to-create-external-content-types-for-sql-server-in-sharepoint.md) <br/> |Learn how to create an external content type based on a SQL Server database.  <br/> |
+| [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md) <br/> |Learn how to use Visual Studio 2012 to discover a published OData source, and create a reusable external content type for use in SharePoint Business Connectivity Services (BCS).  <br/> |
+| [How to: Create external content types for SQL Server in SharePoint](how-to-create-external-content-types-for-sql-server-in-sharepoint.md) <br/> |Learn how to create an external content type based on a SQL Server database.  <br/> |
    
 
 ## Additional resources
 <a name="SP15ectoverview_addres"> </a>
 
 
--  [Business Connectivity Services in SharePoint 2013](business-connectivity-services-in-sharepoint.md)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
     
   
--  [How to: Create an add-in-scoped external content type in SharePoint 2013](how-to-create-an-add-in-scoped-external-content-type-in-sharepoint.md)
+-  [How to: Create an add-in-scoped external content type in SharePoint](how-to-create-an-add-in-scoped-external-content-type-in-sharepoint.md)
     
   
--  [How to: Create external content types for SQL Server in SharePoint 2013](how-to-create-external-content-types-for-sql-server-in-sharepoint.md)
+-  [How to: Create external content types for SQL Server in SharePoint](how-to-create-external-content-types-for-sql-server-in-sharepoint.md)
     
   
--  [Get started with Business Connectivity Services in SharePoint 2013](get-started-with-business-connectivity-services-in-sharepoint.md)
+-  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint.md)
     
   
--  [What's new in Business Connectivity Services in SharePoint 2013](what-s-new-in-business-connectivity-services-in-sharepoint.md)
+-  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint.md)
     
   
 

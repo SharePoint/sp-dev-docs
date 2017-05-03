@@ -1,22 +1,22 @@
 ---
-title: Create a workflow with elevated permissions by using the SharePoint 2013 Workflow platform
+title: Create a workflow with elevated permissions by using the SharePoint Workflow platform
 ms.prod: SHAREPOINT
 ms.assetid: 4656f6a0-36fd-4b7d-898e-8cd4bdbbda57
 ---
 
 
-# Create a workflow with elevated permissions by using the SharePoint 2013 Workflow platform
-Learn how to create a workflow with elevated permissions by using the SharePoint 2013 Workflow platform.
-## SharePoint Server 2013 App Catalog and workflow
+# Create a workflow with elevated permissions by using the SharePoint Workflow platform
+Learn how to create a workflow with elevated permissions by using the SharePoint Workflow platform.
+## SharePoint App Catalog and workflow
 <a name="section1"> </a>
 
-This article describes how to create SharePoint 2013 workflows that access objects in SharePoint that require elevated permissions. These solutions use two features: granting permissions to the workflow app and wrapping actions with the App Step.
+This article describes how to create SharePoint workflows that access objects in SharePoint that require elevated permissions. These solutions use two features: granting permissions to the workflow app and wrapping actions with the App Step.
   
     
     
 
 > **Important:**
-> This article assumes that the SharePoint 2013 Workflow platform has been installed and configured and that SharePoint 2013 has been configured for apps. For more information on SharePoint 2013 Workflow and apps for SharePoint 2013, including installation and configuration, see  [Workflow in SharePoint 2013](http://technet.microsoft.com/sharepoint/jj556245.aspx) and [Install and manage apps for SharePoint 2013](http://msdn.microsoft.com/library/733647a3-a5d3-475b-967d-3bb627c2a0c2.aspx). 
+> This article assumes that the SharePoint Workflow platform has been installed and configured and that SharePoint has been configured for apps. For more information on SharePoint Workflow and apps for SharePoint, including installation and configuration, see  [Workflow in SharePoint](http://technet.microsoft.com/sharepoint/jj556245.aspx) and [Install and manage apps for SharePoint](http://msdn.microsoft.com/library/733647a3-a5d3-475b-967d-3bb627c2a0c2.aspx). 
   
     
     
@@ -47,9 +47,9 @@ To solve this, you have to create a workflow with elevated permissions by doing 
     
   
 
-### Allowing a workflow to use app permissions in a SharePoint Server 2013 site
+### Allowing a workflow to use app permissions in a SharePoint site
 
-The first step is to allow workflow to use app permissions. You configure workflow to use app permissions on the **Site Settings** page of the SharePoint Server 2013 site where the workflow will run. The following procedure configures the SharePoint Server 2013 site to allow workflow to use app permissions.
+The first step is to allow workflow to use app permissions. You configure workflow to use app permissions on the **Site Settings** page of the SharePoint site where the workflow will run. The following procedure configures the SharePoint site to allow workflow to use app permissions.
   
     
     
@@ -85,7 +85,7 @@ The first step is to allow workflow to use app permissions. You configure workfl
 4. Locate the feature called **Workflows can use app permissions**, as shown in the figure, and then click **Activate**.
     
     > **Caution:**
-      > This feature will not activate unless you have properly configured the SharePoint 2013 Workflow platform and also apps for SharePoint. 
+      > This feature will not activate unless you have properly configured the SharePoint Workflow platform and also apps for SharePoint. 
 
    **Figure: The site feature, 'Workflows can use app permissions'**
 
@@ -106,7 +106,7 @@ In order for the workflow to function properly it must be granted full control i
     
 
 > **Important:**
->  The procedure assumes the following:>  The procedure must be completed by a user that has **Site Owner** permissions.>  The workflow must already be published to the SharePoint Server 2013 site.
+>  The procedure assumes the following:>  The procedure must be completed by a user that has **Site Owner** permissions.>  The workflow must already be published to the SharePoint site.
   
     
     
@@ -152,7 +152,7 @@ In order for the workflow to function properly it must be granted full control i
     > **Note:**
       > The 'app' in this step refers to the Workflow app in general and not just a specific workflow. Individual workflows cannot be access controlled. When you enable app permissions you are enabling for all workflows within the Site Collection. 
 
-    For more information about setting up a workflow, see  [Blog article from Sympraxis Consulting: Looping Through Content in a SharePoint 2013 Site Workflow](http://sympmarc.com/2016/01/14/looping-through-content-in-a-sharepoint-site-workflow-part-1-introduction)
+    For more information about setting up a workflow, see  [Blog article from Sympraxis Consulting: Looping Through Content in a SharePoint Site Workflow](http://sympmarc.com/2016/01/14/looping-through-content-in-a-sharepoint-site-workflow-part-1-introduction)
     
     The following figure shows an example.
     
@@ -355,28 +355,28 @@ The following diagram illustrates the change in permissions
 <a name="section3"> </a>
 
 
--  [Workflow in SharePoint 2013 ](http://technet.microsoft.com/en-us/sharepoint/jj556245.aspx)
+-  [Workflow in SharePoint ](http://technet.microsoft.com/en-us/sharepoint/jj556245.aspx)
     
   
--  [Install and manage apps for SharePoint 2013](http://msdn.microsoft.com/library/733647a3-a5d3-475b-967d-3bb627c2a0c2.aspx)
+-  [Install and manage apps for SharePoint](http://msdn.microsoft.com/library/733647a3-a5d3-475b-967d-3bb627c2a0c2.aspx)
     
   
--  [What's new in workflow in SharePoint Server 2013](http://msdn.microsoft.com/library/6ab8a28b-fa2f-4530-8b55-a7f663bf15ea.aspx)
+-  [What's new in workflow in SharePoint](http://msdn.microsoft.com/library/6ab8a28b-fa2f-4530-8b55-a7f663bf15ea.aspx)
     
   
--  [Getting started with SharePoint Server 2013 workflow](http://msdn.microsoft.com/library/cc73be76-a329-449f-90ab-86822b1c2ee8.aspx)
+-  [Getting started with SharePoint workflow](http://msdn.microsoft.com/library/cc73be76-a329-449f-90ab-86822b1c2ee8.aspx)
     
   
 -  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)
     
   
--  [Workflow actions quick reference (SharePoint 2013 Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
+-  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
     
   
 -  [Blog article from the SharePoint Designer team: Workflow package and deploy scenario](http://blogs.msdn.com/b/sharepointdesigner/archive/2012/08/30/packaging-list-site-and-reusable-workflow-and-how-to-deploy-the-package.aspx)
     
   
--  [Blog article from Sympraxis Consulting: Looping Through Content in a SharePoint 2013 Site Workflow](http://sympmarc.com/2016/01/14/looping-through-content-in-a-sharepoint-site-workflow-part-1-introduction)
+-  [Blog article from Sympraxis Consulting: Looping Through Content in a SharePoint Site Workflow](http://sympmarc.com/2016/01/14/looping-through-content-in-a-sharepoint-site-workflow-part-1-introduction)
     
   
 

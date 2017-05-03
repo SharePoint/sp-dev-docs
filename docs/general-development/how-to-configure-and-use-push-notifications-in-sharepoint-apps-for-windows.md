@@ -1,11 +1,11 @@
 ---
-title: How to Configure and use push notifications in SharePoint 2013 apps for Windows Phone
+title: How to Configure and use push notifications in SharePoint apps for Windows Phone
 ms.prod: SHAREPOINT
 ms.assetid: 68fa2138-86d9-4e35-9c7c-5cd292087b80
 ---
 
 
-# How to: Configure and use push notifications in SharePoint 2013 apps for Windows Phone
+# How to: Configure and use push notifications in SharePoint apps for Windows Phone
 Create a solution in SharePoint Server for sending push notifications and develop a Windows Phone app for receiving the notifications.
 Using the Microsoft Push Notification Service (MPNS), Windows Phone apps can receive notifications through the Internet of events triggered on Microsoft SharePoint Server. The phone app doesn't have to poll the server for changes to, for example, the items in a list on which the phone app is based. The app can be registered to receive notifications from the server, and an event receiver can initiate a notification and send it to the receiving app for handling. The push notification is relayed to Windows Phone devices by MPNS.
   
@@ -41,7 +41,7 @@ The server-side solution can be either a SharePoint app deployed in an isolated 
 3. In the **New Project** dialog box, expand the **SharePoint** node under **Visual C#**, and then choose the **15** node.
     
   
-4. In the **Templates** pane, select **SharePoint 2013 Project** and specify a name for the project, such asPushNotificationsList.
+4. In the **Templates** pane, select **SharePoint Project** and specify a name for the project, such asPushNotificationsList.
     
   
 5. Choose the **OK** button. The SharePoint Customization Wizard appears. This wizard enables you to select the target site for developing and debugging the project and the trust level of the solution.
@@ -648,7 +648,7 @@ In this section, you create a Windows Phone app from the Windows Phone SharePoin
   
     
     
-To follow the procedures in this section, first perform the steps in the procedure described in  [How to: Create a Windows Phone SharePoint 2013 list app](how-to-create-a-windows-phone-sharepoint-list-app.md) to create a Visual Studio project from the Windows Phone SharePoint List Application template, using the Jobs list created in the preceding section as the target SharePoint list for the project. For the purposes of the procedures in this section, it is assumed that the name specified for the project isSPListAppForNotifications.
+To follow the procedures in this section, first perform the steps in the procedure described in  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app.md) to create a Visual Studio project from the Windows Phone SharePoint List Application template, using the Jobs list created in the preceding section as the target SharePoint list for the project. For the purposes of the procedures in this section, it is assumed that the name specified for the project isSPListAppForNotifications.
   
     
     
@@ -1353,7 +1353,7 @@ When you add an item to the Jobs SharePoint list, the code in the event receiver
 <a name="SP15Configurepushnot_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint 2013](build-windows-phone-apps-that-access-sharepoint.md)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
 -  [Push Notifications Overview for Windows Phone](http://msdn.microsoft.com/en-us/library/ff402558%28VS.92%29.aspx)

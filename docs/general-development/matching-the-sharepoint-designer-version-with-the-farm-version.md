@@ -16,7 +16,7 @@ SharePoint Designer is tool used to connect to and work with a SharePoint site. 
     
 
 > **Note:**
-> The latest version of the product is SharePoint Designer 2013. To learn how to find and install SharePoint Designer 2013, see  [Creating a workflow by using SharePoint Designer 2013 and the SharePoint 2013 Workflow platform](creating-a-workflow-by-using-sharepoint-designer-and-the-sharepoint-wo.md). If you already have an older version of SharePoint Designer installed on your computer we recommend that you uninstall it before installing the new version. 
+> The latest version of the product is SharePoint Designer 2013. To learn how to find and install SharePoint Designer 2013, see  [Creating a workflow by using SharePoint Designer 2013 and the SharePoint Workflow platform](creating-a-workflow-by-using-sharepoint-designer-and-the-sharepoint-wo.md). If you already have an older version of SharePoint Designer installed on your computer we recommend that you uninstall it before installing the new version. 
   
     
     
@@ -34,10 +34,10 @@ Trying to use a version of SharePoint Designer that does not match with the Shar
 <a name="bk_addresources"> </a>
 
 
--  [What's new in workflow in SharePoint Server 2013](http://msdn.microsoft.com/library/6ab8a28b-fa2f-4530-8b55-a7f663bf15ea.aspx)
+-  [What's new in workflow in SharePoint](http://msdn.microsoft.com/library/6ab8a28b-fa2f-4530-8b55-a7f663bf15ea.aspx)
     
   
--  [Getting started with SharePoint Server 2013 workflow](http://msdn.microsoft.com/library/cc73be76-a329-449f-90ab-86822b1c2ee8.aspx)
+-  [Getting started with SharePoint workflow](http://msdn.microsoft.com/library/cc73be76-a329-449f-90ab-86822b1c2ee8.aspx)
     
   
 -  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)

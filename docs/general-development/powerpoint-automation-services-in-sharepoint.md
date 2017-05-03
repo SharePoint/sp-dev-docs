@@ -1,17 +1,17 @@
 ---
-title: PowerPoint Automation Services in SharePoint 2013
+title: PowerPoint Automation Services in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 168c7dc0-fbdc-41a2-84db-65d211d3d673
 ---
 
 
-# PowerPoint Automation Services in SharePoint 2013
+# PowerPoint Automation Services in SharePoint
 Learn to use Microsoft PowerPoint Automation Services to do server-side presentation conversions to and from a variety of file formats. 
 
 ## Introduction
 <a name="PAS_Intro"> </a>
 
-Many businesses, large and small, use their Microsoft SharePoint Server libraries as a repository for Microsoft PowerPoint presentations. These businesses all have their own particular needs for storing, distributing, and updating their presentations. Microsoft PowerPoint Automation Services is a new feature of Microsoft SharePoint Server 2013 that can help enterprises to manage their presentations. It is a shared service that provides unattended, server-side conversion of presentations into other formats. It was designed from the outset to work on servers and can process many presentation files in a reliable and predictable manner.
+Many businesses, large and small, use their Microsoft SharePoint Server libraries as a repository for Microsoft PowerPoint presentations. These businesses all have their own particular needs for storing, distributing, and updating their presentations. Microsoft PowerPoint Automation Services is a new feature of Microsoft SharePoint that can help enterprises to manage their presentations. It is a shared service that provides unattended, server-side conversion of presentations into other formats. It was designed from the outset to work on servers and can process many presentation files in a reliable and predictable manner.
   
     
     
@@ -21,7 +21,7 @@ Using PowerPoint Automation Services, you can convert from the PowerPoint binary
     
 
 > **Note:**
-> PowerPoint Automation Services takes advantage of facilities of SharePoint 2013 and is a feature of it. You must have SharePoint Server 2013 installed to use PowerPoint Automation Services. If you are using SharePoint Server 2013 in a server farm, you must explicitly enable PowerPoint Automation Services. 
+> PowerPoint Automation Services takes advantage of facilities of SharePoint and is a feature of it. You must have SharePoint installed to use PowerPoint Automation Services. If you are using SharePoint in a server farm, you must explicitly enable PowerPoint Automation Services. 
   
     
     
@@ -89,7 +89,7 @@ PowerPoint Automation Services does not include capabilities for printing docume
 ## PowerPoint Automation Services API
 <a name="PAS_APIs"> </a>
 
-To use PowerPoint Automation Services, you use its programming interface to send a conversion request to the SharePoint Server 2013 server. For each conversion request, you specify which files you want to convert and the output format of the conversion job. For some conversion requests, you can also specify what types of content is converted, including comments, hidden slides, or document properties.
+To use PowerPoint Automation Services, you use its programming interface to send a conversion request to the SharePoint server. For each conversion request, you specify which files you want to convert and the output format of the conversion job. For some conversion requests, you can also specify what types of content is converted, including comments, hidden slides, or document properties.
   
     
     
@@ -210,7 +210,7 @@ The easiest way to show how to write code that uses PowerPoint Automation Servic
     
 
 > **Note:**
-> Because PowerPoint Automation Services is a service of SharePoint Server 2013, you can use it only in an application that runs directly on a SharePoint Server. You must build the application as a farm solution. You cannot use PowerPoint Automation Services from a sandboxed solution. 
+> Because PowerPoint Automation Services is a service of SharePoint, you can use it only in an application that runs directly on a SharePoint Server. You must build the application as a farm solution. You cannot use PowerPoint Automation Services from a sandboxed solution. 
   
     
     
@@ -460,7 +460,7 @@ End Namespace
 3. After waiting one minute for the conversion process to run, navigate to the Shared Documents folder in the SharePoint site, and refresh the page. The document library now contains a new PowerPoint document, Pres1.pptx.
     
   
-PowerPoint Automation Services on SharePoint Server 2013 provides businesses with advanced capabilities for managing their presentation files. This high-performance solution allows scalable, server-side presentation manipulation and generation, as a batch or on-demand. 
+PowerPoint Automation Services on SharePoint provides businesses with advanced capabilities for managing their presentation files. This high-performance solution allows scalable, server-side presentation manipulation and generation, as a batch or on-demand. 
   
     
     
@@ -475,7 +475,7 @@ PowerPoint Automation Services on SharePoint Server 2013 provides businesses wit
 ## Conclusion
 <a name="PAS_Conclusion"> </a>
 
-PowerPoint Automation Services on SharePoint Server 2013 provides businesses with advanced capabilities for managing their presentation files. This high-performance solution allows scalable, server-side presentation manipulation and generation, as a batch or on-demand. 
+PowerPoint Automation Services on SharePoint provides businesses with advanced capabilities for managing their presentation files. This high-performance solution allows scalable, server-side presentation manipulation and generation, as a batch or on-demand. 
   
     
     

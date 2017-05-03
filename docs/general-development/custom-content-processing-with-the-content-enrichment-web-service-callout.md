@@ -6,8 +6,8 @@ ms.assetid: bdda92c8-9c8d-416e-9a6b-4a9373686fa0
 
 
 # Custom content processing with the Content Enrichment web service callout
-Learn about the content enrichment web service callout in SharePoint 2013 that enables developers to create an external web service to modify managed properties for crawled items during content processing.
-Search in SharePoint 2013 enables users to modify the managed properties of crawled items before they are indexed by calling out to an external content enrichment web service. The ability to modify managed properties for items during content processing is helpful when performing tasks such as data cleansing, entity extraction, classification, and tagging.
+Learn about the content enrichment web service callout in SharePoint that enables developers to create an external web service to modify managed properties for crawled items during content processing.
+Search in SharePoint enables users to modify the managed properties of crawled items before they are indexed by calling out to an external content enrichment web service. The ability to modify managed properties for items during content processing is helpful when performing tasks such as data cleansing, entity extraction, classification, and tagging.
   
     
     
@@ -142,7 +142,7 @@ Table 2 lists examples of trigger conditions.
 |StartsWith(MP1, "sample") AND MP2 != 18  <br/> |Returns **true** if the value in the managed property MP1 starts with "sample" and the value of managed property MP2 is not 18. <br/> |MP1 must be of type **string** and MP2 must be a numeric type. <br/> |
 |IsDay(MP1, 2009, 12, 24)  <br/> |Checks whether the managed property MP1 contains a **DateTime** that falls on December 24, 2009. <br/> |MP1 must be of type **DateTime**.  <br/> |
    
-See  [Trigger expressions syntax in SharePoint 2013](trigger-expressions-syntax-in-sharepoint.md) for the elements that can be used in a trigger expression and a list of supported functions.
+See  [Trigger expressions syntax in SharePoint](trigger-expressions-syntax-in-sharepoint.md) for the elements that can be used in a trigger expression and a list of supported functions.
   
     
     
@@ -166,7 +166,7 @@ For a basic implementation, do the following:
 <a name="bk_addresources"> </a>
 
 
--  [Configure search in SharePoint 2013](configure-search-in-sharepoint.md)
+-  [Configure search in SharePoint](configure-search-in-sharepoint.md)
     
   
 -  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout.md)

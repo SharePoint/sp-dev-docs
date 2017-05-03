@@ -657,10 +657,10 @@ Visio Professional 2013 can recognize a maximum of 10 levels of nested workflow 
 <a name="bk_addresources"> </a>
 
 
--  [What's new in workflows for SharePoint 2013](what-s-new-in-workflows-for-sharepoint.md)
+-  [What's new in workflows for SharePoint](what-s-new-in-workflows-for-sharepoint.md)
     
   
--  [Get started with workflows in SharePoint 2013](get-started-with-workflows-in-sharepoint.md)
+-  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint.md)
     
   
 -  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)

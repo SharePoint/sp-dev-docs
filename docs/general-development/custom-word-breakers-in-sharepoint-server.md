@@ -1,13 +1,13 @@
 ---
-title: Custom word breakers in SharePoint Server 2013
+title: Custom word breakers in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: d18b48d4-987c-4228-9932-30d5b30f86a2
 ---
 
 
-# Custom word breakers in SharePoint Server 2013
-Learn about word breaking in SharePoint Server 2013. 
-Word breaking is one of the key Natural Language Processing (NLP) features that enable search and improve search results (or recall). Word breakers split a stream of text into individual words or tokens on which you can base additional language processing. Word breakers are language-specific. In addition to built-in word breakers, Search in SharePoint 2013 enables the use of custom word breakers so that users can tune word breaking behavior according to their needs. See  [Supported languages for word breaker customizations in SharePoint Server 2013](#SP15_SupportedLanguages) for a list languages supported for word breaker customization.
+# Custom word breakers in SharePoint
+Learn about word breaking in SharePoint. 
+Word breaking is one of the key Natural Language Processing (NLP) features that enable search and improve search results (or recall). Word breakers split a stream of text into individual words or tokens on which you can base additional language processing. Word breakers are language-specific. In addition to built-in word breakers, Search in SharePoint enables the use of custom word breakers so that users can tune word breaking behavior according to their needs. See  [Supported languages for word breaker customizations in SharePoint](#SP15_SupportedLanguages) for a list languages supported for word breaker customization.
   
     
     
@@ -20,7 +20,7 @@ For information on how to write a word breaker refer to the following articles
     
   
 
-## How to switch to a custom word breaker in SharePoint Server 2013
+## How to switch to a custom word breaker in SharePoint
 <a name="SP15wordbreaker_howto"> </a>
 
 
@@ -60,14 +60,14 @@ Take the following steps to replace the existing word breaker with a custom word
 6. In the **Edit String** dialog box, in the **Value data** box, type the class ID of your custom word breaker, and then choose **OK**.
     
   
-7. Restart the SharePoint Search Host Controller and SharePoint Server 2013.
+7. Restart the SharePoint Search Host Controller and SharePoint.
     
   
 8. Do a full re-crawl.
     
   
 
-## Supported languages for word breaker customizations in SharePoint Server 2013
+## Supported languages for word breaker customizations in SharePoint
 <a name="SP15_SupportedLanguages"> </a>
 
 The following languages are supported for word breaker customization:
@@ -279,7 +279,7 @@ Vietnamese
 <a name="SP15wordbreakers_addresources"> </a>
 
 
--  [Configure search in SharePoint 2013](configure-search-in-sharepoint.md)
+-  [Configure search in SharePoint](configure-search-in-sharepoint.md)
     
   
 -  [Implementing a Word Breaker](http://msdn.microsoft.com/en-us/library/ms693186%28v=vs.85%29.aspx)

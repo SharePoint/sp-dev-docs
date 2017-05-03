@@ -6,15 +6,15 @@ ms.assetid: 9d2fa681-30c2-4549-9df2-ea9ed757fda9
 
 
 # How to: Build and deploy workflow custom actions
-Learn how to model business processes whose requirements are not met by the existing library of workflow actions in SharePoint Designer by creating custom workflow actions in SharePoint 2013.
+Learn how to model business processes whose requirements are not met by the existing library of workflow actions in SharePoint Designer by creating custom workflow actions in SharePoint.
 SharePoint Designer provides a collection of workflow actions that are available through the Workflow Designer user interface (UI). Although the range of workflow actions that are included in SharePoint Designer) is extensive, it is nevertheless finite. In some cases, you may need to model a business process whose requirements are not met by the existing library of workflow actions that are available in SharePoint Designer.
   
     
     
 
-Recognizing that business processes often have specialized requirements, SharePoint 2013 lets you create custom workflow actions. You can develop these custom actions by using Visual Studio, and then package and deploy them to SharePoint. At that point, the custom action becomes available to workflow authors in SharePoint Designer, exactly as if it were among the library of existing actions. This capability lets you customize the functionality in your workflow authoring environment to match any of your specialized business processes.
+Recognizing that business processes often have specialized requirements, SharePoint lets you create custom workflow actions. You can develop these custom actions by using Visual Studio, and then package and deploy them to SharePoint. At that point, the custom action becomes available to workflow authors in SharePoint Designer, exactly as if it were among the library of existing actions. This capability lets you customize the functionality in your workflow authoring environment to match any of your specialized business processes.
 > **Note:**
-> A sample is provided that illustrates creating a custom action. The sample, along with a readme file, is available here:  [SharePoint 2013 workflow: Create a custom action](http://code.msdn.microsoft.com/SharePoint-workflow-41e5c0f9) (http://code.msdn.microsoft.com/SharePoint-workflow-41e5c0f9).
+> A sample is provided that illustrates creating a custom action. The sample, along with a readme file, is available here:  [SharePoint workflow: Create a custom action](http://code.msdn.microsoft.com/SharePoint-workflow-41e5c0f9) (http://code.msdn.microsoft.com/SharePoint-workflow-41e5c0f9).
   
     
     
@@ -75,7 +75,7 @@ Visual Studio 2012 now provides a "workflow custom activity" item type within Sh
 ### To create a workflow custom activity
 
 
-1. Begin by opening Visual Studio 2012 and creating a new Visual C# project of type **SharePoint 2013 Project**, as shown in Figure 1.
+1. Begin by opening Visual Studio 2012 and creating a new Visual C# project of type **SharePoint Project**, as shown in Figure 1.
     
    **Figure 1. New Project dialog box**
 
@@ -102,7 +102,7 @@ Visual Studio 2012 now provides a "workflow custom activity" item type within Sh
 3. In the **Add New Item** dialog box, choose the **Workflow Custom Activity** item type and give it a meaningful name. In the illustration, the name is "WorkflowActionsModule1". Then choose **Add**. The new item is created, and you are presented with the activity design surface.
     
   
-4. If the **Toolbox** tab is not already showing, click it to expose the toolbox nodes. Click the **SharePoint 2013 Workflow** node to show the workflow development objects. There is a partial view of objects in the workflow toolbox in Figure 3.
+4. If the **Toolbox** tab is not already showing, click it to expose the toolbox nodes. Click the **SharePoint Workflow** node to show the workflow development objects. There is a partial view of objects in the workflow toolbox in Figure 3.
     
    **Figure 3. Partial view of SharePoint workflow toolbox**
 
@@ -174,13 +174,13 @@ Activating a custom action feature on a site collection (that is, on an **SPWeb*
 <a name="bk_addlresources"> </a>
 
 
--  [SharePoint 2013 workflow fundamentals](sharepoint-workflow-fundamentals.md)
+-  [SharePoint workflow fundamentals](sharepoint-workflow-fundamentals.md)
     
   
--  [Workflow actions and activities reference for SharePoint 2013](workflow-actions-and-activities-reference-for-sharepoint.md)
+-  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint.md)
     
   
--  [Develop SharePoint 2013 workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
+-  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
     
   
 

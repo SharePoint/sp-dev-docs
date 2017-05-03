@@ -1,5 +1,5 @@
-# Complete basic operations using SharePoint 2013 REST endpoints
-Learn how to perform basic create, read, update, and delete (CRUD) operations with the SharePoint 2013 REST interface.
+# Complete basic operations using SharePoint REST endpoints
+Learn how to perform basic create, read, update, and delete (CRUD) operations with the SharePoint REST interface.
  
 
  **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
@@ -9,7 +9,7 @@ Learn how to perform basic create, read, update, and delete (CRUD) operations wi
 ## Developing with the SharePoint client APIs and REST
 <a name="ClientAPIs"> </a>
 
-You can perform basic create, read, update, and delete (CRUD) operations by using the Representational State Transfer (REST) interface provided by SharePoint 2013. The REST interface exposes all of the SharePoint entities and operations that are available in the other SharePoint client APIs. One advantage of using REST is that you don't have to add references to any SharePoint 2013 libraries or client assemblies. Instead, you make HTTP requests to the appropriate endpoints to retrieve or update SharePoint entities, such as webs, lists, and list items. See  [Get to know the SharePoint 2013 REST service](get-to-know-the-sharepoint-2013-rest-service.md) for a thorough introduction to the SharePoint 2013 REST interface and its architecture.
+You can perform basic create, read, update, and delete (CRUD) operations by using the Representational State Transfer (REST) interface provided by SharePoint. The REST interface exposes all of the SharePoint entities and operations that are available in the other SharePoint client APIs. One advantage of using REST is that you don't have to add references to any SharePoint libraries or client assemblies. Instead, you make HTTP requests to the appropriate endpoints to retrieve or update SharePoint entities, such as webs, lists, and list items. See  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-2013-rest-service.md) for a thorough introduction to the SharePoint REST interface and its architecture.
  
 
  
@@ -17,15 +17,15 @@ You can perform basic create, read, update, and delete (CRUD) operations by usin
  
 
  
-For more details about the sets of APIs available on the SharePoint 2013 platform, see  [Choose the right API set in SharePoint 2013](http://msdn.microsoft.com/library/f36645da-77c5-47f1-a2ca-13d4b62b320d%28Office.15%29.aspx). For information about how to use the other client APIs, see  [Complete basic operations using JavaScript library code in SharePoint 2013](complete-basic-operations-using-javascript-library-code-in-sharepoint-2013.md),  [Complete basic operations using JavaScript library code in SharePoint 2013](complete-basic-operations-using-javascript-library-code-in-sharepoint-2013.md), and  [Build Windows Phone apps that access SharePoint 2013](http://msdn.microsoft.com/library/36681335-f772-4499-8445-f94481bc18e7%28Office.15%29.aspx).
+For more details about the sets of APIs available on the SharePoint platform, see  [Choose the right API set in SharePoint](http://msdn.microsoft.com/library/f36645da-77c5-47f1-a2ca-13d4b62b320d%28Office.15%29.aspx). For information about how to use the other client APIs, see  [Complete basic operations using JavaScript library code in SharePoint](complete-basic-operations-using-javascript-library-code-in-sharepoint-2013.md),  [Complete basic operations using JavaScript library code in SharePoint](complete-basic-operations-using-javascript-library-code-in-sharepoint-2013.md), and  [Build Windows Phone apps that access SharePoint](http://msdn.microsoft.com/library/36681335-f772-4499-8445-f94481bc18e7%28Office.15%29.aspx).
  
 
  
 
-## HTTP operations in SharePoint 2013 REST services
+## HTTP operations in SharePoint REST services
 <a name="HTTPOps"> </a>
 
-The endpoints in the SharePoint 2013 REST service correspond to the types and members in the SharePoint client object models. By using HTTP requests, you can use these REST endpoints to perform typical CRUD ( **Create**,  **Read**,  **Update**, and  **Delete**) operations against SharePoint entities, such as lists and sites. 
+The endpoints in the SharePoint REST service correspond to the types and members in the SharePoint client object models. By using HTTP requests, you can use these REST endpoints to perform typical CRUD ( **Create**,  **Read**,  **Update**, and  **Delete**) operations against SharePoint entities, such as lists and sites. 
  
 
  
@@ -33,7 +33,7 @@ Typically, endpoints that represent  **Read** operations map to HTTP **GET** com
  
 
  
-In SharePoint 2013, use  **POST** to create entities such as lists and sites. The SharePoint 2013 REST service supports sending **POST** commands that include object definitions to endpoints that represent collections. For example, you could send a **POST** command that included a new list object definition in ATOM to the following URL, to create a SharePoint list:
+In SharePoint, use  **POST** to create entities such as lists and sites. The SharePoint REST service supports sending **POST** commands that include object definitions to endpoints that represent collections. For example, you could send a **POST** command that included a new list object definition in ATOM to the following URL, to create a SharePoint list:
  
 
  
@@ -54,10 +54,10 @@ Use the HTTP  **DELETE** command against the specific endpoint URL to delete the
 
  
 
-## Reading data with the SharePoint 2013 REST interface
+## Reading data with the SharePoint REST interface
 <a name="ReadingData"> </a>
 
-To use the REST capabilities that are built into SharePoint 2013, you construct a RESTful HTTP request, using the OData standard, which corresponds to the client object model API you want to use. Each SharePoint entity is exposed at an endpoint on the SharePoint 2013 site that you are targeting, and its metadata is represented in either XML or JSON format. You can make the HTTP requests in any language, including but not limited to JavaScript and C#.
+To use the REST capabilities that are built into SharePoint, you construct a RESTful HTTP request, using the OData standard, which corresponds to the client object model API you want to use. Each SharePoint entity is exposed at an endpoint on the SharePoint site that you are targeting, and its metadata is represented in either XML or JSON format. You can make the HTTP requests in any language, including but not limited to JavaScript and C#.
  
 
  
@@ -86,7 +86,7 @@ HttpWebResponse endpointResponse =
 
 ```
 
-This request would look a little different if you are writing your add-in in JavaScript but using the SharePoint 2013 cross-domain library. In this case, you don't need to provide an access token. The following code demonstrates how this request would look if you are using the cross-domain library and want to receive the OData representation of the lists as XML instead of JSON. (Because Atom is the default response format, you don't have to include an  **Accept** header.) See [Access SharePoint 2013 data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library.md) for more information about using the cross-domain library.
+This request would look a little different if you are writing your add-in in JavaScript but using the SharePoint cross-domain library. In this case, you don't need to provide an access token. The following code demonstrates how this request would look if you are using the cross-domain library and want to receive the OData representation of the lists as XML instead of JSON. (Because Atom is the default response format, you don't have to include an  **Accept** header.) See [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library.md) for more information about using the cross-domain library.
  
 
  
@@ -317,7 +317,7 @@ When you send a POST request, the request must include the form digest value in 
 ### Add-ins that use OAuth must pass access tokens in requests
 <a name="OAuthTokens"> </a>
 
-Cloud-hosted add-ins use either OAuth or the cross-domain library to authorize access to SharePoint data. Add-in components with code that runs on a remote web server must use OAuth to authorize access to SharePoint data. In this case, you need to include an  **Authorization** header to send the access token. See [Reading data with the SharePoint 2013 REST interface](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md#ReadingData) for an example that adds an authorization header to an **HTTPWebRequest** object.
+Cloud-hosted add-ins use either OAuth or the cross-domain library to authorize access to SharePoint data. Add-in components with code that runs on a remote web server must use OAuth to authorize access to SharePoint data. In this case, you need to include an  **Authorization** header to send the access token. See [Reading data with the SharePoint REST interface](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md#ReadingData) for an example that adds an authorization header to an **HTTPWebRequest** object.
  
 
  
@@ -405,7 +405,7 @@ function getQueryStringParameter(paramToRetrieve) {
     if (singleParam[0] == paramToRetrieve) return singleParam[1];
   }
 }
-… // success and error callback functions
+??? // success and error callback functions
 ```
 
 
@@ -459,13 +459,13 @@ The SharePoint Online (and on-premise SharePoint 2016 and later) REST service su
 -  [SharePoint-Add-in-REST-OData-BasicDataOperations](https://github.com/OfficeDev/SharePoint-Add-in-REST-OData-BasicDataOperations)
     
  
--  [SharePoint 2013: Perform basic data access operations on files and folders by using REST](http://code.msdn.microsoft.com/SharePoint-2013-Perform-ab9c4ae5)
+-  [SharePoint: Perform basic data access operations on files and folders by using REST](http://code.msdn.microsoft.com/SharePoint-2013-Perform-ab9c4ae5)
     
  
--  [Complete basic operations using SharePoint 2013 client library code](complete-basic-operations-using-sharepoint-2013-client-library-code.md)
+-  [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-2013-client-library-code.md)
     
  
--  [Complete basic operations using JavaScript library code in SharePoint 2013](complete-basic-operations-using-javascript-library-code-in-sharepoint-2013.md)
+-  [Complete basic operations using JavaScript library code in SharePoint](complete-basic-operations-using-javascript-library-code-in-sharepoint-2013.md)
     
  
 -  [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
@@ -474,7 +474,7 @@ The SharePoint Online (and on-premise SharePoint 2016 and later) REST service su
 -  [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md)
     
  
--  [Work with external data in SharePoint 2013](work-with-external-data-in-sharepoint-2013.md)
+-  [Work with external data in SharePoint](work-with-external-data-in-sharepoint-2013.md)
     
  
 -  [Open Data Protocol](http://www.odata.org/)

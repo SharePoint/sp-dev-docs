@@ -1,11 +1,11 @@
 ---
-title: How to Configure MSMQ for SharePoint 2013 workflows
+title: How to Configure MSMQ for SharePoint workflows
 ms.prod: SHAREPOINT
 ms.assetid: c0e130f6-c210-44ea-83ed-b327f04551d6
 ---
 
 
-# How to: Configure MSMQ for SharePoint 2013 workflows
+# How to: Configure MSMQ for SharePoint workflows
 Learn how to configure Microsoft Message Queuing (MSMQ) in SharePoint to support asynchronous event messaging in SharePoint workflows. 
 ## Enabling MSMQ
 

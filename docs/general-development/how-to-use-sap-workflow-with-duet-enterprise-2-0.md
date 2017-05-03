@@ -39,7 +39,7 @@ The first step is to create an SharePoint Add-in that will contain the connectio
 3. In the **New Project** dialog box, expand the **Visual C#** node, expand the **Office/SharePoint** node, and then choose the **Apps** node.
     
   
-4. Choose **App for SharePoint 2013**.
+4. Choose **App for SharePoint**.
     
   
 5. Name the project and click **OK**.
@@ -803,7 +803,7 @@ function RegisterCallOut(divId, displayName, aboutme, userUrl, isFollowed) {
 -  [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)
     
   
--  [Complete basic operations using SharePoint 2013 client library code](http://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx)
+-  [Complete basic operations using SharePoint client library code](http://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx)
     
   
 -  [An introduction to SAP Business Workflow](http://scn.sap.com/docs/DOC-31056)

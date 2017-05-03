@@ -6,10 +6,10 @@ ms.assetid: 2a3a7d23-775a-4d95-9066-ebbd18c92ad4
 
 
 # Searching new content with SharePoint Search
-Learn how to make content available for users to search with SharePoint Server 2013.
-## Making content available for search in SharePoint Server 2013
+Learn how to make content available for users to search with SharePoint.
+## Making content available for search in SharePoint
 
-Search in SharePoint 2013 provides two approaches for processing queries to return search results—federated search and content crawling.
+Search in SharePoint provides two approaches for processing queries to return search results—federated search and content crawling.
   
     
     
@@ -18,7 +18,7 @@ Search in SharePoint 2013 provides two approaches for processing queries to retu
     
     
 
-- You require no additional capacity requirements for the content index, as content is not crawled by Search in SharePoint 2013.
+- You require no additional capacity requirements for the content index, as content is not crawled by Search in SharePoint.
     
   
 - You can take advantage of a repository's existing search engine. For example, you can federate to an Internet search engine to search the web.
@@ -51,21 +51,21 @@ Search in SharePoint 2013 provides two approaches for processing queries to retu
 ## In this section
 
 
--  [Search connector framework in SharePoint 2013](search-connector-framework-in-sharepoint.md)
+-  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint.md)
     
-  -  [Enhancing the BDC model file for Search in SharePoint 2013](enhancing-the-bdc-model-file-for-search-in-sharepoint.md)
-    
-  
-  -  [How to: Crawl associated external content types in SharePoint 2013](how-to-crawl-associated-external-content-types-in-sharepoint.md)
+  -  [Enhancing the BDC model file for Search in SharePoint](enhancing-the-bdc-model-file-for-search-in-sharepoint.md)
     
   
-  -  [How to: Crawl binary large objects (BLOBs) in SharePoint 2013](how-to-crawl-binary-large-objects-blobs-in-sharepoint.md)
+  -  [How to: Crawl associated external content types in SharePoint](how-to-crawl-associated-external-content-types-in-sharepoint.md)
     
   
-  -  [How to: Crawl associated external content types in SharePoint 2013](how-to-crawl-associated-external-content-types-in-sharepoint.md)
+  -  [How to: Crawl binary large objects (BLOBs) in SharePoint](how-to-crawl-binary-large-objects-blobs-in-sharepoint.md)
     
   
-  -  [How to: Configure item-level security in SharePoint 2013](how-to-configure-item-level-security-in-sharepoint.md)
+  -  [How to: Crawl associated external content types in SharePoint](how-to-crawl-associated-external-content-types-in-sharepoint.md)
+    
+  
+  -  [How to: Configure item-level security in SharePoint](how-to-configure-item-level-security-in-sharepoint.md)
     
   
 

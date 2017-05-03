@@ -404,7 +404,7 @@ function onError(error) {
 <a name="bk_addresources"> </a>
 
 
--  [Get to know the SharePoint 2013 REST service](get-to-know-the-sharepoint-2013-rest-service.md)
+-  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-2013-rest-service.md)
     
  
 -  [Working with folders and files with REST](working-with-folders-and-files-with-rest.md)
@@ -416,7 +416,7 @@ function onError(error) {
 -  [REST API reference and samples](http://msdn.microsoft.com/library/rest-api-reference-and-samples%28Office.15%29.aspx)
     
  
--  [Access SharePoint 2013 data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library.md)
+-  [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library.md)
     
  
 

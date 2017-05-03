@@ -1,16 +1,16 @@
 ---
-title: Overview of Design Manager in SharePoint 2013
+title: Overview of Design Manager in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 29834b3f-3815-4347-91d3-296387663114
 ---
 
 
-# Overview of Design Manager in SharePoint 2013
-Get an overview of using Design Manager to brand your SharePoint 2013 site. Design Manager is a publishing feature that is available in publishing sites in both SharePoint Server 2013 and Office 365. You can also use Design Manager to brand the public-facing website in Office 365.
+# Overview of Design Manager in SharePoint
+Get an overview of using Design Manager to brand your SharePoint site. Design Manager is a publishing feature that is available in publishing sites in both SharePoint and Office 365. You can also use Design Manager to brand the public-facing website in Office 365.
 ## Introduction to Design Manager
 <a name="Introduction"> </a>
 
-If you want your SharePoint 2013 site to represent your organization's brand and not "look like SharePoint," you can create a custom design and use Design Manager to achieve that goal. Design Manager is a feature in SharePoint 2013 that makes it easier to create a fully customized, pixel-perfect design while using the web-design tools that you're already familiar with. Design Manager is a publishing feature that is available in publishing sites in both SharePoint Server 2013 and Office 365. You can also use Design Manager to brand the public-facing website in Office 365.
+If you want your SharePoint site to represent your organization's brand and not "look like SharePoint," you can create a custom design and use Design Manager to achieve that goal. Design Manager is a feature in SharePoint that makes it easier to create a fully customized, pixel-perfect design while using the web-design tools that you're already familiar with. Design Manager is a publishing feature that is available in publishing sites in both SharePoint and Office 365. You can also use Design Manager to brand the public-facing website in Office 365.
   
     
     
@@ -18,7 +18,7 @@ With Design Manager, you can create a visual design for your website by using wh
   
     
     
-Creating the visual design of a site often fits into a larger process, in which multiple people or organizations are involved. For a roadmap of the tasks from a larger perspective, see  [Design and branding in SharePoint 2013](http://go.microsoft.com/fwlink/?LinkId=262838)
+Creating the visual design of a site often fits into a larger process, in which multiple people or organizations are involved. For a roadmap of the tasks from a larger perspective, see  [Design and branding in SharePoint](http://go.microsoft.com/fwlink/?LinkId=262838)
   
     
     
@@ -27,7 +27,7 @@ At a high level, the designer will perform the following tasks:
     
     
 
-- Understand core SharePoint design concepts. For more information, see  [Overview of the SharePoint 2013 page model](overview-of-the-sharepoint-page-model.md).
+- Understand core SharePoint design concepts. For more information, see  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md).
     
   
 - Create a mock-up of the design in HTML and CSS. Creating the design is a core skill of a web designer, and is not covered in this article.
@@ -108,7 +108,7 @@ When you create a design, you can use whatever HTML editor you prefer and work w
   
     
     
-The easiest way to upload and continue to work on design files is to map a drive on your computer to the Master Page Gallery of your SharePoint site. This connects a folder on your computer to the Master Page Gallery, so that you can work on files that reside on the server in SharePoint 2013 as if they were local files.
+The easiest way to upload and continue to work on design files is to map a drive on your computer to the Master Page Gallery of your SharePoint site. This connects a folder on your computer to the Master Page Gallery, so that you can work on files that reside on the server in SharePoint as if they were local files.
   
     
     
@@ -116,7 +116,7 @@ After you map a network drive, you can upload your design to SharePoint simply b
   
     
     
-For more information, see  [How to: Map a network drive to the SharePoint 2013 Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md).
+For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md).
   
     
     
@@ -186,7 +186,7 @@ After you convert your master page and successfully preview it, you are ready to
   
 3. Preview and style snippets by using CSS.
     
-For more information, see  [SharePoint 2013 Design Manager snippets](sharepoint-design-manager-snippets.md).
+For more information, see  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md).
     
   
 
@@ -210,7 +210,7 @@ After you copy snippets into your HTML file and then save the changes, you can r
   
     
     
-By default, most snippets inherit styles from the main SharePoint 2013 style sheet, corev15.css. To style a snippet, you have to identify what styles are applied to the snippet and then override them with custom CSS. To identify these default styles, you can use a browser tool such as the developer tools in Internet Explorer. While viewing your master page in the server-side preview in Internet Explorer, press **F12**, choose **Find**, and then choose **Select element by click**. This lets you click the snippet and see exactly what styles to override by adding CSS to whatever custom style sheet your master page links to.
+By default, most snippets inherit styles from the main SharePoint style sheet, corev15.css. To style a snippet, you have to identify what styles are applied to the snippet and then override them with custom CSS. To identify these default styles, you can use a browser tool such as the developer tools in Internet Explorer. While viewing your master page in the server-side preview in Internet Explorer, press **F12**, choose **Find**, and then choose **Select element by click**. This lets you click the snippet and see exactly what styles to override by adding CSS to whatever custom style sheet your master page links to.
   
     
     
@@ -266,14 +266,14 @@ When you design a page layout, your basic task is to position and style the page
   
     
     
-For more information, see  [How to: Create a page layout in SharePoint 2013](how-to-create-a-page-layout-in-sharepoint.md).
+For more information, see  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md).
   
     
     
 
 ### Create themes and composed looks
 
-In the public-facing website in Office 365, but not in on-premises SharePoint Server 2013 installations, Design Manager has the option of creating themes and composed looks. A theme is a set of fonts and colors that can be applied to a custom design (meaning a master page). Themes are defined in .xml files that you upload to the Themes gallery. If you want a custom master page to be theme-able, you need to add special markup to the master page that SharePoint recognizes and uses to insert theme elements such as fonts and colors.
+In the public-facing website in Office 365, but not in on-premises SharePoint installations, Design Manager has the option of creating themes and composed looks. A theme is a set of fonts and colors that can be applied to a custom design (meaning a master page). Themes are defined in .xml files that you upload to the Themes gallery. If you want a custom master page to be theme-able, you need to add special markup to the master page that SharePoint recognizes and uses to insert theme elements such as fonts and colors.
   
     
     
@@ -319,13 +319,13 @@ A design package is a .wsp file, a SharePoint solution file, which is basically 
 <a name="Additional"> </a>
 
 
--  [Overview of the SharePoint 2013 page model](overview-of-the-sharepoint-page-model.md)
+-  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md)
     
   
--  [How to: Convert an HTML file into a master page in SharePoint 2013](how-to-convert-an-html-file-into-a-master-page-in-sharepoint.md)
+-  [How to: Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint.md)
     
   
--  [How to: Create a page layout in SharePoint 2013](how-to-create-a-page-layout-in-sharepoint.md)
+-  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md)
     
   
 

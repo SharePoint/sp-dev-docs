@@ -1,13 +1,13 @@
 ---
-title: BDC model schema reference for SharePoint 2013
+title: BDC model schema reference for SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 979a5ffc-f033-4e72-b2d1-11d8cb1b294a
 ---
 
 
 
-# BDC model schema reference for SharePoint 2013
-Contains reference documentation for the BDC model schema (BDCMetadata.xsd), which you can use to create external content types in SharePoint 2013. 
+# BDC model schema reference for SharePoint
+Contains reference documentation for the BDC model schema (BDCMetadata.xsd), which you can use to create external content types in SharePoint. 
  [BDCMetadata.xsd](http://schemas.microsoft.com/windows/2007/BusinessDataCatalog)
   
     
@@ -151,7 +151,7 @@ Specifies an action supported by an external content type.
   
     
     
-Actions bridge the gap between SharePoint 2013 and Office 2013 and an external system's user interface by providing a link back to the external system. 
+Actions bridge the gap between SharePoint and Office 2013 and an external system's user interface by providing a link back to the external system. 
   
     
     
@@ -2739,24 +2739,24 @@ None
 <a name="bkmk_Addres"> </a>
 
 
--  [Changes in the BDC model schema for SharePoint 2013](changes-in-the-bdc-model-schema-for-sharepoint.md)
+-  [Changes in the BDC model schema for SharePoint](changes-in-the-bdc-model-schema-for-sharepoint.md)
     
   
--  [External content types in SharePoint 2013](external-content-types-in-sharepoint.md)
+-  [External content types in SharePoint](external-content-types-in-sharepoint.md)
     
   
--  [Get started using the client object model with external data in SharePoint 2013](get-started-using-the-client-object-model-with-external-data-in-sharepoint.md)
+-  [Get started using the client object model with external data in SharePoint](get-started-using-the-client-object-model-with-external-data-in-sharepoint.md)
     
   
--  [Business Connectivity Services in SharePoint 2013](business-connectivity-services-in-sharepoint.md)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
     
   
--  [What's new in Business Connectivity Services in SharePoint 2013](what-s-new-in-business-connectivity-services-in-sharepoint.md)
+-  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint.md)
     
   
--  [Get started with Business Connectivity Services in SharePoint 2013](get-started-with-business-connectivity-services-in-sharepoint.md)
+-  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint.md)
     
   
--  [Business Connectivity Services programmers reference for SharePoint 2013](business-connectivity-services-programmers-reference-for-sharepoint.md)
+-  [Business Connectivity Services programmers reference for SharePoint](business-connectivity-services-programmers-reference-for-sharepoint.md)
     
   

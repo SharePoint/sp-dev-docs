@@ -1,12 +1,12 @@
 ---
-title: Enhancing the BDC model file for Search in SharePoint 2013
+title: Enhancing the BDC model file for Search in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 3c67b1cf-5fca-4805-a1b5-c9ac1ff8aede
 ---
 
 
-# Enhancing the BDC model file for Search in SharePoint 2013
-Learn about the properties in the BDC metadata model that are applicable to BCS indexing connectors which enable Search in SharePoint 2013 to crawl external data.
+# Enhancing the BDC model file for Search in SharePoint
+Learn about the properties in the BDC metadata model that are applicable to BCS indexing connectors which enable Search in SharePoint to crawl external data.
 ## Search properties for BDC model files
 <a name="SearchBDCModelProperties_SearchProperties"> </a>
 
@@ -181,7 +181,7 @@ Profile pages may require that you use the Secure Store Service because of the m
 <a name="SP15enhanceBDC_addlresources"> </a>
 
 
--  [Search connector framework in SharePoint 2013](search-connector-framework-in-sharepoint.md)
+-  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint.md)
     
   
 -  [BDC Model Infrastructure](http://msdn.microsoft.com/library/2818ebdd-6cda-4d8f-82b2-7fde9fbf2633%28Office.15%29.aspx)
@@ -190,7 +190,7 @@ Profile pages may require that you use the Secure Store Service because of the m
 -  [Authoring BDC Models](http://msdn.microsoft.com/library/170d1cfd-cf19-4162-b79f-ba6d3b4ad23b%28Office.15%29.aspx)
     
   
--  [Setting up a development environment for BCS in SharePoint 2013](setting-up-a-development-environment-for-bcs-in-sharepoint.md)
+-  [Setting up a development environment for BCS in SharePoint](setting-up-a-development-environment-for-bcs-in-sharepoint.md)
     
   
 -  [How to: Use SharePoint Designer to Create a BDC Model File for a Custom Connector](http://msdn.microsoft.com/library/8f239482-0c82-4b60-817d-b0c4392e7e2e%28Office.15%29.aspx)

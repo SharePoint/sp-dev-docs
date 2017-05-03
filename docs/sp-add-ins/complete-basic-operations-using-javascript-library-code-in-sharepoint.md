@@ -1,5 +1,5 @@
-# Complete basic operations using JavaScript library code in SharePoint 2013
-Learn how to write code to perform basic operations using the JavaScript client object model in SharePoint 2013.
+# Complete basic operations using JavaScript library code in SharePoint
+Learn how to write code to perform basic operations using the JavaScript client object model in SharePoint.
  
 
  **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
@@ -10,10 +10,10 @@ Learn how to write code to perform basic operations using the JavaScript client 
  
 
 
-## SharePoint 2013 client APIs
+## SharePoint client APIs
 <a name="ClientAPIs"> </a>
 
-You can use the SharePoint client object model to retrieve, update, and manage data in SharePoint 2013. SharePoint makes the object model available in several forms.
+You can use the SharePoint client object model to retrieve, update, and manage data in SharePoint. SharePoint makes the object model available in several forms.
  
 
  
@@ -33,7 +33,7 @@ You can use the SharePoint client object model to retrieve, update, and manage d
 - Silverlight redistributable assemblies
     
  
-For more information about the sets of APIs that are available for SharePoint 2013, see  [Choose the right API set in SharePoint 2013](http://msdn.microsoft.com/library/f36645da-77c5-47f1-a2ca-13d4b62b320d%28Office.15%29.aspx). 
+For more information about the sets of APIs that are available for SharePoint, see  [Choose the right API set in SharePoint](http://msdn.microsoft.com/library/f36645da-77c5-47f1-a2ca-13d4b62b320d%28Office.15%29.aspx). 
  
 
  
@@ -42,20 +42,20 @@ This article shows how to perform basic operations using the JavaScript object m
 
  
 
--  [Complete basic operations using SharePoint 2013 client library code](complete-basic-operations-using-sharepoint-2013-client-library-code.md)
+-  [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-2013-client-library-code.md)
     
  
--  [Complete basic operations using SharePoint 2013 REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md)
+-  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md)
     
  
--  [Build Windows Phone apps that access SharePoint 2013](http://msdn.microsoft.com/library/36681335-f772-4499-8445-f94481bc18e7%28Office.15%29.aspx)
+-  [Build Windows Phone apps that access SharePoint](http://msdn.microsoft.com/library/36681335-f772-4499-8445-f94481bc18e7%28Office.15%29.aspx)
     
  
 -  [Using the Silverlight Object Model](http://msdn.microsoft.com/library/cea7829d-f360-4052-8b76-91d90bcefd2a%28Office.15%29.aspx)
     
  
 
-## Perform basic tasks in SharePoint 2013 using the JavaScript client object model
+## Perform basic tasks in SharePoint using the JavaScript client object model
 <a name="BasicOps_SPJSOMOps"> </a>
 
 The following sections describe tasks that you can complete programmatically, and they include JavaScript code examples that demonstrate the operations.
@@ -1016,7 +1016,7 @@ function onQueryFailed(sender, args) {
 
 ### Use the Include method to access properties of ListItem objects
 
-Four properties of  **ListItem** objects are not available by default when you return list items— **displayName**,  **effectiveBasePermissions**,  **hasUniqueRoleAssignments**, and  **roleAssignments**. The previous example returns a  **PropertyOrFieldNotInitializedException** if you try to access one of these properties. To access these properties, use the **Include** method as part of the query string, as shown in the following example.
+Four properties of  **ListItem** objects are not available by default when you return list items??? **displayName**,  **effectiveBasePermissions**,  **hasUniqueRoleAssignments**, and  **roleAssignments**. The previous example returns a  **PropertyOrFieldNotInitializedException** if you try to access one of these properties. To access these properties, use the **Include** method as part of the query string, as shown in the following example.
  
 
  
@@ -1283,7 +1283,7 @@ function execCrossDomainRequest(appweburl, hostweburl) {
 }
 ```
 
-The previous example uses the cross-domain library in SharePoint 2013 to access the host web. For more information, see  [Access SharePoint 2013 data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library.md).
+The previous example uses the cross-domain library in SharePoint to access the host web. For more information, see  [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library.md).
  
 
  
@@ -1292,10 +1292,10 @@ The previous example uses the cross-domain library in SharePoint 2013 to access 
 <a name="BasicOps_AddRes"> </a>
 
 
--  [Complete basic operations using SharePoint 2013 client library code](complete-basic-operations-using-sharepoint-2013-client-library-code.md)
+-  [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-2013-client-library-code.md)
     
  
--  [Complete basic operations using SharePoint 2013 REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md)
+-  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md)
     
  
 -  [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
@@ -1304,7 +1304,7 @@ The previous example uses the cross-domain library in SharePoint 2013 to access 
 -  [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md)
     
  
--  [Work with external data in SharePoint 2013](work-with-external-data-in-sharepoint-2013.md)
+-  [Work with external data in SharePoint](work-with-external-data-in-sharepoint-2013.md)
     
  
 

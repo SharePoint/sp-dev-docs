@@ -111,19 +111,19 @@ The following tables list blogs, forums, and additional resources about claims-b
 <a name="bk_addresources"> </a>
 
 
--  [Authentication, authorization, and security in SharePoint 2013](authentication-authorization-and-security-in-sharepoint.md)
+-  [Authentication, authorization, and security in SharePoint](authentication-authorization-and-security-in-sharepoint.md)
     
   
--  [Authorization, users, groups, and the object model in SharePoint 2013](authorization-users-groups-and-the-object-model-in-sharepoint.md)
+-  [Authorization, users, groups, and the object model in SharePoint](authorization-users-groups-and-the-object-model-in-sharepoint.md)
     
   
--  [Role, inheritance, elevation of privilege, and password changes in SharePoint 2013](role-inheritance-elevation-of-privilege-and-password-changes-in-sharepoint.md)
+-  [Role, inheritance, elevation of privilege, and password changes in SharePoint](role-inheritance-elevation-of-privilege-and-password-changes-in-sharepoint.md)
     
   
--  [Claims-based identity in SharePoint 2013](claims-based-identity-in-sharepoint.md)
+-  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint.md)
     
   
--  [Claims-based identity and concepts in SharePoint 2013](claims-based-identity-and-concepts-in-sharepoint.md)
+-  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint.md)
     
   
 

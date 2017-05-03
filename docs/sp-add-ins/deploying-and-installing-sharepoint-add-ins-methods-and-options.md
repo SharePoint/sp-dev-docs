@@ -9,7 +9,7 @@ Learn about the methods for publishing, installing, and uninstalling a SharePoin
 ## Publishing to the Office Store or an organization's add-in catalog
 <a name="MarketOrCatalog"> </a>
 
-You can upload your SharePoint Add-in to either the public Office Store or to an organization's private add-in catalog. A private add-in catalog is a dedicated site collection in a SharePoint 2013 web application (or a SharePoint Online tenancy) that hosts document libraries for SharePoint Add-ins and Office Add-ins. Putting the catalog into its own site collection makes it easier for the web application administrator or tenant administrator to limit permissions to the catalog. 
+You can upload your SharePoint Add-in to either the public Office Store or to an organization's private add-in catalog. A private add-in catalog is a dedicated site collection in a SharePoint web application (or a SharePoint Online tenancy) that hosts document libraries for SharePoint Add-ins and Office Add-ins. Putting the catalog into its own site collection makes it easier for the web application administrator or tenant administrator to limit permissions to the catalog. 
  
 
  
@@ -25,7 +25,7 @@ Uploading a SharePoint Add-in to an organization's add-in catalog is as easy as 
  
 
  
-Tenant administrators and SharePoint 2013 web application administrators can shop for SharePoint Add-ins on the Office Store. To open the Office Store, the administrator selects  **Add an Add-in** on the **Site Contents** page and then selects **SharePoint Store** in the **Your Add-ins** page. This opens a **SharePoint Store** page that the administrators can use to discover and learn about SharePoint Add-ins that vendors are offering. (They can also do this on office.com.) Add-ins that require a prerequisite that is not installed on the administrator's web application or tenancy appear dimmed and are unavailable in the add-in store. For example, if an add-in requires Search Services and this is not installed, the add-in appears dimmed. Administrators can sort, filter, and browse the list of add-ins, read about the add-ins, see add-in reviews, and purchase licenses for an add-in.
+Tenant administrators and SharePoint web application administrators can shop for SharePoint Add-ins on the Office Store. To open the Office Store, the administrator selects  **Add an Add-in** on the **Site Contents** page and then selects **SharePoint Store** in the **Your Add-ins** page. This opens a **SharePoint Store** page that the administrators can use to discover and learn about SharePoint Add-ins that vendors are offering. (They can also do this on office.com.) Add-ins that require a prerequisite that is not installed on the administrator's web application or tenancy appear dimmed and are unavailable in the add-in store. For example, if an add-in requires Search Services and this is not installed, the add-in appears dimmed. Administrators can sort, filter, and browse the list of add-ins, read about the add-ins, see add-in reviews, and purchase licenses for an add-in.
  
 
  
@@ -56,7 +56,7 @@ All the add-ins that the user can install immediately are listed, and with few e
 ## Installing SharePoint Add-ins
 <a name="Installing"> </a>
 
-Website owners install SharePoint Add-ins from the  **Your Add-ins** page as described earlier in this topic. Installation creates an instance of the add-in. For more information about installing add-ins, see [Add SharePoint Add-ins to a SharePoint 2013 site](https://technet.microsoft.com/en-us/library/fp161231.aspx). 
+Website owners install SharePoint Add-ins from the  **Your Add-ins** page as described earlier in this topic. Installation creates an instance of the add-in. For more information about installing add-ins, see [Add SharePoint Add-ins to a SharePoint site](https://technet.microsoft.com/en-us/library/fp161231.aspx). 
  
 
  

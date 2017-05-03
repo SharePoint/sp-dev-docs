@@ -10,7 +10,7 @@ Walk through the process of creating a workflow SharePoint Add-in using Microsof
 ## Prerequisites
 <a name="bmPreReq"> </a>
 
-This development scenario presumes that a SharePoint Server 2013 farm and a Workflow Manager 1.0 farm are installed and paired. These two farms can be located on the same or on separate server computers. The scenario further presumes that workflow development is taking place remotely - that is, on a computer separate from either of the server computers - and is using Microsoft Visual Studio 2012 or later.
+This development scenario presumes that a SharePoint farm and a Workflow Manager 1.0 farm are installed and paired. These two farms can be located on the same or on separate server computers. The scenario further presumes that workflow development is taking place remotely - that is, on a computer separate from either of the server computers - and is using Microsoft Visual Studio 2012 or later.
   
     
     
@@ -20,7 +20,7 @@ This development scenario presumes that a SharePoint Server 2013 farm and a Work
   - Windows Server 2008 R2.
     
   
-  - Microsoft SharePoint Server 2013
+  - Microsoft SharePoint
     
   
   - Workflow Manager 1.0
@@ -43,10 +43,10 @@ For assistance setting up and configuring your SharePoint workflow development e
 -  [Prepare to set up and configure a SharePoint workflow development environment](prepare-to-set-up-and-configure-a-sharepoint-workflow-development-environment.md)
     
   
--  [Configure workflow in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj658586%28v=office.15%29)
+-  [Configure workflow in SharePoint](http://technet.microsoft.com/en-us/library/jj658586%28v=office.15%29)
     
   
--  [Video series: Install and configure Workflow in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/dn201724%28v=office.15%29)
+-  [Video series: Install and configure Workflow in SharePoint](http://technet.microsoft.com/en-us/library/dn201724%28v=office.15%29)
     
   
 
@@ -99,7 +99,7 @@ In summary, the workflow does the following:
 
     
 > **Important:**
-> Before you start this walkthrough, ensure that you have a properly installed and configured workflow development environment. For more information, see  [Prepare to set up and configure a SharePoint workflow development environment](prepare-to-set-up-and-configure-a-sharepoint-workflow-development-environment.md). Also, ensure that you have a SharePoint Server 2013 instance that you can develop your workflow against. For more information, see  [Install SharePoint 2013](http://technet.microsoft.com/en-us/library/cc303424.aspx). 
+> Before you start this walkthrough, ensure that you have a properly installed and configured workflow development environment. For more information, see  [Prepare to set up and configure a SharePoint workflow development environment](prepare-to-set-up-and-configure-a-sharepoint-workflow-development-environment.md). Also, ensure that you have a SharePoint instance that you can develop your workflow against. For more information, see  [Install SharePoint](http://technet.microsoft.com/en-us/library/cc303424.aspx). 
   
     
     
@@ -113,7 +113,7 @@ The first step is preparing our SharePoint site with document libraries that our
     
     
 
-1. Launch Visual Studio 2012 and create a new project using the **App for SharePoint 2013** template, as depicted in Figure 2.
+1. Launch Visual Studio 2012 and create a new project using the **App for SharePoint** template, as depicted in Figure 2.
     
     > **Note:**
       > In this walkthrough, the solution file is named "DocApprovalWorkflow1". It is recommended that you use the same name. However, if you name your solution differently, be sure that you make necessary adjustments in the instructions that follow. 
@@ -255,7 +255,7 @@ Now we're ready to create the workflow itself.
   
 
   
-5. Finally, configure your SharePoint Server to manage outgoing email using the SMTP service. For instructions, see  [Configure outgoing email for a SharePoint 2013 farm](http://technet.microsoft.com/en-us/library/cc263462.aspx). This is necessary to allow the workflow to send email notifications related to workflow tasks.
+5. Finally, configure your SharePoint Server to manage outgoing email using the SMTP service. For instructions, see  [Configure outgoing email for a SharePoint farm](http://technet.microsoft.com/en-us/library/cc263462.aspx). This is necessary to allow the workflow to send email notifications related to workflow tasks.
     
   
 
@@ -538,7 +538,7 @@ Following are resources that provide guidance for packaging and deploying your w
 <a name="bk_addresources"> </a>
 
 
--  [Workflows in SharePoint 2013](workflows-in-sharepoint.md)
+-  [Workflows in SharePoint](workflows-in-sharepoint.md)
     
   
 -  [Prepare to set up and configure a SharePoint workflow development environment](prepare-to-set-up-and-configure-a-sharepoint-workflow-development-environment.md)
@@ -547,7 +547,7 @@ Following are resources that provide guidance for packaging and deploying your w
 -  [SharePoint workflow development best practices](sharepoint-workflow-development-best-practices.md)
     
   
--  [Develop SharePoint 2013 workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
+-  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
     
   
 

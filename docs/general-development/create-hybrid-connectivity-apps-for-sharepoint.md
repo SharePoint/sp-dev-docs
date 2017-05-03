@@ -6,25 +6,25 @@ ms.assetid: 311f036e-3442-4497-b35e-442b665462d3
 
 
 # Create hybrid connectivity apps for SharePoint
-Learn about the process of developing and deploying apps for SharePoint 2013 hybrid connectivity solutions.
-## Hybrid connectivity in SharePoint 2013 and SharePoint Online
+Learn about the process of developing and deploying apps for SharePoint hybrid connectivity solutions.
+## Hybrid connectivity in SharePoint and SharePoint Online
 <a name="bk_hybridconnectivity"> </a>
 
-As businesses move to using SharePoint Online, they need a way to expose large amounts of proprietary data safely and securely. To help solve this challenge, SharePoint 2013 introduced hybrid connectivity.
+As businesses move to using SharePoint Online, they need a way to expose large amounts of proprietary data safely and securely. To help solve this challenge, SharePoint introduced hybrid connectivity.
   
     
     
-The Business Connectivity Services (BCS) hybrid connectivity capability lets SharePoint 2013 consume data housed on-premises, inside corporate firewalls, and secured by various forms of authentication. With hybrid connectivity functionality, SharePoint Online can access this data securely over the web as if it was on the same internal network. Once hybrid connectivity is configured, users can work with data that is secured within the business' infrastructure. They can access and manipulate the data according to the permissions that they have been granted in SharePoint 2013.
+The Business Connectivity Services (BCS) hybrid connectivity capability lets SharePoint consume data housed on-premises, inside corporate firewalls, and secured by various forms of authentication. With hybrid connectivity functionality, SharePoint Online can access this data securely over the web as if it was on the same internal network. Once hybrid connectivity is configured, users can work with data that is secured within the business' infrastructure. They can access and manipulate the data according to the permissions that they have been granted in SharePoint.
   
     
     
-For a complete description of how to configure a working hybrid solution, see  [Hybrid for SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj838715.aspx). This series of articles walks you through all the requirements of configuring data sources, reverse proxies, search, security, networking, and everything else needed to set up the end-to-end scenario.
+For a complete description of how to configure a working hybrid solution, see  [Hybrid for SharePoint](http://technet.microsoft.com/en-us/library/jj838715.aspx). This series of articles walks you through all the requirements of configuring data sources, reverse proxies, search, security, networking, and everything else needed to set up the end-to-end scenario.
   
     
     
 
 > **Caution:**
-> To configure a hybrid SharePoint environment, you need a combination of expert skills and significant hands-on experience with SharePoint Server 2013, SharePoint Online, and related products and technologies. We recommend that you engage Microsoft Consulting Services to provide technical guidance and support during the design and deployment of your hybrid environment. > For more information, see  [Microsoft Services](http://www.microsoft.com/en-us/microsoftservices/deploy.aspx). 
+> To configure a hybrid SharePoint environment, you need a combination of expert skills and significant hands-on experience with SharePoint, SharePoint Online, and related products and technologies. We recommend that you engage Microsoft Consulting Services to provide technical guidance and support during the design and deployment of your hybrid environment. > For more information, see  [Microsoft Services](http://www.microsoft.com/en-us/microsoftservices/deploy.aspx). 
   
     
     
@@ -134,7 +134,7 @@ One of the assumptions we are making here is that you are developing your app in
 ### To create a new app
 
 
-1. Open Visual Studio 2012 on your development computer that has Office Developer Tools for Visual Studio 2013 and SharePoint 2013 installed.
+1. Open Visual Studio 2012 on your development computer that has Office Developer Tools for Visual Studio 2013 and SharePoint installed.
     
   
 2. Create a new app for SharePoint.
@@ -181,7 +181,7 @@ To add a BDC model or external content type to your project, do the following.
 8. Modify the  `ODataServiceUrl` property with the URL that allows access through the reverse proxy.
     
   
-For information about how to add an OData-based external content type, see  [How to: Create an external content type from an OData source in SharePoint 2013](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md).
+For information about how to add an OData-based external content type, see  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md).
   
     
     
@@ -213,13 +213,13 @@ You can also take the BDCM file created for the external content type and extrac
 <a name="bk_addresources"> </a>
 
 
--  [Hybrid for SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj838715.aspx)
+-  [Hybrid for SharePoint](http://technet.microsoft.com/en-us/library/jj838715.aspx)
     
   
--  [Business Connectivity Services in SharePoint 2013](business-connectivity-services-in-sharepoint.md)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
     
   
--  [How to: Create an external content type from an OData source in SharePoint 2013](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md)
+-  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md)
     
   
 -  [Publish SharePoint Add-ins by using Visual Studio](http://msdn.microsoft.com/library/8137d0fa-52e2-4771-8639-60af80f693bb%28Office.15%29.aspx)

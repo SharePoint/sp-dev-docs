@@ -27,13 +27,13 @@ Non-Microsoft device apps, including mobile apps, **use SharePoint REST/OData AP
     
     
 
-- See  [Get to know the SharePoint 2013 REST service](http://msdn.microsoft.com/library/2de035a0-ac75-43bd-9665-5c5a59c4c590%28Office.15%29.aspx) for the basics.
+- See  [Get to know the SharePoint REST service](http://msdn.microsoft.com/library/2de035a0-ac75-43bd-9665-5c5a59c4c590%28Office.15%29.aspx) for the basics.
     
   
-- See  [REST API reference for SharePoint 2013](http://msdn.microsoft.com/library/3514e753-19f9-4b41-a1ae-f35c5ffc17d2%28Office.15%29.aspx) for a complete reference.
+- See  [REST API reference for SharePoint](http://msdn.microsoft.com/library/3514e753-19f9-4b41-a1ae-f35c5ffc17d2%28Office.15%29.aspx) for a complete reference.
     
   
-For more information about how to create mobile apps for any platform, see  [Build mobile apps for other platforms using SharePoint 2013](build-mobile-apps-for-other-platforms-using-sharepoint.md).
+For more information about how to create mobile apps for any platform, see  [Build mobile apps for other platforms using SharePoint](build-mobile-apps-for-other-platforms-using-sharepoint.md).
   
     
     
@@ -56,7 +56,7 @@ Windows Phone apps can use one of the following:
   
     
     
-For more about creating Windows Phone apps that access SharePoint, see  [Build Windows Phone apps that access SharePoint 2013](build-windows-phone-apps-that-access-sharepoint.md).
+For more about creating Windows Phone apps that access SharePoint, see  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md).
   
     
     

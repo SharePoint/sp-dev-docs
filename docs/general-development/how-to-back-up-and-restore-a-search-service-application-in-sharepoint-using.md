@@ -1,15 +1,15 @@
 ---
-title: How to Back up and restore a search service application in SharePoint 2013 using VSS
+title: How to Back up and restore a search service application in SharePoint using VSS
 ms.prod: SHAREPOINT
 ms.assetid: 87ee28e6-8170-4dba-8c9d-f04ab9e632dc
 ---
 
 
-# How to: Back up and restore a search service application in SharePoint 2013 using VSS
- **Summary:** Learn how to back up and restore a search service application in SharePoint 2013 by using the Volume Shadow Copy Service (VSS).
+# How to: Back up and restore a search service application in SharePoint using VSS
+ **Summary:** Learn how to back up and restore a search service application in SharePoint by using the Volume Shadow Copy Service (VSS).
 ## Prerequisites for backing up and restoring SharePoint with the Volume Shadow Copy Service
 
-To program a backup and restore solution for SharePoint 2013, you need to understand how VSS works and the SharePoint interface with it.
+To program a backup and restore solution for SharePoint, you need to understand how VSS works and the SharePoint interface with it.
   
     
     
@@ -20,13 +20,13 @@ To program a backup and restore solution for SharePoint 2013, you need to unders
 |**Article**|**Description**|
 |:-----|:-----|
 | [Volume Shadow Copy Service](http://msdn.microsoft.com/en-us/library/windows/desktop/bb968832%28v=vs.85%29.aspx) and its child articles. <br/> |Learn about the VSS and how to program for it.  <br/> |
-| [Windows SharePoint Services and the Volume Shadow Copy Service](http://msdn.microsoft.com/library/adae101a-078e-40b9-9cfa-db2cfb10270a%28Office.15%29.aspx) and its child articles. <br/> |Overview information and step-by-step, how-to procedures for backing up and restoring SharePoint 2013 data using the VSS and the SharePoint interface with VSS.  <br/> |
+| [Windows SharePoint Services and the Volume Shadow Copy Service](http://msdn.microsoft.com/library/adae101a-078e-40b9-9cfa-db2cfb10270a%28Office.15%29.aspx) and its child articles. <br/> |Overview information and step-by-step, how-to procedures for backing up and restoring SharePoint data using the VSS and the SharePoint interface with VSS.  <br/> |
    
 
 ## Use the Volume Shadow Copy Service to back up and restore a search service application
 <a name="Use"> </a>
 
-The following procedures are intended to help developers with creating a backup/restore application that uses the VSS. If you are an IT professional looking for instructions for how to back up or restore a SharePoint 2013 search service application, see  [Backup and restore SharePoint 2013](http://technet.microsoft.com/en-us/library/ee662536.aspx). 
+The following procedures are intended to help developers with creating a backup/restore application that uses the VSS. If you are an IT professional looking for instructions for how to back up or restore a SharePoint search service application, see  [Backup and restore SharePoint](http://technet.microsoft.com/en-us/library/ee662536.aspx). 
   
     
     
@@ -36,7 +36,7 @@ The following procedures are intended to help developers with creating a backup/
     
 
 > **Tip:**
-> For details about the Windows PowerShell cmdlets mentioned in this article, see  [Windows PowerShell for SharePoint 2013 reference](http://technet.microsoft.com/en-us/library/ee890108.aspx). 
+> For details about the Windows PowerShell cmdlets mentioned in this article, see  [Windows PowerShell for SharePoint reference](http://technet.microsoft.com/en-us/library/ee890108.aspx). 
   
     
     

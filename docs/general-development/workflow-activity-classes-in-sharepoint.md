@@ -1,13 +1,13 @@
 ---
-title: Workflow activity classes in SharePoint 2013
+title: Workflow activity classes in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 70d5ca8d-520d-40a9-b24e-52bb31bd6c22
 ---
 
 
-# Workflow activity classes in SharePoint 2013
-Provides a summary of the SharePoint workflow activity classes that are available in SharePoint 2013.
-The palette of activity classes has been revised for SharePoint 2013. Table 1 lists the current catalog of 49 available activities grouped by their respective activity categories.
+# Workflow activity classes in SharePoint
+Provides a summary of the SharePoint workflow activity classes that are available in SharePoint.
+The palette of activity classes has been revised for SharePoint. Table 1 lists the current catalog of 49 available activities grouped by their respective activity categories.
   
     
     
@@ -20,7 +20,7 @@ The palette of activity classes has been revised for SharePoint 2013. Table 1 li
     
 
 
-## Workflow activity classes available in SharePoint 2013
+## Workflow activity classes available in SharePoint
 <a name="bk_wfactivityclasses"> </a>
 
 
@@ -84,13 +84,13 @@ The palette of activity classes has been revised for SharePoint 2013. Table 1 li
 <a name="bkm_addlresource"> </a>
 
 
--  [Workflow actions and activities reference for SharePoint 2013](workflow-actions-and-activities-reference-for-sharepoint.md)
+-  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint.md)
     
   
--  [Develop SharePoint 2013 workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
+-  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
     
   
--  [Set up and configure SharePoint 2013 Workflow Manager](set-up-and-configure-sharepoint-workflow-manager.md)
+-  [Set up and configure SharePoint Workflow Manager](set-up-and-configure-sharepoint-workflow-manager.md)
     
   
 

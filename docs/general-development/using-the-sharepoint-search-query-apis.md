@@ -1,21 +1,21 @@
 ---
-title: Using the SharePoint 2013 search Query APIs
+title: Using the SharePoint search Query APIs
 ms.prod: SHAREPOINT
 ms.assetid: ae9d73ed-1140-430b-9287-01dbbe8ae7d1
 ---
 
 
 
-# Using the SharePoint 2013 search Query APIs
-Learn about the query APIs available in SharePoint 2013 that enable you to add search functionality to custom solutions and applications. 
-## SharePoint 2013 Query APIs
+# Using the SharePoint search Query APIs
+Learn about the query APIs available in SharePoint that enable you to add search functionality to custom solutions and applications. 
+## SharePoint Query APIs
 <a name="bk_QueryAPIs"> </a>
 
-Search in SharePoint 2013 provides several query APIs, giving you lots of ways to access search results, so that you can return search results in a variety of custom solution types.
+Search in SharePoint provides several query APIs, giving you lots of ways to access search results, so that you can return search results in a variety of custom solution types.
   
     
     
-In addition to the server object model that was available in previous versions of SharePoint, Search in SharePoint 2013 also provides the following:
+In addition to the server object model that was available in previous versions of SharePoint, Search in SharePoint also provides the following:
   
     
     
@@ -45,7 +45,7 @@ Table 1 shows the APIs that you can use to program search queries and the path t
 |REST service endpoints  <br/> |http://server/_api/search/query          http://server/_api/search/suggest  <br/> |
 |Server object model  <br/> |Microsoft.Office.Server.Search.dll          %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\ISAPI  <br/> |
    
-As a best practice in SharePoint 2013 development, use client APIs when you can. Client APIs include the .NET, Silverlight, Phone, and JavaScript client object models, and the REST service. For more information about the APIs in SharePoint 2013 and when to use them, see  [Choose the right API set in SharePoint 2013](choose-the-right-api-set-in-sharepoint.md).
+As a best practice in SharePoint development, use client APIs when you can. Client APIs include the .NET, Silverlight, Phone, and JavaScript client object models, and the REST service. For more information about the APIs in SharePoint and when to use them, see  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md).
   
     
     
@@ -53,7 +53,7 @@ As a best practice in SharePoint 2013 development, use client APIs when you can.
 ### Query using the .NET client object model
 <a name="bk_QueryNETcsom"> </a>
 
-Search in SharePoint 2013 includes a client object model that enables access to search results for online, on-premises, and mobile development. The Search in SharePoint 2013 CSOM is built on the SharePoint 2013 CSOM. Therefore, your client code first needs to access the SharePoint 2013 CSOM and then access the Search in SharePoint 2013 CSOM. For more information about the SharePoint CSOM, see  [SharePoint 2010 Client Object Model](http://msdn.microsoft.com/library/8c086b11-2b8b-41ec-82ae-cd4fef0aeac6%28Office.15%29.aspx). For more information about the  [ClientContext](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.ClientContext.aspx) class, which is the entry point to the CSOM, see [Client Context as Central Object](http://msdn.microsoft.com/library/6299f0df-ab4c-40e6-b709-ec80271c99b3%28Office.15%29.aspx).
+Search in SharePoint includes a client object model that enables access to search results for online, on-premises, and mobile development. The Search in SharePoint CSOM is built on the SharePoint CSOM. Therefore, your client code first needs to access the SharePoint CSOM and then access the Search in SharePoint CSOM. For more information about the SharePoint CSOM, see  [SharePoint 2010 Client Object Model](http://msdn.microsoft.com/library/8c086b11-2b8b-41ec-82ae-cd4fef0aeac6%28Office.15%29.aspx). For more information about the  [ClientContext](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.ClientContext.aspx) class, which is the entry point to the CSOM, see [Client Context as Central Object](http://msdn.microsoft.com/library/6299f0df-ab4c-40e6-b709-ec80271c99b3%28Office.15%29.aspx).
   
     
     
@@ -80,7 +80,7 @@ using (ClientContext clientContext = new ClientContext("http://<serverName>/site
 }
 ```
 
-To download an example, see the following code sample posted by SharePoint MVP  [Corey Roth](http://mvp.microsoft.com/en-us/mvp/Corey%20Roth-4029260):  [SharePoint 2013: Query Search with the Managed Client Object Model](http://code.msdn.microsoft.com/Query-Search-with-the-649f1bc1).
+To download an example, see the following code sample posted by SharePoint MVP  [Corey Roth](http://mvp.microsoft.com/en-us/mvp/Corey%20Roth-4029260):  [SharePoint: Query Search with the Managed Client Object Model](http://code.msdn.microsoft.com/Query-Search-with-the-649f1bc1).
   
     
     
@@ -110,7 +110,7 @@ var results = searchExecutor.executeQuery(keywordQuery);
 context.executeQueryAsync(onQuerySuccess, onQueryError);
 ```
 
-To download an example, see the following code sample posted by SharePoint MVP  [Corey Roth](http://mvp.microsoft.com/en-us/mvp/Corey%20Roth-4029260):  [SharePoint 2013: Querying Search with the JavaScript Client Object Model](http://code.msdn.microsoft.com/SharePoint-Querying-a629b53b).
+To download an example, see the following code sample posted by SharePoint MVP  [Corey Roth](http://mvp.microsoft.com/en-us/mvp/Corey%20Roth-4029260):  [SharePoint: Querying Search with the JavaScript Client Object Model](http://code.msdn.microsoft.com/SharePoint-Querying-a629b53b).
   
     
     
@@ -118,7 +118,7 @@ To download an example, see the following code sample posted by SharePoint MVP  
 ### Query using the REST service
 <a name="bk_QueryREST"> </a>
 
-SharePoint 2013 includes a REST service that enables you to remotely execute queries against the SharePoint 2013 Search service from client applications by using any technology that supports REST web requests. The Search REST service exposes two endpoints, **query** and **suggest**, and will support both **GET** and **POST** operations. Results are returned in either XML or JavaScript Object Notation (JSON) format.
+SharePoint includes a REST service that enables you to remotely execute queries against the SharePoint Search service from client applications by using any technology that supports REST web requests. The Search REST service exposes two endpoints, **query** and **suggest**, and will support both **GET** and **POST** operations. Results are returned in either XML or JavaScript Object Notation (JSON) format.
   
     
     
@@ -134,11 +134,11 @@ See  [SharePoint Search REST API overview](sharepoint-search-rest-api-overview.m
 ### Query using the .NET server object model
 <a name="bk_QuerySOM"> </a>
 
-Applications that use the server object model must run directly on a server that is running SharePoint 2013. The search Query server object model resides in the  [Microsoft.Office.Server.Search.Query](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.aspx) namespace, which is located in Microsoft.Office.Server.Search.dll.
+Applications that use the server object model must run directly on a server that is running SharePoint. The search Query server object model resides in the  [Microsoft.Office.Server.Search.Query](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.aspx) namespace, which is located in Microsoft.Office.Server.Search.dll.
   
     
     
-As in SharePoint Server 2010, you use the  [KeywordQuery](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.KeywordQuery.aspx) class to define the query, and then called the [Execute()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.Query.Execute.aspx) method to submit the query. In SharePoint 2013, the **Execute** method is obsolete, and while it will still work, you should use the [SearchExecutor](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.SearchExecutor.aspx) class instead. To submit the query, call the [ExecuteQuery()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.SearchExecutor.ExecuteQuery.aspx) method, passing the instance of the **KeywordQuery** class in the call.
+As in SharePoint Server 2010, you use the  [KeywordQuery](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.KeywordQuery.aspx) class to define the query, and then called the [Execute()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.Query.Execute.aspx) method to submit the query. In SharePoint, the **Execute** method is obsolete, and while it will still work, you should use the [SearchExecutor](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.SearchExecutor.aspx) class instead. To submit the query, call the [ExecuteQuery()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.SearchExecutor.ExecuteQuery.aspx) method, passing the instance of the **KeywordQuery** class in the call.
   
     
     
@@ -163,7 +163,7 @@ using (SPSite siteCollection = new SPSite("<serverRelativeUrl>"))
 }
 ```
 
-To download an example, see the following code sample posted by SharePoint MVP  [Corey Roth](http://mvp.microsoft.com/en-us/mvp/Corey%20Roth-4029260):  [SharePoint 2013: Query Search with the KeywordQuery Class](http://code.msdn.microsoft.com/Query-Search-with-the-372139b5).
+To download an example, see the following code sample posted by SharePoint MVP  [Corey Roth](http://mvp.microsoft.com/en-us/mvp/Corey%20Roth-4029260):  [SharePoint: Query Search with the KeywordQuery Class](http://code.msdn.microsoft.com/Query-Search-with-the-372139b5).
   
     
     
@@ -172,13 +172,13 @@ To download an example, see the following code sample posted by SharePoint MVP  
 <a name="bk_addresources"> </a>
 
 
--  [Building search queries in SharePoint 2013](building-search-queries-in-sharepoint.md)
+-  [Building search queries in SharePoint](building-search-queries-in-sharepoint.md)
     
   
 -  [SharePoint Search REST API overview](sharepoint-search-rest-api-overview.md)
     
   
--  [SharePoint 2013: Using the search REST service from an app for SharePoint](http://code.msdn.microsoft.com/sharepoint/SharePoint-Perform-a-1bf3e87d)
+-  [SharePoint: Using the search REST service from an app for SharePoint](http://code.msdn.microsoft.com/sharepoint/SharePoint-Perform-a-1bf3e87d)
     
   
 

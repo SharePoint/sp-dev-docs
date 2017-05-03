@@ -22,7 +22,7 @@ By using Napa, you can create your SharePoint Add-ins inside your browser instea
 By following this article, you can learn how to create a simple SharePoint-hosted SharePoint Add-in by using Napa. The add-in that you'll create includes controls and code for managing lists and list items. 
  
 
- **Note**  You can create only SharePoint-hosted SharePoint Add-ins with Napa, not provider-hosted. For information on the differences, see  [SharePoint Add-ins](sharepoint-add-ins.md).You cannot use SharePoint's add-in updating semantics, which is described in  [Update add-in web components in SharePoint 2013](update-add-in-web-components-in-sharepoint-2013.md), in Napa. So if you need to update an add-in created in Napa, you first have to export it to Visual Studio. Instructions for doing so are later in this article.You can also create a SharePoint Add-in by using Visual Studio. For more information, see  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md).
+ **Note**  You can create only SharePoint-hosted SharePoint Add-ins with Napa, not provider-hosted. For information on the differences, see  [SharePoint Add-ins](sharepoint-add-ins.md).You cannot use SharePoint's add-in updating semantics, which is described in  [Update add-in web components in SharePoint](update-add-in-web-components-in-sharepoint-2013.md), in Napa. So if you need to update an add-in created in Napa, you first have to export it to Visual Studio. Instructions for doing so are later in this article.You can also create a SharePoint Add-in by using Visual Studio. For more information, see  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md).
  
 
 
@@ -218,9 +218,9 @@ In this procedure, you'll add some JavaScript code so that users can create and 
 
 |**Function Name**|**Description**|
 |:-----|:-----|
-| `getWebProperties()`|Connected to the  **getListCount** control—retrieves the number of lists in the web.|
-| `createlist()`|Connected to the  **createListButton** control—creates a generic SharePoint list.|
-| `deletelist()`|Connected to the  **deletelistbutton** control—deletes the list that the user chose from the list of available lists.|
+| `getWebProperties()`|Connected to the  **getListCount** control???retrieves the number of lists in the web.|
+| `createlist()`|Connected to the  **createListButton** control???creates a generic SharePoint list.|
+| `deletelist()`|Connected to the  **deletelistbutton** control???deletes the list that the user chose from the list of available lists.|
 
     You'll also call the  `welcome()` and `displayLists()` functions, which this walkthrough will describe later.
     
@@ -637,7 +637,7 @@ Open your project in Visual Studio by choosing the  **Open in Visual Studio** bu
 <a name="Additional"> </a>
 
 
--  [SharePoint 2013 development overview](http://msdn.microsoft.com/library/f86e2695-4d7a-4fc5-bc23-689de96c4b06%28Office.15%29.aspx)
+-  [SharePoint development overview](http://msdn.microsoft.com/library/f86e2695-4d7a-4fc5-bc23-689de96c4b06%28Office.15%29.aspx)
     
  
 -  [SharePoint Add-ins](sharepoint-add-ins.md)

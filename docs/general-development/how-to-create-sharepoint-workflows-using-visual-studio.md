@@ -1,12 +1,12 @@
 ---
-title: How to Create SharePoint 2013 Workflows using Visual Studio
+title: How to Create SharePoint Workflows using Visual Studio
 ms.prod: SHAREPOINT
 ms.assetid: 739af178-96b3-4630-bbc0-5def02065eeb
 ---
 
 
-# How to: Create SharePoint 2013 Workflows using Visual Studio
-Learn the basics of creating a SharePoint workflow in the new SharePoint 2013 workflow platform.
+# How to: Create SharePoint Workflows using Visual Studio
+Learn the basics of creating a SharePoint workflow in the new SharePoint workflow platform.
  **Provided by:** [Andrew Connell](http://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [AndrewConnell.com](http://www.andrewconnell.com)
   
     
@@ -31,7 +31,7 @@ Learn the basics of creating a SharePoint workflow in the new SharePoint 2013 wo
   
     
     
-Microsoft has taken a very different approach to workflows in SharePoint 2013 than in previous versions. SharePoint workflows are now based on Windows Workflow Foundation 4, and their execution is driven by a new component called Workflow Manager, which runs externally to SharePoint.Workflow Manager serves the role as host for the Windows Workflow Foundation runtime and all the necessary services in a highly available and scalable way. It leverages Service Bus for performance and scalability, and when deployed it runs exactly the same in an on-premises deployment as when deployed to a cloud-based service, such as Office 365, because it is configured to hand off all workflow execution and related tasks to the Workflow Manager farm.The dramatic change in the workflow architecture required some changes to the two primary workflow authoring tools for creating custom workflows - Visual Studio and SharePoint Designer. This article will explore using Visual Studio 2012 as your workflow authoring tool to create custom workflows for use in **sp15allshort** deployments - either on-premises or Office 365 deployments
+Microsoft has taken a very different approach to workflows in SharePoint than in previous versions. SharePoint workflows are now based on Windows Workflow Foundation 4, and their execution is driven by a new component called Workflow Manager, which runs externally to SharePoint.Workflow Manager serves the role as host for the Windows Workflow Foundation runtime and all the necessary services in a highly available and scalable way. It leverages Service Bus for performance and scalability, and when deployed it runs exactly the same in an on-premises deployment as when deployed to a cloud-based service, such as Office 365, because it is configured to hand off all workflow execution and related tasks to the Workflow Manager farm.The dramatic change in the workflow architecture required some changes to the two primary workflow authoring tools for creating custom workflows - Visual Studio and SharePoint Designer. This article will explore using Visual Studio 2012 as your workflow authoring tool to create custom workflows for use in **sp15allshort** deployments - either on-premises or Office 365 deployments
 ## Types of workflows in Visual Studio 2012
 <a name="bm1"> </a>
 
@@ -78,7 +78,7 @@ The stage construct within a SharePoint Designer 2013 based workflow is based on
 
     
 > **Note:**
-> You can find the workflow depicted in Figure 1 as a workflow sample on MSDN here:  [SharePoint 2013: Approval workflow that uses a custom initiation form](http://code.msdn.microsoft.com/officeapps/SharePoint-Approval-f5ac5eb2). 
+> You can find the workflow depicted in Figure 1 as a workflow sample on MSDN here:  [SharePoint: Approval workflow that uses a custom initiation form](http://code.msdn.microsoft.com/officeapps/SharePoint-Approval-f5ac5eb2). 
   
     
     
@@ -107,7 +107,7 @@ State machine workflows, like flowchart workflows, do not typically follow a spe
 
     
 > **Note:**
-> You can find the workflow depicted in Figure 1 as a workflow sample on MSDN here:  [SharePoint 2013: Route workflows to states depending on actions and events](http://code.msdn.microsoft.com/officeapps/SharePoint-Route-25a25d87). 
+> You can find the workflow depicted in Figure 1 as a workflow sample on MSDN here:  [SharePoint: Route workflows to states depending on actions and events](http://code.msdn.microsoft.com/officeapps/SharePoint-Route-25a25d87). 
   
     
     
@@ -185,7 +185,7 @@ Click on the **Arguments** tab to see a list of the arguments that are used to p
 ## How to create a custom workflow
 <a name="bm3"> </a>
 
-To create a custom workflow using Visual Studio 2012 or later, ensure that you have access to a SharePoint 2013 developer site. For this walkthrough, it is recommended that you use a local SharePoint 2013 installation. This is because workflows tested locally can write debugging information to the Test Service Host console utility using the **WriteLine** activity. This utility is included with the Office Developer Tools for Visual Studio 2013, which are part of the default installation of Visual Studio 2012 and later in the Professional, Premium, and Ultimate editions.
+To create a custom workflow using Visual Studio 2012 or later, ensure that you have access to a SharePoint developer site. For this walkthrough, it is recommended that you use a local SharePoint installation. This is because workflows tested locally can write debugging information to the Test Service Host console utility using the **WriteLine** activity. This utility is included with the Office Developer Tools for Visual Studio 2013, which are part of the default installation of Visual Studio 2012 and later in the Professional, Premium, and Ultimate editions.
   
     
     
@@ -292,7 +292,7 @@ You can comment a given workflow activity by selecting the activity, the selecti
 
 ### Obtain values from list items
 
-A common task you will encounter when creating workflows is getting properties of a list item. To accomplish this task, use the **LookupSPListItem** activity. What this activity does is make a web service call using the SharePoint 2013 REST API to lookup information on the list item. The following procedure shows how to do this:
+A common task you will encounter when creating workflows is getting properties of a list item. To accomplish this task, use the **LookupSPListItem** activity. What this activity does is make a web service call using the SharePoint REST API to lookup information on the list item. The following procedure shows how to do this:
   
     
     
@@ -330,7 +330,7 @@ The point, of course, is to get some values from the list item that triggered th
     
     
 
-1. On the **Properties** property on the **GetDynamicValueProperties** activity, click on the ellipses button [ **…**] to open the **Properties** dialog box, shown in Figure 7.
+1. On the **Properties** property on the **GetDynamicValueProperties** activity, click on the ellipses button [ **???**] to open the **Properties** dialog box, shown in Figure 7.
     
    **Figure 7. Extract values using the Properties dialog box**
 
@@ -445,7 +445,7 @@ Finally, let's test the workflow. Start by adding two **WriteLine** activities. 
 ## Conclusion
 <a name="bm4"> </a>
 
-This article first explained the different types of workflows that can be created using Visual Studio 2012 and later for SharePoint 2013 when it has been connected to a Workflow Manager farm. Next it demonstrated how to create a workflow that not only collected values from the list item that triggered the workflow, but it also demonstrated how to perform a common task such as obtaining a user's login name and display name using the **LookupSPUser** activity. In addition, the article touched on a few good practices for keeping workflows organized and adding comments using annotations.
+This article first explained the different types of workflows that can be created using Visual Studio 2012 and later for SharePoint when it has been connected to a Workflow Manager farm. Next it demonstrated how to create a workflow that not only collected values from the list item that triggered the workflow, but it also demonstrated how to perform a common task such as obtaining a user's login name and display name using the **LookupSPUser** activity. In addition, the article touched on a few good practices for keeping workflows organized and adding comments using annotations.
   
     
     
@@ -454,13 +454,13 @@ This article first explained the different types of workflows that can be create
 <a name="bk_addresources"> </a>
 
 
--  [Workflows in SharePoint 2013](workflows-in-sharepoint.md)
+-  [Workflows in SharePoint](workflows-in-sharepoint.md)
     
   
 -  [SharePoint workflow development best practices](sharepoint-workflow-development-best-practices.md)
     
   
--  [SharePoint 2013 workflow samples](sharepoint-workflow-samples.md)
+-  [SharePoint workflow samples](sharepoint-workflow-samples.md)
     
   
 

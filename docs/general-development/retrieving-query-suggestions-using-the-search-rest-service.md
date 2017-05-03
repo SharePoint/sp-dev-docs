@@ -6,8 +6,8 @@ ms.assetid: a64c5bec-64a8-4752-9c72-433d1c864aed
 
 
 # Retrieving query suggestions using the Search REST service
-Learn how you can use the Search REST service from your client and mobile applications to retrieve query suggestions from Search in SharePoint 2013.
-Query suggestions, also known as search suggestions, are phrases that users have already searched for and that are displayed or "suggested" to them as they type their queries. You can use Search in SharePoint 2013 to turn on pre-query and post-query suggestions. These suggestions appear in a list below the Search box as a user types a query. For more information about query suggestions and how to enable them, see  [Manage query suggestions in SharePoint Server 2013](http://technet.microsoft.com/en-us/library/jj721441.aspx).
+Learn how you can use the Search REST service from your client and mobile applications to retrieve query suggestions from Search in SharePoint.
+Query suggestions, also known as search suggestions, are phrases that users have already searched for and that are displayed or "suggested" to them as they type their queries. You can use Search in SharePoint to turn on pre-query and post-query suggestions. These suggestions appear in a list below the Search box as a user types a query. For more information about query suggestions and how to enable them, see  [Manage query suggestions in SharePoint](http://technet.microsoft.com/en-us/library/jj721441.aspx).
   
     
     
@@ -235,13 +235,13 @@ http:// _server_/_api/search/suggest?querytext='sharepoint'&amp;fprefixmatchallt
 -  [SharePoint Search REST API overview](sharepoint-search-rest-api-overview.md)
     
   
--  [Search in SharePoint 2013](search-in-sharepoint.md)
+-  [Search in SharePoint](search-in-sharepoint.md)
     
   
--  [SharePoint 2013: Using the search REST service from an app for SharePoint](http://code.msdn.microsoft.com/sharepoint/SharePoint-Perform-a-1bf3e87d)
+-  [SharePoint: Using the search REST service from an app for SharePoint](http://code.msdn.microsoft.com/sharepoint/SharePoint-Perform-a-1bf3e87d)
     
   
--  [What's new in SharePoint 2013 search for developers](what-s-new-in-sharepoint-search-for-developers.md)
+-  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers.md)
     
   
 -  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)

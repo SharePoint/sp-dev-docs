@@ -10,7 +10,7 @@ ms.assetid: c3ef38aa-559e-4832-95c7-75e222c77624
 ## Overview
 <a name="Overview"> </a>
 
-Duet Enterprise 2.0 is the latest version of a collaborative effort between Microsoft and SAP to give SharePoint users the ability to work with data from SAP systems.It combines components from SAP as well as SharePoint 2013 and SharePoint Online. It gives a developer the ability to create components that will allow users to bring data from SAP systems into the familiar SharePoint environment.
+Duet Enterprise 2.0 is the latest version of a collaborative effort between Microsoft and SAP to give SharePoint users the ability to work with data from SAP systems.It combines components from SAP as well as SharePoint and SharePoint Online. It gives a developer the ability to create components that will allow users to bring data from SAP systems into the familiar SharePoint environment.
   
     
     
@@ -26,7 +26,7 @@ When properly installed and configured, Duet Enterprise 2.0 will provide the fol
 - You can work with data in SAP systems within SharePoint using Business Data Web parts, External lists and custom components.
     
   
-- Use SAP data in SharePoint 2013 without code by using built-in components.
+- Use SAP data in SharePoint without code by using built-in components.
     
   
 - Use SAP reporting systems inside of an app.
@@ -56,7 +56,7 @@ Developing SharePoint Add-ins using Duet Enterprise 2.0, for the most part, is e
 ## Adding external content types
 <a name="AddingECT"> </a>
 
-In order to access the external data housed on the SAP system, you will have to add an external content type. Since SAP data is exposed through OData endpoints, the auto-generation tools installed in Visual Studio can be used to  [How to: Create an external content type from an OData source in SharePoint 2013](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md) that is scoped at the app level.
+In order to access the external data housed on the SAP system, you will have to add an external content type. Since SAP data is exposed through OData endpoints, the auto-generation tools installed in Visual Studio can be used to  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md) that is scoped at the app level.
   
     
     
@@ -125,7 +125,7 @@ This sample shows the properties added to the BDC model:
 ## Using Duet starter services to develop custom apps
 <a name="UsingDuetStarterServices"> </a>
 
-Duet Enterprise 2.0 installs several starter services to the file system on the SharePoint 2013 server. In a default installation, the files are found at C:\\Program Files\\Duet Enterprise\\2.0\\Solutions\\Starter Services. Among these are: 
+Duet Enterprise 2.0 installs several starter services to the file system on the SharePoint server. In a default installation, the files are found at C:\\Program Files\\Duet Enterprise\\2.0\\Solutions\\Starter Services. Among these are: 
   
     
     
@@ -158,7 +158,7 @@ These solutions can be used to see what can be done with Duet Enterprise 2.0 and
 -  [Duet Enterprise for Microsoft SharePoint and SAP Server 2.0](http://technet.microsoft.com/en-us/library/ff972436.aspx)
     
   
--  [How to: Create an external content type from an OData source in SharePoint 2013](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md)
+-  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md)
     
   
 -  [Visual Studio Developer Center](http://msdn.microsoft.com/en-us/vstudio/default)

@@ -1,17 +1,17 @@
 ---
-title: SharePoint 2013 Design Manager design packages
+title: SharePoint Design Manager design packages
 ms.prod: SHAREPOINT
 ms.assetid: 85ad1993-4d75-4806-9097-b934865a899a
 ---
 
 
 
-# SharePoint 2013 Design Manager design packages
+# SharePoint Design Manager design packages
 Learn how to build and export the visual design of a SharePoint site collection as a package.
 ## Overview of Design Packages
 <a name="int"> </a>
 
-In SharePoint 2013, Design Manager can help web developers and designers build and export the visual design of a SharePoint site collection as a package. This package can easily be distributed to customers, or other designated groups, for installation on their site collections. This new feature reduces the complexity of transporting designs, and makes it easier for customers to outsource the visual design of their sites. For example, some usage scenarios can include the following:
+In SharePoint, Design Manager can help web developers and designers build and export the visual design of a SharePoint site collection as a package. This package can easily be distributed to customers, or other designated groups, for installation on their site collections. This new feature reduces the complexity of transporting designs, and makes it easier for customers to outsource the visual design of their sites. For example, some usage scenarios can include the following:
   
     
     
@@ -19,10 +19,10 @@ In SharePoint 2013, Design Manager can help web developers and designers build a
 - **New Design** —A company with limited web design capabilities might contract a vendor agency to refresh their current SharePoint site with a more modern interpretation. The agency can create the site and easily package the contents for importing back into the company SharePoint farm.
     
   
-- **Cross-Site Publishing** —An enterprise IT department using cross-site publishing in SharePoint 2013 might have to share a visual design across multiple site collections. They create the site in-house and want a simple way to transport the design across several SharePoint websites. The design package functionality through Device Manager enables them to export and import with reduced administrative support and complexity.
+- **Cross-Site Publishing** —An enterprise IT department using cross-site publishing in SharePoint might have to share a visual design across multiple site collections. They create the site in-house and want a simple way to transport the design across several SharePoint websites. The design package functionality through Device Manager enables them to export and import with reduced administrative support and complexity.
     
   
-This article can help you understand design packaging in SharePoint 2013 by providing an overview of package creation, and offers workflow guidance for package exporting and importing. It also discusses required permissions for specific operations, and design package architecture.
+This article can help you understand design packaging in SharePoint by providing an overview of package creation, and offers workflow guidance for package exporting and importing. It also discusses required permissions for specific operations, and design package architecture.
   
     
     
@@ -52,14 +52,14 @@ Figure 1 shows the option in Design Manager for naming and creating the design p
   
     
     
-Alternatively, you can import a design package from another SharePoint 2013 site collection through Design Manager on the Welcome page, or by choosing **Import design package** in **Site Settings**.
+Alternatively, you can import a design package from another SharePoint site collection through Design Manager on the Welcome page, or by choosing **Import design package** in **Site Settings**.
   
     
     
 
     
 > **Note:**
-> For more information about Design Manager and the publishing process, see  [Overview of Design Manager in SharePoint 2013](overview-of-design-manager-in-sharepoint.md). 
+> For more information about Design Manager and the publishing process, see  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md). 
   
     
     
@@ -101,7 +101,7 @@ You can approach an end-to-end packaging workflow several ways, with much of the
 |:-----|:-----|:-----|
 |1  <br/> |Customer contracts vendor agency to create visual design.  <br/> | The vendor designer creates site, based on company requirements. <br/> **Note:**  The vendor designer must have the **Designers** permission level to use Design Manager and create and export packages. More specifically, the **Design** permission that allows viewing, adding, updating, deleting, approving, and customizing visual designs.          |
 |2  <br/> |Vendor designer exports visual design into a design package.  <br/> | The vendor designer exports the SharePoint solution package (.wsp file) after completing the other required branding and publishing steps. <br/>  The design package is delivered to the customer via a secure channel. <br/> |
-|3  <br/> |Customer imports visual design into their specified SharePoint 2013 site collection.  <br/> | The customer receives the design package via a secure channel. <br/>  Through the Welcome page in Design Manager or by choosing **Import design package** in **Site Settings**, the customer imports the .wsp file and applies the design package to the specified site collection.  <br/> **Note:**  The customer must have the **Designers** permission level to use Design Manager and import design packages.          |
+|3  <br/> |Customer imports visual design into their specified SharePoint site collection.  <br/> | The customer receives the design package via a secure channel. <br/>  Through the Welcome page in Design Manager or by choosing **Import design package** in **Site Settings**, the customer imports the .wsp file and applies the design package to the specified site collection.  <br/> **Note:**  The customer must have the **Designers** permission level to use Design Manager and import design packages.          |
    
 
 ## Understanding design package contents
@@ -123,12 +123,12 @@ Several files are included in the design package .wsp file when it is created th
    
 
 > **Note:**
-> In SharePoint 2013, only customized files are included in design packages. The packaging process will not export most of the default non-customized system files. 
+> In SharePoint, only customized files are included in design packages. The packaging process will not export most of the default non-customized system files. 
   
     
     
 
-In SharePoint 2013 you cannot uninstall an imported design package, and you should never attempt to deactivate a design package through the solution gallery. If you do, page layout content types are removed and users may not be able to create subsites. To recover from this state, you should perform the following steps where site A= the original site collection, site B = the site collection with the deactivated design package (bad state), and site C = a new, blank site collection that you have created:
+In SharePoint you cannot uninstall an imported design package, and you should never attempt to deactivate a design package through the solution gallery. If you do, page layout content types are removed and users may not be able to create subsites. To recover from this state, you should perform the following steps where site A= the original site collection, site B = the site collection with the deactivated design package (bad state), and site C = a new, blank site collection that you have created:
   
     
     
@@ -164,12 +164,12 @@ When importing a design package, an alternate CSS URL is not set, even if one wa
 <a name="addresources"> </a>
 
 
--  [Develop the site design in SharePoint 2013](develop-the-site-design-in-sharepoint.md)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
     
   
--  [Overview of Design Manager in SharePoint 2013](overview-of-design-manager-in-sharepoint.md)
+-  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md)
     
   
--  [What's new with SharePoint 2013 site development](what-s-new-with-sharepoint-site-development.md)
+-  [What's new with SharePoint site development](what-s-new-with-sharepoint-site-development.md)
     
   

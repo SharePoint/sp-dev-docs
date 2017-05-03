@@ -6,8 +6,8 @@ ms.assetid: d4e44498-9a3d-4f2f-b5ba-6ebef9971dcb
 
 
 # How to: Use the Content Enrichment web service callout for SharePoint Server
-Learn how to implement the Content Enrichment web service in SharePoint Server 2013 to modify the managed properties of crawled items before they are indexed.
-Search in SharePoint 2013 enables developers to add a custom step to content processing to modify the managed properties of crawled items before they are indexed. This custom step requires the implementation of an external web service--the Content Enrichment web service--that can enrich managed properties of items being processed; and then configuring the system to call this external web service.
+Learn how to implement the Content Enrichment web service in SharePoint to modify the managed properties of crawled items before they are indexed.
+Search in SharePoint enables developers to add a custom step to content processing to modify the managed properties of crawled items before they are indexed. This custom step requires the implementation of an external web service--the Content Enrichment web service--that can enrich managed properties of items being processed; and then configuring the system to call this external web service.
   
     
     
@@ -61,7 +61,7 @@ In addition, there are options for specifying size limits and timeouts. See  [Cu
     
     
 
-## Prerequisites for using the Content Enrichment web service callout for SharePoint Server 2013
+## Prerequisites for using the Content Enrichment web service callout for SharePoint
 <a name="SP15ContentEnrich_prereq"> </a>
 
 To complete this how-to, you must have the following installed in your development environment:
@@ -69,13 +69,13 @@ To complete this how-to, you must have the following installed in your developme
     
     
 
-- Search in SharePoint 2013
+- Search in SharePoint
     
   
 - Visual Studio 2010 or similar .NET Framework-compatible development tool
     
   
-- Administrator privileges on your SharePoint Server 2013 installation
+- Administrator privileges on your SharePoint installation
     
   
 - A server on which you can host the service with IIS
@@ -288,7 +288,7 @@ Build the project and deploy it to your IIS site.
     
     
 
-## Configure SharePoint Server 2013
+## Configure SharePoint
 <a name="SP15ContentEnrich_configure"> </a>
 
 Open the SharePoint Management Shell, and enter the following sequence of Windows PowerShell cmdlets.
@@ -341,7 +341,7 @@ Remove-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa
 -  [Start, pause, resume, or stop a crawl](http://technet.microsoft.com/en-us/library/jj219814%28office.15%29.aspx)
     
   
--  [Configure search in SharePoint 2013](configure-search-in-sharepoint.md)
+-  [Configure search in SharePoint](configure-search-in-sharepoint.md)
     
   
 -  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout.md)

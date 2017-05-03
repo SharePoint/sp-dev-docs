@@ -1,20 +1,20 @@
 ---
-title: How to Resolve errors and warnings when previewing a page in SharePoint 2013
+title: How to Resolve errors and warnings when previewing a page in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 03f72f65-b22b-4304-be92-f44ce0619372
 ---
 
 
-# How to: Resolve errors and warnings when previewing a page in SharePoint 2013
-After you convert an HTML file into a SharePoint 2013 master page, or after you create a page layout, you can preview that page in the browser. But before you can preview a master page or page layout, you may have to resolve any issues that prevent the server-side preview from rendering your page.
+# How to: Resolve errors and warnings when previewing a page in SharePoint
+After you convert an HTML file into a SharePoint master page, or after you create a page layout, you can preview that page in the browser. But before you can preview a master page or page layout, you may have to resolve any issues that prevent the server-side preview from rendering your page.
 ## Introduction to resolving preview errors
 <a name="Introduction"> </a>
 
-After you convert an HTML file into a SharePoint 2013 master page, or after you create a page layout, you can preview that page in the browser. As you edit and save your HTML master page or page layout, you can refresh the preview to see exactly how SharePoint 2013 renders your page.
+After you convert an HTML file into a SharePoint master page, or after you create a page layout, you can preview that page in the browser. As you edit and save your HTML master page or page layout, you can refresh the preview to see exactly how SharePoint renders your page.
   
     
     
-The preview in Design Manager is a live server-side preview, so any snippets or controls on your page, such as a navigation control or a search-driven Web Part, use live data. Also, when you preview a master page or page layout, you can choose a generic preview of just that file, or you can choose to preview how a specific page in your site renders with that master page or page layout. The server-side preview is a highly useful tool that complements the design-time preview in an HTML editor. For more information, see  [How to: Change the preview page in SharePoint 2013 Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager.md).
+The preview in Design Manager is a live server-side preview, so any snippets or controls on your page, such as a navigation control or a search-driven Web Part, use live data. Also, when you preview a master page or page layout, you can choose a generic preview of just that file, or you can choose to preview how a specific page in your site renders with that master page or page layout. The server-side preview is a highly useful tool that complements the design-time preview in an HTML editor. For more information, see  [How to: Change the preview page in SharePoint Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager.md).
   
     
     
@@ -40,7 +40,7 @@ Here are the preview errors and warnings that you might encounter, and help for 
 
 ### Resolution
 
-SharePoint 2013 pages are already wrapped in a **\<form\>** tag so that ASP.NET can do post-backs (specifically, a SharePoint 2013.master page contains the **<SharePoint:SharePointForm>** tag that creates an actual **\<form\>** tag when an associated content page is rendered). So, including a **\<form\>** tag on your master page or page layout means that there would be nested **\<form\>** tags on the final rendering of the page, which is not valid in HTML. In your HTML editor, delete any **\<form\>** tags, save the page, and then refresh the preview.
+SharePoint pages are already wrapped in a **\<form\>** tag so that ASP.NET can do post-backs (specifically, a SharePoint.master page contains the **<SharePoint:SharePointForm>** tag that creates an actual **\<form\>** tag when an associated content page is rendered). So, including a **\<form\>** tag on your master page or page layout means that there would be nested **\<form\>** tags on the final rendering of the page, which is not valid in HTML. In your HTML editor, delete any **\<form\>** tags, save the page, and then refresh the preview.
   
     
     
@@ -60,7 +60,7 @@ If you want an HTML **\<form\>** tag in the page layout, you should put the form
 <!--CE: End Create Snippets From Custom ASP.NET Markup Snippet-->
 ```
 
-You can also add the HTML Form Web Part or the InfoPath Form Web Part to your page from the Snippet Gallery. For more information, see  [SharePoint 2013 Design Manager snippets](sharepoint-design-manager-snippets.md).
+You can also add the HTML Form Web Part or the InfoPath Form Web Part to your page from the Snippet Gallery. For more information, see  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md).
   
     
     
@@ -161,7 +161,7 @@ This message simply confirms that the conversion process worked with no errors o
 
 ### Explanation
 
-You see this message when you aren't using a live SharePoint 2013 page with which to preview your master page or page layout. For example, if you're previewing a page layout, you can choose **Change Preview Page** in the upper-left corner, and then select a specific content page to preview with your page layout. This way, you can preview the page layout with actual page content in the page fields. If you want the preview to show just the positions of **ContentPlaceHolderMain** or page fields, you can always use **Change Preview Page** to switch back to a generic preview.
+You see this message when you aren't using a live SharePoint page with which to preview your master page or page layout. For example, if you're previewing a page layout, you can choose **Change Preview Page** in the upper-left corner, and then select a specific content page to preview with your page layout. This way, you can preview the page layout with actual page content in the page fields. If you want the preview to show just the positions of **ContentPlaceHolderMain** or page fields, you can always use **Change Preview Page** to switch back to a generic preview.
   
     
     
@@ -170,13 +170,13 @@ You see this message when you aren't using a live SharePoint 2013 page with whic
 <a name="bk_addresources"> </a>
 
 
--  [Develop the site design in SharePoint 2013](develop-the-site-design-in-sharepoint.md)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
     
   
--  [How to: Change the preview page in SharePoint 2013 Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager.md)
+-  [How to: Change the preview page in SharePoint Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager.md)
     
   
--  [SharePoint 2013 Design Manager snippets](sharepoint-design-manager-snippets.md)
+-  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md)
     
   
 

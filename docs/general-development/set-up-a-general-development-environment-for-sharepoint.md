@@ -1,14 +1,14 @@
 ---
-title: Set up a general development environment for SharePoint 2013
-keywords: install sharepoint 2013,set up sharepoint 2013,setup SharePoint 2013
+title: Set up a general development environment for SharePoint
+keywords: install SharePoint,set up SharePoint,setup SharePoint
 f1_keywords:
-- install sharepoint 2013,set up sharepoint 2013,setup SharePoint 2013
+- install SharePoint,set up SharePoint,setup SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: 08e4e4e1-d960-43fa-85df-f3c279ed6927
 ---
 
 
-# Set up a general development environment for SharePoint 2013
+# Set up a general development environment for SharePoint
 Learn the steps to set up a SharePoint development environment by installing SharePoint and Visual Studio.
 ## How to determine the SharePoint development environment you need
 <a name="SP15_bk_determinedevenv"> </a>
@@ -63,11 +63,11 @@ The requirements for a development environment for an installation of SharePoint
 - Install SharePoint on Windows Server 2008 R2 Service Pack 1 x64 or Windows Server 2012 (or later).
     
   
-- Use Microsoft Hyper-V and install SharePoint on a virtual machine running a Windows Server 2008 R2 Service Pack 1 x64 or Windows Server 2012 guest operating system. See  [Use best practice configurations for the SharePoint 2013 virtual machines and Hyper-V environment](http://technet.microsoft.com/en-US/library/ff621103%28v=office.15%29.aspx) for guidance on setting up a Microsoft Hyper-V virtual machine for SharePoint.
+- Use Microsoft Hyper-V and install SharePoint on a virtual machine running a Windows Server 2008 R2 Service Pack 1 x64 or Windows Server 2012 guest operating system. See  [Use best practice configurations for the SharePoint virtual machines and Hyper-V environment](http://technet.microsoft.com/en-US/library/ff621103%28v=office.15%29.aspx) for guidance on setting up a Microsoft Hyper-V virtual machine for SharePoint.
     
   
 
-### Install the app development prerequisites for the operating system and SharePoint 2013
+### Install the app development prerequisites for the operating system and SharePoint
 <a name="SP15_bk_prereqsOS"> </a>
 
 SharePoint requires your operating system to have certain prerequisites installed before installation begins. For this reason, SharePoint includes a PrerequisiteInstaller.exe tool that installs all of the prerequisites for you. Run this tool before running the Setup.exe tool.
@@ -90,7 +90,7 @@ SharePoint requires your operating system to have certain prerequisites installe
 
   
 
-  ![SharePoint 2013 Installation Server Type](../../images/SP15_app_ServerType.gif)
+  ![SharePoint Installation Server Type](../../images/SP15_app_ServerType.gif)
   
 
   
@@ -114,7 +114,7 @@ dir /od *.log
 
   
 
-  ![SharePoint 2013 site templates](../../images/SP15_app_ChooseSiteTemplates.gif)
+  ![SharePoint site templates](../../images/SP15_app_ChooseSiteTemplates.gif)
   
 
   
@@ -157,7 +157,7 @@ The registry path will change in future versions of Visual Studio.
 ## Next steps
 <a name="SP15_bk_devenvazure"> </a>
 
-If you will be creating workflows, continue with  [Set up and configure SharePoint 2013 Workflow Manager](set-up-and-configure-sharepoint-workflow-manager.md).
+If you will be creating workflows, continue with  [Set up and configure SharePoint Workflow Manager](set-up-and-configure-sharepoint-workflow-manager.md).
   
     
     

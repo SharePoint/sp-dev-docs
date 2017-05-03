@@ -50,10 +50,10 @@ Return to  [Major steps in updating an add-in](update-sharepoint-add-ins.md#Majo
 
  
 
--  [Update add-in web components in SharePoint 2013](update-add-in-web-components-in-sharepoint-2013.md)
+-  [Update add-in web components in SharePoint](update-add-in-web-components-in-sharepoint-2013.md)
     
  
--  [Update host web components in SharePoint 2013](update-host-web-components-in-sharepoint-2013.md)
+-  [Update host web components in SharePoint](update-host-web-components-in-sharepoint-2013.md)
     
  
 -  [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins.md)

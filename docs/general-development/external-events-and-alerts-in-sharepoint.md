@@ -1,12 +1,12 @@
 ---
-title: External events and alerts in SharePoint 2013
+title: External events and alerts in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: e48e4812-a185-43c5-b243-04b1d79b88ee
 ---
 
 
-# External events and alerts in SharePoint 2013
-Learn the concepts behind creating remote event receivers in SharePoint 2013 that can be attached to external lists and execute when the external data that the list represents is updated.
+# External events and alerts in SharePoint
+Learn the concepts behind creating remote event receivers in SharePoint that can be attached to external lists and execute when the external data that the list represents is updated.
 ## What are event receivers?
 <a name="Externalevents_overview"> </a>
 
@@ -46,7 +46,7 @@ External event receivers can also be extended to work against an entity event re
 ## What are remote event receivers?
 <a name="WhatIsARemoteEventReceiver"> </a>
 
-Remote event receivers are new for SharePoint 2013. In a traditional SharePoint solution, you use an event receiver to handle events such as users creating or deleting lists or items in lists. In an SharePoint Add-in, you use a remote event receiver to handle similar events. Remote event receivers work similarly to regular event receivers, except that remote event receivers handle events that occur when an SharePoint Add-in is on a different system from its host web application.
+Remote event receivers are new for SharePoint. In a traditional SharePoint solution, you use an event receiver to handle events such as users creating or deleting lists or items in lists. In an SharePoint Add-in, you use a remote event receiver to handle similar events. Remote event receivers work similarly to regular event receivers, except that remote event receivers handle events that occur when an SharePoint Add-in is on a different system from its host web application.
   
     
     
@@ -69,12 +69,12 @@ To accommodate this, two stereotypes have been added to the schema of the BDC mo
 ## What features and capabilities does the new external event receiver infrastructure provide?
 <a name="FeaturesAddedWithRER"> </a>
 
-By using and extending the SharePoint 2013 event receiver features, BCS is able to add alerts, external list event receivers, and entity receivers to provide extended functionality.
+By using and extending the SharePoint event receiver features, BCS is able to add alerts, external list event receivers, and entity receivers to provide extended functionality.
   
     
     
 
-- **Alerts:** Alerts have been an integral part of SharePoint for several versions, but until SharePoint 2013, they would not work with external lists. Now a user can create alerts on an external list that have the same behavior as alerts on a standard SharePoint list.
+- **Alerts:** Alerts have been an integral part of SharePoint for several versions, but until SharePoint, they would not work with external lists. Now a user can create alerts on an external list that have the same behavior as alerts on a standard SharePoint list.
     
   
 - **External list event receivers:** Event receivers can now be attached to external lists just like they can for standard lists. This provides an extensibility mechanism that lets you write code that is executed at specific times.
@@ -83,7 +83,7 @@ By using and extending the SharePoint 2013 event receiver features, BCS is able 
 - **Entity event receivers:** Entity event receivers provide flexibility by letting you write more robust code that allows other operations like providing user context for filtering data. This can allow better personalization and customized security.
     
   
-Remote eventing in SharePoint 2013 makes several interesting scenarios possible. For example, you might have a "Sales Lead Tracking" application that lets a sales team be notified when new sales leads are entered into an external lead application. When a new sales lead is entered, SharePoint is notified through the notification system that is part of the lead application. SharePoint receives the notification and then creates new tasks for the specified salespeople to follow up on each new lead. By configuring the sales lead entry application on the external system to send a notification to SharePoint on the creation of each new lead, SharePoint is kept completely up to date.
+Remote eventing in SharePoint makes several interesting scenarios possible. For example, you might have a "Sales Lead Tracking" application that lets a sales team be notified when new sales leads are entered into an external lead application. When a new sales lead is entered, SharePoint is notified through the notification system that is part of the lead application. SharePoint receives the notification and then creates new tasks for the specified salespeople to follow up on each new lead. By configuring the sales lead entry application on the external system to send a notification to SharePoint on the creation of each new lead, SharePoint is kept completely up to date.
   
     
     
@@ -96,13 +96,13 @@ To use event receivers for external lists, you need the following:
     
     
 
-- SharePoint 2013
+- SharePoint
     
   
 - Visual Studio 2012
     
   
-For more information about setting up a SharePoint 2013 development environment, see  [Set up a general development environment for SharePoint 2013](set-up-a-general-development-environment-for-sharepoint.md).
+For more information about setting up a SharePoint development environment, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md).
   
     
     
@@ -129,7 +129,7 @@ You have to configure the external system so that it can do the following:
     
   
 
-## Configure SharePoint 2013 to allow communication with external systems
+## Configure SharePoint to allow communication with external systems
 <a name="bkmk_configureSP"> </a>
 
 To allow communication with the external system, SharePoint must be configured with the following:
@@ -146,7 +146,7 @@ To allow communication with the external system, SharePoint must be configured w
 
 ### How is external eventing enabled?
 
-You can enable external eventing in SharePoint 2013 through **Site Settings** or by adding the following custom feature id to your project
+You can enable external eventing in SharePoint through **Site Settings** or by adding the following custom feature id to your project
   
     
     
@@ -386,7 +386,7 @@ Table 1 lists the important attributes of the BDC model that are needed to make 
 ## Notifications
 <a name="bkmk_notifications"> </a>
 
-In SharePoint 2013, the event-handling infrastructure has been enhanced to allow external data sources to notify SharePoint when information in the external system has been modified. Then, when SharePoint receives a notification, event receivers that are associated with the SharePoint external list or entity can execute code to perform specified actions.
+In SharePoint, the event-handling infrastructure has been enhanced to allow external data sources to notify SharePoint when information in the external system has been modified. Then, when SharePoint receives a notification, event receivers that are associated with the SharePoint external list or entity can execute code to perform specified actions.
   
     
     
@@ -645,20 +645,20 @@ For more information about external events and alerts, see the following.
 
 |**Article**|**Description**|
 |:-----|:-----|
-| [How to: Create an OData data service for use as a BCS external system](how-to-create-an-odata-data-service-for-use-as-a-bcs-external-system.md) <br/> |Learn how to create an Internet-addressable Windows Communication Foundation (WCF) service that uses OData to send notifications to SharePoint 2013 when the underlying data changes. These notifications are used to trigger events that are attached to external lists.  <br/> |
+| [How to: Create an OData data service for use as a BCS external system](how-to-create-an-odata-data-service-for-use-as-a-bcs-external-system.md) <br/> |Learn how to create an Internet-addressable Windows Communication Foundation (WCF) service that uses OData to send notifications to SharePoint when the underlying data changes. These notifications are used to trigger events that are attached to external lists.  <br/> |
    
 
 ## Additional resources
 <a name="Externalevents_Addres"> </a>
 
 
--  [What's new in Business Connectivity Services in SharePoint 2013](what-s-new-in-business-connectivity-services-in-sharepoint.md)
+-  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint.md)
     
   
--  [Business Connectivity Services in SharePoint 2013](business-connectivity-services-in-sharepoint.md)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
     
   
--  [Business Connectivity Services programmers reference for SharePoint 2013](business-connectivity-services-programmers-reference-for-sharepoint.md)
+-  [Business Connectivity Services programmers reference for SharePoint](business-connectivity-services-programmers-reference-for-sharepoint.md)
     
   
 -  [How to: Create external event receivers](how-to-create-external-event-receivers.md)

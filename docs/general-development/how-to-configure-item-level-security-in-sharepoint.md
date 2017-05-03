@@ -1,12 +1,12 @@
 ---
-title: How to Configure item-level security in SharePoint 2013
+title: How to Configure item-level security in SharePoint
 ms.prod: SHAREPOINT
 ms.assetid: ffd730f2-e7b7-4707-b677-d073da7df7d7
 ---
 
 
-# How to: Configure item-level security in SharePoint 2013
-Learn how to configure item level security when crawling external data with BCS indexing connectors in SharePoint 2013.
+# How to: Configure item-level security in SharePoint
+Learn how to configure item level security when crawling external data with BCS indexing connectors in SharePoint.
 ## External systems with NTLM authentication
 <a name="ItemLevelSecurity_NTLMAuth"> </a>
 
@@ -18,7 +18,7 @@ For external systems that support NTLM authentication, the security descriptor c
 ### External content type field
 <a name="ItemLevelSecurity_ExtTypeField"> </a>
 
-Microsoft SharePoint 2013 stores the security descriptor if the field of the external content type that contains the descriptor is marked by using the **WindowsSecurityDescriptorField** property, as shown in the following example.
+Microsoft SharePoint stores the security descriptor if the field of the external content type that contains the descriptor is marked by using the **WindowsSecurityDescriptorField** property, as shown in the following example.
   
     
     
@@ -190,13 +190,13 @@ unchecked((int)0xffffffffL), InheritanceFlags.None, PropagationFlags.None);
 <a name="SP15Itemlevelsec_addlresources"> </a>
 
 
--  [Search connector framework in SharePoint 2013](search-connector-framework-in-sharepoint.md)
+-  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint.md)
     
   
 -  [Implementing a BinarySecurityDescriptorAccessor](http://msdn.microsoft.com/library/6cf70490-dd3c-49cd-bb13-ed33e938435d%28Office.15%29.aspx)
     
   
--  [Enhancing the BDC model file for Search in SharePoint 2013](enhancing-the-bdc-model-file-for-search-in-sharepoint.md)
+-  [Enhancing the BDC model file for Search in SharePoint](enhancing-the-bdc-model-file-for-search-in-sharepoint.md)
     
   
 

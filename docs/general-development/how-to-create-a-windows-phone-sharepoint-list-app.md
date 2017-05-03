@@ -1,11 +1,11 @@
 ---
-title: How to Create a Windows Phone SharePoint 2013 list app
+title: How to Create a Windows Phone SharePoint list app
 ms.prod: SHAREPOINT
 ms.assetid: 3e40c475-f4c1-4a4f-a3e5-1a55f814d272
 ---
 
 
-# How to: Create a Windows Phone SharePoint 2013 list app
+# How to: Create a Windows Phone SharePoint list app
 Create a Windows Phone app in Visual Studio based on the Windows Phone SharePoint List Application template.
 Installing the Windows Phone SharePoint SDK makes two Windows Phone SharePoint Application templates available to you in Visual Studio 2010 or Visual Studio 2010 Express for Windows Phone. (See  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md).) Using the Windows Phone SharePoint List Application template, you can follow the steps of a wizard to create a functional Windows Phone app that can access and manipulate data in a SharePoint list.
   
@@ -26,7 +26,7 @@ If you'd like to see a demo of creating a mobile app before you start this how-t
     
 
 
-**Creating mobile apps with SharePoint 2013 demo**
+**Creating mobile apps with SharePoint demo**
 
   
     
@@ -245,7 +245,7 @@ Notice the **Edit** and **Delete** buttons on the Application Bar in this page o
 <a name="SP15Createwinphoneapp_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint 2013](build-windows-phone-apps-that-access-sharepoint.md)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
 -  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
