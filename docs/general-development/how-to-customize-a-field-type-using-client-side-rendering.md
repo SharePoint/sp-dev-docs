@@ -225,7 +225,7 @@ namespace Microsoft.SDK.SharePoint.Samples.WebControls
   - Provides additional attributes for the field type.
     
   
-    ```XML
+```XML
     <?xml version="1.0" encoding="utf-8" ?>
     <FieldTypes>
       <FieldType>
@@ -243,7 +243,7 @@ namespace Microsoft.SDK.SharePoint.Samples.WebControls
         <Field Name="ShowOnColumnTemplateCreate">TRUE</Field>
       </FieldType>
     </FieldTypes>
-    ```
+```
 
 ### To add a JavaScript file for the rendering logic of the custom field type
 

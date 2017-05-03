@@ -158,7 +158,7 @@ The **IContentProcessingEnrichmentService** implementation writes the raw binary
 
 1. Replace the existing **using** directives with the following **using** directives at the beginning of the class.
     
-  ```cs
+```cs
   
 using System;
 using System.Collections.Generic;
@@ -166,7 +166,7 @@ using System.IO;
 using Microsoft.Office.Server.Search.ContentProcessingEnrichment;
 using Microsoft.Office.Server.Search.ContentProcessingEnrichment.PropertyTypes;
 
-  ```
+```
 
 2. Delete the **DoWork** method.
     
@@ -177,7 +177,7 @@ using Microsoft.Office.Server.Search.ContentProcessingEnrichment.PropertyTypes;
 
 1. Add the following code inside the class to define the required constants and members.
     
-  ```cs
+```cs
   
 // Defines the name of the managed property 'Filename'.
 private const string FileNameProperty = "Filename";
@@ -198,11 +198,11 @@ private readonly ProcessedItem processedItemHolder = new ProcessedItem
 { 
    ItemProperties = new List<AbstractProperty>()
 };
-  ```
+```
 
 2. Add the following code for the **ProcessItem** method.
     
-  ```cs
+```cs
   
 public ProcessedItem ProcessItem(Item item)
 {
@@ -259,14 +259,14 @@ public ProcessedItem ProcessItem(Item item)
       processedItemHolder.ErrorCode = UnexpectedError;
    } return processedItemHolder;
 }
-  ```
+```
 
 3. Modify **web.config** to accept messages up to 8 MB, and configure **readerQuotas** to be a sufficiently large value.
     
   
 4. Add the following inside **<system.serviceModel>**.
     
-  ```XML
+```XML
   
 <bindings>
    <basicHttpBinding>
@@ -281,7 +281,7 @@ public ProcessedItem ProcessItem(Item item)
       </binding>
    </basicHttpBinding>
 </bindings>
-  ```
+```
 
 Build the project and deploy it to your IIS site.
   

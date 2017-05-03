@@ -95,14 +95,14 @@ Get-SPEnterpriseSearchRankingModel -SearchApplication $ssa -Owner $owner
   
 2. Run the following sequence of Windows PowerShell cmdlets;  *filename.xml*  is the name of a file in which you want to save the ranking model.
     
-  ```powershell
+```powershell
   
 $ssa = Get-SPEnterpriseSearchServiceApplication
 $owner = Get-SPenterpriseSearchOwner -Level ssa
 $defaultRankingModel = Get-SPEnterpriseSearchRankingModel -SearchApplication $ssa -Owner $owner | Where-Object { $_.IsDefault -eq $True }
 $defaultRankingModel.RankingModelXML > filename.xml
 
-  ```
+```
 
 If you install the SharePoint Server 2013 cumulative update of August 2013, you can use the following procedure to retrieve the search ranking model with two linear stages to use as a template for your custom ranking model.
   
@@ -117,14 +117,14 @@ If you install the SharePoint Server 2013 cumulative update of August 2013, you 
   
 2. Run the following sequence of Windows PowerShell cmdlets;  *filename.xml*  is the name of a file in which you want to save the ranking model.
     
-  ```powershell
+```powershell
   
 $ssa = Get-SPEnterpriseSearchServiceApplication
 $owner = Get-SPenterpriseSearchOwner -Level ssa 
 $twoLinearStagesRankingModel = Get-SPEnterpriseSearchRankingModel -SearchApplication $ssa -Owner $owner -Identity 5E9EE87D-4A68-420A-9D58-8913BEEAA6F2 
 $twoLinearStagesRankingModel.RankingModelXML > filename.xml
 
-  ```
+```
 
 
 ### To deploy a custom ranking model
@@ -135,28 +135,28 @@ $twoLinearStagesRankingModel.RankingModelXML > filename.xml
   
 2. Run the following sequence of Windows PowerShell cmdlets using the GUID copied in step 1 for  _<GUID>_.
     
-  ```powershell
+```powershell
   
 $ssa = Get-SPEnterpriseSearchServiceApplication
 $owner = Get-SPenterpriseSearchOwner -Level ssa
 $rm = Get-SPEnterpriseSearchRankingModel -Identity <GUID> -SearchApplication $ssa -Owner $owner
 $rm.RankingModelXML > myrm.xml 
 
-  ```
+```
 
 3. Edit the  `myrm.xml` file in an XML editor. You must use new GUID values for the **id** attributes in _RankModel2Stage_ element and all _RankingModel2NN_ elements. To get a new GUID value you can for example use the following Windows PowerShell command: `[guid]::NewGuid()`
     
   
 4. Create a new ranking model with the  [New-SPEnterpriseSearchRankingModel](http://technet.microsoft.com/en-us/library/ff607980.aspx) cmdlet by running the following commands.
     
-  ```powershell
+```powershell
   
 $myRankingModel = Get-Content .\\myrm.xml
 $myRankingModel = [String]$myRankingModel
 $ssa = Get-SPEnterpriseSearchServiceApplication
 $owner = Get-SPenterpriseSearchOwner -Level ssa
 $newrm = New-SPEnterpriseSearchRankingModel -SearchApplication $ssa -Owner $owner -RankingModelXML $myRankingModel
-  ```
+```
 
 
 ### Rank detail
@@ -215,7 +215,7 @@ To retrieve the rank detail, you need to be the administrator of the Search serv
   
 2. Run the following sequence of Windows PowerShell cmdlets, and substitute  _<query_text>_ and _<url>_ with actual values.
     
-  ```powershell
+```powershell
   
 $app = Get-SPEnterpriseSearchServiceApplication
 $searchAppProxy =  Get-spenterprisesearchserviceapplicationproxy | Where-Object { ($_.ServiceEndpointUri.PathAndQuery -like $app.Uri.PathAndQuery)}
@@ -227,7 +227,7 @@ $searchexecutor = new-Object Microsoft.Office.Server.Search.Query.SearchExecutor
 $resultTables = $searchexecutor.ExecuteQuery($request) 
 $resultTables[([Microsoft.Office.Server.Search.Query.ResultType]::RelevantResults)].Table
 
-  ```
+```
 
 
 ### Understanding the rank score calculation via the ExplainRank page

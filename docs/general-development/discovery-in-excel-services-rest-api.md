@@ -129,9 +129,9 @@ For example, to access the chart in the workbook by using discovery, do the foll
   
 3. Similarly, clicking **Chart 1** or **Chart 3** displays the chart with the corresponding name. Clicking **SampleChart** navigates to the actual chart URL. Following is the URL to the **SampleChart** image (as can be seen in the screen shot):
     
-  ```
+```
   http://<ServerName>/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model/Charts('SampleChart%20')?$format=image
-  ```
+```
 
 
 ## Atom Feed

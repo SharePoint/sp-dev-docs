@@ -178,10 +178,10 @@ However, for SharePoint 2013 to enable BCS to receive notifications from remote 
   
 4. Replace the comment  `/* TODO: put your data source class name here */` in the definition of the class that defines the data service with the type that is the entity container of the data model, which in this case is **AdventureWorksEntities**. The class definition should look like the following:
     
-  ```cs
+```cs
   
 public class AdventureWorks : DataService<AdventureWorksEntities>
-  ```
+```
 
 By default, when a WCF service is created, it cannot be accessed due to its security configuration. The next step lets you specify who can access it, and what rights they have.
   
@@ -193,11 +193,11 @@ By default, when a WCF service is created, it cannot be accessed due to its secu
 
 - In the code for the data service, replace the placeholder code in the **InitializeService** function with the following.
     
-  ```cs
+```cs
   
       config.SetEntitySetAccessRule("*", EntitySetRights.All);
       config.SetServiceOperationAccessRule("*", ServiceOperationRights.All);
-  ```
+```
 
 
     This enables authorized clients to have read and write access to resources for the specified entity sets.
@@ -218,10 +218,10 @@ The last step in creating the service is to add service operations for the **Sub
 
 - In the AdventureWorks.cs page, add the following string variable declaration.
     
-  ```cs
+```cs
   
 public string subscriptionStorePath = @"\\\\[SHARE_NAME]\\SubscriptionStore\\SubscriptionStore.xml";
-  ```
+```
 
 
     > **Note:**
@@ -231,7 +231,7 @@ public string subscriptionStorePath = @"\\\\[SHARE_NAME]\\SubscriptionStore\\Sub
     
 
 
-  ```cs
+```cs
   [WebGet]
         public string Subscribe(string deliveryUrl, string eventType)
         {
@@ -288,7 +288,7 @@ public string subscriptionStorePath = @"\\\\[SHARE_NAME]\\SubscriptionStore\\Sub
             subscriptionStore.Save(subscriptionStorePath);
         }
 
-  ```
+```
 
 
 ## Next steps

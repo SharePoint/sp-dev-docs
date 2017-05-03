@@ -47,7 +47,7 @@ You can use custom code from the .NET server, .NET client (CSOM), Silverlight, o
     
 
 
-  ```cs
+```cs
   
 public void TermPinningTest()
         {
@@ -135,7 +135,7 @@ using (SPSite site = new SPSite(TestConfig.ServerUrl))
             }
 
 }
-  ```
+```
 
 
 ## Additional resources

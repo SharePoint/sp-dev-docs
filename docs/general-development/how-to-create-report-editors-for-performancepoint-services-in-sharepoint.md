@@ -102,7 +102,7 @@ We recommend that you use the sample editor as a template. The sample shows how 
   
 9. Retrieve the parameters from the query string and set them as values for local variables, as shown in the following code example.
     
-  ```cs
+```cs
   
 // The URL of the site collection that contains the PerformancePoint Services repository.
 string server = Request.QueryString[ClickOnceLaunchKeys.SiteCollectionUrl];
@@ -112,7 +112,7 @@ string itemLocation = Request.QueryString[ClickOnceLaunchKeys.ItemLocation];
 
 // The operation to perform: OpenItem or CreateItem.
 string action = Request.QueryString[ClickOnceLaunchKeys.LaunchOperation];
-  ```
+```
 
 
     For information about the query string parameters, see  [Editors for Custom PerformancePoint Services Objects](http://msdn.microsoft.com/library/7c5924f1-91f3-436a-9d94-2e0dc454c8cc%28Office.15%29.aspx).
@@ -120,16 +120,16 @@ string action = Request.QueryString[ClickOnceLaunchKeys.LaunchOperation];
   
 10. Retrieve the **ReportViewRepositoryHelper** object, which is used to make calls to the repository, as shown in the following code example.
     
-  ```cs
+```cs
   
 reportviewRepositoryHelper = new ReportViewRepositoryHelper();
-  ```
+```
 
 11. Set the report location based on the query string parameter, as shown in the following code example.
     
-  ```cs
+```cs
   RepositoryLocation repositoryReportViewLocation = RepositoryLocation.CreateFromUriString(itemLocation);
-  ```
+```
 
 12. Retrieve the operation to perform ( _OpenItem_ or _CreateItem_) from the query string, and then retrieve or create the custom report.
     
@@ -142,7 +142,7 @@ reportviewRepositoryHelper = new ReportViewRepositoryHelper();
     
   
 
-  ```cs
+```cs
   if (ClickOnceLaunchValues.OpenItem.Equals(action, StringComparison.OrdinalIgnoreCase))
     {
 
@@ -167,14 +167,14 @@ reportviewRepositoryHelper = new ReportViewRepositoryHelper();
         displayError("Invalid Action.");
         return;
     }
-  ```
+```
 
 
     > **Note:**
       > By default, users can create custom objects from PerformancePoint Dashboard Designer only. To enable users to create a custom object outside of Dashboard Designer, you must add a menu item that sends a  _CreateItem_ request to your editor from the content type in the repository. For more information, see [Editors for Custom PerformancePoint Services Objects](http://msdn.microsoft.com/library/7c5924f1-91f3-436a-9d94-2e0dc454c8cc%28Office.15%29.aspx). 
 13. Define the report's endpoint, which enables the report to receive data from filters and scorecards. The sample report editor defines the required properties for the endpoint, as shown in the following code example.
     
-  ```cs
+```cs
   
 if (0 == reportview.EndPoints.Count)
 {
@@ -191,7 +191,7 @@ if (0 == reportview.EndPoints.Count)
 
     reportview.EndPoints.Add(endpoint);
 }
-  ```
+```
 
 
     The sample editor defines the endpoint in the **VerifyReportView** method. It also uses **VerifyReportView** to verify that required properties are set and to define the optional [CustomData](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.ReportView.CustomData.aspx) property, which you can use to store information for your report.

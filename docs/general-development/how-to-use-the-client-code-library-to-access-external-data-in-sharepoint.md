@@ -114,10 +114,10 @@ The next objective is to modify the default.aspx page that you created when you 
   
 2. Add the following **div** element to the page:
     
-  ```HTML
+```HTML
   
 <div id="displayDiv"></div>
-  ```
+```
 
 3. Save the page.
     
@@ -135,7 +135,7 @@ Finally, you add code to the App.js file that executes when the page loads.
   
 2. Paste the following code at the end of the file.
     
-  ```
+```
   $(document).ready(function () {
 
     // Namespace
@@ -189,7 +189,7 @@ function getCustomers() {
     var grid = new AppLevelECT.Grid($("#displayDiv"), _spPageContextInfo.webServerRelativeUrl);
     grid.init();
 }
-  ```
+```
 
 Press F5 to deploy the app to SharePoint. Browse to the Default.aspx page in the app, and a list of customers appears on the page.
   

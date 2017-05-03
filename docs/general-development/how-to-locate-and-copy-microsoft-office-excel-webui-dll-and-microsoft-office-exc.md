@@ -62,23 +62,23 @@ The following steps show how to:
     > **Note:**
       > The directory structure on your computer might be slightly different. This example uses a computer that has Windows Server 2008 installed. 
 
-  ```
+```
   
 cd C:\\Windows\\assembly
-  ```
+```
 
 4. Use the **dir** command to display the contents of the "C:\\Windows\\assembly" directory:
     
-  ```
+```
   C:\\Windows\\assembly>dir
-  ```
+```
 
 
     You will see contents similar to the following:
     
 
 
-  ```
+```
   Volume in drive C has no label.
  
  Directory of C:\\Windows\\assembly
@@ -95,27 +95,27 @@ cd C:\\Windows\\assembly
 02/22/2010  05:05 PM    <DIR>          tmp
                0 File(s)              0 bytes
               10 Dir(s)  104,032,665,600 bytes free
-  ```
+```
 
 5. Use the **cd** command again to change the directory and navigate to the gac_msil directory:
     
-  ```
+```
   
 C:\\Windows\\assembly>cd gac_msil
-  ```
+```
 
 6. Use the **dir** command to display the content of the "C:\\Windows\\assembly\\GAC_MSIL" directory:
     
-  ```
+```
   C:\\Windows\\assembly\\GAC_MSIL>dir
-  ```
+```
 
 
     You will see contents similar to the following:
     
 
 
-  ```
+```
   Volume in drive C has no label.
 Directory of C:\\Windows\\assembly\\GAC_MSIL
 ...
@@ -129,7 +129,7 @@ Directory of C:\\Windows\\assembly\\GAC_MSIL
 ...
 0 File(s)              0 bytes
              739 Dir(s)  100,594,409,472 bytes free
-  ```
+```
 
 7. Now that you have located Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll, you can copy them to a folder of your choice.
     
@@ -140,23 +140,23 @@ Directory of C:\\Windows\\assembly\\GAC_MSIL
 
 1. Use the **cd** command again to change the directory to "Microsoft.Office.Excel.WebUI":
     
-  ```
+```
   
 C:\\Windows\\assembly\\GAC_MSIL>cd Microsoft.Office.Excel.WebUI 
-  ```
+```
 
 2. Use the **dir** command to display the contents:
     
-  ```
+```
   C:\\Windows\\assembly\\GAC_MSIL\\Microsoft.Office.Excel.WebUI>dir
-  ```
+```
 
 
     You will see contents similar to the following:
     
 
 
-  ```
+```
   Volume in drive C has no label.
 Directory of C:\\Windows\\assembly\\GAC_MSIL\Microsoft.Office.Excel.WebUI
 
@@ -165,14 +165,14 @@ Directory of C:\\Windows\\assembly\\GAC_MSIL\Microsoft.Office.Excel.WebUI
 02/20/2010  07:57 AM    <DIR>          14.0.0.0__71e9bce111e9429c
                0 File(s)              0 bytes
                3 Dir(s)  104,006,115,328 bytes free
-  ```
+```
 
 3. Use the **cd** command again to change the directory:
     
-  ```
+```
   
 C:\\Windows\\assembly\\GAC_MSIL\\Microsoft.Office.Excel.WebUI>cd 14.0.0.0__71e9bce111e9429c
-  ```
+```
 
 4. Use the **copy** command to copy Microsoft.Office.Excel.WebUI.dll to a folder of your choice.
     
@@ -180,10 +180,10 @@ C:\\Windows\\assembly\\GAC_MSIL\\Microsoft.Office.Excel.WebUI>cd 14.0.0.0__71e9b
     
 
 
-  ```
+```
   C:\\Windows\\assembly\\GAC_MSIL\\Microsoft.Office.Excel.WebUI\\14.0.0.0__71e9bce111e9429c>copy Microsoft.Office.Excel.WebUI.dll c:\\WebUIAssembly
         1 file(s) copied.
-  ```
+```
 
 
 ## Example

@@ -411,11 +411,11 @@ In the next step, you create the actual service that is hosted by IIS that will 
   
 4. In the code for the data service, in the definition of the class that defines the data service, replace the comment  `/* TODO: put your data source class name here */` with the type that is the entity container of the data model, which in this case is `NorthwindEntities`. The class definition should look like the following.
     
-  ```cs
+```cs
   
 public class Northwind : DataService<NorthwindEntities>
 
-  ```
+```
 
 
 ### To set the security on the service
@@ -423,11 +423,11 @@ public class Northwind : DataService<NorthwindEntities>
 
 - You now have to modify the security to allow access to the data from the OData feed by external consumers. When a WCF service is created, all access is denied by default. Make the following changes to the class you just created.
     
-  ```cs
+```cs
   
 config.SetEntitySetAccessRule("*", EntitySetRights.All);
 config.SetServiceOperationAccessRule("*", ServiceOperationRights.All);
-  ```
+```
 
 
 ### Create the Subscribe service operation (optional)
@@ -519,7 +519,7 @@ Next, you create a new Windows Service project that will be registered on the WC
   
 4. Add the following code in the newly created class.
     
-  ```cs
+```cs
   
 public partial class PollingService : ServiceBase
 {
@@ -619,7 +619,7 @@ public partial class PollingService : ServiceBase
       return itemChangeList;
    }
 
-  ```
+```
 
 The next step is to build an executable file that can be added to the running services on the OData computer.
   
@@ -718,7 +718,7 @@ You will now modify the XML that was generated in the previous step to add a met
   
 3. Scroll down to the bottom of the page, and paste the following method into the  `<Methods>` section.
     
-  ```XML
+```XML
   
 <Method Name="SubscribeCustomer" DefaultDisplayName="Customer Subscribe" IsStatic="true">
               <Properties>
@@ -800,7 +800,7 @@ You will now modify the XML that was generated in the previous step to add a met
                 </MethodInstance>
               </MethodInstances>
             </Method>
-  ```
+```
 
 You will now add client code to allow your list to subscribe to event notifications.
   
@@ -812,7 +812,7 @@ You will now add client code to allow your list to subscribe to event notificati
 
 - In the Scripts folder of your SharePoint Add-in project, open the **App.js** file. Paste the following method into the file.
     
-  ```
+```
   
 function SubscribeEntity()
 {
@@ -824,7 +824,7 @@ function SubscribeEntity()
     context.load(subscription);
     context.executeQueryAsync(OnSubscribeSuccess, failmethod);
 }
-  ```
+```
 
 To register the event receiver with this script, you have to create a button on the Default.aspx page in your project and call the **SubscribeEntity()** from the **onclick()** method.
   
@@ -833,10 +833,10 @@ To register the event receiver with this script, you have to create a button on 
 
 - Open the Default.aspx page, and add the following HTML.
     
-  ```HTML
+```HTML
   
 <input type="button" value="Subscribe" onclick="SubscribeEntity();"/>
-  ```
+```
 
 For eventing to work, you must also enable the SharePoint list to accept external events. This is done by turning on the External Events feature.
   

@@ -103,7 +103,7 @@ The Geolocation column is not available by default in SharePoint lists. You have
   
 3. Uncomment the **FeatureActivated** method and **FeatureDeactivating** method, and then add the following code.
     
-  ```cs
+```cs
   
 public override void FeatureActivated(SPFeatureReceiverProperties properties)
 {
@@ -128,7 +128,7 @@ public override void FeatureDeactivating(
         list.Delete();
     }
 }
-  ```
+```
 
 4. Build the solution by choosing the F6 key.
     

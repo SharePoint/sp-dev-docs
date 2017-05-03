@@ -105,7 +105,7 @@ We recommend that you use the sample editor as a template. The sample shows how 
   
 9. Retrieve the parameters from the query string and set them as values for local variables, as shown in the following code example.
     
-  ```cs
+```cs
   
 // The URL of the site collection that contains the PerformancePoint Services repository.
 string server = Request.QueryString[ClickOnceLaunchKeys.SiteCollectionUrl];
@@ -115,10 +115,10 @@ string itemLocation = Request.QueryString[ClickOnceLaunchKeys.ItemLocation];
 
 // The operation to perform: OpenItem or CreateItem.
 string action = Request.QueryString[ClickOnceLaunchKeys.LaunchOperation];
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   
 ' The URL of the site collection that contains the PerformancePoint Services repository.
 Dim server As String = Request.QueryString(ClickOnceLaunchKeys.SiteCollectionUrl)
@@ -128,7 +128,7 @@ Dim itemLocation As String = Request.QueryString(ClickOnceLaunchKeys.ItemLocatio
 
 ' The operation to perform: OpenItem or CreateItem.
 Dim action As String = Request.QueryString(ClickOnceLaunchKeys.LaunchOperation)
-  ```
+```
 
 
     For information about query string parameters, see  [Editors for Custom PerformancePoint Services Objects](http://msdn.microsoft.com/library/7c5924f1-91f3-436a-9d94-2e0dc454c8cc%28Office.15%29.aspx).
@@ -136,26 +136,26 @@ Dim action As String = Request.QueryString(ClickOnceLaunchKeys.LaunchOperation)
   
 10. Retrieve the **FilterRepositoryHelper** object, which is used to make calls to the repository, as shown in the following code example.
     
-  ```cs
+```cs
   
 filterRepositoryHelper = new FilterRepositoryHelper();
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   filterRepositoryHelper = New FilterRepositoryHelper()
-  ```
+```
 
 11. Set the filter location based on the query string parameter, as shown in the following code example.
     
-  ```cs
+```cs
   RepositoryLocation repositoryFilterLocation = RepositoryLocation.CreateFromUriString(itemLocation);
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   Dim repositoryFilterLocation As RepositoryLocation = RepositoryLocation.CreateFromUriString(itemLocation)
-  ```
+```
 
 12. Retrieve the operation to perform ( _OpenItem_ or _CreateItem_) from the query string, and then retrieve or create the custom filter.
     
@@ -166,7 +166,7 @@ filterRepositoryHelper = new FilterRepositoryHelper();
     
   
 
-  ```cs
+```cs
   if (ClickOnceLaunchValues.OpenItem.Equals(action, StringComparison.OrdinalIgnoreCase))
 {
 
@@ -186,10 +186,10 @@ else if (ClickOnceLaunchValues.CreateItem.Equals(action, StringComparison.Ordina
                     SubTypeId = "SampleFilter"
                 };
 }
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   
 If ClickOnceLaunchValues.OpenItem.Equals(action, StringComparison.OrdinalIgnoreCase) Then
 
@@ -203,14 +203,14 @@ If ClickOnceLaunchValues.OpenItem.Equals(action, StringComparison.OrdinalIgnoreC
 ElseIf ClickOnceLaunchValues.CreateItem.Equals(action, StringComparison.OrdinalIgnoreCase) Then
       filter = New Filter With {.RendererClassName = GetType(MultiSelectTreeViewControl).AssemblyQualifiedName, .SubTypeId = "SampleFilter"}
 End If
-  ```
+```
 
 
     > **Note:**
       > By default, users can create custom objects from PerformancePoint Dashboard Designer only. To enable users to create a custom object outside of Dashboard Designer, you must add a menu item that sends a  _CreateItem_ request to your editor from the content type in the repository. For more information, see [Editors for Custom PerformancePoint Services Objects](http://msdn.microsoft.com/library/7c5924f1-91f3-436a-9d94-2e0dc454c8cc%28Office.15%29.aspx). 
 13. Retrieve the filter's underlying data source from the repository. The sample filter editor uses the **FilterRepositoryHelper.DataSourceHelper** property to call the **DataSourceConsumerHelper.GetDataSource** method, which is used to retrieve the data source by its location in the repository. This is shown in the following code example.
     
-  ```cs
+```cs
   
 if (!string.IsNullOrEmpty(filter.DataSourceLocation.ItemUrl))
     {
@@ -219,20 +219,20 @@ if (!string.IsNullOrEmpty(filter.DataSourceLocation.ItemUrl))
         datasource =
         filterRepositoryHelper.DataSourceHelper.GetDataSource(repositoryDatasourceLocation);
     }
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   
 If Not String.IsNullOrEmpty(filter.DataSourceLocation.ItemUrl) Then
       Dim repositoryDatasourceLocation As RepositoryLocation = RepositoryLocation.CreateFromUriString(filter.DataSourceLocation.ItemUrl)
       datasource = filterRepositoryHelper.DataSourceHelper.GetDataSource(repositoryDatasourceLocation)
 End If
-  ```
+```
 
 14. To enable users to select a data source for the filter, populate the selection control with PerformancePoint Services data sources. The **PopulateDataSourceDropDown** method in the sample filter editor calls the **DataSourceConsumerHelper.GetDataSourcesBySourceNames** method to retrieve the data sources. This is shown in the following code example.
     
-  ```cs
+```cs
   
 // The parameter contains the default server-relative URL to the PerformancePoint Data Connections Library.
 // Edit this value if you are not using the default path. A leading forward slash may not be needed.
@@ -241,15 +241,15 @@ ICollection dataSourceCollection =
 filterRepositoryHelper.DataSourceHelper.GetDataSourcesBySourceNames
     ("/BICenter/Data%20Connections%20for%20PerformancePoint/",
          new[] { "WSTabularDataSource", DataSourceNames.ExcelWorkbook });
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   
 ' The parameter contains the default server-relative URL to the PerformancePoint Data Connections Library.
 ' Edit this value if you are not using the default path. A leading forward slash may not be needed.
 Dim dataSourceCollection As ICollection = filterRepositoryHelper.DataSourceHelper.GetDataSourcesBySourceNames ("("/BICenter/Data%20Connections%20for%20PerformancePoint/", { "WSTabularDataSource", DataSourceNames.ExcelWorkbook })
-  ```
+```
 
 
     The sample filter editor retrieves only two types of data source, but you can modify this method to support other data source types or to prompt the user for the type of data source to retrieve. To reference a native data source of a particular type, use the  [SourceName](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSource.SourceName.aspx) property, which returns a field from the [DataSourceNames](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSourceNames.aspx) class. To reference a custom data source, use the [SubTypeId](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSource.SubTypeId.aspx) property of the data source, which is the same value as the **subType** attribute that is registered in the PerformancePoint Services web.config file for the data source extension.
@@ -275,7 +275,7 @@ Dim dataSourceCollection As ICollection = filterRepositoryHelper.DataSourceHelpe
     > **Note:**
       > The display data table is returned by the  [DisplayValues](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.ParameterDefinition.DisplayValues.aspx) property, and it is initialized when the filter data provider calls the [GetDisplayDataInternal](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Server.Extensions.CustomParameterDataProvider.GetDisplayDataInternal.aspx) method. If the data table contains other columns, you can define other column mappings to provide additional functionality.
 
-  ```cs
+```cs
   
 if (0 == filter.BeginPoints.Count)
 {
@@ -299,10 +299,10 @@ if (0 == filter.BeginPoints.Count)
     
     filter.BeginPoints.Add(paramDef);
 }
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   
 If 0 = filter.BeginPoints.Count Then
         Dim paramDef As New ParameterDefinition()
@@ -325,7 +325,7 @@ If 0 = filter.BeginPoints.Count Then
 
       filter.BeginPoints.Add(paramDef)
 End If
-  ```
+```
 
 
     The sample editor defines its beginpoint in the **VerifyFilter** method. It also uses **VerifyFilter** to verify that required properties are set and to define the selection mode, which is an optional property.

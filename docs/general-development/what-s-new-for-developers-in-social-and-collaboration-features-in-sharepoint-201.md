@@ -266,7 +266,7 @@ The following list contains information for developing with Community Site featu
     
 
 
-  ```cs
+```cs
   
 int retries = 1;
 while (retries <= 10)
@@ -286,7 +286,7 @@ while (retries <= 10)
     }
 }
 
-  ```
+```
 
 
 ## Additional resources

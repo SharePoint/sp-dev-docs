@@ -34,18 +34,18 @@ To facilitate using these objects, you must first add the namespaces as directiv
   
 2. To add these directives, add the following code to the beginning of your code in the Class1.cs file, after  `using System:`
     
-  ```cs
+```cs
   
 using SampleApplication.ExcelWebService;
 using System.Web.Services.Protocols;
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   
 Imports SampleApplication.ExcelWebService
 Imports System.Web.Services.Protocols
-  ```
+```
 
 
 ### To call the Web service
@@ -53,55 +53,55 @@ Imports System.Web.Services.Protocols
 
 1. Instantiate and initialize the Web service proxy object by adding the following code after the opening bracket in  `static void Main(string[] args)`:
     
-  ```cs
+```cs
   
 ExcelService es = new ExcelService();
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   Dim es As New ExcelService()
-  ```
+```
 
 2. Add the following code to create a status array and range coordinate objects:
     
-  ```cs
+```cs
   Status[] outStatus;
 RangeCoordinates rangeCoordinates = new RangeCoordinates();
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   
 Dim outStatus() As Status
 Dim rangeCoordinates As New RangeCoordinates()
-  ```
+```
 
 3. Add the code to point to the worksheet you want to access. In this example, the worksheet is called "Sheet1". Add the following to your code: 
     
-  ```cs
+```cs
   
 string sheetName = "Sheet1";
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   Dim sheetName As String = "Sheet1"
-  ```
+```
 
 
     > **Note:**
       > Make sure the workbook you want to open has a worksheet called "Sheet1" that contains values. Alternatively, you can change "Sheet1" in the code to the name of your worksheet. 
 4.  `Add the following code to point to the workbook you want to open`:
     
-  ```cs
+```cs
   string targetWorkbookPath = "http://myserver02/example/Shared%20Documents/Book1.xlsx";
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   Dim targetWorkbookPath As String = "http://myserver02/example/Shared%20Documents/Book1.xlsx"
-  ```
+```
 
 
     > **Important:**
@@ -114,34 +114,34 @@ string sheetName = "Sheet1";
     > **Note:**
       > You have to explicitly set the credentials even if you intend to use the default credentials. 
 
-  ```cs
+```cs
   es.Credentials = System.Net.CredentialCache.DefaultCredentials;
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   es.Credentials = System.Net.CredentialCache.DefaultCredentials
-  ```
+```
 
 6. Add the following code to open the workbook and point to the trusted location where the workbook is located. Place the code in a **try** block:
     
-  ```cs
+```cs
   try
 {
 string sessionId = es.OpenWorkbook(targetWorkbookPath, "en-US", 
     "en-US", out outStatus);
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   
 Try
 Dim sessionId As String = es.OpenWorkbook(targetWorkbookPath, "en-US", "en-US", outStatus)
-  ```
+```
 
 7. Add the following code to prepare an object to define range coordinates, and call the **GetRange** method. The code will also print the total number of rows in the range and the value in a particular range.
     
-  ```cs
+```cs
   
 rangeCoordinates.Column = 3;
 rangeCoordinates.Row = 9;
@@ -152,10 +152,10 @@ object[] rangeResult1 = es.GetRange(sessionId, sheetName,
     rangeCoordinates, false, out outStatus);
 Console.WriteLine("Total rows in range: " + rangeResult1.Length);
 Console.WriteLine("Value in range is: " + ((object[])rangeResult1[5])[2]);
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   
 rangeCoordinates.Column = 3
 rangeCoordinates.Row = 9
@@ -165,41 +165,41 @@ rangeCoordinates.Width = 12
 Dim rangeResult1() As Object = es.GetRange(sessionId, sheetName, rangeCoordinates, False, outStatus)
 Console.WriteLine("Total rows in range: " &amp; rangeResult1.Length)
 Console.WriteLine("Value in range is: " &amp; (CType(rangeResult1(5), Object()))(2))
-  ```
+```
 
 8. Add code to close the workbook and close the current session. Also add a close bracket to end the **try** block.
     
     > **Important:**
       > It is good practice to close the workbook if you are done using the session. This will close the session and free resources. 
 
-  ```cs
+```cs
   
 es.CloseWorkbook(sessionId);
 }
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   
 es.CloseWorkbook(sessionId)
-  ```
+```
 
 9. Add a **catch** block to catch the SOAP exception and print the exception message:
     
-  ```cs
+```cs
   catch (SoapException e)
 {
     Console.WriteLine("SOAP Exception Message: {0}", e.Message);
 }
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   
 Catch e As SoapException
     Console.WriteLine("SOAP Exception Message: {0}", e.Message)
 End Try
-  ```
+```
 
 
 ## Complete Code

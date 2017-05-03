@@ -47,7 +47,7 @@ If you are getting values from multiple adjacent cells, you may want to consider
 
 1. Use the **GetCell** method to get a value from a cell in the open workbook by using numeric range coordinates; for example:
     
-  ```cs
+```cs
   
 // Instantiate the Web service and make a status array object.
 ExcelService xlservice = new ExcelService();
@@ -68,10 +68,10 @@ string sessionId = xlservice.OpenWorkbook(targetWorkbookPath, "en-US", "en-US", 
 // Call the GetCell method to retrieve a value from a cell.
 // The cell is in the first row and ninth column.
 object[] rangeResult2 = xlservice.GetCell(sessionId, sheetName, 0, 8, false, out outStatus);
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   
 ' Instantiate the Web service and make a status array object.
 Dim xlservice As New ExcelService()
@@ -92,11 +92,11 @@ Dim sessionId As String = xlservice.OpenWorkbook(targetWorkbookPath, "en-US", "e
 ' Call the GetCell method to retrieve a value from a cell.
 ' The cell is in the first row and ninth column.
 Dim rangeResult2() As Object = xlservice.GetCell(sessionId, sheetName, 0, 8, False, outStatus)
-  ```
+```
 
 2. Use the **GetRange** method to get values from a range in the open workbook by using numeric range coordinates.
     
-  ```cs
+```cs
   
 // Instantiate the Web service and make a status array object.
 ExcelService xlservice = new ExcelService();
@@ -121,10 +121,10 @@ foreach (object[] x in rangeResult1s)
         Console.WriteLine(String.Format("{0}",  y));
     }
 }
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   
 ' Instantiate the Web service and make a status array object.
 Dim xlservice As New ExcelService()
@@ -147,7 +147,7 @@ For Each x As Object() In rangeResult1s
         Console.WriteLine(String.Format("{0}", y))
     Next y
 Next x
-  ```
+```
 
 
 ### To get values using the GetCellA1 and GetRangeA1 methods
@@ -155,7 +155,7 @@ Next x
 
 1. Use the **GetCellA1** method to get a value from a cell in the open workbook, using the Excel "A1" range specification; for example:
     
-  ```cs
+```cs
   
 // Instantiate the Web service and make a status array object.
 ExcelService xlservice = new ExcelService();
@@ -163,10 +163,10 @@ Status[] outStatus;
 string sheetName = "Sheet2";
 
 object[] rangeResult = xlservice.GetCellA1(sessionId, sheetName, "MonthlyPayment", true, out outStatus);
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   
 ' Instantiate the Web service and make a status array object.
 Dim xlservice As New ExcelService()
@@ -174,7 +174,7 @@ Dim outStatus() As Status
 Dim sheetName As String = "Sheet2"
 
 Dim rangeResult() As Object = xlservice.GetCellA1(sessionId, sheetName, "MonthlyPayment", True, outStatus)
-  ```
+```
 
 2. Use the **GetRangeA1** method to get a value from a range in the open workbook, using the Excel "A1" range specification. The following code example asks for a 2x3 range, that is, two rows by three columns. The code then loops through each row that is returned and retrieves the three cells each row contains. That is, in the first iteration:
     
@@ -199,7 +199,7 @@ Dim rangeResult() As Object = xlservice.GetCellA1(sessionId, sheetName, "Monthly
     
   
 
-  ```cs
+```cs
   
 object[] rangeResults = xlservice.GetRangeA1(sessionId, "Sheet1", "B2:D3", true, out outStatus);
 foreach (object[] rangeResult in rangeResults)
@@ -208,16 +208,16 @@ foreach (object[] rangeResult in rangeResults)
         rangeResult[0], rangeResult[1], rangeResult[2]));
 }
 
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   
 Dim rangeResults() As Object = xlservice.GetRangeA1(sessionId, "Sheet1", "B2:D3", True, outStatus)
 For Each rangeResult As Object() In rangeResults
     Console.WriteLine(String.Format("{0} | {1} | {2}", rangeResult(0), rangeResult(1), rangeResult(2)))
 Next rangeResult
-  ```
+```
 
 
 ## See also

@@ -77,7 +77,7 @@ The **Application_Launching** and **Application_Closing** handlers for these eve
   
 4. Locate the (empty) implementation of the **Application_Launching** event handler and replace the event handler with the following code.
     
-  ```cs
+```cs
   
 private void Application_Launching(object sender, LaunchingEventArgs e)
 {
@@ -88,11 +88,11 @@ private void Application_Launching(object sender, LaunchingEventArgs e)
         App.MainViewModel.Initialize();
     }
 }
-  ```
+```
 
 5. Locate the (empty) implementation of the **Application_Closing** event handler and replace that event handler with the following code.
     
-  ```cs
+```cs
   
 private void Application_Closing(object sender, ClosingEventArgs e)
 {
@@ -106,7 +106,7 @@ private void Application_Closing(object sender, ClosingEventArgs e)
     }
     IsolatedStorageSettings.ApplicationSettings.Save();
 }
-  ```
+```
 
 6. Save the file.
     
@@ -159,7 +159,7 @@ For the procedures in this section, we assume you're working in the context of a
   
 4. Replace the contents of the class file with the following code.
     
-  ```cs
+```cs
   
 using System;
 using System.Net;
@@ -235,7 +235,7 @@ namespace SPListAppLocalStorage // Based on project name by default.
         }
     }
 }
-  ```
+```
 
 
     The namespace specified in this code is based on the name of the project (SPListAppLocalStorage in this case). You might want to specify a different namespace, based on the name of your project.
@@ -293,7 +293,7 @@ Now you can add elements to the user interface of the phone app and configure th
   
 6. In the XAML pane of the designer, replace the contents of the file with the following XAML.
     
-  ```
+```
   
 <phone:PhoneApplicationPage
     x:Class="SPListAppLocalStorage.Views.Drafts"
@@ -353,7 +353,7 @@ Now you can add elements to the user interface of the phone app and configure th
     </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>
-  ```
+```
 
 
     The value of the namespace designation  `<x:Class>` in this code ("SPListAppLocalStorage.Views.Drafts") will vary depending on the name of your project.
@@ -364,7 +364,7 @@ Now you can add elements to the user interface of the phone app and configure th
   
 8. Replace the contents of the file with the following code.
     
-  ```cs
+```cs
   
 using System;
 using System.Collections.Generic;
@@ -414,7 +414,7 @@ namespace SPListAppLocalStorage.Views
         }
     }
 }
-  ```
+```
 
 9. Save the files.
     
@@ -444,7 +444,7 @@ namespace SPListAppLocalStorage.Views
   
 6. In the XAML pane of the designer, replace the contents of the file with the following XAML.
     
-  ```
+```
   
 <phone:PhoneApplicationPage
     x:Class="SPListAppLocalStorage.DraftItemEditForm"
@@ -582,7 +582,7 @@ namespace SPListAppLocalStorage.Views
     </phone:PhoneApplicationPage.ApplicationBar>
 
 </phone:PhoneApplicationPage>
-  ```
+```
 
 
     The XAML for defining this page is similar to that of the EditForm.xaml file. You can copy the EditForm.xaml file to use as a basis for DraftItemEditForm.xaml, making the modifications to the file as indicated in this markup.
@@ -593,7 +593,7 @@ namespace SPListAppLocalStorage.Views
   
 8. Replace the contents of the file with the following code.
     
-  ```cs
+```cs
   
 using System;
 using System.Collections.Generic;
@@ -696,7 +696,7 @@ namespace SPListAppLocalStorage
         }
     }
 }
-  ```
+```
 
 
     As you can see, the namespace used in this file is based on the name of the project (SPListAppLocalStorage).
@@ -730,13 +730,13 @@ namespace SPListAppLocalStorage
   
 2. Within the code block (demarcated by opening and closing braces) that implements the **EditItemViewModel** class, add the following public method to the file.
     
-  ```cs
+```cs
   
 public void SaveAsDraft()
 {
     DraftItemStore.AddDraftItem(this.ID.ToString(), this);
 }
-  ```
+```
 
 3. In **Solution Explorer**, under the **Views** node in the project, double-click the EditForm.xaml file.
     
@@ -745,7 +745,7 @@ public void SaveAsDraft()
   
 4. In the XAML pane of the designer, add another button to the  `<shell:ApplicationBar>` tag (in addition to the existing **Submit** and **Cancel** buttons), as shown in the following XAML.
     
-  ```
+```
   
 <phone:PhoneApplicationPage.ApplicationBar>
     <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
@@ -758,20 +758,20 @@ public void SaveAsDraft()
                       Text="Cancel" Click="OnCancelButtonClick"/>
     </shell:ApplicationBar>
 </phone:PhoneApplicationPage.ApplicationBar>
-  ```
+```
 
 5. With the EditForm.xaml file chosen in **Solution Explorer**, press F7 to open the associated code-behind file, EditForm.xaml.cs, for editing.
     
   
 6. Within the code block (demarcated by opening and closing braces) that implements the **EditForm** partial class, add the following event handler to the file.
     
-  ```cs
+```cs
   
 private void OnSaveDraftButtonClick(object sender, EventArgs e)
 {
     viewModel.SaveAsDraft();
 }
-  ```
+```
 
 7. Save the files.
     
@@ -787,7 +787,7 @@ private void OnSaveDraftButtonClick(object sender, EventArgs e)
   
 2. In the XAML pane of the designer, add another button to the **<shell:ApplicationBar>** tag (in addition to the existing **New** and **Refresh** buttons), as shown in the following XAML markup.
     
-  ```
+```
   
 <phone:PhoneApplicationPage.ApplicationBar>
     <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
@@ -800,7 +800,7 @@ private void OnSaveDraftButtonClick(object sender, EventArgs e)
         <shell:ApplicationBarIconButton x:Name="btnDrafts"            IconUri="/Images/appbar.folder.rest.png"            Text="View Drafts" IsEnabled="True"            Click="OnDraftsButtonClick"/>
     </shell:ApplicationBar>
 </phone:PhoneApplicationPage.ApplicationBar>
-  ```
+```
 
 3. Add an icon image to your project for the **Drafts** button. In **Solution Explorer**, choose the **Images** folder node in the project.
     
@@ -825,13 +825,13 @@ private void OnSaveDraftButtonClick(object sender, EventArgs e)
   
 9. Add the following event handler to the file, within the code block (demarcated by opening and closing braces) that implements the **ListForm** partial class.
     
-  ```cs
+```cs
   
 private void OnDraftsButtonClick(object sender, EventArgs e)
 {
     NavigationService.Navigate(new Uri("/Views/Drafts.xaml", UriKind.Relative));
 }
-  ```
+```
 
 10. Save all the files in the solution and press F6 to compile the solution.
     

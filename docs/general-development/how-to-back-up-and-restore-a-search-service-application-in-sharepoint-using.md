@@ -64,7 +64,7 @@ The following procedures are intended to help developers with creating a backup/
     
 1. Create an XML file and copy the following into it: 
     
-  ```XML
+```XML
   
 <BETest>
   <Writer writerid="SharePoint Services Writer ID">
@@ -81,7 +81,7 @@ The following procedures are intended to help developers with creating a backup/
   </Writer>
 </BETest>
 
-  ```
+```
 
 2. Replace the 10 placeholders in this file with appropriate values from the writer.txt file that you generated in the first step. Use the following table as a guide. 
     
@@ -112,7 +112,7 @@ The following procedures are intended to help developers with creating a backup/
     
 1. Create an XML file and copy the following into it:
     
-  ```XML
+```XML
   
 <BETest>
    <Writer writerid="SharePoint Services Writer ID">
@@ -122,7 +122,7 @@ The following procedures are intended to help developers with creating a backup/
       <Component logicalPath="PathOSearch15" componentName="IndexComponentGroup" />
    </Writer>    
 </BETest>
-  ```
+```
 
 2. Replace the six placeholders in this file with appropriate values from the writer.txt file that you generated in the first step. Use the following table as a guide.
     
@@ -147,35 +147,35 @@ The following procedures are intended to help developers with creating a backup/
   
 5. On any server in the farm, open the SharePoint Management Shell and execute the following lines, where  _name of search service application_ is the SSA that you want to back up. Leave the SharePoint Management Shell window open afterward.
     
-  ```
+```
   
 $ssa = Get-SpenterpriseSearchServiceApplication -Identity "name of search service application"
 Suspend-SPEnterpriseSearchServiceApplication -Identity $ssa
-  ```
+```
 
 6. Perform backups of the SSA databases and the index by following these steps:
     
 1. On the server with the SSA databases, execute the following command at a command line, where  _destination backup folder_ is the full path of the folder for the backup files, _backup log file_ is the full path and name of the backup log file, and _SSA manifest file_ is the path and file name of the SSA manifest file.
     
-  ```
+```
   
 betest.exe /v /b /d "destination backup folder" /s "backup log file" /x "SSA manifest file"
-  ```
+```
 
 2. On the server with the open SharePoint Management Shell window, execute the following line, where  _topology file name_ is the full path and name of the exported file containing the topology information. You will use this file in the restore procedure for the SSA.
     
-  ```
+```
   Export-SPEnterpriseSearchTopology -SearchApplication $ssa -Filename "topology file name"
-  ```
+```
 
 3. Verify that the file is created.
     
   
 4. On each server that has an index component, execute the following at a command line, where  _destination backup folder_ is the full path of the folder for the backup files, _backup log file_ is the full path and name of the backup log file, and _index manifest file_ is the path and file name of the index manifest.
     
-  ```
+```
   betest.exe /v /b /d "destination backup folder" /s "backup log file" /x "index manifest file"
-  ```
+```
 
 5. (Optional) Inspect the index folders that have been backed up. Verify that folder names and sizes match with those recorded in the earlier step.
     
@@ -186,36 +186,36 @@ betest.exe /v /b /d "destination backup folder" /s "backup log file" /x "SSA man
 
 1. On any server in the farm, open the SharePoint Management Shell and execute the following lines to remove the existing search service application and its proxy, where  _name of search service application_ is the SSA that you want to restore and _name of proxy_ is its application proxy. Note that _name of SSA proxy_ is normally the same as the name of the SSA with the word "Proxy" added to the end. The `RemoveData` switch ensures that the search databases are removed.
     
-  ```
+```
   $ssa = Get-SPEnterpriseSearchServiceApplication -Identity "name of search service application"
 Remove-SPEnterpriseSearchServiceApplication -Identity $ssa -RemoveData
 Remove-SPEnterpriseSearchServiceApplicationProxy -Identity "name of SSA proxy"
-  ```
+```
 
 2. On the same server, execute the following at a command line to restore the SSA databases, where  _destination backup folder_ is the full path of the folder for the backup files, _backup log file_ is the full path and name of the backup log file, and _SSA manifest file_ is the path and file name of the SSA manifest file.
     
-  ```
+```
   
 betest.exe /v /r /d "destination backup folder" /s "backup log file" /x SSA_manifest_file
-  ```
+```
 
 3. On the same server, open a SharePoint Management Shell and execute the following lines to restore the SSA, where  _application pool name_ is the name of the new pool, _domain\\user_ is the domain name of the user that the application pool logs in as, _name of the search service application_ is the name of the SSA, and _topology_file_name_ is the path and name of the typology file you created when the SSA was backed up.
     
     > **Tip:**
       > This code creates a new application pool identity to run the restored SSA, but you can also use an existing account with the **Get-SPServiceApplicationPool** cmdlet.
 
-  ```
+```
   $applicationPool = New-SPServiceApplicationPool -name "application pool name" -account "domain\\user"
 Restore-SPEnterpriseSearchServiceApplication -Name "name of the search service application" -ApplicationPool $applicationPool -TopologyFile "topology_file_name" -KeepId
-  ```
+```
 
 4. Create a proxy for the SSA with the following cmdlets. We recommend that you use the same values for  _name of the search service application_ and _name of SSA proxy_ as you used in step 1.
     
-  ```
+```
   
 $ssa = Get-SpenterpriseSearchServiceApplication -Identity "name of search service application"
 New-SPEnterpriseSearchServiceApplicationProxy -Name "name of SSA proxy" -SearchApplication $ssa
-  ```
+```
 
 5. (Optional) Verify that the SSA and its proxy exist by opening **Central Administration**. Choose **Manage Service Applications** and verify that the SSA and its proxy are listed.
     
@@ -227,16 +227,16 @@ New-SPEnterpriseSearchServiceApplicationProxy -Name "name of SSA proxy" -SearchA
     
 1. Stop the Host Controller service either in **Administrative Tools > Services**, or by executing the following cmdlet in SharePoint Management Shell:
     
-  ```
+```
   
 stop-service SPSearchHostController
-  ```
+```
 
 2. On the same servers, execute the following at a command line, where  _index manifest file_ is the path and file name of the index manifest that you created in the backup procedure.
     
-  ```
+```
   betest.exe /v /r /d "destination backup folder" /s "backup log file" /x "index manifest file"
-  ```
+```
 
 3. (Optional) Verify that the folder names and sizes match those that you recorded in the backup procedure.
     
@@ -245,9 +245,9 @@ stop-service SPSearchHostController
     
 1. In SharePoint Management Shell, execute the following cmdlet.
     
-  ```
+```
   Get-SPEnterpriseSearchVssDataPath
-  ```
+```
 
 2. From the output of the cmdlet, record the last part of each GUID. For example, if one line of the output is  `IndexComponentGroup_e255918b-6ab0-4d7c-8049-720b2744c62f`, record 720b2744c62f.
     
@@ -260,9 +260,9 @@ stop-service SPSearchHostController
   
 5. Restart the host controller service either in **Administrative Tools > Services**, or by executing the following cmdlet in SharePoint Management Shell:
     
-  ```
+```
   start-service SPSearchHostController
-  ```
+```
 
 6. Verify that the index data folder names have reverted back to their previous name. (In the continuing example, this would be "'SP720b2744c62f.1.I.1.0".)
     
@@ -275,9 +275,9 @@ stop-service SPSearchHostController
   
 10. On all the affected servers, run the following cmdlet in SharePoint Management Shell to verify that the search application service is running properly:
     
-  ```
+```
   Get-SPEnterpriseSearchStatus
-  ```
+```
 
 11. Verify that feeding and searching for new documents works. For example, check the size of the index by using the query "size>=0". Also add a new document and verify that it is searchable.
     

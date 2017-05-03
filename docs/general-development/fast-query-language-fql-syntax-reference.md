@@ -89,9 +89,9 @@ A property specification (the **In** Operator) may be applied to the following q
     
     `title:"to be or not to be"`
 - An operator, for example, the **STRING** operator, as follows:
-    ```
+```
     title:string("to be or not to be")
-    ```
+```
     In this case the property specification applies to the complete operator expression.
 
 ### Examples

@@ -34,17 +34,17 @@ The **Microsoft.Office.Excel.Server.Udf.UdfMethod** attribute has an **IsVolatil
     
 
 
-  ```cs
+```cs
   
 using Microsoft.Office.Excel.Server.Udf; 
-  ```
+```
 
 
 
 
-  ```VB.net
+```VB.net
   Imports Microsoft.Office.Excel.Server.Udf
-  ```
+```
 
 
 ### To mark a UDF class and methods
@@ -52,56 +52,56 @@ using Microsoft.Office.Excel.Server.Udf;
 
 1. Mark  `Class1` as a UDF class by adding the following attribute just above `public class Class1`: 
     
-  ```cs
+```cs
   [UdfClass]
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   <UdfClass>_
-  ```
+```
 
 2. Create a function that takes a number (of type **double**), and in the function, multiply the number by 9. The function is a UDF method that is nonvolatile. Add the following code to  `Class1`:
     
-  ```cs
+```cs
   [UdfMethod]
 public double MyDouble(double d)
 {
     return d * 9;
 }
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   
 <UdfMethod> _
 Public Function MyDouble(ByVal d As Double) As Double
     Return d * 9
 End Function
-  ```
+```
 
 
     > **Note:**
       > The default value for the **IsVolatile** property is **false**, which means that particular UDF method is nonvolatile. Therefore, it is sufficient to mark a nonvolatile UDF method as  `[UdfMethod]`. It is not necessary to mark it as  `[UdfMethod(IsVolatile = false)]`. 
 3. Create another function that returns the current date using the **System.DateTime.Today** property. The function is a UDF method that is volatile. Add the following code to `Class1`:
     
-  ```cs
+```cs
   
 [UdfMethod(IsVolatile = true)]
 public DateTime ReturnDateTimeToday()
 {
     return (DateTime.Today);
 }      
-  ```
+```
 
 
-  ```VB.net
+```VB.net
   
 <UdfMethod(IsVolatile := True)> _
 Public Function ReturnDateTimeToday() As Date
     Return (Date.Today)
 End Function
-  ```
+```
 
 
 ### To build the project

@@ -91,35 +91,35 @@ To create a console application that uses the .NET client object model to retrie
   
 6. In the **Main** method, define variables for the server URL and the target user name, as shown in the following code.
     
-  ```cs
+```cs
 const string serverUrl = "http://serverName/";
 const string targetUser = "domainName\\\\userName";
-  ```
+```
 
    > Note: Remember to replace the  `http://serverName/` and `domainName\\\\userName` placeholder values before you run the code.
 
 7. Initialize the SharePoint client context, as shown in the following code.
     
-  ```cs
+```cs
 ClientContext clientContext = new ClientContext(serverUrl);
-  ```
+```
 
 8. Get the target user's properties from the **PeopleManager** object, as shown in the following code.
     
-  ```cs
+```cs
 PeopleManager peopleManager = new PeopleManager(clientContext);
 PersonProperties personProperties = peopleManager.GetPropertiesFor(targetUser);
-  ```
+```
 
    The **personProperties** object is a client object. Some client objects contain no data until they are initialized. For example, you cannot access the property values of the **personProperties** object until you initialize it. If you try to access a property before it is initialized, you receive a **PropertyOrFieldNotInitializedException** exception.
     
   
 9. To initialize the **personProperties** object, register the request that you want to run, and then run the request on the server, as shown in the following code.
     
-  ```cs
+```cs
 clientContext.Load(personProperties, p => p.AccountName, p => p.UserProfileProperties);
 clientContext.ExecuteQuery();
-  ```
+```
 
    When you call the **Load** method (or the **LoadQuery** method), you pass in the object that you want to retrieve or change. In this example, the call to the **Load** method passes in optional parameters to filter the request. The parameters are lambda expressions that request only the **AccountName** property and **UserProfileProperties** property of the **personProperties** object.
     
@@ -127,13 +127,13 @@ clientContext.ExecuteQuery();
 
 10. Iterate through the user profile properties and read the name and value of each property, as shown in the following code.
     
-  ```cs
+```cs
 foreach (var property in personProperties.UserProfileProperties)
 {
     Console.WriteLine(string.Format("{0}: {1}", 
         property.Key.ToString(), property.Value.ToString()));
 }
-  ```
+```
 
 
 ## Code example: Retrieving all user profile properties by using the SharePoint 2013 .NET client object model

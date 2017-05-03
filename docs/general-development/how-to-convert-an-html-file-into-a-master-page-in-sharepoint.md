@@ -94,14 +94,14 @@ Before you convert your HTML file, here are some best practices and guidance to 
 <script>
 (function( …
 
-  ```
+```
 
 
     Do not put them on the same line, like this.
     
 
 
-  ```
+```
   
 <Script> (function( …
 ```
@@ -192,7 +192,7 @@ The following is a breakdown of the types of markup that are added to the HTML f
 
 - **Document properties** The **\<mso\>** tag contains SharePoint metadata, including information about the file itself and some properties needed for the successful conversion to the .master file.
     
-  ```HTML
+```HTML
   
 <mso:CustomDocumentProperties>
 <mso:HtmlDesignFromMaster msdt:dt="string"></mso:HtmlDesignFromMaster>
@@ -201,19 +201,19 @@ The following is a breakdown of the types of markup that are added to the HTML f
 <mso:HtmlDesignAssociated msdt:dt="string">1</mso:HtmlDesignAssociated>
 <mso:HtmlDesignConversionSucceeded msdt:dt="string">True</mso:HtmlDesignConversionSucceeded>
 </mso:CustomDocumentProperties>
-  ```
+```
 
 - **SharePoint namespace registration** The **\<SPM\>** tag ("SharePoint markup") provides a line registering a SharePoint namespace.
     
-  ```HTML
+```HTML
   
 <!--SPM:<%@Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
         <!--SPM:<%@Register Tagprefix="WebPartPages" Namespace="Microsoft.SharePoint.WebPartPages" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
-  ```
+```
 
 - **Comments** The **\<CS\>** and **\<CE\>** ("Comment start" and "comment end") tags are ignored during the conversion process. These tags are to help you parse the lines of markup.
     
-  ```HTML
+```HTML
   
 <!--CS: Start Page Head Contents Snippet-->
 …
@@ -226,11 +226,11 @@ The following is a breakdown of the types of markup that are added to the HTML f
 <!--CS: Start PlaceHolderMain Snippet-->
 …
 <!--CE: End PlaceHolderMain Snippet-->
-  ```
+```
 
 - **Snippets** The **\<MS\>** and **\<ME\>** ("markup start" and "markup end") tags denote the beginning and end of a SharePoint control or a snippet. A snippet is a SharePoint control that adds SharePoint functionality to your page. You can add snippets yourself by using the Snippet Gallery. For more information, see [SharePoint 2013 Design Manager snippets](sharepoint-design-manager-snippets.md).
     
-  ```HTML
+```HTML
   
 <!--MS:<SharePoint:RobotsMetaTag runat="server">-->
         <!--ME:</SharePoint:RobotsMetaTag>-->
@@ -276,25 +276,25 @@ The following is a breakdown of the types of markup that are added to the HTML f
             <!--MS:<WebPartPages:SPWebPartManager runat="server">-->
             <!--ME:</WebPartPages:SPWebPartManager>-->
         <!--ME:</SharePoint:AjaxDelta>-->
-  ```
+```
 
 - **Preview blocks** The **\<PS\>** and **\<PE\>** ("Preview start" and "preview end") tags surround a section of HTML code that you shouldn't edit because this section affects only the design-time preview. These preview sections are a snapshot in time of the SharePoint control that snippet is inserting. A preview makes it possible for you to work more meaningfully on the HTML file in a client-side HTML editor. But, changing the content or styling within that preview has no lasting effect on the .master file, which is what SharePoint is ultimately using. To style a snippet, you have to identify and override the SharePoint styles with your own custom CSS.
     
-  ```HTML
+```HTML
   
 <!--PS: Start of READ-ONLY PREVIEW (do not modify) -->
 <div class="DefaultContentBlock" style="background:rgb(0, 114, 198); color:white; width:100%; padding:8px; height:64px; overflow:hidden;">The SharePoint ribbon will be here when your file is either previewed on or applied to your site.</div>
 <!--PE: End of READ-ONLY PREVIEW -->
-  ```
+```
 
 - **SharePoint IDs** Two of the snippets added to your HTML file during the conversion (the Page Head Contents snippet and the SharePoint Ribbon) have an associated SharePoint ID, or SID (00 and 02, respectively). These IDs make it possible to shorten the snippets and make the HTML in the page easier to read.
     
-  ```HTML
+```HTML
   
 <!--SID:00 -->
 
 <!--SID:02 {Ribbon}-->
-  ```
+```
 
 
 ### Added snippets
@@ -306,13 +306,13 @@ It's important to know about two of the snippets that are added to your HTML fil
 
 - **The Ribbon** For content authors to be able to create pages and author content on your SharePoint site, your master page needs the ribbon and the "suite navigation" that is new to SharePoint 2013. The ribbon is contained in a security-trimming snippet, so that when a visitor browses your site, the ribbon is displayed only to authenticated users, not anonymous users. You can move the ribbon to a different position on the page or style it by overriding the default CSS classes, but we do not recommend moving or reordering the components (such as the Site Actions menu) that are contained inside the ribbon.
     
-  ```HTML
+```HTML
   
 <!--MS:<SharePoint:SPSecurityTrimmedControl runat="server" AuthenticationRestrictions="AnonymousUsersOnly">-->
 <!--MS:<wssucw:Welcome runat="server" EnableViewState="false">-->
 <!--ME:</wssucw:Welcome>-->
 <!--ME:</SharePoint:SPSecurityTrimmedControl>-->
-  ```
+```
 
 - **ContentPlaceHolderMain** At the bottom of the **\<div id="s4-bodyContainer"\>** tag, before the closing **\</body\>** tag, the conversion process inserts a content placeholder named **PlaceHolderMain**. Inside this snippet is the black-bordered, yellow **\<div\>** that appears in the design view of your HTML editor, or in the server-side preview in Design Manager.
     
@@ -320,7 +320,7 @@ It's important to know about two of the snippets that are added to your HTML fil
     
 
 
-  ```HTML
+```HTML
   
 <!--CS: Start PlaceHolderMain Snippet-->
                     <!--SPM:<%@Register Tagprefix="SharePoint" Namespace="Microsoft.SharePoint.WebControls" Assembly="Microsoft.SharePoint, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c"%>-->
@@ -333,7 +333,7 @@ It's important to know about two of the snippets that are added to your HTML fil
                         <!--ME:</asp:ContentPlaceHolder>-->
                     <!--ME:</SharePoint:AjaxDelta>-->
                     <!--CE: End PlaceHolderMain Snippet-->
-  ```
+```
 
 
 ## Reference: Examples of SharePoint markup added to the HTML file

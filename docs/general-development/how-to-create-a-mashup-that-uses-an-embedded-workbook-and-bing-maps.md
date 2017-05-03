@@ -98,7 +98,7 @@ The integration happens in the following 3 steps:
     
 
 
-  ```HTML
+```HTML
   
 <!-- HTML omitted for brevity -->
     <select id="destinations" style="width: 150px" name="destinations"
@@ -111,7 +111,7 @@ The integration happens in the following 3 steps:
     <div id="mapDiv" style="position:relative; width:693px; height:400px;"></div>
     <!-- HTML omitted for brevity -->
 
-  ```
+```
 
 2. **Initialize the embedded workbook charts and the Bing Map**
     
@@ -123,7 +123,7 @@ The integration happens in the following 3 steps:
     
 
 
-  ```
+```
   
 // Use this file token to reference your OneDrive hosted workbook in Excel's APIs
     var fileToken = "TOKEN TO YOUR WORKBOOK GOES HERE";
@@ -190,7 +190,7 @@ The integration happens in the following 3 steps:
     mapTypeId: Microsoft.Maps.MapTypeId.road,
     zoom: 3 });
 
-  ```
+```
 
 3. **Create the appropriate callback functions**
     
@@ -198,10 +198,10 @@ The integration happens in the following 3 steps:
     
 
 
-  ```
+```
   
 Ewa.EwaControl.loadEwaAsync(fileToken, "chartDiv", props, onEwaChartLoaded);
-  ```
+```
 
 
     The callback used here is **onEwaChartLoaded**. This launches the following chain of calls to the Excel Services JavaScript API and callbacks within the Destination Explorer. The callbacks used in this chain are:
@@ -230,7 +230,7 @@ Ewa.EwaControl.loadEwaAsync(fileToken, "chartDiv", props, onEwaChartLoaded);
     
 
 
-  ```
+```
   // Event handler called when user selects a different region.
     function onRegionChange() {
     currentDestination = '';
@@ -275,7 +275,7 @@ Ewa.EwaControl.loadEwaAsync(fileToken, "chartDiv", props, onEwaChartLoaded);
     ewaChart.getActiveWorkbook().getRangeA1Async("Output!OutputTopFiveDetails", onGotDetailRange, null);
     }
 
-  ```
+```
 
 
 ## Conclusion

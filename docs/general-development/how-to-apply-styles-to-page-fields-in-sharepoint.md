@@ -212,7 +212,7 @@ When you change the value of the **PrefixStyleSheet** property, none of the exis
     
 
 
-  ```HTML
+```HTML
   
 H2.customstyleElement-H2
 {
@@ -226,7 +226,7 @@ font-family: Cambria;
 font-size: 16pt;
 } 
 
-  ```
+```
 
 
     For clarity, the class name and the name of the style as it appears on the ribbon are defined separately from the style properties. In this example, **H2** is the element selector for the style, and **customstyleElement-H2** is the class name of the style. The class name has two parts: **customstyle** is the prefix that you specified for this page field, and **Element** specifies that this style will appear in the **Page Elements** section of the **Styles** gallery on the ribbon of the HTML editor. The **-ms-name** property sets the display name that appears to content authors in the Styles gallery.
