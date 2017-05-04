@@ -10,11 +10,9 @@ ms.assetid: 8ed91929-fdb6-4fde-ba2a-7942870575f3
 Learn how to use the SharePoint client object model to work with Business Connectivity Services (BCS) in SharePoint.
 ## What is the SharePoint client object model?
 
+The client object model for SharePoint is a set of client-based libraries that represent the server object model. They are packaged in three different DLLs to accommodate a variety of development types. The client object model includes most of the major functions of the server API. This allows access to the same types of functionality from browser scripting and also .NET web applications and Silverlight applications.  <br/> To enhance and expand the capabilities for working with external data, Business Connectivity Services (BCS) has expanded the client object model to include additional functionality.  <br/> 
 
-|||
-|:-----|:-----|
-|The client object model for SharePoint is a set of client-based libraries that represent the server object model. They are packaged in three different DLLs to accommodate a variety of development types. The client object model includes most of the major functions of the server API. This allows access to the same types of functionality from browser scripting and also .NET web applications and Silverlight applications.  <br/> To enhance and expand the capabilities for working with external data, Business Connectivity Services (BCS) has expanded the client object model to include additional functionality.  <br/>  [![Get set up](../../images/mod_icon_getstartbox.gif)          ](get-started-using-the-client-object-model-with-external-data-in-sharepoint#BCScsom_getstarted) [![Get to work](../../images/mod_icon_dobox.gif)          ](get-started-using-the-client-object-model-with-external-data-in-sharepoint#BCScsom_Tasks) [![Learn more](../../images/mod_icon_startbox.gif)          ](get-started-using-the-client-object-model-with-external-data-in-sharepoint#BCScsom_Learnmore) <br/> ||
-   
+<a href="#BCScsom_getstarted"><img alt="Get set up" src="../../images/mod_icon_getstartbox.gif" /></a>&nbsp;&nbsp;&nbsp;<a href="BCScsom_Tasks"><img alt="Get to work" src="../../images/mod_icon_dobox.gif" /></a>&nbsp;&nbsp;&nbsp;<a href="#BCScsom_Learnmore"><img alt="Learn more" src="../../images/mod_icon_startbox.gif" /></a></p>
 
 ## Get started using the SharePoint client object model with external data
 <a name="BCScsom_getstarted"> </a>
