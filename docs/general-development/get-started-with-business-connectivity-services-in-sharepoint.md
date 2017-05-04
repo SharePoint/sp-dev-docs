@@ -13,7 +13,7 @@ Learn the basics of what Business Connectivity Services (BCS) provides to develo
 Business Connectivity Services (BCS) was introduced in SharePoint Server 2010 as an evolution of the Business Data Catalog released in Office SharePoint Server 2007. BCS enables SharePoint to work with data that is hosted externally. Possible sources can include databases, web services, Windows Communication Foundation (WCF) services, Open Data Protocol (OData) sources, and other proprietary data that is accessed by using custom .NET assemblies.
 
 <a href="#SP15GettingStartedBCS_WhatDoYouNeed"><img alt="Get set up" src="../../images/mod_icon_getstartbox.gif" /></a>&nbsp;&nbsp;&nbsp;<a href="#SP15GettingStartedBCS_WhatCanYouDo"><img alt="Get to work" src="../../images/mod_icon_dobox.gif" /></a>&nbsp;&nbsp;&nbsp;<a href="#SP15GettingStartedBCS_LearnMore"><img alt="Learn more" src="../../images/mod_icon_startbox.gif" /></a>
-|
+
    
 In a dynamic workplace, information workers need access to data that resides in separate software worlds, for example:
   
