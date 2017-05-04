@@ -5,7 +5,7 @@
     {
       "Title": "SharePoint Framework",
       "URL": "/sharepoint/docs/spfx/sharepoint-framework-overview",
-      "Index": "/sharepoint/docs"
+      "Index": "/sharepoint/docs/spfx"
     },
     {
       "Title": "SharePoint Framework Reference",
@@ -20,12 +20,12 @@
     {
       "Title": "SharePoint General Development",
       "URL": "/sharepoint/docs/general-development/sharepoint-development-overview",
-      "Index": "/sharepoint/docs"
+      "Index": "/sharepoint/docs/general-development"
     },
     {
       "Title": "SharePoint Add-ins",
       "URL": "/sharepoint/docs/sp-add-ins/sharepoint-add-ins",
-      "Index": "/sharepoint/docs"
+      "Index": "/sharepoint/docs/sp-add-ins"
     },
     {
       "Title": "SharePoint REST APIs",
