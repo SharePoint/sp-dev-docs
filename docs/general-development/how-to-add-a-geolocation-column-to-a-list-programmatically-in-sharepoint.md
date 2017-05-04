@@ -90,7 +90,7 @@ class Program
     }
 ```
 
-8. Replace <Site Url> and <List Title> with valid values.
+8. Replace \<Site Url\> and \<List Title\> with valid values.
     
   
 9.  Set the target framework in Project Properties as .NET Framework 4.0 or 3.5, and run the example.
