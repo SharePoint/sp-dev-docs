@@ -1,8 +1,4 @@
----
-title: URLs and tokens in SharePoint
-ms.prod: SHAREPOINT
-ms.assetid: 161418d7-8123-4c4e-91a1-97e43c17f0e6
----
+
 
 
 
