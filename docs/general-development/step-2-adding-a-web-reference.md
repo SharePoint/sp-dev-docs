@@ -38,7 +38,7 @@ Your application must have a means to communicate with the Web service and to lo
 5. Visual Studio downloads the service description and generates a proxy class to interface between your application and Excel Web Services. 
     
   
-6. For more information, see  [Accessing the SOAP API](accessing-the-soap-api.md).
+6. For more information, see  [Accessing the SOAP API](accessing-the-soap-api).
     
   
 
@@ -51,23 +51,23 @@ Your application must have a means to communicate with the Web service and to lo
   
     
     
- [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking.md)
+ [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking)
 #### Other resources
 
 
   
     
     
- [Step 1: Creating the Web Service Client Project](step-1-creating-the-web-service-client-project.md)
+ [Step 1: Creating the Web Service Client Project](step-1-creating-the-web-service-client-project)
   
     
     
- [Step 3: Accessing the Web Service](step-3-accessing-the-web-service.md)
+ [Step 3: Accessing the Web Service](step-3-accessing-the-web-service)
   
     
     
- [Step 4: Building and Testing the Application](step-4-building-and-testing-the-application.md)
+ [Step 4: Building and Testing the Application](step-4-building-and-testing-the-application)
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)

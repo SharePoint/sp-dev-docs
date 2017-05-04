@@ -3,11 +3,11 @@
 Learn how to use the client-side People Picker control in SharePoint-hosted SharePoint Add-ins.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
 
- **Important**  This topic assumes that you know how to create a SharePoint-hosted SharePoint Add-in. To learn how to create one, start at  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md).
+ **Important**  This topic assumes that you know how to create a SharePoint-hosted SharePoint Add-in. To learn how to create one, start at  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins).
  
 
 
@@ -52,7 +52,7 @@ This article assumes that you create the SharePoint Add-in by using Napa on an O
 
  
 
- **Note**  Go to  [Set up a development environment for SharePoint Add-ins on Office 365](set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md) to find out how to sign up for a Developer Site and start using Napa.
+ **Note**  Go to  [Set up a development environment for SharePoint Add-ins on Office 365](set-up-a-development-environment-for-sharepoint-add-ins-on-office-365) to find out how to sign up for a Developer Site and start using Napa.
  
 
 If you're not using Napa on a Developer Site, you'll need the following:
@@ -73,7 +73,7 @@ If you're not using Napa on a Developer Site, you'll need the following:
  **Note**  For guidance about how to set up a development environment that fits your needs, see  [Start building Office and SharePoint Add-ins](http://msdn.microsoft.com/library/187f8c8c-1b15-471c-80b5-69a40e67deea.aspx).
  
 
-The following steps describe the high-level steps for adding the picker to your add-in and then getting its user information from another client-side control. See  [Code example: Using the client-side People Picker](use-the-client-side-people-picker-control-in-sharepoint-hosted-sharepoint-add-ins.md#bk_example) for the corresponding code.
+The following steps describe the high-level steps for adding the picker to your add-in and then getting its user information from another client-side control. See  [Code example: Using the client-side People Picker](use-the-client-side-people-picker-control-in-sharepoint-hosted-sharepoint-add-ins#bk_example) for the corresponding code.
  
 
  
@@ -246,7 +246,7 @@ function onFail(sender, args) {
 <a name="bk_addresources"> </a>
 
 
--  [Create UX components in SharePoint](create-ux-components-in-sharepoint-2013.md)
+-  [Create UX components in SharePoint](create-ux-components-in-sharepoint-2013)
     
  
 -  [People Picker and claims providers overview (SharePoint)](http://technet.microsoft.com/library/gg602078.aspx)

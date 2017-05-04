@@ -62,7 +62,7 @@ private static void Import(string fileName)
 <a name="bk_addresources"> </a>
 
 
--  [Search in SharePoint](search-in-sharepoint.md)
+-  [Search in SharePoint](search-in-sharepoint)
     
   
 -  [Export and import customized search configuration settings in SharePoint](http://technet.microsoft.com/en-us/library/jj871675.aspx)

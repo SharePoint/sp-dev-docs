@@ -206,7 +206,7 @@ public void Initialize(NameValueCollection staticProperties, SearchServiceApplic
 ## Deploying the custom security trimmer component
 <a name="Deploying_the_trimmer"> </a>
 
-After you create the custom security trimmer, you must deploy it to the global assembly cache on any server in the Query role. Step 2 in  [How to: Use a custom security trimmer for SharePoint Server search results](how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results.md) describes the process for deploying the custom security trimmer to the global assembly cache.
+After you create the custom security trimmer, you must deploy it to the global assembly cache on any server in the Query role. Step 2 in  [How to: Use a custom security trimmer for SharePoint Server search results](how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results) describes the process for deploying the custom security trimmer to the global assembly cache.
   
     
     
@@ -238,7 +238,7 @@ The following table describes the parameters that the cmdlet uses.
 | _id_ <br/> |Required. The security trimmer identifier (ID). This value is unique; if a security trimmer is registered with an ID that is already registered for another security trimmer, the registration for the first trimmer is overwritten with the registration for the second trimmer.  <br/> |
 | _properties_ <br/> |Optional. The name-value pairs specifying the configuration properties. Must be in the following format:  `Name1~Value1~Name2~Value~???` <br/> |
    
-For an example of a basic command for registering a custom security trimmer and a sample that specifies the configuration properties, see  [How to: Use a custom security trimmer for SharePoint Server search results](how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results.md).
+For an example of a basic command for registering a custom security trimmer and a sample that specifies the configuration properties, see  [How to: Use a custom security trimmer for SharePoint Server search results](how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results).
   
     
     
@@ -247,7 +247,7 @@ For an example of a basic command for registering a custom security trimmer and 
 <a name="bk_sectrimmer_addlresources"> </a>
 
 
--  [How to: Use a custom security trimmer for SharePoint Server search results](how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results.md)
+-  [How to: Use a custom security trimmer for SharePoint Server search results](how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results)
     
   
 -  [ISecurityTrimmerPre](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre.aspx)

@@ -22,7 +22,7 @@ Next, display a workbook by using the Excel Services Web Part that you added to 
 2. Add a Content Editor Web Part to the Web Parts Page that you just created.
     
   
-3. Feed the URL for the text file that you created in  [Step 1: Creating a ECMAScript Text File](step-1-creating-a-ecmascript-text-file.md) to the Content Editor Web Part. You do this by adding the URL for the text file that you uploaded to a trusted document library in [Step 1: Creating a ECMAScript Text File](step-1-creating-a-ecmascript-text-file.md). 
+3. Feed the URL for the text file that you created in  [Step 1: Creating a ECMAScript Text File](step-1-creating-a-ecmascript-text-file) to the Content Editor Web Part. You do this by adding the URL for the text file that you uploaded to a trusted document library in [Step 1: Creating a ECMAScript Text File](step-1-creating-a-ecmascript-text-file). 
     
     For example: 
     

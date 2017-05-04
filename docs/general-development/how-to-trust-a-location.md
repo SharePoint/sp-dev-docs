@@ -66,22 +66,22 @@ You can also trust a location by using Windows PowerShell. For more information,
   
     
     
- [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md)
+ [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs)
   
     
     
- [How to: Save from Excel Client to the Server](how-to-save-from-excel-client-to-the-server.md)
+ [How to: Save from Excel Client to the Server](how-to-save-from-excel-client-to-the-server)
 #### Concepts
 
 
   
     
     
- [Excel Services Alerts](excel-services-alerts.md)
+ [Excel Services Alerts](excel-services-alerts)
 #### Other resources
 
 
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)

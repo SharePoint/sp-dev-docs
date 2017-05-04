@@ -33,14 +33,14 @@ There are four primary interfaces for Excel Services:
   
 
 > **Note:**
-> The Excel Interactive View feature has been disabled. For information about removing this feature from your website, see  [Removing Excel Interactive View from a webpage](removing-excel-interactive-view-from-a-webpage.md). 
+> The Excel Interactive View feature has been disabled. For information about removing this feature from your website, see  [Removing Excel Interactive View from a webpage](removing-excel-interactive-view-from-a-webpage). 
   
     
     
 
 You can also extend Excel Calculation Services by using user-defined functions (UDFs).
 > **Note:**
-> For more information about Excel Calculation Services, see  [Excel Services Architecture](excel-services-architecture.md). 
+> For more information about Excel Calculation Services, see  [Excel Services Architecture](excel-services-architecture). 
   
     
     
@@ -54,7 +54,7 @@ By using Excel Services, you can view live, interactive workbooks by using only 
 
 Excel Services also has a Web service. You can use Excel Web Services to load workbooks, set values in cells and ranges, refresh external data connections, calculate worksheets, and extract calculated results (including cell values, the entire calculated workbook, or a snapshot of the workbook). In SharePoint, you can also save, save a copy, and participate in collaborative editing sessions by using Excel Web Services.
 > **Note:**
-> For more information about snapshots, see  [How to: Get an Entire Workbook or a Snapshot](how-to-get-an-entire-workbook-or-a-snapshot.md). 
+> For more information about snapshots, see  [How to: Get an Entire Workbook or a Snapshot](how-to-get-an-entire-workbook-or-a-snapshot). 
   
     
     
@@ -182,7 +182,7 @@ You can also use Excel Services UDFs, which enable you to use formulas in a cell
   
     
     
-For more information about UDFs in Excel Services, see  [Understanding Excel Services UDFs](understanding-excel-services-udfs.md).
+For more information about UDFs in Excel Services, see  [Understanding Excel Services UDFs](understanding-excel-services-udfs).
   
     
     
@@ -234,7 +234,7 @@ You can use the REST API in Excel Services to access workbook parts or elements 
   
     
     
-For more information about the REST API in Excel Services, see  [Excel Services REST API](excel-services-rest-api.md).
+For more information about the REST API in Excel Services, see  [Excel Services REST API](excel-services-rest-api).
   
     
     
@@ -269,28 +269,28 @@ From there you can use OData system query options to get specific information ab
 ## Additional resources
 
 
--  [Excel Services Development Roadmap](excel-services-development-roadmap.md)
+-  [Excel Services Development Roadmap](excel-services-development-roadmap)
     
   
--  [Excel Services Architecture](excel-services-architecture.md)
+-  [Excel Services Architecture](excel-services-architecture)
     
   
--  [JavaScript user-defined functions overview](javascript-user-defined-functions-overview.md)
+-  [JavaScript user-defined functions overview](javascript-user-defined-functions-overview)
     
   
--  [Using OData with Excel Services REST in SharePoint](using-odata-with-excel-services-rest-in-sharepoint.md)
+-  [Using OData with Excel Services REST in SharePoint](using-odata-with-excel-services-rest-in-sharepoint)
     
   
--  [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
+-  [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
     
   
--  [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs.md)
+-  [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs)
     
   
 -  [Unsupported Features in Excel Services](http://msdn.microsoft.com/library/5868e672-4786-4fed-9168-07ff538f6f5c%28Office.15%29.aspx)
     
   
--  [Excel Services Blogs, Forums, and Resources](excel-services-blogs-forums-and-resources.md)
+-  [Excel Services Blogs, Forums, and Resources](excel-services-blogs-forums-and-resources)
     
   
 

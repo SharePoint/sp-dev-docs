@@ -200,10 +200,10 @@ See  [Microsoft Support Knowledge Base article ID 2557533](http://support.micros
 <a name="bk_addresources"> </a>
 
 
--  [SharePoint workflow development best practices](sharepoint-workflow-development-best-practices.md)
+-  [SharePoint workflow development best practices](sharepoint-workflow-development-best-practices)
     
   
--  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
+-  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio)
     
   
 

@@ -229,22 +229,22 @@ Next rangeResult
   
     
     
- [How to: Specify a Range Address and Sheet Name](how-to-specify-a-range-address-and-sheet-name.md)
+ [How to: Specify a Range Address and Sheet Name](how-to-specify-a-range-address-and-sheet-name)
   
     
     
- [How to: Set Values of Ranges](how-to-set-values-of-ranges.md)
+ [How to: Set Values of Ranges](how-to-set-values-of-ranges)
 #### Concepts
 
 
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api.md)
+ [Accessing the SOAP API](accessing-the-soap-api)
 #### Other resources
 
 
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)

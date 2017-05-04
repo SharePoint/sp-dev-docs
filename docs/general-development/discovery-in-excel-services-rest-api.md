@@ -39,7 +39,7 @@ Following is the construct of the REST URL to a specific element in a workbook:
 http://<ServerName>/_vti_bin/ExcelRest.aspx/<DocumentLibrary>/<FileName>/<ResourceLocation>
 ```
 
-As described in the  [Basic URI Structure and Path](basic-uri-structure-and-path.md) topic, following is the REST URL to access a workbook named **sampleWorkbook.xlsx** and further view the chart called **SampleChart**: 
+As described in the  [Basic URI Structure and Path](basic-uri-structure-and-path) topic, following is the REST URL to access a workbook named **sampleWorkbook.xlsx** and further view the chart called **SampleChart**: 
   
     
     
@@ -203,4 +203,4 @@ As can be seen in the XML, the feed contains traversable elements that enable co
   
     
     
- [Resources URI for Excel Services REST API](resources-uri-for-excel-services-rest-api.md)
+ [Resources URI for Excel Services REST API](resources-uri-for-excel-services-rest-api)

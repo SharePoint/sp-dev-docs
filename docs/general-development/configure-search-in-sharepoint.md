@@ -29,10 +29,10 @@ A custom step can be added to modify managed properties in the form of an extern
 <a name="SP15ConfigSearch_customstep"> </a>
 
 
--  [Custom word breakers in SharePoint](custom-word-breakers-in-sharepoint-server.md)
+-  [Custom word breakers in SharePoint](custom-word-breakers-in-sharepoint-server)
     
   
--  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout.md)
+-  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout)
     
   
 
@@ -40,10 +40,10 @@ A custom step can be added to modify managed properties in the form of an extern
 <a name="SP15configsearch_addlresources"> </a>
 
 
--  [Search in SharePoint](search-in-sharepoint.md)
+-  [Search in SharePoint](search-in-sharepoint)
     
   
--  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers.md)
+-  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers)
     
   
 

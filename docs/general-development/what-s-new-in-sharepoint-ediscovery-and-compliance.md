@@ -94,7 +94,7 @@ Sites, and other large objects, sometimes require that their users comply with a
 <a name="bk_addresources"> </a>
 
 
--  [eDiscovery in SharePoint](ediscovery-in-sharepoint.md)
+-  [eDiscovery in SharePoint](ediscovery-in-sharepoint)
     
   
 

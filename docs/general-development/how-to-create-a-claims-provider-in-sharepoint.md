@@ -158,16 +158,16 @@ protected SPClaim CreateClaim(String claimType, String value, String valueType)
 <a name="SP15_HowToCreateClaimsProvider_AdditionalResources"> </a>
 
 
--  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint.md)
+-  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint)
     
   
--  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint.md)
+-  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint)
     
   
--  [Claims provider in SharePoint](claims-provider-in-sharepoint.md)
+-  [Claims provider in SharePoint](claims-provider-in-sharepoint)
     
   
--  [How to: Deploy a claims provider in SharePoint](how-to-deploy-a-claims-provider-in-sharepoint.md)
+-  [How to: Deploy a claims provider in SharePoint](how-to-deploy-a-claims-provider-in-sharepoint)
     
   
 

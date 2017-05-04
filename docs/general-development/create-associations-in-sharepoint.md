@@ -32,10 +32,10 @@ The following articles were written for SharePoint Server 2010 and SharePoint De
 ## Additional resources
 
 
--  [External content types in SharePoint](external-content-types-in-sharepoint.md)
+-  [External content types in SharePoint](external-content-types-in-sharepoint)
     
   
--  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint)
     
   
 

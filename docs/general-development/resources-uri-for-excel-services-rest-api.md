@@ -110,4 +110,4 @@ Table 1 shows all the accessible resources in the Excel Services REST API. To ac
   
     
     
- [Basic URI Structure and Path](basic-uri-structure-and-path.md)
+ [Basic URI Structure and Path](basic-uri-structure-and-path)

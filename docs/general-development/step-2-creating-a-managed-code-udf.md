@@ -182,27 +182,27 @@ End Namespace
   
     
     
- [Step 1: Creating a Project and Adding a UDF Reference](step-1-creating-a-project-and-adding-a-udf-reference.md)
+ [Step 1: Creating a Project and Adding a UDF Reference](step-1-creating-a-project-and-adding-a-udf-reference)
   
     
     
- [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md)
+ [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs)
   
     
     
- [Step 4: Testing and Calling UDFs from Cells](step-4-testing-and-calling-udfs-from-cells.md)
+ [Step 4: Testing and Calling UDFs from Cells](step-4-testing-and-calling-udfs-from-cells)
   
     
     
- [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service.md)
+ [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service)
 #### Concepts
 
 
   
     
     
- [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md)
+ [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf)
   
     
     
- [Understanding Excel Services UDFs](understanding-excel-services-udfs.md)
+ [Understanding Excel Services UDFs](understanding-excel-services-udfs)

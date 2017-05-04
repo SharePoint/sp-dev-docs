@@ -84,13 +84,13 @@ The palette of activity classes has been revised for SharePoint. Table 1 lists t
 <a name="bkm_addlresource"> </a>
 
 
--  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint.md)
+-  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint)
     
   
--  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
+-  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio)
     
   
--  [Set up and configure SharePoint Workflow Manager](set-up-and-configure-sharepoint-workflow-manager.md)
+-  [Set up and configure SharePoint Workflow Manager](set-up-and-configure-sharepoint-workflow-manager)
     
   
 

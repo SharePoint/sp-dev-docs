@@ -49,7 +49,7 @@ Additionally, Microsoft advises customers to evaluate the technologies used when
   
     
     
-For more information about the new flexible development technologies for applications on SharePoint, see  [SharePoint development overview](sharepoint-development-overview.md).
+For more information about the new flexible development technologies for applications on SharePoint, see  [SharePoint development overview](sharepoint-development-overview).
   
     
     
@@ -723,7 +723,7 @@ The information in  [SharePoint Add-ins update process](http://msdn.microsoft.co
 -  [Use an Office 365 SharePoint site to authorize provider-hosted add-ins on an on-premises SharePoint site](http://msdn.microsoft.com/library/2f65ba3f-b246-4064-b4fb-ad18399d387a%28Office.15%29.aspx)
     
   
--  [SharePoint development overview](sharepoint-development-overview.md)
+-  [SharePoint development overview](sharepoint-development-overview)
     
   
 -  [What is the Open Data Protocol?](http://www.odata.org/)

@@ -611,16 +611,16 @@ Or, you can use a channel panel inside the item display template of a Content Se
 <a name="bk_AdditionalResources"> </a>
 
 
--  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md)
+-  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint)
     
   
--  [Build sites for SharePoint](build-sites-for-sharepoint.md)
+-  [Build sites for SharePoint](build-sites-for-sharepoint)
     
   
--  [SharePoint Design Manager display templates](sharepoint-design-manager-display-templates.md)
+-  [SharePoint Design Manager display templates](sharepoint-design-manager-display-templates)
     
   
--  [SharePoint Design Manager device channels](sharepoint-design-manager-device-channels.md)
+-  [SharePoint Design Manager device channels](sharepoint-design-manager-device-channels)
     
   
 

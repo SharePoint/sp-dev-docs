@@ -51,21 +51,21 @@ Search in SharePoint provides two approaches for processing queries to return se
 ## In this section
 
 
--  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint.md)
+-  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint)
     
-  -  [Enhancing the BDC model file for Search in SharePoint](enhancing-the-bdc-model-file-for-search-in-sharepoint.md)
-    
-  
-  -  [How to: Crawl associated external content types in SharePoint](how-to-crawl-associated-external-content-types-in-sharepoint.md)
+  -  [Enhancing the BDC model file for Search in SharePoint](enhancing-the-bdc-model-file-for-search-in-sharepoint)
     
   
-  -  [How to: Crawl binary large objects (BLOBs) in SharePoint](how-to-crawl-binary-large-objects-blobs-in-sharepoint.md)
+  -  [How to: Crawl associated external content types in SharePoint](how-to-crawl-associated-external-content-types-in-sharepoint)
     
   
-  -  [How to: Crawl associated external content types in SharePoint](how-to-crawl-associated-external-content-types-in-sharepoint.md)
+  -  [How to: Crawl binary large objects (BLOBs) in SharePoint](how-to-crawl-binary-large-objects-blobs-in-sharepoint)
     
   
-  -  [How to: Configure item-level security in SharePoint](how-to-configure-item-level-security-in-sharepoint.md)
+  -  [How to: Crawl associated external content types in SharePoint](how-to-crawl-associated-external-content-types-in-sharepoint)
+    
+  
+  -  [How to: Configure item-level security in SharePoint](how-to-configure-item-level-security-in-sharepoint)
     
   
 

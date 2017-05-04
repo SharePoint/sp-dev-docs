@@ -13,7 +13,7 @@ SharePoint supports two primary workflow development environments for authoring 
 
 
 > **Note:**
-> For guidance on setting up and configuring Microsoft SharePoint and the Workflow Manager Client 1.0 server, see  [Set up and configure SharePoint Workflow Manager](set-up-and-configure-sharepoint-workflow-manager.md). 
+> For guidance on setting up and configuring Microsoft SharePoint and the Workflow Manager Client 1.0 server, see  [Set up and configure SharePoint Workflow Manager](set-up-and-configure-sharepoint-workflow-manager). 
   
     
     
@@ -24,7 +24,7 @@ As with previous versions, Microsoft SharePoint provides two primary workflow de
     
 
 > **Note:**
-> As a complement to authoring workflows in SharePoint Designer, you can also use Microsoft Visio 2013 to structure your workflow logic by using Visio 2013 shapes, and then import your logic into SharePoint Designer 2013. For information about using Visio 2013 to author your workflow logic, see  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md). 
+> As a complement to authoring workflows in SharePoint Designer, you can also use Microsoft Visio 2013 to structure your workflow logic by using Visio 2013 shapes, and then import your logic into SharePoint Designer 2013. For information about using Visio 2013 to author your workflow logic, see  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio). 
   
     
     

@@ -454,13 +454,13 @@ This article first explained the different types of workflows that can be create
 <a name="bk_addresources"> </a>
 
 
--  [Workflows in SharePoint](workflows-in-sharepoint.md)
+-  [Workflows in SharePoint](workflows-in-sharepoint)
     
   
--  [SharePoint workflow development best practices](sharepoint-workflow-development-best-practices.md)
+-  [SharePoint workflow development best practices](sharepoint-workflow-development-best-practices)
     
   
--  [SharePoint workflow samples](sharepoint-workflow-samples.md)
+-  [SharePoint workflow samples](sharepoint-workflow-samples)
     
   
 

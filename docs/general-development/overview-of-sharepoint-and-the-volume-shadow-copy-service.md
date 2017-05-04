@@ -46,7 +46,7 @@ During a recovery, the backup/restore application instructs the SPF-VSS Writer t
 
     
 > **Note:**
-> See "Restoring" in  [VSS requestors and SharePoint](vss-requestors-and-sharepoint.md) for important information about restorations.
+> See "Restoring" in  [VSS requestors and SharePoint](vss-requestors-and-sharepoint) for important information about restorations.
   
     
     
@@ -95,19 +95,19 @@ The following is the high-level sequence of events during backup or restore oper
 <a name="bk_addresources"> </a>
 
 
--  [SharePoint VSS Writer](sharepoint-vss-writer.md)
+-  [SharePoint VSS Writer](sharepoint-vss-writer)
     
   
--  [VSS requestors and SharePoint](vss-requestors-and-sharepoint.md)
+-  [VSS requestors and SharePoint](vss-requestors-and-sharepoint)
     
   
--  [How to: Create a VSS requestor for use with SharePoint](how-to-create-a-vss-requestor-for-use-with-sharepoint.md)
+-  [How to: Create a VSS requestor for use with SharePoint](how-to-create-a-vss-requestor-for-use-with-sharepoint)
     
   
--  [How to: Back up and restore SharePoint using a VSS requestor](how-to-back-up-and-restore-sharepoint-using-a-vss-requestor.md)
+-  [How to: Back up and restore SharePoint using a VSS requestor](how-to-back-up-and-restore-sharepoint-using-a-vss-requestor)
     
   
--  [How to: Back up and restore a search service application in SharePoint using VSS](how-to-back-up-and-restore-a-search-service-application-in-sharepoint-using.md)
+-  [How to: Back up and restore a search service application in SharePoint using VSS](how-to-back-up-and-restore-a-search-service-application-in-sharepoint-using)
     
   
 -  [Starting and Configuring the WSS Writer Service](http://msdn.microsoft.com/library/c9243dd6-e61e-4783-9fef-48d0122f1c09.aspx)

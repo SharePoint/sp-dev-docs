@@ -2,10 +2,10 @@
 Set up a development environment and create your first SharePoint-hosted SharePoint Add-in.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
-SharePoint-hosted add-ins are one of the two major types of SharePoint Add-ins. For an overview of SharePoint Add-ins and the two different types, see  [SharePoint Add-ins](sharepoint-add-ins.md). Here's a summary of SharePoint-hosted add-ins:
+SharePoint-hosted add-ins are one of the two major types of SharePoint Add-ins. For an overview of SharePoint Add-ins and the two different types, see  [SharePoint Add-ins](sharepoint-add-ins). Here's a summary of SharePoint-hosted add-ins:
  
 
 - They contain SharePoint lists, Web Parts, workflows, custom pages, and other components, all of which are installed on a subweb, called the add-in web, of the SharePoint website where the add-in is installed.
@@ -14,11 +14,11 @@ SharePoint-hosted add-ins are one of the two major types of SharePoint Add-ins. 
 - The only code they have is JavaScript on custom SharePoint pages.
     
  
-- [Step 1 - Set up your dev environment](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md#Setup) 
+- [Step 1 - Set up your dev environment](get-started-creating-sharepoint-hosted-sharepoint-add-ins#Setup) 
 
-- [Step 2 - Create the app project](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md#Create) 
+- [Step 2 - Create the app project](get-started-creating-sharepoint-hosted-sharepoint-add-ins#Create) 
 
-- [Step 3 - Code your app](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md#Code)
+- [Step 3 - Code your app](get-started-creating-sharepoint-hosted-sharepoint-add-ins#Code)
  
 
 ## Set up your dev environment
@@ -43,7 +43,7 @@ There are many ways to set up a development environment for SharePoint Add-ins. 
 <a name="o365_signup"> </a>
 
 
- **Note**   You might already have access to an Office 365 Developer Site. **Are you an MSDN subscriber?** Visual Studio Ultimate and Visual Studio Premium with MSDN subscribers receive an Office 365 Developer Subscription as a benefit. [Redeem your benefit today.](https://msdn.microsoft.com/subscriptions/manage/default.aspx) **Do you have one of the following Office 365 subscription plans?** **If so, an administrator of the Office 365 subscription can create a Developer Site** by using the [Office 365 admin center](https://portal.microsoftonline.com/admin/default.aspx). For more info, see  [Create a developer site on an existing Office 365 subscription](create-a-developer-site-on-an-existing-office-365-subscription.md). 
+ **Note**   You might already have access to an Office 365 Developer Site. **Are you an MSDN subscriber?** Visual Studio Ultimate and Visual Studio Premium with MSDN subscribers receive an Office 365 Developer Subscription as a benefit. [Redeem your benefit today.](https://msdn.microsoft.com/subscriptions/manage/default.aspx) **Do you have one of the following Office 365 subscription plans?** **If so, an administrator of the Office 365 subscription can create a Developer Site** by using the [Office 365 admin center](https://portal.microsoftonline.com/admin/default.aspx). For more info, see  [Create a developer site on an existing Office 365 subscription](create-a-developer-site-on-an-existing-office-365-subscription). 
  
 
 There are three ways to get an Office 365 plan. 
@@ -361,7 +361,7 @@ For your first SharePoint-hosted SharePoint Add-in, we'll include the classic Sh
 ## 
 <a name="Nextsteps"> </a>
 
-So far, there isn't much orientation information in the list. We'll add some in later articles in this series. But first, take a brief break from coding to learn about deploying SharePoint Add-ins in  [Deploy and install a SharePoint-hosted SharePoint Add-in](deploy-and-install-a-sharepoint-hosted-sharepoint-add-in.md).
+So far, there isn't much orientation information in the list. We'll add some in later articles in this series. But first, take a brief break from coding to learn about deploying SharePoint Add-ins in  [Deploy and install a SharePoint-hosted SharePoint Add-in](deploy-and-install-a-sharepoint-hosted-sharepoint-add-in).
  
 
  

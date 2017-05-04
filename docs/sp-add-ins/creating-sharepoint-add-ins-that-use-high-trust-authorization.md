@@ -2,7 +2,7 @@
 Learn about high-trust SharePoint Add-ins, which use digital certificates to establish trust between SharePoint and the remote components that access SharePoint.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
  **Provided by:**
@@ -20,7 +20,7 @@ A high-trust add-in is a provider-hosted SharePoint Add-in that is installed to 
 
  
 
- **Note**   This topic helps you understand the high-trust authorization system for SharePoint Add-ins. For practical information about creating and deploying high-trust add-ins, see the following topics: [Create high-trust SharePoint Add-ins](create-high-trust-sharepoint-add-ins.md) [Package and publish high-trust SharePoint Add-ins](package-and-publish-high-trust-sharepoint-add-ins.md)
+ **Note**   This topic helps you understand the high-trust authorization system for SharePoint Add-ins. For practical information about creating and deploying high-trust add-ins, see the following topics: [Create high-trust SharePoint Add-ins](create-high-trust-sharepoint-add-ins) [Package and publish high-trust SharePoint Add-ins](package-and-publish-high-trust-sharepoint-add-ins)
  
 
 In SharePoint, the security token service (STS) provides access tokens for server-to-server authentication. The STS enables temporary access tokens to access other application services such as Exchange 2013, Lync 2013, and SharePoint Add-ins. A farm administrator establishes trust between SharePoint and the other application or add-in by using Windows PowerShell cmdlets and a certificate. Each certificate that is used must be trusted by SharePoint using the  `New-SPTrustedRootAuthority` cmdlet. Also each certificate must be registered with SharePoint as a token issuer using the `New-SPTrustedSecurityTokenIssuer` cmdlet.
@@ -62,7 +62,7 @@ $fullIssuerIdentifier = "<client_ID_of_SP_app> " + "@" + "<realm_GUID> "
 New-SPTrustedSecurityTokenIssuer -RegisteredIssuerName $fullIssuerIdentifier --other parameters omitted--
 ```
 
-Typically, the  `New-SPTrustedSecurityTokenIssuer` cmdlet is used in a script that performs other tasks to configure SharePoint for high-trust add-ins. For more information about such scripts and complete examples of the `New-SPTrustedSecurityTokenIssuer` cmdlet, see [High-trust configuration scripts for SharePoint](high-trust-configuration-scripts-for-sharepoint-2013.md).
+Typically, the  `New-SPTrustedSecurityTokenIssuer` cmdlet is used in a script that performs other tasks to configure SharePoint for high-trust add-ins. For more information about such scripts and complete examples of the `New-SPTrustedSecurityTokenIssuer` cmdlet, see [High-trust configuration scripts for SharePoint](high-trust-configuration-scripts-for-sharepoint-2013).
  
 
  
@@ -93,7 +93,7 @@ To get the still trustworthy SharePoint Add-ins working again, the administrator
  
 
  
-The benefit of using one certificate per add-in is that it makes it easier to break trust with a particular add-in, because the certificates that are used by the still trustworthy add-ins are not affected when the administrator breaks trust with the certificate of the one add-in. The disadvantage in this strategy is that an administrator has more certificates to acquire and SharePoint must be configured to use each of them, which can be done with a reusable script as shown in  [High-trust configuration scripts for SharePoint](high-trust-configuration-scripts-for-sharepoint-2013.md).
+The benefit of using one certificate per add-in is that it makes it easier to break trust with a particular add-in, because the certificates that are used by the still trustworthy add-ins are not affected when the administrator breaks trust with the certificate of the one add-in. The disadvantage in this strategy is that an administrator has more certificates to acquire and SharePoint must be configured to use each of them, which can be done with a reusable script as shown in  [High-trust configuration scripts for SharePoint](high-trust-configuration-scripts-for-sharepoint-2013).
  
 
  
@@ -124,7 +124,7 @@ New-SPTrustedRootAuthority -Name "<name_of_certificate>" -Certificate $certifica
 
 ```
 
-The root and intermediate certificates should be added only once on a SharePoint farm. Typically, the web application's certificate is added in a separate script that does other configuration too, such as the call to  `New-SPTrustedSecurityTokenIssuer`. For examples, see  [High-trust configuration scripts for SharePoint](high-trust-configuration-scripts-for-sharepoint-2013.md).
+The root and intermediate certificates should be added only once on a SharePoint farm. Typically, the web application's certificate is added in a separate script that does other configuration too, such as the call to  `New-SPTrustedSecurityTokenIssuer`. For examples, see  [High-trust configuration scripts for SharePoint](high-trust-configuration-scripts-for-sharepoint-2013).
  
 
  
@@ -140,7 +140,7 @@ For more information, see the blog post  [Root of certificate chain not trusted 
 ## Web application needs to know that it is a token issuer
 <a name="AppIsTokenIssuer"> </a>
 
-The remote web application component of the SharePoint Add-in is bound to its certificate in IIS. This is sufficient for the traditional purposes of certificates: securely identifying the web application and encoding the HTTP requests and responses. However, in a high-trust SharePoint Add-in, the certificate has the additional task of being the official "issuer" of the access tokens that the web application sends to SharePoint. For this purpose, web application has to know the issuer ID of the certificate that is used when registering the certificate as a token issuer with SharePoint. The web application gets this ID from the  **appSettings** section of the web.config file, where there is a key named **IssuerId**. Instructions for how the add-in developer sets this value, and how the certificate is bound to the web application in IIS, are in  [Package and publish high-trust SharePoint Add-ins](package-and-publish-high-trust-sharepoint-add-ins.md). Note that if the customer is using the strategy of having a separate certificate for each high-trust SharePoint Add-in, then the  **ClientId** value is also used as the **IssuerId** value. This is not the case when multiple add-ins share the same certificate, because each SharePoint Add-in must have its own unique client ID, but the issuer ID is the identifier for a **SPTrustedSecurityTokenIssuer** object.
+The remote web application component of the SharePoint Add-in is bound to its certificate in IIS. This is sufficient for the traditional purposes of certificates: securely identifying the web application and encoding the HTTP requests and responses. However, in a high-trust SharePoint Add-in, the certificate has the additional task of being the official "issuer" of the access tokens that the web application sends to SharePoint. For this purpose, web application has to know the issuer ID of the certificate that is used when registering the certificate as a token issuer with SharePoint. The web application gets this ID from the  **appSettings** section of the web.config file, where there is a key named **IssuerId**. Instructions for how the add-in developer sets this value, and how the certificate is bound to the web application in IIS, are in  [Package and publish high-trust SharePoint Add-ins](package-and-publish-high-trust-sharepoint-add-ins). Note that if the customer is using the strategy of having a separate certificate for each high-trust SharePoint Add-in, then the  **ClientId** value is also used as the **IssuerId** value. This is not the case when multiple add-ins share the same certificate, because each SharePoint Add-in must have its own unique client ID, but the issuer ID is the identifier for a **SPTrustedSecurityTokenIssuer** object.
  
 
  
@@ -191,16 +191,16 @@ Developers will have to understand the requirements for application security as 
 <a name="AR"> </a>
 
 
--  [Create high-trust SharePoint Add-ins](create-high-trust-sharepoint-add-ins.md)
+-  [Create high-trust SharePoint Add-ins](create-high-trust-sharepoint-add-ins)
     
  
--  [Package and publish high-trust SharePoint Add-ins](package-and-publish-high-trust-sharepoint-add-ins.md)
+-  [Package and publish high-trust SharePoint Add-ins](package-and-publish-high-trust-sharepoint-add-ins)
     
  
 -  [Troubleshooting tips for high trust add-ins on SharePoint](http://blogs.technet.com/b/speschka/archive/2012/11/01/more-troubleshooting-tips-for-high-trust-apps-on-sharepoint-2013.aspx)
     
  
--  [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md)
+-  [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins)
     
  
 

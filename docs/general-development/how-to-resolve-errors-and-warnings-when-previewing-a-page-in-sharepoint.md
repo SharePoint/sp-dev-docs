@@ -14,7 +14,7 @@ After you convert an HTML file into a SharePoint master page, or after you creat
   
     
     
-The preview in Design Manager is a live server-side preview, so any snippets or controls on your page, such as a navigation control or a search-driven Web Part, use live data. Also, when you preview a master page or page layout, you can choose a generic preview of just that file, or you can choose to preview how a specific page in your site renders with that master page or page layout. The server-side preview is a highly useful tool that complements the design-time preview in an HTML editor. For more information, see  [How to: Change the preview page in SharePoint Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager.md).
+The preview in Design Manager is a live server-side preview, so any snippets or controls on your page, such as a navigation control or a search-driven Web Part, use live data. Also, when you preview a master page or page layout, you can choose a generic preview of just that file, or you can choose to preview how a specific page in your site renders with that master page or page layout. The server-side preview is a highly useful tool that complements the design-time preview in an HTML editor. For more information, see  [How to: Change the preview page in SharePoint Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager).
   
     
     
@@ -60,7 +60,7 @@ If you want an HTML **\<form\>** tag in the page layout, you should put the form
 <!--CE: End Create Snippets From Custom ASP.NET Markup Snippet-->
 ```
 
-You can also add the HTML Form Web Part or the InfoPath Form Web Part to your page from the Snippet Gallery. For more information, see  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md).
+You can also add the HTML Form Web Part or the InfoPath Form Web Part to your page from the Snippet Gallery. For more information, see  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets).
   
     
     
@@ -170,13 +170,13 @@ You see this message when you aren't using a live SharePoint page with which to 
 <a name="bk_addresources"> </a>
 
 
--  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint)
     
   
--  [How to: Change the preview page in SharePoint Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager.md)
+-  [How to: Change the preview page in SharePoint Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager)
     
   
--  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md)
+-  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets)
     
   
 

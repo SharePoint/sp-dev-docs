@@ -3,14 +3,14 @@
 Update the remote web applications and databases in a SharePoint Add-in.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
 
 ## Prerequisites for updating the remote components of a SharePoint Add-in
 <a name="Prerequistes"> </a>
 
-Be familiar with  [Update SharePoint Add-ins](update-sharepoint-add-ins.md) and the prerequisites and core concepts listed in it.
+Be familiar with  [Update SharePoint Add-ins](update-sharepoint-add-ins) and the prerequisites and core concepts listed in it.
  
 
  
@@ -45,18 +45,18 @@ For a provider-hosted SharePoint Add-in that uses Microsoft Azure SQL Database o
 ## Next steps
 <a name="Next"> </a>
 
-Return to  [Major steps in updating an add-in](update-sharepoint-add-ins.md#MajorAppUpgradeSteps), or go directly to one of the following articles to learn how to update the next major component of your SharePoint Add-in.
+Return to  [Major steps in updating an add-in](update-sharepoint-add-ins#MajorAppUpgradeSteps), or go directly to one of the following articles to learn how to update the next major component of your SharePoint Add-in.
  
 
  
 
--  [Update add-in web components in SharePoint](update-add-in-web-components-in-sharepoint-2013.md)
+-  [Update add-in web components in SharePoint](update-add-in-web-components-in-sharepoint-2013)
     
  
--  [Update host web components in SharePoint](update-host-web-components-in-sharepoint-2013.md)
+-  [Update host web components in SharePoint](update-host-web-components-in-sharepoint-2013)
     
  
--  [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins.md)
+-  [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins)
     
  
 
@@ -64,10 +64,10 @@ Return to  [Major steps in updating an add-in](update-sharepoint-add-ins.md#Majo
 <a name="bk_addresources"> </a>
 
 
--  [Update SharePoint Add-ins](update-sharepoint-add-ins.md)
+-  [Update SharePoint Add-ins](update-sharepoint-add-ins)
     
  
--  [SharePoint Add-ins update process](sharepoint-add-ins-update-process.md)
+-  [SharePoint Add-ins update process](sharepoint-add-ins-update-process)
     
  
 

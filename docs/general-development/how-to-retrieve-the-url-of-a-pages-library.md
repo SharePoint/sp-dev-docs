@@ -114,7 +114,7 @@ Key = vti_pageslistname, Value = {the URL to the Pages list}
 <a name="bk_addresources"> </a>
 
 
--  [Build sites for SharePoint](build-sites-for-sharepoint.md)
+-  [Build sites for SharePoint](build-sites-for-sharepoint)
     
   
 

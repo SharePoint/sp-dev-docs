@@ -68,7 +68,7 @@ GET http://server/_api/navigation/menustate?mapprovidername='GlobalNavigationSwi
 
 ```
 
-A matching response is shown in  [Example response for a Navigation REST call for a mobile app](how-to-build-search-driven-mobile-apps-with-the-navigation-and-event-logging-res.md#response_navigation_rest).
+A matching response is shown in  [Example response for a Navigation REST call for a mobile app](how-to-build-search-driven-mobile-apps-with-the-navigation-and-event-logging-res#response_navigation_rest).
   
     
     
@@ -110,7 +110,7 @@ GET http://server/_api/search/query?querytext='owstaxidProductCatalogItemCategor
 
 ```
 
-A matching response is shown in  [Example response for a Search REST query for a mobile app](how-to-build-search-driven-mobile-apps-with-the-navigation-and-event-logging-res.md#response_search_rest).
+A matching response is shown in  [Example response for a Search REST query for a mobile app](how-to-build-search-driven-mobile-apps-with-the-navigation-and-event-logging-res#response_search_rest).
   
     
     
@@ -316,7 +316,7 @@ The service follows standard HTTP return codes: an HTTP 200 response indicates a
 <a name="bk_addresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
     
   
 -  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)

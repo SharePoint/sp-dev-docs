@@ -47,15 +47,15 @@ SharePoint includes features and APIs that you can use to author, design, brand,
 
 ### Design Manager
 
-In previous versions of SharePoint, branding a site required specific technical expertise about things like what content placeholders are required on a master page, or how a master page implements certain classes of styles. SharePoint introduces  [Design Manager](overview-of-design-manager-in-sharepoint.md)—a new interface and central hub for managing all aspects of branding your SharePoint site. You can find the Design Manager in the top-level site for your site collection. It is a part of the Publishing Portal site collection template in SharePoint.
+In previous versions of SharePoint, branding a site required specific technical expertise about things like what content placeholders are required on a master page, or how a master page implements certain classes of styles. SharePoint introduces  [Design Manager](overview-of-design-manager-in-sharepoint)—a new interface and central hub for managing all aspects of branding your SharePoint site. You can find the Design Manager in the top-level site for your site collection. It is a part of the Publishing Portal site collection template in SharePoint.
   
     
     
-Design Manager enables a step-by-step approach for creating design assets that you can use to brand sites. Upload design assets—images, HTML, CSS, and so on—and then create your master pages and page layouts. You can preview how your design looks either in a client-side code editor or on the server as you are designing it. You can add custom SharePoint components and ribbon elements by using the Design Manager UI. The Design Manager generates HTML  [snippets](sharepoint-design-manager-snippets.md) that can be used by any web design tool—it renders HTML and ignores ASP.NET and SharePoint markup (while SharePoint renders only ASP.NET and SharePoint markup and ignores HTML).
+Design Manager enables a step-by-step approach for creating design assets that you can use to brand sites. Upload design assets—images, HTML, CSS, and so on—and then create your master pages and page layouts. You can preview how your design looks either in a client-side code editor or on the server as you are designing it. You can add custom SharePoint components and ribbon elements by using the Design Manager UI. The Design Manager generates HTML  [snippets](sharepoint-design-manager-snippets) that can be used by any web design tool—it renders HTML and ignores ASP.NET and SharePoint markup (while SharePoint renders only ASP.NET and SharePoint markup and ignores HTML).
   
     
     
-You can use your expertise in HTML, CSS, and JavaScript to design master pages in HTML, and design HTML page layouts in the HTML editor of your choice. To connect your favorite authoring and design tool to your SharePoint site,  [map a network drive](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md) and then edit the SharePoint file as if it were a local file. When your site design is ready, upload the HTML and supporting files and use Design Manager to [convert the HTML file into an ASP.NET master page (.master) file](how-to-convert-an-html-file-into-a-master-page-in-sharepoint.md). Now,  [apply the master page](how-to-apply-a-master-page-to-a-site-in-sharepoint.md) to your SharePoint site. Use Design Manager to [create a new page layout](how-to-create-a-page-layout-in-sharepoint.md), and the HTML version of it is automatically associated with the corresponding ASP.NET page (.aspx file) that SharePoint interprets. 
+You can use your expertise in HTML, CSS, and JavaScript to design master pages in HTML, and design HTML page layouts in the HTML editor of your choice. To connect your favorite authoring and design tool to your SharePoint site,  [map a network drive](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery) and then edit the SharePoint file as if it were a local file. When your site design is ready, upload the HTML and supporting files and use Design Manager to [convert the HTML file into an ASP.NET master page (.master) file](how-to-convert-an-html-file-into-a-master-page-in-sharepoint). Now,  [apply the master page](how-to-apply-a-master-page-to-a-site-in-sharepoint) to your SharePoint site. Use Design Manager to [create a new page layout](how-to-create-a-page-layout-in-sharepoint), and the HTML version of it is automatically associated with the corresponding ASP.NET page (.aspx file) that SharePoint interprets. 
   
     
     
@@ -93,7 +93,7 @@ Design Manager generates HTML snippets that can be used by any web design tool�
 
 ### Device channels
 
-In Design Manager, you create  [device channels](sharepoint-design-manager-device-channels.md), and then you map them to mobile devices or browsers by using substrings of each incoming device's user agent string. A device can belong to multiple channels, so channels can be ranked. For example, if you create device channels for "smart phones" and "Windows Phone 8", you can rank the channels so that devices running Windows Phone 8 get the channel specifically assigned to them, while all other smart phones get content associated with the "smart phones" channel.
+In Design Manager, you create  [device channels](sharepoint-design-manager-device-channels), and then you map them to mobile devices or browsers by using substrings of each incoming device's user agent string. A device can belong to multiple channels, so channels can be ranked. For example, if you create device channels for "smart phones" and "Windows Phone 8", you can rank the channels so that devices running Windows Phone 8 get the channel specifically assigned to them, while all other smart phones get content associated with the "smart phones" channel.
   
     
     
@@ -128,7 +128,7 @@ There are three contexts when you may want to use display templates with search 
   
     
     
-To learn more about display templates, see  [SharePoint Design Manager display templates](sharepoint-design-manager-display-templates.md).
+To learn more about display templates, see  [SharePoint Design Manager display templates](sharepoint-design-manager-display-templates).
   
     
     
@@ -136,7 +136,7 @@ To learn more about display templates, see  [SharePoint Design Manager display t
 ### Image renditions
 <a name="SP15_BuildSitesForSP2013_DisplayTemplates"> </a>
 
-You can use  [image renditions](sharepoint-design-manager-image-renditions.md) to display uploaded images in predefined sizes, widths, and crops. You can create more than one rendition of a source image file, which means that you can set the display characteristics once and apply them to any number of images. For example, a rendition named **Article_image** displays a full-sized image in an article, while the rendition named **Thumbnail_small** displays a smaller version of the image in a context that you define.
+You can use  [image renditions](sharepoint-design-manager-image-renditions) to display uploaded images in predefined sizes, widths, and crops. You can create more than one rendition of a source image file, which means that you can set the display characteristics once and apply them to any number of images. For example, a rendition named **Article_image** displays a full-sized image in an article, while the rendition named **Thumbnail_small** displays a smaller version of the image in a context that you define.
   
     
     
@@ -155,7 +155,7 @@ Enterprise managed metadata (EMM) capabilities introduced in are improved and ex
 
 ### Managed navigation
 
-Managed navigation is the taxonomy-based alternative to the traditional SharePoint navigation feature—called structured navigation—that is based on the structure of SharePoint. The  [managed navigation](managed-navigation-in-sharepoint.md) feature enables you to design a site navigation that is driven by managed metadata. Managed navigation creates SEO-friendly URLs that are derived from the managed navigation structure. Because managed navigation is driven by taxonomy, you can use it to design site navigation around important business concepts without changing the structure of your sites or site components.
+Managed navigation is the taxonomy-based alternative to the traditional SharePoint navigation feature—called structured navigation—that is based on the structure of SharePoint. The  [managed navigation](managed-navigation-in-sharepoint) feature enables you to design a site navigation that is driven by managed metadata. Managed navigation creates SEO-friendly URLs that are derived from the managed navigation structure. Because managed navigation is driven by taxonomy, you can use it to design site navigation around important business concepts without changing the structure of your sites or site components.
   
     
     
@@ -163,7 +163,7 @@ Managed navigation is the taxonomy-based alternative to the traditional SharePoi
 ### Content Search Web Part
 <a name="SP15_BuildSitesForSP2013_ContentSearchWebPart"> </a>
 
-You can use the  [Content Search Web Part (CSWP)](content-search-web-part-in-sharepoint.md) to display search data on your pages. It serves a function similar to that of the Content Query Web Part, but it serves different site design goals. CSWP styles are easier to customize than Content Query Web Part styles. CSWP returns client-side results in JSON format. On the server, you can customize results by using display templates.
+You can use the  [Content Search Web Part (CSWP)](content-search-web-part-in-sharepoint) to display search data on your pages. It serves a function similar to that of the Content Query Web Part, but it serves different site design goals. CSWP styles are easier to customize than Content Query Web Part styles. CSWP returns client-side results in JSON format. On the server, you can customize results by using display templates.
   
     
     
@@ -171,7 +171,7 @@ You can use the  [Content Search Web Part (CSWP)](content-search-web-part-in-sha
 ### Other managed metadata improvements for sites
 <a name="SP15_BuildSitesForSP2013_ContentSearchWebPart"> </a>
 
-SharePoint introduces several improvements to the managed metadata UI and functionality. To learn more, see  [Managed metadata and navigation in SharePoint](managed-metadata-and-navigation-in-sharepoint.md).
+SharePoint introduces several improvements to the managed metadata UI and functionality. To learn more, see  [Managed metadata and navigation in SharePoint](managed-metadata-and-navigation-in-sharepoint).
   
     
     
@@ -190,7 +190,7 @@ If you're a professional web designer, you may want to create and test a design 
   
     
     
-In previous versions of SharePoint, if you wanted to reuse a design, you had to use Visual Studio to create a SharePoint Solution Package (.wsp file). Then, in the destination site, you would upload the package to the Solutions Gallery and execute it. Now, in SharePoint, after you finish designing your site, you can choose **Export Package** in Design Manager to export a single .wsp file called a [design package](sharepoint-design-manager-design-packages.md). When you export a design package, SharePoint automatically packages all of the contents that you have added or changed in the Master Page Gallery, Style Library, Theme Gallery, the Device Channels list, and Page content types into a design package. 
+In previous versions of SharePoint, if you wanted to reuse a design, you had to use Visual Studio to create a SharePoint Solution Package (.wsp file). Then, in the destination site, you would upload the package to the Solutions Gallery and execute it. Now, in SharePoint, after you finish designing your site, you can choose **Export Package** in Design Manager to export a single .wsp file called a [design package](sharepoint-design-manager-design-packages). When you export a design package, SharePoint automatically packages all of the contents that you have added or changed in the Master Page Gallery, Style Library, Theme Gallery, the Device Channels list, and Page content types into a design package. 
   
     
     
@@ -212,7 +212,7 @@ When you import a design package, the design assets in the package overwrite any
 
 ### Catalogs
 
-SharePoint site publishing introduces catalogs, which enable you to incorporate lists into your publishing sites. Catalogs enable content to be published across site collections—the cross-site publishing features depend on catalogs. You can use catalogs to truly reuse content across your sites and across the boundary between your intranet sites, Internet sites, and extranet sites. For predefined search queries, catalogs are flagged in search. You can surface content stored in catalogs across site collections by using the  [Content Search Web Part (CSWP)](content-search-web-part-in-sharepoint.md). You can write custom code to populate catalogs, connect a product catalog to a site, and curate individual pages with custom page layouts, Web Parts, and HTML content that appears only in the defined context.
+SharePoint site publishing introduces catalogs, which enable you to incorporate lists into your publishing sites. Catalogs enable content to be published across site collections—the cross-site publishing features depend on catalogs. You can use catalogs to truly reuse content across your sites and across the boundary between your intranet sites, Internet sites, and extranet sites. For predefined search queries, catalogs are flagged in search. You can surface content stored in catalogs across site collections by using the  [Content Search Web Part (CSWP)](content-search-web-part-in-sharepoint). You can write custom code to populate catalogs, connect a product catalog to a site, and curate individual pages with custom page layouts, Web Parts, and HTML content that appears only in the defined context.
   
     
     
@@ -234,7 +234,7 @@ Use the topic pages feature to customize the landing page experience for content
   
     
     
-To learn more about cross-site publishing, see  [Scenario: Create SharePoint sites by using cross-site publishing in SharePoint](http://technet.microsoft.com/en-us/sharepoint/jj872721). To learn more about development options for cross-site publishing, see  [Cross-site publishing in SharePoint](cross-site-publishing-in-sharepoint.md).
+To learn more about cross-site publishing, see  [Scenario: Create SharePoint sites by using cross-site publishing in SharePoint](http://technet.microsoft.com/en-us/sharepoint/jj872721). To learn more about development options for cross-site publishing, see  [Cross-site publishing in SharePoint](cross-site-publishing-in-sharepoint).
   
     
     
@@ -267,7 +267,7 @@ Analytics makes data anonymous and rolls it up every 15 days. Analytics purges e
 
 ### Variations and multilingual sites
 
-You can use the variations feature in SharePoint to create multilingual sites or other sites where you want to vary the presentation of your content. The variations feature is constrained to one site collection. That is, you can create target language/locale "variants" of a source language/locale as current websites within the same SharePoint site collection. Variations supports friendly URLs and the ability to export or import content for translation by a third party in  [XLIFF file format](the-xliff-interchange-file-format-in-sharepoint.md). You can include labels, a page for translation and replication, a variety of list items (for example, document libraries), and navigation in your export packages. 
+You can use the variations feature in SharePoint to create multilingual sites or other sites where you want to vary the presentation of your content. The variations feature is constrained to one site collection. That is, you can create target language/locale "variants" of a source language/locale as current websites within the same SharePoint site collection. Variations supports friendly URLs and the ability to export or import content for translation by a third party in  [XLIFF file format](the-xliff-interchange-file-format-in-sharepoint). You can include labels, a page for translation and replication, a variety of list items (for example, document libraries), and navigation in your export packages. 
   
     
     
@@ -282,22 +282,22 @@ You can use the variations feature in SharePoint to create multilingual sites or
 -  [Complete basic operations using JavaScript library code in SharePoint](http://msdn.microsoft.com/library/29089af8-dbc0-49b7-a1a0-9e311f49c826%28Office.15%29.aspx)
     
   
--  [How to: Customize page layouts for a catalog-based site in SharePoint](how-to-customize-page-layouts-for-a-catalog-based-site-in-sharepoint.md)
+-  [How to: Customize page layouts for a catalog-based site in SharePoint](how-to-customize-page-layouts-for-a-catalog-based-site-in-sharepoint)
     
   
--  [How to: Change the preview page in SharePoint Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager.md)
+-  [How to: Change the preview page in SharePoint Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager)
     
   
--  [How to: Resolve errors and warnings when previewing a page in SharePoint](how-to-resolve-errors-and-warnings-when-previewing-a-page-in-sharepoint.md)
+-  [How to: Resolve errors and warnings when previewing a page in SharePoint](how-to-resolve-errors-and-warnings-when-previewing-a-page-in-sharepoint)
     
   
--  [Themes overview for SharePoint](themes-overview-for-sharepoint.md)
+-  [Themes overview for SharePoint](themes-overview-for-sharepoint)
     
   
--  [Managed metadata and navigation in SharePoint](managed-metadata-and-navigation-in-sharepoint.md)
+-  [Managed metadata and navigation in SharePoint](managed-metadata-and-navigation-in-sharepoint)
     
   
--  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers.md)
+-  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers)
     
   
 

@@ -8,25 +8,25 @@ ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 # How to: Avoid getting throttled or blocked in SharePoint Online
 Find out about throttling in SharePoint Online, and learn how to avoid being throttled or blocked. Includes sample CSOM and REST code you can use to make your task easier.
 
--  [What is throttling?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#BKMK_Whatisthrottling)
+-  [What is throttling?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online#BKMK_Whatisthrottling)
     
   
--  [Common throttling scenarios in SharePoint Online](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#BKMK_Commonthrottlingscenarios)
+-  [Common throttling scenarios in SharePoint Online](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online#BKMK_Commonthrottlingscenarios)
     
   
--  [Why can't you just tell me the exact throttling limits?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#BKMK_Whycantyoujusttellmetheexactthrottlinglimits)
+-  [Why can't you just tell me the exact throttling limits?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online#BKMK_Whycantyoujusttellmetheexactthrottlinglimits)
     
   
--  [Best practices to handle throttling](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#BKMK_Bestpracticestohandlethrottling)
+-  [Best practices to handle throttling](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online#BKMK_Bestpracticestohandlethrottling)
     
   
--  [GitHub CSOM code samples: SharePoint Online Throttling](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#BKMK_GitHubCSOMandRESTcodesamplesSharePointOnlineThrottling)
+-  [GitHub CSOM code samples: SharePoint Online Throttling](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online#BKMK_GitHubCSOMandRESTcodesamplesSharePointOnlineThrottling)
     
   
--  [What should you do if you get blocked in SharePoint Online?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#BKMK_Whatshouldyoudoifyougetblocked)
+-  [What should you do if you get blocked in SharePoint Online?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online#BKMK_Whatshouldyoudoifyougetblocked)
     
   
--  [Additional resources](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#BKMK_Additionalresources)
+-  [Additional resources](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online#BKMK_Additionalresources)
     
   
 

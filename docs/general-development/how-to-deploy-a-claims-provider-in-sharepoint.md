@@ -157,16 +157,16 @@ namespace MySample.Sample.Server.SampleClaimsProvider
 <a name="SP15_HowToDeployClaimsProvider_AdditionalResources"> </a>
 
 
--  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint.md)
+-  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint)
     
   
--  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint.md)
+-  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint)
     
   
--  [Claims provider in SharePoint](claims-provider-in-sharepoint.md)
+-  [Claims provider in SharePoint](claims-provider-in-sharepoint)
     
   
--  [How to: Create a claims provider in SharePoint](how-to-create-a-claims-provider-in-sharepoint.md)
+-  [How to: Create a claims provider in SharePoint](how-to-create-a-claims-provider-in-sharepoint)
     
   
 

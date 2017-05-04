@@ -48,34 +48,34 @@ The following are links to blogs, forums, and additional resources related to Ex
   
     
     
- [Excel Services Overview](excel-services-overview.md)
+ [Excel Services Overview](excel-services-overview)
   
     
     
- [Excel Services Development Roadmap](excel-services-development-roadmap.md)
+ [Excel Services Development Roadmap](excel-services-development-roadmap)
   
     
     
- [Excel Services Architecture](excel-services-architecture.md)
+ [Excel Services Architecture](excel-services-architecture)
   
     
     
- [Excel Services Best Practices](excel-services-best-practices.md)
+ [Excel Services Best Practices](excel-services-best-practices)
   
     
     
- [Excel Services Alerts](excel-services-alerts.md)
+ [Excel Services Alerts](excel-services-alerts)
   
     
     
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
+ [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips)
 #### Other resources
 
 
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
   
     
     

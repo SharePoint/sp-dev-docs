@@ -20,19 +20,19 @@ The actions in this list are organized in categories based on their area of appl
     
     
 
--  [Core actions](visio-shapes-in-sharepoint-designer-a-quick-reference-guide-sharepoint-2010.md#section1a) These are the most commonly used actions in a workflow.
+-  [Core actions](visio-shapes-in-sharepoint-designer-a-quick-reference-guide-sharepoint-2010#section1a) These are the most commonly used actions in a workflow.
     
   
--  [Document set actions](visio-shapes-in-sharepoint-designer-a-quick-reference-guide-sharepoint-2010.md#section1e) Typically, these actions are used in workflows that are associated with a document library or the document content type.
+-  [Document set actions](visio-shapes-in-sharepoint-designer-a-quick-reference-guide-sharepoint-2010#section1e) Typically, these actions are used in workflows that are associated with a document library or the document content type.
     
   
--  [List actions](visio-shapes-in-sharepoint-designer-a-quick-reference-guide-sharepoint-2010.md#section1b) These actions perform operations on list items.
+-  [List actions](visio-shapes-in-sharepoint-designer-a-quick-reference-guide-sharepoint-2010#section1b) These actions perform operations on list items.
     
   
--  [Relational actions](visio-shapes-in-sharepoint-designer-a-quick-reference-guide-sharepoint-2010.md#section1d) The single action in this category looks up a user's manager and stores that information in a variable.
+-  [Relational actions](visio-shapes-in-sharepoint-designer-a-quick-reference-guide-sharepoint-2010#section1d) The single action in this category looks up a user's manager and stores that information in a variable.
     
   
--  [Task actions](visio-shapes-in-sharepoint-designer-a-quick-reference-guide-sharepoint-2010.md#section1c) These actions are associated with approval, feedback, and form operations.
+-  [Task actions](visio-shapes-in-sharepoint-designer-a-quick-reference-guide-sharepoint-2010#section1c) These actions are associated with approval, feedback, and form operations.
     
   
 
@@ -248,13 +248,13 @@ In Visio, each workflow must begin with a Start terminator (
 <a name="bk_addresources"> </a>
 
 
--  [What's new in workflows for SharePoint](what-s-new-in-workflows-for-sharepoint.md)
+-  [What's new in workflows for SharePoint](what-s-new-in-workflows-for-sharepoint)
     
   
--  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint.md)
+-  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint)
     
   
--  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)
+-  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio)
     
   
 

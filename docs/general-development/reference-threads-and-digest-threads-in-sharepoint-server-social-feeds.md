@@ -83,7 +83,7 @@ To optimize performance, when a thread contains more than two replies, the serve
 <a name="bk_addresources"> </a>
 
 
--  [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint.md)
+-  [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint)
     
   
 -  [SocialThread](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThread.aspx) in the .NET client object model

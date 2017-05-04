@@ -2,11 +2,11 @@
 Learn how to write code to perform basic operations using the JavaScript client object model in SharePoint.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
 
- **Note**  For a "Hello World" level sample SharePoint Add-in that uses the JavaScript library, see  [Use the SharePoint JavaScript APIs to work with SharePoint data](use-the-sharepoint-javascript-apis-to-work-with-sharepoint-data.md).
+ **Note**  For a "Hello World" level sample SharePoint Add-in that uses the JavaScript library, see  [Use the SharePoint JavaScript APIs to work with SharePoint data](use-the-sharepoint-javascript-apis-to-work-with-sharepoint-data).
  
 
 
@@ -42,10 +42,10 @@ This article shows how to perform basic operations using the JavaScript object m
 
  
 
--  [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-2013-client-library-code.md)
+-  [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-2013-client-library-code)
     
  
--  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md)
+-  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints)
     
  
 -  [Build Windows Phone apps that access SharePoint](http://msdn.microsoft.com/library/36681335-f772-4499-8445-f94481bc18e7%28Office.15%29.aspx)
@@ -766,7 +766,7 @@ You can manipulate files by using the JavaScript object model. The following sec
 
  
 
- **Note**  You can only work with files up to 1.5 MB by using the JavaScript object model. To upload larger files, use REST (Representational State Transfer). For more information, see  [](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md#LargeFiles).
+ **Note**  You can only work with files up to 1.5 MB by using the JavaScript object model. To upload larger files, use REST (Representational State Transfer). For more information, see  [](complete-basic-operations-using-sharepoint-2013-rest-endpoints#LargeFiles).
  
 
 
@@ -1283,7 +1283,7 @@ function execCrossDomainRequest(appweburl, hostweburl) {
 }
 ```
 
-The previous example uses the cross-domain library in SharePoint to access the host web. For more information, see  [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library.md).
+The previous example uses the cross-domain library in SharePoint to access the host web. For more information, see  [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library).
  
 
  
@@ -1292,19 +1292,19 @@ The previous example uses the cross-domain library in SharePoint to access the h
 <a name="BasicOps_AddRes"> </a>
 
 
--  [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-2013-client-library-code.md)
+-  [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-2013-client-library-code)
     
  
--  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md)
+-  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints)
     
  
--  [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
+-  [Develop SharePoint Add-ins](develop-sharepoint-add-ins)
     
  
--  [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md)
+-  [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins)
     
  
--  [Work with external data in SharePoint](work-with-external-data-in-sharepoint-2013.md)
+-  [Work with external data in SharePoint](work-with-external-data-in-sharepoint-2013)
     
  
 

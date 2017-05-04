@@ -31,7 +31,7 @@ To follow the steps in this example, you need the following:
 - A SharePoint development environment
     
   
-For information about setting up your SharePoint development environment, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md).
+For information about setting up your SharePoint development environment, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint).
   
     
     
@@ -48,7 +48,7 @@ The following table lists useful articles that can help you understand the conce
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint.md) <br/> |Learn about developing, packaging, and deploying administrative extensions to SharePoint using farm solutions.  <br/> |
+| [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint) <br/> |Learn about developing, packaging, and deploying administrative extensions to SharePoint using farm solutions.  <br/> |
 | [Custom Field Types](http://msdn.microsoft.com/en-us/library/ms446361.aspx) <br/> |Learn about creating custom field types. As you store your business information in SharePoint, there may be times when your data does not conform to the field types that are available in SharePoint FoundationOr, you might just want to customize those field types. Custom fields can include custom data validation and custom field rendering.  <br/> |
    
 
@@ -347,18 +347,18 @@ This article demonstrated how to customize the rendering process for a custom fi
 <a name="SP15CustomizeafieldtypeusingCSR_AddResources"> </a>
 
 
--  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md)
+-  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint)
     
   
--  [Build sites for SharePoint](build-sites-for-sharepoint.md)
+-  [Build sites for SharePoint](build-sites-for-sharepoint)
     
   
--  [What's new for developers in SharePoint](what???s-new-for-developers-in-sharepoint.md)
+-  [What's new for developers in SharePoint](what???s-new-for-developers-in-sharepoint)
     
   
--  [Add SharePoint capabilities](add-sharepoint-capabilities.md)
+-  [Add SharePoint capabilities](add-sharepoint-capabilities)
     
   
--  [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint.md)
+-  [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint)
     
   

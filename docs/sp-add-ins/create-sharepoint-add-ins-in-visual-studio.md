@@ -2,7 +2,7 @@
 Learn to develop SharePoint Add-ins by using templates for projects and project items in Visual Studio.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
 You can develop SharePoint Add-ins by using new templates for projects and project items in  **vsnv**. 
@@ -39,14 +39,14 @@ Creates a SharePoint Add-in based on the information that you specify in a wizar
 - The type of add-in that you want to create: provider-hosted or SharePoint-hosted. 
     
  
-For more information, see  [SharePoint Add-ins](sharepoint-add-ins.md).
+For more information, see  [SharePoint Add-ins](sharepoint-add-ins).
  
 
  
 
 ### Cloud Business Add-in
 
-By using the  **Cloud Business Add-in** template in Visual Studio, you can create a SharePoint-hosted add-in in which mobile users can view, add, and update data from remote locations by using modern, touch-oriented devices such as phones and tablets. For more information, see [Create cloud business add-ins](create-cloud-business-add-ins.md).
+By using the  **Cloud Business Add-in** template in Visual Studio, you can create a SharePoint-hosted add-in in which mobile users can view, add, and update data from remote locations by using modern, touch-oriented devices such as phones and tablets. For more information, see [Create cloud business add-ins](create-cloud-business-add-ins).
  
 
  
@@ -77,7 +77,7 @@ Adds a client web part to your SharePoint Add-in. By adding a client web part, y
 |**Property Name**|**Description**|
 |:-----|:-----|
 |ClientWebPart|Specifies the name, the title, the description, and the dimensions of the client web part.|
-|Content|Defines the location of the page that renders inside the client web part. This element has two properties:  `Type` and `Src`.  `Type` specifies the type of web part that you're creating, such as HTML. `Src` defines the location of the page that will render inside the client web part. The template references properties on the query string by using the pattern _ _PropertyName__, such as  `Src="~addinWebUrl/Pages/ClientWebPart1.aspx?Property1=_property1_"`For more information, see  [Create add-in parts to install with your SharePoint Add-in](create-add-in-parts-to-install-with-your-sharepoint-add-in.md).|
+|Content|Defines the location of the page that renders inside the client web part. This element has two properties:  `Type` and `Src`.  `Type` specifies the type of web part that you're creating, such as HTML. `Src` defines the location of the page that will render inside the client web part. The template references properties on the query string by using the pattern _ _PropertyName__, such as  `Src="~addinWebUrl/Pages/ClientWebPart1.aspx?Property1=_property1_"`For more information, see  [Create add-in parts to install with your SharePoint Add-in](create-add-in-parts-to-install-with-your-sharepoint-add-in).|
 
 ### Content Type
 
@@ -106,7 +106,7 @@ Adds two project items to your SharePoint Add-in: a list definition and an insta
 
 ### Menu Item Custom Action
 
-Adds a project item that extends the UI of its host site by adding an action to a list menu. The menu custom action contains an Elements.xml file, which you use to define the properties of the action. For more information, see  [Create custom actions to deploy with SharePoint Add-ins](create-custom-actions-to-deploy-with-sharepoint-add-ins.md).
+Adds a project item that extends the UI of its host site by adding an action to a list menu. The menu custom action contains an Elements.xml file, which you use to define the properties of the action. For more information, see  [Create custom actions to deploy with SharePoint Add-ins](create-custom-actions-to-deploy-with-sharepoint-add-ins).
  
 
  
@@ -120,14 +120,14 @@ Adds a module project item to your SharePoint Add-in. Modules are basically cont
 
 ### Remote Event Receiver
 
-Adds a project item for a remote event receiver to your SharePoint Add-in and a web application project to your solution, if such a project isn't already present. The web application contains a web service that's associated with the remote event receiver in your SharePoint Add-in. The web service contains a Visual Basic or Visual C# code file whose code executes when a list, a list item, or a web item event occurs in the SharePoint Add-in. If a web application is present, it's associated with the SharePoint Add-in, and the web service is added to that application. For more information, see  [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins.md).
+Adds a project item for a remote event receiver to your SharePoint Add-in and a web application project to your solution, if such a project isn't already present. The web application contains a web service that's associated with the remote event receiver in your SharePoint Add-in. The web service contains a Visual Basic or Visual C# code file whose code executes when a list, a list item, or a web item event occurs in the SharePoint Add-in. If a web application is present, it's associated with the SharePoint Add-in, and the web service is added to that application. For more information, see  [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins).
  
 
  
 
 ### Ribbon Custom Action
 
-Adds a project item that extends the UI of its host site by adding an action to a ribbon. The ribbon custom action contains an Elements.xml file, which defines the properties of the action. For more information, see  [Create custom actions to deploy with SharePoint Add-ins](create-custom-actions-to-deploy-with-sharepoint-add-ins.md).
+Adds a project item that extends the UI of its host site by adding an action to a ribbon. The ribbon custom action contains an Elements.xml file, which defines the properties of the action. For more information, see  [Create custom actions to deploy with SharePoint Add-ins](create-custom-actions-to-deploy-with-sharepoint-add-ins).
  
 
  
@@ -189,6 +189,6 @@ Adds a project item for a workflow custom activity to your SharePoint Add-in. By
 <a name="SP15Projecttemplates_addlresources"> </a>
 
 
--  [Tools and environments for developing SharePoint Add-ins](tools-and-environments-for-developing-sharepoint-add-ins.md)
+-  [Tools and environments for developing SharePoint Add-ins](tools-and-environments-for-developing-sharepoint-add-ins)
     
  

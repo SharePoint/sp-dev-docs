@@ -22,7 +22,7 @@ The following examples show how to capture the error codes using the  [SubCode](
     
     
 
-For a list of error codes, see  [Excel Services Error Codes](excel-services-error-codes.md).
+For a list of error codes, see  [Excel Services Error Codes](excel-services-error-codes).
 ### To capture error codes when using SOAP
 
 
@@ -362,38 +362,38 @@ In addition, make changes to the workbook path, sheet name, and so on, as approp
   
     
     
- [How to: Catch Exceptions](how-to-catch-exceptions.md)
+ [How to: Catch Exceptions](how-to-catch-exceptions)
   
     
     
- [How to: Trust a Location](how-to-trust-a-location.md)
+ [How to: Trust a Location](how-to-trust-a-location)
   
     
     
- [How to: Save from Excel Client to the Server](how-to-save-from-excel-client-to-the-server.md)
+ [How to: Save from Excel Client to the Server](how-to-save-from-excel-client-to-the-server)
 #### Concepts
 
 
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api.md)
+ [Accessing the SOAP API](accessing-the-soap-api)
   
     
     
- [Excel Services Alerts](excel-services-alerts.md)
+ [Excel Services Alerts](excel-services-alerts)
   
     
     
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
+ [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips)
   
     
     
- [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking.md)
+ [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking)
 #### Other resources
 
 
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)

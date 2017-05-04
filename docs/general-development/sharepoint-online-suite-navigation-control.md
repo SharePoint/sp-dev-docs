@@ -303,10 +303,10 @@ var g_navBarHelpDefaultKey = "HelpHome";
 <a name="bk_addresources"> </a>
 
 
--  [Build sites for SharePoint](build-sites-for-sharepoint.md)
+-  [Build sites for SharePoint](build-sites-for-sharepoint)
     
   
--  [What's new with SharePoint site development](what-s-new-with-sharepoint-site-development.md)
+-  [What's new with SharePoint site development](what-s-new-with-sharepoint-site-development)
     
   
 -  [Menu control overview (ASP.NET)](http://msdn.microsoft.com/en-us/library/ecs0x9w5%28v=vs.90%29.aspx.aspx)

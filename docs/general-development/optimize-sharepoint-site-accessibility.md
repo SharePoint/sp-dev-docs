@@ -38,10 +38,10 @@ Alternative text is required for screen readers to read non-text content on the 
 <a name="bk_addresources"> </a>
 
 
--  [Build sites for SharePoint](build-sites-for-sharepoint.md)
+-  [Build sites for SharePoint](build-sites-for-sharepoint)
     
   
--  [Accessibility in SharePoint](accessibility-in-sharepoint.md)
+-  [Accessibility in SharePoint](accessibility-in-sharepoint)
     
   
 -  [Microsoft Accessibility](https://www.microsoft.com/enable)

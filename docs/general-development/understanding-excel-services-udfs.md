@@ -119,7 +119,7 @@ Each Excel Services trusted location has an **AllowUdfs** flag.
     
 
 > **Note:**
-> The **AllowUdfs** flag is denoted by the **User-defined functions allowed** option on the Excel Services Trusted File Locations page. To learn how to navigate to the Trusted File Locations page, see [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md). 
+> The **AllowUdfs** flag is denoted by the **User-defined functions allowed** option on the Excel Services Trusted File Locations page. To learn how to navigate to the Trusted File Locations page, see [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs). 
   
     
     
@@ -152,7 +152,7 @@ To reload a UDF assembly, you can run **iisreset** or restart the Excel Calculat
     
 
 > **Caution:**
-> Resetting IIS will end all current sessions. > For more information, see  [How to: Enable UDFs](how-to-enable-udfs.md). 
+> Resetting IIS will end all current sessions. > For more information, see  [How to: Enable UDFs](how-to-enable-udfs). 
   
     
     
@@ -200,43 +200,43 @@ For more information about configuring code groups, as well as the **RequestMini
   
     
     
- [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service.md)
+ [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service)
   
     
     
- [How to: Trust a Location](how-to-trust-a-location.md)
+ [How to: Trust a Location](how-to-trust-a-location)
   
     
     
- [How to: Catch Exceptions](how-to-catch-exceptions.md)
+ [How to: Catch Exceptions](how-to-catch-exceptions)
   
     
     
- [How to: Enable UDFs](how-to-enable-udfs.md)
+ [How to: Enable UDFs](how-to-enable-udfs)
 #### Concepts
 
 
   
     
     
- [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md)
+ [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf)
   
     
     
- [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs.md)
+ [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs)
   
     
     
- [Excel Services Architecture](excel-services-architecture.md)
+ [Excel Services Architecture](excel-services-architecture)
   
     
     
- [Excel Services Alerts](excel-services-alerts.md)
+ [Excel Services Alerts](excel-services-alerts)
   
     
     
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
+ [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips)
   
     
     
- [Excel Services Best Practices](excel-services-best-practices.md)
+ [Excel Services Best Practices](excel-services-best-practices)

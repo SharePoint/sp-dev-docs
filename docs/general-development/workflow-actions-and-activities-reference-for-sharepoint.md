@@ -14,7 +14,7 @@ Workflow activities represent the code-level objects that handle method calls to
   
     
     
-For a list of available activities, see  [Workflow activity classes in SharePoint](workflow-activity-classes-in-sharepoint.md).
+For a list of available activities, see  [Workflow activity classes in SharePoint](workflow-activity-classes-in-sharepoint).
   
     
     
@@ -22,7 +22,7 @@ On the other hand, workflow actions are wrapper objects that encapsulate these u
   
     
     
-For a list of available workflow actions, see  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md) and [Workflow actions available using the workflow interop bridge](workflow-actions-available-using-the-workflow-interop-bridge.md).
+For a list of available workflow actions, see  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform) and [Workflow actions available using the workflow interop bridge](workflow-actions-available-using-the-workflow-interop-bridge).
   
     
     
@@ -43,13 +43,13 @@ The WF 4.0 activity classes provide some useful features that you may not find i
 <a name="bkm_inthissection"> </a>
 
 
--  [Workflow activity classes in SharePoint](workflow-activity-classes-in-sharepoint.md)
+-  [Workflow activity classes in SharePoint](workflow-activity-classes-in-sharepoint)
     
   
--  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
+-  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform)
     
   
--  [Workflow actions available using the workflow interop bridge](workflow-actions-available-using-the-workflow-interop-bridge.md)
+-  [Workflow actions available using the workflow interop bridge](workflow-actions-available-using-the-workflow-interop-bridge)
     
   
 
@@ -57,13 +57,13 @@ The WF 4.0 activity classes provide some useful features that you may not find i
 <a name="bkm_addlres"> </a>
 
 
--  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
+-  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio)
     
   
--  [SharePoint workflow fundamentals](sharepoint-workflow-fundamentals.md)
+-  [SharePoint workflow fundamentals](sharepoint-workflow-fundamentals)
     
   
--  [Workflows in SharePoint](workflows-in-sharepoint.md)
+-  [Workflows in SharePoint](workflows-in-sharepoint)
     
   
 

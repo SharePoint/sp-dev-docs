@@ -40,7 +40,7 @@ For assistance setting up and configuring your SharePoint workflow development e
     
     
 
--  [Prepare to set up and configure a SharePoint workflow development environment](prepare-to-set-up-and-configure-a-sharepoint-workflow-development-environment.md)
+-  [Prepare to set up and configure a SharePoint workflow development environment](prepare-to-set-up-and-configure-a-sharepoint-workflow-development-environment)
     
   
 -  [Configure workflow in SharePoint](http://technet.microsoft.com/en-us/library/jj658586%28v=office.15%29)
@@ -99,7 +99,7 @@ In summary, the workflow does the following:
 
     
 > **Important:**
-> Before you start this walkthrough, ensure that you have a properly installed and configured workflow development environment. For more information, see  [Prepare to set up and configure a SharePoint workflow development environment](prepare-to-set-up-and-configure-a-sharepoint-workflow-development-environment.md). Also, ensure that you have a SharePoint instance that you can develop your workflow against. For more information, see  [Install SharePoint](http://technet.microsoft.com/en-us/library/cc303424.aspx). 
+> Before you start this walkthrough, ensure that you have a properly installed and configured workflow development environment. For more information, see  [Prepare to set up and configure a SharePoint workflow development environment](prepare-to-set-up-and-configure-a-sharepoint-workflow-development-environment). Also, ensure that you have a SharePoint instance that you can develop your workflow against. For more information, see  [Install SharePoint](http://technet.microsoft.com/en-us/library/cc303424.aspx). 
   
     
     
@@ -538,16 +538,16 @@ Following are resources that provide guidance for packaging and deploying your w
 <a name="bk_addresources"> </a>
 
 
--  [Workflows in SharePoint](workflows-in-sharepoint.md)
+-  [Workflows in SharePoint](workflows-in-sharepoint)
     
   
--  [Prepare to set up and configure a SharePoint workflow development environment](prepare-to-set-up-and-configure-a-sharepoint-workflow-development-environment.md)
+-  [Prepare to set up and configure a SharePoint workflow development environment](prepare-to-set-up-and-configure-a-sharepoint-workflow-development-environment)
     
   
--  [SharePoint workflow development best practices](sharepoint-workflow-development-best-practices.md)
+-  [SharePoint workflow development best practices](sharepoint-workflow-development-best-practices)
     
   
--  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
+-  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio)
     
   
 

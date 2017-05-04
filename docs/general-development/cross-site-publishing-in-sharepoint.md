@@ -32,7 +32,7 @@ Cross-site publishing was designed with some common scenarios in mind, including
 ## Catalogs
 <a name="SP15_CrossSitePublising_Catalog"> </a>
 
-Catalogs, introduced in SharePoint, include a list or library that is shared out to search for consumption on publishing sites. Catalogs enable content to be published across site collections—the cross-site publishing features depend on catalogs. You can use catalogs to really reuse content across your sites and across the boundary between your intranet sites, extranet sites, and Internet sites. For predefined search queries, catalogs are flagged in search. You can surface content stored in catalogs across site collections by using the  [Content Search Web Part in SharePoint](content-search-web-part-in-sharepoint.md).
+Catalogs, introduced in SharePoint, include a list or library that is shared out to search for consumption on publishing sites. Catalogs enable content to be published across site collections—the cross-site publishing features depend on catalogs. You can use catalogs to really reuse content across your sites and across the boundary between your intranet sites, extranet sites, and Internet sites. For predefined search queries, catalogs are flagged in search. You can surface content stored in catalogs across site collections by using the  [Content Search Web Part in SharePoint](content-search-web-part-in-sharepoint).
   
     
     
@@ -184,7 +184,7 @@ public CatalogConnectionSettings GetCatalogConnectionSettings(string catalogPath
 <a name="bk_addresources"> </a>
 
 
--  [Publish SharePoint sites](publish-sharepoint-sites.md)
+-  [Publish SharePoint sites](publish-sharepoint-sites)
     
   
 

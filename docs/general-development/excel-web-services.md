@@ -16,35 +16,35 @@ This section contains information about Excel Web Services and explains how to u
 ## In this section
 
 
- [What's New in Excel Web Services](what-s-new-in-excel-web-services.md)
+ [What's New in Excel Web Services](what-s-new-in-excel-web-services)
   
     
     
 > Learn about the new types and members added to Excel Web Services in Microsoft SharePoint Server 2010.
     
   
- [Accessing the SOAP API](accessing-the-soap-api.md)
+ [Accessing the SOAP API](accessing-the-soap-api)
   
     
     
 > Learn how to call the Web service by referencing the Excel Web Services Web Services Description Language (WSDL).
     
   
- [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking.md)
+ [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking)
   
     
     
 > Learn when to link to Microsoft.Office.Excel.Server.WebServices.dll locally.
     
   
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
   
     
     
 > Get step-by-step instructions about how to create a Web service client application that accesses Excel Web Services.
     
   
- [Excel Services Error Codes](excel-services-error-codes.md)
+ [Excel Services Error Codes](excel-services-error-codes)
   
     
     
@@ -58,7 +58,7 @@ This section contains information about Excel Web Services and explains how to u
 > Learn how to set credentials for your users so that they can call Excel Web Services by using your custom applications.
     
   
- [How to: Get an Entire Workbook or a Snapshot](how-to-get-an-entire-workbook-or-a-snapshot.md)
+ [How to: Get an Entire Workbook or a Snapshot](how-to-get-an-entire-workbook-or-a-snapshot)
   
     
     
@@ -72,42 +72,42 @@ This section contains information about Excel Web Services and explains how to u
 > Learn about using the various libraries in the Microsoft .NET Framework to save a workbook.
     
   
- [How to: Get Values from Ranges](how-to-get-values-from-ranges.md)
+ [How to: Get Values from Ranges](how-to-get-values-from-ranges)
   
     
     
 > See examples of the four methods for getting values from an Excel workbook.
     
   
- [How to: Set Values of Ranges](how-to-set-values-of-ranges.md)
+ [How to: Set Values of Ranges](how-to-set-values-of-ranges)
   
     
     
 > Learn how to use the four methods for setting values in an Excel workbook.
     
   
- [How to: Specify a Range Address and Sheet Name](how-to-specify-a-range-address-and-sheet-name.md)
+ [How to: Specify a Range Address and Sheet Name](how-to-specify-a-range-address-and-sheet-name)
   
     
     
 > Learn how to specify range addresses by using range coordinates, named ranges, rows, and columns. Also learn how to specify a sheet name, and about the relationship between a sheet name and a range address.
     
   
- [How to: Use the CloseWorkbook Method Call Asynchronously](how-to-use-the-closeworkbook-method-call-asynchronously.md)
+ [How to: Use the CloseWorkbook Method Call Asynchronously](how-to-use-the-closeworkbook-method-call-asynchronously)
   
     
     
 > Find out how to close a workbook asynchronously to save some operation time.
     
   
- [How to: Refresh Data](how-to-refresh-data.md)
+ [How to: Refresh Data](how-to-refresh-data)
   
     
     
 > Learn how you can use the **Refresh** method to retrieve updated data from external data sources for an open workbook.
     
   
- [How to: Use the SubCode Property to Capture Error Codes](how-to-use-the-subcode-property-to-capture-error-codes.md)
+ [How to: Use the SubCode Property to Capture Error Codes](how-to-use-the-subcode-property-to-capture-error-codes)
   
     
     

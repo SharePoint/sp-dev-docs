@@ -73,7 +73,7 @@ A color palette is the combination of colors that are used in a SharePoint site.
 ```
 
 
-  For more information, see  [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint.md)
+  For more information, see  [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint)
     
   
 
@@ -407,22 +407,22 @@ Table 1 describes the available font slots and where they are used in a page.
 <a name="bk_addresources"> </a>
 
 
--  [Themes overview for SharePoint](themes-overview-for-sharepoint.md)
+-  [Themes overview for SharePoint](themes-overview-for-sharepoint)
     
   
--  [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint.md)
+-  [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint)
     
   
--  [Upgrade custom themes and CSS to SharePoint](upgrade-custom-themes-and-css-to-sharepoint.md)
+-  [Upgrade custom themes and CSS to SharePoint](upgrade-custom-themes-and-css-to-sharepoint)
     
   
--  [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint.md)
+-  [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint)
     
   
 -  [SharePoint Team Blog: Show off your style with SharePoint theming](http://blogs.office.com/b/sharepoint/archive/2012/10/29/show-off-your-style-with-sharepoint-theming.aspx)
     
   
--  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md)
+-  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities)
     
   
 

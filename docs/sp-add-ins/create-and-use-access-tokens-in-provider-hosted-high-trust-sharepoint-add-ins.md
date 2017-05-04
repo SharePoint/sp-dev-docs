@@ -2,18 +2,18 @@
 Learn about the role of access tokens in high-trust SharePoint Add-ins and how your code works with them.
  
 
- +ACoAKg-Note+ACoAKg-  The name +ACI-apps for SharePoint+ACI- is changing to +ACI-SharePoint Add-ins+ACI-. During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term +ACI-apps for SharePoint+ACI-. For details, see  +AFs-New name for apps for Office and SharePoint+AF0-(new-name-for-apps-for-sharepoint.md+ACM-bk+AF8-newname).
+ +ACoAKg-Note+ACoAKg-  The name +ACI-apps for SharePoint+ACI- is changing to +ACI-SharePoint Add-ins+ACI-. During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term +ACI-apps for SharePoint+ACI-. For details, see  +AFs-New name for apps for Office and SharePoint+AF0-(new-name-for-apps-for-sharepoint+ACM-bk+AF8-newname).
  
 
 
- +ACoAKg-Important+ACoAKg-   +ACoAKg-This article is entirely about the use of access tokens in the high-trust authorization system, not the ACS system.+ACoAKg- For information about the user of security tokens in the ACS system, see +AFs-Handle security tokens in provider-hosted low-trust SharePoint Add-ins+AF0-(handle-security-tokens-in-provider-hosted-low-trust-sharepoint-add-ins.md).
+ +ACoAKg-Important+ACoAKg-   +ACoAKg-This article is entirely about the use of access tokens in the high-trust authorization system, not the ACS system.+ACoAKg- For information about the user of security tokens in the ACS system, see +AFs-Handle security tokens in provider-hosted low-trust SharePoint Add-ins+AF0-(handle-security-tokens-in-provider-hosted-low-trust-sharepoint-add-ins).
  
 
 
- +ACoAKg-SharePoint Add-ins that use the  +AFs-high-trust authorization system+AF0-(creating-sharepoint-add-ins-that-use-high-trust-authorization.md) to gain access to SharePoint have to pass an access token+ACoAKg- (in +AFs-JSON Web Token+AF0-(http://datatracker.ietf.org/doc/draft-ietf-oauth-json-web-token/) format) to SharePoint with each create, read, update, or delete (CRUD) request. SharePoint validates the token and serves the request. This article provides information about how your code creates and passes the access token.
+ +ACoAKg-SharePoint Add-ins that use the  +AFs-high-trust authorization system+AF0-(creating-sharepoint-add-ins-that-use-high-trust-authorization) to gain access to SharePoint have to pass an access token+ACoAKg- (in +AFs-JSON Web Token+AF0-(http://datatracker.ietf.org/doc/draft-ietf-oauth-json-web-token/) format) to SharePoint with each create, read, update, or delete (CRUD) request. SharePoint validates the token and serves the request. This article provides information about how your code creates and passes the access token.
  
 
-In the high-trust authorization system,  +ACoAKg-the remote component of your SharePoint Add-in creates the access token+ACoAKg-. If the remote component is using managed code for its server-side code, most of the coding work for creating the tokens is done for you in the SharePointContext.cs (or .vb) and TokenHelper.cs (or .vb) files that are included in Office Developer Tools for Visual Studio. Since the customer for a high-trust SharePoint Add-in has on-premise SharePoint, they are probably not averse to using ASP.NET, IIS, and Windows Sever as the hosting stack for the remote component. You should consider using this stack because the two generated files will save you a lot of coding and testing labor. If the remote component must use a non-.NET language, and both the remote component and the SharePoint farm are connected to the Internet, you should consider using +AFs-the low-trust authorization system+AF0-(creating-sharepoint-add-ins-that-use-low-trust-authorization.md) instead of high-trust. In the Microsoft Azure Access Control Service (ACS) system, all the token construction is done by ACS, so you are also spared a lot of labor. The remainder of this article is mainly intended to provide guidance to developers creating SharePoint Add-ins with non-.NET remote components and using the high-trust authorization system. It can also provide some valuable information for debugging .NET-based SharePoint Add-ins that use the high-trust system.
+In the high-trust authorization system,  +ACoAKg-the remote component of your SharePoint Add-in creates the access token+ACoAKg-. If the remote component is using managed code for its server-side code, most of the coding work for creating the tokens is done for you in the SharePointContext.cs (or .vb) and TokenHelper.cs (or .vb) files that are included in Office Developer Tools for Visual Studio. Since the customer for a high-trust SharePoint Add-in has on-premise SharePoint, they are probably not averse to using ASP.NET, IIS, and Windows Sever as the hosting stack for the remote component. You should consider using this stack because the two generated files will save you a lot of coding and testing labor. If the remote component must use a non-.NET language, and both the remote component and the SharePoint farm are connected to the Internet, you should consider using +AFs-the low-trust authorization system+AF0-(creating-sharepoint-add-ins-that-use-low-trust-authorization) instead of high-trust. In the Microsoft Azure Access Control Service (ACS) system, all the token construction is done by ACS, so you are also spared a lot of labor. The remainder of this article is mainly intended to provide guidance to developers creating SharePoint Add-ins with non-.NET remote components and using the high-trust authorization system. It can also provide some valuable information for debugging .NET-based SharePoint Add-ins that use the high-trust system.
  
 
 +ACMAIw- Understand the handling of access tokens
@@ -28,7 +28,7 @@ The main  +ACoAKg-things that your code needs to+ACoAKg- do are:
 
  
 
-1.  +ACoAKg-Create an access token.+ACoAKg- The subtasks for creating this token vary depending on whether the remote web application makesadd-in-only calls to SharePoint,user+adc-in calls, or both. (For information about the two kinds of calls, see +AFs-Add-in authorization policy types in SharePoint+AF0-(add-in-authorization-policy-types-in-sharepoint-2013.md).) 
+1.  +ACoAKg-Create an access token.+ACoAKg- The subtasks for creating this token vary depending on whether the remote web application makesadd-in-only calls to SharePoint,user+adc-in calls, or both. (For information about the two kinds of calls, see +AFs-Add-in authorization policy types in SharePoint+AF0-(add-in-authorization-policy-types-in-sharepoint-2013).) 
     
     If the add-in makes user+adc-in calls, then creating the access token includes the following subtasks:
     
@@ -87,7 +87,7 @@ After a token is created, it can be reused in later calls to SharePoint until it
 - In a  +AFs-memcached+AF0-(http://www.memcached.org/) system
     
  
-If the cache storage is shared by different user sessions, such as the application cache, then be sure to use a cache key that is unique to the session. If the cache is shared by multiple applications, your code must also  +ACoAKg-relativize the cache key+ACoAKg- for that variable as well. It is also possible that your add-in accesses different SharePoint farms. You will need distinct access tokens for each of them, so in that scenario your cache key would need to relativize for the farm. Altogether you may need cache keys that are based on one or more of user ID, application ID, and SharePoint domain or realm. Consider using a cache key system similar to the one used by SharePoint Add-ins that use the low-trust authorization system. For details, see +AFs-Understand the cache key+AF0-(handle-security-tokens-in-provider-hosted-low-trust-sharepoint-add-ins.md+ACM-CacheKey). Essentially, you would concatenate one or more of these three IDs (and optionally hash the result into a shorter string) to serve as a cache key. 
+If the cache storage is shared by different user sessions, such as the application cache, then be sure to use a cache key that is unique to the session. If the cache is shared by multiple applications, your code must also  +ACoAKg-relativize the cache key+ACoAKg- for that variable as well. It is also possible that your add-in accesses different SharePoint farms. You will need distinct access tokens for each of them, so in that scenario your cache key would need to relativize for the farm. Altogether you may need cache keys that are based on one or more of user ID, application ID, and SharePoint domain or realm. Consider using a cache key system similar to the one used by SharePoint Add-ins that use the low-trust authorization system. For details, see +AFs-Understand the cache key+AF0-(handle-security-tokens-in-provider-hosted-low-trust-sharepoint-add-ins+ACM-CacheKey). Essentially, you would concatenate one or more of these three IDs (and optionally hash the result into a shorter string) to serve as a cache key. 
  
 
  
@@ -111,7 +111,7 @@ The following is an  +ACoAKg-example of an access token generated by a high-trus
  
 
  
- +ACoAKg-This access token is generated if the add-in is making a call to SharePoint using the  +AFs-user+adc-in policy+AF0-(add-in-authorization-policy-types-in-sharepoint-2013.md).+ACoAKg- If the add-in is using the +AFs-add-in-only policy+AF0-(add-in-authorization-policy-types-in-sharepoint-2013.md) and it makes an add-in-only call to SharePoint, then the actor token (which is a child token within the user+adc-in access token and is described below), becomes the access token (and there is no parent token).
+ +ACoAKg-This access token is generated if the add-in is making a call to SharePoint using the  +AFs-user+adc-in policy+AF0-(add-in-authorization-policy-types-in-sharepoint-2013).+ACoAKg- If the add-in is using the +AFs-add-in-only policy+AF0-(add-in-authorization-policy-types-in-sharepoint-2013) and it makes an add-in-only call to SharePoint, then the actor token (which is a child token within the user+adc-in access token and is described below), becomes the access token (and there is no parent token).
  
 
  
@@ -194,7 +194,7 @@ Table 2 describes the claims your code must include in the body of the token and
 +AGAAYABg-
 
 
- +ACoAKg-Note+ACoAKg-  If the high-trust add-in is using the  +AFs-add-in-only policy+AF0-(add-in-authorization-policy-types-in-sharepoint-2013.md) and it makes an add-in-only call to SharePoint, then the token shown here is actually the access token. There is no outer token. Moreover, there is no +ACoAKg-trustedfordelegation+ACoAKg- claim, since the user's permissions are irrelevant for an add-in-only call.
+ +ACoAKg-Note+ACoAKg-  If the high-trust add-in is using the  +AFs-add-in-only policy+AF0-(add-in-authorization-policy-types-in-sharepoint-2013) and it makes an add-in-only call to SharePoint, then the token shown here is actually the access token. There is no outer token. Moreover, there is no +ACoAKg-trustedfordelegation+ACoAKg- claim, since the user's permissions are irrelevant for an add-in-only call.
  
 
 
@@ -253,7 +253,7 @@ The free  +AFs-Fiddler tool+AF0-(http://www.telerik.com/fiddler) can be used to 
 +ADw-a name+AD0AIg-bk+AF8-addresources+ACIAPg- +ADw-/a+AD4-
 
 
--  +AFs-Creating SharePoint Add-ins that use high-trust authorization+AF0-(creating-sharepoint-add-ins-that-use-high-trust-authorization.md)
+-  +AFs-Creating SharePoint Add-ins that use high-trust authorization+AF0-(creating-sharepoint-add-ins-that-use-high-trust-authorization)
     
  
 - Steve Peschka's  +AFs-Security in SharePoint Add-ins - Part 7+AF0-(http://blogs.technet.com/b/speschka/archive/2013/08/01/security-in-sharepoint-apps-part-7.aspx)

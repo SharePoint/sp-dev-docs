@@ -3,18 +3,18 @@
 Update pages, lists, content types, and other add-in web components in a SharePoint Add-in.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
 
 ## Prerequisites for updating the add-in web components
 <a name="Prerequisites"> </a>
 
-Be familiar with  [Update SharePoint Add-ins](update-sharepoint-add-ins.md) and the prerequisites and core concepts included in it.
+Be familiar with  [Update SharePoint Add-ins](update-sharepoint-add-ins) and the prerequisites and core concepts included in it.
  
 
  
-This topic assumes that you have developed and tested the latest version of the add-in as described in the  [Create and debug the new version as if it were a brand new add-in](update-sharepoint-add-ins.md#DebugFirst).
+This topic assumes that you have developed and tested the latest version of the add-in as described in the  [Create and debug the new version as if it were a brand new add-in](update-sharepoint-add-ins#DebugFirst).
  
 
  
@@ -29,11 +29,11 @@ All of the SharePoint components that are deployed to the add-in web are contain
 
 ### What can and cannot be done declaratively
 
-With a SharePoint-hosted add-in, you can only use XML markup to update an add-in and there are some limits on how you can declaratively change an add-in in an update. In a provider-hosted add-in, you can implement a  [UpdatedEventEndpoint handler](create-a-handler-for-the-update-event-in-sharepoint-add-ins.md) to do things that can't be done declaratively.
+With a SharePoint-hosted add-in, you can only use XML markup to update an add-in and there are some limits on how you can declaratively change an add-in in an update. In a provider-hosted add-in, you can implement a  [UpdatedEventEndpoint handler](create-a-handler-for-the-update-event-in-sharepoint-add-ins) to do things that can't be done declaratively.
  
 
  
-Adding components to an add-in is easy. Any component that is eligible to be included in an add-in can also be added in an update. (For details about what components can be in an add-in, see  [Types of SharePoint components that can be in a SharePoint Add-in](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md#TypesOfSPComponentsInApps). ) But when you want to modify an existing component declaratively, consider the following points. 
+Adding components to an add-in is easy. Any component that is eligible to be included in an add-in can also be added in an update. (For details about what components can be in an add-in, see  [Types of SharePoint components that can be in a SharePoint Add-in](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013#TypesOfSPComponentsInApps). ) But when you want to modify an existing component declaratively, consider the following points. 
  
 
  
@@ -231,14 +231,14 @@ Use the following steps to update the add-in web Feature.
 </Module>
 ```
 
-3. Pages can have Web Parts embedded in them as explained in  [Include a Web Part in a webpage on the add-in web](include-a-web-part-in-a-webpage-on-the-add-in-web.md). If you change a page that has a Web Part on it (or change the properties of the Web Part), then there is an additional step: you have to add the following markup to the page to prevent the SharePoint from adding a second copy of the Web Part onto the page. The markup should be added to the  **asp:Content** element with the ID `PlaceHolderAdditionalPageHead`. (The Office Developer Tools for Visual Studio may have already added it when the page was first created, but you should verify that it is there.)
+3. Pages can have Web Parts embedded in them as explained in  [Include a Web Part in a webpage on the add-in web](include-a-web-part-in-a-webpage-on-the-add-in-web). If you change a page that has a Web Part on it (or change the properties of the Web Part), then there is an additional step: you have to add the following markup to the page to prevent the SharePoint from adding a second copy of the Web Part onto the page. The markup should be added to the  **asp:Content** element with the ID `PlaceHolderAdditionalPageHead`. (The Office Developer Tools for Visual Studio may have already added it when the page was first created, but you should verify that it is there.)
     
 ```XML
   <meta name="WebPartPageExpansion" content="full" />
 ```
 
 
-     **Note**   If the page was configured to allow users to customize it, then this markup has the side effect of removing those customizations. Users will have to repeat them. If the Web Part was added to the page following the guidance in [Include a Web Part in a webpage on the add-in web](include-a-web-part-in-a-webpage-on-the-add-in-web.md), then the Web Part markup is in the elements manifest, so changing the Web Part's properties is an exception to the general rule that you should not edit an element manifest file as part of an add-in update. 
+     **Note**   If the page was configured to allow users to customize it, then this markup has the side effect of removing those customizations. Users will have to repeat them. If the Web Part was added to the page following the guidance in [Include a Web Part in a webpage on the add-in web](include-a-web-part-in-a-webpage-on-the-add-in-web), then the Web Part markup is in the elements manifest, so changing the Web Part's properties is an exception to the general rule that you should not edit an element manifest file as part of an add-in update. 
 4. As an alternative to changing a page, you also have the option of using redirection to a new page using the following steps. 
     
       1. Create the new page and configure its update markup as described in the procedure  **To add components to the add-in** above.
@@ -416,18 +416,18 @@ Follow these steps to verify the deployment of the add-in web Feature and its co
 ## Next steps
 <a name="Next"> </a>
 
-Return to  [Major steps in updating an add-in](update-sharepoint-add-ins.md#MajorAppUpgradeSteps), or go directly to one of the following articles to learn how to update the next major component of your SharePoint Add-in.
+Return to  [Major steps in updating an add-in](update-sharepoint-add-ins#MajorAppUpgradeSteps), or go directly to one of the following articles to learn how to update the next major component of your SharePoint Add-in.
  
 
  
 
--  [Update host web components in SharePoint](update-host-web-components-in-sharepoint-2013.md)
+-  [Update host web components in SharePoint](update-host-web-components-in-sharepoint-2013)
     
  
--  [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins.md)
+-  [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins)
     
  
--  [Update remote components in SharePoint Add-ins](update-remote-components-in-sharepoint-add-ins.md)
+-  [Update remote components in SharePoint Add-ins](update-remote-components-in-sharepoint-add-ins)
     
  
 
@@ -435,7 +435,7 @@ Return to  [Major steps in updating an add-in](update-sharepoint-add-ins.md#Majo
 <a name="bk_addresources"> </a>
 
 
--  [Update SharePoint Add-ins](update-sharepoint-add-ins.md)
+-  [Update SharePoint Add-ins](update-sharepoint-add-ins)
     
  
 -  [How to: Add Elements to an Existing Feature](http://msdn.microsoft.com/library/b007f419-e0d6-4e3a-a3ae-b8e448656d02%28Office.15%29.aspx) in the Microsoft SharePoint 2010 Software Development Kit (SDK).

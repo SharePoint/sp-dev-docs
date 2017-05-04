@@ -243,7 +243,7 @@ Developers can write CMIS clients in any language. For example, a SharePoint dev
 ## Finding and interoperating with open source CMIS implementations
 <a name="SP15CMIS_OpenSource"> </a>
 
-Many open source projects exist and can be tested with the SharePoint implementation of the CMIS 1.0 standard. Some examples include the  [Apache Chemistry Project](http://chemistry.apache.org); the  [Open CMIS project](http://chemistry.apache.org/java/opencmis.html), which tests both client and server CMIS implementations with Java; the  [DotCMIS](http://chemistry.apache.org/dotnet/dotcmis.mdl) project for .NET client, the [cmislib, a CMIS client library for Python](http://chemistry.apache.org/python/cmislib.html) project; and the [phpclient, a CMIS client library for PHP](http://chemistry.apache.org/php/phpclient.html).
+Many open source projects exist and can be tested with the SharePoint implementation of the CMIS 1.0 standard. Some examples include the  [Apache Chemistry Project](http://chemistry.apache.org); the  [Open CMIS project](http://chemistry.apache.org/java/opencmis.html), which tests both client and server CMIS implementations with Java; the  [DotCMIS](http://chemistry.apache.org/dotnet/dotcmisl) project for .NET client, the [cmislib, a CMIS client library for Python](http://chemistry.apache.org/python/cmislib.html) project; and the [phpclient, a CMIS client library for PHP](http://chemistry.apache.org/php/phpclient.html).
   
     
     
@@ -289,7 +289,7 @@ CMIS 1.1 is not supported in SharePoint, but the newer version of the CMIS speci
 <a name="SP15CMIS_AdditionalResources"> </a>
 
 
--  [Add SharePoint capabilities](add-sharepoint-capabilities.md)
+-  [Add SharePoint capabilities](add-sharepoint-capabilities)
     
   
 -  [Manage blocked file types](http://technet.microsoft.com/en-us/library/cc262496.aspx)

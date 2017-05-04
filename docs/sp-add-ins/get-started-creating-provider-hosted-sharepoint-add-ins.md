@@ -2,10 +2,10 @@
 Set up a development environment and create your first provider-hosted SharePoint Add-in.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
-Provider-hosted add-ins are one of the two major types of SharePoint Add-ins. For an overview of SharePoint Add-ins and the two different types, see  [SharePoint Add-ins](sharepoint-add-ins.md). Here's a summary of provider-hosted add-ins:
+Provider-hosted add-ins are one of the two major types of SharePoint Add-ins. For an overview of SharePoint Add-ins and the two different types, see  [SharePoint Add-ins](sharepoint-add-ins). Here's a summary of provider-hosted add-ins:
  
 
 - They include a web application, or service, or database that is hosted externally from the SharePoint farm or SharePoint Online subscription. They may also include SharePoint components. You can host the external components on any web-hosting stack, including the LAMP (Linux, Apache, MySQL, and PHP) stack.
@@ -14,11 +14,11 @@ Provider-hosted add-ins are one of the two major types of SharePoint Add-ins. Fo
 - The custom business logic in the add-in has to run on either the external components or in JavaScript on custom SharePoint pages.
     
  
-- [Step 1 - Set up your dev environment](get-started-creating-provider-hosted-sharepoint-add-ins.md#Setup) 
+- [Step 1 - Set up your dev environment](get-started-creating-provider-hosted-sharepoint-add-ins#Setup) 
 
-- [Step 2 - Create the app project](get-started-creating-provider-hosted-sharepoint-add-ins.md#Create) 
+- [Step 2 - Create the app project](get-started-creating-provider-hosted-sharepoint-add-ins#Create) 
 
-- [Step 3 - Code your app](get-started-creating-provider-hosted-sharepoint-add-ins.md#Code)
+- [Step 3 - Code your app](get-started-creating-provider-hosted-sharepoint-add-ins#Code)
  
 ## Set up your dev environment
 <a name="Setup"> </a>
@@ -42,7 +42,7 @@ There are many ways to set up a development environment for SharePoint Add-ins. 
 <a name="o365_signup"> </a>
 
 
- **Note**   You might already have access to an Office 365 Developer Site: **Are you an MSDN subscriber?** Visual Studio Ultimate and Visual Studio Premium with MSDN subscribers receive an Office 365 Developer Subscription as a benefit. [Redeem your benefit today.](https://msdn.microsoft.com/subscriptions/manage/default.aspx) **Do you have one of the following Office 365 subscription plans?** **If so, an administrator of the Office 365 subscription can create a Developer Site** by using the [Office 365 admin center](https://portal.microsoftonline.com/admin/default.aspx). For more info, see  [Create a developer site on an existing Office 365 subscription](create-a-developer-site-on-an-existing-office-365-subscription.md). 
+ **Note**   You might already have access to an Office 365 Developer Site: **Are you an MSDN subscriber?** Visual Studio Ultimate and Visual Studio Premium with MSDN subscribers receive an Office 365 Developer Subscription as a benefit. [Redeem your benefit today.](https://msdn.microsoft.com/subscriptions/manage/default.aspx) **Do you have one of the following Office 365 subscription plans?** **If so, an administrator of the Office 365 subscription can create a Developer Site** by using the [Office 365 admin center](https://portal.microsoftonline.com/admin/default.aspx). For more info, see  [Create a developer site on an existing Office 365 subscription](create-a-developer-site-on-an-existing-office-365-subscription). 
  
 
 There are three ways to get an Office 365 plan. 
@@ -501,7 +501,7 @@ namespace SampleAddInWeb
 ## Next steps
 <a name="SP15createprovider_nextsteps"> </a>
 
-See  [Give your provider-hosted add-in the SharePoint look-and-feel](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md) to learn how to integrate an add-in into SharePoint's UI scheme.
+See  [Give your provider-hosted add-in the SharePoint look-and-feel](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel) to learn how to integrate an add-in into SharePoint's UI scheme.
  
 
  
@@ -510,7 +510,7 @@ See  [Give your provider-hosted add-in the SharePoint look-and-feel](give-your-p
 <a name="bk_addresources"> </a>
 
 
-- For other ways of setting up a development environment, such as an "all on-premise" environment, see the  [Tools](tools-and-environments-for-developing-sharepoint-add-ins.md) section in the SharePoint Add-ins table of contents.
+- For other ways of setting up a development environment, such as an "all on-premise" environment, see the  [Tools](tools-and-environments-for-developing-sharepoint-add-ins) section in the SharePoint Add-ins table of contents.
     
  
 

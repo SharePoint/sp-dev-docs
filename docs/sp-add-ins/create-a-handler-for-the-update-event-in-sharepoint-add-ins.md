@@ -2,14 +2,14 @@
 Create and use a handler for the update event of a SharePoint Add-in.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
 
 ## Prerequisites for creating a handler for the add-in update event
 <a name="Prerequisites"> </a>
 
-Be thoroughly familiar with both  [Handling add-in events](handle-events-in-sharepoint-add-ins.md#HandlingAppEvents) and [Update SharePoint Add-ins](update-sharepoint-add-ins.md) and the prerequisites and core concepts listed in them.
+Be thoroughly familiar with both  [Handling add-in events](handle-events-in-sharepoint-add-ins#HandlingAppEvents) and [Update SharePoint Add-ins](update-sharepoint-add-ins) and the prerequisites and core concepts listed in them.
  
 
  
@@ -21,7 +21,7 @@ Be thoroughly familiar with both  [Handling add-in events](handle-events-in-shar
  **Note**   **Version numbering system:** For consistency, this topic assumes that the add-in version numbers are 1.0.0.0, 2.0.0.0, 3.0.0.0, and so on. However, the logic and guidance applies no matter what your numbering system is.
  
 
-For custom update logic, you can create a SharePoint remote event receiver that handles the add-in updated event. You should be conservative in using this technique. Use it only for updating steps that can't be done any other way. Also, the guidance found in  [Handling add-in events](handle-events-in-sharepoint-add-ins.md#HandlingAppEvents) applies for the add-in updated event as much as the add-in installed and add-in uninstalling events. This includes:
+For custom update logic, you can create a SharePoint remote event receiver that handles the add-in updated event. You should be conservative in using this technique. Use it only for updating steps that can't be done any other way. Also, the guidance found in  [Handling add-in events](handle-events-in-sharepoint-add-ins#HandlingAppEvents) applies for the add-in updated event as much as the add-in installed and add-in uninstalling events. This includes:
  
 
  
@@ -39,7 +39,7 @@ One scenario in which an  **UpgradedEventEndpoint** handler is useful is when a 
  
 
  
-For more details about how to create a handler for the add-in event, see  [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins.md) and [Create an add-in event receiver in SharePoint Add-ins](create-an-add-in-event-receiver-in-sharepoint-add-ins.md). The following procedure assumes that you have added the add-in event receiver item to your SharePoint Add-in project in Visual Studio. 
+For more details about how to create a handler for the add-in event, see  [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins) and [Create an add-in event receiver in SharePoint Add-ins](create-an-add-in-event-receiver-in-sharepoint-add-ins). The following procedure assumes that you have added the add-in event receiver item to your SharePoint Add-in project in Visual Studio. 
  
 
  
@@ -77,7 +77,7 @@ For more details about how to create a handler for the add-in event, see  [Handl
 
 ```
 
-4. To use the REST interface, your code uses other methods in the  **TokenHelper** class to get an access token, which is then included in the requests it makes to SharePoint. For more information, see [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md). Your code should be structured similarly to the following.
+4. To use the REST interface, your code uses other methods in the  **TokenHelper** class to get an access token, which is then included in the requests it makes to SharePoint. For more information, see [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints). Your code should be structured similarly to the following.
     
 ```C#
   if (properties.EventType == SPRemoteEventType.AppUpgraded)
@@ -228,7 +228,7 @@ catch (Exception e)
 
 ### Use the handler delegation strategy
 
-The handler delegation strategy that is described in  [Handling add-in events](handle-events-in-sharepoint-add-ins.md#HandlingAppEvents) can be used in an **UpdatedEventHandler** too. Not only is your rollback and "already done" logic bundled and run on the remote component, but your versioning logic is too. The limitations of the strategy apply here too: you usually can't use it to update more than one remote system.
+The handler delegation strategy that is described in  [Handling add-in events](handle-events-in-sharepoint-add-ins#HandlingAppEvents) can be used in an **UpdatedEventHandler** too. Not only is your rollback and "already done" logic bundled and run on the remote component, but your versioning logic is too. The limitations of the strategy apply here too: you usually can't use it to update more than one remote system.
  
 
  
@@ -236,18 +236,18 @@ The handler delegation strategy that is described in  [Handling add-in events](h
 ## Next steps
 <a name="Next"> </a>
 
-Return to  [Major steps in updating an add-in](update-sharepoint-add-ins.md#MajorAppUpgradeSteps), or go directly to one of the following articles to learn how to update the next major component of your SharePoint Add-in.
+Return to  [Major steps in updating an add-in](update-sharepoint-add-ins#MajorAppUpgradeSteps), or go directly to one of the following articles to learn how to update the next major component of your SharePoint Add-in.
  
 
  
 
--  [Update add-in web components in SharePoint](update-add-in-web-components-in-sharepoint-2013.md)
+-  [Update add-in web components in SharePoint](update-add-in-web-components-in-sharepoint-2013)
     
  
--  [Update host web components in SharePoint](update-host-web-components-in-sharepoint-2013.md)
+-  [Update host web components in SharePoint](update-host-web-components-in-sharepoint-2013)
     
  
--  [Update remote components in SharePoint Add-ins](update-remote-components-in-sharepoint-add-ins.md)
+-  [Update remote components in SharePoint Add-ins](update-remote-components-in-sharepoint-add-ins)
     
  
 
@@ -255,16 +255,16 @@ Return to  [Major steps in updating an add-in](update-sharepoint-add-ins.md#Majo
 <a name="bk_addresources"> </a>
 
 
--  [Update SharePoint Add-ins](update-sharepoint-add-ins.md)
+-  [Update SharePoint Add-ins](update-sharepoint-add-ins)
     
  
 -  [UpgradedEventEndpoint element (PropertiesDefinition complexType) (SharePoint Add-in Manifest)](http://msdn.microsoft.com/library/09a93d44-d295-47bb-f91c-d243178b0f53%28Office.15%29.aspx)
     
  
--  [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins.md)
+-  [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins)
     
  
--  [Create an add-in event receiver in SharePoint Add-ins](create-an-add-in-event-receiver-in-sharepoint-add-ins.md)
+-  [Create an add-in event receiver in SharePoint Add-ins](create-an-add-in-event-receiver-in-sharepoint-add-ins)
     
  
 

@@ -58,25 +58,25 @@ The location and map features in SharePoint provide unique opportunities for dev
 
 |**Task**|**Description**|
 |:-----|:-----|
-| [How to: Set the Bing Maps key at the web and farm level in SharePoint](how-to-set-the-bing-maps-key-at-the-web-and-farm-level-in-sharepoint.md) <br/> |SharePoint uses Bings Maps to render the map of the location. To be able to use the Bing Maps feature, you need to create a Bing Maps key and set the key at the web or farm level. The article shows the various ways you can set the key in SharePoint and when to choose which option. You see an error message on the map if you do not use a valid Bing Maps key or if a key is not set at the web that contains the list or at the farm level.  <br/> |
-| [How to: Add a Geolocation column to a list programmatically in SharePoint](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint.md) <br/> |The Geolocation column is not available in SharePoint lists for users, by default. To add the column to a SharePoint list, you need to write code. In this topic, learn how to add the Geolocation field to a list programmatically.  <br/> |
-| [How to: Extend the Geolocation field type using client-side rendering](how-to-extend-the-geolocation-field-type-using-client-side-rendering.md) <br/> |You can provide your own rendering to default user interface (UI), logic, and behavior of the Geolocation field by creating custom field types that derive from the Geolocation field. SharePoint simplifies the creation of custom field types by enabling you to run JavaScript by providing a new JSLink property in the Geolocation field class, which points to a custom .js file that renders the field.  <br/> **Note:** The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list.           |
+| [How to: Set the Bing Maps key at the web and farm level in SharePoint](how-to-set-the-bing-maps-key-at-the-web-and-farm-level-in-sharepoint) <br/> |SharePoint uses Bings Maps to render the map of the location. To be able to use the Bing Maps feature, you need to create a Bing Maps key and set the key at the web or farm level. The article shows the various ways you can set the key in SharePoint and when to choose which option. You see an error message on the map if you do not use a valid Bing Maps key or if a key is not set at the web that contains the list or at the farm level.  <br/> |
+| [How to: Add a Geolocation column to a list programmatically in SharePoint](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint) <br/> |The Geolocation column is not available in SharePoint lists for users, by default. To add the column to a SharePoint list, you need to write code. In this topic, learn how to add the Geolocation field to a list programmatically.  <br/> |
+| [How to: Extend the Geolocation field type using client-side rendering](how-to-extend-the-geolocation-field-type-using-client-side-rendering) <br/> |You can provide your own rendering to default user interface (UI), logic, and behavior of the Geolocation field by creating custom field types that derive from the Geolocation field. SharePoint simplifies the creation of custom field types by enabling you to run JavaScript by providing a new JSLink property in the Geolocation field class, which points to a custom .js file that renders the field.  <br/> **Note:** The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list.           |
    
 
 ## Additional resources
 <a name="SP15Integrateloc_addlresources"> </a>
 
 
--  [How to: Add a Geolocation column to a list programmatically in SharePoint](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint.md)
+-  [How to: Add a Geolocation column to a list programmatically in SharePoint](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint)
     
   
--  [How to: Set the Bing Maps key at the web and farm level in SharePoint](how-to-set-the-bing-maps-key-at-the-web-and-farm-level-in-sharepoint.md)
+-  [How to: Set the Bing Maps key at the web and farm level in SharePoint](how-to-set-the-bing-maps-key-at-the-web-and-farm-level-in-sharepoint)
     
   
--  [How to: Extend the Geolocation field type using client-side rendering](how-to-extend-the-geolocation-field-type-using-client-side-rendering.md)
+-  [How to: Extend the Geolocation field type using client-side rendering](how-to-extend-the-geolocation-field-type-using-client-side-rendering)
     
   
--  [How to: Integrate maps with Windows Phone apps and SharePoint lists](how-to-integrate-maps-with-windows-phone-apps-and-sharepoint-lists.md)
+-  [How to: Integrate maps with Windows Phone apps and SharePoint lists](how-to-integrate-maps-with-windows-phone-apps-and-sharepoint-lists)
     
   
 -  [Use the SharePoint location field type in mobile applications](http://technet.microsoft.com/en-us/library/fp161355%28v=office.15%29.aspx)

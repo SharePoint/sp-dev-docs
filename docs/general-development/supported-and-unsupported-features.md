@@ -199,19 +199,19 @@ Unlike workbooks with external links, charts with external links are blocked fro
   
     
     
- [Excel Services Overview](excel-services-overview.md)
+ [Excel Services Overview](excel-services-overview)
   
     
     
- [Excel Services Architecture](excel-services-architecture.md)
+ [Excel Services Architecture](excel-services-architecture)
   
     
     
- [Excel Services Blogs, Forums, and Resources](excel-services-blogs-forums-and-resources.md)
+ [Excel Services Blogs, Forums, and Resources](excel-services-blogs-forums-and-resources)
 #### Other resources
 
 
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)

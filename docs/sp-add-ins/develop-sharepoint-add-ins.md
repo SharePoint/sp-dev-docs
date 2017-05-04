@@ -1,9 +1,9 @@
 # Develop SharePoint Add-ins
 Find in-depth articles and resources to help you build advanced capabilities into your SharePoint Add-ins.
  
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
-> **Note**  This article assumes that you are familiar with the article  [SharePoint Add-ins](sharepoint-add-ins.md) and the getting started material that it links to.
+> **Note**  This article assumes that you are familiar with the article  [SharePoint Add-ins](sharepoint-add-ins) and the getting started material that it links to.
 
 Under  **Develop**, we've got the following to help explain all the different things you can do in a SharePoint Add-in:
 
@@ -26,7 +26,7 @@ And, code is key, so take a look at the "Samples" menu in the Dev Center. It's a
 ## Get started with SharePoint Add-ins resources
 <a name="bk_gettingstarted"> </a>
 
-If you're just getting started with developing SharePoint Add-ins, first take a look a  [SharePoint Add-ins](sharepoint-add-ins.md). That page points you to key articles to get you acquainted quickly with the different kinds of SharePoint Add-ins. Before doing more advanced kinds of development with SharePoint Add-ins, you should start with a good idea of the kinds of add-ins that you want to build, the technologies that you will want to include, and the hosting options that you will want to use.
+If you're just getting started with developing SharePoint Add-ins, first take a look a  [SharePoint Add-ins](sharepoint-add-ins). That page points you to key articles to get you acquainted quickly with the different kinds of SharePoint Add-ins. Before doing more advanced kinds of development with SharePoint Add-ins, you should start with a good idea of the kinds of add-ins that you want to build, the technologies that you will want to include, and the hosting options that you will want to use.
  
 ### Essential tasks and resources for developing SharePoint Add-ins using the client object model, JavaScript object model, and REST endpoints in SharePoint
 <a name="bk_essentials"> </a>
@@ -38,9 +38,9 @@ No matter what kind of SharePoint Add-in you decide to build, your add-in will a
 
 |**Topic**|**Description**|
 |:-----|:-----|
-| [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-2013-client-library-code.md)|Explains how to do common operations by using C# and the client object model.|
-| [Complete basic operations using JavaScript library code in SharePoint](complete-basic-operations-using-javascript-library-code-in-sharepoint-2013.md)|Explains how to do common operations by using the JavaScript object model.|
-| [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md)|Explains how to do common operations by using the REST interface.|
+| [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-2013-client-library-code)|Explains how to do common operations by using C# and the client object model.|
+| [Complete basic operations using JavaScript library code in SharePoint](complete-basic-operations-using-javascript-library-code-in-sharepoint-2013)|Explains how to do common operations by using the JavaScript object model.|
+| [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints)|Explains how to do common operations by using the REST interface.|
 
 ## Learn the fundamental concepts for development with SharePoint Add-ins
 <a name="bk_fundamentals"> </a>
@@ -51,10 +51,10 @@ In addition to understanding the basic operations, you should understand the fun
 
 |**Topic**|**Description**|
 |:-----|:-----|
-| [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md)|Guides you through core concepts related to acquiring the necessary privileges for working with SharePoint resources.|
-| [Explore the app manifest structure and the package of a SharePoint Add-in](explore-the-app-manifest-structure-and-the-package-of-a-sharepoint-add-in.md)|Explains how add-in manifests work and how add-in packages are built.|
-| [Create UX components in SharePoint](create-ux-components-in-sharepoint-2013.md)|Explores the ways in which you can build a rich user experience in SharePoint Add-ins.|
-| [Work with external data in SharePoint](work-with-external-data-in-sharepoint-2013.md)|Explains the data access options and techniques that are available in different kinds of SharePoint Add-ins.|
+| [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins)|Guides you through core concepts related to acquiring the necessary privileges for working with SharePoint resources.|
+| [Explore the app manifest structure and the package of a SharePoint Add-in](explore-the-app-manifest-structure-and-the-package-of-a-sharepoint-add-in)|Explains how add-in manifests work and how add-in packages are built.|
+| [Create UX components in SharePoint](create-ux-components-in-sharepoint-2013)|Explores the ways in which you can build a rich user experience in SharePoint Add-ins.|
+| [Work with external data in SharePoint](work-with-external-data-in-sharepoint-2013)|Explains the data access options and techniques that are available in different kinds of SharePoint Add-ins.|
 | [License your Office and SharePoint Add-ins](http://msdn.microsoft.com/library/license-your-office-and-sharepoint-add-ins%28Office.15%29.aspx)|Guides you through the add-in license framework for Office and SharePoint Add-ins.|
 
 ## Put the pieces together: Building advanced SharePoint Add-ins by integrating capabilities
@@ -66,13 +66,13 @@ When you are familiar with the capabilities and features of SharePoint Add-ins, 
 
 |**Topic**|**Description**|
 |:-----|:-----|
-| [Create a provider-hosted add-in that includes a custom SharePoint list and content type](create-a-provider-hosted-add-in-that-includes-a-custom-sharepoint-list-and-conte.md)|Explains how to create SharePoint Add-ins that are hosted in the cloud and that include custom SharePoint lists and content types.|
+| [Create a provider-hosted add-in that includes a custom SharePoint list and content type](create-a-provider-hosted-add-in-that-includes-a-custom-sharepoint-list-and-conte)|Explains how to create SharePoint Add-ins that are hosted in the cloud and that include custom SharePoint lists and content types.|
 
 ## Additional resources
 <a name="bk_addresources"> </a>
 
--  [Tools and environments for developing SharePoint Add-ins](tools-and-environments-for-developing-sharepoint-add-ins.md) 
--  [Design SharePoint Add-ins](design-sharepoint-add-ins.md)
--  [Publish SharePoint Add-ins](publish-sharepoint-add-ins.md)
+-  [Tools and environments for developing SharePoint Add-ins](tools-and-environments-for-developing-sharepoint-add-ins) 
+-  [Design SharePoint Add-ins](design-sharepoint-add-ins)
+-  [Publish SharePoint Add-ins](publish-sharepoint-add-ins)
 -  [SharePoint Add-ins sample pack](http://code.msdn.microsoft.com/office/Apps-for-SharePoint-sample-64c80184)
  

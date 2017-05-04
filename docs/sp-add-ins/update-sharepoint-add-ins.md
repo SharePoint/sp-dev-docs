@@ -3,7 +3,7 @@
 Learn how to create and deploy an update for a SharePoint Add-in.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
 You can update your SharePoint Add-in by using the updating support built into SharePoint. Within 24 hours after you upload an updated version of the add-in to the organization's add-in catalog or the add-in is accepted at the Office Store, a notification that an update is available appears next to the add-in on  **Site Contents** page of every website where it is installed. As you can see in Figure 1, a link is provided for users to immediately install the update.
@@ -20,7 +20,7 @@ A user can install the update without first uninstalling the earlier version. Th
  
 
     
- **Important**  You cannot change the  *add-in type*  using the update system. For example, you cannot change an add-in from SharePoint-hosted to provider-hosted with an update. To make a change of type, you need to [migrate from an old add-in to a new one](sharepoint-add-ins-update-process.md#Major). In particular, since  [the preview program for autohosted add-ins has been closed](http://blogs.office.com/2014/05/16/update-on-autohosted-apps-preview-program/), you should be aware that you cannot update an autohosted add-in to a provider-hosted add-in. You have to convert the add-in as explained in  [Convert an autohosted SharePoint Add-in to a provider-hosted add-in](convert-an-autohosted-sharepoint-add-in-to-a-provider-hosted-add-in.md).
+ **Important**  You cannot change the  *add-in type*  using the update system. For example, you cannot change an add-in from SharePoint-hosted to provider-hosted with an update. To make a change of type, you need to [migrate from an old add-in to a new one](sharepoint-add-ins-update-process#Major). In particular, since  [the preview program for autohosted add-ins has been closed](http://blogs.office.com/2014/05/16/update-on-autohosted-apps-preview-program/), you should be aware that you cannot update an autohosted add-in to a provider-hosted add-in. You have to convert the add-in as explained in  [Convert an autohosted SharePoint Add-in to a provider-hosted add-in](convert-an-autohosted-sharepoint-add-in-to-a-provider-hosted-add-in).
  
 
 
@@ -32,7 +32,7 @@ A user can install the update without first uninstalling the earlier version. Th
 
  
 
-- A test SharePoint installation that is configured for add-in isolation. See  [Set up a development environment for SharePoint Add-ins on Office 365](set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md) for instructions on how to set up an Office 365 Developer Site.
+- A test SharePoint installation that is configured for add-in isolation. See  [Set up a development environment for SharePoint Add-ins on Office 365](set-up-a-development-environment-for-sharepoint-add-ins-on-office-365) for instructions on how to set up an Office 365 Developer Site.
     
  
 - Tools that are used in creating a SharePoint Add-in are usually also used in updating it. For example, most developers use Visual Studio and Microsoft Office Developer Tools for Visual Studio to create SharePoint Add-ins.
@@ -51,11 +51,11 @@ A user can install the update without first uninstalling the earlier version. Th
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [Choose patterns for developing and hosting your SharePoint Add-in](choose-patterns-for-developing-and-hosting-your-sharepoint-add-in.md)|Learn about the different types of SharePoint Add-ins. The updating process varies depending on the type.|
-| [SharePoint Add-ins update process](sharepoint-add-ins-update-process.md)|Learn about the process for updating SharePoint Add-ins.|
+| [Choose patterns for developing and hosting your SharePoint Add-in](choose-patterns-for-developing-and-hosting-your-sharepoint-add-in)|Learn about the different types of SharePoint Add-ins. The updating process varies depending on the type.|
+| [SharePoint Add-ins update process](sharepoint-add-ins-update-process)|Learn about the process for updating SharePoint Add-ins.|
 | [Upgrading Features](http://msdn.microsoft.com/library/e917f709-6491-4d50-adbe-2ab8f35da990%28Office.15%29.aspx)|Learn how to update Features (SharePoint 2010 SDK).|
-| [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options.md)|Learn about the methods for publishing, installing, and uninstalling a SharePoint Add-in.|
-| [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins.md)|Learn about remote event receivers in SharePoint.|
+| [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options)|Learn about the methods for publishing, installing, and uninstalling a SharePoint Add-in.|
+| [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins)|Learn about remote event receivers in SharePoint.|
 
 ## Major steps in updating an add-in
 <a name="MajorAppUpgradeSteps"> </a>
@@ -80,13 +80,13 @@ The following are the major steps that may be needed when you create an update f
     For more information, see  [Update the add-in version, permission requests, and prerequisites](#UpdateManifest).
     
  
-- Add or update the markup for add-in web components. For more information, see  [Update add-in web components in SharePoint](update-add-in-web-components-in-sharepoint-2013.md).
+- Add or update the markup for add-in web components. For more information, see  [Update add-in web components in SharePoint](update-add-in-web-components-in-sharepoint-2013).
     
  
-- Add or update the markup for host web components. For more information, see  [Update host web components in SharePoint](update-host-web-components-in-sharepoint-2013.md).
+- Add or update the markup for host web components. For more information, see  [Update host web components in SharePoint](update-host-web-components-in-sharepoint-2013).
     
  
-- Add custom logic to an  [UpgradedEventEndpoint](http://msdn.microsoft.com/library/09a93d44-d295-47bb-f91c-d243178b0f53%28Office.15%29.aspx) and register it in the appmanifest.xml file. For more information, see [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins.md).
+- Add custom logic to an  [UpgradedEventEndpoint](http://msdn.microsoft.com/library/09a93d44-d295-47bb-f91c-d243178b0f53%28Office.15%29.aspx) and register it in the appmanifest.xml file. For more information, see [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins).
     
  
 - Update the remote components:
@@ -95,7 +95,7 @@ The following are the major steps that may be needed when you create an update f
     
  
 
-    For more information, see  [Update remote components in SharePoint Add-ins](update-remote-components-in-sharepoint-add-ins.md).
+    For more information, see  [Update remote components in SharePoint Add-ins](update-remote-components-in-sharepoint-add-ins).
     
  
 -  ***** Upload the add-in package to the Office Store or the organization's add-in catalog.
@@ -143,7 +143,7 @@ When the new version of the add-in is functioning correctly as a "new" add-in, r
  
 
  
-When you are ready to test your update, retract the new version from the test site and redeploy the earlier version so you can test update logic. If you have shipped multiple previous versions of the add-in, install each earlier version on a different subweb of your test site. Then upload the latest version of the add-in to your test site's add-in catalog and update every instance of the add-in. Verify that each has the latest add-in version number and the latest version of all components. If there is an add-in web in the add-in, verify that the add-in web components have been deployed using the procedure in  [Verify deployment of add-in web components](update-add-in-web-components-in-sharepoint-2013.md#VerifyDeployAppWebComp).
+When you are ready to test your update, retract the new version from the test site and redeploy the earlier version so you can test update logic. If you have shipped multiple previous versions of the add-in, install each earlier version on a different subweb of your test site. Then upload the latest version of the add-in to your test site's add-in catalog and update every instance of the add-in. Verify that each has the latest add-in version number and the latest version of all components. If there is an add-in web in the add-in, verify that the add-in web components have been deployed using the procedure in  [Verify deployment of add-in web components](update-add-in-web-components-in-sharepoint-2013#VerifyDeployAppWebComp).
  
 
  
@@ -182,7 +182,7 @@ Figure 2 illustrates these steps.
  
 
     
- **Note**  If you need to see the "update available" notice on the add-in's tile more frequently than every 24 hours, you can use the method described in  [Update process for a SharePoint Add-in](sharepoint-add-ins-update-process.md#Minor) to make the notice appear immediately.
+ **Note**  If you need to see the "update available" notice on the add-in's tile more frequently than every 24 hours, you can use the method described in  [Update process for a SharePoint Add-in](sharepoint-add-ins-update-process#Minor) to make the notice appear immediately.
  
 
 
@@ -210,16 +210,16 @@ Continue with the next bullet in the section  [Major steps in updating an add-in
 
  
 
--  [Update add-in web components in SharePoint](update-add-in-web-components-in-sharepoint-2013.md)
+-  [Update add-in web components in SharePoint](update-add-in-web-components-in-sharepoint-2013)
     
  
--  [Update host web components in SharePoint](update-host-web-components-in-sharepoint-2013.md)
+-  [Update host web components in SharePoint](update-host-web-components-in-sharepoint-2013)
     
  
--  [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins.md)
+-  [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins)
     
  
--  [Update remote components in SharePoint Add-ins](update-remote-components-in-sharepoint-add-ins.md)
+-  [Update remote components in SharePoint Add-ins](update-remote-components-in-sharepoint-add-ins)
     
  
 
@@ -227,10 +227,10 @@ Continue with the next bullet in the section  [Major steps in updating an add-in
 <a name="bk_addresources"> </a>
 
 
--  [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
+-  [Develop SharePoint Add-ins](develop-sharepoint-add-ins)
     
  
--  [SharePoint Add-ins update process](sharepoint-add-ins-update-process.md)
+-  [SharePoint Add-ins update process](sharepoint-add-ins-update-process)
     
  
 

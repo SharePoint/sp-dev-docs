@@ -16,7 +16,7 @@ The process of authenticating a SharePoint user on a Windows Phone 7.5 is a litt
     
 
 > **Note:**
-> For more information about the APIs that are discussed in this section, see  [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model.md). For more information about the SharePoint client object model for Silverlight, see  [Managed Client Object Model](http://msdn.microsoft.com/en-us/library/ee537247.aspx) and [Using the Silverlight Object Model](http://msdn.microsoft.com/en-us/library/ee538971.aspx). 
+> For more information about the APIs that are discussed in this section, see  [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model). For more information about the SharePoint client object model for Silverlight, see  [Managed Client Object Model](http://msdn.microsoft.com/en-us/library/ee537247.aspx) and [Using the Silverlight Object Model](http://msdn.microsoft.com/en-us/library/ee538971.aspx). 
   
     
     
@@ -304,7 +304,7 @@ ClientContext ctx = new ClientContext("SiteUrl");
 ## Cookie caching
 <a name="SP15Mobileclientauth_cookie"> </a>
 
-The **Authenticator** class also includes members that you can use to enable and manage caching of cookies or credentials or both. For information about these members of the **Authenticator** class and their uses, see [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model.md).
+The **Authenticator** class also includes members that you can use to enable and manage caching of cookies or credentials or both. For information about these members of the **Authenticator** class and their uses, see [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model).
   
     
     
@@ -313,10 +313,10 @@ The **Authenticator** class also includes members that you can use to enable and
 <a name="SP15Mobileclientauth_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
     
   
--  [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model.md)
+-  [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model)
     
   
 

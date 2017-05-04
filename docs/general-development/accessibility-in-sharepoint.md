@@ -115,7 +115,7 @@ SharePoint administrators and users depend on the accessibility features that we
 -  [Develop SharePoint Add-ins](../sp-add-ins/sharepoint-add-ins)
     
   
--  [Programming models in SharePoint](programming-models-in-sharepoint.md)
+-  [Programming models in SharePoint](programming-models-in-sharepoint)
     
   
 -  [Accessibility in Microsoft Products](http://www.microsoft.com/enable/products/default.aspx)

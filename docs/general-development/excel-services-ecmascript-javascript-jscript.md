@@ -16,21 +16,21 @@ This section contains information about ECMAScript (JavaScript, JScript) in Exce
 ## Related sections
 
 
- [Excel Services ECMAScript Overview](excel-services-ecmascript-overview.md)
+ [Excel Services ECMAScript Overview](excel-services-ecmascript-overview)
   
     
     
 > Learn about the JavaScript object model in Excel Services.
     
   
- [Walkthrough: Developing Using the Content Editor Web Part](walkthrough-developing-using-the-content-editor-web-part.md)
+ [Walkthrough: Developing Using the Content Editor Web Part](walkthrough-developing-using-the-content-editor-web-part)
   
     
     
 > Learn how to call the JavaScript object model in Excel Services by using the Content Editor Web Part.
     
   
- [JavaScript user-defined functions overview](javascript-user-defined-functions-overview.md)
+ [JavaScript user-defined functions overview](javascript-user-defined-functions-overview)
   
     
     
@@ -47,4 +47,4 @@ This section contains information about ECMAScript (JavaScript, JScript) in Exce
   
     
     
- [Excel Services Development Roadmap](excel-services-development-roadmap.md)
+ [Excel Services Development Roadmap](excel-services-development-roadmap)

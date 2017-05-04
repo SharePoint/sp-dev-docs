@@ -2,19 +2,19 @@
 Learn how to create an add-in part in SharePoint that is available in the Web Part gallery of the host web when you install your SharePoint Add-in.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
 With add-in parts, you can show your add-in user experience right in the SharePoint website pages. An add-in part displays the webpage (which is typically an interactive form or a dynamic display of data) that you specify by using an  **IFrame** (also referred to as a frame) in a page in the [host web](http://msdn.microsoft.com/library/fp179925.aspx). For more background about add-in parts, see the following articles:
  
 
--  [Accessing the add-in from the UI](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscape.md#AccessingApp)
+-  [Accessing the add-in from the UI](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscape#AccessingApp)
     
  
--  [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md)
+-  [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins)
     
  
--  [Extending SharePoint UI in add-ins](sharepoint-add-ins-ux-design-guidelines.md#UXGuide_Extending)
+-  [Extending SharePoint UI in add-ins](sharepoint-add-ins-ux-design-guidelines#UXGuide_Extending)
     
  
 Figure 1 shows how the add-in part content is displayed in a SharePoint page.
@@ -46,7 +46,7 @@ To follow the steps in this example, you need the following:
 - Microsoft Office Developer Tools for Visual Studio
     
  
-- A SharePoint development environment. If you need help setting up a development environment, see  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md).
+- A SharePoint development environment. If you need help setting up a development environment, see  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins).
     
  
 
@@ -87,7 +87,7 @@ After completing the tasks, your add-in part should look similar to Figure 2 whe
 ### Add a form for the add-in part content
 
 
-1. Create a provider-hosted SharePoint Add-in as described in  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md), but name the project TestAppPart.
+1. Create a provider-hosted SharePoint Add-in as described in  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins), but name the project TestAppPart.
     
  
 2. After the Visual Studio solution has been created, right-click the web application project (not the SharePoint Add-in project) and add a new Web Form by choosing  **Add** > **New Item** > **Web** > **Web Form**. Name the form AppPartContent.aspx.
@@ -452,7 +452,7 @@ Since your add-in part is hosted within a SharePoint page, you might want to mak
  
 
  
-You can see  [Use a SharePoint website's style sheet in SharePoint Add-ins](use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins.md) for an explanation on how to reference the **defaultcss.ashx** file in your SharePoint Add-ins. You can also download the [coffeemaker code sample](http://code.msdn.microsoft.com/office/SharePoint-2013-App-part-9d83703c) to see an add-in part that references the style sheet.
+You can see  [Use a SharePoint website's style sheet in SharePoint Add-ins](use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins) for an explanation on how to reference the **defaultcss.ashx** file in your SharePoint Add-ins. You can also download the [coffeemaker code sample](http://code.msdn.microsoft.com/office/SharePoint-2013-App-part-9d83703c) to see an add-in part that references the style sheet.
  
 
  
@@ -495,21 +495,21 @@ The  **_editMode_** token lets your content page determine if the add-in part is
 -  [Code sample: Display remote webpage content using the coffeemaker add-in part](http://code.msdn.microsoft.com/SharePoint-2013-App-part-9d83703c)
     
  
--  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md)
+-  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins)
     
  
--  [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md)
+-  [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins)
     
  
--  [SharePoint Add-ins UX design guidelines](sharepoint-add-ins-ux-design-guidelines.md)
+-  [SharePoint Add-ins UX design guidelines](sharepoint-add-ins-ux-design-guidelines)
     
  
--  [Create UX components in SharePoint](create-ux-components-in-sharepoint-2013.md)
+-  [Create UX components in SharePoint](create-ux-components-in-sharepoint-2013)
     
  
--  [Three ways to think about design options for SharePoint Add-ins](three-ways-to-think-about-design-options-for-sharepoint-add-ins.md)
+-  [Three ways to think about design options for SharePoint Add-ins](three-ways-to-think-about-design-options-for-sharepoint-add-ins)
     
  
--  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscape.md)
+-  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscape)
     
  

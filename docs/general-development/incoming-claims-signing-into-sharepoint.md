@@ -95,16 +95,16 @@ SharePoint Server then does claims augmentation. Win32 clients must support the 
 <a name="bk_addresources"> </a>
 
 
--  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint.md)
+-  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint)
     
   
--  [Claims provider in SharePoint](claims-provider-in-sharepoint.md)
+-  [Claims provider in SharePoint](claims-provider-in-sharepoint)
     
   
--  [How to: Create a claims provider in SharePoint](how-to-create-a-claims-provider-in-sharepoint.md)
+-  [How to: Create a claims provider in SharePoint](how-to-create-a-claims-provider-in-sharepoint)
     
   
--  [How to: Deploy a claims provider in SharePoint](how-to-deploy-a-claims-provider-in-sharepoint.md)
+-  [How to: Deploy a claims provider in SharePoint](how-to-deploy-a-claims-provider-in-sharepoint)
     
   
 

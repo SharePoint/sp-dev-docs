@@ -5,7 +5,7 @@ You can publish your cloud business add-in as a provider-hosted SharePoint add-i
 You can publish your add-in directly to a site using WebDeploy, or you can create a package for your add-in that can be deployed to multiple servers.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
 
@@ -161,10 +161,10 @@ You can publish your add-in directly to a site using WebDeploy, or you can creat
 <a name="bk_addresources"> </a>
 
 
--  [Register SharePoint Add-ins 2013](register-sharepoint-add-ins-2013.md)
+-  [Register SharePoint Add-ins 2013](register-sharepoint-add-ins-2013)
     
  
--  [Publish cloud business add-ins](publish-cloud-business-add-ins.md)
+-  [Publish cloud business add-ins](publish-cloud-business-add-ins)
     
  
 

@@ -14,7 +14,7 @@ You can use multiple SharePoint lists in your app in several ways. When you crea
 
 
 > **Important:**
-> If you are developing an app for Windows Phone 8, you must use Visual Studio Express 2012 instead of Visual Studio 2010 Express. Except for the development environment, all information in this article applies to creating apps for both Windows Phone 8 and Windows Phone 7. > For more information, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md). 
+> If you are developing an app for Windows Phone 8, you must use Visual Studio Express 2012 instead of Visual Studio 2010 Express. Except for the development environment, all information in this article applies to creating apps for both Windows Phone 8 and Windows Phone 7. > For more information, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint). 
   
     
     
@@ -396,7 +396,7 @@ In the following procedures, you create a Windows Phone app that uses both of th
 ### To create the component projects for the solution
 
 
-1. Create a Windows Phone app by using the Windows Phone SharePoint List Application template, specifying a SharePoint list defined based on the columns and field types shown in Table 2. In the procedures in this section, it is assumed that the name of the list in the project is "Customers" and the name of the project is "CustomersSPListApp". (See  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app.md) for information about creating an app based on the Windows Phone SharePoint List Application template.)
+1. Create a Windows Phone app by using the Windows Phone SharePoint List Application template, specifying a SharePoint list defined based on the columns and field types shown in Table 2. In the procedures in this section, it is assumed that the name of the list in the project is "Customers" and the name of the project is "CustomersSPListApp". (See  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app) for information about creating an app based on the Windows Phone SharePoint List Application template.)
     
   
 2. In Visual Studio, choose **File**, **Add**, **New Project**. 
@@ -413,7 +413,7 @@ In the following procedures, you create a Windows Phone app that uses both of th
 5. Name the app, for example, OrdersSPListApp, and then choose **OK**.
     
   
-6. Follow the procedure described in  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app.md) to create another Windows Phone app project, specifying a SharePoint list defined based on the columns and field types show in Table 1 as the target list for the project. You should now have two projects in your solution, named "CustomersSPListApp" and "OrdersSPListApp" (if you are following the naming conventions in this procedure).
+6. Follow the procedure described in  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app) to create another Windows Phone app project, specifying a SharePoint list defined based on the columns and field types show in Table 1 as the target list for the project. You should now have two projects in your solution, named "CustomersSPListApp" and "OrdersSPListApp" (if you are following the naming conventions in this procedure).
     
   
 7. In **Solution Explorer**, choose the CustomerSPListApp project node.
@@ -878,10 +878,10 @@ From this form (the List form for the Orders list) you can add, edit, or delete 
 <a name="SP15Usemultlists_addlresources"> </a>
 
 
--  [How to: Configure and use push notifications in SharePoint apps for Windows Phone](how-to-configure-and-use-push-notifications-in-sharepoint-apps-for-windows.md)
+-  [How to: Configure and use push notifications in SharePoint apps for Windows Phone](how-to-configure-and-use-push-notifications-in-sharepoint-apps-for-windows)
     
   
--  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
+-  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint)
     
   
 -  [Windows Phone SDK 8.0](http://www.microsoft.com/en-us/download/details.aspx?id=35471)

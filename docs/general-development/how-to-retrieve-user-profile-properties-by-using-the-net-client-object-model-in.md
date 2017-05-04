@@ -36,7 +36,7 @@ User profile properties from client APIs are read-only (except the profile pictu
     
     
 
-For more information about working with profiles, see  [Work with user profiles in SharePoint](work-with-user-profiles-in-sharepoint.md).
+For more information about working with profiles, see  [Work with user profiles in SharePoint](work-with-user-profiles-in-sharepoint).
   
     
     
@@ -139,7 +139,7 @@ foreach (var property in personProperties.UserProfileProperties)
 ## Code example: Retrieving all user profile properties by using the SharePoint .NET client object model
 <a name="SP15UserProf_codeexample1"> </a>
 
-The following code example shows how to retrieve and iterate through all the user profile properties of a target user, as described in the  [previous procedure](how-to-retrieve-user-profile-properties-by-using-the-net-client-object-model-in.md#bk_RetrieveProps).
+The following code example shows how to retrieve and iterate through all the user profile properties of a target user, as described in the  [previous procedure](how-to-retrieve-user-profile-properties-by-using-the-net-client-object-model-in#bk_RetrieveProps).
   
     
     
@@ -319,13 +319,13 @@ namespace UserProfilesCSOM
 <a name="bk_addresources"> </a>
 
 
--  [Work with user profiles in SharePoint](work-with-user-profiles-in-sharepoint.md)
+-  [Work with user profiles in SharePoint](work-with-user-profiles-in-sharepoint)
     
   
--  [How to: Retrieve user profile properties by using the JavaScript object model in SharePoint](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in.md)
+-  [How to: Retrieve user profile properties by using the JavaScript object model in SharePoint](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in)
     
   
--  [How to: Work with user profiles and organization profiles by using the server object model in SharePoint](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md)
+-  [How to: Work with user profiles and organization profiles by using the server object model in SharePoint](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj)
     
   
 -  [Microsoft.SharePoint.Client.UserProfiles](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.aspx)

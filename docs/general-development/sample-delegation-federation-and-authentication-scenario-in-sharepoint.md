@@ -196,10 +196,10 @@ As shown in Figure 3, the flow in this scenario is:
 <a name="SP15_SampleDelegation_AdditionalResources"> </a>
 
 
--  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint.md)
+-  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint)
     
   
--  [Claims-based identity term definitions](claims-based-identity-term-definitions.md)
+-  [Claims-based identity term definitions](claims-based-identity-term-definitions)
     
   
 

@@ -42,7 +42,7 @@ The procedure for creating and deploying a UDF assembly by using SharePoint Foun
   
 Each Excel Services trusted location has an **AllowUdfs** flag.
 > **Note:**
-> The **AllowUdfs** flag is denoted by the **User-defined functions allowed** option on the Excel Services Trusted File Locations page. To learn how to navigate to the Trusted File Locations page, see [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md). 
+> The **AllowUdfs** flag is denoted by the **User-defined functions allowed** option on the Excel Services Trusted File Locations page. To learn how to navigate to the Trusted File Locations page, see [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs). 
   
     
     
@@ -54,9 +54,9 @@ In order to allow UDFs to be called from a specific trusted location, you must:
 - Add the UDF assembly to the trusted UDF list to allow the UDF to be called from a workbook.
     
   
-For more information on how to enable UDFs and add UDFs to the trusted UDF list, see  [How to: Enable UDFs](how-to-enable-udfs.md).
+For more information on how to enable UDFs and add UDFs to the trusted UDF list, see  [How to: Enable UDFs](how-to-enable-udfs).
 > **Note:**
-> To avoid name collision, give your UDF assemblies and their dependencies strong names, and name them as uniquely as possible. For more information, see  [Excel Services Best Practices](excel-services-best-practices.md) and [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md). 
+> To avoid name collision, give your UDF assemblies and their dependencies strong names, and name them as uniquely as possible. For more information, see  [Excel Services Best Practices](excel-services-best-practices) and [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips). 
   
     
     
@@ -159,27 +159,27 @@ For more information on how to enable UDFs and add UDFs to the trusted UDF list,
   
     
     
- [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service.md)
+ [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service)
   
     
     
- [How to: Enable UDFs](how-to-enable-udfs.md)
+ [How to: Enable UDFs](how-to-enable-udfs)
   
     
     
- [How to: Restrict UDF Code Access Security Permissions](how-to-restrict-udf-code-access-security-permissions.md)
+ [How to: Restrict UDF Code Access Security Permissions](how-to-restrict-udf-code-access-security-permissions)
 #### Concepts
 
 
   
     
     
- [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md)
+ [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf)
   
     
     
- [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs.md)
+ [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs)
   
     
     
- [Understanding Excel Services UDFs](understanding-excel-services-udfs.md)
+ [Understanding Excel Services UDFs](understanding-excel-services-udfs)

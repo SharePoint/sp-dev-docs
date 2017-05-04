@@ -2,7 +2,7 @@
 By using the Cloud Business Add-in template in Visual Studio, you can create SharePoint Add-ins 2013 or SharePoint on Office 365 that are optimized for adding and managing data.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
 
@@ -88,10 +88,10 @@ By using the Cloud Business Add-in template in Visual Studio, you can create Sha
 <a name="bk_addresources"> </a>
 
 
--  [Develop cloud business add-ins](develop-cloud-business-add-ins.md)
+-  [Develop cloud business add-ins](develop-cloud-business-add-ins)
     
  
--  [Create cloud business add-ins](create-cloud-business-add-ins.md)
+-  [Create cloud business add-ins](create-cloud-business-add-ins)
     
  
 

@@ -2,7 +2,7 @@
 Learn the three systems that SharePoint Add-ins can use to get authorization to SharePoint resources.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
 In SharePoint, a SharePoint Add-in is an identity principal just like a user and it must be authenticated and authorized to use SharePoint resources. There are three authorization systems that an add-in can use. They are not mutually exclusive.
@@ -18,17 +18,17 @@ In SharePoint, a SharePoint Add-in is an identity principal just like a user and
 
 -  **Low-Trust**: A provider-hosted SharePoint Add-in can register with Microsoft Azure Access Control Service (ACS) which issues an access token to the add-in that allows the add-in access to the resources in the SharePoint tenancy or farm on which the add-in is installed. Azure ACS is the trusted token issuer in an OAuth 2.0 Framework "flow" that includes SharePoint and the remote components of the add-in. Add-ins that use this system can be sold in the Office Store. The low-trust system is primarily intended for add-ins whose remote components are hosted in the cloud.
     
-    For more information about creating a SharePoint Add-in that uses the low-trust system, see the SDK node  [Creating SharePoint Add-ins that use low-trust authorization](creating-sharepoint-add-ins-that-use-low-trust-authorization.md).
+    For more information about creating a SharePoint Add-in that uses the low-trust system, see the SDK node  [Creating SharePoint Add-ins that use low-trust authorization](creating-sharepoint-add-ins-that-use-low-trust-authorization).
     
      **Note**  The customer who installs the add-in must have an Office 365 account. This is needed to give the add-in access to the Azure ACS. However, the customer need not use the account for any other purpose, and the add-in can be installed to an on-premise SharePoint farm after some simple configuration tasks on the farm.
 -  **High-Trust**: A provider-hosted add-in can establish trust with SharePoint by using digital certificates. The high-trust system is primarily intended for add-ins whose remote components are hosted on-premise. The add-in can be installed to a SharePoint farm that is not connected to the Internet. The add-in cannot be installed on SharePoint Online or sold in the Office Store.
     
-    For more information about creating a SharePoint Add-in that uses the high-trust system, see the SDK node  [Creating SharePoint Add-ins that use high-trust authorization](creating-sharepoint-add-ins-that-use-high-trust-authorization.md).
+    For more information about creating a SharePoint Add-in that uses the high-trust system, see the SDK node  [Creating SharePoint Add-ins that use high-trust authorization](creating-sharepoint-add-ins-that-use-high-trust-authorization).
     
  
 -  **Cross-Domain Library**: When the add-in's business logic is in JavaScript, you have the option of using the SharePoint cross-domain library either in place of, or as a supplement to, the low-trust and high-trust systems. The library is also intended for scenarios where the add-in has cloud-hosted components, but the customer's corporate firewall makes it difficult to use the low-trust system. The user's browser blocks scripts from other domains, but the library encapsulates a secure system for working around this restriction. Add-ins that use the library can be sold in the Office Store and can be installed to either SharePoint Online or on-premise SharePoint.
     
-    For more information about creating a SharePoint Add-in that uses the cross-domain library, see the SDK node  [Creating SharePoint Add-ins that use the cross-domain library](creating-sharepoint-add-ins-that-use-the-cross-domain-library.md), the blog post  [Solving cross-domain problems in SharePoint Add-ins](http://blogs.msdn.com/b/officeapps/archive/2012/11/29/solving-cross-domain-problems-in-apps-for-sharepoint.aspx).
+    For more information about creating a SharePoint Add-in that uses the cross-domain library, see the SDK node  [Creating SharePoint Add-ins that use the cross-domain library](creating-sharepoint-add-ins-that-use-the-cross-domain-library), the blog post  [Solving cross-domain problems in SharePoint Add-ins](http://blogs.msdn.com/b/officeapps/archive/2012/11/29/solving-cross-domain-problems-in-apps-for-sharepoint.aspx).
     
  
 
@@ -72,7 +72,7 @@ So, in the SharePoint implementation, the OAuth roles are played by the followin
 - SharePoint plays the role of the resource server.
     
  
-- Azure ACS plays the role of the authorization server when  [the low-trust authorization system](creating-sharepoint-add-ins-that-use-low-trust-authorization.md) is used. When the [the high-trust system](creating-sharepoint-add-ins-that-use-high-trust-authorization.md) is used, the add-in itself (along with a digitial certificate) becomes the authorization server.
+- Azure ACS plays the role of the authorization server when  [the low-trust authorization system](creating-sharepoint-add-ins-that-use-low-trust-authorization) is used. When the [the high-trust system](creating-sharepoint-add-ins-that-use-high-trust-authorization) is used, the add-in itself (along with a digitial certificate) becomes the authorization server.
     
  
 

@@ -7,7 +7,7 @@ ms.assetid: c12d7fd4-8c6b-446b-970b-1eb0e5d0a9b2
 
 # Build localized applications for Windows Phone based on the SharePoint templates
 Learn how building a localizable Windows Phone app using the new SharePoint templates is different from building one using other Windows Phone templates.
-The SharePoint SDK for Windows Phone 7.1 installs Windows Phone project templates, which you can use to build Windows Phone 7.1 applications against SharePoint or SharePoint 2010. For more information, see  [Overview of Windows Phone SharePoint application templates in Visual Studio](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio.md). 
+The SharePoint SDK for Windows Phone 7.1 installs Windows Phone project templates, which you can use to build Windows Phone 7.1 applications against SharePoint or SharePoint 2010. For more information, see  [Overview of Windows Phone SharePoint application templates in Visual Studio](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio). 
   
     
     
@@ -51,7 +51,7 @@ To see a step-by-step process of how to build a localized application for Window
 <a name="bk_addresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
     
   
 -  [How to: Build a Localized Application for Windows Phone](http://msdn.microsoft.com/library/9306a6ed-6efb-4f32-b850-d2e508431eeb%28Office.15%29.aspx).

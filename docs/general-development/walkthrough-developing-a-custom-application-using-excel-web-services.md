@@ -49,7 +49,7 @@ In order to complete this walkthrough, you will need:
 - A trusted location to store the workbooks that you want to access using Excel Web Services. If the workbooks are not stored in a trusted location, the Excel Web Services calls to open the workbook will fail. This walkthrough assumes the workbook is present on the local computer. 
     
     > **Note:**
-      > For information about how to trust a location, see  [How to: Trust a Location](how-to-trust-a-location.md) and [How to: Trust Workbook Locations Using Script](http://msdn.microsoft.com/library/79ab6ced-7a0c-4275-b852-bb246fc6be57%28Office.15%29.aspx). 
+      > For information about how to trust a location, see  [How to: Trust a Location](how-to-trust-a-location) and [How to: Trust Workbook Locations Using Script](http://msdn.microsoft.com/library/79ab6ced-7a0c-4275-b852-bb246fc6be57%28Office.15%29.aspx). 
 - To create the workbook using Excel.
     
   
@@ -84,35 +84,35 @@ The workbook used in this example has a worksheet named "Sheet1". The worksheet 
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api.md)
+ [Accessing the SOAP API](accessing-the-soap-api)
   
     
     
- [Excel Services Alerts](excel-services-alerts.md)
+ [Excel Services Alerts](excel-services-alerts)
   
     
     
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
+ [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips)
   
     
     
- [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking.md)
+ [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking)
 #### Other resources
 
 
   
     
     
- [Step 1: Creating the Web Service Client Project](step-1-creating-the-web-service-client-project.md)
+ [Step 1: Creating the Web Service Client Project](step-1-creating-the-web-service-client-project)
   
     
     
- [Step 2: Adding a Web Reference](step-2-adding-a-web-reference.md)
+ [Step 2: Adding a Web Reference](step-2-adding-a-web-reference)
   
     
     
- [Step 3: Accessing the Web Service](step-3-accessing-the-web-service.md)
+ [Step 3: Accessing the Web Service](step-3-accessing-the-web-service)
   
     
     
- [Step 4: Building and Testing the Application](step-4-building-and-testing-the-application.md)
+ [Step 4: Building and Testing the Application](step-4-building-and-testing-the-application)

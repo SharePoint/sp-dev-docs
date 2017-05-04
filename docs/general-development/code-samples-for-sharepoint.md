@@ -97,7 +97,7 @@ Find and download code samples for SharePoint, including samples that demonstrat
 -  [SharePoint general development](http://msdn.microsoft.com/library/fc829689-7cef-469d-a04c-4a433e49828a%28Office.15%29.aspx)
     
   
--  [How-tos for SharePoint](how-tos-for-sharepoint.md)
+-  [How-tos for SharePoint](how-tos-for-sharepoint)
     
   
 -  [SharePoint Dev Center](http://msdn.microsoft.com/en-US/sharepoint)

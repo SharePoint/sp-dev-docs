@@ -65,7 +65,7 @@ In order to complete this walkthrough, you will need:
 - To save the workbook as an .xlsx or .xlsb file.
     
     > **Note:**
-      > For more information about how to trust a location, how to enable UDFs, and how to set the **AllowUdfs** flag, see [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md). 
+      > For more information about how to trust a location, how to enable UDFs, and how to set the **AllowUdfs** flag, see [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs). 
 
 ## See also
 
@@ -76,34 +76,34 @@ In order to complete this walkthrough, you will need:
   
     
     
- [Step 1: Creating a Project and Adding a UDF Reference](step-1-creating-a-project-and-adding-a-udf-reference.md)
+ [Step 1: Creating a Project and Adding a UDF Reference](step-1-creating-a-project-and-adding-a-udf-reference)
   
     
     
- [Step 2: Creating a Managed-Code UDF](step-2-creating-a-managed-code-udf.md)
+ [Step 2: Creating a Managed-Code UDF](step-2-creating-a-managed-code-udf)
   
     
     
- [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md)
+ [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs)
   
     
     
- [Step 4: Testing and Calling UDFs from Cells](step-4-testing-and-calling-udfs-from-cells.md)
+ [Step 4: Testing and Calling UDFs from Cells](step-4-testing-and-calling-udfs-from-cells)
   
     
     
- [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service.md)
+ [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service)
 #### Concepts
 
 
   
     
     
- [Understanding Excel Services UDFs](understanding-excel-services-udfs.md)
+ [Understanding Excel Services UDFs](understanding-excel-services-udfs)
 #### Other resources
 
 
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)

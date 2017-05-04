@@ -56,7 +56,7 @@ The UDF method must also have a supported return type. For a list of supported d
 
 ### Can I call a Web service from a UDF assembly?
 
-Yes. For an example, see the following UDF sample code. Also see  [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service.md).
+Yes. For an example, see the following UDF sample code. Also see  [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service).
   
     
     
@@ -215,39 +215,39 @@ Not directly. Excel Services will load and call only managed-code UDFs. However,
   
     
     
- [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service.md)
+ [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service)
   
     
     
- [How to: Trust a Location](how-to-trust-a-location.md)
+ [How to: Trust a Location](how-to-trust-a-location)
   
     
     
- [How to: Catch Exceptions](how-to-catch-exceptions.md)
+ [How to: Catch Exceptions](how-to-catch-exceptions)
 #### Concepts
 
 
   
     
     
- [Understanding Excel Services UDFs](understanding-excel-services-udfs.md)
+ [Understanding Excel Services UDFs](understanding-excel-services-udfs)
   
     
     
- [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md)
+ [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf)
   
     
     
- [Excel Services Architecture](excel-services-architecture.md)
+ [Excel Services Architecture](excel-services-architecture)
   
     
     
- [Excel Services Alerts](excel-services-alerts.md)
+ [Excel Services Alerts](excel-services-alerts)
   
     
     
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
+ [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips)
   
     
     
- [Excel Services Best Practices](excel-services-best-practices.md)
+ [Excel Services Best Practices](excel-services-best-practices)

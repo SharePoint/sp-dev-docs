@@ -17,7 +17,7 @@ Excel Web Services exposes four methods for setting values into an Excel workboo
 
 
 > **Note:**
-> When you make changes to a workbook—for example, by setting values to a range using Excel Web Services—the changes to the workbook are preserved only for that particular session. The changes are not saved or persisted back to the original workbook. When the current workbook session ends (for example, when you call the **CloseWorkbook** method, or the session times out), changes you made will be lost.> If you want to save changes you make to a workbook, you can use the **GetWorkbook** method and then save the workbook using the API of the destination file store. For more information, see [How to: Get an Entire Workbook or a Snapshot](how-to-get-an-entire-workbook-or-a-snapshot.md) and [How to: Save a Workbook](http://msdn.microsoft.com/library/feb74f7a-2d8f-4672-911b-de85f8852aea%28Office.15%29.aspx). 
+> When you make changes to a workbook—for example, by setting values to a range using Excel Web Services—the changes to the workbook are preserved only for that particular session. The changes are not saved or persisted back to the original workbook. When the current workbook session ends (for example, when you call the **CloseWorkbook** method, or the session times out), changes you made will be lost.> If you want to save changes you make to a workbook, you can use the **GetWorkbook** method and then save the workbook using the API of the destination file store. For more information, see [How to: Get an Entire Workbook or a Snapshot](how-to-get-an-entire-workbook-or-a-snapshot) and [How to: Save a Workbook](http://msdn.microsoft.com/library/feb74f7a-2d8f-4672-911b-de85f8852aea%28Office.15%29.aspx). 
   
     
     
@@ -343,22 +343,22 @@ End Sub
   
     
     
- [How to: Specify a Range Address and Sheet Name](how-to-specify-a-range-address-and-sheet-name.md)
+ [How to: Specify a Range Address and Sheet Name](how-to-specify-a-range-address-and-sheet-name)
   
     
     
- [How to: Get Values from Ranges](how-to-get-values-from-ranges.md)
+ [How to: Get Values from Ranges](how-to-get-values-from-ranges)
 #### Concepts
 
 
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api.md)
+ [Accessing the SOAP API](accessing-the-soap-api)
 #### Other resources
 
 
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)

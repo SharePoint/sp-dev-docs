@@ -83,7 +83,7 @@ To authenticate your mobile app with SharePoint, you can use the MS-OFBA protoco
   
     
     
-When a user signs in to SharePoint, the user's token is validated and then used to sign in to SharePoint. The user's token is a security token that is issued by an identity provider. SharePoint supports several kinds of authentication. For more information, see  [Authentication, authorization, and security in SharePoint](authentication-authorization-and-security-in-sharepoint.md). To authenticate a user, you can use the REST interface. The authorization process verifies that an authenticated subject (an app or a user the app is acting on behalf of) has permission to perform certain operations or to access specific resources (for example, a list or a SharePoint document folder).
+When a user signs in to SharePoint, the user's token is validated and then used to sign in to SharePoint. The user's token is a security token that is issued by an identity provider. SharePoint supports several kinds of authentication. For more information, see  [Authentication, authorization, and security in SharePoint](authentication-authorization-and-security-in-sharepoint). To authenticate a user, you can use the REST interface. The authorization process verifies that an authenticated subject (an app or a user the app is acting on behalf of) has permission to perform certain operations or to access specific resources (for example, a list or a SharePoint document folder).
   
     
     
@@ -297,16 +297,16 @@ For more information, see  [Complete basic operations using SharePoint REST endp
 <a name="bk_addresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
     
   
 -  [Using the SharePoint REST service](http://msdn.microsoft.com/library/e1ff2979-1c16-4cb0-a57e-9168dfe20a7c.aspx)
     
   
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
     
   
--  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md)
+-  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint)
     
   
 -  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)
@@ -315,10 +315,10 @@ For more information, see  [Complete basic operations using SharePoint REST endp
 -  [Get to know the SharePoint REST service](http://msdn.microsoft.com/library/2de035a0-ac75-43bd-9665-5c5a59c4c590%28Office.15%29.aspx)
     
   
--  [Making REST calls with C# and JavaScript for SharePoint](http://www.microsoft.com/resources/msdn/en-us/office/media/video/video.mdl?cid=sdc&amp;from=mscomsdc&amp;VideoID=4e4cc094-ff69-405b-852f-2ac7c41293c5)
+-  [Making REST calls with C# and JavaScript for SharePoint](http://www.microsoft.com/resources/msdn/en-us/office/media/video/videol?cid=sdc&amp;from=mscomsdc&amp;VideoID=4e4cc094-ff69-405b-852f-2ac7c41293c5)
     
   
--  [Making REST calls with C# and JavaScript for SharePoint demo](http://www.microsoft.com/resources/msdn/en-us/office/media/video/video.mdl?cid=sdc&amp;from=mscomsdc&amp;VideoID=b1e7c9c5-0f62-4a78-bb7b-8e283c86145c)
+-  [Making REST calls with C# and JavaScript for SharePoint demo](http://www.microsoft.com/resources/msdn/en-us/office/media/video/videol?cid=sdc&amp;from=mscomsdc&amp;VideoID=b1e7c9c5-0f62-4a78-bb7b-8e283c86145c)
     
   
 -  [Open Data Protocol](http://www.odata.org/)

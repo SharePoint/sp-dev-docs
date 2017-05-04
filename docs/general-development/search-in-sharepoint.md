@@ -14,16 +14,16 @@ Search in SharePoint enables users to find relevant information more quickly and
     
 
 See the following articles for a good introduction to general SharePoint development concepts; you may find it helpful to review these before proceeding:
--  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md)
+-  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint)
     
   
--  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md)
+-  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint)
     
   
--  [SharePoint Add-ins compared with SharePoint solutions](sharepoint-add-ins-compared-with-sharepoint-solutions.md)
+-  [SharePoint Add-ins compared with SharePoint solutions](sharepoint-add-ins-compared-with-sharepoint-solutions)
     
   
--  [Deciding between SharePoint Add-ins and SharePoint solutions](deciding-between-sharepoint-add-ins-and-sharepoint-solutions.md)
+-  [Deciding between SharePoint Add-ins and SharePoint solutions](deciding-between-sharepoint-add-ins-and-sharepoint-solutions)
     
   
 
@@ -193,14 +193,14 @@ The Search in SharePoint architecture provides several extensibility points to s
 
 ### Connector framework
 
-The crawl component crawls content by invoking connectors or protocol handlers that interact with content sources to retrieve data. Search in SharePoint includes a connector framework that you can use to customize and build connectors to crawl new content sources. For detailed information about the connector framework architecture and how to extend it, see  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint.md).
+The crawl component crawls content by invoking connectors or protocol handlers that interact with content sources to retrieve data. Search in SharePoint includes a connector framework that you can use to customize and build connectors to crawl new content sources. For detailed information about the connector framework architecture and how to extend it, see  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint).
   
     
     
 
 ### Custom content processing
 
-Within the content processing component, you can use the Content Enrichment web service callout to modify the managed properties of crawled items before they are added to the search index. This web service callout calls out to any external content enrichment web service that you create. For more information, see  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout.md). For a step-by-step implementation of a content enrichment web service, see  [How to: Use the Content Enrichment web service callout for SharePoint Server](how-to-use-the-content-enrichment-web-service-callout-for-sharepoint-server.md). The blog post  [Customize the SharePoint search experience with a Content Enrichment web service](http://blogs.msdn.com/b/sharepointdev/archive/2012/11/13/customize-the-sharepoint-search-experience-with-a-content-enrichment-web-service.aspx) is also a good resource
+Within the content processing component, you can use the Content Enrichment web service callout to modify the managed properties of crawled items before they are added to the search index. This web service callout calls out to any external content enrichment web service that you create. For more information, see  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout). For a step-by-step implementation of a content enrichment web service, see  [How to: Use the Content Enrichment web service callout for SharePoint Server](how-to-use-the-content-enrichment-web-service-callout-for-sharepoint-server). The blog post  [Customize the SharePoint search experience with a Content Enrichment web service](http://blogs.msdn.com/b/sharepointdev/archive/2012/11/13/customize-the-sharepoint-search-experience-with-a-content-enrichment-web-service.aspx) is also a good resource
   
     
     
@@ -227,7 +227,7 @@ Table 1 shows the APIs that you can use to program Search in SharePoint and wher
 |Representational State Transfer (REST) service endpoints  <br/> |http://server/_api/search/query          http://server/_api/search/suggest  <br/> |
 |Server object model  <br/> |Microsoft.Office.Server.Search.dll          %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\ISAPI  <br/> |
    
-For more information, see  [Using the SharePoint search Query APIs](using-the-sharepoint-search-query-apis.md).
+For more information, see  [Using the SharePoint search Query APIs](using-the-sharepoint-search-query-apis).
   
     
     
@@ -241,7 +241,7 @@ To help identify and surface the content that users consider to be the most usef
 
 ### Custom ranking models
 
-Search results can be ordered in various ways, one of which is by rank score. Rank scores are calculated by the search engine using ranking models. SharePoint provides fourteen ranking models by default. However, if you are not satisfied with the way your search results are ordered, you can use a custom ranking model. To learn more about the process of creating a custom ranking model and tuning it, see  [Customizing ranking models to improve relevance in SharePoint](customizing-ranking-models-to-improve-relevance-in-sharepoint.md).
+Search results can be ordered in various ways, one of which is by rank score. Rank scores are calculated by the search engine using ranking models. SharePoint provides fourteen ranking models by default. However, if you are not satisfied with the way your search results are ordered, you can use a custom ranking model. To learn more about the process of creating a custom ranking model and tuning it, see  [Customizing ranking models to improve relevance in SharePoint](customizing-ranking-models-to-improve-relevance-in-sharepoint).
   
     
     
@@ -252,21 +252,21 @@ Search in SharePoint performs security trimming of search results that are based
   
     
     
-The pre-trimmer interface ( **ISecurityTrimmerPre**) carries out pre-query evaluation, where the search query is rewritten to add security information before the search query is matched to the search index. In contrast, the post-trimmer interface ( **ISecurityTrimmerPost**) carries out post-query evaluation, where the search results are pruned before they are returned to the user. For more information about the two interfaces, see  [Custom security trimming for Search in SharePoint](custom-security-trimming-for-search-in-sharepoint-server.md). For step-by-step information on how to implement a security trimmer interface, see  [How to: Use a custom security trimmer for SharePoint Server search results](how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results.md).
+The pre-trimmer interface ( **ISecurityTrimmerPre**) carries out pre-query evaluation, where the search query is rewritten to add security information before the search query is matched to the search index. In contrast, the post-trimmer interface ( **ISecurityTrimmerPost**) carries out post-query evaluation, where the search results are pruned before they are returned to the user. For more information about the two interfaces, see  [Custom security trimming for Search in SharePoint](custom-security-trimming-for-search-in-sharepoint-server). For step-by-step information on how to implement a security trimmer interface, see  [How to: Use a custom security trimmer for SharePoint Server search results](how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results).
   
     
     
 
 ### Content Search Web Part
 
-The Content Search Web Part is a Web Part that can display dynamic content that was previously crawled and added to the search index. Each instance of the Web Part is associated with a search query and shows the results for that particular search query. When users browse to a page that contains a Content Search Web Part, a search query is automatically issued, and the corresponding search results are returned from the search index. You can use the Content Search Web Part whenever you want to display content that is populated by automatically generated search queries. In some cases, you may want to extend the Content Search Web Part, which is exposed through the  [Microsoft.Office.Server.Search.WebControls](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebControls.aspx) namespace as [ContentBySearchWebPart](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart.aspx) . To learn about how to extend the [ContentBySearchWebPart](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart.aspx) so that the Web Part understands custom properties, see [User segmentation in SharePoint](user-segmentation-in-sharepoint.md).
+The Content Search Web Part is a Web Part that can display dynamic content that was previously crawled and added to the search index. Each instance of the Web Part is associated with a search query and shows the results for that particular search query. When users browse to a page that contains a Content Search Web Part, a search query is automatically issued, and the corresponding search results are returned from the search index. You can use the Content Search Web Part whenever you want to display content that is populated by automatically generated search queries. In some cases, you may want to extend the Content Search Web Part, which is exposed through the  [Microsoft.Office.Server.Search.WebControls](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebControls.aspx) namespace as [ContentBySearchWebPart](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart.aspx) . To learn about how to extend the [ContentBySearchWebPart](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart.aspx) so that the Web Part understands custom properties, see [User segmentation in SharePoint](user-segmentation-in-sharepoint).
   
     
     
 
 ### Search-driven mobile apps using the Navigation and Event Logging REST interfaces
 
-SharePoint provides two new REST interfaces: Navigation and Event Logging. You can use them to create search-driven mobile apps for mobile devices, such as phones and tablets, that run on operating systems other than Windows. This feature lets you display the product catalog on a mobile device in an alternate way, instead of using a mobile channel. See  [How to: Build search-driven mobile apps with the Navigation and Event Logging REST interfaces](how-to-build-search-driven-mobile-apps-with-the-navigation-and-event-logging-res.md) for a detailed example of how to create such an app.
+SharePoint provides two new REST interfaces: Navigation and Event Logging. You can use them to create search-driven mobile apps for mobile devices, such as phones and tablets, that run on operating systems other than Windows. This feature lets you display the product catalog on a mobile device in an alternate way, instead of using a mobile channel. See  [How to: Build search-driven mobile apps with the Navigation and Event Logging REST interfaces](how-to-build-search-driven-mobile-apps-with-the-navigation-and-event-logging-res) for a detailed example of how to create such an app.
   
     
     
@@ -274,34 +274,34 @@ SharePoint provides two new REST interfaces: Navigation and Event Logging. You c
 ## In this section
 
 
--  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers.md)
+-  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers)
     
   
--  [Searching new content with SharePoint Search](searching-new-content-with-sharepoint-search.md)
+-  [Searching new content with SharePoint Search](searching-new-content-with-sharepoint-search)
     
   
--  [Configure search in SharePoint](configure-search-in-sharepoint.md)
+-  [Configure search in SharePoint](configure-search-in-sharepoint)
     
   
--  [Building search queries in SharePoint](building-search-queries-in-sharepoint.md)
+-  [Building search queries in SharePoint](building-search-queries-in-sharepoint)
     
   
--  [SharePoint Search REST API overview](sharepoint-search-rest-api-overview.md)
+-  [SharePoint Search REST API overview](sharepoint-search-rest-api-overview)
     
   
--  [Customizing search results in SharePoint](customizing-search-results-in-sharepoint.md)
+-  [Customizing search results in SharePoint](customizing-search-results-in-sharepoint)
     
   
--  [Sorting search results in SharePoint](sorting-search-results-in-sharepoint.md)
+-  [Sorting search results in SharePoint](sorting-search-results-in-sharepoint)
     
   
--  [Customizing ranking models to improve relevance in SharePoint](customizing-ranking-models-to-improve-relevance-in-sharepoint.md)
+-  [Customizing ranking models to improve relevance in SharePoint](customizing-ranking-models-to-improve-relevance-in-sharepoint)
     
   
--  [Custom security trimming for Search in SharePoint](custom-security-trimming-for-search-in-sharepoint-server.md)
+-  [Custom security trimming for Search in SharePoint](custom-security-trimming-for-search-in-sharepoint-server)
     
   
--  [Exporting and importing search configuration settings in SharePoint](exporting-and-importing-search-configuration-settings-in-sharepoint.md)
+-  [Exporting and importing search configuration settings in SharePoint](exporting-and-importing-search-configuration-settings-in-sharepoint)
     
   
 
@@ -314,6 +314,6 @@ SharePoint provides two new REST interfaces: Navigation and Event Logging. You c
 -  [Technical Diagrams -- Search](http://technet.microsoft.com/en-us/library/cc263199.aspx#search)
     
   
--  [Add SharePoint capabilities](add-sharepoint-capabilities.md)
+-  [Add SharePoint capabilities](add-sharepoint-capabilities)
     
   

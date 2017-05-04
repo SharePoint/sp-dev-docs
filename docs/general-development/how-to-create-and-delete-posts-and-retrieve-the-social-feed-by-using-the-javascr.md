@@ -14,7 +14,7 @@ In SharePoint, a social feed is a collection of threads that represent conversat
   
     
     
-For more information about working with  [SocialFeedManager](http://msdn.microsoft.com/library/651fdf0f-841d-88f9-1e07-fcb3ad8c9410%28Office.15%29.aspx) or for information about using other APIs to work with social feeds, see [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint.md).
+For more information about working with  [SocialFeedManager](http://msdn.microsoft.com/library/651fdf0f-841d-88f9-1e07-fcb3ad8c9410%28Office.15%29.aspx) or for information about using other APIs to work with social feeds, see [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint).
   
     
     
@@ -92,9 +92,9 @@ To create an application page that uses the JavaScript object model to work with
 
 11. To add the logic to work with feeds, replace the comment between the **script** tags with the code example from one of the following scenarios:
     
-  -  [Publish posts and replies to the social feed](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md#bkmk_PubPosts)
-  -  [Retrieve social feeds](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md#bkmk_GetFeeds)
-  -  [Delete posts and replies from the social feed](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md#bkmk_DeletePosts)
+  -  [Publish posts and replies to the social feed](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr#bkmk_PubPosts)
+  -  [Retrieve social feeds](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr#bkmk_GetFeeds)
+  -  [Delete posts and replies from the social feed](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr#bkmk_DeletePosts)
     
   
 12. To test the application page, on the menu bar, choose **Debug**, **Start Debugging**. If you are prompted to modify the web.config file, choose the **OK** button.
@@ -122,7 +122,7 @@ The following code example publishes a post and a reply. It shows how to:
   
 
 > **Note:**
-> Paste the following code between the **script** tags that you added in the [Create the application page](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md#bk_CreateApp) procedure.
+> Paste the following code between the **script** tags that you added in the [Create the application page](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr#bk_CreateApp) procedure.
   
     
     
@@ -195,13 +195,13 @@ The following code example retrieves feeds for the current user and a target use
 - Iterate through the feeds to find all non-reference threads and to get information about threads and posts. Reference threads represent notifications that contain information about another thread. For example, if a user mentions someone in a post, the server generates a **MentionReference**-type thread that contains the link to the original post and other metadata about the post.
     
   
-For more information about feed types, see  [Overview of feed types in the My Site Social API](work-with-social-feeds-in-sharepoint.md#bkmk_FeedTypes). For more information about reference threads, see  [Reference threads and digest threads in SharePoint social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md).
+For more information about feed types, see  [Overview of feed types in the My Site Social API](work-with-social-feeds-in-sharepoint#bkmk_FeedTypes). For more information about reference threads, see  [Reference threads and digest threads in SharePoint social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds).
   
     
     
 
 > **Note:**
-> Paste the following code between the **script** tags that you added in the [Create the application page](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md#bk_CreateApp) procedure. Then, change the placeholder value for the **targetUser** variable before you run the code.
+> Paste the following code between the **script** tags that you added in the [Create the application page](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr#bk_CreateApp) procedure. Then, change the placeholder value for the **targetUser** variable before you run the code.
   
     
     
@@ -333,7 +333,7 @@ The following code example deletes a post or a reply. It shows how to:
   
 
 > **Note:**
-> Paste the following code between the **script** tags that you added in the [Create the application page](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md#bk_CreateApp) procedure. This example assumes that the current user's newsfeed contains at least one post.
+> Paste the following code between the **script** tags that you added in the [Create the application page](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr#bk_CreateApp) procedure. This example assumes that the current user's newsfeed contains at least one post.
   
     
     
@@ -425,19 +425,19 @@ function RequestFailed(sender, args) {
 <a name="bk_addResources"> </a>
 
 
--  [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint.md)
+-  [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint)
     
   
 -  [SP.Social namespace (sp.userprofiles)](http://msdn.microsoft.com/library/43d47f01-c085-0e77-bd01-48bcb7d5bb35%28Office.15%29.aspx)
     
   
--  [How to: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-net-cli.md)
+-  [How to: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-net-cli)
     
   
--  [How to: Learn to read and write to the social feed by using the REST service in SharePoint](how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-rest-service-in-s.md)
+-  [How to: Learn to read and write to the social feed by using the REST service in SharePoint](how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-rest-service-in-s)
     
   
--  [Reference threads and digest threads in SharePoint social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md)
+-  [Reference threads and digest threads in SharePoint social feeds](reference-threads-and-digest-threads-in-sharepoint-server-social-feeds)
     
   
 

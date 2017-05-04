@@ -3,7 +3,7 @@
 Learn how to set up a development environment that is specifically suited to developing SharePoint Add-ins with an on-premises installation of SharePoint.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
 
@@ -85,7 +85,7 @@ dir /od *.log
 ## Configure services in SharePoint for server-to-server add-in use
 <a name="Servertoserver"> </a>
 
-In this step, you configure services in SharePoint for server-to-server add-in use. These steps ensure that you will be able to create high trust provider-hosted add-ins with your installation. See  [Create high-trust SharePoint Add-ins](create-high-trust-sharepoint-add-ins.md) for more information about creating this kind of add-in.
+In this step, you configure services in SharePoint for server-to-server add-in use. These steps ensure that you will be able to create high trust provider-hosted add-ins with your installation. See  [Create high-trust SharePoint Add-ins](create-high-trust-sharepoint-add-ins) for more information about creating this kind of add-in.
  
 
  
@@ -170,7 +170,7 @@ The registry path will change in future versions of Visual Studio.
 ## Configure an isolated add-in domain in SharePoint
 <a name="SP15appdevonprem_bk_configure"> </a>
 
-Please read  [Host webs, add-in webs, and the isolated domain](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md#IsolatedDomain) before you carry out any procedures in this section.
+Please read  [Host webs, add-in webs, and the isolated domain](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013#IsolatedDomain) before you carry out any procedures in this section.
  
 
  
@@ -242,7 +242,7 @@ $proxyAppSvc = New-SPAppManagementServiceApplicationProxy -ServiceApplication $a
 
 ```
 
-7. Specify your add-in prefix (see  [Host webs, add-in webs, and the isolated domain](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md#IsolatedDomain)) by typing the following code in the SharePoint Management Shell.
+7. Specify your add-in prefix (see  [Host webs, add-in webs, and the isolated domain](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013#IsolatedDomain)) by typing the following code in the SharePoint Management Shell.
     
 ```
   Set-SPAppSiteSubscriptionName -Name "add-in" -Confirm:$false
@@ -283,7 +283,7 @@ $proxyAppSvc = New-SPAppManagementServiceApplicationProxy -ServiceApplication $a
 9. Choose the  **OK** button to close the **Internet Options** dialog box.
     
  
-See  [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options.md) for information about your options for deploying your add-ins.
+See  [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options) for information about your options for deploying your add-ins.
  
 
  
@@ -296,13 +296,13 @@ See  [Deploying and installing SharePoint Add-ins: methods and options](deployin
 <a name="SP15SetupSPO365_bk_addlresources"> </a>
 
 
--  [SharePoint Add-ins](sharepoint-add-ins.md)
+-  [SharePoint Add-ins](sharepoint-add-ins)
     
  
--  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
+-  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins)
     
  
--  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md)
+-  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins)
     
  
 

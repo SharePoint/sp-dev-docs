@@ -33,7 +33,7 @@ If you need to make your solution compatible with site collections of either mod
 <a name="bk_addresources"> </a>
 
 
--  [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint.md)
+-  [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint)
     
   
 -  [Planning Deployment of Farm Solutions for SharePoint](http://blogs.technet.com/b/mspfe/archive/2013/02/04/planning-deployment-of-farm-solutions-for-sharepoint.aspx)

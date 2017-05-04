@@ -50,7 +50,7 @@ http://<serverName>/_vti_bin/ExcelRest.aspx/Documents/ProductSales.xlsx/OData/Ta
   
     
     
-For more information about how to use OData to request information from an Excel workbook stored on SharePoint Server, see  [Requesting Excel workbook data from SharePoint Server using OData](requesting-excel-workbook-data-from-sharepoint-server-using-odata.md).
+For more information about how to use OData to request information from an Excel workbook stored on SharePoint Server, see  [Requesting Excel workbook data from SharePoint Server using OData](requesting-excel-workbook-data-from-sharepoint-server-using-odata).
   
     
     
@@ -119,7 +119,7 @@ OData provides a simple way to get data from Excel workbooks that are stored on 
 -  [What's new in Excel Services for developers](http://msdn.microsoft.com/library/09e96c8b-cb55-4fd1-a797-b50fbf0f9296.aspx)
     
   
--  [Requesting Excel workbook data from SharePoint Server using OData](requesting-excel-workbook-data-from-sharepoint-server-using-odata.md)
+-  [Requesting Excel workbook data from SharePoint Server using OData](requesting-excel-workbook-data-from-sharepoint-server-using-odata)
     
   
 -  [OData specification documentation](http://www.odata.org)

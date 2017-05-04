@@ -7,7 +7,7 @@ ms.assetid: eb819681-5a4f-49ae-b7f4-334366c51112
 
 # How to: Set Various Credentials
 
-You must set credentials for your users before they can call Excel Web Services by using your custom application. You must explicitly set credentials even if you intend to use the default credentials. Excel Web Services uses the authentication schemes that Microsoft SharePoint Foundation supports. For more information about SharePoint Foundation authentication schemes, see the SharePoint Foundation documentation in this SDK and  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint.md).
+You must set credentials for your users before they can call Excel Web Services by using your custom application. You must explicitly set credentials even if you intend to use the default credentials. Excel Web Services uses the authentication schemes that Microsoft SharePoint Foundation supports. For more information about SharePoint Foundation authentication schemes, see the SharePoint Foundation documentation in this SDK and  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint).
   
     
     
@@ -250,27 +250,27 @@ For more information about how to use the **CredentialCache** class and the **Ne
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api.md)
+ [Accessing the SOAP API](accessing-the-soap-api)
 #### Other resources
 
 
   
     
     
- [Step 1: Creating the Web Service Client Project](step-1-creating-the-web-service-client-project.md)
+ [Step 1: Creating the Web Service Client Project](step-1-creating-the-web-service-client-project)
   
     
     
- [Step 2: Adding a Web Reference](step-2-adding-a-web-reference.md)
+ [Step 2: Adding a Web Reference](step-2-adding-a-web-reference)
   
     
     
- [Step 3: Accessing the Web Service](step-3-accessing-the-web-service.md)
+ [Step 3: Accessing the Web Service](step-3-accessing-the-web-service)
   
     
     
- [Step 4: Building and Testing the Application](step-4-building-and-testing-the-application.md)
+ [Step 4: Building and Testing the Application](step-4-building-and-testing-the-application)
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)

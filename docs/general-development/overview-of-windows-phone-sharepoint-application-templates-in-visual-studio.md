@@ -146,7 +146,7 @@ The project files for are described in Table 1.
 |ListViewModel.cs  <br/> |Serves as the data source for the List.xaml file.  <br/> |
 |NewItemViewModel.cs  <br/> |Serves as the data source for the NewForm.xaml file. You write code in this file to validate data entered by users when adding a new list item.  <br/> |
    
-For the details of the steps involved in creating a Windows Phone app by using the Windows Phone SharePoint List Application template, see  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app.md).
+For the details of the steps involved in creating a Windows Phone app by using the Windows Phone SharePoint List Application template, see  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app).
   
     
     
@@ -155,10 +155,10 @@ For the details of the steps involved in creating a Windows Phone app by using t
 <a name="SP15winphoneover_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
     
   
--  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
+-  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint)
     
   
 -  [Windows Phone SDK 8.0](http://www.microsoft.com/en-us/download/details.aspx?id=35471)

@@ -34,7 +34,7 @@ You can use the SharePoint site publishing capabilities to build, customize, and
 - **Accessibility**—you can use to improve the accessibility of your published sites.
     
   
-If you want to see a summary of what's new for designers and developers of publishing websites in SharePoint, see  [What's new with SharePoint site development](what-s-new-with-sharepoint-site-development.md). 
+If you want to see a summary of what's new for designers and developers of publishing websites in SharePoint, see  [What's new with SharePoint site development](what-s-new-with-sharepoint-site-development). 
   
     
     
@@ -42,7 +42,7 @@ If you want to see a summary of what's new for designers and developers of publi
 ## Authoring, design, and branding in SharePoint
 <a name="SP15_BuildSitesForSP2013_AuthoringDesignBranding"> </a>
 
-SharePoint provides a new approach for designing websites. The content-creation workflow is revised so that you can create content using any —and author great content. To brand your site without having to write custom .NET code, use the  [Design Manager](overview-of-design-manager-in-sharepoint.md) to import design elements. With Design Manager, you can also create an HTML-based master page to define the chrome shared by all of your site's pages and create page layouts to design templates for pages. If you choose to write custom code, you can use .NET server, .NET client (CSOM), Silverlight, and JavaScript libraries.
+SharePoint provides a new approach for designing websites. The content-creation workflow is revised so that you can create content using any —and author great content. To brand your site without having to write custom .NET code, use the  [Design Manager](overview-of-design-manager-in-sharepoint) to import design elements. With Design Manager, you can also create an HTML-based master page to define the chrome shared by all of your site's pages and create page layouts to design templates for pages. If you choose to write custom code, you can use .NET server, .NET client (CSOM), Silverlight, and JavaScript libraries.
   
     
     
@@ -62,7 +62,7 @@ You can use the new .NET client object model (CSOM) to develop SharePoint apps w
 ## Page model for publishing websites
 <a name="SP15_BuildSitesForSP2013_PageModel"> </a>
 
-SharePoint includes a page model for publishing websites. The page model includes master pages, page layouts, and other components that render your site structure, content, look and feel, and behavior. To learn more, see  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md).
+SharePoint includes a page model for publishing websites. The page model includes master pages, page layouts, and other components that render your site structure, content, look and feel, and behavior. To learn more, see  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model).
   
     
     
@@ -74,7 +74,7 @@ A master page is the main template that defines the shared structural elements o
   
     
     
-Page layouts are used by individual pages of a certain type. They are populated with arrangements of page fields. These pages define individual elements on the page. Individual pages are based on page layouts and are created in your web browser either by custom code or by how the site's users fill out the page's fields. To learn more about the page model in SharePoint, see  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md). 
+Page layouts are used by individual pages of a certain type. They are populated with arrangements of page fields. These pages define individual elements on the page. Individual pages are based on page layouts and are created in your web browser either by custom code or by how the site's users fill out the page's fields. To learn more about the page model in SharePoint, see  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model). 
   
     
     
@@ -82,7 +82,7 @@ Page layouts are used by individual pages of a certain type. They are populated 
 ## Client-side rendering controls
 <a name="SP15_BuildSitesForSP2013_ClientSideRendering"> </a>
 
-All new controls in SharePoint are rendered. Data is written to the controls in a client-side JSON array, and you can display content using JavaScript, CSS, and templates. As a designer or developer, you have control over how content is rendered on the page, and you can use various design techniques to get the look and behaviors you want on your published pages by using features like the  [Content Search Web Part in SharePoint](content-search-web-part-in-sharepoint.md) and display templates.
+All new controls in SharePoint are rendered. Data is written to the controls in a client-side JSON array, and you can display content using JavaScript, CSS, and templates. As a designer or developer, you have control over how content is rendered on the page, and you can use various design techniques to get the look and behaviors you want on your published pages by using features like the  [Content Search Web Part in SharePoint](content-search-web-part-in-sharepoint) and display templates.
   
     
     
@@ -98,7 +98,7 @@ Publishing websites in SharePoint are optimized for mobile development. You can 
 ## Metadata and navigation in SharePoint
 <a name="SP15_BuildSitesForSP2013_MetadataNav"> </a>
 
-Managed metadata capabilities introduced in Microsoft SharePoint Server 2010 are improved and extended in SharePoint for better performance, easier access through the user interface, and taxonomy-driven navigation—called managed navigation. You can use managed navigation or navigation based on the SharePoint website structure—called structured navigation—to build your site navigation. To learn more about managed navigation, see  [Managed metadata and navigation in SharePoint](managed-metadata-and-navigation-in-sharepoint.md) and [Managed navigation in SharePoint](managed-navigation-in-sharepoint.md).
+Managed metadata capabilities introduced in Microsoft SharePoint Server 2010 are improved and extended in SharePoint for better performance, easier access through the user interface, and taxonomy-driven navigation—called managed navigation. You can use managed navigation or navigation based on the SharePoint website structure—called structured navigation—to build your site navigation. To learn more about managed navigation, see  [Managed metadata and navigation in SharePoint](managed-metadata-and-navigation-in-sharepoint) and [Managed navigation in SharePoint](managed-navigation-in-sharepoint).
   
     
     
@@ -113,7 +113,7 @@ SharePoint offers the following new content publishing features that enable you 
 
 ### Catalogs
 
-SharePoint introduces catalogs, which you can use to publish content across site collections. Cross-site publishing features depend on catalogs. You can use them to reuse content across your sites and across the boundary between your intranet sites and Internet sites. For predefined search queries, catalogs are flagged in search. You can surface content stored in catalogs across site collections by using the  [Content Search Web Part in SharePoint](content-search-web-part-in-sharepoint.md).
+SharePoint introduces catalogs, which you can use to publish content across site collections. Cross-site publishing features depend on catalogs. You can use them to reuse content across your sites and across the boundary between your intranet sites and Internet sites. For predefined search queries, catalogs are flagged in search. You can surface content stored in catalogs across site collections by using the  [Content Search Web Part in SharePoint](content-search-web-part-in-sharepoint).
   
     
     
@@ -127,7 +127,7 @@ SharePoint introduces a cross-site publishing feature to reuse content across mu
 
 ### Variations and multilingual sites
 
-You can use the variations feature in SharePoint to create multilingual sites or other sites where you want to vary the presentation of your content. The variations feature is constrained to one site collection. That is, you can create target language/locale "variants" of a source language/locale as current websites within the same SharePoint site collection. Variations supports friendly URLs and the ability to export or import content for translation by a third party in  [XLIFF file format](the-xliff-interchange-file-format-in-sharepoint.md). You can include labels, a page for translation and replication, a variety of list items (for example, document libraries), and navigation in your export packages. 
+You can use the variations feature in SharePoint to create multilingual sites or other sites where you want to vary the presentation of your content. The variations feature is constrained to one site collection. That is, you can create target language/locale "variants" of a source language/locale as current websites within the same SharePoint site collection. Variations supports friendly URLs and the ability to export or import content for translation by a third party in  [XLIFF file format](the-xliff-interchange-file-format-in-sharepoint). You can include labels, a page for translation and replication, a variety of list items (for example, document libraries), and navigation in your export packages. 
   
     
     
@@ -143,19 +143,19 @@ You can use the variations feature in SharePoint to create accessible sites or o
 <a name="SP15_BuildSitesForSP2013_AdditionalResources"> </a>
 
 
--  [Optimize SharePoint site accessibility](optimize-sharepoint-site-accessibility.md)
+-  [Optimize SharePoint site accessibility](optimize-sharepoint-site-accessibility)
     
   
--  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md)
+-  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint)
     
   
--  [What's new with SharePoint site development](what-s-new-with-sharepoint-site-development.md)
+-  [What's new with SharePoint site development](what-s-new-with-sharepoint-site-development)
     
   
--  [Minimal Download Strategy overview](minimal-download-strategy-overview.md)
+-  [Minimal Download Strategy overview](minimal-download-strategy-overview)
     
   
--  [Modify SharePoint components for MDS](modify-sharepoint-components-for-mds.md)
+-  [Modify SharePoint components for MDS](modify-sharepoint-components-for-mds)
     
   
 -  [SharePoint Sites and Content server class library](http://msdn.microsoft.com/library/8a93e838-234c-41d8-b990-7ac1a415dd5e%28Office.15%29.aspx)

@@ -19,56 +19,56 @@ This section contains information about user-defined functions (UDFs) and how to
 ## In this section
 
 
- [Understanding Excel Services UDFs](understanding-excel-services-udfs.md)
+ [Understanding Excel Services UDFs](understanding-excel-services-udfs)
   
     
     
 > Learn about managed-code UDFs, including required attributes, deployment, and security.
     
   
- [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md)
+ [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf)
   
     
     
 > Get step-by-step instructions about developing Excel Services UDFs by using Microsoft Visual C#.
     
   
- [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs.md)
+ [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs)
   
     
     
 > Find answers to the most common questions about Excel Services UDFs.
     
   
- [How to: Enable UDFs](how-to-enable-udfs.md)
+ [How to: Enable UDFs](how-to-enable-udfs)
   
     
     
 > Learn how to enable UDFs and allow them to be called from an Excel workbook.
     
   
- [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service.md)
+ [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service)
   
     
     
 > Learn how to call an external Web service from a UDF.
     
   
- [How to: Access an External Data Source from a UDF](how-to-access-an-external-data-source-from-a-udf.md)
+ [How to: Access an External Data Source from a UDF](how-to-access-an-external-data-source-from-a-udf)
   
     
     
 > Get an example showing how to access an external database from a UDF.
     
   
- [How to: Deploy UDFs Using SharePoint Foundation Solutions](how-to-deploy-udfs-using-sharepoint-foundation-solutions.md)
+ [How to: Deploy UDFs Using SharePoint Foundation Solutions](how-to-deploy-udfs-using-sharepoint-foundation-solutions)
   
     
     
 > Learn how to deploy a UDF by using the s solution framework.
     
   
- [How to: Restrict UDF Code Access Security Permissions](how-to-restrict-udf-code-access-security-permissions.md)
+ [How to: Restrict UDF Code Access Security Permissions](how-to-restrict-udf-code-access-security-permissions)
   
     
     

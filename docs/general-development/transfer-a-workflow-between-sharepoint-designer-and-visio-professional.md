@@ -159,13 +159,13 @@ To export a workflow, do the following:
 <a name="bk_addresources"> </a>
 
 
--  [What's new in workflows for SharePoint](what-s-new-in-workflows-for-sharepoint.md)
+-  [What's new in workflows for SharePoint](what-s-new-in-workflows-for-sharepoint)
     
   
--  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint.md)
+-  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint)
     
   
--  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)
+-  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio)
     
   
 

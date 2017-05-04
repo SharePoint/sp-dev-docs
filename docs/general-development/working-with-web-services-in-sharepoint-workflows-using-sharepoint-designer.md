@@ -379,7 +379,7 @@ SharePointintroduced a new workflow architecture facilitated by a new product, W
 <a name="bk_addresources"> </a>
 
 
--  [Workflows in SharePoint](workflows-in-sharepoint.md)
+-  [Workflows in SharePoint](workflows-in-sharepoint)
     
   
 -  [OData](http://www.odata.org/)

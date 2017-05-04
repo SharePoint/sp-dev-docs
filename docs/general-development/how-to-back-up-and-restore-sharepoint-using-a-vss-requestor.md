@@ -62,7 +62,7 @@ Also, to be hosted by the SharePoint Foundation Timer service (owstimer.exe), th
 <a name="bk_addresources"> </a>
 
 
--  [Overview of SharePoint and the Volume Shadow Copy Service](overview-of-sharepoint-and-the-volume-shadow-copy-service.md)
+-  [Overview of SharePoint and the Volume Shadow Copy Service](overview-of-sharepoint-and-the-volume-shadow-copy-service)
     
   
 

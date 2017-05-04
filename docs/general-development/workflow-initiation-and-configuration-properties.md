@@ -183,10 +183,10 @@ List workflows instances have some additional external variables that are set by
 <a name="bk_addresources"> </a>
 
 
--  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
+-  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio)
     
   
--  [How to: Create SharePoint Workflows using Visual Studio](how-to-create-sharepoint-workflows-using-visual-studio.md)
+-  [How to: Create SharePoint Workflows using Visual Studio](how-to-create-sharepoint-workflows-using-visual-studio)
     
   
 

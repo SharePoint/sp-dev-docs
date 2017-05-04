@@ -32,7 +32,7 @@ Instructions for installing and configuring SharePoint workflow components are m
 -  [Workflow Resource Center](http://technet.microsoft.com/en-US/sharepoint/jj556245)
     
   
--  [Workflows in SharePoint](workflows-in-sharepoint.md)
+-  [Workflows in SharePoint](workflows-in-sharepoint)
     
   
 

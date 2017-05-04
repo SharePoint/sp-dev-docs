@@ -269,10 +269,10 @@ After you create a report renderer and a report editor (including its user inter
 <a name="bk_addResources"> </a>
 
 
--  [How to: Create report renderers for PerformancePoint Services in SharePoint](how-to-create-report-renderers-for-performancepoint-services-in-sharepoint.md)
+-  [How to: Create report renderers for PerformancePoint Services in SharePoint](how-to-create-report-renderers-for-performancepoint-services-in-sharepoint)
     
   
--  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint.md)
+-  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint)
     
   
 

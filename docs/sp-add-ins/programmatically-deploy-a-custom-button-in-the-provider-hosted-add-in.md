@@ -3,34 +3,34 @@
 Learn how to programmatically register a custom ribbon button with a custom list in the same provider-hosted SharePoint Add-in.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
-This is the ninth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with  [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series:
+This is the ninth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with  [SharePoint Add-ins](sharepoint-add-ins) and the previous articles in this series:
  
 
--  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
+-  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins)
     
  
--  [Give your provider-hosted add-in the SharePoint look-and-feel](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md)
+-  [Give your provider-hosted add-in the SharePoint look-and-feel](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel)
     
  
--  [Include a custom button in the provider-hosted add-in](include-a-custom-button-in-the-provider-hosted-add-in.md)
+-  [Include a custom button in the provider-hosted add-in](include-a-custom-button-in-the-provider-hosted-add-in)
     
  
--  [Get a quick overview of the SharePoint object model](get-a-quick-overview-of-the-sharepoint-object-model.md)
+-  [Get a quick overview of the SharePoint object model](get-a-quick-overview-of-the-sharepoint-object-model)
     
  
--  [Add SharePoint write operations to the provider-hosted add-in](add-sharepoint-write-operations-to-the-provider-hosted-add-in.md)
+-  [Add SharePoint write operations to the provider-hosted add-in](add-sharepoint-write-operations-to-the-provider-hosted-add-in)
     
  
--  [Include an add-in part in the provider-hosted add-in](include-an-add-in-part-in-the-provider-hosted-add-in.md)
+-  [Include an add-in part in the provider-hosted add-in](include-an-add-in-part-in-the-provider-hosted-add-in)
     
  
--  [Handle add-in events in the provider-hosted add-in](handle-add-in-events-in-the-provider-hosted-add-in.md)
+-  [Handle add-in events in the provider-hosted add-in](handle-add-in-events-in-the-provider-hosted-add-in)
     
  
--  [Add first-run logic to the provider-hosted add-in](add-first-run-logic-to-the-provider-hosted-add-in.md)
+-  [Add first-run logic to the provider-hosted add-in](add-first-run-logic-to-the-provider-hosted-add-in)
     
  
 
@@ -281,7 +281,7 @@ Since the add-in is now adding adding and deleting web-scoped custom actions, we
  
 4. Navigate to the  **Site Contents** page. The **Local Employees** list is present because your first-run logic added it.
     
-     **Note**  If the list is not there or you have other indications that the first-run code is not executing, it may be that the  **Tenants** table is not being reverted to an empty state when you press F5. The most common cause of this is that the **ChainCorporateDB** project is no longer set as a startup project in Visual Studio. See the note near the top of this article for how to fix this. Also be sure that you've configured the database to be rebuilt as described in [Configure Visual Studio to rebuild the corporate database with each debugging session](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md#Rebuild).
+     **Note**  If the list is not there or you have other indications that the first-run code is not executing, it may be that the  **Tenants** table is not being reverted to an empty state when you press F5. The most common cause of this is that the **ChainCorporateDB** project is no longer set as a startup project in Visual Studio. See the note near the top of this article for how to fix this. Also be sure that you've configured the database to be rebuilt as described in [Configure Visual Studio to rebuild the corporate database with each debugging session](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel#Rebuild).
 5. Open the list and add an item.
     
  
@@ -307,7 +307,7 @@ Since the add-in is now adding adding and deleting web-scoped custom actions, we
 ## 
 <a name="Nextsteps"> </a>
 
- Events on lists and list items can also have custom handlers in SharePoint. You learn how to create one and deploy it in your first-run logic in the next article: [Handle list item events in the provider-hosted add-in](handle-list-item-events-in-the-provider-hosted-add-in.md)
+ Events on lists and list items can also have custom handlers in SharePoint. You learn how to create one and deploy it in your first-run logic in the next article: [Handle list item events in the provider-hosted add-in](handle-list-item-events-in-the-provider-hosted-add-in)
  
 
  

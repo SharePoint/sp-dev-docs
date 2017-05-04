@@ -112,27 +112,27 @@ The following steps show how to locate Microsoft.Office.Excel.Server.Udf.dll and
   
     
     
- [Step 2: Creating a Managed-Code UDF](step-2-creating-a-managed-code-udf.md)
+ [Step 2: Creating a Managed-Code UDF](step-2-creating-a-managed-code-udf)
   
     
     
- [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md)
+ [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs)
   
     
     
- [Step 4: Testing and Calling UDFs from Cells](step-4-testing-and-calling-udfs-from-cells.md)
+ [Step 4: Testing and Calling UDFs from Cells](step-4-testing-and-calling-udfs-from-cells)
   
     
     
- [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service.md)
+ [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service)
 #### Concepts
 
 
   
     
     
- [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md)
+ [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf)
   
     
     
- [Understanding Excel Services UDFs](understanding-excel-services-udfs.md)
+ [Understanding Excel Services UDFs](understanding-excel-services-udfs)

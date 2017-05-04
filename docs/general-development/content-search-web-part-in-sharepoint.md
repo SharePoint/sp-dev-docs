@@ -67,10 +67,10 @@ Some site collection administrators mark sites to not be indexed. Content marked
 <a name="SP15_CSWP_AdditionalResources"> </a>
 
 
--  [Managed navigation in SharePoint](managed-navigation-in-sharepoint.md)
+-  [Managed navigation in SharePoint](managed-navigation-in-sharepoint)
     
   
--  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers.md)
+-  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers)
     
   
 

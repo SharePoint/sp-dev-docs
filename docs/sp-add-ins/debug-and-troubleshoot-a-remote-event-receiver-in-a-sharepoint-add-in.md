@@ -2,7 +2,7 @@
 Set up the your development environment to debug remote events in by using Visual Studio.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
 
@@ -69,7 +69,7 @@ Use the procedures in this section to verify that you can debug an RER.
 
 1. In Visual Studio, create a provider-hosted SharePoint Add-in.
     
-    See  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md).
+    See  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins).
     
  
 2. In  **Solution Explorer**, choose the add-in project's node.
@@ -217,7 +217,7 @@ When the add-in is in Microsoft SharePoint Online, but the remote event receiver
 <a name="Additional"> </a>
 
 
--  [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins.md)
+-  [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins)
     
  
 -  [Debugging SharePoint remote events using Visual Studio 2012](http://blogs.msdn.com/b/officeapps/archive/2013/03/21/update-to-debugging-sharepoint-2013-remote-events-using-visual-studio-2012.aspx)

@@ -323,13 +323,13 @@ Two API sets are still supported in the SharePoint framework for backward compat
 <a name="bk_addresources"> </a>
 
 
--  [SharePoint development overview](sharepoint-development-overview.md)
+-  [SharePoint development overview](sharepoint-development-overview)
     
   
--  [Programming models in SharePoint](programming-models-in-sharepoint.md)
+-  [Programming models in SharePoint](programming-models-in-sharepoint)
     
   
--  [SharePoint Add-ins compared with SharePoint solutions](sharepoint-add-ins-compared-with-sharepoint-solutions.md)
+-  [SharePoint Add-ins compared with SharePoint solutions](sharepoint-add-ins-compared-with-sharepoint-solutions)
     
   
 -  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)

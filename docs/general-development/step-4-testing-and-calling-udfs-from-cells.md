@@ -19,7 +19,7 @@ In this step, you will test the SampleUdf.dll assembly you created, deployed, an
 2. Save the workbook to a SharePoint document library that is a trusted location.
     
     > **Note:**
-      > It is assumed that you have already created a SharePoint document library and made it a trusted location. For information about how to trust a location, see the "Trusting a Location" section in  [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md). 
+      > It is assumed that you have already created a SharePoint document library and made it a trusted location. For information about how to trust a location, see the "Trusting a Location" section in  [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs). 
 3. Change parameters to recalculate the workbook.
     
   
@@ -116,27 +116,27 @@ In this step, you will test the SampleUdf.dll assembly you created, deployed, an
   
     
     
- [Step 1: Creating a Project and Adding a UDF Reference](step-1-creating-a-project-and-adding-a-udf-reference.md)
+ [Step 1: Creating a Project and Adding a UDF Reference](step-1-creating-a-project-and-adding-a-udf-reference)
   
     
     
- [Step 2: Creating a Managed-Code UDF](step-2-creating-a-managed-code-udf.md)
+ [Step 2: Creating a Managed-Code UDF](step-2-creating-a-managed-code-udf)
   
     
     
- [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md)
+ [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs)
   
     
     
- [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service.md)
+ [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service)
 #### Concepts
 
 
   
     
     
- [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md)
+ [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf)
   
     
     
- [Understanding Excel Services UDFs](understanding-excel-services-udfs.md)
+ [Understanding Excel Services UDFs](understanding-excel-services-udfs)

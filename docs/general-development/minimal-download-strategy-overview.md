@@ -210,10 +210,10 @@ Thanks to the failover mechanism, your controls work seamlessly whether or not M
 -  [EnableMinimalDownload](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Web.EnableMinimalDownload.aspx)
     
   
--  [Modify SharePoint components for MDS](modify-sharepoint-components-for-mds.md)
+-  [Modify SharePoint components for MDS](modify-sharepoint-components-for-mds)
     
   
--  [Build sites for SharePoint](build-sites-for-sharepoint.md)
+-  [Build sites for SharePoint](build-sites-for-sharepoint)
     
   
 

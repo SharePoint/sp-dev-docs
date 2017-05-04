@@ -65,31 +65,31 @@ In **Solution Explorer**, a file with the default name of Class1.cs has been add
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api.md)
+ [Accessing the SOAP API](accessing-the-soap-api)
   
     
     
- [Excel Services Alerts](excel-services-alerts.md)
+ [Excel Services Alerts](excel-services-alerts)
   
     
     
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
+ [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips)
 #### Other resources
 
 
   
     
     
- [Step 2: Adding a Web Reference](step-2-adding-a-web-reference.md)
+ [Step 2: Adding a Web Reference](step-2-adding-a-web-reference)
   
     
     
- [Step 3: Accessing the Web Service](step-3-accessing-the-web-service.md)
+ [Step 3: Accessing the Web Service](step-3-accessing-the-web-service)
   
     
     
- [Step 4: Building and Testing the Application](step-4-building-and-testing-the-application.md)
+ [Step 4: Building and Testing the Application](step-4-building-and-testing-the-application)
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)

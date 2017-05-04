@@ -16,35 +16,35 @@ This section introduces Excel Services — a server technology first introduced 
 ## In this section
 
 
- [Excel Services Overview](excel-services-overview.md)
+ [Excel Services Overview](excel-services-overview)
   
     
     
 > Learn about this new technology that enables you to load, calculate, and display Excel workbooks on SharePoint Server
     
   
- [Excel Services Architecture](excel-services-architecture.md)
+ [Excel Services Architecture](excel-services-architecture)
   
     
     
 > Learn how the three components of Excel Services communicate and work together.
     
   
- [Excel Services Development Roadmap](excel-services-development-roadmap.md)
+ [Excel Services Development Roadmap](excel-services-development-roadmap)
   
     
     
 > Learn about types of development you can do and the most common scenarios for using Excel Web Services.
     
   
- [Supported and Unsupported Features](supported-and-unsupported-features.md)
+ [Supported and Unsupported Features](supported-and-unsupported-features)
   
     
     
 > Find out which features of Excel are not supported in this first version of Excel Services.
     
   
- [Excel Services Blogs, Forums, and Resources](excel-services-blogs-forums-and-resources.md)
+ [Excel Services Blogs, Forums, and Resources](excel-services-blogs-forums-and-resources)
   
     
     

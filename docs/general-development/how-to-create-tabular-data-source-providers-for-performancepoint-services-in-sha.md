@@ -421,10 +421,10 @@ After you create a data source provider and a data source editor (including its 
 <a name="bk_addResources"> </a>
 
 
--  [How to: Create tabular data source editors for PerformancePoint Services in SharePoint](how-to-create-tabular-data-source-editors-for-performancepoint-services-in-share.md)
+-  [How to: Create tabular data source editors for PerformancePoint Services in SharePoint](how-to-create-tabular-data-source-editors-for-performancepoint-services-in-share)
     
   
--  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint.md)
+-  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint)
     
   
 

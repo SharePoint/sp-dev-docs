@@ -27,7 +27,7 @@ To get started developing add-in-scoped external content types, you need the fol
 - A published OData service available through the Internet
     
   
-For information about setting up a SharePoint development environment, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md).
+For information about setting up a SharePoint development environment, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint).
   
     
     
@@ -99,7 +99,7 @@ For complete steps for creating SharePoint Add-ins, see the following:
 <a name="bk_addresources"> </a>
 
 
--  [Add-in-scoped external content types in SharePoint](add-in-scoped-external-content-types-in-sharepoint.md)
+-  [Add-in-scoped external content types in SharePoint](add-in-scoped-external-content-types-in-sharepoint)
     
   
 -  [Choose patterns for developing and hosting your SharePoint Add-in](http://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx)
@@ -108,13 +108,13 @@ For complete steps for creating SharePoint Add-ins, see the following:
 -  [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)
     
   
--  [External content types in SharePoint](external-content-types-in-sharepoint.md)
+-  [External content types in SharePoint](external-content-types-in-sharepoint)
     
   
--  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint.md)
+-  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint)
     
   
--  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint)
     
   
 

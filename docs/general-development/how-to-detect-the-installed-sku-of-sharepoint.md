@@ -100,10 +100,10 @@ namespace GetInstalledSharePointSku
 <a name="bk_SP15DetectSKUaddresources"> </a>
 
 
--  [SharePoint development overview](sharepoint-development-overview.md)
+-  [SharePoint development overview](sharepoint-development-overview)
     
   
--  [What's new for developers in SharePoint](what’s-new-for-developers-in-sharepoint.md)
+-  [What's new for developers in SharePoint](what’s-new-for-developers-in-sharepoint)
     
   
 -  [SharePoint Developer Blog](http://blogs.msdn.com/b/sharepointdev/)

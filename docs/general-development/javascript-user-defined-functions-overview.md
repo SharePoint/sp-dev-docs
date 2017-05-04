@@ -14,7 +14,7 @@ A user-defined function (UDF) is a function that you can create yourself and the
   
     
     
-Excel Services already allows you to create UDFs using managed code, so if you have worked with the existing Excel Services UDFs, JavaScript UDFs should look familiar to you. For more information about creating UDFs using managed code, see  [Excel Services User-Defined Functions](excel-services-user-defined-functions.md).
+Excel Services already allows you to create UDFs using managed code, so if you have worked with the existing Excel Services UDFs, JavaScript UDFs should look familiar to you. For more information about creating UDFs using managed code, see  [Excel Services User-Defined Functions](excel-services-user-defined-functions).
   
     
     
@@ -116,7 +116,7 @@ You can create and use JavaScript UDFs either on workbooks displayed in SharePoi
 <a name="bk_addresources"> </a>
 
 
--  [Excel Services in SharePoint](excel-services-in-sharepoint.md)
+-  [Excel Services in SharePoint](excel-services-in-sharepoint)
     
   
 -  [What's new in Excel Services for developers](http://msdn.microsoft.com/library/09e96c8b-cb55-4fd1-a797-b50fbf0f9296.aspx)

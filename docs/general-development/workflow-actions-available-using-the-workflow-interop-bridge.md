@@ -10,7 +10,7 @@ Contains a concise list of workflow actions in SharePoint 2010 that are availabl
 ## Workflow actions for the interop bridge
 <a name="bkm_wfactions"> </a>
 
-The SharePoint workflow infrastructure is built on Windows Workflow Foundation (WF) 4 and therefore executes workflows in Microsoft Azure. For this reason, some actions from SharePoint 2010 workflows are available in SharePoint only when using the  [SharePoint workflow interop ](sharepoint-workflow-fundamentals.md#bkm_InteropBridge). 
+The SharePoint workflow infrastructure is built on Windows Workflow Foundation (WF) 4 and therefore executes workflows in Microsoft Azure. For this reason, some actions from SharePoint 2010 workflows are available in SharePoint only when using the  [SharePoint workflow interop ](sharepoint-workflow-fundamentals#bkm_InteropBridge). 
   
     
     
@@ -110,16 +110,16 @@ The following actions are available only when you use the workflow interop bridg
 <a name="bkm_addlresources"> </a>
 
 
--  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
+-  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform)
     
   
--  [SharePoint workflow interop ](sharepoint-workflow-fundamentals.md#bkm_InteropBridge)
+-  [SharePoint workflow interop ](sharepoint-workflow-fundamentals#bkm_InteropBridge)
     
   
--  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)
+-  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio)
     
   
--  [Set up and configure SharePoint Workflow Manager](set-up-and-configure-sharepoint-workflow-manager.md)
+-  [Set up and configure SharePoint Workflow Manager](set-up-and-configure-sharepoint-workflow-manager)
     
   
 

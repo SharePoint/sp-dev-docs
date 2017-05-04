@@ -232,16 +232,16 @@ http:// _server_/_api/search/suggest?querytext='sharepoint'&amp;fprefixmatchallt
 <a name="bk_addresources"> </a>
 
 
--  [SharePoint Search REST API overview](sharepoint-search-rest-api-overview.md)
+-  [SharePoint Search REST API overview](sharepoint-search-rest-api-overview)
     
   
--  [Search in SharePoint](search-in-sharepoint.md)
+-  [Search in SharePoint](search-in-sharepoint)
     
   
 -  [SharePoint: Using the search REST service from an app for SharePoint](http://code.msdn.microsoft.com/sharepoint/SharePoint-Perform-a-1bf3e87d)
     
   
--  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers.md)
+-  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers)
     
   
 -  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)

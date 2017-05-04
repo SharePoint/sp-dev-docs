@@ -50,13 +50,13 @@ For more information about result sources and how they work, see to:  [Understan
 <a name="SP15Buildquery_support"> </a>
 
 
--  [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference.md)
+-  [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference)
     
   
--  [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference.md)
+-  [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference)
     
   
--  [Using the SharePoint search Query APIs](using-the-sharepoint-search-query-apis.md)
+-  [Using the SharePoint search Query APIs](using-the-sharepoint-search-query-apis)
     
   
 
@@ -64,7 +64,7 @@ For more information about result sources and how they work, see to:  [Understan
 <a name="SP15Buildquery_addlresources"> </a>
 
 
--  [Search in SharePoint](search-in-sharepoint.md)
+-  [Search in SharePoint](search-in-sharepoint)
     
   
 -  [Overview of query processing in SharePoint](http://technet.microsoft.com/en-us/library/jj219620%28v=office.15%29.aspx)

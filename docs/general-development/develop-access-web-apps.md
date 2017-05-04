@@ -30,7 +30,7 @@ Access 2013 uses Microsoft SharePoint to host the front end of your application 
   
     
     
-For more information about what's new in Access 2013 apps, see  [What's new in Access](what-s-new-in-access.md)
+For more information about what's new in Access 2013 apps, see  [What's new in Access](what-s-new-in-access)
   
     
     
@@ -51,7 +51,7 @@ For more information about how to develop Access 2013 apps, see  [How to: Create
 <a name="dk2_DevelopingAccess15WebApps_AdditionalResources"> </a>
 
 
--  [What's new in Access](what-s-new-in-access.md)
+-  [What's new in Access](what-s-new-in-access)
     
   
 -  [How to: Create and customize a web app in Access](http://msdn.microsoft.com/library/628745f4-82e9-4838-9726-6f3e506a654f%28Office.15%29.aspx)

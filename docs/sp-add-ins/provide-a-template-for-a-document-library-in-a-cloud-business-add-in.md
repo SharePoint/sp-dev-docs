@@ -3,13 +3,13 @@
 In addition to the Office templates that are available when you add a document to a SharePoint document library, you can provide your own templates. For example, you might have your own sales quote template that you want to use when new orders are added.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
 
 ## 
 
-If you haven't already done so, associate a document library with your cloud business add-in. See  [Associate a document library with an entity](associate-a-document-library-with-an-entity.md).
+If you haven't already done so, associate a document library with your cloud business add-in. See  [Associate a document library with an entity](associate-a-document-library-with-an-entity).
  
 
  
@@ -130,10 +130,10 @@ If you haven't already done so, associate a document library with your cloud bus
 <a name="bk_addresources"> </a>
 
 
--  [Develop cloud business add-ins](develop-cloud-business-add-ins.md)
+-  [Develop cloud business add-ins](develop-cloud-business-add-ins)
     
  
--  [Associate a document library with an entity](associate-a-document-library-with-an-entity.md)
+-  [Associate a document library with an entity](associate-a-document-library-with-an-entity)
     
  
 

@@ -142,7 +142,7 @@ Table 2 lists examples of trigger conditions.
 |StartsWith(MP1, "sample") AND MP2 != 18  <br/> |Returns **true** if the value in the managed property MP1 starts with "sample" and the value of managed property MP2 is not 18. <br/> |MP1 must be of type **string** and MP2 must be a numeric type. <br/> |
 |IsDay(MP1, 2009, 12, 24)  <br/> |Checks whether the managed property MP1 contains a **DateTime** that falls on December 24, 2009. <br/> |MP1 must be of type **DateTime**.  <br/> |
    
-See  [Trigger expressions syntax in SharePoint](trigger-expressions-syntax-in-sharepoint.md) for the elements that can be used in a trigger expression and a list of supported functions.
+See  [Trigger expressions syntax in SharePoint](trigger-expressions-syntax-in-sharepoint) for the elements that can be used in a trigger expression and a list of supported functions.
   
     
     
@@ -166,10 +166,10 @@ For a basic implementation, do the following:
 <a name="bk_addresources"> </a>
 
 
--  [Configure search in SharePoint](configure-search-in-sharepoint.md)
+-  [Configure search in SharePoint](configure-search-in-sharepoint)
     
   
--  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout.md)
+-  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout)
     
   
 

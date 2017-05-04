@@ -2,7 +2,7 @@
 Social and collaboration features in SharePoint for Office 365 allow users to track activity on a list and add comments. You can easily create a newsfeed for your Cloud Business Add-in by enabling a couple of properties.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
 
@@ -63,13 +63,13 @@ To host the newsfeed, you'll need a SharePoint Developer site on Office 365, whi
 <a name="bk_addresources"> </a>
 
 
--  [Develop cloud business add-ins](develop-cloud-business-add-ins.md)
+-  [Develop cloud business add-ins](develop-cloud-business-add-ins)
     
  
 -  [Social and collaboration features in SharePoint](http://msdn.microsoft.com/en-us/library/office/jj163280.aspx)
     
  
--  [Create a cloud business add-in with a social newsfeed](create-a-cloud-business-add-in-with-a-social-newsfeed.md)
+-  [Create a cloud business add-in with a social newsfeed](create-a-cloud-business-add-in-with-a-social-newsfeed)
     
  
 

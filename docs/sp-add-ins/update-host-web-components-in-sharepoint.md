@@ -3,14 +3,14 @@
 Update add-in parts and custom actions in the host web of a SharePoint Add-in.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
 
 ## Prerequisites for updating host web components
 <a name="Prerequisites"> </a>
 
-Be familiar with  [Update SharePoint Add-ins](update-sharepoint-add-ins.md) and the prerequisites and core concepts listed in it.
+Be familiar with  [Update SharePoint Add-ins](update-sharepoint-add-ins) and the prerequisites and core concepts listed in it.
  
 
  
@@ -30,7 +30,7 @@ If you leave the  **Name** property unchanged, the old version remains on pages 
  
 
  
-You can deploy other kinds of host web components programmatically using a remote event receiver that you register in the add-in manifest with an  [InstalledEventEndpoint](http://msdn.microsoft.com/library/af9f83d8-8325-3ede-d7b0-bb82c0445eb9%28Office.15%29.aspx) element. You should use an [UpgradedEventEndpoint](http://msdn.microsoft.com/library/09a93d44-d295-47bb-f91c-d243178b0f53%28Office.15%29.aspx) receiver to update components that were originally deployed with an **InstalledEventEndpoint** receiver. [UpgradedEventEndpoint](http://msdn.microsoft.com/library/09a93d44-d295-47bb-f91c-d243178b0f53%28Office.15%29.aspx) receivers are described in [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins.md).
+You can deploy other kinds of host web components programmatically using a remote event receiver that you register in the add-in manifest with an  [InstalledEventEndpoint](http://msdn.microsoft.com/library/af9f83d8-8325-3ede-d7b0-bb82c0445eb9%28Office.15%29.aspx) element. You should use an [UpgradedEventEndpoint](http://msdn.microsoft.com/library/09a93d44-d295-47bb-f91c-d243178b0f53%28Office.15%29.aspx) receiver to update components that were originally deployed with an **InstalledEventEndpoint** receiver. [UpgradedEventEndpoint](http://msdn.microsoft.com/library/09a93d44-d295-47bb-f91c-d243178b0f53%28Office.15%29.aspx) receivers are described in [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins).
  
 
  
@@ -38,18 +38,18 @@ You can deploy other kinds of host web components programmatically using a remot
 ## Next steps
 <a name="Next"> </a>
 
-Go to  [Major steps in updating an add-in](update-sharepoint-add-ins.md#MajorAppUpgradeSteps), or go directly to one of the following articles to learn how to update the next major component of your SharePoint Add-in.
+Go to  [Major steps in updating an add-in](update-sharepoint-add-ins#MajorAppUpgradeSteps), or go directly to one of the following articles to learn how to update the next major component of your SharePoint Add-in.
  
 
  
 
--  [Update add-in web components in SharePoint](update-add-in-web-components-in-sharepoint-2013.md)
+-  [Update add-in web components in SharePoint](update-add-in-web-components-in-sharepoint-2013)
     
  
--  [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins.md)
+-  [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins)
     
  
--  [Update remote components in SharePoint Add-ins](update-remote-components-in-sharepoint-add-ins.md)
+-  [Update remote components in SharePoint Add-ins](update-remote-components-in-sharepoint-add-ins)
     
  
 
@@ -57,10 +57,10 @@ Go to  [Major steps in updating an add-in](update-sharepoint-add-ins.md#MajorApp
 <a name="bk_addresources"> </a>
 
 
--  [Update SharePoint Add-ins](update-sharepoint-add-ins.md)
+-  [Update SharePoint Add-ins](update-sharepoint-add-ins)
     
  
--  [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013.md)
+-  [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013)
     
  
 

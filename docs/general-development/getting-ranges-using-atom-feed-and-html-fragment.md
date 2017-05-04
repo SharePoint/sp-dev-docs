@@ -27,7 +27,7 @@ The REST API in Excel Services supports two mechanisms for getting ranges. The f
   
     
     
-As described in the  [Discovery in Excel Services REST API](discovery-in-excel-services-rest-api.md) topic, the REST URL to the model page using discovery is:
+As described in the  [Discovery in Excel Services REST API](discovery-in-excel-services-rest-api) topic, the REST URL to the model page using discovery is:
   
     
     
@@ -50,7 +50,7 @@ Therefore, for a workbook with the file name **sampleWorkbook.xlsx** that is sav
 http://<ServerName>/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model
 ```
 
-Using the discovery mechanism described in  [Discovery in Excel Services REST API](discovery-in-excel-services-rest-api.md), if you click on the **Ranges** Atom feed on the model page on the server, ( `http://` _<ServerName>_ `/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model`), it displays a page that shows all the named ranges in the workbook. The sampleWorkbook.xlsx contains one named range, **SampleNamedRange**, as shown in the following screen shot: 
+Using the discovery mechanism described in  [Discovery in Excel Services REST API](discovery-in-excel-services-rest-api), if you click on the **Ranges** Atom feed on the model page on the server, ( `http://` _<ServerName>_ `/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model`), it displays a page that shows all the named ranges in the workbook. The sampleWorkbook.xlsx contains one named range, **SampleNamedRange**, as shown in the following screen shot: 
   
     
     
@@ -259,4 +259,4 @@ In Internet Explorer, the page looks similar to the following figure.
   
     
     
- [Resources URI for Excel Services REST API](resources-uri-for-excel-services-rest-api.md)
+ [Resources URI for Excel Services REST API](resources-uri-for-excel-services-rest-api)

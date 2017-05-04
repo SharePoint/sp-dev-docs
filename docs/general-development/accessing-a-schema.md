@@ -7,7 +7,7 @@ ms.assetid: 02613912-36f6-4edc-a915-165d12e60bc8
 
 # Accessing a Schema
 
-This topic shows one example of how you can access and look at a schema for the REST service in Excel Services. This topic assumes that you have read  [Sample URI For Excel Services REST API](sample-uri-for-excel-services-rest-api.md).d
+This topic shows one example of how you can access and look at a schema for the REST service in Excel Services. This topic assumes that you have read  [Sample URI For Excel Services REST API](sample-uri-for-excel-services-rest-api).d
   
     
     

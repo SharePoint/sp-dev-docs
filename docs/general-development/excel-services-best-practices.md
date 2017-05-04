@@ -211,27 +211,27 @@ For example, use CompanyName.Hierarchichal.Namespace.ClassName instead ofNamespa
   
     
     
- [How to: Trust a Location](how-to-trust-a-location.md)
+ [How to: Trust a Location](how-to-trust-a-location)
 #### Concepts
 
 
   
     
     
- [Excel Services Architecture](excel-services-architecture.md)
+ [Excel Services Architecture](excel-services-architecture)
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api.md)
+ [Accessing the SOAP API](accessing-the-soap-api)
   
     
     
- [Excel Services Alerts](excel-services-alerts.md)
+ [Excel Services Alerts](excel-services-alerts)
   
     
     
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
+ [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips)
   
     
     
- [Excel Services Blogs, Forums, and Resources](excel-services-blogs-forums-and-resources.md)
+ [Excel Services Blogs, Forums, and Resources](excel-services-blogs-forums-and-resources)

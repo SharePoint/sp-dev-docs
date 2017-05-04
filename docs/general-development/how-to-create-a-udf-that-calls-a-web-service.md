@@ -112,7 +112,7 @@ Namespace ZipCodeUdfSample
         End Sub
 ```
 
-For more information about how to test and call UDFs from cells, see  [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md).
+For more information about how to test and call UDFs from cells, see  [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf).
   
     
     
@@ -292,38 +292,38 @@ End Namespace
   
     
     
- [Step 1: Creating a Project and Adding a UDF Reference](step-1-creating-a-project-and-adding-a-udf-reference.md)
+ [Step 1: Creating a Project and Adding a UDF Reference](step-1-creating-a-project-and-adding-a-udf-reference)
   
     
     
- [Step 2: Creating a Managed-Code UDF](step-2-creating-a-managed-code-udf.md)
+ [Step 2: Creating a Managed-Code UDF](step-2-creating-a-managed-code-udf)
   
     
     
- [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md)
+ [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs)
   
     
     
- [Step 4: Testing and Calling UDFs from Cells](step-4-testing-and-calling-udfs-from-cells.md)
+ [Step 4: Testing and Calling UDFs from Cells](step-4-testing-and-calling-udfs-from-cells)
 #### Concepts
 
 
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api.md)
+ [Accessing the SOAP API](accessing-the-soap-api)
 #### Other resources
 
 
   
     
     
- [Step 2: Adding a Web Reference](step-2-adding-a-web-reference.md)
+ [Step 2: Adding a Web Reference](step-2-adding-a-web-reference)
   
     
     
- [Step 3: Accessing the Web Service](step-3-accessing-the-web-service.md)
+ [Step 3: Accessing the Web Service](step-3-accessing-the-web-service)
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)

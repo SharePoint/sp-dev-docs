@@ -30,7 +30,7 @@ To access external data from SharePoint by using REST, you need the following:
 - Office Developer Tools for Visual Studio 2012
     
   
-- A functioning SharePoint Add-ins development environment: Follow the instructions in  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md).
+- A functioning SharePoint Add-ins development environment: Follow the instructions in  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint).
     
   
 - Access to the public OData.org producers
@@ -202,7 +202,7 @@ Press F5 to deploy the app to SharePoint. Browse to the Default.aspx page in the
 <a name="bkmk_Addres"> </a>
 
 
--  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint)
     
   
 -  [Get to know the SharePoint REST service](http://msdn.microsoft.com/library/2de035a0-ac75-43bd-9665-5c5a59c4c590%28Office.15%29.aspx)
@@ -211,10 +211,10 @@ Press F5 to deploy the app to SharePoint. Browse to the Default.aspx page in the
 -  [Using the SharePoint REST service](http://msdn.microsoft.com/library/e1ff2979-1c16-4cb0-a57e-9168dfe20a7c.aspx)
     
   
--  [Add-in-scoped external content types in SharePoint](add-in-scoped-external-content-types-in-sharepoint.md)
+-  [Add-in-scoped external content types in SharePoint](add-in-scoped-external-content-types-in-sharepoint)
     
   
--  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint.md)
+-  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint)
     
   
 

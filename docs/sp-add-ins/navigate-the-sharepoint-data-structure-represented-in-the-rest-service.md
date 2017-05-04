@@ -3,7 +3,7 @@
 Learn how to start from a REST endpoint for a given SharePoint item, and navigate to and access related items, such as parent sites or the library structure where that item resides. 
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
 
@@ -145,28 +145,28 @@ Navigation that is supported by the REST service:
 <a name="bk_addresources"> </a>
 
 
--  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-2013-rest-service.md)
+-  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-2013-rest-service)
     
  
--  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md)
+-  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints)
     
  
--  [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest.md)
+-  [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest)
     
  
--  [Working with folders and files with REST](working-with-folders-and-files-with-rest.md)
+-  [Working with folders and files with REST](working-with-folders-and-files-with-rest)
     
  
--  [Determine SharePoint REST service endpoint URIs](determine-sharepoint-rest-service-endpoint-uris.md)
+-  [Determine SharePoint REST service endpoint URIs](determine-sharepoint-rest-service-endpoint-uris)
     
  
--  [Use OData query operations in SharePoint REST requests](use-odata-query-operations-in-sharepoint-rest-requests.md)
+-  [Use OData query operations in SharePoint REST requests](use-odata-query-operations-in-sharepoint-rest-requests)
     
  
 -  [REST API reference and samples](http://msdn.microsoft.com/library/rest-api-reference-and-samples%28Office.15%29.aspx)
     
  
--  [Synchronize SharePoint items using the REST service](synchronize-sharepoint-items-using-the-rest-service.md)
+-  [Synchronize SharePoint items using the REST service](synchronize-sharepoint-items-using-the-rest-service)
     
  
 -  [Use ETag values through the REST service to get document list item versioning](http://msdn.microsoft.com/library/5f7e0579-46b7-44ab-b3b4-cdbc622dcd98%28Office.15%29.aspx)

@@ -446,7 +446,7 @@ net restart sphostcontrollerservice
 <a name="bk_sectrimmer_addlresources"> </a>
 
 
--  [Custom security trimming for Search in SharePoint](custom-security-trimming-for-search-in-sharepoint-server.md)
+-  [Custom security trimming for Search in SharePoint](custom-security-trimming-for-search-in-sharepoint-server)
     
   
 -  [Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre.aspx)

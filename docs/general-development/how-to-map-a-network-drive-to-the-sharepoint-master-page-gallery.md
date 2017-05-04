@@ -50,19 +50,19 @@ On the computer that runs your design tool or HTML editor, map a network drive t
 <a name="bk_addresources"> </a>
 
 
--  [How to: Apply a master page to a site in SharePoint](how-to-apply-a-master-page-to-a-site-in-sharepoint.md)
+-  [How to: Apply a master page to a site in SharePoint](how-to-apply-a-master-page-to-a-site-in-sharepoint)
     
   
--  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint)
     
   
--  [SharePoint Design Manager device channels](sharepoint-design-manager-device-channels.md)
+-  [SharePoint Design Manager device channels](sharepoint-design-manager-device-channels)
     
   
--  [How to: Change the preview page in SharePoint Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager.md)
+-  [How to: Change the preview page in SharePoint Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager)
     
   
--  [SharePoint Design Manager image renditions](sharepoint-design-manager-image-renditions.md)
+-  [SharePoint Design Manager image renditions](sharepoint-design-manager-image-renditions)
     
   
 

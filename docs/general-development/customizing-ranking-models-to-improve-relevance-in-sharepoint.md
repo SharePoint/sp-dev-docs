@@ -7,7 +7,7 @@ ms.assetid: c166ecdd-7f93-4bbb-b543-2687992dd2bc
 
 # Customizing ranking models to improve relevance in SharePoint
 Improve search relevance by customizing ranking models to calculate rank scores (relevance rank) accurately using rank features in SharePoint.
-You can  [sort search results in SharePoint](sorting-search-results-in-sharepoint.md) in four ways, one of which is by rank score. When you sort search results by rank score, SharePoint places the most relevant results on top in the search result set.
+You can  [sort search results in SharePoint](sorting-search-results-in-sharepoint) in four ways, one of which is by rank score. When you sort search results by rank score, SharePoint places the most relevant results on top in the search result set.
   
     
     
@@ -1080,13 +1080,13 @@ This ranking model with one linear stage contains these four rank features:
 <a name="bk_addresources"> </a>
 
 
--  [Search in SharePoint](search-in-sharepoint.md)
+-  [Search in SharePoint](search-in-sharepoint)
     
   
--  [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference.md)
+-  [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference)
     
   
--  [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference.md)
+-  [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference)
     
   
 -  [Overview of search result ranking in SharePoint](http://technet.microsoft.com/library/7c8ddec1-c8ff-4a90-afae-387b27a653f1.aspx)

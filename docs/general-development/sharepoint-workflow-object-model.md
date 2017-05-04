@@ -115,10 +115,10 @@ Reference content for SharePoint schemas is contained in the reference node enti
 -  [Windows Workflow Foundation (WF) Screencasts](http://msdn.microsoft.com/en-us/netframework/dd733248)
     
   
--  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint.md)
+-  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint)
     
   
--  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
+-  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio)
     
   
 

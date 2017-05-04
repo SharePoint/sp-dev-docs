@@ -801,7 +801,7 @@ SharePoint Machine Translation Service uses the paragraph language as the Source
 <a name="TranslationSvc_AR"> </a>
 
 
--  [Office 2013 and SharePoint application services](office-and-sharepoint-application-services.md)
+-  [Office 2013 and SharePoint application services](office-and-sharepoint-application-services)
     
   
 

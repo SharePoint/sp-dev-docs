@@ -50,7 +50,7 @@ The following are the requirements for developing external content types that ar
 - SharePoint
     
   
-For information about setting up your SharePoint development environment, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md).
+For information about setting up your SharePoint development environment, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint).
   
     
     
@@ -67,7 +67,7 @@ Table 1 contains some core concepts that you should be familiar with when workin
 
 |**Article**|**Description**|
 |:-----|:-----|
-| [External content types in SharePoint](external-content-types-in-sharepoint.md) <br/> |Learn how to create BCS external content types.  <br/> |
+| [External content types in SharePoint](external-content-types-in-sharepoint) <br/> |Learn how to create BCS external content types.  <br/> |
 | [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx) <br/> |Learn about the new add-in model in SharePoint that enables you to create add-ins, which are small, easy-to-use solutions for end users.  <br/> |
 | [Get started creating SharePoint-hosted SharePoint Add-ins](http://msdn.microsoft.com/library/1b992485-6efe-4ea4-a18c-221689b0b66f%28Office.15%29.aspx) <br/> |Learn how to create a basic SharePoint-hosted add-in by using the Office Developer Tools for Visual Studio 2012.  <br/> |
    
@@ -202,10 +202,10 @@ The following example shows how to set security credentials for an external syst
 <a name="Appscopedect_inthissection"> </a>
 
 
--  [How to: Create an add-in-scoped external content type in SharePoint](how-to-create-an-add-in-scoped-external-content-type-in-sharepoint.md)
+-  [How to: Create an add-in-scoped external content type in SharePoint](how-to-create-an-add-in-scoped-external-content-type-in-sharepoint)
     
   
--  [How to: Access external data with REST in SharePoint](how-to-access-external-data-with-rest-in-sharepoint.md)
+-  [How to: Access external data with REST in SharePoint](how-to-access-external-data-with-rest-in-sharepoint)
     
   
 
@@ -213,25 +213,25 @@ The following example shows how to set security credentials for an external syst
 <a name="Appscopedect_Addres"> </a>
 
 
--  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint)
     
   
--  [Business Connectivity Services programmers reference for SharePoint](business-connectivity-services-programmers-reference-for-sharepoint.md)
+-  [Business Connectivity Services programmers reference for SharePoint](business-connectivity-services-programmers-reference-for-sharepoint)
     
   
 -  [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)
     
   
--  [External content types in SharePoint](external-content-types-in-sharepoint.md)
+-  [External content types in SharePoint](external-content-types-in-sharepoint)
     
   
--  [External events and alerts in SharePoint](external-events-and-alerts-in-sharepoint.md)
+-  [External events and alerts in SharePoint](external-events-and-alerts-in-sharepoint)
     
   
--  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint.md)
+-  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint)
     
   
--  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint.md)
+-  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint)
     
   
 

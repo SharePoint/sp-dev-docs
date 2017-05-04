@@ -2,7 +2,7 @@
 By using the document library feature in SharePoint, you can create or upload documents associated with individual items in a list or entity. For example, you might use a document library to store sales literature and product manuals for each product in a list. In a Cloud Business Add-in, you can associate a document library with an entity by creating a relationship.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
 
@@ -200,10 +200,10 @@ The process of associating a document library with an entity involves three step
 <a name="bk_addresources"> </a>
 
 
--  [Develop cloud business add-ins](develop-cloud-business-add-ins.md)
+-  [Develop cloud business add-ins](develop-cloud-business-add-ins)
     
  
--  [Incident manager: A cloud business add-in tutorial](incident-manager-a-cloud-business-add-in-tutorial.md)
+-  [Incident manager: A cloud business add-in tutorial](incident-manager-a-cloud-business-add-in-tutorial)
     
  
 

@@ -36,7 +36,7 @@ SharePoint Server 2010 introduced the REST API for use in getting and setting in
 
 
 > **Note:**
-> The Excel Interactive View feature has been disabled. For information about removing this feature from your website, see  [Removing Excel Interactive View from a webpage](removing-excel-interactive-view-from-a-webpage.md). 
+> The Excel Interactive View feature has been disabled. For information about removing this feature from your website, see  [Removing Excel Interactive View from a webpage](removing-excel-interactive-view-from-a-webpage). 
   
     
     
@@ -46,28 +46,28 @@ SharePoint Server 2010 introduced the REST API for use in getting and setting in
 <a name="xlsWhatsNew"> </a>
 
 
--  [Getting Started with Excel Services](getting-started-with-excel-services.md)
+-  [Getting Started with Excel Services](getting-started-with-excel-services)
     
   
--  [Excel Web Services](excel-web-services.md)
+-  [Excel Web Services](excel-web-services)
     
   
--  [Excel Services User-Defined Functions](excel-services-user-defined-functions.md)
+-  [Excel Services User-Defined Functions](excel-services-user-defined-functions)
     
   
--  [Excel Web Access](excel-web-access.md)
+-  [Excel Web Access](excel-web-access)
     
   
--  [Excel Services ECMAScript (JavaScript, JScript)](excel-services-ecmascript-javascript-jscript.md)
+-  [Excel Services ECMAScript (JavaScript, JScript)](excel-services-ecmascript-javascript-jscript)
     
   
--  [Excel Services REST API](excel-services-rest-api.md)
+-  [Excel Services REST API](excel-services-rest-api)
     
   
--  [General Guidelines](general-guidelines.md)
+-  [General Guidelines](general-guidelines)
     
   
--  [Removing Excel Interactive View from a webpage](removing-excel-interactive-view-from-a-webpage.md)
+-  [Removing Excel Interactive View from a webpage](removing-excel-interactive-view-from-a-webpage)
     
   
 
@@ -75,10 +75,10 @@ SharePoint Server 2010 introduced the REST API for use in getting and setting in
 <a name="bk_addresources"> </a>
 
 
--  [Add SharePoint capabilities](add-sharepoint-capabilities.md)
+-  [Add SharePoint capabilities](add-sharepoint-capabilities)
     
   
--  [Office 2013 and SharePoint application services](office-and-sharepoint-application-services.md)
+-  [Office 2013 and SharePoint application services](office-and-sharepoint-application-services)
     
   
 

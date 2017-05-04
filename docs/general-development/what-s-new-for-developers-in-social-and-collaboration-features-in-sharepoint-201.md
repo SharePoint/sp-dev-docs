@@ -12,7 +12,7 @@ Social and collaboration features in SharePoint make it easy for users to commun
     
     
 
-For an in-depth overview of the new social and collaboration features in SharePoint, see  [What's new in social computing in SharePoint](http://technet.microsoft.com/en-us/library/jj219766%28v=office.15%29) on TechNet. For more information about programming with social and collaboration features, see [Social and collaboration features in SharePoint](social-and-collaboration-features-in-sharepoint.md).
+For an in-depth overview of the new social and collaboration features in SharePoint, see  [What's new in social computing in SharePoint](http://technet.microsoft.com/en-us/library/jj219766%28v=office.15%29) on TechNet. For more information about programming with social and collaboration features, see [Social and collaboration features in SharePoint](social-and-collaboration-features-in-sharepoint).
 ## New and changed My Site features in SharePoint
 <a name="bkmk_Social"> </a>
 
@@ -49,7 +49,7 @@ Not all server-side functionality in the Microsoft.Office.Server.UserProfiles as
   
     
     
-For information about how to access the My Site Social client APIs, see  [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint.md). For more information about the API sets in SharePoint and when to use them, see  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md).
+For information about how to access the My Site Social client APIs, see  [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint). For more information about the API sets in SharePoint and when to use them, see  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint).
   
     
     
@@ -293,13 +293,13 @@ while (retries <= 10)
 <a name="SP15NewSocial_addlresources"> </a>
 
 
--  [Social and collaboration features in SharePoint](social-and-collaboration-features-in-sharepoint.md)
+-  [Social and collaboration features in SharePoint](social-and-collaboration-features-in-sharepoint)
     
   
--  [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint.md)
+-  [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint)
     
   
--  [What's new for developers in SharePoint](what???s-new-for-developers-in-sharepoint.md)
+-  [What's new for developers in SharePoint](what???s-new-for-developers-in-sharepoint)
     
   
 -  [What's new in social computing in SharePoint](http://technet.microsoft.com/en-us/library/jj219766%28v=office.15%29)

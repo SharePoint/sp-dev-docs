@@ -31,7 +31,7 @@ The environment that you use for developing apps with BCS is the same as for dev
   
     
     
-To learn how to install the components of a development environment, including the operating system, SharePoint, Visual Studio 2012, and Office Developer Tools for Visual Studio 2012, follow the instructions in  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md).
+To learn how to install the components of a development environment, including the operating system, SharePoint, Visual Studio 2012, and Office Developer Tools for Visual Studio 2012, follow the instructions in  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint).
   
     
     
@@ -55,13 +55,13 @@ Because these solutions don't require code, you can use SharePoint Designer 2013
 -  [Set up an on-premises development environment for SharePoint Add-ins](http://msdn.microsoft.com/library/b0878c12-27c9-4eea-ae3b-7e79e5a8838d%28Office.15%29.aspx)
     
   
--  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint.md)
+-  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint)
     
   
--  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint)
     
   
--  [SharePoint development overview](sharepoint-development-overview.md)
+-  [SharePoint development overview](sharepoint-development-overview)
     
   
 

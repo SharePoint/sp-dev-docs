@@ -61,7 +61,7 @@ In the HTML page layout, each page field is wrapped in a **\<div\>** tag. To app
 </div>
 ```
 
-For more information about where styles and style references for a page layout should go, see  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md).
+For more information about where styles and style references for a page layout should go, see  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint).
   
     
     
@@ -104,7 +104,7 @@ After you configure these properties in the Snippet Gallery and then update the 
     
     
 
-A RichHtmlField page field contains 28 different **Allow** properties. For more information about what specific properties control, see [RichHtmlField properties](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.webcontrols.richhtmlfield_properties) For more information about adding and configuring snippets, see [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md).
+A RichHtmlField page field contains 28 different **Allow** properties. For more information about what specific properties control, see [RichHtmlField properties](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.publishing.webcontrols.richhtmlfield_properties) For more information about adding and configuring snippets, see [SharePoint Design Manager snippets](sharepoint-design-manager-snippets).
   
     
     
@@ -189,7 +189,7 @@ When you change the value of the **PrefixStyleSheet** property, none of the exis
 10. In the mapped network drive on your computer, open the HTML page layout in your HTML editor.
     
     > **Note:**
-      > For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md). 
+      > For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery). 
 11. In the HTML page layout, paste the HTML snippet inside **PlaceHolderMain**.
     
   
@@ -261,7 +261,7 @@ font-size: 16pt;
     
   
 
-    For more information about where styles for a page layout should reside, see  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md).
+    For more information about where styles for a page layout should reside, see  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint).
     
   
 
@@ -269,13 +269,13 @@ font-size: 16pt;
 <a name="Additional"> </a>
 
 
--  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md)
+-  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint)
     
   
--  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md)
+-  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint)
     
   
--  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md)
+-  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets)
     
   
 

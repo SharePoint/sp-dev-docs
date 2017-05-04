@@ -48,7 +48,7 @@ To create a search add-in, use one of these two environments:
 - Napa Office 365 Development Tools
     
   
-With Visual Studio 2013 and later, you can publish your search add-ins to both on-premises or in Office 365. With Napa, alternatively, you can build and publish search add-ins within your browser. These add-ins can later be exported to and re-packaged for on-premises customers. For more information about the two development environments and how to use them to create search add-ins, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md) and [Create Office Add-ins with Napa with an Office 365 Developer Site](http://msdn.microsoft.com/library/82a3645c-0911-4926-9176-236ac8d28bdd%28Office.15%29.aspx).
+With Visual Studio 2013 and later, you can publish your search add-ins to both on-premises or in Office 365. With Napa, alternatively, you can build and publish search add-ins within your browser. These add-ins can later be exported to and re-packaged for on-premises customers. For more information about the two development environments and how to use them to create search add-ins, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint) and [Create Office Add-ins with Napa with an Office 365 Developer Site](http://msdn.microsoft.com/library/82a3645c-0911-4926-9176-236ac8d28bdd%28Office.15%29.aspx).
   
     
     
@@ -246,7 +246,7 @@ The add-in manifest file is in XML format and can be edited directly. To get per
 -  [Add search capabilities to your add-ins for SharePoint](http://blogs.msdn.com/b/officeapps/archive/2013/05/30/add-search-capabilities-to-your-apps-for-sharepoint.aspx)
     
   
--  [Exporting and importing search configuration settings in SharePoint](exporting-and-importing-search-configuration-settings-in-sharepoint.md)
+-  [Exporting and importing search configuration settings in SharePoint](exporting-and-importing-search-configuration-settings-in-sharepoint)
     
   
 -  [Export and import customized search configuration settings in SharePoint (TechNet)](http://technet.microsoft.com/en-us/library/jj871675.aspx)

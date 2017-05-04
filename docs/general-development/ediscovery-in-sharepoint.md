@@ -116,7 +116,7 @@ SharePoint provides a Microsoft .NET server programming model that you can use t
 <a name="SP15_eDiscoveryInSP_AdditionalResources"> </a>
 
 
--  [What's new in SharePoint eDiscovery and compliance](what-s-new-in-sharepoint-ediscovery-and-compliance.md)
+-  [What's new in SharePoint eDiscovery and compliance](what-s-new-in-sharepoint-ediscovery-and-compliance)
     
   
 -  [Complete basic operations using SharePoint client library code](http://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx)

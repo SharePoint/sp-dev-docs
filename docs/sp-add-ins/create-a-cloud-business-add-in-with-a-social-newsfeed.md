@@ -4,7 +4,7 @@ By using the  **Cloud Business Add-in** template in Visual Studio, you can creat
 You can download the complete sample application from the MSDN Code Gallery:  [Creating a Cloud Business Add-in with a Social Newsfeed](http://code.msdn.microsoft.com/Creating-a-Cloud-Business-8540c0c9)
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
 
@@ -374,7 +374,7 @@ Of course, this is just a simple example; there's much more that you can do to c
 <a name="bk_addresources"> </a>
 
 
--  [Create cloud business add-ins](create-cloud-business-add-ins.md)
+-  [Create cloud business add-ins](create-cloud-business-add-ins)
     
  
 

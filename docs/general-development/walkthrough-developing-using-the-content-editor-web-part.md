@@ -24,7 +24,7 @@ During this walkthrough, you will learn how to:
   
 
 > **Note:**
-> For information about how to trust a location, see  [How to: Trust a Location](how-to-trust-a-location.md). 
+> For information about how to trust a location, see  [How to: Trust a Location](how-to-trust-a-location). 
   
     
     
@@ -39,18 +39,18 @@ During this walkthrough, you will learn how to:
   
     
     
- [How to: Trust a Location](how-to-trust-a-location.md)
+ [How to: Trust a Location](how-to-trust-a-location)
 #### Concepts
 
 
   
     
     
- [Excel Services Alerts](excel-services-alerts.md)
+ [Excel Services Alerts](excel-services-alerts)
   
     
     
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
+ [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips)
 #### Other resources
 
 

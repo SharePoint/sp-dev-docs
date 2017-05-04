@@ -510,7 +510,7 @@ You should categorize page optimization techniques into one of two categories: f
 - Use consolidated images and files; for example, combine multiple CSS files into one. Combine images into an image strip or cluster.
     
   
-- Use compression (crunch) techniques. For more information, see  [Compress (crunch) JavaScript and CSS files](optimize-page-performance-in-sharepoint.md#OptimizingPagePerformance_Crunch).
+- Use compression (crunch) techniques. For more information, see  [Compress (crunch) JavaScript and CSS files](optimize-page-performance-in-sharepoint#OptimizingPagePerformance_Crunch).
     
   
 - Verify that you are referencing the production version of common JavaScript libraries, such as jQuery, instead of the debug versions.
@@ -800,7 +800,7 @@ To learn more about the Developer Dashboard:
     
     
 
--  [Overview of the SharePoint renewed developer dashboard](http://www.microsoft.com/resources/technet/en-us/office/media/video/video.mdl?cid=stc&amp;amp;from=mscomstc&amp;amp;VideoID=505bdd61-1fcc-4125-97fc-b5f0dda72cbc) (video).
+-  [Overview of the SharePoint renewed developer dashboard](http://www.microsoft.com/resources/technet/en-us/office/media/video/videol?cid=stc&amp;amp;from=mscomstc&amp;amp;VideoID=505bdd61-1fcc-4125-97fc-b5f0dda72cbc) (video).
     
   
 -  [Renewed Developer Dashboard](http://download.microsoft.com/download/7/7/3/773CA2C2-579B-408C-808E-A6F561194E20/Ig15_SP_IT_M10V3_devdash.pptx) (PowerPoint slide deck).
@@ -857,15 +857,15 @@ Much of the guidance for SharePoint 2010 page performance optimization applies t
 <a name="bk_addresources"> </a>
 
 
--  [Build sites for SharePoint](build-sites-for-sharepoint.md)
+-  [Build sites for SharePoint](build-sites-for-sharepoint)
     
   
--  [SharePoint Design Manager image renditions](sharepoint-design-manager-image-renditions.md)
+-  [SharePoint Design Manager image renditions](sharepoint-design-manager-image-renditions)
     
   
--  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md)
+-  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint)
     
   
--  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md)
+-  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model)
     
   

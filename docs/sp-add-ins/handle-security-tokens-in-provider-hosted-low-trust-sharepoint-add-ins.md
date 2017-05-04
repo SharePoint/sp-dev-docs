@@ -3,22 +3,22 @@
 Learn about the context, access, and refresh tokens that are used for authorization by low-trust, provider-hosted SharePoint Add-ins, and how to work with them in your code.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
 
- **Important**   **This article is entirely about the use of security tokens in the low-trust authorization system, not the high-trust system.** For information about the use of tokens in the high-trust system, see [Create and use access tokens in provider-hosted high-trust SharePoint Add-ins](create-and-use-access-tokens-in-provider-hosted-high-trust-sharepoint-add-ins.md).
+ **Important**   **This article is entirely about the use of security tokens in the low-trust authorization system, not the high-trust system.** For information about the use of tokens in the high-trust system, see [Create and use access tokens in provider-hosted high-trust SharePoint Add-ins](create-and-use-access-tokens-in-provider-hosted-high-trust-sharepoint-add-ins).
  
 
 
- **SharePoint Add-ins that use the  [low-trust authorization system](creating-sharepoint-add-ins-that-use-low-trust-authorization.md) to gain access to SharePoint data participate in an OAuthflow that involves the passing of security tokens (in [JSON Web Token](http://datatracker.ietf.org/doc/draft-ietf-oauth-json-web-token/) format) among SharePoint, Microsoft Azure Access Control Service (ACS), the remote components of the SharePoint Add-in, and, in some cases, the user's browser.** There are different flows depending on the design of the add-in, but all of them involve at least the following two types of tokens:
+ **SharePoint Add-ins that use the  [low-trust authorization system](creating-sharepoint-add-ins-that-use-low-trust-authorization) to gain access to SharePoint data participate in an OAuthflow that involves the passing of security tokens (in [JSON Web Token](http://datatracker.ietf.org/doc/draft-ietf-oauth-json-web-token/) format) among SharePoint, Microsoft Azure Access Control Service (ACS), the remote components of the SharePoint Add-in, and, in some cases, the user's browser.** There are different flows depending on the design of the add-in, but all of them involve at least the following two types of tokens:
  
 
 
 -  **Access token:** Included in each create, read, update, or delete (CRUD) request from the remote components of the add-in to SharePoint. SharePoint validates the token and serves the request.
     
  
--  **Refresh token:** Used to obtain a first access token in the [Context Token flow](creating-sharepoint-add-ins-that-use-low-trust-authorization.md#Flows), and to replace expiring access tokens in both the Context Token flow and the  [Authorization Code flow](creating-sharepoint-add-ins-that-use-low-trust-authorization.md#Flows) of the low-trust authorization system.
+-  **Refresh token:** Used to obtain a first access token in the [Context Token flow](creating-sharepoint-add-ins-that-use-low-trust-authorization#Flows), and to replace expiring access tokens in both the Context Token flow and the  [Authorization Code flow](creating-sharepoint-add-ins-that-use-low-trust-authorization#Flows) of the low-trust authorization system.
     
  
 Depending on which OAuth flow the add-in is using, one or the other of the following is also part of the process:
@@ -83,7 +83,7 @@ Depending on your SharePoint Add-in's architecture and the hosting platform, the
     
  
 
- **Note**  In most scenarios, you won't be able to use terms as simple as "AccessToken" as the caching key because your add-in must keep the tokens for different users and SharePoint farms/tenancies distinct. If your add-in uses the  [Context Token flow](creating-sharepoint-add-ins-that-use-low-trust-authorization.md#Flows), there is special  **CacheKey** provided by SharePoint that can be used to distinguish cached tokens. This section explains what the issues are and what to do when your application is not using the Context Token flow.
+ **Note**  In most scenarios, you won't be able to use terms as simple as "AccessToken" as the caching key because your add-in must keep the tokens for different users and SharePoint farms/tenancies distinct. If your add-in uses the  [Context Token flow](creating-sharepoint-add-ins-that-use-low-trust-authorization#Flows), there is special  **CacheKey** provided by SharePoint that can be used to distinguish cached tokens. This section explains what the issues are and what to do when your application is not using the Context Token flow.
  
 
 Caching the access token in session state is fine for most scenarios. If the remote web application is accessing other services that use OAuth (in addition to SharePoint) and it is caching the various access tokens in session state, be sure to use distinct cache keys for the tokens; for example, instead of "AccessToken", use "SharePoint_AccessToken", "Facebook_AccessToken", "SAP_Gateway_AccessToken", etc. . (If you are not using session state or some other caching that automatically separates each user's cache, you would need also to relativize your keys for user.)
@@ -145,7 +145,7 @@ This section describes, with examples, access tokens and shows how they differ d
  
 
  
-The following is a decoded  **example of a user+add-in access token generated by ACS** to be used for calls to SharePoint using the [user+add-in policy](add-in-authorization-policy-types-in-sharepoint-2013.md). White space has been added for readability. The token complies with the  [JSON Web Token](http://datatracker.ietf.org/doc/draft-ietf-oauth-json-web-token/?include_text=1) protocol. The JavaScript Object Notation (JSON) object in the token is called theclaim set See table 1 for details about the properties in the claim set. Note that all the values must be lower-case. (User+add-in access tokens are the same in the [Context Token flow](creating-sharepoint-add-ins-that-use-low-trust-authorization.md#Flows) and the [Authorization Code flow](creating-sharepoint-add-ins-that-use-low-trust-authorization.md#Flows).)
+The following is a decoded  **example of a user+add-in access token generated by ACS** to be used for calls to SharePoint using the [user+add-in policy](add-in-authorization-policy-types-in-sharepoint-2013). White space has been added for readability. The token complies with the  [JSON Web Token](http://datatracker.ietf.org/doc/draft-ietf-oauth-json-web-token/?include_text=1) protocol. The JavaScript Object Notation (JSON) object in the token is called theclaim set See table 1 for details about the properties in the claim set. Note that all the values must be lower-case. (User+add-in access tokens are the same in the [Context Token flow](creating-sharepoint-add-ins-that-use-low-trust-authorization#Flows) and the [Authorization Code flow](creating-sharepoint-add-ins-that-use-low-trust-authorization#Flows).)
  
 
  
@@ -181,7 +181,7 @@ The following is a decoded  **example of a user+add-in access token generated by
  
 
  
-The following is a decoded  **example of an add-in-only access token generated by ACS** to be used for calls to SharePoint using the [add-in-only policy](add-in-authorization-policy-types-in-sharepoint-2013.md). White space has been added for readability. The token complies with the  [JSON Web Token](http://datatracker.ietf.org/doc/draft-ietf-oauth-json-web-token/?include_text=1) protocol. See table 2 for details about the properties in the claim set. (The add-in-only policy is not available for applications that use the [Authorization Code flow](creating-sharepoint-add-ins-that-use-low-trust-authorization.md#Flows), because they do not have an add-in manifest file and, thus, cannot request permission to use add-in-only calls.)
+The following is a decoded  **example of an add-in-only access token generated by ACS** to be used for calls to SharePoint using the [add-in-only policy](add-in-authorization-policy-types-in-sharepoint-2013). White space has been added for readability. The token complies with the  [JSON Web Token](http://datatracker.ietf.org/doc/draft-ietf-oauth-json-web-token/?include_text=1) protocol. See table 2 for details about the properties in the claim set. (The add-in-only policy is not available for applications that use the [Authorization Code flow](creating-sharepoint-add-ins-that-use-low-trust-authorization#Flows), because they do not have an add-in manifest file and, thus, cannot request permission to use add-in-only calls.)
  
 
  
@@ -221,7 +221,7 @@ The following is a decoded  **example of an add-in-only access token generated b
 ## Understand the structure and handling of context tokens
 <a name="ContextTokens"> </a>
 
-A context token is used only in the  [Context Token flow](creating-sharepoint-add-ins-that-use-low-trust-authorization.md#Flows) of the low-trust authorization system. **When the SharePoint Add-in is launched in SharePoint, SharePoint requests that Azure ACS create a context token that SharePoint then passes on to the remote component of the SharePoint Add-in.** The token is passed as a hidden form parameter called **SPAppToken** in a request from SharePoint for the start page of the remote component. The token is signed with a client secret known only to ACS and the SharePoint Add-in. The **context token includes a refresh token that the add-in uses**, along with other information from the context token, **to request an access token** from ACS. (When this article was written, ACS-issued context tokens for SharePoint had a life span of 12 hours, but that could change.) The **main tasks for the code in the SharePoint Add-in** are the following:
+A context token is used only in the  [Context Token flow](creating-sharepoint-add-ins-that-use-low-trust-authorization#Flows) of the low-trust authorization system. **When the SharePoint Add-in is launched in SharePoint, SharePoint requests that Azure ACS create a context token that SharePoint then passes on to the remote component of the SharePoint Add-in.** The token is passed as a hidden form parameter called **SPAppToken** in a request from SharePoint for the start page of the remote component. The token is signed with a client secret known only to ACS and the SharePoint Add-in. The **context token includes a refresh token that the add-in uses**, along with other information from the context token, **to request an access token** from ACS. (When this article was written, ACS-issued context tokens for SharePoint had a life span of 12 hours, but that could change.) The **main tasks for the code in the SharePoint Add-in** are the following:
  
 
  
@@ -433,7 +433,7 @@ If you want to limit access to your remote component, such as a WCF service, to 
 ## Understand the handling and caching of refresh tokens
 <a name="RefreshTokens"> </a>
 
- **A refresh token is included in the context token that SharePoint posts to your web application when it is launched.** The refresh token is an encrypted token that your SharePoint Add-in cannot unencrypt. **Your code uses it**, along with other information, **to get a new access token when the current access token expires**. It is also used to get the *first*  access token in the [Context Token flow](creating-sharepoint-add-ins-that-use-low-trust-authorization.md#Flows). (When this article was written, ACS-issued refresh tokens for SharePoint had a life span of 6 months, but that could change.)
+ **A refresh token is included in the context token that SharePoint posts to your web application when it is launched.** The refresh token is an encrypted token that your SharePoint Add-in cannot unencrypt. **Your code uses it**, along with other information, **to get a new access token when the current access token expires**. It is also used to get the *first*  access token in the [Context Token flow](creating-sharepoint-add-ins-that-use-low-trust-authorization#Flows). (When this article was written, ACS-issued refresh tokens for SharePoint had a life span of 6 months, but that could change.)
  
 
  
@@ -448,7 +448,7 @@ Since an access token lasts hours (currently 12) and an end user gets a new one 
 - The add-in's design enables users to schedule the add-in to access SharePoint sometime after the session ends.
     
  
-Both  **scenarios require your add-in to cache the refresh token**, and second scenario requires a server-side cache that is durable across sessions. Your caching options are the same as those for the [access token](#CacheAccessToken) and, in the Context Token flow, you can use [the cache key in the context token](#CacheKey). (In the Context Token flow, you usually just cache the context token. It contains the refresh token and other information you need to get a new access token. In the  [Authorization Code flow](creating-sharepoint-add-ins-that-use-low-trust-authorization.md#Flows), there is no context token, so you cache the refresh token itself.)
+Both  **scenarios require your add-in to cache the refresh token**, and second scenario requires a server-side cache that is durable across sessions. Your caching options are the same as those for the [access token](#CacheAccessToken) and, in the Context Token flow, you can use [the cache key in the context token](#CacheKey). (In the Context Token flow, you usually just cache the context token. It contains the refresh token and other information you need to get a new access token. In the  [Authorization Code flow](creating-sharepoint-add-ins-that-use-low-trust-authorization#Flows), there is no context token, so you cache the refresh token itself.)
  
 
  
@@ -456,7 +456,7 @@ If you are caching the refresh token in a storage that persists across a specifi
  
 
  
-If the refresh token is expired, a request to ACS for a new access token will result in a  **401 Unauthorized** error. Your add-in should respond to this error by getting a new refresh token and using it to get a new access token. (Since the refresh token is encrypted, your code cannot check its expiration before using it.) In the Context Token flow, your add-in gets a new refresh token by [getting a new context token](#GetNewContextToken). In the Authorization Code flow, your add-in gets a new refresh token by restarting the flow. Specifically, your code should respond to the error by redirecting the user to the SharePoint OAuthAuthorize.aspx page as explained in  [Understand the OAuth flow for add-ins that request permissions on the fly](authorization-code-oauth-flow-for-sharepoint-add-ins.md#Flow).
+If the refresh token is expired, a request to ACS for a new access token will result in a  **401 Unauthorized** error. Your add-in should respond to this error by getting a new refresh token and using it to get a new access token. (Since the refresh token is encrypted, your code cannot check its expiration before using it.) In the Context Token flow, your add-in gets a new refresh token by [getting a new context token](#GetNewContextToken). In the Authorization Code flow, your add-in gets a new refresh token by restarting the flow. Specifically, your code should respond to the error by redirecting the user to the SharePoint OAuthAuthorize.aspx page as explained in  [Understand the OAuth flow for add-ins that request permissions on the fly](authorization-code-oauth-flow-for-sharepoint-add-ins#Flow).
  
 
  
@@ -464,7 +464,7 @@ If the refresh token is expired, a request to ACS for a new access token will re
 ## Understanding the handling authorization codes
 <a name="Authcodes"> </a>
 
- **In the Authorization Code flow, the authorization process begins with an authorization code that ACS issues, at the request of SharePoint, and which SharePoint then passes to the remote application** as a query parameter. The authorization code is unique to each pair of user and remote application. (When this article was written, ACS-issued authorization codes for SharePoint had a life span of 5 minutes, but that could change.) The logic in **your application must get the authorization code from the query parameter and use it in a request to ACS for an access token**. If you are using managed code, sample code for creating the token is in the TokenHelper.cs (and .vb) file. Sample code for reading the query parameter is in [Get sample code behind for a page that accesses SharePoint](authorization-code-oauth-flow-for-sharepoint-add-ins.md#Default). ACS invalidates the authorization code immediately after issuing the access token, so it can only be used once and there is no point in caching it.
+ **In the Authorization Code flow, the authorization process begins with an authorization code that ACS issues, at the request of SharePoint, and which SharePoint then passes to the remote application** as a query parameter. The authorization code is unique to each pair of user and remote application. (When this article was written, ACS-issued authorization codes for SharePoint had a life span of 5 minutes, but that could change.) The logic in **your application must get the authorization code from the query parameter and use it in a request to ACS for an access token**. If you are using managed code, sample code for creating the token is in the TokenHelper.cs (and .vb) file. Sample code for reading the query parameter is in [Get sample code behind for a page that accesses SharePoint](authorization-code-oauth-flow-for-sharepoint-add-ins#Default). ACS invalidates the authorization code immediately after issuing the access token, so it can only be used once and there is no point in caching it.
  
 
  
@@ -472,7 +472,7 @@ If the refresh token is expired, a request to ACS for a new access token will re
 ## Work with JWT time values
 <a name="JWTtimes"> </a>
 
-The  **nbf** and **exp** claims are in the format specified by the [JWT specification](http://self-issued.info/docs/draft-goland-json-web-token-00.mdl). They are written as the number of seconds since Jan 1, 1970. In C#, you can translate these values with the following code, where  _jWTTimeStamp_ is the value from the token, such as 1335822895.
+The  **nbf** and **exp** claims are in the format specified by the [JWT specification](http://self-issued.info/docs/draft-goland-json-web-token-00l). They are written as the number of seconds since Jan 1, 1970. In C#, you can translate these values with the following code, where  _jWTTimeStamp_ is the value from the token, such as 1335822895.
  
 
  
@@ -495,7 +495,7 @@ The free  [Fiddler tool](http://www.telerik.com/fiddler) can be used to capture 
 <a name="bk_addresources"> </a>
 
 
--  [Creating SharePoint Add-ins that use low-trust authorization](creating-sharepoint-add-ins-that-use-low-trust-authorization.md)
+-  [Creating SharePoint Add-ins that use low-trust authorization](creating-sharepoint-add-ins-that-use-low-trust-authorization)
     
  
 - For code samples that use managed code and TokenHelper, see  [SharePoint: Hello World remote add-in using CSOM](http://code.msdn.microsoft.com/SharePoint-2013-Hello-0fd15fbf) and [SharePoint Add-ins sample pack](http://code.msdn.microsoft.com/office/Apps-for-SharePoint-sample-64c80184)

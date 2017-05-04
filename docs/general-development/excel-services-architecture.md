@@ -103,14 +103,14 @@ Excel Web Services is the Excel Services component that provides programmatic ac
     
     
 
-For more information about Excel Web Services, see  [Excel Services Development Roadmap](excel-services-development-roadmap.md).
+For more information about Excel Web Services, see  [Excel Services Development Roadmap](excel-services-development-roadmap).
   
     
     
 
 ## User-Defined Functions (UDFs)
 
-Excel Services UDFs enable you to use formulas in a cell to call custom functions that are written in managed code and deployed to SharePoint Server 2010. For more information about UDFs in Excel Services, see  [Understanding Excel Services UDFs](understanding-excel-services-udfs.md).
+Excel Services UDFs enable you to use formulas in a cell to call custom functions that are written in managed code and deployed to SharePoint Server 2010. For more information about UDFs in Excel Services, see  [Understanding Excel Services UDFs](understanding-excel-services-udfs).
   
     
     
@@ -136,7 +136,7 @@ The discovery mechanisms built into the Excel Services REST API enables develope
   
     
     
-For more information about the REST API in Excel Services, see  [Excel Services REST API](excel-services-rest-api.md). 
+For more information about the REST API in Excel Services, see  [Excel Services REST API](excel-services-rest-api). 
   
     
     
@@ -168,19 +168,19 @@ Administrators can configure the load-balancing behavior.
   
     
     
- [Excel Services Overview](excel-services-overview.md)
+ [Excel Services Overview](excel-services-overview)
   
     
     
- [Excel Services Development Roadmap](excel-services-development-roadmap.md)
+ [Excel Services Development Roadmap](excel-services-development-roadmap)
   
     
     
- [Supported and Unsupported Features](supported-and-unsupported-features.md)
+ [Supported and Unsupported Features](supported-and-unsupported-features)
 #### Other resources
 
 
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)

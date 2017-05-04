@@ -5,7 +5,7 @@ By using the  **Cloud Business Add-in** template in Visual Studio, you can creat
 You can download the Incident Management sample application and associated files from the MSDN Samples Gallery:  [Incident Manager: A Cloud Business Add-in Tutorial](http://code.msdn.microsoft.com/Incident-Manager-A-Cloud-c32d9b04).
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
  
 
 
@@ -1388,13 +1388,13 @@ Congratulations! You have now finished the tutorial, and you know the basics of 
 <a name="bk_addresources"> </a>
 
 
--  [Get started developing cloud business add-ins](get-started-developing-cloud-business-add-ins.md)
+-  [Get started developing cloud business add-ins](get-started-developing-cloud-business-add-ins)
     
  
--  [Develop cloud business add-ins](develop-cloud-business-add-ins.md)
+-  [Develop cloud business add-ins](develop-cloud-business-add-ins)
     
  
--  [Publish cloud business add-ins](publish-cloud-business-add-ins.md)
+-  [Publish cloud business add-ins](publish-cloud-business-add-ins)
     
  
 

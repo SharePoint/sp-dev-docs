@@ -7,7 +7,7 @@ ms.assetid: c967be7c-f29f-481a-9ce2-915ead315dcd
 
 # Modify SharePoint components for MDS
 Learn how to modify the components in your SharePoint project to take advantage of Minimal Download Strategy (MDS) in SharePoint.
-Minimal Download Strategy (MDS) improves the user experience by returning from the server only the portions of a page required to render it properly in the browser. Because the fully-rendered page is not returned to the client, the server must be able to accurately identify the portions that are required to render the page. You might need to modify the components in your SharePoint project so that they are identified as MDS-compliant and can work with the MDS engine. Learn more about MDS in  [Minimal Download Strategy overview](minimal-download-strategy-overview.md).
+Minimal Download Strategy (MDS) improves the user experience by returning from the server only the portions of a page required to render it properly in the browser. Because the fully-rendered page is not returned to the client, the server must be able to accurately identify the portions that are required to render the page. You might need to modify the components in your SharePoint project so that they are identified as MDS-compliant and can work with the MDS engine. Learn more about MDS in  [Minimal Download Strategy overview](minimal-download-strategy-overview).
   
     
     
@@ -16,7 +16,7 @@ Minimal Download Strategy (MDS) improves the user experience by returning from t
 ## Why modify SharePoint components?
 <a name="bk_whymodify"> </a>
 
-As explained in  [Minimal Download Strategy overview](minimal-download-strategy-overview.md), SharePoint controls work whether or not you modify them to take full advantage of MDS. However, when your components are not MDS compliant, the MDS engine issues a failover. In a failover, the MDS engine takes an extra round trip to redirect the browser to the full version of the new page, which takes time. Users have the best experience when you modify components to work with MDS and avoid a failover every time they browse to a new page in SharePoint. You usually need to modify master pages, ASP.NET pages, controls, and Web Parts. 
+As explained in  [Minimal Download Strategy overview](minimal-download-strategy-overview), SharePoint controls work whether or not you modify them to take full advantage of MDS. However, when your components are not MDS compliant, the MDS engine issues a failover. In a failover, the MDS engine takes an extra round trip to redirect the browser to the full version of the new page, which takes time. Users have the best experience when you modify components to work with MDS and avoid a failover every time they browse to a new page in SharePoint. You usually need to modify master pages, ASP.NET pages, controls, and Web Parts. 
   
     
     
@@ -222,7 +222,7 @@ You also need to mark your controls and Web Parts as MDS compliant. The followin
 
 ```cs
 
-[assembly: Microsoft.SharePoint.WebControls.MdsCompliantAttribute(IsCompliant = true)]
+[assembly: Microsoft.SharePoint.WebControlssCompliantAttribute(IsCompliant = true)]
 namespace VisualWebPartProject2.VisualWebPart1
 {
     // Rest of your control logic
@@ -250,10 +250,10 @@ Your controls and Web Parts can also use XSLT files to control the rendering pro
 <a name="bk_addresources"> </a>
 
 
--  [Minimal Download Strategy overview](minimal-download-strategy-overview.md)
+-  [Minimal Download Strategy overview](minimal-download-strategy-overview)
     
   
--  [Build sites for SharePoint](build-sites-for-sharepoint.md)
+-  [Build sites for SharePoint](build-sites-for-sharepoint)
     
   
 

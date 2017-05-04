@@ -111,7 +111,7 @@ Table 1 shows important properties to consider when you want to restrict a Web P
    
 
 > **Note:**
-> You cannot insert a Web Part zone inside a Device Channel Panel. If you want to allow authors to add Web Parts to a page, and if you are not concerned about the page weight for mobile devices, you can add a Rich Text Editor page field to a Device Channel Panel, and then instruct authors to add Web Parts there. You can add Web Parts directly to a Device Channel Panel (without a Web Part zone). For more information, see  [How to: Add a Device Channel Panel snippet in SharePoint](how-to-add-a-device-channel-panel-snippet-in-sharepoint.md). 
+> You cannot insert a Web Part zone inside a Device Channel Panel. If you want to allow authors to add Web Parts to a page, and if you are not concerned about the page weight for mobile devices, you can add a Rich Text Editor page field to a Device Channel Panel, and then instruct authors to add Web Parts there. You can add Web Parts directly to a Device Channel Panel (without a Web Part zone). For more information, see  [How to: Add a Device Channel Panel snippet in SharePoint](how-to-add-a-device-channel-panel-snippet-in-sharepoint). 
   
     
     
@@ -162,7 +162,7 @@ Like all snippets, you add this snippet from the Snippet Gallery. To navigate to
   
 10. In your HTML editor, open the mapped network drive on your computer, and then open the HTML file for the master page or page layout that you're adding the snippet to.
     
-    For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md).
+    For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery).
     
   
 11. In the HTML file, paste the snippet where you want the markup to appear.
@@ -223,7 +223,7 @@ Additional properties that can be used to restrict how content authors can use z
 <a name="AdditionalResources"> </a>
 
 
--  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md)
+-  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets)
     
   
 -  [WebPartZone class](http://msdn.microsoft.com/en-us/library/system.web.ui.webcontrols.webparts.webpartzone.aspx)
@@ -232,10 +232,10 @@ Additional properties that can be used to restrict how content authors can use z
 -  [WebPartZoneBase properties](http://msdn.microsoft.com/en-us/library/335sw9k3.aspx)
     
   
--  [Build sites for SharePoint](build-sites-for-sharepoint.md)
+-  [Build sites for SharePoint](build-sites-for-sharepoint)
     
   
--  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint)
     
   
 

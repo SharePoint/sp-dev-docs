@@ -39,7 +39,7 @@ We encourage you to  [embed Excel into your web pages ](https://support.office.c
 <a name="bk_addresources"> </a>
 
 
--  [Excel Services in SharePoint](excel-services-in-sharepoint.md)
+-  [Excel Services in SharePoint](excel-services-in-sharepoint)
     
   
 -  [Embed an Excel workbook on your blog](https://support.office.com/en-au/article/Share-it-Embed-an-Excel-workbook-on-your-blog-804e1845-5662-487e-9b38-f96307144081?ui=en-US&amp;rs=en-AU&amp;ad=AU)

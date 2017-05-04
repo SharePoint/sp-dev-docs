@@ -56,7 +56,7 @@ These Windows PowerShell cmdlets enable an administrator to configure the follow
 - A **SendRawData** switch that sends the raw data of an item in binary form. This is useful when more metadata is required than what can be retrieved from the parsed version of the item.
     
   
-In addition, there are options for specifying size limits and timeouts. See  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout.md) for a full list of configurable properties.
+In addition, there are options for specifying size limits and timeouts. See  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout) for a full list of configurable properties.
   
     
     
@@ -341,10 +341,10 @@ Remove-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa
 -  [Start, pause, resume, or stop a crawl](http://technet.microsoft.com/en-us/library/jj219814%28office.15%29.aspx)
     
   
--  [Configure search in SharePoint](configure-search-in-sharepoint.md)
+-  [Configure search in SharePoint](configure-search-in-sharepoint)
     
   
--  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout.md)
+-  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout)
     
   
 

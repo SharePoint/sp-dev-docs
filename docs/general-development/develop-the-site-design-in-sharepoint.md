@@ -13,16 +13,16 @@ If you want your SharePoint site to represent your organization's brand and not 
     
 
 For more information about using Design Manager to customize your sites, see the following articles and their subtopics:
--  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md) : Get an overview of using Design Manager to brand your SharePoint site. Design Manager is a publishing feature that is available in publishing sites in both SharePoint and Office 365.
+-  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint) : Get an overview of using Design Manager to brand your SharePoint site. Design Manager is a publishing feature that is available in publishing sites in both SharePoint and Office 365.
     
   
--  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md) : Learn about the revised page model—including master pages and page layouts—redesigned for SharePoint.
+-  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model) : Learn about the revised page model—including master pages and page layouts—redesigned for SharePoint.
     
   
--  [Master pages, the Master Page Gallery, and page layouts in SharePoint](master-pages-the-master-page-gallery-and-page-layouts-in-sharepoint.md) : Find links to information about using Design Manager to work with master pages, page layouts, and display templates in publishing sites in SharePoint.
+-  [Master pages, the Master Page Gallery, and page layouts in SharePoint](master-pages-the-master-page-gallery-and-page-layouts-in-sharepoint) : Find links to information about using Design Manager to work with master pages, page layouts, and display templates in publishing sites in SharePoint.
     
   
--  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md) : Find links to information about using Design Manager branding and design capabilities in SharePoint.
+-  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities) : Find links to information about using Design Manager branding and design capabilities in SharePoint.
     
   
 
@@ -30,10 +30,10 @@ For more information about using Design Manager to customize your sites, see the
 <a name="bk_addresources"> </a>
 
 
--  [Build sites for SharePoint](build-sites-for-sharepoint.md)
+-  [Build sites for SharePoint](build-sites-for-sharepoint)
     
   
--  [What's new with SharePoint site development](what-s-new-with-sharepoint-site-development.md)
+-  [What's new with SharePoint site development](what-s-new-with-sharepoint-site-development)
     
   
 

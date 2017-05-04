@@ -81,7 +81,7 @@ Like all snippets, you add this snippet from the Snippet Gallery. To navigate to
 9. On the left side of the Snippet Gallery, under **HTML Snippet**, choose **Copy to Clipboard**.
     
   
-10. In your HTML editor, open the mapped network drive on your computer, and then open the HTML file for the master page or page layout that you're adding the snippet to. For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md).
+10. In your HTML editor, open the mapped network drive on your computer, and then open the HTML file for the master page or page layout that you're adding the snippet to. For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery).
     
   
 11. In the HTML file, paste the snippet where you want the markup to appear.
@@ -138,16 +138,16 @@ The **<div>** where `class="DefaultContentBlock"` is what you replace with your 
 <a name="AdditionalResources"> </a>
 
 
--  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md)
+-  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets)
     
   
--  [How to: Add a Security Trim snippet in SharePoint](how-to-add-a-security-trim-snippet-in-sharepoint.md)
+-  [How to: Add a Security Trim snippet in SharePoint](how-to-add-a-security-trim-snippet-in-sharepoint)
     
   
--  [Build sites for SharePoint](build-sites-for-sharepoint.md)
+-  [Build sites for SharePoint](build-sites-for-sharepoint)
     
   
--  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint)
     
   
 

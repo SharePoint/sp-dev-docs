@@ -350,26 +350,26 @@ End Namespace
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api.md)
+ [Accessing the SOAP API](accessing-the-soap-api)
 #### Other resources
 
 
   
     
     
- [Step 1: Creating the Web Service Client Project](step-1-creating-the-web-service-client-project.md)
+ [Step 1: Creating the Web Service Client Project](step-1-creating-the-web-service-client-project)
   
     
     
- [Step 2: Adding a Web Reference](step-2-adding-a-web-reference.md)
+ [Step 2: Adding a Web Reference](step-2-adding-a-web-reference)
   
     
     
- [Step 4: Building and Testing the Application](step-4-building-and-testing-the-application.md)
+ [Step 4: Building and Testing the Application](step-4-building-and-testing-the-application)
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
   
     
     
