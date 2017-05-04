@@ -32,7 +32,18 @@ None
 |[`getValue(param)`](getvalue-urlqueryparametercollection.md)     | `public` | `string` | Returns the value of the first matching query parameter or undefined if the key doesn't exist. Examples: this._queryParameterList = [ {key: TEST, value: done}, {key: DEBUG, value: false}, {key: TEST, value: notdone}] getValue('TEST') ---> 'done' getValue('debug') ---> 'false' getValue('lost') ---> undefined |
 |[`getValues(param)`](getvalues-urlqueryparametercollection.md)     | `public` | `string[]` | Returns the values of all of the matching query parameters or undefined if the key doesn't exist. Examples: this._queryParameterList = [ {key: TEST, value: done}, {key: DEBUG, value: false}, {key: TEST, value: notdone}] getValues('TEST') ---> ['done', 'notdone'] getValues('debug') ---> ['false'] getValues('lost') ---> undefined |
 
+## Sample
 
+```ts
+import {
+  UrlQueryParameterCollection
+} from '@microsoft/sp-core-library';
+
+// ...
+let queryParameterCollection = new UrlQueryParameterCollection(document.URL);
+let idValue = queryParameterCollection.getValue("id");
+// ...
+```
 
 
 
