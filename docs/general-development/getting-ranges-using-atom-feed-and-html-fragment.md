@@ -39,7 +39,7 @@ As described in the  [Discovery in Excel Services REST API](discovery-in-excel-s
 http://<ServerName>/_vti_bin/ExcelRest.aspx/<DocumentLibrary>/<FileName>/model
 ```
 
-Therefore, for a workbook with the file name **sampleWorkbook.xlsx** that is saved to `http://` _<ServerName>_ `/Docs/Documents/sampleWorkbook.xlsx`, following is the URI to the model page:
+Therefore, for a workbook with the file name **sampleWorkbook.xlsx** that is saved to `http://` _\<ServerName\>_ `/Docs/Documents/sampleWorkbook.xlsx`, following is the URI to the model page:
   
     
     

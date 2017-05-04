@@ -7,9 +7,7 @@ ms.assetid: 33fbcf91-0a5d-47ab-85a9-9d2d556a204d
 
 # Understanding Coordination actions in SharePoint Designer 2013
 Coordination Actions in SharePoint Designer 2013 are designed to start a workflow built on the SharePoint 2010 Workflow platform from within a workflow built on the SharePoint Workflow platform.
-||
-|:-----|
-||
+
    
 
 ## Coordination Actions in SharePoint Designer 2013

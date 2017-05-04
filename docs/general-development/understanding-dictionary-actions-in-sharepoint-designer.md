@@ -7,9 +7,7 @@ ms.assetid: 73df233e-bad8-4ea1-b05d-61ecab597924
 
 # Understanding Dictionary actions in SharePoint Designer 2013
 The Dictionary variable type is a new variable type in the SharePoint Workflow platform that you can use with SharePoint Designer 2013. 
-||
-|:-----|
-||
+
    
 
 ## Understanding the Dictionary variable type
