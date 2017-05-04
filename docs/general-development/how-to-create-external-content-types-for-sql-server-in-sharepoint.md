@@ -362,7 +362,7 @@ You can create several different types of filters. For each filter that you crea
     
 
     
-    A Wildcard filter limits what items are returned based on a user-entered string value (such as State Contains "New") and is converted to an SQL LIKE clause. Valid SQL Server wildcard characters are * (asterisk) which means match any number of characters and _ (underscore) which means match one and only one character. 
+    A Wildcard filter limits what items are returned based on a user-entered string value (such as State Contains "New") and is converted to an SQL LIKE clause. Valid SQL Server wildcard characters are \* (asterisk) which means match any number of characters and \_ (underscore) which means match one and only one character. 
   
     
     
@@ -383,7 +383,7 @@ You can create several different types of filters. For each filter that you crea
 5. Click **OK**.
     
   
-6.  Under **Properties**, next to **Default Value**, enter the initial value that you want to filter by, if the user does not enter a value. If you do not enter a value, the external list does not display any items. It's a good idea to enter an * (asterisk) as the default.
+6.  Under **Properties**, next to **Default Value**, enter the initial value that you want to filter by, if the user does not enter a value. If you do not enter a value, the external list does not display any items. It's a good idea to enter an \* (asterisk) as the default.
     
   
 
