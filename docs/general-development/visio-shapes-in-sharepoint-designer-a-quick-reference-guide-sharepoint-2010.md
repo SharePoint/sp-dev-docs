@@ -47,16 +47,12 @@ The actions in this list are organized in categories based on their area of appl
 <a name="section1a"> </a>
 
 These are the most commonly-used actions and can be used in any type of workflow or step.
-  
-    
-    
 
-****
 
 
 |**Visio Action Shape**|**Corresponding action in SharePoint Designer**|**Action description**|
 |:-----|:-----|:-----|
-|![Add a comment](../../images/spd15-addcomment-visio.JPG)|This Visio action is the same as the **Add a Comment** action in SharePoint Designer 2013 and appears as: <br/> ![Add comment](../../images/spd15-addcomment-txt.JPG)    **Note:** Comments remain visible when the workflow is exported to Visio.           |**Add a comment** <br/> Use this action to leave informative comments in the workflow designer for reference purposes. This is especially helpful when there are other users co-authoring the workflow. For example, if a variable in the current workflow doesn't have a user-friendly name, you use this action to add a comment to indicate what the variable does in the workflow.  <br/> |
+|![Add a comment](../../images/spd15-addcomment-visio.JPG)|This Visio action is the same as the **Add a Comment** action in SharePoint Designer 2013 and appears as: <br/> ![Add comment](../../images/spd15-addcomment-txt.JPG)  <br/>  **Note:** Comments remain visible when the workflow is exported to Visio.           |**Add a comment** <br/> Use this action to leave informative comments in the workflow designer for reference purposes. This is especially helpful when there are other users co-authoring the workflow. For example, if a variable in the current workflow doesn't have a user-friendly name, you use this action to add a comment to indicate what the variable does in the workflow.  <br/> |
 |![Add time to date](../../images/spd15-addtimetodate-visio.JPG)|This Visio action is the same as the **Add Time to Date** action in SharePoint Designer 2013 and appears as: <br/> ![Add time to date](../../images/spd15-addtimetodate-txt.JPG)|**Add time to date** <br/> Use this action to add a specific time in minutes, hours, days, months, or years to a date, and store the output value as a variable. The date can be a current date, specific date, or a lookup.  <br/> |
 |![Do calculation](../../images/spd15-docalc-visio.JPG)|This Visio action is the same as the **Do Calculation** action in SharePoint Designer 2013 and appears as: <br/> ![Do calculation](../../images/spd15-docalc-txt.JPG)|**Do calculation** <br/> Use this action to perform a calculation, such as add, subtract, multiply, or divide two values, and stores the output value in a variable.  <br/> |
 |![Log to history list](../../images/spd15-LogHist-visio.JPG)|This Visio action is the same as the **Log to History List** action in SharePoint Designer 2013 and appears as: <br/> ![Log to history list](../../images/spd15-LogHist-txt.JPG)|**Log to history list** <br/> Use this action to log a message about the workflow into its history list. A message can be a summary of a workflow event, or anything significant about the workflow. The workflow history list can be helpful in troubleshooting issues with the workflow.  <br/> |
@@ -91,8 +87,7 @@ These actions are used on list items.
 |![Inherit list item permissions](../../images/spd15-InheritListItemPerms-visio.JPG)|This Visio action is the same as the **Inherit List Item Parent Permissions** action in SharePoint Designer 2013 and appears as: <br/> ![Inherit list item permissions](../../images/spd15-InheritListItemPerms-txt.JPG)    **Note:** This action is only available in an impersonation step.           |**Inherit list item permissions** <br/> If your item has unique permissions, you can use this action to make the item inherit the parent permissions from the list.  <br/> |
 |![Remove list item permissions](../../images/spd15-RmListItemPerms-visio.JPG)|This Visio action is the same as the **Remove List Item Permission**s action in SharePoint Designer 2013 and appears as:  <br/> ![Remove list item permissions](../../images/spd15-RmListItemPerms-txt.JPG)    **Note:** This action is only available in an impersonation step.           |**Remove list item permissions** <br/> This action removes permissions from an item for specific users.  <br/> |
 |![Replace list item permissions](../../images/spd15-ReplaceListItemPerms-visio.JPG)|This Visio action is the same as the **Replace List Item Permissions** action in SharePoint Designer 2013 and appears as: <br/> ![Replace list item permissions](../../images/spd15-ReplaceListItemPerms-txt.JPG)    **Note:** This action is only available in an impersonation step.           |**Replace list item permissions** <br/> It replaces an item's current permissions with the new permissions that you specify in the action.  <br/> |
-|![Set content approval status](../../images/spd15-SetContentApprovalStatus-visio.JPG)|This Visio action is the same as the **Set Content Approval Status** action in SharePoint Designer 2013 and appears as: <br/> ![Set content approval status](../../images/spd15-SetContentApprovalStatus-txt.JPG)    **Note:** Content approval must be enabled in the list in order to use this action.           
-|**Set content approval status** <br/> If you have content approval enabled in your list, use this action to set the content approval status field to a value such as Approved, Rejected, or Pending. You can type a custom status in the action.  <br/> **Note:** The **Set Content Approval Status** action works on the current item that the workflow is acting upon, therefore the action is not available in a site workflow.          |
+|![Set content approval status](../../images/spd15-SetContentApprovalStatus-visio.JPG)|This Visio action is the same as the **Set Content Approval Status** action in SharePoint Designer 2013 and appears as: <br/> ![Set content approval status](../../images/spd15-SetContentApprovalStatus-txt.JPG)    **Note:** Content approval must be enabled in the list in order to use this action.|**Set content approval status** <br/> If you have content approval enabled in your list, use this action to set the content approval status field to a value such as Approved, Rejected, or Pending. You can type a custom status in the action.  <br/> **Note:** The **Set Content Approval Status** action works on the current item that the workflow is acting upon, therefore the action is not available in a site workflow.          |
 |![Set field in current item](../../images/spd15-SetFieldCurrItem-visio.JPG)|This Visio action is the same as the **Set Field in Current Item** action in SharePoint Designer 2013 and appears as: <br/> ![Set field in current item](../../images/spd15-SetFieldCurrItem-txt.JPG)|**Set field in current item** <br/> Use the action to set a field in the current item to a value.  <br/> **Note:** If you want to pause the workflow until it changes the value of the field, use the **Wait for Field Change in Current Item** action instead.          The **Set Field in Current Item** action should not be used in a site workflow. <br/> |
 |![Update list item](../../images/spd15-UpdateListItem-visio.JPG)|This Visio action is the same as the **Update List Item** action in SharePoint Designer 2013 and appears as: <br/> ![Update list item](../../images/spd15-UpdateListItem-txt.JPG)|**Update list item** <br/> Use this action to update a list item. You can specify the fields and the new values in those fields.  <br/> |
 |![Wait for field change in current item](../../images/spd15-Wait4FieldChange-visio.JPG)|This Visio action is the same as the **Wait for Field Change in Current Item** action in SharePoint Designer 2013 and appears as: <br/> ![Wait for field change](../../images/spd15-Wait4FieldChange-txt.JPG)|**Wait for field change in current item** <br/> This action pauses the workflow until the field in the current item has changed to a new value.  <br/> **Note:** If you want the workflow to change the value of the field, rather than have the workflow wait for the field to change, use the **Set Field in Current Item** action instead.          |
@@ -223,23 +218,7 @@ Some workflow conditions are only available when the workflow is associated to a
 ## Workflow terminators
 <a name="section3"> </a>
 
-In Visio, each workflow must begin with a Start terminator (
-  
-    
-    
-![Start](../../images/spd15-WFStart-icon.JPG)
-  
-    
-    
-) and end with a Stop terminator (
-  
-    
-    
-![Stop](../../images/spd15-WFStop-icon.JPG)
-  
-    
-    
-). Only one of each type of terminator can be used in a given workflow. Terminators are necessary when you create a SharePoint workflow in Visio so that the workflow can pass validation and can be exported. Workflow terminators are not used in SharePoint Designer.
+In Visio, each workflow must begin with a Start terminator (![Start](../../images/spd15-WFStart-icon.JPG)) and end with a Stop terminator (![Stop](../../images/spd15-WFStop-icon.JPG)). Only one of each type of terminator can be used in a given workflow. Terminators are necessary when you create a SharePoint workflow in Visio so that the workflow can pass validation and can be exported. Workflow terminators are not used in SharePoint Designer.
   
     
     
