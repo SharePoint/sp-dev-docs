@@ -466,7 +466,7 @@ PowerPoint Automation Services on SharePoint provides businesses with advanced c
     
 
 > **Note:**
->  Before you run the example, make sure that PowerPoint Automation Services has been enabled in the SharePoint Central Administration console.>  To verify that PowerPoint Automation Services is enabled, do the following:>  In the Central Administration console, under **System Settings**, choose **Manage services on server**, and then make sure that the **PowerPoint Conversion Service** is set to **Started**. >  Also in the Central Administration console, under **Application Management**, choose **Manage service applications**, and then make sure that the **PowerPoint Conversion Service Application** and **PowerPoint Conversion Service Application Proxy** are set to Started.
+>  Before you run the example, make sure that PowerPoint Automation Services has been enabled in the SharePoint Central Administration console.<br/>  To verify that PowerPoint Automation Services is enabled, do the following: <ul><li>In the Central Administration console, under **System Settings**, choose **Manage services on server**, and then make sure that the **PowerPoint Conversion Service** is set to **Started**. </li><li>Also in the Central Administration console, under **Application Management**, choose **Manage service applications**, and then make sure that the **PowerPoint Conversion Service Application** and **PowerPoint Conversion Service Application Proxy** are set to Started.</li></ul>
   
     
     
