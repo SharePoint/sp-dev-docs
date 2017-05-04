@@ -46,7 +46,7 @@ To get data from an Excel workbook, you construct a URL that points to the workb
   
     
     
-http://<serverName>/_vti_bin/ExcelRest.aspx/Documents/ProductSales.xlsx/OData/Table1
+http://\<serverName\>/_vti_bin/ExcelRest.aspx/Documents/ProductSales.xlsx/OData/Table1
   
     
     
@@ -62,7 +62,7 @@ When you make an OData request to Excel Services, it returns XML in the Atom for
   
     
     
-http://<serverName>/_vti_bin/ExcelRest.aspx/Documents/WindowsPhoneComparison.xlsx/odata/Table1
+http://\<serverName\>/_vti_bin/ExcelRest.aspx/Documents/WindowsPhoneComparison.xlsx/odata/Table1
   
     
     
