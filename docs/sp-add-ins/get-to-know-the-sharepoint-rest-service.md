@@ -179,7 +179,7 @@ Use the resources listed below to learn more about using the SharePoint REST ser
 
  
 
-|||
+|**Title**|**Description**|
 |:-----|:-----|
 | [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints)|Learn how to perform basic create, read, update, and delete (CRUD) operations with the SharePoint REST interface.|
 | [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest)|Learn how to perform basic create, read, update, and delete (CRUD) operations on lists and list items with the SharePoint REST interface.|

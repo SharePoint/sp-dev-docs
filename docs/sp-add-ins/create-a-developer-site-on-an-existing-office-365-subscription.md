@@ -62,7 +62,7 @@ An Office 365 Developer Site makes it easier to get set up and start creating, t
  
 6. In the  **New Site Collection** dialog box, provide information about your Developer Site.
     
-|||
+|**Field**|**Value**|
 |:-----|:-----|
 |**Title**|The name you want to give your Developer Site.|
 |**Public Website Address** list|A domain name and a URL path—either  **/sites/** or **/teams/**—and then type a URL name for the site collection.|

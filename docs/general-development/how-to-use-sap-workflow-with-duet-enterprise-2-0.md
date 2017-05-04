@@ -48,7 +48,7 @@ The first step is to create an SharePoint Add-in that will contain the connectio
 6. In the first **Specify the App for SharePoint Settings** dialog box, name your app and choose **SharePoint-hosted** under **How do you want to host your app for SharePoint**. Also specify the URL of the **Duet Workflow site** you want to debug against under **What SharePoint site do you want to use for debugging your app** and choose **Finish**.
     
   
-7. On the Build menu, choose **Deploy** *<your app name>*  .
+7. On the Build menu, choose **Deploy** *\<your app name\>*  .
     
   
 After the app is deployed, Visual Studio will launch the default page for the app.
@@ -72,7 +72,7 @@ BCS must be made aware of the external data source. This is done using an extern
   
 2. On the **Specify OData Source** page, enter the URL of the Duet Enterprise Workflow Service. The following is an example of a Duet service URL:
     
-     *https://<<DUETGATEWAY>>:<<PORT>>/sap/opu/odata/IWWRK/DUET_WORKFLOW_CORE;mo;c=SHAREPOINT_DE* 
+     *https://\<\<DUETGATEWAY\>\>:\<\<PORT\>\>/sap/opu/odata/IWWRK/DUET_WORKFLOW_CORE;mo;c=SHAREPOINT_DE* 
     
   
 3. Choose a name for your ODATA source, for example, SAPWorkflows, and then choose **Next**.
