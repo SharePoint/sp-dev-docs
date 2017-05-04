@@ -53,9 +53,8 @@ SharePoint supports four different permission scopes within the content database
 
 **Table 1. SharePoint add-in permission request scope URIs and descriptions**
 
-|||
-|:-----|:-----|
 |**Scope URI**|**Description**|
+|:-----|:-----|
 |tenancyhttp://sharepoint/content/tenant|The tenancy where the add-in is installed. Includes all children of this scope.|
 |site collectionhttp://sharepoint/content/sitecollection|The site collection where the add-in is installed. Includes all children of this scope.|
 |websitehttp://sharepoint/content/sitecollection/web|The website where the add-in is installed. Includes all children of this scope.|
@@ -157,9 +156,8 @@ Table 2 shows the permission request scope for list and library content. It also
 
 **Table 2. SharePoint add-in permission scope URIs and available rights**
 
-|||
-|:-----|:-----|
 |**Scope URI**|**Available Rights**|
+|:-----|:-----|
 |http://sharepoint/content/sitecollection|Read, Write, Manage, FullControl|
 |http://sharepoint/content/sitecollection/web|Read, Write, Manage, FullControl|
 |http://sharepoint/content/sitecollection/web/list|Read, Write, Manage, FullControl|
@@ -244,9 +242,8 @@ Table 3 shows the permission request scope for Business Connectivity Services (B
 
 **Table 3. BCS add-in permission request scope URIs and available rights**
 
-|||
-|:-----|:-----|
 |**Scope URI**|**Available Rights**|
+|:-----|:-----|
 |http://sharepoint/bcs/connection|Read|
 
  **Note**  For more information about the BCS add-in permission request scope, see  [Business Connectivity Services in SharePoint](http://msdn.microsoft.com/library/64b7d032-4b83-4e9e-bc08-f0a161af5457%28Office.15%29.aspx).
@@ -263,9 +260,8 @@ Table 4 shows the permission request scope for Search. It also lists the rights 
 
 **Table 4. Search add-in permission request scope URIs and available rights**
 
-|||
-|:-----|:-----|
 |**Scope URI**|**Available Rights**|
+|:-----|:-----|
 |http://sharepoint/search|QueryAsUserIgnoreAppPrincipal|
 
  **Note**  For more information about the Search add-in permission request scope, see  [Search in SharePoint](http://msdn.microsoft.com/library/59220f81-0e5e-4945-8056-cf0a116446cb%28Office.15%29.aspx).
@@ -286,9 +282,8 @@ Table 5 shows the permission request scope for Project Server 2013. It also list
 
 **Table 5. Project Server add-in permission request scope URIs and available rights**
 
-|||
-|:-----|:-----|
 |**Scope**|**Available Rights**|
+|:-----|:-----|
 |http://sharepoint/projectserver|Manage|
 |http://sharepoint/projectserver/projects|Read, Write|
 |http://sharepoint/projectserver/projects/project|Read, Write|
@@ -307,9 +302,8 @@ Table 6 shows the permission request scope for social features. It also lists th
 
 **Table 6. Social features add-in permission request scope URIs and available rights**
 
-|||
-|:-----|:-----|
 |**Scope URI**|**Available Rights**|
+|:-----|:-----|
 |http://sharepoint/social/tenant|Read, Write, Manage, FullControl|
 |http://sharepoint/social/core|Read, Write, Manage, FullControl|
 |http://sharepoint/social/microfeed|Read, Write, Manage, FullControl|
@@ -328,9 +322,8 @@ Table 7 shows the permission request scope for taxonomy. It also lists the right
 
 **Table 7. Taxonomy add-in permission request scope URIs and available rights**
 
-|||
-|:-----|:-----|
 |**Scope URI**|**Available Rights**|
+|:-----|:-----|
 |http://sharepoint/taxonomy|Read, Write|
 
  **Note**  For more information about the taxonomy add-in permission request scope, see  [Add SharePoint capabilities](http://msdn.microsoft.com/library/11ecb65e-6dc5-4cf1-80ca-3c16418697b6%28Office.15%29.aspx).
@@ -360,9 +353,8 @@ The  **BaseTemplateId** property is a child element, not an attribute of the **A
 
 **Table 7. Permission request scope with associated properties**
 
-||||
-|:-----|:-----|:-----|
 |**Scope URI**|**Property**|**Type**|
+|:-----|:-----|:-----|
 |http://sharepoint/content/sitecollection/web/list|**BaseTemplateId**|Integer **Note**  For more information about  **BaseTemplateId** and the corresponding integer value for the list base template, see the **Type** attribute of the [List Element (List)](http://msdn.microsoft.com/library/b2b26fee-eb45-48ac-99f1-65f725da293f%28Office.15%29.aspx). |
 
 ## Manage and troubleshoot add-in permissions

@@ -30,7 +30,6 @@ Find how-to articles and related code examples that show how to perform basic de
 
 |**Title**|**Summary**|
 |:-----|:-----|
-|||
 | [Create a basic SharePoint-hosted add-in by using Napa Office 365 Development Tools](http://msdn.microsoft.com/library/3b47c97b-9e09-47b2-a65f-29b0f44e34bf%28Office.15%29.aspx) <br/> |Learn how to create a basic SharePoint Add-in by using Napa Office 365 Development Tools.  <br/> |
 | [Set up an on-premises development environment for SharePoint Add-ins](http://msdn.microsoft.com/library/b0878c12-27c9-4eea-ae3b-7e79e5a8838d%28Office.15%29.aspx) <br/> |Learn how to set up a development environment that is specifically suited to developing SharePoint Add-ins with an on-premises installation of SharePoint.  <br/> |
 | [Get started creating provider-hosted SharePoint Add-ins](http://msdn.microsoft.com/library/3038dd73-41ee-436f-8c78-ef8e6869bf7b%28Office.15%29.aspx) <br/> |Learn how to create a basic provider-hosted SharePoint Add-in with the Office Developer Tools for Visual Studio 2012, how to interact with SharePoint sites by using the SharePoint CSOM, and how to implement OAuth in an SharePoint Add-in.  <br/> |
@@ -95,9 +94,6 @@ Find how-to articles and related code examples that show how to perform basic de
 <a name="bk_setuphowtos"> </a>
 
 
-****
-
-
 |**Title**|**Summary**|
 |:-----|:-----|
 | [How to: Detect the installed SKU of SharePoint](how-to-detect-the-installed-sku-of-sharepoint) <br/> |If the behavior of your solutions depends on the locally installed SKU of SharePoint or Project Server 2013, use the code sample in this article to find the SKU information you need.  <br/> |
@@ -106,9 +102,6 @@ Find how-to articles and related code examples that show how to perform basic de
 
 ## Customization how-tos for SharePoint
 <a name="bk_customhowtos"> </a>
-
-
-****
 
 
 |**Title**|**Summary**|
@@ -122,12 +115,8 @@ Find how-to articles and related code examples that show how to perform basic de
 <a name="bk_mobilehowtos"> </a>
 
 
-****
-
-
 |**Title**|**Summary**|
 |:-----|:-----|
-|||
 | [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint) <br/> |Learn about the system requirements and configuring a development environment for SharePoint mobility projects.  <br/> |
 | [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app) <br/> |Create a Windows Phone app in Visual Studio based on the Windows Phone SharePoint List Application template.  <br/> |
 | [How to: Store and retrieve SharePoint list items on a Windows Phone](how-to-store-and-retrieve-sharepoint-list-items-on-a-windows-phone) <br/> |Learn about the Windows Phone application life cycle and storing network data locally.  <br/> |
@@ -203,9 +192,8 @@ Find how-to articles and related code examples that show how to perform basic de
 <a name="bk_locationhowtos"> </a>
 
 
-|||
+|**Title**|**Summary**|
 |:-----|:-----|
-|Title  <br/> |Summary  <br/> |
 | [How to: Add a Geolocation column to a list programmatically in SharePoint](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint) <br/> |Learn how to programmatically add a Geolocation column to a list in SharePoint. Integrate location information and maps in SharePoint lists and location-based websites by using the new Geolocation field creating your own geolocation-based field type.  <br/> |
 | [How to: Set the Bing Maps key at the web and farm level in SharePoint](how-to-set-the-bing-maps-key-at-the-web-and-farm-level-in-sharepoint) <br/> |Learn how to set the Bing Maps key programmatically at the web and farm level by using the SharePoint client object model and Windows PowerShell, to enable the Bing Maps functionality in SharePoint lists and location-based web and mobile apps.  <br/> |
 | [How to: Extend the Geolocation field type using client-side rendering](how-to-extend-the-geolocation-field-type-using-client-side-rendering) <br/> |Learn how to customize the SharePoint Geolocation field type programmatically using client-side rendering.  <br/> |
@@ -229,13 +217,12 @@ Find how-to articles and related code examples that show how to perform basic de
 <a name="bk_bcshowtos"> </a>
 
 
-|||
+|**Title**|**Summary**|
 |:-----|:-----|
 | [How to: Create external content types for SQL Server in SharePoint](how-to-create-external-content-types-for-sql-server-in-sharepoint) <br/> |Learn how to create an external content type for SQL Server in SharePoint.  <br/> |
 | [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint) <br/> |Learn how to use Visual Studio 2012 to discover a published OData source and create a reusable external content type for use in BCS in SharePoint.  <br/> |
 | [How to: Create an OData data service for use as a BCS external system](how-to-create-an-odata-data-service-for-use-as-a-bcs-external-system) <br/> |Learn how to create an Internet-addressable WCF service that uses OData to send notifications to SharePoint when the underlying data changes. These notifications are used to trigger events that are attached to external lists.  <br/> |
 | [How to: Create an external list using an OData data source in SharePoint](how-to-create-an-external-list-using-an-odata-data-source-in-sharepoint) <br/> |Learn how to create an external list programmatically and bind it to an OData-based external content type in SharePoint.  <br/> |
-|||
 | [How to: Create an add-in-scoped external content type in SharePoint](how-to-create-an-add-in-scoped-external-content-type-in-sharepoint) <br/> |Learn how to create external content types that can be installed, secured, and used in an SharePoint Add-in.  <br/> |
 | [How to: Access external data with REST in SharePoint](how-to-access-external-data-with-rest-in-sharepoint) <br/> |Learn how to access external data from SharePoint by using Representational State Transfer (REST) URLs for BCS.  <br/> |
 | [How to: Use the client code library to access external data in SharePoint](how-to-use-the-client-code-library-to-access-external-data-in-sharepoint) <br/> |Learn how to use the SharePoint client object model to work with BCS objects in SharePoint using browser-based scripting.  <br/> |
