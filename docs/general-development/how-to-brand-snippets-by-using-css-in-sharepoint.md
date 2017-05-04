@@ -64,9 +64,9 @@ In this example, the site uses managed navigation, so the top navigation control
     
     
 
-### Sample 1: Navigation <div> from the HTML mockup file
+### Sample 1: Navigation \<div\> from the HTML mockup file
 
-Before you use Design Manager, when you design the HTML mockup for your master page, you'll likely use HTML and CSS to design a functional top navigation element. This HTML sample uses a basic structure for the top navigation: a **<div>** element with an ID and class name, a list for the top-level navigation entries, and a nested list for each flyout submenu.
+Before you use Design Manager, when you design the HTML mockup for your master page, you'll likely use HTML and CSS to design a functional top navigation element. This HTML sample uses a basic structure for the top navigation: a **\<div\>** element with an ID and class name, a list for the top-level navigation entries, and a nested list for each flyout submenu.
   
     
     
@@ -106,9 +106,9 @@ Before you use Design Manager, when you design the HTML mockup for your master p
 ```
 
 
-### Sample 2: Navigation <div> styled with custom CSS
+### Sample 2: Navigation \<div\> styled with custom CSS
 
-To override the default SharePoint styles, in the mockup HTML file, include a standard link to your CSS file  `(<link rel="stylesheet" type="text/css" href="URLtoYourCustomCSSFile"/>`) just before the closing **</head>** tag.
+To override the default SharePoint styles, in the mockup HTML file, include a standard link to your CSS file  `(<link rel="stylesheet" type="text/css" href="URLtoYourCustomCSSFile"/>`) just before the closing **\</head\>** tag.
   
     
     
@@ -117,13 +117,13 @@ In these HTML and CSS samples, note the following:
     
     
 
-- Navigation entries are styled by using the format  `.msax-Navigation ul li` instead of applying classes directly to the **<ul>** or **<li>** tags.
+- Navigation entries are styled by using the format  `.msax-Navigation ul li` instead of applying classes directly to the **\<ul\>** or **\<li\>** tags.
     
   
-- Styles use the syntax  `.msax-Navigation ul li` instead of `.msax-Navigation ul>li` because the snippet markup may contain intervening **<div>** tags between the selected elements.
+- Styles use the syntax  `.msax-Navigation ul li` instead of `.msax-Navigation ul>li` because the snippet markup may contain intervening **\<div\>** tags between the selected elements.
     
   
-- The HTML mockup contains an empty **<li></li>** element as the last entry of the top-level **<ul>**. This is because, with managed navigation turned on, SharePoint adds an **Edit Links** command as the final entry to the top-level navigation, and the final site typically does not need to display this option. The CSS sample uses `.msax-Navigation ul li:last-child` to select this entry and set the display value to `none`. The empty **<li></li>** element in the HTML file is a temporary substitute for the default **Edit Links** entry. Be aware of this final **<li>** element if your site uses managed navigation and your CSS uses any `li:last-child` selectors.
+- The HTML mockup contains an empty **\<li\>\</li\>** element as the last entry of the top-level **\<ul\>**. This is because, with managed navigation turned on, SharePoint adds an **Edit Links** command as the final entry to the top-level navigation, and the final site typically does not need to display this option. The CSS sample uses `.msax-Navigation ul li:last-child` to select this entry and set the display value to `none`. The empty **\<li\>\</li\>** element in the HTML file is a temporary substitute for the default **Edit Links** entry. Be aware of this final **\<li\>** element if your site uses managed navigation and your CSS uses any `li:last-child` selectors.
     
   
 
@@ -228,11 +228,11 @@ In the Snippet Gallery, when you configure the properties of the top navigation 
 - Some properties are already configured to make branding the top navigation snippet easier by eliminating the default dynamic CSS and JavaScript behaviors—for example, by default **UseSimpleRendering** is set to **True** and **MaximumDynamicDisplayLevels** is set to **0**. For more information about specific properties of the top navigation snippet, see  [AspMenu properties](http://msdn.microsoft.com/en-us/library/ms412476.aspx) and [Menu properties](http://msdn.microsoft.com/en-us/library/282668a1.aspx).
     
   
-After you configure the top navigation snippet in the Snippet Gallery, choose **Update**, and then choose **Copy to Clipboard**. In the HTML master page, delete the contents of the navigation  `<div id="navigation" class="msax-Navigation">` that contains your mockup control (delete just the contents of the **<div>** tag, not the **<div>** tag itself), and then copy the snippet into the navigation **<div>**. If necessary, reposition the navigation **<div>**, typically just after the start of the  `<div id="s4-bodyContainer">` tag but before the **<div>** containing `PlaceHolderMain`.
+After you configure the top navigation snippet in the Snippet Gallery, choose **Update**, and then choose **Copy to Clipboard**. In the HTML master page, delete the contents of the navigation  `<div id="navigation" class="msax-Navigation">` that contains your mockup control (delete just the contents of the **\<div\>** tag, not the **\<div\>** tag itself), and then copy the snippet into the navigation **\<div\>**. If necessary, reposition the navigation **\<div\>**, typically just after the start of the  `<div id="s4-bodyContainer">` tag but before the **\<div\>** containing `PlaceHolderMain`.
   
     
     
-For easy comparison with the HTML of the navigation **<div>** above, the following sample contains the navigation **<div>** portion of the top navigation snippet. Note that this is not the entire snippet.
+For easy comparison with the HTML of the navigation **\<div\>** above, the following sample contains the navigation **\<div\>** portion of the top navigation snippet. Note that this is not the entire snippet.
   
     
     
