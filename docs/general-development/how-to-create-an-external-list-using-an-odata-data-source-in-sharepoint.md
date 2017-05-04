@@ -90,7 +90,7 @@ For testing purposes, you may want to modify the AppManifest.xml file so that th
 1. Open the AppManifest.xml file using an XML editor.
     
   
-2. Find the <StartPage> tag.
+2. Find the \<StartPage\> tag.
     
   
 3. Change the value to  `~appWebUrl/Lists/Employees`.
