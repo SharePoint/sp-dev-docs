@@ -23,7 +23,7 @@ A query language expression can contain nested subexpressions that include query
 **Table 1. Subexpressions in query language expressions**
 
 
-**Item**|**Description**|
+|**Item**|**Description**|
 |:-----|:-----|
 |Token expressions  <br/> |One or more query terms, phrases, or numeric values to search for in a query.  <br/> |
 |Property specification  <br/> |A property or full-text index to match with the affected expression.  <br/> |
@@ -157,7 +157,7 @@ Each numeric term expression must include a property specification of a compatib
 |**Int** <br/> |**Integer** <br/> |64 bit integer.  <br/> |
 |**Float** <br/> |**Double** <br/> |64-bit (double precision) floating point.  <br/> |
 |**Decimal** <br/> |**Decimal** <br/> |128-bit decimal  <br/> |
-|**Datetime** <br/> |**Datetime** <br/> |A date and time value.  <br/> The date/time support in FQL enables the same numeric operations on date/time values as on other numeric values.  <br/> |
+|**Datetime** <br/> |**Datetime** <br/> |A date and time value.  <br/>The date/time support in FQL enables the same numeric operations on date/time values as on other numeric values.  <br/> |
    
 
 #### Date and time query expressions
@@ -226,7 +226,7 @@ The following words are reserved within FQL.
   
     
     
- `and, or, any, andnot, count, decimal, rank, near, onear, int, in32, int64, float, double, datetime, max, min, range, phrase, scope, filter, not, string, starts-with, ends-with, equals, words, xrank.`
+`and, or, any, andnot, count, decimal, rank, near, onear, int, in32, int64, float, double, datetime, max, min, range, phrase, scope, filter, not, string, starts-with, ends-with, equals, words, xrank.`
   
     
     
@@ -321,7 +321,7 @@ Table 3 lists the types of operators supported by FQL.
 |Boolean  <br/> |Enables you to combine terms and sub-expressions in a query.  <br/> | [AND](fast-query-language-fql-syntax-reference#fql_and_operator),  [OR](fast-query-language-fql-syntax-reference#fql_or_operator),  [ANY](fast-query-language-fql-syntax-reference#fql_any_operator),  [ANDNOT](fast-query-language-fql-syntax-reference#fql_andnot_operator),  [NOT](fast-query-language-fql-syntax-reference#fql_not_operator),  [COUNT](fast-query-language-fql-syntax-reference#fql_count_operator),  [COUNT](fast-query-language-fql-syntax-reference#fql_count_operator) <br/> |
 |Proximity  <br/> |Enables you to specify the proximity of the query terms in a matching sequence of text.  <br/> | [NEAR](fast-query-language-fql-syntax-reference#fql_near_operator),  [ONEAR](fast-query-language-fql-syntax-reference#fql_onear_operator),  [PHRASE](fast-query-language-fql-syntax-reference#fql_phrase_operator),  [STARTS-WITH](fast-query-language-fql-syntax-reference#fql_startswith_operator),  [ENDS-WITH](fast-query-language-fql-syntax-reference#fql_endswith_operator),  [EQUALS](fast-query-language-fql-syntax-reference#fql_equals_operator) <br/> |
 |Numeric  <br/> |Enables you to specify numeric conditions in the query.  <br/> | [RANGE](fast-query-language-fql-syntax-reference#fql_range_operator) , [INT](fast-query-language-fql-syntax-reference#fql_int_operator),  [FLOAT](fast-query-language-fql-syntax-reference#fql_float_operator),  [DATETIME](fast-query-language-fql-syntax-reference#fql_datetime_operator),  [DECIMAL](#fql_decimal_operator) <br/> |
-|Relevance  <br/> |Enables you to impact the relevance evaluation of a query.  <br/> | [XRANK](fast-query-language-fql-syntax-reference#fql_xrank_operator)and  [FILTER](fast-query-language-fql-syntax-reference#fql_filter_operator) <br/> |
+|Relevance  <br/> |Enables you to impact the relevance evaluation of a query.  <br/> | [XRANK](fast-query-language-fql-syntax-reference#fql_xrank_operator) and  [FILTER](fast-query-language-fql-syntax-reference#fql_filter_operator) <br/> |
    
 Table 4 provides a list of the supported operators.
   
@@ -1438,7 +1438,7 @@ You can search for an exact string of tokens by using the **STRING** operator wi
   
     
     
-All such phrase operations imply a tokenized phrase match. This means that special characters such as comma (" **,** "), semicolon (" **;** "), colon (" **:** "), underscore (" **_** "), minus (" **-** "), or forward slash (" **/** ") are treated as white space. This is related to the tokenization process.
+All such phrase operations imply a tokenized phrase match. This means that special characters such as comma (" **,** "), semicolon (" **;** "), colon (" **:** "), underscore (" \_ "), minus (" **-** "), or forward slash (" **/** ") are treated as white space. This is related to the tokenization process.
   
     
     
