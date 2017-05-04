@@ -18,9 +18,14 @@
       "Index": "external"
     },      
     {
+      "Title": "SharePoint General Development",
+      "URL": "/sharepoint/docs/general-development/sharepoint-development-overview",
+      "Index": "/sharepoint/docs"
+    },
+    {
       "Title": "SharePoint Add-ins",
-      "URL": "https://msdn.microsoft.com/en-us/library/office/fp179930.aspx",
-      "Index": "external"
+      "URL": "/sharepoint/docs/sp-add-ins/sharepoint-add-ins",
+      "Index": "/sharepoint/docs"
     },
     {
       "Title": "SharePoint REST APIs",
