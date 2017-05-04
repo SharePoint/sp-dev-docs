@@ -93,7 +93,7 @@ Except where indicated otherwise, none of these tokens in the next table can be 
 <a name="SP15URLS_addlresources"> </a>
 
 
--  [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint)
+-  [Build farm solutions in SharePoint](https://msdn.microsoft.com/en-us/library/office/jj163902.aspx)
     
   
 -  [Advanced Extranet Support](http://msdn.microsoft.com/library/21d67796-23c5-4339-8f0e-124208d21ab2%28Office.15%29.aspx)
