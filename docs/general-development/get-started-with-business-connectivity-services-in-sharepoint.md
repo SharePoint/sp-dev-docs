@@ -10,31 +10,9 @@ ms.assetid: c6bf3db0-db79-4b13-9834-891d24b2c9e5
 Learn the basics of what Business Connectivity Services (BCS) provides to developers of SharePoint solutions, along with how to get started using BCS in various types of solutions.
 ## What is Business Connectivity Services?
 
+Business Connectivity Services (BCS) was introduced in SharePoint Server 2010 as an evolution of the Business Data Catalog released in Office SharePoint Server 2007. BCS enables SharePoint to work with data that is hosted externally. Possible sources can include databases, web services, Windows Communication Foundation (WCF) services, Open Data Protocol (OData) sources, and other proprietary data that is accessed by using custom .NET assemblies.
 
-|||
-|:-----|:-----|
-|Business Connectivity Services (BCS) was introduced in SharePoint Server 2010 as an evolution of the Business Data Catalog released in Office SharePoint Server 2007. BCS enables SharePoint to work with data that is hosted externally. Possible sources can include databases, web services, Windows Communication Foundation (WCF) services, Open Data Protocol (OData) sources, and other proprietary data that is accessed by using custom .NET assemblies. [![Get set up](../../images/mod_icon_getstartbox.gif)          ](get-started-with-business-connectivity-services-in-sharepoint#SP15GettingStartedBCS_WhatDoYouNeed) [![Get to work](../../images/mod_icon_dobox.gif)          ](get-started-with-business-connectivity-services-in-sharepoint#SP15GettingStartedBCS_WhatCanYouDo) [![Learn more](../../images/mod_icon_startbox.gif)          ](get-started-with-business-connectivity-services-in-sharepoint#SP15GettingStartedBCS_LearnMore)|
-**Watch the video: SharePoint business connectivity services and OData services overview**
-
-  
-    
-    
-
-  
-    
-    
-![Videos](../../images/mod_icon_video.png)
-  
-    
-    
-
-  
-    
-    
-
-  
-    
-    
+<a href="#SP15GettingStartedBCS_WhatDoYouNeed"><img alt="Get set up" src="../../images/mod_icon_getstartbox.gif" /></a>&nbsp;&nbsp;&nbsp;<a href="#SP15GettingStartedBCS_WhatCanYouDo"><img alt="Get to work" src="../../images/mod_icon_dobox.gif" /></a>&nbsp;&nbsp;&nbsp;<a href="#SP15GettingStartedBCS_LearnMore"><img alt="Learn more" src="../../images/mod_icon_startbox.gif" /></a>
 |
    
 In a dynamic workplace, information workers need access to data that resides in separate software worlds, for example:
