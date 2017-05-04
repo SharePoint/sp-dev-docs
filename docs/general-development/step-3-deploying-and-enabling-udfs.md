@@ -95,7 +95,7 @@ To do the following steps, you need a computer that has SharePoint Server 2010 i
 2. Under **Excel Services Settings**, click **User-defined function assemblies**. 
     
   
-3. On the Excel Services User-Defined Functions page, click **Add User-Defined Function** to open the Excel ****Services Add User-Defined Function Assembly page.
+3. On the Excel Services User-Defined Functions page, click **Add User-Defined Function** to open the ExcelServices Add User-Defined Function Assembly page.
     
   
 4. In the **Assembly** box, type the path to the SampleUdf.dll assembly. In this example, it would be _C:\\UDFs\\SampleUdf.dll_.

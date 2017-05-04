@@ -72,7 +72,6 @@ These actions are used on list items.
     
     
 
-****
 
 
 |**VISIO ACTION SHAPE**|**CORRESPONDING ACTION IN SHAREPOINT DESIGNER**|**ACTION DESCRIPTION**|
@@ -101,7 +100,7 @@ Actions in this category pertain to task items. These actions apply only to Shar
     
     
 
-****
+
 
 
 |**VISIO ACTION SHAPE**|**CORRESPONDING ACTION IN SHAREPOINT DESIGNER**|**ACTION DESCRIPTION**|
@@ -122,7 +121,7 @@ The single action in this category looks up a user's manager and stores that inf
     
     
 
-****
+
 
 
 |**VISIO ACTION SHAPE**|**CORRESPONDING ACTION IN SHAREPOINT DESIGNER**|**ACTION DESCRIPTION**|
@@ -138,7 +137,7 @@ Some workflow actions are only available when the workflow is associated to a do
     
     
 
-****
+
 
 
 |**VISIO ACTION SHAPE**|**CORRESPONDING ACTION IN SHAREPOINT DESIGNER**|**ACTION DESCRIPTION**|
@@ -171,7 +170,7 @@ This section describes the conditions that are available in SharePoint Designer 
     
     
 
-****
+
 
 
 |**VISIO CONDITION SHAPE**|**CORRESPONDING CONDITION IN SHAREPOINT DESIGNER**|**CONDITION DESCRIPTION**|
@@ -206,7 +205,7 @@ Some workflow conditions are only available when the workflow is associated to a
     
     
 
-****
+
 
 
 |**VISIO CONDITION SHAPE**|**CORRESPONDING CONDITION IN SHAREPOINT DESIGNER**|**CONDITION DESCRIPTION**|

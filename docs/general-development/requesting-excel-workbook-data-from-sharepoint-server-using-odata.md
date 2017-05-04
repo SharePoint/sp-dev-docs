@@ -69,7 +69,7 @@ The Excel Services implementation of OData supports a number of the standard ODa
 **Table 1. Excel Services OData system query options**
 
 
-|****System Query Option****|****Description****|
+|**System Query Option**|**Description**|
 |:-----|:-----|
 |/\<tableName\>  <br/> |Returns all rows for the table specified by \<tableName\>, where \<tableName\> is the name of a table in an Excel workbook that contains the rows that you want to retrieve.  <br/> **Important:** This form of OData request returns no more than 500 rows at a time. Each set of 500 rows is one page. To get rows in further pages in a table that has more than 500 rows, use the **$skiptoken** query option (see below).<br/>The following example returns all rows up to the 500th row in Table1 in the ProductSales.xlsx workbook.  <br/> |
 |**$metadata** <br/> |Returns all the available tables and the type information for all rows in each table in the specified workbook.  <br/> The following example returns the tables and type information for the tables in the ProductSales.xlsx workbook.  <br/> http://contoso1/_vti_bin/ExcelRest.aspx/Documents/ProductSales.xlsx/OData/$metadata  <br/> |

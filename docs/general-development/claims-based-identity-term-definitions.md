@@ -16,7 +16,7 @@ Table 1 contains definitions of key terms related to claims-based identity.
 **Table 1. Definitions of terms related to claims-based identity**
 
 
-|****Term****|****Definition****|
+|**Term**|**Definition**|
 |:-----|:-----|
 |Claim  <br/> |A statement that one subject makes about itself or another subject. For example, the statement can be about a name, identity, key, group, privilege, or capability. Claims are issued by a provider, and they are given one or more values and then packaged in security tokens that are issued by a security token service (STS). They are also defined by a claim value type and, possibly, associated metadata.  <br/> |
 |Claim name  <br/> |A user-friendly name for the claim type.  <br/> |

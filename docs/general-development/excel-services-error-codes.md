@@ -30,7 +30,7 @@ The following table lists the error codes for Excel Web Services alerts and the 
     
 
 
-|****Error Code****|****Message****|****Explanation****|****Resolution****|
+|**Error Code**|**Message**|**Explanation**|**Resolution**|
 |:-----|:-----|:-----|:-----|
 |ApiInvalidArgument  <br/> |Invalid value to argument: {0}  <br/> |An invalid value for an argument was passed into the API call.  <br/> 0 = name of the argument. Its value is invalid.  <br/> |Use a valid value for the argument.  <br/> |
 |ApiInvalidCoordinate  <br/> |The {0} coordinate of {1} is invalid.  <br/> |0 = coordinate name (row, column, height, width).  <br/> 1 = name of the argument, which holds the coordinate structure.  <br/> The contents of the **RangeCoordinates** class or the row\\column\\height\\width parameters on a get or set call are invalid. <br/> |Use valid coordinate values for the argument.  <br/> |

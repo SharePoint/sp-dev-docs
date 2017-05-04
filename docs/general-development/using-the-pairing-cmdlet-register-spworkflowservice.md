@@ -27,7 +27,7 @@ Also note that **Register-SPWorkflowService** uses the credentials of the curren
 ## Cmdlet design
 
 
-****
+
 
 
 |**Detail**|**Description**|

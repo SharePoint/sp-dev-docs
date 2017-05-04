@@ -177,7 +177,7 @@ The first step is preparing our SharePoint site with document libraries that our
     
   
 
-   ****
+   
 
   
 

@@ -299,7 +299,7 @@ The following sections describe attributes, child elements, and parent elements.
     
 
 
-|****Element****|**Description**|
+|**Element**|**Description**|
 |:-----|:-----|
 | [ActionParameters Element in Action (BDCMetadata Schema)](http://msdn.microsoft.com/library/e14df901-621c-1851-db78-e99fd3cf31ae%28Office.15%29.aspx) <br/> |The **ActionParameters** element that contains this **ActionParameter**.  <br/> |
    
@@ -1032,11 +1032,11 @@ The following sections describe attributes, child elements, and parent elements.
 
 |**Attribute**|**Description**|
 |:-----|:-----|
-|**Namespace** <br/> |Required.  <br/> The namespace that this external content type belongs to.  <br/> Attribute type: **String** <br/> **Note:** The namespace should not contain the asterisk special character " *****".           |
+|**Namespace** <br/> |Required.  <br/> The namespace that this external content type belongs to.  <br/> Attribute type: **String** <br/> **Note:** The namespace should not contain the asterisk special character " **\***".           |
 |**Version** <br/> |Required.  <br/> The version number of this external content type.  <br/> Attribute type: **String** <br/> **Caution:** When the BDC model changes, you must increase the version number of the external content type. If the structure of an external content type changes, you should increase the major number. Examples of structural changes include adding a field to a **SpecificFinder** or changing an identifier field. If the change does not affect the structure of the external content type, for example, when adding a creator method, changing connection information, or when changing names of **LobSystems** and type descriptors, you should change the build number and revision number.          |
 |**EstimatedInstanceCount** <br/> |Optional.  <br/> The estimated number of external items contained by the external system.  <br/> Default value: 10000  <br/> Attribute type: **Integer** <br/> |
 |**DefaultOperationMode** <br/> |Optional.  <br/> Specifies the default behavior when interacting with the external system while creating, deleting, updating, or reading external items.  <br/> Default value: Default  <br/> The following table lists the possible values for this attribute.  <br/> <table width="50%" cellspacing="2" cellpadding="5" frame="lhs"><thead><tr><th><p>Value</p></th><th><p>Description</p></th></tr></thead><tbody><tr><td><p>Online</p></td><td><p>Bypass the cached external items for all operations and interact with the external system directly.</p></td></tr><tr><td><p>Cached</p></td><td><p>Perform <b>Create</b>, <b>Read</b>, <b>Update</b>, and <b>Delete</b> operations directly against the cached external items. For <b>Read</b> operations, if the requested external items are available in the cache, use the external items in the cache. Otherwise, bypass the cache to obtain the external items from the external system, and put it in the cache for later use.</p></td></tr><tr><td><p>Offline</p></td><td><p>Perform <b>Create</b>, <b>Read</b>, <b>Update</b>, and <b>Delete</b> operations against only the cached external items.</p></td></tr><tr><td><p>Default</p></td><td><p>Use the System default behavior. This uses Cached mode if the environment supports caching external items.</p></td></tr></tbody></table>|
-|Name  <br/> |Required.  <br/> The name of the external content type.  <br/> Attribute type: **String** <br/> **Note:** The name of an external content type should not contain the asterisk special character " *****".           |
+|Name  <br/> |Required.  <br/> The name of the external content type.  <br/> Attribute type: **String** <br/> **Note:** The name of an external content type should not contain the asterisk special character " **\***".           |
 |DefaultDisplayName  <br/> |Optional.  <br/> The default display name of the external content type.  <br/> Attribute type: **String** <br/> |
 |IsCached  <br/> |Optional.  <br/> Specifies whether this external content type will be frequently used. If set to true, Business Data Connectivity (BDC) service will cache this external content type in memory.  <br/> Default value: **true** <br/> Attribute type: **Boolean** <br/> |
    

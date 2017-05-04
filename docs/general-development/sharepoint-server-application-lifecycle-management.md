@@ -7,12 +7,12 @@ ms.assetid: caaf9a09-2e6a-49e3-a8d6-aaf7f93a842a
 
 # SharePoint Application Lifecycle Management
 Applies common application lifecycle management (ALM) concepts and practices to application development using SharePoint technologies.
- * **Provided by: *** Eric Charran, Microsoft Corporation
+ **Provided by:** Eric Charran, Microsoft Corporation
   
     
     
 
- * **Contributors:*** Vesa Juvonen, Microsoft Corporation | Steve Peschka, Microsoft Corporation
+**Contributors:** Vesa Juvonen, Microsoft Corporation | Steve Peschka, Microsoft Corporation
 
   
     

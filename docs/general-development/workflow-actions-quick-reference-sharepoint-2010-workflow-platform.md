@@ -73,7 +73,7 @@ General actions are actions that display in the Actions list in all workflow con
     
     
 
-****
+
 
 
 |**Action**|**Description**|
@@ -120,7 +120,7 @@ Actions such as **Start Approval Process**, **Declare Record**, and **Lookup Man
     
     
 
-****
+
 
 
 |**Action**|**Description**|
@@ -167,7 +167,7 @@ When you customize task behavior inside actions such as **Start Approval Process
     
 
 
-****
+
 
 
 |**Action**|**Description**|
@@ -210,7 +210,7 @@ The following table presents a comparison between the three task actions on the 
     
     
 
-****
+
 
 
 |**Feature**|**Task actions**|**Pre-build reusable workflows**|
@@ -231,7 +231,7 @@ Some workflow actions (such as **Shared Documents**) are available only when the
     
     
 
-****
+
 
 
 |**Action**|**Description**|

@@ -17,7 +17,7 @@ The following are links to blogs, forums, and additional resources related to Ex
 
 
 
-|****Blog Name****|****Links****|
+|**Blog Name**|**Links**|
 |:-----|:-----|
 |Cum Grano Salis  <br/> | [Home page](http://blogs.msdn.com/cumgranosalis/) <br/>  [Excel Services page](http://blogs.msdn.com/cumgranosalis/archive/category/12700.aspx) <br/> |
 |Microsoft Excel 2010: The official blog of the Microsoft Excel product team  <br/> | [Home page](http://blogs.msdn.com/excel) <br/>  [Excel Online page](http://blogs.msdn.com/excel/archive/2010/01/21/collaborative-editing-using-excel-web-app.aspx) <br/> |
@@ -25,14 +25,14 @@ The following are links to blogs, forums, and additional resources related to Ex
    
 
 
-|****Forum Name****|****Links****|
+|**Forum Name**|**Links**|
 |:-----|:-----|
 |SharePoint - Excel Services  <br/> | [Excel Services forum home page](http://social.msdn.microsoft.com/Forums/en-US/sharepointexcel/threads) <br/> |
 |SharePoint Products and Technologies  <br/> | [List of SharePoint Products and Technologies forums](http://social.msdn.microsoft.com/forums/en-US/category/sharepoint) <br/> |
    
 
 
-|****Additional Resources****|****Links****|
+|**Additional Resources**|**Links**|
 |:-----|:-----|
 |Excel Services Resource Center  <br/> | [Excel Services Resource Center on MSDN](http://msdn.microsoft.com/en-us/office/bb203828.aspx) <br/> |
 |IT Pro \\ Administration Documentation  <br/> | [TechNet](http://technet.microsoft.com/en-us/library/ee424401%28office.14%29.aspx) <br/> |

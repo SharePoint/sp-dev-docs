@@ -75,7 +75,7 @@ The following tables list blogs, forums, and additional resources about claims-b
 **Table 1. Blogs**
 
 
-|****Blog Name****|****Links****|
+|**Blog Name**|**Links**|
 |:-----|:-----|
 |Share-n-dipity  <br/> | [Blog home page](http://blogs.technet.com/speschka/) <br/> |
 |Microsoft SharePoint Developer Team Blog  <br/> | [Blog home page](http://blogs.msdn.com/b/sharepointdev/) <br/> |
@@ -85,7 +85,7 @@ The following tables list blogs, forums, and additional resources about claims-b
 **Table 2. Forums**
 
 
-|****Forum Name****|****Links****|
+|**Forum Name**|**Links**|
 |:-----|:-----|
 |SharePoint Products and Technologies Forums  <br/> | [Forum home page](http://social.msdn.microsoft.com/Forums/en-US/category/sharepoint) <br/> |
    
@@ -93,7 +93,7 @@ The following tables list blogs, forums, and additional resources about claims-b
 **Table 3. Additional resources**
 
 
-|****Additional Resources****|****Links****|
+|**Additional Resources**|**Links**|
 |:-----|:-----|
 |Claims and Security: Technical Articles Node  <br/> | [Claims and security: Technical articles and code samples on MSDN](http://msdn.microsoft.com/en-us/library/gg430136.aspx) <br/> |
 |||
