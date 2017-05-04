@@ -21,7 +21,13 @@ This class implements provides a standard way to validate properties and functio
 |[`isNotNullOrUndefined(value,variableName)`](isnotnullorundefined-validate.md)     | `public, static` | `void` | Throws an exception if the specified value is null or undefined. |
 |[`isTrue(value,variableName)`](istrue-validate.md)     | `public, static` | `void` | Throws an exception if the specified value is not true. |
 
+## Sample
+```ts
+import {
+  Validate
+} from '@microsoft/sp-core-library';
 
-
-
-
+Validate.isNonemptyString(idValue, "idValue");
+Validate.isNotNullOrUndefined(idValue, "idValue");
+Validate.isTrue((idValue !== undefined), "idValue");
+```
