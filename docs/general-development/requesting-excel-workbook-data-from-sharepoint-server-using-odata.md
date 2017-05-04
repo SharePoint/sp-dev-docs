@@ -9,8 +9,7 @@ ms.assetid: 2f846e96-6c9e-4ed2-9602-4081ad0ab135
 # Requesting Excel workbook data from SharePoint Server using OData
 
 > **Note:**
-> The Excel Services REST API applies to SharePoint and SharePoint 2016 on-premises. For Office 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/en-us/docs/api-reference/v1.0/resources/excel
-) endpoint.
+> The Excel Services REST API applies to SharePoint and SharePoint 2016 on-premises. For Office 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/en-us/docs/api-reference/v1.0/resources/excel) endpoint.
   
     
     
@@ -72,7 +71,7 @@ The Excel Services implementation of OData supports a number of the standard ODa
 
 |****System Query Option****|****Description****|
 |:-----|:-----|
-|/<tableName>  <br/> |Returns all rows for the table specified by <tableName>, where <tableName> is the name of a table in an Excel workbook that contains the rows that you want to retrieve.  <br/> **Important:** This form of OData request returns no more than 500 rows at a time. Each set of 500 rows is one page. To get rows in further pages in a table that has more than 500 rows, use the **$skiptoken** query option (see below).          The following example returns all rows up to the 500th row in Table1 in the ProductSales.xlsx workbook.  <br/> |
+|/\<tableName\>  <br/> |Returns all rows for the table specified by \<tableName\>, where \<tableName\> is the name of a table in an Excel workbook that contains the rows that you want to retrieve.  <br/> **Important:** This form of OData request returns no more than 500 rows at a time. Each set of 500 rows is one page. To get rows in further pages in a table that has more than 500 rows, use the **$skiptoken** query option (see below).<br/>The following example returns all rows up to the 500th row in Table1 in the ProductSales.xlsx workbook.  <br/> |
 |**$metadata** <br/> |Returns all the available tables and the type information for all rows in each table in the specified workbook.  <br/> The following example returns the tables and type information for the tables in the ProductSales.xlsx workbook.  <br/> http://contoso1/_vti_bin/ExcelRest.aspx/Documents/ProductSales.xlsx/OData/$metadata  <br/> |
 |**$orderby** <br/> |Returns rows in the specified table, sorted by the value specified by **$orderby**.  <br/> The following example returns all rows from Table 1, sorted by the Name column, in the ProductSales.xlsx workbook.  <br/> **Note:** The default value for **$orderby** is ascending.          http://contoso1/_vti_bin/ExcelRest.aspx/Documents/ProductSales.xlsx/OData/Table1?$orderby=Name  <br/> |
 |**$top** <br/> |Returns N rows from the table where N is a number specified by the value of **$top**.  <br/> The following example returns the first 5 rows from Table1, sorted by the Name column, in the ProductSales.xlsx workbook.  <br/> http://contoso1/_vti_bin/ExcelRest.aspx/Documents/ProductSales.xlsx/OData/Table1?$orderby=Name&amp;$top=5  <br/> |
@@ -81,7 +80,7 @@ The Excel Services implementation of OData supports a number of the standard ODa
 |**$filter** <br/> |Returns the subset of rows that satisfy the conditions specified in the value of **$filter**. For more information about the operators and set of functions that you can use with **$filter**, see the OData  [documentation](http://www.odata.org/documentation/odata-version-2-0/uri-conventions/).  <br/> The following example returns only those rows where the value of the Price column is greater than 100.  <br/> http://contoso1/_vti_bin/ExcelRest.aspx/Documents/ProductSales.xlsx/OData/Table1?$filter=Price gt 100  <br/> |
 |**$format** <br/> |The Atom XML format is the only supported value and is the default for the **$format** query option. <br/> |
 |**$select** <br/> |Returns the entity specified by **$select**.  <br/> The following example selects the Name column from Table1 in the ProductSales.xlsx workbook.  <br/> http://contoso1/_vti_bin/ExcelRest.aspx/Documents/ProductSales.xlsx/OData/Table1?$select=Name  <br/> |
-|**$inlinecount** <br/> | Returns the number of rows in the specified table. <br/>  $ **inlinecount** can only use 1 of 2 of the following values. <br/> **allpages** - Returns the count for all rows in the table. <br/> **none** - Does not include a count of rows in the table. <br/>  The following example returns the count for the total number of rows in Table1 in the ProductSales.xlsx workbook. <br/>  http://contoso1/_vti_bin/ExcelRest.aspx/Documents/ProductSales.xlsx/OData/Table1?$inlinecount=allpages <br/> |
+|**$inlinecount** <br/> | Returns the number of rows in the specified table. <br/>  $ **inlinecount** can only use 1 of 2 of the following values. <br/><ul><li>**allpages** - Returns the count for all rows in the table.</li><li>**none** - Does not include a count of rows in the table.</li></ul><br/>The following example returns the count for the total number of rows in Table1 in the ProductSales.xlsx workbook. <br/>  http://contoso1/_vti_bin/ExcelRest.aspx/Documents/ProductSales.xlsx/OData/Table1?$inlinecount=allpages <br/> |
    
 
 ## Additional resources
