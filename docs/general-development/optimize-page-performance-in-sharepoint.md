@@ -8,7 +8,7 @@ ms.assetid: 262caeef-64fd-4e02-b947-d772faf01159
 
 # Optimize page performance in SharePoint
 Learn about features to improve performance in pages in SharePoint. These features can be used to enhance the experience in geographically distributed implementations.
- * **Provided by: *** David Crawford, Microsoft Corporation
+ **Provided by:** David Crawford, Microsoft Corporation
   
     
     
@@ -33,7 +33,7 @@ The following table shows some benefits of using MDS.
 |:-----|:-----|
 |Fewer amounts of data downloaded per page request.  <br/> |No browser flashing caused by full page reload.  <br/> |
 |Browser needs to update only the regions of the page that changed since the last request.  <br/> |Easy to identify animations.  <br/> |
-|Small amount of processing required on the client.  <br/> **Note:** Half of client Page-Load-Time 1 (PLT1) is due to chrome cascading style sheet (CSS) rendering and JavaScript parsing and execution.           |Changes in the page attract user's attention.  <br/> |
+|Small amount of processing required on the client.  <br/>**Note:** Half of client Page-Load-Time 1 (PLT1) is due to chrome cascading style sheet (CSS) rendering and JavaScript parsing and execution.           |Changes in the page attract user's attention.  <br/> |
    
 Both AJAX and MDS are technologies that request only sections of the page to minimize data download and improve page responsiveness. The following figure shows the MDS architecture.
   
@@ -101,7 +101,7 @@ The object used for the AJAX navigation is **AjaxNavigate**. By default, there i
 ajaxNavigate.update(serverRelativeURL, null);
 ```
 
-If you want a control or Web Part to listen to the navigation events, you can use the **add_navigate** handler. When the handler is called, your callback function receives a reference to the navigation object and the parsed hash values in a dictionary. The control or Web Part can retrieve the value for the parameter of interest from the dictionary, compare it to the current value, and decide what action it needs to take. A common action is to send an AJAX request to the server to retrieve some data or reorder the items in the view. When a control has finished listening to navigation events, it can use the **remove_navigate** handler.
+If you want a control or Web Part to listen to the navigation events, you can use the **add\_navigate** handler. When the handler is called, your callback function receives a reference to the navigation object and the parsed hash values in a dictionary. The control or Web Part can retrieve the value for the parameter of interest from the dictionary, compare it to the current value, and decide what action it needs to take. A common action is to send an AJAX request to the server to retrieve some data or reorder the items in the view. When a control has finished listening to navigation events, it can use the **remove\_navigate** handler.
   
     
     
@@ -291,23 +291,7 @@ You should replace HTML inline script elements with **SharePoint:ScriptBlock** c
 
 |**HTML inline script element**|**MDS-compliant alternative**|
 |:-----|:-----|
-|
-```
-
-<script type="text/javascript">
-    // Your JavaScript code goes here.
-</script>
-```
-
-|
-```
-
-<SharePoint:ScriptBlock runat="server">
-    // Your JavaScript code goes here.
-</SharePoint:ScriptBlock>
-```
-
-|
+|`<script type="text/javascript">`<br/>&nbsp;&nbsp;&nbsp;`// Your JavaScript code goes here.`<br/>`</script>`|`<SharePoint:ScriptBlock runat="server">`<br/>&nbsp;&nbsp;&nbsp;`// Your JavaScript code goes here.`<br/>`</SharePoint:ScriptBlock>`|
    
 The introduction of the **SharePoint:ScriptBlock** in the page can change the scope of variables in page. Sometimes it is necessary to move the declaration of variables from `<% %>` to `<script runat="server"> <script>`. To test this, load the page in the browser after you perform updates.
   
