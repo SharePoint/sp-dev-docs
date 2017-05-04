@@ -1,8 +1,4 @@
----
-title: Sorting search results in SharePoint
-ms.prod: SHAREPOINT
-ms.assetid: 66af835e-2c8f-405e-8bed-cb1e5436e190
----
+
 
 
 

@@ -1,8 +1,4 @@
----
-title: Trigger expressions syntax in SharePoint
-ms.prod: SHAREPOINT
-ms.assetid: d50536f6-d02e-4060-9286-634dfd06206c
----
+
 
 
 # Trigger expressions syntax in SharePoint
@@ -56,7 +52,7 @@ Table 1 describes the operators supported by the trigger expression language, wi
 |Additive  <br/> |+  <br/> -  <br/> &amp;  <br/> |Addition  <br/> Subtraction  <br/> String concatenation  <br/> |
 |Relational  <br/> |=, ==  <br/> !=, <>  <br/> <  <br/> >  <br/> <=  <br/> >=  <br/> |Equality  <br/> Inequality  <br/> Less than  <br/> Greater than  <br/> Less than or equal  <br/> Greater than or equal  <br/> |
 |Logical AND  <br/> |&amp;&amp;, AND  <br/> |Logical AND  <br/> |
-|Logical OR  <br/> |||, OR  <br/> |Logical OR  <br/> |
+|Logical OR  <br/> | OR  <br/> |Logical OR  <br/> |
    
 
 ## Managed property access in trigger expressions

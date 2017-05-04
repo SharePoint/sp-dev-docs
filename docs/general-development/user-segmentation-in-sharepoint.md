@@ -1,8 +1,4 @@
----
-title: User segmentation in SharePoint
-ms.prod: SHAREPOINT
-ms.assetid: 85eabab0-4b8a-4849-9cba-80fd06732183
----
+
 
 
 # User segmentation in SharePoint
@@ -137,7 +133,7 @@ static void CreateNavigationTermSet(string siteUrl)
 ## Create a custom Web Part for user segmentation
 <a name="SP15_Create_a_custom_web_part_user_segmentation"> </a>
 
-In Visual Studio 2012, create a custom Web Part by using the Visual Web Parts template from the SharePoint category. Your custom Web Part must inherit from the  [ContentBySearchWebPart](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart.aspx) object.
+In Visual Studio 2012, create a custom Web Part by using the Visual Web Parts template from the SharePoint category. Your custom Web Part must inherit from the  [ContentBySearchWebPart](https://msdn.microsoft.com/en-us/library/office/microsoft.office.server.search.webcontrols.contentbysearchwebpart.aspx) object.
   
     
     
@@ -152,7 +148,7 @@ In Visual Studio 2012, create a custom Web Part by using the Visual Web Parts te
 ## Configure a custom Web Part with user segmentation logic
 <a name="SP15_Configure_custom_web_part_user_segmentation_logic"> </a>
 
-In your custom Web Part, you can re-implement either the  [OnLoad()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart.OnLoad.aspx) method or the [OnInit()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart.OnInit.aspx) method to carry out your custom logic. Both these methods are useful to set or customize properties of the [ContentBySearchWebPart](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebConrols.ContentBySearchWebPart.aspx) object.
+In your custom Web Part, you can re-implement either the  [OnLoad()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart.OnLoad.aspx) method or the [OnInit()](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.WebControls.ContentBySearchWebPart.OnInit.aspx) method to carry out your custom logic. Both these methods are useful to set or customize properties of the [ContentBySearchWebPart](https://msdn.microsoft.com/en-us/library/office/microsoft.office.server.search.webcontrols.contentbysearchwebpart.aspx) object.
   
     
     
@@ -373,7 +369,7 @@ You need to add your custom Web Part to your SharePoint page.
 <a name="bk_addresources"> </a>
 
 
--  [Build sites for SharePoint](build-sites-for-sharepoint)
+-  [Build sites for SharePoint](https://officedevcentersite-release.azurewebsites.net/sharepoint/docs/general-development/build-sites-for-sharepoint)
     
   
 -  [Set up User Segmentation to drive adaptive experiences in a Product Catalog in SharePoint](http://blogs.msdn.com/b/adaptive_experiences_in_sharepoint_2013/archive/2012/11/14/set-up-user-segmentation-to-drive-adaptive-experiences-in-a-product-catalog-in-sharepoint.aspx)
