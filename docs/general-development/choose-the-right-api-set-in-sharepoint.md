@@ -8,9 +8,6 @@ ms.assetid: f36645da-77c5-47f1-a2ca-13d4b62b320d
 
 # Choose the right API set in SharePoint
 Learn about the several sets of APIs that are provided in SharePoint, including the server object model and the various client object models, and the REST/OData web service.
-**Watch the video: SharePoint strategy for SharePoint client object model (CSOM) and REST**
-
-
     
     
 
