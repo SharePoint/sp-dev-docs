@@ -1,8 +1,4 @@
----
-title: How to Create report renderers for PerformancePoint Services in SharePoint
-ms.prod: SHAREPOINT
-ms.assetid: 642175cb-8fcb-4210-8d1e-626ad1f58bb0
----
+
 
 
 # How to: Create report renderers for PerformancePoint Services in SharePoint
