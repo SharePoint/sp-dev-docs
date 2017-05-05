@@ -1,8 +1,4 @@
----
-title: How to Create filter editors for PerformancePoint Services in SharePoint
-ms.prod: SHAREPOINT
-ms.assetid: 51354c88-4330-40f0-bffa-1ce73f9ff298
----
+
 
 
 # How to: Create filter editors for PerformancePoint Services in SharePoint
@@ -1174,10 +1170,10 @@ After you create a filter editor (including its user interface, if required) and
 <a name="bk_addResources"> </a>
 
 
--  [How to: Create filter data providers for PerformancePoint Services in SharePoint](how-to-create-filter-data-providers-for-performancepoint-services-in-sharepoint)
+-  [How to: Create filter data providers for PerformancePoint Services in SharePoint](https://msdn.microsoft.com/en-us/library/office/cc159445.aspx)
     
   
--  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint)
+-  [PerformancePoint Services in SharePoint](https://msdn.microsoft.com/en-us/library/office/ee559635.aspx)
     
   
 
