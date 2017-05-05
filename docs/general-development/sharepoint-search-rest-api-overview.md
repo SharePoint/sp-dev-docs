@@ -949,7 +949,7 @@ The GUID for the user who submitted the search query.
   
     
     
-http:// _<server>_/_api/search/query?querytext='sharepoint'&amp;personalizationdata=' _<GUID>_'
+http:// _\<server\>_/_api/search/query?querytext='sharepoint'&amp;personalizationdata=' _\<GUID\>_'
   
     
     
