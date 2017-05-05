@@ -1,9 +1,3 @@
----
-title: Role, inheritance, elevation of privilege, and password changes in SharePoint
-ms.prod: SHAREPOINT
-ms.assetid: a72c6cad-9e3d-4d57-bf26-24cd1ad7f020
----
-
 
 # Role, inheritance, elevation of privilege, and password changes in SharePoint
 
