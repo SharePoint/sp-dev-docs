@@ -70,10 +70,10 @@ Before you convert your HTML file, here are some best practices and guidance to 
   - Don't put **\<style\>** blocks in the **\<head\>** tag. These styles are removed during conversion. Instead, link from your HTML file to an external CSS file.
     
   
-  - Add  `ms-design-css-conversion="no"` to the **<CSS link>** tag if you're using a web font.
+  - Add  `ms-design-css-conversion="no"` to the **\<CSS link\>** tag if you're using a web font.
     
   
-  - Be cautious about applying styles to general HTML tags like **\<body\>**, **\<div\>**, and **\< img\>**. Everything within your SharePoint design, including the ribbon, is within the **\<body\>** tag. For styles that you would usually apply to the **\<body\>** tag, consider applying them instead to **\<div id="s4-bodyContainer"\>**, which is a tag that SharePoint uses for the main body of the page. Also, SharePoint uses many images that are affected by whatever styles you apply to the **\<img\>** tag.
+  - Be cautious about applying styles to general HTML tags like **\<body\>**, **\<div\>**, and **\<img\>**. Everything within your SharePoint design, including the ribbon, is within the **\<body\>** tag. For styles that you would usually apply to the **\<body\>** tag, consider applying them instead to **\<div id="s4-bodyContainer"\>**, which is a tag that SharePoint uses for the main body of the page. Also, SharePoint uses many images that are affected by whatever styles you apply to the **\<img\>** tag.
     
   
   - Many designers style the navigation by applying classes to **\<ul\>** and **\<li\>** elements. But, SharePoint uses a dynamic navigation control, which you can add to your master page from the Snippet Gallery. SharePoint navigation controls have styles applied by default that you have to override.
@@ -96,8 +96,7 @@ Before you convert your HTML file, here are some best practices and guidance to 
 
 ```
 
-
-    Do not put them on the same line, like this.
+Do not put them on the same line, like this.
     
 
 
@@ -344,7 +343,7 @@ The following is an example of markup added to an HTML file after it is converte
     
     
 
-### Markup added to the <head> tag
+### Markup added to the \<head\> tag
 
 
 ```HTML
@@ -423,7 +422,7 @@ The following is an example of markup added to an HTML file after it is converte
 ```
 
 
-### Markup added after the start <body> tag
+### Markup added after the start \<body\> tag
 
 
 #### Ribbon snippet
@@ -461,7 +460,7 @@ The following is an example of markup added to an HTML file after it is converte
 ```
 
 
-#### Two SharePoint <div> tags
+#### Two SharePoint \<div\> tags
 
 
 ```HTML
@@ -472,7 +471,7 @@ The following is an example of markup added to an HTML file after it is converte
 ```
 
 
-### Markup added before the closing </body> tag and two closing </div> tags
+### Markup added before the closing \</body\> tag and two closing \</div\> tags
 
 
 ```HTML
