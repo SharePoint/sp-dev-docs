@@ -1,9 +1,3 @@
----
-title: Minimal Download Strategy overview
-ms.prod: SHAREPOINT
-ms.assetid: 9caa7d99-1e74-4889-96c7-ba5a10772ad7
----
-
 
 # Minimal Download Strategy overview
 Learn about Minimal Download Strategy (MDS), a new feature in SharePoint that reduces page load time by sending only the differences when users navigate to a new page.
