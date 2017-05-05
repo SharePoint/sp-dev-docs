@@ -1,8 +1,3 @@
----
-title: Use workflow interop for SharePoint
-ms.prod: SHAREPOINT
-ms.assetid: 6c70e941-3836-4cf5-b848-f192fefddbd4
----
 
 
 # Use workflow interop for SharePoint
