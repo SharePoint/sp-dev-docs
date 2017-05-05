@@ -7,32 +7,19 @@ ms.assetid: caaf9a09-2e6a-49e3-a8d6-aaf7f93a842a
 
 # SharePoint Application Lifecycle Management
 Applies common application lifecycle management (ALM) concepts and practices to application development using SharePoint technologies.
- **Provided by:** Eric Charran, Microsoft Corporation
-  
-    
-    
+
+**Provided by:** Eric Charran, Microsoft Corporation
 
 **Contributors:** Vesa Juvonen, Microsoft Corporation | Steve Peschka, Microsoft Corporation
 
-  
-    
-    
-
-
 > **Important:**
 > This topic refers to autohosted SharePoint Add-ins. The preview program for autohosted apps has ended. Please disregard all references to autohosted SharePoint Add-ins. 
-  
-    
-    
 
 
 ## Overview of application lifecycle management (ALM)
 <a name="Overview"> </a>
 
 Microsoft SharePoint gives developers several options for creating and deploying applications that are based on SharePoint technologies, for both on-premises and in hosted or public cloud platforms. SharePoint offers increased flexibility in the shape applications can take as well as new options for using standards-based technologies with applications. Although these application capabilities and deployment options afforded by the new application model inSharePoint provide an effective means for developers to create new and immersive applications, developers must be able to infuse quality, testing and ALM considerations into the development process. This article applies common ALM concepts and practices to application development using SharePoint technologies.
-  
-    
-    
 
 ### What's new
 <a name="WhatsNew"> </a>
@@ -100,14 +87,9 @@ The selection of a development environment should be made based on multiple fact
 
 **Figure 1. Development environment components and tools**
 
-  
-    
+
     
  [![The app development environment can include Office 365, Visual Studio, and virtual machines.](../../images/AppDevelopmentEnvironment.png)
-  
-    
-    
-](http://go.microsoft.com/fwlink/?LinkId=391723) [Click to see enlargement.](http://go.microsoft.com/fwlink/?LinkId=391723)
   
     
     
@@ -142,10 +124,6 @@ Figure 2 shows how developers can use Office 365 as a development environment an
     
     
  [![Build apps for SharePoint with Office 365, Visual Studio, and "Napa."](../../images/Office365AppDevelpment.png)
-  
-    
-    
-](http://go.microsoft.com/fwlink/?LinkId=391724) [Click to see enlargement.](http://go.microsoft.com/fwlink/?LinkId=391724)
   
     
     
@@ -207,8 +185,6 @@ For organizations or developers who choose not to use Office 365 developer sites
   
     
     
-](http://go.microsoft.com/fwlink/?LinkId=391725) [Click to see enlargement.](http://go.microsoft.com/fwlink/?LinkId=391725)
-  
     
     
 Figure 3 describes the development tools and application types that can be enabled with developer sites when using an on-premises SharePoint farm as a host. Note that NapaOffice 365 development tools cannot be used in this environment as they are a capability only present in Office 365 development sites.
@@ -249,8 +225,6 @@ Figure 4 shows the types of applications that can be created using an on-premise
   
     
     
-](http://go.microsoft.com/fwlink/?LinkId=391726) [Click to see enlargement.](http://go.microsoft.com/fwlink/?LinkId=391726)
-  
     
     
 Developers can conduct remote development for the SharePoint and cloud-hosted applications within their own SharePoint farms as well as the development of full trust farm solutions. These farms are often hosted within a virtualization server running either on the developer's workstation or in a centralized virtualization private cloud that can easily be accessible to developers. The SharePoint farm environment is usually separate from other developers' farms and provides a level of isolation that is required when developing full trust code that may require the restart of critical services (that is IIS).
@@ -427,9 +401,6 @@ Figure 9 shows a standard process for SharePoint application builds and deployme
   
     
     
-](http://go.microsoft.com/fwlink/?LinkId=391727) [Click to see enlargement.](http://go.microsoft.com/fwlink/?LinkId=391727)
-  
-    
     
 The developer checks in the SharePoint application Visual Studio 2012 solution. Depending on the desired configuration (that is, continuous integration or scheduled build), TFS build services will execute the steps defined by the SharePoint application build definition. This definition, configured by developers, contains the continuous integration build process template as well as post-build instructions to execute Windows PowerShell scripts for application deployment. Note that the SharePoint Online Management Shell extensions will be required in order to deploy the application to SharePoint Online. For more information about SharePoint Online Management Shell extensions, see  [SharePoint Online Management Shell page](http://www.microsoft.com/en-us/download/details.aspx?id=35588) on the Download Center.
   
@@ -461,9 +432,6 @@ Note that for cloud-hosted (auto and provider) applications, developers can depl
   
     
     
-](http://go.microsoft.com/fwlink/?LinkId=391728) [Click to see enlargement.](http://go.microsoft.com/fwlink/?LinkId=391728)
-  
-    
     
 As shown in Figure 10, when developers make changes to the solution that represents the SharePoint application, there may be circumstances where changes are made to the projects within the solution that do not apply to theSharePoint application project itself. In this circumstance, the SharePoint application project does not have to be redeployed as it has not changed. The changes associated with the cloud-hosted projects must be redeployed.
   
@@ -493,10 +461,7 @@ Figure 11 shows the types of testing approaches that are best used with SharePoi
     
  [![Coded UI tests should be leveraged against SharePoint-hosted applications where the business logic and the user experience reside in the same layer.](../../images/ALMTestingTypes.png)
   
-    
-    
-](http://go.microsoft.com/fwlink/?LinkId=391729) [Click to see enlargement.](http://go.microsoft.com/fwlink/?LinkId=391729)
-  
+   
     
     
 Figure 11 suggests the use of different types of tests for testing SharePoint applications by type. Coded UI tests should be used against SharePoint-hosted applications where the business logic and the user experience reside in the same layer. While business logic can be abstracted to JavaScript libraries, a primary means of testing that logic will be through the user experience.
@@ -573,9 +538,6 @@ Developer testing can occur in the environment where the developers are creating
   
     
     
-](http://go.microsoft.com/fwlink/?LinkId=391731) [Click to see enlargement.](http://go.microsoft.com/fwlink/?LinkId=391731)
-  
-    
     
 Developers will execute tests from Visual Studio against the solution components deployed in their own Office 365 or on-premises developer site. For cloud-hosted applications, the tests will also be executed from Visual Studio against the solution components that reside on provider-hosted infrastructure. These components will reside in the developer's Microsoft Azure subscription.
   
@@ -607,10 +569,6 @@ In order to test the application, all of the development components should be as
   
     
     
-](http://go.microsoft.com/fwlink/?LinkId=391732) [Click to see enlargement.](http://go.microsoft.com/fwlink/?LinkId=391732)
-  
-    
-    
 For this type of testing, the ALM platform will build and deploy the SharePoint application and any required components to the target environments. For SharePoint-hosted applications, this will either be an Office 365 site or an on-premises/IaaS SharePoint site collection specifically established for integration and systems testing. For SharePoint cloud-hosted applications, TFS will also deploy the components to a centralized Microsoft Azure subscription where the services will be configured specifically for integration/systems testing. TFS will then execute coded UI or unit tests against the SharePoint application, as well as any components that the solution requires on hosted infrastructure.
   
     
@@ -633,9 +591,6 @@ For user acceptance testing (UAT), organizations often have separate environment
   
     
     
-](http://go.microsoft.com/fwlink/?LinkId=391733) [Click to see enlargement.](http://go.microsoft.com/fwlink/?LinkId=391733)
-  
-    
     
 As shown in Figure 14, users assigned to conduct acceptance testing or organizational testing resources conduct test scripts in a stable environment that is focused on a well-publicized build of the application. While code deployment and testing continues in the integration environment, users will conduct manual testing to validate that the application meets required use or test cases. The application and any provider-hosted infrastructure will be deployed, typically by a release manager, into this testing environment. An automated deployment is possible as well. This sort of deployment uses a dedicated UAT build definition in TFS that mirrors the one that conducts deployment for the integration and systems testing environment.
   
@@ -653,10 +608,7 @@ For cloud-hosted infrastructure, deployment into a Microsoft Azure subscription 
     
  [![Deployment into a Microsoft Azure subscription that is shared with the integration/systems test environment is possible if the services are named and configured to be deployed side by side as different services or databases.](../../images/ALMIntegrationandUAT.png)
   
-    
-    
-](http://go.microsoft.com/fwlink/?LinkId=391734) [Click to see enlargement.](http://go.microsoft.com/fwlink/?LinkId=391734)
-  
+   
     
     
 
@@ -675,10 +627,7 @@ The code promotion process between the development and testing environments as w
     
  [![Following a check-in to TFS, an automated build procedure will compile and deploy the solution to the target environment where build verification tests will be executed as part of the build definition in TFS.](../../images/ALMCodePromotion.png)
   
-    
-    
-](http://go.microsoft.com/fwlink/?LinkId=391735) [Click to see enlargement.](http://go.microsoft.com/fwlink/?LinkId=391735)
-  
+   
     
     
 Following a check-in to TFS, an automated build procedure will compile and deploy the solution to the target integration and system testing environment where build verification tests will be executed as part of the build definition in TFS. This approach includes deploying the provider-hosted components of the solution to the target environment (Microsoft Azure or on-premises environments). Note that for Microsoft Azure infrastructure, the Microsoft Azure subscription can be the same one used for both integration and system testing as well as UAT and QA assuming they are deployed to different namespaces and separate SQL databases.
