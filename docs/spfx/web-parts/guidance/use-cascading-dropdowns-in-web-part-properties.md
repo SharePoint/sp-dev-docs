@@ -1,7 +1,5 @@
 # Use cascading dropdowns in web part properties
 
-> Note. This article has not yet been verified with SPFx GA version, so you might have challenges on making this work as such with the latest release.
-
 When designing the property pane for your SharePoint client-side web parts, you may have one web part property that displays its options based on the  value selected in another property. This scenario typically occurs when implementing cascading dropdown controls. In this article, you will learn how to create cascading dropdown controls in the web part property pane without developing a custom property pane control.
 
 ![Item dropdown disabled and web part placeholder communicating loading updated list of item options](../../../../images/react-cascading-dropdowns-loading-indicator-when-loading-items.png)
@@ -34,9 +32,9 @@ When prompted, enter the following values:
 
 - **react-cascadingdropdowns** as your solution name
 - **Use the current folder** for the location to place the files
+- **React** as the starting point to build the web part
 - **List items** as your web part name
 - **Shows list items from the selected list** as your web part description
-- **React** as the starting point to build the web part
 
 ![SharePoint Framework Yeoman generator with the default choices](../../../../images/react-cascading-dropdowns-yo-sharepoint.png)
 
@@ -81,7 +79,7 @@ Update the **propertyPaneSettings** getter to:
 ```ts
 export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
   // ...
-  protected get propertyPaneSettings(): IPropertyPaneSettings {
+  protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {
       pages: [
         {
@@ -132,26 +130,17 @@ In the **src/webparts/listItems/components/ListItems.tsx** file, change the cont
 
 ```tsx
 export default class ListItems extends React.Component<IListItemsProps, {}> {
-  public render(): JSX.Element {
+ public render(): JSX.Element {
     return (
-      <div className={styles.listItems}>
+        <div className={styles.helloWorld}>
         <div className={styles.container}>
-          <div className={css('ms-Grid-row ms-bgColor-themeDark ms-fontColor-white', styles.row)}>
-            <div className='ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1'>
-              <span className='ms-font-xl ms-fontColor-white'>
-                Welcome to SharePoint!
-              </span>
-              <p className='ms-font-l ms-fontColor-white'>
-                Customize SharePoint experiences using web parts.
-              </p>
-              <p className='ms-font-l ms-fontColor-white'>
-                {this.props.listName}
-              </p>
-              <a
-                className={css('ms-Button', styles.button)}
-                href='https://github.com/SharePoint/sp-dev-docs/wiki'
-              >
-                <span className='ms-Button-label'>Learn more</span>
+          <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
+            <div className="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
+              <span className="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
+              <p className="ms-font-l ms-fontColor-white">Customize SharePoint experiences using Web Parts.</p>
+              <p className="ms-font-l ms-fontColor-white">{escape(this.props.listName)}</p>
+              <a href="https://aka.ms/spfx" className={styles.button}>
+                <span className={styles.label}>Learn more</span>
               </a>
             </div>
           </div>
@@ -159,6 +148,13 @@ export default class ListItems extends React.Component<IListItemsProps, {}> {
       </div>
     );
   }
+}
+```
+In the **src/webparts/listItems/components/IListItemsProps.ts** file, change the **IListItemsProps** interface to:
+
+```ts
+export interface IListItemsProps {
+  listName: string;
 }
 ```
 
@@ -183,23 +179,18 @@ In the **ListItemsWebPart** class add a reference to the **PropertyPaneDropdown*
 ```ts
 import {
   BaseClientSideWebPart,
-  IPropertyPaneSettings,
-  IWebPartContext,
-  PropertyPaneDropdown
+  IPropertyPaneConfiguration,
+  PropertyPaneTextField,
+  PropertyPaneDropdown,
+  IPropertyPaneDropdownOption
 } from '@microsoft/sp-webpart-base';
-```
-
-Right after this import statement, add a reference to the **IDropdownOption** interface.
-
-```ts
-import { IDropdownOption } from 'office-ui-fabric-react';
 ```
 
 In the **ListItemsWebPart** class, add a new variable named **lists** to store information about all available lists in the current site.
 
 ```ts
 export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
-  private lists: IDropdownOption[];
+  private lists: IPropertyPaneDropdownOption[];
   // ...
 }
 ```
@@ -233,7 +224,7 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
                 PropertyPaneDropdown('listName', {
                   label: strings.ListNameFieldLabel,
                   options: this.lists,
-                  isDisabled: this.listsDropdownDisabled
+                  disabled: this.listsDropdownDisabled
                 })
               ]
             }
@@ -264,17 +255,17 @@ In the **ListItemsWebPart** class, add a method to load available lists. In this
 ```ts
 export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
   // ...
-  private loadLists(): Promise<IDropdownOption[]> {
-    return new Promise<IDropdownOption[]>((resolve: (options: IDropdownOption[]) => void, reject: (error: any) => void) => {
+  private loadLists(): Promise<IPropertyPaneDropdownOption[]> {
+    return new Promise<IPropertyPaneDropdownOption[]>((resolve: (options: IPropertyPaneDropdownOption[]) => void, reject: (error: any) => void) => {
       setTimeout((): void => {
         resolve([{
           key: 'sharedDocuments',
           text: 'Shared Documents'
         },
-          {
-            key: 'myDocuments',
-            text: 'My Documents'
-          }]);
+        {
+          key: 'myDocuments',
+          text: 'My Documents'
+        }]);
       }, 2000);
     });
   }
@@ -298,7 +289,7 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
     this.context.statusRenderer.displayLoadingIndicator(this.domElement, 'lists');
 
     this.loadLists()
-      .then((listOptions: IDropdownOption[]): void => {
+      .then((listOptions: IPropertyPaneDropdownOption[]): void => {
         this.lists = listOptions;
         this.listsDropdownDisabled = false;
         this.context.propertyPane.refresh();
@@ -358,6 +349,15 @@ export interface IListItemsWebPartProps {
 }
 ```
 
+Change the code in the **src/webparts/listItems/components/IListItemsProps.ts** file to:
+
+```ts
+export interface IListItemsProps {
+  listName: string;
+  itemName: string;
+}
+```
+
 In the **src/webparts/listItems/ListItemsWebPart.ts** file, change the code of the **render** method to:
 
 ```ts
@@ -407,27 +407,16 @@ In the **src/webparts/listItems/components/ListItems.tsx** file, change the **re
 export default class ListItems extends React.Component<IListItemsProps, {}> {
   public render(): JSX.Element {
     return (
-      <div className={styles.listItems}>
+        <div className={styles.helloWorld}>
         <div className={styles.container}>
-          <div className={css('ms-Grid-row ms-bgColor-themeDark ms-fontColor-white', styles.row)}>
-            <div className='ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1'>
-              <span className='ms-font-xl ms-fontColor-white'>
-                Welcome to SharePoint!
-              </span>
-              <p className='ms-font-l ms-fontColor-white'>
-                Customize SharePoint experiences using web parts.
-              </p>
-              <p className='ms-font-l ms-fontColor-white'>
-                {this.props.listName}
-              </p>
-              <p className='ms-font-l ms-fontColor-white'>
-                {this.props.itemName}
-              </p>
-              <a
-                className={css('ms-Button', styles.button)}
-                href='https://github.com/SharePoint/sp-dev-docs/wiki'
-              >
-                <span className='ms-Button-label'>Learn more</span>
+          <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
+            <div className="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
+              <span className="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
+              <p className="ms-font-l ms-fontColor-white">Customize SharePoint experiences using Web Parts.</p>
+              <p className="ms-font-l ms-fontColor-white">{escape(this.props.listName)}</p>
+              <p className="ms-font-l ms-fontColor-white">{escape(this.props.itemName)}</p>
+              <a href="https://aka.ms/spfx" className={styles.button}>
+                <span className={styles.label}>Learn more</span>
               </a>
             </div>
           </div>
@@ -447,7 +436,7 @@ In the **ListItemsWebPart** class, add a new variable named **items** which you 
 ```ts
 export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
   // ...
-  private items: IDropdownOption[];
+  private items: IPropertyPaneDropdownOption[];
   // ...
 }
 ```
@@ -467,7 +456,7 @@ Change the **propertyPaneSettings** getter to use the dropdown control to render
 ```ts
 export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
   // ...
-  protected get propertyPaneSettings(): IPropertyPaneSettings {
+  protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {
       pages: [
         {
@@ -481,12 +470,12 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
                 PropertyPaneDropdown('listName', {
                   label: strings.ListNameFieldLabel,
                   options: this.lists,
-                  isDisabled: this.listsDropdownDisabled
+                  disabled: this.listsDropdownDisabled
                 }),
                 PropertyPaneDropdown('itemName', {
                   label: strings.ItemNameFieldLabel,
                   options: this.items,
-                  isDisabled: this.itemsDropdownDisabled
+                  disabled: this.itemsDropdownDisabled
                 })
               ]
             }
@@ -517,7 +506,7 @@ In the **src/webparts/listItems/ListItemsWebPart.ts** file, in the **ListItemsWe
 ```ts
 export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
   // ...
-  private loadItems(): Promise<IDropdownOption[]> {
+    private loadItems(): Promise<IPropertyPaneDropdownOption[]> {
     if (!this.properties.listName) {
       // resolve to empty options since no list has been selected
       return Promise.resolve();
@@ -525,7 +514,7 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
 
     const wp: ListItemsWebPart = this;
 
-    return new Promise<IDropdownOption[]>((resolve: (options: IDropdownOption[]) => void, reject: (error: any) => void) => {
+    return new Promise<IPropertyPaneDropdownOption[]>((resolve: (options: IPropertyPaneDropdownOption[]) => void, reject: (error: any) => void) => {
       setTimeout(() => {
         const items = {
           sharedDocuments: [
