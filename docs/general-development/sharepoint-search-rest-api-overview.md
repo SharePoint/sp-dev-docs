@@ -1,9 +1,3 @@
----
-title: SharePoint Search REST API overview
-ms.prod: SHAREPOINT
-ms.assetid: 8a4f7863-e4c1-4099-9189-a1894db36930
----
-
 
 # SharePoint Search REST API overview
 Add search functionality to client and mobile applications using the Search REST service in SharePoint and any technology that supports REST web requests.
@@ -1649,7 +1643,6 @@ When an anonymous Search REST query is submitted, the query object is constructe
 
 ## In this section
 <a name="bk_AnonymousREST"> </a>
-
 
 -  [Retrieving query suggestions using the Search REST service](retrieving-query-suggestions-using-the-search-rest-service)
     
