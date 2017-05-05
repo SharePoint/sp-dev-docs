@@ -1,9 +1,3 @@
----
-title: Managed navigation in SharePoint
-ms.prod: SHAREPOINT
-ms.assetid: c9da5011-3c73-4b83-8e00-e7a03a71ed02
----
-
 
 # Managed navigation in SharePoint
 
