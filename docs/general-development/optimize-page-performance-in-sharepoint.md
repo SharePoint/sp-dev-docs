@@ -314,27 +314,7 @@ HyperLinks in ASP.NET pages must be updated to use **SPUpdatePage** type. Table 
 
 |**Hyperlink in ASP.NET**|**MDS-compliant alternative**|
 |:-----|:-----|
-|
-```cs
-
-<a
-    id=<%_STSWriteHTML("viewlist" + spList.BaseTemplate.ToString());%>
-    href=<%_STSWriteURL(listViewUrl);%>
->
-
-```
-
-|
-```cs
-
-<a
-    id=<%_STSWriteHTML("viewlist" + spList.BaseTemplate.ToString());%>
-    href=<%_STSWriteURL(listViewUrl);%>
-    onclick="if (typeof(SPUpdatePage) !== 'undefined') return SPUpdatePage(this.href);"
->
-```
-
-|
+|`<a`<br/>&nbsp;&nbsp;&nbsp;`id=<%_STSWriteHTML("viewlist" + spList.BaseTemplate.ToString());%>`<br/>&nbsp;&nbsp;&nbsp;`href=<%_STSWriteURL(listViewUrl);%>`<br/>`>`|`<a`<br/>&nbsp;&nbsp;&nbsp;`id=<%_STSWriteHTML("viewlist" + spList.BaseTemplate.ToString());%>`<br/>&nbsp;&nbsp;&nbsp;`href=<%_STSWriteURL(listViewUrl);%>`<br/>&nbsp;&nbsp;&nbsp;`onclick="if (typeof(SPUpdatePage) !== 'undefined') return SPUpdatePage(this.href);"`<br/>`>`|
    
 
 ### Custom master pages for errors
@@ -391,36 +371,8 @@ To use MDS, controls and Web Parts have to register page resources by using the 
 
 |**Common practice for rendering content**|**MDS-compliant alternative**|
 |:-----|:-----|
-|
-```cs
-
-output.Write("<input type=\\"hidden\\" name=\\"");
-output.Write(SPHttpUtility.NoEncode("HiddenField));
-output.Write("\\" value=\\"");
-output.Write(DigestValue);
-output.Write("\\" />");
-```
-
-|
-```cs
-
-SPPageContentManager.RegisterHiddenField(this, "HiddenField", DigestValue);
-```
-
-|
-|
-```cs
-Page.ClientScript.RegisterClientScriptBlock(typeof(MyType), "MyKey", "var myvar=1", true);
-
-```
-
-|
-```cs
-
-SPPageContentManager.RegisterClientScriptBlock(this, typeof(MyType), "MyKey", "var myvar=1");
-```
-
-|
+|`output.Write("<input type=\\"hidden\\" name=\\"");`<br/>`output.Write(SPHttpUtility.NoEncode("HiddenField));`<br/>`output.Write("\\" value=\\"");`<br/>`output.Write(DigestValue);`<br/>`output.Write("\\" />");`|`SPPageContentManager.RegisterHiddenField(this, "HiddenField", DigestValue);`|
+|`Page.ClientScript.RegisterClientScriptBlock(typeof(MyType), "MyKey", "var myvar=1", true);`|`SPPageContentManager.RegisterClientScriptBlock(this, typeof(MyType), "MyKey", "var myvar=1");`|
    
 
 > **Note:**
