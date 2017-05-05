@@ -1,9 +1,3 @@
----
-title: SharePoint workflow development best practices
-ms.prod: SHAREPOINT
-ms.assetid: 63d9c867-0c5e-4f89-bc61-eeefb0320844
----
-
 
 # SharePoint workflow development best practices
 Provides a collection of best practices for developers using Visual Studio to create workflows in SharePoint.
@@ -74,7 +68,7 @@ For more information, see the following:
     
     
 
--  [Workflow actions in SharePoint Designer 2010: A quick reference guide](http://office.microsoft.com/en-us/sharepoint-designer-help/workflow-actions-in-sharepoint-designer-2010-a-quick-reference-guide-HA010376961.aspx#_Toc260924447)
+-  [Workflow actions in SharePoint Designer 2010: A quick reference guide](https://support.office.com/en-us/article/Workflow-actions-in-SharePoint-Designer-2010-A-quick-reference-guide-5a7ad276-0ed7-49b0-b652-e56a77dd96c6?CorrelationId=9cff0340-2d05-4878-b3a0-aecb30b862ed&ui=en-US&rs=en-US&ad=US&ocmsassetID=HA010376961)
     
   
 -  [LogToHistoryListActivity](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowActions.LogToHistoryListActivity.aspx) class
@@ -99,7 +93,7 @@ For more information, see the following:
     
     
 
--  [Workflow actions in SharePoint Designer 2010: A quick reference guide](http://office.microsoft.com/en-us/sharepoint-designer-help/workflow-actions-in-sharepoint-designer-2010-a-quick-reference-guide-HA010376961.aspx#_Toc260924447)
+-  [Workflow actions in SharePoint Designer 2010: A quick reference guide](https://support.office.com/en-us/article/Workflow-actions-in-SharePoint-Designer-2010-A-quick-reference-guide-5a7ad276-0ed7-49b0-b652-e56a77dd96c6?CorrelationId=9cff0340-2d05-4878-b3a0-aecb30b862ed&ui=en-US&rs=en-US&ad=US&ocmsassetID=HA010376961)
     
   
 -  [LogToHistoryListActivity](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowActions.LogToHistoryListActivity.aspx) class
