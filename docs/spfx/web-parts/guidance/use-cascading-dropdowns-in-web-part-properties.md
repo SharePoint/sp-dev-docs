@@ -301,7 +301,7 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
       .then((listOptions: IDropdownOption[]): void => {
         this.lists = listOptions;
         this.listsDropdownDisabled = false;
-        this.refreshPropertyPane();
+        this.context.propertyPane.refresh();
         this.context.statusRenderer.clearLoadingIndicator(this.domElement);
         this.render();
       });
@@ -314,7 +314,7 @@ The **onPropertyPaneConfigurationStart** method is called by the SharePoint Fram
 
 ![Loading indicator displayed in web part while loading information about available lists](../../../../images/react-cascading-dropdowns-loading-indicator-when-loading-list-info.png)
 
-After the information about available lists has been loaded the method assigns the retrieved data to the **lists** class variable, from which it can be used by the list dropdown. Next, the dropdown is enabled allowing the user to select a list. By calling the **refreshPropertyPane** method the web part property pane is refreshed and it reflects the latest changes to the list dropdown. Once list information is loaded, the loading indicator is removed by a call to the **clearLoadingIndicator** method. Since calling this method clears the web part user interface, the **render** method is called to force the web part to re-render.
+After the information about available lists has been loaded the method assigns the retrieved data to the **lists** class variable, from which it can be used by the list dropdown. Next, the dropdown is enabled allowing the user to select a list. By calling  **this.context.propertyPane.refresh()** the web part property pane is refreshed and it reflects the latest changes to the list dropdown. Once list information is loaded, the loading indicator is removed by a call to the **clearLoadingIndicator** method. Since calling this method clears the web part user interface, the **render** method is called to force the web part to re-render.
 
 Run the following command to confirm that everything is working as expected:
 
@@ -579,13 +579,13 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
       .then((listOptions: IDropdownOption[]): Promise<IDropdownOption[]> => {
         this.lists = listOptions;
         this.listsDropdownDisabled = false;
-        this.refreshPropertyPane();
+        this.context.propertyPane.refresh();
         return this.loadItems();
       })
       .then((itemOptions: IDropdownOption[]): void => {
         this.items = itemOptions;
         this.itemsDropdownDisabled = !this.properties.listName;
-        this.refreshPropertyPane();
+        this.context.propertyPane.refresh();
         this.context.statusRenderer.clearLoadingIndicator(this.domElement);
         this.render();
       });
@@ -631,7 +631,7 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
       // disable item selector until new items are loaded
       this.itemsDropdownDisabled = true;
       // refresh the item selector control by repainting the property pane
-      this.refreshPropertyPane();
+      this.context.propertyPane.refresh();
       // communicate loading items
       this.context.statusRenderer.displayLoadingIndicator(this.domElement, 'items');
 
@@ -646,7 +646,7 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
           // re-render the web part as clearing the loading indicator removes the web part body
           this.render();
           // refresh the item selector control by repainting the property pane
-          this.refreshPropertyPane();
+          this.context.propertyPane.refresh();
         });
     }
     else {
