@@ -247,7 +247,7 @@ Following the **\<script\>** tag is a **\<div\>** tag with an ID. By default, th
     
     
 
-In the first **\<div\>** tag you'll see code inside comment blocks that begin with **<!--#_** and end with **_#-->**. You use JavaScript code inside these blocks, and HTML outside the blocks. You can also use these blocks to control the HTML with conditional statements. To do this, use a comment block with the conditional statement and opening bracket, followed by HTML, followed by another comment block with the closing bracket. In the following example, the anchor tag is rendered on the page only if the value for the **linkURL** object is not empty.
+In the first **\<div\>** tag you'll see code inside comment blocks that begin with **\<!--#\_** and end with **\_#--\>**. You use JavaScript code inside these blocks, and HTML outside the blocks. You can also use these blocks to control the HTML with conditional statements. To do this, use a comment block with the conditional statement and opening bracket, followed by HTML, followed by another comment block with the closing bracket. In the following example, the anchor tag is rendered on the page only if the value for the **linkURL** object is not empty.
   
     
     
