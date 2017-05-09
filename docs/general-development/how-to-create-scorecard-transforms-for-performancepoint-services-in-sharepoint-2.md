@@ -1,9 +1,3 @@
----
-title: How to Create scorecard transforms for PerformancePoint Services in SharePoint
-ms.prod: SHAREPOINT
-ms.assetid: 16117716-6ce5-4890-a829-5312f76164d0
----
-
 
 # How to: Create scorecard transforms for PerformancePoint Services in SharePoint
 Learn how to create custom scorecard transforms for PerformancePoint Services in SharePoint.
@@ -229,7 +223,7 @@ namespace Microsoft.PerformancePoint.SDK.Samples
 <a name="bk_addResources"> </a>
 
 
--  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint)
+-  [PerformancePoint Services in SharePoint](https://dev.office.com/sharepoint/docs/general-development/performancepoint-services-in-sharepoint)
     
   
 -  [PerformancePoint Services Scorecards](http://msdn.microsoft.com/library/e77eccdb-82b3-483a-bb91-dfdc716400dd%28Office.15%29.aspx)
