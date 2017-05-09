@@ -7,6 +7,8 @@ Thank you for reporting an issue or suggesting an enhancement. We appreciate you
 - [ ] Enhancement / Suggestion
 - [ ] Additional article idea
 
+> If you are planning to share a new feature request (enhancement / suggestion), please use SP Dev UserVoice at http://aka.ms/sp-dev-uservoice.
+
 #### Expected or Desired Behavior
 _If you are reporting a bug, please describe the expected behavior. If you are suggesting an enhancement please describe thoroughly the enhancement, how it can be achieved, and expected benefit._
 
