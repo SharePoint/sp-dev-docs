@@ -4,7 +4,6 @@ Thank you for reporting an issue or suggesting an enhancement. We appreciate you
 - [ ] Question
 - [ ] Typo
 - [ ] Bug
-- [ ] Enhancement / Suggestion
 - [ ] Additional article idea
 
 > If you are planning to share a new feature request (enhancement / suggestion), please use SP Dev UserVoice at http://aka.ms/sp-dev-uservoice.
