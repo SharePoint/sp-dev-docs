@@ -22,19 +22,19 @@ Enable public CDN in the tenant
 ```
 Set-SPOTenantCdnEnabled -CdnType Public
 ```
-Now public CDN has been enabled in the tenant using default allowed file type configuration. This means that following file type extensions are supported: "CSS,EOT,GIF,ICO,JPEG,JPG,JS,MAP,PNG,SVG,TTF,WOFF".
+Now public CDN has been enabled in the tenant using the default file type configuration allowed. This means that the following file type extensions are supported: "CSS,EOT,GIF,ICO,JPEG,JPG,JS,MAP,PNG,SVG,TTF,WOFF".
 
-Open up a browser and move to a site collection where you'd like to host your CDN library. This could be any site collection in your tenant. In this tutorial, we create a specific library to act as your CDN library, but you can also use a specific folder in any existing document library as they CDN endpoint.
+Open up a browser and move to a site collection where you'd like to host your CDN library. This could be any site collection in your tenant. In this tutorial, we create a specific library to act as your CDN library, but you can also use a specific folder in any existing document library as the CDN endpoint.
 
-Create new document library to your site collection called **CDN** and a folder called **helloworld** to it.
+Create a new document library on your site collection called **CDN** and add a folder called **helloworld** to it.
 
 ![helloworld-webpart folder in CDN library](../../../../images/cdn-helloworld-folder.png) 
 
-Move back to your PowerShell console and add new CDN origin. Update provided URL to match your own environment. 
+Move back to your PowerShell console and add a new CDN origin. Update the provided URL below to match your own environment. 
 ```
 Add-SPOTenantCdnOrigin -CdnType Public -OriginUrl sites/cdn/cdn
 ```
-Execute following to get list of CDN origins from your tenant
+Execute the following command to get the list of CDN origins from your tenant
 ```
 Get-SPOTenantCdnOrigins -CdnType Public
 ```
@@ -42,7 +42,7 @@ Notice that your newly added origin is listed as a valid CDN origin. Final confi
 
 ![List of public origins in tenant](../../../../images/cdn-public-origins.png)
 
-> When origin is listed without the *(configuration pending)* text, it is ready to be used in your tenant. This is indicating on-going configuration between SharePoint Online and CDN system. 
+> When origin is listed without the *(configuration pending)* text, it is ready to be used in your tenant. This is the indication of an on-going configuration between SharePoint Online and CDN system. 
 
 ## Creating a new Web Part project
 
@@ -74,15 +74,15 @@ When prompted:
 
 ![Yeoman generator questions around the newly created web part](../../../../images/cdn-create-webpart-yo.png)
 
-At this point, Yeoman will install the required dependencies and scaffold the solution files. This might take a few minutes. Yeoman will scaffold the project to include your custom web part as well.
+At this point, Yeoman will scaffold the solution files and install the required dependencies. This might take a few minutes. Yeoman will scaffold the project to include your custom web part as well.
 	
 When the scaffold is complete, in the console, type the following to open the web part project in Visual Studio Code:
 
 ```
 code .
 ```
-Update the *write-manifests.json* file under *config* folder as follows to point to your CDN endpoint. 
-- You will need to use the publiccdn.sharepointonline.com as the prefix and then extend teh URL with the actual path in your tenant
+Update the *write-manifests.json* file (under *config* folder) as follow to point to your CDN endpoint. 
+- You will need to use the publiccdn.sharepointonline.com as the prefix and then extend the URL with the actual path in your tenant
 * Format of the CDN URL is as follows
 ```
 https://publiccdn.sharepointonline.com/<tenant host name>/sites/site/library/folder
@@ -92,22 +92,22 @@ https://publiccdn.sharepointonline.com/<tenant host name>/sites/site/library/fol
 
 Save your changes.
 
-Execute following commands to bundle your solution
-* This will execute a release build of your project using CDN URL specified in the **writer-manifest.json** file. Output of the execution will be located in the **./temp/deploy** folder. These are the files, which you will need to upload to your the SharePoint folder acting as your CDN endpoint. 
+Execute the following tasks to bundle your solution
+* This will execute a release build of your project using CDN URL specified in the **writer-manifest.json** file. Output of the execution will be located in the **./temp/deploy** folder. These are the files which you will need to upload to the SharePoint folder acting as your CDN endpoint. 
 
 ```
 gulp bundle --ship
 ```
 
-Execute following to package your solution to prepare the files
+Execute the following task to package your solution
 
 ```
 gulp package-solution --ship
 ```
 
-This command will create a **sphosted-webpart.sppkg** package to the **sharepoint/solution** folder and also prepare assets to be deployed to the CDN to the **temp/deploy folder**
+This command will create a **sphosted-webpart.sppkg** package on the **sharepoint/solution** folder and also prepare the assets on the **temp/deploy folder** to be deployed to the CDN.
 
-Upload or drag & drop the newly created client-side solution package to app catalog in your tenant. 
+Upload or drag & drop the newly created client-side solution package to the app catalog in your tenant. 
 
 ![Installation popup from app catalog for the SPFx solution](../../../../images/cdn-upload-solution-to-app-catalog.png)
 
@@ -119,21 +119,15 @@ Upload all files from **temp/deploy** folder to the **CDN/helloworld** folder in
 
 ![helloworld folder in SPO tenant with the web part assets copied from the temp/deploy folder](../../../../images/cdn-web-part-files-in-folder.png)
 
-At this point web part is ready to be used in page
+At this point the web part is ready to be used on a page
 
-Move to a site where you want to test the web part
+Open a site where you want to test the web part and go the **Site contents** page of the site.
 
-Move to **Site contents** page of the site
-
-Choose **Add – App** from the toolbar
-
-Choose the **sphosted-webpart-client-side-solution** to be installed on the site
+Choose **Add – App** from the toolbar and choose the **sphosted-webpart-client-side-solution** app to be installed on the site
 
 ![Adding web part solution to site](../../../../images/cdn-add-webpart-to-site.png)
 
-When solution has been installed, chose **Add a page** from the *gear* menu
-
-Pick **HelloWorld** from the web part picker for modern page
+After the solution has been installed, chose **Add a page** from the *gear* menu and pick **HelloWorld** from the modern page web part picker
 
 ![HelloWorld web part visible in web part picker for modern page](../../../../images/cdn-web-part-picker.png)
 
