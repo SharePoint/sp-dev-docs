@@ -129,11 +129,10 @@ Add the following field definition in a **groupFields** array.
 }
 ```
 
-Add the following types to the **@microsoft/sp-client-platform** imports.
+Add the following types to the **@microsoft/sp-webpart-base** imports.
 
 ```ts
-IPropertyPaneFieldType,
-IOnCustomPropertyFieldChanged
+IPropertyPaneFieldType
 ```
 
 Add the following private method to render the custom field.
