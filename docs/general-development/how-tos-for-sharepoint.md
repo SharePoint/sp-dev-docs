@@ -30,7 +30,6 @@ Find how-to articles and related code examples that show how to perform basic de
 
 |**Title**|**Summary**|
 |:-----|:-----|
-| [Create a basic SharePoint-hosted add-in by using Napa Office 365 Development Tools](http://msdn.microsoft.com/library/3b47c97b-9e09-47b2-a65f-29b0f44e34bf%28Office.15%29.aspx) <br/> |Learn how to create a basic SharePoint Add-in by using Napa Office 365 Development Tools.  <br/> |
 | [Set up an on-premises development environment for SharePoint Add-ins](http://msdn.microsoft.com/library/b0878c12-27c9-4eea-ae3b-7e79e5a8838d%28Office.15%29.aspx) <br/> |Learn how to set up a development environment that is specifically suited to developing SharePoint Add-ins with an on-premises installation of SharePoint.  <br/> |
 | [Get started creating provider-hosted SharePoint Add-ins](http://msdn.microsoft.com/library/3038dd73-41ee-436f-8c78-ef8e6869bf7b%28Office.15%29.aspx) <br/> |Learn how to create a basic provider-hosted SharePoint Add-in with the Office Developer Tools for Visual Studio 2012, how to interact with SharePoint sites by using the SharePoint CSOM, and how to implement OAuth in an SharePoint Add-in.  <br/> |
 | [Get started creating SharePoint-hosted SharePoint Add-ins](http://msdn.microsoft.com/library/1b992485-6efe-4ea4-a18c-221689b0b66f%28Office.15%29.aspx) <br/> |Learn how to create a basic SharePoint-hosted SharePoint Add-in with the Office Developer Tools for Visual Studio 2012.  <br/> |

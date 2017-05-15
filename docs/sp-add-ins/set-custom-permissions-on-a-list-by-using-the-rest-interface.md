@@ -42,9 +42,7 @@ To use the example in this article, you'll need:
 - A SharePoint development environment (app isolation required for on-premises scenarios)
     
  
-- Visual Studio 2012 or Visual Studio 2013 with Office Developer Tools for Visual Studio 2012, or
- 
-Napa (SharePoint Online only)
+- Visual Studio 2012 or Visual Studio 2013 with Office Developer Tools for Visual Studio 2012, or newer
     
  
 You'll also need to set  **Full Control** add-in permissions at the **Web** scope. Only users who have sufficient permissions to change list permissions (such as site owners) can run this add-in.

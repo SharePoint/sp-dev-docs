@@ -614,7 +614,6 @@
 			<Item text="Create a developer site on an existing Office 365 subscription" url="sp-add-ins/create-a-developer-site-on-an-existing-office-365-subscription" SEODescription=""/>
 			<Item text="Set up an on-premises development environment for add-ins" url="sp-add-ins/set-up-an-on-premises-development-environment-for-sharepoint-add-ins" SEODescription=""/>
 			<Item text="Create SharePoint Add-ins in Visual Studio" url="sp-add-ins/create-sharepoint-add-ins-in-visual-studio" SEODescription=""/>
-			<Item text="Create a basic SharePoint-hosted add-in by using Napa" url="sp-add-ins/create-a-basic-sharepoint-hosted-add-in-by-using-napa-office-365-development-too" SEODescription=""/>
 			<Item text="What's new in Office Developer Tools for Visual Studio 2013" url="sp-add-ins/what-s-new-in-office-developer-tools-for-visual-studio-2013" SEODescription=""/>
 		</Item>
 		<Item text="Create cloud business add-ins" url="sp-add-ins/create-cloud-business-add-ins" SEODescription="">

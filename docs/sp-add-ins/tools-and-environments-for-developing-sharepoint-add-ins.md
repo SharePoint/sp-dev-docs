@@ -41,9 +41,6 @@ Consider the following:
 
 ## Other tooling information
 
-
--  [Create a basic SharePoint-hosted add-in by using Napa Office 365 Development Tools](create-a-basic-sharepoint-hosted-add-in-by-using-napa-office-365-development-tools)
-    
  
 -  [Create SharePoint Add-ins in Visual Studio](create-sharepoint-add-ins-in-visual-studio)
     

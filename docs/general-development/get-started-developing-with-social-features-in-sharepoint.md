@@ -66,17 +66,9 @@ To get started developing with social features, you'll need:
 
 - SharePoint or SharePoint Online
     
+- Visual Studio 2012 or Visual Studio 2013, with Office Developer Tools for Visual Studio 2013 - or newer
   
-- Visual Studio 2012 or Visual Studio 2013, with Office Developer Tools for Visual Studio 2013
-  
-    
-    
- **OR**
-  
-    
-    
-Napa (only for developing SharePoint-hosted apps on an Office 365 Developer Site)
-    
+
   
 For more guidance, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint) and [Configure social computing features in SharePoint](http://technet.microsoft.com/en-us/library/fp161267%28v=office.15%29.aspx).
   
@@ -167,7 +159,7 @@ Although apps and solutions access SharePoint differently, after you do access S
 ## App permission requests for accessing social features in SharePoint Add-ins
 <a name="bkmk_AppPerms"> </a>
 
-An SharePoint Add-in must request the permissions that it needs to access SharePoint resources from the user who installs it. For example, an app that posts to the feed should request **Write** permission (at minimum) to the feed. You specify the permissions that your app need in the AppManifest.xml file in Visual Studio or in the **Properties** dialog box in Napa.
+An SharePoint Add-in must request the permissions that it needs to access SharePoint resources from the user who installs it. For example, an app that posts to the feed should request **Write** permission (at minimum) to the feed. You specify the permissions that your app need in the AppManifest.xml file in Visual Studio.
   
     
     

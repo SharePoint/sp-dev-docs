@@ -48,7 +48,7 @@ When properly installed and configured, Duet Enterprise 2.0 will provide the fol
 ## Setting up the development environment
 <a name="SettingUp"> </a>
 
-Developing SharePoint Add-ins using Duet Enterprise 2.0, for the most part, is exactly the same as creating standard SharePoint Add-ins. You can use either the browser-based Napa Office 365 Development Tools tools to create and deploy, or you can use Visual Studio to extend your apps and work within the robust framework of the Visual Studio integrated development environment.
+Developing SharePoint Add-ins using Duet Enterprise 2.0, for the most part, is exactly the same as creating standard SharePoint Add-ins. You can use Visual Studio to extend your apps and work within the robust framework of the Visual Studio integrated development environment.
   
     
     
