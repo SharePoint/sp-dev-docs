@@ -99,7 +99,7 @@ The following procedures guide you through setting up an SharePoint Add-in and c
 ## Code example: Add scripts and HTML to the Home.aspx page
 <a name="bkmk_AddUIelements"> </a>
 
-At this point, you have an external content type and an external list that will display the data from the Netflix OData source. 
+At this point, you have an external content type and an external list that will display the data from the Northwind OData source. 
   
     
     
