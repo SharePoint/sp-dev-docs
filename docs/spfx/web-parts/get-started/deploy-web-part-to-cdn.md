@@ -224,7 +224,7 @@ In order to deploy the assets to your favorite CDN provider, you can copy the fi
 gulp --ship
 ```
 
-As long as you are updaging the **cdnBasePath** accordingly, your files are being properly loaded.
+As long as you are updating the **cdnBasePath** accordingly, your files are being properly loaded.
 
 ## Next steps
 
