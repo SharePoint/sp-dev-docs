@@ -33,7 +33,9 @@ Choose **OK** to create the app catalog site.
 SharePoint will create the app catalog site and you will be able to see its progress in the SharePoint admin center.
 
 ## Create a new Developer Site collection
-You also need a Developer Site. If you already have a Developer Site collection, see [Set up a document library](#set-up-a-document-library).
+You also need a site collection and a site for your testing. You can create a new site collection using any of the available templates. You may chose to use **developer site collection**, but that does not really add additional value, since workbench and basic testing can be performed under any site.
+
+Here are steps for creating new developer site collection.
 
  Go to the **SharePoint Admin Center** by entering the following URL in your browser. Replace **yourtenantprefix** with your Office 365 Developer Tenant prefix.
 	
