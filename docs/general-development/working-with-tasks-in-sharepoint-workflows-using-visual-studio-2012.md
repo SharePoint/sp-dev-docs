@@ -499,7 +499,7 @@ The new custom site column markup should now look like the following:
        ID="{7b7edd9e-f5d1-4558-a2c8-e733dcfb0a5e}"
        Name="CustomSiteColumn"
        DisplayName="Better State"
-       Type="Choice"
+       Type="OutcomeChoice"
        Required="FALSE"
        Group="Custom Site Columns">
        <CHOICES>
