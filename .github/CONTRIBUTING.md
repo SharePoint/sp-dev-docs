@@ -20,7 +20,7 @@ docs
 ```
 At this time, contributions are accepted for:
 
-* SharePoint Framework Developer Preview
+* SharePoint Framework
 * SharePoint Webhooks
 
 ### SPFx Folder

@@ -1,13 +1,11 @@
 # Deploy your SharePoint client-side web part to a CDN
 
->**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not currently supported for use in production environments.
-
 In this article, you will deploy the **HelloWorld** assets to a remote CDN instead of using the local environment. You'll use an Azure Storage account integrated with a CDN to deploy your assets. SharePoint Framework build tools provide out-of-the-box support for deploying to an Azure Storage account; however, you can also manually upload the files to your favorite CDN provider or to SharePoint.
 
-You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=xMQMNtsHDhk&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
+You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=FDGatKnjNeM&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
 
-<a href="https://www.youtube.com/watch?v=xMQMNtsHDhk&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
-<img src="../../../../images/spfx-youtube-tutorial3.png" alt="Screenshot of the YouTube video player for this tutorial" />
+<a href="https://www.youtube.com/watch?v=FDGatKnjNeM&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
+<img src="../../../../images/spfx-youtube-tutorial4.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
 ## Prerequisites
@@ -120,6 +118,33 @@ In this example, with the storage account created earlier, this file will look l
 
 Save the file.
 
+## Configuring web part to load from CDN
+
+In order for the web part to load from your CDN, you will need to tell it your CDN path.
+
+Switch to Visual Studio Code and open the **write-manifests.json** from the **config** folder.
+
+Enter your CDN base path for the **cdnBasePath** property.
+
+```json
+{
+  "cdnBasePath": "<!-- PATH TO CDN -->"
+}
+```
+
+In this example, with the CDN profile created earlier, this file will look like:
+
+```json
+{
+  "cdnBasePath": "https://spfxsamples.azureedge.net/helloworld-webpart/"
+}
+```
+
+>**Note:** The CDN base path is the CDN endpoint with the BLOB container.
+
+Save the file.
+
+
 ## Prepare web part assets to deploy
 
 Before uploading the assets to CDN, you need to build them.
@@ -153,32 +178,6 @@ gulp deploy-azure-storage
 
 This will deploy the web part bundle along with other assets like JavaScript and CSS files to the CDN.
 
-### Configuring web part to load from CDN
-
-In order for the web part to load from your CDN, you will need to tell it your CDN path.
-
-Switch to Visual Studio Code and open the **write-manifests.json** from the **config** folder.
-
-Enter your CDN base path for the **cdnBasePath** property.
-
-```json
-{
-  "cdnBasePath": "<!-- PATH TO CDN -->"
-}
-```
-
-In this example, with the CDN profile created earlier, this file will look like:
-
-```json
-{
-  "cdnBasePath": "https://spfxsamples.azureedge.net/helloworld-webpart/"
-}
-```
-
->**Note:** The CDN base path is the CDN endpoint with the BLOB container.
-
-Save the file.
-
 ## Deploy the updated package
 
 ### Package the solution
@@ -190,11 +189,8 @@ Switch to the console of the **HelloWorld** project directory.
 Enter the gulp task to package the client-side solution, this time with the `--ship` flag set. This forces the task to pick up the CDN base path configured in the previous step:
 
 ```
-gulp bundle --ship
 gulp package-solution --ship
 ```
-
-> **Note:** "gulp bundle --ship" is a temporary fix needed with Developer Preview to ensure that files are rebuilt properly for packaging.
 
 This will create the updated client-side solution package in the **sharepoint\solution** folder.
 
@@ -222,11 +218,13 @@ Notice that you are no longer running **gulp serve**, and therefore nothing is s
 
 ## Deploying to other CDNs
 
-In order to deploy the assets to your favorite CDN provider, you can copy the files from **tmp\deploy** folder. To generate assets for distribution you will run the following gulp command as we did before with the **--ship** parameter:
+In order to deploy the assets to your favorite CDN provider, you can copy the files from **temp\deploy** folder. To generate assets for distribution you will run the following gulp command as we did before with the **--ship** parameter:
 
 ```
 gulp --ship
 ```
+
+As long as you are updating the **cdnBasePath** accordingly, your files are being properly loaded.
 
 ## Next steps
 

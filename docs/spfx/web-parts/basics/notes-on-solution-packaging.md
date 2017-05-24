@@ -1,8 +1,5 @@
 # Notes on solution packaging
 
->**Note:** The SharePoint Framework is currently in preview and is subject to change. SharePoint Framework client-side web parts are not supported for use in production environments.
->
-
 The **package-solution** gulp task looks at **/config/package-solution.json** for various configuration details, including some generic filepaths, as well as defining the relationship between components (_WebParts_ & _Applications_) in a package.
 
 ## Configuration File

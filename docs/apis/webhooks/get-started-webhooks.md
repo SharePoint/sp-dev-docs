@@ -1,7 +1,5 @@
 # Get started with SharePoint webhooks
 
->**Note:** SharePoint webhooks is currently in preview and is subject to change. SharePoint webhooks are not currently supported for use in production environments.
-
 This article describes how to build an application that adds and handles SharePoint webhook requests. You will learn how to use [Postman client](https://www.getpostman.com/) to construct and execute SharePoint webhook requests quickly while interacting with a simple ASP.NET Web API as the webhook receiver.
 
 In this article, you will use plain HTTP requests, which is useful for helping you to understand how webhooks work.  
@@ -20,6 +18,8 @@ To complete the step-by-step instructions in this article, download and install 
 
 In order for the Postman client to communicate with SharePoint, you will need to register an Azure AD app in your Azure AD tenant associated with your Office 365 tenant. 
 
+Ensure that you register the application as a "Web Application".
+
 To access SharePoint Online, it's important to grant the Azure AD app permissions to the **Office 365 SharePoint Online** application and select the **read and write items and lists in all site collections** permission.
 
 > For more information about adding an Azure AD application and granting permissions to applications, see [Adding an application](https://azure.microsoft.com/en-us/documentation/articles/active-directory-integrating-applications/#adding-an-application). 
@@ -29,6 +29,8 @@ Enter the following endpoint as the Reply (Redirect) URL for the app. This is th
 ```html
 https://www.getpostman.com/oauth2/callback
 ```
+
+Also generate a "Key", which will be the client secret.
 
 The following properties are required in later steps, so copy them to a safe place:
 
@@ -286,8 +288,8 @@ Postman makes it really simple to work with APIs. The first step is to configure
 * Choose the **Get New Access Token** button.
 * In the dialog window, enter the following: 
     * Auth URL: 
-       * **https://login.microsoftonline.com/common/oauth2/authorize?resource=https%3A%2F%2F<_your-sharepoint-site-collection-url-without-https_>**
-       * Replace _your-sharepoint-site-collection-url-without-https_ with your site collection without the **https** prefix.
+       * **https://login.microsoftonline.com/common/oauth2/authorize?resource=https%3A%2F%2F<_your-sharepoint-tenant-url-without-https_>**
+       * Replace _your-sharepoint-tenant-url-without-https_ with your tenant url without the **https** prefix.
     * Access Token URL:
         * **https://login.microsoftonline.com/common/oauth2/token**
     * Client Id: 
@@ -448,7 +450,7 @@ Now add a file to the Documents library and test if you get a notification from 
 * Go to the **Documents** library. It will be named **Shared Documents** library in your default site collection.
 * Add a new file.
 * Go to Visual Studio and wait for the breakpoint to be hit.
-   * In preview, the wait time may vary from a few seconds up to five minutes. When the breakpoint is hit, the webhook receiver has just received a notification from SharePoint.
+   * Wait time may vary from a few seconds up to five minutes. When the breakpoint is hit, the webhook receiver has just received a notification from SharePoint.
 * Choose **F5** to continue.
 * To see the notification data, look in the **Output** window for the following entries, since you added the notification data into the trace log:
 
