@@ -161,12 +161,12 @@ After you finish the signup process, your browser opens the Office 365 installat
     
 ```
   <script type="text/javascript" src="/_layouts/15/sp.runtime.js"></script> 
-<script type="text/javascript" src="/_layouts/15/sp.js"></script> 
+  <script type="text/javascript" src="/_layouts/15/sp.js"></script> 
 
 ```
 
 
-    Then search the file for any other markup that also loads one or the other of these files and remove the redundant markup. Save and close the file.
+Then search the file for any other markup that also loads one or the other of these files and remove the redundant markup. Save and close the file.
     
  
 
@@ -262,7 +262,7 @@ For your first SharePoint-hosted SharePoint Add-in, we'll include the classic Sh
 ```
   <ViewFields>
   <FieldRef Name="Title" ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" DisplayName="Employee" />
- </ViewFields>
+  </ViewFields>
 ```
 
 20. Still in the schema.xml file, in the  **View** element whose **BaseViewID** value is "1", replace the existing **ViewFields** element with the following markup. (Use exactly this GUID for the **FieldRef** named `LinkTitle`.)
@@ -270,7 +270,7 @@ For your first SharePoint-hosted SharePoint Add-in, we'll include the classic Sh
 ```
   <ViewFields>
   <FieldRef Name="LinkTitle" ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" DisplayName="Employee" />
-</ViewFields>
+  </ViewFields>
 ```
 
 21. Save and close the schema.xml file.
@@ -321,7 +321,6 @@ For your first SharePoint-hosted SharePoint Add-in, we'll include the classic Sh
     <p><asp:HyperLink runat="server" 
     NavigateUrl="JavaScript:window.location = _spPageContextInfo.webAbsoluteUrl + '/Lists/NewEmployeesInSeattle/AllItems.aspx';" 
     Text="New Employees in Seattle" /></p>
-
 ```
 
 
