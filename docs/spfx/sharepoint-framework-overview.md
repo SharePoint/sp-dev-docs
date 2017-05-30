@@ -4,7 +4,7 @@ The SharePoint Framework (SPFx) is a page and web part model that provides full 
  
 Key features of the SharePoint Framework include:
 
-* Runs in the context of the current user and connection in the browser. There are no iFrames.
+* Runs in the context of the current user and connection in the browser. There are no iFrames (no iFrames only in client-side JavaScript injection model).
 * The controls are rendered in the normal page DOM.
 * The controls are responsive and accessible by nature.
 * Enables the developer to access the lifecycle - including, in addition to **render** -  **load**, **serialize** and **deserialize**, **configuration changes**, and more.
