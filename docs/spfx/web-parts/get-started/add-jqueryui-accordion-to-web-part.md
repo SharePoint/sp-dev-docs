@@ -14,7 +14,7 @@ You can also follow these steps by watching the video on the [SharePoint PnP You
 Complete the following steps before you start:
 
 * [Build your first web part](build-a-hello-world-web-part.md)
-* [Connect to SharePoint](connect-to-sharepoint.md) 
+* [Connect to SharePoint](connect-to-sharepoint.md)
 
 The developer toolchain uses Webpack, SystemJS and CommonJS to bundle your web parts. This includes loading any external dependencies such as jQuery or jQueryUI. To load external dependencies, at a high level, you will need to:
 
