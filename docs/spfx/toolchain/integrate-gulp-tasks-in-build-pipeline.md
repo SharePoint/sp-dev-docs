@@ -79,17 +79,14 @@ You can also add this custom task to be executed before or after certain availab
 The SharePoint Framework tasks are available in the default build rig. The build rig is a collection of tasks defined for a specific purpose. In our case, building client-side packages. You can access this default rig using the `build.rig` object and get access to the pre and post task functions:
  
 ```js
+//execute before the typescript subtask
+build.rig.addPreBuildTask(helloWorldTask);
+
 // execute after TypeScript task
 build.rig.addPostTypescriptTask(helloWorldTask);
 
-//execute before TypeScript task
-build.rig.addBuildTasks(helloWorldTask);
-
 //execute after all tasks
 build.rig.addPostBuildTask(helloWorldTask);
-
-//execute before all tasks
-build.rig.addPreBuildTask(helloWorldTask);
 ```
 
 ## Example: Custom image resize task
