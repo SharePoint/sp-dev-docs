@@ -17,15 +17,17 @@ You should updated your Yeoman template packages. We have updated certification 
 
 **When will custom actions and JSLink be available in the SharePoint Framework?**
 
-- *Date - 28th of April*
+- *Date - 6th of June*
 
-We do not have public date for this currently. We are working on providing modern customization story for user custom actions and JSLink capabilities, which will be supported in both classic and modern experiences. 
+SharePoint Extensions with additional customizations capabilities for the SharePoint Online is now available for dev preview. We do not have public GA date currently. You can start learning how to build these extensions reading following tutorials.
+
+* [Getting started with SharePoint Framework Extensions](http://aka.ms/spfx-extensions)
 
 **Will SharePoint Framework be available in on-premises?**
 
-- *Date - 28th of April*
+- *Date - 6th of June*
 
-We are working getting SharePoint Framework released to SharePoint 2016 during 2017 calendar year. We do not have other public dates currently available. 
+SharePoint Framework client-side web parts will be released to SharePoint 2016 as part of the Feature Pack 2 (FP2). 
 
 ## Additional resources
 Please use following resources to provide feedback, comments and questions towards SharePoint engineering. 
