@@ -10,6 +10,9 @@ The SharePoint Framework now generally available. Please check more release deta
 
 ## SharePoint Framework Releases
 
+* **June 6, 2017**
+   *  **Dev Preview of extensions is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes---Extensions-Dev-Preview-Drop-1)
+
 * **Feb 22, 2017**
    *  **GA is available**.  [See the release notes here](https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-GA)
 
