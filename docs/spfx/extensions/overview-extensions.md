@@ -23,6 +23,10 @@ If you have already previously installed SharePoint Framework, please execute fo
 npm install -g @microsoft/generator-sharepoint
 ```
 
+Get started with the tutorials around SharePoint Framework Extension development 
+
+* [Build your first SharePoint SharePoint Extension (Hello World part 1)](./get-started/build-a-hello-world-extension)
+
 ## Updates & Feedback
 
 To keep track of improvements to the SharePoint Framework, including extensions releases, please take a look at:
