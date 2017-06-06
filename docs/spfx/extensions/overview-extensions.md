@@ -15,7 +15,7 @@ In addition to plain JavaScript projects, you can build extensions alongside com
 ## Getting started
 If you have not yet installed SharePoint Framework, please have a look on following tutorial to ready for SharePoint Framework development.
 
-* - [Setup your development environment](../set-up-your-development-environment)
+* [Setup your development environment](../set-up-your-development-environment)
 
 If you have already previously installed SharePoint Framework, please execute following command to update your Yeoman templates with the latest version.
 
