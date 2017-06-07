@@ -121,9 +121,9 @@ gulp serve --nobrowser
 ```
 Notice that we used the `--nobrowser` option, since there's no value for starting local workbench, since you cannot debug extensions locally currently.
 
-Once it compiles the code without errors, it will serve the resulting manifest from http://localhost:4321.
+Once it compiles the code without errors, it will serve the resulting manifest from *http://localhost:4321*.
 
-Move any SharePoint list in your SharePoin Online sites with a modern experience.
+Move any SharePoint list in your SharePoint Online sites with a modern experience.
 
 Since our ListView Command Set is hosted still in localhost and is running, we can use specific debug query parameters to execute the code in the newly created.
 
