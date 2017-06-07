@@ -128,6 +128,7 @@ Append the following query string parameters to the URL. Notice that you will ne
 ?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Percent":{"id":"0e3d8b71-56aa-4405-9225-f08a80fc1d71","properties":{"sampleText":"Hello!"}}}
 ```
 More detail about the URL query parameters:
+
 * **loadSPFX=true:**  ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework normally is not loaded unless at least one extension is registered.  Since no components are registered yet, we must explicitly load the framework.
 * **debugManifestsFile:**  specifies that we want to load SPFx components that are being locally served.  Normally the loader only looks for components in the App Catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
 * **fieldCustomizers**:  Indicates which fields in your list should have their rendering controlled by the Field Customizer.  The ID parameter specifies the GUID of the extension that should be used to control the rendering of the field.  The properties parameter is an optional text string containing a JSON object that will be deserialized into `this.properties` for your extension.

@@ -99,6 +99,7 @@ export default class HelloWorldApplicationCustomizer
 ```
 
 Update the `onRender` method with the following code:
+
 * We use `this.context.placeholders.tryAttach` to get access on the placeholder
 * Extension code should not assume that the expected placeholder is available
 * Code expects a custom properties called `Header`and `Footer`. If properties exists, they will be rendered inside of the placeholder.
@@ -199,6 +200,7 @@ gulp serve --nobrowser
 Navigate to a out of the box modern list in SharePoint Online. This can be a list or a library for the initial testing. 
 
 To test your extension, append the following query string parameters to the URL:
+
 * Notice that the GUID used in this query parameter has to match on the ID attribute of your Application Customizer available from **HelloWorldApplicationCustomizer.manifest.json**.
 * We also use Header and Footer JSON properties to provide parameters or configurations to the Application Customizer. In this case we simply output these values, but you could adjust the behavior based on the properties in actual production usage. 
 
