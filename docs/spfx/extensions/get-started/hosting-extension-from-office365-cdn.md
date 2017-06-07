@@ -37,11 +37,11 @@ Open up a browser and move to a site collection where you'd like to host your CD
 
 Create a new document library on your site collection called **CDN** and add a folder called **helloworld** to it.
 
-![helloworld-extension folder in CDN library](../../../../images/cdn-helloworld-folder.png) 
+![helloworld-extension folder in CDN library](../../../../images/ext-app-cdn-folder-created.png) 
 
-Move back to your PowerShell console and add a new CDN origin. Update the provided URL below to match your own environment. 
+Move back to your PowerShell console and add a new CDN origin. Update the provided URL below to match your own environment. In this case we are setting origin as `*/cdn`, which means that any relative folder with name of **cdn** will act as CDN origin.
 ```
-Add-SPOTenantCdnOrigin -CdnType Public -OriginUrl sites/cdn/cdn
+Add-SPOTenantCdnOrigin -CdnType Public -OriginUrl */cdn
 ```
 Execute the following command to get the list of CDN origins from your tenant
 ```
@@ -49,7 +49,7 @@ Get-SPOTenantCdnOrigins -CdnType Public
 ```
 Notice that your newly added origin is listed as a valid CDN origin. Final configuration of the origin will take a while (approximately 15 minutes), so we can continue by creating your test extension, which will be hosted from the origin, when the deployment is completed. 
 
-![List of public origins in tenant](../../../../images/cdn-public-origins.png)
+![List of public origins in tenant](../../../../images/ext-app-cdn-origins-pending.png)
 
 > When origin is listed without the *(configuration pending)* text, it is ready to be used in your tenant. This is the indication of an on-going configuration between SharePoint Online and CDN system. 
 
@@ -66,7 +66,7 @@ Update the *write-manifests.json* file (under *config* folder) as follow to poin
 https://publiccdn.sharepointonline.com/<tenant host name>/sites/site/library/folder
 ```
 
-![Updated write manifest content with path to CDN endpoint](../../../../images/cdn-write-manifest-json.png)
+![Updated write manifest content with path to CDN endpoint](../../../../images/ext-app-cdn-write-manifest.png)
 
 Save your changes.
 
@@ -86,6 +86,9 @@ gulp package-solution --ship
 This command will create a **app-extension.sppkg** package on the **sharepoint/solution** folder and also prepare the assets on the **temp/deploy folder** to be deployed to the CDN.
 
 Upload or drag & drop the newly created client-side solution package to the app catalog in your tenant. 
+
+UPDUPAUPETPE
+![](../../../../images/ext-app-approve-cdn-address.png)
 
 Install new version of the solution to your site and ensure that it's working properly.
 

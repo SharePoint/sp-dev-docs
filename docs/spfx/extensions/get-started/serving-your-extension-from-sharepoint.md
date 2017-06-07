@@ -48,6 +48,8 @@ Create a new file inside the **sharepoint\assets** folder named as **elements.xm
 
 Copy the following xml structure into **elements.xml**. Updated the **ClientSideComponentId** property to have the unique Id of your Application Customizer available from the **HelloWorldApplicationCustomizer.manifest.json** file at **src\extensions\helloWorld** folder.
 
+We also set the **ClientSideComponentProperties** using this xml definition and bypass JSON properties for this extension instance. Notice how the JSON is escaped, so that we can set that properly using XML attribute. 
+
 Notice also that we use specific location called `ClientSideExtension.ApplicationCustomizer` to define that this is Application Customizer. Since by default this **element.xml** will be associated to *Web* scoped feature, this CustomAction will be automatically added to `Web.UserCustomAction` collection in the site where the solution is being installed.
 
 ```xml
@@ -57,7 +59,8 @@ Notice also that we use specific location called `ClientSideExtension.Applicatio
     <CustomAction 
         Title="SPFxApplicationCustomizer"
         Location="ClientSideExtension.ApplicationCustomizer"
-        ClientSideComponentId="5fc73e12-8085-4a4b-8743-f6d02ffe1240">
+        ClientSideComponentId="46606aa6-5dd8-4792-b017-1555ec0a43a4"
+        ClientSideComponentProperties="{&quot;Header&quot;:&quot;Header area of the page&quot;,&quot;Footer&quot;:&quot;Footer area in the page&quot;}">
 
     </CustomAction>
 

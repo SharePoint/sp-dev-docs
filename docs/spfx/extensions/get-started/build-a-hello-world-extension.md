@@ -1,5 +1,5 @@
 
-# Build your first SharePoint SharePoint Extension (Hello World part 1)
+# Build your first SharePoint Framework Extension (Hello World part 1)
 
 >**Note:** The SharePoint Framework Extensions are currently in preview and is subject to change. SharePoint Framework Extensions are not currently supported for use in production environments.
 
