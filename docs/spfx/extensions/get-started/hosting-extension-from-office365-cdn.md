@@ -60,8 +60,10 @@ Move to previously created solution to perform needed URL updates.
 code .
 ```
 Update the *write-manifests.json* file (under *config* folder) as follow to point to your CDN endpoint. 
-- You will need to use the publiccdn.sharepointonline.com as the prefix and then extend the URL with the actual path in your tenant
+
+* You will need to use the publiccdn.sharepointonline.com as the prefix and then extend the URL with the actual path in your tenant
 * Format of the CDN URL is as follows
+
 ```
 https://publiccdn.sharepointonline.com/<tenant host name>/sites/site/library/folder
 ```
@@ -87,9 +89,8 @@ This command will create a **app-extension.sppkg** package on the **sharepoint/s
 
 Upload or drag & drop the newly created client-side solution package to the app catalog in your tenant. 
 
-UPDUPAUPETPE
 ![](../../../../images/ext-app-approve-cdn-address.png)
 
-Install new version of the solution to your site and ensure that it's working properly.
+Install new version of the solution to your site and ensure that it's working properly without your locahost hosting the JavaScript file.
 
 ![Custom header and footer elements rendered in the page](../../../../images/ext-app-header-footer-visible.png)

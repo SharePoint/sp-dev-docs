@@ -72,7 +72,8 @@ Notice that base class for the Application Customizer is imported from the **sp-
 
 ![import statement for BaseApplicationCustomizer from @microsoft/sp-application-base](../../../../images/ext-app-vscode-app-base.png)
 
-The logic for your Application Customizer is contained in the two methods onInit and onRender.  
+The logic for your Application Customizer is contained in the two methods onInit and onRender.
+
 - **onInit()** is where you should perform any setup needed for your extension.  This event occurs after this.context and this.properties are assigned, but before the page DOM is ready. Like with web parts, onInit() returns a promise that you can use to perform asynchronous operations; onRender() will not be called until your promise has resolved.  If you don’t need that, simply return super.onInit().
 - **onRender()** is where your extension can interact with the UI.  This event occurs after the application’s initial page DOM structure has been created (although some parts of the UI may not have finished rendering yet).
 
@@ -104,8 +105,11 @@ To test your extension, navigate to a modern list view page in your SharePoint e
 ?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"d03ae0c2-bbbf-4cf5-9ff7-0986904553da":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"testMessage":"Hello as property!"}}}
 ```
 More detail about the URL query parameters:
+
 * **loadSPFX=true:**  ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework normally is not loaded unless at least one extension is registered.  Since no components are registered yet, we must explicitly load the framework.
+
 * **debugManifestsFile:**  specifies that we want to load SPFx components that are being locally served.  Normally the loader only looks for components in the App Catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
+
 * **customActions:**  this URL query parameter simulates a custom action.  When we actually deploy and register this component in a site later in this lab, we’ll create this CustomAction object for real and describe all the different properties you can set on it. 
     * **Key:** use the Guid of the extension as the key to associate with the custom action
     * **Location:** the type of custom action, use "ClientSideExtension.ApplicationCustomizer" for the Application Customizer extension
