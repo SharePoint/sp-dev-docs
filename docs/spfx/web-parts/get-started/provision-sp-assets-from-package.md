@@ -215,7 +215,7 @@ To ensure that our newly added Feature Framework files are taken into account wh
     "features": [{
       "title": "asset-deployment-webpart-client-side-solution",
       "description": "asset-deployment-webpart-client-side-solution",
-      "id": "523fe887-ced5-4036-b564-8dad5c6c6e24",
+      "id": "00bfea71-de22-43b2-a848-c05709900100",
       "version": "1.0.0.0",
       "assets": {        
         "elementManifests": [
