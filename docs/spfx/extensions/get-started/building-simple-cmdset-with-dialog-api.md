@@ -135,14 +135,14 @@ Append the following query string parameters to the URL. Notice that you will ne
 
 * **loadSPFX=true:**  ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework normally is not loaded unless at least one extension is registered.  Since no components are registered yet, we must explicitly load the framework.
 * **debugManifestsFile:**  specifies that we want to load SPFx components that are being locally served.  Normally the loader only looks for components in the App Catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
-* **customActions:**  this URL query parameter simulates a custom action. There are many properties you can set on this CustomAction object that affect the look, feel, and location of your button; we’ll cover them all later.
+* **customActions:**  this URL query parameter simulates a custom action. There are many properties you can set on this *CustomAction* object that affect the look, feel, and location of your button; we’ll cover them all later.
     * **Key:** guid of the extension
     * **Location:** where the commands are displayed. The possible values are:
         * **ClientSideExtension.ListViewCommandSet.ContextMenu:**  The context menu of the items
         * **ClientSideExtension.ListViewCommandSet.CommandBar:** The top command set menu in a list or library
         * **ClientSideExtension.ListViewCommandSet:** Both context menu and also command bar
 (Corresponds to SPUserCustomAction.Location="CommandUI.Ribbon")
-* **Properties:** an optional JSON object containing properties that will be available via the this.properties member. In this HelloWorld example, it defined a ‘testMessage’ property.
+* **Properties:** an optional JSON object containing properties that will be available via the `this.properties` member. In this HelloWorld example, it defined a *‘testMessage’* property.
 
 Full URL should be something like following, depending on your tenant URL and the location of the newly created list.
 
@@ -299,7 +299,7 @@ To ensure that our newly added **element.xml** file is taken into account while 
 
 ## Deploy field to SharePoint Online and host JavaScript from local host
 
-Now you are ready to deploy the solution to SharePoint site and to get the CustomAction automatically associated on the site level.
+Now you are ready to deploy the solution to SharePoint site and to get the *CustomAction* automatically associated on the site level.
 
 In the console window, enter the following command to package your client-side solution that contains the extension, so that we get the basic structure ready for packaging:
 
@@ -337,7 +337,7 @@ gulp serve --nobrowser
 
 Go to the site where you want to test SharePoint asset provisioning. This could be any site collection in the tenant where you deployed this solution package.
 
-Chose the gears icon on the top nav bar on the right and choose **Add an app** to go to your Apps page.
+Chose the gears icon on the top navigation bar on the right and choose **Add an app** to go to your Apps page.
 
 In the **Search** box, enter '**command**' and choose *Enter* to filter your apps.
 

@@ -2,11 +2,11 @@
 
 >**Note:** The SharePoint Framework Extensions are currently in preview and is subject to change. SharePoint Framework Extensions are not currently supported for use in production environments.
 
-In this article you will learn how to deploy your SharePoint Framework Application Customizer to be hosted from Office 365 CDN and how to deploy that to SharePoint for the end users. This article continues with the hello world extension built in the previous article [# Deploy your extension to site collection (Hello world part 3)](./using-page-placeholder-with-extensions.md) where we hosted customizer still from from localhost.
+In this article, you will learn how to deploy your SharePoint Framework Application Customizer to be hosted from Office 365 CDN and how to deploy that to SharePoint for the end users. This article continues with the hello world extension built in the previous article [# Deploy your extension to site collection (Hello world part 3)](./using-page-placeholder-with-extensions.md) where we hosted customizer still from localhost.
 
 Be sure you have completed the procedures in the following articles before you start:
 
-* [Build your first SharePoint SharePoint Extension (Hello world part 1)](./build-a-hello-world-extension.md)
+* [Build your first SharePoint Framework Extension (Hello world part 1)](./build-a-hello-world-extension.md)
 * [Connect your client-side web part to SharePoint (Hello world part 2)](./using-page-placeholder-with-extensions.md)
 * [Deploy your extension to site collection (Hello world part 3)](./serving-your-extension-from-sharepoint.md)
 
@@ -91,6 +91,6 @@ Upload or drag & drop the newly created client-side solution package to the app 
 
 ![](../../../../images/ext-app-approve-cdn-address.png)
 
-Install new version of the solution to your site and ensure that it's working properly without your locahost hosting the JavaScript file.
+Install new version of the solution to your site and ensure that it's working properly without your *locahost* hosting the JavaScript file.
 
 ![Custom header and footer elements rendered in the page](../../../../images/ext-app-header-footer-visible.png)

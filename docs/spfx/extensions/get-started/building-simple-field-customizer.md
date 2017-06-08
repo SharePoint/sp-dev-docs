@@ -184,7 +184,7 @@ Open the **HelloWorldFieldCustomizer.ts** file in the **src\extensions\helloWorl
   }
 ```
 
-Switch back to your console window and ensure that you do not have any exceptions. If you do not have the solution running in locahost, execute following command:
+Switch back to your console window and ensure that you do not have any exceptions. If you do not have the solution running in *locahost*, execute following command:
 
 ```
 gulp serve --nobrowser
@@ -204,7 +204,7 @@ Notice how we have change the field rendering style completely. Field value is i
 Now that we have tested our solution properly in debug mode, we can package this to be deployed automatically as part of the solution package deployed to the sites. There are few things to take care of here.
 
 1. Install solution package to site where it should be installed, so that extension manifest is being white listed for execution
-2. Associate Field Customizer to existing field in the site. This can be performed programatically (CSOM/REST) or by using feature framework inside of the SharePoint Framework solution package. You'll need to associate following properties in the SPField object at site or list level.
+2. Associate Field Customizer to existing field in the site. This can be performed programmatically (CSOM/REST) or by using feature framework inside of the SharePoint Framework solution package. You'll need to associate following properties in the *SPField* object at site or list level.
     * **ClientSiteComponentId:** This is the identifier (GUID) of the Field Customizer, which has been installed on the app catalog. 
     * **ClientSideComponentProperties:** This is optional parameter, which can be used to provide properties for the Field Customizer instance
 
@@ -325,7 +325,7 @@ Notice that we did not update the URLs for hosting the solution for this deploym
 
 Go to the site where you want to test SharePoint asset provisioning. This could be any site collection in the tenant where you deployed this solution package.
 
-Chose the gears icon on the top nav bar on the right and choose **Add an app** to go to your Apps page.
+Chose the gears icon on the top navigation bar on the right and choose **Add an app** to go to your Apps page.
 
 In the **Search** box, enter '**field**' and choose *Enter* to filter your apps.
 
@@ -364,4 +364,4 @@ In this case we hosted the JavaScript still from the localhost location, but you
 
 Process for actual publishing is identical among the different extension types. You can follow following publishing steps to update the assets to be hosted from CDN.
 
-* [Deploy extension to Office 365 CDN](./deploy-extension-to-office365-cdn.md).
+* [Deploy extension to Office 365 CDN](./hosting-extension-from-office365-cdn.md).

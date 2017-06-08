@@ -6,13 +6,13 @@ Application Customizers also support you to access well known locations in the p
 
 This is similar model as using UserCustomAction collection in Site or Web object to associate custom JavaScript, which would be used to modify page experience. Key different or advantage with SPFx extensions is that you will have guaranteed elements in the page also in case of any html dom structure modifications with future changes in SharePoint Online.
 
-In this article, we'll continue extending hello world extension built in the previous article [Build your first SharePoint SharePoint Extension (Hello World part 1)](./build-a-hello-world-extension.md) to take advantage of the page placeholders. 
+In this article, we'll continue extending hello world extension built in the previous article [Build your first SharePoint Framework Extension (Hello World part 1)](./build-a-hello-world-extension.md) to take advantage of the page placeholders. 
 
 ## Get access to page placeholders
 
 Application Customizer extensions are supported with `Site`, `Web` and `List` scopes. You can control the scope by deciding where or how the Application Customizer will be registered in our SharePoint tenant. When Application Customizer exists in the scope and is being rendered, you use following method in the code to get access on placeholder. Once you have received the placeholder object, you have full control on deciding what will be presented for end users. 
 
-Notice that we are requesting well known placeholder by using their well known identifier. In this case code is accessing header section of the page using `PageHeader` identifier. 
+Notice that we are requesting well-known placeholder by using their well known identifier. In this case code is accessing header section of the page using `PageHeader` identifier. 
 
 ```ts
     // Handling header place holder
@@ -78,6 +78,7 @@ Update **AppCustomizer.module.scss** as follows:
 ```
 
 Move back to **HelloWorldApplicationCustomizer.ts** and update **IHelloWorldApplicationCustomizerProperties** interface to have specific properties for Header and Footer as follows.
+
 * If your command set uses the ClientSideComponentProperties JSON input, it will be deserialized into the BaseExtension.properties object. You can define an interface to describe it.
 
 ```ts
@@ -87,7 +88,7 @@ export interface IHelloWorldApplicationCustomizerProperties {
 }
 ```
 
-Add following private variable inside of the **HelloWorldApplicationCustomizer** class. In this scenario these could be also local variables in a `onRender` method, but if you'd want to share that to other objects, you'd define that as private variables. 
+Add following private variable inside of the **HelloWorldApplicationCustomizer** class. In this scenario, these could be also local variables in a `onRender` method, but if you'd want to share that to other objects, you'd define that as private variables. 
 
 ```ts
 export default class HelloWorldApplicationCustomizer
@@ -102,7 +103,7 @@ Update the `onRender` method with the following code:
 
 * We use `this.context.placeholders.tryAttach` to get access on the placeholder
 * Extension code should not assume that the expected placeholder is available
-* Code expects a custom properties called `Header`and `Footer`. If properties exists, they will be rendered inside of the placeholder.
+* Code expects a custom property called `Header`and `Footer`. If properties exist, they will be rendered inside of the placeholder.
 * Notice that code path for both header and footer is almost identical in the below method, only different is the used variables and style definitions.
 
 ```ts
@@ -197,7 +198,7 @@ If you don't have solution running currently, execute following command and ensu
 gulp serve --nobrowser
 ```
 
-Navigate to a out of the box modern list in SharePoint Online. This can be a list or a library for the initial testing. 
+Navigate to an out of the box modern list in SharePoint Online. This can be a list or a library for the initial testing. 
 
 To test your extension, append the following query string parameters to the URL:
 
