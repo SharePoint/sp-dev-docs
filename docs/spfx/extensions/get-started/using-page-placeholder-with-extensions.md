@@ -218,7 +218,7 @@ contoso.sharepoint.com/Lists/Contoso/AllItems.aspx?loadSPFX=true&debugManifestsF
 
 Click "**Load debug scripts**" button to continue loading scripts from your local host.
 
-You should now see the alert message in your page. 
+You should now see the custom header and footer content in your page. 
 
 ![Custom header and footer elements rendered in the page](../../../../images/ext-app-header-footer-visible.png)
 
