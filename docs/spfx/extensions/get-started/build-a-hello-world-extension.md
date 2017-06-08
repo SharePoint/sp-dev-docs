@@ -72,7 +72,7 @@ Notice that base class for the Application Customizer is imported from the **sp-
 
 ![import statement for BaseApplicationCustomizer from @microsoft/sp-application-base](../../../../images/ext-app-vscode-app-base.png)
 
-The logic for your Application Customizer is contained in the two methods onInit and onRender.
+The logic for your Application Customizer is contained in the two methods **onInit** and **onRender**.
 
 - **onInit()** is where you should perform any setup needed for your extension. This event occurs after ```this.context``` and ```this.properties``` are assigned, but before the page DOM is ready. As with web parts, ```onInit()``` returns a promise that you can use to perform asynchronous operations; ```onRender()``` will not be called until your promise has resolved. If you don’t need that, simply return ```super.onInit()```.
 - **onRender()** is where your extension can interact with the UI. This event occurs after the application’s initial page DOM structure has been created (although some parts of the UI may not have finished rendering yet).

@@ -3,15 +3,15 @@
 
 >**Note:** The SharePoint Framework Extensions are currently in preview and is subject to change. SharePoint Framework Extensions are not currently supported for use in production environments.
 
-In this article you will learn how to deploy your SharePoint Framework Application Customizer to SharePoint and see it working on a modern SharePoint pages. This article continues with the hello world extension built in the previous article [Using page placeholders from Application Customizer (Hello World part 2)](./using-page-placeholder-with-extensions.md).
+In this article, you will learn how to deploy your SharePoint Framework Application Customizer to SharePoint and see it working on a modern SharePoint pages. This article continues with the hello world extension built in the previous article [Using page placeholders from Application Customizer (Hello World part 2)](./using-page-placeholder-with-extensions.md).
 
 Be sure you have completed the procedures in the following articles before you start:
 
-* [Build your first SharePoint SharePoint Extension (Hello World part 1)](./build-a-hello-world-extension.md)
+* [Build your first SharePoint Framework Extension (Hello World part 1)](./build-a-hello-world-extension.md)
 * [Using page placeholders from Application Customizer (Hello World part 2)](./using-page-placeholder-with-extensions.md)
 
 ## Package the helloWorld Application Customizer
-In the console window, go to the extension project directory created in [Build your first SharePoint SharePoint Extension (Hello World part 1)](./build-a-hello-world-extension.md)
+In the console window, go to the extension project directory created in [Build your first SharePoint Framework Extension (Hello World part 1)](./build-a-hello-world-extension.md)
 
 ```
 cd app-extension
@@ -23,7 +23,7 @@ Unlike in the **Debug** mode, in order to use extension on modern SharePoint ser
 Before we package our solution, we want to include needed code to automate the extension activation in the site, whenever solution will be installed on the site. In this case, we'll use feature framework elements to perform these actions directly in the solution package, but you could also associate the application customizer to SharePoint site using REST or CSOM object model, for example as part of the site provisioning.
 
 1. Install solution package to site where it should be installed, so that extension manifest is being white listed for execution
-2. Associate Application Customizer to the planned scope. This can be performed programatically (CSOM/REST) or by using feature framework inside of the SharePoint Framework solution package. You'll need to associate following properties in the `UserCustomAction` object at site collection, site or list level.
+2. Associate Application Customizer to the planned scope. This can be performed programmatically (CSOM/REST) or by using feature framework inside of the SharePoint Framework solution package. You'll need to associate following properties in the `UserCustomAction` object at site collection, site or list level.
     * **ClientSiteComponentId:** This is the identifier (GUID) of the Field Customizer, which has been installed on the app catalog. 
     * **ClientSideComponentProperties:** This is optional parameter, which can be used to provide properties for the Field Customizer instance
 
@@ -50,7 +50,7 @@ Copy the following xml structure into **elements.xml**. Updated the **ClientSide
 
 We also set the **ClientSideComponentProperties** using this xml definition and bypass JSON properties for this extension instance. Notice how the JSON is escaped, so that we can set that properly using XML attribute. 
 
-Notice also that we use specific location called `ClientSideExtension.ApplicationCustomizer` to define that this is Application Customizer. Since by default this **element.xml** will be associated to *Web* scoped feature, this CustomAction will be automatically added to `Web.UserCustomAction` collection in the site where the solution is being installed.
+Notice also that we use specific location called `ClientSideExtension.ApplicationCustomizer` to define that this is Application Customizer. Since by default this **element.xml** will be associated to *Web* scoped feature, this `CustomAction` will be automatically added to `Web.UserCustomAction` collection in the site where the solution is being installed.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -114,7 +114,7 @@ To ensure that our newly added **element.xml** file is taken into account while 
 
 ## Deploy field to SharePoint Online and host JavaScript from local host
 
-Now you are ready to deploy the solution to SharePoint site and to get the CustomAction automatically associated on the site level.
+Now you are ready to deploy the solution to SharePoint site and to get the `CustomAction` automatically associated on the site level.
 
 In the console window, enter the following command to package your client-side solution that contains the extension, so that we get the basic structure ready for packaging:
 
@@ -152,7 +152,7 @@ gulp serve --nobrowser
 
 Go to the site where you want to test SharePoint asset provisioning. This could be any site collection in the tenant where you deployed this solution package.
 
-Chose the gears icon on the top nav bar on the right and choose **Add an app** to go to your Apps page.
+Chose the gears icon on the top navigation bar on the right and choose **Add an app** to go to your Apps page.
 
 In the **Search** box, enter '**app**' and choose *Enter* to filter your apps.
 
@@ -166,4 +166,4 @@ When application has been successfully installed, you can see the header and foo
 
 ## Next steps
 
-Congratulations! You have deployed a extension to a modern SharePoint page from app catalog. You can continue building out your Hello World extension in the next topic, [Hosting extension from Office 365 CDN (Hello world part 4)](./hosting-extension-from-office365-cdn.md), where you will learn how to deploy and load the extension assets from a CDN instead of localhost.
+Congratulations! You have deployed an extension to a modern SharePoint page from app catalog. You can continue building out your Hello World extension in the next topic, [Hosting extension from Office 365 CDN (Hello world part 4)](./hosting-extension-from-office365-cdn.md), where you will learn how to deploy and load the extension assets from a CDN instead of localhost.
