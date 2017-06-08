@@ -1,21 +1,21 @@
 # Using page placeholders from Application Customizer (Hello World part 2)
 
->**Note:** The SharePoint Framework Extensions are currently in preview and is subject to change. SharePoint Framework Extensions are not currently supported for use in production environments.
+>**Note:** The SharePoint Framework Extensions are currently in preview and are subject to change. SharePoint Framework Extensions are not currently supported for use in production environments.
 
-Application Customizers also support you to access well known locations in the page, which you can modify based on your business and functional requirements. Typical scenarios would be for example dynamic header and footer experiences, which would be visible cross all the pages in SharePoint Online. 
+Application Customizers also provide access to well known locations in the page, which you can modify based on your business and functional requirements. Typical scenarios would be dynamic header and footer experiences, which would be visible across all the pages in SharePoint Online. 
 
-This is similar model as using UserCustomAction collection in Site or Web object to associate custom JavaScript, which would be used to modify page experience. Key different or advantage with SPFx extensions is that you will have guaranteed elements in the page also in case of any html dom structure modifications with future changes in SharePoint Online.
+This model is similar to using a UserCustomAction collection in a Site or Web object to associate custom JavaScript to modify the page experience. The key difference or advantage with SPFx extensions is that you have guaranteed elements on the page regardless of any HTML/DOM structure modifications in future changes to SharePoint Online.
 
-In this article, we'll continue extending hello world extension built in the previous article [Build your first SharePoint Framework Extension (Hello World part 1)](./build-a-hello-world-extension.md) to take advantage of the page placeholders. 
+In this article, we'll continue extending the hello world extension built in the previous article [Build your first SharePoint Framework Extension (Hello World part 1)](./build-a-hello-world-extension.md) to take advantage of the page placeholders. 
 
-## Get access to page placeholders
+## Getting access to page placeholders
 
-Application Customizer extensions are supported with `Site`, `Web` and `List` scopes. You can control the scope by deciding where or how the Application Customizer will be registered in our SharePoint tenant. When Application Customizer exists in the scope and is being rendered, you use following method in the code to get access on placeholder. Once you have received the placeholder object, you have full control on deciding what will be presented for end users. 
+Application Customizer extensions are supported with `Site`, `Web` and `List` scopes. You can control the scope by deciding where or how the Application Customizer will be registered in your SharePoint tenant. When the Application Customizer exists in the scope and is being rendered, you can use the following method to get access to the placeholder. Once you have received the placeholder object, you have full control over what will be presented to the end user.
 
-Notice that we are requesting well-known placeholder by using their well known identifier. In this case code is accessing header section of the page using `PageHeader` identifier. 
+Notice that we are requesting a well-known placeholder by using the corresponding well-known identifier. In this case, the code is accessing the header section of the page using the `PageHeader` identifier. 
 
 ```ts
-    // Handling header place holder
+    // Handling the header placeholder
     if (!this._headerPlaceholder) {
       this._headerPlaceholder = this.context.placeholders.tryAttach(
         'PageHeader',
@@ -25,11 +25,11 @@ Notice that we are requesting well-known placeholder by using their well known i
     }
 ```
 
-In following steps, we'll modify previously created hello word Application Customizer to access placeholders and to modify their content by adding custom html elements to them. 
+In the following steps, we'll modify the previously created hello word Application Customizer to access placeholders and modify their content by adding custom html elements to them. 
 
-Switch to Visual Studio code (or your preferred IDE) and open **src\extesions\helloWorld\HelloWorldApplicationCustomizer.ts.**
+Switch to Visual Studio Code (or your preferred IDE) and open **src\extensions\helloWorld\HelloWorldApplicationCustomizer.ts.**
 
-Add the `Placeholder` to the import section from `@microsoft/sp-application-base` by updating import as follows:
+Add the `Placeholder` to the import from `@microsoft/sp-application-base` by updating the import statement as follows:
 
 ```ts
 import {
@@ -38,8 +38,9 @@ import {
 } from '@microsoft/sp-application-base';
 ```
 
-Add also following imports under the `strings` import on top of the file:
-* We will create style definitions for the output in following steps
+Also add the following import statements after the `strings` import at the top of the file:
+
+* We will create style definitions for the output in the following steps
 * `escape` is used to escape Application Customizer properties  
 
 ```ts
@@ -47,10 +48,11 @@ import styles from './AppCustomizer.module.scss';
 import { escape } from '@microsoft/sp-lodash-subset'; 
 ```
 
-Create a new file call **AppCustomizer.module.scss** under **src\extesions\helloWorld** folder. 
+Create a new file named **AppCustomizer.module.scss** under the **src\extensions\helloWorld** folder. 
 
 Update **AppCustomizer.module.scss** as follows:
-* These are the styles used to output html for the header and footer placeholders.
+
+* These are the styles that will be used within the outputed html for the header and footer placeholders.
 
 ```css
 .app {
@@ -77,9 +79,9 @@ Update **AppCustomizer.module.scss** as follows:
 
 ```
 
-Move back to **HelloWorldApplicationCustomizer.ts** and update **IHelloWorldApplicationCustomizerProperties** interface to have specific properties for Header and Footer as follows.
+Move back to **HelloWorldApplicationCustomizer.ts** and update the **IHelloWorldApplicationCustomizerProperties** interface to have specific properties for Header and Footer as follows.
 
-* If your command set uses the ClientSideComponentProperties JSON input, it will be deserialized into the BaseExtension.properties object. You can define an interface to describe it.
+* If your command set uses the ClientSideComponentProperties JSON input, it will be deserialized into the `BaseExtension.properties` object. You can define an interface to describe it.
 
 ```ts
 export interface IHelloWorldApplicationCustomizerProperties {
@@ -88,7 +90,7 @@ export interface IHelloWorldApplicationCustomizerProperties {
 }
 ```
 
-Add following private variable inside of the **HelloWorldApplicationCustomizer** class. In this scenario, these could be also local variables in a `onRender` method, but if you'd want to share that to other objects, you'd define that as private variables. 
+Add the following private variables inside of the **HelloWorldApplicationCustomizer** class. In this scenario, these could just be local variables in an `onRender` method, but if you want to share them with other objects you define them as private variables. 
 
 ```ts
 export default class HelloWorldApplicationCustomizer
@@ -103,8 +105,8 @@ Update the `onRender` method with the following code:
 
 * We use `this.context.placeholders.tryAttach` to get access on the placeholder
 * Extension code should not assume that the expected placeholder is available
-* Code expects a custom property called `Header`and `Footer`. If properties exist, they will be rendered inside of the placeholder.
-* Notice that code path for both header and footer is almost identical in the below method, only different is the used variables and style definitions.
+* The code expects custom properties called `Header`and `Footer`. If the properties exist, they will be rendered inside of the placeholders.
+* Notice that the code path for both the header and the footer is almost identical in the below method. The only differences are the variables used and the style definitions.
 
 ```ts
   @override
@@ -114,7 +116,7 @@ Update the `onRender` method with the following code:
     console.log('Available placeholders: ',
       this.context.placeholders.placeholderNames.join(', '));
 
-    // Handling header place holder
+    // Handling the header placeholder
     if (!this._headerPlaceholder) {
       this._headerPlaceholder = this.context.placeholders.tryAttach(
         'PageHeader',
@@ -124,7 +126,7 @@ Update the `onRender` method with the following code:
 
       // The extension should not assume that the expected placeholder is available.
       if (!this._headerPlaceholder) {
-        console.error('The expected placeholder was not found.');
+        console.error('The expected placeholder (PageHeader) was not found.');
         return;
       }
 
@@ -145,7 +147,7 @@ Update the `onRender` method with the following code:
       }
     }
 
-    // Trying footer placeholder
+    // Handling the footer placeholder
     if (!this._footerPlaceholder) {
       this._footerPlaceholder = this.context.placeholders.tryAttach(
         'PageFooter',
@@ -155,7 +157,7 @@ Update the `onRender` method with the following code:
 
       // The extension should not assume that the expected placeholder is available.
       if (!this._footerPlaceholder) {
-        console.error('The expected placeholder was not found.');
+        console.error('The expected placeholder (PageFooter) was not found.');
         return;
       }
 
@@ -179,7 +181,7 @@ Update the `onRender` method with the following code:
 
 ```
 
-Add following method under the `onRender` method. In this case we simply output a console message, when extension is removed from the page. 
+Add the following method after the `onRender` method. In this case, we simply output a console message, when the extension is removed from the page. 
 
 ```ts
  private _onDispose(): void {
@@ -188,11 +190,11 @@ Add following method under the `onRender` method. In this case we simply output 
 
 ```
 
-Code is now ready to be tested in SharePoint Online. 
+The code is now ready to be tested in SharePoint Online. 
 
 Switch to the console window that is running `gulp serve` and check if there are any errors. If there are errors, gulp reports them in the console and you will need to fix them before proceeding.
 
-If you don't have solution running currently, execute following command and ensure that you don't have any errors.
+If you don't have the solution running currently, execute the following command and ensure you don't have any errors.
 
 ```
 gulp serve --nobrowser
@@ -203,12 +205,12 @@ Navigate to an out of the box modern list in SharePoint Online. This can be a li
 To test your extension, append the following query string parameters to the URL:
 
 * Notice that the GUID used in this query parameter has to match on the ID attribute of your Application Customizer available from **HelloWorldApplicationCustomizer.manifest.json**.
-* We also use Header and Footer JSON properties to provide parameters or configurations to the Application Customizer. In this case we simply output these values, but you could adjust the behavior based on the properties in actual production usage. 
+* We also use Header and Footer JSON properties to provide parameters or configurations to the Application Customizer. In this case, we simply output these values, but you could adjust the behavior based on the properties in actual production usage. 
 
 ```
 ?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"5fc73e12-8085-4a4b-8743-f6d02ffe1240":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"Header":"Header area of the page","Footer":"Footer area in the page"}}}
 ```
-Full URL to request would be something like following:
+The full URL to request would be something like the following:
 
 ```
 contoso.sharepoint.com/Lists/Contoso/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"5fc73e12-8085-4a4b-8743-f6d02ffe1240":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"Header":"Header area of the page","Footer":"Footer area in the page"}}}
@@ -216,11 +218,11 @@ contoso.sharepoint.com/Lists/Contoso/AllItems.aspx?loadSPFX=true&debugManifestsF
 
 ![Allow Debug Manifest question from the page](../../../../images/ext-app-debug-manifest-message.png)
 
-Click "**Load debug scripts**" button to continue loading scripts from your local host.
+Click the "**Load debug scripts**" button to continue loading scripts from your local host.
 
 You should now see the custom header and footer content in your page. 
 
 ![Custom header and footer elements rendered in the page](../../../../images/ext-app-header-footer-visible.png)
 
 ## Next steps
-Congratulations on building your own custom header and footer from Application Customizer. You can continue building out your Hello World Extension in the next topic [Deploy your extension to site collection (Hello world part 3)](./serving-your-extension-from-sharepoint.md). You will learn how to deploy and preview the Hello World extension in SharePoint site collection without using **Debug** query parameters. 
+Congratulations on building your own custom header and footer using the Application Customizer! You can continue building out your Hello World Extension in the next topic [Deploy your extension to site collection (Hello world part 3)](./serving-your-extension-from-sharepoint.md). You will learn how to deploy and preview the Hello World extension in a SharePoint site collection without using **Debug** query parameters. 
