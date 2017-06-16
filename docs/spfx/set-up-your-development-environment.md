@@ -19,17 +19,7 @@ Install [NodeJS](https://nodejs.org/en/) Long Term Support (LTS) version.
 * If you have NodeJS already installed please check you have the latest version using `node -v`. It should return the current [LTS version](https://nodejs.org/en/download/). 
 * If you are using a Mac, it is recommended you use [homebrew](http://brew.sh/) to install and manage NodeJS. 
 
-After installing node, make sure npm is up to date by running following command:
-	
-```
-npm install -g npm
-```
-
-In case of Ubuntu Linux previous command might result in 'permission denied' message, so it should be instead executed as 
-
-```
-sudo npm install -g npm
-```
+> Notice that SPFx build pipeline does **NOT** currently support npm v5.x, so you'll need to use either v3 or v4. At the time of the writing, NodeJS LTS version (v6.11.0) installs npm v3.10.10. We'll update this section when there are changes in the supportability statement. 
 
 ### Code Editors
 Install a code editor. You can use any code editor or IDE that supports client-side development to build your web part, such as:
