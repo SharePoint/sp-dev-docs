@@ -6,7 +6,7 @@ Helper method to create a Toggle on the PropertyPane.
 
 **Signature:** __
 
-**Returns**: [`IPropertyPaneField`](../../sp-webpart-base.api/interface/ipropertypanefield.md)<[`IPropertyPaneToggleProps`](../../sp-webpart-base.api/interface/ipropertypanetoggleprops.md)>
+**Returns**: [`IPropertyPaneField`](../../sp-webpart-base/interface/ipropertypanefield.md)<[`IPropertyPaneToggleProps`](../../sp-webpart-base/interface/ipropertypanetoggleprops.md)>
 
 
 
@@ -18,6 +18,6 @@ Helper method to create a Toggle on the PropertyPane.
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `targetProperty`    | `string` | Target property the toggle is associated to. |
-| `properties`    | [`IPropertyPaneToggleProps`](../../sp-webpart-base.api/interface/ipropertypanetoggleprops.md) | Strongly typed Toggle properties. |
+| `properties`    | [`IPropertyPaneToggleProps`](../../sp-webpart-base/interface/ipropertypanetoggleprops.md) | Strongly typed Toggle properties. |
 
 

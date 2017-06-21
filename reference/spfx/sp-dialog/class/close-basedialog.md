@@ -4,9 +4,9 @@
 
 Close the dialog. This will void the permission to show for this dialog. Every dialog should have a mechanism to eventually close to avoid blocking the user interface. If called on an inactive dialog it will abort the request to show.
 
-**Signature:** _public close(): [Promise](../../web-apis.api/class/promise.md)<void>;_
+**Signature:** _public close(): [Promise](../../web-apis/class/promise.md)<void>;_
 
-**Returns**: [`Promise`](../../web-apis.api/class/promise.md)<void>
+**Returns**: [`Promise`](../../web-apis/class/promise.md)<void>
 
 
 

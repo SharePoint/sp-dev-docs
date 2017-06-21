@@ -4,9 +4,9 @@
 
 This event hook is called when the client-side extension is first activated on the page.
 
-**Signature:** _@virtual public onInit(): [Promise](../../web-apis.api/class/promise.md)<void>;_
+**Signature:** _@virtual public onInit(): [Promise](../../web-apis/class/promise.md)<void>;_
 
-**Returns**: [`Promise`](../../web-apis.api/class/promise.md)<void>
+**Returns**: [`Promise`](../../web-apis/class/promise.md)<void>
 
 
 

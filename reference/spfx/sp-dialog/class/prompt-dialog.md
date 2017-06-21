@@ -4,9 +4,9 @@
 
 Prompts the user for a string value with a user-friendly interface. Calling this method sends a request to application to show the dialog.
 
-**Signature:** _public static prompt(message: string, options?: [IPromptOptions](../../sp-dialog.api/interface/ipromptoptions.md)): [Promise](../../web-apis.api/class/promise.md)<string | undefined>;_
+**Signature:** _public static prompt(message: string, options?: [IPromptOptions](../../sp-dialog/interface/ipromptoptions.md)): [Promise](../../web-apis/class/promise.md)<string | undefined>;_
 
-**Returns**: [`Promise`](../../web-apis.api/class/promise.md)<string ,` undefined>`
+**Returns**: [`Promise`](../../web-apis/class/promise.md)<string ,` undefined>`
 
 
 

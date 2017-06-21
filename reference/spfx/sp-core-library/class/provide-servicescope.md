@@ -4,7 +4,7 @@
 
 ServiceScope.provide() is used to register an implemententation of the given serviceKey for the current scope. It may only be used when the ServiceScope is in an "unfinished" state, i.e. before finish() has been called.
 
-**Signature:** _public provide < T >(serviceKey: [ServiceKey](../../sp-core-library.api/class/servicekey.md)<T>, service: T): T;_
+**Signature:** _public provide < T >(serviceKey: [ServiceKey](../../sp-core-library/class/servicekey.md)<T>, service: T): T;_
 
 **Returns**: `T`
 
@@ -17,7 +17,7 @@ ServiceScope.provide() is used to register an implemententation of the given ser
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [`ServiceKey`](../../sp-core-library.api/class/servicekey.md)<T> | the key that will later be used to consume the service |
+| `serviceKey`    | [`ServiceKey`](../../sp-core-library/class/servicekey.md)<T> | the key that will later be used to consume the service |
 | `service`    | `T` | the service instance that is being registered |
 
 

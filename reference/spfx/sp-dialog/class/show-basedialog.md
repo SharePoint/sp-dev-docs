@@ -4,9 +4,9 @@
 
 Request the framework to show this dialog.
 
-**Signature:** _public show(options?: [IDialogShowingOptions](../../sp-dialog.api/interface/idialogshowingoptions.md)): [Promise](../../web-apis.api/class/promise.md)<void>;_
+**Signature:** _public show(options?: [IDialogShowingOptions](../../sp-dialog/interface/idialogshowingoptions.md)): [Promise](../../web-apis/class/promise.md)<void>;_
 
-**Returns**: [`Promise`](../../web-apis.api/class/promise.md)<void>
+**Returns**: [`Promise`](../../web-apis/class/promise.md)<void>
 
 
 
@@ -17,6 +17,6 @@ A promise that resolves once the dialog is successfully closed (after being show
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `options`    | [`IDialogShowingOptions`](../../sp-dialog.api/interface/idialogshowingoptions.md) | _Optional._ Dialog showing options |
+| `options`    | [`IDialogShowingOptions`](../../sp-dialog/interface/idialogshowingoptions.md) | _Optional._ Dialog showing options |
 
 

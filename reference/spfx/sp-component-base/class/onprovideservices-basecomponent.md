@@ -4,7 +4,7 @@
 
 Constructs the object that will be returned by the "services" property.
 
-**Signature:** _@virtual protected onProvideServices(serviceScope: [ServiceScope](../../sp-core-library.api/class/servicescope.md)): void;_
+**Signature:** _@virtual protected onProvideServices(serviceScope: [ServiceScope](../../sp-core-library/class/servicescope.md)): void;_
 
 **Returns**: `void`
 

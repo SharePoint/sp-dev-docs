@@ -9,9 +9,9 @@ SharePoint Framework support for accessibility features such as keyboard navigat
 
 | Class	   |  Description |
 |:-------------|:---------------|
-| [`BaseDialog`](./sp-dialog.api/class/basedialog.md)     | The base class for implementing dialogs in SharePoint Framework. This provides a supported way for showing dialogs to the user inside SharePoint Framework components. |
-| [`Dialog`](./sp-dialog.api/class/dialog.md)     | Static Dialog class to provide API for showing static dialogs such as alert and prompt |
-| [`SecondaryDialog`](./sp-dialog.api/class/secondarydialog.md)     | This class handles calls to show a secondary dialog. It's only available by calling this.secondaryManager inside a dialog. |
+| [`BaseDialog`](./sp-dialog/class/basedialog.md)     | The base class for implementing dialogs in SharePoint Framework. This provides a supported way for showing dialogs to the user inside SharePoint Framework components. |
+| [`Dialog`](./sp-dialog/class/dialog.md)     | Static Dialog class to provide API for showing static dialogs such as alert and prompt |
+| [`SecondaryDialog`](./sp-dialog/class/secondarydialog.md)     | This class handles calls to show a secondary dialog. It's only available by calling this.secondaryManager inside a dialog. |
 
 
 
@@ -19,10 +19,10 @@ SharePoint Framework support for accessibility features such as keyboard navigat
 
 | Interface	   |  Description |
 |:-------------|:---------------|
-| [`IAlertOptions`](./sp-dialog.api/interface/ialertoptions.md)   | Options for showing an alert dialog  |
-| [`IDialogConfiguration`](./sp-dialog.api/interface/idialogconfiguration.md)   | The interface for dialog configuration  |
-| [`IDialogShowingOptions`](./sp-dialog.api/interface/idialogshowingoptions.md)   | Options for showing a dialog  |
-| [`IPromptOptions`](./sp-dialog.api/interface/ipromptoptions.md)   | Options for showing an prompt dialog  |
+| [`IAlertOptions`](./sp-dialog/interface/ialertoptions.md)   | Options for showing an alert dialog  |
+| [`IDialogConfiguration`](./sp-dialog/interface/idialogconfiguration.md)   | The interface for dialog configuration  |
+| [`IDialogShowingOptions`](./sp-dialog/interface/idialogshowingoptions.md)   | Options for showing a dialog  |
+| [`IPromptOptions`](./sp-dialog/interface/ipromptoptions.md)   | Options for showing an prompt dialog  |
 
 
 

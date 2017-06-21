@@ -4,7 +4,7 @@
 
 Checks if this version is greater (i.e. newer) than the input parameter. Missing patch number is treated as zero Examples: 1.0.0 greaterThan 0.0.9 -> true 2.0 greaterThan 2.0.0 -> false 3.0.1 greaterThan 3.0 -> true
 
-**Signature:** _public greaterThan(compareWith: [Version](../../sp-core-library.api/class/version.md)): boolean;_
+**Signature:** _public greaterThan(compareWith: [Version](../../sp-core-library/class/version.md)): boolean;_
 
 **Returns**: `boolean`
 
@@ -17,6 +17,6 @@ A boolean indicating if this version is greater than the input parameter
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `compareWith`    | [`Version`](../../sp-core-library.api/class/version.md) | The version to compare with |
+| `compareWith`    | [`Version`](../../sp-core-library/class/version.md) | The version to compare with |
 
 

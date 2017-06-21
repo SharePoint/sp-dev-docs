@@ -4,9 +4,9 @@
 
 
 
-**Signature:** _static error(): [Response](../../web-apis.api/class/response.md);_
+**Signature:** _static error(): [Response](../../web-apis/class/response.md);_
 
-**Returns**: [`Response`](../../web-apis.api/class/response.md)
+**Returns**: [`Response`](../../web-apis/class/response.md)
 
 
 

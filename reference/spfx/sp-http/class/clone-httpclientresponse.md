@@ -4,9 +4,9 @@
 
 
 
-**Signature:** _@virtual public clone(): [HttpClientResponse](../../sp-http.api/class/httpclientresponse.md);_
+**Signature:** _@virtual public clone(): [HttpClientResponse](../../sp-http/class/httpclientresponse.md);_
 
-**Returns**: [`HttpClientResponse`](../../sp-http.api/class/httpclientresponse.md)
+**Returns**: [`HttpClientResponse`](../../sp-http/class/httpclientresponse.md)
 
 
 

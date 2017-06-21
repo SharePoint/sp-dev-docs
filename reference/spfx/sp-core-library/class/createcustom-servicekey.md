@@ -4,9 +4,9 @@
 
 Constructs a new ServiceKey whose default implementation will be obtained by invoking the specified callback.
 
-**Signature:** _public static createCustom < T >(name: string, defaultCreator: ServiceCreator<T>): [ServiceKey](../../sp-core-library.api/class/servicekey.md)<T>;_
+**Signature:** _public static createCustom < T >(name: string, defaultCreator: ServiceCreator<T>): [ServiceKey](../../sp-core-library/class/servicekey.md)<T>;_
 
-**Returns**: [`ServiceKey`](../../sp-core-library.api/class/servicekey.md)<T>
+**Returns**: [`ServiceKey`](../../sp-core-library/class/servicekey.md)<T>
 
 
 

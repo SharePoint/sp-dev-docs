@@ -4,9 +4,9 @@
 
 Alerts a message to the user with a user-friendly interface. Calling this method sends a request to application to show the alert dialog.
 
-**Signature:** _public static alert(message: string, options?: [IAlertOptions](../../sp-dialog.api/interface/ialertoptions.md)): [Promise](../../web-apis.api/class/promise.md)<void>;_
+**Signature:** _public static alert(message: string, options?: [IAlertOptions](../../sp-dialog/interface/ialertoptions.md)): [Promise](../../web-apis/class/promise.md)<void>;_
 
-**Returns**: [`Promise`](../../web-apis.api/class/promise.md)<void>
+**Returns**: [`Promise`](../../web-apis/class/promise.md)<void>
 
 
 

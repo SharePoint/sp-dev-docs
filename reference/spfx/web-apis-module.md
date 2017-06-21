@@ -9,11 +9,11 @@
 
 | Class	   |  Description |
 |:-------------|:---------------|
-| [`Body`](./web-apis.api/class/body.md)     |  |
-| [`Headers`](./web-apis.api/class/headers.md)     |  |
-| [`Promise`](./web-apis.api/class/promise.md)     |  |
-| [`Request`](./web-apis.api/class/request.md)     |  |
-| [`Response`](./web-apis.api/class/response.md)     |  |
+| [`Body`](./web-apis/class/body.md)     |  |
+| [`Headers`](./web-apis/class/headers.md)     |  |
+| [`Promise`](./web-apis/class/promise.md)     |  |
+| [`Request`](./web-apis/class/request.md)     |  |
+| [`Response`](./web-apis/class/response.md)     |  |
 
 
 
@@ -21,11 +21,11 @@
 
 | Interface	   |  Description |
 |:-------------|:---------------|
-| [`HeadersMap`](./web-apis.api/interface/headersmap.md)   |   |
-| [`RequestInit`](./web-apis.api/interface/requestinit.md)   |   |
-| [`ResponseInit`](./web-apis.api/interface/responseinit.md)   |   |
-| [`Thenable`](./web-apis.api/interface/thenable.md)   |   |
-| [`Window`](./web-apis.api/interface/window.md)   |   |
+| [`HeadersMap`](./web-apis/interface/headersmap.md)   |   |
+| [`RequestInit`](./web-apis/interface/requestinit.md)   |   |
+| [`ResponseInit`](./web-apis/interface/responseinit.md)   |   |
+| [`Thenable`](./web-apis/interface/thenable.md)   |   |
+| [`Window`](./web-apis/interface/window.md)   |   |
 
 
 

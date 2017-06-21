@@ -6,7 +6,7 @@ Helper method to create a custom field on the PropertyPane. The purpose of the c
 
 **Signature:** __
 
-**Returns**: [`IPropertyPaneField`](../../sp-webpart-base.api/interface/ipropertypanefield.md)<[`IPropertyPaneCustomFieldProps`](../../sp-webpart-base.api/interface/ipropertypanecustomfieldprops.md)>
+**Returns**: [`IPropertyPaneField`](../../sp-webpart-base/interface/ipropertypanefield.md)<[`IPropertyPaneCustomFieldProps`](../../sp-webpart-base/interface/ipropertypanecustomfieldprops.md)>
 
 
 
@@ -18,6 +18,6 @@ Helper method to create a custom field on the PropertyPane. The purpose of the c
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `targetProperty`    |  | target property for this field. This parameter is being deprecated in future releases. |
-| `properties`    | [`IPropertyPaneCustomFieldProps`](../../sp-webpart-base.api/interface/ipropertypanecustomfieldprops.md) | Strongly typed Custom field properties. |
+| `properties`    | [`IPropertyPaneCustomFieldProps`](../../sp-webpart-base/interface/ipropertypanecustomfieldprops.md) | Strongly typed Custom field properties. |
 
 

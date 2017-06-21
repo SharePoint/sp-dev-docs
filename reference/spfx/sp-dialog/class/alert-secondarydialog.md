@@ -4,9 +4,9 @@
 
 Similar to
 
-**Signature:** _public alert(message: string, options?: [IAlertOptions](../../sp-dialog.api/interface/ialertoptions.md)): [Promise](../../web-apis.api/class/promise.md)<void>;_
+**Signature:** _public alert(message: string, options?: [IAlertOptions](../../sp-dialog/interface/ialertoptions.md)): [Promise](../../web-apis/class/promise.md)<void>;_
 
-**Returns**: [`Promise`](../../web-apis.api/class/promise.md)<void>
+**Returns**: [`Promise`](../../web-apis/class/promise.md)<void>
 
 
 
@@ -17,6 +17,6 @@ Similar to
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `options`    | [`IAlertOptions`](../../sp-dialog.api/interface/ialertoptions.md) | _Optional._ Dialog showing options |
+| `options`    | [`IAlertOptions`](../../sp-dialog/interface/ialertoptions.md) | _Optional._ Dialog showing options |
 
 

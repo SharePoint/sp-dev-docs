@@ -9,8 +9,8 @@ This package supports development of client-side components (e.g. web parts, cli
 
 | Class	   |  Description |
 |:-------------|:---------------|
-| [`BaseComponent`](./sp-component-base.api/class/basecomponent.md)     | Base class for client-side components such as BaseClientSideWebPart, BaseExtension, etc. |
-| [`BaseComponentContext`](./sp-component-base.api/class/basecomponentcontext.md)     | The base class for context objects for client-side components. |
+| [`BaseComponent`](./sp-component-base/class/basecomponent.md)     | Base class for client-side components such as BaseClientSideWebPart, BaseExtension, etc. |
+| [`BaseComponentContext`](./sp-component-base/class/basecomponentcontext.md)     | The base class for context objects for client-side components. |
 
 
 
@@ -18,7 +18,7 @@ This package supports development of client-side components (e.g. web parts, cli
 
 | Interface	   |  Description |
 |:-------------|:---------------|
-| [`IClientSideComponentContext`](./sp-component-base.api/interface/iclientsidecomponentcontext.md)   | The base context interface for client-side components.  |
+| [`IClientSideComponentContext`](./sp-component-base/interface/iclientsidecomponentcontext.md)   | The base context interface for client-side components.  |
 
 
 

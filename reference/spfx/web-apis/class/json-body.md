@@ -4,9 +4,9 @@
 
 
 
-**Signature:** _json(): [Promise](../../web-apis.api/class/promise.md)<any>;_
+**Signature:** _json(): [Promise](../../web-apis/class/promise.md)<any>;_
 
-**Returns**: [`Promise`](../../web-apis.api/class/promise.md)<any>
+**Returns**: [`Promise`](../../web-apis/class/promise.md)<any>
 
 
 

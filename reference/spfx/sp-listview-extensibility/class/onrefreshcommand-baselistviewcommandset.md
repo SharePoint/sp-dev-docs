@@ -4,7 +4,7 @@
 
 This event occurs whenever the ListView state changes. It allows the implementor to tailor the appearance of the command. For example, to hide the command, assign event.visible = false. To customize the title, assign event.tile.
 
-**Signature:** _@virtual public onRefreshCommand(event: [IListViewCommandSetRefreshEventParameters](../../sp-listview-extensibility.api/interface/ilistviewcommandsetrefresheventparameters.md)): void;_
+**Signature:** _@virtual public onRefreshCommand(event: [IListViewCommandSetRefreshEventParameters](../../sp-listview-extensibility/interface/ilistviewcommandsetrefresheventparameters.md)): void;_
 
 **Returns**: `void`
 

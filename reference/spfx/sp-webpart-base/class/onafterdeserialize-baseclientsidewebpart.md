@@ -4,7 +4,7 @@
 
 This API is called after the web part is deserialized to an object, right before the property bag is populated. The default implementation is a no-op. A web part developer can override this API if the deserialized object does not fully reflect the initial state of the property bag. This gives the web part developer a chance to populate the property bag right after the data is deserialized to an object.
 
-**Signature:** _@virtual protected onAfterDeserialize(deserializedObject: any, data[Version](../../sp-core-library.api/class/version.md): Version): TProperties;_
+**Signature:** _@virtual protected onAfterDeserialize(deserializedObject: any, data[Version](../../sp-core-library/class/version.md): Version): TProperties;_
 
 **Returns**: `TProperties`
 
@@ -18,7 +18,7 @@ The property bag of the web part
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `deserializedObject`    | `any` | The object deserialized from the stored data. Note that the schema of this object is not necessarily consistent with the current property bag, because the serialization could have been done by an older version of the web part |
-| `dataVersion`    | [`Version`](../../sp-core-library.api/class/version.md) | The data version of the stored data being deserialized. You can use this value to determine if the data was serialized by an older web part. Web parts can define their data version by overriding the dataVersion property. |
+| `dataVersion`    | [`Version`](../../sp-core-library/class/version.md) | The data version of the stored data being deserialized. You can use this value to determine if the data was serialized by an older web part. Web parts can define their data version by overriding the dataVersion property. |
 
 
 ### Remarks

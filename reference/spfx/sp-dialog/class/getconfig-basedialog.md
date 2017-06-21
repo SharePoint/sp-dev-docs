@@ -4,9 +4,9 @@
 
 Optionally, subclasses can override the getConfig() method to customize various configuration settings that affect how a dialog is displayed.
 
-**Signature:** _@virtual public getConfig(): [IDialogConfiguration](../../sp-dialog.api/interface/idialogconfiguration.md);_
+**Signature:** _@virtual public getConfig(): [IDialogConfiguration](../../sp-dialog/interface/idialogconfiguration.md);_
 
-**Returns**: [`IDialogConfiguration`](../../sp-dialog.api/interface/idialogconfiguration.md)
+**Returns**: [`IDialogConfiguration`](../../sp-dialog/interface/idialogconfiguration.md)
 
 
 

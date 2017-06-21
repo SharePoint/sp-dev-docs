@@ -6,7 +6,7 @@ Helper method to create a Link on the PropertyPane.
 
 **Signature:** __
 
-**Returns**: [`IPropertyPaneField`](../../sp-webpart-base.api/interface/ipropertypanefield.md)<[`IPropertyPaneLinkProps`](../../sp-webpart-base.api/interface/ipropertypanelinkprops.md)>
+**Returns**: [`IPropertyPaneField`](../../sp-webpart-base/interface/ipropertypanefield.md)<[`IPropertyPaneLinkProps`](../../sp-webpart-base/interface/ipropertypanelinkprops.md)>
 
 
 
@@ -18,6 +18,6 @@ Helper method to create a Link on the PropertyPane.
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `targetProperty`    | `string` | Target property the Link is associated to. |
-| `properties`    | [`IPropertyPaneLinkProps`](../../sp-webpart-base.api/interface/ipropertypanelinkprops.md) | Strongly typed Link properties. |
+| `properties`    | [`IPropertyPaneLinkProps`](../../sp-webpart-base/interface/ipropertypanelinkprops.md) | Strongly typed Link properties. |
 
 

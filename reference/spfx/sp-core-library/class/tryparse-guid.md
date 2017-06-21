@@ -4,9 +4,9 @@
 
 Attempts to parse the input string to construct a new Guid object. If the string cannot be parsed, then undefined is returned.
 
-**Signature:** _public static tryParse(guid: string | undefined | null): [Guid](../../sp-core-library.api/class/guid.md) | undefined;_
+**Signature:** _public static tryParse(guid: string | undefined | null): [Guid](../../sp-core-library/class/guid.md) | undefined;_
 
-**Returns**: [`Guid `](../../sp-core-library.api/class/guid.md),` undefined`
+**Returns**: [`Guid `](../../sp-core-library/class/guid.md),` undefined`
 
 
 

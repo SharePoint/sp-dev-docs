@@ -5,9 +5,9 @@
 Searches for a content placeholder with the specified name. If none is found, then the function returns undefined. If one is found, we try to attach to it. If the caller tries to re-attached a placeholder, an exception will be thrown. A dispose has to happen before re-attach can happen.
 
 **Signature:** _public tryAttach(name: string,
-    options?: [I[Placeholder](../../sp-application-base.api/class/placeholder.md)AttachOptions](../../sp-application-base.api/interface/iplaceholderattachoptions.md)): Placeholder | undefined;_
+    options?: [I[Placeholder](../../sp-application-base/class/placeholder.md)AttachOptions](../../sp-application-base/interface/iplaceholderattachoptions.md)): Placeholder | undefined;_
 
-**Returns**: [`Placeholder `](../../sp-application-base.api/class/placeholder.md),` undefined`
+**Returns**: [`Placeholder `](../../sp-application-base/class/placeholder.md),` undefined`
 
 
 
@@ -19,7 +19,7 @@ Searches for a content placeholder with the specified name. If none is found, th
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `name`    | `string` | logical name of the placeholder. This name should not be confused with the DOM id or the attribute value of the placeholder. |
-| `options`    | [`IPlaceholderAttachOptions`](../../sp-application-base.api/interface/iplaceholderattachoptions.md) | _Optional._ placeholder options. |
+| `options`    | [`IPlaceholderAttachOptions`](../../sp-application-base/interface/iplaceholderattachoptions.md) | _Optional._ placeholder options. |
 
 
 ### Remarks

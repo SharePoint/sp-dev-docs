@@ -4,9 +4,9 @@
 
 
 
-**Signature:** _new < T >(): [Set](../../es6-collections.api/interface/set.md)<T>;_
+**Signature:** _new < T >(): [Set](../../es6-collections/interface/set.md)<T>;_
 
-**Returns**: [`Set`](../../es6-collections.api/interface/set.md)<T>
+**Returns**: [`Set`](../../es6-collections/interface/set.md)<T>
 
 
 

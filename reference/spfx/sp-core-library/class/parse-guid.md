@@ -4,9 +4,9 @@
 
 Parses the input string to construct a new Guid object. If the string cannot be parsed, then an error is thrown.
 
-**Signature:** _public static parse(guidString: string | undefined | null): [Guid](../../sp-core-library.api/class/guid.md);_
+**Signature:** _public static parse(guidString: string | undefined | null): [Guid](../../sp-core-library/class/guid.md);_
 
-**Returns**: [`Guid`](../../sp-core-library.api/class/guid.md)
+**Returns**: [`Guid`](../../sp-core-library/class/guid.md)
 
 
 

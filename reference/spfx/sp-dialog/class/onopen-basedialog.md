@@ -4,9 +4,9 @@
 
 This method is called before the render method and can be overridden to make preparations for rendering. The loading indicator is displayed during the lifetime of this method.
 
-**Signature:** _@virtual protected onOpen(): [Promise](../../web-apis.api/class/promise.md)<void>;_
+**Signature:** _@virtual protected onOpen(): [Promise](../../web-apis/class/promise.md)<void>;_
 
-**Returns**: [`Promise`](../../web-apis.api/class/promise.md)<void>
+**Returns**: [`Promise`](../../web-apis/class/promise.md)<void>
 
 
 

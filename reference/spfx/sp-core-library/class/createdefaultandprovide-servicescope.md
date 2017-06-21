@@ -4,7 +4,7 @@
 
 This is a shorthand function that constructs the default implementation of the specified serviceKey, and then registers it by calling ServiceScope.provide().
 
-**Signature:** _public createDefaultAndProvide < T >(serviceKey: [ServiceKey](../../sp-core-library.api/class/servicekey.md)<T>): T;_
+**Signature:** _public createDefaultAndProvide < T >(serviceKey: [ServiceKey](../../sp-core-library/class/servicekey.md)<T>): T;_
 
 **Returns**: `T`
 
@@ -17,6 +17,6 @@ This is a shorthand function that constructs the default implementation of the s
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `serviceKey`    | [`ServiceKey`](../../sp-core-library.api/class/servicekey.md)<T> | the key that can be used later to consume the service |
+| `serviceKey`    | [`ServiceKey`](../../sp-core-library/class/servicekey.md)<T> | the key that can be used later to consume the service |
 
 

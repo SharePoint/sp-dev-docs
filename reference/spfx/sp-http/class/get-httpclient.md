@@ -4,10 +4,10 @@
 
 Calls fetch(), but sets the method to 'GET'.
 
-**Signature:** _public get(url: string, configuration: [HttpClientConfiguration](../../sp-http.api/class/httpclientconfiguration.md),
-    options?: [IHttpClientOptions](../../sp-http.api/interface/ihttpclientoptions.md)): [Promise](../../web-apis.api/class/promise.md)<[HttpClientResponse](../../sp-http.api/class/httpclientresponse.md)>;_
+**Signature:** _public get(url: string, configuration: [HttpClientConfiguration](../../sp-http/class/httpclientconfiguration.md),
+    options?: [IHttpClientOptions](../../sp-http/interface/ihttpclientoptions.md)): [Promise](../../web-apis/class/promise.md)<[HttpClientResponse](../../sp-http/class/httpclientresponse.md)>;_
 
-**Returns**: [`Promise`](../../web-apis.api/class/promise.md)<[`HttpClientResponse`](../../sp-http.api/class/httpclientresponse.md)>
+**Returns**: [`Promise`](../../web-apis/class/promise.md)<[`HttpClientResponse`](../../sp-http/class/httpclientresponse.md)>
 
 
 
@@ -19,7 +19,7 @@ a promise that will return the result
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `url`    | `string` | the URL to fetch |
-| `configuration`    | [`HttpClientConfiguration`](../../sp-http.api/class/httpclientconfiguration.md) | determines the default behavior of HttpClient; normally this should be the latest version number from HttpClientConfigurations |
-| `options`    | [`IHttpClientOptions`](../../sp-http.api/interface/ihttpclientoptions.md) | _Optional._ additional options that affect the request |
+| `configuration`    | [`HttpClientConfiguration`](../../sp-http/class/httpclientconfiguration.md) | determines the default behavior of HttpClient; normally this should be the latest version number from HttpClientConfigurations |
+| `options`    | [`IHttpClientOptions`](../../sp-http/interface/ihttpclientoptions.md) | _Optional._ additional options that affect the request |
 
 

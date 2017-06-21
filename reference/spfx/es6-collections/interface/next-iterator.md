@@ -4,9 +4,9 @@
 
 
 
-**Signature:** _next(value?: any): [IteratorResult](../../es6-collections.api/interface/iteratorresult.md)<T>;_
+**Signature:** _next(value?: any): [IteratorResult](../../es6-collections/interface/iteratorresult.md)<T>;_
 
-**Returns**: [`IteratorResult`](../../es6-collections.api/interface/iteratorresult.md)<T>
+**Returns**: [`IteratorResult`](../../es6-collections/interface/iteratorresult.md)<T>
 
 
 

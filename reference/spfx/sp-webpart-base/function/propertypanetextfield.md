@@ -6,7 +6,7 @@ Helper method to create a TextField on the PropertyPane.
 
 **Signature:** __
 
-**Returns**: [`IPropertyPaneField`](../../sp-webpart-base.api/interface/ipropertypanefield.md)<[`IPropertyPaneTextFieldProps`](../../sp-webpart-base.api/interface/ipropertypanetextfieldprops.md)>
+**Returns**: [`IPropertyPaneField`](../../sp-webpart-base/interface/ipropertypanefield.md)<[`IPropertyPaneTextFieldProps`](../../sp-webpart-base/interface/ipropertypanetextfieldprops.md)>
 
 
 
@@ -18,6 +18,6 @@ Helper method to create a TextField on the PropertyPane.
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
 | `targetProperty`    | `string` | Target property the textfield is associated to. |
-| `properties`    | [`IPropertyPaneTextFieldProps`](../../sp-webpart-base.api/interface/ipropertypanetextfieldprops.md) | Strongly typed TextField properties. |
+| `properties`    | [`IPropertyPaneTextFieldProps`](../../sp-webpart-base/interface/ipropertypanetextfieldprops.md) | Strongly typed TextField properties. |
 
 

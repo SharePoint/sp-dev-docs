@@ -4,7 +4,7 @@
 
 Retrieves the cell value for the specified column. The value will be a primitive JavaScript object such as a string, number, etc.
 
-**Signature:** _public abstract getValue(column: [ColumnAccessor](../../sp-listview-extensibility.api/class/columnaccessor.md)): any;_
+**Signature:** _public abstract getValue(column: [ColumnAccessor](../../sp-listview-extensibility/class/columnaccessor.md)): any;_
 
 **Returns**: `any`
 

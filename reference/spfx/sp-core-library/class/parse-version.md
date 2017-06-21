@@ -4,9 +4,9 @@
 
 Constructs a new Version instance using the version string. tryParse validates the input version string and throws error if it is invalid
 
-**Signature:** _public static parse(versionString: string | undefined | null): [Version](../../sp-core-library.api/class/version.md);_
+**Signature:** _public static parse(versionString: string | undefined | null): [Version](../../sp-core-library/class/version.md);_
 
-**Returns**: [`Version`](../../sp-core-library.api/class/version.md)
+**Returns**: [`Version`](../../sp-core-library/class/version.md)
 
 
 

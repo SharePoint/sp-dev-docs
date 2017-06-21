@@ -4,9 +4,9 @@
 
 Loads a component from a manifest.
 
-**Signature:** _loadComponent < TComponent >(manifest: IClientSideComponentManifest): [Promise](../../web-apis.api/class/promise.md)<TComponent>;_
+**Signature:** _loadComponent < TComponent >(manifest: IClientSideComponentManifest): [Promise](../../web-apis/class/promise.md)<TComponent>;_
 
-**Returns**: [`Promise`](../../web-apis.api/class/promise.md)<TComponent>
+**Returns**: [`Promise`](../../web-apis/class/promise.md)<TComponent>
 
 
 

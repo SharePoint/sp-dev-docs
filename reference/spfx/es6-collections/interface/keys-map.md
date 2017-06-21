@@ -4,9 +4,9 @@
 
 
 
-**Signature:** _keys(): [Iterator](../../es6-collections.api/interface/iterator.md)<K>;_
+**Signature:** _keys(): [Iterator](../../es6-collections/interface/iterator.md)<K>;_
 
-**Returns**: [`Iterator`](../../es6-collections.api/interface/iterator.md)<K>
+**Returns**: [`Iterator`](../../es6-collections/interface/iterator.md)<K>
 
 
 

@@ -4,9 +4,9 @@
 
 Similar to
 
-**Signature:** _public prompt(message: string, options?: [IPromptOptions](../../sp-dialog.api/interface/ipromptoptions.md)): [Promise](../../web-apis.api/class/promise.md)<string>;_
+**Signature:** _public prompt(message: string, options?: [IPromptOptions](../../sp-dialog/interface/ipromptoptions.md)): [Promise](../../web-apis/class/promise.md)<string>;_
 
-**Returns**: [`Promise`](../../web-apis.api/class/promise.md)<string>
+**Returns**: [`Promise`](../../web-apis/class/promise.md)<string>
 
 
 
@@ -17,6 +17,6 @@ Similar to
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `options`    | [`IPromptOptions`](../../sp-dialog.api/interface/ipromptoptions.md) | _Optional._ Dialog showing options |
+| `options`    | [`IPromptOptions`](../../sp-dialog/interface/ipromptoptions.md) | _Optional._ Dialog showing options |
 
 

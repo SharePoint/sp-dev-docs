@@ -4,9 +4,9 @@
 
 Similar to
 
-**Signature:** _public show(dialog: [BaseDialog](../../sp-dialog.api/class/basedialog.md), options?: [IDialogShowingOptions](../../sp-dialog.api/interface/idialogshowingoptions.md)): [Promise](../../web-apis.api/class/promise.md)<void>;_
+**Signature:** _public show(dialog: [BaseDialog](../../sp-dialog/class/basedialog.md), options?: [IDialogShowingOptions](../../sp-dialog/interface/idialogshowingoptions.md)): [Promise](../../web-apis/class/promise.md)<void>;_
 
-**Returns**: [`Promise`](../../web-apis.api/class/promise.md)<void>
+**Returns**: [`Promise`](../../web-apis/class/promise.md)<void>
 
 
 
@@ -17,6 +17,6 @@ Similar to
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `options`    | [`IDialogShowingOptions`](../../sp-dialog.api/interface/idialogshowingoptions.md) | _Optional._ Dialog showing options |
+| `options`    | [`IDialogShowingOptions`](../../sp-dialog/interface/idialogshowingoptions.md) | _Optional._ Dialog showing options |
 
 

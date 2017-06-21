@@ -4,7 +4,7 @@
 
 Compares two Version classes
 
-**Signature:** _public static compare(v1: [Version](../../sp-core-library.api/class/version.md), v2: Version): number;_
+**Signature:** _public static compare(v1: [Version](../../sp-core-library/class/version.md), v2: Version): number;_
 
 **Returns**: `number`
 
@@ -17,7 +17,7 @@ Compares two Version classes
 
 | Parameter	   | Type    | Description |
 |:-------------|:---------------|:------------|
-| `v1`    | [`Version`](../../sp-core-library.api/class/version.md) | The first version class for comparison |
-| `v2`    | [`Version`](../../sp-core-library.api/class/version.md) | The second version class for comparison |
+| `v1`    | [`Version`](../../sp-core-library/class/version.md) | The first version class for comparison |
+| `v2`    | [`Version`](../../sp-core-library/class/version.md) | The second version class for comparison |
 
 

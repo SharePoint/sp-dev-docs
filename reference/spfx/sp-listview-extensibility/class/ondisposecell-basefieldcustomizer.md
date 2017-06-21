@@ -4,7 +4,7 @@
 
 
 
-**Signature:** _@virtual public onDisposeCell(event: [IFieldCustomizerCellEventParameters](../../sp-listview-extensibility.api/interface/ifieldcustomizercelleventparameters.md)): void;_
+**Signature:** _@virtual public onDisposeCell(event: [IFieldCustomizerCellEventParameters](../../sp-listview-extensibility/interface/ifieldcustomizercelleventparameters.md)): void;_
 
 **Returns**: `void`
 
