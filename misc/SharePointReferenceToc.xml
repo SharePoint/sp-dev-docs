@@ -205,17 +205,17 @@
 		</Item>
 		<Item text="es6-collections" url="spfx/es6-collections-module" SEODescription="">
 			<Item text="Interfaces" url="spfx/es6-collections" SEODescription="">
-				<Item text="ForEachable" url="spfx/es6-collections.api/interface/foreachable" SEODescription=""/>
-				<Item text="Iterator" url="spfx/es6-collections.api/interface/iterator" SEODescription=""/>
-				<Item text="IteratorResult" url="spfx/es6-collections.api/interface/iteratorresult" SEODescription=""/>
-				<Item text="Map" url="spfx/es6-collections.api/interface/map" SEODescription=""/>
-				<Item text="MapConstructor" url="spfx/es6-collections.api/interface/mapconstructor" SEODescription=""/>
-				<Item text="Set" url="spfx/es6-collections.api/interface/set" SEODescription=""/>
-				<Item text="SetConstructor" url="spfx/es6-collections.api/interface/setconstructor" SEODescription=""/>
-				<Item text="WeakMap" url="spfx/es6-collections.api/interface/weakmap" SEODescription=""/>
-				<Item text="WeakMapConstructor" url="spfx/es6-collections.api/interface/weakmapconstructor" SEODescription=""/>
-				<Item text="WeakSet" url="spfx/es6-collections.api/interface/weakset" SEODescription=""/>
-				<Item text="WeakSetConstructor" url="spfx/es6-collections.api/interface/weaksetconstructor" SEODescription=""/>
+				<Item text="ForEachable" url="spfx/es6-collections/interface/foreachable" SEODescription=""/>
+				<Item text="Iterator" url="spfx/es6-collections/interface/iterator" SEODescription=""/>
+				<Item text="IteratorResult" url="spfx/es6-collections/interface/iteratorresult" SEODescription=""/>
+				<Item text="Map" url="spfx/es6-collections/interface/map" SEODescription=""/>
+				<Item text="MapConstructor" url="spfx/es6-collections/interface/mapconstructor" SEODescription=""/>
+				<Item text="Set" url="spfx/es6-collections/interface/set" SEODescription=""/>
+				<Item text="SetConstructor" url="spfx/es6-collections/interface/setconstructor" SEODescription=""/>
+				<Item text="WeakMap" url="spfx/es6-collections/interface/weakmap" SEODescription=""/>
+				<Item text="WeakMapConstructor" url="spfx/es6-collections/interface/weakmapconstructor" SEODescription=""/>
+				<Item text="WeakSet" url="spfx/es6-collections/interface/weakset" SEODescription=""/>
+				<Item text="WeakSetConstructor" url="spfx/es6-collections/interface/weaksetconstructor" SEODescription=""/>
 			</Item>
 		</Item>
 		<Item text="es6-promise" url="spfx/es6-promise-module" SEODescription="">
