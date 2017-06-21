@@ -203,24 +203,24 @@
 				<Item text="Window" url="spfx/web-apis/interface/window" SEODescription=""/>
 			</Item>
 		</Item>
-		<Item text="es6-collections" url="spdx/es6-collections-module" SEODescription="">
-			<Item text="Interfaces" url="spdx/es6-collections" SEODescription="">
-				<Item text="ForEachable" url="spdx/es6-collections.api/interface/foreachable" SEODescription=""/>
-				<Item text="Iterator" url="spdx/es6-collections.api/interface/iterator" SEODescription=""/>
-				<Item text="IteratorResult" url="spdx/es6-collections.api/interface/iteratorresult" SEODescription=""/>
-				<Item text="Map" url="spdx/es6-collections.api/interface/map" SEODescription=""/>
-				<Item text="MapConstructor" url="spdx/es6-collections.api/interface/mapconstructor" SEODescription=""/>
-				<Item text="Set" url="spdx/es6-collections.api/interface/set" SEODescription=""/>
-				<Item text="SetConstructor" url="spdx/es6-collections.api/interface/setconstructor" SEODescription=""/>
-				<Item text="WeakMap" url="spdx/es6-collections.api/interface/weakmap" SEODescription=""/>
-				<Item text="WeakMapConstructor" url="spdx/es6-collections.api/interface/weakmapconstructor" SEODescription=""/>
-				<Item text="WeakSet" url="spdx/es6-collections.api/interface/weakset" SEODescription=""/>
-				<Item text="WeakSetConstructor" url="spdx/es6-collections.api/interface/weaksetconstructor" SEODescription=""/>
+		<Item text="es6-collections" url="spfx/es6-collections-module" SEODescription="">
+			<Item text="Interfaces" url="spfx/es6-collections" SEODescription="">
+				<Item text="ForEachable" url="spfx/es6-collections.api/interface/foreachable" SEODescription=""/>
+				<Item text="Iterator" url="spfx/es6-collections.api/interface/iterator" SEODescription=""/>
+				<Item text="IteratorResult" url="spfx/es6-collections.api/interface/iteratorresult" SEODescription=""/>
+				<Item text="Map" url="spfx/es6-collections.api/interface/map" SEODescription=""/>
+				<Item text="MapConstructor" url="spfx/es6-collections.api/interface/mapconstructor" SEODescription=""/>
+				<Item text="Set" url="spfx/es6-collections.api/interface/set" SEODescription=""/>
+				<Item text="SetConstructor" url="spfx/es6-collections.api/interface/setconstructor" SEODescription=""/>
+				<Item text="WeakMap" url="spfx/es6-collections.api/interface/weakmap" SEODescription=""/>
+				<Item text="WeakMapConstructor" url="spfx/es6-collections.api/interface/weakmapconstructor" SEODescription=""/>
+				<Item text="WeakSet" url="spfx/es6-collections.api/interface/weakset" SEODescription=""/>
+				<Item text="WeakSetConstructor" url="spfx/es6-collections.api/interface/weaksetconstructor" SEODescription=""/>
 			</Item>
 		</Item>
-		<Item text="es6-promise" url="spdx/es6-promise-module" SEODescription="">
+		<Item text="es6-promise" url="spfx/es6-promise-module" SEODescription="">
 		</Item>
-		<Item text="whatwg-fetch" url="spdx/whatwg-fetch-module" SEODescription="">
+		<Item text="whatwg-fetch" url="spfx/whatwg-fetch-module" SEODescription="">
 		</Item>
 	</Item>
 </Menu>
