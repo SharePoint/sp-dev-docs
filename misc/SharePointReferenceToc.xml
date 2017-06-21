@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SupportedProduct="|SharePoint" SupportedVersion="|V1.0|">
-	<Item text="SharePoint Framework Reference" url="spfx" SEODescription="Reference documentation for the SharePoint Framework">
+	<Item text="SharePoint Framework Reference" url="spdx" SEODescription="Reference documentation for the SharePoint Framework">
 		<Item text="Overview" url="spfx/sharepoint-framework-reference-overview" SEODescription="Reference documentation for the SharePoint Framework"/>
 		<Item text="sp-application-base" url="spfx/sp-application-base-module" SEODescription="">
 			<Item text="Classes" url="spfx/sp-application-base" SEODescription="">
@@ -48,17 +48,6 @@
 			</Item>
 		</Item>
 		<Item text="sp-dialog" url="spfx/sp-dialog-module" SEODescription="">
-			<Item text="Classes" url="spfx/sp-dialog" SEODescription="">
-				<Item text="BaseDialog" url="spfx/sp-dialog/class/basedialog" SEODescription=""/>
-				<Item text="Dialog" url="spfx/sp-dialog/class/dialog" SEODescription=""/>
-				<Item text="SecondaryDialog" url="spfx/sp-dialog/class/secondarydialog" SEODescription=""/>
-			</Item>
-			<Item text="Interfaces" url="spfx/sp-dialog" SEODescription="">
-				<Item text="IAlertOptions" url="spfx/sp-dialog/interface/ialertoptions" SEODescription=""/>
-				<Item text="IDialogConfiguration" url="spfx/sp-dialog/interface/idialogconfiguration" SEODescription=""/>
-				<Item text="IDialogShowingOptions" url="spfx/sp-dialog/interface/idialogshowingoptions" SEODescription=""/>
-				<Item text="IPromptOptions" url="spfx/sp-dialog/interface/ipromptoptions" SEODescription=""/>
-			</Item>
 		</Item>
 		<Item text="sp-extension-base" url="spfx/sp-extension-base-module" SEODescription="">
 			<Item text="Classes" url="spfx/sp-extension-base" SEODescription="">
