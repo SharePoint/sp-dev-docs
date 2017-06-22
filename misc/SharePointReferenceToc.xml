@@ -207,9 +207,7 @@
 				<Item text="WeakSetConstructor" url="spfx/es6-collections/interface/weaksetconstructor" SEODescription=""/>
 			</Item>
 		</Item>
-		<Item text="es6-promise" url="spfx/es6-promise-module" SEODescription="">
-		</Item>
-		<Item text="whatwg-fetch" url="spfx/whatwg-fetch-module" SEODescription="">
+		<Item text="web-apis" url="spfx/web-apis-module" SEODescription="">
 		</Item>
 	</Item>
 </Menu>
