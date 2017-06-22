@@ -2,7 +2,7 @@
 <Menu xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SupportedProduct="|SharePoint" SupportedVersion="|V1.0|">
 	<Item text="SharePoint Framework Reference" url="spfx" SEODescription="Reference documentation for the SharePoint Framework">
 		<Item text="Overview" url="spfx/sharepoint-framework-reference-overview" SEODescription="Reference documentation for the SharePoint Framework"/>
-		<Item text="sp-application-base" url="spfx/sp-application-base-module" SEODescription="">
+		<Item text="sp-application-base" url="spfx/sp-application-base" SEODescription="">
 			<Item text="Classes" url="spfx/sp-application-base/class" SEODescription="">
 				<Item text="ApplicationCustomizerContext" url="spfx/sp-application-base/class/applicationcustomizercontext" SEODescription=""/>
 				<Item text="BaseApplicationCustomizer" url="spfx/sp-application-base/class/baseapplicationcustomizer" SEODescription=""/>
