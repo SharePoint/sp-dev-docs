@@ -148,7 +148,7 @@ gulp serve
 
 The `serve` runs the different tasks and finally launches SharePoint Workbench.
 
-![gulp serve task](../../images/toolchain-gulp-serve-task.png)
+![gulp serve task](../../../images/toolchain-gulp-serve-task.png)
 
 ### Build targets
 In the previous screenshot, you can see that the task indicates your build target as follows:
