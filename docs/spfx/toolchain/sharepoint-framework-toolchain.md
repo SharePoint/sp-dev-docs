@@ -129,7 +129,7 @@ The toolchain consists of the following gulp tasks defined in the [@microsoft/sp
   * Bundles the client-side solution project entry point and all its dependencies into a single JavaScript file.
 * serve
   * Serves the client-side solution project and assets from the local machine.
-* nuke
+* clean
   * Cleans the client-side solution project's build artifacts from the previous build and from the build target directories (lib and dist)
 * test
   * Runs unit tests, if available, for the client-side solution project. 
