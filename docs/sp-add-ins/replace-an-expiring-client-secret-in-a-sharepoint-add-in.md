@@ -136,6 +136,8 @@ $newClientSecret
   <add key="SecondaryClientSecret" value="your old secret here" />
 ```
 
+> **Note** If you are performing this procedure for the first time there will be no **SecondaryClientSecret** property entry at this point in the configuration file. However if you are performing the procedure for a subsequent client secret expiration (second or third) the property **SecondaryClientSecret** is already present and containing the initial or already longer time ago expired old secret. In this case delete the **SecondaryClientSecret** property first before renaming **ClientSecret**.
+
 3. Add a new  **ClientSecret** key and give it your new client secret. Your markup should now look like the following:
     
 ```XML
