@@ -85,7 +85,7 @@ An interesting middle ground between developing on the host and in a virtual mac
 
 Similarly to virtual machines, Docker containers run a virtualized instance of an operating system (most commonly based on Linux). All software installed in the image used to create the container runs isolated inside that container and has only access to the portion of the host file system explicitly shared with the container. As all changes to the filesystem inside a Docker container are discarded once the container is closed, developers share folders from their host to store the source code.
 
-Read more about [using Docker for building SharePoint Framework solutions](https://www.spcaf.com/blog/try-sharepoint-framework-without-installing/).
+Read more about [using Docker for building SharePoint Framework solutions](https://rencore.com/blog/try-sharepoint-framework-without-installing).
 
 ## Development workflow in SharePoint Framework projects
 
@@ -204,7 +204,7 @@ SharePoint Framework offers standard support for the [Karma](http://karma-runner
 
 Where linting is helpful to validate the syntax of the particular file, often developers need more support in order to verify that the project as a whole meets the guidelines. Generally linters focus on the code itself but miss the context of what the particular code file represents. In SharePoint Framework solutions artifacts have specific requirements, for example a web part should have a unique ID in the project. Also organizations might have other requirements such as not referencing scripts from CDN or only using a specific version of a particular library. This is where linters generally fall short and developers need other tools.
 
-[SharePoint Code Analysis Framework](https://spcaf.com) (SPCAF) is a third part solution frequently used by SharePoint developers, administrators and employees in quality assurance and security roles to verify that SharePoint customizations meet organizational quality guidelines. SPCAF integrates with the whole application lifecycle process helping organizations lower the total cost of ownership of SharePoint customizations. SPCAF offers a set of rules that specifically target SharePoint Framework solutions.
+[SharePoint Code Analysis Framework](http://rencore.com/spcaf) (SPCAF) is a third part solution frequently used by SharePoint developers, administrators and employees in quality assurance and security roles to verify that SharePoint customizations meet organizational quality guidelines. SPCAF integrates with the whole application lifecycle process helping organizations lower the total cost of ownership of SharePoint customizations. SPCAF offers a set of rules that specifically target SharePoint Framework solutions.
 
 ## Upgrading SharePoint Framework projects
 
