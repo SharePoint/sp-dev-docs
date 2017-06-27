@@ -6,15 +6,19 @@ First release of the SharePoint Framework will contain support for client-side w
 
 ## On-premises support
 
-- Shipping as part of Feature Pack 
+- Shipping as part of Feature Pack 2 for SharePoint 2016
 - Similar feature capabilities as in SharePoint Online
 - Target is to provide common development platform across on-premises and the cloud
-- Leveraging modern toolchain and open source on “legacy” environments
+- Leveraging modern toolchain and open source on on-premises environments
 - Targeting SharePoint 2016 version during calendar year 2017
+
+## General improvements
+
+- Easy access to Graph API to access user specific information (GraphHttpClient in dev preview)
+- Site collection app catalog with tenant level control for enabling easier solution deployed 
 
 ## Client-side web parts++ and add-ins
 
-- Easy access to Graph API to access user specific information
 - Supporting more complex scenarios and interactions with web parts
     - Part-to-part communication
 	- JS Framework isolation
@@ -27,15 +31,14 @@ First release of the SharePoint Framework will contain support for client-side w
 
 ## JavaScript embedding support (JSLink, User Custom Actions)
 
-- The same tool chain and deployment model as client side web parts.
+- The same tool chain and deployment model as client-side web parts
 - Derive from a strongly typed base class wherever possible rather than manipulating the page DOM directly.
-- Replacing custom actions and JSLinks with SharePoint Framework-based extensions
+- Enable modern extension usage with modern experiences similar as Custom Actions and JS Link in classic experience
 - Work with NoScript via tenant app catalog
-- Work in site collection app catalog
-- PnP community driven migration best practices and tools
 
+> This is now available in [developer preview](https://dev.office.com/blogs/announcing-availability-of-sharepoint-framework-extensions-developer-preview).
 
-## Application Lifecyle Management
+## Application Lifecycle Management
 
 - Streamlined approval experience: no need to know who your tenant admin is anymore
     - Owner initiate the approval process
@@ -53,11 +56,6 @@ First release of the SharePoint Framework will contain support for client-side w
 - Tool Chain Components
 - Additional Yeoman Templates
 
-## Full Page Apps
-- Build SharePoint Framework apps, which render in full page mode, rather than as a client-side web part
-- List level: custom view item, edit item, delete item, add item
-- Page level: assign an app to a page to a full custom page experience
-- Mobile
 
 ## Additional resources
 Please use following resources to stay up to date on the new releases and capabilities being released for SharePoint Framework.
