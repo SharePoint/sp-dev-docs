@@ -29,6 +29,9 @@
 				<Item text="Build FieldCustomizer" url="spfx/extensions/get-started/building-simple-field-customizer" SEODescription="Building simple field customizer and associating that to SharePoint site." />
 				<Item text="Build ListView Command Set" url="spfx/extensions/get-started/building-simple-cmdset-with-dialog-api" SEODescription="Build a ListView Command Set, which uses dialog API." />
 			</Item>
+			<Item text="Get started" url="spfx/extensions/get-started">
+				<Item text="Using custom dialogs" url="spfx/extensions/guidance/using-custom-dialogs-with-spfx" SEODescription="Using Custom Dialogs with SharePoint Framework Extensions." />
+			</Item>
 		</Item>
 		<Item text="Web parts" url="spfx/web-parts" SEODescription="">
 			<Item text="Overview" url="spfx/web-parts/overview-client-side-web-parts" SEODescription="Develop SharePoint client-side web parts to provide a better customized experience for SharePoint."/>
