@@ -6,6 +6,8 @@ Extensions are client-side components that run inside the context of a SharePoin
 
 >**Note:** Before following the steps in this article, be sure to [Set up your development environment](../../set-up-your-development-environment). Notice that extensions are currently **ONLY** available from Office 365 developer tenants.
 
+>**Note:** Currently ListView Command Set Extension can only be debugged with the modern experience in classic SharePoint sites. Please ensure that you use a classic team site with modern list experience for the testing.
+
 ## Create an extension project
 Create a new project directory in your favorite location.
 
