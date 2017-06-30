@@ -339,7 +339,7 @@ The **HelloWorldWebPart.manifest.json** file defines the web part metadata such 
 }
 ```
 
-Now that we have introduced new properties, make sure that you are again hosting the web part from the local developement environment by executing following command. This will also ensure that the above changes were correctly applied.
+Now that we have introduced new properties, make sure that you are again hosting the web part from the local development environment by executing following command. This will also ensure that the above changes were correctly applied.
 
 ```
 gulp serve
@@ -351,7 +351,7 @@ SharePoint Workbench is also hosted in SharePoint to preview and test your local
 
 Go to the following URL: 'https://your-sharepoint-site/_layouts/workbench.aspx'
 
->**Note:** If you do not have the SPFx developer certificate installed, then Workbench will notify you that it is configured not to load scripts from localhost. Execute `gulp trust-dev-cert` command in your project directory console to install the developer certificate.
+>**Note:** If you do not have the SPFx developer certificate installed, then Workbench will notify you that it is configured not to load scripts from localhost. Stop currently running process in the console window, execute `gulp trust-dev-cert` command in your project directory console to install the developer certificate before running `gulp serve`command again.
 
 ![SharePoint Workbench running in a SharePoint Online site](../../../../images/sp-workbench-o365.png)
 

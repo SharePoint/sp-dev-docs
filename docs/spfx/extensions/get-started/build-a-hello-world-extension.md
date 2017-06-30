@@ -95,6 +95,8 @@ First, compile your code and host the compiled files from your local machine by 
 gulp serve --nobrowser
 ```
 
+>**Note:** If you do not have the SPFx developer certificate installed, then Workbench will notify you that it is configured not to load scripts from localhost. Stop currently running process in the console window, execute `gulp trust-dev-cert` command in your project directory console to install the developer certificate before running `gulp serve --nobrowser`command again.
+
 Notice that we used the ```--nobrowser``` option, since there's no value in launching the local workbench since you currently cannot debug extensions locally.
 
 Once it compiles the code without errors, it will serve the resulting manifest from http://localhost:4321.
