@@ -176,8 +176,9 @@
 				<Item text="IWebPartPropertiesMetadata" url="spfx/sp-webpart-base/interface/iwebpartpropertiesmetadata" SEODescription=""/>
 			</Item>
 		</Item>
-		<Item text="horizontalline" url="/" IsSeparation="true" />
-        <Item text="External packages" url="spfx/web-apis-module" SEODescription="" />
+		<Item text="horizontalline" url="/" IsSeparation="true" SEODescription="">
+	</Item>
+		<Item text="External packages" url="spfx/web-apis-module" SEODescription="" />
 		<Item text="web-apis" url="spfx/web-apis-module" SEODescription="">
 			<Item text="Classes" url="spfx/web-apis" SEODescription="">
 				<Item text="Body" url="spfx/web-apis/class/body" SEODescription=""/>
@@ -208,8 +209,6 @@
 				<Item text="WeakSet" url="spfx/es6-collections/interface/weakset" SEODescription=""/>
 				<Item text="WeakSetConstructor" url="spfx/es6-collections/interface/weaksetconstructor" SEODescription=""/>
 			</Item>
-		</Item>
-		<Item text="web-apis" url="spfx/web-apis-module" SEODescription="">
 		</Item>
 	</Item>
 </Menu>
