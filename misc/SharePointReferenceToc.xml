@@ -48,6 +48,17 @@
 			</Item>
 		</Item>
 		<Item text="sp-dialog" url="spfx/sp-dialog-module" SEODescription="">
+			<Item text="Classes" url="spfx/sp-dialog" SEODescription="">
+				<Item text="BaseDialog" url="spfx/sp-dialog/class/basedialog" SEODescription=""/>
+				<Item text="Dialog" url="spfx/sp-dialog/class/dialog" SEODescription=""/>
+				<Item text="SecondaryDialog" url="spfx/sp-dialog/class/secondarydialog" SEODescription=""/>
+			</Item>
+			<Item text="Interfaces" url="spfx/sp-dialog" SEODescription="">
+				<Item text="IAlertOptions" url="spfx/sp-dialog/interface/ialertoptions" SEODescription=""/>
+				<Item text="IDialogConfiguration" url="spfx/sp-dialog/interface/idialogconfiguration" SEODescription=""/>
+				<Item text="IDialogShowingOptions" url="spfx/sp-dialog/interface/idialogshowingoptions" SEODescription=""/>
+				<Item text="IPromptOptions" url="spfx/sp-dialog/interface/ipromptoptions" SEODescription=""/>
+			</Item>
 		</Item>
 		<Item text="sp-extension-base" url="spfx/sp-extension-base-module" SEODescription="">
 			<Item text="Classes" url="spfx/sp-extension-base" SEODescription="">
@@ -177,7 +188,7 @@
 			</Item>
 		</Item>
 		<Item text="horizontalline" url="/" IsSeparation="true" SEODescription="">
-	</Item>
+		</Item>
 		<Item text="External packages" url="spfx/web-apis-module" SEODescription="" />
 		<Item text="web-apis" url="spfx/web-apis-module" SEODescription="">
 			<Item text="Classes" url="spfx/web-apis" SEODescription="">
