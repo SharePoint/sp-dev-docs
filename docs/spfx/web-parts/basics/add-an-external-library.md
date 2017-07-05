@@ -21,7 +21,7 @@ npm install validator --save
 	
 Create a file in the your web part's folder called `validator.d.ts` and add the following:
 	
->**Note:** Some libraries do not have typings. Validator is one of them. In this case you would want to define your own typings definition `.d.ts` file for the library. The following code shows an example.
+>**Note:** Some libraries do not have typings. While the Validator library does have a [community provided typings file](https://www.npmjs.com/package/@types/validator), for this scenario let's assume it does not. In this case you would want to define your own typings definition `.d.ts` file for the library. The following code shows an example.
 	
 ```typescript
 declare module "validator" {
@@ -60,7 +60,7 @@ npm install marked --save
 Download the typings:
 	
 ```
-tsd install marked --save
+npm install @types/marked --save
 ```
 	
 Edit the **config/config.json** and add an entry to the **externals** map. This is what tells the bundler to put this in a separate file. This prevents the bundler from bundling this library:
@@ -200,7 +200,7 @@ Contoso.EventList = {
 ```javascript
 var Contoso = {
     getEvents: function() {
-        return ['A', 'B', 'C'];   
+        return ['A', 'B', 'C'];
     }
 };
 ```
@@ -211,15 +211,15 @@ Add or create tpyings for this class. In this case, you will create `Contoso.d.t
 
 ```typescript
 declare module "contoso" {
-interface IEventList {
- alert(): void;
-}
-interface IContoso {
- getEvents(): string[];
- EventList: IEventList;
-}
-var contoso: IContoso;
-export = contoso;
+    interface IEventList {
+        alert(): void;
+    }
+    interface IContoso {
+        getEvents(): string[];
+        EventList: IEventList;
+    }
+    var contoso: IContoso;
+    export = contoso;
 }
 ```
 
@@ -259,38 +259,38 @@ Loading SharePoint JSOM is essentially the same scenario as loading non-AMD scri
 Install typings for Microsoft Ajax which is a dependency for JSOM typings:
 
 ```
-tsd install microsoft.ajax --save
+npm install @types/microsoft-ajax --save
 ```
 
 Install typings for the JSOM:
 
 ```
-tsd install sharepoint --save
+npm install @types/sharepoint --save
 ``` 
 
 Add entries to the `config.json`:
 
 ```json
 {
-"sp-init": {
- "path": "https://CONTOSO.sharepoint.com/_layouts/15/init.js",
- "globalName": "$_global_init"
-},
-"microsoft-ajax": {
- "path": "https://CONTOSO.sharepoint.com/_layouts/15/MicrosoftAjax.js",
- "globalName": "Sys",
- "globalDependencies": [ "sp-init" ]
-},
-"sp-runtime": {
- "path": "https://CONTOSO.sharepoint.com/_layouts/15/SP.Runtime.js",
- "globalName": "SP",
- "globalDependencies": [ "microsoft-ajax" ]
-},
-"sharepoint": {
- "path": "https://CONTOSO.sharepoint.com/_layouts/15/SP.js",
- "globalName": "SP",
- "globalDependencies": [ "sp-runtime" ]
-}
+    "sp-init": {
+        "path": "https://CONTOSO.sharepoint.com/_layouts/15/init.js",
+        "globalName": "$_global_init"
+    },
+    "microsoft-ajax": {
+        "path": "https://CONTOSO.sharepoint.com/_layouts/15/MicrosoftAjax.js",
+        "globalName": "Sys",
+        "globalDependencies": [ "sp-init" ]
+    },
+    "sp-runtime": {
+        "path": "https://CONTOSO.sharepoint.com/_layouts/15/SP.Runtime.js",
+        "globalName": "SP",
+        "globalDependencies": [ "microsoft-ajax" ]
+    },
+    "sharepoint": {
+        "path": "https://CONTOSO.sharepoint.com/_layouts/15/SP.js",
+        "globalName": "SP",
+        "globalDependencies": [ "sp-runtime" ]
+    }
 }
 ```
 
@@ -323,7 +323,7 @@ Edit the **config.json** file. Add an entry to **localizedResources**. The **{lo
 
 ```json
 {
-"strings": "strings/{locale}.js"
+    "strings": "strings/{locale}.js"
 }
 ```
     
@@ -331,14 +331,14 @@ Add typings for your strings. In this case, you have a file **MyStrings.d.ts**:
 
 ```typescript
 declare interface IStrings {
-webpartTitle: string;
-initialPrompt: string;
-exitPrompt: string;
+    webpartTitle: string;
+    initialPrompt: string;
+    exitPrompt: string;
 }
 
 declare module 'mystrings' {
-const strings: IStrings;
-export = strings;
+    const strings: IStrings;
+    export = strings;
 }
 ```
     
