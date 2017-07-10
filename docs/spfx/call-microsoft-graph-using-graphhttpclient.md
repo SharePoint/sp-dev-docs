@@ -44,7 +44,12 @@ The GraphHttpClient is meant to be used only for accessing the Microsoft Graph. 
 
 ### Available permission scopes
 
-The GraphHttpClient uses the **Office 365 SharePoint Online** Azure Active Directory application to retrieve a valid access token to the Microsoft Graph on behalf of the current user. The retrieved access token contains two permissions scopes: **Read and write all groups (preview)** (`Group.ReadWrite.All`) and **Read all usage reports** (`Reports.Read.All`). At this moment these are the only two permissions available when using the GraphHttpClient. If you need other permission scopes in your solution, you have to use [ADAL JS with implicit OAuth flow](web-parts/guidance/call-microsoft-graph-from-your-web-part) instead.
+The GraphHttpClient uses the **Office 365 SharePoint Online** Azure Active Directory application to retrieve a valid access token to the Microsoft Graph on behalf of the current user. The retrieved access token contains two permissions scopes: 
+
+* **Read and write all groups (preview)** (`Group.ReadWrite.All`) 
+* **Read all usage reports** (`Reports.Read.All`) 
+
+At this moment these are the only two permissions available when using the GraphHttpClient. If you need other permission scopes in your solution, you have to use [ADAL JS with implicit OAuth flow](web-parts/guidance/call-microsoft-graph-from-your-web-part) instead.
 
 ### Tokens are retrieved using an internal API
 
