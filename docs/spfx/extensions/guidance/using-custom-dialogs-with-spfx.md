@@ -4,11 +4,10 @@ You can use custom dialog boxes, available from the **@microsoft/sp-dialog** pac
 
 This article describes how to create a custom dialog box and use it within the context of a ListView Command Set extension.
 
->**Note:** The custom dialog box feature is currently in preview. We are looking for your feedback before we release. To provide your feedback, [file an issue in our GitHub repo](https://github.com/SharePoint/sp-dev-docs/issues).
+>**Note:** The custom dialog box feature is currently in preview. We are looking for your feedback before we release. To provide feedback, [file an issue in our GitHub repo](https://github.com/SharePoint/sp-dev-docs/issues).
 
 > Please note that debugging Custom ListView Command Sets in SharePoint Online is currently only available from the modern list experience within classic team sites hosted in a **developer tenant**.
 
-> The end result of this tutorial is available as source code at https://github.com/SharePoint/sp-dev-fx-extensions/tree/master/samples/react-command-dialog.  
 
 You can access the sample code that this article is based on in the [](https://github.com/SharePoint/sp-dev-fx-extensions/tree/master/samples/react-command-dialog) repo.
 
