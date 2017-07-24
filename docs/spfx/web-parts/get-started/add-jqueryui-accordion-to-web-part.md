@@ -68,7 +68,7 @@ code .
 In the console, type the following to install jQuery npm package:
 
 ```
-npm install --save jquery
+npm install --save jquery@2
 ```
 
  Now type the following to install jQueryUI npm package:
@@ -82,7 +82,7 @@ Next we'll need to install the typings for our project. Starting from TypeScript
 Open your console and install needed types:
 
 ```
-npm install --save @types/jquery
+npm install --save @types/jquery@2
 npm install --save @types/jqueryui
 ```
 
