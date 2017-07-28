@@ -46,7 +46,7 @@ When the scaffold is complete, you should see the following message indicating a
 
 ![SharePoint client-side solution scaffolded successfully](../../../../images/ext-com-yeoman-complete.png)
 
-For information about troubleshooting any errors, see [Known issues](../basics/known-issues).
+For information about troubleshooting any errors, see [Known issues](../../web-parts/basics/known-issues).
 
 Once the solution scaffolding is completed, type the following into the console to start Visual Studio Code.
 
