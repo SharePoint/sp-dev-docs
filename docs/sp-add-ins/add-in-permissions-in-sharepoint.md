@@ -53,12 +53,13 @@ SharePoint supports four different permission scopes within the content database
 
 **Table 1. SharePoint add-in permission request scope URIs and descriptions**
 
-|**Scope URI**|**Description**|
-|:-----|:-----|
-|tenancyhttp://sharepoint/content/tenant|The tenancy where the add-in is installed. Includes all children of this scope.|
-|site collectionhttp://sharepoint/content/sitecollection|The site collection where the add-in is installed. Includes all children of this scope.|
-|websitehttp://sharepoint/content/sitecollection/web|The website where the add-in is installed. Includes all children of this scope.|
-|listhttp://sharepoint/content/sitecollection/web/list|A single list in the website where the add-in is installed. When the user who installs the add-in is prompted to grant permissions, the dialog enables the user to select one list to which the add-in is granted permissions. If the add-in needs permission to more than one list, it must request permission to web scope. Also, since you, the developer, have no way to control which list the user chooses or to tell the user which one to choose, you must use web scope if there is a list to which your add-in  *must*  have permission. (But there is a way to narrow the user's choice to certain subsets of lists. See [Permission request scope with associated properties](#AssociatedProperties) below.)|
+|**Scope**|**Scope URI**|**Description**|
+|:-----|:-----|:-----|
+|Tenancy| http://sharepoint/content/tenant|The tenancy where the add-in is installed. Includes all children of this scope.|
+|Site Collection| http://sharepoint/content/sitecollection|The site collection where the add-in is installed. Includes all children of this scope.|
+|Website| http://sharepoint/content/sitecollection/web|The website where the add-in is installed. Includes all children of this scope.|
+|List| http://sharepoint/content/sitecollection/web/list|A single list in the website where the add-in is installed. When the user who installs the add-in is prompted to grant permissions, the dialog enables the user to select one list to which the add-in is granted permissions. If the add-in needs permission to more than one list, it must request permission to web scope. Also, since you, the developer, have no way to control which list the user chooses or to tell the user which one to choose, you must use web scope if there is a list to which your add-in  *must*  have permission. (But there is a way to narrow the user's choice to certain subsets of lists. See [Permission request scope with associated properties](#AssociatedProperties) below.)|
+
 If an add-in is granted permission to one of the scopes, the permission applies to all children of the scope. For example, if an add-in is granted permission to a website, the add-in is also granted permission to each list that is contained in the website, and all list items that are in each list.
  
 
