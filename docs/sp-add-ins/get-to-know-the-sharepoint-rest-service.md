@@ -142,7 +142,7 @@ The following table contains typical REST endpoint URL examples to get you start
 |Creates a list| `lists`|POST|
 ```
 {
-  '_metadata':{'type':SP.List},
+  '__metadata':{'type':SP.List},
   'AllowContentTypes': true,
   'BaseTemplate': 104 ,
   'ContentTypesEnabled': true,
@@ -151,11 +151,10 @@ The following table contains typical REST endpoint URL examples to get you start
 }
 ```
 
-|
 |Adds an item to a list| `lists/getbytitle('listname')/items`|POST|
 ```
 {
-  '_metadata':{'type':SP.listname ListItem},
+  '__metadata':{'type': SP.Data.'listname'.ListItem},
   'Title': 'MyItem'
 }
 
