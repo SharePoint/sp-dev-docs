@@ -453,9 +453,6 @@ The SharePoint Online (and on-premise SharePoint 2016 and later) REST service su
 -  [Working with folders and files with REST](working-with-folders-and-files-with-rest)
     
  
--  [REST API reference and samples](http://msdn.microsoft.com/library/rest-api-reference-and-samples%28Office.15%29.aspx)
-    
- 
 -  [SharePoint-Add-in-REST-OData-BasicDataOperations](https://github.com/OfficeDev/SharePoint-Add-in-REST-OData-BasicDataOperations)
     
  
