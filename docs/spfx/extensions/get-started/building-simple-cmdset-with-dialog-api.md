@@ -284,7 +284,7 @@ To ensure that our newly added **elements.xml** file is taken into account while
     "features": [{
       "title": "ListView Command Set - Deployment of custom action.",
       "description": "Deploys a custom action with ClientSideComponentId association",
-      "id": "456da147-ced2-3036-b564-8dad5c1c2e34",
+      "id": "456da147-ced2-3036-b564-8dad5c1c2e35",
       "version": "1.0.0.0",
       "assets": {        
         "elementManifests": [
