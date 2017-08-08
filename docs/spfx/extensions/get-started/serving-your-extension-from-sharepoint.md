@@ -24,7 +24,7 @@ Before we package our solution, we want to include the code needed to automate t
 
 1. Install the solution package to the site where it should be installed, so that extension manifest is being white listed for execution
 2. Associate the Application Customizer to the planned scope. This can be performed programmatically (CSOM/REST) or by using the feature framework inside of the SharePoint Framework solution package. You'll need to associate the following properties in the `UserCustomAction` object at the site collection, site or list level.
-    * **ClientSiteComponentId:** This is the identifier (GUID) of the Field Customizer, which has been installed in the app catalog. 
+    * **ClientSideComponentId:** This is the identifier (GUID) of the Field Customizer, which has been installed in the app catalog. 
     * **ClientSideComponentProperties:** This is an optional parameter, which can be used to provide properties for the Field Customizer instance
 
 > Notice. Currently you'll need to install solution packages explicitly to sites to ensure the extension is being properly executed. There will be alternative ways to achieve this in the future without site-by-site deployment. 
