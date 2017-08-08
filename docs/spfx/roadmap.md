@@ -16,6 +16,7 @@ First release of the SharePoint Framework will contain support for client-side w
 
 - Easy access to Graph API to access user specific information (GraphHttpClient in dev preview)
 - Site collection app catalog with tenant level control for enabling easier solution deployed 
+- Site level WebHooks
 
 ## Client-side web parts++ and add-ins
 
