@@ -11,6 +11,7 @@
 		<Item text="Enterprise Guidance" url="spfx/enterprise-guidance" SEODescription="SharePoint Framework Enterprise architecture and development guidance." />
 		<Item text="Team-based development" url="spfx/team-based-development-on-sharepoint-framework" SEODescription="Team-based development on SharePoint Framework." />
 		<Item text="Using GraphHttpClient" url="spfx/call-microsoft-graph-using-graphhttpclient" SEODescription="Call Microsoft Graph using the SharePoint Framework GraphHttpClient." />
+		<Item text="Tenant-wide deployment" url="spfx/tenant-scoped-deployment" SEODescription="Tenant-wide deployment option for SharePoint Framework solutions (skipFeatureDeployment)." />
 		<Item text="Toolchain" url="spfx/toolchain/sharepoint-framework-toolchain" SEODescription="">
 			<Item text="SharePoint Framework Toolchain" url="spfx/toolchain/sharepoint-framework-toolchain" SEODescription="The SharePoint Framework toolchain is the set of build tools, framework packages, and other items that manage building and deploying your client side projects." />
 			<Item text="Yeoman Sharepoint generator" url="spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator" SEODescription="Create new client-side solution projects using yeoman SharePoint generator." />
