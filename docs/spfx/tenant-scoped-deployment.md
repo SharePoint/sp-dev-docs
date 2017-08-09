@@ -1,4 +1,4 @@
-# Tenant-wide solution deployment for SharePoint Framework solutions
+# Tenant-Scoped solution deployment for SharePoint Framework solutions
 
 You can configure your SharePoint Framework components to be immediately available cross the tenant when solution package is installed to tenant app catalog. This can be configured by using **skipFeatureDeployment** attribute in the **package-solution.json** file.
 
