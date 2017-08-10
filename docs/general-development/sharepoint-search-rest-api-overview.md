@@ -115,17 +115,14 @@ http:// _server_/_api/search/query?querytext='sharepoint'
     
     
  **Sample POST request**
-  
-    
-    
 
-
-
-```
-
+```JSON
 {
-'__metadata' : {'type' : 'Microsoft.Office.Server.Search.REST.SearchRequest'},
-'Querytext' : 'sharepoint'
+    'request': {
+         'Querytext': 'sharepoint',
+         'RowLimit':20, 
+         'ClientType':'ContentSearchRegular'
+         }
 }
 ```
 
