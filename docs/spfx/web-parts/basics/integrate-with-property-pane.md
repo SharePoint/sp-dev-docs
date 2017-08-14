@@ -111,7 +111,13 @@ The property pane has two interaction modes:
 
 In reactive mode, on every change, a change event is triggered. Reactive behavior automatically updates the web part with the new values.
 
-While reactive mode is sufficient for many scenarios, at times you will need non-reactive behavior. Non-reactive does not update the web part automatically unless the user confirms the changes.
+While reactive mode is sufficient for many scenarios, at times you will need non-reactive behavior. Non-reactive does not update the web part automatically unless the user confirms the changes. To turn on the non-reactive mode, add the following code in your web part:
+
+```ts 
+protected get disableReactivePropertyChanges(): boolean { 
+  return true; 
+}
+```
 
 ## Custom field example
 
