@@ -1,4 +1,3 @@
-
 # Build your first SharePoint Framework Extension (Hello World part 1)
 
 >**Note:** SharePoint Framework Extensions are currently in preview and are subject to change. They are not currently supported for use in production environments.
@@ -81,13 +80,13 @@ The logic for your Application Customizer is contained in the following methods:
 - **onInit()** - Use this method to perform any setup steps needed for your extension. This event occurs after ```this.context``` and ```this.properties``` are assigned, but before the page DOM is ready. As with web parts, ```onInit()``` returns a promise that you can use to perform asynchronous operations; ```onRender()``` will not be called until your promise has resolved. If you don’t need that, simply return ```super.onInit()```.
 - **onRender()** - Use this method to interact with the UI. This event occurs after the application’s initial page DOM structure has been created (although some parts of the UI might not have rendered yet).
 
->**Note:** The class constructor is called at an early stage, when ```this.context``` and ```this.properties``` are undefined. We do not support including custom initiation logic here.
+>**Note:** The class constructor is called at an early stage, when ```this.context``` and ```this.properties``` are undefined. Including custom initiation logic here is not supported.
 
 The following are the contents of **onInit()** and **onRender()** in the default solution. This default solution writes a log to the Dev Dashboard, and then displays a simple JavaScript alert when the page renders.
 
 ![Default onInit and onRender methods in the code](../../../../images/ext-app-vscode-methods.png)
 
->**Note:** If your application customizer uses the ClientSideComponentProperties JSON input, it will be deserialized into the **BaseExtension.properties** object. You can define an interface to describe it. The default template looks for a property called testMessage, and if it's provided, it outputs it in an alert message.
+>**Note:** If your application customizer uses the ClientSideComponentProperties JSON input, it will be deserialized into the **BaseExtension.properties** object. You can define an interface to describe it. The default template looks for a property called **testMessage**, and if it's provided, it outputs it in an alert message.
 
 ## Debug your Application Customizer using gulp serve and query string parameters
 You cannot currently use the local workbench to test SharePoint Framework Extensions. You'll need to test them against a live SharePoint Online site. You don't have to deploy your customization to the app catalog to do this, which makes the debugging experience simple and efficient. 
@@ -98,11 +97,11 @@ First, compile your code and host the compiled files from your local computer by
 gulp serve --nobrowser
 ```
 
->**Note:** If you do not have the SPFx developer certificate installed, Workbench will notify you that it is configured not to load scripts from localhost. Stop the process that is currently running in the console window, and run the `gulp trust-dev-cert` command in your project directory console to install the developer certificate, and then run the `gulp serve --nobrowser`command again.
+>**Note:** If you do not have the SPFx developer certificate installed, workbench will notify you that it is not configured to load scripts from localhost. If this happens, stop the process that is currently running in the console window, run the `gulp trust-dev-cert` command in your project directory console to install the developer certificate, and then run the `gulp serve --nobrowser` command again.
 
-Notice that we used the ```--nobrowser``` option, since there's no value in launching the local workbench since you currently cannot debug extensions locally.
+>Use the ```--nobrowser``` option because you don't need to launch the local workbench, given that you can't debug extensions locally.
 
-Once it compiles the code without errors, it will serve the resulting manifest from http://localhost:4321.
+When it compiles the code without errors, it will serve the resulting manifest from http://localhost:4321.
 
 ![gulp serve](../../../../images/ext-app-gulp-serve.png)
 
