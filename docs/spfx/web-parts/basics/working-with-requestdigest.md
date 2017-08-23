@@ -5,8 +5,8 @@ There is a lot of code written to work with classic SharePoint pages that you ca
 However, if your existing code uses some older constructs, through the power of client-side code and DOM manipulation, it's fairly easy to add these back to a page. The key is to hook into the `onInit` method in the base web part class and create the DOM element that you expect to be there. Here's an example that creates the `__REQUESTDIGEST` form element:
 
 ```JavaScript
-    public onInit<T>(): Promise<T>
-    {
+  protected onInit(): Promise<void>
+  {
     // does the digest exist?
     if ( !document.getElementById('__REQUESTDIGEST') )
     {
@@ -18,7 +18,7 @@ However, if your existing code uses some older constructs, through the power of 
       }
       catch (exception){
         // there is no digest on this page, so just return. This can easily happen on the local workbench
-        return Promise.resolve();
+        return super.onInit();
       }
 
       if (digestValue){
@@ -36,14 +36,14 @@ However, if your existing code uses some older constructs, through the power of 
     }
 
     // no promise to return
-    return Promise.resolve();
-    }
+    return super.onInit();
+  }
 ```
 
->**Note:** There is a better way to get the current digest value that will handle all of the caching, expiring, refetching, etc. Give this a try (You'll need to import `digestCacheServiceKey` and `IDigestCache` from **sp-client-base**):
+>**Note:** There is a better way to get the current digest value that will handle all of the caching, expiring, refetching, etc. Give this a try (You'll need to import `DigestCache` and `IDigestCache` from **@microsoft/sp-http**):
 
 ```JavaScript
-    var digestCache:IDigestCache = this.context.serviceScope.consume(digestCacheServiceKey);
+    var digestCache:IDigestCache = this.context.serviceScope.consume(DigestCache.serviceKey);
     digestCache.fetchDigest(this.context.pageContext.web.serverRelativeUrl).then((digest: string) => {
       // Do Something with the digest
       console.log(digest);
