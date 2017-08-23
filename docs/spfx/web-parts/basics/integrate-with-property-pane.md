@@ -22,10 +22,10 @@ Property fields are then defined inside a group.
 
 ## Using the property pane
 
-The following code example initializes and configures the property pane in your web part. You create a method of type **IPropertyPaneSettings** and return a collection of property pane page(s).
+The following code example initializes and configures the property pane in your web part. You override the **getPropertyPaneConfiguration** method and return a collection of property pane page(s).
 
 ```ts
-protected get propertyPaneSettings(): IPropertyPaneSettings {
+protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
   return {
     pages: [
       {
@@ -52,13 +52,16 @@ protected get propertyPaneSettings(): IPropertyPaneSettings {
 
 The following field types are supported:
 
-* Label
-* Textbox
-* Multi-line Textbox
+* Button
 * Checkbox
+* Choice group
 * Dropdown
+* Horizontal rule
+* Label
 * Link
 * Slider
+* Textbox
+* Multi-line Textbox
 * Toggle
 * Custom
 
@@ -76,7 +79,7 @@ import {
 } from '@microsoft/sp-client-preview';
 ```
 
-Every field type constructor is defined as follows, taking **PropertyPaneTextField** as an example:
+Every field type method is defined as follows, taking **PropertyPaneTextField** as an example:
 
 ```ts
 PropertyPaneTextField('targetProperty',{
@@ -100,7 +103,7 @@ This is then available in your web part using **this.properties.targetProperty**
 <p class="ms-font-l ms-fontColor-white">${this.properties.description}</p>
 ```
 
-When the properties are defined, you can access them in your web part using the **this.properties.<property-value>**. For details, see [**render** method of the **HelloWorldWebPart**](../get-started/build-a-hello-world-web-part#web-part-render-method):
+When the properties are defined, you can access them in your web part using the **this.properties.[property-name]**. For details, see [**render** method of the **HelloWorldWebPart**](../get-started/build-a-hello-world-web-part#web-part-render-method).
 
 ## Handling field changes
 
@@ -119,32 +122,6 @@ protected get disableReactivePropertyChanges(): boolean {
 }
 ```
 
-## Custom field example
+## Custom property pane controls
 
-Add the following field definition in a **groupFields** array.
-
-```ts
-{
-  type: IPropertyPaneFieldType.Custom,
-  targetProperty: 'custom',
-  properties: {
-    onRender: this._customFieldRender.bind(this),
-    value: undefined,
-    context: undefined
-  }
-}
-```
-
-Add the following types to the **@microsoft/sp-webpart-base** imports.
-
-```ts
-IPropertyPaneFieldType
-```
-
-Add the following private method to render the custom field.
-
-```ts
-private _customFieldRender(elem: HTMLElement, context: any, onChanged?: IOnCustomPropertyFieldChanged): void {
-    elem.innerHTML = '<input id="password" type="password" name="password" class="ms-TextField-field">';
-}
-```
+SharePoint Framework contains a set of standard controls for the property pane. But sometimes you need additional functionality beyond the basic controls. SharePoint Framework allows you to build custom controls to deliver the require functionality. To learn more, read the [Build custom controls for the property pane](../guidance/build-custom-property-pane-controls) guide.
