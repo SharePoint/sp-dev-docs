@@ -183,7 +183,7 @@ Things to note in the included xml structure:
 * Custom content type deployed using **elements.xml** file is referenced in the **ContentTypeRef** element
 * Custom fields called **SPFxAmount** and **SPFxCostCenter** are being referenced in the **FieldRef** element
 
-> More details on the used schema structures can be found from [Uderstanding Schema.xml Files](https://msdn.microsoft.com/en-us/library/office/ms459356(v=office.14).aspx) article at MSDN.
+> More details on the used schema structures can be found from [Understanding Schema.xml Files](https://msdn.microsoft.com/en-us/library/office/ms459356(v=office.14).aspx) article at MSDN.
 
 ## Ensure that definitions are taken into use in build pipeline
 Now we have created the needed structures for provisioning SharePoint assets automatically from the solution when it's deployed. Next step is to ensure that we package these xml files as part of the solution file.
