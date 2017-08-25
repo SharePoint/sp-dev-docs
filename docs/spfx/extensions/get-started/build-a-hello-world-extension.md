@@ -2,11 +2,11 @@
 
 >**Note:** SharePoint Framework Extensions are currently in preview and are subject to change. They are not currently supported for use in production environments.
 
-SharePoint Framework Extensions are client-side components that run inside the context of a SharePoint page. You can deploy extensions to SharePoint Online, and you can use modern JavaScript tools and libraries to build them.
+SharePoint Framework (SPFx) Extensions are client-side components that run inside the context of a SharePoint page. You can deploy extensions to SharePoint Online, and you can use modern JavaScript tools and libraries to build them.
 
 Extensions are currently available only on Office 365 developer tenants.
 
->**Note:** Before you get started with extensions, be sure to [set up your SharePoint Framework development environment](../../set-up-your-development-environment). 
+>**Note:** Before you get started with extensions, be sure to [set up your development environment](../../set-up-your-development-environment). 
 
 ## Create an extension project
 1. Create a new project directory in your favorite location.
@@ -99,34 +99,36 @@ gulp serve --nobrowser
 
 >**Note:** If you do not have the SPFx developer certificate installed, workbench will notify you that it is not configured to load scripts from localhost. If this happens, stop the process that is currently running in the console window, run the `gulp trust-dev-cert` command in your project directory console to install the developer certificate, and then run the `gulp serve --nobrowser` command again.
 
->Use the ```--nobrowser``` option because you don't need to launch the local workbench, given that you can't debug extensions locally.
+You use the ```--nobrowser``` option because you don't need to launch the local workbench, since you can't debug extensions locally.
 
-When it compiles the code without errors, it will serve the resulting manifest from http://localhost:4321.
+When the code compiles without errors, it will serve the resulting manifest from http://localhost:4321.
 
 ![gulp serve](../../../../images/ext-app-gulp-serve.png)
 
-To test your extension, go to a modern list view page in your SharePoint environment and append the following query string parameters to the URL:
+To test your extension, go to a modern list view or library page in your SharePoint environment. Application customizers are also supported in modern pages and on the Site Contents page. 
+
+Append the following query string parameters to the URL:
+
 ```
 ?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"d03ae0c2-bbbf-4cf5-9ff7-0986904553da":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"testMessage":"Hello as property!"}}}
 ```
 
+Note that you'll need to update the GUID to match the ID of your custom Application Customizer. This is available from  **HelloWorldApplicationCustomizer.manifest.json** in the src\extensions\helloWorld folder. 
+
 More detail about the URL query parameters:
 
-* **loadSPFX=true** - Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework is not normally loaded unless at least one extension is registered. Since no components are registered yet, we must explicitly load the framework.
+* **loadSPFX=true** - Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework does not load unless at least one extension is registered. Because no components are registered, you must explicitly load the framework.
 
-* **debugManifestsFile** - Specifies that we want to load SPFx components that are being locally served. Normally the loader only looks for components in the App Catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
+* **debugManifestsFile** - Specifies that you want to load SPFx components that are locally served. The loader only looks for components in the App Catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
 
-* **customActions** - this URL query parameter simulates a custom action. When we actually deploy and register this component in a site later in this lab, we’ll create this CustomAction object for real and describe all the different properties you can set on it. 
-    * **Key:** use the Guid of the extension as the key to associate with the custom action
-    * **Location:** the type of custom action, use "ClientSideExtension.ApplicationCustomizer" for the Application Customizer extension
-    * **Properties:** an optional JSON object containing properties that will be available via the this.properties member. In this HelloWorld example, it defined a ‘testMessage’ property.
+* **customActions** - Simulates a custom action. When you deploy and register this component in a site, you'll create a CustomAction object and describe all the properties you can set on it:
+ 
+    * **Key** - Use the GUID of the extension as the key to associate with the custom action
+    * **Location** - The type of custom action. Use "ClientSideExtension.ApplicationCustomizer" for the Application Customizer extension.
+    * **Properties** - An optional JSON object that contains properties that will be available via the this .properties member. In this HelloWorld example, it defines a ‘testMessage’ property.
 
 
-Go to a modern list in SharePoint Online. This can be a list or a library for the initial testing. Application customizers are also supported in modern pages and on the Site Contents page. 
-
-Extend the URL with the additional query parameters. Notice that you'll need to update the GUID to match the ID of your custom Application Customizer available from  **HelloWorldApplicationCustomizer.manifest.json** at the src\extensions\helloWorld folder. 
-
-The full URL should look similar to the following depending on your tenant URL:
+The full URL should look similar to the following:
 
 ```
 contoso.sharepoint.com/Lists/Contoso/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"5fc73e12-8085-4a4b-8743-f6d02ffe1240":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"testMessage":"Hello as property!"}}}
@@ -136,13 +138,13 @@ contoso.sharepoint.com/Lists/Contoso/AllItems.aspx?loadSPFX=true&debugManifestsF
 
 Choose **Load debug scripts** to continue loading scripts from your local host.
 
-You should now see the alert message on your page. 
+You should see the alert message on your page. 
 
-![Allow Debug Manifest question from the page](../../../../images/ext-app-alert-sp-page.png)
+![Hello as property alert message](../../../../images/ext-app-alert-sp-page.png)
 
-This alert is thrown by your SharePoint Framework Extension. Notice also that since we provided the testMessage property as part of the debug query parameters, it's included in the alert message. You can configure your extension instances based on the client component properties, which are passed for the instance also in runtime mode. 
+This alert is thrown by your SharePoint Framework Extension. Note that because you provided the **testMessage** property as part of the debug query parameters, it's included in the alert message. You can configure your extension instances based on the client component properties, which are passed for the instance also in runtime mode. 
 
-> If you are having challenges in getting debugging to work, double check the URL query parameters used for the query. Some browsers tend to encode the parameters and in some scenarios this will impact the behavior. 
+> **Note:** If you have issues with debugging, double check the URL query parameters. Some browsers encode the parameters and in some scenarios this affects the behavior. 
 
 ## Next steps
-Congratulations on getting your first SharePoint Framework Extension running! Now that your extension is running, you can continue building out your extension in the next topic, [Using page placeholders from Application Customizer (Hello World part 2)](./using-page-placeholder-with-extensions.md). You will use the same project and take advantage of specific content placeholders for modifying the UI of SharePoint. Notice that the ```gulp serve``` command is still running in your console window (or in Visual Studio Code if you are using the editor). You can continue to let it run while you go to the next article.
+Congratulations, you've gotten your first SharePoint Framework Extension running! To continue building out your extension, see [Using page placeholders from Application Customizer (Hello World part 2)](./using-page-placeholder-with-extensions.md). You will use the same project and take advantage of specific content placeholders for modifying the SharePoint UI. Notice that the ```gulp serve``` command is still running in your console window (or in Visual Studio Code if you are using the editor). You can continue to let it run while you go to the next article.
