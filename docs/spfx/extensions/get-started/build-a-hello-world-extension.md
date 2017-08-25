@@ -40,7 +40,7 @@ Extensions are currently available only on Office 365 developer tenants.
 	
 	![Yeoman SharePoint generator prompts to create an extension solution](../../../../images/ext-yeoman-app-prompts.png)
 
-	> Notice that if you use a name for the extension that is too long, you might encounter issues. The entries provided are used to generate an alias entry for the application customizer manifest json file. If alias is longer than 40 characters, you will get an exception when you try to serve the extension using `gulp serve --nobrowser`. You can resolve this by updating the alias entry afterward.
+	>**Note:** if you use a name for the extension that is too long, you might encounter issues. The entries provided are used to generate an alias entry for the application customizer manifest json file. If the alias is longer than 40 characters, you will get an exception when you try to serve the extension using `gulp serve --nobrowser`. You can resolve this by updating the alias entry afterward.
 
 	At this point, Yeoman will install the required dependencies and scaffold the solution files along with the **HelloWorld** extension. This might take a few minutes. 
 	
