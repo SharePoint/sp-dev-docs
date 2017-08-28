@@ -42,7 +42,7 @@ Here's a summary of currently supported options for using the Office UI Fabric w
 
 Here are the recommendations for using Fabric in React based web parts in a safe and reliable way:
 
-- Web part developers should place an explicit dependency on the specific version of Fabric React version 2.0 in their **package.json** file `"office-ui-fabric-react":"2.0.0"`. Please note, Fabric React versions older than 2.x are not supported.
+- Web part developers should place an explicit dependency on the specific version of Fabric React version 2.0 in their **package.json** file `"office-ui-fabric-react":"2.34.2"`. Please note, Fabric React versions older than 2.x are not supported.
 - Web part developers need to **statically link** to the Fabric React components. This includes the Fabric React component in your web part bundle. This will ensure that if the page level implementation of the Button were to change, it will not affect your web part adversely.
 - **Overriding** Fabric React component styles should be done only sparingly and within a local scope. A developer can override using custom CSS classes with `!important` and style tags. Both will have higher specificity than the component classes. Please note, if you override using a simple class, then you may run into load order issues. i.e. If `ms-Button` loads after your class, it will take precedence because their specificity is the same.
 - **Theming** should just work as is. No extra work is required on the part of the developer.
