@@ -12,6 +12,8 @@
 		<Item text="Team-based development" url="spfx/team-based-development-on-sharepoint-framework" SEODescription="Team-based development on SharePoint Framework." />
 		<Item text="Using GraphHttpClient" url="spfx/call-microsoft-graph-using-graphhttpclient" SEODescription="Call Microsoft Graph using the SharePoint Framework GraphHttpClient." />
 		<Item text="Tenant-Scoped deployment" url="spfx/tenant-scoped-deployment" SEODescription="Tenant-Scoped deployment option for SharePoint Framework solutions (skipFeatureDeployment)." />
+		<Item text="Use theme colors in your solution" url="spfx/use-theme-colors-in-your-customizations" SEODescription="Use theme colors in your SharePoint Framework customizations." />
+		<Item text="Working with CSS" url="spfx/css-recommendations" SEODescription="Recommendations for working with CSS in SharePoint Framework solutions." />
 		<Item text="Toolchain" url="spfx/toolchain/sharepoint-framework-toolchain" SEODescription="">
 			<Item text="SharePoint Framework Toolchain" url="spfx/toolchain/sharepoint-framework-toolchain" SEODescription="The SharePoint Framework toolchain is the set of build tools, framework packages, and other items that manage building and deploying your client side projects." />
 			<Item text="Yeoman Sharepoint generator" url="spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator" SEODescription="Create new client-side solution projects using yeoman SharePoint generator." />
@@ -59,6 +61,7 @@
 				<Item text="Use existing JavaScript libraries" url="spfx/web-parts/guidance/use-existing-javascript-libraries" SEODescription="Best practices for using existing JavaScript libraries in your SharePoint client-side web parts." />
 				<Item text="Reference third-party CSS styles" url="spfx/web-parts/guidance/reference-third-party-css-styles" SEODescription="Reference third party CSS styles in your SharePoint Framework client-side web parts." />
 				<Item text="Using preconfigured entries" url="spfx/web-parts/guidance/simplify-adding-web-parts-with-preconfigured-entries" SEODescription="Simplify adding web parts with preconfigured entries." />
+				<Item text="Integrate web part properties with SharePoint" url="spfx/web-parts/guidance/integrate-web-part-properties-with-sharepoint" SEODescription="SharePoint Frameworks offers you a new set of capabilities that simplify managing web part properties' values and integrate them with SharePoint Search." />			
 				<Item text="Using JSOM in web part" url="spfx/web-parts/guidance/connect-to-sharepoint-using-jsom" SEODescription="Connect to SharePoint using the JavaScript Object Model (JSOM)." />
 				<Item text="Validate property pane entries" url="spfx/web-parts/guidance/validate-web-part-property-values" SEODescription="Validate property pane entries from end users." />
 				<Item text="Use cascading dropdowns in property pane" url="spfx/web-parts/guidance/use-cascading-dropdowns-in-web-part-properties" SEODescription="Using cascading dropdowns in property pane of your SharePoint Framework client-side web part." />
