@@ -49,6 +49,7 @@ officeFabricIconFontName|string          |no      |The icon for the web part tha
 iconImageUrl            |string          |no      |The icon for the web part that is displayed in the toolbox and is represented by an image URL. The image at the URL must be exactly 38 x 38 px. If the **officeFabricIconName** property does not have a value, this property must have a value.|`"iconImageUrl": "https://cdn.contoso.com/weather.png"`
 groupId                 |string          |yes     |The group id determines which toolbox group will contain the web part. The SharePoint Framework reserves group ids for default groups. The developer can pick one of those groups. If a group id is specified, then the **group** property will be ignored. Alternatively, the developer can pick a completely unique id and a group name. The toolbox will then show the web part in its own group.|`"groupId": "6737645a-4443-4210-a70e-e5e2a219133a"`
 group                   |ILocalizedString|no      |The name of the group in the toolbox in which the web part will be displayed. If no value is provided, then the web part will be displayed in the **Custom** group.|`"group": { "default": "Content", "nl-nl": "Inhoud" }`
+dataVersion             |string          |no      |Use this field to specify the data version of the pre-configured data provided to the web part. Note that data version is different from the version field in the manifest. The manifest version is used to control the versioning of the web part code, while data version is used to control the versioning of the serialized data of the web part. Refer to dataVersion field of your web part for more information. Supported values format: MAJOR.MINOR version|`"dataVersion": "1.0"`
 properties              |TProperties     |yes     |A Key-value pair object with default values for web part properties.|`"properties": { "location": "Redmond", "numberOfDays": 3, "showIcon": true }`
 
 Some web part properties have a value of type **ILocalizedString**. This type is a key-value pair object that allows developers to specify strings for the different locales. At a minimum, a value of type **ILocalizedString** must contain the **default** value. Optionally developers can provide the translations of that value to the different locales that their web part supports. If the web part is placed on a page in a locale that isn't listed in the localized string, the default value is used instead.
@@ -173,19 +174,27 @@ Update the main React component to display the values of the properties. If the 
 import * as React from 'react';
 import styles from './Gallery.module.scss';
 import { IGalleryProps } from './IGalleryProps';
-import { Placeholder } from '@microsoft/sp-webpart-base';
 
-export default class Gallery extends React.Component<IGalleryProps, {}> {
+export default class Gallery extends React.Component<IGalleryProps, void> {
   public render(): JSX.Element {
     if (this.needsConfiguration()) {
-      return <Placeholder
-        icon="ms-Icon--ThumbnailView"
-        iconText="Gallery"
-        description="Show items from the selected list" />;
+      return <div className="ms-Grid" style={{ color: "#666", backgroundColor: "#f4f4f4", padding: "80px 0", alignItems: "center", boxAlign: "center" }}>
+        <div className="ms-Grid-row" style={{ color: "#333" }}>
+          <div className="ms-Grid-col ms-u-hiddenSm ms-u-md3"></div>
+          <div className="ms-Grid-col ms-u-sm12 ms-u-md6" style={{ height: "100%", whiteSpace: "nowrap", textAlign: "center" }}>
+            <i className="ms-fontSize-su ms-Icon ms-Icon--ThumbnailView" style={{ display: "inline-block", verticalAlign: "middle", whiteSpace: "normal" }}></i><span className="ms-fontWeight-light ms-fontSize-xxl" style={{ paddingLeft: "20px", display: "inline-block", verticalAlign: "middle", whiteSpace: "normal" }}>Gallery</span>
+          </div>
+          <div className="ms-Grid-col ms-u-hiddenSm ms-u-md3"></div>
+        </div>
+        <div className="ms-Grid-row" style={{ width: "65%", verticalAlign: "middle", margin: "0 auto", textAlign: "center" }}>
+          <span style={{ color: "#666", fontSize: "17px", display: "inline-block", margin: "24px 0", fontWeight: 100 }}>Show items from the selected list</span>
+        </div>
+        <div className="ms-Grid-row"></div>
+      </div>;
     }
     else {
       return (
-        <div className={styles.helloWorld}>
+        <div className={styles.gallery}>
           <div className={styles.container}>
             <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
               <div className='ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1'>

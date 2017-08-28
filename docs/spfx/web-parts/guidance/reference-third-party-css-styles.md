@@ -120,7 +120,7 @@ npm install jquery jquery-ui --save
 Because you are building your web part in TypeScript you also need TypeScript typings for jQuery that you can install by running the following command:
 
 ```sh
-npm install @types/jquery --save-dev
+npm install @types/jquery --save
 ```
 
 ### Reference libraries in the web part
@@ -195,7 +195,7 @@ When you reference third-party libraries from a URL, you don't need to install t
 Assuming you start with an empty project created as described previously in this article, install TypeScript typings for jQuery by running the following command:
 
 ```sh
-npm install @types/jquery --save-dev
+npm install @types/jquery --save
 ```
 
 ### Specify URLs of libraries
@@ -248,7 +248,7 @@ At this point you have referenced only the jQuery UI scripts which explains why 
 
 ### Reference third-party CSS stylesheets from URL in the web part
 
-Adding references to third-party CSS stylesheets from a URL is different than referencing resources from project packages. While the project configuration in the **config.json** file allows you to specify external resources, it applies only to scripts. To reference CSS stylesheets from a URL you have to use the **SPModuleLoader** instead.
+Adding references to third-party CSS stylesheets from a URL is different than referencing resources from project packages. While the project configuration in the **config.json** file allows you to specify external resources, it applies only to scripts. To reference CSS stylesheets from a URL you have to use the **SPComponentLoader** instead.
 
 #### Load CSS from the URL using the SPComponentLoader
 
@@ -258,15 +258,13 @@ In the code editor open the **./src/webparts/jQueryAccordion/JQueryAccordionWebP
 import { SPComponentLoader } from '@microsoft/sp-loader';
 ```
 
-In the same file add web part constructor as follows:
+In the same file override the onInit() method as follows:
 
 ```ts
 export default class JQueryAccordionWebPart extends BaseClientSideWebPart<IJQueryAccordionWebPartProps> {
-
-  public constructor() {
-    super();
-
+  protected onInit(): Promise<void> {
     SPComponentLoader.loadCss('https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css');
+    return super.onInit();
   }
 
   // ...

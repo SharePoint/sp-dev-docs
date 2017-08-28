@@ -13,7 +13,7 @@ npm install angular --save
 Next, to use Angular with TypeScript, you would install typings using **npm**:
 
 ```sh
-npm install @types/angular --save-dev
+npm install @types/angular --save
 ```
 
 Finally, you would reference Angular in your web part using the `import` statement:
@@ -78,7 +78,7 @@ Referencing existing JavaScript libraries in the SharePoint Framework is easy an
 Using Angular as an example, in order to reference it as an external resource in your client-side web part, you start by installing its TypeScript typings using **npm**:
 
 ```sh
-npm install @types/angular --save-dev
+npm install @types/angular --save
 ```
 
 Next, in the **config/config.json** file, to the **externals** property you add the following entry:
@@ -250,7 +250,9 @@ To solve this problem, all you need to do is to register jQuery as a non-module 
 
 This way you specify that the **simpleWeather** script should be loaded after jQuery and that jQuery should be available under a globally available variable `jQuery` which is required by the **simpleWeather** jQuery plugin to register itself.
 
-> Note how the entry for registering jQuery uses **jquery** for the external resource name but **jQuery** as the global variable name. The name of the external resource is the name that you use in the `import` statements in your code. This is also the name that must match TypeScript typings. The global variable name, specified using the **globalName** property, is the name known to other scripts like plugins built on top of the library. While for some libraries these names might be the same, it's not required and you should carefully check that you are using correct names to avoid any problems. 
+> Note how the entry for registering jQuery uses **jquery** for the external resource name but **jQuery** as the global variable name. The name of the external resource is the name that you use in the `import` statements in your code. This is also the name that must match TypeScript typings. The global variable name, specified using the **globalName** property, is the name known to other scripts like plugins built on top of the library. While for some libraries these names might be the same, it's not required and you should carefully check that you are using correct names to avoid any problems.
+
+It's hard to determine manually whether the script that you're trying to load is a module or a non-module script. This is especially the case if the script that you're trying to load is minified. If your script is hosted on a publicly accessible URL, you can use the free [Rencore SharePoint Framework Script Check](https://rencore.com/sharepoint-framework/script-check/) tool to determine the type of script for you. Additionally, this tool will let you know whether the hosting location from which you're loading the script is properly configured.
 
 ## Non-module scripts considerations
 
