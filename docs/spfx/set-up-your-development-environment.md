@@ -74,6 +74,7 @@ Here are some tools that might come in handy as well:
 
 * [Fiddler](http://www.telerik.com/fiddler)
 * [Postman plugin for Chrome](https://www.getpostman.com/docs/introduction)
+* [SP REST Client](https://chrome.google.com/webstore/detail/sp-rest-client/ojnaikgchcnginnmkmkonmdglhjikokd)
 * [Cmder for Windows](http://cmder.net/)
 * [Oh My Zsh for Mac](http://ohmyz.sh/)
 * [Git source control tools](https://git-scm.com/)
