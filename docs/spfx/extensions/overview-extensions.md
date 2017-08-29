@@ -1,6 +1,8 @@
 # Overview of SharePoint Framework Extensions (preview)
 
-You can use SharePoint Framework Extensions to extend the SharePoint user experience. With SharePoint Frameword Extensions, you can customize more facets of the SharePoint experience, including notification areas, toolbars, and list data views. SharePoint Framework Extensions are available for testing on Office 365 developer tenants during the preview period. 
+You can use SharePoint Framework Extensions to extend the SharePoint user experience. With SharePoint Frameword Extensions, you can customize more facets of the SharePoint experience, including notification areas, toolbars, and list data views. SharePoint Framework Extensions are available for testing in first release tenants and in Office 365 developer tenants as part of the release candidate release. 
+
+>**Note:** The SharePoint Framework Extensions are currently in preview and are subject to change. SharePoint Framework Extensions are not currently supported for use in production environments.
 
 > **Note:** You can get a free Office 365 developer tenant when you subscribe to the [Office 365 Developer Program](http://dev.office.com/devprogram).
 
