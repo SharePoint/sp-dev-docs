@@ -6,10 +6,9 @@ Release Candidate is enabled in the First Release tenants in Office 365, but is 
 
 ## General solution package changes
 
-- Use lockstep version for all SPFx packages.
-- Upgrade to TypeScript 2.4.
+- All SharePoint Framework packages are now standardized to version 1.2. All future updates will also have version standardization cross all packages to avoid any confusions around used versions.
+- Upgrade to use TypeScript 2.4 and React 15 typings
 - Update to Fabric React 4.32.0.
-- SPFx npm package versions updated to 1.2.
 
 ### Application Customizer Changes
 
