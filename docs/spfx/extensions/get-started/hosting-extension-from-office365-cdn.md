@@ -10,6 +10,12 @@ Be sure you have completed the procedures in the following articles before you s
 * [Connect your client-side web part to SharePoint (Hello world part 2)](./using-page-placeholder-with-extensions.md)
 * [Deploy your extension to SharePoint (Hello world part 3)](./serving-your-extension-from-sharepoint.md)
 
+You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=oOIHWamPr34&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV). 
+
+<a href="https://www.youtube.com/watch?v=oOIHWamPr34&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV">
+<img src="../../../../images/spfx-ext-youtube-tutorial4.png" alt="Screenshot of the YouTube video player for this tutorial" />
+</a>
+
 ## Using the CDN in your Office 365 tenant
 Office 365 CDN is the easiest way to host SharePoint Framework solutions directly from your tenant while still taking advantage of the Content Delivery Network (CDN) service for faster load times of your assets.
 

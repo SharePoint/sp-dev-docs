@@ -44,6 +44,8 @@ yo @microsoft/sharepoint
 When prompted:
 
 * Accept the default value of **dialog-cmd** as your solution name and press **Enter**.
+* Choose **Use the current folder** and press **Enter**.
+* Choose **N** to require extension to be installed on each site explicitly when it's being used.
 * Choose **Extension (Preview)** as the client-side component type to be created. 
 * Choose **ListView Command Set (Preview)** as the extension type to be created.
 
@@ -77,10 +79,11 @@ In the extension manifest, configure the extension to have only one button. In t
 ```json
 {
   //...
-  "commands": {
+  "items": {
     "COMMAND_1": {
-      "title": "Open Custom Dialog",
-      "iconImageUrl": "icons/request.png"
+      "title": { "default": "Open Custom Dialog" },
+      "iconImageUrl": "icons/request.png",
+      "type": "command"
     }
   }
 }
@@ -104,7 +107,6 @@ Create a new file called **ColorPickerDialog.tsx** in the **./src/extensions/dia
 
 Add the following import statements at the top of the newly created file. You're creating your custom dialog box using the [Office UI Fabric React components](https://dev.office.com/fabric#/components), so the implementation will be in React. 
 
-> **Note:** Currently the `DialogContent` component is coming from `@microsoft/sp-dialog`, but it will be included as part of the Office UI Fabric React components soon. 
 
 ```ts
 import * as React from 'react';
@@ -115,12 +117,10 @@ import {
   ColorPicker,
   PrimaryButton,
   Button,
-  DialogFooter
-  // DialogContent <- This should be imported here for third parties
+  DialogFooter,
+  DialogContent
 } from 'office-ui-fabric-react';
-// Note: DialogContent is available in v2.32.0 of office-ui-fabric-react
-// As a workaround we're importing it from sp-dialog until the next version bump
-import { DialogContent } from '@microsoft/sp-dialog';
+
 ```
 
 Add the following interface definition just below the import statements. This will be used to pass information and functions between your ListView Command Set extension and your custom dialog box.
@@ -258,8 +258,6 @@ Notice that you use the `--nobrowser` option. You don't need to launch the local
 
 This will start the bundling of your solution and will serve the resulting manifest from the `localhost` address.
 
-![Initial Visual Studio Code structure after scaffolding](../../../../images/ext-com-dialog-gulp-serve.png)
-
 To test your extension, go to a site in your SharePoint Online developer tenant.
 
 Go to an existing custom list within the site that contains some items, or create a new list and add a few items to it for testing purposes. 
@@ -276,12 +274,12 @@ Accept the loading of Debug Manifests by choosing **Load debug scripts** when pr
 
 Notice that the new button is visible in the toolbar of the list with the text *Open Custom Dialog box*.
 
-![Allow debug scripts warning](../../../../images/ext-com-dialog-button-in-toolbar.png)
+![Open Cusotm Dialog button visible in the toolbar](../../../../images/ext-com-dialog-button-in-toolbar.png)
 
 Choose the *Open Custom Dialog box* button to see your custom dialog box rendered within the list view. 
 
-![Allow debug scripts warning](../../../../images/ext-com-dialog-visible-dialog.png)
+![Color Picker rendered in dialog mode](../../../../images/ext-com-dialog-visible-dialog.png)
 
 Choose a color in the *Color Picker* and choose **OK** to test how the code is returning the selected value back to the caller. The selection is then shown using the default alert dialog box.
 
-![Default alert dialog box](../../../../images/ext-com-dialog-oob-alert-dialog.png)
+![Dialog with picked color details](../../../../images/ext-com-dialog-oob-alert-dialog.png)

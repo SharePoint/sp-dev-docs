@@ -4,9 +4,11 @@
 
 Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online and you can use modern JavaScript tools and libraries to build them.
 
->**Note:** Before following the steps in this article, be sure to [Set up your development environment](../../set-up-your-development-environment). Notice that extensions are currently **ONLY** available from Office 365 developer tenants.
+You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=fijOzUmlXrY&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV). 
 
->**Note:** Currently Field Customizers can only be debugged with the modern experience in classic SharePoint sites. Please ensure that you use a classic team site with modern list experience for the testing.
+<a href="https://www.youtube.com/watch?v=fijOzUmlXrY&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV">
+<img src="../../../../images/spfx-ext-youtube-tutorialfield.png" alt="Screenshot of the YouTube video player for this tutorial" />
+</a>
 
 ## Create an extension project
 Create a new project directory in your favorite location.
@@ -30,6 +32,8 @@ yo @microsoft/sharepoint
 When prompted:
 
 * Accept the default value of **field-extension** as your solution name and press **Enter**.
+* Choose **Use the current folder** and press **Enter**.
+* Choose **N** to require extension to be installed on each site explicitly when it's being used.
 * Choose **Extension (Preview)** as the client-side component type to be created. 
 * Choose **Field Customizer (Preview)** as the extension type to be created.
 
@@ -72,17 +76,42 @@ Open the **HelloWorldFieldCustomizer.ts** file in the **src\extensions\helloWorl
 
 Notice that the base class for the Field Customizer is imported from the **sp-application-base** package, which contains SharePoint framework code required by the Field Customizer.
 
-![import statement for BaseFieldCustomizer from @microsoft/sp-application-base](../../../../images/ext-field-vscode-customizer-base.png)
+```ts
+import { Log } from '@microsoft/sp-core-library';
+import { override } from '@microsoft/decorators';
+import {
+  BaseFieldCustomizer,
+  IFieldCustomizerCellEventParameters
+} from '@microsoft/sp-listview-extensibility';
+```
 
 The logic for your Field Customizer is contained in the **OnInit()**, **onRenderCell()**, and **onDisposeCell()** methods.
 
-* **onInit():**  this is where you should perform any setup needed for your extension. This event occurs after `this.context` and `this.properties` are assigned, but before the page DOM is ready. As with web parts, `onInit()` returns a promise that you can use to perform asynchronous operations; `onRenderCell()` will not be called until your promise has resolved. If you don’t need that, simply return `super.onInit()`.
-* **onRenderCell():**  This event occurs before each cell is rendered. It provides an `event.cellDiv` HTML element where your code can write its content.
+* **onInit():**  this is where you should perform any setup needed for your extension. This event occurs after `this.context` and `this.properties` are assigned, but before the page DOM is ready. As with web parts, `onInit()` returns a promise that you can use to perform asynchronous operations; `onRenderCell()` will not be called until your promise has resolved. If you don’t need that, simply return `Promise.resolve<void>();`.
+* **onRenderCell():**  This event occurs when each cell is rendered. It provides an `event.domElement` HTML element where your code can write its content.
 * **onDisposeCell():** This event occurs immediately before the `event.cellDiv` is deleted. It can be used to free any resources that were allocated during field rendering. For example, if `onRenderCell()` mounted a React element, `onDisposeCell()` must be used to free it, otherwise a resource leak would occur. 
 
 Below are the contents of **onRenderCell()** and **onDisposeCell()** in the default solution:
 
-![onRenderCell and onDisposeCell default implementation](../../../../images/ext-field-onrender-default-solution.png)
+```ts
+  @override
+  public onRenderCell(event: IFieldCustomizerCellEventParameters): void {
+    // Use this method to perform your custom cell rendering.
+    const text: string = `['${event.fieldValue}']`;
+
+    event.domElement.innerText = text;
+
+    event.domElement.classList.add(styles.cell);
+  }
+
+  @override
+  public onDisposeCell(event: IFieldCustomizerCellEventParameters): void {
+    // This method should be used to free any resources that were allocated during rendering.
+    // For example, if your onRenderCell() called ReactDOM.render(), then you should
+    // call ReactDOM.unmountComponentAtNode() here.
+    super.onDisposeCell(event);
+  }
+```
 
 ## Debugging your Field Customizer using gulp serve and query string parameters
 SharePoint Framework extensions cannot currently be tested using the local workbench, so you'll need to test and develop them directly against a live SharePoint Online site. You do not however need to deploy your customization to the app catalog to do this, which keeps the debugging experience simple and efficient.
@@ -94,7 +123,7 @@ gulp serve --nobrowser
 
 Notice that we used the `--nobrowser` option, since there's no value in launching the local workbench since you currently cannot debug extensions locally.
 
-Once it compiles the code without errors, it will serve the resulting manifest from http://localhost:4321.
+Once it compiles the code without errors, it will serve the resulting manifest from https://localhost:4321.
 
 ![gulp serve](../../../../images/ext-field-gulp-serve.png)
 
@@ -127,7 +156,7 @@ Since our Field Customizer is still hosted in localhost and is running, we can u
 Append the following query string parameters to the URL. Notice that you will need to update the id to match your own extension identifier available from the **HelloWorldFieldCustomizer.manifest.json** file:
 
 ```
-?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Percent":{"id":"0e3d8b71-56aa-4405-9225-f08a80fc1d71","properties":{"sampleText":"Hello!"}}}
+?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Percent":{"id":"7e7a4262-d02b-49bf-bfcb-e6ef1716aaef","properties":{"sampleText":"Hello!"}}}
 ```
 More detail about the URL query parameters:
 
@@ -141,7 +170,7 @@ More detail about the URL query parameters:
 The full URL should look similar to the following, depending on your tenant URL and the location of the newly created list:
 
 ```
-contoso.sharepoint.com/Lists/Orders/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Percent":{"id":"0e3d8b71-56aa-4405-9225-f08a80fc1d71","properties":{"sampleText":"Hello!"}}}
+contoso.sharepoint.com/Lists/Orders/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Percent":{"id":"7e7a4262-d02b-49bf-bfcb-e6ef1716aaef","properties":{"sampleText":"Hello!"}}}
 ```
 
 Accept the loading of Debug Manifests, by clicking **Load debug scripts** when prompted:
@@ -171,22 +200,21 @@ Open the **HelloWorld.module.scss** file in the **src\extensions\helloWorld** fo
 ```
 Open the **HelloWorldFieldCustomizer.ts** file in the **src\extensions\helloWorld** folder and update the **onRednerCell** method as follows.
 
-```
+```ts
   @override
   public onRenderCell(event: IFieldCustomizerCellEventParameters): void {
 
-    event.cellDiv.classList.add(styles.cell);
-    event.cellDiv.innerHTML = `
+    event.domElement.classList.add(styles.cell);
+    event.domElement.innerHTML = `
                 <div class='${styles.full}'>
-                  <div style='width: ${event.cellValue}px; background:#0094ff; color:#c0c0c0'>
-                    &nbsp; ${event.cellValue}
+                  <div style='width: ${event.fieldValue}px; background:#0094ff; color:#c0c0c0'>
+                    &nbsp; ${event.fieldValue}
                   </div>
                 </div>`;
-
   }
 ```
 
-Switch back to your console window and ensure that you do not have any exceptions. If you do not have the solution running in *locahost*, execute the following command:
+Switch back to your console window and ensure that you do not have any exceptions. If you do not have the solution running in *localhost*, execute the following command:
 
 ```
 gulp serve --nobrowser
@@ -210,9 +238,9 @@ Now that we have tested our solution properly in debug mode, we can package this
     * **ClientSiteComponentId:** This is the identifier (GUID) of the Field Customizer, which has been installed in the app catalog. 
     * **ClientSideComponentProperties:** This is an optional parameter, which can be used to provide properties for the Field Customizer instance.
 
-> Notice, currently you'll need to install solution packages explicitly to the sites to ensure that the extension is being properly executed. There will be alternative ways to achieve this in the future without site-by-site deployment. 
+> Notice, you can control the requirement to add a solution containing your extension to the site by using `skipFeatureDeployment` setting in **package-solution.json**. Event though you would not require solution to be installed on the site, you'd need to associate **ClientSideComponentId** to specific objects for the extension to be visible. 
 
-In the following steps, we'll create a new field definition, which will then be automatically deployed with the needed configurations when the solution package is installed on a site. 
+In the following steps, we'll create a new field definition, which will then be automatically deployed with the needed configurations when the solution package is installed on a site.
 
 Return to your solution in Visual Studio Code (or to your preferred editor).
 
@@ -241,7 +269,7 @@ Copy the following xml structure into **elements.xml**. Be sure to update the **
             Min="0"
             Required="FALSE"
             Group="SPFx Columns"
-            ClientSideComponentId="0e3d8b71-56aa-4405-9225-f08a80fc1d71">
+            ClientSideComponentId="7e7a4262-d02b-49bf-bfcb-e6ef1716aaef">
     </Field>
 
 </Elements>
@@ -256,7 +284,8 @@ Open **package-solution.json** from the **config** folder. The **package-solutio
   "solution": {
     "name": "field-extension-client-side-solution",
     "id": "11cd343e-1ce6-462c-8acb-929804d0c3b2",
-    "version": "1.0.0.0"
+    "version": "1.0.0.0",
+    "skipFeatureDeployment": false
   },
   "paths": {
     "zippedPackage": "solution/field-extension.sppkg"
@@ -274,6 +303,7 @@ To ensure that our newly added **elements.xml** file is taken into account while
     "name": "field-extension-client-side-solution",
     "id": "11cd343e-1ce6-462c-8acb-929804d0c3b2",
     "version": "1.0.0.0",
+    "skipFeatureDeployment": false,
     "features": [{
       "title": "Field Extension - Deployment of custom field.",
       "description": "Deploys a custom field with ClientSideComponentId association",

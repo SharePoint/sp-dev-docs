@@ -4,9 +4,11 @@
 
 Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online and you can use modern JavaScript tools and libraries to build them.
 
->**Note:** Before following the steps in this article, be sure to [Set up your development environment](../../set-up-your-development-environment). Notice that extensions are currently **ONLY** available from Office 365 developer tenants.
+You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=iW0LQQqAY0Y&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV). 
 
->**Note:** Currently ListView Command Set Extension can only be debugged with the modern experience in classic SharePoint sites. Please ensure that you use a classic team site with modern list experience for the testing.
+<a href="https://www.youtube.com/watch?v=iW0LQQqAY0Y&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV">
+<img src="../../../../images/spfx-ext-youtube-tutorialcommand.png" alt="Screenshot of the YouTube video player for this tutorial" />
+</a>
 
 ## Create an extension project
 Create a new project directory in your favorite location.
@@ -30,6 +32,8 @@ yo @microsoft/sharepoint
 When prompted:
 
 * Accept the default value of **command-extension** as your solution name and press **Enter**.
+* Choose **Use the current folder** and press **Enter**.
+* Choose **N** to require extension to be installed on each site explicitly when it's being used. 
 * Choose **Extension (Preview)** as the client-side component type to be created. 
 * Choose **ListView Command Set (Preview)** as the extension type to be created.
 
@@ -75,21 +79,33 @@ Open the **HelloWorldCommandSet.ts** file in the **src\extensions\helloWorld** f
 
 Notice that the base class for the ListView Command Set is imported from the **sp-listview-extensibility** package, which contains SharePoint framework code required by the ListView Command Set.
 
-![import statement for BaseListViewCommandSet from @microsoft/sp-listview-extensibility](../../../../images/ext-com-vscode-base.png)
+```ts
+import { override } from '@microsoft/decorators';
+import { Log } from '@microsoft/sp-core-library';
+import {
+  BaseListViewCommandSet,
+  Command,
+  IListViewCommandSetListViewUpdatedParameters,
+  IListViewCommandSetExecuteEventParameters
+} from '@microsoft/sp-listview-extensibility';
+```
 
-The behavior for your custom buttons is contained in the **onRefreshCommand()** and **OnExecute()** methods.
+The behavior for your custom buttons is contained in the **onListViewUpdated()** and **OnExecute()** methods.
 
-The **onRefreshCommand()** event occurs separately for each command (e.g. menu item), whenever the application attempts to display it in the UI. The `“event”` function parameter represents information about the command being rendered. The handler can use this information to customize the title or adjust the visibility. For example, if a command should only be shown when a certain number of items are selected in the list view. Here's the default implementation:
+The **onListViewUpdated()** event occurs separately for each command (e.g. menu item), whenever a change happens in the ListView and the UI needs to be re-rendered. The `“event”` function parameter represents information about the command being rendered. The handler can use this information to customize the title or adjust the visibility. For example, if a command should only be shown when a certain number of items are selected in the list view. Here's the default implementation:
+
+When using the method `“tryGetCommand”` you’ll get a Command object, which is a representation of the command that shows in the UI. You can modify its values, like `“title”`, or `“visible”` in order to modify the UI element. SPFx will use this information when re-rendering the commands. These objects keep the state from the last render, so if a command is set to `“visible = false”` it will remain invisible until is set back to `“visible = true”`.
 
 ```ts
   @override
-  public onRefreshCommand(event: IListViewCommandSetRefreshEventParameters): void {
-    event.visible = true; // assume true by default
-
+  public onListViewUpdated(event: IListViewCommandSetListViewUpdatedParameters): void {
     if (this.properties.disabledCommandIds) {
-      if (this.properties.disabledCommandIds.indexOf(event.commandId) >= 0) {
-        Log.info(LOG_SOURCE, 'Hiding command ' + event.commandId);
-        event.visible = false;
+      for (const commandId of this.properties.disabledCommandIds) {
+        const command: Command | undefined = this.tryGetCommand(commandId);
+        if (command && command.visible) {
+          Log.info(LOG_SOURCE, `Hiding command ${commandId}`);
+          command.visible = false;
+        }
       }
     }
   }
@@ -132,7 +148,7 @@ Since our ListView Command Set is hosted from localhost and is running, we can u
 Append the following query string parameters to the URL. Notice that you will need to update the GUID to match the ID of your list view command set extension available in the **HelloWorldCommandSet.manifest.json** file:
 
 ```
-?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"81b6a3d7-e408-43a4-8ef1-180d0f2582cc":{"location":"ClientSideExtension.ListViewCommandSet.CommandBar"}}
+?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"6a6ac29e-258e-4a2c-8de3-6bdd358cdb54":{"location":"ClientSideExtension.ListViewCommandSet.CommandBar"}}
 ```
 
 * **loadSPFX=true:**  ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework is not normally loaded unless at least one extension is registered. Since no components are registered yet, we must explicitly load the framework.
@@ -148,7 +164,7 @@ Append the following query string parameters to the URL. Notice that you will ne
 The full URL should look similar to the following, depending on your tenant URL and the location of the list.
 
 ```
-contoso.sharepoint.com/Lists/Orders/AllItems.aspx?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"81b6a3d7-e408-43a4-8ef1-180d0f2582cc":{"location":"ClientSideExtension.ListViewCommandSet.CommandBar"}}
+contoso.sharepoint.com/Lists/Orders/AllItems.aspx?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"6a6ac29e-258e-4a2c-8de3-6bdd358cdb54":{"location":"ClientSideExtension.ListViewCommandSet.CommandBar"}}
 ```
 
 Accept the loading of Debug Manifests, by clicking **Load debug scripts** when prompted.
@@ -172,10 +188,10 @@ Return to Visual Studio Code (or your preferred editor).
 
 Open **HelloWorldCommandSet.ts** from the **src\extensions\helloWorld** folder.
 
-Add the following import statement for the `Dialog` class from `@microsoft/sp-dialog/lib/index` after the existing import statements. 
+Add the following import statement for the `Dialog` class from `@microsoft/sp-dialog` after the existing import statements. 
 
 ```ts
-import { Dialog } from '@microsoft/sp-dialog/lib/index';
+import { Dialog } from '@microsoft/sp-dialog';
 ``` 
 
 Update the **onExecute** method as follows
@@ -224,7 +240,7 @@ We'll first need to create an **assets** folder where we will place all feature 
 
 Your solution structure should look similar to the following picture:
 
-![assets folder in solution structure](../../../../images/ext-app-assets-folder.png)
+![assets folder in solution structure](../../../../images/ext-com-assets-folder.png)
 
 ### Add an elements.xml file for SharePoint definitions
 
@@ -265,7 +281,8 @@ Open **package-solution.json** from the **config** folder. The **package-solutio
   "solution": {
     "name": "command-extension-client-side-solution",
     "id": "dfffbe21-e422-4c0f-a302-d7d62a30c1bf",
-    "version": "1.0.0.0"
+    "version": "1.0.0.0",
+    "skipFeatureDeployment": false,
   },
   "paths": {
     "zippedPackage": "solution/command-extension.sppkg"
@@ -281,6 +298,7 @@ To ensure that our newly added **elements.xml** file is taken into account while
     "name": "command-extension-client-side-solution",
     "id": "dfffbe21-e422-4c0f-a302-d7d62a30c1bf",
     "version": "1.0.0.0",
+    "skipFeatureDeployment": false,    
     "features": [{
       "title": "ListView Command Set - Deployment of custom action.",
       "description": "Deploys a custom action with ClientSideComponentId association",
@@ -341,7 +359,7 @@ Go to the site where you want to test SharePoint asset provisioning. This could 
 
 Chose the gear icon on the top navigation bar on the right and choose **Add an app** to go to your Apps page.
 
-In the **Search** box, enter '**command**' and press *Enter* to filter your apps.
+In the **Search** box, enter '**extension**' and press *Enter* to filter your apps.
 
 ![installing the listview command set to a site](../../../../images/ext-com-install-solution-to-site.png)
 
@@ -349,7 +367,7 @@ Choose the **command-extension-client-side-solution** app to install the solutio
 
 When the application has been successfully installed, Click **New** from the toolbar on the **Site Contents** page and choose **List**
 
-![Creating a new list](../../../../images/ext-field-create-new-list.png)
+![Creating a new list](../../../../images/ext-com-create-new-list.png)
 
 Provide the name as **Sample** and click **Create**.
 

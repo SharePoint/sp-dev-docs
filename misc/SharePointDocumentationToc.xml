@@ -25,6 +25,7 @@
 		</Item>
 		<Item text="Extensions (Preview)" url="spfx/extensions" SEODescription="">
 			<Item text="Overview" url="spfx/extensions/overview-extensions" SEODescription="Develop SharePoint Solution extensions to customize experience for SharePoint."/>
+			<Item text="Changes between Dev Preview and RC" url="spfx/extensions/changes-between-dev-preview-and-rc" SEODescription="Changes between Dev Preview and Release Candidate for SharePoint Framework Extensions (preview)."/>
 			<Item text="Get started" url="spfx/extensions/get-started">
 				<Item text="Build your first extension" url="spfx/extensions/get-started/build-a-hello-world-extension" SEODescription="Build a hello world SharePoint Framework extension." />
 				<Item text="Using page placeholders" url="spfx/extensions/get-started/using-page-placeholder-with-extensions" SEODescription="Using page placeholders from Application Customizer." />

@@ -6,7 +6,13 @@ Application Customizers also provide access to well known locations in the page,
 
 This model is similar to using a UserCustomAction collection in a Site or Web object to associate custom JavaScript to modify the page experience. The key difference or advantage with SPFx extensions is that you have guaranteed elements on the page regardless of any HTML/DOM structure modifications in future changes to SharePoint Online.
 
-In this article, we'll continue extending the hello world extension built in the previous article [Build your first SharePoint Framework Extension (Hello World part 1)](./build-a-hello-world-extension.md) to take advantage of the page placeholders. 
+In this article, we'll continue extending the hello world extension built in the previous article [Build your first SharePoint Framework Extension (Hello World part 1)](./build-a-hello-world-extension.md) to take advantage of the page placeholders.
+
+You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=ipRw6o6bOTw&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV).
+
+<a href="https://www.youtube.com/watch?v=ipRw6o6bOTw&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV">
+<img src="../../../../images/spfx-ext-youtube-tutorial2.png" alt="Screenshot of the YouTube video player for this tutorial" />
+</a>
 
 ## Getting access to page placeholders
 
@@ -16,25 +22,26 @@ Notice that we are requesting a well-known placeholder by using the correspondin
 
 ```ts
     // Handling the header placeholder
-    if (!this._headerPlaceholder) {
-      this._headerPlaceholder = this.context.placeholders.tryAttach(
-        'PageHeader',
-        {
-          onDispose: this._onDispose
-        });
+    if (!this._bottomPlaceholder) {
+      this._bottomPlaceholder =
+        this.context.placeholderProvider.tryCreateContent(
+          PlaceholderName.Bottom,
+          { onDispose: this._onDispose });
+    ...
     }
 ```
 
-In the following steps, we'll modify the previously created hello word Application Customizer to access placeholders and modify their content by adding custom html elements to them. 
+In the following steps, we'll modify the previously created hello world Application Customizer to access placeholders and modify their content by adding custom html elements to them.
 
 Switch to Visual Studio Code (or your preferred IDE) and open **src\extensions\helloWorld\HelloWorldApplicationCustomizer.ts.**
 
-Add the `Placeholder` to the import from `@microsoft/sp-application-base` by updating the import statement as follows:
+Add the `PlaceholderContent` and `PlaceholderName` to the import from `@microsoft/sp-application-base` by updating the import statement as follows:
 
 ```ts
 import {
-  BaseApplicationCustomizer,
-  Placeholder
+  BaseApplicationCustomizer, 
+  PlaceholderContent,
+  PlaceholderName
 } from '@microsoft/sp-application-base';
 ```
 
@@ -56,27 +63,26 @@ Update **AppCustomizer.module.scss** as follows:
 
 ```css
 .app {
-  .header {
-    height:60px; 
-    text-align:center; 
-    line-height:2.5; 
+  .top {
+    height:60px;
+    text-align:center;
+    line-height:2.5;
     font-weight:bold;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 
-  .footer {
-    height:40px; 
-    text-align:center; 
-    line-height:2.5; 
+  .bottom {
+    height:40px;
+    text-align:center;
+    line-height:2.5;
     font-weight:bold;
     display: flex;
     align-items: center;
     justify-content: center;
   }
 }
-
 ```
 
 Move back to **HelloWorldApplicationCustomizer.ts** and update the **IHelloWorldApplicationCustomizerProperties** interface to have specific properties for Header and Footer as follows.
@@ -85,8 +91,8 @@ Move back to **HelloWorldApplicationCustomizer.ts** and update the **IHelloWorld
 
 ```ts
 export interface IHelloWorldApplicationCustomizerProperties {
-  Header: string;
-  Footer: string;
+  Top: string;
+  Bottom: string;
 }
 ```
 
@@ -97,100 +103,113 @@ export default class HelloWorldApplicationCustomizer
   extends BaseApplicationCustomizer<IHelloWorldApplicationCustomizerProperties> {
   
   // These have been added
-  private _headerPlaceholder: Placeholder;
-  private _footerPlaceholder: Placeholder;
+  private _topPlaceholder: PlaceholderContent | undefined;
+  private _bottomPlaceholder: PlaceholderContent | undefined;
 ```
 
-Update the `onRender` method with the following code:
-
-* We use `this.context.placeholders.tryAttach` to get access on the placeholder
-* Extension code should not assume that the expected placeholder is available
-* The code expects custom properties called `Header`and `Footer`. If the properties exist, they will be rendered inside of the placeholders.
-* Notice that the code path for both the header and the footer is almost identical in the below method. The only differences are the variables used and the style definitions.
+Update `onInit` method code as follows:
 
 ```ts
   @override
-  public onRender(): void {
+  public onInit(): Promise<void> {
+    Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
 
-    console.log('CustomHeader.onRender()');
-    console.log('Available placeholders: ',
-      this.context.placeholders.placeholderNames.join(', '));
+    // Added to handle possible changes on the existence of placeholders
+    this.context.placeholderProvider.changedEvent.add(this, this._renderPlaceHolders);
 
-    // Handling the header placeholder
-    if (!this._headerPlaceholder) {
-      this._headerPlaceholder = this.context.placeholders.tryAttach(
-        'PageHeader',
-        {
-          onDispose: this._onDispose
-        });
-
-      // The extension should not assume that the expected placeholder is available.
-      if (!this._headerPlaceholder) {
-        console.error('The expected placeholder (PageHeader) was not found.');
-        return;
-      }
-
-      if (this.properties) {
-        let headerString: string = this.properties.Header;
-        if (!headerString) {
-          headerString = '(Header property was not defined.)';
-        }
-
-        if (this._headerPlaceholder.domElement) {
-          this._headerPlaceholder.domElement.innerHTML = `
-                <div class="${styles.app}">
-                  <div class="ms-bgColor-themeDark ms-fontColor-white ${styles.header}">
-                    <i class="ms-Icon ms-Icon--Info" aria-hidden="true"></i> ${escape(headerString)}
-                  </div>
-                </div>`;
-        }
-      }
-    }
-
-    // Handling the footer placeholder
-    if (!this._footerPlaceholder) {
-      this._footerPlaceholder = this.context.placeholders.tryAttach(
-        'PageFooter',
-        {
-          onDispose: this._onDispose
-        });
-
-      // The extension should not assume that the expected placeholder is available.
-      if (!this._footerPlaceholder) {
-        console.error('The expected placeholder (PageFooter) was not found.');
-        return;
-      }
-
-      if (this.properties) {
-        let footerString: string = this.properties.Footer;
-        if (!footerString) {
-          footerString = '(Footer property was not defined.)';
-        }
-
-        if (this._footerPlaceholder.domElement) {
-          this._footerPlaceholder.domElement.innerHTML = `
-                <div class="${styles.app}">
-                  <div class="ms-bgColor-themeDark ms-fontColor-white ${styles.footer}">
-                    <i class="ms-Icon ms-Icon--Info" aria-hidden="true"></i> ${escape(footerString)}
-                  </div>
-                </div>`;
-        }
-      }
-    }
+    // Call render method for generating the needed html elements
+    this._renderPlaceHolders();
+    return Promise.resolve<void>();
   }
-
 ```
 
-Add the following method after the `onRender` method. In this case, we simply output a console message, when the extension is removed from the page. 
+
+Create new `_renderPlaceHolders` private method with the following code:
+
+* We use `this.context.placeholderProvider.tryCreateContent` to get access on the placeholder
+* Extension code should not assume that the expected placeholder is available
+* The code expects custom properties called `Top` and `Bottom`. If the properties exist, they will be rendered inside of the placeholders.
+* Notice that the code path for both the top and the bottom placeholders is almost identical in the below method. The only differences are the variables used and the style definitions.
 
 ```ts
- private _onDispose(): void {
-    console.log('[CustomHeader._onDispose] Disposed custom header.');
+   private _renderPlaceHolders(): void {
+
+    console.log('HelloWorldApplicationCustomizer._renderPlaceHolders()');
+    console.log('Available placeholders: ',
+      this.context.placeholderProvider.placeholderNames.map(name => PlaceholderName[name]).join(', '));
+
+    // Handling the top placeholder
+    if (!this._topPlaceholder) {
+      this._topPlaceholder =
+        this.context.placeholderProvider.tryCreateContent(
+          PlaceholderName.Top,
+          { onDispose: this._onDispose });
+
+      // The extension should not assume that the expected placeholder is available.
+      if (!this._topPlaceholder) {
+        console.error('The expected placeholder (Top) was not found.');
+        return;
+      }
+
+      if (this.properties) {
+        let topString: string = this.properties.Top;
+        if (!topString) {
+          topString = '(Top property was not defined.)';
+        }
+
+        if (this._topPlaceholder.domElement) {
+          this._topPlaceholder.domElement.innerHTML = `
+                <div class="${styles.app}">
+                  <div class="ms-bgColor-themeDark ms-fontColor-white ${styles.top}">
+                    <i class="ms-Icon ms-Icon--Info" aria-hidden="true"></i> ${escape(topString)}
+                  </div>
+                </div>`;
+        }
+      }
+    }
+
+    // Handling the bottom placeholder
+    if (!this._bottomPlaceholder) {
+      this._bottomPlaceholder =
+        this.context.placeholderProvider.tryCreateContent(
+          PlaceholderName.Bottom,
+          { onDispose: this._onDispose });
+
+      // The extension should not assume that the expected placeholder is available.
+      if (!this._bottomPlaceholder) {
+        console.error('The expected placeholder (Bottom) was not found.');
+        return;
+      }
+
+      if (this.properties) {
+        let bottomString: string = this.properties.Bottom;
+        if (!bottomString) {
+          bottomString = '(Bottom property was not defined.)';
+        }
+
+        if (this._bottomPlaceholder.domElement) {
+          this._bottomPlaceholder.domElement.innerHTML = `
+                <div class="${styles.app}">
+                  <div class="ms-bgColor-themeDark ms-fontColor-white ${styles.bottom}">
+                    <i class="ms-Icon ms-Icon--Info" aria-hidden="true"></i> ${escape(bottomString)}
+                  </div>
+                </div>`;
+        }
+      }
+    }
   }
 
 ```
 
-The code is now ready to be tested in SharePoint Online. 
+Add the following method after the `_renderPlaceHolders` method. In this case, we simply output a console message, when the extension is removed from the page. 
+
+```ts
+  private _onDispose(): void {
+    console.log('[HelloWorldApplicationCustomizer._onDispose] Disposed custom top and bottom placeholders.');
+  }
+```
+
+The code is now ready to be tested in SharePoint Online.
 
 Switch to the console window that is running `gulp serve` and check if there are any errors. If there are errors, gulp reports them in the console and you will need to fix them before proceeding.
 
@@ -208,12 +227,12 @@ To test your extension, append the following query string parameters to the URL:
 * We also use Header and Footer JSON properties to provide parameters or configurations to the Application Customizer. In this case, we simply output these values, but you could adjust the behavior based on the properties in actual production usage. 
 
 ```
-?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"5fc73e12-8085-4a4b-8743-f6d02ffe1240":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"Header":"Header area of the page","Footer":"Footer area in the page"}}}
+?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"e5625e23-5c5a-4007-a335-e6c2c3afa485":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"Top":"Top area of the page","Bottom":"Bottom area in the page"}}}
 ```
 The full URL to request would be something like the following:
 
 ```
-contoso.sharepoint.com/Lists/Contoso/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"5fc73e12-8085-4a4b-8743-f6d02ffe1240":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"Header":"Header area of the page","Footer":"Footer area in the page"}}}
+contoso.sharepoint.com/Lists/Contoso/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"e5625e23-5c5a-4007-a335-e6c2c3afa485":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"Top":"Top area of the page","Bottom":"Bottom area in the page"}}}
 ```
 
 ![Allow Debug Manifest question from the page](../../../../images/ext-app-debug-manifest-message.png)

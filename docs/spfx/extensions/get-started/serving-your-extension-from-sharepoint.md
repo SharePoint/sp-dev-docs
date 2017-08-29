@@ -10,6 +10,12 @@ Be sure you have completed the procedures in the following articles before you b
 * [Build your first SharePoint Framework Extension (Hello World part 1)](./build-a-hello-world-extension.md)
 * [Using page placeholders from Application Customizer (Hello World part 2)](./using-page-placeholder-with-extensions.md)
 
+You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=P_yWI0WVQIg&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV). 
+
+<a href="https://www.youtube.com/watch?v=P_yWI0WVQIg&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV">
+<img src="../../../../images/spfx-ext-youtube-tutorial3.png" alt="Screenshot of the YouTube video player for this tutorial" />
+</a>
+
 ## Package the helloWorld Application Customizer
 In the console window, go to the extension project directory created in [Build your first SharePoint Framework Extension (Hello World part 1)](./build-a-hello-world-extension.md)
 
@@ -27,7 +33,7 @@ Before we package our solution, we want to include the code needed to automate t
     * **ClientSideComponentId:** This is the identifier (GUID) of the Field Customizer, which has been installed in the app catalog. 
     * **ClientSideComponentProperties:** This is an optional parameter, which can be used to provide properties for the Field Customizer instance
 
-> Notice. Currently you'll need to install solution packages explicitly to sites to ensure the extension is being properly executed. There will be alternative ways to achieve this in the future without site-by-site deployment. 
+> Notice, you can control the requirement to add a solution containing your extension to the site by using `skipFeatureDeployment` setting in **package-solution.json**. Event though you would not require solution to be installed on the site, you'd need to associate **ClientSideComponentId** to specific objects for the extension to be visible. 
 
 In the following steps, we'll create a new `CustomAction` definition, which will then be automatically deployed with the needed configurations when the solution package is installed on a site. 
 
@@ -60,7 +66,7 @@ Notice also that we use the specific location of `ClientSideExtension.Applicatio
         Title="SPFxApplicationCustomizer"
         Location="ClientSideExtension.ApplicationCustomizer"
         ClientSideComponentId="46606aa6-5dd8-4792-b017-1555ec0a43a4"
-        ClientSideComponentProperties="{&quot;Header&quot;:&quot;Header area of the page&quot;,&quot;Footer&quot;:&quot;Footer area in the page&quot;}">
+        ClientSideComponentProperties="{&quot;Top&quot;:&quot;Top area of the page&quot;,&quot;Bottom&quot;:&quot;Bottom area in the page&quot;}">
 
     </CustomAction>
 
@@ -76,7 +82,8 @@ Open **package-solution.json** from the **config** folder. The **package-solutio
   "solution": {
     "name": "app-extension-client-side-solution",
     "id": "02d35a3e-5896-4664-874f-9fe9fdfe8408",
-    "version": "1.0.0.0"
+    "version": "1.0.0.0",
+    "skipFeatureDeployment": false
   },
   "paths": {
     "zippedPackage": "solution/app-extension.sppkg"
@@ -93,6 +100,7 @@ To ensure that our newly added **element.xml** file is taken into account while 
     "name": "app-extension-client-side-solution",
     "id": "02d35a3e-5896-4664-874f-9fe9fdfe8408",
     "version": "1.0.0.0",
+    "skipFeatureDeployment": false,
     "features": [{
       "title": "Application Extension - Deployment of custom action.",
       "description": "Deploys a custom action with ClientSideComponentId association",
