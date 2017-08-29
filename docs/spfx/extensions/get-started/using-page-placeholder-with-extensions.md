@@ -18,10 +18,10 @@ You can also follow these steps by watching the video on the [SharePoint PnP You
 
 Application Customizer extensions are supported with `Site`, `Web` and `List` scopes. You can control the scope by deciding where or how the Application Customizer will be registered in your SharePoint tenant. When the Application Customizer exists in the scope and is being rendered, you can use the following method to get access to the placeholder. Once you have received the placeholder object, you have full control over what will be presented to the end user.
 
-Notice that we are requesting a well-known placeholder by using the corresponding well-known identifier. In this case, the code is accessing the header section of the page using the `PageHeader` identifier. 
+Notice that we are requesting a well-known placeholder by using the corresponding well-known identifier. In this case, the code is accessing the footer section of the page using the `Bottom` identifier. 
 
 ```ts
-    // Handling the header placeholder
+    // Handling the Bottom placeholder
     if (!this._bottomPlaceholder) {
       this._bottomPlaceholder =
         this.context.placeholderProvider.tryCreateContent(
