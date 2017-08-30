@@ -136,13 +136,19 @@ In the code editor open the **./src/webparts/listInfo/ListInfoWebPart.manifest.j
 
 ```json
 {
-  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
-
+  "$schema": "https://dev.office.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
   "id": "1ec8f92d-ea55-4584-bf50-bac435c916bf",
   "alias": "ListInfoWebPart",
   "componentType": "WebPart",
-  "version": "0.0.1",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
   "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
 
   "preconfiguredEntries": [{
     "groupId": "1ec8f92d-ea55-4584-bf50-bac435c916bf",
@@ -151,8 +157,7 @@ In the code editor open the **./src/webparts/listInfo/ListInfoWebPart.manifest.j
     "description": { "default": "Shows information about the selected list" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "List info",
-      "listName": ""
+      "description": "List info"
     }
   }]
 }
