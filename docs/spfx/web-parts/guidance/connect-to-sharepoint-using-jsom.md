@@ -310,7 +310,7 @@ export default class SharePointLists extends React.Component<ISharePointListsPro
     });
 
     return (
-      <div className={styles.helloWorld}>
+      <div className={styles.sharePointLists}>
         <div className={styles.container}>
           <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
             <div className="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
@@ -364,16 +364,21 @@ First, remove the existing external script references. In the code editor, open 
 
 ```json
 {
-  "entries": [
-    {
-      "entry": "./lib/webparts/sharePointLists/SharePointListsWebPart.js",
-      "manifest": "./src/webparts/sharePointLists/SharePointListsWebPart.manifest.json",
-      "outputPath": "./dist/share-point-lists.bundle.js"
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "share-point-lists-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/sharePointLists/SharePointListsWebPart.js",
+          "manifest": "./src/webparts/sharePointLists/SharePointListsWebPart.manifest.json"
+        }
+      ]
     }
-  ],
+  },
   "externals": {},
   "localizedResources": {
-    "sharePointListsStrings": "webparts/sharePointLists/loc/{locale}.js"
+    "SharePointListsWebPartStrings": "lib/webparts/sharePointLists/loc/{locale}.js"
   }
 }
 ```
@@ -459,11 +464,9 @@ export default class SharePointLists extends React.Component<ISharePointListsPro
 }
 ```
 
-To communicate the status of loading the SharePoint JSOM scripts to the user, add the `import` statement to reference the `Placeholder` component and update the `render` method to the following code:
+To communicate the status of loading the SharePoint JSOM scripts to the user, update the `render` method to the following code:
 
 ```tsx
-import { Placeholder } from '@microsoft/sp-webpart-base';
-
 export default class SharePointLists extends React.Component<ISharePointListsProps, ISharePointListsState> {
   // ...
   public render(): React.ReactElement<ISharePointListsProps> {
@@ -472,13 +475,22 @@ export default class SharePointLists extends React.Component<ISharePointListsPro
     });
 
     return (
-      <div className={styles.helloWorld}>
+      <div className={styles.sharePointLists}>
         <div className={styles.container}>
           {this.state.loadingScripts &&
-            <Placeholder
-              icon={'ms-Icon--CustomList'}
-              iconText={'SharePoint lists'}
-              description={'Loading SharePoint JSOM scripts...'} />}
+            <div className="ms-Grid" style={{ color: "#666", backgroundColor: "#f4f4f4", padding: "80px 0", alignItems: "center", boxAlign: "center" }}>
+              <div className="ms-Grid-row" style={{ color: "#333" }}>
+                <div className="ms-Grid-col ms-u-hiddenSm ms-u-md3"></div>
+                <div className="ms-Grid-col ms-u-sm12 ms-u-md6" style={{ height: "100%", whiteSpace: "nowrap", textAlign: "center" }}>
+                  <i className="ms-fontSize-su ms-Icon ms-Icon--CustomList" style={{ display: "inline-block", verticalAlign: "middle", whiteSpace: "normal" }}></i><span className="ms-fontWeight-light ms-fontSize-xxl" style={{ paddingLeft: "20px", display: "inline-block", verticalAlign: "middle", whiteSpace: "normal" }}>SharePoint lists</span>
+                </div>
+                <div className="ms-Grid-col ms-u-hiddenSm ms-u-md3"></div>
+              </div>
+              <div className="ms-Grid-row" style={{ width: "65%", verticalAlign: "middle", margin: "0 auto", textAlign: "center" }}>
+                <span style={{ color: "#666", fontSize: "17px", display: "inline-block", margin: "24px 0", fontWeight: 100 }}>Loading SharePoint JSOM scripts...</span>
+              </div>
+              <div className="ms-Grid-row"></div>
+            </div>}
           {this.state.loadingScripts === false &&
             <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
               <div className="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
@@ -507,7 +519,7 @@ export default class SharePointLists extends React.Component<ISharePointListsPro
 }
 ```
 
-When the React component's state indicates that the SharePoint JSOM scripts are being loaded, it will display a standard SharePoint Framework placeholder. Once the scripts have been loaded, the web part will display the expected content with the button allowing users to load the information about SharePoint lists in the current site.
+When the React component's state indicates that the SharePoint JSOM scripts are being loaded, it will display a placeholder. Once the scripts have been loaded, the web part will display the expected content with the button allowing users to load the information about SharePoint lists in the current site.
 
 ### Load SharePoint JSOM Scripts Using SPComponentLoader
 
@@ -520,7 +532,7 @@ import { SPComponentLoader } from '@microsoft/sp-loader';
 
 export default class SharePointLists extends React.Component<ISharePointListsProps, ISharePointListsState> {
   // ...
-  private componentDidMount(): void {
+  public componentDidMount(): void {
     SPComponentLoader.loadScript('/_layouts/15/init.js', {
       globalExportsName: '$_global_init'
     })
@@ -568,7 +580,7 @@ While using the `SPComponentLoader` requires some additional effort, it allows y
 
 In the past, when building client-side customizations on SharePoint you might have used SharePoint JSOM to communicate with SharePoint. However, the recommended approach is to use the SharePoint REST API either directly or through the [PnP JavaScript Core Library](https://github.com/SharePoint/PnP-JS-Core).
 
-When SharePoint JSOM was introduced, it was the first step towards supporting client-side solutions on SharePoint. However, it is no longer being actively maintained and might not offer access to all capabilities available through the REST API. Additionaly, whether using the SharePoint REST API directly or through the PnP JavaScript Core Library, you can use promises which significantly simplify writing asynchronous code (a common problem when utilizing JSOM).
+When SharePoint JSOM was introduced, it was the first step towards supporting client-side solutions on SharePoint. However, it is no longer being actively maintained and might not offer access to all capabilities available through the REST API. Additionally, whether using the SharePoint REST API directly or through the PnP JavaScript Core Library, you can use promises which significantly simplify writing asynchronous code (a common problem when utilizing JSOM).
 
 Although there are still a limited number of cases where SharePoint JSOM provides access to data and methods not yet covered by the SharePoint REST API, where possible, the REST API should be preferred.
 
