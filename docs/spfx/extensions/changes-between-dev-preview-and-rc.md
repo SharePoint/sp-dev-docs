@@ -14,7 +14,7 @@ Release Candidate is enabled in the First Release tenants in Office 365, but is 
 
 - Placeholder logic has been changed slightly and they have been renamed.
 - Typical placeholders are now called `'top'` and `'bottom'`
-- `onRender` method is deprecated - you should call render from the onInit, if needed and also add event handling for the possible events when placeholders should be re-rendered. See [updated placeholder].(./get-started/using-page-placeholder-with-extensions.md) tutorial for details.
+- `onRender` method is deprecated - you should call render from the onInit, if needed and also add event handling for the possible events when placeholders should be re-rendered. See [updated placeholder tutorial](./get-started/using-page-placeholder-with-extensions.md) for details.
 - Schema definition URL has been updated in the manifest file to point json schema file from the dev.office.com.
 
 ### Field Customizer Changes
