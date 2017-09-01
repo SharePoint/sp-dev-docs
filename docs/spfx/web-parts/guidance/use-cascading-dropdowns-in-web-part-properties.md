@@ -132,7 +132,7 @@ In the **src/webparts/listItems/components/ListItems.tsx** file, change the cont
 export default class ListItems extends React.Component<IListItemsProps, {}> {
  public render(): JSX.Element {
     return (
-        <div className={styles.helloWorld}>
+        <div className={styles.listItems}>
         <div className={styles.container}>
           <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
             <div className="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
@@ -407,7 +407,7 @@ In the **src/webparts/listItems/components/ListItems.tsx** file, change the **re
 export default class ListItems extends React.Component<IListItemsProps, {}> {
   public render(): JSX.Element {
     return (
-        <div className={styles.helloWorld}>
+        <div className={styles.listItems}>
         <div className={styles.container}>
           <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
             <div className="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
@@ -506,7 +506,7 @@ In the **src/webparts/listItems/ListItemsWebPart.ts** file, in the **ListItemsWe
 ```ts
 export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
   // ...
-    private loadItems(): Promise<IPropertyPaneDropdownOption[]> {
+  private loadItems(): Promise<IPropertyPaneDropdownOption[]> {
     if (!this.properties.listName) {
       // resolve to empty options since no list has been selected
       return Promise.resolve();
@@ -565,13 +565,13 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
     this.context.statusRenderer.displayLoadingIndicator(this.domElement, 'options');
 
     this.loadLists()
-      .then((listOptions: IDropdownOption[]): Promise<IDropdownOption[]> => {
+      .then((listOptions: IPropertyPaneDropdownOption[]): Promise<IPropertyPaneDropdownOption[]> => {
         this.lists = listOptions;
         this.listsDropdownDisabled = false;
         this.context.propertyPane.refresh();
         return this.loadItems();
       })
-      .then((itemOptions: IDropdownOption[]): void => {
+      .then((itemOptions: IPropertyPaneDropdownOption[]): void => {
         this.items = itemOptions;
         this.itemsDropdownDisabled = !this.properties.listName;
         this.context.propertyPane.refresh();
@@ -625,7 +625,7 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
       this.context.statusRenderer.displayLoadingIndicator(this.domElement, 'items');
 
       this.loadItems()
-        .then((itemOptions: IDropdownOption[]): void => {
+        .then((itemOptions: IPropertyPaneDropdownOption[]): void => {
           // store items
           this.items = itemOptions;
           // enable item selector
