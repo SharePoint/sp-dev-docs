@@ -52,6 +52,17 @@ group                   |ILocalizedString|no      |The name of the group in the 
 dataVersion             |string          |no      |Use this field to specify the data version of the pre-configured data provided to the web part. Note that data version is different from the version field in the manifest. The manifest version is used to control the versioning of the web part code, while data version is used to control the versioning of the serialized data of the web part. Refer to dataVersion field of your web part for more information. Supported values format: MAJOR.MINOR version|`"dataVersion": "1.0"`
 properties              |TProperties     |yes     |A Key-value pair object with default values for web part properties.|`"properties": { "location": "Redmond", "numberOfDays": 3, "showIcon": true }`
 
+Out of the box Categories are following, which can be used for the `groupId` property.
+
+Category Name |Guid |Map to web part picker |Description        
+--- |--- |--- |---
+Text, media, and content | `cf066440-0614-43d6-98ae-0b31cf14c7c3`| Media and Content  |This category includes web parts that display text, multi-media, documents, information from the web, and other rich content.   
+Discover | `1edbd9a8-0bfb-4aa2-9afd-14b8c45dd489`| Discovery  |This category includes web parts that organize, group, and filter content to help users discover information. | `75e22ed5-fa14-4829-850a-c890608aca2d`| Social Collaboration |This category includes web parts that facilitate information sharing, team work, and social interactions.
+Planning and process | `1bc7927e-4a5e-4520-b540-71305c79c20a`| Business Data | This category includes web parts that empower team productivity with the use of planning and process tools. 
+Business and intelligence | `4aca9e90-eff5-4fa1-bac7-728f5f157b66`| Business Data | This category includes web parts for tracking and analyzing data, and for integrating business flow with pages. 
+Site tools | `070951d7-94da-4db8-b06e-9d581f1f55b1`| Site tools  |This category includes web parts for site information and management. 
+Other | `5c03119e-3074-46fd-976b-c60198311f70`| Others | This category includes web parts not in other categories.            
+
 Some web part properties have a value of type **ILocalizedString**. This type is a key-value pair object that allows developers to specify strings for the different locales. At a minimum, a value of type **ILocalizedString** must contain the **default** value. Optionally developers can provide the translations of that value to the different locales that their web part supports. If the web part is placed on a page in a locale that isn't listed in the localized string, the default value is used instead.
 
 Valid **ILocalizedString** values:
