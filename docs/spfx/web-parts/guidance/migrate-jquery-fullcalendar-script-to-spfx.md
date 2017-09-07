@@ -185,7 +185,7 @@ When prompted, define values as follows:
 - **WebPart** as the client-side component to create
 - **Tasks calendar** as your web part name
 - **Shows tasks in the calendar view** as your web part description
-- **No javaScript web framework** as the starting point to build the web part
+- **No JavaScript web framework** as the starting point to build the web part
 
 ![SharePoint Framework Yeoman generator with the default choices](../../../../images/fullcalendar-yeoman.png)
 
@@ -365,7 +365,7 @@ function updateTask(id, startDate, dueDate) {
 }
 ```
 
-This code is almost identical with the original code of the Script Editor Web Part customization. The only difference is that where the original code retrieved the URL of the current web from the global **\_spPageContextInfo** variable set by SharePoint (lines 8, 45, 96 and 104), the code in the SharePoint Framework uses a custom variable that you will have to set in the web part. SharePoint Framework client-side web parts can be used both on classic and modern pages. While the **_spPageContextInfo** variable is present on classic pages, it's not available on modern pages which is why you can't rely on it and need a custom property that you can control yourself instead.
+This code is almost identical with the original code of the Script Editor Web Part customization. The only difference is that where the original code retrieved the URL of the current web from the global **\_spPageContextInfo** variable set by SharePoint (lines 8, 45, 96 and 104), the code in the SharePoint Framework uses a custom variable that you will have to set in the web part. SharePoint Framework client-side web parts can be used both on classic and modern pages. While the **\_spPageContextInfo** variable is present on classic pages, it's not available on modern pages which is why you can't rely on it and need a custom property that you can control yourself instead.
 
 In order to reference this file in the web part, in the code editor, open the **./src/webparts/tasksCalendar/TasksCalendarWebPart.ts** file and change the **render** method to:
 
