@@ -1,30 +1,29 @@
-# Changes between Dev Preview and Release Candidate for SharePoint Framework Extensions (preview)
+# Changes introduced in the SharePoint Framework Extensions (preview) Release Candidate release
 
-If you have created SharePoint Framework Extensions with the developer preview version (released June 2017), you'll have to perform some changes to make them work with Release Candidate (RC) version. Here's a short list of the changes, which were introduced with the latest version.
+If you used the developer preview version of the SharePoint Framework Extensions (released in June 2017), you'll have to make some changes to ensure that your extensions work with the Release Candidate (RC) release. This article provides a short list of the changes that were introduced in the SharePoint Framework Extensions RC release.
 
-Release Candidate is enabled in the First Release tenants in Office 365, but is not supported yet in production use.
+>**Note:** The RC release is enabled on the First Release tenants in Office 365, but is not yet supported for use in production.
 
 ## General solution package changes
 
-- All SharePoint Framework packages are now standardized to version 1.2. All future updates will also have version standardization cross all packages to avoid any confusions around used versions.
-- Upgrade to use TypeScript 2.4 and React 15 typings
-- Update to Fabric React 4.32.0.
+- All SharePoint Framework packages are now standardized to version 1.2. All future updates will also have standard versions across all packages.
+- Upgraded to use TypeScript 2.4 and React 15 typings.
+- Updated to Fabric React 4.32.0.
 
-### Application Customizer Changes
+## Application Customizer changes
 
-- Placeholder logic has been changed slightly and they have been renamed.
-- Typical placeholders are now called `'top'` and `'bottom'`
-- `onRender` method is deprecated - you should call render from the onInit, if needed and also add event handling for the possible events when placeholders should be re-rendered. See [updated placeholder tutorial](./get-started/using-page-placeholder-with-extensions.md) for details.
-- Schema definition URL has been updated in the manifest file to point json schema file from the dev.office.com.
+- Placeholder logic has changed slightly and placeholders have been renamed. Typical placeholders are now called `'top'` and `'bottom'`.
+- The **`onRender`** method has been deprecated. Instead, call **`render`** from the **`onInit`** method, and add event handling for the possible events when placeholders should be re-rendered. For details, see [Using page placeholders](./get-started/using-page-placeholder-with-extensions.md).
+- The schema definition URL has been updated in the manifest file to point to the json schema file on dev.office.com.
 
-### Field Customizer Changes
+## Field Customizer changes
 
-- There are changes in the APIs for accessing the actual field values. You should be using `event.fieldValue`. Other options are deprecated.
-- API to access UI element to render the field customizer output has been changed from `event.cellDiv` to `event.domElement`. 
-- Schema definition URL has been updated in the manifest file to point json schema file from the dev.office.com.
+- Changes were made to the APIs that access field values. Use **`event.fieldValue`**. Other options are deprecated.
+- The API to access UI elements to render the Field Customizer output has changed from **`event.cellDiv`** to **`event.domElement`**. 
+- The schema definition URL has been updated in the manifest file to point to the json schema file on dev.office.com.
 
-### ListView Command Set Changes
+## ListView Command Set changes
 
-- `onRefreshCommand` method deprecated and replaced with `onListViewUpdated`.
-- Manifest json changes around the commands structure. Is using now `items` collections and changes in the title handling of the commands in the json definition.
-- Schema definition URL has been updated in the manifest file to point json schema file from the dev.office.com.
+- The **`onRefreshCommand`** method has been deprecated and replaced with **`onListViewUpdated`**.
+- Changes were made to the commands structure in the manifest json file. Commands now use the **`items`** collection and command title handling was updated in the json definition.
+- The schema definition URL has been updated in the manifest file to point to the json schema file on dev.office.com.
