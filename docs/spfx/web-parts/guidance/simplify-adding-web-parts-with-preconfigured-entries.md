@@ -54,7 +54,7 @@ properties              |TProperties     |yes     |A Key-value pair object with 
 
 Out of the box Categories are following, which can be used for the `groupId` property.
 
-Category Name |Guid |Map to web part picker |Description        
+Category Name |Guid |Corresponding classic page category name |Description        
 --- |--- |--- |---
 Text, media, and content | `cf066440-0614-43d6-98ae-0b31cf14c7c3`| Media and Content  |This category includes web parts that display text, multi-media, documents, information from the web, and other rich content.   
 Discovery | `1edbd9a8-0bfb-4aa2-9afd-14b8c45dd489`| Discovery  |This category includes web parts that organize, group, and filter content to help users discover information. 
