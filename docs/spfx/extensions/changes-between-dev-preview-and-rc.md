@@ -14,16 +14,16 @@ If you used the developer preview version of the SharePoint Framework Extensions
 
 - Placeholder logic has changed slightly and placeholders have been renamed. Typical placeholders are now called `'top'` and `'bottom'`.
 - The **`onRender`** method has been deprecated. Instead, call **`render`** from the **`onInit`** method, and add event handling for the possible events when placeholders should be re-rendered. For details, see [Using page placeholders](./get-started/using-page-placeholder-with-extensions.md).
-- The schema definition URL has been updated in the manifest file to point to the json schema file on dev.office.com.
+- The schema definition URL has been updated in the manifest file to point to the online documentation for the JSON schema.
 
 ## Field Customizer changes
 
 - Changes were made to the APIs that access field values. Use **`event.fieldValue`**. Other options are deprecated.
 - The API to access UI elements to render the Field Customizer output has changed from **`event.cellDiv`** to **`event.domElement`**. 
-- The schema definition URL has been updated in the manifest file to point to the json schema file on dev.office.com.
+- The schema definition URL has been updated in the manifest file to point to the online documentation for the JSON schema.
 
 ## ListView Command Set changes
 
 - The **`onRefreshCommand`** method has been deprecated and replaced with **`onListViewUpdated`**.
 - Changes were made to the commands structure in the manifest json file. Commands now use the **`items`** collection and command title handling was updated in the json definition.
-- The schema definition URL has been updated in the manifest file to point to the json schema file on dev.office.com.
+- The schema definition URL has been updated in the manifest file to point to the online documentation for the JSON schema.
