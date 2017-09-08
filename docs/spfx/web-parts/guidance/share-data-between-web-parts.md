@@ -1,7 +1,5 @@
 # Share Data Between Client-Side Web Parts
 
-> Note. This article has not yet been verified with the SPFx GA version, so you might have challenges making this work as described using the latest release.
-
 When building client-side web parts, loading data once and reusing it across different web parts will help you improve the performance of your pages and decrease the load on your network. This article describes a number of approaches that you can use to share data across multiple web parts.
 
 ## Why Share Data Between Web Parts
@@ -327,12 +325,14 @@ SharePoint Framework services can be built using the same project build system a
 
 ```json
 {
-  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+  "$schema": "https://dev.office.com/json-schemas/spfx/client-side-library-manifest.schema.json",
 
   "id": "69b1aacd-68f2-4147-8433-8efb08eae331",
   "alias": "DocumentsService",
   "componentType": "Library",
-  "version": "0.0.1",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
   "manifestVersion": 2
 }
 ```

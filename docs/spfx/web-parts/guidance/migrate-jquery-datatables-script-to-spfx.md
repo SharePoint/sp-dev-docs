@@ -189,7 +189,7 @@ export default class ItRequestsWebPart extends BaseClientSideWebPart<IItRequests
   public render(): void {
     this.domElement.innerHTML = `
       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" />
-      <table id="requests" class="display ${styles.helloWorld}" cellspacing="0" width="100%">
+      <table id="requests" class="display ${styles.itRequests}" cellspacing="0" width="100%">
         <thead>
             <tr>
                 <th>ID</th>
@@ -505,7 +505,7 @@ To function properly, TypeScript requires type definitions for the different lib
 Start by installing type definitions for jQuery and DataTables by executing in the command line:
 
 ```sh
-npm install --save-dev @types/jquery @types/jquery.datatables
+npm install --save-dev @types/jquery@1 @types/datatables.net
 ```
 
 Type definitions for Moment.js are distributed together with the Moment.js package. Even though, you're loading Moment.js from a URL, in order to use its typings, you still need to install the Moment.js package in the project.
@@ -530,7 +530,7 @@ Having defined **$** as jQuery you can now remove the local definition of **$** 
 var $: any = (window as any).$;
 ```
 
-Because DataTables is a jQuery plugin that attaches itself to jQuery you cannot load its type definition directly. Instead, you have to add it to the list of types loaded globally. In the code editor, open the **./tsconfig.json** file and to the **types** array add **jquery.datatables**:
+Because DataTables is a jQuery plugin that attaches itself to jQuery you cannot load its type definition directly. Instead, you have to add it to the list of types loaded globally. In the code editor, open the **./tsconfig.json** file and to the **types** array add **datatables.net**:
 
 ```json
 {
@@ -544,7 +544,7 @@ Because DataTables is a jQuery plugin that attaches itself to jQuery you cannot 
     "types": [
       "es6-promise",
       "es6-collections",
-      "jquery.datatables",
+      "datatables.net",
       "webpack-env"
     ]
   }
@@ -607,7 +607,7 @@ export default class ItRequestsWebPart extends BaseClientSideWebPart<IItRequests
       },
       columnDefs: [{
         targets: 4,
-        render: $.fn.dataTable.render.moment('YYYY/MM/DD')
+        render: ($.fn as any).dataTable.render.moment('YYYY/MM/DD')
       }]
     });
   }
@@ -629,7 +629,7 @@ import * as $ from 'jquery';
 import * as moment from 'moment';
 
 /* tslint:disable:no-function-expression */
-$.fn.dataTable.render.moment = function (from: string, to: string, locale: string): (d: any, type: string, row: any) => string {
+($.fn as any).dataTable.render.moment = function (from: string, to: string, locale: string): (d: any, type: string, row: any) => string {
 /* tslint:enable */
     // Argument shifting
     if (arguments.length === 1) {
