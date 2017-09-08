@@ -57,7 +57,7 @@ Out of the box Categories are following, which can be used for the `groupId` pro
 Category Name |Guid |Map to web part picker |Description        
 --- |--- |--- |---
 Text, media, and content | `cf066440-0614-43d6-98ae-0b31cf14c7c3`| Media and Content  |This category includes web parts that display text, multi-media, documents, information from the web, and other rich content.   
-Discover | `1edbd9a8-0bfb-4aa2-9afd-14b8c45dd489`| Discovery  |This category includes web parts that organize, group, and filter content to help users discover information. 
+Discovery | `1edbd9a8-0bfb-4aa2-9afd-14b8c45dd489`| Discovery  |This category includes web parts that organize, group, and filter content to help users discover information. 
 Communication and collaboration | `75e22ed5-fa14-4829-850a-c890608aca2d`| Social Collaboration |This category includes web parts that facilitate information sharing, team work, and social interactions.
 Planning and process | `1bc7927e-4a5e-4520-b540-71305c79c20a`| Business Data | This category includes web parts that empower team productivity with the use of planning and process tools. 
 Business and intelligence | `4aca9e90-eff5-4fa1-bac7-728f5f157b66`| Business Data | This category includes web parts for tracking and analyzing data, and for integrating business flow with pages. 
