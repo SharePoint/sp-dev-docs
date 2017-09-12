@@ -135,9 +135,9 @@ The full URL should look similar to the following depending on your tenant URL:
 contoso.sharepoint.com/Lists/Contoso/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"e5625e23-5c5a-4007-a335-e6c2c3afa485":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"testMessage":"Hello as property!"}}}
 ```
 
-![Allow Debug Manifest question from the page](../../../../images/ext-app-debug-manifest-message.png)
+Choose "**Load debug scripts**" to continue loading scripts from your local host.
 
-Click the "**Load debug scripts**" button to continue loading scripts from your local host.
+![Allow Debug Manifest question from the page](../../../../images/ext-app-debug-manifest-message.png)
 
 You should now see the alert message on your page.
 
