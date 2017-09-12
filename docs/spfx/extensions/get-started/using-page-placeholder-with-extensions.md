@@ -1,24 +1,22 @@
-# Using page placeholders from Application Customizer (Hello World part 2)
+# Use page placeholders from Application Customizer (Hello World part 2)
 
->**Note:** The SharePoint Framework Extensions are currently in preview and are subject to change. SharePoint Framework Extensions are not currently supported for use in production environments.
+>**Note:** SharePoint Framework Extensions are currently in preview and are subject to change. They are not currently supported for use in production environments.
 
-Application Customizers also provide access to well known locations in the page, which you can modify based on your business and functional requirements. Typical scenarios would be dynamic header and footer experiences, which would be visible across all the pages in SharePoint Online. 
+Application Customizers provide access to well-known locations on SharePoint pages that you can modify based on your business and functional requirements. For example, you can create dynamic header and footer experiences that render across all the pages in SharePoint Online. 
 
-This model is similar to using a UserCustomAction collection in a Site or Web object to associate custom JavaScript to modify the page experience. The key difference or advantage with SPFx extensions is that you have guaranteed elements on the page regardless of any HTML/DOM structure modifications in future changes to SharePoint Online.
+This model is similar to using a **UserCustomAction** collection in a **Site** or **Web** object to modify the page experience via custom JavaScript. The key difference or advantage with SharePoint Framework (SPFx) Extensions is that your page elements won't change if changes are made to the HTML/DOM structure in SharePoint Online.
 
-In this article, we'll continue extending the hello world extension built in the previous article [Build your first SharePoint Framework Extension (Hello World part 1)](./build-a-hello-world-extension.md) to take advantage of the page placeholders.
-
-You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=ipRw6o6bOTw&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV).
+This article describes how to extend your [Hello World extension](./build-a-hello-world-extension.md) to take advantage of page placeholders. You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=ipRw6o6bOTw&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV).
 
 <a href="https://www.youtube.com/watch?v=ipRw6o6bOTw&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV">
 <img src="../../../../images/spfx-ext-youtube-tutorial2.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
-## Getting access to page placeholders
+## Get access to page placeholders
 
-Application Customizer extensions are supported with `Site`, `Web` and `List` scopes. You can control the scope by deciding where or how the Application Customizer will be registered in your SharePoint tenant. When the Application Customizer exists in the scope and is being rendered, you can use the following method to get access to the placeholder. Once you have received the placeholder object, you have full control over what will be presented to the end user.
+Application Customizer extensions are supported with `Site`, `Web`, and `List` scopes. You can control the scope by deciding where or how the Application Customizer will be registered in your SharePoint tenant. When the Application Customizer exists in the scope and is being rendered, you can use the following method to get access to the placeholder. After you have received the placeholder object, you have full control over what will be presented to the end user.
 
-Notice that we are requesting a well-known placeholder by using the corresponding well-known identifier. In this case, the code is accessing the footer section of the page using the `Bottom` identifier. 
+Notice that you're requesting a well-known placeholder by using the corresponding well-known identifier. In this case, the code is accessing the footer section of the page using the `Bottom` identifier. 
 
 ```ts
     // Handling the Bottom placeholder
@@ -31,33 +29,33 @@ Notice that we are requesting a well-known placeholder by using the correspondin
     }
 ```
 
-In the following steps, we'll modify the previously created hello world Application Customizer to access placeholders and modify their content by adding custom html elements to them.
+In the following steps, you'll modify the Hello World Application Customizer to access placeholders and modify their content by adding custom HTML elements to them.
 
-Switch to Visual Studio Code (or your preferred IDE) and open **src\extensions\helloWorld\HelloWorldApplicationCustomizer.ts.**
+1. In Visual Studio Code (or your preferred IDE), open **src\extensions\helloWorld\HelloWorldApplicationCustomizer.ts.**
 
-Add the `PlaceholderContent` and `PlaceholderName` to the import from `@microsoft/sp-application-base` by updating the import statement as follows:
+2. Add the `PlaceholderContent` and `PlaceholderName` to the import from `@microsoft/sp-application-base` by updating the import statement as follows:
 
-```ts
-import {
-  BaseApplicationCustomizer, 
-  PlaceholderContent,
-  PlaceholderName
-} from '@microsoft/sp-application-base';
-```
+	```ts
+	import {
+	  BaseApplicationCustomizer, 
+	  PlaceholderContent,
+	  PlaceholderName
+	} from '@microsoft/sp-application-base';
+	```
+	
+	Also add the following import statements after the `strings` import at the top of the file:
 
-Also add the following import statements after the `strings` import at the top of the file:
 
-* We will create style definitions for the output in the following steps
-* `escape` is used to escape Application Customizer properties  
+	```ts
+	import styles from './AppCustomizer.module.scss';
+	import { escape } from '@microsoft/sp-lodash-subset'; 
+	```
+	
+	You use `escape` to escape Application Customizer properties. You'll create style definitions for the output in the following steps.  
 
-```ts
-import styles from './AppCustomizer.module.scss';
-import { escape } from '@microsoft/sp-lodash-subset'; 
-```
+3. Create a new file named **AppCustomizer.module.scss** under the **src\extensions\helloWorld** folder. 
 
-Create a new file named **AppCustomizer.module.scss** under the **src\extensions\helloWorld** folder. 
-
-Update **AppCustomizer.module.scss** as follows:
+4. Update **AppCustomizer.module.scss** as follows:
 
 * These are the styles that will be used within the outputed html for the header and footer placeholders.
 
