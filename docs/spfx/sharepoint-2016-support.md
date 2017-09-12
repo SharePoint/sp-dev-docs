@@ -10,7 +10,7 @@ Introduction to SharePoint Framework development in SharePoint 2016 Feature Pack
 
 ## When to use which SharePoint Framework version?
 
-Since SharePoint Online and SharePoint 2016 has different release cycle for the new capabilities, they do support different capabilities also for the SharePoint Framework. SharePoint Online is always using the latest version of the SharePoint Framework, but SharePoint 2016 will support the version, which is matching server-side dependencies of the deployed packages.
+Since SharePoint Online and SharePoint 2016 has different release cycle for the new capabilities, they do support different capabilities also for the SharePoint Framework. SharePoint Online is always using the latest version of the SharePoint Framework, but SharePoint 2016 will support the version, which is matching server-side dependencies of the deployed packages. 
 
 SharePoint 2016 Feature Pack 2 has support for the SharePoint Framework client-side web parts hosted in the classic SharePoint pages with SharePoint Framework v1.0. This means that when you are targeting your customization to SharePoint 2016 platform, you'll need to use SharePoint Framework v1.0.2 version due server-side version dependency. 
 
