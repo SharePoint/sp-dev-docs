@@ -1,6 +1,8 @@
 # Overview of the SharePoint Framework
 
 The SharePoint Framework (SPFx) is a page and web part model that provides full support for client-side SharePoint development, easy integration with SharePoint data, and support for open source tooling. With the SharePoint Framework, you can use modern web technologies and tools in your preferred development environment to build productive experiences and apps that are responsive and mobile-ready from day one. The SharePoint Framework works for SharePoint Online and also for on-premises (SharePoint 2016 Feature Pack 2).
+
+> See details around SharePoint Framework support in SharePoint 2016 from following article: [SharePoint Framework development with SharePoint 2016 Feature Pack 2](sharepoint-2016-support)
  
 Key features of the SharePoint Framework include:
 
