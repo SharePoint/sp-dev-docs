@@ -4,7 +4,7 @@
 
 SharePoint Framework (SPFx) Extensions are client-side components that run inside the context of a SharePoint page. You can deploy extensions to SharePoint Online, and you can use modern JavaScript tools and libraries to build them.
 
-You can follow the steps in this article by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=0BeS0HukW24&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV). 
+This article describes how to create your first Hello World SharePoint Framework Extension. You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=0BeS0HukW24&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV). 
 
 <a href="https://www.youtube.com/watch?v=0BeS0HukW24&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV">
 <img src="../../../../images/spfx-ext-youtube-tutorial1.png" alt="Screenshot of the YouTube video player for this tutorial" />
@@ -137,9 +137,9 @@ The full URL should look similar to the following:
 contoso.sharepoint.com/Lists/Contoso/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"e5625e23-5c5a-4007-a335-e6c2c3afa485":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"testMessage":"Hello as property!"}}}
 ```
 
-![Allow Debug Manifest question from the page](../../../../images/ext-app-debug-manifest-message.png)
+Choose **Load debug scripts** to continue loading scripts from your local host.
 
-Choose "**Load debug scripts**" to continue loading scripts from your local host.
+![Allow Debug Manifest question from the page](../../../../images/ext-app-debug-manifest-message.png)
 
 You should now see the alert message on your page.
 
