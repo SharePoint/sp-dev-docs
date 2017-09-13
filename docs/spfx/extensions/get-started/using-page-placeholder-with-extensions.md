@@ -105,7 +105,7 @@ In the following steps, you'll modify the Hello World Application Customizer to 
 	    // These have been added
 	    private _topPlaceholder: PlaceholderContent | undefined;
 	    private _bottomPlaceholder: PlaceholderContent | undefined;
-  ```
+  	```
 
 7. Update the `onInit` method code as follows:
 
@@ -205,11 +205,11 @@ In the following steps, you'll modify the Hello World Application Customizer to 
 
 9. Add the following method after the `_renderPlaceHolders` method. In this case, you simply output a console message when the extension is removed from the page. 
 
-  ```ts
-    private _onDispose(): void {
-      console.log('[HelloWorldApplicationCustomizer._onDispose] Disposed custom top and bottom placeholders.');
-    }
-  ```
+	  ```ts
+	    private _onDispose(): void {
+	      console.log('[HelloWorldApplicationCustomizer._onDispose] Disposed custom top and bottom placeholders.');
+	    }
+	  ```
 
 You're now ready to test your code in SharePoint Online.
 
@@ -235,13 +235,13 @@ To test your extension, append the following query string parameters to the URL:
 * Notice that the GUID used in this query parameter has to match on the ID attribute of your Application Customizer. This is available in the **HelloWorldApplicationCustomizer.manifest.json** file.
 * You use Header and Footer JSON properties to provide parameters or configurations to the Application Customizer. In this case, you simply output these values. You can also adjust the behavior based on the properties used in production. 
 
-The full URL to request should look similar to the following:
+The full URL should look similar to the following:
 
 ```
 contoso.sharepoint.com/Lists/Contoso/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"e5625e23-5c5a-4007-a335-e6c2c3afa485":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"Top":"Top area of the page","Bottom":"Bottom area in the page"}}}
 ```
 
-Choose "**Load debug scripts**" to continue loading scripts from your local host.
+Choose **Load debug scripts** to continue loading scripts from your local host.
 
 ![Allow Debug Manifest question from the page](../../../../images/ext-app-debug-manifest-message.png)
 
