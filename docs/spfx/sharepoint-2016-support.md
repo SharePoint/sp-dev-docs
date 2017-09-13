@@ -1,4 +1,4 @@
-# SharePoint Framework Development with SharePoint 2016 Feature Pack 2
+# SharePoint Framework development with SharePoint 2016 Feature Pack 2
 
 SharePoint 2016 Feature Pack 2 supports SharePoint Framework client-side web parts hosted in classic SharePoint pages. 
 
@@ -8,7 +8,7 @@ An introduction to SharePoint Framework development in SharePoint 2016 using Fea
 <img src="../../images/spfx-fp2-youtube-video.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
-## Which Version of the SharePoint Framework to use
+## Which version of the SharePoint Framework to use
 
 Since SharePoint Online and SharePoint 2016 have different release cycles for new capabilities, they also have different capabilities when it comes to the SharePoint Framework. SharePoint Online always uses the latest version of the SharePoint Framework, but SharePoint 2016 only supports the version which matches the server-side dependencies of the deployed packages. 
 
@@ -16,7 +16,7 @@ SharePoint 2016 Feature Pack 2 supports SharePoint Framework client-side web par
 
 If you are planning to use the same client-side web parts in both SharePoint 2016 and in SharePoint Online, you will need to use the SharePoint Framework v1.0.2 as your baseline version to ensure that the web part works in both environments. 
 
-## Installing the SharePoint Framework Version Needed for SP2016 Development
+## Installing the SharePoint Framework version needed for SP2016 development
 
 You should ensure that you are using the right version of the SharePoint Framework on your development machine. You can check the currently globally installed SharePoint Framework Yeoman template package version using the following command: 
 
@@ -36,7 +36,7 @@ To install v1.0.2 of the SharePoint Framework Yeoman templates, you can use the 
 npm install -g @microsoft/generator-sharepoint@1.0.2
 ```
 
-## Hosting your SharePoint Framework Solution for On-Premises Deployment
+## Hosting your SharePoint Framework solution for on-premises deployment
 
 Getting SharePoint Framework client-side web parts deployed to on-premises requires two distinct actions:
 
@@ -51,7 +51,7 @@ You can host the JavaScript files in the location that best fits your environmen
 
 > You can find more details on blocked file types in SharePoint 2016 from the following support article: [Types of files that cannot be added to a list or library](https://support.office.com/en-us/article/Types-of-files-that-cannot-be-added-to-a-list-or-library-30be234d-e551-4c2a-8de8-f8546ffbf5b3#ID0EAADAAA=2016)
 
-## Development Environment Considerations 
+## Development environment considerations 
 
 When you are developing SharePoint Framework client-side web parts you need Internet connectivity to access npm packages. This is required when solutions are being scaffolded using the SharePoint Framework Yeoman templates.
 
@@ -59,7 +59,7 @@ If Internet access is not available for the development machines, you can setup 
 
 > The [Team-based development on the SharePoint Framework](team-based-development-on-sharepoint-framework.md) guidance document includes different options for development environment setup including when you might need to support multiple SharePoint Framework versions. 
 
-## How to Determine Which SharePoint Framework Version was Used for a Solution
+## How to determine which SharePoint Framework version was used for a solution
 
 If you have existing SharePoint Framework solutions and you'd like to confirm which version of the SharePoint Framework was used for them, you'll need to check the following locations:
 
