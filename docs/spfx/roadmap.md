@@ -10,7 +10,8 @@ First release of the SharePoint Framework will contain support for client-side w
 - Similar feature capabilities as in SharePoint Online
 - Target is to provide common development platform across on-premises and the cloud
 - Leveraging modern toolchain and open source on on-premises environments
-- Targeting SharePoint 2016 version during calendar year 2017
+
+> SharePoint 2016 support for client-side web parts was shipped with SharePoint 2016 Feature Pack 2 during September 2017.
 
 ## General improvements
 

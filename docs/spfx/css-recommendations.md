@@ -1,6 +1,6 @@
 # Recommendations for working with CSS in SharePoint Framework solutions
 
-When building SharePoint Framework solutions, you can use CSS to define how your customization should look like and behave. This article describes how you can make the best use of the capabilities provided with the SharePoint Framework and build your CSS styles in a robust way.
+When building SharePoint Framework solutions, you can use CSS to define how your customizations should look and behave. This article describes how you can make the best use of the capabilities provided by the SharePoint Framework and build your CSS styles in a robust way.
 
 ## SharePoint Framework customizations are part of the page
 

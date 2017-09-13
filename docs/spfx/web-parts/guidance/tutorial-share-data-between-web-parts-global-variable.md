@@ -62,13 +62,20 @@ Remove the standard `description` property from the web part manifest. Open the 
 
 ```json
 {
-  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+  "$schema": "https://dev.office.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
 
   "id": "7a7e3aa9-5d8a-4155-936b-0b0e06e9ca11",
   "alias": "RecentDocumentsWebPart",
   "componentType": "WebPart",
-  "version": "0.0.1",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
   "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
 
   "preconfiguredEntries": [{
     "groupId": "7a7e3aa9-5d8a-4155-936b-0b0e06e9ca11",
@@ -372,13 +379,20 @@ Remove the standard `description` property from the web part manifest. Open the 
 
 ```json
 {
-  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
+  "$schema": "https://dev.office.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
 
   "id": "71a6f643-1ac1-47ee-a9f1-502ef52f26d4",
   "alias": "RecentDocumentWebPart",
   "componentType": "WebPart",
-  "version": "0.0.1",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
   "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
 
   "preconfiguredEntries": [{
     "groupId": "71a6f643-1ac1-47ee-a9f1-502ef52f26d4",
@@ -490,19 +504,19 @@ import {
   DocumentCard,
   DocumentCardPreview,
   DocumentCardTitle,
-  DocumentCardActivity,
-  ImageFit
-} from 'office-ui-fabric-react';
+  DocumentCardActivity
+} from 'office-ui-fabric-react/lib/DocumentCard';
+import { ImageFit } from 'office-ui-fabric-react/lib/Image';
 import { IDocument } from '../../IDocument';
 import styles from './RecentDocument.module.scss';
 import { IRecentDocumentProps } from './IRecentDocumentProps';
 
-export default class RecentDocument extends React.Component<IRecentDocumentProps, void> {
+export default class RecentDocument extends React.Component<IRecentDocumentProps, {}> {
   public render(): React.ReactElement<IRecentDocumentProps> {
     const document: IDocument = this.props.document;
 
     return (
-      <div className={styles.helloWorld}>
+      <div className={styles.recentDocument}>
         <DocumentCard onClickHref={document.url}>
           <DocumentCardPreview previewImages={[{
             name: document.title,
@@ -719,7 +733,7 @@ import { IDocument } from '../services/documentsService';
 instead of:
 
 ```ts
-import { IDocument } from '../services/documentsService/IDocument.ts';
+import { IDocument } from '../services/documentsService/IDocument';
 ```
 
 If at some point you decided that it's better to move the **IDocument.ts** file to a subfolder or merge a few files together, the only thing that you would change is the path in the barrel definition (**./src/services/documentsService/index.ts**). All elements in the project could still use the exact same relative path to the **documentsService** folder to reference the `IDocument` interface.

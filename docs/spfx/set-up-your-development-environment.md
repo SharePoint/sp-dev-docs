@@ -65,7 +65,7 @@ Enter the following command to install the Yeoman SharePoint generator:
 ```
 npm install -g @microsoft/generator-sharepoint 
 ```
->**Note:** Yeoman generator for SharePoint is targeted to get deployed globally with the initial General Availability (GA) version. There are some known issues if it's installed locally to the project, which are planned to be addressed post GA.
+>**Note:** Yeoman generator for SharePoint can be installed both globally and locally. In this case we are installing the Yeoman generator for SharePoint to be available globally. 
 
 
 ## Optional tools
