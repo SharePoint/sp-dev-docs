@@ -102,7 +102,7 @@ Within your enterprise administrators and developers jointly should create a *bl
 ### Citizen developers
 
 Citizen developers have for a long time used SharePoint to build business applications using a lot of different methods and techniques.
-SharePoint Framework will for certain scenarios, specifically JavaScript embeddings and Script Editor Web Parts solutions be one good way forward. This to make these solutions more standardized and maintainable over time. For citizen developers there might be a little bit of learning curve to adjust to this new structured way of building solutions, but will in the long run proove to be more stable, secure and maintainable.
+SharePoint Framework will for certain scenarios, specifically JavaScript embeddings and Script Editor Web Parts solutions be one good way forward. This to make these solutions more standardized and maintainable over time. For citizen developers there might be a little bit of learning curve to adjust to this new structured way of building solutions, but will in the long run prove to be more stable, secure and maintainable.
 
 Given that the, above mentioned, *Custom Script* control methods are in place, the citizen developers will not be allowed to add arbitrary JavaScript code or Script Editor Web Parts. This can potentially make your SharePoint environment more stable and maintainable, but at the same time you might prohibt some *innovation* in your company, and should make sure that your citizen developers aligns with your enterprise developers on using SharePoint Framework going forward.
 
