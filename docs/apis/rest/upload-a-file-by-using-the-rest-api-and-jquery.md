@@ -45,7 +45,7 @@ To use the examples in this article, you'll need the following:
 <a name="RunTheExamples"> </a>
 The following code example uses the SharePoint REST API and jQuery AJAX requests to upload a file to the  **Documents** library and to change properties of the list item that represents the file. The context for this example is a SharePoint-hosted add-in that uploads a file to a folder on the host web.
  
-You need to meet  [these requirements](upload-a-file-by-using-the-rest-api-and-jquery.md#RunTheExamples) to use this example.
+You need to meet  [these requirements](upload-a-file-by-using-the-rest-api-and-jquery#RunTheExamples) to use this example.
  
 ```javascript
 'use strict';
@@ -217,7 +217,7 @@ function getQueryStringParameter(paramToRetrieve) {
 <a name="UploadFile"> </a>
 The following code example uses the SharePoint REST API and jQuery AJAX requests to upload a file to the  **Documents** library and to change properties of the list item that represents the file. The context for this example is a solution that's running on the server. The code would be similar in a SharePoint-hosted add-in that uploads files to the add-in web.
  
-You need to meet  [these requirements](upload-a-file-by-using-the-rest-api-and-jquery.md#RunTheExamples) before you can run this example.
+You need to meet  [these requirements](upload-a-file-by-using-the-rest-api-and-jquery#RunTheExamples) before you can run this example.
  
 ```javascript
 'use strict';
@@ -359,8 +359,8 @@ function onError(error) {
 ## Additional resources
 <a name="bk_addresources"> </a>
 
--  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
--  [Working with folders and files with REST](working-with-folders-and-files-with-rest.md)
--  [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest.md)
+-  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service)
+-  [Working with folders and files with REST](working-with-folders-and-files-with-rest)
+-  [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest)
 -  [REST API reference and samples](http://msdn.microsoft.com/library/02128c70-9d27-4388-9374-a11bce68fdb8%28Office.15%29.aspx)
--  [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library.md)
+-  [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library)
