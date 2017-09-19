@@ -17,8 +17,6 @@ You can also follow these steps by watching the video on the [SharePoint PnP You
 
 ## Creating a new Web Part project
 
-Make sure you're using the latest version of . Run `yo` and follow the prompts to create a skeleton project,.
-
 Create a new project directory in your favorite location:
 
 ```
