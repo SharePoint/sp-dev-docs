@@ -1,10 +1,17 @@
+---
+title: Share Data Between Web Parts Using a Global Variable (Tutorial)
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Share Data Between Web Parts Using a Global Variable (Tutorial)
 
 > Note: This article has not yet been verified with the SPFx GA version, so you might have challenges making this work as described using the latest release.
 
 When building client-side web parts, loading data once and reusing it across different web parts will help improve the performance of your pages and decrease the load on your network. This tutorial illustrates step-by-step how to share data between web parts using a global variable.
 
-> **Note:** Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment).
+> **Note:** Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment.md).
 
 ## Prepare the Project
 
@@ -37,17 +44,17 @@ When prompted, use the following values:
 - **Shows recently modified documents** as your web part description.
 - **React** as the framework to use.
 
-![The SharePoint Framework Yeoman generator with the default choices](../../../../images/tutorial-sharingdata-yo-sharepoint-recent-documents.png)
+![The SharePoint Framework Yeoman generator with the default choices](../../../images/tutorial-sharingdata-yo-sharepoint-recent-documents.png)
 
 Once the scaffolding completes, open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor you prefer.
 
-![The SharePoint Framework project open in Visual Studio Code](../../../../images/tutorial-sharingdata-vscode.png)
+![The SharePoint Framework project open in Visual Studio Code](../../../images/tutorial-sharingdata-vscode.png)
 
 ## Show the Recently Modified Documents
 
 The Recent documents web part shows information about the most recently modified documents displayed as cards using the Office UI Fabric.
 
-![The Recent documents web part showing three small document cards representing the three most recently modified documents](../../../../images/tutorial-sharingdata-recent-documents.png)
+![The Recent documents web part showing three small document cards representing the three most recently modified documents](../../../images/tutorial-sharingdata-recent-documents.png)
 
 ### Remove the Standard _description_ Property
 
@@ -62,20 +69,13 @@ Remove the standard `description` property from the web part manifest. Open the 
 
 ```json
 {
-  "$schema": "https://dev.office.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
 
   "id": "7a7e3aa9-5d8a-4155-936b-0b0e06e9ca11",
   "alias": "RecentDocumentsWebPart",
   "componentType": "WebPart",
-
-  // The "*" signifies that the version should be taken from the package.json
-  "version": "*",
+  "version": "0.0.1",
   "manifestVersion": 2,
-
-  // If true, the component can only be installed on sites where Custom Script is allowed.
-  // Components that allow authors to embed arbitrary script code should set this to true.
-  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
-  "requiresCustomScript": false,
 
   "preconfiguredEntries": [{
     "groupId": "7a7e3aa9-5d8a-4155-936b-0b0e06e9ca11",
@@ -339,13 +339,13 @@ gulp serve
 
 In the SharePoint workbench add the Recent Documents web part to the canvas.
 
-![The recent documents web part showing three most recently modified documents as document cards](../../../../images/tutorial-sharingdata-recent-documents.png)
+![The recent documents web part showing three most recently modified documents as document cards](../../../images/tutorial-sharingdata-recent-documents.png)
 
 ## Show the Most Recently Modified Document
 
 The Recent document web part shows information about the most recently modified document.
 
-![The Recent document web part showing one big document card with information about the most recently modified document](../../../../images/tutorial-sharingdata-recent-document.png)
+![The Recent document web part showing one big document card with information about the most recently modified document](../../../images/tutorial-sharingdata-recent-document.png)
 
 ### Add the Second Web Part
 
@@ -364,7 +364,7 @@ When prompted, enter the following values:
 - **Recent document** as your web part name.
 - **Shows information about the most recently modified document** as your web part description.
 
-![The SharePoint Framework Yeoman generator with information to scaffold the second web part](../../../../images/tutorial-sharingdata-yo-sharepoint-recent-document.png)
+![The SharePoint Framework Yeoman generator with information to scaffold the second web part](../../../images/tutorial-sharingdata-yo-sharepoint-recent-document.png)
 
 ### Remove the Standard _description_ Property
 
@@ -379,20 +379,13 @@ Remove the standard `description` property from the web part manifest. Open the 
 
 ```json
 {
-  "$schema": "https://dev.office.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
 
   "id": "71a6f643-1ac1-47ee-a9f1-502ef52f26d4",
   "alias": "RecentDocumentWebPart",
   "componentType": "WebPart",
-
-  // The "*" signifies that the version should be taken from the package.json
-  "version": "*",
+  "version": "0.0.1",
   "manifestVersion": 2,
-
-  // If true, the component can only be installed on sites where Custom Script is allowed.
-  // Components that allow authors to embed arbitrary script code should set this to true.
-  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
-  "requiresCustomScript": false,
 
   "preconfiguredEntries": [{
     "groupId": "71a6f643-1ac1-47ee-a9f1-502ef52f26d4",
@@ -456,7 +449,7 @@ The Recent document web part displays information about the most recently modifi
 
 In Visual Studio Code, activate the Explorer pane, and from the **./src/webparts/recentDocuments** folder, move the **IDocument.ts** and **IDocumentActivity.ts** files one level up, to the **./src/webparts** folder.
 
-![Visual Studio Code Explorer pane with the IDocument.ts and IDocumentActivity.ts files highlighted](../../../../images/tutorial-sharingdata-interfaces.png)
+![Visual Studio Code Explorer pane with the IDocument.ts and IDocumentActivity.ts files highlighted](../../../images/tutorial-sharingdata-interfaces.png)
 
 #### Update References to the Moved Files
 
@@ -504,19 +497,19 @@ import {
   DocumentCard,
   DocumentCardPreview,
   DocumentCardTitle,
-  DocumentCardActivity
-} from 'office-ui-fabric-react/lib/DocumentCard';
-import { ImageFit } from 'office-ui-fabric-react/lib/Image';
+  DocumentCardActivity,
+  ImageFit
+} from 'office-ui-fabric-react';
 import { IDocument } from '../../IDocument';
 import styles from './RecentDocument.module.scss';
 import { IRecentDocumentProps } from './IRecentDocumentProps';
 
-export default class RecentDocument extends React.Component<IRecentDocumentProps, {}> {
+export default class RecentDocument extends React.Component<IRecentDocumentProps, void> {
   public render(): React.ReactElement<IRecentDocumentProps> {
     const document: IDocument = this.props.document;
 
     return (
-      <div className={styles.recentDocument}>
+      <div className={styles.helloWorld}>
         <DocumentCard onClickHref={document.url}>
           <DocumentCardPreview previewImages={[{
             name: document.title,
@@ -610,7 +603,7 @@ gulp serve
 
 In the SharePoint workbench add the Recent document web part to the canvas.
 
-![The recent document web part showing a document card with the information about the most recently modified document](../../../../images/tutorial-sharingdata-recent-document.png)
+![The recent document web part showing a document card with the information about the most recently modified document](../../../images/tutorial-sharingdata-recent-document.png)
 
 The current implementation is a typical example of two web parts being developed independently. If they were both placed on the same page and were loading data from SharePoint, they would execute two separate requests to retrieve similar information. If, at some point, you had to change where the information about the recently modified documents is loaded from, you would have to update both web parts. To improve the performance of loading the page and simplify maintaining the web part code, you can centralize the logic of retrieving the data and make the once retrieved data available to both web parts.
 
@@ -622,7 +615,7 @@ To centralize loading the information about recently modified documents, build a
 
 In the project folder create the **./src/services/documentsService** folder path. From the **./src/webparts** folder, move the **IDocument.ts** and **IDocumentActivity.ts** files to the **./src/services/documentsService** folder.
 
-![The IDocument.ts and IDocumentActivity.ts files highlighted in the Explorer pane in Visual Studio Code](../../../../images/tutorial-sharingdata-interfaces-documentsservice.png)
+![The IDocument.ts and IDocumentActivity.ts files highlighted in the Explorer pane in Visual Studio Code](../../../images/tutorial-sharingdata-interfaces-documentsservice.png)
 
 ### Build the Data Access Service
 
@@ -733,7 +726,7 @@ import { IDocument } from '../services/documentsService';
 instead of:
 
 ```ts
-import { IDocument } from '../services/documentsService/IDocument';
+import { IDocument } from '../services/documentsService/IDocument.ts';
 ```
 
 If at some point you decided that it's better to move the **IDocument.ts** file to a subfolder or merge a few files together, the only thing that you would change is the path in the barrel definition (**./src/services/documentsService/index.ts**). All elements in the project could still use the exact same relative path to the **documentsService** folder to reference the `IDocument` interface.
@@ -796,7 +789,7 @@ Verify that your changes work as expected, by running the following command from
 gulp serve
 ```
 
-![The Recent document and Recent documents web parts showing information about recently modified documents](../../../../images/tutorial-sharingdata-recent-document-recent-documents.png)
+![The Recent document and Recent documents web parts showing information about recently modified documents](../../../images/tutorial-sharingdata-recent-document-recent-documents.png)
 
 ### Load Web Part Data Using the Data Service
 
@@ -874,7 +867,7 @@ Confirm that both web parts are working correctly by running the following comma
 gulp serve
 ```
 
-![The Recent document and Recent documents web parts showing information about recently modified documents](../../../../images/tutorial-sharingdata-recent-document-recent-documents.png)
+![The Recent document and Recent documents web parts showing information about recently modified documents](../../../images/tutorial-sharingdata-recent-document-recent-documents.png)
 
 ### Share Data Between Web Parts
 
@@ -1003,12 +996,12 @@ Confirm that both web parts are working correctly by running the following comma
 gulp serve
 ```
 
-![The Recent document and Recent documents web parts showing information about recently modified documents](../../../../images/tutorial-sharingdata-recent-document-recent-documents.png)
+![The Recent document and Recent documents web parts showing information about recently modified documents](../../../images/tutorial-sharingdata-recent-document-recent-documents.png)
 
 If you were to add logging statements in the different parts of the `DocumentsService.ensureRecentDocuments` method, you would see that the data is loaded once and reused for the second web part!
 
-![Developer console showing different logging statements in Microsoft Edge](../../../../images/tutorial-sharingdata-console-log.png)
+![Developer console showing different logging statements in Microsoft Edge](../../../images/tutorial-sharingdata-console-log.png)
 
 ## See Also
 
-- [Share Data Between Client-Side Web Parts](./share-data-between-web-parts)
+- [Share Data Between Client-Side Web Parts](./share-data-between-web-parts.md)

@@ -1,3 +1,10 @@
+---
+title: Use Office UI Fabric React components in your SharePoint client-side web part
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Use Office UI Fabric React components in your SharePoint client-side web part
 
 > **Important:** You must upgrade existing projects to use @microsoft/sp-build-web@1.0.1 or later to use Office UI Fabric React. Easiest way to achieve this is to ensure that you have latest package by running `npm install -g @microsoft/generator-sharepoint` in your console before completing this tutorial. 
@@ -6,16 +13,18 @@ This article describes how to build a simple web part that uses the DocumentCard
 
 The following image shows a DocumentCard component created with Office UI Fabric React.
 
-![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../../images/fabric-components-doc-card-view-ex.png)
+![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../images/fabric-components-doc-card-view-ex.png)
 
 You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=1N6kNvLxyg4&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
 
 <a href="https://www.youtube.com/watch?v=1N6kNvLxyg4&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
-<img src="../../../../images/spfx-youtube-tutorial6.png" alt="Screenshot of the YouTube video player for this tutorial" />
+<img src="../../../images/spfx-youtube-tutorial6.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
 
 ## Creating a new Web Part project
+
+Make sure you're using the latest version of . Run `yo` and follow the prompts to create a skeleton project,.
 
 Create a new project directory in your favorite location:
 
@@ -230,4 +239,4 @@ gulp serve
 	
 In the toolbox, select your `DocumentCardExample` web part to add:
 	
-![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../../images/fabric-components-doc-card-view-ex.png)
+![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../images/fabric-components-doc-card-view-ex.png)

@@ -1,3 +1,10 @@
+---
+title: Get subscriptions
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Get subscriptions
 
 Gets one or more webhook subscriptions on a SharePoint list.

@@ -1,9 +1,10 @@
----
+﻿---
 title: How to Enable UDFs
+ms.date: 09/25/2017
 keywords: how to,howdoi,howto,UDF list
 f1_keywords:
 - how to,howdoi,howto,UDF list
-ms.prod: OFFICE365
+ms.prod: sharepoint
 ms.assetid: 8c1af2eb-bb22-45e1-82de-a2b4b53d7a26
 ---
 
@@ -84,7 +85,7 @@ To do the following steps, you need a computer that has Microsoft SharePoint Ser
 1. Open the Excel Services Add Trusted File Location page (if you are adding a new trusted location) or Excel Services Edit Trusted File Location page (if you are editing an existing trusted location). 
     
     > **Note:**
-      > For more information about trusting a location, see  [How to: Trust a Location](how-to-trust-a-location). 
+      > For more information about trusting a location, see  [How to: Trust a Location](how-to-trust-a-location.md). 
 2. Under **Allow User-Defined Functions**, select **User-defined functions allowed** to allow UDFs to be called from workbooks stored in this trusted location.
     
   
@@ -101,39 +102,39 @@ To do the following steps, you need a computer that has Microsoft SharePoint Ser
   
     
     
- [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs)
+ [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md)
   
     
     
- [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service)
+ [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service.md)
   
     
     
- [How to: Trust a Location](how-to-trust-a-location)
+ [How to: Trust a Location](how-to-trust-a-location.md)
 #### Concepts
 
 
   
     
     
- [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf)
+ [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md)
   
     
     
- [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs)
+ [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs.md)
   
     
     
- [Understanding Excel Services UDFs](understanding-excel-services-udfs)
+ [Understanding Excel Services UDFs](understanding-excel-services-udfs.md)
   
     
     
- [Excel Services Alerts](excel-services-alerts)
+ [Excel Services Alerts](excel-services-alerts.md)
   
     
     
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips)
+ [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
   
     
     
- [Excel Services Best Practices](excel-services-best-practices)
+ [Excel Services Best Practices](excel-services-best-practices.md)

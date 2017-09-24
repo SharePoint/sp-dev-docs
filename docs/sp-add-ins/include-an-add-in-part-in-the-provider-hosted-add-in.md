@@ -1,27 +1,33 @@
+---
+title: Include an add-in part in the provider-hosted add-in
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # Include an add-in part in the provider-hosted add-in
 Learn how to surface a remote web form in a SharePoint page in a provider-hosted SharePoint Add-in.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
-This is the sixth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with  [SharePoint Add-ins](sharepoint-add-ins) and the previous articles in this series:
+This is the sixth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with  [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series:
  
 
--  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins)
+-  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
     
  
--  [Give your provider-hosted add-in the SharePoint look-and-feel](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel)
+-  [Give your provider-hosted add-in the SharePoint look-and-feel](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md)
     
  
--  [Include a custom button in the provider-hosted add-in](include-a-custom-button-in-the-provider-hosted-add-in)
+-  [Include a custom button in the provider-hosted add-in](include-a-custom-button-in-the-provider-hosted-add-in.md)
     
  
--  [Get a quick overview of the SharePoint object model](get-a-quick-overview-of-the-sharepoint-object-model)
+-  [Get a quick overview of the SharePoint object model](get-a-quick-overview-of-the-sharepoint-object-model.md)
     
  
--  [Add SharePoint write operations to the provider-hosted add-in](add-sharepoint-write-operations-to-the-provider-hosted-add-in)
+-  [Add SharePoint write operations to the provider-hosted add-in](add-sharepoint-write-operations-to-the-provider-hosted-add-in.md)
     
  
 
@@ -92,7 +98,7 @@ In this article, you add a special kind of Web Part, called an add-in part to th
  
   4. On the Web Part insertion control that opens, select the  **Place Order** add-in part. The control will look similar to the following.
     
-  ![SharePoint's Web Part insertion control. The part called "Place Order" is highlighted. Its name and description appears in a box at the right.](../../images/aae61f89-2e9e-4808-8b0c-2439dad7c701.PNG)
+  ![SharePoint's Web Part insertion control. The part called "Place Order" is highlighted. Its name and description appears in a box at the right.](../images/aae61f89-2e9e-4808-8b0c-2439dad7c701.PNG)
  
 
  
@@ -109,7 +115,7 @@ In this article, you add a special kind of Web Part, called an add-in part to th
  
 3. The order form now appears on the page and it has the look-and-feel of the rest of the page. It should look like the following: 
     
-  ![The Place Order add-in part on the page with text boxes for Product, Supplier, and Quantity. There is also a "Place Order" button.](../../images/beae2e3c-c1f4-4334-8ab8-0c42252cb2a2.PNG)
+  ![The Place Order add-in part on the page with text boxes for Product, Supplier, and Quantity. There is also a "Place Order" button.](../images/beae2e3c-c1f4-4334-8ab8-0c42252cb2a2.PNG)
  
 
  
@@ -131,7 +137,7 @@ In this article, you add a special kind of Web Part, called an add-in part to th
 ## 
 <a name="Nextsteps"> </a>
 
- The add-in depends on two lists that you created manually. You don't want your users to have to do that. In the next article you begin the process of automatically creating these lists. The first major step is to create custom handlers for the event of installing an add-in: [Handle add-in events in the provider-hosted add-in](handle-add-in-events-in-the-provider-hosted-add-in)
+ The add-in depends on two lists that you created manually. You don't want your users to have to do that. In the next article you begin the process of automatically creating these lists. The first major step is to create custom handlers for the event of installing an add-in: [Handle add-in events in the provider-hosted add-in](handle-add-in-events-in-the-provider-hosted-add-in.md)
  
 
  

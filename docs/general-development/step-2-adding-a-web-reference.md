@@ -1,6 +1,7 @@
 ---
 title: Step 2 Adding a Web Reference
-ms.prod: OFFICE365
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: e9175863-ddb4-4750-847d-d53cb59b33cb
 ---
 
@@ -38,7 +39,7 @@ Your application must have a means to communicate with the Web service and to lo
 5. Visual Studio downloads the service description and generates a proxy class to interface between your application and Excel Web Services. 
     
   
-6. For more information, see  [Accessing the SOAP API](accessing-the-soap-api).
+6. For more information, see  [Accessing the SOAP API](accessing-the-soap-api.md).
     
   
 
@@ -51,23 +52,23 @@ Your application must have a means to communicate with the Web service and to lo
   
     
     
- [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking)
+ [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking.md)
 #### Other resources
 
 
   
     
     
- [Step 1: Creating the Web Service Client Project](step-1-creating-the-web-service-client-project)
+ [Step 1: Creating the Web Service Client Project](step-1-creating-the-web-service-client-project.md)
   
     
     
- [Step 3: Accessing the Web Service](step-3-accessing-the-web-service)
+ [Step 3: Accessing the Web Service](step-3-accessing-the-web-service.md)
   
     
     
- [Step 4: Building and Testing the Application](step-4-building-and-testing-the-application)
+ [Step 4: Building and Testing the Application](step-4-building-and-testing-the-application.md)
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)

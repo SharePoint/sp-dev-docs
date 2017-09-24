@@ -1,6 +1,7 @@
----
+﻿---
 title: How to Create Custom SharePoint Workflow Forms with Visual Studio 2012
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 26873259-330c-493f-b935-297a7a5a086d
 ---
 
@@ -47,7 +48,7 @@ How does this affect workflow forms? Recall that starting in SharePoint 2010 Mic
   
     
     
-To alleviate this limitation, Microsoft extended CSOM to include an API for interacting with the workflow engine. To connect a SharePoint farm to the Workflow Manager farm, you must install the Workflow Manager Client on the SharePoint servers. This component serves as a proxy that SharePoint uses to communicate with the Workflow Manager farm. The Workflow Services CSOM API is effectively the client-side component that you use to interact with the new workflow engine. For more information about SharePoint Workflow Services CSOM, see  [Working with the SharePoint Workflow Services Client Side Object Model](working-with-the-sharepoint-workflow-services-client-side-object-model).
+To alleviate this limitation, Microsoft extended CSOM to include an API for interacting with the workflow engine. To connect a SharePoint farm to the Workflow Manager farm, you must install the Workflow Manager Client on the SharePoint servers. This component serves as a proxy that SharePoint uses to communicate with the Workflow Manager farm. The Workflow Services CSOM API is effectively the client-side component that you use to interact with the new workflow engine. For more information about SharePoint Workflow Services CSOM, see  [Working with the SharePoint Workflow Services Client Side Object Model](working-with-the-sharepoint-workflow-services-client-side-object-model.md).
   
     
     
@@ -77,7 +78,7 @@ Prior the release of SharePoint, there were three types of custom workflow forms
   
     
     
-SharePoint improves how you work with workflow tasks in that you can create custom outcome buttons for specific scenarios. You can also customize the rendering and behavior of specific columns in task items using the new Client Side Rendering (CSR), which was introduced in SharePoint. Note that CSR uses JavaScript executed in the client. These topics are covered in the article  [Working with Tasks in SharePoint Workflows using Visual Studio 2012](working-with-tasks-in-sharepoint-workflows-using-visual-studio-2012). You can also get more information in the article  [Customize a list view in SharePoint Add-ins using client-side rendering](http://msdn.microsoft.com/library/8d5cabb2-70d0-46a0-bfe0-9e21f8d67d86%28Office.15%29.aspx).
+SharePoint improves how you work with workflow tasks in that you can create custom outcome buttons for specific scenarios. You can also customize the rendering and behavior of specific columns in task items using the new Client Side Rendering (CSR), which was introduced in SharePoint. Note that CSR uses JavaScript executed in the client. These topics are covered in the article  [Working with Tasks in SharePoint Workflows using Visual Studio 2012](working-with-tasks-in-sharepoint-workflows-using-visual-studio-2012.md). You can also get more information in the article  [Customize a list view in SharePoint Add-ins using client-side rendering](http://msdn.microsoft.com/library/8d5cabb2-70d0-46a0-bfe0-9e21f8d67d86%28Office.15%29.aspx).
   
     
     
@@ -145,7 +146,7 @@ In this walkthrough we demonstrate how to create a custom association form and u
 
   
 
-  ![SharePoint Customization Wizard](../../images/CreateSharePoint2013Workflows.png)
+  ![SharePoint Customization Wizard](../images/CreateSharePoint2013Workflows.png)
   
 
   
@@ -160,7 +161,7 @@ In this walkthrough we demonstrate how to create a custom association form and u
 
   
 
-  ![The Add New Item dialog box.](../../images/CreateSharePoint2013WorkflowsFig2.png)
+  ![The Add New Item dialog box.](../images/CreateSharePoint2013WorkflowsFig2.png)
   
 
   
@@ -278,7 +279,7 @@ With the form complete, the next step is to configure the workflow to use the va
 
   
 
-  ![Creating a string variable.](../../images/CreatSharePoint2013WorkflowsFig4.png)
+  ![Creating a string variable.](../images/CreatSharePoint2013WorkflowsFig4.png)
   
 
   
@@ -290,7 +291,7 @@ With the form complete, the next step is to configure the workflow to use the va
 
   
 
-  ![Set the Result property.](../../images/CreateSharePoint2013WorkflowsFig5.png)
+  ![Set the Result property.](../images/CreateSharePoint2013WorkflowsFig5.png)
   
 
   
@@ -326,7 +327,7 @@ With the form complete, the next step is to configure the workflow to use the va
 
   
 
-  ![Figure 5. Custom workflow association form](../../images/ngFormsFig5.png)
+  ![Figure 5. Custom workflow association form](../images/ngFormsFig5.png)
   
 
   
@@ -341,7 +342,7 @@ With the form complete, the next step is to configure the workflow to use the va
 
   
 
-  ![Figure 6. Association form: Status pane](../../images/ngFormsFig6.png)
+  ![Figure 6. Association form: Status pane](../images/ngFormsFig6.png)
   
 
   
@@ -383,7 +384,7 @@ This walkthrough demonstrates creating a custom association form and using it to
 
   
 
-  ![Figure 7. Solution Explorer view of the project](../../images/ngFormsFig7.png)
+  ![Figure 7. Solution Explorer view of the project](../images/ngFormsFig7.png)
   
 
   
@@ -403,7 +404,7 @@ The workflow initiation form prompts users for two pieces of information that it
 
   
 
-  ![Figure 8. Configuring initiation form arguments](../../images/ngFormsFig8.png)
+  ![Figure 8. Configuring initiation form arguments](../images/ngFormsFig8.png)
   
 
   
@@ -423,7 +424,7 @@ The workflow initiation form prompts users for two pieces of information that it
 
   
 
-  ![Figure 9. Configuring a WriteToHistory activity](../../images/ngFormsFig9.png)
+  ![Figure 9. Configuring a WriteToHistory activity](../images/ngFormsFig9.png)
   
 
   
@@ -477,7 +478,7 @@ When you added the new initiation form to the project, Visual Studio 2012 automa
   
     
     
-![Figure 10. Code comment to disregard](../../images/ngFormsFig10.png)
+![Figure 10. Code comment to disregard](../images/ngFormsFig10.png)
   
     
     
@@ -617,7 +618,7 @@ Because the workflow definition contains a reference to an initiation form, the 
   
     
     
-![Starting the workflow instance.](../../images/CreateSharePoint2013WorkflowsFig7.png)
+![Starting the workflow instance.](../images/CreateSharePoint2013WorkflowsFig7.png)
   
     
     
@@ -635,7 +636,7 @@ After starting the workflow, the page redirects the user back to the originating
   
     
     
-![The sample workflow.](../../images/CreateSharePoint2013WorkflowsFig8.png)
+![The sample workflow.](../images/CreateSharePoint2013WorkflowsFig8.png)
   
     
     
@@ -663,7 +664,7 @@ SharePoint introduced several improvements to workflows. This article detailed t
 -  [Workflow Association and Initiation Forms (SharePoint Foundation)](http://msdn.microsoft.com/en-us/library/office/ms481192%28v=office.14%29.aspx)
     
   
--  [Working with the SharePoint Workflow Services Client Side Object Model](working-with-the-sharepoint-workflow-services-client-side-object-model)
+-  [Working with the SharePoint Workflow Services Client Side Object Model](working-with-the-sharepoint-workflow-services-client-side-object-model.md)
     
   
 -  [Customize a list view in SharePoint Add-ins using client-side rendering](http://msdn.microsoft.com/library/8d5cabb2-70d0-46a0-bfe0-9e21f8d67d86%28Office.15%29.aspx)

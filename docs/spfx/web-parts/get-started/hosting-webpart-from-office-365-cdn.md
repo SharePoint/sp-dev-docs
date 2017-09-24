@@ -1,3 +1,10 @@
+---
+title: Hosting client-side web part from Office 365 CDN
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Hosting client-side web part from Office 365 CDN
 
 This article describes how to host your client-side web part from Office 365 CDN. Office 365 CDN provide you easy solution to host your assets directly from your own Office 365 tenant. It can be used for hosting any static assets, which are used in SharePoint Online. You can find more details around the Office 365 CDN capability from following blog post.
@@ -28,7 +35,7 @@ Open up a browser and move to a site collection where you'd like to host your CD
 
 Create a new document library on your site collection called **CDN** and add a folder called **helloworld** to it.
 
-![helloworld-webpart folder in CDN library](../../../../images/cdn-helloworld-folder.png) 
+![helloworld-webpart folder in CDN library](../../../images/cdn-helloworld-folder.png) 
 
 Move back to your PowerShell console and add a new CDN origin. Update the provided URL below to match your own environment. 
 ```
@@ -40,7 +47,7 @@ Get-SPOTenantCdnOrigins -CdnType Public
 ```
 Notice that your newly added origin is listed as a valid CDN origin. Final configuration of the origin will take a while (approximately 15 minutes), so we can continue by creating your test web part, which will be hosted from the origin, when the deployment is completed. 
 
-![List of public origins in tenant](../../../../images/cdn-public-origins.png)
+![List of public origins in tenant](../../../images/cdn-public-origins.png)
 
 > When origin is listed without the *(configuration pending)* text, it is ready to be used in your tenant. This is the indication of an on-going configuration between SharePoint Online and CDN system. 
 
@@ -72,7 +79,7 @@ When prompted:
 * Use **HelloWord** for your web part name and choose **Enter**.
 * Accept the default **HelloWorld description** and choose **Enter**.
 
-![Yeoman generator questions around the newly created web part](../../../../images/cdn-create-webpart-yo.png)
+![Yeoman generator questions around the newly created web part](../../../images/cdn-create-webpart-yo.png)
 
 At this point, Yeoman will scaffold the solution files and install the required dependencies. This might take a few minutes. Yeoman will scaffold the project to include your custom web part as well.
 	
@@ -88,7 +95,7 @@ Update the *write-manifests.json* file (under *config* folder) as follow to poin
 https://publiccdn.sharepointonline.com/<tenant host name>/sites/site/library/folder
 ```
 
-![Updated write manifest content with path to CDN endpoint](../../../../images/cdn-write-manifest-json.png)
+![Updated write manifest content with path to CDN endpoint](../../../images/cdn-write-manifest-json.png)
 
 Save your changes.
 
@@ -109,7 +116,7 @@ This command will create a **sphosted-webpart.sppkg** package on the **sharepoin
 
 Upload or drag & drop the newly created client-side solution package to the app catalog in your tenant. 
 
-![Installation popup from app catalog for the SPFx solution](../../../../images/cdn-upload-solution-to-app-catalog.png)
+![Installation popup from app catalog for the SPFx solution](../../../images/cdn-upload-solution-to-app-catalog.png)
 
 Choose **Deploy**
 
@@ -117,7 +124,7 @@ Move to the site collection where the **CDN** library was created earlier in thi
 
 Upload all files from **temp/deploy** folder to the **CDN/helloworld** folder in your site collection. 
 
-![helloworld folder in SPO tenant with the web part assets copied from the temp/deploy folder](../../../../images/cdn-web-part-files-in-folder.png)
+![helloworld folder in SPO tenant with the web part assets copied from the temp/deploy folder](../../../images/cdn-web-part-files-in-folder.png)
 
 At this point the web part is ready to be used on a page
 
@@ -125,15 +132,15 @@ Open a site where you want to test the web part and go the **Site contents** pag
 
 Choose **Add – App** from the toolbar and choose the **sphosted-webpart-client-side-solution** app to be installed on the site
 
-![Adding web part solution to site](../../../../images/cdn-add-webpart-to-site.png)
+![Adding web part solution to site](../../../images/cdn-add-webpart-to-site.png)
 
 After the solution has been installed, chose **Add a page** from the *gear* menu and pick **HelloWorld** from the modern page web part picker
 
-![HelloWorld web part visible in web part picker for modern page](../../../../images/cdn-web-part-picker.png)
+![HelloWorld web part visible in web part picker for modern page](../../../images/cdn-web-part-picker.png)
 
 Notice how the web part is rendered even though you are not running the node.js service locally. 
 
-![HelloWorld web part rendering on a modern page, which is in edit mode](../../../../images/cdn-web-part-rendering.png)
+![HelloWorld web part rendering on a modern page, which is in edit mode](../../../images/cdn-web-part-rendering.png)
 
 Save changes on the page with web part on it.
 
@@ -141,7 +148,7 @@ Press **F12** to open up developer tools.
 
 Extend **publiccdn.sharepointonline.com** under the source and notice how the **hello-world.bundle** file is loaded from the CDN endpoint which we defined earlier in this tutorial.
 
-![HelloWorld web part bundle coming from public CDN URL in the sources tab of Chrome developer tools](../../../../images/cdn-web-part-f12-source.png)
+![HelloWorld web part bundle coming from public CDN URL in the sources tab of Chrome developer tools](../../../images/cdn-web-part-f12-source.png)
 
 Now you have deployed your custom web part to SharePoint Online and it's being hosted from the Office 365 CDN. 
 

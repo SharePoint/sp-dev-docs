@@ -1,3 +1,10 @@
+﻿---
+title: Build your first ListView Command Set extension
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Build your first ListView Command Set extension
 
 >**Note:** The SharePoint Framework Extensions are currently in preview and are subject to change. SharePoint Framework Extensions are not currently supported for use in production environments.
@@ -7,7 +14,7 @@ Extensions are client-side components that run inside the context of a SharePoin
 You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=iW0LQQqAY0Y&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV). 
 
 <a href="https://www.youtube.com/watch?v=iW0LQQqAY0Y&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV">
-<img src="../../../../images/spfx-ext-youtube-tutorialcommand.png" alt="Screenshot of the YouTube video player for this tutorial" />
+<img src="../../../images/spfx-ext-youtube-tutorialcommand.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
 ## Create an extension project
@@ -42,15 +49,15 @@ The next set of prompts will ask for specific information about your extension:
 * Accept the default value of **HelloWorld** as your extension name and press **Enter**.
 * Accept the default value of **HelloWorld description** as your extension description and press **Enter**.
 
-![Yeoman SharePoint generator prompts to create an extension solution](../../../../images/ext-com-yeoman-prompts.png)
+![Yeoman SharePoint generator prompts to create an extension solution](../../../images/ext-com-yeoman-prompts.png)
 
 At this point, Yeoman will install the required dependencies and scaffold the solution files along with the **HelloWorld** extension. This might take a few minutes. 
 
 When the scaffold is complete, you should see the following message indicating a successful scaffold:
 
-![SharePoint client-side solution scaffolded successfully](../../../../images/ext-com-yeoman-complete.png)
+![SharePoint client-side solution scaffolded successfully](../../../images/ext-com-yeoman-complete.png)
 
-For information about troubleshooting any errors, see [Known issues](../../web-parts/basics/known-issues).
+For information about troubleshooting any errors, see [Known issues](../../known-issues-and-common-questions.md).
 
 Once the solution scaffolding is completed, type the following into the console to start Visual Studio Code.
 
@@ -62,7 +69,7 @@ code .
 
 Notice how the default solution structure is like the solution structure of client-side web parts. This is the basic SharePoint Framework solution structure, with similar configuration options across all solution types.
 
-![SharePoint Framework solution opened after initial scaffolding](../../../../images/ext-com-vscode-solution-structure.png)
+![SharePoint Framework solution opened after initial scaffolding](../../../images/ext-com-vscode-solution-structure.png)
 
 Open **HelloWorldCommandSet.manifest.json** in the **src\extensions\helloWorld** folder.
 
@@ -70,7 +77,7 @@ This file defines your extension type and a unique identifier **“id”** for y
 
 Notice also the actual command definitions in the manifest file. These are the actual buttons which will be exposed based on the registration target. In the default template, you'll find two different buttons: *"Command One"* and *"Command Two"*
 
-![ListView Command Set manifest json content](../../../../images/ext-com-vscode-manifest.png)
+![ListView Command Set manifest json content](../../../images/ext-com-vscode-manifest.png)
 
 > Currently, images are not properly referenced unless you are referring to them from absolute locations in a CDN within your manifest. This will be improved in future releases.
 
@@ -169,11 +176,11 @@ contoso.sharepoint.com/Lists/Orders/AllItems.aspx?loadSpfx=true&debugManifestsFi
 
 Accept the loading of Debug Manifests, by clicking **Load debug scripts** when prompted.
 
-![Accept loading debug scripts](../../../../images/ext-com-accept-debug-scripts.png)
+![Accept loading debug scripts](../../../images/ext-com-accept-debug-scripts.png)
 
 Notice two new buttons available in the toolbar with titles of *Command One* and *Command Two*.
 
-![Accept loading debug scripts](../../../../images/ext-com-default-customizer-output.png)
+![Accept loading debug scripts](../../../images/ext-com-default-customizer-output.png)
 
 ## Enhancing the ListView Command Set rendering
 We'll take advantage of a new Dialog API, which can be used to show modal dialogs easily from your code. 
@@ -223,11 +230,11 @@ Return to the list view and use the same query parameters used previously with t
 
 Accept the loading of Debug Manifests, by clicking **Load debug scripts** when prompted.
 
-![Accept loading debug scripts](../../../../images/ext-com-accept-debug-scripts.png)
+![Accept loading debug scripts](../../../images/ext-com-accept-debug-scripts.png)
 
 We still have the same buttons in the toolbar, but you'll notice they behave differently if you click them one-by-one. Now we are using the new dialog API, which can be easily used with your solutions even for complex scenarios. 
 
-![Dialog shown in the page](../../../../images/ext-com-dialog-output.png)
+![Dialog shown in the page](../../../images/ext-com-dialog-output.png)
 
 ## Adding a ListView Command Set to a solution package for deployment
 
@@ -240,7 +247,7 @@ We'll first need to create an **assets** folder where we will place all feature 
 
 Your solution structure should look similar to the following picture:
 
-![assets folder in solution structure](../../../../images/ext-com-assets-folder.png)
+![assets folder in solution structure](../../../images/ext-com-assets-folder.png)
 
 ### Add an elements.xml file for SharePoint definitions
 
@@ -347,7 +354,7 @@ Upload or drag and drop the `command-extension.sppkg` located in the **sharepoin
 
 Notice that we did not update the URLs for hosting the solution for this deployment, so the URL is still pointing to `https://localhost:4321`. Click the **Deploy** button.
 
-![Trust operation in app catalog upload](../../../../images/ext-com-sppkg-deploy-trust.png)
+![Trust operation in app catalog upload](../../../images/ext-com-sppkg-deploy-trust.png)
 
 Move back to your console and ensure that the solution is running. If it's not running, execute the following command in the solution folder:
 
@@ -361,16 +368,16 @@ Chose the gear icon on the top navigation bar on the right and choose **Add an a
 
 In the **Search** box, enter '**extension**' and press *Enter* to filter your apps.
 
-![installing the listview command set to a site](../../../../images/ext-com-install-solution-to-site.png)
+![installing the listview command set to a site](../../../images/ext-com-install-solution-to-site.png)
 
 Choose the **command-extension-client-side-solution** app to install the solution on the site. When the installation is completed, refresh the page by pressing **F5**.
 
 When the application has been successfully installed, Click **New** from the toolbar on the **Site Contents** page and choose **List**
 
-![Creating a new list](../../../../images/ext-com-create-new-list.png)
+![Creating a new list](../../../images/ext-com-create-new-list.png)
 
 Provide the name as **Sample** and click **Create**.
 
 Notice how **Command One** and **Command Two** are being rendered in the toolbar based on your ListView Command Set customizations. 
 
-![Addional buttons visible in the toolbar](../../../../images/ext-com-dialog-visible-deployment.png)
+![Addional buttons visible in the toolbar](../../../images/ext-com-dialog-visible-deployment.png)

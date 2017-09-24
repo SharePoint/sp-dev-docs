@@ -1,6 +1,7 @@
----
+﻿---
 title: Develop SharePoint workflows using Visual Studio
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 28f5d3b1-6fe8-4b1f-8c4e-b11105fe6f46
 ---
 
@@ -13,7 +14,7 @@ SharePoint supports two primary workflow development environments for authoring 
 
 
 > **Note:**
-> For guidance on setting up and configuring Microsoft SharePoint and the Workflow Manager Client 1.0 server, see  [Set up and configure SharePoint Workflow Manager](set-up-and-configure-sharepoint-workflow-manager). 
+> For guidance on setting up and configuring Microsoft SharePoint and the Workflow Manager Client 1.0 server, see  [Set up and configure SharePoint Workflow Manager](set-up-and-configure-sharepoint-workflow-manager.md). 
   
     
     
@@ -24,7 +25,7 @@ As with previous versions, Microsoft SharePoint provides two primary workflow de
     
 
 > **Note:**
-> As a complement to authoring workflows in SharePoint Designer, you can also use Microsoft Visio 2013 to structure your workflow logic by using Visio 2013 shapes, and then import your logic into SharePoint Designer 2013. For information about using Visio 2013 to author your workflow logic, see  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio). 
+> As a complement to authoring workflows in SharePoint Designer, you can also use Microsoft Visio 2013 to structure your workflow logic by using Visio 2013 shapes, and then import your logic into SharePoint Designer 2013. For information about using Visio 2013 to author your workflow logic, see  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md). 
   
     
     

@@ -1,9 +1,10 @@
 ---
 title: How to Access an External Data Source from a UDF
+ms.date: 09/25/2017
 keywords: how to,howdoi,howto,UDF
 f1_keywords:
 - how to,howdoi,howto,UDF
-ms.prod: OFFICE365
+ms.prod: sharepoint
 ms.assetid: 7a1876da-aeb5-4017-8eb6-3fed47912f70
 ---
 
@@ -160,43 +161,43 @@ End Namespace
   
     
     
- [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service)
+ [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service.md)
   
     
     
- [How to: Trust a Location](how-to-trust-a-location)
+ [How to: Trust a Location](how-to-trust-a-location.md)
   
     
     
- [How to: Catch Exceptions](how-to-catch-exceptions)
+ [How to: Catch Exceptions](how-to-catch-exceptions.md)
   
     
     
- [How to: Enable UDFs](how-to-enable-udfs)
+ [How to: Enable UDFs](how-to-enable-udfs.md)
 #### Concepts
 
 
   
     
     
- [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf)
+ [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md)
   
     
     
- [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs)
+ [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs.md)
   
     
     
- [Excel Services Architecture](excel-services-architecture)
+ [Excel Services Architecture](excel-services-architecture.md)
   
     
     
- [Excel Services Alerts](excel-services-alerts)
+ [Excel Services Alerts](excel-services-alerts.md)
   
     
     
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips)
+ [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
   
     
     
- [Excel Services Best Practices](excel-services-best-practices)
+ [Excel Services Best Practices](excel-services-best-practices.md)

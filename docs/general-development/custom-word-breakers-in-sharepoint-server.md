@@ -1,6 +1,7 @@
 ---
 title: Custom word breakers in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: d18b48d4-987c-4228-9932-30d5b30f86a2
 ---
 
@@ -279,7 +280,7 @@ Vietnamese
 <a name="SP15wordbreakers_addresources"> </a>
 
 
--  [Configure search in SharePoint](configure-search-in-sharepoint)
+-  [Configure search in SharePoint](configure-search-in-sharepoint.md)
     
   
 -  [Implementing a Word Breaker](http://msdn.microsoft.com/en-us/library/ms693186%28v=vs.85%29.aspx)

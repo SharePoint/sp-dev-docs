@@ -1,6 +1,7 @@
 ---
 title: Validation issues in Visio (SharePoint 2010 Workflow platform)
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 416c8269-3c4e-40f4-bc20-a625f07a4dac
 ---
 
@@ -44,7 +45,7 @@ Example:
   
     
     
-![A custom action cannot be added.](../../images/spd15-wf-error1.JPG)
+![A custom action cannot be added.](../images/spd15-wf-error1.JPG)
   
     
     
@@ -76,7 +77,7 @@ Example:
   
     
     
-![A custom condition cannot be added](../../images/spd15-wf-error2.JPG)
+![A custom condition cannot be added](../images/spd15-wf-error2.JPG)
   
     
     
@@ -108,7 +109,7 @@ Example:
   
     
     
-![A compound condition cannot be manually added](../../images/spd15-wf-error3.JPG)
+![A compound condition cannot be manually added](../images/spd15-wf-error3.JPG)
   
     
     
@@ -140,7 +141,7 @@ Example:
   
     
     
-![Duplicate connections exist between shapes](../../images/spd15-wf-error4.JPG)
+![Duplicate connections exist between shapes](../images/spd15-wf-error4.JPG)
   
     
     
@@ -172,7 +173,7 @@ Example:
   
     
     
-![Loop back to parent shape is not allowed](../../images/spd15-wf-error5.JPG)
+![Loop back to parent shape is not allowed](../images/spd15-wf-error5.JPG)
   
     
     
@@ -204,7 +205,7 @@ Example:
   
     
     
-![Parallel activities that are also sequential](../../images/spd15-wf-error6.JPG)
+![Parallel activities that are also sequential](../images/spd15-wf-error6.JPG)
   
     
     
@@ -224,7 +225,7 @@ Example:
   
     
     
-![Avoid pointing to an activity from multiple paths](../../images/spd15-wf-error7.JPG)
+![Avoid pointing to an activity from multiple paths](../images/spd15-wf-error7.JPG)
   
     
     
@@ -240,7 +241,7 @@ To avoid having connectors point to the same activity from multiple paths, try d
   
     
     
-![Parallel activities that are also sequential](../../images/spd15-wf-error8.JPG)
+![Parallel activities that are also sequential](../images/spd15-wf-error8.JPG)
   
     
     
@@ -252,7 +253,7 @@ Example:
   
     
     
-![Parallel activities that are also sequential](../../images/spd15-wf-error9.JPG)
+![Parallel activities that are also sequential](../images/spd15-wf-error9.JPG)
   
     
     
@@ -268,7 +269,7 @@ If dealing with parallel blocks in sequential steps (usually found in workflows 
   
     
     
-![Parallel activities that are also sequential](../../images/spd15-wf.JPG)
+![Parallel activities that are also sequential](../images/spd15-wf.JPG)
   
     
     
@@ -300,7 +301,7 @@ Example:
   
     
     
-![Condition shape does not have yes/no connections](../../images/spd15-wf-error11.JPG)
+![Condition shape does not have yes/no connections](../images/spd15-wf-error11.JPG)
   
     
     
@@ -332,7 +333,7 @@ Example:
   
     
     
-![Condition shape must have an outgoing connection](../../images/spd15-wf-error12.JPG)
+![Condition shape must have an outgoing connection](../images/spd15-wf-error12.JPG)
   
     
     
@@ -364,7 +365,7 @@ Example:
   
     
     
-![Ensure the correct connector is used](../../images/spd15-wf-error13.JPG)
+![Ensure the correct connector is used](../images/spd15-wf-error13.JPG)
   
     
     
@@ -396,7 +397,7 @@ Example:
   
     
     
-![Connector must be connected to two workflow shapes](../../images/spd15-wf-error14.JPG)
+![Connector must be connected to two workflow shapes](../images/spd15-wf-error14.JPG)
   
     
     
@@ -428,7 +429,7 @@ Example:
   
     
     
-![Diagram must only have one workflow and one start](../../images/spd15-wf-error15.JPG)
+![Diagram must only have one workflow and one start](../images/spd15-wf-error15.JPG)
   
     
     
@@ -460,7 +461,7 @@ Example:
   
     
     
-![The shape is not a SharePoint workflow shape](../../images/spd15-wf-error16.JPG)
+![The shape is not a SharePoint workflow shape](../images/spd15-wf-error16.JPG)
   
     
     
@@ -492,7 +493,7 @@ Example:
   
     
     
-![The start shape must not have incoming connections](../../images/spd15-wf-error17.JPG)
+![The start shape must not have incoming connections](../images/spd15-wf-error17.JPG)
   
     
     
@@ -524,7 +525,7 @@ Example:
   
     
     
-![Terminate shape must not have outgoing connections](../../images/spd15-wf-error18.JPG)
+![Terminate shape must not have outgoing connections](../images/spd15-wf-error18.JPG)
   
     
     
@@ -556,7 +557,7 @@ Example:
   
     
     
-![The workflow must have a start shape](../../images/spd15-wf-error19.JPG)
+![The workflow must have a start shape](../images/spd15-wf-error19.JPG)
   
     
     
@@ -588,7 +589,7 @@ Example:
   
     
     
-![Workflow shape is not connected to a terminate](../../images/spd15-wf-error20.JPG)
+![Workflow shape is not connected to a terminate](../images/spd15-wf-error20.JPG)
   
     
     
@@ -620,7 +621,7 @@ Example:
   
     
     
-![Workflow shape is not connected to the workflow](../../images/spd15-wf-error21.JPG)
+![Workflow shape is not connected to the workflow](../images/spd15-wf-error21.JPG)
   
     
     
@@ -657,13 +658,13 @@ Visio Professional 2013 can recognize a maximum of 10 levels of nested workflow 
 <a name="bk_addresources"> </a>
 
 
--  [What's new in workflows for SharePoint](what-s-new-in-workflows-for-sharepoint)
+-  [What's new in workflows for SharePoint](what-s-new-in-workflows-for-sharepoint.md)
     
   
--  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint)
+-  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint.md)
     
   
--  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio)
+-  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)
     
   
 

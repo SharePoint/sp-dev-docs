@@ -1,6 +1,7 @@
 ---
 title: Virtual directories in SharePoint solutions
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: c26c4160-31be-4358-89cf-082b8a1e6a6c
 ---
 
@@ -33,7 +34,7 @@ If you need to make your solution compatible with site collections of either mod
 <a name="bk_addresources"> </a>
 
 
--  [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint)
+-  [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint.md)
     
   
 -  [Planning Deployment of Farm Solutions for SharePoint](http://blogs.technet.com/b/mspfe/archive/2013/02/04/planning-deployment-of-farm-solutions-for-sharepoint.aspx)

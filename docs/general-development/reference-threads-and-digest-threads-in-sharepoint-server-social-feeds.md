@@ -1,6 +1,7 @@
----
+﻿---
 title: Reference threads and digest threads in SharePoint social feeds
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 58e68fb2-ba40-4861-912f-355e119a1c41
 ---
 
@@ -83,7 +84,7 @@ To optimize performance, when a thread contains more than two replies, the serve
 <a name="bk_addresources"> </a>
 
 
--  [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint)
+-  [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint.md)
     
   
 -  [SocialThread](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialThread.aspx) in the .NET client object model

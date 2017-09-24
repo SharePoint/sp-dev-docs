@@ -1,3 +1,10 @@
+﻿---
+title: Build your first Field Customizer extension
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Build your first Field Customizer extension
 
 >**Note:** The SharePoint Framework Extensions are currently in preview and are subject to change. SharePoint Framework Extensions are not currently supported for use in production environments.
@@ -7,7 +14,7 @@ Extensions are client-side components that run inside the context of a SharePoin
 You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=fijOzUmlXrY&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV). 
 
 <a href="https://www.youtube.com/watch?v=fijOzUmlXrY&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV">
-<img src="../../../../images/spfx-ext-youtube-tutorialfield.png" alt="Screenshot of the YouTube video player for this tutorial" />
+<img src="../../../images/spfx-ext-youtube-tutorialfield.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
 ## Create an extension project
@@ -43,15 +50,15 @@ The next set of prompts will ask for specific information about your extension:
 * Accept the default value of **HelloWorld description** as your extension description and press **Enter**.
 * Accept the default **No JavaScript Framework** as the framework selection and press **Enter** 
 
-![Yeoman SharePoint generator prompts to create an extension solution](../../../../images/ext-field-yeoman-prompts.png)
+![Yeoman SharePoint generator prompts to create an extension solution](../../../images/ext-field-yeoman-prompts.png)
 
 At this point, Yeoman will install the required dependencies and scaffold the solution files along with the **HelloWorld** extension. This might take a few minutes. 
 
 When the scaffold is complete, you should see the following message indicating a successful scaffold:
 
-![SharePoint client-side solution scaffolded successfully](../../../../images/ext-field-yeoman-complete.png)
+![SharePoint client-side solution scaffolded successfully](../../../images/ext-field-yeoman-complete.png)
 
-For information about troubleshooting any errors, see [Known issues](../basics/known-issues).
+For information about troubleshooting any errors, see [Known issues](../../known-issues-and-common-questions.md).
 
 Once the solution scaffolding is completed, type the following into the console to start Visual Studio Code.
 
@@ -63,13 +70,13 @@ code .
 
 Notice how the default solution structure is like the solution structure of client-side web parts. This is the basic SharePoint Framework solution structure with similar configuration options across all solution types.
 
-![SharePoint Framework solution opened after initial scaffolding](../../../../images/ext-field-vscode-solution-structure.png)
+![SharePoint Framework solution opened after initial scaffolding](../../../images/ext-field-vscode-solution-structure.png)
 
 Open **HelloWorldFieldCustomizer.manifest.json** at the **src\extensions\helloWorld** folder.
 
 This file defines your extension type and a unique identifier **“id”** for your extension. You’ll need this unique identifier later when debugging and deploying your extension to SharePoint.
 
-![Application customizer manifest json content](../../../../images/ext-field-vscode-manifest.png)
+![Application customizer manifest json content](../../../images/ext-field-vscode-manifest.png)
 
 ## Coding your Field Customizer 
 Open the **HelloWorldFieldCustomizer.ts** file in the **src\extensions\helloWorld** folder.
@@ -125,7 +132,7 @@ Notice that we used the `--nobrowser` option, since there's no value in launchin
 
 Once it compiles the code without errors, it will serve the resulting manifest from https://localhost:4321.
 
-![gulp serve](../../../../images/ext-field-gulp-serve.png)
+![gulp serve](../../../images/ext-field-gulp-serve.png)
 
 To test your extension, navigate to a site in your SharePoint Online tenant.
 
@@ -133,23 +140,23 @@ Move to the **Site Contents** page.
 
 Click **New** from the toolbar and choose **List**:
 
-![Creating a new list](../../../../images/ext-field-create-new-list.png)
+![Creating a new list](../../../images/ext-field-create-new-list.png)
 
 Create a new list named *Orders* and click **Create**:
 
-![Creating a new list with name of Orders](../../../../images/ext-field-create-new-list-order.png)
+![Creating a new list with name of Orders](../../../images/ext-field-create-new-list-order.png)
 
 Click the **plus** sign and choose **Number** to create a new Number field for the list:
 
-![Creating a new Number field](../../../../images/ext-field-new-number-field.png)
+![Creating a new Number field](../../../images/ext-field-new-number-field.png)
 
 Set name of the field to **Percent** and click **Save**:
 
-![Creating a new field called Percent](../../../../images/ext-field-new-number-field-percent.png)
+![Creating a new field called Percent](../../../images/ext-field-new-number-field-percent.png)
 
 Add a few items with different numbers in the percent field. We'll modify the rendering later in this tutorial, so the different numbers will be presented differently based on your custom implementation.
 
-![Creating items in the newly created list with different values in the Percent field](../../../../images/ext-field-create-items-to-list.png)
+![Creating items in the newly created list with different values in the Percent field](../../../images/ext-field-create-items-to-list.png)
 
 Since our Field Customizer is still hosted in localhost and is running, we can use specific debug query parameters to execute the code in the newly created list.
 
@@ -175,11 +182,11 @@ contoso.sharepoint.com/Lists/Orders/AllItems.aspx?loadSPFX=true&debugManifestsFi
 
 Accept the loading of Debug Manifests, by clicking **Load debug scripts** when prompted:
 
-![Accept loading debug scripts](../../../../images/ext-field-accept-debug-scripts.png)
+![Accept loading debug scripts](../../../images/ext-field-accept-debug-scripts.png)
 
 Notice how the Percent values are now presented with additional [ ] characters:
 
-![Accept loading debug scripts](../../../../images/ext-field-default-customizer-output.png)
+![Accept loading debug scripts](../../../images/ext-field-default-customizer-output.png)
 
 ## Enhancing the Field Customizer rendering
 Now that we have successfully tested the out of the box starting point of the Field Customizer, let's modify the logic slightly to have a more polished rendering of the field value. 
@@ -224,11 +231,11 @@ Move back to your previously created list and use the same query parameter as us
 
 Accept the loading of Debug Manifests, by clicking **Load debug scripts** when prompted.
 
-![Accept loading debug scripts](../../../../images/ext-field-accept-debug-scripts.png)
+![Accept loading debug scripts](../../../images/ext-field-accept-debug-scripts.png)
 
 Notice how we have changed the field rendering style completely. The field value is indicated using a graphical representation of the value.
 
-![Graphical Representation of Percent](../../../../images/ext-field-percent-field-graphic.png)
+![Graphical Representation of Percent](../../../images/ext-field-percent-field-graphic.png)
 
 ## Add the field definition to the solution package for deployment
 Now that we have tested our solution properly in debug mode, we can package this to be deployed automatically as part of the solution package deployed to the sites. There are few things to take care of here.
@@ -251,7 +258,7 @@ We'll first need to create an **assets** folder where we will place all feature 
 
 Your solution structure should look similar to the following picture:
 
-![assets folder in solution structure](../../../../images/ext-field-assets-folder.png)
+![assets folder in solution structure](../../../images/ext-field-assets-folder.png)
 
 ### Add an elements.xml file for SharePoint definitions
 Create a new file inside the **sharepoint\assets** folder named **elements.xml**
@@ -352,7 +359,7 @@ Upload or drag and drop the `field-extension.sppkg` located in the **sharepoint/
 
 Notice that we did not update the URLs for hosting the solution for this deployment, so the URL is still pointing to https://localhost:4321. Click the **Deploy** button.
 
-![Deploy Dialog](../../../../images/ext-field-sppkg-deploy-trust.png)
+![Deploy Dialog](../../../images/ext-field-sppkg-deploy-trust.png)
 
 Go to the site where you want to test SharePoint asset provisioning. This could be any site collection in the tenant where you deployed this solution package.
 
@@ -360,25 +367,25 @@ Choose the gears icon on the top navigation bar on the right and choose **Add an
 
 In the **Search** box, enter '**field**' and press *Enter* to filter your apps.
 
-![installing field customizer to site](../../../../images/ext-field-install-solution-to-site.png)
+![installing field customizer to site](../../../images/ext-field-install-solution-to-site.png)
 
 Choose the **field-extension-client-side-solution** app to install the solution on the site. Once the installation is completed, refresh the page by pressing **F5**.
 
 When the solution has been installed, Click **New** from the toolbar in **Site Contents** page and choose **List**:
 
-![Creating a new list](../../../../images/ext-field-create-new-list.png)
+![Creating a new list](../../../images/ext-field-create-new-list.png)
 
 Create a list named **Invoices**:
 
 When the new list has been created, move back to the **Site Contents** page and choose **Settings** from the context menu of the just created list:
 
-![List settings for the new list](../../../../images/ext-field-list-settings.png)
+![List settings for the new list](../../../images/ext-field-list-settings.png)
 
 Choose **Add from existing site columns** under the **Columns** section:
 
 Choose the **Percentage** field which was provisioned from the solution package, under the **SPFx Columns** group:
 
-![List settings for the new list](../../../../images/ext-field-add-field-to-list.png)
+![List settings for the new list](../../../images/ext-field-add-field-to-list.png)
 
 Click **OK**.
 
@@ -389,7 +396,7 @@ gulp serve --nobrowser
 ```
 Navigate to the newly created **Invoices** list and add a few new items to the list with different values in the Percentage column to see how the field is being rendered without the Debug query parameters.
 
-![Field Rendering without Debug Query Parameters](../../../../images/ext-field-render-field-without-debug.png)
+![Field Rendering without Debug Query Parameters](../../../images/ext-field-render-field-without-debug.png)
 
 In this case, we continued to host the JavaScript from the localhost, but you could just as well relocate the assets to any CDN and update the URL to enable the loading of the JavaScript assets outside of the localhost as well. 
 

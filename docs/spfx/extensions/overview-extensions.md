@@ -1,3 +1,10 @@
+---
+title: Overview of SharePoint Framework Extensions (preview)
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Overview of SharePoint Framework Extensions (preview)
 
 You can use SharePoint Framework Extensions to extend the SharePoint user experience. With SharePoint Frameword Extensions, you can customize more facets of the SharePoint experience, including notification areas, toolbars, and list data views. SharePoint Framework Extensions are available for testing in first release tenants and in Office 365 developer tenants as part of the release candidate release. 
@@ -15,7 +22,7 @@ SharePoint Framework Extensions enable you to extend the SharePoint user experie
 You can build extensions alongside common scripting frameworks, such as AngularJS and React, in addition to plain JavaScript projects. For example, you can use React along with components from Office UI Fabric React to create experiences based on the same components used in Office 365.
 
 ## Get started
-If you haven't installed the SharePoint Framework, follow the steps to [Set up your development environment](../set-up-your-development-environment).
+If you haven't installed the SharePoint Framework, follow the steps to [Set up your development environment](../set-up-your-development-environment.md).
 
 After you install the SharePoint Framework, run the following command to update your Yeoman templates with the latest version:
 
@@ -23,7 +30,7 @@ After you install the SharePoint Framework, run the following command to update 
 npm install -g @microsoft/generator-sharepoint
 ```
 
-Next, you can [Build your first SharePoint Framework Extension (Hello World part 1)](./get-started/build-a-hello-world-extension).
+Next, you can [Build your first SharePoint Framework Extension (Hello World part 1)](./get-started/build-a-hello-world-extension.md).
 
 ## Stay up to date
 To keep track of improvements to the SharePoint Framework, including updates to extensions, see the following:
@@ -42,5 +49,5 @@ We invite you to give us your feedback on the SharePoint Framework Extensions pr
 
 ## Additional resources
 
-- [Overview of the SharePoint Framework](../sharepoint-framework-overview)
-- [SharePoint Framework development tools and libraries](../tools-and-libraries)
+- [Overview of the SharePoint Framework](../sharepoint-framework-overview.md)
+- [SharePoint Framework development tools and libraries](../tools-and-libraries.md)

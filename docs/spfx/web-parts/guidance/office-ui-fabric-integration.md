@@ -1,3 +1,10 @@
+---
+title: Using Office UI Fabric Core and Fabric React in SPFx client-side web parts
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Using Office UI Fabric Core and Fabric React in SPFx client-side web parts
 
 #### **Important:** You must upgrade existing projects to use *@microsoft/sp-build-web@1.0.1* or later in order to use the Office UI Fabric React components. See the instructions at the end of this article for additional information.

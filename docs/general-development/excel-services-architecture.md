@@ -1,9 +1,10 @@
----
+﻿---
 title: Excel Services Architecture
+ms.date: 09/25/2017
 keywords: excel services design
 f1_keywords:
 - excel services design
-ms.prod: SHAREPOINT
+ms.prod: sharepoint
 ms.assetid: e0349b4a-2d52-46c4-a167-801e9c24eaca
 ---
 
@@ -51,7 +52,7 @@ The Excel Web Access, Excel Web Services, UDFs, JavaScript, the REST service, an
   
     
     
-![A Web front end and a back-end application server](../../images/ed480e23-e0e8-4896-93b1-98a94f50b9a0.gif)
+![A Web front end and a back-end application server](../images/ed480e23-e0e8-4896-93b1-98a94f50b9a0.gif)
   
     
     
@@ -103,14 +104,14 @@ Excel Web Services is the Excel Services component that provides programmatic ac
     
     
 
-For more information about Excel Web Services, see  [Excel Services Development Roadmap](excel-services-development-roadmap).
+For more information about Excel Web Services, see  [Excel Services Development Roadmap](excel-services-development-roadmap.md).
   
     
     
 
 ## User-Defined Functions (UDFs)
 
-Excel Services UDFs enable you to use formulas in a cell to call custom functions that are written in managed code and deployed to SharePoint Server 2010. For more information about UDFs in Excel Services, see  [Understanding Excel Services UDFs](understanding-excel-services-udfs).
+Excel Services UDFs enable you to use formulas in a cell to call custom functions that are written in managed code and deployed to SharePoint Server 2010. For more information about UDFs in Excel Services, see  [Understanding Excel Services UDFs](understanding-excel-services-udfs.md).
   
     
     
@@ -136,7 +137,7 @@ The discovery mechanisms built into the Excel Services REST API enables develope
   
     
     
-For more information about the REST API in Excel Services, see  [Excel Services REST API](excel-services-rest-api). 
+For more information about the REST API in Excel Services, see  [Excel Services REST API](excel-services-rest-api.md). 
   
     
     
@@ -168,19 +169,19 @@ Administrators can configure the load-balancing behavior.
   
     
     
- [Excel Services Overview](excel-services-overview)
+ [Excel Services Overview](excel-services-overview.md)
   
     
     
- [Excel Services Development Roadmap](excel-services-development-roadmap)
+ [Excel Services Development Roadmap](excel-services-development-roadmap.md)
   
     
     
- [Supported and Unsupported Features](supported-and-unsupported-features)
+ [Supported and Unsupported Features](supported-and-unsupported-features.md)
 #### Other resources
 
 
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)

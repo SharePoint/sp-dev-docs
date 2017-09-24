@@ -1,6 +1,7 @@
 ---
 title: Claims-based identity and concepts in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: d96c7cf4-2e48-4223-a3c0-42368d079b74
 ---
 
@@ -145,13 +146,13 @@ Suppose that you have a web farm that consists of a server that runs an ASP.NET 
 <a name="bk_addresources"> </a>
 
 
--  [Authentication, authorization, and security in SharePoint](authentication-authorization-and-security-in-sharepoint)
+-  [Authentication, authorization, and security in SharePoint](authentication-authorization-and-security-in-sharepoint.md)
     
   
--  [Sample delegation, federation, and authentication scenario in SharePoint](sample-delegation-federation-and-authentication-scenario-in-sharepoint)
+-  [Sample delegation, federation, and authentication scenario in SharePoint](sample-delegation-federation-and-authentication-scenario-in-sharepoint.md)
     
   
--  [Claims-based identity term definitions](claims-based-identity-term-definitions)
+-  [Claims-based identity term definitions](claims-based-identity-term-definitions.md)
     
   
 

@@ -1,6 +1,7 @@
 ---
 title: How to Set the Bing Maps key at the web and farm level in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 507ed9de-c349-44b5-b182-e838795dd862
 ---
 
@@ -10,7 +11,7 @@ ms.assetid: 507ed9de-c349-44b5-b182-e838795dd862
   
     
     
-![How to topic](../../images/mod_icon_howto.png)
+![How to topic](../images/mod_icon_howto.png)
   
     
     
@@ -145,10 +146,10 @@ To learn more about working with location and map functionality in SharePoint, s
     
     
 
--  [How to: Add a Geolocation column to a list programmatically in SharePoint](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint)
+-  [How to: Add a Geolocation column to a list programmatically in SharePoint](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint.md)
     
   
--  [How to: Extend the Geolocation field type using client-side rendering](how-to-extend-the-geolocation-field-type-using-client-side-rendering)
+-  [How to: Extend the Geolocation field type using client-side rendering](how-to-extend-the-geolocation-field-type-using-client-side-rendering.md)
     
   
 

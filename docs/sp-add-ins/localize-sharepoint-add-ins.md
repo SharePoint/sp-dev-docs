@@ -1,12 +1,19 @@
+﻿---
+title: Localize SharePoint Add-ins
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Localize SharePoint Add-ins
 Localize a SharePoint Add-in by using resource files, JavaScript resource files, and other techniques.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 
- **Note**  This topic assumes that you are familiar with basic creation of SharePoint Add-ins; and with SharePoint Features, the distinction between add-in webs and host webs,  [what kind of SharePoint components can be in an add-in](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013#TypesOfSPComponentsInApps), and the basics of localization with .resx files.
+ **Note**  This topic assumes that you are familiar with basic creation of SharePoint Add-ins; and with SharePoint Features, the distinction between add-in webs and host webs,  [what kind of SharePoint components can be in an add-in](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md#TypesOfSPComponentsInApps), and the basics of localization with .resx files.
  
 
 
@@ -39,7 +46,7 @@ Also, be aware of the following:
 ## Localize the add-in web components
 <a name="LocalizingAppWeb"> </a>
 
-An add-in web can contain specific kinds of SP components. For more information about the kinds of SharePoint components that can be in a SharePoint Add-in, see  [Types of SharePoint components that can be in a SharePoint Add-in](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013#TypesOfSPComponentsInApps). To localize components that are deployed to an add-in web, you add .resx files in modules in the same Feature that contains the add-in web component. You reference the resources in the markup of the component. How you do this is explained later in this article. However, custom site pages in a SharePoint Add-in use JavaScript string variable files instead of .resx files, as described later in this section.
+An add-in web can contain specific kinds of SP components. For more information about the kinds of SharePoint components that can be in a SharePoint Add-in, see  [Types of SharePoint components that can be in a SharePoint Add-in](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md#TypesOfSPComponentsInApps). To localize components that are deployed to an add-in web, you add .resx files in modules in the same Feature that contains the add-in web component. You reference the resources in the markup of the component. How you do this is explained later in this article. However, custom site pages in a SharePoint Add-in use JavaScript string variable files instead of .resx files, as described later in this section.
  
 
  
@@ -125,7 +132,7 @@ An add-in web can contain specific kinds of SP components. For more information 
 
  
 
-  ![A localized custom list](../../images/LocSPApp_AppwebList.png)
+  ![A localized custom list](../images/LocSPApp_AppwebList.png)
  
 
  
@@ -281,7 +288,7 @@ var step07 = "Review the localized <a href=\"../Lists/Orders\">Orders</a>" +
 
  
 
-  ![A SharePoint page using localized strings](../../images/LocSPApp_AppwebPage.png)
+  ![A SharePoint page using localized strings](../images/LocSPApp_AppwebPage.png)
  
 
  
@@ -382,7 +389,7 @@ protected override void InitializeCulture()
 ## Localize remote JavaScript and the SharePoint chrome control
 <a name="JSandChrome"> </a>
 
-If there are localizable string values in your web application's JavaScript, you can localize them using JavaScript resource files. An especially important example of localizable JavaScript is the  [SharePoint chrome control](use-the-client-chrome-control-in-sharepoint-add-ins), which can be used to give remote pages the appearance of SharePoint pages. We'll use the localization of the chrome control as an example in this section.
+If there are localizable string values in your web application's JavaScript, you can localize them using JavaScript resource files. An especially important example of localizable JavaScript is the  [SharePoint chrome control](use-the-client-chrome-control-in-sharepoint-add-ins.md), which can be used to give remote pages the appearance of SharePoint pages. We'll use the localization of the chrome control as an example in this section.
  
 
  
@@ -525,7 +532,7 @@ Test your add-in by deploying it to a SharePoint website that is provisioned in 
  
 
  
-![Create site collection page](../../images/LocSPApp_TestCreatesite.png)
+![Create site collection page](../images/LocSPApp_TestCreatesite.png)
  
 
 ### To test your add-in an on-premises website
@@ -556,7 +563,7 @@ Test your add-in by deploying it to a SharePoint website that is provisioned in 
 ## Additional resources
 <a name="SP15Localizeapp_addlresources"> </a>
 
--  [Develop SharePoint Add-ins](develop-sharepoint-add-ins)
+-  [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
 -  [Localization for Office Add-ins](http://msdn.microsoft.com/library/5a1a1cd7-b716-4597-b51f-fa70357d0833%28Office.15%29.aspx)
 -  [ASP.NET Globalization and Localization](http://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d.aspx)
 -  [SharePoint-Add-in-Localization](https://github.com/OfficeDev/SharePoint-Add-in-Localization)

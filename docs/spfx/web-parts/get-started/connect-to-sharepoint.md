@@ -1,11 +1,18 @@
+---
+title: Connect your client-side web part to SharePoint (Hello world part 2)
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Connect your client-side web part to SharePoint (Hello world part 2)
 
-Connect your web part to SharePoint to access functionality and data in SharePoint and provide a more integrated experience for end users. This article continues building the hello world web part built in the previous article [Build your first web part](./build-a-hello-world-web-part).
+Connect your web part to SharePoint to access functionality and data in SharePoint and provide a more integrated experience for end users. This article continues building the hello world web part built in the previous article [Build your first web part](./build-a-hello-world-web-part.md).
 
 You can also follow follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=9VMwjb2pbQ8&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
 
 <a href="https://www.youtube.com/watch?v=9VMwjb2pbQ8&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
-<img src="../../../../images/spfx-youtube-tutorial2.png" alt="Screenshot of the YouTube video player for this tutorial" />
+<img src="../../../images/spfx-youtube-tutorial2.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
 
@@ -72,7 +79,7 @@ In your browser, switch to the local SharePoint Workbench tab. If you have alrea
 
 You should see the following in the web part:
 
-![SharePoint page context in localhost](../../../../images/sp-mock-localhost-wp.png)
+![SharePoint page context in localhost](../../../images/sp-mock-localhost-wp.png)
 
 Now, navigate to the SharePoint Workbench hosted in SharePoint. The full URL is `https://your-sharepoint-site-url/_layouts/workbench.aspx`. Notice that in the SharePoint Online side, you'll need to refresh the page to see the changes.
 
@@ -80,7 +87,7 @@ Now, navigate to the SharePoint Workbench hosted in SharePoint. The full URL is 
 
 You should now see your SharePoint site title in the web part now that page context is available to the web part.
 
-![SharePoint page context in SharePoint site](../../../../images/sp-lists-spsiteurl-wp.png)
+![SharePoint page context in SharePoint site](../../../images/sp-lists-spsiteurl-wp.png)
 
 ## Define list model
 You need a list model to start working with SharePoint list data. To retrieve the lists, you need two models. 
@@ -347,16 +354,16 @@ Switch to your local workbench and add the HelloWorld web part.
 
 You should see the mock data returned.
 
-![Render lists data from localhost](../../../../images/sp-lists-render-localhost.png)
+![Render lists data from localhost](../../../images/sp-lists-render-localhost.png)
 
 Switch to the workbench hosted in SharePoint. Refresh the page and add the HelloWorld web part.
 
 You should see lists returned from the current site.
 
-![Render lists data from SharePoint](../../../../images/sp-lists-render-spsite.png)
+![Render lists data from SharePoint](../../../images/sp-lists-render-spsite.png)
 
 Now you can stop the server from running. Switch to the console and stop `gulp serve`. Choose `Ctrl+C` to terminate the gulp task.
 
 ## Next steps
 
-Congratulations on connecting your web part to SharePoint list data! You can continue building out your Hello World web part in the next topic [Deploy your web part to a SharePoint page](./serve-your-web-part-in-a-sharepoint-page). You will learn how to deploy and preview the Hello World web part in a classic SharePoint server-side page.
+Congratulations on connecting your web part to SharePoint list data! You can continue building out your Hello World web part in the next topic [Deploy your web part to a SharePoint page](./serve-your-web-part-in-a-sharepoint-page.md). You will learn how to deploy and preview the Hello World web part in a classic SharePoint server-side page.

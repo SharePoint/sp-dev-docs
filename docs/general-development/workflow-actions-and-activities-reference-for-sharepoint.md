@@ -1,6 +1,7 @@
 ---
 title: Workflow actions and activities reference for SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 88e09f75-480f-4a68-87a6-b496350345cc
 ---
 
@@ -14,7 +15,7 @@ Workflow activities represent the code-level objects that handle method calls to
   
     
     
-For a list of available activities, see  [Workflow activity classes in SharePoint](workflow-activity-classes-in-sharepoint).
+For a list of available activities, see  [Workflow activity classes in SharePoint](workflow-activity-classes-in-sharepoint.md).
   
     
     
@@ -22,7 +23,7 @@ On the other hand, workflow actions are wrapper objects that encapsulate these u
   
     
     
-For a list of available workflow actions, see  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform) and [Workflow actions available using the workflow interop bridge](workflow-actions-available-using-the-workflow-interop-bridge).
+For a list of available workflow actions, see  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md) and [Workflow actions available using the workflow interop bridge](workflow-actions-available-using-the-workflow-interop-bridge.md).
   
     
     
@@ -43,13 +44,13 @@ The WF 4.0 activity classes provide some useful features that you may not find i
 <a name="bkm_inthissection"> </a>
 
 
--  [Workflow activity classes in SharePoint](workflow-activity-classes-in-sharepoint)
+-  [Workflow activity classes in SharePoint](workflow-activity-classes-in-sharepoint.md)
     
   
--  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform)
+-  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
     
   
--  [Workflow actions available using the workflow interop bridge](workflow-actions-available-using-the-workflow-interop-bridge)
+-  [Workflow actions available using the workflow interop bridge](workflow-actions-available-using-the-workflow-interop-bridge.md)
     
   
 
@@ -57,13 +58,13 @@ The WF 4.0 activity classes provide some useful features that you may not find i
 <a name="bkm_addlres"> </a>
 
 
--  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio)
+-  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
     
   
--  [SharePoint workflow fundamentals](sharepoint-workflow-fundamentals)
+-  [SharePoint workflow fundamentals](sharepoint-workflow-fundamentals.md)
     
   
--  [Workflows in SharePoint](workflows-in-sharepoint)
+-  [Workflows in SharePoint](workflows-in-sharepoint.md)
     
   
 

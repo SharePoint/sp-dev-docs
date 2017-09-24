@@ -1,6 +1,7 @@
 ---
 title: What's changed in SharePoint Designer 2013
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: f1cd30c9-9a73-428d-9151-f1813b43b020
 ---
 
@@ -175,7 +176,7 @@ If you want to visually design or brand your site, and you want a WYSIWYG ("what
 <a name="WhatsChangedSharePointDesigner2013_AdditionalResources"> </a>
 
 
--  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform)
+-  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
     
   
 -  [Changes from SharePoint 2010 to SharePoint](http://technet.microsoft.com/en-us/library/ff607742%28v=office.15%29.aspx)

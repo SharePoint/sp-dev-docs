@@ -1,8 +1,15 @@
+﻿---
+title: Create a developer site on an existing Office 365 subscription
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Create a developer site on an existing Office 365 subscription
 An Office 365 Developer Site makes it easier to get set up and start creating, testing, and deploying your Office and SharePoint Add-ins more quickly. Many Office 365 Business, Enterprise, Education, and Government subscriptions include a site template you can use to create a Developer Site.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
  **Before you start**
@@ -54,7 +61,7 @@ An Office 365 Developer Site makes it easier to get set up and start creating, t
  
 5. In the  **SharePoint admin center**, on the **Site Collections** tab, click **New > Private Site Collection**.
     
-  ![SharePoint Admin Center new site collection option](../../images/SPAdminCenter_newSiteCollection.png)
+  ![SharePoint Admin Center new site collection option](../images/SPAdminCenter_newSiteCollection.png)
  
 
  
@@ -76,7 +83,7 @@ An Office 365 Developer Site makes it easier to get set up and start creating, t
     
     You'll see the new developer site URL in the  **Site Collections** list. When the site creation is finished, you can navigate to the URL to open your Developer Site.
     
-  ![New site collection provisioning](../../images/SPAdminCenter_newSiteCollection_provisioning.png)
+  ![New site collection provisioning](../images/SPAdminCenter_newSiteCollection_provisioning.png)
  
 
  
@@ -87,7 +94,7 @@ An Office 365 Developer Site makes it easier to get set up and start creating, t
 <a name="bk_addresources"> </a>
 
 
--  [SharePoint Add-ins](sharepoint-add-ins)
+-  [SharePoint Add-ins](sharepoint-add-ins.md)
     
  
 -  [Create or delete a site collection](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/create-or-delete-a-site-collection-HA102772354.aspx?CTT=1)

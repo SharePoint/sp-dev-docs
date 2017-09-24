@@ -1,6 +1,7 @@
----
+﻿---
 title: Step 4 Testing and Calling UDFs from Cells
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: d3e6aa72-2eb8-4b4b-a0eb-273486890d00
 ---
 
@@ -19,7 +20,7 @@ In this step, you will test the SampleUdf.dll assembly you created, deployed, an
 2. Save the workbook to a SharePoint document library that is a trusted location.
     
     > **Note:**
-      > It is assumed that you have already created a SharePoint document library and made it a trusted location. For information about how to trust a location, see the "Trusting a Location" section in  [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs). 
+      > It is assumed that you have already created a SharePoint document library and made it a trusted location. For information about how to trust a location, see the "Trusting a Location" section in  [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md). 
 3. Change parameters to recalculate the workbook.
     
   
@@ -116,27 +117,27 @@ In this step, you will test the SampleUdf.dll assembly you created, deployed, an
   
     
     
- [Step 1: Creating a Project and Adding a UDF Reference](step-1-creating-a-project-and-adding-a-udf-reference)
+ [Step 1: Creating a Project and Adding a UDF Reference](step-1-creating-a-project-and-adding-a-udf-reference.md)
   
     
     
- [Step 2: Creating a Managed-Code UDF](step-2-creating-a-managed-code-udf)
+ [Step 2: Creating a Managed-Code UDF](step-2-creating-a-managed-code-udf.md)
   
     
     
- [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs)
+ [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md)
   
     
     
- [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service)
+ [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service.md)
 #### Concepts
 
 
   
     
     
- [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf)
+ [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md)
   
     
     
- [Understanding Excel Services UDFs](understanding-excel-services-udfs)
+ [Understanding Excel Services UDFs](understanding-excel-services-udfs.md)

@@ -1,9 +1,15 @@
+---
+title: UX design for SharePoint Add-ins
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # UX design for SharePoint Add-ins
 Learn about the user experience (UX) options that you have when you build add-ins in SharePoint.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 As a developer, you should always give high priority to the user experience (UX) when you are creating add-ins. The model for SharePoint Add-ins offers many UX components and mechanisms that help you build a great user experience. The user experience in the add-in model is also flexible enough to let you use the techniques and platforms that best adapt to the needs of end users.
@@ -20,10 +26,10 @@ As the add-in developer, you have to know the architecture of your add-in. After
 - What can I use if I am creating a cloud-hosted add-in?
     
  
-- What can I use if I am creating a SharePoint-hosted add-in? For more information, see  [Choose patterns for developing and hosting your SharePoint Add-in](choose-patterns-for-developing-and-hosting-your-sharepoint-add-in).
+- What can I use if I am creating a SharePoint-hosted add-in? For more information, see  [Choose patterns for developing and hosting your SharePoint Add-in](choose-patterns-for-developing-and-hosting-your-sharepoint-add-in.md).
     
  
-- How can I connect my UX to the host web? For more information, see  [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013).
+- How can I connect my UX to the host web? For more information, see  [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md).
     
  
 The following diagram shows the main scenarios and options to consider when you are designing your add-in UX.
@@ -36,7 +42,7 @@ The following diagram shows the main scenarios and options to consider when you 
  
 
  
-![App UX main scenarios](../../images/AppUX_landscape.png)
+![App UX main scenarios](../images/AppUX_landscape.png)
  
 In choosing your design, you should fundamentally consider which parts of your add-in are hosted in SharePoint and which are not. You should also consider how your add-in interacts with the host web.
  
@@ -55,20 +61,20 @@ The following UX resources are available for cloud-hosted add-ins in SharePoint:
 
  
 
--  **Chrome control:** Thechrome control enables you to use the navigation header of a specific SharePoint site in your add-in without needing to register a server library or use a specific technology or tool. To use this functionality, you must register a SharePoint JavaScript library through standard <script> tags. You can provide a placeholder by using an HTML **div** element and further customize the control by using the available options. The control inherits its appearance from the specified SharePoint website. For more information, see [Use the client chrome control in SharePoint Add-ins](use-the-client-chrome-control-in-sharepoint-add-ins).
+-  **Chrome control:** Thechrome control enables you to use the navigation header of a specific SharePoint site in your add-in without needing to register a server library or use a specific technology or tool. To use this functionality, you must register a SharePoint JavaScript library through standard <script> tags. You can provide a placeholder by using an HTML **div** element and further customize the control by using the available options. The control inherits its appearance from the specified SharePoint website. For more information, see [Use the client chrome control in SharePoint Add-ins](use-the-client-chrome-control-in-sharepoint-add-ins.md).
     
     **Watch the video: SharePoint chrome control**
 
  
 
  
-![Videos](../../images/mod_icon_video.png)
+![Videos](../images/mod_icon_video.png)
  
 
  
 
  
--  **Stylesheet:** You can reference a SharePoint website's style sheet in your SharePoint Add-in and use it to style your webpages using the available classes. In addition, if the end users change the SharePoint website's theme, your add-in can adopt the new set of styles without modifying the reference in your add-in. For more information, see [Use a SharePoint website's style sheet in SharePoint Add-ins](use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins).
+-  **Stylesheet:** You can reference a SharePoint website's style sheet in your SharePoint Add-in and use it to style your webpages using the available classes. In addition, if the end users change the SharePoint website's theme, your add-in can adopt the new set of styles without modifying the reference in your add-in. For more information, see [Use a SharePoint website's style sheet in SharePoint Add-ins](use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins.md).
     
  
 Figure 2 shows the resources in the model for SharePoint Add-ins for cloud-hosted add-ins.
@@ -81,7 +87,7 @@ Figure 2 shows the resources in the model for SharePoint Add-ins for cloud-hoste
  
 
  
-![App UX resources for developer-hosted apps](../../images/AppUX_devhosted.png)
+![App UX resources for developer-hosted apps](../images/AppUX_devhosted.png)
  
 
  
@@ -120,10 +126,10 @@ The following UX resources are available to connect your add-in UX to the host w
 
  
 
--  **Custom actions**: You can use custom actions to connect the host web UX with your add-in. There are two types of custom actions:Ribbon orECB. A custom action can send parameters such as the list or item on which it was invoked to a remote page. For more information, see  [Create custom actions to deploy with SharePoint Add-ins](create-custom-actions-to-deploy-with-sharepoint-add-ins).
+-  **Custom actions**: You can use custom actions to connect the host web UX with your add-in. There are two types of custom actions:Ribbon orECB. A custom action can send parameters such as the list or item on which it was invoked to a remote page. For more information, see  [Create custom actions to deploy with SharePoint Add-ins](create-custom-actions-to-deploy-with-sharepoint-add-ins.md).
     
  
--  **Add-in parts:** You can include some of your add-in user experience in the host web by using add-in parts. The add-in part is available in the Web Part gallery in the host web when you deploy the add-in. Users can add the add-in part to a page by using the **Web Part Adder** control. For more information, see [Create add-in parts to install with your SharePoint Add-in](create-add-in-parts-to-install-with-your-sharepoint-add-in).
+-  **Add-in parts:** You can include some of your add-in user experience in the host web by using add-in parts. The add-in part is available in the Web Part gallery in the host web when you deploy the add-in. Users can add the add-in part to a page by using the **Web Part Adder** control. For more information, see [Create add-in parts to install with your SharePoint Add-in](create-add-in-parts-to-install-with-your-sharepoint-add-in.md).
     
  
 Figure 3 shows the resources in the model for SharePoint Add-ins to connect your add-in UX to the host web.
@@ -136,7 +142,7 @@ Figure 3 shows the resources in the model for SharePoint Add-ins to connect your
  
 
  
-![App UX resources for the host web](../../images/AppUX_hostweb.png)
+![App UX resources for the host web](../images/AppUX_hostweb.png)
  
 
  
@@ -151,37 +157,37 @@ To learn how to use the add-in UX options in SharePoint Add-ins, see the followi
 
  
 
--  [Design SharePoint Add-ins](design-sharepoint-add-ins)
+-  [Design SharePoint Add-ins](design-sharepoint-add-ins.md)
     
  
--  [SharePoint Add-ins](sharepoint-add-ins)
+-  [SharePoint Add-ins](sharepoint-add-ins.md)
     
  
--  [Three ways to think about design options for SharePoint Add-ins](three-ways-to-think-about-design-options-for-sharepoint-add-ins)
+-  [Three ways to think about design options for SharePoint Add-ins](three-ways-to-think-about-design-options-for-sharepoint-add-ins.md)
     
  
--  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscape)
+-  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md)
     
  
--  [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013)
+-  [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md)
     
  
--  [SharePoint Add-ins UX design guidelines](sharepoint-add-ins-ux-design-guidelines)
+-  [SharePoint Add-ins UX design guidelines](sharepoint-add-ins-ux-design-guidelines.md)
     
  
--  [Create UX components in SharePoint](create-ux-components-in-sharepoint-2013)
+-  [Create UX components in SharePoint](create-ux-components-in-sharepoint.md)
     
  
--  [Use a SharePoint website's style sheet in SharePoint Add-ins](use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins)
+-  [Use a SharePoint website's style sheet in SharePoint Add-ins](use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins.md)
     
  
--  [Use the client chrome control in SharePoint Add-ins](use-the-client-chrome-control-in-sharepoint-add-ins)
+-  [Use the client chrome control in SharePoint Add-ins](use-the-client-chrome-control-in-sharepoint-add-ins.md)
     
  
--  [Create add-in parts to install with your SharePoint Add-in](create-add-in-parts-to-install-with-your-sharepoint-add-in)
+-  [Create add-in parts to install with your SharePoint Add-in](create-add-in-parts-to-install-with-your-sharepoint-add-in.md)
     
  
--  [Create custom actions to deploy with SharePoint Add-ins](create-custom-actions-to-deploy-with-sharepoint-add-ins)
+-  [Create custom actions to deploy with SharePoint Add-ins](create-custom-actions-to-deploy-with-sharepoint-add-ins.md)
     
  
 

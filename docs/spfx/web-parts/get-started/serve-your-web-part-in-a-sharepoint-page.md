@@ -1,22 +1,29 @@
+---
+title: Deploy your client-side web part to a SharePoint page (Hello world part 3)
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Deploy your client-side web part to a SharePoint page (Hello world part 3)
 
-In this article you will learn how to deploy your client-side web part to SharePoint and see it working on a modern SharePoint server-side page. This article continues with the hello world web part built in the previous article [Connect your client-side web part to SharePoint](./connect-to-sharepoint).
+In this article you will learn how to deploy your client-side web part to SharePoint and see it working on a modern SharePoint server-side page. This article continues with the hello world web part built in the previous article [Connect your client-side web part to SharePoint](./connect-to-sharepoint.md).
 
 Be sure you have completed the procedures in the following articles before you start:
 
-* [Build your first SharePoint client-side web part](./build-a-hello-world-web-part)
-* [Connect your client-side web part to SharePoint](./connect-to-sharepoint)
+* [Build your first SharePoint client-side web part](./build-a-hello-world-web-part.md)
+* [Connect your client-side web part to SharePoint](./connect-to-sharepoint.md)
 
 You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=asmQIfgaKSw&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
 
 <a href="https://www.youtube.com/watch?v=asmQIfgaKSw&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
-<img src="../../../../images/spfx-youtube-tutorial3.png" alt="Screenshot of the YouTube video player for this tutorial" />
+<img src="../../../images/spfx-youtube-tutorial3.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
 
 ## Package the HelloWorld web part
 
-In the console window, go to the web part project directory created in [Build your first SharePoint client-side web part](./build-a-hello-world-web-part).
+In the console window, go to the web part project directory created in [Build your first SharePoint client-side web part](./build-a-hello-world-web-part.md).
 
 ```
 cd helloworld-webpart
@@ -77,11 +84,11 @@ Go to your site's App Catalog.
 
 Upload or drag and drop the **helloworld-webpart.sppkg** to the App Catalog.
 
-![Upload solution to app catalog](../../../../images/upload-solution-app-catalog.png) 
+![Upload solution to app catalog](../../../images/upload-solution-app-catalog.png) 
 
 This will deploy the client-side solution package. Since this is a full trust client-side solution, SharePoint will display a dialog and ask you to trust the client-side solution to deploy.
 
-![Trust client-side solution deployment](../../../../images/sp-app-deploy-trust.png) 
+![Trust client-side solution deployment](../../../images/sp-app-deploy-trust.png) 
 	
 Choose **Deploy**
 
@@ -93,11 +100,11 @@ Choose the gears icon on the top nav bar on the right and choose **Add an app** 
 
 In the **Search** box, enter **helloworld** and choose **Enter** to filter your apps.
 	
-![Add app to site](../../../../images/install-app-your-site.png) 
+![Add app to site](../../../images/install-app-your-site.png) 
 	
 Choose the **helloworld-webpart-client-side-solution** app to install the app on the site.
 	
-![Trust app](../../../../images/app-installed-your-site.png) 
+![Trust app](../../../images/app-installed-your-site.png) 
 
 The client-side solution and the web part are installed on your developer site.
 
@@ -139,19 +146,19 @@ The web part assets will be loaded from the local environment. In order to load 
 	
 You should see the **HelloWorld** web part you built in the previous article that retrieves lists from the current site. 
 
-![Hello World web part in modern page](../../../../images/sp-wp-modern-page.png)
+![Hello World web part in modern page](../../../images/sp-wp-modern-page.png)
 
 ## Edit web part properties
 
 Click the **Configure element** icon (pen) in the web part to open the property pane for the web part.
 
-![Edit web part](../../../../images/edit-webpart-modern-page.png)
+![Edit web part](../../../images/edit-webpart-modern-page.png)
 
 This is the same property pane you built and previewed in the workbench.
 	
 Edit the **Description** property and enter **Client-side web parts are awesome!**
 	
-![Hello World web part in modern page](../../../../images/sp-wp-modern-page-pp.png)
+![Hello World web part in modern page](../../../images/sp-wp-modern-page-pp.png)
 
 Notice that you still have the same behaviors such as a reactive pane where the web part is updated as you type.
 	
@@ -161,4 +168,4 @@ In the toolbar, choose **Save and close** to save the page.
 
 ## Next steps
 
-Congratulations! You have deployed a client-side web part to a modern SharePoint page. You can continue building out your Hello World web part in the next topic, [Deploy your client-side web part source to a CDN](./deploy-web-part-to-cdn), where you will learn how to deploy and load the web part assets from a CDN instead of localhost.
+Congratulations! You have deployed a client-side web part to a modern SharePoint page. You can continue building out your Hello World web part in the next topic, [Deploy your client-side web part source to a CDN](./deploy-web-part-to-cdn.md), where you will learn how to deploy and load the web part assets from a CDN instead of localhost.

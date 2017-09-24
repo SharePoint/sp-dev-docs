@@ -1,6 +1,7 @@
 ---
 title: Following people and content REST API reference for SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: c05755df-846d-4a39-941d-950d066cc6d4
 ---
 
@@ -15,7 +16,7 @@ You can use the SharePoint Representational State Transfer (REST) service to do 
 
 The endpoint URI for most Following tasks begins with the **SocialRestFollowingManager** resource ( `social.following`) and ends with the resource that performs the specific task. For example, you use the URI  `http://www.contoso.com/_api/social.following/follow` to make the current user start following people or content, and the URI `https://www.contoso.com/sites/devSite/_api/social.following/followed` to get the people or content the current user is following.
 > **Note:**
-> This article shows the endpoint URI and parameter components of HTTP requests. For examples of complete requests, see  [How to: Follow documents, sites, and tags by using the REST service in SharePoint](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2). 
+> This article shows the endpoint URI and parameter components of HTTP requests. For examples of complete requests, see  [How to: Follow documents, sites, and tags by using the REST service in SharePoint](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md). 
   
     
     
@@ -187,7 +188,7 @@ http://<siteCollection>/<site>/_api/social.following/follow(ActorType=3,TagGuid=
 }
 ```
 
-You need the tag GUID to start following a tag. You can't get the GUID by using the REST service, but you can use the .NET client object model or the JavaScript object model. See  [How to get a tag's GUID based on the tag's name by using the JavaScript object model](follow-content-in-sharepoint#bk_getTagGuid).
+You need the tag GUID to start following a tag. You can't get the GUID by using the REST service, but you can use the .NET client object model or the JavaScript object model. See  [How to get a tag's GUID based on the tag's name by using the JavaScript object model](follow-content-in-sharepoint.md#bk_getTagGuid).
   
     
     
@@ -363,7 +364,7 @@ http://<siteCollection>/<site>/_api/social.following/stopfollowing(ActorType=3,T
 }
 ```
 
-You need the tag GUID to start following a tag. You can't get the GUID by using the REST service, but you can use the .NET client object model or the JavaScript object model. See  [How to get a tag's GUID based on the tag's name by using the JavaScript object model](follow-content-in-sharepoint#bk_getTagGuid).
+You need the tag GUID to start following a tag. You can't get the GUID by using the REST service, but you can use the .NET client object model or the JavaScript object model. See  [How to get a tag's GUID based on the tag's name by using the JavaScript object model](follow-content-in-sharepoint.md#bk_getTagGuid).
   
     
     
@@ -525,7 +526,7 @@ http://<siteCollection>/<site>/_api/social.following/isfollowed(ActorType=3,TagG
 }
 ```
 
-You need the tag GUID to start following a tag. You can't get the GUID by using the REST service, but you can use the .NET client object model or the JavaScript object model. See  [How to get a tag's GUID based on the tag's name by using the JavaScript object model](follow-content-in-sharepoint#bk_getTagGuid).
+You need the tag GUID to start following a tag. You can't get the GUID by using the REST service, but you can use the .NET client object model or the JavaScript object model. See  [How to get a tag's GUID based on the tag's name by using the JavaScript object model](follow-content-in-sharepoint.md#bk_getTagGuid).
   
     
     
@@ -971,7 +972,7 @@ Gets users who the current user might want to follow.
     
 
 > **Note:**
-> People Suggestions functionality depends on users' following activities, search crawls, and search analytics. See  [How People Suggestions works on SharePoint Online](follow-people-in-sharepoint#bk_PeopleSuggestions). 
+> People Suggestions functionality depends on users' following activities, search crawls, and search analytics. See  [How People Suggestions works on SharePoint Online](follow-people-in-sharepoint.md#bk_PeopleSuggestions). 
   
     
     
@@ -1015,7 +1016,7 @@ Gets users who the current user might want to follow.
     
 
 > **Note:**
-> People Suggestions functionality depends on users' following activities, search crawls, and search analytics. See  [How People Suggestions works on SharePoint Online](follow-people-in-sharepoint#bk_PeopleSuggestions). 
+> People Suggestions functionality depends on users' following activities, search crawls, and search analytics. See  [How People Suggestions works on SharePoint Online](follow-people-in-sharepoint.md#bk_PeopleSuggestions). 
   
     
     
@@ -1565,15 +1566,15 @@ The following response represents a user who is following the specified user.
 <a name="bk_addresources"> </a>
 
 
--  [How to: Follow documents, sites, and tags by using the REST service in SharePoint](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2)
+-  [How to: Follow documents, sites, and tags by using the REST service in SharePoint](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md)
     
   
--  [Social feed REST API reference for SharePoint](social-feed-rest-api-reference-for-sharepoint)
+-  [Social feed REST API reference for SharePoint](social-feed-rest-api-reference-for-sharepoint.md)
     
   
 -  [SharePoint User Profiles JavaScript Reference (sp.userprofiles.js)](http://msdn.microsoft.com/library/80cf5436-6aa2-6f11-a782-66a04f6e2fb0%28Office.15%29.aspx)
     
   
--  [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint)
+-  [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint.md)
     
   

@@ -1,38 +1,45 @@
+---
+title: Handle list item events in the provider-hosted add-in
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Handle list item events in the provider-hosted add-in
 Learn how to handle list item events in a provider-hosted SharePoint Add-in.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
-This is the tenth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with  [SharePoint Add-ins](sharepoint-add-ins) and the previous articles in this series:
+This is the tenth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with  [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series:
  
 
--  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins)
+-  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
     
  
--  [Give your provider-hosted add-in the SharePoint look-and-feel](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel)
+-  [Give your provider-hosted add-in the SharePoint look-and-feel](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md)
     
  
--  [Include a custom button in the provider-hosted add-in](include-a-custom-button-in-the-provider-hosted-add-in)
+-  [Include a custom button in the provider-hosted add-in](include-a-custom-button-in-the-provider-hosted-add-in.md)
     
  
--  [Get a quick overview of the SharePoint object model](get-a-quick-overview-of-the-sharepoint-object-model)
+-  [Get a quick overview of the SharePoint object model](get-a-quick-overview-of-the-sharepoint-object-model.md)
     
  
--  [Add SharePoint write operations to the provider-hosted add-in](add-sharepoint-write-operations-to-the-provider-hosted-add-in)
+-  [Add SharePoint write operations to the provider-hosted add-in](add-sharepoint-write-operations-to-the-provider-hosted-add-in.md)
     
  
--  [Include an add-in part in the provider-hosted add-in](include-an-add-in-part-in-the-provider-hosted-add-in)
+-  [Include an add-in part in the provider-hosted add-in](include-an-add-in-part-in-the-provider-hosted-add-in.md)
     
  
--  [Handle add-in events in the provider-hosted add-in](handle-add-in-events-in-the-provider-hosted-add-in)
+-  [Handle add-in events in the provider-hosted add-in](handle-add-in-events-in-the-provider-hosted-add-in.md)
     
  
--  [Add first-run logic to the provider-hosted add-in](add-first-run-logic-to-the-provider-hosted-add-in)
+-  [Add first-run logic to the provider-hosted add-in](add-first-run-logic-to-the-provider-hosted-add-in.md)
     
  
--  [Programmatically deploy a custom button in the provider-hosted add-in](programmatically-deploy-a-custom-button-in-the-provider-hosted-add-in)
+-  [Programmatically deploy a custom button in the provider-hosted add-in](programmatically-deploy-a-custom-button-in-the-provider-hosted-add-in.md)
     
  
 
@@ -123,10 +130,10 @@ You saw in an earlier article in this series that when an order is placed, it is
 ## Create the list item event receiver
 
 
- **Note**  If you have been working through this series of articles, then you have already configured your development environment for debugging remote event receivers. If you have not done that, see  [Configure the solution for event receiver debugging](handle-add-in-events-in-the-provider-hosted-add-in#RERDebug) before you go any further in this topic.
+ **Note**  If you have been working through this series of articles, then you have already configured your development environment for debugging remote event receivers. If you have not done that, see  [Configure the solution for event receiver debugging](handle-add-in-events-in-the-provider-hosted-add-in.md#RERDebug) before you go any further in this topic.
  
 
-The Office Developer Tools for Visual Studio include a  **Remote Event Receiver** item that can be added to a SharePoint Add-in solution. However, at the time this article was written, this project item assumes that the list (with which the receiver will be registered) is on the add-in web, and consequently the tools create an add-in web and some SharePoint artifacts in it. But the receiver for the Chain Store add-in is going to be registered (in a later step) with the **Expected Shipments** list on the host web, so the add-in does not need an add-in web. (For a reminder of the distinction between add-in webs and host webs, see [SharePoint Add-ins](sharepoint-add-ins).)
+The Office Developer Tools for Visual Studio include a  **Remote Event Receiver** item that can be added to a SharePoint Add-in solution. However, at the time this article was written, this project item assumes that the list (with which the receiver will be registered) is on the add-in web, and consequently the tools create an add-in web and some SharePoint artifacts in it. But the receiver for the Chain Store add-in is going to be registered (in a later step) with the **Expected Shipments** list on the host web, so the add-in does not need an add-in web. (For a reminder of the distinction between add-in webs and host webs, see [SharePoint Add-ins](sharepoint-add-ins.md).)
  
 
  
@@ -564,7 +571,7 @@ expectedShipmentsList.EventReceivers.Add(receiver);
  
 3. Ensure that the  **Define DEBUG constant** box is checked. (It usually is by default.) The following screen shot shows the proper setting.
     
-  ![The Build sub-tab of the Properties tab in Visual Studio. The Configuration drop down is set to Debug. The check box for "Define DEBUG constant" is checked.](../../images/4f81174f-d875-4a9e-bff4-adea0f176f00.PNG)
+  ![The Build sub-tab of the Properties tab in Visual Studio. The Configuration drop down is set to Debug. The check box for "Define DEBUG constant" is checked.](../images/4f81174f-d875-4a9e-bff4-adea0f176f00.PNG)
  
 
  
@@ -572,7 +579,7 @@ expectedShipmentsList.EventReceivers.Add(receiver);
  
 4. Change the  **Configuration** drop down to **Release**, and then ensure that the  **Define DEBUG constant** box is ***not*** checked. (It usually is not by default.) The following screen shot shows the proper setting.
     
-  ![The Build sub-tab of the Properties tab. The Configuration drop down says Release. The check box for "Define DEBUG constant" is not checked.](../../images/7fd942de-a324-4f70-a750-f5304c993832.PNG)
+  ![The Build sub-tab of the Properties tab. The Configuration drop down says Release. The check box for "Define DEBUG constant" is not checked.](../images/7fd942de-a324-4f70-a750-f5304c993832.PNG)
  
 
  
@@ -612,7 +619,7 @@ The add-in event and list item event receivers are Windows Communication Service
  
 5. When the breakpoint is hit, hover the cursor over the  `debugEndpoint` variable. When the Visual Studio Data Tip appears, click the down arrow and select **Text Visualizer**.
     
-  ![A Visual Studio text visualizer with an Azure Service Bus URL in it.](../../images/494cf01e-3e17-4092-b239-9312ac4ab258.PNG)
+  ![A Visual Studio text visualizer with an Azure Service Bus URL in it.](../images/494cf01e-3e17-4092-b239-9312ac4ab258.PNG)
  
 
  
@@ -685,21 +692,21 @@ The add-in event and list item event receivers are Windows Communication Service
 ## 
 <a name="Nextsteps"> </a>
 
-See  [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options) to learn how to publish your add-in to a SharePoint site. Or go on to advanced work in SharePoint add-in development with these nodes of MSDN:
+See  [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options.md) to learn how to publish your add-in to a SharePoint site. Or go on to advanced work in SharePoint add-in development with these nodes of MSDN:
  
 
  
 
--  [Design SharePoint Add-ins](design-sharepoint-add-ins)
+-  [Design SharePoint Add-ins](design-sharepoint-add-ins.md)
     
  
--  [Develop SharePoint Add-ins](develop-sharepoint-add-ins)
+-  [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
     
  
--  [Publish SharePoint Add-ins](publish-sharepoint-add-ins)
+-  [Publish SharePoint Add-ins](publish-sharepoint-add-ins.md)
     
  
--  [Tools and environments for developing SharePoint Add-ins](tools-and-environments-for-developing-sharepoint-add-ins)
+-  [Tools and environments for developing SharePoint Add-ins](tools-and-environments-for-developing-sharepoint-add-ins.md)
     
  
 

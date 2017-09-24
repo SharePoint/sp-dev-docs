@@ -1,6 +1,7 @@
 ---
 title: Develop Access web apps
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 41131b27-d750-4d11-b3c7-c17ad4d666e2
 ---
 
@@ -30,7 +31,7 @@ Access 2013 uses Microsoft SharePoint to host the front end of your application 
   
     
     
-For more information about what's new in Access 2013 apps, see  [What's new in Access](what-s-new-in-access)
+For more information about what's new in Access 2013 apps, see  [What's new in Access](what-s-new-in-access.md)
   
     
     
@@ -51,7 +52,7 @@ For more information about how to develop Access 2013 apps, see  [How to: Create
 <a name="dk2_DevelopingAccess15WebApps_AdditionalResources"> </a>
 
 
--  [What's new in Access](what-s-new-in-access)
+-  [What's new in Access](what-s-new-in-access.md)
     
   
 -  [How to: Create and customize a web app in Access](http://msdn.microsoft.com/library/628745f4-82e9-4838-9726-6f3e506a654f%28Office.15%29.aspx)

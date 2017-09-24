@@ -1,3 +1,10 @@
+---
+title: Get started with SharePoint webhooks
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Get started with SharePoint webhooks
 
 This article describes how to build an application that adds and handles SharePoint webhook requests. You will learn how to use [Postman client](https://www.getpostman.com/) to construct and execute SharePoint webhook requests quickly while interacting with a simple ASP.NET Web API as the webhook receiver.
@@ -305,7 +312,7 @@ Postman makes it really simple to work with APIs. The first step is to configure
 * Select the option to **Add token to header**.
 * Double-click the **access\_token** variable to add the token to the header for the request.
 
-![Postman get new access token](../../../images/postman-get-new-access-token.png)
+![Postman get new access token](../../images/postman-get-new-access-token.png)
 
 ### Get Documents list Id
 
@@ -354,7 +361,7 @@ Now that you have the required information, construct the query and the request 
 	}
 	```
 
-	![postman add webhook body](../../../images/postman-add-webhook-body.png)
+	![postman add webhook body](../../images/postman-add-webhook-body.png)
 
 > Make sure the **expirationDateTime** is at most 6 months from today. 
 
@@ -471,4 +478,4 @@ With this data, you can construct the URL and use the [GetChanges](https://msdn.
 
 In this article, you used Postman client and a simple web API to subscribe and receive webhook notifications from SharePoint.
 
-Next, take a look at [SharePoint webhooks sample reference implementation](./webhooks-reference-implementation), which shows an end-to-end sample that uses Azure Storage Queues to process the information, get changes from SharePoint, and push those changes back into a SharePoint list.
+Next, take a look at [SharePoint webhooks sample reference implementation](./webhooks-reference-implementation.md), which shows an end-to-end sample that uses Azure Storage Queues to process the information, get changes from SharePoint, and push those changes back into a SharePoint list.

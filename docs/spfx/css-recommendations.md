@@ -1,6 +1,13 @@
+---
+title: Recommendations for working with CSS in SharePoint Framework solutions
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Recommendations for working with CSS in SharePoint Framework solutions
 
-When building SharePoint Framework solutions, you can use CSS to define how your customizations should look and behave. This article describes how you can make the best use of the capabilities provided by the SharePoint Framework and build your CSS styles in a robust way.
+When building SharePoint Framework solutions, you can use CSS to define how your customization should look like and behave. This article describes how you can make the best use of the capabilities provided with the SharePoint Framework and build your CSS styles in a robust way.
 
 ## SharePoint Framework customizations are part of the page
 
@@ -216,7 +223,7 @@ Because the selector begins with the unique class name, specific to your compone
 
 ## Integrate Office UI Fabric
 
-By making your customizations look and behave like the standard functionality of SharePoint and Office 365 you will make it easier for the end-users to work with them. Office UI Fabric offers you a set of controls and styles for use in your customizations to seamlessly integrate with the existing user experience. For more information on using Office UI Fabric in the SharePoint Framework, read the [Office UI Fabric integration guide](./web-parts/guidance/office-ui-fabric-integration.md).
+By making your customizations look and behave like the standard functionality of SharePoint and Office 365 you will make it easier for the end-users to work with them. Office UI Fabric offers you a set of controls and styles for use in your customizations to seamlessly integrate with the existing user experience. For more information on using Office UI Fabric in the SharePoint Framework, read the [Office UI Fabric integration guide](web-parts/guidance/office-ui-fabric-integration.md).
 
 ## Use theme colors
 

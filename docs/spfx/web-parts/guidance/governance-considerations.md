@@ -1,12 +1,19 @@
+---
+title: SharePoint Framework solutions governance considerations
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # SharePoint Framework solutions governance considerations
 
 Using the SharePoint Framework organizations can easily build solutions that make better use of capabilities available in SharePoint and Office 365. Additionally, by default, SharePoint Framework solutions work across the different devices even including the SharePoint mobile app. In order to benefit of SharePoint Framework solutions, organizations should have an actionable governance plan covering the most important considerations.
 
 ## Anatomy of SharePoint Framework solutions
 
-![Diagram illustrating the composition of SharePoint Framework solutions](../../../../images/guidance-governance-spfx-structure-schema.png)
+![Diagram illustrating the composition of SharePoint Framework solutions](../../../images/guidance-governance-spfx-structure-schema.png)
 
-SharePoint Framework solutions consist of two parts: code (often referred to as web part bundle), deployed to a URL, and an .sppkg file that contains web part manifest with a URL pointing to the location where the web part code is deployed. There are no particular restrictions with regards to where the code is deployed to, as long as users working with the web part can access the web part code. Organizations can choose for example to have their web parts deployed to the [Office 365 public CDN](https://dev.office.com/blogs/office-365-public-cdn-developer-preview-release), [Azure storage](../get-started/deploy-web-part-to-cdn) or a privately owned web server.
+SharePoint Framework solutions consist of two parts: code (often referred to as web part bundle), deployed to a URL, and an .sppkg file that contains web part manifest with a URL pointing to the location where the web part code is deployed. There are no particular restrictions with regards to where the code is deployed to, as long as users working with the web part can access the web part code. Organizations can choose for example to have their web parts deployed to the [Office 365 public CDN](https://dev.office.com/blogs/office-365-public-cdn-developer-preview-release), [Azure storage](../get-started/deploy-web-part-to-cdn.md) or a privately owned web server.
 
 ## Web part code hosting location
 

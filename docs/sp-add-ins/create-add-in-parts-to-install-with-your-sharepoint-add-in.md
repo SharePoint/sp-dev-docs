@@ -1,20 +1,27 @@
+---
+title: Create add-in parts to install with your SharePoint Add-in
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Create add-in parts to install with your SharePoint Add-in
 Learn how to create an add-in part in SharePoint that is available in the Web Part gallery of the host web when you install your SharePoint Add-in.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 With add-in parts, you can show your add-in user experience right in the SharePoint website pages. An add-in part displays the webpage (which is typically an interactive form or a dynamic display of data) that you specify by using an  **IFrame** (also referred to as a frame) in a page in the [host web](http://msdn.microsoft.com/library/fp179925.aspx). For more background about add-in parts, see the following articles:
  
 
--  [Accessing the add-in from the UI](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscape#AccessingApp)
+-  [Accessing the add-in from the UI](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md#AccessingApp)
     
  
--  [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins)
+-  [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md)
     
  
--  [Extending SharePoint UI in add-ins](sharepoint-add-ins-ux-design-guidelines#UXGuide_Extending)
+-  [Extending SharePoint UI in add-ins](sharepoint-add-ins-ux-design-guidelines.md#UXGuide_Extending)
     
  
 Figure 1 shows how the add-in part content is displayed in a SharePoint page.
@@ -25,7 +32,7 @@ Figure 1 shows how the add-in part content is displayed in a SharePoint page.
  
 
  
-![App part content displayed in a SharePoint page](../../images/AppParts_ConceptualArchitecture.png)
+![App part content displayed in a SharePoint page](../images/AppParts_ConceptualArchitecture.png)
  
 An add-in part is implemented with the  **ClientWebPart** class, and like all Web Parts it is a available in the Web Part gallery after a user installs the SharePoint Add-in that includes it. Your users can further customize the add-in part using the properties that you provide. (See figure 2 below for an example of configurable properties in an add-in part.)
  
@@ -46,7 +53,7 @@ To follow the steps in this example, you need the following:
 - Microsoft Office Developer Tools for Visual Studio
     
  
-- A SharePoint development environment. If you need help setting up a development environment, see  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins).
+- A SharePoint development environment. If you need help setting up a development environment, see  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md).
     
  
 
@@ -81,13 +88,13 @@ After completing the tasks, your add-in part should look similar to Figure 2 whe
  
 
  
-![Web part page hosting a basic app part](../../images/BasicAppPart_result.png)
+![Web part page hosting a basic app part](../images/BasicAppPart_result.png)
  
 
 ### Add a form for the add-in part content
 
 
-1. Create a provider-hosted SharePoint Add-in as described in  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins), but name the project TestAppPart.
+1. Create a provider-hosted SharePoint Add-in as described in  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md), but name the project TestAppPart.
     
  
 2. After the Visual Studio solution has been created, right-click the web application project (not the SharePoint Add-in project) and add a new Web Form by choosing  **Add** > **New Item** > **Web** > **Web Form**. Name the form AppPartContent.aspx.
@@ -208,7 +215,7 @@ After completing the tasks, your add-in part should look similar to Figure 2 whe
     
  **Custom Properties dialog for ClientWebPart**
 
-![The Client Web Part Custom Properties Dialog with 4 properties listed on the left, and each one having 5 attributes set on the right.](../../images/6a0f0a56-3184-490a-af19-b51b7545671d.PNG)
+![The Client Web Part Custom Properties Dialog with 4 properties listed on the left, and each one having 5 attributes set on the right.](../images/6a0f0a56-3184-490a-af19-b51b7545671d.PNG)
  
 
 8. Select the  **enumProp** property, select the **EnumItems** attribute, and then choose the callout ( **...**) button. 
@@ -246,7 +253,7 @@ The dialog should look like the following when you are finished:
 
  
 
-![The Client Web Part Enum Item Collection Editor with 3 items listed and each one having a Value attribute and a Web Display Name attribute.](../../images/1b21d968-bd58-4f30-a019-84df6181b81a.PNG)
+![The Client Web Part Enum Item Collection Editor with 3 items listed and each one having a Value attribute and a Web Display Name attribute.](../images/1b21d968-bd58-4f30-a019-84df6181b81a.PNG)
  
 
  
@@ -350,7 +357,7 @@ The dialog should look like the following when you are finished:
 
  
 
-  ![Basic app part in the web part gallery](../../images/BasicAppPart_gallery.jpg)
+  ![Basic app part in the web part gallery](../images/BasicAppPart_gallery.jpg)
  
 
  
@@ -402,7 +409,7 @@ In most cases, a webpage can't be displayed in a frame if it sends an  **X-Frame
  
 
  
-![App part that can't display its content in a frame](../../images/AppParts_IFrameError.png)
+![App part that can't display its content in a frame](../images/AppParts_IFrameError.png)
  
 Be aware that certain scenarios are susceptible to " [ClickJacking](http://blogs.msdn.com/b/ieinternals/archive/2010/03/30/combating-clickjacking-with-x-frame-options.aspx)" attacks when the webpages are displayed in a frame. Carefully evaluate your add-in part scenarios to make sure there is no risk of  **ClickJacking** attacks.
  
@@ -419,7 +426,7 @@ If your page hosted on the add-in web is not susceptible to ClickJacking attacks
 <WebPartPages:AllowFraming ID="AllowFraming1" runat="server" />
 ```
 
-You can download an  [add-in part code sample](http://code.msdn.microsoft.com/SharePoint-2013-Display-be8dac16) that shows how to use a SharePoint page as the content page.
+You can download an  [add-in part code sample](http://code.msdn.microsoft.com/SharePoint-Display-be8dac16) that shows how to use a SharePoint page as the content page.
  
 
  
@@ -430,7 +437,7 @@ If you're using dynamic content in your add-in part, the content might change it
  
 
  
-You can use POST messages from your content webpage to specify the frame's size. The following JavaScript example shows you how to send a POST message to resize the frame in which your add-in part is hosted. Typically, you would have this in a JavaScript method in a JavaScript file that you call from the page. For example, the page could have a control in which the user specifies the size of the add-in part window. The custom method is then called from  **onchange** handler of the control. For a full sample, see [Code sample: Resize add-in parts dynamically in SharePoint Add-ins](http://code.msdn.microsoft.com/officeapps/SharePoint-2013-Resize-app-594acc88). 
+You can use POST messages from your content webpage to specify the frame's size. The following JavaScript example shows you how to send a POST message to resize the frame in which your add-in part is hosted. Typically, you would have this in a JavaScript method in a JavaScript file that you call from the page. For example, the page could have a control in which the user specifies the size of the add-in part window. The custom method is then called from  **onchange** handler of the control. For a full sample, see [Code sample: Resize add-in parts dynamically in SharePoint Add-ins](http://code.msdn.microsoft.com/officeapps/SharePoint-Resize-app-594acc88). 
  
 
  
@@ -441,7 +448,7 @@ You can use POST messages from your content webpage to specify the frame's size.
 window.parent.postMessage("<message senderId={SenderId}>resize(120, 300)</message>", {hostweburl});
 ```
 
-In the example above, the  **senderId** value will be set on the query string of the page automatically by the add-in part code when the page is rendered. Your page would just need to read the **SenderId** value off of the query string and use it when requesting a resize. You can retrieve the host web URL from the query string by appending the **StandardTokens** or **HostUrl** tokens to the **Src** attribute in your add-in part definition. You can download the [Resize add-in parts code sample](http://code.msdn.microsoft.com/officeapps/SharePoint-2013-Resize-app-594acc88) to see an add-in part that dynamically resizes.
+In the example above, the  **senderId** value will be set on the query string of the page automatically by the add-in part code when the page is rendered. Your page would just need to read the **SenderId** value off of the query string and use it when requesting a resize. You can retrieve the host web URL from the query string by appending the **StandardTokens** or **HostUrl** tokens to the **Src** attribute in your add-in part definition. You can download the [Resize add-in parts code sample](http://code.msdn.microsoft.com/officeapps/SharePoint-Resize-app-594acc88) to see an add-in part that dynamically resizes.
  
 
  
@@ -452,7 +459,7 @@ Since your add-in part is hosted within a SharePoint page, you might want to mak
  
 
  
-You can see  [Use a SharePoint website's style sheet in SharePoint Add-ins](use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins) for an explanation on how to reference the **defaultcss.ashx** file in your SharePoint Add-ins. You can also download the [coffeemaker code sample](http://code.msdn.microsoft.com/office/SharePoint-2013-App-part-9d83703c) to see an add-in part that references the style sheet.
+You can see  [Use a SharePoint website's style sheet in SharePoint Add-ins](use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins.md) for an explanation on how to reference the **defaultcss.ashx** file in your SharePoint Add-ins. You can also download the [coffeemaker code sample](http://code.msdn.microsoft.com/office/SharePoint-App-part-9d83703c.md) to see an add-in part that references the style sheet.
  
 
  
@@ -483,33 +490,33 @@ The  **_editMode_** token lets your content page determine if the add-in part is
 <a name="SP15Createappparts_AddResources"> </a>
 
 
--  [Code sample: Display remote add-in content in the host web using an add-in part](http://code.msdn.microsoft.com/SharePoint-2013-Display-03c28286)
+-  [Code sample: Display remote add-in content in the host web using an add-in part](http://code.msdn.microsoft.com/SharePoint-Display-03c28286)
     
  
--  [Code sample: Display add-in web content in the host web using an add-in part](http://code.msdn.microsoft.com/SharePoint-2013-Display-be8dac16)
+-  [Code sample: Display add-in web content in the host web using an add-in part](http://code.msdn.microsoft.com/SharePoint-Display-be8dac16)
     
  
--  [Code sample: Resize add-in parts dynamically in SharePoint Add-ins](http://code.msdn.microsoft.com/officeapps/SharePoint-2013-Resize-app-594acc88)
+-  [Code sample: Resize add-in parts dynamically in SharePoint Add-ins](http://code.msdn.microsoft.com/officeapps/SharePoint-Resize-app-594acc88)
     
  
--  [Code sample: Display remote webpage content using the coffeemaker add-in part](http://code.msdn.microsoft.com/SharePoint-2013-App-part-9d83703c)
+-  [Code sample: Display remote webpage content using the coffeemaker add-in part](http://code.msdn.microsoft.com/SharePoint-App-part-9d83703c)
     
  
--  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins)
+-  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md)
     
  
--  [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins)
+-  [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md)
     
  
--  [SharePoint Add-ins UX design guidelines](sharepoint-add-ins-ux-design-guidelines)
+-  [SharePoint Add-ins UX design guidelines](sharepoint-add-ins-ux-design-guidelines.md)
     
  
--  [Create UX components in SharePoint](create-ux-components-in-sharepoint-2013)
+-  [Create UX components in SharePoint](create-ux-components-in-sharepoint.md)
     
  
--  [Three ways to think about design options for SharePoint Add-ins](three-ways-to-think-about-design-options-for-sharepoint-add-ins)
+-  [Three ways to think about design options for SharePoint Add-ins](three-ways-to-think-about-design-options-for-sharepoint-add-ins.md)
     
  
--  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscape)
+-  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md)
     
  

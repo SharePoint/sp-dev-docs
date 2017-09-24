@@ -1,6 +1,7 @@
----
+﻿---
 title: Excel Services in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: f7e13fcb-a86a-4a1e-af59-3bace98ce9d7
 ---
 
@@ -36,7 +37,7 @@ SharePoint Server 2010 introduced the REST API for use in getting and setting in
 
 
 > **Note:**
-> The Excel Interactive View feature has been disabled. For information about removing this feature from your website, see  [Removing Excel Interactive View from a webpage](removing-excel-interactive-view-from-a-webpage). 
+> The Excel Interactive View feature has been disabled. For information about removing this feature from your website, see  [Removing Excel Interactive View from a webpage](removing-excel-interactive-view-from-a-webpage.md). 
   
     
     
@@ -46,28 +47,28 @@ SharePoint Server 2010 introduced the REST API for use in getting and setting in
 <a name="xlsWhatsNew"> </a>
 
 
--  [Getting Started with Excel Services](getting-started-with-excel-services)
+-  [Getting Started with Excel Services](getting-started-with-excel-services.md)
     
   
--  [Excel Web Services](excel-web-services)
+-  [Excel Web Services](excel-web-services.md)
     
   
--  [Excel Services User-Defined Functions](excel-services-user-defined-functions)
+-  [Excel Services User-Defined Functions](excel-services-user-defined-functions.md)
     
   
--  [Excel Web Access](excel-web-access)
+-  [Excel Web Access](excel-web-access.md)
     
   
--  [Excel Services ECMAScript (JavaScript, JScript)](excel-services-ecmascript-javascript-jscript)
+-  [Excel Services ECMAScript (JavaScript, JScript)](excel-services-ecmascript-javascript-jscript.md)
     
   
--  [Excel Services REST API](excel-services-rest-api)
+-  [Excel Services REST API](excel-services-rest-api.md)
     
   
--  [General Guidelines](general-guidelines)
+-  [General Guidelines](general-guidelines.md)
     
   
--  [Removing Excel Interactive View from a webpage](removing-excel-interactive-view-from-a-webpage)
+-  [Removing Excel Interactive View from a webpage](removing-excel-interactive-view-from-a-webpage.md)
     
   
 
@@ -75,10 +76,10 @@ SharePoint Server 2010 introduced the REST API for use in getting and setting in
 <a name="bk_addresources"> </a>
 
 
--  [Add SharePoint capabilities](add-sharepoint-capabilities)
+-  [Add SharePoint capabilities](add-sharepoint-capabilities.md)
     
   
--  [Office 2013 and SharePoint application services](office-and-sharepoint-application-services)
+-  [Office 2013 and SharePoint application services](office-and-sharepoint-application-services.md)
     
   
 

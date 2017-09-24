@@ -1,42 +1,48 @@
+---
+title: Work with host web data from JavaScript in the add-in web
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # Work with host web data from JavaScript in the add-in web
 Use the SharePoint JavaScript object model (JSOM) to work with SharePoint data in the host web from JavaScript on pages in the add-in web.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
-This is the 11th in a series of articles about the basics of developing SharePoint-hosted SharePoint Add-ins. You should first be familiar with  [SharePoint Add-ins](sharepoint-add-ins) and the previous articles in this series:
+This is the 11th in a series of articles about the basics of developing SharePoint-hosted SharePoint Add-ins. You should first be familiar with  [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series:
  
 
--  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins)
+-  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md)
     
  
--  [Deploy and install a SharePoint-hosted SharePoint Add-in](deploy-and-install-a-sharepoint-hosted-sharepoint-add-in)
+-  [Deploy and install a SharePoint-hosted SharePoint Add-in](deploy-and-install-a-sharepoint-hosted-sharepoint-add-in.md)
     
  
--  [Add custom columns to a SharePoint-hostedSharePoint Add-in](add-custom-columns-to-a-sharepoint-hostedsharepoint-add-in)
+-  [Add custom columns to a SharePoint-hostedSharePoint Add-in](add-custom-columns-to-a-sharepoint-hostedsharepoint-add-in.md)
     
  
--  [Add a custom content type to a SharePoint-hostedSharePoint Add-in](add-a-custom-content-type-to-a-sharepoint-hostedsharepoint-add-in)
+-  [Add a custom content type to a SharePoint-hostedSharePoint Add-in](add-a-custom-content-type-to-a-sharepoint-hostedsharepoint-add-in.md)
     
  
--  [Add a Web Part to a page in a SharePoint-hosted SharePoint Add-in](add-a-web-part-to-a-page-in-a-sharepoint-hosted-sharepoint-add-in)
+-  [Add a Web Part to a page in a SharePoint-hosted SharePoint Add-in](add-a-web-part-to-a-page-in-a-sharepoint-hosted-sharepoint-add-in.md)
     
  
--  [Add a workflow to a SharePoint-hosted SharePoint Add-in](add-a-workflow-to-a-sharepoint-hosted-sharepoint-add-in)
+-  [Add a workflow to a SharePoint-hosted SharePoint Add-in](add-a-workflow-to-a-sharepoint-hosted-sharepoint-add-in.md)
     
  
--  [Add a custom page and style to a SharePoint-hosted SharePoint Add-in](add-a-custom-page-and-style-to-a-sharepoint-hosted-sharepoint-add-in)
+-  [Add a custom page and style to a SharePoint-hosted SharePoint Add-in](add-a-custom-page-and-style-to-a-sharepoint-hosted-sharepoint-add-in.md)
     
  
--  [Add custom client-side rendering to a SharePoint-hosted SharePoint Add-in](add-custom-client-side-rendering-to-a-sharepoint-hosted-sharepoint-add-in)
+-  [Add custom client-side rendering to a SharePoint-hosted SharePoint Add-in](add-custom-client-side-rendering-to-a-sharepoint-hosted-sharepoint-add-in.md)
     
  
--  [Create a custom ribbon button in the host web of a SharePoint Add-in](create-a-custom-ribbon-button-in-the-host-web-of-a-sharepoint-add-in)
+-  [Create a custom ribbon button in the host web of a SharePoint Add-in](create-a-custom-ribbon-button-in-the-host-web-of-a-sharepoint-add-in.md)
     
  
--  [Use the SharePoint JavaScript APIs to work with SharePoint data](use-the-sharepoint-javascript-apis-to-work-with-sharepoint-data)
+-  [Use the SharePoint JavaScript APIs to work with SharePoint data](use-the-sharepoint-javascript-apis-to-work-with-sharepoint-data.md)
     
  
 
@@ -80,7 +86,7 @@ Open the host web -- your developer test website -- and verify that there is a c
 
  
 
-  ![A calendar named Employee Orientation Schedule with an item on June 1st that says "Orient Cassie Hicks"](../../images/d2066862-41c1-424d-9bfb-b6c5342bcf2c.PNG)
+  ![A calendar named Employee Orientation Schedule with an item on June 1st that says "Orient Cassie Hicks"](../images/d2066862-41c1-424d-9bfb-b6c5342bcf2c.PNG)
  
 
  
@@ -352,7 +358,7 @@ Your add-in automatically has full control permission to its own add-in web, so 
 
  
 
-  ![The list of permissionson the Permissions tab in the Visual Studio add-in manifest designer with the Edit button visible in the cell of the Properties column.](../../images/03780b79-aca8-44d1-b0bf-d80833d08627.PNG)
+  ![The list of permissionson the Permissions tab in the Visual Studio add-in manifest designer with the Edit button visible in the cell of the Properties column.](../images/03780b79-aca8-44d1-b0bf-d80833d08627.PNG)
  
 
  
@@ -367,7 +373,7 @@ Your add-in automatically has full control permission to its own add-in web, so 
 
  
 
-  ![The Properties dialog for list permissions in Visual Studio with property name set to "Base List ID" and the Value set to "106".](../../images/13773fdd-5606-4f35-b8d5-14aad54cffb7.PNG)
+  ![The Properties dialog for list permissions in Visual Studio with property name set to "Base List ID" and the Value set to "106".](../images/13773fdd-5606-4f35-b8d5-14aad54cffb7.PNG)
  
 
     Choose  **OK**. The  **Permissions** tab should now look similar to the following:
@@ -377,7 +383,7 @@ Your add-in automatically has full control permission to its own add-in web, so 
 
  
 
-  ![The Permissions tab of the add-in manifest designer in Visual Studio showing that the add-in wants Manage permission to lists that have base type 106.](../../images/14d5a820-ab44-4d12-98de-6672884bf344.PNG)
+  ![The Permissions tab of the add-in manifest designer in Visual Studio showing that the add-in wants Manage permission to lists that have base type 106.](../images/14d5a820-ab44-4d12-98de-6672884bf344.PNG)
  
 
  
@@ -406,7 +412,7 @@ Your add-in automatically has full control permission to its own add-in web, so 
 
  
 
-  ![The SharePoint add-in consent prompt with brief description of the permissions the add-in needs and buttons to "Trust It" or "Cancel".](../../images/99209248-8927-4fc2-abfc-53d530376516.PNG)
+  ![The SharePoint add-in consent prompt with brief description of the permissions the add-in needs and buttons to "Trust It" or "Cancel".](../images/99209248-8927-4fc2-abfc-53d530376516.PNG)
  
 
  
@@ -418,7 +424,7 @@ Your add-in automatically has full control permission to its own add-in web, so 
 
  
 
-  ![The Employee Orientation home page with a new button added which has the label "Ensure Items are Scheduled".](../../images/72b78f79-78c0-41db-90d5-8f67e1c17b0e.PNG)
+  ![The Employee Orientation home page with a new button added which has the label "Ensure Items are Scheduled".](../images/72b78f79-78c0-41db-90d5-8f67e1c17b0e.PNG)
  
 
  
@@ -436,7 +442,7 @@ Your add-in automatically has full control permission to its own add-in web, so 
 
  
 
-  ![Employee Orientation calendar with new events added for the orientation of two employees on the 10th and 11th of the month](../../images/f8037509-4bf1-4c69-a673-ee6fe0f0dcb7.PNG)
+  ![Employee Orientation calendar with new events added for the orientation of two employees on the 10th and 11th of the month](../images/f8037509-4bf1-4c69-a673-ee6fe0f0dcb7.PNG)
  
 
  
@@ -460,16 +466,16 @@ Go on to advanced work in SharePoint-hosted SharePoint Add-ins:
 
  
 
--  [Design SharePoint Add-ins](design-sharepoint-add-ins)
+-  [Design SharePoint Add-ins](design-sharepoint-add-ins.md)
     
  
--  [Develop SharePoint Add-ins](develop-sharepoint-add-ins)
+-  [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
     
  
--  [Publish SharePoint Add-ins](publish-sharepoint-add-ins)
+-  [Publish SharePoint Add-ins](publish-sharepoint-add-ins.md)
     
  
--  [Tools and environments for developing SharePoint Add-ins](tools-and-environments-for-developing-sharepoint-add-ins)
+-  [Tools and environments for developing SharePoint Add-ins](tools-and-environments-for-developing-sharepoint-add-ins.md)
     
  
 

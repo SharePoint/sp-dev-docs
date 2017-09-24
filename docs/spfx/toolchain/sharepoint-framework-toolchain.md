@@ -1,3 +1,10 @@
+﻿---
+title: SharePoint Framework Toolchain
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # SharePoint Framework Toolchain
 
 The SharePoint Framework toolchain is the set of build tools, framework packages, and other items that manage building and deploying your client side projects. The toolchain helps you build client-side components like web parts. It also helps you test them in your local development environment with tools such as the SharePoint Workbench. And you can use the toolchain to package and deploy to SharePoint. The toolchain also provides you with a set of build commands that help you to complete key build tasks such as code compilation, packaging the client-side project into a SharePoint app package and more. 
@@ -66,7 +73,7 @@ Every time you create a new project using the generator, the generator installs 
 ### package.json
 The `package.json` file in the client-side project specifies the list of dependencies the project depends on. The list defines what dependencies to install. As described earlier, each dependency could contain several more. npm allows you to define both runtime and build dependencies for your package using the `dependencies` and `devDependencies` properties. The `devDependencies` property is used when you want to use that module in your code as in the case of building web parts.
 
-The following is the `package.json` of the [helloworld-webpart](web-parts/get-started/build-a-hello-world-web-part).
+The following is the `package.json` of the [helloworld-webpart](../web-parts/get-started/build-a-hello-world-web-part.md).
 
 ```json 
 {
@@ -98,7 +105,7 @@ The following is the `package.json` of the [helloworld-webpart](web-parts/get-st
 }
 ```
 
-While there are lot of packages installed for the project, they are required only for building the web part in the dev environment. With the help of these packages, you can depend on the modules, and build, compile, bundle, and package your web part for deployment. The final minified bundled version of the web part that you deploy to a CDN server or SharePoint does not include any of these packages. That said, you can also configure to include certain modules depending on your requirements. For more information, see [Add an external library to a web part](web-parts/basics/add-an-external-library).
+While there are lot of packages installed for the project, they are required only for building the web part in the dev environment. With the help of these packages, you can depend on the modules, and build, compile, bundle, and package your web part for deployment. The final minified bundled version of the web part that you deploy to a CDN server or SharePoint does not include any of these packages. That said, you can also configure to include certain modules depending on your requirements. For more information, see [Add an external library to a web part](../web-parts/basics/add-an-external-library.md).
 
 ### Working with source control systems
 As project dependencies increase, the number of packages to install also increases. You don’t want to check the `node_modules` folder, which contains all of the dependencies, into your source control system. You should exclude the `node_modules` from the list of files to ignore during check-ins. 
@@ -147,7 +154,7 @@ gulp serve
 
 The `serve` runs the different tasks and finally launches SharePoint Workbench.
 
-![gulp serve task](../../../images/toolchain-gulp-serve-task.png)
+![gulp serve task](../../images/toolchain-gulp-serve-task.png)
 
 ### Build targets
 In the previous screenshot, you can see that the task indicates your build target as follows:

@@ -1,3 +1,10 @@
+---
+title: SharePoint Framework roadmap
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # SharePoint Framework roadmap
 
 First release of the SharePoint Framework will contain support for client-side web parts. This is however just a start on the journey for providing additional modern customization capabilities to SharePoint. This article lists the different areas which are in our backlog for the future releases of SharePoint Framework.
@@ -10,8 +17,7 @@ First release of the SharePoint Framework will contain support for client-side w
 - Similar feature capabilities as in SharePoint Online
 - Target is to provide common development platform across on-premises and the cloud
 - Leveraging modern toolchain and open source on on-premises environments
-
-> SharePoint 2016 support for client-side web parts was shipped with SharePoint 2016 Feature Pack 2 during September 2017.
+- Targeting SharePoint 2016 version during calendar year 2017
 
 ## General improvements
 

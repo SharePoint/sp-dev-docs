@@ -1,26 +1,33 @@
+﻿---
+title: Add a workflow to a SharePoint-hosted SharePoint Add-in
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Add a workflow to a SharePoint-hosted SharePoint Add-in
 Learn how to include a workflow in a SharePoint Add-in.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
-This is the sixth in a series of articles about the basics of developing SharePoint-hosted SharePoint Add-ins. You should first be familiar with  [SharePoint Add-ins](sharepoint-add-ins) and the previous articles in this series:
+This is the sixth in a series of articles about the basics of developing SharePoint-hosted SharePoint Add-ins. You should first be familiar with  [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series:
  
 
--  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins)
+-  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md)
     
  
--  [Deploy and install a SharePoint-hosted SharePoint Add-in](deploy-and-install-a-sharepoint-hosted-sharepoint-add-in)
+-  [Deploy and install a SharePoint-hosted SharePoint Add-in](deploy-and-install-a-sharepoint-hosted-sharepoint-add-in.md)
     
  
--  [Add custom columns to a SharePoint-hostedSharePoint Add-in](add-custom-columns-to-a-sharepoint-hostedsharepoint-add-in)
+-  [Add custom columns to a SharePoint-hostedSharePoint Add-in](add-custom-columns-to-a-sharepoint-hostedsharepoint-add-in.md)
     
  
--  [Add a custom content type to a SharePoint-hostedSharePoint Add-in](add-a-custom-content-type-to-a-sharepoint-hostedsharepoint-add-in)
+-  [Add a custom content type to a SharePoint-hostedSharePoint Add-in](add-a-custom-content-type-to-a-sharepoint-hostedsharepoint-add-in.md)
     
  
--  [Add a Web Part to a page in a SharePoint-hosted SharePoint Add-in](add-a-web-part-to-a-page-in-a-sharepoint-hosted-sharepoint-add-in)
+-  [Add a Web Part to a page in a SharePoint-hosted SharePoint Add-in](add-a-web-part-to-a-page-in-a-sharepoint-hosted-sharepoint-add-in.md)
     
  
 
@@ -96,7 +103,7 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
 
  **Note**  At various times when designing your workflow, a blue diamond symbol with an exclamation mark in it, 
  
-![A small blue diamond shape with a white exclamation mark in it.](../../images/f7b82a70-80fe-4e7e-a0f5-5a78cd12b367.PNG)
+![A small blue diamond shape with a white exclamation mark in it.](../images/f7b82a70-80fe-4e7e-a0f5-5a78cd12b367.PNG)
  
 , will appear on one or more items in the workflow designer. These report temporary errors. (Hover the cursor over the symbol to see a brief message, or look in the Visual Studio  **Error List** for details.) These are side effects of the incompleteness of the workflow. They should all be gone when you have finished this procedure.
  
@@ -124,7 +131,7 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
 
  
 
-  ![The Properties pane of the Lookup List Item workflow activity with ItemID, ListID, and DisplayName properties set.](../../images/60f3302e-ca9c-45be-b785-0c9f636181da.PNG)
+  ![The Properties pane of the Lookup List Item workflow activity with ItemID, ListID, and DisplayName properties set.](../images/60f3302e-ca9c-45be-b785-0c9f636181da.PNG)
  
 
     Click anywhere outside the pane to save your changes and the designer surface should now look like this.
@@ -134,7 +141,7 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
 
  
 
-  ![The workflow designer with a Sequence box and, inside it, an activity named Lookup Current New Employee.](../../images/c8fbf801-e8e4-444a-9d2e-c14e29f537de.PNG)
+  ![The workflow designer with a Sequence box and, inside it, an activity named Lookup Current New Employee.](../images/c8fbf801-e8e4-444a-9d2e-c14e29f537de.PNG)
  
 
     
@@ -161,7 +168,7 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
 
  
 
-  ![The Properties dialog for the "Get Dynamic Values" activity, with the Entity Type set to items of the New Employees list, and variables named Title and OrientationStage assigned to the fields of the same names.](../../images/36a841e7-ce1b-444c-9bfe-7cdc56399ec1.PNG)
+  ![The Properties dialog for the "Get Dynamic Values" activity, with the Entity Type set to items of the New Employees list, and variables named Title and OrientationStage assigned to the fields of the same names.](../images/36a841e7-ce1b-444c-9bfe-7cdc56399ec1.PNG)
  
 
  
@@ -173,7 +180,7 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
 
  
 
-  ![The workflow designer with two activities: a List Item Lookup and a Get Dynamic Values.](../../images/cd8eb456-d883-491a-b171-38c1b9f64018.PNG)
+  ![The workflow designer with two activities: a List Item Lookup and a Get Dynamic Values.](../images/cd8eb456-d883-491a-b171-38c1b9f64018.PNG)
  
 
     
@@ -210,7 +217,7 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
 
  
 
-  ![The workflow designer with activities for "List Item Lookup", "Get Dynamic Value", and an "If Then Else" structure. Email is the activity in the Then part and Terminate Worklow is the activity in the Else.](../../images/c1230e3b-d149-413c-aa66-d258250a4512.PNG)
+  ![The workflow designer with activities for "List Item Lookup", "Get Dynamic Value", and an "If Then Else" structure. Email is the activity in the Then part and Terminate Worklow is the activity in the Else.](../images/c1230e3b-d149-413c-aa66-d258250a4512.PNG)
  
 
  
@@ -236,7 +243,7 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
 
  
 
-  ![The workflow Test Service Host window with a line saying that the workflow has started, followed by a line saying that it has completed. The GUID of the workflow instance is at the beginning of each line.](../../images/2422936d-7ef6-4c90-a03f-30053fbb9743.PNG)
+  ![The workflow Test Service Host window with a line saying that the workflow has started, followed by a line saying that it has completed. The GUID of the workflow instance is at the beginning of each line.](../images/2422936d-7ef6-4c90-a03f-30053fbb9743.PNG)
  
 
     
@@ -249,13 +256,11 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
 
  
 
-  ![An email message in Outlook from the workflow with subject "Cassie Hicks is ready for HR paperwork" and body "Cassie Hicks is waiting in the lobby to fill out benefits and employement forms."](../../images/7b1d8f47-9c34-441e-af6a-3af4a8c65533.PNG)
+  ![An email message in Outlook from the workflow with subject "Cassie Hicks is ready for HR paperwork" and body "Cassie Hicks is waiting in the lobby to fill out benefits and employement forms."](../images/7b1d8f47-9c34-441e-af6a-3af4a8c65533.PNG)
  
 
-    
-    
-    
-     **Tip**  If the workflow begins but never completes, and the email is not sent, try ending the debugging session and trying F5 again a few times before you conclude there is something wrong in your code. Sometimes the problem is in SharePoint Online. If you are still having problems, try adding a content type called  **ListFieldsContentType**, if there isn't one already, to the  **ContentTypes** section of the schema.xml file. The following is an example of the markup. `<ContentType ID="0x0100781dd48170b94fdc9706313c82b3d04c" Name="ListFieldsContentType" Hidden="TRUE">`
+> [!Tip]
+> If the workflow begins but never completes, and the email is not sent, try ending the debugging session and trying F5 again a few times before you conclude there is something wrong in your code. Sometimes the problem is in SharePoint Online. If you are still having problems, try adding a content type called  **ListFieldsContentType**, if there isn't one already, to the  **ContentTypes** section of the schema.xml file. The following is an example of the markup. `<ContentType ID="0x0100781dd48170b94fdc9706313c82b3d04c" Name="ListFieldsContentType" Hidden="TRUE">`
  
  `</ContentType>`Then copy the whole of the  **FieldRefs** section of the **NewEmployee** content type into this new content type.Save the project, retract, and try F5 again.
 4. To end the debugging session, close the browser window or stop debugging in Visual Studio. Each time that you press F5, Visual Studio will retract the previous version of the add-in and install the latest one.
@@ -268,7 +273,7 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
 ## 
 <a name="Nextsteps"> </a>
 
-In the next article in this series, you'll add a custom page and style to the SharePoint Add-in:  [Add a custom page and style to a SharePoint-hosted SharePoint Add-in](add-a-custom-page-and-style-to-a-sharepoint-hosted-sharepoint-add-in).
+In the next article in this series, you'll add a custom page and style to the SharePoint Add-in:  [Add a custom page and style to a SharePoint-hosted SharePoint Add-in](add-a-custom-page-and-style-to-a-sharepoint-hosted-sharepoint-add-in.md).
  
 
  

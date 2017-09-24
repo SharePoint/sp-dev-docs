@@ -1,3 +1,10 @@
+---
+title: Connect to API secured with Azure Active Directory
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Connect to API secured with Azure Active Directory
 
 When building SharePoint Framework solutions you might need to connect to your custom API to retrieve some data or to communicate with line of business applications. Securing custom APIs with Azure Active Directory offers you a number of benefits and can be done in a number of ways. Once you have built the API, there are a number of ways in which you can access it. These ways vary in complexity and each have their specific considerations. This article discusses the different approaches and describes step-by-step the process of building and connecting to an API secured with Azure Active Directory.
@@ -14,7 +21,7 @@ When building custom APIs there are two main ways in which you can secure your A
 
 When deploying custom APIs to Azure App Service you can benefit of the App Service Authentication option to secure the API with Azure Active Directory. The biggest benefit of using App Service Authentication is its simplicity: by following the configuration steps available in the Azure Portal you can either have the wizard setup the authentication configuration for you. If you choose the basic setup, the wizard will create a new AAD application in the Azure Active Directory associated with the current subscription. In the advanced configuration, you can choose which AAD application should be used to secure the access to the App Service hosting the API.
 
-![App Service Authentication settings displayed in the Azure Portal](../../../../images/api-aad-azure-app-service-authentication.png)
+![App Service Authentication settings displayed in the Azure Portal](../../../images/api-aad-azure-app-service-authentication.png)
 
 Once App Service Authentication has been configured, users trying to access your API will be prompted to sign in with their organizational account that belongs to the same Azure Active Directory as the AAD application used to secure the API. After signing in, you will be able to access the information about the current user through the `HttpContext.Current.User` property. When using the Azure App Service Authentication there is no additional configuration required in your application.
 
@@ -24,7 +31,7 @@ Azure App Service Authentication is a feature available only in Microsoft Azure 
 
 If you want to have the maximum flexibility with regards to where your API is hosted and how it is deployed, you should consider implementing the support for AAD authentication in ASP.NET. Visual Studio simplifies the implementation process significantly and after completing the authentication setup wizard, your API will require users to sign in using their organizational account.
 
-![Visual Studio authentication setup wizard](../../../../images/api-aad-visual-studio-authentication-wizard.png)
+![Visual Studio authentication setup wizard](../../../images/api-aad-visual-studio-authentication-wizard.png)
 
 During the configuration process, Visual Studio will add all the necessary references and settings to your ASP.NET Web API project, including registering a new AAD application to secure your API.
 
@@ -40,15 +47,15 @@ A commonly used approach for communicating with APIs secured with Azure Active D
 
 When using ADAL JS, client-side applications have full access to the identity information of the currently signed-in user. This is convenient for requirements such as displaying user name or profile picture in the application. When building solutions hosted in SharePoint, developers can retrieve extended profile information using the SharePoint API, but for standalone applications this isn't possible.
 
-Besides facilitating authentication against AAD, ADAL JS is capable of retrieving access tokens to specific resources. With these access tokens, applications can securely access APIs secured with AAD such as the [Microsoft Graph](./call-microsoft-graph-from-your-web-part) or other custom APIs. Before a client-side application can use ADAL JS, it has to be registered as an application in Azure Active Directory. In the registration process, developers specify a number of parameters such as the URL where the application is hosted and the resources to which the application requires access, either by itself or on behalf of the currently signed-in user.
+Besides facilitating authentication against AAD, ADAL JS is capable of retrieving access tokens to specific resources. With these access tokens, applications can securely access APIs secured with AAD such as the [Microsoft Graph](./call-microsoft-graph-from-your-web-part.md) or other custom APIs. Before a client-side application can use ADAL JS, it has to be registered as an application in Azure Active Directory. In the registration process, developers specify a number of parameters such as the URL where the application is hosted and the resources to which the application requires access, either by itself or on behalf of the currently signed-in user.
 
-![Registering new Azure Active Directory application in the Azure Portal](../../../../images/api-aad-create-new-aad-app.png)
+![Registering new Azure Active Directory application in the Azure Portal](../../../images/api-aad-create-new-aad-app.png)
 
 The first time the application is used, it prompts the user to grant it the necessary permissions. This is often referred to as consent flow. Once approved, the application can then request access tokens for the specific resources and communicate with them securely.
 
 #### Considerations when using ADAL JS to communicate with APIs secured with AAD
 
-ADAL JS has been designed to be used with single-page applications. As such, by default it doesn't work correctly when used with SharePoint Framework solutions. By [applying a patch](./call-microsoft-graph-from-your-web-part) however, it can be successfully used in SharePoint Framework projects.
+ADAL JS has been designed to be used with single-page applications. As such, by default it doesn't work correctly when used with SharePoint Framework solutions. By [applying a patch](./call-microsoft-graph-from-your-web-part.md) however, it can be successfully used in SharePoint Framework projects.
 
 When using ADAL JS and OAuth to access APIs secured with AAD, the authentication flow is facilitated by Microsoft Azure. Any errors are handled by the Azure sign-in page. Once the user has signed-in with her organizational account, the application will try to retrieve a valid access token. All errors that occur at this stage have to be explicitly handled by the developer of the application as retrieving access tokens is non-interactive and doesn't present any UI to the user.
 
@@ -214,19 +221,19 @@ Following is how you would use Azure Functions to create an API secured with Azu
 
 In the Azure Portal go to your Resource Group and add a Function App.
 
-![Function App highlighted in the list of available services that can be added to a Resource Group](../../../../images/api-aad-create-new-function-app.png)
+![Function App highlighted in the list of available services that can be added to a Resource Group](../../../images/api-aad-create-new-function-app.png)
 
 Once the Function App has been provisioned, open the newly created Function App and add a new function by clicking the plus icon next to the Functions label.
 
-![The plus icon next to the Functions label highlighted on the Function App blade](../../../../images/api-aad-add-function.png)
+![The plus icon next to the Functions label highlighted on the Function App blade](../../../images/api-aad-add-function.png)
 
 On the quick start screen, scroll down to the **Get started on your own** section and choose the **Custom function** option.
 
-![The Custom function link highlighted on the Add new function screen](../../../../images/api-aad-custom-function.png)
+![The Custom function link highlighted on the Add new function screen](../../../images/api-aad-custom-function.png)
 
 From the list of templates choose **HttpTrigger-JavaScript**. As the function name, use **Orders** and set the function Authorization level to **Anonymous** as you will use Azure AD to secure the access to the Azure Function. Confirm your selection by clicking the **Create** button.
 
-![New Azure Function configuration](../../../../images/api-aad-add-function-parameters.png)
+![New Azure Function configuration](../../../images/api-aad-add-function-parameters.png)
 
 #### Implement API code
 
@@ -299,7 +306,7 @@ Change the URL specified in the **Access-Control-Allow-Origin** header to match 
 
 Save the changes to the function's code by clicking the **Save** button.
 
-![Save button highlighted on the Azure Function code screen](../../../../images/api-aad-function-code.png)
+![Save button highlighted on the Azure Function code screen](../../../images/api-aad-function-code.png)
 
 #### Change CORS settings
 
@@ -307,37 +314,37 @@ Azure Functions are hosted in Azure App Service which allows you to configure it
 
 In the Function App, select your Azure Function and navigate to the **Platform features** blade.
 
-![The Platform features link highlighted in the Azure Function settings](../../../../images/api-aad-platform-features.png)
+![The Platform features link highlighted in the Azure Function settings](../../../images/api-aad-platform-features.png)
 
 From the **API** section, choose the **CORS** option.
 
-![The CORS option highlighted on the Azure Function Platform features blade](../../../../images/api-aad-function-cors.png)
+![The CORS option highlighted on the Azure Function Platform features blade](../../../images/api-aad-function-cors.png)
 
 On the CORS settings blade, delete all entries so that the CORS configuration is empty.
 
-![The Delete option highlighted on the first CORS entry](../../../../images/api-aad-function-cors-delete.png)
+![The Delete option highlighted on the first CORS entry](../../../images/api-aad-function-cors-delete.png)
 
 Confirm the deletion by clicking the **Save** button.
 
-![The Save button highlighted on the CORS settings blade](../../../../images/api-aad-function-cors-save.png)
+![The Save button highlighted on the CORS settings blade](../../../images/api-aad-function-cors-save.png)
 
 #### Enable App Service Authentication
 
 In the Function App settings, go back to the Platform settings blade. From the **Networking** section, select the **Authentication / Authorization** option.
 
-![The Authentication / Authorization option highlighted on the Function App Platform settings blade](../../../../images/api-aad-function-authentication.png)
+![The Authentication / Authorization option highlighted on the Function App Platform settings blade](../../../images/api-aad-function-authentication.png)
 
 Enable the App Service Authentication by setting the **App Service Authentication** toggle to **On**.
 
-![The App Service Authentication toggle set to on](../../../../images/api-aad-function-authentication-on.png)
+![The App Service Authentication toggle set to on](../../../images/api-aad-function-authentication-on.png)
 
 To disallow anonymous access to the API and force authentication using Azure AD, set the value of the **Action to take when request is not authenticated** drop-down to **Login with Azure Active Directory**.
 
-![The 'Login with Azure Active Directory' option selected in the 'Action to take when request is not authenticated' drop-down](../../../../images/api-aad-function-authentication-login-aad.png)
+![The 'Login with Azure Active Directory' option selected in the 'Action to take when request is not authenticated' drop-down](../../../images/api-aad-function-authentication-login-aad.png)
 
 Next, in the list of authentication providers, select Azure Active Directory to configure it.
 
-![Azure Active Directory highlighted in the list of authentication providers](../../../../images/api-aad-function-authentication-aad.png)
+![Azure Active Directory highlighted in the list of authentication providers](../../../images/api-aad-function-authentication-aad.png)
 
 On the Active Directory Authentication blade, set the **Management mode** to **Express** and create a new AAD app.
 
@@ -349,15 +356,15 @@ On the Active Directory Authentication blade, set the **Management mode** to **E
 
 Because the app is only meant to secure the access to the Azure Function, it doesn't require any additional permissions. Confirm the selection by clicking the **OK** button.
 
-![Azure Active Directory authentication settings](../../../../images/api-aad-function-authentication-aad-app.png)
+![Azure Active Directory authentication settings](../../../images/api-aad-function-authentication-aad-app.png)
 
 When the Azure Active Directory blade closes, back on the **Authentication / Authorization** blade, click the **Save** button to confirm all changes to authentication settings.
 
-![The Save button highlighted on the Authentication / Authorization blade](../../../../images/api-aad-function-authentication-save.png)
+![The Save button highlighted on the Authentication / Authorization blade](../../../images/api-aad-function-authentication-save.png)
 
 If you try to navigate to your API URL in a new private window, you should be prompted to sign in using your Azure AD account.
 
-![Azure AD sign in page](../../../../images/api-aad-sign-in.png)
+![Azure AD sign in page](../../../images/api-aad-sign-in.png)
 
 At this point, the API is ready to be called securely from a SharePoint Framework client-side web part using the authentication cookie.
 
@@ -371,25 +378,25 @@ Following is how you would build an API using ASP.NET WebAPI, deploy it to Azure
 
 In Visual Studio, from the **File** menu, choose the **New / Project** option. In the **New Project** dialog, select C# Web templates and from the list of available templates, select the **ASP.NET Web Application** template.
 
-![The 'ASP.NET Web Application' project template selected in the New Project dialog](../../../../images/api-aad-webapi-vs-web-application.png)
+![The 'ASP.NET Web Application' project template selected in the New Project dialog](../../../images/api-aad-webapi-vs-web-application.png)
 
 As the type of ASP.NET Web Application project, select **Web API**.
 
-![Web API selected as the type of ASP.NET Web Application project to create](../../../../images/api-aad-webapi-vs-webapi.png)
+![Web API selected as the type of ASP.NET Web Application project to create](../../../images/api-aad-webapi-vs-webapi.png)
 
 Because you will use Azure App Service Authentication to secure the access to the API, click the **Change Authentication** button and select the **No Authentication** option.
 
-![The 'No Authentication' option selected as the authentication option for the newly created ASP.NET Web Application](../../../../images/api-aad-webapi-vs-no-authentication.png)
+![The 'No Authentication' option selected as the authentication option for the newly created ASP.NET Web Application](../../../images/api-aad-webapi-vs-no-authentication.png)
 
 Confirm your choice by clicking the **OK** button.
 
 Visual Studio allows you to easily deploy your WebAPI to Azure App Service. To benefit of this capability, in the **New ASP.NET Web Application** dialog, in the **Microsoft Azure** section, select the **Host in the cloud** section and in the drop-down select the **App Service** option.
 
-![App Service selected as the hosting platform for the Web Application](../../../../images/api-aad-webapi-vs-host-app-service.png)
+![App Service selected as the hosting platform for the Web Application](../../../images/api-aad-webapi-vs-host-app-service.png)
 
 In the **Create App Service** dialog, specify the name for the web app to be created and select your Azure subscription, Resource Group and App Service Plan that you want to use for this application.
 
-![App Service creation settings dialog](../../../../images/api-aad-webapi-vs-create-app-service.png)
+![App Service creation settings dialog](../../../images/api-aad-webapi-vs-create-app-service.png)
 
 Confirm your choice by clicking the **Create** button. At this point, Visual Studio will create a new Azure Web App to host your web application.
 
@@ -397,11 +404,11 @@ Confirm your choice by clicking the **Create** button. At this point, Visual Stu
 
 By default, APIs created using the ASP.NET Web Application project template don't support CORS and cannot be called by client-applications hosted on different domains. To add support for CORS to your WebAPI, click right on the project, and from the context menu choose the **Manage NuGet Packages...** option.
 
-![The 'Manage NuGet Packages' option highlighted in the project context menu in Visual Studio](../../../../images/api-aad-webapi-vs-manage-nuget.png)
+![The 'Manage NuGet Packages' option highlighted in the project context menu in Visual Studio](../../../images/api-aad-webapi-vs-manage-nuget.png)
 
 On the **Manage NuGet Packages** tab, search for a package named **Microsoft.AspNet.WebApi.Cors** and install it in your project.
 
-![The 'Microsoft.AspNet.WebApi.Cors' package highlighted on the 'Manage NuGet Packages' tab](../../../../images/api-aad-webapi-vs-cors-nuget.png)
+![The 'Microsoft.AspNet.WebApi.Cors' package highlighted on the 'Manage NuGet Packages' tab](../../../images/api-aad-webapi-vs-cors-nuget.png)
 
 #### Add data model
 
@@ -569,33 +576,33 @@ At this point, the API is code complete and can be published to the Azure Web Ap
 
 In Visual Studio, right click on the project, and from the context menu choose the **Publish...** option.
 
-![The Publish option highlighted in the project context menu](../../../../images/api-aad-webapi-vs-publish.png)
+![The Publish option highlighted in the project context menu](../../../images/api-aad-webapi-vs-publish.png)
 
 In the Publish dialog, verify that all information is correct and click the **Publish** button to start the publishing process.
 
-![Publish dialog with publish information](../../../../images/api-aad-webapi-vs-publish-settings.png)
+![Publish dialog with publish information](../../../images/api-aad-webapi-vs-publish-settings.png)
 
 Once the publishing process completes, navigate in your web browser to the API URL, eg. _http://pnp-aad-api.azurewebsites.net/api/orders_. At this point the API is not secured and can be accessed by anonymous users.
 
-![API response displayed in web browser for an anonymous user](../../../../images/api-aad-webapi-response-anonymous.png)
+![API response displayed in web browser for an anonymous user](../../../images/api-aad-webapi-response-anonymous.png)
 
 #### Secure the API using Azure App Service
 
 To secure the API using Azure AD go to the Azure Portal and open the Web App hosting your API. From the **Settings** group, select the **Authentication / Authorization** option.
 
-![Azure App Service Authentication / Authorization page displayed in the Azure Portal](../../../../images/api-aad-webapi-authentication.png)
+![Azure App Service Authentication / Authorization page displayed in the Azure Portal](../../../images/api-aad-webapi-authentication.png)
 
 To enable authentication for your Web App, set the **App Service Authentication** toggle to **On**.
 
-![The 'App Service Authentication' toggle set to On for the Web App hosting the WebAPI](../../../../images/api-aad-webapi-authentication-on.png)
+![The 'App Service Authentication' toggle set to On for the Web App hosting the WebAPI](../../../images/api-aad-webapi-authentication-on.png)
 
 To disallow anonymous access to the API, in the **Action to take when request is not authenticated** drop-down, select the **Login with Azure Active Directory** option.
 
-![The 'Login with Azure Active Directory' option selected in the 'Action to take when request is not authenticated' drop-down in Web App Authentication settings](../../../../images/api-aad-webapi-authentication-aad-login.png)
+![The 'Login with Azure Active Directory' option selected in the 'Action to take when request is not authenticated' drop-down in Web App Authentication settings](../../../images/api-aad-webapi-authentication-aad-login.png)
 
 Finally, configure Azure Active Directory authentication by from the list of authentication providers selecting **Azure Active Directory**.
 
-![Azure Active Directory highlighted in the list of authentication providers](../../../../images/api-aad-webapi-authentication-aad.png)
+![Azure Active Directory highlighted in the list of authentication providers](../../../images/api-aad-webapi-authentication-aad.png)
 
 On the Active Directory Authentication blade, set the **Management mode** to **Express** and create a new AAD app.
 
@@ -607,15 +614,15 @@ On the Active Directory Authentication blade, set the **Management mode** to **E
 
 Because the app is only meant to secure the access to the Azure Function, it doesn't require any additional permissions. Confirm the selection by clicking the **OK** button.
 
-![Azure Active Directory authentication settings](../../../../images/api-aad-webapi-authentication-aad-ok.png)
+![Azure Active Directory authentication settings](../../../images/api-aad-webapi-authentication-aad-ok.png)
 
 When the Azure Active Directory blade closes, back on the **Authentication / Authorization** blade, click the **Save** button to confirm all changes to authentication settings.
 
-![The Save button highlighted on the Authentication / Authorization blade](../../../../images/api-aad-webapi-authentication-save.png)
+![The Save button highlighted on the Authentication / Authorization blade](../../../images/api-aad-webapi-authentication-save.png)
 
 If you try to navigate to your API URL in a new private window, you should be prompted to sign in using your Azure AD account.
 
-![Azure AD sign in page](../../../../images/api-aad-webapi-azure-sign-in.png)
+![Azure AD sign in page](../../../images/api-aad-webapi-azure-sign-in.png)
 
 At this point, the API is ready to be called securely from a SharePoint Framework client-side web part using the authentication cookie.
 
@@ -668,7 +675,7 @@ namespace PnP.Aad.Api {
 
 If you would try to access either the API or any other resource in your web application, you would get a 401 Unauthorized response.
 
-![Unauthorized response when trying to access the API](../../../../images/api-aad-webapi-anonymous-unauthorized.png)
+![Unauthorized response when trying to access the API](../../../images/api-aad-webapi-anonymous-unauthorized.png)
 
 At this point, the web application requires that all requests to its resources are authenticated, but it doesn't start the AAD login flow. In the following steps you will extend the web application so that it would redirect the user to the Azure AD login page, if she wasn't previously authenticated.
 
@@ -680,23 +687,23 @@ If you don't have an existing AAD application yet, you can create one in the Azu
 
 > **Important:** the Azure AD application, used to secure the API, should be created in the same Azure Active Directory which is used by your organization to access Office 365.
 
-![Azure Active Directory blade open in the Azure Portal](../../../../images/api-aad-webapi-azure-aad.png)
+![Azure Active Directory blade open in the Azure Portal](../../../images/api-aad-webapi-azure-aad.png)
 
 On the Azure Active Directory blade, navigate to the **App registrations** blade.
 
-![App registrations section highlighted on the Azure Active Directory blade](../../../../images/api-aad-webapi-azure-app-registrations.png)
+![App registrations section highlighted on the Azure Active Directory blade](../../../images/api-aad-webapi-azure-app-registrations.png)
 
 On the **App registrations** blade, click the **New application registration** button to register a new Azure AD application.
 
-![The 'New application registration' button highlighted on the App registrations blade](../../../../images/api-aad-webapi-azure-new-app-registration.png)
+![The 'New application registration' button highlighted on the App registrations blade](../../../images/api-aad-webapi-azure-new-app-registration.png)
 
 On the **Create** blade, provide the information about your application and confirm the creation by clicking the **Create** button.
 
-![The Create button highlighted on the Create new application registration blade](../../../../images/api-aad-webapi-azure-new-app-registration-create.png)
+![The Create button highlighted on the Create new application registration blade](../../../images/api-aad-webapi-azure-new-app-registration-create.png)
 
 After the application registration is successfully created, select it in the list to view its details.
 
-![Application registration information displayed in the Azure Portal](../../../../images/api-aad-webapi-azure-app-details.png)
+![Application registration information displayed in the Azure Portal](../../../images/api-aad-webapi-azure-app-details.png)
 
 From the application registration information, copy the **Application ID** and store it as you will need it when configure Azure AD authentication for your web application.
 

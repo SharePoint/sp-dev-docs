@@ -1,6 +1,7 @@
 ---
 title: Workflow activity classes in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 70d5ca8d-520d-40a9-b24e-52bb31bd6c22
 ---
 
@@ -84,13 +85,13 @@ The palette of activity classes has been revised for SharePoint. Table 1 lists t
 <a name="bkm_addlresource"> </a>
 
 
--  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint)
+-  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint.md)
     
   
--  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio)
+-  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
     
   
--  [Set up and configure SharePoint Workflow Manager](set-up-and-configure-sharepoint-workflow-manager)
+-  [Set up and configure SharePoint Workflow Manager](set-up-and-configure-sharepoint-workflow-manager.md)
     
   
 

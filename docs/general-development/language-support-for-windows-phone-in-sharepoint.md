@@ -1,6 +1,7 @@
 ---
 title: Language support for Windows Phone in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 2c396a91-0fc1-4e25-942b-fffad49bd2c6
 ---
 
@@ -13,12 +14,12 @@ To develop your mobile application for more than one language, you need to globa
     
 
 The Windows Phone SDK includes Visual Studio 2010 Express for Windows Phone, Windows Phone Emulator, XNA Game Studio, and Expression Blend. To get started, install the  [Windows Phone SDK 7.1](http://www.microsoft.com/en-us/download/details.aspx?id=27570) for Windows Phone development. Then install the [Microsoft SharePoint SDK for Windows Phone 7.1](http://www.microsoft.com/en-us/download/details.aspx?id=30476) to install the SharePoint templates for Windows Phone.
-After you set up your development environment and install the SharePoint SDK for Windows Phone, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint).
+After you set up your development environment and install the SharePoint SDK for Windows Phone, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md).
   
     
     
 
-For more information about the SharePoint templates for Windows Phone, see  [Overview of Windows Phone SharePoint application templates in Visual Studio](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio).
+For more information about the SharePoint templates for Windows Phone, see  [Overview of Windows Phone SharePoint application templates in Visual Studio](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio.md).
 ## Templates and libraries installed by the SharePoint SDK for Windows Phone
 <a name="LanguageSupportForWindowsPhoneForSharePoint2013_TemplatesInstalledBySharePointSDKForWindowsPhone"> </a>
 
@@ -117,10 +118,10 @@ Although you have programmatic access to nine languages, you can run your ShareP
 <a name="bk_addresources"> </a>
 
 
--  [Overview of Windows Phone SharePoint application templates in Visual Studio](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio)
+-  [Overview of Windows Phone SharePoint application templates in Visual Studio](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio.md)
     
   
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
 -  [Windows Phone SDK 8.0](http://www.microsoft.com/en-us/download/details.aspx?id=35471)

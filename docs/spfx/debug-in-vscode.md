@@ -1,3 +1,10 @@
+---
+title: Debug SharePoint Framework solutions in Visual Studio Code
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Debug SharePoint Framework solutions in Visual Studio Code
 
 Visual Studio Code is a popular code editor frequently used for building SharePoint Framework solutions. By setting up debugging of your SharePoint Framework solution in Visual Studio Code, you can more efficiently step through your code and fix errors. This article describes the prerequisites and configuration steps required to configure Visual Studio Code for debugging SharePoint Framework solutions.
@@ -14,15 +21,15 @@ Download and install the latest version of Google Chrome from [https://www.googl
 
 Start Visual Studio Code and open the **Extensions** pane.
 
-![The extensions pane activated in Visual Studio Code](../../images/vscode-debugging-vscode-extensions.png)
+![The extensions pane activated in Visual Studio Code](../images/vscode-debugging-vscode-extensions.png)
 
 In the search box, search for **Debugger for Chrome**.
 
-![The Debugger for Chrome extension selected in the search results](../../images/vscode-debugging-debugger-chrome-extension.png)
+![The Debugger for Chrome extension selected in the search results](../images/vscode-debugging-debugger-chrome-extension.png)
 
 Install the **Debugger for Chrome** extension by clicking the **Install** button, next to the extension. After the extension has been installed, reload the Visual Studio Code window by clicking the **Reload** button.
 
-![Reload button highlighted next to the Debugger for Chrome extension](../../images/vscode-debugging-debugger-extension-installed-reload.png)
+![Reload button highlighted next to the Debugger for Chrome extension](../images/vscode-debugging-debugger-extension-installed-reload.png)
 
 ## Debug SharePoint Framework solution using local workbench
 
@@ -32,15 +39,15 @@ When building SharePoint Framework solutions, you can use the local workbench to
 
 In Visual Studio Code activate the **Debug** pane.
 
-![Debug pane activated in Visual Studio Code](../../images/vscode-debugging-vscode-debug.png)
+![Debug pane activated in Visual Studio Code](../images/vscode-debugging-vscode-debug.png)
 
 In the top section of the pane, open the **Configurations** drop-down and select the **Add Configuration...** option.
 
-![The Add Configuration option highlighted in the debug configurations drop-down](../../images/vscode-debugging-add-debug-configuration.png)
+![The Add Configuration option highlighted in the debug configurations drop-down](../images/vscode-debugging-add-debug-configuration.png)
 
 From the list of debug environments select **Chrome**.
 
-![Chrome highlighted as the debug environment for the new configuration](../../images/vscode-debugging-chrome-debug-environment.png)
+![Chrome highlighted as the debug environment for the new configuration](../images/vscode-debugging-chrome-debug-environment.png)
 
 Replace the contents of the generated **launch.json** file with:
 
@@ -78,7 +85,7 @@ With Visual Studio Code configured for debugging SharePoint Framework solutions 
 
 In Visual Studio Code open the main web part source file and add a breakpoint in the first line of the **render** method by either clicking on the margin left to the line number or by highlighting the code line in the editor and pressing the **F9** key.
 
-![Breakpoint configured in a SharePoint Framework client-side web part in Visual Studio Code](../../images/vscode-debugging-breakpoint-configured.png)
+![Breakpoint configured in a SharePoint Framework client-side web part in Visual Studio Code](../images/vscode-debugging-breakpoint-configured.png)
 
 #### Start serving the SharePoint Framework solution
 
@@ -90,13 +97,13 @@ gulp serve --nobrowser
 
 Running this command will build your SharePoint Framework solution and start the local webserver to serve the output files. Because the debugger will start its own instance of the browser, you use the **--nobrowser** argument to prevent the **serve** task from opening a browser window.
 
-![The gulp serve command typed in the integrated terminal in Visual Studio Code](../../images/vscode-debugging-gulp-serve.png)
+![The gulp serve command typed in the integrated terminal in Visual Studio Code](../images/vscode-debugging-gulp-serve.png)
 
 #### Start debugging in Visual Studio Code
 
 Once the gulp task is finished, move the focus to the code area of Visual Studio Code and press **F5** (or from the **Debug** menu select the **Start Debugging** option). The debug mode in Visual Studio Code will start, changing the color of the status bar to orange and a new window of Google Chrome will open showing the local version of the SharePoint workbench.
 
-![Visual Studio Code in debug mode displayed next to Google Chrome showing the local version of the SharePoint workbench](../../images/vscode-debugging-chrome-started.png)
+![Visual Studio Code in debug mode displayed next to Google Chrome showing the local version of the SharePoint workbench](../images/vscode-debugging-chrome-started.png)
 
 > Note, that at this point the breakpoint is disabled, because the web part's code hasn't been loaded yet. SharePoint Framework loads web parts on demand only after they have been added to the page.
 
@@ -104,15 +111,15 @@ Once the gulp task is finished, move the focus to the code area of Visual Studio
 
 To verify that debugging is working, in the workbench add your web part to the canvas.
 
-![Web part toolbox open in SharePoint workbench](../../images/vscode-debugging-adding-web-part-to-canvas.png)
+![Web part toolbox open in SharePoint workbench](../images/vscode-debugging-adding-web-part-to-canvas.png)
 
 Notice, that with the code loaded on the page, the breakpoint indicator changed to active.
 
-![Breakpoint active after adding web part to the canvas](../../images/vscode-debugging-breakpoint-active.png)
+![Breakpoint active after adding web part to the canvas](../images/vscode-debugging-breakpoint-active.png)
 
 If you now reload the page, your breakpoint in Visual Studio Code will be hit, and you will be able to inspect all properties and step through the code.
 
-![Breakpoint hit in Visual Studio Code](../../images/vscode-debugging-breakpoint-hit.png)
+![Breakpoint hit in Visual Studio Code](../images/vscode-debugging-breakpoint-hit.png)
 
 ## Debug SharePoint Framework solution using hosted workbench
 
@@ -166,15 +173,15 @@ In Visual Studio Code open the **./.vscode/launch.json** file. Copy the existing
 
 With the debug configuration for the hosted workbench ready, verify that it's working correctly. In Visual Studio Code, activate the **Debug** pane and in the **Configurations** drop-down, select the newly added **Hosted workbench** configuration.
 
-![The hosted workbench configuration selected in the debug configurations drop-down in Visual Studio Code](../../images/vscode-debugging-debugging-hosted-workbench.png)
+![The hosted workbench configuration selected in the debug configurations drop-down in Visual Studio Code](../images/vscode-debugging-debugging-hosted-workbench.png)
 
 Next, start debugging either by pressing the **F5** key or by selecting from the **Debug** menu the **Start Debugging** option. Visual Studio Code will switch into debug mode, indicated by the orange status bar, and the Debugger for Chrome extension will open a new instance of Google Chrome with the Office 365 login page.
 
-![Office 365 login page displayed in Google Chrome after starting debugging in the hosted workbench](../../images/vscode-debugging-o365-login.png)
+![Office 365 login page displayed in Google Chrome after starting debugging in the hosted workbench](../images/vscode-debugging-o365-login.png)
 
 After you log in, add the web part to the canvas and refresh the workbench, just like with the local workbench, you will see the breakpoint in Visual Studio Code be hit and you will be able to inspect variables and step through the code.
 
-![Breakpoint hit in Visual Studio Code when debugging a SharePoint Framework client-side web part in the hosted workbench](../../images/vscode-debugging-breakpoint-hit-o365.png)
+![Breakpoint hit in Visual Studio Code when debugging a SharePoint Framework client-side web part in the hosted workbench](../images/vscode-debugging-breakpoint-hit-o365.png)
 
 ## Additional information
 

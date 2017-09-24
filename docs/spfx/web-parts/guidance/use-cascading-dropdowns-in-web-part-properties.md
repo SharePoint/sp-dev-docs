@@ -1,12 +1,19 @@
+---
+title: Use cascading dropdowns in web part properties
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Use cascading dropdowns in web part properties
 
 When designing the property pane for your SharePoint client-side web parts, you may have one web part property that displays its options based on the  value selected in another property. This scenario typically occurs when implementing cascading dropdown controls. In this article, you will learn how to create cascading dropdown controls in the web part property pane without developing a custom property pane control.
 
-![Item dropdown disabled and web part placeholder communicating loading updated list of item options](../../../../images/react-cascading-dropdowns-loading-indicator-when-loading-items.png)
+![Item dropdown disabled and web part placeholder communicating loading updated list of item options](../../../images/react-cascading-dropdowns-loading-indicator-when-loading-items.png)
 
 The source of the working web part is available on GitHub at [https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/react-custompropertypanecontrols](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/react-custompropertypanecontrols).
 
-> **Note:** Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment).
+> **Note:** Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment.md).
 
 ## Create new project
 
@@ -36,11 +43,11 @@ When prompted, enter the following values:
 - **List items** as your web part name
 - **Shows list items from the selected list** as your web part description
 
-![SharePoint Framework Yeoman generator with the default choices](../../../../images/react-cascading-dropdowns-yo-sharepoint.png)
+![SharePoint Framework Yeoman generator with the default choices](../../../images/react-cascading-dropdowns-yo-sharepoint.png)
 
 Once the scaffolding completes, open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots but you can use any editor you prefer.
 
-![SharePoint Framework project open in Visual Studio Code](../../../../images/react-cascading-dropdowns-visual-studio-code.png)
+![SharePoint Framework project open in Visual Studio Code](../../../images/react-cascading-dropdowns-visual-studio-code.png)
 
 ## Define a web part property to store the selected list
 
@@ -48,7 +55,7 @@ You will build a web part that displays list items from a selected SharePoint li
 
 In the code editor, open the **src/webparts/listItems/ListItemsWebPartManifest.json** file. Replace the default **description** property with a new property named `listName`.
 
-![Web part manifest with the list web part property highlighted](../../../../images/react-cascading-dropdowns-listname-property-web-part-manifest.png)
+![Web part manifest with the list web part property highlighted](../../../images/react-cascading-dropdowns-listname-property-web-part-manifest.png)
 
 Next, open the **src/webparts/listItems/IListItemsWebPartProps.ts** file, and replace its contents with:
 
@@ -166,7 +173,7 @@ gulp serve
 
 In the web browser, add the **List items** web part to the canvas and open its properties. Verify that the value set for the **List** property is displayed in the web part body.
 
-![Web part showing the value of the listName property](../../../../images/react-cascading-dropdowns-web-part-first-run.png)
+![Web part showing the value of the listName property](../../../images/react-cascading-dropdowns-web-part-first-run.png)
 
 ## Populate the dropdown with SharePoint lists to choose from
 
@@ -242,7 +249,7 @@ Run the following command to verify that it's working as expected:
 gulp serve
 ```
 
-![The listName property rendered in the web part property pane using a dropdown control](../../../../images/react-cascading-dropdowns-listname-property-pane-dropdown.png)
+![The listName property rendered in the web part property pane using a dropdown control](../../../images/react-cascading-dropdowns-listname-property-pane-dropdown.png)
 
 ### Show available lists in the list dropdown
 
@@ -303,7 +310,7 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
 
 The **onPropertyPaneConfigurationStart** method is called by the SharePoint Framework after the web part property pane for the web part has been opened. First, the method checks if the information about the lists available in the current site has been loaded. If the list information is loaded, then the list dropdown will be enabled. If the list information about lists has not been loaded yet, the loading indicator is displayed which informs the user that the web part is loading information about lists.
 
-![Loading indicator displayed in web part while loading information about available lists](../../../../images/react-cascading-dropdowns-loading-indicator-when-loading-list-info.png)
+![Loading indicator displayed in web part while loading information about available lists](../../../images/react-cascading-dropdowns-loading-indicator-when-loading-list-info.png)
 
 After the information about available lists has been loaded the method assigns the retrieved data to the **lists** class variable, from which it can be used by the list dropdown. Next, the dropdown is enabled allowing the user to select a list. By calling  **this.context.propertyPane.refresh()** the web part property pane is refreshed and it reflects the latest changes to the list dropdown. Once list information is loaded, the loading indicator is removed by a call to the **clearLoadingIndicator** method. Since calling this method clears the web part user interface, the **render** method is called to force the web part to re-render.
 
@@ -315,13 +322,13 @@ gulp serve
 
 When you add a web part to the canvas and open its property pane, you should see the lists dropdown filled with available lists for the user to choose from.
 
-![List dropdown in the web part property pane showing the available lists](../../../../images/react-cascading-dropdowns-list-dropdown-available-lists.png)
+![List dropdown in the web part property pane showing the available lists](../../../images/react-cascading-dropdowns-list-dropdown-available-lists.png)
 
 ## Allow users to select an item from the selected list
 
 When building web parts you often need to allow users to choose an option from a set of values determined by a previously selected value, such as choosing a country based on the selected continent or choosing a list item from a selected list. This user experience is often referred to as cascading dropdowns. Using the standard SharePoint Framework client-side web parts capabilities you can build cascading dropdowns in the web part property pane. To learn how to do it you will extend the previously built web part with the ability to choose a list item based on the previously selected list.
 
-![List item dropdown open in the web part property pane](../../../../images/react-cascading-dropdowns-item-dropdown-list-items.png)
+![List item dropdown open in the web part property pane](../../../images/react-cascading-dropdowns-item-dropdown-list-items.png)
 
 ### Add item web part property
 
@@ -338,7 +345,7 @@ In the code editor open the **src/webparts/listItems/ListItemsWebPart.manifest.j
 }
 ```
 
-![Web part manifest with the itemName web part property highlighted](../../../../images/react-cascading-dropdowns-itemname-property-web-part-manifest.png)
+![Web part manifest with the itemName web part property highlighted](../../../images/react-cascading-dropdowns-itemname-property-web-part-manifest.png)
 
 Change the code in the **src/webparts/listItems/IListItemsWebPartProps.ts** file to:
 
@@ -493,7 +500,7 @@ Run the following command to verify that it's working as expected:
 gulp serve
 ```
 
-![The itemName property rendered in the web part property pane using a dropdown control](../../../../images/react-cascading-dropdowns-itemname-property-pane-dropdown.png)
+![The itemName property rendered in the web part property pane using a dropdown control](../../../images/react-cascading-dropdowns-itemname-property-pane-dropdown.png)
 
 ### Show items available in the selected list in the item dropdown
 
@@ -595,7 +602,7 @@ gulp serve
 
 As required, initially the item dropdown is disabled, requiring users to select a list first. But at this point, even after a list has been selected, the item dropdown remains disabled.
 
-![Item dropdown disabled even after a list has been selected](../../../../images/react-cascading-dropdowns-list-selected-item-disabled.png)
+![Item dropdown disabled even after a list has been selected](../../../images/react-cascading-dropdowns-list-selected-item-disabled.png)
 
 #### Update web part property pane after selecting a list
 
@@ -662,4 +669,4 @@ Once the items for the selected list are loaded they are assigned to the **items
 > isDisabled: newProps.isDisabled !== undefined ? newProps.isDisabled : newProps.disabled
 > ```
 
-![Item dropdown in the web part property pane showing available list items for the selected list](../../../../images/react-cascading-dropdowns-item-dropdown-list-items.png)
+![Item dropdown in the web part property pane showing available list items for the selected list](../../../images/react-cascading-dropdowns-item-dropdown-list-items.png)

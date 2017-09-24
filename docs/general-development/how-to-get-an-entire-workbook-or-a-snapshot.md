@@ -1,9 +1,10 @@
 ---
 title: How to Get an Entire Workbook or a Snapshot
+ms.date: 09/25/2017
 keywords: how to,howdoi,howto
 f1_keywords:
 - how to,howdoi,howto
-ms.prod: SHAREPOINT
+ms.prod: sharepoint
 ms.assetid: 39115503-8352-4589-87f4-cfa9c07260b6
 ---
 
@@ -243,34 +244,34 @@ Make sure you add a Web reference to an Excel Web Services site you have access 
   
     
     
- [How to: Trust a Location](how-to-trust-a-location)
+ [How to: Trust a Location](how-to-trust-a-location.md)
 #### Concepts
 
 
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api)
+ [Accessing the SOAP API](accessing-the-soap-api.md)
 #### Other resources
 
 
   
     
     
- [Step 1: Creating the Web Service Client Project](step-1-creating-the-web-service-client-project)
+ [Step 1: Creating the Web Service Client Project](step-1-creating-the-web-service-client-project.md)
   
     
     
- [Step 2: Adding a Web Reference](step-2-adding-a-web-reference)
+ [Step 2: Adding a Web Reference](step-2-adding-a-web-reference.md)
   
     
     
- [Step 3: Accessing the Web Service](step-3-accessing-the-web-service)
+ [Step 3: Accessing the Web Service](step-3-accessing-the-web-service.md)
   
     
     
- [Step 4: Building and Testing the Application](step-4-building-and-testing-the-application)
+ [Step 4: Building and Testing the Application](step-4-building-and-testing-the-application.md)
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)

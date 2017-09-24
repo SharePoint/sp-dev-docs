@@ -1,6 +1,7 @@
 ---
 title: Configure search in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: e447127c-2b11-4d65-b46e-01a18cdcdee5
 ---
 
@@ -29,10 +30,10 @@ A custom step can be added to modify managed properties in the form of an extern
 <a name="SP15ConfigSearch_customstep"> </a>
 
 
--  [Custom word breakers in SharePoint](custom-word-breakers-in-sharepoint-server)
+-  [Custom word breakers in SharePoint](custom-word-breakers-in-sharepoint-server.md)
     
   
--  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout)
+-  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout.md)
     
   
 
@@ -40,10 +41,10 @@ A custom step can be added to modify managed properties in the form of an extern
 <a name="SP15configsearch_addlresources"> </a>
 
 
--  [Search in SharePoint](search-in-sharepoint)
+-  [Search in SharePoint](search-in-sharepoint.md)
     
   
--  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers)
+-  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers.md)
     
   
 

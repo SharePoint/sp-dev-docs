@@ -1,6 +1,7 @@
----
+﻿---
 title: Excel Services Overview
-ms.prod: OFFICE365
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 5fa22ebb-e507-4ffc-a425-e755502feae2
 ---
 
@@ -33,14 +34,14 @@ There are four primary interfaces for Excel Services:
   
 
 > **Note:**
-> The Excel Interactive View feature has been disabled. For information about removing this feature from your website, see  [Removing Excel Interactive View from a webpage](removing-excel-interactive-view-from-a-webpage). 
+> The Excel Interactive View feature has been disabled. For information about removing this feature from your website, see  [Removing Excel Interactive View from a webpage](removing-excel-interactive-view-from-a-webpage.md). 
   
     
     
 
 You can also extend Excel Calculation Services by using user-defined functions (UDFs).
 > **Note:**
-> For more information about Excel Calculation Services, see  [Excel Services Architecture](excel-services-architecture). 
+> For more information about Excel Calculation Services, see  [Excel Services Architecture](excel-services-architecture.md). 
   
     
     
@@ -54,7 +55,7 @@ By using Excel Services, you can view live, interactive workbooks by using only 
 
 Excel Services also has a Web service. You can use Excel Web Services to load workbooks, set values in cells and ranges, refresh external data connections, calculate worksheets, and extract calculated results (including cell values, the entire calculated workbook, or a snapshot of the workbook). In SharePoint, you can also save, save a copy, and participate in collaborative editing sessions by using Excel Web Services.
 > **Note:**
-> For more information about snapshots, see  [How to: Get an Entire Workbook or a Snapshot](how-to-get-an-entire-workbook-or-a-snapshot). 
+> For more information about snapshots, see  [How to: Get an Entire Workbook or a Snapshot](how-to-get-an-entire-workbook-or-a-snapshot.md). 
   
     
     
@@ -91,7 +92,7 @@ Excel Services also enables you to calculate data on the server. Excel Services 
   
     
     
-![Dashboard with filtering and Excel content](../../images/17740d96-b5cf-4a0f-938d-a0d0d1e91f1e.GIF)
+![Dashboard with filtering and Excel content](../images/17740d96-b5cf-4a0f-938d-a0d0d1e91f1e.GIF)
   
     
     
@@ -121,7 +122,7 @@ If you want to use certain functionalities in Excel or if you want to analyze a 
   
     
     
-![Using the Parameters pane](../../images/65926095-d833-4eb2-b899-9efe40e2d540.GIF)
+![Using the Parameters pane](../images/65926095-d833-4eb2-b899-9efe40e2d540.GIF)
   
     
     
@@ -182,7 +183,7 @@ You can also use Excel Services UDFs, which enable you to use formulas in a cell
   
     
     
-For more information about UDFs in Excel Services, see  [Understanding Excel Services UDFs](understanding-excel-services-udfs).
+For more information about UDFs in Excel Services, see  [Understanding Excel Services UDFs](understanding-excel-services-udfs.md).
   
     
     
@@ -234,7 +235,7 @@ You can use the REST API in Excel Services to access workbook parts or elements 
   
     
     
-For more information about the REST API in Excel Services, see  [Excel Services REST API](excel-services-rest-api).
+For more information about the REST API in Excel Services, see  [Excel Services REST API](excel-services-rest-api.md).
   
     
     
@@ -269,28 +270,28 @@ From there you can use OData system query options to get specific information ab
 ## Additional resources
 
 
--  [Excel Services Development Roadmap](excel-services-development-roadmap)
+-  [Excel Services Development Roadmap](excel-services-development-roadmap.md)
     
   
--  [Excel Services Architecture](excel-services-architecture)
+-  [Excel Services Architecture](excel-services-architecture.md)
     
   
--  [JavaScript user-defined functions overview](javascript-user-defined-functions-overview)
+-  [JavaScript user-defined functions overview](javascript-user-defined-functions-overview.md)
     
   
--  [Using OData with Excel Services REST in SharePoint](using-odata-with-excel-services-rest-in-sharepoint)
+-  [Using OData with Excel Services REST in SharePoint](using-odata-with-excel-services-rest-in-sharepoint.md)
     
   
--  [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
+-  [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
     
   
--  [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs)
+-  [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs.md)
     
   
 -  [Unsupported Features in Excel Services](http://msdn.microsoft.com/library/5868e672-4786-4fed-9168-07ff538f6f5c%28Office.15%29.aspx)
     
   
--  [Excel Services Blogs, Forums, and Resources](excel-services-blogs-forums-and-resources)
+-  [Excel Services Blogs, Forums, and Resources](excel-services-blogs-forums-and-resources.md)
     
   
 

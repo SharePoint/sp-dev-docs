@@ -1,4 +1,8 @@
-
+﻿---
+title: How to Create filter editors for PerformancePoint Services in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
 
 
 # How to: Create filter editors for PerformancePoint Services in SharePoint
@@ -343,7 +347,7 @@ The following code example creates, retrieves, and updates custom filters. This 
   
     
     
-Before you can compile this code example, you must configure your development environment as described in  [Create and configure the editor class for a filter editor in PerformancePoint Services](#BKMK_ConfigFEd).
+Before you can compile this code example, you must configure your development environment as described in  [Create and configure the editor class for a filter editor in PerformancePoint Services](#bk_intro).
   
     
     

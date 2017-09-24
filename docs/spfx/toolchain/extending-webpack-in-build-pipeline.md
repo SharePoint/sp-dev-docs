@@ -1,3 +1,10 @@
+---
+title: Extending webpack in the SharePoint Framework toolchain
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Extending webpack in the SharePoint Framework toolchain
 
 [Webpack](https://webpack.github.io/) is a JavaScript module bundler that takes your JavaScript files and its dependencies and generates one or more JavaScript bundles so you can load different bundles for different scenarios.

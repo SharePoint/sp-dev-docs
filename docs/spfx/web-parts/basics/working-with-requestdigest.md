@@ -1,3 +1,10 @@
+---
+title: Working with __REQUESTDIGEST
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Working with __REQUESTDIGEST
 
 When executing non-GET REST requests to the SharePoint API, you must add a valid request digest to your request. This digest proves validity of your request to SharePoint. Because this token is valid only for a limited period of time, you have to ensure that the token you have is valid, before adding it to your request or the request will fail. This article describes the different approaches to obtain a valid request digest and pitfalls of some commonly used approaches.

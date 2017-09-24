@@ -1,3 +1,10 @@
+---
+title: Call Microsoft Graph using the SharePoint Framework GraphHttpClient
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Call Microsoft Graph using the SharePoint Framework GraphHttpClient
 
 Using the Microsoft Graph you can build powerful solutions that use data from the different services that are a part of Office 365. In the past, connecting SharePoint Framework solutions to the Microsoft Graph was challenging, as it required you to register an Azure Active Directory application and complete the authorization flow. With the SharePoint Framework GraphHttpClient you can directly call the Microsoft Graph, without any additional setup.
@@ -49,7 +56,7 @@ The GraphHttpClient uses the **Office 365 SharePoint Online** Azure Active Direc
 * **Read and write all groups (preview)** (`Group.ReadWrite.All`) 
 * **Read all usage reports** (`Reports.Read.All`) 
 
-At this moment these are the only two permissions available when using the GraphHttpClient. If you need other permission scopes in your solution, you have to use [ADAL JS with implicit OAuth flow](web-parts/guidance/call-microsoft-graph-from-your-web-part) instead.
+At this moment these are the only two permissions available when using the GraphHttpClient. If you need other permission scopes in your solution, you have to use [ADAL JS with implicit OAuth flow](web-parts/guidance/call-microsoft-graph-from-your-web-part.md) instead.
 
 ### Tokens are retrieved using an internal API
 

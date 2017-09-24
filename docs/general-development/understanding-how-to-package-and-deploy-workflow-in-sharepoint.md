@@ -1,6 +1,7 @@
 ---
 title: Understanding how to package and deploy workflow in SharePoint
-ms.prod: SHAREPOINTDESIGNER
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 545b4930-ac05-4c9d-9980-5818cb800cf1
 ---
 
@@ -60,7 +61,7 @@ The process for packaging a workflow involves saving the workflow to a template 
 
   
 
-  ![Packaging workflow in SPD 2013](../../images/SPD15-PackagingWorkflow1.png)
+  ![Packaging workflow in SPD 2013](../images/SPD15-PackagingWorkflow1.png)
   
 
   
@@ -75,7 +76,7 @@ The process for packaging a workflow involves saving the workflow to a template 
 
   
 
-  ![Workflow template in Site Assets.](../../images/SPD15-PackagingWorkflow2.png)
+  ![Workflow template in Site Assets.](../images/SPD15-PackagingWorkflow2.png)
   
 
   
@@ -131,7 +132,7 @@ Before you can deploy a workflow you must first export the workflow template fro
 
   
 
-  ![Export workflow file from SPD.](../../images/SPD15-PackagingWorkflow3.png)
+  ![Export workflow file from SPD.](../images/SPD15-PackagingWorkflow3.png)
   
 
   
@@ -161,7 +162,7 @@ To deploy a workflow package follow this procedure.
 
   
 
-  ![Upload solution button.](../../images/SPD15-PackagingWorkflow4.png)
+  ![Upload solution button.](../images/SPD15-PackagingWorkflow4.png)
   
 
   
@@ -173,7 +174,7 @@ To deploy a workflow package follow this procedure.
 
   
 
-  ![Activate solution after upload.](../../images/SPD15-PackagingWorkflow5.png)
+  ![Activate solution after upload.](../images/SPD15-PackagingWorkflow5.png)
   
 
   
@@ -206,7 +207,7 @@ After a workflow solution has been activated for a site collection, it is availa
   
     
     
-![Activate site feature.](../../images/SPD15-PackagingWorkflow6.png)
+![Activate site feature.](../images/SPD15-PackagingWorkflow6.png)
   
     
     
@@ -232,10 +233,10 @@ After a workflow solution has been activated for a site collection, it is availa
 -  [Getting started with SharePoint workflow](http://msdn.microsoft.com/library/cc73be76-a329-449f-90ab-86822b1c2ee8.aspx)
     
   
--  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio)
+-  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)
     
   
--  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform)
+-  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
     
   
 -  [Blog article from the SharePoint Designer team: Workflow package and deploy scenario](http://blogs.msdn.com/b/sharepointdesigner/archive/2012/08/30/packaging-list-site-and-reusable-workflow-and-how-to-deploy-the-package.aspx)

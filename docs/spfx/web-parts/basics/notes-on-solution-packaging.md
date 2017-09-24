@@ -1,3 +1,10 @@
+---
+title: Notes on solution packaging
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Notes on solution packaging
 
 The **package-solution** gulp task looks at **/config/package-solution.json** for various configuration details, including some generic filepaths, as well as defining the relationship between components (_WebParts_ and _Applications_) in a package.

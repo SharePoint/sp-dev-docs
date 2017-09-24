@@ -1,3 +1,10 @@
+---
+title: Migrate jQuery and DataTables solution built using Script Editor Web Part to SharePoint Framework
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Migrate jQuery and DataTables solution built using Script Editor Web Part to SharePoint Framework
 
 One of the frequently used jQuery plugins is [DataTables](https://datatables.net/). With DataTables you can easily build powerful data overviews of data coming both from SharePoint and external APIs. This article illustrates how you would migrate a SharePoint customization using DataTables built with the Script Editor Web Part to the SharePoint Framework.
@@ -6,7 +13,7 @@ One of the frequently used jQuery plugins is [DataTables](https://datatables.net
 
 To illustrate the process of migrating a SharePoint customization using DataTables to the SharePoint Framework you will use the following solution that shows an overview of IT support requests retrieved from a SharePoint list.
 
-![Overview of IT support requests displayed on a SharePoint page](../../../../images/datatables-sewp.png)
+![Overview of IT support requests displayed on a SharePoint page](../../../images/datatables-sewp.png)
 
 The solution is built using the standard SharePoint Script Editor Web Part. Following is the code used by the customization.
 
@@ -113,11 +120,11 @@ First, the customization loads the libraries it uses: jQuery, DataTables and Mom
 
 Thanks to using DataTables, end-users get a powerful solution where they can easily filter, sort and page through the results without any additional development effort.
 
-![The list of IT support requests displayed using DataTables filtered by requests assigned to Lidia sorted descending by the due date](../../../../images/datatables-sewp-filter.png)
+![The list of IT support requests displayed using DataTables filtered by requests assigned to Lidia sorted descending by the due date](../../../images/datatables-sewp-filter.png)
 
 ## Migrate the IT requests overview solution from the Script Editor Web Part to the SharePoint Framework
 
-> **Note:** Before following the steps in this article, be sure to [set up your development environment](../../set-up-your-development-environment) for building SharePoint Framework solutions.
+> **Note:** Before following the steps in this article, be sure to [set up your development environment](../../set-up-your-development-environment.md) for building SharePoint Framework solutions.
 
 Transforming this customization to the SharePoint Framework offers a number of benefits such as more user-friendly configuration and centralized management of the solution. Following is a step-by-step description of how you would migrate the solution to the SharePoint Framework. First, you will migrate the solution to the SharePoint Framework with as few changes to the original code as possible. Later, you will transform the solution's code to TypeScript to benefit of its development-time type safety features.
 
@@ -150,11 +157,11 @@ When prompted, define values as follows:
 - **IT requests** as your web part name
 - **Shows overview of IT support requests** as your web part description
 
-![SharePoint Framework Yeoman generator with the default choices](../../../../images/datatables-yeoman.png)
+![SharePoint Framework Yeoman generator with the default choices](../../../images/datatables-yeoman.png)
 
 Once the scaffolding completes, open your project folder in your code editor. In this tutorial, you will use Visual Studio Code.
 
-![SharePoint Framework project open in Visual Studio Code](../../../../images/datatables-vscode.png)
+![SharePoint Framework project open in Visual Studio Code](../../../images/datatables-vscode.png)
 
 ### Load JavaScript libraries
 
@@ -189,7 +196,7 @@ export default class ItRequestsWebPart extends BaseClientSideWebPart<IItRequests
   public render(): void {
     this.domElement.innerHTML = `
       <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.15/css/jquery.dataTables.min.css" />
-      <table id="requests" class="display ${styles.itRequests}" cellspacing="0" width="100%">
+      <table id="requests" class="display ${styles.helloWorld}" cellspacing="0" width="100%">
         <thead>
             <tr>
                 <th>ID</th>
@@ -340,7 +347,7 @@ gulp serve --nobrowser
 
 Because the web part loads its data from SharePoint, you have to test the web part using the hosted SharePoint Framework workbench. Navigate to **https://yourtenant.sharepoint.com/_layouts/workbench.aspx** and add the web part to the canvas. You should now see the IT requests displayed using the DataTables jQuery plugin.
 
-![IT requests displayed in a SharePoint Framework client-side web part](../../../../images/datatables-spfx.png)
+![IT requests displayed in a SharePoint Framework client-side web part](../../../images/datatables-spfx.png)
 
 ## Add support for configuring the web part through web part properties
 
@@ -350,7 +357,7 @@ In the previous steps you migrated the IT requests solutions from Script Editor 
 
 Start with defining a web part property to store the name of the list from which IT requests should be loaded. In the code editor, open the **./src/webparts/itRequests/ItRequestsWebPart.manifest.json** file and rename the default **description** property to **listName** and clear its value.
 
-![The listName property in the web part manifest highlighted in Visual Studio Code](../../../../images/datatables-spfx-listname-property.png)
+![The listName property in the web part manifest highlighted in Visual Studio Code](../../../images/datatables-spfx-listname-property.png)
 
 Next, update the web part properties interface to reflect the changes in the manifest. In the code editor, open the **./src/webparts/itRequests/IItRequestsWebPartProps.ts** file and change its contents to:
 
@@ -492,7 +499,7 @@ gulp serve --nobrowser
 
 Navigate to the hosted workbench and add the web part to the canvas. Open the web part property pane, specify the name of the list with IT requests and click the **Apply** button to confirm the changes. You should now see IT requests displayed in the web part.
 
-![IT requests loaded from the configured list and displayed in a SharePoint Framework client-side web part](../../../../images/datatables-spfx-list-configured.png)
+![IT requests loaded from the configured list and displayed in a SharePoint Framework client-side web part](../../../images/datatables-spfx-list-configured.png)
 
 ## Transform the plain JavaScript code to TypeScript
 
@@ -505,7 +512,7 @@ To function properly, TypeScript requires type definitions for the different lib
 Start by installing type definitions for jQuery and DataTables by executing in the command line:
 
 ```sh
-npm install --save-dev @types/jquery@1 @types/datatables.net
+npm install --save-dev @types/jquery @types/jquery.datatables
 ```
 
 Type definitions for Moment.js are distributed together with the Moment.js package. Even though, you're loading Moment.js from a URL, in order to use its typings, you still need to install the Moment.js package in the project.
@@ -530,7 +537,7 @@ Having defined **$** as jQuery you can now remove the local definition of **$** 
 var $: any = (window as any).$;
 ```
 
-Because DataTables is a jQuery plugin that attaches itself to jQuery you cannot load its type definition directly. Instead, you have to add it to the list of types loaded globally. In the code editor, open the **./tsconfig.json** file and to the **types** array add **datatables.net**:
+Because DataTables is a jQuery plugin that attaches itself to jQuery you cannot load its type definition directly. Instead, you have to add it to the list of types loaded globally. In the code editor, open the **./tsconfig.json** file and to the **types** array add **jquery.datatables**:
 
 ```json
 {
@@ -544,7 +551,7 @@ Because DataTables is a jQuery plugin that attaches itself to jQuery you cannot 
     "types": [
       "es6-promise",
       "es6-collections",
-      "datatables.net",
+      "jquery.datatables",
       "webpack-env"
     ]
   }
@@ -607,7 +614,7 @@ export default class ItRequestsWebPart extends BaseClientSideWebPart<IItRequests
       },
       columnDefs: [{
         targets: 4,
-        render: ($.fn as any).dataTable.render.moment('YYYY/MM/DD')
+        render: $.fn.dataTable.render.moment('YYYY/MM/DD')
       }]
     });
   }
@@ -629,7 +636,7 @@ import * as $ from 'jquery';
 import * as moment from 'moment';
 
 /* tslint:disable:no-function-expression */
-($.fn as any).dataTable.render.moment = function (from: string, to: string, locale: string): (d: any, type: string, row: any) => string {
+$.fn.dataTable.render.moment = function (from: string, to: string, locale: string): (d: any, type: string, row: any) => string {
 /* tslint:enable */
     // Argument shifting
     if (arguments.length === 1) {

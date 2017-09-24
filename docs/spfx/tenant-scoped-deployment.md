@@ -1,3 +1,10 @@
+---
+title: Tenant-Scoped solution deployment for SharePoint Framework solutions
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Tenant-Scoped solution deployment for SharePoint Framework solutions
 
 You can configure your SharePoint Framework components to be immediately available cross the tenant when solution package is installed to tenant app catalog. This can be configured by using **skipFeatureDeployment** attribute in the **package-solution.json** file.
@@ -7,7 +14,7 @@ When solution has this attribute enabled, tenant administrator will be provided 
 You can also see the tenant-wide deployment option demonstrated by watching following video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=pemHOZCSwZI).
 
 <a href="https://www.youtube.com/watch?v=pemHOZCSwZI&list=PLR9nK3mnD-OXZbEvTEPxzIOMGXj_aZKJG">
-<img src="../../images/tenant-deploy-youtube-video.png" alt="PnP Short Guidance video on tenant-wide deployment option" />
+<img src="../images/tenant-deploy-youtube-video.png" alt="PnP Short Guidance video on tenant-wide deployment option" />
 </a>
 
 > Notice. You have to update to latest SharePoint Framework Yeoman template version to be able to use this capability. You can update your global installation by executing `npm install -g @microsoft/generator-sharepoint`. 
@@ -24,7 +31,7 @@ When this option is used, any feature framework definitions in the SharePoint Fr
 
 SharePoint Framework Yeoman template will ask a specific question related on this option. This question will impact directly on the **skipFeatureDeployment** attribute in the **package-solution.json** file. 
 
-![Yeoman question around tenant deployed option](../../images/tenant-deploy-yeoman.png)
+![Yeoman question around tenant deployed option](../images/tenant-deploy-yeoman.png)
 
 In following example configuration, **skipFeatureDeployment** is set to true, which indicates that solution can be centrally deployed cross the tenant. 
 
@@ -49,7 +56,7 @@ When solution with **skipFeatureDeployment** attribute set to **true** is deploy
 
 By default, "**Make this solution available to all sites in the organization**" checkbox is unchecked. If the checkbox is checked by the administrator, components in the solutions will be automatically visible and available cross the tenant. 
 
-!["Make this solution available to all sites in the organization" setting visible when solution is deployed to app catalog](../../images/tenant-deploy-app-catalog.png)
+!["Make this solution available to all sites in the organization" setting visible when solution is deployed to app catalog](../images/tenant-deploy-app-catalog.png)
 
 Notice that since the solution and site -specific upgrade actions are only available when you use feature framework, there's no specific upgrade option for the centrally deployed solutions. These solutions can be simply updated by updating solution specific assets in the CDN and by updating package in the app catalog. This will update automatically all existing component instances cross the tenant to use the latest component assets, like JavaScript files and updated CSS files.
 

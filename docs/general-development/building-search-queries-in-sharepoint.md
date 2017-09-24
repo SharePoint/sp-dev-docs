@@ -1,6 +1,7 @@
 ---
 title: Building search queries in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: c4372fcc-4574-4c81-a345-a1bb282ca8f7
 ---
 
@@ -50,13 +51,13 @@ For more information about result sources and how they work, see to:  [Understan
 <a name="SP15Buildquery_support"> </a>
 
 
--  [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference)
+-  [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference.md)
     
   
--  [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference)
+-  [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference.md)
     
   
--  [Using the SharePoint search Query APIs](using-the-sharepoint-search-query-apis)
+-  [Using the SharePoint search Query APIs](using-the-sharepoint-search-query-apis.md)
     
   
 
@@ -64,7 +65,7 @@ For more information about result sources and how they work, see to:  [Understan
 <a name="SP15Buildquery_addlresources"> </a>
 
 
--  [Search in SharePoint](search-in-sharepoint)
+-  [Search in SharePoint](search-in-sharepoint.md)
     
   
 -  [Overview of query processing in SharePoint](http://technet.microsoft.com/en-us/library/jj219620%28v=office.15%29.aspx)

@@ -1,3 +1,10 @@
+---
+title: SharePoint Framework development tools and libraries
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # SharePoint Framework development tools and libraries
 
 The SharePoint Framework includes several client-side JavaScript libraries that you can use to build your solutions. This article provides an overview of the tools and libraries that you can use to develop client-side web parts.
@@ -101,5 +108,5 @@ The [Office Dev Patterns and Practices / SharePoint Pattern and Practices (PnP)]
 
 ## Additional resources
 
-* [SharePoint Framework](sharepoint-framework-overview)
-* [Build a Hello World client-side web part](web-parts/get-started/build-a-hello-world-web-part)
+* [SharePoint Framework](sharepoint-framework-overview.md)
+* [Build a Hello World client-side web part](web-parts/get-started/build-a-hello-world-web-part.md)

@@ -1,9 +1,15 @@
+---
+title: Use an Office 365 SharePoint site to authorize provider-hosted add-ins on an on-premises SharePoint site
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # Use an Office 365 SharePoint site to authorize provider-hosted add-ins on an on-premises SharePoint site
 Use an Office 365 SharePoint site to create an environment where you can use ACS to establish trust between a provider-hosted add-in and an on-premises SharePoint farm, just as you would if you were developing add-ins for an Office 365 SharePoint site.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 
@@ -15,10 +21,10 @@ Be sure that you have the following.
 
  
 
-- An on-premises SharePoint development environment. See  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins).
+- An on-premises SharePoint development environment. See  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md).
     
  
-- An Office 365 SharePoint site. If don't have one yet and you want to set up a development environment quickly, you can  [Set up a development environment for SharePoint Add-ins on Office 365](set-up-a-development-environment-for-sharepoint-add-ins-on-office-365).
+- An Office 365 SharePoint site. If don't have one yet and you want to set up a development environment quickly, you can  [Set up a development environment for SharePoint Add-ins on Office 365](set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md).
     
  
 -  [Visual Studio 2012](https://www.microsoft.com/en-us/download/details.aspx?id=30682) installed either remotely or on the computer where you installed SharePoint.
@@ -62,7 +68,7 @@ You'll need to replace the default security token service (STS) certificate of y
 
  
 
-  ![Server Certificates option in IIS](../../images/e38f9b7f-59a3-468c-bcde-a48272f1f217.gif)
+  ![Server Certificates option in IIS](../images/e38f9b7f-59a3-468c-bcde-a48272f1f217.gif)
  
 
  
@@ -74,7 +80,7 @@ You'll need to replace the default security token service (STS) certificate of y
 
  
 
-  ![Create Self-Signed Cerificate link](../../images/3f0aae5a-e58b-4ec8-b67f-0024abfa2dab.gif)
+  ![Create Self-Signed Cerificate link](../images/3f0aae5a-e58b-4ec8-b67f-0024abfa2dab.gif)
  
 
  
@@ -89,7 +95,7 @@ You'll need to replace the default security token service (STS) certificate of y
 
  
 
-  ![Exporting a test certificate](../../images/997021de-c60c-46b0-961f-7e1e63c0f619.gif)
+  ![Exporting a test certificate](../images/997021de-c60c-46b0-961f-7e1e63c0f619.gif)
  
 
  
@@ -122,7 +128,7 @@ Set-SPSecurityTokenServiceConfig -ImportSigningCertificate $stsCertificate -conf
 ```
 
 
- **Note**  The  [Configure a one-way hybrid environment with SharePoint Server 2013 and Office 365](http://download.microsoft.com/download/6/4/4/644BA525-96CB-4739-B08F-18949A9BDADC/sps-2013-config-one-way-hybrid-environment.docx) document that is available for download on the [SharePoint hybrid resources page](http://www.microsoft.com/en-us/download/details.aspx?id=35593) explains in greater detail how to replace the default STS certificate of your on-premises farm with a certificate from a well-known certification authority or a self-signed certificate.
+ **Note**  The  [Configure a one-way hybrid environment with SharePoint Server 2013 and Office 365](http://download.microsoft.com/download/6/4/4/644BA525-96CB-4739-B08F-18949A9BDADC/sps-config-one-way-hybrid-environment.docx) document that is available for download on the [SharePoint hybrid resources page](http://www.microsoft.com/en-us/download/details.aspx?id=35593) explains in greater detail how to replace the default STS certificate of your on-premises farm with a certificate from a well-known certification authority or a self-signed certificate.
  
 
 
@@ -139,7 +145,7 @@ Figure 4 shows the four steps to enable the connections you need within the over
  
 
  
-![Make ACS work with an on-premises installation of SharePoint by using an Office 365 site](../../images/SP15_OnPremACSArchitecture.png)
+![Make ACS work with an on-premises installation of SharePoint by using an Office 365 site](../images/SP15_OnPremACSArchitecture.png)
  
 
  
@@ -462,7 +468,7 @@ Get-SPWebApplication | ForEach-Object {
 ## Next Steps
 <a name="CreateApp"> </a>
 
-Follow the steps in  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins) to create a simple "hello world" provider-hosted add-in that uses ACS as the token issuer.
+Follow the steps in  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md) to create a simple "hello world" provider-hosted add-in that uses ACS as the token issuer.
  
 
  
@@ -471,6 +477,6 @@ Follow the steps in  [Get started creating provider-hosted SharePoint Add-ins](g
 <a name="bk_addresources"> </a>
 
 
--  [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins)
+-  [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md)
     
  

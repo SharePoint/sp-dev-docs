@@ -1,15 +1,21 @@
+---
+title: SharePoint Add-ins update process
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # SharePoint Add-ins update process
 Learn about the process for updating SharePoint Add-ins.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 You have to update a SharePoint Add-in if you add functionality, fix a bug, or make a security update. An update to an add-in is deployed in a SharePoint Add-in package in the same way that the first version of the add-in is deployed. The SharePoint Add-in update process ensures that the add-in's data is preserved if the update fails for any reason.
  
 
- **Important**  You cannot change the  *add-in type*  using the update system. For example, you cannot change an add-in from SharePoint-hosted to provider-hosted with an update. To make a change of type, you need to [migrate from an old add-in to a new one](#Major). In particular, since  [the preview program for autohosted add-ins has been closed](http://blogs.office.com/2014/05/16/update-on-autohosted-apps-preview-program/), you should be aware that you cannot update an autohosted add-in to a provider-hosted add-in. You have to convert the add-in as explained in  [Convert an autohosted SharePoint Add-in to a provider-hosted add-in](convert-an-autohosted-sharepoint-add-in-to-a-provider-hosted-add-in).
+ **Important**  You cannot change the  *add-in type*  using the update system. For example, you cannot change an add-in from SharePoint-hosted to provider-hosted with an update. To make a change of type, you need to [migrate from an old add-in to a new one](#Major). In particular, since  [the preview program for autohosted add-ins has been closed](http://blogs.office.com/2014/05/16/update-on-autohosted-apps-preview-program/), you should be aware that you cannot update an autohosted add-in to a provider-hosted add-in. You have to convert the add-in as explained in  [Convert an autohosted SharePoint Add-in to a provider-hosted add-in](convert-an-autohosted-sharepoint-add-in-to-a-provider-hosted-add-in.md).
  
 
 
@@ -30,11 +36,11 @@ Within 24 hours after you upload your update to an organization's add-in catalog
  
 
  
-![The UI steps for updating an app](../../images/UpdatingApp_AppTileUpdateNotice.png)
+![The UI steps for updating an app](../images/UpdatingApp_AppTileUpdateNotice.png)
  
 
     
- **Tip**   When you are developing an update, you don't want to wait 24 hours every time you upload a new version to your test SharePoint add-in catalog. See [Update an add-in without waiting 24 hours ](update-sharepoint-add-ins#ImmediateUpdateNotice) for information about how to immediately update an add-in. By default, SharePoint checks every 24 hours for updates to installed add-ins. A farm administrator can set this to another value by using the following SharePoint Management Shell command, wheren is the number of hours between checks. `Set-SPInternalAppStateUpdateInterval -AppStateSyncHours n` If the value is set to 0, then the check is made every time the built-in timer job **Internal Add-in State Update** executes, which by default is every hour. Farm administrators can use Central Admin to change the frequency of the timer job or run it immediately.
+ **Tip**   When you are developing an update, you don't want to wait 24 hours every time you upload a new version to your test SharePoint add-in catalog. See [Update an add-in without waiting 24 hours ](update-sharepoint-add-ins.md#ImmediateUpdateNotice) for information about how to immediately update an add-in. By default, SharePoint checks every 24 hours for updates to installed add-ins. A farm administrator can set this to another value by using the following SharePoint Management Shell command, wheren is the number of hours between checks. `Set-SPInternalAppStateUpdateInterval -AppStateSyncHours n` If the value is set to 0, then the check is made every time the built-in timer job **Internal Add-in State Update** executes, which by default is every hour. Farm administrators can use Central Admin to change the frequency of the timer job or run it immediately.
  
 
 SharePoint will do the following when a user installs an update to a SharePoint Add-in. These events do not necessarily occur in exactly this order, and some of them may occur in parallel. Also, if update fails, there is a complete rollback.
@@ -109,28 +115,28 @@ If the old and new add-ins each contain an add-in web, consider that a new add-i
 <a name="SP15appupgrade_addlresources"> </a>
 
 
--  [Update SharePoint Add-ins](update-sharepoint-add-ins)
+-  [Update SharePoint Add-ins](update-sharepoint-add-ins.md)
     
  
--  [Update add-in web components in SharePoint](update-add-in-web-components-in-sharepoint-2013)
+-  [Update add-in web components in SharePoint](update-add-in-web-components-in-sharepoint.md)
     
  
--  [Update host web components in SharePoint](update-host-web-components-in-sharepoint-2013)
+-  [Update host web components in SharePoint](update-host-web-components-in-sharepoint.md)
     
  
--  [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins)
+-  [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins.md)
     
  
--  [Update remote components in SharePoint Add-ins](update-remote-components-in-sharepoint-add-ins)
+-  [Update remote components in SharePoint Add-ins](update-remote-components-in-sharepoint-add-ins.md)
     
  
--  [Publish SharePoint Add-ins](publish-sharepoint-add-ins)
+-  [Publish SharePoint Add-ins](publish-sharepoint-add-ins.md)
     
  
--  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscape)
+-  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md)
     
  
--  [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options)
+-  [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options.md)
     
  
 

@@ -1,16 +1,22 @@
+---
+title: High-trust configuration scripts for SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # High-trust configuration scripts for SharePoint
 Get customizable Windows PowerShell scripts that configure a Microsoft SharePoint farm to use a high-trust SharePoint Add-in.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 
 ## How to use the scripts
 <a name="Usage"> </a>
 
-The scripts below are used to designate one or more X.509 digital certificates as trusted issuers of access tokens in a staging or production Microsoft SharePoint farm. (For a script that is more appropriate for an SharePoint Add-ins development environment, see  [Create high-trust SharePoint Add-ins](create-high-trust-sharepoint-add-ins).) No single set of scripts can work for every SharePoint farm because there are too many different ways that the certificates can be acquired and stored. For that reason, please note the following:
+The scripts below are used to designate one or more X.509 digital certificates as trusted issuers of access tokens in a staging or production Microsoft SharePoint farm. (For a script that is more appropriate for an SharePoint Add-ins development environment, see  [Create high-trust SharePoint Add-ins](create-high-trust-sharepoint-add-ins.md).) No single set of scripts can work for every SharePoint farm because there are too many different ways that the certificates can be acquired and stored. For that reason, please note the following:
  
 
  
@@ -21,7 +27,7 @@ The scripts below are used to designate one or more X.509 digital certificates a
 - These scripts should be thought of as drafts that may need to be customized.
     
  
-- They are used as part of the overall process of publishing a high-trust SharePoint Add-in. They should only be used by someone familiar with the topics  [Creating SharePoint Add-ins that use high-trust authorization](creating-sharepoint-add-ins-that-use-high-trust-authorization) and [Package and publish high-trust SharePoint Add-ins](package-and-publish-high-trust-sharepoint-add-ins) and the prerequisites listed in them.
+- They are used as part of the overall process of publishing a high-trust SharePoint Add-in. They should only be used by someone familiar with the topics  [Creating SharePoint Add-ins that use high-trust authorization](creating-sharepoint-add-ins-that-use-high-trust-authorization.md) and [Package and publish high-trust SharePoint Add-ins](package-and-publish-high-trust-sharepoint-add-ins.md) and the prerequisites listed in them.
     
  
 - They should also be reviewed and customized as needed by someone familiar with the add-in customer's certificate policies.
@@ -39,7 +45,7 @@ The scripts below are used to designate one or more X.509 digital certificates a
     To find the user account that an application pool is using, open IIS Manager on a SharePoint server and double-click  **Application Pools** in the **Connections** pane. The **Identity** column in the **Application Pools** list that opens shows the users for the application pools.
     
  
-- The instructions for the two major scripts also assume that the certificate(s) have been installed to IIS on server(s) that host the remote web application(s). For instructions, see  [Configure the remote web server with the certificate](package-and-publish-high-trust-sharepoint-add-ins#ConfigureRemote).
+- The instructions for the two major scripts also assume that the certificate(s) have been installed to IIS on server(s) that host the remote web application(s). For instructions, see  [Configure the remote web server with the certificate](package-and-publish-high-trust-sharepoint-add-ins.md#ConfigureRemote).
     
  
 See specific usage notes for each script in the sections below.

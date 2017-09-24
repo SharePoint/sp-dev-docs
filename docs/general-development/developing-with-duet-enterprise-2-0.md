@@ -1,6 +1,7 @@
 ---
 title: Developing with Duet Enterprise 2.0
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: c3ef38aa-559e-4832-95c7-75e222c77624
 ---
 
@@ -56,7 +57,7 @@ Developing SharePoint Add-ins using Duet Enterprise 2.0, for the most part, is e
 ## Adding external content types
 <a name="AddingECT"> </a>
 
-In order to access the external data housed on the SAP system, you will have to add an external content type. Since SAP data is exposed through OData endpoints, the auto-generation tools installed in Visual Studio can be used to  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint) that is scoped at the app level.
+In order to access the external data housed on the SAP system, you will have to add an external content type. Since SAP data is exposed through OData endpoints, the auto-generation tools installed in Visual Studio can be used to  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md) that is scoped at the app level.
   
     
     
@@ -158,7 +159,7 @@ These solutions can be used to see what can be done with Duet Enterprise 2.0 and
 -  [Duet Enterprise for Microsoft SharePoint and SAP Server 2.0](http://technet.microsoft.com/en-us/library/ff972436.aspx)
     
   
--  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint)
+-  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md)
     
   
 -  [Visual Studio Developer Center](http://msdn.microsoft.com/en-us/vstudio/default)

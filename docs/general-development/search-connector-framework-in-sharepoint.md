@@ -1,6 +1,7 @@
----
+﻿---
 title: Search connector framework in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 38560a3b-69c6-4a56-97ca-3625bbd5755e
 ---
 
@@ -68,7 +69,7 @@ Figure 1 provides a high-level overview of the SharePoint indexing connector sto
   
     
     
-![SharePoint indexing connectors](../../images/SP15Con_CF_IndexingConnectors.jpg)
+![SharePoint indexing connectors](../images/SP15Con_CF_IndexingConnectors.jpg)
   
     
     
@@ -102,7 +103,7 @@ BCS is the umbrella of tools and infrastructure that enables you to connect to e
   
     
     
-![BCS architecture](../../images/SP15Con_CF_BCS_Overview.jpg)
+![BCS architecture](../images/SP15Con_CF_BCS_Overview.jpg)
   
     
     
@@ -193,7 +194,7 @@ Figure 3 shows a high-level view of the search connector framework architecture.
   
     
     
-![Search connector framework architecture](../../images/SP15Con_CF_ConnFrwkArch.jpg)
+![Search connector framework architecture](../images/SP15Con_CF_ConnFrwkArch.jpg)
   
     
     
@@ -307,22 +308,22 @@ The connector framework also provides improved exception capturing and logging t
 <a name="SP15searchconnect_addlresources"> </a>
 
 
--  [Enhancing the BDC model file for Search in SharePoint](enhancing-the-bdc-model-file-for-search-in-sharepoint)
+-  [Enhancing the BDC model file for Search in SharePoint](enhancing-the-bdc-model-file-for-search-in-sharepoint.md)
     
   
 -  [SharePoint: MyFileConnector custom BCS indexing connector sample](http://code.msdn.microsoft.com/SharePoint-MyFileConne-79d2ea26)
     
   
--  [How to: Crawl associated external content types in SharePoint](how-to-crawl-associated-external-content-types-in-sharepoint)
+-  [How to: Crawl associated external content types in SharePoint](how-to-crawl-associated-external-content-types-in-sharepoint.md)
     
   
--  [How to: Crawl binary large objects (BLOBs) in SharePoint](how-to-crawl-binary-large-objects-blobs-in-sharepoint)
+-  [How to: Crawl binary large objects (BLOBs) in SharePoint](how-to-crawl-binary-large-objects-blobs-in-sharepoint.md)
     
   
--  [How to: Crawl associated external content types in SharePoint](how-to-crawl-associated-external-content-types-in-sharepoint)
+-  [How to: Crawl associated external content types in SharePoint](how-to-crawl-associated-external-content-types-in-sharepoint.md)
     
   
--  [How to: Configure item-level security in SharePoint](how-to-configure-item-level-security-in-sharepoint)
+-  [How to: Configure item-level security in SharePoint](how-to-configure-item-level-security-in-sharepoint.md)
     
   
 

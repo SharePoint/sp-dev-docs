@@ -1,3 +1,10 @@
+---
+title: Known issues and frequently asked questions
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Known issues and frequently asked questions
 
 This page is for listing any known issues or to answer any frequently asked questions around SharePoint Framework. 
@@ -19,16 +26,15 @@ You should update your Yeoman template packages. We have updated certification c
 
 - *Date - 6th of June*
 
-SharePoint Extensions with additional customizations capabilities for the SharePoint Online is now available as Release Candiate release. We do not have public GA date currently. You can start learning how to build these extensions reading following tutorials.
+SharePoint Extensions with additional customizations capabilities for the SharePoint Online is now available for dev preview. We do not have public GA date currently. You can start learning how to build these extensions reading following tutorials.
 
 * [Getting started with SharePoint Framework Extensions](http://aka.ms/spfx-extensions)
 
 **Will SharePoint Framework be available in on-premises?**
 
 - *Date - 6th of June*
-- *Updated - 12th of September*
 
-SharePoint Framework client-side web parts are now available as part of the SharePoint 2016 Feature Pack 2 (FP2). 
+SharePoint Framework client-side web parts will be released to SharePoint 2016 as part of the Feature Pack 2 (FP2). 
 
 ## Additional resources
 Please use following resources to provide feedback, comments and questions towards SharePoint engineering. 

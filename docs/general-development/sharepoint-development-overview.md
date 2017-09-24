@@ -1,6 +1,7 @@
----
+﻿---
 title: SharePoint development overview
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: f86e2695-4d7a-4fc5-bc23-689de96c4b06
 ---
 
@@ -31,14 +32,14 @@ The following article can help you get acquainted with SharePoint Add-ins and de
     
     
 
--  [SharePoint Add-ins compared with SharePoint solutions](sharepoint-add-ins-compared-with-sharepoint-solutions)
+-  [SharePoint Add-ins compared with SharePoint solutions](sharepoint-add-ins-compared-with-sharepoint-solutions.md)
     
   
  **For SharePoint solutions and add-ins for mobility features development**
   
     
     
-If you want to develop farm solutions, you can take advantage of many new capabilities, including features for social applications, integration with remote data stores (Business Connectivity Services), and mobile development. Start with our guidance in  [What's new for developers in SharePoint](what’s-new-for-developers-in-sharepoint).
+If you want to develop farm solutions, you can take advantage of many new capabilities, including features for social applications, integration with remote data stores (Business Connectivity Services), and mobile development. Start with our guidance in  [What's new for developers in SharePoint](what-s-new-for-developers-in-sharepoint.md).
   
     
     
@@ -47,10 +48,10 @@ The following sections describe how to create mobile solutions for SharePoint.
     
     
 
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
--  [How to: Build search-driven mobile apps with the Navigation and Event Logging REST interfaces](how-to-build-search-driven-mobile-apps-with-the-navigation-and-event-logging-res)
+-  [How to: Build search-driven mobile apps with the Navigation and Event Logging REST interfaces](how-to-build-search-driven-mobile-apps-with-the-navigation-and-event-logging-res.md)
     
   
 The following sections provide information about SharePoint features that are available for farm solutions. 
@@ -58,10 +59,10 @@ The following sections provide information about SharePoint features that are av
     
     
 
--  [Build sites for SharePoint](build-sites-for-sharepoint)
+-  [Build sites for SharePoint](build-sites-for-sharepoint.md)
     
   
--  [Add SharePoint capabilities](add-sharepoint-capabilities)
+-  [Add SharePoint capabilities](add-sharepoint-capabilities.md)
     
   
 
@@ -86,11 +87,11 @@ Table 1 shows the resources for setting up a development environment and beginni
 
 |**Topic**|**Description**|
 |:-----|:-----|
-| [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint) <br/> |Contains step-by-step instructions on how to install the components of a SharePoint development environment.  <br/> |
-| [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint) <br/> |Describes the several sets of APIs that are provided in SharePoint, including the server object model and the various client-side object models, and the REST/OData web service.  <br/> |
-| [What's new for developers in SharePoint](what’s-new-for-developers-in-sharepoint) <br/> |Provides a gateway to detailed information about new features and functionality in SharePoint.  <br/> |
-| [Programming models in SharePoint](programming-models-in-sharepoint) <br/> |Provides a quick overview of the different kinds of SharePoint development projects that you can create with SharePoint.  <br/> |
-| [Add SharePoint capabilities](add-sharepoint-capabilities) <br/> |Provides a gateway to detailed information about using the capabilities of SharePoint in your solutions.  <br/> |
+| [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md) <br/> |Contains step-by-step instructions on how to install the components of a SharePoint development environment.  <br/> |
+| [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md) <br/> |Describes the several sets of APIs that are provided in SharePoint, including the server object model and the various client-side object models, and the REST/OData web service.  <br/> |
+| [What's new for developers in SharePoint](what-s-new-for-developers-in-sharepoint.md) <br/> |Provides a gateway to detailed information about new features and functionality in SharePoint.  <br/> |
+| [Programming models in SharePoint](programming-models-in-sharepoint.md) <br/> |Provides a quick overview of the different kinds of SharePoint development projects that you can create with SharePoint.  <br/> |
+| [Add SharePoint capabilities](add-sharepoint-capabilities.md) <br/> |Provides a gateway to detailed information about using the capabilities of SharePoint in your solutions.  <br/> |
    
  **For SharePoint Add-ins development**
   
@@ -121,10 +122,10 @@ When you know the kinds of SharePoint Add-in that you want to create, we provide
 <a name="bk_additionalresources"> </a>
 
 
--  [Accessibility in SharePoint](accessibility-in-sharepoint)
+-  [Accessibility in SharePoint](accessibility-in-sharepoint.md)
     
   
--  [Protocol handler error due to deprecated interface in SharePoint 2016](protocol-handler-error-due-to-deprecated-interface-in-sharepoint-2016)
+-  [Protocol handler error due to deprecated interface in SharePoint 2016](protocol-handler-error-due-to-deprecated-interface-in-sharepoint-2016.md)
     
   
 -  [.NET server API reference for SharePoint](http://msdn.microsoft.com/library/fb8a82f1-9239-49ae-89f3-ce1385fb28b5%28Office.15%29.aspx)

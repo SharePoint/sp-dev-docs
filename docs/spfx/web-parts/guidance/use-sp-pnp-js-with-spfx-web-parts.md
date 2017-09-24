@@ -1,3 +1,10 @@
+---
+title: Use sp-pnp-js with SharePoint Framework Web Parts
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Use sp-pnp-js with SharePoint Framework Web Parts
 
 You may opt to use the [sp-pnp-js](https://www.npmjs.com/package/sp-pnp-js) library when building your SharePoint Framework (SPFx) web parts. This library provides a fluent API to make building your REST queries intuitive and supports batching and caching. You can learn more on the [project's homepage](https://github.com/SharePoint/PnP-JS-Core) which has links to documentation, samples, and other resources to help you get started.
@@ -36,7 +43,7 @@ Enter the following values when prompted during the setup of the new project:
 - **SPPnPJSExample** as the name of the web part
 - **Example of using sp-pnp-js within SPFx** as the description
 
-![Completed Project Scaffolding](../../../../images/sp-pnp-js-guide-completed-setup.png)
+![Completed Project Scaffolding](../../../images/sp-pnp-js-guide-completed-setup.png)
 
 
 Once the scaffolding completes, open the project in the code editor of your choosing. The screenshots shown here demonstrate [Visual Studio Code](https://code.visualstudio.com/). To open the directory within Visual Studio Code, enter the following in the console:
@@ -45,7 +52,7 @@ Once the scaffolding completes, open the project in the code editor of your choo
 code .
 ```
 
-![Project as first opened in visual studio code](../../../../images/sp-pnp-js-guide-first-open.png)
+![Project as first opened in visual studio code](../../../images/sp-pnp-js-guide-first-open.png)
 
 ## Install And Setup sp-pnp-js
 
@@ -340,7 +347,7 @@ Start the sample and add the web part to your SharePoint hosted workbench (/_lay
 gulp serve --nobrowser
 ```
 
-![Project as it appears on first run](../../../../images/sp-pnp-js-guide-first-run.png)
+![Project as it appears on first run](../../../images/sp-pnp-js-guide-first-run.png)
 
 You can delete existing items by clicking on the trashcan icon, or add new items by putting values in both fields and clicking the add button.
 
@@ -493,7 +500,7 @@ Finally, type `gulp serve` in the console to bring up the local workbench, which
 gulp serve
 ```
 
-![Project as it appears running in the local workbench with mock data](../../../../images/sp-pnp-js-guide-with-mock-data.png)
+![Project as it appears running in the local workbench with mock data](../../../images/sp-pnp-js-guide-with-mock-data.png)
 
 
 ## Download Full Example Code

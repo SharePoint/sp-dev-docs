@@ -1,3 +1,10 @@
+---
+title: Integrate gulp tasks in SharePoint Framework toolchain
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Integrate gulp tasks in SharePoint Framework toolchain
 
 SharePoint client-side development tools use [gulp](http://gulpjs.com/) as the build process task runner to:
@@ -20,7 +27,7 @@ gulp.task('somename', function() {
 
 When working with the SharePoint Framework toolchain, it is necessary to define your tasks in the framework's build pipeline. Once defined and registered with the pipeline, the task will be added to the toolchain.
 
-SharePoint Framework uses a [common build toolchain](sharepoint-framework-toolchain.md#common-build-tools-packages) which consists of a set of npm packages that share common build tasks. And hence, the default tasks are defined in the common package as opposed to your client-side project's `gulpfile.js`. To see the available tasks, you can execute the following command in a console within your project directory:
+SharePoint Framework uses a [common build toolchain](sharepoint-framework-toolchain.md#common-build-tool-packages) which consists of a set of npm packages that share common build tasks. And hence, the default tasks are defined in the common package as opposed to your client-side project's `gulpfile.js`. To see the available tasks, you can execute the following command in a console within your project directory:
 
 ```
 gulp --tasks
@@ -28,7 +35,7 @@ gulp --tasks
 
 The command above will list all the available tasks.
 
-![Available gulp tasks](../../../images/gulp-tasks-available.png)
+![Available gulp tasks](../../images/gulp-tasks-available.png)
 
 ## Custom gulp tasks
 To add your custom tasks, you will define the custom tasks in the `gulpfile.js`. Open the `gulpfile.js` in your code editor. The default code initializes the SharePoint Framework toolchain and the global `gulp` instance for the toolchain. Any custom tasks added should be defined before initializing the global `gulp` instance.
@@ -138,11 +145,11 @@ Now, you can execute this task from the gulp command line as follows:
 gulp resize-images
 ```
 
-![image-resize-task](../../../images/gulp-extend-image-resize-task.png)
+![image-resize-task](../../images/gulp-extend-image-resize-task.png)
 
 You will also see this `resize-images` task in the available tasks for your project when you execute `gulp --tasks`:
 
-![image-resize-task with available tasks](../../../images/gulp-extend-image-resize-available-tasks.png)
+![image-resize-task with available tasks](../../images/gulp-extend-image-resize-available-tasks.png)
 
 
 

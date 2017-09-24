@@ -1,6 +1,7 @@
 ---
 title: Understanding Eventing Actions in SharePoint Designer 2013
-ms.prod: SHAREPOINTDESIGNER
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: fe4ad8cf-2c6f-488d-8b33-6bf4357018ac
 ---
 
@@ -45,7 +46,7 @@ The Eventing actions are accessed in the **Action** drop-down menu of the ShareP
   
     
     
-![Eventing Actions in SharePoint Designer 2013](../../images/SPD15-EventingActions1.png)
+![Eventing Actions in SharePoint Designer 2013](../images/SPD15-EventingActions1.png)
   
     
     
@@ -59,7 +60,7 @@ The Eventing actions are accessed in the **Action** drop-down menu of the ShareP
   
     
     
-![Wait for Project Event action](../../images/SPD15-EventingActions4.png)
+![Wait for Project Event action](../images/SPD15-EventingActions4.png)
   
     
     
@@ -73,7 +74,7 @@ The Eventing actions are accessed in the **Action** drop-down menu of the ShareP
   
     
     
-![Selecting Wait for Field Change in Current Item.](../../images/wf15-eventingactions3.png)
+![Selecting Wait for Field Change in Current Item.](../images/wf15-eventingactions3.png)
   
     
     
@@ -114,7 +115,7 @@ The **Wait for Event in List Item** action contains two editable regions, as sho
   
     
     
-![Wait for event action in SharePoint Designer 2013](../../images/SPD15-EventingActions2.png)
+![Wait for event action in SharePoint Designer 2013](../images/SPD15-EventingActions2.png)
   
     
     
@@ -151,7 +152,7 @@ Clicking the **this item event** link opens the **Choose List Item Event** dialo
   
     
     
-![Choose List Item Event dialog](../../images/SPD15-EventingActions3.jpg)
+![Choose List Item Event dialog](../images/SPD15-EventingActions3.jpg)
   
     
     
@@ -184,7 +185,7 @@ The **Wait for Project Event** action contains one editable region, as shown in 
   
     
     
-![Wait for Project Event in workflow](../../images/SPD15-EventingActions5.png)
+![Wait for Project Event in workflow](../images/SPD15-EventingActions5.png)
   
     
     
@@ -229,7 +230,7 @@ The **Wait for Field Change in Current Item** action contains two editable regio
   
     
     
-![Screenshot of eventing action.](../../images/wf15-eventingactions4.png)
+![Screenshot of eventing action.](../images/wf15-eventingactions4.png)
   
     
     
@@ -270,10 +271,10 @@ Once a field has changed the workflow continues.
 -  [Getting started with SharePoint workflow](http://msdn.microsoft.com/library/cc73be76-a329-449f-90ab-86822b1c2ee8.aspx)
     
   
--  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio)
+-  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)
     
   
--  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform)
+-  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
     
   
 

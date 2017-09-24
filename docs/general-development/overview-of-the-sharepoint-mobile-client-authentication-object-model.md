@@ -1,6 +1,7 @@
 ---
 title: Overview of the SharePoint mobile client authentication object model
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 00ee657f-a32a-495e-80b4-83ac0f60df44
 ---
 
@@ -16,7 +17,7 @@ The process of authenticating a SharePoint user on a Windows Phone 7.5 is a litt
     
 
 > **Note:**
-> For more information about the APIs that are discussed in this section, see  [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model). For more information about the SharePoint client object model for Silverlight, see  [Managed Client Object Model](http://msdn.microsoft.com/en-us/library/ee537247.aspx) and [Using the Silverlight Object Model](http://msdn.microsoft.com/en-us/library/ee538971.aspx). 
+> For more information about the APIs that are discussed in this section, see  [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model.md). For more information about the SharePoint client object model for Silverlight, see  [Managed Client Object Model](http://msdn.microsoft.com/en-us/library/ee537247.aspx) and [Using the Silverlight Object Model](http://msdn.microsoft.com/en-us/library/ee538971.aspx). 
   
     
     
@@ -106,7 +107,7 @@ If the SharePoint URL has basic or forms-based authentication support, the **Exe
   
     
     
-![SharePointClientAuthentication](../../images/SP15Con_SharePointClientAuthenticationFig1.png)
+![SharePointClientAuthentication](../images/SP15Con_SharePointClientAuthenticationFig1.png)
   
     
     
@@ -304,7 +305,7 @@ ClientContext ctx = new ClientContext("SiteUrl");
 ## Cookie caching
 <a name="SP15Mobileclientauth_cookie"> </a>
 
-The **Authenticator** class also includes members that you can use to enable and manage caching of cookies or credentials or both. For information about these members of the **Authenticator** class and their uses, see [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model).
+The **Authenticator** class also includes members that you can use to enable and manage caching of cookies or credentials or both. For information about these members of the **Authenticator** class and their uses, see [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model.md).
   
     
     
@@ -313,10 +314,10 @@ The **Authenticator** class also includes members that you can use to enable and
 <a name="SP15Mobileclientauth_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
--  [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model)
+-  [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model.md)
     
   
 

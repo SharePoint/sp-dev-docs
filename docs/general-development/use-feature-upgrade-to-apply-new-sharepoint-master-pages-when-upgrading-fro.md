@@ -1,6 +1,7 @@
 ---
 title: Use Feature upgrade to apply new SharePoint master pages when upgrading from SharePoint 2010
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: de3169f1-715e-4f80-bfbf-caea744e2a0b
 ---
 
@@ -77,7 +78,7 @@ In either case, during upgrade any custom master pages you've created will rever
 
   
 
-  ![After you create an event receiver to your feature, a code file appears under the feature.](../../images/SP15_FeatureReceiverVS.png)
+  ![After you create an event receiver to your feature, a code file appears under the feature.](../images/SP15_FeatureReceiverVS.png)
   
 
     This file contains a commented and empty  `FeatureUpgrading` method. You'll use this method in the following step.
@@ -137,7 +138,7 @@ Once you're done with the upgrade, you'll want to think about the future and lon
 -  [Deploy custom features to upgraded site collections in SharePoint](http://technet.microsoft.com/en-us/library/dn673579%28v=office.15%29.aspx)
     
   
--  [Upgrade site customizations for SharePoint](upgrade-site-customizations-for-sharepoint)
+-  [Upgrade site customizations for SharePoint](upgrade-site-customizations-for-sharepoint.md)
     
   
 -  [Upgrade to SharePoint](http://technet.microsoft.com/en-us/library/cc303420%28v=office.15%29.aspx)

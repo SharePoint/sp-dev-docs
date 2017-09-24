@@ -1,6 +1,7 @@
 ---
 title: External events and alerts in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: e48e4812-a185-43c5-b243-04b1d79b88ee
 ---
 
@@ -102,7 +103,7 @@ To use event receivers for external lists, you need the following:
 - Visual Studio 2012
     
   
-For more information about setting up a SharePoint development environment, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint).
+For more information about setting up a SharePoint development environment, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md).
   
     
     
@@ -178,7 +179,7 @@ In Figure 1, notice that there are three distinct steps involved when using exte
   
     
     
-![Data flow for external event notifications](../../images/ExtEvtsAndAlrts_Figure1.jpg)
+![Data flow for external event notifications](../images/ExtEvtsAndAlrts_Figure1.jpg)
   
     
     
@@ -212,7 +213,7 @@ Figure 2 demonstrates the flow of information between SharePoint and the externa
   
     
     
-![External eventing Subscribe method process flow](../../images/ExtEvtsAndAlerts_Figure2.jpg)
+![External eventing Subscribe method process flow](../images/ExtEvtsAndAlerts_Figure2.jpg)
   
     
     
@@ -408,7 +409,7 @@ Figure 3 shows the communication flow between the external system and SharePoint
   
     
     
-![External event notification process](../../images/ExtEvtsAndAlerts_Figure3.jpg)
+![External event notification process](../images/ExtEvtsAndAlerts_Figure3.jpg)
   
     
     
@@ -499,7 +500,7 @@ The **Unsubscribe** operation removes a subscription from the notifications list
   
     
     
-![External notifications unsubscribe process](../../images/ExternalEventsAndAlerts_UnsubscribeFlow.jpg)
+![External notifications unsubscribe process](../images/ExternalEventsAndAlerts_UnsubscribeFlow.jpg)
   
     
     
@@ -645,23 +646,23 @@ For more information about external events and alerts, see the following.
 
 |**Article**|**Description**|
 |:-----|:-----|
-| [How to: Create an OData data service for use as a BCS external system](how-to-create-an-odata-data-service-for-use-as-a-bcs-external-system) <br/> |Learn how to create an Internet-addressable Windows Communication Foundation (WCF) service that uses OData to send notifications to SharePoint when the underlying data changes. These notifications are used to trigger events that are attached to external lists.  <br/> |
+| [How to: Create an OData data service for use as a BCS external system](how-to-create-an-odata-data-service-for-use-as-a-bcs-external-system.md) <br/> |Learn how to create an Internet-addressable Windows Communication Foundation (WCF) service that uses OData to send notifications to SharePoint when the underlying data changes. These notifications are used to trigger events that are attached to external lists.  <br/> |
    
 
 ## Additional resources
 <a name="Externalevents_Addres"> </a>
 
 
--  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint)
+-  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint.md)
     
   
--  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
     
   
--  [Business Connectivity Services programmers reference for SharePoint](business-connectivity-services-programmers-reference-for-sharepoint)
+-  [Business Connectivity Services programmers reference for SharePoint](business-connectivity-services-programmers-reference-for-sharepoint.md)
     
   
--  [How to: Create external event receivers](how-to-create-external-event-receivers)
+-  [How to: Create external event receivers](how-to-create-external-event-receivers.md)
     
   
 

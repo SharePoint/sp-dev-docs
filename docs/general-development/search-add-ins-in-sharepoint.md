@@ -1,6 +1,7 @@
 ---
 title: Search add-ins in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 21682e45-dd78-4f3c-8f1e-cdd48de3bde2
 ---
 
@@ -48,7 +49,7 @@ To create a search add-in, use one of these two environments:
 - Napa Office 365 Development Tools
     
   
-With Visual Studio 2013 and later, you can publish your search add-ins to both on-premises or in Office 365. For more information about the development environments and how to use them to create search add-ins, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint).
+With Visual Studio 2013 and later, you can publish your search add-ins to both on-premises or in Office 365. For more information about the development environments and how to use them to create search add-ins, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md).
   
     
     
@@ -175,7 +176,7 @@ Search add-ins send query requests to the Search service application (SSA), and 
   
     
     
-![Search app permission configuration with VS](../../images/SP15_search_apps_permission_Visual_Studio.PNG)
+![Search app permission configuration with VS](../images/SP15_search_apps_permission_Visual_Studio.PNG)
   
     
     
@@ -197,7 +198,7 @@ Search add-ins send query requests to the Search service application (SSA), and 
   
     
     
-![Search app permission configuration through Napa](../../images/SP15_search_app_permission_Napa.gif)
+![Search app permission configuration through Napa](../images/SP15_search_app_permission_Napa.gif)
   
     
     
@@ -246,7 +247,7 @@ The add-in manifest file is in XML format and can be edited directly. To get per
 -  [Add search capabilities to your add-ins for SharePoint](http://blogs.msdn.com/b/officeapps/archive/2013/05/30/add-search-capabilities-to-your-apps-for-sharepoint.aspx)
     
   
--  [Exporting and importing search configuration settings in SharePoint](exporting-and-importing-search-configuration-settings-in-sharepoint)
+-  [Exporting and importing search configuration settings in SharePoint](exporting-and-importing-search-configuration-settings-in-sharepoint.md)
     
   
 -  [Export and import customized search configuration settings in SharePoint (TechNet)](http://technet.microsoft.com/en-us/library/jj871675.aspx)

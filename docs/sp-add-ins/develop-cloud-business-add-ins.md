@@ -1,24 +1,31 @@
+---
+title: Develop cloud business add-ins
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Develop cloud business add-ins
  Cloud business add-ins are based on Visual Studio LightSwitch technologies. Some of the tasks for developing cloud business add-ins are unique to the Cloud Business Add-in template, but most are the same as for LightSwitch HTML Client add-ins.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 
 ## Cloud Business Add-in developer tasks
 
 
-- Cloud business add-ins are created by using the Cloud Business Add-in template in Visual Studio. See  [Create a cloud business add-in](create-a-cloud-business-add-in).
+- Cloud business add-ins are created by using the Cloud Business Add-in template in Visual Studio. See  [Create a cloud business add-in](create-a-cloud-business-add-in.md).
     
  
-- By using the document library feature in SharePoint, you can create or upload documents associated with individual items in a list or entity. See  [Associate a document library with an entity](associate-a-document-library-with-an-entity).
+- By using the document library feature in SharePoint, you can create or upload documents associated with individual items in a list or entity. See  [Associate a document library with an entity](associate-a-document-library-with-an-entity.md).
     
  
-- In addition to the Office templates that are available when you add a document to a SharePoint document library, you can provide your own templates. See  [Provide a template for a document library in a cloud business add-in](provide-a-template-for-a-document-library-in-a-cloud-business-add-in).
+- In addition to the Office templates that are available when you add a document to a SharePoint document library, you can provide your own templates. See  [Provide a template for a document library in a cloud business add-in](provide-a-template-for-a-document-library-in-a-cloud-business-add-in.md).
     
  
-- Social and collaboration features in SharePoint for Office 365 allow users to track activity on a list and add comments. You can easily create a newsfeed for your Cloud Business Add-in by enabling a couple of properties. See  [Enable a newsfeed for a cloud business add-in](enable-a-newsfeed-for-a-cloud-business-add-in).
+- Social and collaboration features in SharePoint for Office 365 allow users to track activity on a list and add comments. You can easily create a newsfeed for your Cloud Business Add-in by enabling a couple of properties. See  [Enable a newsfeed for a cloud business add-in](enable-a-newsfeed-for-a-cloud-business-add-in.md).
     
  
 
@@ -72,7 +79,7 @@
 <a name="bk_addresources"> </a>
 
 
--  [Create cloud business add-ins](create-cloud-business-add-ins)
+-  [Create cloud business add-ins](create-cloud-business-add-ins.md)
     
  
 -  [HTML Client Screens for LightSwitch Add-ins](http://msdn.microsoft.com/en-us/library/jj674623.aspx)

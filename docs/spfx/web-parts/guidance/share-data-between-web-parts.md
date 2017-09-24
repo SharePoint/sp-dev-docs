@@ -1,4 +1,13 @@
+---
+title: Share Data Between Client-Side Web Parts
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Share Data Between Client-Side Web Parts
+
+> **Note.** This article has not yet been verified with the SPFx GA version, so you might have challenges making this work as described using the latest release.
 
 When building client-side web parts, loading data once and reusing it across different web parts will help you improve the performance of your pages and decrease the load on your network. This article describes a number of approaches that you can use to share data across multiple web parts.
 
@@ -6,7 +15,7 @@ When building client-side web parts, loading data once and reusing it across dif
 
 Often, when building web parts, a number of them will be used together on one page. If you consider each web part as a standalone part of the page, then you may end up in a situation where you are loading a similar or even the same set of data multiple times on the same page. This will unnecessarily slow down the loading of the page and increase traffic on your network.
 
-![Two web parts on one page loading similar sets of data separately](../../../../images/guidance-sharingdata-loading-data-separately.png)
+![Two web parts on one page loading similar sets of data separately](../../../images/guidance-sharingdata-loading-data-separately.png)
 
 A sample service responsible for loading the data could look like the following:
 
@@ -124,11 +133,11 @@ Notice how loading the data has been moved from the specific methods to the `ens
 
 If you look at the log in the developer tools, you will notice that the remote API is now called only once.
 
-![One log statement referring to loading data for both web parts](../../../../images/guidance-sharingdata-reusing-data-global-variable-loading-message.png)
+![One log statement referring to loading data for both web parts](../../../images/guidance-sharingdata-reusing-data-global-variable-loading-message.png)
 
 Looking at the informational messages, you can confirm that when the second web part tries to load the data it detects that the data is already being loaded. Once the data is loaded, it reuses the existing data rather than loading it itself.
 
-![Information message from the log showing how the second web part waits on data to be loaded](../../../../images/guidance-sharingdata-reusing-data-global-variable-waiting-message.png)
+![Information message from the log showing how the second web part waits on data to be loaded](../../../images/guidance-sharingdata-reusing-data-global-variable-waiting-message.png)
 
 Using a globally-scoped variable is the easiest way to exchange data between different web parts on the page. One downside of using this approach, however, is that the data is exposed not only to web parts but also to all other elements on the page. This introduces the risk of other elements on the page using the same variable as you to store their data potentially overwriting your data.
 
@@ -201,15 +210,15 @@ In the example above the [js-cookie](https://www.npmjs.com/package/js-cookie) pa
 
 When you load the page in Microsoft Edge the first time, you will see that the data is retrieved once and reused by both web parts.
 
-![Log messages showing data being loaded once and the other web part waiting for the data to be loaded on the first request in Microsoft Edge](../../../../images/guidance-sharingdata-cookie-edge-first-request.png)
+![Log messages showing data being loaded once and the other web part waiting for the data to be loaded on the first request in Microsoft Edge](../../../images/guidance-sharingdata-cookie-edge-first-request.png)
 
 On subsequent requests, a web part can directly reuse the previously loaded data without calling the remote API.
 
-![Log message showing data being loaded directly without calling the remote API on subsequent requests in Microsoft Edge](../../../../images/guidance-sharingdata-cookie-edge-subsequent-request.png)
+![Log message showing data being loaded directly without calling the remote API on subsequent requests in Microsoft Edge](../../../images/guidance-sharingdata-cookie-edge-subsequent-request.png)
 
 When loading the page in Google Chrome, you would see that the data is loaded twice from the remote API and is not being cached at all.
 
-![Log message showing data being loaded twice from the remote API despite using cookies](../../../../images/guidance-sharingdata-cookie-chrome.png)
+![Log message showing data being loaded twice from the remote API despite using cookies](../../../images/guidance-sharingdata-cookie-chrome.png)
 
 Different web browsers have different limits regarding how much data can be stored in a cookie. In this example, the retrieved data exceeds the maximum length of what can be stored in a cookie in Google Chrome. As a result, no cookie is being set and the data is loaded twice.
 
@@ -325,14 +334,12 @@ SharePoint Framework services can be built using the same project build system a
 
 ```json
 {
-  "$schema": "https://dev.office.com/json-schemas/spfx/client-side-library-manifest.schema.json",
+  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
 
   "id": "69b1aacd-68f2-4147-8433-8efb08eae331",
   "alias": "DocumentsService",
   "componentType": "Library",
-
-  // The "*" signifies that the version should be taken from the package.json
-  "version": "*",
+  "version": "0.0.1",
   "manifestVersion": 2
 }
 ```

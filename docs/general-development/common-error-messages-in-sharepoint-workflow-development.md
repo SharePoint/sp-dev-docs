@@ -1,6 +1,7 @@
----
+﻿---
 title: Common error messages in SharePoint workflow development
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: e9bf6878-c722-4b1f-b5b5-b302ae0ea4da
 ---
 
@@ -200,10 +201,10 @@ See  [Microsoft Support Knowledge Base article ID 2557533](http://support.micros
 <a name="bk_addresources"> </a>
 
 
--  [SharePoint workflow development best practices](sharepoint-workflow-development-best-practices)
+-  [SharePoint workflow development best practices](sharepoint-workflow-development-best-practices.md)
     
   
--  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio)
+-  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
     
   
 

@@ -1,6 +1,7 @@
----
+﻿---
 title: Save, download, and upload a SharePoint site as a template
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 2e637172-ddac-4a70-bd77-55a1645a3db1
 ---
 
@@ -57,7 +58,7 @@ Most of the objects in a site are included and supported by the template. Howeve
 - **Unsupported** Customized permissions, running workflow instances, list item version history, workflow tasks associated with running workflows, people or group field values, taxonomy field values, publishing pages and publishing sites, My Sites, stapled features, SharePoint Add-ins, and remote event receivers.
     
     > **Note:**
-      > For publishing sites, you can use site definition templates. For more information, see  [Additional resources](save-download-and-upload-a-sharepoint-site-as-a-template#bkmk_additionalresources) at the end of this topic.
+      > For publishing sites, you can use site definition templates. For more information, see  [Additional resources](save-download-and-upload-a-sharepoint-site-as-a-template.md#bkmk_additionalresources) at the end of this topic.
 
 ### What can you do with SharePoint templates?
 

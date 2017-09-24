@@ -1,11 +1,18 @@
+---
+title: Set up a development environment for SharePoint Add-ins on Office 365
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Set up a development environment for SharePoint Add-ins on Office 365
 Set up a development environment for SharePoint Add-ins on an Office 365 Developer Site.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
-Please read  [Tools and environments for developing SharePoint Add-ins](tools-and-environments-for-developing-sharepoint-add-ins) to get an understanding of your options before you carry out any procedures in this article. See [SharePoint Add-ins](sharepoint-add-ins) if you are not sure what kinds of SharePoint Add-ins you want to create.
+Please read  [Tools and environments for developing SharePoint Add-ins](tools-and-environments-for-developing-sharepoint-add-ins.md) to get an understanding of your options before you carry out any procedures in this article. See [SharePoint Add-ins](sharepoint-add-ins.md) if you are not sure what kinds of SharePoint Add-ins you want to create.
  
 
 ## Install Visual Studio and tools on your computer
@@ -44,7 +51,7 @@ The registry path will change in future versions of Visual Studio.
 <a name="o365_signup"> </a>
 
 
- **Note**   You might already have access to an Office 365 Developer Site: **Are you an MSDN subscriber?** Visual Studio Enterprise with MSDN subscribers receive an Office 365 Developer Subscription as a benefit. [Redeem your benefit today.](https://msdn.microsoft.com/subscriptions/manage/default.aspx) **Do you have one of the following Office 365 subscription plans?** **If so, an administrator of the Office 365 subscription can create a Developer Site** by using the [Office 365 admin center](https://portal.microsoftonline.com/admin/default.aspx). For more information, see  [Create a developer site on an existing Office 365 subscription](create-a-developer-site-on-an-existing-office-365-subscription). 
+ **Note**   You might already have access to an Office 365 Developer Site: **Are you an MSDN subscriber?** Visual Studio Enterprise with MSDN subscribers receive an Office 365 Developer Subscription as a benefit. [Redeem your benefit today.](https://msdn.microsoft.com/subscriptions/manage/default.aspx) **Do you have one of the following Office 365 subscription plans?** **If so, an administrator of the Office 365 subscription can create a Developer Site** by using the [Office 365 admin center](https://portal.microsoftonline.com/admin/default.aspx). For more information, see  [Create a developer site on an existing Office 365 subscription](create-a-developer-site-on-an-existing-office-365-subscription.md). 
  
 
 Three ways to get an Office 365 plan. 
@@ -71,7 +78,7 @@ Three ways to get an Office 365 plan.
  
 
  
-![Page 2 of Sign up form for Office 365 account](../../images/ff384c69-56bf-4ceb-81c3-8b874e2407f0.png)
+![Page 2 of Sign up form for Office 365 account](../images/ff384c69-56bf-4ceb-81c3-8b874e2407f0.png)
  
 
  
@@ -109,7 +116,7 @@ After you finish the signup process, your browser will opens the Office 365 inst
  
 
  
-![Screenshot that shows the Office 365 admin center.](../../images/SP15_Office365AdminInset_border.png)
+![Screenshot that shows the Office 365 admin center.](../images/SP15_Office365AdminInset_border.png)
  
 
  
@@ -129,7 +136,7 @@ After you finish the signup process, your browser will opens the Office 365 inst
  
 
  
-![Screenshot that shows the Developer site homepage.](../../images/SP15_DeveloperSiteHome_border.png)
+![Screenshot that shows the Developer site homepage.](../images/SP15_DeveloperSiteHome_border.png)
  
 
  
@@ -140,13 +147,13 @@ After you finish the signup process, your browser will opens the Office 365 inst
 <a name="SP15SetupSPO365_bk_addlresources"> </a>
 
 
--  [SharePoint Add-ins](sharepoint-add-ins)
+-  [SharePoint Add-ins](sharepoint-add-ins.md)
     
  
--  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins)
+-  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
     
  
--  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins)
+-  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md)
     
  
 

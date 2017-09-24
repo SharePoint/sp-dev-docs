@@ -1,6 +1,7 @@
 ---
 title: How to Create external content types for SQL Server in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 7fe2fbf0-546b-4a16-b02e-a0960bfb3842
 ---
 
@@ -513,13 +514,13 @@ The external content type is now available for use in SharePoint and Office 2013
 <a name="AR"> </a>
 
 
--  [External content types in SharePoint](external-content-types-in-sharepoint)
+-  [External content types in SharePoint](external-content-types-in-sharepoint.md)
     
   
 -  [Deploy a Business Connectivity Services on-premises solution in SharePoint](http://msdn.microsoft.com/library/4692ebba-90eb-4d72-ac12-e90c4d4ee7ae.aspx)
     
   
--  [Using OData sources with Business Connectivity Services in SharePoint](using-odata-sources-with-business-connectivity-services-in-sharepoint)
+-  [Using OData sources with Business Connectivity Services in SharePoint](using-odata-sources-with-business-connectivity-services-in-sharepoint.md)
     
   
 -  [Configure the Secure Store Service in SharePoint](http://msdn.microsoft.com/library/29C0BC76-D835-401B-A2FB-ABB069E84125.aspx)

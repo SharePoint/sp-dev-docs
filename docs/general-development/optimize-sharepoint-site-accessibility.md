@@ -1,6 +1,7 @@
 ---
 title: Optimize SharePoint site accessibility
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 0a3fbfb3-1a0b-4902-9317-525cf2f63d98
 ---
 
@@ -38,10 +39,10 @@ Alternative text is required for screen readers to read non-text content on the 
 <a name="bk_addresources"> </a>
 
 
--  [Build sites for SharePoint](build-sites-for-sharepoint)
+-  [Build sites for SharePoint](build-sites-for-sharepoint.md)
     
   
--  [Accessibility in SharePoint](accessibility-in-sharepoint)
+-  [Accessibility in SharePoint](accessibility-in-sharepoint.md)
     
   
 -  [Microsoft Accessibility](https://www.microsoft.com/enable)

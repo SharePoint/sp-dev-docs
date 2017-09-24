@@ -1,6 +1,7 @@
 ---
 title: How to Set up an environment for developing mobile apps for SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: acaf556d-e20d-478d-8c59-2efd8efb9dcb
 ---
 
@@ -71,7 +72,7 @@ To develop SharePoint Add-ins for use on Windows Phone 8, you need to set up you
 
     > **Note:**
       > The templates in the SharePoint SDK for Windows Phone are currently available for C# projects only. 
-For more information about the templates in SharePoint SDK for Windows Phone, see  [Overview of Windows Phone SharePoint application templates in Visual Studio](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio).
+For more information about the templates in SharePoint SDK for Windows Phone, see  [Overview of Windows Phone SharePoint application templates in Visual Studio](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio.md).
   
     
     
@@ -114,7 +115,7 @@ To develop SharePoint Add-ins for use on Windows Phone 7, you need to set up you
 
     > **Note:**
       > The templates in the SharePoint SDK for Windows Phone are currently available for C# projects only. 
-For more information about the templates in SharePoint SDK for Windows Phone, see  [Overview of Windows Phone SharePoint application templates in Visual Studio](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio).
+For more information about the templates in SharePoint SDK for Windows Phone, see  [Overview of Windows Phone SharePoint application templates in Visual Studio](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio.md).
   
     
     
@@ -123,7 +124,7 @@ For more information about the templates in SharePoint SDK for Windows Phone, se
 <a name="SP15Setupmobile_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
 -  [Windows Phone SDK 8.0](http://www.microsoft.com/en-us/download/details.aspx?id=35471)

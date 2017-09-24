@@ -1,3 +1,10 @@
+---
+title: Update SharePoint Framework packages 
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Update SharePoint Framework packages 
 
 SharePoint client-side development tools use the [npm](https://www.npmjs.com/) package manager to manage dependencies and other required JavaScript helpers. npm is typically included as part of Node.js setup.
@@ -19,7 +26,7 @@ The command will list the following information about the packages your project 
 * Version requested by your project (available in `package.json`)
 * Latest version available
 
-![NPM outdated packages](../../images/npm-outdated-packages-list.png)
+![NPM outdated packages](../images/npm-outdated-packages-list.png)
 
 To identify the SharePoint Framework packages, look for the package names that start with the following npm scope and prefix:
 
@@ -36,7 +43,7 @@ Open your project in your favorite code editor and locate the `package.json` fil
 
 In the `package.json` file, locate the package(s) under the `dependencies` and `devDependencies` section and update the version to the latest version available that was listed in the `npm outdated` command. For example, the image below highlights the version updates to SharePoint Framework packages, the left section referring to the old and the right section referring to the latest package versions.
 
-![Edit package versions in package.json file](../../images/npm-update-packagejson-versions.png)
+![Edit package versions in package.json file](../images/npm-update-packagejson-versions.png)
 
 Once you have updated the package versions, Save the `package.json` file.
 
@@ -95,7 +102,7 @@ The command will list the following information about the packages installed glo
 * Version requested by you when you installed
 * Latest version available
 
-![NPM outdated global packages](../../images/npm-outdated-global-packages-list.png)
+![NPM outdated global packages](../images/npm-outdated-global-packages-list.png)
 
 To identify the generator package, look for the following package name:
 

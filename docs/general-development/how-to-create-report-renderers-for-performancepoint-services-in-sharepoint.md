@@ -1,3 +1,8 @@
+---
+title: Create report renderers for PerformancePoint Services in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
 
 
 
@@ -85,7 +90,7 @@ The class in the following code example creates a report renderer that displays 
   
     
     
-Before you can compile this code example, you must configure your development environment as described in  [To create and configure the renderer class](#BKMK_ConfigRR).
+Before you can compile this code example, you must configure your development environment as described in  [To create and configure the renderer class](#BKMK_ConfigRenderer).
   
     
     
@@ -265,10 +270,10 @@ After you create a report renderer and a report editor (including its user inter
 <a name="bk_addResources"> </a>
 
 
--  [How to: Create report renderers for PerformancePoint Services in SharePoint](how-to-create-report-renderers-for-performancepoint-services-in-sharepoint)
+-  [How to: Create report renderers for PerformancePoint Services in SharePoint](how-to-create-report-renderers-for-performancepoint-services-in-sharepoint.md)
     
   
--  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint)
+-  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint.md)
     
   
 

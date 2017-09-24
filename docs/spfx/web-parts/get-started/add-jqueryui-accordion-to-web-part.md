@@ -1,13 +1,20 @@
+---
+title: Add jQueryUI Accordion to your SharePoint client-side web part
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Add jQueryUI Accordion to your SharePoint client-side web part
 
 This article describes how to add the jQueryUI Accordion to your web part project. This involves creating a new web part, as shown in the following image. 
 
-![Screenshot of a web part that includes a jQuery Accordion](../../../../images/jquery-accordion-wb.png)
+![Screenshot of a web part that includes a jQuery Accordion](../../../images/jquery-accordion-wb.png)
 
 You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=-3m__hRQxEI&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
 
 <a href="https://www.youtube.com/watch?v=-3m__hRQxEI&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
-<img src="../../../../images/spfx-youtube-tutorial5.png" alt="Screenshot of the YouTube video player for this tutorial" />
+<img src="../../../images/spfx-youtube-tutorial5.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
 ## Prerequisites
@@ -318,6 +325,6 @@ Gulp will execute the tasks and open the local SharePoint web part workbench.
 
 In the page canvas, choose the **+** (plus sign) to show the list of web parts, and add the jQuery web part. You should now see the jQueryUI Accordion!
 
-![Screenshot of a web part that includes a jQuery Accordion](../../../../images/jquery-accordion-wb.png)
+![Screenshot of a web part that includes a jQuery Accordion](../../../images/jquery-accordion-wb.png)
 
 In the console where you have `gulp serve` running, choose **Ctrl+C** to terminate the task.

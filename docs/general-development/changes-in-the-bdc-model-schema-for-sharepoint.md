@@ -1,6 +1,7 @@
 ---
 title: Changes in the BDC model schema for SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 882ea867-9acb-4313-99c9-865a523b72fd
 ---
 
@@ -12,7 +13,7 @@ The number of changes in the schema (BDCMetadata.xsd) for creating BDC models in
     
     
 
-For more information about the BDCMetadata schema, see  [BDC model schema reference for SharePoint](bdc-model-schema-reference-for-sharepoint).
+For more information about the BDCMetadata schema, see  [BDC model schema reference for SharePoint](bdc-model-schema-reference-for-sharepoint.md).
 ## Changes to complex type elements in BDCMetadata.xsd
 <a name="bkmk_ChangesToElements"> </a>
 
@@ -66,19 +67,19 @@ The following table lists the changes to the attributes of each element.
 <a name="bkmk_AdditionalResources"> </a>
 
 
--  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
     
   
--  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint)
+-  [What's new in Business Connectivity Services in SharePoint](what-s-new-in-business-connectivity-services-in-sharepoint.md)
     
   
--  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint)
+-  [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint.md)
     
   
--  [Business Connectivity Services programmers reference for SharePoint](business-connectivity-services-programmers-reference-for-sharepoint)
+-  [Business Connectivity Services programmers reference for SharePoint](business-connectivity-services-programmers-reference-for-sharepoint.md)
     
   
--  [BDC model schema reference for SharePoint](bdc-model-schema-reference-for-sharepoint)
+-  [BDC model schema reference for SharePoint](bdc-model-schema-reference-for-sharepoint.md)
     
   
 

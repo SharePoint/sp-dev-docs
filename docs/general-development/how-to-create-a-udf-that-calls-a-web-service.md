@@ -1,9 +1,10 @@
----
+﻿---
 title: How to Create a UDF That Calls a Web Service
+ms.date: 09/25/2017
 keywords: how to,howdoi,howto,UDF
 f1_keywords:
 - how to,howdoi,howto,UDF
-ms.prod: SHAREPOINT
+ms.prod: sharepoint
 ms.assetid: 360c5766-4b5d-4a48-9f23-8955036924ce
 ---
 
@@ -112,7 +113,7 @@ Namespace ZipCodeUdfSample
         End Sub
 ```
 
-For more information about how to test and call UDFs from cells, see  [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf).
+For more information about how to test and call UDFs from cells, see  [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md).
   
     
     
@@ -292,38 +293,38 @@ End Namespace
   
     
     
- [Step 1: Creating a Project and Adding a UDF Reference](step-1-creating-a-project-and-adding-a-udf-reference)
+ [Step 1: Creating a Project and Adding a UDF Reference](step-1-creating-a-project-and-adding-a-udf-reference.md)
   
     
     
- [Step 2: Creating a Managed-Code UDF](step-2-creating-a-managed-code-udf)
+ [Step 2: Creating a Managed-Code UDF](step-2-creating-a-managed-code-udf.md)
   
     
     
- [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs)
+ [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md)
   
     
     
- [Step 4: Testing and Calling UDFs from Cells](step-4-testing-and-calling-udfs-from-cells)
+ [Step 4: Testing and Calling UDFs from Cells](step-4-testing-and-calling-udfs-from-cells.md)
 #### Concepts
 
 
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api)
+ [Accessing the SOAP API](accessing-the-soap-api.md)
 #### Other resources
 
 
   
     
     
- [Step 2: Adding a Web Reference](step-2-adding-a-web-reference)
+ [Step 2: Adding a Web Reference](step-2-adding-a-web-reference.md)
   
     
     
- [Step 3: Accessing the Web Service](step-3-accessing-the-web-service)
+ [Step 3: Accessing the Web Service](step-3-accessing-the-web-service.md)
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)

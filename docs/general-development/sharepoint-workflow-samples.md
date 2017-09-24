@@ -1,6 +1,7 @@
 ---
 title: SharePoint workflow samples
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: ffaccd6b-426d-4ca0-b62f-bc7b14641a49
 ---
 
@@ -74,16 +75,16 @@ You can locate the sample code here:  [SharePoint workflow: Workflow OM in a Sha
 <a name="bkm_additional"> </a>
 
 
--  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint)
+-  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint.md)
     
   
--  [Set up and configure SharePoint Workflow Manager](set-up-and-configure-sharepoint-workflow-manager)
+-  [Set up and configure SharePoint Workflow Manager](set-up-and-configure-sharepoint-workflow-manager.md)
     
   
--  [What's new in workflows for SharePoint](what-s-new-in-workflows-for-sharepoint)
+-  [What's new in workflows for SharePoint](what-s-new-in-workflows-for-sharepoint.md)
     
   
--  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint)
+-  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint.md)
     
   
 -  [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)

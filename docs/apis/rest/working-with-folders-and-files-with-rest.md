@@ -1,3 +1,10 @@
+---
+title: Working with folders and files with REST
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Working with folders and files with REST
 Learn how to perform basic create, read, update, and delete (CRUD) operations on folders and files with the SharePoint 2013 REST interface.
 
@@ -161,7 +168,7 @@ headers:
 
 ## Working with large files by using REST
 <a name="LargeFiles"> </a>
-When you need to upload a binary file that is larger than 1.5 megabytes (MB), the REST interface is your only option. See  [Complete basic operations using JavaScript library code in SharePoint](complete-basic-operations-using-javascript-library-code-in-sharepoint-2013.md) for a code example that shows you how to upload a binary file that is smaller than 1.5 MB by using the SharePoint Javascript object model. The maximum size of a binary file that you can create with REST is 2 gigabytes (GB). The following example shows how to **create** a large binary file.
+When you need to upload a binary file that is larger than 1.5 megabytes (MB), the REST interface is your only option. See  [Complete basic operations using JavaScript library code in SharePoint](../../sp-add-ins/complete-basic-operations-using-javascript-library-code-in-sharepoint.md) for a code example that shows you how to upload a binary file that is smaller than 1.5 MB by using the SharePoint Javascript object model. The maximum size of a binary file that you can create with REST is 2 gigabytes (GB). The following example shows how to **create** a large binary file.
  
  **Caution**  This approach will work only with Internet Explorer 10 and the latest versions of other browsers.
  
@@ -256,7 +263,7 @@ headers:
 ## Additional resources
 <a name="bk_addresources"> </a>
 
--  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md)
+-  [Complete basic operations using SharePoint REST endpoints](../../sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md)
 -  [Files and folders REST API reference](http://msdn.microsoft.com/library/2c3d2545-1cd7-497e-b535-12199d8edfbb%28Office.15%29.aspx)
 -  [Upload a file by using the REST API and jQuery](upload-a-file-by-using-the-rest-api-and-jquery.md)
 -  [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest.md)
@@ -264,10 +271,10 @@ headers:
 -  [SharePoint 2013: Perform basic data access operations on files and folders by using REST](http://code.msdn.microsoft.com/SharePoint-2013-Perform-ab9c4ae5)
 -  [Making REST calls with C# and JavaScript for SharePoint 2013](http://www.microsoft.com/resources/msdn/en-us/office/media/video/video.mdl?cid=sdc&amp;from=mscomsdc&amp;VideoID=4e4cc094-ff69-405b-852f-2ac7c41293c5)
 -  [Making REST calls with C# and JavaScript for SharePoint 2013 demo](http://www.microsoft.com/resources/msdn/en-us/office/media/video/video.mdl?cid=sdc&amp;from=mscomsdc&amp;VideoID=b1e7c9c5-0f62-4a78-bb7b-8e283c86145c)
--  [Complete basic operations using SharePoint 2013 client library code](complete-basic-operations-using-sharepoint-2013-client-library-code.md)
--  [Complete basic operations using JavaScript library code in SharePoint 2013](complete-basic-operations-using-javascript-library-code-in-sharepoint-2013.md)
--  [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
--  [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md)
--  [Work with external data in SharePoint 2013](work-with-external-data-in-sharepoint-2013.md)
+-  [Complete basic operations using SharePoint 2013 client library code](../../sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code.md)
+-  [Complete basic operations using JavaScript library code in SharePoint 2013](../../sp-add-ins/complete-basic-operations-using-javascript-library-code-in-sharepoint.md)
+-  [Develop SharePoint Add-ins](../../sp-add-ins/develop-sharepoint-add-ins.md)
+-  [Secure data access and client object models for SharePoint Add-ins](../../sp-add-ins/secure-data-access-and-client-object-models-for-sharepoint-add-ins.md)
+-  [Work with external data in SharePoint 2013](../../sp-add-ins/work-with-external-data-in-sharepoint.md)
 -  [Open Data Protocol](http://www.odata.org/)
 -  [OData: JavaScript Object Notation (JSON) Format](http://www.odata.org/documentation/odata-version-2-0/JSON-format/)

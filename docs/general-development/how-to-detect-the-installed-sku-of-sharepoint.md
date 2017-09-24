@@ -1,6 +1,7 @@
----
+﻿---
 title: How to Detect the installed SKU of SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: d5d84d6f-6a8e-4ead-9296-7025baf1e154
 ---
 
@@ -100,10 +101,10 @@ namespace GetInstalledSharePointSku
 <a name="bk_SP15DetectSKUaddresources"> </a>
 
 
--  [SharePoint development overview](sharepoint-development-overview)
+-  [SharePoint development overview](sharepoint-development-overview.md)
     
   
--  [What's new for developers in SharePoint](what’s-new-for-developers-in-sharepoint)
+-  [What's new for developers in SharePoint](what-s-new-for-developers-in-sharepoint.md)
     
   
 -  [SharePoint Developer Blog](http://blogs.msdn.com/b/sharepointdev/)

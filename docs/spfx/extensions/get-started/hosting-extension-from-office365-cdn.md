@@ -1,3 +1,10 @@
+---
+title: Hosting extension from Office 365 CDN (Hello world part 4)
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Hosting extension from Office 365 CDN (Hello world part 4)
 
 >**Note:** The SharePoint Framework Extensions are currently in preview and are subject to change. SharePoint Framework Extensions are not currently supported for use in production environments.
@@ -13,7 +20,7 @@ Be sure you have completed the procedures in the following articles before you s
 You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=oOIHWamPr34&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV). 
 
 <a href="https://www.youtube.com/watch?v=oOIHWamPr34&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV">
-<img src="../../../../images/spfx-ext-youtube-tutorial4.png" alt="Screenshot of the YouTube video player for this tutorial" />
+<img src="../../../images/spfx-ext-youtube-tutorial4.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
 ## Using the CDN in your Office 365 tenant
@@ -43,7 +50,7 @@ Open up a browser and move to a site collection where you'd like to host your CD
 
 Create a new document library on your site collection called **CDN** and add a folder named **helloworld** to it.
 
-![helloworld-extension folder in CDN library](../../../../images/ext-app-cdn-folder-created.png) 
+![helloworld-extension folder in CDN library](../../../images/ext-app-cdn-folder-created.png) 
 
 Move back to the PowerShell console and add a new CDN origin. In this case, we are setting the origin as `*/cdn`, which means that any relative folder with the name of **cdn** will act as a CDN origin.
 ```
@@ -55,7 +62,7 @@ Get-SPOTenantCdnOrigins -CdnType Public
 ```
 Notice that your newly added origin is listed as a valid CDN origin. Final configuration of the origin will take a while (approximately 15 minutes), so we can continue creating your test extension, which will be hosted from the origin once deployment is completed. 
 
-![List of public origins in tenant](../../../../images/ext-app-cdn-origins-pending.png)
+![List of public origins in tenant](../../../images/ext-app-cdn-origins-pending.png)
 
 > When origin is listed without the *(configuration pending)* text, it is ready to be used in your tenant. This is the indication of an on-going configuration between SharePoint Online and the CDN system. 
 
@@ -74,7 +81,7 @@ Update the *write-manifests.json* file (under the *config* folder) as follows to
 https://publiccdn.sharepointonline.com/<tenant host name>/sites/site/library/folder
 ```
 
-![Updated write manifest content with path to CDN endpoint](../../../../images/ext-app-cdn-write-manifest.png)
+![Updated write manifest content with path to CDN endpoint](../../../images/ext-app-cdn-write-manifest.png)
 
 Save your changes.
 
@@ -96,12 +103,12 @@ This command will create an **app-extension.sppkg** package in the **sharepoint/
 
 Upload or drag & drop the newly created client-side solution package to the app catalog in your tenant. Click the **Deploy** button.
 
-![App Catalog Trust Dialog with path to CDN endpoint](../../../../images/ext-app-approve-cdn-address.png)
+![App Catalog Trust Dialog with path to CDN endpoint](../../../images/ext-app-approve-cdn-address.png)
 
 Upload or drag & drop the files in the **temp/deploy** folder to the **CDN/helloworld** folder created earlier.
 
 Install the new version of the solution to your site and ensure that it's working properly without your *locahost* hosting the JavaScript file.
 
-![Custom header and footer elements rendered in the page](../../../../images/ext-app-header-footer-visible.png)
+![Custom header and footer elements rendered in the page](../../../images/ext-app-header-footer-visible.png)
 
 Congratulations, you have enabled a public CDN in your Office 365 tenant and taken advantage of it from your solution!

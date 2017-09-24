@@ -1,3 +1,10 @@
+---
+title: Use custom dialog boxes with SharePoint Framework Extensions
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Use custom dialog boxes with SharePoint Framework Extensions
 
 You can use custom dialog boxes, available from the **@microsoft/sp-dialog** package, within the context of SharePoint Framework Extensions or client-side web parts. 
@@ -54,15 +61,15 @@ The next set of prompts will ask for specific information about your extension:
 * Use the value of **DialogDemo** as your extension name and press **Enter**.
 * Accept the default value of **DialogDemo description** as your extension description and press **Enter**.
 
-![Yeoman SharePoint generator prompts to create an extension solution](../../../../images/ext-com-dialog-yeoman-prompts.png)
+![Yeoman SharePoint generator prompts to create an extension solution](../../../images/ext-com-dialog-yeoman-prompts.png)
 
 At this point, Yeoman will install the required dependencies and scaffold the solution files along with the *DialogDemo* extension. This might take a few minutes. 
 
 When the scaffold is complete, you should see the following message indicating a successful scaffold:
 
-![SharePoint client-side solution scaffolded successfully](../../../../images/ext-com-dialog-yeoman-complete.png)
+![SharePoint client-side solution scaffolded successfully](../../../images/ext-com-dialog-yeoman-complete.png)
 
->**Note:** For information about troubleshooting any errors, see [Known issues](../basics/known-issues).
+>**Note:** For information about troubleshooting any errors, see [Known issues](../../known-issues-and-common-questions.md).
 
 When the scaffolding is complete, open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor you prefer. To open the folder in Visual Studio Code, use the following command in the console:
 
@@ -70,7 +77,7 @@ When the scaffolding is complete, open your project folder in your code editor. 
 code .
 ```
 
-![Initial Visual Studio Code structure after scaffolding](../../../../images/ext-com-dialog-vs-code-initial.png)
+![Initial Visual Studio Code structure after scaffolding](../../../images/ext-com-dialog-vs-code-initial.png)
 
 ## Modify the extension manifest
 
@@ -270,16 +277,16 @@ Append the following query string parameters to the URL. Notice that you will ne
 
 Accept the loading of Debug Manifests by choosing **Load debug scripts** when prompted.
 
-![Allow debug scripts warning](../../../../images/ext-com-dialog-debug-scripts.png)
+![Allow debug scripts warning](../../../images/ext-com-dialog-debug-scripts.png)
 
 Notice that the new button is visible in the toolbar of the list with the text *Open Custom Dialog box*.
 
-![Open Cusotm Dialog button visible in the toolbar](../../../../images/ext-com-dialog-button-in-toolbar.png)
+![Open Cusotm Dialog button visible in the toolbar](../../../images/ext-com-dialog-button-in-toolbar.png)
 
 Choose the *Open Custom Dialog box* button to see your custom dialog box rendered within the list view. 
 
-![Color Picker rendered in dialog mode](../../../../images/ext-com-dialog-visible-dialog.png)
+![Color Picker rendered in dialog mode](../../../images/ext-com-dialog-visible-dialog.png)
 
 Choose a color in the *Color Picker* and choose **OK** to test how the code is returning the selected value back to the caller. The selection is then shown using the default alert dialog box.
 
-![Dialog with picked color details](../../../../images/ext-com-dialog-oob-alert-dialog.png)
+![Dialog with picked color details](../../../images/ext-com-dialog-oob-alert-dialog.png)

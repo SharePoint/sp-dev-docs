@@ -1,10 +1,17 @@
+---
+title: Make your SharePoint client-side web part configurable
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Make your SharePoint client-side web part configurable
 
-The property pane allows end users to configure the web part with a bunch of properties. The article [Build your first web part](../get-started/build-a-hello-world-web-part) describes how the property pane is defined in the **HelloWorldWebPart** class. The property pane properties are defined in  **propertyPaneSettings**.
+The property pane allows end users to configure the web part with a bunch of properties. The article [Build your first web part](../get-started/build-a-hello-world-web-part.md) describes how the property pane is defined in the **HelloWorldWebPart** class. The property pane properties are defined in  **propertyPaneSettings**.
 
 The following figure shows an example of a property pane in SharePoint.
 
-![Property pane example](../../../../images/property-pane-example.png)
+![Property pane example](../../../images/property-pane-example.png)
 
 The property pane has three key metadata:
 
@@ -103,7 +110,7 @@ This is then available in your web part using **this.properties.targetProperty**
 <p class="ms-font-l ms-fontColor-white">${this.properties.description}</p>
 ```
 
-When the properties are defined, you can access them in your web part using the **this.properties.[property-name]**. For details, see [**render** method of the **HelloWorldWebPart**](../get-started/build-a-hello-world-web-part#web-part-render-method).
+When the properties are defined, you can access them in your web part using the **this.properties.[property-name]**. For details, see [**render** method of the **HelloWorldWebPart**](../get-started/build-a-hello-world-web-part.md#web-part-render-method).
 
 ## Handling field changes
 
@@ -124,4 +131,4 @@ protected get disableReactivePropertyChanges(): boolean {
 
 ## Custom property pane controls
 
-SharePoint Framework contains a set of standard controls for the property pane. But sometimes you need additional functionality beyond the basic controls. SharePoint Framework allows you to build custom controls to deliver the require functionality. To learn more, read the [Build custom controls for the property pane](../guidance/build-custom-property-pane-controls) guide.
+SharePoint Framework contains a set of standard controls for the property pane. But sometimes you need additional functionality beyond the basic controls. SharePoint Framework allows you to build custom controls to deliver the require functionality. To learn more, read the [Build custom controls for the property pane](../guidance/build-custom-property-pane-controls.md) guide.

@@ -1,3 +1,10 @@
+﻿---
+title: Determine SharePoint REST service endpoint URIs
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Determine SharePoint REST service endpoint URIs
 Learn general guidelines for determining SharePoint REST endpoint URIs from the signature of the corresponding client object model APIs.
  
@@ -29,7 +36,7 @@ In some cases, however, the endpoint URI differs from the corresponding client o
 The following figure shows the general syntax structure of SharePoint REST URIs. 
 
 **SharePoint REST URI syntax structure**
-![SharePoint REST request syntax](../../../images/REST_OverallSyntax.png)
+![SharePoint REST request syntax](../../images/REST_OverallSyntax.png)
  
 Some endpoints for SharePoint resources deviate from this syntax structure:
 
@@ -111,7 +118,7 @@ To specify multiple parameters, include the parameter as a name-value pair, and 
 The following figure shows the SharePoint REST parameter syntax.
  
 **SharePoint REST parameter syntax**
-![SharePoint REST service method parameter syntax](../../../images/REST_parameterSyntax.png)
+![SharePoint REST service method parameter syntax](../../images/REST_parameterSyntax.png)
 
 ### Complex types as parameters for the REST service
 Some methods in the client object model require a large payload as a parameter. For REST endpoints to maintain functionality parity with their corresponding client object model APIs, the endpoints must accept a complex type as a parameter. In these cases, the REST service extends the existing OData protocol to enable these REST endpoints to accept a single complex type as a parameter. This applies to  **POST** operations only, and you have to pass the complex type in [Atom](http://www.odata.org/developers/protocols/atom-format#RepresentingComplexTypesProperties) format or [JSON](http://www.odata.org/developers/protocols/json-format#RepresentingComplexTypeProperties) format, according to OData standards.
@@ -157,13 +164,13 @@ However, the SharePoint REST service does not support passing complex types via 
  ```
  
 **SharePoint REST service parameter aliasing syntax**
-![SharePoint REST service parameter aliasing syntax](../../../images/REST_parameterAliasSyntax.png)
+![SharePoint REST service parameter aliasing syntax](../../images/REST_parameterAliasSyntax.png)
 
 ### Specifying dictionaries as parameter values
 For REST endpoints that correspond to methods that take  `Dictionary<String, String>` dictionaries as parameters, pass the dictionary as a series of comma delimited name-value pairs in the query string.
 
 **REST service syntax for Dictionary parameters**
-![REST service syntax for Dictionary parameters](../../../images/REST_parameterDictionarySyntax.png)
+![REST service syntax for Dictionary parameters](../../images/REST_parameterDictionarySyntax.png)
  
 A  `Dictionary<String, object>` is represented as a multi-value object, named KeyedPropertyValue, with the following string properties:
 
@@ -181,7 +188,7 @@ If your REST URI terminates in a method call, you can use query string syntax to
 the figure below shows the REST service syntax for parameters in query string. 
 
 **REST service syntax for parameters in query string**
-![REST service syntax for parameters in query string](../../../images/REST_parameterQuerySyntax.png)
+![REST service syntax for parameters in query string](../../images/REST_parameterQuerySyntax.png)
  
 ## Specifying static methods and properties as REST service URIs
 To construct URIs that correspond to static methods or properties, use the corresponding API name from the ECMAScript object model, starting with the namespace declaration and using dot notation. For example,  [SP.Utilities.Utility.getImageUrl(imageName)](http://msdn.microsoft.com/en-us/library/ee658947.aspx) in the ECMAScript client object model would have the following REST equivalent:
@@ -199,7 +206,7 @@ However, using that resource location as a parameter for a more complex URI, as 
 The figure below shows the SharePoint REST service static member syntax.
 
 **SharePoint REST service static member syntax**
-![REST service syntax for parameters in query string](../../../images/REST_parameterQuerySyntax.png)
+![REST service syntax for parameters in query string](../../images/REST_parameterQuerySyntax.png)
 
 ## Next steps
 If you want to select, filter, or order the data you requested from an endpoint, the SharePoint REST service supports a wide range of OData query string operators. 

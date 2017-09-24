@@ -1,6 +1,7 @@
----
+﻿---
 title: Getting Ranges Using Atom Feed and HTML Fragment
-ms.prod: OFFICE365
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 45d4ef08-02d6-48dd-b0ef-a748db1a0c6a
 ---
 
@@ -27,7 +28,7 @@ The REST API in Excel Services supports two mechanisms for getting ranges. The f
   
     
     
-As described in the  [Discovery in Excel Services REST API](discovery-in-excel-services-rest-api) topic, the REST URL to the model page using discovery is:
+As described in the  [Discovery in Excel Services REST API](discovery-in-excel-services-rest-api.md) topic, the REST URL to the model page using discovery is:
   
     
     
@@ -50,7 +51,7 @@ Therefore, for a workbook with the file name **sampleWorkbook.xlsx** that is sav
 http://<ServerName>/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model
 ```
 
-Using the discovery mechanism described in  [Discovery in Excel Services REST API](discovery-in-excel-services-rest-api), if you click on the **Ranges** Atom feed on the model page on the server, ( `http://` _<ServerName>_ `/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model`), it displays a page that shows all the named ranges in the workbook. The sampleWorkbook.xlsx contains one named range, **SampleNamedRange**, as shown in the following screen shot: 
+Using the discovery mechanism described in  [Discovery in Excel Services REST API](discovery-in-excel-services-rest-api.md), if you click on the **Ranges** Atom feed on the model page on the server, ( `http://` _<ServerName>_ `/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/model`), it displays a page that shows all the named ranges in the workbook. The sampleWorkbook.xlsx contains one named range, **SampleNamedRange**, as shown in the following screen shot: 
   
     
     
@@ -78,7 +79,7 @@ Using the discovery mechanism described in  [Discovery in Excel Services REST AP
   
     
     
-![Excel Services REST named range discovery](../../images/159f676e-421e-4190-94a6-cf311f7db2ca.gif)
+![Excel Services REST named range discovery](../images/159f676e-421e-4190-94a6-cf311f7db2ca.gif)
   
     
     
@@ -108,7 +109,7 @@ Note that, in Internet Explorer, the resulting page looks like an error, as show
   
     
     
-![Excel Services REST range discovery using Atom](../../images/2d011e17-953f-42b1-97d3-2525372296c1.gif)
+![Excel Services REST range discovery using Atom](../images/2d011e17-953f-42b1-97d3-2525372296c1.gif)
   
     
     
@@ -237,7 +238,7 @@ In Internet Explorer, the page looks similar to the following figure.
   
     
     
-![Excel Services REST Discovery Get Range Using HTML](../../images/558e6305-5a42-4b5c-9a70-1116ddcf6637.gif)
+![Excel Services REST Discovery Get Range Using HTML](../images/558e6305-5a42-4b5c-9a70-1116ddcf6637.gif)
   
     
     
@@ -259,4 +260,4 @@ In Internet Explorer, the page looks similar to the following figure.
   
     
     
- [Resources URI for Excel Services REST API](resources-uri-for-excel-services-rest-api)
+ [Resources URI for Excel Services REST API](resources-uri-for-excel-services-rest-api.md)

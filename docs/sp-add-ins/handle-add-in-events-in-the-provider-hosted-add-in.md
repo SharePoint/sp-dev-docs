@@ -1,29 +1,36 @@
+---
+title: Handle add-in events in the provider-hosted add-in
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Handle add-in events in the provider-hosted add-in
 Learn how to customize the installation of a provider-hosted SharePoint Add-in.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
-This is the seventh in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with  [SharePoint Add-ins](sharepoint-add-ins) and the previous articles in this series:
+This is the seventh in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with  [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series:
  
 
--  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins)
+-  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
     
  
--  [Give your provider-hosted add-in the SharePoint look-and-feel](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel)
+-  [Give your provider-hosted add-in the SharePoint look-and-feel](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md)
     
  
--  [Include a custom button in the provider-hosted add-in](include-a-custom-button-in-the-provider-hosted-add-in)
+-  [Include a custom button in the provider-hosted add-in](include-a-custom-button-in-the-provider-hosted-add-in.md)
     
  
--  [Get a quick overview of the SharePoint object model](get-a-quick-overview-of-the-sharepoint-object-model)
+-  [Get a quick overview of the SharePoint object model](get-a-quick-overview-of-the-sharepoint-object-model.md)
     
  
--  [Add SharePoint write operations to the provider-hosted add-in](add-sharepoint-write-operations-to-the-provider-hosted-add-in)
+-  [Add SharePoint write operations to the provider-hosted add-in](add-sharepoint-write-operations-to-the-provider-hosted-add-in.md)
     
  
--  [Include an add-in part in the provider-hosted add-in](include-an-add-in-part-in-the-provider-hosted-add-in)
+-  [Include an add-in part in the provider-hosted add-in](include-an-add-in-part-in-the-provider-hosted-add-in.md)
     
  
 
@@ -68,7 +75,7 @@ For the Chain Store add-in, we'll combine these strategies. In this article, you
 ## Configure the solution for event receiver debugging
 <a name="RERDebug"> </a>
 
-Debugging of event receivers requires the use of the Azure Service Bus. Follow the instructions at  [Debug and troubleshoot a remote event receiver in a SharePoint Add-in](debug-and-troubleshoot-a-remote-event-receiver-in-a-sharepoint-add-in). Since you are using a SharePoint Online website as your test site, be sure carry out the instructions for a remote test site. The remainder of this series will assume you have configured debugging successfully. 
+Debugging of event receivers requires the use of the Azure Service Bus. Follow the instructions at  [Debug and troubleshoot a remote event receiver in a SharePoint Add-in](debug-and-troubleshoot-a-remote-event-receiver-in-a-sharepoint-add-in.md). Since you are using a SharePoint Online website as your test site, be sure carry out the instructions for a remote test site. The remainder of this series will assume you have configured debugging successfully. 
  
 
  
@@ -281,7 +288,7 @@ catch (Exception e)
  
 3. On the  **Accounts** page, press the **Show Add-in Version** button. The version shows as0000.0000.0000.0000.
     
-  ![The Accounts page with the heading "Account settings". A button named "Show Add-in Version" and below this a line of text reading "Registered version: zero zero zero zero dot zero zero zero zero dot zero zero zero zero dot zero zero zero zero".](../../images/2a905b7d-89c7-456a-8456-21a9b7e9efc5.PNG)
+  ![The Accounts page with the heading "Account settings". A button named "Show Add-in Version" and below this a line of text reading "Registered version: zero zero zero zero dot zero zero zero zero dot zero zero zero zero dot zero zero zero zero".](../images/2a905b7d-89c7-456a-8456-21a9b7e9efc5.PNG)
  
 
  
@@ -297,7 +304,7 @@ catch (Exception e)
 ## 
 <a name="Nextsteps"> </a>
 
- In the next article of the series, you will add first-run logic to the add-in that will programmatically deploy the **Local Employees** list and the custom ribbon button: [Add first-run logic to the provider-hosted add-in](add-first-run-logic-to-the-provider-hosted-add-in)
+ In the next article of the series, you will add first-run logic to the add-in that will programmatically deploy the **Local Employees** list and the custom ribbon button: [Add first-run logic to the provider-hosted add-in](add-first-run-logic-to-the-provider-hosted-add-in.md)
  
 
  

@@ -1,6 +1,7 @@
 ---
 title: What's New in Excel Web Services
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: cb342e94-0308-4608-b027-b73ebe8107b0
 ---
 
@@ -119,4 +120,4 @@ The following are new types added to Excel Web Services, in alphabetical order:
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)

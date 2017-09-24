@@ -1,3 +1,10 @@
+---
+title: Integrate web part properties with SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Integrate web part properties with SharePoint
 
 When building classic web parts, web part properties were isolated from SharePoint and their values were managed by end-users. SharePoint Frameworks offers you a new set of capabilities that simplify managing web part properties' values and integrate them with SharePoint Search. This article explains how you can use these capabilities when building SharePoint Framework client-side web parts.
@@ -10,9 +17,9 @@ When building SharePoint Framework client-side web parts, you can define propert
 
 Comparing to classic web parts, there are some differences in how the SharePoint Framework handles web parts properties. The following schema illustrates how web part properties values flow through the different layers of SharePoint.
 
-![Schema illustrating how the SharePoint Framework handles web part properties](../../../../images/integrate-webpart-properties-schema.png)
+![Schema illustrating how the SharePoint Framework handles web part properties](../../../images/integrate-webpart-properties-schema.png)
 
-Before accepting values for web part properties from the end-users you should always [validate them](./validate-web-part-property-values). This will not only allow you to ensure that your web parts are user-friendly, but will also help you prevent storing invalid data in the web part's configuration. Additionally, you should consider that the SharePoint Framework doesn't support personalization and all users see the same configuration of the particular web part.
+Before accepting values for web part properties from the end-users you should always [validate them](./validate-web-part-property-values.md). This will not only allow you to ensure that your web parts are user-friendly, but will also help you prevent storing invalid data in the web part's configuration. Additionally, you should consider that the SharePoint Framework doesn't support personalization and all users see the same configuration of the particular web part.
 
 ## Specify web part property value type
 

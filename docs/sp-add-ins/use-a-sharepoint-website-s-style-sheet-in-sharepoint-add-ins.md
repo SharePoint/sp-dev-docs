@@ -1,9 +1,15 @@
+---
+title: Use a SharePoint website's style sheet in SharePoint Add-ins
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # Use a SharePoint website's style sheet in SharePoint Add-ins
 Learn how to use a SharePoint website's style sheet in a SharePoint Add-in.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 You can reference the style sheet of a SharePoint website in your SharePoint Add-in and use it to style your webpages by using the style sheet in SharePoint. In addition, if someone changes the SharePoint website's style sheet or theme, you can adopt the new set of styles in your add-in without modifying the style sheet reference in your add-in.
@@ -16,7 +22,7 @@ You can reference the style sheet of a SharePoint website in your SharePoint Add
 ## Prerequisites for using the examples in this article
 <a name="SP15Usestylesheetcontrol_Prereq"> </a>
 
-You need a development environment as explained in  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins).
+You need a development environment as explained in  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md).
  
 
  
@@ -33,9 +39,9 @@ The following table lists useful articles that can help you understand the conce
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [SharePoint Add-ins](sharepoint-add-ins)|Learn about the new add-in model in SharePoint that enables you to create add-ins, which are small, easy-to-use solutions for end users.|
-| [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins)|Learn about the user experience (UX) options and alternatives that you have when building SharePoint Add-ins.|
-| [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013)|Learn about the difference between host webs and add-in webs. Find out which SharePoint components can be included in a SharePoint Add-in, which components are deployed to the host web, which components are deployed to the add-in web, and how the add-in web is deployed in an isolated domain.|
+| [SharePoint Add-ins](sharepoint-add-ins.md)|Learn about the new add-in model in SharePoint that enables you to create add-ins, which are small, easy-to-use solutions for end users.|
+| [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md)|Learn about the user experience (UX) options and alternatives that you have when building SharePoint Add-ins.|
+| [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md)|Learn about the difference between host webs and add-in webs. Find out which SharePoint components can be included in a SharePoint Add-in, which components are deployed to the host web, which components are deployed to the add-in web, and how the add-in web is deployed in an isolated domain.|
 
 ## Code example: Use a SharePoint website's style sheet in a SharePoint Add-in
 <a name="SP15Usestylesheetcontrol_Example"> </a>
@@ -71,7 +77,7 @@ Figure 1 shows a SharePoint webpage that is using the style sheet.
  
 
  
-![A web page using the stylesheet control](../../images/StylesheetControl_result.png)
+![A web page using the stylesheet control](../images/StylesheetControl_result.png)
  
 
 ### To create the SharePoint Add-in and remote web projects
@@ -80,7 +86,7 @@ Figure 1 shows a SharePoint webpage that is using the style sheet.
 1. Open Visual Studio as administrator. (To do this, right-click the Visual Studio icon on the  **Start** menu, and choose **Run as administrator**.)
     
  
-2. Create the provider-hosted SharePoint Add-in as explained in  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins) and name itStylesheetAdd-in. 
+2. Create the provider-hosted SharePoint Add-in as explained in  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md) and name itStylesheetAdd-in. 
     
  
 
@@ -248,7 +254,7 @@ Figure 1 shows a SharePoint webpage that is using the style sheet.
 
  
 
-  ![Stylesheet control used in a web page](../../images/StylesheetControl_result2.png)
+  ![Stylesheet control used in a web page](../images/StylesheetControl_result2.png)
  
 
  
@@ -274,16 +280,16 @@ This article demonstrated how to use the style sheet in a SharePoint Add-in. As 
 
  
 
--  [Code sample: Use the SharePoint style sheet in an add-in](http://code.msdn.microsoft.com/SharePoint-2013-Use-the-7a8684e2)
+-  [Code sample: Use the SharePoint style sheet in an add-in](http://code.msdn.microsoft.com/SharePoint-Use-the-7a8684e2)
     
  
--  [Use the client chrome control in SharePoint Add-ins](use-the-client-chrome-control-in-sharepoint-add-ins)
+-  [Use the client chrome control in SharePoint Add-ins](use-the-client-chrome-control-in-sharepoint-add-ins.md)
     
  
--  [Create custom actions to deploy with SharePoint Add-ins](create-custom-actions-to-deploy-with-sharepoint-add-ins)
+-  [Create custom actions to deploy with SharePoint Add-ins](create-custom-actions-to-deploy-with-sharepoint-add-ins.md)
     
  
--  [Create add-in parts to install with your SharePoint Add-in](create-add-in-parts-to-install-with-your-sharepoint-add-in)
+-  [Create add-in parts to install with your SharePoint Add-in](create-add-in-parts-to-install-with-your-sharepoint-add-in.md)
     
  
 
@@ -291,19 +297,19 @@ This article demonstrated how to use the style sheet in a SharePoint Add-in. As 
 <a name="SP15Usestylesheetcontrol_Addresources"> </a>
 
 
--  [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins)
+-  [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md)
     
  
--  [SharePoint Add-ins UX design guidelines](sharepoint-add-ins-ux-design-guidelines)
+-  [SharePoint Add-ins UX design guidelines](sharepoint-add-ins-ux-design-guidelines.md)
     
  
--  [Create UX components in SharePoint](create-ux-components-in-sharepoint-2013)
+-  [Create UX components in SharePoint](create-ux-components-in-sharepoint.md)
     
  
--  [Three ways to think about design options for SharePoint Add-ins](three-ways-to-think-about-design-options-for-sharepoint-add-ins)
+-  [Three ways to think about design options for SharePoint Add-ins](three-ways-to-think-about-design-options-for-sharepoint-add-ins.md)
     
  
--  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscape)
+-  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md)
     
  
 

@@ -1,9 +1,15 @@
+﻿---
+title: Three ways to think about design options for SharePoint Add-ins
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # Three ways to think about design options for SharePoint Add-ins
-Get an overview of the design and architecture options that are available with SharePoint Add-ins. You should first be familiar with the article  [SharePoint Add-ins](sharepoint-add-ins).
+Get an overview of the design and architecture options that are available with SharePoint Add-ins. You should first be familiar with the article  [SharePoint Add-ins](sharepoint-add-ins.md).
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 
@@ -32,31 +38,31 @@ There are three major categories of choices that need to be made when a SharePoi
       -  **Provider-hosted** add-ins have their primary data storage and business logic deployed and hosted by you—the developer—outside of SharePoint in servers or a cloud account that you provide. You are responsible for enforcing isolation between the accounts of the various customers who purchase your add-in. Such add-ins can have SharePoint components too. These are hosted in the customer's SharePoint farm. This type of add-in provides you with the most flexibility in the other categories of design choices. It also enables you to use non-Microsoft platforms for the external data, logic, and web user interface (UI). (Within the category of provider-hosted add-ins, you also need to distinguish between add-ins whose remote components are within the same corporate firewall as the SharePoint farm and those whose remote components are outside of that firewall. The authorization systems for these two scenarios are different, which, in turn, makes a difference in which programming language you use to access the SharePoint data..)
     
  
-  -  **SharePoint-hosted** add-ins consist entirely of SharePoint components, such as lists, content types, workflows, and Web Parts. There are no external components. For more information about the kinds of SharePoint components that can be included in SharePoint Add-ins, see [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013).
+  -  **SharePoint-hosted** add-ins consist entirely of SharePoint components, such as lists, content types, workflows, and Web Parts. There are no external components. For more information about the kinds of SharePoint components that can be included in SharePoint Add-ins, see [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md).
     
  
 
-    For more detailed information about the hosting options of SharePoint Add-ins, see  [Choose patterns for developing and hosting your SharePoint Add-in](choose-patterns-for-developing-and-hosting-your-sharepoint-add-in).
+    For more detailed information about the hosting options of SharePoint Add-ins, see  [Choose patterns for developing and hosting your SharePoint Add-in](choose-patterns-for-developing-and-hosting-your-sharepoint-add-in.md).
     
  
 -  **Connectivity:** SharePoint supports three kinds of secure create/read/update/delete (CRUD) access to data.
     
-      - External web applications in an add-in use the OAuth protocol to access SharePoint data. For more information, see  [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins).
+      - External web applications in an add-in use the OAuth protocol to access SharePoint data. For more information, see  [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md).
     
  
-  - JavaScript can access data in a SharePoint add-in web and data on other websites within the same tenancy by using a special JavaScript library that enables secure cross-domain scripting. For more information, see  [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library).
+  - JavaScript can access data in a SharePoint add-in web and data on other websites within the same tenancy by using a special JavaScript library that enables secure cross-domain scripting. For more information, see  [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md).
     
  
-  - A SharePoint Add-in can also access external data through Business Connectivity Services (BCS) or a web service proxy. For more information, see  [Business Connectivity Services in SharePoint](http://msdn.microsoft.com/library/64b7d032-4b83-4e9e-bc08-f0a161af5457%28Office.15%29.aspx) and [Query a remote service using the web proxy in SharePoint](query-a-remote-service-using-the-web-proxy-in-sharepoint-2013).
+  - A SharePoint Add-in can also access external data through Business Connectivity Services (BCS) or a web service proxy. For more information, see  [Business Connectivity Services in SharePoint](http://msdn.microsoft.com/library/64b7d032-4b83-4e9e-bc08-f0a161af5457%28Office.15%29.aspx) and [Query a remote service using the web proxy in SharePoint](query-a-remote-service-using-the-web-proxy-in-sharepoint.md).
     
  
 
-    For more information on data storage and access in SharePoint Add-ins, see  [Data storage in SharePoint Add-ins](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscape#Data),  [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins), and  [Work with external data in SharePoint](work-with-external-data-in-sharepoint-2013).
+    For more information on data storage and access in SharePoint Add-ins, see  [Data storage in SharePoint Add-ins](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscape#Data.md),  [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md), and  [Work with external data in SharePoint](work-with-external-data-in-sharepoint.md).
     
  
--  **UI:** There are three ways to surface a SharePoint Add-in in SharePoint: at a minimum, all add-ins are surfaced in a full web page. Optionally, an add-in can also be surfaced through an add-in part, and through a menu item or ribbon button. For more information, see [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins).
+-  **UI:** There are three ways to surface a SharePoint Add-in in SharePoint: at a minimum, all add-ins are surfaced in a full web page. Optionally, an add-in can also be surfaced through an add-in part, and through a menu item or ribbon button. For more information, see [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md).
     
-     **Note**  SharePoint Add-ins can be installed by your customers to multiple site collections in a tenancy, or on a website-by-website basis. The former are called tenant-scoped add-ins. If you want your customers to have the tenant-scoped option, you may not include a custom ribbon button or an add-in part. For more information, see  [Tenancies and deployment scopes for SharePoint Add-ins](tenancies-and-deployment-scopes-for-sharepoint-add-ins).
+     **Note**  SharePoint Add-ins can be installed by your customers to multiple site collections in a tenancy, or on a website-by-website basis. The former are called tenant-scoped add-ins. If you want your customers to have the tenant-scoped option, you may not include a custom ribbon button or an add-in part. For more information, see  [Tenancies and deployment scopes for SharePoint Add-ins](tenancies-and-deployment-scopes-for-sharepoint-add-ins.md).
 
 ## Architectural tiers
 <a name="Tiers"> </a>
@@ -123,10 +129,10 @@ The SharePoint Add-in model enables so many possibilities for design that a simp
 <a name="AdditionalResources"> </a>
 
 
--  [Design SharePoint Add-ins](design-sharepoint-add-ins)
+-  [Design SharePoint Add-ins](design-sharepoint-add-ins.md)
     
  
--  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscape)
+-  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md)
     
  
 

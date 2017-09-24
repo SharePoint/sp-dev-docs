@@ -1,6 +1,7 @@
 ---
 title: Retrieving query suggestions using the Search REST service
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: a64c5bec-64a8-4752-9c72-433d1c864aed
 ---
 
@@ -232,16 +233,16 @@ http:// _server_/_api/search/suggest?querytext='sharepoint'&amp;fprefixmatchallt
 <a name="bk_addresources"> </a>
 
 
--  [SharePoint Search REST API overview](sharepoint-search-rest-api-overview)
+-  [SharePoint Search REST API overview](sharepoint-search-rest-api-overview.md)
     
   
--  [Search in SharePoint](search-in-sharepoint)
+-  [Search in SharePoint](search-in-sharepoint.md)
     
   
 -  [SharePoint: Using the search REST service from an app for SharePoint](http://code.msdn.microsoft.com/sharepoint/SharePoint-Perform-a-1bf3e87d)
     
   
--  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers)
+-  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers.md)
     
   
 -  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)

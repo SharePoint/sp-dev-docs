@@ -1,18 +1,24 @@
+---
+title: Include a custom button in the provider-hosted add-in
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # Include a custom button in the provider-hosted add-in
 Learn how to include a custom ribbon button in a provider-hosted SharePoint Add-in.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
-This is the third in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with  [SharePoint Add-ins](sharepoint-add-ins) and the previous articles in this series:
+This is the third in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with  [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series:
  
 
--  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins)
+-  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
     
  
--  [Give your provider-hosted add-in the SharePoint look-and-feel](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel)
+-  [Give your provider-hosted add-in the SharePoint look-and-feel](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md)
     
  
 
@@ -69,7 +75,7 @@ The custom button is going to be on the ribbon of a specific list that records t
  
 10. Click  **new item** and on the create item form, enter a name, but do *not*  check **Added to Corporate DB**. Then click  **Save**. The list should look similar to the following:
     
-  ![The Local Employees list with a single item. Name is Brayden Sawtell. The value of the "Added to Corporate DB" column is No.](../../images/a3371859-e42f-49ea-8f17-48d8a248b075.PNG)
+  ![The Local Employees list with a single item. Name is Brayden Sawtell. The value of the "Added to Corporate DB" column is No.](../images/a3371859-e42f-49ea-8f17-48d8a248b075.PNG)
  
 
  
@@ -267,7 +273,7 @@ As you have seen, SharePoint prompts you to grant the add-in permissions to the 
  
 4. Leave the  **Properties** field empty and save the file. The **Permission** tab should look similar to the following:
     
-  ![The Permissions tab of the add-in manifest designer show the Scope to List and the Permission to be Read.](../../images/8dd2a25f-103a-42af-aa88-c8ec796315db.PNG)
+  ![The Permissions tab of the add-in manifest designer show the Scope to List and the Permission to be Read.](../images/8dd2a25f-103a-42af-aa88-c8ec796315db.PNG)
  
 
  
@@ -283,7 +289,7 @@ As you have seen, SharePoint prompts you to grant the add-in permissions to the 
 
 1. Use the F5 key to deploy and run your add-in. Visual Studio hosts the remote web application in IIS Express and hosts the SQL database in a SQL Express. It also makes a temporary installation of the add-in on your test SharePoint site and immediately runs the add-in. You are prompted to grant permissions to the add-in before it's start page opens. This time the prompt has a drop down where you select the list that the app needs to read as seen in the following screenshot. 
     
-  ![The SharePoint add-in permission prompt with the list named Local Employees selected in a drop down that is labelled "Let it read items in the list""](../../images/84e8b42c-4800-4947-acbd-21c6f096f4ea.PNG)
+  ![The SharePoint add-in permission prompt with the list named Local Employees selected in a drop down that is labelled "Let it read items in the list""](../images/84e8b42c-4800-4947-acbd-21c6f096f4ea.PNG)
  
 
  
@@ -306,7 +312,7 @@ As you have seen, SharePoint prompts you to grant the add-in permissions to the 
  
 7. Select an item on the list. The page and ribbon should look similar to the following:
     
-  ![The Local Employees list. One item is highlighted. Above it is the ribbon and a button named "Add To Corporate DB" is in the Actions section.](../../images/797a5ceb-7291-4b62-8075-2bb6a1b8e8a1.PNG)
+  ![The Local Employees list. One item is highlighted. Above it is the ribbon and a button named "Add To Corporate DB" is in the Actions section.](../images/797a5ceb-7291-4b62-8075-2bb6a1b8e8a1.PNG)
  
 
  
@@ -323,7 +329,7 @@ As you have seen, SharePoint prompts you to grant the add-in permissions to the 
  
 11. Click  **Show Employees** and the list of employees will be populated with the employee that you added. It should look similar to the following:
     
-  ![The corporate employees list on the add-in start page showing the same employee that was selected in the earlier step.](../../images/4a300a4e-f479-4f63-b536-6315c5d9ba4d.PNG)
+  ![The corporate employees list on the add-in start page showing the same employee that was selected in the earlier step.](../images/4a300a4e-f479-4f63-b536-6315c5d9ba4d.PNG)
  
 
  
@@ -339,7 +345,7 @@ As you have seen, SharePoint prompts you to grant the add-in permissions to the 
 ## 
 <a name="Nextsteps"> </a>
 
- In the next article, we'll take a brief break from coding for an overview of the SharePoint client-side object model: [Get a quick overview of the SharePoint object model](get-a-quick-overview-of-the-sharepoint-object-model).
+ In the next article, we'll take a brief break from coding for an overview of the SharePoint client-side object model: [Get a quick overview of the SharePoint object model](get-a-quick-overview-of-the-sharepoint-object-model.md).
  
 
  

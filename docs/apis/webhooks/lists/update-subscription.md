@@ -1,3 +1,10 @@
+---
+title: Update a subscription
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Update a subscription
 
 Updates a webhook subscription on a SharePoint list.

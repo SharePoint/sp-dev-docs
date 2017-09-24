@@ -1,3 +1,10 @@
+---
+title: Delete a subscription
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Delete a subscription
 
 Deletes a webhook subscription from a SharePoint list. After deleting the subscription notifications will no longer be delivered.

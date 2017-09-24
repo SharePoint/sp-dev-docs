@@ -1,10 +1,17 @@
+---
+title: Migrate Angular v1.x applications to SharePoint Framework
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Migrate Angular v1.x applications to SharePoint Framework
 
 > Note. This article has not yet been verified with SPFx GA version, so you might have challenges on making this work as such with the latest release.
 
 Many organizations have been using Angular for building SharePoint solutions in the past. This article shows how to migrate an existing Angular v1.x application styled using [ngOfficeUIFabric](http://ngofficeuifabric.com) - Angular directives for Office UI Fabric, to a SharePoint Framework client-side web part. The sample application used for this tutorial manages to do items stored in a SharePoint list.
 
-![Angular application for managing to do items stored in a SharePoint list](../../../../images/ng-migration-original-angular-application.png)
+![Angular application for managing to do items stored in a SharePoint list](../../../images/ng-migration-original-angular-application.png)
 
 The source of the Angular application is available on GitHub at [https://github.com/SharePoint/sp-dev-fx-webparts/tree/dev/samples/angular-migration/angular-todo](https://github.com/SharePoint/sp-dev-fx-webparts/tree/dev/samples/angular-migration/angular-todo).
 
@@ -43,11 +50,11 @@ When prompted, define values as follows:
 - **Simple management of to do tasks** as your web part description
 - **No JavaScript web framework** as the starting point to build the web part
 
-![SharePoint Framework Yeoman generator with the default choices](../../../../images/ng-migration-yeoman-generator.png)
+![SharePoint Framework Yeoman generator with the default choices](../../../images/ng-migration-yeoman-generator.png)
 
 Once the scaffolding completes, open your project folder in your code editor. In this tutorial, you will use Visual Studio Code.
 
-![SharePoint Framework project open in Visual Studio Code](../../../../images/ng-migration-project-visual-studio-code.png)
+![SharePoint Framework project open in Visual Studio Code](../../../images/ng-migration-project-visual-studio-code.png)
 
 ### Add Angular and ngOfficeUIFabric
 
@@ -61,7 +68,7 @@ In this tutorial you will load both Angular and ngOfficeUIFabric from CDN. To do
 "ng-office-ui-fabric": "https://cdnjs.cloudflare.com/ajax/libs/ngOfficeUiFabric/0.12.3/ngOfficeUiFabric.js"
 ```
 
-![Angular and ngOfficeUIFabric added to the config.json file](../../../../images/ng-migration-angular-ngofficeuifabric-config.png)
+![Angular and ngOfficeUIFabric added to the config.json file](../../../images/ng-migration-angular-ngofficeuifabric-config.png)
 
 ### Add Angular typings for TypeScript
 
@@ -85,17 +92,17 @@ In progress
 Completed
 ```
 
-![Todo SharePoint list](../../../../images/ng-migration-todo-list.png)
+![Todo SharePoint list](../../../images/ng-migration-todo-list.png)
 
 ### Copy Angular application files to the web part project
 
 In the web part project, in the **src/webparts/toDo** folder create a new folder called `app`.
 
-![App folder highlighted in Visual Studio Code Explorer pane](../../../../images/ng-migration-app-folder-visual-studio-code.png)
+![App folder highlighted in Visual Studio Code Explorer pane](../../../images/ng-migration-app-folder-visual-studio-code.png)
 
 From the source application copy the contents of the **app** folder, to the newly created **app** folder in the web part project.
 
-![App files highlighted in Visual Studio Code Explorer pane](../../../../images/ng-migration-app-files-visual-studio-code.png)
+![App files highlighted in Visual Studio Code Explorer pane](../../../images/ng-migration-app-files-visual-studio-code.png)
 
 ### Load the Angular application in the client-side web part
 
@@ -108,7 +115,7 @@ import * as angular from 'angular';
 import 'ng-office-ui-fabric';
 ```
 
-![Import statements to load Angular and ngOfficeUIFabric](../../../../images/ng-migration-angular-ngofficeuifabric-import.png)
+![Import statements to load Angular and ngOfficeUIFabric](../../../images/ng-migration-angular-ngofficeuifabric-import.png)
 
 Change the contents of the **render** method to:
 
@@ -161,7 +168,7 @@ export default class ToDoWebPart extends BaseClientSideWebPart<IToDoWebPartProps
 
 In the code editor open the **./src/webparts/toDo/app/app.config.js** file. Change the value of the **sharepointApi** constant to the server-relative URL of the SharePoint site where you created the Todo list, followed by `/_api/`.
 
-![Web URL highlighted in the app.config.js file in Visual Studio Code](../../../../images/ng-migration-app-config-web-url.png)
+![Web URL highlighted in the app.config.js file in Visual Studio Code](../../../images/ng-migration-app-config-web-url.png)
 
 ### Trust the development certificate
 
@@ -183,19 +190,19 @@ gulp serve --nobrowser
 
 In the **./temp** folder copy the **workbench.html** file and rename it to **workbench.aspx**. Inside the **workbench.aspx** file change the value of the **webAbsoluteUrl** property to the full URL of the SharePoint site in which you created the Todo list.
 
-![Web URL highlighted in the workbench.aspx file in Visual Studio Code](../../../../images/ng-migration-workbench-weburl.png)
+![Web URL highlighted in the workbench.aspx file in Visual Studio Code](../../../images/ng-migration-workbench-weburl.png)
 
 Upload the **workbench.aspx** file to the document library in your SharePoint site.
 
-![Web URL highlighted in the workbench.aspx file in Visual Studio Code](../../../../images/ng-migration-workbench-aspx-doclib.png)
+![Web URL highlighted in the workbench.aspx file in Visual Studio Code](../../../images/ng-migration-workbench-aspx-doclib.png)
 
 If you followed all steps correctly, you should see the web part in the browser showing the form to add to do items.
 
-![Migrated Angular application displayed in the SharePoint workbench uploaded to SharePoint](../../../../images/ng-migration-first-run.png)
+![Migrated Angular application displayed in the SharePoint workbench uploaded to SharePoint](../../../images/ng-migration-first-run.png)
 
 Add a few todo items to verify that the web part is working as expected.
 
-![Migrated Angular application incorrectly styled](../../../../images/ng-migration-old-office-ui-fabric.png)
+![Migrated Angular application incorrectly styled](../../../images/ng-migration-old-office-ui-fabric.png)
 
 ### Fix web part styling
 
@@ -274,7 +281,7 @@ export default class ToDoWebPart extends BaseClientSideWebPart<IToDoWebPartProps
 
 If you refresh the web part in the web browser, you will see that it is now correctly styled.
 
-![Migrated Angular application correctly marking completed items in the web part](../../../../images/ng-migration-correct-styling.png)
+![Migrated Angular application correctly marking completed items in the web part](../../../images/ng-migration-correct-styling.png)
 
 ## Upgrade the Angular application to TypeScript
 
@@ -663,7 +670,7 @@ gulp serve --nobrowser
 
 In the web browser refresh the SharePoint workbench which should display your web part just as previously.
 
-![Migrated Angular application correctly marking completed items in the web part](../../../../images/ng-migration-correct-styling.png)
+![Migrated Angular application correctly marking completed items in the web part](../../../images/ng-migration-correct-styling.png)
 
 Even though the way the web part works hasn't changed, your code is improved. In case of a future update you can more easily verify the correctness and integrity of your code already during development.
 
@@ -682,7 +689,7 @@ In the code editor open the **./src/webparts/toDo/ToDoWebPart.manifest.json** fi
 }
 ```
 
-![Web part manifest extended with new properties for the Angular application](../../../../images/ng-migration-angular-web-part-properties.png)
+![Web part manifest extended with new properties for the Angular application](../../../images/ng-migration-angular-web-part-properties.png)
 
 Change the contents of the **./src/webparts/toDo/IToDoWebPartProps.ts** file to:
 
@@ -705,7 +712,7 @@ import {
 } from '@microsoft/sp-client-preview';
 ```
 
-![Import statement updated to load the PropertyPaneToggle property pane control](../../../../images/ng-migration-import-propertypanetoggle.png)
+![Import statement updated to load the PropertyPaneToggle property pane control](../../../images/ng-migration-import-propertypanetoggle.png)
 
 Next, in the same file, change the **propertyPaneSettings** method to:
 
@@ -998,7 +1005,7 @@ export default class ToDoWebPart extends BaseClientSideWebPart<IToDoWebPartProps
 }
 ```
 
-![Injector property highlighted in the ToDoWebPart class](../../../../images/ng-migration-injector-property.png)
+![Injector property highlighted in the ToDoWebPart class](../../../images/ng-migration-injector-property.png)
 
 In the same file, update the **render** method to:
 
@@ -1227,4 +1234,4 @@ gulp serve --nobrowser
 
 In your web browser navigate to the SharePoint workbench and add the web part to canvas. If you toggle the **Hide finished tasks** option you should see completed tasks being displayed or hidden accordingly.
 
-![Angular application hiding finished tasks as configured in web part properties](../../../../images/ng-migration-finished-tasks-hidden.png)
+![Angular application hiding finished tasks as configured in web part properties](../../../images/ng-migration-finished-tasks-hidden.png)

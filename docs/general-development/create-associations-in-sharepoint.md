@@ -1,6 +1,7 @@
 ---
 title: Create associations in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 202599e3-232e-4b3a-9da5-c11f6e972283
 ---
 
@@ -32,10 +33,10 @@ The following articles were written for SharePoint Server 2010 and SharePoint De
 ## Additional resources
 
 
--  [External content types in SharePoint](external-content-types-in-sharepoint)
+-  [External content types in SharePoint](external-content-types-in-sharepoint.md)
     
   
--  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
     
   
 

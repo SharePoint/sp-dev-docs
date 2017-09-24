@@ -1,3 +1,10 @@
+---
+title: Working with lists and list items with REST
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Working with lists and list items with REST
 Learn how to perform basic create, read, update, and delete (CRUD) operations on lists and list items with the SharePoint REST interface.
  

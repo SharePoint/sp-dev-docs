@@ -1,9 +1,10 @@
----
+﻿---
 title: Excel Services Development Roadmap
+ms.date: 09/25/2017
 keywords: roadmap
 f1_keywords:
 - roadmap
-ms.prod: SHAREPOINT
+ms.prod: sharepoint
 ms.assetid: 5c789f58-9cdb-4601-9047-9c6f83f2fbba
 ---
 
@@ -138,11 +139,11 @@ You can use Excel Web Services as:
 - A local assembly, by linking directly to **Microsoft.Office.Excel.Server.Webservices.dll**.
     
   
-For more information about when you should link directly to **Microsoft.Office.Excel.Server.Webservices.dll**, see  [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking). 
+For more information about when you should link directly to **Microsoft.Office.Excel.Server.Webservices.dll**, see  [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking.md). 
   
     
     
-For information about the Excel Web Services API, see the  [Microsoft.Office.Excel.Server.Webservices](https://msdn.microsoft.com/library/Microsoft.Office.Excel.Server.Webservices.aspx) namespace reference documentation. For an example of how to develop a custom application by using Excel Web Services, see [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services).
+For information about the Excel Web Services API, see the  [Microsoft.Office.Excel.Server.Webservices](https://msdn.microsoft.com/library/Microsoft.Office.Excel.Server.Webservices.aspx) namespace reference documentation. For an example of how to develop a custom application by using Excel Web Services, see [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md).
   
     
     
@@ -166,7 +167,7 @@ Excel Services supports managed-code UDFs. Excel Services UDFs give you the abil
 - Wrap calls to existing native code library functions—for example, existing Excel UDFs.
     
   
-For more information about Excel Services UDFs, see  [Understanding Excel Services UDFs](understanding-excel-services-udfs). 
+For more information about Excel Services UDFs, see  [Understanding Excel Services UDFs](understanding-excel-services-udfs.md). 
   
     
     
@@ -177,7 +178,7 @@ For information about Excel Services UDF definitions, see the  [Microsoft.Office
   
     
     
-For an example of how to create managed-code UDFs, see  [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf).
+For an example of how to create managed-code UDFs, see  [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md).
   
     
     
@@ -237,7 +238,7 @@ For more information about JavaScript, see the following links:
 - For more information about the JavaScript object model in Excel Services, see the  [Ewa](http://msdn.microsoft.com/library/6fe73191-3213-b986-1ad6-2c3b918a2241%28Office.15%29.aspx) namespace reference documentation.
     
   
-- For an example of how to interact with the JavaScript object model in Excel Services by using the Content Editor Web Part, see  [Walkthrough: Developing Using the Content Editor Web Part](walkthrough-developing-using-the-content-editor-web-part).
+- For an example of how to interact with the JavaScript object model in Excel Services by using the Content Editor Web Part, see  [Walkthrough: Developing Using the Content Editor Web Part](walkthrough-developing-using-the-content-editor-web-part.md).
     
   
 
@@ -255,7 +256,7 @@ Using the Atom feed provided by the REST API enables an easier way to get to the
   
     
     
-For more information, see  [Excel Services REST API](excel-services-rest-api).
+For more information, see  [Excel Services REST API](excel-services-rest-api.md).
   
     
     
@@ -267,10 +268,10 @@ For information about:
     
     
 
-- Accessing the REST service, and to view sample URIs for the REST service in Excel Services, see  [Accessing Excel Services REST API](sample-uri-for-excel-services-rest-api).
+- Accessing the REST service, and to view sample URIs for the REST service in Excel Services, see  [Accessing Excel Services REST API](sample-uri-for-excel-services-rest-api.md).
     
   
-- Accessing a schema for the REST service in Excel Services, see  [Accessing a Schema](accessing-a-schema).
+- Accessing a schema for the REST service in Excel Services, see  [Accessing a Schema](accessing-a-schema.md).
     
   
 
@@ -283,30 +284,30 @@ For information about:
   
     
     
- [How to: Programmatically Add an Excel Web Access Web Part to a Page](how-to-programmatically-add-an-excel-web-access-web-part-to-a-page)
+ [How to: Programmatically Add an Excel Web Access Web Part to a Page](how-to-programmatically-add-an-excel-web-access-web-part-to-a-page.md)
 #### Concepts
 
 
   
     
     
- [Excel Services Overview](excel-services-overview)
+ [Excel Services Overview](excel-services-overview.md)
   
     
     
- [Excel Services Architecture](excel-services-architecture)
+ [Excel Services Architecture](excel-services-architecture.md)
   
     
     
- [Supported and Unsupported Features](supported-and-unsupported-features)
+ [Supported and Unsupported Features](supported-and-unsupported-features.md)
   
     
     
- [Excel Services Blogs, Forums, and Resources](excel-services-blogs-forums-and-resources)
+ [Excel Services Blogs, Forums, and Resources](excel-services-blogs-forums-and-resources.md)
 #### Other resources
 
 
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)

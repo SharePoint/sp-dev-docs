@@ -1,6 +1,7 @@
 ---
 title: Walkthrough Developing Using the Content Editor Web Part
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 0b5e74b7-405c-43c5-b2dd-1dff77280856
 ---
 
@@ -24,7 +25,7 @@ During this walkthrough, you will learn how to:
   
 
 > **Note:**
-> For information about how to trust a location, see  [How to: Trust a Location](how-to-trust-a-location). 
+> For information about how to trust a location, see  [How to: Trust a Location](how-to-trust-a-location.md). 
   
     
     
@@ -39,18 +40,18 @@ During this walkthrough, you will learn how to:
   
     
     
- [How to: Trust a Location](how-to-trust-a-location)
+ [How to: Trust a Location](how-to-trust-a-location.md)
 #### Concepts
 
 
   
     
     
- [Excel Services Alerts](excel-services-alerts)
+ [Excel Services Alerts](excel-services-alerts.md)
   
     
     
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips)
+ [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
 #### Other resources
 
 

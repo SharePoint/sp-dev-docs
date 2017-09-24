@@ -1,3 +1,10 @@
+---
+title: Team-based development on the SharePoint Framework
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Team-based development on the SharePoint Framework
 
 SharePoint Framework is a new development model for building SharePoint customizations. Unlike other SharePoint development models available to date, the SharePoint Framework focuses on client-side development and is built on top of popular open source tools such as gulp and webpack. One big benefit of this change is that developers on any platform can build SharePoint customizations.

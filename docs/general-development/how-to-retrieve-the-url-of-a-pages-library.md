@@ -1,6 +1,7 @@
 ---
 title: How to Retrieve the URL of a Pages library
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: d9922e4b-4948-4c4a-a8ca-1623168143a3
 ---
 
@@ -114,7 +115,7 @@ Key = vti_pageslistname, Value = {the URL to the Pages list}
 <a name="bk_addresources"> </a>
 
 
--  [Build sites for SharePoint](build-sites-for-sharepoint)
+-  [Build sites for SharePoint](build-sites-for-sharepoint.md)
     
   
 

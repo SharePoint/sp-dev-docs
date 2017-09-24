@@ -1,15 +1,21 @@
+---
+title: Provide a template for a document library in a cloud business add-in
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # Provide a template for a document library in a cloud business add-in
 In addition to the Office templates that are available when you add a document to a SharePoint document library, you can provide your own templates. For example, you might have your own sales quote template that you want to use when new orders are added.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 
 ## 
 
-If you haven't already done so, associate a document library with your cloud business add-in. See  [Associate a document library with an entity](associate-a-document-library-with-an-entity).
+If you haven't already done so, associate a document library with your cloud business add-in. See  [Associate a document library with an entity](associate-a-document-library-with-an-entity.md).
  
 
  
@@ -26,7 +32,7 @@ If you haven't already done so, associate a document library with your cloud bus
 
  
 
-  ![Site Settings link](../../images/CBA_IM_8b.PNG)
+  ![Site Settings link](../images/CBA_IM_8b.PNG)
  
 
  
@@ -38,7 +44,7 @@ If you haven't already done so, associate a document library with your cloud bus
 
  
 
-  ![Site content types link](../../images/CBA_IM_26.PNG)
+  ![Site content types link](../images/CBA_IM_26.PNG)
  
 
  
@@ -50,7 +56,7 @@ If you haven't already done so, associate a document library with your cloud bus
 
  
 
-  ![Create link](../../images/CBA_IM_27.PNG)
+  ![Create link](../images/CBA_IM_27.PNG)
  
 
  
@@ -62,7 +68,7 @@ If you haven't already done so, associate a document library with your cloud bus
 
  
 
-  ![Parent content type selections](../../images/CBA_IM_28.PNG)
+  ![Parent content type selections](../images/CBA_IM_28.PNG)
  
 
  
@@ -74,7 +80,7 @@ If you haven't already done so, associate a document library with your cloud bus
 
  
 
-  ![Group setting](../../images/CBA_IM_28a.PNG)
+  ![Group setting](../images/CBA_IM_28a.PNG)
  
 
  
@@ -89,7 +95,7 @@ If you haven't already done so, associate a document library with your cloud bus
 
  
 
-  ![Specify the document template](../../images/CBA_IM_29.PNG)
+  ![Specify the document template](../images/CBA_IM_29.PNG)
  
 
  
@@ -107,7 +113,7 @@ If you haven't already done so, associate a document library with your cloud bus
 
  
 
-  ![Adding the template](../../images/CBA_IM_29a.PNG)
+  ![Adding the template](../images/CBA_IM_29a.PNG)
  
 
  
@@ -119,7 +125,7 @@ If you haven't already done so, associate a document library with your cloud bus
 
  
 
-  ![The Create a new file dialog with the new template](../../images/CBA_IM_30.PNG)
+  ![The Create a new file dialog with the new template](../images/CBA_IM_30.PNG)
  
 
  
@@ -130,10 +136,10 @@ If you haven't already done so, associate a document library with your cloud bus
 <a name="bk_addresources"> </a>
 
 
--  [Develop cloud business add-ins](develop-cloud-business-add-ins)
+-  [Develop cloud business add-ins](develop-cloud-business-add-ins.md)
     
  
--  [Associate a document library with an entity](associate-a-document-library-with-an-entity)
+-  [Associate a document library with an entity](associate-a-document-library-with-an-entity.md)
     
  
 

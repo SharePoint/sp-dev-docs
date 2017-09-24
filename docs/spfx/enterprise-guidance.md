@@ -1,3 +1,10 @@
+﻿---
+title: SharePoint Framework (SPFx) enterprise guidance
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # SharePoint Framework (SPFx) enterprise guidance
 
 ## Introduction
@@ -95,14 +102,14 @@ SharePoint is and have been one of the most successfull enterprise collaboration
 
 ### Enterprise developers
 
-The SharePoint Framework allows **Enterprise developers**, typically a developer that creates application for use within an organization, to extend SharePoint (Online) with new functionality in a structured and supported way. The SharePoint Framework offers everything from the development framework, build pipeline, to the actual deployment and allows the developers in a short time reach out to all Site Collections with new solutions and features, all controlled by the App Catalog. In an enterprise scenario you also have full control of the CDN locations; external or internal in SharePoint and you can very easily deploy fixes and updates to your whole organization.
+The SharePoint Framework allows **Enterprise developers**, typically a developer that creates application for use within an organization, to extend SharePoint (Online) with new functionality in a structured and supported way. The SharePoint Framework offers everything from the development framework, build pipeline, to the actual deployment and allows the developers in a short time reach out to all Site Collections with new solutions and features, all controlled by the App Catalog. In an enterprise scenarion you also have full control of the CDN locations; external or internal in SharePoint and you can very easy deploy fixes and updates to your whole organization.
 
 Within your enterprise administrators and developers jointly should create a *blue print* for how SharePoint Frameworks solutions should be deployed. The blue print should contain details on preferred client side frameworks, CDN locations etc. For more details, see the section below on *Building a plan around SharePoint Framework customizations*.
 
 ### Citizen developers
 
 Citizen developers have for a long time used SharePoint to build business applications using a lot of different methods and techniques.
-SharePoint Framework will for certain scenarios, specifically JavaScript embeddings and Script Editor Web Parts solutions be one good way forward. This to make these solutions more standardized and maintainable over time. For citizen developers there might be a little bit of learning curve to adjust to this new structured way of building solutions, but will in the long run prove to be more stable, secure and maintainable.
+SharePoint Framework will for certain scenarios, specifically JavaScript embeddings and Script Editor Web Parts solutions be one good way forward. This to make these solutions more standardized and maintainable over time. For citizen developers there might be a little bit of learning curve to adjust to this new structured way of building solutions, but will in the long run proove to be more stable, secure and maintainable.
 
 Given that the, above mentioned, *Custom Script* control methods are in place, the citizen developers will not be allowed to add arbitrary JavaScript code or Script Editor Web Parts. This can potentially make your SharePoint environment more stable and maintainable, but at the same time you might prohibt some *innovation* in your company, and should make sure that your citizen developers aligns with your enterprise developers on using SharePoint Framework going forward.
 
@@ -135,7 +142,7 @@ Finally, developers will need to think about application life cycle management (
 
 All SharePoint Framework solutions deployed into a tenant must be approved by a tenant administrator. This is done by uploading the SharePoint Framework package, the `.sppkg` file into the *Apps for SharePoint* library. When a new solution is added to the library, the administrator will get a dialog that asks for a consent to approve the solution for use in the tenancy. The dialog explains that this is a *full trust client side code* solution without any resource restrictions and that it executes under users context. The dialog also shows from what domain it will primarily get content, that is the CDN location of the SharePoint Framework scripts. Note that any SharePoint Framework application can load data from other locations, after the initial load from the CDN. Once approved the SharePoint Framework solution can be enabled on any Site Collection.
 
-![SharePoint Framework app catalog trust dialog](../../../../images/enterprise-guidance-trust-spfx-dialog.png)
+![SharePoint Framework app catalog trust dialog](../images/enterprise-guidance-trust-spfx-dialog.png)
 
 An administrator of the App Catalog can at any time remove the package from the App Catalog by removing the solution package from the *Apps for SharePoint* library. This will prohibit the solution to be used in all Site Collections. The solution can also be disabled by modifying the *Enabled* property of the uploaded package. This will immediatley disable the solution in all Site Collections; existing pages using client side web parts will not render the web part and the app will not be available on the Site Collections or available to add on existing Site Collections. When removing a SharePoint Framework solution it will not remove any data or information created by the actual client side solution either in SharePoint or in any external data source used by the solution.
 
@@ -161,7 +168,7 @@ What you cannot backup is the actual solution artifacts such as script bundles a
 
 ## SharePoint Framework Roadmap
 
-The SharePoint Framework reached General Availability (GA) in February 2017. General Availability means that IT and developers can supportably use SharePoint Framework in production. Beyond General Availability, we would expect that the set of scenarios where we would see SharePoint Framework-based components are built and used will expand beyond web parts scenarios, and into areas like list and site customizations. For more information about the SharePoint Framework see the dedicated [SharePoint Framework Roadmap article](https://dev.office.com/sharepoint/docs/spfx/roadmap). SharePoint Framework client-side web parts are also available in on-premises with SharePoint 2016 Feature Pack 2.
+The SharePoint Framework reached General Availability (GA) in February 2017. General Availability means that IT and developers can supportably use SharePoint Framework in production. Beyond General Availability, we would expect that the set of scenarios where we would see SharePoint Framework-based components are built and used will expand beyond web parts scenarios, and into areas like list and site customizations. For more information about the SharePoint Framework see the dedicated [SharePoint Framework Roadmap article](https://dev.office.com/sharepoint/docs/spfx/roadmap). Also, the SharePoint team is looking to bring the SharePoint Framework to SharePoint 2016 on-premises during 2017, as part of a future Feature Pack.
 
 Major changes or introduction of new major features will be announced through the Office 365 Message Center, found in your tenant admin - something that an Office 365 administrator already should have on their daily routine to check. Another important resource is the [Office Developer blog](http://dev.office.com/blogs) where you will find even more details and updates.
 

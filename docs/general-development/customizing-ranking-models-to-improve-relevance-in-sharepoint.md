@@ -1,13 +1,14 @@
 ---
 title: Customizing ranking models to improve relevance in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: c166ecdd-7f93-4bbb-b543-2687992dd2bc
 ---
 
 
 # Customizing ranking models to improve relevance in SharePoint
 Improve search relevance by customizing ranking models to calculate rank scores (relevance rank) accurately using rank features in SharePoint.
-You can  [sort search results in SharePoint](sorting-search-results-in-sharepoint) in four ways, one of which is by rank score. When you sort search results by rank score, SharePoint places the most relevant results on top in the search result set.
+You can  [sort search results in SharePoint](sorting-search-results-in-sharepoint.md) in four ways, one of which is by rank score. When you sort search results by rank score, SharePoint places the most relevant results on top in the search result set.
   
     
     
@@ -208,7 +209,7 @@ To retrieve the rank detail, you need to be the administrator of the Search serv
     
 
 ### To retrieve the rank detail
-
+<a name="sp15_list_available_ranking_models"> </a>
 
 1. Open the SharePoint Management Shell as an Administrator.
     
@@ -292,7 +293,7 @@ The BM25 rank feature calculates the relevance rank score using the following fo
   
     
     
-![BM25 formula for the BM25 rank feature](../../images/sp15_BM25_formula.gif)
+![BM25 formula for the BM25 rank feature](../images/sp15_BM25_formula.gif)
   
     
     
@@ -446,7 +447,7 @@ Before the static rank feature can be aggregated with other rank features, each 
 
     
     
-![Transform functions supported for rank features](../../images/sp15_transform_table_ranking_model.gif)
+![Transform functions supported for rank features](../images/sp15_transform_table_ranking_model.gif)
   
     
     
@@ -688,7 +689,7 @@ The freshness transform is based on the following formula:
   
     
     
-![Freshness formula for ranking models](../../images/sp15_freshness_formula.gif)
+![Freshness formula for ranking models](../images/sp15_freshness_formula.gif)
   
     
     
@@ -798,7 +799,7 @@ The rank score provided by linear models is computed using the following formula
   
     
     
-![Linear model formula for ranking models](../../images/sp15_linear_model_formula.gif)
+![Linear model formula for ranking models](../images/sp15_linear_model_formula.gif)
   
     
     
@@ -845,7 +846,7 @@ The ranking score produced by a neural network is computed using the following f
   
     
     
-![Neural network formula for ranking models](../../images/sp15_neural_network_formula.gif)
+![Neural network formula for ranking models](../images/sp15_neural_network_formula.gif)
   
     
     
@@ -900,7 +901,7 @@ The overall schema of rank score computation with a two-layer neural network is 
   
     
     
-![Neural network in ranking models](../../images/sp15neuralnetworkinrankingmodels.gif)
+![Neural network in ranking models](../images/sp15neuralnetworkinrankingmodels.gif)
   
     
     
@@ -1080,13 +1081,13 @@ This ranking model with one linear stage contains these four rank features:
 <a name="bk_addresources"> </a>
 
 
--  [Search in SharePoint](search-in-sharepoint)
+-  [Search in SharePoint](search-in-sharepoint.md)
     
   
--  [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference)
+-  [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference.md)
     
   
--  [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference)
+-  [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference.md)
     
   
 -  [Overview of search result ranking in SharePoint](http://technet.microsoft.com/library/7c8ddec1-c8ff-4a90-afae-387b27a653f1.aspx)

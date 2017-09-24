@@ -1,6 +1,7 @@
 ---
 title: Overview of SharePoint and the Volume Shadow Copy Service
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: d1cb6653-bfc0-4af2-b221-d7d30cb40d84
 ---
 
@@ -23,7 +24,7 @@ The following figure shows the main components in the system: Microsoft Windows 
   
     
     
-![SharePoint to VSS Relationships](../../images/77a290e8-e4aa-4c54-b1ec-3d74bf3962b6.gif)
+![SharePoint to VSS Relationships](../images/77a290e8-e4aa-4c54-b1ec-3d74bf3962b6.gif)
   
     
     
@@ -46,7 +47,7 @@ During a recovery, the backup/restore application instructs the SPF-VSS Writer t
 
     
 > **Note:**
-> See "Restoring" in  [VSS requestors and SharePoint](vss-requestors-and-sharepoint) for important information about restorations.
+> See "Restoring" in  [VSS requestors and SharePoint](vss-requestors-and-sharepoint.md) for important information about restorations.
   
     
     
@@ -95,19 +96,19 @@ The following is the high-level sequence of events during backup or restore oper
 <a name="bk_addresources"> </a>
 
 
--  [SharePoint VSS Writer](sharepoint-vss-writer)
+-  [SharePoint VSS Writer](sharepoint-vss-writer.md)
     
   
--  [VSS requestors and SharePoint](vss-requestors-and-sharepoint)
+-  [VSS requestors and SharePoint](vss-requestors-and-sharepoint.md)
     
   
--  [How to: Create a VSS requestor for use with SharePoint](how-to-create-a-vss-requestor-for-use-with-sharepoint)
+-  [How to: Create a VSS requestor for use with SharePoint](how-to-create-a-vss-requestor-for-use-with-sharepoint.md)
     
   
--  [How to: Back up and restore SharePoint using a VSS requestor](how-to-back-up-and-restore-sharepoint-using-a-vss-requestor)
+-  [How to: Back up and restore SharePoint using a VSS requestor](how-to-back-up-and-restore-sharepoint-using-a-vss-requestor.md)
     
   
--  [How to: Back up and restore a search service application in SharePoint using VSS](how-to-back-up-and-restore-a-search-service-application-in-sharepoint-using)
+-  [How to: Back up and restore a search service application in SharePoint using VSS](how-to-back-up-and-restore-a-search-service-application-in-sharepoint-using.md)
     
   
 -  [Starting and Configuring the WSS Writer Service](http://msdn.microsoft.com/library/c9243dd6-e61e-4783-9fef-48d0122f1c09.aspx)

@@ -1,10 +1,16 @@
+﻿---
+title: Managed navigation in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # Managed navigation in SharePoint
 
   
     
     
-![Conceptual overview topic](../../images/mod_icon_badge_conoverview.png)
+![Conceptual overview topic](../images/mod_icon_badge_conoverview.png)
   
     
     
@@ -244,7 +250,7 @@ using (SPSite site = new SPSite(TestConfig.ServerUrl))
 <a name="SP15_ManagedNav_AdditionalResources"> </a>
 
 
--  [Content Search Web Part in SharePoint](content-search-web-part-in-sharepoint)
+-  [Content Search Web Part in SharePoint](content-search-web-part-in-sharepoint.md)
     
   
 

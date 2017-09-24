@@ -1,6 +1,7 @@
----
+﻿---
 title: Overview of Windows Phone SharePoint application templates in Visual Studio
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 6ae27957-fa41-4e6f-92e3-db11dae1f6c2
 ---
 
@@ -76,7 +77,7 @@ If you create a Visual Studio project based on the Windows Phone Empty SharePoin
   
     
     
-![Windows Phone Empty SharePoint Application project](../../images/SP15_OverviewOfWinPhoneSPTemplatesInVisualStudio_fig1.PNG)
+![Windows Phone Empty SharePoint Application project](../images/SP15_OverviewOfWinPhoneSPTemplatesInVisualStudio_fig1.PNG)
   
     
     
@@ -116,7 +117,7 @@ The files generated for a Visual Studio project using the Windows Phone SharePoi
   
     
     
-![Windows Phone SharePoint List Application project](../../images/1a9680d3-7a96-4d82-b0b9-9a9384bf96c2.gif)
+![Windows Phone SharePoint List Application project](../images/1a9680d3-7a96-4d82-b0b9-9a9384bf96c2.gif)
   
     
     
@@ -146,7 +147,7 @@ The project files for are described in Table 1.
 |ListViewModel.cs  <br/> |Serves as the data source for the List.xaml file.  <br/> |
 |NewItemViewModel.cs  <br/> |Serves as the data source for the NewForm.xaml file. You write code in this file to validate data entered by users when adding a new list item.  <br/> |
    
-For the details of the steps involved in creating a Windows Phone app by using the Windows Phone SharePoint List Application template, see  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app).
+For the details of the steps involved in creating a Windows Phone app by using the Windows Phone SharePoint List Application template, see  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app.md).
   
     
     
@@ -155,10 +156,10 @@ For the details of the steps involved in creating a Windows Phone app by using t
 <a name="SP15winphoneover_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
--  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint)
+-  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
     
   
 -  [Windows Phone SDK 8.0](http://www.microsoft.com/en-us/download/details.aspx?id=35471)

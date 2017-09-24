@@ -1,3 +1,9 @@
+﻿---
+title: SharePoint Search REST API overview
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # SharePoint Search REST API overview
 Add search functionality to client and mobile applications using the Search REST service in SharePoint and any technology that supports REST web requests.
@@ -1641,7 +1647,7 @@ When an anonymous Search REST query is submitted, the query object is constructe
 ## In this section
 <a name="bk_AnonymousREST"> </a>
 
--  [Retrieving query suggestions using the Search REST service](retrieving-query-suggestions-using-the-search-rest-service)
+-  [Retrieving query suggestions using the Search REST service](retrieving-query-suggestions-using-the-search-rest-service.md)
     
   
 
@@ -1649,13 +1655,13 @@ When an anonymous Search REST query is submitted, the query object is constructe
 <a name="bk_addresources"> </a>
 
 
--  [Search in SharePoint](search-in-sharepoint)
+-  [Search in SharePoint](search-in-sharepoint.md)
     
   
 -  [SharePoint: Using the search REST service from an app for SharePoint](http://code.msdn.microsoft.com/sharepoint/SharePoint-Perform-a-1bf3e87d)
     
   
--  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers)
+-  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers.md)
     
   
 -  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)

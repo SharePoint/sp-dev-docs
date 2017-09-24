@@ -1,6 +1,7 @@
 ---
 title: Using the SharePoint search Query APIs
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: ae9d73ed-1140-430b-9287-01dbbe8ae7d1
 ---
 
@@ -45,7 +46,7 @@ Table 1 shows the APIs that you can use to program search queries and the path t
 |REST service endpoints  <br/> |http://server/_api/search/query <br/>http://server/_api/search/suggest  <br/> |
 |Server object model  <br/> |Microsoft.Office.Server.Search.dll <br/>%ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\ISAPI  <br/> |
    
-As a best practice in SharePoint development, use client APIs when you can. Client APIs include the .NET, Silverlight, Phone, and JavaScript client object models, and the REST service. For more information about the APIs in SharePoint and when to use them, see  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint).
+As a best practice in SharePoint development, use client APIs when you can. Client APIs include the .NET, Silverlight, Phone, and JavaScript client object models, and the REST service. For more information about the APIs in SharePoint and when to use them, see  [Choose the right API set in SharePoint](choose-the-right-api-set-in-sharepoint.md).
   
     
     
@@ -126,7 +127,7 @@ The following is the access point for the service:  `http://server/_api/search/`
   
     
     
-See  [SharePoint Search REST API overview](sharepoint-search-rest-api-overview) and [Retrieving query suggestions using the Search REST service](retrieving-query-suggestions-using-the-search-rest-service) for more information.
+See  [SharePoint Search REST API overview](sharepoint-search-rest-api-overview.md) and [Retrieving query suggestions using the Search REST service](retrieving-query-suggestions-using-the-search-rest-service.md) for more information.
   
     
     
@@ -172,10 +173,10 @@ To download an example, see the following code sample posted by SharePoint MVP  
 <a name="bk_addresources"> </a>
 
 
--  [Building search queries in SharePoint](building-search-queries-in-sharepoint)
+-  [Building search queries in SharePoint](building-search-queries-in-sharepoint.md)
     
   
--  [SharePoint Search REST API overview](sharepoint-search-rest-api-overview)
+-  [SharePoint Search REST API overview](sharepoint-search-rest-api-overview.md)
     
   
 -  [SharePoint: Using the search REST service from an app for SharePoint](http://code.msdn.microsoft.com/sharepoint/SharePoint-Perform-a-1bf3e87d)

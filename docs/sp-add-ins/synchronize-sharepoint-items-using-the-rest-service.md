@@ -1,9 +1,15 @@
+---
+title: Synchronize SharePoint items using the REST service
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # Synchronize SharePoint items using the REST service
 Learn how to synchronize items between SharePoint and your add-ins or services by using the  **GetListItemChangesSinceToken** resource, part of the SharePoint REST service.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 
@@ -75,25 +81,25 @@ The request returns ADO  **rowset** XML which includes rows corresponding to any
 <a name="bk_addresources"> </a>
 
 
--  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-2013-rest-service)
+-  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
     
  
--  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints)
+-  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md)
     
  
--  [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest)
+-  [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest.md)
     
  
--  [Working with folders and files with REST](working-with-folders-and-files-with-rest)
+-  [Working with folders and files with REST](working-with-folders-and-files-with-rest.md)
     
  
--  [Navigate the SharePoint data structure represented in the REST service](navigate-the-sharepoint-data-structure-represented-in-the-rest-service)
+-  [Navigate the SharePoint data structure represented in the REST service](navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md)
     
  
--  [Determine SharePoint REST service endpoint URIs](determine-sharepoint-rest-service-endpoint-uris)
+-  [Determine SharePoint REST service endpoint URIs](determine-sharepoint-rest-service-endpoint-uris.md)
     
  
--  [Use OData query operations in SharePoint REST requests](use-odata-query-operations-in-sharepoint-rest-requests)
+-  [Use OData query operations in SharePoint REST requests](use-odata-query-operations-in-sharepoint-rest-requests.md)
     
  
 -  [REST API reference and samples](http://msdn.microsoft.com/library/rest-api-reference-and-samples%28Office.15%29.aspx)

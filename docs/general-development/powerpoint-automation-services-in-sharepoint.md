@@ -1,6 +1,7 @@
 ---
 title: PowerPoint Automation Services in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 168c7dc0-fbdc-41a2-84db-65d211d3d673
 ---
 

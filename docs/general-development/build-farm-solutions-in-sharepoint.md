@@ -1,6 +1,7 @@
 ---
 title: Build farm solutions in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 96c32f08-ad93-49af-b8d0-9d194a48cc79
 ---
 
@@ -14,7 +15,7 @@ SharePoint has its own system for installing extensions to SharePoint administra
   
     
     
-Unlike SharePoint Add-ins, farm solutions contain code that is deployed to the SharePoint servers and makes calls to the SharePoint server object model. These assemblies always run with full trust. Moreover, the Features in farm solutions can have scope as wide as the site collection, web application, or whole farm, in addition to the website scope of Features in SharePoint Add-ins. These aspects of farm solutions sometimes make farm administrators reluctant to install them, unless they come from a well-known and trusted source. For this reason, SharePoint extensions that are primarily for use by end users should be developed as SharePoint Add-ins, not farm solutions. Farm solutions should be used for customizations of SharePoint administrative functions, such as custom timer jobs, custom Windows PowerShell cmdlets, and extensions of Central Administration. For more on the advantages of SharePoint Add-ins and the uses of farm solutions, see  [SharePoint Add-ins compared with SharePoint solutions](sharepoint-add-ins-compared-with-sharepoint-solutions).
+Unlike SharePoint Add-ins, farm solutions contain code that is deployed to the SharePoint servers and makes calls to the SharePoint server object model. These assemblies always run with full trust. Moreover, the Features in farm solutions can have scope as wide as the site collection, web application, or whole farm, in addition to the website scope of Features in SharePoint Add-ins. These aspects of farm solutions sometimes make farm administrators reluctant to install them, unless they come from a well-known and trusted source. For this reason, SharePoint extensions that are primarily for use by end users should be developed as SharePoint Add-ins, not farm solutions. Farm solutions should be used for customizations of SharePoint administrative functions, such as custom timer jobs, custom Windows PowerShell cmdlets, and extensions of Central Administration. For more on the advantages of SharePoint Add-ins and the uses of farm solutions, see  [SharePoint Add-ins compared with SharePoint solutions](sharepoint-add-ins-compared-with-sharepoint-solutions.md).
   
     
     
@@ -62,13 +63,13 @@ The topics in this section describe the ways in which development of SharePoint 
     
     
 
--  [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering)
+-  [How to: Customize a field type using client-side rendering](how-to-customize-a-field-type-using-client-side-rendering.md)
     
   
--  [URLs and tokens in SharePoint](urls-and-tokens-in-sharepoint)
+-  [URLs and tokens in SharePoint](urls-and-tokens-in-sharepoint.md)
     
   
--  [Virtual directories in SharePoint solutions](virtual-directories-in-sharepoint-solutions)
+-  [Virtual directories in SharePoint solutions](virtual-directories-in-sharepoint-solutions.md)
     
   
 
@@ -76,7 +77,7 @@ The topics in this section describe the ways in which development of SharePoint 
 <a name="SP15buildfarm_addlresources"> </a>
 
 
--  [Programming models in SharePoint](programming-models-in-sharepoint)
+-  [Programming models in SharePoint](programming-models-in-sharepoint.md)
     
   
 

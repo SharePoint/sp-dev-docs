@@ -1,3 +1,10 @@
+---
+title: Add an external library to your SharePoint client-side web part
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Add an external library to your SharePoint client-side web part
 
 You might want to include one or more JavaScript libraries in your web part. This article shows you how to bundle an external library and share libraries.

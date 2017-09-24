@@ -1,6 +1,7 @@
 ---
 title: How to Avoid getting throttled or blocked in SharePoint Online
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 ---
 
@@ -8,25 +9,25 @@ ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 # How to: Avoid getting throttled or blocked in SharePoint Online
 Find out about throttling in SharePoint Online, and learn how to avoid being throttled or blocked. Includes sample CSOM and REST code you can use to make your task easier.
 
--  [What is throttling?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online#BKMK_Whatisthrottling)
+-  [What is throttling?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#BKMK_Whatisthrottling)
     
   
--  [Common throttling scenarios in SharePoint Online](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online#BKMK_Commonthrottlingscenarios)
+-  [Common throttling scenarios in SharePoint Online](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#BKMK_Commonthrottlingscenarios)
     
   
--  [Why can't you just tell me the exact throttling limits?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online#BKMK_Whycantyoujusttellmetheexactthrottlinglimits)
+-  [Why can't you just tell me the exact throttling limits?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#BKMK_Whycantyoujusttellmetheexactthrottlinglimits)
     
   
--  [Best practices to handle throttling](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online#BKMK_Bestpracticestohandlethrottling)
+-  [Best practices to handle throttling](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#BKMK_Bestpracticestohandlethrottling)
     
   
--  [GitHub CSOM code samples: SharePoint Online Throttling](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online#BKMK_GitHubCSOMandRESTcodesamplesSharePointOnlineThrottling)
+-  [GitHub CSOM code samples: SharePoint Online Throttling](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#BKMK_GitHubCSOMandRESTcodesamplesSharePointOnlineThrottling)
     
   
--  [What should you do if you get blocked in SharePoint Online?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online#BKMK_Whatshouldyoudoifyougetblocked)
+-  [What should you do if you get blocked in SharePoint Online?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#BKMK_Whatshouldyoudoifyougetblocked)
     
   
--  [Additional resources](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online#BKMK_Additionalresources)
+-  [Additional resources](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#BKMK_Additionalresources)
     
   
 
@@ -51,7 +52,7 @@ That said, it is extremely rare for a user to get throttled in SharePoint Online
   
     
     
-![How throttling happens](../../images/3b9184db-99a4-416e-ba1e-7f8653484cee.png)
+![How throttling happens](../images/3b9184db-99a4-416e-ba1e-7f8653484cee.png)
   
     
     
@@ -77,7 +78,7 @@ If the offending process continues to exceed usage limits, SharePoint Online mig
   
     
     
-![The 503 Server unavailable message](../../images/e70a43c1-43ba-4f5c-b25f-e3995f18dd16.png)
+![The 503 Server unavailable message](../images/e70a43c1-43ba-4f5c-b25f-e3995f18dd16.png)
   
     
     
@@ -100,7 +101,7 @@ The most common causes of per-user throttling in SharePoint Online are client-si
     
   - For example, after migrating files to SharePoint Online, you run a custom CSOM or REST script to update metadata on the files. The CSOM/REST script is updating a large number of files at a very high frequency, which triggers throttling. Similarly, an autocomplete UI widget using REST services, making too many calls to lists during each end user operation, may also cause throttling, depending on what other operations are consuming resources at the same time.
     
-  ![Sporadic throttling](../../images/a61afe25-9597-403f-b3fa-d3f630155021.png)
+  ![Sporadic throttling](../images/a61afe25-9597-403f-b3fa-d3f630155021.png)
   
 
   
@@ -118,7 +119,7 @@ The most common causes of per-user throttling in SharePoint Online are client-si
   
   - You customized your team site on SharePoint Online, for example, by adding a status indicator on the Home page. This status indicator updates frequently, which causes the page to make too many calls to the SharePoint Online service - this triggered throttling.
     
-  ![Steady throttling](../../images/7849d413-381f-4558-9e50-b3cc9990d3e3.png)
+  ![Steady throttling](../images/7849d413-381f-4558-9e50-b3cc9990d3e3.png)
   
 
   

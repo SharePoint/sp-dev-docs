@@ -1,6 +1,7 @@
----
+﻿---
 title: What's new in Access
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 625bc1d0-55db-4420-a02e-aee04028b215
 ---
 
@@ -40,7 +41,7 @@ Figure 1 provides an overview of Access 2013 architecture.
   
     
     
-![Access 2013 architecture](../../images/odc_Office15_Access15OverviewDK2_Figure07.jpg)
+![Access 2013 architecture](../images/odc_Office15_Access15OverviewDK2_Figure07.jpg)
   
     
     

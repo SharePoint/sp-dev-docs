@@ -1,6 +1,7 @@
----
+﻿---
 title: SharePoint Design Manager device channels
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: a924bd7b-a5e3-41bf-b0a7-3e43945fa951
 ---
 
@@ -15,7 +16,7 @@ Browsing the web on a mobile device is now so common that a SharePoint site must
   
     
     
-Device channels are available only for SharePoint publishing sites. Before you implement device channels, you should already have a general understanding of the parts of a SharePoint site, how a SharePoint page is put together, and a general understanding of design manager. For more information about the SharePoint page model, including master page and page layouts, see  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model). For more information about design manager, see  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint).
+Device channels are available only for SharePoint publishing sites. Before you implement device channels, you should already have a general understanding of the parts of a SharePoint site, how a SharePoint page is put together, and a general understanding of design manager. For more information about the SharePoint page model, including master page and page layouts, see  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md). For more information about design manager, see  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md).
   
     
     
@@ -35,7 +36,7 @@ Figure 1. Using device channels across different device platforms
   
     
     
-![Using device channels across device platforms](../../images/sp15Con_DeviceChannels_Fig1.png)
+![Using device channels across device platforms](../images/sp15Con_DeviceChannels_Fig1.png)
   
     
     
@@ -62,7 +63,7 @@ You can create and configure a device channel from the **Site Settings** menu un
 
     
 > **Note:**
-> For more information and steps for creating a device channel, see the  [Create a device channel](sharepoint-design-manager-device-channels#create) section of this article.
+> For more information and steps for creating a device channel, see the  [Create a device channel](sharepoint-design-manager-device-channels.md#create) section of this article.
   
     
     
@@ -81,7 +82,7 @@ After a device channel is created and activated, device redirection to a specifi
   
     
     
-![Setting master pages for mobile device and desktop](../../images/sp15Con_SiteMasterPage_Figure2.png)
+![Setting master pages for mobile device and desktop](../images/sp15Con_SiteMasterPage_Figure2.png)
   
     
     
@@ -114,7 +115,7 @@ In the **Device Inclusion Rules** field, you add just the substring value or val
     
 
 > **Important:**
-> User agent substring values differ from device manufacturer to device manufacturer, and possibly throughout a set of similarly branded devices, as seen above with Windows Phone. To achieve successful traffic redirection to a specific pool, you must provide a unique identifier for the user agent substring. For more information about how to isolate a substring across different devices, see the  [Planning your device channels experience](sharepoint-design-manager-device-channels#plan) section of this article.
+> User agent substring values differ from device manufacturer to device manufacturer, and possibly throughout a set of similarly branded devices, as seen above with Windows Phone. To achieve successful traffic redirection to a specific pool, you must provide a unique identifier for the user agent substring. For more information about how to isolate a substring across different devices, see the  [Planning your device channels experience](sharepoint-design-manager-device-channels.md#plan) section of this article.
   
     
     
@@ -125,7 +126,7 @@ After they are created, device channels are ordered and stored in a list. It is 
     
 
 > **Note:**
-> For more information about how to reorder device channels see the  [Create a device channel](sharepoint-design-manager-device-channels#create) section of this article.
+> For more information about how to reorder device channels see the  [Create a device channel](sharepoint-design-manager-device-channels.md#create) section of this article.
   
     
     
@@ -146,7 +147,7 @@ If you choose Order 1, where the device inclusion rule substring is set to **Win
     
 
 > **Note:**
-> For more information and steps for ordering device channels, see the  [Change the order of device channels](sharepoint-design-manager-device-channels#reorder) section of this article.
+> For more information and steps for ordering device channels, see the  [Change the order of device channels](sharepoint-design-manager-device-channels.md#reorder) section of this article.
   
     
     
@@ -184,7 +185,7 @@ This paragraph of content shows up only in the default channel, which means that
 </div>
 ```
 
-If you want the content to be displayed on more than one channel, the aliases should be separated by commas within the quotation marks:  `IncludedChannels="alias1, alias2"` For more information about the device channel panel container, see [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model). For more information about using Design Manager snippets, see  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets).
+If you want the content to be displayed on more than one channel, the aliases should be separated by commas within the quotation marks:  `IncludedChannels="alias1, alias2"` For more information about the device channel panel container, see [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md). For more information about using Design Manager snippets, see  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md).
   
     
     
@@ -434,12 +435,12 @@ Use this procedure to change the order of device channels.
 <a name="PlanDeviceChannels_addresources"> </a>
 
 
--  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
     
   
--  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model)
+-  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md)
     
   
--  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint)
+-  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md)
     
   

@@ -1,3 +1,9 @@
+---
+title: SharePoint VSS Writer
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # SharePoint workflow development best practices
 Provides a collection of best practices for developers using Visual Studio to create workflows in SharePoint.
@@ -8,34 +14,34 @@ To develop error-free workflows for SharePoint, it is best to follow some genera
     
     
 
--  [Apps for SharePoint that contain integrated workflows must edit a tag in the workflowmanifest.xml file](sharepoint-workflow-development-best-practices#bkm_00)
+-  [Apps for SharePoint that contain integrated workflows must edit a tag in the workflowmanifest.xml file](sharepoint-workflow-development-best-practices.md#bkm_00)
     
   
--  [When you use the Log To History List action, more information is better](sharepoint-workflow-development-best-practices#bkm_01)
+-  [When you use the Log To History List action, more information is better](sharepoint-workflow-development-best-practices.md#bkm_01)
     
   
--  [Write the value of every string and variable that you construct to the history list](sharepoint-workflow-development-best-practices#bkm_02)
+-  [Write the value of every string and variable that you construct to the history list](sharepoint-workflow-development-best-practices.md#bkm_02)
     
   
--  [Output a trace log before and after each step or important unit of work in the workflow](sharepoint-workflow-development-best-practices#bkm_03)
+-  [Output a trace log before and after each step or important unit of work in the workflow](sharepoint-workflow-development-best-practices.md#bkm_03)
     
   
--  [Verify that variables are non-null and contain expected values](sharepoint-workflow-development-best-practices#bkm_04)
+-  [Verify that variables are non-null and contain expected values](sharepoint-workflow-development-best-practices.md#bkm_04)
     
   
--  [Ensure that strings in workflow text fields do not exceed 255 characters](sharepoint-workflow-development-best-practices#bkm_05)
+-  [Ensure that strings in workflow text fields do not exceed 255 characters](sharepoint-workflow-development-best-practices.md#bkm_05)
     
   
--  [Use elevated permissions on a neutral account when using impersonation](sharepoint-workflow-development-best-practices#bkm_06)
+-  [Use elevated permissions on a neutral account when using impersonation](sharepoint-workflow-development-best-practices.md#bkm_06)
     
   
--  [In reusable workflows, use Association columns to ensure error-free list fields](sharepoint-workflow-development-best-practices#bkm_07)
+-  [In reusable workflows, use Association columns to ensure error-free list fields](sharepoint-workflow-development-best-practices.md#bkm_07)
     
   
--  [Workflow design: Model a business process in a single workflow](sharepoint-workflow-development-best-practices#bkm_08)
+-  [Workflow design: Model a business process in a single workflow](sharepoint-workflow-development-best-practices.md#bkm_08)
     
   
--  [Workflow design: Using the Approval action effectively](sharepoint-workflow-development-best-practices#bkm_09)
+-  [Workflow design: Using the Approval action effectively](sharepoint-workflow-development-best-practices.md#bkm_09)
     
   
 
@@ -144,7 +150,7 @@ When using impersonation steps in a workflow, you should author the workflow usi
   
     
     
-For more information, see  [Create a workflow with elevated permissions by using the SharePoint Workflow platform](create-a-workflow-with-elevated-permissions-by-using-the-sharepoint-workflo).
+For more information, see  [Create a workflow with elevated permissions by using the SharePoint Workflow platform](create-a-workflow-with-elevated-permissions-by-using-the-sharepoint-workflo.md).
   
     
     
@@ -177,13 +183,13 @@ Where possible, instead of creating multiple **Approval** actions, it is more ef
 <a name="bk_addresources"> </a>
 
 
--  [Workflows in SharePoint](workflows-in-sharepoint)
+-  [Workflows in SharePoint](workflows-in-sharepoint.md)
     
   
--  [SharePoint workflow fundamentals](sharepoint-workflow-fundamentals)
+-  [SharePoint workflow fundamentals](sharepoint-workflow-fundamentals.md)
     
   
--  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio)
+-  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
     
   
 

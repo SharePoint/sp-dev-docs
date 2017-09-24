@@ -1,10 +1,17 @@
+---
+title: Reference third-party CSS styles in SharePoint Framework web parts
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Reference third-party CSS styles in SharePoint Framework web parts
 
 There are many third-party libraries that you can leverage to build rich SharePoint Framework client-side web parts. In addition to scripts, these libraries often contain additional assets such as stylesheets. This article shows two different approaches to include third-party CSS styles in web parts and how each approach affects the resulting web part bundle. The example web part discussed in this article uses jQuery and jQuery UI to display an accordion.
 
-![jQuery UI accordion rendered by a SharePoint Framework client-side web part](../../../../images/thirdpartycss-accordion-styled.png)
+![jQuery UI accordion rendered by a SharePoint Framework client-side web part](../../../images/thirdpartycss-accordion-styled.png)
 
-> **Note:** Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment).
+> **Note:** Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment.md).
 
 ## Prepare the project
 
@@ -36,11 +43,11 @@ When prompted, enter the following values:
 - **jQuery accordion** as your web part name
 - **Shows jQuery accordion** as your web part description
 
-![The SharePoint Framework Yeoman generator with the default choices](../../../../images/thirdpartycss-yeoman.png)
+![The SharePoint Framework Yeoman generator with the default choices](../../../images/thirdpartycss-yeoman.png)
 
 Once the scaffolding completes, open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots but you can use any editor you prefer.
 
-![The SharePoint Framework project open in Visual Studio Code](../../../../images/thirdpartycss-visual-studio-code.png)
+![The SharePoint Framework project open in Visual Studio Code](../../../images/thirdpartycss-visual-studio-code.png)
 
 ### Add test content
 
@@ -142,7 +149,7 @@ gulp serve
 
 After adding the web part to the canvas you should see the accordion working.
 
-![jQuery UI accordion without styles rendered by a SharePoint Framework client-side web part](../../../../images/thirdpartycss-accordion-not-styled.png)
+![jQuery UI accordion without styles rendered by a SharePoint Framework client-side web part](../../../images/thirdpartycss-accordion-not-styled.png)
 
 At this point you have referenced only the jQuery UI scripts which explains why the accordion is not styled. Next you will add the missing CSS stylesheets to brand the accordion.
 
@@ -168,7 +175,7 @@ gulp serve
 
 The accordion should be displayed correctly and branded using the standard jQuery UI theme.
 
-![jQuery UI accordion branded using the default jQuery UI theme rendered by a SharePoint Framework client-side web part](../../../../images/thirdpartycss-accordion-styled.png)
+![jQuery UI accordion branded using the default jQuery UI theme rendered by a SharePoint Framework client-side web part](../../../images/thirdpartycss-accordion-styled.png)
 
 ### Analyze the contents of the generated web part bundle
 
@@ -176,7 +183,7 @@ The easiest way to use third-party libraries and their resources is by including
 
 To see the impact of the libraries on the size of the generated web part bundle, after bundling the project open the **./temp/stats/js-thirdpartycss.stats.html** file in the web browser. Move your mouse over the chart and you will see, for example, that the jQuery UI CSS files referenced by the web part make up over 6% of the total web part bundle size.
 
-![jQuery UI CSS highlighted in the chart illustrating the size of the different pieces of the generated web part bundle](../../../../images/thirdpartycss-jquery-ui-css-size.png)
+![jQuery UI CSS highlighted in the chart illustrating the size of the different pieces of the generated web part bundle](../../../images/thirdpartycss-jquery-ui-css-size.png)
 
 As mentioned in the disclaimer below the chart, the sizes are indicative and reflect the size of the debug version of the bundle. The release version of the bundle would be significantly smaller. Still it's good to realize which different pieces compose the web part bundle and what's their relative size compared to other elements in the bundle.
 
@@ -238,11 +245,11 @@ gulp serve
 
 After adding the web part to the canvas you should see the accordion working.
 
-![jQuery UI accordion without styles rendered by a SharePoint Framework client-side web part](../../../../images/thirdpartycss-accordion-not-styled.png)
+![jQuery UI accordion without styles rendered by a SharePoint Framework client-side web part](../../../images/thirdpartycss-accordion-not-styled.png)
 
 In your web browser, open the developer tools, switch to the tab showing the network requests, and reload the page. You should see how both jQuery and jQuery UI are loaded from the CDN.
 
-![jQuery and jQuery UI request highlighted in Microsoft Edge developer tools](../../../../images/thirdpartycss-libraries-cdn.png)
+![jQuery and jQuery UI request highlighted in Microsoft Edge developer tools](../../../images/thirdpartycss-libraries-cdn.png)
 
 At this point you have referenced only the jQuery UI scripts which explains why the accordion is not styled. Next you will add the missing CSS stylesheets to brand the accordion.
 
@@ -281,7 +288,7 @@ gulp serve
 
 The accordion should be displayed correctly and branded using the standard jQuery UI Theme.
 
-![jQuery UI accordion branded using the default jQuery UI theme rendered by a SharePoint Framework client-side web part](../../../../images/thirdpartycss-accordion-styled.png)
+![jQuery UI accordion branded using the default jQuery UI theme rendered by a SharePoint Framework client-side web part](../../../images/thirdpartycss-accordion-styled.png)
 
 ### Analyze the contents of the generated web part bundle loading resources from URL
 

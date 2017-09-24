@@ -1,6 +1,7 @@
 ---
 title: Code samples for SharePoint
-ms.prod: SHAREPOINTDESIGNER
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: e6b52c6c-32f8-4689-8c1a-7b50039dcbe8
 ---
 
@@ -97,7 +98,7 @@ Find and download code samples for SharePoint, including samples that demonstrat
 -  [SharePoint general development](http://msdn.microsoft.com/library/fc829689-7cef-469d-a04c-4a433e49828a%28Office.15%29.aspx)
     
   
--  [How-tos for SharePoint](how-tos-for-sharepoint)
+-  [How-tos for SharePoint](how-tos-for-sharepoint.md)
     
   
 -  [SharePoint Dev Center](http://msdn.microsoft.com/en-US/sharepoint)

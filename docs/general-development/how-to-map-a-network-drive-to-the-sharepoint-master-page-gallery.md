@@ -1,6 +1,7 @@
 ---
 title: How to Map a network drive to the SharePoint Master Page Gallery
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 7d416f6e-2471-4d03-97ae-4e8d907784c6
 ---
 
@@ -50,19 +51,19 @@ On the computer that runs your design tool or HTML editor, map a network drive t
 <a name="bk_addresources"> </a>
 
 
--  [How to: Apply a master page to a site in SharePoint](how-to-apply-a-master-page-to-a-site-in-sharepoint)
+-  [How to: Apply a master page to a site in SharePoint](how-to-apply-a-master-page-to-a-site-in-sharepoint.md)
     
   
--  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
     
   
--  [SharePoint Design Manager device channels](sharepoint-design-manager-device-channels)
+-  [SharePoint Design Manager device channels](sharepoint-design-manager-device-channels.md)
     
   
--  [How to: Change the preview page in SharePoint Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager)
+-  [How to: Change the preview page in SharePoint Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager.md)
     
   
--  [SharePoint Design Manager image renditions](sharepoint-design-manager-image-renditions)
+-  [SharePoint Design Manager image renditions](sharepoint-design-manager-image-renditions.md)
     
   
 

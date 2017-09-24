@@ -1,3 +1,10 @@
+---
+title: Provisioning SharePoint assets from your SharePoint client-side web part
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Provisioning SharePoint assets from your SharePoint client-side web part
 
 This article describes how to provision SharePoint assets as part of the SharePoint Framework solution. These assets are deployed to SharePoint sites when the solution is installed on it. Article also covers needed steps for introducing possible updates as part of new versions of the package. This process is exactly the same as for add-in update.
@@ -11,7 +18,7 @@ Complete the following steps before you start to understand the basic flow of cr
 ## Resources
 See following resources for additional details around the covered topics in this tutorial.
 
-* [Provision SharePoint assets with your solution package](../../toolchain/provision-sharepoint-assets)
+* [Provision SharePoint assets with your solution package](../../toolchain/provision-sharepoint-assets.md)
 * [Sample solution - Deployment of SharePoint assets as part of SPFx package](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/react-feature-framework)
 
 ## Create a new web part project
@@ -62,7 +69,7 @@ We'll first need to create an **assets** folder where we will place all feature 
 
 Your solution structure should be looking like in the following picture
 
-![Screenshot showing assets folder under sharepoint folder in the solution structure](../../../../images/tutorial-feature-solution-initial-structure.png)
+![Screenshot showing assets folder under sharepoint folder in the solution structure](../../../images/tutorial-feature-solution-initial-structure.png)
 
 ## Create feature framework files for initial deployment
 To be able to provision SharePoint assets to sites with feature framework elements, we'll need to create needed xml files to the asset folder. Supported elements for the SharePoint Framework solution packages are following:
@@ -259,7 +266,7 @@ asset-deployment-webpart.sppkg
 ```
 Before testing the package in the SharePoint, let's quickly have a look on the default structures created for the package around the defined feature framework elements. Move back to Visual Studio Code side and expand `sharepoint/solution/debug` folder, which contains the raw xml structures to be included in the actual **sppkg** package.
 
-![Screenshot showing debug folder under sharepoint folder in the solution structure](../../../../images/tutorial-feature-solution-debug-folder.png)
+![Screenshot showing debug folder under sharepoint folder in the solution structure](../../../images/tutorial-feature-solution-debug-folder.png)
 
 Next you need to deploy the package that was generated to the App Catalog.
 
@@ -267,7 +274,7 @@ Go to your site's App Catalog.
 
 Upload or drag and drop the asset-deployment-webpart.sppkg located in the `sharepoint/solution` folder  to the App Catalog. SharePoint will display a dialog and ask you to trust the client-side solution to deploy.
 
-![Trust dialog for the solution package deployment](../../../../images/tutorial-feature-solution-trust-app-catalog.png)
+![Trust dialog for the solution package deployment](../../../images/tutorial-feature-solution-trust-app-catalog.png)
 
 > Note. SharePoint validates the published package when it's deployed and you only see the trust dialog, if package is valid for deployment. You can also see the status around this validation from the 'Valid App Package' column in the app catalog.
 
@@ -277,17 +284,17 @@ Chose the gears icon on the top nav bar on the right and choose **Add an app** t
 
 In the **Search** box, enter **deployment** and choose **Enter** to filter your apps. 
 
-![Search for the app in the site](../../../../images/tutorial-feature-solution-add-app.png)
+![Search for the app in the site](../../../images/tutorial-feature-solution-add-app.png)
 
 Choose the **asset-deployment-webpart-client-side-solution** app to install the app on the site. When installation is completed, refresh the page by pressing **F5**.
 
-![New SPFx List and app being visible in site contents page after solution provisioning](../../../../images/tutorial-feature-solution-provision-app.png)
+![New SPFx List and app being visible in site contents page after solution provisioning](../../../images/tutorial-feature-solution-provision-app.png)
 
 Notice how the custom **SPFx List** has been also provisioned to site as part of the solution package deployment.
 
 Click **SPFx List** to move to the list
 
-![Default list view for a custom list showing additional fields by default](../../../../images/tutorial-feature-solution-list-view.png)
+![Default list view for a custom list showing additional fields by default](../../../images/tutorial-feature-solution-list-view.png)
 
 Notice how the custom fields **Amount** and **Cost Center** are visible automatically in the default view of the list. 
 
@@ -392,13 +399,13 @@ Go to your tenant's App Catalog.
 
 Upload or drag and drop the asset-deployment-webpart.sppkg located in the `sharepoint/solution` folder  to the App Catalog. SharePoint will request you to confirm overriding the existing version.
 
-![Replace question from the app catalog](../../../../images/tutorial-feature-solution-override-sppkg.png)
+![Replace question from the app catalog](../../../images/tutorial-feature-solution-override-sppkg.png)
 
 Click **Replace It** to updated latest version to App catalog.
 
 Notice that the App Version column for the **asset-deployment-webpart-client-side-solution** is now updated to be "2.0.0.0".
 
-![Close up for solution row in app catalog with updated version number](../../../../images/tutorial-feature-solution-version-2.png)
+![Close up for solution row in app catalog with updated version number](../../../images/tutorial-feature-solution-version-2.png)
 
 ### Update existing instance in the site
 Now that the package has been updated in the App Catalog, we can move to the actual SharePoint content site and perform the upgrade for the existing instance.
@@ -407,18 +414,18 @@ Move to site where you deployed first version of the SharePoint Framework soluti
 
 Chose **About** from the context menu of the **asset-deployment-webpart-client-side-solution** solution
 
-![Context menu of existing package in site](../../../../images/tutorial-feature-solution-hover-menu.png)
+![Context menu of existing package in site](../../../images/tutorial-feature-solution-hover-menu.png)
 
 This will present the current details around installed SharePoint Framework solution. This page also now shows a text as '*There is a new version of this app. Get it now*' to indicate that there's a new version available.
 
-![Context menu of existing package in site](../../../../images/tutorial-feature-solution-app-details.png)
+![Context menu of existing package in site](../../../images/tutorial-feature-solution-app-details.png)
 
 Click **GET IT** button to start update process for the package.
 
-![App status updated to updating in the site contents page](../../../../images/tutorial-feature-solution-updating-app.png)
+![App status updated to updating in the site contents page](../../../images/tutorial-feature-solution-updating-app.png)
 
 Update can take a while, but when the add-in status is moved to normal again, you can click **F5** to refresh the site contents page to confirm that new list has been successfully provisioned as part of the update process.
 
-![Site contents page with additional New List being created](../../../../images/tutorial-feature-solution-new-list.png)
+![Site contents page with additional New List being created](../../../images/tutorial-feature-solution-new-list.png)
 
 Now we have successfully upgrade this instance to the latest version. This Feature Framework option for SharePoint asset provisioning is pretty much the same as it is for the SharePoint add-in model. Key difference however is that the assets are being provisioned directly to normal SharePoint site, since there's no concept called app / add-in web with SharePoint Framework solutions. 

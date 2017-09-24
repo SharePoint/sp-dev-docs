@@ -1,32 +1,39 @@
+---
+title: Add first-run logic to the provider-hosted add-in
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Add first-run logic to the provider-hosted add-in
 Learn how to include "first run" code in a provider-hosted SharePoint Add-in.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
-This is the eighth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with  [SharePoint Add-ins](sharepoint-add-ins) and the previous articles in this series:
+This is the eighth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with  [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series:
  
 
--  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins)
+-  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
     
  
--  [Give your provider-hosted add-in the SharePoint look-and-feel](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel)
+-  [Give your provider-hosted add-in the SharePoint look-and-feel](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md)
     
  
--  [Include a custom button in the provider-hosted add-in](include-a-custom-button-in-the-provider-hosted-add-in)
+-  [Include a custom button in the provider-hosted add-in](include-a-custom-button-in-the-provider-hosted-add-in.md)
     
  
--  [Get a quick overview of the SharePoint object model](get-a-quick-overview-of-the-sharepoint-object-model)
+-  [Get a quick overview of the SharePoint object model](get-a-quick-overview-of-the-sharepoint-object-model.md)
     
  
--  [Add SharePoint write operations to the provider-hosted add-in](add-sharepoint-write-operations-to-the-provider-hosted-add-in)
+-  [Add SharePoint write operations to the provider-hosted add-in](add-sharepoint-write-operations-to-the-provider-hosted-add-in.md)
     
  
--  [Include an add-in part in the provider-hosted add-in](include-an-add-in-part-in-the-provider-hosted-add-in)
+-  [Include an add-in part in the provider-hosted add-in](include-an-add-in-part-in-the-provider-hosted-add-in.md)
     
  
--  [Handle add-in events in the provider-hosted add-in](handle-add-in-events-in-the-provider-hosted-add-in)
+-  [Handle add-in events in the provider-hosted add-in](handle-add-in-events-in-the-provider-hosted-add-in.md)
     
  
 
@@ -138,7 +145,7 @@ internal static Version localVersion;
 
 1. The SharePoint host web needs to tell the remote web application what version of the add-in it has installed. We'll use a query parameter to do this. Open the AppManifest.xml file in the  **ChainStore** project. In the designer you'll see the placeholder **{StandardTokens}** as the value of the **Query string** box. Add the string "&amp;SPAddInVersion=1.0.0.0" to the end. The manifest designer should look similar to the following.  *Notice that the version number you pass in the query string has to match the value in the  **Version** box of the designer.*  (If you ever update the add-in, one of your tasks is to raise these two values and keep them the same.)
     
-  ![The General tab of the manifest designer. The Version box has the value one zero zero zero. The Query string box says "{StandardTokens}&amp;SPAddInVersion=1.0.0.0"](../../images/db71c411-10c5-43d8-bb5e-3388d2f6f7bc.PNG)
+  ![The General tab of the manifest designer. The Version box has the value one zero zero zero. The Query string box says "{StandardTokens}&amp;SPAddInVersion=1.0.0.0"](../images/db71c411-10c5-43d8-bb5e-3388d2f6f7bc.PNG)
  
 
  
@@ -359,10 +366,10 @@ Since the add-in is now adding a list to the host web, not just items to an exis
  
 4. Navigate to the  **Site Contents** page. The **Local Employees** list is present because your first-run logic added it.
     
-     **Note**  If the list is not there or you have other indications that the first-run code is not executing, it may be that the  **Tenants** table is not being reverted to an empty state when you press F5. The most common cause of this is that the **ChainCorporateDB** project is no longer set as a startup project in Visual Studio. See the note near the top of this article for how to fix this. Also be sure that you've configured the database to be rebuilt as described in [Configure Visual Studio to rebuild the corporate database with each debugging session](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel#Rebuild).
+     **Note**  If the list is not there or you have other indications that the first-run code is not executing, it may be that the  **Tenants** table is not being reverted to an empty state when you press F5. The most common cause of this is that the **ChainCorporateDB** project is no longer set as a startup project in Visual Studio. See the note near the top of this article for how to fix this. Also be sure that you've configured the database to be rebuilt as described in [Configure Visual Studio to rebuild the corporate database with each debugging session](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md#Rebuild).
 5. Open the list and add an item. Note that on the new item form, the  **Added to Corporate DB** field is no longer present, so it cannot be manually set. This is true of the edit item form as well.
     
-  ![The new item form for the Local Employees list. The "Added to Corporate DB" field is no longer on the form. Only the name field and buttons for OK and Cancel.](../../images/3fdc6752-4184-4928-9423-0bc7c0206c62.PNG)
+  ![The new item form for the Local Employees list. The "Added to Corporate DB" field is no longer on the form. Only the name field and buttons for OK and Cancel.](../images/3fdc6752-4184-4928-9423-0bc7c0206c62.PNG)
  
 
  
@@ -376,7 +383,7 @@ Since the add-in is now adding a list to the host web, not just items to an exis
  
 8. On the  **Accounts** page, press the **Show Add-in Version** button. The version shows as **1.0.0.0** because the first-run logic changed it.
     
-  ![The Account settings page with the version number of 1.0.0.0.](../../images/4c6d82a7-7c40-4190-b7e3-1337275e1e60.PNG)
+  ![The Account settings page with the version number of 1.0.0.0.](../images/4c6d82a7-7c40-4190-b7e3-1337275e1e60.PNG)
  
 
  
@@ -392,7 +399,7 @@ Since the add-in is now adding a list to the host web, not just items to an exis
 ## 
 <a name="Nextsteps"> </a>
 
- In the next article, you'll see how to get the custom button for the **Local Employee** ribbon back into the add-in now the list is being deployed programmatically: [Programmatically deploy a custom button in the provider-hosted add-in](programmatically-deploy-a-custom-button-in-the-provider-hosted-add-in)
+ In the next article, you'll see how to get the custom button for the **Local Employee** ribbon back into the add-in now the list is being deployed programmatically: [Programmatically deploy a custom button in the provider-hosted add-in](programmatically-deploy-a-custom-button-in-the-provider-hosted-add-in.md)
  
 
  

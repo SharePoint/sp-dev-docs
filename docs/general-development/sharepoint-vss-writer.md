@@ -1,6 +1,7 @@
 ---
 title: SharePoint VSS Writer
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: f83577e4-ebb8-44e5-8dec-a3ca5878b7fd
 ---
 
@@ -47,7 +48,7 @@ Following are the SharePoint Foundation VSS solution features and characteristic
 - **Full rollback.** The SPF-VSS Writer handles all components within a SharePoint Foundation deployment, including the configuration database and the content databases and the Search database and index. As mentioned previously, the writer also has a dependency on the Search writer, which handles all the Search index files for backup and recovery. At the time of recovery, the writer can roll back the entire SharePoint Foundation deployment by restoring a previous farm backup. (The IIS configuration store is not included. It must be backed up and restored separately.)
     
     > **Note:**
-      > See "Restoring" in  [VSS requestors and SharePoint](vss-requestors-and-sharepoint) for important information about restorations.
+      > See "Restoring" in  [VSS requestors and SharePoint](vss-requestors-and-sharepoint.md) for important information about restorations.
 - **Post-restore synchronization of databases.** To ensure that all databases are synchronized with the farm after a restore operation is complete, each of the databases are automatically detached and reattached to the farm post recovery. Administrators do not need to run additional procedures to resynchronize the restored databases.
     
   
@@ -75,7 +76,7 @@ The SPF-VSS Writer performs the following functions:
     
   
 
-  ![SharePoint and Volume Shadow Copy Service](../../images/99376713-6a54-4d88-9b05-068578169506.gif)
+  ![SharePoint and Volume Shadow Copy Service](../images/99376713-6a54-4d88-9b05-068578169506.gif)
   
 
   
@@ -87,7 +88,7 @@ The SPF-VSS Writer performs the following functions:
     
   
 
-  ![SharePoint and Volume Shadow Copy Service](../../images/97765b6d-51e9-4d07-8b5d-3e93c0508b16.gif)
+  ![SharePoint and Volume Shadow Copy Service](../images/97765b6d-51e9-4d07-8b5d-3e93c0508b16.gif)
   
 
   
@@ -102,7 +103,7 @@ The SPF-VSS Writer performs the following functions:
     
   
 
-  ![SharePoint and Volume Shadow Copy Service](../../images/b86ecdb8-88a7-4407-af86-07d2442235dc.gif)
+  ![SharePoint and Volume Shadow Copy Service](../images/b86ecdb8-88a7-4407-af86-07d2442235dc.gif)
   
 
   
@@ -117,7 +118,7 @@ Learn how to create and use a VSS requestor for SharePoint:
     
     
 
--  [VSS requestors and SharePoint](vss-requestors-and-sharepoint)
+-  [VSS requestors and SharePoint](vss-requestors-and-sharepoint.md)
     
   
 
@@ -125,7 +126,7 @@ Learn how to create and use a VSS requestor for SharePoint:
 <a name="bk_addresources"> </a>
 
 
--  [Overview of SharePoint and the Volume Shadow Copy Service](overview-of-sharepoint-and-the-volume-shadow-copy-service)
+-  [Overview of SharePoint and the Volume Shadow Copy Service](overview-of-sharepoint-and-the-volume-shadow-copy-service.md)
     
   
 

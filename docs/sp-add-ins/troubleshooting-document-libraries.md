@@ -1,9 +1,15 @@
+---
+title: Troubleshooting document libraries
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # Troubleshooting document libraries
 In this topic, you can learn about problems that may occur when you access a SharePoint document library from a cloud business add-in and the techniques that you can use to resolve those problems.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 
@@ -28,7 +34,7 @@ When attempting to upload a document to an associated document library in a clou
 
  
 
-  ![Selections in the Manage NuGet Packages dialog box](../../images/NuGet.PNG)
+  ![Selections in the Manage NuGet Packages dialog box](../images/NuGet.PNG)
  
 
  
@@ -53,7 +59,7 @@ When attempting to upload a document to an associated document library in a clou
 <a name="bk_addresources"> </a>
 
 
--  [Associate a document library with an entity](associate-a-document-library-with-an-entity)
+-  [Associate a document library with an entity](associate-a-document-library-with-an-entity.md)
     
  
 

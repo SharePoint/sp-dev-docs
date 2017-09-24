@@ -1,6 +1,7 @@
 ---
 title: How to Configure MSMQ for SharePoint workflows
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: c0e130f6-c210-44ea-83ed-b327f04551d6
 ---
 
@@ -34,7 +35,7 @@ MSMQ is provided as a "Feature" in Windows Server. To enable MSMQ, do the follow
 
   
 
-  ![Figure 1. Adding the Message Queuing feature.](../../images/ng_MsmqFeature.png)
+  ![Figure 1. Adding the Message Queuing feature.](../images/ng_MsmqFeature.png)
   
 
   
@@ -56,7 +57,7 @@ MSMQ is provided as a "Feature" in Windows Server. To enable MSMQ, do the follow
 
   
 
-  ![Figure 2. The Message Queuing feature added to Ser](../../images/ng_MsmqQueues.png)
+  ![Figure 2. The Message Queuing feature added to Ser](../images/ng_MsmqQueues.png)
   
 
     

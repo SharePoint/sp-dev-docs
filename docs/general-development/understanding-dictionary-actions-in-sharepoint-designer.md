@@ -1,6 +1,7 @@
 ---
 title: Understanding Dictionary actions in SharePoint Designer 2013
-ms.prod: SHAREPOINTDESIGNER
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 73df233e-bad8-4ea1-b05d-61ecab597924
 ---
 
@@ -31,7 +32,7 @@ When you create a variable you need to tell the workflow engine what type of dat
   
     
     
-![A String variable](../../images/SPD-Dictionary-1a.png)
+![A String variable](../images/SPD-Dictionary-1a.png)
   
     
     
@@ -53,7 +54,7 @@ The figure illustrates the concept.
   
     
     
-![A Dictionary variable](../../images/SPD15-Dictionary-1b.png)
+![A Dictionary variable](../images/SPD15-Dictionary-1b.png)
   
     
     
@@ -101,7 +102,7 @@ The workflow actions for the Dictionary variable type can be found on the **Acti
   
     
     
-![Dictionary actions](../../images/SPD15-Dictionary-2.png)
+![Dictionary actions](../images/SPD15-Dictionary-2.png)
   
     
     
@@ -126,7 +127,7 @@ The figure shows the **Build a Dictionary** dialog box. Notice that three variab
   
     
     
-![Build a Dictionary dialog box](../../images/SPD15-BuildADictionaryDialog.png)
+![Build a Dictionary dialog box](../images/SPD15-BuildADictionaryDialog.png)
   
     
     
@@ -201,7 +202,7 @@ The figure shows the **Count Items in a Dictionary** workflow action.
   
     
     
-![Count items in a Dictionary.](../../images/SPD15-CountItemsInDictionary.png)
+![Count items in a Dictionary.](../images/SPD15-CountItemsInDictionary.png)
   
     
     
@@ -234,7 +235,7 @@ The figure shows the **Get an Item from a Dictionary** workflow action. Notice t
   
     
     
-![Get an item from a Dictionary.](../../images/SPD15-GetAnItemFromDictionary.png)
+![Get an item from a Dictionary.](../images/SPD15-GetAnItemFromDictionary.png)
   
     
     

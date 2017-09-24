@@ -1,6 +1,7 @@
----
+﻿---
 title: How to Use a custom security trimmer for SharePoint Server search results
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: e1a8664e-fb43-45c2-83aa-9635fe1efc99
 ---
 
@@ -446,7 +447,7 @@ net restart sphostcontrollerservice
 <a name="bk_sectrimmer_addlresources"> </a>
 
 
--  [Custom security trimming for Search in SharePoint](custom-security-trimming-for-search-in-sharepoint-server)
+-  [Custom security trimming for Search in SharePoint](custom-security-trimming-for-search-in-sharepoint-server.md)
     
   
 -  [Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre.aspx)

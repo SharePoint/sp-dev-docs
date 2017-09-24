@@ -1,3 +1,10 @@
+---
+title: Scaffold projects using yeoman SharePoint generator
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Scaffold projects using yeoman SharePoint generator
 
 [Yeoman](http://yeoman.io/) helps you to kickstart new projects, prescribing best practices and tools to help you stay productive. Using the yeoman SharePoint generator, developers are able to scaffold new client-side solution projects to build, package and deploy SharePoint solutions. The generator provides common build tools, boilerplate code, and a common playground web site to host web parts for testing.
@@ -12,7 +19,7 @@ npm install @microsoft/generator-sharepoint -g
 
 >**Note:** Yeoman generator for SharePoint is targeted to get deployed globally with the initial General Availability (GA) version. There are some known issues if it's installed locally to the project, which are planned to be addressed post GA.
 
-It is recommended you follow the [set up your development environment](../spfx/set-up-your-development-environment.md) to configure your machine with the complete set of developer tools, including yeoman SharePoint generator. 
+It is recommended you follow the [set up your development environment](../set-up-your-development-environment.md) to configure your machine with the complete set of developer tools, including yeoman SharePoint generator. 
 
 ## Using the yeoman SharePoint generator
 

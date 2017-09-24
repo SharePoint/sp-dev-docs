@@ -1,6 +1,7 @@
----
+﻿---
 title: Overview of Design Manager in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 29834b3f-3815-4347-91d3-296387663114
 ---
 
@@ -27,7 +28,7 @@ At a high level, the designer will perform the following tasks:
     
     
 
-- Understand core SharePoint design concepts. For more information, see  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model).
+- Understand core SharePoint design concepts. For more information, see  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md).
     
   
 - Create a mock-up of the design in HTML and CSS. Creating the design is a core skill of a web designer, and is not covered in this article.
@@ -116,7 +117,7 @@ After you map a network drive, you can upload your design to SharePoint simply b
   
     
     
-For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery).
+For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md).
   
     
     
@@ -186,7 +187,7 @@ After you convert your master page and successfully preview it, you are ready to
   
 3. Preview and style snippets by using CSS.
     
-For more information, see  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets).
+For more information, see  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md).
     
   
 
@@ -266,7 +267,7 @@ When you design a page layout, your basic task is to position and style the page
   
     
     
-For more information, see  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint).
+For more information, see  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md).
   
     
     
@@ -319,13 +320,13 @@ A design package is a .wsp file, a SharePoint solution file, which is basically 
 <a name="Additional"> </a>
 
 
--  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model)
+-  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md)
     
   
--  [How to: Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint)
+-  [How to: Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint.md)
     
   
--  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint)
+-  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md)
     
   
 

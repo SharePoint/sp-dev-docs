@@ -1,3 +1,9 @@
+---
+title: Minimal Download Strategy overview
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # Minimal Download Strategy overview
 Learn about Minimal Download Strategy (MDS), a new feature in SharePoint that reduces page load time by sending only the differences when users navigate to a new page.
@@ -16,7 +22,7 @@ Minimal Download Strategy (MDS) is a new technology in SharePoint that reduces t
   
     
     
-![Page processed with MDS](../../images/MDS_UpdateSections.png)
+![Page processed with MDS](../images/MDS_UpdateSections.png)
   
     
     
@@ -104,7 +110,7 @@ The basic mechanics of MDS are pretty simple. The main components of MDS are two
   
     
     
-![MDS flow when a user navigates the site](../../images/MDS_GeneralFlow.png)
+![MDS flow when a user navigates the site](../images/MDS_GeneralFlow.png)
   
     
     
@@ -204,10 +210,10 @@ Thanks to the failover mechanism, your controls work seamlessly whether or not M
 -  [EnableMinimalDownload](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Web.EnableMinimalDownload.aspx)
     
   
--  [Modify SharePoint components for MDS](modify-sharepoint-components-for-mds)
+-  [Modify SharePoint components for MDS](modify-sharepoint-components-for-mds.md)
     
   
--  [Build sites for SharePoint](build-sites-for-sharepoint)
+-  [Build sites for SharePoint](build-sites-for-sharepoint.md)
     
   
 

@@ -1,8 +1,15 @@
+---
+title: Create a provider-hosted add-in that includes a custom SharePoint list and content type
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Create a provider-hosted add-in that includes a custom SharePoint list and content type
 Create a SharePoint Add-in that combines a cloud-hosted web application with custom SharePoint-hosted list templates, list instances, and custom content types by using the Office Developer Tools for Visual Studio 2012. Learn how to interact with SharePoint add-in webs by using the REST/OData web service, and how to implement OAuth in a SharePoint Add-in.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 Most classic SharePoint components, such as custom content types, custom list definitions, and workflows, can be included in a cloud-hosted SharePoint Add-in. The simple example in this article contains the following:
@@ -44,7 +51,7 @@ Most classic SharePoint components, such as custom content types, custom list de
   - The test SharePoint website must be created from the  **Developer Site** site definition (which you can create in Central Administration).
     
  
-  - Your remote web application communicates with the add-in web by using either JavaScript and the  [cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library) or [OAuth](authorization-and-authentication-of-sharepoint-add-ins). If OAuth is used, as it is in the continuing example of this article, the SharePoint installation must be configured to use OAuth.
+  - Your remote web application communicates with the add-in web by using either JavaScript and the  [cross-domain library](access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md) or [OAuth](authorization-and-authentication-of-sharepoint-add-ins.md). If OAuth is used, as it is in the continuing example of this article, the SharePoint installation must be configured to use OAuth.
     
  
 
@@ -64,9 +71,9 @@ Before you create your first add-in, you should have a basic understanding of wh
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [SharePoint Add-ins](sharepoint-add-ins)|Learn about the new add-in model in SharePoint that enables you to create add-ins, which are small, easy-to-use solutions for end users.|
-| [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscape)|Learn about aspects of the architecture of SharePoint Add-ins and the model for SharePoint Add-ins, including the add-in hosting options, user interface (UI) options, deployment system, security system, and life cycle.|
-| [Choose patterns for developing and hosting your SharePoint Add-in](choose-patterns-for-developing-and-hosting-your-sharepoint-add-in)|Learn about the various ways that you can host SharePoint Add-ins.|
+| [SharePoint Add-ins](sharepoint-add-ins.md)|Learn about the new add-in model in SharePoint that enables you to create add-ins, which are small, easy-to-use solutions for end users.|
+| [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md)|Learn about aspects of the architecture of SharePoint Add-ins and the model for SharePoint Add-ins, including the add-in hosting options, user interface (UI) options, deployment system, security system, and life cycle.|
+| [Choose patterns for developing and hosting your SharePoint Add-in](choose-patterns-for-developing-and-hosting-your-sharepoint-add-in.md)|Learn about the various ways that you can host SharePoint Add-ins.|
 
 ## Develop the SharePoint Add-in
 <a name="Develop"> </a>
@@ -105,14 +112,14 @@ Before you create your first add-in, you should have a basic understanding of wh
   -  **System.IdentityModel.dll** This assembly is part of the .NET Framework 4, and it appears on the **Assemblies | Framework** node of the **Add Reference** dialog box.
     
  
-7. If your remote web application accesses information in the host web as well as the add-in web, you must add an  **AppPermissionRequests** element, with one or more child **AppPermissionRequest** elements, to the AppManifest.xml file. (The web application in the continuing example of this article accesses only the add-in web. Add-in principals automatically have all permissions needed to the add-in web, so the AppManifest.xml in the example does not have an **AppPermissionRequests** element.) For more information about add-in permission requests and how to add them, see [Add-in permissions in SharePoint](add-in-permissions-in-sharepoint-2013).
+7. If your remote web application accesses information in the host web as well as the add-in web, you must add an  **AppPermissionRequests** element, with one or more child **AppPermissionRequest** elements, to the AppManifest.xml file. (The web application in the continuing example of this article accesses only the add-in web. Add-in principals automatically have all permissions needed to the add-in web, so the AppManifest.xml in the example does not have an **AppPermissionRequests** element.) For more information about add-in permission requests and how to add them, see [Add-in permissions in SharePoint](add-in-permissions-in-sharepoint.md).
     
  
 
 ### To add the SharePoint components
 
 
-1. You add SharePoint components to an add-in exactly as you would add them to a classic farm solution. However, not every kind of SharePoint component can be included in a SharePoint Add-in. The purposes these components serve are accomplished in other ways in SharePoint Add-ins. For detailed information about what kinds of SharePoint components can be included in a SharePoint Add-in and how to include them in a project, see  [Types of SharePoint components that can be in a SharePoint Add-in](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013#TypesOfSPComponentsInApps).
+1. You add SharePoint components to an add-in exactly as you would add them to a classic farm solution. However, not every kind of SharePoint component can be included in a SharePoint Add-in. The purposes these components serve are accomplished in other ways in SharePoint Add-ins. For detailed information about what kinds of SharePoint components can be included in a SharePoint Add-in and how to include them in a project, see  [Types of SharePoint components that can be in a SharePoint Add-in](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md#TypesOfSPComponentsInApps).
     
     For purposes of the continuing example, use the following procedures. These will provide examples of using Visual Studio 2012 to add custom columns, content types, list templates, and list instances to a SharePoint Add-in.
     
@@ -458,7 +465,7 @@ Uri sharepointUrl;
 }
 ```
 
-  7. Add the following line that uses one of the SharePoint REST/OData endpoints to obtain list data. In this example, the code reads the  **Characters in Hamlet** list that is deployed to the add-in web. The APIs for this service make it easy, in a single line of code, to select a list and specify three fields from the list to return. Note that in the OData URL you must use the internal names of the fields (columns) rather than the display names, so the code uses `Title`,  `Actor`, and  `CastingStatus` rather than `Character`,  `Actor/Actress`, and  `Casting Status.` For more information about the REST/OData web service, see [Use OData query operations in SharePoint REST requests](use-odata-query-operations-in-sharepoint-rest-requests).
+  7. Add the following line that uses one of the SharePoint REST/OData endpoints to obtain list data. In this example, the code reads the  **Characters in Hamlet** list that is deployed to the add-in web. The APIs for this service make it easy, in a single line of code, to select a list and specify three fields from the list to return. Note that in the OData URL you must use the internal names of the fields (columns) rather than the display names, so the code uses `Title`,  `Actor`, and  `CastingStatus` rather than `Character`,  `Actor/Actress`, and  `Casting Status.` For more information about the REST/OData web service, see [Use OData query operations in SharePoint REST requests](use-odata-query-operations-in-sharepoint-rest-requests.md).
     
 ```C#
   // REST/OData URL section
@@ -527,7 +534,7 @@ GridView1.DataBind();
 ## Publishing the SharePoint Add-in
 <a name="Publish"> </a>
 
-To publish your SharePoint Add-in, upload the add-in package to a corporate add-in catalog or to the Office add-in store. For more information, see  [Publishing to the Office Store or an organization's add-in catalog](deploying-and-installing-sharepoint-add-ins-methods-and-options#MarketOrCatalog) and [Publish SharePoint Add-ins](publish-sharepoint-add-ins).
+To publish your SharePoint Add-in, upload the add-in package to a corporate add-in catalog or to the Office add-in store. For more information, see  [Publishing to the Office Store or an organization's add-in catalog](deploying-and-installing-sharepoint-add-ins-methods-and-options.md#MarketOrCatalog) and [Publish SharePoint Add-ins](publish-sharepoint-add-ins.md).
  
 
  
@@ -579,10 +586,10 @@ This article demonstrated how to create a simple hybrid SharePoint Add-in with a
 
  
 
-- Adding full CRUD functionality to the add-in with either the REST/OData endpoints or one of the client object models. For more information, see  [Use OData query operations in SharePoint REST requests](use-odata-query-operations-in-sharepoint-rest-requests) and [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-2013-client-library-code).
+- Adding full CRUD functionality to the add-in with either the REST/OData endpoints or one of the client object models. For more information, see  [Use OData query operations in SharePoint REST requests](use-odata-query-operations-in-sharepoint-rest-requests.md) and [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-client-library-code.md).
     
  
-- Localizing your SharePoint Add-in for other cultures. For more information, see  [Localize SharePoint Add-ins](localize-sharepoint-add-ins).
+- Localizing your SharePoint Add-in for other cultures. For more information, see  [Localize SharePoint Add-ins](localize-sharepoint-add-ins.md).
     
  
 - Creating a Windows Phone companion add-in that duplicates the functionality of the remote web application. For more information, see  [Build mobile SharePoint Add-ins 2013](http://msdn.microsoft.com/en-us/library/office/jj163228.aspx).
@@ -593,10 +600,10 @@ This article demonstrated how to create a simple hybrid SharePoint Add-in with a
 <a name="SP15createcloud_bk_addlresources"> </a>
 
 
--  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins)
+-  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
     
  
--  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins)
+-  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md)
     
  
 

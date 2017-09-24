@@ -1,3 +1,10 @@
+---
+title: Use theme colors in your SharePoint Framework customizations
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Use theme colors in your SharePoint Framework customizations
 
 When building SharePoint Framework customizations you should use theme colors, so that your customizations looks like a part of the site. This article explains how can you refer to the theme colors of the context site in your SharePoint Framework solution.
@@ -8,7 +15,7 @@ When building SharePoint Framework customizations you should use theme colors, s
 
 When you scaffold a new SharePoint Framework client-side web part, it uses a fixed blue palette. When you add such web part on a modern site, using a different color scheme, it stands out and doesn't look like a part of the site.
 
-![SharePoint Framework client-side web part using the blue color scheme on a modern team site using the red theme](../../images/themed-styles-blue-web-part-red-site.png)
+![SharePoint Framework client-side web part using the blue color scheme on a modern team site using the red theme](../images/themed-styles-blue-web-part-red-site.png)
 
 When using fixed colors, you decide upfront which colors you want to use for which elements. This can lead to a situation like the one just illustrated, where a blue web part is displayed on a red team site, standing out unnecessarily. In most cases, you should strive to leverage the theme colors of the context site, so that your solution doesn't stand out but looks like a part of the site.
 
@@ -63,7 +70,7 @@ When you scaffold a new SharePoint Framework client-side web part, by default, i
 
 In the code editor open the **./src/webparts/helloWorld/components/HelloWorld.tsx** file and from the div with class **ms-Grid-row** remove the **ms-bgColor-themeDark** class.
 
-![The 'ms-bgColor-themeDark' class selected in Visual Studio Code editor](../../images/themed-styles-ms-bgcolor-themedark-class.png)
+![The 'ms-bgColor-themeDark' class selected in Visual Studio Code editor](../images/themed-styles-ms-bgcolor-themedark-class.png)
 
 Next, in the same folder, open the **HelloWorld.module.scss** file. Change the `.row` selector to:
 
@@ -74,7 +81,7 @@ Next, in the same folder, open the **HelloWorld.module.scss** file. Change the `
 }
 ```
 
-![The .row selector extended with background color](../../images/themed-styles-row-class.png)
+![The .row selector extended with background color](../images/themed-styles-row-class.png)
 
 In the `.button` selector, change the `background-color` and `border-color` properties to:
 
@@ -87,11 +94,11 @@ In the `.button` selector, change the `background-color` and `border-color` prop
 }
 ```
 
-![The .button selector updated with references to theme colors](../../images/themed-styles-button-class.png)
+![The .button selector updated with references to theme colors](../images/themed-styles-button-class.png)
 
 When you add the web part to a site, the colors used by the web part will automatically adapt to the theme colors used by the current site.
 
-![Side-by-side view of the same web part displayed in two sites using different colors. The web part follows the color scheme of each web site](../../images/themed-styles-side-by-side.png)
+![Side-by-side view of the same web part displayed in two sites using different colors. The web part follows the color scheme of each web site](../images/themed-styles-side-by-side.png)
 
 ## More information
 

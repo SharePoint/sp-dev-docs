@@ -1,6 +1,7 @@
 ---
 title: Workflow actions available using the workflow interop bridge
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: a8903440-ff8f-41a4-8c2a-5dbe12c07cfb
 ---
 
@@ -10,7 +11,7 @@ Contains a concise list of workflow actions in SharePoint 2010 that are availabl
 ## Workflow actions for the interop bridge
 <a name="bkm_wfactions"> </a>
 
-The SharePoint workflow infrastructure is built on Windows Workflow Foundation (WF) 4 and therefore executes workflows in Microsoft Azure. For this reason, some actions from SharePoint 2010 workflows are available in SharePoint only when using the  [SharePoint workflow interop ](sharepoint-workflow-fundamentals#bkm_InteropBridge). 
+The SharePoint workflow infrastructure is built on Windows Workflow Foundation (WF) 4 and therefore executes workflows in Microsoft Azure. For this reason, some actions from SharePoint 2010 workflows are available in SharePoint only when using the  [SharePoint workflow interop ](sharepoint-workflow-fundamentals.md#bkm_InteropBridge). 
   
     
     
@@ -110,16 +111,16 @@ The following actions are available only when you use the workflow interop bridg
 <a name="bkm_addlresources"> </a>
 
 
--  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform)
+-  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
     
   
--  [SharePoint workflow interop ](sharepoint-workflow-fundamentals#bkm_InteropBridge)
+-  [SharePoint workflow interop ](sharepoint-workflow-fundamentals.md#bkm_InteropBridge)
     
   
--  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio)
+-  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)
     
   
--  [Set up and configure SharePoint Workflow Manager](set-up-and-configure-sharepoint-workflow-manager)
+-  [Set up and configure SharePoint Workflow Manager](set-up-and-configure-sharepoint-workflow-manager.md)
     
   
 

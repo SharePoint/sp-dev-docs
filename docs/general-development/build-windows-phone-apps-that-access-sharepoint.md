@@ -1,6 +1,7 @@
 ---
 title: Build Windows Phone apps that access SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 36681335-f772-4499-8445-f94481bc18e7
 ---
 
@@ -28,7 +29,7 @@ The new mobility features offered by SharePoint are built on existing Microsoft 
   
     
     
-![SharePoint list items in a Windows Phone app](../../images/9159345c-ce12-41a6-8994-fc2e9aa26fd6.gif)
+![SharePoint list items in a Windows Phone app](../images/9159345c-ce12-41a6-8994-fc2e9aa26fd6.gif)
   
     
     
@@ -72,7 +73,7 @@ You can build a wide variety of mobile apps using SharePoint. This section descr
 
 ### Windows Phone SharePoint Application template
 
-This is the simplest type of mobile app you can build to bring a regular list to the phone. SharePoint offers a Visual Studio template to enable you to quickly and easily create SharePoint list applications for the Windows Phone. For example, you can build a "To Do List"-type Windows Phone application that brings your task list from SharePoint into the Windows Phone and enables the you to use your phone to update the status of a task on the go. Another example is having the product catalog for an inventory list in SharePoint available on the phone for the sales people. Installing the Windows Phone SharePoint SDK makes two Windows Phone SharePoint Application templates available to you in Visual Studio 2010 or Visual Studio 2010 Express for Windows Phone. (See  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint).) Using the Windows Phone SharePoint List Application template, you can follow the steps of a wizard to create a functional Windows Phone app that can access and manipulate data in a SharePoint list.
+This is the simplest type of mobile app you can build to bring a regular list to the phone. SharePoint offers a Visual Studio template to enable you to quickly and easily create SharePoint list applications for the Windows Phone. For example, you can build a "To Do List"-type Windows Phone application that brings your task list from SharePoint into the Windows Phone and enables the you to use your phone to update the status of a task on the go. Another example is having the product catalog for an inventory list in SharePoint available on the phone for the sales people. Installing the Windows Phone SharePoint SDK makes two Windows Phone SharePoint Application templates available to you in Visual Studio 2010 or Visual Studio 2010 Express for Windows Phone. (See  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md).) Using the Windows Phone SharePoint List Application template, you can follow the steps of a wizard to create a functional Windows Phone app that can access and manipulate data in a SharePoint list.
   
     
     
@@ -83,15 +84,15 @@ SharePoint adds several new classes to both the server and client object models 
   
     
     
-To enable location-aware apps, there is a new native field type class, **SPFieldGeoLocation**, along with several associated classes for structuring the value of location fields and rendering them. These classes are also callable in the SharePoint client object model for Silverlight. The new field type also has a definition added to the standard SharePoint fldtypes.xml file and new user controls for rendering the field on the Display, Edit, and New forms. For an overview, see  [Integrating location and map functionality in SharePoint](integrating-location-and-map-functionality-in-sharepoint). 
+To enable location-aware apps, there is a new native field type class, **SPFieldGeoLocation**, along with several associated classes for structuring the value of location fields and rendering them. These classes are also callable in the SharePoint client object model for Silverlight. The new field type also has a definition added to the standard SharePoint fldtypes.xml file and new user controls for rendering the field on the Display, Edit, and New forms. For an overview, see  [Integrating location and map functionality in SharePoint](integrating-location-and-map-functionality-in-sharepoint.md). 
   
     
     
-To enable SharePoint authentication for Windows Phone users, the client object model includes a new **Authenticator** class and several associated classes. For an overview, see [Overview of the SharePoint mobile client authentication object model](overview-of-the-sharepoint-mobile-client-authentication-object-model).
+To enable SharePoint authentication for Windows Phone users, the client object model includes a new **Authenticator** class and several associated classes. For an overview, see [Overview of the SharePoint mobile client authentication object model](overview-of-the-sharepoint-mobile-client-authentication-object-model.md).
   
     
     
-To enable automatic notifications to Windows Phone users of events on a SharePoint farm, the server object model includes several new classes, each of which is also callable from the client object model. These classes include methods that enable phone apps to register with SharePoint server apps for notifications about specified types of events. There are also methods that the server apps use to send notifications to registered subscribers. For an overview, see  [Create a Windows Phone SharePoint list app to receive push notifications](how-to-configure-and-use-push-notifications-in-sharepoint-apps-for-windows#BKMK_NotificationPhoneApp).
+To enable automatic notifications to Windows Phone users of events on a SharePoint farm, the server object model includes several new classes, each of which is also callable from the client object model. These classes include methods that enable phone apps to register with SharePoint server apps for notifications about specified types of events. There are also methods that the server apps use to send notifications to registered subscribers. For an overview, see  [Create a Windows Phone SharePoint list app to receive push notifications](how-to-configure-and-use-push-notifications-in-sharepoint-apps-for-windows.md#BKMK_NotificationPhoneApp).
   
     
     
@@ -120,7 +121,7 @@ In SharePoint Foundation 2010, the client object models provide APIs that enable
   
     
     
-![SharePoint client object model architecture](../../images/SP15Con_BuildSharePointAppsForMobileDevices_Fig3.png)
+![SharePoint client object model architecture](../images/SP15Con_BuildSharePointAppsForMobileDevices_Fig3.png)
   
     
     
@@ -145,7 +146,7 @@ To use the REST capabilities that are built into SharePoint, you can construct a
   
     
     
-![SharePoint REST architecture](../../images/SP15Con_BuildSharePointAppsForMobileDevices_Fig2.png)
+![SharePoint REST architecture](../images/SP15Con_BuildSharePointAppsForMobileDevices_Fig2.png)
   
     
     
@@ -180,49 +181,49 @@ The following how-tos and overviews delve into the specific information you need
     
     
 
--  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint)
+-  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
     
   
--  [Overview of Windows Phone SharePoint application templates in Visual Studio](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio)
+-  [Overview of Windows Phone SharePoint application templates in Visual Studio](overview-of-windows-phone-sharepoint-application-templates-in-visual-studio.md)
     
   
--  [Architecture of the Windows Phone SharePoint List Application template](architecture-of-the-windows-phone-sharepoint-list-application-template)
+-  [Architecture of the Windows Phone SharePoint List Application template](architecture-of-the-windows-phone-sharepoint-list-application-template.md)
     
   
--  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app)
+-  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app.md)
     
   
--  [How to: Store and retrieve SharePoint list items on a Windows Phone](how-to-store-and-retrieve-sharepoint-list-items-on-a-windows-phone)
+-  [How to: Store and retrieve SharePoint list items on a Windows Phone](how-to-store-and-retrieve-sharepoint-list-items-on-a-windows-phone.md)
     
   
--  [How to: Implement business logic and data validation in a Windows Phone app for SharePoint](how-to-implement-business-logic-and-data-validation-in-a-windows-phone-app-for-s)
+-  [How to: Implement business logic and data validation in a Windows Phone app for SharePoint](how-to-implement-business-logic-and-data-validation-in-a-windows-phone-app-for-s.md)
     
   
--  [How to: Support and convert SharePoint field types for Windows Phone apps](how-to-support-and-convert-sharepoint-field-types-for-windows-phone-apps)
+-  [How to: Support and convert SharePoint field types for Windows Phone apps](how-to-support-and-convert-sharepoint-field-types-for-windows-phone-apps.md)
     
   
--  [How to: Customize list item queries and filter data for Windows Phone apps](how-to-customize-list-item-queries-and-filter-data-for-windows-phone-apps)
+-  [How to: Customize list item queries and filter data for Windows Phone apps](how-to-customize-list-item-queries-and-filter-data-for-windows-phone-apps.md)
     
   
--  [How to: Customize the user interface of a SharePoint list app for Windows Phone](how-to-customize-the-user-interface-of-a-sharepoint-list-app-for-windows-ph)
+-  [How to: Customize the user interface of a SharePoint list app for Windows Phone](how-to-customize-the-user-interface-of-a-sharepoint-list-app-for-windows-ph.md)
     
   
--  [How to: Use multiple SharePoint lists in a Windows Phone app](how-to-use-multiple-sharepoint-lists-in-a-windows-phone-app)
+-  [How to: Use multiple SharePoint lists in a Windows Phone app](how-to-use-multiple-sharepoint-lists-in-a-windows-phone-app.md)
     
   
--  [How to: Configure and use push notifications in SharePoint apps for Windows Phone](how-to-configure-and-use-push-notifications-in-sharepoint-apps-for-windows)
+-  [How to: Configure and use push notifications in SharePoint apps for Windows Phone](how-to-configure-and-use-push-notifications-in-sharepoint-apps-for-windows.md)
     
   
--  [Integrating location and map functionality in SharePoint](integrating-location-and-map-functionality-in-sharepoint)
+-  [Integrating location and map functionality in SharePoint](integrating-location-and-map-functionality-in-sharepoint.md)
     
   
--  [How to: Create a mobile app in SharePoint that contains data from an external data source](how-to-create-a-mobile-app-in-sharepoint-that-contains-data-from-an-externa)
+-  [How to: Create a mobile app in SharePoint that contains data from an external data source](how-to-create-a-mobile-app-in-sharepoint-that-contains-data-from-an-externa.md)
     
   
--  [How to: Integrate maps with Windows Phone apps and SharePoint lists](how-to-integrate-maps-with-windows-phone-apps-and-sharepoint-lists)
+-  [How to: Integrate maps with Windows Phone apps and SharePoint lists](how-to-integrate-maps-with-windows-phone-apps-and-sharepoint-lists.md)
     
   
--  [How to: Build search-driven mobile apps with the Navigation and Event Logging REST interfaces](how-to-build-search-driven-mobile-apps-with-the-navigation-and-event-logging-res)
+-  [How to: Build search-driven mobile apps with the Navigation and Event Logging REST interfaces](how-to-build-search-driven-mobile-apps-with-the-navigation-and-event-logging-res.md)
     
   
 
@@ -234,10 +235,10 @@ The following how-tos and overviews delve into the specific information you need
     
     
 
--  [Programming models in SharePoint](programming-models-in-sharepoint)
+-  [Programming models in SharePoint](programming-models-in-sharepoint.md)
     
   
--  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint)
+-  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
     
   
 -  [Windows Phone SDK 8.0](http://www.microsoft.com/en-us/download/details.aspx?id=35471)

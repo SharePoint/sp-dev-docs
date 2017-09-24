@@ -1,6 +1,7 @@
----
+﻿---
 title: How to Configure and use push notifications in SharePoint apps for Windows Phone
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 68fa2138-86d9-4e35-9c7c-5cd292087b80
 ---
 
@@ -648,7 +649,7 @@ In this section, you create a Windows Phone app from the Windows Phone SharePoin
   
     
     
-To follow the procedures in this section, first perform the steps in the procedure described in  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app) to create a Visual Studio project from the Windows Phone SharePoint List Application template, using the Jobs list created in the preceding section as the target SharePoint list for the project. For the purposes of the procedures in this section, it is assumed that the name specified for the project isSPListAppForNotifications.
+To follow the procedures in this section, first perform the steps in the procedure described in  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app.md) to create a Visual Studio project from the Windows Phone SharePoint List Application template, using the Jobs list created in the preceding section as the target SharePoint list for the project. For the purposes of the procedures in this section, it is assumed that the name specified for the project isSPListAppForNotifications.
   
     
     
@@ -1286,7 +1287,7 @@ If you compile the project and deploy the app to the Windows Phone Emulator to r
   
     
     
-![Settings page for notification registration](../../images/bee8bbc5-a93d-4695-927b-c10e0e63ddf9.gif)
+![Settings page for notification registration](../images/bee8bbc5-a93d-4695-927b-c10e0e63ddf9.gif)
   
     
     
@@ -1304,7 +1305,7 @@ If you have deployed and activated the PushNotificationsList solution (developed
   
     
     
-![Toast notification (app running)](../../images/19b38f1b-8f98-4e91-8384-ba0e2d3da744.gif)
+![Toast notification (app running)](../images/19b38f1b-8f98-4e91-8384-ba0e2d3da744.gif)
   
     
     
@@ -1322,7 +1323,7 @@ The message displayed when your app received a toast notification while it's run
   
     
     
-![Raw notification](../../images/2e5dc58a-55d2-48c6-a162-974199ff5e5c.gif)
+![Raw notification](../images/2e5dc58a-55d2-48c6-a162-974199ff5e5c.gif)
   
     
     
@@ -1340,7 +1341,7 @@ If the app is not running when the item is added to the list, the phone should s
   
     
     
-![Toast notification (app not running)](../../images/c046bc5c-1e31-4ac6-9cba-05482cc36915.gif)
+![Toast notification (app not running)](../images/c046bc5c-1e31-4ac6-9cba-05482cc36915.gif)
   
     
     
@@ -1353,13 +1354,13 @@ When you add an item to the Jobs SharePoint list, the code in the event receiver
 <a name="SP15Configurepushnot_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
 -  [Push Notifications Overview for Windows Phone](http://msdn.microsoft.com/en-us/library/ff402558%28VS.92%29.aspx)
     
   
--  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint)
+-  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
     
   
 -  [Windows Phone SDK 8.0](http://www.microsoft.com/en-us/download/details.aspx?id=35471)

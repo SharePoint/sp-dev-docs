@@ -1,8 +1,15 @@
+---
+title: Convert an autohosted SharePoint Add-in to a provider-hosted add-in
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Convert an autohosted SharePoint Add-in to a provider-hosted add-in
 Learn how to convert an autohosted SharePoint Add-in to a provider-hosted add-in.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 Microsoft SharePoint introduced a new approach to extending SharePoint sites in addition to the previous approach of using solution-based customizations. This new extensibility model for SharePoint, called the add-in model, enables developers to create custom implementations that can be deployed to SharePoint environments regardless of whether they are running in an on-premises, SharePoint Online, or hybrid deployment.
@@ -19,7 +26,7 @@ This article explains how to convert and migrate an autohosted add-in to a provi
 ## Prerequisites for converting an autohosted add-in to a provider-hosted add-in
 
 
-- All of the  [prerequisites for developing provider-hosted add-ins](get-started-creating-provider-hosted-sharepoint-add-ins#SP15createselfhostapp_bk_prereq).
+- All of the  [prerequisites for developing provider-hosted add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md).
     
  
 - Azure SDK v2.3. Install it from here  [this Download Center page](http://azure.microsoft.com/downloads).
@@ -39,10 +46,10 @@ Before you convert an autohosted add-in to a provider-hosted add-in, you should 
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [SharePoint Add-ins](sharepoint-add-ins)|Learn about the new add-in model in SharePoint that enables you to create add-ins, which are small, easy-to-use solutions for end users.|
-| [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscape)|Learn about aspects of the architecture of SharePoint Add-ins and the model for SharePoint Add-ins, including the add-in hosting options, user interface (UI) options, deployment system, security system, and lifecycle.|
-| [Choose patterns for developing and hosting your SharePoint Add-in](choose-patterns-for-developing-and-hosting-your-sharepoint-add-in)|Learn about the various ways that you can host SharePoint Add-ins.|
-| [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013)|Learn about the distinction between host webs and add-in webs. Also find out which SharePoint components can be included in a SharePoint Add-in, which are deployed to the host web, which are deployed to the add-in web, and how the add-in web is deployed in an isolated domain.|
+| [SharePoint Add-ins](sharepoint-add-ins.md)|Learn about the new add-in model in SharePoint that enables you to create add-ins, which are small, easy-to-use solutions for end users.|
+| [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md)|Learn about aspects of the architecture of SharePoint Add-ins and the model for SharePoint Add-ins, including the add-in hosting options, user interface (UI) options, deployment system, security system, and lifecycle.|
+| [Choose patterns for developing and hosting your SharePoint Add-in](choose-patterns-for-developing-and-hosting-your-sharepoint-add-in.md)|Learn about the various ways that you can host SharePoint Add-ins.|
+| [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md)|Learn about the distinction between host webs and add-in webs. Also find out which SharePoint components can be included in a SharePoint Add-in, which are deployed to the host web, which are deployed to the add-in web, and how the add-in web is deployed in an isolated domain.|
 
 ## Converting the add-in
 <a name="Converting"> </a>
@@ -131,7 +138,7 @@ The next step is to create a new Microsoft Azure SQL Database. Login to the  **A
  
 
  
-![Azure SQL DB listing](../../images/ConvertAuto2ProviderFig3.jpg)
+![Azure SQL DB listing](../images/ConvertAuto2ProviderFig3.jpg)
  
 Click the  **SERVERS** link in the top navigation and then click the **ADD** button in the footer as shown in the following figure:
  
@@ -143,7 +150,7 @@ Click the  **SERVERS** link in the top navigation and then click the **ADD** but
  
 
  
-![Azure SQL DB Add button](../../images/ConvertAuto2ProviderFig4.jpg)
+![Azure SQL DB Add button](../images/ConvertAuto2ProviderFig4.jpg)
  
 In the  **CREATE SERVER** dialog that appears, select the Azure **SUBSCRIPTION**, the  **LOGIN NAME** and **PASSWORD** for the user who will have rights to the server and select the same **REGION** used when creating the Azure Web Site previously. Make a note of the login name and password as those will be needed in a later step.
  
@@ -155,7 +162,7 @@ In the  **CREATE SERVER** dialog that appears, select the Azure **SUBSCRIPTION**
  
 
  
-![Azure SQL New DB dialog](../../images/ConvertAuto2ProviderFig5.jpg)
+![Azure SQL New DB dialog](../images/ConvertAuto2ProviderFig5.jpg)
  
 Once the form is filled out, click the  **check icon** in the lower right to create the database. While the server is now created, the only resource that can access it are other Azure services. Make a note of the name of the Microsoft Azure SQL Database because this will be needed in a later step.
  
@@ -171,7 +178,7 @@ In order to connect to the Microsoft Azure SQL Database and deploy the database,
  
 
  
-![Connect to server error](../../images/ConvertAuto2ProviderFig6.jpg)
+![Connect to server error](../images/ConvertAuto2ProviderFig6.jpg)
  
 To create a firewall rule, within the  **Azure Management Portal**, select the Microsoft Azure SQL Database previously created and then click the  **CONFIGURE** link in the top navigation. Under the **Allowed IP Addresses** section, your IP address is currently shown as shown in the following figure. Click **ADD TO THE ALLOWED IP ADDRESSES** to add a firewall rule. Doing so will allow connections to the Microsoft Azure SQL Database and deployment of the database. Make sure to click the **Save** button in the footer.
  
@@ -183,7 +190,7 @@ To create a firewall rule, within the  **Azure Management Portal**, select the M
  
 
  
-![Azure SQL create firewall rule](../../images/ConvertAuto2Providerfig7.jpg)
+![Azure SQL create firewall rule](../images/ConvertAuto2Providerfig7.jpg)
  
 The next step is to deploy the database. This can be done from Visual Studio using the Azure SDK v2.3. Install it from  [this Download Center page](http://azure.microsoft.com/downloads). Within Visual Studio, open the  **SQL Server Object Explorer** tool window, right-click the **SQL Server** node and select **Add SQL Server**:
  
@@ -195,7 +202,7 @@ The next step is to deploy the database. This can be done from Visual Studio usi
  
 
  
-![Connect to SQL Azure from Visual Studio](../../images/ConvertAuto2Providerfig8.jpg)
+![Connect to SQL Azure from Visual Studio](../images/ConvertAuto2Providerfig8.jpg)
  
 In the  **Connect to Server** dialog, enter the **Server Name**, set the  **Authentication** to **SQL Server Authentication** and enter the same **Login** and **Password** defined when creating the Microsoft Azure SQL Database. The server name should be the fully qualified name of the server which is `[server-name].database.windows.net`, as shown in the following figure:
  
@@ -207,7 +214,7 @@ In the  **Connect to Server** dialog, enter the **Server Name**, set the  **Auth
  
 
  
-![SQL login to server dialog](../../images/ConvertAuto2Providerfig9.jpg)
+![SQL login to server dialog](../images/ConvertAuto2Providerfig9.jpg)
  
 After connecting to the Microsoft Azure SQL Database, expand the node for the newly added server, right-click on the  **Databases** node and select **Publish Data-tier Application** to bring up the publishing wizard.
  
@@ -223,7 +230,7 @@ In the section  **Source Data-tier Application (.dacpac)**, use the  **Browse** 
  
 
  
-![Publish DACPAC dialog](../../images/ConvertAuto2ProviderFig10.jpg)
+![Publish DACPAC dialog](../images/ConvertAuto2ProviderFig10.jpg)
  
 Refresh the Visual Studio  **SQL Server Object Explorer** tool window to see the CustomerDb listed under the **Databases** node.
  
@@ -247,7 +254,7 @@ Once the Microsoft Azure SQL Database has been created, make a copy of the conne
  
 
  
-![Azure SQL connection strings dialog](../../images/ConvertAuto2Providerfig11.jpg)
+![Azure SQL connection strings dialog](../images/ConvertAuto2Providerfig11.jpg)
  
 The other way to get the connection string is from within Visual Studio, provided the Azure SDK v2.3 is installed. Within the  **SQL Server Object Explorer** tool window in Visual Studio, select the database **CustomerDb**. Once the database is selected, look at the  **Properties** tool window to see connection string. This is the same value found in the **Azure Management Portal** above.
  
@@ -259,7 +266,7 @@ The other way to get the connection string is from within Visual Studio, provide
  
 
  
-![Obtain SQL connection string in Visual Studio](../../images/ConvertAuto2ProviderFig12.jpg)
+![Obtain SQL connection string in Visual Studio](../images/ConvertAuto2ProviderFig12.jpg)
  
 
  
@@ -282,7 +289,7 @@ To create a new Azure Web Site, first login to the  **Azure Management Portal** 
  
 
  
-![Azure Web Sites dashboard](../../images/ConvertAuto2Providerfig13.jpg)
+![Azure Web Sites dashboard](../images/ConvertAuto2Providerfig13.jpg)
  
 Next, in the new web site wizard, select  **COMPUTE**,  **WEB SITE**,  **QUICK CREATE** and then specify a **URL** and **WEB HOSTING PLAN**. Finally specify the  **REGION** where the web site should be created. Make sure to remember the region selected because the same region should be used for the Microsoft Azure SQL Database created later. In addition, if a web hosting plan does not already exist or a new one is desired, select the option **Create new web hosting plan**. The following figure shows an example:
  
@@ -294,7 +301,7 @@ Next, in the new web site wizard, select  **COMPUTE**,  **WEB SITE**,  **QUICK C
  
 
  
-![Create Azure Web Site dialog](../../images/ConvertAuto2Providerfig14.jpg)
+![Create Azure Web Site dialog](../images/ConvertAuto2Providerfig14.jpg)
  
 After creating the Azure Web Site, make a note of the URL that is used for the site. In the figures above, the site created is  `http://spahapptoph.azurewebsites.net`. 
  
@@ -383,7 +390,7 @@ Now the ASP.NET MVC web application files need to be deployed to the Azure Web S
  
 
  
-![Publish web site dialog in Visual Studio](../../images/ConvertAuto2Providerfig17.jpg)
+![Publish web site dialog in Visual Studio](../images/ConvertAuto2Providerfig17.jpg)
  
 In the next step, select the name of the Azure Web Site that was created in a previous step as shown in the following figure, click  **OK**, and ensure the URL of the site is HTTPS.
  
@@ -395,7 +402,7 @@ In the next step, select the name of the Azure Web Site that was created in a pr
  
 
  
-![Select existing web site dialog](../../images/ConvertAuto2ProviderFig18.png)
+![Select existing web site dialog](../images/ConvertAuto2ProviderFig18.png)
  
 In the last step, click the button  **Validate Connection** to ensure the settings and connection is in good working order and finally click **Publish**. This will trigger Visual Studio to deploy the ASP.NET web application to the Azure Web Site. 
  
@@ -449,7 +456,7 @@ Next, remove the reference in the SharePoint add-in project to the ASP.NET MVC w
  
 
  
-![Web project properties in Visual Studio](../../images/ConvertAuto2ProviderFig20.jpg)
+![Web project properties in Visual Studio](../images/ConvertAuto2ProviderFig20.jpg)
  
 The last step requires a manual update to the AppManifest.xml file because some settings are not exposed within the designer. Do this by saving any existing changes to the AppManifest.xml file, and then right-click the same file in  **Solution Explorer** and select **View Code**.
  
@@ -461,7 +468,7 @@ The last step requires a manual update to the AppManifest.xml file because some 
  
 
  
-![App manifest context menu in Visual Studio](../../images/ConvertAuto2ProviderFig21.jpg)
+![App manifest context menu in Visual Studio](../images/ConvertAuto2ProviderFig21.jpg)
  
 Within the code view of the AppManifest.xml file, remove the two references to the ASP.NET MVC web application project and the SQL data-tier application project as they are not needed within a SharePoint provider-hosted add-in.
  
@@ -486,7 +493,7 @@ Then find the  **<RemoteWebApplication>** element and update the **ClientId** at
  
 
  
-![Client ID attribute in app manifest](../../images/ConvertAuto2ProviderFig22.jpg)
+![Client ID attribute in app manifest](../images/ConvertAuto2ProviderFig22.jpg)
  
 After saving all changes to the AppManifest.xml file, the add-in is now ready for testing as a SharePoint provider-hosted add-in. Deploy the add-in to a SharePoint farm or SharePoint Online site to verify the conversion steps were performed correctly.
  

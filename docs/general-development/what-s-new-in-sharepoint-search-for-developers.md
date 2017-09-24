@@ -1,6 +1,7 @@
 ---
 title: What's new in SharePoint search for developers
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: b8d69685-3612-421e-b011-50b4d580d461
 ---
 
@@ -30,7 +31,7 @@ The Search CSOM returns the search results data from the server in JavaScript Ob
 ## SQL Syntax Support Removed
 <a name="SP15Searchnew_support"> </a>
 
-Custom search solutions in SharePoint do not support  [SQL syntax](http://msdn.microsoft.com/en-us/library/ee558869). Search in SharePoint supports FQL syntax and KQL syntax for custom search solutions. You cannot use SQL syntax in custom search solutions using any technologies, including the Query server object model, the client object model, and the Search REST service. Custom search solutions that use SQL syntax with the Query server object model and the Query web service that were created in earlier versions of SharePoint Server will not work when you upgrade them to SharePoint. Queries submitted via these applications will return an error. For more information about using FQL syntax and KQL syntax, see  [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference) and [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference).
+Custom search solutions in SharePoint do not support  [SQL syntax](http://msdn.microsoft.com/en-us/library/ee558869). Search in SharePoint supports FQL syntax and KQL syntax for custom search solutions. You cannot use SQL syntax in custom search solutions using any technologies, including the Query server object model, the client object model, and the Search REST service. Custom search solutions that use SQL syntax with the Query server object model and the Query web service that were created in earlier versions of SharePoint Server will not work when you upgrade them to SharePoint. Queries submitted via these applications will return an error. For more information about using FQL syntax and KQL syntax, see  [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference.md) and [FAST Query Language (FQL.md) syntax reference](fast-query-language-fql-syntax-reference.md).
   
     
     
@@ -245,7 +246,7 @@ SharePoint Search enables you to retrieve claims information for content stored 
   
     
     
-The connector framework also provides improved exception capturing and logging to help you troubleshoot errors encountered when crawling content sources using custom connectors that are built on top of the connector framework. For information about the connector framework, see  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint).
+The connector framework also provides improved exception capturing and logging to help you troubleshoot errors encountered when crawling content sources using custom connectors that are built on top of the connector framework. For information about the connector framework, see  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint.md).
   
     
     
@@ -254,16 +255,16 @@ The connector framework also provides improved exception capturing and logging t
 <a name="bk_addresources"> </a>
 
 
--  [Searching new content with SharePoint Search](searching-new-content-with-sharepoint-search)
+-  [Searching new content with SharePoint Search](searching-new-content-with-sharepoint-search.md)
     
   
--  [Configure search in SharePoint](configure-search-in-sharepoint)
+-  [Configure search in SharePoint](configure-search-in-sharepoint.md)
     
   
--  [Building search queries in SharePoint](building-search-queries-in-sharepoint)
+-  [Building search queries in SharePoint](building-search-queries-in-sharepoint.md)
     
   
--  [How to: Use a custom security trimmer for SharePoint Server search results](how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results)
+-  [How to: Use a custom security trimmer for SharePoint Server search results](how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results.md)
     
   
 

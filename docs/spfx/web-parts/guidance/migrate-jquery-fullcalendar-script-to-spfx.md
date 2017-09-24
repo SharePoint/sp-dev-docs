@@ -1,3 +1,10 @@
+---
+title: Migrate jQuery and FullCalendar solution built using Script Editor Web Part to SharePoint Framework
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Migrate jQuery and FullCalendar solution built using Script Editor Web Part to SharePoint Framework
 
 When building SharePoint solutions, SharePoint developers often use the [FullCalendar](https://fullcalendar.io) jQuery plugin to display data in calendar view. FullCalendar is a great alternative to the standard SharePoint calendar view, as it allows you to render as calendar data from multiple calendar lists, data from non-calendar lists or even data from outside of SharePoint. This article illustrates how you would migrate a SharePoint customization using FullCalendar built with the Script Editor Web Part to the SharePoint Framework.
@@ -6,7 +13,7 @@ When building SharePoint solutions, SharePoint developers often use the [FullCal
 
 To illustrate the process of migrating a SharePoint customization using FullCalendar to the SharePoint Framework you will use the following solution that shows a calendar view of tasks retrieved from a SharePoint list.
 
-![Calendar view of tasks displayed on a SharePoint page](../../../../images/fullcalendar-sewp.png)
+![Calendar view of tasks displayed on a SharePoint page](../../../images/fullcalendar-sewp.png)
 
 The solution is built using the standard SharePoint Script Editor Web Part. Following is the code used by the customization.
 
@@ -149,11 +156,11 @@ First, the customization loads the libraries it uses: jQuery, Moment.js and Full
 
 Using the FullCalendar jQuery plugin, with little effort users get rich solutions capable of things such as using different colors to mark different events or using drag and drop to reorganize events.
 
-![Dragging events in FullCalendar to reschedule underlying tasks](../../../../images/fullcalendar-sewp-draganddrop.png)
+![Dragging events in FullCalendar to reschedule underlying tasks](../../../images/fullcalendar-sewp-draganddrop.png)
 
 ## Migrate the Tasks calendar solution from the Script Editor Web Part to the SharePoint Framework
 
-> **Note:** Before following the steps in this article, be sure to [set up your development environment](../../set-up-your-development-environment) for building SharePoint Framework solutions.
+> **Note:** Before following the steps in this article, be sure to [set up your development environment](../../set-up-your-development-environment.md) for building SharePoint Framework solutions.
 
 Transforming a Script Editor Web Part-based customization to the SharePoint Framework offers a number of benefits such as more user-friendly configuration and centralized management of the solution. Following is a step-by-step description of how you would migrate the solution to the SharePoint Framework. First, you will migrate the solution to the SharePoint Framework with as few changes to the original code as possible. Later, you will transform the solution's code to TypeScript to benefit of its development-time type safety features and replace some of the code with the SharePoint Framework API to fully benefit of its capabilities and simplify the solution even further.
 
@@ -185,13 +192,13 @@ When prompted, define values as follows:
 - **WebPart** as the client-side component to create
 - **Tasks calendar** as your web part name
 - **Shows tasks in the calendar view** as your web part description
-- **No JavaScript web framework** as the starting point to build the web part
+- **No javaScript web framework** as the starting point to build the web part
 
-![SharePoint Framework Yeoman generator with the default choices](../../../../images/fullcalendar-yeoman.png)
+![SharePoint Framework Yeoman generator with the default choices](../../../images/fullcalendar-yeoman.png)
 
 Once the scaffolding completes, open your project folder in your code editor. In this tutorial, you will use Visual Studio Code.
 
-![SharePoint Framework project open in Visual Studio Code](../../../../images/fullcalendar-vscode.png)
+![SharePoint Framework project open in Visual Studio Code](../../../images/fullcalendar-vscode.png)
 
 ### Load JavaScript libraries
 
@@ -365,7 +372,7 @@ function updateTask(id, startDate, dueDate) {
 }
 ```
 
-This code is almost identical with the original code of the Script Editor Web Part customization. The only difference is that where the original code retrieved the URL of the current web from the global **\_spPageContextInfo** variable set by SharePoint (lines 8, 45, 96 and 104), the code in the SharePoint Framework uses a custom variable that you will have to set in the web part. SharePoint Framework client-side web parts can be used both on classic and modern pages. While the **\_spPageContextInfo** variable is present on classic pages, it's not available on modern pages which is why you can't rely on it and need a custom property that you can control yourself instead.
+This code is almost identical with the original code of the Script Editor Web Part customization. The only difference is that where the original code retrieved the URL of the current web from the global **\_spPageContextInfo** variable set by SharePoint (lines 8, 45, 96 and 104), the code in the SharePoint Framework uses a custom variable that you will have to set in the web part. SharePoint Framework client-side web parts can be used both on classic and modern pages. While the **_spPageContextInfo** variable is present on classic pages, it's not available on modern pages which is why you can't rely on it and need a custom property that you can control yourself instead.
 
 In order to reference this file in the web part, in the code editor, open the **./src/webparts/tasksCalendar/TasksCalendarWebPart.ts** file and change the **render** method to:
 
@@ -393,7 +400,7 @@ gulp serve --nobrowser
 
 Because the web part loads its data from SharePoint, you have to test the web part using the hosted SharePoint Framework workbench. Navigate to **https://yourtenant.sharepoint.com/_layouts/workbench.aspx** and add the web part to the canvas. You should now see the tasks displayed in a calendar view using the FullCalendar jQuery plugin.
 
-![Tasks displayed in a calendar view in a SharePoint Framework client-side web part](../../../../images/fullcalendar-spfx.png)
+![Tasks displayed in a calendar view in a SharePoint Framework client-side web part](../../../images/fullcalendar-spfx.png)
 
 ## Add support for configuring the web part through web part properties
 
@@ -403,7 +410,7 @@ In the previous steps you migrated the Tasks calendar solutions from Script Edit
 
 Start with defining a web part property to store the name of the list from which tasks should be loaded. In the code editor, open the **./src/webparts/tasksCalendar/TasksCalendarWebPart.manifest.json** file and rename the default **description** property to **listName** and clear its value.
 
-![The listName property in the web part manifest highlighted in Visual Studio Code](../../../../images/fullcalendar-spfx-listname-property.png)
+![The listName property in the web part manifest highlighted in Visual Studio Code](../../../images/fullcalendar-spfx-listname-property.png)
 
 Next, update the web part properties interface to reflect the changes in the manifest. In the code editor, open the **./src/webparts/tasksCalendar/ITasksCalendarWebPartProps.ts** file and change its contents to:
 
@@ -652,7 +659,7 @@ gulp serve --nobrowser
 
 Navigate to the hosted workbench and add the web part to the canvas. Open the web part property pane, specify the name of the list with tasks and click the **Apply** button to confirm the changes. You should now see tasks displayed in a calendar view in the web part.
 
-![Tasks loaded from the configured list and displayed in a SharePoint Framework client-side web part](../../../../images/fullcalendar-spfx-list-configured.png)
+![Tasks loaded from the configured list and displayed in a SharePoint Framework client-side web part](../../../images/fullcalendar-spfx-list-configured.png)
 
 ## Transform the plain JavaScript code to TypeScript
 

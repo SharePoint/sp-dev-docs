@@ -1,6 +1,7 @@
 ---
 title: Machine Translation Services in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 15a81428-da94-40b8-8ed4-6a12f05661e2
 ---
 
@@ -66,7 +67,7 @@ Using the server object model, you can submit requests to the Machine Translatio
   
     
     
-![Related code snippets and sample apps](../../images/mod_icon_links_samples.png)
+![Related code snippets and sample apps](../images/mod_icon_links_samples.png)
   
     
     
@@ -270,7 +271,7 @@ For the .NET managed CSOM, get a **ClientContext** instance (located in the **Mi
   
     
     
-![Related code snippets and sample apps](../../images/mod_icon_links_samples.png)
+![Related code snippets and sample apps](../images/mod_icon_links_samples.png)
   
     
     
@@ -286,7 +287,7 @@ For the Silverlight CSOM, get a **ClientContext** instance (located in the **Mic
   
     
     
-![Related code snippets and sample apps](../../images/mod_icon_links_samples.png)
+![Related code snippets and sample apps](../images/mod_icon_links_samples.png)
   
     
     
@@ -488,7 +489,7 @@ For the JavaScript CSOM, get an **SP.ClientContext** instance, and then use the 
   
     
     
-![Related code snippets and sample apps](../../images/mod_icon_links_samples.png)
+![Related code snippets and sample apps](../images/mod_icon_links_samples.png)
   
     
     
@@ -801,7 +802,7 @@ SharePoint Machine Translation Service uses the paragraph language as the Source
 <a name="TranslationSvc_AR"> </a>
 
 
--  [Office 2013 and SharePoint application services](office-and-sharepoint-application-services)
+-  [Office 2013 and SharePoint application services](office-and-sharepoint-application-services.md)
     
   
 

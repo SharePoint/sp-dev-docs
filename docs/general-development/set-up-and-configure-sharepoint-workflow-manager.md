@@ -1,6 +1,7 @@
 ---
 title: Set up and configure SharePoint Workflow Manager
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 4cd68a3e-9c3b-4fb9-bb66-e96cf0faec69
 ---
 
@@ -32,7 +33,7 @@ Instructions for installing and configuring SharePoint workflow components are m
 -  [Workflow Resource Center](http://technet.microsoft.com/en-US/sharepoint/jj556245)
     
   
--  [Workflows in SharePoint](workflows-in-sharepoint)
+-  [Workflows in SharePoint](workflows-in-sharepoint.md)
     
   
 

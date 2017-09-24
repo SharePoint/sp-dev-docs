@@ -1,3 +1,9 @@
+---
+title: Publish a cloud business add-in to SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # Publish a cloud business add-in to SharePoint
 You can publish your cloud business add-in as a provider-hosted SharePoint add-in. A provider-hosted add-in gives you the flexibility of deploying your web app and database to an on-premise SharePoint site, to Microsoft Azure, or to a third-party hosting site. After you publish your add-in, others can run it from SharePoint on their computers and mobile devices.
@@ -5,7 +11,7 @@ You can publish your cloud business add-in as a provider-hosted SharePoint add-i
 You can publish your add-in directly to a site using WebDeploy, or you can create a package for your add-in that can be deployed to multiple servers.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 
@@ -19,7 +25,7 @@ You can publish your add-in directly to a site using WebDeploy, or you can creat
 
  
 
-  ![The IncidentManager node](../../images/CBA_IM_18.PNG)
+  ![The IncidentManager node](../images/CBA_IM_18.PNG)
  
 
  
@@ -107,7 +113,7 @@ You can publish your add-in directly to a site using WebDeploy, or you can creat
 
  
 
-  ![The IncidentManager node](../../images/CBA_IM_18.PNG)
+  ![The IncidentManager node](../images/CBA_IM_18.PNG)
  
 
     
@@ -161,10 +167,10 @@ You can publish your add-in directly to a site using WebDeploy, or you can creat
 <a name="bk_addresources"> </a>
 
 
--  [Register SharePoint Add-ins 2013](register-sharepoint-add-ins-2013)
+-  [Register SharePoint Add-ins 2013](register-sharepoint-add-ins.md)
     
  
--  [Publish cloud business add-ins](publish-cloud-business-add-ins)
+-  [Publish cloud business add-ins](publish-cloud-business-add-ins.md)
     
  
 
