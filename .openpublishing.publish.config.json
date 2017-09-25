@@ -14,11 +14,8 @@
         "RestApi": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes"
-    },
-    "build_entry_point": "docs",
-    "template_folder": "_themes",
-    "customized_tasks": {
+      "template_folder": "_themes",
+      "customized_tasks": {
         "docset_prebuild": [
           "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
         ]
