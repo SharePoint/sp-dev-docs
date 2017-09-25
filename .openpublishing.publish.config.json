@@ -14,22 +14,6 @@
         "RestApi": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes"
-    },
-    {
-      "docset_name": "sharepoint-developer",
-      "build_source_folder": "docs",
-      "build_output_subfolder": "sharepoint-developer",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": false,
-      "type_mapping": {
-        "Conceptual": "Content",
-        "ManagedReference": "Content",
-        "RestApi": "Content"
-      },
-      "build_entry_point": "docs",
       "template_folder": "_themes",
       "customized_tasks": {
         "docset_prebuild": [
