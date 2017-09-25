@@ -54,13 +54,16 @@ yo @microsoft/sharepoint
 When prompted:
 
 * Accept the default **jquery-webpart** as your solution name and choose **Enter**.
-* Select **Use the current folder** as the location for the files.
+* Choose **SharePoint Online only (latest)**, and press **Enter**.
+* Select **Use the current folder** for where to place the files.
+* Choose **N** to require the extension to be installed on each site explicitly when it's being used. 
+* Choose **WebPart** as the client-side component type to be created. 
 
 The next set of prompts will ask for specific information about your web part:
 
-* Accept the default No **javascript web framework** option for the framework and choose **Enter** to continue.
 * Type **jQuery** for the web part name and choose **Enter**.
 * Enter **jQuery Web Part** as the description of the web part and choose **Enter**. 
+* Accept the default No **javascript web framework** option for the framework and choose **Enter** to continue.
 
 At this point, Yeoman will install the required dependencies and scaffold the solution files. This might take a few minutes. Yeoman will scaffold the project to include your **jQueryWebPart** web part as well.
 

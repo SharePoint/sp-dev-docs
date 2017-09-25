@@ -1,13 +1,4 @@
----
-title: Hosting extension from Office 365 CDN (Hello world part 4)
-ms.date: 09/25/2017
-ms.prod: sharepoint
----
-
-
 # Hosting extension from Office 365 CDN (Hello world part 4)
-
->**Note:** The SharePoint Framework Extensions are currently in preview and are subject to change. SharePoint Framework Extensions are not currently supported for use in production environments.
 
 In this article, you will learn how to deploy your SharePoint Framework Application Customizer to be hosted from an Office 365 CDN and how to deploy that to SharePoint for the end users. This article continues with the hello world extension built in the previous article [# Deploy your extension to SharePoint (Hello world part 3)](./using-page-placeholder-with-extensions.md) where we were still hosting the customizer from localhost.
 
@@ -19,7 +10,7 @@ Be sure you have completed the procedures in the following articles before you s
 
 You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=oOIHWamPr34&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV). 
 
-<a href="https://www.youtube.com/watch?v=oOIHWamPr34&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV">
+<a href="https://www.youtube.com/watch?v=nh1qFArXG2Y">
 <img src="../../../images/spfx-ext-youtube-tutorial4.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
@@ -42,7 +33,7 @@ Get-SPOTenantCdnPolicies -CdnType Public
 ```
 Enable public CDN in the tenant
 ```
-Set-SPOTenantCdnEnabled -CdnType Public
+Set-SPOTenantCdnEnabled -CdnType Publicget
 ```
 Now public CDN has been enabled in the tenant using the default file type configuration allowed. This means that the following file type extensions are supported: "CSS,EOT,GIF,ICO,JPEG,JPG,JS,MAP,PNG,SVG,TTF,WOFF".
 

@@ -47,7 +47,13 @@ yo @microsoft/sharepoint
 When prompted:
 
 * Accept the default **documentcardexample-webpart** as your solution name and choose **Enter**.
-* Select **WebPart** as the type of the client-side component and choose **Enter**
+* Choose **SharePoint Online only (latest)**, and press **Enter**.
+* Select **Use the current folder** for where to place the files.
+* Choose **N** to require the extension to be installed on each site explicitly when it's being used. 
+* Choose **WebPart** as the client-side component type to be created. 
+
+The next set of prompts will ask for specific information about your web part:
+
 * Use **DocumentCardExample** for your web part name and choose **Enter**.
 * Accept the default **DocumentCardExample description** and choose **Enter**.
 * Select **React** as the framework and choose **Enter**.

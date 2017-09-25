@@ -1,19 +1,10 @@
-﻿---
-title: Build your first Field Customizer extension
-ms.date: 09/25/2017
-ms.prod: sharepoint
----
-
-
 # Build your first Field Customizer extension
-
->**Note:** The SharePoint Framework Extensions are currently in preview and are subject to change. SharePoint Framework Extensions are not currently supported for use in production environments.
 
 Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online and you can use modern JavaScript tools and libraries to build them.
 
 You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=fijOzUmlXrY&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV). 
 
-<a href="https://www.youtube.com/watch?v=fijOzUmlXrY&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV">
+<a href="https://www.youtube.com/watch?v=4wgZy5tm4yo">
 <img src="../../../images/spfx-ext-youtube-tutorialfield.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
@@ -39,10 +30,11 @@ yo @microsoft/sharepoint
 When prompted:
 
 * Accept the default value of **field-extension** as your solution name and press **Enter**.
+* Choose **SharePoint Online only (latest)**, and press **Enter**.
 * Choose **Use the current folder** and press **Enter**.
 * Choose **N** to require extension to be installed on each site explicitly when it's being used.
-* Choose **Extension (Preview)** as the client-side component type to be created. 
-* Choose **Field Customizer (Preview)** as the extension type to be created.
+* Choose **Extension** as the client-side component type to be created. 
+* Choose **Field Customizer** as the extension type to be created.
 
 The next set of prompts will ask for specific information about your extension:
 
@@ -101,10 +93,10 @@ The logic for your Field Customizer is contained in the **OnInit()**, **onRender
 Below are the contents of **onRenderCell()** and **onDisposeCell()** in the default solution:
 
 ```ts
-  @override
+@override
   public onRenderCell(event: IFieldCustomizerCellEventParameters): void {
     // Use this method to perform your custom cell rendering.
-    const text: string = `['${event.fieldValue}']`;
+    const text: string = `${this.properties.sampleText}: ${event.fieldValue}`;
 
     event.domElement.innerText = text;
 
@@ -163,7 +155,7 @@ Since our Field Customizer is still hosted in localhost and is running, we can u
 Append the following query string parameters to the URL. Notice that you will need to update the id to match your own extension identifier available from the **HelloWorldFieldCustomizer.manifest.json** file:
 
 ```
-?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Percent":{"id":"7e7a4262-d02b-49bf-bfcb-e6ef1716aaef","properties":{"sampleText":"Hello!"}}}
+?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Percent":{"id":"45a1d299-990d-4917-ba62-7cb67158be16","properties":{"sampleText":"Hello!"}}}
 ```
 More detail about the URL query parameters:
 
@@ -177,16 +169,16 @@ More detail about the URL query parameters:
 The full URL should look similar to the following, depending on your tenant URL and the location of the newly created list:
 
 ```
-contoso.sharepoint.com/Lists/Orders/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Percent":{"id":"7e7a4262-d02b-49bf-bfcb-e6ef1716aaef","properties":{"sampleText":"Hello!"}}}
+contoso.sharepoint.com/Lists/Orders/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Percent":{"id":"45a1d299-990d-4917-ba62-7cb67158be16","properties":{"sampleText":"Hello!"}}}
 ```
 
 Accept the loading of Debug Manifests, by clicking **Load debug scripts** when prompted:
 
 ![Accept loading debug scripts](../../../images/ext-field-accept-debug-scripts.png)
 
-Notice how the Percent values are now presented with additional [ ] characters:
+Notice how the Percent values are now presented with additional prefix string as 'Hello!: ', which is provided as a property for the field customizer:
 
-![Accept loading debug scripts](../../../images/ext-field-default-customizer-output.png)
+![List view with field customizer rendered for percent field](../../../images/ext-field-default-customizer-output.png)
 
 ## Enhancing the Field Customizer rendering
 Now that we have successfully tested the out of the box starting point of the Field Customizer, let's modify the logic slightly to have a more polished rendering of the field value. 
@@ -245,25 +237,20 @@ Now that we have tested our solution properly in debug mode, we can package this
     * **ClientSiteComponentId:** This is the identifier (GUID) of the Field Customizer, which has been installed in the app catalog. 
     * **ClientSideComponentProperties:** This is an optional parameter, which can be used to provide properties for the Field Customizer instance.
 
-> Notice, you can control the requirement to add a solution containing your extension to the site by using `skipFeatureDeployment` setting in **package-solution.json**. Event though you would not require solution to be installed on the site, you'd need to associate **ClientSideComponentId** to specific objects for the extension to be visible. 
+> Notice, you can control the requirement to add a solution containing your extension to the site by using `skipFeatureDeployment` setting in **package-solution.json**. Event though you would not require solution to be installed on the site, you'd need to associate **ClientSideComponentId** to specific objects for the extension to be visible.
 
-In the following steps, we'll create a new field definition, which will then be automatically deployed with the needed configurations when the solution package is installed on a site.
+In the following steps, we'll review default field definition, which was automatically created and will then be used to automatically deploy needed needed configurations when the solution package is installed on a site.
 
 Return to your solution in Visual Studio Code (or to your preferred editor).
 
-We'll first need to create an **assets** folder where we will place all feature framework assets used to provision SharePoint structures when the package is installed.
-
-* Create a folder named **sharepoint** in the root of the solution
-* Create a folder named **assets** as a sub folder of the just created **sharepoint** folder
-
-Your solution structure should look similar to the following picture:
+Extend **sharepoint** folder and **assets** sub folder in the root of the solution to see existing **elements.xml** file. 
 
 ![assets folder in solution structure](../../../images/ext-field-assets-folder.png)
 
-### Add an elements.xml file for SharePoint definitions
-Create a new file inside the **sharepoint\assets** folder named **elements.xml**
+### Review elements.xml file 
+Open **elements.xml** file inside the **sharepoint\assets** folder.
 
-Copy the following xml structure into **elements.xml**. Be sure to update the **ClientSideComponentId** property to the unique Id of your Field Customizer available in the **HelloWorldFieldCustomizer.manifest.json** file in the** src\extensions\helloWorld** folder.
+Notice the following xml structure into **elements.xml**.  **ClientSideComponentId** property has been automatically updated to the unique Id of your Field Customizer available in the **HelloWorldFieldCustomizer.manifest.json** file in the **src\extensions\helloWorld** folder.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -292,24 +279,6 @@ Open **package-solution.json** from the **config** folder. The **package-solutio
     "name": "field-extension-client-side-solution",
     "id": "11cd343e-1ce6-462c-8acb-929804d0c3b2",
     "version": "1.0.0.0",
-    "skipFeatureDeployment": false
-  },
-  "paths": {
-    "zippedPackage": "solution/field-extension.sppkg"
-  }
-}
-
-
-```
-
-To ensure that our newly added **elements.xml** file is taken into account while solution is being packaged, we'll need to include a Feature Framework feature definition for the solution package. Let's include a JSON definition for the needed feature inside of the solution structure as demonstrated below.
-
-```json
-{
-  "solution": {
-    "name": "field-extension-client-side-solution",
-    "id": "11cd343e-1ce6-462c-8acb-929804d0c3b2",
-    "version": "1.0.0.0",
     "skipFeatureDeployment": false,
     "features": [{
       "title": "Field Extension - Deployment of custom field.",
@@ -329,6 +298,9 @@ To ensure that our newly added **elements.xml** file is taken into account while
 }
 
 ```
+
+To ensure that **element.xml** file is taken into account while the solution is being packaged, default scaffolding has added needed configuration to define a Feature Framework feature definition for the solution package.
+
 
 ## Deploy the field to SharePoint Online and host JavaScript from local host
 Now you are ready to deploy the solution to a SharePoint site and to get the field association automatically included in a field. 
@@ -385,7 +357,7 @@ Choose **Add from existing site columns** under the **Columns** section:
 
 Choose the **Percentage** field which was provisioned from the solution package, under the **SPFx Columns** group:
 
-![List settings for the new list](../../../images/ext-field-add-field-to-list.png)
+![Adding Percentage field to list](../../../images/ext-field-add-field-to-list.png)
 
 Click **OK**.
 
@@ -398,7 +370,7 @@ Navigate to the newly created **Invoices** list and add a few new items to the l
 
 ![Field Rendering without Debug Query Parameters](../../../images/ext-field-render-field-without-debug.png)
 
-In this case, we continued to host the JavaScript from the localhost, but you could just as well relocate the assets to any CDN and update the URL to enable the loading of the JavaScript assets outside of the localhost as well. 
+In this case, we continued to host the JavaScript from the localhost, but you could just as well relocate the assets to any CDN and update the URL to enable the loading of the JavaScript assets outside of the localhost as well.
 
 The process for publishing your app is identical among the different extension types. You can follow the following publishing steps to update the assets to be hosted from a CDN.
 

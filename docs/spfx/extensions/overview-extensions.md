@@ -1,15 +1,6 @@
----
-title: Overview of SharePoint Framework Extensions (preview)
-ms.date: 09/25/2017
-ms.prod: sharepoint
----
-
-
-# Overview of SharePoint Framework Extensions (preview)
+# Overview of SharePoint Framework Extensions
 
 You can use SharePoint Framework Extensions to extend the SharePoint user experience. With SharePoint Frameword Extensions, you can customize more facets of the SharePoint experience, including notification areas, toolbars, and list data views. SharePoint Framework Extensions are available for testing in first release tenants and in Office 365 developer tenants as part of the release candidate release. 
-
->**Note:** The SharePoint Framework Extensions are currently in preview and are subject to change. SharePoint Framework Extensions are not currently supported for use in production environments.
 
 > **Note:** You can get a free Office 365 developer tenant when you subscribe to the [Office 365 Developer Program](http://dev.office.com/devprogram).
 
@@ -30,7 +21,7 @@ After you install the SharePoint Framework, run the following command to update 
 npm install -g @microsoft/generator-sharepoint
 ```
 
-Next, you can [Build your first SharePoint Framework Extension (Hello World part 1)](./get-started/build-a-hello-world-extension.md).
+Next, you can [Build your first SharePoint Framework Extension (Hello World part 1)](get-started/build-a-hello-world-extension.md).
 
 ## Stay up to date
 To keep track of improvements to the SharePoint Framework, including updates to extensions, see the following:
@@ -39,7 +30,7 @@ To keep track of improvements to the SharePoint Framework, including updates to 
 * [Office Developer Blog](http://dev.office.com/blogs)
 
 ## Provide feedback 
-We invite you to give us your feedback on the SharePoint Framework Extensions preview release. You can use the following resources to provide feedback directly to the SharePoint engineering team:
+We invite you to give us your feedback on the SharePoint Framework General Availability release. You can use the following resources to provide feedback directly to the SharePoint engineering team:
 
 - [sp-dev-docs repository issue list](https://github.com/SharePoint/sp-dev-docs/issues) - Questions, issues, and comments.
 * [SharePoint StackExchange](http://sharepoint.stackexchange.com/) - Tag with [#spfx](http://sharepoint.stackexchange.com/tags/spfx/), [#spfx-extensions](http://sharepoint.stackexchange.com/tags/spfx-extensions/), and [#spfx-tooling](http://sharepoint.stackexchange.com/tags/spfx-tooling/).

@@ -90,9 +90,9 @@ When approving third party SharePoint Framework solutions, a typical checklist i
 
 A recommendation is for IT administrators to keep track of what CDN's are used, and what CDN's are approved by the organization - which should also be communicated to the enterprise developers.
 
-### Office 365 Public CDN (Developer Preview Release)
+### Office 365 Public CDN
 
-The [Office 365 Public CDN (Developer Preview Release)](https://dev.office.com/blogs/office-365-public-cdn-developer-preview-release) is a new capbility in Office 365 and SharePoint Online that allows administrators to automatically host static assets such as JavaScript files, images and CSS styles in a CDN for providing better performance. The Office 365 Public CDN is a geo-distributed caching feature, that keeps static assets as close to the end-users browsers requesting them.
+The [Office 365 Public CDN](https://dev.office.com/blogs/general-availability-of-office-365-cdn) is a new capbility in Office 365 and SharePoint Online that allows administrators to automatically host static assets such as JavaScript files, images and CSS styles in a CDN for providing better performance. The Office 365 Public CDN is a geo-distributed caching feature, that keeps static assets as close to the end-users browsers requesting them.
 
 Administrators can enable the Office 365 Public CDN capability on one or more designated document libraries, which will serve as the origin for the static assets. Administration of the libraries and the CDN are done using the SharePoint Online PowerShell cmdlets. The assets, in the document library, will be replicated to the Office 365 CDN and be accessible through the Office 365 Public CDN URLs generated and associated with the document library. Any updates to the assets will be reflected on the CDN end-points within 15 minutes. Note that any assets within the document libraries will be available for anonymous users, through the CDN end-point.
 

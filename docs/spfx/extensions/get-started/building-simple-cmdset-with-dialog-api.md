@@ -1,19 +1,10 @@
-﻿---
-title: Build your first ListView Command Set extension
-ms.date: 09/25/2017
-ms.prod: sharepoint
----
-
-
 # Build your first ListView Command Set extension
-
->**Note:** The SharePoint Framework Extensions are currently in preview and are subject to change. SharePoint Framework Extensions are not currently supported for use in production environments.
 
 Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online and you can use modern JavaScript tools and libraries to build them.
 
 You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=iW0LQQqAY0Y&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV). 
 
-<a href="https://www.youtube.com/watch?v=iW0LQQqAY0Y&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV">
+<a href="https://www.youtube.com/watch?v=JBhgdSgWgdM">
 <img src="../../../images/spfx-ext-youtube-tutorialcommand.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
@@ -39,10 +30,11 @@ yo @microsoft/sharepoint
 When prompted:
 
 * Accept the default value of **command-extension** as your solution name and press **Enter**.
+* Choose **SharePoint Online only (latest)**, and press **Enter**.
 * Choose **Use the current folder** and press **Enter**.
 * Choose **N** to require extension to be installed on each site explicitly when it's being used. 
-* Choose **Extension (Preview)** as the client-side component type to be created. 
-* Choose **ListView Command Set (Preview)** as the extension type to be created.
+* Choose **Extension** as the client-side component type to be created. 
+* Choose **ListView Command Set** as the extension type to be created.
 
 The next set of prompts will ask for specific information about your extension:
 
@@ -51,7 +43,7 @@ The next set of prompts will ask for specific information about your extension:
 
 ![Yeoman SharePoint generator prompts to create an extension solution](../../../images/ext-com-yeoman-prompts.png)
 
-At this point, Yeoman will install the required dependencies and scaffold the solution files along with the **HelloWorld** extension. This might take a few minutes. 
+At this point, Yeoman will install the required dependencies and scaffold the solution files along with the **HelloWorld** extension. This might take a few minutes.
 
 When the scaffold is complete, you should see the following message indicating a successful scaffold:
 
@@ -95,6 +87,7 @@ import {
   IListViewCommandSetListViewUpdatedParameters,
   IListViewCommandSetExecuteEventParameters
 } from '@microsoft/sp-listview-extensibility';
+import { Dialog } from '@microsoft/sp-dialog';
 ```
 
 The behavior for your custom buttons is contained in the **onListViewUpdated()** and **OnExecute()** methods.
@@ -106,14 +99,10 @@ When using the method `“tryGetCommand”` you’ll get a Command object, which
 ```ts
   @override
   public onListViewUpdated(event: IListViewCommandSetListViewUpdatedParameters): void {
-    if (this.properties.disabledCommandIds) {
-      for (const commandId of this.properties.disabledCommandIds) {
-        const command: Command | undefined = this.tryGetCommand(commandId);
-        if (command && command.visible) {
-          Log.info(LOG_SOURCE, `Hiding command ${commandId}`);
-          command.visible = false;
-        }
-      }
+    const compareOneCommand: Command = this.tryGetCommand('COMMAND_1');
+    if (compareOneCommand) {
+      // This command should be hidden unless exactly one row is selected.
+      compareOneCommand.visible = event.selectedRows.length === 1;
     }
   }
 ```
@@ -122,12 +111,12 @@ The **OnExecute()** method defines what happens when a command is executed (e.g.
 ```ts
   @override
   public onExecute(event: IListViewCommandSetExecuteEventParameters): void {
-    switch (event.commandId) {
+    switch (event.itemId) {
       case 'COMMAND_1':
-        alert(`Clicked ${strings.Command1}`);
+        Dialog.alert(`${this.properties.sampleTextOne}`);
         break;
       case 'COMMAND_2':
-        alert(`Clicked ${strings.Command2}`);
+        Dialog.alert(`${this.properties.sampleTextTwo}`);
         break;
       default:
         throw new Error('Unknown command');
@@ -155,7 +144,7 @@ Since our ListView Command Set is hosted from localhost and is running, we can u
 Append the following query string parameters to the URL. Notice that you will need to update the GUID to match the ID of your list view command set extension available in the **HelloWorldCommandSet.manifest.json** file:
 
 ```
-?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"6a6ac29e-258e-4a2c-8de3-6bdd358cdb54":{"location":"ClientSideExtension.ListViewCommandSet.CommandBar"}}
+?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"a8047e2f-30d5-40fc-b880-b2890c7c16d6":{"location":"ClientSideExtension.ListViewCommandSet.CommandBar","properties":{"sampleTextOne":"One item is selected in the list.","sampleTextTwo":"This command is always visible."}}}
 ```
 
 * **loadSPFX=true:**  ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework is not normally loaded unless at least one extension is registered. Since no components are registered yet, we must explicitly load the framework.
@@ -171,35 +160,36 @@ Append the following query string parameters to the URL. Notice that you will ne
 The full URL should look similar to the following, depending on your tenant URL and the location of the list.
 
 ```
-contoso.sharepoint.com/Lists/Orders/AllItems.aspx?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"6a6ac29e-258e-4a2c-8de3-6bdd358cdb54":{"location":"ClientSideExtension.ListViewCommandSet.CommandBar"}}
+contoso.sharepoint.com/Lists/Orders/AllItems.aspx?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"a8047e2f-30d5-40fc-b880-b2890c7c16d6":{"location":"ClientSideExtension.ListViewCommandSet.CommandBar","properties":{"sampleTextOne":"One item is selected in the list.","sampleTextTwo":"This command is always visible."}}}
 ```
 
 Accept the loading of Debug Manifests, by clicking **Load debug scripts** when prompted.
 
-![Accept loading debug scripts](../../../images/ext-com-accept-debug-scripts.png)
+![Accept loading debugripts](../../../images/ext-com-accept-debug-scripts.png)
 
-Notice two new buttons available in the toolbar with titles of *Command One* and *Command Two*.
+Notice new button available in the toolbar with title of  *Command Two*. If you click that button, you'll see the text provided as property for the *sampleTextTwo* property.
 
-![Accept loading debug scripts](../../../images/ext-com-default-customizer-output.png)
+![Command Two button visible in the document library toolbar](../../../images/ext-com-default-customizer-output.png)
+
+*Command One* is not visible based on the code, until one row is selected in the document library. Upload or create a document to the library and confirm that the second button will be visible.
+
+![Selecting one document to get Command One button visible](../../../images/ext-com-default-customizer-doc-select.png)
+
+Click *Command Two* button to also see how the dialog control works, which is used in the default output from solution scaffolding when ListView Command Set is selected as the extension type. 
+
+![Selecting one document to get Command One button visible](../../../images/ext-com-default-customizer-btn-click.png)
+
 
 ## Enhancing the ListView Command Set rendering
-We'll take advantage of a new Dialog API, which can be used to show modal dialogs easily from your code. 
+Default solution takes advantage of a new Dialog API, which can be used to show modal dialogs easily from your code. In following steps, we'll slightly modify the default experience to demonstrate Dialog API use cases.
 
 Return to the console and execute the following command to include the dialog API in our solution.
-
-``` 
-npm install @microsoft/sp-dialog --save
-```
 
 Return to Visual Studio Code (or your preferred editor).
 
 Open **HelloWorldCommandSet.ts** from the **src\extensions\helloWorld** folder.
 
 Add the following import statement for the `Dialog` class from `@microsoft/sp-dialog` after the existing import statements. 
-
-```ts
-import { Dialog } from '@microsoft/sp-dialog';
-``` 
 
 Update the **onExecute** method as follows
 
@@ -230,32 +220,28 @@ Return to the list view and use the same query parameters used previously with t
 
 Accept the loading of Debug Manifests, by clicking **Load debug scripts** when prompted.
 
-![Accept loading debug scripts](../../../images/ext-com-accept-debug-scripts.png)
+![Accept loading debugripts](../../../images/ext-com-accept-debug-scripts.png)
 
 We still have the same buttons in the toolbar, but you'll notice they behave differently if you click them one-by-one. Now we are using the new dialog API, which can be easily used with your solutions even for complex scenarios. 
 
-![Dialog shown in the page](../../../images/ext-com-dialog-output.png)
+![Accept loading debugripts](../../../images/ext-com-show-adv-dialog-input.png)
+
 
 ## Adding a ListView Command Set to a solution package for deployment
 
 Return to your solution in Visual Studio Code (or to your preferred editor).
 
-We'll first need to create an **assets** folder where we will place all feature framework assets used to provision SharePoint structures when the package is installed.
-
-* Create a folder named **sharepoint** in the root of the solution
-* Create a folder named **assets** as a sub folder within the just created **sharepoint** folder
-
-Your solution structure should look similar to the following picture:
+Extend **sharepoint** folder and **assets** sub folder in the root of the solution to see existing **elements.xml** file. 
 
 ![assets folder in solution structure](../../../images/ext-com-assets-folder.png)
 
-### Add an elements.xml file for SharePoint definitions
+### Review elements.xml file 
 
-Create a new file inside the **sharepoint\assets** folder named **elements.xml**
+Open **elements.xml** file inside the **sharepoint\assets** folder.
 
-Copy the following xml structure into **elements.xml**. Be sure to update the **ClientSideComponentId** property to the unique Id of your ListView Command Set available in the **HelloWorldCommandSet.manifest.json** file in the **src\extensions\helloWorld** folder.
+Notice the following xml structure into **elements.xml**.  **ClientSideComponentId** property has been automatically updated to the unique Id of your ListView Command Set available in the **HelloWorldCommandSet.manifest.json** file in the **src\extensions\helloWorld** folder.
 
-Notice that we use a specific location value of `ClientSideExtension.ListViewCommandSet.CommandBar` to define that this is a ListView Command Set and it should be displayed in the command bar. We also define the `RegistrationId` as **100** and the `RegistrationType` as **List** to associate this custom action automatically with generic lists.
+Notice that we use a specific location value of `ClientSideExtension.ListViewCommandSet.CommandBar` to define that this is a ListView Command Set and it should be displayed in the command bar. We also define the `RegistrationId` as **100** and the `RegistrationType` as **List** to associate this custom action automatically with generic lists. `ClientSideComponentProperties` can be used to provide instance specific configurations. In this case we are using default properties called *sampleTextOne* and *sampleTextTwo*.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -266,7 +252,8 @@ Notice that we use a specific location value of `ClientSideExtension.ListViewCom
         RegistrationId="100"
         RegistrationType="List"
         Location="ClientSideExtension.ListViewCommandSet.CommandBar"
-        ClientSideComponentId="5fc73e12-8085-4a4b-8743-f6d02ffe1240">
+        ClientSideComponentId="5fc73e12-8085-4a4b-8743-f6d02ffe1240"
+        ClientSideComponentProperties="{&quot;sampleTextOne&quot;:&quot;One item is selected in the list.&quot;, &quot;sampleTextTwo&quot;:&quot;This command is always visible.&quot;}">
 
     </CustomAction>
 
@@ -285,44 +272,32 @@ Open **package-solution.json** from the **config** folder. The **package-solutio
 
 ```json
 {
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
     "name": "command-extension-client-side-solution",
-    "id": "dfffbe21-e422-4c0f-a302-d7d62a30c1bf",
+    "id": "690ae189-a4fc-4b98-8f28-d4ec17448b7a",
     "version": "1.0.0.0",
-    "skipFeatureDeployment": false,
-  },
-  "paths": {
-    "zippedPackage": "solution/command-extension.sppkg"
-  }
-}
-```
-
-To ensure that our newly added **elements.xml** file is taken into account while the solution is being packaged, we'll need to include a Feature Framework feature definition for the solution package. Let's include a JSON definition for the needed feature inside of the solution structure as demonstrated below.
-
-```json
-{
-  "solution": {
-    "name": "command-extension-client-side-solution",
-    "id": "dfffbe21-e422-4c0f-a302-d7d62a30c1bf",
-    "version": "1.0.0.0",
-    "skipFeatureDeployment": false,    
-    "features": [{
-      "title": "ListView Command Set - Deployment of custom action.",
-      "description": "Deploys a custom action with ClientSideComponentId association",
-      "id": "456da147-ced2-3036-b564-8dad5c1c2e35",
-      "version": "1.0.0.0",
-      "assets": {        
-        "elementManifests": [
-          "elements.xml"
-        ]
+    "features": [
+      {
+        "title": "Application Extension - Deployment of custom action.",
+        "description": "Deploys a custom action with ClientSideComponentId association",
+        "id": "e91d5532-3519-4b50-b55e-b142fc74cd8a",
+        "version": "1.0.0.0",
+        "assets": {
+          "elementManifests": [
+            "elements.xml"
+          ]
+        }
       }
-    }]
+    ]
   },
   "paths": {
     "zippedPackage": "solution/command-extension.sppkg"
   }
 }
 ```
+
+To ensure that **element.xml** file is taken into account while the solution is being packaged, default scaffolding has added needed configuration to define a Feature Framework feature definition for the solution package.
 
 ## Deploy the Extension to SharePoint Online and host JavaScript from local host
 
@@ -354,7 +329,7 @@ Upload or drag and drop the `command-extension.sppkg` located in the **sharepoin
 
 Notice that we did not update the URLs for hosting the solution for this deployment, so the URL is still pointing to `https://localhost:4321`. Click the **Deploy** button.
 
-![Trust operation in app catalog upload](../../../images/ext-com-sppkg-deploy-trust.png)
+![Trust operation in app catalog upload./../../../images/ext-com-sppkg-deploy-trust.png)
 
 Move back to your console and ensure that the solution is running. If it's not running, execute the following command in the solution folder:
 
@@ -374,7 +349,7 @@ Choose the **command-extension-client-side-solution** app to install the solutio
 
 When the application has been successfully installed, Click **New** from the toolbar on the **Site Contents** page and choose **List**
 
-![Creating a new list](../../../images/ext-com-create-new-list.png)
+![Cring a new list](../../../images/ext-com-create-new-list.png)
 
 Provide the name as **Sample** and click **Create**.
 

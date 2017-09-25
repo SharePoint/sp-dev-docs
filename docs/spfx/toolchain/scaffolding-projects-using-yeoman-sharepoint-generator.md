@@ -1,10 +1,3 @@
----
-title: Scaffold projects using yeoman SharePoint generator
-ms.date: 09/25/2017
-ms.prod: sharepoint
----
-
-
 # Scaffold projects using yeoman SharePoint generator
 
 [Yeoman](http://yeoman.io/) helps you to kickstart new projects, prescribing best practices and tools to help you stay productive. Using the yeoman SharePoint generator, developers are able to scaffold new client-side solution projects to build, package and deploy SharePoint solutions. The generator provides common build tools, boilerplate code, and a common playground web site to host web parts for testing.
@@ -45,18 +38,30 @@ yo @microsoft/generator-sharepoint --help
 
 Option | Description 
 -----|------
---skip-install|Do no automatically install dependencies.
---solutionName|Client-side solution name, as well as folder name.
---framework|Framework to use for the solution. Choose one from "none", "react", "knockout".
---componentType|Component type. Currently only "webpart" is supported.
---componentName|Name of the component.
+--help|Print the generator's options and usage.
+--skip-cache|Do not remember prompt answers. Default: *false*.
+--skip-install|Do no automatically install dependencies. Default: *false*.
+--componentType|The type of component. Currently "webpart" or "extension" is supported
 --componentDescription|Description of the component.
+--componentName|Name of the component.
+--framework|Framework to use for the solution. Choose one from "none", "react", "knockout".
+--extensionType|The type of extension: Currently "ApplicationCustomizer", "FieldCustomizer", "ListViewCommandSet"
+--solutionName|Client-side solution name, as well as folder name.
+--environment|The target environment for the solution. Either "onprem" or "spo".
 
-Below is an example of a command that creates a solution called "hello-world" with a web part "HelloWorld" with "react" framework:
+Following table lists the available arguments.
+
+Argument | Description | Type | Required |
+-- | -- | -- | -- |
+skipFeatureDeployment | If specified, allow the tenant admin the choice of being able to deploy the components to all sites immediately without running any feature deployment or adding apps in sites. | Boolean | false | 
+
+Below is an example of a command that creates a solution called "hello-world" with a web part "HelloWorld" with "react" framework targeted only to SharePoint Online with tenant-scoped deployment optional enabled:
 
 ```
-yo @microsoft/sharepoint --solutionName "hello-world" --framework "react" --componentType "webpart" --componentName "HelloWorld" --componentDescription "HelloWorld web part"
+yo @microsoft/sharepoint --solutionName "hello-world" --framework "react" --componentType "webpart" --componentName "HelloWorld" --componentDescription "HelloWorld web part" --skip-install --environment "spo" skipFeatureDeployment true
 ```
+
+> Notice that some of the options have dependencies between each other. You cannot for example create extension with on-premises option.
 
 ### Notes on --skip-install 
 

@@ -22,14 +22,20 @@
     href: spfx/enterprise-guidance.md
   - name: Team-based development
     href: spfx/team-based-development-on-sharepoint-framework.md
-  - name: Using GraphHttpClient
-    href: spfx/call-microsoft-graph-using-graphhttpclient.md
   - name: Tenant-Scoped deployment
     href: spfx/tenant-scoped-deployment.md
+  - name: Tenant properties
+    href: spfx/tenant-properties.md
   - name: Use theme colors in your solution
     href: spfx/use-theme-colors-in-your-customizations.md
   - name: Working with CSS
     href: spfx/css-recommendations.md
+  - name: GraphHttpClient
+    items:
+    - name: Overview
+      href: spfx/overview-graphhttpclient.md
+    - name: Use GraphHttpClient to call Microsoft Graph
+      href: spfx/call-microsoft-graph-using-graphhttpclient.md
   - name: Toolchain
     href: spfx/toolchain/sharepoint-framework-toolchain.md
     items:
@@ -47,12 +53,10 @@
       href: spfx/toolchain/extending-webpack-in-build-pipeline.md
     - name: Provision SharePoint assets
       href: spfx/toolchain/provision-sharepoint-assets.md
-  - name: Extensions (Preview)
+  - name: Extensions
     items:
     - name: Overview
       href: spfx/extensions/overview-extensions.md
-    - name: Changes in the RC release
-      href: spfx/extensions/changes-between-dev-preview-and-rc.md
     - name: Get started
       items:
       - name: Build your first extension
@@ -149,8 +153,45 @@
         href: spfx/web-parts/guidance/localize-web-parts.md
       - name: Call the Microsoft Graph API
         href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md
+  - name: Design guidance
+    items:
+    - name: Overview
+      href: design/design-guidance-overview.md
+    - name: Authoring pages
+      href: design/authoring-pages.md
+    - name: Designing a web part
+      href: design/design-a-web-part.md
+      items:
+      - name: Reactive and nonreactive web parts
+        href: design/reactive-and-nonreactive-web-parts.md
+      - name: Responsive design
+        href: design/grid-and-responsive-design.md
+      - name: Tities and descriptions
+        href: design/web-part-titles-and-descriptions.md
+      - name: UI text
+        href: design/ui-text-for-web-parts.md
+      - name: Themes and colors
+        href: design/themes-colors.md
+      - name: Placeholders and fallbacks
+        href: design/placeholders-and-fallbacks.md
+      - name: Showcase web part
+        href: design/showcase-web-part.md
+- name: Declarative customization
+  items:
+  - name: Site theming
+    items:
+    - name: Overview
+      href: declarative-customization/site-theming/sharepoint-site-theming-overview.md
+    - name: JSON schema reference
+      href: declarative-customization/site-theming/sharepoint-site-theming-json-schema.md
+    - name: PowerShell commands
+      href: declarative-customization/site-theming/sharepoint-site-theming-powershell.md
+    - name: REST API
+      href: declarative-customization/site-theming/sharepoint-site-theming-rest-api.md
 - name: SharePoint APIs
   items:
+  - name: Create Communication Sites
+    href: apis/communication-site-creation-rest.md
   - name: REST
     items:
     - name: SharePoint REST service

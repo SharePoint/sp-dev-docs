@@ -1,14 +1,5 @@
----
-title: Deploy your extension to SharePoint (Hello world part 3)
-ms.date: 09/25/2017
-ms.prod: sharepoint
----
-
-
 
 # Deploy your extension to SharePoint (Hello world part 3)
-
->**Note:** The SharePoint Framework Extensions are currently in preview and are subject to change. SharePoint Framework Extensions are not currently supported for use in production environments.
 
 In this article, you will learn how to deploy your SharePoint Framework Application Customizer to SharePoint and see it working on modern SharePoint pages. This article continues with the hello world extension built in the previous article [Using page placeholders from Application Customizer (Hello World part 2)](./using-page-placeholder-with-extensions.md).
 
@@ -19,7 +10,7 @@ Be sure you have completed the procedures in the following articles before you b
 
 You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=P_yWI0WVQIg&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV). 
 
-<a href="https://www.youtube.com/watch?v=P_yWI0WVQIg&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV">
+<a href="https://www.youtube.com/watch?v=DzHdVxLA3Pc">
 <img src="../../../images/spfx-ext-youtube-tutorial3.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
@@ -42,28 +33,25 @@ Before we package our solution, we want to include the code needed to automate t
 
 > Notice, you can control the requirement to add a solution containing your extension to the site by using `skipFeatureDeployment` setting in **package-solution.json**. Event though you would not require solution to be installed on the site, you'd need to associate **ClientSideComponentId** to specific objects for the extension to be visible. 
 
-In the following steps, we'll create a new `CustomAction` definition, which will then be automatically deployed with the needed configurations when the solution package is installed on a site. 
+In the following steps, we'll review `CustomAction` definition, which was automatically created for the solution as part of the scaffolding for enabling solution in a site when it's being installed. 
 
 Return to your solution package in Visual Studio Code (or to your preferred editor).
 
-We'll first need to create an **assets** folder where we will place all feature framework assets used to provision SharePoint structures when the package is installed.
-
-* Create a folder named **sharepoint** in the root of the solution
-* Create a folder named **assets** as a sub folder of the just created **sharepoint** folder
-
-Your solution structure should look similar to the following picture:
+Extend **sharepoint** folder and **assets** sub folder in the root of the solution to see existing **elements.xml** file. 
 
 ![assets folder in solution structure](../../../images/ext-app-assets-folder.png)
 
-### Add an elements.xml file for SharePoint definitions
+### Review existing elements.xml file for SharePoint definitions
 
-Create a new file inside the **sharepoint\assets** folder named **elements.xml**
+Review the existing xml structure in the **elements.xml** file. Notice that the **ClientSideComponentId** property has been automatically updated based on the unique Id of your Application Customizer available in the **HelloWorldApplicationCustomizer.manifest.json** file in the **src\extensions\helloWorld** folder.
 
-Copy the following xml structure into **elements.xml**. Be sure to update the **ClientSideComponentId** property to the unique Id of your Application Customizer available in the **HelloWorldApplicationCustomizer.manifest.json** file in the **src\extensions\helloWorld** folder.
+**ClientSideComponentProperties** has been also automatically set with default structure and pass JSON properties for this extension instance. Notice how the JSON is escaped so that we can set it properly within an XML attribute. 
 
-We also set the **ClientSideComponentProperties** and pass JSON properties for this extension instance. Notice how the JSON is escaped so that we can set it properly within an XML attribute. 
+Notice that configuration uses the specific location of `ClientSideExtension.ApplicationCustomizer` to define that this is an Application Customizer. Since by default this **elements.xml** will be associated to a *Web* scoped feature, this `CustomAction` will be automatically added to the `Web.UserCustomAction` collection in the site where the solution is being installed.
 
-Notice also that we use the specific location of `ClientSideExtension.ApplicationCustomizer` to define that this is an Application Customizer. Since by default this **elements.xml** will be associated to a *Web* scoped feature, this `CustomAction` will be automatically added to the `Web.UserCustomAction` collection in the site where the solution is being installed.
+To ensure that the configuration matches updates performed in the Application Customizer, update the **ClientSideComponentProperties** as in the below xml structure. 
+
+> Notice that you should not copy the whole structure, since it would cause a mismatch with your **ClientSideComponentId**.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -85,47 +73,36 @@ Notice also that we use the specific location of `ClientSideExtension.Applicatio
 Open **package-solution.json** from the **config** folder. The **package-solution.json** file defines the package metadata as shown in the following code:
 
 ```json
+
 {
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
     "name": "app-extension-client-side-solution",
-    "id": "02d35a3e-5896-4664-874f-9fe9fdfe8408",
+    "id": "98a9fe4f-175c-48c1-adee-63fb927faa70",
     "version": "1.0.0.0",
-    "skipFeatureDeployment": false
-  },
-  "paths": {
-    "zippedPackage": "solution/app-extension.sppkg"
-  }
-}
-
-```
-
-To ensure that our newly added **element.xml** file is taken into account while the solution is being packaged, we'll need to include a Feature Framework feature definition for the solution package. Let's include a JSON definition for the needed feature inside of the solution structure as demonstrated below.
-
-```json
-{
-  "solution": {
-    "name": "app-extension-client-side-solution",
-    "id": "02d35a3e-5896-4664-874f-9fe9fdfe8408",
-    "version": "1.0.0.0",
-    "skipFeatureDeployment": false,
-    "features": [{
-      "title": "Application Extension - Deployment of custom action.",
-      "description": "Deploys a custom action with ClientSideComponentId association",
-      "id": "456da147-ced2-3036-b564-8dad5c1c2e34",
-      "version": "1.0.0.0",
-      "assets": {        
-        "elementManifests": [
-          "elements.xml"
-        ]
+    "features": [
+      {
+        "title": "Application Extension - Deployment of custom action.",
+        "description": "Deploys a custom action with ClientSideComponentId association",
+        "id": "4678966b-de68-445f-a74e-e553a7b937ab",
+        "version": "1.0.0.0",
+        "assets": {
+          "elementManifests": [
+            "elements.xml"
+          ]
+        }
       }
-    }]
+    ]
   },
   "paths": {
     "zippedPackage": "solution/app-extension.sppkg"
   }
 }
 
+
 ```
+
+To ensure that **element.xml** file is taken into account while the solution is being packaged, default scaffolding has added needed configuration to define a Feature Framework feature definition for the solution package.
 
 ## Deploy the extension to SharePoint Online and host JavaScript from local host
 

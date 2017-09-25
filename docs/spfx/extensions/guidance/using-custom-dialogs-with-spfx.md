@@ -1,20 +1,8 @@
----
-title: Use custom dialog boxes with SharePoint Framework Extensions
-ms.date: 09/25/2017
-ms.prod: sharepoint
----
-
-
 # Use custom dialog boxes with SharePoint Framework Extensions
 
 You can use custom dialog boxes, available from the **@microsoft/sp-dialog** package, within the context of SharePoint Framework Extensions or client-side web parts. 
 
 This article describes how to create a custom dialog box and use it within the context of a ListView Command Set extension.
-
->**Note:** The custom dialog box feature is currently in preview. We are looking for your feedback before we release. To provide feedback, [file an issue in our GitHub repo](https://github.com/SharePoint/sp-dev-docs/issues).
-
-> Please note that debugging Custom ListView Command Sets in SharePoint Online is currently only available from the modern list experience within classic team sites hosted in a **developer tenant**.
-
 
 You can access the sample code that this article is based on in the [](https://github.com/SharePoint/sp-dev-fx-extensions/tree/master/samples/react-command-dialog) repo.
 
@@ -51,10 +39,11 @@ yo @microsoft/sharepoint
 When prompted:
 
 * Accept the default value of **dialog-cmd** as your solution name and press **Enter**.
+* Choose **SharePoint Online only (latest)**, and press **Enter**.
 * Choose **Use the current folder** and press **Enter**.
 * Choose **N** to require extension to be installed on each site explicitly when it's being used.
-* Choose **Extension (Preview)** as the client-side component type to be created. 
-* Choose **ListView Command Set (Preview)** as the extension type to be created.
+* Choose **Extension** as the client-side component type to be created. 
+* Choose **ListView Command Set** as the extension type to be created.
 
 The next set of prompts will ask for specific information about your extension:
 
@@ -95,18 +84,6 @@ In the extension manifest, configure the extension to have only one button. In t
   }
 }
 ```
-
-## Add the sp-dialog package to the solution
-
-Return to the console and run the following command to include the dialog API in your solution:
-
-```sh
-npm install @microsoft/sp-dialog --save
-```
-
-Because you're using the `--save` option, this dependency will be added to the **package.json** file. This ensures that it will be installed automatically when the `npm install` command runs (this is important when you restore or clone your project elsewhere).
-
-Return to Visual Studio Code (or your preferred editor).
 
 ## Create a custom dialog box
 
@@ -212,7 +189,6 @@ In the code editor, open the **DialogDemoCommandSet.ts** file from the **./src/e
 Add the following import statements under the existing **strings** import. These are for using the custom dialog box in the context of your ListView Command Set. 
 
 ```ts
-import { Dialog } from '@microsoft/sp-dialog';
 import ColorPickerDialog from './ColorPickerDialog';
 ```
 
@@ -234,7 +210,7 @@ Update the `onExecute` function as follows. This code does the following:
 ```ts
   @override
   public onExecute(event: IListViewCommandSetExecuteEventParameters): void {
-    switch (event.commandId) {
+    switch (event.itemId) {
       case 'COMMAND_1':
         const dialog: ColorPickerDialog = new ColorPickerDialog();
         dialog.message = 'Pick a color:';
@@ -272,18 +248,20 @@ Go to an existing custom list within the site that contains some items, or creat
 Append the following query string parameters to the URL. Notice that you will need to update the **id** to match your own extension identifier as listed in the **DialogDemoCommandSet.manifest.json** file:
 
 ```
-?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"8701f44c-8c81-4e54-999d-62763e8f34d2":{"location":"ClientSideExtension.ListViewCommandSet.CommandBar"}}
+?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"fcbc5541-b335-4ed0-b8a4-8d40d3c4d25d":{"location":"ClientSideExtension.ListViewCommandSet.CommandBar"}}
 ```
 
 Accept the loading of Debug Manifests by choosing **Load debug scripts** when prompted.
 
 ![Allow debug scripts warning](../../../images/ext-com-dialog-debug-scripts.png)
 
-Notice that the new button is visible in the toolbar of the list with the text *Open Custom Dialog box*.
+Notice that the new button is NOT visible in the toolbar by default, since default solution require that you'll need to select one item from the list. 
+
+Select item from the list or libary and notice how button will be visible in the toolbar with the text *Open Custom Dialog box*.
 
 ![Open Cusotm Dialog button visible in the toolbar](../../../images/ext-com-dialog-button-in-toolbar.png)
 
-Choose the *Open Custom Dialog box* button to see your custom dialog box rendered within the list view. 
+Click the *Open Custom Dialog box* button to see your custom dialog box rendered within the list view. 
 
 ![Color Picker rendered in dialog mode](../../../images/ext-com-dialog-visible-dialog.png)
 

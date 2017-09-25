@@ -45,13 +45,16 @@ yo @microsoft/sharepoint
 When prompted:
 
 * Accept the default **helloworld-webpart** as your solution name and choose **Enter**.
+* Choose **SharePoint Online only (latest)**, and press **Enter**.
 * Select **Use the current folder** for where to place the files.
+* Choose **N** to require the extension to be installed on each site explicitly when it's being used. 
+* Choose **WebPart** as the client-side component type to be created. 
 
 The next set of prompts will ask for specific information about your web part:
 
-* Accept the default **No javascript web framework** as the framework you would like to use and choose **Enter**.
 * Accept the default **HelloWorld** as your web part name and choose **Enter**.
 * Accept the default **HelloWorld description** as your web part description and choose **Enter**.
+* Accept the default **No javascript web framework** as the framework you would like to use and choose **Enter**.
 
 ![Yeoman SharePoint generator prompts to create a web part client-side solution](../../../images/yeoman-sp-prompts.png)
 
@@ -76,8 +79,6 @@ SharePoint Framework documentation uses Visual Studio code in the steps and exam
 To preview your web part, build and run it on a local web server. The client-side toolchain uses HTTPS endpoint by default. However, since a default certificate is not configured for the local dev environment, your browser will report a certificate error. The SPFx toolchain comes with a developer certificate that you can install for building web parts.
 
 To install the developer certificate for use with SPFx development, switch to your console, make sure you are still in the **helloworld-webpart** directory and enter the following command:
-
-> Notice that if you hare using Chrome v58 or newer as your browser, below command does not generate valid certificate for your environment and you will see a certificate exception in local workbench
 
 ```
 gulp trust-dev-cert
