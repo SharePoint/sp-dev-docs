@@ -1,10 +1,6 @@
 {
   "docsets_to_publish": [
     {
-      "customized_tasks": {
-        "docset_prebuild": [
-          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"        ]
-      },
       "docset_name": "sharepoint-developer",
       "build_source_folder": "docs",
       "build_output_subfolder": "sharepoint-developer",
@@ -18,22 +14,12 @@
         "RestApi": "Content"
       },
       "build_entry_point": "docs",
-      "template_folder": "_themes"
-    }
-  ],
-  "JoinTOCPlugin": [
-    {
-      "ConceptualTOC": "/docs/toc.yml",
-      "ReferenceTOCUrl": "/javascript/api/spfx-toc/toc.json" 
-    }
-  ],
-  "dependent_packages": [
-    {
-      "path_to_root": "_dependentPackages/CommonPlugins", 
-      "target_framework": "net45", 
-      "version": "latest", 
-      "id": "Microsoft.OpenPublishing.CommonPlugins", 
-      "nuget_feed": "https://www.myget.org/F/op/api/v2"
+      "template_folder": "_themes",
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
+        ]
+      }
     }
   ],
   "notification_subscribers": [],
@@ -50,5 +36,20 @@
     }
   ],
   "branch_target_mapping": {},
-  "need_generate_pdf_url_template": false
+  "need_generate_pdf_url_template": false,
+  "JoinTOCPlugin": [
+    {
+      "ConceptualTOC": "/docs/toc.yml",
+      "ReferenceTOCUrl": "/javascript/api/spfx-toc/toc.json"
+    }
+  ],
+  "dependent_packages": [
+    {
+      "path_to_root": "_dependentPackages/CommonPlugins",
+      "target_framework": "net45",
+      "version": "latest",
+      "id": "Microsoft.OpenPublishing.CommonPlugins",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2"
+    }
+  ]
 }
