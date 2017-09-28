@@ -1,8 +1,8 @@
-# Overview of the GraphHttpClient class
+# Overview of the GraphHttpClient class (preview)
+
+>**Important:** The **GraphHttpClient** is currently in preview and is subject to change. It is not currently supported for use in production environments.
 
 You can use Microsoft Graph to build powerful solutions that access data from Office 365 and other Microsoft services. To connect SharePoint Framework (SPFx) solutions to Microsoft Graph, you have to register an Azure Active Directory (Azure AD) application and complete the authorization flow. To make this easier, you can use the SPFx **GraphHttpClient** class to call Microsoft Graph directly, without any additional setup.
-
-> **Important:** The **GraphHttpClient** class is currently in developer preview and is subject to change. We don't recommend that you use it in your production environment.
 
 ## What is the GraphHttpClient class?
 
