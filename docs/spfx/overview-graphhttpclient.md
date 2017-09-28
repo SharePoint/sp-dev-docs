@@ -1,10 +1,10 @@
-# Overview of the GraphHttpClient
+# Overview of the GraphHttpClient class
 
-Using the Microsoft Graph you can build powerful solutions that use data from the different services that are a part of Office 365. In the past, connecting SharePoint Framework solutions to the Microsoft Graph was challenging, as it required you to register an Azure Active Directory application and complete the authorization flow. With the SharePoint Framework GraphHttpClient you can directly call the Microsoft Graph, without any additional setup.
+You can use Microsoft Graph to build powerful solutions that access data from Office 365 services. Connecting SharePoint Framework (SPFx) solutions to Microsoft Graph requires you to register an Azure Active Directory (Azure AD) application and complete the authorization flow. To make this easier, you can use the SPFx **GraphHttpClient** class to call Microsoft Graph directly, without any additional setup.
 
-> **Important:** The GraphHttpClient is currently in developer preview and should not be used in production.
+> **Important:** The **GraphHttpClient** class is currently in developer preview and is subject to change. We don't recommend that you use it in your production environment.
 
-## What is GraphHttpClient
+## What is GraphHttpClient?
 
 GraphHttpClient is a specialized HTTP client provided as a part of the SharePoint Framework. It works similarly to the HttpClient that you can use to communicate with third party APIs. On top of the HttpClient, the GraphHttpClient automatically ensures that your request to the Microsoft Graph has a valid bearer access token and required headers. Whenever you issue a GET or a POST request, the GraphHttpClient verifies that it has a valid access token, and if it doesn't, it automatically retrieves one from an internal API and stores it for subsequent requests.
 
@@ -40,16 +40,16 @@ Using the GraphHttpClient is a very convenient way of communicating with the Mic
 
 ### Use for Microsoft Graph access only
 
-The GraphHttpClient is meant to be used only for accessing the Microsoft Graph. The URL specified in the request must begin with the version of the Microsoft Graph API (either **v1.0** or **beta**) followed by the API operation. Any other URL will be rejected with an error.
+The GraphHttpClient is meant to be used only to access Microsoft Graph. The URL specified in the request must begin with the version of the Microsoft Graph API (either **v1.0** or **beta**), followed by the API operation. Any other URL will return an error.
 
-### Available permission scopes
+### Permissions
 
-The GraphHttpClient uses the **Office 365 SharePoint Online** Azure Active Directory application to retrieve a valid access token to the Microsoft Graph on behalf of the current user. The retrieved access token contains two permissions scopes: 
+The GraphHttpClient uses the **Office 365 SharePoint Online** Azure AD application to retrieve a valid access token to Microsoft Graph on behalf of the current user. The retrieved access token contains two permissionss: 
 
 * **Read and write all groups (preview)** (`Group.ReadWrite.All`) 
 * **Read all usage reports** (`Reports.Read.All`) 
 
-At this moment these are the only two permissions available when using the GraphHttpClient. If you need other permission scopes in your solution, you have to use [ADAL JS with implicit OAuth flow](web-parts/guidance/call-microsoft-graph-from-your-web-part.md) instead.
+At this moment these are the only two permissions available when using the GraphHttpClient. If you need other permission scopes in your solution, you can use [ADAL JS with implicit OAuth flow](web-parts/guidance/call-microsoft-graph-from-your-web-part.md) instead.
 
 ### Tokens are retrieved using an internal API
 
