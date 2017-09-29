@@ -29,6 +29,8 @@ These themes have been designed for readability, so you might find them to be us
 
 ## Selecting a modern theme
 
+<!-- Verify that it's okay to use the concept of "modern" themes/pages here? -->
+
 To select from the available themes for a SharePoint site, choose the __gear icon (⚙️)__ in the top right corner of the screen and then select __Change the look__. You'll be presented with a list of themes to choose from, which might include default themes and/or custom themes depending on how your site has been configured.
 
 The following image shows how the default themes are presented in the theme picker dialog box.
