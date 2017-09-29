@@ -46,10 +46,10 @@ In the following steps, you'll modify the Hello World Application Customizer to 
 	  Also add the following import statements after the `strings` import at the top of the file:
 
 
-	    ```ts
-	    import styles from './AppCustomizer.module.scss';
-	    import { escape } from '@microsoft/sp-lodash-subset'; 
-	    ```
+	 ```ts
+	 import styles from './AppCustomizer.module.scss';
+	 import { escape } from '@microsoft/sp-lodash-subset'; 
+	 ```
 
 	  You use `escape` to escape Application Customizer properties. You'll create style definitions for the output in the following steps.  
 
