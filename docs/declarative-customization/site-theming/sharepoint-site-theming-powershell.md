@@ -149,7 +149,8 @@ c:\> Remove-SPOTheme -Name "Custom Cyan"
 ```
 ## Set-HideDefaultThemes
 
-_NOTE: this command will be renamed to ```Set-SPOHideDefaultThemes``` in a future release, for consistency with other SharePoint PowerShell commands._
+>[!NOTE] 
+>This command will be renamed to ```Set-SPOHideDefaultThemes``` in a future release, for consistency with other SharePoint PowerShell commands.
 
 The **Set-HideDefaultThemes** command is used to specify whether the default themes that come with SharePoint should be included in the theme picker list. For example, you might want to create custom themes for your sites and then remove the default themes, to ensure that all pages will use your custom themes.
 
@@ -169,7 +170,8 @@ Set-HideDefaultThemes $false
 
 ## Get-HideDefaultThemes
 
-_NOTE: this command will be renamed to ```Get-SPOHideDefaultThemes``` in a future release, for consistency with other SharePoint PowerShell commands._
+>[!NOTE]
+>This command will be renamed to ```Get-SPOHideDefaultThemes``` in a future release, for consistency with other SharePoint PowerShell commands.
 
 The **Get-HideDefaultThemes** command retrieves the currrent **Set-HideDefaultThemes** setting. You might want to use this command in a PowerShell script to read the setting and then take different actions based on whether the default themes are hidden. This command does not have any parameters.
 
