@@ -1,5 +1,6 @@
 # Use GraphHttpClient to call Microsoft Graph
->**Important:** The **GraphHttpClient** is currently in preview and is subject to change. It is not currently supported for use in production environments.
+> [!IMPORTANT]
+>The **GraphHttpClient** is currently in preview and is subject to change. It is not currently supported for use in production environments.
 
 Use the **GraphHttpClient** class to make calls to the Microsoft Graph REST API. You can make GET, POST, and PATCH requests using the **get()**, **post()**, and **fetch()** methods. This article shows how to build a web part that uses **GraphHttpClient**, but you can use **GraphHttpClient** in any SharePoint Framework client code.
 
@@ -273,20 +274,21 @@ Again, you need to modify the HTML to add a button that will create a new group.
   * Because your solution is already registered, you'll be prompted as to whether you want to replace it. Choose **Replace it**.
   * When prompted as to whether you trust the solution, choose **Deploy**.
 
-3, Use gulp serve to host the web part.
+3. Use gulp serve to host the web part.
 
   ```
   gulp serve --nobrowser
   ```
 
-4, Add the web part to a web page, or use the SharePoint workbench.
+4. Add the web part to a web page, or use the SharePoint workbench.
 
   You should see the following on your page.
   ![GraphHttpClient web part with create group button indicating group was created successfully](../images/graphhttpclient-group-created.jpg)
 
-5, When you choose **Create New Group**, the code will create a new Office 365 group. 
+5. When you choose **Create New Group**, the code will create a new Office 365 group. 
 
-  >**Note:** If you try to create the same group again, the code will return an error because the group already exists. The error is logged to the console, which you can view in the browser's developer mode.
+  > [!NOTE] 
+  >If you try to create the same group again, the code will return an error because the group already exists. The error is logged to the console, which you can view in the browser's developer mode.
 
 ## Update a group using a PATCH call
 
