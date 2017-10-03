@@ -147,6 +147,8 @@ The responsive grid for both team sites and communication sites adjusts when goi
 | 1600         | Web 1600x900            | XX-Large   | 12      | 32     | 3                       |
 | 1920         | Web 1920x1080           | XXX-Large  | 12      | 32     | 3                       |
 
+## See also
 
+- [Design toolkit and assets](https://developer.microsoft.com/en-us/fabric#/resources)
 
 
