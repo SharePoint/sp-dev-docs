@@ -166,7 +166,7 @@ __Return type:__ ClientResult<bool>
 
 * [SharePoint site theming overview](sharepoint-site-theming-overview.md)
 * [SharePoint site theming: JSON schema](sharepoint-site-theming-json-schema.md)
-* [SharePoint site theming: PowerShell commands](sharepoint-site-theming-powershell.md)
+* [SharePoint site theming: PowerShell cmdlets](sharepoint-site-theming-powershell.md)
 * [SharePoint site theming: REST API](sharepoint-site-theming-rest-api.md)
 * [Using the Client Object Model](https://msdn.microsoft.com/en-us/library/ff798388.aspx)
 * [Common Programming Tasks in the Managed Client Object Model](https://msdn.microsoft.com/en-us/library/ee537013.aspx)

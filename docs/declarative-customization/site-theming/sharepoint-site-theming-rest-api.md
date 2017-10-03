@@ -13,8 +13,8 @@ Before you get started, make sure that you're familiar with the following:
 
 The following REST commands are available for working with site themes:
 
-* __AddTenantTheme__ &mdash; create a new theme; similar to the Add-SPOTheme SharePoint command
-* __RemoveTenantTheme__ &mdash; remove a theme from the tenant store; similar to the Remove-SPOTheme PowerShell command
+* __AddTenantTheme__ &mdash; create a new theme; similar to the Add-SPOTheme SharePoint cmdlet
+* __RemoveTenantTheme__ &mdash; remove a theme from the tenant store; similar to the Remove-SPOTheme PowerShell cmdlet
 * __GetTenantThemingOptions__ &mdash; read theme settings
 
 The URL for theme management REST commands is based on _api/thememanager. For example, the following are the endpoints for the commands:
@@ -129,7 +129,7 @@ RestRequest("/_api/thememanager/GetTenantThemingOptions");
 
 * [SharePoint site theming overview](sharepoint-site-theming-overview.md)
 * [SharePoint site theming: JSON schema](sharepoint-site-theming-json-schema.md)
-* [SharePoint site theming: PowerShell commands](sharepoint-site-theming-powershell.md)
+* [SharePoint site theming: PowerShell cmdlets](sharepoint-site-theming-powershell.md)
 * [SharePoint site theming: CSOM](sharepoint-site-theming-csom.md)
 * [Complete basic operations using SharePoint REST endpoints](https://dev.office.com/sharepoint/docs/apis/rest/complete-basic-operations-using-sharepoint-rest-endpoints.md)
 * [Making REST calls with C# and JavaScript for SharePoint 2013](http://www.microsoft.com/resources/msdn/en-us/office/media/video/video.mdl?cid=sdc&from=mscomsdc&VideoID=4e4cc094-ff69-405b-852f-2ac7c41293c5)

@@ -6,9 +6,7 @@ SharePoint site owners have new options for applying custom styles and colors to
 * A simplified set of default themes, with six light themes and two dark themes presently available.
 * Control over which themes are available for use on pages within your sites. For example, you can define custom themes based on your organization's branding or identity, and make those the only available themes within your sites.
 
-<!-- Global: We should refer to PowerShell "cmdlets" instead of "commands", to be consistent with the admin docs on TechNet. -->
-
-These capabilities are available to administrators via [PowerShell commands](sharepoint-site-theming-powershell.md), and to developers via the SharePoint [Client Side Object Model (CSOM)](sharepoint-site-theming-csom.md) or the SharePoint [REST API](sharepoint-site-theming-rest-api.md).
+These capabilities are available to administrators via [PowerShell cmdlets](sharepoint-site-theming-powershell.md), and to developers via the SharePoint [Client Side Object Model (CSOM)](sharepoint-site-theming-csom.md) or the SharePoint [REST API](sharepoint-site-theming-rest-api.md).
 
 For general information about working with themes to customize the look of your sites, see [Change the look of your SharePoint site](https://support.office.com/en-us/article/Change-the-look-of-your-SharePoint-site-06bbadc3-6b04-4a60-9d14-894f6a170818).
 
@@ -54,6 +52,6 @@ For the simplest experience, we recommend that you use modern themes with modern
 ## See also
 
 * [SharePoint site theming: JSON schema](sharepoint-site-theming-json-schema.md)
-* [SharePoint site theming: PowerShell commands](sharepoint-site-theming-powershell.md)
+* [SharePoint site theming: PowerShell cmdlets](sharepoint-site-theming-powershell.md)
 * [SharePoint site theming: CSOM](sharepoint-site-theming-csom.md)
 * [SharePoint site theming: REST API](sharepoint-site-theming-rest-api.md)
