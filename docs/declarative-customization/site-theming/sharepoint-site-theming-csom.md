@@ -165,7 +165,7 @@ __Namespace:__ Microsoft.Online.SharePoint.TenantManagement.Tenant<br/>
 __Parameters:__ string name, string themeJson<br/>
 __Return type:__ ClientResult<bool>
 
-## Additional resources
+## See also
 
 * [SharePoint site theming overview](sharepoint-site-theming-overview.md)
 * [SharePoint site theming: JSON schema](sharepoint-site-theming-json-schema.md)
