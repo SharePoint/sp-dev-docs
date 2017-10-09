@@ -85,12 +85,12 @@ The small size has a single centered column area, with 20px margins left and rig
 #### Medium 480 x 854
 The medium size has 12 columns, with 16px gutters.
 
-![Communication site medium grid](../images/design-grid-Communication-site–M-Canvas-16px-gutters.png)
+![Communication site medium grid](../images/design-grid-Communication-site-M-Canvas-16px-gutters.png)
 
 #### Large 640 x 1024
 The large size has 12 columns, with 24px gutters.
 
-![Communication site large grid](../images/design-grid-Communication-site–L-Canvas-24px-gutters.png)
+![Communication site large grid](../images/design-grid-Communication-site-L-Canvas-24px-gutters.png)
 
 #### XL 1024 x 768
 The XL size has a twelve columns, with 24px gutters.
