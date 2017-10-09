@@ -184,7 +184,7 @@
       href: declarative-customization/site-theming/sharepoint-site-theming-overview.md
     - name: JSON schema reference
       href: declarative-customization/site-theming/sharepoint-site-theming-json-schema.md
-    - name: PowerShell commands
+    - name: PowerShell cmdlets
       href: declarative-customization/site-theming/sharepoint-site-theming-powershell.md
     - name: REST API
       href: declarative-customization/site-theming/sharepoint-site-theming-rest-api.md

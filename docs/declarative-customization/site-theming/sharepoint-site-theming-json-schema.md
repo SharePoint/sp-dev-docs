@@ -2,7 +2,7 @@
 
 The new [SharePoint site theming](sharepoint-site-theming-overview.md) features use a JSON schema to store color settings and other information about each theme. Theme settings are stored in a JSON object that contains the following keys:
 
-* __name__ &mdash; The name of the theme, which appears in the theme picker UI and is also used by administrators and developers to refer to the theme in PowerShell commands or calls to the SharePoint REST API.
+* __name__ &mdash; The name of the theme, which appears in the theme picker UI and is also used by administrators and developers to refer to the theme in PowerShell cmdlets or calls to the SharePoint REST API.
 * __isInverted__ &mdash; This value should be false for light themes and true for dark themes; it controls whether SharePoint will use dark or light theme colors to render text on colored backgrounds.
 * __backgroundImageUril__ &mdash; The URI of an optional background image for the theme (value can be blank if no background image).
 * __theme__ &mdash; The RGB color settings for the theme, stored as a nested JSON object with the following keys:
@@ -376,6 +376,6 @@ The following code shows how to define a dictionary in PowerShell for the Dark B
 ## See also
 
 * [SharePoint site theming overview](sharepoint-site-theming-overview.md)
-* [SharePoint site theming: PowerShell commands](sharepoint-site-theming-powershell.md)
+* [SharePoint site theming: PowerShell cmdlets](sharepoint-site-theming-powershell.md)
 * [SharePoint site theming: CSOM](sharepoint-site-theming-csom.md)
 * [SharePoint site theming: REST API](sharepoint-site-theming-rest-api.md)
