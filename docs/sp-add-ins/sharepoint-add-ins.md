@@ -24,10 +24,10 @@ There are two basic kinds of SharePoint Add-ins — SharePoint-hosted and provid
  
 
 
--  **A SharePoint Add-in is a self-contained pieces of functionality** that extends the capabilities of SharePoint websites to solve a well-defined business problem.
+-  **A SharePoint Add-in is a self-contained piece of functionality** that extends the capabilities of SharePoint websites to solve a well-defined business problem.
     
  
--  **Add-ins don't have custom code that runs on the SharePoint servers**. Instead, all custom logic moves "up" to the cloud, or "down" to client computers, or "over" to an on-premise server that is outside the SharePoint farm or SharePoint Online subscription. Keeping custom code off SharePoint servers provides reassurance to SharePoint administrators that the add-in can't harm their servers or reduce the performance of their SharePoint Online websites.
+-  **Add-ins don't have custom code which runs on SharePoint servers**. Instead, all custom logic moves "up" to the cloud, or "down" to client computers, or "over" to an on-premises server that is outside the SharePoint farm or SharePoint Online subscription. Keeping custom code off SharePoint servers provides reassurance to SharePoint administrators that the add-in can't harm their servers or reduce the performance of their SharePoint Online websites.
     
  
 -  **Business logic in a SharePoint Add-in can access SharePoint data through one of the several client APIs included in SharePoint**. Which API you use for your add-in depends on certain other design decisions you make.
@@ -36,7 +36,7 @@ There are two basic kinds of SharePoint Add-ins — SharePoint-hosted and provid
 -  **Almost all major types of SharePoint components can be part of a SharePoint Add-in**, including pages, lists, workflows, custom content types, list templates, Web Parts, and more.
     
  
--  **The SharePoint websites where SharePoint Add-ins are installed, and from which users launch them, are called host webs.** The SharePoint components, however, are generally in a special child web of the host web called theadd-in web.
+-  **The SharePoint websites where SharePoint Add-ins are installed, and from which users launch them, are called host webs.** The SharePoint components, however, are generally in a special child web of the host web called the add-in web.
     
  
 -  **SharePoint Add-ins can fit into a SharePoint website in several ways**:
@@ -81,7 +81,7 @@ You can distribute an add-in package in two ways:
 
  
 
--  **To an organization's add-in catalog**, which is a dedicated SharePoint site collection in the SharePoint Online subscription or on-premise farm. This method is used when the add-in is custom-made for a particular organization.
+-  **To an organization's add-in catalog**, which is a dedicated SharePoint site collection in the SharePoint Online subscription or on-premises farm. This method is used when the add-in is custom-made for a particular organization.
     
  
 -  **To the  [Office Store](https://store.office.com/appshome.aspx?productgroup=SharePoint)**. The store handles the marketing process for you, from discovery to purchase to updates. Microsoft has a **Seller Dashboard** to help you sell add-ins through the Office Store.
