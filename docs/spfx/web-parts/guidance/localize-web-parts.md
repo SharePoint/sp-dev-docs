@@ -36,7 +36,10 @@ yo @microsoft/sharepoint
 When prompted, enter the following values:
 
 - **react-localization** as your solution name.
+- **SharePoint Online only (latest)** as the baseline package set.
 - **Use the current folder** for the location to place the files.
+- **y** to allow tenant-wide deployment.
+- **WebPart** as the type of component to develop.
 - **Greeting** as your web part name.
 - **Greets the user** as your web part description.
 - **React** as the starting point to build the web part.
@@ -49,7 +52,7 @@ Once the scaffolding completes, open your project folder in your code editor. Th
 
 ### Replace the default code
 
-In the code editor open the **./src/webparts/greeting/IGreetingWebPartProps.ts** file and paste the following code:
+In the code editor, open the **./src/webparts/greeting/GreetingWebPart.ts** file and update the definition of the `IGreetingWebPartProps` interface to the following code:
 
 ```ts
 export interface IGreetingWebPartProps {
@@ -57,7 +60,7 @@ export interface IGreetingWebPartProps {
 }
 ```
 
-Next, open the **./src/webparts/greeting/GreetingWebPart.ts** file and change the **GreetingWebPart** class to:
+Next, in the same file and change the **GreetingWebPart** class to:
 
 ```ts
 export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
@@ -112,7 +115,7 @@ import { escape } from '@microsoft/sp-lodash-subset';
 export default class Greeting extends React.Component<IGreetingProps, {}> {
   public render(): JSX.Element {
     return (
-      <div className={styles.helloWorld}>
+      <div className={styles.greeting}>
         <div className={styles.container}>
           <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
             <div className="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
@@ -140,7 +143,7 @@ export default class Greeting extends React.Component<IGreetingProps, {}> {
 Update the main React component interface by opening the **./src/webparts/greeting/components/IGreetingProps.tsx** file and changing its code to:
 
 ```tsx
-import { IGreetingWebPartProps } from '../IGreetingWebPartProps';
+import { IGreetingWebPartProps } from '../GreetingWebPart';
 
 export interface IGreetingProps extends IGreetingWebPartProps {
 }
@@ -149,14 +152,14 @@ export interface IGreetingProps extends IGreetingWebPartProps {
 Update the localization TypeScript type definition file by opening the **./src/webparts/greeting/loc/mystrings.d.ts** file and changing its code to:
 
 ```ts
-declare interface IGreetingStrings {
+declare interface IGreetingWebPartStrings {
   PropertyPaneDescription: string;
   DisplayGroupName: string;
   GreetingFieldLabel: string;
 }
 
-declare module 'greetingStrings' {
-  const strings: IGreetingStrings;
+declare module 'GreetingWebPartStrings' {
+  const strings: IGreetingWebPartStrings;
   export = strings;
 }
 ```
@@ -179,8 +182,8 @@ In the web part manifest update the default value of the **greeting** property b
 {
   // ...
   "preconfiguredEntries": [{
-    "groupId": "edbc4e31-6085-4ffa-85f4-eeffcb0ea2d4",
-    "group": { "default": "Under Development" },
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
+    "group": { "default": "Other" },
     "title": { "default": "Greeting" },
     "description": { "default": "Greets the user" },
     "officeFabricIconFontName": "Page",
@@ -215,8 +218,8 @@ In the code editor open the **./src/webparts/greeting/GreetingWebPart.manifest.j
 {
   // ...
   "preconfiguredEntries": [{
-    "groupId": "edbc4e31-6085-4ffa-85f4-eeffcb0ea2d4",
-    "group": { "default": "Under Development", "nl-nl": "In ontwikkeling" },
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
+    "group": { "default": "Other", "nl-nl": "Anders" },
     "title": { "default": "Greeting", "nl-nl": "Begroeting" },
     "description": { "default": "Greets the user", "nl-nl": "Begroet de gebruiker" },
     "officeFabricIconFontName": "Page",
@@ -225,7 +228,6 @@ In the code editor open the **./src/webparts/greeting/GreetingWebPart.manifest.j
     }
   }]
 }
-
 ```
 
 Run the following command to verify that the project is working:
@@ -324,7 +326,7 @@ The default web part provided with the scaffolded SharePoint Framework project h
 In the code editor, open the **./src/webparts/greeting/components/Greetings.tsx** file. In the top section of the file, directly after the last `import` statement, add a reference to the localized strings:
 
 ```ts
-import * as strings from 'greetingStrings';
+import * as strings from 'GreetingWebPartStrings';
 ```
 
 Next, replace the contents of the **Greeting** class with the following code:
@@ -334,7 +336,7 @@ Next, replace the contents of the **Greeting** class with the following code:
 export default class Greeting extends React.Component<IGreetingProps, {}> {
   public render(): JSX.Element {
     return (
-      <div className={styles.helloWorld}>
+      <div className={styles.greeting}>
         <div className={styles.container}>
           <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
             <div className="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
@@ -364,7 +366,7 @@ export default class Greeting extends React.Component<IGreetingProps, {}> {
 Having replaced the string with a reference, the next step is to add that string to the localization files used by the web part. In the code editor open the **./src/webparts/greetings/loc/mystrings.d.ts** file, and change its code to:
 
 ```ts
-declare interface IGreetingStrings {
+declare interface IGreetingWebPartStrings {
   PropertyPaneDescription: string;
   DisplayGroupName: string;
   GreetingFieldLabel: string;
@@ -372,7 +374,7 @@ declare interface IGreetingStrings {
 }
 
 declare module 'greetingStrings' {
-  const strings: IGreetingStrings;
+  const strings: IGreetingWebPartStrings;
   export = strings;
 }
 
@@ -580,8 +582,8 @@ In the code editor open the **./src/webparts/greeting/GreetingWebPart.manifest.j
   // ...
 
   "preconfiguredEntries": [{
-    "groupId": "edbc4e31-6085-4ffa-85f4-eeffcb0ea2d4",
-    "group": { "default": "Under Development", "nl-nl": "In ontwikkeling" },
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
+    "group": { "default": "Other", "nl-nl": "Anders" },
     "title": { "default": "Greeting", "nl-nl": "Begroeting" },
     "description": { "default": "Greets the user", "nl-nl": "Begroet de gebruiker" },
     "officeFabricIconFontName": "Page",
@@ -591,7 +593,7 @@ In the code editor open the **./src/webparts/greeting/GreetingWebPart.manifest.j
 }
 ```
 
-Next, open the **./src/webparts/greeting/IGreetingWebPartProps.ts** file, and remove the **greeting** property from the interface definition:
+Next, open the **./src/webparts/greeting/GreetingWebPart.ts** file, and from the `IGreetingWebPartProps` interface definition remove the **greeting** property:
 
 ```ts
 export interface IGreetingWebPartProps {
@@ -601,7 +603,7 @@ export interface IGreetingWebPartProps {
 Because the main React component should display a greeting, open the **./src/webparts/greeting/components/IGreetingProps.ts** file, and change the **IGreetingProps** interface to:
 
 ```ts
-export interface IGreetingProps extends IGreetingWebPartProps {
+export interface IGreetingProps {
   greeting: string;
 }
 ```
@@ -629,7 +631,7 @@ Since we will be querying data in SharePoint, we will be using SharePoint Http C
 ```ts
 import {
   SPHttpClient,
-  SPHttpClientResponse   
+  SPHttpClientResponse
 } from '@microsoft/sp-http';
 ```
 
@@ -683,7 +685,7 @@ import {
   BaseClientSideWebPart,
   IPropertyPaneConfiguration,
   PropertyPaneTextField,
-   IPropertyPaneField
+  IPropertyPaneField
 } from '@microsoft/sp-webpart-base';
 ```
 
@@ -718,14 +720,14 @@ export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebP
 If the site has multiple languages enabled, the web part will render multiple fields for the user to enter the greeting message. To make it clear that these fields belong together, put them in a separate group. In the code editor, open the **./src/webparts/greeting/loc/mystrings.d.ts** file, and change its code to:
 
 ```ts
-declare interface IGreetingStrings {
+declare interface IGreetingWebPartStrings {
   PropertyPaneDescription: string;
   GreetingGroupName: string;
   LearnMoreButtonLabel: string;
 }
 
-declare module 'greetingStrings' {
-  const strings: IGreetingStrings;
+declare module 'GreetingWebPartStrings' {
+  const strings: IGreetingWebPartStrings;
   export = strings;
 }
 ```
@@ -772,7 +774,7 @@ In the **./src/webparts/greeting/GreetingWebPart.ts** file override the **onProp
 
 ```ts
 export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebPartProps> {
-  // ... 
+  // ...
   protected onPropertyPaneConfigurationStart(): void {
     this.context.statusRenderer.displayLoadingIndicator(this.domElement, 'languages');
 
@@ -785,7 +787,7 @@ export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebP
           }));
         });
 
-        this.refreshPropertyPane();
+        this.context.propertyPane.refresh();
         this.context.statusRenderer.clearLoadingIndicator(this.domElement);
         this.render();
       });
@@ -795,7 +797,7 @@ export default class GreetingWebPart extends BaseClientSideWebPart<IGreetingWebP
 
 When the user opens the web part property pane, the method will load the information about the languages enabled in the current site. Because loading this information might take a moment, the method displays a loading indicator communicating its status to the user. Once the information about the enabled languages is loaded, the method creates a new property pane text field linked to a dynamic web part property named **greeting__lcid_**. For example, **greeting_1033** for US English.
 
-Once text fields for all enabled languages are constructed, the method refreshes the property pane by calling the **refreshPropertyPane** method. Finally, the method clears the web part loading indicator and re-renders the web part body.
+Once text fields for all enabled languages are constructed, the method refreshes the property pane by calling the **IPropertyPaneAccessor.refresh** method. Finally, the method clears the web part loading indicator and re-renders the web part body.
 
 ![Text fields for all enabled languages displayed in the web part property pane](../../../images/localization-multilingual-properties.png)
 
@@ -848,7 +850,7 @@ Depending on the selected build mode, the SharePoint Framework handles localizat
 
 When building SharePoint Framework projects in debug mode, only the information about the default locale is included in the generated web part manifest. In debug mode SharePoint Framework either uses the default en-US locale or the locale that has been specified in the project configuration or using the **locale** argument in command line. Resource files with translated strings are not included in the output **dist** folder. Instead they are loaded at runtime from the intermediate **lib** folder using the path in the generated web part manifest.
 
-Looking at the information about the **greetingStrings** module in the web part manifest generated during a debug build, you can see that despite the different locales supported by the web part (en-US, nl-NL and qps-ploc) the path to the en-US resource file stored in the intermediate location has been assigned as the default path of the localization module.
+Looking at the information about the **GreetingWebPartStrings** module in the web part manifest generated during a debug build, you can see that despite the different locales supported by the web part (en-US, nl-NL and qps-ploc) the path to the en-US resource file stored in the intermediate location has been assigned as the default path of the localization module.
 
 ```json
 {
@@ -859,18 +861,23 @@ Looking at the information about the **greetingStrings** module in the web part 
   "manifestVersion": 2,
   // ...
   "loaderConfig": {
-    "entryModuleId": "greeting.bundle",
+    "entryModuleId": "greeting-web-part",
     "internalModuleBaseUrls": [
       "https://localhost:4321/"
     ],
     "scriptResources": {
-      "greeting.bundle": {
-        "type": "internal",
-        "path": "dist/greeting.bundle.js"
+      "greeting-web-part": {
+        "type": "path",
+        "path": "dist/greeting-web-part.js"
       },
-      "greetingStrings": {
+      "GreetingWebPartStrings": {
         "defaultPath": "lib/webparts/greeting/loc/en-us.js",
-        "type": "localized"
+        "type": "localizedPath",
+        "paths": {
+          "en-US": "lib/webparts/greeting/loc/en-us.js",
+          "nl-NL": "lib/webparts/greeting/loc/nl-nl.js",
+          "qps-ploc": "lib/webparts/greeting/loc/qps-ploc.js"
+        }
       },
       // ...
     }
@@ -884,7 +891,7 @@ When building SharePoint Framework projects in release mode, the information abo
 
 > **Important:** In release builds resource files are copied only to the **./temp/deploy** folder and not to the **./dist** folder. When deploying your web part to production you should always use files from the **./temp/deploy** folder to ensure that you are deploying all files required by your web part.
 
-Examining the latest web part manifest generated in a release build, you can see that now the **greetingStrings** module contains references to all supported locales.
+Examining the latest web part manifest generated in a release build, you can see that now the **GreetingWebPartStrings** module contains references to all supported locales.
 
 ```json
 {
@@ -895,22 +902,22 @@ Examining the latest web part manifest generated in a release build, you can see
   "manifestVersion": 2,
   // ...
   "loaderConfig": {
-    "entryModuleId": "greeting.bundle",
+    "entryModuleId": "greeting-web-part",
     "internalModuleBaseUrls": [
       "https://cdn.contoso.com/"
     ],
     "scriptResources": {
-      "greeting.bundle": {
-        "type": "internal",
-        "path": "greeting.bundle_734e78a24ec5779bbc7a5a10603d4904.js"
+      "greeting-web-part": {
+        "type": "path",
+        "path": "greeting-web-part_159d9eb591c6716cae6d0ff15b78a19a.js"
       },
-      "greetingStrings": {
-        "defaultPath": "react-localization-greetingstrings_en-us_60a6b3dba7cc244bcc28781a2e292f85.js",
-        "type": "localized",
+      "GreetingWebPartStrings": {
+        "defaultPath": "react-localization-greetingwebpartstrings_en-us_b5e89eba6e8d819bf1647b3ab505dae5.js",
+        "type": "localizedPath",
         "paths": {
-          "en-US": "react-localization-greetingstrings_en-us_60a6b3dba7cc244bcc28781a2e292f85.js",
-          "nl-NL": "react-localization-greetingstrings_nl-nl_ecae5f3385f9e9bef23817b91d1a0bf1.js",
-          "qps-ploc": "react-localization-greetingstrings_qps-ploc_dc97c611a9edc88818c84871f3749afb.js"
+          "en-US": "react-localization-greetingwebpartstrings_en-us_b5e89eba6e8d819bf1647b3ab505dae5.js",
+          "nl-NL": "react-localization-greetingwebpartstrings_nl-nl_d6e80ff75385975e7737774e0802641e.js",
+          "qps-ploc": "react-localization-greetingwebpartstrings_qps-ploc_effe5ee4af9cadee91bbf84327eb7308.js"
         }
       },
       // ...
