@@ -28,7 +28,7 @@ The command will list all of the generators available in your machine. Select th
 
 ## Available command line options for the generator
 
-You can use the command line options available with the yeoman SharePoint generator to scaffold projects in one command instead of going through the prompts. Execute the following command to see the list of  command line options available for the SharePoint generator:
+You can use the command line options available with the yeoman SharePoint generator to scaffold projects in one command instead of going through the prompts. Execute the following command to see the list of command line options available for the SharePoint generator:
 
 ```
 yo @microsoft/generator-sharepoint --help
@@ -40,7 +40,7 @@ Option | Description
 -----|------
 --help|Print the generator's options and usage.
 --skip-cache|Do not remember prompt answers. Default: *false*.
---skip-install|Do no automatically install dependencies. Default: *false*.
+--skip-install|Do not automatically install dependencies. Default: *false*.
 --componentType|The type of component. Currently "webpart" or "extension" is supported
 --componentDescription|Description of the component.
 --componentName|Name of the component.
