@@ -580,7 +580,7 @@ The following column types support column formatting:
 You can use the following predefined classes for several common scenarios.
 
 | Class name | Screenshot |
-| ------------- |:-------------| :-----|
+| ------------- |:-------------|
 | sp-field-customFormatBackground |Specifies the padding and margins for all classes that use backgrounds. |
 | sp-field-severity--good |![Green box with text Done and check mark](../images/sp-columnformatting-severitygood.png) |
 | sp-field-severity--low |![White box with text In Progress and arrow](../images/sp-columnformatting-severitylow.png) |
