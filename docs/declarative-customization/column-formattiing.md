@@ -7,11 +7,11 @@ You can use column formatting to customize how fields in SharePoint lists and li
 
 For example, a list with the fields Title, Effort, Assigned To, and Status with no customizations applied might look like this:
 
-![SharePoint list with four unformatted columns](../images/sp-customFormatting-none.png)
+![SharePoint list with four unformatted columns](../images/sp-columnformatting-none.png)
 
 A list with the appearance of the Effort, Assigned To, and Status fields customized via column formatting might look like this:
 
-![SharePoint list with three columns formatted](../images/sp-customFormatting-all.png)
+![SharePoint list with three columns formatted](../images/sp-columnformatting-all.png)
 
 ## How is column formatting different than the Field Customizer?
 Both column formatting and the [SharePoint Framework Field Customizer](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/building-simple-field-customizer) extension enable you to customize how fields in SharePoint lists are displayed. The Field Customizer is more powerful, because you can use it to write any code you want to control how a field is displayed. Column formatting is more easily and broadly applied. However, it is less flexible, because it does not allow for custom code; it only allows for certain predefined elements and attributes. 
@@ -31,7 +31,7 @@ To open the column formatting pane, open the dropdown menu under a column. Under
 
 If no one has used column formatting on the column you selected, the pane will look like the following.
 
-![Format column pane with space to paste or type column formatting JSON and options to preview, save, and cancel](../images/sp-customFormatting-panel.png)
+![Format column pane with space to paste or type column formatting JSON and options to preview, save, and cancel](../images/sp-columnformatting-panel.png)
 
 A field with no formatting specified will use the default rendering. To format a column, enter the column formatting JSON in the box.
 
@@ -72,7 +72,7 @@ You can use column formatting to apply styles, classes, and icons to fields, dep
 ### Conditional formatting based on a number range (basic)
 The following image shows an example of conditional formatting applied to a number range.
 
-![Severity warning of 70 with orange background](../images/sp-customFormatting-conditionalBasic.png)
+![Severity warning of 70 with orange background](../images/sp-columnformatting-conditionalbasic.png)
 
 This example customizes a number field to color that field red when its value less than 70. This example adds a style attribute to the parent `<div />` element, specifies a CSS class (`sp-field-severity--warning`) to apply to that item if the value inside the field is less than 70, and specifies no color if the value is outside that range (in which case it will use the default color for values in that list view). 
 Note: this example uses a binary operation with the less than operator, "<", nested inside the conditional operation indicated by the operator, ":". Another description of the section in the following example is: If @currentField < 70 Then class = sp-field-severity--warning.
@@ -104,7 +104,7 @@ Note: this example uses a binary operation with the less than operator, "<", nes
 
 The following image shows an example of conditional formatting applied to a text or choice field.
 
-![Status field with done colored green, blocked colored red, and in review colored orange](../images/sp-customFormatting-conditionalAdvanced.png)
+![Status field with done colored green, blocked colored red, and in review colored orange](../images/sp-columnformatting-conditionaladvanced.png)
 
 You can apply conditional formatting to text or choice fields that might contain a fixed set of values. The following example applies different classes depending on whether the value of the field is Done, In Review, Blocked, or another value. This example applies a CSS class (`sp-field-severity--low, sp-field-severity--good, sp-field-severity--warning, sp-field-severity--blocked`) to the  `<div />` based on the field's value. Then, it outputs a `<span />` element with an `IconName` attribute. This attribute applies another CSS class to that `<span />` that shows an [Office UI Fabric](https://dev.office.com/fabric#/) icon inside that element. Finally, another `<span />` element is outputted that contains the value inside the field.
 
@@ -289,7 +289,7 @@ Because dates are often used to track deadlines and key project timelines, a com
 
 The following image shows a field with conditional date formatting applied.
 
-![Status field with the Overdue text colored red](../images/sp-customFormatting-overdue.png)
+![Status field with the Overdue text colored red](../images/sp-columnformatting-overdue.png)
 
 This example colors the current field red when the value inside an item's DueDate is before the current date/time. Unlike some of the previous examples, this example applies formatting to one field by looking at the value inside another field. Note that DueDate is referenced using the [$FieldName] syntax. FieldName is assumed to be the internal name of the field. This example also takes advantage of a special value that can be used in date/time fields - `@now`, which resolves to the current date/time, evaluated when the user loads the list view.
 
@@ -382,7 +382,7 @@ You can use column formatting to provide hyperlinks that go to other web pages, 
 ### Turn field values into hyperlinks (basic)
 This example shows how to turn a text field that contains stock ticker symbols into a hyperlink that targets the Yahoo Finance real-time quotes page for that stock ticker. The example uses a `+` operator that appends the current field value to the static hyperlink <a>http://finance.yahoo.com/quote/</a>. You can extend this pattern to any scenario in which you want users to view contextual information related to an item, or you want to start a business process on the current item, as long as the information or process can be accessed via a hyperlink parameterized with values from the list item.
 
-![Stocks list with ticker symbols turned into hyperlinks](../images/sp-customFormatting-hyperlinks.png)
+![Stocks list with ticker symbols turned into hyperlinks](../images/sp-columnformatting-hyperlinks.png)
 
 ```JSON
 {
@@ -403,7 +403,7 @@ This example shows how to turn a text field that contains stock ticker symbols i
 ### Add an action button to a field (advanced)
 The following image shows action buttons added to a field.
 
-![Assigned To field with mail buttons added to names](../images/sp-customFormatting-actionButton.png)
+![Assigned To field with mail buttons added to names](../images/sp-columnformatting-actionButton.png)
 
 You can use column formatting to render quick action links next to fields. The following example, intended for a person field, renders two elements inside the parent `<div />` element:
 
@@ -448,7 +448,7 @@ Use column formatting to combine conditional and arithmetical operations to achi
 ### Format a number column as a data bar (advanced)
 The following image shows a number column formatted as a data bar.
 
-![Effort list with number list items shown as bars](../images/sp-customFormatting-dataBars.png)
+![Effort list with number list items shown as bars](../images/sp-columnformatting-databars.png)
 
 This example applies `background-color` and `border-top` styles to create a data bar visualization of `@currentField`, which is a number field. The bars are sized differently for different values based on the way the `width` attribute is set - it's set to `100%` when the value is greater than 20, and `(@currentField * 5)%` when there value is less than 10. This achieves a width of 5% for the data bar for values of 1, 10% for values of 2, and so on. To fit this example to your number column, you can adjust the boundary condition (`20`) to match the maximum anticipated value inside the field, and the multiplier (`5`) to specify how much the bar should grow depending on the value inside the field.
 ```JSON
@@ -498,7 +498,7 @@ This example applies `background-color` and `border-top` styles to create a data
 ### Show trending up/trending down icons (advanced)
 The following image shows a list with trending up/trending down icons added.
 
-![List with trending up and trending down icons next to list items](../images/sp-customFormatting-trending.png)
+![List with trending up and trending down icons next to list items](../images/sp-columnformatting-trending.png)
 
 This example relies on two number fields, `Before` and `After`, for which the values can be compared. It shows the appropriate trending icon next to the `After` field, depending on that field's value compared to the value in `Before`.  `sp-field-trending--up` is used when `After`'s value is higher; `sp-field-trending--down` is used when `After`'s value is lower.
 
@@ -582,15 +582,15 @@ You can use the following predefined classes for several common scenarios.
 | Class name | Screenshot |
 | ------------- |:-------------| :-----|
 | sp-field-customFormatBackground |Specifies the padding and margins for all classes that use backgrounds. |
-| sp-field-severity--good |![Green box with text Done and check mark](../images/sp-customFormatting-severityGood.png) |
-| sp-field-severity--low |![White box with text In Progress and arrow](../images/sp-customFormatting-severityLow.png) |
-| sp-field-severity--warning | ![Yellow box with text In Review and hazard icon](../images/sp-customFormatting-severityWarning.png) |
-| sp-field-severity--severeWarning | ![Orange box with text Has issues and hazard icon](../images/sp-customFormatting-severitySevereWarning.png) |
-| sp-field-severity--blocked | ![Red box with text Blocked and X icon](../images/sp-customFormatting-severityBlocked.png) |
-| sp-field-dataBars |![Blue bar with number 4](../images/sp-customFormatting-dataBar.png) |
-| sp-field-trending--up |![Green arrow with number 500](../images/sp-customFormatting-trendingUp.png) |
-| sp-field-trending--down |![Red arrow with number 100](../images/sp-customFormatting-trendingDown.png) |
-| sp-field-quickAction |![Name with mail icon](../images/sp-customFormatting-quickAction.png) |
+| sp-field-severity--good |![Green box with text Done and check mark](../images/sp-columnformatting-severitygood.png) |
+| sp-field-severity--low |![White box with text In Progress and arrow](../images/sp-columnformatting-severitylow.png) |
+| sp-field-severity--warning | ![Yellow box with text In Review and hazard icon](../images/sp-columnformatting-severitywarning.png) |
+| sp-field-severity--severeWarning | ![Orange box with text Has issues and hazard icon](../images/sp-columnformatting-severityseverewarning.png) |
+| sp-field-severity--blocked | ![Red box with text Blocked and X icon](../images/sp-columnformatting-severityblocked.png) |
+| sp-field-dataBars |![Blue bar with number 4](../images/sp-columnformatting-databar.png) |
+| sp-field-trending--up |![Green arrow with number 500](../images/sp-columnformatting-trendingup.png) |
+| sp-field-trending--down |![Red arrow with number 100](../images/sp-columnformatting-trendingdown.png) |
+| sp-field-quickAction |![Name with mail icon](../images/sp-columnformatting-quickaction.png) |
 
 ## Predefined icons
 
