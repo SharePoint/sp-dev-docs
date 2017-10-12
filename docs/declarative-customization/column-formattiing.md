@@ -403,7 +403,7 @@ This example shows how to turn a text field that contains stock ticker symbols i
 ### Add an action button to a field (advanced)
 The following image shows action buttons added to a field.
 
-![Assigned To field with mail buttons added to names](../images/sp-columnformatting-actionButton.png)
+![Assigned To field with mail buttons added to names](../images/sp-columnformatting-actionbutton.png)
 
 You can use column formatting to render quick action links next to fields. The following example, intended for a person field, renders two elements inside the parent `<div />` element:
 
