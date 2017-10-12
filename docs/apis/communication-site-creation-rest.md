@@ -2,6 +2,9 @@
 
 Learn how to create and get the status of a new modern SharePoint Communication site with the REST interface.
 
+> [!NOTE]
+> There is a known bug with this API which is blocking completely this behavior. Fix will be rolling gradually to SharePoint Online by end of October 2017.
+
 ## Prerequisites
 
 This topic assumes that you are already familiar with the topics Get to know the SharePoint REST service and Complete basic operations using SharePoint REST endpoints. It does not provide code snippets.
@@ -23,14 +26,18 @@ url: /_api/sitepages/communicationsite/create
 method: POST
 body:
 {
-  "__metadata":{"type":"SP.Publishing.CommunicationSiteCreationRequest"},
-  "AllowFileSharingForGuestUsers":false,
-  "Classification":"Contoso confidential",
-  "Description":"Here is my communication site",
-  "SiteDesignId":"6142d2a0-63a5-4ba0-aede-d9fefca2c767",
-  "Title":"comm1",
-  "Url":"https://contoso.sharepoint.com/sites/comm1",
-  "lcid":1033
+   "request":{
+      "__metadata":{
+         "type":"SP.Publishing.CommunicationSiteCreationRequest"
+      },
+      "AllowFileSharingForGuestUsers":false,
+      "Classification":"LBI",
+      "Description":"Description",
+      "SiteDesignId":"6142d2a0-63a5-4ba0-aede-d9fefca2c767",
+      "Title":"Comm Site 1",
+      "Url":"https://vesku.sharepoint.com/sites/commsite132",
+      "lcid":1033
+   }
 }
 ```
 

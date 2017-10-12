@@ -155,7 +155,7 @@ Backing off is the fastest way to handle being throttled because SharePoint Onli
   
     
     
-For information about ways to monitor your SharePoint Online activity, see  [Diagnosing performance issues with SharePoint Online](http://msdn.microsoft.com/library/93502df4-552f-409b-971b-2e9b0f38588f.aspx).
+For information about ways to monitor your SharePoint Online activity, see  [Diagnosing performance issues with SharePoint Online](https://support.office.com/en-us/article/3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86).
   
     
     
@@ -311,7 +311,7 @@ If we block your subscription, you'll see HTTP status code 503, and we'll notify
 <a name="BKMK_Additionalresources"> </a>
 
 
--  [Diagnosing performance issues with SharePoint Online](http://msdn.microsoft.com/library/93502df4-552f-409b-971b-2e9b0f38588f.aspx)
+-  [Diagnosing performance issues with SharePoint Online](https://support.office.com/en-us/article/3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86)
     
   
 -  [Capacity planning and load testing SharePoint Online](http://msdn.microsoft.com/library/22fa7e7e-7554-4987-b56f-b39bbf303a0a.aspx)
