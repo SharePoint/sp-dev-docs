@@ -144,25 +144,77 @@ Setting and publishing exact throttling limits sounds very straightforward, but 
 - Reduce the frequency of calls
     
   
-- Use incremental back off to reduce the number and frequency of calls until no more throttling occurs
+- Decorate your traffic so we know who you are (see section on traffic decoration best practice more on that below)
     
-  
+
+If you do run into throttling, we recommend incremental back off to reduce the number and frequency of calls until no more throttling occurs.
+
 Incremental back off uses progressively longer waits between retries before trying again to run the code that was throttled. You can use the GitHub code samples, later in this article, written as extension methods, to add incremental back off to your code.
-  
-    
     
 Backing off is the fastest way to handle being throttled because SharePoint Online continues to log resource usage while a user is being throttled. In other words, aggressive retries work against you because even though the calls fail, they still accrue against your usage limits. The faster you back off, the faster you'll stop exceeding usage limits. 
-  
-    
-    
+
 For information about ways to monitor your SharePoint Online activity, see  [Diagnosing performance issues with SharePoint Online](https://support.office.com/en-us/article/3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86).
-  
-    
-    
+
 For a broader discussion of throttling on the Microsoft Cloud, see  [Throttling Pattern](http://msdn.microsoft.com/library/4baf5af2-32fc-47ab-8569-3e5c59a5ebd5.aspx).
-  
-    
-    
+
+## How to decorate your http traffic to avoid throttling?
+
+To ensure and maintain high-availability, some traffic may be throttled. Throttling happens when system health is at stake and one of the criteria used for throttling is traffic decoration, which impacts directly on the prioritization of the traffic. Well decorated traffic will be prioritized over traffic which is not properly decorated.
+ 
+What is definition of undecorated traffic?
+
+- Traffic is undecorated if there is no AppID/AppTitle or User Agent string in CSOM or REST API call to SharePoint Online.
+
+What are the recommendation?
+
+- If you have created an application, recommendation is to register and use  AppID and AppTitle – This will ensure the best overall experience and best path for any future issue resolution. Include also the User Agent string information as defined in following step.
+
+- Make sure to include User Agent string in your API call to SharePoint with following naming convention
+
+| Type  | User Agent  | Description   |
+|---|---|---|
+| ISV Application | ISV:CompanyName:AppName:Version | Identify as ISV and include Company Name, App Name and Version name – separated by colon |
+| Enterprise application | NONISV:CompanyName:AppName:Version | Identify as NONISV and include Company Name, App Name and Version name – separated by colon |
+
+- If you are building your own JavaScript libraries, which are used to call SharePoint Online APIs, make sure that you include the User Agent information to your http request and potentially register your web application also as an Application, where suitable.
+
+### Example of decorating traffic with User agent when using Client Side Object Model (CSOM)
+
+```cs
+// Get access to source site
+using (var ctx = new ClientContext("https://contoso.sharepoint.com/sites/team"))
+{
+    //Provide account and pwd for connecting to SharePoint Online
+    var passWord = new SecureString();
+    foreach (char c in pwd.ToCharArray()) passWord.AppendChar(c);
+    ctx.Credentials = new SharePointOnlineCredentials("contoso@contoso.onmicrosoft.com", passWord);
+
+    // Add our User Agent information
+    ctx.ExecutingWebRequest += delegate (object sender, WebRequestEventArgs e)
+    {
+        e.WebRequestExecutor.WebRequest.UserAgent = "NONISV:Contoso:GovernanceCheck:1.0";
+    };
+                
+    // Normal CSOM Call with custom User-Agent information
+    Web site = ctx.Web;
+    ctx.Load(site);
+    ctx.ExecuteQuery();
+}
+```
+
+### Example of decorating traffic with User agent when using REST APIs
+
+Following sample is in c# format, but the similar User Agent information is recommended to be used even for the JavaScript libraries used in the SharePoint Online pages.
+
+```cs
+HttpWebRequest endpointRequest = (HttpWebRequest)HttpWebRequest.Create(sharepointUrl.ToString() + "/_api/web/lists");
+endpointRequest.Method = "GET";
+endpointRequest.UserAgent = "NONISV:Contoso:GovernanceCheck:1.0";
+endpointRequest.Accept = "application/json;odata=verbose";
+endpointRequest.Headers.Add("Authorization", "Bearer " + accessToken);
+HttpWebResponse endpointResponse = (HttpWebResponse)endpointRequest.GetResponse();
+```
+
 
 ## GitHub CSOM code samples: SharePoint Online Throttling
 <a name="BKMK_GitHubCSOMandRESTcodesamplesSharePointOnlineThrottling"> </a>
