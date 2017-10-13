@@ -20,7 +20,7 @@ The following table compares column formatting and the Field Customizer.
 
 | Field type        | Column formatting          | Field Customizer  |
 | ------------- |:-------------| :-----|
-| Conditional formatting based on item values and value ranges      | Supported | Supported |
+| https://www.youtube.com/watch?v=AmC9SmCBUj4ional formatting based on item values and value ranges      | Supported | Supported |
 | Action links       | Support for static hyperlinks that do not launch script      |  Support for any hyperlink, including those that invoke custom script   |
 | Data visualizations | Support for simple visualizations that can be expressed using HTML and CSS      |   Support for arbitrary data visualizations  |
 
@@ -902,6 +902,7 @@ Operators specify the type of operation to perform. The following operators are 
 - cos
 - sin
 - : 
+- ?
 
 **Binary operators** - The following are the standard arithmetic binary operators that expect two operands: 
 
@@ -925,6 +926,10 @@ Operators specify the type of operation to perform. The following operators are 
 **Conditional operator** - The conditional operator is:
 
 - :
+
+Alternately,
+
+- ?
 
 This is to achieve an expression equivalent to a ? b : c, where if the expression a evaluates to true, then the result is b, else the result is c.
 
