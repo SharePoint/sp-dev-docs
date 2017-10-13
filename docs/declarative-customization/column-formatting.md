@@ -75,7 +75,7 @@ The following image shows an example of conditional formatting applied to a numb
 ![Severity warning of 70 with orange background](../images/sp-columnformatting-conditionalbasic.png)
 
 This example customizes a number field to color that field red when its value less than 70. This example adds a style attribute to the parent `<div />` element, specifies a CSS class (`sp-field-severity--warning`) to apply to that item if the value inside the field is less than 70, and specifies no color if the value is outside that range (in which case it will use the default color for values in that list view). 
-Note: this example uses a binary operation with the less than operator, "<", nested inside the conditional operation indicated by the operator, ":". Another description of the section in the following example is: If @currentField < 70 Then class = sp-field-severity--warning.
+Note: this example uses a binary operation with the less than operator, "<", nested inside the conditional operation indicated by the operator, "?". Another description of the section in the following example is: If @currentField < 70 Then class = sp-field-severity--warning.
 
 ```JSON
 {
@@ -83,7 +83,7 @@ Note: this example uses a binary operation with the less than operator, "<", nes
    "txtContent": "@currentField",
    "attributes": {
       "class": {
-         "operator": ":",
+         "operator": "?",
          "operands": [
             {
                "operator": "<",
@@ -117,7 +117,7 @@ This pattern is useful when you want different values to map to different levels
     "elmType": "div",
     "attributes": {
         "class": {
-            "operator": ":",
+            "operator": "?",
             "operands": [
                 {
                     "operator": "==",
@@ -133,7 +133,7 @@ This pattern is useful when you want different values to map to different levels
                 },
                 "sp-field-severity--good",
                 {
-                    "operator": ":",
+                    "operator": "?",
                     "operands": [
                         {
                             "operator": "==",
@@ -149,7 +149,7 @@ This pattern is useful when you want different values to map to different levels
                         },
                         "sp-field-severity--low",
                         {
-                            "operator": ":",
+                            "operator": "?",
                             "operands": [
                                 {
                                     "operator": "==",
@@ -165,7 +165,7 @@ This pattern is useful when you want different values to map to different levels
                                 },
                                 "sp-field-severity--warning",
                                 {
-                                    "operator": ":",
+                                    "operator": "?",
                                     "operands": [
                                         {
                                             "operator": "==",
@@ -199,7 +199,7 @@ This pattern is useful when you want different values to map to different levels
             },
             "attributes": {
                 "iconName": {
-                    "operator": ":",
+                    "operator": "?",
                     "operands": [
                         {
                             "operator": "==",
@@ -215,7 +215,7 @@ This pattern is useful when you want different values to map to different levels
                         },
                         "CheckMark",
                         {
-                            "operator": ":",
+                            "operator": "?",
                             "operands": [
                                 {
                                     "operator": "==",
@@ -231,7 +231,7 @@ This pattern is useful when you want different values to map to different levels
                                 },
                                 "Forward",
                                 {
-                                    "operator": ":",
+                                    "operator": "?",
                                     "operands": [
                                         {
                                             "operator": "==",
@@ -247,7 +247,7 @@ This pattern is useful when you want different values to map to different levels
                                         },
                                         "Error",
                                         {
-                                            "operator": ":",
+                                            "operator": "?",
                                             "operands": [
                                                 {
                                                     "operator": "==",
@@ -300,7 +300,7 @@ This example colors the current field red when the value inside an item's DueDat
    "txtContent": "@currentField",
    "style": {
       "color": {
-         "operator": ":",
+         "operator": "?",
          "operands": [
             {
                "operator": "<=",
@@ -325,7 +325,7 @@ To compare the value of a date/time field against a date that's not `@now`, foll
    "txtContent": "@currentField",
    "style": {
       "color": {
-         "operator": ":",
+         "operator": "?",
          "operands": [
             {
                "operator": "<=",
@@ -354,7 +354,7 @@ To compare a date/time field value against another date constant, use the **Date
    "txtContent": "@currentField",
    "style": {
       "color": {
-         "operator": ":",
+         "operator": "?",
          "operands": [
             {
                "operator": "<=",
@@ -461,7 +461,7 @@ This example applies `background-color` and `border-top` styles to create a data
   },
   "style": {
     "width": {
-      "operator": ":",
+      "operator": "?",
       "operands": [
         {
           "operator": ">",
@@ -511,7 +511,7 @@ This example relies on two number fields, `Before` and `After`, for which the va
             "elmType": "span",
             "attributes": {
                 "class": {
-                    "operator": ":",
+                    "operator": "?",
                     "operands": [
                         {
                             "operator": ">",
@@ -525,7 +525,7 @@ This example relies on two number fields, `Before` and `After`, for which the va
                     ]
                 },
                 "iconName": {
-                    "operator": ":",
+                    "operator": "?",
                     "operands": [
                         {
                             "operator": ">",
@@ -536,7 +536,7 @@ This example relies on two number fields, `Before` and `After`, for which the va
                         },
                         "SortUp",
                         {
-                            "operator": ":",
+                            "operator": "?",
                             "operands": [
                                 {
                                     "operator": "<",
@@ -783,7 +783,7 @@ The following example shows the value of a style object. In this example, two st
 {
    "padding": "4px",
    "background-color": {
-      "operator": ":",
+      "operator": "?",
       "operands": [
          {
             "operator": "<",
@@ -848,7 +848,7 @@ The following example shows an Expression object that performs the following exp
 
 ```JSON
 {
-   "operator": ":",
+   "operator": "?",
    "operands": [
       {
          "operator": ">",
