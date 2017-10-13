@@ -7,7 +7,7 @@ Before you get started, make sure that you're familiar with the following:
 - [Using the Client Object Model](https://msdn.microsoft.com/en-us/library/ff798388.aspx)
 - [Common Programming Tasks in the Managed Client Object Model](https://msdn.microsoft.com/en-us/library/ee537013.aspx)
 
-You will also need to install the [Microsoft.SharePointOnline.CSOM](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM/) NuGet package (version 16.1.6906.1200 or later).
+You will also need to reference the [Microsoft.SharePointOnline.CSOM](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM/) NuGet package (version 16.1.6906.1200 or later).
 
 ## CSOM code example
 
@@ -20,17 +20,19 @@ The following example shows how to create a __Microsoft.Online.SharePoint.Tenant
 
 ```C#
 using System.Security;
-using SPClient=Microsoft.SharePoint.Client;
+using Microsoft.SharePoint.Client;
 using Microsoft.Online.SharePoint.TenantAdministration;
 using Microsoft.Online.SharePoint.TenantManagement;
 
-SPClient.ClientContext ctx = new SPClient.ClientContext("https://mysite-admin.sharepoint.com/");
+...
+
+ClientContext ctx = new ClientContext("https://mysite-admin.sharepoint.com/");
 var pwd = "mypassword";
 var passWord = new SecureString();
 foreach (char c in pwd.ToCharArray()) passWord.AppendChar(c);
-ctx.Credentials = new SPClient.SharePointOnlineCredentials("admin@mydomain.com", passWord);
+ctx.Credentials = new SharePointOnlineCredentials("admin@mydomain.com", passWord);
 Tenant tenant = new Tenant(ctx);
-SPClient.ClientObjectList<ThemeProperties> themes = tenant.GetAllTenantThemes();
+ClientObjectList<ThemeProperties> themes = tenant.GetAllTenantThemes();
 ```
 
 ## Theme definition example
@@ -69,7 +71,7 @@ public class SPOTheme 
 
 ## Applying a theme
 
-The methods described in this section are used to manage the available themes in your tenant. To _apply_ a theme to a particular SharePoint website, use the [SPWeb.ApplyTheme](https://msdn.microsoft.com/en-us/library/office/jj251358.aspx) method of the [Microsoft.SharePoint.Client.Web](https://msdn.microsoft.com/en-us/library/office/microsoft.sharepoint.client.web.aspx) class.
+There's currently no supported API to programmatically apply a theme to specific site.
 
 ## Methods/properties of the Microsoft.Online.SharePoint.TenantAdministration.Tenant class
 
@@ -118,7 +120,7 @@ __Return type:__ ClientResult<bool>
 
 ## Methods of the Microsoft.Online.SharePoint.TenantManagement.Tenant class
 
-Use the following methods to manage themes in a multitenant environment.
+These are alternative APIs to manage your themes in tenant level.
 
 ### AddTenantTheme public method
 Add a theme to the tenant.
