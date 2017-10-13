@@ -927,7 +927,7 @@ Operators specify the type of operation to perform. The following operators are 
 
 - :
 
-Alternately,
+Alternately:
 
 - ?
 
