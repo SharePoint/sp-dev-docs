@@ -112,7 +112,7 @@ This pattern is useful when you want different values to map to different levels
 <!-- The schema URL will need to be updated when it is changed from customformatter to columnformatting -->
 ```JSON
 {
-    "$schema": "https://columnformatting.sharepointpnp.com/customFormatterSchema.json",
+    "$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json",
     "debugMode": true,
     "elmType": "div",
     "attributes": {
@@ -607,7 +607,7 @@ Creating custom column formatting JSON from scratch is simple if you understand 
 
     ```JSON
     {
-    "$schema": "https://columnformatting.sharepointpnp.com/customFormatterSchema.json"
+    "$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json"
     }
     ```
     You now have validation and autocomplete to create your JSON. You can start adding your JSON after the first line that defines the schema location. 
