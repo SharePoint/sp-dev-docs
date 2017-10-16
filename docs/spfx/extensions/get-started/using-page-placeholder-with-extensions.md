@@ -123,8 +123,6 @@ In the following steps, you'll modify the Hello World Application Customizer to 
 
 8. Create a new `_renderPlaceHolders` private method with the following code:
 
-
-
 	  ```ts
 	    private _renderPlaceHolders(): void {
 
@@ -192,7 +190,6 @@ In the following steps, you'll modify the Hello World Application Customizer to 
 		}
 	      }
 	    }
-
 	  ```
 
 	  * Use `this.context.placeholderProvider.tryCreateContent` to get access to the placeholder.
