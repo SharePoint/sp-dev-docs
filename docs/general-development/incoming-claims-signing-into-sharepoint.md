@@ -65,7 +65,7 @@ In ASP.NET membership and role passive sign-in, the sign-in happens by redirecti
   
     
     
-SharePoint Serverthen does claims augmentation. Win32 clients must support the forms-based authentication that is implemented in Office clients.
+SharePoint Server then does claims augmentation. Win32 clients must support the forms-based authentication that is implemented in Office clients.
   
     
     
