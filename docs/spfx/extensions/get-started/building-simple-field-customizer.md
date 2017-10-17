@@ -37,7 +37,7 @@ This article describes how to create your first Field Customizer Extension. You 
     * Select **Extension** as the client-side component type to be created. 
     * Select **Field Customizer** as the extension type to be created.
     
-5. The next set of prompts will ask for specific information about your extension:
+5. The next set of prompts ask for specific information about your extension:
      
     * Accept the default value of **HelloWorld** as your extension name, and then select Enter.
     * Accept the default value of **HelloWorld description** as your extension description, and select Enter.
@@ -45,7 +45,7 @@ This article describes how to create your first Field Customizer Extension. You 
     
     ![Yeoman SharePoint generator prompts to create an extension solution](../../../images/ext-field-yeoman-prompts.png)
     
-    At this point, Yeoman will install the required dependencies and scaffold the solution files along with the **HelloWorld** extension. This might take a few minutes. 
+    At this point, Yeoman installs the required dependencies and scaffolds the solution files along with the **HelloWorld** extension. This might take a few minutes. 
     
     When the scaffold is complete, you should see the following message indicating a successful scaffold:
     
@@ -75,7 +75,7 @@ This article describes how to create your first Field Customizer Extension. You 
 
 Open the **HelloWorldFieldCustomizer.ts** file in the **src\extensions\helloWorld** folder.
 
-Notice that the base class for the Field Customizer is imported from the **sp-application-base** package, which contains SharePoint framework code required by the Field Customizer.
+Notice that the base class for the Field Customizer is imported from the **sp-application-base** package, which contains SharePoint Framework code required by the Field Customizer.
 
 ```ts
 import { Log } from '@microsoft/sp-core-library';
@@ -176,7 +176,7 @@ The full URL should look similar to the following, depending on your tenant URL 
 contoso.sharepoint.com/Lists/Orders/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Percent":{"id":"45a1d299-990d-4917-ba62-7cb67158be16","properties":{"sampleText":"Hello!"}}}
 ```
     
-Accept the loading of Debug Manifests, by selecting **Load debug scripts** when prompted.
+Accept the loading of Debug Manifests by selecting **Load debug scripts** when prompted.
 
 ![Accept loading debug scripts](../../../images/ext-field-accept-debug-scripts.png)
 
@@ -319,7 +319,7 @@ Now you are ready to deploy the solution to a SharePoint site and get the field 
     gulp bundle
     ```
 
-2. Next, execute the following command so that the solution package is created:
+2. Execute the following command so that the solution package is created:
 
     ```
     gulp package-solution
@@ -351,7 +351,7 @@ Now you are ready to deploy the solution to a SharePoint site and get the field 
 
 9. Select the **field-extension-client-side-solution** app to install the solution on the site. After the installation is complete, refresh the page by selecting **F5**.
 
-10. When the solution has been installed, select **New** from the toolbar on the **Site Contents** page, and and then select **List**.
+10. When the solution has been installed, select **New** from the toolbar on the **Site Contents** page, and then select **List**.
 
     ![Creating a new list](../../../images/ext-field-create-new-list.png)
 
