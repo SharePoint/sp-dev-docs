@@ -16,13 +16,13 @@ The following PowerShell commands are available to manage the tenant properties:
 Applies to: Office 365, SharePoint Online
 
 Syntax
-Get-SPOStorageEntity [-Site] <AppCatalogSiteURL> [-Key] <String>
+Get-SPOStorageEntity [-Site] &lt;AppCatalogSiteURL&gt; [-Key] &lt;String&gt;
 
 ### Set-SPOStorageEntity
 Applies to: Office 365, SharePoint Online
 
 Syntax
-Get-SPOStorageEntity [-Site] <AppCatalogSiteURL> [-Key] <String> [-Value] <String> [-Description] <String> [-Comments] <String>
+Get-SPOStorageEntity [-Site] &lt;AppCatalogSiteURL&gt; [-Key] &lt;String&gt; [-Value] &lt;String&gt; [-Description] &lt;String&gt; [-Comments] &lt;String&gt;
 
 ## Reading tenant properties
 
