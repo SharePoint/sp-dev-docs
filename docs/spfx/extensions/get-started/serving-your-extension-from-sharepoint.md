@@ -1,7 +1,7 @@
 
 # Deploy your extension to SharePoint (Hello World part 3)
 
-In this article, you will learn how to deploy your SharePoint Framework Application Customizer to SharePoint and see it working on modern SharePoint pages. This article continues with the Hello World extension built in the previous article [Use page placeholders from Application Customizer (Hello World part 2)](./using-page-placeholder-with-extensions.md).
+This article describes how to deploy your SharePoint Framework Application Customizer to SharePoint and see it working on modern SharePoint pages. This article continues with the Hello World extension built in the previous article [Use page placeholders from Application Customizer (Hello World part 2)](./using-page-placeholder-with-extensions.md).
 
 Be sure you have completed the procedures in the following articles before you begin:
 
@@ -20,21 +20,22 @@ In the console window, go to the extension project directory created in [Build y
 ```
 cd app-extension
 ```
-If gulp serve is still running, stop it from running by pressing Ctrl+C.
+If gulp serve is still running, stop it from running by selecting Ctrl+C.
 
 Unlike in **Debug** mode, to use an extension on modern SharePoint server-side pages, you need to deploy and register the extension with SharePoint in `Site collection`, `Site`, or `List` scope. The scope defines where and how the Application Customizer will be active. In this particular scenario, we'll register the Application Customizer by using the `Site collection` scope. 
 
 Before we package our solution, we want to include the code needed to automate the extension activation within the site whenever the solution is installed on the site. In this case, we'll use feature framework elements to perform these actions directly in the solution package, but you could also associate the application customizer to a SharePoint site by using REST or CSOM as part of the site provisioning, for example.
 
 1. Install the solution package to the site where it should be installed so that the extension manifest is being white listed for execution.
+
 2. Associate the Application Customizer to the planned scope. This can be performed programmatically (CSOM/REST) or by using the feature framework inside of the SharePoint Framework solution package. You'll need to associate the following properties in the `UserCustomAction` object at the site collection, site, or list level.
     * **ClientSideComponentId:** This is the identifier (GUID) of the Field Customizer, which has been installed in the app catalog. 
     * **ClientSideComponentProperties:** This is an optional parameter, which can be used to provide properties for the Field Customizer instance.
-
+   
    Note that you can control the requirement to add a solution containing your extension to the site by using the `skipFeatureDeployment` setting in **package-solution.json**. Even though you would not require the solution to be installed on the site, you'd need to associate **ClientSideComponentId** to specific objects for the extension to be visible. 
-
+   
 In the following steps, we'll review the `CustomAction` definition, which was automatically created for the solution as part of the scaffolding for enabling the solution on a site when it's being installed. 
-
+   
 1. Return to your solution package in Visual Studio Code (or to your preferred editor).
 
 2. Extend the **sharepoint** folder and **assets** subfolder in the root of the solution to see the existing **elements.xml** file. 
@@ -151,11 +152,11 @@ Now you are ready to deploy the solution to a SharePoint site and have the `Cust
 
 8. Select the gear icon on the top navigation bar on the right, and then select **Add an app** to go to your Apps page.
 
-9. In the **Search** box, enter **app**, and then press Enter to filter your apps.
+9. In the **Search** box, enter **app**, and then select Enter to filter your apps.
 
    ![installing field customizer to site](../../../images/ext-app-install-solution-to-site.png)
 
-10. Select the **app-extension-client-side-solution** app to install the solution on the site. When the installation is completed, refresh the page by pressing **F5**.
+10. Select the **app-extension-client-side-solution** app to install the solution on the site. When the installation is completed, refresh the page by selecting **F5**.
 
 When the application has been successfully installed, you can see the header and footer being rendered just like with the debug query parameters.
 
