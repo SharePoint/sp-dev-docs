@@ -1238,3 +1238,312 @@
       items:
       - name: Publish a cloud business add-in to SharePoint
         href: sp-add-ins/publish-a-cloud-business-add-in-to-sharepoint.md
+- name: Solution guidance
+  href: pnp-guidance/Office-365-development-patterns-and-practices-solution-guidance.md
+  items:
+  - name: Branding and site provisioning
+    href: pnp-guidance/Branding-and-site-provisioning-solutions-for-SharePoint.md
+    items:
+    - name: Page model
+      href: pnp-guidance/SharePoint-pages-and-the-page-model.md
+    - name: Development and design tools and practices
+      href: pnp-guidance/SharePoint-development-and-design-tools-and-practices.md
+    - name: Site branding
+      href: pnp-guidance/SharePoint-site-branding-and-page-customization-solutions.md
+      items:
+      - name: Use composed looks to brand sites
+        href: pnp-guidance/Use-composed-looks-to-brand-SharePoint-sites.md
+      - name: Use remote provisioning to brand pages
+        href: pnp-guidance/Use-remote-provisioning-to-brand-SharePoint-pages.md
+      - name: Use CSS to brand pages
+        href: pnp-guidance/Use-CSS-to-brand-pages.md
+      - name: Customize elements of a SharePoint page
+        href: pnp-guidance/Customize-a-SharePoint-page-by-using-remote-provisioning-and-CSS.md
+      - name: Update the branding of existing sites and regions
+        href: pnp-guidance/update-the-branding-of-existing-sharepoint-sites-and-page-regions.md
+      - name: Customize OneDrive for Business site branding
+        href: pnp-guidance/Customization-Options-For-OD4B-Sites.md
+    - name: Site provisioning
+      href: pnp-guidance/sharepoint-site-provisioning-solutions.md
+      items:
+      - name: Implement a site classification solution
+        href: pnp-guidance/implement-a-sharepoint-site-classification-solution.md
+      - name: Modify host web lists at creation time
+        href: pnp-guidance/modify-sharepoint-host-web-lists-at-creation-time.md
+      - name: Create content types by using CSOM
+        href: pnp-guidance/create-sharepoint-content-types-by-using-csom.md
+      - name: Modify site permissions and get external sharing status
+        href: pnp-guidance/modify-sharepoint-site-permissions-and-get-external-sharing-status.md
+      - name: Manage users and groups
+        href: pnp-guidance/manage-sharepoint-users-and-groups.md
+    - name: Metadata, site navigation, and publishing site features
+      href: pnp-guidance/sharepoint-metadata-site-navigation-and-publishing-site-features.md
+    - name: UX Components
+      href: pnp-guidance/ux-components-in-sharepoint-2013-and-sharepoint-online.md
+      items:
+      - name: Customize the UX
+        href: pnp-guidance/customize-the-ux-by-using-sharepoint-provider-hosted-add-ins.md
+      - name: Create UX controls
+        href: pnp-guidance/create-ux-controls-by-using-sharepoint-provider-hosted-add-ins.md
+      - name: Display information from a host site
+        href: pnp-guidance/display-information-from-a-host-site-by-using-office-web-widgets.md
+      - name: Improve performance
+        href: pnp-guidance/improve-performance-in-sharepoint-provider-hosted-add-ins.md
+  - name: Customizing the "modern" experiences in SharePoint Online
+    href: pnp-guidance/modern-experience-customizations.md
+    items:
+    - name: Provisioning "modern" team sites programmatically
+      href: pnp-guidance/modern-experience-customizations-provisioning-sites.md
+    - name: Customizing "modern" team sites
+      href: pnp-guidance/modern-experience-customizations-customize-sites.md
+    - name: Customizing "modern" lists and libraries
+      href: pnp-guidance/modern-experience-customizations-customize-lists-and-libraries.md
+    - name: Customizing "modern" site pages
+      href: pnp-guidance/modern-experience-customizations-customize-pages.md
+  - name: SharePoint Multi-Geo tenant guidance
+    href: pnp-guidance/multigeo-introduction.md
+    items:
+    - name: Permissions in a Multi-Geo tenant
+      href: pnp-guidance/multigeo-permissions.md
+    - name: Discover the Multi-Geo configuration of your SharePoint tenant
+      href: pnp-guidance/multigeo-discovery.md
+    - name: Onedrive for Business in a Multi-Geo tenant
+      href: pnp-guidance/multigeo-onedrive.md
+    - name: Work with SharePoint sites in a Multi-Geo tenant
+      href: pnp-guidance/multigeo-sites.md
+    - name: Work with user profiles in a Multi-Geo tenant
+      href: pnp-guidance/multigeo-userprofileexperience.md
+    - name: Search in a Multi-Geo SharePoint tenant
+      href: pnp-guidance/multigeo-search.md
+    - name: Managed metadata in a Multi-Geo tenant
+      href: pnp-guidance/multigeo-managedmetadata.md
+    - name: Content type hub in a Multi-Geo tenant
+      href: pnp-guidance/multigeo-contenttypehub.md
+  - name: Building well performing SharePoint Online portals
+    href: pnp-guidance/portal-overview.md
+    items:
+    - name: Performance guidance
+      href: pnp-guidance/portal-performance.md
+    - name: Information Architecture
+      href: pnp-guidance/portal-information-architecture.md
+    - name: Navigation considerations
+      href: pnp-guidance/portal-navigation.md
+    - name: Data aggregation guidance
+      href: pnp-guidance/portal-data-aggregation.md
+    - name: Branding your portals
+      href: pnp-guidance/portal-branding.md
+    - name: Portal go live approach
+      href: pnp-guidance/portal-rollout.md
+  - name: Composite business add-ins
+    href: pnp-guidance/Composite-buisness-apps-for-SharePoint.md
+    items:
+    - name: Migrate InfoPath forms
+      href: pnp-guidance/Migrate-InfoPath-forms-to-SharePoint.md
+    - name: Data storage options
+      href: pnp-guidance/Data-storage-options-in-SharePoint-Online.md
+    - name: Corporate event app integration
+      href: pnp-guidance/Corporate-app-event-registration-with-SharePoint.md
+    - name: Call web services from workflows
+      href: pnp-guidance/Call-web-services-from-SharePoint-workflows.md
+  - name: ECM solutions
+    href: pnp-guidance/Enterprise-Content-Management-solutions-for-SharePoint-2013-and-SharePoint-Online.md
+    items:
+    - name: Document library templates
+      href: pnp-guidance/Document-library-templates-sample-app-for-SharePoint.md
+    - name: Autotagging
+      href: pnp-guidance/Autotagging-sample-app-for-SharePoint.md
+    - name: Information management
+      href: pnp-guidance/Information-management-sample-app-for-SharePoint.md
+    - name: Records management extensions
+      href: pnp-guidance/Records-management-extensions-sample-app-for-SharePoint.md
+    - name: Taxonomy operations
+      href: pnp-guidance/Taxonomy-operations-sample-app-for-SharePoint.md
+    - name: Bulk upload documents
+      href: pnp-guidance/Bulk-upload-documents-sample-app-for-SharePoint.md
+    - name: Upload large files
+      href: pnp-guidance/Upload-large-files-sample-app-for-SharePoint.md
+    - name: Synchronize term groups
+      href: pnp-guidance/Synchronize-term-groups-sample-app-for-SharePoint.md
+    - name: 'Supporting % and # in file and folder with the ResourcePath API'
+      href: pnp-guidance/supporting-and-in-file-and-folder-with-the-resourcepath-api.md
+  - name: Localization solutions
+    href: pnp-guidance/localization-solutions-for-sharepoint-2013-and-sharepoint-online.md
+    items:
+    - name: Use localization features
+      href: pnp-guidance/Use-localization-features-in-Office-365-sample-app.md
+    - name: Localize UI elements
+      href: pnp-guidance/Localize-UI-elements-sample-app-for-SharePoint.md
+  - name: Search solutions
+    href: pnp-guidance/search-solutions-in-sharepoint-2013-and-sharepoint-online.md
+    items:
+    - name: Search customizations
+      href: pnp-guidance/search-customizations-for-sharepoint.md
+  - name: Security and Performance
+    href: pnp-guidance/security-and-performance.md
+    items:
+    - name: Authorize provider-hosted add-in users at run time
+      href: pnp-guidance/authorize-provider-hosted-add-in-users-at-run-time-by-using-oauth.md
+    - name: Authorization considerations for tenants hosted in the Germany, China or US Government environments
+      href: pnp-guidance/Extending-SharePoint-Online-for-Germany-China-USGovernment-environments.md
+    - name: Cross-domain images in SharePoint provider-hosted add-ins
+      href: pnp-guidance/cross-domain-images-in-sharepoint-provider-hosted-add-ins.md
+    - name: Elevated privileges in SharePoint Add-ins
+      href: pnp-guidance/elevated-privileges-in-sharepoint-add-ins.md
+    - name: How to provide add-in app only tenant administrative permissions in SharePoint Online
+      href: pnp-guidance/how-to-provide-add-in-app-only-tenant-administrative-permissions-in-sharepoint-online.md
+      items:
+      - name: Developing using Tenant permissions with App-Only
+        href: pnp-guidance/development-experience-tenant-apponly-permissions-in-sharepoint-online.md
+    - name: Set external sharing in Office 365
+      href: pnp-guidance/Set-external-sharing-on-site-collections-in-Office-365.md
+    - name: Handle SharePoint Online throttling
+      href: pnp-guidance/Handle-SharePoint-Online-throttling-by-using-exponential-back-off.md
+    - name: JavaScript Patterns and Performance
+      href: pnp-guidance/javascript-patterns-and-performance.md
+  - name: SharePoint Add-in recipes
+    href: pnp-guidance/sharepoint-add-in-recipes.md
+    items:
+    - name: App-Only and Elevated privileges
+      href: pnp-guidance/app-only-elevated-privileges-sharepoint-add-in.md
+    - name: Branding SharePoint Sites
+      href: pnp-guidance/branding-sharepoint-sites-sharepoint-add-in.md
+    - name: Custom Actions
+      href: pnp-guidance/custom-actions-sharepoint-add-in.md
+    - name: Custom Field Type
+      href: pnp-guidance/custom-field-type-sharepoint-add-in.md
+    - name: Custom Ribbons
+      href: pnp-guidance/Add-a-custom-ribbon-to-your-SharePoint-site.md
+    - name: Customize your SharePoint site UI using JavaScript embedding
+      href: pnp-guidance/Customize-your-SharePoint-site-UI-by-using-JavaScript.md
+    - name: Delegate Controls
+      href: pnp-guidance/delegate-controls-sharepoint-add-in.md
+    - name: Document ID Provider
+      href: pnp-guidance/document-id-provider-sharepoint-add-in.md
+    - name: Event Receivers and List Event Receivers
+      href: pnp-guidance/event-receiver-and-list-event-receiver-sharepoint-add-in.md
+    - name: Feature Stapling
+      href: pnp-guidance/feature-stapling-sharepoint-add-in.md
+    - name: Information Management Policy
+      href: pnp-guidance/information-management-policy-sharepoint-add-in.md
+    - name: JavaScript customizations
+      href: pnp-guidance/Embedding-JavaScript-into-SharePoint.md
+    - name: List Definition / List Template
+      href: pnp-guidance/list-definition-template-sharepoint-add-in.md
+    - name: List Instance
+      href: pnp-guidance/list-instance-sharepoint-add-in.md
+    - name: Localization
+      href: pnp-guidance/localization-sharepoint-add-in.md
+    - name: Master Pages
+      href: pnp-guidance/master-pages-sharepoint-add-in.md
+    - name: MMS manipulation
+      href: pnp-guidance/mms-manipulation-sharepoint-add-in.md
+    - name: Modules
+      href: pnp-guidance/modules-sharepoint-add-in.md
+    - name: OneDrive for Business customization
+      href: pnp-guidance/onedrive-for-business-customization-sharepoint-add-in.md
+    - name: Performance Considerations
+      href: pnp-guidance/performance-considerations-sharepoint-add-in.md
+    - name: Remote Timer Jobs
+      href: pnp-guidance/remote-timer-jobs-sharepoint-add-in.md
+    - name: Remote event receivers
+      href: pnp-guidance/Use-remote-event-receivers-in-SharePoint.md
+    - name: Search API Usage
+      href: pnp-guidance/search-api-usage-sharepoint-add-in.md
+    - name: Search Configuration
+      href: pnp-guidance/search-configuration-sharepoint-add-in.md
+    - name: SharePoint change log
+      href: pnp-guidance/query-sharepoint-change-log-with-changequery-and-changeToken.md
+    - name: Site Columns and Content Types
+      href: pnp-guidance/site-columns-and-content-types-sharepoint-add-in.md
+    - name: Site Provisioning
+      href: pnp-guidance/site-provisioning-sharepoint-add-in.md
+    - name: Use asynchronous operations in SharePoint Add-ins
+      href: pnp-guidance/use-asynchronous-operations-in-sharepoint-add-ins.md
+    - name: User Controls and Web Controls
+      href: pnp-guidance/user-controls-and-web-controls-sharepoint-add-in.md
+    - name: User Profile Manipulation
+      href: pnp-guidance/user profile manipulation-sharepoint-add-in.md
+    - name: Variations
+      href: pnp-guidance/variations-sharepoint-add-in.md
+    - name: Web Part
+      href: pnp-guidance/web-part-sharepoint-add-in.md
+    - name: Upload Web Parts
+      href: pnp-guidance/upload-web-parts-in-sharepoint.md
+    - name: Connect SharePoint add-in parts
+      href: pnp-guidance/Connect-SharePoint-app-parts-by-using-SignalR.md
+    - name: Workflows, Actions (Activities), Events, and Forms
+      href: pnp-guidance/workflows-actions-events-and-forms-sharepoint-add-in.md
+    - name: Yammer Integration
+      href: pnp-guidance/yammer-integration-sharepoint-add-in.md
+  - name: Transform farm solutions to the SharePoint add-in model
+    href: pnp-guidance/Transform-farm-solutions-to-the-SharePoint-app-model.md
+    items:
+    - name: Replace content types and site columns
+      href: pnp-guidance/replace-sharepoint-content-types-and-site-columns.md
+    - name: Replace files deployed using modules in farm solutions
+      href: pnp-guidance/replace-files-deployed-using-modules-in-sharepoint-farm-solutions.md
+    - name: Replace lists created from list definitions
+      href: pnp-guidance/replace-sharepoint-lists-created-from-list-definitions.md
+    - name: Replace Web Parts with add-in parts
+      href: pnp-guidance/replace-sharepoint-web-parts-with-add-in-parts.md
+  - name: Sandbox Solution Transformation Guidance
+    href: pnp-guidance/Sandbox-Solution-Transformation-Guidance.md
+    items:
+    - name: Web Parts
+      href: pnp-guidance/Sandbox-Solution-Transformation-Guidance-WebParts.md
+    - name: Event receivers
+      href: pnp-guidance/Sandbox-Solution-Transformation-Guidance-Event-Receivers.md
+    - name: Feature receivers
+      href: pnp-guidance/Sandbox-Solution-Transformation-Guidance-Feature-Receivers.md
+    - name: InfoPath forms with code
+      href: pnp-guidance/Sandbox-Solution-Transformation-Guidance-InfoPath.md
+  - name: User Profile Solutions
+    href: pnp-guidance/user-profile-solutions-for-sharepoint.md
+    items:
+    - name: Read or update user profile properties
+      href: pnp-guidance/Read-or-update-user-profile-properties-sample-app-for-SharePoint.md
+    - name: Bulk User Profile update API
+      href: pnp-guidance/bulk-user-profile-update-api-for-sharepoint-online.md
+    - name: Migrate user profile properties
+      href: pnp-guidance/Migrate-user-profile-properties-sample-app-for-SharePoint.md
+    - name: Personalize search results
+      href: pnp-guidance/Personalize-search-results-sample-app-for-SharePoint.md
+    - name: Upload user profile pictures
+      href: pnp-guidance/Upload-user-profile-pictures-sample-app-for-SharePoint.md
+  - name: Deploying your SharePoint add-ins
+    href: pnp-guidance/deploying-your-sharepoint-add-ins.md
+    items:
+    - name: Deploy Sites to Microsoft Azure
+      href: pnp-guidance/Move-O365Api-Project-from-Dev-To-Prod.md
+    - name: Use Azure WebJobs with Office 365
+      href: pnp-guidance/Use-Microsoft-Azure-WebJobs-with-Office-365.md
+    - name: Configure Provider-Hosted Add-ins for Distribution
+      href: pnp-guidance/Configure-SP-Provider-Hosted-Apps-For-Distribution.md
+    - name: Configure Office 365 Projects for Distribution
+      href: pnp-guidance/Configure-O365Api-Project-For-Distribution.md
+  - name: PnP remote provisioning
+    href: pnp-guidance/pnp-remote-provisioning.md
+    items:
+    - name: Introducing the PnP Provisioning Engine
+      href: pnp-guidance/Introducing-the-PnP-Provisioning-Engine.md
+    - name: PnP provisioning framework
+      href: pnp-guidance/pnp-provisioning-framework.md
+    - name: PnP provisioning engine and the core library
+      href: pnp-guidance/pnp-provisioning-engine-and-the-core-library.md
+    - name: PnP provisioning schema
+      href: pnp-guidance/pnp-provisioning-schema.md
+    - name: Provisioning console application sample
+      href: pnp-guidance/provisioning-console-application-sample.md
+  - name: PnP remote timer job framework
+    href: pnp-guidance/pnp-remote-timer-job-framework.md
+    items:
+    - name: The Timer Job Framework
+      href: pnp-guidance/timerjob-framework.md
+    - name: Create remote timer jobs in SharePoint
+      href: pnp-guidance/create-remote-timer-jobs-in-sharepoint.md
+    - name: Getting Started with WebJobs ("timer jobs")
+      href: pnp-guidance/Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites.md
+  - name: PnP Sites Core API reference
+    href: https://msdn.microsoft.com/en-us/pnp_sites_core/pnp-sites-core-overview
+  - name: PnP PowerShell reference
+    href: https://msdn.microsoft.com/en-us/pnp_powershell/pnp-powershell-overview
