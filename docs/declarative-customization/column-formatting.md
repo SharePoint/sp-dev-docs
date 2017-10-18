@@ -74,8 +74,8 @@ The following image shows an example of conditional formatting applied to a numb
 
 ![Severity warning of 70 with orange background](../images/sp-columnformatting-conditionalbasic.png)
 
-This example customizes a number field to color that field red when its value less than 70. This example adds a style attribute to the parent `<div />` element, specifies a CSS class (`sp-field-severity--warning`) to apply to that item if the value inside the field is less than 70, and specifies no color if the value is outside that range (in which case it will use the default color for values in that list view). 
-Note: this example uses a binary operation with the less than operator, "<", nested inside the conditional operation indicated by the operator, "?". Another description of the section in the following example is: If @currentField < 70 Then class = sp-field-severity--warning.
+This example customizes a number field to color that field yellow when its value is 70 or less. This example adds a style attribute to the parent `<div />` element, specifies a CSS class (`sp-field-severity--warning`) to apply to that item if the value inside the field is less than or equal to 70, and specifies no color if the value is outside that range (in which case it will use the default color for values in that list view). 
+Note: this example uses a binary operation with the less than operator, "<", nested inside the conditional operation indicated by the operator, "?". Another description of the section in the following example is: If @currentField <= 70 Then class = sp-field-severity--warning.
 
 ```JSON
 {
@@ -86,7 +86,7 @@ Note: this example uses a binary operation with the less than operator, "<", nes
          "operator": "?",
          "operands": [
             {
-               "operator": "<",
+               "operator": "<=",
                "operands": [
                   "@currentField",
                   70
@@ -901,7 +901,7 @@ Operators specify the type of operation to perform. The following operators are 
 - Date()
 - cos
 - sin
-- : 
+- ? 
 
 **Binary operators** - The following are the standard arithmetic binary operators that expect two operands: 
 
@@ -924,7 +924,7 @@ Operators specify the type of operation to perform. The following operators are 
 
 **Conditional operator** - The conditional operator is:
 
-- :
+- ?
 
 This is to achieve an expression equivalent to a ? b : c, where if the expression a evaluates to true, then the result is b, else the result is c.
 
