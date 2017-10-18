@@ -52,7 +52,7 @@ The next set of prompts will ask for specific information about your extension:
 
 ![Yeoman SharePoint generator prompts to create an extension solution](../../../images/ext-com-dialog-yeoman-prompts.png)
 
-At this point, Yeoman will install the required dependencies and scaffold the solution files along with the *DialogDemo* extension. This might take a few minutes. 
+At this point, Yeoman will install the required dependencies and scaffold the solution files along with the *DialogDemo* extension. This might take a few minutes.
 
 When the scaffold is complete, you should see the following message indicating a successful scaffold:
 
@@ -60,7 +60,13 @@ When the scaffold is complete, you should see the following message indicating a
 
 >**Note:** For information about troubleshooting any errors, see [Known issues](../../known-issues-and-common-questions.md).
 
-When the scaffolding is complete, open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor you prefer. To open the folder in Visual Studio Code, use the following command in the console:
+Once the scaffolding completes, lock down the version of the project dependencies by running the following command:
+
+```sh
+npm shrinkwrap
+```
+
+Next, open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor you prefer. To open the folder in Visual Studio Code, use the following command in the console:
 
 ```sh
 code .
