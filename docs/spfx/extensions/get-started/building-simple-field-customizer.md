@@ -41,7 +41,7 @@ This article describes how to create your first Field Customizer Extension. You 
      
     * Accept the default value of **HelloWorld** as your extension name, and then select Enter.
     * Accept the default value of **HelloWorld description** as your extension description, and select Enter.
-    * Accept the default value of **No JavaScript Framework** as the framework selection, and select Enter. 
+    * Accept the default value of **No JavaScript Framework** as the framework selection, and select Enter.
     
     ![Yeoman SharePoint generator prompts to create an extension solution](../../../images/ext-field-yeoman-prompts.png)
     
@@ -59,7 +59,7 @@ This article describes how to create your first Field Customizer Extension. You 
     code .
     ```
     
-    **Note:** Because the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor that supports client-side development to build your extension.
+    > **Note:** Because the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor that supports client-side development to build your extension.
 
     Note how the default solution structure looks like the solution structure of client-side web parts. This is the basic SharePoint Framework solution structure, with similar configuration options across all solution types.
 
@@ -137,7 +137,7 @@ You cannot currently use the local workbench to test SharePoint Framework Extens
     
     ![Creating a new list](../../../images/ext-field-create-new-list.png)
     
-5. Create a new list named **Orders** and then select **Create**.
+5. Create a new list named **Orders**, and then select **Create**.
     
     ![Creating a new list with name of Orders](../../../images/ext-field-create-new-list-order.png)
     
@@ -166,9 +166,9 @@ More detail about the URL query parameters:
 - **loadSPFX=true** ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework is not normally loaded unless at least one extension is registered. Because no components are registered yet, we must explicitly load the framework.
 - **debugManifestsFile** specifies that you want to load SPFx components that are locally served. The loader only looks for components in the App Catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
 - **fieldCustomizers** indicates which fields in your list should have their rendering controlled by the Field Customizer. The ID parameter specifies the GUID of the extension that should be used to control the rendering of the field. The properties parameter is an optional text string containing a JSON object that will be deserialized into `this.properties` for your extension.
-  - **Key**: Use the internal name of the field as the key.
-  - **Id**: The GUID of the Field Customizer extension associated with this field.
-  - **Properties**: The property values defined in the extension. In this example, `sampleText` is a property defined by the extension.
+    - **Key**: Use the internal name of the field as the key.
+    - **Id**: The GUID of the Field Customizer extension associated with this field.
+    - **Properties**: The property values defined in the extension. In this example, `sampleText` is a property defined by the extension.
 
 The full URL should look similar to the following, depending on your tenant URL and the location of the newly created list:
     
@@ -176,11 +176,11 @@ The full URL should look similar to the following, depending on your tenant URL 
 contoso.sharepoint.com/Lists/Orders/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Percent":{"id":"45a1d299-990d-4917-ba62-7cb67158be16","properties":{"sampleText":"Hello!"}}}
 ```
     
-Accept the loading of Debug Manifests by selecting **Load debug scripts** when prompted.
+Accept the loading of debug manifests by selecting **Load debug scripts** when prompted.
 
 ![Accept loading debug scripts](../../../images/ext-field-accept-debug-scripts.png)
 
-Notice how the Percent values are now presented with an additional prefix string as 'Hello!: ', which is provided as a property for the Field Customizer.
+Notice how the Percent values are now presented with an additional prefix string as `Hello!: `, which is provided as a property for the Field Customizer.
 
 ![List view with field customizer rendered for percent field](../../../images/ext-field-default-customizer-output.png)
 
@@ -379,6 +379,4 @@ Now you are ready to deploy the solution to a SharePoint site and get the field 
 
 In this case, we continued to host the JavaScript from the localhost, but you could just as well relocate the assets to any CDN and update the URL to enable the loading of the JavaScript assets outside of the localhost as well.
 
-The process for publishing your app is identical among the different extension types. You can use the following publishing steps to update the assets to be hosted from a CDN.
-
-* [Host extension from Office 365 CDN](./hosting-extension-from-office365-cdn.md).
+The process for publishing your app is identical among the different extension types. You can use the following publishing steps to update the assets to be hosted from a CDN: [Host extension from Office 365 CDN](./hosting-extension-from-office365-cdn.md).
