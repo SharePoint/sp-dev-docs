@@ -186,16 +186,13 @@ Now that we have successfully tested the out of the box starting point of the Fi
 Open the **HelloWorld.module.scss** file in the **src\extensions\helloWorld** folder and update the styling definition as follows.
 
 ```
-.HelloWorld {
-  .cell {
-    display: 'inline-block';
-  }
-  .full {
-    background-color: '#e5e5e5';
-    width: '100px';
-  }
+.cell {
+  display: 'inline-block';
 }
-
+.full {
+  background-color: #e5e5e5;
+  width: 100px;
+}
 ```
 Open the **HelloWorldFieldCustomizer.ts** file in the **src\extensions\helloWorld** folder and update the **onRednerCell** method as follows.
 
