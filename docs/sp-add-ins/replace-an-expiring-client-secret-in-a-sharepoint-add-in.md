@@ -116,8 +116,6 @@ $newClientSecret
 
  **Tip**  By default, the add-in secret lasts one year. You can set this to a shorter or longer (up to 3 years maximum) by using the  **-EndDate** parameter on the three calls of the **New-MsolServicePrincipalCredential** cmdlet. The value of the parameter must be a [DateTime](http://msdn2.microsoft.com/EN-US/library/03ybds8y) object set to no longer than 3 years from **DateTime.Now**.
  
-
-
 ## Update the remote web application in Visual Studio to use the new secret
 
 
@@ -154,6 +152,8 @@ $newClientSecret
      ... other settings may be here ...
 </appSettings>
 ```
+
+***Important Note*** You will not be able to use the newly generated client secret until the current client secret expires.  Therefore, changing the ClientId key to the new client secret without the SecondaryClientSecret key present will NOT work.  You MUST follow the above procedure provided here and wait for the previous client secret to expire.  Then, you can remove the SecondaryClientSecret if you desire.
 
 4. If you changed to a new TokenHelper file, rebuild the project.
     
