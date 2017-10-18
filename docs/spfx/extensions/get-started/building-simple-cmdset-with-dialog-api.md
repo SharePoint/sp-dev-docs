@@ -58,7 +58,7 @@ This article describes how to create your first ListView Command Set Extension. 
     code .
     ```
 
-    **Note:** Because the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor that supports client-side development to build your extension.
+    > **Note:** Because the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor that supports client-side development to build your extension.
 
     Note how the default solution structure looks like the solution structure of client-side web parts. This is the basic SharePoint Framework solution structure, with similar configuration options across all solution types.
 
@@ -158,12 +158,14 @@ More detail about the URL query parameters:
 - **loadSPFX=true** ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework is not normally loaded unless at least one extension is registered. Because no components are registered yet, we must explicitly load the framework.
 - **debugManifestsFile** specifies that we want to load SPFx components that are being locally served. The loader only looks for components in the App Catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
 - **customActions** simulates a custom action. You can set many properties on this `CustomAction` object that affect the look, feel, and location of your button; we’ll cover them all later.
-  - **Key**: GUID of the extension.
-  - **Location**: Where the commands are displayed. The possible values are:
-    - **ClientSideExtension.ListViewCommandSet.ContextMenu:**  The context menu of the item(s)
-    - **ClientSideExtension.ListViewCommandSet.CommandBar:** The top command set menu in a list or library
-    - **ClientSideExtension.ListViewCommandSet:** Both the context menu and the command bar (Corresponds to SPUserCustomAction.Location="CommandUI.Ribbon")
-  - **Properties**: An optional JSON object containing properties that are available via the `this.properties` member.
+    - **Key**: GUID of the extension.
+    - **Location**: Where the commands are displayed. The possible values are:
+        - **ClientSideExtension.ListViewCommandSet.ContextMenu:**  The context menu of the item(s)
+        - **ClientSideExtension.ListViewCommandSet.CommandBar:** The top command set menu in a list or library
+        - **ClientSideExtension.ListViewCommandSet:** Both the context menu and the command bar (Corresponds to SPUserCustomAction.Location="CommandUI.Ribbon")
+    - **Properties**: An optional JSON object containing properties that are available via the `this.properties` member.
+
+<br/>
 
 The full URL should look similar to the following, depending on your tenant URL and the location of the list.
 
@@ -171,21 +173,29 @@ The full URL should look similar to the following, depending on your tenant URL 
 contoso.sharepoint.com/Lists/Orders/AllItems.aspx?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"a8047e2f-30d5-40fc-b880-b2890c7c16d6":{"location":"ClientSideExtension.ListViewCommandSet.CommandBar","properties":{"sampleTextOne":"One item is selected in the list.","sampleTextTwo":"This command is always visible."}}}
 ```
 
-4. Accept the loading of debug manifests by selecting **Load debug scripts** when prompted.
+<br/>
+
+Accept the loading of debug manifests by selecting **Load debug scripts** when prompted.
     
-    ![Accept loading debugripts](../../../images/ext-com-accept-debug-scripts.png)
-    
-    Notice the new **Command Two** button available in the toolbar. If you select that button, you'll see the text provided as property for the `sampleTextTwo` property.
+![Accept loading debugripts](../../../images/ext-com-accept-debug-scripts.png)
 
-    ![Command Two button visible in the document library toolbar](../../../images/ext-com-default-customizer-output.png)
+<br/>
 
-    The **Command One** button is not visible based on the code, until one row is selected in the document library. Upload or create a document to the library and confirm that the second button is visible.
+Notice the new **Command Two** button available in the toolbar. If you select that button, you'll see the text provided as property for the `sampleTextTwo` property.
 
-    ![Selecting one document to get Command One button visible](../../../images/ext-com-default-customizer-doc-select.png)
+![Command Two button visible in the document library toolbar](../../../images/ext-com-default-customizer-output.png)
 
-5. Select **Command Two** to see how the dialog control works, which is used in the default output from the solution scaffolding when the ListView Command Set is selected as the extension type. 
+<br/>
 
-    ![Selecting one document to get Command One button visible](../../../images/ext-com-default-customizer-btn-click.png)
+The **Command One** button is not visible based on the code, until one row is selected in the document library. Upload or create a document to the library and confirm that the second button is visible.
+
+![Selecting one document to get Command One button visible](../../../images/ext-com-default-customizer-doc-select.png)
+
+<br/>
+
+Select **Command Two** to see how the dialog control works, which is used in the default output from the solution scaffolding when the ListView Command Set is selected as the extension type. 
+
+![Selecting one document to get Command One button visible](../../../images/ext-com-default-customizer-btn-click.png)
 
 
 ## Enhance the ListView Command Set rendering
@@ -244,7 +254,9 @@ The default solution takes advantage of a new Dialog API, which can be used to s
 2. Extend the **sharepoint** folder and **assets** subfolder in the root of the solution to see the existing **elements.xml** file. 
     
     ![assets folder in solution structure](../../../images/ext-com-assets-folder.png)
-    
+
+<br/>
+
 ### Review the elements.xml file 
 
 Open the **elements.xml** file inside the **sharepoint\assets** folder.
@@ -275,6 +287,8 @@ Possible location values that can be used with a ListView Command Set:
 * `ClientSideExtension.ListViewCommandSet.CommandBar` - Toolbar of the list or library
 * `ClientSideExtension.ListViewCommandSet.ContextMenu` - Context menu for list or library items
 * `ClientSideExtension.ListViewCommandSet` - Register commands to both the toolbar and to the context menu
+
+<br/>
 
 ### Ensure that definitions are taken into account within the build pipeline
 
