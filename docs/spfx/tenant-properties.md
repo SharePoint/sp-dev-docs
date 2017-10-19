@@ -24,6 +24,12 @@ Applies to: Office 365, SharePoint Online
 Syntax
 Set-SPOStorageEntity [-Site] <AppCatalogSiteURL> [-Key] <String> [-Value] <String> [-Description] <String> [-Comments] <String>
 
+### Remove-SPOStorageEntity
+Applies to: Office 365, SharePoint Online
+
+Syntax
+Remove-SPOStorageEntity [-Site] <AppCatalogSiteURL> [-Key] <String>
+
 ## Reading tenant properties
 
 Developers can read tenant properties using the SharePoint REST APIs and use them in SharePoint Framework components such as web parts and extensions.
