@@ -209,12 +209,14 @@ Now that we have successfully tested the out-of-the-box starting point of the Fi
       public onRenderCell(event: IFieldCustomizerCellEventParameters): void {
 
         event.domElement.classList.add(styles.cell);
-        event.domElement.innerHTML = `
+        if (typeof event.fieldValue != 'undefined' && event.fieldValue) {  // for folder fieldValue is "".
+            event.domElement.innerHTML = `
                     <div class='${styles.full}'>
                       <div style='width: ${event.fieldValue}px; background:#0094ff; color:#c0c0c0'>
                         &nbsp; ${event.fieldValue}
                       </div>
                     </div>`;
+        }
       }
     ```
 
