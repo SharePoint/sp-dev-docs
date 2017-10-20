@@ -48,7 +48,13 @@ Enter the following values when prompted during the setup of the new project:
 
 ![Completed Project Scaffolding](../../../images/sp-pnp-js-guide-completed-setup.png)
 
-Once the scaffolding completes, open the project in the code editor of your choosing. The screenshots shown here demonstrate [Visual Studio Code](https://code.visualstudio.com/). To open the directory within Visual Studio Code, enter the following in the console:
+Once the scaffolding completes, lock down the version of the project dependencies by running the following command:
+
+```sh
+npm shrinkwrap
+```
+
+Next, open the project in the code editor of your choosing. The screenshots shown here demonstrate [Visual Studio Code](https://code.visualstudio.com/). To open the directory within Visual Studio Code, enter the following in the console:
 
 ```sh
 code .

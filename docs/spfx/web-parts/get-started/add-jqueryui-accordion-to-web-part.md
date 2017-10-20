@@ -67,7 +67,13 @@ The next set of prompts will ask for specific information about your web part:
 
 At this point, Yeoman will install the required dependencies and scaffold the solution files. This might take a few minutes. Yeoman will scaffold the project to include your **jQueryWebPart** web part as well.
 
-In the console, type the following to open the web part project in Visual Studio Code:
+Once the scaffolding completes, lock down the version of the project dependencies by running the following command:
+
+```sh
+npm shrinkwrap
+```
+
+Next, type the following to open the web part project in Visual Studio Code:
 
 ```
 code .

@@ -52,7 +52,13 @@ This article describes how to create your first ListView Command Set Extension. 
 
     For information about troubleshooting any errors, see [Known issues](../../known-issues-and-common-questions.md).
 
-6. When the solution scaffolding is complete, type the following into the console to start Visual Studio Code.
+6. Once the scaffolding completes, lock down the version of the project dependencies by running the following command:
+
+    ```sh
+    npm shrinkwrap
+    ```
+
+7. Next, type the following into the console to start Visual Studio Code.
 
     ```
     code .
@@ -64,7 +70,7 @@ This article describes how to create your first ListView Command Set Extension. 
 
     ![SharePoint Framework solution opened after initial scaffolding](../../../images/ext-com-vscode-solution-structure.png)
 
-7. Open **HelloWorldCommandSet.manifest.json** in the **src\extensions\helloWorld** folder.
+8. Open **HelloWorldCommandSet.manifest.json** in the **src\extensions\helloWorld** folder.
 
     This file defines your extension type and a unique identifier `id` for your extension. You’ll need this unique identifier later when debugging and deploying your extension to SharePoint.
 

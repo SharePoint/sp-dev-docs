@@ -132,7 +132,13 @@ When prompted, enter the following values:
 
 ![SharePoint Framework Yeoman generator with the default choices](../../../images/preconfiguredentries-yeoman.png)
 
-Once the scaffolding completes, open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots but you can use any editor you prefer.
+Once the scaffolding completes, lock down the version of the project dependencies by running the following command:
+
+```sh
+npm shrinkwrap
+```
+
+Next, open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots but you can use any editor you prefer.
 
 ![SharePoint Framework project open in Visual Studio Code](../../../images/preconfiguredentries-visual-studio-code.png)
 
