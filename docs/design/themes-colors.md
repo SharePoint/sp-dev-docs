@@ -37,10 +37,9 @@ Our built-in accessibility checker ensures universal design at all levels of def
 
 The SharePoint color palette has been optimized for screens and devices, and to provide enough flexibility to ensure continuity with your brand. The SharePoint-provided colors also guarantee accessible and legible experiences.
 
-
 ### Red
 
-<table style="font-weight:bold; vertical-align:middle">
+<table>
 <tr>
 <td style="color:white; background-color:#751b1e">themeDarker: #751b1e</td>
 <td style="color:white; background-color:#000000">black: #000000</td>
@@ -54,11 +53,13 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 <td style="color:white; background-color:#333">neutralPrimary: #333</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#d13438">themePrimary: #d13438</td>
+<td rowspan=3 style="font-weight:bold; vertical-align:middle; color:white; background-color:#d13438">themePrimary: #d13438</td>
 <td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3c3c3c</td>
 </tr>
 <tr>
 <td style="color:white; background-color:#666666">neutralSecondary: #666666</td>
+</tr>
+<tr>
 <td style="color:black; background-color:#a6a6a6">neutralTertiary: #a6a6a6</td>
 </tr>
 <tr>
@@ -71,8 +72,7 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 </tr>
 <tr>
 <td style="color:black; background-color:#f6d6d8">themeLight: #f6d6d8</td>
-<td style="color:black; background-color:#f4f4f4">neutralLighter: #f4f4f4</td>
-</tr>
+<td style="color:black; background-color:#f4f4f4">neutralLighter: #f4f4f4</td></tr>
 <tr>
 <td style="color:black; background-color:#faebeb">themeLighter: #faebeb</td>
 <td style="color:black; background-color:#f8f8f8">neutralLighterAlt: #f8f8f8</td>
@@ -87,7 +87,7 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 
 ### Orange
 
-<table style="font-weight:bold; vertical-align:middle">
+<table>
 <tr>
 <td style="color:white; background-color:#6f2d09">themeDarker: #6f2d09</td>
 <td style="color:white; background-color:#000000">black: #000000</td>
@@ -101,11 +101,13 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 <td style="color:white; background-color:#333">neutralPrimary: #333</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#ca5010">themePrimary: #ca5010</td>
+<td rowspan=3 style="font-weight:bold; vertical-align:middle; color:white; background-color:#ca5010">themePrimary: #ca5010</td>
 <td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3c3c3c</td>
 </tr>
 <tr>
 <td style="color:white; background-color:#666666">neutralSecondary: #666666</td>
+</tr>
+<tr>
 <td style="color:black; background-color:#a6a6a6">neutralTertiary: #a6a6a6</td>
 </tr>
 <tr>
@@ -134,7 +136,7 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 
 ### Green
 
-<table style="font-weight:bold; vertical-align:middle">
+<table>
 <tr>
 <td style="color:white; background-color:#094c23">themeDarker: #094c23</td>
 <td style="color:white; background-color:#000000">black: #000000</td>
@@ -148,11 +150,13 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 <td style="color:white; background-color:#333">neutralPrimary: #333</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#10893e">themePrimary: #10893e</td>
+<td rowspan=3 style="font-weight:bold; vertical-align:middle; color:white; background-color:#10893e">themePrimary: #10893e</td>
 <td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3c3c3c</td>
 </tr>
 <tr>
 <td style="color:white; background-color:#666666">neutralSecondary: #666666</td>
+</tr>
+<tr>
 <td style="color:black; background-color:#a6a6a6">neutralTertiary: #a6a6a6</td>
 </tr>
 <tr>
@@ -181,7 +185,7 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 
 ### Blue
 
-<table style="font-weight:bold; vertical-align:middle">
+<table>
 <tr>
 <td style="color:white; background-color:#004578">themeDarker: #004578</td>
 <td style="color:white; background-color:#000000">black: #000000</td>
@@ -195,11 +199,13 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 <td style="color:white; background-color:#333">neutralPrimary: #333</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#0078d7">themePrimary: #0078d7</td>
+<td rowspan=3 style="font-weight:bold; vertical-align:middle; color:white; background-color:#0078d7">themePrimary: #0078d7</td>
 <td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3c3c3c</td>
 </tr>
 <tr>
 <td style="color:white; background-color:#666666">neutralSecondary: #666666</td>
+</tr>
+<tr>
 <td style="color:black; background-color:#a6a6a6">neutralTertiary: #a6a6a6</td>
 </tr>
 <tr>
@@ -228,7 +234,7 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 
 ### Purple
 
-<table style="font-weight:bold; vertical-align:middle">
+<table>
 <tr>
 <td style="color:white; background-color:#27268a">themeDarker: #27268a</td>
 <td style="color:white; background-color:#000000">black: #000000</td>
@@ -242,11 +248,13 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 <td style="color:white; background-color:#333">neutralPrimary: #333</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#6b69d6">themePrimary: #6b69d6</td>
+<td rowspan=3 style="font-weight:bold; vertical-align:middle; color:white; background-color:#6b69d6">themePrimary: #6b69d6</td>
 <td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3c3c3c</td>
 </tr>
 <tr>
 <td style="color:white; background-color:#666666">neutralSecondary: #666666</td>
+</tr>
+<tr>
 <td style="color:black; background-color:#a6a6a6">neutralTertiary: #a6a6a6</td>
 </tr>
 <tr>
@@ -275,7 +283,7 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 
 ### Gray
 
-<table style="font-weight:bold; vertical-align:middle">
+<table>
 <tr>
 <td style="color:white; background-color:#323130">themeDarker: #323130</td>
 <td style="color:white; background-color:#000000">black: #000000</td>
@@ -289,11 +297,13 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 <td style="color:white; background-color:#333">neutralPrimary: #333</td>
 </tr>
 <tr>
-<td style="color:white; background-color:#5d5a58">themePrimary: #5d5a58</td>
+<td rowspan=3 style="font-weight:bold; vertical-align:middle; color:white; background-color:#5d5a58">themePrimary: #5d5a58</td>
 <td style="color:white; background-color:#3c3c3c">neutralPrimaryAlt: #3c3c3c</td>
 </tr>
 <tr>
 <td style="color:white; background-color:#666666">neutralSecondary: #666666</td>
+</tr>
+<tr>
 <td style="color:black; background-color:#a6a6a6">neutralTertiary: #a6a6a6</td>
 </tr>
 <tr>
