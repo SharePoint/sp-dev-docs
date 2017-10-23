@@ -562,7 +562,7 @@ This example relies on two number fields, `Before` and `After`, for which the va
 
 ## Supported Column Types
 The following column types support column formatting:
-* Single line of text
+* Single line of text 
 * Number
 * Choice
 * Person or Group
@@ -571,7 +571,13 @@ The following column types support column formatting:
 * Picture
 * Date/Time
 * Lookup
- The Name and Title fields are also supported.
+* Title (in Lists)
+
+The following are not currently supported:
+* Managed Metadata
+* Filename (in Document Libraries)
+* Calculated
+* Retention Label
 
 ## Style guidelines
 
