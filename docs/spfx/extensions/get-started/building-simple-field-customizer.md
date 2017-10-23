@@ -43,6 +43,8 @@ This article describes how to create your first Field Customizer Extension. You 
     * Accept the default value of **HelloWorld description** as your extension description, and select Enter.
     * Accept the default value of **No JavaScript Framework** as the framework selection, and select Enter. 
     
+    <br/>
+    
     ![Yeoman SharePoint generator prompts to create an extension solution](../../../images/ext-field-yeoman-prompts.png)
     
     At this point, Yeoman installs the required dependencies and scaffolds the solution files along with the **HelloWorld** extension. This might take a few minutes. 
@@ -53,13 +55,13 @@ This article describes how to create your first Field Customizer Extension. You 
     
     For information about troubleshooting any errors, see [Known issues](../../known-issues-and-common-questions.md).
 
-6. Once the scaffolding completes, lock down the version of the project dependencies by running the following command:
+6. After the scaffolding completes, lock down the version of the project dependencies by running the following command:
 
     ```sh
     npm shrinkwrap
     ```
     
-7. Next, type the following into the console to start Visual Studio Code.
+7. Type the following into the console to start Visual Studio Code.
     
     ```
     code .
@@ -166,9 +168,12 @@ You cannot currently use the local workbench to test SharePoint Framework Extens
     ```
     ?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Percent":{"id":"45a1d299-990d-4917-ba62-7cb67158be16","properties":{"sampleText":"Hello!"}}}
     ```
-
+    
+    <br/>
 
     The full URL should look similar to the following, depending on your tenant URL and the location of the newly created list:
+    
+    <br/>
     
     ```
     contoso.sharepoint.com/Lists/Orders/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Percent":{"id":"45a1d299-990d-4917-ba62-7cb67158be16","properties":{"sampleText":"Hello!"}}}
