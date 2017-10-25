@@ -26,15 +26,16 @@ You should update your Yeoman template packages. We have updated certification c
 
 - *Date - 6th of June*
 
-SharePoint Extensions with additional customizations capabilities for the SharePoint Online is now available for dev preview. We do not have public GA date currently. You can start learning how to build these extensions reading following tutorials.
+SharePoint Extensions with additional customizations capabilities for the SharePoint Online is now available in SharePoint Online. You can find more details on the SharePoint Framework extensions from our documentation.
 
-* [Getting started with SharePoint Framework Extensions](http://aka.ms/spfx-extensions)
+- [SharePoint Framework Extensions Overview](./extensions/overview-extensions.md)
+- [SharePoint Framework Extensions Tutorials](./extensions/get-started/build-a-hello-world-extension.md)
 
 **Will SharePoint Framework be available in on-premises?**
 
 - *Date - 6th of June*
 
-SharePoint Framework client-side web parts will be released to SharePoint 2016 as part of the Feature Pack 2 (FP2). 
+SharePoint Framework client-side web parts on classic pages were released to SharePoint 2016 as part of the Feature Pack 2 (FP2). There are no plans currently to provide SharePoint Framework capabilities to SharePoint 2013. There's no specific list of SharePoint Framework capabilities which will be included in the SharePoint 2019 release.
 
 ## Additional resources
 Please use following resources to provide feedback, comments and questions towards SharePoint engineering. 

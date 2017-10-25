@@ -50,7 +50,7 @@ Historically, we created web parts as full trust C# assemblies that were install
 
 ## What's next?
 
-SharePoint Framework web parts have now reached General Availability (GA). We will continue to provide updates and refinements over time based on your feedback and experiences. For any additional SharePoint Framework capabilities that are first launched in preview mode, you might experience occasional breaking changes around API names, flows, and more. Future updates to the SharePoint Framework will be backward compatible, so that your solutions will continue to work.
+SharePoint Framework web parts and extensions have now reached General Availability (GA). We will continue to provide updates and refinements over time based on your feedback and experiences. For any additional SharePoint Framework capabilities that are first launched in preview mode, you might experience occasional breaking changes around API names, flows, and more. Future updates to the SharePoint Framework will be backward compatible, so that your solutions will continue to work.
 
 ## SharePoint Framework License
 
@@ -65,3 +65,4 @@ You can also post issues, questions, or feedback on the docs or the SharePoint F
 ## Additional resources
 
 - [Overview of SharePoint client-side web parts](./web-parts/overview-client-side-web-parts.md)
+- [Overview of SharePoint Framework Extensions](./extensions/overview-extensions.md)
