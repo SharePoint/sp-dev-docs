@@ -121,7 +121,7 @@ What are the recommendation?
 | Type  | User Agent  | Description   |
 |---|---|---|
 | ISV Application | ISV&#124;CompanyName&#124;AppName/Version | Identify as ISV and include Company Name, App Name separated by a pipe character and then adding Version number separated with a slash character  |
-| Enterprise application | NONISV&#124;CompanyName&#124;AppName/Version | Identify as NONISV and include Company Name, App Name separated by a pipe character and then adding Version number after separated with a slash character |
+| Enterprise application | NONISV&#124;CompanyName&#124;AppName/Version | Identify as NONISV and include Company Name, App Name separated by a pipe character and then adding Version number separated with a slash character |
 
 - If you are building your own JavaScript libraries, which are used to call SharePoint Online APIs, make sure that you include the User Agent information to your http request and potentially register your web application also as an Application, where suitable.
 
