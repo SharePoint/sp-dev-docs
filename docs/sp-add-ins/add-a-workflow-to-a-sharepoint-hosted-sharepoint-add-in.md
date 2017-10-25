@@ -152,7 +152,8 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
 
    > [!Tip]
    > If the workflow begins but never completes, and the email is not sent, try ending the debugging session and trying F5 again a few times before you conclude there is something wrong in your code. Sometimes the problem is in SharePoint Online. If you are still having problems, try adding a content type called **ListFieldsContentType**, if there isn't one already, to the **ContentTypes** section of the schema.xml file. The following is an example of the markup: 
-   > `<ContentType ID="0x0100781dd48170b94fdc9706313c82b3d04c" Name="ListFieldsContentType" Hidden="TRUE">` `</ContentType>`
+   
+   > `<ContentType ID="0x0100781dd48170b94fdc9706313c82b3d04c" Name="ListFieldsContentType" Hidden="TRUE"></ContentType>`
    
    > Copy the whole of the **FieldRefs** section of the **NewEmployee** content type into this new content type. Save the project, retract, and try F5 again.
 
