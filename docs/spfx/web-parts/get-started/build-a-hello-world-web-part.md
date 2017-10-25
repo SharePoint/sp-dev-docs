@@ -157,7 +157,7 @@ The following are some key files in the project.
 
 Notice that the web part class is defined to accept a property type **IHelloWorldWebPartProps**.
 
-The property type is defined as an interface in a separate file **IHelloWorldWebPartProps.ts**.
+The property type is defined as an interface before **HelloWorldWebPart**.
 
 ```ts
 export interface IHelloWorldWebPartProps {
@@ -232,7 +232,7 @@ Save the file.
 
 Next, update the web part properties to include the new properties. This maps the fields to typed objects.
 
-Open **IHelloWorldWebPartProps.ts** and replace the existing code with the following code. 
+Replace the **IHelloWorldWebPartProps** interface with the following code.
 
 ```ts
 export interface IHelloWorldWebPartProps {
