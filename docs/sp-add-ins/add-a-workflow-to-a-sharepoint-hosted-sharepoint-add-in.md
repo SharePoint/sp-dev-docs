@@ -8,7 +8,8 @@ ms.prod: sharepoint
 # Add a workflow to a SharePoint-hosted SharePoint Add-in
 Learn how to include a workflow in a SharePoint Add-in.
  
-> **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+ > [!NOTE]
+ > The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 This is the sixth in a series of articles about the basics of developing SharePoint-hosted SharePoint Add-ins. You should first be familiar with  [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series:
  
@@ -22,7 +23,8 @@ This is the sixth in a series of articles about the basics of developing SharePo
     
 -  [Add a Web Part to a page in a SharePoint-hosted SharePoint Add-in](add-a-web-part-to-a-page-in-a-sharepoint-hosted-sharepoint-add-in.md)
 
-> **Note**  If you have been working through this series about SharePoint-hosted add-ins, then you have a Visual Studio solution that you can use to continue with this topic. You can also download the repository at  [SharePoint_SP-hosted_Add-Ins_Tutorials](https://github.com/OfficeDev/SharePoint_SP-hosted_Add-Ins_Tutorials) and open the BeforeWorkflow.sln file.
+ > [!NOTE]
+ > If you have been working through this series about SharePoint-hosted add-ins, then you have a Visual Studio solution that you can use to continue with this topic. You can also download the repository at  [SharePoint_SP-hosted_Add-Ins_Tutorials](https://github.com/OfficeDev/SharePoint_SP-hosted_Add-Ins_Tutorials) and open the BeforeWorkflow.sln file.
 
 In this article you add a workflow the Employee Orientation SharePoint Add-in that notifies the Human Resources (HR) department that a new employee is ready to fill out the HR paperwork.
 
@@ -57,7 +59,8 @@ In this article you add a workflow the Employee Orientation SharePoint Add-in th
 
 The workflow sends an email to notify an HR staffer that the new employee has finished the  **Tour of building** stage of orientation and is ready to fill out the HR intake paperwork. Any change in an existing item on theNew Employees in Seattle list triggers the workflow, but the workflow does nothing unless theOrientation Stage field of the list item is set toHR paperwork. If it is, then an email is sent to an HR staffer and a task for that employee will be added to the  **WorkflowTaskList**. 
 
-> **Note**  At various times when designing your workflow, a blue diamond symbol with an exclamation mark in it ( ![A small blue diamond shape with a white exclamation mark in it.](../images/f7b82a70-80fe-4e7e-a0f5-5a78cd12b367.PNG) ) will appear on one or more items in the workflow designer. These report temporary errors. (Hover the cursor over the symbol to see a brief message, or look in the Visual Studio  **Error List** for details.) These are side effects of the incompleteness of the workflow. They should all be gone when you have finished this procedure.
+ > [!NOTE]
+ > At various times when designing your workflow, a blue diamond symbol with an exclamation mark in it ( ![A small blue diamond shape with a white exclamation mark in it.](../images/f7b82a70-80fe-4e7e-a0f5-5a78cd12b367.PNG) ) will appear on one or more items in the workflow designer. These report temporary errors. (Hover the cursor over the symbol to see a brief message, or look in the Visual Studio  **Error List** for details.) These are side effects of the incompleteness of the workflow. They should all be gone when you have finished this procedure.
 
 1. Open the  **Toolbox** pane in Visual Studio, expand the **SP - List** node, and then drag **LookupSPListItem** into the **Sequence** in the designer.
     
@@ -74,42 +77,42 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
     ![The Properties pane of the Lookup List Item workflow activity with ItemID, ListID, and DisplayName properties set.](../images/60f3302e-ca9c-45be-b785-0c9f636181da.PNG)
  
 
-   Click anywhere outside the pane to save your changes and the designer surface should now look like this.
+3. Click anywhere outside the pane to save your changes and the designer surface should now look like this.
     
-   *Sequence in the workflow designer*
+    *Sequence in the workflow designer*
 
-   ![The workflow designer with a Sequence box and, inside it, an activity named Lookup Current New Employee.](../images/c8fbf801-e8e4-444a-9d2e-c14e29f537de.PNG)
+    ![The workflow designer with a Sequence box and, inside it, an activity named Lookup Current New Employee.](../images/c8fbf801-e8e4-444a-9d2e-c14e29f537de.PNG)
 
-3. Click the **Get Properties** link inside the (newly renamed) LookupCurrentNewEmployee activity in the designer. This adds a **GetDynamicValueProperties** activity to the sequence.
+4. Click the **Get Properties** link inside the (newly renamed) LookupCurrentNewEmployee activity in the designer. This adds a **GetDynamicValueProperties** activity to the sequence.
     
-4. Click the **Define…** text in the **GetDynamicValueProperties** activity. This will open the **Properties** dialog.
+5. Click the **Define…** text in the **GetDynamicValueProperties** activity. This will open the **Properties** dialog.
     
-5. Set the **Entity Type** to **List Item of** _list_instance_name_, where _list_instance_name_ is **New Employees in Seattle**.
+6. Set the **Entity Type** to **List Item of** _list_instance_name_, where _list_instance_name_ is **New Employees in Seattle**.
     
-6. In the **Path** column, click the top cell and then choose **Orientation Stage** from the drop-down.
+7. In the **Path** column, click the top cell and then choose **Orientation Stage** from the drop-down.
  
-7. Click the cell below it, and then choose **Title (Title)** from the drop-down.
+8. Click the cell below it, and then choose **Title (Title)** from the drop-down.
  
-8. Click **Populate Variables**. This will create variables named **OrientationStage** and **Title** and assign each of the values of the corresponding fields in the current item of the **New Employees in Seattle** list. The **Properties** dialog should now look like the following:
+9. Click **Populate Variables**. This will create variables named **OrientationStage** and **Title** and assign each of the values of the corresponding fields in the current item of the **New Employees in Seattle** list. The **Properties** dialog should now look like the following:
     
    *Properties dialog of workflow activity*
 
    ![The Properties dialog for the "Get Dynamic Values" activity, with the Entity Type set to items of the New Employees list, and variables named Title and OrientationStage assigned to the fields of the same names.](../images/36a841e7-ce1b-444c-9bfe-7cdc56399ec1.PNG)
  
 
-9. Choose **OK**. The designer surface should now look like the following:
+10. Choose **OK**. The designer surface should now look like the following:
     
    *Workflow designer*
 
    ![The workflow designer with two activities: a List Item Lookup and a Get Dynamic Values.](../images/cd8eb456-d883-491a-b171-38c1b9f64018.PNG)
 
-10. Open the **Toolbox** pane in Visual Studio, expand the **Control Flow** node, and then drag **If** into the bottom of the **Sequence** below the **GetDynamicValueProperties**.
+11. Open the **Toolbox** pane in Visual Studio, expand the **Control Flow** node, and then drag **If** into the bottom of the **Sequence** below the **GetDynamicValueProperties**.
  
-11. In the **Condition** box of the **If**, enter **OrientationStage=="HR paperwork"**.
+12. In the **Condition** box of the **If**, enter **OrientationStage=="HR paperwork"**.
     
-12. Open the **Toolbox** pane in Visual Studio, expand the **SP - Utilities** node, and then drag **Email** into the **Then** box of the **If** activity.
+13. Open the **Toolbox** pane in Visual Studio, expand the **SP - Utilities** node, and then drag **Email** into the **Then** box of the **If** activity.
     
-13. Select the  **Email** activity. In the **Properties** pane, set the values of the **Body**, **Subject**, and **To** properties. In each case, choose the callout button, **. . .**, for the property and use the  **Expression Editor** that opens to set the property's value as in the following table. These are C# string expressions, so use quotation marks exactly as shown. The `Title` here is a variable that you assigned earlier to the **Title** field of the list item (which holds the name of the employee).
+14. Select the  **Email** activity. In the **Properties** pane, set the values of the **Body**, **Subject**, and **To** properties. In each case, choose the callout button, **. . .**, for the property and use the  **Expression Editor** that opens to set the property's value as in the following table. These are C# string expressions, so use quotation marks exactly as shown. The `Title` here is a variable that you assigned earlier to the **Title** field of the list item (which holds the name of the employee).
     
     -  **Body:** `Title + " is waiting in the lobby to fill out benefits and employment forms."`
     -  **Subject:** `Title + " is ready for HR paperwork"`
@@ -117,9 +120,9 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
     
     Replace the placeholder, *your_O365_email*, with the identity that you use to sign in to your Office 365 developer account, such as `*alias*@*O365domain*.sharepoint.com`. This is a C# string so it must be in quotation marks.
     
-14. Open the **Toolbox** pane in Visual Studio, expand the **Runtime** node, and then drag **TerminateWorkflow** into the **Else** box of the **If** activity.
+15. Open the **Toolbox** pane in Visual Studio, expand the **Runtime** node, and then drag **TerminateWorkflow** into the **Else** box of the **If** activity.
     
-15. Select the  **TerminateWorkflow** activity and in the **Properties** pane, set the **Reason** to the following, *including the quotation marks*: `"Not at HR paperwork stage."`. The designer should now look the following:
+16. Select the  **TerminateWorkflow** activity and in the **Properties** pane, set the **Reason** to the following, *including the quotation marks*: `"Not at HR paperwork stage."`. The designer should now look the following:
     
     *Workflow designer when the workflow is complete*
 
@@ -138,7 +141,8 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
 
    ![The workflow Test Service Host window with a line saying that the workflow has started, followed by a line saying that it has completed. The GUID of the workflow instance is at the beginning of each line.](../images/2422936d-7ef6-4c90-a03f-30053fbb9743.PNG)
  
-   > **Note**  If the  **Test Service Host** console does not open, you may need to enable workflow debugging. Right-click the project name in **Solution Explorer** and choose **Properties**. Open the  **SharePoint** tab on the **Properties** pane and check the box for **Enable Workflow debugging**.
+    > [!NOTE]
+    > If the  **Test Service Host** console does not open, you may need to enable workflow debugging. Right-click the project name in **Solution Explorer** and choose **Properties**. Open the  **SharePoint** tab on the **Properties** pane and check the box for **Enable Workflow debugging**.
 
 3. Navigate to the email inbox (Outlook) of your Office 365 developer account. There is an email with the subject "*Employee* is ready for HR paperwork" where *Employee* is the name of the employee whose item you edited. The body of the email says "*Employee* is waiting in the lobby to fill out benefits and employment forms." The following is an example:
     
@@ -149,6 +153,7 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
    > [!Tip]
    > If the workflow begins but never completes, and the email is not sent, try ending the debugging session and trying F5 again a few times before you conclude there is something wrong in your code. Sometimes the problem is in SharePoint Online. If you are still having problems, try adding a content type called **ListFieldsContentType**, if there isn't one already, to the **ContentTypes** section of the schema.xml file. The following is an example of the markup: 
    > `<ContentType ID="0x0100781dd48170b94fdc9706313c82b3d04c" Name="ListFieldsContentType" Hidden="TRUE">` `</ContentType>`
+   
    > Copy the whole of the **FieldRefs** section of the **NewEmployee** content type into this new content type. Save the project, retract, and try F5 again.
 
 4. To end the debugging session, close the browser window or stop debugging in Visual Studio. Each time that you press F5, Visual Studio will retract the previous version of the add-in and install the latest one.
