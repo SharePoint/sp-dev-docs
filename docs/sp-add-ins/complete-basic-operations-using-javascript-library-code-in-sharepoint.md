@@ -44,7 +44,7 @@ For more information about the sets of APIs that are available for SharePoint, s
  
 
  
-This article shows how to perform basic operations using the JavaScript object model. You can add a reference to the object model using HTML <script> tags. For information about how to use the other client APIs, see the following:
+This article shows how to perform basic operations using the JavaScript object model. You can add a reference to the object model using HTML &lt;script&gt; tags. For information about how to use the other client APIs, see the following:
  
 
  
@@ -69,7 +69,7 @@ The following sections describe tasks that you can complete programmatically, an
  
 
  
-When you create a cloud-hosted add-in, you can add a reference to the object model by using HTML <script> tags. We recommend that you reference the host web because the add-in web may not exist in every scenario in cloud-hosted add-ins. You can retrieve the host web URL from the  _SPHostUrl_ query string parameter if you are using the **{StandardTokens}** token. You can also use your custom defined query string parameter if you are using the **{HostUrl}** token. After you have the host web URL, you must use JavaScript code to dynamically create the reference to the object model.
+When you create a cloud-hosted add-in, you can add a reference to the object model by using HTML &lt;script&gt; tags. We recommend that you reference the host web because the add-in web may not exist in every scenario in cloud-hosted add-ins. You can retrieve the host web URL from the  _SPHostUrl_ query string parameter if you are using the **{StandardTokens}** token. You can also use your custom defined query string parameter if you are using the **{HostUrl}** token. After you have the host web URL, you must use JavaScript code to dynamically create the reference to the object model.
  
 
  
@@ -154,7 +154,7 @@ The following code example performs these tasks to add a reference to the JavaSc
 
 ```
 
-When you create a SharePoint-hosted add-in, you can add a reference to the object model by using HTML <script> tags. The add-in web in a SharePoint-hosted add-in allows you to use relative paths to reference the required files to use the JavaScript object model.
+When you create a SharePoint-hosted add-in, you can add a reference to the object model by using HTML &lt;script&gt; tags. The add-in web in a SharePoint-hosted add-in allows you to use relative paths to reference the required files to use the JavaScript object model.
  
 
  
