@@ -120,10 +120,13 @@ What are the recommendation?
 
 | Type  | User Agent  | Description   |
 |---|---|---|
-| ISV Application | ISV:CompanyName:AppName:Version | Identify as ISV and include Company Name, App Name and Version name – separated by colon |
-| Enterprise application | NONISV:CompanyName:AppName:Version | Identify as NONISV and include Company Name, App Name and Version name – separated by colon |
+| ISV Application | ISV&#124;CompanyName&#124;AppName/Version | Identify as ISV and include Company Name, App Name separated by a pipe character and then adding Version number separated with a slash character  |
+| Enterprise application | NONISV&#124;CompanyName&#124;AppName/Version | Identify as NONISV and include Company Name, App Name separated by a pipe character and then adding Version number after separated with a slash character |
 
 - If you are building your own JavaScript libraries, which are used to call SharePoint Online APIs, make sure that you include the User Agent information to your http request and potentially register your web application also as an Application, where suitable.
+
+> [!NOTE]
+> Format of the  user agent string is expected to follow [RFC2616](http://www.ietf.org/rfc/rfc2616.txt), so please follow up on the above guidance on the right separators.
 
 ### Example of decorating traffic with User agent when using Client Side Object Model (CSOM)
 
@@ -139,13 +142,16 @@ using (var ctx = new ClientContext("https://contoso.sharepoint.com/sites/team"))
     // Add our User Agent information
     ctx.ExecutingWebRequest += delegate (object sender, WebRequestEventArgs e)
     {
-        e.WebRequestExecutor.WebRequest.UserAgent = "NONISV:Contoso:GovernanceCheck:1.0";
+        e.WebRequestExecutor.WebRequest.UserAgent = "NONISV|Contoso|GovernanceCheck/1.0";
     };
                 
     // Normal CSOM Call with custom User-Agent information
     Web site = ctx.Web;
     ctx.Load(site);
     ctx.ExecuteQuery();
+
+    // Remove the app decoration event handler after the executequery
+    clientContext.ExecutingWebRequest -= appDecorationHandler;
 }
 ```
 
@@ -156,7 +162,7 @@ Following sample is in c# format, but the similar User Agent information is reco
 ```cs
 HttpWebRequest endpointRequest = (HttpWebRequest)HttpWebRequest.Create(sharepointUrl.ToString() + "/_api/web/lists");
 endpointRequest.Method = "GET";
-endpointRequest.UserAgent = "NONISV:Contoso:GovernanceCheck:1.0";
+endpointRequest.UserAgent = "NONISV|Contoso|GovernanceCheck/1.0";
 endpointRequest.Accept = "application/json;odata=verbose";
 endpointRequest.Headers.Add("Authorization", "Bearer " + accessToken);
 HttpWebResponse endpointResponse = (HttpWebResponse)endpointRequest.GetResponse();
