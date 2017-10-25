@@ -149,9 +149,6 @@ using (var ctx = new ClientContext("https://contoso.sharepoint.com/sites/team"))
     Web site = ctx.Web;
     ctx.Load(site);
     ctx.ExecuteQuery();
-
-    // Remove the app decoration event handler after the executequery
-    clientContext.ExecutingWebRequest -= appDecorationHandler;
 }
 ```
 
