@@ -111,19 +111,19 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
     
 13. Select the  **Email** activity. In the **Properties** pane, set the values of the **Body**, **Subject**, and **To** properties. In each case, choose the callout button, **. . .**, for the property and use the  **Expression Editor** that opens to set the property's value as in the following table. These are C# string expressions, so use quotation marks exactly as shown. The `Title` here is a variable that you assigned earlier to the **Title** field of the list item (which holds the name of the employee).
     
-   -  **Body:** `Title + " is waiting in the lobby to fill out benefits and employment forms."`
-   -  **Subject:** `Title + " is ready for HR paperwork"`
-   -  **To:** `new System.Collections.ObjectModel.Collection<string>() {"your_O365_email"}`
+    -  **Body:** `Title + " is waiting in the lobby to fill out benefits and employment forms."`
+    -  **Subject:** `Title + " is ready for HR paperwork"`
+    -  **To:** `new System.Collections.ObjectModel.Collection<string>() {"your_O365_email"}`
     
-   Replace the placeholder, *your_O365_email*, with the identity that you use to sign in to your Office 365 developer account, such as `*alias*@*O365domain*.sharepoint.com`. This is a C# string so it must be in quotation marks.
+    Replace the placeholder, *your_O365_email*, with the identity that you use to sign in to your Office 365 developer account, such as `*alias*@*O365domain*.sharepoint.com`. This is a C# string so it must be in quotation marks.
     
 14. Open the **Toolbox** pane in Visual Studio, expand the **Runtime** node, and then drag **TerminateWorkflow** into the **Else** box of the **If** activity.
     
 15. Select the  **TerminateWorkflow** activity and in the **Properties** pane, set the **Reason** to the following, *including the quotation marks*: `"Not at HR paperwork stage."`. The designer should now look the following:
     
-   *Workflow designer when the workflow is complete*
+    *Workflow designer when the workflow is complete*
 
-   ![The workflow designer with activities for "List Item Lookup", "Get Dynamic Value", and an "If Then Else" structure. Email is the activity in the Then part and Terminate Worklow is the activity in the Else.](../images/c1230e3b-d149-413c-aa66-d258250a4512.PNG)
+    ![The workflow designer with activities for "List Item Lookup", "Get Dynamic Value", and an "If Then Else" structure. Email is the activity in the Then part and Terminate Worklow is the activity in the Else.](../images/c1230e3b-d149-413c-aa66-d258250a4512.PNG)
  
 
 ## Run and test the add-in
