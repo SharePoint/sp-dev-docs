@@ -102,9 +102,9 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
 
 10. Choose **OK**. The designer surface should now look like the following:
     
-   *Workflow designer*
+    *Workflow designer*
 
-   ![The workflow designer with two activities: a List Item Lookup and a Get Dynamic Values.](../images/cd8eb456-d883-491a-b171-38c1b9f64018.PNG)
+    ![The workflow designer with two activities: a List Item Lookup and a Get Dynamic Values.](../images/cd8eb456-d883-491a-b171-38c1b9f64018.PNG)
 
 11. Open the **Toolbox** pane in Visual Studio, expand the **Control Flow** node, and then drag **If** into the bottom of the **Sequence** below the **GetDynamicValueProperties**.
  
