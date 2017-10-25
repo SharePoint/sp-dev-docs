@@ -11,7 +11,8 @@ Learn how to deploy a custom theme to a SharePoint site by using the user interf
 SharePoint includes preinstalled themes. You can create custom themes by creating additional color palettes, font schemes, and master pages. After the files are uploaded to the Theme Gallery and the Master Page Gallery, you can deploy a theme to a site by using the user interface or by using code. For more information about color palettes and font schemes, see  [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md).
   
     
-    
+> [!NOTE]
+> This article only applies in the context of classic SharePoint site experience. If you are looking details around modern SharePoint sites and their theme support, please have a look on the following article - [SharePoint site theming](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview)
 
 
 ## Core concepts to know to deploy a theme
