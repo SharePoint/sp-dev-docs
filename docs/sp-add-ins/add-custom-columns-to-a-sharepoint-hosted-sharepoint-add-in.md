@@ -97,9 +97,9 @@ In this article, we get back to coding by adding some site columns to the Employ
     1. Select the callout button, **· · ·** just above the list, and then select **Create View**.
     2. The **View Type** page opens, with the breadcrumb structure **Settings > View Type** near the top. Select the **Settings** breadcrumb.
     
-    *Figure 1. Steps to open the list settings page*
+        *Figure 1. Steps to open the list settings page*
 
-    ![New Employee in Seattle list with callout button and Create View item highlighted as step one. Then arrow to Create View page with Settings breadcrumb highlighted.](../images/6c119cae-adf8-42ff-9890-f3aa1e11719d.png)
+        ![New Employee in Seattle list with callout button and Create View item highlighted as step one. Then arrow to Create View page with Settings breadcrumb highlighted.](../images/6c119cae-adf8-42ff-9890-f3aa1e11719d.png)
  
     3. On the **Settings** page, open the **Add from existing site columns** link on the left about halfway down the page.
     
@@ -125,7 +125,7 @@ In this article, we get back to coding by adding some site columns to the Employ
  
 5. To end the debugging session, close the browser window or stop debugging in Visual Studio. Each time that you select F5, Visual Studio will retract the previous version of the add-in and install the latest one.
     
-6. You will work with this add-in and Visual Studio solution in other articles, and it's a good practice to retract the add-in one last time when you are done working with it for a while. Right-click the project in **Solution Explorer** and then select **Retract**.
+6. You will work with this add-in and Visual Studio solution in other articles, and it's a good practice to retract the add-in one last time when you are done working with it for a while. Right-click the project in **Solution Explorer**, and then select **Retract**.
     
 
 ## Next steps
