@@ -43,6 +43,8 @@ This article describes how to create your first Field Customizer Extension. You 
     * Accept the default value of **HelloWorld description** as your extension description, and select Enter.
     * Accept the default value of **No JavaScript Framework** as the framework selection, and select Enter. 
     
+    <br/>
+    
     ![Yeoman SharePoint generator prompts to create an extension solution](../../../images/ext-field-yeoman-prompts.png)
     
     At this point, Yeoman installs the required dependencies and scaffolds the solution files along with the **HelloWorld** extension. This might take a few minutes. 
@@ -52,20 +54,26 @@ This article describes how to create your first Field Customizer Extension. You 
     ![SharePoint client-side solution scaffolded successfully](../../../images/ext-field-yeoman-complete.png)
     
     For information about troubleshooting any errors, see [Known issues](../../known-issues-and-common-questions.md).
+
+6. After the scaffolding completes, lock down the version of the project dependencies by running the following command:
+
+    ```sh
+    npm shrinkwrap
+    ```
     
-6. When the solution scaffolding is complete, type the following into the console to start Visual Studio Code.
+7. Type the following into the console to start Visual Studio Code.
     
     ```
     code .
     ```
     
-    **Note:** Because the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor that supports client-side development to build your extension.
+    > **Note:** Because the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor that supports client-side development to build your extension.
 
     Note how the default solution structure looks like the solution structure of client-side web parts. This is the basic SharePoint Framework solution structure, with similar configuration options across all solution types.
 
     ![SharePoint Framework solution opened after initial scaffolding](../../../images/ext-field-vscode-solution-structure.png)
 
-7. Open **HelloWorldFieldCustomizer.manifest.json** in the **src\extensions\helloWorld** folder.
+8. Open **HelloWorldFieldCustomizer.manifest.json** in the **src\extensions\helloWorld** folder.
 
     This file defines your extension type and a unique identifier `id` for your extension. You’ll need this unique identifier later when debugging and deploying your extension to SharePoint.
 
@@ -137,7 +145,7 @@ You cannot currently use the local workbench to test SharePoint Framework Extens
     
     ![Creating a new list](../../../images/ext-field-create-new-list.png)
     
-5. Create a new list named **Orders** and then select **Create**.
+5. Create a new list named **Orders**, and then select **Create**.
     
     ![Creating a new list with name of Orders](../../../images/ext-field-create-new-list-order.png)
     
@@ -155,34 +163,41 @@ You cannot currently use the local workbench to test SharePoint Framework Extens
 
     Because our Field Customizer is still hosted in localhost and is running, we can use specific debug query parameters to execute the code in the newly created list.
 
-9. Append the following query string parameters to the URL. Notice that you will need to update the ID to match your own extension identifier available from the **HelloWorldFieldCustomizer.manifest.json** file.
+9. Append the following query string parameters to the URL. Notice that you will need to update the ID to match your own extension identifier available from the **HelloWorldFieldCustomizer.manifest.json** file. For more information, see [More details about the URL query parameters](#more-details-about-the-url-query-parameters). 
 
     ```
     ?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Percent":{"id":"45a1d299-990d-4917-ba62-7cb67158be16","properties":{"sampleText":"Hello!"}}}
     ```
+    
+    <br/>
 
-More detail about the URL query parameters:
+    The full URL should look similar to the following, depending on your tenant URL and the location of the newly created list:
+    
+    <br/>
+    
+    ```
+    contoso.sharepoint.com/Lists/Orders/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Percent":{"id":"45a1d299-990d-4917-ba62-7cb67158be16","properties":{"sampleText":"Hello!"}}}
+    ```
+    
+10. Accept the loading of debug manifests by selecting **Load debug scripts** when prompted.
+
+    ![Accept loading debug scripts](../../../images/ext-field-accept-debug-scripts.png)
+
+    Notice how the Percent values are now presented with an additional prefix string as `Hello!: `, which is provided as a property for the Field Customizer.
+
+    ![List view with field customizer rendered for percent field](../../../images/ext-field-default-customizer-output.png)
+
+
+### More details about the URL query parameters
 
 - **loadSPFX=true** ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework is not normally loaded unless at least one extension is registered. Because no components are registered yet, we must explicitly load the framework.
 - **debugManifestsFile** specifies that you want to load SPFx components that are locally served. The loader only looks for components in the App Catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
 - **fieldCustomizers** indicates which fields in your list should have their rendering controlled by the Field Customizer. The ID parameter specifies the GUID of the extension that should be used to control the rendering of the field. The properties parameter is an optional text string containing a JSON object that will be deserialized into `this.properties` for your extension.
-  - **Key**: Use the internal name of the field as the key.
-  - **Id**: The GUID of the Field Customizer extension associated with this field.
-  - **Properties**: The property values defined in the extension. In this example, `sampleText` is a property defined by the extension.
+    - **Key**: Use the internal name of the field as the key.
+    - **Id**: The GUID of the Field Customizer extension associated with this field.
+    - **Properties**: The property values defined in the extension. In this example, `sampleText` is a property defined by the extension.
 
-The full URL should look similar to the following, depending on your tenant URL and the location of the newly created list:
-    
-```
-contoso.sharepoint.com/Lists/Orders/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Percent":{"id":"45a1d299-990d-4917-ba62-7cb67158be16","properties":{"sampleText":"Hello!"}}}
-```
-    
-Accept the loading of Debug Manifests by selecting **Load debug scripts** when prompted.
-
-![Accept loading debug scripts](../../../images/ext-field-accept-debug-scripts.png)
-
-Notice how the Percent values are now presented with an additional prefix string as 'Hello!: ', which is provided as a property for the Field Customizer.
-
-![List view with field customizer rendered for percent field](../../../images/ext-field-default-customizer-output.png)
+<br/>
 
 ## Enhance the Field Customizer rendering
 Now that we have successfully tested the out-of-the-box starting point of the Field Customizer, let's modify the logic slightly to have a more polished rendering of the field value. 
@@ -209,12 +224,14 @@ Now that we have successfully tested the out-of-the-box starting point of the Fi
       public onRenderCell(event: IFieldCustomizerCellEventParameters): void {
 
         event.domElement.classList.add(styles.cell);
-        event.domElement.innerHTML = `
+        if (typeof event.fieldValue != 'undefined' && event.fieldValue) {  // for folder fieldValue is "".
+            event.domElement.innerHTML = `
                     <div class='${styles.full}'>
                       <div style='width: ${event.fieldValue}px; background:#0094ff; color:#c0c0c0'>
                         &nbsp; ${event.fieldValue}
                       </div>
                     </div>`;
+        }
       }
     ```
 
@@ -240,7 +257,7 @@ Now that we have tested our solution properly in debug mode, we can package this
 1. Install the solution package to the site where it should be installed, so that the extension manifest is white listed for execution.
 
 2. Associate the Field Customizer to an existing field in the site. You can do this programmatically (CSOM/REST) or by using the feature framework inside of the SharePoint Framework solution package. You'll need to associate the following properties in the `SPField` object at the site or list level.
-    - **ClientSiteComponentId** is the identifier (GUID) of the Field Customizer, which has been installed in the App Catalog. 
+    - **ClientSiteComponentId** is the identifier (GUID) of the Field Customizer, which has been installed in the App Catalog.
     - **ClientSideComponentProperties** is an optional parameter, which can be used to provide properties for the Field Customizer instance.
 
     Note that you can control the requirement to add a solution containing your extension to the site by using the `skipFeatureDeployment` setting in **package-solution.json**. Even though you would not require the solution to be installed on the site, you'd need to associate **ClientSideComponentId** to specific objects for the extension to be visible.
@@ -252,7 +269,9 @@ Now that we have tested our solution properly in debug mode, we can package this
 4. Extend the **sharepoint** folder and **assets** subfolder in the root of the solution to see the existing **elements.xml** file. 
     
     ![assets folder in solution structure](../../../images/ext-field-assets-folder.png)
-    
+
+<br/>
+
 ### Review the elements.xml file 
 
 Open the **elements.xml** file inside the **sharepoint\assets** folder.
@@ -275,6 +294,8 @@ Note the following XML structure in **elements.xml**.  The **ClientSideComponent
 
 </Elements>
 ```
+
+<br/>
 
 ### Ensure that definitions are taken into account within the build pipeline
 
@@ -379,6 +400,4 @@ Now you are ready to deploy the solution to a SharePoint site and get the field 
 
 In this case, we continued to host the JavaScript from the localhost, but you could just as well relocate the assets to any CDN and update the URL to enable the loading of the JavaScript assets outside of the localhost as well.
 
-The process for publishing your app is identical among the different extension types. You can use the following publishing steps to update the assets to be hosted from a CDN.
-
-* [Host extension from Office 365 CDN](./hosting-extension-from-office365-cdn.md).
+The process for publishing your app is identical among the different extension types. You can use the following publishing steps to update the assets to be hosted from a CDN: [Host extension from Office 365 CDN](./hosting-extension-from-office365-cdn.md).

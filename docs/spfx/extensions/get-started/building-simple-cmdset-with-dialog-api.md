@@ -52,19 +52,25 @@ This article describes how to create your first ListView Command Set Extension. 
 
     For information about troubleshooting any errors, see [Known issues](../../known-issues-and-common-questions.md).
 
-6. When the solution scaffolding is complete, type the following into the console to start Visual Studio Code.
+6. Once the scaffolding completes, lock down the version of the project dependencies by running the following command:
+
+    ```sh
+    npm shrinkwrap
+    ```
+
+7. Next, type the following into the console to start Visual Studio Code.
 
     ```
     code .
     ```
 
-    **Note:** Because the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor that supports client-side development to build your extension.
+    > **Note:** Because the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor that supports client-side development to build your extension.
 
     Note how the default solution structure looks like the solution structure of client-side web parts. This is the basic SharePoint Framework solution structure, with similar configuration options across all solution types.
 
     ![SharePoint Framework solution opened after initial scaffolding](../../../images/ext-com-vscode-solution-structure.png)
 
-7. Open **HelloWorldCommandSet.manifest.json** in the **src\extensions\helloWorld** folder.
+8. Open **HelloWorldCommandSet.manifest.json** in the **src\extensions\helloWorld** folder.
 
     This file defines your extension type and a unique identifier `id` for your extension. You’ll need this unique identifier later when debugging and deploying your extension to SharePoint.
 
@@ -147,46 +153,48 @@ You cannot currently use the local workbench to test SharePoint Framework Extens
     
     Because our ListView Command Set is hosted from localhost and is running, we can use specific debug query parameters to execute the code in the list view.
     
-3. Append the following query string parameters to the URL. Notice that you will need to update the GUID to match the ID of your ListView Command Set Extension available in the **HelloWorldCommandSet.manifest.json** file:
+3. Append the following query string parameters to the URL. Notice that you will need to update the GUID to match the ID of your ListView Command Set Extension available in the **HelloWorldCommandSet.manifest.json** file. For more information, see [More details about the URL query parameters](#more-details-about-the-url-query-parameters).
     
     ```
     ?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"a8047e2f-30d5-40fc-b880-b2890c7c16d6":{"location":"ClientSideExtension.ListViewCommandSet.CommandBar","properties":{"sampleTextOne":"One item is selected in the list.","sampleTextTwo":"This command is always visible."}}}
     ```
 
-More detail about the URL query parameters:
+    The full URL should look similar to the following, depending on your tenant URL and the location of the list.
 
-- **loadSPFX=true** ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework is not normally loaded unless at least one extension is registered. Because no components are registered yet, we must explicitly load the framework.
-- **debugManifestsFile** specifies that we want to load SPFx components that are being locally served. The loader only looks for components in the App Catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
-- **customActions** simulates a custom action. You can set many properties on this `CustomAction` object that affect the look, feel, and location of your button; we’ll cover them all later.
-  - **Key**: GUID of the extension.
-  - **Location**: Where the commands are displayed. The possible values are:
-    - **ClientSideExtension.ListViewCommandSet.ContextMenu:**  The context menu of the item(s)
-    - **ClientSideExtension.ListViewCommandSet.CommandBar:** The top command set menu in a list or library
-    - **ClientSideExtension.ListViewCommandSet:** Both the context menu and the command bar (Corresponds to SPUserCustomAction.Location="CommandUI.Ribbon")
-  - **Properties**: An optional JSON object containing properties that are available via the `this.properties` member.
-
-The full URL should look similar to the following, depending on your tenant URL and the location of the list.
-
-```
-contoso.sharepoint.com/Lists/Orders/AllItems.aspx?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"a8047e2f-30d5-40fc-b880-b2890c7c16d6":{"location":"ClientSideExtension.ListViewCommandSet.CommandBar","properties":{"sampleTextOne":"One item is selected in the list.","sampleTextTwo":"This command is always visible."}}}
-```
+    ```
+    contoso.sharepoint.com/Lists/Orders/AllItems.aspx?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"a8047e2f-30d5-40fc-b880-b2890c7c16d6":{"location":"ClientSideExtension.ListViewCommandSet.CommandBar","properties":{"sampleTextOne":"One item is selected in the list.","sampleTextTwo":"This command is always visible."}}}
+    ```
 
 4. Accept the loading of debug manifests by selecting **Load debug scripts** when prompted.
     
     ![Accept loading debugripts](../../../images/ext-com-accept-debug-scripts.png)
     
-    Notice the new **Command Two** button available in the toolbar. If you select that button, you'll see the text provided as property for the `sampleTextTwo` property.
+5. Notice the new **Command Two** button available in the toolbar. Select that button to see the text provided as property for the `sampleTextTwo` property.
 
     ![Command Two button visible in the document library toolbar](../../../images/ext-com-default-customizer-output.png)
 
-    The **Command One** button is not visible based on the code, until one row is selected in the document library. Upload or create a document to the library and confirm that the second button is visible.
+6. The **Command One** button is not visible based on the code, until one row is selected in the document library. Upload or create a document to the library and confirm that the second button is visible.
 
     ![Selecting one document to get Command One button visible](../../../images/ext-com-default-customizer-doc-select.png)
 
-5. Select **Command Two** to see how the dialog control works, which is used in the default output from the solution scaffolding when the ListView Command Set is selected as the extension type. 
+7. Select **Command Two** to see how the dialog control works, which is used in the default output from the solution scaffolding when the ListView Command Set is selected as the extension type. 
 
     ![Selecting one document to get Command One button visible](../../../images/ext-com-default-customizer-btn-click.png)
 
+
+### More details about the URL query parameters
+
+- **loadSPFX=true** ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework is not normally loaded unless at least one extension is registered. Because no components are registered yet, we must explicitly load the framework.
+- **debugManifestsFile** specifies that we want to load SPFx components that are being locally served. The loader only looks for components in the App Catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
+- **customActions** simulates a custom action. You can set many properties on this `CustomAction` object that affect the look, feel, and location of your button; we’ll cover them all later.
+    - **Key**: GUID of the extension.
+    - **Location**: Where the commands are displayed. The possible values are:
+        - **ClientSideExtension.ListViewCommandSet.ContextMenu:**  The context menu of the item(s)
+        - **ClientSideExtension.ListViewCommandSet.CommandBar:** The top command set menu in a list or library
+        - **ClientSideExtension.ListViewCommandSet:** Both the context menu and the command bar (Corresponds to SPUserCustomAction.Location="CommandUI.Ribbon")
+    - **Properties**: An optional JSON object containing properties that are available via the `this.properties` member.
+
+<br/>
 
 ## Enhance the ListView Command Set rendering
 

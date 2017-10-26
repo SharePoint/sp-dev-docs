@@ -82,8 +82,14 @@ When prompted:
 ![Yeoman generator questions around the newly created web part](../../../images/cdn-create-webpart-yo.png)
 
 At this point, Yeoman will scaffold the solution files and install the required dependencies. This might take a few minutes. Yeoman will scaffold the project to include your custom web part as well.
-	
-When the scaffold is complete, in the console, type the following to open the web part project in Visual Studio Code:
+
+Once the scaffolding completes, lock down the version of the project dependencies by running the following command:
+
+```sh
+npm shrinkwrap
+```
+
+Next, type the following to open the web part project in Visual Studio Code:
 
 ```
 code .

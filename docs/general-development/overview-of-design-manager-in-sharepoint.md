@@ -7,11 +7,11 @@ ms.assetid: 29834b3f-3815-4347-91d3-296387663114
 
 
 # Overview of Design Manager in SharePoint
-Get an overview of using Design Manager to brand your SharePoint site. Design Manager is a publishing feature that is available in publishing sites in both SharePoint and Office 365. You can also use Design Manager to brand the public-facing website in Office 365.
+Get an overview of using Design Manager to brand your SharePoint site. Design Manager is a publishing feature that is available in publishing sites in both SharePoint and Office 365. 
 ## Introduction to Design Manager
 <a name="Introduction"> </a>
 
-If you want your SharePoint site to represent your organization's brand and not "look like SharePoint," you can create a custom design and use Design Manager to achieve that goal. Design Manager is a feature in SharePoint that makes it easier to create a fully customized, pixel-perfect design while using the web-design tools that you're already familiar with. Design Manager is a publishing feature that is available in publishing sites in both SharePoint and Office 365. You can also use Design Manager to brand the public-facing website in Office 365.
+If you want your SharePoint site to represent your organization's brand and not "look like SharePoint," you can create a custom design and use Design Manager to achieve that goal. Design Manager is a feature in SharePoint that makes it easier to create a fully customized, pixel-perfect design while using the web-design tools that you're already familiar with. Design Manager is a publishing feature that is available in publishing sites in both SharePoint and Office 365. 
   
     
     
@@ -36,13 +36,7 @@ At a high level, the designer will perform the following tasks:
   
 - Implement the design by using Design Manager. Sections of this article provide an introduction to Design Manager and the process of using Design Manager to implement a visual design.
     
-  
-
-> **Note:**
-> The design elements that you can create for a public-facing website in SharePoint Online are different from the design elements for other publishing sites. Also, you cannot create design packages in the version of Design Manager that is available in the public-facing website in SharePoint Online. 
-  
-    
-    
+ 
 
 
 ## Use Design Manager to implement a design
@@ -274,13 +268,11 @@ For more information, see  [How to: Create a page layout in SharePoint](how-to-c
 
 ### Create themes and composed looks
 
-In the public-facing website in Office 365, but not in on-premises SharePoint installations, Design Manager has the option of creating themes and composed looks. A theme is a set of fonts and colors that can be applied to a custom design (meaning a master page). Themes are defined in .xml files that you upload to the Themes gallery. If you want a custom master page to be theme-able, you need to add special markup to the master page that SharePoint recognizes and uses to insert theme elements such as fonts and colors.
+In the Office 365, but not in on-premises SharePoint installations, Design Manager has the option of creating themes and composed looks. A theme is a set of fonts and colors that can be applied to a custom design (meaning a master page). Themes are defined in .xml files that you upload to the Themes gallery. If you want a custom master page to be theme-able, you need to add special markup to the master page that SharePoint recognizes and uses to insert theme elements such as fonts and colors.
   
     
-    
-A composed look is just an association between a background image, a theme (meaning fonts and colors), and a design (meaning a master page). A composed look takes predefined design elements—themes, background images, and master pages—and enables them to be used in many different combinations, so that the public-facing website has many more customization options.
+A composed look is just an association between a background image, a theme (meaning fonts and colors), and a design (meaning a master page). A composed look takes predefined design elements—themes, background images, and master pages—and enables them to be used in many different combinations.
   
-    
     
 
 ### Publish and apply design
@@ -306,14 +298,7 @@ A design package is an easy way to collect all the files and assets used by your
     
 A design package is a .wsp file, a SharePoint solution file, which is basically a special type of .cab file. When you create or import a design package, the .wsp file is stored in the Solutions gallery. After you import a design package, the package is automatically activated. If the master pages and page layouts were published before they were packaged, and if the master pages were assigned to device channels before they were packaged, the design will be automatically applied to the site when the design package is deployed. Otherwise, to apply the design to the new site, you just have to publish the design files and apply the master pages per device channel.
   
-    
-    
 
-> **Note:**
-> Design packages are not available in the public-facing website in Office 365. To implement a fully custom design with Design Manager, you can invite a designer into your site by temporarily granting that person the Designer permission level. 
-  
-    
-    
 
 
 ## Additional resources

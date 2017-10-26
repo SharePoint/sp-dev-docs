@@ -15,6 +15,9 @@ You can also follow these steps by watching the video on the [SharePoint PnP You
 <img src="../../../images/spfx-youtube-tutorial4.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
+> [!NOTE]
+> There are multiple different hosting options for your web part assets. This tutorial concentrates on showing the Azure CDN option, but you could also use the [Office 365 CDN](./hosting-webpart-from-office-365-cdn.md) or simply host your assets from SharePoint library from your tenant. In the latter case, you would not benefit from the CDN performance improvements, but that would also work from the functionality perspective. Any location which end users can access using HTTP would be technically suitable for hosting the assets for end users. 
+
 ## Prerequisites
 
 Make sure that you have completed the following tasks before you begin:

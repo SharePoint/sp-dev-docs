@@ -51,7 +51,13 @@ When prompted, define values as follows:
 
 ![SharePoint Framework Yeoman generator with the default choices](../../../images/ng-migration-yeoman-generator.png)
 
-Once the scaffolding completes, open your project folder in your code editor. In this tutorial, you will use Visual Studio Code.
+Once the scaffolding completes, lock down the version of the project dependencies by running the following command:
+
+```sh
+npm shrinkwrap
+```
+
+Next, open your project folder in your code editor. In this tutorial, you will use Visual Studio Code.
 
 ![SharePoint Framework project open in Visual Studio Code](../../../images/ng-migration-project-visual-studio-code.png)
 
