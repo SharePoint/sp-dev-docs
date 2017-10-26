@@ -1,97 +1,128 @@
 ---
-title: Using Office UI Fabric Core and Fabric React in SPFx client-side web parts
+title: Using Office UI Fabric Core and Fabric React in SharePoint Framework
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ---
 
 
-# Using Office UI Fabric Core and Fabric React in SPFx client-side web parts
-
-#### **Important:** You must upgrade existing projects to use *@microsoft/sp-build-web@1.0.1* or later in order to use the Office UI Fabric React components. See the instructions at the end of this article for additional information.
+# Using Office UI Fabric Core and Fabric React in SharePoint Framework
 
 The Office UI Fabric is the official front-end framework for building experiences in Office 365 and SharePoint. SharePoint provides seamless integration with Fabric that enables Microsoft to deliver a robust and consistent design language across various SharePoint experiences such as modern team sites, modern pages, and modern lists. Additionally, the Office UI Fabric is available for developers in the SharePoint Framework when building custom SharePoint solutions.
 
-> Integration and usage of the Office UI Fabric is still a work in progress. The purpose of this document is to provide a status update to SPFx developers. Very soon we will publish a final plan.
-
-## Goals
-
-There are two parts of the Office UI Fabric that are available to be used by developers:
-
-  1. [Office UI Fabric Core](http://dev.office.com/fabric) a.k.a. Fabric Core - this is a set of core styles, typography, a responsive grid, animations, icons, and other fundamental building blocks of the overall design language.
-
-  2. [Office UI Fabric React](http://dev.office.com/fabric#/components) a.k.a. Fabric React - this package contains a set of React components built on top of the Fabric design language.
-  
-Some of the goals of the SharePoint Framework are to allow both Microsoft and customers to build rich, beautiful, and consistent solutions on top of SharePoint. In accordance with these goals, here are our design principles:
-
-* All customers should be able to smoothly and reliably consume Fabric Core and Fabric React in their solutions.
-* Microsoft will roll out updated experiences that consume updated versions of Fabric Core and Fabric React in SharePoint without conflicting with customer's solutions.
-* Customers can customize and override the styles, designs, and components to tailor to their solution's needs.
-* Customers should be able to build solutions with non-React based frameworks.
-
 ## Summary
 
-Microsoft uses Fabric Core and Fabric React in SharePoint. Microsoft regularly pushes updates to SharePoint Online and SharePoint experiences are likely to continue updating the version of Fabric Core and Fabric React used. These updates could potentially conflict with third party solutions built with previous versions of Fabric Core and Fabric React, which could cause exceptions in those customizations. The primary reason for these types of breaks is the use of **Global CSS styles** in both Fabric libraries. Such conflicts need to be avoided at all costs. 
-
-In order to achieve reliability, one of the main problems we need to solve is that of **Global CSS styles**. Currently, both Fabric Core and fabric.component.css use global styles.
-
-For these reasons, currently, customer solutions cannot yet safely use portions of the Office UI Fabric. However, we understand that developers need Fabric Core and Fabric React to build their solutions. We are working to resolve this as quickly as possible.
-
-Here's a summary of currently supported options for using the Office UI Fabric within SharePoint Framework solutions based on the JavaScript framework selected:
-
-- React - You can only use the Office UI Fabric safely by **statically linking** to the Fabric React components
-- Other JS libraries - Usage of the Office UI Fabric within a SharePoint Framework solution is **not** supported
-
-> An example of the current versioning challenge: A web part consumes the class `ms-Icon--List` when they build their web part. At a later date, Fabric decides to change the definition of this class. The web part that had made an assumption regarding the previous implementation can break. Similarly, let's say, the web part uses the class `ms-Button` from Fabric React. Then the Fabric React team later changes the implementation of the Button in a big way along with the styles in the `ms-Button` class. That would likely break the web part.
+Microsoft uses Fabric Core and Fabric React in SharePoint. Microsoft regularly pushes updates to SharePoint Online which could also update the Fabric Core and Fabric React versions as well. These updates could potentially conflict with third party customer solutions built with previous versions of Fabric Core and Fabric React, which could cause exceptions in those customizations. The primary reason for these types of breaks is the use of **Global CSS styles** in both Fabric libraries. Such conflicts need to be avoided at all costs. 
 
 > The challenge with Global CSS styles is well explained in the following presentation within the context of React and JS: [React CSS in JS](https://speakerdeck.com/vjeux/react-css-in-js).
 
-## How to use the Office UI Fabric React in a Safe Way in Your Solution
+In order to achieve reliability, one of the main problems we need to solve is that of **Global CSS styles**. This accounts to not using global class names in the HTML markup and instead using Fabric Core mixins and variables in the SASS declaration file. This involves importing the Fabric Core's SASS declarations in your SASS file and then consuming the variables and mixins appropriately. 
 
-Here are the recommendations for using Fabric in React based web parts in a safe and reliable way:
+## Goals
 
-- Web part developers should place an explicit dependency on the specific version of Fabric React version 2.0 in their **package.json** file `"office-ui-fabric-react":"2.34.2"`. Please note, Fabric React versions older than 2.x are not supported.
-- Web part developers need to **statically link** to the Fabric React components. This includes the Fabric React component in your web part bundle. This will ensure that if the page level implementation of the Button were to change, it will not affect your web part adversely.
-- **Overriding** Fabric React component styles should be done only sparingly and within a local scope. A developer can override using custom CSS classes with `!important` and style tags. Both will have higher specificity than the component classes. Please note, if you override using a simple class, then you may run into load order issues. i.e. If `ms-Button` loads after your class, it will take precedence because their specificity is the same.
-- **Theming** should just work as is. No extra work is required on the part of the developer.
+The goal of the SharePoint Framework is to allow both Microsoft and customers build rich, beautiful, and consistent user experiences on top of SharePoint. In accordance with these goals, below are the key design  principles:
 
-The following code snippet shows how to perform static and dynamic linking of libraries:
+* Customers should be able to smoothly and reliably consume Fabric Core and Fabric React in their solutions.
+* Microsoft will roll out updated experiences that consume updated versions of Fabric Core and Fabric React in SharePoint without conflicting with customer's solutions.
+* Customers can customize and override the default styles, designs, and components to tailor the solution's needs.
 
-```Javascript
-  // This sample demonstrates how static linking should be done for Fabric React components.
-  // Remember to explicitly add a dependency on a specific version of 
-  // office-ui-fabric-react in your package.json file.
+There are two parts of the Office UI Fabric that are available to be used by developers:
 
-  // correct - static linking.
-  import { Button } from 'office-ui-fabric-react/lib/Button';
+* [Office UI Fabric Core](http://dev.office.com/fabric)
 
-  // incorrect - dynamic linking.
-  import { Button } from '@microsoft/office-ui-fabric-react';
+  A set of core styles, typography, a responsive grid, animations, icons, and other fundamental building blocks of the overall design language.
 
-  render() {
-    ...
-    <div>
-      <Button>click me</Button>
-    </div>
-    ...
-  }
+* [Office UI Fabric React](http://dev.office.com/fabric#/components)
+
+  A set of React components built on top of the Fabric design language for use in React-based projects.
+
+## SPFx Fabric Core Package
+
+The SPFx Fabric Core npm package - sp-office-ui-fabric-core - contains a subset of supported Fabric Core styles that can be safely consumed within a SharePoint Framework component. 
+
+The following core styles are supported in the package:
+- Typography
+- Layouts
+- Colors
+- Themes
+- Localization
+
+The following are not yet supported in the package:
+- Animations
+- Icons
+
+With the SharePoint Framework yeoman generator version 1.3.3, the default project (web parts and extensions) templates will come setup with the new sp-office-ui-fabric-core package and consume core styles from the package instead of using global CSS styles. 
+
+### Updating existing projects
+
+To use the SPFx Fabric Core package in your existing project, install the package as dev dependency:
+
+```
+npm install @microsoft/sp-office-ui-fabric-core --save-dev
 ```
 
-***Understanding this approach and its shortcomings:***
+Once installed, you can then import the Fabric Core SASS declarations in your SASS defintion file and use the mixins and variables as decribed in the section below. 
 
-- Components in your web part are locked to the version of Fabric React you used when you built the web part. They will not automatically evolve with the surrounding page. You will need to manually update your web part to adapt to newer versions of Fabric React.
-- The page may be less performant as it may load more CSS, but it will be reliable.
-- Static linking bloats up your web part bundle, but dynamic linking is too fragile considering future updates to be introduced in SharePoint Online. Static linking is the only approach that is officially supported when Office UI Fabric React is being used in SharePoint Framework solutions.
+### Using Fabric Core styles
 
-### Currently unsupported features
+In order to use the Fabric Core styles first you will need to import the SPFabricCore declarations in your SASS file.
 
-- **Office UI Fabric Core**: The Fabric Core implementation currently uses global styles e.g. `.ms-Icon--List` and hence there is no safe way to use Fabric core in your web part without potential challenges in the future. Work is being done to address this challenge and more details will be shared when the situation changes.
+> Note: Make sure you have the sp-office-ui-fabric-core npm package installed.
 
-- **fabric.components.css**: This file contains global classes that conflict with Fabric React. e.g. `.ms-Button` in fabric.component.css will override the Button styles in a Fabric React Button component. Including fabric.component.css in a web part is bound to break the surrounding page or other web parts on the page. We are working on a solution and will release an update shortly.
+```css
+@import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
+```
 
+Now, you can use the core styles as mixins and variables.
 
-## Using the Office UI Fabric with Non-React Based Web Parts
+```css
+.row {
+    @include ms-Grid-row;
+    @include ms-fontColor-white;
+    background-color: $ms-color-themeDark;
+    padding: 20px;
+  }
+ ``` 
 
-Using the Office UI Fabric with non-React based web parts is currently not supported and implementations could experience unexpected issues when newer versions of the Office UI Fabric are released. We are working on creating a reliable integration story for **Office UI Fabric Core**, **fabric.component.css**, and **Non-React based web parts**. 
+## Using Office UI Fabric React
+
+It is recommended to install the latest Office UI Fabric React package and place an explicit dependency on that specific version of the package. This will include the components used in your SPFx solution in your component bundle, either the web part or extension depending on where you use the Fabric React components. 
+
+> Please note that Fabric React versions 2.x or older are not supported in SharePoint Framework.
+
+Once the Fabric React package is installed, you can import the required components from the Fabric React bundle.
+
+```Javascript
+//import Button component from Fabric React Button bundle
+import { Button } from 'office-ui-fabric-react/lib/Button';
+
+//use it in your component
+render() {
+  ...
+  <div>
+    <Button>click me</Button>
+  </div>
+  ...
+}
+```
+
+Fabric React package includes the supported Fabric Core styles used in the Fabric React components. It is recommended to import the Fabric Core styles from the Fabric React package instead of the sp-office-ui-fabric-core package to ensure the right styles are used in your component. 
+
+Since the sp-office-ui-fabric-core package is already installed in your solution by the yeoman generator, it is recommended to uninstall that package if you decide to use Fabric Components and reduce your component bundle size.
+
+```
+npm uninstall @microsoft/sp-office-ui-fabric-core --save-dev
+```
+
+Then you can import the core styles from the SASS declarations available in the Fabric React packge.
+
+```css
+@import 'office-ui-fabric-react/dist/sass/References.scss';
+```
+
+### Understanding this approach and its shortcomings
+
+Fabric Components in your solution are locked to that specific version of Fabric React you installed. You will need to update the Fabric React package to get any new components if they are available in a newer package version. Since the Fabric Components are included in the component bundle, it may increase the size of your component bundle. However, this approach is the only approach that is officially supported when Office UI Fabric React is being used in SharePoint Framework solutions.
+
 
 ## Additional Details on the CSS Challenge with Office UI Fabric
 The following concepts and references provide insights on the challenge with Office UI Fabric usage in the context of client-side web parts. 
@@ -101,8 +132,7 @@ The following concepts and references provide insights on the challenge with Off
   - [Scope CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/:scope) is in early stages of discussion. 
   - iframes are not a good option to isolate styles.
   - [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) is another standard that talks about scoped styles but is still in discussion stages.
-          
-    [This](https://speakerdeck.com/vjeux/react-css-in-js) discussion explains the problem well. There is plenty of other documentation on the web about the solutions to the global namespace menace.
+  - [This](https://speakerdeck.com/vjeux/react-css-in-js) discussion explains the problem well. There is plenty of other documentation on the web about the solutions to the global namespace menace.
  
 **[CSS Specificity](https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity)** and how it applies to web UI. Higher specificity styles override the lower specificity styles, but the key thing to understand is how the specificity rules apply. In general, the precedence order from highest to lowest is as follows:
   - The style attribute (e.g. `style="background:red;"`)
@@ -233,7 +263,4 @@ Here's a more simplistic sample demonstrating the challenge:
 
 **Leakage from unscoped classes** - There is another problem with descendant selectors. Note in the above example, the height and the width styles from the unscoped myButton class are applied to all the buttons. This implies that a change in that style could inadvertently break html using scoped markup. Say for example, for some reason at the app level we decide to make height 0px on the myButton class. That will result in all 3rd party web parts using the myButton class to have a height of 0px (i.e. a serious regression in the user experience).
 
-## Updating an existing project
-
-In your project's `package.json`, update the `@microsoft/sp-build-web` dependency to at least version 1.0.1, delete your project's `node_modules` directory, and run `npm install`.
 
