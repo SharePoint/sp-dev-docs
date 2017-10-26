@@ -126,7 +126,7 @@ What are the recommendation?
 - If you are building your own JavaScript libraries, which are used to call SharePoint Online APIs, make sure that you include the User Agent information to your http request and potentially register your web application also as an Application, where suitable.
 
 > [!NOTE]
-> Format of the  user agent string is expected to follow [RFC2616](http://www.ietf.org/rfc/rfc2616.txt), so please follow up on the above guidance on the right separators.
+> Format of the  user agent string is expected to follow [RFC2616](http://www.ietf.org/rfc/rfc2616.txt), so please follow up on the above guidance on the right separators. It is also fine to append existing user agent string with the requested information.
 
 ### Example of decorating traffic with User agent when using Client Side Object Model (CSOM)
 
