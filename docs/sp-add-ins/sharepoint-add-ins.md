@@ -1,6 +1,6 @@
 ---
 title: SharePoint Add-ins
-ms.date: 09/25/2017
+ms.date: 10/26/2017
 ms.prod: sharepoint
 ---
 
