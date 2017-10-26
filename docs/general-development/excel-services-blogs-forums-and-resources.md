@@ -35,6 +35,7 @@ The following are links to blogs, forums, and additional resources related to Ex
 
 |**Additional Resources**|**Links**|
 |:-----|:-----|
+|Advanced Excel Training  <br/> | [Excel Corporate Training](http://www.excelnext.in) <br/> |
 |Excel Services Resource Center  <br/> | [Excel Services Resource Center on MSDN](http://msdn.microsoft.com/en-us/office/bb203828.aspx) <br/> |
 |IT Pro \\ Administration Documentation  <br/> | [TechNet](http://technet.microsoft.com/en-us/library/ee424401%28office.14%29.aspx) <br/> |
 |Microsoft Excel Online, part of Office Online, also supports Excel workbooks in the browser.  <br/> |For more information about Excel Online, see the  [documentation](https://technet.microsoft.com/en-us/library/ee855124.aspx) on Technet. <br/> |
