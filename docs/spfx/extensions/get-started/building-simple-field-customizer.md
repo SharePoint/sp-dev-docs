@@ -83,7 +83,7 @@ This article describes how to create your first Field Customizer Extension. You 
 
 Open the **HelloWorldFieldCustomizer.ts** file in the **src\extensions\helloWorld** folder.
 
-Notice that the base class for the Field Customizer is imported from the **sp-application-base** package, which contains SharePoint Framework code required by the Field Customizer.
+Notice that the base class for the Field Customizer is imported from the **sp-listview-extensibility** package, which contains SharePoint Framework code required by the Field Customizer.
 
 ```ts
 import { Log } from '@microsoft/sp-core-library';

@@ -332,7 +332,7 @@ When you add a web part to the canvas and open its property pane, you should see
 
 ## Allow users to select an item from the selected list
 
-When building web parts you often need to allow users to choose an option from a set of values determined by a previously selected value, such as choosing a country based on the selected continent or choosing a list item from a selected list. This user experience is often referred to as cascading dropdowns. Using the standard SharePoint Framework client-side web parts capabilities you can build cascading dropdowns in the web part property pane. To learn how to do it you will extend the previously built web part with the ability to choose a list item based on the previously selected list.
+When building web parts you often need to allow users to choose an option from a set of values determined by a previously selected value, such as choosing a country/region based on the selected continent or choosing a list item from a selected list. This user experience is often referred to as cascading dropdowns. Using the standard SharePoint Framework client-side web parts capabilities you can build cascading dropdowns in the web part property pane. To learn how to do it you will extend the previously built web part with the ability to choose a list item based on the previously selected list.
 
 ![List item dropdown open in the web part property pane](../../../images/react-cascading-dropdowns-item-dropdown-list-items.png)
 

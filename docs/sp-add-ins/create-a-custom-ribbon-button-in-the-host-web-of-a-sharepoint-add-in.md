@@ -62,27 +62,16 @@ You will add the button to the ribbon of a calendar on the host web. Take the fo
 3. When the calendar opens, put the cursor on any date until the  **Add** link appears on the date, and then click **Add**. 
     
  
-4. On the  **Employee Orientation Schedule - New Item** dialog, typeOrient Cassi Hicks for the **Title**. Leave the other fields at their defaults and click  **Save**.
+4. On the  **Employee Orientation Schedule - New Item** dialog, type **Orient Cassi Hicks** for the **Title**. Leave the other fields at their defaults and click  **Save**.
     
     The calendar should look similar to the following:
     
 
     **Custom calendar**
 
- 
+   ![A calendar named Employee Orientation Schedule with an item on June 1st that says "Orient Cassie Hicks"](../images/d2066862-41c1-424d-9bfb-b6c5342bcf2c.PNG)
 
-  ![A calendar named Employee Orientation Schedule with an item on June 1st that says "Orient Cassie Hicks"](../images/d2066862-41c1-424d-9bfb-b6c5342bcf2c.PNG)
- 
-
- 
-
- 
-
- 
-
- 
-
- **Important**  The next procedure requires that the calendar be visible in the UI of Visual Studio, but it won't be if If Visual Studio was open when you created the calendar. Before you continue, close Visual Studio and also log out of any browser windows and PowerShell consoles where you are logged into your developer site.
+   **Important**  The next procedure requires that the calendar be visible in the UI of Visual Studio, but it won't be if If Visual Studio was open when you created the calendar. Before you continue, close Visual Studio and also log out of any browser windows and PowerShell consoles where you are logged into your developer site.
  
 
 
@@ -92,17 +81,18 @@ You will add the button to the ribbon of a calendar on the host web. Take the fo
 1. In  **Solution Explorer**, right-click the  **EmployeeOrientation** project, and choose **Add** > **New Item** > **Office/SharePoint** > **Ribbon Custom Action**. Name it RunOrientationAdd-in, and then choose  **Add**.
     
  
-2. The  **Create Custom Action for Ribbon** wizard asks you a series of questions. Give the answers from the following table:
+2. The **Create Custom Action for Ribbon** Wizard asks you a series of questions. Give the answers from the following table:
     
 
-|**Property question**|**Answer**|
-|:-----|:-----|
-|Where do you want to expose the custom action?|Choose  **Host Web**.|
-|Where is the custom action scoped to?|Choose  **List Instance** ( *not*  List Template).|
-|Which particular item is the custom action scoped to?|Choose  **Employee Orientation Schedule**.|
-|Where is the control located?|Do not use the drop down selections. Instead, type  **Ribbon.Calendar.Events.Actions.Controls._children**. (The third part,  **Events**, identifies the tab of the ribbon, and the fourth part,  **Actions**, identifies the button group.)|
-|What is the text on the menu item?|Type  **Employee Orientation**.|
-|Where does the custom action navigate to?|Do not use the drop down selections. Instead, type  **~appWebUrl/Lists/NewEmployeesInSeattle**. This is the list view page for the list, which is on the add-in web, so the ribbon button on the host web opens a page on the add-in web.|
+   |**Property question**|**Answer**|
+   |:-----|:-----|
+   |Where do you want to expose the custom action?|Choose  **Host Web**.|
+   |Where is the custom action scoped to?|Choose **List Instance** (*not* List Template).|
+   |Which particular item is the custom action scoped to?|Choose **Employee Orientation Schedule**.|
+   |Where is the control located?|Do not use the drop down selections. Instead, type `Ribbon.Calendar.Events.Actions.Controls._children`. (The third part, **Events**, identifies the tab of the ribbon, and the fourth part, **Actions**, identifies the button group.)|
+   |What is the text on the menu item?|Type **Employee Orientation**.|
+   |Where does the custom action navigate to?|Do not use the drop down selections. Instead, type  **~appWebUrl/Lists/NewEmployeesInSeattle**. This is the list view page for the list, which is on the add-in web, so the ribbon button on the host web opens a page on the add-in web.|
+
 3. Choose  **Finish**. 
     
  
@@ -150,9 +140,7 @@ Notice that the custom action that you created,  **RunOrientationAdd-in**, is li
     
     **Events ribbon tab with custom button**
 
- 
-
-  ![The Events ribbon with a custom button named "Employee Orientation"](../images/916ecbba-11ff-45b6-a8e9-ba717ae6fe0b.png)
+    ![The Events ribbon with a custom button named "Employee Orientation"](../images/916ecbba-11ff-45b6-a8e9-ba717ae6fe0b.png)
  
 
  
