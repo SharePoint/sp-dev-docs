@@ -363,11 +363,12 @@ SharePoint Workbench is also hosted in SharePoint to preview and test your local
 
 Go to the following URL: 'https://your-sharepoint-site/_layouts/workbench.aspx'
 
->**Note:** If you do not have the SPFx developer certificate installed, then Workbench will notify you that it is configured not to load scripts from localhost. Stop currently running process in the console window, execute `gulp trust-dev-cert` command in your project directory console to install the developer certificate before running `gulp serve`command again.
+> [!NOTE]
+> If you do not have the SPFx developer certificate installed, then Workbench will notify you that it is configured not to load scripts from localhost. Stop currently running process in the console window, execute `gulp trust-dev-cert` command in your project directory console to install the developer certificate before running `gulp serve`command again.
 
 ![SharePoint Workbench running in a SharePoint Online site](../../../images/sp-workbench-o365.png)
 
-Notice that the SharePoint workbench now has the Office 365 Suite navigation bar.
+Notice that the SharePoint workbench now has the Office 365 Suite navigation bar. 
 
 Choose **add icon** in the canvas to reveal the toolbox. The toolbox now shows the web parts available on the site where the SharePoint workbench is hosted along with your **HelloWorldWebPart**.
 
@@ -376,6 +377,9 @@ Choose **add icon** in the canvas to reveal the toolbox. The toolbox now shows t
 Add **HelloWorld** from the toolbox. Now you're running your web part in a page hosted in SharePoint!
 
 ![HelloWorld web part running in SharePoint Workbench running in a SharePoint Online site](../../../images/sp-workbench-o365-helloworld-wp.png)
+
+> [!NOTE]
+> Color of the web part depends on the colors of the site. By default web parts will inherit the core colors from the site by dynamically referencing Office UI Fabric Core styles used in the site where web part is hosted.
 
 Because you are still developing and testing your web part, there is no need to package and deploy your web part to SharePoint. 
 
