@@ -61,15 +61,12 @@ In this article, you add a custom content type to the Employee Orientation Share
 
 1. The next step requires that you work directly in the raw XML for the content type, so in **Solution Explorer**, select the elements.xml file child of the **NewEmployee** content type.
     
-2. There are already **FieldRef** elements in the file for the two columns that you added. Add **FieldRef** elements for two built-in SharePoint columns as peers of the two that are already there. The following is the markup for the elements. *You must use these same GUIDs for the ID attribute because these are built-in field types with fixed IDs.*  Add these *above*  the two **FieldRef** elements for the custom site columns.
+2. There are already **FieldRef** elements in the file for the two columns that you added. Add **FieldRef** elements for two built-in SharePoint columns as peers of the two that are already there. The following is the markup for the elements. *You must use these same GUIDs for the ID attribute because these are built-in field types with fixed IDs.* Add these *above* the two **FieldRef** elements for the custom site columns. Note that we have given these fields the custom display name **Employee**.
     
     ```
       <FieldRef Name="LinkTitle" ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" DisplayName="Employee" />
       <FieldRef Name="Title" ID="{fa564e0f-0c70-4ab9-b863-0177e6ddd247}" DisplayName="Employee" />
     ```
-
-
-    Note that we have given these fields a custom display name:  **Employee**.
  
 3. Save and close the file.
  
@@ -107,7 +104,7 @@ In this article, you add a custom content type to the Employee Orientation Share
     
     ```
       <FieldRef Name="Division" ID="{GUID from the Field element}" />
-    <FieldRef Name="OrientationStage" ID="{GUID from the Field element}" />
+      <FieldRef Name="OrientationStage" ID="{GUID from the Field element}" />
 
     ```
 
@@ -115,10 +112,10 @@ In this article, you add a custom content type to the Employee Orientation Share
 
     ```
       <ViewFields>
-       <FieldRef Name="LinkTitle" ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" DisplayName="Employee" />
-       <FieldRef Name="Division" ID="{509d2d67-9a96-4596-9b3b-58449cdcc6ff}" />
-       <FieldRef Name="OrientationStage" ID="{38a3b54c-acf3-4ddf-b748-55c7c28d4cc2}" />        
-    </ViewFields>
+        <FieldRef Name="LinkTitle" ID="{82642ec8-ef9b-478f-acf9-31f7d45fbc31}" DisplayName="Employee" />
+        <FieldRef Name="Division" ID="{509d2d67-9a96-4596-9b3b-58449cdcc6ff}" />
+        <FieldRef Name="OrientationStage" ID="{38a3b54c-acf3-4ddf-b748-55c7c28d4cc2}" />        
+      </ViewFields>
     ```
 
 7. Still in the schema.xml file, find the **View** element whose **BaseViewID** value is "0". Find the **ViewFields** element within it.
