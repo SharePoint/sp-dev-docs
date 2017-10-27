@@ -6,7 +6,7 @@ ms.prod: sharepoint
 
 # Add a custom content type to a SharePoint-hosted SharePoint Add-in
 
-Learn how to include custom content types in an SharePoint Add-ins.
+Learn how to include custom content types in SharePoint Add-ins.
  
 > [!NOTE]
 > The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname). 
