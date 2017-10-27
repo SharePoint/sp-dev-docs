@@ -63,7 +63,7 @@ The next set of prompts will ask for specific information about your web part:
 
 * Type **jQuery** for the web part name and choose **Enter**.
 * Enter **jQuery Web Part** as the description of the web part and choose **Enter**. 
-* Accept the default No **javascript web framework** option for the framework and choose **Enter** to continue.
+* Accept the default **No JavaScript framework** option for the framework and choose **Enter** to continue.
 
 At this point, Yeoman will install the required dependencies and scaffold the solution files. This might take a few minutes. Yeoman will scaffold the project to include your **jQueryWebPart** web part as well.
 
@@ -105,20 +105,23 @@ npm install --save @types/jqueryui
 ### Unbundle external dependencies from web part bundle
 By default, any dependencies you add are bundled into the web part bundle. In some cases, this is not ideal. You can choose to unbundle these dependencies from the web part bundle.
 
-In Visual Studio Code, open the file config\config.json.
+In Visual Studio Code, open the file **config\config.json**.
 
 This file contains information about your bundle(s) and any external dependencies. 
 
-The `entries` region contains the default bundle information - in this case, the jQuery web part bundle. When you add more web parts to your solution, you will see one entry per web part.
+The `bundles` region contains the default bundle information - in this case, the jQuery web part bundle. When you add more web parts to your solution, you will see one entry per web part.
 
 ```json
-"entries": [
-  {
-    "entry": "./lib/webparts/jQuery/jQueryWebPart.js",
-    "manifest": "./src/webparts/jQuery/jQueryWebPart.manifest.json",
-    "outputPath": "./dist/j-query.bundle.js",
-  }
-]
+  "bundles": {
+    "j-query-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/jQuery/JQueryWebPart.js",
+          "manifest": "./src/webparts/jQuery/JQueryWebPart.manifest.json"
+        }
+      ]
+    }
+  },
 ```
 
 You can use the `externals` section contains the libraries that are not bundled with the default bundle. 
@@ -140,19 +143,24 @@ Full content of the config.json file as currently as follows
 
 ```json
 {
-  "entries": [
-    {
-      "entry": "./lib/webparts/jQuery/JQueryWebPart.js",
-      "manifest": "./src/webparts/jQuery/JQueryWebPart.manifest.json",
-      "outputPath": "./dist/j-query.bundle.js"
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/config.2.0.schema.json",
+  "version": "2.0",
+  "bundles": {
+    "j-query-web-part": {
+      "components": [
+        {
+          "entrypoint": "./lib/webparts/jQuery/JQueryWebPart.js",
+          "manifest": "./src/webparts/jQuery/JQueryWebPart.manifest.json"
+        }
+      ]
     }
-  ],
+  },
   "externals": {
     "jquery":"node_modules/jquery/dist/jquery.min.js",
     "jqueryui":"node_modules/jqueryui/jquery-ui.min.js"
   },
   "localizedResources": {
-    "jQueryStrings": "webparts/jQuery/loc/{locale}.js"
+    "JQueryWebPartStrings": "lib/webparts/jQuery/loc/{locale}.js"
   }
 }
 ```
@@ -160,7 +168,7 @@ Full content of the config.json file as currently as follows
 
 ## Build the Accordion
 
-Open the project folder **jquery-webpart** in Visual Studio Code. Your project should have the jQuery web part that you added earlier under the /src/webparts/jQuery folder.
+Open the project folder **jquery-webpart** in Visual Studio Code. Your project should have the jQuery web part that you added earlier under the `/src/webparts/jQuery` folder.
 
 ### Add Accordion HTML
 Add a new file in the `src/webparts/jQuery` folder called **MyAccordionTemplate.ts**.
@@ -328,7 +336,8 @@ In your console, make sure you are still in the jquery-webpart folder and type t
 gulp serve
 ```
 
-> **Note:** Visual Studio Code provides built-in support for gulp and other task runners. You can choose **Ctrl+Shift+B** in Windows or **Cmd+Shift+B** on a Mac to debug and preview your web part.
+> [!NOTE]
+> Visual Studio Code provides built-in support for gulp and other task runners. You can choose **Ctrl+Shift+B** in Windows or **Cmd+Shift+B** on a Mac to debug and preview your web part.
 
 Gulp will execute the tasks and open the local SharePoint web part workbench.
 
