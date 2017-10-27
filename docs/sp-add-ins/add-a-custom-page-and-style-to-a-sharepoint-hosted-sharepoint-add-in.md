@@ -89,7 +89,7 @@ In this article, you add a help page to the Employee Orientation SharePoint Add-
 
 2. When the add-in's default page opens, select the **Get help for the Employee Orientation add-in** link to open the **Help** page.
     
-   Your custom page opens and the two lines that you put in <p> tags are green.
+   Your custom page opens and the two lines that you put in `<p>` tags are green.
 
    *Figure 1. Help page*
 
