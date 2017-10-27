@@ -138,7 +138,7 @@ The workflow sends an email to notify an HR staffer that the new employee has fi
     
    In the **Test Service Host** console, an indication appears that the workflow has started. Shortly after, there is an indication that the workflow has completed. The following is an example:
  
-   *Figure 6. Service Test Host console*
+   *Figure 6. Test Service Host console*
 
    ![The workflow Test Service Host window with a line saying that the workflow has started, followed by a line saying that it has completed. The GUID of the workflow instance is at the beginning of each line.](../images/2422936d-7ef6-4c90-a03f-30053fbb9743.PNG)
  
