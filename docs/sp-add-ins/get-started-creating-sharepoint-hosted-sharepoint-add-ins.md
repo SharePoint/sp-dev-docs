@@ -70,9 +70,9 @@ There are three ways to get an Office 365 plan:
 
 After you finish the signup process, your browser opens the Office 365 installation page. Select the Admin icon to open the admin center page.
 
-    *Figure 2. Office 365 admin center page*
+  *Figure 2. Office 365 admin center page*
 
-    ![Screenshot that shows the Office 365 admin center.](../images/SP15_Office365AdminInset_border.png)
+  ![Screenshot that shows the Office 365 admin center.](../images/SP15_Office365AdminInset_border.png)
  
 1. Wait for your Developer Site to finish setting up. After provisioning is complete, refresh the admin center page in your browser.
 
@@ -229,7 +229,7 @@ For your first SharePoint-hosted SharePoint Add-in, we'll include the classic Sh
 
 2. When the add-in's default page opens, select the **New Employees in Seattle** link to open the custom list instance.
     
-    *Figure 4. Default page and list view page*
+    *Figure 5. Default page and list view page*
 
     ![The add-in's default page is shown with its title New Employees by Location. There is a link labeled New Employees in Seattle. An arrow from this link points to the list view page for the list. It is titled New Employees in Seattle, with the list below.](../images/9dc5cefe-083a-4807-bee6-473001f23db9.png)
 
