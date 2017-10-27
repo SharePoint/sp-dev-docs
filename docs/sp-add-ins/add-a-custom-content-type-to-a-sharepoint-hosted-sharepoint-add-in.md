@@ -160,4 +160,4 @@ In this article, you add a custom content type to the Employee Orientation Share
 ## Next steps
 <a name="Nextsteps"> </a>
 
-In the next article in this series, you'll add a list view Web Part to the default page of the SharePoint Add-in: [Add a Web Part to a page in a SharePoint-hosted SharePoint Add-in](add-a-web-part-to-a-page-in-a-sharepoint-hosted-sharepoint-add-in.md).
+In the next article in this series, you'll [add a Web Part to a page in a SharePoint-hosted SharePoint Add-in](add-a-web-part-to-a-page-in-a-sharepoint-hosted-sharepoint-add-in.md).
