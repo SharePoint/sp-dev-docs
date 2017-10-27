@@ -2,7 +2,7 @@
 title: Add a custom content type to a SharePoint-hosted SharePoint Add-in
 ms.date: 10/26/2017
 ms.prod: sharepoint
-redirect_url: /sp-add-ins/add-a-custom-content-type-to-a-sharepoint-hosted-sharepoint-add-in
+redirect_url: /add-a-custom-content-type-to-a-sharepoint-hosted-sharepoint-add-in
 ---
 
 # Add a custom content type to a SharePoint-hosted SharePoint Add-in
