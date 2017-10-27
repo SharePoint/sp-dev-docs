@@ -220,19 +220,19 @@ Now that we have successfully tested the out-of-the-box starting point of the Fi
 2. Open the **HelloWorldFieldCustomizer.ts** file in the **src\extensions\helloWorld** folder, and update the **onRednerCell** method as follows.
 
     ```ts
-      @override
-      public onRenderCell(event: IFieldCustomizerCellEventParameters): void {
+        @override
+        public onRenderCell(event: IFieldCustomizerCellEventParameters): void {
 
-        event.domElement.classList.add(styles.cell);
-        if (typeof event.fieldValue != 'undefined' && event.fieldValue) {  // for folder fieldValue is "".
+            event.domElement.classList.add(styles.cell);
             event.domElement.innerHTML = `
-                    <div class='${styles.full}'>
-                      <div style='width: ${event.fieldValue}px; background:#0094ff; color:#c0c0c0'>
-                        &nbsp; ${event.fieldValue}
-                      </div>
+                    <div class='${styles.HelloWorld}'>
+                        <div class='${styles.full}'>
+                        <div style='width: ${event.fieldValue}px; background:#0094ff; color:#c0c0c0'>
+                            &nbsp; ${event.fieldValue}
+                        </div>
+                        </div>
                     </div>`;
         }
-      }
     ```
 
 3. In your console window, ensure that you do not have any exceptions. If you do not have the solution running in *localhost*, execute the following command:
