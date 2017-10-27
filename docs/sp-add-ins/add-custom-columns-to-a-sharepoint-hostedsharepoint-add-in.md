@@ -2,7 +2,7 @@
 title: Add custom columns to a SharePoint-hostedSharePoint Add-in
 ms.date: 10/26/2017
 ms.prod: sharepoint
-redirect_url: /sp-add-ins/add-custom-columns-to-a-sharepoint-hosted-sharepoint-add-in
+redirect_url: /add-custom-columns-to-a-sharepoint-hosted-sharepoint-add-in
 ---
 
 
