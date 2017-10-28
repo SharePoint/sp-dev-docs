@@ -132,7 +132,7 @@ Open the host web (your developer test website) and verify that there is a calen
    - This is nearly identical to the list query method that gets the **Completed** items, except that it gets items that are **Not Started** instead of those that are **Completed**. We are interested in only the **Not Started** items because the script makes the simplifying assumption that if an orientation is past the **Not Started** stage, it must already be scheduled.
    - You create the two callback methods in the **executeQueryAsync** call in later steps.
 
-6. Add the following function to the Add-in.js file just below the preceding function. Notice that it uses the **hostWebContext** object to identify the list that is queried.
+6. Add the following function to the Add-in.js file just under the preceding function. Notice that it uses the **hostWebContext** object to identify the list that is queried.
 
     ```
       function getScheduledOrientations() {
@@ -211,9 +211,9 @@ Open the host web (your developer test website) and verify that there is a calen
 
    - If none of the events that are already on the calendar matches a **Not Started** item, the script creates a calendar item for the **Not Started** item.
 
-   - JSOM uses a lightweight **ListItemCreationInformation** object instead of a **SPListItem** object to minimize the size of the payload that is sent to the SharePoint server.
+   - JSOM uses a lightweight **ListItemCreationInformation** object instead of an **SPListItem** object to minimize the size of the payload that is sent to the SharePoint server.
 
-   - The two DateTime fields of the new calendar event are set to days in the month when this article was written: `2015-06`. *Change these dates to a day in the current month and year, so you don't have to scroll back in your calendar to find the items.* 
+   - The two **DateTime** fields of the new calendar event are set to days in the month when this article was written: `2015-06`. *Change these dates to a day in the current month and year, so you don't have to scroll back in your calendar to find the items.* 
 
    - If any **Not Started** items are found to be unscheduled, the first one will be scheduled for the 10th of the month. Each additional unscheduled item will be scheduled for a day later. The simplifying assumption is that there won't be so many that some are scheduled for impossible days of the month, such as "32".
 
@@ -296,7 +296,7 @@ Your add-in automatically has full control permission to its own add-in web, so 
 
 5. If the **Properties** column is left blank, the add-in is asking for write permission to every list on the host web. It is a good practice to limit add-ins to only the permissions that they need. There isn't any way in the add-in manifest to limit permissions to a specific list instance, but it is possible to limit the add-in to only list instances that are built on a specific base list template. The base list template of a calendar is **Events** whose numeric ID is 106.
     
-   Select the **Properties** cell of the same row to make the **Edit** button appear in the cell. The permissions list should now look similar to the following:
+   Select the **Properties** cell of the same row to make the **Edit** button appear in the cell. The permissions list should now look similar to the following.
 
    *Figure 2. Permission list with Edit button visible*
 
@@ -304,13 +304,13 @@ Your add-in automatically has full control permission to its own add-in web, so 
 
 6. Select **Edit** to open the **Properties** dialog.
 
-7. Set **Name** to **BaseTemplateID**, and set **Value** to **106**. The dialog should now look like the following:
+7. Set **Name** to **BaseTemplateId**, and set **Value** to **106**. The dialog should now look like the following.
     
    *Figure 3. List permission properties dialog*
 
    ![The Properties dialog for list permissions in Visual Studio with property name set to "Base List ID" and the Value set to "106".](../images/13773fdd-5606-4f35-b8d5-14aad54cffb7.PNG)
 
-8. Select **OK**. The **Permissions** tab should now look similar to the following:
+8. Select **OK**. The **Permissions** tab should now look similar to the following.
 
    *Figure 4. Permissions tab of add-in manifest designer in Visual Studio*
 
@@ -336,7 +336,7 @@ Your add-in automatically has full control permission to its own add-in web, so 
 
    ![The Employee Orientation home page with a new button added that has the label "Ensure Items are Scheduled".](../images/72b78f79-78c0-41db-90d5-8f67e1c17b0e.PNG)
 
-6. If any of the failure callback functions is run, you will see the error message alert that your callback functions create. Otherwise, you will see the success message created by the final success callback: **There was one or more unscheduled orientations and they have been added to the Employee Orientation Schedule calendar.**
+6. If any of the failure callback functions is run, you will see the error message alert that your callback functions create. Otherwise, you will see the success message created by the final success callback: *There was one or more unscheduled orientations and they have been added to the Employee Orientation Schedule calendar.*
 
 7. Go to the **Employee Orientation Schedule** calendar on the host web. For example, select the breadcrumb link to your developer site's home page and select **Site Contents**. Select the **Employee Orientation Schedule** tile (not the **Employee Orientation** tile).
 
@@ -346,7 +346,7 @@ Your add-in automatically has full control permission to its own add-in web, so 
 
    ![Employee Orientation calendar with new events added for the orientation of two employees on the 10th and 11th of the month](../images/f8037509-4bf1-4c69-a673-ee6fe0f0dcb7.PNG)
 
-8. *Be sure you delete the two new events from the calendar before you select **Ensure Items are Scheduled** again.* 
+8. Ensure that you delete the two new events from the calendar before you select **Ensure Items are Scheduled** again.
 
 9. To end the debugging session, close the browser window or stop debugging in Visual Studio. Each time that you select F5, Visual Studio retracts the previous version of the add-in and installs the latest one.
 
