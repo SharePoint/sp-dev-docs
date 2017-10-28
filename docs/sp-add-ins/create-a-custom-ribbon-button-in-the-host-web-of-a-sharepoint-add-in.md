@@ -76,9 +76,9 @@ To add the button to the ribbon of a calendar on the host web, take the followin
 
 In **Solution Explorer**, expand the **Features** folder, and select the **NewEmployeeOrientationComponents** feature. The Feature designer opens.
 
-Notice that the custom action that you created, **RunOrientationAdd-in**, is listed in **Items in the solution**, but not in **Items in the feature**. This is because the Feature is deployed to the add-in web, but your custom action is deployed to the host web. 
+Notice that the custom action that you created, **RunOrientationAdd-in**, is listed in **Items in the solution**, but not in **Items in the feature**. This is because the feature is deployed to the add-in web, but your custom action is deployed to the host web. 
 
-When you package the add-in in Visual Studio for deployment to production, or when you select F5 in Visual Studio, the Office Developer Tools for Visual Studio creates a special host web feature, adds the custom action to it, and deploys it to the host web. You should never edit the host web feature. That is why it is not created until packaging time.
+When you package the add-in in Visual Studio for deployment to production, or when you select F5 in Visual Studio, the Office Developer Tools for Visual Studio creates a special host web feature, adds the custom action to it, and deploys it to the host web. You should never edit the host web feature; that is why it is not created until packaging time.
 
 *Figure 2. Feature designer*
 
@@ -88,7 +88,7 @@ When you package the add-in in Visual Studio for deployment to production, or wh
 
 1. Use the F5 key to deploy and run your add-in. Visual Studio makes a temporary installation of the add-in on your test SharePoint site and immediately runs the add-in. 
 
-2. The default page of the SharePoint Add-in opens. Go to the home page of your developer site (which is the host web). There is a breadcrumb link to it in the upper-left of the page.
+2. The default page of the SharePoint Add-in opens. Go to the home page of your developer site (which is the host web). There is a breadcrumb link to it in the upper-left corner of the page.
 
 3. On the host web's home page, select **Site Contents**, and on the **Site Contents** page, select the **Employee Orientation Schedule** calendar (not the **Employee Orientation** add-in).
 
