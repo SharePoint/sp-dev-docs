@@ -72,7 +72,7 @@ To add the button to the ribbon of a calendar on the host web, take the followin
     |Where does the custom action navigate to?|Do not use the drop-down selections. Instead, enter  `~appWebUrl/Lists/NewEmployeesInSeattle`. This is the list view page for the list, which is on the add-in web, so the ribbon button on the host web opens a page on the add-in web.|
 
 
-## Inspect the add-in web Feature
+## Inspect the add-in web feature
 
 In **Solution Explorer**, expand the **Features** folder, and select the **NewEmployeeOrientationComponents** feature. The Feature designer opens.
 
