@@ -34,7 +34,7 @@ This is the tenth in a series of articles about the basics of developing SharePo
 > [!NOTE]
 > If you have been working through this series about SharePoint-hosted add-ins, you have a Visual Studio solution that you can use to continue with this topic. You can also download the repository at [SharePoint_SP-hosted_Add-Ins_Tutorials](https://github.com/OfficeDev/SharePoint_SP-hosted_Add-Ins_Tutorials) and open the BeforeJSOM.sln file.
 
-Even though SharePoint-hosted SharePoint Add-ins cannot have server-side code, you can still have business logic and runtime interaction with SharePoint components in a SharePoint-hosted SharePoint Add-in by using JavaScript and the SharePoint JavaScript client object model library. (We'll call it JSOM. Note the "M" on the end. Don't confuse this with JSO **N** [JavaScript Object Notation].) In this article, you use the JavaScript object model to find and remove old items from the **New Employees in Seattle** list.
+Even though SharePoint-hosted SharePoint Add-ins cannot have server-side code, you can still have business logic and runtime interaction with SharePoint components in a SharePoint-hosted SharePoint Add-in by using JavaScript and the SharePoint JavaScript client object model library. We'll call it JSOM. Note the "M" on the end. Don't confuse this with JSO**N** (JavaScript Object Notation). In this article, you use the JavaScript object model to find and remove old items from the **New Employees in Seattle** list.
 
 ## Create the JavaScript and a button to invoke it
 
@@ -193,23 +193,23 @@ Even though SharePoint-hosted SharePoint Add-ins cannot have server-side code, y
    The following is an example of how the **Rows** element should look.
 
     ```
-      <Rows>
-      <Row>
-        <Field Name="Title">Tom Higginbotham</Field>
-        <Field Name="Division">Manufacturing</Field>
-        <Field Name="OrientationStage">Completed</Field>
-      </Row>
-      <Row>
-        <Field Name="Title">Satomi Hayakawa</Field>
-        <Field Name="OrientationStage">Completed</Field>
-      </Row>
-      <Row>
-        <Field Name="Title">Cassi Hicks</Field>
-      </Row>
-      <Row>
-        <Field Name="Title">Lertchai Treetawatchaiwong</Field>
-      </Row>
-    </Rows>
+     <Rows>
+       <Row>
+         <Field Name="Title">Tom Higginbotham</Field>
+         <Field Name="Division">Manufacturing</Field>
+         <Field Name="OrientationStage">Completed</Field>
+       </Row>
+       <Row>
+         <Field Name="Title">Satomi Hayakawa</Field>
+         <Field Name="OrientationStage">Completed</Field>
+       </Row>
+       <Row>
+         <Field Name="Title">Cassi Hicks</Field>
+       </Row>
+       <Row>
+         <Field Name="Title">Lertchai Treetawatchaiwong</Field>
+       </Row>
+     </Rows>
     ```
 
 
