@@ -32,7 +32,7 @@ This is the eighth in a series of articles about the basics of developing ShareP
  
 You can use a little client-side JavaScript to customize the rendering of Web Parts, most types of fields (columns), and some other controls, by assigning a JavaScript file to the **JSLink** property of the control, such as **SPField.JSLink**. You can also add client-side validation logic in this way. In this article, you customize the rendering of a field in a list of the Employee Orientation SharePoint Add-in by using client-side rendering.
  
-> [!NOTES]
+> [!NOTE]
 > - If the end-user has JavaScript disabled in their browser, SharePoint will fall back to server-side rendering and validation.
 > - The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list.
 
@@ -42,7 +42,7 @@ You can use a little client-side JavaScript to customize the rendering of Web Pa
 
 2. Select **JavaScript File** and name it **OrientationStageRendering.js**. 
 
-3. Your custom rendering of the field should happen automatically, so add an anonymous method to the JavaScript that runs automatically when the file loads with the following code:
+3. Your custom rendering of the field should happen automatically, so use the following code to add an anonymous method to the JavaScript that runs automatically when the file loads:
 
     ```
       (function () {
@@ -60,7 +60,7 @@ You can use a little client-side JavaScript to customize the rendering of Web Pa
     }
     ```
 
-5. In the body of the `Fields` template object, add the following JSON. 
+5. In the body of the **Fields** template object, add the following JSON. 
    - The property name `OrientationStage` identifies the field that has customized rendering. 
    - The value of the property is another JSON object. 
    - The `View` property identifies the page context in which the custom rendering is applied. In this case, the object is telling SharePoint to use the customized rendering on list views. (Other options would be for the Edit, New, and Display forms.) 
