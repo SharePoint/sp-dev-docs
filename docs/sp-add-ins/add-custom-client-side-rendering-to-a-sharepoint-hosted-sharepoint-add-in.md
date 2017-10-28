@@ -60,15 +60,16 @@ You can use a little client-side JavaScript to customize the rendering of Web Pa
     }
     ```
 
-5. In the body of the **Fields** template object, add the following JSON. 
+5. In the body of the **Fields** template object, add the following JSON.
+
+    ```
+      "OrientationStage": { "View": renderOrientationStage }
+    ```
+
    - The property name `OrientationStage` identifies the field that has customized rendering. 
    - The value of the property is another JSON object. 
    - The `View` property identifies the page context in which the custom rendering is applied. In this case, the object is telling SharePoint to use the customized rendering on list views. (Other options would be for the Edit, New, and Display forms.) 
    - The value of the property `renderOrientationStage` is the name of the custom rendering method that you create in a later step.
-    
-    ```
-      "OrientationStage": { "View": renderOrientationStage }
-    ```
 
 6. The last thing that the anonymous method must do is tell SharePoint's template manager about the rendering override. Add the following line to the end of the body of the method.
     
