@@ -1,6 +1,6 @@
 ---
 title: Get started creating SharePoint-hosted SharePoint Add-ins
-ms.date: 10/26/2017
+ms.date: 10/30/2017
 ms.prod: sharepoint
 ---
 
@@ -67,15 +67,16 @@ There are three ways to get an Office 365 plan:
     
 4. Select **Next** and fill out the final page of the form. If you choose to provide a telephone number to get a confirmation code, you can provide a mobile or landline number, but *not* a VoIP (Voice over Internet Protocol) number.
     
-    > [!NOTE]
-    > If you're signed in to another Microsoft account when you try to sign up for a developer account, you might see this message: "Sorry, that user ID you entered didn't work. It looks like it's not valid. Be sure you enter the user ID that your organization assigned to you. Your user ID usually looks like *someone@example.com* or *someone@example.onmicrosoft.com*." 
-    > If you see that message, sign out of the Microsoft account you were using and try again. If you still get the message, clear your browser cache or switch to **InPrivate Browsing** and then fill out the form.
+   > [!NOTE]
+   > If you're signed in to another Microsoft account when you try to sign up for a developer account, you might see this message: "Sorry, that user ID you entered didn't work. It looks like it's not valid. Be sure you enter the user ID that your organization assigned to you. Your user ID usually looks like *someone@example.com* or *someone@example.onmicrosoft.com*." 
+
+   > If you see that message, sign out of the Microsoft account you were using and try again. If you still get the message, clear your browser cache or switch to **InPrivate Browsing** and then fill out the form.
 
    After you finish the signup process, your browser opens the Office 365 installation page. Select the Admin icon to open the admin center page.
 
-  *Figure 2. Office 365 admin center page*
+   *Figure 2. Office 365 admin center page*
 
-  ![Screenshot that shows the Office 365 admin center.](../images/SP15_Office365AdminInset_border.png)
+   ![Screenshot that shows the Office 365 admin center.](../images/SP15_Office365AdminInset_border.png)
  
 5. Wait for your Developer Site to finish setting up. After provisioning is complete, refresh the admin center page in your browser.
 
@@ -83,9 +84,9 @@ There are three ways to get an Office 365 plan:
 
 7. Make a note of the site's URL; it's used when you create SharePoint Add-ins projects in Visual Studio.
 
-    *Figure 3. Your Developer Site home page with the Add-ins in Testing list*
+   *Figure 3. Your Developer Site home page with the Add-ins in Testing list*
 
-    ![Screenshot that shows the Developer site homepage.](../images/SP15_DeveloperSiteHome_border.png)
+   ![Screenshot that shows the Developer site homepage.](../images/SP15_DeveloperSiteHome_border.png)
 
 ## Create the add-in project
 <a name="Create"> </a>
