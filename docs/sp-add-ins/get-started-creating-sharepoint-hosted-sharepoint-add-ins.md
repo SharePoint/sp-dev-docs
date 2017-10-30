@@ -92,13 +92,13 @@ There are three ways to get an Office 365 plan:
 
 1. Start Visual Studio by using the **Run as administrator** option.
 
-2. Select **File** > **New** > **New Project**.
+2. In Visual Studio, select **File** > **New** > **New Project**.
  
 3. In the **New Project** dialog box, expand the **Visual C#** node, expand the **Office/SharePoint** node, and then select **Add-ins** > **Add-in for SharePoint**.
 
 4. Name the project **EmployeeOrientation**, and then select **OK**.
 
-5. In the first **Specify the Add-in for SharePoint Settings** dialog box, provide the full URL of the SharePoint site that you want to use to debug your add-in. This is the URL of the Developer Site. (Use HTTPS, not HTTP in the URL.) Under **How do you want to host your SharePoint Add-in**, select  **SharePoint-hosted**, and then select **Finish**.
+5. In the **Specify the Add-in for SharePoint Settings** dialog box, provide the full URL of the SharePoint site that you want to use to debug your add-in. This is the URL of the Developer Site. (Use HTTPS, not HTTP in the URL.) Under **How do you want to host your SharePoint Add-in**, select  **SharePoint-hosted**, and then select **Finish**.
 
 6. You may be prompted to sign in to your Developer Site. If so, use your subscription administrator's credentials.
 
