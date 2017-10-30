@@ -12,7 +12,7 @@ Learn how to give your provider-hosted SharePoint Add-ins the look and feel of S
 > [!NOTE]
 > The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
 
-This is the second in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous article in this series:
+This is the second in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with the topic [SharePoint Add-ins](sharepoint-add-ins.md) and the previous article in this series:
 
 -  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
     
@@ -49,7 +49,7 @@ We are not going to teach you ASP.NET or T-SQL programming in this series, but y
    - **ChainStoreWeb**: the remote web application
    - **ChainCorporateDB**: the SQL Azure database
 
-3. Select the **ChainStore** project and, in the **Properties** window, set the **Site URL** property to the full URL of the Hong Kong team site: `https://{YOUR_SHAREPOINT_DOMAIN}/hongkong/`. Be sure to include the "/" character at the end. Select **Save**. *At some point in this process, you will be prompted to sign in to your SharePoint Online subscription.* 
+3. Select the **ChainStore** project and, in the **Properties** window, set the **Site URL** property to the full URL of the Hong Kong team site: `https://{YOUR_SHAREPOINT_DOMAIN}/hongkong/` (be sure to include the "/" character at the end). Select **Save**. *At some point in this process, you will be prompted to sign in to your SharePoint Online subscription.* 
     
 4. Right-click the solution node at the top of **Solution Explorer**, and then select **Set startup projects**.
  
@@ -57,40 +57,40 @@ We are not going to teach you ASP.NET or T-SQL programming in this series, but y
     
 6. Use the F5 key to deploy and run your add-in. Visual Studio hosts the remote web application in IIS Express and hosts the SQL database in SQL Express. It also makes a temporary installation of the add-in on your test SharePoint site and immediately runs the add-in. You are prompted to grant permissions to the add-in before its start page opens.
     
-7. The add-in's start page looks like the one in Figure 2. At the very top is the name of the SharePoint website where the add-in is installed. This is a side effect of some sample code that the Office Developer Tools for Visual Studio generates. You'll change this in a later step. The page has areas where data from the corporate **Inventory**, **Orders**, and **Employees** SQL database tables can be seen. These tables are empty initially.
+7. The add-in's start page looks like the one in Figure 2. At the very top is the name of the SharePoint website where the add-in is installed. This is a side effect of some sample code that the Office Developer Tools for Visual Studio generates. You'll change this in a later step. The page has areas where data from the corporate **Orders**, **Inventory**, and **Employees** SQL database tables can be seen. These tables are empty initially.
   
    *Figure 2. Start page of the chain store add-in*
 
-   ![The start page of the chain store add-in with labelled areas and buttons for viewing the store's inventory, orders, and employees.](../images/9c836899-8f21-4e0f-9260-69b8171a303c.PNG)
+   ![The start page of the chain store add-in with labeled areas and buttons for viewing the store's inventory, orders, and employees.](../images/9c836899-8f21-4e0f-9260-69b8171a303c.PNG)
 
 8. Select the **Order Form** link at the bottom of the page to open an order form. Enter some values in the form, and then select **Place Order**. The screenshot in Figure 3 shows an example. It won't appear that anything has happened, but the code behind the button passes the values to a parameterized stored procedure in the SQL database. Using parameterized stored procedures protects the database from SQL injection attacks.
 
    *Figure 3. Order form*
 
-   ![Order form with text boxes for supplier, product, and quantity; with a button labelled Place Order.](../images/5ce3e68b-1bcf-4a24-9153-b9164af77a6b.PNG)
+   ![Order form with text boxes for supplier, product, and quantity; with a button labeled Place Order.](../images/5ce3e68b-1bcf-4a24-9153-b9164af77a6b.PNG)
 
-9. Use the browser's back button to go back to the start page, and then select the **Show Orders** button. The page refreshes and your order appears on the page similar to the screenshot in Figure 4.
+9. Use the browser's back button to go back to the start page, and then select the **Show Orders** button. The start page refreshes and your order appears on the page similar to the screenshot in Figure 4.
 
-   *Figure 4. Start page for orders*
+   *Figure 4. Start page after selecting Show Orders*
 
    ![The section of the start page for orders with one order showing in an HTML table. It has columns for ID, Tenant, Supplier, Product, and Quantity.](../images/6a82c6eb-4a46-4a97-94f9-c1f4a7605d1f.PNG)
     
    The table has a **Tenant** field with the URL of your test SharePoint website as the value. This does not refer to the SharePoint Online subscription that is sometimes called a tenancy. Instead, each instance of the add-in is a distinct tenant in the corporate database. Because no more than one instance of an add-in can be installed on a specific SharePoint host web, the URL of the host web can be used as a tenant discriminator in the database. (For a refresher on the distinction between host web and add-in web, see [SharePoint Add-ins](sharepoint-add-ins.md).) 
    
-   All of the stored procedures in the add-in include the discriminator value when they write or read from the database. This ensures that when a user selects the **Show Orders** (or **Show Employees** or **Show Inventory**.md) button, only the data that is associated with the user's store is retrieved from the database. This design also ensures that users can only place orders and add employees for their own store.
+   All the stored procedures in the add-in include the discriminator value when they write or read from the database. This ensures that when a user selects **Show Orders** (or **Show Inventory** or **Show Employees**), only the data that is associated with the user's store is retrieved from the database. This design also ensures that users can only place orders and add employees for their own store.
     
    The remote web application obtains the host web URL from a query string parameter that SharePoint adds to the URL of the start page when it launches the add-in. Because SSL is being used, this query string is encrypted as it goes across the Internet to the remote web application. 
 
 10. To end the debugging session, close the browser window or stop debugging in Visual Studio. Each time you select F5, Visual Studio retracts the previous version of the add-in and installs the latest one.   
  
-11. By default, the add-in remains installed on the SharePoint host web in between debugging sessions in Visual Studio. To see how end users would launch it after it is installed, open the Fabrikam Hong Kong SharePoint website in your browser and go to the **Site Contents** page. You'll see the tile for the add-in as it is in the following screenshot:
+11. By default, the add-in remains installed on the SharePoint host web in between debugging sessions in Visual Studio. To see how end users would launch it after it is installed, open the Fabrikam Hong Kong SharePoint website in your browser and go to the **Site Contents** page. You'll see the tile for the add-in as it is in the following screenshot.
 
    *Figure 5. Launch tile for the Chain Store add-in*
 
    ![The launch tile for the Chain Store add-in on the site contents page with the add-in's icon and name.](../images/f16e6360-c511-431f-b2c5-9e5541e64d4b.PNG)
  
-> [!NOTE]
-> If you select the tile, the start page does not open because Visual Studio closes the IIS Express session when you stop debugging.
+   > [!NOTE]
+   > If you select the tile, the start page does not open because Visual Studio closes the IIS Express session when you stop debugging.
 
 ## Configure Visual Studio to rebuild the corporate database with each debugging session
 <a name="Rebuild"> </a>
@@ -242,7 +242,7 @@ In some scenarios, you want your remote pages to have their own branding, but in
 ## Run the add-in and test the new SharePoint UI
 <a name="Rebuild"> </a>
 
-1. Use the F5 key to deploy and run your add-in. Visual Studio hosts the remote web application in IIS Express and hosts the SQL database in a SQL Express. It also makes a temporary installation of the add-in on your test SharePoint site and immediately runs the add-in. You are prompted to grant permissions to the add-in before its start page opens.
+1. Use the F5 key to deploy and run your add-in. Visual Studio hosts the remote web application in IIS Express and hosts the SQL database in SQL Express. It also makes a temporary installation of the add-in on your test SharePoint site and immediately runs the add-in. You are prompted to grant permissions to the add-in before its start page opens.
     
 2. When the add-in's start page opens, it now looks like a SharePoint page. Select the **Order Form** link. It also now looks like a SharePoint form.
   
@@ -260,7 +260,7 @@ In some scenarios, you want your remote pages to have their own branding, but in
 
 5. Select the **?** icon on the end of the chrome control. A simple help page opens. Select the browser's back button.
 
-6. Select the gear icon on the chrome control. A menu opens with links for an Account and a Contact page. Open the Account page, and use the browser's back button to get back to the start page. Do the same for the Contact page.
+6. Select the gear icon on the chrome control. A menu opens with links for an Account page and a Contact page. Open the Account page, and use the browser's back button to get back to the start page. Do the same for the Contact page.
 
 7. Select the **Back to Site** button on the chrome control. The home page of the host web, the Hong Kong store team site, opens.
 
