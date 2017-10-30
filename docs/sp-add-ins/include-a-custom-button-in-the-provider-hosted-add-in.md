@@ -51,13 +51,13 @@ The custom button is going to be on the ribbon of a specific list that records t
     
 10. Click **new item**, and on the create item form, enter a name, but do *not* select **Added to Corporate DB**. Select **Save**. The list should look similar to the following.
 
-   *Figure 1. Local Employees list with a single item
+   *Figure 1. Local Employees list with a single item*
 
    ![The Local Employees list with a single item. Name is Brayden Sawtell. The value of the "Added to Corporate DB" column is No.](../images/a3371859-e42f-49ea-8f17-48d8a248b075.PNG)
 
 ## Add the custom button
 
-In this section, you include markup in the add-in that will deploy a button to the list's ribbon. When a user highlights an employee on the list and clicks the button, the employee's name will be added to the corporate database and the  **Added to Corporate DB** field for the employee will be switched from No to Yes.
+In this section, you include markup in the add-in that deploys a button to the list's ribbon. When a user highlights an employee in the list and selects the button, the employee's name is added to the corporate database, and the **Added to Corporate DB** field for the employee switches from **No** to **Yes**.
 
 1.  If Visual Studio is open, you have to close it and reopen the Chain Store solution so that Visual Studio can discover your new list (run Visual Studio as an administrator).
     
@@ -85,7 +85,7 @@ In this section, you include markup in the add-in that will deploy a button to t
    |:-----|:-----|
    |**Where is the control located?**|Ribbon.ListItem.Actions|
    |**What is the label text for the button control?**|Add to Corporate DB|
-   |**Where does the button control navigate to?**|ChainStoreWeb\Pages\EmployeeAdder.aspx (this is a page whose code-behind is going to add the employee to the database)|
+   |**Where does the button control navigate to?**|ChainStoreWeb\Pages\EmployeeAdder.aspx<br/>(this is a page whose code-behind is going to add the employee to the database)|
 
 6. Click  **Finish**.
     
@@ -172,23 +172,23 @@ In this section, you include markup in the add-in that will deploy a button to t
     ```
 
 
-   The entire method should now look like the following.
+    The entire method should now look like the following.
 
-    ```C#
-      private string GetLocalEmployeeName()
-    {
-        ListItem localEmployee;
+     ```C#
+       private string GetLocalEmployeeName()
+     {
+         ListItem localEmployee;
 
-        using (var clientContext = spContext.CreateUserClientContextForSPHost())
-        {
-            List localEmployeesList = clientContext.Web.Lists.GetByTitle("Local Employees");
-            selectedLocalEmployee = localEmployeesList.GetItemById(listItemID);
-            clientContext.Load(selectedLocalEmployee);
-            clientContext.ExecuteQuery();
-        }
-        return localEmployee["Title"].ToString();
-    }
-    ```
+         using (var clientContext = spContext.CreateUserClientContextForSPHost())
+         {
+             List localEmployeesList = clientContext.Web.Lists.GetByTitle("Local Employees");
+             selectedLocalEmployee = localEmployeesList.GetItemById(listItemID);
+             clientContext.Load(selectedLocalEmployee);
+             clientContext.ExecuteQuery();
+         }
+         return localEmployee["Title"].ToString();
+     }
+     ```
 
 17. The EmployeeAdder page should not actually render, so add the following as the last line in the **Page_Load** method. This redirects the browser back to the list view page for the **Local Employees** list.
     
@@ -198,24 +198,24 @@ In this section, you include markup in the add-in that will deploy a button to t
 
     ```
 
-The entire **Page_Load** method should now look like the following.
+    The entire **Page_Load** method should now look like the following.
 
-    ```C#
-      protected void Page_Load(object sender, EventArgs e)
-    {
-        spContext = Session["SPContext"] as SharePointContext;
-        listItemID = GetListItemIDFromQueryParameter();
+        ```C#
+          protected void Page_Load(object sender, EventArgs e)
+        {
+            spContext = Session["SPContext"] as SharePointContext;
+            listItemID = GetListItemIDFromQueryParameter();
 
-        // Read from SharePoint
-        string employeeName = GetLocalEmployeeName();
+            // Read from SharePoint
+            string employeeName = GetLocalEmployeeName();
 
-        // Write to remote database
-        AddLocalEmployeeToCorpDB(employeeName);
+            // Write to remote database
+            AddLocalEmployeeToCorpDB(employeeName);
 
-        // Go back to the preceding page
-        Response.Redirect(spContext.SPHostUrl.ToString() + "Lists/LocalEmployees/AllItems.aspx", true);
-    }
-    ```
+            // Go back to the preceding page
+            Response.Redirect(spContext.SPHostUrl.ToString() + "Lists/LocalEmployees/AllItems.aspx", true);
+        }
+        ```
 
 
 ## Request permission to read the host web list
