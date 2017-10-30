@@ -1,6 +1,6 @@
 ---
 title: Add SharePoint write operations to the provider-hosted add-in
-ms.date: 09/25/2017
+ms.date: 10/30/2017
 ms.prod: sharepoint
 ---
 
