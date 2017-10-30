@@ -51,9 +51,9 @@ The custom button is going to be on the ribbon of a specific list that records t
     
 10. Click **new item**, and on the create item form, enter a name, but do *not* select **Added to Corporate DB**. Select **Save**. The list should look similar to the following.
 
-   *Figure 1. Local Employees list with a single item*
+    *Figure 1. Local Employees list with a single item*
 
-   ![The Local Employees list with a single item. Name is Brayden Sawtell. The value of the "Added to Corporate DB" column is No.](../images/a3371859-e42f-49ea-8f17-48d8a248b075.PNG)
+    ![The Local Employees list with a single item. Name is Brayden Sawtell. The value of the "Added to Corporate DB" column is No.](../images/a3371859-e42f-49ea-8f17-48d8a248b075.PNG)
 
 ## Add the custom button
 
