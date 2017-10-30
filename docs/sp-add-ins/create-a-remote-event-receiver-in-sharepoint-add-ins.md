@@ -1,15 +1,22 @@
+---
+title: Create a remote event receiver in SharePoint Add-ins
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Create a remote event receiver in SharePoint Add-ins
 Create a remote event receiver (RER) that handles list and list item events in a SharePoint Add-in.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 
 ## Prerequisites
 <a name="SP15appevent_prereq"> </a>
 
-It is helpful if you first have an understanding of provider-hosted SharePoint Add-ins, and for you to have developed a few that go a least a little beyond the "Hello World" level. Also, you should be familiar with  [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins). 
+It is helpful if you first have an understanding of provider-hosted SharePoint Add-ins, and for you to have developed a few that go a least a little beyond the "Hello World" level. Also, you should be familiar with  [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins.md). 
  
 
  
@@ -94,7 +101,7 @@ To follow along with this article and enter the code yourself, download the samp
 ### To add functionality to the remote event receiver
 
 
-1. If your test SharePoint farm is not on the same computer that is running Visual Studio, (or you are using an SharePoint Online tenancy as your test SharePoint site), configure the project for debugging using the Microsoft Azure Service Bus. For more information, see the  [Debug and troubleshoot a remote event receiver in a SharePoint Add-in](debug-and-troubleshoot-a-remote-event-receiver-in-a-sharepoint-add-in). 
+1. If your test SharePoint farm is not on the same computer that is running Visual Studio, (or you are using an SharePoint Online tenancy as your test SharePoint site), configure the project for debugging using the Microsoft Azure Service Bus. For more information, see the  [Debug and troubleshoot a remote event receiver in a SharePoint Add-in](debug-and-troubleshoot-a-remote-event-receiver-in-a-sharepoint-add-in.md). 
     
  
 2. In the code file for the service of the remote event receiver (that is, RemoteEventReceiver1.svc.cs), replace the contents with the following code.
@@ -300,7 +307,7 @@ Test your handler with the following procedure.
 
  
 
-  ![SharePoint remote events in Visual Studio](../../images/SP_VS_Properties_Window_RemoteEvents.PNG)
+  ![SharePoint remote events in Visual Studio](../images/SP_VS_Properties_Window_RemoteEvents.PNG)
  
 
  
@@ -343,13 +350,13 @@ https://github.com/OfficeDev/PnP/tree/master/Samples/Provisioning.ReR)
 <a name="Additional"> </a>
 
 
--  [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins)
+-  [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins.md)
     
  
--  [Debug and troubleshoot a remote event receiver in a SharePoint Add-in](debug-and-troubleshoot-a-remote-event-receiver-in-a-sharepoint-add-in)
+-  [Debug and troubleshoot a remote event receiver in a SharePoint Add-in](debug-and-troubleshoot-a-remote-event-receiver-in-a-sharepoint-add-in.md)
     
  
--  [Remote Event Receivers FAQ](handle-events-in-sharepoint-add-ins#RERFAQ)
+-  [Remote Event Receivers FAQ](handle-events-in-sharepoint-add-ins.md#RERFAQ)
     
  
 

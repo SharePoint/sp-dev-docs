@@ -1,6 +1,7 @@
 ---
 title: How to Work with user profiles and organization profiles by using the server object model in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 13f16dc3-f652-4fb3-996b-5f2166236d2b
 ---
 
@@ -15,7 +16,7 @@ In SharePoint, user profiles represent SharePoint users. User profile properties
     
 
 > **Note:**
-> For more information about common programming tasks for working with user profiles and the API that you use to perform the tasks, see  [Work with user profiles in SharePoint](work-with-user-profiles-in-sharepoint). 
+> For more information about common programming tasks for working with user profiles and the API that you use to perform the tasks, see  [Work with user profiles in SharePoint](work-with-user-profiles-in-sharepoint.md). 
   
     
     
@@ -66,11 +67,11 @@ To create a console application that uses the server object model to work with u
   
 6. Replace the contents of the **Program** class with the code example from one of the following scenarios:
     
-  -  [Create a user profile](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj#bkmk_CreateUP)
-  -  [Create a user profile property](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj#bkmk_CreateUPProp)
-  -  [Retrieve and change user profiles](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj#bkmk_GetChangeUP)
-  -  [Retrieve and change attributes for user profile properties](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj#bkmk_GetChangePropAttributes)
-  -  [Retrieve and change values for user properties](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj#bkmk_GetChangePropValues)
+  -  [Create a user profile](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md#bkmk_CreateUP)
+  -  [Create a user profile property](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md#bkmk_CreateUPProp)
+  -  [Retrieve and change user profiles](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md#bkmk_GetChangeUP)
+  -  [Retrieve and change attributes for user profile properties](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md#bkmk_GetChangePropAttributes)
+  -  [Retrieve and change values for user properties](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md#bkmk_GetChangePropValues)
     
   
 7. To test the console application, on the menu bar, choose **Debug**, **Start Debugging**. You can check your changes from the **Manage Profile Service** page for the User Profile Service Application in Central Administration.
@@ -498,13 +499,13 @@ namespace UserProfilesSSOM
 <a name="bk_addresources"> </a>
 
 
--  [Work with user profiles in SharePoint](work-with-user-profiles-in-sharepoint)
+-  [Work with user profiles in SharePoint](work-with-user-profiles-in-sharepoint.md)
     
   
--  [How to: Retrieve user profile properties by using the .NET client object model in SharePoint](how-to-retrieve-user-profile-properties-by-using-the-net-client-object-model-in)
+-  [How to: Retrieve user profile properties by using the .NET client object model in SharePoint](how-to-retrieve-user-profile-properties-by-using-the-net-client-object-model-in.md)
     
   
--  [How to: Retrieve user profile properties by using the JavaScript object model in SharePoint](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in)
+-  [How to: Retrieve user profile properties by using the JavaScript object model in SharePoint](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in.md)
     
   
 -  [Microsoft.Office.Server.UserProfiles](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.aspx)

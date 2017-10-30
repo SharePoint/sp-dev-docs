@@ -1,6 +1,7 @@
 ---
 title: Step 3 Accessing the Web Service
-ms.prod: OFFICE365
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: d27f654d-242f-4f34-8385-be857c170532
 ---
 
@@ -350,26 +351,26 @@ End Namespace
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api)
+ [Accessing the SOAP API](accessing-the-soap-api.md)
 #### Other resources
 
 
   
     
     
- [Step 1: Creating the Web Service Client Project](step-1-creating-the-web-service-client-project)
+ [Step 1: Creating the Web Service Client Project](step-1-creating-the-web-service-client-project.md)
   
     
     
- [Step 2: Adding a Web Reference](step-2-adding-a-web-reference)
+ [Step 2: Adding a Web Reference](step-2-adding-a-web-reference.md)
   
     
     
- [Step 4: Building and Testing the Application](step-4-building-and-testing-the-application)
+ [Step 4: Building and Testing the Application](step-4-building-and-testing-the-application.md)
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
   
     
     

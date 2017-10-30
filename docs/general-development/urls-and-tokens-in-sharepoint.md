@@ -1,4 +1,8 @@
-
+---
+title: URLs and tokens in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
 
 
 

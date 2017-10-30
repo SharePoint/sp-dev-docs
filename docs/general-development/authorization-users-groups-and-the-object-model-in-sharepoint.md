@@ -1,6 +1,7 @@
----
+﻿---
 title: Authorization, users, groups, and the object model in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: aacf3398-f0b5-48cb-9071-440b4c3a9dd1
 ---
 
@@ -119,7 +120,7 @@ Figure 1 shows a high-level view of the SharePoint Server security management sy
   
     
     
-![Authorization object relations](../../images/4a1e594e-cc3b-4bd6-bfe7-27568e30bb2b.gif)
+![Authorization object relations](../images/4a1e594e-cc3b-4bd6-bfe7-27568e30bb2b.gif)
   
     
     
@@ -249,19 +250,19 @@ The only way to remove a user from all scopes is to delete that user from the si
 <a name="SP15_AuthorizationUsersGroupsAndObjectModel_AdditionalResources"> </a>
 
 
--  [Authentication, authorization, and security in SharePoint](authentication-authorization-and-security-in-sharepoint)
+-  [Authentication, authorization, and security in SharePoint](authentication-authorization-and-security-in-sharepoint.md)
     
   
--  [Role, inheritance, elevation of privilege, and password changes in SharePoint](role-inheritance-elevation-of-privilege-and-password-changes-in-sharepoint)
+-  [Role, inheritance, elevation of privilege, and password changes in SharePoint](role-inheritance-elevation-of-privilege-and-password-changes-in-sharepoint.md)
     
   
--  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint)
+-  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint.md)
     
   
--  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint)
+-  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint.md)
     
   
--  [Configuration, administration, and resources in SharePoint](configuration-administration-and-resources-in-sharepoint)
+-  [Configuration, administration, and resources in SharePoint](configuration-administration-and-resources-in-sharepoint.md)
     
   
 

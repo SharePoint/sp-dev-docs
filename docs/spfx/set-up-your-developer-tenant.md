@@ -1,3 +1,10 @@
+---
+title: Set up your Office 365 tenant
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Set up your Office 365 tenant
 
 To build and deploy client-side web parts using the preview release of the SharePoint Framework, you will need a normal Office 365 tenant. 
@@ -64,4 +71,4 @@ https://your-sharepoint-site/_layouts/workbench.aspx
 ```
 
 ## Next steps
-Now that you have configured your SharePoint tenant, [set up your development environment](./set-up-your-development-environment) to build client-side web parts.
+Now that you have configured your SharePoint tenant, [set up your development environment](./set-up-your-development-environment.md) to build client-side web parts.

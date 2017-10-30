@@ -1,6 +1,7 @@
----
+﻿---
 title: Understanding Excel Services UDFs
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: a1567278-fac4-4b3b-a814-56f2376c1217
 ---
 
@@ -119,7 +120,7 @@ Each Excel Services trusted location has an **AllowUdfs** flag.
     
 
 > **Note:**
-> The **AllowUdfs** flag is denoted by the **User-defined functions allowed** option on the Excel Services Trusted File Locations page. To learn how to navigate to the Trusted File Locations page, see [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs). 
+> The **AllowUdfs** flag is denoted by the **User-defined functions allowed** option on the Excel Services Trusted File Locations page. To learn how to navigate to the Trusted File Locations page, see [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md). 
   
     
     
@@ -152,7 +153,7 @@ To reload a UDF assembly, you can run **iisreset** or restart the Excel Calculat
     
 
 > **Caution:**
-> Resetting IIS will end all current sessions. > For more information, see  [How to: Enable UDFs](how-to-enable-udfs). 
+> Resetting IIS will end all current sessions. > For more information, see  [How to: Enable UDFs](how-to-enable-udfs.md). 
   
     
     
@@ -200,43 +201,43 @@ For more information about configuring code groups, as well as the **RequestMini
   
     
     
- [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service)
+ [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service.md)
   
     
     
- [How to: Trust a Location](how-to-trust-a-location)
+ [How to: Trust a Location](how-to-trust-a-location.md)
   
     
     
- [How to: Catch Exceptions](how-to-catch-exceptions)
+ [How to: Catch Exceptions](how-to-catch-exceptions.md)
   
     
     
- [How to: Enable UDFs](how-to-enable-udfs)
+ [How to: Enable UDFs](how-to-enable-udfs.md)
 #### Concepts
 
 
   
     
     
- [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf)
+ [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md)
   
     
     
- [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs)
+ [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs.md)
   
     
     
- [Excel Services Architecture](excel-services-architecture)
+ [Excel Services Architecture](excel-services-architecture.md)
   
     
     
- [Excel Services Alerts](excel-services-alerts)
+ [Excel Services Alerts](excel-services-alerts.md)
   
     
     
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips)
+ [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
   
     
     
- [Excel Services Best Practices](excel-services-best-practices)
+ [Excel Services Best Practices](excel-services-best-practices.md)

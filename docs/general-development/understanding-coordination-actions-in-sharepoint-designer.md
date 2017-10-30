@@ -1,6 +1,7 @@
 ---
 title: Understanding Coordination actions in SharePoint Designer 2013
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 33fbcf91-0a5d-47ab-85a9-9d2d556a204d
 ---
 
@@ -38,7 +39,7 @@ Coordination Actions appear in the **Actions** drop-down menu when you build a w
   
     
     
-![Coordination Actions in SharePoint Designer](../../images/SPD15-CoordinationActions.png)
+![Coordination Actions in SharePoint Designer](../images/SPD15-CoordinationActions.png)
   
     
     
@@ -76,7 +77,7 @@ A Coordination Action includes three editable regions, as shown in the figure.
   
     
     
-![Start a List Workflow coordination action](../../images/SPD15-CoordinationActions2.png)
+![Start a List Workflow coordination action](../images/SPD15-CoordinationActions2.png)
   
     
     
@@ -108,7 +109,7 @@ Click an editable link to enter information. For example, to select the 2010 wor
   
     
     
-![Selecting a workflow based on the 2010 platform](../../images/SPD15-CoordinationActions3.png)
+![Selecting a workflow based on the 2010 platform](../images/SPD15-CoordinationActions3.png)
   
     
     
@@ -138,7 +139,7 @@ The SharePoint 2010 Workflow platform workflow instances that are coordinated fr
   
     
     
-![The workflow status page lists the subworkflows.](../../images/SPD15-CorrelationActions4.png)
+![The workflow status page lists the subworkflows.](../images/SPD15-CorrelationActions4.png)
   
     
     
@@ -161,7 +162,7 @@ The SharePoint 2010 Workflow platform workflow instances that are coordinated fr
 -  [Getting started with SharePoint workflow](http://msdn.microsoft.com/library/cc73be76-a329-449f-90ab-86822b1c2ee8.aspx)
     
   
--  [Understanding Dictionary actions in SharePoint Designer 2013](understanding-dictionary-actions-in-sharepoint-designer)
+-  [Understanding Dictionary actions in SharePoint Designer 2013](understanding-dictionary-actions-in-sharepoint-designer.md)
     
   
 

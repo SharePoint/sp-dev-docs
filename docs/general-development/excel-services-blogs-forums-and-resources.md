@@ -1,9 +1,10 @@
 ---
 title: Excel Services Blogs, Forums, and Resources
+ms.date: 09/25/2017
 keywords: blogger
 f1_keywords:
 - blogger
-ms.prod: OFFICE365
+ms.prod: sharepoint
 ms.assetid: c0b137cd-126d-4c74-a3f7-eb9debe3c35f
 ---
 
@@ -48,34 +49,34 @@ The following are links to blogs, forums, and additional resources related to Ex
   
     
     
- [Excel Services Overview](excel-services-overview)
+ [Excel Services Overview](excel-services-overview.md)
   
     
     
- [Excel Services Development Roadmap](excel-services-development-roadmap)
+ [Excel Services Development Roadmap](excel-services-development-roadmap.md)
   
     
     
- [Excel Services Architecture](excel-services-architecture)
+ [Excel Services Architecture](excel-services-architecture.md)
   
     
     
- [Excel Services Best Practices](excel-services-best-practices)
+ [Excel Services Best Practices](excel-services-best-practices.md)
   
     
     
- [Excel Services Alerts](excel-services-alerts)
+ [Excel Services Alerts](excel-services-alerts.md)
   
     
     
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips)
+ [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
 #### Other resources
 
 
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)
   
     
     

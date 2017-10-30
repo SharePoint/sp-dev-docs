@@ -1,6 +1,7 @@
 ---
 title: Working with Tasks in SharePoint Workflows using Visual Studio 2012
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: f5869fe2-1bef-4e6f-bfdc-3e109501d260
 ---
 
@@ -86,7 +87,7 @@ This new **Workflow Task** content type differs from the earlier **Task** conten
 
   
 
-  ![WorkingWithTasksSharePointWorkflowsFig1](../../images/WorkingWithTasksSharePointWorkflowsFig1.png)
+  ![WorkingWithTasksSharePointWorkflowsFig1](../images/WorkingWithTasksSharePointWorkflowsFig1.png)
   
 
   
@@ -110,7 +111,7 @@ Prior to SharePoint, the workflow task list used the same list template as the s
   
     
     
-![WorkingWithTasksSharePointWorkflowsFig2](../../images/WorkingWithTasksSharePointWorkflowsFig2.png)
+![WorkingWithTasksSharePointWorkflowsFig2](../images/WorkingWithTasksSharePointWorkflowsFig2.png)
   
     
     
@@ -139,7 +140,7 @@ Both SharePoint Designer 2013 and Visual Studio 2012 provide workflow authors tw
   
     
     
-![WorkingWithTasksSharePointWorkflowsFig3](../../images/WorkingWithTasksSharePointWorkflowsFig3.png)
+![WorkingWithTasksSharePointWorkflowsFig3](../images/WorkingWithTasksSharePointWorkflowsFig3.png)
   
     
     
@@ -157,7 +158,7 @@ SharePoint lets you specify whether multiple tasks should run serially or in par
   
     
     
-![WorkingWithTasksSharePointWorkflowsFig4](../../images/WorkingWithTasksSharePointWorkflowsFig4.png)
+![WorkingWithTasksSharePointWorkflowsFig4](../images/WorkingWithTasksSharePointWorkflowsFig4.png)
   
     
     
@@ -206,7 +207,7 @@ We are going to create a task in our workflow and assign it to the person who cr
 
   
 
-  ![WorkingWithTasksSharePointWorkflowsFig4](../../images/WorkingWithTasksSharePointWorkflowsFig5.png)
+  ![WorkingWithTasksSharePointWorkflowsFig4](../images/WorkingWithTasksSharePointWorkflowsFig5.png)
   
 
   
@@ -236,7 +237,7 @@ We are going to create a task in our workflow and assign it to the person who cr
 
   
 
-  ![WorkingWithTasksSharePointWorkflowsFig5](../../images/WorkingWithTasksSharePointWorkflowsFig6.png)
+  ![WorkingWithTasksSharePointWorkflowsFig5](../images/WorkingWithTasksSharePointWorkflowsFig6.png)
   
 
   
@@ -265,7 +266,7 @@ At this point we can create and assign the task to the author of the announcemen
 
   
 
-  ![WorkingWithTasksSharePointWorkflowsFig7](../../images/WorkingWithTasksSharePointWorkflowsFig7.png)
+  ![WorkingWithTasksSharePointWorkflowsFig7](../images/WorkingWithTasksSharePointWorkflowsFig7.png)
   
 
   
@@ -289,7 +290,7 @@ Notice in Figure 8 the email options that you can set. Among other options, you 
   
     
     
-![WorkingWithTasksSharePointWorkflowsFig8](../../images/WorkingWithTasksSharePointWorkflowsFig8.png)
+![WorkingWithTasksSharePointWorkflowsFig8](../images/WorkingWithTasksSharePointWorkflowsFig8.png)
   
     
     
@@ -307,7 +308,7 @@ You can also set the task outcome options. You can select the workflow task cont
   
     
     
-![WorkingWithTasksSharePointWorkflowsFig9](../../images/WorkingWithTasksSharePointWorkflowsFig9.png)
+![WorkingWithTasksSharePointWorkflowsFig9](../images/WorkingWithTasksSharePointWorkflowsFig9.png)
   
     
     
@@ -336,7 +337,7 @@ Once you have accepted values in the **Task Options** dialog box, select the **S
   
     
     
-![WorkingWithTasksSharePointWorkflowsFig10](../../images/WorkingWithTasksSharePointWorkflowsFig10.png)
+![WorkingWithTasksSharePointWorkflowsFig10](../images/WorkingWithTasksSharePointWorkflowsFig10.png)
   
     
     
@@ -358,7 +359,7 @@ Notice that the **Outcome** property automatically created a variable named **ou
   
     
     
-![WorkingWithTasksSharePointWorkflowsFig11](../../images/WorkingWithTasksSharePointWorkflowsFig11.png)
+![WorkingWithTasksSharePointWorkflowsFig11](../images/WorkingWithTasksSharePointWorkflowsFig11.png)
   
     
     
@@ -390,7 +391,7 @@ To test the workflow, do the following:
 
   
 
-  ![WorkingWithTasksSharePointWorkflowsFig13](../../images/WorkingWithTasksSharePointWorkflowsFig12.png)
+  ![WorkingWithTasksSharePointWorkflowsFig13](../images/WorkingWithTasksSharePointWorkflowsFig12.png)
   
 
   
@@ -402,7 +403,7 @@ To test the workflow, do the following:
 
   
 
-  ![WorkingWithTasksSharePointWorkflowsFig13](../../images/WorkingWithTasksSharePointWorkflowsFig13.png)
+  ![WorkingWithTasksSharePointWorkflowsFig13](../images/WorkingWithTasksSharePointWorkflowsFig13.png)
   
 
   
@@ -433,7 +434,7 @@ This approach can pose a challenge, however, in that the content type that the c
   
     
     
-![WorkingWithTasksSharePointWorkflowsFig14](../../images/WorkingWithTasksSharePointWorkflowsFig14.png)
+![WorkingWithTasksSharePointWorkflowsFig14](../images/WorkingWithTasksSharePointWorkflowsFig14.png)
   
     
     
@@ -575,7 +576,7 @@ Now we create a workflow so we can test the custom site column and content type.
 
   
 
-  ![WorkingWithTasksSharePointWorkflowsFig15](../../images/WorkingWithTasksSharePointWorkflowsFig15.png)
+  ![WorkingWithTasksSharePointWorkflowsFig15](../images/WorkingWithTasksSharePointWorkflowsFig15.png)
   
 
   
@@ -610,7 +611,7 @@ Now we collect the list item properties.
 
   
 
-  ![WorkingWithTasksSharePointWorkflowsFig16](../../images/WorkingWithTasksSharePointWorkflowsFig16.png)
+  ![WorkingWithTasksSharePointWorkflowsFig16](../images/WorkingWithTasksSharePointWorkflowsFig16.png)
   
 
   
@@ -639,7 +640,7 @@ Now we can create the single task.
 
   
 
-  ![WorkingWithTasksSharePointWorkflowsFig17](../../images/WorkingWithTasksSharePointWorkflowsFig17.png)
+  ![WorkingWithTasksSharePointWorkflowsFig17](../images/WorkingWithTasksSharePointWorkflowsFig17.png)
   
 
   
@@ -654,7 +655,7 @@ Now we can create the single task.
 
   
 
-  ![WorkingWithTasksSharePointWorkflowsFig18](../../images/WorkingWithTasksSharePointWorkflowsFig18.png)
+  ![WorkingWithTasksSharePointWorkflowsFig18](../images/WorkingWithTasksSharePointWorkflowsFig18.png)
   
 
   
@@ -721,7 +722,7 @@ Now let's test the workflow.
 
   
 
-  ![WorkingWithTasksSharePointWorkflowsFig19](../../images/WorkingWithTasksSharePointWorkflowsFig.png)
+  ![WorkingWithTasksSharePointWorkflowsFig19](../images/WorkingWithTasksSharePointWorkflowsFig.png)
   
 
   

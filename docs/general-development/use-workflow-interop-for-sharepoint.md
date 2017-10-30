@@ -1,3 +1,8 @@
+---
+title: Use workflow interop for SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
 
 
 # Use workflow interop for SharePoint
@@ -9,7 +14,7 @@ Provides a discussion of using SharePoint workflow Interop in the Visual Studio 
 
 
 > **Important:**
-> To learn about using SharePoint workflow interop functionality in SharePoint Designer 2013, see  [Understanding Coordination actions in SharePoint Designer 2013](understanding-coordination-actions-in-sharepoint-designer). 
+> To learn about using SharePoint workflow interop functionality in SharePoint Designer 2013, see  [Understanding Coordination actions in SharePoint Designer 2013](understanding-coordination-actions-in-sharepoint-designer.md). 
   
     
     
@@ -36,7 +41,7 @@ SharePoint workflow interop enables SharePoint 2010 workflows (built on Windows 
   
     
     
-![Workflow interop bridge](../../images/wfInteropBridge.png)
+![Workflow interop bridge](../images/wfInteropBridge.png)
   
     
     
@@ -62,7 +67,7 @@ Let's walk through the process depicted in Figure 1. Use the letters to referenc
 
   
 
-  ![Start a 2010 workflow](../../images/wfInterop_Stage1.png)
+  ![Start a 2010 workflow](../images/wfInterop_Stage1.png)
   
 
     
@@ -85,7 +90,7 @@ Let's walk through the process depicted in Figure 1. Use the letters to referenc
 
   
 
-  ![Setting properties on a Start Workflow activity](../../images/wfInterop_.png)
+  ![Setting properties on a Start Workflow activity](../images/wfInterop_.png)
   
 
   
@@ -140,7 +145,7 @@ The activity is in fact a sequence of messages that take place between the Workf
   
     
     
-![Workflow interop messaging](../../images/wfInteropMessaging.png)
+![Workflow interop messaging](../images/wfInteropMessaging.png)
   
     
     
@@ -157,13 +162,13 @@ The activity is in fact a sequence of messages that take place between the Workf
 <a name="bk_addresources"> </a>
 
 
--  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint)
+-  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint.md)
     
   
--  [SharePoint workflow fundamentals](sharepoint-workflow-fundamentals)
+-  [SharePoint workflow fundamentals](sharepoint-workflow-fundamentals.md)
     
   
--  [Understanding Coordination actions in SharePoint Designer 2013](understanding-coordination-actions-in-sharepoint-designer)
+-  [Understanding Coordination actions in SharePoint Designer 2013](understanding-coordination-actions-in-sharepoint-designer.md)
     
   
 -  [WorkflowInteropService](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowInteropService.aspx)

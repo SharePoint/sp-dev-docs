@@ -1,6 +1,7 @@
 ---
 title: How to Apply a master page to a site in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 04861390-84d5-40ea-b0db-6c0748eff196
 ---
 
@@ -15,7 +16,7 @@ In SharePoint, a master page defines the shared framing elements such as the chr
     
 
 > **Note:**
-> For more information about Design Manager and master pages, see  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint). For more information about how to create device channels, see  [SharePoint Design Manager device channels](sharepoint-design-manager-device-channels). 
+> For more information about Design Manager and master pages, see  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md). For more information about how to create device channels, see  [SharePoint Design Manager device channels](sharepoint-design-manager-device-channels.md). 
   
     
     
@@ -46,13 +47,13 @@ In SharePoint, a master page defines the shared framing elements such as the chr
 <a name="bk_addresources"> </a>
 
 
--  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
     
   
--  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint)
+-  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md)
     
   
--  [What's new with SharePoint site development](what-s-new-with-sharepoint-site-development)
+-  [What's new with SharePoint site development](what-s-new-with-sharepoint-site-development.md)
     
   
 

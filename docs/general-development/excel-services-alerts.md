@@ -1,9 +1,10 @@
----
+﻿---
 title: Excel Services Alerts
+ms.date: 09/25/2017
 keywords: errors
 f1_keywords:
 - errors
-ms.prod: SHAREPOINT
+ms.prod: sharepoint
 ms.assetid: a4e7030b-05c2-484e-b21f-46cba937b803
 ---
 
@@ -92,23 +93,23 @@ For general information about exception handling, see "Handling and Throwing Exc
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api)
+ [Accessing the SOAP API](accessing-the-soap-api.md)
   
     
     
- [Excel Services Error Codes](excel-services-error-codes)
+ [Excel Services Error Codes](excel-services-error-codes.md)
 #### Other resources
 
 
   
     
     
- [Step 3: Accessing the Web Service](step-3-accessing-the-web-service)
+ [Step 3: Accessing the Web Service](step-3-accessing-the-web-service.md)
   
     
     
- [Step 4: Building and Testing the Application](step-4-building-and-testing-the-application)
+ [Step 4: Building and Testing the Application](step-4-building-and-testing-the-application.md)
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)

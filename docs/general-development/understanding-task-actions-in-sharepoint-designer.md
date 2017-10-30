@@ -1,6 +1,7 @@
 ---
 title: Understanding Task Actions in SharePoint Designer 2013
-ms.prod: SHAREPOINTDESIGNER
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 6fd69e94-ebe1-4d5d-98db-b2f3ce16f098
 ---
 
@@ -44,7 +45,7 @@ The Task Actions are accessed in the **Action** drop-down menu of the SharePoint
   
     
     
-![Task Actions are available from the Action drop-down menu of the SharePoint Designer 2013 Preview ribbon](../../images/spd15-TaskActions1.png)
+![Task Actions are available from the Action drop-down menu of the SharePoint Designer 2013 Preview ribbon](../images/spd15-TaskActions1.png)
   
     
     
@@ -85,7 +86,7 @@ The **Assign a task** action is shown in the figure.
   
     
     
-!["Assign a task" action in SharePoint Designer 2013.](../../images/SPD15-TaskActions2.png)
+!["Assign a task" action in SharePoint Designer 2013.](../images/SPD15-TaskActions2.png)
   
     
     
@@ -121,7 +122,7 @@ The **Assign a task** action takes three inputs: the user to assign a task, the 
   
     
     
-![Use the "Assign a task" dialog box to set the participant, task title, description, due date, task options, email options, and outcome options.](../../images/SPD15-TaskActions3.png)
+![Use the "Assign a task" dialog box to set the participant, task title, description, due date, task options, email options, and outcome options.](../images/SPD15-TaskActions3.png)
   
     
     
@@ -150,7 +151,7 @@ The **Start a task process** action is shown in the figure.
   
     
     
-![The "Start a task process" action takes two inputs: "users" and an "outcome" variable](../../images/SPD15-TaskActions4.png)
+![The "Start a task process" action takes two inputs: "users" and an "outcome" variable](../images/SPD15-TaskActions4.png)
   
     
     
@@ -183,7 +184,7 @@ The **Start a task process** action takes two inputs: the users that will partic
   
     
     
-![Use the "Start a Task Process" dialog box to set the participants, task title, description, due date, task options, email options, and outcome options.](../../images/SPD15-TaskActions5.png)
+![Use the "Start a Task Process" dialog box to set the participants, task title, description, due date, task options, email options, and outcome options.](../images/SPD15-TaskActions5.png)
   
     
     
@@ -206,10 +207,10 @@ The **Start a task process** action takes two inputs: the users that will partic
 -  [Getting started with SharePoint workflow](http://msdn.microsoft.com/library/cc73be76-a329-449f-90ab-86822b1c2ee8.aspx)
     
   
--  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio)
+-  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)
     
   
--  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform)
+-  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
     
   
 

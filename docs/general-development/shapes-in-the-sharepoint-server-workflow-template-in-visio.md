@@ -1,6 +1,7 @@
 ---
 title: Shapes in the SharePoint Server workflow template in Visio
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: f35bdf5d-c102-4e2d-8a23-1d2df17155b9
 ---
 
@@ -17,7 +18,7 @@ This article lists the shapes contained in the SharePoint Workflow template in V
     
 
 > **Important:**
-> The following is a reference for workflow actions that are supported in SharePoint Designer 2013. Most of these actions are available in SharePoint Designer 2010, although one of those (Wait for List Item Event) has been revised and enhanced in the present version. Twelve new actions are introduced in the present version, and 25 actions have been removed. (To see a list of actions, conditions, and blocks that have been removed, see  [Workflow actions available using the workflow interop bridge](workflow-actions-available-using-the-workflow-interop-bridge).) 
+> The following is a reference for workflow actions that are supported in SharePoint Designer 2013. Most of these actions are available in SharePoint Designer 2010, although one of those (Wait for List Item Event) has been revised and enhanced in the present version. Twelve new actions are introduced in the present version, and 25 actions have been removed. (To see a list of actions, conditions, and blocks that have been removed, see  [Workflow actions available using the workflow interop bridge](workflow-actions-available-using-the-workflow-interop-bridge.md)..md) 
   
     
     
@@ -112,10 +113,10 @@ The following table shows a list of all the shapes that are contained in the Sha
 |**Shape in Visio 2013 and SharePoint Designer 2013 Visual Designer**|**Action in the SharePoint Designer 2013 Declarative Designer**|**Properties in SharePoint Designer 2013 Visual Designer**|**Description**|
 |:-----|:-----|:-----|:-----|
 |Start  <br/> |NA  <br/> |NA  <br/> |Begins the workflow. Every SharePoint workflow diagram must have only one Start shape.  <br/> |
-|Stage  <br/> |**Stage** <br/> |NA  <br/> |Contains any number of shapes and may include branching. All actions in the workflow must be contained by a stage. Stage shapes are visualized by using container shapes. A Stage shape requires that an Enter and an Exit shape be added to the edges of the container to define the paths in and out of the stage.  <br/> For more information, see the section titled "Stages, loops, and steps" in the article  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio).  <br/> |
-|Step  <br/> |**Step** <br/> |NA  <br/> |Represents a grouped series of sequential actions. Steps must be contained by a stage. A step shape must also have an Enter and Exit shape, which are added when the shape is dropped onto the canvas.  <br/> For more information, see the section titled "Stages, loops, and steps" in the article  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio).  <br/> |
+|Stage  <br/> |**Stage** <br/> |NA  <br/> |Contains any number of shapes and may include branching. All actions in the workflow must be contained by a stage. Stage shapes are visualized by using container shapes. A Stage shape requires that an Enter and an Exit shape be added to the edges of the container to define the paths in and out of the stage.  <br/> For more information, see the section titled "Stages, loops, and steps" in the article  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md).  <br/> |
+|Step  <br/> |**Step** <br/> |NA  <br/> |Represents a grouped series of sequential actions. Steps must be contained by a stage. A step shape must also have an Enter and Exit shape, which are added when the shape is dropped onto the canvas.  <br/> For more information, see the section titled "Stages, loops, and steps" in the article  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md).  <br/> |
 |Simple Stage  <br/> |**Stage** <br/> |NA  <br/> |Adds new stages to the top level of the workflow when in Stage View in Visio 2013.  <br/> |
-|Loop n Times  <br/> |**Loop n Times** <br/> |**Loop Count** <br/> |Defines a series of connected shapes that will execute as a loop, returning from the last shape in the series to the first, until the loop has executed a specified amount of times. Like stages, loops are represented by a container shape that includes an Enter and Exit shape.  <br/> For more information, see the section titled "Stages, loops, and steps" in the article  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio).  <br/> |
+|Loop n Times  <br/> |**Loop n Times** <br/> |**Loop Count** <br/> |Defines a series of connected shapes that will execute as a loop, returning from the last shape in the series to the first, until the loop has executed a specified amount of times. Like stages, loops are represented by a container shape that includes an Enter and Exit shape.  <br/> For more information, see the section titled "Stages, loops, and steps" in the article  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md).  <br/> |
 |Loop with condition  <br/> |**Loop with Condition** <br/> |**Loop Count** <br/> |Loops until a specific condition is met.  <br/> |
 |Start Parallel Action  <br/> |**Parallel Block** <br/> |NA  <br/> ||
 |End Parallel Action  <br/> |**Parallel Block** <br/> |NA  <br/> ||
@@ -125,10 +126,10 @@ The following table shows a list of all the shapes that are contained in the Sha
 <a name="VSSPD_Additional"> </a>
 
 
--  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio)
+-  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)
     
   
--  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform)
+-  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md)
     
   
 -  [SharePoint Workflow template shapes guide](http://office.microsoft.com/en-us/visio-help/sharepoint-workflow-template-shapes-guide-HA101903894.aspx)

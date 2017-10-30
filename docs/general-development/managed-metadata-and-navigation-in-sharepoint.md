@@ -1,6 +1,7 @@
 ---
 title: Managed metadata and navigation in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: b66d4ec1-a2ef-49cc-8ca5-a6b516bff02e
 ---
 
@@ -10,7 +11,7 @@ ms.assetid: b66d4ec1-a2ef-49cc-8ca5-a6b516bff02e
   
     
     
-![Conceptual overview topic](../../images/mod_icon_badge_conoverview.png)
+![Conceptual overview topic](../images/mod_icon_badge_conoverview.png)
   
     
     
@@ -164,7 +165,7 @@ You can use the following code examples to complete basic operations with the ta
 ## Pinning
 <a name="SP15_ManagedMetadataAndNav_Pinning"> </a>
 
-In Microsoft SharePoint Server 2010, users could reuse terms (and all terms nested under the reused terms) in other locations in the term hierarchy. After these terms were reused, they could be modified and changes would be seen everywhere the terms were reused. SharePoint introduces term pinning. A pinned term is just like a term that is reused, except it is read only and cannot be changed in the locations where the term is reused. For an example, see  [How to: Use code to pin terms to navigation term sets in SharePoint](how-to-use-code-to-pin-terms-to-navigation-term-sets-in-sharepoint).
+In Microsoft SharePoint Server 2010, users could reuse terms (and all terms nested under the reused terms) in other locations in the term hierarchy. After these terms were reused, they could be modified and changes would be seen everywhere the terms were reused. SharePoint introduces term pinning. A pinned term is just like a term that is reused, except it is read only and cannot be changed in the locations where the term is reused. For an example, see  [How to: Use code to pin terms to navigation term sets in SharePoint](how-to-use-code-to-pin-terms-to-navigation-term-sets-in-sharepoint.md).
   
     
     
@@ -234,10 +235,10 @@ A term store manager can enhance and expand term usage models based on more flex
 <a name="SP15_ManagedMetadataAndNav_AdditionalResources"> </a>
 
 
--  [Managed navigation in SharePoint](managed-navigation-in-sharepoint)
+-  [Managed navigation in SharePoint](managed-navigation-in-sharepoint.md)
     
   
--  [Content Search Web Part in SharePoint](content-search-web-part-in-sharepoint)
+-  [Content Search Web Part in SharePoint](content-search-web-part-in-sharepoint.md)
     
   
 

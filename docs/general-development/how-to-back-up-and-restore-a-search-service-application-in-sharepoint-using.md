@@ -1,6 +1,7 @@
 ---
 title: How to Back up and restore a search service application in SharePoint using VSS
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 87ee28e6-8170-4dba-8c9d-f04ab9e632dc
 ---
 

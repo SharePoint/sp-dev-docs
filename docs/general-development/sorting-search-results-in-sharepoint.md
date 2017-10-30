@@ -1,4 +1,8 @@
-
+﻿---
+title: Sorting search results in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
 
 
 
@@ -7,7 +11,7 @@
   
     
     
-![Conceptual overview topic](../../images/mod_icon_badge_conoverview.png)
+![Conceptual overview topic](../images/mod_icon_badge_conoverview.png)
   
     
     
@@ -67,7 +71,7 @@ If you have multiple values in  [SortList](https://msdn.microsoft.com/library/Mi
   
     
     
-Apart from the Query object model, SharePoint also provides a Search REST service that you can use to query the search index with your client or mobile applications. The Search REST service supports both HTTP POST and HTTP GET requests. For more information on how to construct URIs for these requests, see  [Querying with the Search REST service](sharepoint-search-rest-api-overview#bk_queryrest).
+Apart from the Query object model, SharePoint also provides a Search REST service that you can use to query the search index with your client or mobile applications. The Search REST service supports both HTTP POST and HTTP GET requests. For more information on how to construct URIs for these requests, see  [Querying with the Search REST service](sharepoint-search-rest-api-overview.md#bk_queryrest).
   
     
     
@@ -84,7 +88,7 @@ You can also influence the rank calculation in the query string, in one of two w
     
     
 
-- By using the **XRANK** operator available in [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference) and [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference). You can use **XRANK** to apply a conditional rank boosting if a specific query condition is met.
+- By using the **XRANK** operator available in [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference.md) and [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference.md). You can use **XRANK** to apply a conditional rank boosting if a specific query condition is met.
     
   
 - By choosing a relevance weight for dynamic ranking. When using FQL, you can specify an individual relevance weight for each **STRING** operator.
@@ -579,16 +583,16 @@ using (var context = new ClientContext("http://localhost"))
 <a name="bk_addresources"> </a>
 
 
--  [Search in SharePoint](search-in-sharepoint)
+-  [Search in SharePoint](search-in-sharepoint.md)
     
   
--  [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference)
+-  [Keyword Query Language (KQL) syntax reference](keyword-query-language-kql-syntax-reference.md)
     
   
--  [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference)
+-  [FAST Query Language (FQL) syntax reference](fast-query-language-fql-syntax-reference.md)
     
   
--  [SharePoint Search REST API overview](sharepoint-search-rest-api-overview)
+-  [SharePoint Search REST API overview](sharepoint-search-rest-api-overview.md)
     
   
 -  [Overview of crawled and managed properties in SharePoint](http://technet.microsoft.com/en-us/library/jj219630%28office.15%29.aspx)

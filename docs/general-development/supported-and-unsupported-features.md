@@ -1,6 +1,7 @@
 ---
 title: Supported and Unsupported Features
-ms.prod: OFFICE365
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 6e4acad6-7665-493c-94cc-d38684b2842f
 ---
 
@@ -134,7 +135,7 @@ In the following figure, clicking **Learn more about unsupported features** prov
   
     
     
-![Unsupported feature error message for VBA](../../images/aebc97ae-c886-4d50-94ff-238049a259c7.gif)
+![Unsupported feature error message for VBA](../images/aebc97ae-c886-4d50-94ff-238049a259c7.gif)
   
     
     
@@ -181,7 +182,7 @@ All other unsupported features continue to behave as they do in Office SharePoin
   
     
     
-![Unsupported feature error message for XML maps](../../images/7745688c-c612-4a38-b8aa-b5fdb5e4eeb8.gif)
+![Unsupported feature error message for XML maps](../images/7745688c-c612-4a38-b8aa-b5fdb5e4eeb8.gif)
   
     
     
@@ -199,19 +200,19 @@ Unlike workbooks with external links, charts with external links are blocked fro
   
     
     
- [Excel Services Overview](excel-services-overview)
+ [Excel Services Overview](excel-services-overview.md)
   
     
     
- [Excel Services Architecture](excel-services-architecture)
+ [Excel Services Architecture](excel-services-architecture.md)
   
     
     
- [Excel Services Blogs, Forums, and Resources](excel-services-blogs-forums-and-resources)
+ [Excel Services Blogs, Forums, and Resources](excel-services-blogs-forums-and-resources.md)
 #### Other resources
 
 
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)

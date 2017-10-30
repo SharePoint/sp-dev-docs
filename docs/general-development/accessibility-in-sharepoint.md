@@ -1,6 +1,7 @@
 ---
 title: Accessibility in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: c9106d47-c523-49c1-b9f1-cdd7420abd5e
 ---
 
@@ -112,10 +113,10 @@ SharePoint administrators and users depend on the accessibility features that we
 -  [SharePoint Add-ins UX design guidelines](http://msdn.microsoft.com/library/a4a8f53c-27d7-43dc-b6db-aa7b1f1c7d45%28Office.15%29.aspx)
     
   
--  [Develop SharePoint Add-ins](../sp-add-ins/sharepoint-add-ins)
+-  [Develop SharePoint Add-ins](../sp-add-ins/sharepoint-add-ins.md)
     
   
--  [Programming models in SharePoint](programming-models-in-sharepoint)
+-  [Programming models in SharePoint](programming-models-in-sharepoint.md)
     
   
 -  [Accessibility in Microsoft Products](http://www.microsoft.com/enable/products/default.aspx)

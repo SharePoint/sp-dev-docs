@@ -1,14 +1,21 @@
+---
+title: Create a basic SharePoint-hosted add-in by using Napa Office 365 Development Tools
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Create a basic SharePoint-hosted add-in by using Napa Office 365 Development Tools
 Learn how to create a basic SharePoint-hosted SharePoint Add-in by using Napa Office 365 Development Tools.
  
 
  
-![Run button](../../images/Apps_NAPA_Run_Button.png)
+![Run button](../images/Apps_NAPA_Run_Button.png)
  
  [Run this sample now!](http://go.microsoft.com/fwlink/?LinkId=313212)
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 Napa is a tool that you can use to create SharePoint-hosted SharePoint Add-ins. Napa is itself implemented as a (provider-hosted) SharePoint Add-in that can be installed on SharePoint Online websites that are created with the  **Developer Site** template. SharePoint developer sites have a library called **Add-ins in Testing** on the home page. Instructions for creating a developer site and installing Napa are later in this article.
@@ -22,7 +29,7 @@ By using Napa, you can create your SharePoint Add-ins inside your browser instea
 By following this article, you can learn how to create a simple SharePoint-hosted SharePoint Add-in by using Napa. The add-in that you'll create includes controls and code for managing lists and list items. 
  
 
- **Note**  You can create only SharePoint-hosted SharePoint Add-ins with Napa, not provider-hosted. For information on the differences, see  [SharePoint Add-ins](sharepoint-add-ins).You cannot use SharePoint's add-in updating semantics, which is described in  [Update add-in web components in SharePoint](update-add-in-web-components-in-sharepoint-2013), in Napa. So if you need to update an add-in created in Napa, you first have to export it to Visual Studio. Instructions for doing so are later in this article.You can also create a SharePoint Add-in by using Visual Studio. For more information, see  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins).
+ **Note**  You can create only SharePoint-hosted SharePoint Add-ins with Napa, not provider-hosted. For information on the differences, see  [SharePoint Add-ins](sharepoint-add-ins.md).You cannot use SharePoint's add-in updating semantics, which is described in  [Update add-in web components in SharePoint](update-add-in-web-components-in-sharepoint.md), in Napa. So if you need to update an add-in created in Napa, you first have to export it to Visual Studio. Instructions for doing so are later in this article.You can also create a SharePoint Add-in by using Visual Studio. For more information, see  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md).
  
 
 
@@ -34,7 +41,7 @@ If you don't already have a SharePoint Online subscription that you can use for 
 
  
 
- **Note**   You might already have access to an Office 365 Developer Site: **Are you an MSDN subscriber?** Visual Studio Ultimate and Visual Studio Premium with MSDN subscribers receive an Office 365 Developer Subscription as a benefit. [Redeem your benefit today.](https://msdn.microsoft.com/subscriptions/manage/default.aspx) **Do you have one of the following Office 365 subscription plans?** **If so, an administrator of the Office 365 subscription can create a Developer Site** by using the [Office 365 admin center](https://portal.microsoftonline.com/admin/default.aspx). For more information, see  [Create a developer site on an existing Office 365 subscription](create-a-developer-site-on-an-existing-office-365-subscription). 
+ **Note**   You might already have access to an Office 365 Developer Site: **Are you an MSDN subscriber?** Visual Studio Ultimate and Visual Studio Premium with MSDN subscribers receive an Office 365 Developer Subscription as a benefit. [Redeem your benefit today.](https://msdn.microsoft.com/subscriptions/manage/default.aspx) **Do you have one of the following Office 365 subscription plans?** **If so, an administrator of the Office 365 subscription can create a Developer Site** by using the [Office 365 admin center](https://portal.microsoftonline.com/admin/default.aspx). For more information, see  [Create a developer site on an existing Office 365 subscription](create-a-developer-site-on-an-existing-office-365-subscription.md). 
  
 
 Two ways to get an Office 365 plan. 
@@ -58,7 +65,7 @@ Two ways to get an Office 365 plan.
  
 
  
-![Page 2 of Sign up form for Office 365 account](../../images/ff384c69-56bf-4ceb-81c3-8b874e2407f0.png)
+![Page 2 of Sign up form for Office 365 account](../images/ff384c69-56bf-4ceb-81c3-8b874e2407f0.png)
  
 
  
@@ -96,7 +103,7 @@ After you finish the signup process, your browser will opens the Office 365 inst
  
 
  
-![Screenshot that shows the Office 365 admin center.](../../images/SP15_Office365AdminInset_border.png)
+![Screenshot that shows the Office 365 admin center.](../images/SP15_Office365AdminInset_border.png)
  
 
  
@@ -116,7 +123,7 @@ After you finish the signup process, your browser will opens the Office 365 inst
  
 
  
-![Screenshot that shows the Developer site homepage.](../../images/SP15_DeveloperSiteHome_border.png)
+![Screenshot that shows the Developer site homepage.](../images/SP15_DeveloperSiteHome_border.png)
  
 
  
@@ -126,7 +133,7 @@ After you finish the signup process, your browser will opens the Office 365 inst
 ## Install Napa
 <a name="Overview"> </a>
 
-If your subscription was not originally created as a Office 365 Developer Site, then you have to create a Developer Site in the Administration UI of the subscription and then install Napa in it. Instructions for creating the site are in  [Create a developer site on an existing Office 365 subscription](create-a-developer-site-on-an-existing-office-365-subscription).
+If your subscription was not originally created as a Office 365 Developer Site, then you have to create a Developer Site in the Administration UI of the subscription and then install Napa in it. Instructions for creating the site are in  [Create a developer site on an existing Office 365 subscription](create-a-developer-site-on-an-existing-office-365-subscription.md).
  
 
  
@@ -376,7 +383,7 @@ The first part of the UI and code is in place, so go ahead and run the add-in to
 
 1. At the bottom of the page, choose the run (
  
-![Run button](../../images/Apps_NAPA_Run_Button.png)
+![Run button](../images/Apps_NAPA_Run_Button.png)
  
 ) button.
     
@@ -626,7 +633,7 @@ Open your project in Visual Studio by choosing the  **Open in Visual Studio** bu
  
 
  
-![Open in Visual Studio button](../../images/Apps_Napa_OpenInVS.png)
+![Open in Visual Studio button](../images/Apps_Napa_OpenInVS.png)
  
 
  
@@ -640,7 +647,7 @@ Open your project in Visual Studio by choosing the  **Open in Visual Studio** bu
 -  [SharePoint development overview](http://msdn.microsoft.com/library/f86e2695-4d7a-4fc5-bc23-689de96c4b06%28Office.15%29.aspx)
     
  
--  [SharePoint Add-ins](sharepoint-add-ins)
+-  [SharePoint Add-ins](sharepoint-add-ins.md)
     
  
 

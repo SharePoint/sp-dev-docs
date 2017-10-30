@@ -1,9 +1,10 @@
----
+﻿---
 title: How to Get Values from Ranges
+ms.date: 09/25/2017
 keywords: get range,how to,howdoi,howto
 f1_keywords:
 - get range,how to,howdoi,howto
-ms.prod: OFFICE365
+ms.prod: sharepoint
 ms.assetid: ab2c0f60-b7df-46a1-9105-eb85ce817431
 ---
 
@@ -229,22 +230,22 @@ Next rangeResult
   
     
     
- [How to: Specify a Range Address and Sheet Name](how-to-specify-a-range-address-and-sheet-name)
+ [How to: Specify a Range Address and Sheet Name](how-to-specify-a-range-address-and-sheet-name.md)
   
     
     
- [How to: Set Values of Ranges](how-to-set-values-of-ranges)
+ [How to: Set Values of Ranges](how-to-set-values-of-ranges.md)
 #### Concepts
 
 
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api)
+ [Accessing the SOAP API](accessing-the-soap-api.md)
 #### Other resources
 
 
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)

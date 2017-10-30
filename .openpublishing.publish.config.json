@@ -1,0 +1,58 @@
+{
+  "docsets_to_publish": [
+    {
+      "docset_name": "sharepoint-dev",
+      "build_source_folder": "docs",
+      "build_output_subfolder": "sharepoint-dev",
+      "locale": "en-us",
+      "monikers": [],
+      "moniker_ranges": [],
+      "open_to_public_contributors": true,
+      "type_mapping": {
+        "Conceptual": "Content",
+        "ManagedReference": "Content",
+        "RestApi": "Content"
+      },
+      "build_entry_point": "docs",
+      "template_folder": "_themes",
+      "customized_tasks": {
+        "docset_prebuild": [
+          "_dependentPackages/CommonPlugins/tools/JoinTOC.ps1"
+        ]
+      }
+    }
+  ],
+  "notification_subscribers": [
+    "vesaj@microsoft.com"
+  ],
+  "branches_to_filter": [],
+  "skip_source_output_uploading": false,
+  "need_preview_pull_request": false,
+  "contribution_branch_mappings": {},
+  "git_repository_branch_open_to_public_contributors": "master",
+  "dependent_repositories": [
+    {
+      "path_to_root": "_themes",
+      "url": "https://github.com/Microsoft/templates.docs.msft",
+      "branch": "master",
+      "branch_mapping": {}
+    }
+  ],
+  "branch_target_mapping": {},
+  "need_generate_pdf_url_template": false,
+  "JoinTOCPlugin": [
+    {
+      "ConceptualTOC": "/docs/toc.yml",
+      "ReferenceTOCUrl": "/javascript/api/spfx-toc/toc.json"
+    }
+  ],
+  "dependent_packages": [
+    {
+      "path_to_root": "_dependentPackages/CommonPlugins",
+      "target_framework": "net45",
+      "version": "latest",
+      "id": "Microsoft.OpenPublishing.CommonPlugins",
+      "nuget_feed": "https://www.myget.org/F/op/api/v2"
+    }
+  ]
+}

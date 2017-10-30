@@ -1,9 +1,10 @@
 ---
 title: Step 2 Creating a Managed-Code UDF
+ms.date: 09/25/2017
 keywords: soap
 f1_keywords:
 - soap
-ms.prod: SHAREPOINT
+ms.prod: sharepoint
 ms.assetid: 3c9edf82-ee2d-41f0-9d66-e88e8dc0cc69
 ---
 
@@ -182,27 +183,27 @@ End Namespace
   
     
     
- [Step 1: Creating a Project and Adding a UDF Reference](step-1-creating-a-project-and-adding-a-udf-reference)
+ [Step 1: Creating a Project and Adding a UDF Reference](step-1-creating-a-project-and-adding-a-udf-reference.md)
   
     
     
- [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs)
+ [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md)
   
     
     
- [Step 4: Testing and Calling UDFs from Cells](step-4-testing-and-calling-udfs-from-cells)
+ [Step 4: Testing and Calling UDFs from Cells](step-4-testing-and-calling-udfs-from-cells.md)
   
     
     
- [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service)
+ [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service.md)
 #### Concepts
 
 
   
     
     
- [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf)
+ [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md)
   
     
     
- [Understanding Excel Services UDFs](understanding-excel-services-udfs)
+ [Understanding Excel Services UDFs](understanding-excel-services-udfs.md)

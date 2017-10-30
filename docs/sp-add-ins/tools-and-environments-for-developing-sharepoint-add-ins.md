@@ -1,9 +1,15 @@
+---
+title: Tools and environments for developing SharePoint Add-ins
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # Tools and environments for developing SharePoint Add-ins
 Learn your options for creating a development environment for SharePoint Add-ins.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 There are two basic patterns for development environments for SharePoint Add-ins:
@@ -18,7 +24,7 @@ There are two basic patterns for development environments for SharePoint Add-ins
 Consider the following:
  
 
-- Almost any add-in you create can be deployed to either SharePoint Online or to on-premise SharePoint farms, regardless of which type of environment you use. As a general rule, add-ins that cannot be deployed to SharePoint Online also cannot be developed with it. Examples: add-ins that require  [Full Control permissions](add-in-permissions-in-sharepoint-2013) and add-ins that use the [high-trust authorization system](creating-sharepoint-add-ins-that-use-high-trust-authorization).
+- Almost any add-in you create can be deployed to either SharePoint Online or to on-premise SharePoint farms, regardless of which type of environment you use. As a general rule, add-ins that cannot be deployed to SharePoint Online also cannot be developed with it. Examples: add-ins that require  [Full Control permissions](add-in-permissions-in-sharepoint.md) and add-ins that use the [high-trust authorization system](creating-sharepoint-add-ins-that-use-high-trust-authorization.md).
     
  
 - You can develop both SharePoint-hosted and provider-hosted SharePoint Add-ins, regardless of which type of environment you use.
@@ -30,19 +36,19 @@ Consider the following:
 - All things considered, the two options are equally easy to set up.
     
  
- **To create the SharePoint Online environment** using an SharePoint Online subscription that you can use for development, see [Create a developer site on an existing Office 365 subscription](create-a-developer-site-on-an-existing-office-365-subscription).
+ **To create the SharePoint Online environment** using an SharePoint Online subscription that you can use for development, see [Create a developer site on an existing Office 365 subscription](create-a-developer-site-on-an-existing-office-365-subscription.md).
  
- **To create the on-premise environment**, see [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins).
+ **To create the on-premise environment**, see [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md).
  
 
- **Note**  This topic is only concerned with environments for developing SharePoint Add-ins. If you plan to develop farm solutions, see  [Set up a general development environment for SharePoint](http://msdn.microsoft.com/library/08e4e4e1-d960-43fa-85df-f3c279ed6927%28Office.15%29.aspx). If you plan to do both kinds of development, start with the latter article, and then see  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins) for additional steps you need to develop SharePoint Add-ins.
+ **Note**  This topic is only concerned with environments for developing SharePoint Add-ins. If you plan to develop farm solutions, see  [Set up a general development environment for SharePoint](http://msdn.microsoft.com/library/08e4e4e1-d960-43fa-85df-f3c279ed6927%28Office.15%29.aspx). If you plan to do both kinds of development, start with the latter article, and then see  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md) for additional steps you need to develop SharePoint Add-ins.
  
 
 
 ## Other tooling information
 
  
--  [Create SharePoint Add-ins in Visual Studio](create-sharepoint-add-ins-in-visual-studio)
+-  [Create SharePoint Add-ins in Visual Studio](create-sharepoint-add-ins-in-visual-studio.md)
     
  
 
@@ -50,7 +56,7 @@ Consider the following:
 <a name="bk_addresources"> </a>
 
 
--  [SharePoint Add-ins](sharepoint-add-ins)
+-  [SharePoint Add-ins](sharepoint-add-ins.md)
     
  
 

@@ -1,6 +1,7 @@
 ---
 title: Basic URI Structure and Path
-ms.prod: OFFICE365
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: d73cf6c2-0677-4726-8a3e-2ad130e1a12c
 ---
 
@@ -81,7 +82,7 @@ The three parts of the REST URL are:
 
 ### Accessing by Using the Discovery User Interface
 
-You can also access the chart by using the discovery user interface. To learn how access resources like charts, tables, PivotTables, and ranges by using the discovery mechanism shown in the following screen shot, see  [Discovery in Excel Services REST API](discovery-in-excel-services-rest-api).
+You can also access the chart by using the discovery user interface. To learn how access resources like charts, tables, PivotTables, and ranges by using the discovery mechanism shown in the following screen shot, see  [Discovery in Excel Services REST API](discovery-in-excel-services-rest-api.md).
   
     
     
@@ -89,7 +90,7 @@ You can also access the chart by using the discovery user interface. To learn ho
   
     
     
-![Excel Services REST model URL](../../images/SharePointServer14Con_XLSvcs_RESTModel.gif)
+![Excel Services REST model URL](../images/SharePointServer14Con_XLSvcs_RESTModel.gif)
   
     
     
@@ -173,8 +174,8 @@ http://<ServerName>/_vti_bin/ExcelRest.aspx/Docs/Documents/sampleWorkbook.xlsx/m
   
     
     
- [Resources URI for Excel Services REST API](resources-uri-for-excel-services-rest-api)
+ [Resources URI for Excel Services REST API](resources-uri-for-excel-services-rest-api.md)
   
     
     
- [Discovery in Excel Services REST API](discovery-in-excel-services-rest-api)
+ [Discovery in Excel Services REST API](discovery-in-excel-services-rest-api.md)

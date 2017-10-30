@@ -1,6 +1,7 @@
 ---
 title: Creating a workflow by using SharePoint Designer 2013 and the SharePoint Workflow platform
-ms.prod: SHAREPOINTDESIGNER
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: c05e0127-c6f5-48b8-b8f2-cbcc30149c8b
 ---
 
@@ -48,7 +49,7 @@ SharePoint Designer 2013 is a free download. To download and install SharePoint 
   
     
     
-![The SharePoint Designer 2013 Download page.](../../images/SPD15-install-connect-1.png)
+![The SharePoint Designer 2013 Download page.](../images/SPD15-install-connect-1.png)
   
     
     
@@ -125,7 +126,7 @@ SharePoint Designer 2013 can be used for many important tasks. The navigational 
   
     
     
-![SharePoint Designer 2013 - New List Workflow](../../images/SPD15-install-connect-2.png)
+![SharePoint Designer 2013 - New List Workflow](../images/SPD15-install-connect-2.png)
   
     
     
@@ -147,7 +148,7 @@ SharePoint Designer 2013 can be used for many important tasks. The navigational 
   
     
     
-![Workflow Creation Dialog](../../images/SPD15-install-connect-3.png)
+![Workflow Creation Dialog](../images/SPD15-install-connect-3.png)
   
     
     
@@ -173,7 +174,7 @@ Now that the workflow is created, you can add Actions, Conditions, Stages, Steps
   
     
     
-![Workflow items in the ribbon.](../../images/SPD15-install-connect-4.png)
+![Workflow items in the ribbon.](../images/SPD15-install-connect-4.png)
   
     
     
@@ -185,7 +186,7 @@ Now that the workflow is created, you can add Actions, Conditions, Stages, Steps
     
     
 
-To learn more about the available components of workflow development, see  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform).
+To learn more about the available components of workflow development, see  [Workflow actions quick reference (SharePoint Workflow platform)](workflow-actions-quick-reference-sharepoint-workflow-platform.md).
   
     
     
@@ -200,7 +201,7 @@ To learn more about the available components of workflow development, see  [Work
 -  [Getting started with SharePoint workflow](http://msdn.microsoft.com/library/cc73be76-a329-449f-90ab-86822b1c2ee8.aspx)
     
   
--  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio)
+-  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)
     
   
 

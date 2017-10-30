@@ -1,14 +1,21 @@
+---
+title: Give your provider-hosted add-in the SharePoint look-and-feel
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Give your provider-hosted add-in the SharePoint look-and-feel
 Learn how to give your provider-hosted SharePoint Add-ins the look and feel of SharePoint.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
-This is the second in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with  [SharePoint Add-ins](sharepoint-add-ins) and the previous articles in this series:
+This is the second in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with  [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series:
  
 
--  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins)
+-  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
     
  
 In the previous article of this series you learned how to set up a development environment and how to use Visual Studio to create a first "Hello World" level add-in that exposes SharePoint data in the add-in's remote web application. In this article, we are going to start with an SharePoint Add-in solution that has already been created. It includes an ASP.NET Web Forms application and an SQL Azure database. We've created these for you because this series of articles is intended to focus only on SharePoint Add-ins. You'll be adding more SharePoint functionality and integration to the add-in with each article in this series.
@@ -31,7 +38,7 @@ We are not going to teach you ASP.NET or T-SQL programming in this series, but y
  
 2. On the  **New SharePoint Site** page, fill out the form for a new team site by using the values in the following screen shot.
     
-  ![The form for creating a new SharePoint subsite with "Fabrikam Hong Kong Store" in the Title textbox and "hongkong" in the URL textbox.](../../images/7639578e-3d3f-40cf-8f53-355bb19c539b.png)
+  ![The form for creating a new SharePoint subsite with "Fabrikam Hong Kong Store" in the Title textbox and "hongkong" in the URL textbox.](../images/7639578e-3d3f-40cf-8f53-355bb19c539b.png)
  
 
  
@@ -72,7 +79,7 @@ We are not going to teach you ASP.NET or T-SQL programming in this series, but y
  
 7. The add-in's start page looks like the one in the screen shot below. At the very top is the name of the SharePoint website where the add-in is installed. This is a side effect of some sample code that the Office Developer Tools for Visual Studio generate. You'll change this in a later step. The page has areas where data from the corporate  **Inventory**,  **Orders**, and  **Employees** SQL database tables can be seen. These tables are empty initially.
     
-  ![The start page of the chain store add-in with labelled areas and buttons for viewing the store's inventory, orders, and employees.](../../images/9c836899-8f21-4e0f-9260-69b8171a303c.PNG)
+  ![The start page of the chain store add-in with labelled areas and buttons for viewing the store's inventory, orders, and employees.](../images/9c836899-8f21-4e0f-9260-69b8171a303c.PNG)
  
 
  
@@ -80,7 +87,7 @@ We are not going to teach you ASP.NET or T-SQL programming in this series, but y
  
 8. Open the  **Order Form** link at the bottom of the page to open an order form. Enter some values in the form and press **Place Order**. The following screenshot shows an example. It won't appear that anything has nappened, but the code behind the button passes the values to a parameterized stored procedure in the SQL database. Using parameterized stored procedures protects the database from SQL injection attacks.
     
-  ![Order form with text boxes for supplier, product, and quantity; with a button labelled Place Order.](../../images/5ce3e68b-1bcf-4a24-9153-b9164af77a6b.PNG)
+  ![Order form with text boxes for supplier, product, and quantity; with a button labelled Place Order.](../images/5ce3e68b-1bcf-4a24-9153-b9164af77a6b.PNG)
  
 
  
@@ -88,11 +95,11 @@ We are not going to teach you ASP.NET or T-SQL programming in this series, but y
  
 9. Use the browser's back button to navigate back to the start page, and then press the  **Show Orders** button. The page will refresh and your order will appear on the page similar to the following screenshot.
     
-    The table has a  **Tenant** field with the URL of your test SharePoint website as the value. This does not refer to the SharePoint Online subscription that is sometimes called a tenancy. Instead, each instance of the add-in is a distinct tenant in the corporate database. Since no more than one instance of an add-in can be installed on a specific SharePoint host web, the URL of the host web can be used as a tenant discriminator in the database. (For a refresher on the distinction between host web and add-in web, see [SharePoint Add-ins](sharepoint-add-ins).) All of the stored procedures in the add-in include the discriminator value when they write or read from the database. This ensures that when a user presses the  **Show Orders** (or **Show Employees** or **Show Inventory**) button, only the data that is associated with the user's store is retrieved from the database. This design also ensures that users can only place orders and add employees for their own store.
+    The table has a  **Tenant** field with the URL of your test SharePoint website as the value. This does not refer to the SharePoint Online subscription that is sometimes called a tenancy. Instead, each instance of the add-in is a distinct tenant in the corporate database. Since no more than one instance of an add-in can be installed on a specific SharePoint host web, the URL of the host web can be used as a tenant discriminator in the database. (For a refresher on the distinction between host web and add-in web, see [SharePoint Add-ins](sharepoint-add-ins.md).) All of the stored procedures in the add-in include the discriminator value when they write or read from the database. This ensures that when a user presses the  **Show Orders** (or **Show Employees** or **Show Inventory**.md) button, only the data that is associated with the user's store is retrieved from the database. This design also ensures that users can only place orders and add employees for their own store.
     
     The remote web application obtains the host web URL from a query string parameter that SharePoint adds to the URL of the start page when it launches the add-in. Since SSL is being used, this query string is encrypted as it goes across the Internet to the remote web application. 
     
-  ![The section of the start page for orders with one order showing in an HTML table. It has columns for ID, Tenant, Supplier, Product, and Quantity.](../../images/6a82c6eb-4a46-4a97-94f9-c1f4a7605d1f.PNG)
+  ![The section of the start page for orders with one order showing in an HTML table. It has columns for ID, Tenant, Supplier, Product, and Quantity.](../images/6a82c6eb-4a46-4a97-94f9-c1f4a7605d1f.PNG)
  
 
  
@@ -103,7 +110,7 @@ We are not going to teach you ASP.NET or T-SQL programming in this series, but y
  
 11. By default the add-in remains installed on the SharePoint host web in between debugging sessions in Visual Studio. To see how end users would launch it after it is installed, open the Fabrikam Hong Kong SharePoint website in your browser and navigate to the  **Site Contents** page. You'll see the tile for the add-in as it is in the following screenshot:
     
-  ![The launch tile for the Chain Store add-in on the site contents page with the add-in's icon and name.](../../images/f16e6360-c511-431f-b2c5-9e5541e64d4b.PNG)
+  ![The launch tile for the Chain Store add-in on the site contents page with the add-in's icon and name.](../images/f16e6360-c511-431f-b2c5-9e5541e64d4b.PNG)
  
 
     
@@ -288,13 +295,13 @@ href="<%= spContext.SPHostUrl.ToString() + "_layouts/15/defaultcss.ashx" %>" />
     
 2. When the add-in's start page opens, it now looks like a SharePoint page. Click the  **Order Form** link. It also now looks like a SharePoint form.
     
-  ![The Order Form again. Now it uses Segoe fonts and the phrase "Place Order" is highlighted in blue.](../../images/a35fd1af-7194-4c99-b298-bac97025b981.PNG)
+  ![The Order Form again. Now it uses Segoe fonts and the phrase "Place Order" is highlighted in blue.](../images/a35fd1af-7194-4c99-b298-bac97025b981.PNG)
  
 3. Create an order and press  **Place Order**.
     
 4.  Use the browser's back button to navigate back to the add-in start page, and then press **Show Orders**. The page should now look similar like the following. Note that the column headings are now all caps. 
     
-  ![The start page with the chrome control across the top. All of the text and controls have SharePoint styling.](../../images/e56e4b80-1f1c-4a83-9ac0-3005ceea7c3a.PNG)
+  ![The start page with the chrome control across the top. All of the text and controls have SharePoint styling.](../images/e56e4b80-1f1c-4a83-9ac0-3005ceea7c3a.PNG)
  
 
 5. Press the  **?** icon on the end of the chrome control. A simple help page opens. Click the browser's back button.
@@ -314,7 +321,7 @@ href="<%= spContext.SPHostUrl.ToString() + "_layouts/15/defaultcss.ashx" %>" />
  
 10. Navigate to the  **Site Contents** page and launch the Chain Store app from its tile. Your custom pages have taken on the chosen look. The following screenshots show how they appear in the **Nature** composed look.
     
-  ![The add-in's start page and order form with the greenish colors of the Nature composed look.](../../images/25ba5677-f530-432a-9980-64b5eb33119c.png)
+  ![The add-in's start page and order form with the greenish colors of the Nature composed look.](../images/25ba5677-f530-432a-9980-64b5eb33119c.png)
  
 
 11. Change the site's look back to the default, which is called  **Office**.
@@ -330,7 +337,7 @@ href="<%= spContext.SPHostUrl.ToString() + "_layouts/15/defaultcss.ashx" %>" />
 ## Next Steps
 <a name="Nextsteps"> </a>
 
- The add-in now looks like SharePoint, but it's still just a web application that doesn't really integrate with SharePoint beyond being launched from a tile in SharePoint. You'll add a custom command, launched from a custom ribbon button in the next article: [Include a custom button in the provider-hosted add-in](include-a-custom-button-in-the-provider-hosted-add-in).
+ The add-in now looks like SharePoint, but it's still just a web application that doesn't really integrate with SharePoint beyond being launched from a tile in SharePoint. You'll add a custom command, launched from a custom ribbon button in the next article: [Include a custom button in the provider-hosted add-in](include-a-custom-button-in-the-provider-hosted-add-in.md).
  
 
  

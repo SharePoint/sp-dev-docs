@@ -1,6 +1,7 @@
 ---
 title: How to Use code to pin terms to navigation term sets in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 4a2811dc-25fd-4eb2-b0ab-1edded64c556
 ---
 
@@ -27,7 +28,7 @@ To understand pinning in SharePoint, you may want to learn about managed metadat
 |**Article title**|**Description**|
 |:-----|:-----|
 | [A Brief Introduction to Enterprise Metadata Management for Microsoft SharePoint Server 2010 Developers](http://msdn.microsoft.com/library/113a5d75-ac4d-498b-8436-725e04fb685d%28Office.15%29.aspx) <br/> |Written for SharePoint Server 2010, this article provides a basic overview of the enterprise managed metadata programming model and core concepts, such as terms and term sets.  <br/> |
-| [Managed navigation in SharePoint](managed-navigation-in-sharepoint) <br/> |An introduction to the taxonomy-driven managed navigation feature in SharePoint.  <br/> |
+| [Managed navigation in SharePoint](managed-navigation-in-sharepoint.md) <br/> |An introduction to the taxonomy-driven managed navigation feature in SharePoint.  <br/> |
    
 
 ## Use code to complete pinning tasks
@@ -142,7 +143,7 @@ using (SPSite site = new SPSite(TestConfig.ServerUrl))
 <a name="SP15_H2UseCodeToPinTerms_AdditionalResources"> </a>
 
 
--  [Managed metadata and navigation in SharePoint](managed-metadata-and-navigation-in-sharepoint)
+-  [Managed metadata and navigation in SharePoint](managed-metadata-and-navigation-in-sharepoint.md)
     
   
 -  [Microsoft.SharePoint.Publishing.Navigation](https://msdn.microsoft.com/library/Microsoft.SharePoint.Publishing.Navigation.aspx)

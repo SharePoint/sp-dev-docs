@@ -1,15 +1,21 @@
+﻿---
+title: Replace an expiring client secret in a SharePoint Add-in
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # Replace an expiring client secret in a SharePoint Add-in
 Learn how to add a new client secret for a SharePoint Add-in that is registered with AppRegNew.aspx.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 Client secrets for SharePoint Add-ins that are registered using the AppRegNew.aspx page expire after one year. This article explains how to add a new secret for the add-in, as well as how to create a new client secret that is valid for three years.
  
 
- **Note**  This article is about SharePoint Add-ins that are distributed through an organization catalog and registered with the AppRegNew.aspx page. If the add-in is registered on the Seller Dashboard, see  [Create or update client IDs and secrets in the Seller Dashboard](http://msdn.microsoft.com/library/create-or-update-client-ids-and-secrets-in-the-seller-dashboard%28Office.15%29.aspx#bk_update).
+ **Note**  This article is about SharePoint Add-ins that are distributed through an organization catalog and registered with the AppRegNew.aspx page. If the add-in is registered on the Seller Dashboard, see  [Create or update client IDs and secrets in the Seller Dashboard](https://dev.office.com/officestore/docs/create-or-update-client-ids-and-secrets#bk_update).
  
 
 
@@ -135,6 +141,8 @@ $newClientSecret
 ```XML
   <add key="SecondaryClientSecret" value="your old secret here" />
 ```
+
+> **Note** If you are performing this procedure for the first time there will be no **SecondaryClientSecret** property entry at this point in the configuration file. However if you are performing the procedure for a subsequent client secret expiration (second or third) the property **SecondaryClientSecret** is already present and containing the initial or already longer time ago expired old secret. In this case delete the **SecondaryClientSecret** property first before renaming **ClientSecret**.
 
 3. Add a new  **ClientSecret** key and give it your new client secret. Your markup should now look like the following:
     

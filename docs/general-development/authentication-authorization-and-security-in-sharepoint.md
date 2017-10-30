@@ -1,6 +1,7 @@
 ---
 title: Authentication, authorization, and security in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 8734790c-eb75-4d78-9604-7cc23b33b693
 ---
 
@@ -66,13 +67,13 @@ SharePoint supports the following types of authentication:
 
 - **Windows:** All Internet Information Services (IIS) and Windows authentication integration options, including Basic, Digest, Certificates, Windows NT LAN Manager (NTLM), and Kerberos are supported. Windows authentication allows IIS to perform the authentication for SharePoint.
     
-    For information about signing in to SharePoint by using Windows claims mode, see  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint).
+    For information about signing in to SharePoint by using Windows claims mode, see  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint.md).
     
     > **Important:**
       >  For information about suspending impersonation, see [Avoid suspending impersonation of the calling user](http://msdn.microsoft.com/en-us/library/ff407852.aspx). 
 - **ASP.NET Forms:** A non-Windows identity management system that uses the pluggable ASP.NET forms-based authentication system is supported. This mode enables SharePoint to work with a variety of identity management systems, including externally defined groups or roles such as Lightweight Directory Access Protocol (LDAP) and light-weight database identity management systems. Forms authentication allows ASP.NET to perform the authentication for SharePoint, often involving a redirect to a log-on page. In SharePoint, ASP.NET forms are supported only under claims authentication. A forms provider must be registered within a web application that is configured for claims.
     
-    For information about signing in to SharePoint by using ASP.NET membership and role passive sign-in, see  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint).
+    For information about signing in to SharePoint by using ASP.NET membership and role passive sign-in, see  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint.md).
     
   
 
@@ -109,7 +110,7 @@ When a user signs in to SharePoint, the user's token is validated and then used 
   
 
 > **Note:**
-> For more information about signing into SharePoint and the different sign-in modes, see  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint). 
+> For more information about signing into SharePoint and the different sign-in modes, see  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint.md). 
   
     
     
@@ -141,7 +142,7 @@ Under this model, your application makes identity-related decisions based on cla
     
 
 > **Note:**
-> For more information about claims-based identity and claims providers, see  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint) and [Claims provider in SharePoint](claims-provider-in-sharepoint). 
+> For more information about claims-based identity and claims providers, see  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint.md) and [Claims provider in SharePoint](claims-provider-in-sharepoint.md). 
   
     
     
@@ -160,7 +161,7 @@ The membership provider is responsible for validating the credential information
     
 
 > **Note:**
-> For more information about STS, see  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint). 
+> For more information about STS, see  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint.md). 
   
     
     
@@ -171,7 +172,7 @@ The role manager is optional. If a custom authentication system does not support
     
 
 > **Note:**
-> For more information about claims-based identity and claims providers, see  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint) and [Claims provider in SharePoint](claims-provider-in-sharepoint). 
+> For more information about claims-based identity and claims providers, see  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint.md) and [Claims provider in SharePoint](claims-provider-in-sharepoint.md). 
   
     
     
@@ -182,7 +183,7 @@ In ASP.NET membership and role passive sign-in, the sign-in happens by redirecti
     
 
 > **Note:**
-> For more information about signing into SharePoint, see  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint). 
+> For more information about signing into SharePoint, see  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint.md). 
   
     
     
@@ -207,19 +208,19 @@ For information about the pluggable authentication framework provided by ASP.NET
 <a name="SP15_AuthenticationAuthorizationSecurity_AdditionalResources"> </a>
 
 
--  [Authorization, users, groups, and the object model in SharePoint](authorization-users-groups-and-the-object-model-in-sharepoint)
+-  [Authorization, users, groups, and the object model in SharePoint](authorization-users-groups-and-the-object-model-in-sharepoint.md)
     
   
--  [Role, inheritance, elevation of privilege, and password changes in SharePoint](role-inheritance-elevation-of-privilege-and-password-changes-in-sharepoint)
+-  [Role, inheritance, elevation of privilege, and password changes in SharePoint](role-inheritance-elevation-of-privilege-and-password-changes-in-sharepoint.md)
     
   
--  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint)
+-  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint.md)
     
   
--  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint)
+-  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint.md)
     
   
--  [Configuration, administration, and resources in SharePoint](configuration-administration-and-resources-in-sharepoint)
+-  [Configuration, administration, and resources in SharePoint](configuration-administration-and-resources-in-sharepoint.md)
     
   
 

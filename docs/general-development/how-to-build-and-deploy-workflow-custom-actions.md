@@ -1,6 +1,7 @@
----
+﻿---
 title: How to Build and deploy workflow custom actions
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 9d2fa681-30c2-4549-9df2-ea9ed757fda9
 ---
 
@@ -81,7 +82,7 @@ Visual Studio 2012 now provides a "workflow custom activity" item type within Sh
 
   
 
-  ![New Project Dialog](../../images/wfVS_NewProjectDialog.JPG)
+  ![New Project Dialog](../images/wfVS_NewProjectDialog.JPG)
   
 
   
@@ -93,7 +94,7 @@ Visual Studio 2012 now provides a "workflow custom activity" item type within Sh
 
   
 
-  ![New Item Dialog Box](../../images/wfVS_NewItem.JPG)
+  ![New Item Dialog Box](../images/wfVS_NewItem.JPG)
   
 
     
@@ -108,7 +109,7 @@ Visual Studio 2012 now provides a "workflow custom activity" item type within Sh
 
   
 
-  ![Workflow Toolbox](../../images/wfVS_WorkflowToolbox.jpg)
+  ![Workflow Toolbox](../images/wfVS_WorkflowToolbox.jpg)
   
 
     
@@ -131,7 +132,7 @@ After you create your actions module and add your action and activity files, you
   
     
     
-![Activity node in Solution Explorer](../../images/wfVS_ActivityNode.jpg)
+![Activity node in Solution Explorer](../images/wfVS_ActivityNode.jpg)
   
     
     
@@ -174,13 +175,13 @@ Activating a custom action feature on a site collection (that is, on an **SPWeb*
 <a name="bk_addlresources"> </a>
 
 
--  [SharePoint workflow fundamentals](sharepoint-workflow-fundamentals)
+-  [SharePoint workflow fundamentals](sharepoint-workflow-fundamentals.md)
     
   
--  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint)
+-  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint.md)
     
   
--  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio)
+-  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
     
   
 

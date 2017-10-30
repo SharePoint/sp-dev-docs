@@ -1,6 +1,7 @@
 ---
 title: Content Search Web Part in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 6fb4bf41-0846-4dca-ad9e-906afdfd3d2b
 ---
 
@@ -10,7 +11,7 @@ ms.assetid: 6fb4bf41-0846-4dca-ad9e-906afdfd3d2b
   
     
     
-![Conceptual overview topic](../../images/mod_icon_badge_conoverview.png)
+![Conceptual overview topic](../images/mod_icon_badge_conoverview.png)
   
     
     
@@ -67,10 +68,10 @@ Some site collection administrators mark sites to not be indexed. Content marked
 <a name="SP15_CSWP_AdditionalResources"> </a>
 
 
--  [Managed navigation in SharePoint](managed-navigation-in-sharepoint)
+-  [Managed navigation in SharePoint](managed-navigation-in-sharepoint.md)
     
   
--  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers)
+-  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers.md)
     
   
 

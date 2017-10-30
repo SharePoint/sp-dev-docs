@@ -1,3 +1,10 @@
+---
+title: Integrate gulp tasks in SharePoint Framework toolchain
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Integrate gulp tasks in SharePoint Framework toolchain
 
 SharePoint client-side development tools use [gulp](http://gulpjs.com/) as the build process task runner to:
@@ -20,7 +27,7 @@ gulp.task('somename', function() {
 
 When working with the SharePoint Framework toolchain, it is necessary to define your tasks in the framework's build pipeline. Once defined and registered with the pipeline, the task will be added to the toolchain.
 
-SharePoint Framework uses a [common build toolchain](sharepoint-framework-toolchain.md#common-build-tools-packages) which consists of a set of npm packages that share common build tasks. And hence, the default tasks are defined in the common package as opposed to your client-side project's `gulpfile.js`. To see the available tasks, you can execute the following command in a console within your project directory:
+SharePoint Framework uses a [common build toolchain](sharepoint-framework-toolchain.md#common-build-tool-packages) which consists of a set of npm packages that share common build tasks. And hence, the default tasks are defined in the common package as opposed to your client-side project's `gulpfile.js`. To see the available tasks, you can execute the following command in a console within your project directory:
 
 ```
 gulp --tasks
@@ -79,17 +86,14 @@ You can also add this custom task to be executed before or after certain availab
 The SharePoint Framework tasks are available in the default build rig. The build rig is a collection of tasks defined for a specific purpose. In our case, building client-side packages. You can access this default rig using the `build.rig` object and get access to the pre and post task functions:
  
 ```js
+//execute before the typescript subtask
+build.rig.addPreBuildTask(helloWorldTask);
+
 // execute after TypeScript task
 build.rig.addPostTypescriptTask(helloWorldTask);
 
-//execute before TypeScript task
-build.rig.addBuildTasks(helloWorldTask);
-
 //execute after all tasks
 build.rig.addPostBuildTask(helloWorldTask);
-
-//execute before all tasks
-build.rig.addPreBuildTask(helloWorldTask);
 ```
 
 ## Example: Custom image resize task

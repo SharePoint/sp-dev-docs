@@ -1,6 +1,7 @@
 ---
 title: Workflow actions quick reference (SharePoint Workflow platform)
-ms.prod: SHAREPOINTDESIGNER
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: eb3434e5-bc75-4474-8873-4980062fd29c
 ---
 
@@ -11,7 +12,7 @@ This reference lists the workflow actions that are supported in the current buil
 ## Workflow actions in SharePoint Designer 2013
 <a name="bkm_WorkflowActions"> </a>
 
-The following is a reference for workflow actions available for the SharePoint Workflow platform. In addition to the SharePoint Workflow platform, SharePoint Designer 2013 also supports the SharePoint 2010 Workflow platform. To view workflow actions for the 2010 platform, see  [Workflow actions quick reference (SharePoint 2010 Workflow platform)](workflow-actions-quick-reference-sharepoint-2010-workflow-platform)
+The following is a reference for workflow actions available for the SharePoint Workflow platform. In addition to the SharePoint Workflow platform, SharePoint Designer 2013 also supports the SharePoint 2010 Workflow platform. To view workflow actions for the 2010 platform, see  [Workflow actions quick reference (SharePoint 2010 Workflow platform)](workflow-actions-quick-reference-sharepoint-2010-workflow-platform.md)
   
     
     
@@ -31,8 +32,8 @@ Core actions are those that are most commonly performed, and they are grouped to
 |:-----|:-----|
 |Add a Comment  <br/> |Enables you to leave informative comments in the workflow designer for reference purposes. This is especially helpful when there are other users collaborating on the workflow.  <br/> |
 |Add Time to Date  <br/> |Adds a specific time in minutes, hours, days, or months to a date (Year is not supported), and stores the output value as a variable. The date can be a current data, specific date, or a lookup. The 'Current Date' value returns UTC midnight.  <br/> |
-|Build Dictionary  <br/> |Builds a Dictionary variable of key/value pairs.  <br/> **Note:** The Dictionary uses JSON notation to store data.           For more information on the Dictionary variable, see  [Understanding Dictionary actions in SharePoint Designer 2013](understanding-dictionary-actions-in-sharepoint-designer) <br/> |
-|Call HTTP Web Service  <br/> |Functions as a method call to an HTTP web service and returns data using the JSON format. Basic authentication is supported through the RequestHeader.  <br/> For more information on the Dictionary variable, see  [Understanding Dictionary actions in SharePoint Designer 2013](understanding-dictionary-actions-in-sharepoint-designer) <br/> |
+|Build Dictionary  <br/> |Builds a Dictionary variable of key/value pairs.  <br/> **Note:** The Dictionary uses JSON notation to store data.           For more information on the Dictionary variable, see  [Understanding Dictionary actions in SharePoint Designer 2013](understanding-dictionary-actions-in-sharepoint-designer.md) <br/> |
+|Call HTTP Web Service  <br/> |Functions as a method call to an HTTP web service and returns data using the JSON format. Basic authentication is supported through the RequestHeader.  <br/> For more information on the Dictionary variable, see  [Understanding Dictionary actions in SharePoint Designer 2013](understanding-dictionary-actions-in-sharepoint-designer.md) <br/> |
 |Count Items in a Dictionary  <br/> |Returns a count of the number of items in a specified dictionary.  <br/> |
 |Do Calculation  <br/> |Performs an arithmetic calculation and stores the output value in a variable.  <br/> **Note:** For SharePoint, this action supports only the **Double** numeric type. Integers are not supported. Use of the "+" operator (concatenation) for strings is not supported.          |
 |Get an Item from a Dictionary  <br/> |Returns a particular item from a dictionary variable.  <br/> |
@@ -49,7 +50,7 @@ Core actions are those that are most commonly performed, and they are grouped to
 ### Coordination actions
 <a name="bkm_CoreActions"> </a>
 
-Coordination actions are used to invoke a workflow based on the SharePoint 2010 Workflow platform. For more information on Coordination actions, see  [Understanding Coordination actions in SharePoint Designer 2013](understanding-coordination-actions-in-sharepoint-designer)
+Coordination actions are used to invoke a workflow based on the SharePoint 2010 Workflow platform. For more information on Coordination actions, see  [Understanding Coordination actions in SharePoint Designer 2013](understanding-coordination-actions-in-sharepoint-designer.md)
   
     
     
@@ -153,7 +154,7 @@ Utility actions are actions that manipulate strings or find the interval between
 ## Workflow actions that are deprecated in SharePoint
 <a name="bkm_NotAvailable"> </a>
 
-For a list of actions from SharePoint 2010 that are deprecated and will not appear in SharePoint, see  [Workflow actions available using the workflow interop bridge](workflow-actions-available-using-the-workflow-interop-bridge).
+For a list of actions from SharePoint 2010 that are deprecated and will not appear in SharePoint, see  [Workflow actions available using the workflow interop bridge](workflow-actions-available-using-the-workflow-interop-bridge.md).
   
     
     
@@ -162,15 +163,15 @@ For a list of actions from SharePoint 2010 that are deprecated and will not appe
 <a name="bkm_addlresource"> </a>
 
 
--  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint)
+-  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint.md)
     
   
--  [SharePoint workflow fundamentals](sharepoint-workflow-fundamentals)
+-  [SharePoint workflow fundamentals](sharepoint-workflow-fundamentals.md)
     
   
--  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint)
+-  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint.md)
     
   
--  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio)
+-  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)
     
   

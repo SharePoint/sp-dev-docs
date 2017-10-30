@@ -1,6 +1,7 @@
 ---
 title: Office 2013 and SharePoint application services
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: f962922c-2967-492f-9a89-5ad10a1a6dd3
 ---
 
@@ -66,13 +67,13 @@ Use the links in Table 2 to learn more about developing with the Office and Shar
 
 |**Service**|**Description**|
 |:-----|:-----|
-|Access Services  <br/> See  [Develop Access web apps](develop-access-web-apps) <br/> |Enables users to create, deploy, and manage collaborative web-based Access applications.  <br/> |
-|Excel Services  <br/> See  [Excel Services in SharePoint](excel-services-in-sharepoint) <br/> |Enables users to load, calculate, and display Excel workbooks on SharePoint sites.  <br/> |
-|Machine Translation Service  <br/> See  [Machine Translation Services in SharePoint](machine-translation-services-in-sharepoint) <br/> |Provides automatic machine translation of sites, documents, and sites.  <br/> |
-|PerformancePoint Services  <br/> See  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint) <br/> |Creates and publishes dashboards that contain interactive data visualizations (such as scorecards and reports) that enable people to monitor and analyze their business performance.  <br/> |
-|PowerPoint Automation Services  <br/>  [PowerPoint Automation Services in SharePoint](powerpoint-automation-services-in-sharepoint) <br/> |Provides unattended, server-side conversion of PowerPoint presentations into other formats.  <br/> |
-|Visio Services  <br/> See  [Visio Services in SharePoint](visio-services-in-sharepoint) <br/> |Enables users to view and interact with Visio drawings stored on SharePoint sites.  <br/> |
-|Word Automation Services  <br/> See  [What's new in Word Automation Services for developers](what-s-new-in-word-automation-services-for-developers) <br/> |Provides unattended, server-side conversion of documents that are supported by Word.  <br/> |
+|Access Services  <br/> See  [Develop Access web apps](develop-access-web-apps.md) <br/> |Enables users to create, deploy, and manage collaborative web-based Access applications.  <br/> |
+|Excel Services  <br/> See  [Excel Services in SharePoint](excel-services-in-sharepoint.md) <br/> |Enables users to load, calculate, and display Excel workbooks on SharePoint sites.  <br/> |
+|Machine Translation Service  <br/> See  [Machine Translation Services in SharePoint](machine-translation-services-in-sharepoint.md) <br/> |Provides automatic machine translation of sites, documents, and sites.  <br/> |
+|PerformancePoint Services  <br/> See  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint.md) <br/> |Creates and publishes dashboards that contain interactive data visualizations (such as scorecards and reports.md) that enable people to monitor and analyze their business performance.  <br/> |
+|PowerPoint Automation Services  <br/>  [PowerPoint Automation Services in SharePoint](powerpoint-automation-services-in-sharepoint.md) <br/> |Provides unattended, server-side conversion of PowerPoint presentations into other formats.  <br/> |
+|Visio Services  <br/> See  [Visio Services in SharePoint](visio-services-in-sharepoint.md) <br/> |Enables users to view and interact with Visio drawings stored on SharePoint sites.  <br/> |
+|Word Automation Services  <br/> See  [What's new in Word Automation Services for developers](what-s-new-in-word-automation-services-for-developers.md) <br/> |Provides unattended, server-side conversion of documents that are supported by Word.  <br/> |
    
 Not all services and scenarios are represented in this section. For links to developer documentation for other services, see  [Additional resources](#bkmk_Resources).
   
@@ -83,13 +84,13 @@ Not all services and scenarios are represented in this section. For links to dev
 <a name="bkmk_Resources"> </a>
 
 
--  [Add SharePoint capabilities](add-sharepoint-capabilities)
+-  [Add SharePoint capabilities](add-sharepoint-capabilities.md)
     
   
--  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
     
   
--  [Search in SharePoint](search-in-sharepoint)
+-  [Search in SharePoint](search-in-sharepoint.md)
     
   
 -  [Install SQL Server BI Features with SharePoint (PowerPivot and Reporting Services)](http://msdn.microsoft.com/en-us/library/hh231671)

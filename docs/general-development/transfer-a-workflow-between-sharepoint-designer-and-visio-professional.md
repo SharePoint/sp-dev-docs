@@ -1,6 +1,7 @@
----
+﻿---
 title: Transfer a workflow between SharePoint Designer 2013 and Visio Professional 2013 (SharePoint 2010 Workflow platform)
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: dbe6f019-b4f2-480f-a8e7-bcb8842ab924
 ---
 
@@ -18,7 +19,7 @@ Business analysts and process analysts who are already familiar with flowchartin
   
     
     
-![Translate business logic to workflow rules](../../images/spd15-wf-importFromVisio.png)
+![Translate business logic to workflow rules](../images/spd15-wf-importFromVisio.png)
   
     
     
@@ -63,7 +64,7 @@ You can visualize workflows in SharePoint Designer in two ways:
   
     
     
-![Workflow diagrams can be exported to Visio](../../images/spd15-wf-exportToVisio.png)
+![Workflow diagrams can be exported to Visio](../images/spd15-wf-exportToVisio.png)
   
     
     
@@ -89,7 +90,7 @@ To import a SharePoint workflow, do the following:
   
 2. On the **Workflows** tab, in the **Manage** group, click **Import from Visio**.
     
-  ![Import workflow](../../images/spd15-ImportFromVisio.JPG)
+  ![Import workflow](../images/spd15-ImportFromVisio.JPG)
   
 
   
@@ -117,7 +118,7 @@ The imported workflow appears in the SharePoint Designer full-screen workflow ed
   
     
     
-![Imported workflow](../../images/spd15-wf-PO.JPG)
+![Imported workflow](../images/spd15-wf-PO.JPG)
   
     
     
@@ -159,13 +160,13 @@ To export a workflow, do the following:
 <a name="bk_addresources"> </a>
 
 
--  [What's new in workflows for SharePoint](what-s-new-in-workflows-for-sharepoint)
+-  [What's new in workflows for SharePoint](what-s-new-in-workflows-for-sharepoint.md)
     
   
--  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint)
+-  [Get started with workflows in SharePoint](get-started-with-workflows-in-sharepoint.md)
     
   
--  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio)
+-  [Workflow development in SharePoint Designer and Visio](workflow-development-in-sharepoint-designer-and-visio.md)
     
   
 

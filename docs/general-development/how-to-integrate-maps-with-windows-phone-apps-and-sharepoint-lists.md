@@ -1,6 +1,7 @@
 ---
 title: How to Integrate maps with Windows Phone apps and SharePoint lists
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 7e0550bc-92d1-407f-b8ba-1371c63bd16e
 ---
 
@@ -14,7 +15,7 @@ SharePoint introduces a new field type named Geolocation that enables you to ann
 
 
 > **Important:**
-> If you are developing an app for Windows Phone 8, you must use Visual Studio Express 2012 instead of Visual Studio 2010 Express. Except for the development environment, all information in this article applies to creating apps for both Windows Phone 8 and Windows Phone 7. > For more information, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint). 
+> If you are developing an app for Windows Phone 8, you must use Visual Studio Express 2012 instead of Visual Studio 2010 Express. Except for the development environment, all information in this article applies to creating apps for both Windows Phone 8 and Windows Phone 7. > For more information, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md). 
   
     
     
@@ -40,7 +41,7 @@ Ensure that you have the following installed:
 - Access to a SharePoint list, with sufficient privileges to add a column
     
   
-- The Bing Maps key deployed to your server; see  [How to: Set the Bing Maps key at the web and farm level in SharePoint](how-to-set-the-bing-maps-key-at-the-web-and-farm-level-in-sharepoint)
+- The Bing Maps key deployed to your server; see  [How to: Set the Bing Maps key at the web and farm level in SharePoint](how-to-set-the-bing-maps-key-at-the-web-and-farm-level-in-sharepoint.md)
     
   
 
@@ -85,7 +86,7 @@ The Geolocation column is not available by default in SharePoint lists. You have
 
   
 
-  ![Adding the SharePoint list using the wizard](../../images/SP15Con_HowToCreateMapBasedPhoneApp_Fig1.png)
+  ![Adding the SharePoint list using the wizard](../images/SP15Con_HowToCreateMapBasedPhoneApp_Fig1.png)
   
 
   
@@ -241,7 +242,7 @@ In this step, you can run your app and validate it.
 
   
 
-  ![Allow privacy policy for maps](../../images/SP15Con_HowToCreateMapBasedPhoneApp_Fig2.png)
+  ![Allow privacy policy for maps](../images/SP15Con_HowToCreateMapBasedPhoneApp_Fig2.png)
   
 
     The map view is displayed, as shown in Figure 3.
@@ -251,7 +252,7 @@ In this step, you can run your app and validate it.
 
   
 
-  ![Map view on mobile app](../../images/SP15Con_HowToCreateMapBasedPhoneApp_Fig3.png)
+  ![Map view on mobile app](../images/SP15Con_HowToCreateMapBasedPhoneApp_Fig3.png)
   
 
   
@@ -269,19 +270,19 @@ In this step, you can run your app and validate it.
 <a name="SP15Integmaps_addlresources"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
--  [Integrating location and map functionality in SharePoint](integrating-location-and-map-functionality-in-sharepoint)
+-  [Integrating location and map functionality in SharePoint](integrating-location-and-map-functionality-in-sharepoint.md)
     
   
--  [How to: Extend the Geolocation field type using client-side rendering](how-to-extend-the-geolocation-field-type-using-client-side-rendering)
+-  [How to: Extend the Geolocation field type using client-side rendering](how-to-extend-the-geolocation-field-type-using-client-side-rendering.md)
     
   
--  [How to: Add a Geolocation column to a list programmatically in SharePoint](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint)
+-  [How to: Add a Geolocation column to a list programmatically in SharePoint](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint.md)
     
   
--  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint)
+-  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
     
   
 -  [Windows Phone SDK 7.1](http://www.microsoft.com/en-us/download/details.aspx?id=27570)

@@ -1,0 +1,1240 @@
+- name: SharePoint development
+  href: index.md
+- name: SharePoint Framework
+  items:
+  - name: Overview
+    href: spfx/sharepoint-framework-overview.md
+  - name: Roadmap
+    href: spfx/roadmap.md
+  - name: Known issues and FAQ
+    href: spfx/known-issues-and-common-questions.md
+  - name: Tools and libraries
+    href: spfx/tools-and-libraries.md
+  - name: Set up your Office 365 tenant
+    href: spfx/set-up-your-developer-tenant.md
+  - name: Set up your development environment
+    href: spfx/set-up-your-development-environment.md
+  - name: SharePoint 2016 support
+    href: spfx/sharepoint-2016-support.md
+  - name: Debug solutions with VS Code
+    href: spfx/debug-in-vscode.md
+  - name: Enterprise Guidance
+    href: spfx/enterprise-guidance.md
+  - name: Team-based development
+    href: spfx/team-based-development-on-sharepoint-framework.md
+  - name: Tenant-Scoped deployment
+    href: spfx/tenant-scoped-deployment.md
+  - name: Tenant properties
+    href: spfx/tenant-properties.md
+  - name: Use theme colors in your solution
+    href: spfx/use-theme-colors-in-your-customizations.md
+  - name: Working with CSS
+    href: spfx/css-recommendations.md
+  - name: GraphHttpClient
+    items:
+    - name: Overview
+      href: spfx/overview-graphhttpclient.md
+    - name: Use GraphHttpClient to call Microsoft Graph
+      href: spfx/call-microsoft-graph-using-graphhttpclient.md
+  - name: Toolchain
+    href: spfx/toolchain/sharepoint-framework-toolchain.md
+    items:
+    - name: SharePoint Framework Toolchain
+      href: spfx/toolchain/sharepoint-framework-toolchain.md
+    - name: Yeoman Sharepoint generator
+      href: spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md
+    - name: Update SharePoint Framework packages
+      href: spfx/toolchain/update-latest-packages.md
+    - name: Optimize builds for production
+      href: spfx/toolchain/optimize-builds-for-production.md
+    - name: Integrate gulp tasks in SharePoint Framework toolchain
+      href: spfx/toolchain/integrate-gulp-tasks-in-build-pipeline.md
+    - name: Extending Webpack in SharePoint Framework toolchain
+      href: spfx/toolchain/extending-webpack-in-build-pipeline.md
+    - name: Provision SharePoint assets
+      href: spfx/toolchain/provision-sharepoint-assets.md
+  - name: Extensions
+    items:
+    - name: Overview
+      href: spfx/extensions/overview-extensions.md
+    - name: Get started
+      items:
+      - name: Build your first extension
+        href: spfx/extensions/get-started/build-a-hello-world-extension.md
+      - name: Using page placeholders
+        href: spfx/extensions/get-started/using-page-placeholder-with-extensions.md
+      - name: Deploy your extension to SharePoint
+        href: spfx/extensions/get-started/serving-your-extension-from-sharepoint.md
+      - name: Hosting extension from CDN
+        href: spfx/extensions/get-started/hosting-extension-from-office365-cdn.md
+      - name: Build FieldCustomizer
+        href: spfx/extensions/get-started/building-simple-field-customizer.md
+      - name: Build ListView Command Set
+        href: spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md
+    - name: Guidance
+      items:
+      - name: Use custom dialog boxes
+        href: spfx/extensions/guidance/using-custom-dialogs-with-spfx.md
+  - name: Web parts
+    items:
+    - name: Overview
+      href: spfx/web-parts/overview-client-side-web-parts.md
+    - name: Get started
+      items:
+      - name: Build your first web part
+        href: spfx/web-parts/get-started/build-a-hello-world-web-part.md
+      - name: Connect to SharePoint
+        href: spfx/web-parts/get-started/connect-to-sharepoint.md
+      - name: Deploy your web part to a SharePoint page
+        href: spfx/web-parts/get-started/serve-your-web-part-in-a-sharepoint-page.md
+      - name: Deploy to an Azure CDN
+        href: spfx/web-parts/get-started/deploy-web-part-to-cdn.md
+      - name: Add jQueryUI Accordion
+        href: spfx/web-parts/get-started/add-jqueryui-accordion-to-web-part.md
+      - name: Use Office UI Fabric React components
+        href: spfx/web-parts/get-started/use-fabric-react-components.md
+      - name: Provisioning assets from solution
+        href: spfx/web-parts/get-started/provision-sp-assets-from-package.md
+      - name: Deploy to Office 365 CDN
+        href: spfx/web-parts/get-started/hosting-webpart-from-office-365-cdn.md
+    - name: Basics
+      items:
+      - name: Design considerations
+        href: spfx/web-parts/basics/design-considerations-for-web-parts.md
+      - name: Add properties to the property pane
+        href: spfx/web-parts/basics/integrate-with-property-pane.md
+      - name: Add an external library
+        href: spfx/web-parts/basics/add-an-external-library.md
+      - name: Working with the original __RequestDigest
+        href: spfx/web-parts/basics/working-with-requestdigest.md
+      - name: Notes on solution packaging
+        href: spfx/web-parts/basics/notes-on-solution-packaging.md
+    - name: Guidance
+      items:
+      - name: SharePoint Framework solutions governance considerations
+        href: spfx/web-parts/guidance/governance-considerations.md
+      - name: Use existing JavaScript libraries
+        href: spfx/web-parts/guidance/use-existing-javascript-libraries.md
+      - name: Reference third-party CSS styles
+        href: spfx/web-parts/guidance/reference-third-party-css-styles.md
+      - name: Using preconfigured entries
+        href: spfx/web-parts/guidance/simplify-adding-web-parts-with-preconfigured-entries.md
+      - name: Integrate web part properties with SharePoint
+        href: spfx/web-parts/guidance/integrate-web-part-properties-with-sharepoint.md
+      - name: Using JSOM in web part
+        href: spfx/web-parts/guidance/connect-to-sharepoint-using-jsom.md
+      - name: Validate property pane entries
+        href: spfx/web-parts/guidance/validate-web-part-property-values.md
+      - name: Use cascading dropdowns in property pane
+        href: spfx/web-parts/guidance/use-cascading-dropdowns-in-web-part-properties.md
+      - name: Build custom controls for the property pane
+        href: spfx/web-parts/guidance/build-custom-property-pane-controls.md
+      - name: Share data between web parts
+        href: spfx/web-parts/guidance/share-data-between-web-parts.md
+      - name: Sharing data between web parts (tutorial)
+        href: spfx/web-parts/guidance/tutorial-share-data-between-web-parts-global-variable.md
+      - name: Migrating Script Editor Web Part customizations
+        href: spfx/web-parts/guidance/migrate-script-editor-web-part-customizations.md
+      - name: Migrating jQuery and DataTables solution
+        href: spfx/web-parts/guidance/migrate-jquery-datatables-script-to-spfx.md
+      - name: Migrating jQuery and FullCalendar solution
+        href: spfx/web-parts/guidance/migrate-jquery-fullcalendar-script-to-spfx.md
+      - name: Connect to API secured with Azure Active Directory
+        href: spfx/web-parts/guidance/connect-to-api-secured-with-aad.md
+      - name: Office UI Fabric integration
+        href: spfx/web-parts/guidance/office-ui-fabric-integration.md
+      - name: Build web parts with SP PnP JS
+        href: spfx/web-parts/guidance/use-sp-pnp-js-with-spfx-web-parts.md
+      - name: Build web parts with Angular v1.x
+        href: spfx/web-parts/guidance/build-client-side-web-parts-with-angular-1-x.md
+      - name: Migrating Angular applications
+        href: spfx/web-parts/guidance/migrate-angular-1-x-applications-to-sharepoint-framework.md
+      - name: Localization
+        href: spfx/web-parts/guidance/localize-web-parts.md
+      - name: Call the Microsoft Graph API
+        href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md
+  - name: Design guidance
+    items:
+    - name: Overview
+      href: design/design-guidance-overview.md
+    - name: Authoring pages
+      href: design/authoring-pages.md
+    - name: Designing a web part
+      href: design/design-a-web-part.md
+      items:
+      - name: Reactive and nonreactive web parts
+        href: design/reactive-and-nonreactive-web-parts.md
+      - name: Responsive design
+        href: design/grid-and-responsive-design.md
+      - name: Titles and descriptions
+        href: design/web-part-titles-and-descriptions.md
+      - name: UI text
+        href: design/ui-text-for-web-parts.md
+      - name: Themes and colors
+        href: design/themes-colors.md
+      - name: Placeholders and fallbacks
+        href: design/placeholders-and-fallbacks.md
+      - name: Showcase web part
+        href: design/showcase-web-part.md
+- name: Declarative customization
+  items:
+  - name: Site theming
+    items:
+    - name: Overview
+      href: declarative-customization/site-theming/sharepoint-site-theming-overview.md
+    - name: JSON schema reference
+      href: declarative-customization/site-theming/sharepoint-site-theming-json-schema.md
+    - name: PowerShell cmdlets
+      href: declarative-customization/site-theming/sharepoint-site-theming-powershell.md
+    - name: REST API
+      href: declarative-customization/site-theming/sharepoint-site-theming-rest-api.md
+    - name: CSOM API
+      href: declarative-customization/site-theming/sharepoint-site-theming-csom.md  
+  - name: Column formatting
+    href: declarative-customization/column-formatting.md   
+- name: SharePoint APIs
+  items:
+  - name: Create Communication Sites
+    href: apis/communication-site-creation-rest.md
+  - name: REST
+    items:
+    - name: SharePoint REST service
+      href: apis/rest/get-to-know-the-sharepoint-rest-service.md
+    - name: Basic operations
+      href: apis/rest/complete-basic-operations-using-sharepoint-rest-endpoints.md
+    - name: Lists and list items
+      href: apis/rest/working-with-lists-and-list-items-with-rest.md
+    - name: Folders and files
+      href: apis/rest/working-with-folders-and-files-with-rest.md
+    - name: REST endpoint URIs
+      href: apis/rest/determine-sharepoint-rest-service-endpoint-uris.md
+    - name: OData query operations
+      href: apis/rest/use-odata-query-operations-in-sharepoint-rest-requests.md
+    - name: Navigate data structure
+      href: apis/rest/navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md
+    - name: Synchronize SharePoint items
+      href: apis/rest/synchronize-sharepoint-items-using-the-rest-service.md
+    - name: Upload a file
+      href: apis/rest/upload-a-file-by-using-the-rest-api-and-jquery.md
+    - name: Manage permissions
+      href: apis/rest/set-custom-permissions-on-a-list-by-using-the-rest-interface.md
+    - name: Batch requests
+      href: apis/rest/make-batch-requests-with-the-rest-apis.md
+  - name: Webhooks
+    items:
+    - name: Overview
+      href: apis/webhooks/overview-sharepoint-webhooks.md
+    - name: Get started
+      href: apis/webhooks/get-started-webhooks.md
+    - name: Reference implementation
+      href: apis/webhooks/webhooks-reference-implementation.md
+    - name: Azure Functions and SharePoint webhooks
+      href: apis/webhooks/sharepoint-webhooks-using-azure-functions.md
+    - name: SharePoint lists
+      items:
+      - name: Overview
+        href: apis/webhooks/lists/overview-sharepoint-list-webhooks.md
+      - name: Create a subscription
+        href: apis/webhooks/lists/create-subscription.md
+      - name: Update a subscription
+        href: apis/webhooks/lists/update-subscription.md
+      - name: Delete a subscription
+        href: apis/webhooks/lists/delete-subscription.md
+      - name: Get subscriptions
+        href: apis/webhooks/lists/get-subscription.md
+- name: SharePoint development overview
+  href: general-development/sharepoint-development-overview.md
+  items:
+  - name: What's new for developers in SharePoint
+    href: general-development/what-s-new-for-developers-in-sharepoint.md
+  - name: Protocol handler error in SharePoint 2016
+    href: general-development/protocol-handler-error-due-to-deprecated-interface-in-sharepoint-2016.md
+  - name: Programming models
+    href: general-development/programming-models-in-sharepoint.md
+    items:
+    - name: SharePoint Add-ins compared with SharePoint solutions
+      href: general-development/sharepoint-add-ins-compared-with-sharepoint-solutions.md
+    - name: Build farm solutions
+      href: general-development/build-farm-solutions-in-sharepoint.md
+      items:
+      - name: 'How to: Customize a field type using client-side rendering'
+        href: general-development/how-to-customize-a-field-type-using-client-side-rendering.md
+      - name: URLs and tokens in SharePoint
+        href: general-development/urls-and-tokens-in-sharepoint.md
+      - name: Virtual directories in SharePoint solutions
+        href: general-development/virtual-directories-in-sharepoint-solutions.md
+    - name: Access SharePoint from mobile and native device apps
+      href: general-development/access-sharepoint-from-mobile-and-native-device-apps.md
+    - name: Build Windows Phone apps that access SharePoint
+      href: general-development/build-windows-phone-apps-that-access-sharepoint.md
+      items:
+      - name: 'How to: Set up an environment for developing mobile apps for SharePoint'
+        href: general-development/how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md
+      - name: Overview of Windows Phone SharePoint application templates in Visual Studio
+        href: general-development/overview-of-windows-phone-sharepoint-application-templates-in-visual-studio.md
+      - name: Architecture of the Windows Phone SharePoint List Application template
+        href: general-development/architecture-of-the-windows-phone-sharepoint-list-application-template.md
+      - name: 'How to: Create a Windows Phone SharePoint list app'
+        href: general-development/how-to-create-a-windows-phone-sharepoint-list-app.md
+      - name: 'How to: Store and retrieve SharePoint list items on a Windows Phone'
+        href: general-development/how-to-store-and-retrieve-sharepoint-list-items-on-a-windows-phone.md
+      - name: 'How to: Implement business logic and data validation in a Windows Phone app for SharePoint'
+        href: general-development/how-to-implement-business-logic-and-data-validation-in-a-windows-phone-app-for-s.md
+      - name: 'How to: Support and convert SharePoint field types for Windows Phone apps'
+        href: general-development/how-to-support-and-convert-sharepoint-field-types-for-windows-phone-apps.md
+      - name: 'How to: Customize list item queries and filter data for Windows Phone apps'
+        href: general-development/how-to-customize-list-item-queries-and-filter-data-for-windows-phone-apps.md
+      - name: 'How to: Customize the user interface of a SharePoint list app for Windows Phone'
+        href: general-development/how-to-customize-the-user-interface-of-a-sharepoint-list-app-for-windows-ph.md
+      - name: 'How to: Use multiple SharePoint lists in a Windows Phone app'
+        href: general-development/how-to-use-multiple-sharepoint-lists-in-a-windows-phone-app.md
+      - name: 'How to: Configure and use push notifications in SharePoint apps for Windows Phone'
+        href: general-development/how-to-configure-and-use-push-notifications-in-sharepoint-apps-for-windows.md
+      - name: 'How to: Create a mobile app in SharePoint that contains data from an external data source'
+        href: general-development/how-to-create-a-mobile-app-in-sharepoint-that-contains-data-from-an-externa.md
+      - name: 'How to: Integrate maps with Windows Phone apps and SharePoint lists'
+        href: general-development/how-to-integrate-maps-with-windows-phone-apps-and-sharepoint-lists.md
+      - name: 'How to: Build search-driven mobile apps with the Navigation and Event Logging REST interfaces'
+        href: general-development/how-to-build-search-driven-mobile-apps-with-the-navigation-and-event-logging-res.md
+      - name: Overview of the SharePoint mobile object model
+        href: general-development/overview-of-the-sharepoint-mobile-object-model.md
+      - name: Overview of the SharePoint mobile client authentication object model
+        href: general-development/overview-of-the-sharepoint-mobile-client-authentication-object-model.md
+      - name: 'How to: Export the Name field in a Document Library list to a mobile app'
+        href: general-development/how-to-export-the-name-field-in-a-document-library-list-to-a-mobile-app.md
+      - name: Build localized applications for Windows Phone based on the SharePoint templates
+        href: general-development/build-localized-applications-for-windows-phone-based-on-the-sharepoint-templates.md
+      - name: Language support for Windows Phone in SharePoint
+        href: general-development/language-support-for-windows-phone-in-sharepoint.md
+      - name: Build mobile apps for other platforms using SharePoint
+        href: general-development/build-mobile-apps-for-other-platforms-using-sharepoint.md
+    - name: Build reusable components for SharePoint
+      href: general-development/build-reusable-components-for-sharepoint.md
+    - name: Build sites for SharePoint
+      href: general-development/build-sites-for-sharepoint.md
+      items:
+      - name: What's new with SharePoint site development
+        href: general-development/what-s-new-with-sharepoint-site-development.md
+      - name: Develop the site design in SharePoint
+        href: general-development/develop-the-site-design-in-sharepoint.md
+        items:
+        - name: Overview of Design Manager
+          href: general-development/overview-of-design-manager-in-sharepoint.md
+        - name: Overview of the SharePoint page model
+          href: general-development/overview-of-the-sharepoint-page-model.md
+        - name: Master pages, the Master Page Gallery, and page layouts
+          href: general-development/master-pages-the-master-page-gallery-and-page-layouts-in-sharepoint.md
+          items:
+          - name: 'How to: Map a network drive to the Master Page Gallery'
+            href: general-development/how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md
+          - name: 'How to: Apply a master page to a site'
+            href: general-development/how-to-apply-a-master-page-to-a-site-in-sharepoint.md
+          - name: 'How to: Create a page layout'
+            href: general-development/how-to-create-a-page-layout-in-sharepoint.md
+          - name: 'How to: Customize page layouts for a catalog-based site'
+            href: general-development/how-to-customize-page-layouts-for-a-catalog-based-site-in-sharepoint.md
+          - name: 'How to: Apply styles to page fields'
+            href: general-development/how-to-apply-styles-to-page-fields-in-sharepoint.md
+          - name: 'How to: Resolve errors and warnings when previewing a page'
+            href: general-development/how-to-resolve-errors-and-warnings-when-previewing-a-page-in-sharepoint.md
+          - name: 'How to: Convert an HTML file into a master page'
+            href: general-development/how-to-convert-an-html-file-into-a-master-page-in-sharepoint.md
+          - name: 'How to: Create a minimal master page'
+            href: general-development/how-to-create-a-minimal-master-page-in-sharepoint.md
+          - name: 'How to: Change the preview page in Design Manager'
+            href: general-development/how-to-change-the-preview-page-in-sharepoint-design-manager.md
+          - name: SharePoint Online Suite Navigation control
+            href: general-development/sharepoint-online-suite-navigation-control.md
+        - name: 'How to: Retrieve the URL of a Pages library'
+          href: general-development/how-to-retrieve-the-url-of-a-pages-library.md
+        - name: Branding and design capabilities
+          href: general-development/sharepoint-design-manager-branding-and-design-capabilities.md
+          items:
+          - name: Design packages
+            href: general-development/sharepoint-design-manager-design-packages.md
+          - name: Device channels
+            href: general-development/sharepoint-design-manager-device-channels.md
+          - name: Display templates
+            href: general-development/sharepoint-design-manager-display-templates.md
+          - name: Image renditions
+            href: general-development/sharepoint-design-manager-image-renditions.md
+          - name: Snippets
+            href: general-development/sharepoint-design-manager-snippets.md
+            items:
+            - name: 'How to: Add a Device Channel Panel snippet'
+              href: general-development/how-to-add-a-device-channel-panel-snippet-in-sharepoint.md
+            - name: 'How to: Add an Edit Mode Panel snippet'
+              href: general-development/how-to-add-an-edit-mode-panel-snippet-in-sharepoint.md
+            - name: 'How to: Add a Web Part zone snippet'
+              href: general-development/how-to-add-a-web-part-zone-snippet-in-sharepoint.md
+            - name: 'How to: Add a Security Trim snippet'
+              href: general-development/how-to-add-a-security-trim-snippet-in-sharepoint.md
+            - name: 'How to: Brand snippets by using CSS'
+              href: general-development/how-to-brand-snippets-by-using-css-in-sharepoint.md
+          - name: Themes
+            href: general-development/themes-overview-for-sharepoint.md
+            items:
+            - name: 'How to: Create a master page preview file'
+              href: general-development/how-to-create-a-master-page-preview-file-in-sharepoint.md
+            - name: 'How to: Deploy a custom theme'
+              href: general-development/how-to-deploy-a-custom-theme-in-sharepoint.md
+            - name: 'How to: Make custom CSS files themable'
+              href: general-development/how-to-make-custom-css-files-themable-in-sharepoint.md
+            - name: Upgrade custom themes and CSS
+              href: general-development/upgrade-custom-themes-and-css-to-sharepoint.md
+            - name: Color palettes and fonts
+              href: general-development/color-palettes-and-fonts-in-sharepoint.md
+      - name: Managed metadata and navigation in SharePoint
+        href: general-development/managed-metadata-and-navigation-in-sharepoint.md
+        items:
+        - name: Managed navigation in SharePoint
+          href: general-development/managed-navigation-in-sharepoint.md
+        - name: Content Search Web Part in SharePoint
+          href: general-development/content-search-web-part-in-sharepoint.md
+        - name: 'How to: Use code to pin terms to navigation term sets in SharePoint'
+          href: general-development/how-to-use-code-to-pin-terms-to-navigation-term-sets-in-sharepoint.md
+      - name: Publish SharePoint sites
+        href: general-development/publish-sharepoint-sites.md
+        items:
+        - name: Cross-site publishing in SharePoint
+          href: general-development/cross-site-publishing-in-sharepoint.md
+      - name: User segmentation in SharePoint
+        href: general-development/user-segmentation-in-sharepoint.md
+      - name: Minimal Download Strategy overview
+        href: general-development/minimal-download-strategy-overview.md
+      - name: Modify SharePoint components for MDS
+        href: general-development/modify-sharepoint-components-for-mds.md
+      - name: Optimize page performance
+        href: general-development/optimize-page-performance-in-sharepoint.md
+      - name: Optimize SharePoint stie accessibility
+        href: general-development/optimize-sharepoint-site-accessibility.md
+  - name: Add SharePoint capabilities
+    href: general-development/add-sharepoint-capabilities.md
+    items:
+    - name: Workflows
+      href: general-development/workflows-in-sharepoint.md
+      items:
+      - name: Get started with workflows in SharePoint
+        href: general-development/get-started-with-workflows-in-sharepoint.md
+      - name: SharePoint workflow fundamentals
+        href: general-development/sharepoint-workflow-fundamentals.md
+      - name: What's new in workflows for SharePoint
+        href: general-development/what-s-new-in-workflows-for-sharepoint.md
+      - name: Prepare to set up and configure a SharePoint workflow development environment
+        href: general-development/prepare-to-set-up-and-configure-a-sharepoint-workflow-development-environment.md
+      - name: 'How to: Configure MSMQ for SharePoint workflows'
+        href: general-development/how-to-configure-msmq-for-sharepoint-workflows.md
+      - name: Workflow initiation and configuration properties
+        href: general-development/workflow-initiation-and-configuration-properties.md
+      - name: SharePoint workflow development best practices
+        href: general-development/sharepoint-workflow-development-best-practices.md
+      - name: Debugging SharePoint Server workflows
+        href: general-development/debugging-sharepoint-server-workflows.md
+      - name: Using the pairing cmdlet Register-SPWorkflowService
+        href: general-development/using-the-pairing-cmdlet-register-spworkflowservice.md
+      - name: SharePoint workflow samples
+        href: general-development/sharepoint-workflow-samples.md
+      - name: Develop SharePoint workflows using Visual Studio
+        href: general-development/develop-sharepoint-workflows-using-visual-studio.md
+        items:
+        - name: Create a SharePoint workflow app using Visual Studio 2012
+          href: general-development/create-a-sharepoint-workflow-app-using-visual-studio-2012.md
+        - name: 'How to: Create SharePoint Workflows using Visual Studio'
+          href: general-development/how-to-create-sharepoint-workflows-using-visual-studio.md
+        - name: Working with the SharePoint Workflow Services Client Side Object Model
+          href: general-development/working-with-the-sharepoint-workflow-services-client-side-object-model.md
+        - name: Working with Web Services in SharePoint Workflows using Visual Studio 2012
+          href: general-development/working-with-web-services-in-sharepoint-workflows-using-visual-studio-2012.md
+        - name: Working with Tasks in SharePoint Workflows using Visual Studio 2012
+          href: general-development/working-with-tasks-in-sharepoint-workflows-using-visual-studio-2012.md
+        - name: 'How to: Create Custom SharePoint Server Workflow Forms with Visual Studio 2012'
+          href: general-development/how-to-create-custom-sharepoint-server-workflow-forms-with-visual-studio-20.md
+        - name: 'How to: Build and deploy workflow custom actions'
+          href: general-development/how-to-build-and-deploy-workflow-custom-actions.md
+        - name: Use workflow interop for SharePoint
+          href: general-development/use-workflow-interop-for-sharepoint.md
+        - name: Common error messages in SharePoint workflow development
+          href: general-development/common-error-messages-in-sharepoint-workflow-development.md
+        - name: SharePoint workflow object model
+          href: general-development/sharepoint-workflow-object-model.md
+      - name: Workflow development in SharePoint Designer and Visio
+        href: general-development/workflow-development-in-sharepoint-designer-and-visio.md
+        items:
+        - name: What's changed in SharePoint Designer
+          href: general-development/what-s-changed-in-sharepoint-designer.md
+        - name: Creating a workflow by using SharePoint Designer and the SharePoint Workflow platform
+          href: general-development/creating-a-workflow-by-using-sharepoint-designer-and-the-sharepoint-wo.md
+        - name: Shapes in the SharePoint Server workflow template in Visio
+          href: general-development/shapes-in-the-sharepoint-server-workflow-template-in-visio.md
+        - name: Troubleshooting SharePoint Server workflow validation errors in Visio
+          href: general-development/troubleshooting-sharepoint-server-workflow-validation-errors-in-visio.md
+        - name: Understanding Dictionary actions in SharePoint Designer 2013
+          href: general-development/understanding-dictionary-actions-in-sharepoint-designer.md
+        - name: Understanding Coordination actions in SharePoint Designer 2013
+          href: general-development/understanding-coordination-actions-in-sharepoint-designer.md
+        - name: Understanding Task Actions in SharePoint Designer 2013
+          href: general-development/understanding-task-actions-in-sharepoint-designer.md
+        - name: Understanding Eventing Actions in SharePoint Designer 2013
+          href: general-development/understanding-eventing-actions-in-sharepoint-designer.md
+        - name: Getting familiar with Visual Designer for workflow in SharePoint Designer 2013
+          href: general-development/getting-familiar-with-visual-designer-for-workflow-in-sharepoint-designer.md
+        - name: Working with Web Services in SharePoint Workflows using SharePoint Designer 2013
+          href: general-development/working-with-web-services-in-sharepoint-workflows-using-sharepoint-designer.md
+        - name: Understanding how to package and deploy workflow in SharePoint
+          href: general-development/understanding-how-to-package-and-deploy-workflow-in-sharepoint.md
+        - name: Create a workflow with elevated permissions by using the SharePoint Workflow platform
+          href: general-development/create-a-workflow-with-elevated-permissions-by-using-the-sharepoint-workflo.md
+        - name: Matching the SharePoint Designer version with the farm version
+          href: general-development/matching-the-sharepoint-designer-version-with-the-farm-version.md
+        - name: Transfer a workflow between SharePoint Designer 2013 and Visio Professional 2013 (SharePoint 2010 Workflow platform)
+          href: general-development/transfer-a-workflow-between-sharepoint-designer-and-visio-professional.md
+      - name: Workflow actions and activities reference
+        href: general-development/workflow-actions-and-activities-reference-for-sharepoint.md
+        items:
+        - name: Workflow activity classes
+          href: general-development/workflow-activity-classes-in-sharepoint.md
+        - name: Workflow actions quick reference (SharePoint Workflow platform)
+          href: general-development/workflow-actions-quick-reference-sharepoint-workflow-platform.md
+        - name: Workflow actions available using the workflow interop bridge
+          href: general-development/workflow-actions-available-using-the-workflow-interop-bridge.md
+        - name: Workflow conditions quick reference (SharePoint 2010 Workflow platform)
+          href: general-development/workflow-conditions-quick-reference-sharepoint-2010-workflow-platform.md
+        - name: Workflow actions quick reference (SharePoint 2010 Workflow platform)
+          href: general-development/workflow-actions-quick-reference-sharepoint-2010-workflow-platform.md
+        - name: 'Visio shapes in SharePoint Designer 2013: A quick reference guide (SharePoint 2010 Workflow platform)'
+          href: general-development/visio-shapes-in-sharepoint-designer-a-quick-reference-guide-sharepoint-2010.md
+        - name: Validation issues in Visio (SharePoint 2010 Workflow platform)
+          href: general-development/validation-issues-in-visio-sharepoint-2010-workflow-platform.md
+    - name: Social and collaboration
+      href: general-development/social-and-collaboration-features-in-sharepoint.md
+      items:
+      - name: What's new for developers in social and collaboration features
+        href: general-development/what-s-new-for-developers-in-social-and-collaboration-features-in-sharepoint-201.md
+      - name: Get started developing with social features
+        href: general-development/get-started-developing-with-social-features-in-sharepoint.md
+        items:
+        - name: 'How to: Learn to read and write to the social feed by using the .NET client object model'
+          href: general-development/how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-net-client-object.md
+        - name: 'How to: Learn to read and write to the social feed by using the REST service'
+          href: general-development/how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-rest-service-in-s.md
+        - name: Social feed REST API reference
+          href: general-development/social-feed-rest-api-reference-for-sharepoint.md
+        - name: Following people and content REST API reference
+          href: general-development/following-people-and-content-rest-api-reference-for-sharepoint.md
+      - name: Work with social feeds
+        href: general-development/work-with-social-feeds-in-sharepoint.md
+        items:
+        - name: 'How to: Create and delete posts and retrieve the social feed by using the .NET client object model'
+          href: general-development/how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-net-cli.md
+        - name: 'How to: Create and delete posts and retrieve the social feed by using the JavaScript object model'
+          href: general-development/how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md
+        - name: 'How to: Include mentions, tags, and links to sites and documents in posts'
+          href: general-development/how-to-include-mentions-tags-and-links-to-sites-and-documents-in-posts-in-sharep.md
+        - name: 'How to: Embed images, videos, and documents in posts'
+          href: general-development/how-to-embed-images-videos-and-documents-in-posts-in-sharepoint-server.md
+        - name: Reference threads and digest threads in social feeds
+          href: general-development/reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md
+      - name: Follow people
+        href: general-development/follow-people-in-sharepoint.md
+        items:
+        - name: 'How to: Follow people by using the .NET client object model'
+          href: general-development/how-to-follow-people-by-using-the-net-client-object-model-in-sharepoint.md
+        - name: 'How to: Follow people by using the JavaScript object model'
+          href: general-development/how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint.md
+      - name: Follow content
+        href: general-development/follow-content-in-sharepoint.md
+        items:
+        - name: 'How to: Follow documents and sites by using the .NET client object model'
+          href: general-development/how-to-follow-documents-and-sites-by-using-the-net-client-object-model-in-sharep.md
+        - name: 'How to: Follow documents, sites, and tags by using the REST service'
+          href: general-development/how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md
+      - name: Work with user profiles
+        href: general-development/work-with-user-profiles-in-sharepoint.md
+        items:
+        - name: 'How to: Retrieve user profile properties by using the .NET client object model'
+          href: general-development/how-to-retrieve-user-profile-properties-by-using-the-net-client-object-model-in.md
+        - name: 'How to: Retrieve user profile properties by using the JavaScript object model'
+          href: general-development/how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in.md
+        - name: 'How to: Work with user profiles by using the server object model'
+          href: general-development/how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md
+    - name: Integrating location and map functionality
+      href: general-development/integrating-location-and-map-functionality-in-sharepoint.md
+      items:
+      - name: 'How to: Add a Geolocation column to a list programmatically in SharePoint'
+        href: general-development/how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint.md
+      - name: Create a map view for the Geolocation field in SharePoint
+        href: general-development/create-a-map-view-for-the-geolocation-field-in-sharepoint.md
+      - name: 'How to: Set the Bing Maps key at the web and farm level in SharePoint'
+        href: general-development/how-to-set-the-bing-maps-key-at-the-web-and-farm-level-in-sharepoint.md
+      - name: 'How to: Extend the Geolocation field type using client-side rendering'
+        href: general-development/how-to-extend-the-geolocation-field-type-using-client-side-rendering.md
+    - name: Search in SharePoint
+      href: general-development/search-in-sharepoint.md
+      items:
+      - name: What's new in SharePoint search for developers
+        href: general-development/what-s-new-in-sharepoint-search-for-developers.md
+      - name: Searching new content with SharePoint Search
+        href: general-development/searching-new-content-with-sharepoint-search.md
+        items:
+        - name: Search connector framework
+          href: general-development/search-connector-framework-in-sharepoint.md
+          items:
+          - name: Enhancing the BDC model file for Search
+            href: general-development/enhancing-the-bdc-model-file-for-search-in-sharepoint.md
+          - name: 'How to: Crawl associated external content types'
+            href: general-development/how-to-crawl-associated-external-content-types-in-sharepoint.md
+          - name: 'How to: Crawl binary large objects (BLOBs)'
+            href: general-development/how-to-crawl-binary-large-objects-blobs-in-sharepoint.md
+          - name: 'How to: Configure item-level security'
+            href: general-development/how-to-configure-item-level-security-in-sharepoint.md
+      - name: Configure search in SharePoint
+        href: general-development/configure-search-in-sharepoint.md
+        items:
+        - name: Custom word breakers in SharePoint Server
+          href: general-development/custom-word-breakers-in-sharepoint-server.md
+        - name: Custom content processing with the Content Enrichment web service callout
+          href: general-development/custom-content-processing-with-the-content-enrichment-web-service-callout.md
+          items:
+          - name: 'How to: Use the Content Enrichment web service callout for SharePoint Server'
+            href: general-development/how-to-use-the-content-enrichment-web-service-callout-for-sharepoint-server.md
+          - name: Trigger expression syntax
+            href: general-development/trigger-expressions-syntax-in-sharepoint.md
+      - name: Building search queries in SharePoint
+        href: general-development/building-search-queries-in-sharepoint.md
+        items:
+        - name: Keyword Query Language (KQL) syntax reference
+          href: general-development/keyword-query-language-kql-syntax-reference.md
+        - name: FAST Query Language (FQL) syntax reference
+          href: general-development/fast-query-language-fql-syntax-reference.md
+        - name: Using the SharePoint search Query APIs
+          href: general-development/using-the-sharepoint-search-query-apis.md
+      - name: SharePoint Search REST API overview
+        href: general-development/sharepoint-search-rest-api-overview.md
+        items:
+        - name: Retrieving query suggestions using the Search REST service
+          href: general-development/retrieving-query-suggestions-using-the-search-rest-service.md
+      - name: Search add-ins in SharePoint
+        href: general-development/search-add-ins-in-sharepoint.md
+      - name: Customizing search results in SharePoint
+        href: general-development/customizing-search-results-in-sharepoint.md
+      - name: Sorting search results in SharePoint
+        href: general-development/sorting-search-results-in-sharepoint.md
+      - name: Customizing ranking models to improve relevance
+        href: general-development/customizing-ranking-models-to-improve-relevance-in-sharepoint.md
+      - name: Custom security trimming for Search in SharePoint Server
+        href: general-development/custom-security-trimming-for-search-in-sharepoint-server.md
+        items:
+        - name: 'How to: Use a custom security trimmer for SharePoint Server search results'
+          href: general-development/how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results.md
+      - name: Exporting and importing search configuration settings programmatically
+        href: general-development/exporting-and-importing-search-configuration-settings-in-sharepoint.md
+      - name: Query Refinement in SharePoint
+        href: general-development/query-refinement-in-sharepoint.md
+    - name: Business Connectivity Services
+      href: general-development/business-connectivity-services-in-sharepoint.md
+      items:
+      - name: What's new in Business Connectivity Services
+        href: general-development/what-s-new-in-business-connectivity-services-in-sharepoint.md
+      - name: Get started with Business Connectivity Services
+        href: general-development/get-started-with-business-connectivity-services-in-sharepoint.md
+        items:
+        - name: Setting up a development environment for BCS
+          href: general-development/setting-up-a-development-environment-for-bcs-in-sharepoint.md
+      - name: External content types
+        href: general-development/external-content-types-in-sharepoint.md
+        items:
+        - name: 'How to: Create external content types for SQL Server'
+          href: general-development/how-to-create-external-content-types-for-sql-server-in-sharepoint.md
+        - name: Create associations in SharePoint
+          href: general-development/create-associations-in-sharepoint.md
+        - name: Add-in-scoped external content types
+          href: general-development/add-in-scoped-external-content-types-in-sharepoint.md
+          items:
+          - name: 'How to: Create an add-in-scoped external content type'
+            href: general-development/how-to-create-an-add-in-scoped-external-content-type-in-sharepoint.md
+          - name: 'How to: Convert an add-in-scoped external content type to tenant-scoped'
+            href: general-development/how-to-convert-an-add-in-scoped-external-content-type-to-tenant-scoped.md
+          - name: 'How to: Access external data using REST'
+            href: general-development/how-to-access-external-data-with-rest-in-sharepoint.md
+      - name: Using OData sources with Business Connectivity Services
+        href: general-development/using-odata-sources-with-business-connectivity-services-in-sharepoint.md
+        items:
+        - name: 'How to: Create an external content type from an OData source'
+          href: general-development/how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md
+        - name: 'How to: Create an OData data service for use as a BCS external system'
+          href: general-development/how-to-create-an-odata-data-service-for-use-as-a-bcs-external-system.md
+        - name: 'How to: Create an external list using an OData data source'
+          href: general-development/how-to-create-an-external-list-using-an-odata-data-source-in-sharepoint.md
+      - name: External events and alerts
+        href: general-development/external-events-and-alerts-in-sharepoint.md
+        items:
+        - name: 'How to: Create external event receivers'
+          href: general-development/how-to-create-external-event-receivers.md
+      - name: Get started using the client object model with external data
+        href: general-development/get-started-using-the-client-object-model-with-external-data-in-sharepoint.md
+        items:
+        - name: 'How to: Use the client code library to access external data'
+          href: general-development/how-to-use-the-client-code-library-to-access-external-data-in-sharepoint.md
+      - name: Business Connectivity Services programmers reference
+        href: general-development/business-connectivity-services-programmers-reference-for-sharepoint.md
+        items:
+        - name: BCS REST API reference
+          href: general-development/bcs-rest-api-reference-for-sharepoint.md
+        - name: BCS client object model reference
+          href: general-development/bcs-client-object-model-reference-for-sharepoint.md
+        - name: Changes in the BDC model schema for SharePoint
+          href: general-development/changes-in-the-bdc-model-schema-for-sharepoint.md
+        - name: BDC model schema reference
+          href: general-development/bdc-model-schema-reference-for-sharepoint.md
+      - name: Create hybrid connectivity apps for SharePoint
+        href: general-development/create-hybrid-connectivity-apps-for-sharepoint.md
+      - name: Developing with Duet Enterprise 2.0
+        href: general-development/developing-with-duet-enterprise-2-0.md
+        items:
+        - name: 'How to: Use SAP workflow with Duet Enterprise 2.0'
+          href: general-development/how-to-use-sap-workflow-with-duet-enterprise-2-0.md
+        - name: 'How to: Use SAP Reporting with Duet Enterprise 2.0'
+          href: general-development/how-to-use-sap-reporting-with-duet-enterprise-2-0.md
+    - name: Office and SharePoint application services
+      href: general-development/office-and-sharepoint-application-services.md
+      items:
+      - name: Excel Services in SharePoint
+        href: general-development/excel-services-in-sharepoint.md
+        items:
+        - name: Getting Started with Excel Services
+          href: general-development/getting-started-with-excel-services.md
+          items:
+          - name: Excel Services Overview
+            href: general-development/excel-services-overview.md
+          - name: Excel Services Architecture
+            href: general-development/excel-services-architecture.md
+          - name: Excel Services Development Roadmap
+            href: general-development/excel-services-development-roadmap.md
+          - name: Supported and Unsupported Features
+            href: general-development/supported-and-unsupported-features.md
+          - name: Excel Services Blogs, Forums, and Resources
+            href: general-development/excel-services-blogs-forums-and-resources.md
+        - name: Excel Web Services
+          href: general-development/excel-web-services.md
+          items:
+          - name: What's New in Excel Web Services
+            href: general-development/what-s-new-in-excel-web-services.md
+          - name: Accessing the SOAP API
+            href: general-development/accessing-the-soap-api.md
+          - name: Loop-Back SOAP Calls and Direct Linking
+            href: general-development/loop-back-soap-calls-and-direct-linking.md
+          - name: 'Walkthrough: Developing a Custom Application Using Excel Web Services'
+            href: general-development/walkthrough-developing-a-custom-application-using-excel-web-services.md
+            items:
+            - name: 'Step 1: Creating the Web Service Client Project'
+              href: general-development/step-1-creating-the-web-service-client-project.md
+            - name: 'Step 2: Adding a Web Reference'
+              href: general-development/step-2-adding-a-web-reference.md
+            - name: 'Step 3: Accessing the Web Service'
+              href: general-development/step-3-accessing-the-web-service.md
+            - name: 'Step 4: Building and Testing the Application'
+              href: general-development/step-4-building-and-testing-the-application.md
+          - name: Excel Services Error Codes
+            href: general-development/excel-services-error-codes.md
+          - name: 'How to: Get Values from Ranges'
+            href: general-development/how-to-get-values-from-ranges.md
+          - name: 'How to: Set Values of Ranges'
+            href: general-development/how-to-set-values-of-ranges.md
+          - name: 'How to: Specify a Range Address and Sheet Name'
+            href: general-development/how-to-specify-a-range-address-and-sheet-name.md
+          - name: 'How to: Get an Entire Workbook or a Snapshot'
+            href: general-development/how-to-get-an-entire-workbook-or-a-snapshot.md
+          - name: 'How to: Use the CloseWorkbook Method Call Asynchronously'
+            href: general-development/how-to-use-the-closeworkbook-method-call-asynchronously.md
+          - name: 'How to: Set Various Credentials'
+            href: general-development/how-to-set-various-credentials.md
+          - name: 'How to: Refresh Data'
+            href: general-development/how-to-refresh-data.md
+          - name: 'How to: Use the SubCode Property to Capture Error Codes'
+            href: general-development/how-to-use-the-subcode-property-to-capture-error-codes.md
+        - name: Excel Services User-Defined Functions
+          href: general-development/excel-services-user-defined-functions.md
+          items:
+          - name: Understanding Excel Services UDFs
+            href: general-development/understanding-excel-services-udfs.md
+          - name: 'Walkthrough: Developing a Managed-Code UDF'
+            href: general-development/walkthrough-developing-a-managed-code-udf.md
+            items:
+            - name: 'Step 1: Creating a Project and Adding a UDF Reference'
+              href: general-development/step-1-creating-a-project-and-adding-a-udf-reference.md
+            - name: 'Step 2: Creating a Managed-Code UDF'
+              href: general-development/step-2-creating-a-managed-code-udf.md
+            - name: 'Step 3: Deploying and Enabling UDFs'
+              href: general-development/step-3-deploying-and-enabling-udfs.md
+            - name: 'Step 4: Testing and Calling UDFs from Cells'
+              href: general-development/step-4-testing-and-calling-udfs-from-cells.md
+          - name: Frequently Asked Questions About Excel Services UDFs
+            href: general-development/frequently-asked-questions-about-excel-services-udfs.md
+          - name: 'How to: Enable UDFs'
+            href: general-development/how-to-enable-udfs.md
+          - name: 'How to: Create a UDF That Calls a Web Service'
+            href: general-development/how-to-create-a-udf-that-calls-a-web-service.md
+          - name: 'How to: Access an External Data Source from a UDF'
+            href: general-development/how-to-access-an-external-data-source-from-a-udf.md
+          - name: 'How to: Deploy UDFs Using SharePoint Foundation Solutions'
+            href: general-development/how-to-deploy-udfs-using-sharepoint-foundation-solutions.md
+          - name: 'How to: Restrict UDF Code Access Security Permissions'
+            href: general-development/how-to-restrict-udf-code-access-security-permissions.md
+        - name: Excel Web Access
+          href: general-development/excel-web-access.md
+          items:
+          - name: 'How to: Programmatically Add an Excel Web Access Web Part to a Page'
+            href: general-development/how-to-programmatically-add-an-excel-web-access-web-part-to-a-page.md
+          - name: 'How to: Locate and Copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll'
+            href: general-development/how-to-locate-and-copy-microsoft-office-excel-webui-dll-and-microsoft-office-exc.md
+        - name: Excel Services ECMAScript (JavaScript, JScript)
+          href: general-development/excel-services-ecmascript-javascript-jscript.md
+          items:
+          - name: 'Walkthrough: Developing Using the Content Editor Web Part'
+            href: general-development/walkthrough-developing-using-the-content-editor-web-part.md
+            items:
+            - name: 'Step 1: Creating a ECMAScript Text File'
+              href: general-development/step-1-creating-a-ecmascript-text-file.md
+            - name: 'Step 2: Adding the Content Editor and Excel Services Web Parts'
+              href: general-development/step-2-adding-the-content-editor-and-excel-services-web-parts.md
+          - name: Excel Services ECMAScript Overview
+            href: general-development/excel-services-ecmascript-overview.md
+          - name: JavaScript user-defined functions overview
+            href: general-development/javascript-user-defined-functions-overview.md
+          - name: Working with the Excel Services JavaScript object model
+            href: general-development/working-with-the-excel-services-javascript-object-model.md
+          - name: 'How to: Create a mashup that uses an embedded workbook and Bing Maps'
+            href: general-development/how-to-create-a-mashup-that-uses-an-embedded-workbook-and-bing-maps.md
+        - name: Excel Services REST API
+          href: general-development/excel-services-rest-api.md
+          items:
+          - name: Excel Services REST API Overview
+            href: general-development/excel-services-rest-api-overview.md
+          - name: Basic URI Structure and Path
+            href: general-development/basic-uri-structure-and-path.md
+          - name: Discovery in Excel Services REST API
+            href: general-development/discovery-in-excel-services-rest-api.md
+          - name: Resources URI for Excel Services REST API
+            href: general-development/resources-uri-for-excel-services-rest-api.md
+          - name: Getting Ranges Using Atom Feed and HTML Fragment
+            href: general-development/getting-ranges-using-atom-feed-and-html-fragment.md
+          - name: Sample URI For Excel Services REST API
+            href: general-development/sample-uri-for-excel-services-rest-api.md
+          - name: Accessing a Schema
+            href: general-development/accessing-a-schema.md
+          - name: Unsupported Features in Excel Services REST API
+            href: general-development/unsupported-features-in-excel-services-rest-api.md
+          - name: Advanced Scenarios and Additional Samples
+            href: general-development/advanced-scenarios-and-additional-samples.md
+          - name: Using OData with Excel Services REST in SharePoint
+            href: general-development/using-odata-with-excel-services-rest-in-sharepoint.md
+          - name: Requesting Excel workbook data from SharePoint Server using OData
+            href: general-development/requesting-excel-workbook-data-from-sharepoint-server-using-odata.md
+        - name: General Guidelines
+          href: general-development/general-guidelines.md
+          items:
+          - name: Excel Services Alerts
+            href: general-development/excel-services-alerts.md
+          - name: Excel Services Known Issues and Tips
+            href: general-development/excel-services-known-issues-and-tips.md
+          - name: Excel Services Best Practices
+            href: general-development/excel-services-best-practices.md
+          - name: 'How to: Trust a Location'
+            href: general-development/how-to-trust-a-location.md
+          - name: 'How to: Save from Excel Client to the Server'
+            href: general-development/how-to-save-from-excel-client-to-the-server.md
+          - name: 'How to: Save to the Server to Prepare for Programmatic Access'
+            href: general-development/how-to-save-to-the-server-to-prepare-for-programmatic-access.md
+          - name: 'How to: Catch Exceptions'
+            href: general-development/how-to-catch-exceptions.md
+        - name: Removing Excel Interactive View from a webpage
+          href: general-development/removing-excel-interactive-view-from-a-webpage.md
+      - name: Machine Translation Services in SharePoint
+        href: general-development/machine-translation-services-in-sharepoint.md
+      - name: PerformancePoint Services in SharePoint
+        href: general-development/performancepoint-services-in-sharepoint.md
+        items:
+        - name: 'How to: Create report renderers for PerformancePoint Services'
+          href: general-development/how-to-create-report-renderers-for-performancepoint-services-in-sharepoint.md
+        - name: 'How to: Create report editors for PerformancePoint Services'
+          href: general-development/how-to-create-report-editors-for-performancepoint-services-in-sharepoint.md
+        - name: 'How to: Create filter data providers for PerformancePoint Services'
+          href: general-development/how-to-create-filter-data-providers-for-performancepoint-services-in-sharepoint.md
+        - name: 'How to: Create filter editors for PerformancePoint Services'
+          href: general-development/how-to-create-filter-editors-for-performancepoint-services-in-sharepoint.md
+        - name: 'How to: Create tabular data source providers for PerformancePoint Services'
+          href: general-development/how-to-create-tabular-data-source-providers-for-performancepoint-services-in-sha.md
+        - name: 'How to: Create tabular data source editors#for PerformancePoint Services'
+          href: general-development/how-to-create-tabular-data-source-editors-for-performancepoint-services-in-share.md
+        - name: 'How to: Create scorecard transforms for PerformancePoint Services'
+          href: general-development/how-to-create-scorecard-transforms-for-performancepoint-services-in-sharepoint-2.md
+      - name: PowerPoint Automation Services in SharePoint
+        href: general-development/powerpoint-automation-services-in-sharepoint.md
+      - name: Develop Access web apps
+        href: general-development/develop-access-web-apps.md
+        items:
+        - name: What's new in Access
+          href: general-development/what-s-new-in-access.md
+      - name: Visio Services in SharePoint
+        href: general-development/visio-services-in-sharepoint.md
+      - name: What's new in Word Automation Services for developers
+        href: general-development/what-s-new-in-word-automation-services-for-developers.md
+      - name: Extend the fixed-format export feature in Word Automation Services
+        href: general-development/extend-the-fixed-format-export-feature-in-word-automation-services.md
+    - name: Authentication, authorization, and security in SharePoint
+      href: general-development/authentication-authorization-and-security-in-sharepoint.md
+      items:
+      - name: Authorization, users, groups, and the object model in SharePoint
+        href: general-development/authorization-users-groups-and-the-object-model-in-sharepoint.md
+      - name: Role, inheritance, elevation of privilege, and password changes in SharePoint
+        href: general-development/role-inheritance-elevation-of-privilege-and-password-changes-in-sharepoint.md
+      - name: Claims-based identity in SharePoint
+        href: general-development/claims-based-identity-in-sharepoint.md
+        items:
+        - name: 'Incoming claims: Signing into SharePoint'
+          href: general-development/incoming-claims-signing-into-sharepoint.md
+        - name: Claims provider in SharePoint
+          href: general-development/claims-provider-in-sharepoint.md
+        - name: 'How to: Create a claims provider in SharePoint'
+          href: general-development/how-to-create-a-claims-provider-in-sharepoint.md
+        - name: 'How to: Deploy a claims provider in SharePoint'
+          href: general-development/how-to-deploy-a-claims-provider-in-sharepoint.md
+      - name: Claims-based identity and concepts in SharePoint
+        href: general-development/claims-based-identity-and-concepts-in-sharepoint.md
+        items:
+        - name: Sample delegation, federation, and authentication scenario in SharePoint
+          href: general-development/sample-delegation-federation-and-authentication-scenario-in-sharepoint.md
+        - name: Claims-based identity term definitions
+          href: general-development/claims-based-identity-term-definitions.md
+      - name: Configuration, administration, and resources in SharePoint
+        href: general-development/configuration-administration-and-resources-in-sharepoint.md
+    - name: eDiscovery
+      href: general-development/ediscovery-in-sharepoint.md
+      items:
+      - name: What's new in SharePoint eDiscovery and compliance
+        href: general-development/what-s-new-in-sharepoint-ediscovery-and-compliance.md
+    - name: CMIS in SharePoint
+      href: general-development/content-management-interoperability-services-cmis-in-sharepoint.md
+    - name: The XLIFF interchange file format in SharePoint
+      href: general-development/the-xliff-interchange-file-format-in-sharepoint.md
+  - name: Create SharePoint no-code solutions
+    href: general-development/create-sharepoint-no-code-solutions.md
+    items:
+    - name: SharePoint Composites Handbook
+      href: general-development/sharepoint-composites-handbook.md
+    - name: Save, download, and upload a SharePoint site as a template
+      href: general-development/save-download-and-upload-a-sharepoint-site-as-a-template.md
+  - name: Upgrade site customizations
+    href: general-development/upgrade-site-customizations-for-sharepoint.md
+    items:
+    - name: Upgrade web templates
+      href: general-development/upgrade-web-templates-for-sharepoint.md
+    - name: Use Feature upgrade to apply new SharePoint master pages when upgrading from SharePoint 2010
+      href: general-development/use-feature-upgrade-to-apply-new-sharepoint-master-pages-when-upgrading-fro.md
+  - name: Set up a general development environment for SharePoint
+    href: general-development/set-up-a-general-development-environment-for-sharepoint.md
+  - name: How-tos for SharePoint
+    href: general-development/how-tos-for-sharepoint.md
+  - name: Code samples for SharePoint
+    href: general-development/code-samples-for-sharepoint.md
+  - name: Choose the right API set in SharePoint
+    href: general-development/choose-the-right-api-set-in-sharepoint.md
+  - name: Set up and configure SharePoint Workflow Manager
+    href: general-development/set-up-and-configure-sharepoint-workflow-manager.md
+  - name: SharePoint Server Application Lifecycle Management
+    href: general-development/sharepoint-server-application-lifecycle-management.md
+  - name: Accessibility in SharePoint
+    href: general-development/accessibility-in-sharepoint.md
+  - name: 'How to: Detect the installed SKU of SharePoint'
+    href: general-development/how-to-detect-the-installed-sku-of-sharepoint.md
+  - name: 'How to: Avoid getting throttled or blocked in SharePoint Online'
+    href: general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md
+  - name: Overview of SharePoint and the Volume Shadow Copy Service
+    href: general-development/overview-of-sharepoint-and-the-volume-shadow-copy-service.md
+    items:
+    - name: SharePoint VSS Writer
+      href: general-development/sharepoint-vss-writer.md
+    - name: VSS requestors and SharePoint
+      href: general-development/vss-requestors-and-sharepoint.md
+    - name: 'How to: Create a VSS requestor for use with SharePoint'
+      href: general-development/how-to-create-a-vss-requestor-for-use-with-sharepoint.md
+    - name: 'How to: Back up and restore SharePoint using a VSS requestor'
+      href: general-development/how-to-back-up-and-restore-sharepoint-using-a-vss-requestor.md
+    - name: 'How to: Back up and restore a search service application in SharePoint using VSS'
+      href: general-development/how-to-back-up-and-restore-a-search-service-application-in-sharepoint-using.md
+- name: SharePoint Add-ins
+  href: sp-add-ins/sharepoint-add-ins.md
+  items:
+  - name: New name for apps for SharePoint
+    href: sp-add-ins/new-name-for-apps-for-sharepoint.md
+  - name: Get started creating SharePoint-hosted SharePoint Add-ins
+    href: sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins.md
+    items:
+    - name: 1. Deploy and install a SharePoint-hosted SharePoint Add-in
+      href: sp-add-ins/deploy-and-install-a-sharepoint-hosted-sharepoint-add-in.md
+    - name: 2. Add custom columns to a SharePoint-hosted SharePoint Add-in
+      href: sp-add-ins/add-custom-columns-to-a-sharepoint-hosted-sharepoint-add-in.md
+    - name: 3. Add a custom content type to a SharePoint-hosted SharePoint Add-in
+      href: sp-add-ins/add-a-custom-content-type-to-a-sharepoint-hosted-sharepoint-add-in.md
+    - name: 4. Add a Web Part to a page in a SharePoint-hosted SharePoint Add-in
+      href: sp-add-ins/add-a-web-part-to-a-page-in-a-sharepoint-hosted-sharepoint-add-in.md
+    - name: 5. Add a workflow to a SharePoint-hosted SharePoint Add-in
+      href: sp-add-ins/add-a-workflow-to-a-sharepoint-hosted-sharepoint-add-in.md
+    - name: 6. Add a custom page and style to a SharePoint-hosted SharePoint Add-in
+      href: sp-add-ins/add-a-custom-page-and-style-to-a-sharepoint-hosted-sharepoint-add-in.md
+    - name: 7. Add custom client-side rendering to a SharePoint-hosted SharePoint Add-in
+      href: sp-add-ins/add-custom-client-side-rendering-to-a-sharepoint-hosted-sharepoint-add-in.md
+    - name: 8. Create a custom ribbon button in the host web of a SharePoint Add-in
+      href: sp-add-ins/create-a-custom-ribbon-button-in-the-host-web-of-a-sharepoint-add-in.md
+    - name: 9. Use the SharePoint JavaScript APIs to work with SharePoint data
+      href: sp-add-ins/use-the-sharepoint-javascript-apis-to-work-with-sharepoint-data.md
+    - name: 10. Work with host web data from JavaScript in the add-in web
+      href: sp-add-ins/work-with-host-web-data-from-javascript-in-the-add-in-web.md
+  - name: Get started creating provider-hosted SharePoint Add-ins
+    href: sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins.md
+    items:
+    - name: 1. Give your provider-hosted add-in the SharePoint look-and-feel
+      href: sp-add-ins/give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md
+    - name: 2. Include a custom button in the provider-hosted add-in
+      href: sp-add-ins/include-a-custom-button-in-the-provider-hosted-add-in.md
+    - name: 3. Get a quick overview of the SharePoint object model
+      href: sp-add-ins/get-a-quick-overview-of-the-sharepoint-object-model.md
+    - name: 4. Add SharePoint write operations to the provider-hosted add-in
+      href: sp-add-ins/add-sharepoint-write-operations-to-the-provider-hosted-add-in.md
+    - name: 5. Include an add-in part in the provider-hosted add-in
+      href: sp-add-ins/include-an-add-in-part-in-the-provider-hosted-add-in.md
+    - name: 6. Handle add-in events in the provider-hosted add-in
+      href: sp-add-ins/handle-add-in-events-in-the-provider-hosted-add-in.md
+    - name: 7. Add first-run logic to the provider-hosted add-in
+      href: sp-add-ins/add-first-run-logic-to-the-provider-hosted-add-in.md
+    - name: 8. Programmatically deploy a custom button in the provider-hosted add-in
+      href: sp-add-ins/programmatically-deploy-a-custom-button-in-the-provider-hosted-add-in.md
+    - name: 9. Handle list item events in the provider-hosted add-in
+      href: sp-add-ins/handle-list-item-events-in-the-provider-hosted-add-in.md
+  - name: Design
+    href: sp-add-ins/design-sharepoint-add-ins.md
+    items:
+    - name: Three ways to think about design options for SharePoint Add-ins
+      href: sp-add-ins/three-ways-to-think-about-design-options-for-sharepoint-add-ins.md
+    - name: Important aspects of the SharePoint Add-in architecture and development landscape
+      href: sp-add-ins/important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md
+      items:
+      - name: Choose patterns for developing and hosting your SharePoint Add-in
+        href: sp-add-ins/choose-patterns-for-developing-and-hosting-your-sharepoint-add-in.md
+      - name: Host webs, add-in webs, and SharePoint components
+        href: sp-add-ins/host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md
+    - name: Secure data access and client object models for SharePoint Add-ins
+      href: sp-add-ins/secure-data-access-and-client-object-models-for-sharepoint-add-ins.md
+    - name: UX design for SharePoint Add-ins
+      href: sp-add-ins/ux-design-for-sharepoint-add-ins.md
+      items:
+      - name: SharePoint Add-ins UX design guidelines
+        href: sp-add-ins/sharepoint-add-ins-ux-design-guidelines.md
+  - name: Develop
+    href: sp-add-ins/develop-sharepoint-add-ins.md
+    items:
+    - name: Explore the app manifest structure and the package of a SharePoint Add-in
+      href: sp-add-ins/explore-the-app-manifest-structure-and-the-package-of-a-sharepoint-add-in.md
+      items:
+      - name: URL strings and tokens in SharePoint Add-ins
+        href: sp-add-ins/url-strings-and-tokens-in-sharepoint-add-ins.md
+    - name: SharePoint .NET Server, CSOM, JSOM, and REST API index
+      href: sp-add-ins/sharepoint-net-server-csom-jsom-and-rest-api-index.md
+    - name: Complete basic operations using SharePoint client library code
+      href: sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code.md
+    - name: Complete basic operations using JavaScript library code in SharePoint
+      href: sp-add-ins/complete-basic-operations-using-javascript-library-code-in-sharepoint.md
+    - name: Get to know the SharePoint REST service
+      href: sp-add-ins/get-to-know-the-sharepoint-rest-service.md
+      items:
+      - name: Complete basic operations using SharePoint REST endpoints
+        href: sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md
+      - name: Working with lists and list items with REST
+        href: sp-add-ins/working-with-lists-and-list-items-with-rest.md
+      - name: Working with folders and files with REST
+        href: sp-add-ins/working-with-folders-and-files-with-rest.md
+      - name: Determine SharePoint REST service endpoint URIs
+        href: sp-add-ins/determine-sharepoint-rest-service-endpoint-uris.md
+      - name: Use OData query operations in SharePoint REST requests
+        href: sp-add-ins/use-odata-query-operations-in-sharepoint-rest-requests.md
+      - name: Navigate the SharePoint data structure represented in the REST service
+        href: sp-add-ins/navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md
+      - name: Synchronize SharePoint items using the REST service
+        href: sp-add-ins/synchronize-sharepoint-items-using-the-rest-service.md
+      - name: Upload a file by using the REST API and jQuery
+        href: sp-add-ins/upload-a-file-by-using-the-rest-api-and-jquery.md
+      - name: Set custom permissions on a list by using the REST interface
+        href: sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-interface.md
+      - name: Make batch requests with the REST APIs
+        href: sp-add-ins/make-batch-requests-with-the-rest-apis.md
+    - name: Create UX components in SharePoint
+      href: sp-add-ins/create-ux-components-in-sharepoint.md
+      items:
+      - name: Use a SharePoint website's style sheet in add-ins
+        href: sp-add-ins/use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins.md
+      - name: Use the client chrome control in add-ins
+        href: sp-add-ins/use-the-client-chrome-control-in-sharepoint-add-ins.md
+      - name: Create add-in parts to install with your SharePoint Add-in
+        href: sp-add-ins/create-add-in-parts-to-install-with-your-sharepoint-add-in.md
+      - name: Create custom actions to deploy with SharePoint Add-ins
+        href: sp-add-ins/create-custom-actions-to-deploy-with-sharepoint-add-ins.md
+      - name: Customize a list view in SharePoint Add-ins using client-side rendering
+        href: sp-add-ins/customize-a-list-view-in-sharepoint-add-ins-using-client-side-rendering.md
+      - name: Use the client-side People Picker control in SharePoint-hosted SharePoint Add-ins
+        href: sp-add-ins/use-the-client-side-people-picker-control-in-sharepoint-hosted-sharepoint-add-in.md
+      - name: Highlight content and enhance the functionality of SharePoint-hosted SharePoint Add-ins with the callout control
+        href: sp-add-ins/highlight-content-and-enhance-the-functionality-of-sharepoint-hosted-sharepoint.md
+      - name: Include a Web Part in a webpage on the add-in web
+        href: sp-add-ins/include-a-web-part-in-a-webpage-on-the-add-in-web.md
+      - name: Office Web Widgets - Experimental overview
+        href: sp-add-ins/office-web-widgetsexperimental-overview.md
+        items:
+        - name: Use the experimental People Picker widget in SharePoint Add-ins
+          href: sp-add-ins/use-the-experimental-people-picker-widget-in-sharepoint-add-ins.md
+        - name: Use the experimental Desktop List View widget in SharePoint Add-ins
+          href: sp-add-ins/use-the-experimental-desktop-list-view-widget-in-sharepoint-add-ins.md
+        - name: Office Web Widgets - Experimental License Terms
+          href: sp-add-ins/office-web-widgetsexperimental-license-terms.md
+    - name: Work with external data in SharePoint
+      href: sp-add-ins/work-with-external-data-in-sharepoint.md
+      items:
+      - name: Create a custom proxy page for the cross-domain library
+        href: sp-add-ins/create-a-custom-proxy-page-for-the-cross-domain-library-in-sharepoint.md
+      - name: Query a remote service using the web proxy
+        href: sp-add-ins/query-a-remote-service-using-the-web-proxy-in-sharepoint.md
+    - name: Handle events in SharePoint Add-ins
+      href: sp-add-ins/handle-events-in-sharepoint-add-ins.md
+      items:
+      - name: Create a remote event receiver
+        href: sp-add-ins/create-a-remote-event-receiver-in-sharepoint-add-ins.md
+      - name: Create an add-in event receiver
+        href: sp-add-ins/create-an-add-in-event-receiver-in-sharepoint-add-ins.md
+      - name: Debug and troubleshoot a remote event receiver
+        href: sp-add-ins/debug-and-troubleshoot-a-remote-event-receiver-in-a-sharepoint-add-in.md
+    - name: Create a provider-hosted add-in that includes a custom SharePoint list and content type
+      href: sp-add-ins/create-a-provider-hosted-add-in-that-includes-a-custom-sharepoint-list-and-conte.md
+    - name: Get user identity and properties in SharePoint
+      href: sp-add-ins/get-user-identity-and-properties-in-sharepoint.md
+    - name: Localize SharePoint Add-ins
+      href: sp-add-ins/localize-sharepoint-add-ins.md
+    - name: Authorization and authentication of SharePoint Add-ins
+      href: sp-add-ins/authorization-and-authentication-of-sharepoint-add-ins.md
+      items:
+      - name: Add-in permissions in SharePoint
+        href: sp-add-ins/add-in-permissions-in-sharepoint.md
+      - name: Register SharePoint Add-ins
+        href: sp-add-ins/register-sharepoint-add-ins.md
+      - name: Add-in authorization policy types in SharePoint
+        href: sp-add-ins/add-in-authorization-policy-types-in-sharepoint.md
+      - name: Three authorization systems for SharePoint Add-ins
+        href: sp-add-ins/three-authorization-systems-for-sharepoint-add-ins.md
+        items:
+        - name: Creating SharePoint Add-ins that use low-trust authorization
+          href: sp-add-ins/creating-sharepoint-add-ins-that-use-low-trust-authorization.md
+          items:
+          - name: Context Token OAuth flow for SharePoint Add-ins
+            href: sp-add-ins/context-token-oauth-flow-for-sharepoint-add-ins.md
+          - name: Authorization Code OAuth flow for SharePoint Add-ins
+            href: sp-add-ins/authorization-code-oauth-flow-for-sharepoint-add-ins.md
+          - name: Handle security tokens in provider-hosted low-trust SharePoint Add-ins
+            href: sp-add-ins/handle-security-tokens-in-provider-hosted-low-trust-sharepoint-add-ins.md
+          - name: Use an Office 365 SharePoint site to authorize provider-hosted add-ins on an on-premises SharePoint site
+            href: sp-add-ins/use-an-office-365-sharepoint-site-to-authorize-provider-hosted-add-ins-on-an-on.md
+          - name: Replace an expiring client secret in a SharePoint Add-in
+            href: sp-add-ins/replace-an-expiring-client-secret-in-a-sharepoint-add-in.md
+        - name: Creating SharePoint Add-ins that use high-trust authorization
+          href: sp-add-ins/creating-sharepoint-add-ins-that-use-high-trust-authorization.md
+          items:
+          - name: Create high-trust add-ins
+            href: sp-add-ins/create-high-trust-sharepoint-add-ins.md
+          - name: Create and use access tokens in provider-hosted high-trust SharePoint Add-ins
+            href: sp-add-ins/create-and-use-access-tokens-in-provider-hosted-high-trust-sharepoint-add-ins.md
+          - name: Troubleshooting high-trust SharePoint Add-ins
+            href: sp-add-ins/troubleshooting-high-trust-sharepoint-add-ins.md
+          - name: Package and publish high-trust SharePoint Add-ins
+            href: sp-add-ins/package-and-publish-high-trust-sharepoint-add-ins.md
+            items:
+            - name: High-trust configuration scripts for SharePoint
+              href: sp-add-ins/high-trust-configuration-scripts-for-sharepoint.md
+        - name: Creating SharePoint Add-ins that use the cross-domain library
+          href: sp-add-ins/creating-sharepoint-add-ins-that-use-the-cross-domain-library.md
+          items:
+          - name: Access SharePoint data from add-ins using the cross-domain library
+            href: sp-add-ins/access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md
+          - name: Work with the cross-domain library across different Internet Explorer security zones in SharePoint Add-ins
+            href: sp-add-ins/work-with-the-cross-domain-library-across-different-internet-explorer-security-z.md
+    - name: Create SharePoint Add-ins that can be used by anonymous users
+      href: sp-add-ins/create-sharepoint-add-ins-that-can-be-used-by-anonymous-users.md
+    - name: Convert an autohosted SharePoint Add-in to a provider-hosted add-in
+      href: sp-add-ins/convert-an-autohosted-sharepoint-add-in-to-a-provider-hosted-add-in.md
+    - name: Create SharePoint Add-ins for the SAP Gateway for Microsoft
+      href: sp-add-ins/create-provider-hosted-sharepoint-add-ins-to-access-sap-data-by-using-the-sap-ga.md
+    - name: Create a SharePoint Add-in that contains a document template and a task pane add-in
+      href: sp-add-ins/create-a-sharepoint-add-in-that-contains-a-document-template-and-a-task-pane-add.md
+  - name: Publish
+    href: sp-add-ins/publish-sharepoint-add-ins.md
+    items:
+    - name: 'Deploying and installing SharePoint Add-ins: methods and options'
+      href: sp-add-ins/deploying-and-installing-sharepoint-add-ins-methods-and-options.md
+    - name: Tenancies and deployment scopes for SharePoint Add-ins
+      href: sp-add-ins/tenancies-and-deployment-scopes-for-sharepoint-add-ins.md
+    - name: SharePoint Add-ins update process
+      href: sp-add-ins/sharepoint-add-ins-update-process.md
+      items:
+      - name: Update SharePoint Add-ins
+        href: sp-add-ins/update-sharepoint-add-ins.md
+        items:
+        - name: Update add-in web components in SharePoint
+          href: sp-add-ins/update-add-in-web-components-in-sharepoint.md
+        - name: Update host web components in SharePoint
+          href: sp-add-ins/update-host-web-components-in-sharepoint.md
+        - name: Update remote components in SharePoint Add-ins
+          href: sp-add-ins/update-remote-components-in-sharepoint-add-ins.md
+        - name: Create a handler for the update event in SharePoint Add-ins
+          href: sp-add-ins/create-a-handler-for-the-update-event-in-sharepoint-add-ins.md
+    - name: Publish SharePoint Add-ins by using Visual Studio
+      href: sp-add-ins/publish-sharepoint-add-ins-by-using-visual-studio.md
+  - name: Tools
+    href: sp-add-ins/tools-and-environments-for-developing-sharepoint-add-ins.md
+    items:
+    - name: Set up a development environment for SharePoint Add-ins on Office 365
+      href: sp-add-ins/set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md
+    - name: Create a developer site on an existing Office 365 subscription
+      href: sp-add-ins/create-a-developer-site-on-an-existing-office-365-subscription.md
+    - name: Set up an on-premises development environment for add-ins
+      href: sp-add-ins/set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md
+    - name: Create SharePoint Add-ins in Visual Studio
+      href: sp-add-ins/create-sharepoint-add-ins-in-visual-studio.md
+    - name: What's new in Office Developer Tools for Visual Studio 2013
+      href: sp-add-ins/what-s-new-in-office-developer-tools-for-visual-studio.md
+  - name: Create cloud business add-ins
+    href: sp-add-ins/create-cloud-business-add-ins.md
+    items:
+    - name: Start
+      href: sp-add-ins/get-started-developing-cloud-business-add-ins.md
+      items:
+      - name: 'Incident manager: A cloud business add-in tutorial'
+        href: sp-add-ins/incident-manager-a-cloud-business-add-in-tutorial.md
+      - name: Create a cloud business add-in with a social newsfeed
+        href: sp-add-ins/create-a-cloud-business-add-in-with-a-social-newsfeed.md
+    - name: Develop
+      href: sp-add-ins/develop-cloud-business-add-ins.md
+      items:
+      - name: Create a cloud business add-in
+        href: sp-add-ins/create-a-cloud-business-add-in.md
+      - name: Associate a document library with an entity
+        href: sp-add-ins/associate-a-document-library-with-an-entity.md
+        items:
+        - name: Troubleshooting document libraries
+          href: sp-add-ins/troubleshooting-document-libraries.md
+      - name: Enable a newsfeed for a cloud business add-in
+        href: sp-add-ins/enable-a-newsfeed-for-a-cloud-business-add-in.md
+      - name: Provide a template for a document library in a cloud business add-in
+        href: sp-add-ins/provide-a-template-for-a-document-library-in-a-cloud-business-add-in.md
+      - name: Create a cloud business add-in that uses the SAP Gateway
+        href: sp-add-ins/create-a-cloud-business-add-in-that-uses-the-sap-gateway.md
+    - name: Publish
+      href: sp-add-ins/publish-cloud-business-add-ins.md
+      items:
+      - name: Publish a cloud business add-in to SharePoint
+        href: sp-add-ins/publish-a-cloud-business-add-in-to-sharepoint.md

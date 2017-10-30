@@ -1,6 +1,7 @@
 ---
 title: SharePoint Application Lifecycle Management
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: caaf9a09-2e6a-49e3-a8d6-aaf7f93a842a
 ---
 
@@ -36,7 +37,7 @@ Additionally, Microsoft advises customers to evaluate the technologies used when
   
     
     
-For more information about the new flexible development technologies for applications on SharePoint, see  [SharePoint development overview](sharepoint-development-overview).
+For more information about the new flexible development technologies for applications on SharePoint, see  [SharePoint development overview](sharepoint-development-overview.md).
   
     
     
@@ -89,7 +90,7 @@ The selection of a development environment should be made based on multiple fact
 
 
     
- [![The app development environment can include Office 365, Visual Studio, and virtual machines.](../../images/AppDevelopmentEnvironment.png)
+ [![The app development environment can include Office 365, Visual Studio, and virtual machines.](../images/AppDevelopmentEnvironment.png)
   
     
     
@@ -123,7 +124,7 @@ Figure 2 shows how developers can use Office 365 as a development environment an
   
     
     
- [![Build apps for SharePoint with Office 365, Visual Studio, and "Napa."](../../images/Office365AppDevelpment.png)
+ [![Build apps for SharePoint with Office 365, Visual Studio, and "Napa."](../images/Office365AppDevelpment.png)
   
     
     
@@ -181,7 +182,7 @@ For organizations or developers who choose not to use Office 365 developer sites
   
     
     
- [![Build apps for SharePoint in an on-premises deployment of SharePoint with the developer site template](../../images/OnPremDevSites.png)
+ [![Build apps for SharePoint in an on-premises deployment of SharePoint with the developer site template](../images/OnPremDevSites.png)
   
     
     
@@ -221,7 +222,7 @@ Figure 4 shows the types of applications that can be created using an on-premise
   
     
     
- [![Build apps for SharePoint in a virtual on-premises environment](../../images/AppDevelopmentVirtualEnvironment.png)
+ [![Build apps for SharePoint in a virtual on-premises environment](../images/AppDevelopmentVirtualEnvironment.png)
   
     
     
@@ -301,7 +302,7 @@ When planning build processes for SharePoint application development, developers
   
     
     
-![Visual Studio builds work with app manifests, pages, and supporting files.](../../images/AppDevelopmentClientBuildComponents.png)
+![Visual Studio builds work with app manifests, pages, and supporting files.](../images/AppDevelopmentClientBuildComponents.png)
   
     
     
@@ -319,7 +320,7 @@ The illustration in Figure 5 is a logical representation of a SharePoint applica
   
     
     
-![Provider-hosted apps contain both SharePoint app packages and cloud-hosted components.](../../images/ProviderHostedAppBuildComponents.png)
+![Provider-hosted apps contain both SharePoint app packages and cloud-hosted components.](../images/ProviderHostedAppBuildComponents.png)
   
     
     
@@ -337,7 +338,7 @@ Figure 6 shows a SharePoint cloud-hosted application (that is, autohosted or pro
   
     
     
-![TFS can be configured to conduct build and deployment activities with a SharePoint application through build definitions.](../../images/ALMWithTFS.png)
+![TFS can be configured to conduct build and deployment activities with a SharePoint application through build definitions.](../images/ALMWithTFS.png)
   
     
     
@@ -355,7 +356,7 @@ Figure 7 shows TFS as the ALM platform. Teams will use TFS to store code and con
   
     
     
-![Scripts executed by a TFS build definition will deploy the SharePoint application components to SharePoint Online and on-premises SharePoint.](../../images/TFSBuildTargets.png)
+![Scripts executed by a TFS build definition will deploy the SharePoint application components to SharePoint Online and on-premises SharePoint.](../images/TFSBuildTargets.png)
   
     
     
@@ -397,7 +398,7 @@ Figure 9 shows a standard process for SharePoint application builds and deployme
   
     
     
- [![TFS build services execute the steps defined by the SharePoint application build definition.](../../images/ALMBuildDeployProcess.png)
+ [![TFS build services execute the steps defined by the SharePoint application build definition.](../images/ALMBuildDeployProcess.png)
   
     
     
@@ -428,7 +429,7 @@ Note that for cloud-hosted (auto and provider) applications, developers can depl
   
     
     
- [![As developers make changes to the solution that represents the SharePoint application, there may be circumstances where changes are made to the projects within the solution that do not apply to the SharePoint application project itself.](../../images/ALMChangeManagement.png)
+ [![As developers make changes to the solution that represents the SharePoint application, there may be circumstances where changes are made to the projects within the solution that do not apply to the SharePoint application project itself.](../images/ALMChangeManagement.png)
   
     
     
@@ -459,7 +460,7 @@ Figure 11 shows the types of testing approaches that are best used with SharePoi
   
     
     
- [![Coded UI tests should be leveraged against SharePoint-hosted applications where the business logic and the user experience reside in the same layer.](../../images/ALMTestingTypes.png)
+ [![Coded UI tests should be leveraged against SharePoint-hosted applications where the business logic and the user experience reside in the same layer.](../images/ALMTestingTypes.png)
   
    
     
@@ -534,7 +535,7 @@ Developer testing can occur in the environment where the developers are creating
   
     
     
- [![Developers will execute tests from Visual Studio against the solution components deployed in their own Office 365 or on-premises developer site.](../../images/ALMDeveloperTesting.png)
+ [![Developers will execute tests from Visual Studio against the solution components deployed in their own Office 365 or on-premises developer site.](../images/ALMDeveloperTesting.png)
   
     
     
@@ -565,7 +566,7 @@ In order to test the application, all of the development components should be as
   
     
     
- [![TFS will build and deploy the SharePoint application and any required components to the target environments.](../../images/ALMIntegrationTesting.png)
+ [![TFS will build and deploy the SharePoint application and any required components to the target environments.](../images/ALMIntegrationTesting.png)
   
     
     
@@ -587,7 +588,7 @@ For user acceptance testing (UAT), organizations often have separate environment
   
     
     
- [![Users assigned to conduct acceptance testing or organizational testing resources conduct test scripts in a stable environment that is focused on a well-publicized build version of the application.](../../images/ALMUATTesting.png)
+ [![Users assigned to conduct acceptance testing or organizational testing resources conduct test scripts in a stable environment that is focused on a well-publicized build version of the application.](../images/ALMUATTesting.png)
   
     
     
@@ -606,7 +607,7 @@ For cloud-hosted infrastructure, deployment into a Microsoft Azure subscription 
   
     
     
- [![Deployment into a Microsoft Azure subscription that is shared with the integration/systems test environment is possible if the services are named and configured to be deployed side by side as different services or databases.](../../images/ALMIntegrationandUAT.png)
+ [![Deployment into a Microsoft Azure subscription that is shared with the integration/systems test environment is possible if the services are named and configured to be deployed side by side as different services or databases.](../images/ALMIntegrationandUAT.png)
   
    
     
@@ -625,7 +626,7 @@ The code promotion process between the development and testing environments as w
   
     
     
- [![Following a check-in to TFS, an automated build procedure will compile and deploy the solution to the target environment where build verification tests will be executed as part of the build definition in TFS.](../../images/ALMCodePromotion.png)
+ [![Following a check-in to TFS, an automated build procedure will compile and deploy the solution to the target environment where build verification tests will be executed as part of the build definition in TFS.](../images/ALMCodePromotion.png)
   
    
     
@@ -672,7 +673,7 @@ The information in  [SharePoint Add-ins update process](http://msdn.microsoft.co
 -  [Use an Office 365 SharePoint site to authorize provider-hosted add-ins on an on-premises SharePoint site](http://msdn.microsoft.com/library/2f65ba3f-b246-4064-b4fb-ad18399d387a%28Office.15%29.aspx)
     
   
--  [SharePoint development overview](sharepoint-development-overview)
+-  [SharePoint development overview](sharepoint-development-overview.md)
     
   
 -  [What is the Open Data Protocol?](http://www.odata.org/)

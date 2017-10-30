@@ -1,6 +1,7 @@
 ---
 title: How to Configure item-level security in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: ffd730f2-e7b7-4707-b677-d073da7df7d7
 ---
 
@@ -190,13 +191,13 @@ unchecked((int)0xffffffffL), InheritanceFlags.None, PropagationFlags.None);
 <a name="SP15Itemlevelsec_addlresources"> </a>
 
 
--  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint)
+-  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint.md)
     
   
 -  [Implementing a BinarySecurityDescriptorAccessor](http://msdn.microsoft.com/library/6cf70490-dd3c-49cd-bb13-ed33e938435d%28Office.15%29.aspx)
     
   
--  [Enhancing the BDC model file for Search in SharePoint](enhancing-the-bdc-model-file-for-search-in-sharepoint)
+-  [Enhancing the BDC model file for Search in SharePoint](enhancing-the-bdc-model-file-for-search-in-sharepoint.md)
     
   
 

@@ -1,9 +1,17 @@
+---
+title: Set custom permissions on a list by using the REST interface
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Set custom permissions on a list by using the REST interface
 Learn how to define custom, fine-grained permissions on a SharePoint list by using the REST interface and JavaScript.
 
 SharePoint sites, lists, and list items are types of  **SecurableObject**. By default, a securable object inherits the permissions of its parent. To set custom permissions for an object, you need to break its inheritance so that it stops inheriting permissions from its parent, and then define new permissions by adding or removing role assignments.
  
- **Note**  See  [Additional resources](set-custom-permissions-on-a-list-by-using-the-rest-interface.md#bk_addresources) for links to articles about setting fine-grained permissions.
+> [!Note]
+> See [Additional resources](set-custom-permissions-on-a-list-by-using-the-rest-interface.md#bk_addresources) for links to articles about setting fine-grained permissions.
  
 The code example in this article sets custom permissions on a list, and then changes a group's permissions to it. The example uses the REST interface to:
  
@@ -32,7 +40,7 @@ You'll also need to set  **Full Control** add-in permissions at the **Web** scop
 
 The following examples represent the contents of the App.js file in a SharePoint-hosted add-in. The first example uses the JavaScript cross-domain library to build and send HTTP requests. The second example uses jQuery AJAX requests.
  
-Before you run the code, replace the placeholder values with actual values. If you're using a different language or environment, you'll need to add or change some request components. See  [How REST requests differ by environment](complete-basic-operations-using-sharepoint-2013-rest-endpoints.md#bk_HowRequestsDiffer) for more information.
+Before you run the code, replace the placeholder values with actual values. If you're using a different language or environment, you'll need to add or change some request components. See  [How REST requests differ by environment](complete-basic-operations-using-sharepoint-rest-endpoints.md#bk_HowRequestsDiffer) for more information.
  
  **Example 1: Cross-domain library requests**
  

@@ -1,6 +1,7 @@
----
+﻿---
 title: SharePoint Design Manager design packages
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 85ad1993-4d75-4806-9097-b934865a899a
 ---
 
@@ -48,7 +49,7 @@ Figure 1 shows the option in Design Manager for naming and creating the design p
   
     
     
-![Exporting a design package](../../images/sp15Con_DesignPackageExp_Figure1.png)
+![Exporting a design package](../images/sp15Con_DesignPackageExp_Figure1.png)
   
     
     
@@ -59,7 +60,7 @@ Alternatively, you can import a design package from another SharePoint site coll
 
     
 > **Note:**
-> For more information about Design Manager and the publishing process, see  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint). 
+> For more information about Design Manager and the publishing process, see  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md). 
   
     
     
@@ -164,12 +165,12 @@ When importing a design package, an alternate CSS URL is not set, even if one wa
 <a name="addresources"> </a>
 
 
--  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
     
   
--  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint)
+-  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md)
     
   
--  [What's new with SharePoint site development](what-s-new-with-sharepoint-site-development)
+-  [What's new with SharePoint site development](what-s-new-with-sharepoint-site-development.md)
     
   

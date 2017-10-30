@@ -1,3 +1,8 @@
+---
+title: Trigger expressions syntax in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
 
 
 
@@ -242,10 +247,10 @@ There are two sets of constants that can be used with specific functions: **Date
 <a name="SP15triggerex_addresources"> </a>
 
 
--  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout)
+-  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout.md)
     
   
--  [How to: Use the Content Enrichment web service callout for SharePoint Server](how-to-use-the-content-enrichment-web-service-callout-for-sharepoint-server)
+-  [How to: Use the Content Enrichment web service callout for SharePoint Server](how-to-use-the-content-enrichment-web-service-callout-for-sharepoint-server.md)
     
   
 

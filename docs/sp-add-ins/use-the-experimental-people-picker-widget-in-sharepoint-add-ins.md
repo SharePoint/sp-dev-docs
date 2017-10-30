@@ -1,13 +1,19 @@
+﻿---
+title: Use the experimental People Picker widget in SharePoint Add-ins
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # Use the experimental People Picker widget in SharePoint Add-ins
 Learn how to use the People Picker widget on any web page, even if the page is not hosted in SharePoint. Use the People Picker widget in your add-ins to help users find and select people and groups.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 
- **Caution**  The Office Web Widgets - Experimental are only provided for research and feedback purposes. Do not use in production scenarios. The Office Web Widgets behavior may change significantly in future releases. Read and review the  [Office Web Widgets - Experimental License Terms](office-web-widgets--experimental-license-terms).
+ **Caution**  The Office Web Widgets - Experimental are only provided for research and feedback purposes. Do not use in production scenarios. The Office Web Widgets behavior may change significantly in future releases. Read and review the  [Office Web Widgets - Experimental License Terms](office-web-widgetsexperimental-license-terms.md).
  
 
 
@@ -20,7 +26,7 @@ You can use the experimental People Picker widget in add-ins to help your users 
  
 
  
-![People Picker experimental control on a page](../../images/PeoplePicker_basic.png)
+![People Picker experimental control on a page](../images/PeoplePicker_basic.png)
  
 
  
@@ -68,7 +74,7 @@ To use the examples in this article, you need the following:
 
 ## Use the People Picker widget in a provider-hosted SharePoint Add-in
 
-In this example, there is a simple page hosted outside of SharePoint that declares a People Picker widget using markup. To keep things simple, this example doesn't declare any options, but you can see an example with options in the  [NextSteps](use-the-experimental-people-picker-widget-in-sharepoint-add-ins#NextSteps) section.
+In this example, there is a simple page hosted outside of SharePoint that declares a People Picker widget using markup. To keep things simple, this example doesn't declare any options, but you can see an example with options in the  [NextSteps](use-the-experimental-people-picker-widget-in-sharepoint-add-ins.md#NextSteps) section.
  
 
  
@@ -264,7 +270,7 @@ Office.Controls.Runtime.initialize({});
 3. Choose the add-in icon on the  **Site Contents** page.
     
  
-You can also download this sample from code gallery, see the  [Use the People Picker experimental widget in an add-in](http://code.msdn.microsoft.com/SharePoint-2013-Use-the-57859f85) code sample.
+You can also download this sample from code gallery, see the  [Use the People Picker experimental widget in an add-in](http://code.msdn.microsoft.com/SharePoint-Use-the-57859f85) code sample.
  
 
  
@@ -300,7 +306,7 @@ new Office.Controls.PeoplePicker(
     document.getElementById("PeoplePickerDiv"), {});
 ```
 
-For a code sample that shows how to perform the tasks, see the  **JSSimple.html** page in the [Use the People Picker experimental widget in an add-in](http://code.msdn.microsoft.com/SharePoint-2013-Use-the-57859f85) code sample.
+For a code sample that shows how to perform the tasks, see the  **JSSimple.html** page in the [Use the People Picker experimental widget in an add-in](http://code.msdn.microsoft.com/SharePoint-Use-the-57859f85) code sample.
  
 
  
@@ -346,7 +352,7 @@ You can also specify event handlers for the  **onChange**, **onAdded**, and **on
  
 
  
-For an example of how to specify options, see the  **MarkupOptions.html** and **JSOptions.html** pages in the [Use the People Picker experimental widget in an add-in](http://code.msdn.microsoft.com/SharePoint-2013-Use-the-57859f85) code sample.
+For an example of how to specify options, see the  **MarkupOptions.html** and **JSOptions.html** pages in the [Use the People Picker experimental widget in an add-in](http://code.msdn.microsoft.com/SharePoint-Use-the-57859f85) code sample.
  
 
  
@@ -399,7 +405,7 @@ var principal = pplPicker.selectedItems[i];
 $("#msg").text(principal.text + " is selected in the control.");
 ```
 
-For an example of how to retrieve the selected people or groups from the widget, see the  **demo.html** page of the [Office Web Widgets - Experimental Demo](http://code.msdn.microsoft.com/SharePoint-2013-Office-Web-6d44aa9e) code sample.
+For an example of how to retrieve the selected people or groups from the widget, see the  **demo.html** page of the [Office Web Widgets - Experimental Demo](http://code.msdn.microsoft.com/SharePoint-Office-Web-6d44aa9e) code sample.
  
 
  
@@ -416,7 +422,7 @@ As a developer, you might want to customize the look &amp; feel of the widget. T
  
 
  
-![HTML hierarchy in the People Picker control](../../images/PeoplePicker_HTMLHierarchy.png)
+![HTML hierarchy in the People Picker control](../images/PeoplePicker_HTMLHierarchy.png)
  
 The widget defines many classes prefixed by  **office-peoplepicker**, which you can find and customize in the **Office.Controls.css** style sheet.
  
@@ -435,19 +441,19 @@ You can use the experimental People Picker widget to select people and groups in
 <a name="bk_addresources"> </a>
 
 
--  [Office Web Widgets - Experimental overview](office-web-widgets--experimental-overview)
+-  [Office Web Widgets - Experimental overview](office-web-widgetsexperimental-overview.md)
     
  
--  [Office Web Widgets - Experimental License Terms](office-web-widgets--experimental-license-terms)
+-  [Office Web Widgets - Experimental License Terms](office-web-widgetsexperimental-license-terms.md)
     
  
 -  [Office Web Widgets - Experimental NuGet gallery page](http://www.nuget.org/packages/Microsoft.Office.WebWidgets.Experimental/)
     
  
--  [Code sample: Use the People Picker experimental widget in an add-in](http://code.msdn.microsoft.com/SharePoint-2013-Use-the-57859f85).
+-  [Code sample: Use the People Picker experimental widget in an add-in](http://code.msdn.microsoft.com/SharePoint-Use-the-57859f85).
     
  
--  [Use the experimental Desktop List View widget in SharePoint Add-ins](use-the-experimental-desktop-list-view-widget-in-sharepoint-add-ins).
+-  [Use the experimental Desktop List View widget in SharePoint Add-ins](use-the-experimental-desktop-list-view-widget-in-sharepoint-add-ins.md).
     
  
 

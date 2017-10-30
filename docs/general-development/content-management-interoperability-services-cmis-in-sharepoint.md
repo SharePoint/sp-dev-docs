@@ -1,6 +1,7 @@
----
+﻿---
 title: Content Management Interoperability Services (CMIS) in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: a1def24c-b2db-4bf9-8d2c-02f5628832f8
 ---
 
@@ -34,7 +35,7 @@ Figure 1. CMIS 1.0 capabilities implemented in SharePoint.
   
     
     
-![CMIS capabilities in SharePoint](../../images/SP15_CMISCapabilities.jpg)
+![CMIS capabilities in SharePoint](../images/SP15_CMISCapabilities.jpg)
   
     
     
@@ -99,7 +100,7 @@ Figure 2. Examples of the CMIS document object-type and folder object-type
   
     
     
-![Examples of CMIS object-types in SharePoint](../../images/SP15_CMISObjectTypeExamples.png)
+![Examples of CMIS object-types in SharePoint](../images/SP15_CMISObjectTypeExamples.png)
   
     
     
@@ -289,7 +290,7 @@ CMIS 1.1 is not supported in SharePoint, but the newer version of the CMIS speci
 <a name="SP15CMIS_AdditionalResources"> </a>
 
 
--  [Add SharePoint capabilities](add-sharepoint-capabilities)
+-  [Add SharePoint capabilities](add-sharepoint-capabilities.md)
     
   
 -  [Manage blocked file types](http://technet.microsoft.com/en-us/library/cc262496.aspx)

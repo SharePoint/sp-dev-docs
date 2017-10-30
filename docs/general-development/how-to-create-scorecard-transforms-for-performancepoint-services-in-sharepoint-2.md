@@ -1,3 +1,9 @@
+---
+title: Create scorecard transforms for PerformancePoint Services in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # How to: Create scorecard transforms for PerformancePoint Services in SharePoint
 Learn how to create custom scorecard transforms for PerformancePoint Services in SharePoint.

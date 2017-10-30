@@ -1,6 +1,7 @@
 ---
 title: How to Retrieve user profile properties by using the JavaScript object model in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: c6e1ca38-134f-428a-8d21-b8b2615b161b
 ---
 
@@ -25,7 +26,7 @@ The  [PeopleManager](http://msdn.microsoft.com/library/985fd2df-0e31-6ece-b846-b
 - The  [getUserProfilePropertiesFor](http://msdn.microsoft.com/library/8674e96f-d320-4a50-1580-9a4568842ee5%28Office.15%29.aspx) method and the [getUserProfilePropertyFor](http://msdn.microsoft.com/library/da048bfa-54c6-8216-e8ef-09bd84f68d8d%28Office.15%29.aspx) method return the values of the user profile properties that you specify.
     
   
-User profile properties from client APIs are read-only (except the profile picture, which you can change by using the  [PeopleManager.setMyProfilePicture](http://msdn.microsoft.com/library/a4f8d745-f211-e750-4fd0-047091804683%28Office.15%29.aspx) method). If you want to change other user profile properties, you must use the server object model. For more information about working with user profiles, see [Work with user profiles in SharePoint](work-with-user-profiles-in-sharepoint).
+User profile properties from client APIs are read-only (except the profile picture, which you can change by using the  [PeopleManager.setMyProfilePicture](http://msdn.microsoft.com/library/a4f8d745-f211-e750-4fd0-047091804683%28Office.15%29.aspx) method). If you want to change other user profile properties, you must use the server object model. For more information about working with user profiles, see [Work with user profiles in SharePoint](work-with-user-profiles-in-sharepoint.md).
   
     
     
@@ -102,8 +103,8 @@ To create an application page that uses the JavaScript object model to retrieve 
 
 10. To add logic to retrieve user profile properties, replace the comment between the **script** tags with the code example from one of the following scenarios:
     
-  -  [Retrieve user profile properties from the PersonProperties object and its userProfileProperties property](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in#bk_examplePersonPropsObj)  
-  -  [Retrieve a set of user profile properties by using the getUserProfilePropertiesFor method](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in#bk_exampleGetUPMethod)
+  -  [Retrieve user profile properties from the PersonProperties object and its userProfileProperties property](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in.md#bk_examplePersonPropsObj)  
+  -  [Retrieve a set of user profile properties by using the getUserProfilePropertiesFor method](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in.md#bk_exampleGetUPMethod)
     
   
 11. To test the application page, on the menu bar, choose **Debug**, **Start Debugging**. If you're prompted to modify the web.config file, choose the **OK** button.
@@ -129,7 +130,7 @@ The following code example shows how to get user profile properties for a target
   
 
 > **Note:**
-> Paste the following code between the **script** tags that you added to the UserProfiles.aspx file in the [Create the application page](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in#bk_CreateAppPage) procedure. Replace the `domainName\\userName` placeholder value before you run the code. (This code example does not use the code-behind class file.)
+> Paste the following code between the **script** tags that you added to the UserProfiles.aspx file in the [Create the application page](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in.md#bk_CreateAppPage) procedure. Replace the `domainName\\userName` placeholder value before you run the code. (This code example does not use the code-behind class file.)
   
     
     
@@ -200,7 +201,7 @@ The following code example retrieves the values for a specified set of user prof
   
 
 > **Note:**
-> Paste the following code between the **script** tags that you added to the UserProfiles.aspx file in the [Create the application page](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in#bk_CreateAppPage) procedure. Replace the `domainName\\\\userName` placeholder value before you run the code. (This code example does not use the code-behind class file.)
+> Paste the following code between the **script** tags that you added to the UserProfiles.aspx file in the [Create the application page](how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in.md#bk_CreateAppPage) procedure. Replace the `domainName\\\\userName` placeholder value before you run the code. (This code example does not use the code-behind class file.)
   
     
     
@@ -262,13 +263,13 @@ function onRequestFail(sender, args) {
 <a name="bk_addresources"> </a>
 
 
--  [Work with user profiles in SharePoint](work-with-user-profiles-in-sharepoint)
+-  [Work with user profiles in SharePoint](work-with-user-profiles-in-sharepoint.md)
     
   
--  [How to: Retrieve user profile properties by using the .NET client object model in SharePoint](how-to-retrieve-user-profile-properties-by-using-the-net-client-object-model-in)
+-  [How to: Retrieve user profile properties by using the .NET client object model in SharePoint](how-to-retrieve-user-profile-properties-by-using-the-net-client-object-model-in.md)
     
   
--  [How to: Work with user profiles and organization profiles by using the server object model in SharePoint](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj)
+-  [How to: Work with user profiles and organization profiles by using the server object model in SharePoint](how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md)
     
   
 -  [SP.UserProfiles namespace (sp.userprofiles)](http://msdn.microsoft.com/library/8c1fcceb-cd9a-b25c-32f4-1cfb0578278c%28Office.15%29.aspx)

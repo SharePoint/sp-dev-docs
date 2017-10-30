@@ -1,9 +1,15 @@
+﻿---
+title: Publish SharePoint Add-ins
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # Publish SharePoint Add-ins
 Find articles and resources to help you publish your SharePoint Add-ins.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 
@@ -21,7 +27,7 @@ You've finished developing your SharePoint Add-in—the final step is making tha
 -  **An internal organization add-in catalog.** Publish your add-ins to an internal organization add-in catalog, hosted on your SharePoint deployment, to make them available to users with access to that SharePoint deployment.
     
  
-For information about how to package your add-in for publication by using Visual Studio 2012, see  [Publish SharePoint Add-ins by using Visual Studio](publish-sharepoint-add-ins-by-using-visual-studio).
+For information about how to package your add-in for publication by using Visual Studio 2012, see  [Publish SharePoint Add-ins by using Visual Studio](publish-sharepoint-add-ins-by-using-visual-studio.md).
  
 
  
@@ -100,13 +106,13 @@ The following table offers a comparison of publishing to the Office Store or to 
 -  [License your Office and SharePoint Add-ins](http://msdn.microsoft.com/library/license-your-office-and-sharepoint-add-ins%28Office.15%29.aspx)
     
  
--  [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options)
+-  [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options.md)
     
  
--  [Tenancies and deployment scopes for SharePoint Add-ins](tenancies-and-deployment-scopes-for-sharepoint-add-ins)
+-  [Tenancies and deployment scopes for SharePoint Add-ins](tenancies-and-deployment-scopes-for-sharepoint-add-ins.md)
     
  
--  [Publish SharePoint Add-ins by using Visual Studio](publish-sharepoint-add-ins-by-using-visual-studio)
+-  [Publish SharePoint Add-ins by using Visual Studio](publish-sharepoint-add-ins-by-using-visual-studio.md)
     
  
 -  [Publishing Office Add-ins Store](http://social.msdn.microsoft.com/Forums/en-US/officestore)

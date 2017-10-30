@@ -1,3 +1,10 @@
+---
+title: Migrate existing Script Editor Web Part customizations to the SharePoint Framework
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Migrate existing Script Editor Web Part customizations to the SharePoint Framework
 
 SharePoint Framework is a new model for building SharePoint customizations. If you have been building client-side SharePoint solutions using the Script Editor Web Part in the past, you might be wondering what the possible advantages are of migrating them to the new SharePoint Framework. This article highlights the different benefits of migrating existing client-side customizations to the new SharePoint Framework and points out a number of considerations that you should take into account when planning the migration.

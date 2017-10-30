@@ -1,3 +1,9 @@
+﻿---
+title: SharePoint Search REST API overview
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # SharePoint Search REST API overview
 Add search functionality to client and mobile applications using the Search REST service in SharePoint and any technology that supports REST web requests.
@@ -115,17 +121,14 @@ http:// _server_/_api/search/query?querytext='sharepoint'
     
     
  **Sample POST request**
-  
-    
-    
 
-
-
-```
-
+```JSON
 {
-'__metadata' : {'type' : 'Microsoft.Office.Server.Search.REST.SearchRequest'},
-'Querytext' : 'sharepoint'
+    'request': {
+         'Querytext': 'sharepoint',
+         'RowLimit':20, 
+         'ClientType':'ContentSearchRegular'
+         }
 }
 ```
 
@@ -530,7 +533,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;hiddenconstraints=
 {
 '__metadata':{'type':'Microsoft.Office.Server.Search.REST.SearchRequest'},
 'Querytext':'sharepoint',
-'HiddenConstraints'='developer'
+'HiddenConstraints':'developer'
 }
 ```
 
@@ -646,7 +649,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;trimduplicates=fal
 {
 '__metadata':{'type':'Microsoft.Office.Server.Search.REST.SearchRequest'},
 'Querytext':'sharepoint',
-'TrimDuplicates'='False'
+'TrimDuplicates':'False'
 }
 ```
 
@@ -678,7 +681,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;timeout=60000
 {
 '__metadata':{'type':'Microsoft.Office.Server.Search.REST.SearchRequest'},
 'Querytext':'sharepoint',
-'Timeout'='60000'
+'Timeout':'60000'
 }
 ```
 
@@ -714,7 +717,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;enablenicknames=tr
 {
 '__metadata':{'type':'Microsoft.Office.Server.Search.REST.SearchRequest'},
 'Querytext':'sharepoint',
-'EnableNicknames'='True'
+'EnableNicknames':'True'
 }
 ```
 
@@ -750,7 +753,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;enablephonetic=tru
 {
 '__metadata':{'type':'Microsoft.Office.Server.Search.REST.SearchRequest'},
 'Querytext':'sharepoint',
-'EnablePhonetic'='True'
+'EnablePhonetic':'True'
 }
 ```
 
@@ -1644,7 +1647,7 @@ When an anonymous Search REST query is submitted, the query object is constructe
 ## In this section
 <a name="bk_AnonymousREST"> </a>
 
--  [Retrieving query suggestions using the Search REST service](retrieving-query-suggestions-using-the-search-rest-service)
+-  [Retrieving query suggestions using the Search REST service](retrieving-query-suggestions-using-the-search-rest-service.md)
     
   
 
@@ -1652,13 +1655,13 @@ When an anonymous Search REST query is submitted, the query object is constructe
 <a name="bk_addresources"> </a>
 
 
--  [Search in SharePoint](search-in-sharepoint)
+-  [Search in SharePoint](search-in-sharepoint.md)
     
   
 -  [SharePoint: Using the search REST service from an app for SharePoint](http://code.msdn.microsoft.com/sharepoint/SharePoint-Perform-a-1bf3e87d)
     
   
--  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers)
+-  [What's new in SharePoint search for developers](what-s-new-in-sharepoint-search-for-developers.md)
     
   
 -  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)

@@ -1,3 +1,8 @@
+﻿---
+title: User segmentation in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
 
 
 
@@ -55,7 +60,7 @@ Figure 1 shows the basic steps to add user segmentation functionality to your Sh
   
     
     
-![Steps to add user segmentation functionality](../../images/SP15_User_Segmentation_with_ContentBySearchWebPart.jpg)
+![Steps to add user segmentation functionality](../images/SP15_User_Segmentation_with_ContentBySearchWebPart.jpg)
   
     
     

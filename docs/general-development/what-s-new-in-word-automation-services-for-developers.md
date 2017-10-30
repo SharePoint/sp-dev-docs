@@ -1,6 +1,7 @@
 ---
 title: What's new in Word Automation Services for developers
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 00d2cf8d-93b0-4aab-8e76-31a6bb2f0dcb
 ---
 
@@ -32,7 +33,7 @@ One way to think about the difference between on demand file conversion requests
   
     
     
-![Word Automation Services 2013 architecture](../../images/SPS15CON_WAS_Architecture.png)
+![Word Automation Services 2013 architecture](../images/SPS15CON_WAS_Architecture.png)
   
     
     

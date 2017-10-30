@@ -1,16 +1,21 @@
-# Build custom controls for the property pane
+---
+title: Build custom controls for the property pane
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
 
-> Note. This article has not yet been verified with SPFx GA version, so you might have challenges on making this work as such with the latest release.
+
+# Build custom controls for the property pane
 
 The SharePoint Framework contains a set of standard controls for the property pane. But sometimes you need additional functionality beyond the basic controls. You might need asynchronous updates to the data on a control, or a specific user interface. Build a custom control for the property pane to get the functionality you need.
 
 In this article you will learn how to build a custom control for the property pane. You will build a custom dropdown control that loads its data asynchronously from an external service without blocking the user interface of the web part.
 
-![Item dropdown loading available items after selecting a list in the list dropdown](../../../../images/custom-property-pane-control-cascading-loading-items.png)
+![Item dropdown loading available items after selecting a list in the list dropdown](../../../images/custom-property-pane-control-cascading-loading-items.png)
 
 The source of the working web part is available on GitHub at [https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/react-custompropertypanecontrols](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/react-custompropertypanecontrols).
 
-> **Note:** Before following the steps in this article, be sure to [set up your development environment](../../set-up-your-development-environment) for building SharePoint Framework solutions.
+> **Note:** Before following the steps in this article, be sure to [set up your development environment](../../set-up-your-development-environment.md) for building SharePoint Framework solutions.
 
 ## Create new project
 
@@ -40,11 +45,17 @@ When prompted, enter the following values:
 - **Shows list items from the selected list** as your web part description
 - **React** as the starting point to build the web part
 
-![SharePoint Framework Yeoman generator with the default choices](../../../../images/custom-property-pane-control-yeoman.png)
+![SharePoint Framework Yeoman generator with the default choices](../../../images/custom-property-pane-control-yeoman.png)
 
-Once the scaffolding completes, open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots but you can use any editor you prefer.
+Once the scaffolding completes, lock down the version of the project dependencies by running the following command:
 
-![SharePoint Framework project open in Visual Studio Code](../../../../images/custom-property-pane-control-visual-studio-code.png)
+```sh
+npm shrinkwrap
+```
+
+Next, open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots but you can use any editor you prefer.
+
+![SharePoint Framework project open in Visual Studio Code](../../../images/custom-property-pane-control-visual-studio-code.png)
 
 ## Define web part property for storing the selected list
 
@@ -52,7 +63,7 @@ The Web part you are building will show list items from the selected SharePoint 
 
 In the code editor open the **src/webparts/listItems/ListItemsWebPartManifest.json** file. Replace the default **description** property with a new property named `listName`.
 
-![Web part manifest with the 'listName' web part property highlighted](../../../../images/custom-property-pane-control-list-property-web-part-manifest.png)
+![Web part manifest with the 'listName' web part property highlighted](../../../images/custom-property-pane-control-list-property-web-part-manifest.png)
 
 Next, open the **src/webparts/listItems/IListItemsWebPartProps.ts** file and replace its contents with:
 
@@ -78,12 +89,12 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
 }
 ```
 
-Update the **propertyPaneSettings** getter to:
+Update the **getPropertyPaneConfiguration** method to:
 
 ```ts
 export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
   // ...
-  protected get propertyPaneSettings(): IPropertyPaneSettings {
+  protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {
       pages: [
         {
@@ -108,10 +119,10 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
 }
 ```
 
-In the **src/webparts/listItems/loc/mystrings.d.ts** file change the **IListItemsStrings** interface to:
+In the **src/webparts/listItems/loc/mystrings.d.ts** file change the **IListItemsWebPartStrings** interface to:
 
 ```ts
-declare interface IListItemsStrings {
+declare interface IListItemsWebPartStrings {
   PropertyPaneDescription: string;
   BasicGroupName: string;
   ListFieldLabel: string;
@@ -134,26 +145,17 @@ In the **src/webparts/listItems/components/ListItems.tsx** file change the conte
 
 ```tsx
 export default class ListItems extends React.Component<IListItemsProps, {}> {
-  public render(): JSX.Element {
+  public render(): React.ReactElement<IListItemsProps> {
     return (
       <div className={styles.listItems}>
         <div className={styles.container}>
-          <div className={css('ms-Grid-row ms-bgColor-themeDark ms-fontColor-white', styles.row)}>
-            <div className='ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1'>
-              <span className='ms-font-xl ms-fontColor-white'>
-                Welcome to SharePoint!
-              </span>
-              <p className='ms-font-l ms-fontColor-white'>
-                Customize SharePoint experiences using web parts.
-              </p>
-              <p className='ms-font-l ms-fontColor-white'>
-                {this.props.listName}
-              </p>
-              <a
-                className={css('ms-Button', styles.button)}
-                href='https://github.com/SharePoint/sp-dev-docs/wiki'
-              >
-                <span className='ms-Button-label'>Learn more</span>
+          <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
+            <div className="ms-Grid-col ms-lg10 ms-xl8 ms-xlPush2 ms-lgPush1">
+              <span className="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
+              <p className="ms-font-l ms-fontColor-white">Customize SharePoint experiences using Web Parts.</p>
+              <p className="ms-font-l ms-fontColor-white">{escape(this.props.listName)}</p>
+              <a href="https://aka.ms/spfx" className={styles.button}>
+                <span className={styles.label}>Learn more</span>
               </a>
             </div>
           </div>
@@ -161,6 +163,14 @@ export default class ListItems extends React.Component<IListItemsProps, {}> {
       </div>
     );
   }
+}
+```
+
+Next, open the **src/webparts/listItems/components/IListItemsProps.ts** file and replace its contents with:
+
+```ts
+export interface IListItemsProps {
+  listName: string;
 }
 ```
 
@@ -172,7 +182,7 @@ gulp serve
 
 In the web browser, add the **List items** web part to the canvas and open its properties. Verify that the value set for the **List** property is displayed in the web part body.
 
-![Web part showing the value of the 'listName' property](../../../../images/custom-property-pane-control-web-part-first-run.png)
+![Web part showing the value of the 'listName' property](../../../images/custom-property-pane-control-web-part-first-run.png)
 
 ## Create asynchronous dropdown property pane control
 
@@ -198,14 +208,14 @@ When creating a custom property pane control that uses React in the SharePoint F
 
 In the project **src** folder, create a hierarchy of three new folders so that your folder structure appears as **src/controls/PropertyPaneAsyncDropdown/components**.
 
-![Components folder highlighted in Visual Studio Code](../../../../images/custom-property-pane-control-components-folder.png)
+![Components folder highlighted in Visual Studio Code](../../../images/custom-property-pane-control-components-folder.png)
 
 #### Define asynchronous dropdown React component properties
 
 In the **src/controls/PropertyPaneAsyncDropdown/components** folder create a new file named **IAsyncDropdownProps.ts** and enter the following code:
 
 ```ts
-import { IDropdownOption } from 'office-ui-fabric-react';
+import { IDropdownOption } from 'office-ui-fabric-react/lib/components/Dropdown';
 
 export interface IAsyncDropdownProps {
   label: string;
@@ -219,12 +229,12 @@ export interface IAsyncDropdownProps {
 
 The **IAsyncDropdownProps** class defines properties that can be set on the React component used by the custom property pane control. The **label** property specifies the label for the dropdown control. The function associated with the **loadOptions** delegate is called by the control to load the available options. The function associated with the **onChanged** delegate is called after the user selected an option in the dropdown. The **selectedKey** property specifies the selected value which can be a string or a number. The **disabled** property specifies if the dropdown control is disabled or not. The **stateKey** property is used to force the React component to re-render.
 
-#### Define asynchronous dropdown React component stateKey
+#### Define asynchronous dropdown React component interface
 
 In the **src/controls/PropertyPaneAsyncDropdown/components** folder create new file named **IAsyncDropdownState.ts** and enter the following code:
 
 ```ts
-import { IDropdownOption } from 'office-ui-fabric-react';
+import { IDropdownOption } from 'office-ui-fabric-react/lib/components/Dropdown';
 
 export interface IAsyncDropdownState {
   loading: boolean;
@@ -241,14 +251,17 @@ In the **src/controls/PropertyPaneAsyncDropdown/components** folder create a new
 
 ```tsx
 import * as React from 'react';
-import { Dropdown, Spinner } from 'office-ui-fabric-react';
+import { Dropdown, IDropdownOption } from 'office-ui-fabric-react/lib/components/Dropdown';
+import { Spinner } from 'office-ui-fabric-react/lib/components/Spinner';
 import { IAsyncDropdownProps } from './IAsyncDropdownProps';
 import { IAsyncDropdownState } from './IAsyncDropdownState';
-import { IDropdownOption } from 'office-ui-fabric-react';
 
 export default class AsyncDropdown extends React.Component<IAsyncDropdownProps, IAsyncDropdownState> {
+  private selectedKey: React.ReactText;
+
   constructor(props: IAsyncDropdownProps, state: IAsyncDropdownState) {
     super(props);
+    this.selectedKey = props.selectedKey;
 
     this.state = {
       loading: false,
@@ -298,14 +311,32 @@ export default class AsyncDropdown extends React.Component<IAsyncDropdownProps, 
     return (
       <div>
         <Dropdown label={this.props.label}
-          isDisabled={this.props.disabled || this.state.loading || this.state.error !== undefined}
-          onChanged={this.props.onChanged}
-          selectedKey={this.props.selectedKey}
+          disabled={this.props.disabled || this.state.loading || this.state.error !== undefined}
+          onChanged={this.onChanged.bind(this)}
+          selectedKey={this.selectedKey}
           options={this.state.options} />
         {loading}
         {error}
       </div>
     );
+  }
+
+  private onChanged(option: IDropdownOption, index?: number): void {
+    this.selectedKey = option.key;
+    // reset previously selected options
+    const options: IDropdownOption[] = this.state.options;
+    options.forEach((o: IDropdownOption): void => {
+      if (o.key !== option.key) {
+        o.selected = false;
+      }
+    });
+    this.setState((prevState: IAsyncDropdownState, props: IAsyncDropdownProps): IAsyncDropdownState => {
+      prevState.options = options;
+      return prevState;
+    });
+    if (this.props.onChanged) {
+      this.props.onChanged(option, index);
+    }
   }
 }
 ```
@@ -327,7 +358,7 @@ The second set of properties are private properties used internally inside the c
 In the **src/controls/PropertyPaneAsyncDropdown** folder create a new file named **IPropertyPaneAsyncDropdownProps.ts** and enter the following code:
 
 ```ts
-import { IDropdownOption } from 'office-ui-fabric-react';
+import { IDropdownOption } from 'office-ui-fabric-react/lib/components/Dropdown';
 
 export interface IPropertyPaneAsyncDropdownProps {
   label: string;
@@ -365,7 +396,7 @@ import {
   IPropertyPaneField,
   PropertyPaneFieldType
 } from '@microsoft/sp-webpart-base';
-import { IDropdownOption } from 'office-ui-fabric-react';
+import { IDropdownOption } from 'office-ui-fabric-react/lib/components/Dropdown';
 import { IPropertyPaneAsyncDropdownProps } from './IPropertyPaneAsyncDropdownProps';
 import { IPropertyPaneAsyncDropdownInternalProps } from './IPropertyPaneAsyncDropdownInternalProps';
 import AsyncDropdown from './components/AsyncDropdown';
@@ -380,6 +411,7 @@ export class PropertyPaneAsyncDropdown implements IPropertyPaneField<IPropertyPa
   constructor(targetProperty: string, properties: IPropertyPaneAsyncDropdownProps) {
     this.targetProperty = targetProperty;
     this.properties = {
+      key: properties.label,
       label: properties.label,
       loadOptions: properties.loadOptions,
       onPropertyChange: properties.onPropertyChange,
@@ -422,9 +454,9 @@ export class PropertyPaneAsyncDropdown implements IPropertyPaneField<IPropertyPa
 
 The **PropertyPaneAsyncDropdown** class implements the standard SharePoint Framework **IPropertyPaneField** interface using the **IPropertyPaneAsyncDropdownProps** interface as a contract for its public properties that can be set from inside the web part. The class contains the following three public properties defined by the **IPropertyPaneField** interface:
 
- * **type**: Must be set to **PropertyPaneFieldType.Custom** for a custom property pane control.
- * **targetProperty**: Used to specify the name of the web part property to be used with the control.
- * **properties**: Used to define control-specific properties.
+- **type**: Must be set to **PropertyPaneFieldType.Custom** for a custom property pane control.
+- **targetProperty**: Used to specify the name of the web part property to be used with the control.
+- **properties**: Used to define control-specific properties.
 
 Notice how the **properties** property is of the internal **IPropertyPaneAsyncDropdownInternalProps** type rather than the public **IPropertyPaneAsyncDropdownProps** interface implemented by the class. This is on purpose so that the **properties** property can define the **onRender** method required by the SharePoint Framework. If the **onRender** method was a part of the public **IPropertyPaneAsyncDropdownProps** interface then, when using the asynchronous dropdown control in the web part, you would be required to assign a value to it inside the web part, which isn't desirable.
 
@@ -458,11 +490,11 @@ import { PropertyPaneAsyncDropdown } from '../../controls/PropertyPaneAsyncDropd
 Then after that code, add a reference to the **IDropdownOption** interface and two helpers functions required to work with web part properties.
 
 ```ts
-import { IDropdownOption } from 'office-ui-fabric-react';
+import { IDropdownOption } from 'office-ui-fabric-react/lib/components/Dropdown';
 import { update, get } from '@microsoft/sp-lodash-subset';
 ```
 
-![References to the 'PropertyPaneAsyncDropdown' class and the 'IDropdownOption' interface highlighted in Visual Studio Code](../../../../images/custom-property-pane-control-web-part-imports.png)
+![References to the 'PropertyPaneAsyncDropdown' class and the 'IDropdownOption' interface highlighted in Visual Studio Code](../../../images/custom-property-pane-control-web-part-imports.png)
 
 #### Add method to load available lists
 
@@ -500,21 +532,21 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
     // store new value in web part properties
     update(this.properties, propertyPath, (): any => { return newValue; });
     // refresh web part
-    this.onPropertyPaneFieldChanged(propertyPath, oldValue, newValue);
+    this.render();
   }
 }
 ```
 
 After selecting a list in the list dropdown, the selected value should be persisted in web part properties and the web part should be re-rendered to reflect the selected property.
 
-#### Render the list web part property using the asynchronous dropdown property pane control 
+#### Render the list web part property using the asynchronous dropdown property pane control
 
-In the **ListItemsWebPart** class change the **propertyPaneSettings** getter to use the asynchronous dropdown property pane control to render the **listName** web part property.
+In the **ListItemsWebPart** class change the **getPropertyPaneConfiguration** method to use the asynchronous dropdown property pane control to render the **listName** web part property.
 
 ```ts
 export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
   // ...
-  protected get propertyPaneSettings(): IPropertyPaneSettings {
+  protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {
       pages: [
         {
@@ -548,9 +580,9 @@ At this point you should be able to select a list using the newly created asynch
 gulp serve
 ```
 
-![Asynchronous dropdown property pane control loading its options without blocking the web part user interface](../../../../images/custom-property-pane-control-loading-options.png)
+![Asynchronous dropdown property pane control loading its options without blocking the web part user interface](../../../images/custom-property-pane-control-loading-options.png)
 
-![Selecting one of the options in the asynchronous dropdown property pane control](../../../../images/custom-property-pane-control-selecting-option.png)
+![Selecting one of the options in the asynchronous dropdown property pane control](../../../images/custom-property-pane-control-selecting-option.png)
 
 ## Implement cascading dropdowns using the asynchronous dropdown property pane control
 
@@ -569,12 +601,21 @@ In the code editor open the **src/webparts/listItems/ListItemsWebPart.manifest.j
 // ...
 ```
 
-![Web part manifest with the 'item' web part property highlighted](../../../../images/custom-property-pane-control-item-property-web-part-manifest.png)
+![Web part manifest with the 'item' web part property highlighted](../../../images/custom-property-pane-control-item-property-web-part-manifest.png)
 
 Change the code in the **src/webparts/listItems/IListItemsWebPartProps.ts** file to:
 
 ```ts
 export interface IListItemsWebPartProps {
+  listName: string;
+  item: string;
+}
+```
+
+Change the contents of the **src/webparts/listItems/components/IListItemsProps.ts** file to:
+
+```ts
+export interface IListItemsProps {
   listName: string;
   item: string;
 }
@@ -597,10 +638,10 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
 }
 ```
 
-In the **src/webparts/listItems/loc/mystrings.d.ts** file change the **IListItemsStrings** interface to
+In the **src/webparts/listItems/loc/mystrings.d.ts** file change the **IListItemsWebPartStrings** interface to
 
 ```ts
-declare interface IListItemsStrings {
+declare interface IListItemsWebPartStrings {
   PropertyPaneDescription: string;
   BasicGroupName: string;
   ListFieldLabel: string;
@@ -627,29 +668,18 @@ In the **src/webparts/listItems/components/ListItems.tsx** file change the **ren
 
 ```tsx
 export default class ListItems extends React.Component<IListItemsProps, {}> {
-  public render(): JSX.Element {
+  public render(): React.ReactElement<IListItemsProps> {
     return (
       <div className={styles.listItems}>
         <div className={styles.container}>
-          <div className={css('ms-Grid-row ms-bgColor-themeDark ms-fontColor-white', styles.row)}>
-            <div className='ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1'>
-              <span className='ms-font-xl ms-fontColor-white'>
-                Welcome to SharePoint!
-              </span>
-              <p className='ms-font-l ms-fontColor-white'>
-                Customize SharePoint experiences using web parts.
-              </p>
-              <p className='ms-font-l ms-fontColor-white'>
-                {this.props.listName}
-              </p>
-              <p className='ms-font-l ms-fontColor-white'>
-                {this.props.item}
-              </p>
-              <a
-                className={css('ms-Button', styles.button)}
-                href='https://github.com/SharePoint/sp-dev-docs/wiki'
-              >
-                <span className='ms-Button-label'>Learn more</span>
+          <div className={`ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}`}>
+            <div className="ms-Grid-col ms-lg10 ms-xl8 ms-xlPush2 ms-lgPush1">
+              <span className="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
+              <p className="ms-font-l ms-fontColor-white">Customize SharePoint experiences using Web Parts.</p>
+              <p className="ms-font-l ms-fontColor-white">{escape(this.props.listName)}</p>
+              <p className="ms-font-l ms-fontColor-white">{escape(this.props.item)}</p>
+              <a href="https://aka.ms/spfx" className={styles.button}>
+                <span className={styles.label}>Learn more</span>
               </a>
             </div>
           </div>
@@ -720,7 +750,7 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
     // store new value in web part properties
     update(this.properties, propertyPath, (): any => { return newValue; });
     // refresh web part
-    this.onPropertyPaneFieldChanged(propertyPath, oldValue, newValue);
+    this.render();
   }
 }
 ```
@@ -738,12 +768,12 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
 }
 ```
 
-Next change the code of the **propertyPaneSettings** getter to:
+Next change the code of the **getPropertyPaneConfiguration** method to:
 
 ```ts
 export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
   // ...
-  protected get propertyPaneSettings(): IPropertyPaneSettings {
+  protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     // reference to item dropdown needed later after selecting a list
     this.itemsDropDown = new PropertyPaneAsyncDropdown('item', {
       label: strings.ItemFieldLabel,
@@ -800,7 +830,7 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
     // store new value in web part properties
     update(this.properties, 'item', (): any => { return this.properties.item; });
     // refresh web part
-    this.onPropertyPaneFieldChanged(propertyPath, oldValue, newValue);
+    this.render();
     // reset selected values in item dropdown
     this.itemsDropDown.properties.selectedKey = this.properties.item;
     // allow to load items
@@ -822,20 +852,20 @@ gulp serve
 
 After adding the web part to the page for the first time and opening its property pane, you should see both dropdowns disabled and loading their options.
 
-![Dropdowns in web part property pane loading their data](../../../../images/custom-property-pane-control-cascading-loading-lists.png)
+![Dropdowns in web part property pane loading their data](../../../images/custom-property-pane-control-cascading-loading-lists.png)
 
 After the options have been loaded, the list dropdown becomes enabled. Because no list has been selected yet, the item dropdown remains disabled.
 
-![List dropdown in web part property pane enabled. Item dropdown disabled](../../../../images/custom-property-pane-control-cascading-lists-loaded-items-disabled.png)
+![List dropdown in web part property pane enabled. Item dropdown disabled](../../../images/custom-property-pane-control-cascading-lists-loaded-items-disabled.png)
 
 After selecting a list in the list dropdown the item dropdown will load items available in that list.
 
-![Item dropdown loading available items after selecting a list in the list dropdown](../../../../images/custom-property-pane-control-cascading-loading-items.png)
+![Item dropdown loading available items after selecting a list in the list dropdown](../../../images/custom-property-pane-control-cascading-loading-items.png)
 
 After the available items have been loaded, the item dropdown becomes enabled.
 
-![Selecting a list item from the item dropdown in the web part property pane](../../../../images/custom-property-pane-control-cascading-items-loaded-enabled.png)
+![Selecting a list item from the item dropdown in the web part property pane](../../../images/custom-property-pane-control-cascading-items-loaded-enabled.png)
 
 After selecting an item in the item dropdown the web part is refreshed showing the selected item in its body.
 
-![Selected list and item rendered in the web part](../../../../images/custom-property-pane-control-cascading-selected-list-item.png)
+![Selected list and item rendered in the web part](../../../images/custom-property-pane-control-cascading-selected-list-item.png)

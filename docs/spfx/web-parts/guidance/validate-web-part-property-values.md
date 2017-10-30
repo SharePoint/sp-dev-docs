@@ -1,8 +1,15 @@
+---
+title: Validate web part property values
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Validate web part property values
 
 When working with web parts, users can configure them to meet their needs using their properties. By validating the provided configuration values you can make it easier for users to configure the web part and improve the overall user experience of working with your web part. In this article you will learn how to validate web part property values in SharePoint Framework client-side web parts.
 
-> **Note:** Before following the steps in this article, be sure to [set up your development environment](../../set-up-your-development-environment) for building SharePoint Framework solutions.
+> **Note:** Before following the steps in this article, be sure to [set up your development environment](../../set-up-your-development-environment.md) for building SharePoint Framework solutions.
 
 ## Create new project
 
@@ -32,11 +39,17 @@ When prompted, enter the following values:
 - **List info** as your web part name
 - **Shows information about the selected list** as your web part description
 
-![SharePoint Framework Yeoman generator with the default choices](../../../../images/property-validation-yeoman-generator.png)
+![SharePoint Framework Yeoman generator with the default choices](../../../images/property-validation-yeoman-generator.png)
 
-Once the scaffolding completes, open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots but you can use any editor you prefer.
+Once the scaffolding completes, lock down the version of the project dependencies by running the following command:
 
-![SharePoint Framework project open in Visual Studio Code](../../../../images/property-validation-visual-studio-code.png)
+```sh
+npm shrinkwrap
+```
+
+Next, open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots but you can use any editor you prefer.
+
+![SharePoint Framework project open in Visual Studio Code](../../../images/property-validation-visual-studio-code.png)
 
 ## Validate web part property values in the SharePoint Framework
 
@@ -114,15 +127,15 @@ gulp serve
 
 In the workbench, add the web part to canvas and open its properties. If you remove the description you should see the first validation error.
 
-![Validation error displayed on a required property without a value specified](../../../../images/property-validation-empty-description-error.png)
+![Validation error displayed on a required property without a value specified](../../../images/property-validation-empty-description-error.png)
 
 Next, try providing a value that's longer than 40 characters. You should see another validation error displayed below the text field.
 
-![Validation error displayed when the provided value is longer than allowed](../../../../images/property-validation-description-too-long-error.png)
+![Validation error displayed when the provided value is longer than allowed](../../../images/property-validation-description-too-long-error.png)
 
 Notice, that when providing an invalid value, the web part is rendered showing the last valid value. Additionally, in the non-reactive property pane mode, if one of the web part properties is invalid, the **Apply** button is disabled, preventing the user from applying the invalid configuration.
 
-![Disabled Apply button rendered when a web part property has an invalid value](../../../../images/property-validation-description-error-apply-disabled.png)
+![Disabled Apply button rendered when a web part property has an invalid value](../../../images/property-validation-description-error-apply-disabled.png)
 
 ### Validate web part property values using remote APIs
 
@@ -136,13 +149,19 @@ In the code editor open the **./src/webparts/listInfo/ListInfoWebPart.manifest.j
 
 ```json
 {
-  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
-
+  "$schema": "https://dev.office.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
   "id": "1ec8f92d-ea55-4584-bf50-bac435c916bf",
   "alias": "ListInfoWebPart",
   "componentType": "WebPart",
-  "version": "0.0.1",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
   "manifestVersion": 2,
+
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
 
   "preconfiguredEntries": [{
     "groupId": "1ec8f92d-ea55-4584-bf50-bac435c916bf",
@@ -151,8 +170,7 @@ In the code editor open the **./src/webparts/listInfo/ListInfoWebPart.manifest.j
     "description": { "default": "Shows information about the selected list" },
     "officeFabricIconFontName": "Page",
     "properties": {
-      "description": "List info",
-      "listName": ""
+      "description": "List info"
     }
   }]
 }
@@ -238,7 +256,7 @@ Run the following command to verify that the project is running and that the new
 gulp serve
 ```
 
-![The list name property displayed in the web part property pane](../../../../images/property-validation-list-name-property.png)
+![The list name property displayed in the web part property pane](../../../images/property-validation-list-name-property.png)
 
 #### Validate the name of the list using the SharePoint REST API
 
@@ -339,21 +357,21 @@ Because the list name validation method communicates with the SharePoint REST AP
 
 Add the web part to the canvas and open its properties. Because you haven't specified a default value for the list name, which is a required property, you will see a validation error.
 
-![Validation error displayed on a required property without a value specified](../../../../images/property-validation-empty-list-name-error.png)
+![Validation error displayed on a required property without a value specified](../../../images/property-validation-empty-list-name-error.png)
 
 If you provide a name of a list that doesn't exist, the web part will display a validation error stating that the list you specified doesn't exist in the current site.
 
-![Validation error displayed after providing a name of a list that doesn't exist in the current site](../../../../images/property-validation-invalid-list-name-error.png)
+![Validation error displayed after providing a name of a list that doesn't exist in the current site](../../../images/property-validation-invalid-list-name-error.png)
 
 If you specify a name of an existing list, the validation error will disappear.
 
-![No validation error displayed for a valid list name](../../../../images/property-validation-valid-list-name.png)
+![No validation error displayed for a valid list name](../../../images/property-validation-valid-list-name.png)
 
 #### Optimize validation using remote APIs
 
 When validating web part properties using remote APIs, SharePoint Framework monitors changes in the property pane controls and sends updated values for validation to the specified validation handler. By default, the SharePoint Framework waits 200ms before triggering the validation process. If the user hasn't changed the particular value for 200ms, the SharePoint Framework will start the validation process. When the validation handler uses a remote API, each time the validation process starts, that method will issue a web request to the API to validate the specified value. If users don't type fast enough, this will result in partially completed values being sent over for validation unnecessarily stressing the network and the API. In such cases you should consider increasing the validation delay.
 
-![Network tools in Microsoft Edge showing web requests with partial list name being sent over for validation](../../../../images/property-validation-partial-list-name-validation.png)
+![Network tools in Microsoft Edge showing web requests with partial list name being sent over for validation](../../../images/property-validation-partial-list-name-validation.png)
 
 You can configure the validation delay for each property separately, depending on the type of value that users need to provide. Following steps illustrate how to increase the validation delay for the **listName** property.
 

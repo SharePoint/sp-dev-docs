@@ -1,6 +1,7 @@
 ---
 title: Claims-based identity term definitions
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 0f3decb5-dcd8-432f-9bb8-533f2d01bef7
 ---
 
@@ -25,7 +26,7 @@ Table 1 contains definitions of key terms related to claims-based identity.
 |Claim value type  <br/> |The type of value in the claim. For example, if the claim value is **Contributor**, the claim type value is **String**.  <br/> |
 |Claims-aware application  <br/> |A relying-party software application that uses claims to manage identity and access for users.  <br/> |
 |Claims-based identity  <br/> |A unique identifier that represents a specific user, application, computer, or other entity. It enables that entity to gain access to multiple resources, such as applications and network resources, without entering credentials multiple times. It also enables resources to validate requests from an entity.  <br/> |
-|Claims provider  <br/> |A software component or service that can be used to issue one or more claims during sign-in operations. It is also used to display, resolve, and provide search capabilities for claims in a card selector (for example, in the people picker control in SharePoint). For more information, see  [Claims provider in SharePoint](claims-provider-in-sharepoint).  <br/> |
+|Claims provider  <br/> |A software component or service that can be used to issue one or more claims during sign-in operations. It is also used to display, resolve, and provide search capabilities for claims in a card selector (for example, in the people picker control in SharePoint). For more information, see  [Claims provider in SharePoint](claims-provider-in-sharepoint.md).  <br/> |
 |Claims provider schema  <br/> |A schema that specifies the fields that must be returned as metadata for a claim that is issued by a specific claims provider.  <br/> |
 |Claims provider - security token service  <br/> |A software component or service that is used by a claims provider that issues claims and packages them in security tokens.  <br/> |
 |Delegate  <br/> |A rich client that is authorized to impersonate another client. For example, consider a situation in which a user-facing website, **Web1**, calls an infrastructure data service, **Data2**. It might be advantageous for **Web1** to impersonate its users when it accesses **Data2**. **Web1** contacts a federation server to obtain claims that represent one of its users. When it is contacted, the federation server can determine whether **Web1** is an authorized delegate and, if so, it can allow the impersonation. If it is authorized, **Web1** accesses **Data2** while acting as the user. <br/> |
@@ -34,7 +35,7 @@ Table 1 contains definitions of key terms related to claims-based identity.
 |Relying party  <br/> |An application that relies on and uses claims in security tokens that a claims provider issues. For example, an online auction website organization might receive a security token with claims that determine whether a subject can access all or part of a relying party's application.  <br/> |
 |Relying-party application  <br/> |Software that can consume claims to make authentication and authorization decisions. The relying party application receives the claims from a claims provider.  <br/> |
 |Rich client  <br/> |A client that can use the WS-Trust protocol.  <br/> |
-|SAML passive sign-in  <br/> |SAML passive sign-in describes the process of signing in. When a sign-in for a web application is configured to accept tokens from a trusted login provider, this type of sign-in is called SAML passive sign-in. For more information, see  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint).  <br/> |
+|SAML passive sign-in  <br/> |SAML passive sign-in describes the process of signing in. When a sign-in for a web application is configured to accept tokens from a trusted login provider, this type of sign-in is called SAML passive sign-in. For more information, see  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint.md).  <br/> |
 |Security Assertion Markup Language (SAML) Security Token  <br/> |The data format for communicating claims between a claims provider and a relying party.  <br/> |
 |Security Assertion Markup Language (SAML)  <br/> |The WebSSO protocol that is defined in the SAML 2.0 Core specification. The SAML protocol specifies how to use HTTP web browser redirects to exchange assertions data. SAML is used to authenticate and authorize users across secure boundaries.  <br/> |
 |Security token  <br/> |An on-the-wire representation of claims that is cryptographically signed by the issuer of the claims, providing strong proof to any relying party as to the integrity of the claims and the identity of the issuer.  <br/> |
@@ -56,10 +57,10 @@ Table 1 contains definitions of key terms related to claims-based identity.
 -  [Web Services Federation Language (WS-Federation) Version 1.2](http://docs.oasis-open.org/wsfed/federation/v1.2/os/ws-federation-1.2-spec-osl#_Toc223175002)
     
   
--  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint)
+-  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint.md)
     
   
--  [Sample delegation, federation, and authentication scenario in SharePoint](sample-delegation-federation-and-authentication-scenario-in-sharepoint)
+-  [Sample delegation, federation, and authentication scenario in SharePoint](sample-delegation-federation-and-authentication-scenario-in-sharepoint.md)
     
   
 

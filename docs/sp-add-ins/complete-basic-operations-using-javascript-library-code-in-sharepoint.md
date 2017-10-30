@@ -1,12 +1,19 @@
+---
+title: Complete basic operations using JavaScript library code in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Complete basic operations using JavaScript library code in SharePoint
 Learn how to write code to perform basic operations using the JavaScript client object model in SharePoint.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 
- **Note**  For a "Hello World" level sample SharePoint Add-in that uses the JavaScript library, see  [Use the SharePoint JavaScript APIs to work with SharePoint data](use-the-sharepoint-javascript-apis-to-work-with-sharepoint-data).
+ **Note**  For a "Hello World" level sample SharePoint Add-in that uses the JavaScript library, see  [Use the SharePoint JavaScript APIs to work with SharePoint data](use-the-sharepoint-javascript-apis-to-work-with-sharepoint-data.md).
  
 
 
@@ -37,15 +44,15 @@ For more information about the sets of APIs that are available for SharePoint, s
  
 
  
-This article shows how to perform basic operations using the JavaScript object model. You can add a reference to the object model using HTML <script> tags. For information about how to use the other client APIs, see the following:
+This article shows how to perform basic operations using the JavaScript object model. You can add a reference to the object model using HTML &lt;script&gt; tags. For information about how to use the other client APIs, see the following:
  
 
  
 
--  [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-2013-client-library-code)
+-  [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-client-library-code.md)
     
  
--  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints)
+-  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md)
     
  
 -  [Build Windows Phone apps that access SharePoint](http://msdn.microsoft.com/library/36681335-f772-4499-8445-f94481bc18e7%28Office.15%29.aspx)
@@ -62,7 +69,7 @@ The following sections describe tasks that you can complete programmatically, an
  
 
  
-When you create a cloud-hosted add-in, you can add a reference to the object model by using HTML <script> tags. We recommend that you reference the host web because the add-in web may not exist in every scenario in cloud-hosted add-ins. You can retrieve the host web URL from the  _SPHostUrl_ query string parameter if you are using the **{StandardTokens}** token. You can also use your custom defined query string parameter if you are using the **{HostUrl}** token. After you have the host web URL, you must use JavaScript code to dynamically create the reference to the object model.
+When you create a cloud-hosted add-in, you can add a reference to the object model by using HTML &lt;script&gt; tags. We recommend that you reference the host web because the add-in web may not exist in every scenario in cloud-hosted add-ins. You can retrieve the host web URL from the  _SPHostUrl_ query string parameter if you are using the **{StandardTokens}** token. You can also use your custom defined query string parameter if you are using the **{HostUrl}** token. After you have the host web URL, you must use JavaScript code to dynamically create the reference to the object model.
  
 
  
@@ -147,7 +154,7 @@ The following code example performs these tasks to add a reference to the JavaSc
 
 ```
 
-When you create a SharePoint-hosted add-in, you can add a reference to the object model by using HTML <script> tags. The add-in web in a SharePoint-hosted add-in allows you to use relative paths to reference the required files to use the JavaScript object model.
+When you create a SharePoint-hosted add-in, you can add a reference to the object model by using HTML &lt;script&gt; tags. The add-in web in a SharePoint-hosted add-in allows you to use relative paths to reference the required files to use the JavaScript object model.
  
 
  
@@ -766,7 +773,7 @@ You can manipulate files by using the JavaScript object model. The following sec
 
  
 
- **Note**  You can only work with files up to 1.5 MB by using the JavaScript object model. To upload larger files, use REST (Representational State Transfer). For more information, see  [](complete-basic-operations-using-sharepoint-2013-rest-endpoints#LargeFiles).
+ **Note**  You can only work with files up to 1.5 MB by using the JavaScript object model. To upload larger files, use REST (Representational State Transfer). For more information, see  [](complete-basic-operations-using-sharepoint-rest-endpoints#LargeFiles.md).
  
 
 
@@ -1239,7 +1246,7 @@ function onQueryFailed(sender, args) {
 ## Access objects in the host web
 <a name="BasicOps_AccessHostweb"> </a>
 
-While developing your add-in, you might need to access the host web to interact with items in it. Use the  **AppContextSite** object to reference the host web or other SharePoint sites, as shown in the following example. For a full code sample, see [Get the host web title using the cross-domain library (JSOM)](http://code.msdn.microsoft.com/office/SharePoint-2013-Get-the-563f2a3d).
+While developing your add-in, you might need to access the host web to interact with items in it. Use the  **AppContextSite** object to reference the host web or other SharePoint sites, as shown in the following example. For a full code sample, see [Get the host web title using the cross-domain library (JSOM)](http://code.msdn.microsoft.com/office/SharePoint-Get-the-563f2a3d).
  
 
  
@@ -1283,7 +1290,7 @@ function execCrossDomainRequest(appweburl, hostweburl) {
 }
 ```
 
-The previous example uses the cross-domain library in SharePoint to access the host web. For more information, see  [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library).
+The previous example uses the cross-domain library in SharePoint to access the host web. For more information, see  [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md).
  
 
  
@@ -1292,19 +1299,19 @@ The previous example uses the cross-domain library in SharePoint to access the h
 <a name="BasicOps_AddRes"> </a>
 
 
--  [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-2013-client-library-code)
+-  [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-client-library-code.md)
     
  
--  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints)
+-  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md)
     
  
--  [Develop SharePoint Add-ins](develop-sharepoint-add-ins)
+-  [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
     
  
--  [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins)
+-  [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md)
     
  
--  [Work with external data in SharePoint](work-with-external-data-in-sharepoint-2013)
+-  [Work with external data in SharePoint](work-with-external-data-in-sharepoint.md)
     
  
 

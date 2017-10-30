@@ -1,8 +1,15 @@
+---
+title: Office Web Widgets - Experimental License Terms
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Office Web Widgets - Experimental License Terms
 Learn about the license terms to use the Office Web Widgets - Experimental.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
  **To download the file you must agree to the following license:**
@@ -142,13 +149,13 @@ It also applies even if Microsoft knew or should have known about the possibilit
 <a name="bk_addresources"> </a>
 
 
--  [Office Web Widgets - Experimental overview](office-web-widgets--experimental-overview)
+-  [Office Web Widgets - Experimental overview](office-web-widgetsexperimental-overview.md)
     
  
--  [Use the experimental People Picker widget in SharePoint Add-ins](use-the-experimental-people-picker-widget-in-sharepoint-add-ins)
+-  [Use the experimental People Picker widget in SharePoint Add-ins](use-the-experimental-people-picker-widget-in-sharepoint-add-ins.md)
     
  
--  [Use the experimental Desktop List View widget in SharePoint Add-ins](use-the-experimental-desktop-list-view-widget-in-sharepoint-add-ins)
+-  [Use the experimental Desktop List View widget in SharePoint Add-ins](use-the-experimental-desktop-list-view-widget-in-sharepoint-add-ins.md)
     
  
 

@@ -1,9 +1,15 @@
+---
+title: Use the client chrome control in SharePoint Add-ins
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # Use the client chrome control in SharePoint Add-ins
 Learn how to use the chrome control in add-ins in SharePoint.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 The chrome control in SharePoint enables you to use the header styling of a specific SharePoint site in your add-in without needing to register a server library or use a specific technology or tool. To use this functionality, you must register a SharePoint JavaScript library through a standard <script> tag. You can provide a placeholder by using an HTML **div** element and further customize the control by using the available options. The control inherits its appearance from the specified SharePoint website.
@@ -40,14 +46,14 @@ The following table lists useful articles that can help you understand the conce
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [SharePoint Add-ins](sharepoint-add-ins)|Learn about the new add-in model in SharePoint that enables you to create add-ins, which are small, easy-to-use solutions for end users.|
-| [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins)|Learn about the user experience (UX) options and alternatives that you have when building SharePoint Add-ins.|
-| [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013)|Learn about the distinction between host webs and add-in webs. Find out which SharePoint components can be included in a SharePoint Add-in, which components are deployed to the host web, which components are deployed to the add-in web, and how the add-in web is deployed in an isolated domain.|
+| [SharePoint Add-ins](sharepoint-add-ins.md)|Learn about the new add-in model in SharePoint that enables you to create add-ins, which are small, easy-to-use solutions for end users.|
+| [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md)|Learn about the user experience (UX) options and alternatives that you have when building SharePoint Add-ins.|
+| [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md)|Learn about the distinction between host webs and add-in webs. Find out which SharePoint components can be included in a SharePoint Add-in, which components are deployed to the host web, which components are deployed to the add-in web, and how the add-in web is deployed in an isolated domain.|
 
 ## Code example: Use the chrome control in your cloud-hosted add-in
 <a name="SP15Usechromecontrol_Codeexample"> </a>
 
-A cloud-hosted add-in includes at least one remote component. For more information, see  [Choose patterns for developing and hosting your SharePoint Add-in](choose-patterns-for-developing-and-hosting-your-sharepoint-add-in). To use the chrome control in your cloud-hosted add-in, follow these steps:
+A cloud-hosted add-in includes at least one remote component. For more information, see  [Choose patterns for developing and hosting your SharePoint Add-in](choose-patterns-for-developing-and-hosting-your-sharepoint-add-in.md). To use the chrome control in your cloud-hosted add-in, follow these steps:
  
 
  
@@ -71,7 +77,7 @@ Figure 1 shows a remote webpage with the chrome control.
  
 
  
-![A remote web page with the chrome control](../../images/ChromeControl_result.png)
+![A remote web page with the chrome control](../images/ChromeControl_result.png)
  
 
 ### To create the SharePoint Add-in and remote web projects
@@ -89,7 +95,7 @@ Figure 1 shows a remote webpage with the chrome control.
 
  
 
-  ![App for SharePoint Visual Studio template](../../images/AppForSharePointVSTemplate.PNG)
+  ![App for SharePoint Visual Studio template](../images/AppForSharePointVSTemplate.PNG)
  
 
  
@@ -107,7 +113,7 @@ Figure 1 shows a remote webpage with the chrome control.
 
  
 
-  ![App for SharePoint projects in Solution Explorer](../../images/AppVSTemplateSolutionExplorer.jpg)
+  ![App for SharePoint projects in Solution Explorer](../images/AppVSTemplateSolutionExplorer.jpg)
  
 
  
@@ -126,7 +132,7 @@ Figure 1 shows a remote webpage with the chrome control.
 
  
 
-  ![Manifest editor with query string parameters](../../images/ChromeControl_manifest.PNG)
+  ![Manifest editor with query string parameters](../images/ChromeControl_manifest.PNG)
  
 
     The chrome control automatically takes the following values from the query string:
@@ -433,7 +439,7 @@ function getQueryStringParameter(paramToRetrieve) {
 
  
 
-  ![SharePoint website stylesheet used in a page](../../images/ChromControl_stylesheet.png)
+  ![SharePoint website stylesheet used in a page](../images/ChromControl_stylesheet.png)
  
 
  
@@ -457,22 +463,22 @@ This article demonstrated how to use the chrome control in a SharePoint Add-in. 
 
  
 
--  [Code sample: Use the chrome control in a cloud-hosted add-in](http://code.msdn.microsoft.com/SharePoint-2013-Work-with-089ecc6f)
+-  [Code sample: Use the chrome control in a cloud-hosted add-in](http://code.msdn.microsoft.com/SharePoint-Work-with-089ecc6f)
     
  
--  [Code sample: Use the chrome control and the cross-domain library (CSOM)](http://code.msdn.microsoft.com/SharePoint-2013-Use-the-97c30a2e)
+-  [Code sample: Use the chrome control and the cross-domain library (CSOM)](http://code.msdn.microsoft.com/SharePoint-Use-the-97c30a2e)
     
  
--  [Code sample: Use the chrome control and the cross-domain library (REST)](http://code.msdn.microsoft.com/SharePoint-2013-Use-the-a759e9f8)
+-  [Code sample: Use the chrome control and the cross-domain library (REST)](http://code.msdn.microsoft.com/SharePoint-Use-the-a759e9f8)
     
  
--  [Use a SharePoint website's style sheet in SharePoint Add-ins](use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins)
+-  [Use a SharePoint website's style sheet in SharePoint Add-ins](use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins.md)
     
  
--  [Create custom actions to deploy with SharePoint Add-ins](create-custom-actions-to-deploy-with-sharepoint-add-ins)
+-  [Create custom actions to deploy with SharePoint Add-ins](create-custom-actions-to-deploy-with-sharepoint-add-ins.md)
     
  
--  [Create add-in parts to install with your SharePoint Add-in](create-add-in-parts-to-install-with-your-sharepoint-add-in)
+-  [Create add-in parts to install with your SharePoint Add-in](create-add-in-parts-to-install-with-your-sharepoint-add-in.md)
     
  
 
@@ -480,22 +486,22 @@ This article demonstrated how to use the chrome control in a SharePoint Add-in. 
 <a name="SP15Usechromecontrol_Addresources"> </a>
 
 
--  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins)
+-  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md)
     
  
--  [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins)
+-  [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md)
     
  
--  [SharePoint Add-ins UX design guidelines](sharepoint-add-ins-ux-design-guidelines)
+-  [SharePoint Add-ins UX design guidelines](sharepoint-add-ins-ux-design-guidelines.md)
     
  
--  [Create UX components in SharePoint](create-ux-components-in-sharepoint-2013)
+-  [Create UX components in SharePoint](create-ux-components-in-sharepoint.md)
     
  
--  [Three ways to think about design options for SharePoint Add-ins](three-ways-to-think-about-design-options-for-sharepoint-add-ins)
+-  [Three ways to think about design options for SharePoint Add-ins](three-ways-to-think-about-design-options-for-sharepoint-add-ins.md)
     
  
--  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscape)
+-  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md)
     
  
 

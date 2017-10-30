@@ -1,3 +1,10 @@
+﻿---
+title: Complete basic operations using SharePoint REST endpoints
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Complete basic operations using SharePoint REST endpoints
 Learn how to perform basic create, read, update, and delete (CRUD) operations with the SharePoint REST interface.
 
@@ -5,7 +12,7 @@ Learn how to perform basic create, read, update, and delete (CRUD) operations wi
 <a name="ClientAPIs"> </a>
 You can perform basic create, read, update, and delete (CRUD) operations by using the Representational State Transfer (REST) interface provided by SharePoint. The REST interface exposes all of the SharePoint entities and operations that are available in the other SharePoint client APIs. One advantage of using REST is that you don't have to add references to any SharePoint libraries or client assemblies. Instead, you make HTTP requests to the appropriate endpoints to retrieve or update SharePoint entities, such as webs, lists, and list items. See  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md) for a thorough introduction to the SharePoint REST interface and its architecture.
  
-[Working with lists and list items with REST](working-with-lists-and-list-items-with-rest.md) and [Working with folders and files with REST](working-with-folders-and-files-with-rest.md) explain in greater detail how to work with core SharePoint entities. See [SharePoint-Add-in-REST-OData-BasicDataOperations](https://github.com/OfficeDev/SharePoint-Add-in-REST-OData-BasicDataOperations) for a sample that shows you how to do many of these operations in the context of an ASP.NET web application written in C#.
+[Working with lists and list items with REST](working-with-lists-and-list-items-with-rest.md) and [Working with folders and files with REST](working-with-folders-and-files-with-rest.md) explain in greater detail how to work with core SharePoint entities. See [SharePoint-Add-in-REST-OData-BasicDataOperations](https://github.com/OfficeDev/SharePoint-Add-in-REST-OData-BasicDataOperations.md) for a sample that shows you how to do many of these operations in the context of an ASP.NET web application written in C#.
  
 For more details about the sets of APIs available on the SharePoint platform, see  [Choose the right API set in SharePoint](http://msdn.microsoft.com/library/f36645da-77c5-47f1-a2ca-13d4b62b320d%28Office.15%29.aspx). For information about how to use the other client APIs, see  [Complete basic operations using JavaScript library code in SharePoint](https://msdn.microsoft.com/en-us/library/office/jj163201.aspx),  [Complete basic operations using SharePoint 2013 client library code](https://msdn.microsoft.com/en-us/library/office/fp179912.aspx), and  [Build Windows Phone apps that access SharePoint 2013](https://msdn.microsoft.com/en-us/library/office/jj163228.aspx).
  

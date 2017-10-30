@@ -1,6 +1,7 @@
 ---
 title: Working with Web Services in SharePoint Workflows using SharePoint Designer 2013
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: bc8769c6-ae71-4519-abf3-c1b6fb071059
 ---
 
@@ -66,7 +67,7 @@ In SharePoint workflows, you call a web service using a new action introduced in
   
     
     
-![Figure 1. Call HTTP Web Service action](../../images/ngWSSP2013WorkflowSPD2013.png)
+![Figure 1. Call HTTP Web Service action](../images/ngWSSP2013WorkflowSPD2013.png)
   
     
     
@@ -174,7 +175,7 @@ The following walkthrough demonstrates how to create a custom workflow that call
 
   
 
-  ![Figure 2. Creating the Customers list in SP](../../images/ngWSSP2013WorkflowSPD201302.png)
+  ![Figure 2. Creating the Customers list in SP](../images/ngWSSP2013WorkflowSPD201302.png)
   
 
   
@@ -199,7 +200,7 @@ The following walkthrough demonstrates how to create a custom workflow that call
 
   
 
-  ![Figure 3. Creating a new List Workflow using SP](../../images/ngWSSP2013WorkflowSPD201303.png)
+  ![Figure 3. Creating a new List Workflow using SP](../images/ngWSSP2013WorkflowSPD201303.png)
   
 
   
@@ -234,7 +235,7 @@ Now that we've created the workflow, we want to enable it to call a web service,
 
   
 
-  ![Figure 4. Dynamically Creating the URL for the Web](../../images/ngWSSP2013WorkflowSPD201304.png)
+  ![Figure 4. Dynamically Creating the URL for the Web](../images/ngWSSP2013WorkflowSPD201304.png)
   
 
   
@@ -256,7 +257,7 @@ Now that we've created the workflow, we want to enable it to call a web service,
 
   
 
-  ![Figure 5. Writing the Web Service Response Code to](../../images/ngWSSP2013WorkflowSPD201305.png)
+  ![Figure 5. Writing the Web Service Response Code to](../images/ngWSSP2013WorkflowSPD201305.png)
   
 
   
@@ -292,7 +293,7 @@ To do this, we're going to add two **Get item from dictionary** actions to the w
 
   
 
-  ![Figure 6. Extracting Values from the Web Service D](../../images/ngWSSP2013WorkflowSPD201306.png)
+  ![Figure 6. Extracting Values from the Web Service D](../images/ngWSSP2013WorkflowSPD201306.png)
   
 
   
@@ -315,7 +316,7 @@ The final step is to update the list item using two of the **Set field in curren
   
     
     
-![Figure 7. Update the List Item](../../images/ngWSSP2013WorkflowSPD201307.png)
+![Figure 7. Update the List Item](../images/ngWSSP2013WorkflowSPD201307.png)
   
     
     
@@ -357,7 +358,7 @@ And finally, we complete the **Transition to stage** section of the workflow sta
 
   
 
-  ![Figure 8. List Items Updated by Custom Workflow](../../images/ngWSSP2013WorkflowSPD201308.png)
+  ![Figure 8. List Items Updated by Custom Workflow](../images/ngWSSP2013WorkflowSPD201308.png)
   
 
   
@@ -379,7 +380,7 @@ SharePointintroduced a new workflow architecture facilitated by a new product, W
 <a name="bk_addresources"> </a>
 
 
--  [Workflows in SharePoint](workflows-in-sharepoint)
+-  [Workflows in SharePoint](workflows-in-sharepoint.md)
     
   
 -  [OData](http://www.odata.org/)

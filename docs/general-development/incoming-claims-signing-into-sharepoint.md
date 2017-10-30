@@ -1,6 +1,7 @@
 ---
 title: Incoming claims Signing into SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 08c687aa-e485-4269-aea8-4333da3588a5
 ---
 
@@ -64,7 +65,7 @@ In ASP.NET membership and role passive sign-in, the sign-in happens by redirecti
   
     
     
-SharePoint Serverthen does claims augmentation. Win32 clients must support the forms-based authentication that is implemented in Office clients.
+SharePoint Server then does claims augmentation. Win32 clients must support the forms-based authentication that is implemented in Office clients.
   
     
     
@@ -95,16 +96,16 @@ SharePoint Server then does claims augmentation. Win32 clients must support the 
 <a name="bk_addresources"> </a>
 
 
--  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint)
+-  [Claims-based identity in SharePoint](claims-based-identity-in-sharepoint.md)
     
   
--  [Claims provider in SharePoint](claims-provider-in-sharepoint)
+-  [Claims provider in SharePoint](claims-provider-in-sharepoint.md)
     
   
--  [How to: Create a claims provider in SharePoint](how-to-create-a-claims-provider-in-sharepoint)
+-  [How to: Create a claims provider in SharePoint](how-to-create-a-claims-provider-in-sharepoint.md)
     
   
--  [How to: Deploy a claims provider in SharePoint](how-to-deploy-a-claims-provider-in-sharepoint)
+-  [How to: Deploy a claims provider in SharePoint](how-to-deploy-a-claims-provider-in-sharepoint.md)
     
   
 

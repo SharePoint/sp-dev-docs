@@ -1,6 +1,7 @@
 ---
 title: SharePoint Design Manager image renditions
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: d08a74c0-5674-4f26-8646-11ea1f081c85
 ---
 
@@ -213,7 +214,7 @@ By default, an image rendition is generated from the center of the image. You ca
   
     
     
-![Original image rendition](../../images/ImgRendition_orig.PNG)
+![Original image rendition](../images/ImgRendition_orig.PNG)
   
     
     
@@ -227,7 +228,7 @@ By default, an image rendition is generated from the center of the image. You ca
   
     
     
-![Cropped image rendition](../../images/ImgRendition_crop.PNG)
+![Cropped image rendition](../images/ImgRendition_crop.PNG)
   
     
     
@@ -353,13 +354,13 @@ When an image rendition is deleted, that image rendition is no longer generated 
 <a name="Additional"> </a>
 
 
--  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
     
   
--  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities)
+-  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md)
     
   
--  [Build sites for SharePoint](build-sites-for-sharepoint)
+-  [Build sites for SharePoint](build-sites-for-sharepoint.md)
     
   
 

@@ -1,20 +1,27 @@
+---
+title: Add jQueryUI Accordion to your SharePoint client-side web part
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Add jQueryUI Accordion to your SharePoint client-side web part
 
 This article describes how to add the jQueryUI Accordion to your web part project. This involves creating a new web part, as shown in the following image. 
 
-![Screenshot of a web part that includes a jQuery Accordion](../../../../images/jquery-accordion-wb.png)
+![Screenshot of a web part that includes a jQuery Accordion](../../../images/jquery-accordion-wb.png)
 
 You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=-3m__hRQxEI&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
 
 <a href="https://www.youtube.com/watch?v=-3m__hRQxEI&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
-<img src="../../../../images/spfx-youtube-tutorial5.png" alt="Screenshot of the YouTube video player for this tutorial" />
+<img src="../../../images/spfx-youtube-tutorial5.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
 ## Prerequisites
 Complete the following steps before you start:
 
 * [Build your first web part](build-a-hello-world-web-part.md)
-* [Connect to SharePoint](connect-to-sharepoint.md) 
+* [Connect to SharePoint](connect-to-sharepoint.md)
 
 The developer toolchain uses Webpack, SystemJS and CommonJS to bundle your web parts. This includes loading any external dependencies such as jQuery or jQueryUI. To load external dependencies, at a high level, you will need to:
 
@@ -47,17 +54,26 @@ yo @microsoft/sharepoint
 When prompted:
 
 * Accept the default **jquery-webpart** as your solution name and choose **Enter**.
-* Select **Use the current folder** as the location for the files.
+* Choose **SharePoint Online only (latest)**, and press **Enter**.
+* Select **Use the current folder** for where to place the files.
+* Choose **N** to require the extension to be installed on each site explicitly when it's being used. 
+* Choose **WebPart** as the client-side component type to be created. 
 
 The next set of prompts will ask for specific information about your web part:
 
-* Accept the default No **javascript web framework** option for the framework and choose **Enter** to continue.
 * Type **jQuery** for the web part name and choose **Enter**.
 * Enter **jQuery Web Part** as the description of the web part and choose **Enter**. 
+* Accept the default No **javascript web framework** option for the framework and choose **Enter** to continue.
 
 At this point, Yeoman will install the required dependencies and scaffold the solution files. This might take a few minutes. Yeoman will scaffold the project to include your **jQueryWebPart** web part as well.
 
-In the console, type the following to open the web part project in Visual Studio Code:
+Once the scaffolding completes, lock down the version of the project dependencies by running the following command:
+
+```sh
+npm shrinkwrap
+```
+
+Next, type the following to open the web part project in Visual Studio Code:
 
 ```
 code .
@@ -68,7 +84,7 @@ code .
 In the console, type the following to install jQuery npm package:
 
 ```
-npm install --save jquery
+npm install --save jquery@2
 ```
 
  Now type the following to install jQueryUI npm package:
@@ -82,7 +98,7 @@ Next we'll need to install the typings for our project. Starting from TypeScript
 Open your console and install needed types:
 
 ```
-npm install --save @types/jquery
+npm install --save @types/jquery@2
 npm install --save @types/jqueryui
 ```
 
@@ -318,6 +334,6 @@ Gulp will execute the tasks and open the local SharePoint web part workbench.
 
 In the page canvas, choose the **+** (plus sign) to show the list of web parts, and add the jQuery web part. You should now see the jQueryUI Accordion!
 
-![Screenshot of a web part that includes a jQuery Accordion](../../../../images/jquery-accordion-wb.png)
+![Screenshot of a web part that includes a jQuery Accordion](../../../images/jquery-accordion-wb.png)
 
 In the console where you have `gulp serve` running, choose **Ctrl+C** to terminate the task.

@@ -1,6 +1,7 @@
 ---
 title: Workflow initiation and configuration properties
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 7386bbf9-3ed6-4732-bcdb-b27baed7397e
 ---
 
@@ -183,10 +184,10 @@ List workflows instances have some additional external variables that are set by
 <a name="bk_addresources"> </a>
 
 
--  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio)
+-  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
     
   
--  [How to: Create SharePoint Workflows using Visual Studio](how-to-create-sharepoint-workflows-using-visual-studio)
+-  [How to: Create SharePoint Workflows using Visual Studio](how-to-create-sharepoint-workflows-using-visual-studio.md)
     
   
 

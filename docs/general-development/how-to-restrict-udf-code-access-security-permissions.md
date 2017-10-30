@@ -1,9 +1,10 @@
 ---
 title: How to Restrict UDF Code Access Security Permissions
+ms.date: 09/25/2017
 keywords: cas,how to,howdoi,howto,UDF list
 f1_keywords:
 - cas,how to,howdoi,howto,UDF list
-ms.prod: OFFICE365
+ms.prod: sharepoint
 ms.assetid: 4f022e0d-1fe3-4fab-b41f-82a0d628f77c
 ---
 
@@ -134,31 +135,31 @@ For more information about configuring code groups, see the following articles o
   
     
     
- [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service)
+ [How to: Create a UDF That Calls a Web Service](how-to-create-a-udf-that-calls-a-web-service.md)
   
     
     
- [How to: Enable UDFs](how-to-enable-udfs)
+ [How to: Enable UDFs](how-to-enable-udfs.md)
   
     
     
- [How to: Access an External Data Source from a UDF](how-to-access-an-external-data-source-from-a-udf)
+ [How to: Access an External Data Source from a UDF](how-to-access-an-external-data-source-from-a-udf.md)
   
     
     
- [How to: Deploy UDFs Using SharePoint Foundation Solutions](how-to-deploy-udfs-using-sharepoint-foundation-solutions)
+ [How to: Deploy UDFs Using SharePoint Foundation Solutions](how-to-deploy-udfs-using-sharepoint-foundation-solutions.md)
 #### Concepts
 
 
   
     
     
- [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf)
+ [Walkthrough: Developing a Managed-Code UDF](walkthrough-developing-a-managed-code-udf.md)
   
     
     
- [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs)
+ [Frequently Asked Questions About Excel Services UDFs](frequently-asked-questions-about-excel-services-udfs.md)
   
     
     
- [Understanding Excel Services UDFs](understanding-excel-services-udfs)
+ [Understanding Excel Services UDFs](understanding-excel-services-udfs.md)

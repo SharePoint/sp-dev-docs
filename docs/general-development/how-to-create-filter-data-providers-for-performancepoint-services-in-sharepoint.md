@@ -1,6 +1,7 @@
 ---
 title: How to Create filter data providers for PerformancePoint Services in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 25508ec6-86bf-4eea-acf0-00f88e4faa55
 ---
 
@@ -103,7 +104,7 @@ The following code example shows how a data provider retrieves values from a web
   
     
     
-Before you can compile this code example, you must configure your development environment as described in  [To create and configure the provider class](#BKMK_ConfigClass).
+Before you can compile this code example, you must configure your development environment as described in  [To create and configure the provider class](#bk_createconfig).
   
     
     
@@ -305,10 +306,10 @@ After you create a data provider and a filter editor (including its user interfa
 <a name="bk_next"> </a>
 
 
--  [How to: Create filter editors for PerformancePoint Services in SharePoint](how-to-create-filter-editors-for-performancepoint-services-in-sharepoint)
+-  [How to: Create filter editors for PerformancePoint Services in SharePoint](how-to-create-filter-editors-for-performancepoint-services-in-sharepoint.md)
     
   
--  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint)
+-  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint.md)
     
   
 

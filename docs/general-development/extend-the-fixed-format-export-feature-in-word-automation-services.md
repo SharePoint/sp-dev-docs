@@ -1,6 +1,7 @@
 ---
 title: Extend the fixed-format export feature in Word Automation Services
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: d8375505-432e-438e-971b-221a1d9bb601
 ---
 
@@ -163,7 +164,7 @@ The  *phFile*  parameter specifies the handle to the file to be closed. If the v
 
 ## PFNKeepAlive
 
-When the fixed-format export DLL is active, it must call the **KeepAlive** function at regular intervals (configurable by the administrator) to prevent the service from assuming that the fixed-format export DLL is hung and terminating the process.
+When the fixed-format export DLL is active, it must call the **KeepAlive** function at regular intervals (configurable by the administrator) to prevent the service from assuming that the fixed-format export DLL is not responding, and thus terminating the process.
   
     
     

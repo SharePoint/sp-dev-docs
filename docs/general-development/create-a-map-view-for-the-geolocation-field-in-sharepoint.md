@@ -1,6 +1,7 @@
 ---
 title: Create a map view for the Geolocation field in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 0cd8ba27-3326-4b60-a2d0-d289a94f11bb
 ---
 
@@ -12,7 +13,7 @@ SharePoint introduces a new field type named **Geolocation** that enables you to
     
     
 
-To display a map view in a SharePoint list, you must use the Bing Maps services. The **Geolocation** field is not available when you create a list by using the UI. Instead, this field must be inserted programmatically. For information about how to render and work with this data type programmatically, see [Integrating location and map functionality in SharePoint](integrating-location-and-map-functionality-in-sharepoint).
+To display a map view in a SharePoint list, you must use the Bing Maps services. The **Geolocation** field is not available when you create a list by using the UI. Instead, this field must be inserted programmatically. For information about how to render and work with this data type programmatically, see [Integrating location and map functionality in SharePoint](integrating-location-and-map-functionality-in-sharepoint.md).
 The **Geolocation** field and the map view enable you to give spatial context to any information by integrating data from SharePoint into a mapping experience in web and mobile apps. This article does not explain how to render the **Geolocation** field or provide developer guidance for creating a location-based mobile application; it does provide instruction for creating map views programmatically and from the SharePoint UI by using Bing Maps.
   
     
@@ -69,7 +70,7 @@ The following steps demonstrate how to create a map view from the SharePoint UI.
 
   
 
-  ![Edit Control Box menu for SharePoint list](../../images/SPCon15_CreateMapView_ECB_Menu__fig1.png)
+  ![Edit Control Box menu for SharePoint list](../images/SPCon15_CreateMapView_ECB_Menu__fig1.png)
   
 
   
@@ -81,7 +82,7 @@ The following steps demonstrate how to create a map view from the SharePoint UI.
 
   
 
-  ![Choose Map View from the list of view types](../../images/SPCon15_CreateMapView_ChooseViewType__fig2.png)
+  ![Choose Map View from the list of view types](../images/SPCon15_CreateMapView_ChooseViewType__fig2.png)
   
 
   
@@ -93,7 +94,7 @@ The following steps demonstrate how to create a map view from the SharePoint UI.
 
   
 
-  ![Select fields to appear in the view](../../images/SPCon15_CreateMapView_SelectFieldsForView__fig3.png)
+  ![Select fields to appear in the view](../images/SPCon15_CreateMapView_SelectFieldsForView__fig3.png)
   
 
     
@@ -105,7 +106,7 @@ The following steps demonstrate how to create a map view from the SharePoint UI.
 
   
 
-  ![Completed map view](../../images/SPCon15_CreateMapView_MyMapView__fig4.png)
+  ![Completed map view](../images/SPCon15_CreateMapView_MyMapView__fig4.png)
   
 
   
@@ -210,7 +211,7 @@ A map view providesthree colors of pushpins (as shown in Figure 5), each of whic
   
     
     
-![Different colors of pushpins in a map view](../../images/SPCon15_CreateMapView_DifferentPushPinsOnMapView__fig5.png)
+![Different colors of pushpins in a map view](../images/SPCon15_CreateMapView_DifferentPushPinsOnMapView__fig5.png)
   
     
     
@@ -228,7 +229,7 @@ After you create a map view, all items appear as pushpins. The user can get more
   
     
     
-![User experience of pusphins on a map view](../../images/SPCon15_CreateMapView_PushPinsOnMapView__fig6.png)
+![User experience of pusphins on a map view](../images/SPCon15_CreateMapView_PushPinsOnMapView__fig6.png)
   
     
     
@@ -245,16 +246,16 @@ After you create a map view, all items appear as pushpins. The user can get more
 <a name="SP15CreatingMapViews_AdditionalResources"> </a>
 
 
--  [Integrating location and map functionality in SharePoint](integrating-location-and-map-functionality-in-sharepoint)
+-  [Integrating location and map functionality in SharePoint](integrating-location-and-map-functionality-in-sharepoint.md)
     
   
--  [How to: Add a Geolocation column to a list programmatically in SharePoint](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint)
+-  [How to: Add a Geolocation column to a list programmatically in SharePoint](how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint.md)
     
   
--  [How to: Set the Bing Maps key at the web and farm level in SharePoint](how-to-set-the-bing-maps-key-at-the-web-and-farm-level-in-sharepoint)
+-  [How to: Set the Bing Maps key at the web and farm level in SharePoint](how-to-set-the-bing-maps-key-at-the-web-and-farm-level-in-sharepoint.md)
     
   
--  [How to: Integrate maps with Windows Phone apps and SharePoint lists](how-to-integrate-maps-with-windows-phone-apps-and-sharepoint-lists)
+-  [How to: Integrate maps with Windows Phone apps and SharePoint lists](how-to-integrate-maps-with-windows-phone-apps-and-sharepoint-lists.md)
     
   
 -  [Use the SharePoint location field type in mobile applications](http://technet.microsoft.com/en-us/library/fp161355%28v=office.15%29.aspx)

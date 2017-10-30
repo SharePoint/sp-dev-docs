@@ -1,3 +1,10 @@
+---
+title: Update SharePoint Framework packages 
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Update SharePoint Framework packages 
 
 SharePoint client-side development tools use the [npm](https://www.npmjs.com/) package manager to manage dependencies and other required JavaScript helpers. npm is typically included as part of Node.js setup.

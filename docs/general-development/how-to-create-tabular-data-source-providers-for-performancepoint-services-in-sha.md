@@ -1,6 +1,7 @@
----
+﻿---
 title: How to Create tabular data source providers for PerformancePoint Services in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 8d734ed6-7636-40c5-a99b-bc038362cffe
 ---
 
@@ -421,10 +422,10 @@ After you create a data source provider and a data source editor (including its 
 <a name="bk_addResources"> </a>
 
 
--  [How to: Create tabular data source editors for PerformancePoint Services in SharePoint](how-to-create-tabular-data-source-editors-for-performancepoint-services-in-share)
+-  [How to: Create tabular data source editors for PerformancePoint Services in SharePoint](how-to-create-tabular-data-source-editors-for-performancepoint-services-in-share.md)
     
   
--  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint)
+-  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint.md)
     
   
 

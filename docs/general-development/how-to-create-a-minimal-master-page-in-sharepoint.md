@@ -1,6 +1,7 @@
 ---
 title: How to Create a minimal master page in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 634aa471-07e1-41d6-aa80-27f7ef7e9dc8
 ---
 
@@ -14,7 +15,7 @@ With Design Manager, you can convert a typical HTML file into a SharePoint maste
   
     
     
-When you create a minimal master page, Design Manager creates both the .master file and an associated HTML file, so that you can still work with only the HTML file if you prefer. Working with a minimal master page is exactly the same as working with a master page that you convert from an HTML file. The HTML file and master page are associated, so that whenever you edit and save the HTML file, those changes are synced to the associated master page. And the HTML file contains special types of markup that make syncing with the .master file possible. For more information about this association and these types of markup, see  [How to: Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint).
+When you create a minimal master page, Design Manager creates both the .master file and an associated HTML file, so that you can still work with only the HTML file if you prefer. Working with a minimal master page is exactly the same as working with a master page that you convert from an HTML file. The HTML file and master page are associated, so that whenever you edit and save the HTML file, those changes are synced to the associated master page. And the HTML file contains special types of markup that make syncing with the .master file possible. For more information about this association and these types of markup, see  [How to: Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint.md).
   
     
     
@@ -67,16 +68,16 @@ Starting with a minimal master page is useful when:
     
     The preview page is a live server-side preview of your master page.
     
-    For more information about previewing the master page with different pages, see  [How to: Change the preview page in SharePoint Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager).
+    For more information about previewing the master page with different pages, see  [How to: Change the preview page in SharePoint Design Manager](how-to-change-the-preview-page-in-sharepoint-design-manager.md).
     
-    The preview page also contains a **Snippets** link in the upper-right corner. This link opens the Snippet Gallery, where you can begin replacing static or mock-up controls in your design with dynamic SharePoint controls. For more information, see [SharePoint Design Manager snippets](sharepoint-design-manager-snippets).
+    The preview page also contains a **Snippets** link in the upper-right corner. This link opens the Snippet Gallery, where you can begin replacing static or mock-up controls in your design with dynamic SharePoint controls. For more information, see [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md).
     
     After your master page previews successfully, you will see a **\<div\>** tag that gets added to your HTML file. You may have to scroll to the bottom of the page to see the **\<div\>** tag.
     
     This **\<div\>** is the main content block. It resides inside a content placeholder named **ContentPlaceHolderMain**. At run time, when a visitor browses your site and requests a page, this content placeholder gets filled with content from a page layout that contains content in a matching content region. You should position this **\<div\>** where you want your page layouts to appear on the master page.
     
   
-7. You can edit the HTML file that resides directly on the server by using an HTML editor to open and edit the HTML file in a mapped drive. Each time you save the HTML file, any changes are synced to the associated .master file. For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery).
+7. You can edit the HTML file that resides directly on the server by using an HTML editor to open and edit the HTML file in a mapped drive. Each time you save the HTML file, any changes are synced to the associated .master file. For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md).
     
   
 8. To work only with the .master file and not the HTML file, you must break the association between the two files. In Design Manager, on the Edit Master Pages page, select the HTML file, open the **Properties** menu, and then choose **Edit Properties**. On the **Edit** tab, clear the **Associated File** check box, and then choose **Save**.
@@ -88,7 +89,7 @@ Starting with a minimal master page is useful when:
 ## Understand the associated HTML file
 <a name="UnderstandHTML"> </a>
 
-When you create a minimal master page, an HTML file is created that's associated with the .master file, and this HTML file contains many lines of markup that are specific to how SharePoint works. You can safely ignore most of this markup, and most of it does not appear in the final markup of your site when you view source in the browser, but this markup is critical for syncing changes from the HTML file to the .master file that SharePoint actually uses. Each time you save a change to your HTML file, this SharePoint markup makes it possible for that same change to be made to the associated .master file in the background. For more information, see the markup samples in  [How to: Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint).
+When you create a minimal master page, an HTML file is created that's associated with the .master file, and this HTML file contains many lines of markup that are specific to how SharePoint works. You can safely ignore most of this markup, and most of it does not appear in the final markup of your site when you view source in the browser, but this markup is critical for syncing changes from the HTML file to the .master file that SharePoint actually uses. Each time you save a change to your HTML file, this SharePoint markup makes it possible for that same change to be made to the associated .master file in the background. For more information, see the markup samples in  [How to: Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint.md).
   
     
     
@@ -97,16 +98,16 @@ When you create a minimal master page, an HTML file is created that's associated
 <a name="Additional"> </a>
 
 
--  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint)
+-  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md)
     
   
--  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint)
+-  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md)
     
   
--  [How to: Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint)
+-  [How to: Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint.md)
     
   
--  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets)
+-  [SharePoint Design Manager snippets](sharepoint-design-manager-snippets.md)
     
   
 

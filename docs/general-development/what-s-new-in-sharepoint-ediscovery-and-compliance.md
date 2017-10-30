@@ -1,6 +1,7 @@
 ---
 title: What's new in SharePoint eDiscovery and compliance
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 39a1cc3f-c78d-478f-8c15-928b96386a52
 ---
 
@@ -94,7 +95,7 @@ Sites, and other large objects, sometimes require that their users comply with a
 <a name="bk_addresources"> </a>
 
 
--  [eDiscovery in SharePoint](ediscovery-in-sharepoint)
+-  [eDiscovery in SharePoint](ediscovery-in-sharepoint.md)
     
   
 

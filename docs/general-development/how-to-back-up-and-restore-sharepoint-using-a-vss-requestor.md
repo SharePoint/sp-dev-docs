@@ -1,6 +1,7 @@
 ---
 title: How to Back up and restore SharePoint using a VSS requestor
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: cab5ba90-bd23-4cec-82d7-529e3f86ba88
 ---
 
@@ -62,7 +63,7 @@ Also, to be hosted by the SharePoint Foundation Timer service (owstimer.exe), th
 <a name="bk_addresources"> </a>
 
 
--  [Overview of SharePoint and the Volume Shadow Copy Service](overview-of-sharepoint-and-the-volume-shadow-copy-service)
+-  [Overview of SharePoint and the Volume Shadow Copy Service](overview-of-sharepoint-and-the-volume-shadow-copy-service.md)
     
   
 

@@ -1,6 +1,7 @@
 ---
 title: Custom content processing with the Content Enrichment web service callout
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: bdda92c8-9c8d-416e-9a6b-4a9373686fa0
 ---
 
@@ -22,7 +23,7 @@ Search in SharePoint enables users to modify the managed properties of crawled i
   
     
     
-![Content enrichment within content processing](../../images/SP15_Content_Enrichment.gif)
+![Content enrichment within content processing](../images/SP15_Content_Enrichment.gif)
   
     
     
@@ -142,7 +143,7 @@ Table 2 lists examples of trigger conditions.
 |StartsWith(MP1, "sample") AND MP2 != 18  <br/> |Returns **true** if the value in the managed property MP1 starts with "sample" and the value of managed property MP2 is not 18. <br/> |MP1 must be of type **string** and MP2 must be a numeric type. <br/> |
 |IsDay(MP1, 2009, 12, 24)  <br/> |Checks whether the managed property MP1 contains a **DateTime** that falls on December 24, 2009. <br/> |MP1 must be of type **DateTime**.  <br/> |
    
-See  [Trigger expressions syntax in SharePoint](trigger-expressions-syntax-in-sharepoint) for the elements that can be used in a trigger expression and a list of supported functions.
+See  [Trigger expressions syntax in SharePoint](trigger-expressions-syntax-in-sharepoint.md) for the elements that can be used in a trigger expression and a list of supported functions.
   
     
     
@@ -166,10 +167,10 @@ For a basic implementation, do the following:
 <a name="bk_addresources"> </a>
 
 
--  [Configure search in SharePoint](configure-search-in-sharepoint)
+-  [Configure search in SharePoint](configure-search-in-sharepoint.md)
     
   
--  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout)
+-  [Custom content processing with the Content Enrichment web service callout](custom-content-processing-with-the-content-enrichment-web-service-callout.md)
     
   
 

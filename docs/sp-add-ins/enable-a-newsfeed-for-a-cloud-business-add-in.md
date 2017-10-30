@@ -1,8 +1,15 @@
+---
+title: Enable a newsfeed for a cloud business add-in
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Enable a newsfeed for a cloud business add-in
 Social and collaboration features in SharePoint for Office 365 allow users to track activity on a list and add comments. You can easily create a newsfeed for your Cloud Business Add-in by enabling a couple of properties.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 
@@ -24,7 +31,7 @@ To host the newsfeed, you'll need a SharePoint Developer site on Office 365, whi
  
 2. In the  **Properties** window, select the **Post when Created** and/or **Post when Updated** check boxes.
     
-  ![Social properties](../../images/CBAsocial.PNG)
+  ![Social properties](../images/CBAsocial.PNG)
  
 
      **Post when Created** adds a thread to the newsfeed for each new list item. **Post when Updated** adds a thread when the value for an item in the list is changed. Post triggers determine which fields in the item will trigger a post.
@@ -52,7 +59,7 @@ To host the newsfeed, you'll need a SharePoint Developer site on Office 365, whi
  
 3. On the SharePoint chrome bar, choose the  **Newsfeed** link.
     
-  ![The SharePoint chrome bar](../../images/CBAnewsfeed.PNG)
+  ![The SharePoint chrome bar](../images/CBAnewsfeed.PNG)
  
 
     The  **Newsfeed** page opens in a new browser window with entries for the added and/or updated items. You can choose the **Like** link for a post, or you can choose the **Reply** link to add a comment.
@@ -63,13 +70,13 @@ To host the newsfeed, you'll need a SharePoint Developer site on Office 365, whi
 <a name="bk_addresources"> </a>
 
 
--  [Develop cloud business add-ins](develop-cloud-business-add-ins)
+-  [Develop cloud business add-ins](develop-cloud-business-add-ins.md)
     
  
 -  [Social and collaboration features in SharePoint](http://msdn.microsoft.com/en-us/library/office/jj163280.aspx)
     
  
--  [Create a cloud business add-in with a social newsfeed](create-a-cloud-business-add-in-with-a-social-newsfeed)
+-  [Create a cloud business add-in with a social newsfeed](create-a-cloud-business-add-in-with-a-social-newsfeed.md)
     
  
 

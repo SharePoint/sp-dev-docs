@@ -1,27 +1,33 @@
+---
+title: Use OData query operations in SharePoint REST requests
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # Use OData query operations in SharePoint REST requests
 Learn how to use a wide range of OData query string operators to select, filter, and order the data you request from the SharePoint REST service. 
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
  **Before you start**
  
 
--  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-2013-rest-service)
+-  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
     
  
--  [Navigate the SharePoint data structure represented in the REST service](navigate-the-sharepoint-data-structure-represented-in-the-rest-service)
+-  [Navigate the SharePoint data structure represented in the REST service](navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md)
     
  
--  [Determine SharePoint REST service endpoint URIs](determine-sharepoint-rest-service-endpoint-uris)
+-  [Determine SharePoint REST service endpoint URIs](determine-sharepoint-rest-service-endpoint-uris.md)
     
  
 The SharePoint REST service supports a wide range of OData query string operators that enable you to select, filter, and order the data you request.
  
 
- **Tip**  The SharePoint Online (and on-premise SharePoint 2016 and later) REST service supports combining multiple requests into a single call to the service by using the OData  `$batch` query option. For details and links to code samples, see [Make batch requests with the REST APIs](make-batch-requests-with-the-rest-apis).
+ **Tip**  The SharePoint Online (and on-premise SharePoint 2016 and later) REST service supports combining multiple requests into a single call to the service by using the OData  `$batch` query option. For details and links to code samples, see [Make batch requests with the REST APIs](make-batch-requests-with-the-rest-apis.md).
  
 
 
@@ -138,7 +144,7 @@ The figure below shows the supported OData query options.
  
 
  
-![SharePoint REST service query option syntax](../../images/SPF15Con_REST_queryOptionSyntax.png)
+![SharePoint REST service query option syntax](../images/SPF15Con_REST_queryOptionSyntax.png)
  
 
  
@@ -149,22 +155,22 @@ The figure below shows the supported OData query options.
 <a name="bk_addresources"> </a>
 
 
--  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-2013-rest-service)
+-  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
     
  
--  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-2013-rest-endpoints)
+-  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md)
     
  
--  [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest)
+-  [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest.md)
     
  
--  [Working with folders and files with REST](working-with-folders-and-files-with-rest)
+-  [Working with folders and files with REST](working-with-folders-and-files-with-rest.md)
     
  
--  [Navigate the SharePoint data structure represented in the REST service](navigate-the-sharepoint-data-structure-represented-in-the-rest-service)
+-  [Navigate the SharePoint data structure represented in the REST service](navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md)
     
  
--  [Determine SharePoint REST service endpoint URIs](determine-sharepoint-rest-service-endpoint-uris)
+-  [Determine SharePoint REST service endpoint URIs](determine-sharepoint-rest-service-endpoint-uris.md)
     
  
 -  [REST API reference and samples](http://msdn.microsoft.com/library/rest-api-reference-and-samples%28Office.15%29.aspx)

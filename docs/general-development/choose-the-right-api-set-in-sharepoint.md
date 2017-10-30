@@ -1,6 +1,7 @@
 ---
 title: Choose the right API set in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: f36645da-77c5-47f1-a2ca-13d4b62b320d
 ---
 
@@ -62,7 +63,7 @@ This topic provides an overview of the various API sets that are provided by Sha
   
     
     
-![Venn diagram of API sets and SharePoint app types](../../images/SharePointAPIsetsandselectedSharePointextensions.png)
+![Venn diagram of API sets and SharePoint app types](../images/SharePointAPIsetsandselectedSharePointextensions.png)
   
     
     
@@ -295,7 +296,7 @@ Figure 2 illustrates the relationship of the various client APIs, various types 
   
     
     
-![Programming model for apps for SharePoint](../../images/Sp15_app_.png)
+![Programming model for apps for SharePoint](../images/Sp15_app_.png)
   
     
     
@@ -320,13 +321,13 @@ Two API sets are still supported in the SharePoint framework for backward compat
 <a name="bk_addresources"> </a>
 
 
--  [SharePoint development overview](sharepoint-development-overview)
+-  [SharePoint development overview](sharepoint-development-overview.md)
     
   
--  [Programming models in SharePoint](programming-models-in-sharepoint)
+-  [Programming models in SharePoint](programming-models-in-sharepoint.md)
     
   
--  [SharePoint Add-ins compared with SharePoint solutions](sharepoint-add-ins-compared-with-sharepoint-solutions)
+-  [SharePoint Add-ins compared with SharePoint solutions](sharepoint-add-ins-compared-with-sharepoint-solutions.md)
     
   
 -  [Use OData query operations in SharePoint REST requests](http://msdn.microsoft.com/library/d4b5c277-ed50-420c-8a9b-860342284b72%28Office.15%29.aspx)

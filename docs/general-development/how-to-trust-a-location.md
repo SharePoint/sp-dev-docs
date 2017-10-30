@@ -1,9 +1,10 @@
----
+﻿---
 title: How to Trust a Location
+ms.date: 09/25/2017
 keywords: how to,howdoi,howto,trusted location
 f1_keywords:
 - how to,howdoi,howto,trusted location
-ms.prod: SHAREPOINT
+ms.prod: sharepoint
 ms.assetid: 0f396c0b-f578-4d1a-9e6b-a75f352265ab
 ---
 
@@ -66,22 +67,22 @@ You can also trust a location by using Windows PowerShell. For more information,
   
     
     
- [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs)
+ [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md)
   
     
     
- [How to: Save from Excel Client to the Server](how-to-save-from-excel-client-to-the-server)
+ [How to: Save from Excel Client to the Server](how-to-save-from-excel-client-to-the-server.md)
 #### Concepts
 
 
   
     
     
- [Excel Services Alerts](excel-services-alerts)
+ [Excel Services Alerts](excel-services-alerts.md)
 #### Other resources
 
 
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)

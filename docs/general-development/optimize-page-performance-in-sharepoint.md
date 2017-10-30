@@ -1,6 +1,7 @@
 ---
 title: Optimize page performance in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 262caeef-64fd-4e02-b947-d772faf01159
 ---
 
@@ -49,7 +50,7 @@ Both AJAX and MDS are technologies that request only sections of the page to min
   
     
     
-![MDS architecture](../../images/OptimizePage_Fig01_MDSArchitecture.png)
+![MDS architecture](../images/OptimizePage_Fig01_MDSArchitecture.png)
   
     
     
@@ -67,7 +68,7 @@ The MDS framework assumes that a master page defines a chrome and content region
   
     
     
-![Page chrome and regions in a SharePoint page](../../images/OptimizePage_Fig02_PageStructure.png)
+![Page chrome and regions in a SharePoint page](../images/OptimizePage_Fig02_PageStructure.png)
   
     
     
@@ -446,7 +447,7 @@ You should categorize page optimization techniques into one of two categories: f
 - Use consolidated images and files; for example, combine multiple CSS files into one. Combine images into an image strip or cluster.
     
   
-- Use compression (crunch) techniques. For more information, see  [Compress (crunch) JavaScript and CSS files](optimize-page-performance-in-sharepoint#OptimizingPagePerformance_Crunch).
+- Use compression (crunch) techniques. For more information, see  [Compress (crunch) JavaScript and CSS files](optimize-page-performance-in-sharepoint.md#OptimizingPagePerformance_Crunch).
     
   
 - Verify that you are referencing the production version of common JavaScript libraries, such as jQuery, instead of the debug versions.
@@ -589,7 +590,7 @@ You should minimize the number of images in your site. To help with that effort,
   
     
     
-![Single image file that contains multiple images](../../images/OptimizePage_Fig03_SingleImage.png)
+![Single image file that contains multiple images](../images/OptimizePage_Fig03_SingleImage.png)
   
     
     
@@ -607,7 +608,7 @@ Figure 4 shows how the image file is subsequently changed to display as individu
   
     
     
-![Multiple images displayed in a table](../../images/OptimizePage_Fig04_ImageTable.png)
+![Multiple images displayed in a table](../images/OptimizePage_Fig04_ImageTable.png)
   
     
     
@@ -772,7 +773,7 @@ Figure 5 shows the Developer Dashboard.
   
     
     
-![Developer dashboard](../../images/OptimizePage_Fig05_DevDashboard.png)
+![Developer dashboard](../images/OptimizePage_Fig05_DevDashboard.png)
   
     
     
@@ -793,15 +794,15 @@ Much of the guidance for SharePoint 2010 page performance optimization applies t
 <a name="bk_addresources"> </a>
 
 
--  [Build sites for SharePoint](build-sites-for-sharepoint)
+-  [Build sites for SharePoint](build-sites-for-sharepoint.md)
     
   
--  [SharePoint Design Manager image renditions](sharepoint-design-manager-image-renditions)
+-  [SharePoint Design Manager image renditions](sharepoint-design-manager-image-renditions.md)
     
   
--  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint)
+-  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md)
     
   
--  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model)
+-  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md)
     
   

@@ -1,9 +1,10 @@
----
+﻿---
 title: How to Save to the Server to Prepare for Programmatic Access
+ms.date: 09/25/2017
 keywords: how to,howdoi,howto
 f1_keywords:
 - how to,howdoi,howto
-ms.prod: OFFICE365
+ms.prod: sharepoint
 ms.assetid: 80b34a29-3d40-4d11-9ba1-b4886ffcfd42
 ---
 
@@ -22,7 +23,7 @@ This example shows how to save an Excel workbook to the server to to prepare it 
 2. Save the workbook to a trusted SharePoint library location. 
     
     > **Note:**
-      > It is assumed that you have already created a SharePoint document library and made it a trusted location. For more information, see  [How to: Trust a Location](how-to-trust-a-location). 
+      > It is assumed that you have already created a SharePoint document library and made it a trusted location. For more information, see  [How to: Trust a Location](how-to-trust-a-location.md). 
 3. Programmatically specify values for the worksheet, named range, and cell value by using the Excel Web Services **SetCellA1** method. The values are passed in as arguments—that is, _args [1]_ and _args [2]_:
     
 ```cs
@@ -48,7 +49,7 @@ You can specify the values of  _args [1]_ and _args [2]_ by using a Web form or 
 GetSnapshot.exe http://MyServer002/MyTrustedDocumentLibrary/TestMyParam.xlsx MyParam28 > MySnapshot.xlsx 
 ```
 
-In this example,  _args [1]_ is **MyParam**, **args [2]** is _28_ and _GetSnapshot.exe_ is the name of the application that you create. To find a sample program, see [How to: Get an Entire Workbook or a Snapshot](how-to-get-an-entire-workbook-or-a-snapshot).
+In this example,  _args [1]_ is **MyParam**, **args [2]** is _28_ and _GetSnapshot.exe_ is the name of the application that you create. To find a sample program, see [How to: Get an Entire Workbook or a Snapshot](how-to-get-an-entire-workbook-or-a-snapshot.md).
 ### To create a named range
 
 
@@ -189,7 +190,7 @@ status = xlSrv.SetCellA1(sessionId, String.Empty, args[1], args[2]);
   
 
 > **Note:**
-> For more information about snapshots, see  [How to: Get an Entire Workbook or a Snapshot](how-to-get-an-entire-workbook-or-a-snapshot). For more information about the **SetCellA1** method, see the Excel Web Services reference documentation. The namespace of the Web service is [Microsoft.Office.Excel.Server.WebServices](https://msdn.microsoft.com/library/Microsoft.Office.Excel.Server.WebServices.aspx) .
+> For more information about snapshots, see  [How to: Get an Entire Workbook or a Snapshot](how-to-get-an-entire-workbook-or-a-snapshot.md). For more information about the **SetCellA1** method, see the Excel Web Services reference documentation. The namespace of the Web service is [Microsoft.Office.Excel.Server.WebServices](https://msdn.microsoft.com/library/Microsoft.Office.Excel.Server.WebServices.aspx) .
   
     
     
@@ -204,7 +205,7 @@ status = xlSrv.SetCellA1(sessionId, String.Empty, args[1], args[2]);
   
     
     
- [How to: Save from Excel Client to the Server](how-to-save-from-excel-client-to-the-server)
+ [How to: Save from Excel Client to the Server](how-to-save-from-excel-client-to-the-server.md)
 #### Reference
 
 
@@ -218,19 +219,19 @@ status = xlSrv.SetCellA1(sessionId, String.Empty, args[1], args[2]);
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api)
+ [Accessing the SOAP API](accessing-the-soap-api.md)
   
     
     
- [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking)
+ [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking.md)
   
     
     
- [Excel Services Alerts](excel-services-alerts)
+ [Excel Services Alerts](excel-services-alerts.md)
 #### Other resources
 
 
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)

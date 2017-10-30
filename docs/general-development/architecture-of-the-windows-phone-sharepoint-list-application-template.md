@@ -1,6 +1,7 @@
 ---
 title: Architecture of the Windows Phone SharePoint List Application template
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 2c09bd02-bed0-4293-a4d4-1778692e246a
 ---
 
@@ -38,7 +39,7 @@ The three main components or layers of the MVVM pattern are the View, the Model,
   
     
     
-![Template files in MVVM pattern](../../images/96681da7-ceab-40f3-8d08-441aea9b4a6f.gif)
+![Template files in MVVM pattern](../images/96681da7-ceab-40f3-8d08-441aea9b4a6f.gif)
   
     
     
@@ -123,7 +124,7 @@ Figure 2 shows a simplified representation of the class inheritance hierarchy fo
   
     
     
-![The EditItemViewModel and EditForm classes](../../images/9faa4fbc-5fd6-4960-ba25-8a8cc0195562.gif)
+![The EditItemViewModel and EditForm classes](../images/9faa4fbc-5fd6-4960-ba25-8a8cc0195562.gif)
   
     
     
@@ -131,7 +132,7 @@ The **EditForm** class (which represents the View component from the MVVM patter
   
     
     
-Software designs based on the MVVM pattern often confine business logic and validation routines to the Model component of the pattern. In projects based on the Windows Phone SharePoint List Application template, however, some operations that are typically considered part of the Model component have been implemented in the ViewModel component to make it more convenient for developers to extend the projects, at the cost of slightly blurring the conceptual distinction between the data layer (Model) and the presentation layer (ViewModel). For example, the ViewModel classes for editing and creating list items (that is, the **EditItemViewModel** and **NewItemViewModel** classes) expose a **Validate** method that developers can override to implement validation of data entered by users. (For information on implementing data validation with these ViewModels, see [How to: Implement business logic and data validation in a Windows Phone app for SharePoint](how-to-implement-business-logic-and-data-validation-in-a-windows-phone-app-for-s).)
+Software designs based on the MVVM pattern often confine business logic and validation routines to the Model component of the pattern. In projects based on the Windows Phone SharePoint List Application template, however, some operations that are typically considered part of the Model component have been implemented in the ViewModel component to make it more convenient for developers to extend the projects, at the cost of slightly blurring the conceptual distinction between the data layer (Model) and the presentation layer (ViewModel). For example, the ViewModel classes for editing and creating list items (that is, the **EditItemViewModel** and **NewItemViewModel** classes) expose a **Validate** method that developers can override to implement validation of data entered by users. (For information on implementing data validation with these ViewModels, see [How to: Implement business logic and data validation in a Windows Phone app for SharePoint](how-to-implement-business-logic-and-data-validation-in-a-windows-phone-app-for-s.md)..md)
   
     
     
@@ -151,7 +152,7 @@ The App.xaml file and its associated code-behind file, App.xaml.cs, are standard
   
     
     
-For information about the kinds of modifications you might make to the App.xaml.cs file in your projects, see  [How to: Store and retrieve SharePoint list items on a Windows Phone](how-to-store-and-retrieve-sharepoint-list-items-on-a-windows-phone) on implementing event handlers in the App.xaml.cs file to preserve application state information, and [How to: Use multiple SharePoint lists in a Windows Phone app](how-to-use-multiple-sharepoint-lists-in-a-windows-phone-app) on instantiating and configuring additional **ListDataProvider** objects in App.xaml.cs.
+For information about the kinds of modifications you might make to the App.xaml.cs file in your projects, see  [How to: Store and retrieve SharePoint list items on a Windows Phone](how-to-store-and-retrieve-sharepoint-list-items-on-a-windows-phone.md) on implementing event handlers in the App.xaml.cs file to preserve application state information, and [How to: Use multiple SharePoint lists in a Windows Phone app](how-to-use-multiple-sharepoint-lists-in-a-windows-phone-app.md) on instantiating and configuring additional **ListDataProvider** objects in App.xaml.cs.
   
     
     

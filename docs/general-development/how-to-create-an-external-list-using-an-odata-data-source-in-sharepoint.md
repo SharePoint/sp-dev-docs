@@ -1,6 +1,7 @@
 ---
 title: How to Create an external list using an OData data source in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 601fbfce-a0c6-43dd-8398-540d094c083c
 ---
 
@@ -30,10 +31,10 @@ The following components are needed to create an external list from an OData sou
 - Office Developer Tools for Visual Studio 2012
     
   
-- A published external content type based on an OData source: For instructions, see  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint).
+- A published external content type based on an OData source: For instructions, see  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md).
     
   
-For information about setting up a SharePoint development environment, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint).
+For information about setting up a SharePoint development environment, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md).
   
     
     
@@ -50,7 +51,7 @@ The following articles provide information about SharePoint Add-ins and other ba
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint) <br/> |Learn about Business Connectivity Services and how you can expose external data in SharePoint.  <br/> |
+| [Get started with Business Connectivity Services in SharePoint](get-started-with-business-connectivity-services-in-sharepoint.md) <br/> |Learn about Business Connectivity Services and how you can expose external data in SharePoint.  <br/> |
 | [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx) <br/> |Learn about the new app model in SharePoint that enables you to create apps, which are small, easy-to-use solutions for end users.  <br/> |
 | [Choose patterns for developing and hosting your SharePoint Add-in](http://msdn.microsoft.com/library/05ce5435-0a03-4ddc-976b-c33b08d03457%28Office.15%29.aspx) <br/> |Learn about the different ways that you can host SharePoint Add-ins.  <br/> |
    
@@ -64,7 +65,7 @@ The following procedures will show you how to create a new external list, bind i
     
 
 > **Note:**
-> The first step assumes that you have successfully created an external content type, as described in  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint). 
+> The first step assumes that you have successfully created an external content type, as described in  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md). 
   
     
     
@@ -113,19 +114,19 @@ For testing purposes, you may want to modify the AppManifest.xml file so that th
 <a name="bkmk_AdditionalResources"> </a>
 
 
--  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint)
+-  [Business Connectivity Services in SharePoint](business-connectivity-services-in-sharepoint.md)
     
   
--  [Using OData sources with Business Connectivity Services in SharePoint](using-odata-sources-with-business-connectivity-services-in-sharepoint)
+-  [Using OData sources with Business Connectivity Services in SharePoint](using-odata-sources-with-business-connectivity-services-in-sharepoint.md)
     
   
--  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint)
+-  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md)
     
   
 -  [How to: Create a basic autohosted app for SharePoint](http://msdn.microsoft.com/library/0572894d-c437-4b7d-8ac6-8405496e2145%28Office.15%29.aspx)
     
   
--  [Using OData sources with Business Connectivity Services in SharePoint](using-odata-sources-with-business-connectivity-services-in-sharepoint)
+-  [Using OData sources with Business Connectivity Services in SharePoint](using-odata-sources-with-business-connectivity-services-in-sharepoint.md)
     
   
 

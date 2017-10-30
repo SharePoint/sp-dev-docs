@@ -1,6 +1,7 @@
 ---
 title: How to Follow people by using the .NET client object model in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 0fdb7ca5-d408-4256-b52b-886c4bc3b5b8
 ---
 
@@ -70,8 +71,8 @@ To create a console application that uses the .NET client object model to work w
   
 6. Replace the contents of the **Program** class with the code example from one of the following scenarios:
     
-  -  [Start and stop following people](how-to-follow-people-by-using-the-net-client-object-model-in-sharepoint#bkmk_FollowPeople)  
-  -  [Get followers and followed people](how-to-follow-people-by-using-the-net-client-object-model-in-sharepoint#bkmk_GetFollowednFollowers)
+  -  [Start and stop following people](how-to-follow-people-by-using-the-net-client-object-model-in-sharepoint.md#bkmk_FollowPeople)  
+  -  [Get followers and followed people](how-to-follow-people-by-using-the-net-client-object-model-in-sharepoint.md#bkmk_GetFollowednFollowers)
     
   
 7. To test the console application, on the menu bar, choose **Debug**, **Start Debugging**.
@@ -303,13 +304,13 @@ namespace FollowPeopleCSOM
 <a name="bkmk_AdditionalResources"> </a>
 
 
--  [Follow people in SharePoint](follow-people-in-sharepoint)
+-  [Follow people in SharePoint](follow-people-in-sharepoint.md)
     
   
--  [How to: Follow people by using the JavaScript object model in SharePoint](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint)
+-  [How to: Follow people by using the JavaScript object model in SharePoint](how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint.md)
     
   
--  [How to: Follow documents and sites by using the .NET client object model in SharePoint](how-to-follow-documents-and-sites-by-using-the-net-client-object-model-in-sharep)
+-  [How to: Follow documents and sites by using the .NET client object model in SharePoint](how-to-follow-documents-and-sites-by-using-the-net-client-object-model-in-sharep.md)
     
   
 

@@ -1,3 +1,10 @@
+---
+title: Synchronize SharePoint items using the REST service
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Synchronize SharePoint items using the REST service
 Learn how to synchronize items between SharePoint and your add-ins or services by using the  **GetListItemChangesSinceToken** resource, part of the SharePoint REST service.
 

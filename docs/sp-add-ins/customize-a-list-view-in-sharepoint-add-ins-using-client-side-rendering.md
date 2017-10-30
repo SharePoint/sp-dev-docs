@@ -1,8 +1,15 @@
+---
+title: Customize a list view in SharePoint Add-ins using client-side rendering
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Customize a list view in SharePoint Add-ins using client-side rendering
 Learn how to customize a list view in a SharePoint-hosted add-in by using the client-side rendering technology in SharePoint.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 In SharePoint, client-side rendering provides a way for you to produce your own output for a set of controls that are hosted in a SharePoint page. It enables you to use well-known technologies, such as HTML and JavaScript, to define the rendering logic of SharePoint list views. With client-side rendering, you can specify your own JavaScript resources and host them in the data storage options that are available to your add-ins, such as in a document library. A SharePoint-hosted add-in includes only SharePoint components. A SharePoint-hosted add-in has its resources in an isolated subsite of the host web, called the add-in web.
@@ -39,9 +46,9 @@ The following table lists useful articles that can help you understand the conce
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [SharePoint Add-ins](sharepoint-add-ins)|Learn about the new add-in model in Microsoft SharePoint that enables you to create add-ins, which are small, easy-to-use solutions for end users.|
-| [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins)|Learn about the UX options that you have when you are building SharePoint Add-ins.|
-| [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013)|Learn about the difference between host webs and add-in webs. Find out which SharePoint components can be included in a SharePoint Add-in, which components are deployed to the host web, which components are deployed to the add-in web, and how the add-in web is deployed in an isolated domain.|
+| [SharePoint Add-ins](sharepoint-add-ins.md)|Learn about the new add-in model in Microsoft SharePoint that enables you to create add-ins, which are small, easy-to-use solutions for end users.|
+| [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md)|Learn about the UX options that you have when you are building SharePoint Add-ins.|
+| [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md)|Learn about the difference between host webs and add-in webs. Find out which SharePoint components can be included in a SharePoint Add-in, which components are deployed to the host web, which components are deployed to the add-in web, and how the add-in web is deployed in an isolated domain.|
 
 ## Code example: Customize a list view by using client-side rendering
 <a name="SP15CSRlistview_Codeexample"> </a>
@@ -70,7 +77,7 @@ Figure 1 shows a client-side rendered view of an announcements list.
  
 
  
-![Custom view of an announcements list](../../images/CSRListView_result.png)
+![Custom view of an announcements list](../images/CSRListView_result.png)
  
 
 ### To create the SharePoint Add-in project
@@ -88,7 +95,7 @@ Figure 1 shows a client-side rendered view of an announcements list.
 
  
 
-  ![App for SharePoint Visual Studio template](../../images/AppForSharePointVSTemplate.PNG)
+  ![App for SharePoint Visual Studio template](../images/AppForSharePointVSTemplate.PNG)
  
 
  
@@ -244,19 +251,19 @@ This article demonstrated how to customize a list view in a SharePoint Add-in by
 
  
 
--  [Code sample: Customize a list view in an add-in using client-side rendering](http://code.msdn.microsoft.com/SharePoint-2013-Customize-61761017)
+-  [Code sample: Customize a list view in an add-in using client-side rendering](http://code.msdn.microsoft.com/SharePoint-Customize-61761017)
     
  
--  [Use a SharePoint website's style sheet in SharePoint Add-ins](use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins)
+-  [Use a SharePoint website's style sheet in SharePoint Add-ins](use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins.md)
     
  
--  [Use the client chrome control in SharePoint Add-ins](use-the-client-chrome-control-in-sharepoint-add-ins)
+-  [Use the client chrome control in SharePoint Add-ins](use-the-client-chrome-control-in-sharepoint-add-ins.md)
     
  
--  [Create custom actions to deploy with SharePoint Add-ins](create-custom-actions-to-deploy-with-sharepoint-add-ins)
+-  [Create custom actions to deploy with SharePoint Add-ins](create-custom-actions-to-deploy-with-sharepoint-add-ins.md)
     
  
--  [Create add-in parts to install with your SharePoint Add-in](create-add-in-parts-to-install-with-your-sharepoint-add-in)
+-  [Create add-in parts to install with your SharePoint Add-in](create-add-in-parts-to-install-with-your-sharepoint-add-in.md)
     
  
 
@@ -264,19 +271,19 @@ This article demonstrated how to customize a list view in a SharePoint Add-in by
 <a name="SP15CSRlistview_AddResources"> </a>
 
 
--  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins)
+-  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md)
     
  
--  [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins)
+-  [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md)
     
  
--  [Create UX components in SharePoint](create-ux-components-in-sharepoint-2013)
+-  [Create UX components in SharePoint](create-ux-components-in-sharepoint.md)
     
  
--  [Three ways to think about design options for SharePoint Add-ins](three-ways-to-think-about-design-options-for-sharepoint-add-ins)
+-  [Three ways to think about design options for SharePoint Add-ins](three-ways-to-think-about-design-options-for-sharepoint-add-ins.md)
     
  
--  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscape)
+-  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md)
     
  
 

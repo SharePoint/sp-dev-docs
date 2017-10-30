@@ -1,9 +1,10 @@
 ---
 title: Set up a general development environment for SharePoint
+ms.date: 09/25/2017
 keywords: install SharePoint,set up SharePoint,setup SharePoint
 f1_keywords:
 - install SharePoint,set up SharePoint,setup SharePoint
-ms.prod: SHAREPOINT
+ms.prod: sharepoint
 ms.assetid: 08e4e4e1-d960-43fa-85df-f3c279ed6927
 ---
 
@@ -90,7 +91,7 @@ SharePoint requires your operating system to have certain prerequisites installe
 
   
 
-  ![SharePoint Installation Server Type](../../images/SP15_app_ServerType.gif)
+  ![SharePoint Installation Server Type](../images/SP15_app_ServerType.gif)
   
 
   
@@ -114,7 +115,7 @@ dir /od *.log
 
   
 
-  ![SharePoint site templates](../../images/SP15_app_ChooseSiteTemplates.gif)
+  ![SharePoint site templates](../images/SP15_app_ChooseSiteTemplates.gif)
   
 
   
@@ -157,7 +158,7 @@ The registry path will change in future versions of Visual Studio.
 ## Next steps
 <a name="SP15_bk_devenvazure"> </a>
 
-If you will be creating workflows, continue with  [Set up and configure SharePoint Workflow Manager](set-up-and-configure-sharepoint-workflow-manager).
+If you will be creating workflows, continue with  [Set up and configure SharePoint Workflow Manager](set-up-and-configure-sharepoint-workflow-manager.md).
   
     
     

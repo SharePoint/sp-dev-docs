@@ -1,6 +1,7 @@
 ---
 title: Resources URI for Excel Services REST API
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 79f95305-ec9e-4842-b937-85f66ced98e4
 ---
 
@@ -110,4 +111,4 @@ Table 1 shows all the accessible resources in the Excel Services REST API. To ac
   
     
     
- [Basic URI Structure and Path](basic-uri-structure-and-path)
+ [Basic URI Structure and Path](basic-uri-structure-and-path.md)

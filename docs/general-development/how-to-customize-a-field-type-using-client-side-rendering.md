@@ -1,6 +1,7 @@
 ---
 title: How to Customize a field type using client-side rendering
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 18e32537-d7ed-4fe7-90cf-b6cfab3f85a3
 ---
 
@@ -31,7 +32,7 @@ To follow the steps in this example, you need the following:
 - A SharePoint development environment
     
   
-For information about setting up your SharePoint development environment, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint).
+For information about setting up your SharePoint development environment, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md).
   
     
     
@@ -48,7 +49,7 @@ The following table lists useful articles that can help you understand the conce
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint) <br/> |Learn about developing, packaging, and deploying administrative extensions to SharePoint using farm solutions.  <br/> |
+| [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint.md) <br/> |Learn about developing, packaging, and deploying administrative extensions to SharePoint using farm solutions.  <br/> |
 | [Custom Field Types](http://msdn.microsoft.com/en-us/library/ms446361.aspx) <br/> |Learn about creating custom field types. As you store your business information in SharePoint, there may be times when your data does not conform to the field types that are available in SharePoint FoundationOr, you might just want to customize those field types. Custom fields can include custom data validation and custom field rendering.  <br/> |
    
 
@@ -86,7 +87,7 @@ Figure 1 shows a view form with a custom-rendered field type.
   
     
     
-  ![Custom client-side rendered field in a View form](../../images/CSRFieldType_result.png)
+  ![Custom client-side rendered field in a View form](../images/CSRFieldType_result.png)
   
     
     
@@ -106,7 +107,7 @@ Figure 1 shows a view form with a custom-rendered field type.
 
   
 
-  ![SharePoint Project Visual Studio template](../../images/SharePointSolutionVSTemplate.png)
+  ![SharePoint Project Visual Studio template](../images/SharePointSolutionVSTemplate.png)
   
 
   
@@ -312,7 +313,7 @@ function favoriteColorViewTemplate(ctx) {
 
   
 
-  ![Creating a new custom field type column](../../images/CSRFieldType_addcolumn.png)
+  ![Creating a new custom field type column](../images/CSRFieldType_addcolumn.png)
   
 
   
@@ -347,18 +348,18 @@ This article demonstrated how to customize the rendering process for a custom fi
 <a name="SP15CustomizeafieldtypeusingCSR_AddResources"> </a>
 
 
--  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint)
+-  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md)
     
   
--  [Build sites for SharePoint](build-sites-for-sharepoint)
+-  [Build sites for SharePoint](build-sites-for-sharepoint.md)
     
   
--  [What's new for developers in SharePoint](what???s-new-for-developers-in-sharepoint)
+-  [What's new for developers in SharePoint](what-s-new-for-developers-in-sharepoint.md)
     
   
--  [Add SharePoint capabilities](add-sharepoint-capabilities)
+-  [Add SharePoint capabilities](add-sharepoint-capabilities.md)
     
   
--  [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint)
+-  [Build farm solutions in SharePoint](build-farm-solutions-in-sharepoint.md)
     
   

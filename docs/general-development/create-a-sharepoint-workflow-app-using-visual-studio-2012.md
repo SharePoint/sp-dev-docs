@@ -1,6 +1,7 @@
----
+﻿---
 title: Create a SharePoint workflow app using Visual Studio 2012
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 7923d60d-84b9-44d6-8185-e5236efaf502
 ---
 
@@ -40,7 +41,7 @@ For assistance setting up and configuring your SharePoint workflow development e
     
     
 
--  [Prepare to set up and configure a SharePoint workflow development environment](prepare-to-set-up-and-configure-a-sharepoint-workflow-development-environment)
+-  [Prepare to set up and configure a SharePoint workflow development environment](prepare-to-set-up-and-configure-a-sharepoint-workflow-development-environment.md)
     
   
 -  [Configure workflow in SharePoint](http://technet.microsoft.com/en-us/library/jj658586%28v=office.15%29)
@@ -71,7 +72,7 @@ Here's a flowchart that depicts the course of the workflow we're going to create
   
     
     
-![Flowchart depicting the document approval workflow](../../images/ngGK_Flowchart.png)
+![Flowchart depicting the document approval workflow](../images/ngGK_Flowchart.png)
   
     
     
@@ -99,7 +100,7 @@ In summary, the workflow does the following:
 
     
 > **Important:**
-> Before you start this walkthrough, ensure that you have a properly installed and configured workflow development environment. For more information, see  [Prepare to set up and configure a SharePoint workflow development environment](prepare-to-set-up-and-configure-a-sharepoint-workflow-development-environment). Also, ensure that you have a SharePoint instance that you can develop your workflow against. For more information, see  [Install SharePoint](http://technet.microsoft.com/en-us/library/cc303424.aspx). 
+> Before you start this walkthrough, ensure that you have a properly installed and configured workflow development environment. For more information, see  [Prepare to set up and configure a SharePoint workflow development environment](prepare-to-set-up-and-configure-a-sharepoint-workflow-development-environment.md). Also, ensure that you have a SharePoint instance that you can develop your workflow against. For more information, see  [Install SharePoint](http://technet.microsoft.com/en-us/library/cc303424.aspx). 
   
     
     
@@ -122,7 +123,7 @@ The first step is preparing our SharePoint site with document libraries that our
 
   
 
-  ![New project dialog in Visual Studio 2012](../../images/ngGK_Fig02.png)
+  ![New project dialog in Visual Studio 2012](../images/ngGK_Fig02.png)
   
 
   
@@ -142,7 +143,7 @@ The first step is preparing our SharePoint site with document libraries that our
 
   
 
-  ![Create new document library wizard](../../images/ngGK_Fig03.png)
+  ![Create new document library wizard](../images/ngGK_Fig03.png)
   
 
   
@@ -181,7 +182,7 @@ The first step is preparing our SharePoint site with document libraries that our
 
   
 
-  ![Set custom column properties](../../images/ngGK_Fig04.png)
+  ![Set custom column properties](../images/ngGK_Fig04.png)
   
 
   
@@ -202,7 +203,7 @@ Now we're ready to create the workflow itself.
 
   
 
-  ![Add new workflow item](../../images/ngGK_Fig05.png)
+  ![Add new workflow item](../images/ngGK_Fig05.png)
   
 
   
@@ -214,7 +215,7 @@ Now we're ready to create the workflow itself.
 
   
 
-  ![Specify workflow name and type](../../images/ngGK_Fig06.png)
+  ![Specify workflow name and type](../images/ngGK_Fig06.png)
   
 
   
@@ -226,7 +227,7 @@ Now we're ready to create the workflow itself.
 
   
 
-  ![Completing the SharePint Customization Wizard](../../images/ngGK_Fig07.png)
+  ![Completing the SharePint Customization Wizard](../images/ngGK_Fig07.png)
   
 
   
@@ -238,7 +239,7 @@ Now we're ready to create the workflow itself.
 
   
 
-  ![Set activation parameters for the workflow](../../images/ngGK_Fig08.png)
+  ![Set activation parameters for the workflow](../images/ngGK_Fig08.png)
   
 
     
@@ -249,7 +250,7 @@ Now we're ready to create the workflow itself.
 
   
 
-  ![Workflow property grid](../../images/ngGK_Fig09.png)
+  ![Workflow property grid](../images/ngGK_Fig09.png)
   
 
   
@@ -276,7 +277,7 @@ Now that we have our SharePoint Server set up and our basic workflow created, we
 
   
 
-  ![LookupSPListItem activity selector](../../images/ngGK_Fig10.png)
+  ![LookupSPListItem activity selector](../images/ngGK_Fig10.png)
   
 
   
@@ -290,7 +291,7 @@ Now that we have our SharePoint Server set up and our basic workflow created, we
 
   
 
-  ![Setting properties for LookupSPListItem](../../images/ngGK_Fig11.png)
+  ![Setting properties for LookupSPListItem](../images/ngGK_Fig11.png)
   
 
   
@@ -310,7 +311,7 @@ Now that we have our SharePoint Server set up and our basic workflow created, we
 
   
 
-  ![Setting property values to extract](../../images/ngGK_Fig12.png)
+  ![Setting property values to extract](../images/ngGK_Fig12.png)
   
 
   
@@ -330,7 +331,7 @@ Now that we have our SharePoint Server set up and our basic workflow created, we
 
   
 
-  ![Get document status and approver properties](../../images/ngGK_Fig13.png)
+  ![Get document status and approver properties](../images/ngGK_Fig13.png)
   
 
   
@@ -347,7 +348,7 @@ Now that we have our SharePoint Server set up and our basic workflow created, we
 
   
 
-  ![Creating an If/Then clause to trigger a task](../../images/ngGK_Fig14.png)
+  ![Creating an If/Then clause to trigger a task](../images/ngGK_Fig14.png)
   
 
   
@@ -362,7 +363,7 @@ Now that we have our SharePoint Server set up and our basic workflow created, we
 
   
 
-  ![Task configuration dialog box](../../images/ngGK_Fig15.png)
+  ![Task configuration dialog box](../images/ngGK_Fig15.png)
   
 
   
@@ -392,7 +393,7 @@ Now that we have our SharePoint Server set up and our basic workflow created, we
 
   
 
-  ![Cast the "Approver" variable to string data type](../../images/ngGK_Fig16.png)
+  ![Cast the "Approver" variable to string data type](../images/ngGK_Fig16.png)
   
 
     At the present point in this walkthrough you have created and configured a workflow task that does two things: It sets a document to be reviewed, but also sends an email to the task assignee (the "Approver" in this case) notifying him or her that a task has been assigned and is waiting for actions.
@@ -410,7 +411,7 @@ Now that we have our SharePoint Server set up and our basic workflow created, we
 
   
 
-  ![Using IF activity to check the task status](../../images/ngGK_Fig17.png)
+  ![Using IF activity to check the task status](../images/ngGK_Fig17.png)
   
 
   
@@ -430,7 +431,7 @@ Now that we have our SharePoint Server set up and our basic workflow created, we
 
   
 
-  ![Specifying list item properties to update](../../images/ngGK_Fig18.png)
+  ![Specifying list item properties to update](../images/ngGK_Fig18.png)
   
 
   
@@ -445,7 +446,7 @@ Now that we have our SharePoint Server set up and our basic workflow created, we
 
   
 
-  ![Adding a CopyItem activity to the workflow](../../images/ngGK_Fig19.png)
+  ![Adding a CopyItem activity to the workflow](../images/ngGK_Fig19.png)
   
 
     Then, configure properties of the **CopyItem** activity in the property grid as depicted in Figure 20. Property values are highlighted.
@@ -455,7 +456,7 @@ Now that we have our SharePoint Server set up and our basic workflow created, we
 
   
 
-  ![Configuring properties of the CopyItem activity](../../images/ngGK_Fig20.png)
+  ![Configuring properties of the CopyItem activity](../images/ngGK_Fig20.png)
   
 
     
@@ -467,7 +468,7 @@ Now that we have our SharePoint Server set up and our basic workflow created, we
 
   
 
-  ![Configuring UpdateListItem for rejected documents](../../images/ngGK_Fig21.png)
+  ![Configuring UpdateListItem for rejected documents](../images/ngGK_Fig21.png)
   
 
   
@@ -487,7 +488,7 @@ This completes "Creating a SharePoint document approval workflow." The completed
   
     
     
-![Completed document approval workflow](../../images/ngGK_Fig22.png)
+![Completed document approval workflow](../images/ngGK_Fig22.png)
   
     
     
@@ -538,16 +539,16 @@ Following are resources that provide guidance for packaging and deploying your w
 <a name="bk_addresources"> </a>
 
 
--  [Workflows in SharePoint](workflows-in-sharepoint)
+-  [Workflows in SharePoint](workflows-in-sharepoint.md)
     
   
--  [Prepare to set up and configure a SharePoint workflow development environment](prepare-to-set-up-and-configure-a-sharepoint-workflow-development-environment)
+-  [Prepare to set up and configure a SharePoint workflow development environment](prepare-to-set-up-and-configure-a-sharepoint-workflow-development-environment.md)
     
   
--  [SharePoint workflow development best practices](sharepoint-workflow-development-best-practices)
+-  [SharePoint workflow development best practices](sharepoint-workflow-development-best-practices.md)
     
   
--  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio)
+-  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
     
   
 

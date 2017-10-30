@@ -1,3 +1,10 @@
+---
+title: Get to know the SharePoint REST service
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Get to know the SharePoint REST service
 Get the basics of using the SharePoint REST service to access and update SharePoint data, using the REST and OData web protocol standards.
 
@@ -28,7 +35,7 @@ The client.svc web service in SharePoint handles the HTTP request, and serves th
  
 **SharePoint REST service architecture**
 
-![SharePoint REST service architecture](../../../images/REST_RESTStructure.png)
+![SharePoint REST service architecture](../../images/REST_RESTStructure.png)
  
 Because of the functionality and ease of use that client object models provide, they remain the primary development option for communicating with SharePoint sites by using .NET Framework managed code, Silverlight, or JavaScript.
  

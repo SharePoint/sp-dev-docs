@@ -1,6 +1,7 @@
 ---
 title: How to Create tabular data source editors for PerformancePoint Services in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 3136420a-f8a2-4677-8b69-1d5d9705d96f
 ---
 
@@ -14,7 +15,7 @@ In PerformancePoint Services, custom data source editors enable users to set pro
   
     
     
-The following procedures and code examples are based on the **SampleDataSourceEditor** class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The editor is a thin web application that enables users to modify the name and description of the data source, enter stock symbols, and to specify a proxy server address and cache file location. For the complete code for the class, see  [Code example: Retrieve and update custom tabular data sources](#BKMK_ExampleCode).
+The following procedures and code examples are based on the **SampleDataSourceEditor** class from the [custom objects sample](http://msdn.microsoft.com/library/af021d52-7562-4e7a-9de4-e1fc5784a59d%28Office.15%29.aspx). The editor is a thin web application that enables users to modify the name and description of the data source, enter stock symbols, and to specify a proxy server address and cache file location. For the complete code for the class, see  [Code example: Retrieve and update custom tabular data sources](#bk_example).
   
     
     
@@ -115,7 +116,7 @@ DataSourceRepositoryHelper = new DataSourceRepositoryHelper();
   - To create the custom data source, use the **DataSource()** constructor and then define the data source's [Name](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Name.aspx) and [SubTypeId](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSource.SubTypeId.aspx) properties. [SubTypeId](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.DataSource.SubTypeId.aspx) is the unique identifier for the data source, and it must match the **subType** attribute that you specify for your custom data source in the PerformancePoint Services web.config file.
     
     > **Note:**
-      > The sample data source editor does not include logic to create a data source object. For examples of creating a custom object, see  [How to: Create report editors for PerformancePoint Services in SharePoint](how-to-create-report-editors-for-performancepoint-services-in-sharepoint) or [How to: Create filter editors for PerformancePoint Services in SharePoint](how-to-create-filter-editors-for-performancepoint-services-in-sharepoint). 
+      > The sample data source editor does not include logic to create a data source object. For examples of creating a custom object, see  [How to: Create report editors for PerformancePoint Services in SharePoint](how-to-create-report-editors-for-performancepoint-services-in-sharepoint.md) or [How to: Create filter editors for PerformancePoint Services in SharePoint](how-to-create-filter-editors-for-performancepoint-services-in-sharepoint.md). 
 
 ```cs
   if (ClickOnceLaunchValues.OpenItem.Equals(action, StringComparison.OrdinalIgnoreCase))
@@ -157,7 +158,7 @@ The following code example retrieves and updates custom tabular data sources. Th
   
     
     
-Before you can compile this code example, you must configure your development environment as described in  [Create and configure the editor class for a tabular data source editor in PerformancePoint Services](#BKMK_DefineDSEd).
+Before you can compile this code example, you must configure your development environment as described in  [Create and configure the editor class for a tabular data source editor in PerformancePoint Services](#BKMK_ConfigDSEditor).
   
     
     
@@ -435,13 +436,13 @@ After you create a data source editor (including its user interface, if required
     
 
 ## Additional resources
-<a name="bk_next"> </a>
+<a name="bk_resources"> </a>
 
 
--  [How to: Create tabular data source providers for PerformancePoint Services in SharePoint](how-to-create-tabular-data-source-providers-for-performancepoint-services-in-sha)
+-  [How to: Create tabular data source providers for PerformancePoint Services in SharePoint](how-to-create-tabular-data-source-providers-for-performancepoint-services-in-sha.md)
     
   
--  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint)
+-  [PerformancePoint Services in SharePoint](performancepoint-services-in-sharepoint.md)
     
   
 

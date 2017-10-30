@@ -1,3 +1,10 @@
+---
+title: Upload a file by using the REST API and jQuery
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Upload a file by using the REST API and jQuery
 Learn how to upload a local file to a SharePoint folder by using the REST API and jQuery AJAX requests.
  
@@ -363,4 +370,4 @@ function onError(error) {
 -  [Working with folders and files with REST](working-with-folders-and-files-with-rest.md)
 -  [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest.md)
 -  [REST API reference and samples](http://msdn.microsoft.com/library/02128c70-9d27-4388-9374-a11bce68fdb8%28Office.15%29.aspx)
--  [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library.md)
+-  [Access SharePoint data from add-ins using the cross-domain library](../../sp-add-ins/access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md)

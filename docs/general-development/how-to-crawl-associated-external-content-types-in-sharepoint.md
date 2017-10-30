@@ -1,6 +1,7 @@
 ---
 title: How to Crawl associated external content types in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 187ec42e-f749-4e22-abef-1df604143063
 ---
 
@@ -117,7 +118,7 @@ To mark an association so that it is crawled as a child external content type, a
 <a name="SP15crawlects_addlresources"> </a>
 
 
--  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint)
+-  [Search connector framework in SharePoint](search-connector-framework-in-sharepoint.md)
     
   
 -  [Adding Associations Between External Content Types](http://msdn.microsoft.com/library/791e95ab-9b3c-413b-be12-bd0e59962c93%28Office.15%29.aspx)

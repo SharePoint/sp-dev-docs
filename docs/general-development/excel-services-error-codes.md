@@ -1,9 +1,10 @@
 ---
 title: Excel Services Error Codes
+ms.date: 09/25/2017
 keywords: alerts
 f1_keywords:
 - alerts
-ms.prod: OFFICE365
+ms.prod: sharepoint
 ms.assetid: ff128d67-f3ac-4a8f-ae8e-1e19e343014e
 ---
 
@@ -15,8 +16,8 @@ Excel Services generates errors and error messages in the SOAP exception based o
     
     
 
-You use the  [SubCode](http://msdn.microsoft.com/library/frlrfSystemWebServicesProtocolsSoapExceptionClassSubCodeTopic.aspx) property of the **SoapException** class to capture the error codes. For more information about using the **SubCode** property to capture error codes, see [How to: Use the SubCode Property to Capture Error Codes](how-to-use-the-subcode-property-to-capture-error-codes)
-For more information about Excel Services alerts, see  [Excel Services Alerts](excel-services-alerts). 
+You use the  [SubCode](http://msdn.microsoft.com/library/frlrfSystemWebServicesProtocolsSoapExceptionClassSubCodeTopic.aspx) property of the **SoapException** class to capture the error codes. For more information about using the **SubCode** property to capture error codes, see [How to: Use the SubCode Property to Capture Error Codes](how-to-use-the-subcode-property-to-capture-error-codes.md)
+For more information about Excel Services alerts, see  [Excel Services Alerts](excel-services-alerts.md). 
   
     
     
@@ -70,19 +71,19 @@ The following table lists the error codes for Excel Web Services alerts and the 
   
     
     
- [How to: Use the SubCode Property to Capture Error Codes](how-to-use-the-subcode-property-to-capture-error-codes)
+ [How to: Use the SubCode Property to Capture Error Codes](how-to-use-the-subcode-property-to-capture-error-codes.md)
 #### Concepts
 
 
   
     
     
- [Excel Services Alerts](excel-services-alerts)
+ [Excel Services Alerts](excel-services-alerts.md)
   
     
     
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips)
+ [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
   
     
     
- [Excel Services Best Practices](excel-services-best-practices)
+ [Excel Services Best Practices](excel-services-best-practices.md)

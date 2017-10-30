@@ -1,6 +1,7 @@
----
+﻿---
 title: SharePoint Design Manager display templates
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 1a782bac-48ee-4baf-8751-0f943a306e0f
 ---
 
@@ -26,7 +27,7 @@ You can view existing display templates in Design Manager, but you don't create 
     
     
 
-- Open your  [mapped network drive to the Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery).
+- Open your  [mapped network drive to the Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md).
     
   
 - Open one of the four folders in the **Display Templates** folder.
@@ -97,7 +98,7 @@ After you add a Search Web Part (such as the Content Search Web Part) to a page,
   
     
     
-![Tool pane of Content Search Web Part](../../images/115_content_search_web_part_tool_pane.gif)
+![Tool pane of Content Search Web Part](../images/115_content_search_web_part_tool_pane.gif)
   
     
     
@@ -123,11 +124,11 @@ When used together in this way, the control display template and the item displa
   
     
     
-![Combined HTML output of a control display template and item display template](../../images/sp15Con_CreateDisplayTemplateSP2013_Figure02.png)
+![Combined HTML output of a control display template and item display template](../images/sp15Con_CreateDisplayTemplateSP2013_Figure02.png)
   
     
     
-For more information about display templates, see the "Search-driven Web Parts and display templates" section in  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model).
+For more information about display templates, see the "Search-driven Web Parts and display templates" section in  [Overview of the SharePoint page model](overview-of-the-sharepoint-page-model.md).
   
     
     
@@ -326,7 +327,7 @@ You can use jQuery with your display templates. But, be aware of two important f
 ## Create a display template
 <a name="bk_createDT"> </a>
 
-Before you can create a display template by using the following procedure, you must have a mapped network drive that points to the **Master Page Gallery**. For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery).
+Before you can create a display template by using the following procedure, you must have a mapped network drive that points to the **Master Page Gallery**. For more information, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md).
   
     
     
@@ -373,19 +374,19 @@ Before you can create a display template by using the following procedure, you m
 <a name="bk_addresources"> </a>
 
 
--  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint)
+-  [Overview of Design Manager in SharePoint](overview-of-design-manager-in-sharepoint.md)
     
   
--  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
     
   
--  [How to: Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint)
+-  [How to: Convert an HTML file into a master page in SharePoint](how-to-convert-an-html-file-into-a-master-page-in-sharepoint.md)
     
   
--  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint)
+-  [How to: Create a page layout in SharePoint](how-to-create-a-page-layout-in-sharepoint.md)
     
   
--  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities)
+-  [SharePoint Design Manager branding and design capabilities](sharepoint-design-manager-branding-and-design-capabilities.md)
     
   
 

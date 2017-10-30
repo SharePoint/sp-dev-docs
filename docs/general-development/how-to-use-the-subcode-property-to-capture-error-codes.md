@@ -1,9 +1,10 @@
 ---
 title: How to Use the SubCode Property to Capture Error Codes
+ms.date: 09/25/2017
 keywords: how to,howdoi,howto,subcode
 f1_keywords:
 - how to,howdoi,howto,subcode
-ms.prod: SHAREPOINT
+ms.prod: sharepoint
 ms.assetid: 8ce4d5b2-111b-49e7-9d07-8c2c586221ec
 ---
 
@@ -22,7 +23,7 @@ The following examples show how to capture the error codes using the  [SubCode](
     
     
 
-For a list of error codes, see  [Excel Services Error Codes](excel-services-error-codes).
+For a list of error codes, see  [Excel Services Error Codes](excel-services-error-codes.md).
 ### To capture error codes when using SOAP
 
 
@@ -362,38 +363,38 @@ In addition, make changes to the workbook path, sheet name, and so on, as approp
   
     
     
- [How to: Catch Exceptions](how-to-catch-exceptions)
+ [How to: Catch Exceptions](how-to-catch-exceptions.md)
   
     
     
- [How to: Trust a Location](how-to-trust-a-location)
+ [How to: Trust a Location](how-to-trust-a-location.md)
   
     
     
- [How to: Save from Excel Client to the Server](how-to-save-from-excel-client-to-the-server)
+ [How to: Save from Excel Client to the Server](how-to-save-from-excel-client-to-the-server.md)
 #### Concepts
 
 
   
     
     
- [Accessing the SOAP API](accessing-the-soap-api)
+ [Accessing the SOAP API](accessing-the-soap-api.md)
   
     
     
- [Excel Services Alerts](excel-services-alerts)
+ [Excel Services Alerts](excel-services-alerts.md)
   
     
     
- [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips)
+ [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md)
   
     
     
- [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking)
+ [Loop-Back SOAP Calls and Direct Linking](loop-back-soap-calls-and-direct-linking.md)
 #### Other resources
 
 
   
     
     
- [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services)
+ [Walkthrough: Developing a Custom Application Using Excel Web Services](walkthrough-developing-a-custom-application-using-excel-web-services.md)

@@ -1,12 +1,19 @@
-# Build SharePoint Framework client-side web parts with Angular v1.x
+---
+title: Build SharePoint Framework client-side web parts with AngularJS
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
 
-If you are familiar with Angular, you can also use this extremely popular framework to build client-side web parts. Thanks to its modularity, it can be used for anything ranging from complex multi-view Single Page Applications to smaller components such as web parts. Many organizations have been using Angular for building SharePoint solutions in the past. This article shows how to use Angular v1.x to build a SharePoint Framework client-side web part and have it styled using [Office UI Fabric](http://dev.office.com/fabric). During this tutorial you will build a simple web part that manages to do items.
 
-![SharePoint Framework client-side web part built using Angular displayed in SharePoint workbench](../../../../images/ng-intro-hide-finished-tasks.png)
+# Build SharePoint Framework client-side web parts with AngularJS
+
+If you are familiar with AngularJS, you can also use this extremely popular framework to build client-side web parts. Thanks to its modularity, it can be used for anything ranging from complex multi-view Single Page Applications to smaller components such as web parts. Many organizations have been using AngularJS for building SharePoint solutions in the past. This article shows how to use AngularJS to build a SharePoint Framework client-side web part and have it styled using [Office UI Fabric](http://dev.office.com/fabric). During this tutorial you will build a simple web part that manages to do items.
+
+![SharePoint Framework client-side web part built using AngularJS displayed in SharePoint workbench](../../../images/ng-intro-hide-finished-tasks.png)
 
 The source of the working web part is available on GitHub at [https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/angular-todo](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/angular-todo).
 
-> **Note:** Before following the steps in this article, be sure to [set up your development environment](../../set-up-your-development-environment) for building SharePoint Framework solutions.
+> **Note:** Before following the steps in this article, be sure to [set up your development environment](../../set-up-your-development-environment.md) for building SharePoint Framework solutions.
 
 ## Create new project
 
@@ -35,38 +42,44 @@ When prompted, define values as follows:
 - **To do** as your web part name
 - **Simple management of to do tasks** as your web part description
 
-![SharePoint Framework Yeoman generator with the default choices](../../../../images/ng-intro-yeoman-generator.png)
+![SharePoint Framework Yeoman generator with the default choices](../../../images/ng-intro-yeoman-generator.png)
 
-Once the scaffolding completes, open your project folder in your code editor. In this tutorial, you will use Visual Studio Code.
+Once the scaffolding completes, lock down the version of the project dependencies by running the following command:
 
-![SharePoint Framework project open in Visual Studio Code](../../../../images/ng-intro-project-visual-studio-code.png)
+```sh
+npm shrinkwrap
+```
 
-## Add Angular
+Next, open your project folder in your code editor. In this tutorial, you will use Visual Studio Code.
 
-In this tutorial you will load Angular from CDN. To do that, in the code editor, open the **config/config.json** file and in the **externals** property add the following lines:
+![SharePoint Framework project open in Visual Studio Code](../../../images/ng-intro-project-visual-studio-code.png)
+
+## Add AngularJS
+
+In this tutorial you will load AngularJS from CDN. To do that, in the code editor, open the **config/config.json** file and in the **externals** property add the following lines:
 
 ```json
 "angular": {
-  "path": "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js",
+  "path": "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.6.6/angular.min.js",
   "globalName": "angular"
 }
 ```
 
-![Angular added to the config.json file](../../../../images/ng-intro-angular-config.png)
+![AngularJS added to the config.json file](../../../images/ng-intro-angular-config.png)
 
-## Add Angular typings for TypeScript
+## Add AngularJS typings for TypeScript
 
-Because you will be referencing Angular in your web part's code, you also need Angular typings for TypeScript. To install them run in the command line:
+Because you will be referencing AngularJS in your web part's code, you also need AngularJS typings for TypeScript. To install them run in the command line:
 
 ```sh
 npm install @types/angular --save-dev
 ```
 
-## Implement Angular application
+## Implement AngularJS application
 
-With all prerequisites in place you can start implementing the sample Angular application. Because it will consist of a few files, create a separate folder for it called **app**.
+With all prerequisites in place you can start implementing the sample AngularJS application. Because it will consist of a few files, create a separate folder for it called **app**.
 
-![The app folder highlighted in Visual Studio Code](../../../../images/ng-intro-app-folder.png)
+![The app folder highlighted in Visual Studio Code](../../../images/ng-intro-app-folder.png)
 
 ### Implement to do data service
 
@@ -180,7 +193,7 @@ export default class DataService implements IDataService {
 }
 ```
 
-![The DataService.ts file opened in Visual Studio Code](../../../../images/ng-intro-dataservice.png)
+![The DataService.ts file opened in Visual Studio Code](../../../images/ng-intro-dataservice.png)
 
 In the previous code snippet you implement three types: the **ITodo** interface which represents a to do item in your application, the **IDataService** interface which defines the signature of the data service and the **DataService** class which is responsible for retrieving and manipulating to do items. The data service implements simple methods for adding and modifying to do items. Even though the operations are instantaneous, for consistency each CRUD function returns a promise.
 
@@ -298,9 +311,9 @@ export default class HomeController {
 }
 ```
 
-![The HomeController.ts file opened in Visual Studio Code](../../../../images/ng-intro-homecontroller.png)
+![The HomeController.ts file opened in Visual Studio Code](../../../images/ng-intro-homecontroller.png)
 
-You start by loading the previously implemented data service. The controller needs it in order to get the list of items and modify items as requested by the user. Using Angular's dependency injection the service is injected into the controller. The controller implements a number of functions that are exposed to the view model and will be called from the template. Using these functions users will be able to add new items, mark items as finished, to do, or delete items.
+You start by loading the previously implemented data service. The controller needs it in order to get the list of items and modify items as requested by the user. Using AngularJS's dependency injection the service is injected into the controller. The controller implements a number of functions that are exposed to the view model and will be called from the template. Using these functions users will be able to add new items, mark items as finished, to do, or delete items.
 
 ### Implement the main module
 
@@ -318,15 +331,15 @@ todoapp
   .service('DataService', DataService);
 ```
 
-![The app-module.ts file opened in Visual Studio Code](../../../../images/ng-intro-app-module.png)
+![The app-module.ts file opened in Visual Studio Code](../../../images/ng-intro-app-module.png)
 
-You start by referencing Angular and by loading previously implemented controller and data service. Next, you define the module for your application. Finally, you register the controller and data service with your application.
+You start by referencing AngularJS and by loading previously implemented controller and data service. Next, you define the module for your application. Finally, you register the controller and data service with your application.
 
-Now you've built an Angular application for your web part. In the following steps you will register the Angular application with the web part and make it configurable using web part properties.
+Now you've built an AngularJS application for your web part. In the following steps you will register the AngularJS application with the web part and make it configurable using web part properties.
 
-## Register Angular application with web part
+## Register AngularJS application with web part
 
-Next step is to add Angular application to the web part. In the code editor open the **ToDoWebPart.ts** file.
+Next step is to add AngularJS application to the web part. In the code editor open the **ToDoWebPart.ts** file.
 
 Just before the class declaration, add the following lines:
 
@@ -335,9 +348,9 @@ import * as angular from 'angular';
 import './app/app-module';
 ```
 
-![Import statements in the ToDoWebPart.ts file highlighted in Visual Studio Code](../../../../images/ng-intro-web-part-import-angular.png)
+![Import statements in the ToDoWebPart.ts file highlighted in Visual Studio Code](../../../images/ng-intro-web-part-import-angular.png)
 
-This allows us to load a reference to Angular and your application, both of which you need to bootstrap your Angular application.
+This allows us to load a reference to AngularJS and your application, both of which you need to bootstrap your AngularJS application.
 
 Change the web part's **render** function to:
 
@@ -345,7 +358,7 @@ Change the web part's **render** function to:
 public render(): void {
   if (this.renderedOnce === false) {
     this.domElement.innerHTML = `
-<div class="${styles.toDoWebPart}">
+<div class="${styles.toDo}">
   <div data-ng-controller="HomeController as vm">
     <div class="${styles.loading}" ng-show="vm.isLoading">
       <div class="${styles.spinner}">
@@ -389,14 +402,14 @@ public render(): void {
 }
 ```
 
-![Web part's render function in Visual Studio Code](../../../../images/ng-intro-web-part-render-angular.png)
+![Web part's render function in Visual Studio Code](../../../images/ng-intro-web-part-render-angular.png)
 
-The code first assigns the template of your application directly to the web part's DOM element. On the root element you specify the name of the controller that will handle events and data binding in the template. Then, you bootstrap your application using the **todoapp** name you used previously when declaring the main module. Using the **renderedOnce** web part property you ensure that your Angular application is bootstrapped only once. Without it, if you changed one of the web part's properties, the **render** function would be invoked again bootstrapping the Angular application again, which would lead to an error.
+The code first assigns the template of your application directly to the web part's DOM element. On the root element you specify the name of the controller that will handle events and data binding in the template. Then, you bootstrap your application using the **todoapp** name you used previously when declaring the main module. Using the **renderedOnce** web part property you ensure that your AngularJS application is bootstrapped only once. Without it, if you changed one of the web part's properties, the **render** function would be invoked again bootstrapping the AngularJS application again, which would lead to an error.
 
 You also need to implement CSS styles that you are using the template. In the code editor open the **ToDo.module.scss** file and replace its contents with:
 
 ```css
-.toDoWebPart {
+.toDo {
   .loading {
     margin: 0 auto;
     width: 6em;
@@ -637,7 +650,7 @@ You also need to implement CSS styles that you are using the template. In the co
 }
 ```
 
-![The ToDo.module.scss file open in Visual Studio Code](../../../../images/ng-intro-web-part-css.png)
+![The ToDo.module.scss file open in Visual Studio Code](../../../images/ng-intro-web-part-css.png)
 
 Run the following command to confirm that everything is working as expected:
 
@@ -647,7 +660,7 @@ gulp serve
 
 In the browser you should see your To do web part showing to do items.
 
-![To do web part showing to do items rendered using Office UI Fabric](../../../../images/ng-intro-workbench-office-ui-fabric.png)
+![To do web part showing to do items rendered using Office UI Fabric](../../../images/ng-intro-workbench-office-ui-fabric.png)
 
 ## Make web part configurable
 
@@ -661,13 +674,13 @@ Start by adding configuration property in the web part manifest. In the code edi
 "hideFinishedTasks": false
 ```
 
-![The hideFinishedTasks property highlighted in web part manifest](../../../../images/ng-intro-manifest-property.png)
+![The hideFinishedTasks property highlighted in web part manifest](../../../images/ng-intro-manifest-property.png)
 
 ### Update the signature of the web part properties interface
 
 Next, update the signature of the web part properties interface.
 
-In the code editor open the **IToDoWebPartProps.ts** file and replace its contents with the following:
+In the code editor open the **ToDoWebPart.ts** file and update the `IToDoWebPartProps` interface to the following:
 
 ```ts
 export interface IToDoWebPartProps {
@@ -675,7 +688,7 @@ export interface IToDoWebPartProps {
 }
 ```
 
-![The IToDoWebPartProps.ts file open in Visual Studio Code](../../../../images/ng-intro-property-interface.png)
+![The IToDoWebPartProps.ts file open in Visual Studio Code](../../../images/ng-intro-property-interface.png)
 
 ### Add the property to the web part property pane
 
@@ -691,7 +704,7 @@ import {
 } from '@microsoft/sp-webpart-base';
 ```
 
-![PropertyPaneToggle import statement highlighted in Visual Studio Code](../../../../images/ng-intro-property-pane-toggle.png)
+![PropertyPaneToggle import statement highlighted in Visual Studio Code](../../../images/ng-intro-property-pane-toggle.png)
 
 Change the implementation of the `propertyPaneSettings` function to:
 
@@ -722,19 +735,19 @@ protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
 To fix the missing string references you first need to change the signature of your strings. In the code editor open the **loc/mystrings.d.ts** file and change its contents to:
 
 ```ts
-declare interface IToDoStrings {
+declare interface IToDoWebPartStrings {
   PropertyPaneDescription: string;
-  ViewGroupName: string;
+  BasicGroupName: string;
   HideFinishedTasksFieldLabel: string;
 }
 
-declare module 'toDoStrings' {
-  const strings: IToDoStrings;
+declare module 'ToDoWebPartStrings' {
+  const strings: IToDoWebPartStrings;
   export = strings;
 }
 ```
 
-![The loc/mystrings.d.ts file open in Visual Studio Code](../../../../images/ng-intro-strings-interface.png)
+![The loc/mystrings.d.ts file open in Visual Studio Code](../../../images/ng-intro-strings-interface.png)
 
 Next, you need to provide the actual values for the newly defined strings. In the code editor open the **loc/en-us.js** file and change its contents to:
 
@@ -748,7 +761,7 @@ define([], function() {
 });
 ```
 
-![The loc/en-us.js file open in Visual Studio Code](../../../../images/ng-intro-strings.png)
+![The loc/en-us.js file open in Visual Studio Code](../../../images/ng-intro-strings.png)
 
 Run the following command to confirm that everything is working as expected:
 
@@ -758,15 +771,15 @@ gulp serve
 
 In the web part property pane you should see a toggle button for your newly defined property.
 
-![Toggle button displayed on the web part property pane](../../../../images/ng-intro-property-pane-toggle-browser.png)
+![Toggle button displayed on the web part property pane](../../../images/ng-intro-property-pane-toggle-browser.png)
 
-At this point clicking the toggle button doesn't have any effect on your web part as it hasn't been connected to Angular. You will do that in the next step.
+At this point clicking the toggle button doesn't have any effect on your web part as it hasn't been connected to AngularJS. You will do that in the next step.
 
-### Make the Angular application configurable using web part properties
+### Make the AngularJS application configurable using web part properties
 
-In the previous step you defined a web part property that allows users to choose whether to show completed tasks or not. Next you will pass the value selected by the user into the Angular application so that it can load items accordingly.
+In the previous step you defined a web part property that allows users to choose whether to show completed tasks or not. Next you will pass the value selected by the user into the AngularJS application so that it can load items accordingly.
 
-#### Broadcast Angular event on web part property change
+#### Broadcast AngularJS event on web part property change
 
 In the code editor open the **ToDoWebPart.ts** file. Right before web part's constructor add the following line:
 
@@ -774,7 +787,7 @@ In the code editor open the **ToDoWebPart.ts** file. Right before web part's con
 private $injector: angular.auto.IInjectorService;
 ```
 
-![$injector class variable highlighted in Visual Studio Code](../../../../images/ng-intro-injector-class-variable.png)
+![$injector class variable highlighted in Visual Studio Code](../../../images/ng-intro-injector-class-variable.png)
 
 Next, change the web part's **render** function to the following:
 
@@ -782,7 +795,7 @@ Next, change the web part's **render** function to the following:
 public render(): void {
   if (this.renderedOnce === false) {
     this.domElement.innerHTML = `
-<div class="${styles.toDoWebPart}">
+<div class="${styles.toDo}">
   <div data-ng-controller="HomeController as vm">
     <div class="${styles.loading}" ng-show="vm.isLoading">
       <div class="${styles.spinner}">
@@ -830,9 +843,9 @@ public render(): void {
 }
 ```
 
-In the above code sample, every time the web part property is changed, it will broadcast an Angular event to which the Angular application will subscribe it. When event is received by the Angular application, it will then handle that accordingly.
+In the above code sample, every time the web part property is changed, it will broadcast an AngularJS event to which the AngularJS application will subscribe it. When event is received by the AngularJS application, it will then handle that accordingly.
 
-#### Subscribe to web part property change event in Angular
+#### Subscribe to web part property change event in AngularJS
 
 In the code editor open the **app/HomeController.ts** file. Extend the constructor as follows:
 
@@ -847,9 +860,9 @@ constructor(private dataService: IDataService, private $window: angular.IWindowS
 }
 ```
 
-![Constructor definition in the HomeController.ts file highlighted in Visual Studio Code](../../../../images/ng-intro-homecontroller-event.png)
+![Constructor definition in the HomeController.ts file highlighted in Visual Studio Code](../../../images/ng-intro-homecontroller-event.png)
 
-To verify that the Angular application is working as expected and correctly responds to property changed, in the command line run:
+To verify that the AngularJS application is working as expected and correctly responds to property changed, in the command line run:
 
 ```sh
 gulp serve
@@ -857,4 +870,4 @@ gulp serve
 
 If you toggle the value of the **Hide finished tasks** property, web part should show or hide finished tasks accordingly.
 
-![web part showing only unfinished task with the 'Hide finished tasks' option enabled](../../../../images/ng-intro-hide-finished-tasks.png)
+![web part showing only unfinished task with the 'Hide finished tasks' option enabled](../../../images/ng-intro-hide-finished-tasks.png)

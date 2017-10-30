@@ -1,6 +1,7 @@
----
+﻿---
 title: How to Create a master page preview file in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 6825518d-eeb2-40b0-8a5b-897025f13796
 ---
 
@@ -12,7 +13,7 @@ The **Change the look** wizard is the entry point to the SharePoint theming expe
     
     
 
-For more information, see  [Themes overview for SharePoint](themes-overview-for-sharepoint).
+For more information, see  [Themes overview for SharePoint](themes-overview-for-sharepoint.md).
 ## Core concepts to know for working with master page preview files
 <a name="Introduction"> </a>
 
@@ -26,7 +27,7 @@ Table 1 lists articles that can help you understand the core concepts for workin
 
 |**Article Title**|**Description**|
 |:-----|:-----|
-| [Themes overview for SharePoint](themes-overview-for-sharepoint) <br/> |Learn about the theming experience in SharePoint.  <br/> |
+| [Themes overview for SharePoint](themes-overview-for-sharepoint.md) <br/> |Learn about the theming experience in SharePoint.  <br/> |
 | [Choose a theme for your publishing site](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/choose-a-theme-for-your-publishing-site-HA102891580.aspx) <br/> |Learn how to change the look and feel of a SharePoint site by using the **Change the look** wizard. <br/> |
    
 
@@ -117,7 +118,7 @@ The miscellaneous tokens are replaced with specified height and width values in 
 
 ### Color tokens
 
-Color tokens are replaced with color values in the preview image. Table 3 describes two formats for color tokens. Replace  _ColorSlot_ with the annotation name of the color slot. The color tokens must be uppercase (for example, [T_THEME_COLOR_PAGEBACKGROUND]). To see the list of available color tokens, see the [Color slot mapping](color-palettes-and-fonts-in-sharepoint#colorSlots) section in [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint).
+Color tokens are replaced with color values in the preview image. Table 3 describes two formats for color tokens. Replace  _ColorSlot_ with the annotation name of the color slot. The color tokens must be uppercase (for example, [T_THEME_COLOR_PAGEBACKGROUND]). To see the list of available color tokens, see the [Color slot mapping](color-palettes-and-fonts-in-sharepoint.md#colorSlots) section in [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md).
   
     
     
@@ -141,7 +142,7 @@ The font tokens are replaced with font values in the preview image.
 - [T_ _SlotName__FONT]
     
   
-Replace  _SlotName_ with the name of the font slot. The font tokens must be uppercase (for example, [T_BODY_FONT]).To see the list of font slots and where they are used in a page, see the [Font slots](color-palettes-and-fonts-in-sharepoint#fontSlot) section in [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint).
+Replace  _SlotName_ with the name of the font slot. The font tokens must be uppercase (for example, [T_BODY_FONT]).To see the list of font slots and where they are used in a page, see the [Font slots](color-palettes-and-fonts-in-sharepoint.md#fontSlot) section in [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md).
   
     
     
@@ -184,7 +185,7 @@ The tokens listed in Table 4 are used in the HTML section of the master page pre
   
     
     
-![Preinstalled theme](../../images/theme_.PNG)
+![Preinstalled theme](../images/theme_.PNG)
   
     
     
@@ -224,7 +225,7 @@ To create a master page preview file, use an existing master page preview as a s
 5. Use the **Change the look** wizard to test the master page preview with your site content.
     
     > **Note:**
-      > You can also create a design that uses the new master page by adding an item to the Composed Looks list. The design will be available in the design gallery (the first page of the **Change the look** wizard). For more information, see the [Deploy a theme by using the user interface](how-to-deploy-a-custom-theme-in-sharepoint#section2) procedure in [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint). 
+      > You can also create a design that uses the new master page by adding an item to the Composed Looks list. The design will be available in the design gallery (the first page of the **Change the look** wizard). For more information, see the [Deploy a theme by using the user interface](how-to-deploy-a-custom-theme-in-sharepoint.md#section2) procedure in [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint.md). 
 6. Repeat steps 3 to 5, as necessary.
     
   
@@ -233,13 +234,13 @@ To create a master page preview file, use an existing master page preview as a s
 <a name="bk_addresources"> </a>
 
 
--  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint)
+-  [Develop the site design in SharePoint](develop-the-site-design-in-sharepoint.md)
     
   
--  [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint)
+-  [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint.md)
     
   
--  [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint)
+-  [Color palettes and fonts in SharePoint](color-palettes-and-fonts-in-sharepoint.md)
     
   
 -  [SharePoint Team Blog: Show off your style with SharePoint theming](http://blogs.office.com/b/sharepoint/archive/2012/10/29/show-off-your-style-with-sharepoint-theming.aspx)

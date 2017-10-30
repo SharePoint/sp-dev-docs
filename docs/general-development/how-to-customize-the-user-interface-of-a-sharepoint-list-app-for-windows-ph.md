@@ -1,6 +1,7 @@
 ---
 title: How to Customize the user interface of a SharePoint list app for Windows Phone
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 09ed59af-5e2b-4716-a9e4-a015e4793d85
 ---
 
@@ -14,7 +15,7 @@ SharePoint list apps created from the Windows Phone SharePoint List Application 
 
 
 > **Important:**
-> If you are developing an app for Windows Phone 8, you must use Visual Studio Express 2012 instead of Visual Studio 2010 Express. Except for the development environment, all information in this article applies to creating apps for both Windows Phone 8 and Windows Phone 7. > For more information, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint). 
+> If you are developing an app for Windows Phone 8, you must use Visual Studio Express 2012 instead of Visual Studio 2010 Express. Except for the development environment, all information in this article applies to creating apps for both Windows Phone 8 and Windows Phone 7. > For more information, see  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md). 
   
     
     
@@ -23,7 +24,7 @@ SharePoint list apps created from the Windows Phone SharePoint List Application 
 ## Create a SharePoint list app for user interface customizations
 <a name="BKMK_CreatingSPListApp"> </a>
 
-For the following procedures, assume a server running SharePoint Server has a Product Orders list created from the Custom List template, similar to the sample Product Orders list used in  [How to: Implement business logic and data validation in a Windows Phone app for SharePoint](how-to-implement-business-logic-and-data-validation-in-a-windows-phone-app-for-s). For the sample Windows Phone app used in this topic, the Product Orders list on which the app is based has been modified to include additional fields. The modified Product Orders list used for the purposes of the examples in this topic has been created with the columns and field types shown in Table 1.
+For the following procedures, assume a server running SharePoint Server has a Product Orders list created from the Custom List template, similar to the sample Product Orders list used in  [How to: Implement business logic and data validation in a Windows Phone app for SharePoint](how-to-implement-business-logic-and-data-validation-in-a-windows-phone-app-for-s.md). For the sample Windows Phone app used in this topic, the Product Orders list on which the app is based has been modified to include additional fields. The modified Product Orders list used for the purposes of the examples in this topic has been created with the columns and field types shown in Table 1.
   
     
     
@@ -42,7 +43,7 @@ For the following procedures, assume a server running SharePoint Server has a Pr
 |Rush  <br/> |Boolean  <br/> |No  <br/> |
 |Contact Number  <br/> |Single line of text (Text)  <br/> |No  <br/> |
    
-Follow the procedures in  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app) to use the Windows Phone SharePoint List Application template to generate a SharePoint list app as a starting point for the following UI customizations. Specify as the target SharePoint list for the app a list that has a schema similar to what is represented in Table 1.
+Follow the procedures in  [How to: Create a Windows Phone SharePoint list app](how-to-create-a-windows-phone-sharepoint-list-app.md) to use the Windows Phone SharePoint List Application template to generate a SharePoint list app as a starting point for the following UI customizations. Specify as the target SharePoint list for the app a list that has a schema similar to what is represented in Table 1.
   
     
     
@@ -191,7 +192,7 @@ If you start the project (by pressing F5) to deploy it to the Windows Phone Emul
   
     
     
-![Edit form with DatePicker control](../../images/787df903-833d-4a12-a692-716ceaf54c10.gif)
+![Edit form with DatePicker control](../images/787df903-833d-4a12-a692-716ceaf54c10.gif)
   
     
     
@@ -209,7 +210,7 @@ The **DatePicker** control (highlighted for the **Order Date** field in Figure 1
   
     
     
-![Date chooser page](../../images/21aebcdb-d7e6-4a61-ac6e-6ae266b1b55d.gif)
+![Date chooser page](../images/21aebcdb-d7e6-4a61-ac6e-6ae266b1b55d.gif)
   
     
     
@@ -244,7 +245,7 @@ In the following procedures, you will:
   
 
 > **Note:**
-> For more information about field value converters, see  [How to: Support and convert SharePoint field types for Windows Phone apps](how-to-support-and-convert-sharepoint-field-types-for-windows-phone-apps). 
+> For more information about field value converters, see  [How to: Support and convert SharePoint field types for Windows Phone apps](how-to-support-and-convert-sharepoint-field-types-for-windows-phone-apps.md). 
   
     
     
@@ -509,10 +510,10 @@ For items in the Product Orders list that are already associated with a custom P
 <a name="BKMK_AddingControlsForChoiceFields"> </a>
 
 
--  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint)
+-  [Build Windows Phone apps that access SharePoint](build-windows-phone-apps-that-access-sharepoint.md)
     
   
--  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint)
+-  [How to: Set up an environment for developing mobile apps for SharePoint](how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md)
     
   
 -  [Windows Phone SDK 8.0](http://www.microsoft.com/en-us/download/details.aspx?id=35471)

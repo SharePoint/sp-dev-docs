@@ -1,6 +1,7 @@
----
+﻿---
 title: Discovery in Excel Services REST API
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: e3a8e057-f803-446d-81c9-4eb8ef3691e1
 ---
 
@@ -39,7 +40,7 @@ Following is the construct of the REST URL to a specific element in a workbook:
 http://<ServerName>/_vti_bin/ExcelRest.aspx/<DocumentLibrary>/<FileName>/<ResourceLocation>
 ```
 
-As described in the  [Basic URI Structure and Path](basic-uri-structure-and-path) topic, following is the REST URL to access a workbook named **sampleWorkbook.xlsx** and further view the chart called **SampleChart**: 
+As described in the  [Basic URI Structure and Path](basic-uri-structure-and-path.md) topic, following is the REST URL to access a workbook named **sampleWorkbook.xlsx** and further view the chart called **SampleChart**: 
   
     
     
@@ -86,7 +87,7 @@ Following is a screen shot of the model page.
   
     
     
-![Excel Services REST model URL](../../images/SharePointServer14Con_XLSvcs_RESTModel.gif)
+![Excel Services REST model URL](../images/SharePointServer14Con_XLSvcs_RESTModel.gif)
   
     
     
@@ -109,7 +110,7 @@ For example, to access the chart in the workbook by using discovery, do the foll
 
   
 
-  ![Excel Services REST discovery chart list](../../images/19126dce-b896-4623-8686-92f2fa807283.gif)
+  ![Excel Services REST discovery chart list](../images/19126dce-b896-4623-8686-92f2fa807283.gif)
   
 
   
@@ -121,7 +122,7 @@ For example, to access the chart in the workbook by using discovery, do the foll
 
   
 
-  ![Viewing chart using REST](../../images/11734dcf-1b57-40cc-b1e8-8b10b7e5d5cb.gif)
+  ![Viewing chart using REST](../images/11734dcf-1b57-40cc-b1e8-8b10b7e5d5cb.gif)
   
 
   
@@ -203,4 +204,4 @@ As can be seen in the XML, the feed contains traversable elements that enable co
   
     
     
- [Resources URI for Excel Services REST API](resources-uri-for-excel-services-rest-api)
+ [Resources URI for Excel Services REST API](resources-uri-for-excel-services-rest-api.md)

@@ -1,3 +1,10 @@
+---
+title: Deploy your SharePoint client-side web part to a CDN
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Deploy your SharePoint client-side web part to a CDN
 
 In this article, you will deploy the **HelloWorld** assets to a remote CDN instead of using the local environment. You'll use an Azure Storage account integrated with a CDN to deploy your assets. SharePoint Framework build tools provide out-of-the-box support for deploying to an Azure Storage account; however, you can also manually upload the files to your favorite CDN provider or to SharePoint.
@@ -5,16 +12,19 @@ In this article, you will deploy the **HelloWorld** assets to a remote CDN inste
 You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=FDGatKnjNeM&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
 
 <a href="https://www.youtube.com/watch?v=FDGatKnjNeM&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
-<img src="../../../../images/spfx-youtube-tutorial4.png" alt="Screenshot of the YouTube video player for this tutorial" />
+<img src="../../../images/spfx-youtube-tutorial4.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
+
+> [!NOTE]
+> There are multiple different hosting options for your web part assets. This tutorial concentrates on showing the Azure CDN option, but you could also use the [Office 365 CDN](./hosting-webpart-from-office-365-cdn.md) or simply host your assets from SharePoint library from your tenant. In the latter case, you would not benefit from the CDN performance improvements, but that would also work from the functionality perspective. Any location which end users can access using HTTP would be technically suitable for hosting the assets for end users. 
 
 ## Prerequisites
 
 Make sure that you have completed the following tasks before you begin:
 
-* [Build your first client-side web part](./build-a-hello-world-web-part)
-* [Connect your client-side web part to SharePoint](./connect-to-sharepoint)
-* [Deploy your client-side web part to a classic SharePoint page](./serve-your-web-part-in-a-sharepoint-page)
+* [Build your first client-side web part](./build-a-hello-world-web-part.md)
+* [Connect your client-side web part to SharePoint](./connect-to-sharepoint.md)
+* [Deploy your client-side web part to a classic SharePoint page](./serve-your-web-part-in-a-sharepoint-page.md)
 
 ## Configure Azure storage account
 
@@ -28,7 +38,7 @@ This is the name you used to create your storage account, as described in [Step 
 
 For example, in the following screenshot, **spfxsamples** is the storage account name.
 
-![Screenshot that shows the Create a new storage account page](../../../../images/deploy-create-storage-account.png)
+![Screenshot that shows the Create a new storage account page](../../../images/deploy-create-storage-account.png)
 
 This will create a new storage account endpoint **spfxsamples.blob.core.windows.net**. 
 
@@ -44,13 +54,13 @@ Select the **+ Container** and create a new container with the following:
 * Name: **helloworld-webpart**
 * Access type: Container
 
-![Image that shows the option to create blob container](../../../../images/deploy-option-blob-container.png)
+![Image that shows the option to create blob container](../../../images/deploy-option-blob-container.png)
 
 ### Storage account access key
 
 In the storage account dashboard, choose **Access Key** in the dashboard and copy one of the access keys.
 
-![Image that shows the storage account access key](../../../../images/deploy-storage-account-accesskey.png)
+![Image that shows the storage account access key](../../../images/deploy-storage-account-accesskey.png)
 
 ### CDN profile and endpoint
 
@@ -60,13 +70,13 @@ Create a new CDN profile as described in [Step 2: Create a new CDN profile](http
 
 For example, in the following screenshot, **spfxwebparts** is the CDN profile name.
 
-![Screenshot of create a new CDN profile](../../../../images/deploy-create-cdn-profile.png)
+![Screenshot of create a new CDN profile](../../../images/deploy-create-cdn-profile.png)
 
 Create a CDN endpoint as described in [Step 3: Create a new CDN endpoint](https://azure.microsoft.com/en-us/documentation/articles/cdn-create-a-storage-account-with-cdn/#step-3-create-a-new-cdn-endpoint).
 
 For example, in the following screenshot, **spfxsamples** is the endpoint name, **Storage** is the origin type, and **spfxsamples.blob.core.windows.net** is the storage account.
 
-![Screenshot of create CDN endpoint](../../../../images/deploy-create-cdn-endpoint.png)
+![Screenshot of create CDN endpoint](../../../images/deploy-create-cdn-endpoint.png)
 
 The CDN endpoint will be created with the following URL: http://spfxsamples.azureedge.net
 
@@ -200,7 +210,7 @@ Upload or drag & drop the client-side solution package to the App Catalog.
 
 Because you already  deployed the package, you will be prompted as to whether to replace the existing package.
 
-![Screenshot of replace client-side solution package prompt](../../../../images/sp-app-replace-pkg.png)
+![Screenshot of replace client-side solution package prompt](../../../images/sp-app-replace-pkg.png)
 
 Choose **Replace It**.
 
@@ -228,4 +238,4 @@ As long as you are updating the **cdnBasePath** accordingly, your files are bein
 
 ## Next steps
 
-You can load jQuery, jQuery UI and build a jQuery Accordion web part. To continue, see [Add jQueryUI Accordion to your client-side web part](./add-jqueryui-accordion-to-web-part).
+You can load jQuery, jQuery UI and build a jQuery Accordion web part. To continue, see [Add jQueryUI Accordion to your client-side web part](./add-jqueryui-accordion-to-web-part.md).

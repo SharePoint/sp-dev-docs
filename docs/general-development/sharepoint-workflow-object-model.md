@@ -1,6 +1,7 @@
 ---
 title: SharePoint workflow object model
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: be615a89-3201-4cd8-bbc7-15f3abf9f668
 ---
 
@@ -115,10 +116,10 @@ Reference content for SharePoint schemas is contained in the reference node enti
 -  [Windows Workflow Foundation (WF) Screencasts](http://msdn.microsoft.com/en-us/netframework/dd733248)
     
   
--  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint)
+-  [Workflow actions and activities reference for SharePoint](workflow-actions-and-activities-reference-for-sharepoint.md)
     
   
--  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio)
+-  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
     
   
 

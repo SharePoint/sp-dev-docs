@@ -1,15 +1,21 @@
+---
+title: Query a remote service using the web proxy in SharePoint
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
 
 # Query a remote service using the web proxy in SharePoint
 Learn how to access data in a remote domain from a page that is hosted in SharePoint by using the web proxy.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 When you are building SharePoint Add-ins, you usually have to incorporate data from various sources. For security reasons, there are blocking mechanisms that prevent cross-domain communication. When you use the web proxy, the webpages in your add-in can access data in your remote domain and the SharePoint domain.
  
 
-As a developer, you can use the web proxy exposed in client APIs, such as the JavaScript and .NET client object models. When you use the web proxy, you issue the initial request to SharePoint. In turn, SharePoint requests the data to the specified endpoint and forwards the response back to your page. Use the web proxy when you want the communication to occur at the server level. For more information, see  [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins).
+As a developer, you can use the web proxy exposed in client APIs, such as the JavaScript and .NET client object models. When you use the web proxy, you issue the initial request to SharePoint. In turn, SharePoint requests the data to the specified endpoint and forwards the response back to your page. Use the web proxy when you want the communication to occur at the server level. For more information, see  [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md).
  
 
 
@@ -18,7 +24,7 @@ As a developer, you can use the web proxy exposed in client APIs, such as the Ja
  
 
  
-![Symbols for "your code", "SharePoint Web Proxy" and "Data source" showing that data requests pass through the web proxy.](../../images/3fbdcfae-6af9-452b-9a07-48575de7e86a.png)
+![Symbols for "your code", "SharePoint Web Proxy" and "Data source" showing that data requests pass through the web proxy.](../images/3fbdcfae-6af9-452b-9a07-48575de7e86a.png)
  
 
  
@@ -52,9 +58,9 @@ The following table lists some useful articles that can help you understand the 
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [SharePoint Add-ins](sharepoint-add-ins)|Learn about the new add-in model in SharePoint that enables you to create add-ins, which are small, easy-to-use solutions for end users.|
-| [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins)|Learn about data access options in SharePoint Add-ins. This article provides guidance on the high-level alternatives you have to choose from when working with data in your add-in.|
-| [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint-2013)|Learn about the difference between host webs and add-in webs. Find out which SharePoint components can be included in a SharePoint Add-in, which components are deployed to the host web, which components are deployed to the add-in web, and how the add-in web is deployed in an isolated domain.|
+| [SharePoint Add-ins](sharepoint-add-ins.md)|Learn about the new add-in model in SharePoint that enables you to create add-ins, which are small, easy-to-use solutions for end users.|
+| [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md)|Learn about data access options in SharePoint Add-ins. This article provides guidance on the high-level alternatives you have to choose from when working with data in your add-in.|
+| [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md)|Learn about the difference between host webs and add-in webs. Find out which SharePoint components can be included in a SharePoint Add-in, which components are deployed to the host web, which components are deployed to the add-in web, and how the add-in web is deployed in an isolated domain.|
 | [Client-side Cross-domain Security](http://msdn.microsoft.com/en-us/library/cc709423%28v=vs.85%29.aspx)|Explore cross-domain threats and use cases, security principles for cross-origin requests, and weigh the risks for developers to enhance cross-domain access from web applications that run in the browser.|
 
 ## Code example: Access data in a remote service using the web proxy
@@ -84,7 +90,7 @@ Figure 1 shows the browser window with data from the remote service in a SharePo
  
 
  
-![SharePoint page with data from the remote service](../../images/WebProxy_result.png)
+![SharePoint page with data from the remote service](../images/WebProxy_result.png)
  
 
 ### To create the SharePoint Add-in project
@@ -102,7 +108,7 @@ Figure 1 shows the browser window with data from the remote service in a SharePo
 
  
 
-  ![App for SharePoint Visual Studio template](../../images/AppForSharePointVSTemplate.PNG)
+  ![App for SharePoint Visual Studio template](../images/AppForSharePointVSTemplate.PNG)
  
 
  
@@ -413,7 +419,7 @@ Figure 1 shows the browser window with data from the remote service in a SharePo
 
  
 
-  ![SharePoint page with data from the remote service](../../images/WebProxy_result.png)
+  ![SharePoint page with data from the remote service](../images/WebProxy_result.png)
  
 
  
@@ -447,13 +453,13 @@ This article demonstrated how to read data in a remote service from a SharePoint
 
  
 
--  [Code sample: Get data from a remote service using the web proxy](http://code.msdn.microsoft.com/SharePoint-2013-Get-data-705bdcd5)
+-  [Code sample: Get data from a remote service using the web proxy](http://code.msdn.microsoft.com/SharePoint-Get-data-705bdcd5)
     
  
--  [Create a custom proxy page for the cross-domain library in SharePoint](create-a-custom-proxy-page-for-the-cross-domain-library-in-sharepoint-2013)
+-  [Create a custom proxy page for the cross-domain library in SharePoint](create-a-custom-proxy-page-for-the-cross-domain-library-in-sharepoint.md)
     
  
--  [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-2013-data-from-add-ins-using-the-cross-domain-library)
+-  [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md)
     
  
 -  [How to: Access external data with REST in SharePoint](http://msdn.microsoft.com/library/0663cc8c-a736-434d-9858-6ce12ce7f748%28Office.15%29.aspx)
@@ -464,27 +470,27 @@ This article demonstrated how to read data in a remote service from a SharePoint
 <a name="SP15Queryremoteservice_Addresources"> </a>
 
 
--  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins)
+-  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md)
     
  
--  [Work with external data in SharePoint](work-with-external-data-in-sharepoint-2013)
+-  [Work with external data in SharePoint](work-with-external-data-in-sharepoint.md)
     
  
--  [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins)
+-  [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md)
     
  
--  [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins)
+-  [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md)
     
  
--  [Use OData query operations in SharePoint REST requests](use-odata-query-operations-in-sharepoint-rest-requests)
+-  [Use OData query operations in SharePoint REST requests](use-odata-query-operations-in-sharepoint-rest-requests.md)
     
  
--  [Three ways to think about design options for SharePoint Add-ins](three-ways-to-think-about-design-options-for-sharepoint-add-ins)
+-  [Three ways to think about design options for SharePoint Add-ins](three-ways-to-think-about-design-options-for-sharepoint-add-ins.md)
     
  
--  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscape)
+-  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md)
     
  
--  [Data storage in SharePoint Add-ins](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscape#Data)
+-  [Data storage in SharePoint Add-ins](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md#Data)
     
  

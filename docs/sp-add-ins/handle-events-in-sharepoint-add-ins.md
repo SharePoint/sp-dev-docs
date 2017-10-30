@@ -1,6 +1,13 @@
+---
+title: Handle events in SharePoint Add-ins
+ms.date: 09/25/2017
+ms.prod: sharepoint
+---
+
+
 # Handle events in SharePoint Add-ins
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint#bk_newname).
+ **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 Your custom code can handle three categories of events in provider-hosted add-ins:
@@ -39,10 +46,10 @@ To handle list and list item events, you create remote event receivers (RERs), w
 
  
 
-- Events in the host web are registered programmatically with the CSOM (client-side object model) or the SharePoint REST API. This task is typically done in "first run" logic in the add-in or in a handler for an add-in event. (See  [Handling add-in events](#HandlingAppEvents) later in the article for an overview of add-in events.) For a code sample that programmatically registers a list event, see [OfficeDev/PnP/Samples/Core.EventReceivers](https://github.com/OfficeDev/PnP/tree/master/Samples/Core.EventReceivers).
+- Events in the host web are registered programmatically with the CSOM (client-side object model) or the SharePoint REST API. This task is typically done in "first run" logic in the add-in or in a handler for an add-in event. (See  [Handling add-in events](#HandlingAppEvents) later in the article for an overview of add-in events.) For a code sample that programmatically registers a list event, see [OfficeDev/PnP/Samples/Core.EventReceivers](https://github.com/OfficeDev/PnP/tree/master/Samples/Core.EventReceivers.md).
     
  
--  Events in the add-in web are usually registered in a Feature of the add-in web with some simple XML markup. Details of how to create the markup and the service are in [Create a remote event receiver in SharePoint Add-ins](create-a-remote-event-receiver-in-sharepoint-add-ins). It is also possible to register add-in web events programmatically.
+-  Events in the add-in web are usually registered in a Feature of the add-in web with some simple XML markup. Details of how to create the markup and the service are in [Create a remote event receiver in SharePoint Add-ins](create-a-remote-event-receiver-in-sharepoint-add-ins.md). It is also possible to register add-in web events programmatically.
     
  
 
@@ -133,7 +140,7 @@ To change the events that the remote event receiver handles, open  **Solution Ex
 
  
 
- **Note**  For additional information about RERs, including some troubleshooting information, see  [Remote Event Receivers FAQ](handle-events-in-sharepoint-add-ins#RERFAQ).
+ **Note**  For additional information about RERs, including some troubleshooting information, see  [Remote Event Receivers FAQ](handle-events-in-sharepoint-add-ins.md#RERFAQ).
  
 
 
@@ -152,7 +159,7 @@ The  **AppInstalled** event runs immediately after SharePoint has finished every
 
  
 
- **Note**  When you install an add-in with  [Tenant scope](tenancies-and-deployment-scopes-for-sharepoint-add-ins), it is installed to the add-in catalog site collection and the AppInstalled event runs then and only then. The add-in is visible in multiple web sites in the tenancy, but the event does not run separately for each of these.
+ **Note**  When you install an add-in with  [Tenant scope](tenancies-and-deployment-scopes-for-sharepoint-add-ins.md), it is installed to the add-in catalog site collection and the AppInstalled event runs then and only then. The add-in is visible in multiple web sites in the tenancy, but the event does not run separately for each of these.
  
 
 Besides canceling an add-in installation, this event can be used for many other purposes including:
@@ -168,7 +175,7 @@ Besides canceling an add-in installation, this event can be used for many other 
  
 - Set app-instance-relative initialization settings. For example, your add-in can have an add-in web property bag for holding settings that vary from one instance of the add-in to another. Your AppInstalled handler can write varying values to the property bag, based on, say, the site type of the host web (such as Team Site or Blog site).
     
-     **Note**  Checking to see if the host web is an AppCatalog site is a good way to detect whether the add-in has been installed with tenant scope. See  [Tenancies and deployment scopes for SharePoint Add-ins](tenancies-and-deployment-scopes-for-sharepoint-add-ins).
+     **Note**  Checking to see if the host web is an AppCatalog site is a good way to detect whether the add-in has been installed with tenant scope. See  [Tenancies and deployment scopes for SharePoint Add-ins](tenancies-and-deployment-scopes-for-sharepoint-add-ins.md).
 - Perform app-instance-relative configuration in the add-in's remote web application, such as adding a table to a database.
     
  
@@ -208,7 +215,7 @@ Some examples of what a handler for this event can do:
 - Make changes to app-instance-relative components in the add-in's web application or remote database.
     
  
- *Detailed instructions for creating add-in event handlers is in  [Create an add-in event receiver in SharePoint Add-ins](create-an-add-in-event-receiver-in-sharepoint-add-ins)*  .
+ *Detailed instructions for creating add-in event handlers is in  [Create an add-in event receiver in SharePoint Add-ins](create-an-add-in-event-receiver-in-sharepoint-add-ins.md)*  .
  
 
  
@@ -245,7 +252,7 @@ Installation and updating errors can be seen in the SharePoint UI, as shown in t
  
 
  
-![Steps to see add-in installation errors in SharePoint.](../../images/1edb644e-b3d4-4a9b-b92e-4ae2c07341c2.png)
+![Steps to see add-in installation errors in SharePoint.](../images/1edb644e-b3d4-4a9b-b92e-4ae2c07341c2.png)
  
 
 #### Add-in event handler architecture strategies
@@ -308,7 +315,7 @@ For example, if your handler needs to take action on an SQL Server database, you
  
 
  
-The SharePoint add-in model doesn't provide a way to store custom server-side code on SharePoint and invoke it from the CSOM (client-side object model). But the CSOM does provide a way to bundle try-catch and if-then-else logic and send it to the server for execution. For a detailed example of a add-in event handler that uses the handler delegation strategy to add a list to a host web, see  [Create an add-in event receiver in SharePoint Add-ins](create-an-add-in-event-receiver-in-sharepoint-add-ins). For a code sample, see  [OfficeDev/PnP/Samples/Core.AppEvents.HandlerDelegation](https://github.com/OfficeDev/PnP/tree/master/Samples/Core.AppEvents.HandlerDelegation).
+The SharePoint add-in model doesn't provide a way to store custom server-side code on SharePoint and invoke it from the CSOM (client-side object model). But the CSOM does provide a way to bundle try-catch and if-then-else logic and send it to the server for execution. For a detailed example of a add-in event handler that uses the handler delegation strategy to add a list to a host web, see  [Create an add-in event receiver in SharePoint Add-ins](create-an-add-in-event-receiver-in-sharepoint-add-ins.md). For a code sample, see  [OfficeDev/PnP/Samples/Core.AppEvents.HandlerDelegation](https://github.com/OfficeDev/PnP/tree/master/Samples/Core.AppEvents.HandlerDelegation.md).
  
 
  
@@ -388,7 +395,7 @@ properties.EventType == SPRemoteEventType.ItemUpdating)
 ```
 
 |
-See  [Add list item properties with a remote event receiver](http://code.msdn.microsoft.com/SharePoint-2013-Add-list-2c6e71e0) for the complete code sample. See [Migrating a SharePoint event receiver to a remote event receiver](http://channel9.msdn.com/Series/Reimagine-SharePoint-Development/Migrating-a-SharePoint-Event-Receiver-to-a-Remote-Event-Receiver) for a detailed demo of the code sample.
+See  [Add list item properties with a remote event receiver](http://code.msdn.microsoft.com/SharePoint-Add-list-2c6e71e0) for the complete code sample. See [Migrating a SharePoint event receiver to a remote event receiver](http://channel9.msdn.com/Series/Reimagine-SharePoint-Development/Migrating-a-SharePoint-Event-Receiver-to-a-Remote-Event-Receiver) for a detailed demo of the code sample.
  
 
  
@@ -424,7 +431,7 @@ Figure 1 shows how remote event receivers work:
  
 
  
-![How remote event receivers work in SharePoint](../../images/SP15Con_Remote_Event_Receivers_FAQ_fig1.png)
+![How remote event receivers work in SharePoint](../images/SP15Con_Remote_Event_Receivers_FAQ_fig1.png)
  
 
  
@@ -434,7 +441,7 @@ Figure 1 shows how remote event receivers work:
 ### How do I debug remote event receivers?
 <a name="RER_DebugRER"> </a>
 
-See  [Debug and troubleshoot a remote event receiver in a SharePoint Add-in](debug-and-troubleshoot-a-remote-event-receiver-in-a-sharepoint-add-in). 
+See  [Debug and troubleshoot a remote event receiver in a SharePoint Add-in](debug-and-troubleshoot-a-remote-event-receiver-in-a-sharepoint-add-in.md). 
  
 
  
@@ -467,10 +474,10 @@ If a SharePoint 2010 solution package containing an event handler is upgraded to
 <a name="SP15handleevents_addlresources"> </a>
 
 
--  [Create a remote event receiver in SharePoint Add-ins](create-a-remote-event-receiver-in-sharepoint-add-ins)
+-  [Create a remote event receiver in SharePoint Add-ins](create-a-remote-event-receiver-in-sharepoint-add-ins.md)
     
  
--  [Create an add-in event receiver in SharePoint Add-ins](create-an-add-in-event-receiver-in-sharepoint-add-ins)
+-  [Create an add-in event receiver in SharePoint Add-ins](create-an-add-in-event-receiver-in-sharepoint-add-ins.md)
     
  
 -  [Introducing remote event receivers in SharePoint](http://www.microsoft.com/resources/msdn/en-us/office/media/video/videol?cid=sdc&amp;from=mscomsdc&amp;VideoID=3ef8f7ae-85a7-44c3-967d-d1620e2a019f)

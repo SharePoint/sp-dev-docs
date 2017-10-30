@@ -1,6 +1,7 @@
----
+﻿---
 title: Keyword Query Language (KQL) syntax reference
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: d8489f59-522f-433c-b9c1-69e597be51c7
 ---
 
@@ -594,7 +595,7 @@ The **XRANK** operator's dynamic ranking calculation is based on this formula:
   
     
     
-![Formula for XRANK operator](../../images/XRANKFormula.gif)
+![Formula for XRANK operator](../images/XRANKFormula.gif)
   
     
     
@@ -688,6 +689,6 @@ You can combine different parts of a keyword query by using the opening parenthe
 <a name="SP15KQL_addlresources"> </a>
 
 
--  [Building search queries in SharePoint](building-search-queries-in-sharepoint)
+-  [Building search queries in SharePoint](building-search-queries-in-sharepoint.md)
     
   

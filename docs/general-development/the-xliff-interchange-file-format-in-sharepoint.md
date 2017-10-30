@@ -1,6 +1,7 @@
 ---
 title: The XLIFF interchange file format in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 660c0f07-7030-4576-957e-b9f2cd0fa895
 ---
 
@@ -94,13 +95,13 @@ The following example of an XML document in XLIFF interchange file format demons
 <a name="bk_addresources"> </a>
 
 
--  [Add SharePoint capabilities](add-sharepoint-capabilities)
+-  [Add SharePoint capabilities](add-sharepoint-capabilities.md)
     
   
 - Code sample:  [SharePoint: Extract and insert bin-unit elements in XLIFF files](http://code.msdn.microsoft.com/SharePoint-Extract-fe686878)
     
   
--  [Machine Translation Services in SharePoint](machine-translation-services-in-sharepoint)
+-  [Machine Translation Services in SharePoint](machine-translation-services-in-sharepoint.md)
     
   
 

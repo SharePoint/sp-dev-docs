@@ -1,6 +1,7 @@
 ---
 title: How to Learn to read and write to the social feed by using the .NET client object model in SharePoint
-ms.prod: SHAREPOINT
+ms.date: 09/25/2017
+ms.prod: sharepoint
 ms.assetid: 3c15ede5-8a59-47e6-a0b2-c17ec6bf4ae1
 ---
 
@@ -49,8 +50,8 @@ Table 1 contains links to articles that describe core concepts you should know b
 
 |**Article title**|**Description**|
 |:-----|:-----|
-| [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint) <br/> |Find out how to get started programming with social feeds and microblog posts, following people and content (documents, sites, and tags), and working with user profiles.  <br/> |
-| [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint) <br/> |Learn about common programming tasks for working with social feeds and the API that you use to perform the tasks.  <br/> |
+| [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint.md) <br/> |Find out how to get started programming with social feeds and microblog posts, following people and content (documents, sites, and tags.md), and working with user profiles.  <br/> |
+| [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint.md) <br/> |Learn about common programming tasks for working with social feeds and the API that you use to perform the tasks.  <br/> |
    
 
 ## Create the console application in Visual Studio 2012 and add references to client assemblies
@@ -291,7 +292,7 @@ To learn how to do more read tasks and write tasks with the social feed by using
     
     
 
--  [How to: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-net-cli)
+-  [How to: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint](how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-net-cli.md)
     
   
 
@@ -299,10 +300,10 @@ To learn how to do more read tasks and write tasks with the social feed by using
 <a name="SP15ReadWriteSocial_addlresources"> </a>
 
 
--  [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint)
+-  [Get started developing with social features in SharePoint](get-started-developing-with-social-features-in-sharepoint.md)
     
   
--  [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint)
+-  [Work with social feeds in SharePoint](work-with-social-feeds-in-sharepoint.md)
     
   
 
