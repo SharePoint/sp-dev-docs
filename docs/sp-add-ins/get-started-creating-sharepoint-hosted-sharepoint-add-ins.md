@@ -59,7 +59,7 @@ There are three ways to get an Office 365 plan:
    
    *Figure 1. Office 365 Developer Site domain name*
 
-   ![Page 2 of Sign up form for Office 365 account](../images/ff384c69-56bf-4ceb-81c3-8b874e2407f0.png)
+   ![Page 2 of Sign-up form for Office 365 account](../images/ff384c69-56bf-4ceb-81c3-8b874e2407f0.png)
    
 3. Create a subdomain of **.onmicrosoft.com**; for example, contoso.onmicrosoft.com.
     
@@ -72,7 +72,7 @@ There are three ways to get an Office 365 plan:
 
    > If you see that message, sign out of the Microsoft account you were using and try again. If you still get the message, clear your browser cache or switch to **InPrivate Browsing** and then fill out the form.
 
-   After you finish the signup process, your browser opens the Office 365 installation page. Select the Admin icon to open the admin center page.
+   After you finish the sign-up process, your browser opens the Office 365 installation page. Select the Admin icon to open the admin center page.
 
    *Figure 2. Office 365 admin center page*
 
