@@ -30,10 +30,10 @@ Here's a summary of provider-hosted add-ins:
 <a name="Setup"> </a>
 
 There are many ways to set up a development environment for SharePoint Add-ins. This section explains the simplest way. For alternatives, see  [Additional resources](#bk_addresources).
-\
+
 ### Get the tools
 
-- If you don't already have **Visual Studio** 2013 or later installed, install it using the instructions at [Install Visual Studio](http://msdn.microsoft.com/library/da049020-cfda-40d7-8ff4-7492772b620f.aspx). We recommend using the [latest version from the Microsoft Download Center](https://www.visualstudio.com/downloads/download-visual-studio-vs).
+- If you don't already have **Visual Studio** 2013 or later installed, install it by using the instructions at [Install Visual Studio](http://msdn.microsoft.com/library/da049020-cfda-40d7-8ff4-7492772b620f.aspx). We recommend using the [latest version from the Microsoft Download Center](https://www.visualstudio.com/downloads/download-visual-studio-vs).
  
 - Visual Studio includes the **Microsoft Office Developer Tools for Visual Studio**. Sometimes a version of the tools is released between updates of Visual Studio. To be sure that you have the latest version of the tools, run the [installer for Office Developer Tools for Visual Studio 2013](http://aka.ms/OfficeDevToolsForVS2013), or the [installer for Office Developer Tools for Visual Studio 2015](http://aka.ms/OfficeDevToolsForVS2015). 
 
@@ -43,7 +43,7 @@ There are many ways to set up a development environment for SharePoint Add-ins. 
 > [!NOTE]
 > You might already have access to an Office 365 Developer Site: 
 > - **Are you an MSDN subscriber?** Visual Studio Ultimate and Visual Studio Premium with MSDN subscribers receive an Office 365 Developer Subscription as a benefit. [Redeem your benefit today.](https://msdn.microsoft.com/subscriptions/manage/default.aspx) 
-> - **Do you have one of the following Office 365 subscription plans?** **If so, an administrator of the Office 365 subscription can create a Developer Site** by using the [Office 365 admin center](https://portal.microsoftonline.com/admin/default.aspx). For more information, see [Create a developer site on an existing Office 365 subscription](create-a-developer-site-on-an-existing-office-365-subscription.md). 
+> - **Do you have one of the following Office 365 subscription plans?** If so, an administrator of the Office 365 subscription can create a Developer Site by using the [Office 365 admin center](https://portal.microsoftonline.com/admin/default.aspx). For more information, see [Create a developer site on an existing Office 365 subscription](create-a-developer-site-on-an-existing-office-365-subscription.md). 
 
 There are three ways to get an Office 365 plan: 
 
@@ -56,7 +56,7 @@ There are three ways to get an Office 365 plan:
 > [!TIP]
 > Open these links in another window or tab to keep the following instructions handy.
 
-1. The first page of the signup form is self-explanatory; supply the requested information and then select **Next**.
+1. The first page of the sign-up form is self-explanatory; supply the requested information, and then select **Next**.
     
 2. On the second page, shown in Figure 1, specify a user ID for the administrator of the subscription.
     
@@ -72,6 +72,7 @@ There are three ways to get an Office 365 plan:
     
    > [!NOTE]
    > If you're signed in to another Microsoft account when you try to sign up for a developer account, you might see this message: "Sorry, that user ID you entered didn't work. It looks like it's not valid. Be sure you enter the user ID that your organization assigned to you. Your user ID usually looks like *someone@example.com* or *someone@example.onmicrosoft.com*." 
+   
    > If you see that message, sign out of the Microsoft account you were using and try again. If you still get the message, clear your browser cache or switch to **InPrivate Browsing** and then fill out the form.
 
    After you finish the signup process, your browser opens the Office 365 installation page. Select the Admin icon to open the admin center page.
@@ -96,7 +97,7 @@ There are three ways to get an Office 365 plan:
 
 1. Start Visual Studio by using the **Run as administrator** option.
     
-2. In Visual Studio, select **File** > **New** > ** New Project**.
+2. In Visual Studio, select **File** > **New** > **New Project**.
     
 3. In the **New Project** dialog box, expand the **Visual C#** node, expand the **Office/SharePoint** node, and then select **Add-ins** > **SharePoint Add-in**.
     
@@ -196,53 +197,52 @@ There are three ways to get an Office 365 plan:
 5. Add the `RetrieveWithCSOM` method inside the [Page](http://msdn2.microsoft.com/EN-US/library/dfbt9et1) class. This method uses the SharePoint CSOM to retrieve information about your site and display it on the page.
     
     ```C#
-      // This method retrieves information about the host web by using the CSOM.
-    private void RetrieveWithCSOM(string accessToken)
-    {
+        // This method retrieves information about the host web by using the CSOM.
+      private void RetrieveWithCSOM(string accessToken)
+      {
 
-        if (IsPostBack)
-        {
-            sharepointUrl = new Uri(Request.QueryString["SPHostUrl"]);
-        }            
+          if (IsPostBack)
+          {
+              sharepointUrl = new Uri(Request.QueryString["SPHostUrl"]);
+          }            
 
-        ClientContext clientContext =
-                        TokenHelper.GetClientContextWithAccessToken(
-                            sharepointUrl.ToString(), accessToken);
+          ClientContext clientContext =
+                          TokenHelper.GetClientContextWithAccessToken(
+                              sharepointUrl.ToString(), accessToken);
 
-        // Load the properties for the web object.
-        Web web = clientContext.Web;
-        clientContext.Load(web);
-        clientContext.ExecuteQuery();
+          // Load the properties for the web object.
+          Web web = clientContext.Web;
+          clientContext.Load(web);
+          clientContext.ExecuteQuery();
 
-        // Get the site name.
-        siteName = web.Title;
+          // Get the site name.
+          siteName = web.Title;
 
-        // Get the current user.
-        clientContext.Load(web.CurrentUser);
-        clientContext.ExecuteQuery();
-        currentUser = clientContext.Web.CurrentUser.LoginName;
+          // Get the current user.
+          clientContext.Load(web.CurrentUser);
+          clientContext.ExecuteQuery();
+          currentUser = clientContext.Web.CurrentUser.LoginName;
 
-        // Load the lists from the Web object.
-        ListCollection lists = web.Lists;
-        clientContext.Load<ListCollection>(lists);
-        clientContext.ExecuteQuery();
+          // Load the lists from the Web object.
+          ListCollection lists = web.Lists;
+          clientContext.Load<ListCollection>(lists);
+          clientContext.ExecuteQuery();
 
-        // Load the current users from the Web object.
-        UserCollection users = web.SiteUsers;
-        clientContext.Load<UserCollection>(users);
-        clientContext.ExecuteQuery();
+          // Load the current users from the Web object.
+          UserCollection users = web.SiteUsers;
+          clientContext.Load<UserCollection>(users);
+          clientContext.ExecuteQuery();
 
-        foreach (User siteUser in users)
-        {
-            listOfUsers.Add(siteUser.LoginName);
-        }
+          foreach (User siteUser in users)
+          {
+              listOfUsers.Add(siteUser.LoginName);
+          }
 
-
-        foreach (List list in lists)
-        {
-            listOfLists.Add(list.Title);
-        }
-    }
+          foreach (List list in lists)
+          {
+              listOfLists.Add(list.Title);
+          }
+      }
     ```
 
 6. Add the `CSOM_Click` method inside the [Page](http://msdn2.microsoft.com/EN-US/library/dfbt9et1) class. This method triggers the event that occurs when the user clicks the **Populate Data** link.
@@ -295,133 +295,132 @@ There are three ways to get an Office 365 plan:
 8. The Default.aspx.cs file should look like this when you're finished.
     
     ```C#
-     using System;
-     using System.Collections.Generic;
-     using System.Linq;
-     using System.Web;
-     using System.Web.UI;
-     using System.Web.UI.WebControls;
+      using System;
+      using System.Collections.Generic;
+      using System.Linq;
+      using System.Web;
+      using System.Web.UI;
+      using System.Web.UI.WebControls;
 
-     using Microsoft.SharePoint.Client;
-     using Microsoft.IdentityModel.S2S.Tokens;
-     using System.Net;
-     using System.IO;
-     using System.Xml;
+      using Microsoft.SharePoint.Client;
+      using Microsoft.IdentityModel.S2S.Tokens;
+      using System.Net;
+      using System.IO;
+      using System.Xml;
 
-     namespace SampleAddInWeb
-     {
-         public partial class Default : System.Web.UI.Page
-         {
-             SharePointContextToken contextToken;
-             string accessToken;
-             Uri sharepointUrl;
-             string siteName;
-             string currentUser;
-             List<string> listOfUsers = new List<string>();
-             List<string> listOfLists = new List<string>();
+      namespace SampleAddInWeb
+      {
+          public partial class Default : System.Web.UI.Page
+          {
+              SharePointContextToken contextToken;
+              string accessToken;
+              Uri sharepointUrl;
+              string siteName;
+              string currentUser;
+              List<string> listOfUsers = new List<string>();
+              List<string> listOfLists = new List<string>();
 
-             protected void Page_PreInit(object sender, EventArgs e)
-             {
-                 Uri redirectUrl;
-                 switch (SharePointContextProvider.CheckRedirectionStatus(Context, out redirectUrl))
-                 {
-                     case RedirectionStatus.Ok:
-                         return;
-                     case RedirectionStatus.ShouldRedirect:
-                         Response.Redirect(redirectUrl.AbsoluteUri, endResponse: true);
-                         break;
-                     case RedirectionStatus.CanNotRedirect:
-                         Response.Write("An error occurred while processing your request.");
-                         Response.End();
-                         break;
-                 }
-             }
+              protected void Page_PreInit(object sender, EventArgs e)
+              {
+                  Uri redirectUrl;
+                  switch (SharePointContextProvider.CheckRedirectionStatus(Context, out redirectUrl))
+                  {
+                      case RedirectionStatus.Ok:
+                          return;
+                      case RedirectionStatus.ShouldRedirect:
+                          Response.Redirect(redirectUrl.AbsoluteUri, endResponse: true);
+                          break;
+                      case RedirectionStatus.CanNotRedirect:
+                          Response.Write("An error occurred while processing your request.");
+                          Response.End();
+                          break;
+                  }
+              }
 
-             protected void CSOM_Click(object sender, EventArgs e)
-             {
-                 string commandAccessToken = ((LinkButton)sender).CommandArgument;
-                 RetrieveWithCSOM(commandAccessToken);
-                 WebTitleLabel.Text = siteName;
-                 CurrentUserLabel.Text = currentUser;
-                 UserList.DataSource = listOfUsers;
-                 UserList.DataBind();
-                 ListList.DataSource = listOfLists;
-                 ListList.DataBind();
-             }
+              protected void CSOM_Click(object sender, EventArgs e)
+              {
+                  string commandAccessToken = ((LinkButton)sender).CommandArgument;
+                  RetrieveWithCSOM(commandAccessToken);
+                  WebTitleLabel.Text = siteName;
+                  CurrentUserLabel.Text = currentUser;
+                  UserList.DataSource = listOfUsers;
+                  UserList.DataBind();
+                  ListList.DataSource = listOfLists;
+                  ListList.DataBind();
+              }
 
-             // This method retrieves information about the host web by using the CSOM.
-             private void RetrieveWithCSOM(string accessToken)
-             {
+              // This method retrieves information about the host web by using the CSOM.
+              private void RetrieveWithCSOM(string accessToken)
+              {
 
-                 if (IsPostBack)
-                 {
-                     sharepointUrl = new Uri(Request.QueryString["SPHostUrl"]);
-                 }
+                  if (IsPostBack)
+                  {
+                      sharepointUrl = new Uri(Request.QueryString["SPHostUrl"]);
+                  }
 
+                  ClientContext clientContext =
+                          TokenHelper.GetClientContextWithAccessToken(
+                              sharepointUrl.ToString(), accessToken);
 
-                 ClientContext clientContext =
-                         TokenHelper.GetClientContextWithAccessToken(
-                             sharepointUrl.ToString(), accessToken);
+                  // Load the properties for the web object.
+                  Web web = clientContext.Web;
+                  clientContext.Load(web);
+                  clientContext.ExecuteQuery();
 
+                  // Get the site name.
+                  siteName = web.Title;
 
-                 // Load the properties for the web object.
-                 Web web = clientContext.Web;
-                 clientContext.Load(web);
-                 clientContext.ExecuteQuery();
+                  // Get the current user.
+                  clientContext.Load(web.CurrentUser);
+                  clientContext.ExecuteQuery();
+                  currentUser = clientContext.Web.CurrentUser.LoginName;
 
-                 // Get the site name.
-                 siteName = web.Title;
+                  // Load the lists from the Web object.
+                  ListCollection lists = web.Lists;
+                  clientContext.Load<ListCollection>(lists);
+                  clientContext.ExecuteQuery();
 
-                 // Get the current user.
-                 clientContext.Load(web.CurrentUser);
-                 clientContext.ExecuteQuery();
-                 currentUser = clientContext.Web.CurrentUser.LoginName;
+                  // Load the current users from the Web object.
+                  UserCollection users = web.SiteUsers;
+                  clientContext.Load<UserCollection>(users);
+                  clientContext.ExecuteQuery();
 
-                 // Load the lists from the Web object.
-                 ListCollection lists = web.Lists;
-                 clientContext.Load<ListCollection>(lists);
-                 clientContext.ExecuteQuery();
+                  foreach (User siteUser in users)
+                  {
+                      listOfUsers.Add(siteUser.LoginName);
+                  }
 
-                 // Load the current users from the Web object.
-                 UserCollection users = web.SiteUsers;
-                 clientContext.Load<UserCollection>(users);
-                 clientContext.ExecuteQuery();
+                  foreach (List list in lists)
+                  {
+                      listOfLists.Add(list.Title);
+                  }
+              }
 
-                 foreach (User siteUser in users)
-                 {
-                     listOfUsers.Add(siteUser.LoginName);
-                 }
+              protected void Page_Load(object sender, EventArgs e)
+              {
+                  string contextTokenString = 
+                       TokenHelper.GetContextTokenFromRequest(Request);
 
-                 foreach (List list in lists)
-                 {
-                     listOfLists.Add(list.Title);
-                 }
-             }
+                  if (contextTokenString != null)
+                  {
+                      contextToken =
+                          TokenHelper.ReadAndValidateContextToken(contextTokenString, Request.Url.Authority);
 
-             protected void Page_Load(object sender, EventArgs e)
-             {
-                 string contextTokenString = 
-                      TokenHelper.GetContextTokenFromRequest(Request);
-
-                 if (contextTokenString != null)
-                 {
-                     contextToken =
-                         TokenHelper.ReadAndValidateContextToken(contextTokenString, Request.Url.Authority);
-
-                     sharepointUrl = new Uri(Request.QueryString["SPHostUrl"]);
-                     accessToken =
-                         TokenHelper.GetAccessToken(contextToken, sharepointUrl.Authority)
-                                    .AccessToken;
-                     CSOM.CommandArgument = accessToken;
-                 }
-                 else if (!IsPostBack)
-                 {
-                     Response.Write("Could not find a context token.");
-                     return;
-                 }
-             }
-         }
-     }
+                      sharepointUrl = new Uri(Request.QueryString["SPHostUrl"]);
+                      accessToken =
+                          TokenHelper.GetAccessToken(contextToken, sharepointUrl.Authority)
+                                     .AccessToken;
+                      CSOM.CommandArgument = accessToken;
+                  }
+                  else if (!IsPostBack)
+                  {
+                      Response.Write("Could not find a context token.");
+                      return;
+                  }
+              }
+          }
+      }
+     
     ```
 
 9. Use the F5 key to deploy and run your add-in. If you see a **Security Alert** window that asks you to trust the self-signed Localhost certificate, select **Yes**.
