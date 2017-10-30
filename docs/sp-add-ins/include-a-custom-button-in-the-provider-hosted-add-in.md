@@ -172,9 +172,9 @@ In this section, you include markup in the add-in that deploys a button to the l
     ```
 
 
-    The entire method should now look like the following.
+   The entire method should now look like the following.
 
-     ```C#
+    ```C#
        private string GetLocalEmployeeName()
      {
          ListItem localEmployee;
@@ -188,7 +188,7 @@ In this section, you include markup in the add-in that deploys a button to the l
          }
          return localEmployee["Title"].ToString();
      }
-     ```
+    ```
 
 17. The EmployeeAdder page should not actually render, so add the following as the last line in the **Page_Load** method. This redirects the browser back to the list view page for the **Local Employees** list.
     
@@ -198,9 +198,9 @@ In this section, you include markup in the add-in that deploys a button to the l
 
     ```
 
-    The entire **Page_Load** method should now look like the following.
+   The entire **Page_Load** method should now look like the following.
 
-        ```C#
+    ```C#
           protected void Page_Load(object sender, EventArgs e)
         {
             spContext = Session["SPContext"] as SharePointContext;
@@ -215,7 +215,7 @@ In this section, you include markup in the add-in that deploys a button to the l
             // Go back to the preceding page
             Response.Redirect(spContext.SPHostUrl.ToString() + "Lists/LocalEmployees/AllItems.aspx", true);
         }
-        ```
+    ```
 
 
 ## Request permission to read the host web list
