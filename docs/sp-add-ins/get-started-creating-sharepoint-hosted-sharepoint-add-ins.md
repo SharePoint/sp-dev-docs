@@ -53,7 +53,7 @@ There are three ways to get an Office 365 plan:
 > [!TIP]
 > Open these links in another window or tab to keep the following instructions handy.
 
-1. The first page of the signup form is self-explanatory; supply the requested information, and then select **Next**.
+1. The first page of the sign-up form is self-explanatory; supply the requested information, and then select **Next**.
 
 2. On the second page, shown in Figure 1, specify a user ID for the administrator of the subscription.
    
