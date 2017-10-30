@@ -171,11 +171,10 @@ In this section, you include markup in the add-in that deploys a button to the l
 
     ```
 
-
    The entire method should now look like the following.
 
     ```C#
-       private string GetLocalEmployeeName()
+      private string GetLocalEmployeeName()
      {
          ListItem localEmployee;
 
@@ -188,7 +187,7 @@ In this section, you include markup in the add-in that deploys a button to the l
          }
          return localEmployee["Title"].ToString();
      }
-    ```
+     ```
 
 17. The EmployeeAdder page should not actually render, so add the following as the last line in the **Page_Load** method. This redirects the browser back to the list view page for the **Local Employees** list.
     
