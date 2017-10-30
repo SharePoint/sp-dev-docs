@@ -41,8 +41,7 @@ body:
 > [!IMPORTANT]
 > lcid parameter is not currently supported with this API. You can currently only create English sites. 
 
-> [!NOTE]
-> New in this API is the concept of SiteDesignID. Much like the in-product site creation flow, the SiteDesignID parameter maps to the included site designs. They are:
+New in this API is the concept of SiteDesignID. Much like the in-product site creation flow, the SiteDesignID parameter maps to the included site designs. They are:
 
 - Topic: null
 - Showcase: 6142d2a0-63a5-4ba0-aede-d9fefca2c767
