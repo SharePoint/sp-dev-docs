@@ -1,4 +1,4 @@
-# SharePoint Framework Tenant Properties
+# SharePoint Online Tenant Properties
 
 >**Note:** Tenant Propeties capability is currently in preview in First Release and is subject to change. They are currently not supported for use in production environments.
 
