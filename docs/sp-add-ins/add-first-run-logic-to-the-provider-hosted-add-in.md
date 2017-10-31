@@ -246,46 +246,50 @@ The SharePoint host web needs to tell the remote web application what version of
                                               true,
                                               AddFieldOptions.DefaultValue);
      ```
-
-
-The entire `CreateLocalEmployeesList` should now look like the following.
+     
+     <br/>
+     
+     
+    The entire `CreateLocalEmployeesList` should now look like the following.
+    
+    <br/>
    
 
-```C#
-       private static void CreateLocalEmployeesList()
-     {
-         using (var clientContext = sPContext.CreateUserClientContextForSPHost())
+     ```C#
+           private static void CreateLocalEmployeesList()
          {
-             var query = from list in clientContext.Web.Lists
-                         where list.Title == "Local Employees"
-                         select list;
-             IEnumerable<List> matchingLists = clientContext.LoadQuery(query);
-             clientContext.ExecuteQuery();
-
-             if (matchingLists.Count() == 0)
+             using (var clientContext = sPContext.CreateUserClientContextForSPHost())
              {
-                 ListCreationInformation listInfo = new ListCreationInformation();
-                 listInfo.Title = "Local Employees";
-                 listInfo.TemplateType = (int)ListTemplateType.GenericList;
-                 listInfo.Url = "LocalEmployees";
-                 List localEmployeesList = clientContext.Web.Lists.Add(listInfo);
-
-                 Field field = localEmployeesList.Fields.GetByInternalNameOrTitle("Title");
-                 field.Title = "Name";
-                 field.Update();
-
-                 localEmployeesList.Fields.AddFieldAsXml("<Field DisplayName='Added to Corporate DB'" 
-                                                         + " Type='Boolean'"  
-                                                        + " ShowInEditForm='FALSE' "
-                                                        + " ShowInNewForm='FALSE'>"
-                                                        + "<Default>FALSE</Default></Field>",
-                                                         true,
-                                                         AddFieldOptions.DefaultValue);
+                 var query = from list in clientContext.Web.Lists
+                             where list.Title == "Local Employees"
+                             select list;
+                 IEnumerable<List> matchingLists = clientContext.LoadQuery(query);
                  clientContext.ExecuteQuery();
+
+                 if (matchingLists.Count() == 0)
+                 {
+                     ListCreationInformation listInfo = new ListCreationInformation();
+                     listInfo.Title = "Local Employees";
+                     listInfo.TemplateType = (int)ListTemplateType.GenericList;
+                     listInfo.Url = "LocalEmployees";
+                     List localEmployeesList = clientContext.Web.Lists.Add(listInfo);
+
+                     Field field = localEmployeesList.Fields.GetByInternalNameOrTitle("Title");
+                     field.Title = "Name";
+                     field.Update();
+
+                     localEmployeesList.Fields.AddFieldAsXml("<Field DisplayName='Added to Corporate DB'" 
+                                                             + " Type='Boolean'"  
+                                                            + " ShowInEditForm='FALSE' "
+                                                            + " ShowInNewForm='FALSE'>"
+                                                            + "<Default>FALSE</Default></Field>",
+                                                             true,
+                                                             AddFieldOptions.DefaultValue);
+                     clientContext.ExecuteQuery();
+                 }
              }
          }
-     }
-```
+     ```
 
 ## Temporarily remove the custom button from the project
 
