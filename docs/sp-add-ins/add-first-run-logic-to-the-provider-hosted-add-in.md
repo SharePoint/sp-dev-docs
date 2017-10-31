@@ -115,7 +115,7 @@ In this article, you add code to the start page of the Chain Store SharePoint Ad
 
 > For the Chain Store add-in, a simple test would work. However, it is generally a good practice to use version numbers because a production add-in is likely to be updated-in-place in the future; that is, updated after it is already installed. When that time comes, your add-in logic needs to be sensitive to more than the two possibilities *not-yet-run* and *already-run-once*. 
 
-> Suppose, for example, that you want to add an additional list to the host web in the upgrade from version 1.0.0.0 to 2.0.0.0. You could do this in an update event handler, or in first-run-after-update logic. Either way, your deployment logic needs to deploy new components, but it also needs to avoid trying to redeploy components that were deployed in a previous version of the add-in. A version number of 1.0.0.0 signals that the components of version 1.0.0.0 have been deployed but that the first-run-after-update logic has not yet run.
+> Suppose, for example, that you want to add an additional list to the host web in the upgrade from version 1.0.0.0 to 2.0.0.0. You could do this in an update event handler, or in first-run-after-update logic. Either way, your deployment logic needs to deploy new components, but it also needs to avoid trying to redeploy components that were deployed in a previous version of the add-in. A version number of 1.0.0.0 signals that the components of version 1.0.0.0 have been deployed, but that the first-run-after-update logic has not yet run.
 
 ## Add the basic startup logic
 
@@ -145,11 +145,11 @@ The SharePoint host web needs to tell the remote web application what version of
 
    - It begins by setting the two static fields in the static `SharePointComponentDeployer` class. It passes the **SharePointContext** object because the code in the `SharePointComponentDeployer` calls into SharePoint, and it uses the query parameter that you added to set the `localVersion` property.  
 
-   - It does nothing if `IsDeployed` is true; that is, if the first-run logic has already run. Otherwise, it calls the deployment method and passes the **ASP.NET Request** object.
+   - It does nothing if `IsDeployed` is true; that is, if the first-run logic has already run. Otherwise, it calls the deployment method and passes the ASP.NET **Request** object.
 
 ## Programmatically deploy a SharePoint list
 
-1. In the SharePointComponentDeployer.cs file, replace the `TODO4` with the following line. You create this method in the next step.
+1. In the SharePointComponentDeployer.cs file, replace the `TODO4` with the following line (you create this method in the next step).
     
     ```C#
       CreateLocalEmployeesList();
@@ -210,18 +210,18 @@ The SharePoint host web needs to tell the remote web application what version of
     
     ```C#
       Field field = localEmployeesList.Fields.GetByInternalNameOrTitle("Title");
-    field.Title = "Name";
-    field.Update();
+      field.Title = "Name";
+      field.Update();
     ```
 
 5. You also manually created a field named **Added to Corporate DB**. To do that programmatically, add the following code in place of  `TODO7`. 
 
     ```C#
-      localEmployeesList.Fields.AddFieldAsXml("<Field DisplayName='Added to Corporate DB'"
-                                             +"Type='Boolean'>"
-                                             + "<Default>FALSE</Default></Field>",
-                                             true,
-                                             AddFieldOptions.DefaultValue);
+          localEmployeesList.Fields.AddFieldAsXml("<Field DisplayName='Added to Corporate DB'"
+                                                 +"Type='Boolean'>"
+                                                 + "<Default>FALSE</Default></Field>",
+                                                 true,
+                                                 AddFieldOptions.DefaultValue);
     ```
 
    
@@ -233,57 +233,58 @@ The SharePoint host web needs to tell the remote web application what version of
 
    - The third parameter determines what content types the field is added to. Passing **DefaultValue** means that it is only added to the list's default content type.
 
+
 6. Recall that the **Added to Corporate DB** is **No** (that is, false) by default, but the custom ribbon button in the add-in sets it to **Yes** after it adds the employee to the corporate database. This system works best only if users cannot manually change the value of the field. To ensure that they don't, make the field invisible in the forms for creating and editing items on the **Local Employees** list. We do this by adding two more attributes to the first parameter, as shown in the following code.
     
-    ```C#
-      localEmployeesList.Fields.AddFieldAsXml("<Field DisplayName='Added to Corporate DB'" 
-                                             + " Type='Boolean'"  
-                                             + " ShowInEditForm='FALSE' "
-                                             + " ShowInNewForm='FALSE'>"
-                                             + "<Default>FALSE</Default></Field>",
-                                             true,
-                                             AddFieldOptions.DefaultValue);
-    ```
+     ```C#
+       localEmployeesList.Fields.AddFieldAsXml("<Field DisplayName='Added to Corporate DB'" 
+                                              + " Type='Boolean'"  
+                                              + " ShowInEditForm='FALSE' "
+                                              + " ShowInNewForm='FALSE'>"
+                                              + "<Default>FALSE</Default></Field>",
+                                              true,
+                                              AddFieldOptions.DefaultValue);
+     ```
 
 
-   The entire `CreateLocalEmployeesList` should now look like the following.
+    The entire `CreateLocalEmployeesList` should now look like the following.
    
 
-    ```C#
-      private static void CreateLocalEmployeesList()
-    {
-        using (var clientContext = sPContext.CreateUserClientContextForSPHost())
-        {
-            var query = from list in clientContext.Web.Lists
-                        where list.Title == "Local Employees"
-                        select list;
-            IEnumerable<List> matchingLists = clientContext.LoadQuery(query);
-            clientContext.ExecuteQuery();
+     ```C#
+       private static void CreateLocalEmployeesList()
+     {
+         using (var clientContext = sPContext.CreateUserClientContextForSPHost())
+         {
+             var query = from list in clientContext.Web.Lists
+                         where list.Title == "Local Employees"
+                         select list;
+             IEnumerable<List> matchingLists = clientContext.LoadQuery(query);
+             clientContext.ExecuteQuery();
 
-            if (matchingLists.Count() == 0)
-            {
-                ListCreationInformation listInfo = new ListCreationInformation();
-                listInfo.Title = "Local Employees";
-                listInfo.TemplateType = (int)ListTemplateType.GenericList;
-                listInfo.Url = "LocalEmployees";
-                List localEmployeesList = clientContext.Web.Lists.Add(listInfo);
+             if (matchingLists.Count() == 0)
+             {
+                 ListCreationInformation listInfo = new ListCreationInformation();
+                 listInfo.Title = "Local Employees";
+                 listInfo.TemplateType = (int)ListTemplateType.GenericList;
+                 listInfo.Url = "LocalEmployees";
+                 List localEmployeesList = clientContext.Web.Lists.Add(listInfo);
 
-                Field field = localEmployeesList.Fields.GetByInternalNameOrTitle("Title");
-                field.Title = "Name";
-                field.Update();
+                 Field field = localEmployeesList.Fields.GetByInternalNameOrTitle("Title");
+                 field.Title = "Name";
+                 field.Update();
 
-                localEmployeesList.Fields.AddFieldAsXml("<Field DisplayName='Added to Corporate DB'" 
-                                                        + " Type='Boolean'"  
-                                                       + " ShowInEditForm='FALSE' "
-                                                       + " ShowInNewForm='FALSE'>"
-                                                       + "<Default>FALSE</Default></Field>",
-                                                        true,
-                                                        AddFieldOptions.DefaultValue);
-                clientContext.ExecuteQuery();
-            }
-        }
-    }
-    ```
+                 localEmployeesList.Fields.AddFieldAsXml("<Field DisplayName='Added to Corporate DB'" 
+                                                         + " Type='Boolean'"  
+                                                        + " ShowInEditForm='FALSE' "
+                                                        + " ShowInNewForm='FALSE'>"
+                                                        + "<Default>FALSE</Default></Field>",
+                                                         true,
+                                                         AddFieldOptions.DefaultValue);
+                 clientContext.ExecuteQuery();
+             }
+         }
+     }
+     ```
 
 ## Temporarily remove the custom button from the project
 
@@ -293,7 +294,7 @@ For technical reasons that we'll discuss in the next article, the custom button 
 
 ## Request permission to manage lists on the host web
 
-Because the add-in is now adding a list to the host web, not just items to an existing list, we need to escalate the permissions that the add-in requests from Write to Manage:
+Because the add-in now adds a list to the host web, not just items to an existing list, we need to escalate the permissions that the add-in requests from Write to Manage:
 
 1. In **Solution Explorer**, open the AppManifest.xml file in the **ChainStore** project.
 
@@ -312,7 +313,7 @@ Because the add-in is now adding a list to the host web, not just items to an ex
 4. Go to the **Site Contents** page. The **Local Employees** list is present because your first-run logic added it.
     
    > [!NOTE]
-   > If the list is not there or you have other indications that the first-run code is not executing, it may be that the **Tenants** table is not being reverted to an empty state when you select F5. The most common cause of this is that the **ChainCorporateDB** project is no longer set as a startup project in Visual Studio. See the note near the top of this article for how to fix this. Also be sure that you've configured the database to be rebuilt as described in [Configure Visual Studio to rebuild the corporate database with each debugging session](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md#Rebuild).
+   > If the list is not there or you have other indications that the first-run code is not executing, it may be that the **Tenants** table is not being reverted to an empty state when you select F5. The most common cause of this is that the **ChainCorporateDB** project is no longer set as a startup project in Visual Studio. See the [note near the top of this article](#create-the-basic-class-for-deploying-sharepoint-components) for how to fix this. Also be sure that you've configured the database to be rebuilt as described in [Configure Visual Studio to rebuild the corporate database with each debugging session](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md#Rebuild).
 
 5. Open the list and add an item. Note that on the new item form, the **Added to Corporate DB** field is no longer present, so it cannot be manually set. This is true of the edit item form as well.
     
