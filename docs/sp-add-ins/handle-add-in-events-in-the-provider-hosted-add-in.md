@@ -23,7 +23,7 @@ This is the seventh in a series of articles about the basics of developing provi
 > [!NOTE]
 > If you have been working through this series about provider-hosted add-ins, you have a Visual Studio solution that you can use to continue with this topic. You can also download the repository at [SharePoint_Provider-hosted_Add-Ins_Tutorials](https://github.com/OfficeDev/SharePoint_Provider-hosted_Add-ins_Tutorials) and open the BeforeAdd-inEventHandlers.sln file.
 
-In this article, we customize the handling of a kind of event in SharePoint called add-in events. Specifically, we create handlers for the add-in installation and uninstallation events. List and list item events can also get custom handling. You'll learn about these in a later article in this series. All of these events are triggered in SharePoint, but your custom code that handles each event is in your remote web application. You configure SharePoint to call your custom handler by registering the handler's URL with the SharePoint event.
+In this article, we customize the handling of a kind of event in SharePoint called add-in events. Specifically, we create handlers for the add-in installation and uninstallation events. List and list item events can also get custom handling; you'll learn about these in a later article in this series. All of these events are triggered in SharePoint, but your custom code that handles each event is in your remote web application. You configure SharePoint to call your custom handler by registering the handler's URL with the SharePoint event.
 
 ## Two places to programmatically deploy SharePoint components
 
@@ -42,11 +42,11 @@ Deciding which is best for a given add-in is an advanced topic. In this article,
 
 - SharePoint doesn't give up if it has to roll back an add-in installation. It immediately tries the installation again. It makes up to four attempts (the 30-second time limit applies on each attempt). Each time it retries, the custom installation handler runs again *from the beginning*. If the handler managed to install, say, a list, before the rollback, it tries to install the same list again on the retry. 
 
-   To prevent this from happening, code in an installation handler has to be written so that it won't take any action (such as, deploy a component) unless it first checks to see if that action has already been done. This makes the logic of an installation handler more complex than first-run logic, because first-run logic won't retry (unless you specifically code it to do so). Also, checking to see if a component has already been deployed usually requires a time-consuming call over the Internet from the remote handler to SharePoint. A second call is also needed to actually deploy the component (if it has not already been deployed).
+   To prevent this from happening, code in an installation handler has to be written so that it won't take any action (such as deploy a component) unless it first checks to see if that action has already been done. This makes the logic of an installation handler more complex than first-run logic because first-run logic won't retry (unless you specifically code it to do so). Also, checking to see if a component has already been deployed usually requires a time-consuming call over the Internet from the remote handler to SharePoint. A second call is also needed to actually deploy the component (if it has not already been deployed).
 
 For the Chain Store add-in, we combine these strategies. In this article, you create an installation handler that registers the host web as a tenant in the corporate database and then sets a signal that specifies whether the add-in has been run yet on the host web. 
 
-In a later article in this series, you'll put first-run logic in the **Page_Load** method of the add-ins start page. This logic will deploy the two custom lists and do some other things too.
+In a later article in this series, you'll put first-run logic in the **Page_Load** method of the add-ins start page. This logic deploys the two custom lists and does some other things, too.
 
 ## Configure the solution for event receiver debugging
 <a name="RERDebug"> </a>
@@ -65,7 +65,7 @@ Debugging of event receivers requires the use of the Azure Service Bus. Follow t
 
 2. Set the value of **Handle Add-in Installed** to **True** (it may still be called **Handle App Installed**). This does two things:
     
-   - A folder called **Services** is created in the **ChainStoreWeb** project (not the **ChainStore** project), and two files are added to it: an AppEventReceiver.svc file and its code-behind AppEventReceiver.svc.cs file (the file names begin with the string "App" because add-ins used to be called "apps"; *don't rename these files*; the Office Developer Tools for Visual Studio assumes that the files will keep these names).
+   - A folder called **Services** is created in the **ChainStoreWeb** project (not the **ChainStore** project), and two files are added to it: an AppEventReceiver.svc file and its code-behind AppEventReceiver.svc.cs file (the file names begin with the string "App" because add-ins used to be called "apps"; *don't rename these files* because the Office Developer Tools for Visual Studio assumes that the files will keep these names).
 
    - The handler URL is registered in the add-in manifest. This part of the manifest is not visible in the manifest designer. To see it, right-click the AppManifest.xml file and select **View Code**. A new child of the **Properties** element looks like the following. 
    
@@ -77,19 +77,20 @@ Debugging of event receivers requires the use of the Azure Service Bus. Follow t
 
 3. Open the AppEventReceiver.svc.cs file.
     
-4. You see that the Office Developer Tools for Visual Studio has created a sample implementation of the **ProcessEvent** method. All implementations of this method begin by initializing an **SPRemoteEventResult** object, and they all end by returning that object to SharePoint. Among other things, this object tells SharePoint whether or not it should roll back the event because the custom handling logic has failed. The tools may also have included a **using** block in this method that creates a **ClientContext** object. The custom handler in the Chain Store add-in isn't going to call back into SharePoint, so delete this block. The method should now look like the following.
+4. You see that the Office Developer Tools for Visual Studio has created a sample implementation of the **ProcessEvent** method. All implementations of this method begin by initializing an **SPRemoteEventResult** object, and they all end by returning that object to SharePoint. Among other things, this object tells SharePoint whether or not it should roll back the event because the custom handling logic has failed. 
+
+   The tools may also have included a **using** block in this method that creates a **ClientContext** object. The custom handler in the Chain Store add-in isn't going to call back into SharePoint, so delete this block. The method should now look like the following.
     
     ```C#
        public SPRemoteEventResult ProcessEvent(SPRemoteEventProperties properties)
      {
          SPRemoteEventResult result = new SPRemoteEventResult();
 
-
          return result;
      }
     ```
 
-5. The event receiver could be called by any of three possible add-in events, so add the following **switch** structure to the **ProcessEvent** method in between the lines that create and return the `result` object. The event names have the string "App" in them because add-ins used to be called "apps."
+5. The event receiver could be called by any of three possible add-in events, so add the following **switch** structure to the **ProcessEvent** method in between the lines that create and return the `result` object (the event names have the string "App" in them because add-ins used to be called "apps").
     
     ```C#
       switch (properties.EventType)
@@ -136,7 +137,9 @@ Debugging of event receivers requires the use of the Azure Service Bus. Follow t
       string tenantName = properties.AppEventProperties.HostWebFullUrl.ToString();
     ```
 
-8. Now our code has to deal with a little quirk of the **AppEventProperties.HostWebFullUrl** property. In most other contexts, SharePoint includes a closing `"/"` character at the end of the host web URL, so the logic of our sample code assumes that this character is present. But SharePoint adds this character at the end of the **HostWebFullUrl** value if, and only if, the host web is the root web of a site collection. Because our Hong Kong website is a subweb in the site collection, we need to add this character to ensure that the same tenant name string is used throughout the sample. Add the following code under the initialization of the `tenantName` object.
+8. Now our code has to deal with a little quirk of the **AppEventProperties.HostWebFullUrl** property. In most other contexts, SharePoint includes a closing `"/"` character at the end of the host web URL, so the logic of our sample code assumes that this character is present. But SharePoint adds this character at the end of the **HostWebFullUrl** value if, and only if, the host web is the root web of a site collection. Because our Hong Kong website is a subweb in the site collection, we need to add this character to ensure that the same tenant name string is used throughout the sample. 
+
+   Add the following code under the initialization of the `tenantName` object.
     
     ```C#
       if (!tenantName.EndsWith("/"))
@@ -149,8 +152,8 @@ Debugging of event receivers requires the use of the Azure Service Bus. Follow t
     
     ```
       using System.Data.SqlClient;
-    using System.Data;
-    using ChainStoreWeb.Utilities;
+      using System.Data;
+      using ChainStoreWeb.Utilities;
     ```
 
 10. Add the following method to the `AppEventReceiver` class. We don't discuss this in detail because the purpose of this series of articles is to teach SharePoint Add-in programming, not SQL Server/Azure programming.
@@ -181,7 +184,7 @@ Debugging of event receivers requires the use of the Azure Service Bus. Follow t
 
 It is usually a good practice to handle the uninstalling event whenever you are handling the installed event. The basic idea is that the uninstalling handler deletes or recycles things that the installed handler deployed. There are, however, many exceptions, so you really need to understand the use cases of your add-in. For example, a list that is deployed with an add-in and populated with the add-in might still have value even after the add-in itself is uninstalled, in which case you wouldn't want to uninstall the list in the uninstalling event handler. 
 
-The uninstallation event does not run, as you might expect, when a user removes the add-in from the **Site Contents** page. Doing so only moves the add-in to the website's Recycle Bin. A user could restore it, but restoring does not rerun the installed event handler, so you'd want anything that was deployed with the installed event handler to still exist if the add-in is restored. SharePoint components can be moved from the Recycle Bin to the second-stage Recycle Bin. It is only when an add-in is deleted from the second-stage that the uninstalling event happens; and when a user does that, the add-in is unrestorable anyway, so we want the Hong Kong store's tenancy to be removed from the corporate database at that point.
+The uninstallation event does not run, as you might expect, when a user removes the add-in from the **Site Contents** page. Doing so only moves the add-in to the website's Recycle Bin. A user could restore it, but restoring does not rerun the installed event handler, so you'd want anything that was deployed with the installed event handler to still exist if the add-in is restored. SharePoint components can be moved from the Recycle Bin to the second-stage Recycle Bin. It is only when an add-in is deleted from the second-stage that the uninstalling event happens; when a user does that, the add-in is unrestorable anyway, so we want the Hong Kong store's tenancy to be removed from the corporate database at that point.
 
 1. Set the value of **Handle Add-in Uninstalling** to **True** (it may still be called **Handle App Uninstalling**). This registers the handler in the AppManifest.xml file just as you earlier registered the installation handler. If you look at the file, you see that they have exactly the same URL. The Office Developer Tools for Visual Studio assumes that you are using the same \*.svc file. We are doing that in this sample, and it is a standard practice. 
 
@@ -238,7 +241,7 @@ The uninstallation event does not run, as you might expect, when a user removes 
 
 3. On the **Accounts** page, select the **Show Add-in Version** button. The version shows as 0000.0000.0000.0000.
     
-   *Figure 1. Accounts page
+   *Figure 1. Accounts page*
 
    ![The Accounts page with the heading "Account settings", a button named "Show Add-in Version", and under this, a line of text reading "Registered version: zero zero zero zero dot zero zero zero zero dot zero zero zero zero dot zero zero zero zero".](../images/2a905b7d-89c7-456a-8456-21a9b7e9efc5.PNG)
 
