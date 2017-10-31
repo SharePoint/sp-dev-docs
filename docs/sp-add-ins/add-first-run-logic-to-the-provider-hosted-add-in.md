@@ -248,10 +248,10 @@ The SharePoint host web needs to tell the remote web application what version of
      ```
 
 
-    The entire `CreateLocalEmployeesList` should now look like the following.
+The entire `CreateLocalEmployeesList` should now look like the following.
    
 
-     ```C#
+```C#
        private static void CreateLocalEmployeesList()
      {
          using (var clientContext = sPContext.CreateUserClientContextForSPHost())
@@ -285,7 +285,7 @@ The SharePoint host web needs to tell the remote web application what version of
              }
          }
      }
-     ```
+```
 
 ## Temporarily remove the custom button from the project
 
