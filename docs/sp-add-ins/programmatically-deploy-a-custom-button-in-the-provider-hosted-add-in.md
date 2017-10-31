@@ -233,17 +233,17 @@ Because the add-in now adds and deletes web-scoped custom actions, we need to es
 4. Go to the **Site Contents** page. The **Local Employees** list is present because your first-run logic added it.
     
    > [!NOTE]
-   > If the list is not there or you have other indications that the first-run code is not executing, it may be that the **Tenants** table is not being reverted to an empty state when you press F5. The most common cause of this is that the **ChainCorporateDB** project is no longer set as a startup project in Visual Studio. See the [note near the top of this article](#re-add-the-custom-button-to-the-project) for how to fix this. Also be sure that you've configured the database to be rebuilt as described in [Configure Visual Studio to rebuild the corporate database with each debugging session](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md#Rebuild).
+   > If the list is not there or you have other indications that the first-run code is not executing, it may be that the **Tenants** table is not being reverted to an empty state when you select F5. The most common cause of this is that the **ChainCorporateDB** project is no longer set as a startup project in Visual Studio. See the [note near the top of this article](#re-add-the-custom-button-to-the-project) for how to fix this. Also be sure that you've configured the database to be rebuilt as described in [Configure Visual Studio to rebuild the corporate database with each debugging session](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md#Rebuild).
 
 5. Open the list and add an item.
 
-6. In the list view, select the item and open the **Item** tab on the ribbon. 
+6. In the list view, select the item, and then open the **Item** tab on the ribbon. 
 
 7. On the **Item** tab, select the **Add to Corporate DB** button. The employee is added to the corporate database, and the **Added to Corporate DB** field is changed to **Yes**.
 
 8. Go back to the **Site Contents** page and select **Add an add-in**.
 
-9. Add a new **Custom List**. By default it will be "Generic" type (Generic is list type 100). After the list is created, open the **Item** tab on the ribbon. Notice that the **Add to Corporate DB** button is *not*  on the ribbon. This because your code deleted the web-scoped button.
+9. Add a new **Custom List**. By default it will be "Generic" type (Generic is list type 100). After the list is created, open the **Item** tab on the ribbon. Notice that the **Add to Corporate DB** button is *not*  on the ribbon. This is because your code deleted the web-scoped button.
 
 10. To end the debugging session, close the browser window or stop debugging in Visual Studio. Each time that you select F5, Visual Studio retracts the previous version of the add-in and installs the latest one.
 
@@ -252,7 +252,7 @@ Because the add-in now adds and deletes web-scoped custom actions, we need to es
 ## Next steps
 <a name="Nextsteps"> </a>
 
-Events on lists and list items can also have custom handlers in SharePoint. You learn how to create one and deploy it in your first-run logic in the next article: [Handle list item events in the provider-hosted add-in](handle-list-item-events-in-the-provider-hosted-add-in.md).
+Events on lists and list items can also have custom handlers in SharePoint. You will learn how to create one and deploy it in your first-run logic in [Handle list item events in the provider-hosted add-in](handle-list-item-events-in-the-provider-hosted-add-in.md).
  
 
  
