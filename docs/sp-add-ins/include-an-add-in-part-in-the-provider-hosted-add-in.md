@@ -10,7 +10,7 @@ ms.prod: sharepoint
 Learn how to surface a remote web form in a SharePoint page in a provider-hosted SharePoint Add-in.
  
 > [!NOTE]
-> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md).
 
 This is the sixth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series:
 
@@ -43,15 +43,14 @@ In this article, you add a special kind of Web Part called an add-in part to the
    An elements.xml file that defines the add-in part is added to the project and opened.
     
 5. In the **ClientWebPart** element, change the following attributes to these values:
-    
+   
+    |**Attribute**|**Value**|
+    |:-----|:-----|
+    |Title|Place Order|
+    |Description|Form to place an order|
+    |DefaultHeight|320|
 
-   |**Attribute**|**Value**|
-   |:-----|:-----|
-   |Title|Place Order|
-   |Description|Form to place an order|
-   |DefaultHeight|320|
-
-   Leave all the other attributes with their defaults and save the file.
+    Leave all the other attributes with their defaults and save the file.
     
 ## Run the add-in and test the add-in part
 
@@ -62,13 +61,13 @@ In this article, you add a special kind of Web Part called an add-in part to the
    1. Select **Back to Site** on the chrome control at the top of the start page to open the home page of the Hong Kong store.
    2. On the ribbon, open the **Page** tab and select **Edit**.
    3. After the page is in edit mode, open the **Insert** tab on the ribbon, and then select **Add-in Part** (the button may still be called **App Part**).
-   4. On the Web Part insertion control that opens, select the **Place Order** add-in part. The control will look similar to the following.
+   4. On the Web Part insertion control that opens, select the **Place Order** add-in part. The control looks similar to the following.
 
       *Figure 1. SharePoint's Web Part insertion control*
 
       ![SharePoint's Web Part insertion control. The part called "Place Order" is highlighted. Its name and description appears in a box at the right.](../images/aae61f89-2e9e-4808-8b0c-2439dad7c701.PNG)
 
-   5. Select somewhere in one of the Web Part zones of the form. This is to set the location where the add-in part will go. 
+   5. Select somewhere in one of the Web Part zones of the form to set the location where the add-in part will go. 
    6. Select **Add** on the Web Part insertion control. The **Place Order** add-in part is added to the Web Part zone.
    7. On the ribbon, select **Save**.
     
