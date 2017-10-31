@@ -58,9 +58,11 @@ In this article, you add code to the start page of the Chain Store SharePoint Ad
       internal static Version localVersion;
     ```
 
-   The first field holds the `SharePointContext` object that is needed to make CRUD operations on SharePoint. 
+   Note the following about this code:
    
-   The second field holds the version number of the add-in that is installed on the host web. This value is initially different from the default value (**0000.0000.0000.0000**) that is recorded in the corporate **Tenants** table when the installation handler registers the tenant. For example, the first version of the add-in will be **1.0.0.0**.
+   - The first field holds the `SharePointContext` object that is needed to make CRUD operations on SharePoint. 
+   
+   - The second field holds the version number of the add-in that is installed on the host web. This value is initially different from the default value (**0000.0000.0000.0000**) that is recorded in the corporate **Tenants** table when the installation handler registers the tenant. For example, the first version of the add-in will be **1.0.0.0**.
 
 7. Create the following static property to hold the version of the add-in that is currently recorded in the corporate **Tenants** table. It uses the two methods that were already in the file to get and set this value.
     
@@ -224,7 +226,6 @@ The SharePoint host web needs to tell the remote web application what version of
                                                  AddFieldOptions.DefaultValue);
     ```
 
-   
    Note the following about this code:
 
    - The key properties of the field are specified with an XML blob. This is a legacy of SharePoint's architecture, where websites, lists, fields, content types, and most other kinds of SharePoint components are defined as XML. In this case, we specify the display name, data type, and default value of the field.
