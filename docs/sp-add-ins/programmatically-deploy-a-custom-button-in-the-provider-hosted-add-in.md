@@ -1,79 +1,53 @@
 ---
 title: Programmatically deploy a custom button in the provider-hosted add-in
-ms.date: 09/25/2017
+ms.date: 10/31/2017
 ms.prod: sharepoint
 ---
 
 
 # Programmatically deploy a custom button in the provider-hosted add-in
+
 Learn how to programmatically register a custom ribbon button with a custom list in the same provider-hosted SharePoint Add-in.
  
+> [!NOTE]
+> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md).
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
- 
-
-This is the ninth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with  [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series:
- 
+This is the ninth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series:
 
 -  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
-    
- 
 -  [Give your provider-hosted add-in the SharePoint look-and-feel](give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md)
-    
- 
 -  [Include a custom button in the provider-hosted add-in](include-a-custom-button-in-the-provider-hosted-add-in.md)
-    
- 
 -  [Get a quick overview of the SharePoint object model](get-a-quick-overview-of-the-sharepoint-object-model.md)
-    
- 
 -  [Add SharePoint write operations to the provider-hosted add-in](add-sharepoint-write-operations-to-the-provider-hosted-add-in.md)
-    
- 
 -  [Include an add-in part in the provider-hosted add-in](include-an-add-in-part-in-the-provider-hosted-add-in.md)
-    
- 
 -  [Handle add-in events in the provider-hosted add-in](handle-add-in-events-in-the-provider-hosted-add-in.md)
-    
- 
 -  [Add first-run logic to the provider-hosted add-in](add-first-run-logic-to-the-provider-hosted-add-in.md)
-    
- 
 
- **Note**  If you have been working through this series about provider-hosted add-ins, then you have a Visual Studio solution that you can use to continue with this topic. You can also download the repository at  [SharePoint_Provider-hosted_Add-Ins_Tutorials](https://github.com/OfficeDev/SharePoint_Provider-hosted_Add-ins_Tutorials) and open the BeforeProgrammaticButton.sln file.
- 
+> [!NOTE]
+> If you have been working through this series about provider-hosted add-ins, you have a Visual Studio solution that you can use to continue with this topic. You can also download the repository at [SharePoint_Provider-hosted_Add-Ins_Tutorials](https://github.com/OfficeDev/SharePoint_Provider-hosted_Add-ins_Tutorials) and open the BeforeProgrammaticButton.sln file.
 
-In this article you will learn how to include a custom ribbon button in the a SharePoint Add-in when the list whose ribbon gets the button is itself being programmatically deployed in the very same add-in.
- 
+In this article, you learn how to include a custom ribbon button in a SharePoint Add-in when the list whose ribbon gets the button is itself being programmatically deployed in the very same add-in.
 
 ## Re-add the custom button to the project
 
+> [!NOTE]
+> The settings for Startup Projects in Visual Studio tend to revert to defaults whenever the solution is reopened. Always take these steps immediately after reopening the sample solution in this series of articles: 
+> 1. Right-click the solution node at the top of **Solution Explorer**, and then select **Set startup projects**.  
+> 2. Ensure that all three projects are set to **Start** in the **Action** column.
 
- **Note**   The settings for Startup Projects in Visual Studio tend to revert to defaults whenever the solution is reopened. Always take these steps immediately after reopening the sample solution in this series of articles: Right-click the solution node at the top of **Solution Explorer** and select **Set startup projects**.  Make sure all three projects are set to **Start** in the **Action** column.
- 
+In the previous article, you removed the custom **AddEmployeeToCorpDB** ribbon button from the project. Add it back in with the following steps.
 
-In the previous article you removed the custom  **AddEmployeeToCorpDB** ribbon button from the project. Add it back in with these steps below.
- 
+1. On the toolbar at the top of **Solution Explorer**, select the **Show All Files** button.
 
- 
+   *Figure 1. Solution Explorer toolbar*
 
-1. In  **Solution Explorer**, press the  **Show All Files** button on the small toolbar at the top of **Solution Explorer**.
-    
-  ![The Solution Explorer toolbar with a box drawn around the "Show All Files" button.](../images/f6b035f5-1aa7-452a-8f59-9dd44b062d06.PNG)
- 
+   ![The Solution Explorer toolbar with a box drawn around the "Show All Files" button.](../images/f6b035f5-1aa7-452a-8f59-9dd44b062d06.PNG)
 
- 
+2. In the **ChainStore** project, right-click **AddEmployeeToCorpDB**, and then select **Include in Project**.
 
- 
-2. In the  **ChainStore** project, right-click **AddEmployeeToCorpDB** and select **Include in Project**.
-    
- 
-3. Press the  **Show All Files** button again.
-    
- 
-4. In the  **ChainStore** project, expand **AddEmployeeToCorpDB** and then open the elements.xml file.
-    
- 
+3. Select the **Show All Files** button again.
+
+4. In the **ChainStore** project, expand **AddEmployeeToCorpDB**, and then open the elements.xml file.
 
 ## Understand a dilemma and its solution
 
