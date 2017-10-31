@@ -50,7 +50,7 @@ The following are not yet supported in the package:
 - Animations
 - Icons
 
-Starting with the SharePoint Framework yeoman generator version 1.3.3, the default project (web parts and extensions) templates will come setup with the new sp-office-ui-fabric-core package and consume core styles from the package instead of using global CSS styles. 
+Starting with the SharePoint Framework yeoman generator version 1.3.4, the default project (web parts and extensions) templates will come setup with the new sp-office-ui-fabric-core package and consume core styles from the package instead of using global CSS styles. 
 
 ### Updating existing projects
 
