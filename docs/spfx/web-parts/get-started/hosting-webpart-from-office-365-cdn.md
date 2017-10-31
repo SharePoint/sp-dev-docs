@@ -74,10 +74,13 @@ yo @microsoft/sharepoint
 When prompted:
 
 * Accept the default **sphosted-webpart** as your solution name and choose **Enter**.
-* Select **Use the current folder** as the location for the files.
-* Select **No JavaScript web Framework** as the framework and choose **Enter**.
-* Use **HelloWord** for your web part name and choose **Enter**.
-* Accept the default **HelloWorld description** and choose **Enter**.
+* Choose **SharePoint Online only (latest)**, and press **Enter**.
+* Select **Use the current folder** for where to place the files.
+* Choose **N** to require the extension to be installed on each site explicitly when it's being used. 
+* Choose **WebPart** as the client-side component type to be created. 
+* Accept the default **HelloWorld** as your web part name and choose **Enter**.
+* Accept the default **HelloWorld description** as your web part description and choose **Enter**.
+* Accept the default **No javascript web framework** as the framework you would like to use and choose **Enter**.
 
 ![Yeoman generator questions around the newly created web part](../../../images/cdn-create-webpart-yo.png)
 

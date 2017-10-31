@@ -30,6 +30,8 @@
     href: spfx/use-theme-colors-in-your-customizations.md
   - name: Working with CSS
     href: spfx/css-recommendations.md
+  - name: Office UI Fabric integration
+    href: spfx/office-ui-fabric-integration.md
   - name: GraphHttpClient
     items:
     - name: Overview
@@ -141,8 +143,6 @@
         href: spfx/web-parts/guidance/migrate-jquery-fullcalendar-script-to-spfx.md
       - name: Connect to API secured with Azure Active Directory
         href: spfx/web-parts/guidance/connect-to-api-secured-with-aad.md
-      - name: Office UI Fabric integration
-        href: spfx/web-parts/guidance/office-ui-fabric-integration.md
       - name: Build web parts with SP PnP JS
         href: spfx/web-parts/guidance/use-sp-pnp-js-with-spfx-web-parts.md
       - name: Build web parts with Angular v1.x

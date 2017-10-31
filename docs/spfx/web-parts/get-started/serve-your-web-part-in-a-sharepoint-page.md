@@ -41,15 +41,17 @@ The **package-solution.json** file defines the package metadata as shown in the 
 
 ```json
 {
-	"solution": {
-		"name": "helloworld-webpart-client-side-solution",
-		"id": "ed83e452-2286-4ea0-8f98-c79d257acea5",
-		"version": "1.0.0.0"
-	},
-	"paths": {
-		"zippedPackage": "solution/helloworld-webpart.sppkg"
-	}
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "helloworld-webpart-client-side-solution",
+    "id": "4432f33b-5845-4ca0-827e-a8ae68c7b945",
+    "version": "1.0.0.0"
+  },
+  "paths": {
+    "zippedPackage": "solution/helloworld-webpart.sppkg"
+  }
 }
+
 ```
 
 In the console window, enter the following command to package your client-side solution that contains the web part:
@@ -100,7 +102,7 @@ Choose the gears icon on the top nav bar on the right and choose **Add an app** 
 
 In the **Search** box, enter **helloworld** and choose **Enter** to filter your apps.
 	
-![Add app to site](../../../images/install-app-your-site.png) 
+![Add app to site](../../../images/install-app-your-site.png)
 	
 Choose the **helloworld-webpart-client-side-solution** app to install the app on the site.
 	
@@ -132,7 +134,8 @@ In the console window that has the **helloworld-webpart** project directory, run
 gulp serve --nobrowser
 ```
 
->**Note:** `--nobrowser` will not automatically launch the SharePoint Workbench.
+> [!NOTE]
+> `--nobrowser` will not automatically launch the SharePoint Workbench.
 
 ## Add the HelloWorld web part to modern page
 
