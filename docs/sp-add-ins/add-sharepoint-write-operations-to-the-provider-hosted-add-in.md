@@ -32,11 +32,11 @@ Our add-in has a custom ribbon button that adds an employee from the Hong Kong s
 > The settings for Startup Projects in Visual Studio tend to revert to defaults whenever the solution is reopened. Always take these steps immediately after reopening the sample solution in this series of articles: 
 
 > 1. Right-click the solution node at the top of **Solution Explorer**, and then select **Set startup projects**.  
-> 2. Make sure all three projects are set to **Start** in the **Action** column.
+> 2. Ensure that all three projects are set to **Start** in the **Action** column.
 
 1. In **Solution Explorer**, open the EmployeeAdder.cs file.
 
-2. Add the following line to the **Page_Load** method between the call of `AddLocalEmployeeToCorpDB` and the call of `Response.Redirect`. In the next step, you create the `SetLocalEmployeeSyncStatus` method.
+2. Add the following line to the **Page_Load** method between the call of `AddLocalEmployeeToCorpDB` and the call of `Response.Redirect`. In the next step, you create the **SetLocalEmployeeSyncStatus** method.
     
     ```C#
        // Write to SharePoint 
@@ -95,7 +95,7 @@ Because the add-in is now writing to the list as well as reading it, we need to 
 
 8. Select the **Add to Corporate DB** button. (You must select an item first.)
 
-9. The page seems to reload because the **Page_Load** method of the EmployeeAdder page redirects back to it. The value of the **Added to Corporate DB** field for the employee has changed to **Yes**.
+9. The page seems to reload because the **Page_Load** method of the EmployeeAdder page redirects back to it. The value of the **Added to Corporate DB** field for the employee changes to **Yes**.
     
    > [!NOTE]
    > What prevents a user from manually changing the value **Added to Corporate DB** in a way that makes the list and the corporate database inconsistent? Nothing does at the moment. You'll get the solution to this problem in a later article of this series.
@@ -149,7 +149,7 @@ Now you add a function to the add-in that creates an item in the **Expected Ship
 
 2. Add a **using** statement for **Microsoft.SharePoint.Client** to the top of the file.
 
-3. In the `btnCreateOrder_Click` method, add the following line just under the call to `CreateOrder`. You'll create the CreateExpectedShipment method in the next step.
+3. In the **btnCreateOrder_Click** method, add the following line just under the call to `CreateOrder`. You'll create the **CreateExpectedShipment** method in the next step.
     
     ```C#
       CreateExpectedShipment(txtBoxSupplier.Text, txtBoxItemName.Text, quantity);
@@ -176,7 +176,9 @@ Now you add a function to the add-in that creates an item in the **Expected Ship
 
    Note the following about this code:
 
-   - A  **ListItem** object is not created with a constructor. This is for performance reasons. A **ListItem** object has many properties (with default values). If a constructor is used, the entire object would be included in the XML message that the **ExecuteQuery** method sends to the server. The **ListItemCreationInformation** object is a lightweight object that only contains the minimal non-default values that the server needs to create a **ListItem** object. It may appear that there is a line that creates a **ListItem** object, but recall that this line only adds some XML markup to a message that is sent to the server. The **ListItem** object is created there on the server.
+   - A  **ListItem** object is not created with a constructor. This is for performance reasons. A **ListItem** object has many properties (with default values). If a constructor is used, the entire object would be included in the XML message that the **ExecuteQuery** method sends to the server. 
+   
+   - The **ListItemCreationInformation** object is a lightweight object that only contains the minimal non-default values that the server needs to create a **ListItem** object. It may appear that there is a line that creates a **ListItem** object, but recall that this line only adds some XML markup to a message that is sent to the server. The **ListItem** object is created there on the server.
 
    - There is no need to bring the **ListItem** object back down to the client, so there is no call to the **ClientContext.Load** method.
 
@@ -186,7 +188,7 @@ Now you add a function to the add-in that creates an item in the **Expected Ship
 
 Anyone with list owner privileges for a SharePoint list can delete the list. And if the list is deployed to the host web by an add-in, the website owner of the host web can delete it. That may happen if the owner decides to do without the functionality provided by the list. (It can be restored from the SharePoint Recycle Bin if the owner changes his mind.) 
 
-The `CreateExpectedShipment` method depends on the existence of the **Expected Shipments** list. Suppose a website owner decided to delete the list. Later, when an order is added with the add-in's **Order Form**, the `CreateExpectedShipment` is called and throws an exception whose message says that there's no **Expected Shipments** list on the SharePoint website.
+The **CreateExpectedShipment** method depends on the existence of the **Expected Shipments** list. Suppose a website owner decided to delete the list. Later, when an order is added with the add-in's **Order Form**, the **CreateExpectedShipment** method is called and throws an exception whose message says that there's no **Expected Shipments** list on the SharePoint website.
 
 You might want the method to check the `expectedShipmentsList` for nullity before it does anything with it. When you are working with CSOM, you can *not*  make this check with a simple structure like this:
 
@@ -210,9 +212,13 @@ if (matchingLists.Count() != 0)
 clientContext.ExecuteQuery(); 
 ```
 
-The preceding code has the advantage of allowing you to avoid the complications of the **ConditionalScope** class, and we use exactly this code elsewhere in this series of articles. But there is a disadvantage too: this code requires an extra call of **ExecuteQuery** solely to get the value you want to check in the **if** statement. If we use this technique in the `CreateExpectedShipment` to check for the existence of the list, that method will have two calls of **ExecuteQuery**, each of which makes an HTTP request from the remote web server to SharePoint. These requests are the most time-consuming part of any CSOM method, so it is generally a good practice to minimize them.
+The preceding code has the advantage of allowing you to avoid the complications of the **ConditionalScope** class, and we use exactly this code elsewhere in this series of articles. But there is a disadvantage too: this code requires an extra call of **ExecuteQuery** solely to get the value you want to check in the **if** statement. 
 
-We will leave the `CreateExpectedShipment` as it is, but in a production add-in, you need to think about how your code is going to work if a component that it references is deleted. Programmatically restoring the list from the Recycle Bin is one option, but that would annoy users who intentionally decided to delete the list. You should also consider that doing nothing at all to prevent the exception might be the best choice. An exception from SharePoint would alert users that the deletion of the list has broken part of the add-in, which is something the person who deleted it might not have realized. A user can then decide whether to restore the list from the Recycle Bin or do without the part of the add-in functionality that no longer works.
+If we use this technique in the **CreateExpectedShipment** method to check for the existence of the list, that method will have two calls of **ExecuteQuery**, each of which makes an HTTP request from the remote web server to SharePoint. These requests are the most time-consuming part of any CSOM method, so it is generally a good practice to minimize them.
+
+We will leave the **CreateExpectedShipment** method as is, but in a production add-in, you need to think about how your code is going to work if a component that it references is deleted. Programmatically restoring the list from the Recycle Bin is one option, but that would annoy users who intentionally decided to delete the list. 
+
+You should also consider that doing nothing at all to prevent the exception might be the best choice. An exception from SharePoint would alert users that the deletion of the list has broken part of the add-in, which is something the person who deleted it might not have realized. A user can then decide whether to restore the list from the Recycle Bin or do without the part of the add-in functionality that no longer works.
 
 ## Request permission to manage the website
 
