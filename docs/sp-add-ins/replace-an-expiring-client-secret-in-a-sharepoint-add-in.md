@@ -46,7 +46,7 @@ Ensure the following before you begin:
 1. Open Windows PowerShell and run the following cmdlet:
     
 ```
-  Connect-MsolService
+Connect-MsolService
 
 ```
 
@@ -63,7 +63,7 @@ Ensure the following before you begin:
  
 
 ```
-  $applist = Get-MsolServicePrincipal -all  |Where-Object -FilterScript { ($_.DisplayName -notlike "*Microsoft*") -and ($_.DisplayName -notlike "autohost*") -and  ($_.ServicePrincipalNames -notlike "*localhost*") }
+$applist = Get-MsolServicePrincipal -all  |Where-Object -FilterScript { ($_.DisplayName -notlike "*Microsoft*") -and ($_.DisplayName -notlike "autohost*") -and  ($_.ServicePrincipalNames -notlike "*localhost*") }
 
 foreach ($appentry in $applist)
 {
@@ -92,14 +92,14 @@ foreach ($appentry in $applist)
 1. Create a client ID variable with the following line, using the client ID of the SharePoint Add-in as the parameter.
     
 ```
-  $clientId = 'client id of the add-in'
+$clientId = 'client id of the add-in'
 
 ```
 
 2. Generate a new client secret with the following lines:
     
 ```
-  $bytes = New-Object Byte[] 32
+$bytes = New-Object Byte[] 32
 $rand = [System.Security.Cryptography.RandomNumberGenerator]::Create()
 $rand.GetBytes($bytes)
 $rand.Dispose()
@@ -128,7 +128,7 @@ $newClientSecret
 1. Open the SharePoint Add-in project in Visual Studio, and open the web.config file for the web application project. In the  **appSettings** section, there are keys for the client ID and client secret. The following is an example:
     
 ```XML
-  <appSettings>
+<appSettings>
   <add key="ClientId" value="your client id here" />
   <add key="ClientSecret" value="your old secret here" />
      ... other settings may be here ...
@@ -139,7 +139,7 @@ $newClientSecret
 2. Change the name of the  **ClientSecret** key to "SecondaryClientSecret" as shown in the following example:
     
 ```XML
-  <add key="SecondaryClientSecret" value="your old secret here" />
+<add key="SecondaryClientSecret" value="your old secret here" />
 ```
 
 > **Note** If you are performing this procedure for the first time there will be no **SecondaryClientSecret** property entry at this point in the configuration file. However if you are performing the procedure for a subsequent client secret expiration (second or third) the property **SecondaryClientSecret** is already present and containing the initial or already longer time ago expired old secret. In this case delete the **SecondaryClientSecret** property first before renaming **ClientSecret**.
@@ -147,7 +147,7 @@ $newClientSecret
 3. Add a new  **ClientSecret** key and give it your new client secret. Your markup should now look like the following:
     
 ```XML
-  <appSettings>
+<appSettings>
   <add key="ClientId" value="your client id here" />
   <add key="ClientSecret" value="your new secret here" />
   <add key="SecondaryClientSecret" value="your old secret here" />
@@ -172,29 +172,28 @@ For expired client secrets, first you must delete all of the expired secrets for
 1. Connect to MSOnline using the tenant admin user with the below markup using SharePoint Windows PowerShell.
     
 ```
-  import-module MSOnline
+import-module MSOnline
 $msolcred = get-credential
 connect-msolservice -credential $msolcred
 
 ```
 
-2. Get  **ServicePrincipals** and keys. Printing **$keys** returns three records. Replace each **KeyId** in *KeyId1*  , *KeyId2*  and *KeyId3*  . You will also see the **EndDate** of each key. Confirm whether your expired key appers there.
+2. Get  **ServicePrincipals** and keys. Printing **$keys** returns three records. Replace each **KeyId** in *KeyId1*, *KeyId2*  and *KeyId3*. You will also see the **EndDate** of each key. Confirm whether your expired key appers there.
     
      **Note:** The **clientId** needs to match your expired **clientId**. It's recommended to delete all keys, both expired and unexpired, for this **clientId**.
-    
-
 
 ```
-  $clientId = "27c5b286-62a6-45c7-beda-abbaea6eecf2"
-$keys = Get-MsolServicePrincipalCredential -AppPrincipalId $clientId
+$clientId = "27c5b286-62a6-45c7-beda-abbaea6eecf2"
+$keys = Get-MsolServicePrincipalCredential -AppPrincipalId $clientId -ReturnKeyValues $false
 Remove-MsolServicePrincipalCredential -KeyIds @("KeyId1"," KeyId2"," KeyId3") -AppPrincipalId $clientId 
-
+# To immediately remove the three keys without manually copy&pasting them, use the following line
+# Remove-MsolServicePrincipalCredential -KeyIds @($keys[0].KeyId,$keys[1].KeyId,$keys[2].KeyId) -AppPrincipalId $clientId
 ```
 
 3. Generate a new  **ClientSecret** for this **clientID**. It uses the same **clientId** as set in the above step. The new **ClientSecret** is valid for 3 years.
     
 ```
-  $bytes = New-Object Byte[] 32
+$bytes = New-Object Byte[] 32
 $rand = [System.Security.Cryptography.RandomNumberGenerator]::Create()
 $rand.GetBytes($bytes)
 $rand.Dispose()
