@@ -117,9 +117,9 @@ The following table lists all of the possible patterns for hosting both the Shar
 
 You can also build add-ins that include both SharePoint-hosted and cloud-hosted components. For example, you can create a [cloud-hosted add-in that includes a custom SharePoint list and content type](create-a-provider-hosted-add-in-that-includes-a-custom-sharepoint-list-and-conte.md). If you choose to use this architecture, your design and approach must account for security limitations that are built into the model. You can use only JavaScript in the code components that are hosted by SharePoint, and the remotely hosted components must use either OAuth or the cross-domain library to interact with the SharePoint website. When considering this approach, make sure that you understand how  [add-in authorization works in SharePoint](authorization-and-authentication-of-sharepoint-add-ins.md). 
 
-Figure 4 shows you how this architecture works if you use Azure to host the remote components of your add-in, and you use OAuth.
+Figure 3 shows you how this architecture works if you use Azure to host the remote components of your add-in, and you use OAuth.
 
-*Figure 4. SharePoint add-in server-to-server communication when you use OAuth and Windows Azure*
+*Figure 3. SharePoint add-in server-to-server communication when you use OAuth and Windows Azure*
 
 ![Server to server communication restrictions](../images/SP15HelloWorldSPApp_Fig01.png)
 
