@@ -20,7 +20,9 @@ Minimal Download Strategy (MDS) relies on the ability to download only specific 
 
 The following table shows some benefits of using MDS.
 
-*Table 1. Benefits of using MDS*
+<br/>
+
+**Table 1. Benefits of using MDS**
 
 |**Performance**|**Visuals**|
 |:-----|:-----|
@@ -30,11 +32,15 @@ The following table shows some benefits of using MDS.
    
 Both AJAX and MDS are technologies that request only sections of the page to minimize data download and improve page responsiveness. The following figure shows the MDS architecture.
 
+<br/>
+
 *Figure 1. MDS architecture*   
     
 ![MDS architecture](../images/OptimizePage_Fig01_MDSArchitecture.png)
 
 The MDS framework assumes that a master page defines a chrome and content regions. In MDS, SharePoint navigating to a page means requesting just the content for those regions and the resources that the page depends on. Once that content downloads to the browser, script code applies the markup or resources to the page as appropriate. The browser behaves as if the requested page had been loaded completely from the server.
+
+<br/>
 
 *Figure 2. Page chrome and regions in a SharePoint page*
 
@@ -44,7 +50,9 @@ When users are browsing a SharePoint website in MDS mode, they will not cause fu
   
 The following table shows some examples of URLs formatted in MDS mode.
 
-*Table 2. URLs formatted in MDS mode*
+<br/>
+
+**Table 2. URLs formatted in MDS mode**
 
 |**Non-MDS URL**|**MDS URL**|
 |:-----|:-----|
@@ -83,9 +91,7 @@ A particular element in the page must make sure that the critical resources need
 ### Master pages
 
 The main change in the master page is to surround the regions of HTML markup that will be sent to the client with a special control named **SharePoint:AjaxDelta**. The most common parts that need to be surrounded by a **SharePoint:AjaxDelta** control are the controls embedded in the master page chrome and the content place holders. If a control is the same on all pages within a site, it should not be wrapped by a **SharePoint:AjaxDelta** control. The following markup shows a visible content placeholder surrounded by a **SharePoint:AjaxDelta** control.
-  
-    
-    
+
 
 ```HTML
 
@@ -95,11 +101,6 @@ The main change in the master page is to surround the regions of HTML markup tha
 ```
 
 Controls that have content dependent on the current URL must be wrapped in a **SharePoint:AjaxDelta** control. The following markup shows a menu surrounded by a **SharePoint:AjaxDelta** control.
-  
-    
-    
-
-
 
 ```HTML
 
@@ -121,19 +122,10 @@ Controls that have content dependent on the current URL must be wrapped in a **S
 
 ```
 
-
-> **Note:**
+> [!NOTE]
 > The **SharePoint:AjaxDelta** control should not be nested within itself. Specify this control at the highest required level.
-  
-    
-    
 
 If you need to include a cascading style sheet (CSS) file, you need to use the **SharePoint:CssLink** and **SharePoint:CssRegistration** controls. These controls have been updated to work in both MDS and non-MDS mode. The following markup shows how to use the **SharePoint:CssLink** and **SharePoint:CssRegistration** controls.
-  
-    
-    
-
-
 
 ```HTML
 
@@ -142,37 +134,21 @@ If you need to include a cascading style sheet (CSS) file, you need to use the *
 ```
 
 
-> **Caution:**
+> [!IMPORTANT]
 > You can have only one **SharePoint:CssLink** control per page. In MDS mode, you get an error if you have more than one **SharePoint:CssLink** control in a page. Including a CSS file using an HTML style element is not supported in MDS mode, because the server logic cannot identify the file as a required resource when the response is rendered.
-  
-    
-    
 
 To include a JavaScript file, use the **SharePoint:ScriptLink** control. The following markup shows how to use the **SharePoint:ScriptLink** control.
-  
-    
-    
-
-
 
 ```HTML
 
 <SharePoint:ScriptLink language="javascript" name="my_javascriptfile.js" runat="server" />
 ```
 
-
-> **Caution:**
+> [!CAUTION]
 > Including a JavaScript file using the HTML script tag is not supported in MDS mode, because the server logic cannot identify the file as a required resource when the response is rendered. 
-  
-    
-    
 
 To render the title element inside the head element in the page, we use a special pattern using the **SharePoint:PageTitle** control. The following markup shows how to use the **SharePoint:PageTitle** control.
   
-    
-    
-
-
 
 ```HTML
 <SharePoint:PageTitle runat="server">
@@ -181,13 +157,9 @@ To render the title element inside the head element in the page, we use a specia
 
 ```
 
-
-> **Note:**
+> [!NOTE]
 > Each individual page must override the title by providing a replacement for the **asp:ContentPlaceHolder** control inside the **SharePoint:PageTitle** control.
   
-    
-    
-
 
 ### ASP.NET pages
 
