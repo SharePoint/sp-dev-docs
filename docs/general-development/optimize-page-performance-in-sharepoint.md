@@ -191,9 +191,11 @@ If a page, control, or Web Part directs its output to the **Response.Output** pr
 
 You should replace HTML inline script elements with **SharePoint:ScriptBlock** controls. The following shows an HTML inline script element and its MDS-compliant alternative **SharePoint:ScriptBlock** control.
 
-- **HTML inline script element** `<script type="text/javascript">`<br/>&nbsp;&nbsp;&nbsp;`// Your JavaScript code goes here.`<br/>`</script>`
+- **HTML inline script element** 
+    `<script type="text/javascript">`<br/>&nbsp;&nbsp;&nbsp;`// Your JavaScript code goes here.`<br/>`</script>`
 
-- **MDS-compliant alternative** `<SharePoint:ScriptBlock runat="server">`<br/>&nbsp;&nbsp;&nbsp;`// Your JavaScript code goes here.`<br/>`</SharePoint:ScriptBlock>`
+- **MDS-compliant alternative** 
+    `<SharePoint:ScriptBlock runat="server">`<br/>&nbsp;&nbsp;&nbsp;`// Your JavaScript code goes here.`<br/>`</SharePoint:ScriptBlock>`
 
 The introduction of the **SharePoint:ScriptBlock** in the page can change the scope of variables in page. Sometimes it is necessary to move the declaration of variables from `<% %>` to `<script runat="server"> <script>`. To test this, load the page in the browser after you perform updates.
   
@@ -202,9 +204,11 @@ The introduction of the **SharePoint:ScriptBlock** in the page can change the sc
 
 HyperLinks in ASP.NET pages must be updated to use **SPUpdatePage** type. The following shows hyperlinks in ASP.NET pages and the same links updated by using **SPUpdatePage** type.  
 
-- **Hyperlink in ASP.NET** `<a`<br/>&nbsp;&nbsp;&nbsp;`id=<%_STSWriteHTML("viewlist" + spList.BaseTemplate.ToString());%>`<br/>&nbsp;&nbsp;&nbsp;`href=<%_STSWriteURL(listViewUrl);%>`<br/>`>`
+- **Hyperlink in ASP.NET** 
+    `<a`<br/>&nbsp;&nbsp;&nbsp;`id=<%_STSWriteHTML("viewlist" + spList.BaseTemplate.ToString());%>`<br/>&nbsp;&nbsp;&nbsp;`href=<%_STSWriteURL(listViewUrl);%>`<br/>`>`
 
-- **MDS-compliant alternative** `<a`<br/>&nbsp;&nbsp;&nbsp;`id=<%_STSWriteHTML("viewlist" + spList.BaseTemplate.ToString());%>`<br/>&nbsp;&nbsp;&nbsp;`href=<%_STSWriteURL(listViewUrl);%>`<br/>&nbsp;&nbsp;&nbsp;`onclick="if (typeof(SPUpdatePage) !== 'undefined') return SPUpdatePage(this.href);"`<br/>`>`
+- **MDS-compliant alternative** 
+    `<a`<br/>&nbsp;&nbsp;&nbsp;`id=<%_STSWriteHTML("viewlist" + spList.BaseTemplate.ToString());%>`<br/>&nbsp;&nbsp;&nbsp;`href=<%_STSWriteURL(listViewUrl);%>`<br/>&nbsp;&nbsp;&nbsp;`onclick="if (typeof(SPUpdatePage) !== 'undefined') return SPUpdatePage(this.href);"`<br/>`>`
 
 ### Custom master pages for errors
 
@@ -222,12 +226,9 @@ function ExecuteAndRegisterBeginEndFunctions(tag, beginFunc, endFunc, loadFunc)
 
 The **ExecuteAndRegisterBeginEndFunctions** has the following parameters:
 
--  _tag_: The name of the file that registers the callbacks; it is used only for debugging purposes.
-     
--  _beginFunc_: A function that is called before you request the page delta.
-    
+-  _tag_: The name of the file that registers the callbacks; it is used only for debugging purposes.     
+-  _beginFunc_: A function that is called before you request the page delta.    
 -  _endFunc_: A function that is called after you retrieve the delta, but before the HTML and JavaScript for the new page are applied.
-
 -  _loadFunc_: A function that is called after the HTML and JavaScript for the new page is applied.
 
 ### Controls and Web Parts
@@ -267,9 +268,7 @@ You must update the XSLT used by Web Parts because all the resources must be add
 
 After you understand the composition of a page, you can use different methods to optimize the download experience for that page. In general, the goal is to minimize the number of round trips between client and server computers and to reduce the amount of data that goes over the network. The guidance in this article includes recommendations that you can apply broadly to a variety of different implementations of SharePoint.
 
-Table 5 shows example loading times that illustrate the difference between the first, second, and subsequent page loads.
-    
-<br/>    
+Table 5 shows example loading times that illustrate the difference between the first, second, and subsequent page loads.   
 
 **Table 5. Page loading times**
 
@@ -278,8 +277,6 @@ Table 5 shows example loading times that illustrate the difference between the f
 |First page load  <br/> |3-4 seconds  <br/> |
 |Second page load  <br/> |1.5 seconds  <br/> |
 |Subsequent page loads  <br/> |1 second  <br/> |
-   
-<br/>
 
 > [!NOTE]
 > Loading times might be different in your particular scenario. Loading times are affected by many variables, including, but not limited to, page size, latency, and server load. 
@@ -354,7 +351,6 @@ Verify that the compressed versions are deployed to production servers. This exa
 You can usually find ways to achieve the same styling and reduce the size of your files by efficiently rewriting your CSS files. The following example shows how to optimize the previous CSS size by inheriting the styles from a parent element.
 
 ```
-
 BODY {font:100% Tahoma,sans-serif}
 .art-By {font: 79%}
 .art-Cap {font: 67%}
@@ -376,21 +372,15 @@ Entity tags (ETags) can cause the client to unnecessarily reload files. ETags ar
 Use Fiddler or a similar tool to verify whether the cache is serving requests. Some common reasons caching not serving requests include:
 
 - Resources do not have an expiration date value.
-
 - The query string constantly changes.
-
 - The sum of **max-age** cache-control directive plus **last-modified** header results in a date previous to today.
-
 - The proxy servers do not support the **max-age** property.
-
 - The **cache-control** header has a value of **no-cache**. A value of **private** caches the resource only for the user that issues the request.
 
 ## Number and size of images
 <a name="OptimizingPagePerformance_Crunch"> </a>
 
-You should minimize the number of images in your site. To help with that effort, you can embed multiple images in a single file and then reference individual images in your page. Not only will file download size decrease, but fewer files result in less network traffic. It is more complicated to author pages by using this technique, but in situations where every round trip and file size counts, it can prove to be valuable way to help improve performance. Figure 3 shows an example of a single image file that contains multiple images. 
-    
-<br/>    
+You should minimize the number of images in your site. To help with that effort, you can embed multiple images in a single file and then reference individual images in your page. Not only will file download size decrease, but fewer files result in less network traffic. It is more complicated to author pages by using this technique, but in situations where every round trip and file size counts, it can prove to be valuable way to help improve performance. Figure 3 shows an example of a single image file that contains multiple images.   
 
 *Figure 3. Single image file that contains multiple images*
     
@@ -400,8 +390,6 @@ You should minimize the number of images in your site. To help with that effort,
 
 Figure 4 shows how the image file is subsequently changed to display as individual pictures in a table.
 
-<br/>
-
 *Figure 4. Multiple images displayed in a table*
 
 ![Multiple images displayed in a table](../images/OptimizePage_Fig04_ImageTable.png)
@@ -409,7 +397,6 @@ Figure 4 shows how the image file is subsequently changed to display as individu
 Manipulation of the images was done entirely through style sheet classes. There were two primary classes used in **div** and **img** elements in each table cell. Those classes are as follows.
 
 ```
-
 BODY {font:100% Tahoma,sans-serif}
 .art-By  {font: 79%}
 .art-Cap {font: 67%}
@@ -431,7 +418,6 @@ BODY {font:100% Tahoma,sans-serif}
 Each image has a class associated with it based on the identifier (ID) for the image. That style clips the picture and defines an offset from the initial picture in the cluster. Those classes are as follows.
 
 ```
-
 #person {
    border:none; 
    clip:rect(0, 49, 49, 0); 
@@ -467,9 +453,7 @@ Microsoft has worked to quantify and improve the performance of list view page r
 These sorts of nuances are why it is important to carefully consider how views are constructed in list view pages, especially over slow network connections. When working with lists that contain a lot of data, it is important to carefully design all views, especially the default view. In general, you can speed up the rendering time of list view pages by using the following recommendations:
 
 - Show only the strictly required columns.
-
 - If possible, exclude columns that include presence information.
-
 - Use a link instead of an edit menu to view the item details.
 
 The following table describes customizations that reduce the time that is required for a view to render.
@@ -480,8 +464,8 @@ The following table describes customizations that reduce the time that is requir
 
 |**Item**|**Description**|
 |:-----|:-----|
-|View type  <br/> |Create a view as a datasheet view instead of a standard view.  <br/> |
-|View: Item limit  <br/> |Anything over 1,000 will likely render slowly.<br/>Over a slow connection, it is important to experiment to find the right balance between the quantity of data shown at a time and the number of round trips necessary to view all the data.<br/>The more rows that display at a time, the fewer round trips, but larger pages.  <br/> |
+|View type  <br/> |Create a view as a datasheet view instead of a standard view.<br/>|
+|View: Item limit  <br/> |Anything over 1,000 will likely render slowly.<br/>Over a slow connection, it is important to experiment to find the right balance between<br/>the quantity of data shown at a time and the number of round trips necessary to view all the data.<br/>The more rows that display at a time, the fewer round trips, but larger pages.  <br/> |
 |View: Filter  <br/> |Use **[Today]** and **[Me]** keywords to filter items by freshness or assignment.<br/>Use Status fields to show only active items in default views. <br/> |
 |View: Columns  <br/> |Include the smallest number of columns.<br/>Create a default view with few columns that allows high-level browsing after which people can drill down.  <br/> |
 
@@ -495,7 +479,7 @@ The following table describes customizations that will increase the time that is
 
 |**Item**|**Description**|
 |:-----|:-----|
-|Group By  <br/> |Grouping adds HTML and JScript, which slows down rendering for large lists.<br/>Making all groups collapsed by default actually increases rendering time further because of additional operations on the browser object model.  <br/> |
+|Group By  <br/> |Grouping adds HTML and JScript, which slows down rendering for large lists.<br/>Making all groups collapsed by default actually increases rendering time further<br/>because of additional operations on the browser object model.  <br/> |
 |Column - title linked to item with edit menu  <br/> |The option "linked to item with edit menu" takes the longest.<br/>The similar option "linked to item" does not increase rendering time noticeably.  <br/> |
    
 <br/>
@@ -520,9 +504,9 @@ $appsetting.Update()
 
 ```
 
-Figure 5 shows the Developer Dashboard.
-
 <br/>
+
+Figure 5 shows the Developer Dashboard.
 
 *Figure 5. Developer Dashboard*
 
