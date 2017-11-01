@@ -494,19 +494,19 @@ SharePoint has a built-in status bar that you can use on SharePoint pages by cal
 
 - For users of an **unlimited trial**: 
 
-   `This is a trial version of _<app name>_. Go here to purchase the full version and unlock  _<paid functionality>_.`
+   "This is a trial version of _\<app name\>_. Go here to purchase the full version and unlock  _\<paid functionality\>_."
 
 - For users of an **unexpired time-limited trial**: 
 
-   `There [is|are] _<amount of time, expressed in a human-readable metric like "3 days" not "73:42:12">_ left in this trial of _<app name>_. Go here to purchase the full version and ensure you don't miss a moment of full functionality.`
+   "There [is|are] _\<amount of time, expressed in a human-readable metric like "3 days" not "73:42:12"\>_ left in this trial of _\<app name\>_. Go here to purchase the full version and ensure you don't miss a moment of full functionality."
 
 - For users of an **expired time-limited trial**: 
 
-   `Unfortunately, there is no more time left in this trial of _<app name>_. Go here to purchase the full version and return to full functionality.`
+   "Unfortunately, there is no more time left in this trial of _\<app name\>_. Go here to purchase the full version and return to full functionality."
 
 - For users **without any license**: 
 
-   `Unfortunately, you don't have a license for _<app name>_. Go here to purchase the full version and enable _<paid functionality>_.`
+   "Unfortunately, you don't have a license for _\<app name\>_. Go here to purchase the full version and enable _\<paid functionality\>_."
 
 ## Other design considerations for SharePoint Add-ins
 <a name="UXGuide_Other"> </a>
