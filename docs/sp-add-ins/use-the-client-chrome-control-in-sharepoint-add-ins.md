@@ -106,6 +106,7 @@ Figure 1 shows a remote webpage with the chrome control.
    - Prepares the options for the chrome control.
    - Initializes the chrome control.
 
+
     ```HTML
        <!DOCTYPE html>
      <html xmlns="http://www.w3.org/1999/xhtml">
@@ -232,6 +233,7 @@ Figure 1 shows a remote webpage with the chrome control.
    - Provides a placeholder for the SP.UI.Controls.js JavaScript file.
    - Dynamically loads the SP.UI.Controls.js file.
    - Provides a placeholder for the chrome control and specifies the options inline with the HTML markup.
+
 
     ```HTML
        <!DOCTYPE html>
