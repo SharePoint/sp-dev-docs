@@ -91,7 +91,6 @@ In this article, you create a handler for this list item event and then programm
 	 }
     ```
 
-
    This code doesn't introduce any functionality that you haven't already seen in a previous article of this series, but note the following:
    
    - It sets the **Required** attribute of the **Quantity** field to **TRUE** so the field must always have a value. It then sets the default value to 1.
