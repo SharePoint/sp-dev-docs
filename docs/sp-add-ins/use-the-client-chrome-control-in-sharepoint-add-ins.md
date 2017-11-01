@@ -100,10 +100,15 @@ Figure 1 shows a remote webpage with the chrome control.
 2. Copy the following markup, and paste it in the ASPX page. The markup performs the following tasks:
     
    - Loads the AJAX library from the Microsoft CDN (Content Delivery Network).
+   
    - Loads the jQuery library from the Microsoft CDN.
+   
    - Loads the SP.UI.Controls.js file using the jQuery function **getScript**.
+   
    - Defines a callback function for the **onCssLoaded** event.
+   
    - Prepares the options for the chrome control.
+   
    - Initializes the chrome control.
 
     ```HTML
@@ -228,9 +233,11 @@ Figure 1 shows a remote webpage with the chrome control.
     ```
 
 3. You can also use the chrome control in a declarative way. In the following code example, the HTML markup declares the control without using JavaScript code to configure and initialize the control. The following markup performs the following tasks:
-    
+   
    - Provides a placeholder for the SP.UI.Controls.js JavaScript file.
+   
    - Dynamically loads the SP.UI.Controls.js file.
+   
    - Provides a placeholder for the chrome control and specifies the options inline with the HTML markup.
 
     ```HTML
