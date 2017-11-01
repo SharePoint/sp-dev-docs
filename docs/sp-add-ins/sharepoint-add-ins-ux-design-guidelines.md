@@ -490,7 +490,7 @@ You should be very careful about overusing the second case of license warnings. 
 
 ### Licensing status bar
 
-SharePoint has a built-in status bar that you can use on SharePoint pages by calling the JavaScript API. You can also copy the styling of the built-in status bar. You should use the yellow "warning"" color, with a message appropriate to the situation the user is in, for example:
+SharePoint has a built-in status bar that you can use on SharePoint pages by calling the JavaScript API. You can also copy the styling of the built-in status bar. You should use the yellow "warning" color, with a message appropriate to the situation the user is in, for example:
 
 - For users of an **unlimited trial**: 
 
