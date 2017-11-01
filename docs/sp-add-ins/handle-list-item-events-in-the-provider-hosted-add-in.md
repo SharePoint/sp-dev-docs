@@ -39,7 +39,7 @@ In this article, you create a handler for this list item event and then programm
 
 1. In **Solution Explorer**, open the Utilities\SharePointComponentDeployer.cs file in the **ChainStoreWeb** project. Add the following method to the `SharePointComponentDeployer` class. 
 
-    ```C#
+     ```C#
 	  private static void CreateExpectedShipmentsList()
 	 {
 	    using (var clientContext = sPContext.CreateUserClientContextForSPHost())
@@ -89,15 +89,16 @@ In this article, you create a handler for this list item event and then programm
 		}
 	     }
 	 }
-    ```
+     ```
 
-   This code doesn't introduce any functionality that you haven't already seen in a previous article of this series, but note the following:
+    This code doesn't introduce any functionality that you haven't already seen in a previous article of this series, but note the following:
    
-   - It sets the **Required** attribute of the **Quantity** field to **TRUE** so the field must always have a value. It then sets the default value to 1.
+    - It sets the **Required** attribute of the **Quantity** field to **TRUE** so the field must always have a value. It then sets the default value to 1.
    
-   - The **Arrived** and **Added to Inventory** fields are hidden on the New Item form.
+    - The **Arrived** and **Added to Inventory** fields are hidden on the New Item form.
    
-   - Ideally, the **Added to Inventory** field would also be hidden on the Edit Item form because it should only be changed to **Yes** when the item updated event handler has first added the item to the corporate **Inventory** table. For technical reasons that we'll explain in a later step, a field has to be visible in the Edit Item form if we want to programmatically write to it in an item updated event handler.
+    - Ideally, the **Added to Inventory** field would also be hidden on the Edit Item form because it should only be changed to **Yes** when the item updated event handler has first added the item to the corporate **Inventory** table. For technical reasons that we'll explain in a later step, a field has to be visible in the Edit Item form if we want to programmatically write to it in an item updated event handler.
+
 
 2. In the **DeployChainStoreComponentsToHostWeb** method, add the following line, just above the line `RemoteTenantVersion = localTenantVersion`.
     
