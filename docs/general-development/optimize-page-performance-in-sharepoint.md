@@ -1,101 +1,58 @@
 ---
 title: Optimize page performance in SharePoint
-ms.date: 09/25/2017
+ms.date: 11/01/2017
 ms.prod: sharepoint
 ms.assetid: 262caeef-64fd-4e02-b947-d772faf01159
 ---
 
-
-
 # Optimize page performance in SharePoint
+
 Learn about features to improve performance in pages in SharePoint. These features can be used to enhance the experience in geographically distributed implementations.
- **Provided by:** David Crawford, Microsoft Corporation
-  
-    
-    
+
+**Provided by:** David Crawford, Microsoft Corporation
 
 This article provides instructions that will help optimize performance in SharePoint. SharePoint includes features that help optimize page loading over a Wide Area Network (WAN). Designing pages to make them as small and responsive as possible complements these performance improvements.
+
 ## Minimal Download Strategy (MDS)
 <a name="MDS"> </a>
 
 Minimal Download Strategy (MDS) relies on the ability to download only specific portions of a page that is rendered fully on the server. Downloading only the specific portions provides a very efficient loading model. The fully rendered page is not returned to the client. The server must be able to accurately identify those pieces that must be part of the response and those that are not necessary. The pieces that may or may be not part of the response include scripts, styles, and markup.
-  
-    
-    
+
 The following table shows some benefits of using MDS.
-  
-    
-    
 
-**Table 1. Benefits of using MDS**
-
+*Table 1. Benefits of using MDS*
 
 |**Performance**|**Visuals**|
 |:-----|:-----|
-|Fewer amounts of data downloaded per page request.  <br/> |No browser flashing caused by full page reload.  <br/> |
-|Browser needs to update only the regions of the page that changed since the last request.  <br/> |Easy to identify animations.  <br/> |
-|Small amount of processing required on the client.  <br/>**Note:** Half of client Page-Load-Time 1 (PLT1) is due to chrome cascading style sheet (CSS) rendering and JavaScript parsing and execution.           |Changes in the page attract user's attention.  <br/> |
+|Fewer amounts of data downloaded per page request.|No browser flashing caused by full page reload.|
+|Browser needs to update only the regions of the page that changed since the last request.|Easy to identify animations.|
+|Small amount of processing required on the client.<br/><br/>**Note:** Half of client Page-Load-Time 1 (PLT1) is due to chrome cascading style sheet (CSS) rendering and JavaScript parsing and execution. |Changes in the page attract user's attention. |
    
 Both AJAX and MDS are technologies that request only sections of the page to minimize data download and improve page responsiveness. The following figure shows the MDS architecture.
-  
-    
-    
 
-**Figure 1. MDS architecture**
-
-  
-    
-    
-
-  
-    
+*Figure 1. MDS architecture*   
     
 ![MDS architecture](../images/OptimizePage_Fig01_MDSArchitecture.png)
-  
-    
-    
+
 The MDS framework assumes that a master page defines a chrome and content regions. In MDS, SharePoint navigating to a page means requesting just the content for those regions and the resources that the page depends on. Once that content downloads to the browser, script code applies the markup or resources to the page as appropriate. The browser behaves as if the requested page had been loaded completely from the server.
-  
-    
-    
 
-**Figure 2. Page chrome and regions in a SharePoint page**
+*Figure 2. Page chrome and regions in a SharePoint page*
 
-  
-    
-    
-
-  
-    
-    
 ![Page chrome and regions in a SharePoint page](../images/OptimizePage_Fig02_PageStructure.png)
+ 
+When users are browsing a SharePoint website in MDS mode, they will not cause full page postbacks and full page reloads. Instead, the URL for the page they are visiting will remain the same, and the fragment identifier (a "#"sign) will change to contain the page they are visiting. The format of the URL is: `[Path to site (spweb)] + /_layouts/15/start.aspx# + [path to page] + [query string]`.
   
-    
-    
-When users are browsing a SharePoint website in MDS mode, they will not cause full page postbacks and full page reloads. Instead, the URL for the page they are visiting will remain the same, and the fragment identifier (a "#"sign) will change to contain the page they are visiting. The format of the URL is:  `[Path to site (spweb)] + /_layouts/15/start.aspx# + [path to page] + [query string]`
-  
-    
-    
 The following table shows some examples of URLs formatted in MDS mode.
-  
-    
-    
 
-**Table 2. URLs formatted in MDS mode**
-
+*Table 2. URLs formatted in MDS mode*
 
 |**Non-MDS URL**|**MDS URL**|
 |:-----|:-----|
-|http://server/SitePages/  <br/> |http://server/_layouts/15/start.aspx#/SitePages/  <br/> |
-|http://server/subsite/SitePages/home.aspx  <br/> |http://server/subsite/_layouts/15/start.aspx#/SitePages/home.aspx  <br/> |
-|http://server/_layouts/15/viewlsts.aspx?BaseType=0  <br/> |http://server/_layouts/15/start.aspx#/_layouts/viewlsts.aspx?BaseType=0  <br/> |
+|`http://server/SitePages/`  <br/> |`http://server/_layouts/15/start.aspx#/SitePages/`  <br/> |
+|`http://server/subsite/SitePages/home.aspx`  <br/> |`http://server/subsite/_layouts/15/start.aspx#/SitePages/home.aspx`  <br/> |
+|`http://server/_layouts/15/viewlsts.aspx?BaseType=0`  <br/> |`http://server/_layouts/15/start.aspx#/_layouts/viewlsts.aspx?BaseType=0` <br/> |
    
 The object used for the AJAX navigation is **AjaxNavigate**. By default, there is an instance of **AjaxNavigate** available for you to use named **ajaxNavigate**. To use the **ajaxNavigate** instance:
-  
-    
-    
-
-
 
 ```cs
 
@@ -103,15 +60,8 @@ ajaxNavigate.update(serverRelativeURL, null);
 ```
 
 If you want a control or Web Part to listen to the navigation events, you can use the **add\_navigate** handler. When the handler is called, your callback function receives a reference to the navigation object and the parsed hash values in a dictionary. The control or Web Part can retrieve the value for the parameter of interest from the dictionary, compare it to the current value, and decide what action it needs to take. A common action is to send an AJAX request to the server to retrieve some data or reorder the items in the view. When a control has finished listening to navigation events, it can use the **remove\_navigate** handler.
-  
-    
-    
-MDS also supports multiple hash marks in key/value pairs. MDS appends the hash marks after the URL. The format of hash marks in the URL is: http://server/_layouts/15/start.aspx#/SitePages/page.aspx#key1=value1#key2=value2. The following code example shows how to update the hash marks.
-  
-    
-    
 
-
+MDS also supports multiple hash marks in key/value pairs. MDS appends the hash marks after the URL. The format of hash marks in the URL is: `http://server/_layouts/15/start.aspx#/SitePages/page.aspx#key1=value1#key2=value2`. The following code example shows how to update the hash marks.
 
 ```
 var updateParts;
@@ -121,29 +71,14 @@ ajaxNavigate.update(null, updateParts);
 ```
 
 If you find that the pages in your website constantly fall back to download the full page, you might want to consider turning the MDS feature off. You might also want to turn the MDS feature off if you need to use a different strategy to improve performance.
-  
-    
-    
+
 A particular element in the page must make sure that the critical resources needed to work are known to the MDS infrastructure at server rendering time. To convert an existing project to use MDS, you need to update the following files and components:
-  
-    
-    
 
 - Master pages
-    
-  
 - ASP.NET pages
-    
-  
 - Custom master pages for errors
-    
-  
 - JavaScript files
-    
-  
 - Controls and Web Parts
-    
-  
 
 ### Master pages
 
