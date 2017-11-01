@@ -192,9 +192,11 @@ If a page, control, or Web Part directs its output to the **Response.Output** pr
 You should replace HTML inline script elements with **SharePoint:ScriptBlock** controls. The following shows an HTML inline script element and its MDS-compliant alternative **SharePoint:ScriptBlock** control.
 
 - **HTML inline script element** 
+    
     `<script type="text/javascript">`<br/>&nbsp;&nbsp;&nbsp;`// Your JavaScript code goes here.`<br/>`</script>`
 
 - **MDS-compliant alternative** 
+    
     `<SharePoint:ScriptBlock runat="server">`<br/>&nbsp;&nbsp;&nbsp;`// Your JavaScript code goes here.`<br/>`</SharePoint:ScriptBlock>`
 
 The introduction of the **SharePoint:ScriptBlock** in the page can change the scope of variables in page. Sometimes it is necessary to move the declaration of variables from `<% %>` to `<script runat="server"> <script>`. To test this, load the page in the browser after you perform updates.
@@ -205,9 +207,11 @@ The introduction of the **SharePoint:ScriptBlock** in the page can change the sc
 HyperLinks in ASP.NET pages must be updated to use **SPUpdatePage** type. The following shows hyperlinks in ASP.NET pages and the same links updated by using **SPUpdatePage** type.  
 
 - **Hyperlink in ASP.NET** 
+    
     `<a`<br/>&nbsp;&nbsp;&nbsp;`id=<%_STSWriteHTML("viewlist" + spList.BaseTemplate.ToString());%>`<br/>&nbsp;&nbsp;&nbsp;`href=<%_STSWriteURL(listViewUrl);%>`<br/>`>`
 
 - **MDS-compliant alternative** 
+    
     `<a`<br/>&nbsp;&nbsp;&nbsp;`id=<%_STSWriteHTML("viewlist" + spList.BaseTemplate.ToString());%>`<br/>&nbsp;&nbsp;&nbsp;`href=<%_STSWriteURL(listViewUrl);%>`<br/>&nbsp;&nbsp;&nbsp;`onclick="if (typeof(SPUpdatePage) !== 'undefined') return SPUpdatePage(this.href);"`<br/>`>`
 
 ### Custom master pages for errors
@@ -284,13 +288,9 @@ Table 5 shows example loading times that illustrate the difference between the f
 You should categorize page optimization techniques into one of two categories: first page request and subsequent page requests. Optimizations for the first page request (page load time 1 or PLT1) are those kinds of optimizations that are effective the first time the page is requested, but that don't necessarily affect subsequent page requests. The following are some optimizations for PLT1:
 
 - Optimize HTML markup.
-
 - Use consolidated images and files; for example, combine multiple CSS files into one. Combine images into an image strip or cluster.
-
 - Use compression (crunch) techniques. For more information, see  [Compress (crunch) JavaScript and CSS files](optimize-page-performance-in-sharepoint.md#OptimizingPagePerformance_Crunch).
-
 - Verify that you are referencing the production version of common JavaScript libraries, such as jQuery, instead of the debug versions.
-
 - Consider using a well-known content delivery network (CDN) such as the  [Microsoft Ajax Content Delivery Network](http://www.asp.net/ajaxlibrary/cdn.ashx). The files required in your pages may already be cached by the client browser.
 
 Optimizations for subsequent page requests are those that can improve the user experience for a subsequent page load. The key is that you need to balance loss in functionality against the gain achieved. If gain is only realized the first time a user hits a site, the optimization might not be worth the loss in functionality.
@@ -380,7 +380,9 @@ Use Fiddler or a similar tool to verify whether the cache is serving requests. S
 ## Number and size of images
 <a name="OptimizingPagePerformance_Crunch"> </a>
 
-You should minimize the number of images in your site. To help with that effort, you can embed multiple images in a single file and then reference individual images in your page. Not only will file download size decrease, but fewer files result in less network traffic. It is more complicated to author pages by using this technique, but in situations where every round trip and file size counts, it can prove to be valuable way to help improve performance. Figure 3 shows an example of a single image file that contains multiple images.   
+You should minimize the number of images in your site. To help with that effort, you can embed multiple images in a single file and then reference individual images in your page. Not only will file download size decrease, but fewer files result in less network traffic. It is more complicated to author pages by using this technique, but in situations where every round trip and file size counts, it can prove to be valuable way to help improve performance. 
+
+Figure 3 shows an example of a single image file that contains multiple images.   
 
 *Figure 3. Single image file that contains multiple images*
     
