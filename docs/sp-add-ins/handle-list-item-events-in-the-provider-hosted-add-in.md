@@ -520,7 +520,9 @@ The final task is to tell SharePoint that we have a custom receiver that we want
 7. To ensure that `DEBUG` is true if and only if the add-in is being debugged, carry out the following subprocedure:
     
    1. In **Solution Explorer**, right-click the **ChainStoreWeb** project and select **Properties**.
+   
    2. Open the **Build** tab of the **Properties**, and then select **Debug** from the **Configuration** drop-down at the top.
+   
    3. Ensure that the **Define DEBUG constant** check box is selected (it usually is by default). The following screen shot shows the proper setting.
 
       *Figure 1. Build sub-tab of the Properties tab in Visual Studio*
@@ -536,7 +538,7 @@ The final task is to tell SharePoint that we have a custom receiver that we want
    5. If you made any changes, save and then close the **Properties** tab.
     
  
-8. Open the web.config file, and add the following markup as a child of the **appSettings** element. We get the value of the setting in the next section.
+8. Open the web.config file, and add the following markup as a child of the **appSettings** element (we get the value of the setting in the next section).
     
     ```XML
       <add key="RERdebuggingServiceBusUrl" value="" />
