@@ -43,7 +43,8 @@
   "JoinTOCPlugin": [
     {
       "ConceptualTOC": "/docs/toc.yml",
-      "ReferenceTOCUrl": "/javascript/api/spfx-toc/toc.json"
+      "ReferenceTOCUrl": "/javascript/api/spfx-toc/toc.json",
+      "ReferenceTOCUrl": "/dotnet/sp_pnp_dotnet_toc/api/_splitted/Microsoft.SharePoint.Client/toc.json"
     }
   ],
   "dependent_packages": [
