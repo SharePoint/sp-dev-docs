@@ -493,4 +493,4 @@ You can now install the solution on any target "modern" site.
 
 5. Once the application installation will be completed, refresh the page or go to the home page of the site. You should be able to see the custom footer in action.
 
-Enjoy your new custom footer built using the new SharePoint Framework extensions!
+Enjoy your new custom footer built using the SharePoint Framework extensions!

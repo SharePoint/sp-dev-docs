@@ -344,4 +344,4 @@ You can now install the solution on any target "modern" site.
 
 5. Once the application installation will be completed, open the _"Documents"_ library of the site and see the custom ECB menu item in action by selecting a single document.
 
-Enjoy your new custom ECB menu item built using the new SharePoint Framework extensions!
+Enjoy your new custom ECB menu item built using the SharePoint Framework extensions!
