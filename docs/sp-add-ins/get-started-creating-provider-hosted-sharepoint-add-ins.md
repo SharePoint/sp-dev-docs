@@ -1,16 +1,12 @@
 ---
 title: Get started creating provider-hosted SharePoint Add-ins
-ms.date: 10/30/2017
+description: Set up a development environment and create your first provider-hosted SharePoint Add-in.
+ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
 
 
 # Get started creating provider-hosted SharePoint Add-ins
-
-Set up a development environment and create your first provider-hosted SharePoint Add-in.
- 
-> [!NOTE]
-> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md).
 
 Provider-hosted add-ins are one of the two major types of SharePoint Add-ins. For an overview of SharePoint Add-ins and the two different types, see [SharePoint Add-ins](sharepoint-add-ins.md). 
 
@@ -25,9 +21,9 @@ Here's a summary of provider-hosted add-ins:
 - Step 2 - Create the app project
 
 - Step 3 - Code your app
- 
-## Set up your dev environment
+
 <a name="Setup"> </a>
+## Set up your dev environment
 
 There are many ways to set up a development environment for SharePoint Add-ins. This section explains the simplest way. For alternatives, see  [Additional resources](#bk_addresources).
 
@@ -37,8 +33,8 @@ There are many ways to set up a development environment for SharePoint Add-ins. 
  
 - Visual Studio includes the **Microsoft Office Developer Tools for Visual Studio**. Sometimes a version of the tools is released between updates of Visual Studio. To be sure that you have the latest version of the tools, run the [installer for Office Developer Tools for Visual Studio 2013](http://aka.ms/OfficeDevToolsForVS2013), or the [installer for Office Developer Tools for Visual Studio 2015](http://aka.ms/OfficeDevToolsForVS2015). 
 
-### Sign up for an Office 365 Developer Site
 <a name="o365_signup"> </a>
+### Sign up for an Office 365 Developer Site
 
 > [!NOTE]
 > You might already have access to an Office 365 Developer Site: 
@@ -91,9 +87,8 @@ There are three ways to get an Office 365 plan:
 
    ![Screenshot that shows the Developer site homepage.](../images/SP15_DeveloperSiteHome_border.png)
  
-
-## Create the add-in project
 <a name="Create"> </a>
+## Create the add-in project
 
 1. Start Visual Studio by using the **Run as administrator** option.
     
@@ -121,8 +116,8 @@ There are three ways to get an Office 365 plan:
     
    Much of the configuration is done when the solution opens. Two projects are created in the Visual Studio solution: one for the SharePoint Add-in and the other for the ASP.NET web application.
 
-## Code your add-in
 <a name="Code"> </a>
+## Code your add-in
 
 1. Open the AppManifest.xml file. On the **Permissions** tab, specify the **Site Collection** scope and the **Read** permission level.
 
