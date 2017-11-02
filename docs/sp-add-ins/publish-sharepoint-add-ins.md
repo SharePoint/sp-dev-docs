@@ -1,5 +1,6 @@
 ---
 title: Publish SharePoint Add-ins
+description: Find articles and resources to help you publish your SharePoint Add-ins.
 ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
