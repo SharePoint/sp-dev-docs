@@ -7,11 +7,6 @@ ms.prod: sharepoint
 
 # Update SharePoint Add-ins
 
-Learn how to create and deploy an update for a SharePoint Add-in.
- 
-> [!NOTE]
-> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md).
-
 You can update your SharePoint Add-in by using the updating support built into SharePoint. Within 24 hours after you upload an updated version of the add-in to the organization's add-in catalog, or the add-in is accepted at the Office Store, a notification that an update is available appears next to the add-in on the **Site Contents** page of every website where it is installed. As you can see in Figure 1, a link is provided for users to immediately install the update.
  
 *Figure 1. Add-in for SharePoint update process*
@@ -23,8 +18,8 @@ A user can install the update without first uninstalling the earlier version. Th
 > [!IMPORTANT]
 > You cannot change the *add-in type* by using the update system. For example, you cannot change an add-in from SharePoint-hosted to provider-hosted with an update. To make a change of type, you need to [migrate from an old add-in to a new one](sharepoint-add-ins-update-process.md#Major). In particular, because [the preview program for autohosted add-ins has been closed](http://blogs.office.com/2014/05/16/update-on-autohosted-apps-preview-program/.md), you should be aware that you cannot update an autohosted add-in to a provider-hosted add-in. You have to convert the add-in as explained in [Convert an autohosted SharePoint Add-in to a provider-hosted add-in](convert-an-autohosted-sharepoint-add-in-to-a-provider-hosted-add-in.md).
 
-## Prerequisites for updating a SharePoint Add-in
 <a name="Prerequisites"> </a>
+## Prerequisites for updating a SharePoint Add-in
 
 Before you update a SharePoint Add-in, you need:
 
@@ -46,8 +41,8 @@ Review the concepts in the following table before updating your add-in.
 | [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options.md)|Learn about the methods for publishing, installing, and uninstalling a SharePoint Add-in.|
 | [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins.md)|Learn about remote event receivers in SharePoint.|
 
-## Major steps for updating an add-in
 <a name="MajorAppUpgradeSteps"> </a>
+## Major steps for updating an add-in
 
 The following are the major steps that may be needed when you create an update for a SharePoint Add-in. Each step is discussed in detail in linked sections or articles. Not all the steps are required in every update project. What you must do depends on what components are already in your add-in and what components you are adding. Only the items marked with `**` are always required.
 
@@ -75,8 +70,8 @@ The following are the major steps that may be needed when you create an update f
     
 - `**` Upload the add-in package to the Office Store or the organization's add-in catalog.
 
-## Best practices for add-in updates
 <a name="BestUpdatePractices"> </a>
+## Best practices for add-in updates
 
 The following sections discuss practices you should follow and important points to consider as you are planning an update.
 
@@ -92,20 +87,19 @@ When a new version of your SharePoint Add-in becomes available in the Office Sto
 
 If a remote component needs to know the version of the add-in instance that is calling it, you can pass this information from SharePoint. For example, you can add the add-in version as a query parameter on the [StartPage](http://msdn.microsoft.com/library/3092674c-a6c3-9021-3d7e-e716562a4a4f%28Office.15%29.aspx) URL of the add-in.
 
-### Create and debug the new version as if it were a brand new add-in
 <a name="DebugFirst"> </a>
+### Create and debug the new version as if it were a brand new add-in
 
 You should separate the development and debugging of the new version of the add-in from the debugging of the update markup and logic. To do this, uninstall the earlier version of the add-in from your development test SharePoint site. Save a backup copy of the add-in package file for the earlier version. Add and change components of the add-in as needed, and then test and debug them against the test site as if it is a brand new add-in you are creating from scratch.
 
 ### Test the update with each earlier version of the add-in
-<a name="DebugFirst"> </a>
 
 When the new version of the add-in is functioning correctly as a "new" add-in, restructure the code and markup so that the project is an update of the old add-in. For example, increment the add-in version number as indicated in [Major steps in updating an add-in](#MajorAppUpgradeSteps). For more information about turning the project into an update, see the child topics of this topic.
 
 When you are ready to test your update, retract the new version from the test site and redeploy the earlier version so you can test update logic. If you have shipped multiple previous versions of the add-in, install each earlier version on a different subweb of your test site. Then upload the latest version of the add-in to your test site's add-in catalog and update every instance of the add-in. Verify that each has the latest add-in version number and the latest version of all components. If there is an add-in web in the add-in, verify that the add-in web components have been deployed by using the procedure in [Verify deployment of add-in web components](update-add-in-web-components-in-sharepoint.md#VerifyDeployAppWebComp).
 
-### Update an add-in without waiting 24 hours
 <a name="ImmediateUpdateNotice"> </a>
+### Update an add-in without waiting 24 hours
 
 When developing an update for an add-in on your SharePoint test site, it is impractical to wait 24 hours between updates. You (and users on a production SharePoint site) can update an add-in immediately after it is uploaded to the Office Store or the organization's add-in catalog with these steps.
 
@@ -126,8 +120,8 @@ Figure 2 illustrates these steps.
 > [!NOTE]
 > If you need to see the "update available" notice on the add-in's tile more frequently than every 24 hours, you can use the method described in [Update process for a SharePoint Add-in](sharepoint-add-ins-update-process.md#Minor) to make the notice appear immediately.
 
-## Update the add-in version, permission requests, and prerequisites
 <a name="UpdateManifest"> </a>
+## Update the add-in version, permission requests, and prerequisites
 
 After making a backup copy of the Visual Studio project folder, open the add-in project. Open the add-in manifest and raise the version number on the **General** tab of the manifest designer.
 
