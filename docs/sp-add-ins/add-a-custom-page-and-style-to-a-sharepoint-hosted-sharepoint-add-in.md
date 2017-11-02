@@ -1,15 +1,11 @@
 ---
 title: Add a custom page and style to a SharePoint-hosted SharePoint Add-in
-ms.date: 10/27/2017
+description: Add a custom page, add a style class to a stylesheet, and run and test the add-in.
+ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
 
 # Add a custom page and style to a SharePoint-hosted SharePoint Add-in
-
-Learn how to include a custom page and CSS file in a SharePoint Add-in.
- 
-> [!NOTE]
-> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md).
 
 This is the seventh in a series of articles about the basics of developing SharePoint-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series:
 
