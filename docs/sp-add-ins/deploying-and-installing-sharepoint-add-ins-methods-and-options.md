@@ -1,5 +1,6 @@
 ---
 title: "Deploying and installing SharePoint Add-ins: methods and options"
+description: Learn about the methods for publishing, installing, and uninstalling a SharePoint Add-in.
 ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
