@@ -255,7 +255,7 @@ For the most part, this is exactly what should occur: you want every earlier ver
     
 4. Go to the previous **VersionRange** element (the one you added the last time you updated the add-in—from 1.0.0.0 to 2.0.0.0 in the continuing example), and add an **EndVersion** attribute to it. You want the upgrade actions in this **VersionRange** to be applied to any versions of the add-in to which they haven't already been applied (version 1.0.0.0), but you don't want them to be reapplied to versions to which they were already applied (version 2.0.0.0). The **EndVersion** value is *exclusive*, so you set it to the lowest version to which you do *not* want the upgrade actions applied. In the continuing example, you set it to 2.0.0.0. Your file should now resemble the following.
     
-    ```XML
+     ```XML
      <Feature <!-- Some attributes omitted --> 
                     Version="3.0.0.0">
        <ElementManifests>
@@ -270,39 +270,38 @@ For the most part, this is exactly what should occur: you want every earlier ver
          </VersionRange>
        </UpgradeActions>
      </Feature>
-    ```
+     ```
 
    Each time that you upgrade the Feature, follow the same pattern. Add a new **VersionRange** for the latest update actions. Add an **EndVersion** element to the _previous_ **VersionRange** element and set it to the previous version number. In the continuing example, the file would resemble the following for the update from 3.0.0.0 to 4.0.0.0.
 
-
-    ```XML
-     <Feature <!-- Some attributes omitted --> 
-                    Version="4.0.0.0">
-       <ElementManifests>
-         <!-- Child elements omitted -->
-       </ElementManifests>
-       <UpgradeActions>
-         <VersionRange EndVersion="2.0.0.0">
-            <!-- Child elements for upgrade from 1.0.0.0 to 2.0.0.0 go here. -->
-         </VersionRange>
-         <VersionRange EndVersion="3.0.0.0">
-            <!-- Child elements for upgrade from 2.0.0.0 to 3.0.0.0 go here. -->
-         </VersionRange>
-         <VersionRange>
-            <!-- Child elements for upgrade from 3.0.0.0 to 4.0.0.0 go here. -->
-         </VersionRange>
-       </UpgradeActions>
-     </Feature>
-    ```
+     ```XML
+        <Feature <!-- Some attributes omitted --> 
+                       Version="4.0.0.0">
+          <ElementManifests>
+            <!-- Child elements omitted -->
+          </ElementManifests>
+          <UpgradeActions>
+            <VersionRange EndVersion="2.0.0.0">
+               <!-- Child elements for upgrade from 1.0.0.0 to 2.0.0.0 go here. -->
+            </VersionRange>
+            <VersionRange EndVersion="3.0.0.0">
+               <!-- Child elements for upgrade from 2.0.0.0 to 3.0.0.0 go here. -->
+            </VersionRange>
+            <VersionRange>
+               <!-- Child elements for upgrade from 3.0.0.0 to 4.0.0.0 go here. -->
+            </VersionRange>
+          </UpgradeActions>
+        </Feature>
+     ```
 
    Notice that the most recent **VersionRange** element has no **BeginVersion** or **EndVersion** attributes. This ensures that the upgrade actions that go into this **VersionRange** element are applied to all previous versions of the Feature, which is what you want because all the latest changes are referenced in this **VersionRange**, and none of them have already occurred for any instance of the Feature.
     
    Notice also that the **BeginVersion** attribute is not used in any of the instances of **VersionRange**. This is because the default value for the **BeginVersion** attribute is 0.0.0.0, and that is the value that you want because you want all upgrade actions applied to every instance of the add-in that is earlier than the version that is specified in the **EndVersion** attribute.
     
-> [!IMPORTANT]
-> The **VersionRange** element determines only which versions of the Feature the upgrades are applied to. It does not determine which versions of the add-in get a notification that an update is available (the notification is triggered only by the add-in version number). Within 24 hours of a new version of the add-in being available in the organization's add-in catalog or the Office Store, every installed instance of the add-in, regardless of version, has the notification that an update is available appear on its tile in the **Site Contents** page. The **VersionRange** does not affect the new version number of the newly upgraded Feature or the newly updated add-in. Those two numbers are always changed to the latest version number, regardless of what version range the Feature was in before the upgrade. 
+   > [!IMPORTANT]
+   > The **VersionRange** element determines only which versions of the Feature the upgrades are applied to. It does not determine which versions of the add-in get a notification that an update is available (the notification is triggered only by the add-in version number). Within 24 hours of a new version of the add-in being available in the organization's add-in catalog or the Office Store, every installed instance of the add-in, regardless of version, has the notification that an update is available appear on its tile in the **Site Contents** page. The **VersionRange** does not affect the new version number of the newly upgraded Feature or the newly updated add-in. Those two numbers are always changed to the latest version number, regardless of what version range the Feature was in before the upgrade. 
 
-> This provides another good reason to avoid using a **BeginVersion** attribute. The **BeginVersion** attribute can be used to block some upgrade actions from ever occurring on some add-in instances. But it cannot block the Feature or add-in versions from being raised to the latest version. So the use of a **BeginVersion** attribute could create a situation in which two instances of your add-in could have the same add-in version number and the same add-in web Feature version number, but have different components in their add-in webs.
+   > This provides another good reason to avoid using a **BeginVersion** attribute. The **BeginVersion** attribute can be used to block some upgrade actions from ever occurring on some add-in instances. But it cannot block the Feature or add-in versions from being raised to the latest version. So the use of a **BeginVersion** attribute could create a situation in which two instances of your add-in could have the same add-in version number and the same add-in web Feature version number, but have different components in their add-in webs.
 
 <a name="VerifyDeployAppWebComp"> </a>
 ## Verify deployment of add-in web components
