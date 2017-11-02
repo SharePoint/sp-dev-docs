@@ -1,16 +1,12 @@
 ---
 title: Get a quick overview of the SharePoint object model
-ms.date: 10/30/2017
+description: Get introduced to the content hierarchy, and client-side runtime and batching. 
+ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
 
 
 # Get a quick overview of the SharePoint object model
-
-Get a quick introduction to some of the major classes in the SharePoint object model.
- 
-> [!NOTE]
-> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md).
 
 This is the fourth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series:
 
@@ -42,8 +38,8 @@ You can programmatically create custom lists, content types, column types, and l
 
 In addition to content, the CSOM gives you access to users, groups, roles and permissions, taxonomy, search, and more.
 
-## Client-side runtime and batching
 <a name="CSOMBatching"> </a>
+## Client-side runtime and batching
 
 CSOM uses a batching system. Chunks of managed code are converted into XML and sent to the server in a single HTTP request. For every command, a corresponding server object model call is made, and the server returns a response to the client in JavaScript Object Notation (JSON) format. 
 
