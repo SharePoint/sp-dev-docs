@@ -274,7 +274,8 @@ For the most part, this is exactly what should occur: you want every earlier ver
 
    Each time that you upgrade the Feature, follow the same pattern. Add a new **VersionRange** for the latest update actions. Add an **EndVersion** element to the _previous_ **VersionRange** element and set it to the previous version number. In the continuing example, the file would resemble the following for the update from 3.0.0.0 to 4.0.0.0.
 
-     ```XML
+     
+    ```XML
         <Feature <!-- Some attributes omitted --> 
                        Version="4.0.0.0">
           <ElementManifests>
@@ -292,7 +293,7 @@ For the most part, this is exactly what should occur: you want every earlier ver
             </VersionRange>
           </UpgradeActions>
         </Feature>
-     ```
+    ```
 
    Notice that the most recent **VersionRange** element has no **BeginVersion** or **EndVersion** attributes. This ensures that the upgrade actions that go into this **VersionRange** element are applied to all previous versions of the Feature, which is what you want because all the latest changes are referenced in this **VersionRange**, and none of them have already occurred for any instance of the Feature.
     
