@@ -1,15 +1,12 @@
 ---
 title: Include a custom button in the provider-hosted add-in
-ms.date: 10/30/2017
+description: Create a custom list on the host website, add a custom button, request Read permissions, run the add-in, and test the button.
+ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
 
 
 # Include a custom button in the provider-hosted add-in
-Learn how to include a custom ribbon button in a provider-hosted SharePoint Add-in.
- 
-> [!NOTE]
-> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md).
 
 This is the third in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series:
 
@@ -21,7 +18,6 @@ This is the third in a series of articles about the basics of developing provide
 
 A SharePoint Add-in can include custom actions, which is the SharePoint term for custom menu items or ribbon buttons. In this article, you'll learn how to create a custom button that synchronizes a SharePoint list with a remote database.
  
-
 ## Create a custom list on the host website
 
 The custom button is going to be on the ribbon of a specific list that records the employees of the local store. In a later article in this series, you'll learn how to programmatically add a custom list to a host website, but for now you'll add one manually. 
