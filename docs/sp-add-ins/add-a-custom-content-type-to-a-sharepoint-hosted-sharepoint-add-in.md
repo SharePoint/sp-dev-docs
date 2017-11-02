@@ -1,15 +1,11 @@
 ---
 title: Add a custom content type to a SharePoint-hosted SharePoint Add-in
-ms.date: 10/26/2017
+description: Create a custom content type, run the add-in, and test it.
+ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
 
 # Add a custom content type to a SharePoint-hosted SharePoint Add-in
-
-Learn how to include custom content types in SharePoint Add-ins.
- 
-> [!NOTE]
-> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md). 
 
 This is the fourth in a series of articles about the basics of developing SharePoint-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the other articles in this series:
 
