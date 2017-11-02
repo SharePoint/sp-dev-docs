@@ -1,16 +1,12 @@
 ---
 title: Add SharePoint write operations to the provider-hosted add-in
-ms.date: 10/30/2017
+description: Write data to SharePoint in a provider-hosted SharePoint Add-in: change a column value on a list item, request Write permission, create a new custom list and insert an item into the list, and check for deleted components.
+ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
 
 
 # Add SharePoint write operations to the provider-hosted add-in
-
-Learn how to write data to SharePoint in a provider-hosted SharePoint Add-in.
- 
-> [!NOTE]
-> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md). 
 
 This is the fifth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series:
 
@@ -157,7 +153,7 @@ Now you add a function to the add-in that creates an item in the **Expected Ship
 
 4. Add the following method to the `OrderForm` class. 
 
-    ```
+    ```C#
       private void CreateExpectedShipment(string supplier, string product, UInt16 quantity)
     {
         using (var clientContext = spContext.CreateUserClientContextForSPHost())
