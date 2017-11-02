@@ -1,17 +1,12 @@
 ---
 title: Deploy and install a SharePoint-hosted SharePoint Add-in
-ms.date: 10/26/2017
+description: Create an add-in catalog, package and upload the add-in to the catalog, install and remove the add-in.
+ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
 
-
 # Deploy and install a SharePoint-hosted SharePoint Add-in
 
-Learn how SharePoint Add-ins are deployed and installed.
- 
-> [!NOTE]
-> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md).
- 
 This is the second in a series of articles about the basics of developing SharePoint-hosted SharePoint Add-ins. You should first be familiar with the topic [SharePoint Add-ins](sharepoint-add-ins.md) and the previous article in this series:
 
 -  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md)
