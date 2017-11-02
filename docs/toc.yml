@@ -1,65 +1,41 @@
 - name: SharePoint development
   href: index.md
 - name: SharePoint Framework
+  href: spfx/sharepoint-framework-overview.md
   items:
   - name: Overview
     href: spfx/sharepoint-framework-overview.md
-  - name: Roadmap
-    href: spfx/roadmap.md
-  - name: Known issues and FAQ
-    href: spfx/known-issues-and-common-questions.md
-  - name: Tools and libraries
-    href: spfx/tools-and-libraries.md
-  - name: Set up your Office 365 tenant
+  - name: Getting started
     href: spfx/set-up-your-developer-tenant.md
-  - name: Set up your development environment
-    href: spfx/set-up-your-development-environment.md
-  - name: SharePoint 2016 support
-    href: spfx/sharepoint-2016-support.md
-  - name: Debug solutions with VS Code
-    href: spfx/debug-in-vscode.md
-  - name: Enterprise Guidance
-    href: spfx/enterprise-guidance.md
-  - name: Team-based development
-    href: spfx/team-based-development-on-sharepoint-framework.md
-  - name: Tenant-Scoped deployment
-    href: spfx/tenant-scoped-deployment.md
-  - name: Tenant properties
-    href: spfx/tenant-properties.md
-  - name: Use theme colors in your solution
-    href: spfx/use-theme-colors-in-your-customizations.md
-  - name: Working with CSS
-    href: spfx/css-recommendations.md
-  - name: Office UI Fabric integration
-    href: spfx/office-ui-fabric-integration.md
-  - name: GraphHttpClient
     items:
-    - name: Overview
-      href: spfx/overview-graphhttpclient.md
-    - name: Use GraphHttpClient to call Microsoft Graph
-      href: spfx/call-microsoft-graph-using-graphhttpclient.md
-  - name: Toolchain
-    href: spfx/toolchain/sharepoint-framework-toolchain.md
+    - name: Setup Office 365 tenant
+      href: spfx/set-up-your-developer-tenant.md
+    - name: Setup development environment
+      href: spfx/set-up-your-development-environment.md
+    - name: Build web parts
+      href: spfx/web-parts/get-started/build-a-hello-world-web-part.md
+    - name: Build extensions
+      href: spfx/extensions/get-started/build-a-hello-world-extension.md
+  - name: Basics
     items:
-    - name: SharePoint Framework Toolchain
-      href: spfx/toolchain/sharepoint-framework-toolchain.md
-    - name: Yeoman Sharepoint generator
-      href: spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md
-    - name: Update SharePoint Framework packages
-      href: spfx/toolchain/update-latest-packages.md
-    - name: Optimize builds for production
-      href: spfx/toolchain/optimize-builds-for-production.md
-    - name: Integrate gulp tasks in SharePoint Framework toolchain
-      href: spfx/toolchain/integrate-gulp-tasks-in-build-pipeline.md
-    - name: Extending Webpack in SharePoint Framework toolchain
-      href: spfx/toolchain/extending-webpack-in-build-pipeline.md
-    - name: Provision SharePoint assets
-      href: spfx/toolchain/provision-sharepoint-assets.md
+    - name: Debugging
+      href: spfx/debug-in-vscode.md
+    - name: Connecting to APIs
+      items:
+      - name: Microsoft Graph
+        href: spfx/overview-graphhttpclient.md
+        items:
+        - name: Overview
+          href: spfx/overview-graphhttpclient.md
+        - name: Tutorial
+          href: spfx/call-microsoft-graph-using-graphhttpclient.md
   - name: Extensions
+    href: spfx/extensions/overview-extensions.md
     items:
     - name: Overview
       href: spfx/extensions/overview-extensions.md
-    - name: Get started
+    - name: Getting started
+      href: spfx/extensions/get-started/build-a-hello-world-extension.md
       items:
       - name: Build your first extension
         href: spfx/extensions/get-started/build-a-hello-world-extension.md
@@ -73,15 +49,13 @@
         href: spfx/extensions/get-started/building-simple-field-customizer.md
       - name: Build ListView Command Set
         href: spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md
-    - name: Guidance
-      items:
-      - name: Use custom dialog boxes
-        href: spfx/extensions/guidance/using-custom-dialogs-with-spfx.md
   - name: Web parts
+    href: spfx/web-parts/overview-client-side-web-parts.md
     items:
     - name: Overview
       href: spfx/web-parts/overview-client-side-web-parts.md
-    - name: Get started
+    - name: Getting started
+      href: spfx/web-parts/get-started/build-a-hello-world-web-part.md
       items:
       - name: Build your first web part
         href: spfx/web-parts/get-started/build-a-hello-world-web-part.md
@@ -101,81 +75,155 @@
         href: spfx/web-parts/get-started/hosting-webpart-from-office-365-cdn.md
     - name: Basics
       items:
-      - name: Design considerations
-        href: spfx/web-parts/basics/design-considerations-for-web-parts.md
-      - name: Add properties to the property pane
+      - name: Custom properties
         href: spfx/web-parts/basics/integrate-with-property-pane.md
-      - name: Add an external library
-        href: spfx/web-parts/basics/add-an-external-library.md
-      - name: Working with the original __RequestDigest
-        href: spfx/web-parts/basics/working-with-requestdigest.md
-      - name: Notes on solution packaging
-        href: spfx/web-parts/basics/notes-on-solution-packaging.md
+      - name: Pre-configuring web parts
+        href: spfx/web-parts/guidance/simplify-adding-web-parts-with-preconfigured-entries.md
+      - name: Validating properties
+        href: spfx/web-parts/guidance/validate-web-part-property-values.md
+    - name: Concepts
+      items:
+      - name: Migrating existing customizations
+        items:
+        - name: Working with __REQUESTDIGEST
+          href: spfx/web-parts/basics/working-with-requestdigest.md
+        - name: Using JSOM
+          href: spfx/web-parts/guidance/connect-to-sharepoint-using-jsom.md
+        - name: Script Editor Web Part
+          href: spfx/web-parts/guidance/migrate-script-editor-web-part-customizations.md
+        - name: jQuery and DataTables
+          href: spfx/web-parts/guidance/migrate-jquery-datatables-script-to-spfx.md
+        - name: jQuery and FullCalendar
+          href: spfx/web-parts/guidance/migrate-jquery-fullcalendar-script-to-spfx.md
+        - name: AngularJS applications
+          href: spfx/web-parts/guidance/migrate-angular-1-x-applications-to-sharepoint-framework.md
+      - name: Performance
+        items:
+        - name: Share data between web parts
+          href: spfx/web-parts/guidance/share-data-between-web-parts.md
+          items:
+          - name: Overview
+            href: spfx/web-parts/guidance/share-data-between-web-parts.md
+          - name: Tutorial
+            href: spfx/web-parts/guidance/tutorial-share-data-between-web-parts-global-variable.md
+      - name: SharePoint integration
+        href: spfx/web-parts/guidance/integrate-web-part-properties-with-sharepoint.md
+        items:
+        - name: Integrate properties with SharePoint
+          href: spfx/web-parts/guidance/integrate-web-part-properties-with-sharepoint.md
+      - name: Extending property pane
+        items:
+        - name: Build custom controls
+          href: spfx/web-parts/guidance/build-custom-property-pane-controls.md
+        - name: Use cascading dropdowns
+          href: spfx/web-parts/guidance/use-cascading-dropdowns-in-web-part-properties.md
+  - name: Concepts
+    items:
     - name: Guidance
       items:
-      - name: SharePoint Framework solutions governance considerations
+      - name: Enterprise guidance
+        href: spfx/enterprise-guidance.md
+      - name: Team-based development
+        href: spfx/team-based-development-on-sharepoint-framework.md
+      - name: Governance considerations
         href: spfx/web-parts/guidance/governance-considerations.md
+    - name: External libraries
+      items:
+      - name: Referencing external libraries
+        href: spfx/web-parts/basics/add-an-external-library.md
       - name: Use existing JavaScript libraries
         href: spfx/web-parts/guidance/use-existing-javascript-libraries.md
-      - name: Reference third-party CSS styles
+      - name: Use existing CSS styles
         href: spfx/web-parts/guidance/reference-third-party-css-styles.md
-      - name: Using preconfigured entries
-        href: spfx/web-parts/guidance/simplify-adding-web-parts-with-preconfigured-entries.md
-      - name: Integrate web part properties with SharePoint
-        href: spfx/web-parts/guidance/integrate-web-part-properties-with-sharepoint.md
-      - name: Using JSOM in web part
-        href: spfx/web-parts/guidance/connect-to-sharepoint-using-jsom.md
-      - name: Validate property pane entries
-        href: spfx/web-parts/guidance/validate-web-part-property-values.md
-      - name: Use cascading dropdowns in property pane
-        href: spfx/web-parts/guidance/use-cascading-dropdowns-in-web-part-properties.md
-      - name: Build custom controls for the property pane
-        href: spfx/web-parts/guidance/build-custom-property-pane-controls.md
-      - name: Share data between web parts
-        href: spfx/web-parts/guidance/share-data-between-web-parts.md
-      - name: Sharing data between web parts (tutorial)
-        href: spfx/web-parts/guidance/tutorial-share-data-between-web-parts-global-variable.md
-      - name: Migrating Script Editor Web Part customizations
-        href: spfx/web-parts/guidance/migrate-script-editor-web-part-customizations.md
-      - name: Migrating jQuery and DataTables solution
-        href: spfx/web-parts/guidance/migrate-jquery-datatables-script-to-spfx.md
-      - name: Migrating jQuery and FullCalendar solution
-        href: spfx/web-parts/guidance/migrate-jquery-fullcalendar-script-to-spfx.md
-      - name: Connect to API secured with Azure Active Directory
-        href: spfx/web-parts/guidance/connect-to-api-secured-with-aad.md
-      - name: Build web parts with SP PnP JS
+      - name: Use SP PnP JS
         href: spfx/web-parts/guidance/use-sp-pnp-js-with-spfx-web-parts.md
-      - name: Build web parts with Angular v1.x
+      - name: Use AngularJS
         href: spfx/web-parts/guidance/build-client-side-web-parts-with-angular-1-x.md
-      - name: Migrating Angular applications
-        href: spfx/web-parts/guidance/migrate-angular-1-x-applications-to-sharepoint-framework.md
-      - name: Localization
-        href: spfx/web-parts/guidance/localize-web-parts.md
-      - name: Call the Microsoft Graph API
-        href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md
-  - name: Design guidance
-    items:
-    - name: Overview
-      href: design/design-guidance-overview.md
-    - name: Authoring pages
-      href: design/authoring-pages.md
-    - name: Designing a web part
-      href: design/design-a-web-part.md
+    - name: Connecting to APIs
       items:
-      - name: Reactive and nonreactive web parts
-        href: design/reactive-and-nonreactive-web-parts.md
-      - name: Responsive design
-        href: design/grid-and-responsive-design.md
-      - name: Titles and descriptions
-        href: design/web-part-titles-and-descriptions.md
-      - name: UI text
-        href: design/ui-text-for-web-parts.md
-      - name: Themes and colors
-        href: design/themes-colors.md
-      - name: Placeholders and fallbacks
-        href: design/placeholders-and-fallbacks.md
-      - name: Showcase web part
-        href: design/showcase-web-part.md
+      - name: APIs secured with Azure Active Directory
+        href: spfx/web-parts/guidance/connect-to-api-secured-with-aad.md
+      - name: Call the Microsoft Graph API using OAuth
+        href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md
+    - name: Performance
+      href: spfx/toolchain/optimize-builds-for-production.md
+      items:
+      - name: Optimize builds for production
+        href: spfx/toolchain/optimize-builds-for-production.md
+    - name: Setup and Deployment
+      items:
+      - name: Packaging solution
+        href: spfx/web-parts/basics/notes-on-solution-packaging.md
+      - name: Custom build tasks
+        href: spfx/toolchain/integrate-gulp-tasks-in-build-pipeline.md
+      - name: Bundling
+        href: spfx/toolchain/extending-webpack-in-build-pipeline.md
+      - name: Update SharePoint Framework packages
+        href: spfx/toolchain/update-latest-packages.md
+      - name: Tenant-scoped deployment
+        href: spfx/tenant-scoped-deployment.md
+      - name: SharePoint 2016 support
+        href: spfx/sharepoint-2016-support.md
+      - name: Provisioning SharePoint assets
+        href: spfx/toolchain/provision-sharepoint-assets.md
+    - name: UI
+      href: design/design-guidance-overview.md
+      items:
+      - name: Design guidance
+        href: design/design-guidance-overview.md
+        items:
+        - name: Overview
+          href: design/design-guidance-overview.md
+        - name: Authoring pages
+          href: design/authoring-pages.md
+        - name: Designing a web part
+          href: design/design-a-web-part.md
+          items:
+          - name: Reactive and nonreactive web parts
+            href: design/reactive-and-nonreactive-web-parts.md
+          - name: Responsive design
+            href: design/grid-and-responsive-design.md
+          - name: Titles and descriptions
+            href: design/web-part-titles-and-descriptions.md
+          - name: UI text
+            href: design/ui-text-for-web-parts.md
+          - name: Themes and colors
+            href: design/themes-colors.md
+          - name: Placeholders and fallbacks
+            href: design/placeholders-and-fallbacks.md
+          - name: Showcase web part
+            href: design/showcase-web-part.md
+      - name: Design considerations
+        href: spfx/web-parts/basics/design-considerations-for-web-parts.md
+      - name: Custom dialogs
+        href: spfx/extensions/guidance/using-custom-dialogs-with-spfx.md
+      - name: Working with CSS
+        href: spfx/css-recommendations.md
+      - name: Using themes
+        href: spfx/use-theme-colors-in-your-customizations.md
+      - name: Office UI Fabric integration
+        href: spfx/office-ui-fabric-integration.md
+    - name: Localization
+      href: spfx/web-parts/guidance/localize-web-parts.md
+    - name: Integrating with SharePoint
+      items:
+      - name: Tenant properties
+        href: spfx/tenant-properties.md
+  - name: Framework architecture
+    items:
+    - name: Tools and libraries
+      href: spfx/tools-and-libraries.md
+    - name: Toolchain
+      href: spfx/toolchain/sharepoint-framework-toolchain.md
+      items:
+      - name: Overview
+        href: spfx/toolchain/sharepoint-framework-toolchain.md
+      - name: SharePoint Framework Yeoman generator
+        href: spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md
+  - name: Roadmap
+    href: spfx/roadmap.md
+  - name: Known issues and FAQ
+    href: spfx/known-issues-and-common-questions.md
 - name: Declarative customization
   items:
   - name: Site theming
