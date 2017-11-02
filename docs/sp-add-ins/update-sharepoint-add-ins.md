@@ -54,7 +54,9 @@ The following are the major steps that may be needed when you create an update f
 - Update the add-in manifest.
 
    - `**` Raise the **Version** number in the [App](http://msdn.microsoft.com/library/d5f30dfe-7500-5f85-0f08-f4f220c0c692%28Office.15%29.aspx) element of the appmanifest.xml file (add-ins were called "apps" when the schema was first released). Do *not* change the **ProductID** number.
+   
    - Change the [AppPermissionRequests](http://msdn.microsoft.com/library/4e617622-78d3-3d23-677d-9957eb1fb107%28Office.15%29.aspx) section of the appmanifest.xml file.
+   
    - Change the [AppPrerequisites](http://msdn.microsoft.com/library/7622b55f-01a1-2c39-9daa-7cfb1a3c890f%28Office.15%29.aspx) section of the appmanifest.xml file.
     
    For more information, see [Update the add-in version, permission requests, and prerequisites](#UpdateManifest).
@@ -107,7 +109,7 @@ When you are ready to test your update, retract the new version from the test si
 
 When developing an update for an add-in on your SharePoint test site, it is impractical to wait 24 hours between updates. You (and users on a production SharePoint site) can update an add-in immediately after it is uploaded to the Office Store or the organization's add-in catalog with these steps.
 
-### To immediately update an add-in
+#### To immediately update an add-in
 
 1. After the latest update is uploaded to the add-in catalog, open the **Site Contents** page on the website where the add-in is installed and select the **...** button on the add-in's tile.
 
@@ -131,14 +133,14 @@ After making a backup copy of the Visual Studio project folder, open the add-in 
 
 If the updated version of the add-in needs more (or fewer) permissions to components of the host web, make changes as needed to the [AppPermissionRequests](http://msdn.microsoft.com/library/4e617622-78d3-3d23-677d-9957eb1fb107%28Office.15%29.aspx) section of the add-in. In Visual Studio, use the **Permissions** tab of the manifest designer. 
 
-When an add-in is updated, the user is always prompted to grant permissions, whether the permissions have changed or not since the previous version. If the new version requests *fewer* permissions than the preceding version, the additional permissions of the preceding version *are not revoked*. The only way to restrict the add-in to the permissions that the latest version needs is for a user to open the page *{SharePointDomain}*`/_layouts/15/appinv.aspx` after the add-in has been updated, and then manually enter permission markup that conforms to the [AppPermissionRequests](http://msdn.microsoft.com/library/4e617622-78d3-3d23-677d-9957eb1fb107%28Office.15%29.aspx) schema.
+When an add-in is updated, the user is always prompted to grant permissions, whether the permissions have changed or not since the previous version. If the new version requests *fewer* permissions than the preceding version, the additional permissions of the preceding version *are not revoked*. The only way to restrict the add-in to the permissions that the latest version needs is for a user to open the page *{SharePointDomain}* `/_layouts/15/appinv.aspx` after the add-in has been updated, and then manually enter permission markup that conforms to the [AppPermissionRequests](http://msdn.microsoft.com/library/4e617622-78d3-3d23-677d-9957eb1fb107%28Office.15%29.aspx) schema.
 
 If the updated version of the add-in has prerequisites that the earlier versions did not have (or no longer has some prerequisites that earlier versions had), make changes as needed to the [AppPrerequisites](http://msdn.microsoft.com/library/7622b55f-01a1-2c39-9daa-7cfb1a3c890f%28Office.15%29.aspx) section of the add-in. In Visual Studio, use the **Prerequisites** tab of the manifest designer.
 
 ## Next steps
 <a name="Next"> </a>
 
-Continue with the next bullet in the section [Major steps in updating an add-in](#MajorAppUpgradeSteps) or go directly to one of the following articles:
+Continue with the next bullet in the section [Major steps in updating an add-in](#MajorAppUpgradeSteps), or go directly to one of the following articles:
 
 -  [Update add-in web components in SharePoint](update-add-in-web-components-in-sharepoint.md)
 -  [Update host web components in SharePoint](update-host-web-components-in-sharepoint.md)
