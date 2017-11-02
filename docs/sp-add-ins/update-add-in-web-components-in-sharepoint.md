@@ -11,12 +11,12 @@ Prerequisites for updating the add-in web components:
 
 - Be familiar with [Update SharePoint Add-ins](update-sharepoint-add-ins.md) and the prerequisites and core concepts included in it.
 
-- This topic assumes that you have developed and tested the latest version of the add-in as described in the [Create and debug the new version as if it were a brand new add-in](update-sharepoint-add-ins.md#DebugFirst).
+- You have developed and tested the latest version of the add-in as described in the [Create and debug the new version as if it were a brand new add-in](update-sharepoint-add-ins.md#DebugFirst).
 
-## Update SharePoint components in the add-in web
 <a name="UpdatingAppWeb"> </a>
+## Update SharePoint components in the add-in web
 
-All of the SharePoint components that are deployed to the add-in web are contained in **Web**-scoped Features in the add-in package. For that reason, updating these components is a matter of updating one or more of the Features. This process has not changed since SharePoint 2010 and is documented in [How to: Add Elements to an Existing Feature](http://msdn.microsoft.com/library/b007f419-e0d6-4e3a-a3ae-b8e448656d02%28Office.15%29.aspx) in the SharePoint 2010 SDK. 
+All of the SharePoint components that are deployed to the add-in web are contained in **Web**-scoped Features in the add-in package. For that reason, updating these components is a matter of updating one or more of the Features. This process has not changed since SharePoint 2010 and is documented in [Add Elements to an Existing Feature](http://msdn.microsoft.com/library/b007f419-e0d6-4e3a-a3ae-b8e448656d02%28Office.15%29.aspx) in the SharePoint 2010 SDK. 
 
 Other articles in the [Upgrading Features](http://msdn.microsoft.com/library/e917f709-6491-4d50-adbe-2ab8f35da990%28Office.15%29.aspx) node may be helpful also, but consider that add-ins must not include custom code on the SharePoint server, so some aspects of Feature upgrading in SharePoint 2010 are not relevant to updating add-ins. For example, you can't use the [CustomUpgradeAction](http://msdn.microsoft.com/library/16a2182e-80aa-4184-8071-8f717ee5c572%28Office.15%29.aspx) element when you upgrade the Feature of a SharePoint Add-in.
 
@@ -236,8 +236,8 @@ The following is an example of a complete _{FeatureName}_.Template.xml file for 
 
 ```
 
-### Subsequent updates of the add-in web
 <a name="SubsequentUpgrades"> </a>
+### Subsequent updates of the add-in web
 
 When you update a SharePoint Add-in for the second (or third, and so on) time, you have to consider that some of your customers may not have made the previous updates. So if a user responds to the "update is available" prompt after your latest update is deployed to the organization's add-in catalog or to the Office Store, their instance of the add-in may be updated through multiple versions in a single update process. 
 
@@ -304,8 +304,8 @@ For the most part, this is exactly what should occur: you want every earlier ver
 
 > This provides another good reason to avoid using a **BeginVersion** attribute. The **BeginVersion** attribute can be used to block some upgrade actions from ever occurring on some add-in instances. But it cannot block the Feature or add-in versions from being raised to the latest version. So the use of a **BeginVersion** attribute could create a situation in which two instances of your add-in could have the same add-in version number and the same add-in web Feature version number, but have different components in their add-in webs.
 
-## Verify deployment of add-in web components
 <a name="VerifyDeployAppWebComp"> </a>
+## Verify deployment of add-in web components
 
 Follow these steps to verify the deployment of the add-in web Feature and its components.
 
@@ -345,6 +345,6 @@ Return to [Major steps in updating an add-in](update-sharepoint-add-ins.md#Major
 <a name="bk_addresources"> </a>
 
 -  [Update SharePoint Add-ins](update-sharepoint-add-ins.md)
--  [How to: Add Elements to an Existing Feature](http://msdn.microsoft.com/library/b007f419-e0d6-4e3a-a3ae-b8e448656d02%28Office.15%29.aspx) in the Microsoft SharePoint 2010 Software Development Kit (SDK).
+-  [Add Elements to an Existing Feature](http://msdn.microsoft.com/library/b007f419-e0d6-4e3a-a3ae-b8e448656d02%28Office.15%29.aspx) in the Microsoft SharePoint 2010 Software Development Kit (SDK).
 -  [Upgrading Features](http://msdn.microsoft.com/library/e917f709-6491-4d50-adbe-2ab8f35da990%28Office.15%29.aspx) in the Microsoft SharePoint 2010 Software Development Kit (SDK).
 
