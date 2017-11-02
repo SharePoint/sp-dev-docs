@@ -1,16 +1,12 @@
 ---
 title: Add first-run logic to the provider-hosted add-in
-ms.date: 10/31/2017
+description: Include "first run" code in a provider-hosted SharePoint Add-in by creating the basic class for deploying components, adding the basic startup logic, and programmatically deploying a SharePoint list. 
+ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
 
 
 # Add first-run logic to the provider-hosted add-in
-
-Learn how to include "first run" code in a provider-hosted SharePoint Add-in.
- 
-> [!NOTE]
-> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md).
 
 This is the eighth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series:
 
@@ -44,7 +40,7 @@ In this article, you add code to the start page of the Chain Store SharePoint Ad
 
 5. Add the following **using** statements to the top of the file.
     
-    ```
+    ```C#
       using System.Web;
       using System.Linq;
       using System.Collections.Generic;
