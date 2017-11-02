@@ -1,16 +1,12 @@
 ---
 title: Give your provider-hosted add-in the SharePoint look-and-feel
-ms.date: 10/30/2017
+description: Get to know the base add-in, configure Visual Studio to rebuild the corporate database, add SharePoint chrome and top bar to the start page, run the add-in, and test the new UI.
+ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
 
 
 # Give your provider-hosted add-in the SharePoint look-and-feel
-
-Learn how to give your provider-hosted SharePoint Add-ins the look and feel of SharePoint.
- 
-> [!NOTE]
-> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md).
 
 This is the second in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with the topic [SharePoint Add-ins](sharepoint-add-ins.md) and the previous article in this series:
 
@@ -92,8 +88,8 @@ We are not going to teach you ASP.NET or T-SQL programming in this series, but y
    > [!NOTE]
    > If you select the tile, the start page does not open because Visual Studio closes the IIS Express session when you stop debugging.
 
-## Configure Visual Studio to rebuild the corporate database with each debugging session
 <a name="Rebuild"> </a>
+## Configure Visual Studio to rebuild the corporate database with each debugging session
 
 By default, Visual Studio will *not*  rebuild the SQL Express database. Therefore, orders and other items that you add to the database in one debugging session are still in the database in later sessions. It is easier to start with an empty database each time you select F5, so take these steps:
 
@@ -103,7 +99,6 @@ By default, Visual Studio will *not*  rebuild the SQL Express database. Therefor
 
 
 ## Give the remote web application the look and feel of SharePoint
-<a name="Rebuild"> </a>
 
 In some scenarios, you want your remote pages to have their own branding, but in most cases they should mimic the UI of SharePoint so that users feel they are still inside SharePoint.
 
@@ -240,7 +235,6 @@ In some scenarios, you want your remote pages to have their own branding, but in
     ```
 
 ## Run the add-in and test the new SharePoint UI
-<a name="Rebuild"> </a>
 
 1. Use the F5 key to deploy and run your add-in. Visual Studio hosts the remote web application in IIS Express and hosts the SQL database in SQL Express. It also makes a temporary installation of the add-in on your test SharePoint site and immediately runs the add-in. You are prompted to grant permissions to the add-in before its start page opens.
     
