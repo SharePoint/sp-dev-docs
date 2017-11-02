@@ -1,15 +1,11 @@
 ---
 title: Handle add-in events in the provider-hosted add-in
-ms.date: 10/31/2017
+description: Customize the installation of a provider-hosted SharePoint Add-in by configuring the solution for event receiver debugging, creating the installation and uninstallation handlers, running the add-in, and testing the handlers.
+ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
 
 # Handle add-in events in the provider-hosted add-in
-
-Learn how to customize the installation of a provider-hosted SharePoint Add-in.
- 
-> [!NOTE]
-> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md).
 
 This is the seventh in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series:
 
@@ -48,13 +44,12 @@ For the Chain Store add-in, we combine these strategies. In this article, you cr
 
 In a later article in this series, you'll put first-run logic in the **Page_Load** method of the add-ins start page. This logic deploys the two custom lists and does some other things, too.
 
-## Configure the solution for event receiver debugging
 <a name="RERDebug"> </a>
+## Configure the solution for event receiver debugging
 
 Debugging of event receivers requires the use of the Azure Service Bus. Follow the instructions at [Debug and troubleshoot a remote event receiver in a SharePoint Add-in](debug-and-troubleshoot-a-remote-event-receiver-in-a-sharepoint-add-in.md). Because you are using a SharePoint Online website as your test site, ensure that you carry out the instructions for a remote test site. The remainder of this series assumes you have configured debugging successfully. 
 
 ## Create the installation handler
-<a name="RERDebug"> </a>
 
 > [!NOTE]
 > The settings for Startup Projects in Visual Studio tend to revert to defaults whenever the solution is reopened. Always take these steps immediately after reopening the sample solution in this series of articles: 
@@ -150,7 +145,7 @@ Debugging of event receivers requires the use of the Azure Service Bus. Follow t
 
 9. Add the following **using** statements to the top of the file.
     
-    ```
+    ```C#
       using System.Data.SqlClient;
       using System.Data;
       using ChainStoreWeb.Utilities;
@@ -180,7 +175,6 @@ Debugging of event receivers requires the use of the Azure Service Bus. Follow t
     This method creates a row in a database table called **Tenants**. In addition to the **Name** column, the table also has a **Version** column with a default value set to 0000.0000.0000.0000. In a later article in this series, you will create first-run logic that looks at this value to determine whether the add-in has already been installed on the host web. If the version is 0000.0000.0000.0000, your code deploys the **Local Employees** and **Expected Shipments** lists, and then raises the version number.
     
 ## Create the uninstallation handler
-<a name="RERDebug"> </a>
 
 It is usually a good practice to handle the uninstalling event whenever you are handling the installed event. The basic idea is that the uninstalling handler deletes or recycles things that the installed handler deployed. There are, however, many exceptions, so you really need to understand the use cases of your add-in. For example, a list that is deployed with an add-in and populated with the add-in might still have value even after the add-in itself is uninstalled, in which case you wouldn't want to uninstall the list in the uninstalling event handler. 
 
@@ -233,17 +227,16 @@ The uninstallation event does not run, as you might expect, when a user removes 
 > In an earlier article in this series, you configured the project to rebuild the corporate database each time you select F5. This empties the **Tenants** table.
 
 ## Run the add-in and test the installation handler
-<a name="RERDebug"> </a>
 
 1. Use the F5 key to deploy and run your add-in. Visual Studio hosts the remote web application in IIS Express and hosts the SQL database in SQL Express. It also makes a temporary installation of the add-in on your test SharePoint site, runs the installation event handler, and immediately runs the add-in. You are prompted to grant permissions to the add-in before its start page opens. 
 
 2. When the add-in's start page opens, select the gear icon on the chrome control at the top, and then select **Account settings**.
 
-3. On the **Accounts** page, select the **Show Add-in Version** button. The version shows as 0000.0000.0000.0000.
+3. On the **Accounts settings** page, select the **Show Add-in Version** button. The version shows as 0000.0000.0000.0000.
     
-   *Figure 1. Accounts page*
+   *Figure 1. Account settings page*
 
-   ![The Accounts page with the heading "Account settings", a button named "Show Add-in Version", and under this, a line of text reading "Registered version: zero zero zero zero dot zero zero zero zero dot zero zero zero zero dot zero zero zero zero".](../images/2a905b7d-89c7-456a-8456-21a9b7e9efc5.PNG)
+   ![The Account settings page with the heading "Account settings", a button named "Show Add-in Version", and under this, a line of text reading "Registered version: zero zero zero zero dot zero zero zero zero dot zero zero zero zero dot zero zero zero zero".](../images/2a905b7d-89c7-456a-8456-21a9b7e9efc5.PNG)
 
 4. To end the debugging session, close the browser window or stop debugging in Visual Studio. Each time that you select F5, Visual Studio retracts the previous version of the add-in and installs the latest one.
 
