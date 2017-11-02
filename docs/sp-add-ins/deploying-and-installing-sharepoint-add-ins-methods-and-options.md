@@ -1,5 +1,5 @@
 ---
-title: Deploying and installing SharePoint Add-ins: methods and options
+title: "Deploying and installing SharePoint Add-ins: methods and options"
 ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
