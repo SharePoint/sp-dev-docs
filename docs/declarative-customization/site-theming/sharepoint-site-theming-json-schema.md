@@ -74,6 +74,10 @@ The following is an example of a JSON object that defines a theme.
 
 The SharePoint Framework includes eight built-in themes: six on light backgrounds, and two on dark backgrounds. You might find it useful to create a custom theme by starting from one of the built-in themes and adjusting it to suit your needs.
 
+Another option is to use the [Theme Generator tool](https://developer.microsoft.com/en-us/fabric#/styles/themegenerator) to build a custom theme. It provides an interactive UI for selecting theme colors, and automatically generates the JSON, SASS, and PowerShell definitions for your custom theme:
+
+![Theme Generator tool](../../images/theme-generator-tool.png)
+
 The following is a summary of the built-in themes, including JSON definitions for the theme colors that you can use as a starting point for customization.
 
 ## Red theme

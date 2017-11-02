@@ -144,8 +144,6 @@ Set-HideDefaultThemes $true
 ```
 After creating the "Custom Cyan" theme, hiding the default themes will leave only the one custom theme in the themes list under **Change the look**.
 
-![Change the look box with default themes hidden and the custom Cyan theme shown](../../images/theme-hidedefaults.png)
-
 To restore the default themes to the theme picker list, use the following cmdlet.
 ```powershell
 Set-HideDefaultThemes $false
