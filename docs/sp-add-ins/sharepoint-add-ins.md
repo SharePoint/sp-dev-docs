@@ -1,17 +1,11 @@
 ---
 title: SharePoint Add-ins
+description: Create self-contained extensions of SharePoint websites, called SharePoint Add-ins, that run without custom code on the SharePoint server.
 ms.date: 10/26/2017
 ms.prod: sharepoint
 ---
 
-
 # SharePoint Add-ins
-SharePoint Add-ins are self-contained extensions of SharePoint websites that you create, and that run without custom code on the SharePoint server.
-
-> [!NOTE]
-> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md).
-
-## SharePoint Add-ins overview
 
 There are two basic kinds of SharePoint Add-ins: SharePoint-hosted and provider-hosted. To make the best decision about the right kind to develop for your scenario, start by learning what both types of SharePoint Add-ins have in common.
 
@@ -33,7 +27,7 @@ There are two basic kinds of SharePoint Add-ins: SharePoint-hosted and provider-
    |||
    |:-----|:-----|
    |![Immersive Full Page SharePoint app experience](../images/7298a25b-ed54-4953-a781-26c3f633866a.jpg)|**As an immersive full-page experience** that can have the look and feel of a SharePoint page.|
-   |![App Part experience for SharePoint app](../images/90cd4b6e-462e-442e-92de-86b2d98282d0.jpg)|**As part of a webpage, using a special kind of control called an add-in part**, to surface an iframe element that contains the add-in.|
+   |![App Part experience for SharePoint app](../images/90cd4b6e-462e-442e-92de-86b2d98282d0.jpg)|**As part of a webpage, using a special kind of control called an add-in part**, to surface an<br/>iframe element that contains the add-in.|
    |![Custom action experience of SharePoint app](../images/3a14cfdc-51e1-446f-82d9-acb4f2bcbc0e.jpg)|**As UI commands that extend ribbons and menus** for lists, documents, and more.|
 
 
@@ -50,7 +44,7 @@ There are two basic kinds of SharePoint Add-ins: SharePoint-hosted and provider-
 > **Take a look at a few SharePoint Add-ins in the** [Office Store](https://store.office.com/appshome.aspx?productgroup=SharePoint) to get a sense of what you can develop. Or open a SharePoint website and install some of the free SharePoint Add-ins. Just navigate to **Site Contents \| add an add-in \| SharePoint Store**.
 
 
-### A few points for veteran SharePoint developers
+## A few points for veteran SharePoint developers
 
 We've deprecated sandboxed solutions that contain custom server-side code. We still support "No code" sandboxed solutions and sandboxed solutions that contain only JavaScript.
 
@@ -117,8 +111,8 @@ You have complete flexibility for the hosting framework that you use for the rem
 
 **Provider-hosted add-ins can connect to any internal or public web service** and, unlike SharePoint-hosted add-ins, they can **handle SharePoint list and list item events**, such as adding an item to a document library.
 
-## Choose your SharePoint development path
 <a name="NowWhat"> </a>
+## Choose your SharePoint development path
 
 Ready to get started?
 
@@ -134,7 +128,7 @@ Ready to get started?
     
    -  Install tools that are appropriate for your stack, if you don't already have them.
  
-   - Get a developer account on Office 365 for testing and debugging purposes. For details, go to  [Set up a development environment for SharePoint Add-ins on Office 365](set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md), or if you already have an Office 365 subscription, you just need to  [create a Developer Site on it.](create-a-developer-site-on-an-existing-office-365-subscription.md).
+   - Get a developer account on Office 365 for testing and debugging purposes. For details, go to  [Set up a development environment for SharePoint Add-ins on Office 365](set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md), or if you already have an Office 365 subscription, you just need to  [create a Developer Site on it](create-a-developer-site-on-an-existing-office-365-subscription.md).
     
    - Your add-in will use SharePoint's REST/OData APIs to perform CRUD operations on SharePoint data:
     
@@ -148,9 +142,6 @@ Ready to get started?
 > [!NOTE]
 > If you're a beginner at both SharePoint and web development, you'd benefit most by starting with the free course at Microsoft's Virtual Academy, or working through a book about SharePoint development.
 
-## See also
-<a name="NowWhat"> </a>
-
-#### Other resources
+## Additional resources
 
 [Developing Microsoft SharePoint Server 2013 Core Solutions Jump Start](http://www.microsoftvirtualacademy.com/training-courses/developing-microsoft-sharepoint-server-core-solutions-jump-start)
