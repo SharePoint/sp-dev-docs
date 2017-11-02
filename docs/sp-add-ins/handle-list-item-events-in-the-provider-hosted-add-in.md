@@ -1,15 +1,11 @@
 ---
 title: Handle list item events in the provider-hosted add-in
-ms.date: 10/31/2017
+description: Programmatically deploy a list, create and register the list item event receiver, and run the provider-hosted SharePoint Add-in and test the receiver.
+ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
 
 # Handle list item events in the provider-hosted add-in
-
-Learn how to handle list item events in a provider-hosted SharePoint Add-in.
- 
-> [!NOTE]
-> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md).
 
 This is the tenth in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with [SharePoint Add-ins](sharepoint-add-ins.md) and the previous articles in this series:
 
@@ -102,7 +98,7 @@ In this article, you create a handler for this list item event and then programm
 
 2. In the **DeployChainStoreComponentsToHostWeb** method, add the following line, just above the line `RemoteTenantVersion = localTenantVersion`.
     
-    ```
+    ```C#
       CreateExpectedShipmentsList();
     ```
 
