@@ -33,7 +33,7 @@ Return to [Major steps in updating an add-in](update-sharepoint-add-ins.md#Major
 ## Additional resources
 
 -  [Update SharePoint Add-ins](update-sharepoint-add-ins.md)
--  [SharePoint Add-ins update process](sharepoint-add-ins-update-process.md)
+-  [SharePoint Add-ins update process](sharepoint-add-ins-update-process.md) 
     
  
 
