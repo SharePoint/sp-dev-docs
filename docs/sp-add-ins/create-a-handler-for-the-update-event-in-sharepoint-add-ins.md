@@ -1,6 +1,6 @@
 ---
 title: Create a handler for the update event in SharePoint Add-ins
-description: Create and use a handler for the update event of a SharePoint Add-in.
+description: Create and use a handler and apply rollback logic for the update event of a SharePoint Add-in.
 ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
@@ -9,11 +9,11 @@ ms.prod: sharepoint
 
 Before you begin, be thoroughly familiar with both [Handling add-in events](handle-events-in-sharepoint-add-ins.md#HandlingAppEvents) and [Update SharePoint Add-ins](update-sharepoint-add-ins.md) and the prerequisites and core concepts listed in them.
 
-<a name="UpgradedEventEndpoint"> </a>
-## Create an UpgradedEventEndpoint receiver
-
 > [!NOTE]
 > **Version numbering system:** For consistency, this topic assumes that the add-in version numbers are 1.0.0.0, 2.0.0.0, 3.0.0.0, and so on. However, the logic and guidance applies no matter what your numbering system is.
+
+<a name="UpgradedEventEndpoint"> </a>
+## Create an UpgradedEventEndpoint receiver
 
 For custom update logic, you can create a SharePoint remote event receiver that handles the add-in updated event. You should be conservative in using this technique. Use it only for updating steps that can't be done any other way. Also, the guidance found in [Handling add-in events](handle-events-in-sharepoint-add-ins.md#HandlingAppEvents) applies for the add-in updated event as much as the add-in installed and add-in uninstalling events. This includes:
 
