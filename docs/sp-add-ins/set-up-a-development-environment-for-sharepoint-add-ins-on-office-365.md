@@ -61,7 +61,7 @@ There are three ways to get an Office 365 plan:
 
 3. Create a subdomain of **.onmicrosoft.com**; for example, contoso.onmicrosoft.com. 
     
-    After you sign up, you use the resulting credentials (in the format *UserID@yourdomain.onmicrosoft.com*) to sign in to your Office 365 portal site where you administer your account. Your SharePoint Online Developer Site is provisioned at your new domain: **http://_yourdomain_.sharepoint.com**.
+    After you sign up, you use the resulting credentials (in the format *UserID@yourdomain.onmicrosoft.com*) to sign in to your Office 365 portal site where you administer your account. Your SharePoint Online Developer Site is provisioned at your new domain: `http://yourdomain.sharepoint.com`.
 
 4. Select **Next** and fill out the final page of the form. If you choose to provide a telephone number to get a confirmation code, you can provide a mobile or landline number, but *not* a VoIP (Voice over Internet Protocol) number.
 
