@@ -14,8 +14,8 @@ Let's say you have a killer idea for an add-in. In this section, we'll guide you
 
 Because the Cloud Add-in Model in SharePoint makes so many design options possible, SharePoint Add-ins can come in many shapes and sizes. This section contains helpful guidance for some of the most important decisions that you need to make as you are planning and designing the architecture and user experience of your add-in—including how you will host your add-in, how your add-in will efficiently and securely access data, and what the user experience will be.
 
-- For an overview of the design and architecture options that are available with SharePoint Add-ins, see [Three ways to think about design options for SharePoint Add-ins](three-ways-to-think-about-design-options-for-sharepoint-add-ins.md). 
-- For an overview of what SharePoint Add-ins are, see [SharePoint Add-ins](sharepoint-add-ins.md).
+- [Three ways to think about design options for SharePoint Add-ins](three-ways-to-think-about-design-options-for-sharepoint-add-ins.md): An overview of the design and architecture options that are available with SharePoint Add-ins.  
+- [SharePoint Add-ins](sharepoint-add-ins.md): An overview of what SharePoint Add-ins are.
 
 <a name="SP15Design_Hostingmodel"> </a>
 ## Choose the right hosting model for your add-in
