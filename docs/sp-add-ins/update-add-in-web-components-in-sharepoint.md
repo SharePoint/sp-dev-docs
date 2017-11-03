@@ -1,6 +1,6 @@
 ---
 title: Update add-in web components in SharePoint
-description: Update pages, lists, content types, and other add-in web components in a SharePoint Add-in.
+description: Update pages, lists, content types, and other web components in a SharePoint Add-in.
 ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
