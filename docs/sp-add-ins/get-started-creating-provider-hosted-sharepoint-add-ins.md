@@ -29,7 +29,7 @@ There are many ways to set up a development environment for SharePoint Add-ins. 
 
 ### Get the tools
 
-- If you don't already have **Visual Studio** 2013 or later installed, install it by using the instructions at [Install Visual Studio](http://msdn.microsoft.com/library/da049020-cfda-40d7-8ff4-7492772b620f.aspx). We recommend using the [latest version from the Microsoft Download Center](https://www.visualstudio.com/downloads/download-visual-studio-vs).
+- If you don't already have **Visual Studio** 2013 or later installed, install it by using the instructions at [Install Visual Studio](https://docs.microsoft.com/en-us/visualstudio/install/install-visual-studio). We recommend using the [latest version from the Microsoft Download Center](https://www.visualstudio.com/downloads/download-visual-studio-vs).
  
 - Visual Studio includes the **Microsoft Office Developer Tools for Visual Studio**. Sometimes a version of the tools is released between updates of Visual Studio. To be sure that you have the latest version of the tools, run the [installer for Office Developer Tools for Visual Studio 2013](http://aka.ms/OfficeDevToolsForVS2013), or the [installer for Office Developer Tools for Visual Studio 2015](http://aka.ms/OfficeDevToolsForVS2015). 
 
@@ -62,7 +62,7 @@ There are three ways to get an Office 365 plan:
 
 3. Create a subdomain of **.onmicrosoft.com**; for example, contoso.onmicrosoft.com.
     
-   After you sign up, you use the resulting credentials (in the format _UserID_@ _yourdomain_.onmicrosoft.com) to sign in to your Office 365 portal site where you administer your account. Your SharePoint Online Developer Site is set up at your new domain: **http:// _yourdomain_.sharepoint.com**.
+   After you sign up, you use the resulting credentials (in the format *UserID@yourdomain.onmicrosoft.com*) to sign in to your Office 365 portal site where you administer your account. Your SharePoint Online Developer Site is set up at your new domain: `http://yourdomain.sharepoint.com`.
     
 4. Select **Next** and fill out the final page of the form. If you choose to provide a telephone number to get a confirmation code, you can provide a mobile or landline telephone number, but *not* a VoIP (Voice over Internet Protocol) number.
     
@@ -430,6 +430,8 @@ There are three ways to get an Office 365 plan:
 <a name="bk_addresources"> </a>
 
 - For other ways of setting up a development environment, such as an "all on-premises" environment, see [Tools](tools-and-environments-for-developing-sharepoint-add-ins.md).
+- [Install earlier versions of Visual Studio](https://msdn.microsoft.com/library/da049020-cfda-40d7-8ff4-7492772b620f.aspx)
+- [Visual Studio documentation](https://docs.microsoft.com/en-us/visualstudio/)
     
 ## Next steps
 <a name="SP15createprovider_nextsteps"> </a>
