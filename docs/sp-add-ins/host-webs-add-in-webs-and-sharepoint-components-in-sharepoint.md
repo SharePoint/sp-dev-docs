@@ -1,21 +1,17 @@
 ---
 title: Host webs, add-in webs, and SharePoint components in SharePoint
-ms.date: 11/01/2017
+description: Which SharePoint components can be included in a SharePoint Add-in, which are deployed to the host web or the add-in web, and how the add-in web is deployed in an isolated domain.
+ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
 
 
 # Host webs, add-in webs, and SharePoint components in SharePoint
 
-Learn about the distinction between host webs and add-in webs. Also find out which SharePoint components can be included in a SharePoint Add-in, which are deployed to the host web, which are deployed to the add-in web, and how the add-in web is deployed in an isolated domain.
-
-> [!NOTE]
-> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md).
-
-## Host webs, add-in webs, and the isolated domain
-<a name="IsolatedDomain"> </a>
-
 When an add-in that includes SharePoint components is installed on a website, it is listed on the **Site Contents** page from which it can be launched. That listing, which is the launch point of the add-in, is the only required addition to the website, although certain other things can optionally be added, such as a custom action or an add-in part. For information about these options, see [Accessing the add-in from the UI](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md#AccessingApp). 
+
+<a name="IsolatedDomain"> </a>
+## Host webs, add-in webs, and the isolated domain
 
 Other than these UI elements, the SharePoint Add-in components and content, such as lists, content types, workflows, and pages, are deployed to a different website in a special isolated domain. This fact is largely hidden from the user. The special website to which the add-in is *deployed* is called an add-in web. The website to which the add-in is *installed* is called the host web. Although the add-in web has its own isolated domain, it is in the same site collection as the host web. (One exception to this rule is when the add-in is installed with tenant scope. In that scenario, the add-in web is in the site collection of the corporate add-in catalog.) 
 
@@ -57,8 +53,8 @@ There are two primary reasons why SharePoint components are deployed to add-in w
     
    SharePoint also provides a means of safely overcoming the limits of the policy. Among other things, this enables the remote components of a SharePoint Add-in to query data from any website in the common parent tenancy of the host and add-in webs. For more information, see [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md).
 
-## Types of SharePoint components that can be in a SharePoint Add-in
 <a name="TypesOfSPComponentsInApps"> </a>
+## Types of SharePoint components that can be in a SharePoint Add-in
 
 In general, a SharePoint Add-in can contain one or more of the components in the following list. With certain exceptions, these components must be deployed in **Web**-scoped Features that are inside a SharePoint solution package (.wsp) file.
 
@@ -86,8 +82,8 @@ In general, a SharePoint Add-in can contain one or more of the components in the
 
 No other kind of SharePoint component can be deployed in a SharePoint Add-in. For more information about restrictions on what can be included in a SharePoint Add-in, see [SharePoint Add-ins compared with SharePoint solutions](http://msdn.microsoft.com/library/0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8%28Office.15%29.aspx).
 
-## Caveats for deploying SharePoint components
 <a name="SpecialCases"> </a>
+## Caveats for deploying SharePoint components
 
 The following are some caveats and details concerning the deployment of certain kinds of SharePoint components in an add-in: 
 
