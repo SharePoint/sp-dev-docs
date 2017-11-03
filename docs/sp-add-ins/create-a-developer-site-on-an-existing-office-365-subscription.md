@@ -28,7 +28,7 @@ For more information about the Office 365 Enterprise offerings, see [Plans &amp;
 
 1. Sign in to Office 365 as a Global or SharePoint Online admin.
     
-   **You must sign in as a Global or SharePoint Online admin to create new site collections,** such as a Developer Site. Only admins can see Admin options when signing into Office 365. If you're not an admin, contact an admin in your company and have them do one of the following:
+   **You must sign in as a Global or SharePoint Online admin to create new site collections,** such as a Developer Site. Only admins can see Admin options when signing in to Office 365. If you're not an admin, contact an admin in your company and have them do one of the following:
     
    - Grant you admin rights, so you can create the Developer Site yourself.
    - Create the Developer Site for you, and specify you as an admin for the site collection.
