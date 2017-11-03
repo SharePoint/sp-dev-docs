@@ -1,20 +1,16 @@
 ---
 title: UX design for SharePoint Add-ins
-ms.date: 11/01/2017
+description: User experience (UX) options when you build add-ins in SharePoint, including UX scenarios in cloud-hosted add-ins and SharePoint-hosted add-ins.
+ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
 
 # UX design for SharePoint Add-ins
 
-Learn about the user experience (UX) options that you have when you build add-ins in SharePoint.
- 
-> [!NOTE]
-> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md).
-
 As a developer, you should always give high priority to the user experience (UX) when you are creating add-ins. The model for SharePoint Add-ins offers many UX components and mechanisms that help you build a great user experience. The user experience in the add-in model is also flexible enough to let you use the techniques and platforms that best adapt to the needs of end users.
 
-## High-level overview of add-in UX in SharePoint
 <a name="SP15_UXdesignapps_overview"> </a>
+## High-level overview of add-in UX in SharePoint
 
 As the add-in developer, you have to know the architecture of your add-in. After you determine how your add-in will be distributed in remote and SharePoint platforms, you can decide among the available alternatives for building your add-in UX. You might ask yourself the following questions:
 
@@ -32,8 +28,8 @@ The following diagram shows the main scenarios and options to consider when you 
  
 In choosing your design, you should fundamentally consider which parts of your add-in are hosted in SharePoint and which are not. You should also consider how your add-in interacts with the host web.
 
-## Add-in UX scenarios in cloud-hosted add-ins
 <a name="SP15_UXdesignapps_devhosted"> </a>
+## Add-in UX scenarios in cloud-hosted add-ins
 
 Suppose that you determine that some of your user experience is not hosted in SharePoint. In these scenarios, it is expected that your end users go back and forth between a SharePoint website and the cloud-hosted add-in. You can use the techniques and tools in the platform, but SharePoint also provides resources to help you design a smooth experience for users.
 
@@ -49,8 +45,8 @@ Figure 2 shows the resources in the model for SharePoint Add-ins for cloud-hoste
 
 ![App UX resources for developer-hosted apps](../images/AppUX_devhosted.png)
 
-## Add-in UX scenarios in SharePoint-hosted add-ins
 <a name="SP15_UXdesignapps_SPhosted"> </a>
+## Add-in UX scenarios in SharePoint-hosted add-ins
 
 If your add-in is hosted in SharePoint, the user experience is less likely to change very much when users move back and forth between the host web and the add-in web. When the add-in is deployed, the add-in web takes the style sheet and theme from the host web. You can still use the chrome control and style sheet in a SharePoint-hosted add-in, but the most significant difference with cloud-hosted scenarios is the availability of the add-in template.
 
@@ -60,8 +56,8 @@ The following UX resource is available for SharePoint-hosted add-ins:
 
 SharePoint-hosted add-ins also benefit from existing resources and technologies in SharePoint such as the Ribbon, web part infrastructure, and client-side rendering.
 
-## Scenarios for connecting the add-in UX to the host web
 <a name="SP15_UXdesignapps_connectingappUX"> </a>
+## Scenarios for connecting the add-in UX to the host web
 
 Some of the use cases for your add-in can be triggered from within the host web. SharePoint provides ways to open your add-in from a document library or list in addition to ways to show some of your add-in UX within SharePoint-hosted pages.
 
