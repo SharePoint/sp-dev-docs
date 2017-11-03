@@ -3,7 +3,9 @@
 SharePoint site owners have new options for applying custom styles and colors to sites that make it easier to define and manage themes across site collections. These new features include:
 
 * The ability to define custom themes and make them available to site owners. Themes are defined in a [JSON schema](sharepoint-site-theming-json-schema.md) that stores color settings and related metadata for each theme.
+* An online [Theme Generator tool](https://developer.microsoft.com/en-us/fabric#/styles/themegenerator) that you can use to define new custom themes.
 * A simplified set of default themes, with six light themes and two dark themes presently available.
+* An updated color palette, with 12 light colors and 6 dark colors, as well as 16 supplementary themes.
 * Control over which themes are available for use on pages within your sites. For example, you can define custom themes based on your organization's branding or identity, and make those the only available themes within your sites.
 
 These capabilities are available to administrators via [PowerShell cmdlets](sharepoint-site-theming-powershell.md), and to developers via the SharePoint [Client Side Object Model (CSOM)](sharepoint-site-theming-csom.md) or the SharePoint [REST API](sharepoint-site-theming-rest-api.md).
@@ -25,6 +27,11 @@ The following predefined themes are available by default:
 
 These themes have been designed for readability, so you might find them to be useful starting points for creating custom themes. For more information about default themes, see [SharePoint site theming: JSON schema](sharepoint-site-theming-json-schema.md).
 
+In addition to the default themes, you can select from supplementary themes. The following customizations are available:
+
+* Light themes: Gold, Teal, Dark Blue, Indigo, Plum, Warm Gray
+* Dark themes: Red, Green, Purple, Gray
+
 ## Selecting a modern theme
 
 <!-- Verify that it's okay to use the concept of "modern" themes/pages here? -->
@@ -35,9 +42,7 @@ The following image shows how the default themes are presented in the theme pick
 
 ![Image showing list of default and dark (inverted) themes](../../images/theme-defaults.png)
 
-When you choose a theme in the list, those color settings are instantly applied to the page so that you can see what the selected theme will look like. The following image shows an example with the __Green__ default theme selected.
-
-![Image of a SharePoint site with a green theme selected](../../images/theme-greenselected.png)
+When you choose a theme in the list, those color settings are instantly applied to the page so that you can see what the selected theme will look like.
 
 After you've found a theme that you want to use, choose **Save** to save your selection, or choose **Cancel** to revert to your current theme.
 
@@ -51,6 +56,8 @@ For the simplest experience, we recommend that you use modern themes with modern
 
 ## See also
 
+* [Change the look of your SharePoint site](https://support.officeppe.com/en-us/article/Change-the-look-of-your-SharePoint-site-06bbadc3-6b04-4a60-9d14-894f6a170818?ui=en-US&rs=en-US&ad=US#ID0EAACAAA=Online)
+* [Theme Generator tool](https://developer.microsoft.com/en-us/fabric#/styles/themegenerator)
 * [SharePoint site theming: JSON schema](sharepoint-site-theming-json-schema.md)
 * [SharePoint site theming: PowerShell cmdlets](sharepoint-site-theming-powershell.md)
 * [SharePoint site theming: CSOM](sharepoint-site-theming-csom.md)
