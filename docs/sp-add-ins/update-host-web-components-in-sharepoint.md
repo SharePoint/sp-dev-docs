@@ -33,7 +33,7 @@ Go to [Major steps in updating an add-in](update-sharepoint-add-ins.md#MajorAppU
 <a name="bk_addresources"> </a>
 
 -  [Update SharePoint Add-ins](update-sharepoint-add-ins.md)
--  [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md)
+-  [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md) 
     
  
 
