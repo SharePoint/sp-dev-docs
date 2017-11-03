@@ -77,6 +77,8 @@
       items:
       - name: Custom properties
         href: spfx/web-parts/basics/integrate-with-property-pane.md
+      - name: Configure web part Icon
+        href: spfx/web-parts/basics/configure-web-part-icon.md                
       - name: Pre-configuring web parts
         href: spfx/web-parts/guidance/simplify-adding-web-parts-with-preconfigured-entries.md
       - name: Validating properties
