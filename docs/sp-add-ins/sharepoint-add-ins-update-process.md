@@ -1,6 +1,6 @@
 ---
 title: SharePoint Add-ins update process
-description: Learn about the process for updating SharePoint Add-ins.
+description: Update and migrate SharePoint Add-ins.
 ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
@@ -8,18 +8,13 @@ ms.prod: sharepoint
 
 # SharePoint Add-ins update process
 
-Learn about the process for updating SharePoint Add-ins.
- 
-> [!NOTE]
-> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md).
-
 You have to update a SharePoint Add-in if you add functionality, fix a bug, or make a security update. An update to an add-in is deployed in a SharePoint Add-in package in the same way that the first version of the add-in is deployed. The SharePoint Add-in update process ensures that the add-in's data is preserved if the update fails for any reason.
  
 > [!IMPORTANT]
 > You cannot change the *add-in type* by using the update system. For example, you cannot change an add-in from SharePoint-hosted to provider-hosted with an update. To make a change of type, you need to [migrate from an old add-in to a new one](#Major). In particular, because [the preview program for autohosted add-ins has been closed](http://blogs.office.com/2014/05/16/update-on-autohosted-apps-preview-program/), you should be aware that you cannot update an autohosted add-in to a provider-hosted add-in. You have to convert the add-in as explained in [Convert an autohosted SharePoint Add-in to a provider-hosted add-in](convert-an-autohosted-sharepoint-add-in-to-a-provider-hosted-add-in.md).
 
-## Update process for a SharePoint Add-in
 <a name="Minor"> </a>
+## Update process for a SharePoint Add-in
 
 For an update, you use the same product ID in the add-in manifest that you used for the original version. The version number in the add-in manifest should be greater than the version number of the original add-in or the most recent update.
 
@@ -62,8 +57,8 @@ SharePoint will do the following when a user installs an update to a SharePoint 
 > [!NOTE]
 > If the schema of any list in the add-in web is being changed, the list is backed up along with the rest of the add-in web. This can take some time if there is a lot of data in the list. If the update process cannot complete in one hour, it stops and the update is rolled back.
 
-## Migrating from an old add-in to a new one
 <a name="Major"> </a>
+## Migrating from an old add-in to a new one
 
 In some scenarios you may want to produce an entirely new add-in to replace an old one, rather than update the original one. The new add-in can have the same friendly name as the old, but it must be given a new product ID in the add-in manifest, and it appears in the public Office Store and on the **Add an Add-in** page of SharePoint websites as a distinct item from the original version.
  
