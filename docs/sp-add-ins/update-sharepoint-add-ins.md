@@ -145,7 +145,7 @@ Continue with the next bullet in the section [Major steps in updating an add-in]
 <a name="bk_addresources"> </a>
 
 -  [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
--  [SharePoint Add-ins update process](sharepoint-add-ins-update-process.md)
+-  [SharePoint Add-ins update process](sharepoint-add-ins-update-process.md) 
     
  
 
