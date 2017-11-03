@@ -9,13 +9,15 @@ ms.prod: sharepoint
 Learn how to add a new client secret for a SharePoint Add-in that is registered with AppRegNew.aspx.
  
 
->**Note:**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
+> [!NOTE]
+> The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 Client secrets for SharePoint Add-ins that are registered using the AppRegNew.aspx page expire after one year. This article explains how to add a new secret for the add-in, as well as how to create a new client secret that is valid for three years.
  
 
->**Note:**  This article is about SharePoint Add-ins that are distributed through an organization catalog and registered with the AppRegNew.aspx page. If the add-in is registered on the Seller Dashboard, see  [Create or update client IDs and secrets in the Seller Dashboard](https://dev.office.com/officestore/docs/create-or-update-client-ids-and-secrets#bk_update).
+> [!NOTE]
+> This article is about SharePoint Add-ins that are distributed through an organization catalog and registered with the AppRegNew.aspx page. If the add-in is registered on the Seller Dashboard, see  [Create or update client IDs and secrets in the Seller Dashboard](https://dev.office.com/officestore/docs/create-or-update-client-ids-and-secrets#bk_update).
  
 
 
@@ -114,12 +116,14 @@ $newClientSecret
     
  
 
->**Tip:**  By default, the add-in secret lasts one year. You can set this to a shorter or longer (up to 3 years maximum) by using the  **-EndDate** parameter on the three calls of the **New-MsolServicePrincipalCredential** cmdlet. The value of the parameter must be a [DateTime](http://msdn2.microsoft.com/EN-US/library/03ybds8y) object set to no longer than 3 years from **DateTime.Now**.
+> [!TIP]
+> By default, the add-in secret lasts one year. You can set this to a shorter or longer (up to 3 years maximum) by using the  **-EndDate** parameter on the three calls of the **New-MsolServicePrincipalCredential** cmdlet. The value of the parameter must be a [DateTime](http://msdn2.microsoft.com/EN-US/library/03ybds8y) object set to no longer than 3 years from **DateTime.Now**.
  
 ## Update the remote web application in Visual Studio to use the new secret
 
 
->**Important:**  If your add-in was originally created with a prerelease version the Microsoft Office Developer Tools for Visual Studio, it may contain an out-of-date version of the TokenHelper.cs (or .vb) file. If the file does not contain the string "secondaryClientSecret", it is out-of-date and it must be replaced before you can update the web application with a new secret. To obtain a copy of a release version of the file, you need Visual Studio 2012 or later. Create a new SharePoint Add-in project in Visual Studio. Copy the TokenHelper file from it to the web application project of your SharePoint Add-in. 
+> [!IMPORTANT]
+>  If your add-in was originally created with a prerelease version the Microsoft Office Developer Tools for Visual Studio, it may contain an out-of-date version of the TokenHelper.cs (or .vb) file. If the file does not contain the string "secondaryClientSecret", it is out-of-date and it must be replaced before you can update the web application with a new secret. To obtain a copy of a release version of the file, you need Visual Studio 2012 or later. Create a new SharePoint Add-in project in Visual Studio. Copy the TokenHelper file from it to the web application project of your SharePoint Add-in. 
  
 
 
@@ -140,7 +144,8 @@ $newClientSecret
   <add key="SecondaryClientSecret" value="your old secret here" />
 ```
 
-> **Note** If you are performing this procedure for the first time there will be no **SecondaryClientSecret** property entry at this point in the configuration file. However if you are performing the procedure for a subsequent client secret expiration (second or third) the property **SecondaryClientSecret** is already present and containing the initial or already longer time ago expired old secret. In this case delete the **SecondaryClientSecret** property first before renaming **ClientSecret**.
+> [!NOTE]
+> If you are performing this procedure for the first time there will be no **SecondaryClientSecret** property entry at this point in the configuration file. However if you are performing the procedure for a subsequent client secret expiration (second or third) the property **SecondaryClientSecret** is already present and containing the initial or already longer time ago expired old secret. In this case delete the **SecondaryClientSecret** property first before renaming **ClientSecret**.
 
 3. Add a new  **ClientSecret** key and give it your new client secret. Your markup should now look like the following:
     
@@ -153,7 +158,8 @@ $newClientSecret
 </appSettings>
 ```
 
->**Important:** You will not be able to use the newly generated client secret until the current client secret expires. Therefore, changing the ClientId key to the new client secret without the SecondaryClientSecret key present will not work. You must follow the  procedure in this article and wait for the previous client secret to expire. Then you can remove the SecondaryClientSecret if you want to.
+> [!IMPORTANT]
+> You will not be able to use the newly generated client secret until the current client secret expires. Therefore, changing the ClientId key to the new client secret without the SecondaryClientSecret key present will not work. You must follow the  procedure in this article and wait for the previous client secret to expire. Then you can remove the SecondaryClientSecret if you want to.
 
 4. If you changed to a new TokenHelper file, rebuild the project.
     
