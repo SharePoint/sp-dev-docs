@@ -21,12 +21,12 @@ You can also follow these steps by watching the video on the [SharePoint PnP You
 
 ### NodeJS
 
-Install [NodeJS](https://nodejs.org/en/) Long Term Support (LTS) version.
+Install [NodeJS version 6.x](https://nodejs.org/download/release/latest-v6.x/).
 
 * If you have NodeJS already installed please check you have the latest version using `node -v`. It should return the current [LTS version](https://nodejs.org/en/download/). 
 * If you are using a Mac, it is recommended you use [homebrew](http://brew.sh/) to install and manage NodeJS. 
 
-> Notice that SPFx build pipeline does **NOT** currently support npm v5.x, so you'll need to use either v3 or v4. At the time of the writing, NodeJS LTS version (v6.11.0) installs npm v3.10.10. We'll update this section when there are changes in the supportability statement. You can downgrade to older npm version with following command `npm install -g npm@3`.
+>**Note:** The SharePoint Framework build pipeline doesn't currently support the LTS version of Node.js. Instead, download [Node.js version 6.11.5](https://nodejs.org/download/release/latest-v6.x/). This installs npm 3.10.10. Note that if you have a v5.x version of npm, you will need to downgrade to an older npm version by using the following command: `npm install -g npm@3`.
 
 ### Code Editors
 
