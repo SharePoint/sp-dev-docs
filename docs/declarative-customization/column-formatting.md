@@ -78,24 +78,54 @@ This example uses the conditional operator `?` to apply a class (`sp-field-sever
 
 ```JSON
 {
-   "elmType": "div",
-   "txtContent": "@currentField",
-   "attributes": {
-      "class": {
-         "operator": "?",
-         "operands": [
-            {
-               "operator": "<=",
-               "operands": [
-                  "@currentField",
-                  70
-               ]
+    "$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json",
+    "debugMode": true,
+    "elmType": "div",
+    "attributes": {
+       "class": {
+          "operator": "?",
+          "operands": [
+             {
+                "operator": "<=",
+                "operands": [
+                   "@currentField",
+                   70
+                ]
+             },
+             "sp-field-severity--warning",
+             ""
+          ]
+       }
+    },
+    "children": [
+        {
+            "elmType": "span",
+            "style": {
+                "display": "inline-block",
+                "padding": "0 4px"
             },
-            "sp-field-severity--warning",
-            ""
-         ]
-      }
-   }
+            "attributes": {
+                "iconName": {
+                    "operator": "?",
+                    "operands": [
+                        {
+                            "operator": "<=",
+                            "operands": [
+                                "@currentField",                  
+                                70
+                            ]
+                        },
+                        "Error",
+                        ""
+                    ]
+                }
+            }
+        },
+        {
+            "elmType": "span",
+            "txtContent": "@currentField"
+        }
+    ]
 }
 ```
 
