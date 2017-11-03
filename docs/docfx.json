@@ -47,6 +47,9 @@
         "spfx/**.md": "sharepoint-framework",
         "spfx-apis/webhooks/**.md": "sharepoint-webhooks",
         "sp-addins/**.md": "sharepoint-addins"
+      },
+      "ms.topic":{
+        "solution-guidance/**.md": "solution"
       }
     },
     "template": [],
