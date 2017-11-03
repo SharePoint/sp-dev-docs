@@ -1,20 +1,16 @@
 ---
 title: Secure data access and client object models for SharePoint Add-ins
-ms.date: 11/01/2017
+description: Connectivity options for accessing data on SharePoint and on external systems, and available APIs for accessing data from your add-in.
+ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
 
 # Secure data access and client object models for SharePoint Add-ins
 
-Learn about the data access options you have when you build SharePoint Add-ins, including connectivity options for accessing data on SharePoint and on external systems, as well as the APIs that are available when you want to access data from your add-in.
- 
-> [!NOTE]
-> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md).
-
 In evaluating your data access options for SharePoint Add-ins, you have to assess your add-in environment and consider several factors, such as communication between the client and server, and the permission level that is required for your add-in to perform the required tasks. You also have to evaluate the APIs that are available in the model for SharePoint Add-ins.
 
-## High-level overview of data in SharePoint Add-ins
 <a name="SP15_dataaccessoptions_considerations"> </a>
+## High-level overview of data in SharePoint Add-ins
 
 It is difficult to imagine a SharePoint Add-in (or any add-in for that matter) that does not need to query, store, or manipulate data. In your add-in, you will frequently have to retrieve and manipulate SharePoint data, such as items in document libraries and lists, metadata, or user profiles. Similarly, you might have scenarios where you need to access external data in your add-in. The model for SharePoint Add-ins provides multiple connectivity options and a rich set of APIs for accessing the data and services that reside on SharePoint and on external systems.
 
@@ -39,8 +35,8 @@ Figure 2 shows the options that you have for accessing external data on your add
 
 ![Options for using external data in your add-in](../images/5950bc8a-ed73-4f14-b616-a88c14c4fe56.png)
 
-## Data connectivity options for SharePoint Add-ins
 <a name="SP15_dataaccessoptions_connectivity"> </a>
+## Data connectivity options for SharePoint Add-ins
 
 You have to consider several aspects when you work with data in your add-in. For example, what route is the data using? Is it coming from or going through the server? Is it going through the client? Is it okay to authenticate as the signed-in user? Does the add-in need elevated privileges? The following sections can help you with these and other questions you may have.
 
@@ -100,8 +96,8 @@ The following table lists the common requirements and scenarios you might encoun
 |There is no direct connectivity between the SharePoint infrastructure and my add-in. I need to issue calls through the browser.||x|x|
 |My add-in needs to access resources as the signed-in user.|x|x|x|
 
-## Available data access APIs for SharePoint Add-ins
 <a name="SP15_dataaccessoptions_availableAPIs"> </a>
+## Available data access APIs for SharePoint Add-ins
 
 The following API choices are available when you want to access SharePoint data from your add-in:
 
