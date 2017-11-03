@@ -1,6 +1,6 @@
 ---
 title: Set up a development environment for SharePoint Add-ins on Office 365
-description: 
+description: Install Visual Studio and sign up for an Office 365 Developer site.
 ms.date: 11/03/2017
 ms.prod: sharepoint
 ---
@@ -31,8 +31,8 @@ Follow these steps if you want to turn on verbose logging:
 
 The registry path will change in future versions of Visual Studio.
 
-## Sign up for an Office 365 Developer Site
 <a name="o365_signup"> </a>
+## Sign up for an Office 365 Developer Site
 
 > [!NOTE]
 > You might already have access to an Office 365 Developer Site: 
@@ -48,7 +48,7 @@ There are three ways to get an Office 365 plan:
 
 - Sign up for a free, one-year Office 365 developer account through the Office 365 Developer Program. [Get more information](http://dev.office.com/devprogram), or go straight to [the sign-up form](https://profile.microsoft.com/RegSysProfileCenter/wizardnp.aspx?wizid=14b845d0-938c-45af-b061-f798fbb4d170). You'll get an email after you sign up for the developer program with a link to sign up for the developer account. Use the following instructions.
 
-> [!NOTE]
+> [!TIP]
 > Open these links in another window or tab to keep the following instructions handy.
 
 1. The first page of the sign-up form is self-explanatory; supply the requested information, and then select **Next**.
@@ -61,7 +61,7 @@ There are three ways to get an Office 365 plan:
 
 3. Create a subdomain of **.onmicrosoft.com**; for example, contoso.onmicrosoft.com. 
     
-    After you sign up, you use the resulting credentials (in the format UserID@ yourdomain.onmicrosoft.com) to sign in to your Office 365 portal site where you administer your account. Your SharePoint Online Developer Site is provisioned at your new domain: **http:// _yourdomain_.sharepoint.com**.
+    After you sign up, you use the resulting credentials (in the format *UserID@yourdomain.onmicrosoft.com*) to sign in to your Office 365 portal site where you administer your account. Your SharePoint Online Developer Site is provisioned at your new domain: **http://_yourdomain_.sharepoint.com**.
 
 4. Select **Next** and fill out the final page of the form. If you choose to provide a telephone number to get a confirmation code, you can provide a mobile or landline number, but *not* a VoIP (Voice over Internet Protocol) number.
 
@@ -70,7 +70,7 @@ There are three ways to get an Office 365 plan:
    
    > If you see that message, sign out of the Microsoft account you were using and try again. If you still get the message, clear your browser cache or switch to **InPrivate Browsing** and then fill out the form.
 
-   After you finish the sign-up process, your browser opens the Office 365 installation page. Select the Admin icon to open the admin center page.
+   After you finish the sign-up process, your browser opens the Office 365 installation page. Select the **Admin** icon to open the admin center page.
 
    *Figure 2. Office 365 admin center page*
 
@@ -92,13 +92,8 @@ There are three ways to get an Office 365 plan:
 
 - [SharePoint Add-ins](sharepoint-add-ins.md)
 - [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
-- [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md)Visual 
+- [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md) 
 - [Visual Studio documentation](https://docs.microsoft.com/en-us/visualstudio/)
 - [Install earlier versions of Visual Studio](https://msdn.microsoft.com/library/da049020-cfda-40d7-8ff4-7492772b620f.aspx)
     
  
-
- 
-
- 
-
