@@ -1,19 +1,16 @@
 ---
-title: "Deploying and installing SharePoint Add-ins: methods and options"
-description: Learn about the methods for publishing, installing, and uninstalling a SharePoint Add-in.
+title: Deploying and installing SharePoint Add-ins - methods and options
+description: Publish, install, and uninstall a SharePoint Add-in.
 ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
 
 # Deploying and installing SharePoint Add-ins: methods and options
 
-Learn about the methods for publishing, installing, and uninstalling a SharePoint Add-in.
- 
-> [!NOTE]
-> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md).
+In this article, you'll learn more about the options for publishing your SharePoint Add-in, as well as how to install and uninstall it.
 
-## Publishing to the Office Store or an organization's add-in catalog
 <a name="MarketOrCatalog"> </a>
+## Publishing to the Office Store or an organization's add-in catalog
 
 You can upload your SharePoint Add-in to either the public Office Store or to an organization's private add-in catalog. A private add-in catalog is a dedicated site collection in a SharePoint web application (or a SharePoint Online tenancy) that hosts document libraries for SharePoint Add-ins and Office Add-ins. Putting the catalog into its own site collection makes it easier for the web application administrator or tenant administrator to limit permissions to the catalog. 
 
@@ -39,16 +36,16 @@ Users install add-ins from the **Your Add-ins** page. This page has a merged lis
 
 All the add-ins that the user can install immediately are listed. Users can filter the add-ins included on the page to include only add-ins in the organization's add-in catalog. When an add-in is installed, it appears in the list of add-ins on the **Site Contents** page of the website to which it is installed.
 
-## Installing SharePoint Add-ins
 <a name="Installing"> </a>
+## Installing SharePoint Add-ins
 
 Website owners install SharePoint Add-ins from the **Your Add-ins** page as described earlier in this topic. Installation creates an instance of the add-in. For more information about installing add-ins, see [Add SharePoint Add-ins to a SharePoint site](https://technet.microsoft.com/en-us/library/fp161231.aspx). 
  
 > [!NOTE]
 > Sometimes a temporary loss of a network connection can block installation. If installation fails for any reason, the installation infrastructure will retry three times. If it does not succeed, an indication of the failure appears in the UI. Users can retry the installation later. 
 
-## Uninstalling SharePoint Add-ins
 <a name="Uninstalling"> </a>
+## Uninstalling SharePoint Add-ins
 
 Website owners can uninstall an instance of a SharePoint Add-in through the SharePoint UI. Uninstallation of an instance of a SharePoint Add-ins is clean. This means that everything installed by the add-in is uninstalled. 
 
