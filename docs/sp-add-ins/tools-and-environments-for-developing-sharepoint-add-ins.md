@@ -7,11 +7,11 @@ ms.prod: sharepoint
 
 # Tools and environments for developing SharePoint Add-ins
 
-There are two basic patterns for development environments for SharePoint Add-ins. The test and debugging SharePoint website can be:
+There are two basic patterns for development environments for SharePoint Add-ins. The test and debugging SharePoint website can be on:
 
--  **In a SharePoint Online website in an Office 365 subscription.** Typically, Visual Studio is installed to a local computer, but a cloud-based Visual Studio is also an option.
+-  **A SharePoint Online website in an Office 365 subscription.** Typically, Visual Studio is installed to a local computer, but a cloud-based Visual Studio is also an option.
 
--  **On an on-premises, one-server SharePoint farm.** Visual Studio is installed on the same computer.
+-  **An on-premises, one-server SharePoint farm.** Visual Studio is installed on the same computer.
  
 Consider the following:
 
