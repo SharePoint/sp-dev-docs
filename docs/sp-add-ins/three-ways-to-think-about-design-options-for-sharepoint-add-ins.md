@@ -1,18 +1,13 @@
 ---
 title: Three ways to think about design options for SharePoint Add-ins
-ms.date: 11/01/2017
+description: Overview of the design and architecture options available with SharePoint Add-ins. 
+ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
 
 # Three ways to think about design options for SharePoint Add-ins
 
-Get an overview of the design and architecture options that are available with SharePoint Add-ins. You should first be familiar with the article [SharePoint Add-ins](sharepoint-add-ins.md).
- 
-> [!NOTE]
-> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md).
-
-## Overview and the first decision
-<a name="Overview"> </a>
+Prerequisite: You should first be familiar with the article [SharePoint Add-ins](sharepoint-add-ins.md).
 
 This article looks at the architectural choices for SharePoint Add-ins in three different ways. First, you learn about the most important categories of design choices; second, you view add-in architecture in terms of application tiers; and, third, you see a set of factors you need to consider when making your design choices.
 
@@ -20,8 +15,8 @@ The first decision to make is whether your SharePoint extension should be a Shar
 
 For more information about deciding between classic solutions and add-ins, see [SharePoint Add-ins compared with SharePoint solutions](http://msdn.microsoft.com/library/0e9efadb-aaf2-4c0d-afd5-d6cf25c4e7a8%28Office.15%29.aspx). Also helpful for making this decision is [Choose the right API set in SharePoint](http://msdn.microsoft.com/library/f36645da-77c5-47f1-a2ca-13d4b62b320d%28Office.15%29.aspx).
 
-## Key elements in the design of SharePoint Add-ins
 <a name="MajorCategoriesOfChoices"> </a>
+## Key elements in the design of SharePoint Add-ins
 
 Three major categories of choices need to be made when a SharePoint Add-in is designed. As always, application design involves trade-offs; choices you make in one category may limit your options in another. Not every possible combination of choices is feasible.
 
@@ -48,8 +43,8 @@ Three major categories of choices need to be made when a SharePoint Add-in is de
 > [!NOTE]
 > SharePoint Add-ins can be installed by your customers to multiple site collections in a tenancy, or on a website-by-website basis. The former are called tenant-scoped add-ins. If you want your customers to have the tenant-scoped option, you may not include a custom ribbon button or an add-in part. For more information, see [Tenancies and deployment scopes for SharePoint Add-ins](tenancies-and-deployment-scopes-for-sharepoint-add-ins.md).
 
-## Architectural tiers
 <a name="Tiers"> </a>
+## Architectural tiers
 
 Another way to think about your add-in architecture options is to think of the add-in as having three logical tiers: the UI, the business logic, and the data access. Each layer has multiple implementation options; again, choices made for one layer limit the options for others. The following tables describe some of the options, and their uses, for the remote components of an add-in and the SharePoint components.
 
@@ -84,8 +79,8 @@ Another way to think about your add-in architecture options is to think of the a
 ||SharePoint lists and libraries that are queried through the SharePoint REST/OData web service|Accessing SharePoint data from non-Microsoft platforms; leveraging existing OData query experience|
 ||A BCS Model|Surfacing external data in SharePoint as a SharePoint list|
 
-## Factors to consider when making your design decisions
 <a name="DecisionFactors"> </a>
+## Factors to consider when making your design decisions
 
 The SharePoint Add-in model enables so many possibilities for design that a simple decision tree is not possible. The following are some of the most important factors to consider when constructing the architecture of a SharePoint Add-in.
 
