@@ -14,9 +14,9 @@ The following image shows a Multi-Geo tenant with:
 
 Depending on your scenario, you can use one or a combination of the following APIs to access a Multi-Geo tenant site:
 
-- The Microsoft Graph API - Multi-Geo aware. We recommend that you use Microsoft Graph to access Multi-Geo tenant sites. 
-- SharePoint CSOM API - Not Multi-Geo aware. Depending on the scenario, you'll need to target the correct geo location (for example, to access a user profile or perform tenant API operations).
-- SharePoint REST API - Typically this API is used in the context of a site URL, and therefore whether the tenant is Multi-Geo is not a factor. Some REST API scenarios (such as search or user profiles) might require you to make calls per geo location.
+- **The Microsoft Graph API** - Multi-Geo aware. We recommend that you use Microsoft Graph to access Multi-Geo tenant sites. 
+- **SharePoint CSOM API** - Not Multi-Geo aware. Depending on the scenario, you'll need to target the correct geo location (for example, to access a user profile or perform tenant API operations).
+- **SharePoint REST API** - Typically this API is used in the context of a site URL, and therefore whether the tenant is Multi-Geo is not a factor. Some REST API scenarios (such as search or user profiles) might require you to make calls per geo location.
 
 ## Get Multi-Geo tenant configuration information
 
@@ -26,6 +26,7 @@ You can get the geo location information for a tenant by using Microsoft Graph. 
 GET https://graph.microsoft.com/v1.0/sites?filter=siteCollection/root%20ne%20null&select=webUrl,siteCollection
 ```
 
+Example response for a Multi-Geo tenant:
 ```JSON
 {
     "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites",
@@ -62,7 +63,7 @@ To learn more, see the [MultiGeo.TenantInformationCollection](https://github.com
 
 ## Discover whether your tenant is Multi-Geo 
 
-You can use Microsoft Graph to discover whether a tenant is Multi-Geo. Requests via Microsoft Graph to Multi-Geo tenants return more then one item in the collection. The following example shows the results of a Microsoft Graph call to a single-geo tenant.
+You can use Microsoft Graph to discover whether a tenant is Multi-Geo since requests via Microsoft Graph to Multi-Geo tenants return more then one item in the collection. The following example shows the results of a Microsoft Graph call to a single-geo tenant.
 
 <!-- Not sure where the output for a Multi-Geo tenant is. Provide a link? -->
 
@@ -70,6 +71,7 @@ You can use Microsoft Graph to discover whether a tenant is Multi-Geo. Requests 
 GET https://graph.microsoft.com/v1.0/sites?filter=siteCollection/root%20ne%20null&select=webUrl,siteCollection
 ```
 
+Example response for a single-geo tenant:
 ```JSON
 {
     "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#sites",
