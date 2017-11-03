@@ -26,6 +26,12 @@ Install [NodeJS](https://nodejs.org/en/) Long Term Support (LTS) version.
 * If you have NodeJS already installed please check you have the latest version using `node -v`. It should return the current [LTS version](https://nodejs.org/en/download/). 
 * If you are using a Mac, it is recommended you use [homebrew](http://brew.sh/) to install and manage NodeJS. 
 
+*** We got a case today where the customer went and downloaded the latest version of Node and the walk through on https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/build-a-hello-world-web-part did not work when he got to the last part "gulp serve."  The 8.9.0 version of Node went live 3 days ago, and the below paragraph suggests we support the latest version.  The paragraph is also confusing because it conflates NPM with Node in ways that many customer following this begining walkthrough won't understand.  It talks first about NPM. I suggest something like...***
+
+> <i> Note, SPFx build pipeline does **NOT** currently support the LTS version of NodeJS.  Please downoad the appropriate 6.11.5 version from https://nodejs.org/download/release/latest-v6.x/.  This installs npm 3.10.10.  Note that if you have a v5.x version  of npm, you will need to dowwngrade to an older npm version with following command `npm install -g npm@3`.  We'll update this document when this document when there are changes to the supportability statement.</i>
+
+*** Also, can I tell my customer when SPFx build will support current LTS of NodeJS? ***
+
 > Notice that SPFx build pipeline does **NOT** currently support npm v5.x, so you'll need to use either v3 or v4. At the time of the writing, NodeJS LTS version (v6.11.0) installs npm v3.10.10. We'll update this section when there are changes in the supportability statement. You can downgrade to older npm version with following command `npm install -g npm@3`.
 
 ### Code Editors
