@@ -1,6 +1,6 @@
 ---
 title: Update host web components in SharePoint
-description: Update add-in parts and custom actions in the host web of a SharePoint Add-in.
+description: Update custom actions and add-in parts in the host web of a SharePoint Add-in.
 ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
@@ -9,10 +9,7 @@ ms.prod: sharepoint
 
 Before you begin, be familiar with [Update SharePoint Add-ins](update-sharepoint-add-ins.md) and the prerequisites and core concepts listed in it.
 
-<a name="UpdateHostWeb"> </a>
-## Update custom actions and add-in parts
-
-Your add-in can install two kinds of components on a host web with descriptive markup in the SharePoint Add-in: custom actions and add-in parts. Updating these components is easier in the host web than in the add-in web. You don't need any update semantics. Just add/change the custom actions and add-in parts. When the SharePoint Add-in is updated, SharePoint always applies any new element manifest files and reapplies any changed element manifest files with the most recent version. No harm is done in reapplying; for example, a ribbon button for a custom action will not be added multiple times to the ribbon.
+Your add-in can install two kinds of components on a host web with descriptive markup in the SharePoint Add-in: **custom actions** and **add-in parts**. Updating these components is easier in the host web than in the add-in web. You don't need any update semantics. Just add/change the custom actions and add-in parts. When the SharePoint Add-in is updated, SharePoint always applies any new element manifest files and reapplies any changed element manifest files with the most recent version. No harm is done in reapplying; for example, a ribbon button for a custom action will not be added multiple times to the ribbon.
 
 When you update an add-in part, SharePoint replaces the old version with the new version in the Web Part gallery. Be sure to change the **Name** property of the **ClientWebPart** object when you update an add-in part. Doing this ensures that, when the add-in is updated, SharePoint will remove the old version of the add-in part (which is no longer part of the app) from all pages to which it was added. Users will need to re-add the new version to pages.
 
