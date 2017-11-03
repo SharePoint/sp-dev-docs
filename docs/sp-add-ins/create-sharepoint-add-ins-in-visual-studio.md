@@ -16,7 +16,9 @@ When you use a project template in Visual Studio, it creates a solution that con
 
 ### Office Add-in
 
-Creates a webpage that's hosted inside an Office application, such as Excel or Outlook. An Office Add-in provides additional content and functionality in a document or Outlook item. For more information, see  [Office Add-ins platform overview](http://msdn.microsoft.com/library/e64de870-ce22-4331-92e7-76d35279bf91%28Office.15%29.aspx).
+Creates a webpage that's hosted inside an Office application, such as Excel or Outlook. An Office Add-in provides additional content and functionality in a document or Outlook item. 
+
+For more information, see [Office Add-ins platform overview](http://msdn.microsoft.com/library/e64de870-ce22-4331-92e7-76d35279bf91%28Office.15%29.aspx).
 
 ### SharePoint Add-in
 
@@ -30,7 +32,9 @@ For more information, see [SharePoint Add-ins](sharepoint-add-ins.md).
 
 ### Cloud Business Add-in
 
-By using the **Cloud Business Add-in** template in Visual Studio, you can create a SharePoint-hosted add-in in which mobile users can view, add, and update data from remote locations by using modern, touch-oriented devices such as phones and tablets. For more information, see [Create cloud business add-ins](create-cloud-business-add-ins.md).
+By using the **Cloud Business Add-in** template in Visual Studio, you can create a SharePoint-hosted add-in in which mobile users can view, add, and update data from remote locations by using modern, touch-oriented devices such as phones and tablets. 
+
+For more information, see [Create cloud business add-ins](create-cloud-business-add-ins.md).
 
 <a name="SP15Projecttemplates_items"> </a>
 ## Project item templates
@@ -39,7 +43,9 @@ After you create a SharePoint solution, you can add project items to it by using
 
 ### Office Add-in
 
-Adds an Office Add-in to your SharePoint Add-in. You can add a task pane add-in, a content add-in, or a mail add-in. For more information, see [Office Add-ins platform overview](http://msdn.microsoft.com/library/e64de870-ce22-4331-92e7-76d35279bf91%28Office.15%29.aspx).
+Adds an Office Add-in to your SharePoint Add-in. You can add a task pane add-in, a content add-in, or a mail add-in. 
+
+For more information, see [Office Add-ins platform overview](http://msdn.microsoft.com/library/e64de870-ce22-4331-92e7-76d35279bf91%28Office.15%29.aspx).
 
 ### Client Web Part (Host Web)
 
@@ -54,7 +60,9 @@ Adds a client web part to your SharePoint Add-in. By adding a client web part, y
 
 Adds a content type to your SharePoint Add-in, similar to content types that were used in previous versions of SharePoint. A content type is a set of metadata, workflows, and behavior for a category of items in a SharePoint list or library. For example, an item is one type of list content. Other types of list content include announcements, contacts, and tasks, and they inherit from the item content type. The contact content type contains columns such as **First Name**, **Last Name**, and **Job Title**.
 
-When you add a content type to your SharePoint Add-in, you specify the base content type from which the new content type inherits. For example, it can inherit from an announcement, a contact, a document, or an item content type. You then use the **Content Type** designer to configure the columns for the content type and its other properties, such as its name and its description. The values that you choose are added to the `ContentType` and `FieldRef` elements in the Elements.xml file. For more information, see [Building Block: SharePoint 2010 Content Types](http://msdn.microsoft.com/library/277dfc42-d9a8-4fae-9ae1-0d202b14674f%28Office.15%29.aspx).
+When you add a content type to your SharePoint Add-in, you specify the base content type from which the new content type inherits. For example, it can inherit from an announcement, a contact, a document, or an item content type. You then use the **Content Type** designer to configure the columns for the content type and its other properties, such as its name and its description. The values that you choose are added to the `ContentType` and `FieldRef` elements in the Elements.xml file. 
+
+For more information, see [Building Block: SharePoint 2010 Content Types](http://msdn.microsoft.com/library/277dfc42-d9a8-4fae-9ae1-0d202b14674f%28Office.15%29.aspx).
 
 ### Empty Element
 
@@ -68,7 +76,9 @@ For more information about list properties, see [ListTemplate Element (List Temp
 
 ### Menu Item Custom Action
 
-Adds a project item that extends the UI of its host site by adding an action to a list menu. The menu custom action contains an Elements.xml file, which you use to define the properties of the action. For more information, see [Create custom actions to deploy with SharePoint Add-ins](create-custom-actions-to-deploy-with-sharepoint-add-ins.md).
+Adds a project item that extends the UI of its host site by adding an action to a list menu. The menu custom action contains an Elements.xml file, which you use to define the properties of the action. 
+
+For more information, see [Create custom actions to deploy with SharePoint Add-ins](create-custom-actions-to-deploy-with-sharepoint-add-ins.md).
 
 ### Module
 
@@ -76,11 +86,15 @@ Adds a module project item to your SharePoint Add-in. Modules are basically cont
 
 ### Remote Event Receiver
 
-Adds a project item for a remote event receiver to your SharePoint Add-in and a web application project to your solution, if such a project isn't already present. The web application contains a web service that's associated with the remote event receiver in your SharePoint Add-in. The web service contains a Visual Basic or Visual C# code file whose code executes when a list, a list item, or a web item event occurs in the SharePoint Add-in. If a web application is present, it's associated with the SharePoint Add-in, and the web service is added to that application. For more information, see [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins.md).
+Adds a project item for a remote event receiver to your SharePoint Add-in and a web application project to your solution, if such a project isn't already present. The web application contains a web service that's associated with the remote event receiver in your SharePoint Add-in. The web service contains a Visual Basic or Visual C# code file whose code executes when a list, a list item, or a web item event occurs in the SharePoint Add-in. If a web application is present, it's associated with the SharePoint Add-in, and the web service is added to that application. 
+
+For more information, see [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins.md).
 
 ### Ribbon Custom Action
 
-Adds a project item that extends the UI of its host site by adding an action to a ribbon. The ribbon custom action contains an Elements.xml file, which defines the properties of the action. For more information, see [Create custom actions to deploy with SharePoint Add-ins](create-custom-actions-to-deploy-with-sharepoint-add-ins.md).
+Adds a project item that extends the UI of its host site by adding an action to a ribbon. The ribbon custom action contains an Elements.xml file, which defines the properties of the action. 
+
+For more information, see [Create custom actions to deploy with SharePoint Add-ins](create-custom-actions-to-deploy-with-sharepoint-add-ins.md).
 
 ### Search Configuration
 
@@ -95,10 +109,11 @@ Adds a project item for a site column to your SharePoint Add-in. The site column
 |ID|A unique GUID value for the site column.|
 |Name|A unique name that's used to reference the site column.|
 |DisplayName|A friendly name that appears in the UI.|
-|Type|The data type of the site column based on  **SPFieldType**, such as Boolean, lookup, or text.|
-|Required|If the column is required, the property is set to  **True**; otherwise, the property is set to  **False**.|
-|Group|Specifies the name of the group to which the site column is assigned. The default value for this property is  **Custom Site Columns**.|
-For more information, see  [Building Block: Columns and Field Types](http://msdn.microsoft.com/library/58548ade-e439-4931-82a2-fa29bd5afdb7%28Office.15%29.aspx).
+|Type|The data type of the site column based on **SPFieldType**, such as Boolean, lookup, or text.|
+|Required|If the column is required, the property is set to **True**; otherwise, the property is set to **False**.|
+|Group|Specifies the name of the group to which the site column is assigned. The default value for this property is **Custom Site Columns**.|
+
+For more information, see [Building Block: Columns and Field Types](http://msdn.microsoft.com/library/58548ade-e439-4931-82a2-fa29bd5afdb7%28Office.15%29.aspx).
 
 ### Workflow
 
@@ -118,11 +133,13 @@ When you add this type of item, you specify a name for the workflow and whether 
 
 ### Workflow Custom Activity
 
-Adds a project item for a workflow custom activity to your SharePoint Add-in. By adding a workflow custom activity, you can create additional workflow actions that you can then import as custom actions in SharePoint Designer. The workflow custom activity contains an Elements.xml file, which defines the properties of the action, and a .xaml file for the workflow designer. For more information, see  [Workflows in SharePoint](http://msdn.microsoft.com/library/e0602371-ae22-44be-8a7e-9e47e9f046d6%28Office.15%29.aspx).
+Adds a project item for a workflow custom activity to your SharePoint Add-in. By adding a workflow custom activity, you can create additional workflow actions that you can then import as custom actions in SharePoint Designer. The workflow custom activity contains an Elements.xml file, which defines the properties of the action, and a .xaml file for the workflow designer. 
+
+For more information, see [Workflows in SharePoint](http://msdn.microsoft.com/library/e0602371-ae22-44be-8a7e-9e47e9f046d6%28Office.15%29.aspx).
 
 ## Additional resources
 <a name="SP15Projecttemplates_addlresources"> </a>
 
--  [Tools and environments for developing SharePoint Add-ins](tools-and-environments-for-developing-sharepoint-add-ins.md)
+- [Tools and environments for developing SharePoint Add-ins](tools-and-environments-for-developing-sharepoint-add-ins.md)
     
  
