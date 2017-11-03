@@ -1,20 +1,16 @@
 ---
 title: SharePoint Add-ins UX design guidelines
-ms.date: 11/01/2017
+description: User experience (UX) design guidelines for add-ins in SharePoint, including choosing the chrome, using CSS, managing user licenses, and other design tasks.
+ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
 
 # SharePoint Add-ins UX design guidelines
 
-Learn about general user experience (UX) design guidelines for add-ins in SharePoint, including choosing the chrome, using CSS, managing user licenses, and other design tasks.
- 
-> [!NOTE]
-> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md).
-
 Add-ins are a new concept for SharePoint, empowering end users to add new functionality to their sites while still ensuring reliability for the SharePoint site itself. Creating a good add-in requires not only making great functionality (although that's obviously important), but also ensuring that the add-in looks right and fits seamlessly into the site where it's installed.
 
-## Choosing the chrome for your add-in
 <a name="UXGuide_AppChrome"> </a>
+## Choosing the chrome for your add-in
 
 The first thing you have to determine when you are building an add-in is how much or how little you want to brand your pages and where you want them to be hosted. Depending on those choices, which technology you use to power your chrome will be relatively obvious:
 
@@ -22,8 +18,8 @@ The first thing you have to determine when you are building an add-in is how muc
 - **HTML pages hosted in SharePoint or any pages outside SharePoint:** Use the chrome control.
 - **Custom branded pages:** Use your own chrome.
 
-### Using the add-in template for SharePoint-hosted pages
 <a name="UXGuide_AppTemplate"> </a>
+### Using the add-in template for SharePoint-hosted pages
 
 The add-in template can be used only for SharePoint-hosted ASPX pages. The template includes the **app.master** master page (which contains chrome appropriate for an add-in and is designed to theme with the host site), and it hides some SharePoint functionality that either wouldn't work or doesn't make sense inside of an add-in web. Figure 1 shows a SharePoint-hosted page that uses the add-in template. 
 
@@ -33,8 +29,8 @@ The add-in template can be used only for SharePoint-hosted ASPX pages. The templ
  
 The add-in template is the default in Visual Studio when you create an add-in web and pages within that web.
 
-### Using the chrome control in SharePoint Add-ins
 <a name="UXGuide_ChromeControl"> </a>
+### Using the chrome control in SharePoint Add-ins
 
 If you're not building SharePoint-hosted ASPX pages, but you still want your add-in to fit in naturally with the host site that it is used from, the chrome control is the right choice. Figure 2 shows the chrome control.
 
@@ -89,13 +85,13 @@ If you're not building SharePoint-hosted ASPX pages, but you still want your add
 
 The chrome control provides for two optional add-in icons: one on the top navigation bar and one in the title area. The add-in icon on the top navigation bar is 24 x 24 pixels (px), and the icon in the title area is the same size as SharePoint site icons—up to 64 px high by up to 180 px long. We recommend you use a PNG image that you have tested on white, black, gray, bright, and muted backgrounds because users and admins can change the site theme. For more information about using the chrome control, see [Use the client chrome control in SharePoint Add-ins](use-the-client-chrome-control-in-sharepoint-add-ins.md).
 
-### Creating a custom branded UI in SharePoint Add-ins
 <a name="UXGuide_CustomUI"> </a>
+### Creating a custom branded UI in SharePoint Add-ins
 
 If, instead of aligning to the host site's theme and fitting into the SharePoint site where your add-in is installed, you want to use your own brand inside your add-in, you will have to build your chrome from scratch. However, you should still have a "back to site" link in the upper-left corner of the page (upper-right in right-to-left [RTL] languages) that redirects the user back to the site where the add-in is installed.
 
-## Using the host web CSS in SharePoint Add-ins
 <a name="UXGuide_CSS"> </a>
+## Using the host web CSS in SharePoint Add-ins
 
 By using the same styles that are used on the host web, you can ensure that your add-ins will remain consistent with the SharePoint site that they came from. The actual styles may change based on the design of the site, but by referencing the CSS file of the host web, you will know that your add-in will fit in no matter where it's installed.
 
@@ -227,8 +223,8 @@ The first thing to do when you are styling your add-in is to use semantic HTML a
 |![ms-topbar](../images/AppUXGuidelines_ms-topbar.png)|Elements in the top bar of the page.|.ms-topBar|
 For more information, see  [Use a SharePoint website's style sheet in SharePoint Add-ins](use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins.md).
 
-## Styling common items consistently in SharePoint Add-ins
 <a name="UXGuide_Styling"> </a>
+## Styling common items consistently in SharePoint Add-ins
 
 To help users learn skills that translate between SharePoint and add-ins, you should style several common elements consistently.
 
@@ -270,8 +266,8 @@ Although animation can lead to a more vibrant and engaging experience, you shoul
 
 In SharePoint, the only place where you should use tabs is on the ribbon. Everywhere else in SharePoint should use pivots to express the concept of changing the content area.
 
-## Office UI Fabric with SharePoint Add-ins FAQ
 <a name="Fabric"> </a>
+## Office UI Fabric with SharePoint Add-ins FAQ
 
 Use this FAQ to understand how to use Office UI Fabric and make your SharePoint Add-in look and feel like the rest of the Office 365.
 
@@ -303,8 +299,8 @@ Currently, we recommend against mixing Office UI Fabric with host web CSS. This 
 
 No, Office UI Fabric does not support SharePoint themes. However, applying Office UI Fabric theming will not conflict with SharePoint themes.
 
-## Extending SharePoint UI in add-ins
 <a name="UXGuide_Extending"> </a>
+## Extending SharePoint UI in add-ins
 
 SharePoint allows add-ins to extend some of the existing UI, which enables you to make your add-in available in the places where users might need it. You can extend the host web's UI by using the following methods:
 
@@ -459,8 +455,8 @@ You cannot add a custom tab to the ribbon of the host web from your add-in. You 
 
 If you have a few controls that are related to each other, or that the user will likely associate with using your add-in, you should group them in their own custom group so that the user is more likely to find them. If, on the other hand, the functionality you're adding is more likely to be something the user considers part of the core experience of their site, you should try to fit that control into a logical spot in the existing ribbon locations. For more information, see [Create custom actions to deploy with SharePoint Add-ins](create-custom-actions-to-deploy-with-sharepoint-add-ins.md).
 
-## Providing a settings page for add-in configuration
 <a name="UXGuide_Settings"> </a>
+## Providing a settings page for add-in configuration
 
 In many cases, it makes sense for your add-in to have some configuration information that the user can change, and to expose this information through the use of a settings page. Ideally, you can choose reasonable defaults for those settings, and users can choose to go to the settings UI only if they need to modify those defaults. In some cases, the add-in will require certain information or choices to be provided before the add-in can function. When your add-in requires information before it can function, you should provide a user experience that guides the user to the settings page to update the configuration.
 
@@ -468,8 +464,8 @@ You should add the settings page URL to the app's top-right menu if appropriate 
 
 You should also keep in mind that the user who is currently visiting the add-in might not be able to configure it. Your UI should also not assume that the current user is able to complete the configuration. Your add-in should guide the user to find the right person if they cannot configure it.
 
-## Managing user licenses in add-ins
 <a name="UXGuide_License"> </a>
+## Managing user licenses in add-ins
 
 If your add-in is not free, you should find a good balance between the features that are available or restricted in the trial or unlicensed modes versus the fully paid version.
 
@@ -508,8 +504,8 @@ SharePoint has a built-in status bar that you can use on SharePoint pages by cal
 
    "Unfortunately, you don't have a license for _\<app name\>_. Go here to purchase the full version and enable _\<paid functionality\>_."
 
-## Other design considerations for SharePoint Add-ins
 <a name="UXGuide_Other"> </a>
+## Other design considerations for SharePoint Add-ins
 
 In addition to what has already been explored, you should keep these things in mind when you are creating your SharePoint Add-in.
 
