@@ -22,21 +22,21 @@ Because the Cloud Add-in Model in SharePoint makes so many design options possib
 
 SharePoint Add-ins support multiple hosting options. You can choose your own web stack, have Microsoft provision Microsoft Azure and SQL Azure, or have the add-in hosted on SharePoint. The following topic contains resources and guidance that can help you choose the right hosting model for your add-in.
 
-[Choose patterns for developing and hosting your SharePoint Add-in](choose-patterns-for-developing-and-hosting-your-sharepoint-add-in.md): Learn about the different ways that you can host the components of SharePoint Add-ins.
+- [Choose patterns for developing and hosting your SharePoint Add-in](choose-patterns-for-developing-and-hosting-your-sharepoint-add-in.md): Learn about the different ways that you can host the components of SharePoint Add-ins.
 
 <a name="SP15Design_Dataaccess"> </a>
 ## Choose the right data access technologies for your add-in
 
 You must ensure that your add-in accesses data efficiently and securely. Various data access technologies are available for accessing SharePoint and working with data in your add-in. This topic provides resources to help you learn about your options and choose the one that is right for your add-in. 
 
-[Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md): Learn about data access options you have when you build SharePoint Add-ins, including data connectivity options for inbound and outbound data scenarios, and the APIs that are available when you want to access SharePoint data from your add-in.
+- [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md): Learn about data access options you have when you build SharePoint Add-ins, including data connectivity options for inbound and outbound data scenarios, and the APIs that are available when you want to access SharePoint data from your add-in.
 
 <a name="SP15Design_UX"> </a>
 ## Design the UX for your add-in
 
 As you design your add-in, your real goal should be to create an experience that enables users to complete the scenarios that you intend for them to accomplish. This topic will help you discover the resources and design guidance that you need to build great add-ins that follow best practices for user experience design and have the familiar appearance and behavior of SharePoint.
 
-[UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md): Learn about the user experience options that you have when you build SharePoint Add-ins.
+- [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md): Learn about the user experience options that you have when you build SharePoint Add-ins.
 
 <a name="Upgrade"> </a>
 ## Design with update in mind
