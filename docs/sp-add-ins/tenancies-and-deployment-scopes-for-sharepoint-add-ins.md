@@ -1,21 +1,16 @@
 ---
 title: Tenancies and deployment scopes for SharePoint Add-ins
-description: Learn about the concept of tenancies and the differences between deploying SharePoint Add-ins at tenant scope and web scope.
+description: Deploy SharePoint Add-ins to tenant scope and web scope SharePoint tenants. 
 ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
 
 # Tenancies and deployment scopes for SharePoint Add-ins
 
-Learn about the concept of tenancies and the differences between deploying SharePoint Add-ins at tenant scope and web scope.
-
-> [!NOTE]
-> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md).
-
-## Tenancies and add-in scope
-<a name="AppScope"> </a>
-
 A SharePoint **tenancy** is a set of site collections in either a SharePoint farm or in SharePoint Online. In SharePoint Online, the site collections belong to a single customer account. In a SharePoint farm, the site collections can be all the site collections in a SharePoint web application or a subset of them, or it can be a set of site collections from across multiple web applications in the farm. A tenancy can have a SharePoint add-in catalog just as a SharePoint web application can.
+
+<a name="AppScope"> </a>
+## Tenancies and add-in scope
 
 A SharePoint Add-in has an **add-in scope**. The two possible add-in scopes are web scope or tenant scope. The difference is not an intrinsic property of the add-in, and you, the developer, do not decide what the scope of your add-in is. The decision is made by tenant administrators as a side effect of how the add-in is installed. 
 
@@ -32,8 +27,8 @@ When new site collections are created in the tenancy, add-ins that were previous
 
 > Add-in scope should also not be confused with add-in permission levels. SharePoint Add-ins can request permissions to all or selected parts of SharePoint content at the levels of list, web, site collection, and tenancy. Installing an add-in with tenant scope does not give it permissions that it would not otherwise have, nor does it cancel key provisions of the SharePoint security model. For more information about add-in permissions, see [Add-in permissions in SharePoint](add-in-permissions-in-sharepoint.md).
 
-## Limitations of tenant-scoped add-ins
 <a name="Tenant"> </a>
+## Limitations of tenant-scoped add-ins
 
 The following types of add-ins will not work correctly when batch-installed:
 
@@ -42,8 +37,8 @@ The following types of add-ins will not work correctly when batch-installed:
 
 In addition, note again that installation with tenant scope is not possible in the Office 365 Small Business Premium version of SharePoint Online.
 
-## How to install, uninstall, and update an add-in on multiple websites in a tenancy
 <a name="Web"> </a>
+## How to install, uninstall, and update an add-in on multiple websites in a tenancy
 
 Regardless of whether an add-in is installed from the Office Store or from an add-in catalog, tenant admins can install it to multiple websites in a tenancy, uninstall it, and update it by using the following procedures.
 
