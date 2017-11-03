@@ -1,25 +1,21 @@
 ---
 title: Choose patterns for developing and hosting your SharePoint Add-in
-ms.date: 11/01/2017
+description: Match your hosting pattern to development goals, choose a pattern for provider-hosted add-ins, combine provider hosting and SharePoint hosting, and use add-ins in Azure Web Roles.
+ms.date: 11/02/2017
 ms.prod: sharepoint
 ---
 
 # Choose patterns for developing and hosting your SharePoint Add-in
 
-Learn about the different ways that you can host the components of SharePoint Add-ins.
- 
-> [!NOTE]
-> The name "apps for SharePoint" is changing to "SharePoint Add-ins." During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint." For details, see [New name for apps for SharePoint](new-name-for-apps-for-sharepoint.md).
-
 The SharePoint add-in model introduces a wide range of hosting and development patterns. Some of these patterns can be used in combination with each other. For example, your add-ins can mix SharePoint-hosted and remotely hosted components. The most useful way to determine which patterns you'll want to use is to start with your own requirements, technologies, and goals and match them with the options and possibilities that are enabled by SharePoint Add-ins.
 
-## What to think about when choosing your development pattern
 <a name="ChoosePattern"> </a>
+## What to think about when choosing your development pattern
 
 SharePoint Add-ins widen the range of possible programming languages and technology stacks that you can use when you work with SharePoint resources and services. The precise range of options depends on both the type of add-in and the hosting pattern that you choose. It's also possible to mix patterns.
 
-### SharePoint-hosted add-ins
 <a name="SPHosted"> </a>
+### SharePoint-hosted add-ins
 
 Start with the simplest option: SharePoint-hosted add-ins, or add-ins where all components are hosted on either an on-premises or Office 365 SharePoint farm. SharePoint-hosted add-ins are installed on a SharePoint website, called the host web. They have their resources hosted on an isolated subsite of a host web, called the add-in web. It's important to know [the difference between host webs and add-in webs](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md). 
 
@@ -46,8 +42,8 @@ This pattern is the easiest to deploy, and you can use the [Create a basic Share
 
 [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md)
 
-### Provider-hosted add-ins
 <a name="SelfHosted"> </a>
+### Provider-hosted add-ins
 
 Provider-hosted SharePoint Add-ins include components that are deployed and hosted outside the SharePoint farm. They are installed to the host web, but their remote components are hosted on another server *that should not be a server in the SharePoint farm*. 
 
@@ -73,8 +69,8 @@ A provider-hosted add-in interacts with a SharePoint site but also uses resource
 |Use one of the SharePoint client object models, the JavaScript cross-domain library, or the SharePoint  [REST/OData-based web service](http://msdn.microsoft.com/magazine/dn198245.aspx) to interact with SharePoint.|Each way of interacting with SharePoint has  [corresponding options for approaches to data access](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md).|
 |Gain authorization to SharePoint data using one of  [the three authorization systems](three-authorization-systems-for-sharepoint-add-ins.md).|You need to decide between OAuth and the cross-domain library to authorize your add-in's access to SharePoint.|
 
-## Match your hosting pattern with your development goals
 <a name="MatchPattern"> </a>
+## Match your hosting pattern with your development goals
 
 In addition to considering the technical advantages and constraints of each option, you'll also need to think about your development goals when deciding on a hosting pattern. You can use the following table to help sort out which hosting pattern best fits your needs.
 
@@ -84,8 +80,8 @@ In addition to considering the technical advantages and constraints of each opti
 |Use existing SharePoint entities and interact with external (non-SharePoint) web services|Provider-hosted|An add-in that gets customer addresses from an existing SharePoint list in the host web and uses a mapping service in a web application to display their locations|
 |Provision new SharePoint entities and interact with external web services|Combined SharePoint-hosted and provider-hosted|A mapping add-in that provisions a SharePoint list on the appweb so that it can store latitude and longitude coordinates for addresses that are supplied by the user or pulled from an existing SharePoint list|
 
-## What to think about when choosing your hosting pattern for provider-hosted add-ins
 <a name="ThinkAbout"> </a>
+## What to think about when choosing your hosting pattern for provider-hosted add-ins
 
 SharePoint-hosted add-ins have a fixed hosting pattern because they are hosted on the add-in web. Provider-hosted add-ins provide more flexibility for hosting the various components of your add-in, so if you choose to create one, you'll need to match your goals and requirements to the appropriate hosting pattern. 
 
@@ -112,8 +108,8 @@ The following table lists all of the possible patterns for hosting both the Shar
 |Office 365 SharePoint site|In cloud|ACS|
 |Office 365 SharePoint site|On-premises|ACS|
 
-## Combine provider hosting and SharePoint hosting
 <a name="Combined"> </a>
+## Combine provider hosting and SharePoint hosting
 
 You can also build add-ins that include both SharePoint-hosted and cloud-hosted components. For example, you can create a [cloud-hosted add-in that includes a custom SharePoint list and content type](create-a-provider-hosted-add-in-that-includes-a-custom-sharepoint-list-and-conte.md). If you choose to use this architecture, your design and approach must account for security limitations that are built into the model. You can use only JavaScript in the code components that are hosted by SharePoint, and the remotely hosted components must use either OAuth or the cross-domain library to interact with the SharePoint website. When considering this approach, make sure that you understand how  [add-in authorization works in SharePoint](authorization-and-authentication-of-sharepoint-add-ins.md). 
 
@@ -133,8 +129,8 @@ Here are some things to think about when you're considering a combination of pro
 |:-----|:-----|
 |All the benefits of the two approaches.|More complex architecture requires careful planning around server-to-server communication and cross-site scripting restrictions.|
 
-## Provider-hosted add-ins in Azure Web Roles
 <a name="AzureWebRole"> </a>
+## Provider-hosted add-ins in Azure Web Roles
 
 You can host a provider-hosted SharePoint Add-in on an Azure web role instead of a web application (whether the web application is on-premises or an Azure website). An Azure web role is, essentially, a website that's based on Internet Information Services (IIS) and hosted on Azure. You can take advantage of the hosting services and scalability of Azure web roles. You can also enhance the performance and usability of your SharePoint Add-in, especially if the add-in is heavily used or demand for it changes over time. If the SharePoint Add-in ever requires more server resources, Azure can dynamically allocate them to the add-in.
 
