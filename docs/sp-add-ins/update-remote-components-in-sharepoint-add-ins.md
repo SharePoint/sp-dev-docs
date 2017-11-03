@@ -11,9 +11,6 @@ Before you begin, be familiar with [Update SharePoint Add-ins](update-sharepoint
 
 For the most part, only very general advice can be provided for updating the remote components because of the wide differences in platforms and tenancy systems. The following section provides some guidance.
 
-<a name="UpdateProviderHosted"> </a>
-## Update remote components in a provider-hosted add-in
-
 For a provider-hosted SharePoint Add-in, you update the remote components by using the best update practices of the platform on which the components are hosted. Just as the remote components of a provider-hosted add-in are installed separately from the installation of the SharePoint Add-in itself, they are also updated separately. Some points to consider:
 
 - The updated remote components should continue to work with all earlier versions of the SharePoint Add-in.
