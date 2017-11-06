@@ -15,7 +15,7 @@ You can [download the Incident Manager sample application and associated files f
 
 This walkthrough requires Visual Studio 2013 Update 1 and Microsoft Developer Tools for Visual Studio 2013 - March 2014 Update.
 
-To host the add-in, you'll also need a SharePoint Developer site on Office 365, which you can get from the [Sign up for an Office 365 Developer Site](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/set-up-a-development-environment-for-sharepoint-add-ins-on-office-365#sign-up-for-an-office-365-developer-site).
+To host the add-in, you'll also need a SharePoint Developer site on Office 365, which you can get from the [Sign up for an Office 365 Developer Site](set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md#sign-up-for-an-office-365-developer-site).
  
 > [!NOTE]
 > You can also host a cloud business add-in on a SharePoint site.
@@ -39,9 +39,9 @@ You will build the mobile add-in that is used to enter basic information about t
 
    ![Cloud Business App template](../images/CBA_IM1.PNG)
 
-3. In the  **Name** text box, enterIncidentManager, and then select **OK**.
+3. In the **Name** box, enter **IncidentManager**, and then select **OK**.
     
-    The  **New Cloud Business Add-in** wizard opens.
+   The New Cloud Business Add-in Wizard opens.
     
  
 4. In the  **New Cloud Business Add-in** wizard, enter the URL for your Office 365 Developer site, and then select **Finish**.
@@ -123,22 +123,12 @@ You will build the mobile add-in that is used to enter basic information about t
     The  **Person** business type provides a connection to the SharePoint User Profile Service, which pulls user information from Active Directory.
     
     Figure 2 shows the finished entity.
-    
+   
+    *Figure 2. The Incidents entity*
 
-    **Figure 2. The Incidents entity**
-
+    ![The Incident entity](../images/CBA_IM_2.PNG)
  
-
-  ![The Incident entity](../images/CBA_IM_2.PNG)
- 
-
-    
- 
-
-    
     In the next step, you'll add a choice list that allows the user to select from a fixed set of values. In this case, the fire department has a set of common incident types.
-    
- 
 
 ### To add a list of choices
 
@@ -184,9 +174,7 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
  
 3. In the entity designer, add the following fields as shown in Figure 3:
     
-    **Figure 3. The finished Patient entity**
-
- 
+    *Figure 3. The finished Patient entity*
 
   ![The Patient entity](../images/CBA_IM_2a.PNG)
  
@@ -221,9 +209,7 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
     Figure 4 shows the relationship.
     
 
-    **Figure 4. Incidents and Patients relationship**
-
- 
+    *Figure 4. Incidents and Patients relationship*
 
   ![The relationship between Incident and Patient](../images/CBA_IM_3.PNG)
  
@@ -258,14 +244,12 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
 5. In the  **Screen Data** list, select **Incidents**.
     
  
-6. Select both the  **Incident Details** and **Incident Patients** check boxes, and then select the **OK** button.
+6. Select both the  **Incident Details** and **Incident Patients** check boxes, and then select **OK**.
     
     Figure 5 shows the Add New Screen dialog.
     
 
-    **Figure 5. Add New Screen dialog**
-
- 
+    *Figure 5. Add New Screen dialog*
 
   ![The Incidents screen set](../images/CBA_IM_4.PNG)
  
@@ -311,9 +295,7 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
     Figure 6 shows the finished screen layout.
     
 
-    **Figure 6. Browse screen layout**
-
- 
+    *Figure 6. Browse screen layout*
 
   ![Browse screen layout](../images/CBA_IM4a.PNG)
  
@@ -344,9 +326,7 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
  
 4. In the left pane of the screen designer, select the  **Add Patients** link, as shown in figure 7.
     
-    **Figure 7. Add Patients link**
-
- 
+    *Figure 7. Add Patients link*
 
   ![The Add Patients link](../images/CBA_IM_5.PNG)
  
@@ -359,9 +339,7 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
     Figure 8 shows the finished screen layout.
     
 
-    **Figure 8. The Add/Edit screen layout**
-
- 
+    *Figure 8. The Add/Edit screen layout*
 
   ![Add/Edit screen layout](../images/CBA_IM_5a.PNG)
  
@@ -403,9 +381,7 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
     Figure 9 shows the finished screen layout.
     
 
-    **Figure 9. The Add/Edit screen layout**
-
- 
+    *Figure 9. The Add/Edit screen layout*
 
   ![Add/Edit screen layout](../images/CBA_IM_6.PNG)
  
@@ -429,9 +405,7 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
     The  **Incidents** Popup opens, as shown in figure 10.
     
 
-    **Figure 10. The Incidents Popup**
-
- 
+    *Figure 10. The Incidents Popup*
 
   ![The Add Incident Popup](../images/CBA_IM_7.PNG)
  
@@ -463,9 +437,7 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
     The  **Add Patient** Popup opens, as shown in Figure 11.
     
 
-    **Figure 11. The Add Patient Popup**
-
- 
+    *Figure 11. The Add Patient Popup*
 
   ![The Add Patient Popup](../images/CBA_IM_8.PNG)
  
@@ -525,7 +497,7 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
 3. In the  **Add New Screen** dialog box, in the **Select a screen template** list, select **View Details Screen**.
     
  
-4. In the  **Screen Name** text box, enter **ViewPatient**, select  **Patient** in the **Screen Data** list, and then select the **OK** button.
+4. In the  **Screen Name** text box, enter **ViewPatient**, select  **Patient** in the **Screen Data** list, and then select **OK**.
     
     The  **ViewPatient** screen opens in the screen designer.
     
@@ -566,9 +538,7 @@ The first step is to add a couple of pre-populated list templates to your develo
  
 2. In the running add-in, on the chrome bar, select **Back to site** link to navigate to your SharePoint developer site, as shown in Figure 12.
     
-    **Figure 12. The Back to site link**
-
- 
+    *Figure 12. The Back to site link*
 
   ![Navigate to the SharePoint developer site](../images/CBA_IM_8a.PNG)
  
@@ -581,9 +551,7 @@ The first step is to add a couple of pre-populated list templates to your develo
  
 4. On the  **Site Contents** page, select the **Settings** link, as shown in Figure 13.
     
-    **Figure 13. The Settings link**
-
- 
+    *Figure 13. The Settings link*
 
   ![Site Settings link](../images/CBA_IM_8b.PNG)
  
@@ -593,9 +561,7 @@ The first step is to add a couple of pre-populated list templates to your develo
  
 5. On the  **Site Settings** page, in the **Web Designer Galleries** list, select the **List templates** link as shown in Figure 14.
     
-    **Figure 14. The List templates link**
-
- 
+    *Figure 14. The List templates link*
 
   ![List templates list](../images/CBA_IM_8c.PNG)
  
@@ -609,7 +575,7 @@ The first step is to add a couple of pre-populated list templates to your develo
 7. In the  **Add a template** dialog box, select the **Browse** button and then navigate to the **Resources** folder for the downloaded Incident Manager sample.
     
  
-8. select the  **ContosoApparatus.stp** file and select the **Open** button, then select the **OK** button.
+8. select the  **ContosoApparatus.stp** file and select the **Open** button, and then select **OK**.
     
  
 9. In the  **List Template Gallery** dialog box, select the **Save** button.
@@ -617,9 +583,7 @@ The first step is to add a couple of pre-populated list templates to your develo
  
 10. Repeat the process and upload the  **ContosoPersonnel.stp** file.
     
-    **Figure 15. The uploaded files**
-
- 
+    *Figure 15. The uploaded files*
 
   ![The Contoso templates](../images/CBA_IM_8d.PNG)
  
@@ -659,9 +623,7 @@ The first step is to add a couple of pre-populated list templates to your develo
  
 2. In the  **Attach Data Source Wizard**, select the  **SharePoint** icon as shown in Figure 16, and then select the **Next** button.
     
-    **Figure 16. SharePoint data source**
-
- 
+    *Figure 16. SharePoint data source*
 
   ![SharePoint data source](../images/CBA_IM_9.PNG)
  
@@ -674,9 +636,7 @@ The first step is to add a couple of pre-populated list templates to your develo
  
 4. On the  **Choose your SharePoint Items** page, select the check boxes for the **ContosoApparatus** and **ContosoPersonnel** lists as shown in Figure 17, and then select the **Finish** button.
     
-    **Figure 17. The selected lists**
-
- 
+    *Figure 17. The selected lists*
 
   ![SharePoint lists](../images/CBA_IM_9a.PNG)
  
@@ -714,9 +674,7 @@ The first step is to add a couple of pre-populated list templates to your develo
     Figure 18 shows the query.
     
 
-    **Figure 18. The AvailableApparatus query**
-
- 
+    *Figure 18. The AvailableApparatus query*
 
   ![The AvailableApparatus query](../images/CBA_IM_10.PNG)
  
@@ -748,9 +706,7 @@ The first step is to add a couple of pre-populated list templates to your develo
     Figure 19 shows the query.
     
 
-    **Figure 19. The AvailablePersonnel query**
-
- 
+    *Figure 19. The AvailablePersonnel query*
 
   ![The Relationship dialog](../images/CBA_IM_10a.PNG)
  
@@ -783,11 +739,9 @@ The first step is to add a couple of pre-populated list templates to your develo
 5. In the  **Add Data Item** dialog box, select the **Query** option button.
     
  
-6. In the list, select **DeveloperData.AvailableApparatus** as shown in Figure 20, and then select the **OK** button.
+6. In the list, select **DeveloperData.AvailableApparatus** as shown in Figure 20, and then select **OK**.
     
-    **Figure 20. The AvailableApparatus query**
-
- 
+    *Figure 20. The AvailableApparatus query*
 
   ![Add a query](../images/CBA_IM_11.PNG)
  
@@ -818,9 +772,7 @@ The first step is to add a couple of pre-populated list templates to your develo
     Figure 21 shows the screen layout.
     
 
-    **Figure 21. The screen layout**
-
- 
+    *Figure 21. The screen layout*
 
   ![The Resources tab layout](../images/CBA_IM_11a.PNG)
  
@@ -854,9 +806,7 @@ On the scene of an incident the Incident Commander has to document many things, 
  
 2. In the running add-in, on the chrome bar, select **Back to site** link as shown in Figure 22 to navigate to your SharePoint developer site.
     
-    **Figure 22. The Back to site link**
-
- 
+    *Figure 22. The Back to site link*
 
   ![Navigate to the SharePoint developer site](../images/CBA_IM_8a.PNG)
  
@@ -887,9 +837,7 @@ On the scene of an incident the Incident Commander has to document many things, 
     Figure 23 shows the newly added column.
     
 
-    **Figure 23. The Incident Documents document library**
-
- 
+    *Figure 23. The Incident Documents document library*
 
   ![Document library with IncidentNumber column](../images/CBA_IM_12.PNG)
  
@@ -912,9 +860,7 @@ On the scene of an incident the Incident Commander has to document many things, 
  
 2. On the  **Choose your SharePoint Items** page, in the left pane, select the **Document Libraries** list item, and in the right pane, select the **IncidentDocuments** checkbox as shown in Figure 24, and then select the **Finish** button.
     
-    **Figure 24. The IncidentDocuments entity**
-
- 
+    *Figure 24. The IncidentDocuments entity*
 
   ![Select the document library](../images/CBA_IM_13.PNG)
  
@@ -940,9 +886,7 @@ On the scene of an incident the Incident Commander has to document many things, 
  
 3. In the  **Add New Relationship** dialog box, in the **To** dropdown list, select **Incident** as shown in Figure 25.
     
-    **Figure 25. The Add New Relationship dialog box**
-
- 
+    *Figure 25. The Add New Relationship dialog box*
 
   ![The relationship between entities](../images/CBA_IM_11b.PNG)
  
@@ -953,14 +897,12 @@ On the scene of an incident the Incident Commander has to document many things, 
 4. In the  **Foreign** key dropdown list, select the **IncidentNumber (String)** field from the **IncidentDocuments** entity.
     
  
-5. In the  **Primary** key dropdown list, select the **IncidentNumber (String)** field from the **Incidents** entity, and then select the **OK** button.
+5. In the  **Primary** key dropdown list, select the **IncidentNumber (String)** field from the **Incidents** entity, and then select **OK**.
     
     Figure 26 shows the Foreign and Primary keys.
     
 
-    **Figure 26. Foreign and primary keys**
-
- 
+    *Figure 26. Foreign and primary keys*
 
   ![The associated fields](../images/CBA_IM_11c.PNG)
  
@@ -994,11 +936,9 @@ On the scene of an incident the Incident Commander has to document many things, 
 6. Under the  **Rows Layout | Documents** node, open the shortcut menu for the **Command Bar** node and select **Add Button**.
     
  
-7. In the  **Add Button** dialog box, expand the **showTab** list and in the **IncidentDocuments** group select**createOrUploadDocument** as shown in Figure 27, and then select the **OK** button.
+7. In the  **Add Button** dialog box, expand the **showTab** list and in the **IncidentDocuments** group select**createOrUploadDocument** as shown in Figure 27, and then select **OK**.
     
-    **Figure 27. The Add Button dialog box**
-
- 
+    *Figure 27. The Add Button dialog box*
 
   ![Button to create or upload documents](../images/CBA_IM_14.PNG)
  
@@ -1020,9 +960,7 @@ On the scene of an incident the Incident Commander has to document many things, 
     The SharePoint  **Create a new file** dialog box opens, as shown in Figure 28.
     
 
-    **Figure 28. The Create a new file dialog box**
-
- 
+    *Figure 28. The Create a new file dialog box*
 
   ![The SharePoint Create a new file dialog](../images/CBA_IM_15.PNG)
  
@@ -1042,9 +980,7 @@ On the scene of an incident the Incident Commander has to document many things, 
  
 14. On the title bar, select the  **Document** name field as shown in Figure 29 and enterIncident Report.
     
-    **Figure 29. The Document name field**
-
- 
+    *Figure 29. The Document name field*
 
   ![The file name](../images/CBA_IM_16.PNG)
  
@@ -1082,9 +1018,7 @@ The Contoso Fire Department is pleased with the additions to the Incident Manage
  
 2. select the  **user-logo.png** and **user-splash-screen.png** files as shown in Figure 30 and delete them.
     
-    **Figure 30. The files to delete**
-
- 
+    *Figure 30. The files to delete*
 
   ![The logo and splash screen files](../images/CBA_IM_17.PNG)
  
@@ -1230,9 +1164,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
  
 2. In  **Solution Explorer**, open the shortcut menu for the  **IncidentManager** node as shown in Figure 31, and then select **Publish**.
     
-    **Figure 31. The IncidentManager node**
-
- 
+    *Figure 31. The IncidentManager node*
 
   ![The IncidentManager node](../images/CBA_IM_18.PNG)
  
@@ -1242,9 +1174,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
  
 3. On the  **SharePoint** options page, select the **Autohosted** option button as shown in Figure 32, and then select the **Publish** button.
     
-    **Figure 32. The Autohosted option**
-
- 
+    *Figure 32. The Autohosted option*
 
   ![The Publish wizard](../images/CBA_IM_19.PNG)
  
@@ -1257,9 +1187,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
  
 5. In the  **Add-ins in Testing** list, select the ellipsis (???) link next to **IncidentManager**, and then select the  **Remove** link, as shown in Figure 33.
     
-    **Figure 33. The Remove link**
-
- 
+    *Figure 33. The Remove link*
 
   ![The Apps in Test list](../images/CBA_IM_20.PNG)
  
@@ -1272,9 +1200,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
  
 7. In the  **Deploy Add-in** dialog box, select the **upload** link, as shown in Figure 34.
     
-    **Figure 34. The upload link**
-
- 
+    *Figure 34. The upload link*
 
   ![The Deploy App dialog](../images/CBA_IM_20a.PNG)
  
@@ -1282,7 +1208,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
     The  **Upload Add-in** dialog box opens.
     
  
-8. In the  **Upload Add-in** dialog box, select the **Browse** button and navigate to the **Publish** folder for your add-in and select the **IncidentManager.SharePoint.app** file, select the **Open** button, and then select the **OK** button.
+8. In the  **Upload Add-in** dialog box, select the **Browse** button and navigate to the **Publish** folder for your add-in and select the **IncidentManager.SharePoint.app** file, select the **Open** button, and then select **OK**.
     
     Once the file has been uploaded, the  **Deploy Add-in** dialog box opens.
     
@@ -1297,9 +1223,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
     Figure 35 shows the Add-ins in Testing list as the add-in is installing.
     
 
-    **Figure 35. The Add-ins in Testing list**
-
- 
+    *Figure 35. The Add-ins in Testing list*
 
   ![App is installing](../images/CBA_IM_21.PNG)
  
@@ -1312,9 +1236,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
     Figure 37 shows the Site Contents list as the add-in is installing.
     
 
-    **Figure 37. The add-in is installing**
-
- 
+    *Figure 37. The add-in is installing*
 
   ![App is installing](../images/CBA_IM_22.PNG)
  
@@ -1327,9 +1249,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
     Figure 38 shows the Site Contents list after the add-in is installed.
     
 
-    **Figure 38. The add-in is installed**
-
- 
+    *Figure 38. The add-in is installed*
 
   ![The app is ready to run](../images/CBA_IM_23.PNG)
  
@@ -1342,9 +1262,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
     Figure 39 shows the add-in as displayed in a desktop browser.
     
 
-    **Figure 39. Tile view**
-
- 
+    *Figure 39. Tile view*
 
   ![Layout in desktop browser](../images/CBA_IM_24.PNG)
  
@@ -1354,9 +1272,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
     Figure 40 shows the add-in as displayed in a mobile browser.
     
 
-    **Figure 40. List view**
-
- 
+    *Figure 40. List view*
 
   ![Layout on mobile device](../images/CBA_IM_25.PNG)
  
