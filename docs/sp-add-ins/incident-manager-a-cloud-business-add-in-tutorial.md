@@ -33,102 +33,83 @@ You will build the mobile add-in that is used to enter basic information about t
     
    The **New Project** dialog box opens.
 
-2. In the list of templates, expand the **Visual Basic** or **Visual C#** node, expand the **Office/SharePoint** node, select the **Add-ins** node, and then select the **Cloud Business Add-in** template, as shown in Figure 1.
+2. In the list of templates, expand the **Visual Basic** or **Visual C#** node, expand the **Office/SharePoint** node, select the **Add-ins** node, and then select the **Cloud Business Add-in** template, as shown in Figure 1 (note that "app" is now "add-in").
     
    *Figure 1. Cloud Business Add-in template*
 
-   ![Cloud Business App template](../images/CBA_IM1.PNG)
+   ![Cloud Business Add-in template](../images/CBA_IM1.PNG)
 
 3. In the **Name** box, enter **IncidentManager**, and then select **OK**.
     
    The New Cloud Business Add-in Wizard opens.
+   
+4. In the New Cloud Business Add-in Wizard, enter the URL for your Office 365 Developer site, and then select **Finish**.
     
- 
-4. In the  **New Cloud Business Add-in** wizard, enter the URL for your Office 365 Developer site, and then select **Finish**.
+   The URL should take the form `https://MySite.sharepoint.com/sites/Developer/`.
     
-    The URL should take the form https://  _MySite_.sharepoint.com/sites/Developer/.
-    
-    A  **IncidentManager** solution is added to Solution Explorer with four projects: a top-level **IncidentManager** project, a **IncidentManager.HTMLClient** project, a **IncidentManager.Server** project, and a **IncidentManager.SharePoint** project.
-    
-    
- 
+   An **IncidentManager** solution is added to Solution Explorer with four projects: 
+   - A top-level **IncidentManager** project
+   - An **IncidentManager.HTMLClient** project
+   - An **IncidentManager.Server** project
+   - An **IncidentManager.SharePoint** project.
 
-    
-    In the next step, you'll add an entity to represent a collection of incidents. The entity creates a SQL Server database table that is intrinsic to the add-in. It will store information about each incident.
-    
- 
+In the next step, you'll add an entity to represent a collection of incidents. The entity creates a SQL Server database table that is intrinsic to the add-in and stores information about each incident.
 
 ### To add the Incident entity
 
+1. On the **Start** screen, select the **Create New Table** link.
+    
+   The entity designer opens.
+   
+2. In the Properties window, in the **Name** property box, enter **Incident**.
+    
+3. In the entity designer, select the `<Add Property>` link, and enter **IncidentNumber**.
+    
+4. Select **Enter**, accepting the default data type **String**, and leaving the **Required** check box selected.
 
-1. On the  **Start** screen, select the **Create New Table** link.
+5. In the Properties window, select the **Include in Unique Index** check box.
     
-    The entity designer opens.
+   The incident number must be unique for each incident.
+     
+6. Select the `<Add Property>` link, enter **IncidentDate**, and then select the **Tab** key.
     
- 
-2. In the  **Properties** window, in the text box for the **Name** property, enterIncident.
-    
- 
-3. In the entity designer, select the  **<Add Property>** link and enterIncidentNumber.
-    
- 
-4. Select the Enter key, accepting the default **Type**,  **String**, and leaving the  **Required** checkbox selected.
-    
- 
-5. In the  **Properties** window, select the **Include in Unique Index** check box.
-    
-    The incident number must be unique for each incident.
-    
- 
-6. Select the  **<Add Property>** link and enterIncidentDate, and then select the **Tab** key.
-    
- 
-7. In the  **Type** column, select **Date**, and then select the Tab key twice.
-    
- 
-8. In the  **Name** column enterDispatchTime, and in the  **Type** column select the **DateTime** data type.
-    
- 
-9. In the next row enter IncidentType and select **Integer** as the data type.
-    
- 
-10. In the next row enter IncidentAddress and select **String** as the data type.
-    
- 
-11. In the next row enter ReportingPartyName and select **String** as the data type, and then clear the **Required** check box.
+7. In the **Type** column, select **Date**, and then select the **Tab** key twice.
+
+8. In the **Name** column, enter **DispatchTime**, and in the **Type** column, select the **Date Time** data type.
+
+9. In the next row, enter **IncidentType**, and select **Integer** as the data type.
+
+10. In the next row, enter **IncidentAddress**, and select **String** as the data type.
+
+11. In the next row, enter **ReportingPartyName**, select **String** as the data type, and then clear the **Required** check box.
     
     Sometimes incidents are reported anonymously, so you don't want to require a value in this field.
+
+12. In the next row, enter **ReportingPhone**, and select the **PhoneNumber** data type.
     
- 
-12. In the next row enter ReportingPhone and select the **PhoneNumber** data type.
+    **Phone Number** is a custom business type that automatically formats and provides validation for telephone numbers.
+
+13. In the Properties window, select the **Phone Number Formats** link.
     
-     **Phone Number** is acustom business type that automatically formats and provides validation for telephone numbers.
+    The **Phone Number Formats** dialog box opens.
     
- 
-13. In the  **Properties** window, select the **Phone Number Formats** hyperlink.
+14. In the **Phone Number Formats** dialog box, select the appropriate format for your locale, and then select the **Move Up** button to move it to the top of the list.
     
-    The  **Phone Number Formats** dialog box opens.
+15. In the **Test Phone Number Validation** box, enter a phone number and verify that it's properly formatted, and then select **Save**.
     
- 
-14. In the  **Phone Number Formats** dialog box, select the appropriate format for your locale, and then select the **Move Up** button to move it to the top of the list.
+    The **Phone Number** business type handles formatting and validation for you on any screen where it appears.
     
- 
-15. In the  **Test Phone Number Validation** text box, enter a phone number and verify that it's properly formatted, and then select the **Save** button.
+16. In the next row, enter **IncidentCommander**, and select the **Person** data type.
     
-    The  **Phone Number** business type handles formatting and validation for you on any screen where it appears.
-    
- 
-16. In the next row enter IncidentCommander and select the **Person** data type.
-    
-    The  **Person** business type provides a connection to the SharePoint User Profile Service, which pulls user information from Active Directory.
+    The **Person** data type provides a connection to the SharePoint User Profile Service, which pulls user information from Active Directory.
     
     Figure 2 shows the finished entity.
    
-    *Figure 2. The Incidents entity*
+    *Figure 2. The Incident entity*
 
     ![The Incident entity](../images/CBA_IM_2.PNG)
  
-    In the next step, you'll add a choice list that allows the user to select from a fixed set of values. In this case, the fire department has a set of common incident types.
+In the next step, you'll add a choice list that allows the user to select from a fixed set of values. In this case, the fire department has a set of common incident types.
 
 ### To add a list of choices
 
@@ -618,10 +599,10 @@ The first step is to add a couple of pre-populated list templates to your develo
 
 1. In  **Solution Explorer**, open the shortcut menu for the  **Data Sources** node and select **Add Data Source**.
     
-    The  **Attach Data Source Wizard** opens.
+    The Attach Data Source Wizard opens.
     
  
-2. In the  **Attach Data Source Wizard**, select the  **SharePoint** icon as shown in Figure 16, and then select the **Next** button.
+2. In the Attach Data Source Wizard, select the  **SharePoint** icon as shown in Figure 16, and then select the **Next** button.
     
     *Figure 16. SharePoint data source*
 
@@ -1169,7 +1150,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
   ![The IncidentManager node](../images/CBA_IM_18.PNG)
  
 
-    The  **LightSwitch Publish Application Wizard** appears.
+    The LightSwitch Publish Application Wizard appears.
     
  
 3. On the  **SharePoint** options page, select the **Autohosted** option button as shown in Figure 32, and then select the **Publish** button.
