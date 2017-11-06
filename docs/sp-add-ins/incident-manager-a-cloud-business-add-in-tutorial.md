@@ -791,29 +791,29 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
 
     ![The Add-ins in Testing list as the add-in is installing](../images/CBA_IM_21.PNG)
 
-11. Select the **Site Contents** link. Figure 37 shows the Site Contents list as the add-in is installing.
+11. Select the **Site Contents** link. Figure 36 shows the Site Contents list as the add-in is installing.
     
-    *Figure 37. The Site Contents list as the add-in is installing*
+    *Figure 36. The Site Contents list as the add-in is installing*
 
     ![The Site Contents list as the add-in is installing](../images/CBA_IM_22.PNG)
 
 12. After the add-in has finished installing, select the **Incident Manager** tile to run the add-in. 
 
-    *Figure 38. The Site Contents list after the add-in is installed*
+    *Figure 37. The Site Contents list after the add-in is installed*
 
     ![The Site Contents list after the add-in is installed](../images/CBA_IM_23.PNG)
 
     The add-in opens in the browser and looks exactly the same as when you ran the add-in in Debug mode. Notice that the data you entered during development is gone. When deploying the add-in, the database is deployed, but not the data.
 
-13. Enter some data and verify that everything works as expected. Figure 39 shows the add-in as displayed in a desktop browser.
+13. Enter some data and verify that everything works as expected. Figure 38 shows the add-in as displayed in a desktop browser.
     
-    *Figure 39. Tile view*
+    *Figure 38. Tile view*
 
     ![Layout in desktop browser](../images/CBA_IM_24.PNG)
 
-    You can also verify your add-in on a mobile device. Sign in to your SharePoint site from the web browser on your device, and then start the add-in. Figure 40 shows the add-in as displayed in a mobile browser.
+    You can also verify your add-in on a mobile device. Sign in to your SharePoint site from the web browser on your device, and then start the add-in. Figure 39 shows the add-in as displayed in a mobile browser.
 
-    *Figure 40. List view*
+    *Figure 39. List view*
 
     ![Layout on mobile device](../images/CBA_IM_25.PNG)
 
