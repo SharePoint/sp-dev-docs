@@ -354,8 +354,8 @@ In the next step, you'll add a screen to view patients.
 
 You have now built a fully functional incident management add-in, but there's much more you can do with cloud business add-ins. In the next section, you'll learn how to utilize resources on the SharePoint site from the incident management add-in.
 
-## Integrate SharePoint resources
 <a name="integrate"> </a>
+## Integrate SharePoint resources
 
 The Contoso Fire Department has started using the Incident Manager add-in, and as is typical in software development projects, they are now requesting a new feature. In addition to incident and patient information, they also need to manage resources such as fire apparatus and personnel. They already have lists of apparatus and personnel on their SharePoint site, so you will utilize those lists as another data source for the add-in.
 
@@ -515,225 +515,145 @@ In the next step, you'll add lists of available apparatus and personnel to the  
 
 In the next section, you'll learn how to add and associate a SharePoint document library with an add-in.
 
-## Associate a Document Library
 <a name="associate"> </a>
+## Associate a document library
 
-On the scene of an incident the Incident Commander has to document many things, some using existing forms and some ad-hoc. The documents created on-scene must be accessible later, and they Must be organized by incident for easy retrieval. For the Incident Manager add-in, you can utilize the custom document library feature in SharePoint to associate documents with each incident.
- 
-
- 
+On the scene of an incident, the Incident Commander has to document many things, some using existing forms and some ad-hoc. The documents created on-scene must be accessible later, and they must be organized by incident for easy retrieval. For the Incident Manager add-in, you can utilize the custom document library feature in SharePoint to associate documents with each incident.
 
 ### To add a document library to the SharePoint site
 
+1. On the menu bar, select **Debug** > **Start Debugging** to run the add-in.
 
-1. On the menu bar, select  **Debug**,  **Start Debugging** to run the add-in.
+2. In the running add-in, on the chrome bar, select **Back to site** as shown in Figure 22 to go to your SharePoint developer site.
     
- 
-2. In the running add-in, on the chrome bar, select **Back to site** link as shown in Figure 22 to navigate to your SharePoint developer site.
-    
-    *Figure 22. The Back to site link*
+   *Figure 22. The Back to site link*
 
-  ![Navigate to the SharePoint developer site](../images/CBA_IM_8a.PNG)
- 
+   ![Go to the SharePoint developer site](../images/CBA_IM_8a.PNG)
 
- 
+3. On the **Developer** page, select the **Site Contents** link.
 
- 
-3. On the  **Developer** page, select the **Site Contents** link.
-    
- 
-4. On the  **Site Contents** page, select the **add an add-in** tile.
-    
- 
-5. On the  **Site Contents > Your Add-ins** page, select the **Document Library** tile.
-    
- 
-6. In the  **Adding Document Library** dialog box, in the **Name** text box enterIncident Documents, and then select the  **Create** button.
-    
- 
-7. On the  **Site Contents** page, select the **Incident Documents** tile to open the library, and then select the **LIBRARY** tab.
-    
- 
-8. On the  **Ribbon**, select the  **Create Column** button.
-    
- 
-9. In the  **Create Column** dialog box, in the **Column name** text box enterIncidentNumber, and then select the  **OK** button.
-    
-    Figure 23 shows the newly added column.
-    
+4. On the **Site Contents** page, select the **Add an add-in** tile.
 
-    *Figure 23. The Incident Documents document library*
+5. On the **Site Contents** > **Your Add-ins** page, select the **Document Library** tile.
 
-  ![Document library with IncidentNumber column](../images/CBA_IM_12.PNG)
- 
+6. In the **Adding Document Library** dialog box, in the **Name** box, enter **Incident Documents**, and then select **Create**.
 
-    In order to associate the document library with your add-in, the document library must contain a custom column that maps to a unique field in your entity. In this case the  **IncidentNumber** column maps to the **IncidentNumber** field in the **Incidents** entity.
-    
-    
- 
+7. On the **Site Contents** page, select the **Incident Documents** tile to open the library, and then select the **LIBRARY** tab.
 
+8. On the ribbon, select **Create Column**.
+
+9. In the **Create Column** dialog box, in the **Column name** box, enter **IncidentNumber**, and then select **OK**. Figure 23 shows the newly added column.
     
-    In the next step, you'll add the document library to your add-in.
-    
+   *Figure 23. The Incident Documents document library*
+
+   ![Document library with IncidentNumber column](../images/CBA_IM_12.PNG)
  
+   In order to associate the document library with your add-in, the document library must contain a custom column that maps to a unique field in your entity. In this case the **IncidentNumber** column maps to the **IncidentNumber** field in the **Incidents** entity.
+    
+In the next step, you'll add the document library to your add-in.
 
 ### To add a document library to a project
 
+1. In **Solution Explorer**, open the shortcut menu for the **Developer Data** node, and select **Update Data Source**.
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **Developer Data** node and select **Update Data Source**.
+2. On the **Choose your SharePoint Items** page, in the left pane, select the **Document Libraries** list item, and in the right pane, select the **IncidentDocuments** check box as shown in Figure 24, and then select **Finish**.
     
- 
-2. On the  **Choose your SharePoint Items** page, in the left pane, select the **Document Libraries** list item, and in the right pane, select the **IncidentDocuments** checkbox as shown in Figure 24, and then select the **Finish** button.
-    
-    *Figure 24. The IncidentDocuments entity*
+   *Figure 24. The IncidentDocuments entity*
 
-  ![Select the document library](../images/CBA_IM_13.PNG)
+   ![Select the document library](../images/CBA_IM_13.PNG)
  
-
-    An  **IncidentDocuments.lsml** node is added to Solution Explorer.
-    
-    
+   An **IncidentDocuments.lsml** node is added to Solution Explorer.
  
-
-    
-    In the next step, you'll create a relationship between the document library and the Incidents entity..
-    
- 
+In the next step, you'll create a relationship between the document library and the Incidents entity.
 
 ### To create a relationship across data sources
 
+1. In **Solution Explorer**, open the shortcut menu for the **IncidentDocuments.lsml** node, and select **Open**.
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **IncidentDocuments.lsml** node and select **Open**.
-    
- 
-2. In the entity designer, on the  **Perspective** bar select **Server**, and then on the toolbar select **Relationship**.
-    
- 
-3. In the  **Add New Relationship** dialog box, in the **To** dropdown list, select **Incident** as shown in Figure 25.
-    
-    *Figure 25. The Add New Relationship dialog box*
+2. In the entity designer, on the **Perspective** bar, select **Server**, and then on the toolbar, select **Relationship**.
 
-  ![The relationship between entities](../images/CBA_IM_11b.PNG)
- 
-
- 
-
- 
-4. In the  **Foreign** key dropdown list, select the **IncidentNumber (String)** field from the **IncidentDocuments** entity.
+3. In the **Add New Relationship** dialog box, in the **To** list, select **Incident** as shown in Figure 25.
     
- 
-5. In the  **Primary** key dropdown list, select the **IncidentNumber (String)** field from the **Incidents** entity, and then select **OK**.
-    
-    Figure 26 shows the Foreign and Primary keys.
-    
+   *Figure 25. The Add New Relationship dialog box*
 
-    *Figure 26. Foreign and primary keys*
+   ![The relationship between entities](../images/CBA_IM_11b.PNG)
 
-  ![The associated fields](../images/CBA_IM_11c.PNG)
- 
+4. In the **Foreign** key list, select the **IncidentNumber (String)** field from the **IncidentDocuments** entity.
 
+5. In the **Primary** key list, select the **IncidentNumber (String)** field from the **Incidents** entity, and then select **OK**. Figure 26 shows the Foreign and Primary keys.
     
- 
+   *Figure 26. Foreign and primary keys*
 
-    
-    In the next step, you'll add the document library to the  **ViewIncidents** screen.
-    
- 
+   ![The associated fields](../images/CBA_IM_11c.PNG)
+
+In the next step, you'll add the document library to the **ViewIncidents** screen.
 
 ### To add a document library to a screen
 
+1. In **Solution Explorer**, open the shortcut menu for the **ViewIncidents.lsml** node, and select **Open**.
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **ViewIncidents.lsml** node and select **Open**.
-    
- 
-2. In the screen designer, open the shortcut menu for the  **Tab** node and select **Add Tab**.
-    
- 
-3. In the  **Properties** window, change the **Name** property toDocuments.
-    
- 
-4. In the screen designer, in the left pane, select the  **Add IncidentDocuments** link.
-    
- 
-5. In the center pane, under the  **Rows Layout | Documents** node, open the **Add** list and select **Incident Documents**.
-    
- 
-6. Under the  **Rows Layout | Documents** node, open the shortcut menu for the **Command Bar** node and select **Add Button**.
-    
- 
-7. In the  **Add Button** dialog box, expand the **showTab** list and in the **IncidentDocuments** group select**createOrUploadDocument** as shown in Figure 27, and then select **OK**.
-    
-    *Figure 27. The Add Button dialog box*
+2. In the screen designer, open the shortcut menu for the **Tab** node, and select **Add Tab**.
 
-  ![Button to create or upload documents](../images/CBA_IM_14.PNG)
- 
+3. In the Properties window, change the **Name** property to **Documents**.
 
- 
+4. In the screen designer, in the left pane, select the **Add IncidentDocuments** link.
 
- 
-8. In the  **Properties** window, select the **Display Name** property and enterAdd Document.
-    
- 
-9. Expand the  **Icon** property list and select **Attachment**.
-    
- 
-10. On the menu bar, select  **Debug**,  **Start Debugging** to run the add-in.
-    
- 
-11. select an incident, select the  **Documents** tab, and then select the **Add Document** button.
-    
-    The SharePoint  **Create a new file** dialog box opens, as shown in Figure 28.
-    
+5. In the center pane, under the **Rows Layout | Documents** node, open the **Add** list, and select **Incident Documents**.
 
+6. Under the **Rows Layout | Documents** node, open the shortcut menu for the **Command Bar** node, and select **Add Button**.
+
+7. In the **Add Button** dialog box, expand the **showTab** list, and in the **IncidentDocuments** group, select **createOrUploadDocument** as shown in Figure 27, and then select **OK**.
+    
+   *Figure 27. The Add Button dialog box*
+
+   ![Button to create or upload documents](../images/CBA_IM_14.PNG)
+
+8. In the Properties window, select the **Display Name** property and enter **Add Document**.
+
+9. Expand the **Icon** property list, and select **Attachment**.
+
+10. On the menu bar, select **Debug** > **Start Debugging** to run the add-in.
+
+11. Select an incident, select the **Documents** tab, and then select **Add Document**.
+    
+    The SharePoint **Create a new file** dialog box opens, as shown in Figure 28.
+    
     *Figure 28. The Create a new file dialog box*
 
-  ![The SharePoint Create a new file dialog](../images/CBA_IM_15.PNG)
+    ![The SharePoint Create a new file dialog box](../images/CBA_IM_15.PNG)
  
+12. Select the **UPLOAD EXISTING FILE** link, select any file to upload, and then select **Open**.
+    
+    The file is added to the **Documents** tab.
+    
+    > [!TIP]
+    > If you select an Office document, you can view it in the add-in.
 
- 
+13. Select **Add Document**, and in the **Create a new file** dialog box, select **Word document**.
+    
+    A new Word document opens in Word Online.
 
- 
-12. select the  **UPLOAD EXISTING FILE** link and select any file to upload, and then select the **Open** button.
-    
-    The file is added to the  **Documents** tab.
-    
-     **Tip**  If you select an Office document, you can view it in the add-in.
-13. select the Add Document button, and in the  **Create a new file** dialog box, select **Word document**.
-    
-    A new Word document opens in  **Word Online**.
-    
- 
-14. On the title bar, select the  **Document** name field as shown in Figure 29 and enterIncident Report.
+14. On the title bar, select the **Document** name field as shown in Figure 29, and enter **Incident Report**.
     
     *Figure 29. The Document name field*
 
-  ![The file name](../images/CBA_IM_16.PNG)
- 
+    ![The Document name field](../images/CBA_IM_16.PNG)
 
     This will be used as the file name for the document.
-    
-    
-     **Note**  If you don't enter a file name, it will be saved with the default name  **Document.docx**. Once saved, the file name can only be changed by accessing it in the document library in SharePoint.
-15. select the back button in your browser to return to the add-in. The  **Incident Report** document should appear on the **Documents** tab.
-    
- 
-16. select the  **Close** button in your browser to return to design mode.
-    
-    
- 
 
+    > [!NOTE]
+    > If you don't enter a file name, it will be saved with the default name **Document.docx**. Once saved, the file name can only be changed by accessing it in the document library in SharePoint.
     
-    In the next section, you'll customize the add-in and add some JavaScript code.
-    
- 
+15. Select the back button in your browser to return to the add-in. The **Incident Report** document should appear on the **Documents** tab.
 
-## Customize the Add-in
+16. select **Close** in your browser to return to design mode.
+
+In the next section, you'll customize the add-in and add some JavaScript code.
+
 <a name="custom"> </a>
+## Customize the add-in
 
 The Contoso Fire Department is pleased with the additions to the Incident Manager add-in, but there are few more "fit and finish" items on their list. They want to display their logo on the screens instead of the default icon. They don't like the  **FlipSwitch** control for **Insured** field on the **AddEditPatient** screen and want it replaced with a check box. Finally, since not all incidents have patients, they don't want the **Patients** tab on the **ViewIncidents** screen at appear if there aren't any patients.
- 
-
- 
 
 ### To display a custom logo
 
