@@ -174,296 +174,185 @@ In the next step, you'll add screens to view, add, and edit both Patient and Inc
 
 ### To add screens
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **Incidents.lsml** node and select **Open**.
-    
- 
-2. In the screen designer, on the  **Perspective** bar, select the **HTML Client** tab, and then on the toolbar select the **Screen** button.
-    
-    The  **Add New Screen** dialog box opens.
-    
- 
-3. In the  **Add New Screen** dialog box, in the **Select a screen template** list, select **Common Screen Set**.
-    
- 
-4. In the  **Screen Set Name** text box, enterIncidents.
-    
- 
-5. In the  **Screen Data** list, select **Incidents**.
-    
- 
-6. Select both the  **Incident Details** and **Incident Patients** check boxes, and then select **OK**.
-    
-    Figure 5 shows the Add New Screen dialog.
-    
+1. In **Solution Explorer**, open the shortcut menu for the **Incidents.lsml** node, and select **Open**.
 
-    *Figure 5. Add New Screen dialog*
+2. In the screen designer, on the **Perspective** bar, select the **HTML Client** tab, and then on the toolbar, select the **Screen** button.
 
-  ![The Incidents screen set](../images/CBA_IM_4.PNG)
- 
+3. In the **Add New Screen** dialog box, in the **Select a screen template** list, select **Common Screen Set**.
 
-    Browse, View Details, and Add/Edit screens are added to the HTMLClient project. The Browse screen is automatically set as the home screen for the application, and the necessary commands for launching the View and Add/Edit screens are automatically provided.
-    
- 
-7. On the menu bar, select  **Debug**,  **Start Debugging** to run the application. If the **Connect to SharePoint** dialog box appears, enter your user name and password.
-    
- 
-8. If prompted, select the  **Trust It** button. The add-in will open with a blank screen. Notice that the screen title is **IncidentsSet**.
-    
- 
-9. select the  **Add** button.
-    
-    The  **Incidents** dialog box opens. Notice that while you can enter incident data, there's no provision for adding patients. You'll fix that and other design issues by customizing the screens.
-    
-    
- 
+4. In the **Screen Set Name** box, enter **Incidents**.
 
+5. In the **Screen Data** list, select **Incidents**.
+
+6. Select both the **Incident Details** and **Incident Patients** check boxes, and then select **OK**.
     
-    In the next step, you'll customize the Browse screen.
+   Figure 5 shows the Add New Screen dialog box.
     
+   *Figure 5. Add New Screen dialog box*
+
+   ![The Incidents screen set](../images/CBA_IM_4.PNG)
  
-10. Close the  **Incident** dialog box, and then close the browser window to return to design mode.
-    
+   The Browse Data, View Details, and Add/Edit Details screens are added to the HTMLClient project. The Browse Data screen is automatically set as the home screen for the application, and the necessary commands for launching the View Details and Add/Edit Details screens are automatically provided.  
  
+7. On the menu bar, select **Debug** > **Start Debugging** to run the application. If the **Connect to SharePoint** dialog box appears, enter your user name and password.
+
+8. If prompted, select the **Trust It** button. The add-in opens with a blank screen. Notice that the screen title is **IncidentsSet**.
+
+9. Select the **Add** button.
+    
+   The **Incidents** dialog box opens. Notice that while you can enter incident data, there's no provision for adding patients. You'll fix that and other design issues by customizing the screens.
+
+10. Close the **Incidents** dialog box, and then close the browser window to return to design mode.
+    
+In the next step, you'll customize the browse screen. 
 
 ### To customize the browse screen
 
+1. In **Solution Explorer**, open the shortcut menu for the **BrowseIncidentsSet.lsml** node, and select **Open**.
 
-1. In  **Solution Explorer** screen, open the shortcut menu for the **BrowseIncidentsSet.lsml** node and select **Open**.
-    
- 
-2. In the  **Properties** window, select the **Display Name** property and enterIncidents.
-    
- 
-3. In the screen designer, select the  **Rows Layout | rows** node, and then expand the **Add** list and select **Incident Address**.
-    
- 
-4. select the  **Dispatch Time** node, and then on the toolbar select the **Delete** button.
-    
-    Figure 6 shows the finished screen layout.
-    
+2. In the Properties window, select the **Display Name** property and enter **Incidents**.
 
-    *Figure 6. Browse screen layout*
+3. In the screen designer, select the **Rows Layout | rows** node, and then expand the **Add** list, and select **Incident Address**.
 
-  ![Browse screen layout](../images/CBA_IM4a.PNG)
- 
+4. Select the **Dispatch Time** node, and then on the toolbar, select **Delete**.
+    
+   Figure 6 shows the finished screen layout.
+    
+   *Figure 6. Browse screen layout*
 
-    At run time the screen will display a tile for each incident, and each tile will display the incident number, date, and address.
-    
-    
+   ![Browse screen layout](../images/CBA_IM4a.PNG)
  
-
+   At run time, the screen displays a tile for each incident, and each tile displays the incident number, date, and address.
     
-    In the next step, you'll customize the Add/Edit screen.
-    
- 
+In the next step, you'll customize the add/edit screen.
 
 ### To customize the add/edit screen
 
+1. In **Solution Explorer**, open the shortcut menu for the **AddEditIncidents.lsml** node, and select **Open**.
 
-1. In  **Solution Explorer** screen, open the shortcut menu for the **AddEditIncidents.lsml** node and select **Open**.
-    
- 
-2. select the  **Incident Address**,  **Reporting Party Name**, and  **Reporting Phone** nodes and drag them to the **Rows Layout | left** section, below the **Incident Type** node.
-    
- 
-3. select the  **Dispatch Time** node, and in the **Properties** window clear the **Date Picker Enabled** check box.
-    
-    The date isn't needed since it will always be the same as the incident date.
-    
- 
-4. In the left pane of the screen designer, select the  **Add Patients** link, as shown in figure 7.
-    
-    *Figure 7. Add Patients link*
+2. Select the **Incident Address**, **Reporting Party Name**, and **Reporting Phone** nodes, and drag them to the **Rows Layout | left** section, under the **Incident Type** node.
 
-  ![The Add Patients link](../images/CBA_IM_5.PNG)
- 
-
- 
-
- 
-5. In the left pane, select the  **Patients** node and drag it under the **Incident Commander** node in the center pane.
+3. Select the **Dispatch Time** node, and in the Properties window, clear the **Date Picker Enabled** check box.
     
-    Figure 8 shows the finished screen layout.
-    
+   The date isn't needed because it is always the same as the incident date.
 
-    *Figure 8. The Add/Edit screen layout*
-
-  ![Add/Edit screen layout](../images/CBA_IM_5a.PNG)
- 
-
+4. In the left pane of the screen designer, select the **Add Patients** link, as shown in Figure 7.
     
- 
+   *Figure 7. Add Patients link*
 
+   ![The Add Patients link](../images/CBA_IM_5.PNG)
+
+5. In the left pane, select the **Patients** node and drag it under the **Incident Commander** node in the center pane.
     
-    In the next step, you'll create a screen to add patient records.
-    
- 
+   Figure 8 shows the finished screen layout.
+
+   *Figure 8. The add/edit screen layout*
+
+   ![add/edit screen layout](../images/CBA_IM_5a.PNG)
+
+In the next step, you'll create a screen to add patient records.
 
 ### To add a Patients screen
 
+1. In **Solution Explorer**, open the shortcut menu for the **AddEditIncidents.lsml** node, and select **Open**.
 
-1. In  **Solution Explorer** screen, open the shortcut menu for the **AddEditIncidents.lsml** node and select **Open**.
-    
- 
-2. In the screen designer, under the  **Rows Layout | Details (Tab)** node, open the shortcut menu for the **Command Bar** node and select **Add Button**.
-    
- 
-3. In the  **Add Button** dialog box, expand the **showTab** list and in the **Patients** group select **addAndEditNew**, and then select **OK**.
-    
-    The  **Add New Screen** dialog box opens.
-    
- 
-4. In the  **Add New Screen** dialog box, accept the default values and select **OK**.
-    
-    The  **AddEditPatient** screen opens in the screen designer.
-    
- 
-5. In the Properties window, select the  **Display Name** property and enterAdd Patient.
-    
- 
-6. In the screen designer, select the  **Incident** node and delete it.
-    
-    The  **Incidents** field isn't needed since the patient is already associated with an incident.
-    
-    Figure 9 shows the finished screen layout.
-    
+2. In the screen designer, under the **Rows Layout | Details (Tab)** node, open the shortcut menu for the **Command Bar** node, and select **Add Button**.
 
-    *Figure 9. The Add/Edit screen layout*
+3. In the **Add Button** dialog box, expand the **showTab** list, and in the **Patients** group, select **addAndEditNew**, and then select **OK**.
 
-  ![Add/Edit screen layout](../images/CBA_IM_6.PNG)
+4. In the **Add New Screen** dialog box, accept the default values, and then select **OK**.
+    
+   The **AddEditPatient** screen opens in the screen designer.
+    
+5. In the Properties window, select the **Display Name** property, and enter **Add Patient**.
  
+6. In the screen designer, select the **Incident** node and delete it.
+    
+   The **Incidents** field isn't needed because the patient is already associated with an incident.
+    
+   Figure 9 shows the finished screen layout.
+    
+   *Figure 9. The Add Patient screen layout*
 
-    
+   ![Add Patient screen layout](../images/CBA_IM_6.PNG)
  
-
-    
-    In the next step, you'll run the add-in and add some data.
-    
- 
+In the next step, you'll run the add-in and add some data.
 
 ### To test the add-in
 
+1. On the menu bar, select **Debug** > **Start Debugging**.
 
-1. On the menu bar, select  **Debug**,  **Start Debugging**.
+2. In the running add-in, select the **Add** button.
     
- 
-2. In the running add-in, select the  **Add** button.
-    
-    The  **Incidents** Popup opens, as shown in figure 10.
-    
+   The **Incidents** pop-up window opens, as shown in Figure 10.
+   
+   *Figure 10. The Incidents pop-up window*
 
-    *Figure 10. The Incidents Popup*
+   ![The Incidents pop-up window](../images/CBA_IM_7.PNG)
 
-  ![The Add Incident Popup](../images/CBA_IM_7.PNG)
- 
+3. In the **Incident Number** box, enter **2014-1**.
 
- 
+4. In the **Incident Date** and **Dispatch Time** fields, use the **Date Picker** and **Time Picker** controls to select a date and time.
 
- 
-3. In the  **Incident Number** text box, enter2014-1.
-    
- 
-4. In the  **Incident Date** and **Dispatch Time** fields, use the **Date Picker** and **Time Picker** controls to select a date and time.
-    
- 
-5. In the  **Incident Type** list, select **Aid - Basic Life Support**.
-    
- 
-6. In the  **Incident Address** text box, enter a street address in your city.
-    
-     Don't include city, state, or postal code. It's assumed that the fire department only serves one city.
-    
- 
-7. In the  **Incident Commander** **Person Picker** control, enter the name of a user on your SharePoint site.
-    
-    Notice that as you type a list of all matching names is displayed.
-    
- 
-8. select the  **Add Patient** button.
-    
-    The  **Add Patient** Popup opens, as shown in Figure 11.
-    
+5. In the **Incident Type** list, select **Aid - Basic Life Support**.
 
-    *Figure 11. The Add Patient Popup*
+6. In the **Incident Address** box, enter a street address in your city. Don't include city, state, or postal code. It's assumed that the fire department only serves one city.
 
-  ![The Add Patient Popup](../images/CBA_IM_8.PNG)
- 
+7. In the **Incident Commander** person picker control, enter the name of a user on your SharePoint site.
+    
+   Notice that as you type, a list of all matching names is displayed.
+   
+8. Select the **Add Patient** button. The **Add Patient** pop-up window opens, as shown in Figure 11.
+    
+   *Figure 11. The Add Patient window*
 
- 
+   ![The Add Patient window](../images/CBA_IM_8.PNG)
 
- 
-9. Enter information for a patient, and then select the  **Save** button.
+9. Enter information for a patient, and then select **Save**.
     
-    The name of the patient that you added is displayed on the  **Incidents** Popup. If you want, you can add more patients.
+   The name of the patient that you added is displayed on the **Incidents** pop-up window. If you want, you can add more patients.
     
- 
-10. On the  **Incidents** Popup, select the **Save** button.
+10. On the **Incidents** pop-up window, select **Save**.
     
-    If you were following instructions, you will see a validation error message. The  **Reporting Phone** field is a required field. Cloud business add-ins have built-in validation for required fields.
-    
- 
-11. Enter a phone number and then select the  **Save** button again.
-    
-    A tile is displayed on the home  **Incidents** screen with the incident number, date, and address.
-    
- 
-12. select the tile to open the View screen for the incident.
-    
-    Notice that the  **Reporting Phone** field is displayed as a hyperlink, providing direct access to your default phone application.
-    
- 
-13. select the  **Edit** button to open the **AddEditIncidents** screen, and the select the **Discard** button to return to the **View** screen.
-    
- 
-14. select the  **Patients** tab to display a list of patients, and then select a patient tile.
-    
-    Notice that it doesn't open a view screen for the patient. That's because you haven't created one yet.
-    
- 
-15. select the  **Close** button in your browser to return to design mode.
-    
-    
- 
+    If you were following instructions, you see a validation error message. The **Reporting Phone** field is a required field. Cloud business add-ins have built-in validation for required fields.
 
+11. Enter a phone number, and then select **Save** again.
     
-    In the next step, you'll add a screen to view patients.
+    A tile is displayed on the home **Incidents** screen with the incident number, date, and address.
+
+12. Select the tile to open the View screen for the incident.
     
- 
+    Notice that the **Reporting Phone** field is displayed as a link, providing direct access to your default phone application.
+
+13. Select **Edit** to open the **AddEditIncidents** screen, and then select **Discard** to return to the **View** screen.
+
+14. Select the **Patients** tab to display a list of patients, and then select a patient tile.
+    
+    Notice that it doesn't open a view screen for the patient; that's because you haven't created one yet.
+
+15. Select **Close** in your browser to return to design mode.
+
+In the next step, you'll add a screen to view patients.
 
 ### To add a view screen
 
+1. In **Solution Explorer**, open the shortcut menu for the **Patients.lsml** node, and select **Open**.
 
-1. In  **Solution Explorer** screen, open the shortcut menu for the **Patients.lsml** node and select **Open**.
+2. In the entity designer, on the **Perspective** bar, select **HTMLClient**, and then on the toolbar, select the **Screen** button.
+
+3. In the **Add New Screen** dialog box, in the **Select a screen template** list, select **View Details Screen**.
+
+4. In the **Screen Set Name** box, enter **ViewPatient**, select **Patient** in the **Screen Data** list, and then select **OK**.
     
- 
-2. In the entity designer, on the  **Perspective** bar, select **HTMLClient**, and then on the toolbar select the  **Screen** button.
-    
-    The  **Add New Screen** dialog box opens.
-    
- 
-3. In the  **Add New Screen** dialog box, in the **Select a screen template** list, select **View Details Screen**.
-    
- 
-4. In the  **Screen Name** text box, enter **ViewPatient**, select  **Patient** in the **Screen Data** list, and then select **OK**.
-    
-    The  **ViewPatient** screen opens in the screen designer.
-    
- 
-5. In the screen designer, under the  **Rows Layout | Details (Tab)** node, open the shortcut menu for the **Command Bar** node and select **Add Button**.
-    
- 
-6. In the  **Add Button** dialog box, expand the **showTab** list and in the **Patient** group select **Edit**, and then select the  **OK** button.
-    
- 
+   The **ViewPatient** screen opens in the screen designer.
+
+5. In the screen designer, under the **Rows Layout | Details (Tab)** node, open the shortcut menu for the **Command Bar** node, and select **Add Button**.
+
+6. In the **Add Button** dialog box, expand the **showTab** list, and in the **Patient** group, select **Edit**, and then select **OK**.
+
 7. Run the application and verify that you can now view and edit patient records.
-    
-    
- 
 
-    
-    You have now built a fully functional incident management add-in, but there's much more you can do with cloud business add-ins. In the next section, you'll learn how to utilize resources on the SharePoint site from the incident management add-in.
-    
- 
+You have now built a fully functional incident management add-in, but there's much more you can do with cloud business add-ins. In the next section, you'll learn how to utilize resources on the SharePoint site from the incident management add-in.
 
 ## Integrate SharePoint Resources
 <a name="integrate"> </a>
@@ -563,7 +452,7 @@ The first step is to add a couple of pre-populated list templates to your develo
 ### To add a SharePoint data source
 
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **Data Sources** node and select **Add Data Source**.
+1. In **Solution Explorer**, open the shortcut menu for the  **Data Sources** node and select **Add Data Source**.
     
     The Attach Data Source Wizard opens.
     
@@ -605,7 +494,7 @@ The first step is to add a couple of pre-populated list templates to your develo
 ### To define the AvailableApparatus query
 
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **ApparatusSet.lsml** node and select **Add Query**.
+1. In **Solution Explorer**, open the shortcut menu for the  **ApparatusSet.lsml** node and select **Add Query**.
     
     The query designer opens.
     
