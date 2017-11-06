@@ -1,73 +1,50 @@
 ---
-title: Incident manager A cloud business add-in tutorial
-ms.date: 09/25/2017
+title: Incident Manager - A cloud business add-in tutorial
+description: Create a SharePoint hosted add-in for a fictional fire department to handle on-scene incident management.
+ms.date: 11/06/2017
 ms.prod: sharepoint
 ---
 
+# Incident Manager: A cloud business add-in tutorial
 
-# Incident manager: A cloud business add-in tutorial
-By using the  **Cloud Business Add-in** template in Visual Studio, you can create a SharePoint hosted in which mobile users can view, add, and update data from remote locations by using modern, touch-oriented devices such as phones and tablets. In this tutorial, you'll create an add-in for a fictional Contoso Fire Department to handle on-scene incident management. The walkthrough covers the core concepts of building a Cloud Business Add-in as well as more advanced concepts such as integrating SharePoint lists and document libraries.
+By using the Cloud Business Add-in template in Visual Studio, you can create a SharePoint hosted add-in in which mobile users can view, add, and update data from remote locations by using modern, touch-oriented devices such as phones and tablets. In this tutorial, you'll create an add-in for a fictional Contoso Fire Department to handle on-scene incident management. The walkthrough covers the core concepts of building a cloud business add-in as well as more advanced concepts such as integrating SharePoint lists and document libraries.
  
-You can download the Incident Management sample application and associated files from the MSDN Samples Gallery:  [Incident Manager: A Cloud Business Add-in Tutorial](http://code.msdn.microsoft.com/Incident-Manager-A-Cloud-c32d9b04).
- 
-
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
- 
-
+You can [download the Incident Manager sample application and associated files from the MSDN Samples Gallery](https://code.msdn.microsoft.com/Incident-Manager-A-Cloud-c32d9b04).
 
 ## Prerequisites
 
 This walkthrough requires Visual Studio 2013 Update 1 and Microsoft Developer Tools for Visual Studio 2013 - March 2014 Update.
- 
 
+To host the add-in, you'll also need a SharePoint Developer site on Office 365, which you can get from the [Sign up for an Office 365 Developer Site](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/set-up-a-development-environment-for-sharepoint-add-ins-on-office-365#sign-up-for-an-office-365-developer-site).
  
-To host the add-in, you'll also need a SharePoint Developer site on Office 365, which you can get from the  [Sign up for an Office 365 Developer Site](http://go.microsoft.com/fwlink/?LinkId=263490).
- 
+> [!NOTE]
+> You can also host a cloud business add-in on a SharePoint site.
 
- 
-
- **Note**  You can also host a Cloud Business Add-in on a SharePoint site.
- 
-
-
-## Create the Incident Management Application
 <a name="add-in"> </a>
+## Create the Incident Manager add-in
 
-The Contoso Fire Department responds to fires, medical aid emergencies, motor vehicle accidents and other emergencies. Each emergency incident requires considerable paperwork to document the incident. They currently enter information using paper forms on-scene, and then enter the information into their computer system when they return to the firehouse. They have recently adopted SharePoint for Office 365 for records management, and they have purchased tablets to enable the Incident Commander to enter data on-scene.
- 
+The Contoso Fire Department responds to fires, medical aid emergencies, motor vehicle accidents, and other emergencies. Each emergency incident requires considerable paperwork to document the incident. They currently enter information by using paper forms on-scene, and then enter the information into their computer system when they return to the firehouse. They have recently adopted SharePoint for Office 365 for records management, and they have purchased tablets to enable the Incident Commander to enter data on-scene.
 
- 
-You will build the mobile add-in that will be used to enter basic information about the incident. Since many incidents also involve medical aid, the add-in will also need to be able to enter data for multiple patients per incident. In this section you will build the basic application, learning the fundamentals of Cloud Business Add-ins along the way.
- 
-
- 
+You will build the mobile add-in that is used to enter basic information about the incident. Because many incidents also involve medical aid, the add-in also needs to be able to enter data for multiple patients per incident. In this section, you will build the basic application, learning the fundamentals of cloud business add-ins along the way.
 
 ### To create a project
 
-
-1. On the menu bar, choose  **File**,  **New**,  **Project**.
+1. On the menu bar, select **File** > **New** > **Project**.
     
-    The  **New Project** dialog box opens.
+   The **New Project** dialog box opens.
+
+2. In the list of templates, expand the **Visual Basic** or **Visual C#** node, expand the **Office/SharePoint** node, select the **Add-ins** node, and then select the **Cloud Business Add-in** template, as shown in Figure 1.
     
- 
-2. In the list of templates, expand the  **Visual Basic** or **Visual C#** node, expand the **Office/SharePoint** node, choose the **Add-ins** node, and then choose the **Cloud Business Add-in** template, as shown in Figure 1.
-    
-    **Figure 1. Cloud Business Add-in template**
+   *Figure 1. Cloud Business Add-in template*
 
- 
+   ![Cloud Business App template](../images/CBA_IM1.PNG)
 
-  ![Cloud Business App template](../images/CBA_IM1.PNG)
- 
-
- 
-
- 
-3. In the  **Name** text box, enterIncidentManager, and then choose the  **OK** button.
+3. In the  **Name** text box, enterIncidentManager, and then select **OK**.
     
     The  **New Cloud Business Add-in** wizard opens.
     
  
-4. In the  **New Cloud Business Add-in** wizard, enter the URL for your Office 365 Developer site, and then choose the **Finish** button.
+4. In the  **New Cloud Business Add-in** wizard, enter the URL for your Office 365 Developer site, and then select **Finish**.
     
     The URL should take the form https://  _MySite_.sharepoint.com/sites/Developer/.
     
@@ -84,7 +61,7 @@ You will build the mobile add-in that will be used to enter basic information ab
 ### To add the Incident entity
 
 
-1. On the  **Start** screen, choose the **Create New Table** hyperlink.
+1. On the  **Start** screen, select the **Create New Table** link.
     
     The entity designer opens.
     
@@ -92,10 +69,10 @@ You will build the mobile add-in that will be used to enter basic information ab
 2. In the  **Properties** window, in the text box for the **Name** property, enterIncident.
     
  
-3. In the entity designer, choose the  **<Add Property>** link and enterIncidentNumber.
+3. In the entity designer, select the  **<Add Property>** link and enterIncidentNumber.
     
  
-4. Choose the Enter key, accepting the default **Type**,  **String**, and leaving the  **Required** checkbox selected.
+4. Select the Enter key, accepting the default **Type**,  **String**, and leaving the  **Required** checkbox selected.
     
  
 5. In the  **Properties** window, select the **Include in Unique Index** check box.
@@ -103,45 +80,45 @@ You will build the mobile add-in that will be used to enter basic information ab
     The incident number must be unique for each incident.
     
  
-6. Choose the  **<Add Property>** link and enterIncidentDate, and then choose the  **Tab** key.
+6. Select the  **<Add Property>** link and enterIncidentDate, and then select the **Tab** key.
     
  
-7. In the  **Type** column, choose **Date**, and then choose the Tab key twice.
+7. In the  **Type** column, select **Date**, and then select the Tab key twice.
     
  
-8. In the  **Name** column enterDispatchTime, and in the  **Type** column choose the **DateTime** data type.
+8. In the  **Name** column enterDispatchTime, and in the  **Type** column select the **DateTime** data type.
     
  
-9. In the next row enter IncidentType and choose **Integer** as the data type.
+9. In the next row enter IncidentType and select **Integer** as the data type.
     
  
-10. In the next row enter IncidentAddress and choose **String** as the data type.
+10. In the next row enter IncidentAddress and select **String** as the data type.
     
  
-11. In the next row enter ReportingPartyName and choose **String** as the data type, and then clear the **Required** check box.
+11. In the next row enter ReportingPartyName and select **String** as the data type, and then clear the **Required** check box.
     
     Sometimes incidents are reported anonymously, so you don't want to require a value in this field.
     
  
-12. In the next row enter ReportingPhone and choose the **PhoneNumber** data type.
+12. In the next row enter ReportingPhone and select the **PhoneNumber** data type.
     
      **Phone Number** is acustom business type that automatically formats and provides validation for telephone numbers.
     
  
-13. In the  **Properties** window, choose the **Phone Number Formats** hyperlink.
+13. In the  **Properties** window, select the **Phone Number Formats** hyperlink.
     
     The  **Phone Number Formats** dialog box opens.
     
  
-14. In the  **Phone Number Formats** dialog box, choose the appropriate format for your locale, and then choose the **Move Up** button to move it to the top of the list.
+14. In the  **Phone Number Formats** dialog box, select the appropriate format for your locale, and then select the **Move Up** button to move it to the top of the list.
     
  
-15. In the  **Test Phone Number Validation** text box, enter a phone number and verify that it's properly formatted, and then choose the **Save** button.
+15. In the  **Test Phone Number Validation** text box, enter a phone number and verify that it's properly formatted, and then select the **Save** button.
     
     The  **Phone Number** business type handles formatting and validation for you on any screen where it appears.
     
  
-16. In the next row enter IncidentCommander and choose the **Person** data type.
+16. In the next row enter IncidentCommander and select the **Person** data type.
     
     The  **Person** business type provides a connection to the SharePoint User Profile Service, which pulls user information from Active Directory.
     
@@ -159,25 +136,25 @@ You will build the mobile add-in that will be used to enter basic information ab
  
 
     
-    In the next step, you'll add a choice list that allows the user to choose from a fixed set of values. In this case, the fire department has a set of common incident types.
+    In the next step, you'll add a choice list that allows the user to select from a fixed set of values. In this case, the fire department has a set of common incident types.
     
  
 
 ### To add a list of choices
 
 
-1. In the entity designer, choose the  **IncidentType** field, and then in the **Properties** window choose the **Choice List** hyperlink.
+1. In the entity designer, select the  **IncidentType** field, and then in the **Properties** window select the **Choice List** hyperlink.
     
     The  **Choice List** dialog box opens.
     
  
-2. In the  **Choice List** dialog box, choose the **Add Value** link and enter1.
+2. In the  **Choice List** dialog box, select the **Add Value** link and enter1.
     
  
 3. In the  **Display Name** column, enter **Fire - Commercial**.
     
  
-4. Enter the following values and display names, and then choose the  **OK** button.
+4. Enter the following values and display names, and then select the  **OK** button.
     
 
 |**Value**|**Display Name**|
@@ -199,7 +176,7 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
 ### To add the Patient entity
 
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **Data Sources** node and choose **Add Table**.
+1. In  **Solution Explorer**, open the shortcut menu for the  **Data Sources** node and select **Add Table**.
     
  
 2. In the  **Properties** window, in the text box for the **Name** property, enterPatient.
@@ -225,21 +202,21 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
 ### To define a relationship
 
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **Incidents.lsml** node and choose **Open**.
+1. In  **Solution Explorer**, open the shortcut menu for the  **Incidents.lsml** node and select **Open**.
     
  
-2. On the toolbar, choose the  **Relationship** button.
+2. On the toolbar, select the  **Relationship** button.
     
     The  **Add New Relationship** dialog box appears.
     
  
-3. In the  **Add New Relationship** dialog box, in the **To** column of the **Name** row, choose **Patient**.
+3. In the  **Add New Relationship** dialog box, in the **To** column of the **Name** row, select **Patient**.
     
  
-4. In the  **Multiplicity** row, in the **From** column choose **Zero or one**.
+4. In the  **Multiplicity** row, in the **From** column select **Zero or one**.
     
  
-5. In the  **To** column, choose **Many**, and then choose the  **OK** button.
+5. In the  **To** column, select **Many**, and then select the  **OK** button.
     
     Figure 4 shows the relationship.
     
@@ -264,24 +241,24 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
 ### To add screens
 
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **Incidents.lsml** node and choose **Open**.
+1. In  **Solution Explorer**, open the shortcut menu for the  **Incidents.lsml** node and select **Open**.
     
  
-2. In the screen designer, on the  **Perspective** bar, choose the **HTML Client** tab, and then on the toolbar choose the **Screen** button.
+2. In the screen designer, on the  **Perspective** bar, select the **HTML Client** tab, and then on the toolbar select the **Screen** button.
     
     The  **Add New Screen** dialog box opens.
     
  
-3. In the  **Add New Screen** dialog box, in the **Select a screen template** list, choose **Common Screen Set**.
+3. In the  **Add New Screen** dialog box, in the **Select a screen template** list, select **Common Screen Set**.
     
  
 4. In the  **Screen Set Name** text box, enterIncidents.
     
  
-5. In the  **Screen Data** list, choose **Incidents**.
+5. In the  **Screen Data** list, select **Incidents**.
     
  
-6. Select both the  **Incident Details** and **Incident Patients** check boxes, and then choose the **OK** button.
+6. Select both the  **Incident Details** and **Incident Patients** check boxes, and then select the **OK** button.
     
     Figure 5 shows the Add New Screen dialog.
     
@@ -296,13 +273,13 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
     Browse, View Details, and Add/Edit screens are added to the HTMLClient project. The Browse screen is automatically set as the home screen for the application, and the necessary commands for launching the View and Add/Edit screens are automatically provided.
     
  
-7. On the menu bar, choose  **Debug**,  **Start Debugging** to run the application. If the **Connect to SharePoint** dialog box appears, enter your user name and password.
+7. On the menu bar, select  **Debug**,  **Start Debugging** to run the application. If the **Connect to SharePoint** dialog box appears, enter your user name and password.
     
  
-8. If prompted, choose the  **Trust It** button. The add-in will open with a blank screen. Notice that the screen title is **IncidentsSet**.
+8. If prompted, select the  **Trust It** button. The add-in will open with a blank screen. Notice that the screen title is **IncidentsSet**.
     
  
-9. Choose the  **Add** button.
+9. select the  **Add** button.
     
     The  **Incidents** dialog box opens. Notice that while you can enter incident data, there's no provision for adding patients. You'll fix that and other design issues by customizing the screens.
     
@@ -320,16 +297,16 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
 ### To customize the browse screen
 
 
-1. In  **Solution Explorer** screen, open the shortcut menu for the **BrowseIncidentsSet.lsml** node and choose **Open**.
+1. In  **Solution Explorer** screen, open the shortcut menu for the **BrowseIncidentsSet.lsml** node and select **Open**.
     
  
-2. In the  **Properties** window, choose the **Display Name** property and enterIncidents.
+2. In the  **Properties** window, select the **Display Name** property and enterIncidents.
     
  
-3. In the screen designer, choose the  **Rows Layout | rows** node, and then expand the **Add** list and choose **Incident Address**.
+3. In the screen designer, select the  **Rows Layout | rows** node, and then expand the **Add** list and select **Incident Address**.
     
  
-4. Choose the  **Dispatch Time** node, and then on the toolbar choose the **Delete** button.
+4. select the  **Dispatch Time** node, and then on the toolbar select the **Delete** button.
     
     Figure 6 shows the finished screen layout.
     
@@ -354,18 +331,18 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
 ### To customize the add/edit screen
 
 
-1. In  **Solution Explorer** screen, open the shortcut menu for the **AddEditIncidents.lsml** node and choose **Open**.
+1. In  **Solution Explorer** screen, open the shortcut menu for the **AddEditIncidents.lsml** node and select **Open**.
     
  
-2. Choose the  **Incident Address**,  **Reporting Party Name**, and  **Reporting Phone** nodes and drag them to the **Rows Layout | left** section, below the **Incident Type** node.
+2. select the  **Incident Address**,  **Reporting Party Name**, and  **Reporting Phone** nodes and drag them to the **Rows Layout | left** section, below the **Incident Type** node.
     
  
-3. Choose the  **Dispatch Time** node, and in the **Properties** window clear the **Date Picker Enabled** check box.
+3. select the  **Dispatch Time** node, and in the **Properties** window clear the **Date Picker Enabled** check box.
     
     The date isn't needed since it will always be the same as the incident date.
     
  
-4. In the left pane of the screen designer, choose the  **Add Patients** link, as shown in figure 7.
+4. In the left pane of the screen designer, select the  **Add Patients** link, as shown in figure 7.
     
     **Figure 7. Add Patients link**
 
@@ -377,7 +354,7 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
  
 
  
-5. In the left pane, choose the  **Patients** node and drag it under the **Incident Commander** node in the center pane.
+5. In the left pane, select the  **Patients** node and drag it under the **Incident Commander** node in the center pane.
     
     Figure 8 shows the finished screen layout.
     
@@ -400,26 +377,26 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
 ### To add a Patients screen
 
 
-1. In  **Solution Explorer** screen, open the shortcut menu for the **AddEditIncidents.lsml** node and choose **Open**.
+1. In  **Solution Explorer** screen, open the shortcut menu for the **AddEditIncidents.lsml** node and select **Open**.
     
  
-2. In the screen designer, under the  **Rows Layout | Details (Tab)** node, open the shortcut menu for the **Command Bar** node and choose **Add Button**.
+2. In the screen designer, under the  **Rows Layout | Details (Tab)** node, open the shortcut menu for the **Command Bar** node and select **Add Button**.
     
  
-3. In the  **Add Button** dialog box, expand the **showTab** list and in the **Patients** group choose **addAndEditNew**, and then choose the  **OK** button.
+3. In the  **Add Button** dialog box, expand the **showTab** list and in the **Patients** group select **addAndEditNew**, and then select **OK**.
     
     The  **Add New Screen** dialog box opens.
     
  
-4. In the  **Add New Screen** dialog box, accept the default values and choose the **OK** button.
+4. In the  **Add New Screen** dialog box, accept the default values and select **OK**.
     
     The  **AddEditPatient** screen opens in the screen designer.
     
  
-5. In the Properties window, choose the  **Display Name** property and enterAdd Patient.
+5. In the Properties window, select the  **Display Name** property and enterAdd Patient.
     
  
-6. In the screen designer, choose the  **Incident** node and delete it.
+6. In the screen designer, select the  **Incident** node and delete it.
     
     The  **Incidents** field isn't needed since the patient is already associated with an incident.
     
@@ -444,10 +421,10 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
 ### To test the add-in
 
 
-1. On the menu bar, choose  **Debug**,  **Start Debugging**.
+1. On the menu bar, select  **Debug**,  **Start Debugging**.
     
  
-2. In the running add-in, choose the  **Add** button.
+2. In the running add-in, select the  **Add** button.
     
     The  **Incidents** Popup opens, as shown in figure 10.
     
@@ -468,7 +445,7 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
 4. In the  **Incident Date** and **Dispatch Time** fields, use the **Date Picker** and **Time Picker** controls to select a date and time.
     
  
-5. In the  **Incident Type** list, choose **Aid - Basic Life Support**.
+5. In the  **Incident Type** list, select **Aid - Basic Life Support**.
     
  
 6. In the  **Incident Address** text box, enter a street address in your city.
@@ -481,7 +458,7 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
     Notice that as you type a list of all matching names is displayed.
     
  
-8. Choose the  **Add Patient** button.
+8. select the  **Add Patient** button.
     
     The  **Add Patient** Popup opens, as shown in Figure 11.
     
@@ -496,35 +473,35 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
  
 
  
-9. Enter information for a patient, and then choose the  **Save** button.
+9. Enter information for a patient, and then select the  **Save** button.
     
     The name of the patient that you added is displayed on the  **Incidents** Popup. If you want, you can add more patients.
     
  
-10. On the  **Incidents** Popup, choose the **Save** button.
+10. On the  **Incidents** Popup, select the **Save** button.
     
-    If you were following instructions, you will see a validation error message. The  **Reporting Phone** field is a required field. Cloud Business Add-ins have built-in validation for required fields.
+    If you were following instructions, you will see a validation error message. The  **Reporting Phone** field is a required field. Cloud business add-ins have built-in validation for required fields.
     
  
-11. Enter a phone number and then choose the  **Save** button again.
+11. Enter a phone number and then select the  **Save** button again.
     
     A tile is displayed on the home  **Incidents** screen with the incident number, date, and address.
     
  
-12. Choose the tile to open the View screen for the incident.
+12. select the tile to open the View screen for the incident.
     
     Notice that the  **Reporting Phone** field is displayed as a hyperlink, providing direct access to your default phone application.
     
  
-13. Choose the  **Edit** button to open the **AddEditIncidents** screen, and the choose the **Discard** button to return to the **View** screen.
+13. select the  **Edit** button to open the **AddEditIncidents** screen, and the select the **Discard** button to return to the **View** screen.
     
  
-14. Choose the  **Patients** tab to display a list of patients, and then choose a patient tile.
+14. select the  **Patients** tab to display a list of patients, and then select a patient tile.
     
     Notice that it doesn't open a view screen for the patient. That's because you haven't created one yet.
     
  
-15. Choose the  **Close** button in your browser to return to design mode.
+15. select the  **Close** button in your browser to return to design mode.
     
     
  
@@ -537,26 +514,26 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
 ### To add a view screen
 
 
-1. In  **Solution Explorer** screen, open the shortcut menu for the **Patients.lsml** node and choose **Open**.
+1. In  **Solution Explorer** screen, open the shortcut menu for the **Patients.lsml** node and select **Open**.
     
  
-2. In the entity designer, on the  **Perspective** bar, choose **HTMLClient**, and then on the toolbar choose the  **Screen** button.
+2. In the entity designer, on the  **Perspective** bar, select **HTMLClient**, and then on the toolbar select the  **Screen** button.
     
     The  **Add New Screen** dialog box opens.
     
  
-3. In the  **Add New Screen** dialog box, in the **Select a screen template** list, choose **View Details Screen**.
+3. In the  **Add New Screen** dialog box, in the **Select a screen template** list, select **View Details Screen**.
     
  
-4. In the  **Screen Name** text box, enter **ViewPatient**, choose  **Patient** in the **Screen Data** list, and then choose the **OK** button.
+4. In the  **Screen Name** text box, enter **ViewPatient**, select  **Patient** in the **Screen Data** list, and then select the **OK** button.
     
     The  **ViewPatient** screen opens in the screen designer.
     
  
-5. In the screen designer, under the  **Rows Layout | Details (Tab)** node, open the shortcut menu for the **Command Bar** node and choose **Add Button**.
+5. In the screen designer, under the  **Rows Layout | Details (Tab)** node, open the shortcut menu for the **Command Bar** node and select **Add Button**.
     
  
-6. In the  **Add Button** dialog box, expand the **showTab** list and in the **Patient** group choose **Edit**, and then choose the  **OK** button.
+6. In the  **Add Button** dialog box, expand the **showTab** list and in the **Patient** group select **Edit**, and then select the  **OK** button.
     
  
 7. Run the application and verify that you can now view and edit patient records.
@@ -565,7 +542,7 @@ In the next step, you'll add a Patient entity. Many of the fire department's inc
  
 
     
-    You have now built a fully functional incident management add-in, but there's much more you can do with Cloud Business Add-ins. In the next section, you'll learn how to utilize resources on the SharePoint site from the incident management add-in.
+    You have now built a fully functional incident management add-in, but there's much more you can do with cloud business add-ins. In the next section, you'll learn how to utilize resources on the SharePoint site from the incident management add-in.
     
  
 
@@ -584,10 +561,10 @@ The first step is to add a couple of pre-populated list templates to your develo
 ### To add list templates
 
 
-1. On the menu bar, choose  **Debug**,  **Start Debugging** to run the add-in.
+1. On the menu bar, select **Debug**,  **Start Debugging** to run the add-in.
     
  
-2. In the running add-in, on the chrome bar, choose  **Back to site** link to navigate to your SharePoint developer site, as shown in Figure 12.
+2. In the running add-in, on the chrome bar, select **Back to site** link to navigate to your SharePoint developer site, as shown in Figure 12.
     
     **Figure 12. The Back to site link**
 
@@ -599,10 +576,10 @@ The first step is to add a couple of pre-populated list templates to your develo
  
 
  
-3. On the  **Developer** page, choose the **Site Contents** link.
+3. On the  **Developer** page, select the **Site Contents** link.
     
  
-4. On the  **Site Contents** page, choose the **Settings** link, as shown in Figure 13.
+4. On the  **Site Contents** page, select the **Settings** link, as shown in Figure 13.
     
     **Figure 13. The Settings link**
 
@@ -614,7 +591,7 @@ The first step is to add a couple of pre-populated list templates to your develo
  
 
  
-5. On the  **Site Settings** page, in the **Web Designer Galleries** list, choose the **List templates** link as shown in Figure 14.
+5. On the  **Site Settings** page, in the **Web Designer Galleries** list, select the **List templates** link as shown in Figure 14.
     
     **Figure 14. The List templates link**
 
@@ -626,16 +603,16 @@ The first step is to add a couple of pre-populated list templates to your develo
  
 
  
-6. On the  **List Template Gallery** page, choose the **FILES** tab, and then on the ribbon choose the **Upload Document** button.
+6. On the  **List Template Gallery** page, select the **FILES** tab, and then on the ribbon select the **Upload Document** button.
     
  
-7. In the  **Add a template** dialog box, choose the **Browse** button and then navigate to the **Resources** folder for the downloaded Incident Management sample.
+7. In the  **Add a template** dialog box, select the **Browse** button and then navigate to the **Resources** folder for the downloaded Incident Manager sample.
     
  
-8. Choose the  **ContosoApparatus.stp** file and choose the **Open** button, then choose the **OK** button.
+8. select the  **ContosoApparatus.stp** file and select the **Open** button, then select the **OK** button.
     
  
-9. In the  **List Template Gallery** dialog box, choose the **Save** button.
+9. In the  **List Template Gallery** dialog box, select the **Save** button.
     
  
 10. Repeat the process and upload the  **ContosoPersonnel.stp** file.
@@ -650,13 +627,13 @@ The first step is to add a couple of pre-populated list templates to your develo
  
 
  
-11. Choose the  **Site Contents** link, and on the **Site Contents** page choose the **add an add-in** tile.
+11. select the  **Site Contents** link, and on the **Site Contents** page select the **add an add-in** tile.
     
  
-12. On the  **Site Contents > Your Add-ins** page, choose the **Contoso Apparatus** tile.
+12. On the  **Site Contents > Your Add-ins** page, select the **Contoso Apparatus** tile.
     
      **Note**  You may need to go to the second page of add-ins to find the  **Contoso Apparatus** tile.
-13. In the  **Adding Custom List** dialog box, choose the **Name** text box and enterContoso Apparatus, and then choose the  **Create** button.
+13. In the  **Adding Custom List** dialog box, select the **Name** text box and enterContoso Apparatus, and then select the  **Create** button.
     
  
 14. Repeat the process and add the  **Contoso Personnel** list, enteringContoso Personnel as the name.
@@ -675,12 +652,12 @@ The first step is to add a couple of pre-populated list templates to your develo
 ### To add a SharePoint data source
 
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **Data Sources** node and choose **Add Data Source**.
+1. In  **Solution Explorer**, open the shortcut menu for the  **Data Sources** node and select **Add Data Source**.
     
     The  **Attach Data Source Wizard** opens.
     
  
-2. In the  **Attach Data Source Wizard**, choose the  **SharePoint** icon as shown in Figure 16, and then choose the **Next** button.
+2. In the  **Attach Data Source Wizard**, select the  **SharePoint** icon as shown in Figure 16, and then select the **Next** button.
     
     **Figure 16. SharePoint data source**
 
@@ -692,10 +669,10 @@ The first step is to add a couple of pre-populated list templates to your develo
  
 
  
-3. On the  **Enter Connection Information** page, verify that the URL for your SharePoint developer site is correct, and then choose the **Next** button.
+3. On the  **Enter Connection Information** page, verify that the URL for your SharePoint developer site is correct, and then select the **Next** button.
     
  
-4. On the  **Choose your SharePoint Items** page, select the check boxes for the **ContosoApparatus** and **ContosoPersonnel** lists as shown in Figure 17, and then choose the **Finish** button.
+4. On the  **Choose your SharePoint Items** page, select the check boxes for the **ContosoApparatus** and **ContosoPersonnel** lists as shown in Figure 17, and then select the **Finish** button.
     
     **Figure 17. The selected lists**
 
@@ -708,7 +685,7 @@ The first step is to add a couple of pre-populated list templates to your develo
     
     
      **Note**  You may have noticed that a  **UserInformationLists** entity was also added. This list is used by SharePoint to manage the **CreatedBy** and **ModifiedBy** fields for lists.
-5. In the  **Properties** window, choose the **Display Name** property and change it toApparatus.
+5. In the  **Properties** window, select the **Display Name** property and change it toApparatus.
     
     
  
@@ -721,15 +698,15 @@ The first step is to add a couple of pre-populated list templates to your develo
 ### To define the AvailableApparatus query
 
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **ApparatusSet.lsml** node and choose **Add Query**.
+1. In  **Solution Explorer**, open the shortcut menu for the  **ApparatusSet.lsml** node and select **Add Query**.
     
     The query designer opens.
     
  
-2. In the  **Properties** window, choose the **Name** property and enterAvailableApparatus.
+2. In the  **Properties** window, select the **Name** property and enterAvailableApparatus.
     
  
-3. In the query designer, choose the  **Add Filter** link, and in the second drop-down list choose **Available**.
+3. In the query designer, select the  **Add Filter** link, and in the second drop-down list select **Available**.
     
  
 4. In the last text box, change  **False** to **True**.
@@ -755,15 +732,15 @@ The first step is to add a couple of pre-populated list templates to your develo
 ### To define the AvailablePersonnel query
 
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **ContosoPersonnels.lsml** node and choose **Add Query**.
+1. In  **Solution Explorer**, open the shortcut menu for the  **ContosoPersonnels.lsml** node and select **Add Query**.
     
     The query designer opens.
     
  
-2. In the  **Properties** window, choose the **Name** property and enterAvailablePersonnel.
+2. In the  **Properties** window, select the **Name** property and enterAvailablePersonnel.
     
  
-3. In the query designer, choose the  **Add Filter** link, and in the second drop-down list choose **Shift**.
+3. In the query designer, select the  **Add Filter** link, and in the second drop-down list select **Shift**.
     
  
 4. In the last text box, enter  **A**.
@@ -789,24 +766,24 @@ The first step is to add a couple of pre-populated list templates to your develo
 ### To add queries to the screen
 
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **ViewIncidents.lsml** node and choose **Open**.
+1. In  **Solution Explorer**, open the shortcut menu for the  **ViewIncidents.lsml** node and select **Open**.
     
  
-2. In the screen designer, open the shortcut menu for the  **Tab** node and choose **Add Tab**.
+2. In the screen designer, open the shortcut menu for the  **Tab** node and select **Add Tab**.
     
  
 3. In the  **Properties** window, change the **Name** property toResources.
     
  
-4. In the screen designer, on the toolbar, choose  **Add Data Item**.
+4. In the screen designer, on the toolbar, select  **Add Data Item**.
     
     The  **Add Data Item** dialog box opens.
     
  
-5. In the  **Add Data Item** dialog box, choose the **Query** option button.
+5. In the  **Add Data Item** dialog box, select the **Query** option button.
     
  
-6. In the list, choose  **DeveloperData.AvailableApparatus** as shown in Figure 20, and then choose the **OK** button.
+6. In the list, select **DeveloperData.AvailableApparatus** as shown in Figure 20, and then select the **OK** button.
     
     **Figure 20. The AvailableApparatus query**
 
@@ -821,19 +798,19 @@ The first step is to add a couple of pre-populated list templates to your develo
 7. Repeat the process to add the  **AvailablePersonnel** query to the screen.
     
  
-8. Under the  **Rows Layout | Resources** node, open the **Add** list and choose **Available Apparatus**.
+8. Under the  **Rows Layout | Resources** node, open the **Add** list and select **Available Apparatus**.
     
  
-9. Choose the  **List | Available Apparatus** node, open the **List** list and choose **Tile List**.
+9. select the  **List | Available Apparatus** node, open the **List** list and select **Tile List**.
     
  
 10. Delete all of the items under the  **Rows Layout | Contoso Apparatus** node except for **Apparatus Number** and **Apparatus Type**.
     
  
-11. Under the  **Rows Layout | Resources** node, open the **Add** list and choose **Available Personnel**.
+11. Under the  **Rows Layout | Resources** node, open the **Add** list and select **Available Personnel**.
     
  
-12. Choose the  **List | Available Personnel** node, open the **List** list and choose **Table**.
+12. select the  **List | Available Personnel** node, open the **List** list and select **Table**.
     
  
 13. Delete all of the items under the  **Table Row | Contoso Personnel** node except for **Name**,  **Rank**, and  **Assignment**.
@@ -851,7 +828,7 @@ The first step is to add a couple of pre-populated list templates to your develo
  
 
  
-14. Run the add-in and observe the changes. Choose an incident, and then choose the  **Resources** tab to see a list of available resources.
+14. Run the add-in and observe the changes. select an incident, and then select the  **Resources** tab to see a list of available resources.
     
     
  
@@ -864,7 +841,7 @@ The first step is to add a couple of pre-populated list templates to your develo
 ## Associate a Document Library
 <a name="associate"> </a>
 
-On the scene of an incident the Incident Commander has to document many things, some using existing forms and some ad-hoc. The documents created on-scene must be accessible later, and they Must be organized by incident for easy retrieval. For the Incident Management add-in, you can utilize the custom document library feature in SharePoint to associate documents with each incident.
+On the scene of an incident the Incident Commander has to document many things, some using existing forms and some ad-hoc. The documents created on-scene must be accessible later, and they Must be organized by incident for easy retrieval. For the Incident Manager add-in, you can utilize the custom document library feature in SharePoint to associate documents with each incident.
  
 
  
@@ -872,10 +849,10 @@ On the scene of an incident the Incident Commander has to document many things, 
 ### To add a document library to the SharePoint site
 
 
-1. On the menu bar, choose  **Debug**,  **Start Debugging** to run the add-in.
+1. On the menu bar, select  **Debug**,  **Start Debugging** to run the add-in.
     
  
-2. In the running add-in, on the chrome bar, choose  **Back to site** link as shown in Figure 22 to navigate to your SharePoint developer site.
+2. In the running add-in, on the chrome bar, select **Back to site** link as shown in Figure 22 to navigate to your SharePoint developer site.
     
     **Figure 22. The Back to site link**
 
@@ -887,25 +864,25 @@ On the scene of an incident the Incident Commander has to document many things, 
  
 
  
-3. On the  **Developer** page, choose the **Site Contents** link.
+3. On the  **Developer** page, select the **Site Contents** link.
     
  
-4. On the  **Site Contents** page, choose the **add an add-in** tile.
+4. On the  **Site Contents** page, select the **add an add-in** tile.
     
  
-5. On the  **Site Contents > Your Add-ins** page, choose the **Document Library** tile.
+5. On the  **Site Contents > Your Add-ins** page, select the **Document Library** tile.
     
  
-6. In the  **Adding Document Library** dialog box, in the **Name** text box enterIncident Documents, and then choose the  **Create** button.
+6. In the  **Adding Document Library** dialog box, in the **Name** text box enterIncident Documents, and then select the  **Create** button.
     
  
-7. On the  **Site Contents** page, choose the **Incident Documents** tile to open the library, and then choose the **LIBRARY** tab.
+7. On the  **Site Contents** page, select the **Incident Documents** tile to open the library, and then select the **LIBRARY** tab.
     
  
-8. On the  **Ribbon**, choose the  **Create Column** button.
+8. On the  **Ribbon**, select the  **Create Column** button.
     
  
-9. In the  **Create Column** dialog box, in the **Column name** text box enterIncidentNumber, and then choose the  **OK** button.
+9. In the  **Create Column** dialog box, in the **Column name** text box enterIncidentNumber, and then select the  **OK** button.
     
     Figure 23 shows the newly added column.
     
@@ -930,10 +907,10 @@ On the scene of an incident the Incident Commander has to document many things, 
 ### To add a document library to a project
 
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **Developer Data** node and choose **Update Data Source**.
+1. In  **Solution Explorer**, open the shortcut menu for the  **Developer Data** node and select **Update Data Source**.
     
  
-2. On the  **Choose your SharePoint Items** page, in the left pane, choose the **Document Libraries** list item, and in the right pane, select the **IncidentDocuments** checkbox as shown in Figure 24, and then choose the **Finish** button.
+2. On the  **Choose your SharePoint Items** page, in the left pane, select the **Document Libraries** list item, and in the right pane, select the **IncidentDocuments** checkbox as shown in Figure 24, and then select the **Finish** button.
     
     **Figure 24. The IncidentDocuments entity**
 
@@ -955,13 +932,13 @@ On the scene of an incident the Incident Commander has to document many things, 
 ### To create a relationship across data sources
 
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **IncidentDocuments.lsml** node and choose **Open**.
+1. In  **Solution Explorer**, open the shortcut menu for the  **IncidentDocuments.lsml** node and select **Open**.
     
  
-2. In the entity designer, on the  **Perspective** bar choose **Server**, and then on the toolbar choose  **Relationship**.
+2. In the entity designer, on the  **Perspective** bar select **Server**, and then on the toolbar select **Relationship**.
     
  
-3. In the  **Add New Relationship** dialog box, in the **To** dropdown list, choose **Incident** as shown in Figure 25.
+3. In the  **Add New Relationship** dialog box, in the **To** dropdown list, select **Incident** as shown in Figure 25.
     
     **Figure 25. The Add New Relationship dialog box**
 
@@ -973,10 +950,10 @@ On the scene of an incident the Incident Commander has to document many things, 
  
 
  
-4. In the  **Foreign** key dropdown list, choose the **IncidentNumber (String)** field from the **IncidentDocuments** entity.
+4. In the  **Foreign** key dropdown list, select the **IncidentNumber (String)** field from the **IncidentDocuments** entity.
     
  
-5. In the  **Primary** key dropdown list, choose the **IncidentNumber (String)** field from the **Incidents** entity, and then choose the **OK** button.
+5. In the  **Primary** key dropdown list, select the **IncidentNumber (String)** field from the **Incidents** entity, and then select the **OK** button.
     
     Figure 26 shows the Foreign and Primary keys.
     
@@ -999,25 +976,25 @@ On the scene of an incident the Incident Commander has to document many things, 
 ### To add a document library to a screen
 
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **ViewIncidents.lsml** node and choose **Open**.
+1. In  **Solution Explorer**, open the shortcut menu for the  **ViewIncidents.lsml** node and select **Open**.
     
  
-2. In the screen designer, open the shortcut menu for the  **Tab** node and choose **Add Tab**.
+2. In the screen designer, open the shortcut menu for the  **Tab** node and select **Add Tab**.
     
  
 3. In the  **Properties** window, change the **Name** property toDocuments.
     
  
-4. In the screen designer, in the left pane, choose the  **Add IncidentDocuments** link.
+4. In the screen designer, in the left pane, select the  **Add IncidentDocuments** link.
     
  
-5. In the center pane, under the  **Rows Layout | Documents** node, open the **Add** list and choose **Incident Documents**.
+5. In the center pane, under the  **Rows Layout | Documents** node, open the **Add** list and select **Incident Documents**.
     
  
-6. Under the  **Rows Layout | Documents** node, open the shortcut menu for the **Command Bar** node and choose **Add Button**.
+6. Under the  **Rows Layout | Documents** node, open the shortcut menu for the **Command Bar** node and select **Add Button**.
     
  
-7. In the  **Add Button** dialog box, expand the **showTab** list and in the **IncidentDocuments** group choose **createOrUploadDocument** as shown in Figure 27, and then choose the **OK** button.
+7. In the  **Add Button** dialog box, expand the **showTab** list and in the **IncidentDocuments** group select**createOrUploadDocument** as shown in Figure 27, and then select the **OK** button.
     
     **Figure 27. The Add Button dialog box**
 
@@ -1029,16 +1006,16 @@ On the scene of an incident the Incident Commander has to document many things, 
  
 
  
-8. In the  **Properties** window, choose the **Display Name** property and enterAdd Document.
+8. In the  **Properties** window, select the **Display Name** property and enterAdd Document.
     
  
-9. Expand the  **Icon** property list and choose **Attachment**.
+9. Expand the  **Icon** property list and select **Attachment**.
     
  
-10. On the menu bar, choose  **Debug**,  **Start Debugging** to run the add-in.
+10. On the menu bar, select  **Debug**,  **Start Debugging** to run the add-in.
     
  
-11. Choose an incident, choose the  **Documents** tab, and then choose the **Add Document** button.
+11. select an incident, select the  **Documents** tab, and then select the **Add Document** button.
     
     The SharePoint  **Create a new file** dialog box opens, as shown in Figure 28.
     
@@ -1053,17 +1030,17 @@ On the scene of an incident the Incident Commander has to document many things, 
  
 
  
-12. Choose the  **UPLOAD EXISTING FILE** link and choose any file to upload, and then choose the **Open** button.
+12. select the  **UPLOAD EXISTING FILE** link and select any file to upload, and then select the **Open** button.
     
     The file is added to the  **Documents** tab.
     
-     **Tip**  If you choose an Office document, you can view it in the add-in.
-13. Choose the Add Document button, and in the  **Create a new file** dialog box, choose **Word document**.
+     **Tip**  If you select an Office document, you can view it in the add-in.
+13. select the Add Document button, and in the  **Create a new file** dialog box, select **Word document**.
     
     A new Word document opens in  **Word Online**.
     
  
-14. On the title bar, choose the  **Document** name field as shown in Figure 29 and enterIncident Report.
+14. On the title bar, select the  **Document** name field as shown in Figure 29 and enterIncident Report.
     
     **Figure 29. The Document name field**
 
@@ -1076,10 +1053,10 @@ On the scene of an incident the Incident Commander has to document many things, 
     
     
      **Note**  If you don't enter a file name, it will be saved with the default name  **Document.docx**. Once saved, the file name can only be changed by accessing it in the document library in SharePoint.
-15. Choose the back button in your browser to return to the add-in. The  **Incident Report** document should appear on the **Documents** tab.
+15. select the back button in your browser to return to the add-in. The  **Incident Report** document should appear on the **Documents** tab.
     
  
-16. Choose the  **Close** button in your browser to return to design mode.
+16. select the  **Close** button in your browser to return to design mode.
     
     
  
@@ -1092,7 +1069,7 @@ On the scene of an incident the Incident Commander has to document many things, 
 ## Customize the Add-in
 <a name="custom"> </a>
 
-The Contoso Fire Department is pleased with the additions to the Incident Management add-in, but there are few more "fit and finish" items on their list. They want to display their logo on the screens instead of the default icon. They don't like the  **FlipSwitch** control for **Insured** field on the **AddEditPatient** screen and want it replaced with a check box. Finally, since not all incidents have patients, they don't want the **Patients** tab on the **ViewIncidents** screen at appear if there aren't any patients.
+The Contoso Fire Department is pleased with the additions to the Incident Manager add-in, but there are few more "fit and finish" items on their list. They want to display their logo on the screens instead of the default icon. They don't like the  **FlipSwitch** control for **Insured** field on the **AddEditPatient** screen and want it replaced with a check box. Finally, since not all incidents have patients, they don't want the **Patients** tab on the **ViewIncidents** screen at appear if there aren't any patients.
  
 
  
@@ -1103,7 +1080,7 @@ The Contoso Fire Department is pleased with the additions to the Incident Manage
 1. In  **Solution Explorer**, in the  **IncidentManager.HtmlClient** project, expand the **Content** and **Images** nodes.
     
  
-2. Choose the  **user-logo.png** and **user-splash-screen.png** files as shown in Figure 30 and delete them.
+2. select the  **user-logo.png** and **user-splash-screen.png** files as shown in Figure 30 and delete them.
     
     **Figure 30. The files to delete**
 
@@ -1115,13 +1092,13 @@ The Contoso Fire Department is pleased with the additions to the Incident Manage
  
 
  
-3. Open the shortcut menu for the  **Images** node, choose **Add**,  **Existing Item**.
+3. Open the shortcut menu for the  **Images** node, select **Add**,  **Existing Item**.
     
  
-4. In the  **Add Existing Item** dialog box, choose the **Browse** button and then navigate to the **Resources** folder for the downloaded Incident Management sample.
+4. In the  **Add Existing Item** dialog box, select the **Browse** button and then navigate to the **Resources** folder for the downloaded Incident Manager sample.
     
  
-5. Choose the  **user-logo.png** and **user-splash-screen.png** files, and then choose the **Add** button.
+5. select the  **user-logo.png** and **user-splash-screen.png** files, and then select the **Add** button.
     
     The new images will be displayed on the title bar of the add-in and in the splash screen shown when the add-in is loading.
     
@@ -1136,13 +1113,13 @@ The Contoso Fire Department is pleased with the additions to the Incident Manage
 ### To replace the FlipSwitch control
 
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **AddEditPatient.lsml** screen node and choose **Open**.
+1. In  **Solution Explorer**, open the shortcut menu for the  **AddEditPatient.lsml** screen node and select **Open**.
     
  
-2. In the screen designer, expand the list for the  **Insured** node and choose **Custom Control**.
+2. In the screen designer, expand the list for the  **Insured** node and select **Custom Control**.
     
  
-3. In the  **Properties** window, choose the **Edit Render Code** link.
+3. In the  **Properties** window, select the **Edit Render Code** link.
     
  
 4. In the Code Editor, add the following code to the  **Insured_render** method:
@@ -1176,13 +1153,13 @@ The Contoso Fire Department is pleased with the additions to the Incident Manage
     This code creates a  **CheckBox** control when the screen is rendered. You'll also need to add code to set an initial value.
     
  
-5. In  **Solution Explorer**, open the shortcut menu for the  **Patients.lsml** entity node and choose **Open**.
+5. In  **Solution Explorer**, open the shortcut menu for the  **Patients.lsml** entity node and select **Open**.
     
  
-6. In the entity designer, on the  **Perspective** bar, choose the **HTMLClient** tab.
+6. In the entity designer, on the  **Perspective** bar, select the **HTMLClient** tab.
     
  
-7. On the toolbar, expand the  **Write Code** list and choose **created**.
+7. On the toolbar, expand the  **Write Code** list and select **created**.
     
  
 8. In the Code Editor, add the following code to the  **created** method:
@@ -1206,10 +1183,10 @@ The Contoso Fire Department is pleased with the additions to the Incident Manage
 ### To conditionally hide a tab
 
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **ViewIncidents.lsml** screen node and choose **Open**.
+1. In  **Solution Explorer**, open the shortcut menu for the  **ViewIncidents.lsml** screen node and select **Open**.
     
  
-2. On the toolbar, open the  **Write Code** list and choose **created**.
+2. On the toolbar, open the  **Write Code** list and select **created**.
     
  
 3. In the Code Editor, add the following code to the  **ViewIncidents_created** method:
@@ -1227,7 +1204,7 @@ The Contoso Fire Department is pleased with the additions to the Incident Manage
     This code runs the  **GetPatients** query to get a count of **Patients**. If the result is zero, the  **findContentItem** method sets the **isVisible** property of the **Patients** tab to false, hiding it.
     
  
-4. On the menu bar, choose  **Debug**,  **Start Debugging** to run the add-in. Notice that the new logo appears on the screens. Open the first incident that you created earlier and edit a patient. Verify that the Insured field is now a checkbox. Add a new incident without any patients, and verify that the **Patients** tab is hidden on the view screen.
+4. On the menu bar, select  **Debug**,  **Start Debugging** to run the add-in. Notice that the new logo appears on the screens. Open the first incident that you created earlier and edit a patient. Verify that the Insured field is now a checkbox. Add a new incident without any patients, and verify that the **Patients** tab is hidden on the view screen.
     
     
  
@@ -1248,10 +1225,10 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
 ### To publish the add-in
 
 
-1. On the Visual Studio toolbar, open the  **Debug** list and choose **Release**.
+1. On the Visual Studio toolbar, open the  **Debug** list and select **Release**.
     
  
-2. In  **Solution Explorer**, open the shortcut menu for the  **IncidentManager** node as shown in Figure 31, and then choose **Publish**.
+2. In  **Solution Explorer**, open the shortcut menu for the  **IncidentManager** node as shown in Figure 31, and then select **Publish**.
     
     **Figure 31. The IncidentManager node**
 
@@ -1263,7 +1240,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
     The  **LightSwitch Publish Application Wizard** appears.
     
  
-3. On the  **SharePoint** options page, choose the **Autohosted** option button as shown in Figure 32, and then choose the **Publish** button.
+3. On the  **SharePoint** options page, select the **Autohosted** option button as shown in Figure 32, and then select the **Publish** button.
     
     **Figure 32. The Autohosted option**
 
@@ -1278,7 +1255,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
 4. In the browser, navigate to your SharePoint Developer site
     
  
-5. In the  **Add-ins in Testing** list, choose the ellipsis (???) link next to **IncidentManager**, and then choose the  **Remove** link, as shown in Figure 33.
+5. In the  **Add-ins in Testing** list, select the ellipsis (???) link next to **IncidentManager**, and then select the  **Remove** link, as shown in Figure 33.
     
     **Figure 33. The Remove link**
 
@@ -1290,10 +1267,10 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
  
 
  
-6. Choose the  **new add-in to deploy** link.
+6. select the  **new add-in to deploy** link.
     
  
-7. In the  **Deploy Add-in** dialog box, choose the **upload** link, as shown in Figure 34.
+7. In the  **Deploy Add-in** dialog box, select the **upload** link, as shown in Figure 34.
     
     **Figure 34. The upload link**
 
@@ -1305,15 +1282,15 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
     The  **Upload Add-in** dialog box opens.
     
  
-8. In the  **Upload Add-in** dialog box, choose the **Browse** button and navigate to the **Publish** folder for your add-in and choose the **IncidentManager.SharePoint.app** file, choose the **Open** button, and then choose the **OK** button.
+8. In the  **Upload Add-in** dialog box, select the **Browse** button and navigate to the **Publish** folder for your add-in and select the **IncidentManager.SharePoint.app** file, select the **Open** button, and then select the **OK** button.
     
     Once the file has been uploaded, the  **Deploy Add-in** dialog box opens.
     
  
-9. In the  **Deploy Add-in** dialog box, choose the **Deploy** button.
+9. In the  **Deploy Add-in** dialog box, select the **Deploy** button.
     
  
-10. In the  **Upload Add-in** dialog box, choose the **Trust It** button.
+10. In the  **Upload Add-in** dialog box, select the **Trust It** button.
     
     The add-in will be installed on your SharePoint site. The process may take a few minutes.
     
@@ -1330,7 +1307,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
  
 
  
-11. Choose the  **Site Contents** link.
+11. select the  **Site Contents** link.
     
     Figure 37 shows the Site Contents list as the add-in is installing.
     
@@ -1345,7 +1322,7 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
  
 
  
-12. Once the add-in has finished installing, choose the  **Incident Manager** tile to run the add-in.
+12. Once the add-in has finished installing, select the  **Incident Manager** tile to run the add-in.
     
     Figure 38 shows the Site Contents list after the add-in is installed.
     
@@ -1387,20 +1364,13 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
  
 
  
-Congratulations! You have now finished the tutorial, and you know the basics of a creating a Cloud Business Add-in. Now go and build an add-in of your own - the additional resource below should help you to go further.
+Congratulations! You have now finished the tutorial, and you know the basics of a creating a cloud business add-in. Now go and build an add-in of your own - the additional resource below should help you to go further.
  
 
 ## Additional resources
 <a name="bk_addresources"> </a>
 
-
 -  [Get started developing cloud business add-ins](get-started-developing-cloud-business-add-ins.md)
-    
- 
 -  [Develop cloud business add-ins](develop-cloud-business-add-ins.md)
-    
- 
 -  [Publish cloud business add-ins](publish-cloud-business-add-ins.md)
     
- 
-
