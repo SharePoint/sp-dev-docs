@@ -614,6 +614,8 @@ The following are not currently supported:
 ### Predefined classes
 You can use the following predefined classes for several common scenarios.
 
+<Comment> This table is missleading. Predefined classes only define background color. It does not include icons. But pictures shown in the table display both background color and icon. All pictures should be modified without icon. Or add a note to explain it clearly.
+   
 | Class name | Screenshot |
 | ------------- |:-------------|
 | sp-field-customFormatBackground |Specifies the padding and margins for all classes that use backgrounds. |
