@@ -1288,3 +1288,312 @@
       items:
       - name: Publish a cloud business add-in to SharePoint
         href: sp-add-ins/publish-a-cloud-business-add-in-to-sharepoint.md
+- name: Solution guidance
+  href: solution-guidance/Office-365-development-patterns-and-practices-solution-guidance.md
+  items:
+  - name: Branding and site provisioning
+    href: solution-guidance/Branding-and-site-provisioning-solutions-for-SharePoint.md
+    items:
+    - name: Page model
+      href: solution-guidance/SharePoint-pages-and-the-page-model.md
+    - name: Development and design tools and practices
+      href: solution-guidance/SharePoint-development-and-design-tools-and-practices.md
+    - name: Site branding
+      href: solution-guidance/SharePoint-site-branding-and-page-customization-solutions.md
+      items:
+      - name: Use composed looks to brand sites
+        href: solution-guidance/Use-composed-looks-to-brand-SharePoint-sites.md
+      - name: Use remote provisioning to brand pages
+        href: solution-guidance/Use-remote-provisioning-to-brand-SharePoint-pages.md
+      - name: Use CSS to brand pages
+        href: solution-guidance/Use-CSS-to-brand-pages.md
+      - name: Customize elements of a SharePoint page
+        href: solution-guidance/Customize-a-SharePoint-page-by-using-remote-provisioning-and-CSS.md
+      - name: Update the branding of existing sites and regions
+        href: solution-guidance/update-the-branding-of-existing-sharepoint-sites-and-page-regions.md
+      - name: Customize OneDrive for Business site branding
+        href: solution-guidance/Customization-Options-For-OD4B-Sites.md
+    - name: Site provisioning
+      href: solution-guidance/sharepoint-site-provisioning-solutions.md
+      items:
+      - name: Implement a site classification solution
+        href: solution-guidance/implement-a-sharepoint-site-classification-solution.md
+      - name: Modify host web lists at creation time
+        href: solution-guidance/modify-sharepoint-host-web-lists-at-creation-time.md
+      - name: Create content types by using CSOM
+        href: solution-guidance/create-sharepoint-content-types-by-using-csom.md
+      - name: Modify site permissions and get external sharing status
+        href: solution-guidance/modify-sharepoint-site-permissions-and-get-external-sharing-status.md
+      - name: Manage users and groups
+        href: solution-guidance/manage-sharepoint-users-and-groups.md
+    - name: Metadata, site navigation, and publishing site features
+      href: solution-guidance/sharepoint-metadata-site-navigation-and-publishing-site-features.md
+    - name: UX Components
+      href: solution-guidance/ux-components-in-sharepoint-2013-and-sharepoint-online.md
+      items:
+      - name: Customize the UX
+        href: solution-guidance/customize-the-ux-by-using-sharepoint-provider-hosted-add-ins.md
+      - name: Create UX controls
+        href: solution-guidance/create-ux-controls-by-using-sharepoint-provider-hosted-add-ins.md
+      - name: Display information from a host site
+        href: solution-guidance/display-information-from-a-host-site-by-using-office-web-widgets.md
+      - name: Improve performance
+        href: solution-guidance/improve-performance-in-sharepoint-provider-hosted-add-ins.md
+  - name: Customizing the "modern" experiences in SharePoint Online
+    href: solution-guidance/modern-experience-customizations.md
+    items:
+    - name: Provisioning "modern" team sites programmatically
+      href: solution-guidance/modern-experience-customizations-provisioning-sites.md
+    - name: Customizing "modern" team sites
+      href: solution-guidance/modern-experience-customizations-customize-sites.md
+    - name: Customizing "modern" lists and libraries
+      href: solution-guidance/modern-experience-customizations-customize-lists-and-libraries.md
+    - name: Customizing "modern" site pages
+      href: solution-guidance/modern-experience-customizations-customize-pages.md
+  - name: SharePoint Multi-Geo tenant guidance
+    href: solution-guidance/multigeo-introduction.md
+    items:
+    - name: Permissions in a Multi-Geo tenant
+      href: solution-guidance/multigeo-permissions.md
+    - name: Discover the Multi-Geo configuration of your SharePoint tenant
+      href: solution-guidance/multigeo-discovery.md
+    - name: Onedrive for Business in a Multi-Geo tenant
+      href: solution-guidance/multigeo-onedrive.md
+    - name: Work with SharePoint sites in a Multi-Geo tenant
+      href: solution-guidance/multigeo-sites.md
+    - name: Work with user profiles in a Multi-Geo tenant
+      href: solution-guidance/multigeo-userprofileexperience.md
+    - name: Search in a Multi-Geo SharePoint tenant
+      href: solution-guidance/multigeo-search.md
+    - name: Managed metadata in a Multi-Geo tenant
+      href: solution-guidance/multigeo-managedmetadata.md
+    - name: Content type hub in a Multi-Geo tenant
+      href: solution-guidance/multigeo-contenttypehub.md
+  - name: Building well performing SharePoint Online portals
+    href: solution-guidance/portal-overview.md
+    items:
+    - name: Performance guidance
+      href: solution-guidance/portal-performance.md
+    - name: Information Architecture
+      href: solution-guidance/portal-information-architecture.md
+    - name: Navigation considerations
+      href: solution-guidance/portal-navigation.md
+    - name: Data aggregation guidance
+      href: solution-guidance/portal-data-aggregation.md
+    - name: Branding your portals
+      href: solution-guidance/portal-branding.md
+    - name: Portal go live approach
+      href: solution-guidance/portal-rollout.md
+  - name: Composite business add-ins
+    href: solution-guidance/Composite-buisness-apps-for-SharePoint.md
+    items:
+    - name: Migrate InfoPath forms
+      href: solution-guidance/Migrate-InfoPath-forms-to-SharePoint.md
+    - name: Data storage options
+      href: solution-guidance/Data-storage-options-in-SharePoint-Online.md
+    - name: Corporate event app integration
+      href: solution-guidance/Corporate-app-event-registration-with-SharePoint.md
+    - name: Call web services from workflows
+      href: solution-guidance/Call-web-services-from-SharePoint-workflows.md
+  - name: ECM solutions
+    href: solution-guidance/Enterprise-Content-Management-solutions-for-SharePoint-2013-and-SharePoint-Online.md
+    items:
+    - name: Document library templates
+      href: solution-guidance/Document-library-templates-sample-app-for-SharePoint.md
+    - name: Autotagging
+      href: solution-guidance/Autotagging-sample-app-for-SharePoint.md
+    - name: Information management
+      href: solution-guidance/Information-management-sample-app-for-SharePoint.md
+    - name: Records management extensions
+      href: solution-guidance/Records-management-extensions-sample-app-for-SharePoint.md
+    - name: Taxonomy operations
+      href: solution-guidance/Taxonomy-operations-sample-app-for-SharePoint.md
+    - name: Bulk upload documents
+      href: solution-guidance/Bulk-upload-documents-sample-app-for-SharePoint.md
+    - name: Upload large files
+      href: solution-guidance/Upload-large-files-sample-app-for-SharePoint.md
+    - name: Synchronize term groups
+      href: solution-guidance/Synchronize-term-groups-sample-app-for-SharePoint.md
+    - name: 'Supporting % and # in file and folder with the ResourcePath API'
+      href: solution-guidance/supporting-and-in-file-and-folder-with-the-resourcepath-api.md
+  - name: Localization solutions
+    href: solution-guidance/localization-solutions-for-sharepoint-2013-and-sharepoint-online.md
+    items:
+    - name: Use localization features
+      href: solution-guidance/Use-localization-features-in-Office-365-sample-app.md
+    - name: Localize UI elements
+      href: solution-guidance/Localize-UI-elements-sample-app-for-SharePoint.md
+  - name: Search solutions
+    href: solution-guidance/search-solutions-in-sharepoint-2013-and-sharepoint-online.md
+    items:
+    - name: Search customizations
+      href: solution-guidance/search-customizations-for-sharepoint.md
+  - name: Security and Performance
+    href: solution-guidance/security-and-performance.md
+    items:
+    - name: Authorize provider-hosted add-in users at run time
+      href: solution-guidance/authorize-provider-hosted-add-in-users-at-run-time-by-using-oauth.md
+    - name: Authorization considerations for tenants hosted in the Germany, China or US Government environments
+      href: solution-guidance/Extending-SharePoint-Online-for-Germany-China-USGovernment-environments.md
+    - name: Cross-domain images in SharePoint provider-hosted add-ins
+      href: solution-guidance/cross-domain-images-in-sharepoint-provider-hosted-add-ins.md
+    - name: Elevated privileges in SharePoint Add-ins
+      href: solution-guidance/elevated-privileges-in-sharepoint-add-ins.md
+    - name: How to provide add-in app only tenant administrative permissions in SharePoint Online
+      href: solution-guidance/how-to-provide-add-in-app-only-tenant-administrative-permissions-in-sharepoint-online.md
+      items:
+      - name: Developing using Tenant permissions with App-Only
+        href: solution-guidance/development-experience-tenant-apponly-permissions-in-sharepoint-online.md
+    - name: Set external sharing in Office 365
+      href: solution-guidance/Set-external-sharing-on-site-collections-in-Office-365.md
+    - name: Handle SharePoint Online throttling
+      href: solution-guidance/Handle-SharePoint-Online-throttling-by-using-exponential-back-off.md
+    - name: JavaScript Patterns and Performance
+      href: solution-guidance/javascript-patterns-and-performance.md
+  - name: SharePoint Add-in recipes
+    href: solution-guidance/sharepoint-add-in-recipes.md
+    items:
+    - name: App-Only and Elevated privileges
+      href: solution-guidance/app-only-elevated-privileges-sharepoint-add-in.md
+    - name: Branding SharePoint Sites
+      href: solution-guidance/branding-sharepoint-sites-sharepoint-add-in.md
+    - name: Custom Actions
+      href: solution-guidance/custom-actions-sharepoint-add-in.md
+    - name: Custom Field Type
+      href: solution-guidance/custom-field-type-sharepoint-add-in.md
+    - name: Custom Ribbons
+      href: solution-guidance/Add-a-custom-ribbon-to-your-SharePoint-site.md
+    - name: Customize your SharePoint site UI using JavaScript embedding
+      href: solution-guidance/Customize-your-SharePoint-site-UI-by-using-JavaScript.md
+    - name: Delegate Controls
+      href: solution-guidance/delegate-controls-sharepoint-add-in.md
+    - name: Document ID Provider
+      href: solution-guidance/document-id-provider-sharepoint-add-in.md
+    - name: Event Receivers and List Event Receivers
+      href: solution-guidance/event-receiver-and-list-event-receiver-sharepoint-add-in.md
+    - name: Feature Stapling
+      href: solution-guidance/feature-stapling-sharepoint-add-in.md
+    - name: Information Management Policy
+      href: solution-guidance/information-management-policy-sharepoint-add-in.md
+    - name: JavaScript customizations
+      href: solution-guidance/Embedding-JavaScript-into-SharePoint.md
+    - name: List Definition / List Template
+      href: solution-guidance/list-definition-template-sharepoint-add-in.md
+    - name: List Instance
+      href: solution-guidance/list-instance-sharepoint-add-in.md
+    - name: Localization
+      href: solution-guidance/localization-sharepoint-add-in.md
+    - name: Master Pages
+      href: solution-guidance/master-pages-sharepoint-add-in.md
+    - name: MMS manipulation
+      href: solution-guidance/mms-manipulation-sharepoint-add-in.md
+    - name: Modules
+      href: solution-guidance/modules-sharepoint-add-in.md
+    - name: OneDrive for Business customization
+      href: solution-guidance/onedrive-for-business-customization-sharepoint-add-in.md
+    - name: Performance Considerations
+      href: solution-guidance/performance-considerations-sharepoint-add-in.md
+    - name: Remote Timer Jobs
+      href: solution-guidance/remote-timer-jobs-sharepoint-add-in.md
+    - name: Remote event receivers
+      href: solution-guidance/Use-remote-event-receivers-in-SharePoint.md
+    - name: Search API Usage
+      href: solution-guidance/search-api-usage-sharepoint-add-in.md
+    - name: Search Configuration
+      href: solution-guidance/search-configuration-sharepoint-add-in.md
+    - name: SharePoint change log
+      href: solution-guidance/query-sharepoint-change-log-with-changequery-and-changeToken.md
+    - name: Site Columns and Content Types
+      href: solution-guidance/site-columns-and-content-types-sharepoint-add-in.md
+    - name: Site Provisioning
+      href: solution-guidance/site-provisioning-sharepoint-add-in.md
+    - name: Use asynchronous operations in SharePoint Add-ins
+      href: solution-guidance/use-asynchronous-operations-in-sharepoint-add-ins.md
+    - name: User Controls and Web Controls
+      href: solution-guidance/user-controls-and-web-controls-sharepoint-add-in.md
+    - name: User Profile Manipulation
+      href: solution-guidance/user profile manipulation-sharepoint-add-in.md
+    - name: Variations
+      href: solution-guidance/variations-sharepoint-add-in.md
+    - name: Web Part
+      href: solution-guidance/web-part-sharepoint-add-in.md
+    - name: Upload Web Parts
+      href: solution-guidance/upload-web-parts-in-sharepoint.md
+    - name: Connect SharePoint add-in parts
+      href: solution-guidance/Connect-SharePoint-app-parts-by-using-SignalR.md
+    - name: Workflows, Actions (Activities), Events, and Forms
+      href: solution-guidance/workflows-actions-events-and-forms-sharepoint-add-in.md
+    - name: Yammer Integration
+      href: solution-guidance/yammer-integration-sharepoint-add-in.md
+  - name: Transform farm solutions to the SharePoint add-in model
+    href: solution-guidance/Transform-farm-solutions-to-the-SharePoint-app-model.md
+    items:
+    - name: Replace content types and site columns
+      href: solution-guidance/replace-sharepoint-content-types-and-site-columns.md
+    - name: Replace files deployed using modules in farm solutions
+      href: solution-guidance/replace-files-deployed-using-modules-in-sharepoint-farm-solutions.md
+    - name: Replace lists created from list definitions
+      href: solution-guidance/replace-sharepoint-lists-created-from-list-definitions.md
+    - name: Replace Web Parts with add-in parts
+      href: solution-guidance/replace-sharepoint-web-parts-with-add-in-parts.md
+  - name: Sandbox Solution Transformation Guidance
+    href: solution-guidance/Sandbox-Solution-Transformation-Guidance.md
+    items:
+    - name: Web Parts
+      href: solution-guidance/Sandbox-Solution-Transformation-Guidance-WebParts.md
+    - name: Event receivers
+      href: solution-guidance/Sandbox-Solution-Transformation-Guidance-Event-Receivers.md
+    - name: Feature receivers
+      href: solution-guidance/Sandbox-Solution-Transformation-Guidance-Feature-Receivers.md
+    - name: InfoPath forms with code
+      href: solution-guidance/Sandbox-Solution-Transformation-Guidance-InfoPath.md
+  - name: User Profile Solutions
+    href: solution-guidance/user-profile-solutions-for-sharepoint.md
+    items:
+    - name: Read or update user profile properties
+      href: solution-guidance/Read-or-update-user-profile-properties-sample-app-for-SharePoint.md
+    - name: Bulk User Profile update API
+      href: solution-guidance/bulk-user-profile-update-api-for-sharepoint-online.md
+    - name: Migrate user profile properties
+      href: solution-guidance/Migrate-user-profile-properties-sample-app-for-SharePoint.md
+    - name: Personalize search results
+      href: solution-guidance/Personalize-search-results-sample-app-for-SharePoint.md
+    - name: Upload user profile pictures
+      href: solution-guidance/Upload-user-profile-pictures-sample-app-for-SharePoint.md
+  - name: Deploying your SharePoint add-ins
+    href: solution-guidance/deploying-your-sharepoint-add-ins.md
+    items:
+    - name: Deploy Sites to Microsoft Azure
+      href: solution-guidance/Move-O365Api-Project-from-Dev-To-Prod.md
+    - name: Use Azure WebJobs with Office 365
+      href: solution-guidance/Use-Microsoft-Azure-WebJobs-with-Office-365.md
+    - name: Configure Provider-Hosted Add-ins for Distribution
+      href: solution-guidance/Configure-SP-Provider-Hosted-Apps-For-Distribution.md
+    - name: Configure Office 365 Projects for Distribution
+      href: solution-guidance/Configure-O365Api-Project-For-Distribution.md
+  - name: PnP remote provisioning
+    href: solution-guidance/pnp-remote-provisioning.md
+    items:
+    - name: Introducing the PnP Provisioning Engine
+      href: solution-guidance/Introducing-the-PnP-Provisioning-Engine.md
+    - name: PnP provisioning framework
+      href: solution-guidance/pnp-provisioning-framework.md
+    - name: PnP provisioning engine and the core library
+      href: solution-guidance/pnp-provisioning-engine-and-the-core-library.md
+    - name: PnP provisioning schema
+      href: solution-guidance/pnp-provisioning-schema.md
+    - name: Provisioning console application sample
+      href: solution-guidance/provisioning-console-application-sample.md
+  - name: PnP remote timer job framework
+    href: solution-guidance/pnp-remote-timer-job-framework.md
+    items:
+    - name: The Timer Job Framework
+      href: solution-guidance/timerjob-framework.md
+    - name: Create remote timer jobs in SharePoint
+      href: solution-guidance/create-remote-timer-jobs-in-sharepoint.md
+    - name: Getting Started with WebJobs ("timer jobs")
+      href: solution-guidance/Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites.md
+  - name: PnP Sites Core API reference
+    href: https://msdn.microsoft.com/en-us/pnp_sites_core/pnp-sites-core-overview
+  - name: PnP PowerShell reference
+    href: https://msdn.microsoft.com/en-us/pnp_powershell/pnp-powershell-overview
