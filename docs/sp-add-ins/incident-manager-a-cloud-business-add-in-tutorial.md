@@ -354,277 +354,166 @@ In the next step, you'll add a screen to view patients.
 
 You have now built a fully functional incident management add-in, but there's much more you can do with cloud business add-ins. In the next section, you'll learn how to utilize resources on the SharePoint site from the incident management add-in.
 
-## Integrate SharePoint Resources
+## Integrate SharePoint resources
 <a name="integrate"> </a>
 
-The Contoso Fire Department has started using the Incident Manager add-in, and as is typical in software development projects they are now requesting a new feature. In addition to incident and patient information, they also need to manage resources such as fire apparatus and personnel. They already have lists of apparatus and personnel on their SharePoint site, so you will utilize those lists as another data source for the add-in.
- 
+The Contoso Fire Department has started using the Incident Manager add-in, and as is typical in software development projects, they are now requesting a new feature. In addition to incident and patient information, they also need to manage resources such as fire apparatus and personnel. They already have lists of apparatus and personnel on their SharePoint site, so you will utilize those lists as another data source for the add-in.
 
- 
-The first step is to add a couple of pre-populated list templates to your developer site.
- 
-
- 
+The first step is to add a few prepopulated list templates to your developer site.
 
 ### To add list templates
 
+1. On the menu bar, select **Debug** > **Start Debugging** to run the add-in.
 
-1. On the menu bar, select **Debug**,  **Start Debugging** to run the add-in.
+2. In the running add-in, on the chrome bar, select the **Back to site** link to go to your SharePoint developer site, as shown in Figure 12.
     
- 
-2. In the running add-in, on the chrome bar, select **Back to site** link to navigate to your SharePoint developer site, as shown in Figure 12.
+   *Figure 12. The Back to site link*
+
+   ![Navigate to the SharePoint developer site](../images/CBA_IM_8a.PNG)
+
+3. On the **Developer** page, select the **Site Contents** link.
+
+4. On the **Site Contents** page, select the **Settings** link, as shown in Figure 13.
     
-    *Figure 12. The Back to site link*
+   *Figure 13. The Settings link*
 
-  ![Navigate to the SharePoint developer site](../images/CBA_IM_8a.PNG)
- 
+   ![Site Settings link](../images/CBA_IM_8b.PNG)
 
- 
-
- 
-3. On the  **Developer** page, select the **Site Contents** link.
+5. On the **Site Settings** page, in the **Web Designer Galleries** list, select the **List templates** link, as shown in Figure 14.
     
- 
-4. On the  **Site Contents** page, select the **Settings** link, as shown in Figure 13.
-    
-    *Figure 13. The Settings link*
+   *Figure 14. The List templates link*
 
-  ![Site Settings link](../images/CBA_IM_8b.PNG)
- 
+   ![List templates link](../images/CBA_IM_8c.PNG)
 
- 
+6. On the **List Template Gallery** page, select the **FILES** tab, and then on the ribbon, select **Upload Document**.
 
- 
-5. On the  **Site Settings** page, in the **Web Designer Galleries** list, select the **List templates** link as shown in Figure 14.
-    
-    *Figure 14. The List templates link*
+7. In the **Add a template** dialog box, select **Browse**, and then go to the **Resources** folder for the downloaded Incident Manager sample.
 
-  ![List templates list](../images/CBA_IM_8c.PNG)
- 
+8. Select the **ContosoApparatus.stp** file, select **Open**, and then select **OK**.
 
- 
+9. In the **List Template Gallery** dialog box, select **Save**.
 
- 
-6. On the  **List Template Gallery** page, select the **FILES** tab, and then on the ribbon select the **Upload Document** button.
-    
- 
-7. In the  **Add a template** dialog box, select the **Browse** button and then navigate to the **Resources** folder for the downloaded Incident Manager sample.
-    
- 
-8. select the  **ContosoApparatus.stp** file and select the **Open** button, and then select **OK**.
-    
- 
-9. In the  **List Template Gallery** dialog box, select the **Save** button.
-    
- 
-10. Repeat the process and upload the  **ContosoPersonnel.stp** file.
+10. Repeat the process to upload the **ContosoPersonnel.stp** file.
     
     *Figure 15. The uploaded files*
 
-  ![The Contoso templates](../images/CBA_IM_8d.PNG)
- 
+    ![The Contoso templates](../images/CBA_IM_8d.PNG)
 
- 
+11. Select the **Site Contents** link, and on the **Site Contents** page, select the **Add an add-in** tile.
 
- 
-11. select the  **Site Contents** link, and on the **Site Contents** page select the **add an add-in** tile.
+12. On the **Site Contents** > **Your Add-ins** page, select the **Contoso Apparatus** tile.
     
- 
-12. On the  **Site Contents > Your Add-ins** page, select the **Contoso Apparatus** tile.
-    
-     **Note**  You may need to go to the second page of add-ins to find the  **Contoso Apparatus** tile.
-13. In the  **Adding Custom List** dialog box, select the **Name** text box and enterContoso Apparatus, and then select the  **Create** button.
-    
- 
-14. Repeat the process and add the  **Contoso Personnel** list, enteringContoso Personnel as the name.
-    
- 
-15. On the  **Site Contents** page, verify that the **Contoso Apparatus** and **Contoso Personnel** lists now appear.
-    
-    
- 
+    > [!NOTE]
+    > You may need to go to the second page of add-ins to find the **Contoso Apparatus** tile.
 
-    
-    In the next step, you'll add your SharePoint site as a data source.
-    
- 
+13. In the **Adding Custom List** dialog box, select the **Name** text box and enter **Contoso Apparatus**, and then select **Create**.
+
+14. Repeat the process to add the **Contoso Personnel** list, entering **Contoso Personnel** as the name.
+
+15. On the **Site Contents** page, verify that the **Contoso Apparatus** and **Contoso Personnel** lists now appear.
+
+In the next step, you'll add your SharePoint site as a data source.
 
 ### To add a SharePoint data source
 
+1. In **Solution Explorer**, open the shortcut menu for the **Data Sources** node, and select **Add Data Source**.
 
-1. In **Solution Explorer**, open the shortcut menu for the  **Data Sources** node and select **Add Data Source**.
-    
-    The Attach Data Source Wizard opens.
-    
- 
-2. In the Attach Data Source Wizard, select the  **SharePoint** icon as shown in Figure 16, and then select the **Next** button.
+2. In the Attach Data Source Wizard, select the **SharePoint** icon as shown in Figure 16, and then select **Next**.
     
     *Figure 16. SharePoint data source*
 
-  ![SharePoint data source](../images/CBA_IM_9.PNG)
- 
+    ![SharePoint data source](../images/CBA_IM_9.PNG)
 
- 
+3. On the **Enter Connection Information** page, verify that the URL for your SharePoint developer site is correct, and then select **Next**.
 
- 
-3. On the  **Enter Connection Information** page, verify that the URL for your SharePoint developer site is correct, and then select the **Next** button.
+4. On the **Choose your SharePoint Items** page, select the check boxes for the **ContosoApparatus** and **ContosoPersonnel** lists as shown in Figure 17, and then select **Finish**.
     
- 
-4. On the  **Choose your SharePoint Items** page, select the check boxes for the **ContosoApparatus** and **ContosoPersonnel** lists as shown in Figure 17, and then select the **Finish** button.
-    
-    *Figure 17. The selected lists*
+   *Figure 17. The selected lists*
 
-  ![SharePoint lists](../images/CBA_IM_9a.PNG)
+   ![SharePoint lists](../images/CBA_IM_9a.PNG)
  
+   The entities are added to a new **Developer Data** node under the **Data Sources** node in **Solution Explorer**, and the **ContosoApparatus** entity opens in the entity designer.
 
-    The entities are added to a new  **Developer Data** node under the **Data Sources** node in **Solution Explorer**, and the  **ContosoApparatus** entity opens in the entity designer.
-    
-    
-     **Note**  You may have noticed that a  **UserInformationLists** entity was also added. This list is used by SharePoint to manage the **CreatedBy** and **ModifiedBy** fields for lists.
-5. In the  **Properties** window, select the **Display Name** property and change it toApparatus.
-    
-    
- 
+   > [!NOTE]
+   > You may have noticed that a **UserInformationLists** entity was also added. This list is used by SharePoint to manage the **CreatedBy** and **ModifiedBy** fields for lists.
 
-    
-    In the next step, you'll define a query to limit the data returned from the  **ApparatusSet** entity. In this case, you only want to see apparatus that are in service.
-    
- 
+5. In the Properties window, select the **Display Name** property and change it to **Apparatus**.
+
+In the next step, you'll define a query to limit the data returned from the **ApparatusSet** entity. In this case, you only want to see apparatus that are in service.
 
 ### To define the AvailableApparatus query
 
+1. In **Solution Explorer**, open the shortcut menu for the **ApparatusSet.lsml** node, and select **Add Query**.
 
-1. In **Solution Explorer**, open the shortcut menu for the  **ApparatusSet.lsml** node and select **Add Query**.
-    
-    The query designer opens.
-    
- 
-2. In the  **Properties** window, select the **Name** property and enterAvailableApparatus.
-    
- 
-3. In the query designer, select the  **Add Filter** link, and in the second drop-down list select **Available**.
-    
- 
-4. In the last text box, change  **False** to **True**.
-    
-    Figure 18 shows the query.
-    
+2. In the query designer, in the Properties window, select the **Name** property and enter **AvailableApparatus**.
 
-    *Figure 18. The AvailableApparatus query*
+3. Select the **Add Filter** link, and in the second drop-down list, select **Available**.
 
-  ![The AvailableApparatus query](../images/CBA_IM_10.PNG)
- 
+4. In the last box, change**False** to **True**. Figure 18 shows the query.
+    
+   *Figure 18. The AvailableApparatus query*
 
-    
- 
+   ![The AvailableApparatus query](../images/CBA_IM_10.PNG)
 
-    
-    In the next step, you'll define another query for the  **ContosoPersonnel** entity. In this case, you only want to see personnel that are assigned to the "A" shift.
-    
- 
+In the next step, you'll define another query for the **ContosoPersonnel** entity. In this case, you only want to see personnel that are assigned to the "A" shift.
 
 ### To define the AvailablePersonnel query
 
+1. In **Solution Explorer**, open the shortcut menu for the **ContosoPersonnels.lsml** node, and select **Add Query**.
+    
+2. In the query designer, in the Properties window, select the **Name** property and enter **AvailablePersonnel**.
+     
+3. Select the **Add Filter** link, and in the second drop-down list, select **Shift**.
+    
+4. In the last box, enter **A**. Figure 19 shows the query.
+    
+   *Figure 19. The AvailablePersonnel query*
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **ContosoPersonnels.lsml** node and select **Add Query**.
-    
-    The query designer opens.
-    
+   ![The AvailablePersonnel query](../images/CBA_IM_10a.PNG)
  
-2. In the  **Properties** window, select the **Name** property and enterAvailablePersonnel.
-    
- 
-3. In the query designer, select the  **Add Filter** link, and in the second drop-down list select **Shift**.
-    
- 
-4. In the last text box, enter  **A**.
-    
-    Figure 19 shows the query.
-    
-
-    *Figure 19. The AvailablePersonnel query*
-
-  ![The Relationship dialog](../images/CBA_IM_10a.PNG)
- 
-
-    
- 
-
-    
-    In the next step, you'll add lists of available apparatus and personnel to the  **ViewIncidents** screen.
-    
- 
+In the next step, you'll add lists of available apparatus and personnel to the  **ViewIncidents** screen.
 
 ### To add queries to the screen
 
+1. In **Solution Explorer**, open the shortcut menu for the **ViewIncidents.lsml** node, and select **Open**.
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **ViewIncidents.lsml** node and select **Open**.
-    
- 
-2. In the screen designer, open the shortcut menu for the  **Tab** node and select **Add Tab**.
-    
- 
-3. In the  **Properties** window, change the **Name** property toResources.
-    
- 
-4. In the screen designer, on the toolbar, select  **Add Data Item**.
-    
-    The  **Add Data Item** dialog box opens.
-    
- 
-5. In the  **Add Data Item** dialog box, select the **Query** option button.
-    
- 
+2. In the screen designer, open the shortcut menu for the **Tab** node, and select **Add Tab**.
+
+3. In the Properties window, change the **Name** property to **Resources**.
+
+4. In the screen designer, on the toolbar, select **Add Data Item**.
+
+5. In the **Add Data Item** dialog box, select the **Query** option.
+
 6. In the list, select **DeveloperData.AvailableApparatus** as shown in Figure 20, and then select **OK**.
     
-    *Figure 20. The AvailableApparatus query*
+   *Figure 20. The AvailableApparatus query*
 
-  ![Add a query](../images/CBA_IM_11.PNG)
+   ![Add a query](../images/CBA_IM_11.PNG)
  
+   The **AvailableApparatus** collection is added to the left pane of the screen designer.
 
-    The  **AvailableApparatus** collection is added to the left pane of the screen designer.
-    
- 
-7. Repeat the process to add the  **AvailablePersonnel** query to the screen.
-    
- 
-8. Under the  **Rows Layout | Resources** node, open the **Add** list and select **Available Apparatus**.
-    
- 
-9. select the  **List | Available Apparatus** node, open the **List** list and select **Tile List**.
-    
- 
-10. Delete all of the items under the  **Rows Layout | Contoso Apparatus** node except for **Apparatus Number** and **Apparatus Type**.
-    
- 
-11. Under the  **Rows Layout | Resources** node, open the **Add** list and select **Available Personnel**.
-    
- 
-12. select the  **List | Available Personnel** node, open the **List** list and select **Table**.
-    
- 
-13. Delete all of the items under the  **Table Row | Contoso Personnel** node except for **Name**,  **Rank**, and  **Assignment**.
-    
-    Figure 21 shows the screen layout.
-    
+7. Repeat the process to add the **AvailablePersonnel** query to the screen.
 
+8. Under the **Rows Layout | Resources** node, open the **Add** list, and select **Available Apparatus**.
+
+9. Select the **List | Available Apparatus** node, open the **List** list, and select **Tile List**.
+
+10. Delete all the items under the **Rows Layout | Contoso Apparatus** node except for **Apparatus Number** and **Apparatus Type**.
+
+11. Under the **Rows Layout | Resources** node, open the **Add** list, and select **Available Personnel**.
+
+12. Select the **List | Available Personnel** node, open the **List** list, and select **Table**.
+
+13. Delete all the items under the **Table Row | Contoso Personnel** node except for **Name**, **Rank**, and **Assignment**. Figure 21 shows the screen layout.
+    
     *Figure 21. The screen layout*
 
-  ![The Resources tab layout](../images/CBA_IM_11a.PNG)
- 
+    ![The Resources tab layout](../images/CBA_IM_11a.PNG)
 
- 
+14. Run the add-in and observe the changes. Select an incident, and then select the **Resources** tab to see a list of available resources. The changes are now complete. 
 
- 
-14. Run the add-in and observe the changes. select an incident, and then select the  **Resources** tab to see a list of available resources.
-    
-    
- 
-
-    
-    The changes are now complete. In the next section, you'll learn how add and associate a SharePoint document library with add-in.
-    
- 
+In the next section, you'll learn how to add and associate a SharePoint document library with an add-in.
 
 ## Associate a Document Library
 <a name="associate"> </a>
