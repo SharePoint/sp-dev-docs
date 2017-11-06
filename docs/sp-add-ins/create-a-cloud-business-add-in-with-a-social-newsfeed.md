@@ -93,13 +93,13 @@ The candidate tracker add-in needs a database table, which you'll create in the 
     
    The screen designer opens, with a representation of the data entity in the left pane, and a representation of the screen layout in the right pane.
 
-4. In the right pane of the screen designer, select the **List | Candidates** node, expand the **List** list, and then select **Table**, as shown in figure 3.
+4. In the right pane of the screen designer, select the **List | Candidates** node, expand the **List** list, and then select **Table**, as shown in Figure 3.
     
    *Figure 3. The Table control*
 
    ![The BrowseCandidates screen designer](../images/CBAscreen.PNG)
  
-   This displays the **Candidate** information in a tabular format instead of the default list format.
+   This displays the **Candidate** information in a tabular format instead of in the default list format.
     
    Notice that in addition to the fields that you defined for the table, there are four more fields: Created By, Created, Modified By, and Modified. These fields create an audit trail to show when an item was added or last updated and by whom. 
 
@@ -214,7 +214,9 @@ In many business add-ins, you'll want to restrict access to certain functionalit
                     results.AddEntityError("Permission denied")
                 End If
     ```
-
+    
+    <br/>
+    
 
     ```C#
       if (!(Application.User.Department == "Hiring Managers")) {
@@ -222,14 +224,14 @@ In many business add-ins, you'll want to restrict access to certain functionalit
     }
     ```
 
-   The **Validate** method is run when a user tries to save a record. If the user is a member of the Hiring Managers security group, the record is saved; otherwise, a "Permission denied" error message is displayed and the record is discarded.
+The **Validate** method is run when a user tries to save a record. If the user is a member of the Hiring Managers security group, the record is saved; otherwise, a "Permission denied" error message is displayed and the record is discarded.
 
-   At this point, if you run the add-in and add a new candidate, you will likely see the error message unless you are a member of an actual security group named Hiring Managers. Replace "Hiring Managers" with the name of a security group to which you belong and try again. You should now have permission to add a candidate.
+At this point, if you run the add-in and add a new candidate, you will likely see the error message unless you are a member of an actual security group named Hiring Managers. Replace "Hiring Managers" with the name of a security group to which you belong and try again. You should now have permission to add a candidate.
 
 <a name="bk_validate"> </a>
 ## Next steps
 
-Congratulations! You created your first cloud business add-in. If this was an add-in that you want to share with users, your next step would be to publish the add-in. See [Publish a Cloud Business Add-in to Office 365](http://msdn.microsoft.com/en-us/library/vstudio/dn454601.aspx) or [Publish SharePoint Add-ins](http://msdn.microsoft.com/en-us/library/office/apps/jj164070.aspx).
+Congratulations! You created your first cloud business add-in. If this was an add-in that you want to share with users, your next step would be to publish the add-in: [Publish a cloud business add-in to Office 365](incident-manager-a-cloud-business-add-in-tutorial.md#publish-to-sharepoint) or [Publish SharePoint Add-ins](publish-sharepoint-add-ins.md).
 
 Of course, this is just a simple example; there's much more that you can do to create full-featured add-ins. Because the Cloud Business Add-in template is based on LightSwitch technologies, you may want to explore the LightSwitch documentation to get some ideas: [LightSwitch SharePoint Add-ins](http://msdn.microsoft.com/en-us/library/vstudio/jj969620.aspx).
 
