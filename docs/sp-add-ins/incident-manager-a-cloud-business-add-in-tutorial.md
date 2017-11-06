@@ -653,280 +653,183 @@ In the next section, you'll customize the add-in and add some JavaScript code.
 <a name="custom"> </a>
 ## Customize the add-in
 
-The Contoso Fire Department is pleased with the additions to the Incident Manager add-in, but there are few more "fit and finish" items on their list. They want to display their logo on the screens instead of the default icon. They don't like the  **FlipSwitch** control for **Insured** field on the **AddEditPatient** screen and want it replaced with a check box. Finally, since not all incidents have patients, they don't want the **Patients** tab on the **ViewIncidents** screen at appear if there aren't any patients.
+The Contoso Fire Department is pleased with the additions to the Incident Manager add-in, but there are a few more "fit and finish" items on their list. They want to display their logo on the screens instead of the default icon. They don't like the **FlipSwitch** control for the **Insured** field on the **AddEditPatient** screen and want it replaced with a check box. Finally, because not all incidents have patients, they don't want the **Patients** tab on the **ViewIncidents** screen to appear if there aren't any patients.
 
 ### To display a custom logo
 
+1. In **Solution Explorer**, in the **IncidentManager.HtmlClient** project, expand the **Content** and **Images** nodes.
 
-1. In  **Solution Explorer**, in the  **IncidentManager.HtmlClient** project, expand the **Content** and **Images** nodes.
+2. Select the **user-logo.png** and **user-splash-screen.png** files as shown in Figure 30, and delete them.
     
- 
-2. select the  **user-logo.png** and **user-splash-screen.png** files as shown in Figure 30 and delete them.
-    
-    *Figure 30. The files to delete*
+   *Figure 30. The files to delete*
 
-  ![The logo and splash screen files](../images/CBA_IM_17.PNG)
- 
+   ![Delete the logo and splash screen files](../images/CBA_IM_17.PNG)
 
- 
+3. Open the shortcut menu for the **Images** node, and then select **Add** > **Existing Item**.
 
- 
-3. Open the shortcut menu for the  **Images** node, select **Add**,  **Existing Item**.
-    
- 
-4. In the  **Add Existing Item** dialog box, select the **Browse** button and then navigate to the **Resources** folder for the downloaded Incident Manager sample.
-    
- 
-5. select the  **user-logo.png** and **user-splash-screen.png** files, and then select the **Add** button.
-    
-    The new images will be displayed on the title bar of the add-in and in the splash screen shown when the add-in is loading.
-    
-    
- 
+4. In the **Add Existing Item** dialog box, select **Browse**, and then go to the **Resources** folder for the downloaded Incident Manager sample.
 
+5. Select the **user-logo.png** and **user-splash-screen.png** files, and then select **Add**.
     
-    In the next step, you'll replace the  **FlipSwitch** control with a checkbox.
-    
- 
+   The new images are displayed on the title bar of the add-in and in the splash screen shown when the add-in is loading.
+
+In the next step, you'll replace the **FlipSwitch** control with a check box.
 
 ### To replace the FlipSwitch control
 
+1. In **Solution Explorer**, open the shortcut menu for the **AddEditPatient.lsml** screen node, and select **Open**.
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **AddEditPatient.lsml** screen node and select **Open**.
-    
- 
-2. In the screen designer, expand the list for the  **Insured** node and select **Custom Control**.
-    
- 
-3. In the  **Properties** window, select the **Edit Render Code** link.
-    
- 
-4. In the Code Editor, add the following code to the  **Insured_render** method:
-    
-```
-  // Create the checkbox and add it to the DOM.
-    var checkbox = $("<input type='checkbox'/>")
-            .css({
-                height: 20,
-                width: 20,
-                margin: "10px"
-            })
-            .appendTo($(element));
+2. In the screen designer, expand the list for the **Insured** node, and select **Custom Control**.
 
-    // Determine if the change was initiated by the user.
-    var changingValue = false;
+3. In the Properties window, select the **Edit Render Code** link.
 
-    checkbox.change(function () {
-        changingValue = true;
-        contentItem.value = checkbox[0].checked;
-        changingValue = false;
-    });
-    contentItem.dataBind("value", function (newValue) {
-        if (!changingValue) {
-            checkbox[0].checked = newValue;
-        }
-    });
-```
+4. In the Code Editor, add the following code to the **Insured_render** method:
+    
+    ```
+      // Create the checkbox and add it to the DOM.
+        var checkbox = $("<input type='checkbox'/>")
+                .css({
+                    height: 20,
+                    width: 20,
+                    margin: "10px"
+                })
+                .appendTo($(element));
 
+        // Determine if the change was initiated by the user.
+        var changingValue = false;
 
-    This code creates a  **CheckBox** control when the screen is rendered. You'll also need to add code to set an initial value.
-    
- 
-5. In  **Solution Explorer**, open the shortcut menu for the  **Patients.lsml** entity node and select **Open**.
-    
- 
-6. In the entity designer, on the  **Perspective** bar, select the **HTMLClient** tab.
-    
- 
-7. On the toolbar, expand the  **Write Code** list and select **created**.
-    
- 
-8. In the Code Editor, add the following code to the  **created** method:
-    
-```
-  entity.Insured = new Boolean();
-    entity.Insured = 'true';
-```
+        checkbox.change(function () {
+            changingValue = true;
+            contentItem.value = checkbox[0].checked;
+            changingValue = false;
+        });
+        contentItem.dataBind("value", function (newValue) {
+            if (!changingValue) {
+                checkbox[0].checked = newValue;
+            }
+        });
+    ```
 
+   This code creates a **CheckBox** control when the screen is rendered. You'll also need to add code to set an initial value.
 
-    This code sets the initial value of the control to checked (true) when the screen is created.
-    
-    
- 
+5. In **Solution Explorer**, open the shortcut menu for the **Patients.lsml** entity node, and select **Open**.
 
+6. In the entity designer, on the **Perspective** bar, select the **HTMLClient** tab.
+
+7. On the toolbar, expand the **Write Code** list, and select **created**.
+
+8. In the Code Editor, add the following code to the **created** method:
     
-    In the next step, you'll add code to hide the  **Patients** tab if no patients exist.
-    
- 
+    ```
+      entity.Insured = new Boolean();
+      entity.Insured = 'true';
+    ```
+   This code sets the initial value of the control to checked (true) when the screen is created.
+   
+In the next step, you'll add code to hide the **Patients** tab if no patients exist.
 
 ### To conditionally hide a tab
 
+1. In **Solution Explorer**, open the shortcut menu for the **ViewIncidents.lsml** screen node, and select **Open**.
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **ViewIncidents.lsml** screen node and select **Open**.
-    
- 
-2. On the toolbar, open the  **Write Code** list and select **created**.
-    
- 
-3. In the Code Editor, add the following code to the  **ViewIncidents_created** method:
-    
-```
-  screen.getPatients().then(function (results) {
-        var queryCount = results.count;
-        if (queryCount == 0 ) {
-            screen.findContentItem("Patients").isVisible = false;
-        }
-    });
-```
+2. On the toolbar, open the **Write Code** list, and select **created**.
 
+3. In the Code Editor, add the following code to the **ViewIncidents_created** method:
+    
+    ```
+      screen.getPatients().then(function (results) {
+            var queryCount = results.count;
+            if (queryCount == 0 ) {
+                screen.findContentItem("Patients").isVisible = false;
+            }
+        });
+    ```
+   This code runs the **GetPatients** query to get a count of **Patients**. If the result is zero, the **findContentItem** method sets the **isVisible** property of the **Patients** tab to false, hiding it.
 
-    This code runs the  **GetPatients** query to get a count of **Patients**. If the result is zero, the  **findContentItem** method sets the **isVisible** property of the **Patients** tab to false, hiding it.
-    
- 
-4. On the menu bar, select  **Debug**,  **Start Debugging** to run the add-in. Notice that the new logo appears on the screens. Open the first incident that you created earlier and edit a patient. Verify that the Insured field is now a checkbox. Add a new incident without any patients, and verify that the **Patients** tab is hidden on the view screen.
-    
-    
- 
+4. On the menu bar, select **Debug** > **Start Debugging** to run the add-in. Notice that the new logo appears on the screens. Open the first incident that you created earlier and edit a patient. Verify that the **Insured** field is now a check box. Add a new incident without any patients, and verify that the **Patients** tab is hidden on the view screen.
 
-    
-    In the final section, you'll publish the finished add-in to SharePoint.
-    
- 
+In the final section, you'll publish the finished add-in to SharePoint.
 
-## Publish to SharePoint
 <a name="pub"> </a>
+## Publish to SharePoint
 
 So far you've only run the add-in in Debug mode, which uses SharePoint to provide authentication and redirects to the local computer's instance of IIS Express. Next you'll publish the add-in as an auto-hosted SharePoint add-in, which will automatically provision space in Office 365 for both the add-in and an intrinsic database. Specifically, the add-in will be hosted in Microsoft Azure and the database in SQL Azure. After you publish your add-in, others can start it from SharePoint on their computers and mobile devices.
- 
-
- 
 
 ### To publish the add-in
 
+1. On the Visual Studio toolbar, open the **Debug** list, and select **Release**.
 
-1. On the Visual Studio toolbar, open the  **Debug** list and select **Release**.
+2. In **Solution Explorer**, open the shortcut menu for the **IncidentManager** node as shown in Figure 31, and then select **Publish**.
     
- 
-2. In  **Solution Explorer**, open the shortcut menu for the  **IncidentManager** node as shown in Figure 31, and then select **Publish**.
-    
-    *Figure 31. The IncidentManager node*
+   *Figure 31. The IncidentManager node*
 
-  ![The IncidentManager node](../images/CBA_IM_18.PNG)
- 
+   ![The IncidentManager node](../images/CBA_IM_18.PNG)
 
-    The LightSwitch Publish Application Wizard appears.
+3. In the LightSwitch Publish Application Wizard, on the **SharePoint Options** page, select the **Autohosted** option as shown in Figure 32, and then select **Publish**.
     
- 
-3. On the  **SharePoint** options page, select the **Autohosted** option button as shown in Figure 32, and then select the **Publish** button.
-    
-    *Figure 32. The Autohosted option*
+   *Figure 32. The Autohosted option*
 
-  ![The Publish wizard](../images/CBA_IM_19.PNG)
+   ![The Autohosted option](../images/CBA_IM_19.PNG)
  
+   When your add-in is published, File Explorer displays the **Publish** folder for your project.    
+ 
+4. In the browser, go to your SharePoint Developer site.
 
-    When your add-in is published,  **File Explorer** appears and displays the **Publish** folder for your project.
+5. In the **Add-ins in Testing** list, select the ellipsis (`...`) link next to **IncidentManager**, and then select **REMOVE**, as shown in Figure 33.
     
- 
-4. In the browser, navigate to your SharePoint Developer site
-    
- 
-5. In the  **Add-ins in Testing** list, select the ellipsis (???) link next to **IncidentManager**, and then select the  **Remove** link, as shown in Figure 33.
-    
-    *Figure 33. The Remove link*
+   *Figure 33. The Remove link*
 
-  ![The Apps in Test list](../images/CBA_IM_20.PNG)
- 
+   ![The Apps in Test list](../images/CBA_IM_20.PNG)
 
- 
+6. Select the **New add-in to deploy** link.
 
- 
-6. select the  **new add-in to deploy** link.
+7. In the **Deploy Add-in** dialog box, select the **upload** link, as shown in Figure 34.
     
- 
-7. In the  **Deploy Add-in** dialog box, select the **upload** link, as shown in Figure 34.
-    
-    *Figure 34. The upload link*
+   *Figure 34. The upload link*
 
-  ![The Deploy App dialog](../images/CBA_IM_20a.PNG)
- 
+   ![The Deploy App dialog](../images/CBA_IM_20a.PNG)
 
-    The  **Upload Add-in** dialog box opens.
+8. In the **Upload Add-in** dialog box, select **Browse**, go to the **Publish** folder for your add-in, select the **IncidentManager.SharePoint.app** file, select **Open**, and then select **OK**.
     
+   After the file has been uploaded, the **Deploy Add-in** dialog box opens.    
  
-8. In the  **Upload Add-in** dialog box, select the **Browse** button and navigate to the **Publish** folder for your add-in and select the **IncidentManager.SharePoint.app** file, select the **Open** button, and then select **OK**.
+9. In the **Deploy Add-in** dialog box, select **Deploy**.
+
+10. In the **Upload Add-in** dialog box, select **Trust It**.
     
-    Once the file has been uploaded, the  **Deploy Add-in** dialog box opens.
-    
- 
-9. In the  **Deploy Add-in** dialog box, select the **Deploy** button.
-    
- 
-10. In the  **Upload Add-in** dialog box, select the **Trust It** button.
-    
-    The add-in will be installed on your SharePoint site. The process may take a few minutes.
-    
-    Figure 35 shows the Add-ins in Testing list as the add-in is installing.
-    
+    The add-in is installed on your SharePoint site. The process may take a few minutes. Figure 35 shows the **Add-ins in Testing** list as the add-in is installing.
 
     *Figure 35. The Add-ins in Testing list*
 
-  ![App is installing](../images/CBA_IM_21.PNG)
- 
+    ![App is installing](../images/CBA_IM_21.PNG)
 
- 
-
- 
-11. select the  **Site Contents** link.
+11. Select the **Site Contents** link. Figure 37 shows the Site Contents list as the add-in is installing.
     
-    Figure 37 shows the Site Contents list as the add-in is installing.
-    
-
     *Figure 37. The add-in is installing*
 
-  ![App is installing](../images/CBA_IM_22.PNG)
- 
+    ![App is installing](../images/CBA_IM_22.PNG)
 
- 
-
- 
-12. Once the add-in has finished installing, select the  **Incident Manager** tile to run the add-in.
-    
-    Figure 38 shows the Site Contents list after the add-in is installed.
-    
+12. After the add-in has finished installing, select the **Incident Manager** tile to run the add-in. Figure 38 shows the Site Contents list after the add-in is installed.
 
     *Figure 38. The add-in is installed*
 
-  ![The app is ready to run](../images/CBA_IM_23.PNG)
- 
+    ![The add-in is installed](../images/CBA_IM_23.PNG)
 
-    The add-in opens in the browser and looks exactly the same as when you ran the add-in in Debug mode. Notice that the data you entered during development is gone. When deploying the add-in, the database is deployed but not the data.
-    
- 
-13. Enter some data and verify that everything works as expected.
-    
-    Figure 39 shows the add-in as displayed in a desktop browser.
-    
+    The add-in opens in the browser and looks exactly the same as when you ran the add-in in Debug mode. Notice that the data you entered during development is gone. When deploying the add-in, the database is deployed, but not the data.
 
+13. Enter some data and verify that everything works as expected. Figure 39 shows the add-in as displayed in a desktop browser.
+    
     *Figure 39. Tile view*
 
-  ![Layout in desktop browser](../images/CBA_IM_24.PNG)
- 
+    ![Layout in desktop browser](../images/CBA_IM_24.PNG)
 
-    You can also verify your add-in on a mobile device. Sign in to your SharePoint site from the web browser on your device, and then start the add-in.
-    
-    Figure 40 shows the add-in as displayed in a mobile browser.
-    
+    You can also verify your add-in on a mobile device. Sign in to your SharePoint site from the web browser on your device, and then start the add-in. Figure 40 shows the add-in as displayed in a mobile browser.
 
     *Figure 40. List view*
 
-  ![Layout on mobile device](../images/CBA_IM_25.PNG)
- 
+    ![Layout on mobile device](../images/CBA_IM_25.PNG)
 
- 
-
- 
-Congratulations! You have now finished the tutorial, and you know the basics of a creating a cloud business add-in. Now go and build an add-in of your own - the additional resource below should help you to go further.
- 
+Congratulations! You have now finished the tutorial, and you know the basics of creating a cloud business add-in. Now go and build an add-in of your own; the following resources should help you go further.
 
 ## Additional resources
 <a name="bk_addresources"> </a>
