@@ -773,7 +773,7 @@ You can manipulate files by using the JavaScript object model. The following sec
 
  
 
- **Note**  You can only work with files up to 1.5 MB by using the JavaScript object model. To upload larger files, use REST (Representational State Transfer). For more information, see  [](complete-basic-operations-using-sharepoint-rest-endpoints#LargeFiles.md).
+ **Note**  You can only work with files up to 1.5 MB by using the JavaScript object model. To upload larger files, use REST (Representational State Transfer). For more information, see  [](complete-basic-operations-using-sharepoint-rest-endpoints.md#LargeFiles).
  
 
 

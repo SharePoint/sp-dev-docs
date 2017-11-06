@@ -36,7 +36,7 @@ Three major categories of choices need to be made when a SharePoint Add-in is de
     
    - A SharePoint Add-in can also access external data through Business Connectivity Services (BCS) or a web service proxy. For more information, see [Business Connectivity Services in SharePoint](http://msdn.microsoft.com/library/64b7d032-4b83-4e9e-bc08-f0a161af5457%28Office.15%29.aspx) and [Query a remote service using the web proxy in SharePoint](query-a-remote-service-using-the-web-proxy-in-sharepoint.md).
 
-   For more information about data storage and access in SharePoint Add-ins, see [Data storage in SharePoint Add-ins](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscape#Data.md), [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md), and [Work with external data in SharePoint](work-with-external-data-in-sharepoint.md).
+   For more information about data storage and access in SharePoint Add-ins, see [Data storage in SharePoint Add-ins](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscape.md#Data), [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md), and [Work with external data in SharePoint](work-with-external-data-in-sharepoint.md).
 
 - **UI:** There are three ways to surface a SharePoint Add-in in SharePoint: at a minimum, all add-ins are surfaced in a full web page. Optionally, an add-in can also be surfaced through an add-in part, and through a menu item or ribbon button. For more information, see [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md).
     
