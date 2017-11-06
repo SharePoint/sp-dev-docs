@@ -206,7 +206,7 @@ In the next step, you'll customize the browse screen.
 
 2. In the Properties window, select the **Display Name** property and enter **Incidents**.
 
-3. In the screen designer, select the **Rows Layout | rows** node, and then expand the **Add** list, and select **Incident Address**.
+3. In the screen designer, select the **Rows Layout | rows** node, expand the **Add** list, and then select **Incident Address**.
 
 4. Select the **Dispatch Time** node, and then on the toolbar, select **Delete**.
     
@@ -361,7 +361,7 @@ The first step is to add a few prepopulated list templates to your developer sit
 
 3. On the **Developer** page, select the **Site Contents** link.
 
-4. On the **Site Contents** page, select the **Settings** link, as shown in Figure 13.
+4. On the **Site Contents** page, select the **SETTINGS** link, as shown in Figure 13.
     
    *Figure 13. The Settings link*
 
@@ -433,11 +433,11 @@ In the next step, you'll define a query to limit the data returned from the **Ap
 
 1. In **Solution Explorer**, open the shortcut menu for the **ApparatusSet.lsml** node, and select **Add Query**.
 
-2. In the query designer, in the Properties window, select the **Name** property and enter **AvailableApparatus**.
+2. In the query designer, in the Properties window, select the **Name** property, and enter **AvailableApparatus**.
 
-3. Select the **Add Filter** link, and in the second drop-down list, select **Available**.
+3. Select the **Add Filter** link, and in the second list, select **Available**.
 
-4. In the last box, change**False** to **True**. Figure 18 shows the query.
+4. In the last box, change **False** to **True**. Figure 18 shows the query.
     
    *Figure 18. The AvailableApparatus query*
 
@@ -449,9 +449,9 @@ In the next step, you'll define another query for the **ContosoPersonnel** entit
 
 1. In **Solution Explorer**, open the shortcut menu for the **ContosoPersonnels.lsml** node, and select **Add Query**.
     
-2. In the query designer, in the Properties window, select the **Name** property and enter **AvailablePersonnel**.
+2. In the query designer, in the Properties window, select the **Name** property, and enter **AvailablePersonnel**.
      
-3. Select the **Add Filter** link, and in the second drop-down list, select **Shift**.
+3. Select the **Add Filter** link, and in the second list, select **Shift**.
     
 4. In the last box, enter **A**. Figure 19 shows the query.
     
@@ -536,7 +536,7 @@ On the scene of an incident, the Incident Commander has to document many things,
 
    ![Document library with IncidentNumber column](../images/CBA_IM_12.PNG)
  
-   In order to associate the document library with your add-in, the document library must contain a custom column that maps to a unique field in your entity. In this case the **IncidentNumber** column maps to the **IncidentNumber** field in the **Incidents** entity.
+   To associate the document library with your add-in, the document library must contain a custom column that maps to a unique field in your entity. In this case the **IncidentNumber** column maps to the **IncidentNumber** field in the **Incidents** entity.
     
 In the next step, you'll add the document library to your add-in.
 
@@ -630,11 +630,11 @@ In the next step, you'll add the document library to the **ViewIncidents** scree
     This will be used as the file name for the document.
 
     > [!NOTE]
-    > If you don't enter a file name, it will be saved with the default name **Document.docx**. Once saved, the file name can only be changed by accessing it in the document library in SharePoint.
+    > If you don't enter a file name, it will be saved with the default name **Document.docx**. After a file name is saved, it can only be changed by accessing it in the document library in SharePoint.
     
 15. Select the back button in your browser to return to the add-in. The **Incident Report** document should appear on the **Documents** tab.
 
-16. select **Close** in your browser to return to design mode.
+16. Select **Close** in your browser to return to design mode.
 
 In the next section, you'll customize the add-in and add some JavaScript code.
 
