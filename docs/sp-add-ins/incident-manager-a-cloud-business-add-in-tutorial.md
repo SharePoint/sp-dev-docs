@@ -94,12 +94,10 @@ In the next step, you'll add an entity to represent a collection of incidents. T
 16. In the next row, enter **IncidentCommander**, and select the **Person** data type.
     
     The **Person** data type provides a connection to the SharePoint User Profile Service, which pulls user information from Active Directory.
-    
-    Figure 2 shows the finished entity.
    
-    *Figure 2. The Incident entity*
+    *Figure 2. The finished Incident entity*
 
-    ![The Incident entity](../images/CBA_IM_2.PNG)
+    ![The finished Incident entity](../images/CBA_IM_2.PNG)
  
 In the next step, you'll add a choice list that allows the user to select from a fixed set of values. In this case, the fire department has a set of common incident types.
 
@@ -161,8 +159,6 @@ In the next step, you'll define a relationship between the Incident and Patient 
 4. In the **Multiplicity** row, in the **From** column, select **Zero or one**.
  
 5. In the **Multiplicity** row, in the **To** column, select **Many**, and then select **OK**.
-    
-   Figure 4 shows the relationship.
  
    *Figure 4. Incident and Patient relationship*
 
@@ -186,11 +182,9 @@ In the next step, you'll add screens to view, add, and edit both Patient and Inc
 
 6. Select both the **Incident Details** and **Incident Patients** check boxes, and then select **OK**.
     
-   Figure 5 shows the Add New Screen dialog box.
-    
-   *Figure 5. Add New Screen dialog box*
+   *Figure 5. The Add New Screen dialog box*
 
-   ![The Incidents screen set](../images/CBA_IM_4.PNG)
+   ![The Add New Screen dialog box](../images/CBA_IM_4.PNG)
  
    The Browse Data, View Details, and Add/Edit Details screens are added to the HTMLClient project. The Browse Data screen is automatically set as the home screen for the application, and the necessary commands for launching the View Details and Add/Edit Details screens are automatically provided.  
  
@@ -216,11 +210,9 @@ In the next step, you'll customize the browse screen.
 
 4. Select the **Dispatch Time** node, and then on the toolbar, select **Delete**.
     
-   Figure 6 shows the finished screen layout.
-    
-   *Figure 6. Browse screen layout*
+   *Figure 6. The finished browse screen layout*
 
-   ![Browse screen layout](../images/CBA_IM4a.PNG)
+   ![The finished browse screen layout](../images/CBA_IM4a.PNG)
  
    At run time, the screen displays a tile for each incident, and each tile displays the incident number, date, and address.
     
@@ -243,12 +235,10 @@ In the next step, you'll customize the add/edit screen.
    ![The Add Patients link](../images/CBA_IM_5.PNG)
 
 5. In the left pane, select the **Patients** node and drag it under the **Incident Commander** node in the center pane.
-    
-   Figure 8 shows the finished screen layout.
 
-   *Figure 8. The add/edit screen layout*
+   *Figure 8. The finished add/edit screen layout*
 
-   ![add/edit screen layout](../images/CBA_IM_5a.PNG)
+   ![The finished add/edit screen layout](../images/CBA_IM_5a.PNG)
 
 In the next step, you'll create a screen to add patient records.
 
@@ -270,11 +260,9 @@ In the next step, you'll create a screen to add patient records.
     
    The **Incidents** field isn't needed because the patient is already associated with an incident.
     
-   Figure 9 shows the finished screen layout.
-    
-   *Figure 9. The Add Patient screen layout*
+   *Figure 9. The finished Add Patient screen layout*
 
-   ![Add Patient screen layout](../images/CBA_IM_6.PNG)
+   ![The finished Add Patient screen layout](../images/CBA_IM_6.PNG)
  
 In the next step, you'll run the add-in and add some data.
 
@@ -505,7 +493,7 @@ In the next step, you'll add lists of available apparatus and personnel to the  
 
 12. Select the **List | Available Personnel** node, open the **List** list, and select **Table**.
 
-13. Delete all the items under the **Table Row | Contoso Personnel** node except for **Name**, **Rank**, and **Assignment**. Figure 21 shows the screen layout.
+13. Delete all the items under the **Table Row | Contoso Personnel** node except for **Name**, **Rank**, and **Assignment**. 
     
     *Figure 21. The screen layout*
 
@@ -580,7 +568,7 @@ In the next step, you'll create a relationship between the document library and 
 
 4. In the **Foreign** key list, select the **IncidentNumber (String)** field from the **IncidentDocuments** entity.
 
-5. In the **Primary** key list, select the **IncidentNumber (String)** field from the **Incidents** entity, and then select **OK**. Figure 26 shows the Foreign and Primary keys.
+5. In the **Primary** key list, select the **IncidentNumber (String)** field from the **Incidents** entity, and then select **OK**.
     
    *Figure 26. Foreign and primary keys*
 
@@ -797,23 +785,23 @@ So far you've only run the add-in in Debug mode, which uses SharePoint to provid
 
 10. In the **Upload Add-in** dialog box, select **Trust It**.
     
-    The add-in is installed on your SharePoint site. The process may take a few minutes. Figure 35 shows the **Add-ins in Testing** list as the add-in is installing.
+    The add-in is installed on your SharePoint site. The process may take a few minutes. 
 
-    *Figure 35. The Add-ins in Testing list*
+    *Figure 35. The Add-ins in Testing list as the add-in is installing*
 
-    ![App is installing](../images/CBA_IM_21.PNG)
+    ![The Add-ins in Testing list as the add-in is installing](../images/CBA_IM_21.PNG)
 
 11. Select the **Site Contents** link. Figure 37 shows the Site Contents list as the add-in is installing.
     
-    *Figure 37. The add-in is installing*
+    *Figure 37. The Site Contents list as the add-in is installing*
 
-    ![App is installing](../images/CBA_IM_22.PNG)
+    ![The Site Contents list as the add-in is installing](../images/CBA_IM_22.PNG)
 
-12. After the add-in has finished installing, select the **Incident Manager** tile to run the add-in. Figure 38 shows the Site Contents list after the add-in is installed.
+12. After the add-in has finished installing, select the **Incident Manager** tile to run the add-in. 
 
-    *Figure 38. The add-in is installed*
+    *Figure 38. The Site Contents list after the add-in is installed*
 
-    ![The add-in is installed](../images/CBA_IM_23.PNG)
+    ![The Site Contents list after the add-in is installed](../images/CBA_IM_23.PNG)
 
     The add-in opens in the browser and looks exactly the same as when you ran the add-in in Debug mode. Notice that the data you entered during development is gone. When deploying the add-in, the database is deployed, but not the data.
 
