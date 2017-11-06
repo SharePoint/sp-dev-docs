@@ -30,18 +30,14 @@ You will build the mobile add-in that is used to enter basic information about t
 ### To create a project
 
 1. On the menu bar, select **File** > **New** > **Project**.
-    
-   The **New Project** dialog box opens.
 
-2. In the list of templates, expand the **Visual Basic** or **Visual C#** node, expand the **Office/SharePoint** node, select the **Add-ins** node, and then select the **Cloud Business Add-in** template, as shown in Figure 1 (note that "app" is now "add-in").
+2. In the **New Project** dialog box, in the list of templates, expand the **Visual Basic** or **Visual C#** node, expand the **Office/SharePoint** node, select the **Add-ins** node, and then select the **Cloud Business Add-in** template, as shown in Figure 1 (note that "app" is now "add-in").
     
    *Figure 1. Cloud Business Add-in template*
 
    ![Cloud Business Add-in template](../images/CBA_IM1.PNG)
 
 3. In the **Name** box, enter **IncidentManager**, and then select **OK**.
-    
-   The New Cloud Business Add-in Wizard opens.
    
 4. In the New Cloud Business Add-in Wizard, enter the URL for your Office 365 Developer site, and then select **Finish**.
     
@@ -51,15 +47,13 @@ You will build the mobile add-in that is used to enter basic information about t
    - A top-level **IncidentManager** project
    - An **IncidentManager.HTMLClient** project
    - An **IncidentManager.Server** project
-   - An **IncidentManager.SharePoint** project.
+   - An **IncidentManager.SharePoint** project
 
 In the next step, you'll add an entity to represent a collection of incidents. The entity creates a SQL Server database table that is intrinsic to the add-in and stores information about each incident.
 
 ### To add the Incident entity
 
-1. On the **Start** screen, select the **Create New Table** link.
-    
-   The entity designer opens.
+1. On the **Start** screen, select the **Create New Table** link. The entity designer opens.
    
 2. In the Properties window, in the **Name** property box, enter **Incident**.
     
@@ -91,8 +85,6 @@ In the next step, you'll add an entity to represent a collection of incidents. T
 
 13. In the Properties window, select the **Phone Number Formats** link.
     
-    The **Phone Number Formats** dialog box opens.
-    
 14. In the **Phone Number Formats** dialog box, select the appropriate format for your locale, and then select the **Move Up** button to move it to the top of the list.
     
 15. In the **Test Phone Number Validation** box, enter a phone number and verify that it's properly formatted, and then select **Save**.
@@ -113,100 +105,74 @@ In the next step, you'll add a choice list that allows the user to select from a
 
 ### To add a list of choices
 
+1. In the entity designer, select the **IncidentType** field, and then in the Properties window, select the **Choice List** link.
 
-1. In the entity designer, select the  **IncidentType** field, and then in the **Properties** window select the **Choice List** hyperlink.
+2. In the **Choice List** dialog box, select the **Add Value** link and enter **1**.
     
-    The  **Choice List** dialog box opens.
+3. In the **Display Name** column, enter **Fire - Commercial**.
     
- 
-2. In the  **Choice List** dialog box, select the **Add Value** link and enter1.
+4. Enter the following values and display names, and then select **OK**.
     
- 
-3. In the  **Display Name** column, enter **Fire - Commercial**.
-    
- 
-4. Enter the following values and display names, and then select the  **OK** button.
-    
+   |**Value**|**Display Name**|
+   |:-----:|:-----|
+   |2|Fire - Residential|
+   |3|Fire - Single Engine Response|
+   |4| Aid - Advanced Life Support|
+   |5| Aid - Basic Life Support|
+   |6|Motor Vehicle Collision|
+   |7|Service Call|
+   |||
 
-|**Value**|**Display Name**|
-|:-----|:-----|
-|2|Fire - Residential|
-|3|Fire - Single Engine Response|
-|4| Aid - Advanced Life Support|
-|5| Aid - Basic Life Support|
-|6|Motor Vehicle Collision|
-|7|Service Call|
-|||
-
-At run time, a list of the display names will be presented to the user. When they make a choice, the corresponding  **Integer** value will be stored in the database.
+   At run time, a list of the display names is presented to the user. When they make a choice, the corresponding **Integer** value is stored in the database.
     
 In the next step, you'll add a Patient entity. Many of the fire department's incidents involve medical aid, and a single incident often involves multiple patients.
-    
- 
 
 ### To add the Patient entity
 
+1. In **Solution Explorer**, open the shortcut menu for the **Data Sources** node, and select **Add Table**.
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **Data Sources** node and select **Add Table**.
-    
- 
-2. In the  **Properties** window, in the text box for the **Name** property, enterPatient.
-    
- 
+2. In the Properties window, in the **Name** property box, enter **Patient**.
+
 3. In the entity designer, add the following fields as shown in Figure 3:
-    
-    *Figure 3. The finished Patient entity*
 
-  ![The Patient entity](../images/CBA_IM_2a.PNG)
- 
+   - Enter **PatientName**, and select **String** as the data type.
+   - Enter **DateOfBirth**, and select **Date** as the data type.
+   - Enter **Address**, and select **String** as the data type.
+   - Enter **Address2**, select **String** as the data type, and then clear the **Required** check box.
+   - Enter **City**, and select **String** as the data type.
+   - Enter **State**, and select **String** as the data type.
+   - Enter **PostalCode**, and select **String** as the data type.
+   - Enter **Insured**, and select **Boolean** as the data type.
+   
+   *Figure 3. The finished Patient entity*
 
-    
- 
+   ![The Patient entity](../images/CBA_IM_2a.PNG)
 
-    
-    In the next step, you'll define a relationship between the Incident and Patient entities. An incident can have multiple related patients.
-    
- 
+In the next step, you'll define a relationship between the Incident and Patient entities. An incident can have multiple related patients.
 
 ### To define a relationship
 
+1. In **Solution Explorer**, open the shortcut menu for the **Incidents.lsml** node, and select **Open**.
 
-1. In  **Solution Explorer**, open the shortcut menu for the  **Incidents.lsml** node and select **Open**.
+2. On the toolbar, select the **Relationship** button.
     
+3. In the **Add New Relationship** dialog box, in the **To** column of the **Name** row, select **Patient**.
  
-2. On the toolbar, select the  **Relationship** button.
-    
-    The  **Add New Relationship** dialog box appears.
-    
+4. In the **Multiplicity** row, in the **From** column, select **Zero or one**.
  
-3. In the  **Add New Relationship** dialog box, in the **To** column of the **Name** row, select **Patient**.
+5. In the **Multiplicity** row, in the **To** column, select **Many**, and then select **OK**.
     
+   Figure 4 shows the relationship.
  
-4. In the  **Multiplicity** row, in the **From** column select **Zero or one**.
-    
- 
-5. In the  **To** column, select **Many**, and then select the  **OK** button.
-    
-    Figure 4 shows the relationship.
-    
+   *Figure 4. Incident and Patient relationship*
 
-    *Figure 4. Incidents and Patients relationship*
-
-  ![The relationship between Incident and Patient](../images/CBA_IM_3.PNG)
+   ![The relationship between Incident and Patient](../images/CBA_IM_3.PNG)
  
-
-    This creates a zero or one to many relationship between incidents and patients. An incident record doesn't have to have a patient, but every patient has to have a related incident record.
+   This creates a zero or one-to-many relationship between incidents and patients. An incident record doesn't have to have a patient, but every patient has to have a related incident record.
     
-    
- 
-
-    
-    In the next step, you'll add screens to view, add, and edit both Patient and Incident records.
-    
- 
+In the next step, you'll add screens to view, add, and edit both Patient and Incident records.
 
 ### To add screens
-
 
 1. In  **Solution Explorer**, open the shortcut menu for the  **Incidents.lsml** node and select **Open**.
     
