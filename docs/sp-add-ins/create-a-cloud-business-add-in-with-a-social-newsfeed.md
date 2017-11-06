@@ -228,7 +228,10 @@ At this point, if you run the add-in and add a new candidate, you will likely se
 <a name="bk_validate"> </a>
 ## Next steps
 
-Congratulations! You created your first cloud business add-in. If this was an add-in that you want to share with users, your next step would be to publish the add-in: [Publish a cloud business add-in to Office 365](incident-manager-a-cloud-business-add-in-tutorial.md#publish-to-sharepoint) or [Publish SharePoint Add-ins](publish-sharepoint-add-ins.md).
+Congratulations! You created your first cloud business add-in. If this was an add-in that you want to share with users, your next step would be to publish the add-in: 
+- [Publish a cloud business add-in to Office 365](incident-manager-a-cloud-business-add-in-tutorial.md#publish-to-sharepoint)
+- [Publish cloud business add-ins](publish-cloud-business-add-ins.md)
+- [Publish SharePoint Add-ins](publish-sharepoint-add-ins.md).
 
 Of course, this is just a simple example; there's much more that you can do to create full-featured add-ins. Because the Cloud Business Add-in template is based on LightSwitch technologies, you may want to explore the LightSwitch documentation to get some ideas: [LightSwitch SharePoint Add-ins](http://msdn.microsoft.com/en-us/library/vstudio/jj969620.aspx).
 
