@@ -1015,8 +1015,6 @@
 - name: SharePoint Add-ins
   href: sp-add-ins/sharepoint-add-ins.md
   items:
-  - name: New name for apps for SharePoint
-    href: sp-add-ins/new-name-for-apps-for-sharepoint.md
   - name: Get started creating SharePoint-hosted SharePoint Add-ins
     href: sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins.md
     items:
