@@ -214,160 +214,133 @@ This component is included after the LightSwitch solution to enable the SharePoi
 
 ## Implementation
 
+Figure 6 show the components that comprise the SellerDashboard. The solid line shows the data flow, and the dotted line shows the OAuth flow. The green components are related to the SAP data operations, the blue components are related to the SharePoint picture library operation, and the orange components depict the operations of the entire SellerDashboard app.  
 
- 
+*Figure 6. SellerDashboard Solution*
 
- 
-
-### Overview
-
-The following image show the components that comprise the SellerDashboard. The solid line shows the data flow and the dotted line shows the OAuth flow. The green components are related to the SAP data operations, the blue components are related to the SharePoint picture library operation, and the orange components depict the operations of the whole SellerDashboard app.  
- 
-
- 
- **SellerDashboard Solution**
- 
-
- 
-
- 
 ![SellerDashboard Solution](../images/5be3a1d5-4d6e-4d08-aa9f-ca9b093325ae.jpg)
- 
-
- 
-
- 
 
 ### Data mashup
 
 LightSwitch supports the data mashup by adding a relationship between the two data sources in the designer.
  
+#### SAP data source
 
- 
- **SAP data source**
- 
-
- 
-
--  *Data schema in SAP database* 
+- Data schema in SAP database 
     
-    The following snippet shows an example of a data schema from SAP Gateway for Microsoft.
+  The following snippet shows an example of a data schema from SAP Gateway for Microsoft.
+
+    ```XML
+
+	<?xml version="1.0" encoding="UTF-8"?> 
+	- <edmx:Edmx xmlns:sap="http://www.sap.com/Protocols/SAPData" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" 
+	xmlns:edmx:"http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
+	   - <edmx:DataServices m:DataServiceVersion="2.0">
+	      - <Schema xml:lang="en" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZCAR_POC_SRV">
+		 - <EntityType sap:content-version="1" Name="ContosoMotors">
+		      - <Key>
+			     <PropertyRef Name="ID"/>
+		       </Key>
+		       <Property Name="ContactPhone" Type="Edm.String"/>
+		       <Property Name="ContactEmail" Type="Edm.String"/>
+		       <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
+		       <Property Name="BuyerEmail" Type="Edm.String" MaxLength="255"/>
+		       <Property Name="MaxPower" Type="Edm.Int32" Nullable="false"/>
+		       <Property Name="Engine" Type="Edm.String" Nullable="false" MaxLength="255"/>
+		       <Property Name="BodyStyle" Type="Edm.String" Nullable="false" MaxLength="255"/>
+		       <Property Name="Transmission" Type="Edm.String" Nullable="false" MaxLength="255"/>
+		       <Property Name="Year" Type="Edm.Int32" Nullable="false"/>
+		       <Property Name="Model" Type="Edm.String" Nullable="false" MaxLength="255"/>
+		       <Property Name="Brand" Type="Edm.String" Nullable="false" MaxLength="255"/>
+		       <Property Name="ExtColor" Type="Edm.String" Nullable="false" MaxLength="255"/>
+		       <Property Name="IntColor" Type="Edm.String" Nullable="false" MaxLength="255"/>
+		       <Property Name="ContactName" Type="Edm.String" Nullable="false" MaxLength="255"/>
+		       <Property Name="Price" Type="Edm.String" Nullable="false"/>
+		       <Property Name="StockNo" Type="Edm.String" Nullable="false"/>
+		       <Property Name="Arrived_Date" Type="Edm.DateTime" Nullable="false" Precision="0"/>
+		       <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="255"/>
+	           </EntityType>
+	   - <EntityContainer Name="ZCAR_POC_SRV_Entities" m:IsDefaultEntityContainer="true">
+		  <EntitySet sap:content-version="1" Name="ContosoMotorsCollection" sap:searchable="true" EntityType="ZCAR_POC_SRV.ContosoMotors"/>
+	     </EntityContainer>
+	     <atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="http://contoso.cloudapp.net:8080/perf/sap/opu/odata/sap/ZCAR_POC_SRV/$metadata" rel="self"/>
+	     <atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="http://contoso.cloudapp.net:8080/perf/sap/opu/odata/sap/ZCAR_POC_SRV/$metadata" rel="latest-version"/>
+	</Schema>
+	</edmx:DataServices>
+	</edms:Edmx>               
+
+    ```
+
+  This is our test data base, and the Property Type and Nullable value is based on the scenario. The ID is the PropertyRef, and the OData CRUD operation is based on ID. The StockNo property is used to mash data with the car picture that is stored in the SharePoint picture library.
     
+ 
+- Data model defined for RIA service 
+    
+    ```C#
+	  public interface IInventoryItem
+		{
+		IEnumerable<InventoryPropertyName> ValidPropertyNames { get; }
+		bool IsValid { get; }
 
+		int ID { get; set; }
+		DateTime ArrivedDate { get; set; }
+		string BodyStyle { get; set; }
+		string Brand { get; set; }
+		string BuyerEmail { get; set; }
+		string ContactEmail { get; set; }
+		string ContactName { get; set; }
+		string ContactPhone { get; set; }
+		string Engine { get; set; }
+		string ExtColor { get; set; }
+		IEnumerable<Uri> Images { get; }
+		string IntColor { get; set; }
+		int MaxPower { get; set; }
+		string Model { get; set; }
+		decimal Price { get; set; }
+		bool Removed { get; }
+		string Status { get; set; }
+		string StockNo { get; set; }
+		string Transmission { get; set; }
+		int Year { get; set; }
 
-```XML
+		void AddImageUrl(Uri url);
+		bool CopyFrom(IInventoryItem other);
+		object GetPropertyValue(InventoryPropertyName property);
+		void MarkAsRemoved();
+		void SetPropertyValue(InventoryPropertyName property, object value);
+	       }
+
+		public interface IInventoryCollection
+	       {
+		IEnumerable<InventoryPropertyName> QueriedPropertyNames { get; }
+		IEnumerable<IInventoryItem> Items { get; }
+		bool Valid { get; }
+
+		IInventoryItem this[int id] { get; }
+		bool Contains(int id);
+		void AddItem(IInventoryItem inventoryItem);
+		IInventoryCollection Filter(Predicate<IInventoryItem> match);
+		bool CopyFrom(IInventoryCollection other);
+	}
+
+    ```
+
+  Any property that isn't included in the SAP database schema can be ignored. For example, the **Images** property was added here for scalability considerations. This data model is a middle layer between the real SAP database and the SellerDashboard.Server data source. The LightSwitch project has two components: View and Server. When you add an external data source on the Server side, LightSwitch helps you build an abstract data layer that is added to the data source on the Server side.
+    
+  Most of the properties have the same type as the properties in the SAP database schema, except for StockNo, whose type has been changed from **int** to **string**. This is because StockNo is used as a way to define the relationship between the SAP data and SharePoint picture library.
+    
+  > [!TIP]
+  > StockNo must have the type **string** because the value stored in the SharePoint picture library is **Text**. These two types must match in order to accomplish the data mashup.
+
+  The implementation of the two interfaces is in CarInventoryModel/InventoryItem.cs and CarInventoryModel/InventoryCollection.cs.
+
+- Data source consumed by the LightSwitch server side 
   
-<?xml version="1.0" encoding="UTF-8"?> 
-- <edmx:Edmx xmlns:sap="http://www.sap.com/Protocols/SAPData" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" 
-xmlns:edmx:"http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
-   - <edmx:DataServices m:DataServiceVersion="2.0">
-      - <Schema xml:lang="en" xmlns="http://schemas.microsoft.com/ado/2008/09/edm" Namespace="ZCAR_POC_SRV">
-         - <EntityType sap:content-version="1" Name="ContosoMotors">
-              - <Key>
-                     <PropertyRef Name="ID"/>
-               </Key>
-               <Property Name="ContactPhone" Type="Edm.String"/>
-               <Property Name="ContactEmail" Type="Edm.String"/>
-               <Property Name="ID" Type="Edm.Int32" Nullable="false"/>
-               <Property Name="BuyerEmail" Type="Edm.String" MaxLength="255"/>
-               <Property Name="MaxPower" Type="Edm.Int32" Nullable="false"/>
-               <Property Name="Engine" Type="Edm.String" Nullable="false" MaxLength="255"/>
-               <Property Name="BodyStyle" Type="Edm.String" Nullable="false" MaxLength="255"/>
-               <Property Name="Transmission" Type="Edm.String" Nullable="false" MaxLength="255"/>
-               <Property Name="Year" Type="Edm.Int32" Nullable="false"/>
-               <Property Name="Model" Type="Edm.String" Nullable="false" MaxLength="255"/>
-               <Property Name="Brand" Type="Edm.String" Nullable="false" MaxLength="255"/>
-               <Property Name="ExtColor" Type="Edm.String" Nullable="false" MaxLength="255"/>
-              <Property Name="IntColor" Type="Edm.String" Nullable="false" MaxLength="255"/>
-              <Property Name="ContactName" Type="Edm.String" Nullable="false" MaxLength="255"/>
-              <Property Name="Price" Type="Edm.String" Nullable="false"/>
-              <Property Name="StockNo" Type="Edm.String" Nullable="false"/>
-              <Property Name="Arrived_Date" Type="Edm.DateTime" Nullable="false" Precision="0"/>
-              <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="255"/>
-      </EntityType>
-   - <EntityContainer Name="ZCAR_POC_SRV_Entities" m:IsDefaultEntityContainer="true">
-          <EntitySet sap:content-version="1" Name="ContosoMotorsCollection" sap:searchable="true" EntityType="ZCAR_POC_SRV.ContosoMotors"/>
-     </EntityContainer>
-     <atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="http://contoso.cloudapp.net:8080/perf/sap/opu/odata/sap/ZCAR_POC_SRV/$metadata" rel="self"/>
-     <atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="http://contoso.cloudapp.net:8080/perf/sap/opu/odata/sap/ZCAR_POC_SRV/$metadata" rel="latest-version"/>
-</Schema>
-</edmx:DataServices>
-</edms:Edmx>               
+  *Figure 7. InventoryItem*
 
-```
-
-
-    This is our test data base, and the Property Type and Nullable value is based on the scenario. The ID is the PropertyRef and the OData CRUD operation is based on ID. The StockNo property is used to mash data with the car picture that is stored in SharePoint picture library.
-    
- 
--  *Data model defined for RIA service* 
-    
-```C#
-  public interface IInventoryItem
-    	{
-        IEnumerable<InventoryPropertyName> ValidPropertyNames { get; }
-        bool IsValid { get; }
-
-        int ID { get; set; }
-        DateTime ArrivedDate { get; set; }
-        string BodyStyle { get; set; }
-        string Brand { get; set; }
-        string BuyerEmail { get; set; }
-        string ContactEmail { get; set; }
-        string ContactName { get; set; }
-        string ContactPhone { get; set; }
-        string Engine { get; set; }
-        string ExtColor { get; set; }
-        IEnumerable<Uri> Images { get; }
-        string IntColor { get; set; }
-        int MaxPower { get; set; }
-        string Model { get; set; }
-        decimal Price { get; set; }
-        bool Removed { get; }
-        string Status { get; set; }
-        string StockNo { get; set; }
-        string Transmission { get; set; }
-        int Year { get; set; }
-
-        void AddImageUrl(Uri url);
-        bool CopyFrom(IInventoryItem other);
-        object GetPropertyValue(InventoryPropertyName property);
-        void MarkAsRemoved();
-        void SetPropertyValue(InventoryPropertyName property, object value);
-       }
-
-    	public interface IInventoryCollection
-       {
-        IEnumerable<InventoryPropertyName> QueriedPropertyNames { get; }
-        IEnumerable<IInventoryItem> Items { get; }
-        bool Valid { get; }
-
-        IInventoryItem this[int id] { get; }
-        bool Contains(int id);
-        void AddItem(IInventoryItem inventoryItem);
-        IInventoryCollection Filter(Predicate<IInventoryItem> match);
-        bool CopyFrom(IInventoryCollection other);
-}
-
-```
-
-
-    Any property that isn't included in the SAP database schema can be ignored. For example, the  **Images** property was added here for scalability considerations. This data model is a middle layer between the real SAP database and the SellerDashboard.Server data source. The LightSwitch project has two components: View and Server. When you add an external data source on the Server side, LightSwitch helps you build an abstract data layer that is added to the data source on the Server side.
-    
-    Most of the properties have the same type as the properties in the SAP database schema, except for StockNo, whose type has been changed from  **int** to **string**. This is because StockNo is used as a way to define the relationship between the SAP data and SharePoint picture library.
-    
-> [!TIP]
-> StockNo must have the type  **string** because the value stored in the SharePoint picture library is **Text**. These two types must match in order to accomplish the data mashup.
-
-    The implementation of the two interfaces is in CarInventoryModel/InventoryItem.cs and CarInventoryModel/InventoryCollection.cs.
-    
- 
--  *Data source consumed by the LightSwitch server side* 
-    
   ![InventoryItem](../images/b08243f7-3fa3-48b3-bf6c-e3ff49f2e2a2.jpg)
  
-
-    In the SellerDashboard server, when you add the WCF RIA Service (BoxXDataService), the data model that's defined in CarInventoryModel is included, and you get the relevant data table. You can change the type of some of the properties. For example, you can change the  **BuyerEmail** type from **String** to **Email Address**, and LightSwitch will support the email format check on the client side.
+  In the SellerDashboard server, when you add the WCF RIA Service (BoxXDataService), the data model that's defined in CarInventoryModel is included, and you get the relevant data table. You can change the type of some of the properties. For example, you can change the **BuyerEmail** type from **String** to **Email Address**, and LightSwitch supports the email format check on the client side.
     
  
  **SharePoint picture library**
