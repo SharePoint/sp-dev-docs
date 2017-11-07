@@ -1,6 +1,6 @@
 ---
 title: Publish a cloud business add-in to SharePoint
-description: 
+description: Publish and package a provider-hosted SharePoint add-in.
 ms.date: 11/06/2017
 ms.prod: sharepoint
 ---
