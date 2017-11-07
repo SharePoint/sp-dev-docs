@@ -372,8 +372,6 @@ Add a one-to-zero relationship or a one-to-one relationship between the Inventor
 
 This section provides an overview of how the add-in implements OAuth in Azure AD and access control services (ACS).
 
-#### Overview
-
 SellerDashboard is a SharePoint provider-hosted add-in that has to operate on both data sources: SharePoint picture library and the SAP data by means of SAP Gateway for Microsoft.
 
 To access the SharePoint picture library, SellerDashboard needs to authenticate to ACS and get an access token from it. To access the SAP data, however, the SellerDashboard needs to get a different access token from Azure AD, because SAP Gateway for Microsoft uses Azure AD for Authentication and Authorization.
@@ -381,8 +379,6 @@ To access the SharePoint picture library, SellerDashboard needs to authenticate 
 *Figure 10. Data center*
 
 ![Data center](../images/eb83c0d8-0937-4df7-984b-3d8b4717b2b3.jpg)
- 
-#### Implementation
 
 SellerDashboard is a SharePoint provider-hosted add-in that supports the picture-upload operation by using the SharePoint client-side object model. The SharePoint context, which is used to create the client context for the SharePoint host, is cached, and the client context is then used by the upload Web API.
 
@@ -717,6 +713,7 @@ Configure the settings for the new application that you created in the previous 
     ```
 
    1. Replace the `sharePointUrl` value with your SharePoint site, the one to which the add-in will be installed and that also contains the picture library.
+   
    2. Replace `sharePointRootUrl` value with the relevant SharePoint root site.
 
 2. Locate SellerDashboard.Server/Web.config in the SellerDashboard solution and find the following configuration placeholder:
@@ -744,16 +741,24 @@ Configure the settings for the new application that you created in the previous 
     ```
 
    1. Replace the `ClientSecret` and `ClientId` values with the values you got in the previous procedure.
+   
    2. Replace the `Ida:ClientId` and `Ida:ClientSecret` values with the values from the Azure AD app.
+   
    3. Replace the `Ida:TenantId` value with `<yourDomain>.onmicrosoft.com`.
+   
     
       For example, if your organizational account is `someone@<yourDomain>.onmicrosoft.com`, `<yourDomain>.onmicrosoft.com` is what you need.
 
    4. Replace the `Ida:RedirectUrl` value with the test site you created on Azure, which hosts this add-in.
+   
    5. Replace the `Ida:ResourceUrl` value with the SAP Gateway for Microsoft instance that's been deployed and configured in Azure.
+   
    6. Replace the `Ida:ODataServiceBaseUrl` value with the SAP Gateway for Microsoft instance OData endpoint URL.
+   
    7. Replace the `Ida:ODataServiceMetadataUrl` value with the SAP Gateway for Microsoft instance OData endpoint metadata URL.
+   
    8. Replace the `Ida:DataCollection` value. You can get this value from the metadata. For example, use the ContosoMotorsCollection.
+   
    9. Replace the `Ida:ODataWriterTypeName` value. You can get the correct value from the metadata. 
     
       For example, use the following:
@@ -805,8 +810,9 @@ Configure the settings for the new application that you created in the previous 
 
 |**Web Source**|**Collection**|**Code Location**|**License**|
 |:-----|:-----|:-----|:-----|
-| [Survey Add-in Tutorial: Developing a SharePoint Application Using LightSwitch](http://code.msdn.microsoft.com/Survey-App-Tutorial-a70d0afd)<br/><br/>[Walkthrough: Creating an Add-in for SharePoint by Using LightSwitch](http://msdn.microsoft.com/en-us/library/jj969621.aspx)|**Photo Uploader:**<br/>PhotoListHelper.csPhotosController.csGlobal.asax.cs| [Survey Add-in Tutorial: Developing a SharePoint Application Using LightSwitch (C#)](http://www.getcodesamples.com/src/2571E87E/)|Apache License, Version 2.0|
-|null|**ACS Auth:**<br/>SharePointContext.csTokenHelper.cs|**VS internal Templates:**<br/>Visual C#/Office/SharePoint/Apps/AppforSharePoint||
+| [Survey Add-in Tutorial: Developing a SharePoint Application Using LightSwitch](http://code.msdn.microsoft.com/Survey-App-Tutorial-a70d0afd)<br/><br/>[Walkthrough: Creating an Add-in for SharePoint by Using LightSwitch](http://msdn.microsoft.com/en-us/library/jj969621.aspx)|**Photo Uploader:**<br/>PhotoListHelper.cs<br/>PhotosController.cs<br/>Global.asax.cs| [Survey Add-in Tutorial: Developing a SharePoint Application Using LightSwitch (C#)](http://www.getcodesamples.com/src/2571E87E/)|Apache License, Version 2.0|
+|null|**ACS Auth:**<br/>SharePointContext.cs<br/>TokenHelper.cs|**Visual Studio internal templates:**<br/>
+Visual C#/Office/SharePoint/Apps/AppforSharePoint||
 
 ## Additional resources
 
