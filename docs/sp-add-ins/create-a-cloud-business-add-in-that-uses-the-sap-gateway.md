@@ -746,7 +746,6 @@ Configure the settings for the new application that you created in the previous 
    
    3. Replace the `Ida:TenantId` value with `<yourDomain>.onmicrosoft.com`.
    
-    
       For example, if your organizational account is `someone@<yourDomain>.onmicrosoft.com`, `<yourDomain>.onmicrosoft.com` is what you need.
 
    4. Replace the `Ida:RedirectUrl` value with the test site you created on Azure, which hosts this add-in.
