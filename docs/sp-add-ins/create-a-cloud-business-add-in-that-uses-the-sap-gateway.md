@@ -161,6 +161,7 @@ This is the real CRUD implementation for BoxXDataService. Figure 2 shows the mai
 
 ![CarInventoryBoxDataOperation](../images/a9baa59c-4459-4f0d-935d-456f0ca7791e.jpg)
 
+
 #### CarInventoryModel
     
 This is a library project that's used to implement the data model and utilities. The data model definition has to match the metadata of the OData endpoint that's used by SAP Gateway for Microsoft, which is based on the SAP data schema. BoxXDataService and CarInventoryBoxXDataOperation use it to convert the SAP database item into a car inventory instance. Figure 3 shows the main components.
@@ -169,64 +170,47 @@ This is a library project that's used to implement the data model and utilities.
 
 ![CarInventoryModel](../images/1a814b3b-76a3-4a5c-8eef-550893728499.jpg)
 
+
 ### SellerDashboardStudio
 
 SellerDashboardStudio includes standard LightSwitch SharePoint add-in components.
  
+#### SellerDashboard
+    
+SellerDashboard is the StartUp project, and it is used to publish the SellerDashboard add-in to the Azure website and its SharePoint add-in to the SharePoint developer site.
 
- 
+#### SellerDashboard.HTMLClient
+    
+This component includes the screens, a custom control, and a photo upload control. Figure 4 shows its main components.
+    
+*Figure 4. SellerDashboard.HTMLClient*
 
--  **SellerDashboard**
-    
-    SellerDashboard is the StartUp project, and it is used to publish the SellerDashboard add-in to the Azure website and its SharePoint add-in to the SharePoint developer site.
-    
+![SellerDashboard.HTMLClient](../images/89aa8c23-f8f2-410e-b021-7b0959e11586.jpg)
  
--  **SellerDashboard.HTMLClient**
+SellerDashboard.HTML.Client includes these four screens:
     
-    This component includes the screens, a custom control, and a photo upload control. The following image shows its main components.
-    
- 
-- 
-  ![SellerDashboard.HTMLClient](../images/89aa8c23-f8f2-410e-b021-7b0959e11586.jpg)
- 
+- **BrowseInventoryItems** is the home screen, used to browse basic information for all inventory items.
+- **ViewInventoryItem** is the detail screen, used to display a detailed view for each inventory item.
+- **EditInventoryItem** is an edit pop-up screen, used to edit an inventory item.
+- **AddInventoryItem** is an add pop-up screen, used to add a new inventory item.
 
-    SellerDashboard.HTML.Client includes these four screens:
+The UserCode.js file includes the UX custom control code.
     
- 
+The photohelper.js and sharepointauthhelper.js files, included in the Scripts folder, are based on the guidance provided in the article [Walkthrough: Creating an add-in for SharePoint by using LightSwitch](http://msdn.microsoft.com/en-us/library/jj969621.aspx).
 
-      - BrowseInventoryItems is the home screen, used to browse basic information for all inventory items.
+#### SellerDashboard.Server
     
- 
-  - ViewInventoryItem is the detail screen, used to display a detailed view for each inventory item.
-    
- 
-  - EditInventoryItem is an edit popup screen, used to edit an inventory item.
-    
- 
-  - AddInventoryItem is an add popup screen, used to add a new inventory item.
-    
- 
+This component includes the WCF RIA data source, the SharePoint data source, and the photo-upload Web API. Figure 5 shows its main components.
 
-    The UserCode.js file includes the UX custom control code.
-    
-    The photohelper.js and sharepointauthhelper.js, files, included in the Scripts folder, are based on the guidance provided in the article  [Walkthrough: Creating an Add-in for SharePoint by Using LightSwitch](http://msdn.microsoft.com/en-us/library/jj969621.aspx).
-    
- 
--  **SellerDashboard.Server**
-    
-    This component includes the WCF RIA data source, the SharePoint data source, and the photo-upload Web API. The following image shows its main components.
-    
-  ![SellerDashboard.Server](../images/43e92a09-180d-4adf-9ae2-8f6212d297c9.jpg)
- 
+*Figure 5. SellerDashboard.Server*
 
-    The SharePointContext.cs and TokenHelper.cs are the helper classes that provide the client context to authenticate to SharePoint. This enables the photo upload Web API to be used to upload photos of cars to the picture library. The PhotoListHelper.cs and PhotosController.cs files implement the photo-upload Web API. For more information about how the photo-upload Web API is used by LightSwitch, see the article  [Walkthrough: Creating an Add-in for SharePoint by Using LightSwitch](http://msdn.microsoft.com/en-us/library/jj969621.aspx).
-    
+![SellerDashboard.Server](../images/43e92a09-180d-4adf-9ae2-8f6212d297c9.jpg)
  
--  **SellerDashboard.SharePoint**
+The SharePointContext.cs and TokenHelper.cs are the helper classes that provide the client context to authenticate to SharePoint. This enables the photo upload Web API to be used to upload photos of cars to the picture library. The PhotoListHelper.cs and PhotosController.cs files implement the photo-upload Web API. For more information about how the photo-upload Web API is used by LightSwitch, see the article [Walkthrough: Creating an add-in for SharePoint by using LightSwitch](http://msdn.microsoft.com/en-us/library/jj969621.aspx).
     
-    This component is included after the LightSwitch solution to enable the SharePoint project. You can use this component to configure the SharePoint site used for the picture library and to set the required permission for the add-in. SellerDashboard needs to be granted the Full Control permission level on the SharePoint site that hosts the picture library.
+#### SellerDashboard.SharePoint
     
- 
+This component is included after the LightSwitch solution to enable the SharePoint project. You can use this component to configure the SharePoint site used for the picture library and to set the required permission for the add-in. SellerDashboard needs to be granted the Full Control permission level on the SharePoint site that hosts the picture library.
 
 ## Implementation
 
