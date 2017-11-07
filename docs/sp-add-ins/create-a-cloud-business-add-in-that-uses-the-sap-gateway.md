@@ -64,18 +64,13 @@ The SellerDashboard solution includes eight projects, and as the following image
  
 ### BoxXDataStudio
 
-This studio includes all of the components needed to interact with SAP Gateway for Microsoft.
- 
+This studio includes all the components you need to interact with SAP Gateway for Microsoft.
 
- 
-
--  **AADAuthLib**
+#### AADAuthLib
     
-    This component is used to carry out the  [Azure AD authorization code flow](https://msdn.microsoft.com/en-us/library/azure/dn645542.aspx), which uses a Singleton pattern.
+This component is used to carry out the [Azure AD authorization code flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-protocols-oauth-code), which uses a Singleton pattern.
     
-    The following code snippet shows the main function, which the AADAuthLib component provides. For more detail, see the AADAuthLib/AuthUtil.cs sample code helper class.
-    
-
+The following code snippet shows the main function, which the AADAuthLib component provides. For more detail, see the AADAuthLib/AuthUtil.cs sample code helper class.
 
 ```C#
   // Use the auth code, acquire the refresh token and access token, and store them in the current session
@@ -119,13 +114,11 @@ This studio includes all of the components needed to interact with SAP Gateway f
   }
 ```
 
--  **BoxXDataService**
+#### BoxXDataService
     
-    This is a WCF RIA service, which is the interface used by the SellerDashboard server-side component hosted in Azure, and which consumes the SAP data source from SAP Gateway for Microsoft..
+This is a WCF RIA service, which is the interface used by the SellerDashboard server-side component hosted in Azure, and which consumes the SAP data source from SAP Gateway for Microsoft.
     
-    The following code snippet is the CRUD Web method, which the WCF RIA service supports. For more detail see BoxXDataService/BoxXDataService.cs.
-    
-
+The following code snippet is the CRUD Web method, which the WCF RIA service supports. For more detail, see BoxXDataService/BoxXDataService.cs.
 
 ```C#
   [Query(IsDefault = true)]
@@ -160,31 +153,21 @@ This studio includes all of the components needed to interact with SAP Gateway f
  }
 ```
 
--  **CarInventoryBoxXDataOperation**
+#### CarInventoryBoxXDataOperation
     
-    This is the real CRUD implementation for BoxXDataService. The following image shows the main code architecture of CarInventoryBoxXDataOperation. The CRUD namespace is used to implement the CRUD operations, and the Util namespace is the helper code for the CRUD namespace.
-    
-  ![CarInventoryBoxDataOperation](../images/a9baa59c-4459-4f0d-935d-456f0ca7791e.jpg)
- 
+This is the real CRUD implementation for BoxXDataService. Figure 2 shows the main code architecture of CarInventoryBoxXDataOperation. The CRUD namespace is used to implement the CRUD operations, and the Util namespace is the helper code for the CRUD namespace.
 
- 
+*Figure 2. CarInventoryBoxDataOperation*
 
- 
--  **CarInventoryModel**
-    
-    This is a library project that's used to implement the data model and utilities. The data model definition has to match the metadata of the OData endpoint that's used by SAP Gateway for Microsoft, which is based on the SAP data schema. BoxXDataService and CarInventoryBoxXDataOperation use it to convert the SAP database item into a car inventory instance.
-    
-    The following image shows the main components.
-    
- 
+![CarInventoryBoxDataOperation](../images/a9baa59c-4459-4f0d-935d-456f0ca7791e.jpg)
 
- 
+#### CarInventoryModel
+    
+This is a library project that's used to implement the data model and utilities. The data model definition has to match the metadata of the OData endpoint that's used by SAP Gateway for Microsoft, which is based on the SAP data schema. BoxXDataService and CarInventoryBoxXDataOperation use it to convert the SAP database item into a car inventory instance. Figure 3 shows the main components.
+    
+*Figure 3. CarInventoryModel*
+
 ![CarInventoryModel](../images/1a814b3b-76a3-4a5c-8eef-550893728499.jpg)
- 
-
- 
-
- 
 
 ### SellerDashboardStudio
 
