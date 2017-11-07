@@ -811,8 +811,7 @@ Configure the settings for the new application that you created in the previous 
 |**Web Source**|**Collection**|**Code Location**|**License**|
 |:-----|:-----|:-----|:-----|
 | [Survey Add-in Tutorial: Developing a SharePoint Application Using LightSwitch](http://code.msdn.microsoft.com/Survey-App-Tutorial-a70d0afd)<br/><br/>[Walkthrough: Creating an Add-in for SharePoint by Using LightSwitch](http://msdn.microsoft.com/en-us/library/jj969621.aspx)|**Photo Uploader:**<br/>PhotoListHelper.cs<br/>PhotosController.cs<br/>Global.asax.cs| [Survey Add-in Tutorial: Developing a SharePoint Application Using LightSwitch (C#)](http://www.getcodesamples.com/src/2571E87E/)|Apache License, Version 2.0|
-|null|**ACS Auth:**<br/>SharePointContext.cs<br/>TokenHelper.cs|**Visual Studio internal templates:**<br/>
-Visual C#/Office/SharePoint/Apps/AppforSharePoint||
+|null|**ACS Auth:**<br/>SharePointContext.cs<br/>TokenHelper.cs|**Visual Studio internal templates:**<br/>Visual C#/Office/SharePoint/Apps/AppforSharePoint||
 
 ## Additional resources
 
