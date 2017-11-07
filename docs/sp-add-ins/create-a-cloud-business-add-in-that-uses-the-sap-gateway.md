@@ -212,6 +212,7 @@ The SharePointContext.cs and TokenHelper.cs are the helper classes that provide 
     
 This component is included after the LightSwitch solution to enable the SharePoint project. You can use this component to configure the SharePoint site used for the picture library and to set the required permission for the add-in. SellerDashboard needs to be granted the Full Control permission level on the SharePoint site that hosts the picture library.
 
+
 ## Implementation
 
 Figure 6 show the components that comprise the SellerDashboard. The solid line shows the data flow, and the dotted line shows the OAuth flow. The green components are related to the SAP data operations, the blue components are related to the SharePoint picture library operation, and the orange components depict the operations of the entire SellerDashboard app.  
@@ -342,86 +343,51 @@ LightSwitch supports the data mashup by adding a relationship between the two da
  
   In the SellerDashboard server, when you add the WCF RIA Service (BoxXDataService), the data model that's defined in CarInventoryModel is included, and you get the relevant data table. You can change the type of some of the properties. For example, you can change the **BuyerEmail** type from **String** to **Email Address**, and LightSwitch supports the email format check on the client side.
     
- 
- **SharePoint picture library**
- 
+#### SharePoint picture library
 
- 
-The picture library in the SharePoint host site is named ContosoMotorsPictureLibrary, and contains three new columns named StockNo, ThumbnailUrl, and FullImageUrl. All of them are configured as  **Text** fields.
+The picture library in the SharePoint host site is named ContosoMotorsPictureLibrary, and contains three new columns named StockNo, ThumbnailUrl, and FullImageUrl. All of them are configured as **Text** fields.
 
 > [!TIP]
-> The column names are case sensitive.
+> The column names are case-sensitive.
  
+The StockNo column is used to create a relationship with the SAP data. The ThumbnailUrl and FullImageUrl columns are used to get the URL to the relevant picture in a convenient way.
+ 
+- Data source consumed by the LightSwitch server side 
 
- The StockNo column is used to create a relationship with the SAP data. The ThumbnailUrl and FullImageUrl columns are used to get the URL to the relevant picture in a convenient way.
- 
+  ContosoMotorsPicture is a LightSwitch data source model, which maps to the SharePoint host site picture library on the LightSwitch server side.
 
- 
- *Data source consumed by the LightSwitch server side* 
- 
+  *Figure 8. ContosoMotorsPicture*
 
+  ![ContosoMotorsPicture](../images/1dfc317f-b4f2-46f7-9f3e-4b81f04ef0dd.jpg)
  
-ContosoMotorsPicture is a LightSwitch data source model, which maps to the SharePoint host site picture library on the LightSwitch server side.
- 
+#### Data relationship
 
- 
-
- 
-![ContosoMotorsPicture](../images/1dfc317f-b4f2-46f7-9f3e-4b81f04ef0dd.jpg)
- 
- **Data relationship**
- 
-
- 
 Add a one-to-zero relationship or a one-to-one relationship between the InventoryItem and ContosoMotorsPicture. The following image shows what this looks like, using LightSwitch in Visual Studio
- 
 
- 
+*Figure 9. Data relationship*
 
- 
 ![Data relationship](../images/978d8147-cabd-422e-9d02-d8022a114bd6.jpg)
- 
 
- 
-
- 
 
 ### OAuth with Azure AD &amp; ACS
 
 This section provides an overview of how the add-in implements OAuth in Azure AD and access control services (ACS).
- 
 
- 
- **Overview**
- 
+#### Overview
 
- 
 SellerDashboard is a SharePoint provider host add-in that has to operate on both data sources: SharePoint picture library and the SAP data by means of SAP Gateway for Microsoft.
- 
 
- 
-To access the SharePoint picture library, SellerDashboard needs to authenticate to ACS, and get an access token from it. To access the SAP data, however, the SellerDashboard needs to get a different access token from Azure AD, because SAP Gateway for Microsoft uses Azure AD for Authentication and Authorization.
- 
+To access the SharePoint picture library, SellerDashboard needs to authenticate to ACS and get an access token from it. To access the SAP data, however, the SellerDashboard needs to get a different access token from Azure AD, because SAP Gateway for Microsoft uses Azure AD for Authentication and Authorization.
 
- 
+*Figure 10. Data center*
 
- 
 ![Data center](../images/eb83c0d8-0937-4df7-984b-3d8b4717b2b3.jpg)
  
- **Implementation**
- 
+#### Implementation
 
- 
 SellerDashboard is a SharePoint provider-hosted add-in that supports the picture-upload operation by using the SharePoint client-side object model. The SharePoint context, which is used to create the client context for the SharePoint host, is cached, and the client context is then used by the upload Web API.
- 
 
- 
 After the OAuth with ACS process is complete, the request for authentication is sent to Azure AD. To accomplish this, the add-in uses a cookie to sign into Login.MicrosoftOnline.com and then complete the Azure AD authorization code flow , which returns a refresh token that the add-in caches for future authentication requests during the session. Here's the code that is used for this process.
- 
-
- 
-
-
 
 ```C#
 protected override void Page_Load(object sender, EventArgs e)
@@ -450,26 +416,14 @@ protected override void Page_Load(object sender, EventArgs e)
 ```
 
 For more detail, see SellerDashBoard.Server/SharePointLaunch.aspx.cs, and AADAuthLib/AuthUtil.cs in the code sample.
- 
 
- 
 SellerDashboard.Server includes the SharePointContext.cs and TokenHelper.cs files, which are used to get the app-only client context for the SharePoint host. .These two files are added to your SharePoint project automatically by Visual Studio. (Visual Studio names the project < *yourprojectname*  >Web; for example, SharePointAppWeb.) You can then copy these two files to your SellerDashboard add-in source code and include them in your project.
- 
-
- 
 
 ### CRUD operations on SAP Data from SAP Gateway for Microsoft
 
 The following code snippets show the main code logic of the CRUD operations. For more details, see the implementation of CarInventoryBoxXDataOperation in the code sample.
- 
 
- 
- **BoxXDataCreater**
- 
-
- 
-
-
+#### BoxXDataCreater
 
 ```C#
 
@@ -505,12 +459,7 @@ BoxXDataReader
         }
 ```
 
- **BoxXDataUpdater**
- 
-
- 
-
-
+#### BoxXDataUpdater
 
 ```C#
 public void UpdateInventoryItem(IInventoryItem inventoryItem)
@@ -542,23 +491,13 @@ BoxXDataDeleter
         }
 ```
 
-
 ### Uploading photos to the SharePoint picture library
 
 The photo-upload control and photo-upload Web API implementation are used to upload photos to the SharePoint picture library, using the following code, which is based on the guidance in the article  [Walkthrough: Creating an Add-in for SharePoint by Using LightSwitch](http://msdn.microsoft.com/en-us/library/jj969621.aspx).
  
-
- 
- **For the photohelper.js changes:**
- 
-
+#### For the photohelper.js changes
  
 A new field is added for the uploadForm, which is used to pass the StockNo to the photo-upload Web API.
- 
-
- 
-
-
 
 ```
 
@@ -570,12 +509,7 @@ uploadForm = $(
 
 ```
 
-Add the logic for caching the picture URL, and picture set back logic.
- 
-
- 
-
-
+Add the logic for caching the picture URL and picture set back logic.
 
 ```
 function completeUpload(uploadedFiles) {
@@ -591,20 +525,11 @@ function completeUpload(uploadedFiles) {
         }
 ```
 
- **For the PhotosController.cs changes:**
- 
+#### For the PhotosController.cs changes
 
- 
 Use the app-only client context for the SharePoint host, which is created by the cached SharePoint Context.
- 
 
- 
 Do this because the ContosoMotorsPictureLibrary doesn't belong to the SellerDashboard add-in; rather, it belongs to the SharePoint host site. Also, remove the photo delete relevant code.
- 
-
- 
-
-
 
 ```C#
 
@@ -622,16 +547,9 @@ private ClientContext AppWebContext
 
 ```
 
- **For the PhotoListHelper.cs changes:**
- 
+#### For the PhotoListHelper.cs changes
 
- 
 Add the picture update logic, which will delete the old picture item if one exists and then add a new picture item. Assign the StockNo of the new picture item, and at the same time set the FullImageUrl and ThumbnailUrl values to the new picture item.
- 
-
- 
-
-
 
 ```C#
 
@@ -671,95 +589,69 @@ Add the picture update logic, which will delete the old picture item if one exis
 
 ```
 
-
-### User Experience
+### User experience
 
 For the special scenario request, many custom controls are implemented to support the request. You can find the relevant code in the UserCode.js file. You can build a simple user interface quickly by using the LightSwitch designer. The Common Screen Set can meet your test request. Because the user experience isn't the main focus of this document, details are not provided here.
- 
-
- 
 
 ## Deploying the app
 
 Complete the steps in this section to deploy the add-in. Before you deploy this add-in, ensure that SAP Gateway for Microsoft has been deployed and configured on your Azure tenant.
- 
 
- 
-
-### Create your Azure web site
-
+### Create your Azure website
 
 1. Log in to the  [Microsoft Azure Portal](http://go.microsoft.com/fwlink/?LinkID=512959) as a global administrator.
-    
- 
+
 2. In the left menu, click  **Websites**.
     
-> [!NOTE]
-> You'll use this web site to host the SharePoint provider-hosted add-in for the SellerDashboard.
+   > [!NOTE]
+   > You'll use this web site to host the SharePoint provider-hosted add-in for the SellerDashboard.
 
 3. In the command bar at the bottom of the page, click  **New**.
-    
- 
+
 4. Select  **Compute > Website > Quick Create**.
-    
- 
+
 5. In the  **URL** box, enter the first part of the URL you want to use, select a Web Hosting Plan, and then click **Create Website**. Copy this URL because you will need it when you register the add-in later in a later section of this article. For example, use Constoso.azurewebsites.net.
-    
- 
 
-### Register the SharePoint app
+### Register the SharePoint add-in
 
-An empty SharePoint add-in is used to grant the SharePoint add-in the read permissions that it needs to retrieve images of cars from the picture library in SharePoint Online. Complete the following steps to register the SharePoint add-in with the SharePoint site that contains this picture library and grant the add-in read access to the site.
- 
+An empty SharePoint add-in is used to grant the SharePoint add-in the read permissions that it needs to retrieve images of cars from the picture library in SharePoint Online. Complete the following steps to register the SharePoint add-in with the SharePoint site that contains this picture library, and grant the add-in read access to the site.
 
- 
-
-### To register the SharePoint add-in
-
+#### To register the SharePoint add-in
 
 1. Open the solution in Solution Explorer.
-    
- 
+
 2. In the properties of the SharePoint add-in, input the  **Site URL** of the SharePoint site that contains the picture library. In the login prompt that appears, log in as a Site Owner.
-    
- 
+
 3. Set the Read permission in the application's manifest.
-    
-  ![Manifest](../images/746bcfe7-7f51-4f5d-a072-12c577e5fa2f.jpg)
- 
+  
+   *Figure . Manifest*
+  
+   ![Manifest](../images/746bcfe7-7f51-4f5d-a072-12c577e5fa2f.jpg)
 
- 
-
- 
 4. Set the add-in as a StartUp project, and run the project. You can find the ClientID and ClientSecret values in the ContosoMotorsCarInventoryWeb/Web.config file. The code should resemble the following:
     
-```XML
-  <add key="ClientId" value="06af1059-8916-4851-a271-2705e8cf53c6"/>
-<add key="ClientSecret" value="LypZu2yVajlHfPLRn5J2hBrwCk5aBOHxE4PtKCjIQkk="/>
-```
+    ```XML
+	<add key="ClientId" value="06af1059-8916-4851-a271-2705e8cf53c6"/>
+	<add key="ClientSecret" value="LypZu2yVajlHfPLRn5J2hBrwCk5aBOHxE4PtKCjIQkk="/>
+    ```
 
 5. Replace the values of ClientID and ClientSecret at "Hosted add-in configuration" in ContosoMotorsCarInventoryWeb/TokenHelper.cs with above values. The code should resemble the following:
     
-```C#
-  
-private static readonly string ClientId = "06af1059-8916-4851-a271-2705e8cf53c6";
-private static readonly string ClientSecret = "LypZu2yVajlHfPLRn5J2hBrwCk5aBOHxE4PtKCjIQkk=";
+    ```C#
 
-```
+	private static readonly string ClientId = "06af1059-8916-4851-a271-2705e8cf53c6";
+	private static readonly string ClientSecret = "LypZu2yVajlHfPLRn5J2hBrwCk5aBOHxE4PtKCjIQkk=";
+
+    ```
 
 
 ### Register your web application with Azure AD
 
 The steps in this section describe how to register the sample add-in from the Azure Management portal.
- 
-
- 
 
 1. Login to the  [Azure Management Portal](http://go.microsoft.com/fwlink/?LinkID=512959) with your Azure service administrator or co-administrator account.
-    
  
 2. In the left navigation pane, click  **Active Directory**.
-    
  
 3. On the active directory page, click the directory that was configured for SAP Gateway for Microsoft.
     
@@ -767,25 +659,18 @@ The steps in this section describe how to register the sample add-in from the Az
    > If you're not sure which one was used, ask your SAP Gateway for Microsoft administrator. Hint: it's the directory that contains the users and groups for SAP Gateway for Microsoft.
 
 4. On the top navigation bar, choose  **APPLICATIONS**.
-    
  
 5. At the bottom of the page, click  **Add**.
-    
  
 6. In the dialog box that opens, click  **Add an application my organization is developing**.
-    
  
 7. In the  **ADD Application** dialog box, name the application. For example, name it "SellerDashboard."
-    
  
 8. Choose  **Web application and/or web API** as the application type, and then click the right arrow.
-    
  
 9. In the  **Add properties** dialog box, use the URL of the site you created earlier (in the Create your Azure web site section) as the SIGN-ON URL. For example, use *https://Constoso.azurewebsites.net*  .
-    
  
 10. For the  **APP ID URI**, give the application a unique URI, such as the application name appended to the end of the  **SIGN-ON URL**; for example, use  *https://Constoso.azurewebsites.net/SellerDashboard*  , where Constoso.azurewebsites.net is the site you created earlier in this article.
-    
  
 11. Click the checkmark to create the application. 
     
@@ -793,192 +678,130 @@ The steps in this section describe how to register the sample add-in from the Az
     
 > [!NOTE]
 > You must register the add-in with Azure AD twice: Once for debugging purposes, and then again to deploy it for production, as described in step 10.To register the add-in for debugging purposes, use the  **SIGN-ON URL** and **APP ID URI** with the debugging URL of the SellerDashboard.Server project so that you can run the Visual Studio debugger (F5). This URL will be of the form https://localhost. *nnnn*  , where *nnnn*  is a port number. You can find this URL in the Properties pane in Visual Studio.Then, when you are ready to deploy for production, edit the registration to use the correct production URL.
- 
-
 
 ### Configure application settings
 
 Configure the settings for the new application that you created in the previous procedure. 
- 
-
- 
 
 1. At the top of the application page, click  **Configure**.
-    
  
 2. Set parameters where required, and make a note of configuration settings as described in the following table.
-    
+ 
+	|**Parameter**|**Action**|
+	|:-----|:-----|
+	|Client ID|Copy the value that appears in the Client ID field.|
+	|Client Secret| Generate a new application key: In the Keys section, select the key duration of 1 or 2 years. In the command bar at the bottom of the page, click **Save**.  The key value is now displayed. Copy and save the key value for future use; you cannot retrieve it after you leave the page.|
+	|App ID URI|Copy the value that appears in the  **Add-in ID URI** field.|
 
-|**Parameter**|**Action**|
-|:-----|:-----|
-|Client ID|Copy the value that appears in the Client ID field.|
-|Client Secret| Generate a new application key: In the Keys section, select the key duration of 1 or 2 years. In the command bar at the bottom of the page, click **Save**.  The key value is now displayed. Copy and save the key value for future use; you cannot retrieve it after you leave the page.|
-|App ID URI|Copy the value that appears in the  **Add-in ID URI** field.|
-
-    Remember to keep this information handy, because you'll need it in a later procedure.
-    
+   Remember to keep this information handy, because you'll need it in a later procedure.    
  
-3. In the  **permissions to other applications** section, do the following:
+3. In the **permissions to other applications** section, do the following:
     
-      1. Select your SAP Gateway for Microsoft application.
+   1. Select your SAP Gateway for Microsoft application.
+   2. In the **Delegated Permissions** column, enable the boxes for the permissions to the SAP Gateway for Microsoft that your SharePoint provider-hosted add-in for the SellerDashboard needs.
     
- 
-  2. In the  **Delegated Permissions** column, enable the boxes for the permissions to the SAP Gateway for Microsoft that your SharePoint provider-hosted add-in for the SellerDashboard will need.
-    
- 
-4. In the command bar at the bottom of the page, click  **Save**.
-    
- 
+4. In the command bar at the bottom of the page, select **Save**.
 
 ### Replace the needed configuration for deployment
 
-
 1. Locate SellerDashboardHTMLClient/UserCode.js, and find the following code placeholder:
     
-```C#
-  sharePointUrl: "Replace with your SharePoint host site", 
-// https://fake_domain.sharepoint.com/sites/Developer
-SharePointRootUrl: "Replace with your SharePoint root site"
- // https://fake_domain.sharepoint.com/ 
+    ```C#
+	sharePointUrl: "Replace with your SharePoint host site", 
+	// https://fake_domain.sharepoint.com/sites/Developer
+	SharePointRootUrl: "Replace with your SharePoint root site"
+	// https://fake_domain.sharepoint.com/ 
 
-```
+    ```
 
+   1. Replace the sharePointUrl value with your SharePoint site, the one to which the add-in will be installed and that also contains the picture library.
+   2. Replace sharePointRootUrl value with the relevant SharePoint root site.
 
-      1. Replace the sharePointUrl value with your SharePoint site, the one to which the add-in will be installed and that also contains the picture library.
-    
- 
-  2. Replace sharePointRootUrl value with the relevant SharePoint root site.
-    
- 
 2. Locate SellerDashboard.Server/Web.config in the SellerDashboard solution and find the following configuration placeholder:
     
-```XML
-  <add key="ClientSecret" value="MwMp1yxOyy8BGhfD5d9VvuqlRbhaqWESxVNLzgpYNHU=" />
-<add key="ClientId" value="ed138b32-c89d-4f22-b74d-7d9d5044b260" />
-<add key="Ida:ClientId" value="Replace with Azure register add-in client id" />
-<add key="Ida:ClientSecret" value="Replace with Azure register add-in client secret" />
-<add key="Ida:TenantId" value="Replace with the SAP Gateway for Microsoft tenant domain, for example <yourDomain>.onmicrosoft.com" />
-<add key="Ida:RedirectUrl" value="Replace with the Azure host site, for example https://contoso.azurewebsites.net/SharePointLaunch.aspx" />
-<add key="Ida:ResourceUrl" value="Replace with the SAP Gateway for Microsoft instance, for example http://contoso.cloudapp.net/" />
-<add key="Ida:ODataServiceBaseUrl" value="Replace with the SAP OData endpoint url, for example https://contoso.cloudapp.net:8081/perf/sap/opu/odata/sap/ZCAR_POC_SRV/" />
-<add key="Ida:ODataServiceMetadataUrl" value="Replace with the SAP OData endpoint metadata url, for example https://contoso.cloudapp.net:8081/perf/sap/opu/odata/sap/ZCAR_POC_SRV/$metadata" />
-<add key="Ida:DataCollection" value="Replace with OData EntitySet name, for example ContosoMotorsCollection" />
-<add key="Ida:ODataFeedOrEntryFormat" value="application/atom+xml" />
-<add key="Ida:ODataMetadataFormat" value="application/xml" />
-<add key="Ida:ODataContentType" value="application/xml" />
-<add key="Ida:ODataVersion" value="2.0" />
-<add key="Ida:ODataMaxVersion" value="3.0" />
-<add key="Ida:ODataWriterTypeName" value="Replace with the OData EntityType, for example ZCAR_POC_SRV.ContosoMotors" />
-<add key="Ida:DefaultID" value="1024" />
-<add key="Ida:DefaultStockNo" value="2048" />
-<add key="Ida:SPPicLib" value="Replace with you picture library name, for example ContosoMotorsPictureLibrary" />
-```
+    ```XML
+	<add key="ClientSecret" value="MwMp1yxOyy8BGhfD5d9VvuqlRbhaqWESxVNLzgpYNHU=" />
+	<add key="ClientId" value="ed138b32-c89d-4f22-b74d-7d9d5044b260" />
+	<add key="Ida:ClientId" value="Replace with Azure register add-in client id" />
+	<add key="Ida:ClientSecret" value="Replace with Azure register add-in client secret" />
+	<add key="Ida:TenantId" value="Replace with the SAP Gateway for Microsoft tenant domain, for example <yourDomain>.onmicrosoft.com" />
+	<add key="Ida:RedirectUrl" value="Replace with the Azure host site, for example https://contoso.azurewebsites.net/SharePointLaunch.aspx" />
+	<add key="Ida:ResourceUrl" value="Replace with the SAP Gateway for Microsoft instance, for example http://contoso.cloudapp.net/" />
+	<add key="Ida:ODataServiceBaseUrl" value="Replace with the SAP OData endpoint url, for example https://contoso.cloudapp.net:8081/perf/sap/opu/odata/sap/ZCAR_POC_SRV/" />
+	<add key="Ida:ODataServiceMetadataUrl" value="Replace with the SAP OData endpoint metadata url, for example https://contoso.cloudapp.net:8081/perf/sap/opu/odata/sap/ZCAR_POC_SRV/$metadata" />
+	<add key="Ida:DataCollection" value="Replace with OData EntitySet name, for example ContosoMotorsCollection" />
+	<add key="Ida:ODataFeedOrEntryFormat" value="application/atom+xml" />
+	<add key="Ida:ODataMetadataFormat" value="application/xml" />
+	<add key="Ida:ODataContentType" value="application/xml" />
+	<add key="Ida:ODataVersion" value="2.0" />
+	<add key="Ida:ODataMaxVersion" value="3.0" />
+	<add key="Ida:ODataWriterTypeName" value="Replace with the OData EntityType, for example ZCAR_POC_SRV.ContosoMotors" />
+	<add key="Ida:DefaultID" value="1024" />
+	<add key="Ida:DefaultStockNo" value="2048" />
+	<add key="Ida:SPPicLib" value="Replace with you picture library name, for example ContosoMotorsPictureLibrary" />
+    ```
 
+   1. Replace the ClientId and ClientSecret values with the values you got in the previous procedure.
+   2. Replace the Ida:ClientId and Ida:ClientSectet valuse with the values from the Azure AD app.
+   3. Replace the Ida:TenantId value with < *yourDomain*  >.onmicrosoft.com.
+    
+      For example, if your organizational account is someone@< *yourDomain*  >.onmicrosoft.com, < *yourDomain*  >.onmicrosoft.com is what you need.
 
-      1. Replace the ClientId and ClientSecret values with the values you got in the previous procedure.
+   4. Replace the Ida:RedirectUrl value with the test site you created on Azure, which hosts this add-in.
+   5. Replace the Ida:ResourceUrl value with the SAP Gateway for Microsoft instance that's been deployed and configured in Azure.
+   6. Replace the Ida:ODataServiceBaseUrl value with the SAP Gateway for Microsoft instance OData endpoint URL.
+   7. Replace the Ida:ODataServiceMetadataUrl value with the SAP Gateway for Microsoft instance OData endpoint metadata URL
+   8. Replace the Ida:DataCollection value. You can get this value from the metadata. For example, use the ContosoMotorsCollection.
+   9. Replace the Ida:ODataWriterTypeName value. You can get the correct value from the metadata. 
     
- 
-  2. Replace the Ida:ClientId and Ida:ClientSectet valuse with the values from the Azure AD app.
-    
- 
-  3. Replace the Ida:TenantId value with < *yourDomain*  >.onmicrosoft.com.
-    
-    For example, if your organizational account is someone@< *yourDomain*  >.onmicrosoft.com, < *yourDomain*  >.onmicrosoft.com is what you need.
-    
- 
-  4. Replace the Ida:RedirectUrl value with the test site you created on Azure, which hosts this add-in.
-    
- 
-  5. Replace the Ida:ResourceUrl value with the SAP Gateway for Microsoft instance that's been deployed and configured in Azure.
-    
- 
-  6. Replace the Ida:ODataServiceBaseUrl value with the SAP Gateway for Microsoft instance OData endpoint URL.
-    
- 
-  7. Replace the Ida:ODataServiceMetadataUrl value with the SAP Gateway for Microsoft instance OData endpoint metadata URL
-    
- 
-  8. Replace the Ida:DataCollection value. You can get this value from the metadata. For example, use the ContosoMotorsCollection.
-    
- 
-  9. Replace the Ida:ODataWriterTypeName value. You can get the correct value from the metadata. 
-    
-    For example, use the following:
-    
+      For example, use the following:
 
+       ```XML
+	  ZCAR_POC_SRV.ContosoMotors
 
-```XML
-  ZCAR_POC_SRV.ContosoMotors
+	<EntityContainer Name="ZCAR_POC_SRV_Entities" m:IsDefaultEntityContainer="true">
+	     <EntitySet sap:content-version="1" Name="ContosoMotorsCollection" sap:searchable="true" EntityType="ZCAR_POC_SRV.ContosoMotors"/>
+	</EntityContainer>
+	<atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="http://contoso.cloudapp.net:8080/perf/sap/opu/odata/sap/ZCAR_POC_SRV.ContosoMotors"/>
+       ```
 
-<EntityContainer Name="ZCAR_POC_SRV_Entities" m:IsDefaultEntityContainer="true">
-     <EntitySet sap:content-version="1" Name="ContosoMotorsCollection" sap:searchable="true" EntityType="ZCAR_POC_SRV.ContosoMotors"/>
-</EntityContainer>
-<atom:link xmlns:atom="http://www.w3.org/2005/Atom" href="http://contoso.cloudapp.net:8080/perf/sap/opu/odata/sap/ZCAR_POC_SRV.ContosoMotors"/>
-```
-
-  10. Replace the Ida:SPPicLib value with the picture library name, which you created in the SharePoint host site.
-    
- 
+   10. Replace the Ida:SPPicLib value with the picture library name, which you created in the SharePoint host site.
 
 ### Publish the project
 
-
 1. Locate the SellerDashboard project in the SellerDashboard solution.
-    
- 
+
 2. Right-click the SellerDashboard to publish the project.
-    
- 
+
 3. Choose  **Provider-hosted**.
-    
- 
+
 4. Choose  **Windows Azure**.
-    
- 
+
 5. Sign in as a global administrator.
-    
- 
+
 6. Choose the web site you created in Azure.
-    
- 
+
 7. Indicate that you want to use HTTPS.
-    
- 
+
 8. Use the default data connections string.
-    
- 
+
 9. Input the web site that you created in Azure as the host web site; input the ClientId and ClientSecret values, which you get in the previous procedure.
-    
- 
+
 10. Publish.
     
      You will get a published package.
-    
- 
 
-### Install the App
-
+### Install the add-in
 
 1. Log into your SharePoint deployment site, as a site administrator.
-    
- 
+
 2. On the site home page, click  **New add-in to deploy**.
-    
- 
+
 3. Choose the package that you get from the publish process.
-    
- 
+
 4. Deploy it and trust it.
-    
- 
 
-## External Code List
-
-
- 
-
- 
-
+## External code list
 
 |**Web Source**|**Collection**|**Code Location**|**License**|
 |:-----|:-----|:-----|:-----|
