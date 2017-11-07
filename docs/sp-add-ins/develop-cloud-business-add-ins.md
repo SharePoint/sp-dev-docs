@@ -17,7 +17,7 @@ Cloud business add-ins are based on Visual Studio LightSwitch technologies. Some
 
 - In addition to the Office templates that are available when you add a document to a SharePoint document library, you can provide your own templates. See [Provide a template for a document library in a cloud business add-in](provide-a-template-for-a-document-library-in-a-cloud-business-add-in.md).
 
-- Social and collaboration features in SharePoint for Office 365 allow users to track activity on a list and add comments. You can easily create a newsfeed for your cloud business add-in by enabling a couple of properties. See [Enable a newsfeed for a cloud business add-in](enable-a-newsfeed-for-a-cloud-business-add-in.md).
+- Social and collaboration features in SharePoint for Office 365 allow users to track activity on a list and add comments. You can easily create a newsfeed for your cloud business add-in by enabling a few properties. See [Enable a newsfeed for a cloud business add-in](enable-a-newsfeed-for-a-cloud-business-add-in.md).
 
 ## HTML client developer tasks
 
@@ -27,7 +27,7 @@ Cloud business add-ins are based on Visual Studio LightSwitch technologies. Some
 
 - Create a screen to display or collect information on a mobile device. See [Create an HTML client screen](http://msdn.microsoft.com/en-us/library/jj713589.aspx).
 
-- If you create a dialog or a popup for your add-in, users can display or specify information on a phone, tablet, or other mobile device that's running a client for that add-in. See [Create a dialog or popup](http://msdn.microsoft.com/en-us/library/jj713587.aspx).
+- If you create a dialog or a pop-up window for your add-in, users can display or specify information on a phone, tablet, or other mobile device that's running a client for that add-in. See [Create a dialog or pop-up](http://msdn.microsoft.com/en-us/library/jj713587.aspx).
 
 - By using the screen designer, you can modify the appearance of screens in an HTML client. See [Design an HTML screen by using the screen designer](http://msdn.microsoft.com/en-us/library/jj733575.aspx).
 
@@ -41,7 +41,7 @@ Cloud business add-ins are based on Visual Studio LightSwitch technologies. Some
 
 - As you design an HTML client add-in, you specify how users open one screen from another. They can open a screen by tapping either a list item on another screen or a button on the command bar. See [Control navigation between HTML screens](http://msdn.microsoft.com/en-us/library/jj733570.aspx).
 
-- In addition to the standard navigation, you can provide a navigation menu that allows users to jump directly to another screen. See [Create a Navigation Menu](http://msdn.microsoft.com/en-us/library/dn546744.aspx).
+- In addition to the standard navigation, you can provide a navigation menu that allows users to jump directly to another screen. See [Create a navigation menu](http://msdn.microsoft.com/en-us/library/dn546744.aspx).
 
 - As you develop an HTML mobile client add-in, you can write JavaScript code that runs when a user initiates a certain event. See [Handle screen events in a mobile client](http://msdn.microsoft.com/en-us/library/jj863131.aspx).
 
