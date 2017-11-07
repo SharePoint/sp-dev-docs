@@ -19,6 +19,8 @@ Cloud business add-ins are based on Visual Studio LightSwitch technologies. Some
 
 - Social and collaboration features in SharePoint for Office 365 allow users to track activity on a list and add comments. You can easily create a newsfeed for your cloud business add-in by enabling a few properties. See [Enable a newsfeed for a cloud business add-in](enable-a-newsfeed-for-a-cloud-business-add-in.md).
 
+- You can build a LightSwitch SharePoint provider-hosted add-in to access SAP data by means of the SAP Gateway for Microsoft. See [Create a cloud business add-in that uses the SAP Gateway](create-a-cloud-business-add-in-that-uses-the-sap-gateway.md).
+
 ## HTML client developer tasks
 
 - When you design HTML screens, you primarily use designers and tool windows, but you can also use code to modify those screens in specific ways. By using LightSwitch JavaScript APIs, you can perform many tasks. See [Modify an HTML screen by using code](http://msdn.microsoft.com/en-us/library/jj733572.aspx).
