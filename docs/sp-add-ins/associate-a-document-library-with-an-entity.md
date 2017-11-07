@@ -108,9 +108,9 @@ The process of associating a document library with an entity involves three step
 
 6. Expand the **Command Bar** node for the new tab, as shown in Figure 8, and select **Add**.
     
-*Figure 8. The Command Bar node*
+   *Figure 8. The Command Bar node*
 
-![The Command Bar node](../images/CBAAddButton.PNG)
+   ![The Command Bar node](../images/CBAAddButton.PNG)
 
 7. In the **Add Button** dialog box, accept the default choices, and then select **OK**. Figure 9 shows the **Add Button** dialog box with the default method **createOrUploadDocument**.
     
