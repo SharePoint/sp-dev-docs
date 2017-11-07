@@ -1,88 +1,67 @@
-﻿---
+---
 title: Create a cloud business add-in that uses the SAP Gateway
-ms.date: 09/25/2017
+description: Build a LightSwitch SharePoint provider-hosted add-in to access SAP data by means of the SAP Gateway for Microsoft.
+ms.date: 11/07/2017
 ms.prod: sharepoint
 ---
 
-
 # Create a cloud business add-in that uses the SAP Gateway
- Learn how to build the LightSwitch SharePoint provider-hosted add-in to access SAP data by means of SAP Gateway for Microsoft.
- 
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
- 
+This article highlights the key steps that the development team at Microsoft used to create a LightSwitch SharePoint provider-hosted add-in that can access SAP data by means of the SAP Gateway for Microsoft. This add-in supports CRUD (create, read, update, and delete) operations on SAP Data, and can be used to view pictures from and upload pictures to a SharePoint picture library.
 
-This article highlights the key steps that the development team at Microsoft used to create a LightSwitch SharePoint provider-hosted add-in that can access SAP data by means of SAP Gateway for Microsoft. This add-in supports CRUD operations on SAP Data, and can be used to view pictures from and upload pictures to a SharePoint picture library.
- 
+The purpose of this article is to show the key points of the add-in that might help you build similar add-ins. The code sample is provided and linked to the article so that you can see how the working solution was created, to reinforce your learning.
 
-The purpose of this article is to show the key points of the add-in that might help you to build similar add-ins. The code sample is provided and linked to the article so that you can see how the working solution was created, in order to reinforce your learning.
- 
-
- **Sample download:** [ Sample: Developing a Cloud Business Add-in to access SAP Gateway for Microsoft](https://code.msdn.microsoft.com/Sample-Developing-a-Cloud-25d6d1ea)
+**Sample download:** [Sample: Developing a cloud business add-in to access SAP Gateway for Microsoft](https://code.msdn.microsoft.com/Developing-a-Cloud-b8bfe0c1) (note that "app" is now "add-in")
  
 
 ## Before you begin
 
 The following are prerequisites to the procedures in this article:
- 
 
- 
+- **An Office 365 Developer Site** in an Office 365 domain that is associated with a Microsoft Azure Active Directory (Azure AD) tenancy. See:
+   - [Set up a development environment for SharePoint Add-ins on Office 365](set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md), or
+   - [Create a developer site on an existing Office 365 subscription](create-a-developer-site-on-an-existing-office-365-subscription.md)
 
--  **An Office 365 Developer Site** in an Office 365 domain that is associated with a Microsoft Azure Active Directory (Azure AD) tenancy. See [Sign up for an Office 365 Developer Site, set up your tools and environment, and start deploying add-ins](http://msdn.microsoft.com/en-us/library/office/fp179924%28v=office.15%29.aspx) or [How to: Create a Developer Site within your existing Office 365 subscription.](http://msdn.microsoft.com/en-us/library/office/jj692554%28v=office.15%29.aspx)
-    
- 
--  **Visual Studio 2013 Update 4** or later, which you can obtain from [Welcome to Visual Studio 2013](http://msdn.microsoft.com/en-us/library/dd831853.aspx).
-    
- 
--  **Microsoft Office Developer Tools for Visual Studio.** The version that is included in Update 4 of Visual Studio 2013 or later.
-    
- 
--  **SAP Gateway for Microsoft** is deployed and configured in Microsoft Azure. For details, see the documentation for [SAP Gateway for Microsoft](http://go.microsoft.com/fwlink/?LinkId=507635).
-    
- 
+- **Visual Studio 2013 Update 4** or later, which you can obtain from [Welcome to Visual Studio](http://msdn.microsoft.com/en-us/library/dd831853.aspx).
+
+- **Microsoft Office Developer Tools for Visual Studio.** The version that is included in Update 4 of Visual Studio 2013 or later.
+
+- **SAP Gateway for Microsoft** is deployed and configured in Microsoft Azure. For details, see the documentation for [SAP Gateway for Microsoft](http://go.microsoft.com/fwlink/?LinkId=507635).
+
 -  **An organizational account in Microsoft Azure.** See [Create an organizational user account in Azure AD](http://go.microsoft.com/fwlink/?LinkID=512580).
     
-     **Note**  Log in to your Office 365 account (login.microsoftonline.com) to change the temporary password after the account is created.
--  **An SAP OData endpoint** with sample data in it. See the documentation for [SAP Gateway for Microsoft](http://go.microsoft.com/fwlink/?LinkId=507635).
+   > [!NOTE]
+   > Sign in to your Office 365 account (login.microsoftonline.com) to change the temporary password after the account is created.
+
+- **SAP OData endpoint** with sample data in it. See the documentation for [SAP Gateway for Microsoft](http://go.microsoft.com/fwlink/?LinkId=507635).
+
+- **A basic familiarity with Azure AD.** See:
+
+   - [Getting started with Azure AD](https://docs.microsoft.com/en-us/azure/active-directory/get-started-azure-ad)
+   - [What is Azure Active Directory?](https://docs.microsoft.com/en-us/azure/active-directory/active-directory-whatis)
+
+- **A basic familiarity with creating SharePoint Add-ins.** See [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md).
+
+-  **A basic familiarity with OAuth 2.0 in Azure AD.** See [Authorize access to web applications using OAuth 2.0 and Azure Active Directory](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-protocols-oauth-code) and its child topics.
     
- 
--  **A basic familiarity with Azure AD.** See [Getting started with Azure AD](http://msdn.microsoft.com/en-us/library/azure/dn655157.aspx).
-    
- 
--  **A basic familiarity with creating SharePoint Add-ins.** See [How to: Create a basic provider-hosted SharePoint Add-in](http://msdn.microsoft.com/en-us/library/office/fp142381%28v=office.15%29.aspx).
-    
- 
--  **A basic familiarity with OAuth 2.0 in Azure AD.** See [OAuth 2.0 and in Azure AD](http://msdn.microsoft.com/en-us/library/azure/dn645545.aspx) and its child topics.
-    
- 
 
-## Solution Overview
+## Solution overview
 
-Contoso Motors is a fictitious auto sales company that represents a real-life business in which an automobile dealership shares information about its inventory of automobiles with sales representatives and other dealerships that it's affiliated with. By using this add-in, sales people can check the current status of their automobile inventory, which the add-in accesses directly from SAP by means of SAP Gateway for Microsoft. All data is stored in SAP, and a picture of each car is stored in a picture library in SharePoint Online. Both the data from SAP and the SharePoint picture library are brought together and displayed by this add-in. Within the add-in, managers and administrators can do standard CRUD operations on the detailed data about each car in SAP.
- 
+Contoso Motors is a fictitious auto sales company that represents a real-life business in which an automobile dealership shares information about its inventory of automobiles with sales representatives and other dealerships that it's affiliated with. By using this add-in, sales people can check the current status of their automobile inventory, which the add-in accesses directly from SAP by means of SAP Gateway for Microsoft. All data is stored in SAP, and a picture of each car is stored in a picture library in SharePoint Online. Both the data from SAP and the SharePoint picture library are brought together and displayed by this add-in. Within the add-in, managers and administrators can do standard CRUD (create, read, update, and delete) operations on the detailed data about each car in SAP.
 
- 
-In the example in this article, the SellerDashboard add-in manipulates automobile inventory data from SAP and its picture in SharePoint picture library. Within this add-in, standard CRUD (create, read, update, and delete) operations are supported on the detailed information about each car in SAP.
- 
+In the example in this article, the SellerDashboard add-in manipulates automobile inventory data from SAP and its picture in the SharePoint picture library. Within this add-in, standard CRUD operations are supported on the detailed information about each car in SAP.
 
+> [!TIP]
+> For a video demonstration of this add-in, watch the [Technical Webinar - SAP Gateway for Microsoft &amp; Microsoft Azure Development Model](http://go.microsoft.com/fwlink/?LinkId=517378) video on BrightTalk. The demo of the app's functionality starts at 48:00 minutes on the timeline.
  
+The SellerDashboard solution includes eight projects, and as the following image shows, it is divided into two categories:
+- [BoxXDataStudio](#boxxdatastudio)
+- [SellerDashboardStudio](#sellerdashboardstudio)
 
- **Tip**  For a video demonstration of this add-in, watch the  [Technical Webinar - SAP Gateway for Microsoft &amp; Microsoft Azure Development Model](http://go.microsoft.com/fwlink/?LinkId=517378) video on BrightTalk. The demo of the app's functionality starts at 48:00 minutes on the timeline.
- 
+*Figure 1. SellerDashboard Code Architecture*
 
- **Code Architecture**
- 
-
- 
-The SellerDashboard solution includes eight projects, and as the following image shows, it is divided into two categories: BoxXDataStudio and SellerDashboardStudio.
- 
-
- 
-
- 
 ![SellerDashboard](../images/4092aef3-2fb9-43f1-ad9a-0a326c4648d4.jpg)
  
-
 ### BoxXDataStudio
 
 This studio includes all of the components needed to interact with SAP Gateway for Microsoft.
@@ -410,7 +389,8 @@ xmlns:edmx:"http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
     
     Most of the properties have the same type as the properties in the SAP database schema, except for StockNo, whose type has been changed from  **int** to **string**. This is because StockNo is used as a way to define the relationship between the SAP data and SharePoint picture library.
     
-     **Tip**  StockNo must have the type  **string** because the value stored in the SharePoint picture library is **Text**. These two types must match in order to accomplish the data mashup.
+> [!TIP]
+> StockNo must have the type  **string** because the value stored in the SharePoint picture library is **Text**. These two types must match in order to accomplish the data mashup.
 
     The implementation of the two interfaces is in CarInventoryModel/InventoryItem.cs and CarInventoryModel/InventoryCollection.cs.
     
@@ -428,11 +408,9 @@ xmlns:edmx:"http://schemas.microsoft.com/ado/2007/06/edmx" Version="1.0">
 
  
 The picture library in the SharePoint host site is named ContosoMotorsPictureLibrary, and contains three new columns named StockNo, ThumbnailUrl, and FullImageUrl. All of them are configured as  **Text** fields.
- 
 
- 
-
- **Tip**  The column names are case sensitive.
+> [!TIP]
+> The column names are case sensitive.
  
 
  The StockNo column is used to create a relationship with the SAP data. The ThumbnailUrl and FullImageUrl columns are used to get the URL to the relevant picture in a convenient way.
@@ -776,7 +754,9 @@ Complete the steps in this section to deploy the add-in. Before you deploy this 
  
 2. In the left menu, click  **Websites**.
     
-     **Note**  You'll use this web site to host the SharePoint provider-hosted add-in for the SellerDashboard.
+> [!NOTE]
+> You'll use this web site to host the SharePoint provider-hosted add-in for the SellerDashboard.
+
 3. In the command bar at the bottom of the page, click  **New**.
     
  
@@ -843,7 +823,9 @@ The steps in this section describe how to register the sample add-in from the Az
  
 3. On the active directory page, click the directory that was configured for SAP Gateway for Microsoft.
     
-     **Tip**   If you're not sure which one was used, ask your SAP Gateway for Microsoft administrator. Hint: it's the directory that contains the users and groups for SAP Gateway for Microsoft.
+   > [!TIP]
+   > If you're not sure which one was used, ask your SAP Gateway for Microsoft administrator. Hint: it's the directory that contains the users and groups for SAP Gateway for Microsoft.
+
 4. On the top navigation bar, choose  **APPLICATIONS**.
     
  
@@ -869,9 +851,8 @@ The steps in this section describe how to register the sample add-in from the Az
     
     The Azure dashboard for the application opens and displays a success message.
     
- 
-
- **Note**  You must register the add-in with Azure AD twice: Once for debugging purposes, and then again to deploy it for production, as described in step 10.To register the add-in for debugging purposes, use the  **SIGN-ON URL** and **APP ID URI** with the debugging URL of the SellerDashboard.Server project so that you can run the Visual Studio debugger (F5). This URL will be of the form https://localhost. *nnnn*  , where *nnnn*  is a port number. You can find this URL in the Properties pane in Visual Studio.Then, when you are ready to deploy for production, edit the registration to use the correct production URL.
+> [!NOTE]
+> You must register the add-in with Azure AD twice: Once for debugging purposes, and then again to deploy it for production, as described in step 10.To register the add-in for debugging purposes, use the  **SIGN-ON URL** and **APP ID URI** with the debugging URL of the SellerDashboard.Server project so that you can run the Visual Studio debugger (F5). This URL will be of the form https://localhost. *nnnn*  , where *nnnn*  is a port number. You can find this URL in the Properties pane in Visual Studio.Then, when you are ready to deploy for production, edit the registration to use the correct production URL.
  
 
 
@@ -1063,3 +1044,9 @@ SharePointRootUrl: "Replace with your SharePoint root site"
 |:-----|:-----|:-----|:-----|
 | [Survey Add-in Tutorial: Developing a SharePoint Application Using LightSwitch](http://code.msdn.microsoft.com/Survey-App-Tutorial-a70d0afd) [Walkthrough: Creating an Add-in for SharePoint by Using LightSwitch](http://msdn.microsoft.com/en-us/library/jj969621.aspx)|**Photo Uploader:**PhotoListHelper.csPhotosController.csGlobal.asax.cs| [Survey Add-in Tutorial: Developing a SharePoint Application Using LightSwitch (C#)](http://www.getcodesamples.com/src/2571E87E/)|Apache License, Version 2.0|
 |null|**ACS Auth:**SharePointContext.csTokenHelper.cs|**VS internal Templates:**Visual C#/Office/SharePoint/Apps/AppforSharePoint||
+
+## Additional resources
+
+- [Develop cloud business add-ins](develop-cloud-business-add-ins.md)
+
+
