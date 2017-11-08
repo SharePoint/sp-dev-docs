@@ -1,6 +1,6 @@
 ---
 title: Customizing "modern" lists and libraries
-description: Customize user actions, branding, configuring end user experience.
+description: Get a faster, more intuitive, and responsive SharePoint Online experience by customizing your lists and libraries to the "modern" experience using user custom actions and custom branding.
 ms.date: 11/08/2017
 ---
 
@@ -278,8 +278,9 @@ If you want to completely disable the "modern" experience, it's best to use the 
 
 ### Site/Web level configuration
 You can prevent a site collection or web from using the "modern" experience by enabling a feature:
-- Site collection scoped feature with ID **E3540C7D-6BEA-403C-A224-1A12EAFEE4C4** for site collection control
-- Web scoped feature with ID **52E14B6F-B1BB-4969-B89B-C4FAA56745EF** for web scoped control
+
+- For site collection control, use the site collection scoped feature with ID **E3540C7D-6BEA-403C-A224-1A12EAFEE4C4**. 
+- For web control, use the web scoped feature with ID **52E14B6F-B1BB-4969-B89B-C4FAA56745EF**. 
 
 Use the following [PnP PowerShell](http://aka.ms/sppnp-powershell) to enable/disable the needed features:
 
@@ -300,11 +301,13 @@ Enable-PnPFeature -Identity E3540C7D-6BEA-403C-A224-1A12EAFEE4C4 -Scope Site
 ```
 
 ### List/Library configuration
-If you want to control the experience at the library level, you can use go to list settings, advanced settings, and change the behavior:
+If you want to control the experience at the library level, you can go to **List settings** > **Advanced settings**, and change the behavior:
 
-![List experience configuration in the SharePoint tenant level settings in admin ui](media/modern-experiences/list-experience-setting.png)
+*Figure 5. List experience configuration in the SharePoint tenant level settings in Admin UI*
 
-The same can also be done using CSOM as shown in the below snippet:
+![List experience configuration in the SharePoint tenant level settings in Admin UI](media/modern-experiences/list-experience-setting.png)
+
+The same can also be done by using CSOM as shown in this snippet:
 
 ```C#
 // Load the list you want to update
@@ -321,34 +324,40 @@ context.ExecuteQuery();
 ```
 
 > [!NOTE]
-> - The settings at the library level **override** the settings at the web, site, or tenant level. This also implies that you could pilot the "modern" list and library experience to a sub site of sites by having the "modern" experience turned off at tenant level but enabled at list level on the pilot sites.
-> - When you've manually chosen (so not because of list, site, web or tenant "classic" enforcement) you'll see a link "Exit classic experience" appearing under the left navigation (as of July 2017). Clicking this will bring you back to the "modern" experience.
-> - If you're not able to get the "modern" experience to show up then inspect the cookies being passed to SharePoint as it could be possible that the opt out of "modern" experiences cookie (splnu with value set to 0) is still present. Clearing the browser cookies should get this fixed.
+> - The settings at the library level *override* the settings at the web, site, or tenant level. This also implies that you could pilot the "modern" list and library experience to a subsite of sites by having the "modern" experience turned off at the tenant level but enabled at the list level on the pilot sites.
+> - When you've manually chosen "classic" (that is, not due to list, site, web, or tenant "classic" enforcement), you'll see the link **Exit classic experience** appearing under the left navigation (as of July 2017). Selecting this brings you back to the "modern" experience.
+> - If you're not able to get the "modern" experience to appear, inspect the cookies being passed to SharePoint because it is possible that the opt out of "modern" experiences cookie (splnu with value set to 0) is still present. Clearing the browser cookies should fix this.
 
-
-## When does the built-in auto-detect automatically switch rendering back to "classic"?
 <a name="autodetect"> </a>
-SharePoint will use an auto-detect system to automatically switch the rendering of a list to "classic" assuming you've not disabled the "modern" experience for your list using either the site, web, or list scoped overrides explained in the previous chapter. This auto-detect system will automatically switch you back to "classic" whenever SharePoint detects your list is using features which are not (yet) supported in "modern".
+## When does the built-in auto-detect automatically switch rendering back to "classic"?
 
-Below are the settings that are evaluated as part of the auto-detect system and which make the list render in "classic" mode:
-- If the requested list form page has zero or more than 1 web part on it
-- **Until July 2017**: If the Web scoped feature "Metadata Navigation and Filtering" is enabled. We're rolling out managed metadata navigation support for "modern" lists and libraries as explained here: https://techcommunity.microsoft.com/t5/SharePoint-Blog/SharePoint-filters-pane-updates-filtering-and-metadata/ba-p/74162
-- If the available webpart is an **XSLTListViewWebPart** (default way to render the list) and:
-	- There's a non standard JSLink or XslLink value set for the web part properties
-	- The page is shown in a dialog (IsDlg=1)
-	- The list is not based on one of the following types: Document library (101), Picture library (109), Web page library (119) or Generic list (100). **As of August 2017** also Announcements (104) and Links (103) do render using the "modern" UI.
-	- The JSLink property is set on one of the fields to render
-	- One of the fields to render is of type "BCS external data", "Geolocation", "OutcomeChoice" or one of these publishing field types "Image", "Html", or "SummaryLinks"
-	- There are list scoped user custom actions which have their ScriptSrc property set
-- If the available webpart is a **ListFormWebPart** and: 
-	- The page is shown in a dialog (IsDlg=1) 
-	- It's a "New" form page for a document library  
-	- The fields to render are not any of these supported types (Attachments, TaxonomyField, Boolean, Choice, Currency, DateTime, File, Lookup, MultiChoice, MultiLine except when Append with versioning is on, Number, Text, User, or Url) 
+SharePoint uses an auto-detect system to automatically switch the rendering of a list to "classic", assuming that you do not disable the "modern" experience for your list by using the site, web, or list scoped overrides explained in the previous section. This auto-detect system automatically switches you back to "classic" whenever SharePoint detects that your list is using features that are not (yet) supported in "modern".
+
+Following are the settings that are evaluated as part of the auto-detect system and which make the list render in "classic" mode:
+
+- If the requested list form page has zero or more than one web part on it.
+
+- (**Until July 2017**) If the web scoped feature "Metadata Navigation and Filtering" is enabled. We're [rolling out managed metadata navigation support for "modern" lists and libraries](https://techcommunity.microsoft.com/t5/SharePoint-Blog/SharePoint-filters-pane-updates-filtering-and-metadata/ba-p/74162).
+
+- If the available web part is an **XSLTListViewWebPart** (default way to render the list) and:
+	- There's a non-standard JSLink or XslLink value set for the web part properties.
+	- The page is shown in a dialog (IsDlg=1).
+	- The list is not based on one of the following types: Document library (101), Picture library (109), Web page library (119), or Generic list (100). **As of August 2017**, Announcements (104) and Links (103) do render using the "modern" UI.
+	- The JSLink property is set on one of the fields to render.
+	- One of the fields to render is of type **BCS external data**, **Geolocation**, **OutcomeChoice**, or one of these publishing field types **Image**, **Html**, or **SummaryLinks**.
+	- There are list scoped user custom actions that have their ScriptSrc property set.
+
+- If the available web part is a **ListFormWebPart** and: 
+	- The page is shown in a dialog (IsDlg=1). 
+	- It's a "New" form page for a document library.  
+	- The fields to render are not any of these supported types: **Attachments**, **TaxonomyField**, **Boolean**, **Choice**, **Currency**, **DateTime**, **File**, **Lookup**, **MultiChoice**, **MultiLine** except when Append with versioning is on, **Number**, **Text**, **User**, or **Url**.
 
 ### Programmatically detect if your library/list will be shown using "modern" or "classic" 
-The previous chapter explained the reasoning behind our auto-detect mechanism, but luckily there's an easy way for you as a developer to understand how a library/list will be rendered. Getting this information is as simple as getting the value of the **PageRenderType** file property which you can obtain using CSOM or REST. Below samples show how to first load the page rendering the list and then get the **PageRenderType**:
 
-*CSOM sample:*
+The previous section explained the reasoning behind our auto-detect mechanism, but luckily there's an easy way for you as a developer to understand how a library/list will be rendered. Getting this information is as simple as getting the value of the **PageRenderType** file property, which you can obtain by using CSOM or REST. The following samples show how to first load the page that is rendering the list, and then get the **PageRenderType**:
+
+#### CSOM sample
+
 ```C#
 using (var cc = new ClientContext(siteUrl))
 {
@@ -364,16 +373,20 @@ using (var cc = new ClientContext(siteUrl))
 }
 ```
 
+<br/>
 
 > [!NOTE]
 > The PageRenderType property was introduced in [January 2017 CSOM release (16.1.6112.1200)](https://dev.office.com/blogs/new-sharepoint-csom-version-released-for-Office-365-january-2017).
 
-*REST request:*
+<br/>
+
+#### REST request
+
 ```Html
 GET _api/web/getfilebyserverrelativeurl('/sites/dev/ECMTest/Forms/AllItems.aspx')/pageRenderType
 ```
 
-The REST call will get you integer value which is explained in below table:
+The REST call gets you the integer value, which is explained in the following table.
 
 Value | Reason
 :------:|-------
@@ -384,7 +397,7 @@ Value | Reason
 4 | NoSPList
 5 | HasBusinessDataField
 6 | HasTaskOutcomeField
-7 | HasPublishingfield
+7 | HasPublishingField
 8 | HasGeolocationField
 9 | HasCustomActionWithCode
 10 | HasMetadataNavFeature 
@@ -407,12 +420,12 @@ Value | Reason
 
 ## Additional considerations
 
-We'll gradually introduce more customization options for "modern" list and library experiences. These will be aligned with the release of additional SharePoint framework capabilities. Currently, there's no exact schedule available, but we'll be updating the "modern" experience articles whenever new capabilities are released.
+We'll gradually introduce more customization options for "modern" list and library experiences. These will be aligned with the release of additional SharePoint Framework capabilities. Currently, there's no exact schedule available, but we'll update the "modern" experience articles whenever new capabilities are released.
 
 ## Additional resources
 
 - [Customizing the "modern" experiences in SharePoint Online](modern-experience-customizations.md)
 - [Switch the default experience for lists or document libraries from new or classic](https://support.office.com/en-us/article/Switch-the-default-experience-for-lists-or-document-libraries-from-new-or-classic-66dac24b-4177-4775-bf50-3d267318caa9)
-- [Overview of the "modern" document library experience](https://blogs.office.com/2016/06/07/modern-document-libraries-in-sharepoint)
-- [Overview of the "modern" list experience](https://blogs.office.com/2016/07/25/modern-sharepoint-lists-are-here-including-integration-with-microsoft-flow-and-powerapps) 
-- [Differences between "modern" and "classic" experiences](https://support.office.com/en-us/article/Differences-between-classic-and-new-experiences-for-lists-and-document-libraries-30e1aab0-a5cc-4363-b7f2-09e2ae07d4dc?ui=en-US&rs=en-US&ad=US)
+- [Modern document libraries in SharePoint](https://blogs.office.com/2016/06/07/modern-document-libraries-in-sharepoint)
+- [Modern SharePoint lists are here—including integration with Microsoft Flow and PowerApps](https://blogs.office.com/2016/07/25/modern-sharepoint-lists-are-here-including-integration-with-microsoft-flow-and-powerapps) 
+- [Differences between the new and classic experiences for lists and libraries](https://support.office.com/en-us/article/Differences-between-the-new-and-classic-experiences-for-lists-and-libraries-30e1aab0-a5cc-4363-b7f2-09e2ae07d4dc?ui=en-US&rs=en-US&ad=US)
