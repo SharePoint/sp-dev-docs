@@ -9,10 +9,9 @@ ms.date: 11/03/2017
 SharePoint sites span the default and satellite geo locations of a Multi-Geo tenant. When your custom solution needs to work with SharePoint sites, and when you deploy applications, it's important to be aware of the geo locations in your Multi-Geo tenant. 
 
 ## Deploying applications to Multi-Geo SharePoint tenants
-When you're deploying applications, such as SharePoint Add-ins or SharePoint client-side web parts based on the SharePoint Framework, you need to take in account that applications are deployed at the geo location level. When you deploy an application to the default geo location, that application will not be available in the satellite geo locations.
+When you're deploying applications, such as SharePoint Add-ins or SharePoint client-side web parts based on the SharePoint Framework, you need to take in account that applications are deployed at the geo location level. When you deploy an application to the default geo location, that application will not be available in the satellite geo locations. See [Managing Apps/Add-ins in a Multi-Geo tenant](multigeo-apps.md) for more details on app deployment.
 
 We recommend that you deploy and update your enterprise applications in all locations. This will ensure that the application is available to all users.
-
 
 ## Enumerating site collections
 To enumerate all tenant site collections, use the [CSOM GetSitePropertiesFromSharePointByFilters method](https://msdn.microsoft.com/en-us/library/microsoft.online.sharepoint.tenantadministration.tenant.getsitepropertiesfromsharepointbyfilters.aspx) on a `Tenant` object instance. Because each geo location has a tenant admin center,  you'll need to enumerate site collections per geo location and concatenate the results to get a single tenant-wide list of site collections.
@@ -40,4 +39,10 @@ The `Tenant` object is also used to configure tenant-level settings, such as CDN
 
 For more details about how to get a site using the `GetSitePropertiesByUrl` method and then restrict the site from being moved by setting the `RestrictedToRegion` property, see the [MultiGeo.RestrictSiteToGeoLocation](https://github.com/SharePoint/PnP/tree/dev/Samples/MultiGeo.RestrictSiteToGeoLocation) sample. 
 
+## Are site URLs a good way to identify sites?
+In a Multi-Geo tenant sites can be moved between the geo locations which implies that that the URL of that site will change, so storing the site URL as unique key to identify a site is not recommended. It's better to store the site ID as that will stay the same, regardless in which geo location the site is hosted. 
+
+
+## See also
+- [Managing Apps/Add-ins in a Multi-Geo tenant](multigeo-apps.md)
 
