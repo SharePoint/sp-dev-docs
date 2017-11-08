@@ -56,7 +56,7 @@ For the simplest experience, we recommend that you use modern themes with modern
 
 ## See also
 
-* [Change the look of your SharePoint site](https://support.officeppe.com/en-us/article/Change-the-look-of-your-SharePoint-site-06bbadc3-6b04-4a60-9d14-894f6a170818?ui=en-US&rs=en-US&ad=US#ID0EAACAAA=Online)
+* [Change the look of your SharePoint site](https://support.office.com/en-us/article/Change-the-look-of-your-SharePoint-site-06bbadc3-6b04-4a60-9d14-894f6a170818?ui=en-US&rs=en-US&ad=US#ID0EAACAAA=Online)
 * [Theme Generator tool](https://developer.microsoft.com/en-us/fabric#/styles/themegenerator)
 * [SharePoint site theming: JSON schema](sharepoint-site-theming-json-schema.md)
 * [SharePoint site theming: PowerShell cmdlets](sharepoint-site-theming-powershell.md)
