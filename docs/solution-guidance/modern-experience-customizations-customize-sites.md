@@ -54,9 +54,9 @@ In numerous areas on the "modern" team sites, the typical customizations are not
 - "Classic" publishing features (WCM).
 - Activation of community feature or creation of community subsites under "modern" team site.
 
-Because "modern" team sites also have scripting capabilities disabled (it's a so called 'noscript' site), numerous areas cannot be customized. The impact of 'noscript' is the same for "modern" or "classic" sites. "Modern" sites have 'noscript' enabled by default, meaning that scripting capabilities are not available. However, it is possible and supported to disable 'noscript' settings in both "modern" and "classic" sites to further enable some capabilities. 
+Because "modern" team sites also have scripting capabilities disabled (it's a so called NoScript site), numerous areas cannot be customized. The impact of NoScript is the same for "modern" or "classic" sites. "Modern" sites have NoScript enabled by default, meaning that scripting capabilities are not available. However, it is possible and supported to disable NoScript settings in both "modern" and "classic" sites to further enable some capabilities. 
 
-When you design your solutions, consider these key areas related to the 'noscript' setting:
+When you design your solutions, consider these key areas related to the NoScript setting:
 
 - Sandbox solutions are not supported.
 - Custom JavaScript cannot be enabled on the sites by using "classic" extensibility options (for example, via user custom actions).
@@ -72,7 +72,7 @@ When you design your solutions, consider these key areas related to the 'noscrip
 
 You can use the [PnP provisioning engine](https://msdn.microsoft.com/en-us/pnp_articles/pnp-provisioning-engine-and-the-core-library) with "modern" team sites. The PnP provisioning engine automatically detects if a site is a "modern" team site and adjusts its behavior based on the supported capabilities. The process is exactly the same as using the PnP provisioning engine with "classic" sites where the scripting capabilities are not disabled.
 
-The following elements are ignored when a remote template is applied to a "modern" team site or a site that has 'noscript' enabled:
+The following elements are ignored when a remote template is applied to a "modern" team site or a site that has NoScript enabled:
 
 - Site collection **AuditLogTrimmingRetention** configuration in the auditing settings
 - Applying a custom theme from the template; current implementation has a dependency on storing a custom theme to the catalog, which is not supported
