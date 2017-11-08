@@ -110,7 +110,7 @@ gulp serve --nobrowser
 
 You use the ```--nobrowser``` option because you don't need to launch the local workbench, since you can't debug extensions locally.
 
-When the code compiles without errors, it will serve the resulting manifest from http://localhost:4321.
+When the code compiles without errors, it will serve the resulting manifest from https://localhost:4321.
 
 ![Gulp serve](../../../images/ext-app-gulp-serve.png)
 
