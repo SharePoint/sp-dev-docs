@@ -1359,6 +1359,8 @@
       href: solution-guidance/multigeo-onedrive.md
     - name: Work with SharePoint sites in a Multi-Geo tenant
       href: solution-guidance/multigeo-sites.md
+    - name: Managing Apps/Add-ins in a Multi-Geo tenant
+      href: solution-guidance/multigeo-apps.md
     - name: Work with user profiles in a Multi-Geo tenant
       href: solution-guidance/multigeo-userprofileexperience.md
     - name: Search in a Multi-Geo SharePoint tenant

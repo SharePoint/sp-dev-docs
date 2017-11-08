@@ -23,7 +23,8 @@
     }
   ],
   "notification_subscribers": [
-    "vesaj@microsoft.com"
+    "vesaj@microsoft.com", 
+    "bjansen@microsoft.com"
   ],
   "branches_to_filter": [],
   "skip_source_output_uploading": false,
