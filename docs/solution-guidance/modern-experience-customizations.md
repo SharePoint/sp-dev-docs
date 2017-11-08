@@ -37,12 +37,12 @@ If you have existing customizations that are business critical for your deployme
 
 Following are the key scenarios currently supported by the "modern" experiences. We will be updating the list of supported scenarios whenever new capabilities are introduced in SharePoint Online. 
 
-|**Customization**|**Introduction to options**|**Article**|
-|:-----|:-----|:-----|
-|Provisioning "modern" team sites| "Modern" team sites can be provisioned by an end user, but you can also create these sites programmatically. | [Provisioning "modern" team sites programmatically](modern-experience-customizations-provisioning-sites.md) |
-|Customizing "modern" team sites| "Modern" team sites are sites that bring a fresh, new responsive user experience to SharePoint Online, showing relevant information on the home page. Typically, these sites also have an associated Office 365 Group. | [Customizing "modern" team sites](modern-experience-customizations-customize-sites.md) |
-|Customizing "modern" lists and libraries| "Modern" lists and document libraries bring a better user experience that is faster, more intuitive, and responsive. This article focuses on the extensibility options, such as user custom actions and branding, which are supported for the "modern" library and list experiences. | [Customizing "modern" lists and libraries](modern-experience-customizations-customize-lists-and-libraries.md) |
-|Customizing "modern" site pages| "Modern" team site pages are fast, easy to author, and support rich multimedia content. Additionally, these pages look great on any device, in a browser, or from within the SharePoint mobile app. This article focuses on the extensibility options available within the "modern" page experience | [Customizing "modern" site pages](modern-experience-customizations-customize-pages.md) |
+|**Customization/Article**|**Introduction to options**|
+|:-----|:-----|
+|[Provisioning "modern" team sites programmatically](modern-experience-customizations-provisioning-sites.md)| "Modern" team sites can be provisioned by an end user, but you can also create these sites programmatically. | 
+|[Customizing "modern" team sites](modern-experience-customizations-customize-sites.md) | "Modern" team sites are sites that bring a fresh, new responsive user experience to SharePoint Online, showing relevant information on the home page. Typically, these sites also have an associated Office 365 Group. | 
+|[Customizing "modern" lists and libraries](modern-experience-customizations-customize-lists-and-libraries.md) | "Modern" lists and document libraries bring a better user experience that is faster, more intuitive, and responsive. This article focuses on the extensibility options, such as user custom actions and branding, which are supported for the "modern" library and list experiences. | 
+|[Customizing "modern" site pages](modern-experience-customizations-customize-pages.md) | "Modern" team site pages are fast, easy to author, and support rich multimedia content. Additionally, these pages look great on any device, in a browser, or from within the SharePoint mobile app. This article focuses on the extensibility options available within the "modern" page experience. | 
 
 <a name="convertingexisting"> </a>
 ## Converting existing sites to "modern" team sites
