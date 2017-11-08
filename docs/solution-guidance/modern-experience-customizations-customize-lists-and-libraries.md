@@ -57,7 +57,7 @@ Numerous customizations are currently not supported for "modern" lists and libra
  - SharePoint server publishing
 
 > [!NOTE]
-> In June 2017 [SharePoint Framework extensions went into developer preview](https://dev.office.com/blogs/announcing-availability-of-sharepoint-framework-extensions-developer-preview). Using these SharePoint Framework Extensions, you can control the rendering of a field via custom code, and you can create user custom actions that execute your custom code. To learn more, see [Overview of SharePoint Framework Extensions](http://aka.ms/spfx-extensions). 
+> In June 2017 [SharePoint Framework Extensions went into developer preview](https://dev.office.com/blogs/announcing-availability-of-sharepoint-framework-extensions-developer-preview). Using these SharePoint Framework Extensions, you can control the rendering of a field via custom code, and you can create user custom actions that execute your custom code. To learn more, see [Overview of SharePoint Framework Extensions](http://aka.ms/spfx-extensions). 
 
 <a name="supportedcustomactions"> </a>
 ## User custom actions
