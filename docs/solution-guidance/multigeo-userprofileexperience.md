@@ -142,7 +142,7 @@ You can use the [bulk user profile update API](https://msdn.microsoft.com/en-us/
 
 ## See also
 
-- [Introducing the API for Bulk Updating Custom User Profile Properties for SharePoint Online](solution-guidance/bulk-user-profile-update-api-for-sharepoint-online.md)
+- [Introducing the API for Bulk Updating Custom User Profile Properties for SharePoint Online](bulk-user-profile-update-api-for-sharepoint-online.md)
 - [User Profile Batch Update API sample](https://github.com/SharePoint/PnP/tree/master/Samples/UserProfile.BatchUpdate.API)
 
 

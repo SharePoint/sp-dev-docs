@@ -10,7 +10,7 @@ SharePoint sites can be spread across the default and satellite geo locations of
 
 ### Provisioning classic team sites
 When provisioning classic team site collections (e.g. STS#0 based site collections) one has to use the [CSOM `CreateSite` method](https://msdn.microsoft.com/en-us/library/microsoft.online.sharepoint.tenantadministration.tenant.createsite(v=office.15).aspx) call as explained and shown in following articles and samples:
-- [Site provisioning in the SharePoint add-in model](solution-guidance/site-provisioning-sharepoint-add-in.md)
+- [Site provisioning in the SharePoint add-in model](site-provisioning-sharepoint-add-in.md)
 - [Provision sites in batches with the add-in model](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Batch)
 - [Create site collection or sub site using the PnP Sites Core library](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.CreateSite)
 
@@ -67,6 +67,6 @@ using (var ctx = new ClientRuntimeContext(tenantAdminSiteForMyGeoLocation))
 ## Resources
 Below list of resources are useful when you're learning more about working with sites:
 - [Provisioning modern team sites](https://msdn.microsoft.com/en-us/pnp_articles/modern-experience-customizations-provisioning-sites)
-- [Site provisioning in the SharePoint add-in model](solution-guidance/site-provisioning-sharepoint-add-in.md)
+- [Site provisioning in the SharePoint add-in model](site-provisioning-sharepoint-add-in.md)
 - [Provision sites in batches with the add-in model](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Batch)
 - [Create site collection or sub site using the PnP Sites Core library](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.CreateSite)

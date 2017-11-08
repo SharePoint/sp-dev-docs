@@ -21,8 +21,8 @@ A consequence of this architecture is that you'll need to deploy your app in **a
 ## See also
 
 - [SharePoint Apps ALM API's]()
-- [Deploying and installing SharePoint Add-ins: methods and options](/docs/sp-add-ins/deploying-and-installing-sharepoint-add-ins-methods-and-options.md)
-- [Hosting client-side web part from Office 365 CDN](/docs/spfx/web-parts/get-started/hosting-webpart-from-office-365-cdn.md)
-- [Host extension from Office 365 CDN](/docs/spfx/extensions/get-started/hosting-extension-from-office365-cdn.md) 
+- [Deploying and installing SharePoint Add-ins: methods and options](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/deploying-and-installing-sharepoint-add-ins-methods-and-options)
+- [Hosting client-side web part from Office 365 CDN](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/get-started/hosting-webpart-from-office-365-cdn)
+- [Host extension from Office 365 CDN](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/hosting-extension-from-office365-cdn) 
 
 

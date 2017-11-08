@@ -180,4 +180,4 @@ Below list of resources are useful when you're learning more about the Microsoft
 - [Get access tokens to call the Graph API](https://developer.microsoft.com/en-us/graph/docs/concepts/auth_overview)
 - [Microsoft Graph documentation](https://developer.microsoft.com/en-us/graph/docs/concepts/overview)
 - [Graph Explorer](https://developer.microsoft.com/en-us/graph/graph-explorer)
-- [App-only and elevated privileges in the SharePoint add-in model](solution-guidance/app-only-elevated-privileges-sharepoint-add-in)
+- [App-only and elevated privileges in the SharePoint add-in model](app-only-elevated-privileges-sharepoint-add-in)
