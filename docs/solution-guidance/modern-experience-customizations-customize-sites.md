@@ -87,7 +87,7 @@ The following elements are ignored when a remote template is applied to a "moder
 - Site No Crawl settings
 - Site master page settings
 
-## Apply a custom theme to "modern" team site
+## Apply a custom theme to a "modern" team site
 
 "Modern" team sites support custom themes even though you cannot upload a new gallery entry for end users. This can be achieved by uploading the needed assets to the site and then executing the **ApplyTheme** method. The following PowerShell script shows how to perform this for a "modern" team site.
 
