@@ -1,12 +1,12 @@
 ---
 title: Provisioning "modern" team sites programmatically
-description: Provision a team site from the UI or by using PnP CSOM or PnP PowerShell.
+description: Provision a team site from the UI or by using PnP CSOM Core or PnP PowerShell.
 ms.date: 11/08/2017
 ---
 
 # Provisioning "modern" team sites programmatically
 
-"Modern" team sites were introduced in SharePoint Online in 2016 and the option to use them can be controlled at the tenant level. This article discusses the different options and considerations for provisioning "modern" team sites in SharePoint Online.
+"Modern" team sites were introduced in SharePoint Online in 2016, and the option to use them can be controlled at the tenant level. This article discusses the different options and considerations for provisioning "modern" team sites in SharePoint Online.
 
 > [!IMPORTANT]
 > We're not deprecating the "classic" experience; both "classic" and "modern" will coexist.
@@ -21,11 +21,11 @@ There are numerous routes for a "modern" team site to get provisioned. You can s
 
 ### Control default provisioning flow
 
-You can control the SharePoint site creation process from the SharePoint Online administrator settings. You can choose if the "modern" experience is available for your end users, or if you'd like to continue using the "classic" experience. For details, see [Manage site creation in SharePoint Online](https://support.office.com/en-US/article/Manage-site-creation-in-SharePoint-Online-e72844a3-0171-47c9-befb-e98b23e2dcf9).
+You can control the SharePoint site creation process from the SharePoint Online Admin settings. You can choose if the "modern" experience is available for your end users, or if you'd like to continue using the "classic" experience. For details, see [Manage site creation in SharePoint Online](https://support.office.com/en-US/article/Manage-site-creation-in-SharePoint-Online-e72844a3-0171-47c9-befb-e98b23e2dcf9).
 
 *Figure 1. Site creation options from SharePoint Online*
 
-![Site creation options from the SharePoint Online admin UI](media/modern-experiences/site-creation-options-admin-ui.png)
+![Site creation options from the SharePoint Online Admin UI](media/modern-experiences/site-creation-options-admin-ui.png)
 
 
 ## Provisioning a "modern" team site programmatically
@@ -119,7 +119,7 @@ If you provision a subsite under the root site of a "modern" site collection, su
 
 ### Sites are not listed in the SharePoint Admin UI / Tenant API
 
-"Modern" team sites are not visible in the SharePoint admin UI. You can access the list of "modern" team sites from the Office 365 groups admin user interface under the Office 365 admin portal. The SharePoint Online admin user interface only lists "classic" SharePoint sites. This same limitation does not apply to the tenant API; you can use this API to enumerate "modern" team sites together with "classic" team sites. To obtain a list of only "modern" team sites, you can use the Groups end point from Microsoft Graph API.
+"Modern" team sites are not visible in the SharePoint Admin UI. You can access the list of "modern" team sites from the Office 365 groups Admin user interface under the Office 365 Admin portal. The SharePoint Online Admin user interface only lists "classic" SharePoint sites. This same limitation does not apply to the tenant API; you can use this API to enumerate "modern" team sites together with "classic" team sites. To obtain a list of only "modern" team sites, you can use the Groups end point from the Microsoft Graph API.
 
 ## Additional resources
 
