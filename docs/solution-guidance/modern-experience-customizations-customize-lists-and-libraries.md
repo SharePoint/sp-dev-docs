@@ -45,7 +45,7 @@ In the remainder of this article, we'll use "modern" for the new user experience
  - Custom branding
  - PowerApps and Flow integration
 
-Numerous customizations are currently not supported for "modern" lists and libraries:
+Some customizations are currently not supported for "modern" lists and libraries:
  
  - JSLink-based field customizations (see Note on *SharePoint Framework Extensions*)
  - JSLink-based view customizations (see Note on *SharePoint Framework Extensions*)
