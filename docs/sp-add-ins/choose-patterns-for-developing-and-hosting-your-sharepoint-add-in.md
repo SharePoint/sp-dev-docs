@@ -117,7 +117,7 @@ Figure 3 shows you how this architecture works if you use Azure to host the remo
 
 *Figure 3. SharePoint add-in server-to-server communication when you use OAuth and Windows Azure*
 
-
+<img src="../images/SP15HelloWorldSPApp_Fig01.png" alt="Server to server communication restrictions" width="600">
 
 <br/>
 
@@ -166,4 +166,3 @@ If you already have a web role in an Azure cloud service that you want to use as
 -  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md)
 -  [Create a provider-hosted add-in that includes a custom SharePoint list and content type](create-a-provider-hosted-add-in-that-includes-a-custom-sharepoint-list-and-conte.md)
 
- - TEST
