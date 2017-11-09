@@ -33,7 +33,6 @@ In the following code snippet you can see the XML code defining that _CustomActi
                 Sequence="1001"
                 RegistrationType="List"
                 RegistrationId="101"                
-                ScriptSrc="https://code.jquery.com/jquery-3.2.1.slim.min.js"
                 Location="EditControlBlock">
     <UrlAction Url="ShowDetails.aspx?ID={ItemId}&amp;List={ListId}" />
   </CustomAction>
