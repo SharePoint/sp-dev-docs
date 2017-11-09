@@ -28,7 +28,7 @@ The number of customizations available for "modern" pages keeps on growing, and 
  - Adding, deleting, and updating client-side web parts on "modern" pages
  - Alternative layouts (see note on *SharePoint Virtual Summit*)
 
-Some customizations are currently not supported for "modern" pages:
+These customizations are currently not supported for "modern" pages:
 
  - Adding "classic" web parts on "modern" pages
  - Custom CSS via AlternateCSSUrl web property
