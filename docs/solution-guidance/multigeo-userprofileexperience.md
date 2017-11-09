@@ -40,12 +40,13 @@ GET https://contoso.sharepoint.com/_api/SP.UserProfiles.PeopleManager/GetPropert
 If you're using C#, CSOM, as shown in the following example, is easier to use.
 
 ```C#
-public string GetUserPersonalSiteHostUrlCSOM(ClientContext ctx, string userPrincipalName)
+public string GetUserPersonalSiteHostUrlCSOM(string userPrincipalName)
 {
     string result = null;
 
-    PeopleManager peopleManager = new PeopleManager(ctx);
-    var userProperties = peopleManager.GetPropertiesFor(userPrincipalName);
+    PeopleManager peopleManager = new PeopleManager(this.clientContext);
+    var userProperties = peopleManager.GetPropertiesFor($"i:0#.f|membership|{userPrincipalName}");
+    this.clientContext.Load(userProperties);
     this.clientContext.ExecuteQuery();
     result = userProperties.PersonalSiteHostUrl;
 
