@@ -119,6 +119,14 @@ Figure 3 shows you how this architecture works if you use Azure to host the remo
 
 ![Server to server communication restrictions](../images/SP15HelloWorldSPApp_Fig01.png)
 
+<img src="../images/SP15HelloWorldSPApp_Fig01.png" alt="Server to server communication restrictions" style="width:500px;height:600px;">
+
+<img src="../images/SP15HelloWorldSPApp_Fig01.png" alt="Server to server communication restrictions" style="width:500px;">
+
+<img src="../images/SP15HelloWorldSPApp_Fig01.png" alt="Server to server communication restrictions" width="500" height="600">
+
+<img src="../images/SP15HelloWorldSPApp_Fig01.png" alt="Server to server communication restrictions" width="500">
+
 <br/>
 
 [Learn how to create an add-in that combines cloud hosting and SharePoint hosting](create-a-provider-hosted-add-in-that-includes-a-custom-sharepoint-list-and-conte.md).
