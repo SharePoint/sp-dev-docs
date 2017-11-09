@@ -254,7 +254,7 @@ When developing user custom actions that need to work in "modern" experiences, c
 <a name="themingimpact"> </a>
 ## Custom branding
 
-If your site happens to use a custom theme, this custom theme is respected in the "modern" list and library experiences as shown in the following sample:
+If your site happens to use a custom theme, this custom theme is respected in the "modern" list and library experiences as shown in the following sample.
 
 *Figure 3. Modern list with custom branding coming from custom theme*
 
@@ -266,7 +266,7 @@ If your site happens to use a custom theme, this custom theme is respected in th
 You have multiple options to control whether the "modern" or "classic" library and list experience is used. 
 
 ### Tenant level configuration
-If you want to completely disable the "modern" experience, it's best to use the tenant setting for this. Go to your tenant admin center (for example, contoso-admin.sharepoint.com), go to Settings, and select the "classic" experience:
+If you want to completely disable the "modern" experience, it's best to use the tenant setting for this. Go to your tenant admin center (for example, contoso-admin.sharepoint.com), go to Settings, and select the "classic" experience.
 
 *Figure 4. SharePoint lists and libraries experience settings in the SharePoint Admin UI*
 
@@ -301,7 +301,7 @@ Enable-PnPFeature -Identity E3540C7D-6BEA-403C-A224-1A12EAFEE4C4 -Scope Site
 ```
 
 ### List/Library configuration
-If you want to control the experience at the library level, you can go to **List settings** > **Advanced settings**, and change the behavior:
+If you want to control the experience at the library level, you can go to **List settings** > **Advanced settings**, and change the behavior.
 
 *Figure 5. List experience configuration in the SharePoint tenant level settings in Admin UI*
 
