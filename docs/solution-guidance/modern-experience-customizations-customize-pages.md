@@ -1,7 +1,7 @@
 ---
 title: Customizing "modern" site pages
 description: Use custom branding in SharePoint Online, add "modern" pages programmatically, and add, delete, or update client-side web parts on "modern" pages.
-ms.date: 11/08/2017
+ms.date: 11/09/2017
 ---
 
 # Customizing "modern" site pages
@@ -48,7 +48,7 @@ If your site happens to use a custom theme, this theme is respected in the "mode
 
 *Figure 1. Modern page with custom branding coming from theme settings*
 
-![Modern page with custom branding coming from theme settings](media/modern-experiences/modern-page-with-custom-theme.png)
+<img src="media/modern-experiences/modern-page-with-custom-theme.png" alt="Modern page with custom branding coming from theme settings" width="600">
 
 <a name="sitesversusmodernpages"> </a>
 ## Why a site may not have "modern" pages functionality
