@@ -1,22 +1,20 @@
-﻿---
-title: How to Create Custom SharePoint Workflow Forms with Visual Studio 2012
+---
+title: Create custom SharePoint workflow forms with Visual Studio 2012
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 26873259-330c-493f-b935-297a7a5a086d
 ---
 
 
-# How to: Create Custom SharePoint Workflow Forms with Visual Studio 2012
+# Create custom SharePoint workflow forms with Visual Studio 2012
+
 Presents workflow forms in SharePoint. This article uses SharePoint with the March 2013 Public Update applied and Office Developer tools for Visual Studio 2012. Everything in this article applies to both SharePoint on-premises deployments as well as Office 365.
- **Provided by:** [Andrew Connell](http://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [www.AndrewConnell.com](http://www.andrewconnell.com)
-  
-    
-    
+
+**Provided by:** [Andrew Connell](http://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [www.AndrewConnell.com](http://www.andrewconnell.com)
 
 Since the release of Microsoft SharePoint 2007, the SharePoint platform has supported using workflows to automate business processes. The SharePoint workflow platform is built on the Windows Workflow Foundation, which is part of the .NET Framework. While the Workflow Foundation provides many capabilities for authoring custom workflows and managing automated business processes, SharePoint also adds end-user integration. This integration is implemented in two parts: 
 - **Tasks** assigned to users and groups that can be created and monitored by the workflows.
-    
-  
+
 - **Forms** that collect information from users when workflows are associated with a type of content (for example, a site, list, or library) or when a workflow is started.
     
   
