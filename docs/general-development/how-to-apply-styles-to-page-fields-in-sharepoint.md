@@ -1,12 +1,12 @@
-﻿---
-title: How to Apply styles to page fields in SharePoint
+---
+title: Apply styles to page fields in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: e227613d-0e4d-4312-924d-bb55e1fe4293
 ---
 
 
-# How to: Apply styles to page fields in SharePoint
+# Apply styles to page fields in SharePoint
 In a page layout, you can apply styles to a page field, and those styles are applied to any content added by content authors when they create a page from that page layout. Also, you have further options to control how content in a RichHtmlField page field is styled.
 ## Introduction to applying styles to page fields
 <a name="Introduction"> </a>
