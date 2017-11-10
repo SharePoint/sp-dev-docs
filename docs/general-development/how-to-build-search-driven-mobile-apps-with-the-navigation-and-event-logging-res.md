@@ -1,12 +1,13 @@
-﻿---
-title: How to Build search-driven mobile apps with the Navigation and Event Logging REST interfaces
+---
+title: Build search-driven mobile apps with the Navigation and Event Logging REST interfaces
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 5b313130-500c-4ccf-80ea-b102f30e5afb
 ---
 
 
-# How to: Build search-driven mobile apps with the Navigation and Event Logging REST interfaces
+# Build search-driven mobile apps with the Navigation and Event Logging REST interfaces
+
 SharePoint introduces the Navigation and Event Logging REST interfaces, enabling you to create a search-driven mobile app for mobile devices such as phones and tablets that run on operating systems other than Windows—for example, Android and iOS.
 ## How apps work with the product catalog
 <a name="mobile_app_and_product_catalog"> </a>
