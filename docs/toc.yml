@@ -307,7 +307,7 @@
     - name: Build farm solutions
       href: general-development/build-farm-solutions-in-sharepoint.md
       items:
-      - name: 'How to: Customize a field type using client-side rendering'
+      - name: Customize a field type using client-side rendering
         href: general-development/how-to-customize-a-field-type-using-client-side-rendering.md
       - name: URLs and tokens in SharePoint
         href: general-development/urls-and-tokens-in-sharepoint.md
@@ -318,39 +318,39 @@
     - name: Build Windows Phone apps that access SharePoint
       href: general-development/build-windows-phone-apps-that-access-sharepoint.md
       items:
-      - name: 'How to: Set up an environment for developing mobile apps for SharePoint'
+      - name: Set up an environment for developing mobile apps for SharePoint
         href: general-development/how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md
       - name: Overview of Windows Phone SharePoint application templates in Visual Studio
         href: general-development/overview-of-windows-phone-sharepoint-application-templates-in-visual-studio.md
       - name: Architecture of the Windows Phone SharePoint List Application template
         href: general-development/architecture-of-the-windows-phone-sharepoint-list-application-template.md
-      - name: 'How to: Create a Windows Phone SharePoint list app'
+      - name: Create a Windows Phone SharePoint list app
         href: general-development/how-to-create-a-windows-phone-sharepoint-list-app.md
-      - name: 'How to: Store and retrieve SharePoint list items on a Windows Phone'
+      - name: Store and retrieve SharePoint list items on a Windows Phone
         href: general-development/how-to-store-and-retrieve-sharepoint-list-items-on-a-windows-phone.md
-      - name: 'How to: Implement business logic and data validation in a Windows Phone app for SharePoint'
+      - name: Implement business logic and data validation in a Windows Phone app for SharePoint
         href: general-development/how-to-implement-business-logic-and-data-validation-in-a-windows-phone-app-for-s.md
-      - name: 'How to: Support and convert SharePoint field types for Windows Phone apps'
+      - name: Support and convert SharePoint field types for Windows Phone apps
         href: general-development/how-to-support-and-convert-sharepoint-field-types-for-windows-phone-apps.md
-      - name: 'How to: Customize list item queries and filter data for Windows Phone apps'
+      - name: Customize list item queries and filter data for Windows Phone apps
         href: general-development/how-to-customize-list-item-queries-and-filter-data-for-windows-phone-apps.md
-      - name: 'How to: Customize the user interface of a SharePoint list app for Windows Phone'
+      - name: Customize the user interface of a SharePoint list app for Windows Phone
         href: general-development/how-to-customize-the-user-interface-of-a-sharepoint-list-app-for-windows-ph.md
-      - name: 'How to: Use multiple SharePoint lists in a Windows Phone app'
+      - name: Use multiple SharePoint lists in a Windows Phone app
         href: general-development/how-to-use-multiple-sharepoint-lists-in-a-windows-phone-app.md
-      - name: 'How to: Configure and use push notifications in SharePoint apps for Windows Phone'
+      - name: Configure and use push notifications in SharePoint apps for Windows Phone
         href: general-development/how-to-configure-and-use-push-notifications-in-sharepoint-apps-for-windows.md
-      - name: 'How to: Create a mobile app in SharePoint that contains data from an external data source'
+      - name: Create a mobile app in SharePoint that contains data from an external data source
         href: general-development/how-to-create-a-mobile-app-in-sharepoint-that-contains-data-from-an-externa.md
-      - name: 'How to: Integrate maps with Windows Phone apps and SharePoint lists'
+      - name: Integrate maps with Windows Phone apps and SharePoint lists
         href: general-development/how-to-integrate-maps-with-windows-phone-apps-and-sharepoint-lists.md
-      - name: 'How to: Build search-driven mobile apps with the Navigation and Event Logging REST interfaces'
+      - name: Build search-driven mobile apps with the Navigation and Event Logging REST interfaces
         href: general-development/how-to-build-search-driven-mobile-apps-with-the-navigation-and-event-logging-res.md
       - name: Overview of the SharePoint mobile object model
         href: general-development/overview-of-the-sharepoint-mobile-object-model.md
       - name: Overview of the SharePoint mobile client authentication object model
         href: general-development/overview-of-the-sharepoint-mobile-client-authentication-object-model.md
-      - name: 'How to: Export the Name field in a Document Library list to a mobile app'
+      - name: Export the Name field in a Document Library list to a mobile app
         href: general-development/how-to-export-the-name-field-in-a-document-library-list-to-a-mobile-app.md
       - name: Build localized applications for Windows Phone based on the SharePoint templates
         href: general-development/build-localized-applications-for-windows-phone-based-on-the-sharepoint-templates.md
