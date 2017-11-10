@@ -1,5 +1,5 @@
-﻿---
-title: How to Set Values of Ranges
+---
+title: Set values of ranges
 ms.date: 09/25/2017
 keywords: how to,howdoi,howto,set range
 f1_keywords:
@@ -9,7 +9,7 @@ ms.assetid: ccc7e204-f857-45a9-81ec-3a8484e6d454
 ---
 
 
-# How to: Set Values of Ranges
+# Set values of ranges
 
 Excel Web Services exposes four methods for setting values into an Excel workbook: **SetCell**, **SetCellA1**, **SetRange**, and **SetRangeA1**. 
   
