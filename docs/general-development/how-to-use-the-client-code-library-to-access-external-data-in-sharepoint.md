@@ -1,13 +1,15 @@
 ---
-title: How to Use the client code library to access external data in SharePoint
+title: Use the client code library to access external data in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: c280ae92-c52b-4658-b0f3-805fb215ef8e
 ---
 
 
-# How to: Use the client code library to access external data in SharePoint
+# Use the client code library to access external data in SharePoint
+
 Learn how to use the SharePoint client object model to work with Business Connectivity Services (BCS) objects in SharePoint using browser-based scripting.
+
 This article demonstrates how to set up an external list that retrieves data from an Open Data protocol (OData) source using the client object model in SharePoint.
   
     
