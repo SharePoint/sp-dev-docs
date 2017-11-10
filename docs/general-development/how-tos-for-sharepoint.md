@@ -17,9 +17,9 @@ Find how-to articles and related code examples that show how to perform basic de
 
 |**Title**|**Summary**|
 |:-----|:-----|
-| [Set up an on-premises development environment for SharePoint Add-ins](./sp-add-ins/set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md) <br/> |Learn how to set up a development environment that is specifically suited to developing SharePoint Add-ins with an on-premises installation of SharePoint.  <br/> |
-| [Get started creating provider-hosted SharePoint Add-ins](./sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins.md) <br/> |Learn how to create a basic provider-hosted SharePoint Add-in with the Office Developer Tools for Visual Studio 2012, how to interact with SharePoint sites by using the SharePoint CSOM, and how to implement OAuth in an SharePoint Add-in.  <br/> |
-| [Get started creating SharePoint-hosted SharePoint Add-ins](/sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins.md) <br/> |Learn how to create a basic SharePoint-hosted SharePoint Add-in with the Office Developer Tools for Visual Studio 2012.  <br/> |
+| [Set up an on-premises development environment for SharePoint Add-ins](sp-add-ins/set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md) <br/> |Learn how to set up a development environment that is specifically suited to developing SharePoint Add-ins with an on-premises installation of SharePoint.  <br/> |
+| [Get started creating provider-hosted SharePoint Add-ins](sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins.md) <br/> |Learn how to create a basic provider-hosted SharePoint Add-in with the Office Developer Tools for Visual Studio 2012, how to interact with SharePoint sites by using the SharePoint CSOM, and how to implement OAuth in an SharePoint Add-in.  <br/> |
+| [Get started creating SharePoint-hosted SharePoint Add-ins](sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins.md) <br/> |Learn how to create a basic SharePoint-hosted SharePoint Add-in with the Office Developer Tools for Visual Studio 2012.  <br/> |
    
 
 ## Development how-tos for SharePoint Add-ins
