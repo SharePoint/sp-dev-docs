@@ -1,12 +1,12 @@
 ---
-title: How to Avoid getting throttled or blocked in SharePoint Online
+title: Avoid getting throttled or blocked in SharePoint Online
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 33ed8106-d850-42b1-8d7f-5ba83901149c
 ---
 
 
-# How to: Avoid getting throttled or blocked in SharePoint Online
+# Avoid getting throttled or blocked in SharePoint Online
 Find out about throttling in SharePoint Online, and learn how to avoid being throttled or blocked. Includes sample CSOM and REST code you can use to make your task easier.
 
 -  [What is throttling?](how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md#BKMK_Whatisthrottling)
