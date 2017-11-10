@@ -1,13 +1,15 @@
 ---
-title: How to Customize page layouts for a catalog-based site in SharePoint
+title: Customize page layouts for a catalog-based site in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 21d8db99-73b3-4429-b6cb-04e375af9f55
 ---
 
 
-# How to: Customize page layouts for a catalog-based site in SharePoint
+# Customize page layouts for a catalog-based site in SharePoint
+
 Learn how to create and customize category page and catalog-item page layouts for a SharePoint cross-site publishing site.
+
 ## Prerequisites for creating and customizing page layouts for a catalog-based site
 <a name="bk_prereqs"> </a>
 
