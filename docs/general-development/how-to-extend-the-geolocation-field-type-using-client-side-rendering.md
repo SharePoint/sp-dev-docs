@@ -1,12 +1,13 @@
 ---
-title: How to Extend the Geolocation field type using client-side rendering
+title: Extend the Geolocation field type by using client-side rendering
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 7360633a-a7cf-4194-8bbd-8dd7c323e80b
 ---
 
 
-# How to: Extend the Geolocation field type using client-side rendering
+# Extend the Geolocation field type by using client-side rendering
+
 Learn how to customize the SharePoint Geolocation field type programmatically using client-side rendering.
 
 SharePoint introduces a new field type named Geolocation that enables you to annotate SharePoint lists with location information. In columns of type Geolocation, you can enter location information as a pair of latitude and longitude coordinates in decimal degrees, or retrieve the coordinates of the user's current location from the browser if it implements the W3C Geolocation API. For more information about the Geolocation field, see  [Integrating location and map functionality in SharePoint](integrating-location-and-map-functionality-in-sharepoint.md). 
