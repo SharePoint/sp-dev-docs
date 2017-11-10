@@ -1,5 +1,5 @@
-﻿---
-title: How to Enable UDFs
+---
+title: Enable UDFs
 ms.date: 09/25/2017
 keywords: how to,howdoi,howto,UDF list
 f1_keywords:
@@ -9,7 +9,7 @@ ms.assetid: 8c1af2eb-bb22-45e1-82de-a2b4b53d7a26
 ---
 
 
-# How to: Enable UDFs
+# Enable UDFs
 
 Each Excel Services trusted location in the Shared Services Provider (SSP) has an **AllowUdfs** flag.
   
