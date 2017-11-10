@@ -551,7 +551,7 @@
           href: general-development/workflow-conditions-quick-reference-sharepoint-2010-workflow-platform.md
         - name: Workflow actions quick reference (SharePoint 2010 Workflow platform)
           href: general-development/workflow-actions-quick-reference-sharepoint-2010-workflow-platform.md
-        - name: Visio shapes in SharePoint Designer 2013: A quick reference guide (SharePoint 2010 Workflow platform)
+        - name: 'Visio shapes in SharePoint Designer 2013: A quick reference guide (SharePoint 2010 Workflow platform)'
           href: general-development/visio-shapes-in-sharepoint-designer-a-quick-reference-guide-sharepoint-2010.md
         - name: Validation issues in Visio (SharePoint 2010 Workflow platform)
           href: general-development/validation-issues-in-visio-sharepoint-2010-workflow-platform.md
@@ -810,13 +810,13 @@
           - name: 'Walkthrough: Developing a Managed-Code UDF'
             href: general-development/walkthrough-developing-a-managed-code-udf.md
             items:
-            - name: Step 1: Creating a Project and Adding a UDF Reference
+            - name: 'Step 1: Creating a Project and Adding a UDF Reference'
               href: general-development/step-1-creating-a-project-and-adding-a-udf-reference.md
-            - name: Step 2: Creating a Managed-Code UDF
+            - name: 'Step 2: Creating a Managed-Code UDF'
               href: general-development/step-2-creating-a-managed-code-udf.md
-            - name: Step 3: Deploying and Enabling UDFs
+            - name: 'Step 3: Deploying and Enabling UDFs'
               href: general-development/step-3-deploying-and-enabling-udfs.md
-            - name: Step 4: Testing and Calling UDFs from Cells
+            - name: 'Step 4: Testing and Calling UDFs from Cells'
               href: general-development/step-4-testing-and-calling-udfs-from-cells.md
           - name: Frequently Asked Questions About Excel Services UDFs
             href: general-development/frequently-asked-questions-about-excel-services-udfs.md
@@ -941,7 +941,7 @@
       - name: Claims-based identity in SharePoint
         href: general-development/claims-based-identity-in-sharepoint.md
         items:
-        - name: Incoming claims: Signing into SharePoint
+        - name: 'Incoming claims: Signing into SharePoint'
           href: general-development/incoming-claims-signing-into-sharepoint.md
         - name: Claims provider in SharePoint
           href: general-development/claims-provider-in-sharepoint.md
@@ -1261,7 +1261,7 @@
     - name: Start
       href: sp-add-ins/get-started-developing-cloud-business-add-ins.md
       items:
-      - name: Incident Manager: A cloud business add-in tutorial
+      - name: 'Incident Manager: A cloud business add-in tutorial'
         href: sp-add-ins/incident-manager-a-cloud-business-add-in-tutorial.md
       - name: Create a cloud business add-in with a social newsfeed
         href: sp-add-ins/create-a-cloud-business-add-in-with-a-social-newsfeed.md
