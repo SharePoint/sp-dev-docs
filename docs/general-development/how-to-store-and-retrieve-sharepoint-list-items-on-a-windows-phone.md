@@ -1,12 +1,13 @@
 ---
-title: How to Store and retrieve SharePoint list items on a Windows Phone
+title: Store and retrieve SharePoint list items on a Windows Phone
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 14ca37a2-5b45-430d-9004-ff3016f89834
 ---
 
 
-# How to: Store and retrieve SharePoint list items on a Windows Phone
+# Store and retrieve SharePoint list items on a Windows Phone
+
 Learn about the Windows Phone application life cycle and storing network data locally.
 One of the most important considerations in the development of Windows Phone apps is the management of state information, both for the overall application and for individual pages or data items within the application. If you're developing Windows Phone apps, you must take into account that users of your apps might lose connectivity to network resources (such as SharePoint lists). The development infrastructure for Windows Phone apps provides mechanisms for handling state information at various stages in the life cycle of an app.
   
