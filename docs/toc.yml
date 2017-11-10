@@ -563,9 +563,9 @@
       - name: Get started developing with social features
         href: general-development/get-started-developing-with-social-features-in-sharepoint.md
         items:
-        - name: 'How to: Learn to read and write to the social feed by using the .NET client object model'
+        - name: Read and write to the social feed by using the .NET client object model
           href: general-development/how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-net-client-object.md
-        - name: 'How to: Learn to read and write to the social feed by using the REST service'
+        - name: Read and write to the social feed by using the REST service
           href: general-development/how-to-learn-to-read-and-write-to-the-social-feed-by-using-the-rest-service-in-s.md
         - name: Social feed REST API reference
           href: general-development/social-feed-rest-api-reference-for-sharepoint.md
@@ -574,38 +574,38 @@
       - name: Work with social feeds
         href: general-development/work-with-social-feeds-in-sharepoint.md
         items:
-        - name: 'How to: Create and delete posts and retrieve the social feed by using the .NET client object model'
+        - name: Create and delete posts and retrieve the social feed by using the .NET client object model
           href: general-development/how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-net-cli.md
-        - name: 'How to: Create and delete posts and retrieve the social feed by using the JavaScript object model'
+        - name: Create and delete posts and retrieve the social feed by using the JavaScript object model
           href: general-development/how-to-create-and-delete-posts-and-retrieve-the-social-feed-by-using-the-javascr.md
-        - name: 'How to: Include mentions, tags, and links to sites and documents in posts'
+        - name: Include mentions, tags, and links to sites and documents in posts
           href: general-development/how-to-include-mentions-tags-and-links-to-sites-and-documents-in-posts-in-sharep.md
-        - name: 'How to: Embed images, videos, and documents in posts'
+        - name: Embed images, videos, and documents in posts
           href: general-development/how-to-embed-images-videos-and-documents-in-posts-in-sharepoint-server.md
         - name: Reference threads and digest threads in social feeds
           href: general-development/reference-threads-and-digest-threads-in-sharepoint-server-social-feeds.md
       - name: Follow people
         href: general-development/follow-people-in-sharepoint.md
         items:
-        - name: 'How to: Follow people by using the .NET client object model'
+        - name: Follow people by using the .NET client object model
           href: general-development/how-to-follow-people-by-using-the-net-client-object-model-in-sharepoint.md
-        - name: 'How to: Follow people by using the JavaScript object model'
+        - name: Follow people by using the JavaScript object model
           href: general-development/how-to-follow-people-by-using-the-javascript-object-model-in-sharepoint.md
       - name: Follow content
         href: general-development/follow-content-in-sharepoint.md
         items:
-        - name: 'How to: Follow documents and sites by using the .NET client object model'
+        - name: Follow documents and sites by using the .NET client object model
           href: general-development/how-to-follow-documents-and-sites-by-using-the-net-client-object-model-in-sharep.md
-        - name: 'How to: Follow documents, sites, and tags by using the REST service'
+        - name: Follow documents, sites, and tags by using the REST service
           href: general-development/how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md
       - name: Work with user profiles
         href: general-development/work-with-user-profiles-in-sharepoint.md
         items:
-        - name: 'How to: Retrieve user profile properties by using the .NET client object model'
+        - name: Retrieve user profile properties by using the .NET client object model
           href: general-development/how-to-retrieve-user-profile-properties-by-using-the-net-client-object-model-in.md
-        - name: 'How to: Retrieve user profile properties by using the JavaScript object model'
+        - name: Retrieve user profile properties by using the JavaScript object model
           href: general-development/how-to-retrieve-user-profile-properties-by-using-the-javascript-object-model-in.md
-        - name: 'How to: Work with user profiles by using the server object model'
+        - name: Work with user profiles by using the server object model
           href: general-development/how-to-work-with-user-profiles-and-organization-profiles-by-using-the-server-obj.md
     - name: Integrating location and map functionality
       href: general-development/integrating-location-and-map-functionality-in-sharepoint.md
