@@ -1,13 +1,15 @@
 ---
-title: How to Create an add-in-scoped external content type in SharePoint
+title: Create an add-in-scoped external content type in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: de4b50a3-84da-48ce-9ba0-fe06571e52a8
 ---
 
 
-# How to: Create an add-in-scoped external content type in SharePoint
+# Create an add-in-scoped external content type in SharePoint
+
 Learn how to create external content types that can be installed, secured, and used in an SharePoint Add-in.
+
 ## Prerequisites for developing add-in-scoped external content types
 <a name="bkmk_Prerequisites"> </a>
 
