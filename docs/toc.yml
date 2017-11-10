@@ -610,13 +610,13 @@
     - name: Integrating location and map functionality
       href: general-development/integrating-location-and-map-functionality-in-sharepoint.md
       items:
-      - name: 'How to: Add a Geolocation column to a list programmatically in SharePoint'
+      - name: Add a Geolocation column to a list programmatically in SharePoint
         href: general-development/how-to-add-a-geolocation-column-to-a-list-programmatically-in-sharepoint.md
       - name: Create a map view for the Geolocation field in SharePoint
         href: general-development/create-a-map-view-for-the-geolocation-field-in-sharepoint.md
-      - name: 'How to: Set the Bing Maps key at the web and farm level in SharePoint'
+      - name: Set the Bing Maps key at the web and farm level in SharePoint
         href: general-development/how-to-set-the-bing-maps-key-at-the-web-and-farm-level-in-sharepoint.md
-      - name: 'How to: Extend the Geolocation field type using client-side rendering'
+      - name: Extend the Geolocation field type by using client-side rendering
         href: general-development/how-to-extend-the-geolocation-field-type-using-client-side-rendering.md
     - name: Search in SharePoint
       href: general-development/search-in-sharepoint.md
@@ -631,11 +631,11 @@
           items:
           - name: Enhancing the BDC model file for Search
             href: general-development/enhancing-the-bdc-model-file-for-search-in-sharepoint.md
-          - name: 'How to: Crawl associated external content types'
+          - name: Crawl associated external content types
             href: general-development/how-to-crawl-associated-external-content-types-in-sharepoint.md
-          - name: 'How to: Crawl binary large objects (BLOBs)'
+          - name: Crawl binary large objects (BLOBs)
             href: general-development/how-to-crawl-binary-large-objects-blobs-in-sharepoint.md
-          - name: 'How to: Configure item-level security'
+          - name: Configure item-level security
             href: general-development/how-to-configure-item-level-security-in-sharepoint.md
       - name: Configure search in SharePoint
         href: general-development/configure-search-in-sharepoint.md
@@ -645,7 +645,7 @@
         - name: Custom content processing with the Content Enrichment web service callout
           href: general-development/custom-content-processing-with-the-content-enrichment-web-service-callout.md
           items:
-          - name: 'How to: Use the Content Enrichment web service callout for SharePoint Server'
+          - name: Use the Content Enrichment web service callout for SharePoint Server
             href: general-development/how-to-use-the-content-enrichment-web-service-callout-for-sharepoint-server.md
           - name: Trigger expression syntax
             href: general-development/trigger-expressions-syntax-in-sharepoint.md
@@ -674,7 +674,7 @@
       - name: Custom security trimming for Search in SharePoint Server
         href: general-development/custom-security-trimming-for-search-in-sharepoint-server.md
         items:
-        - name: 'How to: Use a custom security trimmer for SharePoint Server search results'
+        - name: Use a custom security trimmer for SharePoint Server search results
           href: general-development/how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results.md
       - name: Exporting and importing search configuration settings programmatically
         href: general-development/exporting-and-importing-search-configuration-settings-in-sharepoint.md
@@ -693,37 +693,37 @@
       - name: External content types
         href: general-development/external-content-types-in-sharepoint.md
         items:
-        - name: 'How to: Create external content types for SQL Server'
+        - name: Create external content types for SQL Server
           href: general-development/how-to-create-external-content-types-for-sql-server-in-sharepoint.md
         - name: Create associations in SharePoint
           href: general-development/create-associations-in-sharepoint.md
         - name: Add-in-scoped external content types
           href: general-development/add-in-scoped-external-content-types-in-sharepoint.md
           items:
-          - name: 'How to: Create an add-in-scoped external content type'
+          - name: Create an add-in-scoped external content type
             href: general-development/how-to-create-an-add-in-scoped-external-content-type-in-sharepoint.md
-          - name: 'How to: Convert an add-in-scoped external content type to tenant-scoped'
+          - name: Convert an add-in-scoped external content type to tenant-scoped
             href: general-development/how-to-convert-an-add-in-scoped-external-content-type-to-tenant-scoped.md
-          - name: 'How to: Access external data using REST'
+          - name: Access external data by using REST
             href: general-development/how-to-access-external-data-with-rest-in-sharepoint.md
       - name: Using OData sources with Business Connectivity Services
         href: general-development/using-odata-sources-with-business-connectivity-services-in-sharepoint.md
         items:
-        - name: 'How to: Create an external content type from an OData source'
+        - name: Create an external content type from an OData source
           href: general-development/how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md
-        - name: 'How to: Create an OData data service for use as a BCS external system'
+        - name: Create an OData data service for use as a BCS external system
           href: general-development/how-to-create-an-odata-data-service-for-use-as-a-bcs-external-system.md
-        - name: 'How to: Create an external list using an OData data source'
+        - name: Create an external list using an OData data source
           href: general-development/how-to-create-an-external-list-using-an-odata-data-source-in-sharepoint.md
       - name: External events and alerts
         href: general-development/external-events-and-alerts-in-sharepoint.md
         items:
-        - name: 'How to: Create external event receivers'
+        - name: Create external event receivers
           href: general-development/how-to-create-external-event-receivers.md
       - name: Get started using the client object model with external data
         href: general-development/get-started-using-the-client-object-model-with-external-data-in-sharepoint.md
         items:
-        - name: 'How to: Use the client code library to access external data'
+        - name: Use the client code library to access external data
           href: general-development/how-to-use-the-client-code-library-to-access-external-data-in-sharepoint.md
       - name: Business Connectivity Services programmers reference
         href: general-development/business-connectivity-services-programmers-reference-for-sharepoint.md
@@ -741,9 +741,9 @@
       - name: Developing with Duet Enterprise 2.0
         href: general-development/developing-with-duet-enterprise-2-0.md
         items:
-        - name: 'How to: Use SAP workflow with Duet Enterprise 2.0'
+        - name: Use SAP workflow with Duet Enterprise 2.0
           href: general-development/how-to-use-sap-workflow-with-duet-enterprise-2-0.md
-        - name: 'How to: Use SAP Reporting with Duet Enterprise 2.0'
+        - name: Use SAP Reporting with Duet Enterprise 2.0
           href: general-development/how-to-use-sap-reporting-with-duet-enterprise-2-0.md
     - name: Office and SharePoint application services
       href: general-development/office-and-sharepoint-application-services.md
@@ -786,21 +786,21 @@
               href: general-development/step-4-building-and-testing-the-application.md
           - name: Excel Services Error Codes
             href: general-development/excel-services-error-codes.md
-          - name: 'How to: Get Values from Ranges'
+          - name: Get values from ranges
             href: general-development/how-to-get-values-from-ranges.md
-          - name: 'How to: Set Values of Ranges'
+          - name: Set values of ranges
             href: general-development/how-to-set-values-of-ranges.md
-          - name: 'How to: Specify a Range Address and Sheet Name'
+          - name: Specify a range address and sheet name
             href: general-development/how-to-specify-a-range-address-and-sheet-name.md
-          - name: 'How to: Get an Entire Workbook or a Snapshot'
+          - name: Get an entire workbook or a snapshot
             href: general-development/how-to-get-an-entire-workbook-or-a-snapshot.md
-          - name: 'How to: Use the CloseWorkbook Method Call Asynchronously'
+          - name: Use the CloseWorkbook method call asynchronously
             href: general-development/how-to-use-the-closeworkbook-method-call-asynchronously.md
-          - name: 'How to: Set Various Credentials'
+          - name: Set various credentials
             href: general-development/how-to-set-various-credentials.md
-          - name: 'How to: Refresh Data'
+          - name: Refresh data
             href: general-development/how-to-refresh-data.md
-          - name: 'How to: Use the SubCode Property to Capture Error Codes'
+          - name: Use the SubCode property to capture error codes
             href: general-development/how-to-use-the-subcode-property-to-capture-error-codes.md
         - name: Excel Services User-Defined Functions
           href: general-development/excel-services-user-defined-functions.md
@@ -810,32 +810,32 @@
           - name: 'Walkthrough: Developing a Managed-Code UDF'
             href: general-development/walkthrough-developing-a-managed-code-udf.md
             items:
-            - name: 'Step 1: Creating a Project and Adding a UDF Reference'
+            - name: Step 1: Creating a Project and Adding a UDF Reference
               href: general-development/step-1-creating-a-project-and-adding-a-udf-reference.md
-            - name: 'Step 2: Creating a Managed-Code UDF'
+            - name: Step 2: Creating a Managed-Code UDF
               href: general-development/step-2-creating-a-managed-code-udf.md
-            - name: 'Step 3: Deploying and Enabling UDFs'
+            - name: Step 3: Deploying and Enabling UDFs
               href: general-development/step-3-deploying-and-enabling-udfs.md
-            - name: 'Step 4: Testing and Calling UDFs from Cells'
+            - name: Step 4: Testing and Calling UDFs from Cells
               href: general-development/step-4-testing-and-calling-udfs-from-cells.md
           - name: Frequently Asked Questions About Excel Services UDFs
             href: general-development/frequently-asked-questions-about-excel-services-udfs.md
-          - name: 'How to: Enable UDFs'
+          - name: Enable UDFs
             href: general-development/how-to-enable-udfs.md
-          - name: 'How to: Create a UDF That Calls a Web Service'
+          - name: Create a UDF that calls a web service
             href: general-development/how-to-create-a-udf-that-calls-a-web-service.md
-          - name: 'How to: Access an External Data Source from a UDF'
+          - name: Access an external data source from a UDF
             href: general-development/how-to-access-an-external-data-source-from-a-udf.md
-          - name: 'How to: Deploy UDFs Using SharePoint Foundation Solutions'
+          - name: Deploy UDFs using SharePoint Foundation solutions
             href: general-development/how-to-deploy-udfs-using-sharepoint-foundation-solutions.md
-          - name: 'How to: Restrict UDF Code Access Security Permissions'
+          - name: Restrict UDF code access security permissions
             href: general-development/how-to-restrict-udf-code-access-security-permissions.md
         - name: Excel Web Access
           href: general-development/excel-web-access.md
           items:
-          - name: 'How to: Programmatically Add an Excel Web Access Web Part to a Page'
+          - name: Programmatically add an Excel Web Access Web Part to a page
             href: general-development/how-to-programmatically-add-an-excel-web-access-web-part-to-a-page.md
-          - name: 'How to: Locate and Copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll'
+          - name: Locate and copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll
             href: general-development/how-to-locate-and-copy-microsoft-office-excel-webui-dll-and-microsoft-office-exc.md
         - name: Excel Services ECMAScript (JavaScript, JScript)
           href: general-development/excel-services-ecmascript-javascript-jscript.md
@@ -853,7 +853,7 @@
             href: general-development/javascript-user-defined-functions-overview.md
           - name: Working with the Excel Services JavaScript object model
             href: general-development/working-with-the-excel-services-javascript-object-model.md
-          - name: 'How to: Create a mashup that uses an embedded workbook and Bing Maps'
+          - name: Create a mashup that uses an embedded workbook and Bing Maps
             href: general-development/how-to-create-a-mashup-that-uses-an-embedded-workbook-and-bing-maps.md
         - name: Excel Services REST API
           href: general-development/excel-services-rest-api.md
@@ -889,13 +889,13 @@
             href: general-development/excel-services-known-issues-and-tips.md
           - name: Excel Services Best Practices
             href: general-development/excel-services-best-practices.md
-          - name: 'How to: Trust a Location'
+          - name: Trust a location
             href: general-development/how-to-trust-a-location.md
-          - name: 'How to: Save from Excel Client to the Server'
+          - name: Save from Excel client to the server
             href: general-development/how-to-save-from-excel-client-to-the-server.md
-          - name: 'How to: Save to the Server to Prepare for Programmatic Access'
+          - name: Save to the server to prepare for programmatic access
             href: general-development/how-to-save-to-the-server-to-prepare-for-programmatic-access.md
-          - name: 'How to: Catch Exceptions'
+          - name: Catch exceptions
             href: general-development/how-to-catch-exceptions.md
         - name: Removing Excel Interactive View from a webpage
           href: general-development/removing-excel-interactive-view-from-a-webpage.md
@@ -904,19 +904,19 @@
       - name: PerformancePoint Services in SharePoint
         href: general-development/performancepoint-services-in-sharepoint.md
         items:
-        - name: 'How to: Create report renderers for PerformancePoint Services'
+        - name: Create report renderers for PerformancePoint Services
           href: general-development/how-to-create-report-renderers-for-performancepoint-services-in-sharepoint.md
-        - name: 'How to: Create report editors for PerformancePoint Services'
+        - name: Create report editors for PerformancePoint Services
           href: general-development/how-to-create-report-editors-for-performancepoint-services-in-sharepoint.md
-        - name: 'How to: Create filter data providers for PerformancePoint Services'
+        - name: Create filter data providers for PerformancePoint Services
           href: general-development/how-to-create-filter-data-providers-for-performancepoint-services-in-sharepoint.md
-        - name: 'How to: Create filter editors for PerformancePoint Services'
+        - name: Create filter editors for PerformancePoint Services
           href: general-development/how-to-create-filter-editors-for-performancepoint-services-in-sharepoint.md
-        - name: 'How to: Create tabular data source providers for PerformancePoint Services'
+        - name: Create tabular data source providers for PerformancePoint Services
           href: general-development/how-to-create-tabular-data-source-providers-for-performancepoint-services-in-sha.md
-        - name: 'How to: Create tabular data source editors#for PerformancePoint Services'
+        - name: Create tabular data source editors for PerformancePoint Services
           href: general-development/how-to-create-tabular-data-source-editors-for-performancepoint-services-in-share.md
-        - name: 'How to: Create scorecard transforms for PerformancePoint Services'
+        - name: Create scorecard transforms for PerformancePoint Services
           href: general-development/how-to-create-scorecard-transforms-for-performancepoint-services-in-sharepoint-2.md
       - name: PowerPoint Automation Services in SharePoint
         href: general-development/powerpoint-automation-services-in-sharepoint.md
@@ -941,13 +941,13 @@
       - name: Claims-based identity in SharePoint
         href: general-development/claims-based-identity-in-sharepoint.md
         items:
-        - name: 'Incoming claims: Signing into SharePoint'
+        - name: Incoming claims: Signing into SharePoint
           href: general-development/incoming-claims-signing-into-sharepoint.md
         - name: Claims provider in SharePoint
           href: general-development/claims-provider-in-sharepoint.md
-        - name: 'How to: Create a claims provider in SharePoint'
+        - name: Create a claims provider in SharePoint
           href: general-development/how-to-create-a-claims-provider-in-sharepoint.md
-        - name: 'How to: Deploy a claims provider in SharePoint'
+        - name: Deploy a claims provider in SharePoint
           href: general-development/how-to-deploy-a-claims-provider-in-sharepoint.md
       - name: Claims-based identity and concepts in SharePoint
         href: general-development/claims-based-identity-and-concepts-in-sharepoint.md
@@ -995,9 +995,9 @@
     href: general-development/sharepoint-server-application-lifecycle-management.md
   - name: Accessibility in SharePoint
     href: general-development/accessibility-in-sharepoint.md
-  - name: 'How to: Detect the installed SKU of SharePoint'
+  - name: Detect the installed SKU of SharePoint
     href: general-development/how-to-detect-the-installed-sku-of-sharepoint.md
-  - name: 'How to: Avoid getting throttled or blocked in SharePoint Online'
+  - name: Avoid getting throttled or blocked in SharePoint Online
     href: general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md
   - name: Overview of SharePoint and the Volume Shadow Copy Service
     href: general-development/overview-of-sharepoint-and-the-volume-shadow-copy-service.md
@@ -1006,11 +1006,11 @@
       href: general-development/sharepoint-vss-writer.md
     - name: VSS requestors and SharePoint
       href: general-development/vss-requestors-and-sharepoint.md
-    - name: 'How to: Create a VSS requestor for use with SharePoint'
+    - name: Create a VSS requestor for use with SharePoint
       href: general-development/how-to-create-a-vss-requestor-for-use-with-sharepoint.md
-    - name: 'How to: Back up and restore SharePoint using a VSS requestor'
+    - name: Back up and restore SharePoint using a VSS requestor
       href: general-development/how-to-back-up-and-restore-sharepoint-using-a-vss-requestor.md
-    - name: 'How to: Back up and restore a search service application in SharePoint using VSS'
+    - name: Back up and restore a search service application in SharePoint using VSS
       href: general-development/how-to-back-up-and-restore-a-search-service-application-in-sharepoint-using.md
 - name: SharePoint Add-ins
   href: sp-add-ins/sharepoint-add-ins.md
@@ -1261,7 +1261,7 @@
     - name: Start
       href: sp-add-ins/get-started-developing-cloud-business-add-ins.md
       items:
-      - name: 'Incident manager: A cloud business add-in tutorial'
+      - name: Incident Manager: A cloud business add-in tutorial
         href: sp-add-ins/incident-manager-a-cloud-business-add-in-tutorial.md
       - name: Create a cloud business add-in with a social newsfeed
         href: sp-add-ins/create-a-cloud-business-add-in-with-a-social-newsfeed.md
