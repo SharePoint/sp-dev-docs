@@ -1,13 +1,15 @@
 ---
-title: How to Create tabular data source editors for PerformancePoint Services in SharePoint
+title: Create tabular data source editors for PerformancePoint Services in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 3136420a-f8a2-4677-8b69-1d5d9705d96f
 ---
 
 
-# How to: Create tabular data source editors for PerformancePoint Services in SharePoint
+# Create tabular data source editors for PerformancePoint Services in SharePoint
+
 Learn how to create the editor component of a custom tabular data source extension for PerformancePoint Services.
+
 ## What are custom data source editors for PerformancePoint Services?
 <a name="bk_intro"> </a>
 
