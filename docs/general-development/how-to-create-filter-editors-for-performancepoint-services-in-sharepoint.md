@@ -1,12 +1,14 @@
-﻿---
-title: How to Create filter editors for PerformancePoint Services in SharePoint
+---
+title: Create filter editors for PerformancePoint Services in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ---
 
 
-# How to: Create filter editors for PerformancePoint Services in SharePoint
+# Create filter editors for PerformancePoint Services in SharePoint
+
 Learn how to create the editor component of a custom filter extension for PerformancePoint Services.
+
 ## What are custom filter editors for PerformancePoint Services?
 <a name="bk_intro"> </a>
 
