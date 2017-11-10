@@ -375,23 +375,23 @@
         - name: Master pages, the Master Page Gallery, and page layouts
           href: general-development/master-pages-the-master-page-gallery-and-page-layouts-in-sharepoint.md
           items:
-          - name: 'How to: Map a network drive to the Master Page Gallery'
+          - name: Map a network drive to the Master Page Gallery
             href: general-development/how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md
-          - name: 'How to: Apply a master page to a site'
+          - name: Apply a master page to a site
             href: general-development/how-to-apply-a-master-page-to-a-site-in-sharepoint.md
-          - name: 'How to: Create a page layout'
+          - name: Create a page layout
             href: general-development/how-to-create-a-page-layout-in-sharepoint.md
-          - name: 'How to: Customize page layouts for a catalog-based site'
+          - name: Customize page layouts for a catalog-based site
             href: general-development/how-to-customize-page-layouts-for-a-catalog-based-site-in-sharepoint.md
-          - name: 'How to: Apply styles to page fields'
+          - name: Apply styles to page fields
             href: general-development/how-to-apply-styles-to-page-fields-in-sharepoint.md
-          - name: 'How to: Resolve errors and warnings when previewing a page'
+          - name: Resolve errors and warnings when previewing a page
             href: general-development/how-to-resolve-errors-and-warnings-when-previewing-a-page-in-sharepoint.md
-          - name: 'How to: Convert an HTML file into a master page'
+          - name: Convert an HTML file into a master page
             href: general-development/how-to-convert-an-html-file-into-a-master-page-in-sharepoint.md
-          - name: 'How to: Create a minimal master page'
+          - name: Create a minimal master page
             href: general-development/how-to-create-a-minimal-master-page-in-sharepoint.md
-          - name: 'How to: Change the preview page in Design Manager'
+          - name: Change the preview page in Design Manager
             href: general-development/how-to-change-the-preview-page-in-sharepoint-design-manager.md
           - name: SharePoint Online Suite Navigation control
             href: general-development/sharepoint-online-suite-navigation-control.md
