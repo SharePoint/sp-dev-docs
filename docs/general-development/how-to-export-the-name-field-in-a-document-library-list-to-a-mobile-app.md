@@ -1,12 +1,13 @@
 ---
-title: How to Export the Name field in a Document Library list to a mobile app
+title: Export the Name field in a Document Library list to a mobile app
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 901c2012-18c6-4dbd-a787-f8650a0cc7a8
 ---
 
 
-# How to: Export the Name field in a Document Library list to a mobile app
+# Export the Name field in a Document Library list to a mobile app
+
 Export the Name field of a Document Library list to a mobile app by using the Visual Studio SharePoint List wizard. The Name field does not appear automatically when a user creates a mobile app for a document library in SharePoint.
 In a Document Library list, a user can upload various documents. A list item for a document typically has **Title**, **Name**, and a link to the document as properties. If a developer creates a Windows Phone 7 app against the document library, the **Name** field is not exported in the IDE wizard. Thus the developer has no easy way of knowing the document name. (This is because SharePoint does not support fields of type "FILE" by default.)
   
