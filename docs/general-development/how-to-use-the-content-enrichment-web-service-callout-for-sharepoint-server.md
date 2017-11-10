@@ -1,26 +1,23 @@
 ---
-title: How to Use the Content Enrichment web service callout for SharePoint Server
+title: Use the Content Enrichment web service callout for SharePoint Server
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: d4e44498-9a3d-4f2f-b5ba-6ebef9971dcb
 ---
 
 
-# How to: Use the Content Enrichment web service callout for SharePoint Server
+# Use the Content Enrichment web service callout for SharePoint Server
+
 Learn how to implement the Content Enrichment web service in SharePoint to modify the managed properties of crawled items before they are indexed.
+
 Search in SharePoint enables developers to add a custom step to content processing to modify the managed properties of crawled items before they are indexed. This custom step requires the implementation of an external web service--the Content Enrichment web service--that can enrich managed properties of items being processed; and then configuring the system to call this external web service.
-  
-    
-    
 
 Implementation of the external content enrichment web service relies on interfaces under the  [Microsoft.Office.Server.Search.ContentProcessingEnrichment](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.ContentProcessingEnrichment.aspx) namespace.
+
 ## Windows PowerShell Cmdlets to use with the Content Enrichment web service
 <a name="SP15_PowerShell_Cmdlets_Content_Enrichment"> </a>
 
 The Content Enrichment functionality is configured and enabled with the following Windows PowerShell cmdlets:
-  
-    
-    
 
 -  [Get-SPEnterpriseSearchContentEnrichmentConfiguration](http://technet.microsoft.com/en-us/library/jj219783%28office.15%29.aspx)
     
