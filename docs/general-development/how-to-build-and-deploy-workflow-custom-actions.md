@@ -1,12 +1,13 @@
-﻿---
-title: How to Build and deploy workflow custom actions
+---
+title: Build and deploy workflow custom actions
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 9d2fa681-30c2-4549-9df2-ea9ed757fda9
 ---
 
 
-# How to: Build and deploy workflow custom actions
+# Build and deploy workflow custom actions
+
 Learn how to model business processes whose requirements are not met by the existing library of workflow actions in SharePoint Designer by creating custom workflow actions in SharePoint.
 SharePoint Designer provides a collection of workflow actions that are available through the Workflow Designer user interface (UI). Although the range of workflow actions that are included in SharePoint Designer) is extensive, it is nevertheless finite. In some cases, you may need to model a business process whose requirements are not met by the existing library of workflow actions that are available in SharePoint Designer.
   
