@@ -1,13 +1,15 @@
 ---
-title: How to Create an external content type from an OData source in SharePoint
+title: Create an external content type from an OData source in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: bc60ea49-c44e-4531-af62-06b8cf77d35d
 ---
 
 
-# How to: Create an external content type from an OData source in SharePoint
+# Create an external content type from an OData source in SharePoint
+
 Learn how to use Visual Studio 2012 to discover a published OData source and create a reusable external content type for use in Business Connectivity Services (BCS) in SharePoint.
+
 ## Prerequisites for creating OData-based external content types
 <a name="bkmk_Prerequisites"> </a>
 
