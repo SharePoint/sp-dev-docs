@@ -8,32 +8,18 @@ ms.assetid: ca78b080-0be4-4da4-b112-b86b1bde66e4
 
 # How-tos for SharePoint
 
-  
-    
-    
 ![SharePoint](../images/mod_logo_sharepoint.png)
-  
-    
-    
 
-  
-    
-    
-
-  
-    
-    
 Find how-to articles and related code examples that show how to perform basic development tasks in SharePoint, including how to set up your development environment and start building sites, mobile apps, and SharePoint Add-ins.
-## Getting started how-tos for SharePoint Add-ins
+
 <a name="bk_starthowtos"> </a>
-
-
+## Getting started how-tos for SharePoint Add-ins
 
 |**Title**|**Summary**|
 |:-----|:-----|
-| [Set up an on-premises development environment for SharePoint Add-ins](http://msdn.microsoft.com/library/b0878c12-27c9-4eea-ae3b-7e79e5a8838d%28Office.15%29.aspx) <br/> |Learn how to set up a development environment that is specifically suited to developing SharePoint Add-ins with an on-premises installation of SharePoint.  <br/> |
-| [Get started creating provider-hosted SharePoint Add-ins](http://msdn.microsoft.com/library/3038dd73-41ee-436f-8c78-ef8e6869bf7b%28Office.15%29.aspx) <br/> |Learn how to create a basic provider-hosted SharePoint Add-in with the Office Developer Tools for Visual Studio 2012, how to interact with SharePoint sites by using the SharePoint CSOM, and how to implement OAuth in an SharePoint Add-in.  <br/> |
-| [Get started creating SharePoint-hosted SharePoint Add-ins](http://msdn.microsoft.com/library/1b992485-6efe-4ea4-a18c-221689b0b66f%28Office.15%29.aspx) <br/> |Learn how to create a basic SharePoint-hosted SharePoint Add-in with the Office Developer Tools for Visual Studio 2012.  <br/> |
+| [Set up an on-premises development environment for SharePoint Add-ins](./sp-add-ins/set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md) <br/> |Learn how to set up a development environment that is specifically suited to developing SharePoint Add-ins with an on-premises installation of SharePoint.  <br/> |
+| [Get started creating provider-hosted SharePoint Add-ins](./sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins.md) <br/> |Learn how to create a basic provider-hosted SharePoint Add-in with the Office Developer Tools for Visual Studio 2012, how to interact with SharePoint sites by using the SharePoint CSOM, and how to implement OAuth in an SharePoint Add-in.  <br/> |
+| [Get started creating SharePoint-hosted SharePoint Add-ins](/sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins.md) <br/> |Learn how to create a basic SharePoint-hosted SharePoint Add-in with the Office Developer Tools for Visual Studio 2012.  <br/> |
    
 
 ## Development how-tos for SharePoint Add-ins
