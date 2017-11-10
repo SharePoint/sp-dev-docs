@@ -1,13 +1,15 @@
 ---
-title: How to Learn to read and write to the social feed by using the REST service in SharePoint
+title: Read and write to the social feed by using the REST service in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 1da8d484-3666-42c3-8a8f-8b3ef93e96e9
 ---
 
 
-# How to: Learn to read and write to the social feed by using the REST service in SharePoint
+# Read and write to the social feed by using the REST service in SharePoint
+
 Create a SharePoint-hosted app that uses the REST service to publish a post and get the personal feed for the current user.
+
 ## Prerequisites for creating a SharePoint-hosted SharePoint Add-in that publishes a post and gets the social feed by using the SharePoint REST service
 <a name="bkmk_Prereqs"> </a>
 
