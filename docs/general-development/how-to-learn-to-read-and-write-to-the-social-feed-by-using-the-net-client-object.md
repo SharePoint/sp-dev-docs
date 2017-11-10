@@ -1,13 +1,15 @@
 ---
-title: How to Learn to read and write to the social feed by using the .NET client object model in SharePoint
+title: Read and write to the social feed by using the .NET client object model in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 3c15ede5-8a59-47e6-a0b2-c17ec6bf4ae1
 ---
 
 
-# How to: Learn to read and write to the social feed by using the .NET client object model in SharePoint
+# Read and write to the social feed by using the .NET client object model in SharePoint
+
 Create a console application that reads and writes to the social feed by using the SharePoint .NET client object model.
+
 ## Prerequisites for creating a console application that reads and writes to the social feed by using the SharePoint .NET client object model
 <a name="bkmk_Prereqs"> </a>
 
