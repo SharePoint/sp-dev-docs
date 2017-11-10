@@ -1,38 +1,22 @@
 ---
-title: How to Create SharePoint Workflows using Visual Studio
+title: Create SharePoint Workflows using Visual Studio
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 739af178-96b3-4630-bbc0-5def02065eeb
 ---
 
 
-# How to: Create SharePoint Workflows using Visual Studio
+# Create SharePoint Workflows using Visual Studio
+
 Learn the basics of creating a SharePoint workflow in the new SharePoint workflow platform.
- **Provided by:** [Andrew Connell](http://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [AndrewConnell.com](http://www.andrewconnell.com)
-  
-    
-    
 
-
-  
-    
-    
+**Provided by:** [Andrew Connell](http://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [AndrewConnell.com](http://www.andrewconnell.com)
 
 > **Note:**
 > This article is accompanied by an end-to-end code sample that you can use to follow the article, or as a starter for your own SharePoint workflow projects. You can find the downloadable code here: LINK. 
-  
-    
-    
-
-
-  
-    
-    
-
-  
-    
     
 Microsoft has taken a very different approach to workflows in SharePoint than in previous versions. SharePoint workflows are now based on Windows Workflow Foundation 4, and their execution is driven by a new component called Workflow Manager, which runs externally to SharePoint.Workflow Manager serves the role as host for the Windows Workflow Foundation runtime and all the necessary services in a highly available and scalable way. It leverages Service Bus for performance and scalability, and when deployed it runs exactly the same in an on-premises deployment as when deployed to a cloud-based service, such as Office 365, because it is configured to hand off all workflow execution and related tasks to the Workflow Manager farm.The dramatic change in the workflow architecture required some changes to the two primary workflow authoring tools for creating custom workflows - Visual Studio and SharePoint Designer. This article will explore using Visual Studio 2012 as your workflow authoring tool to create custom workflows for use in **sp15allshort** deployments - either on-premises or Office 365 deployments
+
 ## Types of workflows in Visual Studio 2012
 <a name="bm1"> </a>
 
