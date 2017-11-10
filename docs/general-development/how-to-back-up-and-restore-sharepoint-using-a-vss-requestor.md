@@ -1,13 +1,15 @@
 ---
-title: How to Back up and restore SharePoint using a VSS requestor
+title: Back up and restore SharePoint using a VSS requestor
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: cab5ba90-bd23-4cec-82d7-529e3f86ba88
 ---
 
 
-# How to: Back up and restore SharePoint using a VSS requestor
- **Summary:** Learn how to back and restore using a Volume Shadow Copy Service (VSS) requestor for Microsoft SharePoint.
+# Back up and restore SharePoint using a VSS requestor
+
+Learn how to back and restore using a Volume Shadow Copy Service (VSS) requestor for Microsoft SharePoint.
+
 ## Backing up and restoring with the requestor
 
 Use the following procedure to back up and restore Microsoft SharePoint Foundation data using your VSS requestor.
