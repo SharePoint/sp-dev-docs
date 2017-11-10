@@ -395,7 +395,7 @@
             href: general-development/how-to-change-the-preview-page-in-sharepoint-design-manager.md
           - name: SharePoint Online Suite Navigation control
             href: general-development/sharepoint-online-suite-navigation-control.md
-        - name: 'How to: Retrieve the URL of a Pages library'
+        - name: Retrieve the URL of a Pages library
           href: general-development/how-to-retrieve-the-url-of-a-pages-library.md
         - name: Branding and design capabilities
           href: general-development/sharepoint-design-manager-branding-and-design-capabilities.md
@@ -411,24 +411,24 @@
           - name: Snippets
             href: general-development/sharepoint-design-manager-snippets.md
             items:
-            - name: 'How to: Add a Device Channel Panel snippet'
+            - name: Add a Device Channel Panel snippet
               href: general-development/how-to-add-a-device-channel-panel-snippet-in-sharepoint.md
-            - name: 'How to: Add an Edit Mode Panel snippet'
+            - name: Add an Edit Mode Panel snippet
               href: general-development/how-to-add-an-edit-mode-panel-snippet-in-sharepoint.md
-            - name: 'How to: Add a Web Part zone snippet'
+            - name: Add a Web Part zone snippet
               href: general-development/how-to-add-a-web-part-zone-snippet-in-sharepoint.md
-            - name: 'How to: Add a Security Trim snippet'
+            - name: Add a Security Trim snippet
               href: general-development/how-to-add-a-security-trim-snippet-in-sharepoint.md
-            - name: 'How to: Brand snippets by using CSS'
+            - name: Brand snippets by using CSS
               href: general-development/how-to-brand-snippets-by-using-css-in-sharepoint.md
           - name: Themes
             href: general-development/themes-overview-for-sharepoint.md
             items:
-            - name: 'How to: Create a master page preview file'
+            - name: Create a master page preview file
               href: general-development/how-to-create-a-master-page-preview-file-in-sharepoint.md
-            - name: 'How to: Deploy a custom theme'
+            - name: Deploy a custom theme
               href: general-development/how-to-deploy-a-custom-theme-in-sharepoint.md
-            - name: 'How to: Make custom CSS files themable'
+            - name: Make custom CSS files themable
               href: general-development/how-to-make-custom-css-files-themable-in-sharepoint.md
             - name: Upgrade custom themes and CSS
               href: general-development/upgrade-custom-themes-and-css-to-sharepoint.md
@@ -441,7 +441,7 @@
           href: general-development/managed-navigation-in-sharepoint.md
         - name: Content Search Web Part in SharePoint
           href: general-development/content-search-web-part-in-sharepoint.md
-        - name: 'How to: Use code to pin terms to navigation term sets in SharePoint'
+        - name: Use code to pin terms to navigation term sets in SharePoint
           href: general-development/how-to-use-code-to-pin-terms-to-navigation-term-sets-in-sharepoint.md
       - name: Publish SharePoint sites
         href: general-development/publish-sharepoint-sites.md
@@ -472,7 +472,7 @@
         href: general-development/what-s-new-in-workflows-for-sharepoint.md
       - name: Prepare to set up and configure a SharePoint workflow development environment
         href: general-development/prepare-to-set-up-and-configure-a-sharepoint-workflow-development-environment.md
-      - name: 'How to: Configure MSMQ for SharePoint workflows'
+      - name: Configure MSMQ for SharePoint workflows
         href: general-development/how-to-configure-msmq-for-sharepoint-workflows.md
       - name: Workflow initiation and configuration properties
         href: general-development/workflow-initiation-and-configuration-properties.md
@@ -489,17 +489,17 @@
         items:
         - name: Create a SharePoint workflow app using Visual Studio 2012
           href: general-development/create-a-sharepoint-workflow-app-using-visual-studio-2012.md
-        - name: 'How to: Create SharePoint Workflows using Visual Studio'
+        - name: Create SharePoint workflows using Visual Studio
           href: general-development/how-to-create-sharepoint-workflows-using-visual-studio.md
         - name: Working with the SharePoint Workflow Services Client Side Object Model
           href: general-development/working-with-the-sharepoint-workflow-services-client-side-object-model.md
-        - name: Working with Web Services in SharePoint Workflows using Visual Studio 2012
+        - name: Working with Web Services in SharePoint workflows using Visual Studio 2012
           href: general-development/working-with-web-services-in-sharepoint-workflows-using-visual-studio-2012.md
-        - name: Working with Tasks in SharePoint Workflows using Visual Studio 2012
+        - name: Working with Tasks in SharePoint workflows using Visual Studio 2012
           href: general-development/working-with-tasks-in-sharepoint-workflows-using-visual-studio-2012.md
-        - name: 'How to: Create Custom SharePoint Server Workflow Forms with Visual Studio 2012'
+        - name: Create custom SharePoint workflow forms with Visual Studio 2012
           href: general-development/how-to-create-custom-sharepoint-server-workflow-forms-with-visual-studio-20.md
-        - name: 'How to: Build and deploy workflow custom actions'
+        - name: Build and deploy workflow custom actions
           href: general-development/how-to-build-and-deploy-workflow-custom-actions.md
         - name: Use workflow interop for SharePoint
           href: general-development/use-workflow-interop-for-sharepoint.md
@@ -528,7 +528,7 @@
           href: general-development/understanding-eventing-actions-in-sharepoint-designer.md
         - name: Getting familiar with Visual Designer for workflow in SharePoint Designer 2013
           href: general-development/getting-familiar-with-visual-designer-for-workflow-in-sharepoint-designer.md
-        - name: Working with Web Services in SharePoint Workflows using SharePoint Designer 2013
+        - name: Working with Web Services in SharePoint workflows using SharePoint Designer 2013
           href: general-development/working-with-web-services-in-sharepoint-workflows-using-sharepoint-designer.md
         - name: Understanding how to package and deploy workflow in SharePoint
           href: general-development/understanding-how-to-package-and-deploy-workflow-in-sharepoint.md
@@ -551,7 +551,7 @@
           href: general-development/workflow-conditions-quick-reference-sharepoint-2010-workflow-platform.md
         - name: Workflow actions quick reference (SharePoint 2010 Workflow platform)
           href: general-development/workflow-actions-quick-reference-sharepoint-2010-workflow-platform.md
-        - name: 'Visio shapes in SharePoint Designer 2013: A quick reference guide (SharePoint 2010 Workflow platform)'
+        - name: Visio shapes in SharePoint Designer 2013: A quick reference guide (SharePoint 2010 Workflow platform)
           href: general-development/visio-shapes-in-sharepoint-designer-a-quick-reference-guide-sharepoint-2010.md
         - name: Validation issues in Visio (SharePoint 2010 Workflow platform)
           href: general-development/validation-issues-in-visio-sharepoint-2010-workflow-platform.md
