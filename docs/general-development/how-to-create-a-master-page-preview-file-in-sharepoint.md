@@ -1,13 +1,15 @@
-﻿---
-title: How to Create a master page preview file in SharePoint
+---
+title: Create a master page preview file in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 6825518d-eeb2-40b0-8a5b-897025f13796
 ---
 
 
-# How to: Create a master page preview file in SharePoint
+# Create a master page preview file in SharePoint
+
 Learn how to create master page preview files that are used in the SharePoint theming experience to display a preview of selected theme components.
+
 The **Change the look** wizard is the entry point to the SharePoint theming experience. The design gallery is the first page in the **Change the look** wizard and shows a thumbnail view of available designs. Users select a design for their site and then continue to the next page where they can customize the design. Users can then preview the site before applying the design to their site. The master page preview file is used to generate the thumbnail and preview images. If a master page does not have a corresponding preview file, it cannot be used in the theming experience.
   
     
