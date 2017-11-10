@@ -1,12 +1,13 @@
 ---
-title: How to Embed images, videos, and documents in posts in SharePoint
+title: Embed images, videos, and documents in posts in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 9927b9e7-daea-4261-80fa-4cc25f489e22
 ---
 
 
-# How to: Embed images, videos, and documents in posts in SharePoint
+# Embed images, videos, and documents in posts in SharePoint
+
 Learn how to add  [SocialAttachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialAttachment.aspx) objects to microblog posts, which render as embedded pictures, videos, and documents in SharePoint social feeds.
 In a social feed, the simplest form of post content contains only text, but you can also add embedded pictures, videos, and documents. To do this, you use the  [Attachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.Attachment.aspx) property on the [SocialPostCreationData](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.aspx) object that defines the post. Posts can contain one attachment, which is represented by a [SocialAttachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialAttachment.aspx) object.
   
