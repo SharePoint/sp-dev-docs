@@ -17,7 +17,7 @@ Most classic SharePoint components, such as custom content types, custom list de
 
 - An add-in web with
     
-      - some custom site columns
+  - some custom site columns
     
  
   - a custom content type that uses the custom columns
