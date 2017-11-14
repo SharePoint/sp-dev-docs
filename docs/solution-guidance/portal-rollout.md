@@ -17,6 +17,7 @@ _**Applies to:** SharePoint Online_
 Below list contains the key things **not** to do when it comes to rolling out your portal:
 - Stress test your portal against your SharePoint Online tenant
 - Do a big bang release, essentially releasing your new portal to **all** your users at the same moment
+- Sharing your portal to a large number of security groups can cause problems – it’s dependent on how many site groups each security group is in. You may experience issues at 40,000 security groups, but they could occur at a lower security group count depending on your usage.
 
 
 ## How did you do this in the past
