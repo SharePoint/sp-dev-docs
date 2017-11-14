@@ -22,7 +22,7 @@ Get-SPOStorageEntity [-Site] <AppCatalogSiteURL> [-Key] <String>
 Applies to: Office 365, SharePoint Online
 
 Syntax
-Get-SPOStorageEntity [-Site] <AppCatalogSiteURL> [-Key] <String> [-Value] <String> [-Description] <String> [-Comments] <String>
+Set-SPOStorageEntity [-Site] <AppCatalogSiteURL> [-Key] <String> [-Value] <String> [-Description] <String> [-Comments] <String>
 
 ## Reading tenant properties
 

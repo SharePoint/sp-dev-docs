@@ -124,20 +124,6 @@ C:\> Get-SPOTheme -Name "Custom Cyan" | ConvertTo-Json
 ```
 Note that this example uses the PowerShell _ConvertTo-Json_ filter to display the theme in JSON format.
 
-To see all the themes currently available in the tenant store, use **Get-SPOTheme** with no arguments.
-
-```powershell
-c:\> Get-SPOTheme
-Blue
-Orange
-Red
-Purple
-Green
-Gray
-Dark Yellow
-Dark Blue
-Custom Cyan
-```
 ## Remove-SPOTheme
 
 The **Remove-SPOTheme** cmdlet removes a theme from your tenant store. For example, this cmdlet removes the "Custom Cyan" theme that was used in the previous examples.

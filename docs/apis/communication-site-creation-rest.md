@@ -2,9 +2,6 @@
 
 Learn how to create and get the status of a new modern SharePoint Communication site with the REST interface.
 
-> [!NOTE]
-> There is a known bug with this API which is blocking completely this behavior. Fix will be rolling gradually to SharePoint Online by end of October 2017.
-
 ## Prerequisites
 
 This topic assumes that you are already familiar with the topics Get to know the SharePoint REST service and Complete basic operations using SharePoint REST endpoints. It does not provide code snippets.

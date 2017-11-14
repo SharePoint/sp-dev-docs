@@ -3,9 +3,9 @@
 > [!IMPORTANT]
 > Column formatting is not yet in production. This documentation is in preview and is subject to change.
 
-You can use column formatting to customize how fields in SharePoint lists and libraries are displayed. To do this, you construct a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements. The column formatting does not change the data in the list item or file; it only changes how it’s displayed to users who browse the list. Anyone who can create and manage views in a list can use column formatting to configure how view fields are displayed.
+You can use column formatting to customize how fields in SharePoint lists and libraries are displayed. To do this, you construct a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements. The column formatting does not change the data in the list item or file; it only changes how it’s displayed to users who browse the list. Anyone who can create and manage views in a list can use column formatting to configure how view fields are displayed. 
 
-For example, a list with the fields Title, Effort, Assigned To, and Status with no customizations applied might look like this:
+For example, a list with the fields Title, Effort, Assigned To, and Status with no customizations applied might look like this: 
 
 ![SharePoint list with four unformatted columns](../images/sp-columnformatting-none.png)
 
@@ -74,8 +74,8 @@ The following image shows an example of conditional formatting applied to a numb
 
 ![Severity warning of 70 with orange background](../images/sp-columnformatting-conditionalbasic.png)
 
-This example customizes a number field to color that field red when its value less than 70. This example adds a style attribute to the parent `<div />` element, specifies a CSS class (`sp-field-severity--warning`) to apply to that item if the value inside the field is less than 70, and specifies no color if the value is outside that range (in which case it will use the default color for values in that list view). 
-Note: this example uses a binary operation with the less than operator, "<", nested inside the conditional operation indicated by the operator, ":". Another description of the section in the following example is: If @currentField < 70 Then class = sp-field-severity--warning.
+This example customizes a number field to color that field yellow when its value is 70 or less. This example adds a style attribute to the parent `<div />` element, specifies a CSS class (`sp-field-severity--warning`) to apply to that item if the value inside the field is less than or equal to 70, and specifies no color if the value is outside that range (in which case it will use the default color for values in that list view). 
+Note: this example uses a binary operation with the less than operator, "<", nested inside the conditional operation indicated by the operator, "?". Another description of the section in the following example is: If @currentField <= 70 Then class = sp-field-severity--warning.
 
 ```JSON
 {
@@ -83,10 +83,10 @@ Note: this example uses a binary operation with the less than operator, "<", nes
    "txtContent": "@currentField",
    "attributes": {
       "class": {
-         "operator": ":",
+         "operator": "?",
          "operands": [
             {
-               "operator": "<",
+               "operator": "<=",
                "operands": [
                   "@currentField",
                   70
@@ -112,12 +112,12 @@ This pattern is useful when you want different values to map to different levels
 <!-- The schema URL will need to be updated when it is changed from customformatter to columnformatting -->
 ```JSON
 {
-    "$schema": "https://columnformatting.sharepointpnp.com/customFormatterSchema.json",
+    "$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json",
     "debugMode": true,
     "elmType": "div",
     "attributes": {
         "class": {
-            "operator": ":",
+            "operator": "?",
             "operands": [
                 {
                     "operator": "==",
@@ -133,7 +133,7 @@ This pattern is useful when you want different values to map to different levels
                 },
                 "sp-field-severity--good",
                 {
-                    "operator": ":",
+                    "operator": "?",
                     "operands": [
                         {
                             "operator": "==",
@@ -149,7 +149,7 @@ This pattern is useful when you want different values to map to different levels
                         },
                         "sp-field-severity--low",
                         {
-                            "operator": ":",
+                            "operator": "?",
                             "operands": [
                                 {
                                     "operator": "==",
@@ -165,7 +165,7 @@ This pattern is useful when you want different values to map to different levels
                                 },
                                 "sp-field-severity--warning",
                                 {
-                                    "operator": ":",
+                                    "operator": "?",
                                     "operands": [
                                         {
                                             "operator": "==",
@@ -199,7 +199,7 @@ This pattern is useful when you want different values to map to different levels
             },
             "attributes": {
                 "iconName": {
-                    "operator": ":",
+                    "operator": "?",
                     "operands": [
                         {
                             "operator": "==",
@@ -215,7 +215,7 @@ This pattern is useful when you want different values to map to different levels
                         },
                         "CheckMark",
                         {
-                            "operator": ":",
+                            "operator": "?",
                             "operands": [
                                 {
                                     "operator": "==",
@@ -231,7 +231,7 @@ This pattern is useful when you want different values to map to different levels
                                 },
                                 "Forward",
                                 {
-                                    "operator": ":",
+                                    "operator": "?",
                                     "operands": [
                                         {
                                             "operator": "==",
@@ -247,7 +247,7 @@ This pattern is useful when you want different values to map to different levels
                                         },
                                         "Error",
                                         {
-                                            "operator": ":",
+                                            "operator": "?",
                                             "operands": [
                                                 {
                                                     "operator": "==",
@@ -300,7 +300,7 @@ This example colors the current field red when the value inside an item's DueDat
    "txtContent": "@currentField",
    "style": {
       "color": {
-         "operator": ":",
+         "operator": "?",
          "operands": [
             {
                "operator": "<=",
@@ -325,7 +325,7 @@ To compare the value of a date/time field against a date that's not `@now`, foll
    "txtContent": "@currentField",
    "style": {
       "color": {
-         "operator": ":",
+         "operator": "?",
          "operands": [
             {
                "operator": "<=",
@@ -354,7 +354,7 @@ To compare a date/time field value against another date constant, use the **Date
    "txtContent": "@currentField",
    "style": {
       "color": {
-         "operator": ":",
+         "operator": "?",
          "operands": [
             {
                "operator": "<=",
@@ -461,7 +461,7 @@ This example applies `background-color` and `border-top` styles to create a data
   },
   "style": {
     "width": {
-      "operator": ":",
+      "operator": "?",
       "operands": [
         {
           "operator": ">",
@@ -511,7 +511,7 @@ This example relies on two number fields, `Before` and `After`, for which the va
             "elmType": "span",
             "attributes": {
                 "class": {
-                    "operator": ":",
+                    "operator": "?",
                     "operands": [
                         {
                             "operator": ">",
@@ -525,7 +525,7 @@ This example relies on two number fields, `Before` and `After`, for which the va
                     ]
                 },
                 "iconName": {
-                    "operator": ":",
+                    "operator": "?",
                     "operands": [
                         {
                             "operator": ">",
@@ -536,7 +536,7 @@ This example relies on two number fields, `Before` and `After`, for which the va
                         },
                         "SortUp",
                         {
-                            "operator": ":",
+                            "operator": "?",
                             "operands": [
                                 {
                                     "operator": "<",
@@ -607,7 +607,7 @@ Creating custom column formatting JSON from scratch is simple if you understand 
 
     ```JSON
     {
-    "$schema": "https://columnformatting.sharepointpnp.com/customFormatterSchema.json"
+    "$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json"
     }
     ```
     You now have validation and autocomplete to create your JSON. You can start adding your JSON after the first line that defines the schema location. 
@@ -783,7 +783,7 @@ The following example shows the value of a style object. In this example, two st
 {
    "padding": "4px",
    "background-color": {
-      "operator": ":",
+      "operator": "?",
       "operands": [
          {
             "operator": "<",
@@ -848,7 +848,7 @@ The following example shows an Expression object that performs the following exp
 
 ```JSON
 {
-   "operator": ":",
+   "operator": "?",
    "operands": [
       {
          "operator": ">",
@@ -901,7 +901,7 @@ Operators specify the type of operation to perform. The following operators are 
 - Date()
 - cos
 - sin
-- : 
+- ? 
 
 **Binary operators** - The following are the standard arithmetic binary operators that expect two operands: 
 
@@ -924,7 +924,7 @@ Operators specify the type of operation to perform. The following operators are 
 
 **Conditional operator** - The conditional operator is:
 
-- :
+- ?
 
 This is to achieve an expression equivalent to a ? b : c, where if the expression a evaluates to true, then the result is b, else the result is c.
 
