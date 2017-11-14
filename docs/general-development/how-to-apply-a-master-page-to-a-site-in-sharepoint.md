@@ -1,12 +1,12 @@
 ---
-title: How to Apply a master page to a site in SharePoint
+title: Apply a master page to a site in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 04861390-84d5-40ea-b0db-6c0748eff196
 ---
 
 
-# How to: Apply a master page to a site in SharePoint
+# Apply a master page to a site in SharePoint
 Learn how to map a master page to a SharePoint site.
 ## Mapping a master page to a site
 

@@ -1,12 +1,13 @@
 ---
-title: How to Set up an environment for developing mobile apps for SharePoint
+title: Set up an environment for developing mobile apps for SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: acaf556d-e20d-478d-8c59-2efd8efb9dcb
 ---
 
 
-# How to: Set up an environment for developing mobile apps for SharePoint
+# Set up an environment for developing mobile apps for SharePoint
+
 Learn about the system requirements and configuring a development environment for SharePoint mobility projects.
 A minimal configuration for working with SharePoint mobility projects requires a server running SharePoint (or a SharePoint Online account) and a development environment on a separate client operating system. Installing SharePoint on client operating systems (such as Windows 7) is not supported, and installing the tools necessary for Windows Phone development is not supported on server operating systems (such as Windows Server 2008).
   

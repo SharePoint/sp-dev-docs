@@ -1,5 +1,5 @@
-﻿---
-title: How to Trust a Location
+---
+title: Trust a location
 ms.date: 09/25/2017
 keywords: how to,howdoi,howto,trusted location
 f1_keywords:
@@ -9,7 +9,7 @@ ms.assetid: 0f396c0b-f578-4d1a-9e6b-a75f352265ab
 ---
 
 
-# How to: Trust a Location
+# Trust a location
 
 Workbooks that you want to access must be placed in a trusted location. If they are not, calls to open the workbooks will fail. This example shows you how to trust a location by using the SharePoint Central Administration page. 
   

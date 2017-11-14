@@ -1,12 +1,13 @@
-﻿---
-title: How to Configure and use push notifications in SharePoint apps for Windows Phone
+---
+title: Configure and use push notifications in SharePoint apps for Windows Phone
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 68fa2138-86d9-4e35-9c7c-5cd292087b80
 ---
 
 
-# How to: Configure and use push notifications in SharePoint apps for Windows Phone
+# Configure and use push notifications in SharePoint apps for Windows Phone
+
 Create a solution in SharePoint Server for sending push notifications and develop a Windows Phone app for receiving the notifications.
 Using the Microsoft Push Notification Service (MPNS), Windows Phone apps can receive notifications through the Internet of events triggered on Microsoft SharePoint Server. The phone app doesn't have to poll the server for changes to, for example, the items in a list on which the phone app is based. The app can be registered to receive notifications from the server, and an event receiver can initiate a notification and send it to the receiving app for handling. The push notification is relayed to Windows Phone devices by MPNS.
   

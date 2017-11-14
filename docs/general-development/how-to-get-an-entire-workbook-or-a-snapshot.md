@@ -1,5 +1,5 @@
 ---
-title: How to Get an Entire Workbook or a Snapshot
+title: Get an entire workbook or a snapshot
 ms.date: 09/25/2017
 keywords: how to,howdoi,howto
 f1_keywords:
@@ -9,7 +9,7 @@ ms.assetid: 39115503-8352-4589-87f4-cfa9c07260b6
 ---
 
 
-# How to: Get an Entire Workbook or a Snapshot
+# Get an entire workbook or a snapshot
 
 This example shows how to get an entire workbook, a snapshot of the entire file, or just a snapshot of the viewable sheets or objects in the file by using Excel Web Services. Getting the workbook or a snapshot is useful if you want to save a copy of the up-to-date workbook, store it somewhere, send it to someone, and so on.
   

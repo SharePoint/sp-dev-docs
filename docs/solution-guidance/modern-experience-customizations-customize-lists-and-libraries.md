@@ -1,7 +1,7 @@
 ---
 title: Customizing "modern" lists and libraries
 description: Get a faster, more intuitive, and responsive SharePoint Online experience by customizing your lists and libraries to the "modern" experience using user custom actions and custom branding.
-ms.date: 11/08/2017
+ms.date: 11/09/2017
 ---
 
 # Customizing "modern" lists and libraries
@@ -106,7 +106,7 @@ If you refresh the "modern" view of a document library on your site, you'll see 
 
 *Figure 1. Custom EditControlBlock actions visible in the menu*
 
-![Custom EditControlBlock actions visible in the menu](media/modern-experiences/custom-editcontrolblock-actions.png)
+<img src="media/modern-experiences/custom-editcontrolblock-actions.png" alt="Custom EditControlBlock actions visible in the menu" width="700">
 
 
 > [!NOTE]
@@ -258,7 +258,7 @@ If your site happens to use a custom theme, this custom theme is respected in th
 
 *Figure 3. Modern list with custom branding coming from custom theme*
 
-![Modern list with custom branding coming from custom theme](media/modern-experiences/modern-list-with-custom-theme.png)
+<img src="media/modern-experiences/modern-list-with-custom-theme.png" alt="Modern list with custom branding coming from custom theme" width="700">
 
 <a name="configuremodernlibrariesandlists"> </a>
 ## Configure the end user experience

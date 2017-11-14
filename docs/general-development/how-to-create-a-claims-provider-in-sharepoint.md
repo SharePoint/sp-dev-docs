@@ -1,12 +1,13 @@
 ---
-title: How to Create a claims provider in SharePoint
+title: Create a claims provider in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 8f3228ca-57fd-4253-a07d-abeb63298c58
 ---
 
 
-# How to: Create a claims provider in SharePoint
+# Create a claims provider in SharePoint
+
 Learn how to create and implement a SharePoint claims provider that fulfills the requirements for claims augmentation and claims picking.
 A claims provider issues claims and packages claims into security tokens. A claims provider has two roles: augmentation and picking.
   

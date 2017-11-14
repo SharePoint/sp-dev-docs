@@ -1,19 +1,19 @@
 ---
-title: How to Use code to pin terms to navigation term sets in SharePoint
+title: Use code to pin terms to navigation term sets in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 4a2811dc-25fd-4eb2-b0ab-1edded64c556
 ---
 
 
-# How to: Use code to pin terms to navigation term sets in SharePoint
+# Use code to pin terms to navigation term sets in SharePoint
+
 Learn how to use code to pin terms to navigation term sets.
+
 In taxonomy creation, pinning is the ability to attach a term to a target. SharePoint introduces term pinning. A pinned term is just like a term that is reused, except it is read-only and cannot be changed in the location where the term is used.
-  
-    
-    
 
 In SharePoint managed navigation, the API enables you to pin new or existing terms to a  [NavigationTermSet](https://msdn.microsoft.com/library/Microsoft.SharePoint.Publishing.Navigation.NavigationTermSet.aspx) object. In Microsoft SharePoint Server 2010, users could reuse terms (and all terms nested under the reused terms) in other locations in the term hierarchy. After these terms were reused, they could be modified in any location and changes would be seen everywhere the terms were reused.
+
 ## Term pinning essentials
 <a name="SP15_H2UseCodeToPinTerms_TermPinningEssentials"> </a>
 

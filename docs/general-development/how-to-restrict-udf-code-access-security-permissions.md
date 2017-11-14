@@ -1,5 +1,5 @@
 ---
-title: How to Restrict UDF Code Access Security Permissions
+title: Restrict UDF code access security permissions
 ms.date: 09/25/2017
 keywords: cas,how to,howdoi,howto,UDF list
 f1_keywords:
@@ -9,7 +9,7 @@ ms.assetid: 4f022e0d-1fe3-4fab-b41f-82a0d628f77c
 ---
 
 
-# How to: Restrict UDF Code Access Security Permissions
+# Restrict UDF code access security permissions
 
 If you do not want a particular user-defined function (UDF) assembly to run with full trust, you must explicitly restrict code access security permissions for it. You can configure code groups and restrict permissions by using the .NET Framework 2.0 Configuration tool. 
   

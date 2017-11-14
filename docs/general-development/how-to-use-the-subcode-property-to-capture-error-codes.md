@@ -1,5 +1,5 @@
 ---
-title: How to Use the SubCode Property to Capture Error Codes
+title: Use the SubCode property to capture error codes
 ms.date: 09/25/2017
 keywords: how to,howdoi,howto,subcode
 f1_keywords:
@@ -9,7 +9,7 @@ ms.assetid: 8ce4d5b2-111b-49e7-9d07-8c2c586221ec
 ---
 
 
-# How to: Use the SubCode Property to Capture Error Codes
+# Use the SubCode property to capture error codes
 
 Excel Services generates errors in the SOAP exception based on errors that occur in Excel Services. To make it easier for the developer to catch specific error conditions, an Excel Calculation Services alert has an associated error code. The Excel Web Services then returns the error using properties from the **SoapException** class.
   

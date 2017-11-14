@@ -1,13 +1,15 @@
-﻿---
-title: How to Use a custom security trimmer for SharePoint Server search results
+---
+title: Use a custom security trimmer for SharePoint Server search results
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: e1a8664e-fb43-45c2-83aa-9635fe1efc99
 ---
 
 
-# How to: Use a custom security trimmer for SharePoint Server search results
+# Use a custom security trimmer for SharePoint Server search results
+
 This how-to guides you through the steps to implement—create, deploy, and register—a custom security trimmer for Search in SharePoint by using Microsoft Visual Studio 2010.
+
 Search in SharePoint performs query-time security trimming of search results. However, there may be scenarios in which you want to perform custom security trimming. Search in SharePoint provides support for these scenarios through the  [Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre.aspx) , [Microsoft.Office.Server.Search.Query.ISecurityTrimmerPost](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPost.aspx) , and [ISecurityTrimmer2](https://msdn.microsoft.com/library/Microsft.Office.Server.Search.Query.ISecurityTrimmer2.aspx) (deprecated) interfaces in the [Microsoft.Office.Server.Search.Query](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.aspx) namespace.
   
     

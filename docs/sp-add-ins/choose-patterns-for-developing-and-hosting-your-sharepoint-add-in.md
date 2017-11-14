@@ -117,7 +117,7 @@ Figure 3 shows you how this architecture works if you use Azure to host the remo
 
 *Figure 3. SharePoint add-in server-to-server communication when you use OAuth and Windows Azure*
 
-![Server to server communication restrictions](../images/SP15HelloWorldSPApp_Fig01.png)
+<img src="../images/SP15HelloWorldSPApp_Fig01.png" alt="Server to server communication restrictions" width="600">
 
 <br/>
 

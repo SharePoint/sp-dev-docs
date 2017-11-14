@@ -1,13 +1,15 @@
 ---
-title: How to Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint
+title: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: c8d68632-1b55-454c-961a-f3ddad731bf6
 ---
 
 
-# How to: Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint
+# Create and delete posts and retrieve the social feed by using the .NET client object model in SharePoint
+
 Learn how to create and delete microblog posts and retrieve social feeds by using the SharePoint .NET client object model.
+
 ## What are social feeds in SharePoint?
 <a name="bk_intro"> </a>
 

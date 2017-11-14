@@ -1,13 +1,15 @@
 ---
-title: How to Configure item-level security in SharePoint
+title: Configure item-level security in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: ffd730f2-e7b7-4707-b677-d073da7df7d7
 ---
 
 
-# How to: Configure item-level security in SharePoint
+# Configure item-level security in SharePoint
+
 Learn how to configure item level security when crawling external data with BCS indexing connectors in SharePoint.
+
 ## External systems with NTLM authentication
 <a name="ItemLevelSecurity_NTLMAuth"> </a>
 

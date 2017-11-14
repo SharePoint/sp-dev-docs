@@ -1,13 +1,15 @@
-﻿---
-title: How to Add a Device Channel Panel snippet in SharePoint
+---
+title: Add a Device Channel Panel snippet in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 612780a8-6267-49f6-a32d-33600bb5f6b4
 ---
 
 
-# How to: Add a Device Channel Panel snippet in SharePoint
+# Add a Device Channel Panel snippet in SharePoint
+
 A Device Channel Panel is a snippet that you can add to a master page or page layout to control what content is rendered for each channel that you create. The primary purpose of a Device Channel Panel is to selectively display different page fields on different channels from a single page layout.
+
 ## Introduction to the Device Channel Panel snippet
 <a name="Introduction"> </a>
 
