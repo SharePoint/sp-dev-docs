@@ -174,7 +174,9 @@
         href: design/themes-colors.md
       - name: Placeholders and fallbacks
         href: design/placeholders-and-fallbacks.md
-      - name: Showcase web part
+      - name: Accessibility
+        href: design/accessibility.md
+	  - name: Showcase web part
         href: design/showcase-web-part.md
 - name: Declarative customization
   items:
