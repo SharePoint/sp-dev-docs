@@ -193,6 +193,8 @@
             href: design/themes-colors.md
           - name: Placeholders and fallbacks
             href: design/placeholders-and-fallbacks.md
+          - name: Accessibility
+            href: design/accessibility.md
           - name: Showcase web part
             href: design/showcase-web-part.md
       - name: Design considerations
