@@ -7,10 +7,7 @@ Before you get started, make sure that you're familiar with the following:
 - [Using the Client Object Model](https://msdn.microsoft.com/en-us/library/ff798388.aspx)
 - [Common Programming Tasks in the Managed Client Object Model](https://msdn.microsoft.com/en-us/library/ee537013.aspx)
 
-Install the following components for CSOM development:
-
-* [SharePoint Server 2016 Client Component SDK](https://www.microsoft.com/en-us/download/details.aspx?id=51679)
-* [Microsoft.SharePointOnline.CSOM](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM/) NuGet package (version 16.1.6906.1200 or later)
+You will also need to install the [Microsoft.SharePointOnline.CSOM](https://www.nuget.org/packages/Microsoft.SharePointOnline.CSOM/) NuGet package (version 16.1.6906.1200 or later).
 
 ## CSOM code example
 
@@ -107,7 +104,7 @@ __Parameters:__ string name<br/>
 __Return type:__ ThemeProperties
 
 ### HideDefaultThemes public property
-This property indicates whether the default themes are hidden in the theme picker UI for modern pages. You might want to set this property to __true__ after you define custom themes, to allow only specific themes to be used.
+This property indicates whether the default themes are available in the theme picker UI. The default setting is __false__ (the default themes are available), but you might want to set this property to __true__ after you define custom themes, to allow only specific themes to be used.
 
 __Namespace:__ Microsoft.Online.SharePoint.TenantAdministration.Tenant<br/>
 __Type:__ Boolean
@@ -165,7 +162,7 @@ __Namespace:__ Microsoft.Online.SharePoint.TenantManagement.Tenant<br/>
 __Parameters:__ string name, string themeJson<br/>
 __Return type:__ ClientResult<bool>
 
-## Additional resources
+## See also
 
 * [SharePoint site theming overview](sharepoint-site-theming-overview.md)
 * [SharePoint site theming: JSON schema](sharepoint-site-theming-json-schema.md)

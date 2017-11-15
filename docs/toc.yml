@@ -87,7 +87,7 @@
         href: spfx/web-parts/get-started/connect-to-sharepoint.md
       - name: Deploy your web part to a SharePoint page
         href: spfx/web-parts/get-started/serve-your-web-part-in-a-sharepoint-page.md
-      - name: Deploy to a Azure CDN
+      - name: Deploy to an Azure CDN
         href: spfx/web-parts/get-started/deploy-web-part-to-cdn.md
       - name: Add jQueryUI Accordion
         href: spfx/web-parts/get-started/add-jqueryui-accordion-to-web-part.md
@@ -166,7 +166,7 @@
         href: design/reactive-and-nonreactive-web-parts.md
       - name: Responsive design
         href: design/grid-and-responsive-design.md
-      - name: Tities and descriptions
+      - name: Titles and descriptions
         href: design/web-part-titles-and-descriptions.md
       - name: UI text
         href: design/ui-text-for-web-parts.md
