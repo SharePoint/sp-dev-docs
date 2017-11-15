@@ -133,3 +133,4 @@ RestRequest("/_api/thememanager/GetTenantThemingOptions");
 * [SharePoint site theming: CSOM](sharepoint-site-theming-csom.md)
 * [Complete basic operations using SharePoint REST endpoints](https://dev.office.com/sharepoint/docs/apis/rest/complete-basic-operations-using-sharepoint-rest-endpoints.md)
 * [Making REST calls with C# and JavaScript for SharePoint 2013](http://www.microsoft.com/resources/msdn/en-us/office/media/video/video.mdl?cid=sdc&from=mscomsdc&VideoID=4e4cc094-ff69-405b-852f-2ac7c41293c5)
+

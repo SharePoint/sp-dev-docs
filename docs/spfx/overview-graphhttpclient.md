@@ -1,7 +1,7 @@
 # Overview of the GraphHttpClient class (preview)
 
 > [!IMPORTANT]
->The **GraphHttpClient** is currently in preview and is subject to change. It is not currently supported for use in production environments.
+> The **GraphHttpClient** is currently in preview and is subject to change. It is not currently supported for use in production environments.
 
 You can use Microsoft Graph to build powerful solutions that access data from Office 365 and other Microsoft services. To connect SharePoint Framework (SPFx) solutions to Microsoft Graph, you have to register an Azure Active Directory (Azure AD) application and complete the authorization flow. To make this easier, you can use the SPFx **GraphHttpClient** class to call Microsoft Graph directly, without any additional setup.
 
@@ -13,7 +13,7 @@ The following example shows a request to Microsoft Graph that uses the **GraphHt
 
 ```ts
 // ...
-import { GraphHttpClient, GraphClientResponse } from '@microsoft/sp-http';
+import { GraphHttpClient, GraphHttpClientResponse } from '@microsoft/sp-http';
 
 export default class MyApplicationCustomizer
   extends BaseApplicationCustomizer<IMyApplicationCustomizerProperties> {
@@ -23,7 +23,7 @@ export default class MyApplicationCustomizer
   @override
   public onRender(): void {
     this.context.graphHttpClient.get("v1.0/groups?$select=displayName", GraphHttpClient.configurations.v1)
-      .then((response: GraphClientResponse): Promise<any> => {
+      .then((response: GraphHttpClientResponse): Promise<any> => {
         return response.json();
       })
       .then((data: any): void => {
@@ -32,16 +32,17 @@ export default class MyApplicationCustomizer
   }
 }
 ```
+
 To make a request to Microsoft Graph:
 
-- Import the **GraphHttpClient** and **GraphClientResponse** modules from the **@microsoft/sp-http** package. 
-- Use the instance of **GraphHttpClient** that's available on the `this.context.graphHttpClient` property to issue a GET or POST request to Microsoft Graph. 
-- As parameters, specify the Microsoft Graph API that you want to call (start with the API version without a leading `/` - slash), followed by the **GraphHttpClient** configuration. 
+- Import the **GraphHttpClient** and **GraphHttpClientResponse** modules from the **@microsoft/sp-http** package.
+- Use the instance of **GraphHttpClient** that's available on the `this.context.graphHttpClient` property to issue a GET or POST request to Microsoft Graph.
+- As parameters, specify the Microsoft Graph API that you want to call (start with the API version without a leading `/` - slash), followed by the **GraphHttpClient** configuration.
 - Optionally, you can specify additional request headers that will be merged with the default headers set by **GraphHttpClient** (`'Accept': 'application/json'`, `'Authorization': 'Bearer [token]'` and `'Content-Type': 'application/json; charset=utf-8'`).
 
 ## Considerations for using the **GraphHttpClient** class
 
-The **GraphHttpClient** class provides a convenient way to communicate with Microsoft Graph because it abstracts the authorization flow and management of access tokens. Because **GraphHttpClient** is currently in developer preview,  there are some considerations that you should take into account before using it.
+The **GraphHttpClient** class provides a convenient way to communicate with Microsoft Graph because it abstracts the authorization flow and management of access tokens. Because **GraphHttpClient** is currently in developer preview, there are some considerations that you should take into account before using it.
 
 ### Use for Microsoft Graph access only
 
@@ -49,10 +50,10 @@ Use the **GraphHttpClient** class only to access Microsoft Graph. The URL specif
 
 ### Permissions
 
-The GraphHttpClient uses the Office 365 SharePoint Online Azure AD application to retrieve a valid access token to Microsoft Graph on behalf of the current user. The retrieved access token contains two permissions: 
+The GraphHttpClient uses the Office 365 SharePoint Online Azure AD application to retrieve a valid access token to Microsoft Graph on behalf of the current user. The retrieved access token contains two permissions:
 
-* Read and write all groups (preview) (`Group.ReadWrite.All`) 
-* Read all usage reports (`Reports.Read.All`) 
+- Read and write all groups (preview) (`Group.ReadWrite.All`)
+- Read all usage reports (`Reports.Read.All`)
 
 These are the only permissions that are available when you use **GraphHttpClient**. If you need other permissions for your solution, you can use [ADAL JS with implicit OAuth flow](web-parts/guidance/call-microsoft-graph-from-your-web-part.md) instead.
 

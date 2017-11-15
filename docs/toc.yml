@@ -174,7 +174,9 @@
         href: design/themes-colors.md
       - name: Placeholders and fallbacks
         href: design/placeholders-and-fallbacks.md
-      - name: Showcase web part
+      - name: Accessibility
+        href: design/accessibility.md
+	  - name: Showcase web part
         href: design/showcase-web-part.md
 - name: Declarative customization
   items:
@@ -190,6 +192,8 @@
       href: declarative-customization/site-theming/sharepoint-site-theming-rest-api.md
     - name: CSOM API
       href: declarative-customization/site-theming/sharepoint-site-theming-csom.md  
+  - name: Column formatting
+    href: declarative-customization/column-formatting.md   
 - name: SharePoint APIs
   items:
   - name: Create Communication Sites

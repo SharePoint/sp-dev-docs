@@ -533,7 +533,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;hiddenconstraints=
 {
 '__metadata':{'type':'Microsoft.Office.Server.Search.REST.SearchRequest'},
 'Querytext':'sharepoint',
-'HiddenConstraints'='developer'
+'HiddenConstraints':'developer'
 }
 ```
 
@@ -649,7 +649,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;trimduplicates=fal
 {
 '__metadata':{'type':'Microsoft.Office.Server.Search.REST.SearchRequest'},
 'Querytext':'sharepoint',
-'TrimDuplicates'='False'
+'TrimDuplicates':'False'
 }
 ```
 
@@ -681,7 +681,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;timeout=60000
 {
 '__metadata':{'type':'Microsoft.Office.Server.Search.REST.SearchRequest'},
 'Querytext':'sharepoint',
-'Timeout'='60000'
+'Timeout':'60000'
 }
 ```
 
@@ -717,7 +717,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;enablenicknames=tr
 {
 '__metadata':{'type':'Microsoft.Office.Server.Search.REST.SearchRequest'},
 'Querytext':'sharepoint',
-'EnableNicknames'='True'
+'EnableNicknames':'True'
 }
 ```
 
@@ -753,7 +753,7 @@ http:// _server_/_api/search/query?querytext='sharepoint'&amp;enablephonetic=tru
 {
 '__metadata':{'type':'Microsoft.Office.Server.Search.REST.SearchRequest'},
 'Querytext':'sharepoint',
-'EnablePhonetic'='True'
+'EnablePhonetic':'True'
 }
 ```
 
