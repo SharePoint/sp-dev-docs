@@ -194,7 +194,7 @@
           - name: Placeholders and fallbacks
             href: design/placeholders-and-fallbacks.md
           - name: Accessibility
-            hrer: design/accessibility.md
+            href: design/accessibility.md
           - name: Showcase web part
             href: design/showcase-web-part.md
       - name: Design considerations
