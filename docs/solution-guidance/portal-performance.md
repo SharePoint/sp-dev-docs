@@ -368,6 +368,7 @@ The logical architecture of the Data Access Layer (DAL) Framework includes the f
 
 - [Client-Side Data Access Layer (DAL) Sample](https://github.com/SharePoint/PnP/tree/master/Samples/Portal.DataAccessLayer)
 - [Introduction to Performance Tuning for SharePoint Online](https://support.office.com/en-US/article/Introduction-to-performance-tuning-for-SharePoint-Online-81c4be5f-327e-435d-a568-526d68cffef0)
+- [Tune SharePoint Online performance](https://support.office.com/en-us/article/Tune-SharePoint-Online-performance-f0522d4a-fbf4-41f9-854e-c9b59555091d)
 - [Office Development Patterns and Practices (PnP) JavaScript Core](https://github.com/SharePoint/PnP-JS-Core)
 - [Learn how to build a fast, responsive SharePoint portal in SharePoint Online](https://channel9.msdn.com/Events/Ignite/2016/BRK3026)
 - [Client-Side Data Access Layer (DAL) Sample](https://github.com/SharePoint/PnP/tree/master/Samples/Portal.DataAccessLayer)
