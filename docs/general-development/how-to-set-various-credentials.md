@@ -1,12 +1,12 @@
 ---
-title: How to Set Various Credentials
+title: Set various credentials
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: eb819681-5a4f-49ae-b7f4-334366c51112
 ---
 
 
-# How to: Set Various Credentials
+# Set various credentials
 
 You must set credentials for your users before they can call Excel Web Services by using your custom application. You must explicitly set credentials even if you intend to use the default credentials. Excel Web Services uses the authentication schemes that Microsoft SharePoint Foundation supports. For more information about SharePoint Foundation authentication schemes, see the SharePoint Foundation documentation in this SDK and  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint.md).
   

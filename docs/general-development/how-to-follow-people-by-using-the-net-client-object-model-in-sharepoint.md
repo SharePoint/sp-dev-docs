@@ -1,13 +1,15 @@
 ---
-title: How to Follow people by using the .NET client object model in SharePoint
+title: Follow people by using the .NET client object model in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 0fdb7ca5-d408-4256-b52b-886c4bc3b5b8
 ---
 
 
-# How to: Follow people by using the .NET client object model in SharePoint
+# Follow people by using the .NET client object model in SharePoint
+
 Learn how to work with Following People features by using the SharePoint .NET client object model.
+
 ## Why use Following People features in SharePoint?
 
 In SharePoint, when a user follows people, the posts and activities of the followed people show up in the user's newsfeed. By using Following People features to focus on the people who users care about, you can improve the relevance of your app or solution. In the .NET client object model, people that you follow are represented by  [SocialActor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActor.aspx) objects. To perform core Following People tasks in the .NET client object model, you use the [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx) object. This article shows how to use the .NET client object model to work with Following People features.

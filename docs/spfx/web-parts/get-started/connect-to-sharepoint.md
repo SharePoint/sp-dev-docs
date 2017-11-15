@@ -48,17 +48,17 @@ Inside the **render** method, replace the **innerHTML** code block with the foll
 
 ```ts
     this.domElement.innerHTML = `
-      <div class="${styles.helloWorld}">
-        <div class="${styles.container}">
-          <div class="ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}">
-            <div class="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
-              <span class="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
-              <p class="ms-font-l ms-fontColor-white">Customize SharePoint experiences using Web Parts.</p>
-              <p class="ms-font-l ms-fontColor-white">${escape(this.properties.description)}</p>
-              <p class="ms-font-l ms-fontColor-white">${escape(this.properties.test2)}</p>
-              <p class="ms-font-l ms-fontColor-white">Loading from ${escape(this.context.pageContext.web.title)}</p>
-              <a href="https://aka.ms/spfx" class="${styles.button}">
-                <span class="${styles.label}">Learn more</span>
+      <div class="${ styles.helloWorld }">
+        <div class="${ styles.container }">
+          <div class="${ styles.row }">
+            <div class="${ styles.column }">
+              <span class="${ styles.title }">Welcome to SharePoint!</span>
+              <p class="${ styles.subTitle }">Customize SharePoint experiences using Web Parts.</p>
+              <p class="${ styles.description }">${escape(this.properties.description)}</p>
+              <p class="${ styles.description }">${escape(this.properties.test)}</p>
+              <p class="${ styles.description }">Loading from ${escape(this.context.pageContext.web.title)}</p>
+              <a href="https://aka.ms/spfx" class="${ styles.button }">
+                <span class="${ styles.label }">Learn more</span>
               </a>
             </div>
           </div>
@@ -73,7 +73,8 @@ Save the file. The `gulp serve` running in your console will detect this save op
 * Build and bundle the updated code automatically.
 * Refresh your local workbench page (as the web part code needs to be reloaded).
 
->**Note:** Keep the console window and VS Code side by side to see gulp automatically compile as you save changes in VS Code.
+> [!NOTE]
+> Keep the console window and VS Code side by side to see gulp automatically compile as you save changes in VS Code.
 
 In your browser, switch to the local SharePoint Workbench tab. If you have already closed the tab, the URL is `https://localhost:4321/temp/workbench.html`.
 
@@ -83,7 +84,8 @@ You should see the following in the web part:
 
 Now, navigate to the SharePoint Workbench hosted in SharePoint. The full URL is `https://your-sharepoint-site-url/_layouts/workbench.aspx`. Notice that in the SharePoint Online side, you'll need to refresh the page to see the changes.
 
->**Note:** If you do not have the SPFx developer certificate installed, then Workbench will notify you that it is configured not to load scripts from localhost. Execute `gulp trust-dev-cert` command in your project directory console to install the developer certificate.
+> [!NOTE]
+> If you do not have the SPFx developer certificate installed, then Workbench will notify you that it is configured not to load scripts from localhost. Execute `gulp trust-dev-cert` command in your project directory console to install the developer certificate.
 
 You should now see your SharePoint site title in the web part now that page context is available to the web part.
 
@@ -147,7 +149,7 @@ You can now use the **MockHttpClient** class in the **HelloWorldWebPart** class.
 
 Open the **HelloWorldWebPart.ts** file.
 
-Copy and paste the following code just below `import { IHelloWorldWebPartProps } from './IHelloWorldWebPartProps';`.
+Copy and paste the following code just below `import * as strings from 'HelloWorldWebPartStrings';`.
 
 ```ts
 import MockHttpClient from './MockHttpClient';
@@ -326,24 +328,25 @@ Navigate to the **render** method and replace the code inside the method with th
 
 ```ts
     this.domElement.innerHTML = `
-      <div class="${styles.helloWorld}">
-        <div class="${styles.container}">
-          <div class="ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}">
-            <div class="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
-              <span class="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
-              <p class="ms-font-l ms-fontColor-white">Customize SharePoint experiences using Web Parts.</p>
-              <p class="ms-font-l ms-fontColor-white">${escape(this.properties.description)}</p>
-              <p class="ms-font-l ms-fontColor-white">Loading from ${escape(this.context.pageContext.web.title)}</p>
-              <a href="https://aka.ms/spfx" class="${styles.button}">
-                <span class="${styles.label}">Learn more</span>
+      <div class="${ styles.helloWorld }">
+        <div class="${ styles.container }">
+          <div class="${ styles.row }">
+            <div class="${ styles.column }">
+              <span class="${ styles.title }">Welcome to SharePoint!</span>
+              <p class="${ styles.subTitle }">Customize SharePoint experiences using Web Parts.</p>
+              <p class="${ styles.description }">${escape(this.properties.description)}</p>
+              <p class="${ styles.description }">${escape(this.properties.test)}</p>
+              <p class="${ styles.description }">Loading from ${escape(this.context.pageContext.web.title)}</p>
+              <a href="https://aka.ms/spfx" class="${ styles.button }">
+                <span class="${ styles.label }">Learn more</span>
               </a>
             </div>
           </div>
-        </div>  
-        <div id="spListContainer" />
+          <div id="spListContainer" />
+        </div>
       </div>`;
 
-    this._renderListAsync(); 
+      this._renderListAsync();
 ```
 
 Save the file.

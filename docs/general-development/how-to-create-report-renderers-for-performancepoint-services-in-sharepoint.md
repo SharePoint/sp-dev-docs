@@ -6,8 +6,10 @@ ms.prod: sharepoint
 
 
 
-# How to: Create report renderers for PerformancePoint Services in SharePoint
+# Create report renderers for PerformancePoint Services in SharePoint
+
 Learn how to create the renderer component in a custom report extension for PerformancePoint Services.
+
 ## What are custom report renderers for PerformancePoint Services?
 <a name="bk_intro"> </a>
 

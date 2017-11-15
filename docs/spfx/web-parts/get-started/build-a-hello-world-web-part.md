@@ -14,7 +14,8 @@ Client-side web parts support:
 * Building with HTML and JavaScript.
 * Both SharePoint online and on-premises environments.
 
->**Note:** Before following the steps in this article, be sure to [Set up your development environment](../../set-up-your-development-environment.md).
+> [!NOTE]
+> Before following the steps in this article, be sure to [Set up your development environment](../../set-up-your-development-environment.md).
 
 You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=QbDtsMg88Js&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
 
@@ -58,7 +59,7 @@ The next set of prompts will ask for specific information about your web part:
 
 ![Yeoman SharePoint generator prompts to create a web part client-side solution](../../../images/yeoman-sp-prompts.png)
 
-At this point, Yeoman will install the required dependencies and scaffold the solution files along with the **HelloWorld** web part. This might take a few minutes. 
+At this point, Yeoman will install the required dependencies and scaffold the solution files along with the **HelloWorld** web part. This might take a few minutes.
 
 When the scaffold is complete, you should see the following message indicating a successful scaffold:
 
@@ -73,7 +74,7 @@ Because the SharePoint client-side solution is HTML/TypeScript based, you can us
 * [Atom](https://atom.io)
 * [Webstorm](https://www.jetbrains.com/webstorm)
 
-SharePoint Framework documentation uses Visual Studio code in the steps and examples. Visual Studio Code is a lightweight but powerful source code editor from Microsoft which runs on your desktop and is available for Windows, Mac and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Python, PHP) and runtimes.. 
+SharePoint Framework documentation uses Visual Studio code in the steps and examples. Visual Studio Code is a lightweight but powerful source code editor from Microsoft which runs on your desktop and is available for Windows, Mac and Linux. It comes with built-in support for JavaScript, TypeScript and Node.js and has a rich ecosystem of extensions for other languages (such as C++, C#, Python, PHP) and runtimes.
    
 ## Preview the web part
 To preview your web part, build and run it on a local web server. The client-side toolchain uses HTTPS endpoint by default. However, since a default certificate is not configured for the local dev environment, your browser will report a certificate error. The SPFx toolchain comes with a developer certificate that you can install for building web parts.
@@ -124,7 +125,7 @@ Now, choose the pencil icon on the far left of the web part to reveal the web pa
    
 ![HelloWorld web part property pane](../../../images/sp-workbench-helloworld-pp.png)
 
-The property pane is where you can define properties to customize your web part. The property pane is client-side driven and provides a consistent design across SharePoint. 
+The property pane is where you can define properties to customize your web part. The property pane is client-side driven and provides a consistent design across SharePoint.
    
 Modify the text in the **Description** text box to **Client-side web parts are awesome!**
 
@@ -135,7 +136,7 @@ One of the new capabilities available to the property pane is to configure its u
 ## Web part project structure
 You can use Visual Studio Code to explore the web part project structure. 
 
-* In the console, go to the **src\webparts\helloWorld** directory. 
+* In the console, break teh processing by pressing Ctrl+C (in Windows) 
 * Enter the following command to open the web part project in Visual Studio Code (or use your favorite editor):
 
 ```
@@ -151,13 +152,13 @@ TypeScript is the primary language for building SharePoint client-side web parts
 The following are some key files in the project.
 
 ### Web part class
-**HelloWorldWebPart.ts** defines the main entry point for the web part. The web part class **HelloWorldWebPart** extends the **BaseClientSideWebPart**. Any client-side web part should extend the **BaseClientSideWebPart** class in order to be defined as a valid web part.
+**HelloWorldWebPart.ts** in **src\webparts\helloworld** folder defines the main entry point for the web part. The web part class **HelloWorldWebPart** extends the **BaseClientSideWebPart**. Any client-side web part should extend the **BaseClientSideWebPart** class in order to be defined as a valid web part.
 
 **BaseClientSideWebPart** implements the minimal functionality that is required to build a web part. This class also provides many parameters to validate and access to read-only properties such as **displayMode**, web part properties, web part context, web part **instanceId**, the web part **domElement** and much more.
 
 Notice that the web part class is defined to accept a property type **IHelloWorldWebPartProps**.
 
-The property type is defined as an interface in a separate file **IHelloWorldWebPartProps.ts**.
+The property type is defined as an interface before **HelloWorldWebPart**.
 
 ```ts
 export interface IHelloWorldWebPartProps {
@@ -173,15 +174,15 @@ The DOM element where the web part should be rendered is available in the **rend
 ```ts
   public render(): void {
     this.domElement.innerHTML = `
-      <div class="${styles.helloWorld}">
-        <div class="${styles.container}">
-          <div class="ms-Grid-row ms-bgColor-themeDark ms-fontColor-white ${styles.row}">
-            <div class="ms-Grid-col ms-u-lg10 ms-u-xl8 ms-u-xlPush2 ms-u-lgPush1">
-              <span class="ms-font-xl ms-fontColor-white">Welcome to SharePoint!</span>
-              <p class="ms-font-l ms-fontColor-white">Customize SharePoint experiences using Web Parts.</p>
-              <p class="ms-font-l ms-fontColor-white">${escape(this.properties.description)}</p>
-              <a href="https://aka.ms/spfx" class="${styles.button}">
-                <span class="${styles.label}">Learn more</span>
+      <div class="${ styles.helloWorld }">
+        <div class="${ styles.container }">
+          <div class="${ styles.row }">
+            <div class="${ styles.column }">
+              <span class="${ styles.title }">Welcome to SharePoint!</span>
+              <p class="${ styles.subTitle }">Customize SharePoint experiences using Web Parts.</p>
+              <p class="${ styles.description }">${escape(this.properties.description)}</p>
+              <a href="https://aka.ms/spfx" class="${ styles.button }">
+                <span class="${ styles.label }">Learn more</span>
               </a>
             </div>
           </div>
@@ -228,11 +229,9 @@ import {
 } from '@microsoft/sp-webpart-base';
 ```
 
-Save the file.
-
 Next, update the web part properties to include the new properties. This maps the fields to typed objects.
 
-Open **IHelloWorldWebPartProps.ts** and replace the existing code with the following code. 
+Replace the **IHelloWorldWebPartProps** interface with the following code.
 
 ```ts
 export interface IHelloWorldWebPartProps {
@@ -245,8 +244,6 @@ export interface IHelloWorldWebPartProps {
 ```
 
 Save the file.
-
-Switch back to the **HelloWorldWebPart.ts** file.
 
 Replace the **getPropertyPaneConfiguration** method with the code below which adds the new property pane fields and maps them to their respective typed objects.
 
@@ -298,7 +295,7 @@ protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
 After you add your properties to the web part properties, you can now access the properties in the same way you accessed the **description** property earlier:
 
 ```ts
-<p class="ms-font-l ms-fontColor-white">${escape(this.properties.test)}</p>
+<p class="${ styles.description }">${escape(this.properties.test)}</p>
 ```
 
 To set the default value for the properties, you will need to update the web part manifest's **properties** property bag:
@@ -318,21 +315,27 @@ Open `HelloWorldWebPart.manifest.json` and modify the `properties` to:
 The web part property pane will now have these default values for those properties.
 
 ### Web part manifest
-The **HelloWorldWebPart.manifest.json** file defines the web part metadata such as version, id, display name, icon, and description. Every web part should contain this manifest.
+The **HelloWorldWebPart.manifest.json** file defines the web part metadata such as version, id, display name, icon, and description. Every web part must contain this manifest.
 
 ```json
 {
-  "$schema": "../../../node_modules/@microsoft/sp-module-interfaces/lib/manifestSchemas/jsonSchemas/clientSideComponentManifestSchema.json",
-
-  "id": "922a9623-f92f-4971-8574-185b31554e44",
+  "$schema": "https://dev.office.com/json-schemas/spfx/client-side-web-part-manifest.schema.json",
+  "id": "7d5437ee-afc2-4e66-914b-80be5ace4056",
   "alias": "HelloWorldWebPart",
   "componentType": "WebPart",
-  "version": "0.0.1",
+
+  // The "*" signifies that the version should be taken from the package.json
+  "version": "*",
   "manifestVersion": 2,
 
+  // If true, the component can only be installed on sites where Custom Script is allowed.
+  // Components that allow authors to embed arbitrary script code should set this to true.
+  // https://support.office.com/en-us/article/Turn-scripting-capabilities-on-or-off-1f2c515f-5d7e-448a-9fd7-835da935584f
+  "requiresCustomScript": false,
+
   "preconfiguredEntries": [{
-    "groupId": "922a9623-f92f-4971-8574-185b31554e44",
-    "group": { "default": "Under Development" },
+    "groupId": "5c03119e-3074-46fd-976b-c60198311f70", // Other
+    "group": { "default": "Other" },
     "title": { "default": "HelloWorld" },
     "description": { "default": "HelloWorld description" },
     "officeFabricIconFontName": "Page",
@@ -345,6 +348,7 @@ The **HelloWorldWebPart.manifest.json** file defines the web part metadata such 
     }
   }]
 }
+
 ```
 
 Now that we have introduced new properties, make sure that you are again hosting the web part from the local development environment by executing following command. This will also ensure that the above changes were correctly applied.
@@ -359,19 +363,23 @@ SharePoint Workbench is also hosted in SharePoint to preview and test your local
 
 Go to the following URL: 'https://your-sharepoint-site/_layouts/workbench.aspx'
 
->**Note:** If you do not have the SPFx developer certificate installed, then Workbench will notify you that it is configured not to load scripts from localhost. Stop currently running process in the console window, execute `gulp trust-dev-cert` command in your project directory console to install the developer certificate before running `gulp serve`command again.
+> [!NOTE]
+> If you do not have the SPFx developer certificate installed, then Workbench will notify you that it is configured not to load scripts from localhost. Stop currently running process in the console window, execute `gulp trust-dev-cert` command in your project directory console to install the developer certificate before running `gulp serve`command again.
 
 ![SharePoint Workbench running in a SharePoint Online site](../../../images/sp-workbench-o365.png)
 
-Notice that the SharePoint workbench now has the Office 365 Suite navigation bar.
+Notice that the SharePoint workbench now has the Office 365 Suite navigation bar. 
 
 Choose **add icon** in the canvas to reveal the toolbox. The toolbox now shows the web parts available on the site where the SharePoint workbench is hosted along with your **HelloWorldWebPart**.
 
 ![Toolbox in SharePoint Workbench running in SharePoint Online site](../../../images/sp-workbench-o365-toolbox.png)
 
-Add **HelloWorldWebPart** from the toolbox. Now you're running your web part in a page hosted in SharePoint!
+Add **HelloWorld** from the toolbox. Now you're running your web part in a page hosted in SharePoint!
 
 ![HelloWorld web part running in SharePoint Workbench running in a SharePoint Online site](../../../images/sp-workbench-o365-helloworld-wp.png)
+
+> [!NOTE]
+> Color of the web part depends on the colors of the site. By default web parts will inherit the core colors from the site by dynamically referencing Office UI Fabric Core styles used in the site where web part is hosted.
 
 Because you are still developing and testing your web part, there is no need to package and deploy your web part to SharePoint. 
 

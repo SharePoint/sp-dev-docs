@@ -11,45 +11,47 @@ You can use Visual Studio, or your own custom development environment to build S
 
 >**Note:** Before following the steps in this article, be sure to [Set up your Office 365 Tenant](./set-up-your-developer-tenant.md).
 
-You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=_fxYexlUhe0&t=5s&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=1). 
+You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=_fxYexlUhe0&t=5s&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=1).
 
 <a href="https://www.youtube.com/watch?v=_fxYexlUhe0&t=5s&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
     <img src="../images/spfx-youtube-tutorial0.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
-
 ## Install developer tools
 
 ### NodeJS
-Install [NodeJS](https://nodejs.org/en/) Long Term Support (LTS) version.
 
+Install [NodeJS version 6.x](https://nodejs.org/download/release/latest-v6.x/). 
+
+* If you are in Windows, you can use the msi installers in the above link for easiest way to setup NodeJS
 * If you have NodeJS already installed please check you have the latest version using `node -v`. It should return the current [LTS version](https://nodejs.org/en/download/). 
 * If you are using a Mac, it is recommended you use [homebrew](http://brew.sh/) to install and manage NodeJS. 
 
-> Notice that SPFx build pipeline does **NOT** currently support npm v5.x, so you'll need to use either v3 or v4. At the time of the writing, NodeJS LTS version (v6.11.0) installs npm v3.10.10. We'll update this section when there are changes in the supportability statement. You can downgrade to older npm version with following command `npm install -g npm@3`.
+>**Note:** The SharePoint Framework build pipeline doesn't currently support the LTS version of Node.js. Instead, download [Node.js version 6.11.5](https://nodejs.org/download/release/latest-v6.x/). This installs npm 3.10.10. Note that if you have a v5.x version of npm, you will need to downgrade to an older npm version by using the following command: `npm install -g npm@3`.
 
 ### Code Editors
+
 Install a code editor. You can use any code editor or IDE that supports client-side development to build your web part, such as:
 
 * [Visual Studio Code](https://code.visualstudio.com/)
 * [Atom](https://atom.io)
-* [Webstorm](https://www.jetbrains.com/webstorm) 
+* [Webstorm](https://www.jetbrains.com/webstorm)
 
-The steps and examples in this documentation use [Visual Studio Code](https://code.visualstudio.com/), but you can use any editor of your choice. 
+The steps and examples in this documentation use [Visual Studio Code](https://code.visualstudio.com/), but you can use any editor of your choice.
 
 ### If you are using Ubuntu
 
 You need to install compiler tools using the following command:
-	
-```
+
+```sh
 sudo apt-get install build-essential
 ```
 
 ### If you are using fedora
 
 You need to install compiler tools using the following command:
-	
-```
+
+```sh
 sudo yum install make automake gcc gcc-c++ kernel-devel
 ```
 
@@ -58,8 +60,8 @@ sudo yum install make automake gcc gcc-c++ kernel-devel
 [Yeoman](http://yeoman.io/) helps you kick-start new projects, and prescribes best practices and tools to help you stay productive. SharePoint client-side development tools include a Yeoman generator for creating new web parts. The generator provides common build tools, common boilerplate code, and a common playground web site to host web parts for testing.
 
 Enter the following command to install Yeoman and gulp:
-	
-```
+
+```sh
 npm install -g yo gulp
 ```
 
@@ -67,13 +69,17 @@ npm install -g yo gulp
 
 The Yeoman SharePoint web part generator helps you quickly create a SharePoint client-side solution project with the right toolchain and project structure.
 
-Enter the following command to install the Yeoman SharePoint generator:
-	
-```
-npm install -g @microsoft/generator-sharepoint 
-```
->**Note:** Yeoman generator for SharePoint is targeted to get deployed globally with the initial General Availability (GA) version. There are some known issues if it's installed locally to the project, which are planned to be addressed post GA.
+To install the SharePoint Framework Yeoman generator globally, enter the following command:
 
+```sh
+npm install -g @microsoft/generator-sharepoint
+```
+
+If you need to switch between the different projects created using different versions of the SharePoint Framework Yeoman generator, you can install the generator locally as a development dependency in the project folder by executing the following command:
+
+```sh
+npm install @microsoft/generator-sharepoint --save-dev
+```
 
 ## Optional tools
 

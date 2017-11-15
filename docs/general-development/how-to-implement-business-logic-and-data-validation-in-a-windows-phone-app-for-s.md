@@ -1,12 +1,13 @@
 ---
-title: How to Implement business logic and data validation in a Windows Phone app for SharePoint
+title: Implement business logic and data validation in a Windows Phone app for SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: fbbedc38-9651-4cd6-b523-d93cbf1cd39d
 ---
 
 
-# How to: Implement business logic and data validation in a Windows Phone app for SharePoint
+# Implement business logic and data validation in a Windows Phone app for SharePoint
+
 Implement data validation in a Windows Phone app created by using the Windows Phone SharePoint List Application template.
 In a Windows Phone app intended for production use, you likely need to validate data entered by users to, for example, enforce business logic relevant to your particular circumstances, or to ensure appropriate formatting of entered values, or simply to catch mistakes before saving values to a SharePoint list. Projects based on the Windows Phone SharePoint List Application template include default data validation logic, but such projects also provide a mechanism for developers to implement custom data validation.
   

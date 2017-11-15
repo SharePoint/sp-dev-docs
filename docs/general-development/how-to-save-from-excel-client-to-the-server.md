@@ -1,5 +1,5 @@
-﻿---
-title: How to Save from Excel Client to the Server
+---
+title: Save from Excel client to the server
 ms.date: 09/25/2017
 keywords: how to,howdoi,howto
 f1_keywords:
@@ -9,7 +9,7 @@ ms.assetid: 28716ba5-0774-44df-833b-0034d2c63319
 ---
 
 
-# How to: Save from Excel Client to the Server
+# Save from Excel client to the server
 
 This example shows you how to:
   

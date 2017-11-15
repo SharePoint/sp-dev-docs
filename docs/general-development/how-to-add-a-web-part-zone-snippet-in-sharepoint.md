@@ -1,13 +1,15 @@
-﻿---
-title: How to Add a Web Part zone snippet in SharePoint
+---
+title: Add a Web Part zone snippet in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 7583b217-200c-4569-8f88-fe975c8ebd72
 ---
 
 
-# How to: Add a Web Part zone snippet in SharePoint
+# Add a Web Part zone snippet in SharePoint
+
 A Web Part zone is a snippet that you can add to a page layout so that content authors can add, edit, or delete Web Parts in that zone.
+
 ## Introduction to the Web Part zone snippet
 <a name="Introduction"> </a>
 

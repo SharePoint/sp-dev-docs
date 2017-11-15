@@ -1,5 +1,5 @@
 ---
-title: How to Refresh Data
+title: Refresh data
 ms.date: 09/25/2017
 keywords: how to,howdoi,howto
 f1_keywords:
@@ -9,7 +9,7 @@ ms.assetid: 6cfd89ff-846e-486b-8f73-a109016813ab
 ---
 
 
-# How to: Refresh Data
+# Refresh data
 
 This example shows how to retrieve updated data from external data sources for the open workbook by using the **Refresh** method. The Excel Web Services signature for the **Refresh** method is as follows:
   

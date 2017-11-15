@@ -1,13 +1,15 @@
 ---
-title: How to Follow people by using the JavaScript object model in SharePoint
+title: Follow people by using the JavaScript object model in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 2643c286-47c9-4a7a-9273-7474394477d6
 ---
 
 
-# How to: Follow people by using the JavaScript object model in SharePoint
+# Follow people by using the JavaScript object model in SharePoint
+
 Learn how to work with Following People features by using the SharePoint JavaScript object model.
+
 ## Why use Following People features in SharePoint?
 <a name="bk_FollowingPeopleFeatures"> </a>
 

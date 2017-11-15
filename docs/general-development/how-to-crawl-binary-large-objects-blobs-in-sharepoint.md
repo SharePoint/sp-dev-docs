@@ -1,13 +1,15 @@
-﻿---
-title: How to Crawl binary large objects (BLOBs) in SharePoint
+---
+title: Crawl binary large objects (BLOBs) in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 99b3dd51-1651-4300-a2de-33681f4cc258
 ---
 
 
-# How to: Crawl binary large objects (BLOBs) in SharePoint
+# Crawl binary large objects (BLOBs) in SharePoint
+
 Learn how to modify the BDC model file for a database BCS indexing connector to enable the Search in SharePoint crawler to crawl binary large object (BLOB) data stored in a SQL Server database.
+
 ## Crawling BLOB data
 <a name="HowToCrawlBlobs_CrawlingBlobData"> </a>
 

@@ -1,5 +1,5 @@
-﻿---
-title: How to Save to the Server to Prepare for Programmatic Access
+---
+title: Save to the server to prepare for programmatic access
 ms.date: 09/25/2017
 keywords: how to,howdoi,howto
 f1_keywords:
@@ -9,13 +9,9 @@ ms.assetid: 80b34a29-3d40-4d11-9ba1-b4886ffcfd42
 ---
 
 
-# How to: Save to the Server to Prepare for Programmatic Access
+# Save to the server to prepare for programmatic access
 
-This example shows how to save an Excel workbook to the server to to prepare it for programmatic access. The steps are:
-  
-    
-    
-
+This example shows how to save an Excel workbook to the server to prepare it for programmatic access. The steps are:
 
 1. Create a workbook with named ranges.
     

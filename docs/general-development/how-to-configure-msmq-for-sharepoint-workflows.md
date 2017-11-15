@@ -1,13 +1,15 @@
 ---
-title: How to Configure MSMQ for SharePoint workflows
+title: Configure MSMQ for SharePoint workflows
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: c0e130f6-c210-44ea-83ed-b327f04551d6
 ---
 
 
-# How to: Configure MSMQ for SharePoint workflows
+# Configure MSMQ for SharePoint workflows
+
 Learn how to configure Microsoft Message Queuing (MSMQ) in SharePoint to support asynchronous event messaging in SharePoint workflows. 
+
 ## Enabling MSMQ
 
 MSMQ is a Windows Server feature that you can enable on your SharePoint Server computer to allow asynchronous event messaging in SharePoint workflows. To support asynchronous event messaging, you must enable MSMQ on your SharePoint Server computer.

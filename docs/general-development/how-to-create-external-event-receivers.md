@@ -1,13 +1,15 @@
 ---
-title: How to Create external event receivers
+title: Create external event receivers
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: c6d5f486-6247-47f9-9876-fab12f13342f
 ---
 
 
-# How to: Create external event receivers
+# Create external event receivers
+
 Learn the steps for creating external event receivers for on-premises installations of Business Connectivity Services (BCS) external lists.
+
 External event receivers are classes that enable SharePoint Add-ins to respond to events that occur to SharePoint items, such as lists or list items. For example, you can respond to list events, such as adding or removing a field; list item events, such as adding or removing a list item or attachment to a list item; or web events, such as adding or deleting a site or site collection. You can add a remote event receiver to an existing Visual Studio solution that contains an SharePoint Add-in.
   
     

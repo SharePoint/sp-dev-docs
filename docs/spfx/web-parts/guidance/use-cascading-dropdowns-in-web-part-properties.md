@@ -45,7 +45,13 @@ When prompted, enter the following values:
 
 ![SharePoint Framework Yeoman generator with the default choices](../../../images/react-cascading-dropdowns-yo-sharepoint.png)
 
-Once the scaffolding completes, open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots but you can use any editor you prefer.
+Once the scaffolding completes, lock down the version of the project dependencies by running the following command:
+
+```sh
+npm shrinkwrap
+```
+
+Next, open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots but you can use any editor you prefer.
 
 ![SharePoint Framework project open in Visual Studio Code](../../../images/react-cascading-dropdowns-visual-studio-code.png)
 
@@ -326,7 +332,7 @@ When you add a web part to the canvas and open its property pane, you should see
 
 ## Allow users to select an item from the selected list
 
-When building web parts you often need to allow users to choose an option from a set of values determined by a previously selected value, such as choosing a country based on the selected continent or choosing a list item from a selected list. This user experience is often referred to as cascading dropdowns. Using the standard SharePoint Framework client-side web parts capabilities you can build cascading dropdowns in the web part property pane. To learn how to do it you will extend the previously built web part with the ability to choose a list item based on the previously selected list.
+When building web parts you often need to allow users to choose an option from a set of values determined by a previously selected value, such as choosing a country/region based on the selected continent or choosing a list item from a selected list. This user experience is often referred to as cascading dropdowns. Using the standard SharePoint Framework client-side web parts capabilities you can build cascading dropdowns in the web part property pane. To learn how to do it you will extend the previously built web part with the ability to choose a list item based on the previously selected list.
 
 ![List item dropdown open in the web part property pane](../../../images/react-cascading-dropdowns-item-dropdown-list-items.png)
 

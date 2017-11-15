@@ -15,6 +15,9 @@ You can also follow these steps by watching the video on the [SharePoint PnP You
 <img src="../../../images/spfx-youtube-tutorial4.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
+> [!NOTE]
+> There are multiple different hosting options for your web part assets. This tutorial concentrates on showing the Azure CDN option, but you could also use the [Office 365 CDN](./hosting-webpart-from-office-365-cdn.md) or simply host your assets from SharePoint library from your tenant. In the latter case, you would not benefit from the CDN performance improvements, but that would also work from the functionality perspective. Any location which end users can access using HTTP would be technically suitable for hosting the assets for end users.
+
 ## Prerequisites
 
 Make sure that you have completed the following tasks before you begin:
@@ -39,7 +42,8 @@ For example, in the following screenshot, **spfxsamples** is the storage account
 
 This will create a new storage account endpoint **spfxsamples.blob.core.windows.net**. 
 
->**Note:** You will need to create a unique storage name for your SharePoint Framework project.
+> [!NOTE]
+> You will need to create a unique storage name for your SharePoint Framework project.
 
 
 ### BLOB container name
@@ -147,7 +151,8 @@ In this example, with the CDN profile created earlier, this file will look like:
 }
 ```
 
->**Note:** The CDN base path is the CDN endpoint with the BLOB container.
+> [!NOTE]
+> The CDN base path is the CDN endpoint with the BLOB container.
 
 Save the file.
 

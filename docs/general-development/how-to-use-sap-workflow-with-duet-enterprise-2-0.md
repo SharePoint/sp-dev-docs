@@ -1,12 +1,12 @@
 ---
-title: How to Use SAP workflow with Duet Enterprise 2.0
+title: Use SAP workflow with Duet Enterprise 2.0
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 816e28ed-8cea-4e33-98e5-d3d27136e2e6
 ---
 
 
-# How to: Use SAP workflow with Duet Enterprise 2.0
+# Use SAP workflow with Duet Enterprise 2.0
 
 ## Introduction
 <a name="bkmk_Introduction"> </a>

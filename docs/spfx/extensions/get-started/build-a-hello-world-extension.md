@@ -54,7 +54,13 @@ This article describes how to create your first Hello World SharePoint Framework
 
     For information about troubleshooting any errors, see [Known issues](../../known-issues-and-common-questions.md).
 
-6. When the solution scaffolding is complete, type the following into the console to start Visual Studio Code.
+6. Once the scaffolding completes, lock down the version of the project dependencies by running the following command:
+
+    ```sh
+    npm shrinkwrap
+    ```
+
+7. Next, type the following into the console to start Visual Studio Code.
 
     ```
     code .
@@ -66,7 +72,7 @@ This article describes how to create your first Hello World SharePoint Framework
 
     ![SharePoint Framework solution opened after initial scaffolding](../../../images/ext-app-vscode-solution-structure.png)
 
-7. Open **HelloWorldApplicationCustomizer.manifest.json** in the src\extensions\helloWorld folder.
+8. Open **HelloWorldApplicationCustomizer.manifest.json** in the src\extensions\helloWorld folder.
 
     This file defines your extension type and a unique identifier for your extension. You’ll need this ID later when you debug and deploy your extension to SharePoint.
 
@@ -104,7 +110,7 @@ gulp serve --nobrowser
 
 You use the ```--nobrowser``` option because you don't need to launch the local workbench, since you can't debug extensions locally.
 
-When the code compiles without errors, it will serve the resulting manifest from http://localhost:4321.
+When the code compiles without errors, it will serve the resulting manifest from https://localhost:4321.
 
 ![Gulp serve](../../../images/ext-app-gulp-serve.png)
 

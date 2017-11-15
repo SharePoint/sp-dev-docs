@@ -1,13 +1,15 @@
-﻿---
-title: How to Add an Edit Mode Panel snippet in SharePoint
+---
+title: Add an Edit Mode Panel snippet in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 39fa1e32-9129-407d-914f-96f4c6e66dc8
 ---
 
 
-# How to: Add an Edit Mode Panel snippet in SharePoint
+# Add an Edit Mode Panel snippet in SharePoint
+
 An Edit Mode Panel is a snippet that you can use to display instructions or other content to content authors, who see the contents of that panel only when they edit a page. Conversely, this snippet can also be configured to display its contents only in regular (view) mode instead of in edit mode.
+
 ## Introduction to the Edit Mode Panel
 <a name="Introduction"> </a>
 

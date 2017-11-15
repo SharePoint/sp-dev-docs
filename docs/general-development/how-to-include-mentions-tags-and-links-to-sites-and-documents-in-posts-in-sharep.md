@@ -1,12 +1,13 @@
 ---
-title: How to Include mentions, tags, and links to sites and documents in posts in SharePoint
+title: Include mentions, tags, and links to sites and documents in posts in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 975da333-372b-4bf6-a3f4-7452db369f04
 ---
 
 
-# How to: Include mentions, tags, and links to sites and documents in posts in SharePoint
+# Include mentions, tags, and links to sites and documents in posts in SharePoint
+
 Learn how to add  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) objects to microblog posts, which render as mentions, tags, or links in SharePoint social feeds.
 In a social feed, the simplest form of post content contains only text, but you can also add links that render as mentions, tags, or links to websites, SharePoint sites, and documents. To do this, you add  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) objects to the [ContentItems](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.ContentItems.aspx) property of the [SocialPostCreationData](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.aspx) object that defines the post. Posts can contain multiple links.
   

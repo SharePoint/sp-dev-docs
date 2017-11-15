@@ -36,7 +36,7 @@ Office 365 CDN is the easiest way to host SharePoint Framework solutions directl
 4. Enable public CDN in the tenant:
     
     ```
-    Set-SPOTenantCdnEnabled -CdnType Publicget
+    Set-SPOTenantCdnEnabled -CdnType Public
     ```
     
     Public CDN has now been enabled in the tenant by using the default file type configuration allowed. This means that the following file type extensions are supported: CSS, EOT, GIF, ICO, JPEG, JPG, JS, MAP, PNG, SVG, TTF, and WOFF.

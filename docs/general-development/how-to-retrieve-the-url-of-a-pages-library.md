@@ -1,13 +1,15 @@
 ---
-title: How to Retrieve the URL of a Pages library
+title: Retrieve the URL of a Pages library
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: d9922e4b-4948-4c4a-a8ca-1623168143a3
 ---
 
 
-# How to: Retrieve the URL of a Pages library
+# Retrieve the URL of a Pages library
+
 Learn how to retrieve the URL for the pages list for a publishing web in a site collection that differs from the current context.
+
 ## Core concepts to know for retrieving the URL of a Pages list
 <a name="SP15_Core_Concepts_URL_MP"> </a>
 

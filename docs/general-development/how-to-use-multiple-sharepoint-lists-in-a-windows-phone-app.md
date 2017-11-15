@@ -1,12 +1,12 @@
 ---
-title: How to Use multiple SharePoint lists in a Windows Phone app
+title: Use multiple SharePoint lists in a Windows Phone app
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 5251d35a-d659-49b3-8e0d-dfd4a7faee6b
 ---
 
 
-# How to: Use multiple SharePoint lists in a Windows Phone app
+# Use multiple SharePoint lists in a Windows Phone app
 Create Windows Phone apps that use data from multiple SharePoint lists.
 You can use multiple SharePoint lists in your app in several ways. When you create a Windows Phone app based on the Windows Phone SharePoint List Application template, you specify a single target SharePoint list, but the architecture of the resulting project is extensible enough to accommodate the integration of multiple lists.
   

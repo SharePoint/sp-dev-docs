@@ -1,5 +1,5 @@
 ---
-title: How to Locate and Copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll
+title: Locate and copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll
 ms.date: 09/25/2017
 keywords: how to,howdoi,howto,WebUI DLL
 f1_keywords:
@@ -9,7 +9,7 @@ ms.assetid: 09ad5d5e-1678-45e4-8159-23ef56f84215
 ---
 
 
-# How to: Locate and Copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll
+# Locate and copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll
 
 If you want to programmatically add an Excel Web Access Web Part to a SharePoint page and programmatically change the Excel Web Access Web Part, you must add a reference to the required SharePoint DLLs. For example: 
   

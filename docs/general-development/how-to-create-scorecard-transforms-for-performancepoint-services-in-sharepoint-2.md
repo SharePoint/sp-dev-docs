@@ -5,8 +5,10 @@ ms.prod: sharepoint
 ---
 
 
-# How to: Create scorecard transforms for PerformancePoint Services in SharePoint
+# Create scorecard transforms for PerformancePoint Services in SharePoint
+
 Learn how to create custom scorecard transforms for PerformancePoint Services in SharePoint.
+
 ## What are scorecard transforms in PerformancePoint Services?
 <a name="bk_intro"> </a>
 

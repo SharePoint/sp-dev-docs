@@ -74,29 +74,58 @@ The following image shows an example of conditional formatting applied to a numb
 
 ![Severity warning of 70 with orange background](../images/sp-columnformatting-conditionalbasic.png)
 
-This example customizes a number field to color that field yellow when its value is 70 or less. This example adds a style attribute to the parent `<div />` element, specifies a CSS class (`sp-field-severity--warning`) to apply to that item if the value inside the field is less than or equal to 70, and specifies no color if the value is outside that range (in which case it will use the default color for values in that list view). 
-Note: this example uses a binary operation with the less than operator, "<", nested inside the conditional operation indicated by the operator, "?". Another description of the section in the following example is: If @currentField <= 70 Then class = sp-field-severity--warning.
+This example uses the conditional operator `?` to apply a class (`sp-field-severity--warning`) to the parent `<div />` element when the  value in the current field is less than or equal to 70.  This causes the field to be highlighted when the value is less than or equal to 70, and appear normally if it's greater than 70.
 
 ```JSON
 {
-   "elmType": "div",
-   "txtContent": "@currentField",
-   "attributes": {
-      "class": {
-         "operator": "?",
-         "operands": [
-            {
-               "operator": "<=",
-               "operands": [
-                  "@currentField",
-                  70
-               ]
+    "$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json",
+    "debugMode": true,
+    "elmType": "div",
+    "attributes": {
+       "class": {
+          "operator": "?",
+          "operands": [
+             {
+                "operator": "<=",
+                "operands": [
+                   "@currentField",
+                   70
+                ]
+             },
+             "sp-field-severity--warning",
+             ""
+          ]
+       }
+    },
+    "children": [
+        {
+            "elmType": "span",
+            "style": {
+                "display": "inline-block",
+                "padding": "0 4px"
             },
-            "sp-field-severity--warning",
-            ""
-         ]
-      }
-   }
+            "attributes": {
+                "iconName": {
+                    "operator": "?",
+                    "operands": [
+                        {
+                            "operator": "<=",
+                            "operands": [
+                                "@currentField",                  
+                                70
+                            ]
+                        },
+                        "Error",
+                        ""
+                    ]
+                }
+            }
+        },
+        {
+            "elmType": "span",
+            "txtContent": "@currentField"
+        }
+    ]
 }
 ```
 
@@ -433,7 +462,7 @@ You can use column formatting to render quick action links next to fields. The f
                         "@currentField.email",
                         "?subject=Task status&body=Hey, how is your task coming along?.\r\n---\r\n",
                         "@currentField.title",
-                        "\r\nClick this link for more info. https://msft.spoppe.com/sites/LincolnsFunHouse2/Lists/Conference%20Prep/DispForm.aspx?ID=",
+                        "\r\nClick this link for more info. http://contoso.sharepoint.com/sites/ConferencePrep/Tasks/Prep/DispForm.aspx?ID=",
                         "[$ID]"
                     ]
                 }
@@ -563,7 +592,7 @@ This example relies on two number fields, `Before` and `After`, for which the va
 
 ## Supported Column Types
 The following column types support column formatting:
-* Single line of text
+* Single line of text 
 * Number
 * Choice
 * Person or Group
@@ -572,7 +601,13 @@ The following column types support column formatting:
 * Picture
 * Date/Time
 * Lookup
- The Name and Title fields are also supported.
+* Title (in Lists)
+
+The following are not currently supported:
+* Managed Metadata
+* Filename (in Document Libraries)
+* Calculated
+* Retention Label
 
 ## Style guidelines
 

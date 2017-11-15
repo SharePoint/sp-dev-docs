@@ -1,13 +1,15 @@
 ---
-title: How to Follow documents, sites, and tags by using the REST service in SharePoint
+title: Follow documents, sites, and tags by using the REST service in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 989a5873-49f9-49e4-8d0f-439dde891cc2
 ---
 
 
-# How to: Follow documents, sites, and tags by using the REST service in SharePoint
+# Follow documents, sites, and tags by using the REST service in SharePoint
+
 Create SharePoint-hosted apps that use the REST service to follow content (documents, sites, and tags) and to get followed content.
+
 ## How do I use the SharePoint REST service to follow content?
 <a name="bk_intro"> </a>
 

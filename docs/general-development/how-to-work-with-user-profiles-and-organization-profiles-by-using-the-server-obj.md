@@ -1,13 +1,15 @@
 ---
-title: How to Work with user profiles and organization profiles by using the server object model in SharePoint
+title: Work with user profiles and organization profiles by using the server object model in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 13f16dc3-f652-4fb3-996b-5f2166236d2b
 ---
 
 
-# How to: Work with user profiles and organization profiles by using the server object model in SharePoint
+# Work with user profiles and organization profiles by using the server object model in SharePoint
+
 Learn how to create, retrieve, and change SharePoint user profiles and user profile properties programmatically by using the SharePoint server object model.
+
 ## What are user profiles in SharePoint?
 
 In SharePoint, user profiles represent SharePoint users. User profile properties represent information about the users and also about the properties themselves. For example, properties include the account name or email address of a user and the data type of a property. You can use the server object model to programmatically create, retrieve, and change user profiles, profile subtypes, and profile properties.

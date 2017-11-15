@@ -1,13 +1,15 @@
 ---
-title: How to Create external content types for SQL Server in SharePoint
+title: Create external content types for SQL Server in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 7fe2fbf0-546b-4a16-b02e-a0960bfb3842
 ---
 
 
-# How to: Create external content types for SQL Server in SharePoint
+# Create external content types for SQL Server in SharePoint
+
 Learn how to create an external content type for SQL Server in SharePoint.
+
 Creating an external content type is a pivotal task when you are working with external data. An external content type contains important information about connections, access, methods of operation, columns, filters, and other metadata that is used to retrieve the data from the external data source.
   
     

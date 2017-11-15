@@ -1,13 +1,15 @@
-﻿---
-title: How to Create a page layout in SharePoint
+---
+title: Create a page layout in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 5447e6a1-2f14-4667-81d0-7514b468be80
 ---
 
 
-# How to: Create a page layout in SharePoint
+# Create a page layout in SharePoint
+
 When you use Design Manager to create a page layout, two files are created: an .aspx file that SharePoint uses, and an HTML version of that page layout that you can edit in your HTML editor. The HTML file and page layout are associated, so that whenever you edit and save the HTML file, your changes are synced to the associated page layout.
+
 ## Introduction to page layouts
 <a name="Introduction"> </a>
 

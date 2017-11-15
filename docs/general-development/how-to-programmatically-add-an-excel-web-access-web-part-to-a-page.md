@@ -1,5 +1,5 @@
 ---
-title: How to Programmatically Add an Excel Web Access Web Part to a Page
+title: Programmatically add an Excel Web Access Web Part to a page
 ms.date: 09/25/2017
 keywords: how to,howdoi,howto,webpart
 f1_keywords:
@@ -9,7 +9,7 @@ ms.assetid: 858bb0f6-654a-4f12-ba0b-4776bda5ff6d
 ---
 
 
-# How to: Programmatically Add an Excel Web Access Web Part to a Page
+# Programmatically add an Excel Web Access Web Part to a page
 
 This example shows how to programmatically add an Excel Web Access Web Part to a SharePoint page. It also shows you how to display an Excel workbook programmatically in an Excel Web Access Web Part. 
   

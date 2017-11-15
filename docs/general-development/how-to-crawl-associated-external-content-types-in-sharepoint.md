@@ -1,13 +1,15 @@
 ---
-title: How to Crawl associated external content types in SharePoint
+title: Crawl associated external content types in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 187ec42e-f749-4e22-abef-1df604143063
 ---
 
 
-# How to: Crawl associated external content types in SharePoint
+# Crawl associated external content types in SharePoint
+
 Learn how to use the search specific properties in the Business Data Connectivity (BDC) service metadata model for crawling associations, and the different user experiences that you can enable.
+
 ## Crawling the associated external content type
 <a name="HowToCrawlAssociations_CrawlingAssociatedExternalTypes"> </a>
 

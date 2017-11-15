@@ -1,12 +1,13 @@
-﻿---
-title: How to Build and deploy workflow custom actions
+---
+title: Build and deploy workflow custom actions
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 9d2fa681-30c2-4549-9df2-ea9ed757fda9
 ---
 
 
-# How to: Build and deploy workflow custom actions
+# Build and deploy workflow custom actions
+
 Learn how to model business processes whose requirements are not met by the existing library of workflow actions in SharePoint Designer by creating custom workflow actions in SharePoint.
 SharePoint Designer provides a collection of workflow actions that are available through the Workflow Designer user interface (UI). Although the range of workflow actions that are included in SharePoint Designer) is extensive, it is nevertheless finite. In some cases, you may need to model a business process whose requirements are not met by the existing library of workflow actions that are available in SharePoint Designer.
   
@@ -15,7 +16,7 @@ SharePoint Designer provides a collection of workflow actions that are available
 
 Recognizing that business processes often have specialized requirements, SharePoint lets you create custom workflow actions. You can develop these custom actions by using Visual Studio, and then package and deploy them to SharePoint. At that point, the custom action becomes available to workflow authors in SharePoint Designer, exactly as if it were among the library of existing actions. This capability lets you customize the functionality in your workflow authoring environment to match any of your specialized business processes.
 > **Note:**
-> A sample is provided that illustrates creating a custom action. The sample, along with a readme file, is available here:  [SharePoint workflow: Create a custom action](http://code.msdn.microsoft.com/SharePoint-workflow-41e5c0f9) (http://code.msdn.microsoft.com/SharePoint-workflow-41e5c0f9).
+> A sample is provided that illustrates creating a custom action. The sample, along with a readme file, is available here:  [SharePoint workflow: Create a custom action](http://code.msdn.microsoft.com/SharePoint-2013-workflow-41e5c0f9) (http://code.msdn.microsoft.com/SharePoint-2013-workflow-41e5c0f9).
   
     
     

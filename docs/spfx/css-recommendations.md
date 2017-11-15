@@ -223,7 +223,7 @@ Because the selector begins with the unique class name, specific to your compone
 
 ## Integrate Office UI Fabric
 
-By making your customizations look and behave like the standard functionality of SharePoint and Office 365 you will make it easier for the end-users to work with them. Office UI Fabric offers you a set of controls and styles for use in your customizations to seamlessly integrate with the existing user experience. For more information on using Office UI Fabric in the SharePoint Framework, read the [Office UI Fabric integration guide](web-parts/guidance/office-ui-fabric-integration.md).
+By making your customizations look and behave like the standard functionality of SharePoint and Office 365 you will make it easier for the end-users to work with them. Office UI Fabric offers you a set of controls and styles for use in your customizations to seamlessly integrate with the existing user experience. For more information on using Office UI Fabric in the SharePoint Framework, read the [Office UI Fabric integration guide](../office-ui-fabric-integration.md).
 
 ## Use theme colors
 

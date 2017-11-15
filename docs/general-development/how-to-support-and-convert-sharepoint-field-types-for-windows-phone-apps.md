@@ -1,12 +1,13 @@
 ---
-title: How to Support and convert SharePoint field types for Windows Phone apps
+title: Support and convert SharePoint field types for Windows Phone apps
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ms.assetid: 301e6e58-5153-4ca9-a419-8ae0535ebbed
 ---
 
 
-# How to: Support and convert SharePoint field types for Windows Phone apps
+# Support and convert SharePoint field types for Windows Phone apps
+
 Implement data-conversion logic to support SharePoint field types in Windows Phone apps.
 In projects based on the Windows Phone SharePoint List Application template, the data of many SharePoint field types is processed and coordinated by default conversion logic to be suitable for display and manipulation in the Silverlight user interface of a Windows Phone, but developers can also implement their own custom data handling routines.
   

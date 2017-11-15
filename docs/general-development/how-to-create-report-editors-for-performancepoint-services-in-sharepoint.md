@@ -1,12 +1,14 @@
-﻿---
-title: How to Create report editors for PerformancePoint Services in SharePoint
+---
+title: Create report editors for PerformancePoint Services in SharePoint
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ---
 
 
-# How to: Create report editors for PerformancePoint Services in SharePoint
+# Create report editors for PerformancePoint Services in SharePoint
+
 Learn how to create the editor component of a custom report extension for PerformancePoint Services.
+
 ## What are custom report editors for PerformancePoint Services?
 <a name="bi_intro"> </a>
 
