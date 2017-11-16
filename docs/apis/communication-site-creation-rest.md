@@ -9,7 +9,7 @@ This topic assumes that you are already familiar with the topics Get to know the
 The following REST commands are available for creating a modern SharePoint Communication site.
 
 - **Create** - Create a new SharePoint Communication site
-- **Status** - Get the status of a SharePoint Communication site
+- **Status** - Get the status of a SharePoint Communication site 
 
 The URL for communication site REST commands is based on `_api/sitepages/communicationsite`. For example, these are the endpoints for the commands listed above:
 
