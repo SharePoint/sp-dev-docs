@@ -131,9 +131,7 @@ The notification doesn't include any information about the changes that triggere
 SharePoint webhooks only support asynchronous events. This means that webhooks are only fired after a change happened (similar to **-ed** events), and thus synchronous (**-ing** events) are not possible.
 
 ## Error handling
-If an error occurs while sending the notification to your application, SharePoint will follow exponential back-off logic. Any response with an HTTP status code outside of the 200-299 range, or that times out, will be attempted again over the next several minutes. If the request is not successful after 15 minutes, the notification is dropped.
-
-Future notifications will still be attempted to your application, although the service may remove the subscription if a sufficient number of failures are detected.
+If an error occurs while sending the notification to your application, SharePoint will retry up to 5 times to deliver the notification. Any response with an HTTP status code outside of the 200-299 range, or that times out, will be attempted again 5 minute later. If the request is not successful after 5 attempts, the notification is dropped. Future notifications will still be attempted to your application.
 
 ## Expiration
 Webhook subscriptions are set to expire after 6 months by default if an **expirationDateTime** value is not specified. 
