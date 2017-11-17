@@ -1435,10 +1435,14 @@
   - name: Security and Performance
     href: solution-guidance/security-and-performance.md
     items:
-    - name: Authorize provider-hosted add-in users at run time
-      href: solution-guidance/authorize-provider-hosted-add-in-users-at-run-time-by-using-oauth.md
     - name: Authorization considerations for tenants hosted in the Germany, China or US Government environments
       href: solution-guidance/Extending-SharePoint-Online-for-Germany-China-USGovernment-environments.md
+    - name: Handle SharePoint Online throttling
+      href: solution-guidance/Handle-SharePoint-Online-throttling-by-using-exponential-back-off.md
+    - name: Implementing a web app policy alternative
+      href: solution-guidance/security-webapppolicies.md
+    - name: Authorize provider-hosted add-in users at run time
+      href: solution-guidance/authorize-provider-hosted-add-in-users-at-run-time-by-using-oauth.md
     - name: Cross-domain images in SharePoint provider-hosted add-ins
       href: solution-guidance/cross-domain-images-in-sharepoint-provider-hosted-add-ins.md
     - name: Elevated privileges in SharePoint Add-ins
@@ -1450,8 +1454,6 @@
         href: solution-guidance/development-experience-tenant-apponly-permissions-in-sharepoint-online.md
     - name: Set external sharing in Office 365
       href: solution-guidance/Set-external-sharing-on-site-collections-in-Office-365.md
-    - name: Handle SharePoint Online throttling
-      href: solution-guidance/Handle-SharePoint-Online-throttling-by-using-exponential-back-off.md
     - name: JavaScript Patterns and Performance
       href: solution-guidance/javascript-patterns-and-performance.md
   - name: SharePoint Add-in recipes
