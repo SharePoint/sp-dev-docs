@@ -1439,6 +1439,13 @@
       href: solution-guidance/Extending-SharePoint-Online-for-Germany-China-USGovernment-environments.md
     - name: Handle SharePoint Online throttling
       href: solution-guidance/Handle-SharePoint-Online-throttling-by-using-exponential-back-off.md
+    - name: Setting up App-Only access to SharePoint
+      href: solution-guidance/security-only.md
+      items:
+      - name: Granting access via Azure AD App-Only
+        href: solution-guidance/security-apponly-azuread.md      
+      - name: Granting access using SharePoint App-Only
+        href: solution-guidance/security-apponly-azureacs.md      
     - name: Implementing a web app policy alternative
       href: solution-guidance/security-webapppolicies.md
     - name: Authorize provider-hosted add-in users at run time
