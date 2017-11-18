@@ -28,6 +28,9 @@ For all non-human access, it’s advisable to use app principals as discussed pr
  - Using an Azure AD application: this is the preferred method when using SharePoint Online because you can also grant permissions to other Office 365 services (if needed) + you’ve a user interface (Azure management portal) to maintain your app principals.
  - Using a SharePoint App-Only principal: this method is older and only works for SharePoint access, but is still relevant. This method is also the recommended model when you’re still working in SharePoint on-premises since this model works in both SharePoint on-premises as SharePoint Online.
 
+Both models are explain in detail in the Accessing SharePoint using an application context, also known as app-only article 
+
+
 ### Granting access via users and groups
 When you want to grant access to all your sites you’ll need to grant either a user or a group access to all sites individually. This model is different than what you used to have with web app policies, but it’s the only model that you can use to grant a user account or group access to all sites. 
 
