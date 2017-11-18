@@ -221,7 +221,7 @@ After transpilation, the generated CSS file will look similar to:
 
 Because the selector begins with the unique class name, specific to your component, the alternative presentation will apply only to hyperlinks inside your component.
 
-## Handle vendor prefixes in SPFX
+## Vendor prefix handling in SPFX
 In SPFx no vendor prefixed style properties are required in the SASS or CSS files of a project. If some of the SPFx supported browsers require prefixes they were added after the SASS to CSS compilation automatically. This method is also known as auto-prefixing and is a fundamental part of the CSS build chain in SPFx.
 In case a web part should use the new flex box model defined by `display: flex` declaration. Some older WebKit-based and Internet Explorer versions require a particular vendor prefix defined in the CSS.
 
