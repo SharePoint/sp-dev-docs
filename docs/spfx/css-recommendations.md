@@ -236,14 +236,15 @@ In the SASS code of the SPFx artefact does not need to have vendor prefixes incl
 
 ```css
 .container_7e976ae1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex
+  display: -webkit-box; // older Safari on MacOS and iOS
+  display: -ms-flexbox; // IE 10 - 11
+  display: flex;
 }
 ```
 
 Removing already applied prefixes does not only make the code cleaner of the artefact. It also makes it easier to read and future-ready. This process is also configured to support only SPFx supported browser and makes it more error safe.
 In case a web part already has vendor prefixes included in the SASS files that are not needed anymore the same process removes those declarations automatically.
+
 The following example makes use of the `border-radius` property. A property that does not require vendor prefixes on the supported systems.
 
 ```css
