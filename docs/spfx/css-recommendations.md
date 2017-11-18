@@ -1,6 +1,6 @@
 ---
 title: Recommendations for working with CSS in SharePoint Framework solutions
-ms.date: 09/25/2017
+ms.date: 11/18/2017
 ms.prod: sharepoint
 ---
 
