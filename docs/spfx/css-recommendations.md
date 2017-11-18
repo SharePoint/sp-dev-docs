@@ -221,6 +221,51 @@ After transpilation, the generated CSS file will look similar to:
 
 Because the selector begins with the unique class name, specific to your component, the alternative presentation will apply only to hyperlinks inside your component.
 
+## Handle vendor prefixes in SPFX
+In SPFx no vendor prefixed style properties are required in the SASS or CSS files of a project. If some of the SPFx supported browsers require prefixes they were added after the SASS to CSS compilation automatically. This method is also known as auto-prefixing and is a fundamental part of the CSS build chain in SPFx.
+In case a web part should use the new flex box model defined by `display: flex` declaration. Some older WebKit-based and Internet Explorer versions require a particular vendor prefix defined in the CSS.
+
+```css
+.container{
+  display: flex;
+}
+```
+
+In the SASS code of the SPFx artefact does not need to have vendor prefixes included. After the SASS-to-CSS compilation, those were added automatically resulting in the following CSS declaration.
+
+```css
+.container_7e976ae1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex
+}
+```
+
+Removing already applied prefixes does not only make the code cleaner of the artefact. It also makes it easier to read and future-ready. This process is also configured to support only SPFx supported browser and makes it more error safe.
+In case a web part already has vendor prefixes included in the SASS files that are not needed anymore the same process removes those declarations automatically.
+The following example makes use of the border-radius property. A property that does not require vendor prefixes on the supported systems.
+
+```css
+.container {
+  /* Safari 3-4, iOS 1-3.2, Android 1.6- */
+  -webkit-border-radius: 7px;
+  /* Firefox 1-3.6 */
+  -moz-border-radius: 7px;
+  /* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+  border-radius: 7px;
+}
+```
+
+The resulting CSS in the package will be converted to the following code.
+
+```css
+.container_9e54c0b0 {
+  border-radius: 7px
+}
+```
+
+For more details on auto-prefixing look at the documentation in the 'auto prefix' GitHub repository. The databased throughout this process is available on [caniuse.com](https://caniuse.com).
+
 ## Integrate Office UI Fabric
 
 By making your customizations look and behave like the standard functionality of SharePoint and Office 365 you will make it easier for the end-users to work with them. Office UI Fabric offers you a set of controls and styles for use in your customizations to seamlessly integrate with the existing user experience. For more information on using Office UI Fabric in the SharePoint Framework, read the [Office UI Fabric integration guide](../office-ui-fabric-integration.md).
