@@ -86,7 +86,7 @@ Example:
 }
 ```
 
-### **addSPField**
+### addSPField
 
 Adds a new field.
 
