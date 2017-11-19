@@ -136,7 +136,7 @@ One of the new capabilities available to the property pane is to configure its u
 ## Web part project structure
 You can use Visual Studio Code to explore the web part project structure. 
 
-* In the console, break teh processing by pressing Ctrl+C (in Windows) 
+* In the console, break the processing by pressing Ctrl+C (in Windows) 
 * Enter the following command to open the web part project in Visual Studio Code (or use your favorite editor):
 
 ```
