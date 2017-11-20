@@ -322,6 +322,9 @@ The following image shows a field with conditional date formatting applied.
 
 This example colors the current field red when the value inside an item's DueDate is before the current date/time. Unlike some of the previous examples, this example applies formatting to one field by looking at the value inside another field. Note that DueDate is referenced using the [$FieldName] syntax. FieldName is assumed to be the internal name of the field. This example also takes advantage of a special value that can be used in date/time fields - `@now`, which resolves to the current date/time, evaluated when the user loads the list view.
 
+> [!NOTE]
+> If you have spaces in teh field name, those are defined as `_x0020_`. This means that if you would have for example a field named as "Due Date", definition to be used for that field would be `$Due_x0020_Date`.
+
 ```JSON
 {
 
@@ -1041,7 +1044,7 @@ The following example shows how a lookup field might be used on a current field.
 #### "[$FieldName]" 
 The context that's passed in is the entire row. Use this context to reference the values of other fields. For example, to get the value of a field named "MarchSales", use "[$MarchSales]".
 
-If the value of a field is an object, the object's properties can be accessed. For example, to access the "Title" property of a filed named "MarchSales", use "[$MarchSales].Title".  
+If the value of a field is an object, the object's properties can be accessed. For example, to access the "Title" property of a filed named "MarchSales", use "[$MarchSales.title]".
 
 #### "@me"
 This will evaluate to the email address of the current logged in user. 
