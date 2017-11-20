@@ -270,7 +270,7 @@ For more details on auto-prefixing look at the documentation in the '[autoprefix
 
 ## Integrate Office UI Fabric
 
-By making your customizations look and behave like the standard functionality of SharePoint and Office 365 you will make it easier for the end-users to work with them. Office UI Fabric offers you a set of controls and styles for use in your customizations to seamlessly integrate with the existing user experience. For more information on using Office UI Fabric in the SharePoint Framework, read the [Office UI Fabric integration guide](../office-ui-fabric-integration.md).
+By making your customizations look and behave like the standard functionality of SharePoint and Office 365 you will make it easier for the end-users to work with them. Office UI Fabric offers you a set of controls and styles for use in your customizations to seamlessly integrate with the existing user experience. For more information on using Office UI Fabric in the SharePoint Framework, read the [Office UI Fabric integration guide](./office-ui-fabric-integration.md).
 
 ## Use theme colors
 
