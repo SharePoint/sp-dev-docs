@@ -49,6 +49,10 @@
         href: spfx/extensions/get-started/building-simple-field-customizer.md
       - name: Build ListView Command Set
         href: spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md
+    - name: Basics
+      items:
+      - name: Configure extension icon
+        href: spfx/extensions/basics/configure-extension-icon.md
   - name: Web parts
     href: spfx/web-parts/overview-client-side-web-parts.md
     items:
