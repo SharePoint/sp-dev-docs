@@ -2,9 +2,9 @@
 title: Office 365 development and SharePoint patterns and practices solution guidance
 ms.date: 11/03/2017
 ---
-# Office 365 development and SharePoint patterns and practices solution guidance
+# Solution guidance
 
-The Office 365 Developer and SharePoint Patterns and Practices (PnP) initiative provides samples and documentation to help you to implement typical customizations for Office 365 or for SharePoint (Online and on-premises) based on your functional requirements.
+This section provides more insights and details based on scenarios and functional requirements. 
 
 _**Applies to:** Office 365 | SharePoint 2016 | SharePoint 2013 | SharePoint Online_
 
@@ -14,6 +14,7 @@ _**Applies to:** Office 365 | SharePoint 2016 | SharePoint 2013 | SharePoint Onl
 |:-----|:-----|
 |[Branding and site provisioning](Branding-and-site-provisioning-solutions-for-SharePoint.md)|Use SharePoint Add-ins to provision and manage SharePoint site branding.|
 |[Customizing the "modern" experiences in SharePoint Online](modern-experience-customizations.md)|Customization options with SharePoint Online "modern" experiences.|
+|[Introduction to OneDrive and SharePoint Online Multi-Geo scenarios](multigeo-introduction.md)|The OneDrive and SharePoint Online (ODSP) Multi-Geo Preview allows multinational corporations (MNCs) that are part of the preview and have one or more geographical locations to expand their Office 365 ODSP tenancy to satisfy data residency requirements.|
 |[Composite business add-ins](Composite-buisness-apps-for-SharePoint.md)|Use composite business apps to integrate your SharePoint solutions with your business processes and technologies. |
 |[ECM solutions](Enterprise-Content-Management-solutions-for-SharePoint-2013-and-SharePoint-Online.md)|Perform common ECM tasks such as setting site policies, uploading files, synchronizing term groups, and more.|
 |[Localization solutions](localization-solutions-for-sharepoint-2013-and-sharepoint-online.md)|Localize your SharePoint site contents and UI text.|
@@ -34,5 +35,3 @@ _**Applies to:** Office 365 | SharePoint 2016 | SharePoint 2013 | SharePoint Onl
 -  [Office 365 Development Patterns and Practices on GitHub](https://github.com/SharePoint/PnP)
     
 -  [Developing on the Office 365 platform](http://msdn.microsoft.com/en-us/office/office365/howto/platform-development-overview)
-    
--  [Office development](http://msdn.microsoft.com/en-us/library/office/dn467914%28v=office.15%29.aspx)
