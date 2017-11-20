@@ -23,7 +23,7 @@ ALM APIs are natively provided using REST APIs, but there is also additional CSO
 Adding solution to the tenant app catalog. This API is designed to be executed in the context of the tenant app catalog site.
 
 ```
-/_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Add(overwrite=true, url='test.txt')";
+/_api/web/tenantappcatalog/Add(overwrite=true, url='test.txt')";
 method: POST
 binaryStringRequestBody: true
 body: 'byte array of the file'
