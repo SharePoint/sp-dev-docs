@@ -23,7 +23,7 @@ ALM APIs are natively provided using REST APIs, but there is also additional CSO
 Adding solution to the tenant app catalog. This API is designed to be executed in the context of the tenant app catalog site.
 
 ```
-/_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Add(overwrite=true, url='test.txt')";
+/_api/web/tenantappcatalog/AvailableApps/Add(overwrite=true, url='test.txt')";
 method: POST
 binaryStringRequestBody: true
 body: 'byte array of the file'
@@ -103,7 +103,7 @@ method: POST
 Uninstall a solution package from the site. This REST call can be executed in the context of the site where the uninstall operation should happen.
 
 ```
-url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Upgrade";
+url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Uninstall";
 method: POST
 ```
 > [!NOTE]
