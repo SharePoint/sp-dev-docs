@@ -49,12 +49,12 @@ The simplest column formatting is one that places the value of the field inside 
    "txtContent": "@currentField"
 }
 ```
-Some field types require a bit of extra work to retrieve their values. Person fields are represented in the system as objects, and a person’s display name is contained within that object’s **Title** property. This is the same example, modified to work with the person field.
+Some field types require a bit of extra work to retrieve their values. Person fields are represented in the system as objects, and a person’s display name is contained within that object’s **title** property. This is the same example, modified to work with the person field.
 
 ```JSON
 {
    "elmType": "div",
-   "txtContent": "@currentField.Title"
+   "txtContent": "@currentField.title"
 }
 ```
 Lookup fields are also represented as objects; the display text is stored in the **lookupValue** property. This example works with a lookup field.
