@@ -33,7 +33,6 @@ You can combine a SharePoint-hosted add-in with add-ins that have remotely hoste
 |How the add-in gets authorized|The privileges of the signed-in user|
 |What language the add-in can use|JavaScript (with the SharePoint JSOM library) + HTML|
 
-This pattern is the easiest to deploy, and you can use the [Create a basic SharePoint-hosted add-in by using Napa Office 365 Development Tools](create-a-basic-sharepoint-hosted-add-in-by-using-napa-office-365-development-too.md). You'll want to consider the following before deciding to create a SharePoint-hosted add-in.
 
 |**Get these benefits**|**But consider this**|
 |:-----|:-----|
