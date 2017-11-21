@@ -457,7 +457,7 @@ You can use column formatting to render quick action links next to fields. The f
             "elmType": "a",
             "attributes": {
                 "iconName": "Mail",
-                "class": "sp-field-quickActions",
+                "class": "sp-field-quickAction",
                 "href": {
                     "operator": "+",
                     "operands": [
