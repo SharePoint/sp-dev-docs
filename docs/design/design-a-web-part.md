@@ -1,6 +1,6 @@
 ---
 title: Designing a SharePoint web part
-ms.date: 9/25/2017 
+ms.date: 11/22/2017 
 ---
 
 # Designing a SharePoint web part
@@ -19,13 +19,12 @@ When you design web parts, it's important to be familiar with the following conc
 
 You can use three types of property panes to design and develop web parts that fit your business or customer needs.
 
-To open a pane to configure settings for a web part, choose **Edit**. Use the pane to enable and disable features, select a source, choose a layout, and set options. Edit web part content within the web part rather than in the property pane.
+To open a pane to configure settings for a web part, select **Edit**. Use the pane to enable and disable features, select a source, choose a layout, and set options. Edit web part content within the web part rather than in the property pane.
 
 The property pane is 320px and when opened, the page will responsively reflow.
 
 ### Single pane
 Use a single pane for simple web parts that have only a small number of properties to configure.
-
 
 ![Single pane](../images/design-web-part-single.png)
 
@@ -58,18 +57,18 @@ Use a steps pane to group properties in multiple steps or pages when you need th
 
 In step 1, the back button is disabled and the next button is enabled.
 
-![Steps pane with next button enabled](../images/design-web-part-step-pane-01.png)
+![Steps pane with next button enabled](../images/design-web-part-steps-pane-01.png)
 
 
 **Step 2 of the steps pane** 
 
 In step 2, the back and next buttons are enabled.
 
-![Steps pane with back button and next button enabled](../images/design-web-part-step-pane-02.png)
+![Steps pane with back button and next button enabled](../images/design-web-part-steps-pane-02.png)
 
 
 **Step 3 of the steps pane** 
 
 In step 3, the next button is disabled and the back button is enabled.
 
-![Steps pane with back button enabled](../images/design-web-part-step-pane-03.png)
+![Steps pane with back button enabled](../images/design-web-part-steps-pane-03.png)
