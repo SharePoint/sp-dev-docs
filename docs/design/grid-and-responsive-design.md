@@ -49,17 +49,18 @@ The large size has 12 columns, with 24px gutters.
 ![Team site large grid](../images/design-grid-Team-site-L-Canvas-24px-gutters.png)
 
 #### XL 1024 x 768
-The XL size has a twelve columns, with 24px gutters.
+The XL size has 12 columns, with 24px gutters.
 
 ![Team site XL grid](../images/design-grid-Team-site-XL-Canvas-24px-gutters.png)
 
 #### XXL 1366 x 768
-The XXL size has a twelve columns, with 32px gutters.
+The XXL size has 12 columns, with 32px gutters.
 
-![Team site XXL grid](../images/design-grid-Team-site–XXL-Canvas-32px-gutters.png)
+![Team site XXL grid](../images/design-grid-Team-site-XXL-Canvas-32px-gutters.png)
+
 
 #### XXXL 1920 x 1080
-The XXXL size has a twelve columns, with 32px gutters.
+The XXXL size has 12 columns, with 32px gutters.
 
 ![Team site XXXL grid](../images/design-grid-Team-site-XXXL-Canvas-32px-gutters-maxwidth-1204.png)
 
