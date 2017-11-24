@@ -9,7 +9,6 @@ ms.prod: sharepoint
 Learn how to write code to perform basic operations using the JavaScript client object model in SharePoint.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 
@@ -773,7 +772,7 @@ You can manipulate files by using the JavaScript object model. The following sec
 
  
 
- **Note**  You can only work with files up to 1.5 MB by using the JavaScript object model. To upload larger files, use REST (Representational State Transfer). For more information, see  [](complete-basic-operations-using-sharepoint-rest-endpoints.md#LargeFiles).
+ **Note**  You can only work with files up to 1.5 MB by using the JavaScript object model. To upload larger files, use REST (Representational State Transfer). For more information, see  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md).
  
 
 

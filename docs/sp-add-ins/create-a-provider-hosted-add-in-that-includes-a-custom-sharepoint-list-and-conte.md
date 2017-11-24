@@ -9,7 +9,6 @@ ms.prod: sharepoint
 Create a SharePoint Add-in that combines a cloud-hosted web application with custom SharePoint-hosted list templates, list instances, and custom content types by using the Office Developer Tools for Visual Studio 2012. Learn how to interact with SharePoint add-in webs by using the REST/OData web service, and how to implement OAuth in a SharePoint Add-in.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 Most classic SharePoint components, such as custom content types, custom list definitions, and workflows, can be included in a cloud-hosted SharePoint Add-in. The simple example in this article contains the following:

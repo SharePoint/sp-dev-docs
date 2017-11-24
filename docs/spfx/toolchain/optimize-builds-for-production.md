@@ -1,6 +1,6 @@
 ---
 title: Optimize builds for production
-ms.date: 09/25/2017
+ms.date: 11/21/2017
 ms.prod: sharepoint
 ---
 
@@ -33,13 +33,51 @@ When working with third party libraries, you should always consider loading them
 
 ## Verify the contents of your bundle
 
-When building your project in the debug mode, the SharePoint Framework provides you with the [Webpack Visualizer](https://chrisbateman.github.io/webpack-visualizer/) chart showing the different scripts included in the generated bundle. You can find this chart in the **./temp/stats/[solution-name].stats.html** file.
+To better understand the size of the generated bundles, you can extend the webpack configuration in your project and have the SharePoint Framework generate bundle statistics.
 
-![Webpack Visualizer chart illustrating the contents of a sample SharePoint Framework bundle](../../images/guidance-productionbuilds-webpack-visualizer-angular.png)
+First, install the **webpack-bundle-analyzer** package in your project, by executing in the command line:
 
-Using the Webpack Visualizer chart is a convenient way for you to verify, that the generated bundle doesn't contain any unnecessary scripts and how the included scripts affect the total bundle size. Keep in mind, that the displayed size reflects the debug build and would be significantly smaller for a release build.
+```sh
+npm install webpack-bundle-analyzer --save-dev
+```
 
-More detailed information, used to generate the chart, is included in the **./dist/[solution-name].stats.json** file. Using this file you can find out why a specific script has been included in the bundle or if a particular script is used in multiple bundles. With this information you can optimize your bundles improving the loading time of your solution.
+Next, change the contents of the **gulpfile.js** file in your project to:
+
+```js
+'use strict';
+
+const gulp = require('gulp');
+const path = require('path');
+const build = require('@microsoft/sp-build-web');
+const bundleAnalyzer = require('webpack-bundle-analyzer');
+
+build.configureWebpack.mergeConfig({
+  additionalConfiguration: (generatedConfiguration) => {
+    const lastDirName = path.basename(__dirname);
+    const dropPath = path.join(__dirname, 'temp', 'stats');
+    generatedConfiguration.plugins.push(new bundleAnalyzer.BundleAnalyzerPlugin({
+      openAnalyzer: false,
+      analyzerMode: 'static',
+      reportFilename: path.join(dropPath, `${lastDirName}.stats.html`),
+      generateStatsFile: true,
+      statsFilename: path.join(dropPath, `${lastDirName}.stats.json`),
+      logLevel: 'error'
+    }));
+
+    return generatedConfiguration;
+  }
+});
+
+build.initialize(gulp);
+```
+
+Next time you bundle your project using the `gulp bundle` task, you will see the bundle stats files generated in the **temp/stats** folder in your project. One of the generated stats file, is a treemap showing the different scripts included in the generated bundle. You can find this visualization in the **./temp/stats/[solution-name].stats.html** file.
+
+![Webpack bundle analyzer treemap illustrating the contents of a sample SharePoint Framework bundle](../../images/guidance-productionbuilds-webpack-bundlestats-chart-angular.png)
+
+Using the Webpack bundle analyzer treemap is a convenient way for you to verify, that the generated bundle doesn't contain any unnecessary scripts and how the included scripts affect the total bundle size. Keep in mind, that the displayed size reflects the debug build and would be significantly smaller for a release build.
+
+More detailed information, used to generate the visualization, is included in the **./dist/[solution-name].stats.json** file. Using this file you can find out why a specific script has been included in the bundle or if a particular script is used in multiple bundles. With this information you can optimize your bundles improving the loading time of your solution.
 
 ## Choose your primary client-side library
 
@@ -57,9 +95,9 @@ To illustrate this, take the [Lodash](https://lodash.com) library as an example.
 import * as _ from 'lodash';
 ```
 
-It would add 533 KB to your unoptimized bundle.
+It would add 527 KB to your unoptimized bundle.
 
-![The complete Lodash library included in a bundle, highlighted in the Webpack Visualizer chart](../../images/guidance-productionbuilds-import-lodash.png)
+![The complete Lodash library included in a bundle, highlighted in the Webpack bundle analyzer treemap](../../images/guidance-productionbuilds-import-lodash.png)
 
 Instead, if you referenced only the specific Lodash method using the following code:
 
@@ -67,9 +105,9 @@ Instead, if you referenced only the specific Lodash method using the following c
 const at: any = require('lodash/at');
 ```
 
-It would add 42 KB to your unoptimized bundle.
+It would add 45 KB to your unoptimized bundle.
 
-![Specific Lodash method included in a bundle, highlighted in the Webpack Visualizer chart](../../images/guidance-productionbuilds-import-lodash-at.png)
+![Specific Lodash method included in a bundle, highlighted in the Webpack bundle analyzer treemap](../../images/guidance-productionbuilds-import-lodash-at.png)
 
 Specifically with regards to Lodash, but which could also be the case with other libraries, referencing specific methods instead of the whole library comes with a price. Currently, Lodash doesn't support loading specific methods inside of SharePoint Framework projects using the **import** notation. Instead, you have to use a **require** statement which doesn't offer you the typesafety capabilities that using the **import** statement does. Eventually it is up to you to decide if loading significantly more code into your bundles is worth preserving the typesafety capabilities.
 
