@@ -103,7 +103,7 @@ method: POST
 Uninstall a solution package from the site. This REST call can be executed in the context of the site where the uninstall operation should happen.
 
 ```
-url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Upgrade";
+url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Uninstall";
 method: POST
 ```
 > [!NOTE]

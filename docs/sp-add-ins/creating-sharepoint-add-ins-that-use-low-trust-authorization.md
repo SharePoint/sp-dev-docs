@@ -9,7 +9,6 @@ ms.prod: sharepoint
 Learn about the low-trust authorization system for SharePoint Add-ins.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 Remote components in a SharePoint Add-in (or external application) can gain authorization to SharePoint resources by passing an access token to SharePoint with each HTTP request. The remote components obtain the access token from a Microsoft Azure Access Control Service (ACS) account that is associated with the customer's Office 365 tenancy. Azure ACS acts as the authorization server in an  [OAuth 2.0](http://oauth.net/) transaction, called aflow, with SharePoint as the resource server and the remote components as the client. For related protocol specifications, see  [Web Authorization Protocol (oauth)](http://datatracker.ietf.org/doc/active/#oauth). 

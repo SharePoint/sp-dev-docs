@@ -7,10 +7,7 @@ ms.prod: sharepoint
 
 # Work with the cross-domain library across different Internet Explorer security zones in SharePoint Add-ins
 Learn how to use the cross-domain library in SharePoint when the host web and add-in pages are in different security zones in Windows Internet Explorer.
- 
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
- 
 
 If you are using the SharePoint cross-domain library for your add-ins, you should be aware of how security zones work in Internet Explorer. Your add-in may encounter some communication issues if the SharePoint website and the add-in are in different zones. This article explains what happens when you use the cross-domain library in different Internet Explorer security zones.
  

@@ -798,7 +798,7 @@ export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWe
                   label: strings.ListFieldLabel,
                   loadOptions: this.loadLists.bind(this),
                   onPropertyChange: this.onListChange.bind(this),
-                  selectedKey: this.properties.list
+                  selectedKey: this.properties.listName
                 }),
                 this.itemsDropDown
               ]

@@ -19,14 +19,6 @@ When you do searches in a SharePoint site, you'll see examples of the callout co
 ![Example of the callout control on a SharePoint search results page](../images/S15_CalloutControlExample.png)
  
 
- 
-
- 
-
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
- 
-
-
 ## Make the control available to your HTML page by including the callout.js file
 <a name="GettingStarted"> </a>
 

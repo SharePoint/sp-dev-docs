@@ -8,8 +8,6 @@ ms.prod: sharepoint
 # Include a Web Part in a webpage on the add-in web
 Learn how to include a Web Part on a page in a SharePoint Add-in.
  
-
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 You can include an out-of-the-box Web Part in a page in the add-in web of a SharePoint Add-in, but it is important that you do this in a way that won't cause problems if you ever need to update the add-in.
