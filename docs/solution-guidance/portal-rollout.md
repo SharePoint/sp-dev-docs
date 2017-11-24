@@ -26,14 +26,14 @@ Often customers did run massive stress tests on their SharePoint on-premises bas
 - SharePoint Online will see the load test as a denial of service attack and simply will block the user or even worse the complete tenant
 - If the load test is not getting blocked it will be throttled resulting in hard to interpret test results
 - SharePoint Online will dynamically scale its underlying infrastructure which works great, but not if you suddenly do a massive load increase. The scaling back-end model needs time to absorb increased load
-- Such a performance test is just a one-time validation whereas you portal will keep on evolving ,it's better to rely on build in portal telemetry so that you're able to continuously follow-up on your portal performance. It's also hard to build a load test that represents a real usage pattern.
+- Such a performance test is just a one-time validation whereas you portal will keep on evolving ,it's better to rely on built in portal telemetry so that you're able to continuously follow-up on your portal performance. It's also hard to build a load test that represents a real usage pattern.
 
 The recommended approach for rolling out your new portal is by using a phased roll-out plan combined with built in portal telemetry to measure portal performance while more and more users are added. The next chapter will provide more details around this approach.
 
 ## Recommendation: use a phased portal roll-out strategy combined with portal telemetry
-A commonly used model for rolling out new functionality is using a phased approach which typically consists out of:
+A commonly used model for rolling out new functionality is using a phased approach which typically consists of:
 - A **pilot** wave: this is the first time the portal is opened up to a group of selected key users. It's important to get a set of representative, critical, key users that can provide the first feedback
-- One of more **end user** waves: the number of waves you have is depending on how many users you'll be having combined with the model you're following. We see companies aligning their roll-out waves with their organization structure, other companies are aligning by country/region...in the end the thing that matters most is the fact that you're gradually adding new users to the portal
+- One or more **end user** waves: the number of waves you have depends on how many users you'll be having combined with the model you're following. We see companies aligning their roll-out waves with their organization structure, other companies are aligning by country/region...in the end the thing that matters most is the fact that you're gradually adding new users to the portal
 
 Below picture shows a nice gradual roll-out plan. Note that this also takes in account that typically end-user waves have less actual users then invited users.
 
