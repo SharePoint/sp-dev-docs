@@ -417,7 +417,7 @@ With device channels, you can build a site once and then target it to multiple d
 
 Responsive design is based on the media queries feature in CSS3. It uses media queries to match the width of the device's display and then applies styles on the client side to render the content. Media queries make it possible for a designer to target specific site properties, such as screen width. You can use media queries to create flexible layouts and images, and conditionally call CSS file alternatives.
 
-For more information and examples, see [Responsive SharePoint](http://responsivesharepoint.codeplex.com/) and [Implementing your responsive designs on SharePoint 2013](http://blogs.msdn.com/b/sharepointdev/archive/2013/04/01/implementing-your-responsive-designs-on-sharepoint-2013.aspx).
+For more information and examples, see [SharePoint 2013/2016/Online Responsive UI](https://dev.office.com/patterns-and-practices-detail/7267), [Responsive SharePoint](http://responsivesharepoint.codeplex.com/) and [Implementing your responsive designs on SharePoint 2013](http://blogs.msdn.com/b/sharepointdev/archive/2013/04/01/implementing-your-responsive-designs-on-sharepoint-2013.aspx). 
 
 ### Adaptive design
 
