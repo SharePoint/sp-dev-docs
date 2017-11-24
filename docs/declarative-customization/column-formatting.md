@@ -1,8 +1,5 @@
 # Use column formatting to customize SharePoint
 
-> [!IMPORTANT]
-> Column formatting is not yet in production. This documentation is in preview and is subject to change.
-
 You can use column formatting to customize how fields in SharePoint lists and libraries are displayed. To do this, you construct a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements. The column formatting does not change the data in the list item or file; it only changes how it’s displayed to users who browse the list. Anyone who can create and manage views in a list can use column formatting to configure how view fields are displayed. 
 
 For example, a list with the fields Title, Effort, Assigned To, and Status with no customizations applied might look like this: 
@@ -323,7 +320,7 @@ The following image shows a field with conditional date formatting applied.
 This example colors the current field red when the value inside an item's DueDate is before the current date/time. Unlike some of the previous examples, this example applies formatting to one field by looking at the value inside another field. Note that DueDate is referenced using the [$FieldName] syntax. FieldName is assumed to be the internal name of the field. This example also takes advantage of a special value that can be used in date/time fields - `@now`, which resolves to the current date/time, evaluated when the user loads the list view.
 
 > [!NOTE]
-> If you have spaces in teh field name, those are defined as `_x0020_`. This means that if you would have for example a field named as "Due Date", definition to be used for that field would be `$Due_x0020_Date`.
+> If you have spaces in the field name, those are defined as `_x0020_`. This means that if you would have for example a field named as "Due Date", definition to be used for that field would be `$Due_x0020_Date`.
 
 ```JSON
 {
