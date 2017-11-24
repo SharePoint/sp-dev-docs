@@ -2,8 +2,8 @@
 
 During the last few years, most of the enterprise solutions built on top of Office 365 and SharePoint Online leveraged the site _CustomAction_ capability of the SharePoint Feature Framework to extend the UI of pages. However nowdays, within the new "modern" UI of SharePoint Online, most of those customizations are no more available. Luckily, with the new SharePoint Framework Extensions you can now provide almost the same functionality in the "modern" UI. In this tutorial you will learn how to migrate from old "classic" customizations to the new model based on SharePoint Framework Extensions.
 
->**Important:** 
-We're not deprecating the "classic" experience - both "classic" and "modern" will coexist.
+> [!IMPORTANT]
+> We're not deprecating the "classic" experience - both "classic" and "modern" will coexist.
 
 _**Applies to:** SharePoint Online_
 
@@ -17,7 +17,8 @@ First of all, let's introduce the available options when developing SharePoint F
 
 As you can argue from the above descriptions, the most useful one in our context is the "Application Customizer" extension.
 
-> **Note**: For further details about how to build SharePoint Framework Extensions you can read the article ["Overview of SharePoint Framework Extensions"](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions).
+> [!NOTE]
+> For further details about how to build SharePoint Framework Extensions you can read the article ["Overview of SharePoint Framework Extensions"](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions).
 
 ## Migrating a UserCustomAction to an SPFx Application Customizer
 <a name="FromUserCustomActionToApplicationCustomizer"> </a>
@@ -182,7 +183,8 @@ code .
 <a name="DefineApplicationCustomizerUI"> </a>
 The UI elements of the custom footer will be rendered using React and a custom React component. Of course, you can create the UI elements of the sample footer with whatever technology you like. In this tutorial, we use React in order to leverage the Office UI Fabric components for React.
 
-> **Note**: For further details about developing solutions with React, you can read the following tutorial: [Tutorial: Intro to React](https://reactjs.org/tutorial/tutorial.html).
+> [!NOTE]
+> For further details about developing solutions with React, you can read the following tutorial: [Tutorial: Intro to React](https://reactjs.org/tutorial/tutorial.html).
 
 1. First of all, open the file _CustomFooterApplicationCustomizer.manifest.json_ under the _src/extensions/customFooter_ folder. Copy the value of the _id_ property and store it in a safe place, because you will need it later.
 
@@ -261,7 +263,8 @@ export default class CustomFooterApplicationCustomizer
 First of all, the  __renderPlaceHolders_ method searches for the placeholder of type _Bottom_ and if any it renders its content.
 In fact, at the very end of the __renderPlaceHolders_ method the code creates a new instance of a _CustomFooter_ React component, and renders it within the placeholder of the pages' bottom (i.e. where the footer should be rendered).
 
-> **Note**: The React component will be the replacement, in the "modern" UI for the JavaScript file in the "classic" model. Of course, you can render the entire footer still using pure JavaScript code and reusing most of the code that you already have. However, it is better to consider to upgrade the implementation not only from a technology perspective, but also from a code perspective.
+> [!NOTE]
+> The React component will be the replacement, in the "modern" UI for the JavaScript file in the "classic" model. Of course, you can render the entire footer still using pure JavaScript code and reusing most of the code that you already have. However, it is better to consider to upgrade the implementation not only from a technology perspective, but also from a code perspective.
 
 4. Add a new folder called components within the _src/extensions/customFooter_ folder. Create a new file within the new folder, call it _CustomFooter.tsx_.
 In the following code excerpt you can see the component source file.
@@ -317,8 +320,8 @@ export default class CustomFooter extends React.Component<{}, {}> {
 Teaching you how to write a React component is out of scope for this document. Nevertheless, notice the _import_ statements at the beginning, where the component imports React, and the _CommandButton_ React component from the Office UI Fabric components library.
 Moreover, in the _render_ method of the component, it is defined the output of the _CustomFooter_ with few instances of the _CommandButton_ component for the links in the footer.
 All the HTML output is wrapped within a Grid layout of Office UI Fabric.
-
-> **Note**: For further details about the grid layout of Office UI Fabric, you can read the document [Responsive Layout](https://developer.microsoft.com/en-us/fabric#/styles/layout).
+> [!NOTE]
+> For further details about the grid layout of Office UI Fabric, you can read the document [Responsive Layout](https://developer.microsoft.com/en-us/fabric#/styles/layout).
 
 In the following figure you can see the resulting output.
 

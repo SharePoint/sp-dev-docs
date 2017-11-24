@@ -2,8 +2,8 @@
 
 Since Microsoft SharePoint version 2013, most of the enterprise solutions built on top of Office 365 and SharePoint Online leveraged the _JSLink_ property of fields and list views to customize the rendering of fields. However nowdays, within the new "modern" UI of SharePoint Online, most of those customizations are no more available. Luckily, with the new SharePoint Framework Extensions you can now provide almost the same functionality in the "modern" UI. In this tutorial you will learn how to migrate from old "classic" customizations to the new model based on SharePoint Framework Extensions.
 
->**Important:** 
-We're not deprecating the "classic" experience - both "classic" and "modern" will coexist.
+> [!IMPORTANT]
+> We're not deprecating the "classic" experience - both "classic" and "modern" will coexist.
 
 _**Applies to:** SharePoint Online_
 
@@ -17,7 +17,8 @@ First of all, let's introduce the available options when developing SharePoint F
 
 As you can argue from the above descriptions, the most useful one in our context is the "Field Customizer" extension.
 
-> **Note**: For further details about how to build SharePoint Framework Extensions you can read the article ["Overview of SharePoint Framework Extensions"](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions).
+> [!NOTE]
+> For further details about how to build SharePoint Framework Extensions you can read the article ["Overview of SharePoint Framework Extensions"](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions).
 
 ## Migrating a JSLink to an SPFx Field Customizer
 <a name="FromJSLinktoFieldCustomizer"> </a>
@@ -93,7 +94,8 @@ And here, for the sake of completeness, you can see how the custom rendering of 
 
 As you can see "Color" fields render a colored box filled with the color selected at the item level.
 
-> **Note**: In order to provision this kind of solution in a "classic" site you can eventually use a PnP Provisioning Template, which can provision both the list with the custom field, and the JSLink at once.
+> [!NOTE]
+> In order to provision this kind of solution in a "classic" site you can eventually use a PnP Provisioning Template, which can provision both the list with the custom field, and the JSLink at once.
 
 In order to migrate the above solution to the SharePoint Framework, you will have to accomplish the following steps.
 

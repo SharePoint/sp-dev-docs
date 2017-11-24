@@ -1,9 +1,9 @@
 # Migrating from Edit Control Block (ECB) menu item to SharePoint Framework Extensions
 
-During the last few years, most of the enterprise solutions built on top of Office 365 and SharePoint Online leveraged the site _CustomAction_ capability of the SharePoint Feature Framework to extend the UI of pages. However nowdays, within the new "modern" UI of SharePoint Online, most of those customizations are no more available. Luckily, with the new SharePoint Framework Extensions you can now provide almost the same functionality in the "modern" UI. In this tutorial you will learn how to migrate from old "classic" customizations to the new model based on SharePoint Framework Extensions.
+During the last few years, most of the enterprise solutions built on top of Office 365 and SharePoint Online leveraged the site _CustomAction_ capability of the SharePoint Feature Framework to extend the UI of pages. However nowdays, within the new "modern" UI of SharePoint Online, most of those customizations are no more available. Luckily, with the new SharePoint Framework Extensions you can provide similar functionality in the "modern" UI. In this tutorial you will learn how to migrate from old "classic" customizations to the new model based on SharePoint Framework Extensions.
 
->**Important:** 
-We're not deprecating the "classic" experience - both "classic" and "modern" will coexist.
+> [!IMPORTANT]
+> We're not deprecating the "classic" experience - both "classic" and "modern" will coexist.
 
 _**Applies to:** SharePoint Online_
 
@@ -17,7 +17,8 @@ First of all, let's introduce the available options when developing SharePoint F
 
 As you can argue from the above descriptions, the most useful one in our context is the "Command Set" extension.
 
-> **Note**: For further details about how to build SharePoint Framework Extensions you can read the article ["Overview of SharePoint Framework Extensions"](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions).
+> [!NOTE]
+> For further details about how to build SharePoint Framework Extensions you can read the article ["Overview of SharePoint Framework Extensions"](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions).
 
 ## Migrating a ECB to an SPFx Command Set
 <a name="FromECBtoCommandSet"> </a>
@@ -158,7 +159,8 @@ Lastly, notice the override of the _onListViewUpdated_ method, which by default 
 
 The redirection to the target URL is handled by using classic JavaScript code and using the _window.location.replace_ function. Of course, you can write whatever kind of TypeScript code you like inside the _onExecute_ method. Just for the sake of making an example, you can leverage the SharePoint Framework Dialog Framework to open a new dialog window and to interact with the end users.
 
-> **Note**: For further details about the SharePoint Framework Dialog Framework you can read the document [Use custom dialog boxes with SharePoint Framework Extensions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/guidance/using-custom-dialogs-with-spfx).
+> [!NOTE]
+> For further details about the SharePoint Framework Dialog Framework you can read the document [Use custom dialog boxes with SharePoint Framework Extensions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/guidance/using-custom-dialogs-with-spfx).
 
 In the following figure you can see the resulting output.
 
