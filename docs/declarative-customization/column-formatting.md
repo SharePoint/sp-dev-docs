@@ -409,7 +409,7 @@ To compare a date/time field value against another date constant, use the **Date
 ```
 
 ## Create clickable actions
-You can use column formatting to provide hyperlinks that go to other web pages, or start custom functionality. This functionality is limited to static `http://` links that can be paramaterized with values from fields in the list. You can't use column formatting to output links to protocols other than `http://`.
+You can use column formatting to provide hyperlinks that go to other web pages, or start custom functionality. This functionality is limited to static `http://` or `https://` links that can be paramaterized with values from fields in the list. You can't use column formatting to output links to protocols other than `http://` and `https://`.
 
 ### Turn field values into hyperlinks (basic)
 This example shows how to turn a text field that contains stock ticker symbols into a hyperlink that targets the Yahoo Finance real-time quotes page for that stock ticker. The example uses a `+` operator that appends the current field value to the static hyperlink <a>http://finance.yahoo.com/quote/</a>. You can extend this pattern to any scenario in which you want users to view contextual information related to an item, or you want to start a business process on the current item, as long as the information or process can be accessed via a hyperlink parameterized with values from the list item.
