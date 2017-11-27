@@ -30,12 +30,6 @@ Creates a SharePoint Add-in based on the information that you specify in a wizar
 
 For more information, see [SharePoint Add-ins](sharepoint-add-ins.md).
 
-### Cloud Business Add-in
-
-By using the **Cloud Business Add-in** template in Visual Studio, you can create a SharePoint-hosted add-in in which mobile users can view, add, and update data from remote locations by using modern, touch-oriented devices such as phones and tablets. 
-
-For more information, see [Create cloud business add-ins](create-cloud-business-add-ins.md).
-
 <a name="SP15Projecttemplates_items"> </a>
 ## Project item templates
 

@@ -1,8 +1,5 @@
 # Use column formatting to customize SharePoint
 
-> [!IMPORTANT]
-> Column formatting is not yet in production. This documentation is in preview and is subject to change.
-
 You can use column formatting to customize how fields in SharePoint lists and libraries are displayed. To do this, you construct a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements. The column formatting does not change the data in the list item or file; it only changes how it’s displayed to users who browse the list. Anyone who can create and manage views in a list can use column formatting to configure how view fields are displayed. 
 
 For example, a list with the fields Title, Effort, Assigned To, and Status with no customizations applied might look like this: 
@@ -14,7 +11,7 @@ A list with the appearance of the Effort, Assigned To, and Status fields customi
 ![SharePoint list with three columns formatted](../images/sp-columnformatting-all.png)
 
 ## How is column formatting different than the Field Customizer?
-Both column formatting and the [SharePoint Framework Field Customizer](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/building-simple-field-customizer) extension enable you to customize how fields in SharePoint lists are displayed. The Field Customizer is more powerful, because you can use it to write any code you want to control how a field is displayed. Column formatting is more easily and broadly applied. However, it is less flexible, because it does not allow for custom code; it only allows for certain predefined elements and attributes. 
+Both column formatting and [SharePoint Framework Field Customizer](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/building-simple-field-customizer) extensions enable you to customize how fields in SharePoint lists are displayed. The Field Customizer is more powerful, because you can use it to write any code you want to control how a field is displayed. Column formatting is more easily and broadly applied. However, it is less flexible, because it does not allow for custom code; it only allows for certain predefined elements and attributes. 
 
 The following table compares column formatting and the Field Customizer.
 
@@ -24,7 +21,7 @@ The following table compares column formatting and the Field Customizer.
 | Action links       | Support for static hyperlinks that do not launch script      |  Support for any hyperlink, including those that invoke custom script   |
 | Data visualizations | Support for simple visualizations that can be expressed using HTML and CSS      |   Support for arbitrary data visualizations  |
 
-If you can accomplish your scenario by using column formatting, it’s typically quicker and easier to do that than to use Field Customizer. Anyone who can create and manage views in a list can use column formatting to create and publish customizations. Use Field Customizer for more advanced scenarios that column formatting does not support.
+If you can accomplish your scenario by using column formatting, it’s typically quicker and easier to do that than to use a Field Customizer. Anyone who can create and manage views in a list can use column formatting to create and publish customizations. Use a Field Customizer for more advanced scenarios that column formatting does not support.
 
 ## Get started with column formatting
 To open the column formatting pane, open the dropdown menu under a column. Under **Column Settings**, choose **Format this column**.
@@ -37,11 +34,11 @@ A field with no formatting specified will use the default rendering. To format a
 
 To preview the formatting, select **Preview**. To commit your changes, select **Save**. When you save, anyone who views the list will see the customization that you applied.
 
-The easiest way to use column formatting is to start from an example and edit it to apply to your specific field. The following sections contain examples that you can copy, paste, and edit for your scenarios.
+The easiest way to use column formatting is to start from an example and edit it to apply to your specific field. The following sections contain examples that you can copy, paste, and edit for your scenarios. There are also several samples available in the [SharePoint/sp-dev-column-formatting repository](https://github.com/SharePoint/sp-dev-column-formatting).
 
 ## Display field values (basic)
 
-The simplest column formatting is one that places the value of the field inside a `<div />` element. This example works for number, text, choice, and date fields.
+The simplest column formatting is one that places the value of the field inside a `<div />` element. This example works for number, text, choice, and date fields:
 
 ```JSON
 {
@@ -49,7 +46,7 @@ The simplest column formatting is one that places the value of the field inside 
    "txtContent": "@currentField"
 }
 ```
-Some field types require a bit of extra work to retrieve their values. Person fields are represented in the system as objects, and a person’s display name is contained within that object’s **title** property. This is the same example, modified to work with the person field.
+Some field types require a bit of extra work to retrieve their values. Person fields are represented in the system as objects, and a person’s display name is contained within that object’s **title** property. This is the same example, modified to work with the person field:
 
 ```JSON
 {
@@ -57,7 +54,7 @@ Some field types require a bit of extra work to retrieve their values. Person fi
    "txtContent": "@currentField.title"
 }
 ```
-Lookup fields are also represented as objects; the display text is stored in the **lookupValue** property. This example works with a lookup field.
+Lookup fields are also represented as objects; the display text is stored in the **lookupValue** property. This example works with a lookup field:
 
 ```JSON
 {
@@ -74,7 +71,7 @@ The following image shows an example of conditional formatting applied to a numb
 
 ![Severity warning of 70 with orange background](../images/sp-columnformatting-conditionalbasic.png)
 
-This example uses the conditional operator `?` to apply a class (`sp-field-severity--warning`) to the parent `<div />` element when the  value in the current field is less than or equal to 70.  This causes the field to be highlighted when the value is less than or equal to 70, and appear normally if it's greater than 70.
+This example uses the conditional operator `?` to apply a class (`sp-field-severity--warning`) to the parent `<div />` element when the  value in the current field is less than or equal to 70. This causes the field to be highlighted when the value is less than or equal to 70, and appear normally if it's greater than 70.
 
 ```JSON
 {
@@ -131,14 +128,14 @@ This example uses the conditional operator `?` to apply a class (`sp-field-sever
 
 ### Conditional formatting based on the value in a text or choice field (advanced)
 
-The following image shows an example of conditional formatting applied to a text or choice field.
+The following image shows an example of conditional formatting applied to a text or choice field:
 
 ![Status field with done colored green, blocked colored red, and in review colored orange](../images/sp-columnformatting-conditionaladvanced.png)
 
 You can apply conditional formatting to text or choice fields that might contain a fixed set of values. The following example applies different classes depending on whether the value of the field is Done, In Review, Blocked, or another value. This example applies a CSS class (`sp-field-severity--low, sp-field-severity--good, sp-field-severity--warning, sp-field-severity--blocked`) to the  `<div />` based on the field's value. Then, it outputs a `<span />` element with an `IconName` attribute. This attribute applies another CSS class to that `<span />` that shows an [Office UI Fabric](https://dev.office.com/fabric#/) icon inside that element. Finally, another `<span />` element is outputted that contains the value inside the field.
 
 This pattern is useful when you want different values to map to different levels of urgency or severity. You can start from this example and edit it to specify your own field values and the styles and icons that should map to those values.
-<!-- The schema URL will need to be updated when it is changed from customformatter to columnformatting -->
+
 ```JSON
 {
     "$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json",
@@ -316,14 +313,14 @@ Because dates are often used to track deadlines and key project timelines, a com
 
 ### Formatting an item when a date column is before or after today's date (advanced)
 
-The following image shows a field with conditional date formatting applied.
+The following image shows a field with conditional date formatting applied:
 
 ![Status field with the Overdue text colored red](../images/sp-columnformatting-overdue.png)
 
-This example colors the current field red when the value inside an item's DueDate is before the current date/time. Unlike some of the previous examples, this example applies formatting to one field by looking at the value inside another field. Note that DueDate is referenced using the [$FieldName] syntax. FieldName is assumed to be the internal name of the field. This example also takes advantage of a special value that can be used in date/time fields - `@now`, which resolves to the current date/time, evaluated when the user loads the list view.
+This example colors the current field red when the value inside an item's DueDate is before the current date/time. Unlike some of the previous examples, this example applies formatting to one field by looking at the value inside another field. Note that DueDate is referenced using the `[$FieldName]` syntax. FieldName is assumed to be the internal name of the field. This example also takes advantage of a special value that can be used in date/time fields - `@now`, which resolves to the current date/time, evaluated when the user loads the list view.
 
 > [!NOTE]
-> If you have spaces in teh field name, those are defined as `_x0020_`. This means that if you would have for example a field named as "Due Date", definition to be used for that field would be `$Due_x0020_Date`.
+> If you have spaces in the field name, those are defined as `_x0020_`. For example, a field named "Due Date" should be referenced as `$Due_x0020_Date`.
 
 ```JSON
 {
@@ -350,7 +347,7 @@ This example colors the current field red when the value inside an item's DueDat
 ```
 
 ### Formatting items based on arbitrary dates (advanced)
-To compare the value of a date/time field against a date that's not `@now`, follow the pattern in the following example. The following example colors the current field red if the due date was <= tomorrow. This is accomplished using date math. You can add milliseconds to any date, and the result will be a new date. For example, to add a day to a date, you'd add (246060*1000 = 86,400,000). 
+To compare the value of a date/time field against a date that's not `@now`, follow the pattern in the following example. The following example colors the current field red if the due date was <= tomorrow. This is accomplished using date math. You can add milliseconds to any date and the result will be a new date. For example, to add a day to a date, you'd add (24\*60\*60\*1000 = 86,400,000). 
 ```JSON
 {
    "elmType": "div",
@@ -379,7 +376,7 @@ To compare the value of a date/time field against a date that's not `@now`, foll
    }
 }
 ```
-To compare a date/time field value against another date constant, use the **Date()** method to convert a string to a date. The following example colors the current field red if the value in the DueDate field is before 3/22/2017.
+To compare a date/time field value against another date constant, use the `Date()` method to convert a string to a date. The following example colors the current field red if the value in the DueDate field is before 3/22/2017.
 ```JSON
 {
    "elmType": "div",
@@ -409,7 +406,8 @@ To compare a date/time field value against another date constant, use the **Date
 ```
 
 ## Create clickable actions
-You can use column formatting to provide hyperlinks that go to other web pages, or start custom functionality. This functionality is limited to static `http://` links that can be paramaterized with values from fields in the list. You can't use column formatting to output links to protocols other than `http://`.
+
+You can use column formatting to provide hyperlinks that go to other web pages, or start custom functionality. This functionality is limited to static links that can be paramaterized with values from fields in the list. You can't use column formatting to output links to protocols other than `http://`, `https://`, or `mailto:`.
 
 ### Turn field values into hyperlinks (basic)
 This example shows how to turn a text field that contains stock ticker symbols into a hyperlink that targets the Yahoo Finance real-time quotes page for that stock ticker. The example uses a `+` operator that appends the current field value to the static hyperlink <a>http://finance.yahoo.com/quote/</a>. You can extend this pattern to any scenario in which you want users to view contextual information related to an item, or you want to start a business process on the current item, as long as the information or process can be accessed via a hyperlink parameterized with values from the list item.
@@ -457,7 +455,7 @@ You can use column formatting to render quick action links next to fields. The f
             "elmType": "a",
             "attributes": {
                 "iconName": "Mail",
-                "class": "sp-field-quickActions",
+                "class": "sp-field-quickAction",
                 "href": {
                     "operator": "+",
                     "operands": [
@@ -478,11 +476,11 @@ You can use column formatting to render quick action links next to fields. The f
 Use column formatting to combine conditional and arithmetical operations to achieve basic data visualizations.
 
 ### Format a number column as a data bar (advanced)
-The following image shows a number column formatted as a data bar.
+The following image shows a number column formatted as a data bar:
 
 ![Effort list with number list items shown as bars](../images/sp-columnformatting-databars.png)
 
-This example applies `background-color` and `border-top` styles to create a data bar visualization of `@currentField`, which is a number field. The bars are sized differently for different values based on the way the `width` attribute is set - it's set to `100%` when the value is greater than 20, and `(@currentField * 5)%` when there value is less than 10. This achieves a width of 5% for the data bar for values of 1, 10% for values of 2, and so on. To fit this example to your number column, you can adjust the boundary condition (`20`) to match the maximum anticipated value inside the field, and the multiplier (`5`) to specify how much the bar should grow depending on the value inside the field.
+This example applies `background-color` and `border-top` styles to create a data bar visualization of `@currentField`, which is a number field. The bars are sized differently for different values based on the way the `width` attribute is set - it's set to `100%` when the value is greater than 20, and `(@currentField * 5)%` when the value is less than 10. This achieves a width of 5% for the data bar for values of 1, 10% for values of 2, and so on. To fit this example to your number column, you can adjust the boundary condition (`20`) to match the maximum anticipated value inside the field, and the multiplier (`5`) to specify how much the bar should grow depending on the value inside the field.
 ```JSON
 {
   "debugMode": true,
@@ -528,7 +526,7 @@ This example applies `background-color` and `border-top` styles to create a data
 ```
 
 ### Show trending up/trending down icons (advanced)
-The following image shows a list with trending up/trending down icons added.
+The following image shows a list with trending up/trending down icons added:
 
 ![List with trending up and trending down icons next to list items](../images/sp-columnformatting-trending.png)
 
@@ -814,8 +812,7 @@ An optional property that specifies style attributes to apply to the element spe
     'word-break'
     'word-wrap'
 
-The following example shows the value of a style object. In this example, two style properties (`padding` and `background-color`) will be applied. The `padding` value is a hard-coded string value. The `background-color` value is an Expression that is evaluated to either red (#ff0000) or green (#00ff00) depending on whether the value of the current field (specified by @currentField) is less than 40. For more information, see the Expression object section. 
-
+The following example shows the value of a style object. In this example, two style properties (`padding` and `background-color`) will be applied. The `padding` value is a hard-coded string value. The `background-color` value is an Expression that is evaluated to either red (`#ff0000`) or green (`#00ff00`) depending on whether the value of the current field (specified by `@currentField`) is less than 40. For more information, see the Expression object section. 
 
 ```JSON
 {
@@ -852,7 +849,7 @@ An optional property that specifies additional attributes to add to the element 
 - d
 - aria
 
-Any other attribute name will result in an error. Attribute values can either be Expression objects or strings. The following example adds two attributes (`target` and `href`) to the element specified by `elmType`. The `target` attribute is hard-coded to a string. The `href` attribute is an expression that will be evaluated at runtime to (http://finance.yahoo.com/quote/ + the value of the current field(@currentField)). 
+Any other attribute name will result in an error. Attribute values can either be Expression objects or strings. The following example adds two attributes (`target` and `href`) to the element specified by `elmType`. The `target` attribute is hard-coded to a string. The `href` attribute is an expression that will be evaluated at runtime to (http://finance.yahoo.com/quote/ + the value of the current field(`@currentField`)). 
 ```JSON
 {
    "target": "_blank",
@@ -868,9 +865,7 @@ Any other attribute name will result in an error. Attribute values can either be
 
 ### children
 
-An optional property that specifies child elements of the element specified by `elmType`. The value is specified as an array of `CustomFormatter` objects. There can be an arbitrary level of nesting. If an element has the `txtContent` property, the child properties are ignored. 
-
-<!-- Verify that CustomFormatter is the correct object name? -->
+An optional property that specifies child elements of the element specified by `elmType`. The value is specified as an array of `elm` objects. There can be an arbitrary level of nesting. If an element has the `txtContent` property, the child properties are ignored. 
 
 ### debugMode
 
@@ -878,7 +873,7 @@ An optional property that is meant for debugging. It outputs error messages and 
 
 ### Expression object
 
-Values for `txtContent`, style properties, and attribute properties can be expressed as expressions, so that they are evaluated at runtime based on the context of the current object (or row). Expression objects can be nested to contain other Expression objects. 
+Values for `txtContent`, style properties, and attribute properties can be expressed as expressions, so that they are evaluated at runtime based on the context of the current field (or row). Expression objects can be nested to contain other Expression objects. 
 
 The following example shows an Expression object that performs the following expression:
 
@@ -940,6 +935,9 @@ Operators specify the type of operation to perform. The following operators are 
 - cos
 - sin
 - ? 
+- toLocaleString()
+- toLocaleDateString()
+- toLocaleTimeString()
 
 **Binary operators** - The following are the standard arithmetic binary operators that expect two operands: 
 
@@ -958,7 +956,10 @@ Operators specify the type of operation to perform. The following operators are 
 - Number()
 - Date()
 - cos
-- sin  
+- sin
+- toLocaleString()
+- toLocaleDateString()
+- toLocaleTimeString()
 
 **Conditional operator** - The conditional operator is:
 
@@ -975,11 +976,14 @@ The values for `txtContent`, styles, and attributes can be either strings or Exp
 #### "@currentField"
 Will evaluate to the value of the current field. 
 
-Some field types are represented as objects. To output a value from an object, refer to a particular property inside that object. For example, if the current field is a person/group field, specify @currentField.title to retrieve the person's name, which is normally displayed in list views. The following are the field types that are represented as objects with a list their properties.
+Some field types are represented as objects. To output a value from an object, refer to a particular property inside that object. For example, if the current field is a person/group field, specify `@currentField.title` to retrieve the person's name, which is normally displayed in list views. The following are the field types that are represented as objects with a list their properties.
+
+> [!NOTE]
+> The `@currentField.title` returns a person's name by default. However, if the person field's Show Field has been adjusted, it may change the value of the `title` property. For example, a person field with the Show Field configured as Department will have the person's department for the `title` property.
 
 **People fields**
 
-The people field object has the following properties.
+The people field object has the following properties (with example values):
 
 ```JSON
 {
@@ -987,9 +991,7 @@ The people field object has the following properties.
    "title": "Kalya Tucker",
    "email": "kaylat@contoso.com",
    "sip": "kaylat@contoso.com",
-   "picture": "https://contoso.sharepoint.com/kaylat_contoso_com_MThumb.jpg?t=63576928822",
-   "jobTitle": "",
-   "department": ""
+   "picture": "https://contoso.sharepoint.com/kaylat_contoso_com_MThumb.jpg?t=63576928822"
 }
 ```
 
@@ -997,9 +999,9 @@ The people field object has the following properties.
 
 The value of Date/Time fields can be retrieved a few different ways, depending on the date format you'd like to display. The following methods for converting date values to specific formats are supported: 
 
-* ```toLocaleString()``` - Displays a date type fully expanded with date and time.
-* ```toLocaleDateString()``` - Displays a date type with just the date.
-* ```toLocaleTimeString()``` - Displays a date type with just the time.
+* `toLocaleString()` - Displays a date type fully expanded with date and time.
+* `toLocaleDateString()` - Displays a date type with just the date.
+* `toLocaleTimeString()` - Displays a date type with just the time.
 
 For example, the following JSON will display the current field (assuming it's a date field) as a date and time string.
 
@@ -1015,7 +1017,7 @@ For example, the following JSON will display the current field (assuming it's a 
 
 **Lookup fields**
 
-The lookup field object has the following properties.
+The lookup field object has the following properties (with example values):
 
 ```JSON
 {
@@ -1042,12 +1044,37 @@ The following example shows how a lookup field might be used on a current field.
 ``` 
 
 #### "[$FieldName]" 
-The context that's passed in is the entire row. Use this context to reference the values of other fields. For example, to get the value of a field named "MarchSales", use "[$MarchSales]".
+The column is formatted within the context of the entire row. You can use this context to reference the values of other fields within the same row. For example, to get the value of a field named "MarchSales", use `[$MarchSales]`.
 
-If the value of a field is an object, the object's properties can be accessed. For example, to access the "Title" property of a filed named "MarchSales", use "[$MarchSales.title]".
+If the value of a field is an object, the object's properties can be accessed. For example, to access the "Title" property of a person field named "SalesLead", use "[$SalesLead.title]".
 
 #### "@me"
-This will evaluate to the email address of the current logged in user. 
+This will evaluate to the email address of the current logged in user.
+
+This field can be used to display the current user's email address, but more likely it will be used within conditions. The following is an example of setting the color for a person field to red when it is equal to the current logged in user and blue otherwise: 
+
+```JSON
+{
+   "elmType": "div",
+   "txtContent": "@currentField.title",
+   "style": {
+      "color": {
+         "operator": "?",
+         "operands": [
+            {
+               "operator": "==",
+               "operands": [
+                  "@me",
+                  "@currentField.email"
+               ]
+            },
+            "red",
+            "blue"
+         ]
+      }
+   }
+}
+```
 
 #### "@now"
 This will evaluate to the current date and time. 
