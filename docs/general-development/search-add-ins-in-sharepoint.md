@@ -38,16 +38,13 @@ There are two ways to deploy your search add-in:
 ## Search add-in development environment
 <a name="SP15_Search_app_dev_environment"> </a>
 
-To create a search add-in, use one of these two environments:
+To create a search add-in, use following environment:
   
     
     
 
 - Microsoft Visual Studio 2012 or Microsoft Visual Studio 2013 or Visual Studio 2015
-    
-  
-- Napa Office 365 Development Tools
-    
+        
   
 With Visual Studio 2013 and later, you can publish your search add-ins to both on-premises or in Office 365. For more information about the development environments and how to use them to create search add-ins, see  [Set up a general development environment for SharePoint](set-up-a-general-development-environment-for-sharepoint.md).
   

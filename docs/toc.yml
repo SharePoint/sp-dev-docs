@@ -49,6 +49,20 @@
         href: spfx/extensions/get-started/building-simple-field-customizer.md
       - name: Build ListView Command Set
         href: spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md
+    - name: Basics
+      items:
+      - name: Configure extension icon
+        href: spfx/extensions/basics/configure-extension-icon.md
+    - name: Concepts
+      items:
+      - name: Migrating existing customizations
+        items:
+        - name: Edit Control Block (ECB) menu item
+          href: spfx/extensions/guidance/migrate-from-ecb-to-spfx-extensions.md
+        - name: Client Side Rendering (JSLink)
+          href: spfx/extensions/guidance/migrate-from-jslink-to-spfx-extensions.md
+        - name: JavaScript embedding (UserCustomAction)
+          href: spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions.md          
   - name: Web parts
     href: spfx/web-parts/overview-client-side-web-parts.md
     items:
@@ -1259,37 +1273,6 @@
       href: sp-add-ins/create-sharepoint-add-ins-in-visual-studio.md
     - name: What's new in Office Developer Tools for Visual Studio 2013
       href: sp-add-ins/what-s-new-in-office-developer-tools-for-visual-studio.md
-  - name: Create cloud business add-ins
-    href: sp-add-ins/create-cloud-business-add-ins.md
-    items:
-    - name: Start
-      href: sp-add-ins/get-started-developing-cloud-business-add-ins.md
-      items:
-      - name: 'Incident Manager: A cloud business add-in tutorial'
-        href: sp-add-ins/incident-manager-a-cloud-business-add-in-tutorial.md
-      - name: Create a cloud business add-in with a social newsfeed
-        href: sp-add-ins/create-a-cloud-business-add-in-with-a-social-newsfeed.md
-    - name: Develop
-      href: sp-add-ins/develop-cloud-business-add-ins.md
-      items:
-      - name: Create a cloud business add-in
-        href: sp-add-ins/create-a-cloud-business-add-in.md
-      - name: Associate a document library with an entity
-        href: sp-add-ins/associate-a-document-library-with-an-entity.md
-        items:
-        - name: Troubleshooting document libraries
-          href: sp-add-ins/troubleshooting-document-libraries.md
-      - name: Enable a newsfeed for a cloud business add-in
-        href: sp-add-ins/enable-a-newsfeed-for-a-cloud-business-add-in.md
-      - name: Provide a template for a document library in a cloud business add-in
-        href: sp-add-ins/provide-a-template-for-a-document-library-in-a-cloud-business-add-in.md
-      - name: Create a cloud business add-in that uses the SAP Gateway
-        href: sp-add-ins/create-a-cloud-business-add-in-that-uses-the-sap-gateway.md
-    - name: Publish
-      href: sp-add-ins/publish-cloud-business-add-ins.md
-      items:
-      - name: Publish a cloud business add-in to SharePoint
-        href: sp-add-ins/publish-a-cloud-business-add-in-to-sharepoint.md
 - name: Solution guidance
   href: solution-guidance/Office-365-development-patterns-and-practices-solution-guidance.md
   items:

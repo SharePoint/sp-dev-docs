@@ -9,7 +9,6 @@ ms.prod: sharepoint
 Learn how you can build a SharePoint Add-in that can access SAP data.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
  
 
 You can create a SharePoint Add-in that reads and writes SAP data, and optionally reads and writes SharePoint data, by using SAP Gateway for Microsoft and the Azure AD Authentication Library for .NET. This article provides the procedures for how you can design the SharePoint Add-in to get authorized access to SAP. 

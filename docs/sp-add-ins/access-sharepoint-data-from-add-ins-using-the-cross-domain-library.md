@@ -9,9 +9,6 @@ ms.prod: sharepoint
 Learn how to access data in a SharePoint website from your add-in by using the cross domain library in SharePoint.
  
 
- **Note**  The name "apps for SharePoint" is changing to "SharePoint Add-ins". During the transition, the documentation and the UI of some SharePoint products and Visual Studio tools might still use the term "apps for SharePoint". For details, see  [New name for apps for Office and SharePoint](new-name-for-apps-for-sharepoint.md#bk_newname).
- 
-
 When you build SharePoint Add-ins, you usually have to incorporate data from various sources. But for  [security reasons](http://msdn.microsoft.com/library/cc709423.aspx), there are blocking mechanisms that prevent communication with more than one domain at a time. These security mechanisms are implemented in most browsers, making difficult or impossible to accomplish client-side calls across domains.
  
 
