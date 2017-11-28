@@ -51,7 +51,7 @@ We deliberately opted to use the site collection administrator role for the “F
 #### Granting by adding a user or a group?
 You can achieve the same result by either granting the permissions to a user or a group, but both models have pro’s and con’s.
 
-| |**Equivalent SharePoint permission**|**Equivalent SharePoint permission**|
+| |**Group**|**User**|
 |:-----|:-----|:-----|
 | Clarity | A group can contain on or more accounts, typically not visible to the other site collection administrators | User account is always visible, there’s no doubt about it
 | Maintenance | You can easily grant access by adding new members to the group | New members must be added to all sites
@@ -134,13 +134,13 @@ foreach($sitecollection in $sitecollections) {
 
 #### Granting permissions using a custom developed application
 An alternative model for the PowerShell approach is creating a background application that enumerates all site collections (including modern team sites, OneDrive for Business sites, across locations when using Multi-Geo), checks if the needed user/group has access and if not adds that one. The architecture of such an application could be as simple as the one defined below:
-1. You start with defining an application in Azure AD for which you setup app-only usage (see “Setting up an Azure AD app for app-only access”) and grant full control on all site collections
+1. You start with defining an application in Azure AD for which you setup app-only usage (see “[Setting up an Azure AD app for app-only access](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/security-apponly-azuread)”) and grant full control on all site collections
 2. You create a C# application that authorizes itself using the Azure AD application you’ve defined in step 1 and iterates over all the site collections (this can include OD4B site collections) to add the needed accounts/groups if they’re not present
 3. This C# application then needs to be hosted and scheduled to run on regular intervals. Using an Azure web job is a good model for doing so, but the same could be done by running the application as a scheduled task on a server
 
 ![custom app approach explained](media/webapppolicies/customapp1.png)
 
-As part of this guidance we’ve created an application to get you started with this. The sample is called Governance.EnsurePolicy and can be found as part of this package.
+As part of this guidance we’ve created an application to get you started with this. The sample is called [Governance.EnsurePolicy](https://github.com/SharePoint/PnP/tree/master/Solutions/Governance.EnsurePolicy) and can be in the SharePoint PnP repository.
 
 > [!NOTE]
 > This scenario could be further expanded into an application that conditionally grants and removes permissions. For example, helpdesk employees could request access for a given site via creating a SharePoint list item, the application sees this and grants access for x hours…and removes the permissions later. This application also keeps a log showing who was granted access to which site and when.
