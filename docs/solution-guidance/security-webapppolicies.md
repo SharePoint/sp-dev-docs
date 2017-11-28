@@ -5,7 +5,9 @@ Web app policies are a concept that allows SharePoint administrators to either g
  - Grant support team read-only access to all sites so the support engineer can walk through the site with the end user
  - Deny users (e.g. after leaving the company) access to all content
 
-Web application policies do not exist anymore in SharePoint Online and there’s no identical alternative implementation possible, however by using the existing SharePoint security model you can achieve similar results. In this article, you’ll learn more about this.
+Web application policies do not exist anymore in SharePoint Online and there’s no identical alternative implementation possible, however by using the existing SharePoint security model you can achieve similar results. In this article and video you’ll learn more about this.
+
+> [!Video https://www.youtube.com/embed/zcmngkgQdTU]
 
 ## Granting access
 
