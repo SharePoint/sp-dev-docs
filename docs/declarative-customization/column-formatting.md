@@ -10,6 +10,9 @@ A list with the appearance of the Effort, Assigned To, and Status fields customi
 
 ![SharePoint list with three columns formatted](../images/sp-columnformatting-all.png)
 
+> [!TIP]
+> Samples demonstrated in this article and numerous other community samples are available from a GitHub repository dedicated for open sourced column formatting definitions. You can find these samples from [sp-dev-column-formatting](https://github.com/SharePoint/sp-dev-column-formatting) repository at [SharePoint](https://github.com/SharePoint) GitHub organization.
+
 ## How is column formatting different than the Field Customizer?
 Both column formatting and [SharePoint Framework Field Customizer](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/get-started/building-simple-field-customizer) extensions enable you to customize how fields in SharePoint lists are displayed. The Field Customizer is more powerful, because you can use it to write any code you want to control how a field is displayed. Column formatting is more easily and broadly applied. However, it is less flexible, because it does not allow for custom code; it only allows for certain predefined elements and attributes. 
 
