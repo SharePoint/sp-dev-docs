@@ -44,7 +44,7 @@ Site scripts can be run again on the same site after provisioning. This can only
 
 Site designs incorporate site scripts into the SharePoint user interface for creating new sites. They appear in a dropdown list when creating either a team site, or communication site. A site design has a title, and description, and specify one or more scripts to run.
 
-![site designs appear in drop down list under communication site](/images/site-designs-listed-on-communication-site-template.png)
+![site designs appear in drop down list under communication site](images/site-designs-listed-on-communication-site-template.png)
 
 You can create a site design by using PowerShell, CSOM, or the REST API. The following example shows how to create a new site design for the team site template.
 
@@ -62,7 +62,7 @@ TBD image of progress pane
 
 If you use the PnP provisioning engine to automate site creation you can integrate with site designs to maintain your current provisioning scripts. Site designs provide an action to trigger a Microsoft flow. This allows you to run any custom action you want, including running the PnP provisioning engine.
 
-![process of triggering a Microsoft flow](/images/process-for-triggering-a-custom-flow.png)
+![process of triggering a Microsoft flow](images/process-for-triggering-a-custom-flow.png)
 
 The process works as follows:
 1. The script instantiates your Microsoft flow using a URL with additional details.
