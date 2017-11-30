@@ -21,6 +21,7 @@ To create a self signed certificate with this script:
 The actual script can be copied from here:
 
 ```powershell
+#Requires -RunAsAdministrator
 <#
 .SYNOPSIS
 Creates a Self Signed Certificate for use in server to server authentication
@@ -278,5 +279,5 @@ namespace AzureADCertAuth
 
 ## FAQ
 ### Can I use other means besides certificates for realizing app-only access for my Azure AD app?
-No, all other options are blocked and by SharePoint Online and will result in an Access Denied message.
+No, all other options are blocked by SharePoint Online and will result in an Access Denied message.
 
