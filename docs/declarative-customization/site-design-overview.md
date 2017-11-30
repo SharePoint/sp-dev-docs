@@ -1,23 +1,39 @@
 ---
-# Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Site designs and site scripts
+title: SharePoint site design and site script overview
 description: Use site scripts and site designs to automate provisioning new SharePoint sites with custom configurations.
 ms.date: 11/19/2017
 ---
 
-# Overview of site design
-When people in your organization create new SharePoint sites, you often need to ensure proper branding and theming is applied to each new site. People and teams may need a set of standard configurations that they can use repeatedly for each new site. You may also have complicated site provisioning scripts that need to be repeated each time a new site is created. You can use site designs and site scripts to automate provioning new SharePoint sites using your own custom configurations.
+# SharePoint site design and site script overview
+
+Use site designs and site scripts to automate provisioning new SharePoint sites using your own custom configurations. When people in your organization create new SharePoint sites, you often need to ensure some level of consistency. For example, you may need proper branding and theming applied to each new site. You may also have detailed site provisioning scripts, such as using the PnP provisioning engine, that need to be applied each time a new site is created. This article describes how you can use site designs and site scripts to provide custom configurations to apply when new sites are created.
+
+## How site designs work
+
+You create site designs and register them in SharePoint to one of the modern template sites; the team site, or communication site. Site designs appear in a drop down list when someone creates a new site from one of the templates. Each site design has a title, description, and will run one or more scripts to create the new site as specified in the design.
+
+![site designs appear in drop down list under communication site](images/site-designs-listed-on-communication-site-template.png)
+
+Once a site design is selected, SharePoint creates the new site, and then runs any scripts registered with the site design. The script performs actions such as creating new lists, or applying a theme. Each action is recorded in a local list. When the scripts are done, SharePoint displays the results from the list in a progress pane.
+
+![Progress pane listing completed actions from a site design](images/progress-pane.png)
+
+You can create a site design by using PowerShell, CSOM, or the REST API. Here's an example of creating a new site design for the purpose of applying company branding.
 
 ```
-TBD need overview image
+TBD Powershell example of creating site design for brand (show isdefault)
 ```
+
+You can also make a site design the default for the team or communication site template. Then when someone chooses only the template, you can still apply a custom design. This is done by setting the **IsDefault** property to true as shown previously.
+
+For more information, see [Get started creating site designs](get-started-create-site-design.md)
 
 ## Anatomy of a site script
 
 Site scripts are JSON files that specify an ordered list of actions to run when creating the new site. Here's an example of a script with only one action that simply applies the blue yonder theme.
 
-```javascript
-var site_script = {
+```json
+{
     "$schema": "schema.json",
         "actions": [
             {
@@ -30,57 +46,52 @@ var site_script = {
 }
 ```
 
-Site scripts can apply themes, create lists, create pages, add navigation links, and set the logo. They can also trigger a Microsoft Flow in which you can specify any additional custom action you want.
+Each action in a site script is specified by a **verb** in the JSON.
 
-You can create site scripts by using PowerShell, CSOM, or the REST API. The following example shows how to create a new site script.
+Actions include:
+
+- Creating a new list
+- Applying a theme
+- Creating a page
+- Setting a site logo
+- Adding navigation
+- Triggering a Microsoft flow
+
+You can create site scripts by using PowerShell, CSOM, or the REST API. Here's an example of how to create a site script that applies the Blue Yonder theme.
 
 ```
-TBD: example powershell creating site script
+TBD PowerShell example create a script for blue yonder theme
 ```
+
+For more information, see [Get started creating site designs](get-started-create-site-design.md)
 
 Site scripts can be run again on the same site after provisioning. This can only be done programmatically. Site scripts are non-destructive, so when they run again, they ensure that the site matches the configuration in the script. For example, if the site already has a list with the same name that the site script is creating, the site script will only add missing fields to the existing list.
 
-## How site designs work
-
-Site designs incorporate site scripts into the SharePoint user interface for creating new sites. They appear in a dropdown list when creating either a team site, or communication site. A site design has a title, and description, and specify one or more scripts to run.
-
-![site designs appear in drop down list under communication site](images/site-designs-listed-on-communication-site-template.png)
-
-You can create a site design by using PowerShell, CSOM, or the REST API. The following example shows how to create a new site design for the team site template.
-
-```
-TBD powershell example creating a new site design
-```
-
-When someone creates a new site, and selects a site design, SharePoint creates the new site, and then runs any scripts registered with the site design. Each action is recorded in a local list. When the scripts are done, SharePoint displays the results from the list in a progress pane.
-
-```
-TBD image of progress pane
-```
-
 ## PnP Provisioning and customization using Microsoft Flow
 
-If you use the PnP provisioning engine to automate site creation you can integrate with site designs to maintain your current provisioning scripts. Site designs provide an action to trigger a Microsoft flow. This allows you to run any custom action you want, including running the PnP provisioning engine.
+One action provided by site scripts is the ability to trigger a Microsoft flow. This allows you to specify any custom action you need beyond the actions provided natively in site scripts.
+
+If you use the PnP provisioning engine to automate site creation, then you can use a Microsoft flow to integrate with site designs. You can continue maintaining all of your existing provisioning scripts as well as creating new customizations using this technique.
 
 ![process of triggering a Microsoft flow](images/process-for-triggering-a-custom-flow.png)
 
 The process works as follows:
+
 1. The script instantiates your Microsoft flow using a URL with additional details.
 1. The flow sends a message to an Azure storage queue that you have configured.
 1. The message triggers a call to an Azure function that you have configured.
 1. The Azure function runs your custom script, such as the PnP provisioning engine, to apply your custom configurations.
 
-For a step-by-step tutorial on how to configure this, see [Build a complete site design using the PnP provisioning engine](site-design-pnp-provisioning)
+For a step-by-step tutorial on how to configure your own Microsoft flow with PnP provisioning, see [Build a complete site design using the PnP provisioning engine](site-design-pnp-provisioning)
 
 ## Scoping
 
-You can configure site designs to only appear for specific groups or people in your organization. This is useful to ensure that people only see the site designs intended for them. For example, the accounting department can see only site designs that apply to them. 
+You can configure site designs to only appear for specific groups or people in your organization. This is useful to ensure that people only see the site designs intended for them. For example, you may want the accounting department to only see site designs specific for them. And the accounting site designs may not make sense to show to anyone else.
 
-Scopes are applied when you register a site design. You can specify the scope by user, Office 365 group, or a mail-enabled security group. The following example shows how to register a site design for just the accounting Office 365 group.
+Scopes are applied when you register a site design. You can specify the scope by user, Office 365 group, or a mail-enabled security group. Here is an example of registering a site design for only the accounting Office 365 group:
 
 ```
-TBD powershell example scope
+TBD: PowerShell example register a scoped site design
 ```
 
-For more information, see
-*  TBD(links to PowerShell cmdlet, CSOM, and REST refs)
+For more information, see [Apply a scope to your site design](site-design-scopes.md).

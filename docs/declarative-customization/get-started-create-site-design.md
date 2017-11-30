@@ -1,4 +1,4 @@
-# Get started customizing sites by using site designs
+# Get started creating site designs
 
 Build site designs to provide reusable lists, themes, layouts, pages, or custom actions so that your users can quickly build new SharePoint sites with the features they need. In this article you'll build a simple site design that adds a SharePoint list for tracking customer orders. Then you'll use the site design to create a new SharePoint site with the custom list.
 
