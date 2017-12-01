@@ -28,7 +28,7 @@ One of the properties specified in the web part manifest is the **preconfiguredE
   "manifestVersion": 2,
 
   "preconfiguredEntries": [{
-    "groupId": "6737645a-4443-4210-a70e-e5e2a219133a",
+    "groupId": "1edbd9a8-0bfb-4aa2-9afd-14b8c45dd489", // Discover
     "group": { "default": "Under Development" },
     "title": { "default": "Gallery" },
     "description": { "default": "Shows items from the selected list" },
@@ -54,22 +54,10 @@ title                   |ILocalizedString|yes     |The web part title that is di
 description             |ILocalizedString|yes     |The web part description that is displayed in the toolbox tooltips.|`"description": { "default": "Shows weather in the given location", "nl-nl": "Toont weerbericht voor de opgegeven locatie" } `
 officeFabricIconFontName|string          |no      |The icon for the web part that is displayed in the toolbox. Its value must be one of the [Office UI Fabric icon names](https://dev.office.com/fabric#/styles/icons). If this property has a value, the **iconImageUrl** property will be ignored.|`"officeFabricIconFontName": "Sunny"`
 iconImageUrl            |string          |no      |The icon for the web part that is displayed in the toolbox and is represented by an image URL. The image at the URL must be exactly 40 x 28 px. If the **officeFabricIconName** property does not have a value, this property must have a value.|`"iconImageUrl": "https://cdn.contoso.com/weather.png"`
-groupId                 |string          |yes     |The group id determines which toolbox group will contain the web part. The SharePoint Framework reserves group ids for default groups. The developer can pick one of those groups. If a group id is specified, then the **group** property will be ignored. Alternatively, the developer can pick a completely unique id and a group name. The toolbox will then show the web part in its own group.|`"groupId": "6737645a-4443-4210-a70e-e5e2a219133a"`
-group                   |ILocalizedString|no      |The name of the group in the toolbox in which the web part will be displayed. If no value is provided, then the web part will be displayed in the **Custom** group.|`"group": { "default": "Content", "nl-nl": "Inhoud" }`
+groupId                 |string          |yes     |The group id to determine which modern group contains the web part in modern site page. The SharePoint Framework reserves group ids for [predefined groups](#predefined-modern-groups). The developer can pick one from those groups. If the developer fills an id not in the predefined groups, it falls back to **Other** group.|`"groupId": "1edbd9a8-0bfb-4aa2-9afd-14b8c45dd489"`
+group                   |ILocalizedString|no      |The group name in web part picker to contain the web part in the classic page. If no value is provided, then the web part will be displayed in the **Custom** group.|`"group": { "default": "Content", "nl-nl": "Inhoud" }`
 dataVersion             |string          |no      |Use this field to specify the data version of the pre-configured data provided to the web part. Note that data version is different from the version field in the manifest. The manifest version is used to control the versioning of the web part code, while data version is used to control the versioning of the serialized data of the web part. Refer to dataVersion field of your web part for more information. Supported values format: MAJOR.MINOR version|`"dataVersion": "1.0"`
 properties              |TProperties     |yes     |A Key-value pair object with default values for web part properties.|`"properties": { "location": "Redmond", "numberOfDays": 3, "showIcon": true }`
-
-Out of the box Categories are following, which can be used for the `groupId` property.
-
-Category Name |Guid |Map to web part picker |Description        
---- |--- |--- |---
-Text, media, and content | `cf066440-0614-43d6-98ae-0b31cf14c7c3`| Media and Content  |This category includes web parts that display text, multi-media, documents, information from the web, and other rich content.   
-Discover | `1edbd9a8-0bfb-4aa2-9afd-14b8c45dd489`| Discovery  |This category includes web parts that organize, group, and filter content to help users discover information. 
-Communication and collaboration | `75e22ed5-fa14-4829-850a-c890608aca2d`| Social Collaboration |This category includes web parts that facilitate information sharing, team work, and social interactions.
-Planning and process | `1bc7927e-4a5e-4520-b540-71305c79c20a`| Business Data | This category includes web parts that empower team productivity with the use of planning and process tools. 
-Business and intelligence | `4aca9e90-eff5-4fa1-bac7-728f5f157b66`| Business Data | This category includes web parts for tracking and analyzing data, and for integrating business flow with pages. 
-Site tools | `070951d7-94da-4db8-b06e-9d581f1f55b1`| Site tools  |This category includes web parts for site information and management. 
-Other | `5c03119e-3074-46fd-976b-c60198311f70`| Others | This category includes web parts not in other categories.            
 
 Some web part properties have a value of type **ILocalizedString**. This type is a key-value pair object that allows developers to specify strings for the different locales. At a minimum, a value of type **ILocalizedString** must contain the **default** value. Optionally developers can provide the translations of that value to the different locales that their web part supports. If the web part is placed on a page in a locale that isn't listed in the localized string, the default value is used instead.
 
@@ -95,6 +83,22 @@ A **ILocalizedString** value that is not valid because the **default** key is mi
   "en-us": "Weather"
 }
 ```
+
+### Predefined modern groups
+
+There are 7 out of the box groups as shown in the following table. Use the group ID in the `groupId` property.
+
+| Group Name                      | ID                                     | Description                                                                                                                |
+|---------------------------------|----------------------------------------|----------------------------------------------------------------------------------------------------------------------------|
+| Text, media, and content        | `cf066440-0614-43d6-98ae-0b31cf14c7c3` | This group includes web parts that display text, multi-media, documents, information from the web, and other rich content. |
+| Discover                        | `1edbd9a8-0bfb-4aa2-9afd-14b8c45dd489` | This group includes web parts that organize, group, and filter content to help users discover information.                 |
+| Communication and collaboration | `75e22ed5-fa14-4829-850a-c890608aca2d` | This group includes web parts that facilitate information sharing, team work, and social interactions.                     |
+| Planning and process            | `1bc7927e-4a5e-4520-b540-71305c79c20a` | This group includes web parts that empower team productivity with the use of planning and process tools.                   |
+| Business and intelligence       | `4aca9e90-eff5-4fa1-bac7-728f5f157b66` | This group includes web parts for tracking and analyzing data, and for integrating business flow with pages.               |
+| Site tools                      | `070951d7-94da-4db8-b06e-9d581f1f55b1` | This group includes web parts for site information and management.                                                         |
+| Other                           | `5c03119e-3074-46fd-976b-c60198311f70` | This group includes web parts not in other groups.                                                                         |
+
+If the developer fills an id not in the above list, the web part will fall back to **Other** group.
 
 ## Using preconfigured entries in web parts
 

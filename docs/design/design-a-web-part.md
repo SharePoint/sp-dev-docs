@@ -1,6 +1,6 @@
 ---
 title: Designing a SharePoint web part
-ms.date: 11/22/2017 
+ms.date: 11/30/2017 
 ---
 
 # Designing a SharePoint web part
@@ -71,4 +71,11 @@ In step 2, the back and next buttons are enabled.
 
 In step 3, the next button is disabled and the back button is enabled.
 
-![Steps pane with back button enabled](../images/design-web-part-step-pane-03.png)
+![Steps pane with back button enabled](../images/design-web-part-steps-pane-03.png)
+
+
+## Additional resources
+
+- [Designing great SharePoint experiences](design-guidance-overview.md)
+
+
