@@ -28,7 +28,7 @@ One of the properties specified in the web part manifest is the **preconfiguredE
   "manifestVersion": 2,
 
   "preconfiguredEntries": [{
-    "groupId": "6737645a-4443-4210-a70e-e5e2a219133a",
+    "groupId": "1edbd9a8-0bfb-4aa2-9afd-14b8c45dd489", // Discover
     "group": { "default": "Under Development" },
     "title": { "default": "Gallery" },
     "description": { "default": "Shows items from the selected list" },
