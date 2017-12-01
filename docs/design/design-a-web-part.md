@@ -71,4 +71,4 @@ In step 2, the back and next buttons are enabled.
 
 In step 3, the next button is disabled and the back button is enabled.
 
-![Steps pane with back button enabled](../images/design-web-part-step-pane-03.png)
+![Steps pane with back button enabled](../images/design-web-part-steps-pane-03.png)
