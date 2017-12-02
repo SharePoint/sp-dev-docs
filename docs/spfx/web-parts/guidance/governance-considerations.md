@@ -7,7 +7,7 @@ ms.prod: sharepoint
 
 # SharePoint Framework solutions governance considerations
 
-With the SharePoint Framework, your organization can easily build solutions that easily integrate the capabilities available in SharePoint and Office 365. SharePoint Framework solutions work across modern web technologies and different mobile devices so you can create productive experiences and apps that are responsive and mobile-ready from day one. In order to get the moust benefit from SharePoint Framework solutions, your organization should have an actionable governance plan covering the most important project management considerations.
+With the SharePoint Framework, your organization can easily build solutions that easily integrate the capabilities available in SharePoint and Office 365. SharePoint Framework solutions work across modern web technologies and different mobile devices so you can create productive experiences and apps that are responsive and mobile-ready from day one. In order to get the most benefit from SharePoint Framework solutions, your organization should have an actionable governance plan covering the most important project management considerations.
 
 ## Anatomy of SharePoint Framework solutions
 
