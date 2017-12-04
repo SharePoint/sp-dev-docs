@@ -13,6 +13,7 @@ First release of the SharePoint Framework contained only support for client-side
 - [On-premises support for SharePoint 2016 (Feature Pack 2)](./sharepoint-2016-support.md)
 - [SharePoint Framework Extensions](./extensions/overview-extensions.md)
 - [Tenant properties](./tenant-properties.md)
+- [ALM APIs for SPFx solutions and add-ins](../apis/alm-api-for-spfx-add-ins.md)
 
 
 > [!NOTE]
@@ -45,11 +46,8 @@ First release of the SharePoint Framework contained only support for client-side
     - Tenant admin gets automatically notified 
     - Settings to control the default experience around approval process
 
-- ALM REST APIs - Deploy, activate, delete and upgrade apps and add-ins
-- ALM REST APIs targeted to support *everything* in the App Catalog, including add-ins
 - Automatic CDN hosting for code
     - Package JavaScript bundle into app package, which is automatically then deployed to a library that gets hosted on your tenant Office 365 CDN
-
 
 ## Developer Experience
 - SharePoint Framework Workbench 2.0: Development story for SharePoint Framework Extensions
@@ -59,6 +57,12 @@ First release of the SharePoint Framework contained only support for client-side
 ## Already shipped capabilities
 
 Following chapters are listing older items in the roadmap page, which have been already shipped.
+
+### ALM REST APIs
+
+- ALM REST APIs - Deploy, activate, delete and upgrade apps and add-ins
+- ALM REST APIs targeted to support *everything* in the App Catalog, including add-ins
+- CSOM and PowerShell cmdlets released as an open source community initiate
 
 ### JavaScript embedding support (JSLink, User Custom Actions) 
 
