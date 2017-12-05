@@ -203,7 +203,7 @@ Apply-PnPProvisioningTemplate -Path D:\home\site\wwwroot\ApplyPnPProvisioningTem
 Notice that we are using 2 environment variables, one called ```SPO_AppId```, the other ```SPO_AppSecret```. In order to set those variables navigate to your main Function App page in your Azure Portal, select **Application Settings** and add two new Application Settings:
 
 1. ```SPO_AppId```: set the value to the Client Id you copied in the first step when creating your app on your tenant.
-2. ```SPO_AppSecret```: set the value to the Client Secret you copied in the first step hen creating your app on your tenant.
+2. ```SPO_AppSecret```: set the value to the Client Secret you copied in the first step when creating your app on your tenant.
 
 # Creating the Site Design
 Open PowerShell and make sure you either have the Microsoft Office 365 Management Shell or the PnP PowerShell Module installed. Both will work, but the cmdlets are named slightly different. In this walkthrough we'll use the PnP PowerShell Cmdlets.
