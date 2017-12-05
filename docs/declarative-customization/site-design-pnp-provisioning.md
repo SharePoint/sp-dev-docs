@@ -179,8 +179,8 @@ Now it is time to upload those files so your Azure Function can make use of the 
     
     ![Create new folder](images/pnpprovisioning-kudu-create-folder.png)
 1. In that folder create another folder called **SharePointPnPPowerShellOnline** and navigate to the folder
-1. In your File Explorer on your computer navigate to the folder where you downloaded all the PnP PowerShell Module files. Navigate to the 
-**SharePointPnPPowerShellOnline\2.20.1711.0** in that folder (notice that depending on when you follow this walkthrough the version number can be different).
+1. In your File Explorer on your computer navigate to the folder where you downloaded all the PnP PowerShell Module files. Open the 
+**SharePointPnPPowerShellOnline\2.20.1711.0** folder (notice that depending on when you follow this walkthrough the version number can be different).
 1. Upload all files in that folder by dragging and dropping all the files from this folder into the folder in Kudu.
    ![Create new folder](images/pnpprovisioning-module-files-uploaded.png)
 
