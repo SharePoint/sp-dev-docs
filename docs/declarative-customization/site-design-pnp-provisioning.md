@@ -174,15 +174,13 @@ Now it is time to upload those files so your Azure Function can make use of the 
 1. Upload all files in that folder by dragging and dropping all the files from this folder into the folder in Kudu.
    ![Create new folder](images/pnpprovisioning-module-files-uploaded.png)
 
-## Uploading the Provisioning Template
+## Finishing the Azure Function
 1. Navigate back to your Azure Function and expand the files tab to the right.
 
     ![View Files](images/pnpprovisioning-view-files.png)
 
 1. Select **Upload** and upload your provisioning template file you created earlier.
-## Updating the Azure Function
-
-Navigate back to your Azure Function and replace the PowerShell script with the following
+1. Replace the PowerShell script with the following
 
 ```powershell
 $in = Get-Content $triggerInput -Raw
@@ -192,7 +190,7 @@ Write-Output "Connected to site"
 Apply-PnPProvisioningTemplate -Path D:\home\site\wwwroot\ApplyPnPProvisioningTemplate\FlowDemoTemplate.xml
 ```
 
-Notice that we are using 2 environment variables, one called ```SPO_AppId```, the other ```SPO_AppSecret```. In order to set those variables, navigate to your main Function App page in your Azure Portal and add two new Application Settings:
+Notice that we are using 2 environment variables, one called ```SPO_AppId```, the other ```SPO_AppSecret```. In order to set those variables navigate to your main Function App page in your Azure Portal, select **Application Settings** and add two new Application Settings:
 
 1. ```SPO_AppId```: set the value to the Client Id you copied in the first step when creating your app on your tenant.
 2. ```SPO_AppSecret```: set the value to the Client Secret you copied in the first step hen creating your app on your tenant.
