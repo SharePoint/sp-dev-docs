@@ -48,22 +48,22 @@ Now we will trust this app to have the appropriate access to your tenant:
 
 
 # Creating the Azure Storage Queue
-We start with creating the Azure Storage Queue first
+In this scenario we will use an Azure Storage Queue to receive messages from a Microsoft Flow. Everytime a message shows up in the Storage Queue an Azure Function will get triggered to execute a PowerShell script. But let us set up the Storage Queue first:
 
-1. Navigate to the Azure portal at https://portal.azure.com
+1. Navigate to the Azure portal at https://portal.azure.com and log in.
 1. Choose **+ New**
 1. Select **Storage** from the Azure Marketplace listings and select **Storage account - blob, file, table, queue** in the Featured column
 1. Provide values for the required fields as requested. Make sure to select **Pin to dashboard** for easy location later and click **Create**. The storage account is being created. This can take a few minutes.
 1. Open the Storage Account after it has been created and navigate to **Queues** in the navigation
 1. Choose **+ Queue** at the top of the main area of the screen.
 1. Enter **pnpprovisioningqueue** as the name or enter your own following the naming standard that is enforced. Make a note of the queue name as you need this value later when creating the Azure Function.
-1. Navigate to **Access Keys** and make note of the Storage Account Name and the key1 Key value, you will need those values in the next step where you create the flow.
+1. Navigate to **Access Keys** and make note of the **Storage Account Name** and the **key1 Key value**, you will need those values in the next step where you create the flow.
 
 
 # The Flow
 In order to put a message on the queue we have to create a flow. 
 
-1. Navigate to **https://flow.microsoft.com** and create a new flow by clicking **Create from Blank** at the top.
+1. Navigate to **https://flow.microsoft.com**, log in and create a new flow by clicking **Create from Blank** at the top.
 1. Click **Search hundreds of connectors and triggers** to select your trigger
 1. Search for **Request** and select **Request - When a HTTP Request is received**
 1. Enter the following JSON as your request body:
@@ -88,11 +88,21 @@ In order to put a message on the queue we have to create a flow.
         }
     }
     ``` 
-1. Select '+ New Step' and select 'Add an action'
-1. Search for 'Azure Queues' and select 'Azure Queues - Put a message on a queue'
-1. In the body specified in step 4 we specified an incoming parameter called siteurl. We will put the value of that parameter on the queue. Click in the 'message' field and select 'siteurl' from the Dynamic content picker.
+1. Select **+ New Step** and select **Add an action**
+1. Search for **Azure Queues** and select **Azure Queues - Put a message on a queue**
+1. Enter a name for the connection, this can be anything descriptive
+1. Enter the storage account name you copied in the previous section
+1. Enter the storage shared key, which is the value of the **Key1 key value** of your storage account.
+1. Click **Create**
+1. Select **pnpprovisioningqueue** as the Queue Name.
+1. In the body specified in step 4 we specified an incoming parameter called webUrl. We will put the value of that parameter on the queue. Click in the **message** field and select **webUrl** from the Dynamic Content picker.
+1. Click **Save Flow**. This will generate the URL we will copy in the next step.
 1. Click on the first step in your flow ('When an HTTP request is received') and copy the URL. We will need that to test and later on in our Site Design.
 1. Save your flow.
+
+Your flow should look like this:
+
+![Flow](images/pnpprovisioning-flow-overview.png)
 
 # Testing the flow
 In order to test your flow you have will have to make a post request. The easiest for that, if you are on a Windows PC, is to use PowerShell:
