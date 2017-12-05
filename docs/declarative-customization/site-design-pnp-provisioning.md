@@ -206,7 +206,7 @@ Notice that we are using 2 environment variables, one called ```SPO_AppId```, th
 2. ```SPO_AppSecret```: set the value to the Client Secret you copied in the first step when creating your app on your tenant.
 
 # Creating the Site Design
-Open PowerShell and make sure you either have the Microsoft Office 365 Management Shell or the PnP PowerShell Module installed. Both will work, but the cmdlets are named slightly different. In this walkthrough we'll use the PnP PowerShell Cmdlets.
+Open PowerShell and make sure you either have the Microsoft Office 365 Management Shell or the PnP PowerShell Module installed. Both will work, but the cmdlets are named slightly different. In this walkthrough we will use the [PnP PowerShell Cmdlets](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/?view=sharepoint-ps).
 
 First connect to your tenant using Connect-PnPOnline:
 
@@ -221,14 +221,16 @@ Get-PnPSiteDesign
 ```
 In order to create a Site Design you first need to create a Site Script. Think of a Site Design as a container which refers to 1 or more Site Scripts. 
 1. Copy the following JSON code to your clipboard and modify it. Set the url property to the value you copied when creating the flow. The URL looks alike :
-```https://prod-27.westus.logic.azure.com:443/workflows/ef7434cf0d704dd48ef5fb687f62c90c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=WEcYe2fxE0```
+
+```https://prod-27.westus.logic.azure.com:443/workflows/ef7434cf0d704dd48ef5fb6...oke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun```
+
     ```json
     {
         "$schema": "schema.json",
         "actions": [
            {
                 "verb": "triggerFlow",
-                "url": "[paste the workflow initiation URL here]",
+                "url": "[paste the workflow trigger URL here]",
                 "name": "Apply Template",
                 "parameters": {
                     "event":"",
