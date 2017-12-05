@@ -174,7 +174,7 @@ Now it is time to upload those files so your Azure Function can make use of the 
 
     ![Select Advanced Tools (Kudu))](images/pnpprovisioning-select-kudu.png)
 1. On the main Kudu page, select **Debug Console** and pick either **CMD** or **PowerShell**
-1. In the upper part of the page you see a file explorer. Navigate to **site\wwwroot**\\[nameofyourazurefunction]**
+1. In the upper part of the page you see a file explorer. Navigate to **site\wwwroot\\[nameofyourazurefunction]**
 1. Create a new folder and call that folder **modules**
     
     ![Create new folder](images/pnpprovisioning-kudu-create-folder.png)
