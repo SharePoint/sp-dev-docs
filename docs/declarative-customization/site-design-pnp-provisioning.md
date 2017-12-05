@@ -9,18 +9,18 @@ ms.date: 11/19/2017
 
 Site Designs offer a great way to standardize the look and feel of your site collections. But if you want to take this one step further, by for instance adding a footer to every page, you might notice that Site Designs do not offer you that option. With the PnP Provisioning engine you can hover create a template which allows you to provision an application customizer to a site. This application customizer then can register a footer on every page. In this article you will learn how to create a site design that applies a PnP Provisioning Template to a site which in turn will add an application customizer to render a footer.
 
-## The setup
 We use the following components in our setup:
 
 1. A Site Design and a Site Script
 1. A Microsoft Flow
 1. An Azure Storage Queue
 1. An Azure Function
-1. A SPFX Solution
+1. An SPFX Solution
 1. A PnP Provisioning Template
 1. A PnP PowerShell Script
+1. An AppId and AppSecret with administration rights on your tenant.
 
-We also need to set up App Only access to our tenant.
+We need all these component so we can trigger the PnP Provisioning code in a controller manner right after the site has been created and the Site Design is being applied.
 
 # Setting up App Only Access to your tenant
 This requires that you open 2 different pages on your tenant, one located in a normal site, the other located in your SharePoint Administration site.
@@ -47,7 +47,7 @@ Now we will trust this app to have the appropriate access to your tenant:
 1. You will receive a question if you want to trust this app. Confirm this by selecting **Trust It**
 
 
-# The Azure Storage Queue
+# Creating the Azure Storage Queue
 We start with creating the Azure Storage Queue first
 
 1. Navigate to the Azure portal at https://portal.azure.com
@@ -130,7 +130,7 @@ Copy the following XML to a new file and save the file as FlowDemoTemplate.xml
 </pnp:Provisioning>
 ```
 
-Notice that the template adds a custom action to the the web it is being applied to. It refers to ClientSideComponentId which is the one coming from the SPFX Solution you provisioned earlier. If you run this demo with your own SPFX Solution you will have to change the ClientSideComponentId and optionally the ClientSideComponentProperties attribute values in the XML.
+>Notice that the template adds a custom action to the the web it is being applied to. It refers to ClientSideComponentId which is the one coming from the SPFX Solution you provisioned earlier. If you run this demo with your own SPFX Solution you will have to change the ClientSideComponentId and optionally the ClientSideComponentProperties attribute values in the XML.
 
 # Create the Azure Function
 
@@ -194,3 +194,59 @@ Notice that we are using 2 environment variables, one called ```SPO_AppId```, th
 
 1. ```SPO_AppId```: set the value to the Client Id you copied in the first step when creating your app on your tenant.
 2. ```SPO_AppSecret```: set the value to the Client Secret you copied in the first step hen creating your app on your tenant.
+
+# Creating the Site Design
+Open PowerShell and make sure you either have the Microsoft Office 365 Management Shell or the PnP PowerShell Module installed. Both will work, but the cmdlets are named slightly different. In this walkthrough we'll use the PnP PowerShell Cmdlets.
+
+First connect to your tenant using Connect-PnPOnline:
+
+```powershell
+Connect-PnPOnline -Url https://[yourtenant]-admin.sharepoint.com
+```
+
+Now you can retrieve the existing Site Designs using 
+
+```powershell
+Get-PnPSiteDesign
+```
+In order to create a Site Design you first need to create a Site Script. Think of a Site Design as a container which refers to 1 or more Site Scripts. 
+1. Copy the following JSON code to your clipboard and modify it. Set the url property to the value you copied when creating the flow. The URL looks alike :
+```https://prod-27.westus.logic.azure.com:443/workflows/ef7434cf0d704dd48ef5fb687f62c90c/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=WEcYe2fxE0```
+    ```json
+    {
+        "$schema": "schema.json",
+        "actions": [
+           {
+                "verb": "triggerFlow",
+                "url": "[paste the workflow initiation URL here]",
+                "name": "Apply Template",
+                "parameters": {
+                    "event":"",
+                    "product":""
+                }
+           }
+        ],
+        "bindata": {},
+        "version": 1
+    }
+    ```
+1. After modifying the JSON by inserting the correct URL to trigger your flow, select it all and copy it again to your clipboard
+1. Open PowerShell and enter the following to copy the script into a variable and create the site script
+    ```powershell
+    $script = Get-Clipboard -Raw
+    Add-PnPSiteDesign -Title "Apply PnP Provisioning Template" -Content $script
+    Get-PnPSiteDesign
+    ```
+1. You should be presented with a list of or one or more site script, including the site script you just created
+1. Select the ID of the Site Script you just created and copy it to the clipboard
+1. Create the Site Design:
+    ```powershell
+    Add-PnPSiteDesign -Title "Site with footer" --SiteScriptIds [Paste the ID of the Site Script here] -WebTemplate TeamSite
+    ```
+
+# Concluding
+After you created your Storage Queue, you created the app Id for the app only access, you correctly created the Azure Function, you created the Site Design and triggered the correct Microsoft Flow from the Site Design, you are all good to go. 
+
+Try creating a new site by navigating to your SharePoint Tenant. Select **SharePoint**, select **Create Site**, Select Team Site. Your newly create Site Design should show up as a possible design option. Create your site and notice the Site Design being applied after the site has been created. If you configured it all correctly you should see your flow being triggered. You can check the Run History of the flow if it was executed correctly. As it can take a bit before the PnP Provisioning Template has been applied, it can be that the footer does not show up immediately. Give it a minute and reload your site to check again.
+
+
