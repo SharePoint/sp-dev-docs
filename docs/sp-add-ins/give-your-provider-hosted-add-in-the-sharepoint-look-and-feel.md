@@ -1,14 +1,14 @@
 ---
 title: Give your provider-hosted add-in the SharePoint look-and-feel
 description: Get to know the base add-in, configure Visual Studio to rebuild the corporate database, add SharePoint chrome and top bar to the start page, run the add-in, and test the new UI.
-ms.date: 11/02/2017
+ms.date: 12/04/2017
 ms.prod: sharepoint
 ---
 
 
 # Give your provider-hosted add-in the SharePoint look-and-feel
 
-This is the second in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with the topic [SharePoint Add-ins](sharepoint-add-ins.md) and the previous article in this series:
+This is the second in a series of articles about the basics of developing provider-hosted SharePoint Add-ins. You should first be familiar with the topic [SharePoint Add-ins](sharepoint-add-ins.md) and the overview article in this series:
 
 -  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
     

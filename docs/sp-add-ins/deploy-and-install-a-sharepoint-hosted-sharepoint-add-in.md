@@ -1,13 +1,13 @@
 ---
 title: Deploy and install a SharePoint-hosted SharePoint Add-in
 description: Create an add-in catalog, package and upload the add-in to the catalog, install and remove the add-in.
-ms.date: 11/02/2017
+ms.date: 12/04/2017
 ms.prod: sharepoint
 ---
 
 # Deploy and install a SharePoint-hosted SharePoint Add-in
 
-This is the second in a series of articles about the basics of developing SharePoint-hosted SharePoint Add-ins. You should first be familiar with the topic [SharePoint Add-ins](sharepoint-add-ins.md) and the previous article in this series:
+This is the second in a series of articles about the basics of developing SharePoint-hosted SharePoint Add-ins. You should first be familiar with the topic [SharePoint Add-ins](sharepoint-add-ins.md) and the overview article in this series:
 
 -  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md)
     
@@ -77,7 +77,7 @@ To continue enhancing the same SharePoint Add-in in Visual Studio (see [Next ste
 ## Next steps
 <a name="Nextsteps"></a>
 
-We strongly recommend that you continue with this series about SharePoint-hosted add-ins before you go on to the more advanced topics. Next we get back to coding in [Add custom columns to a SharePoint-hosted SharePoint Add-in](add-custom-columns-to-a-sharepoint-hosted-sharepoint-add-in.md).
+We strongly recommend that you continue with this series about SharePoint-hosted add-ins before you go on to the more advanced topics. Next, we get back to coding in [Add custom columns to a SharePoint-hosted SharePoint Add-in](add-custom-columns-to-a-sharepoint-hosted-sharepoint-add-in.md).
  
 
  
