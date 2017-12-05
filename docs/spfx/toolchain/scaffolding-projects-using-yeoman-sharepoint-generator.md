@@ -63,19 +63,18 @@ yo @microsoft/sharepoint --solutionName "hello-world" --framework "react" --comp
 
 > Notice that some of the options have dependencies between each other. You cannot for example create extension with on-premises option.
 
-### Notes on --skip-install 
+> [!NOTE]
+> Using the `--skip-install` command will scaffold the project and skip installing dependencies. This means, to successfully build the project, you will need to install the dependencies later once the project is scaffolded. 
 
-Using the `--skip-install` command will scaffold the project and skip installing dependencies. This means, to successfully build the project, you will need to install the dependencies later once the project is scaffolded. 
+> If you try to build your project without installing the dependencies, then you will get the following error. This indicates you need to install the dependencies before building the project:
 
-If you try to build your project without installing the dependencies, then you will get the following error. This indicates you need to install the dependencies before building the project:
+> ```
+> Local gulp not found in ~/<project-name>
+> Try running: npm install gulp
+> ```
 
-```
-Local gulp not found in ~/<project-name>
-Try running: npm install gulp
-```
+> You can execute the following command to install the dependencies:
 
-You can execute the following command to install the dependencies:
-
-```
-npm install
-```
+> ```
+> npm install
+> ```

@@ -33,8 +33,9 @@ For example, you can use a Security Trim panel to display the following content 
   
 - A sign-in link separate from the ribbon, for non-authenticated users or users who have yet to be authenticated.
     
-    > **Note:**
-      > This sign-in link is inserted automatically into a master page that is created by using Design Manager, but you can delete it if it's not needed. 
+    > [!NOTE]
+    > This sign-in link is inserted automatically into a master page that is created by using Design Manager, but you can delete it if it's not needed. 
+
 A Security Trim panel has two important property settings, one for authentication and one for permissions (or authorization). For example, you can use a Security Trim panel to display the following content to specific users:
   
     
@@ -45,18 +46,15 @@ A Security Trim panel has two important property settings, one for authenticatio
   
 - **Permissions** With this property, you can select a specific permission that users must have to view the content in the panel.
     
-    > **Note:**
-      > You are selecting an individual permission, not a permission level. (A permission level is a set of granted permissions.) 
+    > [!NOTE]
+    > You are selecting an individual permission, not a permission level. (A permission level is a set of granted permissions.) 
 Of course, if you restrict the authentication to only anonymous users, it's typically not necessary to specify a specific permission because anonymous users have usually not been given any SharePoint permissions. It makes sense to use permissions only with all users or with all authenticated users.
   
     
     
 The Security Trim panel has three options on the ribbon, listed in the left column of Table 1. Table 1 shows how these settings determine the specific permission that users are required to have, the lowest default permission level that includes that specific permission, and the group that is linked to that permission level by default.)
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > These are the default settings, which can be changed for any given scope, such as a site collection, site, list, or item. 
   
     

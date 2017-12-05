@@ -82,7 +82,7 @@ To mark an association so that it is crawled as an attachment, add the **Attachm
 ```
 
 
-> **Note:**
+> [!NOTE]
 > You can specify any value for the **AttachmentAccessor** property; Search does not examine this value.
   
     
@@ -108,8 +108,7 @@ To mark an association so that it is crawled as a child external content type, a
 </Association>
 ```
 
-
-> **Note:**
+> [!NOTE]
 > You can specify any value for the **DirectoryLink** property. Search does not examine this value.
   
     

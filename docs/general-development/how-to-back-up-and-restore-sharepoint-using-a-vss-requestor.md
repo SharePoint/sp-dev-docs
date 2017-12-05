@@ -54,9 +54,8 @@ VSS has special requirements for the accounts running the writers on all targete
   
 Also, to be hosted by the SharePoint Foundation Timer service (owstimer.exe), the writer service must run under the administration application pool account, which is the "Network Service" account in a basic installation of SharePoint Foundation. 
   
-    
-    
- **Note** It is very unlikely that this account will be a local machine admin account, which differs from the requirement for VSS where the processing account must be running as local system.
+> [!NOTE]
+> It is very unlikely that this account will be a local machine admin account, which differs from the requirement for VSS where the processing account must be running as local system.
   
     
     

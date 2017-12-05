@@ -70,8 +70,9 @@ Like all snippets, you add a Device Channel Panel snippet from the Snippet Galle
     
     The section named **Important** contains the properties that are key to how this particular snippet works. For a Device Channel Panel, the **IncludedChannels** property is the most important. For this property, enter the alias of each Device Channel that you want to display the content contained in this Device Channel Panel. If you enter more than one alias, separate each with a comma.
     
-    > **Note:**
-      > If you edit the alias of a channel in the Device Channels list, you must manually find and update that alias wherever it appears in your design files, including updating the **IncludedChannels** property for every Device Channel Panel that uses that alias
+    > [!NOTE]
+    > If you edit the alias of a channel in the Device Channels list, you must manually find and update that alias wherever it appears in your design files, including updating the **IncludedChannels** property for every Device Channel Panel that uses that alias.
+
 8. After you configure any other properties, choose **Update**. This updates the HTML snippet on the left side of the page, so that the markup reflects your custom settings. You can always choose **Reset** to return all properties to their default settings.
     
   
@@ -104,10 +105,7 @@ Like all snippets, you add a Device Channel Panel snippet from the Snippet Galle
 
 The two most important parts of a Device Channel Panel snippet are the **IncludedChannels** property and the **<div>** where `class="DefaultContentBlock"`. By default, the **IncludedChannels** property is empty. In the **Important** section of the property grid, you should enter the aliases, separated by commas, of the device channels that you want to display the content in this panel.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > If you change an alias in the Device Channels list, you must also change that alias wherever it appears in your markup, including in the **IncludedChannels** property for every Device Channel Panel that uses that alias.
   
     

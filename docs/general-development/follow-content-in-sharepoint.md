@@ -47,10 +47,7 @@ As a best practice in SharePoint development, use client APIs when you can. Clie
     
 Each API includes a manager object that you use to perform core tasks for following content.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The same APIs are used to follow people. See  [Follow people in SharePoint](follow-people-in-sharepoint.md) for an overview of Following People tasks.
   
     
@@ -58,10 +55,7 @@ Each API includes a manager object that you use to perform core tasks for follow
 
 Table 1 shows the manager and other key objects (or REST resources) in the APIs and the class library (or access point) where you can find them.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The Silverlight and mobile client object models are not included in Table 1 or Table 2 because they provide the same core functionality as the .NET client object model and use the same signatures. The Silverlight client object model is defined in Microsoft.SharePoint.Client.UserProfiles.Silverlight.dll, and the mobile client object model is defined in Microsoft.SharePoint.Client.UserProfiles.Phone.dll. 
   
     
@@ -83,10 +77,7 @@ Table 1 shows the manager and other key objects (or REST resources) in the APIs 
 
 Table 2 shows common programming tasks for following content and the members that you use to perform them. Members are from the .NET client object model (CSOM), JavaScript object model (JSOM), REST service, and server object model (SSOM).
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The same APIs are used to follow people. See  [Follow people in SharePoint](follow-people-in-sharepoint.md) for an overview of Following People tasks.
   
     
@@ -107,8 +98,7 @@ Table 2 shows common programming tasks for following content and the members tha
 |Get the URI of the site that lists the current user's followed documents|CSOM:  [FollowedDocumentsUri](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.FollowedDocumentsUri.aspx) <br/> JSOM:  [followedDocumentsUri](http://msdn.microsoft.com/library/3a70b9c7-abd7-94ff-d730-70298673d6ec%28Office.15%29.aspx) <br/> REST: **GET** [`<siteUri>/_api/social.following/my/FollowedDocumentsUri`](following-people-and-content-rest-api-reference-for-sharepoint.md#bk_MyFollowedDocumentsUri) <br/> SSOM:  [FollowedDocumentsUri](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFollowingManager.FollowedDocumentsUri.aspx)|
 |Get the URI of the site that lists the current user's followed sites|CSOM:  [FollowedSitesUri](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.FollowedSitesUri.aspx) <br/> JSOM:  [followedSitesUri](http://msdn.microsoft.com/library/829404bc-1b3a-7545-5e95-0922df330084%28Office.15%29.aspx) <br/> REST: **GET** [`<siteUri>/_api/social.following/my/FollowedSitesUri`](following-people-and-content-rest-api-reference-for-sharepoint.md#bk_MyFollowedSitesUri) <br/> SSOM:  [FollowedSitesUri](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFollowingManager.FollowedSitesUri.aspx)|
    
-
-> **Note:**
+> [!NOTE]
 > For examples that show how to use the REST service to follow content, see  [How to: Follow documents, sites, and tags by using the REST service in SharePoint](how-to-follow-documents-sites-and-tags-by-using-the-rest-service-in-sharepoint-2.md). 
   
     

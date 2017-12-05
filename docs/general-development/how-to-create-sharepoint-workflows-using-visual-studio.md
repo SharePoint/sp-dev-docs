@@ -12,7 +12,7 @@ Learn the basics of creating a SharePoint workflow in the new SharePoint workflo
 
 **Provided by:** [Andrew Connell](http://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [AndrewConnell.com](http://www.andrewconnell.com)
 
-> **Note:**
+> [!NOTE]
 > This article is accompanied by an end-to-end code sample that you can use to follow the article, or as a starter for your own SharePoint workflow projects. You can find the downloadable code here: LINK. 
     
 Microsoft has taken a very different approach to workflows in SharePoint than in previous versions. SharePoint workflows are now based on Windows Workflow Foundation 4, and their execution is driven by a new component called Workflow Manager, which runs externally to SharePoint.Workflow Manager serves the role as host for the Windows Workflow Foundation runtime and all the necessary services in a highly available and scalable way. It leverages Service Bus for performance and scalability, and when deployed it runs exactly the same in an on-premises deployment as when deployed to a cloud-based service, such as Office 365, because it is configured to hand off all workflow execution and related tasks to the Workflow Manager farm.The dramatic change in the workflow architecture required some changes to the two primary workflow authoring tools for creating custom workflows - Visual Studio and SharePoint Designer. This article will explore using Visual Studio 2012 as your workflow authoring tool to create custom workflows for use in **sp15allshort** deployments - either on-premises or Office 365 deployments
@@ -58,11 +58,7 @@ The stage construct within a SharePoint Designer 2013 based workflow is based on
     
 ![Figure 1. Flowchart workflow](../images/ngWfFig01.png)
   
-    
-    
-
-    
-> **Note:**
+> [!NOTE]
 > You can find the workflow depicted in Figure 1 as a workflow sample on MSDN here:  [SharePoint: Approval workflow that uses a custom initiation form](http://code.msdn.microsoft.com/officeapps/SharePoint-Approval-f5ac5eb2). 
   
     
@@ -87,11 +83,7 @@ State machine workflows, like flowchart workflows, do not typically follow a spe
     
 ![Figure 2. State machine workflow](../images/ngWfFig02.png)
   
-    
-    
-
-    
-> **Note:**
+> [!NOTE]
 > You can find the workflow depicted in Figure 1 as a workflow sample on MSDN here:  [SharePoint: Route workflows to states depending on actions and events](http://code.msdn.microsoft.com/officeapps/SharePoint-Route-25a25d87). 
   
     
@@ -354,8 +346,8 @@ To get user information, do the following:
 
 1. Rename our first sequence ( **Child Sequence 1**) to "Get Item Properties" and name the second sequence to "Get Author Properties".
     
-    > **Note:**
-      > Make certain the variable that contains the user ID is scoped to the whole workflow and not just to the sequence we were working on. Let's change the scope of the variable now, as shown in Figure 8. 
+    > [!NOTE]
+    > Make certain the variable that contains the user ID is scoped to the whole workflow and not just to the sequence we were working on. Let's change the scope of the variable now, as shown in Figure 8. 
 
    **Figure 8. Changing the scope of variables**
 

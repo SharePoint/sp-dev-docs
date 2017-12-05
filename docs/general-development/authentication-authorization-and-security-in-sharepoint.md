@@ -50,7 +50,7 @@ SharePoint supports security for user access at the website, list, list or libra
     
     
 
-> **Note:**
+> [!NOTE]
 > For information about authorization related to SharePoint Add-ins, see  [Authorization and authentication of SharePoint Add-ins](http://msdn.microsoft.com/library/bde5647a-fff1-4b51-b67b-2139de79ce4a%28Office.15%29.aspx). 
   
     
@@ -77,7 +77,7 @@ SharePoint supports the following types of authentication:
     
   
 
-> **Note:**
+> [!NOTE]
 > SharePoint does not support working with a case-sensitive membership provider. It uses case-insensitive SQL storage for all users in the database, regardless of the membership provider. 
   
     
@@ -109,7 +109,7 @@ When a user signs in to SharePoint, the user's token is validated and then used 
     
   
 
-> **Note:**
+> [!NOTE]
 > For more information about signing into SharePoint and the different sign-in modes, see  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint.md). 
   
     
@@ -141,7 +141,7 @@ Under this model, your application makes identity-related decisions based on cla
     
     
 
-> **Note:**
+> [!NOTE]
 > For more information about claims-based identity and claims providers, see  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint.md) and [Claims provider in SharePoint](claims-provider-in-sharepoint.md). 
   
     
@@ -160,7 +160,7 @@ The membership provider is responsible for validating the credential information
     
     
 
-> **Note:**
+> [!NOTE]
 > For more information about STS, see  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint.md). 
   
     
@@ -171,7 +171,7 @@ The role manager is optional. If a custom authentication system does not support
     
     
 
-> **Note:**
+> [!NOTE]
 > For more information about claims-based identity and claims providers, see  [Claims-based identity and concepts in SharePoint](claims-based-identity-and-concepts-in-sharepoint.md) and [Claims provider in SharePoint](claims-provider-in-sharepoint.md). 
   
     
@@ -179,10 +179,7 @@ The role manager is optional. If a custom authentication system does not support
 
 In ASP.NET membership and role passive sign-in, the sign-in happens by redirecting the client to a web page where the ASP.NET log-in controls are hosted. After the identity object that represents a user identity is created, SharePoint converts it to a  [ClaimsIdentity](https://msdn.microsoft.com/library/Microsoft.IdentityModel.Claims.ClaimsIdentity.aspx) object (which represents a claims-based representation of a user).
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > For more information about signing into SharePoint, see  [Incoming claims: Signing into SharePoint](incoming-claims-signing-into-sharepoint.md). 
   
     
@@ -194,10 +191,7 @@ SharePoint consumes the standard ASP.NET role provider interface to gather group
     
 For information about the pluggable authentication framework provided by ASP.NET, see ASP.NET developer documentation.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > For more information about forms-based authentication, see  [Forms authentication in SharePoint products and technologies (Part 1): Introduction](http://msdn.microsoft.com/library/e5efd4d7-b369-49f0-a6f7-431d21daff20%28Office.15%29.aspx). 
   
     

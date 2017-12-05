@@ -19,10 +19,7 @@ After you convert an HTML master page or create an HTML page layout, you can pre
     
 After you copy a snippet into the HTML file in your mapped drive and then save the changes, you can refresh the server-side preview of the HTML file to see how the control is rendered. Snippets contain markup that provides a design-time preview in your HTML editor of choice, but you shouldn't edit this markup because it's read-only and doesn't affect how the control is rendered on the server. By contrast, the server-side preview shows a full-fidelity preview with live data, if available—for example, a navigation control will show the site's current navigation structure with live data from your data source, such as a SharePoint term store for managed navigation.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > For more information about mapping a network drive, see  [How to: Map a network drive to the SharePoint Master Page Gallery](how-to-map-a-network-drive-to-the-sharepoint-master-page-gallery.md). 
   
     

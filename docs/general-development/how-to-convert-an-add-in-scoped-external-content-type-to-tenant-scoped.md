@@ -43,8 +43,9 @@ The following steps show you how to create the OData-based external content type
     
     Specify a name for your OData source.
     
-    > **Note:**
-      > For this example, you will use the Northwind service that is available from the producers list located on the  [Open Data Protocol website](http://www.odata.org). 
+    > [!NOTE]
+    > For this example, you will use the Northwind service that is available from the producers list located on the  [Open Data Protocol website](http://www.odata.org). 
+    
 6. A list appears showing data entities that are being exposed by the OData Service. Select one or more of the entities, and choose **Finish**.
     
   

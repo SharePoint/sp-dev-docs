@@ -56,10 +56,7 @@ When a page layout includes one or more Web Part zones, the Web Part zones are a
     
 If you want complete control over how a Web Part appears on your site, and if you want that Web Part to appear on all pages of a certain type, add the Web Part directly to a page layout. If you want a Web Part to appear on all pages in a site, you can also add a Web Part directly to a master page.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Web Part zones are available on page layouts but not on master pages—the purpose of zones is to allow authors to modify Web Parts, and authors typically don't edit a master page. 
   
     
@@ -112,8 +109,7 @@ Table 1 shows important properties to consider when you want to restrict a Web P
 |**AllowCustomization** <br/> |Specifies whether shared property values of Web Parts within the zone can be modified.  <br/> If set to **True**, users with appropriate permissions can make changes to the Web Parts in the zone for all users.  <br/> If set to **False**, users cannot make changes to the Web Parts in the zone in the UI in shared view. But, changes can still be made programmatically and by using the Web Part Maintenance page.  <br/> |
 |**AllowPersonalization** <br/> |Specifies whether personal property values of Web Parts within the zone can be modified.  <br/> If set to **True**, users with appropriate permissions can make personal changes to the Web Parts in the zone.  <br/> If set to **False**, users cannot make personal changes to the Web Parts through the UI, unless the Web Part is a private Web Part and they have appropriate permissions.  <br/> |
    
-
-> **Note:**
+> [!NOTE]
 > You cannot insert a Web Part zone inside a Device Channel Panel. If you want to allow authors to add Web Parts to a page, and if you are not concerned about the page weight for mobile devices, you can add a Rich Text Editor page field to a Device Channel Panel, and then instruct authors to add Web Parts there. You can add Web Parts directly to a Device Channel Panel (without a Web Part zone). For more information, see  [How to: Add a Device Channel Panel snippet in SharePoint](how-to-add-a-device-channel-panel-snippet-in-sharepoint.md). 
   
     
@@ -155,8 +151,9 @@ Like all snippets, you add this snippet from the Snippet Gallery. To navigate to
     
     For descriptions of properties that are necessary for restricting a Web Part zone ( **LockLayout**, **AllowCustomization**, and **AllowPersonalization**), see Table 1.
     
-    > **Note:**
-      > You may notice that some property names are bold in the property grid of the Snippet Gallery. These properties have values that have been changed from the default setting for this component, but these properties are not necessarily relevant to a designer scenario. In other words, a property may be bold but not necessarily important for your scenario. 
+    > [!NOTE]
+    > You may notice that some property names are bold in the property grid of the Snippet Gallery. These properties have values that have been changed from the default setting for this component, but these properties are not necessarily relevant to a designer scenario. In other words, a property may be bold but not necessarily important for your scenario. 
+
 8. After you configure any properties, choose **Update**. This updates the HTML snippet on the left side of the page, so that the markup reflects your custom settings. You can always choose **Reset** to return all properties to their default settings.
     
   
@@ -192,10 +189,7 @@ The two most important parts of a Web Part zone snippet are the **ID** property 
     
 Additional properties that can be used to restrict how content authors can use zones ( **AllowCustomization**, **AllowPersonalization**, and **LockLayout**) are shown in the following code.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The **AllowCustomization**, **AllowPersonalization**, and **LockLayout** properties appear in the markup only if you change their default values in the property grid.
   
     

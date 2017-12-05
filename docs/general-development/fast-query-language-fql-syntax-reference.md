@@ -192,8 +192,9 @@ In these **datetime** formats:
 
 -  _YYYY_ specifies a four-digit year.
     
-    > **Note:**
-      > Only four-digit years are supported. 
+    > [!NOTE]
+    > Only four-digit years are supported. 
+
 -  _MM_ specifies a two-digit month. For example, 01 = January.
     
   
@@ -355,8 +356,7 @@ Table 4 provides a list of the supported operators.
 | [STRING](fast-query-language-fql-syntax-reference.md#fql_string_operator) <br/> |Define a Boolean matching condition to a text string.  <br/> |String  <br/> |
 | [XRANK](fast-query-language-fql-syntax-reference.md#fql_xrank_operator) <br/> |Enables you to boost the dynamic rank of items based on certain term occurrences without changing which items match the query. A **XRANK** expression contains one component that must be matched, and one or more components that contribute only to dynamic ranking. <br/> |Relevance  <br/> |
    
-
-> **Note:**
+> [!NOTE]
 > In SharePoint, the **RANK** operator is deprecated and will no longer have any effect. Use **XRANK** instead.
   
     
@@ -440,8 +440,7 @@ Not applicable.
 ### ANY
 <a name="fql_any_operator"> </a>
 
-
-> **Note:**
+> [!NOTE]
 > In SharePoint, the **ANY** operator is deprecated. Use the **OR** operator instead.
   
     
@@ -453,11 +452,8 @@ Similar to the  [OR](fast-query-language-fql-syntax-reference.md#fql_or_operator
     
 The dynamic ranking component for this part of the query is based on the best matching term within the **ANY** expression.
   
-    
-    
-
-> **Note:**
-> The difference from **OR** is related only to the ranking within the result set. The same total set of items will match the query.
+> [!NOTE]
+> he difference from **OR** is related only to the ranking within the result set. The same total set of items will match the query.
   
     
     
@@ -1278,8 +1274,7 @@ The **STRING** operator can also be used as a type conversion. The query `string
 | _linguistics_ <br/> |**on\|off** <br/> |Disables/enables all linguistics features for the string (lemmatization, synonyms, spelling checking) if they are enabled for the query.  <br/> You can use this parameter to switch off linguistic processing for a given term or string while you still want the term or string to contribute to ranking.  <br/> Default: **"ON"** <br/> |
 | _wildcard_ <br/> |**on\|off** <br/> | This parameter controls wildcard expansion of terms inside the _\<text string\>_. This setting overrides any wildcard settings in query parameters, and allows extended wildcard characters to be enabled or disabled on specific parts of the query.  <br/>  The following are valid values: <br/><ul><li> **"ON"** Specifies that the character "\*" is evaluated as wildcard. A "\*" character matches zero or more characters.  </li><li> **"OFF"** Specifies that the characters "\*" is not evaluated as wildcard.  </li></ul>  Default: **"ON"** <br/> |
    
-
-> **Note:**
+> [!NOTE]
 > In SharePoint the  _minexpansion_,  _maxexpansion_ and _annotation_class_ parameters for the **STRING** operator are obsolete.
   
     
@@ -1453,10 +1448,7 @@ Boosts the dynamic rank of items based on certain term occurrences within the  _
     
  _Match expressions_ may be any valid FQL expression, including nested **XRANK** expressions. _Rank expressions_ may be any valid FQL expression without **XRANK** expressions. If your FQL queries have multiple **XRANK** operators, the final dynamic rank value is calculated as a sum of boosts across all **XRANK** operators.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > In SharePoint Server 2010, the **XRANK** operator had two parameters: _boost_ and _boostall_, as well as the following syntax:  `xrank(operand, rank-operand [, rank-operand]* [,boost=n] [,boostall=yes])`. This syntax along with its parameters is deprecated in SharePoint. We recommend the use of the new syntax and parameters instead. 
   
     

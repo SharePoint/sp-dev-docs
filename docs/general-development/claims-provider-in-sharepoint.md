@@ -16,10 +16,7 @@ A claims provider in SharePoint Server issues claims and packages claims into se
     
 A claims provider in SharePoint has two roles: augmentation and picking.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > For information about how to create a claims provider, see  [How to: Create a claims provider in SharePoint](how-to-create-a-claims-provider-in-sharepoint.md). 
   
     
@@ -66,10 +63,7 @@ Users can override the built-in claims provider to implement custom search, name
 
 In SharePoint Server, there are some specific built-in claims providers that enable implementation support for concepts like authenticated users. This is also known as an All Users claim. This scenario enables you to grant rights to all users from a given authentication provider.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > An authentication provider can be a Windows Active Directory, forms-based authentication, or a trusted SAML token issuer (that is, an STS). 
   
     

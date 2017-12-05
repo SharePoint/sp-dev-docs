@@ -43,10 +43,7 @@ An MSI package named SQLSysClrTypes.msi must be installed on every SharePoint fr
 
 A map view is a SharePoint view that displays a map (with data obtained from the Bing Maps service), using longitude and latitude entries from the **Geolocation** field type. When the **Geolocation** field type is available on the SharePoint list, a map view can be created either programmatically or from the SharePoint UI. In the list, SharePoint displays the location on a map powered by Bing Maps. In addition, a new view type named **Map View** displays the list items as pushpins on a Bing Maps Ajax control V7 with the list items as cards on the left pane.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Any SharePoint list can have maximum of two **Geolocation** columns in it; you won't be able to add a third **Geolocation** column in the same list. A map view can have only one **Geolocation** column. You can create multiple map views with different **Geolocation** columns.
   
     
@@ -98,8 +95,8 @@ The following steps demonstrate how to create a map view from the SharePoint UI.
   
 
     
-    > **Note:**
-      > At least one **Geolocation** field is required to create a map view. You cannot select multiple **Geolocation** fields for a map view, although you can create two different map views that use two different **Geolocation** fields.
+    > [!NOTE]
+    > At least one **Geolocation** field is required to create a map view. You cannot select multiple **Geolocation** fields for a map view, although you can create two different map views that use two different **Geolocation** fields.
 5. After you add the required **Geolocation** field and any other field you need, choose **OK**. A map view is created, as shown in Figure 4.
     
    **Figure 4. Completed map view**
@@ -148,8 +145,8 @@ Follow these steps to create a map view for a SharePoint list programmatically.
   
 7. Add the following code to the **Main** method in the .cs file.
     
-    > **Note:**
-      > The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list. 
+    > [!NOTE]
+    > The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list. 
 
 ```cs
   

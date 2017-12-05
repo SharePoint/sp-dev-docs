@@ -9,7 +9,8 @@ ms.prod: sharepoint
 Find in-depth articles and resources to help you build advanced capabilities into your SharePoint Add-ins.
 
  
-> **Note**  This article assumes that you are familiar with the article  [SharePoint Add-ins](sharepoint-add-ins.md) and the getting started material that it links to.
+> [!NOTE]
+> This article assumes that you are familiar with the article  [SharePoint Add-ins](sharepoint-add-ins.md) and the getting started material that it links to.
 
 Under  **Develop**, we've got the following to help explain all the different things you can do in a SharePoint Add-in:
 

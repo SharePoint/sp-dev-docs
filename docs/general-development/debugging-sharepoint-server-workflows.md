@@ -377,10 +377,8 @@ This process will configure Windows to trust the certificate, although SharePoin
     
 ![Figure 7. HTTPS tab](../images/ngDebuggingSP2013Workflows07.png)
   
-    
-    
- >**Note:**
- > If a security WRning appears with a message instructing not to trust the Fiddler certificate, click **Yes** to continue installing the certificate.
+> [!NOTE]
+> If a security WRning appears with a message instructing not to trust the Fiddler certificate, click **Yes** to continue installing the certificate.
   
     
     

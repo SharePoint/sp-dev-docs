@@ -133,8 +133,8 @@ Figure 1 shows a view form with a custom-rendered field type.
   
   - Overrides the **JSLink** property.
     
-    > **Note:**
-      > The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list. 
+    > [!NOTE]
+    > The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list. 
 
 ```cs
 using System;
@@ -296,8 +296,9 @@ function favoriteColorViewTemplate(ctx) {
 
 1. Press the F5 key.
     
-    > **Note:**
-      > When you press F5, Visual Studio builds the solution, deploys the solution, and opens the SharePoint website where the solution is deployed. 
+    > [!NOTE]
+    > When you press F5, Visual Studio builds the solution, deploys the solution, and opens the SharePoint website where the solution is deployed. 
+    
 2. Create a custom list and add a new Favorite color field column.
     
   

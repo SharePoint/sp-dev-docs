@@ -104,10 +104,7 @@ Like all snippets, you add this snippet from the Snippet Gallery. To navigate to
 
 The two most important parts of an Edit Mode Panel snippet are the **PageDisplayMode** property and the **<div>** where `class="DefaultContentBlock"`. The **PageDisplayMode** property determines whether the contents of the panel are displayed only in edit mode or in regular/display mode (meaning whenever the page is not in edit mode).
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > This property doesn't appear in the markup unless you change the value to **Display**. When the property does not appear in the markup, the default mode for the snippet is Edit mode. 
   
     

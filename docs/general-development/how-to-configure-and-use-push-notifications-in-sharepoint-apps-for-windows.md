@@ -382,10 +382,7 @@ In this code, after an item is added to the list to which the event receiver is 
     
 An empty string is simply being passed as the value of the **toastParam** parameter, which corresponds to the **Param** property in the XML schema for toast notifications. You could use this parameter to specify, for example, a page of the phone app to open when the user clicks the notification in the phone. In the sample phone app developed later in this topic for receiving these notifications from the server, the **Param** property is not used. The List form (List.xaml) in the app is simply opened when the user clicks the notification.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The **Param** property for toast notifications is supported only in Windows Phone OS version 7.1 or greater.
   
     
@@ -1148,8 +1145,9 @@ namespace SPListAppForNotifications
   
 10. Navigate to the folder in which the standard Windows Phone icon images were installed by the Windows Phone SDK 7.1.
     
-    > **Note:**
-      > The images with a light foreground and a dark background are in %PROGRAMFILES%(x86)\\Microsoft SDKs\\Windows Phone\\v7.1\\Icons\\dark in a standard installation of the SDK. 
+    > [!NOTE]
+    > The images with a light foreground and a dark background are in %PROGRAMFILES%(x86)\\Microsoft SDKs\\Windows Phone\\v7.1\\Icons\\dark in a standard installation of the SDK. 
+    
 11. Choose the image file named appbar.check.rest.png and click **Add**. The image is added is added to the project under the Images node.
     
   

@@ -224,7 +224,8 @@ When you send a POST request, the request must include the form digest value in 
 
 Cloud-hosted add-ins use either OAuth or the cross-domain library to authorize access to SharePoint data. Add-in components with code that runs on a remote web server must use OAuth to authorize access to SharePoint data. In this case, you need to include an  **Authorization** header to send the access token. See [Reading data with the SharePoint REST interface](complete-basic-operations-using-sharepoint-rest-endpoints.md#ReadingData) for an example that adds an authorization header to an **HTTPWebRequest** object.
  
- **Note**  Cloud-hosted add-in components that are written in JavaScript must use the  **SP.RequestExecutor** object in the cross-domain library to access to SharePoint data. Cross-domain library requests don't need to include an access token.
+> [!NOTE]
+> Cloud-hosted add-in components that are written in JavaScript must use the  **SP.RequestExecutor** object in the cross-domain library to access to SharePoint data. Cross-domain library requests don't need to include an access token.
  
 To learn more about OAuth access tokens and how to get them, see  [Context Token OAuth flow for SharePoint Add-ins](https://msdn.microsoft.com/en-us/library/office/fp142382.aspx) and [Authorization Code OAuth flow for SharePoint Add-ins](https://msdn.microsoft.com/en-us/library/office/jj687470.aspx).
  
@@ -237,7 +238,8 @@ Requests are sent to the resource endpoint that's specified in the  **url** prop
  
 Cross-domain library requests use this format when they access data on the add-in web, which is the default context for cross-domain library requests. But to access data on the host web or on another site collection, the requests need to initialize the host web or other site collection as the context. To do this, they use the  **SP.AppContextSite** endpoint in the URI, as shown in Table 1. The example URIs in Table 1 use the **@target** alias to send the target URL in the query string because the URL contains a special character (':').
 
- **Note**  An add-in web instance is required for a cloud-hosted add-in to access SharePoint data when using the cross-domain library.
+> [!NOTE]
+> An add-in web instance is required for a cloud-hosted add-in to access SharePoint data when using the cross-domain library.
 
 **Table 1. Using the SP.AppContextSite endpoint to change the context of the request**
 
@@ -248,7 +250,8 @@ Cross-domain library requests use this format when they access data on the add-i
 |Cloud-hosted|JavaScript add-in component accessing data in a site collection other than the host web by using the cross-domain library (tenant-scoped add-ins only)| _<app web url>_/_api/SP.AppContextSite(@target)/web/title?@target=' _<target site url>_'|
 |SharePoint-hosted|Add-in web component accessing data in another site collection (tenant-scoped add-ins only)| _<app web url>_/_api/SP.AppContextSite(@target)/web/title?@target=' _<target site url>_'|
 
- **Note**  Cross-domain data access scenarios also require appropriate add-in permissions. For more information, see  [Access data from the host web](https://msdn.microsoft.com/en-us/library/office/fp179927.aspx#SP15Accessdatafromremoteapp_Hostweb) and [Access data across site collections](https://msdn.microsoft.com/en-us/library/office/fp179927.aspx#SP15Accessdatafromremoteapp_TenantScope).
+> [!NOTE]
+> Cross-domain data access scenarios also require appropriate add-in permissions. For more information, see  [Access data from the host web](https://msdn.microsoft.com/en-us/library/office/fp179927.aspx#SP15Accessdatafromremoteapp_Hostweb) and [Access data across site collections](https://msdn.microsoft.com/en-us/library/office/fp179927.aspx#SP15Accessdatafromremoteapp_TenantScope).
 
 SharePoint Add-ins can get the add-in web URL and host web URL from the query string of the add-in page, as shown in the following code example. The example also shows how to reference the cross-domain library, which is defined in the SP.RequestExecutor.js file on the host web. The example assumes that your add-in launches from SharePoint. See  [Authorization Code OAuth flow for SharePoint Add-ins](https://msdn.microsoft.com/en-us/library/office/jj687470.aspx) for guidance on setting your SharePoint context correctly when your add-in does not launch from SharePoint.
 

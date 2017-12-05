@@ -138,7 +138,7 @@ Software designs based on the MVVM pattern often confine business logic and vali
     
 
     
-> **Note:**
+> [!NOTE]
 > The **ListDataProvider** object only loads the data from server. Other operations, such as **Add**, **Update**, and **Delete**, are performed in the ViewModel itself, followed by a refresh call to update the ViewModel data from the server. This design reduces cluttering of the code. 
   
     

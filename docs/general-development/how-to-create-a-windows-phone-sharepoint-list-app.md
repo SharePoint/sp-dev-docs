@@ -50,8 +50,9 @@ In your Windows Phone SharePoint list app, you can access most of the lists that
   
 3. In the **New Project** dialog box, expand the **Visual C#** node, and then choose the **Silverlight for Window Phone** node. (Ensure that the target .NET Framework version is set to 4.)
     
-    > **Note:**
-      > The templates installed by the Windows Phone SharePoint SDK work only in C# projects. The templates are not available for Visual Basic projects. 
+    > [!NOTE]
+    > The templates installed by the Windows Phone SharePoint SDK work only in C# projects. The templates are not available for Visual Basic projects. 
+
 4. In the **Templates** pane, choose the **Windows Phone SharePoint List Application** template and give the project a name, such asContosoSPListApp.
     
   
@@ -97,12 +98,14 @@ In your Windows Phone SharePoint list app, you can access most of the lists that
   
 14. Choose **Next**. The wizard displays the fields associated with the selected list on the SharePoint site.
     
-    > **Note:**
-      > A custom field will not be available to select from the SharePoint List wizard for mobile devices. However, you can write custom code to access any custom field. A field cannot be associated with its content type. However if multiple content types are enabled for the list, all the fields will be available for developers to consume in their phone apps. 
+    > [!NOTE]
+    > A custom field will not be available to select from the SharePoint List wizard for mobile devices. However, you can write custom code to access any custom field. A field cannot be associated with its content type. However if multiple content types are enabled for the list, all the fields will be available for developers to consume in their phone apps. 
+
 15. Select the check box next to each field you want to include in the list as it will appear in your Windows Phone app.
     
-    > **Note:**
-      > List fields that are designated in SharePoint Server as requiring information are selected already; they can't be cleared in the wizard. 
+    > [!NOTE]
+    > List fields that are designated in SharePoint Server as requiring information are selected already; they can't be cleared in the wizard. 
+    
 16. Choose **Next**. The wizard gives you the opportunity to order the fields you selected in the previous step.
     
   

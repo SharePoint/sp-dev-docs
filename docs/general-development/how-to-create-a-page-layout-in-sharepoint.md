@@ -40,9 +40,7 @@ When you create a page layout:
   
 - The HTML file and the .aspx file are associated, so that any later edits to the HTML file are synced to the .aspx file whenever the HTML file is saved. Other markup such as comments, **<div>** tags, snippets, and content placeholders are added to the HTML file.
     
-  
-
-> **Note:**
+> [!NOTE]
 > The syncing goes in one direction only. Changes to the HTML page layout are synced to the associated .aspx file, but if you choose to edit the .aspx file directly, those changes are not synced to the HTML file. Every HTML page layout (and every HTML master page) has a property named **Associated File** that is set to **True** by default, which creates the association and syncing between files.
   
     
@@ -139,8 +137,9 @@ Before you begin, you need to know which content type and master page the page l
     
     The master page that you choose here will be shown in the preview for this page layout. This master page also determines what content placeholders get added to the page layout.
     
-    > **Note:**
-      > After you choose this master page, you cannot preview the page layout with a different master page, even after you apply a different master page to the live site. 
+    > [!NOTE]
+    > After you choose this master page, you cannot preview the page layout with a different master page, even after you apply a different master page to the live site. 
+
 7. Select a content type. The content type for this page layout determines what page fields will be available for this page layout in the Snippet Gallery.
     
   
@@ -183,10 +182,7 @@ When you create HTML mockups for your site, you may have HTML files that represe
     
 You can simply put the styles for one or more page layouts into the same style sheet that the master page links to. But, if you want to minimize the weight of the CSS that is loaded per page, you can also use different style sheets for different page layouts. When you do this, it's important to know that a link to a style sheet cannot go in the **<head>** tag of a page layout. Instead, the link must go in the content placeholder named **PlaceHolderAdditionalPageHead**. 
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > In this markup, the attribute  `ms-design-css-conversion="no"` excludes the style sheet from theming. Also, the link to the style sheet should appear after the lines commented **<!--SPM**. 
   
     

@@ -59,7 +59,8 @@ For this project, use the Visual Studio Web API project to build the webhook rec
 * Change the authentication to **No Authentication** by choosing the **Change Authentication** button.
 * Choose **OK** to create the Web API project.
 
-> **Note:** You can uncheck the **Host in the cloud** option because this project will not be deployed to the cloud.
+> [!NOTE]
+> You can uncheck the **Host in the cloud** option because this project will not be deployed to the cloud.
 
 Visual Studio will create your project.
 

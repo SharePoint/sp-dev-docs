@@ -47,10 +47,7 @@ As a best practice in SharePoint development, use client APIs when you can. Clie
     
 Each API includes a manager object that you use to perform core tasks for following people.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The same APIs are used to follow content. See  [Follow content in SharePoint](follow-content-in-sharepoint.md) for an overview of Following Content tasks.
   
     
@@ -58,10 +55,7 @@ Each API includes a manager object that you use to perform core tasks for follow
 
 Table 1 shows the manager and other key objects (or REST resources) in the APIs and the class library (or access point) where you can find them.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The Silverlight and mobile client object models are not explicitly included in Table 1 or Table 2 because they provide the same core functionality as the .NET client object model and use the same signatures. The Silverlight client object model is defined in Microsoft.SharePoint.Client.UserProfiles.Silverlight.dll, and the mobile client object model is defined in Microsoft.SharePoint.Client.UserProfiles.Phone.dll. 
   
     
@@ -83,10 +77,7 @@ Table 1 shows the manager and other key objects (or REST resources) in the APIs 
 
 Table 2 shows common programming tasks for following people and the members that you use to perform them. Members are from the .NET client object model (CSOM), JavaScript object model (JSOM), REST service, and server object model (SSOM).
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The same APIs are used to follow content. See  [Follow content in SharePoint](follow-content-in-sharepoint.md) for an overview of Following Content tasks.
   
     
