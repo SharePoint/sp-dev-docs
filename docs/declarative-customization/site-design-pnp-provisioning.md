@@ -249,7 +249,7 @@ In order to create a Site Design you first need to create a Site Script. Think o
     Add-PnPSiteDesign -Title "Apply PnP Provisioning Template" -Content $script
     Get-PnPSiteDesign
     ```
-1. You should be presented with a list of or one or more site script, including the site script you just created
+1. You should be presented with a list of one or more site script, including the site script you just created
 1. Select the ID of the Site Script you just created and copy it to the clipboard
 1. Create the Site Design:
     ```powershell
