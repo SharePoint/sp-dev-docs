@@ -218,11 +218,8 @@ C:\\>GetSnapshot.exe http://myServer02/reports/reports/OriginalWorkbook.xlsx > S
 
 If you use the previous command-line example, the GetSnapshot tool places a new file in the "C:\\" directory.
   
-    
-    
-
-> **Note:**
-> The workbook that you want to get a snapshot of must be in a trusted location. 
+> [!NOTE]
+> he workbook that you want to get a snapshot of must be in a trusted location. 
   
     
     

@@ -32,7 +32,8 @@ The  [Workflow.CallCustomService ](https://github.com/SharePoint/PnP/tree/master
 
 The sample works by starting a workflow from a remote web application. This workflow passes query information submitted by the user to the remote web application, which then uses that information to construct a query to the Northwind OData web service. The query returns the product suppliers for a given country. After it receives that information, the remote web application updates a product suppliers list that the add-in has deployed to the add-in web.
 
-**Note**  The  [Workflow.CallCustomService ](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.CallCustomService) sample page contains instructions for deploying this add-in. You can also deploy and test with F5 debugging in Visual Studio if you follow the instructions in the blog post [Debugging SharePoint 2013 workflows using Visual Studio 2013](http://blogs.msdn.com/b/officeapps/archive/2013/10/30/debugging-sharepoint-2013-workflows-using-visual-studio-2013.aspx).
+> [!NOTE] 
+> The  [Workflow.CallCustomService ](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.CallCustomService) sample page contains instructions for deploying this add-in. You can also deploy and test with F5 debugging in Visual Studio if you follow the instructions in the blog post [Debugging SharePoint 2013 workflows using Visual Studio 2013](http://blogs.msdn.com/b/officeapps/archive/2013/10/30/debugging-sharepoint-2013-workflows-using-visual-studio-2013.aspx).
 
 This app's start page includes a drop-down menu from which you can select a country for which you want to create a product suppliers list (Figure 1). 
 
@@ -212,7 +213,8 @@ The  [Workflow.CallServiceUpdateSPViaProxy ](https://github.com/SharePoint/PnP/t
 
 The sample shows a task that is useful when you want to encapsulate all the interactions with a web service so that they are handled directly by the workflow. Using the web proxy makes it easier to update the remote web application logic without having to update the workflow instance. If you're not using the proxy and you have to update the logic in your web application, you'll have to remove the existing workflow instances and then redeploy the add-in. For this reason, we recommend this design when you need to call a remote web service. 
 
-**Note**  The  [Workflow.CallCustomServiceUpdateViaProxy](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.CallServiceUpdateSPViaProxy) sample page contains instructions for deploying this add-in. You can also deploy and test the add-in by using **F5** debugging in Visual Studio if you follow the instructions in the blog post [Debugging SharePoint 2013 workflows using Visual Studio 2013](http://blogs.msdn.com/b/officeapps/archive/2013/10/30/debugging-sharepoint-2013-workflows-using-visual-studio-2013.aspx).
+> [!NOTE] 
+> The  [Workflow.CallCustomServiceUpdateViaProxy](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.CallServiceUpdateSPViaProxy) sample page contains instructions for deploying this add-in. You can also deploy and test the add-in by using **F5** debugging in Visual Studio if you follow the instructions in the blog post [Debugging SharePoint 2013 workflows using Visual Studio 2013](http://blogs.msdn.com/b/officeapps/archive/2013/10/30/debugging-sharepoint-2013-workflows-using-visual-studio-2013.aspx).
 
 The sample starts a workflow from a remote web application. This workflow passes query information submitted by the user to the Northwind OData web service. The query returns the product suppliers for a given country. After it receives the web service response, the workflow passes the information from the response to the remote web application. The remote web application then updates a product suppliers list that the add-in has deployed to the add-in web.
 
@@ -408,7 +410,8 @@ The sample contains a simple workflow that can be associated with any list. The 
 
 When you open this project in Visual Studio, you'll see that it is a simple, generic workflow that is designed to work with any SharePoint list. Other than the workflow task list, it doesn't deploy any list with which it can be associated.
 
-**Note**  You cannot perform the task shown in this sample by using Visual Studio 2013. This sample provides a useful workaround. If the Visual Studio tools are updated in the future, you might not need to use this workaround.
+> [!NOTE] 
+> You cannot perform the task shown in this sample by using Visual Studio 2013. This sample provides a useful workaround. If the Visual Studio tools are updated in the future, you might not need to use this workaround.
 
 ### Deploy a workflow to the host web
 

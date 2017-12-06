@@ -37,7 +37,8 @@ To get started, download the  [Core.LargeFileUpload](https://github.com/SharePoi
 
 When you start this code sample, a console application appears. You must supply a SharePoint Online site collection URL and your logon credentials for Office 365. After authentication, the console application displays an exception. The exception occurs when the  **UploadDocumentContent** method in FileUploadService.cs tries to use the **FileCreationInformation.Content** property to upload a file that is larger than 2 MB. **UploadDocumentContent** also creates a document library called **Docs** if it does not already exist. The **Docs** document library is used later in this code sample.
 
-**Note**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```C#
 public void UploadDocumentContent(ClientContext ctx, string libraryName, string filePath)
@@ -146,7 +147,8 @@ In FileUploadService.cs,  **UploadFileSlicePerSlice** uploads a large file to a 
     
     3. If the chunk size is not equal to the file size, there is more than one chunk to read from the file.  **File.StartUpload** is called to upload the first chunk. **fileoffset**, which is used as the starting point of the next chunk, is then set to the amount of bytes uploaded from the first chunk. When the next chunk is read, if the last chunk has not been reached,  **File.ContinueUpload** is called to upload the next chunk of the file. The process repeats until the last chunk is read. When the last chunk is read, **File.FinishUpload** uploads the last chunk and commits the file. The file content is then changed when this method is finished.
 
-**Note**  Consider the following best practices:
+> [!NOTE] 
+> Consider the following best practices:
 - Use a retry mechanism in case your upload is interrupted. When an uploaded file is interrupted, the file is called an unfinished file. You may restart uploading an unfinished file soon after the upload was interrupted. Unfinished files are removed from the server between 6 hours to 24 hours after the unfinished file was interrupted. This removal period might change without notice.
 - When uploading a file in chunks to SharePoint Online, a lock is placed on the file in SharePoint Online. When an interruption occurs, the file remains locked for 15 minutes. If the next chunk of the file is not uploaded to SharePoint Online within 15 minutes, the lock is removed. After the lock is removed, you can resume uploading, or another user can start uploading the file. If another user starts uploading the file, your unfinished file is removed from SharePoint Online. The period of time the lock remains on a file after an upload is interrupted can change without notice.
 - You might change the chunk size. We recommend using a chunk size of 10 MB.

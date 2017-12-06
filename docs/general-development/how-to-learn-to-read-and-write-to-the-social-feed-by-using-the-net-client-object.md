@@ -30,9 +30,7 @@ To create the console application, you'll need the following:
   
 - **Full Control** access permissions to the User Profile service application for the logged-on user
     
-  
-
-> **Note:**
+> [!NOTE]
 > If you're not developing on the computer that is running SharePoint, get the  [SharePoint Client Components](http://www.microsoft.com/en-us/download/details.aspx?id=35585) download that contains SharePoint client assemblies.
   
     
@@ -104,43 +102,43 @@ using Microsoft.SharePoint.Client.Social;
 
 1. Declare variables for the server URL and target user's account credentials.
     
-```cs
-const string serverUrl = "http://serverName/";
-const string targetUser = "domainName\\userName";
-```
+    ```cs
+    const string serverUrl = "http://serverName/";
+    const string targetUser = "domainName\\userName";
+    ```
 
-   > **Note:**
-   > Remember to replace the  `http://serverName/` and `domainName\\userName` placeholder values before you run the code.
+    > [!NOTE]
+    > Remember to replace the  `http://serverName/` and `domainName\\userName` placeholder values before you run the code.
    
 2. In the **Main** method, initialize the SharePoint client context.
     
-```cs
-ClientContext clientContext = new ClientContext(serverUrl);
-```
+    ```cs
+    ClientContext clientContext = new ClientContext(serverUrl);
+    ```
 
 3. Create the  [SocialFeedManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.aspx) instance.
     
-```cs
-SocialFeedManager feedManager = new SocialFeedManager(clientContext);
-```
+    ```cs
+    SocialFeedManager feedManager = new SocialFeedManager(clientContext);
+    ```
 
 4. Specify the parameters for the feed content that you want to retrieve.
     
-```cs
-  SocialFeedOptions feedOptions = new SocialFeedOptions();
-feedOptions.MaxThreadCount = 10;
-```
+    ```cs
+    SocialFeedOptions feedOptions = new SocialFeedOptions();
+    feedOptions.MaxThreadCount = 10;
+    ```
 
     The default options return the first 20 threads in the feed, sorted by last modified date.
   
 5. Get the target user's feed.
     
-```cs 
-ClientResult<SocialFeed> feed = feedManager.GetFeedFor(targetUser, feedOptions);
-clientContext.ExecuteQuery();
-```
+    ```cs 
+    ClientResult<SocialFeed> feed = feedManager.GetFeedFor(targetUser, feedOptions);
+    clientContext.ExecuteQuery();
+    ```
 
-     [GetFeedFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.GetFeedFor.aspx) returns a **ClientResult<T>** object that stores the collection of threads in its [Value](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.ClientResult`1.Value.aspx) property.
+    [GetFeedFor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.GetFeedFor.aspx) returns a **ClientResult<T>** object that stores the collection of threads in its [Value](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.ClientResult`1.Value.aspx) property.
     
   
 
@@ -192,14 +190,15 @@ feedManager.CreatePost(threadToReplyTo, postCreationData);
 clientContext.ExecuteQuery();
 ```
 
-   > **Note:**
-   > The  [CreatePost](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.CreatePost.aspx) method is also used to publish a root post to the current user's feed by passing **null** for the first parameter.
+    > [!NOTE]
+    > The  [CreatePost](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.CreatePost.aspx) method is also used to publish a root post to the current user's feed by passing **null** for the first parameter.
+
 4. (UI-related only) Exit the program.
     
-```cs
-Console.WriteLine("Your reply was published.");
-Console.ReadKey(false);
-```
+    ```cs
+    Console.WriteLine("Your reply was published.");
+    Console.ReadKey(false);
+    ```
 
 5. To test the console application, on the menu bar, choose **Debug**, **Start Debugging**.
     

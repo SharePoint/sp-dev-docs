@@ -39,7 +39,8 @@ SharePoint provides three types of authorization policies:
     
     
     
-     **Note**  Certain APIs require a user context and can't be executed with an add-in-only policy. These include many APIs for interacting with Project Server 2013 and for performing search queries.
+    > [!NOTE] 
+    > Certain APIs require a user context and can't be executed with an add-in-only policy. These include many APIs for interacting with Project Server 2013 and for performing search queries.
 
 ### See an example scenario of an add-in that uses the add-in-only policy
 <a name="Scenario"> </a>
@@ -72,7 +73,8 @@ To be able to make add-in-only calls to SharePoint, your add-in must request per
 ```
 
 
- **Note**  SharePoint Add-ins used to be called "apps for SharePoint". To maintain backward compatibility, the app manifest schema was not changed, so the string "app" appears in may element and attribute names.
+> [!NOTE] 
+> SharePoint Add-ins used to be called "apps for SharePoint". To maintain backward compatibility, the app manifest schema was not changed, so the string "app" appears in may element and attribute names.
  
 
 A user installing the add-in will be prompted to approve this request. If the add-in asks for tenant-scoped permissions, then only a tenant administrator can grant use of the add-in-only policy, so only a tenant administrator can install the add-in. If the add-in does not ask for any permissions scoped higher than site collection, then a site collection administrator can install the add-in. For more information about permission scopes, see  [Add-in permissions in SharePoint](add-in-permissions-in-sharepoint.md).
@@ -117,7 +119,8 @@ if (contextTokenString != null)
 ```
 
 
- **Note**  Add-ins that do not make OAuth authenticated calls (for example, add-ins that are only JavaScript running in the add-in web) cannot use the add-in-only policy. They can request the permission, but they will not be able to take advantage of it because doing so requires passing an add-in-only OAuth token. Only add-ins with web applications running outside of SharePoint can create and pass add-in-only tokens.
+> [!NOTE] 
+> Add-ins that do not make OAuth authenticated calls (for example, add-ins that are only JavaScript running in the add-in web) cannot use the add-in-only policy. They can request the permission, but they will not be able to take advantage of it because doing so requires passing an add-in-only OAuth token. Only add-ins with web applications running outside of SharePoint can create and pass add-in-only tokens.
  
 
 In general, a current user is required to be present for a call to be made. In the case of add-in-only policy, SharePoint creates a SHAREPOINT\APP, similar to the existing SHAREPOINT\SYSTEM user. All add-in-only requests are made by SHAREPOINT\APP. There is no way to authenticate as SHAREPOINT\APP through user-based authentication.

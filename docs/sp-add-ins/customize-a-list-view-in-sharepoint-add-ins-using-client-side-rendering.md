@@ -119,7 +119,8 @@ Figure 1 shows a client-side rendered view of an announcements list.
  
   - Provides a value for the  **JSLink** element that points to a JavaScript file that is provisioned with the add-in.
     
-     **Note**  The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list.
+    > [!NOTE] 
+    > The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list.
 
 ```XML
   <View BaseViewID="2" 
@@ -233,7 +234,9 @@ function postRenderHandler(ctx) {
 
 1. Press the F5 key.
     
-     **Note**  When you press F5, Visual Studio builds the solution, deploys the add-in, and opens the permissions page for the add-in.
+    > [!NOTE] 
+    > When you press F5, Visual Studio builds the solution, deploys the add-in, and opens the permissions page for the add-in.
+    
 2. Choose the  **Trust It** button.
     
  

@@ -89,7 +89,8 @@ SharePoint uses dynamic tokens to bind the master page to the content page, whic
 |~site/&lt;xyz&gt;.master|http://&lt;siteColl&gt;/&lt;subsite1&gt;/&lt;subsite2&gt;/&lt;xyz&gt;.master|
 |~sitecollection/&lt;abc&gt;.master|http://&lt;siteColl&gt;/&lt;abc&gt;.master|
 
-**Note**  The dynamic tokens in content placeholders correspond to server-side API properties and methods. When using remote provisioning, write code in CSOM or REST.To learn more about dynamic tokens and SharePoint URLs, see  [URLs and Tokens in SharePoint 2013](http://msdn.microsoft.com/library/161418d7-8123-4c4e-91a1-97e43c17f0e6.aspx). Add-ins for SharePoint use some tokens that apply to site URLs.
+> [!NOTE] 
+> The dynamic tokens in content placeholders correspond to server-side API properties and methods. When using remote provisioning, write code in CSOM or REST.To learn more about dynamic tokens and SharePoint URLs, see  [URLs and Tokens in SharePoint 2013](http://msdn.microsoft.com/library/161418d7-8123-4c4e-91a1-97e43c17f0e6.aspx). Add-ins for SharePoint use some tokens that apply to site URLs.
 
 ## Web Part pages and Wiki pages
 <a name="sectionSection2"> </a>
@@ -111,7 +112,8 @@ You can use the remote provisioning pattern to create a wiki page. The [WikiPage
 
 The page layout is the content page of choice for Publishing sites. Page layouts are templates that define different kinds of pages in a SharePoint site, such as articles, by customizing the structure of the body of the page. Just as the Web Part page is a template that exists to arrange Web Part zones and Web Parts on a page, page layouts exist to arrange fields on a page. The field controls defined in a page layout will contain content that an author creates, and the structure of that content will be based on the page layout.
 
-**Note**  Page layouts can include Web Part zones.
+> [!NOTE] 
+> Page layouts can include Web Part zones.
 
 Designers can apply styles to page field controls. This gives designers control over how CSS is applied to each field and rendered, yet allows users to create and manage content in each page field.
 
@@ -128,7 +130,8 @@ SharePoint is a template-based page rendering system that combines master pages,
 
 The page processing model interprets and runs all the requests that user agents such as web browsers make to the server. For example, consider a user requesting a page called contoso.aspx. To complete the request, the ASP.NET engine retrieves two pages: the content page associated with contoso.aspx, and the master page that the file provider associated with the SharePoint site. The engine also retrieves the field controls and Web Parts from fields and renders them on the page.
 
-**Note**  The page processing logic for Team sites and sites is similar to that for Publishing pages. 
+> [!NOTE] 
+> The page processing logic for Team sites and sites is similar to that for Publishing pages. 
 
 ### Page processing
 

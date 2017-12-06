@@ -26,7 +26,8 @@ To perform a tenant-wide site enumeration:
 
 To learn more, see the [MultiGeo.SiteEnumeration](https://github.com/SharePoint/PnP/tree/dev/Samples/MultiGeo.SiteEnumeration) sample.
 
->**Note:** For more information about permissions and how to configure your application, see [Set up a Multi-Geo sample application](multigeo-sampleapplicationsetup.md).
+> [!NOTE] 
+> For more information about permissions and how to configure your application, see [Set up a Multi-Geo sample application](multigeo-sampleapplicationsetup.md).
 
 ## Performing tenant-level operations
 The `Tenant` object is also used to configure tenant-level settings, such as CDN settings, and tenant-level site settings, such as the **site geo location restriction**. To perform tenant-level operations:

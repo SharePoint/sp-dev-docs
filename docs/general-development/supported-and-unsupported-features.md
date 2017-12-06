@@ -16,11 +16,7 @@ ms.assetid: 6e4acad6-7665-493c-94cc-d38684b2842f
 Microsoft Excel is feature-rich. With every release, the functionality gap between Excel and Excel Services gets narrower, and the number of unsupported features is reduced. But is not possible to support every Excel feature in the second version of Excel Services, in Microsoft SharePoint Server 2010. 
 When deciding which feature to support, priorities are given to features that are needed in key Excel Services scenarios, and to ensuring that Excel Services is a server-grade service that meets customers' expectations for reliability, scalability, and security.
   
-    
-    
-
-
-> **Note:**
+> [!NOTE]
 > This topic assumes that you are familiar with what is supported and unsupported in Microsoft Office SharePoint Server 2007. You can find more information about the unsupported features in Office SharePoint Server 2007 in  [Unsupported Features in Excel Services](http://msdn.microsoft.com/en-us/library/ms496823.aspx). 
   
     
@@ -141,11 +137,7 @@ In the following figure, clicking **Learn more about unsupported features** prov
     
 Cropped images are not displayed (that is, missing features). 
   
-    
-    
-
-    
-> **Note:**
+> [!NOTE]
 > For workbooks that contain ignored or missing unsupported features that loaded in view mode with a notification bar, attempting to save a copy of the workbook involves removing the unsupported features. A dialog box alerts the user of this. 
   
     
@@ -156,17 +148,10 @@ Cropped images are not displayed (that is, missing features).
 
 All other unsupported features continue to behave as they do in Office SharePoint Server 2007 for Excel Services. That is, Excel Services blocks loading of a file if it detects the existence of one or more of these unsupported features. Users are informed that the file cannot be loaded, as shown in the following screen shot. 
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The  [Unsupported Features in Excel Services](http://msdn.microsoft.com/en-us/library/ms496823.aspx) topic contains more details about these unsupported features.
   
-    
-    
-
-
-> **Caution:**
+> [!WARNING]
 > The information bar with the list of unsupported features is not displayed if the file is loaded from a Web Part. 
   
     

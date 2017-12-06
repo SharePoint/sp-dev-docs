@@ -25,7 +25,8 @@ In the scenario shown in the following image, a Multi-Geo tenant has three geo l
 
 From an end user point of view, search is scoped to the current geo location. When users perform searches from a site hosted in North America, they will only see results from the North America geo location. Searches from a site hosted in Europe will return results from sites in the Europe geo location.
 
-> **Note:** In the future, search will be Multi-Geo aware. A search query run from any location within the tenant will search all geo locations within the tenant and return combined results.
+> [!NOTE] 
+> In the future, search will be Multi-Geo aware. A search query run from any location within the tenant will search all geo locations within the tenant and return combined results.
 
 ## Working with search programmatically in a Multi-Geo tenant
 Working with search programmatically is similar to the end user search experience. If you perform a search query, you'll only get results for the geo location in which you run the query. Your applications can, however, perform Multi-Geo tenant searches. To do this, iterate over the geo locations in your tenant, issue the same search query in each geo location, and then concatenate the results.

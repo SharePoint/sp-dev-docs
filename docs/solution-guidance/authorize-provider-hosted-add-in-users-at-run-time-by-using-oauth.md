@@ -53,7 +53,8 @@ When you run the code sample:
     
 3. If you are asked to grant consent to the permissions the add-in is requesting, choose  **Trust It**. Notice that you are redirected to the /_layouts/15/OAuthAuthorize.aspx page. 
     
-	**Note:**  Your user must have  **Manage** permissions to grant consent to the permissions the add-in is requesting. You can learn more at [Authorization Code OAuth flow for SharePoint Add-ins](http://msdn.microsoft.com/library/e89e91c7-ea39-49b9-af5a-7f047a7e2ab7%28Office.15%29.aspx).
+	> [!NOTE] 
+    > Your user must have  **Manage** permissions to grant consent to the permissions the add-in is requesting. You can learn more at [Authorization Code OAuth flow for SharePoint Add-ins](http://msdn.microsoft.com/library/e89e91c7-ea39-49b9-af5a-7f047a7e2ab7%28Office.15%29.aspx).
 
 4. In  **Successfully connected to Contoso**, enter the name of a new list to create, and then choose  **Create List**.
     
@@ -61,7 +62,8 @@ When you run the code sample:
     
 When choosing  **Connect** on **Connect to Office 365**,  **Connect** in Controllers\HomeController.cs is called, which then calls **TokenRepository.Connect** . The URL entered by the user on **Connect to Office 365** is passed to **TokenRepository.Connect** as **hostUrl**.
 
-**Note:**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```C#
  public ActionResult Connect(string hostUrl)
@@ -74,7 +76,8 @@ When choosing  **Connect** on **Connect to Office 365**,  **Connect** in Control
 
 **TokenRepository.Connect** calls **TokenHelper.GetAuthorizationUrl** . **TokenHelper.GetAuthorizationUrl** returns the redirect URL to OAuthAuthorize.aspx using the **hostUrl** and the desired permissions on the SharePoint resource. OAuthAuthorize.aspx is used to authorize users using OAuth. When redirected to OAuthorize.aspx, the user must sign in to Office 365, and then consent to the permissions the add-in is requesting, or trust the add-in. The desired permission on the SharePoint resource is **Web.Manage** . After user authorization, the code sample creates lists on the SharePoint site. To create lists on a SharePoint site, users must have **Web.Manage** permissions.
 
-**Note:** **TokenHelper.GetAuthorizationUrl** returns a URL of the form **https://contoso.sharepoint.com/_layouts/15/OAuthAuthorize.aspx?IsDlg=1&amp;client_id=<Client ID>&amp;scope=Web.Manage&amp;response_type=code** , where **&lt;Client ID&gt;** is the add-in's Client ID. If your add-in is registered through the Seller Dashboard, any Office 365 site can install the add-in. If your add-in is not registered through the Seller Dashboard, you must register your add-in by using appregnew.aspx, and then update Core.DynamicPermissionsWeb\web.config. To learn more, see[Register SharePoint Add-ins 2013](http://msdn.microsoft.com/library/be41a5dc-2af9-4fd9-bf4e-ad6dfa849524%28Office.15%29.aspx).
+> [!NOTE] 
+> **TokenHelper.GetAuthorizationUrl** returns a URL of the form **https://contoso.sharepoint.com/_layouts/15/OAuthAuthorize.aspx?IsDlg=1&amp;client_id=<Client ID>&amp;scope=Web.Manage&amp;response_type=code** , where **&lt;Client ID&gt;** is the add-in's Client ID. If your add-in is registered through the Seller Dashboard, any Office 365 site can install the add-in. If your add-in is not registered through the Seller Dashboard, you must register your add-in by using appregnew.aspx, and then update Core.DynamicPermissionsWeb\web.config. To learn more, see[Register SharePoint Add-ins 2013](http://msdn.microsoft.com/library/be41a5dc-2af9-4fd9-bf4e-ad6dfa849524%28Office.15%29.aspx).
 
 ```C#
  public void Connect(string hostUrl)

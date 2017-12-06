@@ -61,8 +61,8 @@ using (var ctx = new ClientRuntimeContext(tenantAdminSiteForMyGeoLocation))
 }
 ```
 
->**Note:**
->If you want to learn more about the needed permissions and how to configure your applications then please checkout the [Setting up the Multi-Geo sample applications](multigeo-sampleapplicationsetup.md) article.
+> [!NOTE] 
+> If you want to learn more about the needed permissions and how to configure your applications then please checkout the [Setting up the Multi-Geo sample applications](multigeo-sampleapplicationsetup.md) article.
 
 ## Resources
 Below list of resources are useful when you're learning more about working with sites:

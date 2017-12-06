@@ -330,7 +330,8 @@ If order 1 is active, a user requesting a page from a Windows 8 phone receives d
 
 After you define and order device channels, you can apply different master pages to each channel. By default, all channels will use the master page of the default channel. 
 
-**Note:**  CSOM does not include a public API for manipulating device channels and device channel panels.
+> [!NOTE] 
+> CSOM does not include a public API for manipulating device channels and device channel panels.
 
 ### Display Templates
 
@@ -347,7 +348,8 @@ SharePoint stores display templates in the Display Templates folder in the Maste
 
 The event receivers that convert and update master pages and page layouts from HTML to JavaScript also convert display templates from HTML to JavaScript. The conversion and synching is unidirectional; it does not convert from JavaScript back to HTML.
 
-**Note:**  CSOM does not include a public API for manipulating display templates.
+> [!NOTE] 
+> CSOM does not include a public API for manipulating display templates.
 
 **Display template structure**
 
@@ -399,7 +401,8 @@ Next, open  **Site Settings** > **Search Schema**, and then search for a column 
 <mso:ManagedPropertyMapping msdt:dt="string">'Picture URL'{Picture URL}:'PublishingImage;PictureURL;PictureThumbnailURL','Link URL'{Link URL}:'Path','Line 1'{Line 1}:'Title','Line 2'{Line 2}:'Description','Line 3'{Line3}:'','owsTXTPrice','owsTXTColor'</mso:ManagedPropertyMapping>
 ```
 
-**Note:**  In this example,  **PictureURL** is mapped to the first managed property that is present when search is getting results for **PublishingImage**,  **PictureURL**, or  **PictureThumbnailURL**.
+> [!NOTE] 
+> In this example,  **PictureURL** is mapped to the first managed property that is present when search is getting results for **PublishingImage**,  **PictureURL**, or  **PictureThumbnailURL**.
 
 ### Image renditions
 

@@ -184,10 +184,7 @@ The following shows examples of the **RecolorImage** annotation being used in a 
 
 Place the custom CSS files in the Themable folder in the Style library (not the Themable folder in the Master Page Gallery). Only CSS files that are stored in the Themable folder in the Style library are recognized by the theming engine. The Themable folder is created automatically for publishing sites. Otherwise, you can create the Themable folder in the correct location (http://  _SiteCollectionName_/Style Library/ _language_/Themable/).
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The name of the  _language_ folder must be in the 4-digit format _ll-cc_ to identify the language and culture, respectively. For example, en-us or ar-sa. For more information, see [Language identifiers and OptionState Id values in Office 2013](http://technet.microsoft.com/en-us/library/cc179219.aspx). 
   
     
@@ -229,8 +226,7 @@ The following is an example of an **<SharePoint:CssRegistration>** element.
 </head>
 ```
 
-
-> **Note:**
+> [!NOTE]
 > The **%$SPUrl** token cannot be used on SharePoint Foundation 2013. You must use a URL to specify the location of the CSS file.
   
     

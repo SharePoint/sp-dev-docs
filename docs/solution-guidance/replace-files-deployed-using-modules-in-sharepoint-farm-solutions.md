@@ -62,7 +62,8 @@ To set up your Visual Studio project:
     
 	2.  **pagelayout** element - Uses the **file** attribute to specify the new page layout file, the **replaces** attribute to specify the existing page layout file, and several other attributes to specify additional page layout information.
 
-	**Note:**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+	> [!NOTE] 
+	> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 	```XML
 		<?xml version="1.0" encoding="utf-8" ?>
@@ -295,7 +296,8 @@ To upload and update references to the new master pages on your SharePoint site:
 
 ## Upload and update references to page layouts
 
-**Note:**  The code examples in this section build on the code examples in the previous section of this article. 
+> [!NOTE] 
+> The code examples in this section build on the code examples in the previous section of this article. 
 
 To replace page layouts that were deployed using modules in farm solutions, upload and update references to use the new page layout files by:
 

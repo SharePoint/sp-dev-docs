@@ -34,22 +34,11 @@ The master page provides a template that lets MDS identify the content regions t
     
     
 
-**Figure 1. Components that require updates in a master page**
-
-  
-    
-    
-
-  
-    
+**Figure 1. Components that require updates in a master page**  
     
 ![Components that require updates in master page](../images/MDS_SeattleMaster.png)
   
-    
-    
-
-    
-> **Note:**
+> [!NOTE]
 > There are many more components in the Seattle.master master page that change from page to page, such as style sheets and JavaScript files. Figure 1 shows only a few examples. 
   
     

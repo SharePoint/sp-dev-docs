@@ -14,7 +14,8 @@ The [Core.CreateContentTypes](https://github.com/SharePoint/PnP/tree/master/Samp
     
 - Localize the content type, site column, list, and a user-supplied site.
 
-**Note**  The localization features described in this article are only available in Office 365. For information about the localization features that are available in Office 365 Dedicated or SharePoint Server 2013 on-premises, see  [How to: Localize add-ins for SharePoint](http://msdn.microsoft.com/library/907a9189-7ce3-469a-8c87-4cef26f03c73.aspx) and [Localizing SharePoint solutions](https://msdn.microsoft.com/en-us/library/ee696750.aspx).
+> [!NOTE] 
+> The localization features described in this article are only available in Office 365. For information about the localization features that are available in Office 365 Dedicated or SharePoint Server 2013 on-premises, see  [How to: Localize add-ins for SharePoint](http://msdn.microsoft.com/library/907a9189-7ce3-469a-8c87-4cef26f03c73.aspx) and [Localizing SharePoint solutions](https://msdn.microsoft.com/en-us/library/ee696750.aspx).
 
 ## Before you begin
 <a name="sectionSection0"> </a>
@@ -45,7 +46,8 @@ Before you run this code sample:
     
       e. Choose  **Save all and close**.
 
-**Note**  It might take a few minutes for your site to render in the selected language(s). 
+> [!NOTE] 
+> It might take a few minutes for your site to render in the selected language(s). 
 
 **Figure 1. Language settings for a site**
 
@@ -88,7 +90,8 @@ The  **LocalizeContentTypeAndField** method shows you how to do the following:
     
 - Set different localized values for the title and description of a site, by using the  **SetValueForUICulture** method on the **TitleResource** and **DescriptionResource** properties on the **Field** object.
     
-**Note**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```C#
 private static void LocalizeSiteAndList(ClientContext cc, Web web)

@@ -48,9 +48,11 @@ Styles defined in corev15.css use the .ms- , and .s4- prefixes, which indicate s
 
 When you view the file, you'll notice many comments in this format:  `/* [ReplaceFont ( themeFont:"body")] */`. SharePoint reads these comments when a composed look is applied. The comments tell SharePoint to change the attribute of the CSS that immediately follows the comment. Applying a composed look might change many of the default colors, fonts, and background images that are applied, and subsequently update the settings in corev15.css.
 
-**Note**  Selecting the corev15.css file this way loads the rendered CSS rather than the saved CSS. Sometimes you might find discrepancies between the two. User agents such as browsers can also change rendering in response to user actions.
+> [!NOTE] 
+> Selecting the corev15.css file this way loads the rendered CSS rather than the saved CSS. Sometimes you might find discrepancies between the two. User agents such as browsers can also change rendering in response to user actions.
 
-**Important**  Do not log on to the server and edit or customize core SharePoint CSS files in the SharePoint root. Doing so will negatively impact support and upgrade. Never edit the corev15.css directly; always create a copy, rename it, and edit the new file instead. Editing corev15.css will apply branding to all web applications on the server.
+> [!IMPORTANT] 
+> Do not log on to the server and edit or customize core SharePoint CSS files in the SharePoint root. Doing so will negatively impact support and upgrade. Never edit the corev15.css directly; always create a copy, rename it, and edit the new file instead. Editing corev15.css will apply branding to all web applications on the server.
 
 ### To create a custom style sheet for SharePoint
 
@@ -83,7 +85,8 @@ You can use composed looks in custom branding when CSS is called from a master p
     
 You can place custom branding files in  `/Style Library/Themable/` and `/Style Library/{culture}/Themable/`, but  `15\TEMPLATE\LAYOUTS\{LCID}\STYLES\Themable` is not editable, so you can't store custom files in that location.
 
-**Note**  If these locations don't exist by default, you can create them manually and SharePoint will recognize them as themable.
+> [!NOTE] 
+> If these locations don't exist by default, you can create them manually and SharePoint will recognize them as themable.
 
 ## Applying custom CSS to a SharePoint page
 <a name="sectionSection4"> </a>

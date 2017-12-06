@@ -17,11 +17,9 @@ Excel Services generates errors in the SOAP exception based on errors that occur
     
 
 The following examples show how to capture the error codes using the  [SubCode](http://msdn.microsoft.com/library/frlrfSystemWebServicesProtocolsSoapExceptionClassSubCodeTopic.aspx) property (http://msdn.microsoft.com/en-us/library/system.web.services.protocols.soapexception.subcode.aspx) of the **SoapException** class.
-> **Note:**
+
+ [!NOTE]
 > To be able to use the **SubCode** property, you must use Microsoft Visual Studio 2005. The **SubCode** property does not exist in earlier versions of Visual Studio.
-  
-    
-    
 
 For a list of error codes, see  [Excel Services Error Codes](excel-services-error-codes.md).
 ### To capture error codes when using SOAP

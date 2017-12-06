@@ -102,13 +102,15 @@ When you choose the button  **Run Scenario 1**, the add-in does the following:
     
 2. Creates the remote event receiver for the ItemAdding event.
     
-    **Note**  This article discusses the ItemAdding event receiver type. Generally, the ItemAdding event receiver type performs better than the ItemAdded event receiver type. The ECM.Autotagging sample provides code for both the ItemAdding and ItemAdded event receiver types.
+    > [!NOTE] 
+    > This article discusses the ItemAdding event receiver type. Generally, the ItemAdding event receiver type performs better than the ItemAdded event receiver type. The ECM.Autotagging sample provides code for both the ItemAdding and ItemAdded event receiver types.
 
 3. Adds the remote event receiver to the document library.
     
 The following code, in the  **btnScenario1_Click** method of the Default.aspx.cs page in the ECM.AutoTaggingWeb project, shows these steps.
 
-**Note**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```C#
 protected void btnScenario1_Click(object sender, EventArgs e)

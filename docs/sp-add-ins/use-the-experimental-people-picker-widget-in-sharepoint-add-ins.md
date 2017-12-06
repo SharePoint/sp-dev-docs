@@ -87,7 +87,9 @@ To use the People Picker widget, you must do the following:
  
 - Create a module on the add-in web. This step ensures that an add-in web is created when users deploy the add-in.
     
-     **Note**  The cross-domain library requires the existence of an add-in web. The People Picker widget communicates with SharePoint by using the cross-domain library.
+    > [!NOTE] 
+    > The cross-domain library requires the existence of an add-in web. The People Picker widget communicates with SharePoint by using the cross-domain library.
+
 - Create an add-in page that declares a People Picker widget instance using markup.
     
  
@@ -106,7 +108,9 @@ To use the People Picker widget, you must do the following:
  
 4. Select  **Provider-hosted** as the hosting option for your add-in.
     
-     **Note**  You can also use the People Picker widget with other hosting options or even with Office Add-ins or your own website.
+    > [!NOTE] 
+    > You can also use the People Picker widget with other hosting options or even with Office Add-ins or your own website.
+
 5. Select  **ASP.NET Web Forms Application** as the type of web application project.
     
  
@@ -122,7 +126,8 @@ To use the People Picker widget, you must do the following:
  
 2. Choose  **Visual C# Items**> **Office/SharePoint**> **Module**. Provide a name for your module.
     
-     **Note**  If you're building a SharePoint-hosted add-in, you don't need to create an extra module.
+    > [!NOTE] 
+    > If you're building a SharePoint-hosted add-in, you don't need to create an extra module.
 
 ### To add a new page that uses the People Picker widget
 
@@ -238,8 +243,8 @@ Basic People Picker sample (HTML markup declaration):
 
 ```
 
-
- **Note**  The code example above explicitly specifies the host web and add-in web URLs to initialize the Office controls runtime. However, if the add-in web and host web URLs are specified in the  **SPAppWebUrl** and **SPHostUrl** query string parameters, respectively; you can pass an empty object and the code will attempt to get the parameters automatically. The **SPAppWebUrl** and **SPHostUrl** parameters are included in the query string when you use the **{StandardTokens}** token.
+> [!NOTE] 
+> The code example above explicitly specifies the host web and add-in web URLs to initialize the Office controls runtime. However, if the add-in web and host web URLs are specified in the  **SPAppWebUrl** and **SPHostUrl** query string parameters, respectively; you can pass an empty object and the code will attempt to get the parameters automatically. The **SPAppWebUrl** and **SPHostUrl** parameters are included in the query string when you use the **{StandardTokens}** token.
  
 
 The following example shows you how to pass an empty object to the initialize method:
@@ -262,7 +267,9 @@ Office.Controls.Runtime.initialize({});
 
 1. Press the F5 key.
     
-     **Note**  When you press F5, Visual Studio builds the solution, deploys the add-in, and opens the permissions page for the add-in.
+    > [!NOTE] 
+    > When you press F5, Visual Studio builds the solution, deploys the add-in, and opens the permissions page for the add-in.
+
 2. Choose the  **Trust It** button.
     
  
@@ -274,7 +281,7 @@ You can also download this sample from code gallery, see the  [Use the People Pi
 
  
 
-## 
+## Next steps
 <a name="NextSteps"> </a>
 
 This article shows how to use the People Picker widget in your add-in by using HTML. You can also explore the following scenarios and details about the widget.

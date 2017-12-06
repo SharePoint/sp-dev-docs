@@ -193,10 +193,7 @@ If you're a professional web designer, you may want to create and test a design 
     
 In previous versions of SharePoint, if you wanted to reuse a design, you had to use Visual Studio to create a SharePoint Solution Package (.wsp file). Then, in the destination site, you would upload the package to the Solutions Gallery and execute it. Now, in SharePoint, after you finish designing your site, you can choose **Export Package** in Design Manager to export a single .wsp file called a [design package](sharepoint-design-manager-design-packages.md). When you export a design package, SharePoint automatically packages all of the contents that you have added or changed in the Master Page Gallery, Style Library, Theme Gallery, the Device Channels list, and Page content types into a design package. 
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > A design package does not include pages, navigation settings, or the term store. 
   
     

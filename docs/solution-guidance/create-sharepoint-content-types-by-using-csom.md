@@ -18,7 +18,8 @@ To get started, download the [Core.SPD](https://github.com/SharePoint/PnP/tree/d
 
 The following code example shows how to create a content type by using the  **ContentTypeCreationInformation** class, including setting the ID.
 
-**Note:**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```C#
 ContentTypeCollection contentTypes = web.ContentTypes;

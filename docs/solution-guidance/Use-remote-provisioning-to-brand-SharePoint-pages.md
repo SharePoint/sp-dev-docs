@@ -42,7 +42,8 @@ The  **ApplyTheme** method uses the following parameters:
     
 - shareGenerated - A Boolean value. **True** if the generated theme files should be applied to the root web; **false** if they are to be stored in the current web.
 
-**Note**  The shareGenerated parameter determines whether the themed output files are stored in a web-specific location or a location that is accessible across the site collection. We recommend that you keep the default value for your site type.
+> [!NOTE] 
+> The shareGenerated parameter determines whether the themed output files are stored in a web-specific location or a location that is accessible across the site collection. We recommend that you keep the default value for your site type.
 
 ## ThemeInfo class
 <a name="sectionSection1"> </a>

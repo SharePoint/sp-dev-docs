@@ -33,9 +33,7 @@ The following objects are the primary APIs for Following Content tasks:
   
 -  [Microsoft.SharePoint.Client.Social.SocialActorType](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActorType.aspx) and [Microsoft.SharePoint.Client.Social.SocialActorTypes](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActorTypes.aspx) specify content types in client-side requests to the server.
     
-  
-
-> **Note:**
+> [!NOTE]
 > You also use these APIs for Following People tasks, but the **GetSuggestions** and **GetFollowers** methods available from [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx) only support following people, not content. For more information about how you can use [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx) , see [Follow content in SharePoint](follow-content-in-sharepoint.md) and [Follow people in SharePoint](follow-people-in-sharepoint.md). For code examples that show how to follow people, see  [How to: Follow people by using the .NET client object model in SharePoint](how-to-follow-people-by-using-the-net-client-object-model-in-sharepoint.md). 
   
     
@@ -58,9 +56,7 @@ To create a console application that uses the .NET client object model to work w
   
 - **Full Control** access permissions to the User Profile service application for the logged-on user
     
-  
-
-> **Note:**
+> [!NOTE]
 > If you are not developing on the computer that is running SharePoint, get the  [SharePoint Client Components](http://www.microsoft.com/en-us/download/details.aspx?id=35585) download that contains SharePoint client assemblies.
   
     
@@ -120,10 +116,7 @@ The following code example makes the current user start following or stop follow
   
 This code example uses the  [SocialFollowResult](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowResult.aspx) object that is returned by the [Follow](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.Follow.aspx) method to determine whether to start or stop following the target item.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Change the placeholder values for the **serverUrl** and **contentUrl** variables before you run the code. To use a site instead of a document, use the variables that are commented out.
   
     
@@ -249,9 +242,7 @@ The following code example gets the documents and sites that the current user is
   
 - Iterate through the groups of content and get each item's name, content URI, and URI.
     
-  
-
-> **Note:**
+> [!NOTE]
 > Change the placeholder value for the **serverUrl**, **docContentUrl**, and **siteContentUrl** variables before you run the code.
   
     

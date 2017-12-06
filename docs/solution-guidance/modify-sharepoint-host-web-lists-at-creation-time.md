@@ -22,7 +22,8 @@ To implement the event handlers for the add-in, display the properties for the S
 
 The following code example shows how the  **AppInstalled** event receiver is modified to attach the **ListAdded** event receiver.
 
-**Note:**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```C#
 bool rerExists = false;
@@ -86,7 +87,8 @@ private void HandleListAdded(SPRemoteEventProperties properties)
 
 When the add-in is uninstalled, the event receiver should also be removed. To make this work during debugging, go to the  **Add-ins in testing** library and use the **remove** option on the add-in. This triggers the **AppUninstalling** event with the proper permissions to remove the created remote event handler. If you just close the browser or uninstall the add-in from **site contents**, either the event receiver never fires or the **AppUninstalling** event receiver runs with insufficient permissions to remove the **ListAdded** event receiver. This is because add-ins are deployed differently when they are side loaded, which is what Visual Studio does when you press F5.
 
-**Note:**  We recommend that you test this sample in a clean developer site.
+> [!NOTE] 
+> We recommend that you test this sample in a clean developer site.
 
 ## Additional resources
 <a name="bk_addresources"> </a>

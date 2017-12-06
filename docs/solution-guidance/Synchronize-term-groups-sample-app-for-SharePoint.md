@@ -83,7 +83,8 @@ You can set the  _TermGroupExclusions_,  _TermGroupToCopy_, and  _TermSetInclusi
 
 The following code shows the  **CopyNewTermGroups** and **CreateNewTargetTermGroup** methods in MMSSyncManager.cs.
 
-**Note**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```C#
 public bool CopyNewTermGroups(ClientContext sourceContext, ClientContext targetContext, List<string> termGroupExclusions = null, string termGroupToCopy = null)
@@ -258,7 +259,8 @@ private void CreateNewTargetTermGroup(ClientContext sourceClientContext, ClientC
 
 When you select  **Process Changes**, the add-in prompts you to enter a Term Group to synchronize, and then calls the  **ProcessChanges** method in MMSSyncManager.cs. **ProcessChanges** uses the **GetChanges** method of the **ChangedInformation** class to retrieve all changes made to groups, term sets, and terms in the source managed metadata service. Changes are then applied to the target managed metadata service.
 
-**Note**  This document includes only some parts of the  **ProcessChanges** method. To review the entire method, open the Core.MMSSync solution in Visual Studio.
+> [!NOTE] 
+> This document includes only some parts of the  **ProcessChanges** method. To review the entire method, open the Core.MMSSync solution in Visual Studio.
 
 The  **ProcessChanges** method starts by creating a **TaxonomySession** object.
 

@@ -8,8 +8,8 @@ Every portal project needs to implement a navigation solution. Based on project 
 
 Regardless of the choice made, a question remains: How to build a well-performing navigation system in SharePoint Online? This article answers that question.
 
->**Note**:
->Although this guidance primarily targets SharePoint Online, most of it also applies to portals hosted in an on-premises SharePoint environment.
+> [!NOTE] 
+> Although this guidance primarily targets SharePoint Online, most of it also applies to portals hosted in an on-premises SharePoint environment.
 
 _**Applies to:** SharePoint Online_
 
@@ -93,14 +93,14 @@ The Navigation Store persists the configuration of the custom navigation control
 
 The most-commonly used custom Navigation Store, a custom SharePoint list, strikes a balance between extensibility, manageability, and performance (when queried via Search). The list schema can be easily extended with custom Content Types that represent navigation headers/groups and navigation links and Site Columns that define the desired custom attributes (e.g., display order). Crawled Properties for these Site Columns can be mapped to Managed Properties within SharePoint Search. The navigation data is easily managed via the familiar OOB List Management pages. The navigation data can be accessed remotely via the SharePoint Search REST API.
 
->**Note:** 
->Search-based navigation has a dependency on the Search Index. SharePoint continuously crawls portal content; however, there will still be a slight delay before changes to the SharePoint List appear in the Search Index.
+> [!NOTE] 
+> Search-based navigation has a dependency on the Search Index. SharePoint continuously crawls portal content; however, there will still be a slight delay before changes to the SharePoint List appear in the Search Index.
 
 The simplest and best-performing custom Navigation Store is a JavaScript resource file (e.g., nav.js) that declares a component-specific configuration variable (e.g., footerNav) that is initialized with a JSON string. The browser automatically downloads the file and caches it for subsequent use.  The configuration data is ready for use once it loads into the JavaScript run-time environment. The primary trade-off with this approach concerns the Management User Interface: at a minimum, an admin must manually edit a JSON string in a JavaScript file. A custom User Interface would be required to abstract the Store from the admin and make things a bit more friendly.
 
 At the other end of the spectrum of custom Navigation Stores is the custom database. This option provides the ultimate in flexibility, but also requires the most custom development. Additionally, a hosting environment is needed for the database, the custom Web API, and the Navigation Management Page. 
 
->**Note:**
+> [!NOTE] 
 > An excellent sample showing how to implement a custom navigation store which uses client-side data access layer is available from the SharePoint PnP repository: [Client-Side Data Access Layer (DAL) Sample](https://github.com/SharePoint/PnP/tree/master/Samples/Portal.DataAccessLayer)
 
 **Out-of-Box (OOB) Navigation Stores:**
@@ -108,15 +108,18 @@ At the other end of the spectrum of custom Navigation Stores is the custom datab
 
 - **OOB Managed Navigation (MMS)**: <a name="bk_managedNavStore"> </a> Managed Navigation allows you to use a Managed Metadata Service (MMS) Term set to configure the navigation nodes for a given site collection. OOB Navigation display controls automatically consume this data. The OOB Navigation Management Page provides an easy-to-use user interface to manage the navigation nodes within an *unconstrained* hierarchy (unlimited depth). Custom Navigation display controls can also consume this data, but must do so via JSOM as there is currently no REST API available to work with Managed Navigation.
 
-	>**Note:** It is quite cumbersome to configure and maintain a Global Navigation definition via Managed Navigation. As each new a site collection is created, you must duplicate the configuration for the site collection and its associated term set. Also keep in mind that managed navigation is not security trimmed, so your users might see links which they cannot access.
+	> [!NOTE] 
+	> It is quite cumbersome to configure and maintain a Global Navigation definition via Managed Navigation. As each new a site collection is created, you must duplicate the configuration for the site collection and its associated term set. Also keep in mind that managed navigation is not security trimmed, so your users might see links which they cannot access.
 
 - **OOB Structural Navigation (Site)**: <a name="bk_structuralNavStore"> </a> Structural Navigation allows you use the native structure of the site collection (its webs and pages), as well as authored headings and links, to configure the navigation nodes for a given site collection. The OOB Navigation Management Page provides a user interface to manage the navigation nodes within an *constrained* hierarchy (limited depth). Custom Navigation display controls can also consume this data, but must do so via JSOM as there is currently no REST API available to work with Structural Navigation.
 
-	>**Note:** The OOB Navigation display controls use database queries (i.e., content by query) to obtain the navigation data. They do this for each page load, which is very resource intensive for complex site collection structures. The use of Structural Navigation is recommended only for small portals with simple site collection structures. Structural navigation is always returning security trimmed results.
+	> [!NOTE] 
+	> The OOB Navigation display controls use database queries (i.e., content by query) to obtain the navigation data. They do this for each page load, which is very resource intensive for complex site collection structures. The use of Structural Navigation is recommended only for small portals with simple site collection structures. Structural navigation is always returning security trimmed results.
 
 - **OOB Search index (Search)**: <a name="bk_searchNavStore"> </a> Search driven navigation allows you query SharePoint search index for sites and pages by constructing the proper search query. There's no specific OOB navigation management page and you'll need to implement custom navigation display controls to consume the data retrieved from the search queries.
 
-	>**Note:** When using search driven navigation is important that you cache the obtained search results as you don't want to hit the server for each page load. Later in this article the client-side data access layer is explained which is the model to use in combination with search driven navigation. Just like structural navigation the search driven navigation is security trimmed, so your users will not see unreachable links. Downside of search driven navigation is that it's hard to control the order of the returned navigation items.
+	> [!NOTE] 
+	> When using search driven navigation is important that you cache the obtained search results as you don't want to hit the server for each page load. Later in this article the client-side data access layer is explained which is the model to use in combination with search driven navigation. Just like structural navigation the search driven navigation is security trimmed, so your users will not see unreachable links. Downside of search driven navigation is that it's hard to control the order of the returned navigation items.
 
 
 ### Navigation Management Page

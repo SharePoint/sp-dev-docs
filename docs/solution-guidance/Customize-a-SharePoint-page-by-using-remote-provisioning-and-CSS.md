@@ -27,7 +27,8 @@ You can now add or modify CSS elements for a rich text field.
 
 To customize Web Part Zones by using CSS, you use the Script Editor Web Part. For more information, see  [How to Use the Script Editor Web Part in SharePoint 2013](http://community.bamboosolutions.com/blogs/sharepoint-2013/archive/2013/05/20/how-to-use-script-editor-web-part-in-sharepoint-2013.aspx).
 
-**Note**  If you are using SharePoint Online and the NoScript feature, the Script Editor Web Part is disabled. 
+> [!NOTE] 
+> If you are using SharePoint Online and the NoScript feature, the Script Editor Web Part is disabled. 
 
 The following code example uploads custom CSS to the Asset Library, applies a reference to the CSS URL with a custom action, and then creates a custom action to build a link to the new CSS file.
 

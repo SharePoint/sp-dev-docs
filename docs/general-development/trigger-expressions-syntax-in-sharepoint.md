@@ -30,9 +30,7 @@ Elements that can be used in a trigger expression are:
   
 - Constants
     
-  
-
-> **Note:**
+> [!NOTE] 
 > The string " **Null**" is reserved for the value **Null**. 
   
     

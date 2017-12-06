@@ -48,8 +48,7 @@ The query suggestion parameters are specified in the URL. You can construct the 
 >  `http://server/_api/search/suggest(parameter=value&amp;parameter=value)`
     
   
-
-> **Note:**
+> [!NOTE]
 > The Search REST service doesn't support anonymous requests to the **Suggest** endpoint.
   
     

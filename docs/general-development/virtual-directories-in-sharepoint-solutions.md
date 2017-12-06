@@ -20,10 +20,7 @@ This new system has implications for you as you develop SharePoint solutions and
     
 If you need to make your solution compatible with site collections of either mode, you need branching logic to determine the mode of the current site collection and construct the virtual path accordingly. The  [CompatibilityLevel](https://msdn.microsoft.com/library/Microsoft.SharePoint.SPSite.CompatibilityLevel.aspx) property, which is also available in all the SharePoint client object models and the REST interface, is one place where your code can check for the mode. The [SPUtility](https://msdn.microsoft.com/library/Microsoft.SharePoint.Utilities.SPUtility.aspx) class also has several new properties to aid in managing compatibility level in your solutions. These are not available in the client object models. Finally, there are several controls in SharePoint that expose a **UIVersion** property that your code can also use to find the current compatibility level.
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > If the file in the virtual path is *.aspx, SharePoint will automatically detect the mode of the current site collection and return the file from the appropriate hive. So you do not have to insert the "/15" into the virtual path. 
   
     

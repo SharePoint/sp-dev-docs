@@ -11,7 +11,8 @@ There are many third-party libraries that you can leverage to build rich SharePo
 
 ![jQuery UI accordion rendered by a SharePoint Framework client-side web part](../../../images/thirdpartycss-accordion-styled.png)
 
-> **Note:** Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment.md).
+> [!NOTE] 
+> Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment.md).
 
 ## Prepare the project
 

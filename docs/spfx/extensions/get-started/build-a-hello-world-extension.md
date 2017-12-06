@@ -44,7 +44,8 @@ This article describes how to create your first Hello World SharePoint Framework
 
     ![Yeoman SharePoint generator prompts to create an extension solution](../../../images/ext-yeoman-app-prompts.png)
 
-    > **Note:** If you use a name for the extension that is too long, you might encounter issues. The entries provided are used to generate an alias entry for the application customizer manifest json file. If the alias is longer than 40 characters, you will get an exception when you try to serve the extension using `gulp serve --nobrowser`. You can resolve this by updating the alias entry afterward.
+    > [!NOTE] 
+    > If you use a name for the extension that is too long, you might encounter issues. The entries provided are used to generate an alias entry for the application customizer manifest json file. If the alias is longer than 40 characters, you will get an exception when you try to serve the extension using `gulp serve --nobrowser`. You can resolve this by updating the alias entry afterward.
 
     At this point, Yeoman will install the required dependencies and scaffold the solution files along with the **HelloWorld** extension. This might take a few minutes. 
 
@@ -66,7 +67,8 @@ This article describes how to create your first Hello World SharePoint Framework
     code .
     ```
 
-    >**Note:** Because the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor that supports client-side development to build your extension.
+    > [!NOTE] 
+    > Because the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor that supports client-side development to build your extension.
 
     Notice how the default solution structure looks like the solution structure for client-side web parts. This is the basic SharePoint Framework solution structure, with similar configuration options across all solution types.
 
@@ -89,7 +91,8 @@ The logic for your Application Customizer is contained in the **onInit** method.
 
 - **onInit()** is called when the client-side extension is first activated on the page. This event occurs after ```this.context``` and ```this.properties``` are assigned. As with web parts, ```onInit()``` returns a promise that you can use to perform asynchronous operations.
 
->**Note:** The class constructor is called at an early stage, when ```this.context``` and ```this.properties``` are undefined. Custom initiation logic is not supported here.
+> [!NOTE] 
+> The class constructor is called at an early stage, when ```this.context``` and ```this.properties``` are undefined. Custom initiation logic is not supported here.
 
 The following are the contents of **onInit()** in the default solution. This default solution writes a log to the Dev Dashboard, and then displays a simple JavaScript alert when the page renders.
 
@@ -106,7 +109,8 @@ First, compile your code and host the compiled files from your local computer by
 gulp serve --nobrowser
 ```
 
->**Note:** If you do not have the SPFx developer certificate installed, Workbench will notify you that it is not configured to load scripts from localhost. If this happens, stop the process that is currently running in the console window, run the `gulp trust-dev-cert` command in your project directory console to install the developer certificate, and then run the `gulp serve --nobrowser` command again.
+> [!NOTE] 
+> If you do not have the SPFx developer certificate installed, Workbench will notify you that it is not configured to load scripts from localhost. If this happens, stop the process that is currently running in the console window, run the `gulp trust-dev-cert` command in your project directory console to install the developer certificate, and then run the `gulp serve --nobrowser` command again.
 
 You use the ```--nobrowser``` option because you don't need to launch the local workbench, since you can't debug extensions locally.
 
@@ -152,7 +156,8 @@ You should now see the dialog message on your page.
 
 This dialog is thrown by your SharePoint Framework Extension. Note that because you provided the **testMessage** property as part of the debug query parameters, it's included in the alert message. You can configure your extension instances based on the client component properties, which are passed for the instance also in runtime mode.
 
-> **Note:** If you have issues with debugging, double-check the URL query parameters used for the query. Some browsers encode the parameters and in some scenarios this affects the behavior.
+> [!NOTE] 
+> If you have issues with debugging, double-check the URL query parameters used for the query. Some browsers encode the parameters and in some scenarios this affects the behavior.
 
 ## Next steps
 Congratulations, you've gotten your first SharePoint Framework Extension running! To continue building out your extension, see [Using page placeholders from Application Customizer (Hello World part 2)](./using-page-placeholder-with-extensions.md). You will use the same project and take advantage of specific content placeholders for modifying the UI of SharePoint. Notice that the ```gulp serve``` command is still running in your console window (or in Visual Studio Code if you are using the editor). You can continue to let it run while you go to the next article.

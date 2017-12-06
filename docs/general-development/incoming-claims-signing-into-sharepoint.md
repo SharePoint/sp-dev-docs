@@ -12,10 +12,7 @@ ms.assetid: 08c687aa-e485-4269-aea8-4333da3588a5
 
 When a user signs in to SharePoint Server, the user's token is validated and then used to sign in to SharePoint. The user's token is a security token issued by a claims provider.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > For information about claims authentication for a single SharePoint farm and inter-farm SharePoint claims authentication, see  [Plan for claims authentication](http://technet.microsoft.com/en-us/library/cc262350.aspx) on TechNet.
   
     
@@ -45,10 +42,7 @@ In Security Assertion Markup Language (SAML) passive sign-in, when a user signs 
     
 For SAML-based claims providers, like the Active Directory Federation Services (ADFS) claims provider and the Windows Live ID claims provider, signing in by using the SAML passive sign-in mode is the only supported way. The SAML passive sign-in is the SharePoint online identity model.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > SAML passive sign-in describes the process of signing in. When a sign-in for a web application is configured to accept tokens from a trusted login provider, this type of sign-in is called SAML passive sign-in. A trusted login provider is an external (that is, external to SharePoint) security token service (STS) that SharePoint trusts. 
   
     

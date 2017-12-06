@@ -103,7 +103,8 @@ Fonts are further scoped by script type (for example, Latin, Arabic, Cyrillic). 
     
 The font scheme defines a large preview image and a small preview image. They are required only for web fonts.
 
-**Note**  You can edit the .spfont file in Notepad. You cannot edit it in PowerPoint.
+> [!NOTE] 
+> You can edit the .spfont file in Notepad. You cannot edit it in PowerPoint.
 
 The following is an example of an .spfont file.
 
@@ -159,7 +160,8 @@ To create a custom theme:
     
 5. When you are done, upload the .spcolor file to the **Site settings** > **Theme** > **15** folder.
     
-    **Note**  Save the file with a new file name (for example, custom_palette1.spcolor).
+    > [!NOTE] 
+    > Save the file with a new file name (for example, custom_palette1.spcolor).
 
    The following table maps colors and page elements to their code in the .spcolor file. It is a subset of the mappings that are available in the .spcolor file.
     
@@ -182,11 +184,13 @@ To create a custom theme:
 
 7. Edit each  `<s:fontSlot />` section to customize the font SharePoint applies to the specified font slot on the page. For example, notice the first entry, `<s:fontSlot name="title">`. This entry describes which font SharePoint uses to style the title of the page. This section also specifies which font will be used for different languages.
     
-    **Note**  You can upload custom fonts to SharePoint and point each entry to a custom .eot, .woff, .ttf, and .svg file. 
+    > [!NOTE] 
+    > You can upload custom fonts to SharePoint and point each entry to a custom .eot, .woff, .ttf, and .svg file. 
 
 8. Upload the file to the **Site settings** > **Theme** > **15** folder.
     
-    **Note**  Save the file with a new file name (for example, custom_font.spfont).
+    > [!NOTE] 
+    > Save the file with a new file name (for example, custom_font.spfont).
 
     The following table maps page elements to fonts as they're defined in the .spfont file.
 

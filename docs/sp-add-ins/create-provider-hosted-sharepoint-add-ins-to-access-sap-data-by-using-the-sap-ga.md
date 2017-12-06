@@ -35,7 +35,9 @@ The following are prerequisites to the procedures in this article:
  
 -  **An organizational account in Microsoft Azure**. See  [Manually register your app with Azure AD so it can access Office 365 APIs](http://msdn.microsoft.com/library/95479f73-15d7-426e-abdf-ae2c72b5cd33%28Office.15%29.aspx#bk_CreateOrganizationAccount).
     
-     **Note**  Login to your Office 365 account (login.microsoftonline.com) to change the temporary password after the account is created.
+    > [!NOTE] 
+    > Login to your Office 365 account (login.microsoftonline.com) to change the temporary password after the account is created.
+
 -  **A SAP OData endpoint** with sample data in it. See the documentation for [SAP Gateway for Microsoft](http://go.microsoft.com/fwlink/?LinkId=507635).
     
  
@@ -119,9 +121,11 @@ For a detailed description and diagram of the OAuth flow used by OAuth 2.0 in Az
 ### Register your web application with Azure AD
 
 
-1. Login into the  [Azure Management portal](https://manage.windowsazure.com) with your Azure administrator account.
+1. Sign in to the  [Azure Management portal](https://manage.windowsazure.com) with your Azure administrator account.
     
-     **Note**  For security purposes, we recommend against using an administrator account when developing add-ins.
+    > [!NOTE] 
+    > For security purposes, we recommend against using an administrator account when developing add-ins.
+
 2. Choose  **Active Directory** on the left side.
     
  
@@ -204,7 +208,9 @@ For a detailed description and diagram of the OAuth flow used by OAuth 2.0 in Az
 ```
 
 
-     **Note**  Your application is known to Azure AD by the "localhost" URL you used to register it. The client ID and client key are associated with that identity. When you are ready to stage your application to an Azure Web Site, you will re-register it with a new URL.
+    > [!NOTE] 
+    > Your application is known to Azure AD by the "localhost" URL you used to register it. The client ID and client key are associated with that identity. When you are ready to stage your application to an Azure Web Site, you will re-register it with a new URL.
+
 4. Still in the  **appSettings** section, add an **Authority** key and set its value to the Office 365 domain ( *some_domain*  .onmicrosoft.com) of your organizational account. In the continuing example, the organizational account is Bob@<O365_domain>.onmicrosoft.com, so the authority is `<O365_domain>.onmicrosoft.com`. 
     
 ```
@@ -601,7 +607,8 @@ Regardless, of whether you use CSOM or the REST APIs to access SharePoint, your 
 ```
 
 
- **Note**  While you are debugging the SharePoint Add-in, the Office Developer Tools for Visual Studio re-register it with Azure ACS each time you press F5 in Visual Studio. When you stage the SharePoint Add-in, you have to give it a long-term registration. See the section  [Modify the add-in and stage it to Azure and Office 365](#Stage).
+> [!NOTE] 
+> While you are debugging the SharePoint Add-in, the Office Developer Tools for Visual Studio re-register it with Azure ACS each time you press F5 in Visual Studio. When you stage the SharePoint Add-in, you have to give it a long-term registration. See the section  [Modify the add-in and stage it to Azure and Office 365](#Stage).
  
 
 

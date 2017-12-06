@@ -47,7 +47,7 @@ The following table shows high-level scenarios that apply to the services descri
 |Word Automation Services  <br/> |||X  <br/> ||
    
 
-> **Note:**
+> [!NOTE]
 > Not all services and scenarios are represented in this section. For links to developer documentation for other services, see  [Additional resources](#bkmk_Resources). 
   
     

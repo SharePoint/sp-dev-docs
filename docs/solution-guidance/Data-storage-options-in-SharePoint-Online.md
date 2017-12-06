@@ -209,7 +209,9 @@ To load enough data to exceed the list query threshold limit:
     
     When the Notes list is updated, a message appears at the top of the page that indicates how many list items (Notes) you added and how many are left to add.
     
-    **Note**  The operation takes about one minute to run each time you choose the button. The end result of running the operation 10 times is shown in Figure 6.
+    > [!NOTE] 
+    > The operation takes about one minute to run each time you choose the button. The end result of running the operation 10 times is shown in Figure 6.
+
 4. After you've added 5,001 items to the list, choose Notes in the left menu. When the page loads, you will see the error message shown in Figure 6, which comes from the SharePoint REST API.
     
     **Figure 6. List query thresold exceeded error message**
@@ -231,7 +233,9 @@ To load enough data to exceed the data storage limit:
     
     When the Notes list is updated, a message appears at the top of the page that indicates how many list items (Notes) you added and how many are left to add.
     
-    **Note**  The operation takes about one minute to run each time you choose the button. The end result of running the operation 11 times is shown in Figure 7.
+    > [!NOTE] 
+    > The operation takes about one minute to run each time you choose the button. The end result of running the operation 11 times is shown in Figure 7.
+    
 4. After you perform the operation 11 times, an error message will occur when you choose the button, as shown in Figure 7.
     
     **Figure 7. Data storage threshold exceeded error message**

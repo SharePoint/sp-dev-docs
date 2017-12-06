@@ -94,10 +94,7 @@ There are two variations of the **equals** and **contains** operators:
   
 The option that you choose for the second **value** in the condition also depends to some extent on what the first **value** is set to. For example, suppose that you set the first **value** to **Created**, and then you look up the second **value** by using a variable that is a string, such as **Last 10 Characters**. You would probably want to return the string **As Date/Time**, so that the comparison with **Created** will return predictable results.
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > You can use logical operators such as**||**(or) or **&amp;&amp;** (and) in the condition.
   
     
@@ -139,10 +136,7 @@ There are two variations of the **equals** and **contains** operators. The **equ
     
 The option that you choose for **value** also depends to some extent on what **field** is set to. For example, suppose that you set **field** to **Created**, and then you look up the **value** by using a variable that is a string, such as **Last 10 Characters**. You would probably want to return the string **As Date/Time**, so that the comparison with **Created** will return predictable results.
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > You can use logical operators such as**||**(or) or **&amp;&amp;** (and) in the condition.
   
     
@@ -164,10 +158,7 @@ Following are examples of what the condition might look like in a workflow step.
 
 This condition is initially displayed in a workflow step as **If created by specific person**. Use this condition to discover whether an item was created by a specified user. You can specify the user either by entering their user name or email address manually (for example, Olivier@contoso.com) or by selecting the user from among users already listed in SharePoint, Exchange, or Active Directory.
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > Because both the user name and the e-mail address are case sensitive, it is recommended that you use the latter method to ensure correct cases. If you must enter a user name or e-mail address manually, be careful to match the cases precisely. For example, the condition **If created by contoso\\molly** does not evaluate as true if the user account is registered as Contoso\\Molly.
   
     
@@ -201,10 +192,7 @@ Following is an example of what the condition might look like in a workflow step
 
 This condition is initially displayed in a workflow step as **If modified by specific person**. Use this condition to discover whether an item was modified by a specified user. The user can be specified as an e-mail address, such as olivier@contoso.com, or selected from SharePoint, Exchange, or Active Directory users.
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > The user name and e-mail address are case sensitive. It is recommended that you select a user name or e-mail address to help ensure that you use the correct case. If you type a user name or e-mail address, you must match the case of the account. For example, **If modified by contoso\\molly** will not evaluate as true if the user account is Contoso\\Molly.
   
     
@@ -261,10 +249,7 @@ The **Person is a valid SharePoint user** condition is one of only two condition
 
 This condition is initially displayed in a workflow step as **If title field contains keywords**. Use this condition to discover whether the **Title** field for an item contains specified text. You can either specify the text in the String Builder (as a static value, as a dynamic string, or as a combination of the two) or insert a lookup to a field or variable.
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > When using the **Title field contains keywords** condition, you cannot search for more than a single keyword text. To search for multiple, alternative keyword texts, you can use logical operators such as**||**( or) and **&amp;&amp;** (and) in either of the following two conditions: **If any value equals value** and **If current item field equals value**. (Use the latter condition if you want to search in the **Title** field only). For an example, see the following image:> 
   
     
@@ -296,11 +281,8 @@ By default, when a workflow is started manually it uses the permissions of the p
     
 In such cases, you can use one or more impersonation steps in the workflow. An impersonation step uses the permissions of the person who most recently saved the workflow template???typically the author of the template, who would typically have the needed permissions for all of the workflow's operations, including in this case permission to archive the document to the appropriate library. 
   
-    
-    
-
-> **Note:**
->  For both of these conditions, *all*  of the specified users and groups must pass the comparison in order for the condition to evaluate to True.>  For both of these conditions, it does not matter whether the specified permissions have been assigned *explicitly*  to the specified individual users or whether the permissions are held by those individual users only *implicitly*  (as members of a group to which the permissions have been assigned, for instance).For specified *groups*  , on the other hand, the permissions must have been assigned *explicitly*  and *not*  inherited from a parent group.
+> [!NOTE] 
+> For both of these conditions, *all*  of the specified users and groups must pass the comparison in order for the condition to evaluate to True.>  For both of these conditions, it does not matter whether the specified permissions have been assigned *explicitly*  to the specified individual users or whether the permissions are held by those individual users only *implicitly*  (as members of a group to which the permissions have been assigned, for instance).For specified *groups*  , on the other hand, the permissions must have been assigned *explicitly*  and *not*  inherited from a parent group.
   
     
     
@@ -390,9 +372,7 @@ Following is an example of what the condition might look like in a workflow step
 
 - If the file size is between 1023 and1048577 kilobytes
     
-  
-
-> **Note:**
+> [!NOTE] 
 > The specified upper and lower limits are not included in the defined range. In the example given here, a file that is 1023 KB would evaluate as false because it is not between 1023 and 1048577. 
   
     

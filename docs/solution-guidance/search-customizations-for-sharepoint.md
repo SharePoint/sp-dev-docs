@@ -24,7 +24,8 @@ To create a site directory:
     
 To create the site directory display templates:
 
-**Note:**  This procedure uses the site-related display templates without modification. If you want to change how site directory results are displayed, modify the display templates that you create.
+> [!NOTE] 
+> This procedure uses the site-related display templates without modification. If you want to change how site directory results are displayed, modify the display templates that you create.
 
 1. Open the mapped network drive to the  **Master Page Gallery**. For more information, see [How to: Map a network drive to the SharePoint 2013 Master Page Gallery](http://msdn.microsoft.com/en-us/library/office/jj733519%28v=office.15%29.aspx).
     
@@ -283,7 +284,8 @@ These settings are also available in the  **Site Collection Administration** sec
 
 The following table lists schema files that support a search configuration. For information about the schema format, see [Share Point search settings portability schemas](http://msdn.microsoft.com/en-us/library/office/dn627953%28v=office.15%29.aspx).
 
-**Note:**  You can download the schema files from [http://download.microsoft.com/download/1/2/2/12204CDE-56A6-4B2F-9719-4EA25FDA7743/SP15_search_settings_portability_schema.zip](http://download.microsoft.com/download/1/2/2/12204CDE-56A6-4B2F-9719-4EA25FDA7743/SP15_search_settings_portability_schema.zip). 
+> [!NOTE] 
+> You can download the schema files from [http://download.microsoft.com/download/1/2/2/12204CDE-56A6-4B2F-9719-4EA25FDA7743/SP15_search_settings_portability_schema.zip](http://download.microsoft.com/download/1/2/2/12204CDE-56A6-4B2F-9719-4EA25FDA7743/SP15_search_settings_portability_schema.zip). 
 
 **Table 2. Search settings portability schemas**
 

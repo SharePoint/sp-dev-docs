@@ -255,11 +255,7 @@ In this step, you can run your app and validate it.
   ![Map view on mobile app](../images/SP15Con_HowToCreateMapBasedPhoneApp_Fig3.png)
   
 
-  
-
-  
-
-> **Note:**
+> [!NOTE]
 > The user's experience of the Geolocation field can be different on mobile devices than in browsers. The **Use Specific Location** option, available in the browser, is not available for mobile devices. For mobile devices, only one option is available: **Use my location**. 
   
     

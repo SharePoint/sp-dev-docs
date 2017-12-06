@@ -26,7 +26,8 @@ To replace content types and site columns by using CSOM:
     
 In the following code,  **Main** shows the order of operations to perform to replace content types and site columns by using CSOM.
 
-**Note:**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```C#
 static void Main(string[] args)
@@ -207,7 +208,8 @@ In the following code,  **ReplaceContentType** checks all items in all libraries
   3. For each list item, getting the content type ID of the list item. Determine whether the content type ID of the list item is equal to the old content type ID. If the content type IDs are not equal, skip to the next list item. If the content type IDs are equal, use [ContentType.StringId](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.contenttype.stringid.aspx) to assign the new content type ID to the list item.
     
 
-**Note:**  The old content type is still in the list but it is not used anymore. You can now delete the old content type from the lists, and then retract it.This article describes how to replace document content types only. If you are replacing content types on page layouts, ensure you update the [AssociatedContentType](https://msdn.microsoft.com/library/office/microsoft.sharepoint.publishing.pagelayout.associatedcontenttype.aspx) property on each page layout in the site collection.
+> [!NOTE] 
+> The old content type is still in the list but it is not used anymore. You can now delete the old content type from the lists, and then retract it.This article describes how to replace document content types only. If you are replacing content types on page layouts, ensure you update the [AssociatedContentType](https://msdn.microsoft.com/library/office/microsoft.sharepoint.publishing.pagelayout.associatedcontenttype.aspx) property on each page layout in the site collection.
 
 ```C#
 private static void ReplaceContentType(ClientContext cc, Web web)

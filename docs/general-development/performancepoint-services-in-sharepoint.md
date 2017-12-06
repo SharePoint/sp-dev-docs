@@ -79,8 +79,7 @@ For more information about creating editors, see the following topics:
 -  [How to: Create tabular data source editors for PerformancePoint Services in SharePoint](how-to-create-tabular-data-source-editors-for-performancepoint-services-in-share.md)
     
   
-
-> **Note:**
+> [!NOTE]
 > PerformancePoint Dashboard Designer can create and delete custom objects, so your editor does not need to provide logic for creating or deleting objects. 
   
     
@@ -111,10 +110,7 @@ Transforms change the appearance, contents, or functionality of scorecards befor
     
 For more information about scorecard transforms, see  [How to: Create scorecard transforms for PerformancePoint Services in SharePoint](how-to-create-scorecard-transforms-for-performancepoint-services-in-sharepoint-2.md).
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > If a transform modifies the data values in a scorecard, the changes propagate directly to Strategy Map reports that use the scorecard as a data source. In addition, changes to scorecards may affect KPI Details reports. 
   
     

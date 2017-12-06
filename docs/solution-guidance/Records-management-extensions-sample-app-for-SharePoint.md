@@ -63,7 +63,8 @@ Scenario 1 addresses in-place records management features and settings for sites
 
 The following code activates or deactivates the In-Place Records Management feature on the site collection. The  **DisableInPlaceRecordsManagementFeature** and **EnableSiteForInPlaceRecordsManagement** methods are part of the AppModelExtensions\RecordsManagementExtensions.cs file in the [OfficeDevPnP.Core](https://github.com/SharePoint/PnP/tree/master/OfficeDevPnP.Core).
     
-**Note**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```C#
 protected void btnToggleIPRStatus_Click(object sender, EventArgs e)
@@ -154,7 +155,8 @@ public static void SetRecordRestrictions(this Site site, EcmSiteRecordRestrictio
 
 Scenario 2 shows how to interact with in-place records management settings for lists. When the app installs, it creates a document library called IPRTest. When you use this app to change and save the in-place records management settings, the changes are applied to IPRTest. 
 
-**Note**  To use in-place records management settings on a list, you must activate the In-place Records Management feature on your site collection, as shown in Figure 1 earlier in this article. 
+> [!NOTE] 
+> To use in-place records management settings on a list, you must activate the In-place Records Management feature on your site collection, as shown in Figure 1 earlier in this article. 
 
 The following code in Default.aspx.cs runs when a user chooses the  **Save Changes** button.
 

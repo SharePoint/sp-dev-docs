@@ -12,7 +12,8 @@ You might want to display images from a SharePoint site in your provider-hosted 
 
 The [Core.CrossDomainImages](https://github.com/SharePoint/PnP/tree/dev/Samples/Core.CrossDomainImages) code sample shows how a provider-hosted add-in can use a SharePoint access token and a REST service to retrieve images from SharePoint. The REST service returns a Base64-encoded string, which is used to show the image in the browser. Use the solution in this sample to show images stored in SharePoint in provider-hosted add-ins by using either server-side or client-side code.
 
-**Note:** Because the sample uses a REST endpoint, you can use either server-side or client-side code to retrieve your image.
+> [!NOTE] 
+> Because the sample uses a REST endpoint, you can use either server-side or client-side code to retrieve your image.
 
 ## Before you begin
 
@@ -28,7 +29,8 @@ When you run this sample, Default.aspx tries to load the following:
     
 - Image 3, by using a client-side call to a REST endpoint that returns a Base64-encoded string.
     
-**Note:** Image 1 does not render because the add-in crosses domains to get to the image in SharePoint. Notice that the URL of the provider-hosted add-in runs on localhost. Open the shortcut menu (right-click) for Image 1, and then choose **Properties**. Notice that the **Address (URL)** is trying to retrieve the image from the add-in web, not localhost. Because the provider-hosted add-in crosses domains to reach the add-in web, authentication is required in order to access the image. Verify that accessing Image 1's URL directly, as opposed to the cross-domain call in the provider-hosted add-in, resolves without an error by copying and pasting **Address (URL)** into a new browser window. Notice that Image 1 displays without an error. Compare the source of Image 1 to the source of Image 2. Notice that the **Address (URL)** points to a Base64-encoded string.
+> [!NOTE] 
+> Image 1 does not render because the add-in crosses domains to get to the image in SharePoint. Notice that the URL of the provider-hosted add-in runs on localhost. Open the shortcut menu (right-click) for Image 1, and then choose **Properties**. Notice that the **Address (URL)** is trying to retrieve the image from the add-in web, not localhost. Because the provider-hosted add-in crosses domains to reach the add-in web, authentication is required in order to access the image. Verify that accessing Image 1's URL directly, as opposed to the cross-domain call in the provider-hosted add-in, resolves without an error by copying and pasting **Address (URL)** into a new browser window. Notice that Image 1 displays without an error. Compare the source of Image 1 to the source of Image 2. Notice that the **Address (URL)** points to a Base64-encoded string.
 
 When Default.aspx loads, **Page_Load** runs and does the following:
 
@@ -38,7 +40,8 @@ When Default.aspx loads, **Page_Load** runs and does the following:
     
 3. Sets Image2.ImageUrl to the Base64-encoded string that **ImgService.GetImage** returns. Access token, site, folder, and file name are passed as parameters to **ImgService.GetImage**.
     
-**Note:** The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```C#
  protected void Page_Load(object sender, EventArgs e)

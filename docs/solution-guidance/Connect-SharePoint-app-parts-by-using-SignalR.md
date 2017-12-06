@@ -32,7 +32,8 @@ The connected app parts and chat hub architecture includes the following compone
     
 3. The chat hub, which uses the SignalR library to route messages from sending to receiving app parts. In this code sample, all app parts receive messages from the chat hub, including the app part that sent the message.
     
-**Note**  Because app parts run in an IFRAME, you cannot use JavaScript only to communicate between app parts. 
+> [!NOTE] 
+> Because app parts run in an IFRAME, you cannot use JavaScript only to communicate between app parts. 
 
 ## Use the Core.ConnectedAppParts app
 <a name="sectionSection2"> </a>
@@ -69,7 +70,8 @@ In this code sample, the Core.ConnectedAppParts project contains two app parts (
     
 4. Start the connection to the chat hub using  **$.connection.hub.start().done**. When the connection is established, an event handler is defined on the  **sendmessage** button's click event. This event handler calls **chat.server.send** to send the name of the app part and the message entered by the user to the chat hub.
 
-**Note**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```
     <!--Script references. -->

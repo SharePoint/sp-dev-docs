@@ -74,7 +74,8 @@ To create a console application to run as an Azure WebJob, perform the following
 
 In Program.cs, add the following code to the console application.
 
-**Note**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 
 1. Add  **using** statements.

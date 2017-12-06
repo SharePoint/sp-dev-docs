@@ -150,7 +150,8 @@ To initiate different tasks, append the task name with the gulp command. For exa
 gulp serve
 ```
 
->**Note**: You cannot execute multiple tasks at the same time.
+> [!NOTE] 
+> You cannot execute multiple tasks at the same time.
 
 The `serve` runs the different tasks and finally launches SharePoint Workbench.
 

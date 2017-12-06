@@ -14,7 +14,8 @@ If you already have an Office 365 tenant, see [create your app catalog site](#cr
 
 If you don't have one, you can create a trial tenant or for example sign up for the [Office Developer Program](https://profile.microsoft.com/RegSysProfileCenter/wizardnp.aspx?wizid=7a6e3d71-b057-49cc-b2aa-158ff23432f3&lcid=1033&culture=en-us&dir=LTR). You will receive a welcome mail with a link to sign up for an Office 365 Developer Tenant. 
 
->**Note:** Make sure that you are signed out of any existing Office 365 tenants before you sign up.
+> [!NOTE] 
+> Make sure that you are signed out of any existing Office 365 tenants before you sign up.
 
 ## Create app catalog site
 You will need an app catalog to upload and deploy web parts. If you've already set up an app catalog, see [create a new Developer Site collection](#create-a-new-developer-site-collection).  

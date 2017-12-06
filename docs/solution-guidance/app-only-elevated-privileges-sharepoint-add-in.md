@@ -21,7 +21,10 @@ As a rule of a thumb, we would like to provide the following high-level guidelin
 	+ Search - if target is SharePoint On-Premises. SharePoint Online support for it has been added ([blog post](https://blogs.msdn.microsoft.com/vesku/2016/03/07/using-add-in-only-app-only-permissions-with-search-queries-in-sharepoint-online/))
 	+ User Profile CSOM operations, except that the User Profile Bulk Update API can be used with app-only permissions
 	+ Updating taxonomy service entries (write) - read works
-	**Note:** In these scenarios you need to use a specific service account.
+	
+	> [!NOTE] 
+	> In these scenarios you need to use a specific service account.
+
 - AllowAppOnlyPolicy is similar to RunWithElevatedPrivileges, but not exactly the same.
 	+ AllowAppOnlyPolicy executes code based on the permissions granted to the SharePoint Add-in, not on behalf of another user who has the appropriate permissions to perform an operation.
 

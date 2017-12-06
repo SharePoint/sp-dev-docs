@@ -16,7 +16,8 @@ In this sample, we create a basic console application that implements classes in
     
 - Apply the provisioning template to a new or existing site collection.
     
-**Note:**  This sample walkthrough is a companion to a sample currently available on GitHub: [Getting Started with the PnP Provisioning Engine](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Framework.Console). The code (Program.cs) and solution files for the sample are available for download. There also is a 20-minute video presentation of this process (with slightly different code) available on the Microsoft Channel 9 site: [Getting Started with the PnP Provisioning Engine](https://channel9.msdn.com/blogs/OfficeDevPnP/Getting-Started-with-PnP-Provisioning-Engine).
+> [!NOTE] 
+> This sample walkthrough is a companion to a sample currently available on GitHub: [Getting Started with the PnP Provisioning Engine](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Framework.Console). The code (Program.cs) and solution files for the sample are available for download. There also is a 20-minute video presentation of this process (with slightly different code) available on the Microsoft Channel 9 site: [Getting Started with the PnP Provisioning Engine](https://channel9.msdn.com/blogs/OfficeDevPnP/Getting-Started-with-PnP-Provisioning-Engine).
 
 ## Remote provisioning walkthrough
 
@@ -32,7 +33,8 @@ To begin, create a Visual Studio project. In this sample, for simplicity, we cre
     
 4. Download and install the PnP Core library that is available as a NuGet package here: [OfficeDevPnP.Core packages](https://www.nuget.org/profiles/officedevpnp).
     
-	**Note:**  There are two versions of the core library. One version is the **OfficeDevPnP.Core** library, which targets SharePoint Online and Office 365. The second version is **OfficeDevPnP.Core (on-premises)**, which targets SharePoint 2013 on-premises. Here is a screenshot of the available options.
+	> [!NOTE] 
+	> There are two versions of the core library. One version is the **OfficeDevPnP.Core** library, which targets SharePoint Online and Office 365. The second version is **OfficeDevPnP.Core (on-premises)**, which targets SharePoint 2013 on-premises. Here is a screenshot of the available options.
 
 	![Two core library download choices](media/provisioning-console-application-sample/5b1adb8d-52e5-4c67-8792-6ef0ae41d655.png)
 
@@ -193,7 +195,8 @@ To begin, we need to connect to the site that we wish to model as our provisioni
     
 4. Create a file system connector object so that we can store a temporary copy of the provisioning template that we're going to apply to another site.
     
-	**Note:**  This step is optional. It's not required that you serialize the provisioning template to XML. At this stage, the template is simply C# code. Not only is serialization optional, but you also can use whatever serialization format you wish.
+	> [!NOTE] 
+	> This step is optional. It's not required that you serialize the provisioning template to XML. At this stage, the template is simply C# code. Not only is serialization optional, but you also can use whatever serialization format you wish.
 
 5. Execute the extraction of the provisioning template by using just this single line of code.  	`ProvisioningTemplate template = ctx.Web.GetProvisioningTemplate(ptci);`
     

@@ -11,11 +11,7 @@ ms.assetid: 975da333-372b-4bf6-a3f4-7452db369f04
 Learn how to add  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) objects to microblog posts, which render as mentions, tags, or links in SharePoint social feeds.
 In a social feed, the simplest form of post content contains only text, but you can also add links that render as mentions, tags, or links to websites, SharePoint sites, and documents. To do this, you add  [SocialDataItem](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItem.aspx) objects to the [ContentItems](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.ContentItems.aspx) property of the [SocialPostCreationData](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.aspx) object that defines the post. Posts can contain multiple links.
   
-    
-    
-
-
-> **Note:**
+> [!NOTE]
 > To add embedded pictures, videos, or documents to a post's content, you add a  [SocialAttachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialAttachment.aspx) object to the [SocialPostCreationData.Attachment](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.Attachment.aspx) property. For more information, see [How to: Embed images, videos, and documents in posts in SharePoint](how-to-embed-images-videos-and-documents-in-posts-in-sharepoint-server.md). 
   
     
@@ -66,9 +62,7 @@ The following code example publishes a post that contains links to a website, a 
   
 - Add the link objects to the  [ContentItems](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.ContentItems.aspx) property of the [SocialPostCreationData](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialPostCreationData.aspx) object that's used to create the post.
     
-  
-
-> **Note:**
+> [!NOTE]
 > Currently, SharePoint handles links to websites, SharePoint sites, and documents in the same way, but as a best practice, choose the  [Site](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItemType.Site.aspx) type and the [Document](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialDataItemType.Document.aspx) type for SharePoint sites and documents.
   
     
@@ -76,10 +70,7 @@ The following code example publishes a post that contains links to a website, a 
 
 In the social feed, clicking a link to a website, SharePoint site, or document opens the item in a separate browser window.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Change the placeholder values for the URL variables before you run the code. 
   
     
@@ -190,10 +181,7 @@ The following code example publishes a post that mentions a user. It shows how t
   
 In the social feed, clicking a mention redirects to the mentioned person's **About** page.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Change the placeholder values for the **serverURL** and **accountName** variables before you run the code.
   
     
@@ -282,10 +270,7 @@ The following code example publishes a post that includes a tag. It shows how to
   
 In the social feed, clicking a tag redirects to the tag's **About** page. If the tag doesn't already exist, the server creates it.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Change the placeholder values for the **serverURL** and **tagName** variables before you run the code.
   
     

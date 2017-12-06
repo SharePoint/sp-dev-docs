@@ -30,10 +30,7 @@ The **Newsfeed** page on SharePoint displays several of these improvements, incl
 
 The **Social** namespace contains the primary API for working with feeds and microblog posts and for following people and content. For more information, see [Microsoft.SharePoint.Client.Social](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.aspx) for the .NET client object model, [SP.Social](http://msdn.microsoft.com/library/43d47f01-c085-0e77-bd01-48bcb7d5bb35%28Office.15%29.aspx) for the JavaScript object model, and [Microsoft.Office.Server.Social](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.aspx) for the server object model.
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > The API in the  [Microsoft.Office.Server.ActivityFeed](https://msdn.microsoft.com/library/Microsoft.Office.Server.ActivityFeed.aspx) namespace is deprecated. See [Deprecated and removed My Site Social API and features](#bkmk_DeprecatedAPI). 
   
     
@@ -64,10 +61,7 @@ My Site Host administrators can use the **ProfileLoader.CreatePersonalSiteEnqueu
     
 The following code example uses the .NET client object model in a console application. Before you run the example, add references to Microsoft.SharePoint.Client.dll, Microsoft.SharePoint.Client.Runtime.dll and Microsoft.SharePoint.Client.UserProfiles.dll, and change the placeholder values for the **userName**, **passwordStr**, and **serverUrl** variables. The **serverUrl** variable must be the URL of the SharePoint Online Administration Center.
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > To get the required client DLLs, download the  [SharePoint Online Client Components SDK](http://www.microsoft.com/en-us/download/details.aspx?id=42038). 
   
     
@@ -178,9 +172,7 @@ SharePoint includes new objects that represent users and user properties:
   
 - The  [PersonProperties](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PersonProperties.aspx) object contains general user properties and user profile properties.
     
-  
-
-> **Note:**
+> [!NOTE] 
 > Server object model versions are the  [SPSocialActor](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialActor.aspx) object and the [PersonProperties](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PersonProperties.aspx) object.
   
     
@@ -215,8 +207,9 @@ The following My Site Social API and features are deprecated in SharePoint:
   
 - The **Recent Activities** Web Part is replaced with a new **Newsfeed** Web Part that supports multithreaded conversations and dynamic feed retrieval.
     
-    > **Note:**
-      > We don't support customizations of the Newsfeed Web Part or other feed Web Parts (such as the Site Feed Web Part on team sites). If you do customize these Web Parts, for example by using JavaScript overrides, be aware that your customizations may break in updates to SharePoint. 
+    > [!NOTE] 
+    > We don't support customizations of the Newsfeed Web Part or other feed Web Parts (such as the Site Feed Web Part on team sites). If you do customize these Web Parts, for example by using JavaScript overrides, be aware that your customizations may break in updates to SharePoint. 
+    
 - The **Social Comments** Web Part is deprecated.
     
   

@@ -117,7 +117,8 @@ This code sample runs as a console application. When the code sample runs, the  
     
 - Calls  **SetAdditionalProfileProperties** to set additional properties on the user profile after the image file is uploaded.
 
-**Note**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```C#
 static void Main(string[] args)

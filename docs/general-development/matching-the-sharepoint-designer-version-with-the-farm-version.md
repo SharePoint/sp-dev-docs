@@ -13,10 +13,7 @@ Learn which version of SharePoint Designer to use.
 
 SharePoint Designer is tool used to connect to and work with a SharePoint site. It is important that the version of SharePoint Designer match the version of the SharePoint farm hosting the SharePoint site to which you are connecting. If your farm is upgraded then you will also need to upgrade your version of SharePoint Designer.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The latest version of the product is SharePoint Designer 2013. To learn how to find and install SharePoint Designer 2013, see  [Creating a workflow by using SharePoint Designer 2013 and the SharePoint Workflow platform](creating-a-workflow-by-using-sharepoint-designer-and-the-sharepoint-wo.md). If you already have an older version of SharePoint Designer installed on your computer we recommend that you uninstall it before installing the new version. 
   
     

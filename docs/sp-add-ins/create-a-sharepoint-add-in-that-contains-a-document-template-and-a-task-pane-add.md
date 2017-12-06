@@ -70,7 +70,9 @@ Install the following components before you get started:
  
 6. In the  **How do you want to host your SharePoint Add-in?** drop-down list, choose **SharePoint-hosted** and then choose **Next**.
     
-     **Note**  This scenario works only with the SharePoint-hosted and provider-hosted options presented in the  **How do you want to host your SharePoint Add-in?** drop-down list.
+    > [!NOTE] 
+    > This scenario works only with the SharePoint-hosted and provider-hosted options presented in the  **How do you want to host your SharePoint Add-in?** drop-down list.
+
 7. On the next page, select  **SharePoint** and then choose the **Finish** button to close the dialog box.
     
  
@@ -149,7 +151,9 @@ In this procedure, you will add a document library and make the workbook the def
  
 12. In the manifest designer, set the value of the  **Start page** value to~appWebUrl/Lists/MyDocumentLibrary. This converts to a value of OfficeEnabledAddin/Lists/MyDocumentLibrary.
     
-     **Note**  This URL refers to the document library. You must use the ~appWebUrl token at the beginning of any URL in your Office Add-in manifest that refers to items within the add-in web. For more information about URL tokens in a SharePoint Add-in project, see  [URL strings and tokens in SharePoint Add-ins](url-strings-and-tokens-in-sharepoint-add-ins.md).
+    > [!NOTE] 
+    > This URL refers to the document library. You must use the ~appWebUrl token at the beginning of any URL in your Office Add-in manifest that refers to items within the add-in web. For more information about URL tokens in a SharePoint Add-in project, see  [URL strings and tokens in SharePoint Add-ins](url-strings-and-tokens-in-sharepoint-add-ins.md).
+
 13. Close the manifest designer to save the change.
     
  
@@ -250,12 +254,8 @@ You can debug your task pane add-in by starting the document or by starting the 
 
 ### Debugging your task pane add-in by starting the document
 
-
- 
-
- 
-
- **Note**  Because this procedure opens Excel, it works only when Office is installed on the system. Otherwise, you get an error that the "application associated with this project type isn't installed on this computer."
+> [!NOTE] 
+> Because this procedure opens Excel, it works only when Office is installed on the system. Otherwise, you get an error that the "application associated with this project type isn't installed on this computer."
  
 
 
@@ -293,12 +293,8 @@ You can debug your task pane add-in by starting the document or by starting the 
 
 ### Debugging your task pane add-in by starting SharePoint
 
-
- 
-
- 
-
- **Note**  This procedure opens the Excel Online. It works only when you have an Office 365 account. See  [How to: Set up an environment for developing SharePoint Add-ins on Office 365](http://msdn.microsoft.com/en-us/library/office/apps/fp161179%28v=office.15%29).
+> [!NOTE] 
+> This procedure opens the Excel Online. It works only when you have an Office 365 account. See  [How to: Set up an environment for developing SharePoint Add-ins on Office 365](http://msdn.microsoft.com/en-us/library/office/apps/fp161179%28v=office.15%29).
  
 
 
@@ -348,7 +344,8 @@ You can debug your task pane add-in by starting the document or by starting the 
     
     Execution stops at the breakpoint that you set next to the  `getDataFromSelection` method.
     
-     **Note**  If the workbook doesn't contain any data, you can add some by choosing  **EDIT WORBOOK**,  **Edit in Excel Online** on the toolbar in the workbook.
+    > [!NOTE] 
+    > If the workbook doesn't contain any data, you can add some by choosing  **EDIT WORBOOK**,  **Edit in Excel Online** on the toolbar in the workbook.
 
 ## Package and publish the add-in
 <a name="Package"> </a>

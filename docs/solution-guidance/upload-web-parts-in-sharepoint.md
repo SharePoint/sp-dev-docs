@@ -48,7 +48,8 @@ When you run the code sample and choose **Run Scenario**:
     
     Notice that the  **src** attribute links to a JavaScript file on the remote web. The **&lt;SCRIPT&gt;** element is set by the **Content** property in the Core.AppScriptPartWeb\userprofileinformation.webpart, as shown in the following example. The JavaScript file linked to by the **src** attribute is Core.AppScriptPartWeb\Scripts\userprofileinformation.js. Userprofileinformation.js reads the current user's profile information from the user profile service, and then displays this information in the Web Part.
     
-     **Note:** The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+    > [!NOTE] 
+    > The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
   ```XML
   <property name="Content" type="string">&amp;lt;script type="text/javascript" src="https://localhost:44361/scripts/userprofileinformation.js"&amp;gt;&amp;lt;/script&amp;gt;
@@ -60,7 +61,8 @@ When you run the code sample and choose **Run Scenario**:
     
 9. Choose **Save**.
 
-**Note:** If your user profile image does not display, open your OneDrive for Business site, and then return to the host web.
+> [!NOTE] 
+> If your user profile image does not display, open your OneDrive for Business site, and then return to the host web.
 
 In Core.AppScriptPartWeb\Pages\Default.aspx, **Run Scenario** runs **btnScenario_Click**, which does the following:
 

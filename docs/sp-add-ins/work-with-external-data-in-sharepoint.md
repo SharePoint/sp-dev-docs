@@ -27,10 +27,8 @@ You can use the cross-domain library to access data in your remote web applicati
  
 For details about how to use the library in this way, see  [Create a custom proxy page for the cross-domain library in SharePoint](create-a-custom-proxy-page-for-the-cross-domain-library-in-sharepoint.md).
  
-
- 
-
- **Note**  The SharePoint cross-domain library can also be used in the other direction; that is, JavaScript on remote web pages can use it to access data from SharePoint. For more information about this use of the library, see  [Creating SharePoint Add-ins that use the cross-domain library](creating-sharepoint-add-ins-that-use-the-cross-domain-library.md).
+> [!NOTE] 
+> The SharePoint cross-domain library can also be used in the other direction; that is, JavaScript on remote web pages can use it to access data from SharePoint. For more information about this use of the library, see  [Creating SharePoint Add-ins that use the cross-domain library](creating-sharepoint-add-ins-that-use-the-cross-domain-library.md).
  
 
 

@@ -22,10 +22,8 @@ The free  [Fiddler tool](http://www.telerik.com/fiddler) can be used to capture 
  
 After you have installed Fiddler on the web application server, add the following markup to your web.config file to make requests from your remote web app go through this proxy. This way, you can capture a Fiddler trace and see the full response from SharePoint when you get an error.
  
-
- 
-
- **Note**  Ensure that you remove this markup if you are not running Fiddler. If you don't remove the markup, your add-in won't be able to make HTTP requests.
+> [!NOTE] 
+> Ensure that you remove this markup if you are not running Fiddler. If you don't remove the markup, your add-in won't be able to make HTTP requests.
  
 
 

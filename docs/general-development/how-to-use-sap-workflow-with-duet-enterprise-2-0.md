@@ -115,7 +115,7 @@ BCS must be made aware of the external data source. This is done using an extern
     
   
 
-> **Note:**
+> [!NOTE]
 > Make sure SAP workflow service allows basic authentication as the BDC auto-generation tools in Visual Studio. 
   
     
@@ -208,9 +208,7 @@ In order to provide a way for the user to work with the new functionality added 
   
 5. Go to the **WorkItem** list in the host web and choose **View Details** in the context menu. You will be redirected to **ViewDetails.aspx**.
     
-  
-
-> **Note:**
+> [!NOTE]
 > Make sure the SAP workflow service allows basic authentication. The BDC auto-generation tools in Visual Studio currently only support anonymous and basic authentication. 
   
     
@@ -775,8 +773,9 @@ function RegisterCallOut(divId, displayName, aboutme, userUrl, isFollowed) {
 ```
 
 
-    > **Note:**
-      > The user name of the participant in company's network is same as that in SAP. 
+> [!NOTE]
+> The user name of the participant in company's network is same as that in SAP.
+ 
 3. Open the **AppManifest.xml** page.
     
   
