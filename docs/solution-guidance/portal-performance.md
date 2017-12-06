@@ -364,7 +364,7 @@ The logical architecture of the Data Access Layer (DAL) Framework includes the f
 10. The Business Data Manager returns the BDO to the Display Component
 11. The Display Component binds to the BDO and renders the data
 
-## Additional resources
+## See also
 <a name="bk_additionalResources"> </a>
 
 - [Client-Side Data Access Layer (DAL) Sample](https://github.com/SharePoint/PnP/tree/master/Samples/Portal.DataAccessLayer)

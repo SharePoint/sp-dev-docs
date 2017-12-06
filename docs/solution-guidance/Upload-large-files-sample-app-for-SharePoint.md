@@ -314,7 +314,7 @@ Chunks must be uploaded in sequential order. You cannot upload slices concurrent
 
 After the code sample is finished, in your Office 365 site, you can go to the  **Docs** document library by choosing **Recent** > **Docs**. Verify that the  **Docs** document library contains three large files.
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Enterprise content management solutions for SharePoint 2013 and SharePoint Online](Enterprise-Content-Management-solutions-for-SharePoint-2013-and-SharePoint-Online.md)

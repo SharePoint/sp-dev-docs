@@ -305,7 +305,7 @@ Two API sets are still supported in the SharePoint framework for backward compat
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

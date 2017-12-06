@@ -525,7 +525,7 @@ Due to upgrades or site maintenance, there might be times when SharePoint is in 
 
    `{hostWebUrl}/_api/site/ReadOnly`
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md)

@@ -239,7 +239,7 @@ After you create a map view, all items appear as pushpins. The user can get more
     
     
 
-## Additional resources
+## See also
 <a name="SP15CreatingMapViews_AdditionalResources"> </a>
 
 

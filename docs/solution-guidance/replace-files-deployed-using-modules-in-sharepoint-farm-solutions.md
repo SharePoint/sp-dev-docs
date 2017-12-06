@@ -512,7 +512,7 @@ To replace page layouts that were deployed using modules in farm solutions, uplo
 	}
 	```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [Transform farm solutions to the SharePoint add-in model](Transform-farm-solutions-to-the-SharePoint-app-model.md)

@@ -90,7 +90,7 @@ When the add-in is uninstalled, the event receiver should also be removed. To ma
 > [!NOTE] 
 > We recommend that you test this sample in a clean developer site.
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [SharePoint site provisioning solutions](sharepoint-site-provisioning-solutions.md)

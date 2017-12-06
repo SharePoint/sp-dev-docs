@@ -253,7 +253,7 @@ If the  **ETag** you specify in your request does not match the **ETag** of the 
     
 Within SharePoint, ETags apply only to SharePoint lists and list items.
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md)

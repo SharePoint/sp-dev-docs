@@ -90,7 +90,7 @@ List<ExternalUserEntity> externalUsers = ccTenant.Web.GetExternalUsersTenant();
 
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [SharePoint site provisioning solutions](sharepoint-site-provisioning-solutions.md)

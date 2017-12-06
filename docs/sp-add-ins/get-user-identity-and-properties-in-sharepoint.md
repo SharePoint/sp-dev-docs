@@ -188,7 +188,7 @@ clientContext.ExecuteQuery();
 ```
 
 
-## Additional resources
+## See also
 <a name="AdditionalResources"> </a>
 
 

@@ -139,7 +139,7 @@ Suppose that you have a web farm that consists of a server that runs an ASP.NET 
     
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

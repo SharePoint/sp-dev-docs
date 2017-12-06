@@ -288,7 +288,7 @@ function requestFailed(sender, args) {
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_AdditionalResources"> </a>
 
 

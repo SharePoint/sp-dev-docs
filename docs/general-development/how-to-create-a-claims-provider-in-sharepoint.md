@@ -152,7 +152,7 @@ protected SPClaim CreateClaim(String claimType, String value, String valueType)
 ```
 
 
-## Additional resources
+## See also
 <a name="SP15_HowToCreateClaimsProvider_AdditionalResources"> </a>
 
 

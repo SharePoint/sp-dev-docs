@@ -143,7 +143,7 @@ Since add-in-only calls effectively elevate user privileges, you should be conse
     
  
 
-## Additional resources
+## See also
 <a name="AR"> </a>
 
 

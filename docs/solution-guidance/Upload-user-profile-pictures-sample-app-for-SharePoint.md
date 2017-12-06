@@ -421,7 +421,7 @@ static void SetAdditionalProfileProperties(string UserName)
 
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [User profile solutions for SharePoint 2013 and SharePoint Online](user-profile-solutions-for-sharepoint.md)

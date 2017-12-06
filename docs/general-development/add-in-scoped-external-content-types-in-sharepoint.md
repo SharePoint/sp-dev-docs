@@ -210,7 +210,7 @@ The following example shows how to set security credentials for an external syst
     
   
 
-## Additional resources
+## See also
 <a name="Appscopedect_Addres"> </a>
 
 

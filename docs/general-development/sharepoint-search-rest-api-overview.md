@@ -1650,7 +1650,7 @@ When an anonymous Search REST query is submitted, the query object is constructe
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

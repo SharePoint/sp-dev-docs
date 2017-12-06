@@ -235,7 +235,7 @@ To load enough data to exceed the data storage limit:
     
     > [!NOTE] 
     > The operation takes about one minute to run each time you choose the button. The end result of running the operation 11 times is shown in Figure 7.
-    
+
 4. After you perform the operation 11 times, an error message will occur when you choose the button, as shown in Figure 7.
     
     **Figure 7. Data storage threshold exceeded error message**
@@ -644,7 +644,7 @@ public ActionResult Orders(string customerId)
 }
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Composite business add-ins for SharePoint 2013 and SharePoint Online](Composite-buisness-apps-for-SharePoint.md)

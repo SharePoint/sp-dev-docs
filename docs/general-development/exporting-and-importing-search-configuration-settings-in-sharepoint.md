@@ -60,7 +60,7 @@ private static void Import(string fileName)
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

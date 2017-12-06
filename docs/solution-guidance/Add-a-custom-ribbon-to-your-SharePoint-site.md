@@ -302,7 +302,7 @@ The custom ribbon displays on all sites and lists on the host web because  **Reg
         }
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)

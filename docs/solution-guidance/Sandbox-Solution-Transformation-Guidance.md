@@ -92,7 +92,7 @@ Support will be removed by disabling code-based operations to be executed from s
 
 All declarative definitions in the sandbox solution will continue working after this change is be applied in SharePoint Online. 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Removing Code-Based Sandbox Solutions in SharePoint Online](http://dev.office.com/blogs/removing-code-based-sandbox-solutions-in-sharepoint-online)

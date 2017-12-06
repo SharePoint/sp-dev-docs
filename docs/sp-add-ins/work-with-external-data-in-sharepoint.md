@@ -43,7 +43,7 @@ For details about how to use the proxy, see  [Query a remote service using the w
 
  
 
-## Additional resources
+## See also
 <a name="SP15Workdata_AddRes"> </a>
 
 

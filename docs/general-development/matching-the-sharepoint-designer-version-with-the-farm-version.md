@@ -28,7 +28,7 @@ Trying to use a version of SharePoint Designer that does not match with the Shar
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

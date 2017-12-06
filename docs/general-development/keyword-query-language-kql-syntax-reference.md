@@ -677,7 +677,7 @@ You can combine different parts of a keyword query by using the opening parenthe
     
     
 
-## Additional resources
+## See also
 <a name="SP15KQL_addlresources"> </a>
 
 

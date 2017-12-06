@@ -78,7 +78,7 @@ The figure below shows the supported OData query options.
 
 ![SharePoint REST service query option syntax](../../images/REST_queryOptionSyntax.png)
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)

@@ -160,7 +160,7 @@ If a thread contains more than two replies, the server returns a digest of the t
     
     
 
-## Additional resources
+## See also
 <a name="bkmk_AdditionalResources"> </a>
 
 

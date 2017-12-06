@@ -332,7 +332,7 @@ Remove-SPEnterpriseSearchContentEnrichmentConfiguration -SearchApplication $ssa
 ```
 
 
-## Additional resources
+## See also
 <a name="SP15ContentEnrich_addresources"> </a>
 
 

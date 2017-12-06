@@ -115,7 +115,7 @@ To mark an association so that it is crawled as a child external content type, a
     
 
 
-## Additional resources
+## See also
 <a name="SP15crawlects_addlresources"> </a>
 
 

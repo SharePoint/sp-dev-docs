@@ -71,7 +71,7 @@ SharePoint Server 2010 introduced the REST API for use in getting and setting in
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

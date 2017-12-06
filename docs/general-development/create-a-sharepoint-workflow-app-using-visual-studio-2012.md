@@ -535,7 +535,7 @@ Following are resources that provide guidance for packaging and deploying your w
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

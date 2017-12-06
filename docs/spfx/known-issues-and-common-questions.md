@@ -37,7 +37,7 @@ SharePoint Extensions with additional customizations capabilities for the ShareP
 
 SharePoint Framework client-side web parts on classic pages were released to SharePoint 2016 as part of the Feature Pack 2 (FP2). There are no plans currently to provide SharePoint Framework capabilities to SharePoint 2013. There's no specific list of SharePoint Framework capabilities which will be included in the SharePoint 2019 release.
 
-## Additional resources
+## See also
 Please use following resources to provide feedback, comments and questions towards SharePoint engineering. 
 
 * [sp-dev-docs GitHub issue list](https://github.com/SharePoint/sp-dev-docs/issues)

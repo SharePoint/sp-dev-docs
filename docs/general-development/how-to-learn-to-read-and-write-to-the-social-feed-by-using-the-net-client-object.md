@@ -297,7 +297,7 @@ To learn how to do more read tasks and write tasks with the social feed by using
     
   
 
-## Additional resources
+## See also
 <a name="SP15ReadWriteSocial_addlresources"> </a>
 
 

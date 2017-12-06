@@ -169,7 +169,7 @@ For more information on CDN's, see:
 - [CDN Manager](https://github.com/SharePoint/PnP/tree/master/Solutions/Core.CDNManager)
 
 
-### Additional resources
+### See also
 <a name="bk_addresources"> </a>
 
 Patterns & Practices:

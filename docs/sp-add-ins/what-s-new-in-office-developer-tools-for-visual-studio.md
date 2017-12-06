@@ -11,7 +11,7 @@ ms.prod: sharepoint
 **August 2015 Update**:The Mail Add-in manifest designer now respects the **Mailbox requirement set** value.
     
 
-## Additional resources
+## See also
 
 -  [Tools and environments for developing SharePoint Add-ins](tools-and-environments-for-developing-sharepoint-add-ins.md)
     

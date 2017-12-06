@@ -264,7 +264,7 @@ From there you can use OData system query options to get specific information ab
     
     
 
-## Additional resources
+## See also
 
 
 -  [Excel Services Development Roadmap](excel-services-development-roadmap.md)

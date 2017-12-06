@@ -314,7 +314,7 @@ Within the  `body` element, there's a `script` element where you can include ext
 
 The next element is a  `div` element. This is where you place any HTML or script that you want as part of the display template. A good way to become familiar with the display template structure is to download copies of the default display templates for search results, Control_SearchResults.html, the control display template, and Item_Default.html, the item display template.
 
-#### Additional resources for result types and display templates
+#### See also for result types and display templates
 
 The following are some additional resources for display templates and result types:
 
@@ -432,7 +432,7 @@ using (var clientContext = spContext.CreateUserClientContextForSPHost())
 
 - [Search customizations for SharePoint](search-customizations-for-sharepoint.md)
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [SharePoint Add-ins](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70%28Office.15%29.aspx)

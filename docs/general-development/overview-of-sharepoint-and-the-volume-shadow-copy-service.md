@@ -88,7 +88,7 @@ The following is the high-level sequence of events during backup or restore oper
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

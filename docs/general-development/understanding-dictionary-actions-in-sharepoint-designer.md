@@ -243,7 +243,7 @@ The figure shows the **Get an Item from a Dictionary** workflow action. Notice t
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

@@ -95,7 +95,7 @@ After the project is created, you use the new autogeneration tooling for OData s
     
     > [!NOTE]
     > You will show the Northwind service that is available from the producers list found on the  [Open Data Protocol website](http://www.odata.org/ecosystem#liveservices). 
-    
+
 3. Choose a name for your OData source, and then choose **Next**.
     
   
@@ -165,7 +165,7 @@ For more information, see  [How to: Create an external list using an OData data 
     
     
 
-## Additional resources
+## See also
 <a name="bkmk_Addres"> </a>
 
 

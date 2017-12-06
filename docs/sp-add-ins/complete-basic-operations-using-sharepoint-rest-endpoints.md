@@ -446,7 +446,7 @@ The SharePoint Online (and on-premise SharePoint 2016 and later) REST service su
 
  
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

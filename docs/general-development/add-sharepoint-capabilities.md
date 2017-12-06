@@ -43,7 +43,7 @@ The following table shows SharePoint capabilities that you can add to your app, 
 |Discover content in electronic format for legal purposes  <br/> | [eDiscovery in SharePoint](ediscovery-in-sharepoint.md) <br/> |
    
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

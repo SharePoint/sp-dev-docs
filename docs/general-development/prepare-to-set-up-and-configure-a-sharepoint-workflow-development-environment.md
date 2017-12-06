@@ -130,7 +130,7 @@ Here is a summary of changes that require you to update your workflow projects:
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

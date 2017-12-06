@@ -344,7 +344,7 @@ Within SharePoint, ETags apply only to SharePoint lists and list items.
 
  
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

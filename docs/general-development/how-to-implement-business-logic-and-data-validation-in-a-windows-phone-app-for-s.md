@@ -299,7 +299,7 @@ The validation logic in this sample enforces given business rules by indicating 
     
     
 
-## Additional resources
+## See also
 <a name="SP15Implementbuslogic_addlresources"> </a>
 
 

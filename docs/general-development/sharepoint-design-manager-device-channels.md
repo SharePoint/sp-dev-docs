@@ -405,7 +405,7 @@ Use this procedure to change the order of device channels.
     
   
 
-## Additional resources
+## See also
 <a name="PlanDeviceChannels_addresources"> </a>
 
 

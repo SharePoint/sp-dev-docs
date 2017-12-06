@@ -283,7 +283,7 @@ After you create the document library, go to the  **Library settings** on your d
 
 ![Screenshot of a Document Library Setting page, with Name, Web Address, and Description fields highlighted.](media/aedf5107-bacb-4872-8ad4-8e66b1afead8.png)
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Enterprise Content Management solutions for SharePoint 2013 and SharePoint Online](Enterprise-Content-Management-solutions-for-SharePoint-2013-and-SharePoint-Online.md)

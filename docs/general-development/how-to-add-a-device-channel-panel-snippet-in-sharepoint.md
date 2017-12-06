@@ -136,7 +136,7 @@ The **<div>** where `class="DefaultContentBlock"` should be replaced with whatev
 ```
 
 
-## Additional resources
+## See also
 <a name="AdditionalResources"> </a>
 
 

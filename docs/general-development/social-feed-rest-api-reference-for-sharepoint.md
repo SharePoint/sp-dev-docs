@@ -3555,7 +3555,7 @@ The following properties belong to the **SocialThread** object.
 |TotalReplyCount|**Int32**|The count of the total number of replies for the thread.|
    
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

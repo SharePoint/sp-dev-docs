@@ -233,7 +233,7 @@ The following is an example of an **<SharePoint:CssRegistration>** element.
     
 
 
-## Additional resources
+## See also
 <a name="addresources"> </a>
 
 

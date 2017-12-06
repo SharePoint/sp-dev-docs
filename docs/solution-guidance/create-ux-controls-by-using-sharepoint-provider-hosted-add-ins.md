@@ -252,7 +252,7 @@ The taxonomy picker control uses the following code to open a  **TaxonomySession
 
 The taxonomy picker control then looks for potential matches from the loaded terms, and adds new terms to the term store as needed.
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [UX Components in SharePoint 2013 and SharePoint Online](ux-components-in-sharepoint-2013-and-sharepoint-online.md)

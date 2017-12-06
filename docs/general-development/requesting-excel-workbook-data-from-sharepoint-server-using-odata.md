@@ -84,7 +84,7 @@ The Excel Services implementation of OData supports a number of the standard ODa
 |**$inlinecount** <br/> | Returns the number of rows in the specified table. <br/>  $ **inlinecount** can only use 1 of 2 of the following values. <br/><ul><li>**allpages** - Returns the count for all rows in the table.</li><li>**none** - Does not include a count of rows in the table.</li></ul><br/>The following example returns the count for the total number of rows in Table1 in the ProductSales.xlsx workbook. <br/>  http://contoso1/_vti_bin/ExcelRest.aspx/Documents/ProductSales.xlsx/OData/Table1?$inlinecount=allpages <br/> |
    
 
-## Additional resources
+## See also
 <a name="xlsAdditionalResources"> </a>
 
 

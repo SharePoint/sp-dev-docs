@@ -140,7 +140,7 @@ You can use the variations feature in SharePoint to create accessible sites or o
     
     
 
-## Additional resources
+## See also
 <a name="SP15_BuildSitesForSP2013_AdditionalResources"> </a>
 
 

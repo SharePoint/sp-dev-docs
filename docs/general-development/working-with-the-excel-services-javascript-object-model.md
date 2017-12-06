@@ -160,7 +160,7 @@ Writing a solution that uses the JavaScript object model is basically the same w
     
     
 
-## Additional resources
+## See also
 <a name="SP15DevKitchenCon_AnatomyofanappSignupsheets_Additionalresources"> </a>
 
 

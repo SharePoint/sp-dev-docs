@@ -394,7 +394,7 @@ Here is a breakdown of the types of markup that are included in a snippet.
 ```
 
 
-## Additional resources
+## See also
 <a name="Resources"> </a>
 
 

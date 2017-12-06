@@ -52,7 +52,7 @@ Different markets have different tastes. The variations feature helps accommodat
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

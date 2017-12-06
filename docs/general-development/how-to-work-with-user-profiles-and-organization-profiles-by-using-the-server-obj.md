@@ -479,7 +479,7 @@ namespace UserProfilesSSOM
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

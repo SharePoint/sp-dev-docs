@@ -420,7 +420,7 @@ After you create a data source provider and a data source editor (including its 
     
     
 
-## Additional resources
+## See also
 <a name="bk_addResources"> </a>
 
 

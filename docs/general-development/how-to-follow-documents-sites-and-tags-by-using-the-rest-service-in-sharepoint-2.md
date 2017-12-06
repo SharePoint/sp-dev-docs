@@ -897,7 +897,7 @@ The following response represents a count of three followed documents, sites, an
 ```
 
 
-## Additional resources
+## See also
 <a name="bkmk_AddtionalResources"> </a>
 
 

@@ -157,7 +157,7 @@ When importing a design package, an alternate CSS URL is not set, even if one wa
     
     
 
-## Additional resources
+## See also
 <a name="addresources"> </a>
 
 

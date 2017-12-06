@@ -106,7 +106,7 @@ dir /od *.log
     
     > [!NOTE]
     > The SharePoint Products and Technologies Configuration Wizard can fail if you are using a computer that is joined to a domain but that is not connected to a domain controller. If this failure occurs, connect to a domain controller either directly or through a Virtual Private Network (VPN) connection, or sign in with a local account that has administrative privileges on the computer. 
-    
+
 7. After the configuration wizard is complete, you see the **Template Selection** page of the new SharePoint site.
     
    **Figure 3. Choose site template page**
@@ -161,7 +161,7 @@ If you will be creating workflows, continue with  [Set up and configure SharePoi
     
     
 
-## Additional resources
+## See also
 <a name="SP15_bk_AddlResources"> </a>
 
 

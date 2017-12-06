@@ -80,7 +80,7 @@ Following chapters are listing older items in the roadmap page, which have been 
 - Targeting SharePoint 2016 version during calendar year 2017
 
 
-## Additional resources
+## See also
 Please use following resources to stay up to date on the new releases and capabilities being released for SharePoint Framework.
 
 * [dev.office.com blog](https://dev.office.com/blogs)

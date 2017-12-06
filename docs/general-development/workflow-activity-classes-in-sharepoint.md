@@ -77,7 +77,7 @@ The palette of activity classes has been revised for SharePoint. Table 1 lists t
 |WriteToHistory  <br/> |Utility  <br/> |Writes specified comment to history list.  <br/> |
    
 
-## Additional resources
+## See also
 <a name="bkm_addlresource"> </a>
 
 

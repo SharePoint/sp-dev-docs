@@ -71,7 +71,7 @@ You can locate the sample code here:  [SharePoint workflow: Workflow OM in a Sha
     
     
 
-## Additional resources
+## See also
 <a name="bkm_additional"> </a>
 
 

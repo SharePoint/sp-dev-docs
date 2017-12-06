@@ -1287,7 +1287,7 @@ The previous example uses the cross-domain library in SharePoint to access the h
 
  
 
-## Additional resources
+## See also
 <a name="BasicOps_AddRes"> </a>
 
 

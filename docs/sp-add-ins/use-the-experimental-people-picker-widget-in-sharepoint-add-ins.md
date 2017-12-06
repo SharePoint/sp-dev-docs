@@ -443,7 +443,7 @@ You can use the experimental People Picker widget to select people and groups in
 
  
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

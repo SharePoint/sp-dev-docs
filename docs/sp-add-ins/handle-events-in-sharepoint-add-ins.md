@@ -466,7 +466,7 @@ If a SharePoint 2010 solution package containing an event handler is upgraded to
 
  
 
-## Additional resources
+## See also
 <a name="SP15handleevents_addlresources"> </a>
 
 

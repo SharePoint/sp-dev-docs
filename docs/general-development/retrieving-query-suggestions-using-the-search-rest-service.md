@@ -228,7 +228,7 @@ http:// _server_/_api/search/suggest?querytext='sharepoint'&amp;fprefixmatchallt
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

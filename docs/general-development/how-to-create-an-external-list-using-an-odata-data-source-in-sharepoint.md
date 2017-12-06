@@ -108,7 +108,7 @@ For testing purposes, you may want to modify the AppManifest.xml file so that th
     
   
 
-## Additional resources
+## See also
 <a name="bkmk_AdditionalResources"> </a>
 
 

@@ -725,7 +725,7 @@ This article discussed the changes related to workflow tasks that were driven fr
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

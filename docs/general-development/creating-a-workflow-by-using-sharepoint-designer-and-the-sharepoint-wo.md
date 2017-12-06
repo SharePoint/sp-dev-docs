@@ -188,7 +188,7 @@ To learn more about the available components of workflow development, see  [Work
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

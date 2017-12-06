@@ -147,7 +147,7 @@ Widgets can help to speed up the development process and reduce the cost and tim
 
  
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

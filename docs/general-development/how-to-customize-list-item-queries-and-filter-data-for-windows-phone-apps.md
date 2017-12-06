@@ -250,7 +250,7 @@ You can make many other customizations both to the CAML queries on which views a
     
     
 
-## Additional resources
+## See also
 <a name="SP15Custlistitem_addlresources"> </a>
 
 

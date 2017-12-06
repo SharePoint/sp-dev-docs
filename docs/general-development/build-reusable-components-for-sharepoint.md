@@ -46,7 +46,7 @@ Using SharePoint, you can build a variety of components, such as lists, Web Part
     
   
 
-## Additional resources
+## See also
 <a name="SP15Reusecomp_AddRes"> </a>
 
 

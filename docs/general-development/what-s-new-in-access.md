@@ -70,7 +70,7 @@ For more information about how to develop Access 2013 apps, see  [How to: Create
     
     
 
-## Additional Resources
+## See also
 <a name="SP15_access15overview_addres"> </a>
 
 

@@ -66,7 +66,7 @@ An add-in web can contain specific kinds of SP components. For more information 
     
     > [!NOTE] 
     > A SharePoint Add-in cannot be installed on a website whose language is not listed in the  **Supported Locales** section of the add-in manifest. Keep in mind that when this article discusses languages for which you are *not*  going to be providing a localized add-in, you do still have to add such languages to the add-in manifest. See the procedure **To create resource files for the host web** in this article for more details about supported locales in the add-in manifest.
-    
+
 4. In the  **Name** column of the top row in the **Resource Editor**, enter a descriptive name for the string (or other resource)—for example, OrdersListInstance_Title andOrdersListInstance_Description. These names of localizable resources are not themselves localized. Each resource must have its own name. 
     
  
@@ -564,7 +564,7 @@ Test your add-in by deploying it to a SharePoint website that is provisioned in 
     
  
 
-## Additional resources
+## See also
 <a name="SP15Localizeapp_addlresources"> </a>
 
 -  [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)

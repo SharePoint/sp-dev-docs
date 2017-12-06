@@ -328,7 +328,7 @@ private static void ImportSearchSettings(ClientContext context, string settingsF
 }
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [Search solutions in SharePoint 2013 and SharePoint Online](search-solutions-in-sharepoint-2013-and-sharepoint-online.md)

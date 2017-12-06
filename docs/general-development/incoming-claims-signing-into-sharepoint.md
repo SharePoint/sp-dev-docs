@@ -86,7 +86,7 @@ SharePoint Server then does claims augmentation. Win32 clients must support the 
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

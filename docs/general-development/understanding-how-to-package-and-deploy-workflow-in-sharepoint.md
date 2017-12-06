@@ -148,7 +148,7 @@ To deploy a workflow package follow this procedure.
     
     > [!NOTE] 
     > You must be on the **Site Settings** page for the site collection in order to see the **Solutions** gallery. If you are on the **Site Settings** page for a sub-site then the **Solutions** gallery is not visible.
-    
+
 4. Click the **Upload Solution** button to upload the solution as shown in the figure.
     
    **Figure: Upload Solution button**
@@ -213,7 +213,7 @@ After a workflow solution has been activated for a site collection, it is availa
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

@@ -143,7 +143,7 @@ It also applies even if Microsoft knew or should have known about the possibilit
 
  
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

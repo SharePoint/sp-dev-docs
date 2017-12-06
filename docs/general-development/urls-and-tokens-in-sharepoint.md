@@ -91,7 +91,7 @@ Except where indicated otherwise, none of these tokens in the next table can be 
 |{Source}  <br/> |The HTTP Request URL.  <br/> |No  <br/> |Yes  <br/> |No  <br/> ||
    
 
-## Additional resources
+## See also
 <a name="SP15URLS_addlresources"> </a>
 
 

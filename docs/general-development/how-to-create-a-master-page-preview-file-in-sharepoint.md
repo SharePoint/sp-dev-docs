@@ -226,12 +226,12 @@ To create a master page preview file, use an existing master page preview as a s
     
     > [!NOTE]
     > You can also create a design that uses the new master page by adding an item to the Composed Looks list. The design will be available in the design gallery (the first page of the **Change the look** wizard). For more information, see the [Deploy a theme by using the user interface](how-to-deploy-a-custom-theme-in-sharepoint.md#section2) procedure in [How to: Deploy a custom theme in SharePoint](how-to-deploy-a-custom-theme-in-sharepoint.md). 
-    
+
 6. Repeat steps 3 to 5, as necessary.
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

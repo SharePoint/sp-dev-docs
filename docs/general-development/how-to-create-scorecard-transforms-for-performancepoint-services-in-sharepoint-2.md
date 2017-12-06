@@ -224,7 +224,7 @@ namespace Microsoft.PerformancePoint.SDK.Samples
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addResources"> </a>
 
 

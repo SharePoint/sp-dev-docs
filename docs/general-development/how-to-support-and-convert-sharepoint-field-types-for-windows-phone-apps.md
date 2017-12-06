@@ -600,7 +600,7 @@ Now the Identifier field is shown on the Display form as well as on the List for
     
     
 
-## Additional resources
+## See also
 <a name="SP15Supportwinphone_addlresources"> </a>
 
 

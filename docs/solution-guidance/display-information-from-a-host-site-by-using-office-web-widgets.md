@@ -61,7 +61,7 @@ var listViewHostWeb = new Office.Controls.ListView(document.getElementById("list
            });
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [UX Components in SharePoint 2013 and SharePoint Online](ux-components-in-sharepoint-2013-and-sharepoint-online.md)

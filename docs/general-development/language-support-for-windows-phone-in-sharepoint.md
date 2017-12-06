@@ -114,7 +114,7 @@ Although you have programmatic access to nine languages, you can run your ShareP
 |Swedish (Sweden)  <br/> |sv  <br/> |
    
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

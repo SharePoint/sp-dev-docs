@@ -302,7 +302,7 @@ public static void SetListAutoRecordDeclaration(this List list, bool autoDeclare
         }
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Enterprise Content Management solutions for SharePoint 2013 and SharePoint Online](Enterprise-Content-Management-solutions-for-SharePoint-2013-and-SharePoint-Online.md)

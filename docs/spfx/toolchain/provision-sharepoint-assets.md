@@ -325,7 +325,7 @@ Adds a new element to an existing Feature. When a Feature is upgraded, provision
 
 Specifies a version range to which specified upgrade actions apply.
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [SharePoint PnP Webcast - Provisioning SharePoint assets for your SPFx solution](https://www.youtube.com/watch?v=r-UdJhhHlEQ&list=PLR9nK3mnD-OUnJytlXlO84fQnYt50iTmS)

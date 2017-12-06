@@ -608,7 +608,7 @@ Or, you can use a channel panel inside the item display template of a Content Se
     
     
 
-## Additional resources
+## See also
 <a name="bk_AdditionalResources"> </a>
 
 

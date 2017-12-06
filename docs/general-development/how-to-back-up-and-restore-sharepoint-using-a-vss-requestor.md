@@ -60,7 +60,7 @@ Also, to be hosted by the SharePoint Foundation Timer service (owstimer.exe), th
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

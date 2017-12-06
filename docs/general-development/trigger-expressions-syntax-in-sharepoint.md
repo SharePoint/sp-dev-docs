@@ -241,7 +241,7 @@ There are two sets of constants that can be used with specific functions: **Date
 |**RegexOptionConstant** <br/> |**IgnoreCase** <br/> |With the **IsMatch**, **Match**, **ReplaceRegex**, and **IndexOfRegex** functions. <br/> |
    
 
-## Additional resources
+## See also
 <a name="SP15triggerex_addresources"> </a>
 
 

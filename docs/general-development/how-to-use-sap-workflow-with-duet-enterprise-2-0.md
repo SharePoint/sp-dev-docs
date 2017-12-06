@@ -775,7 +775,7 @@ function RegisterCallOut(divId, displayName, aboutme, userUrl, isFollowed) {
 
 > [!NOTE]
 > The user name of the participant in company's network is same as that in SAP.
- 
+
 3. Open the **AppManifest.xml** page.
     
   
@@ -796,7 +796,7 @@ function RegisterCallOut(divId, displayName, aboutme, userUrl, isFollowed) {
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

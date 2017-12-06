@@ -26,7 +26,7 @@ Go to [Major steps in updating an add-in](update-sharepoint-add-ins.md#MajorAppU
 -  [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins.md)
 -  [Update remote components in SharePoint Add-ins](update-remote-components-in-sharepoint-add-ins.md)
  
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Update SharePoint Add-ins](update-sharepoint-add-ins.md)

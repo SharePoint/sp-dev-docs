@@ -158,7 +158,7 @@ The activity is in fact a sequence of messages that take place between the Workf
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

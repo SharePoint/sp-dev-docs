@@ -653,7 +653,7 @@ SharePoint introduced several improvements to workflows. This article detailed t
     
     
 
-## Additional Resources
+## See also
 <a name="sec7"> </a>
 
 

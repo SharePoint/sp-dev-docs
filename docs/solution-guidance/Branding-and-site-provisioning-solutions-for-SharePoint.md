@@ -269,7 +269,7 @@ When considering moving an existing customization from full-trust code to the Cl
     
 -  [SharePoint site branding and page customization solutions](SharePoint-site-branding-and-page-customization-solutions.md)
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)

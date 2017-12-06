@@ -270,7 +270,7 @@ You can use the variations feature in SharePoint to create multilingual sites or
     
     
 
-## Additional resources
+## See also
 <a name="SP15_WhatsNewSiteDevelopment_AdditionalResources"> </a>
 
 

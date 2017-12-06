@@ -292,7 +292,7 @@ namespace FollowPeopleCSOM
 ```
 
 
-## Additional resources
+## See also
 <a name="bkmk_AdditionalResources"> </a>
 
 

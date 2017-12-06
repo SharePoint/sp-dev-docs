@@ -45,7 +45,7 @@ The following table lists all of the validation issues that can appear in the Is
 |A parallel activity must begin with a Start Parallel Branch shape.  <br/> |Check each parallel activity in the workflow to be sure that it has a Start Parallel Branch shape before the parallel activity begins.  <br/> |
    
 
-## Additional resources
+## See also
 <a name="VSSPD_Trouble_Additional"> </a>
 
 

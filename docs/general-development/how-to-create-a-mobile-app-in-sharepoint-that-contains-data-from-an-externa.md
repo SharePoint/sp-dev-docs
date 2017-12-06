@@ -263,7 +263,7 @@ Now that the app is ready to run, you can test it using phone emulator.
     
 
 
-## Additional resources
+## See also
 <a name="SP15createmobileapp_addlresources"> </a>
 
 

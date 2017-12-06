@@ -242,7 +242,7 @@ Figure 1 shows a SharePoint webpage that is using the style sheet.
     
     > [!NOTE] 
     > When you press F5, Visual Studio builds the solution, deploys the add-in, and opens the permissions page for the add-in.
-    
+
 3. Choose the  **Trust It** button.
     
  
@@ -294,7 +294,7 @@ This article demonstrated how to use the style sheet in a SharePoint Add-in. As 
     
  
 
-## Additional resources
+## See also
 <a name="SP15Usestylesheetcontrol_Addresources"> </a>
 
 

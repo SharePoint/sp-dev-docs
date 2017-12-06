@@ -275,7 +275,7 @@ The document ID,  _docid_, is used to retrieve the duplicates of a particular do
     
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

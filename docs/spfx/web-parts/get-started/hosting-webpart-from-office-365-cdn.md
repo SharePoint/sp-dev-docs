@@ -161,7 +161,7 @@ Extend **publiccdn.sharepointonline.com** under the source and notice how the **
 
 Now you have deployed your custom web part to SharePoint Online and it's being hosted from the Office 365 CDN. 
 
-## Additional resources
+## See also
 
 - [General availability of Office 365 CDN](https://dev.office.com/blogs/general-availability-of-office-365-cdn)
 - [Automate publishing of your SharePoint Framework scripts to Office 365 public CDN](https://www.eliostruyf.com/automate-publishing-of-your-sharepoint-framework-scripts-to-office-365-public-cdn)

@@ -401,7 +401,7 @@ Table 1 describes the available font slots and where they are used in a page.
 |body  <br/> |The base font that is used everywhere else on the page.  <br/> |
    
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

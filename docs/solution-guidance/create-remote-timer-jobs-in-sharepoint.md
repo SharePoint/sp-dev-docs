@@ -292,7 +292,7 @@ void SiteGovernanceJob_TimerJobRun(object o, TimerJobRunEventArgs e)
         }
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)

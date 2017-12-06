@@ -956,7 +956,7 @@ Now you can see the app in action.
     
   
 
-## Additional resources
+## See also
 <a name="bkmk_additionalresources"> </a>
 
 

@@ -157,7 +157,7 @@ For information about the kinds of modifications you might make to the App.xaml.
     
     
 
-## Additional resources
+## See also
 <a name="SP15Winphoneover_addlresources"> </a>
 
 

@@ -305,7 +305,7 @@ The **Authenticator** class also includes members that you can use to enable and
     
     
 
-## Additional resources
+## See also
 <a name="SP15Mobileclientauth_addlresources"> </a>
 
 

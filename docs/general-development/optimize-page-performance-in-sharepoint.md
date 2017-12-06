@@ -525,7 +525,7 @@ There is also consideration for where the requests route or how they are distrib
 
 Much of the guidance for SharePoint 2010 page performance optimization applies to SharePoint. This article provides some of the elements of guidance for SharePoint 2010 while diving into new areas that would specifically benefit performance. We covered some obvious changes or enhancements, for example, MDS and the enhanced Developer Dashboard. We wrapped up with the classic guidance: crunch down JavaScript and cascading style sheets, use a CDN for common JavaScript libraries if possible for caching, combine and compress images as much as possible, limit or remove unnecessary data from view, and construct list views judiciously. The techniques and features discussed in this article contribute to supporting your performance goals.
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Build sites for SharePoint](build-sites-for-sharepoint.md)  

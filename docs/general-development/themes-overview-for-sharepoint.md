@@ -110,7 +110,7 @@ You can create new designs by creating new list items in the Composed Looks list
     
     
 
-## Additional resources
+## See also
 <a name="section4"> </a>
 
 

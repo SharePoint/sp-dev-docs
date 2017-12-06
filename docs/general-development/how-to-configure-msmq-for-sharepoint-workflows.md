@@ -91,7 +91,7 @@ The Windows Developer Center provides extensive documentation of MSMQ. Following
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

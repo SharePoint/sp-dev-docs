@@ -122,7 +122,7 @@ For more information about the templates in SharePoint SDK for Windows Phone, se
     
     
 
-## Additional resources
+## See also
 <a name="SP15Setupmobile_addlresources"> </a>
 
 

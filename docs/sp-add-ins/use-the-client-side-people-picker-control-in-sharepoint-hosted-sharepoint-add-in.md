@@ -243,7 +243,7 @@ function onFail(sender, args) {
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

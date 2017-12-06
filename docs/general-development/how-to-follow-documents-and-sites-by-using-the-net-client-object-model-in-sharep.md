@@ -335,7 +335,7 @@ namespace FollowContentCSOM
 ```
 
 
-## Additional resources
+## See also
 <a name="bkmk_AddtionalResources"> </a>
 
 

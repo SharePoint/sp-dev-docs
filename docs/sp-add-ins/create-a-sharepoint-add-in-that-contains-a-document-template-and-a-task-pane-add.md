@@ -361,7 +361,7 @@ When you are ready to package your add-in for publishing, open the  **Publish Of
     
  
 
-## Additional resources
+## See also
 <a name="AdditionalResources"> </a>
 
 

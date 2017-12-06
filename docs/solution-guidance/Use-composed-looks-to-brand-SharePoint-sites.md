@@ -260,7 +260,7 @@ The following table lists the CSS comment tokens.
 |/* ReplaceColor */|Swaps the current color with one of the colors specified in a color slot in the color palette URL of the assigned composed look.|colorPaletteUrl|
 |/* RecolorImage */|Recolors images using tinting or filling. ||
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [SharePoint site branding and page customization solutions](SharePoint-site-branding-and-page-customization-solutions.md)

@@ -92,7 +92,7 @@ Assume a scenario where your system has some specific requirements for people pi
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

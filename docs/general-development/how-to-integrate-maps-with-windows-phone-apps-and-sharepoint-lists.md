@@ -262,7 +262,7 @@ In this step, you can run your app and validate it.
     
 
 
-## Additional resources
+## See also
 <a name="SP15Integmaps_addlresources"> </a>
 
 

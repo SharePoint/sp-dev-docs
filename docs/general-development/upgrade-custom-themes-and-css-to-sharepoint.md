@@ -97,7 +97,7 @@ Unmodified SharePoint 2010 CSS files and custom CSS files cannot be used on Shar
     
   
 
-## Additional resources
+## See also
 <a name="addresources"> </a>
 
 

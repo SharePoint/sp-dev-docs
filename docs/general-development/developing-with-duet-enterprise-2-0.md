@@ -152,7 +152,7 @@ These solutions can be used to see what can be done with Duet Enterprise 2.0 and
     
     
 
-## Additional resources
+## See also
 <a name="ConNavExample_resources"> </a>
 
 

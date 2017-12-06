@@ -2260,7 +2260,7 @@ public string MessageId
 ```
 
 
-## Additional resources
+## See also
 <a name="SP15MobileOM_addlresources"> </a>
 
 

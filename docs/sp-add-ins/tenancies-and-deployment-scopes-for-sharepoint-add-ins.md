@@ -79,7 +79,7 @@ Regardless of whether an add-in is installed from the Office Store or from an ad
 3. When you are prompted to approve the permission requests of the add-in, select **Trust It**.   
  
 
-## Additional resources
+## See also
 <a name="SP15tenancies_addlresources"> </a>
 
 -  [Publish SharePoint Add-ins](publish-sharepoint-add-ins.md)    

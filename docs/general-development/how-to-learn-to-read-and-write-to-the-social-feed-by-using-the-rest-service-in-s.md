@@ -323,7 +323,7 @@ See  [Social feed REST API reference for SharePoint](social-feed-rest-api-refere
     
     
 
-## Additional resources
+## See also
 <a name="bk_addResources"> </a>
 
 

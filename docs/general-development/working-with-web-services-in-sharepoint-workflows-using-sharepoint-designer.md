@@ -376,7 +376,7 @@ SharePointintroduced a new workflow architecture facilitated by a new product, W
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

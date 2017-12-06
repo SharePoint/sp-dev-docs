@@ -17,7 +17,7 @@ _**Applies to:** Office 365 | SharePoint 2013 | SharePoint Online_
 |[Display information from a host site by using Office Web Widgets](display-information-from-a-host-site-by-using-office-web-widgets.md)|Use the experimental [Office Web Widgets NuGet package](http://msdn.microsoft.com/en-us/library/office/dn636913%28v=office.15%29.aspx) in provider-hosted add-ins. These include the people picker and list view widgets.|
 |[Improve performance in SharePoint provider-hosted add-ins](improve-performance-in-sharepoint-provider-hosted-add-ins.md)|Use HTML5 and HTTP cookies to cache data and reduce the number of calls to SharePoint services.|
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [Branding and site provisioning solutions for SharePoint 2013 and SharePoint Online](Branding-and-site-provisioning-solutions-for-SharePoint.md)

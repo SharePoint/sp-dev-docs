@@ -112,7 +112,7 @@ These are the steps that correspond to the numbers in the figure:
     
  
 
-## Additional resources
+## See also
 <a name="Filename_AdditionalResources"> </a>
 
 

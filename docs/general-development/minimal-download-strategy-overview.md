@@ -203,7 +203,7 @@ Thanks to the failover mechanism, your controls work seamlessly whether or not M
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

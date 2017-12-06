@@ -246,7 +246,7 @@ For an example of a basic command for registering a custom security trimmer and 
     
     
 
-## Additional resources
+## See also
 <a name="bk_sectrimmer_addlresources"> </a>
 
 

@@ -298,7 +298,7 @@ A design package is a .wsp file, a SharePoint solution file, which is basically 
 
 
 
-## Additional resources
+## See also
 <a name="Additional"> </a>
 
 

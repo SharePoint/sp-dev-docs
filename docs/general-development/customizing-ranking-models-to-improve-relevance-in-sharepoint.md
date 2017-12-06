@@ -1068,7 +1068,7 @@ This ranking model with one linear stage contains these four rank features:
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

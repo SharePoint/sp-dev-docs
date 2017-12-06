@@ -117,7 +117,7 @@ The following are some caveats and details concerning the deployment of certain 
 
    For more information about site definition configurations and web templates, see  [Working with Site Templates and Definitions](http://msdn.microsoft.com/library/1edf6d4d-eddb-4cb5-9034-ed394e8a3e01%28Office.15%29.aspx).
     
-## Additional resources
+## See also
 <a name="SP15hostedwebs_bk_addlresources"> </a>
 
 - [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md)

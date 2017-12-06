@@ -221,7 +221,7 @@ The tools you can use to brand a SharePoint Online site depend on your SharePoin
 
 The Enterprise edition includes a Team site collection at the root web application for the domain that does not include Publishing. It does not include a public site. Use Design Manager to manage SharePoint site branding elements for the Publishing site in the SharePoint Online Enterprise edition.
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Branding and site provisioning solutions for SharePoint 2013 and SharePoint Online](Branding-and-site-provisioning-solutions-for-SharePoint.md)

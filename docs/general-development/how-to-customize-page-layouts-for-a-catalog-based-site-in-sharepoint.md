@@ -589,7 +589,7 @@ __WebPartId="{22e39e9d-1b25-42c7-bf2a-7ebca37616d4}">-->
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

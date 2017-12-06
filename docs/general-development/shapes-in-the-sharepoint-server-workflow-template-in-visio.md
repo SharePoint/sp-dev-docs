@@ -122,7 +122,7 @@ The following table shows a list of all the shapes that are contained in the Sha
 |End Parallel Action  <br/> |**Parallel Block** <br/> |NA  <br/> ||
    
 
-## Additional resources
+## See also
 <a name="VSSPD_Additional"> </a>
 
 

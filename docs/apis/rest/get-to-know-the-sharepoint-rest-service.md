@@ -115,7 +115,7 @@ The following table contains typical REST endpoint URL examples to get you start
 
 The SharePoint Online (and on-premise SharePoint 2016 or later) REST service supports combining multiple requests into a single call to the service by using the OData  `$batch` query option. For details and links to code samples, see [Make batch requests with the REST APIs](make-batch-requests-with-the-rest-apis.md). .
  
-## Additional Resources
+## See also
 <a name="bk_learnmore"> </a>
 Use the resources listed below to learn more about using the SharePoint REST service.
  

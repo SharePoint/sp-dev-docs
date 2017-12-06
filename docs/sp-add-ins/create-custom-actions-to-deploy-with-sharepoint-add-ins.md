@@ -286,7 +286,7 @@ Follow these steps to create a custom action in the host web document libraries:
     
     > [!NOTE] 
     > When you press F5, Visual Studio builds the solution, deploys the add-in, and opens the permissions page for the add-in.
-    
+
 2. Choose the  **Trust It** button. The default page of your developer site opens.
     
  
@@ -380,7 +380,7 @@ This article demonstrated how to create a custom action in a SharePoint Add-in. 
     
  
 
-## Additional resources
+## See also
 <a name="SP15Createcustomactionsapps_AddResources"> </a>
 
 

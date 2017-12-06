@@ -1309,7 +1309,7 @@ public static void SetAvailableWebTemplates(this Web web, List<WebTemplateEntity
 
 The **InheritWebTemplates** property bag makes sure that any templates that are normally inherited from the parent site also are ignored when you create subsites.
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [UX Components in SharePoint 2013 and SharePoint Online](ux-components-in-sharepoint-2013-and-sharepoint-online.md)

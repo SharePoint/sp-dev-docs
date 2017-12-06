@@ -324,7 +324,7 @@ The markup that is unique to page layouts is page fields that are added to the p
 ```
 
 
-## Additional resources
+## See also
 <a name="AdditionalResources"> </a>
 
 

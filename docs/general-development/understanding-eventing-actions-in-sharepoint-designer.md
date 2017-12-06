@@ -255,7 +255,7 @@ Once a field has changed the workflow continues.
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

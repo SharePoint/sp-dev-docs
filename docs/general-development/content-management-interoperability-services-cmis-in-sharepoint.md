@@ -286,7 +286,7 @@ CMIS 1.1 is not supported in SharePoint, but the newer version of the CMIS speci
     
   
 
-## Additional resources
+## See also
 <a name="SP15CMIS_AdditionalResources"> </a>
 
 

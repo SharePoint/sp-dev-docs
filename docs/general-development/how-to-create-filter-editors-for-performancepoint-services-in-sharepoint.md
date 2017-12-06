@@ -1174,7 +1174,7 @@ After you create a filter editor (including its user interface, if required) and
     
     
 
-## Additional resources
+## See also
 <a name="bk_addResources"> </a>
 
 

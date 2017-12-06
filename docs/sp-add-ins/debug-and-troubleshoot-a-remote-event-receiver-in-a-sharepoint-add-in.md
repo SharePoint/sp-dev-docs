@@ -219,7 +219,7 @@ When the add-in is in Microsoft SharePoint Online, but the remote event receiver
 
  
 
-## Additional resources
+## See also
 <a name="Additional"> </a>
 
 

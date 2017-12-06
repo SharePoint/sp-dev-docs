@@ -12,7 +12,7 @@ Timer jobs are background tasks that operate on a timed or recurrent basis to ma
 |[Create remote timer jobs in SharePoint](create-remote-timer-jobs-in-sharepoint.md)|Create remote timer jobs to manage SharePoint by monitoring and taking action on SharePoint data.|
 |[Getting Started with WebJobs ("timer jobs")](Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites.md)|Describes how to build an Azure WebJob to act as a scheduled job for your SharePoint installation.
 
-## Additional resources 
+## See also 
 
 * [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)
 * [Patterns and Practices developer center](http://dev.office.com/patterns-and-practices)

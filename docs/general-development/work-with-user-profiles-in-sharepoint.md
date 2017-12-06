@@ -114,7 +114,7 @@ SharePoint includes the following new objects that represent users and user prop
     
 
 
-## Additional resources
+## See also
 <a name="bkmk_AdditionalResources"> </a>
 
 

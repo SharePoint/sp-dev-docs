@@ -155,7 +155,7 @@ You can use remote provisioning to provision site branding elements such as them
 
 To help maintain consistency in a custom master page, follow the existing coding pattern. For example, in areas of the page that use tables, reinforce the coding pattern by using tables. In areas where  `<DIV>` tags or HTML5 are used, match any custom code with `<DIV>` tags or HTML5. In the long run, this will make any custom master pages that you have to create easier to maintain, and therefore, less expensive.
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Branding and site provisioning solutions for SharePoint 2013 and SharePoint Online](Branding-and-site-provisioning-solutions-for-SharePoint.md)

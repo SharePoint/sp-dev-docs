@@ -64,7 +64,7 @@ The add-in's permissions are also revoked when it is removed (recycled), accordi
 
 The [UninstallingEventEndpoint](http://msdn.microsoft.com/library/4194e44b-f2af-1db4-aad5-9b7b511b4348%28Office.15%29.aspx) web service, if one is registered in the add-in manifest of the add-in, executes at the beginning of the uninstallation process (which occurs when the add-in is removed from the second stage Recycle Bin). It is a best practice to have an [UninstallingEventEndpoint](http://msdn.microsoft.com/library/4194e44b-f2af-1db4-aad5-9b7b511b4348%28Office.15%29.aspx) web service if you have an [InstalledEventEndpoint](http://msdn.microsoft.com/library/af9f83d8-8325-3ede-d7b0-bb82c0445eb9%28Office.15%29.aspx) web service and to design the [UninstallingEventEndpoint](http://msdn.microsoft.com/library/4194e44b-f2af-1db4-aad5-9b7b511b4348%28Office.15%29.aspx) service to reverse anything done in your [InstalledEventEndpoint](http://msdn.microsoft.com/library/af9f83d8-8325-3ede-d7b0-bb82c0445eb9%28Office.15%29.aspx) service. For more information, see [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins.md).
 
-## Additional resources
+## See also
 <a name="SP15deployinstallapps_addlresources"> </a>
 
 -  [Publish SharePoint Add-ins](publish-sharepoint-add-ins.md)

@@ -303,7 +303,7 @@ To notify SharePoint that changes have been made, you also need to create a serv
     
     
 
-## Additional resources
+## See also
 <a name="bkmk_Addresources"> </a>
 
 

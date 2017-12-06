@@ -163,7 +163,7 @@ As shown in Figure 5, your site displays your custom French title  **Hello World
 
 ![Screenshot of the updated customized page title](media/14471283-f7b6-49ca-a507-a3e28e43ee22.png)
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Localization solutions for SharePoint 2013 and SharePoint Online](localization-solutions-for-sharepoint-2013-and-sharepoint-online.md)

@@ -61,7 +61,7 @@ For more information about result sources and how they work, see to:  [Understan
     
   
 
-## Additional resources
+## See also
 <a name="SP15Buildquery_addlresources"> </a>
 
 

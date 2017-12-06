@@ -473,7 +473,7 @@ Follow the steps in  [Get started creating provider-hosted SharePoint Add-ins](g
 
  
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

@@ -33,7 +33,7 @@ BCS is improved and enhanced for SharePoint, including the new functionality lis
 |Support for Representational State Transfer (REST) and the client object model is enhanced.  <br/> | [Get started using the client object model with external data in SharePoint](get-started-using-the-client-object-model-with-external-data-in-sharepoint.md) <br/> |
    
 
-## Additional resources
+## See also
 <a name="SP15whatsnewBCS_addresources"> </a>
 
 

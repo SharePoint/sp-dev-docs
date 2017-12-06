@@ -488,7 +488,7 @@ When you are debugging in Visual Studio with  **F5**, Microsoft Office Developer
 
  
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

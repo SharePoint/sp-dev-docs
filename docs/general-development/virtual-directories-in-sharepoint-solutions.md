@@ -27,7 +27,7 @@ If you need to make your solution compatible with site collections of either mod
     
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

@@ -172,7 +172,7 @@ If you want to visually design or brand your site, and you want a WYSIWYG ("what
     
     
 
-## Additional resources
+## See also
 <a name="WhatsChangedSharePointDesigner2013_AdditionalResources"> </a>
 
 

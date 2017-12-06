@@ -275,7 +275,7 @@ namespace ApplyThemeAppWeb.Pages
 }
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [SharePoint site branding and page customization solutions](SharePoint-site-branding-and-page-customization-solutions.md)

@@ -45,7 +45,7 @@ The articles in this section show you how to use the SharePoint Add-in model to 
 |[Workflows, Actions (Activities), Events, and Forms](workflows-actions-events-and-forms-sharepoint-add-in.md)|Implement workflows and their associated components.|
 |[Yammer Integration](yammer-integration-sharepoint-add-in.md)|Integrate Yammer with SharePoint.|
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)

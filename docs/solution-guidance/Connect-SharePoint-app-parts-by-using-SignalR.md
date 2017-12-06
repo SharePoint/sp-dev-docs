@@ -122,7 +122,7 @@ When the inline JavaScript code in ConnectedPartOne.aspx runs  **chat.server.sen
 
 **Important**  In this code sample, all app parts connected to the chat hub receive all messages sent through the chat hub. Consider filtering messages based on session ID to determine which app parts should receive which messages.
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)

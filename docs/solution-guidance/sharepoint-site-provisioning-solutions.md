@@ -20,7 +20,7 @@ The samples described in this section show you how to use provider-hosted add-in
 |[Modify SharePoint site permissions and get external sharing status](modify-sharepoint-site-permissions-and-get-external-sharing-status.md)|[Core.SitePermissions](https://github.com/SharePoint/PnP/tree/dev/Scenarios/Core.SitePermissions)|Modify properties of site collection administrators using CSOM code and get the external sharing status and external users of a site collection or tenant.|
 |[Manage SharePoint users and groups](manage-sharepoint-users-and-groups.md)|[Core.GroupManagement](https://github.com/SharePoint/PnP/tree/dev/Scenarios/Core.GroupManagement)|Manage users, groups, and permissions within a SharePoint site collection.|
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [Branding and site provisioning solutions for SharePoint 2013 and SharePoint Online](Branding-and-site-provisioning-solutions-for-SharePoint.md)

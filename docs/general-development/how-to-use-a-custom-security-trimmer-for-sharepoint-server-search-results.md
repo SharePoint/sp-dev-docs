@@ -420,7 +420,7 @@ Version=1.0.0.0, Culture=neutral, PublicKeyToken=token" -RulePath "xmldoc://*"
     
     > [!NOTE]
     > If you have multiple front-end web servers, you must deploy your security trimmer to the global assembly cache on all the front-end web servers in the farm. 
-    
+
 6. Verify that your security trimmer is registered with the following PowerShell cmdlets.
     
 ```
@@ -446,7 +446,7 @@ net restart sphostcontrollerservice
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_sectrimmer_addlresources"> </a>
 
 

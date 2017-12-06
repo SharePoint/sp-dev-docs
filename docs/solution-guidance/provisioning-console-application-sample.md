@@ -255,7 +255,7 @@ Once we extract, save, and persist the provisioning template, the next and final
 		web.ApplyProvisioningTemplate(template, ptai);
 	```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [PnP provisioning framework](pnp-provisioning-framework.md)

@@ -208,7 +208,7 @@ You should be aware of the following considerations when you specify app permiss
     
   
 
-## Additional resources
+## See also
 <a name="bk_AddResources"> </a>
 
  **Conceptual articles**

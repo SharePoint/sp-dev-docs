@@ -238,7 +238,7 @@ To see a list of registered add-in principals, go to:
 
  
 
-## Additional resources
+## See also
 <a name="AR"> </a>
 
 

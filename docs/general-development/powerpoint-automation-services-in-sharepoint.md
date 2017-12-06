@@ -470,7 +470,7 @@ PowerPoint Automation Services on SharePoint provides businesses with advanced c
     
     
 
-## Additional Resources
+## See also
 <a name="PAS_Additional"> </a>
 
 

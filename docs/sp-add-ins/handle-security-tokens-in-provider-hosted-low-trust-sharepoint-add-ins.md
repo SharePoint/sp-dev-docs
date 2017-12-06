@@ -493,7 +493,7 @@ The free  [Fiddler tool](http://www.telerik.com/fiddler) can be used to capture 
 
  
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

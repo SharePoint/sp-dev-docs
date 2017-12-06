@@ -277,7 +277,7 @@ A site workflow operates at a site-level and is not attached to any more specifi
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

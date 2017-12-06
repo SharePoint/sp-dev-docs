@@ -92,7 +92,7 @@ The SharePoint platform and Visual Studio 2012 enable encapsulation and reuse of
     
   
 
-## Additional resources
+## See also
 <a name="SP15devinSP_addlresources"> </a>
 
 

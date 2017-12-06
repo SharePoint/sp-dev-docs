@@ -152,7 +152,7 @@ ContentType ct = web.ContentTypes.GetById("0x0101009189AB5D3D2647B580F011DA2F356
 
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [SharePoint site provisioning solutions](sharepoint-site-provisioning-solutions.md)

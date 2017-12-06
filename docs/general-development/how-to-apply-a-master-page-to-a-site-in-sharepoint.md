@@ -33,7 +33,7 @@ In SharePoint, a master page defines the shared framing elements such as the chr
     
     > [!NOTE]
     > If you are working on the top-level parent site this option is unavailable. 
-    
+
   - **Specify a master page to be used by this site and all sites that inherit from it** Choose this option if you want to map a specific master page to the site, or if you want to map a specific master page for administrative pages. A drop-down box named **Default** or **All Channels** is available for you, depending on your site or system configuration, so you can select a specific master page stored in the master page gallery. Select the desired master page from the drop-down box.
     
     > [!NOTE]
@@ -43,7 +43,7 @@ In SharePoint, a master page defines the shared framing elements such as the chr
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

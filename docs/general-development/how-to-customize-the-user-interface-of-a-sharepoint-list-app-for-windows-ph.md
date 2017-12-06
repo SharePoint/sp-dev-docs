@@ -497,7 +497,7 @@ For items in the Product Orders list that are already associated with a custom P
     
     
 
-## Additional resources
+## See also
 <a name="BKMK_AddingControlsForChoiceFields"> </a>
 
 

@@ -692,7 +692,7 @@ One of the major improvements to workflows in SharePoint is the expansion of CSO
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

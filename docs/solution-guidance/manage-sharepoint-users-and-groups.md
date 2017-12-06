@@ -97,7 +97,7 @@ Microsoft.SharePoint.Client.User currentUser = cc.Web.CurrentUser;
 cc.Web.RemovePermissionLevelFromUser(currentUser.LoginName, RoleType.Reader);
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [SharePoint site provisioning solutions](sharepoint-site-provisioning-solutions.md)

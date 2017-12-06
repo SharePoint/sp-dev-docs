@@ -352,7 +352,7 @@ The following diagram illustrates the change in permissions
     
     
 
-## Additional resources
+## See also
 <a name="section3"> </a>
 
 

@@ -199,7 +199,7 @@ To publish your SharePoint Add-in, upload the add-in manifest file (.app) of you
 
  
 
-## Additional resources
+## See also
 <a name="Additional"> </a>
 
 

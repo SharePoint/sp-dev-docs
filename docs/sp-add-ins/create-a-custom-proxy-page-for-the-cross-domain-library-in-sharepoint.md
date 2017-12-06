@@ -377,7 +377,7 @@ This article demonstrated how to access remote data by using a custom proxy page
     
  
 
-## Additional resources
+## See also
 <a name="SP15Createcustomproxypage_Addresources"> </a>
 
 

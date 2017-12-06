@@ -50,7 +50,7 @@ The code block below displays the schema's root element and direct child element
 </pnp:ProvisioningTemplate>
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [Deep dive to PnP provisioning engine schema](https://channel9.msdn.com/blogs/OfficeDevPnP/Deep-dive-to-PnP-provisioning-engine-schema)

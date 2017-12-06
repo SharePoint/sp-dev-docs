@@ -113,7 +113,7 @@ SharePoint provides a Microsoft .NET server programming model that you can use t
 | [SourceValidation](https://msdn.microsoft.com/library/Microsoft.Office.Server.Discovery.SourceValidation.aspx) <br/> |Indicates whether the source is valid.  <br/> |
    
 
-## Additional resources
+## See also
 <a name="SP15_eDiscoveryInSP_AdditionalResources"> </a>
 
 

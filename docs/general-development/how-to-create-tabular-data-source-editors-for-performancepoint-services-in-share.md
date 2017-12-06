@@ -149,7 +149,7 @@ else
     
     > [!NOTE]
     > Users can edit a custom object's  [Name](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Name.aspx) , [Description](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Description.aspx) , and [Owner](https://msdn.microsoft.com/library/Microsoft.PerformancePoint.Scorecards.Element.Owner.aspx) ( **Person Responsible**) properties and delete custom objects directly from Dashboard Designer and the PerformancePoint Services repository. 
-    
+
 13. Call the data source provider to define column mappings if they are not already defined.
     
   
@@ -438,7 +438,7 @@ After you create a data source editor (including its user interface, if required
     
     
 
-## Additional resources
+## See also
 <a name="bk_resources"> </a>
 
 

@@ -240,7 +240,7 @@ private static void ReplaceWebPart(Web web, ListItem item, LimitedWebPartManager
   }
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [Transform farm solutions to the SharePoint add-in model](Transform-farm-solutions-to-the-SharePoint-app-model.md)

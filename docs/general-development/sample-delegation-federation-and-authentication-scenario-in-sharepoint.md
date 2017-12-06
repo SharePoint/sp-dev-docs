@@ -192,7 +192,7 @@ As shown in Figure 3, the flow in this scenario is:
     
   
 
-## Additional resources
+## See also
 <a name="SP15_SampleDelegation_AdditionalResources"> </a>
 
 

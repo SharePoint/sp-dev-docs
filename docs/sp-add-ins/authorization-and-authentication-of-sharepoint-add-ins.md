@@ -71,7 +71,7 @@ You would not use OAuth to make a call from JavaScript on a page in the add-in w
 
  
 
-## Additional resources
+## See also
 <a name="Filename_AdditionalResources"> </a>
 
 

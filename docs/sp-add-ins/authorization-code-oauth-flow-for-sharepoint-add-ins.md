@@ -415,7 +415,7 @@ namespace DynamicAppPermissionRequest
 ```
 
 
-## Additional resources
+## See also
 <a name="AR"> </a>
 
 

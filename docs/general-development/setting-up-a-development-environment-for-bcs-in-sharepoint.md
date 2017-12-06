@@ -49,7 +49,7 @@ Because these solutions don't require code, you can use SharePoint Designer 2013
     
     
 
-## Additional resources
+## See also
 <a name="SP15SettingupdevenvBCS_addresources"> </a>
 
 

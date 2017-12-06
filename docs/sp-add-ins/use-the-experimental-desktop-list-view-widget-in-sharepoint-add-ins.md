@@ -331,7 +331,7 @@ Office.Controls.Runtime.initialize({});
     
     > [!NOTE] 
     > When you press F5, Visual Studio builds the solution, deploys the add-in, and opens the permissions page for the add-in.
-    
+
 2. Choose the  **Trust It** button.
     
  
@@ -426,7 +426,7 @@ You can use the experimental Desktop List View widget to display data in SharePo
 
  
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

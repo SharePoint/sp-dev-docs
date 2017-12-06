@@ -42,7 +42,7 @@ We invite you to give us your feedback on the SharePoint Framework General Avail
 * [SharePoint Developer UserVoice](https://sharepoint.uservoice.com/forums/329220-sharepoint-dev-platform) - Request new capabilities and features.
 
 
-## Additional resources
+## See also
 
 - [Overview of the SharePoint Framework](../sharepoint-framework-overview.md)
 - [SharePoint Framework development tools and libraries](../tools-and-libraries.md)

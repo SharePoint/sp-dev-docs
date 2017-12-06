@@ -2735,7 +2735,7 @@ None
 | [TypeDescriptor](http://msdn.microsoft.com/library/30e38d7f-af18-20ec-45ab-0bece071ce67.aspx) <br/> ||
    
 
-## Additional resources
+## See also
 <a name="bkmk_Addres"> </a>
 
 

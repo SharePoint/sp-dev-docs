@@ -236,7 +236,7 @@ Your controls and Web Parts can also use XSLT files to control the rendering pro
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

@@ -218,7 +218,7 @@ The figure below shows the SharePoint REST service static member syntax.
 If you want to select, filter, or order the data you requested from an endpoint, the SharePoint REST service supports a wide range of OData query string operators. 
  
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)

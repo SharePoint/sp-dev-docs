@@ -113,7 +113,7 @@ OData provides a simple way to get data from Excel workbooks that are stored on 
     
     
 
-## Additional resources
+## See also
 <a name="xlsOdataAddRes"> </a>
 
 

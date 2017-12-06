@@ -189,7 +189,7 @@ Developers will have to understand the requirements for application security as 
     
  
 
-## Additional resources
+## See also
 <a name="AR"> </a>
 
 

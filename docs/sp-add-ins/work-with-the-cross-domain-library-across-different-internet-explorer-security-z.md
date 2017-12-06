@@ -195,7 +195,7 @@ Other browsers, such as Google Chrome, Mozilla Firefox, and Apple Safari, do not
 
  
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

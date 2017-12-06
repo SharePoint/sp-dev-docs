@@ -118,7 +118,7 @@ if (drlPolicies.SelectedItem != null)
 
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Enterprise Content Management solutions for SharePoint 2013 and SharePoint Online](Enterprise-Content-Management-solutions-for-SharePoint-2013-and-SharePoint-Online.md)

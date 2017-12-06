@@ -73,7 +73,7 @@ To optimize performance, when a thread contains more than two replies, the serve
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

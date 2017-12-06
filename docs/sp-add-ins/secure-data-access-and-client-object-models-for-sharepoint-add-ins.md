@@ -109,7 +109,7 @@ The following API choices are available when you want to access SharePoint data 
     
 There might be additional APIs that you can use in your SharePoint Add-in when accessing external data. It depends on what interfaces the external services and systems have to offer. You should also consider these interfaces in your design.
 
-## Additional resources
+## See also
 <a name="SP15_dataaccessoptions_addResources"> </a>
 
 -  [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md)

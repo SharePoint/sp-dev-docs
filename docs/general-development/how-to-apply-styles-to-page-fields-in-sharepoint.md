@@ -204,7 +204,7 @@ When you change the value of the **PrefixStyleSheet** property, none of the exis
     
     > [!IMPORTANT]
     > Do not modify the default style sheet, HtmlEditorStyles.css. This style sheet provides styles for every RichHtmlField in the farm. Also, service updates or an upgrade may overwrite this file, causing you to lose any changes. 
-    
+
 14. In your style sheet, create a list of new styles that start with the new prefix.
     
     For example, if **customstyle** is the new prefix, your style sheet might contain the following style.
@@ -264,7 +264,7 @@ font-size: 16pt;
     
   
 
-## Additional resources
+## See also
 <a name="Additional"> </a>
 
 

@@ -165,7 +165,7 @@ with the following line of code:
     
   
 
-## Additional resources
+## See also
 <a name="SP15Crawlblobs_addlresources"> </a>
 
 

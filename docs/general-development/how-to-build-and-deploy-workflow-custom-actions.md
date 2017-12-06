@@ -173,7 +173,7 @@ Activating a custom action feature on a site collection (that is, on an **SPWeb*
     
   
 
-## Additional resources
+## See also
 <a name="bk_addlresources"> </a>
 
 

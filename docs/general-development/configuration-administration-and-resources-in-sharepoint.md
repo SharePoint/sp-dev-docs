@@ -108,7 +108,7 @@ The following tables list blogs, forums, and additional resources about claims-b
 |.NET Framework Class Library  <br/> | [.NET Framework Class Library](http://msdn.microsoft.com/en-us/library/ms229335.aspx) <br/> |
    
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

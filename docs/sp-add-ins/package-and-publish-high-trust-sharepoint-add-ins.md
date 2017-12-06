@@ -584,7 +584,7 @@ private static X509Certificate2 GetCertificateFromStore()
     
  
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

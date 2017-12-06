@@ -118,7 +118,7 @@ The command will update the yeoman generator for SharePoint to the latest publis
 npm ls @microsoft/generator-sharepoint -g --depth=0
 ```
 
-## Additional resources
+## See also
 
 * [Upgrading SharePoint Framework projects (Team-based development guidance)](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/team-based-development-on-sharepoint-framework#upgrading-sharepoint-framework-projects)
 * [Upgrade SharePoint items (Provisioning SharePoint assets)](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/toolchain/provision-sharepoint-assets#upgrade-sharepoint-items)

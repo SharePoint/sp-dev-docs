@@ -209,7 +209,7 @@ The following My Site Social API and features are deprecated in SharePoint:
     
     > [!NOTE] 
     > We don't support customizations of the Newsfeed Web Part or other feed Web Parts (such as the Site Feed Web Part on team sites). If you do customize these Web Parts, for example by using JavaScript overrides, be aware that your customizations may break in updates to SharePoint. 
-    
+
 - The **Social Comments** Web Part is deprecated.
     
   
@@ -283,7 +283,7 @@ while (retries <= 10)
 ```
 
 
-## Additional resources
+## See also
 <a name="SP15NewSocial_addlresources"> </a>
 
 

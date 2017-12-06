@@ -274,7 +274,7 @@ function setClassifier() {
 
 You can use extension method  **Web.AddIndexedPropertyBagKey** in the ObjectPropertyBagEntry.cs file in[OfficeDevPnP.Core](https://github.com/SharePoint/PnP/tree/96eff6153389d6d21358480878de9cc8fa21abab/OfficeDevPnP.Core) to store the classification values in site property bags instead of a list. The method enables property bags to be crawled or searchable.
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [SharePoint site provisioning solutions](sharepoint-site-provisioning-solutions.md)

@@ -198,7 +198,7 @@ For information about the pluggable authentication framework provided by ASP.NET
     
 
 
-## Additional resources
+## See also
 <a name="SP15_AuthenticationAuthorizationSecurity_AdditionalResources"> </a>
 
 

@@ -494,7 +494,7 @@ The following is an example of markup added to an HTML file after it is converte
 ```
 
 
-## Additional resources
+## See also
 <a name="Additional"> </a>
 
 

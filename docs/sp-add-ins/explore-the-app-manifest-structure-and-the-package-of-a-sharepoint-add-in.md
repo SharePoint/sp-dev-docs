@@ -128,7 +128,7 @@ SharePoint provides several tokens that can be used in the  **StartPage** elemen
  
 
 
-## Additional resources
+## See also
 <a name="SP15Exploreappmanifest_bk_addlresources"> </a>
 
 

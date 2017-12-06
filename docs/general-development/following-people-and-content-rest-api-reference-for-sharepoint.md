@@ -1557,7 +1557,7 @@ The following response represents a user who is following the specified user.
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

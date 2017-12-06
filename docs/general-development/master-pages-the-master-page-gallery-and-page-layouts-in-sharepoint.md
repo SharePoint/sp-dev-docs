@@ -42,7 +42,7 @@ For more information about using Design Manager to work with master pages, page 
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

@@ -576,7 +576,7 @@ If the add-in is not working, you should consider whether a mistake in the CAML 
     
     > [!NOTE] 
     > If there is no  **Content Types** section on the page, you must enable management of content types. Click the **Advanced Settings** link and on the **Advanced Settings** page, enable management of content types and click **OK**. You are returned to the previous page and there is now a list of  **Content Types** section.
-    
+
 9. Near the top of the page is the  **Web Address** of the list. Copy this and paste it into the address bar of your browser, and then navigate to the list. Verify that the list has the sample items that you created. (The Title column may appear with its internal name **Title**, instead of the display name  **Character** that you gave it.)
     
  
@@ -599,7 +599,7 @@ This article demonstrated how to create a simple hybrid SharePoint Add-in with a
     
  
 
-## Additional resources
+## See also
 <a name="SP15createcloud_bk_addlresources"> </a>
 
 

@@ -216,7 +216,7 @@ Additional properties that can be used to restrict how content authors can use z
 ```
 
 
-## Additional resources
+## See also
 <a name="AdditionalResources"> </a>
 
 

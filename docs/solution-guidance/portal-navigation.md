@@ -168,7 +168,7 @@ The Client-Side Data Access Layer is a custom client-side JavaScript framework m
 
 Please refer to the [Portal Performance article](portal-performance.md) for more information on the Client-Side Data Access Layer.
 
-## Additional Resources
+## See also
 <a name="bk_additionalResources"> </a>
 
 - [Portal performance guidance](portal-performance.md)

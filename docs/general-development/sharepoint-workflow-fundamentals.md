@@ -230,7 +230,7 @@ For a full discussion of SharePoint workflow interop, see  [Use workflow interop
     
     
 
-## Additional resources
+## See also
 <a name="bk_additional"> </a>
 
 

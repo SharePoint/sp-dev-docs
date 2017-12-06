@@ -232,7 +232,7 @@ The first thing the workflow needs to do is retrieve the customer ID, as entered
     
     > [!NOTE] 
     > The **DynamicValue** data type is not shown by default. To find it, select the **Browse for Types** option in the **Variable Type** column. In the search box at the top of the dialog, enter **DynamicValue**, and then select the **Microsoft.Activities.DynamicValue**. 
-    
+
   - **CustomerId** (data type = **String**; scope = **Root**): Use this variable to store the customer ID entered by the user.
     
   
@@ -449,7 +449,7 @@ SharePoint introduced a new workflow architecture facilitated by a new product: 
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

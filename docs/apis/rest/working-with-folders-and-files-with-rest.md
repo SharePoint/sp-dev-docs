@@ -262,7 +262,7 @@ headers:
     X-RequestDigest: form digest value
     content-length:length of post body
 ```
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Complete basic operations using SharePoint REST endpoints](../../sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md)

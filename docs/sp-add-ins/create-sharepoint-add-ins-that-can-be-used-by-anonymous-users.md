@@ -250,7 +250,7 @@ If you are developing a SharePoint-hosted add-in and it accesses a SharePoint li
     
  
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

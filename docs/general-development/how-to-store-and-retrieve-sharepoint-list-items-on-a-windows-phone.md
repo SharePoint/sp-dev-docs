@@ -815,7 +815,7 @@ private void OnSaveDraftButtonClick(object sender, EventArgs e)
     
     > [!NOTE]
     > The images with a light foreground and a dark background are in  `%PROGRAMFILES%(x86)\\Microsoft SDKs\\Windows Phone\\v7.1\\Icons\\dark` in a standard installation of the SDK.
-    
+
 6. Choose the image file named appbar.folder.rest.png, and then choose **Add**. 
     
     The image is added is added to the project under the **Images** node.
@@ -917,7 +917,7 @@ Notice the similarity between the Draft Item Edit form (Figure 4) and the standa
     
     
 
-## Additional resources
+## See also
 <a name="SP15StoreSPlist_addlresources"> </a>
 
 

@@ -153,7 +153,7 @@ To export a workflow, do the following:
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

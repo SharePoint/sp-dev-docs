@@ -459,7 +459,7 @@ When you open this project in Visual Studio, you'll see that it is a simple, gen
 
 You have now deployed the workflow to the host web and associated it with a list on the host web. You can trigger a workflow manually, or you can update the workflow in Visual Studio so that it is triggered in other ways.
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Composite business add-ins for SharePoint 2013 and SharePoint Online](Composite-buisness-apps-for-SharePoint.md)

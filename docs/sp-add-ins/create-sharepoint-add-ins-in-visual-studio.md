@@ -131,7 +131,7 @@ Adds a project item for a workflow custom activity to your SharePoint Add-in. By
 
 For more information, see [Workflows in SharePoint](http://msdn.microsoft.com/library/e0602371-ae22-44be-8a7e-9e47e9f046d6%28Office.15%29.aspx).
 
-## Additional resources
+## See also
 <a name="SP15Projecttemplates_addlresources"> </a>
 
 - [Tools and environments for developing SharePoint Add-ins](tools-and-environments-for-developing-sharepoint-add-ins.md)

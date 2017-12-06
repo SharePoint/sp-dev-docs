@@ -61,7 +61,7 @@ The location and map features in SharePoint provide unique opportunities for dev
 | [How to: Extend the Geolocation field type using client-side rendering](how-to-extend-the-geolocation-field-type-using-client-side-rendering.md) <br/> |You can provide your own rendering to default user interface (UI.md), logic, and behavior of the Geolocation field by creating custom field types that derive from the Geolocation field. SharePoint simplifies the creation of custom field types by enabling you to run JavaScript by providing a new JSLink property in the Geolocation field class, which points to a custom .js file that renders the field.  <br/><br/> **Note**: The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list.           |
    
 
-## Additional resources
+## See also
 <a name="SP15Integrateloc_addlresources"> </a>
 
 

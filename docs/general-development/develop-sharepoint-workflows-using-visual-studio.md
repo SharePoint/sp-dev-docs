@@ -193,7 +193,7 @@ After you enable workflow debugging and provide a valid connection string for th
     
 
 
-## Additional resources
+## See also
 <a name="workflowbk_addres"> </a>
 
 A great deal of developing SharePoint workflows remains unchanged for the Visual Studio developer. The key sections of the documentation for SharePoint 2010 remain relevant:

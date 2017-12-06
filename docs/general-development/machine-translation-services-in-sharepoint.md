@@ -797,7 +797,7 @@ SharePoint Machine Translation Service uses the paragraph language as the Source
     
   
 
-## Additional resources
+## See also
 <a name="TranslationSvc_AR"> </a>
 
 

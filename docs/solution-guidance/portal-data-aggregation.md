@@ -156,7 +156,7 @@ When you use Search-based Content Aggregation, please observe the following guid
 
 Please refer to the [Portal Performance article](portal-performance.md) for more information on the Client-Side Data Access Layer.
 
-## Additional resources
+## See also
 <a name="bk_additionalResources"> </a>
 
 - [Portal performance guidance](portal-performance.md)

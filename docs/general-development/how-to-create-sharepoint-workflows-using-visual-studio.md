@@ -427,7 +427,7 @@ This article first explained the different types of workflows that can be create
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

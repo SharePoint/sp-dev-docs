@@ -344,7 +344,7 @@ https://github.com/OfficeDev/PnP/tree/master/Samples/Provisioning.ReR)
     
  
 
-## Additional resources
+## See also
 <a name="Additional"> </a>
 
 

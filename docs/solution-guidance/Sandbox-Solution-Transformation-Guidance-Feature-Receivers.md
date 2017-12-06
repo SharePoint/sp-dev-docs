@@ -91,7 +91,7 @@ If your sandbox solution contains feature receivers logic for feature deactivati
 When you deactivate your existing sandbox solution from your sites, any assets or files deployed using declarative options will not be removed however, the feature will automatically be deactivated. Execution of the code in the feature receiver, is dependent on the timing when the sandbox solution is deactivated. 
 
 
-## Additional Resources
+## See also
 <a name="bk_addresources"> </a>
 -  [Removing Code-Based Sandbox Solutions in SharePoint Online](http://dev.office.com/blogs/removing-code-based-sandbox-solutions-in-sharepoint-online)
 -  [Sandbox solution transformation guidance](https://msdn.microsoft.com/en-us/pnp_articles/sandbox-solution-transformation-guidance)

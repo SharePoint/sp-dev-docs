@@ -40,7 +40,7 @@ Have you finished designing a great UX for your add-in? Incorporate data with th
 
  
 
-## Additional resources
+## See also
 <a name="SP15CreateUX_AddRes"> </a>
 
 

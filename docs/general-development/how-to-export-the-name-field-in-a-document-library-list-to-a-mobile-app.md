@@ -136,7 +136,7 @@ public string m_fileUrl;
 ```
 
 
-## Additional resources
+## See also
 <a name="SP15StoreSPlist_addlresources"> </a>
 
 

@@ -156,7 +156,7 @@ You will see your term data from your managed metadata service displayed in the 
 
 ![Screenshot of the SharePoint admin center with the taxonomy term store expanded.](media/9e623deb-569b-457a-ad1c-fa6d0d4d0a38.png)
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Enterprise Content Management solutions for SharePoint 2013 and SharePoint Online](Enterprise-Content-Management-solutions-for-SharePoint-2013-and-SharePoint-Online.md)

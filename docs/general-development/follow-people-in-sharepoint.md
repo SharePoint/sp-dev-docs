@@ -135,7 +135,7 @@ When a user opens the **People I'm following** page, the [PeopleManager.GetMySug
     
     
 
-## Additional resources
+## See also
 <a name="bk_addResources"> </a>
 
 

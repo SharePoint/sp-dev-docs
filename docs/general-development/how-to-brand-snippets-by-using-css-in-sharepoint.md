@@ -327,7 +327,7 @@ Instead of using only custom styles, you may have a scenario where you want to o
     
     
 
-## Additional resources
+## See also
 <a name="Additional"> </a>
 
 

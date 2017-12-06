@@ -166,7 +166,7 @@ You see this message when you aren't using a live SharePoint page with which to 
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

@@ -474,7 +474,7 @@ The external content type is now available for use in SharePoint and Office 2013
     
     
 
-## Additional resources
+## See also
 <a name="AR"> </a>
 
 

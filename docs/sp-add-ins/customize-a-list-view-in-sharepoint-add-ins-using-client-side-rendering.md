@@ -236,7 +236,7 @@ function postRenderHandler(ctx) {
     
     > [!NOTE] 
     > When you press F5, Visual Studio builds the solution, deploys the add-in, and opens the permissions page for the add-in.
-    
+
 2. Choose the  **Trust It** button.
     
  
@@ -268,7 +268,7 @@ This article demonstrated how to customize a list view in a SharePoint Add-in by
     
  
 
-## Additional resources
+## See also
 <a name="SP15CSRlistview_AddResources"> </a>
 
 

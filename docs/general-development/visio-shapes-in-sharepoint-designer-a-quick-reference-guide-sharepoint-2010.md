@@ -223,7 +223,7 @@ In Visio, each workflow must begin with a Start terminator (![Start](../images/s
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

@@ -172,7 +172,7 @@ Profile pages may require that you use the Secure Store Service because of the m
 > This requires that you set the **ShowInSearchUI** property at the **LobSystemInstance** level instead of at the **LobSystem** level.
 
 
-## Additional resources
+## See also
 <a name="SP15enhanceBDC_addlresources"> </a>
 
 

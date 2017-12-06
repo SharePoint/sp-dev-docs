@@ -513,7 +513,7 @@ After you deploy a custom field to the SharePoint server, a new custom column is
     
     > [!NOTE]
     > When you choose F5, Visual Studio builds the solution, deploys the solution, and opens the SharePoint website where the solution is deployed. 
-    
+
 2. Create a custom list and add a new Custom Geolocation field column.
     
   
@@ -533,7 +533,7 @@ After you deploy a custom field to the SharePoint server, a new custom column is
 
   
 
-## Additional resources
+## See also
 <a name="SP15Createcustomgeo_addlresources"> </a>
 
 

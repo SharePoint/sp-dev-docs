@@ -93,7 +93,7 @@ Learn how to create and use a VSS requestor for SharePoint:
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

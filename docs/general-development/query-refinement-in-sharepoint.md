@@ -318,7 +318,7 @@ query.Refiners);
 ```
 
 
-## Additional resources
+## See also
 <a name="SP15_Query_refinement_addresources"> </a>
 
 

@@ -32,7 +32,7 @@ Learn how to use the requestor to back up and restore SharePoint and search appl
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

@@ -266,7 +266,7 @@ function errorHandler(xhr, ajaxOptions, thrownError) {
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md) 

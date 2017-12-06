@@ -161,7 +161,7 @@ The **<div>** where `class="DefaultContentBlock"` is what you replace with your 
 ```
 
 
-## Additional resources
+## See also
 <a name="AdditionalResources"> </a>
 
 

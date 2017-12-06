@@ -298,7 +298,7 @@ function favoriteColorViewTemplate(ctx) {
     
     > [!NOTE]
     > When you press F5, Visual Studio builds the solution, deploys the solution, and opens the SharePoint website where the solution is deployed. 
-    
+
 2. Create a custom list and add a new Favorite color field column.
     
   
@@ -342,7 +342,7 @@ This article demonstrated how to customize the rendering process for a custom fi
     
   
 
-## Additional resources
+## See also
 <a name="SP15CustomizeafieldtypeusingCSR_AddResources"> </a>
 
 

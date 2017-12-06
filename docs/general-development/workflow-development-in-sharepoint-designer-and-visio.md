@@ -346,7 +346,7 @@ After the workflow has been checked and no issues have been found, you can publi
     
     
 
-## Additional Resources
+## See also
 <a name="VSSPD_Additional"> </a>
 
 For more information, see the following resources:

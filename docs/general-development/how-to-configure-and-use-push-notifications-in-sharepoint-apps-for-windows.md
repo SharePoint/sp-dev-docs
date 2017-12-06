@@ -1147,7 +1147,7 @@ namespace SPListAppForNotifications
     
     > [!NOTE]
     > The images with a light foreground and a dark background are in %PROGRAMFILES%(x86)\\Microsoft SDKs\\Windows Phone\\v7.1\\Icons\\dark in a standard installation of the SDK. 
-    
+
 11. Choose the image file named appbar.check.rest.png and click **Add**. The image is added is added to the project under the Images node.
     
   
@@ -1349,7 +1349,7 @@ When you add an item to the Jobs SharePoint list, the code in the event receiver
     
     
 
-## Additional resources
+## See also
 <a name="SP15Configurepushnot_addlresources"> </a>
 
 

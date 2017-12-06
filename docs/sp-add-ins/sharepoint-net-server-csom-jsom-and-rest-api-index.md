@@ -103,7 +103,7 @@ Table 1 lists the most frequently used, core APIs, which are in most cases based
  
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

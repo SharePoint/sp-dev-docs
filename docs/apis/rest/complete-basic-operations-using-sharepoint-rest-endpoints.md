@@ -320,7 +320,7 @@ Table 2 shows properties that are commonly used in HTTP requests for the SharePo
 <a name="batch"> </a>
 The SharePoint Online (and on-premise SharePoint 2016 and later) REST service supports combining multiple requests into a single call to the service by using the OData  `$batch` query option. For details and links to code samples, see [Make batch requests with the REST APIs](make-batch-requests-with-the-rest-apis.md).
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest.md)

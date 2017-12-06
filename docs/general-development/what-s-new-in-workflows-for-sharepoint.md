@@ -126,7 +126,7 @@ Following are new workflow actions that are provided in SharePoint. For a full d
 |Set this field in the project to this value [Microsoft Project]  <br/> |Sets the value for the enterprise custom field for a specified project.  <br/> |
    
 
-## Additional resources
+## See also
 <a name="SP15Whatsnewinworflow_Addresources"> </a>
 
 

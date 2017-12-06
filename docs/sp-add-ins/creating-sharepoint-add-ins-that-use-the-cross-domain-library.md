@@ -88,7 +88,7 @@ The SharePoint cross-domain library can also be used in the reverse direction; t
     
  
 
-## Additional resources
+## See also
 <a name="ReverseDirection"> </a>
 
 

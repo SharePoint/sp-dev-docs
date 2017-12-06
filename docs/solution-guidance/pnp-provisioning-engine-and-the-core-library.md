@@ -143,7 +143,7 @@ The Core library (OfficeDevPnP.Core) is a CSOM/REST object model that supports t
 |OfficeDevPnP.Core.Framework.Provisioning.Providers.Xml.V201505|Auto generated schema files for v201505 version of the schema.|
 |OfficeDevPnP.Core.Framework.Provisioning.Providers.Xml.V201508|Auto generated schema files for v201508 version of the schema.|
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [Provisioning console application sample](provisioning-console-application-sample.md)

@@ -280,7 +280,7 @@ Figure 2 shows a webpage that displays the data on the add-in web.
     
     > [!NOTE] 
     > When you press F5, Visual Studio builds the solution, deploys the add-in, and opens the permissions page for the add-in.
-    
+
 2. Choose the  **Trust It** button.
     
  
@@ -483,7 +483,7 @@ To download a sample of a SharePoint-hosted add-in that uses the cross-domain li
 
  
 
-## Additional resources
+## See also
 <a name="SP15Accessdatafromremoteapp_Addresources"> </a>
 
 

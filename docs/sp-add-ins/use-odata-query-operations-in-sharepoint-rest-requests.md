@@ -142,7 +142,7 @@ The figure below shows the supported OData query options.
 
  
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

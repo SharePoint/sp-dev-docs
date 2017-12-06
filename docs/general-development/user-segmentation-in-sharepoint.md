@@ -364,7 +364,7 @@ You need to add your custom Web Part to your SharePoint page.
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

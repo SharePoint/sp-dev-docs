@@ -105,7 +105,7 @@ In your Windows Phone SharePoint list app, you can access most of the lists that
     
     > [!NOTE]
     > List fields that are designated in SharePoint Server as requiring information are selected already; they can't be cleared in the wizard. 
-    
+
 16. Choose **Next**. The wizard gives you the opportunity to order the fields you selected in the previous step.
     
   
@@ -211,7 +211,7 @@ Notice the **Edit** and **Delete** buttons on the Application Bar in this page o
     
     
 
-## Additional resources
+## See also
 <a name="SP15Createwinphoneapp_addlresources"> </a>
 
 

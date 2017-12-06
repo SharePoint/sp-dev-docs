@@ -289,7 +289,7 @@ For more information, see  [Complete basic operations using SharePoint REST endp
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

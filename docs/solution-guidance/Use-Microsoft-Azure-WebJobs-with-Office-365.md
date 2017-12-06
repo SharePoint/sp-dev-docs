@@ -182,7 +182,7 @@ After completing all the previous steps, your Azure WebJob should be running and
     
 - Review the WebJob Details logs for your Azure WebJob. The WebJob Details logs lets you review when a job ran, the success or failure of a job run, any output from the WebJob (for example, when Console.WriteLine was called), and other details of the job run. For more information, see the section View the job history on  [Run Background tasks with WebJobs](http://azure.microsoft.com/documentation/articles/web-sites-create-web-jobs/).
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md).

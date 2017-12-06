@@ -122,7 +122,7 @@ For more information on CDN's, see:
 - [Using content delivery networks with SharePoint Online](https://support.office.com/en-gb/article/Using-content-delivery-networks-with-SharePoint-Online-9a64268c-0b74-4eaa-b971-fb6380b1b165)
 - [CDN Manager](https://github.com/SharePoint/PnP/tree/master/Solutions/Core.CDNManager)
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [Branding SharePoint sites in the SharePoint add-in model](branding-sharepoint-sites-sharepoint-add-in.md)

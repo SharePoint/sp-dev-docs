@@ -92,7 +92,7 @@ You may encounter one of the small number of SharePoint development scenarios fo
     
     > [!NOTE]
     > Note that SharePointfarm solutions are potentially more powerful than either NCSSs or SharePoint Add-ins for branding, but they are not an option on SharePoint Online. 
-    
+
 - **"Template-like" extensions:** Suppose that you need to create a crisis management extension for SharePoint for the collaborative analysis and solution of business crises. Your extension includes several custom list types, no-code workflows, and other SharePoint components, all combined into a custom WebTemplate. Suppose you package and deploy the extension as an NCSS. After the Feature in the solution has been activated, users can create a crisis management subweb of their SharePoint website whenever a crisis occurs. They can populate the website with data that is specific to the crisis. On the other hand, you could implement the same extension as a SharePoint Add-in using exactly the same set of SharePoint components. When the add-in is installed on the team site, the subweb (known as the "add-in web") is immediately created. Again, users populate the website with relevant data.
     
     Now, what happens when a second crisis occurs? If you implemented the extension as an NCSS, your users can merely create another subweb from your custom WebTemplate. However, if you implemented the extension as a SharePoint Add-in, your users have a problem. They cannot install a second instance of the same add-in on the parent website. Only one instance of any add-in can be installed on a host web. The best that you can do is create a subsite of the parent website to serve as a location for another instance of the add-in to be installed. When the add-in is installed, a new add-in web, which is a sub-subweb of the parent website, is created for the add-in components. This comparison shows a general, but not absolute, principle: SharePoint extensions that have a "template-like" character - that is, a reusable collection of components that must be configured for each specific use case, but which naturally have multiple instances associated with the same SharePoint website - fit better with the NCSS development model than with the add-in model. In this example, the variable element is the crisis, but it is easy to imagine template-like SharePoint extensions in which the instances vary by region, date, or any number of other characteristics.
@@ -185,7 +185,7 @@ Another way to use the SharePoint client object model -- or its REST APIs -- to 
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

@@ -142,7 +142,7 @@ For the details of the steps involved in creating a Windows Phone app by using t
     
     
 
-## Additional resources
+## See also
 <a name="SP15winphoneover_addlresources"> </a>
 
 

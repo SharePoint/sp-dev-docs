@@ -294,7 +294,7 @@ Blocking is the most extreme form of throttling. We rarely ever block a tenant, 
   
 If we block your subscription, you'll see HTTP status code 503, and we'll notify you of the block in the Office 365 Message Center. The message describes what caused the block, provides guidance on how to resolve the offending issue, and tells you who to contact to get the block removed.
   
-## Additional resources
+## See also
 <a name="BKMK_Additionalresources"> </a>
 
 -  [Diagnosing performance issues with SharePoint Online](https://support.office.com/en-us/article/3c364f9e-b9f6-4da4-a792-c8e8c8cd2e86)

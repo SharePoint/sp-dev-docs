@@ -188,7 +188,7 @@ unchecked((int)0xffffffffL), InheritanceFlags.None, PropagationFlags.None);
 ```
 
 
-## Additional resources
+## See also
 <a name="SP15Itemlevelsec_addlresources"> </a>
 
 
