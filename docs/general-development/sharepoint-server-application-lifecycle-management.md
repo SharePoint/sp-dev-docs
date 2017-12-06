@@ -660,7 +660,7 @@ The information in  [SharePoint Add-ins update process](http://msdn.microsoft.co
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

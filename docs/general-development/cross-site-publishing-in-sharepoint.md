@@ -181,7 +181,7 @@ public CatalogConnectionSettings GetCatalogConnectionSettings(string catalogPath
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

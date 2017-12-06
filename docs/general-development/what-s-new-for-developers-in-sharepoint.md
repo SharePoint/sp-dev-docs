@@ -92,7 +92,7 @@ SharePoint includes several services for working with data in your SharePoint si
 <a href="external-events-and-alerts-in-sharepoint.md"><img alt="Translation Services" src="../images/wn_appServices_1.png" /></a>&nbsp;&nbsp;<a href="powerpoint-automation-services-in-sharepoint.md"><img alt="PowerPoint Automation Services" src="../images/wn_appServices_2.png" /></a>&nbsp;&nbsp;<a href="what-s-new-in-access.md"><img alt="Enhanced Access Services" src="../images/wn_appServices_3.png" /></a>&nbsp;&nbsp;<a href="https://msdn.microsoft.com/library/fp161347.aspx" target="_blank"><img alt="Enhanced Excel Services" src="../images/wn_appServices_4.png" /></a>
 
 
-## Additional resources
+## See also
 <a name="bm_Addres"> </a>
 
 

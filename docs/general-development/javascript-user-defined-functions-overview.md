@@ -113,7 +113,7 @@ You can create and use JavaScript UDFs either on workbooks displayed in SharePoi
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

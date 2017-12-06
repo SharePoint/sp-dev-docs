@@ -74,7 +74,7 @@ Except where indicated otherwise, none of the tokens in the next table can be us
 |{Source}|The HTTP Request URL.|No|Yes|No||
 |{StandardTokens}|See Remarks.|Yes|Yes|Yes|This combines five other tokens. It initially resolves to  `SPHostUrl={HostUrl}&amp;SPAppWebUrl={AppWebUrl}&amp;SPLanguage={Language}&amp;SPClientTag={ClientTag}&amp;SPProductNumber={ProductNumber}`. Then each of these tokens resolves. If there is no add-in web, the portion  `&amp;SPAppWebUrl={AppWebUrl}` is not present.|
 
-## Additional resources
+## See also
 <a name="SP15URLstrings_bk_addlresources"> </a>
 
 

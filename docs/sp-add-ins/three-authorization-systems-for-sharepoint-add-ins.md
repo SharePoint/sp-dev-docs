@@ -26,7 +26,9 @@ In SharePoint, a SharePoint Add-in is an identity principal just like a user and
     
     For more information about creating a SharePoint Add-in that uses the low-trust system, see the SDK node  [Creating SharePoint Add-ins that use low-trust authorization](creating-sharepoint-add-ins-that-use-low-trust-authorization.md).
     
-     **Note**  The customer who installs the add-in must have an Office 365 account. This is needed to give the add-in access to the Azure ACS. However, the customer need not use the account for any other purpose, and the add-in can be installed to an on-premise SharePoint farm after some simple configuration tasks on the farm.
+    > [!NOTE] 
+    > The customer who installs the add-in must have an Office 365 account. This is needed to give the add-in access to the Azure ACS. However, the customer need not use the account for any other purpose, and the add-in can be installed to an on-premise SharePoint farm after some simple configuration tasks on the farm.
+
 -  **High-Trust**: A provider-hosted add-in can establish trust with SharePoint by using digital certificates. The high-trust system is primarily intended for add-ins whose remote components are hosted on-premise. The add-in can be installed to a SharePoint farm that is not connected to the Internet. The add-in cannot be installed on SharePoint Online or sold in the Office Store.
     
     For more information about creating a SharePoint Add-in that uses the high-trust system, see the SDK node  [Creating SharePoint Add-ins that use high-trust authorization](creating-sharepoint-add-ins-that-use-high-trust-authorization.md).

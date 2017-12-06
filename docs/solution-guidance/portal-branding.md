@@ -6,8 +6,8 @@ ms.date: 11/03/2017
 
 Being able to apply a custom brand on a portal is a critical capability and this article provides you with an overview of the branding options and branding best practices.
 
->**Note**:
->Although this guidance is targeting SharePoint Online most of it also applies to portals hosted on a SharePoint on-premises environment.
+> [!NOTE] 
+> Although this guidance is targeting SharePoint Online most of it also applies to portals hosted on a SharePoint on-premises environment.
 
 
 _**Applies to:** SharePoint Online_
@@ -122,7 +122,7 @@ For more information on CDN's, see:
 - [Using content delivery networks with SharePoint Online](https://support.office.com/en-gb/article/Using-content-delivery-networks-with-SharePoint-Online-9a64268c-0b74-4eaa-b971-fb6380b1b165)
 - [CDN Manager](https://github.com/SharePoint/PnP/tree/master/Solutions/Core.CDNManager)
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [Branding SharePoint sites in the SharePoint add-in model](branding-sharepoint-sites-sharepoint-add-in.md)

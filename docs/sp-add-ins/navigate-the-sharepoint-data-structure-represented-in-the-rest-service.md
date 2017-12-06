@@ -146,7 +146,7 @@ Navigation that is supported by the REST service:
 |**Title**|Gets or sets the title for the site.|
 |**WebTemplateId**|Gets the identifier of the site template.|
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

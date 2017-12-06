@@ -98,11 +98,12 @@ Table 1 lists the most frequently used, core APIs, which are in most cases based
 |**WebTemplate** **SPWebTemplate**| [SP.WebTemplate object](http://msdn.microsoft.com/library/cd670582-20a3-30b7-20f5-758be6d838da%28Office.15%29.aspx)| `…/_api/web/GetAvailableWebTemplates(languageid,includecrosslanguage)/getbyname(templatename)`|
 |**WebTemplateCollection** **SPWebTemplateCollection**| [SP.WebTemplateCollection object](http://msdn.microsoft.com/library/c6e8b2c8-4f0f-bfda-2626-49c59ef92844%28Office.15%29.aspx)| `…/_api/web/GetAvailableWebTemplates(languageid,includecrosslanguage)`|
 
- **Note**  Before using a REST endpoint URI shown in the table, replace the  `…` abbreviation with the path to your SharePoint site, for example `http://<site collection>/<site>/_api/web/lists`.
+> [!NOTE] 
+> Before using a REST endpoint URI shown in the table, replace the  `…` abbreviation with the path to your SharePoint site, for example `http://<site collection>/<site>/_api/web/lists`.
  
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

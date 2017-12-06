@@ -17,10 +17,7 @@ Themes provide a quick and easy way to apply lightweight branding to a SharePoin
     
 The theming experience in SharePoint was redesigned to simplify the process of customizing sites. The themes user interface was redesigned and there is a set of new file formats related to themes. The **Change the look** wizard is the entry point to the theming experience where you can change the look and feel of your site. You can select a design for the site. Then, you can customize the design by changing the site layout, background, color palette, or font scheme. You can preview the site before applying the design. For more information, see [Choose a theme for your publishing site](http://office.microsoft.com/en-us/office365-sharepoint-online-enterprise-help/choose-a-theme-for-your-publishing-site-HA102891580.aspx) on Office.com.
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > Themes created in SharePoint 2010 cannot be used on SharePoint sites. But, themes created in SharePoint 2010 can still be used on site collections that have not been upgraded or on site collections that use the 2010 experience version. 
   
     
@@ -113,7 +110,7 @@ You can create new designs by creating new list items in the Composed Looks list
     
     
 
-## Additional resources
+## See also
 <a name="section4"> </a>
 
 

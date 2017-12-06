@@ -100,7 +100,8 @@ This code sample runs as a console application. When the code sample runs, the  
     
 - Uses  **UserProfileCollection.Save** to serialize **userData** to an XML file. The XML file is saved at the file path you specified in App.config.
 
-**Note**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```C#
 static void Main(string[] args)
@@ -378,7 +379,7 @@ static void SetSingleProfileProperty(string UserName, string PropertyName, strin
 
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [User profile solutions for SharePoint 2013 and SharePoint Online](user-profile-solutions-for-sharepoint.md)

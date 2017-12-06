@@ -159,7 +159,7 @@ For a list of actions from SharePoint 2010 that are deprecated and will not appe
     
     
 
-## Additional resources
+## See also
 <a name="bkm_addlresource"> </a>
 
 

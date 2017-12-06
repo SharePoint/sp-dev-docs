@@ -13,10 +13,7 @@ Learn to use Visio 2013 and SharePoint Designer 2013 to create and publish workf
 
 Visio 2013 and SharePoint Designer 2013 make it easy for business analysts, process consultants, and IT professionals to collaborate and build workflows. Both Visio Professional 2013 and the Visual Designer in SharePoint Designer 2013 provide a rich representation of workflows in a format that is understandable to programmers and non-programmers alike.
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > For guidance on setting up and configuring SharePoint and the Workflow Manager server, see  [Configure workflow in SharePoint](http://technet.microsoft.com/en-us/library/jj658586.aspx). 
   
     
@@ -302,10 +299,7 @@ Once the SharePoint site is open, you can open the Visio 2013 .vsdx diagram with
   
 When you open a .vsdx file in SharePoint Designer 2013, the file is displayed in the Visual Designer, a Visio ActiveX control that is hosted within SharePoint Designer. The Visio 2013 diagram retains all of the shapes and shape text that was created in Visio. 
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > To switch between the Visual Designer and the Declarative Designer in SharePoint Designer 2013, on the **Workflow** tab, in the **Manage** group, choose **Views**. This process may take a few moments, as SharePoint Designer 2013 validates the workflow and then converts the workflow information from one format to another. During this process, another shape level validation will occur. If any errors are detected with the diagram, the errors will be displayed in an error pane at the bottom of the canvas (just like in Visio). 
   
     
@@ -317,10 +311,7 @@ The shapes that are displayed in the Visual Designer also have Action Tags (show
     
 For example, the **Send an email** shape has two properties associated with it: **Create Email** and **Properties**. When you choose **Create Email**, a **Define Email Message** dialog box appears in which you can create the message to be sent by the action. If you choose **Properties**, a **Send an Email Properties** dialog box appears that displays all of the parameters for the action.
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > For more information about individual actions, shapes, and their properties, see the articles  [Shapes in the SharePoint Server workflow template in Visio](shapes-in-the-sharepoint-server-workflow-template-in-visio.md) and [Workflow actions quick reference (SharePoint Workflow platform.md)](workflow-actions-quick-reference-sharepoint-workflow-platform.md). 
   
     
@@ -355,7 +346,7 @@ After the workflow has been checked and no issues have been found, you can publi
     
     
 
-## Additional Resources
+## See also
 <a name="VSSPD_Additional"> </a>
 
 For more information, see the following resources:

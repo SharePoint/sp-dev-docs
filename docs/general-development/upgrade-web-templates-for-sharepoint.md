@@ -129,28 +129,15 @@ To add the default functionality back to the template, you must modify the Onet.
    
 5. Save your changes, and deploy as you would normally.
     
-  
-
-> **Note:**
+> [!NOTE] 
 > You may also need to activate these features in the Central Administration utility. 
   
-    
-    
-
-
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
-
 -  [Upgrade site customizations for SharePoint](upgrade-site-customizations-for-sharepoint.md)
-    
-  
--  [SharePoint 2010 and web templates](http://blogs.msdn.com/b/vesku/archive/2010/10/14/sharepoint-2010-and-web-templates.aspx)
-    
-  
+-  [SharePoint 2010 and web templates](http://blogs.msdn.com/b/vesku/archive/2010/10/14/sharepoint-2010-and-web-templates.aspx) 
 -  [Plan to upgrade a site collection](https://technet.microsoft.com/en-us/library/ff191199.aspx)
-    
-  
 -  [Plan for site collection upgrades in SharePoint](http://technet.microsoft.com/en-us/library/ff191199.aspx)
     
   

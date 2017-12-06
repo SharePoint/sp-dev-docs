@@ -134,7 +134,7 @@ Table 1 contains examples of tasks that illustrate working with external content
 | [How to: Create external content types for SQL Server in SharePoint](how-to-create-external-content-types-for-sql-server-in-sharepoint.md) <br/> |Learn how to create an external content type based on a SQL Server database.  <br/> |
    
 
-## Additional resources
+## See also
 <a name="SP15ectoverview_addres"> </a>
 
 

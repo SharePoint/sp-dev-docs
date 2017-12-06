@@ -26,7 +26,7 @@ This will offer you to start your function from a template, in the case of Share
 
 ![Choosing an Azure Function template](../../images/webhook-azure-function3.png)
 
->**Note:**
+> [!NOTE]
 > - Using the **GenericWebHook** template currently does not yet work for SharePoint webhooks but the SharePoint product team is aware of this problem and will address it.
 > - If you get "Failed to validate the notification URL" errors when using your Azure function based webhook you might be able to resolve this by setting the Authorization level to **Function** and define your function for anonymous access
 

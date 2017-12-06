@@ -161,7 +161,7 @@ public static bool IsNoScriptSite(Web web)
 
 We'll gradually introduce more customization options for "modern" team sites that will be aligned with the release of additional SharePoint Framework capabilities. Currently there is no exact schedule available, but we'll update the "modern" experience articles whenever new capabilities are released.
 
-## Additional resources
+## See also
 
 - [Customizing the "modern" experiences in SharePoint Online](modern-experience-customizations.md)
 - [PnP Remote Provisioning](https://msdn.microsoft.com/en-us/pnp_articles/pnp-remote-provisioning)

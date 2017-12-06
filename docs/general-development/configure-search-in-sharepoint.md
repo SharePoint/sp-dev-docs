@@ -37,7 +37,7 @@ A custom step can be added to modify managed properties in the form of an extern
     
   
 
-## Additional resources
+## See also
 <a name="SP15configsearch_addlresources"> </a>
 
 

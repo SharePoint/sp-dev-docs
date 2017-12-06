@@ -65,10 +65,8 @@ A high-trust add-in uses a certificate instead of a context token to establish t
  
 In SharePoint, the server-to-server security token service (STS) provides access tokens for server-to-server authentication. The server-to-server STS enables temporary access tokens to access other application services such as Exchange 2013, Lync 2013, and add-ins for SharePoint. You establish a trust relationship between the application services (for example, establishing trust between SharePoint and a remote add-in) by using Windows PowerShell cmdlets and a certificate.
  
-
- 
-
- **Note**  The server-to-server STS isn't intended for user authentication. Therefore, you won't see the server-to-server STS listed on the user sign-in page, in the  **Authentication Provider** section in Central Administration, or in the People Picker in SharePoint.
+> [!NOTE] 
+> The server-to-server STS isn't intended for user authentication. Therefore, you won't see the server-to-server STS listed on the user sign-in page, in the  **Authentication Provider** section in Central Administration, or in the People Picker in SharePoint.
  
 
 This article shows you how to create a high-trust add-in and provides setup instructions for running it within Visual Studio by pressing  **F5**. You'll learn to:
@@ -201,10 +199,8 @@ You'll create a test .pfx certificate file first, and then a corresponding test 
 
 The Windows PowerShell script that you create in this section is intended to support the use of  **F5** in Visual Studio. It will *not*  properly configure a staging or production SharePoint installation. For instructions on configuring a production SharePoint to use certificates, see [Package and publish high-trust SharePoint Add-ins](package-and-publish-high-trust-sharepoint-add-ins.md).
  
-
- 
-
- **Note**  Double-check that you have completed the steps in  [Configure services in SharePoint for server-to-server add-in use](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md#Servertoserver) (which is listed as a prerequisite for this article.md). If not, you must configure it now, before you proceed.
+> [!NOTE] 
+> Double-check that you have completed the steps in  [Configure services in SharePoint for server-to-server add-in use](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md#Servertoserver) (which is listed as a prerequisite for this article.md). If not, you must configure it now, before you proceed.
  
 
 
@@ -241,8 +237,9 @@ $fullIssuerIdentifier = $specificIssuerId + '@' + $realm
 
 ```
 
+    > [!NOTE] 
+    > The  `$specificIssuerId` value must be a GUID because in a production environment each certificate must have a unique issuer. However, in this context, where you use the same certificate to debug all your high-trust add-ins, you can hard code the value. If for any reason, you use a different GUID from the one used here, * **be sure that any letters in the GUID are lower case***  . The SharePoint infrastructure currently requires lower case for certificate issuer GUIDs.
 
-     **Note**  The  `$specificIssuerId` value must be a GUID because in a production environment each certificate must have a unique issuer. However, in this context, where you use the same certificate to debug all your high-trust add-ins, you can hard code the value. If for any reason, you use a different GUID from the one used here, * **be sure that any letters in the GUID are lower case***  . The SharePoint infrastructure currently requires lower case for certificate issuer GUIDs.
 5. Add the following lines to register the certificate as a trusted token issuer. The  `-Name` parameter must be unique so in a production configuration, it is common to use a GUID as part (or all) of the name, but in this context, you can use a friendly name. The `-IsTrustBroker` switch is needed to ensure that you can use the same certificate for all the high-trust add-ins you develop. The `iisreset` command is required to make your token issuer registered immediately. Without it, you might have to wait as long as 24 hours for the new issuer to be registered.
     
 ```
@@ -275,10 +272,8 @@ $serviceConfig.Update()
 
 In this section, you learn how to create a high-trust SharePoint Add-in using Visual Studio.
  
-
- 
-
- **Note**  As stated in the  [Prerequisites for creating high-trust add-ins](#Prereqs) section, this article assumes you know how to create a provider-hosted SharePoint Add-in. For more information, see [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md).
+> [!NOTE] 
+> As stated in the  [Prerequisites for creating high-trust add-ins](#Prereqs) section, this article assumes you know how to create a provider-hosted SharePoint Add-in. For more information, see [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md).
  
 
 
@@ -493,7 +488,7 @@ When you are debugging in Visual Studio with  **F5**, Microsoft Office Developer
 
  
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

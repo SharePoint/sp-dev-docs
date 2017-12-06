@@ -113,7 +113,7 @@ Creating an external content type that uses an OData data source is similar to c
     
   
 
-## Additional resources
+## See also
 <a name="SP15GetstartedOdata_addres"> </a>
 
 

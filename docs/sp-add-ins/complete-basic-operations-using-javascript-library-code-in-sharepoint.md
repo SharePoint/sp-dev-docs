@@ -8,11 +8,8 @@ ms.prod: sharepoint
 # Complete basic operations using JavaScript library code in SharePoint
 Learn how to write code to perform basic operations using the JavaScript client object model in SharePoint.
  
-
- 
-
-
- **Note**  For a "Hello World" level sample SharePoint Add-in that uses the JavaScript library, see  [Use the SharePoint JavaScript APIs to work with SharePoint data](use-the-sharepoint-javascript-apis-to-work-with-sharepoint-data.md).
+> [!NOTE] 
+> For a "Hello World" level sample SharePoint Add-in that uses the JavaScript library, see  [Use the SharePoint JavaScript APIs to work with SharePoint data](use-the-sharepoint-javascript-apis-to-work-with-sharepoint-data.md).
  
 
 
@@ -267,8 +264,8 @@ function onQueryFailed(sender, args) {
 }
 ```
 
-
- **Note**  If you try to access other properties, the code throws an exception because other properties are not available.
+> [!NOTE] 
+> If you try to access other properties, the code throws an exception because other properties are not available.
  
 
 
@@ -769,10 +766,8 @@ function deleteFolder(resultpanel) {
 
 You can manipulate files by using the JavaScript object model. The following sections show you how to perform basic operations on files.
  
-
- 
-
- **Note**  You can only work with files up to 1.5 MB by using the JavaScript object model. To upload larger files, use REST (Representational State Transfer). For more information, see  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md).
+> [!NOTE] 
+> You can only work with files up to 1.5 MB by using the JavaScript object model. To upload larger files, use REST (Representational State Transfer). For more information, see  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md).
  
 
 
@@ -1024,10 +1019,8 @@ function onQueryFailed(sender, args) {
 
 Four properties of  **ListItem** objects are not available by default when you return list items??? **displayName**,  **effectiveBasePermissions**,  **hasUniqueRoleAssignments**, and  **roleAssignments**. The previous example returns a  **PropertyOrFieldNotInitializedException** if you try to access one of these properties. To access these properties, use the **Include** method as part of the query string, as shown in the following example.
  
-
- 
-
- **Note**  When you use LINQ to create queries against the client object model, you are using  [LINQ to Objects](http://msdn.microsoft.com/library/bb397919), not the  [LINQ to SharePoint provider](http://msdn.microsoft.com/library/ee535491), which can only be used when you write code against the server object model.
+> [!NOTE] 
+> When you use LINQ to create queries against the client object model, you are using  [LINQ to Objects](http://msdn.microsoft.com/library/bb397919), not the  [LINQ to SharePoint provider](http://msdn.microsoft.com/library/ee535491), which can only be used when you write code against the server object model.
  
 
 
@@ -1294,7 +1287,7 @@ The previous example uses the cross-domain library in SharePoint to access the h
 
  
 
-## Additional resources
+## See also
 <a name="BasicOps_AddRes"> </a>
 
 

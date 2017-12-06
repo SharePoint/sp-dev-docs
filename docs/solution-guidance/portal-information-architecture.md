@@ -16,10 +16,10 @@ You should be considering following factors:
 
 Once you know more about the users, the content, it's intended usage, you will have a good foundation to start with and can possibly avoid some of the common pitfalls around information architecture.
 
->**Note**:
->Although this guidance is targeting SharePoint Online most of it also applies to portals hosted on a SharePoint on-premises environment.
+> [!NOTE] 
+> Although this guidance is targeting SharePoint Online most of it also applies to portals hosted on a SharePoint on-premises environment.
 >
->This article is not meant to go deep into every aspect of governance, and Information architecture. The intended point is to highlight common issues that affect user adoption and/or performance, both of which are equally major problems.
+> This article is not meant to go deep into every aspect of governance, and Information architecture. The intended point is to highlight common issues that affect user adoption and/or performance, both of which are equally major problems.
 
 _**Applies to:** SharePoint Online_
 
@@ -88,8 +88,8 @@ Structuring for permissions is a difficult task every time, and is another topic
 - SharePoint Groups Approach
 - AD Security groups (AAD Security Groups )
 
->**Note**:
->If you are in SPO, sync your groups with AD Connect
+> [!NOTE] 
+> If you are in SPO, sync your groups with AD Connect
 
 Try to follow these guidelines when planning for permissions:
 
@@ -138,13 +138,12 @@ Enterprise metadata hierarchies can be based off of information security classif
 
 Enterprise term store hierarchies are typically managed by a governance steering committee with an input process from other teams in the organization.  
 
->**Note**:
+> [!NOTE] 
+> Poor planning and poor management can cause issues around large taxonomy hierarchies and deep sorting. The data needs to be sorted client-side, so it is recommended to carefully consider the potential depth of the hierarchy, and the number of terms being returned. The deeper the hierarchy, combined with more and more terms can cause the client DOM sort to take several seconds. 
 >
->Poor planning and poor management can cause issues around large taxonomy hierarchies and deep sorting. The data needs to be sorted client-side, so it is recommended to carefully consider the potential depth of the hierarchy, and the number of terms being returned. The deeper the hierarchy, combined with more and more terms can cause the client DOM sort to take several seconds. 
+> Don't delete term-store items, deprecate them. Keep the term store clean of potentially missing objects or faulty permissions, causing delays in data being returned.
 >
->Don't delete term-store items, deprecate them. Keep the term store clean of potentially missing objects or faulty permissions, causing delays in data being returned.
->
->Terms are not security trimmed, so sensitivity needs to be considered
+> Terms are not security trimmed, so sensitivity needs to be considered
 
 For planning managed metadata, the following worksheets are available:
 
@@ -170,7 +169,7 @@ For more information on CDN's, see:
 - [CDN Manager](https://github.com/SharePoint/PnP/tree/master/Solutions/Core.CDNManager)
 
 
-### Additional resources
+### See also
 <a name="bk_addresources"> </a>
 
 Patterns & Practices:

@@ -151,7 +151,7 @@ If you already have a provider-hosted SharePoint Add-in that you want to host on
 
 If you already have a web role in an Azure cloud service that you want to use as a host for a provider-hosted SharePoint Add-in, open the Azure cloud project in Visual Studio, and then, in **Solution Explorer**, choose the web role project. On the menu bar, select **Project** > **Add Add-in for SharePoint Project**. A project for a provider-hosted SharePoint Add-in is created called _NameOfTheWebAppProject_.Azure and added to the solution. Visual Studio references the Azure web role as the web project host for the SharePoint Add-in.
 
-## Additional resources
+## See also
 <a name="SPAppModelArch_AdditionalResources"> </a>
 
 -  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md)

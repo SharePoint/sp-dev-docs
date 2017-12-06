@@ -17,11 +17,7 @@ A claims provider issues claims and packages claims into security tokens. A clai
 Claims augmentation enables an application to augment additional claims into the user's token. For example, with Windows-based log-in, the Active Directory directory service can augment all of a user's security groups into the user's Windows token. With claims-based log-in, a customer relationship management (CRM) application can augment roles from a CRM database. By having these claims in the user's token, resources can be authorized against these claims. That is, these claims are used to determine whether a particular user has access to specific resources.
 Claims can be displayed in the people picker control through claims picking. Claims picking enables an application to surface claims in the people picker, for example, when configuring the security of a SharePoint site or SharePoint service. This functionality enables you to provide search, resolve, and friendly display of claims.
   
-    
-    
-
-
-> **Note:**
+> [!NOTE]
 > A people picker with claims picking functionality is sometimes referred to as a claims picker. For more information, see  [People picker and claims provider planning](http://technet.microsoft.com/en-us/library/gg602063.aspx). 
   
     
@@ -156,7 +152,7 @@ protected SPClaim CreateClaim(String claimType, String value, String valueType)
 ```
 
 
-## Additional resources
+## See also
 <a name="SP15_HowToCreateClaimsProvider_AdditionalResources"> </a>
 
 

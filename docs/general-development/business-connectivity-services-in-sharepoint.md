@@ -141,7 +141,7 @@ For more information, see  [Using OData sources with Business Connectivity Servi
     
   
 
-## Additional resources
+## See also
 <a name="bkmk_AdditionalResources"> </a>
 
 

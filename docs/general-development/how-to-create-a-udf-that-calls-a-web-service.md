@@ -19,11 +19,7 @@ This example shows how to call an external Web service from a user-defined funct
  `http://webservices.imacination.com/distance/Distance.jws?wsdl`
 You must use Microsoft Visual Studio 2005 or a similar Microsoft .NET Framework 2.0-compatible development tool to create this sample. 
   
-    
-    
-
-
-> **Note:**
+> [!NOTE]
 > Before testing the code, make sure that the Web service you are calling is available. The Web service server could be down or the Web service discontinued. If the Web service is unavailable, the calls you make to the Web service from your code will fail. > You can check if a Web service is available by visiting its site. In this example, the URL is: >  `http://webservices.imacination.com/distance/Distance.jws?wsdl`> If the Web service is available, you will be able to see the Web Services Description Language (WSDL). If it is not available, you will get the usual "Web page not found" error. 
   
     

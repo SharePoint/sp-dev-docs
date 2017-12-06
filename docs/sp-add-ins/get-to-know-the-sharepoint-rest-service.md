@@ -175,7 +175,7 @@ The SharePoint Online (and on-premise SharePoint 2016 or later) REST service sup
 
  
 
-## Additional Resources
+## See also
 <a name="bk_learnmore"> </a>
 
 Use the resources listed below to learn more about using the SharePoint REST service.

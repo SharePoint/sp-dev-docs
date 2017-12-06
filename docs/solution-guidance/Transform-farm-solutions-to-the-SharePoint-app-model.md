@@ -77,14 +77,15 @@ Apply the following best practices when transforming specific solutions:
 
   4. Use embedded JavaScript to manipulate UI elements.
     
-    **Note**  To replace your existing web parts with app parts, you need to:
+    > [!NOTE] 
+	> To replace your existing web parts with app parts, you need to:
 
 	- Enable side loading of add-ins in your Office 365 subscription. Consult with your Office 365 administrator.
 	- Use CSOM to enable side loading of add-ins on your site. For more information, see the Core.SideLoading code sample.
 	- Install your app part on your site.
 	- Disable side loading of add-ins on your site.
 	- Disable side loading of add-ins on your Office 365 subscription. Consult with your Office 365 administrator.
-<p></p>
+
 - Page manipulation. You might need to implement page manipulation during your custom site provisioning process. The  [Provisioning.Pages](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Pages) code sample shows page manipulation techniques, including creating a wiki page, adding HTML content to the page, creating a promoted links list, creating pages with different layouts, adding out-of-the-box web parts to the page, and removing the page.
     
 - Site columns, list definitions, and content types. If your site columns, list definitions, and content types were created using the Feature framework elements, which were deployed using farm solutions, then you must use the swing or content migration transformation approach. This does not apply to Feature framework elements deployed using sandbox solutions. To use the content migration transformation approach, you must use third-party tools to remove the farm solution dependencies.
@@ -95,7 +96,8 @@ Apply the following best practices when transforming specific solutions:
     
 - Timer jobs. If you are using SharePoint Online, you cannot create and manage timer jobs. Instead, you can create a console application that uses Windows Task Scheduler or an  [Azure Web Job](http://azure.microsoft.com/documentation/articles/web-sites-create-web-jobs/) to schedule and run the console application remotely. When creating a custom timer job, determine whether you need to use a specific account or an OAuth-based app-only token. The [Core.TimerJobs.Samples](https://github.com/SharePoint/PnP/tree/master/Solutions/Core.TimerJobs.Samples) code sample shows how to create your own custom timer job.
     
-    **Note**  If your timer job uses server-side code, you will have to redesign your timer job to use the CSOM or another method.
+    > [!NOTE] 
+	> If your timer job uses server-side code, you will have to redesign your timer job to use the CSOM or another method.
 
 |**Article**|**Shows you how to**|
 |:-----|:-----|
@@ -104,9 +106,8 @@ Apply the following best practices when transforming specific solutions:
 |[Replace lists created from list definitions](replace-sharepoint-lists-created-from-list-definitions.md)|Replace lists and libraries that were created by using list definitions in SharePoint.|
 |[Replace Web Parts with add-in parts](replace-sharepoint-web-parts-with-add-in-parts.md)|Use the transformation process to replace Web Parts with add-in parts by using the SharePoint client object model (CSOM).|
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)
-    
 -  [Build add-ins for SharePoint](https://msdn.microsoft.com/library/jj163230.aspx)

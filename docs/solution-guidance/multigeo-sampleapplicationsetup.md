@@ -142,8 +142,8 @@ A sample app.config looks like this:
 ```
 
 
->**Note:**
->You can easily insert the `TokenHelper.cs` class in your project by adding the **AppForSharePointOnlineWebToolkit** nuget package to your solution.
+> [!NOTE] 
+> You can easily insert the `TokenHelper.cs` class in your project by adding the **AppForSharePointOnlineWebToolkit** nuget package to your solution.
 
 ## My application needs to be able to be able to discover the Multi-Geo configuration
 ### I'm using the Microsoft Graph API

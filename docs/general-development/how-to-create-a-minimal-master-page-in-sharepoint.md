@@ -96,7 +96,7 @@ When you create a minimal master page, an HTML file is created that's associated
     
     
 
-## Additional resources
+## See also
 <a name="Additional"> </a>
 
 

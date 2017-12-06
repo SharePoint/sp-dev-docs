@@ -68,10 +68,7 @@ This article focuses on the topic of workflow forms in the context of SharePoint
 
 This article focuses on the Workflow Services CSOM API and thus, by extension, the JSOM API as well; the server side Workflow Services API is not discussed here. The Workflow Services CSOM consists of several different services that are used to perform different tasks. Each of these is discussed in the following sections. 
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > There is one additional service that is not present in the CSOM, but is present instead with the server-side API. This is the Messaging Service, which is used to manage message queuing and message transport. 
   
     
@@ -278,10 +275,7 @@ In previous versions of SharePoint, specifically SharePoint 2007 and SharePoint 
     
 However, to provide backward compatibility, Microsoft retained the legacy model of hosting pre-SharePoint-style workflows within SharePoint by keeping the Windows Workflow Foundation runtime engine. Therefore, all workflows created in SharePoint 2010 will still run as expected in a SharePoint environment. In addition, Microsoft included a new activity, **InvokeSharePointWorkflow**, which can be used in a SharePoint workflow to start an existing workflow in the SharePoint 2010 workflow host that is included in SharePoint. This allows you to take advantage of existing workflow investments migrated from previous versions.
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > The **InvokeSharePointWorkflow** activity is a wrapper for the CSOM method, [StartWorkflow](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.WorkflowServices.InteropService.StartWorkflow.aspx) .
   
     
@@ -698,7 +692,7 @@ One of the major improvements to workflows in SharePoint is the expansion of CSO
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

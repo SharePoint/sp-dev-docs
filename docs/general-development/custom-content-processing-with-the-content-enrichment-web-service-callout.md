@@ -163,7 +163,7 @@ For a basic implementation, do the following:
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

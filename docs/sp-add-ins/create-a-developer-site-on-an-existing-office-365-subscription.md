@@ -64,7 +64,7 @@ For more information about the Office 365 Enterprise offerings, see [Plans &amp;
 
    ![New site collection provisioning](../images/SPAdminCenter_newSiteCollection_provisioning.png)
  
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [SharePoint Add-ins](sharepoint-add-ins.md)

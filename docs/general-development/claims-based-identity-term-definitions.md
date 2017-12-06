@@ -50,7 +50,7 @@ Table 1 contains definitions of key terms related to claims-based identity.
 |WS-Trust  <br/> |A standard that uses WS-Security to provide web services with methods to build and verify trust relationships. For more information about WS-Trust, see  [OASIS Web Services Secure Exchange (WS-SX) TC](http://www.oasis-open.org/committees/tc_home.php?wg_abbrev=ws-sx) on the OASIS website. <br/> |
    
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

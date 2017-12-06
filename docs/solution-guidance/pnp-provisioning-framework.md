@@ -62,7 +62,7 @@ Export your customized site model in your preferred serialized format; the provi
 
 You can use either a Windows PowerShell script or CSOM/REST code to apply your provisioning template to new or existing site collections. You also can provision an entire site collection or only a portion of it. To see a sample of remote provisioning in action, including serialization of the provisioning template to XML, see [Provisioning console application sample](provisioning-console-application-sample.md).
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [PnP remote provisioning](pnp-remote-provisioning.md)

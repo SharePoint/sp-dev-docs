@@ -62,8 +62,8 @@ Example response for a Multi-Geo tenant:
 
 To learn more, see the [MultiGeo.TenantInformationCollection](https://github.com/SharePoint/PnP/tree/dev/Samples/MultiGeo.TenantInformationCollection) sample.
 
->**Note:**
->For more information about permissions and how to configure your application, see [Set up a Multi-Geo sample application](multigeo-sampleapplicationsetup.md).
+> [!NOTE] 
+> For more information about permissions and how to configure your application, see [Set up a Multi-Geo sample application](multigeo-sampleapplicationsetup.md).
 
 ## Discover whether your tenant is Multi-Geo 
 

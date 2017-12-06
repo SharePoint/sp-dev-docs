@@ -118,7 +118,7 @@ function setLocalStorageKeyExpiry(key) {
 
 Before looking for the information stored in the local storage key, the code uses the  **isKeyExpired** function to determine whether the key is expired. For more information, see [Customize the UX by using SharePoint provider-hosted add-ins](customize-the-ux-by-using-sharepoint-provider-hosted-add-ins.md).
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [UX Components in SharePoint 2013 and SharePoint Online](ux-components-in-sharepoint-2013-and-sharepoint-online.md)

@@ -108,12 +108,9 @@ Your users can benefit from the List View widget and display the data in a list 
 ![Desktop List View experimental control on a page](../images/DesktopListView_basic.png)
  
 You can specify an existing view on the list, the widget renders the fields in the order that they appear in the view.
- 
 
- 
-
-    
- **Note**  At this moment, the Desktop List View widget only displays the data. It doesn't offer editing capabilities.
+> [!NOTE] 
+> At this moment, the Desktop List View widget only displays the data. It doesn't offer editing capabilities.
  
 
 You can provide a placeholder for the widget using a  **div** element. You can programmatically or declaratively use the widget.
@@ -150,7 +147,7 @@ Widgets can help to speed up the development process and reduce the cost and tim
 
  
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

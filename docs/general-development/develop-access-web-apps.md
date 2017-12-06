@@ -48,7 +48,7 @@ For more information about how to develop Access 2013 apps, see  [How to: Create
     
     
 
-## Additional resources
+## See also
 <a name="dk2_DevelopingAccess15WebApps_AdditionalResources"> </a>
 
 

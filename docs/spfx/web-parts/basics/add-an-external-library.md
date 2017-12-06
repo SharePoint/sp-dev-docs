@@ -23,11 +23,13 @@ Download the validator package from npm:
 npm install validator --save
 ```
 
->**Note:** Because you're using TypeScript, you need typings for the package you add. This is essential when you are writing code because TypeScript is just a superset of JavaScript. All the TypeScript code is still converted to JavaScript code when you compile. You can search for and find typings by using **npm**, for example: `npm install @types/{package} --save`
+> [!NOTE] 
+> Because you're using TypeScript, you need typings for the package you add. This is essential when you are writing code because TypeScript is just a superset of JavaScript. All the TypeScript code is still converted to JavaScript code when you compile. You can search for and find typings by using **npm**, for example: `npm install @types/{package} --save`
 
 Create a file in the your web part's folder called `validator.d.ts` and add the following:
 
->**Note:** Some libraries do not have typings. While the Validator library does have a [community provided typings file](https://www.npmjs.com/package/@types/validator), for this scenario let's assume it does not. In this case you would want to define your own typings definition `.d.ts` file for the library. The following code shows an example.
+> [!NOTE] 
+> Some libraries do not have typings. While the Validator library does have a [community provided typings file](https://www.npmjs.com/package/@types/validator), for this scenario let's assume it does not. In this case you would want to define your own typings definition `.d.ts` file for the library. The following code shows an example.
 
 ```typescript
 declare module "validator" {

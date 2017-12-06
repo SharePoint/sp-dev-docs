@@ -41,7 +41,8 @@ Headers:
 ```
 
 
- **Note**  Use  `application/json;odata=verbose` in the `accept` header if you want the response in JSON. Use `application/atom+xml` in the `accept` header if you want the response in Atom format.
+> [!NOTE] 
+> Use  `application/json;odata=verbose` in the `accept` header if you want the response in JSON. Use `application/atom+xml` in the `accept` header if you want the response in Atom format.
  
 
 The following example shows how to  **retrieve** a specific list if you know its title.
@@ -112,7 +113,8 @@ The following XML shows an example of the list properties that are returned when
 ```
 
 
- **Note**  The  **ListItemEntityTypeFullName** property ( **SP.Data.ProjectPolicyItemListItem** in the previous example) is especially important if you want to create and update list items. This value must be passed as the **type** property in the metadata that you pass in the body of the HTTP request whenever you create and update list items.
+> [!NOTE] 
+> The  **ListItemEntityTypeFullName** property ( **SP.Data.ProjectPolicyItemListItem** in the previous example) is especially important if you want to create and update list items. This value must be passed as the **type** property in the metadata that you pass in the body of the HTTP request whenever you create and update list items.
  
 
 
@@ -200,10 +202,8 @@ Headers:
 
 The following example shows how to  **retrieve** all of a list's items.
  
-
- 
-
- **Note**  The OData $skip query option does not work when querying list items. In may situations, you can use the  [$skiptoken](http://msdn.microsoft.com/library/4dda9434-c2c5-4577-8e01-7bf9e822d90a.aspx) option instead.
+> [!NOTE] 
+> The OData $skip query option does not work when querying list items. In may situations, you can use the  [$skiptoken](http://msdn.microsoft.com/library/4dda9434-c2c5-4577-8e01-7bf9e822d90a.aspx) option instead.
  
 
 
@@ -260,10 +260,8 @@ The following XML shows an example of the list item properties that are returned
 
 The following example shows how to  **create** a list item.
  
-
- 
-
- **Note**  To do this operation, you must know the  **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body.
+> [!NOTE] 
+> To do this operation, you must know the  **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body.
  
 
 
@@ -283,10 +281,8 @@ headers:
 
 The following example shows how to  **update** a list item.
  
-
- 
-
- **Note**  To do this operation, you must know the  **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body.
+> [!NOTE] 
+> To do this operation, you must know the  **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body.
  
 
 
@@ -348,7 +344,7 @@ Within SharePoint, ETags apply only to SharePoint lists and list items.
 
  
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

@@ -91,7 +91,7 @@ Find and download code samples for SharePoint, including samples that demonstrat
 | [SharePoint: Hello World SharePoint-hosted app](http://code.msdn.microsoft.com/SharePoint-Hello-b3ca20f3) <br/> |Learn how to create a basic SharePoint-hosted SharePoint Add-in that uses JavaScript to read and display information about a SharePoint site.  <br/> |SharePoint Add-ins  <br/> |
    
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

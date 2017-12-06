@@ -90,11 +90,8 @@ A color palette is the combination of colors that are used in a SharePoint site.
 
 Table 1 describes the color slots that are available and where color slots are used in a SharePoint site.
   
-    
-    
-
-> **Note:**
->  When discussing navigation items,pressed applies to when a user clicks or touches a navigation item.Selected applies to when a user is navigated to the page.>  The following summarizes a normal flow of actions and the color slot that applies to the navigation item link at each step:>  The base text of a navigation item link: HeaderNavigationText>  A user hovers the cursor over the navigation item link: HeaderNavigationHoverText>  A user clicks, touches, or chooses the navigation item link: HeaderNavigationPressedText>  The user is navigated to the chosen page. The color slot that applies to the navigation item for the page the user is now on: HeaderNavigationSelectedText
+> [!NOTE]
+> When discussing navigation items,pressed applies to when a user clicks or touches a navigation item.Selected applies to when a user is navigated to the page.>  The following summarizes a normal flow of actions and the color slot that applies to the navigation item link at each step:>  The base text of a navigation item link: HeaderNavigationText>  A user hovers the cursor over the navigation item link: HeaderNavigationHoverText>  A user clicks, touches, or chooses the navigation item link: HeaderNavigationPressedText>  The user is navigated to the chosen page. The color slot that applies to the navigation item for the page the user is now on: HeaderNavigationSelectedText
   
     
     
@@ -245,8 +242,8 @@ In an .spfont file, the following placeholders are replaced:
   
 -  _LatinScriptFont_ is the font to use for Latin scripts. This font is also the fallback font. That is, this is the font that is used for a language that does not have a script that is explicitly set in the font scheme.
     
-    > **Note:**
-      > You must provide additional information to use web fonts in your font scheme. For more information, see the  [Web fonts](#webFont) section in this article.
+    > [!NOTE]
+    > You must provide additional information to use web fonts in your font scheme. For more information, see the  [Web fonts](#webFont) section in this article.
 -  _EAScriptFont_ is the font to use for East Asia scripts. The **<s:ea>** element is not currently used by SharePoint. But, the **<s:ea>** element is still required in the font scheme.
     
   
@@ -404,7 +401,7 @@ Table 1 describes the available font slots and where they are used in a page.
 |body  <br/> |The base font that is used everywhere else on the page.  <br/> |
    
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

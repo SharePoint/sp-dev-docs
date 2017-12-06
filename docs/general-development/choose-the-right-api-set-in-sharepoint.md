@@ -113,10 +113,7 @@ You can use  [LINQ to Objects](http://msdn.microsoft.com/en-us/library/bb397919.
     
 The assemblies that define the built-in server-side classes are installed to the global assembly cache of each server when SharePoint is installed. When you program against the server object model, your assemblies are installed as farm solutions to the global assembly cache.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Developing new sandboxed solutions against SharePoint is deprecated in favor of developing SharePoint Add-ins, but sandboxed solutions can still be installed to site collections on SharePoint. The assemblies of these solutions remain in the package except when they are actually in use, at which time they are temporarily installed to a folder on the server. For more information, see  [Where are Assemblies in Sandboxed Solutions Deployed?](http://msdn.microsoft.com/library/dadbb20b-1bf7-442c-9eeb-bd9f01dbda45%28Office.15%29.aspx). 
   
     
@@ -172,10 +169,7 @@ The assemblies for the .NET Framework client object model must be installed on t
     
 For examples of using the .NET Framework object model, see  [Complete basic operations using SharePoint client library code](http://msdn.microsoft.com/library/5a69c9e3-73bf-4ed5-bc19-182056bdb394%28Office.15%29.aspx).
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > You can also use the SharePoint REST/OData endpoints in a .NET Framework application. For a comparison of the .NET Framework client object model with the SharePoint REST/OData endpoints, see the section  [REST/OData endpoints](#RESTOData) later in this article.
   
     
@@ -194,10 +188,7 @@ The assemblies for the Silverlight client object model are persisted on every Sh
     
 Silverlight .xap files can be included in SharePoint Add-ins, including SharePoint-hosted apps. In the latter case, the .xap file is deployed to a library on the app web. (For more information about app webs, see  [Host webs, add-in webs, and SharePoint components in SharePoint](http://msdn.microsoft.com/library/b791cdf5-8aa2-47fa-bc4c-aee437354759%28Office.15%29.aspx).) This makes a Silverlight application a useful way of including custom SharePoint code in an app, because custom server-side code is not allowed in SharePoint Add-ins. It also enables Silverlight developers to use their existing skills to create SharePoint applications with a minimal learning curve.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > You can also use the SharePoint REST/OData endpoints in a Silverlight application. For a comparison of the Silverlight client object model with the SharePoint REST/OData endpoints, see the section  [REST/OData endpoints](#RESTOData) later in this article.
   
     
@@ -232,10 +223,7 @@ The JavaScript object model is defined in a set of *.js files located at %Progra
     
 For examples of using the .NET Framework object model, see  [Complete basic operations using JavaScript library code in SharePoint](http://msdn.microsoft.com/library/29089af8-dbc0-49b7-a1a0-9e311f49c826%28Office.15%29.aspx).
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > You can also use the SharePoint REST/OData endpoints in a JavaScript application. For a comparison of the JavaScript client object model with SharePoint's REST/OData endpoints, see the following section,  [REST/OData endpoints](#RESTOData). 
   
     
@@ -317,7 +305,7 @@ Two API sets are still supported in the SharePoint framework for backward compat
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

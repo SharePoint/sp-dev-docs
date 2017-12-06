@@ -22,7 +22,8 @@ Use this solution if you want to:
     
 - Use user profile property values to personalize SharePoint.
 
-**Note**  This code sample only runs on Office 365. 
+> [!NOTE] 
+> This code sample only runs on Office 365. 
 
 ## Before you begin
 <a name="sectionSection0"> </a>
@@ -69,8 +70,8 @@ This code sample includes three scenarios.
 |Scenario|Shows how to...|
 |:---|:---|
 |1|Read all user profile properties for the user running the app.|
-|2|<p>Update a single-valued user profile property.</p><p>**Note:** This scenario is only supported in Office 365.</p>|
-|3|<p>Update a multivalued user profile property.</p><p>**Note:** This scenario is only supported in Office 365.</p>|
+|2|<p>Update a single-valued user profile property.</p><p>**Note**: This scenario is only supported in Office 365.</p>|
+|3|<p>Update a multivalued user profile property.</p><p>**Note**: This scenario is only supported in Office 365.</p>|
 
 ### Scenario 1: Read all user profile properties
 
@@ -86,7 +87,8 @@ Choosing  **Run scenario 1** calls the **btnScenario1_Click** method in CodeSamp
     
 - Iterate over  **PersonProperties.UserProfileProperties** to list the values of the user profile properties in a text box.
     
-**Note**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```C#
 protected void btnScenario1_Click(object sender, EventArgs e)
@@ -162,7 +164,8 @@ protected void btnScenario2_Click(object sender, EventArgs e)
         }
 ```
     
-**Note**  If you use custom user profile properties, configure the property to be editable by users. The technique used in this scenario will work for custom user profile properties. 
+> [!NOTE] 
+> If you use custom user profile properties, configure the property to be editable by users. The technique used in this scenario will work for custom user profile properties. 
 
 ### Scenario 3: Update a multivalued user profile property
 
@@ -228,7 +231,7 @@ Choosing  **Run scenario 3** calls **btnScenario3_Click** in CodeSample3.aspx.cs
 
         }
 ```
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [User profile solutions for SharePoint 2013 and SharePoint Online](user-profile-solutions-for-sharepoint.md)

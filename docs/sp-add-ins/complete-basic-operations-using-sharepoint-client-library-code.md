@@ -68,10 +68,8 @@ using Microsoft.SharePoint.Client;
 
 Except where specified otherwise, you can assume that each of these examples is in a parameterless method that is defined in the page's class. Also,  `label1`,  `label2`, and so on, are the names of  [Label](http://msdn2.microsoft.com/EN-US/library/620f4ses) objects on the page.
  
-
- 
-
- **Note**  When you are making a provider-hosted SharePoint Add-in with an ASP.NET web application and you add a reference to an assembly to the web application project in Visual Studio, set the  **Copy Local** property of the assembly to **True**, unless you know that the assembly is already installed on the web server, or you can ensure that it is installed before you deploy your add-in. The .NET Framework is installed on Microsoft Azure Web Roles and Azure Web Sites. But the SharePoint client assemblies and the various Microsoft managed code extensions and foundations are not installed. Office Developer Tools for Visual Studio 2012 automatically adds references to some assemblies commonly used in SharePoint Add-ins and sets the  **Copy Local** property.
+> [!NOTE] 
+> When you are making a provider-hosted SharePoint Add-in with an ASP.NET web application and you add a reference to an assembly to the web application project in Visual Studio, set the  **Copy Local** property of the assembly to **True**, unless you know that the assembly is already installed on the web server, or you can ensure that it is installed before you deploy your add-in. The .NET Framework is installed on Microsoft Azure Web Roles and Azure Web Sites. But the SharePoint client assemblies and the various Microsoft managed code extensions and foundations are not installed. Office Developer Tools for Visual Studio 2012 automatically adds references to some assemblies commonly used in SharePoint Add-ins and sets the  **Copy Local** property.
  
 
 
@@ -141,8 +139,8 @@ label1.Text = web. Description;
 
 ```
 
-
- **Note**  If you try to access other properties, the code throws an exception because other properties are not available.
+> [!NOTE] 
+> If you try to access other properties, the code throws an exception because other properties are not available.
  
 
 
@@ -239,8 +237,8 @@ foreach (List list in web.Lists)
 
 ```
 
-
- **Note**  Alternatively, you can use the  **LoadQuery** method to store the return value in another collection, rather than use the **web.Lists** property. You will also need to add **using** statements for [System.Collections.Generic](http://msdn2.microsoft.com/EN-US/library/0sbxh9x2) and [System.Linq](http://msdn2.microsoft.com/EN-US/library/bb336768). Also, add an alias to the using statement for  **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously. For example, `using SP = Microsoft.SharePoint.Client;`.
+> [!NOTE] 
+> Alternatively, you can use the  **LoadQuery** method to store the return value in another collection, rather than use the **web.Lists** property. You will also need to add **using** statements for [System.Collections.Generic](http://msdn2.microsoft.com/EN-US/library/0sbxh9x2) and [System.Linq](http://msdn2.microsoft.com/EN-US/library/bb336768). Also, add an alias to the using statement for  **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously. For example, `using SP = Microsoft.SharePoint.Client;`.
  
 
 
@@ -324,10 +322,8 @@ context.ExecuteQuery();
 
 This example adds a field to a SharePoint list. add an alias to the using statement for  **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously. For example, `using SP = Microsoft.SharePoint.Client;`.
  
-
- 
-
- **Note**  The example uses  **context.CastTo** to do a cast. Before executing the query, the client library does not know the real type of the returned object "field" and **SharePoint.Field** is the only possible type. If you know the real type, you can use the **ClientContext.CastTo<RealType>** method to cast the object.
+> [!NOTE] 
+> The example uses  **context.CastTo** to do a cast. Before executing the query, the client library does not know the real type of the returned object "field" and **SharePoint.Field** is the only possible type. If you know the real type, you can use the **ClientContext.CastTo<RealType>** method to cast the object.
  
 
 
@@ -363,10 +359,8 @@ These examples demonstrate how to use the .NET Framework CSOM to complete tasks 
 
 This example retrieves the items in a SharePoint list. You will also need to add a  **using** statement for **Microsoft.SharePoint.Client.QueryExpression**.
  
-
- 
-
- **Note**  You can use the  **FolderServerRelativeUrl** property to further restrict the items that are returned to those in a specified folder.
+> [!NOTE] 
+> You can use the  **FolderServerRelativeUrl** property to further restrict the items that are returned to those in a specified folder.
  
 
 
@@ -514,10 +508,8 @@ foreach (SP.Field field in list.Fields)
 
 If you want to retrieve information about a specific field, use the  **Fields.GetByInternalNameOrTitle** method. The return type of this method is **Field**. Before the query is executed, the client does not know the type of object, and C# syntax is not available for casting it to the derived type. Therefore, use the  **ClientContext.CastTo** method to cast it, which instructs the client library to recreate an object. You will also need to add a **using** statement for [System.Collections.Generic](http://msdn2.microsoft.com/EN-US/library/0sbxh9x2). You will also need to add an alias to the  **using** statement for the **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously. For example, `using SP = Microsoft.SharePoint.Client;`.
  
-
- 
-
- **Note**  The  **GetByInternalNameOrTitle** method used in this example is a remote method. It does not use the data from the client collection even if the client collection is already populated.
+> [!NOTE] 
+> The  **GetByInternalNameOrTitle** method used in this example is a remote method. It does not use the data from the client collection even if the client collection is already populated.
  
 
 
@@ -959,10 +951,8 @@ Console.WriteLine(web.HasUniqueRoleAssignments);
 
 To conditionally execute code, set a conditional scope by using a  **ConditionalScope** object. For example, retrieve the list property when the list is not null. You will also need to add **using** statements for [System.Collections.Generic](http://msdn2.microsoft.com/EN-US/library/0sbxh9x2) and [System.Linq](http://msdn2.microsoft.com/EN-US/library/bb336768). Also, add an alias to the  **using** statement for the **Microsoft.SharePoint.Client** namespace so you can refer to its classes unambiguously. For example, `using SP = Microsoft.SharePoint.Client;`.
  
-
- 
-
- **Note**  Calling method and setting properties within a conditional scope are not permitted, because the client library does not track the side effects of method calls and property settings. You should use only  **Load** inside the conditional scope.
+> [!NOTE] 
+> Calling method and setting properties within a conditional scope are not permitted, because the client library does not track the side effects of method calls and property settings. You should use only  **Load** inside the conditional scope.
  
 
 
@@ -1041,7 +1031,7 @@ context.ExecuteQuery();
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

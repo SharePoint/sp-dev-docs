@@ -73,7 +73,7 @@ Figure 3 shows the resources in the model for SharePoint Add-ins to connect your
 
 ![App UX resources for the host web](../images/AppUX_hostweb.png)
 
-## Additional resources
+## See also
 <a name="SP15_UXdesignapps_addresources"> </a>
 
 -  [Design SharePoint Add-ins](design-sharepoint-add-ins.md)

@@ -42,7 +42,8 @@ Repeat these steps two more times, for the names  **MBI** and **LBI**. Use diffe
 
 You can insert a custom action for site classification to the  **Settings** page and the **SharePoint gear** icon. This action is only available to users with **ManageWeb** permission. For more information, see [Default Custom Action Locations and IDs](http://msdn.microsoft.com/en-us/library/office/bb802730%28v=office.15%29.aspx).
 
-**Note:**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```C#
 /// <summary>
@@ -213,7 +214,8 @@ try {
 }
 ```
 
-**Note:**  For more information, see [Create a list in the host web when your SharePoint add-in is installed, and remove it from the recent stuff list](http://blogs.technet.com/b/speschka/archive/2014/05/07/create-a-list-in-the-host-web-when-your-sharepoint-app-is-installed-and-remove-it-from-the-recent-stuff-list.aspx).
+> [!NOTE] 
+> For more information, see [Create a list in the host web when your SharePoint add-in is installed, and remove it from the recent stuff list](http://blogs.technet.com/b/speschka/archive/2014/05/07/create-a-list-in-the-host-web-when-your-sharepoint-app-is-installed-and-remove-it-from-the-recent-stuff-list.aspx).
 
 ## Add a classification indicator to site page
 
@@ -272,7 +274,7 @@ function setClassifier() {
 
 You can use extension method  **Web.AddIndexedPropertyBagKey** in the ObjectPropertyBagEntry.cs file in[OfficeDevPnP.Core](https://github.com/SharePoint/PnP/tree/96eff6153389d6d21358480878de9cc8fa21abab/OfficeDevPnP.Core) to store the classification values in site property bags instead of a list. The method enables property bags to be crawled or searchable.
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [SharePoint site provisioning solutions](sharepoint-site-provisioning-solutions.md)

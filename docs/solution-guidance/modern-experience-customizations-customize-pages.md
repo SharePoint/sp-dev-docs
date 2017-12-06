@@ -274,7 +274,7 @@ The following figure shows the most important classes you'll be working with whe
 
 We'll gradually introduce more customization options for the "modern" pages experience. These options will be aligned with the release of additional SharePoint Framework capabilities. Currently, there is no exact schedule available, but we'll update the "modern" experience articles whenever new capabilities are released.
 
-## Additional resources
+## See also
 
 - [Customizing the "modern" experiences in SharePoint Online](modern-experience-customizations.md)
 - [Allow or prevent creation of modern site pages by end users](https://support.office.com/en-us/article/Allow-or-prevent-creation-of-modern-site-pages-by-end-users-c41d9cc8-c5c0-46b4-8b87-ea66abc6e63b?ui=en-US&rs=en-US&ad=US)

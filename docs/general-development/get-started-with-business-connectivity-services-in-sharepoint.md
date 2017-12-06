@@ -119,7 +119,7 @@ When you master the basic concepts of BCS, you can use the more advanced feature
 | [BCS REST API reference for SharePoint](bcs-rest-api-reference-for-sharepoint.md) <br/> |Find reference information for constructing Representational State Transfer (REST) URIs used for accessing and manipulating OData sources.  <br/> |
    
 
-## Additional resources
+## See also
 <a name="SP15GettingStartedBCS_LearnMore"> </a>
 
 

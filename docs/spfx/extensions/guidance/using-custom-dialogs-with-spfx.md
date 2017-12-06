@@ -58,7 +58,8 @@ When the scaffold is complete, you should see the following message indicating a
 
 ![SharePoint client-side solution scaffolded successfully](../../../images/ext-com-dialog-yeoman-complete.png)
 
->**Note:** For information about troubleshooting any errors, see [Known issues](../../known-issues-and-common-questions.md).
+> [!NOTE] 
+> For information about troubleshooting any errors, see [Known issues](../../known-issues-and-common-questions.md).
 
 Once the scaffolding completes, lock down the version of the project dependencies by running the following command:
 

@@ -26,9 +26,8 @@ There are different ways to retrieve user identity and information, depending on
  
 - Install the most recent version of  [Office Developer Tools for Visual Studio 2013](http://aka.ms/OfficeDevToolsForVS2013) or [Office Developer Tools for Visual Studio 2015](http://aka.ms/OfficeDevToolsForVS2015).
     
- 
-
- **Note**  For guidance on how to setup a development environment that fits your needs, see  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md).
+> [!NOTE] 
+> For guidance on how to setup a development environment that fits your needs, see  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md).
  
 
 
@@ -91,10 +90,8 @@ ClientContext clientContext =
 
 The following is another way to retrieve user's login name. If you have the user's email address or display name, you can use the  **ResolvePrincipal** method to get the user's login name.
  
-
- 
-
- **Note**  The APIs are in the Microsoft.SharePoint.Client.Utilities namespace in the  [Microsoft.SharePoint.Client.dll](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.utilities.utility.resolveprincipal.aspx) assembly.
+> [!NOTE] 
+> The APIs are in the Microsoft.SharePoint.Client.Utilities namespace in the  [Microsoft.SharePoint.Client.dll](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.utilities.utility.resolveprincipal.aspx) assembly.
  
 
 The following is sample code to show how to get the user login information.
@@ -191,7 +188,7 @@ clientContext.ExecuteQuery();
 ```
 
 
-## Additional resources
+## See also
 <a name="AdditionalResources"> </a>
 
 

@@ -24,7 +24,7 @@ The samples in this solution pack show you how to use provider-hosted add-ins to
 |[Synchronize term groups](Synchronize-term-groups-sample-app-for-SharePoint.md)|[Core.MMSSync](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMSSync) | Synchronize term groups across multiple term stores.|
 |[Supporting % and # in file and folder with the ResourcePath API](supporting-and-in-file-and-folder-with-the-resourcepath-api.md)| - | Developer guidance on updated support for % and # in file and folders.|
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)

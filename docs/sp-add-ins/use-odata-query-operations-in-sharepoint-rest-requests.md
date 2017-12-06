@@ -34,10 +34,8 @@ The SharePoint REST service supports a wide range of OData query string operator
 
 Use the  [$select](http://www.odata.org/documentation/odata-version-2-0/uri-conventions#SelectSystemQueryOption) query option to specify which fields to return for a given list, list item, or other SharePoint object represented by an entity set. You can use `$select=*` to return all available fields.
  
-
- 
-
- **Note**  In general, if you do not specify the  `$select` query option, the REST service returns all available fields by default. However, in a few cases, some SharePoint objects include properties that are very resource intensive to retrieve; to optimize REST service performance, these properties are not included in the default query, and must be explicitly requested.For example, the  **SPWeb.EffectiveBasePermissions** property is not returned by default, and must be explicitly requested using the `$select` query option.
+> [!NOTE] 
+> In general, if you do not specify the  `$select` query option, the REST service returns all available fields by default. However, in a few cases, some SharePoint objects include properties that are very resource intensive to retrieve; to optimize REST service performance, these properties are not included in the default query, and must be explicitly requested.For example, the  **SPWeb.EffectiveBasePermissions** property is not returned by default, and must be explicitly requested using the `$select` query option.
  
 
 In addition, you can specify that the request returns projected fields from other lists and the values of lookups. To do this, specify the field name in both the  `$select` and `$expand` query options. For example:
@@ -71,10 +69,8 @@ Single value lookup fields are represented by two separate fields in the SharePo
 
 In the SharePoint REST service, users are represented by the user's friendly (display) name, and not their alias or domain\alias combination. Therefore, you must construct user queries against users' friendly names.
  
-
- 
-
- **Note**  Membership-based user queries are not supported.Usage of the  **Current** operator to do queries using the ID of the current user is not supported.
+> [!NOTE] 
+> Membership-based user queries are not supported.Usage of the  **Current** operator to do queries using the ID of the current user is not supported.
  
 
 
@@ -96,10 +92,8 @@ Use the  [$orderby](http://www.odata.org/documentation/odata-version-2-0/uri-con
 
 Use the  [$top](http://www.odata.org/documentation/odata-version-2-0/uri-conventions#TopSystemQueryOption) and [$skiptoken](http://msdn.microsoft.com/library/dd942121.aspx) query options to select a subset of the items that would otherwise be returned by your query.
  
-
- 
-
- **Note**  The $skip query option does not work with queries for SharePoint list items.
+> [!NOTE] 
+> The $skip query option does not work with queries for SharePoint list items.
  
 
 The  `$top` option enables you to select the first *n*  items of the return set for return. For example, the following URI requests that only the first ten items in the prospective return set actually be returned:
@@ -116,10 +110,8 @@ The $skiptoken option enables you to skip over items until the specified item is
  
  `$skiptoken=Paged=TRUE&amp;p_ID=5`
  
-
- 
-
- **Note**  When using these query options, take into account that paging in OData is ordinal. For example, suppose you are implementing a next page button to display SharePoint list items. You use the REST service to enable the button to return items 1 through 20 when clicked, then items 21 through 40, and so on. However, suppose another user deletes items 4 and 18 between clicks of the next button. In such a case, the ordinal positioning of the remaining items is reset, and displaying items 21 through 40 actually skips over two items.
+> [!NOTE] 
+> When using these query options, take into account that paging in OData is ordinal. For example, suppose you are implementing a next page button to display SharePoint list items. You use the REST service to enable the button to return items 1 through 20 when clicked, then items 21 through 40, and so on. However, suppose another user deletes items 4 and 18 between clicks of the next button. In such a case, the ordinal positioning of the remaining items is reset, and displaying items 21 through 40 actually skips over two items.
  
 
 
@@ -150,7 +142,7 @@ The figure below shows the supported OData query options.
 
  
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

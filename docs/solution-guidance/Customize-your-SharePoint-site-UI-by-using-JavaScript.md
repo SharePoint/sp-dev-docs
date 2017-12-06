@@ -52,7 +52,8 @@ In Figure 1, choosing  **Embed customization** calls **btnSubmit_Click** in defa
     
 All pages on your SharePoint site will now run scenario1.js and display the UI customizations shown in Figure 2 and Figure 3.
     
-**Note**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```C#
  public void AddJsLink(ClientContext ctx, Web web)
@@ -151,7 +152,7 @@ function IsOnPage(pageName) {
 
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)

@@ -15,7 +15,8 @@ The source of the AngularJS application is available on GitHub at [https://githu
 
 The source of the AngularJS application migrated to SharePoint Framework is available on GitHub at [https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/angular-todo](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/samples/angular-todo).
 
-> **Note:** Before following the steps in this article, be sure to [set up your development environment](http://dev.office.com/sharepoint/docs/spfx/set-up-your-development-environment) for building SharePoint Framework solutions.
+> [!NOTE] 
+> Before following the steps in this article, be sure to [set up your development environment](http://dev.office.com/sharepoint/docs/spfx/set-up-your-development-environment) for building SharePoint Framework solutions.
 
 ## Setup project
 

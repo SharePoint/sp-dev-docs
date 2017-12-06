@@ -36,7 +36,8 @@ Make sure the NuGet package worked by making sure there’s these two new classe
 ### Step 3: Add the required code to execute the job on your Office 365 site ###
 At this point we’ve created our Console Application and we’ve added the required assemblies that will make it easy for us to communicate with SharePoint. Next steps are to make use of these helper classes in order to execute commands in our SharePoint environment through our Console Application. Tag along.
 
-***Note:*** In the finished sample I’ll be using an account+password approach (like a service account). We’ll discuss authentication options further down in the article and check out links to other alternatives.
+> [!NOTE] 
+> In the finished sample I’ll be using an account+password approach (like a service account). We’ll discuss authentication options further down in the article and check out links to other alternatives.
 
 #### Wire up the calls to the SharePoint Online site collection ####
 
@@ -212,7 +213,8 @@ static void Main(string[] args)
 ```
 The **TranslatorHelper** class is a helper class which calls a custom translation API but it will not be discussed in detail in this post since it's pretty far outside of the scope.
 
-**Note:** *As seen from the code this is a demo and definitely not for production use, please revise it and adjust according to your coding standards and security principles. However all the Console.WriteLine additions are added in order for us to review the execution of the jobs easily from the Azure Portal. More on logging and monitoring further down in this article.*
+> [!NOTE] 
+> As seen from the code this is a demo and definitely not for production use, please revise it and adjust according to your coding standards and security principles. However all the Console.WriteLine additions are added in order for us to review the execution of the jobs easily from the Azure Portal. More on logging and monitoring further down in this article.
 
 ## Publishing your WebJob to Azure ##
 When you’ve developed your WebJob and you’re ready to deploy it to your Azure environment (deploys to an Azure WebSite), you have two main options as described below.
@@ -249,7 +251,8 @@ Choose a Name, how the job should run and the actual zip file:
 
 ![The Add WebJob dialog is displayed. The Name field contains the text Zimmergren-O365-WebJobSample, and the How to Run field contains the text On Demand.](media/Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites/10.Configure-Name-of-Uploaded-WebJob.png)
 
-***Important:*** The "How To Run" alternative only offers "On Demand" or "Continuous" at this point, but soon there will be support for "Scheduled" as well – which is what we really want.
+> [!IMPORTANT] 
+> The "How To Run" alternative only offers "On Demand" or "Continuous" at this point, but soon there will be support for "Scheduled" as well – which is what we really want.
 
 *(Hint: In the next section for publishing directly from Azure, you can schedule it from inside VS).*
 
@@ -264,7 +267,8 @@ This is my favorite one at this point because I can use the tooling in Visual St
 
 #### Choose to publish the WebJob from Visual Studio 2015 ####
 
-***Note:*** *These dialogs may differ slightly if you’re running an earlier version of Visual Studio. Also, I am already logged in so if you’re doing this for the first time you may get a login-dialog in order to sign in to your Azure account. That’s a pre-requisite.*
+> [!NOTE] 
+> These dialogs may differ slightly if you’re running an earlier version of Visual Studio. Also, I am already logged in so if you’re doing this for the first time you may get a login-dialog in order to sign in to your Azure account. That’s a pre-requisite.
 
 Simply right-click your project and select "**Publish as an Azure WebJob…**":
 

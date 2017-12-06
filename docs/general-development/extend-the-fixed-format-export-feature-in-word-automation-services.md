@@ -173,7 +173,7 @@ When the fixed-format export DLL is active, it must call the **KeepAlive** funct
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 For more information, see the following resources:

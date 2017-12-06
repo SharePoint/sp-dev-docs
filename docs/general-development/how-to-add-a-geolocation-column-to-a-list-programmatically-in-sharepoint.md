@@ -173,7 +173,7 @@ private void AddListItem()
 ```
 
 
-## Additional resources
+## See also
 <a name="SP15addgeo_addlresources"> </a>
 
 

@@ -131,7 +131,7 @@ Once you're done with the upgrade, you'll want to think about the future and lon
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

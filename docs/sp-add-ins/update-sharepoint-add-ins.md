@@ -141,7 +141,7 @@ Continue with the next bullet in the section [Major steps in updating an add-in]
 -  [Create a handler for the update event in SharePoint Add-ins](create-a-handler-for-the-update-event-in-sharepoint-add-ins.md)
 -  [Update remote components in SharePoint Add-ins](update-remote-components-in-sharepoint-add-ins.md)
     
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)

@@ -33,7 +33,7 @@ Consider the following:
 > If you plan to do both kinds of development, start with the latter article, and then see [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md) for additional steps you need to develop SharePoint Add-ins.
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [SharePoint Add-ins](sharepoint-add-ins.md)

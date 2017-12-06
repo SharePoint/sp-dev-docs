@@ -6,8 +6,8 @@ ms.date: 11/03/2017
 
 After you've spent your time and energy in building that new SharePoint based portal you do want to get it live as soon as possible...but what would be a good model for doing so? This article will explain the recommended model for deploying your portal for your end users.
 
->**Note**:
->Although this guidance is targeting SharePoint Online most of it also applies to portals hosted on a SharePoint on-premises environment.
+> [!NOTE] 
+> Although this guidance is targeting SharePoint Online most of it also applies to portals hosted on a SharePoint on-premises environment.
 
 
 _**Applies to:** SharePoint Online_
@@ -41,7 +41,7 @@ Below picture shows a nice gradual roll-out plan. Note that this also takes in a
 
 The above phased approach will give you time to absorb feedback and make adjustments to your portal if needed, but how do measure and follow-up on performance during this phased roll-out? The recommended approach for doing this is embedding portal telemetry in your implementation, as explained in [telemetry section in performance article](https://msdn.microsoft.com/en-us/pnp_articles/portal-performance#telemetry). Having a continuous flow of portal performance data will help you understand if the portal performance is changing when the number of users is growing, but also when you in the future make changes to the portal.
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [Capacity planning and load testing SharePoint Online](https://support.office.com/en-us/article/Capacity-planning-and-load-testing-SharePoint-Online-c932bd9b-fb9a-47ab-a330-6979d03688c0?ui=en-US&rs=en-US&ad=US)

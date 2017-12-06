@@ -99,7 +99,7 @@ namespace GetInstalledSharePointSku
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_SP15DetectSKUaddresources"> </a>
 
 

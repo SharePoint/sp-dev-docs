@@ -343,7 +343,9 @@ The dialog should look like the following when you are finished:
 
 1. Press the F5 key.
     
-     **Note**  When you press F5, Visual Studio builds the solution, installs the add-in, and opens the permissions page for the add-in.
+    > [!NOTE] 
+    > When you press F5, Visual Studio builds the solution, installs the add-in, and opens the permissions page for the add-in.
+
 2. Choose the  **Trust It** button.
     
  
@@ -485,7 +487,7 @@ The  **_editMode_** token lets your content page determine if the add-in part is
 
  
 
-## Additional resources
+## See also
 <a name="SP15Createappparts_AddResources"> </a>
 
 

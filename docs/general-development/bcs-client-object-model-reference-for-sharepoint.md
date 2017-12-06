@@ -490,7 +490,7 @@ The namespace is **Microsoft.BusinessData.MetadataModel**.
     
   
 
-## Additional resources
+## See also
 <a name="bkmk_Addres"> </a>
 
 

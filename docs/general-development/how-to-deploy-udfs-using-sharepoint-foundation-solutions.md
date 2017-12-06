@@ -27,8 +27,9 @@ The procedure for creating and deploying a UDF assembly by using SharePoint Foun
     
     The solution manifest (always called Manifest.xml) is stored at the root of a solution file. This file defines the list of features, site definitions, resource files, Web Part files, and assemblies to be processed. It does not define the file structure; if files are included in a solution but not listed in the manifest XML file, they are not processed in any way.
     
-    > **Note:**
-      > For more information about the structure of the manifest XML file, see the SharePoint Foundation documentation. 
+    > [!NOTE]
+    > For more information about the structure of the manifest XML file, see the SharePoint Foundation documentation. 
+
 2. Package the UDF assembly and Manifest.xml into a CAB file.
     
   
@@ -42,7 +43,8 @@ The procedure for creating and deploying a UDF assembly by using SharePoint Foun
     
   
 Each Excel Services trusted location has an **AllowUdfs** flag.
-> **Note:**
+
+> [!NOTE]
 > The **AllowUdfs** flag is denoted by the **User-defined functions allowed** option on the Excel Services Trusted File Locations page. To learn how to navigate to the Trusted File Locations page, see [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md). 
   
     
@@ -56,7 +58,8 @@ In order to allow UDFs to be called from a specific trusted location, you must:
     
   
 For more information on how to enable UDFs and add UDFs to the trusted UDF list, see  [How to: Enable UDFs](how-to-enable-udfs.md).
-> **Note:**
+
+> [!NOTE]
 > To avoid name collision, give your UDF assemblies and their dependencies strong names, and name them as uniquely as possible. For more information, see  [Excel Services Best Practices](excel-services-best-practices.md) and [Excel Services Known Issues and Tips](excel-services-known-issues-and-tips.md). 
   
     
@@ -91,8 +94,8 @@ For more information on how to enable UDFs and add UDFs to the trusted UDF list,
 ```
 
 
-    > **Note:**
-      > You should generate a unique GUID for each solution. For more information about **Solution** element, see the SharePoint Foundation [Solutions and Web Part Packages](http://msdn.microsoft.com/library/a145a5eb-fbb6-4328-b5b3-96bf5ce89a19%28Office.15%29.aspx) (http://msdn.microsoft.com/en-us/library/ms413687.aspx).
+    > [!NOTE]
+    > You should generate a unique GUID for each solution. For more information about **Solution** element, see the SharePoint Foundation [Solutions and Web Part Packages](http://msdn.microsoft.com/library/a145a5eb-fbb6-4328-b5b3-96bf5ce89a19%28Office.15%29.aspx) (http://msdn.microsoft.com/en-us/library/ms413687.aspx).
 
 ### To create a solution package
 
@@ -125,11 +128,11 @@ For more information on how to enable UDFs and add UDFs to the trusted UDF list,
     
     stsadm.exe -o addsolution -filename <pathtoCAB>
     
-    > **Note:**
-      > You can find the Stsadm.exe at: > C:\\Program Files\\Common Files\\Microsoft Shared\\web server extensions\\12\\BIN. 
+    > [!NOTE]
+    > You can find the Stsadm.exe at: > C:\\Program Files\\Common Files\\Microsoft Shared\\web server extensions\\12\\BIN. 
 
-    > **Note:**
-      > For more information about Stsadm.exe command options, see the  [Stsadm to Windows PowerShell Mapping (SharePoint Foundation 2010)](http://technet.microsoft.com/en-us/library/ff621081.aspx) (http://technet.microsoft.com/en-us/library/ff621081.aspx).
+    > [!NOTE]
+    > For more information about Stsadm.exe command options, see the  [Stsadm to Windows PowerShell Mapping (SharePoint Foundation 2010)](http://technet.microsoft.com/en-us/library/ff621081.aspx) (http://technet.microsoft.com/en-us/library/ff621081.aspx).
 
   
     

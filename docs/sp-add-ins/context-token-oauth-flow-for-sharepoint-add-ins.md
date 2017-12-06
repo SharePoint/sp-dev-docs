@@ -18,10 +18,8 @@ In SharePoint,  **the OAuth authentication and authorization flow for a provider
  
 With a provider-hosted add-in, you have a remote web application or service that is separate from SharePoint, and not part of the SharePoint farm or SharePoint Online tenancy. It can be hosted in the cloud or on an on-premise server. In this article, the remote component is called Contoso.com.
  
-
- 
-
- **Note**  The remote component can also host event receivers that respond to events that occur to SharePoint items, such as lists or list items. Examples of remote events that Contoso.com might want to respond to are list events, such as adding or removing a list item; or web events, such as adding or deleting a site. For more information about how to create remote event receivers, see  [Create a remote event receiver in SharePoint Add-ins](create-a-remote-event-receiver-in-sharepoint-add-ins.md).
+> [!NOTE] 
+> The remote component can also host event receivers that respond to events that occur to SharePoint items, such as lists or list items. Examples of remote events that Contoso.com might want to respond to are list events, such as adding or removing a list item; or web events, such as adding or deleting a site. For more information about how to create remote event receivers, see  [Create a remote event receiver in SharePoint Add-ins](create-a-remote-event-receiver-in-sharepoint-add-ins.md).
  
 
 Contoso.com uses the SharePoint client object model (CSOM) or the SharePoint REST APIs to make calls to SharePoint. The Contoso.com application uses an OAuth token-passing flow to authenticate with SharePoint.  **SharePoint and Contoso.com do not trust each other; but both trust ACS** and will accept tokens issued by ACS. There are three tokens involved: SharePoint has ACS create a context token that SharePoint forwards to Constoso.com. Contoso.com validates that the context token was issued by ACS so it trusts it. Contoso.com then extracts a refresh token from the context token and uses it to get an access token directly from ACS. It includes the access token in all its requests to SharePoint. SharePoint validates that the access token was issued by ACS, so it responds to the requests from Contoso.com.
@@ -114,7 +112,7 @@ These are the steps that correspond to the numbers in the figure:
     
  
 
-## Additional resources
+## See also
 <a name="Filename_AdditionalResources"> </a>
 
 

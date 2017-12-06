@@ -8,8 +8,8 @@ Every portal design includes at least one aspect that requires the customization
 
 Implementing customizations to SharePoint Online places an even greater emphasis on effective design and development for web applications in general, and client-side web applications in particular, especially when it comes to the concept of application performance.
 
->**Note**:
->Although this guidance primarily targets SharePoint Online, most of it also applies to portals hosted in an on-premises SharePoint environment.
+> [!NOTE] 
+> Although this guidance primarily targets SharePoint Online, most of it also applies to portals hosted in an on-premises SharePoint environment.
 
 _**Applies to:** SharePoint Online_
 
@@ -237,7 +237,8 @@ A Content Delivery Network (CDN) is a geo-dispersed network that allows an end-u
 	- [Office 365 Public/Private CDN](https://dev.office.com/blogs/general-availability-of-office-365-cdn)
 	- SharePoint Portal Style Library - default option when a CDN is not used
 
->**Note**: The [Office 365 private CDN capability](https://dev.office.com/blogs/general-availability-of-office-365-cdn) has a publishing feature auto URL rewriting to CDN urls. So once private CDN is enabled SharePoint will return your publishing pages with links pointing to your private CDN location without you as a developer having to built this. This applies to publishing pages, but also to data returned by the content by search web part, the picture library slideshow, image fields in SPList REST queries and SharePoint Image renditions. Your publishing portal can also combine both private and public CDN in the same portal.
+> [!NOTE] 
+> The [Office 365 private CDN capability](https://dev.office.com/blogs/general-availability-of-office-365-cdn) has a publishing feature auto URL rewriting to CDN urls. So once private CDN is enabled SharePoint will return your publishing pages with links pointing to your private CDN location without you as a developer having to built this. This applies to publishing pages, but also to data returned by the content by search web part, the picture library slideshow, image fields in SPList REST queries and SharePoint Image renditions. Your publishing portal can also combine both private and public CDN in the same portal.
 
 ### AJAX
 <a name="bk_ajax"> </a>
@@ -363,7 +364,7 @@ The logical architecture of the Data Access Layer (DAL) Framework includes the f
 10. The Business Data Manager returns the BDO to the Display Component
 11. The Display Component binds to the BDO and renders the data
 
-## Additional resources
+## See also
 <a name="bk_additionalResources"> </a>
 
 - [Client-Side Data Access Layer (DAL) Sample](https://github.com/SharePoint/PnP/tree/master/Samples/Portal.DataAccessLayer)

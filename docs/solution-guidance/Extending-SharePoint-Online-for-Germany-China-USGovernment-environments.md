@@ -157,7 +157,7 @@ ClientContext cc = new AuthenticationManager().GetAppOnlyAuthenticatedContext(si
 ```
 
 
-### Additional resources
+### See also
 <a name="bk_addresources"> </a>
 
 - [Learn about Office 365 Germany](https://support.office.com/en-US/article/Learn-about-Office-365-Germany-8a5a4bbc-667a-4cac-8769-d8ac9015db4c) 

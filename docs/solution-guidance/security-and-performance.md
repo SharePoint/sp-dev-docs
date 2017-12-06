@@ -17,7 +17,7 @@ The articles in this section show you how to improve the security and performanc
 |[Handle SharePoint Online throttling ](Handle-SharePoint-Online-throttling-by-using-exponential-back-off.md) | Learn how to handle throttling in SharePoint Online by using the exponential back-off technique. |
 |[JavaScript Patterns and Performance ](javascript-patterns-and-performance.md)| Learn which JavaScript techniques you can use to improve your add-in performance.
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)

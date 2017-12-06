@@ -89,10 +89,8 @@ If all of certificates of the customer's high-trust SharePoint Add-ins come from
  
 The following is the code for the script. Simply paste it into any text editor or the PowerShell editor (IPowerShell ISE) and save it as AddSPRootAuthority.ps1.
  
-
- 
-
- **Note**  The file has to be saved as ANSI format, not UTF-8. PowerShell may give syntax errors when it runs a file with a non-ANSI format. NotePad and the PowerShell editor will default to saving it as ANSI. If you use any other editor to save the file, be sure you are saving it as ANSI.
+> [!NOTE] 
+> The file has to be saved as ANSI format, not UTF-8. PowerShell may give syntax errors when it runs a file with a non-ANSI format. NotePad and the PowerShell editor will default to saving it as ANSI. If you use any other editor to save the file, be sure you are saving it as ANSI.
  
 
 

@@ -49,7 +49,8 @@ Each solution file must have a **name**, which identifies the package in the Sha
 
 The solution definition also optionally contains a list of SharePoint Feature definitions.
 
-> **Note:** If this is omitted or empty, the task will create a single Feature for every component (a 1:1 mapping).
+> [!NOTE] 
+> If this is omitted or empty, the task will create a single Feature for every component (a 1:1 mapping).
 
 ### Feature definition (_IFeature_)
 

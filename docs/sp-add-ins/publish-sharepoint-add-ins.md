@@ -48,7 +48,7 @@ The following table offers a comparison of publishing to the Office Store or to 
 |Add-in package is verified by Microsoft for technical and content adherence to policies.|Add-in package verification is performed by SharePoint when add-in is uploaded.|
 |You must be signed up with the Microsoft Seller Dashboard to upload add-ins.|No registration with Microsoft is required.|
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Create or update client IDs and secrets in the Seller Dashboard](http://msdn.microsoft.com/library/create-or-update-client-ids-and-secrets-in-the-seller-dashboard%28Office.15%29.aspx)

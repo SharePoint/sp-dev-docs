@@ -64,7 +64,7 @@ Some site collection administrators mark sites to not be indexed. Content marked
     
     
 
-## Additional resources
+## See also
 <a name="SP15_CSWP_AdditionalResources"> </a>
 
 

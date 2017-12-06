@@ -14,9 +14,7 @@ Learn about some of the most important reusable components you can build in Shar
 Using SharePoint, you can build a variety of components, such as lists, Web Parts, and content types, which you can reuse in various apps, sites, and solutions. This section summarizes some of the most common reusable components that you can build in SharePoint. Future updates to this documentation will contain information about additional components you can build.
   
     
-    
-
-> **Note:**
+> [!NOTE]
 > There are some restrictions on which components you can use in SharePoint Add-ins. For more information, see  [Host webs, add-in webs, and SharePoint components in SharePoint](http://msdn.microsoft.com/library/b791cdf5-8aa2-47fa-bc4c-aee437354759%28Office.15%29.aspx). 
   
     
@@ -48,7 +46,7 @@ Using SharePoint, you can build a variety of components, such as lists, Web Part
     
   
 
-## Additional resources
+## See also
 <a name="SP15Reusecomp_AddRes"> </a>
 
 

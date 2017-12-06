@@ -36,7 +36,7 @@ The following articles describe how to create no-code solutions and provide link
 | [Save, download, and upload a SharePoint site as a template](save-download-and-upload-a-sharepoint-site-as-a-template.md) <br/> |Explains how to create site templates without using code so you can easily deploy no-code solutions.  <br/> |
    
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

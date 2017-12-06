@@ -13,10 +13,7 @@ Get an overview of development with the authentication APIs of the SharePoint cl
 
 The process of authenticating a SharePoint user on a Windows Phone 7.5 is a little different from the same process on a client computer. Client code on a Windows Phone 7.5 first creates an object of the **Authenticator** class or **ODataAuthenticator** class, which were added to the SharePointclient object model for Microsoft Silverlight for Windows Phone. It then uses this object as the user's credentials.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > For more information about the APIs that are discussed in this section, see  [Overview of the SharePoint mobile object model](overview-of-the-sharepoint-mobile-object-model.md). For more information about the SharePoint client object model for Silverlight, see  [Managed Client Object Model](http://msdn.microsoft.com/en-us/library/ee537247.aspx) and [Using the Silverlight Object Model](http://msdn.microsoft.com/en-us/library/ee538971.aspx). 
   
     
@@ -36,8 +33,9 @@ The following are the required steps to get an authenticated client context obje
   
 2. Construct a new **Authenticator** object and initialize its properties.
     
-    > **Note:**
-      > One **Authenticator** object can be used with one **ClientContext** object only. You can't share an **Authenticator** object across multiple **ClientContext** objects with different URLs.
+    > [!NOTE]
+    > One **Authenticator** object can be used with one **ClientContext** object only. You can't share an **Authenticator** object across multiple **ClientContext** objects with different URLs.
+
 3. The **Authenticator** class implements the [ICredentials](http://msdn.microsoft.com/en-us/library/system.net.icredentials.aspx) interface, so you assign the object to the [Credentials](http://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.clientruntimecontext.credentials.aspx) property of the **ClientContext** object.
     
   
@@ -261,10 +259,7 @@ at.AuthenticationMode = ClientAuthenticationMode.MicrosoftOnline;
 
 To authenticate against a SharePoint Online URL, set the **AuthenticationMode** property of the **Authenticator** object to **MicrosoftOnline** mode. The remaining steps in the procedure are the same as those for an on-premises SharePoint URL.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The user name and password cannot be hard-coded for SharePoint Online.The user will be prompted for logon credentials. 
   
     
@@ -310,7 +305,7 @@ The **Authenticator** class also includes members that you can use to enable and
     
     
 
-## Additional resources
+## See also
 <a name="SP15Mobileclientauth_addlresources"> </a>
 
 

@@ -14,7 +14,8 @@ The  [Core.ExternalSharing](https://github.com/SharePoint/PnP/tree/master/Sample
     
 - Prepare your site collection for sharing with external users.
 
-**Note:** External sharing settings are only available in Office 365.
+> [!NOTE] 
+> External sharing settings are only available in Office 365.
 
 ## Before you begin
 <a name="sectionSection0"> </a>
@@ -64,7 +65,8 @@ When you run this code sample,  **Main** in Program.cs performs the following ta
     
 - Calls  **SetSiteSharing**.
 
-**Note**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```C#
  static void Main(string[] args)
@@ -176,7 +178,7 @@ public static void SetSiteSharing(ClientContext adminCC, string siteCollectionUR
         }
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)

@@ -304,7 +304,7 @@ After you create a data provider and a filter editor (including its user interfa
     
     
 
-## Additional resources
+## See also
 <a name="bk_next"> </a>
 
 

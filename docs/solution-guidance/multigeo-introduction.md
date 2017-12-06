@@ -10,8 +10,8 @@ The OneDrive and SharePoint Online (ODSP) Multi-Geo Preview allows multinational
 
 In an ODSP Multi-Geo Preview configuration, your Office 365 tenant consists of a central location (also known as a default location) and one or more satellite geo locations. A single tenancy spans one or more additional geo locations. Your tenant information, including geo locations, is stored in Azure Active Directory (AAD).
 
-
->**Note:** ODSP Multi-Geo Preview features are not designed to optimize performance. They are designed to meet data residency requirements.
+> [!NOTE] 
+> ODSP Multi-Geo Preview features are not designed to optimize performance. They are designed to meet data residency requirements.
 
 The following are key terms related to ODSP Multi-Geo Preview:
 

@@ -56,8 +56,9 @@ Working with external data requires several prerequisite tasks to enable secure 
   
 3. In the **Navigation** pane, under **Site Objects**, select **External Content Types**.
     
-    > **Note:**
-      > SharePoint Designer 2013 groups external content types by the namespace in the initial window of the External Content Type Designer. 
+    > [!NOTE]
+    > SharePoint Designer 2013 groups external content types by the namespace in the initial window of the External Content Type Designer. 
+
 4. To open the External Content Type Designer, on the ribbon, click **External Content Type**.
     
   
@@ -84,10 +85,10 @@ Working with external data requires several prerequisite tasks to enable secure 
   
 2. In the **Offline Sync for External List** check box, make sure **Enabled** is selected, which is the default.
     
-    > **Note:**
-      > If you disable this option, then the **SharePoint Connect to Outlook** command is not available for an external list.
+    > [!NOTE]
+    > If you disable this option, then the **SharePoint Connect to Outlook** command is not available for an external list.
 
-> **Note:**
+> [!NOTE]
 > The Farm and Site feature, **Offline Synchronization for External Lists**, must also be active. This feature is active by default at the Farm level, but not active by default at the site level. 
   
     
@@ -148,8 +149,9 @@ SharePoint Designer 2013 validates and tests the connection information. If you 
     
   - **Create All Operations** Defines a create item, delete item, read item, read list, and update item operation.
     
-    > **Note:**
-      > **Create All Operations** is available only for tables and views. Routines require specific operations.
+    > [!NOTE]
+    > **Create All Operations** is available only for tables and views. Routines require specific operations.
+
   - **New Read Item Operation** Defines a read item operation.
     
   
@@ -168,18 +170,10 @@ SharePoint Designer 2013 validates and tests the connection information. If you 
 2. Click **Next**.
     
   
- **Notes**
-  
-    
-    
-
-- On views that span multiple tables, make sure that that write operations are supported. Otherwise, **Create All Operations** or **New Update Operation** might fail.
-    
-  
-- Always define at least a **New Read Item Operation** and **New Read List Operation** because SharePoint features, such as external lists, rely on these operations.
-    
-  
-- Choose specific operations, instead of **Create All Operations**, when the table or view does not support certain operations.
+> [!NOTE]
+> - On views that span multiple tables, make sure that that write operations are supported. Otherwise, **Create All Operations** or **New Update Operation** might fail.
+> - Always define at least a **New Read Item Operation** and **New Read List Operation** because SharePoint features, such as external lists, rely on these operations.
+> - Choose specific operations, instead of **Create All Operations**, when the table or view does not support certain operations.
     
   
 
@@ -192,29 +186,16 @@ SharePoint Designer 2013 validates and tests the connection information. If you 
   
 2. In the **Parameters Configuration** dialog box, by default all columns (known as **Data Source Elements**) are selected. To remove unnecessary columns, clear the corresponding check boxes.
     
-    > **Note:**
-      > Unlike a native SharePoint list, you cannot change the column name of an external list. Consider using an SQL column alias to provide a more meaningful name or a shorter name. 
+    > [!NOTE]
+    > Unlike a native SharePoint list, you cannot change the column name of an external list. Consider using an SQL column alias to provide a more meaningful name or a shorter name. 
+
 3. To select an identifier field, click and highlight a field (typically a unique-valued field), and then under **Properties**, click **Map to Identifier**.
     
-  
-
-> **Important:**
+> [!IMPORTANT]
 > To prevent specific fields from being updated, such as an ID or primary key field, clear the **Required** check box, but select the **Read-Only** check box, which is needed to retrieve items so you can update other fields.
   
-    
-    
-
-  
-    
-    
-
-
-> **Tip:**
+> [!TIP]
 > Always carefully read the messages in the **Errors and Warnings** pane. They provide useful information to confirm your actions or troubleshoot any issues. Periodically click the **Errors and Warnings** pane and make sure that there are no more errors or warnings.
-  
-    
-    
-
 
 ## Map Outlook fields
 <a name="section8"> </a>
@@ -231,14 +212,8 @@ If your external content type maps to an Outlook item type, you must map one or 
   
 2. Under **Properties**, next to **Office property**, click the down arrow. and then select the appropriate matching field. 
     
-  
-
-> **Note:**
+> [!NOTE]
 > You do not need to map all the corresponding fields. However, the fields shown in the following table must be mapped. 
-  
-    
-    
-
 
 **Table: Outlook item type mapped to Outlook item field**
 
@@ -275,9 +250,7 @@ The external item picker control allows users to select a field, such as an ID f
   
 2. Click **Next**.
     
-  
-
-> **Note:**
+> [!NOTE]
 > All filters that you define are displayed in the external item picker control. Although you cannot remove specific filters from the external item picker control, you can define a default filter by clicking **Is Default** in the **Filter configuration** dialog box when you are creating or modifying the filter.
   
     
@@ -416,18 +389,9 @@ You can create several different types of filters. For each filter that you crea
   
 5. Click **OK**. 
   
-    
-    
+    > [!NOTE]
+    > The SQL Server database administrator might want to create specific tables, views, indexes, and optimized queries to limit the results to just what is needed and to help improve performance. 
 
-    
-  
-
-    > **Note:**
-      > The SQL Server database administrator might want to create specific tables, views, indexes, and optimized queries to limit the results to just what is needed and to help improve performance. 
-
-    
-  
-    
     
  **Page Number**
   
@@ -499,9 +463,7 @@ You can create several different types of filters. For each filter that you crea
 
 - On the Quick Access Toolbar, click **Save**. This stores the external content type definition in the Business Data Connectivity metadata store.
     
-  
-
-> **Note:**
+> [!NOTE]
 > To provide better performance, Business Data Connectivity caches all the objects in the metadata store and updates changes by using a timer job that runs every minute. It might take up to one minute for changes to propagate to all the servers in the farm, but changes are immediate on the server where you make the change. 
   
     
@@ -512,7 +474,7 @@ The external content type is now available for use in SharePoint and Office 2013
     
     
 
-## Additional resources
+## See also
 <a name="AR"> </a>
 
 

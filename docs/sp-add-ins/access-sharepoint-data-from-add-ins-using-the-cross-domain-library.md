@@ -24,7 +24,8 @@ When a user requests a page from your add-in domain (1), the client-side communi
 When you use the cross-domain library, the webpages in your add-in can access data in your add-in domain and the SharePoint domain. The cross-domain library is a client-side alternative in the form of a JavaScript file (SP.RequestExecutor.js) that is hosted in the SharePoint website that you can reference in your remote add-in. The cross-domain library lets you interact with more than one domain in your remote add-in page through a proxy. It is a good option if you like your add-in code to run on the client instead of on the server, and if there are connectivity barriers, such as firewalls, between SharePoint and your remote infrastructure. You can access data in the host web—for example, you can access lists that end users interact with regardless of your add-in. Or you can access data in the add-in web, such as lists specifically provisioned for your add-in. Add-ins can also access other site collections and websites as long as the add-in has tenant-scoped permissions and it has been deployed as a batch installation using the add-in catalog.
  
 
- **Note**  In this topic,  **add-in domain** refers to the domain that hosts the add-in pages. This can be the domain of a remote web application in a provider-hosted, but add-in pages can also be on SharePoint in the add-in web and make calls to the host web domain. In the latter scenario, the add-in domain is the domain of the add-in web.
+> [!NOTE] 
+> In this topic,  **add-in domain** refers to the domain that hosts the add-in pages. This can be the domain of a remote web application in a provider-hosted, but add-in pages can also be on SharePoint in the add-in web and make calls to the host web domain. In the latter scenario, the add-in domain is the domain of the add-in web.
  
 
 The main example in this article shows how to build an add-in that reads data on the add-in web and displays it in a webpage. The  [Next steps](access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md#SP15Accessdatafromremoteapp_Next) section shows more scenarios that build on top of the main example.
@@ -98,7 +99,8 @@ Figure 2 shows a webpage that displays the data on the add-in web.
  
 4. Select  **Provider-hosted** as the hosting option for your add-in.
     
-     **Note**  You can also use the cross-domain library in a SharePoint-hosted add-in. However, in a SharePoint-hosted add-in the add-in page is already in the add-in web, in which case it wouldn't need the cross-domain library to read the list items. For a SharePoint-hosted add-in sample that reads data in the host web, see  [Use the cross-domain library in a SharePoint-hosted add-in (REST)](http://code.msdn.microsoft.com/SharePoint-2013-Use-the-00c37814) or see [Access data from the host web](access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md#SP15Accessdatafromremoteapp_Hostweb) later in this article.
+    > [!NOTE] 
+    > You can also use the cross-domain library in a SharePoint-hosted add-in. However, in a SharePoint-hosted add-in the add-in page is already in the add-in web, in which case it wouldn't need the cross-domain library to read the list items. For a SharePoint-hosted add-in sample that reads data in the host web, see  [Use the cross-domain library in a SharePoint-hosted add-in (REST)](http://code.msdn.microsoft.com/SharePoint-2013-Use-the-00c37814) or see [Access data from the host web](access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md#SP15Accessdatafromremoteapp_Hostweb) later in this article.
 
 ### Create list items on the add-in web
 
@@ -151,7 +153,9 @@ Figure 2 shows a webpage that displays the data on the add-in web.
  
   - Instantiates the  **RequestExecutor** object. By default, RequestExecutor uses the add-in web as the context site.
     
-     **Note**  You can change the context site to other sites different than the add-in web by using the  **AppContextSite** endpoint (REST) or object (JSOM). To learn more about AppContextSite, see [Access data from the host web](access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md#SP15Accessdatafromremoteapp_Hostweb) later in this article.
+    > [!NOTE] 
+    > (REST) or object (JSOM). To learn more about AppContextSite, see [Access data from the host web](access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md#SP15Accessdatafromremoteapp_Hostweb) later in this article.
+
   - Issues a REST call to the list items endpoint.
     
  
@@ -274,7 +278,9 @@ Figure 2 shows a webpage that displays the data on the add-in web.
 
 1. Press the F5 key.
     
-     **Note**  When you press F5, Visual Studio builds the solution, deploys the add-in, and opens the permissions page for the add-in.
+    > [!NOTE] 
+    > When you press F5, Visual Studio builds the solution, deploys the add-in, and opens the permissions page for the add-in.
+
 2. Choose the  **Trust It** button.
     
  
@@ -477,7 +483,7 @@ To download a sample of a SharePoint-hosted add-in that uses the cross-domain li
 
  
 
-## Additional resources
+## See also
 <a name="SP15Accessdatafromremoteapp_Addresources"> </a>
 
 

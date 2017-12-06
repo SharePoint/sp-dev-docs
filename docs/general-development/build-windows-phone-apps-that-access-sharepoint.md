@@ -227,7 +227,7 @@ The following how-tos and overviews delve into the specific information you need
     
   
 
-## Additional resources
+## See also
 <a name="SP15buildmobile_addlresources"> </a>
 
 

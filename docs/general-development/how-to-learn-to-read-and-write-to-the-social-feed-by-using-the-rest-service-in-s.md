@@ -15,10 +15,7 @@ Create a SharePoint-hosted app that uses the REST service to publish a post and 
 
 This article assumes that you create the SharePoint Add-in by using Napa on an Office 365 Developer Site. If you're using this development environment, you've already met the prerequisites.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Go to  [Set up a development environment for SharePoint Add-ins on Office 365](http://msdn.microsoft.com/library/b22ce52a-ae9e-4831-9b68-c9210af6dc54%28Office.15%29.aspx) to find out how to sign up for a Developer Site and start using Napa.
   
     
@@ -37,9 +34,7 @@ If you're not using Napa on a Developer Site, you'll need the following:
   
 - **Full Control** access permissions to the User Profile service application for the logged-on user
     
-  
-
-> **Note:**
+> [!NOTE]
 > For guidance about how to set up a development environment that fits your needs, see  [Start building apps for Office and SharePoint](http://msdn.microsoft.com/library/187f8c8c-1b15-471c-80b5-69a40e67deea.aspx). 
   
     
@@ -328,7 +323,7 @@ See  [Social feed REST API reference for SharePoint](social-feed-rest-api-refere
     
     
 
-## Additional resources
+## See also
 <a name="bk_addResources"> </a>
 
 

@@ -18,7 +18,8 @@ To get started, download the [Core.GroupManagement](https://github.com/SharePoin
 
 The following example shows you how to add groups and add users to groups.
 
-**Note:**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```C#
 cc.Load(cc.Web, web => web.CurrentUser);
@@ -96,7 +97,7 @@ Microsoft.SharePoint.Client.User currentUser = cc.Web.CurrentUser;
 cc.Web.RemovePermissionLevelFromUser(currentUser.LoginName, RoleType.Reader);
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [SharePoint site provisioning solutions](sharepoint-site-provisioning-solutions.md)

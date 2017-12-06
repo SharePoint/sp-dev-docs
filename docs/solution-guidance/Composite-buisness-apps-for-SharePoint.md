@@ -36,7 +36,7 @@ The following table summarizes the factors to consider when you decide where to 
 |[Corporate event add-in integration with SharePoint](Corporate-app-event-registration-with-SharePoint.md)|[BusinessApps.CorporateEventsApp](https://github.com/SharePoint/PnP/tree/master/Solutions/BusinessApps.CorporateEventsApp)|Use a provider-hosted add-in to implement complex business tasks.|
 |[Call web services from SharePoint workflows](Call-web-services-from-SharePoint-workflows.md)|<p>[Workflow.CallCustomService](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.CallCustomService)</p><p>[Workflow.CallServiceUpdateSPViaProxy](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.CallServiceUpdateSPViaProxy)</p><p>[Workflow.AssociateToHostWeb](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.AssociateToHostWeb)</p>|Use provider-hosted apps to call remote web services that contain business data.|
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)

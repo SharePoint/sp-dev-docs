@@ -54,7 +54,7 @@ People can use the rich, forum-like experience in Community Sites to find and sh
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

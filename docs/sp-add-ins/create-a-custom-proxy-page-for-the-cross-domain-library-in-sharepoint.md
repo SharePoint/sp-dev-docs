@@ -87,7 +87,8 @@ To read data from the remote service, you must do the following:
 ```
 
 
-     **Note**  The  **AllowedRemoteHostUrl** attribute is used to specify the remote domain. The **~remoteAppUrl** resolves to the remote add-in URL. For more information about tokens, see [Explore the app manifest structure and the package of a SharePoint Add-in](explore-the-app-manifest-structure-and-the-package-of-a-sharepoint-add-in.md).
+    > [!NOTE] 
+    > The  **AllowedRemoteHostUrl** attribute is used to specify the remote domain. The **~remoteAppUrl** resolves to the remote add-in URL. For more information about tokens, see [Explore the app manifest structure and the package of a SharePoint Add-in](explore-the-app-manifest-structure-and-the-package-of-a-sharepoint-add-in.md).
 
 ### To create a custom proxy page
 
@@ -331,7 +332,9 @@ Response.End();
  
 2. Press the F5 key.
     
-     **Note**  When you press F5, Visual Studio builds the solution, deploys the add-in, and opens the permissions page for the add-in.
+    > [!NOTE] 
+    > When you press F5, Visual Studio builds the solution, deploys the add-in, and opens the permissions page for the add-in.
+
 3. Choose the  **Trust It** button.
     
     The Home page will open and it should look like the following. It may take a few seconds for the phrase "Just some text" to appear because it is being fetched from the remote domain's Content.aspx page.
@@ -374,7 +377,7 @@ This article demonstrated how to access remote data by using a custom proxy page
     
  
 
-## Additional resources
+## See also
 <a name="SP15Createcustomproxypage_Addresources"> </a>
 
 

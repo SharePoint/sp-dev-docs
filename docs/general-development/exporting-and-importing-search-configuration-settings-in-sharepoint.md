@@ -8,7 +8,8 @@ ms.assetid: d00679a3-ffa2-4281-ad8b-70fc2c4a14e2
 
 # Exporting and importing search configuration settings in SharePoint
 Get code examples that show you how to export and import customized search configuration settings. These settings include all customized query rules, result sources, result types, ranking models, and site search settings. SharePoint exposes this functionality through the  [Microsoft.Office.Server.Search.Portability](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Portability.aspx) namespace.You can also export customized search configuration settings from a Search service application (SSA) and import the settings to site collections and sites. 
-> **Note:**
+
+> [!NOTE]
 > You can't import customized search configuration settings to an SSA, or export the default search configuration settings. 
   
     
@@ -59,7 +60,7 @@ private static void Import(string fileName)
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

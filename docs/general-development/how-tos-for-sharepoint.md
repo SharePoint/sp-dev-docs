@@ -204,7 +204,7 @@ Find how-to articles and related code examples that show how to perform basic de
 | [Deploy a claims provider in SharePoint](how-to-deploy-a-claims-provider-in-sharepoint.md) <br/> |Learn how to deploy a SharePoint claims provider by using the features infrastructure and creating a class that inherits from  [SPClaimProviderFeatureReceiver](https://msdn.microsoft.com/library/Microsoft.SharePoint.Administration.Claims.SPClaimProviderFeatureReceiver.aspx) . <br/> |
    
 <a name="bk_addresc_howtos"> </a>
-## Additional resources
+## See also
 
 -  [SharePoint general development](https://msdn.microsoft.com/en-us/library/office/mt674607.aspx)
 -  [Code samples for SharePoint](code-samples-for-sharepoint.md)

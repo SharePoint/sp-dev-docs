@@ -17,14 +17,11 @@ This example shows how to programmatically add an Excel Web Access Web Part to a
     
 
 The following project uses Microsoft Visual Studio.
-> **Note:**
+
+> [!NOTE]
 > Depending on the Visual Studio version and the Visual Studio integrated development environment (IDE) settings that you are using, the process and steps to create a Visual Studio project could be slightly different from the procedures shown in this topic. 
   
-    
-    
-
-
-> **Note:**
+> [!NOTE]
 > It is assumed that you have already created a SharePoint document library and made it a trusted location. For more information, see  [How to: Trust a Location](how-to-trust-a-location.md). 
   
     
@@ -35,10 +32,7 @@ The following project uses Microsoft Visual Studio.
 
 The following steps show how to locate Microsoft.Office.Excel.WebUI.dll and how to add a reference to it. Repeat for Microsoft.Office.Excel.WebUI.Internal.dll and Microsoft.SharePoint.dll.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > It is assumed that you have already copied Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll from the global assembly cache to a folder of your choice. For more information about how to locate and copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll, see  [How to: Locate and Copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll](how-to-locate-and-copy-microsoft-office-excel-webui-dll-and-microsoft-office-exc.md). 
   
     
@@ -53,8 +47,9 @@ The following steps show how to locate Microsoft.Office.Excel.WebUI.dll and how 
   
 2. In the **Add Reference** dialog box, click **Browse**.
     
-    > **Note:**
-      > You can also open the **Add Reference** dialog box in the **Solution Explorer** pane by right-clicking **References** and selecting **Add Reference**. 
+    > [!NOTE]
+    > You can also open the **Add Reference** dialog box in the **Solution Explorer** pane by right-clicking **References** and selecting **Add Reference**. 
+    
 3. Browse to the location of Microsoft.Office.Excel.WebUI.dll.
     
   

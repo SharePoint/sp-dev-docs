@@ -23,10 +23,8 @@ Provider-hosted SharePoint Add-ins that use low-trust authorization system can b
 
 To use the low-trust system, the SharePoint Add-in must first be registered with Azure ACS and with the App Management Service of the SharePoint farm or SharePoint Online tenancy. (It is called "App Management Service" because SharePoint Add-ins were originally called "apps for SharePoint".) For add-ins that are sold through the Office Store, registration to ACS is performed in the Seller Dashboard and registration with the service is performed when the add-in is installed. For add-ins that are distributed in the organization add-in catalog, registration to both ACS and the service is performed on the \_Layouts\15\AppRegNew.aspx page of any SharePoint tenancy or farm where the add-in is to be installed. External, non- SharePoint, applications that access SharePoint, also need to be registered. This category includes Office Add-ins, Windows Store apps, web applications, and device apps such as smartphone apps.
  
-
- 
-
- **Note**  Registration requires that the application have an Internet domain. Any existing domain can be used for this purpose, but you can't be 100% certain that any domain you don't own will always exist, so a web application would need to be part of a native device application even if the web application component played no other role than to enable registration. For an advanced code sample that is designed in this way, see  [Provision sites in batches with the add-in model](http://code.msdn.microsoft.com/Provision-sites-in-batches-fcf31bc6).
+> [!NOTE] 
+> Registration requires that the application have an Internet domain. Any existing domain can be used for this purpose, but you can't be 100% certain that any domain you don't own will always exist, so a web application would need to be part of a native device application even if the web application component played no other role than to enable registration. For an advanced code sample that is designed in this way, see  [Provision sites in batches with the add-in model](http://code.msdn.microsoft.com/Provision-sites-in-batches-fcf31bc6).
  
 
 For more information on registration, see  [Register SharePoint Add-ins 2013](register-sharepoint-add-ins.md).
@@ -209,7 +207,7 @@ clientContext.ExecuteQuery();
 
  
 
-## Additional resources
+## See also
 <a name="FileName_AdditionalResources"> </a>
 
 

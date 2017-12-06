@@ -19,11 +19,7 @@ When you are using Excel Web Services, it is good practice to close the workbook
 However, any Web service call takes time. Depending on the way your server is installed, the way that you access it, and how much stress the server is under, the call can take anywhere between 50 milliseconds to 500 milliseconds. It can also take longer, but only if your server is under severe stress. 
 Because a failed **CloseWorkbook** method call is not actionable, you do not need to wait for it to finish to see whether it succeeds. Because of this, you can usually make the call asynchronously and save some operation time.
   
-    
-    
-
-
-> **Note:**
+> [!NOTE]
 > If your application makes some calls to Excel Services and then exits, you may want to close a workbook synchronously instead of asynchronously. In this case, you call the **CloseWorkbook** method instead of the **CloseWorkbookAsync** method. The reason is if you immediately exit the process after issuing an asynchronous call, there is a good chance the call might not get through.
   
     
@@ -47,7 +43,8 @@ End Sub
 ```
 
 You don't have to implement the event that is called when the **CloseWorkbookAsync** method is called.You can find the signature in the "Reference.cs" file in your project "Web References" directory. 
-> **Note:**
+
+> [!NOTE]
 > You can find the **CloseWorkbookAsync** method in the proxy class that is generated when you add a Web reference using Microsoft Visual Studio 2005. If you are using Visual Studio 2003, you call the **BeginCloseWorkbook** method to close a workbook asynchronously instead.
   
     
