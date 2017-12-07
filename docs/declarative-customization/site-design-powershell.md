@@ -29,6 +29,10 @@ The following cmdlets are available for managing site designs and site scripts f
 - **Update-SPOSiteDesign (TBD)**
 - **Update-SPOSiteScript (TBD)**
 
+## Identity for site designs and site scripts
+
+In many commands you'll see a parameter of type **SPOSiteDesignPipeBind** or **SPOSiteScriptPipeBind**. This parameter is a GUID. It uniquely identifies the site design or site script. You'll see it used with commands like **Get-SPOSiteDesign**, or **Remove-SPOSiteDesign**.
+
 ## Add-SPOSiteDesign
 
 Creates a new site design for display in the self-service site creation flow.  
@@ -109,5 +113,113 @@ C:\> $site_script = @'
 '@
 C:\> Add-SPOSiteScript -Title "Customer logo" -Content $site_script -Description "Applies customer logo for customer sites"
 ```
+
+## Get-SPOSiteDesign
+
+Gets details about site designs that are on the SharePoint tenant. You can specify an ID of a specific site design to retrieve. If there are no parameters listed, then details about all site designs are listed.
+
+```powershell
+Get-SPOSiteDesign
+  [[-Identity] <SPOSiteDesignPipeBind>]
+  [<CommonParameters>]
+```
+
+### Parameters
+
+|Parameter     | Description  |
+|--------------|--------------|
+| [-Identity]  | The ID of the site design to retrieve. |
+
+## Get-SPOSiteDesignRights
+
+Displays a list of principals and their rights for usage of the site design. This can be used to determine the scope that your site design has with users on the tenant.
+
+```powershell
+Get-SPOSiteDesignRights
+  [-Identity] <SPOSiteDesignPipeBind>
+  [<CommonParameters>]
+```
+
+### Parameters
+
+|Parameter     | Description  |
+|--------------|--------------|
+| [-Identity]  | The ID of the site design to get scoping information. |
+
+## Get-SPOSiteScript
+
+## Grant-SPOSiteDesignRights
+
+sed to apply permissions to set of users or security group, effectively scoping visibility of site design in UX. They start off public. But once you set permissions, only those groups or users with permissions can access the site design.
+
+```powershell
+Grant-SPOSiteDesignRights
+  [-Identity] <SPOSiteDesignPipeBind>
+  -Principals <string[]>
+  -Rights {View}
+  [<CommonParameters>]
+```
+
+### Parameters
+
+|Parameter     | Description  |
+|--------------|--------------|
+| [-Identity]  | The ID of the site design to get scoping information. |
+| -Principals  | One or more principles to add permissions for. |
+| -Rights      | Always set to the value **View**. Any user or group with view permissions can view and use the site design. |
+
+## Remove-SPOSiteDesign
+
+Removes a site design. It will no longer appear in the UI for creating a new site.
+
+```powershell
+  Remove-SPOSiteDesign
+  [-Identity] <SPOSiteDesignPipeBind>
+  [<CommonParameters>]
+```
+
+### Parameters
+
+|Parameter     | Description  |
+|--------------|--------------|
+| [-Identity]  | The ID of the site design to remove. |
+
+## Remove-SPOSiteScript
+
+Removes a site script. (TBD handling dependency on site design)
+
+```powershell
+Remove-SPOSiteScript
+  [-Identity] <SPOSiteScriptPipeBind>
+  [<CommonParameters>]
+```
+
+### Parameters
+
+|Parameter     | Description  |
+|--------------|--------------|
+| [-Identity]  | The ID of the site script to remove. |
+
+## Revoke-SPOSiteDesignRights
+
+Revokes rights for specified principals from a site design.
+
+```powershell
+Revoke-SPOSiteDesignRights
+  [-Identity] <SPOSiteDesignPipeBind>
+  -Principals <string[]>
+  [<CommonParameters>]
+```
+
+### Parameters
+
+|Parameter     | Description  |
+|--------------|--------------|
+| [-Identity]  | The ID of the site design from which to revoke rights. |
+| -Principals  | One or more principals to revoke rights on the specified site design. |
+
+## Update-SPOSiteDesign (TBD)
+
+## Update-SPOSiteScript (TBD)
 
 
