@@ -16,7 +16,7 @@ You can also tweet / follow [@officedev](https://twitter.com/officedev) or [@off
 
 ## SharePoint Framework Releases
 * **December 7, 2017**
-   *  **SPFx v1.4**.
+   *  **SPFx v1.4**. [See the release notes here] (https://github.com/SharePoint/sp-dev-docs/wiki/Release-Notes-for-SPFx-Package-Version-1.4)
 
 * **September 25, 2017**
    *  **GA of Extensions and SPFx v1.3**.
