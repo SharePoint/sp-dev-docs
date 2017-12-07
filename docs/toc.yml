@@ -249,6 +249,8 @@
       href: declarative-customization/get-started-create-site-design.md
     - name: Trigger a workflow
       href: declarative-customization/site-design-trigger-workflow.md
+    - name: Setting scope
+      href: declarative-customization/site-design-scoping.md
     - name: JSON schema reference
       href: declarative-customization/site-design-json-schema.md
     - name: PowerShell cmdlets
