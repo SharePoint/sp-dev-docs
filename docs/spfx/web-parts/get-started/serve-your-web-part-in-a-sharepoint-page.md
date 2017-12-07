@@ -1,22 +1,22 @@
 ---
 title: Deploy your client-side web part to a SharePoint page (Hello world part 3)
-ms.date: 09/25/2017
+ms.date: 12/05/2017
 ms.prod: sharepoint
 ---
 
 
 # Deploy your client-side web part to a SharePoint page (Hello world part 3)
 
-In this article you will learn how to deploy your client-side web part to SharePoint and see it working on a modern SharePoint server-side page. This article continues with the hello world web part built in the previous article [Connect your client-side web part to SharePoint](./connect-to-sharepoint.md).
+In this article you will learn how to deploy your client-side web part to SharePoint and see it working on a modern SharePoint page. This article continues with the hello world web part built in the previous article [Connect your client-side web part to SharePoint](./connect-to-sharepoint.md).
 
 Be sure you have completed the procedures in the following articles before you start:
 
 * [Build your first SharePoint client-side web part](./build-a-hello-world-web-part.md)
 * [Connect your client-side web part to SharePoint](./connect-to-sharepoint.md)
 
-You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=asmQIfgaKSw&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
+You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=BpJ01ahxbiY&index=4&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
 
-<a href="https://www.youtube.com/watch?v=asmQIfgaKSw&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
+<a href="https://www.youtube.com/watch?v=BpJ01ahxbiY&index=4&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
 <img src="../../../images/spfx-youtube-tutorial3.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
@@ -45,7 +45,8 @@ The **package-solution.json** file defines the package metadata as shown in the 
   "solution": {
     "name": "helloworld-webpart-client-side-solution",
     "id": "4432f33b-5845-4ca0-827e-a8ae68c7b945",
-    "version": "1.0.0.0"
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true
   },
   "paths": {
     "zippedPackage": "solution/helloworld-webpart.sppkg"
@@ -76,7 +77,11 @@ You can view the raw package contents in the **sharepoint/debug** folder.
 
 The contents are then packaged into an **.sppkg** file. The package format is very similar to a SharePoint add-ins package and uses Microsoft Open Packaging Conventions to package your solution. 
 
-The JavaScript files, CSS and other assets are not packaged and you will have to deploy them to an external location such as a CDN. In order to test the web part during development, you can load all the assets from your local computer. 
+The JavaScript files, CSS and other assets are packaged also inside of the package when `--ship` option is used. In this case we will however first test deployment and capabilities by hosting JavaScript files from localhost. This deployment option is explained in the next tutorial. 
+
+> [!NOTE]
+> Starting from the SharePoint Framework v1.4, static assets are by default packaged inside of the sppkg package. When package is deployed in app catalog, they are automatically being hosted either from Office 365 CDN (if enabled) or from app catalog URL. You can control this behavior with the `includeClientSideAssets` setting in `package-solution.json` file.
+
 
 ## Deploy the HelloWorld package to app catalog
 
@@ -106,7 +111,7 @@ In the **Search** box, enter **helloworld** and choose **Enter** to filter your 
 	
 Choose the **helloworld-webpart-client-side-solution** app to install the app on the site.
 	
-![Trust app](../../../images/app-installed-your-site.png) 
+![Trust app](../../../images/app-installed-your-site.png)
 
 The client-side solution and the web part are installed on your developer site.
 
@@ -139,11 +144,11 @@ gulp serve --nobrowser
 
 ## Add the HelloWorld web part to modern page
 
-In your browser go to your site collection.
+In your browser go to your site where solution was just installed.
 	
 Choose the gears icon in the top nav bar on the right and choose **Add a page**.
 	
-Open web part picker and chose your **HelloWorld** web part.
+**Edit** page. Open web part picker and chose your **HelloWorld** web part.
 		
 The web part assets will be loaded from the local environment. In order to load the scripts hosted on your local computer, you need to enable the browser to load unsafe scripts. Depending on the browser you are using, make sure you enable loading unsafe scripts for this session.
 	
@@ -171,4 +176,4 @@ In the toolbar, choose **Save and close** to save the page.
 
 ## Next steps
 
-Congratulations! You have deployed a client-side web part to a modern SharePoint page. You can continue building out your Hello World web part in the next topic, [Deploy your client-side web part source to a CDN](./deploy-web-part-to-cdn.md), where you will learn how to deploy and load the web part assets from a CDN instead of localhost.
+Congratulations! You have deployed a client-side web part to a modern SharePoint page. You can continue building out your Hello World web part in the next topic, [Hosting client-side web part from Office 365 CDN](./hosting-webpart-from-office-365-cdn.md), where you will learn how to deploy and load the web part assets from a Office 365 CDN instead of localhost.

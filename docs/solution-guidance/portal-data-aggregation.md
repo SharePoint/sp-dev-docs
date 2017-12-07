@@ -6,8 +6,8 @@ ms.date: 11/03/2017
 
 Every portal design includes a suite of display components that dynamically locate content for display on portal pages.  Fundamental to the operation of these controls is the concept of Content Aggregation, which for the purposes of this article we define as the process of dynamically locating desired content at run-time. The technique that you choose to perform Content Aggregation can have significant impact on the performance of your portal and its pages.
 
->**Note**:
->Although this guidance primarily targets SharePoint Online, most of it also applies to portals hosted in an on-premises SharePoint environment.
+> [!NOTE] 
+> Although this guidance primarily targets SharePoint Online, most of it also applies to portals hosted in an on-premises SharePoint environment.
 
 _**Applies to:** SharePoint Online_
 
@@ -156,7 +156,7 @@ When you use Search-based Content Aggregation, please observe the following guid
 
 Please refer to the [Portal Performance article](portal-performance.md) for more information on the Client-Side Data Access Layer.
 
-## Additional resources
+## See also
 <a name="bk_additionalResources"> </a>
 
 - [Portal performance guidance](portal-performance.md)

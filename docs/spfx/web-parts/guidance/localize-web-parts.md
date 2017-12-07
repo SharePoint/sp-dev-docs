@@ -9,7 +9,8 @@ ms.prod: sharepoint
 
 You can broaden the appeal of your SharePoint Framework client-side web part by localizing it for different languages spoken by SharePoint users all over the world. In this article, you will localize a web part to the Dutch (Netherlands) locale, and verify that the localized values are displayed correctly.
 
-> **Note:** Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment.md).
+> [!NOTE] 
+> Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment.md).
 
 ## Prepare the project
 
@@ -242,7 +243,8 @@ Run the following command to verify that the project is working:
 gulp serve
 ```
 
->**Note:** Unfortunately, the SharePoint workbench doesn't currently support previewing the localized values from the web part manifest. It always uses the default translation.
+> [!NOTE] 
+> Unfortunately, the SharePoint workbench doesn't currently support previewing the localized values from the web part manifest. It always uses the default translation.
 
 ## Localize the web part property pane
 
@@ -479,7 +481,8 @@ Using the building blocks provided with the SharePoint Framework, you can extend
 
 ![Multiple text fields rendered in the web part property pane to allow translation of the web part values](../../../images/localization-multilingual-properties.png)
 
-> **Note:** The SharePoint site used to test the web part shown in this article is a multilingual site with the US English, Dutch, and German languages enabled. For more information about enabling additional languages in SharePoint sites see the [Choose the languages you want to make available for a site’s user interface](https://support.office.com/en-us/article/Choose-the-languages-you-want-to-make-available-for-a-site-s-user-interface-16d3a83c-05ab-4b50-8fbb-ff576a3351e8) support article.
+> [!NOTE] 
+> The SharePoint site used to test the web part shown in this article is a multilingual site with the US English, Dutch, and German languages enabled. For more information about enabling additional languages in SharePoint sites see the [Choose the languages you want to make available for a site’s user interface](https://support.office.com/en-us/article/Choose-the-languages-you-want-to-make-available-for-a-site-s-user-interface-16d3a83c-05ab-4b50-8fbb-ff576a3351e8) support article.
 
 ### Add list of languages supported by SharePoint Online
 

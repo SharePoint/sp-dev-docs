@@ -25,7 +25,8 @@ Ideally, you should review your existing farm solutions, learn about the techniq
 
 1. Download the [Contoso.Intranet solution](https://github.com/SharePoint/PnP/tree/master/Reference%20Material/Contoso.Intranet). Review [Examine the initial state of the site and library for replacement](https://github.com/SharePoint/TrainingContent/blob/master/O3658/10%20Transformation%20guidance%20from%20farm%20solutions%20to%20app%20model/10-2%20Replacing%20Lists%20Created%20from%20Custom%20Templates/Lab.md#examine-the-initial-state-of-the-site-and-library-for-replacement) to get a quick understanding of how lists were created declaratively using list definitions.
     
-    **Note:**  In Contoso.Intranet, in the elements.xml file for SP\ListTemplate\LTContosoLibrary, the ID for the custom list template is 10003. You will use this to identify the template that was used to create the list. Also review the configuration settings and views that are defined on your list.
+    > [!NOTE] 
+    > In Contoso.Intranet, in the elements.xml file for SP\ListTemplate\LTContosoLibrary, the ID for the custom list template is 10003. You will use this to identify the template that was used to create the list. Also review the configuration settings and views that are defined on your list.
 
 2. Learn about farm solutions. For more information, see [SharePoint 2010 Architectures Overview](https://msdn.microsoft.com/en-us/library/office/gg552610%28v=office.14%29.aspx) and [Build farm solutions in SharePoint 2013](https://msdn.microsoft.com/library/jj163902.aspx).
     
@@ -53,7 +54,8 @@ In the following code, the method shows how to find lists that were created usin
     
 2. For each list in the collection of returned lists, if the  **List.BaseTemplate** is equal to 10003, adds the list to a collection of lists to be replaced, called **listsToReplace**. Remember that 10003 was the custom list template's identifier we reviewed in the Contoso.Intranet sample.
 
-**Note:**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```C#
 static void Main(string[] args)
@@ -145,7 +147,8 @@ private static void SetListSettings(ClientContext clientContext, List listToBeRe
 }
 ```
 
-**Note:**  Based on your requirements, the list settings of your original lists might be different. Review your list settings and change  **SetListSettings** to ensure that your original list settings are applied to your new lists.
+> [!NOTE] 
+> Based on your requirements, the list settings of your original lists might be different. Review your list settings and change  **SetListSettings** to ensure that your original list settings are applied to your new lists.
 
 **SetContentTypes** sets the content types on the new list by:
 
@@ -163,7 +166,8 @@ private static void SetListSettings(ClientContext clientContext, List listToBeRe
     
 7. Deleting the content type by calling [ContentType.DeleteObject](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.contenttype.deleteobject.aspx).
 
-**Note:**  If you are using an in-place transformation approach, and your content types were deployed declaratively using the Feature framework, you need to: 
+> [!NOTE] 
+> If you are using an in-place transformation approach, and your content types were deployed declaratively using the Feature framework, you need to: 
 
  1. Create new content types.
 
@@ -219,7 +223,8 @@ private static void SetContentTypes(ClientContext clientContext, List listToBeRe
 }
 ```
 
-**Note:**  At this point, the new list can accept content from the original list. You can also optionally add and remove views. 
+> [!NOTE] 
+> At this point, the new list can accept content from the original list. You can also optionally add and remove views. 
 
 Users can add or remove views defined on a list to meet their business needs. For this reason, you might need to add or remove views on the new list.  **AddViews** adds views from the original list to the new list by:
 
@@ -336,7 +341,8 @@ private static void RemoveViews(ClientContext clientContext, List listToBeReplac
     
 4. Using [File.CopyTo](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.file.copyto.aspx) to copy the file to the URL of the destination root folder. Alternatively, you might choose to use the [File.MoveTo](https://msdn.microsoft.com/library/office/microsoft.sharepoint.client.file.moveto.aspx) method to move the file to the destination URL.
     
-**Note:**  The following code returns all list items. In your production environment, consider optimizing the following code by implementing a loop, and using multiple iterations to migrate small amounts of list items.
+> [!NOTE] 
+> The following code returns all list items. In your production environment, consider optimizing the following code by implementing a loop, and using multiple iterations to migrate small amounts of list items.
 
 ```C#
 private static void MigrateContent(ClientContext clientContext, List listToBeReplaced, List newList)
@@ -364,11 +370,11 @@ private static void MigrateContent(ClientContext clientContext, List listToBeRep
 }
 ```
 
-**Note:**  The previous code shows how to migrate files stored in the root folder of a list. If your list has subfolders, you will need to add additional code to migrate the subfolders and their contents. If your list uses workflows, additional code is required to associate the workflow to the new list.
+> [!NOTE] 
+> The previous code shows how to migrate files stored in the root folder of a list. If your list has subfolders, you will need to add additional code to migrate the subfolders and their contents. If your list uses workflows, additional code is required to associate the workflow to the new list.
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [Transform farm solutions to the SharePoint add-in model](Transform-farm-solutions-to-the-SharePoint-app-model.md)
-    
 - [SharePoint 2013](https://msdn.microsoft.com/library/office/jj162979.aspx)

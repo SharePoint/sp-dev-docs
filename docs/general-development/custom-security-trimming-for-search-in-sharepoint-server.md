@@ -15,7 +15,9 @@ At query time, Search in SharePoint performs security trimming of search results
     
 
 You might have certain scenarios, however, in which the built-in security trimming results aren't sufficient for your requirements. In such scenarios, you need to implement custom security trimming. Search in SharePoint provides support for custom security trimming through the  [ISecurityTrimmerPre](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPre.aspx) interface, [ISecurityTrimmerPost](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmerPost.aspx) interface, and [ISecurityTrimmer2](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.ISecurityTrimmer2.aspx) interface (deprecated) in the [Microsoft.Office.Server.Search.Query](https://msdn.microsoft.com/library/Microsoft.Office.Server.Search.Query.aspx) namespace.
- **Note:** Custom pre-trimmers don't support Windows SIDs in ACLs, only claims. If any of the SID claim types are returned from a custom pre-trimmer, the resulting ACEs in the index will be encoded as a claim, not as SID. Hence they do not match Windows user identities that are based on SIDs.
+
+> [!NOTE]
+> Custom pre-trimmers don't support Windows SIDs in ACLs, only claims. If any of the SID claim types are returned from a custom pre-trimmer, the resulting ACEs in the index will be encoded as a claim, not as SID. Hence they do not match Windows user identities that are based on SIDs.
   
     
     
@@ -235,7 +237,7 @@ The following table describes the parameters that the cmdlet uses.
 |:-----|:-----|
 | _SearchApplication_ <br/> |Required. The name of the Search service application, for example "Search Service Application".  <br/> |
 | _typeName_ <br/> |Required. The strong name of the custom security trimmer assembly.  <br/> |
-| _RulePath_ <br/> |Required for post-trimmers; optional for pre-trimmers. The crawl rule for the security trimmer.  <br/> **Note:** We recommend using one crawl rule per content source.           |
+| _RulePath_ <br/> |Required for post-trimmers; optional for pre-trimmers. The crawl rule for the security trimmer.  <br/> **Note**: We recommend using one crawl rule per content source.           |
 | _id_ <br/> |Required. The security trimmer identifier (ID). This value is unique; if a security trimmer is registered with an ID that is already registered for another security trimmer, the registration for the first trimmer is overwritten with the registration for the second trimmer.  <br/> |
 | _properties_ <br/> |Optional. The name-value pairs specifying the configuration properties. Must be in the following format:  `Name1~Value1~Name2~Value~???` <br/> |
    
@@ -244,7 +246,7 @@ For an example of a basic command for registering a custom security trimmer and 
     
     
 
-## Additional resources
+## See also
 <a name="bk_sectrimmer_addlresources"> </a>
 
 

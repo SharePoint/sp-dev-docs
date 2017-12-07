@@ -8,9 +8,9 @@ ms.assetid: 8a20225a-323c-4420-bbb4-eef60aed4b42
 
 # Using OData with Excel Services REST in SharePoint
 SharePoint Server 2010 introduced the REST API for use in getting and setting information in Excel Workbooks stored in SharePoint document libraries. SharePoint adds a new way to request data from Excel Services that uses the Open Data Protocol (OData) which you can use to get information about Excel Services resources. This new service relies heavily on the existing Excel Services REST API.This topic provides a high-level overview for using OData in Excel Services.
-> **Note:**
-> The Excel Services REST API applies to SharePoint and SharePoint 2016 on-premises. For Office 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/en-us/docs/api-reference/v1.0/resources/excel
-) endpoint.
+
+> [!NOTE] 
+> The Excel Services REST API applies to SharePoint and SharePoint 2016 on-premises. For Office 365 Education, Business, and Enterprise accounts, use the Excel REST APIs that are part of the  [Microsoft Graph](http://graph.microsoft.io/en-us/docs/api-reference/v1.0/resources/excel) endpoint.
   
     
     
@@ -113,7 +113,7 @@ OData provides a simple way to get data from Excel workbooks that are stored on 
     
     
 
-## Additional resources
+## See also
 <a name="xlsOdataAddRes"> </a>
 
 

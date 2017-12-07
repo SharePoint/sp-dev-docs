@@ -121,7 +121,8 @@ Headers:
 
 The following example shows how to  **update** a file by using the **PUT** method.
 
- **Note**   **PUT** is the only method that you can use to update a file. The **MERGE** method is not allowed.
+> [!NOTE]
+> **PUT** is the only method that you can use to update a file. The **MERGE** method is not allowed.
 
 ```
 url: http://site url/_api/web/GetFileByServerRelativeUrl('/Folder Name/file name')/$value
@@ -248,7 +249,8 @@ headers:
 
 The following example shows how to  **update** a file attachment to a list item by using the **PUT** method.
 
- **Note**   **PUT** is the only method that you can use to update a file. The **MERGE** method is not allowed.
+> [!NOTE]
+> **PUT** is the only method that you can use to update a file. The **MERGE** method is not allowed.
  
 ```
 url: http://site url/_api/web/lists/getbytitle('list title')/items(item id)/AttachmentFiles('file name')/$value
@@ -260,7 +262,7 @@ headers:
     X-RequestDigest: form digest value
     content-length:length of post body
 ```
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Complete basic operations using SharePoint REST endpoints](../../sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md)

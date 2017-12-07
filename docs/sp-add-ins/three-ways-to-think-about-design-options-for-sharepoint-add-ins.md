@@ -92,7 +92,7 @@ The SharePoint Add-in model enables so many possibilities for design that a simp
 
 - You should also consider your existing skills or the skills of your development staff. For example, if you are an experienced ASP.NET developer, that would be a point in favor of creating a remote web application and surfacing SharePoint list data on an ASP.NET page. On the other hand, if you are an experienced SharePoint developer, that would be a point in favor of using a custom SharePoint list and site page, with JavaScript to perform processing.
 
-## Additional resources
+## See also
 <a name="AdditionalResources"> </a>
 
 -  [Design SharePoint Add-ins](design-sharepoint-add-ins.md)

@@ -108,10 +108,7 @@ Before you can discuss workflow associations and subscriptions, you must look at
     
 This decoupling of message creation from message consumption allows for scalability and flexibility. It enables multicast messaging on the publisher side, and for promiscuous message consumption on the subscriber side.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The PubSub feature is a part of the Microsoft Azure Service Bus, which provides connectivity options for WCF and other service endpoints. These include REST endpoints, which can be located behind network address translation (NAT) boundaries, or bound to frequently changing, dynamically assigned IP addresses, or both. For more information about the Azure Service Bus, see  [Service Bus](http://msdn.microsoft.com/en-us/library/ee732537.aspx). 
   
     
@@ -195,9 +192,7 @@ Auto-start workflows are initiated by using an **Add** message to the PubSub ser
   
 - The workflow initiation parameters.
     
-  
-
-> **Note:**
+> [!NOTE]
 > If a workflow automatically starts on a repeatable event (for example, the **OnItemChanged** event), it cannot start another workflow of a given association until the existing running instance of the association's workflow has completed running.
   
     
@@ -235,7 +230,7 @@ For a full discussion of SharePoint workflow interop, see  [Use workflow interop
     
     
 
-## Additional resources
+## See also
 <a name="bk_additional"> </a>
 
 

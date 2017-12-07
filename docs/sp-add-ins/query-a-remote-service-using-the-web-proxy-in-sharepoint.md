@@ -405,7 +405,9 @@ Figure 1 shows the browser window with data from the remote service in a SharePo
 
 1. Press the F5 key.
     
-     **Note**  When you press F5, Visual Studio builds the solution, deploys the add-in, and opens the permissions page for the add-in.
+    > [!NOTE] 
+    > When you press F5, Visual Studio builds the solution, deploys the add-in, and opens the permissions page for the add-in.
+
 2. Choose the  **Trust It** button.
     
  
@@ -465,7 +467,7 @@ This article demonstrated how to read data in a remote service from a SharePoint
     
  
 
-## Additional resources
+## See also
 <a name="SP15Queryremoteservice_Addresources"> </a>
 
 

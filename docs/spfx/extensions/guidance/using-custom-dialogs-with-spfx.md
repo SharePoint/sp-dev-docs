@@ -4,17 +4,11 @@ You can use custom dialog boxes, available from the **@microsoft/sp-dialog** pac
 
 This article describes how to create a custom dialog box and use it within the context of a ListView Command Set extension.
 
-You can access the sample code that this article is based on in the [](https://github.com/SharePoint/sp-dev-fx-extensions/tree/master/samples/react-command-dialog) repo.
+You can access the sample code that this article is based on in the [sp-dev-fx-extensions](https://github.com/SharePoint/sp-dev-fx-extensions/tree/master/samples/react-command-dialog) repo.
 
 ## Set up your development environment
 
-To create a custom dialog box, you'll need to follow the steps in the [Set up your development environment](https://dev.office.com/sharepoint/docs/spfx/set-up-your-development-environment). Make sure that you're using the latest SharePoint Framework Yeoman templates. 
-
-To update your SharePoint Framework Yeoman templates, run the following command:
-
-```sh
-npm install -g @microsoft/generator-sharepoint`
-```
+To create a custom dialog box, you'll need to follow the steps in the [Set up your development environment](https://dev.office.com/sharepoint/docs/spfx/set-up-your-development-environment). Make sure that you're using the latest SharePoint Framework Yeoman templates.
 
 ## Create a new project
 
@@ -57,8 +51,6 @@ At this point, Yeoman will install the required dependencies and scaffold the so
 When the scaffold is complete, you should see the following message indicating a successful scaffold:
 
 ![SharePoint client-side solution scaffolded successfully](../../../images/ext-com-dialog-yeoman-complete.png)
-
->**Note:** For information about troubleshooting any errors, see [Known issues](../../known-issues-and-common-questions.md).
 
 Once the scaffolding completes, lock down the version of the project dependencies by running the following command:
 
@@ -235,35 +227,44 @@ Update the `onExecute` function as follows. This code does the following:
 
 ## Test the custom dialog box in your tenant
 
-Open the **DialogDemoCommandSet.manifest.json** file in the **./src/extensions/dialogDemo/** folder and copy the **id** value, which will be used in the debug query parameter.
+Open the **serve.json** file in the **./config/** folder and update review the current settings in the the file. This file is used to make debugging on SharePoint Framework Extensions easier. You can update the file content to match your own tenant and site details where you want to test your extension. Key value to update is the `pageUrl` property in the json definition to match your own tenant.
+
+Update `pageUrl` to point to a list URL where you want to test the dialog functionality.
+
+```sh
+  "serveConfigurations": {
+    "default": {
+      "pageUrl": "https://sppnp.sharepoint.com/sites/team/Shared%20Documents/Forms/AllItems.aspx",
+      "customActions": {
+        "9b98b919-fe5e-4758-ac91-6d62e582c4fe": {
+          "location": "ClientSideExtension.ListViewCommandSet.CommandBar",
+          "properties": {
+            "sampleTextOne": "One item is selected in the list",
+            "sampleTextTwo": "This command is always visible."
+          }
+        }
+      }
+    },
+```
+
+> [!NOTE]
+> Unique identifier of your extension is automatically updated to this file during initial scaffolding. If you update the properties which your extension will use, you should be updating **serve.json** before you start debuggin.
 
 Return to the console and run the following command:
 
 ```sh
-gulp serve --nobrowser
+gulp serve
 ```
 
-Notice that you use the `--nobrowser` option. You don't need to launch the local workbench because you currently cannot debug extensions locally.
-
-This will start the bundling of your solution and will serve the resulting manifest from the `localhost` address.
-
-To test your extension, go to a site in your SharePoint Online developer tenant.
-
-Go to an existing custom list within the site that contains some items, or create a new list and add a few items to it for testing purposes. 
-
-Append the following query string parameters to the URL. Notice that you will need to update the **id** to match your own extension identifier as listed in the **DialogDemoCommandSet.manifest.json** file:
-
-```
-?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"fcbc5541-b335-4ed0-b8a4-8d40d3c4d25d":{"location":"ClientSideExtension.ListViewCommandSet.CommandBar"}}
-```
+This will start the bundling of your solution and will serve the resulting manifest from the `localhost` address. Due the configuration in the **serve.json** file, it also opens up a browser in the specific URL with automatically setting the query parameters based on the solution configuration.
 
 Accept the loading of Debug Manifests by choosing **Load debug scripts** when prompted.
 
 ![Allow debug scripts warning](../../../images/ext-com-dialog-debug-scripts.png)
 
-Notice that the new button is NOT visible in the toolbar by default, since default solution require that you'll need to select one item from the list. 
+Notice that the new button is NOT visible in the toolbar by default, since default solution require that you'll need to select one item from the list. If you do not have any items in the list or library, create an item or upload a document. 
 
-Select item from the list or libary and notice how button will be visible in the toolbar with the text *Open Custom Dialog box*.
+Select item from the list or library and notice how button will be visible in the toolbar with the text *Open Custom Dialog box*.
 
 ![Open Cusotm Dialog button visible in the toolbar](../../../images/ext-com-dialog-button-in-toolbar.png)
 

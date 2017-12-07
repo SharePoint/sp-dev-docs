@@ -54,7 +54,7 @@ Have a solid design for your add-in? Get ready to build your add-in and publish 
 - [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md): Discusses advanced concepts and capabilities of the add-in model.
 - [Publish SharePoint Add-ins](publish-sharepoint-add-ins.md): Describes the process and requirements for publishing SharePoint Add-ins.
 
-## Additional resources
+## See also
 <a name="SP15Design_AddRes"> </a>
 
 -  [SharePoint Add-ins sample pack](http://code.msdn.microsoft.com/office/Apps-for-SharePoint-sample-64c80184)

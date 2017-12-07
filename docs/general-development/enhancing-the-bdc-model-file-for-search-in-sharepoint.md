@@ -168,17 +168,11 @@ If the repository uses NTLM authentication, we recommend that you specify PassTh
     
 Profile pages may require that you use the Secure Store Service because of the multi-hop delegation problem from the front-end web server. If you encounter this problem, you can optimize the crawl while still allowing profile pages by creating two similar **LobSystemInstance** instances. The first instance should use credentials from the Secure Store Service authentication. This instance should not contain the **ShowInSearchUI** property. The second instance should use PassThrough authentication, and should contain the **ShowInSearchUI** property. Profile pages use the first **LobSystemInstance** instance, and the crawler uses the second instance.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > This requires that you set the **ShowInSearchUI** property at the **LobSystemInstance** level instead of at the **LobSystem** level.
-  
-    
-    
 
 
-## Additional resources
+## See also
 <a name="SP15enhanceBDC_addlresources"> </a>
 
 

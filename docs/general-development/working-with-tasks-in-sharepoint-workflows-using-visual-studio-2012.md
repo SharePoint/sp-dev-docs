@@ -10,23 +10,8 @@ ms.assetid: f5869fe2-1bef-4e6f-bfdc-3e109501d260
 Learn about the new and revised workflow task framework that was introduced in SharePoint, which is built on the new Workflow Manager. 
  **Provided by:** [Andrew Connell](http://social.msdn.microsoft.com/profile/andrew%20connell%20%5bmvp%5d/),  [AndrewConnell.com](http://www.andrewconnell.com)
   
-    
-    
-
-
-  
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > This article is accompanied by an end-to-end code sample that you can use to follow the article, or as a starter for your own SharePoint workflow projects. You can find the downloadable code  [here](http://assets.andrewconnell.com/media/Default/Downloads/SP2013Wf-CustomTasks.zip). 
-  
-    
-    
-
-
-  
-    
     
 One of the greatest benefits that the SharePoint brings to Windows Workflow Foundation is the implementation of a new and improved task management framework that incorporates the new Workflow Manager as its hosting environment.
 ## Reviewing workflow tasks in SharePoint 2007 and SharePoint 2010
@@ -740,7 +725,7 @@ This article discussed the changes related to workflow tasks that were driven fr
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

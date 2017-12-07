@@ -944,10 +944,7 @@ The following methods are standard overrides of inherited methods that were in S
     
 Gets or sets the name of the JavaScript file that renders the fields of the **SPFieldGeolocation** type.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The JSLink property is not supported on Survey or Events lists. A SharePoint calendar is an Events list. 
   
     
@@ -1750,8 +1747,7 @@ Gets a collection of notification subscribers from the website's notification Su
 public SPPhoneNotificationSubscriberCollection GetPhoneNotificationSubscribers(string customArgs)
 ```
 
-
-> **Note:**
+> [!NOTE]
 > Client object model name is **GetPhoneNotificationSubscribersByArgs**. 
   
     
@@ -1765,8 +1761,7 @@ public SPPhoneNotificationSubscriberCollection GetPhoneNotificationSubscribers(s
 
 ```
 
-
-> **Note:**
+> [!NOTE]
 > Client object model name is **GetPhoneNotificationSubscribersByUser**. 
   
     
@@ -2265,7 +2260,7 @@ public string MessageId
 ```
 
 
-## Additional resources
+## See also
 <a name="SP15MobileOM_addlresources"> </a>
 
 

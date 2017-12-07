@@ -199,7 +199,7 @@ Press F5 to deploy the app to SharePoint. Browse to the Default.aspx page in the
     
     
 
-## Additional resources
+## See also
 <a name="bkmk_Addresources"> </a>
 
 

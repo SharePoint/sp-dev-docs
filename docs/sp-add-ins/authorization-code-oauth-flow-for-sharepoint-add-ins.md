@@ -14,7 +14,8 @@ Learn the OAuth flow for add-ins that request permission to access SharePoint re
 <a name="Overview"> </a>
 
 
- **Note**  This article assumes that you are familiar with  [Creating SharePoint Add-ins that use low-trust authorization](creating-sharepoint-add-ins-that-use-low-trust-authorization.md) and with the concepts and principles behind OAuth. For more information about OAuth, see [OAuth.net](http://oauth.net/) and [Web Authorization Protocol (oauth)](http://datatracker.ietf.org/doc/active/#oauth).
+> [!NOTE] 
+> This article assumes that you are familiar with  [Creating SharePoint Add-ins that use low-trust authorization](creating-sharepoint-add-ins-that-use-low-trust-authorization.md) and with the concepts and principles behind OAuth. For more information about OAuth, see [OAuth.net](http://oauth.net/) and [Web Authorization Protocol (oauth)](http://datatracker.ietf.org/doc/active/#oauth).
  
 
 In some scenarios, an add-in can request permission to access SharePoint resources on the fly; that is, an  **add-in can request permission to access SharePoint resources dynamically at runtime**, instead of at add-in installation time. This type of add-in does not have to be launched from, or even installed on, SharePoint. For example, it could be native device add-in, an add-in that is launched from any website, or an Office Add-in launched from an Office application that wants to access resources on SharePoint on the fly.
@@ -22,7 +23,8 @@ In some scenarios, an add-in can request permission to access SharePoint resourc
 
  
 
- **Note**  This type of add-in can only be run by users who have Manage permissions to the resources the add-in wants to access. For example, if an add-in requests only Read permission to a website, a user who has Read, but not Manage, rights to the website cannot run the add-in.
+> [!NOTE] 
+> This type of add-in can only be run by users who have Manage permissions to the resources the add-in wants to access. For example, if an add-in requests only Read permission to a website, a user who has Read, but not Manage, rights to the website cannot run the add-in.
  
 
 To be able to call into SharePoint, this type of  **add-in must first be registered** through the Seller Dashboard or the appregnew.aspx page. For more information about registering add-ins via the Seller Dashboard or appregnew.aspx, see [Register SharePoint Add-ins 2013](register-sharepoint-add-ins.md).
@@ -46,7 +48,8 @@ This section summarizes the OAuth authentication and authorization flow for a Sh
 
  
 
- **Note**  The flow  **involves a series of interactions between your add-in, SharePoint, the authorization server (which is ACS), and the end user** at runtime. So, the flow requires either SharePoint Online or a SharePoint farm that is connected to the Internet, so it can communicate with ACS. SharePoint farms that are not connected to the Internet must use [the high-trust authorization system](creating-sharepoint-add-ins-that-use-high-trust-authorization.md).
+> [!NOTE] 
+> The flow  **involves a series of interactions between your add-in, SharePoint, the authorization server (which is ACS), and the end user** at runtime. So, the flow requires either SharePoint Online or a SharePoint farm that is connected to the Internet, so it can communicate with ACS. SharePoint farms that are not connected to the Internet must use [the high-trust authorization system](creating-sharepoint-add-ins-that-use-high-trust-authorization.md).
  
 
 There has to be a web application or service that is hosted separately from SharePoint. Even if the add-in is a device add-in, it has to have a web application or service URL that can be registered with ACS (see above), even if the web component is used for nothing else. For simplicity, this article will assume that the add-in is a web application called Contoso.com. The application uses the SharePoint client object model (CSOM) or the SharePoint REST APIs to make calls to SharePoint. When the application first attempts to access SharePoint, SharePoint requests an authorization code from ACS that it can send to the Contoso.com application. The application then uses the authorization code to request an access token from the ACS. Once it has the access token, the Contoso.com application includes it in all its requests to SharePoint.
@@ -141,7 +144,8 @@ If you are not using managed code, the scope aliases are used in the scope field
 
  
 
- **Note**  For a description of the scopes, see  [Add-in permissions in SharePoint](add-in-permissions-in-sharepoint.md).
+> [!NOTE] 
+> For a description of the scopes, see  [Add-in permissions in SharePoint](add-in-permissions-in-sharepoint.md).
  
 
 
@@ -411,7 +415,7 @@ namespace DynamicAppPermissionRequest
 ```
 
 
-## Additional resources
+## See also
 <a name="AR"> </a>
 
 

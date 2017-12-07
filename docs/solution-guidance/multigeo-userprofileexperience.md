@@ -67,7 +67,8 @@ GET https://graph.microsoft.com/v1.0/users/bert@contoso.onmicrosoft.com?$select=
 
 When you have the personal site host URL, you can use that along with the [Multi-Geo discovery](multigeo-discovery.md) information to get the tenant admin site URL for the geo location that hosts the user's profile.
 
->**Note:** If the user doesn't have a personal site, this approach will not work. Instead, you should use the SharePoint User Profile API.
+> [!NOTE] 
+> If the user doesn't have a personal site, this approach will not work. Instead, you should use the SharePoint User Profile API.
 
 To learn more, see the [MultiGeo.UserProfileUpdates](https://github.com/SharePoint/PnP/tree/dev/Samples/MultiGeo.UserProfileUpdates) sample.
 

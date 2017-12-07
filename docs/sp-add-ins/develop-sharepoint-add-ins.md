@@ -9,7 +9,8 @@ ms.prod: sharepoint
 Find in-depth articles and resources to help you build advanced capabilities into your SharePoint Add-ins.
 
  
-> **Note**  This article assumes that you are familiar with the article  [SharePoint Add-ins](sharepoint-add-ins.md) and the getting started material that it links to.
+> [!NOTE]
+> This article assumes that you are familiar with the article  [SharePoint Add-ins](sharepoint-add-ins.md) and the getting started material that it links to.
 
 Under  **Develop**, we've got the following to help explain all the different things you can do in a SharePoint Add-in:
 
@@ -74,7 +75,7 @@ When you are familiar with the capabilities and features of SharePoint Add-ins, 
 |:-----|:-----|
 | [Create a provider-hosted add-in that includes a custom SharePoint list and content type](create-a-provider-hosted-add-in-that-includes-a-custom-sharepoint-list-and-conte.md)|Explains how to create SharePoint Add-ins that are hosted in the cloud and that include custom SharePoint lists and content types.|
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Tools and environments for developing SharePoint Add-ins](tools-and-environments-for-developing-sharepoint-add-ins.md) 

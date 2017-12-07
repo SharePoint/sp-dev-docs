@@ -284,7 +284,7 @@ public void Save(Web web) {
 
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Composite business add-ins for SharePoint 2013 and SharePoint Online](Composite-buisness-apps-for-SharePoint.md)

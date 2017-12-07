@@ -62,7 +62,7 @@ If you have any questions, post them on [SharePoint StackExchange](http://sharep
 
 You can also post issues, questions, or feedback on the docs or the SharePoint Framework in our [GitHub repo](https://github.com/SharePoint/sp-dev-docs/issues).
 
-## Additional resources
+## See also
 
 - [Overview of SharePoint client-side web parts](./web-parts/overview-client-side-web-parts.md)
 - [Overview of SharePoint Framework Extensions](./extensions/overview-extensions.md)

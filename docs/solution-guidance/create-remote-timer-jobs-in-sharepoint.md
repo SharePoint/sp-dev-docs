@@ -20,7 +20,8 @@ To get started, download the [Core.TimerJobs.Samples ](https://github.com/ShareP
 
 To start using the Core.TimerJobs.Samples solution, you need to select a startup project, for example the SimpleJob project, by opening the shortcut menu for (right-clicking) the  **Core.TimerJobs.Samples.SimpleJob**, and then choosing  **Set as StartUp Project**.
 
-**Note:**  When you create a new project in Visual Studio, to start building your new remote timer job, add the  **OfficeDevPnP.Core** NuGet package to your project. In Visual Studio, choose **TOOLS** > **NuGet Package Manager** > **Manage NuGet Packages for Solution**.
+> [!NOTE] 
+> When you create a new project in Visual Studio, to start building your new remote timer job, add the  **OfficeDevPnP.Core** NuGet package to your project. In Visual Studio, choose **TOOLS** > **NuGet Package Manager** > **Manage NuGet Packages for Solution**.
 
 ## Schedule your remote timer job
 
@@ -38,7 +39,8 @@ In Core.TimerJobs.Samples.SimpleJob,  **Main** in Program.cs performs the follow
     
 4. Prints timer job information and runs the timer job using  **PrintJobSettingsAndRunJob**.
 
-**Note:**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```C#
  static void Main(string[] args)
@@ -290,7 +292,7 @@ void SiteGovernanceJob_TimerJobRun(object o, TimerJobRunEventArgs e)
         }
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)

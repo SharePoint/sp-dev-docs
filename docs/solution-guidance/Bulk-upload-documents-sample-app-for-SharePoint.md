@@ -8,7 +8,8 @@ As part of your Enterprise Content Management (ECM) strategy, you can bulk uploa
     
 _**Applies to:** Office 365 | SharePoint 2013 | SharePoint Online_
 
-**Note**  The sample uploads one file to a document library. To upload multiple files, you'll need to extend the sample.
+> [!NOTE] 
+> The sample uploads one file to a document library. To upload multiple files, you'll need to extend the sample.
 
 This add-in uses a console application to upload files by using REST API calls. Configuration settings are specified in an XML and a CSV file. Use this solution if you want to:
 
@@ -52,7 +53,8 @@ Before you run the code sample, do the following:
 
 From the  **Main** method in Program.cs, the **RecurseActions** method calls the **Run** method in OneDriveMapper.cs. The **Run** method gets the location of the file to upload from SharePointSites.csv, and then calls the **IterateCollection** method.
 
-**Note**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```C#
 public override void Run(BaseAction parentAction, DateTime CurrentTime, LogHelper logger)
@@ -79,7 +81,8 @@ The SharePointSite.csv file lists a file to upload and the document library to u
     
 4. Performs the file upload.
 
-**Note**  The file name is overwritten with the value of  **FileUploadName** specified in OneDriveUploader.xml.
+> [!NOTE] 
+> The file name is overwritten with the value of  **FileUploadName** specified in OneDriveUploader.xml.
 
 ```C#
 public override void IterateCollection(Collection<string> entries, LogHelper logger)
@@ -208,10 +211,9 @@ public override void IterateCollection(Collection<string> entries, LogHelper log
 
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
--  [Enterprise Content Management solutions for SharePoint 2013 and SharePoint Online](Enterprise-Content-Management-solutions-for-SharePoint-2013-and-SharePoint-Online.md)
-    
+-  [Enterprise Content Management solutions for SharePoint 2013 and SharePoint Online](Enterprise-Content-Management-solutions-for-SharePoint-2013-and-SharePoint-Online.md)   
 -  [Core.LargeFileUpload sample](https://github.com/SharePoint/PnP/tree/master/Samples/Core.LargeFileUpload)
     

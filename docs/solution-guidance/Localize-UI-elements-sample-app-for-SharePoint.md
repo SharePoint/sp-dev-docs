@@ -10,7 +10,8 @@ _**Applies to:** Office 365 | SharePoint 2013 | SharePoint Online_
     
 The [Core.JavaScriptCustomization](https://github.com/SharePoint/PnP/tree/master/Samples/Core.JavaScriptCustomization) sample add-in shows you how to use JavaScript to replace the text value of a SharePoint UI element with a translated text value, which is read from a JavaScript resource file. 
 
-**Note**  You are responsible for maintaining the translated text values in the JavaScript resource file. 
+> [!NOTE] 
+> You are responsible for maintaining the translated text values in the JavaScript resource file. 
 
 This code sample uses a provider-hosted add-in to:
 
@@ -55,9 +56,11 @@ Before you run this code sample, configure the language settings on your site, a
     
 5. Choose  **Save all and close**.
 
-**Note**  It might take a few minutes for your site to render in the selected language(s).
+> [!NOTE] 
+> It might take a few minutes for your site to render in the selected language(s).
 
-**Important**  The CSOM is periodically updated with new features. If the CSOM provides new features to update site page or Quick Launch link titles, we recommend that you use the new features in the CSOM instead of the options discussed here.
+> [!IMPORTANT] 
+> The CSOM is periodically updated with new features. If the CSOM provides new features to update site page or Quick Launch link titles, we recommend that you use the new features in the CSOM instead of the options discussed here.
 
 **Figure 1. Setting the language for a site**
 
@@ -121,7 +124,8 @@ Figure 6 shows the start page for Scenario 1.
 
 The  **AddJSLink** method is part of the JavaScriptExtensions.cs file in **OfficeDevPnP.Core**.  **AddJSLink** requires that you supply a string representing the identifier to assign to the custom action, and a string containing a semicolon delimited list of URLs to the JavaScript files that you want to add to the host web. Note that this code sample adds a reference to Scripts\scenario1.js, which adds a status bar message to the host web.
     
-**Note**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```
 protected void btnSubmit_Click(object sender, EventArgs e)
@@ -134,7 +138,8 @@ protected void btnSubmit_Click(object sender, EventArgs e)
         }
 ```
    
-**Note**  SharePoint 2013 uses Minimal Download Strategy to reduce the amount of data the browser downloads when users navigate between pages on a SharePoint site. For more information, see  [Minimal Download Strategy overview](http://msdn.microsoft.com/library/9caa7d99-1e74-4889-96c7-ba5a10772ad7.aspx). In scenario1.js, the following code ensures that whether or not Minimal Download Strategy is used on your SharePoint site, the  **RemoteManager_Inject** method is always called to run the JavaScript code to add the status bar message to the host web.
+> [!NOTE] 
+> SharePoint 2013 uses Minimal Download Strategy to reduce the amount of data the browser downloads when users navigate between pages on a SharePoint site. For more information, see  [Minimal Download Strategy overview](http://msdn.microsoft.com/library/9caa7d99-1e74-4889-96c7-ba5a10772ad7.aspx). In scenario1.js, the following code ensures that whether or not Minimal Download Strategy is used on your SharePoint site, the  **RemoteManager_Inject** method is always called to run the JavaScript code to add the status bar message to the host web.
 
 ```
 if ("undefined" != typeof g_MinimalDownload &amp;&amp; g_MinimalDownload &amp;&amp; (window.location.pathname.toLowerCase()).endsWith("/_layouts/15/start.aspx") &amp;&amp; "undefined" != typeof asyncDeltaManager) {
@@ -146,7 +151,8 @@ if ("undefined" != typeof g_MinimalDownload &amp;&amp; g_MinimalDownload &amp;&a
 }
 ```
 
-**Note**  Some JavaScript files may depend on other JavaScript files to be loaded first, before they can run and complete successfully. The following code construct from  **RemoteManager_Inject** uses the **loadScript** function in scenario1.js to first load jQuery, then continue running the remaining JavaScript code.
+> [!NOTE] 
+> Some JavaScript files may depend on other JavaScript files to be loaded first, before they can run and complete successfully. The following code construct from  **RemoteManager_Inject** uses the **loadScript** function in scenario1.js to first load jQuery, then continue running the remaining JavaScript code.
 
 ```
 var jQuery = "https://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.2.min.js";
@@ -182,7 +188,8 @@ As shown in Figure 8, choosing  **Inject customization** applies the following c
 
 ![Scenario 2 customizations](media/47e8ec40-d291-496f-8677-01eb46441df2.png)
     
-**Note**  If your values for the Quick Launch link title and site page title differ from those shown in Figure 8, edit the  **quickLauch_Scenario2** and **pageTitle_HelloSharePoint** variables in the JavaScript resource files scenario2.en-us.js or scenario2.nl-nl.js. Then run the code sample again. The scenario2.en-us.js file stores English (US) culture-specific resources. The scenario2.nl-nl.js file stores Dutch culture-specific resources. If you are testing this code sample using another language, consider creating another JavaScript resource file using the same naming convention.
+> [!NOTE] 
+> If your values for the Quick Launch link title and site page title differ from those shown in Figure 8, edit the  **quickLauch_Scenario2** and **pageTitle_HelloSharePoint** variables in the JavaScript resource files scenario2.en-us.js or scenario2.nl-nl.js. Then run the code sample again. The scenario2.en-us.js file stores English (US) culture-specific resources. The scenario2.nl-nl.js file stores Dutch culture-specific resources. If you are testing this code sample using another language, consider creating another JavaScript resource file using the same naming convention.
 
 Similar to Scenario 1,  **btnSubmit_Click** in scenario2.aspx.cs calls **AddJsLink** to add a reference to the Scripts\scenario2.js file. In scenario2.js, the **RemoteManager_Inject** function calls the **TranslateQuickLaunch** function, which performs the following tasks:
 
@@ -252,7 +259,7 @@ function TranslateQuickLaunch() {
 }
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Localization solutions for SharePoint 2013 and SharePoint Online](localization-solutions-for-sharepoint-2013-and-sharepoint-online.md)

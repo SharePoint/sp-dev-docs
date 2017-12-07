@@ -87,7 +87,7 @@ There are three ways to get an Office 365 plan:
    ![Screenshot that shows the Developer site homepage.](../images/SP15_DeveloperSiteHome_border.png)
  
 
-## Additional resources
+## See also
 <a name="SP15SetupSPO365_bk_addlresources"> </a>
 
 - [SharePoint Add-ins](sharepoint-add-ins.md)

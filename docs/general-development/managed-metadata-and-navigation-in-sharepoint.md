@@ -231,7 +231,7 @@ A term store manager can enhance and expand term usage models based on more flex
     
   
 
-## Additional resources
+## See also
 <a name="SP15_ManagedMetadataAndNav_AdditionalResources"> </a>
 
 

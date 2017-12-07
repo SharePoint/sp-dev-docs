@@ -6,8 +6,8 @@ ms.date: 11/03/2017
 
 SharePoint on-premises has been, and is, a popular platform for building enterprise portals (a.k.a. intranets). You can build similar portals on SharePoint Online as well, but since SharePoint Online is different from an infrastructure architecture point of view it's important to factor in the SharePoint Online specific performance considerations when developing your new portal. This set of articles will give you guidance on the key portal design areas.
 
->**Note**:
->Although this guidance is targeting SharePoint Online most of it also applies to portals hosted on a SharePoint on-premises environment.
+> [!NOTE] 
+> Although this guidance is targeting SharePoint Online most of it also applies to portals hosted on a SharePoint on-premises environment.
 
 _**Applies to:** SharePoint Online_
 
@@ -27,8 +27,8 @@ This guidance is completely open source and we encourage the community to provid
 - Create an issue in the issue list if you want to start a discussion on the content
 - Fork the repository, make changes to the articles and create a pull request. We appreciate your contributions and our MSDN publishing system will credit you as page contributor once you're pull request has been accepted
 
->**Note**:
->We'll be further evolving this guidance by adding samples, additional insights, integration of new SharePoint Online capabilities and we would absolutely love community feedback and contributions.
+> [!NOTE] 
+> We'll be further evolving this guidance by adding samples, additional insights, integration of new SharePoint Online capabilities and we would absolutely love community feedback and contributions.
 
 ## What's the audience we're targeting with these guidelines?
 <a name="sectionSection1"> </a>

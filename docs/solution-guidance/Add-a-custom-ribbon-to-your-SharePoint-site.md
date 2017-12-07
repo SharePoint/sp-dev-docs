@@ -14,7 +14,8 @@ The  [Core.RibbonCommands](https://github.com/SharePoint/PnP/tree/master/Samples
     
 - Display a custom ribbon for specific content types, sites, or lists.
 
-**Note**  This code sample shows how to call the JavaScript functions that handle events raised by the ribbon's buttons. This code sample does not provide the implementation of the JavaScript event handler functions for the ribbon's buttons. To implement the JavaScript event handler functions, use the embed JavaScript technique to embed the JavaScript event handler functions on all pages where your custom ribbon appears. For more information about embedding JavaScript, see  [Customize your SharePoint site UI by using JavaScript](Customize-your-SharePoint-site-UI-by-using-JavaScript.md).
+> [!NOTE] 
+> This code sample shows how to call the JavaScript functions that handle events raised by the ribbon's buttons. This code sample does not provide the implementation of the JavaScript event handler functions for the ribbon's buttons. To implement the JavaScript event handler functions, use the embed JavaScript technique to embed the JavaScript event handler functions on all pages where your custom ribbon appears. For more information about embedding JavaScript, see  [Customize your SharePoint site UI by using JavaScript](Customize-your-SharePoint-site-UI-by-using-JavaScript.md).
 
 ## Before you begin
 <a name="sectionSection0"> </a>
@@ -30,7 +31,8 @@ This code sample defines a custom ribbon by using Models\RibbonCommands.xml. Rib
 
 The custom ribbon displays on all sites and lists on the host web because  **RegistrationId="0x01"** and **RegistrationType="ContentType"**.  **RegistrationId="0x01"** and **RegistrationType="ContentType"** specify that the ribbon will appear for all content types that inherit from type **"0x01"**, which are content types that inherit from the  **Item** class. To apply your ribbon to a custom content type, replace "0x01" with your custom content type's ID. To apply your ribbon to a list, change the value of RegistrationType to **List**. 
 
-**Note**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```XML
 <?xml version="1.0" encoding="utf-8" ?>
@@ -236,7 +238,8 @@ The custom ribbon displays on all sites and lists on the host web because  **Reg
 </Elements>
 ```
 
-**Note**  If you use the embed JavaScript technique to implement event handling for your ribbons' buttons, your JavaScript file must implement the methods defined in the  **CommandUIHandler** elements. For example, your embedded JavaScript file should implement functions like **GetCurrentItem** and **AddNewCustom**.
+> [!NOTE] 
+> If you use the embed JavaScript technique to implement event handling for your ribbons' buttons, your JavaScript file must implement the methods defined in the  **CommandUIHandler** elements. For example, your embedded JavaScript file should implement functions like **GetCurrentItem** and **AddNewCustom**.
 
 **InitializeButton_Click** in Default.aspx performs the following tasks:
 
@@ -299,7 +302,7 @@ The custom ribbon displays on all sites and lists on the host web because  **Reg
         }
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)

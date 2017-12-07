@@ -23,7 +23,8 @@ Many enterprises need to replicate custom attributes to the SharePoint user prof
 5. An out of the box server side timer job running in SharePoint online which checks for queued import requests and will perform the actual import operation based on the API calls and the information within the provided JSON file.
 6. Extended user profile information is available within user profiles and can be used for any out of the box or custom functionality in SharePoint online.
 
->**Note**: The import only works for user profile properties which have **not** been set to be editable by end users. This is to prevent the user profile import process from overriding any information which an end user has already updated. Additionally, the import only allows custom properties that are not active directory core properties. These must be synchronized to Azure Active Directory. For the list of these core directory properties, see the table listed in the FAQ section below.
+> [!NOTE] 
+> The import only works for user profile properties which have **not** been set to be editable by end users. This is to prevent the user profile import process from overriding any information which an end user has already updated. Additionally, the import only allows custom properties that are not active directory core properties. These must be synchronized to Azure Active Directory. For the list of these core directory properties, see the table listed in the FAQ section below.
 
 Below is a brief video that demonstrates using the new CSOM API from both managed code (.NET) and from PowerShell. You can find the sample code used, including the sample PowerShell script, in the [Office Dev PnP Code Gallery](http://dev.office.com/patterns-and-practices-detail/7202).
 

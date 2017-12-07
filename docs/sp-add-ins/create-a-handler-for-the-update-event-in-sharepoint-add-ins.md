@@ -198,7 +198,7 @@ Return to [Major steps in updating an add-in](update-sharepoint-add-ins.md#Major
 -  [Update host web components in SharePoint](update-host-web-components-in-sharepoint.md)
 -  [Update remote components in SharePoint Add-ins](update-remote-components-in-sharepoint-add-ins.md)
 
-## Additional resources
+## See also
 
 -  [Update SharePoint Add-ins](update-sharepoint-add-ins.md)
 -  [UpgradedEventEndpoint element (PropertiesDefinition complexType) (SharePoint Add-in Manifest)](http://msdn.microsoft.com/library/09a93d44-d295-47bb-f91c-d243178b0f53%28Office.15%29.aspx)

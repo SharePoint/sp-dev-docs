@@ -63,7 +63,7 @@ PS> Register-SPWorkflowService -SPSite "https://myserver/mysitecollection" -Work
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

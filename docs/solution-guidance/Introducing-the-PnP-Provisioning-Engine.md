@@ -245,7 +245,7 @@ In order to play with the PnP Provisioning Engine on-premises, you need to have 
 Please, play with the PnP Provisioning Engine, give us feedback, and enjoy the future of the SharePoint Add-in Model and remote provisioning!
 
 <a name="bk_addresources"> </a>
-## Additional resources
+## See also
 
 -  [Office 365 Development Patterns & Practices on GitHub](https://github.com/SharePoint/PnP/)
 -  [SharePoint Developer Group](http://aka.ms/sppnp-community) at Microsoft Tech Community

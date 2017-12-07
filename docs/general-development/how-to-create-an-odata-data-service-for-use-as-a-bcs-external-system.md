@@ -205,8 +205,9 @@ By default, when a WCF service is created, it cannot be accessed due to its secu
 
     This enables authorized clients to have read and write access to resources for the specified entity sets.
     
-    > **Note:**
-      > Any client that can access the ASP.NET application can also access the resources that are exposed by the data service. In a production data service, to prevent unauthorized access to resources, you should also secure the application itself. For more information, see  [Securing WCF Data Services](http://msdn.microsoft.com/en-us/library/dd728284.aspx). 
+    > [!NOTE]
+    > Any client that can access the ASP.NET application can also access the resources that are exposed by the data service. In a production data service, to prevent unauthorized access to resources, you should also secure the application itself. For more information, see  [Securing WCF Data Services](http://msdn.microsoft.com/en-us/library/dd728284.aspx). 
+
 For BCS to receive notifications, there must be a mechanism on the back-end data source that will accept a request to be added and removed from notification subscriptions. 
   
     
@@ -227,8 +228,8 @@ public string subscriptionStorePath = @"\\\\[SHARE_NAME]\\SubscriptionStore\\Sub
 ```
 
 
-    > **Note:**
-      > This file is an XML file that is updated with the new subscriptions. Access to this file will be made by the server process, so make sure you have granted sufficient rights for this file access. > You might also want to create a database solution for storing subscription information. 
+    > [!NOTE]
+    > This file is an XML file that is updated with the new subscriptions. Access to this file will be made by the server process, so make sure you have granted sufficient rights for this file access. > You might also want to create a database solution for storing subscription information. 
 
     Then add the following two **WebGet** methods to handle the subscriptions.
     
@@ -302,7 +303,7 @@ To notify SharePoint that changes have been made, you also need to create a serv
     
     
 
-## Additional resources
+## See also
 <a name="bkmk_Addresources"> </a>
 
 

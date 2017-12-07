@@ -116,10 +116,7 @@ UDF assemblies are disabled by default.
     
 Each Excel Services trusted location has an **AllowUdfs** flag.
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > The **AllowUdfs** flag is denoted by the **User-defined functions allowed** option on the Excel Services Trusted File Locations page. To learn how to navigate to the Trusted File Locations page, see [Step 3: Deploying and Enabling UDFs](step-3-deploying-and-enabling-udfs.md). 
   
     

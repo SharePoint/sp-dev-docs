@@ -268,7 +268,7 @@ After you create a report renderer and a report editor (including its user inter
     
     
 
-## Additional resources
+## See also
 <a name="bk_addResources"> </a>
 
 

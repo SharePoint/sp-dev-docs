@@ -80,7 +80,8 @@ Choosing  **Perform Personalized Search** calls the **btnPersonalizedSearch_Clic
     
 - Calls the  **FormatResults** method to format the search results into an HTML table.
     
-**Note**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```
 protected void btnPersonalizedSearch_Click(object sender, EventArgs e)
@@ -122,7 +123,7 @@ private ClientResult<ResultTableCollection> ProcessQuery(ClientContext ctx, stri
         }
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [User profile solutions for SharePoint 2013 and SharePoint Online](user-profile-solutions-for-sharepoint.md)

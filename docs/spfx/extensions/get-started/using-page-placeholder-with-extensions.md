@@ -56,7 +56,8 @@ In the following steps, you'll modify the Hello World Application Customizer to 
 
 4. Update **AppCustomizer.module.scss** as follows:
 
-	>**Note:** These are the styles that will be used in the HTML output for the header and footer placeholders.
+	> [!NOTE] 
+	> These are the styles that will be used in the HTML output for the header and footer placeholders.
 
 	  ```css
 	  .app {
@@ -84,7 +85,8 @@ In the following steps, you'll modify the Hello World Application Customizer to 
 
 5. In the **HelloWorldApplicationCustomizer.ts** file, update the **IHelloWorldApplicationCustomizerProperties** interface to add specific properties for Header and Footer, as follows.
 
-	  **Note:** If your command set uses the ClientSideComponentProperties JSON input, it will be deserialized into the `BaseExtension.properties` object. You can define an interface to describe it.
+	> [!NOTE] 
+	> If your command set uses the ClientSideComponentProperties JSON input, it will be deserialized into the `BaseExtension.properties` object. You can define an interface to describe it.
 
 	```ts
 	export interface IHelloWorldApplicationCustomizerProperties {

@@ -16,7 +16,8 @@ For a video introduction to Timer Jobs, [this PnP video](http://channel9.msdn.co
 ## Simple Timer Job example ##
 In this chapter you'll see how to create a very simple Timer Job: the goal of this sample is to provide the reader a quick view, later on we'll provide a more detailed explanation of the Timer Job Framework. 
 
-**Note:** For a more extensive PnP solution with ten individual Timer Job examples, from "Hello world" samples to actual content expiration jobs, see https://github.com/SharePoint/PnP/tree/dev/Solutions/Core.TimerJobs.Samples
+> [!NOTE] 
+> For a more extensive PnP solution with ten individual Timer Job examples, from "Hello world" samples to actual content expiration jobs, see https://github.com/SharePoint/PnP/tree/dev/Solutions/Core.TimerJobs.Samples
 
 The following describes how to create a simple Timer Job:
 
@@ -24,7 +25,10 @@ The following describes how to create a simple Timer Job:
 In this first step, create a new project of the type "console" and reference the PnP core library by doing one of the following:
 
 - Add the Office 365 Developer Patterns and Practices Core Nuget package to your project. There's a [nuget package for v15 (on-premises) and for v16 (Office 365)](https://www.nuget.org/packages?q=pnp). This is the preferred option.
-- Add the existing PnP Core source project to your project. This will allow you to step into the PnP core code when debugging. **Note:** You will be responsible for keeping this code updated with the latest changes added to PnP.
+- Add the existing PnP Core source project to your project. This will allow you to step into the PnP core code when debugging. 
+
+    > [!NOTE] 
+    > You will be responsible for keeping this code updated with the latest changes added to PnP.
 
 ### Step 2: Create a Timer Job class and add your Timer Job logic ###
 1. Add a class for the Timer Job named `SimpleJob`.
@@ -122,7 +126,8 @@ Also, the timer job can be run from the new [Azure portal](https://portal.azure.
 
 ![Azure portal](media/timerjob-framework/n4wGS5x.png)
 
-**Note:** For in-depth guidance on deploying an Azure WebJob, see [Getting Started with azure WebJobs ("Timer Jobs") for your Office 365 Sites](https://github.com/SharePoint/PnP-Guidance/blob/master/articles/Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites.md). 
+> [!NOTE] 
+> For in-depth guidance on deploying an Azure WebJob, see [Getting Started with azure WebJobs ("Timer Jobs") for your Office 365 Sites](https://github.com/SharePoint/PnP-Guidance/blob/master/articles/Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites.md). 
 
 ### Deploying Timer Jobs to Windows Server using the Windows Scheduler ###
 When deployed to Windows Server, the Timer Job must run without user interaction. Modify the `app.config` file as described in **Deploying Timer Jobs to Microsoft Azure using Azure WebJobs**. 
@@ -193,7 +198,8 @@ public void UseNetworkCredentialsAuthentication(string credentialName)
 #### App Only ####
 App only is the **preferred method** as you can grant tenant scoped permissions. For user credentials the user account must have the needed permissions. 
 
-**Note:** Certain site resolving logic wont work with App-only authentication. Details can be found in the next section. 
+> [!NOTE] 
+> Certain site resolving logic wont work with App-only authentication. Details can be found in the next section. 
 
 To configure the job for app-only authentication, use one of the following methods:
 ```C#
@@ -203,8 +209,8 @@ public void UseAzureADAppOnlyAuthentication(string clientId, string clientSecret
 
 The same method can be used for either Office 365 or SharePoint on-premises which makes Timer Jobs using app-only authentication easily transportable between environments.
 
-**Note:**
-When you use app-only your Timer Job logic will fail when APIs are used that do not work with **AuthenticationType.AppOnly**. Typical samples are the Search API, writing to the taxonomy store, and using the user profile API.
+> [!NOTE] 
+> When you use app-only your Timer Job logic will fail when APIs are used that do not work with **AuthenticationType.AppOnly**. Typical samples are the Search API, writing to the taxonomy store, and using the user profile API.
 
 ### Sites to operate on ###
 When a Timer Job runs it needs one or more sites to run against. To add sites to a Timer Job, use the below set of methods.
@@ -397,7 +403,8 @@ The Timer Job Framework by default uses threads to parallelize work. Threading i
 #### Throttling ####
 Because Timer Job uses threading and Timer Job operations are typically resource intensive operations, a Timer Job run could be throttled. In order to correctly deal with throttling the Timer Job Framework and the whole of PnP Core uses the `ExecuteQueryRetry` method instead of the default `ExecuteQuery`method.
 
-**Note:** It is important to use `ExecuteQueryRetry` in your Timer Job implementation code.
+> [!NOTE] 
+> It is important to use `ExecuteQueryRetry` in your Timer Job implementation code.
 
 #### Concurrency issues - process all sub sites of a site collection in the same thread ####
 

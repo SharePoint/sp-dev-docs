@@ -48,7 +48,7 @@ On the computer that runs your design tool or HTML editor, map a network drive t
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

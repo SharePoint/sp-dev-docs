@@ -422,7 +422,7 @@ Value | Reason
 
 We'll gradually introduce more customization options for "modern" list and library experiences. These will be aligned with the release of additional SharePoint Framework capabilities. Currently, there's no exact schedule available, but we'll update the "modern" experience articles whenever new capabilities are released.
 
-## Additional resources
+## See also
 
 - [Customizing the "modern" experiences in SharePoint Online](modern-experience-customizations.md)
 - [Switch the default experience for lists or document libraries from new or classic](https://support.office.com/en-us/article/Switch-the-default-experience-for-lists-or-document-libraries-from-new-or-classic-66dac24b-4177-4775-bf50-3d267318caa9)

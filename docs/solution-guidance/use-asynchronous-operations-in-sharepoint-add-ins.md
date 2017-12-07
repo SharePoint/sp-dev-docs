@@ -40,7 +40,8 @@ To implement asynchronous operations in your provider-hosted add-in by using Azu
     
 4. The Azure WebJob runs custom business logic against your SharePoint Online site. 
     
-**Note:**  Adding a message to the Azure Storage queue uses a different process from the process that runs the Azure WebJob. Therefore, your add-in can implement asynchronous operations by adding new messages to the queue using one process, and then by using the Azure WebJob to handle those messages in another process. 
+> [!NOTE] 
+> Adding a message to the Azure Storage queue uses a different process from the process that runs the Azure WebJob. Therefore, your add-in can implement asynchronous operations by adding new messages to the queue using one process, and then by using the Azure WebJob to handle those messages in another process. 
 
 ## Before you begin
 
@@ -111,7 +112,8 @@ Use the information in the following table to apply configuration settings to th
 || **AzureWebJobsStorage**| Replace **[YourAccount]** with the storage account name copied from the Azure Management Portal.|
 ||| Replace **[YourKey]** with the primary access key copied from the Azure Management Portal.|
 
-**Note:**  If the  **ClientId** and the **ClientSecret** in Core.QueueWebJobUsageWeb gets updated, for example, when you increment the version number in the AppManifest.xml, make sure you update the **ClientId** and the **ClientSecret** in the Core.QueueWebJobUsage.Job\app.config.
+> [!NOTE] 
+> If the  **ClientId** and the **ClientSecret** in Core.QueueWebJobUsageWeb gets updated, for example, when you increment the version number in the AppManifest.xml, make sure you update the **ClientId** and the **ClientSecret** in the Core.QueueWebJobUsage.Job\app.config.
 
 ## Using the Core.QueueWebJobUsage add-in
 
@@ -133,7 +135,8 @@ When you run the Core.QueueWebJobUsage code sample, the provider-hosted add-in a
     
 3. Calls  **SiteManager().AddAsyncOperationRequestToQueue** to add the message to the Azure Storage queue.
     
-**Note:**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```C#
 protected void btnAsync_Click(object sender, EventArgs e)
@@ -249,7 +252,7 @@ public static void ProcessQueueMessage(
         }
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md).

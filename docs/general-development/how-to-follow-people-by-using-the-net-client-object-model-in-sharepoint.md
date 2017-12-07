@@ -14,10 +14,7 @@ Learn how to work with Following People features by using the SharePoint .NET cl
 
 In SharePoint, when a user follows people, the posts and activities of the followed people show up in the user's newsfeed. By using Following People features to focus on the people who users care about, you can improve the relevance of your app or solution. In the .NET client object model, people that you follow are represented by  [SocialActor](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialActor.aspx) objects. To perform core Following People tasks in the .NET client object model, you use the [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx) object. This article shows how to use the .NET client object model to work with Following People features.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > We focus on  [SocialFollowingManager](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.aspx) because it consolidates the core functionality for following people and content. However, the [PeopleManager](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PeopleManager.aspx) object contains additional functionality for following people, such as the [AmIFollowedBy(String)](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.PeopleManager.AmIFollowedBy.aspx) method and methods that obtain the following status of other users.
   
     
@@ -39,9 +36,7 @@ To create a console application that uses the .NET client object model to work w
   
 - **Full Control** access permissions to the User Profile service application for the logged-on user
     
-  
-
-> **Note:**
+> [!NOTE]
 > If you're not developing on the computer that is running SharePoint, get the  [SharePoint Client Components](http://www.microsoft.com/en-us/download/details.aspx?id=35585) download that contains SharePoint client assemblies.
   
     
@@ -103,10 +98,7 @@ The following code example makes the current user start following or stop follow
   
 This code example uses the  [SocialFollowResult](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowResult.aspx) object that is returned by the [Follow](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFollowingManager.Follow.aspx) method to determine whether to start or stop following the target user.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Change the placeholder values for the **serverUrl** and **targetUser** variables before you run the code.
   
     
@@ -221,9 +213,7 @@ The following code example gets the people who the current user is following, ge
   
 - Iterate through the groups of people and get each person's display name, personal URI, and picture URI.
     
-  
-
-> **Note:**
+> [!NOTE]
 > Change the placeholder values for the **serverUrl** and **targetUser** variables before you run the code.
   
     
@@ -302,7 +292,7 @@ namespace FollowPeopleCSOM
 ```
 
 
-## Additional resources
+## See also
 <a name="bkmk_AdditionalResources"> </a>
 
 

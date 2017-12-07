@@ -97,7 +97,7 @@ SharePoint administrators and users depend on the accessibility features that we
 |Chrome  <br/> | [Chrome Accessibility Technical Documentation](http://go.microsoft.com/fwlink/p/?LinkId=275211) <br/> |
    
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

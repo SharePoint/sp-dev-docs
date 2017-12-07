@@ -17,10 +17,7 @@ The theming experience in SharePoint was redesigned to simplify the process of c
     
 This article describes the issues that may occur when you try to use custom SharePoint 2010 themes, SharePoint 2010 CSS, and custom CSS with the new theming experience. It also explains the changes you have to make to your custom SharePoint 2010 themes, SharePoint 2010 CSS, and custom CSS if you want to use them in SharePoint sites.
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > SharePoint 2010 themes can be used on site collections that are running in 2010 mode. For more information about site collection modes, see  [Plan for site collection upgrades in SharePoint](http://technet.microsoft.com/en-us/library/ff191199.aspx) or [Plan for upgrade to SharePoint](https://technet.microsoft.com/en-us/library/cc303429.aspx). 
   
     
@@ -100,7 +97,7 @@ Unmodified SharePoint 2010 CSS files and custom CSS files cannot be used on Shar
     
   
 
-## Additional resources
+## See also
 <a name="addresources"> </a>
 
 

@@ -399,7 +399,7 @@ If you want to select, filter, or order the data you requested from an endpoint,
 
  
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

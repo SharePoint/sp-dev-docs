@@ -32,9 +32,7 @@ The following settings combination gives anonymous users access to any files in 
   
 - You have a UNC trusted location and the **Process account** is turned on.
     
-  
-
-> **Note:**
+> [!NOTE]
 > The **Process account** is a global Excel Services setting that affects all trusted locations.
   
     

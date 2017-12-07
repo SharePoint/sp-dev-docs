@@ -35,7 +35,7 @@ Alternative text is required for screen readers to read non-text content on the 
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

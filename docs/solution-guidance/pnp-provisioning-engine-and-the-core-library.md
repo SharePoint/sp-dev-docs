@@ -8,7 +8,8 @@ Take a high-level look at the remote provisioning process, including a closer lo
 
 The PnP provisioning engine is the heart of the provisioning framework, and at its foundation is the OfficeDevPnP.Core library. The provisioning engine is part of the Core library and it leverages the Core library extensions in the implementation of provisioning tasks. Comprised of extension methods on the SharePoint CSOM/REST object model, the Core library enables provisioning tasks like enumerating and getting provisioning templates as well as storing and then applying templates to new and existing sites. It also allows you to automate provisioning tasks and to introduce coded logic into your provisioning routines.
 
-**Note:**  To see a video walkthrough of creating and persisting, and applying a provisioning template, go to [Getting Started with PnP Provisioning Engine](https://channel9.msdn.com/blogs/OfficeDevPnP/Getting-Started-with-PnP-Provisioning-Engine).
+> [!NOTE] 
+> To see a video walkthrough of creating and persisting, and applying a provisioning template, go to [Getting Started with PnP Provisioning Engine](https://channel9.msdn.com/blogs/OfficeDevPnP/Getting-Started-with-PnP-Provisioning-Engine).
 
 ## PnP provisioning engine
 
@@ -22,7 +23,8 @@ You can use one of two approaches for extracting your site design as a provision
 
 To use Windows PowerShell scripts with the provisioning engine, you first must download and install the PnP PowerShell cmdlets. Everything you need to run Windows PowerShell, including download and installation instructions as well as the Windows PowerShell command documentation, is available in the [SharePointPnP.PowerShell Commands](https://github.com/SharePoint/PnP-PowerShell) repository on GitHub.
 
-**Note:**  The SharePointPnP.PowerShell Commands repository contains three versions of the Windows PowerShell commands MSI. Two are for on-premises use (one for SharePoint 2013 and one for SharePoint 2016), and the third one is for SharePoint Online.
+> [!NOTE] 
+> The SharePointPnP.PowerShell Commands repository contains three versions of the Windows PowerShell commands MSI. Two are for on-premises use (one for SharePoint 2013 and one for SharePoint 2016), and the third one is for SharePoint Online.
 
 The SharePointPnP.PowerShell Commands repository contains contents that enable you to build a library of Windows PowerShell commands that target SharePoint Online. The commands use CSOM and can work against both SharePoint Online and SharePoint on-premises, depending on which MSI package you install.
 
@@ -32,7 +34,8 @@ Additionally, there is a short [Channel 9](https://channel9.msdn.com/) video&mda
 
 To employ CSOM/REST code to extract a provisioning template, you simply create a development project by using Visual Studio or another development environment. Create any type of project&mdash;for example, a console or Windows application, or a SharePoint Add-in. After you create a development project, you must then install the Core library, which is available as a NuGet package.
 
-**Note:**  Instructions for locating and installing the Core library NuGet package, and a walkthrough for a remote provisioning sample console application, are available in [Provisioning console application sample](provisioning-console-application-sample.md). Note that the Core library comes in two versions: one targets SharePoint Online, SharePoint 2013, and Office 365; and one targets SharePoint 2013 on-premises.
+> [!NOTE] 
+> Instructions for locating and installing the Core library NuGet package, and a walkthrough for a remote provisioning sample console application, are available in [Provisioning console application sample](provisioning-console-application-sample.md). Note that the Core library comes in two versions: one targets SharePoint Online, SharePoint 2013, and Office 365; and one targets SharePoint 2013 on-premises.
 
 While detailed instructions for using CSOM are in the [Provisioning console application sample](provisioning-console-application-sample.md), the general overview is like this:
 
@@ -44,7 +47,8 @@ While detailed instructions for using CSOM are in the [Provisioning console appl
     
 4. Save the provisioning template instance to a file location of your choice by using a template provider and serialization formatter.
     
-	**Note:**  Because the template provider and the serialization formatter objects can be customized, you can implement whatever persistence storage and serialization format you like. Out-of-the-box, the PnP provisioning engine provides support for file system, SharePoint, and Azure blob storage template providers. It also supports XML and JSON serialization formatters.
+	> [!NOTE] 
+  > Because the template provider and the serialization formatter objects can be customized, you can implement whatever persistence storage and serialization format you like. Out-of-the-box, the PnP provisioning engine provides support for file system, SharePoint, and Azure blob storage template providers. It also supports XML and JSON serialization formatters.
 
 You can see an example of the XML serialization output and learn more about the XML serialization schema in the [PnP provisioning schema](pnp-provisioning-schema.md) article. You also can get the schema and its documentation on GitHub:[SharePoint/PnP-Provisioning-Schema](https://github.com/SharePoint/PnP-Provisioning-Schema/). There also is a [Channel 9](https://channel9.msdn.com/) video&mdash;[Deep dive into PnP provisioning engine schema](https://channel9.msdn.com/blogs/OfficeDevPnP/Deep-dive-to-PnP-provisioning-engine-schema)&mdash;that introduces and discusses the schema.
 
@@ -139,7 +143,7 @@ The Core library (OfficeDevPnP.Core) is a CSOM/REST object model that supports t
 |OfficeDevPnP.Core.Framework.Provisioning.Providers.Xml.V201505|Auto generated schema files for v201505 version of the schema.|
 |OfficeDevPnP.Core.Framework.Provisioning.Providers.Xml.V201508|Auto generated schema files for v201508 version of the schema.|
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [Provisioning console application sample](provisioning-console-application-sample.md)

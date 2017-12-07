@@ -27,10 +27,7 @@ A SharePoint workflow can subscribe to be notified when an item is added or chan
   
 The Eventing actions are accessed in the **Action** drop-down menu of the SharePoint Designer 2013 ribbon as shown in the figures.
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > The **Project Web App Actions** are only available when working with a Project Web App site.
   
     
@@ -258,7 +255,7 @@ Once a field has changed the workflow continues.
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

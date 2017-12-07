@@ -81,7 +81,8 @@ For the prerequisites, see  [Get started creating SharePoint-hosted SharePoint A
 
 7. Add  **webPart** markup as a child of the **webParts** element. The following is an example that adds an **XsltListViewWebPart**. It assumes that a custom list called "Test List" is part of the same add-in project. For information about how to add a custom list to an add-in web, see  [Create a provider-hosted add-in that includes a custom SharePoint list and content type](create-a-provider-hosted-add-in-that-includes-a-custom-sharepoint-list-and-conte.md). 
     
-     **Note**   Note that the Web Part does not have an ID property. It is a best practice to include an explicit ID for the Web Part only in the two cases where it is really required: The Web Part is being added to a SharePoint wiki page. The Web Part is one of two or more Web Parts that will be connected.
+    > [!NOTE] 
+    > Note that the Web Part does not have an ID property. It is a best practice to include an explicit ID for the Web Part only in the two cases where it is really required: The Web Part is being added to a SharePoint wiki page. The Web Part is one of two or more Web Parts that will be connected.
 
 ```
   <webParts>

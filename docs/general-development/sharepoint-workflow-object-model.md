@@ -103,7 +103,7 @@ Reference content for SharePoint schemas is contained in the reference node enti
     
   
 
-## Additional resources
+## See also
 <a name="bk_additionalresources"> </a>
 
 

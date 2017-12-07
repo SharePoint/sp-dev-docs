@@ -125,7 +125,7 @@ A workflow can be developed in either the Text-Based Designer or the Visual Desi
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

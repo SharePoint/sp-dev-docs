@@ -118,7 +118,7 @@ When you know the kinds of SharePoint Add-in that you want to create, we provide
 | [Get started creating SharePoint-hosted SharePoint Add-ins](http://msdn.microsoft.com/library/1b992485-6efe-4ea4-a18c-221689b0b66f%28Office.15%29.aspx) <br/> |Contains step-by-step instructions on how to create a basic SharePoint Add-in that is hosted on a SharePoint site.  <br/> |
    
 
-## Additional resources
+## See also
 <a name="bk_additionalresources"> </a>
 
 

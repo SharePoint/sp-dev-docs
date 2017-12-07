@@ -76,7 +76,7 @@ In principle, you can reuse an external data source, compute component, or other
 
 If the old and new add-ins each contain an add-in web, consider that a new add-in web is created when your new add-in is installed. For this reason, you should not use the update-related XML markup in the SharePoint Feature schema. Such markup does not work because you are not updating existing SharePoint components; you are replacing an old add-in with a new one.
 
-## Additional resources
+## See also
 <a name="SP15appupgrade_addlresources"> </a>
 
 -  [Update SharePoint Add-ins](update-sharepoint-add-ins.md)

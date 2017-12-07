@@ -36,7 +36,7 @@ We encourage you to  [embed Excel into your web pages ](https://support.office.c
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

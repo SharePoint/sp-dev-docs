@@ -1,6 +1,6 @@
 ---
 title: Use Office UI Fabric React components in your SharePoint client-side web part
-ms.date: 09/25/2017
+ms.date: 12/05/2017
 ms.prod: sharepoint
 ---
 
@@ -13,16 +13,14 @@ The following image shows a DocumentCard component created with Office UI Fabric
 
 ![Image of a DocumentCard Fabric component in a SharePoint workbench](../../../images/fabric-components-doc-card-view-ex.png)
 
-You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=1N6kNvLxyg4&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
+You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=1YRu4-nZot4&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=7). 
 
-<a href="https://www.youtube.com/watch?v=1N6kNvLxyg4&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
+<a href="https://www.youtube.com/watch?v=1YRu4-nZot4&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=7">
 <img src="../../../images/spfx-youtube-tutorial6.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
 
 ## Creating a new Web Part project
-
-Make sure you're using the latest version of . Run `yo` and follow the prompts to create a skeleton project,.
 
 Create a new project directory in your favorite location:
 
@@ -121,7 +119,7 @@ The *new modern experiences* in SharePoint use Office UI Fabric and Office UI Fa
 Since we chose React as our framework when creating the solution, the generator installed the right version of Office UI Fabric React as well. You can directly import the Fabric components in your react components without any additional work. 
 
 > [!NOTE]
-> With the initial release of the SharePoint Framework, it is recommended to use the Office UI Fabric and Fabric React that ships with the generator. It is not recommended to update the Office UI Fabric and Fabric React packages independently as it might conflict with the already available version in SharePoint and as a result your web part may fail to function as expected.
+> With the current release of the SharePoint Framework, it is recommended to use the Office UI Fabric and Fabric React that ships with the generator. It is not recommended to update the Office UI Fabric and Fabric React packages independently as it might conflict with the already available version in SharePoint and as a result your web part may fail to function as expected.
 
 Open **DocumentCardExample.tsx** from the **src\webparts\documentCardExample\components** folder. 
 
@@ -212,21 +210,22 @@ Your full **gulpfile.js** file should look as follows.
 
 const gulp = require('gulp');
 const build = require('@microsoft/sp-build-web');
+build.addSuppression(`Warning - [sass] The local CSS class 'ms-Grid' is not camelCase and will not be type-safe.`);
 
-build.configureWebpack.mergeConfig({  
-    additionalConfiguration: (generatedConfiguration) => {
-        if (build.getConfig().production) {
-            var basePath = build.writeManifests.taskConfig.cdnBasePath;
-            if (!basePath.endsWith('/')) {
-                basePath += '/';
-            }
-            generatedConfiguration.output.publicPath = basePath;
-        }
-        else {
-            generatedConfiguration.output.publicPath = "/dist/";
-        }
-        return generatedConfiguration;
-    }
+build.configureWebpack.mergeConfig({
+  additionalConfiguration: (generatedConfiguration) => {
+      if (build.getConfig().production) {
+          var basePath = build.writeManifests.taskConfig.cdnBasePath;
+          if (!basePath.endsWith('/')) {
+              basePath += '/';
+          }
+          generatedConfiguration.output.publicPath = basePath;
+      }
+      else {
+          generatedConfiguration.output.publicPath = "/dist/";
+      }
+      return generatedConfiguration;
+  }
 });
 
 build.initialize(gulp);

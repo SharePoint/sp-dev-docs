@@ -43,9 +43,8 @@ The picker has the following components:
  
 - An autofill control.
     
- 
-
- **Note**  The picker and its functionality are defined in the  **clientforms.js**,  **clientpeoplepicker.js**, and  **autofill.js** script files, which are located in the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\LAYOUTS folder on the server.
+> [!NOTE] 
+> The picker and its functionality are defined in the  **clientforms.js**,  **clientpeoplepicker.js**, and  **autofill.js** script files, which are located in the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\LAYOUTS folder on the server.
  
 
 
@@ -54,10 +53,8 @@ The picker has the following components:
 
 This article assumes that you create the SharePoint Add-in by using Napa on an Office 365 Developer Site. If you're using this development environment, you've already met the prerequisites.
  
-
- 
-
- **Note**  Go to  [Set up a development environment for SharePoint Add-ins on Office 365](set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md) to find out how to sign up for a Developer Site and start using Napa.
+> [!NOTE] 
+> Go to  [Set up a development environment for SharePoint Add-ins on Office 365](set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md) to find out how to sign up for a Developer Site and start using Napa.
  
 
 If you're not using Napa on a Developer Site, you'll need the following:
@@ -73,9 +70,8 @@ If you're not using Napa on a Developer Site, you'll need the following:
  
 - Office Developer Tools for Visual Studio 2013
     
- 
-
- **Note**  For guidance about how to set up a development environment that fits your needs, see  [Start building Office and SharePoint Add-ins](http://msdn.microsoft.com/library/187f8c8c-1b15-471c-80b5-69a40e67deea.aspx).
+> [!NOTE] 
+> For guidance about how to set up a development environment that fits your needs, see  [Start building Office and SharePoint Add-ins](http://msdn.microsoft.com/library/187f8c8c-1b15-471c-80b5-69a40e67deea.aspx).
  
 
 The following steps describe the high-level steps for adding the picker to your add-in and then getting its user information from another client-side control. See  [Code example: Using the client-side People Picker](use-the-client-side-people-picker-control-in-sharepoint-hosted-sharepoint-add-in.md#bk_example) for the corresponding code.
@@ -162,8 +158,8 @@ The first example shows the page markup for the  **PlaceHolderMain** **asp:Conte
 </asp:Content>
 ```
 
-
- **Note**  Depending on your environment, you might not have to explicitly reference all of these dependencies.
+> [!NOTE] 
+> Depending on your environment, you might not have to explicitly reference all of these dependencies.
  
 
 The following example shows the script from the App.js file. This script initializes and renders the picker, queries it for user information, and then gets the user ID by using the JavaScript object model.
@@ -247,7 +243,7 @@ function onFail(sender, args) {
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

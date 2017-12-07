@@ -369,7 +369,7 @@ This article demonstrated how to use the chrome control in a SharePoint Add-in. 
 -  [Create custom actions to deploy with SharePoint Add-ins](create-custom-actions-to-deploy-with-sharepoint-add-ins.md)
 -  [Create add-in parts to install with your SharePoint Add-in](create-add-in-parts-to-install-with-your-sharepoint-add-in.md)
 
-## Additional resources
+## See also
 <a name="SP15Usechromecontrol_Addresources"> </a>
 
 -  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md)

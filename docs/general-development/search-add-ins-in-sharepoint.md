@@ -219,7 +219,7 @@ The add-in manifest file is in XML format and can be edited directly. To get per
 ```
 
 
-## Additional resources
+## See also
 <a name="SP15_Search_app_addresources"> </a>
 
 

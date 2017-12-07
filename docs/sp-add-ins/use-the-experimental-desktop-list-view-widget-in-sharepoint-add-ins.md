@@ -9,10 +9,8 @@ ms.prod: sharepoint
 # Use the experimental Desktop List View widget in SharePoint Add-ins
 Learn how to use the Desktop List View widget on any web page, even if the page is not hosted in SharePoint. Use the List View widget in your add-ins to display data in lists that are hosted in a SharePoint site.
  
- 
-
-
- **Note**  The Office Web Widgets - Experimental are only provided for research and feedback purposes. Do not use in production scenarios. The Office Web Widgets behavior may change significantly in future releases. Read and review the  [Office Web Widgets - Experimental License Terms](office-web-widgetsexperimental-license-terms.md).
+> [!NOTE] 
+> The Office Web Widgets - Experimental are only provided for research and feedback purposes. Do not use in production scenarios. The Office Web Widgets behavior may change significantly in future releases. Read and review the  [Office Web Widgets - Experimental License Terms](office-web-widgetsexperimental-license-terms.md).
  
 
 
@@ -40,10 +38,8 @@ You can specify the view in the SharePoint list that you want to use to display 
  
 The List View widget uses the cross-domain library to get the list data. For this reason, communication happens at the client level.
  
-
- 
-
- **Caution**  The Desktop List View widget doesn't enable all the scenarios of the native List View.
+> [!WARNING] 
+> The Desktop List View widget doesn't enable all the scenarios of the native List View.
  
 
 The following scenarios have not been enabled in the current version of the widget:
@@ -112,7 +108,9 @@ To use the List View widget, you must do the following:
  
 - Create a list on the add-in web. This step also ensures that an add-in web is created when users deploy the add-in.
     
-     **Note**  The cross-domain library requires the existence of an add-in web. The List View widget communicates with SharePoint by using the cross-domain library.
+    > [!NOTE] 
+    > The cross-domain library requires the existence of an add-in web. The List View widget communicates with SharePoint by using the cross-domain library.
+
 - Create an add-in page that declares a List View widget instance using HTML markup.
     
  
@@ -131,7 +129,9 @@ To use the List View widget, you must do the following:
  
 4. Select  **Provider-hosted** as the hosting option for your add-in.
     
-     **Note**  You can also use the Desktop List View widget with other hosting options or even with Office Add-ins or your own website.
+    > [!NOTE] 
+    > You can also use the Desktop List View widget with other hosting options or even with Office Add-ins or your own website.
+
 5. Select  **ASP.NET Web Forms Application** as the type of web application project.
     
  
@@ -305,7 +305,8 @@ To use the List View widget, you must do the following:
 ```
 
 
- **Note**  The code example above explicitly specifies the host web and add-in web URLs to initialize the Office controls runtime. However, if the add-in web and host web URLs are specified in the  **SPAppWebUrl** and **SPHostUrl** query string parameters, respectively; you can pass an empty object and the code will attempt to get the parameters automatically. The **SPAppWebUrl** and **SPHostUrl** parameters are included in the query string when you use the **{StandardTokens}** token.
+> [!NOTE] 
+> The code example above explicitly specifies the host web and add-in web URLs to initialize the Office controls runtime. However, if the add-in web and host web URLs are specified in the  **SPAppWebUrl** and **SPHostUrl** query string parameters, respectively; you can pass an empty object and the code will attempt to get the parameters automatically. The **SPAppWebUrl** and **SPHostUrl** parameters are included in the query string when you use the **{StandardTokens}** token.
  
 
 The following example shows you how to pass an empty object to the initialize method:
@@ -328,7 +329,9 @@ Office.Controls.Runtime.initialize({});
 
 1. Press the F5 key.
     
-     **Note**  When you press F5, Visual Studio builds the solution, deploys the add-in, and opens the permissions page for the add-in.
+    > [!NOTE] 
+    > When you press F5, Visual Studio builds the solution, deploys the add-in, and opens the permissions page for the add-in.
+
 2. Choose the  **Trust It** button.
     
  
@@ -423,7 +426,7 @@ You can use the experimental Desktop List View widget to display data in SharePo
 
  
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

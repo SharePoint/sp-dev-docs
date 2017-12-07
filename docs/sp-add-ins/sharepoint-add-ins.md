@@ -142,6 +142,6 @@ Ready to get started?
 > [!NOTE]
 > If you're a beginner at both SharePoint and web development, you'd benefit most by starting with the free course at Microsoft's Virtual Academy, or working through a book about SharePoint development.
 
-## Additional resources
+## See also
 
 [Developing Microsoft SharePoint Server 2013 Core Solutions Jump Start](http://www.microsoftvirtualacademy.com/training-courses/developing-microsoft-sharepoint-server-core-solutions-jump-start)

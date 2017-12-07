@@ -111,7 +111,8 @@ The state of SharePoint files and content affects how easy it is to apply update
 |ghosted|A file with a source that is stored outside the content database.|A pointer in the content database (the ghost of the file) still exists that tells SharePoint to look for the file's source on the server's file system.|
 |unghosted|An uncustomized version of the source file resides in the content database.|Example: The SharePoint 2013 Design Manager creates a sandboxed solution to package branding files. It's never added to the file system of the server, therefore by definition its files are considered unghosted. But, the files it deploys are still in an uncustomized state. |
 
-**Note**  If a file has been customized, it won't be updated when you install new service packs or the SharePoint Online service is updated.
+> [!NOTE] 
+> If a file has been customized, it won't be updated when you install new service packs or the SharePoint Online service is updated.
 
 ## Site branding and provisioning with the Cloud Add-in Model
 <a name="sectionSection6"> </a>
@@ -152,7 +153,8 @@ The branding and provisioning code samples follow this sequence of events to sho
 |2|If the workflow is approved, the add-in for SharePoint calls the stored data and provisions the site according to the metadata that user submitted in step 1.| <p>[Provision sites in batches with the add-in model](https://code.msdn.microsoft.com/Provision-sites-in-batches-fcf31bc6)</p><p>[SharePoint 2013: Use workflow to provision a SharePoint site (host web)](https://code.msdn.microsoft.com/SharePoint-2013-Use-e2ee88dd)</p><p>[SharePoint 2013: Use workflow to provision a SharePoint site (app web)](https://code.msdn.microsoft.com/SharePoint-2013-Use-2b96feb7)</p><p>[SharePoint 2013: Use add-ins for SharePoint to provision on-prem site collection](https://code.msdn.microsoft.com/SharePoint-2013-Use-apps-9094e012)</p>| [SharePoint 2013 site provisioning](sharepoint-site-provisioning-solutions.md)|
 |3|The add-in for SharePoint scopes provisioning to the instructions in the request form by using the data available in the add-in web and content database. During this stage, applicable branding elements are provisioned to the site.| <p>[SharePoint 2013: Use an add-in for SharePoint to configure CSS](https://code.msdn.microsoft.com/SharePoint-2013-Use-an-app-c5d78f25)</p><p>[SharePoint 2013: Use an add-in for SharePoint to apply a theme to a SharePoint site](https://code.msdn.microsoft.com/SharePoint-2013-Use-an-app-d90a49e3)</p><p>[SharePoint 2013: Brand a SharePoint OneDrive For Business site](https://code.msdn.microsoft.com/SharePoint-2013-Brand-a-6da627cb)</p><p>[SharePoint 2013: Provision custom CSS to a site with remote provisioning](https://code.msdn.microsoft.com/SharePoint-2013-Provision-bf1d878a)</p><p>[SharePoint 2013: Use an add-in for SharePoint to provision a wiki page](https://code.msdn.microsoft.com/SharePoint-2013-Use-an-app-5db977e8)</p>|<p>[SharePoint pages and the page model](SharePoint-pages-and-the-page-model.md)</p><p>[SharePoint site branding and page customization solutions](SharePoint-site-branding-and-page-customization-solutions.md)</p><p>[SharePoint 2013 site provisioning](sharepoint-site-provisioning-solutions.md)|
 
-**Note**  Table 4 lists the steps that might be typical of a remote provisioning scenario. The samples you use depend on the approach that works best for your enterprise. For example, if you don't have a business need to create a custom approval workflow, you won't use that sample. 
+> [!NOTE] 
+> Table 4 lists the steps that might be typical of a remote provisioning scenario. The samples you use depend on the approach that works best for your enterprise. For example, if you don't have a business need to create a custom approval workflow, you won't use that sample. 
 
 **Figure 1. Example of a site provisioning and branding workflow using the remote provisioning pattern**
 
@@ -184,7 +186,8 @@ The code samples described in this section show the core scenario and extend it 
 |SiteProvisioningWorkflow|Provisions site collections with a workflow on the host web and a remote event receiver.| [SharePoint 2013 site provisioning](sharepoint-site-provisioning-solutions.md)|
 |SiteProvisioningWorkflowAppWeb|Provisions site collections with a workflow on the add-in web and a remote event receiver.| [SharePoint 2013 site provisioning](sharepoint-site-provisioning-solutions.md)|
 
-**Note**  The BatchProvisioning, SiteProvisioningWorkflow, and SiteProvisioningWorkflowAppWeb samples demonstrate the core concepts and functions of the remote provisioning pattern. The ProvisionWikiPages sample addresses a specific use case (Wiki page provisioning).
+> [!NOTE] 
+> The BatchProvisioning, SiteProvisioningWorkflow, and SiteProvisioningWorkflowAppWeb samples demonstrate the core concepts and functions of the remote provisioning pattern. The ProvisionWikiPages sample addresses a specific use case (Wiki page provisioning).
 
 **Table 6. Branding samples**
 
@@ -212,7 +215,8 @@ The branding design and development workflow for SharePoint websites closely res
     
 - Package your site design, and use add-ins for SharePoint and the remote provisioning pattern to provision site branding.
 
-**Note**  Applying branding in SharePoint means modifying the look and feel of a default SharePoint site. This can include making both structural and cosmetic changes to the site's appearance
+> [!NOTE] 
+> Applying branding in SharePoint means modifying the look and feel of a default SharePoint site. This can include making both structural and cosmetic changes to the site's appearance
 
 ### Branding cost and complexity
 
@@ -265,7 +269,7 @@ When considering moving an existing customization from full-trust code to the Cl
     
 -  [SharePoint site branding and page customization solutions](SharePoint-site-branding-and-page-customization-solutions.md)
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)

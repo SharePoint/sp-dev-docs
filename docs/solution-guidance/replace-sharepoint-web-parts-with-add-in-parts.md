@@ -54,7 +54,8 @@ To use CSOM to replace a Web Part with an add-in part, you need to get the add-i
     
 10. Choose the add-in part file that you downloaded, and then choose  **Open** to view the add-in part definition.
     
-**Note:**  The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
+> [!NOTE] 
+> The code in this article is provided as-is, without warranty of any kind, either express or implied, including any implied warranties of fitness for a particular purpose, merchantability, or non-infringement.
 
 ```XML
 <webParts>
@@ -239,7 +240,7 @@ private static void ReplaceWebPart(Web web, ListItem item, LimitedWebPartManager
   }
 ```
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [Transform farm solutions to the SharePoint add-in model](Transform-farm-solutions-to-the-SharePoint-app-model.md)

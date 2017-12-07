@@ -14,7 +14,8 @@ Set up the your development environment to debug remote events in by using Visua
 ## Configure debugging for a remote SharePoint test site
 
 
- **Note**  The procedures in this section apply only when your test SharePoint site is on a different computer from Visual Studio or you are using an SharePoint Online Developer Site as your test site. If SharePoint and Visual Studio are on the same computer, skip this section.
+> [!NOTE] 
+> The procedures in this section apply only when your test SharePoint site is on a different computer from Visual Studio or you are using an SharePoint Online Developer Site as your test site. If SharePoint and Visual Studio are on the same computer, skip this section.
  
 
 When a SharePoint Add-in project in Visual Studio includes a remote event receiver (RER) or an add-in event receiver, you have to do some additional quick configuration in the project properties before you can debug the add-in with (F5). This configuration, in turn, requires that you do some Azure configuration. You do not have to repeat the Azure configuration for every project that has an RER or add-in event. (If the add-in includes an AppInstalled event handler, the add-in won't even run with either F5 or Ctrl-F5 [run without debugging] unless you carry out the configuration in this section.)
@@ -218,7 +219,7 @@ When the add-in is in Microsoft SharePoint Online, but the remote event receiver
 
  
 
-## Additional resources
+## See also
 <a name="Additional"> </a>
 
 

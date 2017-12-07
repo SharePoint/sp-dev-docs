@@ -251,7 +251,7 @@ The connector framework also provides improved exception capturing and logging t
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

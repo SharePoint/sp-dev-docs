@@ -34,6 +34,6 @@ Notifications will be sent to your application for the following asynchronous li
 
 Synchronous events are not supported in webhooks.
 
-## Additional resources
+## See also
 
 * [Overview of SharePoint webhooks](../overview-sharepoint-webhooks.md)

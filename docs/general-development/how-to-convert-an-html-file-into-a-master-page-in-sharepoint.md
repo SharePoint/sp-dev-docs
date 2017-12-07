@@ -37,9 +37,7 @@ When you convert an HTML file into a master page:
   
 - The HTML file and master page are associated, so that any later edits to the HTML file are synced to the .master file when the HTML file is saved.
     
-  
-
-> **Note:**
+> [!NOTE]
 > The syncing goes in one direction only. Changes to the HTML master page are synced to the associated .master file, but if you choose to edit the .master file directly the changes are not synced to the HTML file. Every HTML master page (and every HTML page layout) has a property named **Associated File** that is set to **True** by default, which creates the association and syncing between files.
   
     
@@ -137,8 +135,8 @@ Before you convert an HTML file, you first have to upload all of your design fil
   
 5. In the **Select an Asset** dialog box, browse to and select the HTML file that you want to convert.
     
-    > **Note:**
-      > When you upload your design files, you should keep all files that are related to a single design in their own folder in the Master Page Gallery. When you copy your design folder into the mapped network drive, the Master Page Gallery retains whatever folder structure you created. 
+    > [!NOTE]
+    > When you upload your design files, you should keep all files that are related to a single design in their own folder in the Master Page Gallery. When you copy your design folder into the mapped network drive, the Master Page Gallery retains whatever folder structure you created. 
 6. Choose **Insert**.
     
     At this point, SharePoint converts your HTML file into a .master file with the same name.
@@ -496,7 +494,7 @@ The following is an example of markup added to an HTML file after it is converte
 ```
 
 
-## Additional resources
+## See also
 <a name="Additional"> </a>
 
 

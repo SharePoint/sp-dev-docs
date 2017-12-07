@@ -67,7 +67,8 @@ This article describes how to create your first Field Customizer Extension. You 
     code .
     ```
     
-    > **Note:** Because the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor that supports client-side development to build your extension.
+    > [!NOTE] 
+    > Because the SharePoint client-side solution is HTML/TypeScript based, you can use any code editor that supports client-side development to build your extension.
 
     Note how the default solution structure looks like the solution structure of client-side web parts. This is the basic SharePoint Framework solution structure, with similar configuration options across all solution types.
 

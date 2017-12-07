@@ -150,8 +150,8 @@ In order for the workflow to function properly it must be granted full control i
     
     Example: http://{hostname}/{the Site Collection}/_layouts/15/appinv.aspx. 
     
-    > **Note:**
-      > The 'app' in this step refers to the Workflow app in general and not just a specific workflow. Individual workflows cannot be access controlled. When you enable app permissions you are enabling for all workflows within the Site Collection. 
+    > [!NOTE]
+    > The 'app' in this step refers to the Workflow app in general and not just a specific workflow. Individual workflows cannot be access controlled. When you enable app permissions you are enabling for all workflows within the Site Collection. 
 
     For more information about setting up a workflow, see  [Blog article from Sympraxis Consulting: Looping Through Content in a SharePoint Site Workflow](http://sympmarc.com/2016/01/14/looping-through-content-in-a-sharepoint-site-workflow-part-1-introduction)
     
@@ -352,7 +352,7 @@ The following diagram illustrates the change in permissions
     
     
 
-## Additional resources
+## See also
 <a name="section3"> </a>
 
 

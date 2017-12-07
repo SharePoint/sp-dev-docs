@@ -421,7 +421,7 @@ Any user with browse rights to a SharePoint website can launch any SharePoint Ad
 
  
 
-## Additional resources
+## See also
 <a name="Filename_AdditionalResources"> </a>
 
 

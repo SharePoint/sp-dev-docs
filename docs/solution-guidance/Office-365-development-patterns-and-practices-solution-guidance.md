@@ -29,7 +29,7 @@ _**Applies to:** Office 365 | SharePoint 2016 | SharePoint 2013 | SharePoint Onl
 |[PnP remote timer job framework](pnp-remote-timer-job-framework.md)|Describes timer jobs which are background tasks that operate on your SharePoint sites.|
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Office 365 Development Patterns and Practices on GitHub](https://github.com/SharePoint/PnP)

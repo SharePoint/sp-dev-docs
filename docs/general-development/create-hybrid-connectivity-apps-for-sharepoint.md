@@ -81,8 +81,9 @@ To create an OData endpoint, you will need to follow these steps for creating a 
 
 1. Create an IIS website running at least Microsoft .NET Framework 4. Secure the site using basic authentication.
     
-    > **Note:**
-      > It's not necessary for SharePoint to be installed on this server. In fact, for the sake of simplicity and performance, it's better if SharePoint is not installed on the server that hosts the WCF data service. 
+    > [!NOTE]
+    > It's not necessary for SharePoint to be installed on this server. In fact, for the sake of simplicity and performance, it's better if SharePoint is not installed on the server that hosts the WCF data service. 
+
 2. Create a new project in Visual Studio 2012 using the **ASP.NET Empty Web Application** template.
     
   
@@ -210,7 +211,7 @@ You can also take the BDCM file created for the external content type and extrac
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

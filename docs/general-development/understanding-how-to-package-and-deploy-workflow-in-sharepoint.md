@@ -26,15 +26,7 @@ SharePoint Designer 2013 provides the capability to save a workflow as a templat
 |Reusable Workflow  <br/> |Yes  <br/> |Yes  <br/> |
    
 
-  
-    
-    
-
-  
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > SharePoint contains two different workflow platforms: the SharePoint 2010 Workflow platform and the SharePoint Workflow platform. Both platforms are available in SharePoint. For more information about the two workflow, see  [Getting started with SharePoint workflow.](http://msdn.microsoft.com/library/cc73be76-a329-449f-90ab-86822b1c2ee8.aspx)
   
     
@@ -154,8 +146,9 @@ To deploy a workflow package follow this procedure.
   
 3. In the **Web Design Galleries** section click **Solutions**.
     
-    > **Note:**
-      > You must be on the **Site Settings** page for the site collection in order to see the **Solutions** gallery. If you are on the **Site Settings** page for a sub-site then the **Solutions** gallery is not visible.
+    > [!NOTE] 
+    > You must be on the **Site Settings** page for the site collection in order to see the **Solutions** gallery. If you are on the **Site Settings** page for a sub-site then the **Solutions** gallery is not visible.
+
 4. Click the **Upload Solution** button to upload the solution as shown in the figure.
     
    **Figure: Upload Solution button**
@@ -220,7 +213,7 @@ After a workflow solution has been activated for a site collection, it is availa
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

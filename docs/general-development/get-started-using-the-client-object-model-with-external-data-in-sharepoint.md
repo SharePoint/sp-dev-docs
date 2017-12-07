@@ -207,7 +207,7 @@ For more information about using the client object model in SharePoint, see the 
 | [BCS client object model reference for SharePoint](bcs-client-object-model-reference-for-sharepoint.md) <br/> |Summarizes the objects available for creating client-side scripts using the SharePoint client object model to access external data exposed by BCS.  <br/> |
    
 
-## Additional resources
+## See also
 <a name="BCScsom_Learnmore"> </a>
 
 

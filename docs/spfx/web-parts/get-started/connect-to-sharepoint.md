@@ -1,6 +1,6 @@
 ---
 title: Connect your client-side web part to SharePoint (Hello world part 2)
-ms.date: 09/25/2017
+ms.date: 12/05/2017
 ms.prod: sharepoint
 ---
 
@@ -9,9 +9,9 @@ ms.prod: sharepoint
 
 Connect your web part to SharePoint to access functionality and data in SharePoint and provide a more integrated experience for end users. This article continues building the hello world web part built in the previous article [Build your first web part](./build-a-hello-world-web-part.md).
 
-You can also follow follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=9VMwjb2pbQ8&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
+You can also follow follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=hYrP6D4FaaU&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=3). 
 
-<a href="https://www.youtube.com/watch?v=9VMwjb2pbQ8&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
+<a href="https://www.youtube.com/watch?v=hYrP6D4FaaU&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=3">
 <img src="../../../images/spfx-youtube-tutorial2.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
@@ -369,4 +369,4 @@ Now you can stop the server from running. Switch to the console and stop `gulp s
 
 ## Next steps
 
-Congratulations on connecting your web part to SharePoint list data! You can continue building out your Hello World web part in the next topic [Deploy your web part to a SharePoint page](./serve-your-web-part-in-a-sharepoint-page.md). You will learn how to deploy and preview the Hello World web part in a classic SharePoint server-side page.
+Congratulations on connecting your web part to SharePoint list data! You can continue building out your Hello World web part in the next topic [Deploy your web part to a SharePoint page](./serve-your-web-part-in-a-sharepoint-page.md). You will learn how to deploy and preview the Hello World web part in a SharePoint page.

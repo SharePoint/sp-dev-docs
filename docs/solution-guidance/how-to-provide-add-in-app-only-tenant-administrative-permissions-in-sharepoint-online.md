@@ -21,7 +21,7 @@ Steps to provide tenant admin permission for app only add-in:
 Notice that this operation has to be completed under the tenant administration site and account used for these operations will need to have tenant administrative permissions. If you are providing lower level permissions for your add-in, you can complete those under normal site collection URLs with lower permissions. 
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [Register SharePoint Add-ins 2013](https://msdn.microsoft.com/en-us/library/office/jj687469.aspx)

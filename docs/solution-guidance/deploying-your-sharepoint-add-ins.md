@@ -13,7 +13,7 @@ The articles in this section show you how to deploy your SharePoint add-ins.
 |[Configure Provider-Hosted Add-ins for Distribution](Configure-SP-Provider-Hosted-Apps-For-Distribution.md)|This page explains issues that may arise when sharing a SharePoint Provider-Hosted application with other developers or when obtaining a copy from a source control system such as Team Foundation Server, Git or Visual Studio Online.|
 |[Configure Office 365 Projects for Distribution](Configure-O365Api-Project-For-Distribution.md)|This page explains some steps developers should consider taking on their projects that leverage the Office 365 APIs prior to distributing them to other developers, their customers, or to source control systems.|
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 - [Office 365 development patterns and practices solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)

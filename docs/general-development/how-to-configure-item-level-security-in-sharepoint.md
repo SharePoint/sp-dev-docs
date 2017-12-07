@@ -76,9 +76,8 @@ DefaultDisplayName="ReadSecurity">
 </Method>
 ```
 
-
-> **Note:**
-> If you return the security descriptor as a field of the external content type, you cannot use client caching. This is because cached items are limited to a specific size, which access control lists (ACL) can easily exceed. Therefore, the Search connector framework ignores requests to cache items if they contain a security descriptor field. 
+> [!NOTE]
+> ems are limited to a specific size, which access control lists (ACL) can easily exceed. Therefore, the Search connector framework ignores requests to cache items if they contain a security descriptor field. 
   
     
     
@@ -189,7 +188,7 @@ unchecked((int)0xffffffffL), InheritanceFlags.None, PropagationFlags.None);
 ```
 
 
-## Additional resources
+## See also
 <a name="SP15Itemlevelsec_addlresources"> </a>
 
 

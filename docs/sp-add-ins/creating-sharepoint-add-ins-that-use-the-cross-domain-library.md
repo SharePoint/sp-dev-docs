@@ -25,8 +25,8 @@ There are some scenarios in which neither the low-trust nor the high-trust autho
  
 However,  [for security](http://msdn.microsoft.com/en-us/library%28d=robot%29/cc709423(d=robot,l=en-us,v=vs.85).aspx), browsers do not allow JavaScript that is hosted on one domain to access resources on another domain, so a special technique is required to allow the remote JavaScript to access SharePoint resources. The SharePoint cross-domain JavaScript library makes it easy for your remote web application to use the technique.
  
-
- **Note**  The cross-domain library is also used to allow access to data in the reverse direction; that is, to allow JavaScript on a SharePoint page to access data in a remote domain. See  [Access remote data from a SharePoint page](#ReverseDirection) for more information.
+> [!NOTE] 
+> The cross-domain library is also used to allow access to data in the reverse direction; that is, to allow JavaScript on a SharePoint page to access data in a remote domain. See  [Access remote data from a SharePoint page](#ReverseDirection) for more information.
  
 
 
@@ -60,8 +60,8 @@ Of course, the remote components of the SharePoint Add-in still have to have aut
 </AppPrincipal>
 ```
 
-
- **Note**  If you use the second option (an  **Internal** add-in principal), then you can use only JavaScript and the cross-domain library to access SharePoint. The SharePoint client object model is blocked for **Internal**SharePoint Add-ins, so you cannot have a dual authorization system that uses both the cross-domain library and either the low-trust or high-trust systems.
+> [!NOTE] 
+> If you use the second option (an  **Internal** add-in principal), then you can use only JavaScript and the cross-domain library to access SharePoint. The SharePoint client object model is blocked for **Internal**SharePoint Add-ins, so you cannot have a dual authorization system that uses both the cross-domain library and either the low-trust or high-trust systems.
  
 
 For details on how to use the library, see  [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md).
@@ -88,7 +88,7 @@ The SharePoint cross-domain library can also be used in the reverse direction; t
     
  
 
-## Additional resources
+## See also
 <a name="ReverseDirection"> </a>
 
 

@@ -16,7 +16,7 @@ For more information about throttling in SharePoint Online (for example, causes,
 
 Also, in the [ClientContextExtensions.cs](https://github.com/SharePoint/PnP/blob/dev/Samples/Core.Throttling/Core.Throttling/ClientContextExtensions.cs) sample, check out the ExecuteQueryImplementation extension method. ExecuteQueryImplementation is included in [OfficeDevPnP.Core](https://github.com/SharePoint/PnP-Sites-Core/tree/master/Core/OfficeDevPnP.Core).    
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Solution guidance](Office-365-development-patterns-and-practices-solution-guidance.md)

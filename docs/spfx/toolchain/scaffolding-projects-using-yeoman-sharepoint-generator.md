@@ -10,7 +10,8 @@ Yeoman SharePoint generator is available as part of the framework as a [npm pack
 npm install @microsoft/generator-sharepoint -g
 ```
 
->**Note:** Yeoman generator for SharePoint is targeted to get deployed globally with the initial General Availability (GA) version. There are some known issues if it's installed locally to the project, which are planned to be addressed post GA.
+> [!NOTE] 
+> Yeoman generator for SharePoint is targeted to get deployed globally with the initial General Availability (GA) version. There are some known issues if it's installed locally to the project, which are planned to be addressed post GA.
 
 It is recommended you follow the [set up your development environment](../set-up-your-development-environment.md) to configure your machine with the complete set of developer tools, including yeoman SharePoint generator. 
 
@@ -63,19 +64,18 @@ yo @microsoft/sharepoint --solutionName "hello-world" --framework "react" --comp
 
 > Notice that some of the options have dependencies between each other. You cannot for example create extension with on-premises option.
 
-### Notes on --skip-install 
+> [!NOTE]
+> Using the `--skip-install` command will scaffold the project and skip installing dependencies. This means, to successfully build the project, you will need to install the dependencies later once the project is scaffolded. 
 
-Using the `--skip-install` command will scaffold the project and skip installing dependencies. This means, to successfully build the project, you will need to install the dependencies later once the project is scaffolded. 
+> If you try to build your project without installing the dependencies, then you will get the following error. This indicates you need to install the dependencies before building the project:
 
-If you try to build your project without installing the dependencies, then you will get the following error. This indicates you need to install the dependencies before building the project:
+> ```
+> Local gulp not found in ~/<project-name>
+> Try running: npm install gulp
+> ```
 
-```
-Local gulp not found in ~/<project-name>
-Try running: npm install gulp
-```
+> You can execute the following command to install the dependencies:
 
-You can execute the following command to install the dependencies:
-
-```
-npm install
-```
+> ```
+> npm install
+> ```

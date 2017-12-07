@@ -47,10 +47,7 @@ As a best practice in SharePoint development, use client APIs when you can. Clie
     
 Each API includes a manager object that you use to perform core feed-related tasks. Table 1 shows the manager and other key objects (or REST resources) in the APIs and the class library (or endpoint URI) where you can find them.
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > The Silverlight and mobile client object models are not explicitly mentioned in Table 1 or Table 2 because they provide the same core functionality as the .NET client object model and use the same signatures. The Silverlight client object model is defined in Microsoft.SharePoint.Client.UserProfiles.Silverlight.dll, and the mobile client object model is defined in Microsoft.SharePoint.Client.UserProfiles.Phone.dll. 
   
     
@@ -116,8 +113,7 @@ Table 2 shows common programming tasks for working with social feeds and the mem
 |Get the number of unread mentions for the current user|CSOM:  [GetUnreadMentionCount](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.GetUnreadMentionCount.aspx) <br/> JSOM:  [getUnreadMentionCount](http://msdn.microsoft.com/library/18dde16a-f78f-f65e-0644-4eb737b1ae00%28Office.15%29.aspx) <br/> REST: **GET** [`<siteUri>/_api/social.feed/my/UnreadMentionCount`](social-feed-rest-api-reference-for-sharepoint.md#bk_myUnreadMentionCount) <br/> SSOM:  [GetUnreadMentionCount](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFeedManager.GetUnreadMentionCount.aspx)|
 |Lock (unlock) a thread in the current user's feed|CSOM:  [LockThread](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.LockThread.aspx) ( [UnlockThread](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.SocialFeedManager.UnlockThread.aspx) ) <br/> JSOM:  [lockThread](http://msdn.microsoft.com/library/cc696bb7-e7fd-7a57-5db5-736c3733589e%28Office.15%29.aspx) ( [unlockThread](http://msdn.microsoft.com/library/ee9288d6-ace0-1ec2-ea7c-0ee300b6e1ea%28Office.15%29.aspx))  <br/> REST: **POST** [`<siteUri>/_api/social.feed/Post/Lock`](social-feed-rest-api-reference-for-sharepoint.md#bk_postLock) ( [`<siteUri>/_api/social.feed/Post/Unlock`](social-feed-rest-api-reference-for-sharepoint.md#bk_postUnlock)) and pass the  _ID_ parameter in the request body <br/> SSOM:  [LockThread](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFeedManager.LockThread.aspx) ( [UnlockThread](https://msdn.microsoft.com/library/Microsoft.Office.Server.Social.SPSocialFeedManager.UnlockThread.aspx) .md)|
    
-
-> **Note:**
+> [!NOTE] 
 > The  _domain\\user_ placeholder value in the REST example should be replaced with the account name of an actual user. To see how to pass a REST parameter in a request body, see the [examples](social-feed-rest-api-reference-for-sharepoint.md#bk_exampleRequests) in the Social feed REST API reference.
   
     
@@ -153,10 +149,7 @@ Feed types represent slices of feed data. When you retrieve a feed for the curre
   
 The server, client, and JavaScript object models provide the **GetFeed** method that you can use to retrieve any feed type for the current user and the **GetFeedFor** method that you can use to retrieve the **Personal** feed type (only) for a specified user. Both methods take a **SocialFeedOptions** object as a parameter, which you use to specify the time-based sort order, date range, and maximum number of threads to return.
   
-    
-    
-
-> **Note:**
+> [!NOTE] 
 > The REST service provides separate resources to retrieve each feed type, as shown in Table 2. 
   
     
@@ -167,7 +160,7 @@ If a thread contains more than two replies, the server returns a digest of the t
     
     
 
-## Additional resources
+## See also
 <a name="bkmk_AdditionalResources"> </a>
 
 

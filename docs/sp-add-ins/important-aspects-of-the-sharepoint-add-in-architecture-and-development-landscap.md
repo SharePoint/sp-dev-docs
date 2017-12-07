@@ -205,7 +205,7 @@ The following is an example of raw **AppPrerequisites** markup that registers th
 - [Choose patterns for developing and hosting your SharePoint Add-in](choose-patterns-for-developing-and-hosting-your-sharepoint-add-in.md)
 - [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md)
 
-## Additional resources
+## See also
 <a name="SPAppModelArch_AdditionalResources"> </a>
 
 -  [SharePoint Add-ins](sharepoint-add-ins.md)

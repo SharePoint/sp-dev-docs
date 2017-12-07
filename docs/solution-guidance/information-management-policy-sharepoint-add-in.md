@@ -24,7 +24,8 @@ As a rule of a thumb, we would like to provide the following high level guidelin
 - Ensure you are not violating the Office 365 SharePoint API throttle limits when working with large data sets and recursive crawls as you inspect artifacts in your SharePoint sites and apply information management policies to them accordingly.
 	+ The [Core.Throttling (O365 Pnp Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Core.Throttling) demonstrates how to write intelligent code to handle Office 365 SharePoint API throttling.
 
-**Note:** Currently, the CSOM does not have methods to set retention on content types (only on sites).
+> [!NOTE] 
+> Currently, the CSOM does not have methods to set retention on content types (only on sites).
 
 **Getting Started**
 

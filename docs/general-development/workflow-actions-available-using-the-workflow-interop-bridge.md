@@ -107,7 +107,7 @@ The following actions are available only when you use the workflow interop bridg
     
   
 
-## Additional resources
+## See also
 <a name="bkm_addlresources"> </a>
 
 

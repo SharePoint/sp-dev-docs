@@ -306,7 +306,7 @@ SharePoint provides two new REST interfaces: Navigation and Event Logging. You c
     
   
 
-## Additional resources
+## See also
 
 
 -  [Changes from SharePoint 2010 to SharePoint](http://technet.microsoft.com/en-us/library/ff607742.aspx)

@@ -32,20 +32,17 @@ In this step, you will build and test your application. Visual Studio offers sev
   
 2. The application prints the following output to the console.
     
-    > **Note:**
-      > These values vary depending on the values you have in your workbook, session ID, and so on. 
+    > [!NOTE]
+    > These values vary depending on the values you have in your workbook, session ID, and so on. 
 
-```
-  
-The Credential is: System.Net.SystemNetworkCredential
-Total rows in range: 18
-Value in range is: 4245.955129
-```
+    ```
+    The Credential is: System.Net.SystemNetworkCredential
+    Total rows in range: 18
+    Value in range is: 4245.955129
+    ```
 
 3. Press any key to close SampleApplication.exe.
     
-  
-
 ### File Not Found Exception
 
 

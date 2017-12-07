@@ -113,7 +113,7 @@ Key = vti_pageslistname, Value = {the URL to the Pages list}
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

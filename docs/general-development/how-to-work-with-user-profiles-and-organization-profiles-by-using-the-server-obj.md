@@ -14,10 +14,7 @@ Learn how to create, retrieve, and change SharePoint user profiles and user prof
 
 In SharePoint, user profiles represent SharePoint users. User profile properties represent information about the users and also about the properties themselves. For example, properties include the account name or email address of a user and the data type of a property. You can use the server object model to programmatically create, retrieve, and change user profiles, profile subtypes, and profile properties.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > For more information about common programming tasks for working with user profiles and the API that you use to perform the tasks, see  [Work with user profiles in SharePoint](work-with-user-profiles-in-sharepoint.md). 
   
     
@@ -89,10 +86,7 @@ In SharePoint, user profiles represent SharePoint users. Profile types and subty
     
 The following code example creates a  [UserProfile](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.UserProfile.aspx) object that is associated with the default user profile subtype. Some user profile properties are automatically populated with information that is imported from the directory that contains user accounts, such as Active Directory Domain Services. For a code example that creates a custom subtype, see [ProfileSubtype](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfileSubtype.aspx) .
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Change the domain\\username andservername placeholder values before you run the code.
   
     
@@ -160,10 +154,7 @@ A profile property and its attributes are represented by a set of linked objects
     
 The following code example creates a  [CoreProperty](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.CoreProperty.aspx) that has a URL data type (or optionally a [CoreProperty](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.CoreProperty.aspx) that has a multivalue string data type). In addition, it creates a [ProfileTypeProperty](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfileTypeProperty.aspx) and a [ProfileTypeProperty](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfileTypeProperty.aspx) that define availability, privacy, and other settings for the property. The [ProfileSubtypeProperty.DefaultPrivacy](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfileSubtypeProperty.DefaultPrivacy.aspx) property controls the visibility of properties and other My Site content. For a complete list of the possible data types for profile property values, see [PropertyDataType](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PropertyDataType.aspx) .
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Change the servername placeholder value before you run the code.
   
     
@@ -256,10 +247,7 @@ namespace UserProfilesSSOM
 
 The following code example retrieves all user profiles within the context and changes the value of a user's  [DisplayName](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.UserProfile.DisplayName.aspx) property. Most profile properties are accessed by using the [UserProfile.Item](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.UserProfile.Item.aspx) accessor.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Change the domain\\username andservername placeholder values before you run the code.
   
     
@@ -329,10 +317,7 @@ namespace UserProfilesSSOM
 
 The following code example retrieves the set of properties that represent a specific user property and its attributes, and then it changes the  [CoreProperty.DisplayName](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.CoreProperty.DisplayName.aspx) attribute, [ProfileTypeProperty.IsVisibleOnViewer](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfileTypeProperty.IsVisibleOnViewer.aspx) attribute, and [ProfileSubtypeProperty.PrivacyPolicy](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfileSubtypeProperty.PrivacyPolicy.aspx) attribute. These changes apply globally to the property set. [ProfileSubtypeProperty.PrivacyPolicy](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfileSubtypeProperty.PrivacyPolicy.aspx) specifies whether users are required to provide a value for the property. [PrivacyPolicy](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.ProfileSubtypeProperty.PrivacyPolicy.aspx) applies to user profile properties only.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Change the servername placeholder value before you run the code.
   
     
@@ -407,10 +392,7 @@ namespace UserProfilesSSOM
 
 The following code example retrieves all **UserProfile** type properties and retrieves the property values for a specific user. Then, it changes the single-value [PictureUrl](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PropertyConstants.PictureUrl.aspx) property and the multivalue [PastProjects](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PropertyConstants.PastProjects.aspx) property. For the complete list of profile property name constants, see [PropertyConstants](https://msdn.microsoft.com/library/Microsoft.Office.Server.UserProfiles.PropertyConstants.aspx) .
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > Change the domain\\username, http://servername/docLib/pic.jpg, and servername placeholder values before you run the code.
   
     
@@ -497,7 +479,7 @@ namespace UserProfilesSSOM
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

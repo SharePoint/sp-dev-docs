@@ -106,7 +106,7 @@ We recommend that you become familiar with the following set of REST APIs:
 
 The [Office Dev Patterns and Practices / SharePoint Pattern and Practices (PnP)](http://aka.ms/officedevpnp) initiative provides code samples, patterns, and other resources to help you transform your existing solution to the SharePoint Framework. Be sure to become familiar with the code samples and guidance that is available through the PnP effort.
 
-## Additional resources
+## See also
 
 * [SharePoint Framework](sharepoint-framework-overview.md)
 * [Build a Hello World client-side web part](web-parts/get-started/build-a-hello-world-web-part.md)

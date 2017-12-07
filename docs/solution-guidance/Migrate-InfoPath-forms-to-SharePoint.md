@@ -28,7 +28,7 @@ We recommend the first two solutions, because information workers who don't know
 |Use Microsoft Flow and Microsoft PowerApps|This is the our recommended approach for extending lists by SharePoint power users .|
 |New add-in model and client side developments |You can convert complex forms driven by extensive code into provider-hosted add-ins or client side web parts. This option requires developer resources.|
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Patterns and Practices InfoPath transformation guidance](https://github.com/SharePoint/PnP-Transformation/tree/master/InfoPath) 

@@ -875,7 +875,7 @@ From this form (the List form for the Orders list) you can add, edit, or delete 
     
     
 
-## Additional resources
+## See also
 <a name="SP15Usemultlists_addlresources"> </a>
 
 

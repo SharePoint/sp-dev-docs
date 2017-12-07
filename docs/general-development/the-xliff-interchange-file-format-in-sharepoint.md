@@ -91,7 +91,7 @@ The following example of an XML document in XLIFF interchange file format demons
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

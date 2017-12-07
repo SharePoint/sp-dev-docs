@@ -95,7 +95,7 @@ Inside an app, a developer can also create his own custom UI (using HTML/JavaScr
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

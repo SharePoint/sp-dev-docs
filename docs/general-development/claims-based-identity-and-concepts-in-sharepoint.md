@@ -132,17 +132,14 @@ If your relying party application runs as the local system account, it does not 
     
 Suppose that you have a web farm that consists of a server that runs an ASP.NET application, which accesses a SQL database on a back-end server. You want to make this application claims-aware. But, the application can't access the SQL database by using the claim that it receives from an STS. Instead, it uses the c2WTS to convert the UPN claim to a Windows security token. This allows it to access the SQL database.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > To allow an application to access resources on a different server, a domain administrator must configure the Active Directory directory service to enable constrained delegation. For information about how to enable constrained delegation, see  [How to: Use protocol transition and constrained eelegation in ASP.NET 2.0](http://msdn.microsoft.com/en-us/library/ms998355.aspx). 
   
     
     
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

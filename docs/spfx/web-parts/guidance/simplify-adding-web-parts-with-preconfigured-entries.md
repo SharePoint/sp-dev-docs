@@ -9,7 +9,8 @@ ms.prod: sharepoint
 
 More complex SharePoint Framework client-side web parts will likely have many properties that the user must configure. You can help users by adding preconfigured property entries for specific scenarios. A preconfigured entry will initialize the web part with preset values. In this article you will learn how you to use preconfigured entries in a SharePoint Framework client-side web part to provide users with preconfigured versions of your web part.
 
-> **Note:** Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment.md).
+> [!NOTE] 
+> Before following the steps in this article, be sure to [set up your SharePoint client-side web part development environment](../../set-up-your-development-environment.md).
 
 ## What are web part preconfigured entries
 
@@ -55,7 +56,7 @@ description             |ILocalizedString|yes     |The web part description that
 officeFabricIconFontName|string          |no      |The icon for the web part that is displayed in the toolbox. Its value must be one of the [Office UI Fabric icon names](https://dev.office.com/fabric#/styles/icons). If this property has a value, the **iconImageUrl** property will be ignored.|`"officeFabricIconFontName": "Sunny"`
 iconImageUrl            |string          |no      |The icon for the web part that is displayed in the toolbox and is represented by an image URL. The image at the URL must be exactly 40 x 28 px. If the **officeFabricIconName** property does not have a value, this property must have a value.|`"iconImageUrl": "https://cdn.contoso.com/weather.png"`
 groupId                 |string          |yes     |The group id to determine which modern group contains the web part in modern site page. The SharePoint Framework reserves group ids for [predefined groups](#predefined-modern-groups). The developer can pick one from those groups. If the developer fills an id not in the predefined groups, it falls back to **Other** group.|`"groupId": "1edbd9a8-0bfb-4aa2-9afd-14b8c45dd489"`
-group                   |ILocalizedString|no      |The group name in web part picker to contain the web part in the classic page. If no value is provided, then the web part will be displayed in the **Custom** group.|`"group": { "default": "Content", "nl-nl": "Inhoud" }`
+group                   |ILocalizedString|no      |The group name in web part picker to contain the web part in the classic page. If no value is provided, then the web part will be displayed in the **Miscellaneous** group.|`"group": { "default": "Content", "nl-nl": "Inhoud" }`
 dataVersion             |string          |no      |Use this field to specify the data version of the pre-configured data provided to the web part. Note that data version is different from the version field in the manifest. The manifest version is used to control the versioning of the web part code, while data version is used to control the versioning of the serialized data of the web part. Refer to dataVersion field of your web part for more information. Supported values format: MAJOR.MINOR version|`"dataVersion": "1.0"`
 properties              |TProperties     |yes     |A Key-value pair object with default values for web part properties.|`"properties": { "location": "Redmond", "numberOfDays": 3, "showIcon": true }`
 
@@ -440,7 +441,8 @@ Start debugging the project by running the following command:
 gulp serve
 ```
 
-> **Note**: If you were debugging the project previously, stop debugging and start it again. Changes made to the web part manifest are not automatically reflected in the workbench while debugging, and you have to rebuild the project in order to see them.
+> [!NOTE] 
+> If you were debugging the project previously, stop debugging and start it again. Changes made to the web part manifest are not automatically reflected in the workbench while debugging, and you have to rebuild the project in order to see them.
 
 When you open the web part toolbox to add the web part to the canvas, you will see that its name and icon changed to reflect the preconfigured settings.
 

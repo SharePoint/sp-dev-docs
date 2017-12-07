@@ -54,7 +54,7 @@ The WF 4.0 activity classes provide some useful features that you may not find i
     
   
 
-## Additional resources
+## See also
 <a name="bkm_addlres"> </a>
 
 

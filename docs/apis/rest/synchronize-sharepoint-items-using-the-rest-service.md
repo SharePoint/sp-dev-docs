@@ -61,7 +61,7 @@ The request returns ADO  **rowset** XML which includes rows corresponding to any
 |**ChangeToken**|A string that contains the change token for the request. For a description of the format that is used in this string, see  [Overview of the Change Log](http://msdn.microsoft.com/en-us/library/bb417456.aspx). If null is passed, all items in the list are returned.|
 |**Contains**|A  [Contains](http://msdn.microsoft.com/en-us/library/ms196501.aspx) element that defines custom filtering for the query.|
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)

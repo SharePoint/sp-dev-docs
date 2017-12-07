@@ -197,7 +197,7 @@ See  [Microsoft Support Knowledge Base article ID 2557533](http://support.micros
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

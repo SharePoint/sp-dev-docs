@@ -39,7 +39,7 @@ Table 1 lists the possible after-upgrade problems for custom components and info
 |Master pages  <br/> |During upgrade, any references to custom master pages you have created are reverted back to the default.master page. This may cause errors in SharePoint due to references on the custom page to missing components.  <br/> To fix this, you have to change the references to any custom master pages.  <br/> |
    
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

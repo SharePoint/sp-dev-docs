@@ -33,7 +33,7 @@ See these articles for more information about the design and support capabilitie
     
   
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

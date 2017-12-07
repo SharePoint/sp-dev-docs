@@ -30,9 +30,7 @@ Use the following guidelines to associate and launch (initiate) your workflows u
   
 - To initiate a **site** workflow, use the [StartWorkflow](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowInstanceService.StartWorkflow.aspx) method.
     
-  
-
-> **Note:**
+> [!NOTE] 
 > The two methods for **associating** workflows are found on the [WorkflowSubscriptionService](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowSubscriptionService.aspx) class, while the two methods for **launching** workflows are found on the [WorkflowInstanceService](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.WorkflowInstanceService.aspx) class.
   
     
@@ -114,14 +112,10 @@ In the case of **list** workflows, there are four additional association propert
     
   
 
-> **Important:**
+> [!IMPORTANT] 
 > Properties marked with an asterisk (\*) are not defined in the Workflow APIs, so to access them simply use their string values. 
   
-    
-    
-
-
-> **Note:**
+> [!NOTE] 
 > You can add custom association properties by using an association form. 
   
     
@@ -171,22 +165,17 @@ List workflows instances have some additional external variables that are set by
   
 -  [UniqueId](https://msdn.microsoft.com/library/Microsoft.SharePoint.WorkflowServices.ExternalVariableName.UniqueId.aspx)
     
-  
-
-> **Note:**
+> [!NOTE] 
 > You can add custom initiation properties by using an initiation form. 
   
     
     
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
-
 -  [Develop SharePoint workflows using Visual Studio](develop-sharepoint-workflows-using-visual-studio.md)
-    
-  
 -  [How to: Create SharePoint Workflows using Visual Studio](how-to-create-sharepoint-workflows-using-visual-studio.md)
     
   

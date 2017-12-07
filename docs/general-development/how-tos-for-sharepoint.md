@@ -54,9 +54,9 @@ Find how-to articles and related code examples that show how to perform basic de
 |:-----|:-----|
 | [Publish SharePoint Add-ins by using Visual Studio](../sp-add-ins/publish-sharepoint-add-ins-by-using-visual-studio.md) <br/> |Learn how to package your SharePoint Add-in by using Visual Studio 2012.  <br/> |
 | [Create or edit a Seller Dashboard seller account and add payout information](https://developer.microsoft.com/en-us/store/register) <br/> |The Microsoft Seller Dashboard is the central location for app developers to submit Office and SharePoint Add-ins. Learn how to create a seller account, including a marketing profile, so that you can submit apps for inclusion in the Office Store.  <br/> |
-| [Create or update client IDs and secrets in the Seller Dashboard](https://dev.office.com/officestore/docs/create-or-update-client-ids-and-secrets) <br/> |Learn how to create Client IDs and secrets, and associate them with your apps in the Seller Dashboard to enable Open Authorization (OAuth) authorization services in your Office and SharePoint Add-ins.  <br/> |
-| [Use the Seller Dashboard to submit Office and SharePoint Add-ins and Office 365 apps to the Office Store](https://dev.office.com/officestore/docs/use-the-seller-dashboard-to-submit-to-the-office-store) <br/> |The Microsoft Seller Dashboard enables software developers to submit apps for SharePoint and Office to the Office Store. Learn how to submit your apps for approval and inclusion in the Office Store.  <br/> |
-| [Create effective Office Store apps and add-ins](https://dev.office.com/officestore/docs/create-effective-office-store-listings) <br/> |Get guidance on how to create an effective Office Store listing: name your app appropriately, write effective, engaging app descriptions for your app, and include consistent, properly formatted logos with your app submission to the Seller Dashboard.  <br/> |
+| [Create or update client IDs and secrets in the Seller Dashboard](https://docs.microsoft.com/en-us/office/dev/store/create-or-update-client-ids-and-secrets) <br/> |Learn how to create Client IDs and secrets, and associate them with your apps in the Seller Dashboard to enable Open Authorization (OAuth) authorization services in your Office and SharePoint Add-ins.  <br/> |
+| [Use the Seller Dashboard to submit Office and SharePoint Add-ins and Office 365 apps to the Office Store](https://docs.microsoft.com/en-us/office/dev/store/use-the-seller-dashboard-to-submit-to-the-office-store) <br/> |The Microsoft Seller Dashboard enables software developers to submit apps for SharePoint and Office to the Office Store. Learn how to submit your apps for approval and inclusion in the Office Store.  <br/> |
+| [Create effective Office Store apps and add-ins](https://docs.microsoft.com/en-us/office/dev/store/create-effective-office-store-listings) <br/> |Get guidance on how to create an effective Office Store listing: name your app appropriately, write effective, engaging app descriptions for your app, and include consistent, properly formatted logos with your app submission to the Seller Dashboard.  <br/> |
    
 <a name="bk_lichowtos"> </a>
 ## Licensing how-tos for Office and SharePoint Add-ins
@@ -64,7 +64,7 @@ Find how-to articles and related code examples that show how to perform basic de
 |**Title**|**Summary**|
 |:-----|:-----|
 | [Add license checks to your apps for Office](https://msdn.microsoft.com/library/fp161347.aspx) <br/> |Learn how to add code to your Office Add-in that checks the validity of a user's app license, and takes action based on the app license properties. Load test app license tokens to test your license checking code.  <br/> |
-| [Add license checks to Office and SharePoint Add-ins](https://dev.office.com/officestore/docs/add-license-checks-to-office-and-sharepoint-add-ins) <br/> |Learn how to add code to your SharePoint Add-in that checks the validity of a user's app license, and takes action based on the app license properties. Load test app license tokens to test your license checking code.  <br/> |
+| [Add license checks to Office and SharePoint Add-ins](https://docs.microsoft.com/en-us/office/dev/store/add-license-checks-to-office-and-sharepoint-add-ins) <br/> |Learn how to add code to your SharePoint Add-in that checks the validity of a user's app license, and takes action based on the app license properties. Load test app license tokens to test your license checking code.  <br/> |
    
 <a name="bk_setuphowtos"> </a>
 ## Setting up your dev environment how-tos for developing sites and solutions in SharePoint
@@ -204,7 +204,7 @@ Find how-to articles and related code examples that show how to perform basic de
 | [Deploy a claims provider in SharePoint](how-to-deploy-a-claims-provider-in-sharepoint.md) <br/> |Learn how to deploy a SharePoint claims provider by using the features infrastructure and creating a class that inherits from  [SPClaimProviderFeatureReceiver](https://msdn.microsoft.com/library/Microsoft.SharePoint.Administration.Claims.SPClaimProviderFeatureReceiver.aspx) . <br/> |
    
 <a name="bk_addresc_howtos"> </a>
-## Additional resources
+## See also
 
 -  [SharePoint general development](https://msdn.microsoft.com/en-us/library/office/mt674607.aspx)
 -  [Code samples for SharePoint](code-samples-for-sharepoint.md)

@@ -62,10 +62,7 @@ The following articles provide information about SharePoint Add-ins and other ba
 
 The following procedures will show you how to create a new external list, bind it to OData-based external content type, and publish to SharePoint using Visual Studio 2012.
   
-    
-    
-
-> **Note:**
+> [!NOTE]
 > The first step assumes that you have successfully created an external content type, as described in  [How to: Create an external content type from an OData source in SharePoint](how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md). 
   
     
@@ -111,7 +108,7 @@ For testing purposes, you may want to modify the AppManifest.xml file so that th
     
   
 
-## Additional resources
+## See also
 <a name="bkmk_AdditionalResources"> </a>
 
 

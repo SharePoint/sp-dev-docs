@@ -12,18 +12,15 @@ ms.assetid: 28716ba5-0774-44df-833b-0034d2c63319
 # Save from Excel client to the server
 
 This example shows you how to:
-  
-    
-    
-
 
 1. Create a workbook with editable ranges.
     
   
 2. Save the workbook to a SharePoint document library that is a trusted location.
     
-    > **Note:**
-      > It is assumed that you have already created a SharePoint document library and made it a trusted location. For more information, see  [How to: Trust a Location](how-to-trust-a-location.md). 
+    > [!NOTE]
+    > It is assumed that you have already created a SharePoint document library and made it a trusted location. For more information, see  [How to: Trust a Location](how-to-trust-a-location.md).
+
 3. Change values in a workbook by using the parameters pane in Excel Web Access.
     
   

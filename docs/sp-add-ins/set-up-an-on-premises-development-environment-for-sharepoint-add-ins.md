@@ -221,7 +221,7 @@ For information about your options for deploying your add-ins, see [Deploying an
 > After you deploy a SharePoint-hosted add-in to your installation, you may be prompted to sign in with your credentials when you try to launch it. You need to disable the loopback check to get rid of these prompts. For instructions about how to disable the loopback check, see [You receive error 401.1 when you browse a Web site that uses Integrated Authentication and is hosted on IIS 5.1 or a later version](http://support.microsoft.com/kb/896861).
  
 
-## Additional resources
+## See also
 <a name="SP15SetupSPO365_bk_addlresources"> </a>
 
 - [SharePoint Add-ins](sharepoint-add-ins.md)

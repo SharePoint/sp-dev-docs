@@ -18,11 +18,8 @@ For this walkthrough, you will create a new project and a simple console applica
 
 The following project uses Microsoft Visual Studio 2003.
   
-    
-    
-
-> **Note:**
->  If you are using Microsoft Visual Studio 2005 or Microsoft Visual Studio 2008, the process to create a new project is slightly different depending on which settings you use in the Visual Studio integrated development environment (IDE).
+> [!NOTE]
+> If you are using Microsoft Visual Studio 2005 or Microsoft Visual Studio 2008, the process to create a new project is slightly different depending on which settings you use in the Visual Studio integrated development environment (IDE).
   
     
     

@@ -124,7 +124,8 @@ Thanks to using DataTables, end-users get a powerful solution where they can eas
 
 ## Migrate the IT requests overview solution from the Script Editor Web Part to the SharePoint Framework
 
-> **Note:** Before following the steps in this article, be sure to [set up your development environment](../../set-up-your-development-environment.md) for building SharePoint Framework solutions.
+> [!NOTE] 
+> Before following the steps in this article, be sure to [set up your development environment](../../set-up-your-development-environment.md) for building SharePoint Framework solutions.
 
 Transforming this customization to the SharePoint Framework offers a number of benefits such as more user-friendly configuration and centralized management of the solution. Following is a step-by-step description of how you would migrate the solution to the SharePoint Framework. First, you will migrate the solution to the SharePoint Framework with as few changes to the original code as possible. Later, you will transform the solution's code to TypeScript to benefit of its development-time type safety features.
 
@@ -286,7 +287,8 @@ For the web part to load the plugin, it has to reference the newly created **mom
 import './moment-plugin';
 ```
 
-> **Note:** you don't need to include the **.js** extension when referencing other files. SharePoint Framework will automatically resolve the extension for you.
+> [!NOTE] 
+> You don't need to include the **.js** extension when referencing other files. SharePoint Framework will automatically resolve the extension for you.
 
 ### Initiate DataTables and load data
 

@@ -314,7 +314,7 @@ The service follows standard HTTP return codes: an HTTP 200 response indicates a
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

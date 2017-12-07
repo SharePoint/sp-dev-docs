@@ -48,7 +48,7 @@ To see a step-by-step process of how to build a localized application for Window
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

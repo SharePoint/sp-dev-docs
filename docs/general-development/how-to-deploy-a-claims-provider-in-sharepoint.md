@@ -156,7 +156,7 @@ namespace MySample.Sample.Server.SampleClaimsProvider
 ```
 
 
-## Additional resources
+## See also
 <a name="SP15_HowToDeployClaimsProvider_AdditionalResources"> </a>
 
 

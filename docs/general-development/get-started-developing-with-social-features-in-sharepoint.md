@@ -149,8 +149,7 @@ Although apps and solutions access SharePoint differently, after you do access S
 |Representational State Transfer (REST) service| [`http://<site url>/_api/social.feed`](social-feed-rest-api-reference-for-sharepoint.md)<br/>[`http://<site url>/_api/social.following`](following-people-and-content-rest-api-reference-for-sharepoint.md)<br/>[`http://<site url>/_api/SP.UserProfiles.PeopleManager`](http://msdn.microsoft.com/library/10757ed1-6e86-474f-89e0-6dec6aa66a2b%28Office.15%29.aspx.md#bk_PeopleManager)|
 | [Server object model](http://msdn.microsoft.com/library/87c5118c-ac0e-4bd9-a75f-7452a9eb0e41%28Office.15%29.aspx)|Microsoft.Office.Server.UserProfiles.dll<br/>in %ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\ISAPI|
    
-
-> **Note:**
+> [!NOTE]
 > Not all server-side functionality in the Microsoft.Office.Server.UserProfiles assembly is available from client APIs. To see which APIs are available, see the  [Microsoft.SharePoint.Client.Social](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.Social.aspx) namespace and the [Microsoft.SharePoint.Client.UserProfiles](https://msdn.microsoft.com/library/Microsoft.SharePoint.Client.UserProfiles.aspx) namespace.
   
     
@@ -209,7 +208,7 @@ You should be aware of the following considerations when you specify app permiss
     
   
 
-## Additional resources
+## See also
 <a name="bk_AddResources"> </a>
 
  **Conceptual articles**

@@ -268,7 +268,8 @@ gulp package-solution
 
 The command above will package one or more client-side component manifests, such as web parts, along with the feature XML files referenced in the `package-solution.json` configuration file.
 
->**NOTE:** You can use the `--ship` flag to package minified versions of your components. 
+> [!NOTE] 
+> You can use the `--ship` flag to package minified versions of your components. 
 
 #### Upgrade SharePoint items
 
@@ -324,7 +325,7 @@ Adds a new element to an existing Feature. When a Feature is upgraded, provision
 
 Specifies a version range to which specified upgrade actions apply.
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 -  [SharePoint PnP Webcast - Provisioning SharePoint assets for your SPFx solution](https://www.youtube.com/watch?v=r-UdJhhHlEQ&list=PLR9nK3mnD-OUnJytlXlO84fQnYt50iTmS)

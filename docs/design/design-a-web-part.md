@@ -74,7 +74,7 @@ In step 3, the next button is disabled and the back button is enabled.
 ![Steps pane with back button enabled](../images/design-web-part-steps-pane-03.png)
 
 
-## Additional resources
+## See also
 
 - [Designing great SharePoint experiences](design-guidance-overview.md)
 

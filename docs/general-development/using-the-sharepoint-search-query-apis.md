@@ -169,7 +169,7 @@ To download an example, see the following code sample posted by SharePoint MVP  
     
     
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 

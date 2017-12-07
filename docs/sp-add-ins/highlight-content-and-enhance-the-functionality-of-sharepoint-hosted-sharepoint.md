@@ -394,7 +394,7 @@ callout.set({positionAlgorithm: tryDownAndRightThenGoDefault});
 ```
 
 
-## Additional resources
+## See also
 <a name="bk_addresources"> </a>
 
 
