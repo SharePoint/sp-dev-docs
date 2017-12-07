@@ -254,7 +254,7 @@
     - name: JSON schema reference
       href: declarative-customization/site-design-json-schema.md
     - name: PowerShell cmdlets
-      href: site-design-powershell.md
+      href: declarative-customization/site-design-powershell.md
     - name: REST API
       href: declarative-customization/site-design-rest-api.md
     - name: CSOM API
