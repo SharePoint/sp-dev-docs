@@ -1,6 +1,6 @@
 ---
 title: Provisioning SharePoint assets from your SharePoint client-side web part
-ms.date: 09/25/2017
+ms.date: 12/05/2017
 ms.prod: sharepoint
 ---
 
@@ -8,6 +8,12 @@ ms.prod: sharepoint
 # Provisioning SharePoint assets from your SharePoint client-side web part
 
 This article describes how to provision SharePoint assets as part of the SharePoint Framework solution. These assets are deployed to SharePoint sites when the solution is installed on it. Article also covers needed steps for introducing possible updates as part of new versions of the package. This process is exactly the same as for add-in update.
+
+You can also follow follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=qAqNk_X82QM&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=8). 
+
+<a href="https://www.youtube.com/watch?v=qAqNk_X82QM&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=8">
+<img src="../../../images/spfx-youtube-tutorial2.png" alt="Screenshot of the YouTube video player for this tutorial" />
+</a>
 
 ## Prerequisites
 Complete the following steps before you start to understand the basic flow of creating a custom client-side web part:
@@ -44,13 +50,18 @@ yo @microsoft/sharepoint
 When prompted:
 
 * Accept the default **asset-deployment-webpart** as your solution name and choose **Enter**.
+* Choose **SharePoint Online only (latest)**, and press **Enter**.
 * Select **Use the current folder** as the location for the files.
+* Choose **N** to require the extension to be installed on each site explicitly when it's being used. 
+* Choose **WebPart** as the client-side component type to be created. 
 
 The next set of prompts will ask for specific information about your web part:
 
-* Accept the default **No JavaScipt web framework** option for the framework and choose **Enter** to continue.
 * Type **AssetDeployment** for the web part name and choose **Enter**.
 * Enter **AssetDeployment Web Part** as the description of the web part and choose **Enter**. 
+* Accept the default **No JavaScipt web framework** option for the framework and choose **Enter** to continue.
+
+![Yeoman prompts](../../../images/asset-deployment-yeoman.png)
 
 At this point, Yeoman will install the required dependencies and scaffold the solution files. This might take a few minutes. Yeoman will scaffold the project to include your **AssetDeployment** web part as well.
 
@@ -206,31 +217,36 @@ The **package-solution.json** file defines the package metadata as shown in the 
 
 ```json
 {
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
     "name": "asset-deployment-webpart-client-side-solution",
-    "id": "31086065-dbdb-493f-b02e-7b7f97f45bd9",
-    "version": "1.0.0.0"
+    "id": "6690f11b-012f-4268-bc33-3086eb2dd287",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true
   },
   "paths": {
     "zippedPackage": "solution/asset-deployment-webpart.sppkg"
   }
 }
+
 ```
 
 To ensure that our newly added Feature Framework files are taken into account while solution is being packaged, we'll need to include a Feature Framework feature definition for the solution package. Let's include a JSON definition for needed feature inside of the solution structure as demonstrated in below code.
 
 ```json
 {
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
     "name": "asset-deployment-webpart-client-side-solution",
-    "id": "31086065-dbdb-493f-b02e-7b7f97f45bd9",
+    "id": "6690f11b-012f-4268-bc33-3086eb2dd287",
     "version": "1.0.0.0",
+    "includeClientSideAssets": true,
     "features": [{
       "title": "asset-deployment-webpart-client-side-solution",
       "description": "asset-deployment-webpart-client-side-solution",
       "id": "523fe887-ced5-4036-b564-8dad5c6c6e24",
       "version": "1.0.0.0",
-      "assets": {        
+      "assets": {
         "elementManifests": [
           "elements.xml"
         ],
@@ -244,7 +260,6 @@ To ensure that our newly added Feature Framework files are taken into account wh
     "zippedPackage": "solution/asset-deployment-webpart.sppkg"
   }
 }
-
 ```
 
 Things to note in the added json definitions:
@@ -270,25 +285,27 @@ The command will create the package in the `sharepoint/solution` folder:
 ```
 asset-deployment-webpart.sppkg
 ```
+
 Before testing the package in the SharePoint, let's quickly have a look on the default structures created for the package around the defined feature framework elements. Move back to Visual Studio Code side and expand `sharepoint/solution/debug` folder, which contains the raw xml structures to be included in the actual **sppkg** package.
 
 ![Screenshot showing debug folder under sharepoint folder in the solution structure](../../../images/tutorial-feature-solution-debug-folder.png)
 
 Next you need to deploy the package that was generated to the App Catalog.
 
-Go to your site's App Catalog.
+Go to your tenant's App Catalog.
 
-Upload or drag and drop the asset-deployment-webpart.sppkg located in the `sharepoint/solution` folder  to the App Catalog. SharePoint will display a dialog and ask you to trust the client-side solution to deploy.
+Upload or drag and drop the asset-deployment-webpart.sppkg located in the `sharepoint/solution` folder to the App Catalog. SharePoint will display a dialog and ask you to trust the client-side solution to deploy.
 
 ![Trust dialog for the solution package deployment](../../../images/tutorial-feature-solution-trust-app-catalog.png)
 
-> Note. SharePoint validates the published package when it's deployed and you only see the trust dialog, if package is valid for deployment. You can also see the status around this validation from the 'Valid App Package' column in the app catalog.
+> [!NOTE]
+> SharePoint validates the published package when it's deployed and you only see the trust dialog, if package is valid for deployment. You can also see the status around this validation from the 'Valid App Package' column in the app catalog.
 
-Go to the site where you want to test SharePoint asset provisioning. This could be any site collection in the tenant where you deployed this solution package. 
+Go to the site where you want to test SharePoint asset provisioning. This could be any site collection in the tenant where you deployed this solution package.
 
-Chose the gears icon on the top nav bar on the right and choose **Add an app** to go to your Apps page.
+Choose the gears icon on the top nav bar on the right and choose **Add an app** to go to your Apps page.
 
-In the **Search** box, enter **deployment** and choose **Enter** to filter your apps. 
+In the **Search** box, enter **deployment** and choose **Enter** to filter your apps.
 
 ![Search for the app in the site](../../../images/tutorial-feature-solution-add-app.png)
 
@@ -311,6 +328,7 @@ SharePoint Framework solutions do support following Feature Framework upgrade ac
 * ApplyElementManifest
 * AddContentTypeField
 
+> [!TIP]
 > You can read more details around the Feature Framework upgrade action definitions from [SharePoint add-ins update process](https://msdn.microsoft.com/en-us/library/office/fp179904.aspx) article at MSDN.
 
 ### Add new element.xml file for the new version
@@ -347,44 +365,49 @@ Copy the following xml structure into **upgrade-actions-v2.xml**. Notice that th
 
 ### Deploy new version to SharePoint
 
-Next we'll need to update both solution version and the feature version responsible of the asset provisioning. 
+Next we'll need to update both solution version and the feature version responsible of the asset provisioning.
 
+> [!IMPORTANT]
 > Solution version will indicate for the SharePoint that there's a new version of the SharePoint Framework solution available. Feature version increase will ensure that the upgrade actions will be executed accordingly when the solution package is upgraded in the existing site(s).
 
-Open **package-solution.json** from the config folder and update version values for both solution and feature to "2.0.0.0". We will also need to include **elements-v2.xml** under the elementManifest section and also to include upgradeActions element with a pointer to just created **upgrade-actions-v2.xml** file. 
+Open **package-solution.json** from the config folder and update version values for both solution and feature to "2.0.0.0". We will also need to include **elements-v2.xml** under the elementManifest section and also to include upgradeActions element with a pointer to just created **upgrade-actions-v2.xml** file.
 
 Here's a complete **package-solution.json** file with needed changes. Notice that identifiers for your solution could be slightly different, so concentrate on adding only the missing pieces.
 
 ```json
 {
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
     "name": "asset-deployment-webpart-client-side-solution",
-    "id": "31086065-dbdb-493f-b02e-7b7f97f45bd9",
+    "id": "6690f11b-012f-4268-bc33-3086eb2dd287",
     "version": "2.0.0.0",
+    "includeClientSideAssets": true,
     "features": [{
-        "title": "asset-deployment-webpart-client-side-solution",
-        "description": "asset-deployment-webpart-client-side-solution",
-        "id": "523fe887-ced5-4036-b564-8dad5c6c6e24",
-        "version": "2.0.0.0",
-        "assets": {
-          "elementManifests": [
-            "elements.xml",
-            "elements-v2.xml"
-          ],
-          "elementFiles": [
-            "schema.xml"
-          ],
-          "upgradeActions":[
-            "upgrade-actions-v2.xml"
+      "title": "asset-deployment-webpart-client-side-solution",
+      "description": "asset-deployment-webpart-client-side-solution",
+      "id": "523fe887-ced5-4036-b564-8dad5c6c6e24",
+      "version": "2.0.0.0",
+      "assets": {
+        "elementManifests": [
+          "elements.xml",
+          "elements-v2.xml"
+        ],
+        "elementFiles":[
+          "schema.xml"
+        ],
+        "upgradeActions":[
+          "upgrade-actions-v2.xml"
         ]
-        }
-      }]
+      }
+    }]
   },
   "paths": {
     "zippedPackage": "solution/asset-deployment-webpart.sppkg"
   }
 }
 ```
+
+> [!IMPORTANT]
 > Notice that we also included the **elements-v2.xml** under the elementManifest section. This will ensure that when you install this package to a clean site as a version 2.0, end result will match with the upgraded packages.
 
 In the console window, enter the following command to re-package your client-side solution that contains the web part, so that we get the basic structure ready for packaging:
@@ -397,6 +420,7 @@ Next execute following command, so that the solution package is created:
 ```
 gulp package-solution
 ```
+
 The command will create new version of the solution package to the `sharepoint/solution` folder. Notice that you can easily confirm from `sharepoint/solution/debug` folder that updated xml files are included in the solution package
 
 Next you need to deploy the new version that was generated to the App Catalog.
@@ -409,6 +433,8 @@ Upload or drag and drop the asset-deployment-webpart.sppkg located in the `share
 
 Click **Replace It** to updated latest version to App catalog.
 
+Click **Deploy** to *trust* also latest version.
+
 Notice that the App Version column for the **asset-deployment-webpart-client-side-solution** is now updated to be "2.0.0.0".
 
 ![Close up for solution row in app catalog with updated version number](../../../images/tutorial-feature-solution-version-2.png)
@@ -418,7 +444,9 @@ Now that the package has been updated in the App Catalog, we can move to the act
 
 Move to site where you deployed first version of the SharePoint Framework solution
 
-Chose **About** from the context menu of the **asset-deployment-webpart-client-side-solution** solution
+Move to **Site Contents** page
+
+Chose **Details** from the context menu of the **asset-deployment-webpart-client-side-solution** solution
 
 ![Context menu of existing package in site](../../../images/tutorial-feature-solution-hover-menu.png)
 
@@ -430,8 +458,15 @@ Click **GET IT** button to start update process for the package.
 
 ![App status updated to updating in the site contents page](../../../images/tutorial-feature-solution-updating-app.png)
 
-Update can take a while, but when the add-in status is moved to normal again, you can click **F5** to refresh the site contents page to confirm that new list has been successfully provisioned as part of the update process.
+If you move to classic experience, you can see more details on the actual upgrade action being applied for the SharePoint Framework solution. 
+
+![App status updated to updating in the site contents page](../../../images/tutorial-feature-solution-updating-app-classic.png)
+
+> [!NOTE]
+> Since SharePoint Framework is using same app infrastructure as SharePoint add-ins, status for the upgrade indicates update to happen for an add-in or an app. 
+
+Update can take a while, but when the solution status is moved to normal again, you can click **F5** to refresh the site contents page to confirm that new list  called *`New List`* has been successfully provisioned as part of the update process.
 
 ![Site contents page with additional New List being created](../../../images/tutorial-feature-solution-new-list.png)
 
-Now we have successfully upgrade this instance to the latest version. This Feature Framework option for SharePoint asset provisioning is pretty much the same as it is for the SharePoint add-in model. Key difference however is that the assets are being provisioned directly to normal SharePoint site, since there's no concept called app / add-in web with SharePoint Framework solutions. 
+Now we have successfully upgrade this instance to the latest version. This Feature Framework option for SharePoint asset provisioning is pretty much the same as it is for the SharePoint add-in model. Key difference however is that the assets are being provisioned directly to normal SharePoint site, since there's no concept called app / add-in web with SharePoint Framework solutions.

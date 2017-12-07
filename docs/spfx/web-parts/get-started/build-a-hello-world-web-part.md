@@ -1,6 +1,6 @@
 ---
 title: Build your first SharePoint client-side web part (Hello World part 1)
-ms.date: 09/25/2017
+ms.date: 12/05/2017
 ms.prod: sharepoint
 ---
 
@@ -17,9 +17,9 @@ Client-side web parts support:
 > [!NOTE]
 > Before following the steps in this article, be sure to [Set up your development environment](../../set-up-your-development-environment.md).
 
-You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=QbDtsMg88Js&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq). 
+You can also follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=YqUIX2pMUzg&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=2). 
 
-<a href="https://www.youtube.com/watch?v=QbDtsMg88Js&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
+<a href="https://www.youtube.com/watch?v=YqUIX2pMUzg&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=2">
 <img src="../../../images/spfx-youtube-tutorial1.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
@@ -102,8 +102,6 @@ SharePoint client-side development tools use [gulp](http://gulpjs.com/) as the t
 * Compile SASS files to CSS.
 * Compile TypeScript files to JavaScript.
 
-If you are new to gulp, you can read [Using Gulp](http://docs.asp.net/en/latest/client-side/using-gulp.html) which describes using gulp with Visual Studio in conjunction with building ASP.NET 5 projects.
-
 Visual Studio Code provides built-in support for gulp and other task runners. Choose **Ctrl+Shift+B** on Windows or **Cmd+Shift+B** on Mac to debug and preview your web part. 
 
 ### SharePoint Workbench
@@ -119,7 +117,7 @@ Choose **HelloWorld** to add the web part to the page:
    
 ![HelloWorld web part in SharePoint workbench](../../../images/sp-workbench-helloworld-wp.png)
 
-Congratulations! You have just added your first client-side web part to a client-side page.
+**Congratulations!** You have just added your first client-side web part to a client-side page.
    
 Now, choose the pencil icon on the far left of the web part to reveal the web part property pane.
    
@@ -158,7 +156,7 @@ The following are some key files in the project.
 
 Notice that the web part class is defined to accept a property type **IHelloWorldWebPartProps**.
 
-The property type is defined as an interface before **HelloWorldWebPart**.
+The property type is defined as an interface before **HelloWorldWebPart** class in **HelloWorldWebPart.ts** file.
 
 ```ts
 export interface IHelloWorldWebPartProps {
@@ -361,7 +359,7 @@ gulp serve
 
 SharePoint Workbench is also hosted in SharePoint to preview and test your local web parts in development. The key advantage is that now you are running in SharePoint context and that you will be able to interact with SharePoint data.
 
-Go to the following URL: 'https://your-sharepoint-site/_layouts/workbench.aspx'
+Go to the following URL: 'https://your-sharepoint-tenant.sharepoint.com/_layouts/workbench.aspx'
 
 > [!NOTE]
 > If you do not have the SPFx developer certificate installed, then Workbench will notify you that it is configured not to load scripts from localhost. Stop currently running process in the console window, execute `gulp trust-dev-cert` command in your project directory console to install the developer certificate before running `gulp serve`command again.
@@ -384,4 +382,4 @@ Add **HelloWorld** from the toolbox. Now you're running your web part in a page 
 Because you are still developing and testing your web part, there is no need to package and deploy your web part to SharePoint. 
 
 ## Next steps
-Congratulations on getting your first Hello World web part running! Now that your web part is running, you can continue building out your Hello World web part in the next topic, [Connect to SharePoint](./connect-to-sharepoint.md). You will use the same Hello World web part project and add the ability to interact with SharePoint List REST APIs. Notice that the `gulp serve` command is still running in your console window (or in Visual Studio Code if you using the editor.md). You can continue to let it run while you go to the next article.
+Congratulations on getting your first Hello World web part running! Now that your web part is running, you can continue building out your Hello World web part in the next topic, [Connect to SharePoint](./connect-to-sharepoint.md). You will use the same Hello World web part project and add the ability to interact with SharePoint List REST APIs. Notice that the `gulp serve` command is still running in your console window (or in Visual Studio Code if you using that as editor). You can continue to let it run while you go to the next article.
