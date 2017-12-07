@@ -15,6 +15,8 @@ We’ll also monitor [#spfx](http://sharepoint.stackexchange.com/tags/spfx/), [#
 You can also tweet / follow [@officedev](https://twitter.com/officedev) or [@officedevpnp](https://twitter.com/officedevpnp).
 
 ## SharePoint Framework Releases
+* **December 7, 2017**
+   *  **SPFx v1.4**.
 
 * **September 25, 2017**
    *  **GA of Extensions and SPFx v1.3**.
