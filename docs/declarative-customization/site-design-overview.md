@@ -30,23 +30,61 @@ For more information, see [Get started creating site designs](get-started-create
 
 ## Anatomy of a site script
 
-Site scripts are JSON files that specify an ordered list of actions to run when creating the new site. Here's an example of a script with only one action that simply applies the blue yonder theme.
+Site scripts are JSON files that specify an ordered list of actions to run when creating the new site. The actions are run in the order listed. The following example is a script that has two top-level actions. First it applies a theme that was previously created named **Contoso Explorers**. Then it creates a **Customer Tracking** list.
 
 ```json
 {
-    "$schema": "schema.json",
-        "actions": [
-            {
-                verb: "applyTheme",
-                themeName: "Blue Yonder"
-            }
-        ],
-            "bindata": { },
-    "version": 1
+  "$schema": "schema.json",
+  "actions": [
+    {
+      "verb": "applyTheme",
+      "themeName": "Contoso Explorers"
+    },
+    {
+      "verb": "createSPList",
+      "listName": "Customer Tracking",
+      "templateType": 100,
+      "subactions": [
+        {
+          "verb": "SetDescription",
+          "description": "List of Customers and Orders"
+        },
+        {
+          "verb": "addSPField",
+          "fieldType": "Text",
+          "displayName": "Customer Name",
+          "isRequired": false,
+          "addToDefaultView": true
+        },
+        {
+          "verb": "addSPField",
+          "fieldType": "Number",
+          "displayName": "Requisition Total",
+          "addToDefaultView": true,
+          "isRequired": true
+        },
+        {
+          "verb": "addSPField",
+          "fieldType": "User",
+          "displayName": "Contact",
+          "addToDefaultView": true,
+          "isRequired": true
+        },
+        {
+          "verb": "addSPField",
+          "fieldType": "Note",
+          "displayName": "Meeting Notes",
+          "isRequired": false
+        }
+      ]
+    }
+  ],
+  "bindata": { },
+  "version": 1
 }
 ```
 
-Each action in a site script is specified by a **verb** in the JSON.
+Each action in a site script is specified by a **verb** value in the JSON. In the previous script the first action is specified by the **applyTheme** verb. Then the **createSPList** verb creates the list. Notice that the **createSPList** verb contains its own set of verbs which run additional actions on just the list.
 
 Actions include:
 

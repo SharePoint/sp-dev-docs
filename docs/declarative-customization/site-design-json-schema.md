@@ -250,7 +250,7 @@ Example:
 
 ## Set a site logo
 
-Use the **setSiteLogo** verb to specify a logo for your site.
+Use the **setSiteLogo** verb to specify a logo for your site. This action only works on the communication site template (68).
 
 JSON value:
 
