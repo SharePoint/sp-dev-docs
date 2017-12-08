@@ -275,3 +275,6 @@ Click the *Open Custom Dialog box* button to see your custom dialog box rendered
 Choose a color in the *Color Picker* and choose **OK** to test how the code is returning the selected value back to the caller. The selection is then shown using the default alert dialog box.
 
 ![Dialog with picked color details](../../../images/ext-com-dialog-oob-alert-dialog.png)
+
+> [!NOTE]
+> If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering using the [issue list at sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input advance.

@@ -375,3 +375,6 @@ Now you are ready to deploy the solution to a SharePoint site and to have the `C
     Notice how **Command One** and **Command Two** are rendering in the toolbar based on your ListView Command Set customizations. 
 
     ![Additional buttons visible on the toolbar](../../../images/ext-com-dialog-visible-deployment.png)
+
+> [!NOTE]
+> If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering using the [issue list at sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input advance.

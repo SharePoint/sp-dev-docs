@@ -470,3 +470,6 @@ Update can take a while, but when the solution status is moved to normal again, 
 ![Site contents page with additional New List being created](../../../images/tutorial-feature-solution-new-list.png)
 
 Now we have successfully upgrade this instance to the latest version. This Feature Framework option for SharePoint asset provisioning is pretty much the same as it is for the SharePoint add-in model. Key difference however is that the assets are being provisioned directly to normal SharePoint site, since there's no concept called app / add-in web with SharePoint Framework solutions.
+
+> [!NOTE]
+> If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering using the [issue list at sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input advance.

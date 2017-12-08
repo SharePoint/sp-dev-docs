@@ -24,7 +24,7 @@ Make sure that you have completed the following tasks before you begin:
 You can also follow follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=AIb7s_Y02K8&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=5). 
 
 <a href="https://www.youtube.com/watch?v=AIb7s_Y02K8&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=5">
-<img src="../../../images/spfx-youtube-tutorial2.png" alt="Screenshot of the YouTube video player for this tutorial" />
+<img src="../../../images/spfx-youtube-tutorial4.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
 
@@ -174,3 +174,6 @@ Now you have deployed your custom web part to SharePoint Online and it's being h
 ## Next steps
 
 You can load jQuery, jQuery UI and build a jQuery Accordion web part. To continue, see [Add jQueryUI Accordion to your client-side web part](./add-jqueryui-accordion-to-web-part.md).
+
+> [!NOTE]
+> If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering using the [issue list at sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input advance.

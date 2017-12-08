@@ -106,3 +106,6 @@ When the origin is listed without the `(configuration pending)` text, it is read
 <br/>
 
 Congratulations, you have enabled a public CDN in your Office 365 tenant and taken advantage of it from your solution!
+
+> [!NOTE]
+> If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering using the [issue list at sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input advance.

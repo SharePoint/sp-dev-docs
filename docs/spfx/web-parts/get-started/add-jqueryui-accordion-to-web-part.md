@@ -346,3 +346,6 @@ In the page canvas, choose the **+** (plus sign) to show the list of web parts, 
 ![Screenshot of a web part that includes a jQuery Accordion](../../../images/jquery-accordion-wb.png)
 
 In the console where you have `gulp serve` running, choose **Ctrl+C** to terminate the task.
+
+> [!NOTE]
+> If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering using the [issue list at sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input advance.

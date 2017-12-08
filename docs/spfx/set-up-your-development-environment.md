@@ -94,3 +94,6 @@ Here are some tools that might come in handy as well:
 ## Next steps
 
 You are now ready to [build your first client-side web part](web-parts/get-started/build-a-hello-world-web-part.md)!
+
+> [!NOTE]
+> If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering using the [issue list at sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input advance.
