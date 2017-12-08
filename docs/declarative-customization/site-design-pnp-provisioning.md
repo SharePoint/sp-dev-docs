@@ -253,7 +253,7 @@ In order to create a Site Design you first need to create a Site Script. Think o
 1. Select the ID of the Site Script you just created and copy it to the clipboard
 1. Create the Site Design:
     ```powershell
-    Add-PnPSiteDesign -Title "Site with footer" --SiteScriptIds [Paste the ID of the Site Script here] -WebTemplate TeamSite
+    Add-PnPSiteDesign -Title "Site with footer" -SiteScriptIds [Paste the ID of the Site Script here] -WebTemplate TeamSite
     ```
 
 # Concluding
