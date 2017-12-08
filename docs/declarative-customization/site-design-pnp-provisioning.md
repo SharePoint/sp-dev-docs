@@ -206,18 +206,18 @@ Notice that we are using 2 environment variables, one called ```SPO_AppId```, th
 2. ```SPO_AppSecret```: set the value to the Client Secret you copied in the first step when creating your app on your tenant.
 
 # Creating the Site Design
-Open PowerShell and make sure you either have the Microsoft Office 365 Management Shell or the PnP PowerShell Module installed. Both will work, but the cmdlets are named slightly different. In this walkthrough we will use the [PnP PowerShell Cmdlets](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/?view=sharepoint-ps).
+Open PowerShell and make sure you have the Microsoft Office 365 Management Shell installed.
 
-First connect to your tenant using Connect-PnPOnline:
+First connect to your tenant using Connect-SPOService:
 
 ```powershell
-Connect-PnPOnline -Url https://[yourtenant]-admin.sharepoint.com
+Connect-SPOService -Url https://[yourtenant]-admin.sharepoint.com
 ```
 
 Now you can retrieve the existing Site Designs using 
 
 ```powershell
-Get-PnPSiteDesign
+Get-SPOSiteDesign
 ```
 In order to create a Site Design you first need to create a Site Script. Think of a Site Design as a container which refers to 1 or more Site Scripts. 
 1. Copy the following JSON code to your clipboard and modify it. Set the url property to the value you copied when creating the flow. The URL looks alike :
@@ -246,14 +246,14 @@ In order to create a Site Design you first need to create a Site Script. Think o
 1. Open PowerShell and enter the following to copy the script into a variable and create the site script
     ```powershell
     $script = Get-Clipboard -Raw
-    Add-PnPSiteDesign -Title "Apply PnP Provisioning Template" -Content $script
-    Get-PnPSiteDesign
+    Add-SPOSiteScript -Title "Apply PnP Provisioning Template" -Content $script
+    Get-SPOSiteScript
     ```
-1. You should be presented with a list of one or more site script, including the site script you just created
+1. You should be presented with a list of one or more site scripts, including the site script you just created
 1. Select the ID of the Site Script you just created and copy it to the clipboard
 1. Create the Site Design:
     ```powershell
-    Add-PnPSiteDesign -Title "Site with footer" -SiteScriptIds [Paste the ID of the Site Script here] -WebTemplate TeamSite
+    Add-SPOSiteDesign -Title "Site with footer" -SiteScripts [Paste the ID of the Site Script here] -WebTemplate TeamSite
     ```
 
 # Concluding
