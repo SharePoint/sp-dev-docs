@@ -253,9 +253,10 @@ In order to create a Site Design you first need to create a Site Script. Think o
 1. Select the ID of the Site Script you just created and copy it to the clipboard
 1. Create the Site Design:
     ```powershell
-    Add-SPOSiteDesign -Title "Site with footer" -SiteScripts [Paste the ID of the Site Script here] -WebTemplate TeamSite
+    Add-SPOSiteDesign -Title "Site with footer" -SiteScripts [Paste the ID of the Site Script here] -WebTemplate "64"
     ```
 
+The Add-SPOSiteDesign will associate the site design with the Team Site. If you want to associate the design with a Communication Site use "68".
 # Concluding
 After you created your Storage Queue, you created the app Id for the app only access, you correctly created the Azure Function, you created the Site Design and triggered the correct Microsoft Flow from the Site Design, you are all good to go. 
 
