@@ -222,7 +222,8 @@ Get-SPOSiteDesign
 In order to create a Site Design you first need to create a Site Script. Think of a Site Design as a container which refers to 1 or more Site Scripts. 
 1. Copy the following JSON code to your clipboard and modify it. Set the url property to the value you copied when creating the flow. The URL looks alike :
 
-```https://prod-27.westus.logic.azure.com:443/workflows/ef7434cf0d704dd48ef5fb6...oke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun```
+    ```https://prod-27.westus.logic.azure.com:443/workflows/ef7434cf0d704dd48ef5fb6...oke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun```
+
 
     ```json
     {
@@ -242,6 +243,7 @@ In order to create a Site Design you first need to create a Site Script. Think o
         "version": 1
     }
     ```
+
 1. After modifying the JSON by inserting the correct URL to trigger your flow, select it all and copy it again to your clipboard
 1. Open PowerShell and enter the following to copy the script into a variable and create the site script
     ```powershell
