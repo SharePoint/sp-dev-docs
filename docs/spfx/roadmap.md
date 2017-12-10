@@ -14,6 +14,8 @@ First release of the SharePoint Framework contained only support for client-side
 - [SharePoint Framework Extensions](./extensions/overview-extensions.md)
 - [Tenant properties](./tenant-properties.md)
 - [ALM APIs for SPFx solutions and add-ins](../apis/alm-api-for-spfx-add-ins.md)
+- [Office UI Fabric Core support](https://dev.office.com/blogs/improved-support-for-office-ui-fabric-core)
+- [Asset packaging and site collection app catalog](https://dev.office.com/blogs/sharepoint-framework-1-4-and-new-site-updates-now-available)
 
 
 > [!NOTE]
@@ -22,9 +24,7 @@ First release of the SharePoint Framework contained only support for client-side
 ## General improvements
 
 - Easy access to Graph API to access user specific information (GraphHttpClient in preview)
-- Site collection app catalog with tenant level control for enabling easier solution deployed - by end of 2017
 - Site level WebHooks
-- Office UI Fabric Core support
 
 ## Client-side web parts++ and add-ins
 
@@ -46,8 +46,6 @@ First release of the SharePoint Framework contained only support for client-side
     - Tenant admin gets automatically notified 
     - Settings to control the default experience around approval process
 
-- Automatic CDN hosting for code
-    - Package JavaScript bundle into app package, which is automatically then deployed to a library that gets hosted on your tenant Office 365 CDN
 
 ## Developer Experience
 - SharePoint Framework Workbench 2.0: Development story for SharePoint Framework Extensions
@@ -57,6 +55,10 @@ First release of the SharePoint Framework contained only support for client-side
 ## Already shipped capabilities
 
 Following chapters are listing older items in the roadmap page, which have been already shipped.
+
+### Asset packaging
+
+- Automatic CDN hosting for code - Package JavaScript bundle into app package, which is automatically then deployed to a library that gets hosted on your tenant Office 365 CDN
 
 ### ALM REST APIs
 
