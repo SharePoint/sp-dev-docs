@@ -26,7 +26,7 @@ You should update your Yeoman template packages. We have updated certification c
 
 - *Date - 6th of June*
 
-SharePoint Extensions with additional customizations capabilities for the SharePoint Online is now available in SharePoint Online. You can find more details on the SharePoint Framework extensions from our documentation.
+SharePoint Framework Extensions with additional customizations capabilities is now available in SharePoint Online. You can find more details on the SharePoint Framework extensions from our documentation.
 
 - [SharePoint Framework Extensions Overview](./extensions/overview-extensions.md)
 - [SharePoint Framework Extensions Tutorials](./extensions/get-started/build-a-hello-world-extension.md)
