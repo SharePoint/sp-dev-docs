@@ -1431,6 +1431,8 @@
         href: solution-guidance/security-apponly-azureacs.md      
     - name: Implementing a web app policy alternative
       href: solution-guidance/security-webapppolicies.md
+    - name: Migrating from permissive to strict tenant setting
+      href: solution-guidance/security-permissivesetting.md
     - name: Authorize provider-hosted add-in users at run time
       href: solution-guidance/authorize-provider-hosted-add-in-users-at-run-time-by-using-oauth.md
     - name: Cross-domain images in SharePoint provider-hosted add-ins
