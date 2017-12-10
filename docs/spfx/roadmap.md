@@ -42,7 +42,7 @@ First release of the SharePoint Framework contained only support for client-side
 ## Application Lifecycle Management
 
 - Streamlined approval experience: no need to know who your tenant admin is anymore
-    - Owner initiate the approval process
+    - Owner initiates the approval process
     - Tenant admin gets automatically notified 
     - Settings to control the default experience around approval process
 
@@ -62,7 +62,7 @@ Following chapters are listing older items in the roadmap page, which have been 
 
 - ALM REST APIs - Deploy, activate, delete and upgrade apps and add-ins
 - ALM REST APIs targeted to support *everything* in the App Catalog, including add-ins
-- CSOM and PowerShell cmdlets released as an open source community initiate
+- CSOM and PowerShell cmdlets released as an open source community initiative
 
 ### JavaScript embedding support (JSLink, User Custom Actions) 
 
