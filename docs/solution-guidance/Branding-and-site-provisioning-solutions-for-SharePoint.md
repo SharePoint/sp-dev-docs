@@ -1,12 +1,12 @@
 ---
-title: Branding and site provisioning solutions for SharePoint 2013 and SharePoint Online
+title: Branding and site provisioning solutions for SharePoint Server 2013, SharePoint Server 2016 and SharePoint Online
 ms.date: 11/03/2017
 ---
-# Branding and site provisioning solutions for SharePoint 2013 and SharePoint Online
+# Branding and site provisioning solutions for SharePoint Server 2013, SharePoint Server 2016 and SharePoint Online
 
 The introduction of the Cloud Add-in Model and add-ins for SharePoint provides alternatives to existing, established ways of branding and provisioning SharePoint sites. 
 
-_**Applies to:** Office 365 | SharePoint 2013 | SharePoint Online_
+_**Applies to:** Office 365 | SharePoint Server 2013 | SharePoint Server 2016 | SharePoint Online_
 
 Up to now, you might have used the SharePoint feature framework, site templates, web templates, and site definitions to provision your sites and site collections. The remote provisioning pattern shows you how to create custom add-ins for SharePoint that provision site branding and perform other site provisioning tasks.
 The articles in this section provide information about using add-ins for SharePoint to provision and manage site branding, a pattern that is sometimes referred to as remote provisioning.
@@ -85,15 +85,22 @@ To understand your branding options and the implications that site customization
 
 ### File system
 
-SharePoint stores files in the file system ("hive"). In SharePoint 2013, this location is called the "15-hive". The following is the path to the 15-hive. 
+SharePoint stores files in the file system ("hive"). 
 
+In SharePoint Server 2013 and SharePoint Server 2016, this location is called the "15-hive" or "16-hive". 
+
+The following is the path to this location : 
+
+SharePoint Server 2013 :
 	`%program files%/Common Files/Microsoft Shared/Web Server Extensions/15/`
+SharePoint Server 2016 :
+	`%program files%/Common Files/Microsoft Shared/Web Server Extensions/16/`
 
-The 15-hive includes several subfolders that store files you'll use when branding and provisioning sites.
+The 15-hive and 16-hive includes several subfolders that store files you'll use when branding and provisioning sites.
 
 ### Content databases
 
-Content databases store SharePoint content objects, such as site collections. A content database is automatically installed for every site collection when you deploy SharePoint 2013. All the content for a site collection is stored in one content database on one server. However, a content database can be associated with more than one site collection, and you can attach content databases to a SharePoint web application. You might need to move content from one content database to another, for example when the size of the content will soon exceed the size of the content database.
+Content databases store SharePoint content objects, such as site collections. A content database is automatically installed for every site collection when you deploy SharePoint Server 2013 or SharePoint Server 2016. All the content for a site collection is stored in one content database on one server. However, a content database can be associated with more than one site collection, and you can attach content databases to a SharePoint web application. You might need to move content from one content database to another, for example when the size of the content will soon exceed the size of the content database.
 
 Some characteristics of a content database vary depending on how the site collection is used. For example, sites are often write-intensive, while other types of content, such as read-only documents, are read-intensive. How content is used affects aspects of the content database, such as size and performance. 
 
@@ -117,7 +124,7 @@ The state of SharePoint files and content affects how easy it is to apply update
 ## Site branding and provisioning with the Cloud Add-in Model
 <a name="sectionSection6"> </a>
 
-In SharePoint 2013, you can use custom CSOM code in add-ins for SharePoint to provision SharePoint site collections, sites, and subsites with branding elements. This site provisioning pattern is called remote provisioning. SharePoint is increasingly focused on cloud-based deployments, so this pattern was created to help you use SharePoint's out-of-the-box capabilities to provision site branding in a way that reduces complexity and long-term operational costs.
+In SharePoint Server 2013 or SharePoint Server 2016, you can use custom CSOM code in add-ins for SharePoint to provision SharePoint site collections, sites, and subsites with branding elements. This site provisioning pattern is called remote provisioning. SharePoint is increasingly focused on cloud-based deployments, so this pattern was created to help you use SharePoint's out-of-the-box capabilities to provision site branding in a way that reduces complexity and long-term operational costs.
 
 ### What can I do with the Cloud Add-in Model?
 
