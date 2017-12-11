@@ -1,6 +1,6 @@
 ---
 title: Hosting client-side web part from Office 365 CDN
-ms.date: 12/05/2017
+ms.date: 12/11/2017
 ms.prod: sharepoint
 ---
 
@@ -21,9 +21,9 @@ Make sure that you have completed the following tasks before you begin:
 * [Deploy your client-side web part to a classic SharePoint page](./serve-your-web-part-in-a-sharepoint-page.md)
 
 
-You can also follow follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=AIb7s_Y02K8&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=5). 
+You can also follow follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=MEZMs8VMVQ0&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq).
 
-<a href="https://www.youtube.com/watch?v=AIb7s_Y02K8&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq&index=5">
+<a href="https://www.youtube.com/watch?v=MEZMs8VMVQ0&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
 <img src="../../../images/spfx-youtube-tutorial4.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
