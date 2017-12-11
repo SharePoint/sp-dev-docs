@@ -1,13 +1,13 @@
 ---
-title: Set up your SharePoint client-side web part development environment
+title: Set up your SharePoint Framework development environment
 ms.date: 12/11/2017
 ms.prod: sharepoint
 ---
 
 
-# Set up your SharePoint client-side web part development environment
+# Set up your SharePoint Framework development environment
 
-You can use Visual Studio, or your own custom development environment to build SharePoint client-side web parts. You can use a Mac, PC, or Linux.
+You can use Visual Studio, or your own custom development environment to build SharePoint Framework solutions. You can use a Mac, PC, or Linux.
 
 >**Note:** Before following the steps in this article, be sure to [Set up your Office 365 Tenant](./set-up-your-developer-tenant.md).
 

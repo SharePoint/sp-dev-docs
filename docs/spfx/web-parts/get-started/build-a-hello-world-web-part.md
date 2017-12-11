@@ -1,5 +1,5 @@
 ---
-title: Build your first SharePoint client-side web part (Hello World part 1)
+title: Build your first SharePoint client-side web part (Hello world part 1)
 ms.date: 12/05/2017
 ms.prod: sharepoint
 ---

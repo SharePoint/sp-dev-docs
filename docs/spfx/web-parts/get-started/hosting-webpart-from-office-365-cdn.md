@@ -5,7 +5,7 @@ ms.prod: sharepoint
 ---
 
 
-# Hosting client-side web part from Office 365 CDN
+# Hosting client-side web part from Office 365 CDN (Hello world part 4)
 
 This article describes how to host your client-side web part from Office 365 CDN. Office 365 CDN provide you easy solution to host your assets directly from your own Office 365 tenant. It can be used for hosting any static assets, which are used in SharePoint Online. 
 
