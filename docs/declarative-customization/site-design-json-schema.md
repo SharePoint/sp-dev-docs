@@ -1,11 +1,13 @@
 ---
-# Mandatory fields. See more on aka.ms/skyeye/meta.
 title: Site design JSON schema
 description: JSON schema reference for building site designs for SharePoint.
-ms.date: 11/19/2017
+ms.date: 12/14/2017
 ---
 
 # Site design JSON schema
+
+> [!NOTE]
+> Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for us in production environments.
 
 The site design is a list of actions. For more complex actions, such as creating a list, there are also subactions. Each action is specified by a "verb" value. Verb actions are run in the order they appear in the JSON script.
 
@@ -210,6 +212,8 @@ JSON value:
 
 Example:
 
+<!-- TBD: add link to Doug's Blue Yonder theme with note you need to create it first -->
+
 ```json
 {
    "verb": "applyTheme",
@@ -217,6 +221,7 @@ Example:
 }
 ```
 
+<!-- 
 ## Create a page
 
 Use the **createPage** verb to create a new page on the site.
@@ -247,6 +252,7 @@ Example:
     "setAsHomePage": true
 }
 ```
+-->
 
 ## Set a site logo
 
@@ -267,7 +273,7 @@ Example:
 
 ## Join a hub site
 
-Use the **joinHubSite** verb to join the site to a hub. <TBD provide link to more information on hubs and how to get the id>
+Use the **joinHubSite** verb to join the site to a hub. <!-- TBD provide link to more information on hubs and how to get the id -->
 
 JSON value:
 
@@ -285,6 +291,7 @@ Example:
 ## Trigger a flow
 
 Use the **triggerFlow** verb to kick off a custom flow.
+<!-- update this with example from trigger workflow topic -->
 
 JSON values:
 

@@ -1,11 +1,13 @@
 ---
-# Mandatory fields. See more on aka.ms/skyeye/meta.
-title: Build a complete site design using the PnP provisioning engine
-description: Build a complete site design using the PnP provisioning engine
-ms.date: 11/19/2017
+title: Build a complete SharePoint site design using the PnP provisioning engine
+description: Build a complete SharePoint site design using the PnP provisioning engine
+ms.date: 12/14/2017
 ---
 
 # Calling the PnP Provisioning Engine from a Site Script
+
+> [!NOTE]
+> Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for us in production environments.
 
 Site Designs offer a great way to standardize the look and feel of your site collections. But if you want to take this one step further, by for instance adding a footer to every page, you might notice that Site Designs do not offer you that option. With the PnP Provisioning engine you can hover create a template which allows you to provision an application customizer to a site. This application customizer then can register a footer on every page. In this article you will learn how to create a site design that applies a PnP Provisioning Template to a site which in turn will add an application customizer to render a footer.
 
