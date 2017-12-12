@@ -23,6 +23,7 @@ Once a site design is selected, SharePoint creates the new site, and then runs a
 
 You can create a site design by using PowerShell, or the REST API. Here's an example that creates a new site design that creates a customer list and applies a theme.
 
+> [!div class="tabbedCodeSnippets"]
 ```powershell
 C:\> Add-SPOSiteDesign `
   -Title "Contoso customer tracking" `
@@ -30,7 +31,6 @@ C:\> Add-SPOSiteDesign `
   -SiteScripts ("607aed52-6d61-490a-b692-c0f58a6981a1","5d4756e9-e1f5-42f7-afa7-5fa5aac170aa") `
   -Description "Creates customer list and applies standard theme" `
 ```
-
 ```javascript
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteDesign", {info:{Title:"Contoso customer tracking", Description:"Creates customer list and applies standard theme", SiteScriptIds:["607aed52-6d61-490a-b692-c0f58a6981a1","5d4756e9-e1f5-42f7-afa7-5fa5aac170aa"],  WebTemplate:"64"}});
 ```
