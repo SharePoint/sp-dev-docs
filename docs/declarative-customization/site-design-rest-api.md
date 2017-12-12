@@ -4,7 +4,7 @@ description: Work with SharePoint site designs through the SharePoint REST inter
 ms.date: 12/14/2017
 ---
 
-# Site design REST API
+# Site design and site script REST API
 
 > [!NOTE]
 > Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for us in production environments.

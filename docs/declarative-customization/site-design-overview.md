@@ -13,32 +13,32 @@ Use site designs and site scripts to automate provisioning new SharePoint sites 
 
 ## How site designs work
 
-You create site designs and register them in SharePoint to one of the modern template sites; the team site, or communication site. Site designs appear in a drop down list when someone creates a new site from one of the templates. Each site design has a title, description, and will run one or more scripts to create the new site as specified in the design.
+Site designs are like a template. They can be used each time a new site is created to apply a consistent set of actions. Most actions typically affect the site itself, such as setting the theme, or creating lists. But a site design can also include other actions, such as recording the new site URL to a log, or sending a tweet.
 
-![site designs appear in drop down list under communication site](images/site-designs-listed-on-communication-site-template.png)
+You create site designs and register them in SharePoint to one of the modern template sites: the team site, or communication site. You can see how this works in the following steps.
 
-Once a site design is selected, SharePoint creates the new site, and then runs any scripts registered with the site design. The script performs actions such as creating new lists, or applying a theme. Each action is recorded in a local list. When the scripts are done, SharePoint displays the results from the list in a progress pane.
+1. Go to the SharePoint home page on your developer tenant.
+1. Choose **Create site**.
+
+    You'll see the two modern template sites: **Team site**, and **Communication site**.
+
+1. Choose **Communication site**.
+
+    The communication site has a **Choose a design** box in which the following three site designs are available out-of-the-box.
+
+    - Topic
+    - Showcase
+    - Blank
+
+These are the default site designs. For each site design there is a title, description, and image.
+
+![Default site design title, description, and image on communication site template](images/site-designs-listed-on-communication-site-template.png)
+
+Had you chosen the team site template, it contains only one default site design named **Team site**. For additional information on how you can change the default site designs, see [Applying a site design to a default SharePoint template](site-design-apply-default-template.md).
+
+Once a site design is selected, SharePoint creates the new site, and runs site scripts for the site design. The site scripts detail the work such as creating new lists, or applying a theme. When the actions in the scripts are completed, SharePoint displays detailed results of those actions in a progress pane.
 
 ![Progress pane listing completed actions from a site design](images/progress-pane.png)
-
-You can create a site design by using PowerShell, or the REST API. Here's an example that creates a new site design that creates a customer list and applies a theme.
-
-> [!div class="tabbedCodeSnippets"]
-```powershell
-C:\> Add-SPOSiteDesign `
-  -Title "Contoso customer tracking" `
-  -WebTemplate "64" `
-  -SiteScripts ("607aed52-6d61-490a-b692-c0f58a6981a1","5d4756e9-e1f5-42f7-afa7-5fa5aac170aa") `
-  -Description "Creates customer list and applies standard theme" `
-```
-```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteDesign", {info:{Title:"Contoso customer tracking", Description:"Creates customer list and applies standard theme", SiteScriptIds:["607aed52-6d61-490a-b692-c0f58a6981a1","5d4756e9-e1f5-42f7-afa7-5fa5aac170aa"],  WebTemplate:"64"}});
-```
-
-In the previous example, the **SiteScripts** parameter contains the ID of two scripts that detail each action to run. We'll look at the site script contents in more detail later. The scripts will run in the order listed. The **WebTemplate** parameter value 64 indicates to register this site design with the team site template. The **Title** and **Description** parameters will be displayed when a user views site designs as they create a new team site. For more information on creating a site design, see [Get started creating site designs](get-started-create-site-design.md)
-
-> [!NOTE]
-> You can also make a site design the default for the team or communication site template. In this way you can modify the out-of-the-box base templates. For more information, see [Applying a site design to a default SharePoint template](site-design-apply-default-template.md).
 
 ## Anatomy of a site script
 
@@ -107,15 +107,101 @@ Available actions include:
 - Adding navigation
 - Triggering a Microsoft flow
 
-You can create site scripts by using PowerShell or the REST API. Here's an example of how to create a site script that applies the Blue Yonder theme.
-
-```
-TBD PowerShell example create a script for blue yonder theme
-```
-
-For more information, see [Get started creating site designs](get-started-create-site-design.md)
-
 Site scripts can be run again on the same site after provisioning. This can only be done programmatically. Site scripts are non-destructive, so when they run again, they ensure that the site matches the configuration in the script. For example, if the site already has a list with the same name that the site script is creating, the site script will only add missing fields to the existing list.
+
+## Using PowerShell or REST to work with site designs and site scripts
+
+You can create site designs and site scripts by using PowerShell, or the REST API. The following example creates a site script and a site design that uses the site script. The PowerShell example loads the script from a file, while the REST example has the script inline.
+
+> [!div class="tabbedCodeSnippets"]
+```powershell
+C:\> Get-Content 'c:\scripts\site-script.json' `
+     -Raw | `
+     Add-SPOSiteScript `
+    -Title "Contoso theme and list"
+
+Id          : 2756067f-d818-4933-a514-2a2b2c50fb06
+Title       : Contoso theme and list
+Description :
+Content     :
+Version     : 0
+
+C:\> Add-SPOSiteDesign `
+  -Title "Contoso customer tracking" `
+  -WebTemplate "64" `
+  -SiteScripts "2756067f-d818-4933-a514-2a2b2c50fb06" `
+  -Description "Creates customer list and applies standard theme"
+```
+```javascript
+var site_script = {
+  "$schema": "schema.json",
+  "actions": [
+    {
+      "verb": "applyTheme",
+      "themeName": "Contoso Explorers"
+    },
+    {
+      "verb": "createSPList",
+      "listName": "Customer Tracking",
+      "templateType": 100,
+      "subactions": [
+        {
+          "verb": "SetDescription",
+          "description": "List of Customers and Orders"
+        },
+        {
+          "verb": "addSPField",
+          "fieldType": "Text",
+          "displayName": "Customer Name",
+          "isRequired": false,
+          "addToDefaultView": true
+        },
+        {
+          "verb": "addSPField",
+          "fieldType": "Number",
+          "displayName": "Requisition Total",
+          "addToDefaultView": true,
+          "isRequired": true
+        },
+        {
+          "verb": "addSPField",
+          "fieldType": "User",
+          "displayName": "Contact",
+          "addToDefaultView": true,
+          "isRequired": true
+        },
+        {
+          "verb": "addSPField",
+          "fieldType": "Note",
+          "displayName": "Meeting Notes",
+          "isRequired": false
+        }
+      ]
+    }
+  ],
+  "bindata": { },
+  "version": 1
+};
+
+RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteScript(Title=@title)?@title='Contoso theme and list'", site_script);
+
+//TBD: modify to put site script id into next statement
+
+RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteDesign",{
+  info:{
+    Title:"Contoso customer tracking", Description:"Creates customer list and applies standard theme",  SiteScriptIds:["607aed52-6d61-490a-b692-c0f58a6981a1"],  WebTemplate:"64"
+   }
+  });
+```
+
+In the previous example, the **Add-SPOSiteScript** cmdlet, or **CreateSiteScript** REST API returns a site script id. This is used for the **SiteScripts** parameter in the subsequent call to the **Add-SPO-SiteDesign** cmdlet, or **CreateSiteDesign** REST API.
+
+The **WebTemplate** parameter set to the value 64 indicates to register this site design with the team site template. The value 68 would indicate the communcation site template. The **Title** and **Description** parameters will be displayed when a user views site designs as they create a new team site.
+
+> [!NOTE]
+> A site design can run multiple scripts. The script IDs are passed in an array, and they will run in the order listed.
+
+For step-by-step information on creating a site design, see [Get started creating site designs](get-started-create-site-design.md)
 
 ## PnP Provisioning and customization using Microsoft Flow
 
@@ -136,21 +222,28 @@ For a step-by-step tutorial on how to configure your own Microsoft flow with PnP
 
 ## Scoping
 
-You can configure site designs to only appear for specific groups or people in your organization. This is useful to ensure that people only see the site designs intended for them. For example, you may want the accounting department to only see site designs specific for them. And the accounting site designs may not make sense to show to anyone else.
+You can configure site designs to only appear for specific groups or people in your organization. This is useful to ensure that people only see the site designs intended for them. For example, you may want the accounting department to only see site designs specificly for them. And the accounting site designs may not make sense to show to anyone else.
 
-Scopes are applied when you register a site design. You can specify the scope by user, or a mail-enabled security group. Here is an example of registering a site design for only the accounting Office 365 group:
+By default a site design can be viewed by everyone when it is created. Scopes are applied by using the **Grant-SPOSiteDesignRights** cmdlet, or the **GrantSiteDesignRights** REST API.  You can specify the scope by user, or a mail-enabled security group. The following example shows how to add Nestor (a user at the fictional Contoso site) view rights on a site design.
 
-Here's an example of how to scope an existing site design so that only Nestor (a user at the fictional Contoso site) can view and use the site design.
-
+> [!div class="tabbedCodeSnippets"]
 ```powershell
 Grant-SPOSiteDesignRights `
   -Identity 44252d09-62c4-4913-9eb0-a2a8b8d7f863 `
   -Principals "nestorw@contoso.sharepoint.com" `
   -Rights View
 ```
-
 ```javascript
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GrantSiteDesignRights", {id:"44252d09-62c4-4913-9eb0-a2a8b8d7f863", principalNames:["nestorw@contoso.sharepoint.com”], grantedRights:1});
 ```
 
-For more information, see [Apply a scope to your site design](site-design-scopes.md).
+For more information on working with scopes, see [Scoping access to site designs](site-design-scoping.md).
+
+## See also
+
+- [Get started creating site designs](get-started-create-site-design.md)
+- [Running custom site script actions using Microsoft flow](site-design-trigger-flow.md)
+- [Apply a scope to your site design](site-design-scopes.md)
+- [Site design JSON schema](site-design-json-schema.md)
+- [PowerShell cmdlets for SharePoint site designs and site scripts](site-design-powershell.md)
+- [Site design and site script REST API](site-design-rest-api.md)
