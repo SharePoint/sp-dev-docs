@@ -29,11 +29,11 @@ Verify that your Office 365 subscription allows external sharing. To do this:
 
 1. Open your  **Office 365 admin center**.
     
-2. On the left navigation menu, choose  **EXTERNAL SHARING**.
+2. On the left navigation menu, choose **SharePoint**.
     
-3. Choose  **Sharing Overview**.
+3. On the left navigation menu, choose  **Sharing**.
     
-4. In  **Sites**, ensure that  **Let external people access your sites** is **On**.
+4. In  **Sharing outside your organization**, ensure that  **Allow users to invite and share with authenticated external users** is **On**.
     
 Verify your external site settings on your SharePoint site collection. To do this:
 
@@ -41,7 +41,7 @@ Verify your external site settings on your SharePoint site collection. To do thi
     
 2. On the left navigation menu, choose  **SharePoint** to open your **SharePoint admin center**.
     
-3. Select the check box next to the site collection URL that you want to verify your external sharing settings on.
+3. In the Site Collection List, select the check box next to the site collection URL that you want to verify your external sharing settings on.
     
 4. On the ribbon, choose  **Sharing**.
     
@@ -49,7 +49,7 @@ Verify your external site settings on your SharePoint site collection. To do thi
     
 When you run this code sample,  **Main** in Program.cs performs the following tasks:
 
-- Gets the Office 365 admin center URL.
+- Gets the SharePoint admin center URL.
     
 - Gets the site collection URL to configure external sharing settings on.
     
