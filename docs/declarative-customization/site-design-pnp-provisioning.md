@@ -111,7 +111,7 @@ In order to test your flow you have will have to make a post request. The easies
 
 ```powershell
 $uri = "[the URI you copied in step 8 when creating the flow]"
-$body = "{siteurl:'somesiteurl'}
+$body = "{webUrl:'somesiteurl'}
 Invoke-RestMethod -Uri $uri -Method Post -ContentType "application/json" -Body $body
 ```
 
