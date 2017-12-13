@@ -1,28 +1,22 @@
 ﻿---
 title: SharePoint .NET Server, CSOM, JSOM, and REST API index
-ms.date: 09/25/2017
+description: The most frequently used types and objects that are implemented in the .NET server object model and at least one client programming model.
+ms.date: 12/13/2017
 ms.prod: sharepoint
 ---
 
 
 # SharePoint .NET Server, CSOM, JSOM, and REST API index
 
+Use the API index to look up many of the most frequently used types and objects that are implemented in the .NET server object model and at least one client programming model: .NET client-side object model (CSOM), JavaScript object model (JSOM), and/or REST.
+
+This table lists the most frequently used core APIs, which are in most cases based on types from the .NET server implementation. In some cases, types are native to SharePoint client programming, and there is no equivalent .NET server type. In other cases, some but not all possible client programming model implementations of a specific type exist.
+
+> [!NOTE] 
+> Before using a REST endpoint URI shown in the table, replace the `…` abbreviation with the path to your SharePoint site; for example `http://<site collection>/<site>/_api/web/lists`.
  
  
-
-
 ## SharePoint API index
-
-Use the API index look up many of the most frequently used types and objects that are implemented in the .NET server object model and at least one client programming model: .NET client-side object model (CSOM), JavaScript object model (JSOM), and/or REST.
- 
-
- 
-Table 1 lists the most frequently used, core APIs, which are in most cases based on types from the .NET server implementation. In some cases, types are native to SharePoint client programming, and there is no equivalent .NET server type. In other cases, some but not all possible client programming model implementations of a specific type exist.
- 
-
- 
- *Table 1. Frequently used Core APIs* 
- 
 
 ||||
 |:-----|:-----|:-----|
@@ -98,22 +92,16 @@ Table 1 lists the most frequently used, core APIs, which are in most cases based
 |**WebTemplate** **SPWebTemplate**| [SP.WebTemplate object](http://msdn.microsoft.com/library/cd670582-20a3-30b7-20f5-758be6d838da%28Office.15%29.aspx)| `…/_api/web/GetAvailableWebTemplates(languageid,includecrosslanguage)/getbyname(templatename)`|
 |**WebTemplateCollection** **SPWebTemplateCollection**| [SP.WebTemplateCollection object](http://msdn.microsoft.com/library/c6e8b2c8-4f0f-bfda-2626-49c59ef92844%28Office.15%29.aspx)| `…/_api/web/GetAvailableWebTemplates(languageid,includecrosslanguage)`|
 
-> [!NOTE] 
-> Before using a REST endpoint URI shown in the table, replace the  `…` abbreviation with the path to your SharePoint site, for example `http://<site collection>/<site>/_api/web/lists`.
- 
+
 
 
 ## See also
 <a name="bk_addresources"> </a>
 
+- [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
+- [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-client-library-code.md)
+- [Complete basic operations using JavaScript library code in SharePoint](complete-basic-operations-using-javascript-library-code-in-sharepoint.md)
 
--  [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-client-library-code.md)
-    
- 
--  [Complete basic operations using JavaScript library code in SharePoint](complete-basic-operations-using-javascript-library-code-in-sharepoint.md)
-    
- 
--  [Complete basic operations using JavaScript library code in SharePoint](complete-basic-operations-using-javascript-library-code-in-sharepoint.md)
     
  
 

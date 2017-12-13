@@ -9,7 +9,7 @@ ms.prod: sharepoint
 # URL strings and tokens in SharePoint Add-ins
 
 > [!IMPORTANT]
-> For general information about constructing URLs in SharePoint and the use of tokens in those URLs, see [URLs and tokens in SharePoint](../general-development/urls-and-tokens-in-sharepoint). This topic describes the tokens that are available in SharePoint Add-ins.
+> For general information about constructing URLs in SharePoint and the use of tokens in those URLs, see [URLs and tokens in SharePoint](../general-development/urls-and-tokens-in-sharepoint.md). This topic describes the tokens that are available in SharePoint Add-ins.
  
 SharePoint supports the tokens listed in the following tables for use in SharePoint Add-ins.
 
@@ -22,7 +22,7 @@ In each table:
 - The **Custom Action** column specifies whether the token can be used in the URL of a custom action on a host web. 
 - The **Add-in Part** column specifies whether the token can be used in the **Src** property of the add-in part.
 
-## Tokens that can be used at the beginning of a URL in a SharePoint Add-in
+## Tokens that can be used at the beginning of a URL
 
 |**Token**|**Resolves to**|**StartPage**|**Custom Action**|**Add-in Part**|**Remarks**|
 |:-----|:-----|:-----|:-----|:-----|:-----|
@@ -60,11 +60,12 @@ Except where indicated otherwise, none of the tokens in the next table can be us
 |{SiteCollection}|The URL of the parent site of the current website.|No|Yes|Yes||
 |{SiteUrl}|The URL of the current website.|No|Yes|No||
 |{Source}|The HTTP Request URL.|No|Yes|No||
-|{StandardTokens}|See Remarks.|Yes|Yes|Yes|This combines five other tokens. It initially resolves to `SPHostUrl={HostUrl}&amp;SPAppWebUrl={AppWebUrl}&amp;SPLanguage={Language}&amp;SPClientTag={ClientTag}&amp;SPProductNumber={ProductNumber}` <br/><br/>...and then each of these tokens resolves. If there is no add-in web, the portion `&amp;SPAppWebUrl={AppWebUrl}` is not present.|
+|{StandardTokens}|See Remarks.|Yes|Yes|Yes|This combines five other tokens. It initially resolves to... `SPHostUrl={HostUrl}&amp;SPAppWebUrl={AppWebUrl}&amp;SPLanguage={Language}&amp;SPClientTag={ClientTag}&amp;SPProductNumber={ProductNumber}` <br/><br/>...and then each of these tokens resolves. If there is no add-in web, the portion `&amp;SPAppWebUrl={AppWebUrl}` is not present.|
 
 ## See also
 <a name="SP15URLstrings_bk_addlresources"> </a>
 
+-  [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
 -  [Advanced Extranet Support](http://msdn.microsoft.com/library/21d67796-23c5-4339-8f0e-124208d21ab2%28Office.15%29.aspx)
 -  [Getting References to Sites, Web Applications, and other Key Objects](http://msdn.microsoft.com/library/8623ef1d-e3cc-426c-84a3-6379e0ae284f%28Office.15%29.aspx)
 -  [Working with List Objects and Collections](http://msdn.microsoft.com/library/d4167b10-6f1e-49f1-8b22-16ce20012a27%28Office.15%29.aspx)
