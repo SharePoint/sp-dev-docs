@@ -177,9 +177,10 @@ Example:
 {
    "verb": "setSPFieldCustomFormatter",
    "fieldDisplayName": "name",
-   "formatterJSON": "json"<TBD need an example here>
+   "formatterJSON": "json" 
 }
 ```
+<!-- TBD provide an example for formatterJSON in previous example -->
 
 ## Add a navigation link
 

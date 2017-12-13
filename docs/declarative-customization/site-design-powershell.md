@@ -66,7 +66,7 @@ Add-SPOSiteDesign
 |[-Description]         | The display description of site design. |
 |[-PreviewImageUrl]     | The URL of a preview image. If none is specified SharePoint will use a generic image. |
 |[-PreviewImageAltText] | The alt text description of the image for accessibility. |
-|[-IsDefault]           | A switch that if provided, applies the site design to the default site template. For more information see [Applying a site design to a default SharePoint template](site-design-apply-default-template.md)|
+|[-IsDefault]           | A switch that if provided, applies the site design to the default site template. <!-- For more information see [Applying a site design to a default SharePoint template](site-design-apply-default-template.md) --> |
 
 Here's an example of creating a new site design.
 

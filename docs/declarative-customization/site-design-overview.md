@@ -34,7 +34,7 @@ These are the default site designs. For each site design there is a title, descr
 
 ![Default site design title, description, and image on communication site template](images/site-designs-listed-on-communication-site-template.png)
 
-Had you chosen the team site template, it contains only one default site design named **Team site**. For additional information on how you can change the default site designs, see [Applying a site design to a default SharePoint template](site-design-apply-default-template.md).
+Had you chosen the team site template, it contains only one default site design named **Team site**. <!-- For additional information on how you can change the default site designs, see [Applying a site design to a default SharePoint template](site-design-apply-default-template.md). -->
 
 Once a site design is selected, SharePoint creates the new site, and runs site scripts for the site design. The site scripts detail the work such as creating new lists, or applying a theme. When the actions in the scripts are completed, SharePoint displays detailed results of those actions in a progress pane.
 
@@ -111,9 +111,8 @@ Site scripts can be run again on the same site after provisioning. This can only
 
 ## Using PowerShell or REST to work with site designs and site scripts
 
-You can create site designs and site scripts by using PowerShell, or the REST API. The following example creates a site script and a site design that uses the site script. The PowerShell example loads the script from a file, while the REST example has the script inline.
+You can create site designs and site scripts by using PowerShell, or the REST API. The following example creates a site script and a site design that uses the site script. <!-- The PowerShell example loads the script from a file, while the REST example has the script inline. -->
 
-> [!div class="tabbedCodeSnippets"]
 ```powershell
 C:\> Get-Content 'c:\scripts\site-script.json' `
      -Raw | `
@@ -132,6 +131,8 @@ C:\> Add-SPOSiteDesign `
   -SiteScripts "2756067f-d818-4933-a514-2a2b2c50fb06" `
   -Description "Creates customer list and applies standard theme"
 ```
+
+<!-- 
 ```javascript
 var site_script = {
   "$schema": "schema.json",
@@ -185,14 +186,13 @@ var site_script = {
 
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteScript(Title=@title)?@title='Contoso theme and list'", site_script);
 
-//TBD: modify to put site script id into next statement
-
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteDesign",{
   info:{
     Title:"Contoso customer tracking", Description:"Creates customer list and applies standard theme",  SiteScriptIds:["607aed52-6d61-490a-b692-c0f58a6981a1"],  WebTemplate:"64"
    }
   });
 ```
+-->
 
 In the previous example, the **Add-SPOSiteScript** cmdlet, or **CreateSiteScript** REST API returns a site script id. This is used for the **SiteScripts** parameter in the subsequent call to the **Add-SPO-SiteDesign** cmdlet, or **CreateSiteDesign** REST API.
 
@@ -233,16 +233,17 @@ Grant-SPOSiteDesignRights `
   -Principals "nestorw@contoso.sharepoint.com" `
   -Rights View
 ```
+
+<!--
 ```javascript
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GrantSiteDesignRights", {id:"44252d09-62c4-4913-9eb0-a2a8b8d7f863", principalNames:["nestorw@contoso.sharepoint.com”], grantedRights:1});
 ```
-
+-->
 For more information on working with scopes, see [Scoping access to site designs](site-design-scoping.md).
 
 ## See also
 
 - [Get started creating site designs](get-started-create-site-design.md)
-- [Running custom site script actions using Microsoft flow](site-design-trigger-flow.md)
 - [Apply a scope to your site design](site-design-scopes.md)
 - [Site design JSON schema](site-design-json-schema.md)
 - [PowerShell cmdlets for SharePoint site designs and site scripts](site-design-powershell.md)
