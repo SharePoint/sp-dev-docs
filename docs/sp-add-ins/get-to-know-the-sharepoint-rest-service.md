@@ -21,10 +21,10 @@ SharePoint adds the ability for you to remotely interact with SharePoint sites b
 
 To access SharePoint resources using REST, construct a RESTful HTTP request, using the Open Data Protocol (OData) standard, which corresponds to the desired client object model API. For example:
 
-*Client object model method:* 
+*Client object model method:*<br/> 
 List.GetByTitle(listname) 
 
-*REST endpoint:*
+*REST endpoint:*<br/>
 `http://server/site/_api/lists/getbytitle('listname')`
 
 The client.svc web service in SharePoint handles the HTTP request, and serves the appropriate response in either Atom or JSON (JavaScript Object Notation) format. Your client application must then parse that response. The following figure shows a high-level view of the SharePoint REST architecture.
@@ -48,9 +48,9 @@ In general:
 |**If you want to do this to an endpoint**|**Use this HTTP request**|**Keep in mind**|
 |:-----|:-----|:-----|
 |Read a resource|**GET**||
-|Create or update a resource|**POST**|Use **POST** to create entities such as lists and sites.<br/>The SharePoint REST service supports sending **POST** commands that include object definitions to endpoints that represent collections.<br/>For **POST** operations, any properties that are not required are set to their default values.<br/>If you attempt to set a read-only property as part of a **POST** operation, the service returns an exception.|
-|Update or insert a resource |**PUT**| Use **PUT** and **MERGE** operations to update existing SharePoint objects.<br/>Any service endpoint that represents an object property **set** operation supports both **PUT** requests and **MERGE** requests.<br/>For **MERGE** requests, setting properties is optional; any properties that you do not explicitly set retain their current property.<br/>For **PUT** requests, if you do not specify all required properties in object updates, the REST service returns an exception.<br/>In addition, any optional properties you do not explicitly set are set to their default properties.|
-|Delete a resource|**DELETE**|Use the HTTP **DELETE** command against the specific endpoint URL to delete the SharePoint object represented by that endpoint.<br/>In the case of recyclable objects, such as lists, files, and list items, this results in a **Recycle** operation.|
+|Create or update a resource|**POST**|- Use **POST** to create entities such as lists and sites.<br/>- The SharePoint REST service supports sending **POST** commands that include object definitions to endpoints that represent collections.<br/>- For **POST** operations, any properties that are not required are set to their default values.<br/>- If you attempt to set a read-only property as part of a **POST** operation, the service returns an exception.|
+|Update or insert a resource |**PUT**|- Use **PUT** and **MERGE** operations to update existing SharePoint objects.<br/>- Any service endpoint that represents an object property **set** operation supports both **PUT** requests and **MERGE** requests.<br/>- For **MERGE** requests, setting properties is optional; any properties that you do not explicitly set retain their current property.<br/>- For **PUT** requests, if you do not specify all required properties in object updates, the REST service returns an exception.<br/>- In addition, any optional properties you do not explicitly set are set to their default properties.|
+|Delete a resource|**DELETE**|- Use the HTTP **DELETE** command against the specific endpoint URL to delete the SharePoint object represented by that endpoint.<br/>- In the case of recyclable objects, such as lists, files, and list items, this results in a **Recycle** operation.|
 
 <br/>
 
@@ -148,17 +148,17 @@ To learn more about using the SharePoint REST service, use the following resourc
 
 |**Title**|**Description**|
 |:-----|:-----|
-| [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md)|Learn how to perform basic create, read, update, and delete (CRUD) operations with the SharePoint REST interface.|
-| [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest.md)|Learn how to perform basic create, read, update, and delete (CRUD) operations on lists and list items with the SharePoint REST interface.|
-| [Working with folders and files with REST](working-with-folders-and-files-with-rest.md)|Learn how to perform basic create, read, update, and delete (CRUD.) operations on folders and files with the SharePoint REST interface.|
-| [Navigate the SharePoint data structure represented in the REST service](navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md)|Learn how to start from a REST endpoint for a given SharePoint item, and navigate to and access related items, such as parent sites or the library structure where that item resides.|
-| [Determine SharePoint REST service endpoint URIs](determine-sharepoint-rest-service-endpoint-uris.md)|Learn general guidelines for determining SharePoint REST endpoint URIs from the signature of the corresponding client object model APIs.|
-| [Use OData query operations in SharePoint REST requests](use-odata-query-operations-in-sharepoint-rest-requests.md)|Learn how to use a wide range of OData query string operators to select, filter, and order the data you request from the SharePoint REST service.|
+| [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md)|Perform basic create, read, update, and delete (CRUD) operations with the SharePoint REST interface.|
+| [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest.md)|Perform basic CRUD operations on lists and list items with the SharePoint REST interface.|
+| [Working with folders and files with REST](working-with-folders-and-files-with-rest.md)|Perform basic CRUD operations on folders and files with the SharePoint REST interface.|
+| [Navigate the SharePoint data structure represented in the REST service](navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md)|Start from a REST endpoint for a given SharePoint item, and navigate to and access related items, such as parent sites or the library structure where that item resides.|
+| [Determine SharePoint REST service endpoint URIs](determine-sharepoint-rest-service-endpoint-uris.md)|General guidelines for determining SharePoint REST endpoint URIs from the signature of the corresponding client object model APIs.|
+| [Use OData query operations in SharePoint REST requests](use-odata-query-operations-in-sharepoint-rest-requests.md)|Use a wide range of OData query string operators to select, filter, and order the data you request from the SharePoint REST service.|
 | [SharePoint workflow fundamentals](../general-development/sharepoint-workflow-fundamentals.md)|Add search functionality to client and mobile applications using the Search REST service in SharePoint Server 2013 and any technology that supports REST web requests.|
-| [Social feed REST API reference for SharePoint](../general-development/social-feed-rest-api-reference-for-sharepoint.md)|Learn about SharePoint REST endpoints for feed-related tasks.|
-| [Following people and content REST API reference for SharePoint](../general-development/following-people-and-content-rest-api-reference-for-sharepoint.md)|Learn about SharePoint REST endpoints for following people and content.|
-| [Make batch requests with the REST APIs](make-batch-requests-with-the-rest-apis.md)|Learn how to combine multiple requests into a single call to the REST service.|
-| [Synchronize SharePoint items using the REST service](synchronize-sharepoint-items-using-the-rest-service.md)|Learn how to synchronize items between SharePoint and your add-ins or services by using the **GetListItemChangesSinceToken** resource, part of the SharePoint REST service.|
+| [Social feed REST API reference for SharePoint](../general-development/social-feed-rest-api-reference-for-sharepoint.md)|SharePoint REST endpoints for feed-related tasks.|
+| [Following people and content REST API reference for SharePoint](../general-development/following-people-and-content-rest-api-reference-for-sharepoint.md)|SharePoint REST endpoints for following people and content.|
+| [Make batch requests with the REST APIs](make-batch-requests-with-the-rest-apis.md)|Combine multiple requests into a single call to the REST service.|
+| [Synchronize SharePoint items using the REST service](synchronize-sharepoint-items-using-the-rest-service.md)|Synchronize items between SharePoint and your add-ins or services by using the **GetListItemChangesSinceToken** resource, part of the SharePoint REST service.|
 
 
 
