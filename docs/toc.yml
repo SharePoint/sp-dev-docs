@@ -263,8 +263,6 @@
     items:
     - name: Get started
       href: declarative-customization/get-started-create-site-design.md
-    - name: Trigger a workflow
-      href: declarative-customization/site-design-trigger-workflow.md
     - name: Setting scope
       href: declarative-customization/site-design-scoping.md
     - name: JSON schema reference
@@ -273,6 +271,8 @@
       href: declarative-customization/site-design-powershell.md
     - name: REST API
       href: declarative-customization/site-design-rest-api.md
+    - name: Calling the PnP Provisioning Engine
+      href: declarative-customization/site-design-pnp-provisioning.md
 - name: SharePoint APIs
   items:
   - name: Create Communication Sites
