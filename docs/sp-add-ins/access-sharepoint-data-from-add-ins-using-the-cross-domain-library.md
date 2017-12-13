@@ -1,4 +1,4 @@
-﻿---
+---
 title: Access SharePoint data from add-ins using the cross-domain library
 ms.date: 09/25/2017
 ms.prod: sharepoint
