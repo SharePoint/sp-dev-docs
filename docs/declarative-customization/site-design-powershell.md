@@ -33,6 +33,7 @@ The following cmdlets are available for managing site designs and site scripts f
 - **Remove-SPOSiteDesign**
 - **Remove-SPOSiteScript**
 - **Revoke-SPOSiteDesignRights**
+
 <!--
 - **Set-SPOSiteDesign**
 - **Set-SPOSiteScript**
@@ -268,7 +269,7 @@ Revoke-SPOSiteDesignRights
 | [-Identity]  | The ID of the site design from which to revoke rights. |
 | -Principals  | One or more principals to revoke rights on the specified site design. |
 
-<!-->
+<!--
 ## Set-SPOSiteDesign (TBD)
 
 ## Set-SPOSiteScript (TBD)
