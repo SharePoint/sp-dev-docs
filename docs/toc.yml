@@ -258,6 +258,21 @@
       href: declarative-customization/site-theming/sharepoint-site-theming-csom.md  
   - name: Column formatting
     href: declarative-customization/column-formatting.md   
+  - name: Site design
+    href: declarative-customization/site-design-overview.md
+    items:
+    - name: Get started
+      href: declarative-customization/get-started-create-site-design.md
+    - name: Trigger a workflow
+      href: declarative-customization/site-design-trigger-workflow.md
+    - name: Setting scope
+      href: declarative-customization/site-design-scoping.md
+    - name: JSON schema reference
+      href: declarative-customization/site-design-json-schema.md
+    - name: PowerShell cmdlets
+      href: declarative-customization/site-design-powershell.md
+    - name: REST API
+      href: declarative-customization/site-design-rest-api.md
 - name: SharePoint APIs
   items:
   - name: Create Communication Sites
