@@ -163,7 +163,6 @@ RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScri
 
 Revoke access from a site design for one or more principals.
 
-RestRequest
-
-Revoke-SPOSiteDesignRights [-Identity] <SPOSiteDesignPipeBind> -Principals <string[]>  [<CommonParameters>]
-
+```javascript
+RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.RevokeSiteDesignRights", {id:"5d4756e9-e1f5-42f7-afa7-5fa5aac170aa", principalNames:["debrab@Contoso.sharepoint.com"] });
+```
