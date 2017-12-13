@@ -7,9 +7,9 @@ ms.date: 12/14/2017
 # Site design and site script REST API
 
 > [!NOTE]
-> Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for us in production environments.
+> Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for use in production environments.
 
-You can use the the SharePoint REST interface to perform basic create, read, update, and delete (CRUD) operations on site themes.
+You can use the the SharePoint REST interface to perform basic create, read, update, and delete (CRUD) operations on site designs and site scripts.
 
 The SharePoint Online (and SharePoint 2016 and later on-premises) REST service supports combining multiple requests into a single call to the service by using the OData $batch query option. For details and links to code samples, see [Make batch requests with the REST APIs](https://dev.office.com/sharepoint/docs/apis/rest/make-batch-requests-with-the-rest-apis.md).
 
@@ -22,16 +22,23 @@ Before you get started, make sure that you're familiar with the following:
 
 The following REST commands are available for working with site designs and site scripts:
 
-* __AddTenantTheme__ &mdash; create a new theme; similar to the Add-SPOTheme SharePoint cmdlet
-* __RemoveTenantTheme__ &mdash; remove a theme from the tenant store; similar to the Remove-SPOTheme PowerShell cmdlet
-* __GetTenantThemingOptions__ &mdash; read theme settings
-
-The URL for theme management REST commands is based on _api/thememanager. For example, the following are the endpoints for the commands:
-
-* http://<site url>/_api/thememanager/AddTenantTheme
-* http://<site url>/_api/thememanager/RemoveTenantTheme
+- **CreateSiteScript** &mdash; Create a new site script.
+- **GetSiteScripts** &mdash; Get a list of information on existing site scripts.
+- **GetSiteScriptMetadata** &mdash; Get information about a specific site script.
+- **UpdateSiteScript** &mdash; Update a site script with new values.
+- **DeleteSiteScript** &mdash; Delete a site script.
+- **CreateSiteDesign** &mdash; Create a site design.
+- **GetSiteDesigns** &mdash; Get a list of information on existing site designs.
+- **GetSiteDesignMetadata** &mdash; Get information about a sepcific site design.
+- **UpdateSiteDesign** &mdash; Update a site design with new values.
+- **DeleteSiteDesign** &mdash; Delete a site design.
+- **GetSiteDesignRights** &mdash; Get a list of principals that have access to a site design.
+- **GrantSiteDesignRights** &mdash; Grant access to a site design for one or more principals.
+- **RevokeSiteDesignRights** &mdash; Revoke access from a site design for one or more principals.
 
 ## Create a function to send REST requests
+
+To work with the REST API we recommend creating a helper function to make the REST calls. The following **RestRequest** function will call the REST method specified in the **url** parameter and pass the additional parameters in **params**.
 
 ```javascript
 function RestRequest(url,params) {
@@ -54,89 +61,107 @@ function RestRequest(url,params) {
 }
 ```
 
-## CreateSiteScript 
+## CreateSiteScript
 
-//create site script
+Creates a new site design available to users when they create a new site from the SharePoint home page.
 
+```javascript
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteScript(Title=@title)?@title='TITLE'", VARIABLE);
+```
 
-Add-SPOSiteScript -Title <string> -Content <string> -Description <string>
+## GetSiteScripts
 
-(since it's easiest to just pull stream the formatted script) recommend using w/ Get-Content
+Gets a list of information on existing site scripts.
 
-Get-Content .\scripts\sitescript_sample.txt -Raw | Add-SPOSiteScript -Title "sampleSiteScript" -Description "Create a sample list and add to site nav and apply a pre-loaded company theme"
-
-//get all site scripts
-
+```javascript
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteScripts");
+```
 
-Get-SPOSiteScript
+## GetSiteScriptMetadata
 
+Gets information about a specific site script.
 
-//get a specific site script
-
+```javascript
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteScriptMetadata", {id:"<ID>"});
+```
 
-Get-SPOSiteScript -Identity
+## UpdateSiteScript
 
-//update a specific site script
+Updates a site script with new values.
 
+```javascript
 VAR = site script content
 
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.UpdateSiteScript", {updateInfo:{Id:"<siteScriptID>", Title:"<updated title>", Description:"<updated description>", Version: 2, Content: JSON.stringify(<VAR>)}});
+```
 
-(since it's easiest to just pull stream the formatted script) recommend using w/ Get-Content
+## DeleteSiteScript
 
-Get-Content .\scripts\updatedsitescript_sample.txt -Raw | Set-SPOSiteScript -Identity NNN -Description "Create a sample list with another column and changes the pre-loaded company theme applied from Contoso Explorers to Contoso Programs"
+Deletes a site script.
 
-//delete a specific site script
-
+```javascript
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.DeleteSiteScript", {id:"<ID>"});
+```
 
-Remove-SPOSiteScript -Identity
+## CreateSiteDesign
 
-//create site design
- 
+Create a site design.
+
+```javascript
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteDesign", {info:{Title:"<title>", Description:"<description>", SiteScriptIds:["NNN"],  WebTemplate:"<64 | 68>", IsDefault: <false | true>}});
+```
 
-Add-SPOSiteDesign -Title <string> -WebTemplate <string> -SiteScripts <SPOSiteScriptPipeBind[]> [-Description <string>] [-PreviewImageUrl <string>] [-PreviewImageAltText <string>] [-IsDefault]  [<CommonParameters>]
+## GetSiteDesigns
 
+Get a list of information on existing site designs.
 
-//get all site designs
-
+```javascript
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteDesigns");
+```
 
-Get-SPOSiteDesign
+## GetSiteDesignMetadata
 
-//get a specific site design
+Get information about a specific site design.
 
+```javascript
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteDesignMetadata", {id:"<ID>"});
+```
 
-Get-SPOSiteDesign [[-Identity] <SPOSiteDesignPipeBind>]  [<CommonParameters>]
+## UpdateSiteDesign
 
-//update a specific site design
+Update a site design with new values.
 
+```javascript
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.UpdateSiteDesign", {updateInfo:{Id:"<siteDesignID>", Title:"<updated site design title>", Description:"<updated site design description>", SiteScriptIds:["<ID>"], PreviewImageUrl:"<url to image asset for site design preview image>",PreviewImageAltText:"<alt text for preview image>" WebTemplate:"68", Version: 7, IsDefault: false}});
+```
 
+## DeleteSiteDesign
 
-//delete a specific site design
+Delete a site design.
 
+```javascript
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.DeleteSiteDesign", {id:"<ID>"});
+```
 
-Remove-SPOSiteDesign [-Identity] <SPOSiteDesignPipeBind>  [<CommonParameters>]
+## GetSiteDesignRights
 
-//get a site design scope
+Get a list of principals that have access to a site design.
 
+```javascript
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteDesignRights", {id:"<ID>"});
+```
 
-//scope a site design
+## GrantSiteDesignRights
 
+Grant access to a site design for one or more principals.
+
+```javascript
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GrantSiteDesignRights", {id:"<ID>", principalNames:["alias", “alias@domain.com”], grantedRights:1});
+```
 
-Grant-SPOSiteDesignRights [-Identity] <SPOSiteDesignPipeBind> -Principals <string[]> -Rights {View}  [<CommonParameters>]
-Get-SPOSiteDesignRights [-Identity] <SPOSiteDesignPipeBind>  [<CommonParameters>]
+## RevokeSiteDesignRights
 
-//revoke site design scope rights
+Revoke access from a site design for one or more principals.
 
 RestRequest
 

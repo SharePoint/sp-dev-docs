@@ -7,7 +7,7 @@ ms.date: 12/14/2017
 # Scoping access to site designs
 
 > [!NOTE]
-> Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for us in production environments.
+> Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for use in production environments.
 
 Site designs are available to everyone by default. But you can scope site designs so that they are only available to specific users or groups. For example, the accounting apartment may have specific site designs they use, but it may not make sense to share those site designs with everyone. This article will explain how you can control which users and groups can see specific site designs.
 

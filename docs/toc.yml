@@ -257,8 +257,6 @@
       href: declarative-customization/site-design-powershell.md
     - name: REST API
       href: declarative-customization/site-design-rest-api.md
-    - name: CSOM API
-      href: declarative-customization/site-design-csom.md
 - name: SharePoint APIs
   items:
   - name: Create Communication Sites

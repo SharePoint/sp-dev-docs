@@ -7,7 +7,7 @@ ms.date: 12/14/2017
 # Site design JSON schema
 
 > [!NOTE]
-> Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for us in production environments.
+> Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for use in production environments.
 
 The site design is a list of actions. For more complex actions, such as creating a list, there are also subactions. Each action is specified by a "verb" value. Verb actions are run in the order they appear in the JSON script.
 
@@ -230,7 +230,7 @@ JSON values:
 
 - **fileName** - The name of the file.
 - **setAsHomePage** - True if this page is the home page; otherwise, false.
-- **pageData** - An object with addtional information about the page. **pageData** requires the following values:
+- **pageData** - An object with additional information about the page. **pageData** requires the following values:
   - **Title** - The title of the page.
   - **BannerImageUrl** - A URL specifying the location of an image to display for the banner. <TBD: need more info>
   - **CanvasContent1** - Content for the page specified as XML. <TBD: need more info>

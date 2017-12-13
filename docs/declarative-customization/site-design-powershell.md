@@ -7,7 +7,7 @@ ms.date: 12/14/2017
 # PowerShell cmdlets for SharePoint site designs and site scripts
 
 > [!NOTE]
-> Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for us in production environments.
+> Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for use in production environments.
 
 Use PowerShell cmdlets to create, retrieve, and remove site designs and site scripts.
 
@@ -65,7 +65,7 @@ Add-SPOSiteDesign
 |-SiteScripts           | An array of one or more site scripts. Each is identified by an ID. The scripts will run in the order listed. |
 |[-Description]         | The display description of site design. |
 |[-PreviewImageUrl]     | The URL of a preview image. If none is specified SharePoint will use a generic image. |
-|[-PreviewImageAltText] | Th alot text description of the image for accessibility. |
+|[-PreviewImageAltText] | The alt text description of the image for accessibility. |
 |[-IsDefault]           | A switch that if provided, applies the site design to the default site template. For more information see [Applying a site design to a default SharePoint template](site-design-apply-default-template.md)|
 
 Here's an example of creating a new site design.
@@ -175,9 +175,23 @@ Nestor Wilke i:0#.f|membership|nestorw@contoso.sharepoint.com   View
 
 ## Get-SPOSiteScript
 
+Displays information about existing site scripts. When no parameter is provided, this cmdlet returns the **Id**, **Title**, **Description**, and **Version** of each site script. When a site script ID is provided, this cmdlet also returns the **Content**, which is the JSON of the site script.
+
+```powershell
+Get-SPOSiteScript
+  [[-Identity] <SPOSiteScriptPipeBind>]
+  [<CommonParameters>]
+```
+
+### Parameters
+
+|Parameter     | Description  |
+|--------------|--------------|
+| [-Identity]  | The ID of the site script to get information about. |
+
 ## Grant-SPOSiteDesignRights
 
-sed to apply permissions to set of users or security group, effectively scoping visibility of site design in UX. They start off public. But once you set permissions, only those groups or users with permissions can access the site design.
+Used to apply permissions to set of users or security group, effectively scoping visibility of site design in UX. They start off public. But once you set permissions, only those groups or users with permissions can access the site design.
 
 ```powershell
 Grant-SPOSiteDesignRights

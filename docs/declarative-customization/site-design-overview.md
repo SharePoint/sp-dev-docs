@@ -7,7 +7,7 @@ ms.date: 12/14/2017
 # SharePoint site design and site script overview
 
 > [!NOTE]
-> Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for us in production environments.
+> Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for use in production environments.
 
 Use site designs and site scripts to automate provisioning new SharePoint sites using your own custom configurations. When people in your organization create new SharePoint sites, you often need to ensure some level of consistency. For example, you may need proper branding and theming applied to each new site. You may also have detailed site provisioning scripts, such as using the PnP provisioning engine, that need to be applied each time a new site is created. This article describes how you can use site designs and site scripts to provide custom configurations to apply when new sites are created.
 
@@ -196,7 +196,7 @@ RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScri
 
 In the previous example, the **Add-SPOSiteScript** cmdlet, or **CreateSiteScript** REST API returns a site script id. This is used for the **SiteScripts** parameter in the subsequent call to the **Add-SPO-SiteDesign** cmdlet, or **CreateSiteDesign** REST API.
 
-The **WebTemplate** parameter set to the value 64 indicates to register this site design with the team site template. The value 68 would indicate the communcation site template. The **Title** and **Description** parameters will be displayed when a user views site designs as they create a new team site.
+The **WebTemplate** parameter set to the value 64 indicates to register this site design with the team site template. The value 68 would indicate the communication site template. The **Title** and **Description** parameters will be displayed when a user views site designs as they create a new team site.
 
 > [!NOTE]
 > A site design can run multiple scripts. The script IDs are passed in an array, and they will run in the order listed.
@@ -207,7 +207,7 @@ For step-by-step information on creating a site design, see [Get started creatin
 
 One action provided by site scripts is the ability to trigger a Microsoft flow. This allows you to specify any custom action you need beyond the actions provided natively in site scripts.
 
-If you use the PnP provisioning engine to automate site creation, then you can use a Microsoft flow to integrate with site designs. You can continue maintaining all of your existing provisioning scripts as well as creating new customizations using this technique.
+If you use the PnP provisioning engine to automate site creation, then you can use a Microsoft flow to integrate with site designs. You can maintain all of your existing provisioning scripts as well as create new custom provisioning scripts using this technique.
 
 ![process of triggering a Microsoft flow](images/process-for-triggering-a-custom-flow.png)
 
@@ -222,7 +222,7 @@ For a step-by-step tutorial on how to configure your own Microsoft flow with PnP
 
 ## Scoping
 
-You can configure site designs to only appear for specific groups or people in your organization. This is useful to ensure that people only see the site designs intended for them. For example, you may want the accounting department to only see site designs specificly for them. And the accounting site designs may not make sense to show to anyone else.
+You can configure site designs to only appear for specific groups or people in your organization. This is useful to ensure that people only see the site designs intended for them. For example, you may want the accounting department to only see site designs specifically for them. And the accounting site designs may not make sense to show to anyone else.
 
 By default a site design can be viewed by everyone when it is created. Scopes are applied by using the **Grant-SPOSiteDesignRights** cmdlet, or the **GrantSiteDesignRights** REST API.  You can specify the scope by user, or a mail-enabled security group. The following example shows how to add Nestor (a user at the fictional Contoso site) view rights on a site design.
 

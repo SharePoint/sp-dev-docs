@@ -7,7 +7,7 @@ ms.date: 12/14/2017
 # Calling the PnP Provisioning Engine from a Site Script
 
 > [!NOTE]
-> Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for us in production environments.
+> Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for use in production environments.
 
 Site Designs offer a great way to standardize the look and feel of your site collections. But if you want to take this one step further, by for instance adding a footer to every page, you might notice that Site Designs do not offer you that option. With the PnP Provisioning engine you can hover create a template which allows you to provision an application customizer to a site. This application customizer then can register a footer on every page. In this article you will learn how to create a site design that applies a PnP Provisioning Template to a site which in turn will add an application customizer to render a footer.
 
@@ -24,7 +24,8 @@ We use the following components in our setup:
 
 We need all these component so we can trigger the PnP Provisioning code in a controller manner right after the site has been created and the Site Design is being applied.
 
-# Setting up App Only Access to your tenant
+## Setting up App Only Access to your tenant
+
 This requires that you open 2 different pages on your tenant, one located in a normal site, the other located in your SharePoint Administration site.
 
 1. Navigate to following URL in your tenant: https://[yourtenant].sharepoint.com/_layouts/appregnew.aspx (you can navigate to any site, but for now pick the root site)
@@ -49,8 +50,9 @@ Now we will trust this app to have the appropriate access to your tenant:
 1. You will receive a question if you want to trust this app. Confirm this by selecting **Trust It**
 
 
-# Creating the Azure Storage Queue
-In this scenario we will use an Azure Storage Queue to receive messages from a Microsoft Flow. Everytime a message shows up in the Storage Queue an Azure Function will get triggered to execute a PowerShell script. But let us set up the Storage Queue first:
+## Creating the Azure Storage Queue
+
+In this scenario we will use an Azure Storage Queue to receive messages from a Microsoft Flow. Every time a message shows up in the Storage Queue an Azure Function will get triggered to execute a PowerShell script. But let us set up the Storage Queue first:
 
 1. Navigate to the Azure portal at https://portal.azure.com and log in.
 1. Choose **+ New**
@@ -62,7 +64,8 @@ In this scenario we will use an Azure Storage Queue to receive messages from a M
 1. Navigate to **Access Keys** and make note of the **Storage Account Name** and the **key1 Key value**, you will need those values in the next step where you create the flow.
 
 
-# The Flow
+## The Flow
+
 In order to put a message on the queue we have to create a flow. 
 
 1. Navigate to **https://flow.microsoft.com**, log in and create a new flow by clicking **Create from Blank** at the top.
@@ -106,7 +109,8 @@ Your flow should look like this:
 
 ![Flow](images/pnpprovisioning-flow-overview.png)
 
-# Testing the flow
+## Testing the flow
+
 In order to test your flow you have will have to make a post request. The easiest for that, if you are on a Windows PC, is to use PowerShell:
 
 ```powershell
@@ -118,7 +122,8 @@ Invoke-RestMethod -Uri $uri -Method Post -ContentType "application/json" -Body $
 If you now navigate to the main screen of your flow you will see a run history. If everything went okay it should say 'Succeeded'.
 Now navigate to the queue you just created in Azure and click **Refresh**. There should be an entry showing that you correctly invoked the Flow.
 
-# Provision the SPFX Solution
+## Provision the SPFX Solution
+
 For this walkthrough we are going to use an existing SPFX solution which is available at https://github.com/SharePoint/sp-dev-fx-extensions/tree/master/samples/react-application-regions-footer
 
 Follow the steps as provided in the README.MD available in that repository to build and provision your solution.
@@ -144,9 +149,9 @@ Copy the following XML to a new file and save the file as FlowDemoTemplate.xml
 
 >Notice that the template adds a custom action to the the web it is being applied to. It refers to ClientSideComponentId which is the one coming from the SPFX Solution you provisioned earlier. If you run this demo with your own SPFX Solution you will have to change the ClientSideComponentId and optionally the ClientSideComponentProperties attribute values in the XML.
 
-# Create the Azure Function
+## Create the Azure Function
 
-1. Navigate to the Azure Poral at https://portal.azure.com.
+1. Navigate to the Azure Portal at https://portal.azure.com.
 1. Search for 'Function App' and create a new Function App. In the **Storage** field select **Use existing** and select your previously created storage account. Set the other values as required.
 1. After the function app has been created open it and select **Functions**, then select **New function**.
   ![Create a new function](images/pnpprovisioning-create-function.png)
@@ -158,6 +163,7 @@ Copy the following XML to a new file and save the file as FlowDemoTemplate.xml
 1. You will be presented with a Editor where you can enter PowerShell Cmdlets. We will now upload the PnP PowerShell module so we can use it in the Azure function.
 
 ## Uploading PnP PowerShell for your Azure Function
+
 We first have to download the PnP PowerShell module so you can easy upload it later.
 
 1. Create a temporary folder somewhere on your computer
@@ -187,6 +193,7 @@ Now it is time to upload those files so your Azure Function can make use of the 
    ![Create new folder](images/pnpprovisioning-module-files-uploaded.png)
 
 ## Finishing the Azure Function
+
 1. Navigate back to your Azure Function and expand the files tab to the right.
 
     ![View Files](images/pnpprovisioning-view-files.png)
@@ -207,7 +214,8 @@ Notice that we are using 2 environment variables, one called ```SPO_AppId```, th
 1. ```SPO_AppId```: set the value to the Client Id you copied in the first step when creating your app on your tenant.
 2. ```SPO_AppSecret```: set the value to the Client Secret you copied in the first step when creating your app on your tenant.
 
-# Creating the Site Design
+## Creating the Site Design
+
 Open PowerShell and make sure you have the Microsoft Office 365 Management Shell installed.
 
 First connect to your tenant using Connect-SPOService:
@@ -221,7 +229,8 @@ Now you can retrieve the existing Site Designs using
 ```powershell
 Get-SPOSiteDesign
 ```
-In order to create a Site Design you first need to create a Site Script. Think of a Site Design as a container which refers to 1 or more Site Scripts. 
+
+In order to create a Site Design you first need to create a Site Script. Think of a Site Design as a container which refers to 1 or more Site Scripts.
 1. Copy the following JSON code to your clipboard and modify it. Set the url property to the value you copied when creating the flow. The URL looks alike :
 
     ```https://prod-27.westus.logic.azure.com:443/workflows/ef7434cf0d704dd48ef5fb6...oke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun```
@@ -261,7 +270,9 @@ In order to create a Site Design you first need to create a Site Script. Think o
     ```
 
 The Add-SPOSiteDesign will associate the site design with the Team Site. If you want to associate the design with a Communication Site use "68".
-# Concluding
+
+## Conclusion
+
 After you created your Storage Queue, you created the app Id for the app only access, you correctly created the Azure Function, you created the Site Design and triggered the correct Microsoft Flow from the Site Design, you are all good to go. 
 
 Try creating a new site by navigating to your SharePoint Tenant. Select **SharePoint**, select **Create Site**, Select **Team Site**. Your newly created Site Design should show up as a possible design option. Create your site and notice the Site Design being applied after the site has been created. If you configured it all correctly you should see your flow being triggered. You can check the Run History of the flow if it was executed correctly. As it can take a bit before the PnP Provisioning Template has been applied, it can be that the footer does not show up immediately. Give it a minute and reload your site to check again.
