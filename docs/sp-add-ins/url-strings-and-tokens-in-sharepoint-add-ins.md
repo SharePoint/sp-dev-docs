@@ -22,7 +22,7 @@ In each table:
 - The **Custom Action** column specifies whether the token can be used in the URL of a custom action on a host web. 
 - The **Add-in Part** column specifies whether the token can be used in the **Src** property of the add-in part.
 
-## Tokens that can be used at the beginning of a URL
+## Tokens that you can use at the beginning of a URL
 
 |**Token**|**Resolves to**|**StartPage**|**Custom Action**|**Add-in Part**|**Remarks**|
 |:-----|:-----|:-----|:-----|:-----|:-----|
@@ -39,7 +39,7 @@ Except where indicated otherwise, none of the tokens in the next table can be us
 
 <br/> 
 
-## Tokens that can be used inside a URL
+## Tokens that you can use inside a URL
 
 |**Token**|**Resolves to**|**StartPage**|**Custom Action**|**Add-in Part**|**Remarks**|
 |:-----|:-----|:-----|:-----|:-----|:-----|
