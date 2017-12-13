@@ -237,7 +237,7 @@ Removes a site design. It will no longer appear in the UI for creating a new sit
 
 ## Remove-SPOSiteScript
 
-Removes a site script. <!-- TBD how is dependency problem handled so you don't delete a script that a design depends on. this currently creates an error when running the design.)
+Removes a site script. <!-- TBD how is dependency problem handled so you don't delete a script that a design depends on. this currently creates an error when running the design.) -->
 
 ```powershell
 Remove-SPOSiteScript
