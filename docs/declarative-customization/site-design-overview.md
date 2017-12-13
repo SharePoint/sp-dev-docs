@@ -244,7 +244,7 @@ For more information on working with scopes, see [Scoping access to site designs
 ## See also
 
 - [Get started creating site designs](get-started-create-site-design.md)
-- [Apply a scope to your site design](site-design-scopes.md)
+- [Apply a scope to your site design](site-design-scoping.md)
 - [Site design JSON schema](site-design-json-schema.md)
 - [PowerShell cmdlets for SharePoint site designs and site scripts](site-design-powershell.md)
 - [Site design and site script REST API](site-design-rest-api.md)

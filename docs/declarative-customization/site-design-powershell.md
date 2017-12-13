@@ -274,6 +274,6 @@ Revoke-SPOSiteDesignRights
 ## Set-SPOSiteScript (TBD)
 -->
 
-Developers can also use the SharePoint [REST API](sharepoint-site-design-rest-api.md) to handle theme management tasks.
+Developers can also use the SharePoint [REST API](site-design-rest-api.md) to handle theme management tasks.
 
 For information about how themes are defined and stored, see the [JSON schema reference](site-design-json-schema.md).

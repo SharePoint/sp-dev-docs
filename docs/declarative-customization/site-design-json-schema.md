@@ -164,7 +164,7 @@ Example:
 
 ### setSPFieldCustomFormatter
 
-Sets column formatting for a field. For more information on column formatting see [Use column formatting to customize SharePoint](column-formatting).
+Sets column formatting for a field. For more information on column formatting see [Use column formatting to customize SharePoint](column-formatting.md).
 
 JSON values:
 
@@ -205,7 +205,7 @@ Example:
 
 ## Apply a theme
 
-Use the **applyTheme** verb to add a theme to the site. For more information on themes, see [SharePoint site theming](site-theming/sharepoint-site-theming-overview).
+Use the **applyTheme** verb to add a theme to the site. For more information on themes, see [SharePoint site theming](site-theming/sharepoint-site-theming-overview.md).
 
 JSON value:
 
