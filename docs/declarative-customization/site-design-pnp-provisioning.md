@@ -160,7 +160,9 @@ Copy the following XML to a new file and save the file as FlowDemoTemplate.xml
 1. Navigate to the Azure Portal at https://portal.azure.com.
 1. Search for 'Function App' and create a new Function App. In the **Storage** field select **Use existing** and select your previously created storage account. Set the other values as required.
 1. After the function app has been created open it and select **Functions**, then select **New function**.
+
   ![Create a new function](images/pnpprovisioning-create-function.png)
+
 1. From the Language drop-down, select **PowerShell**.
 1. Select **QueueTrigger - PowerShell**.
 1. Name the function **ApplyPnPProvisioningTemplate** 
@@ -241,10 +243,7 @@ Get-SPOSiteDesign
 ```
 
 In order to create a Site Design you first need to create a Site Script. Think of a Site Design as a container which refers to 1 or more Site Scripts.
-1. Copy the following JSON code to your clipboard and modify it. Set the url property to the value you copied when creating the flow. The URL looks alike :
-
-    ```https://prod-27.westus.logic.azure.com:443/workflows/ef7434cf0d704dd48ef5fb6...oke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun```
-
+1. Copy the following JSON code to your clipboard and modify it. Set the url property to the value you copied when creating the flow. The URL looks alike    `https://prod-27.westus.logic.azure.com:443/workflows/ef7434cf0d704dd48ef5fb6...oke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun`
 
     ```json
     {
