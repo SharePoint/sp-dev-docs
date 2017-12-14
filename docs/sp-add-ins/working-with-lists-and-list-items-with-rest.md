@@ -36,6 +36,7 @@ Headers:
 
 > If you want the response in Atom format, use `application/atom+xml` in the `accept` header.
  
+<br/>
 
 The following example shows how to  **retrieve** a specific list if you know its title.
 
@@ -224,6 +225,8 @@ The following XML shows an example of the list item properties that are returned
 </m:properties>
 </content>
 ```
+
+<br/>
 
 The following example shows how to **create** a list item.
  
