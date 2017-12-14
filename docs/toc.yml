@@ -1022,6 +1022,8 @@
     href: general-development/code-samples-for-sharepoint.md
   - name: Choose the right API set in SharePoint
     href: general-development/choose-the-right-api-set-in-sharepoint.md
+  - name: Use the site collection app catalog
+    href: general-development/site-collection-app-catalog.md
   - name: Set up and configure SharePoint Workflow Manager
     href: general-development/set-up-and-configure-sharepoint-workflow-manager.md
   - name: SharePoint Server Application Lifecycle Management
