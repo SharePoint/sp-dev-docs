@@ -85,7 +85,7 @@ In addition to `/site` and `/web`, the REST service includes several other acces
 |**Feature area**|**Access point**|
 |:-----|:-----|
 |Site|`http://server/site/_api/site`|
-|Web|``http://server/site/_api/web`|
+|Web|`http://server/site/_api/web`|
 |User Profile|`http://server/site/_api/SP.UserProfiles.PeopleManager`|
 |Search|`http://server/site/_api/search`|
 
