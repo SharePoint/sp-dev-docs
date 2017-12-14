@@ -76,7 +76,9 @@ The following figure shows a SharePoint webpage that is using the style sheet.
 2. Replace the contents of the Web Form .aspx file with the following code. The code performs the following tasks:
     
     - Loads the blank.html page from the add-in web in an invisible IFrame.
+
     - Loads the defaultcss.ashx file from the add-in web.
+
     - Uses the available styles.
 
     ```
@@ -209,7 +211,7 @@ In some cases, the user has to be authenticated to SharePoint before your page i
 |**Problem**|**Solution**|
 |:-----|:-----|
 |Visual Studio does not open the browser after you select the F5 key.|Set the SharePoint Add-in project as the startup project.|
-|Certificate error.|Set the **SSL Enabled** property of your web project to false. In the SharePoint Add-in project, set the **Web Project** property to None, and then set the property back to your web project's name.|
+|Certificate error.|Set the **SSL Enabled** property of your web project to **false**. In the SharePoint Add-in project, set the **Web Project** property to **None**, and then set the property back to your web project's name.|
 
 ## See also
 <a name="SP15Usestylesheetcontrol_Addresources"> </a>
