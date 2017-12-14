@@ -84,10 +84,10 @@ In addition to `/site` and `/web`, the REST service includes several other acces
 
 |**Feature area**|**Access point**|
 |:-----|:-----|
-|Site|`http://<server>/<site>/_api/site`|
-|Web|``http://<server>/<site>/_api/web`|
-|User Profile|`http://<server>/<site>/_api/SP.UserProfiles.PeopleManager`|
-|Search|`http://<server>/<site>/_api/search`|
+|Site|`http://server/site/_api/site`|
+|Web|``http://server/site/_api/web`|
+|User Profile|`http://server/site/_api/SP.UserProfiles.PeopleManager`|
+|Search|`http://server/site/_api/search`|
 
 ### Navigate to the specific resources you want to access
 
@@ -95,9 +95,9 @@ From here, construct more specific REST endpoints by "walking" the object model,
 
 |**Client object model API**|**REST endpoint**|
 |:-----|:-----|
-|ClientContext.Web.Lists|`http://<server>/<site>/_api/web/lists`|
-|ClientContext.Web.Lists[guid]|`http://<server>/<site>/_api/web/lists('<guid>')`|
-|ClientContext.Web.Lists.GetByTitle("Title")|`http://<server>/<site>/_api/web/lists/getbytitle('<Title>')`|
+|ClientContext.Web.Lists|`http://server/site/_api/web/lists`|
+|ClientContext.Web.Lists[guid]|`http://server/site/_api/web/lists('<guid>')`|
+|ClientContext.Web.Lists.GetByTitle("Title")|`http://server/site/_api/web/lists/getbytitle('<Title>')`|
 Endpoint URIs are case-insensitive. In the previous table, for example, use `/getbytitle` to specify the REST equivalent of the **GetByTitle()** method.
 
 ## Specify parameters in REST endpoint URIs
@@ -159,10 +159,10 @@ You can use the "parameter aliasing" semantic in OData to pass parameters to a S
 
 For example, the following two REST URIs are equivalent: 
 
-*Specify the parameter value directly:* 
+*Specify the parameter value directly:*<br/> 
 `http://server/site/_api/web/applyWebTemplate("STS#0")`
 
-*Use a parameter alias, and specify the actual parameter value in the query string of the URI:* 
+*Use a parameter alias, and specify the actual parameter value in the query string of the URI:*<br/> 
 `http://server/site/_api/web/applyWebTemplate(title=@template)?@template="STS#0"`
 
 However, the SharePoint REST service does not support passing complex types via parameter aliasing. For example, the following URI, which contains a complex type in the parameter alias, is not supported:
@@ -195,7 +195,7 @@ A `Dictionary<String, object>` is represented as a multi-value object, named Key
 
 If your REST URI terminates in a method call, you can use query string syntax to specify the parameter values of the method. For example:
 
-`http://<server>/<site>/_api/web/applyWebTemplate?template="STS#0"`
+`http://server/site/_api/web/applyWebTemplate?template="STS#0"`
  
 The following figure shows the REST service syntax for parameters in the query string.
 
@@ -205,7 +205,7 @@ The following figure shows the REST service syntax for parameters in the query s
  
 <br/>
 
-## Specifying static methods and properties as REST service URIs
+## Specify static methods and properties as REST service URIs
 
 To construct URIs that correspond to static methods or properties, use the corresponding API name from the ECMAScript object model, starting with the namespace declaration and using dot notation. For example,  [SP.Utilities.Utility.getImageUrl(imageName)](http://msdn.microsoft.com/en-us/library/ee658947.aspx) in the ECMAScript client object model would have the following REST equivalent:
 
