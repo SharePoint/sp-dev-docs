@@ -15,9 +15,11 @@ The request returns ADO **rowset** XML, which includes rows corresponding to any
 
 ### Example
 
-**Example request**: `POST http://server/site/_api/web/Lists/GetByTitle('Announcements')/GetListItemChangesSinceToken`
+**Example request**
 
-**Example POST Body**|
+`POST http://server/site/_api/web/Lists/GetByTitle('Announcements')/GetListItemChangesSinceToken`
+
+**Example POST body**
 
 ```XML
 { 'd' : { 

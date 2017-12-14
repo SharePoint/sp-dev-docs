@@ -1,89 +1,66 @@
 ﻿---
 title: Upload a file by using the REST API and jQuery
-ms.date: 09/25/2017
+description: Upload a local file to a SharePoint folder by using the REST API and jQuery AJAX requests.
+ms.date: 12/14/2017
 ms.prod: sharepoint
 ---
 
-
 # Upload a file by using the REST API and jQuery
-Learn how to upload a local file to a SharePoint folder by using the REST API and jQuery AJAX requests.
- 
 
- 
-
-The code examples in this article use the REST interface and jQuery AJAX requests to add a local file to the  **Documents** library and then change properties of the list item that represents the uploaded file.
- 
+The code examples in this article use the REST interface and jQuery AJAX requests to add a local file to the **Documents** library, and then change properties of the list item that represents the uploaded file.
 
 This process uses the following high-level steps:
- 
 
-
-1. Convert the local file to an array buffer by using the  **FileReader** API, which requires HTML5 support. The **jQuery(document).ready** function checks for FileReader API support in the browser.
+1. Convert the local file to an array buffer by using the **FileReader** API, which requires HTML5 support. The **jQuery(document).ready** function checks for FileReader API support in the browser.
     
- 
-2. Add the file to the  **Shared Documents** folder by using the **Add** method on the folder's file collection. The array buffer is passed in the body of the POST request.
+2. Add the file to the **Shared Documents** folder by using the **Add** method on the folder's file collection. The array buffer is passed in the body of the POST request.
     
-    These examples use the  **getfolderbyserverrelativeurl** endpoint to reach the file collection, but you can also use a list endpoint (example: `…/_api/web/lists/getbytitle('<list title>')/rootfolder/files/add`).
+    These examples use the **getfolderbyserverrelativeurl** endpoint to reach the file collection, but you can also use a list endpoint (example: `…/_api/web/lists/getbytitle('<list title>')/rootfolder/files/add`).
     
- 
-3. Get the list item that corresponds to the uploaded file by using the  **ListItemAllFields** property of the uploaded file.
+3. Get the list item that corresponds to the uploaded file by using the **ListItemAllFields** property of the uploaded file.
     
- 
 4. Change the display name and title of the list item by using a MERGE request.
-    
- 
+
+
+<a name="RunTheExamples"> </a>
 
 ## Running the code examples
-<a name="RunTheExamples"> </a>
 
-Both code examples in this article use the REST API and jQuery AJAX requests to upload a file to the  **Shared Documents** folder and then change list item properties. The first example uses **SP.AppContextSite** to make calls across SharePoint domains, like a SharePoint-hosted add-in would do when uploading files to the host web. The second example makes same-domain calls, like a SharePoint-hosted add-in would do when uploading files to the add-in web, or a solution that's running on the server would do when uploading files.
+Both code examples in this article use the REST API and jQuery AJAX requests to upload a file to the **Shared Documents** folder and then change list item properties. 
+
+The first example uses **SP.AppContextSite** to make calls across SharePoint domains, like a SharePoint-hosted add-in would do when uploading files to the host web. 
+
+The second example makes same-domain calls, like a SharePoint-hosted add-in would do when uploading files to the add-in web, or a solution that's running on the server would do when uploading files.
  
 > [!NOTE] 
-> Provider-hosted add-ins written in JavaScript must use the SP.RequestExecutor cross-domain library to send requests to a SharePoint domain. For an example, see  [upload a file by using the cross-domain library](http://msdn.microsoft.com/library/files-and-folders-rest-api-reference%28Office.15%29.aspx#bk_FileCollectionAdd).
+> Provider-hosted add-ins written in JavaScript must use the SP.RequestExecutor cross-domain library to send requests to a SharePoint domain. For an example, see [upload a file by using the cross-domain library](https://msdn.microsoft.com/en-us/library/office/dn450841.aspx).
  
-
 To use the examples in this article, you'll need the following:
- 
 
- 
-
-- SharePoint Server or SharePoint Online
-    
- 
--  **Write** permissions to the **Documents** library for the user running the code. If you're developing a SharePoint Add-in, you can specify **Write** add-in permissions at the **List** scope
-    
- 
-- Browser support for the  **FileReader** API (HTML5)
-    
- 
+- SharePoint Server or SharePoint Online.
+- **Write** permissions to the **Documents** library for the user running the code. If you're developing a SharePoint Add-in, you can specify **Write** add-in permissions at the **List** scope.
+- Browser support for the **FileReader** API (HTML5).
 - A reference to the jQuery library in your page markup. For example:
     
-```HTML
-  <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js" type="text/javascript"></script>
-```
-
+    ```HTML
+    <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.9.1.min.js" type="text/javascript"></script>
+    ```
 - The following controls in your page markup.
     
-```HTML
-  <input id="getFile" type="file"/><br />
-<input id="displayName" type="text" value="Enter a unique name" /><br />
-<input id="addFileButton" type="button" value="Upload" onclick="uploadFile()"/>
-```
+    ```HTML
+    <input id="getFile" type="file"/><br />
+    <input id="displayName" type="text" value="Enter a unique name" /><br />
+    <input id="addFileButton" type="button" value="Upload" onclick="uploadFile()"/>
+    ```
 
+<a name="CodeExample1"> </a>
 
 ## Code example 1: Upload a file across SharePoint domains by using the REST API and jQuery
-<a name="RunTheExamples"> </a>
 
-The following code example uses the SharePoint REST API and jQuery AJAX requests to upload a file to the  **Documents** library and to change properties of the list item that represents the file. The context for this example is a SharePoint-hosted add-in that uploads a file to a folder on the host web.
+The following code example uses the SharePoint REST API and jQuery AJAX requests to upload a file to the **Documents** library and to change properties of the list item that represents the file. The context for this example is a SharePoint-hosted add-in that uploads a file to a folder on the host web.
+
+You need to meet [these requirements](#RunTheExamples) to use this example.
  
-
- 
-You need to meet  [these requirements](upload-a-file-by-using-the-rest-api-and-jquery.md#RunTheExamples) to use this example.
- 
-
- 
-
-
 
 ```javascript
 'use strict';
@@ -250,20 +227,15 @@ function getQueryStringParameter(paramToRetrieve) {
 }
 ```
 
+<br/>
+
+<a name="CodeExample2"> </a>
 
 ## Code example 2: Upload a file in the same domain by using the REST API and jQuery
-<a name="UploadFile"> </a>
 
-The following code example uses the SharePoint REST API and jQuery AJAX requests to upload a file to the  **Documents** library and to change properties of the list item that represents the file. The context for this example is a solution that's running on the server. The code would be similar in a SharePoint-hosted add-in that uploads files to the add-in web.
- 
+The following code example uses the SharePoint REST API and jQuery AJAX requests to upload a file to the **Documents** library and to change properties of the list item that represents the file. The context for this example is a solution that's running on the server. The code would be similar in a SharePoint-hosted add-in that uploads files to the add-in web.
 
- 
-You need to meet  [these requirements](upload-a-file-by-using-the-rest-api-and-jquery.md#RunTheExamples) before you can run this example.
- 
-
- 
-
-
+You need to meet [these requirements](#RunTheExamples) before you can run this example. 
 
 ```javascript
 'use strict';
@@ -402,24 +374,20 @@ function onError(error) {
 }
 ```
 
+<br/>
 
 ## See also
 <a name="bk_addresources"> </a>
 
 - [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
+- [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md)
+- [REST API reference and samples](https://msdn.microsoft.com/library)
+- [OData resources](get-to-know-the-sharepoint-rest-service.md#odata-resources)
+- [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
 
     
  
--  [Working with folders and files with REST](working-with-folders-and-files-with-rest.md)
-    
- 
--  [Working with lists and list items with REST](working-with-lists-and-list-items-with-rest.md)
-    
- 
--  [REST API reference and samples](http://msdn.microsoft.com/library/rest-api-reference-and-samples%28Office.15%29.aspx)
-    
- 
--  [Access SharePoint data from add-ins using the cross-domain library](access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md)
+
     
  
 
