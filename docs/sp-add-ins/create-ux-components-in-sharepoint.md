@@ -7,7 +7,9 @@ ms.prod: sharepoint
 
 # Create UX components in SharePoint
 
-The model for SharePoint Add-ins offers many UX components and mechanisms that help you build a great user experience in SharePoint Add-ins. The user experience in the add-in model is also flexible enough to let you use the techniques and platforms that best adapt to the needs of end users. The following table lists resources to help you learn about creating and using UX components in add-ins.
+The model for SharePoint Add-ins offers many UX components and mechanisms that help you build a great user experience in SharePoint Add-ins. The user experience in the add-in model is also flexible enough to let you use the techniques and platforms that best adapt to the needs of end users. 
+
+The following table lists resources to help you learn about creating and using UX components in add-ins.
 
 **Resources and guidance for creating UX components in SharePoint Add-ins**
 
@@ -34,16 +36,10 @@ Have you finished designing a great UX for your add-in? Incorporate data with th
 <a name="SP15CreateUX_AddRes"> </a>
 
 - [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md)
-- [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md)
+- [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md)
 - [SharePoint Add-ins UX design guidelines](sharepoint-add-ins-ux-design-guidelines.md)
 - [Three ways to think about design options for SharePoint Add-ins](three-ways-to-think-about-design-options-for-sharepoint-add-ins.md)
-- [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md)
+- [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md)
+- [Host webs, add-in webs, and SharePoint components in SharePoint](host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md)
 - [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md) 
 - [SharePoint Add-ins](sharepoint-add-ins.md)
-    
-
--  
-    
- 
--  
-    
