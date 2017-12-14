@@ -38,8 +38,11 @@ The second example makes same-domain calls, like a SharePoint-hosted add-in woul
 To use the examples in this article, you'll need the following:
 
 - SharePoint Server or SharePoint Online.
+
 - **Write** permissions to the **Documents** library for the user running the code. If you're developing a SharePoint Add-in, you can specify **Write** add-in permissions at the **List** scope.
+
 - Browser support for the **FileReader** API (HTML5).
+
 - A reference to the jQuery library in your page markup. For example:
     
     ```HTML
