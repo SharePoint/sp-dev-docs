@@ -83,30 +83,14 @@ public static void ManipulateModernTeamSite(string accessToken)
 You can also create "modern" sites by using [PnP PowerShell](https://github.com/SharePoint/PnP-PowerShell/releases), which lets you easily authenticate with Microsoft Graph by using Azure Active Directory. The following script creates a "modern" team site and then returns the actual SharePoint site URL for further manipulation. After you have access to the URL of the created site, you can use CSOM (with the SharePoint PnP Core component) or SharePoint PnP PowerShell to automate other operations on the created site.
 
 ```PowerShell
-# Connect to Azure AD and get back an OAuth 2.0 Access Token
-# This command will prompt the sign-in UI to authenticate
-Connect-PnPMicrosoftGraph -Scopes "Group.ReadWrite.All","User.Read.All"
+# Connect to your SharePoint admin center, credentials will be asked
+Connect-PnPOnline -Url https://contoso-admin.sharepoint.com
 
-# Store the Access Token in a local variable
-# This is not really needed for next steps, but is available
-$accessToken = Get-PnPAccessToken
-
-# Create a new Office 365 Unified Group, together with the corresponding Modern Site in SPO
-$group = New-PnPUnifiedGroup -DisplayName "Awesome Group" -Description "Awesome Group" `
-         -MailNickname "awesome-group" -Members "admin@contoso.onmicrosoft.com", "dan@contoso.onmicrosoft.com" `
-         -IsPrivate -GroupLogoPath .\logo.jpg
-
-# Connect to the modern site using PnP PowerShell SP cmdlets
-# Since we are connecting now to SP side, credentials will be asked
-Connect-PnPOnline $group.SiteUrl 
-
-# Now we have access on the SharePoint site for any operations
-$context = Get-PnPContext
-$web = Get-PnPWeb
-$context.Load($web, $web.WebTemplate)
-Execute-PnPQuery
-$web.WebTemplate + "#" + $web.Configuration
+# Create a new modern team site
+New-PnPSite -Type Team -Title "Awesome Group" -Description "Awesome Group" -Alias "awesome-group"
 ```
+
+
 
 > [!NOTE]
 > There is currently no support to provision "modern" team sites by using the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588).
