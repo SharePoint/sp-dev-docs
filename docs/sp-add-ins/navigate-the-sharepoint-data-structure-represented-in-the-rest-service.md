@@ -69,7 +69,7 @@ The SharePoint REST service does not support traversing the folder hierarchy of 
  
 *Navigation that is supported by the REST service:* 
  
-`/_vti_bin/client.svc/web/GetFolderByServerRelativeUrl('SharedDocuments/folder1/stuff/things')/Recycle`.
+`/_vti_bin/client.svc/web/GetFolderByServerRelativeUrl('SharedDocuments/folder1/stuff/things')/Recycle`
  
 
 <a name="bk_props"> </a>
