@@ -130,5 +130,6 @@ There are OData libraries that support OData batching for many languages. Two ex
  
 -  [Datajs library](http://datajs.codeplex.com/documentation). See especially  [Batch operations](http://datajs.codeplex.com/wikipage?title=datajs%20OData%20API&amp;referringTitle=Documentation#Batch).
     
+- [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
  
 

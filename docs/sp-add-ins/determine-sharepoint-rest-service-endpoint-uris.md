@@ -115,7 +115,7 @@ Use  `_api` to denote the SharePoint REST service in your endpoint URIs. The RES
 
 ### Specify entry points for the SharePoint REST service
 
-The main entry points for the REST service represent the site collection and site of the specified context. In this way, these entry points correspond to the  **ClientContext.Site** property and **ClientContext.Web** property in the client object models.
+The main entry points for the REST service represent the site collection and site of the specified context. In this way, these entry points correspond to the **ClientContext.Site** property and **ClientContext.Web** property in the client object models.
  
 
  
@@ -207,11 +207,11 @@ The following figure shows the SharePoint REST parameter syntax.
 
 ### Complex types as parameters for the REST service
 
-Some methods in the client object model require a large payload as a parameter. For REST endpoints to maintain functionality parity with their corresponding client object model APIs, the endpoints must accept a complex type as a parameter. In these cases, the REST service extends the existing OData protocol to enable these REST endpoints to accept a single complex type as a parameter. This applies to  **POST** operations only, and you have to pass the complex type in [Atom](http://www.odata.org/developers/protocols/atom-format#RepresentingComplexTypesProperties) format or [JSON](http://www.odata.org/developers/protocols/json-format#RepresentingComplexTypeProperties) format, according to OData standards.
+Some methods in the client object model require a large payload as a parameter. For REST endpoints to maintain functionality parity with their corresponding client object model APIs, the endpoints must accept a complex type as a parameter. In these cases, the REST service extends the existing OData protocol to enable these REST endpoints to accept a single complex type as a parameter. This applies to **POST** operations only, and you have to pass the complex type in [Atom](http://www.odata.org/developers/protocols/atom-format#RepresentingComplexTypesProperties) format or [JSON](http://www.odata.org/developers/protocols/json-format#RepresentingComplexTypeProperties) format, according to OData standards.
  
 
  
-For example, the  **ListCollection.Add** method takes a **Microsoft.SharePoint.Client.ListCreationInformation** object as a parameter. To add a list to a specified site, construct the appropriate REST endpoint as follows:
+For example, the **ListCollection.Add** method takes a **Microsoft.SharePoint.Client.ListCreationInformation** object as a parameter. To add a list to a specified site, construct the appropriate REST endpoint as follows:
  
 
  
@@ -312,13 +312,13 @@ A  `Dictionary<String, object>` is represented as a multi-value object, named Ke
 
  
 
--  **Key** The key of the multi-value object.
+- **Key** The key of the multi-value object.
     
  
--  **Value** The value of the object
+- **Value** The value of the object
     
  
--  **ValueType** The value type of the object. For simple value types that map to existing Entity Data Model (EDM) types, the REST service returns the appropriate EDM type string; for example, "Edm.String." If not, the REST service returns the value type returned by the **Type.ToString** function.
+- **ValueType** The value type of the object. For simple value types that map to existing Entity Data Model (EDM) types, the REST service returns the appropriate EDM type string; for example, "Edm.String." If not, the REST service returns the value type returned by the **Type.ToString** function.
     
  
 
@@ -359,7 +359,7 @@ To construct URIs that correspond to static methods or properties, use the corre
  
 
  
-However, static properties can be accessed only directly, and are not allowed as part of a larger URI composition. For example, directly accessing the  **SP.Utility.AssetsLibrary** method in REST is allowable, as follows:
+However, static properties can be accessed only directly, and are not allowed as part of a larger URI composition. For example, directly accessing the **SP.Utility.AssetsLibrary** method in REST is allowable, as follows:
  
 
  
@@ -402,8 +402,7 @@ If you want to select, filter, or order the data you requested from an endpoint,
 ## See also
 <a name="bk_addresources"> </a>
 
-
--  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
+- [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
     
  
 -  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md)
