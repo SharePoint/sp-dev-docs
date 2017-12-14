@@ -328,7 +328,7 @@ headers:
 
 - [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
 - [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-client-library-code.md)   
-- [Files and folders REST API reference](https://msdn.microsoft.com/en-us/library/office/dn450841.aspx)
+- [REST API reference and samples](https://msdn.microsoft.com/library)
 - [Upload a file by using the REST API and jQuery](upload-a-file-by-using-the-rest-api-and-jquery.md)
 - [SharePoint-Add-in-REST-OData-BasicDataOperations](https://github.com/OfficeDev/SharePoint-Add-in-REST-OData-BasicDataOperations)
 - [SharePoint: Perform basic data access operations on files and folders by using REST](http://code.msdn.microsoft.com/SharePoint-Perform-ab9c4ae5)
