@@ -19,15 +19,15 @@ This topic assumes you have a basic familiarity with REST and how to construct R
 
 SharePoint adds the ability for you to remotely interact with SharePoint sites by using REST. Now you can interact directly with SharePoint objects by using any technology that supports standard REST capabilities.
 
-To access SharePoint resources using REST, construct a RESTful HTTP request, using the Open Data Protocol (OData) standard, which corresponds to the desired client object model API. For example:
+To access SharePoint resources using REST, construct a RESTful HTTP request by using the OData standard, which corresponds to the desired client object model API. For example:
 
 *Client object model method:*<br/> 
-List.GetByTitle(listname) 
+`List.GetByTitle(listname)` 
 
 *REST endpoint:*<br/>
 `http://server/site/_api/lists/getbytitle('listname')`
 
-The client.svc web service in SharePoint handles the HTTP request, and serves the appropriate response in either Atom or JSON (JavaScript Object Notation) format. Your client application must then parse that response. The following figure shows a high-level view of the SharePoint REST architecture.
+The client.svc web service in SharePoint handles the HTTP request, and serves the appropriate response in either Atom or JavaScript Object Notation (JSON) format. Your client application must then parse that response. The following figure shows a high-level view of the SharePoint REST architecture.
 
 **SharePoint REST service architecture**
 
@@ -42,8 +42,6 @@ Because of the functionality and ease of use that client object models provide, 
 To use the REST capabilities that are built into SharePoint, you construct a RESTful HTTP request by using the OData standard, which corresponds to the client object model API you want to use. The client.svc web service handles the HTTP request and serves the appropriate response in either Atom or JSON format. The client application must then parse that response.
 
 The endpoints in the SharePoint REST service correspond to the types and members in the SharePoint client object models. By using HTTP requests, you can use these REST endpoints to perform typical CRUD operations against SharePoint entities, such as lists and sites. 
-
-In general:
 
 |**If you want to do this to an endpoint**|**Use this HTTP request**|**Keep in mind**|
 |:-----|:-----|:-----|
@@ -83,17 +81,21 @@ For more guidelines for determining SharePoint REST endpoint URIs from the signa
 
 ## SharePoint REST endpoint examples
 
-The following table contains typical REST endpoint URL examples to get you started working with SharePoint data. Prepend  `http://server/site/_api/` to the URL fragments shown in the table to construct a fully qualified REST URL. Where necessary for **POST** commands, the table contains sample data you must pass in the HTTP request body to create the specified SharePoint item. Items in italics represent variables that you must replace with your values.
+The following table contains typical REST endpoint URL examples to get you started working with SharePoint data. Prepend  `http://server/site/_api/` to the URL fragments shown in the table to construct a fully qualified REST URL. Where necessary for **POST** commands, the table contains sample data you must pass in the HTTP request body to create the specified SharePoint item. Items in quotes represent variables that you must replace with your values.
+
+<br/>
 
 |**Description**|**URL endpoint**|**HTTP method**|**Body content**|
 |:-----|:-----|:-----|:-----|
 |Retrieves the title of a list| `web/title`|GET|Not applicable|
 |Retrieves all lists on a site| `lists`|GET|Not applicable|
-|Retrieves a single 'list's metadata| `lists/getbytitle('listname')`|GET|Not applicable|
+|Retrieves a single list's metadata| `lists/getbytitle('listname')`|GET|Not applicable|
 |Retrieves items within a list| `lists/getbytitle('listname')/items`|GET|Not applicable|
 |Retrieves a specific property of a document<br/>(in this case, the document title)| `lists/getbytitle('listname')?select=Title`|GET|Not applicable|
 |Creates a list| `lists`|POST|See sample|
 |Adds an item to a list| `lists/getbytitle('listname')/items`|POST|See sample|
+
+<br/>
 
 _**Creates a list** sample data_
 
@@ -159,7 +161,7 @@ To learn more about using the SharePoint REST service, use the following resourc
 | [Following people and content REST API reference for SharePoint](../general-development/following-people-and-content-rest-api-reference-for-sharepoint.md)|SharePoint REST endpoints for following people and content.|
 | [Make batch requests with the REST APIs](make-batch-requests-with-the-rest-apis.md)|Combine multiple requests into a single call to the REST service.|
 | [Synchronize SharePoint items using the REST service](synchronize-sharepoint-items-using-the-rest-service.md)|Synchronize items between SharePoint and your add-ins or services by using the **GetListItemChangesSinceToken** resource, part of the SharePoint REST service.|
-
+| [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md) | Find in-depth articles and resources to help you build advanced capabilities into your SharePoint Add-ins.|
 
 
 <!-- Removed these because the first one 404'd and the second one went to Working with lists (already in list).

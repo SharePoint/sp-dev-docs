@@ -406,8 +406,8 @@ function onError(error) {
 ## See also
 <a name="bk_addresources"> </a>
 
+- [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
 
--  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
     
  
 -  [Working with folders and files with REST](working-with-folders-and-files-with-rest.md)
