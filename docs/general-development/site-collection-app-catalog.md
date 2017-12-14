@@ -34,7 +34,6 @@ In site collection app catalogs, just as in tenant app catalog, you can deploy b
 SharePoint Framework solution packages that contain assets, can be deployed to site collection app catalogs. Included assets will be deployed to a preconfigured document library in the same site collection as where the site collection app catalog is located. If the Office 365 Public CDN is configured, assets will be served from the CDN. Otherwise, assets will be served directly from the document library.
 
 > [!NOTE]
->
 > A bugfix for correctly supporting assets packaging in site collection app catalogs is currently being rolled out and should be available on all tenants before the end of the calendar year 2017.
 
 ### Tenant-scoped deployment
@@ -52,13 +51,11 @@ At this moment, it's not possible to use the recently released ALM APIs to manag
 You can configure and manage site collection app catalogs using the SharePoint Online Management Shell.
 
 > [!NOTE]
->
 > Before you can manage site collection app catalogs in your tenant, ensure that you have installed [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588) from November '17 or newer.
 
 ### Create a site collection app catalog
 
 > [!NOTE]
->
 > Before running the following script, connect to your SharePoint Online tenant using the `Connect-SPOService` cmdlet. Also ensure, that you have a tenant app catalog created in your tenant. If you don't, the cmdlet will fail with the following error:
 > ```text
 > Cannot invoke method or retrieve property from null object. Object returned by the
@@ -85,13 +82,11 @@ After executing this script, the **Apps for SharePoint** library will be added t
 ### Disable the site collection app catalog
 
 > [!NOTE]
->
 > Before running the following script, connect to your SharePoint Online tenant using the `Connect-SPOService` cmdlet.
 
 To disable the site collection app catalog in your site collection, use the `Remove-SPOSiteCollectionAppCatalog` cmdlet passing the site collection where the app catalog should be disabled as the `-Site` parameter. Alternatively, if you have your site collection's ID, you can use the `Remove-SPOSiteCollectionAppCatalogById` cmdlet instead.
 
 > [!NOTE]
->
 > Despite the naming, the `Remove-SPOSiteCollectionAppCatalog` and `Remove-SPOSiteCollectionAppCatalogById` cmdlets don't remove the site collection app catalog from the site collection. Instead, they disable it so that it's not possible to deploy or use any solutions deployed in it.
 
 ```powershell
@@ -114,3 +109,7 @@ Currently, it's not possible to list all site collections in the tenant that hav
 ### Security
 
 Before deploying solutions to site collection app catalogs, site collection administrators should verify that these solutions meet organizational policies. Although solutions installed in site collection app catalogs can only be used in these particular site collections, they can potentially access resources from other sites in the tenant so administrators should ensure that the solutions they are about to deploy work as intended.
+
+## See also
+
+- [Manage the Site Collection App Catalog](https://support.office.com/en-us/article/Manage-the-Site-Collection-App-Catalog-928b9b61-a9de-4563-a7d1-6231aa9d4d19)
