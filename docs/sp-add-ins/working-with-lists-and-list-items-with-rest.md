@@ -1,35 +1,25 @@
 ---
 title: Working with lists and list items with REST
-ms.date: 09/25/2017
+description: Perform basic create, read, update, and delete (CRUD) operations on lists and list items with the SharePoint REST interface.
+ms.date: 12/13/2017
 ms.prod: sharepoint
 ---
 
-
 # Working with lists and list items with REST
-Learn how to perform basic create, read, update, and delete (CRUD) operations on lists and list items with the SharePoint REST interface.
- 
 
- 
-
-
- **Tip**  The SharePoint Online (and on-premise SharePoint 2016 and later) REST service supports combining multiple requests into a single call to the service by using the OData  `$batch` query option. For details and links to code samples, see [Make batch requests with the REST APIs](make-batch-requests-with-the-rest-apis.md).
- 
-
+> [!TIP] 
+> The SharePoint Online (and on-premises SharePoint 2016 and later) REST service supports combining multiple requests into a single call to the service by using the OData `$batch` query option. For details and links to code samples, see [Make batch requests with the REST APIs](make-batch-requests-with-the-rest-apis.md).
 
 ## Prerequisites
 
-This topic assumes that you are already familiar with the topics  [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md) and [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md). It does not provide code snippets.
+This topic assumes that you are already familiar with the topics [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md) and [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md). It does not provide code snippets.
  
 
- 
+<a name="RetrieveLists"> </a> 
 
 ## Retrieving lists and list properties with REST
-<a name="RetrieveLists"> </a>
 
-The following example shows how to  **retrieve** a specific list if you know its GUID.
- 
-
- 
+The following example shows how to **retrieve** a specific list if you know its GUID.
 
 ```
 url: http://site url/_api/web/lists(guid'list GUID'),
@@ -42,15 +32,12 @@ Headers:
 
 
 > [!NOTE] 
-> Use  `application/json;odata=verbose` in the `accept` header if you want the response in JSON. Use `application/atom+xml` in the `accept` header if you want the response in Atom format.
+> If you want the response in JSON, use `application/json;odata=verbose` in the `accept` header . 
+
+> If you want the response in Atom format, use `application/atom+xml` in the `accept` header.
  
 
 The following example shows how to  **retrieve** a specific list if you know its title.
- 
-
- 
-
-
 
 ```
 url: http://site url/_api/web/lists/GetByTitle('Test')
@@ -61,12 +48,9 @@ Headers:
 
 ```
 
+<br/>
+
 The following XML shows an example of the list properties that are returned when you request the XML content type.
- 
-
- 
-
-
 
 ```XML
   <content type="application/xml">
@@ -114,17 +98,15 @@ The following XML shows an example of the list properties that are returned when
 
 
 > [!NOTE] 
-> The  **ListItemEntityTypeFullName** property ( **SP.Data.ProjectPolicyItemListItem** in the previous example) is especially important if you want to create and update list items. This value must be passed as the **type** property in the metadata that you pass in the body of the HTTP request whenever you create and update list items.
+> The **ListItemEntityTypeFullName** property (**SP.Data.ProjectPolicyItemListItem** in the previous example) is especially important if you want to create and update list items. This value must be passed as the **type** property in the metadata that you pass in the body of the HTTP request whenever you create and update list items.
  
+<br/>
 
-
-## Working with lists by using REST
 <a name="WorkLists"> </a>
 
-The following example shows how to  **create** a list.
- 
+## Working with lists by using REST
 
- 
+The following example shows how to  **create** a list.
 
 ```
 url: http://site url/_api/web/lists
@@ -139,12 +121,9 @@ Headers:
     content-length:length of post body
 ```
 
-The following example shows how to  **update** a list by using the **MERGE** method.
- 
+<br/>
 
- 
-
-
+The following example shows how to **update** a list by using the **MERGE** method.
 
 ```
 url: http://site url/_api/web/lists(guid'list GUID')
@@ -160,12 +139,9 @@ Headers:
     content-length:length of post body
 ```
 
-The following example shows how to  **create** a **custom field** for a list.
- 
+<br/>
 
- 
-
-
+The following example shows how to **create** a **custom field** for a list.
 
 ```
 Url: url: http://site url/_api/web/lists(guid'list GUID')/Fields
@@ -178,12 +154,9 @@ Headers:
     content-length:length of post body
 ```
 
-The following example shows how to  **delete** a list.
- 
+<br/>
 
- 
-
-
+The following example shows how to **delete** a list.
 
 ```
 url: http://site url/_api/web/lists(guid'list GUID')
@@ -196,16 +169,16 @@ Headers:
 
 ```
 
+<br/>
 
-## Working with list items by using REST
 <a name="ListItems"> </a>
 
-The following example shows how to  **retrieve** all of a list's items.
+## Working with list items by using REST
+
+The following example shows how to **retrieve** all of a list's items.
  
 > [!NOTE] 
-> The OData $skip query option does not work when querying list items. In may situations, you can use the  [$skiptoken](http://msdn.microsoft.com/library/4dda9434-c2c5-4577-8e01-7bf9e822d90a.aspx) option instead.
- 
-
+> The OData $skip query option does not work when querying list items. In may situations, you can use the [$skiptoken](http://msdn.microsoft.com/library/4dda9434-c2c5-4577-8e01-7bf9e822d90a.aspx) option instead.
 
 ```
 url: http://site url/_api/web/lists/GetByTitle('Test')/items
@@ -216,12 +189,9 @@ headers:
 
 ```
 
-The following example shows how to  **retrieve** a specific list item.
- 
+<br/>
 
- 
-
-
+The following example shows how to **retrieve** a specific list item.
 
 ```
 url: http://site url/_api/web/lists/GetByTitle('Test')/items(item id)
@@ -232,12 +202,9 @@ headers:
 
 ```
 
+<br/>
+
 The following XML shows an example of the list item properties that are returned when you request the XML content type.
- 
-
- 
-
-
 
 ```XML
 <content type="application/xml">
@@ -258,15 +225,11 @@ The following XML shows an example of the list item properties that are returned
 </content>
 ```
 
-The following example shows how to  **create** a list item.
+The following example shows how to **create** a list item.
  
 > [!NOTE] 
-> To do this operation, you must know the  **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body.
+> To do this operation, you must know the **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body.
  
-
-
-
-
 ```
 url: http://site url/_api/web/lists/GetByTitle('Test')/items
 method: POST
@@ -279,14 +242,12 @@ headers:
     content-length:length of post body
 ```
 
-The following example shows how to  **update** a list item.
+<br/>
+
+The following example shows how to **update** a list item.
  
 > [!NOTE] 
-> To do this operation, you must know the  **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body.
- 
-
-
-
+> To do this operation, you must know the **ListItemEntityTypeFullName** property of the list and pass that as the value of **type** in the HTTP request body.
 
 ```
 url: http://site url/_api/web/lists/GetByTitle('Test')/items(item id)
@@ -302,12 +263,9 @@ headers:
     content-length:length of post body
 ```
 
-The following example shows how to  **delete** a list item.
- 
+<br/>
 
- 
-
-
+The following example shows how to **delete** a list item.
 
 ```
 url: http://site url/_api/web/lists/GetByTitle('Test')/items(item id)
@@ -320,73 +278,34 @@ headers:
 
 ```
 
+<br/>
 
-## Using ETag values to determine document and list item versioning
 <a name="Etag"> </a>
 
-The SharePoint REST service, which follows the  [OData standard](http://www.odata.org/developers/protocols/operations), uses  [HTML ETags for concurrency control](http://www.odata.org/developers/protocols/operations#ConcurrencycontrolandETags) of SharePoint lists and list items. To check on an item's version when you perform a **PUT**,  **MERGE**, or  **DELETE** request, specify an **ETag** in the **If-Match** HTTP request header.
- 
+## Using ETag values to determine document and list item versioning
 
- 
-If the  **ETag** you specify in your request does not match the **ETag** of the document or list item on the server, the REST service returns a 412 exception, per the OData specification.
- 
+The SharePoint REST service, which follows the [OData standard](http://www.odata.org/developers/protocols/operations), uses [HTML ETags for concurrency control](http://www.odata.org/developers/protocols/operations#ConcurrencycontrolandETags) of SharePoint lists and list items. To check on an item's version when you perform a **PUT**, **MERGE**, or **DELETE** request, specify an **ETag** in the **If-Match** HTTP request header.
 
- 
+If the **ETag** you specify in your request does not match the **ETag** of the document or list item on the server, the REST service returns a 412 exception, per the OData specification.
 
-- To force an overwrite of the item regardless of version, set the  **ETag** value to **"*"**.
+- To force an overwrite of the item regardless of version, set the **ETag** value to **"*"**.
     
- 
-- If you do not specify an  **ETag**, SharePoint overwrites the item regardless of version.
+- If you do not specify an **ETag**, SharePoint overwrites the item regardless of version.
     
  
 Within SharePoint, ETags apply only to SharePoint lists and list items.
  
-
- 
-
 ## See also
 <a name="bk_addresources"> </a>
 
 - [Get to know the SharePoint REST service](get-to-know-the-sharepoint-rest-service.md)
--  [Complete basic operations using SharePoint REST endpoints](complete-basic-operations-using-sharepoint-rest-endpoints.md)
-    
- 
--  [Working with folders and files with REST](working-with-folders-and-files-with-rest.md)
-    
- 
--  [SharePoint-Add-in-REST-OData-BasicDataOperations](https://github.com/OfficeDev/SharePoint-Add-in-REST-OData-BasicDataOperations)
-    
- 
--  [SharePoint: Perform basic data access operations on files and folders by using REST](http://code.msdn.microsoft.com/SharePoint-Perform-ab9c4ae5)
-    
- 
--  [Making REST calls with C# and JavaScript for SharePoint](http://www.microsoft.com/resources/msdn/en-us/office/media/video/videol?cid=sdc&amp;from=mscomsdc&amp;VideoID=4e4cc094-ff69-405b-852f-2ac7c41293c5)
-    
- 
--  [Making REST calls with C# and JavaScript for SharePoint demo](http://www.microsoft.com/resources/msdn/en-us/office/media/video/videol?cid=sdc&amp;from=mscomsdc&amp;VideoID=b1e7c9c5-0f62-4a78-bb7b-8e283c86145c)
-    
- 
--  [Complete basic operations using SharePoint client library code](complete-basic-operations-using-sharepoint-client-library-code.md)
-    
- 
--  [Complete basic operations using JavaScript library code in SharePoint](complete-basic-operations-using-javascript-library-code-in-sharepoint.md)
-    
- 
--  [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
-    
- 
--  [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md)
-    
- 
--  [Work with external data in SharePoint](work-with-external-data-in-sharepoint.md)
-    
- 
--  [Open Data Protocol](http://www.odata.org/)
-    
- 
--  [OData: JavaScript Object Notation (JSON) Format](http://www.odata.org/documentation/odata-version-2-0/json-format/)
-    
- 
+- [SharePoint-Add-in-REST-OData-BasicDataOperations](https://github.com/OfficeDev/SharePoint-Add-in-REST-OData-BasicDataOperations)
+- [SharePoint: Perform basic data access operations on files and folders by using REST](http://code.msdn.microsoft.com/SharePoint-Perform-ab9c4ae5)
+- [Secure data access and client object models for SharePoint Add-ins](secure-data-access-and-client-object-models-for-sharepoint-add-ins.md)
+- [Work with external data in SharePoint](work-with-external-data-in-sharepoint.md)
+- [Open Data Protocol](http://www.odata.org/)
+- [OData: JavaScript Object Notation (JSON) Format](http://www.odata.org/documentation/odata-version-2-0/json-format/)  
+- [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md) 
 
  
 
