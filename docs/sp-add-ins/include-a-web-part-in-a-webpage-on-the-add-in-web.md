@@ -110,4 +110,7 @@ For the prerequisites, see  [Get started creating SharePoint-hosted SharePoint A
 8. Press F5 to debug the add-in. You should see the Web Part on the page.
     
  
+## See also
+<a name="bk_addresources"> </a>
 
+-  [Create UX components in SharePoint](create-ux-components-in-sharepoint.md)
