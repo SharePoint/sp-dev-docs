@@ -21,6 +21,8 @@ The following figure shows how the add-in part content is displayed in a SharePo
 **Add-in part content displayed in a SharePoint page**
 
 ![App part content displayed in a SharePoint page](../images/AppParts_ConceptualArchitecture.png)
+
+<br/>
  
 An add-in part is implemented with the **ClientWebPart** class, and like all Web Parts it is a available in the Web Part gallery after a user installs the SharePoint Add-in that includes it. Your users can further customize the add-in part by using the properties that you provide. (For an example of configurable properties in an add-in part, see the figure **SharePoint page hosting a basic add-in part** later in this article.)
  
@@ -52,6 +54,7 @@ After completing the tasks, your add-in part should look similar to the followin
 
 ![Web part page hosting a basic app part](../images/BasicAppPart_result.png)
  
+<br/>
 
 ### Add a form for the add-in part content
 
@@ -142,7 +145,6 @@ After completing the tasks, your add-in part should look similar to the followin
     
     6. Select **Add** again and repeat the process for all four rows of Table 1. Do *not* close the dialog box.
     
-
         **Table 1. Attributes for the add-in part's custom properties**
 
         |**DefaultValue**|**Name**|**Type**|**WebCategory**|**WebDisplayName**|
@@ -152,12 +154,13 @@ After completing the tasks, your add-in part should look similar to the followin
         |false|boolProp|boolean|Basic add-in part category|A property of type boolean|
         |1st|enumProp|enum|Basic add-in part category|A property of type enumeration|
 
-    At this point the dialog should look like the following:
+        At this point the dialog should look like the following:
     
-    **Custom Properties dialog for ClientWebPart**
+        **Custom Properties dialog for ClientWebPart**
 
-    ![The Client Web Part Custom Properties Dialog with 4 properties listed on the left, and each one having 5 attributes set on the right.](../images/6a0f0a56-3184-490a-af19-b51b7545671d.PNG)
- 
+        ![The Client Web Part Custom Properties Dialog with 4 properties listed on the left, and each one having 5 attributes set on the right.](../images/6a0f0a56-3184-490a-af19-b51b7545671d.PNG)
+
+        <br/>
 
 8. Select the **enumProp** property, select the **EnumItems** attribute, and then select the callout ( **...**) button. 
     
@@ -186,6 +189,8 @@ After completing the tasks, your add-in part should look similar to the followin
         **ClientWebPartEnumItem Collection Editor**
 
         ![The Client Web Part Enum Item Collection Editor with 3 items listed and each one having a Value attribute and a Web Display Name attribute.](../images/1b21d968-bd58-4f30-a019-84df6181b81a.PNG)
+
+        <br/>
 
     6. Select **OK** to close the dialog, and then select **OK** again to close the **Custom Properties** dialog.
     
