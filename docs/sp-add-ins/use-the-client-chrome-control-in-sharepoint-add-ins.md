@@ -371,9 +371,9 @@ The following figure shows a remote webpage with the chrome control.
 ## See also
 <a name="SP15Usechromecontrol_Addresources"> </a>
 
--  [Code sample: Use the chrome control in a cloud-hosted add-in](http://code.msdn.microsoft.com/SharePoint-Work-with-089ecc6f)
--  [Code sample: Use the chrome control and the cross-domain library (CSOM)](http://code.msdn.microsoft.com/SharePoint-Use-the-97c30a2e)
--  [Code sample: Use the chrome control and the cross-domain library (REST)](http://code.msdn.microsoft.com/SharePoint-Use-the-a759e9f8)
+-  [Code sample: Use the chrome control in a cloud-hosted add-in](https://code.msdn.microsoft.com/office/SharePoint-2013-Work-with-089ecc6f)
+-  [Code sample: Use the chrome control and the cross-domain library (CSOM)](https://code.msdn.microsoft.com/office/SharePoint-2013-Use-the-97c30a2e)
+-  [Code sample: Use the chrome control and the cross-domain library (REST)](https://code.msdn.microsoft.com/office/SharePoint-2013-Use-the-a759e9f8)
 -  [Create UX components in SharePoint](create-ux-components-in-sharepoint.md)
 
  
