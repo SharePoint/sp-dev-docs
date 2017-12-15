@@ -4,43 +4,45 @@ description: Build a complete SharePoint site design using the PnP provisioning 
 ms.date: 12/14/2017
 ---
 
-# Calling the PnP Provisioning Engine from a Site Script
+# Calling the PnP provisioning engine from a site script
 
 > [!NOTE]
 > Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for use in production environments.
 
-Site Designs offer a great way to standardize the look and feel of your site collections. But if you want to take this one step further, by for instance adding a footer to every page, you might notice that Site Designs do not offer you that option. With the PnP Provisioning engine you can hover create a template which allows you to provision an application customizer to a site. This application customizer then can register a footer on every page. In this article you will learn how to create a site design that applies a PnP Provisioning Template to a site which in turn will add an application customizer to render a footer.
+You can create a site design that applies a PnP provisioning template to a site. Site designs offer a great way to standardize the look and feel of your site collections, but you can't use them to do some things, like add a footer to every page. You can use the PnP provisioning engine to create a template that you can use to provision an application customizer to a site. This application customizer then can register a footer on every page. In this article, you will learn how to create a site design that applies a PnP provisioning template to a site. The template will add an application customizer to render a footer.
 
-We use the following components in our setup:
+The steps in this article use the following components:
 
-1. A Site Design and a Site Script
-1. A Microsoft Flow
-1. An Azure Storage Queue
+1. A site design and a site script
+1. A Microsoft flow
+1. Azure Queue storage
 1. An Azure Function
-1. An SPFX Solution
-1. A PnP Provisioning Template
-1. A PnP PowerShell Script
-1. An AppId and AppSecret with administration rights on your tenant.
+1. A SharePoint Framework (SPFX) solution
+1. A PnP provisioning template
+1. A PnP PowerShell script
+1. An app ID and app secret with administrative rights on your tenant
 
-We need all these component so we can trigger the PnP Provisioning code in a controller manner right after the site has been created and the Site Design is being applied.
+You'll use these components to trigger the PnP provisioning code after the site is created and the site design is applied.
 
-## Setting up App Only Access to your tenant
+## Set up app-only access to your tenant
 
-This requires that you open 2 different pages on your tenant, one located in a normal site, the other located in your SharePoint Administration site.
+To set up app-only access to your tenant, you need to have two different pages on your tenant, one on the regular site, and the other on your SharePoint Administration site.
 
-1. Navigate to following URL in your tenant: https://[yourtenant].sharepoint.com/_layouts/appregnew.aspx (you can navigate to any site, but for now pick the root site)
-1. Click both **Generate** buttons
-1. Enter a title for your App, for instance "Site Provisioning"
-1. Enter **localhost** as the App Domain
-1. Enter **https://localhost** as the Redirect URI
+1. Go to following URL in your tenant: https://[yourtenant].sharepoint.com/_layouts/appregnew.aspx (you can go to any site, but for now pick the root site).
+1. Choose the **Generate** button next to the **Client Id** and **Client Secret** fields.
+1. Enter a title for your app, such as "Site Provisioning".
+1. For the App Domain, enter **localhost**.
+1. For the Redirect URI, enter **https://localhost**.
 
     ![Create App](images/pnpprovisioning-createapponly.png)
 
-1. Click **Create** and copy the values for **Client Id** and **Client Secret** as you will need them later
+1. Choose **Create**. 
+1. Copy the values for **Client Id** and **Client Secret** - you will need them later.
 
-Now we will trust this app to have the appropriate access to your tenant:
-1. Navigate to https://[yourtenant]-admin.sharepoint.com/_layouts/appinv.aspx (notice the -admin in the URL)
-1. Paste in the Client Id you copied above into the **App Id** field and select **Lookup**
+Next, trust the app, so that it has the appropriate access to your tenant:
+
+1. Go to https://[yourtenant]-admin.sharepoint.com/_layouts/appinv.aspx (notice the -admin in the URL).
+1. In the **App Id** field, paste the **Client Id** that you copied, choose **Lookup**.
 1. Paste the following XML in the **Permission Request XML** field:
 
     ```xml
