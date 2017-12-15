@@ -1,11 +1,11 @@
 ---
-title: Load modern pages in maintenance mode
+title: Maintenance mode for modern pages
 ms.date: 12/15/2017
 ms.prod: sharepoint
 ms.assetid: 3ebd2a11-8291-4228-add0-9e0cd899dd3c
 ---
 
-# Load modern pages in maintenance mode
+# Maintenance mode for modern pages
 
 _**Applies to:** Office 365_
 
@@ -14,7 +14,6 @@ When working with modern pages, you can load them in maintenance mode. The maint
 ## Switch to maintenance mode
 
 > [!NOTE]
->
 > In order to load a modern page in maintenance mode, you have to have edit permissions for that specific page.
 
 To switch to the maintenance mode, navigate to the modern page and in the URL append `?maintenancemode=true`, for example:
