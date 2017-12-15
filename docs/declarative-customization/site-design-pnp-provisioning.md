@@ -14,7 +14,7 @@ You can create a site design that applies a PnP provisioning template to a site.
 The steps in this article use the following components:
 
 1. A site design and a site script
-1. A Microsoft flow
+1. Microsoft Flow
 1. Azure Queue storage
 1. An Azure Function
 1. A SharePoint Framework (SPFX) solution
@@ -26,13 +26,13 @@ You'll use these components to trigger the PnP provisioning code after the site 
 
 ## Set up app-only access to your tenant
 
-To set up app-only access to your tenant, you need to have two different pages on your tenant, one on the regular site, and the other on your SharePoint Administration site.
+To set up app-only access, you need to have two different pages on your tenant, one on the regular site, and the other on your SharePoint administration site.
 
 1. Go to following URL in your tenant: https://[yourtenant].sharepoint.com/_layouts/appregnew.aspx (you can go to any site, but for now pick the root site).
 1. Choose the **Generate** button next to the **Client Id** and **Client Secret** fields.
 1. Enter a title for your app, such as "Site Provisioning".
-1. For the App Domain, enter **localhost**.
-1. For the Redirect URI, enter **https://localhost**.
+1. In the **App Domain** box, enter **localhost**.
+1. In the **Redirect URI** box, enter **https://localhost**.
 
     ![Create App](images/pnpprovisioning-createapponly.png)
 
@@ -42,8 +42,8 @@ To set up app-only access to your tenant, you need to have two different pages o
 Next, trust the app, so that it has the appropriate access to your tenant:
 
 1. Go to https://[yourtenant]-admin.sharepoint.com/_layouts/appinv.aspx (notice the -admin in the URL).
-1. In the **App Id** field, paste the **Client Id** that you copied, choose **Lookup**.
-1. Paste the following XML in the **Permission Request XML** field:
+1. In the **App Id** field, paste the **Client Id** that you copied, and choose **Lookup**.
+1. In the **Permission Request XML** field,paste the following XML:
 
     ```xml
     <AppPermissionRequests AllowAppOnlyPolicy="true" >
@@ -51,17 +51,19 @@ Next, trust the app, so that it has the appropriate access to your tenant:
     </AppPermissionRequests>
     ```
 
-1. Select **Create**
-1. You will receive a question if you want to trust this app. Confirm this by selecting **Trust It**
+1. Choose **Create**.
+1. To confirm that you want to trust this app, choose **Trust It**.
 
 
-## Creating the Azure Storage Queue
+## Create the Azure Queue storage
 
-In this scenario we will use an Azure Storage Queue to receive messages from a Microsoft Flow. Every time a message shows up in the Storage Queue an Azure Function will get triggered to execute a PowerShell script. But let us set up the Storage Queue first:
+In this section, you will use Azure Queue storage to receive messages from Microsoft Flow. Every time a message shows up in the storage queue, an Azure function is triggered to run a PowerShell script. 
 
-1. Navigate to the Azure portal at https://portal.azure.com and log in.
-1. Choose **+ New**
-1. Select **Storage** from the Azure Marketplace listings and select **Storage account - blob, file, table, queue** in the Featured column
+To set up the Azure Queue storage:
+
+1. Go to the Azure portal at https://portal.azure.com and sign in.
+1. Choose **+ New**.
+1. From the Azure Marketplace listings, select **Storage**, and in the Featured column, choose **Storage account - blob, file, table, queue**.
 1. Provide values for the required fields as requested. Make sure to select **Pin to dashboard** for easy location later and click **Create**. The storage account is being created. This can take a few minutes.
 1. Open the Storage Account after it has been created and navigate to **Queues** in the navigation
 1. Choose **+ Queue** at the top of the main area of the screen.
