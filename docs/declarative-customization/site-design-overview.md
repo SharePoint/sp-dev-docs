@@ -248,3 +248,4 @@ For more information on working with scopes, see [Scoping access to site designs
 - [Site design JSON schema](site-design-json-schema.md)
 - [PowerShell cmdlets for SharePoint site designs and site scripts](site-design-powershell.md)
 - [Site design and site script REST API](site-design-rest-api.md)
+- [Site design examples](https://github.com/SharePoint/sp-dev-site-scripts)
