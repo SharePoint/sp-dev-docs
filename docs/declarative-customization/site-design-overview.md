@@ -34,7 +34,7 @@ These are the default site designs. For each site design there is a title, descr
 
 ![Default site design title, description, and image on communication site template](images/site-designs-listed-on-communication-site-template.png)
 
-Had you chosen the team site template, it contains only one default site design named **Team site**. <!-- For additional information on how you can change the default site designs, see [Applying a site design to a default SharePoint template](site-design-apply-default-template.md). -->
+Had you chosen the team site template, it contains only one default site design named **Team site**. For additional information on how you can change the default site designs, see [Applying a site design to a default SharePoint template](customize-default-site-design.md).
 
 Once a site design is selected, SharePoint creates the new site, and runs site scripts for the site design. The site scripts detail the work such as creating new lists, or applying a theme. When the actions in the scripts are completed, SharePoint displays detailed results of those actions in a progress pane.
 

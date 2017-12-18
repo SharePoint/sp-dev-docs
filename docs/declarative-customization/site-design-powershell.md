@@ -78,8 +78,7 @@ C:\> Add-SPOSiteDesign `
   -SiteScripts "<ID>" `
   -Description "Tracks key customer data in a list" `
   -PreviewImageUrl "https://contoso.sharepoint.com/SiteAssets/site-preview.png" `
-  -PreviewImageAltText "site preview" `
-  -IsDefault $false
+  -PreviewImageAltText "site preview"
 ```
 
 ## **Add-SPOSiteScript**
