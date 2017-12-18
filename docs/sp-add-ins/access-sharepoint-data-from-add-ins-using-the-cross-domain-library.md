@@ -19,13 +19,13 @@ Figure 1 shows a blocked request across domains.
 **Figure 1. Blocked request across domains**
 
  
-When a user requests a page from your add-in domain (1), the client-side communication is bound only to that domain. Your add-in can issue client-side calls from the page only to other resources in the same domain. However, add-ins usually require resources from other domains, such as the SharePoint domain, to fulfill their scenarios. In the code in your page, you may try to issue a request to the SharePoint domain (2), which is blocked by the browser. You usually see an  **Access is denied** error. The error doesn't imply that you don't have permissions to the requested resources but, most likely, you can't even issue a request to the mentioned resources.
+When a user requests a page from your add-in domain (1), the client-side communication is bound only to that domain. Your add-in can issue client-side calls from the page only to other resources in the same domain. However, add-ins usually require resources from other domains, such as the SharePoint domain, to fulfill their scenarios. In the code in your page, you may try to issue a request to the SharePoint domain (2), which is blocked by the browser. You usually see an **Access is denied** error. The error doesn't imply that you don't have permissions to the requested resources but, most likely, you can't even issue a request to the mentioned resources.
  
 When you use the cross-domain library, the webpages in your add-in can access data in your add-in domain and the SharePoint domain. The cross-domain library is a client-side alternative in the form of a JavaScript file (SP.RequestExecutor.js) that is hosted in the SharePoint website that you can reference in your remote add-in. The cross-domain library lets you interact with more than one domain in your remote add-in page through a proxy. It is a good option if you like your add-in code to run on the client instead of on the server, and if there are connectivity barriers, such as firewalls, between SharePoint and your remote infrastructure. You can access data in the host web—for example, you can access lists that end users interact with regardless of your add-in. Or you can access data in the add-in web, such as lists specifically provisioned for your add-in. Add-ins can also access other site collections and websites as long as the add-in has tenant-scoped permissions and it has been deployed as a batch installation using the add-in catalog.
  
 
 > [!NOTE] 
-> In this topic,  **add-in domain** refers to the domain that hosts the add-in pages. This can be the domain of a remote web application in a provider-hosted, but add-in pages can also be on SharePoint in the add-in web and make calls to the host web domain. In the latter scenario, the add-in domain is the domain of the add-in web.
+> In this topic, **add-in domain** refers to the domain that hosts the add-in pages. This can be the domain of a remote web application in a provider-hosted, but add-in pages can also be on SharePoint in the add-in web and make calls to the host web domain. In the latter scenario, the add-in domain is the domain of the add-in web.
  
 
 The main example in this article shows how to build an add-in that reads data on the add-in web and displays it in a webpage. The  [Next steps](access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md#SP15Accessdatafromremoteapp_Next) section shows more scenarios that build on top of the main example.
@@ -86,18 +86,18 @@ Figure 2 shows a webpage that displays the data on the add-in web.
 ### Create a SharePoint Add-in and web projects
 
 
-1. Open Visual Studio 2012 as administrator. (To do this, right-click the Visual Studio 2012 icon on the  **Start** menu, and choose **Run as administrator**.)
+1. Open Visual Studio 2012 as administrator. (To do this, right-click the Visual Studio 2012 icon on the **Start** menu, and choose **Run as administrator**.)
     
  
-2. Create a new project using the  **Add-in for SharePoint** template.
+2. Create a new project using the **Add-in for SharePoint** template.
     
-    The  **Add-in for SharePoint** template in Visual Studio 2012 is located under **Templates** **>** **Visual C#**,  **Office SharePoint** **>** **Add-ins**.
+    The **Add-in for SharePoint** template in Visual Studio 2012 is located under **Templates** **>** **Visual C#**, **Office SharePoint** **>** **Add-ins**.
     
  
 3. Provide the SharePoint website URL that you want to use for debugging.
     
  
-4. Select  **Provider-hosted** as the hosting option for your add-in.
+4. Select **Provider-hosted** as the hosting option for your add-in.
     
     > [!NOTE] 
     > You can also use the cross-domain library in a SharePoint-hosted add-in. However, in a SharePoint-hosted add-in the add-in page is already in the add-in web, in which case it wouldn't need the cross-domain library to read the list items. For a SharePoint-hosted add-in sample that reads data in the host web, see  [Use the cross-domain library in a SharePoint-hosted add-in (REST)](http://code.msdn.microsoft.com/SharePoint-2013-Use-the-00c37814) or see [Access data from the host web](access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md#SP15Accessdatafromremoteapp_Hostweb) later in this article.
@@ -105,13 +105,13 @@ Figure 2 shows a webpage that displays the data on the add-in web.
 ### Create list items on the add-in web
 
 
-1. Right-click the SharePoint Add-in project in  **Solution Explorer**. Choose  **Add** **>** **New Item…**
+1. Right-click the SharePoint Add-in project in **Solution Explorer**. Choose **Add** **>** **New Item…**
     
  
-2. Choose  **Visual C# Items** **>** **Office/SharePoint** **>** **List**. Set the name of your list to  **Announcements**.
+2. Choose **Visual C# Items** **>** **Office/SharePoint** **>** **List**. Set the name of your list to **Announcements**.
     
  
-3. Double click  **Announcements** **>** **Elements.xml**. Paste the following XML nodes as children of the  **ListInstance** element.
+3. Double click **Announcements** **>** **Elements.xml**. Paste the following XML nodes as children of the **ListInstance** element.
     
 ```
   <Data>
@@ -132,7 +132,7 @@ Figure 2 shows a webpage that displays the data on the add-in web.
 ### To add a new page that uses the cross-domain library
 
 
-1. Double-click  **Default.aspx** in the web project in **Solution Explorer**.
+1. Double-click **Default.aspx** in the web project in **Solution Explorer**.
     
  
 2. Copy the following code and paste it in the Default.aspx file. The code performs the following tasks:
@@ -146,12 +146,12 @@ Figure 2 shows a webpage that displays the data on the add-in web.
   - Extracts the add-in web URL from the query string.
     
  
-  - Loads the cross-domain library JavaScript using the  **getScript** function in jQuery.
+  - Loads the cross-domain library JavaScript using the **getScript** function in jQuery.
     
     The function loads the required resources and then continues to the specified function, ensuring that the cross-domain library is loaded and available to use by the subsequent code.
     
  
-  - Instantiates the  **RequestExecutor** object. By default, RequestExecutor uses the add-in web as the context site.
+  - Instantiates the **RequestExecutor** object. By default, RequestExecutor uses the add-in web as the context site.
     
     > [!NOTE] 
     > (REST) or object (JSOM). To learn more about AppContextSite, see [Access data from the host web](access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md#SP15Accessdatafromremoteapp_Hostweb) later in this article.
@@ -281,13 +281,13 @@ Figure 2 shows a webpage that displays the data on the add-in web.
     > [!NOTE] 
     > When you press F5, Visual Studio builds the solution, deploys the add-in, and opens the permissions page for the add-in.
 
-2. Choose the  **Trust It** button.
+2. Choose the **Trust It** button.
     
  
-3. Choose the add-in icon on the  **Site Contents** page.
+3. Choose the add-in icon on the **Site Contents** page.
     
  
-If you prefer downloadable code samples, you can get this one from code gallery.  **Code sample: Get list items by using the cross-domain library** using [SharePoint-Add-in-REST-OData-CrossDomain](https://github.com/OfficeDev/SharePoint-Add-in-REST-OData-CrossDomain) or [SharePoint-Add-in-JSOM-CrossDomain](https://github.com/OfficeDev/SharePoint-Add-in-JSOM-CrossDomain).
+If you prefer downloadable code samples, you can get this one from code gallery. **Code sample: Get list items by using the cross-domain library** using [SharePoint-Add-in-REST-OData-CrossDomain](https://github.com/OfficeDev/SharePoint-Add-in-REST-OData-CrossDomain) or [SharePoint-Add-in-JSOM-CrossDomain](https://github.com/OfficeDev/SharePoint-Add-in-JSOM-CrossDomain).
  
 
  
@@ -298,8 +298,8 @@ If you prefer downloadable code samples, you can get this one from code gallery.
 |**If you see…**|**Then try…**|
 |:-----|:-----|
 |Error message: Sorry, we had some trouble accessing your site.There is also a button to fix the error, but it doesn't correct the problem.|You may have hit a known problem with security zones in Internet Explorer, see  [Work with the cross-domain library across different Internet Explorer security zones in SharePoint Add-ins](work-with-the-cross-domain-library-across-different-internet-explorer-security-z.md).|
-|Error message: The required functionalities are not supported by your browser. Please make sure you are using IE 8 or above, or other modern browser. Please make sure the 'X-UA-Compatible' meta tag is set to be 'IE=8' or above.|The cross-domain library requires a document mode of  **IE8** or above. In some scenarios, the document mode is set to **IE7** by default. You can use the Internet Explorer developer tools to determine and change the document mode of your page. For more information, see [Defining Document Compatibility](http://msdn.microsoft.com/library/cc288325.aspx).|
-|Error message: 'Type' is undefined.Additionally, your add-in uses the JavaScript Object Model (JSOM).|The JSOM uses the  **Type.registerNamespace** method in the Microsoft Ajax library to register the **SP** namespace. Use the following code to add a reference to the Microsoft Ajax library from your page:```HTML<script  type="text/javascript"  src="//ajax.aspnetcdn.com/ajax/4.0/1/MicrosoftAjax.js"></script>```|
+|Error message: The required functionalities are not supported by your browser. Please make sure you are using IE 8 or above, or other modern browser. Please make sure the 'X-UA-Compatible' meta tag is set to be 'IE=8' or above.|The cross-domain library requires a document mode of **IE8** or above. In some scenarios, the document mode is set to **IE7** by default. You can use the Internet Explorer developer tools to determine and change the document mode of your page. For more information, see [Defining Document Compatibility](http://msdn.microsoft.com/library/cc288325.aspx).|
+|Error message: 'Type' is undefined.Additionally, your add-in uses the JavaScript Object Model (JSOM).|The JSOM uses the **Type.registerNamespace** method in the Microsoft Ajax library to register the **SP** namespace. Use the following code to add a reference to the Microsoft Ajax library from your page:```HTML<script  type="text/javascript"  src="//ajax.aspnetcdn.com/ajax/4.0/1/MicrosoftAjax.js"></script>```|
 
 ## Next steps
 <a name="SP15Accessdatafromremoteapp_Next"> </a>
@@ -320,7 +320,7 @@ Depending on your preference, you might want to use the JSOM instead of REST to 
 - Reference the SharePoint JSOM in your add-in page.
     
  
-- Initialize the  **ProxyWebRequestExecutorFactory** object and set it as the factory of the context object.
+- Initialize the **ProxyWebRequestExecutorFactory** object and set it as the factory of the context object.
     
  
 - Access the SharePoint objects to read the data from the list.
@@ -348,7 +348,7 @@ The example in this page shows how to read data from the add-in web. This works 
 - Provide appropriate permissions to the add-in.
     
  
-You can change the context site by using the  **AppContextSite** endpoint (REST) or object (JSOM). The following example shows how to change the context site using the REST endpoint:
+You can change the context site by using the **AppContextSite** endpoint (REST) or object (JSOM). The following example shows how to change the context site using the REST endpoint:
  
 
  
@@ -442,7 +442,7 @@ Your add-in also needs permission to access data from the tenant. The following 
 </AppPermissionRequests>
 ```
 
-To switch the context site in your code, use the  **AppContextSite** endpoint (REST) or object (JSOM), just like in the [Access data from the host web](access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md#SP15Accessdatafromremoteapp_Hostweb) section. Here is a reminder of the REST endpoint: /_api/SP.AppContextSite(@target)/web/title?@target='weburl', and an example on how to instantiate the object in JSOM: `appContextSite = new SP.AppContextSite(context, weburl);`.
+To switch the context site in your code, use the **AppContextSite** endpoint (REST) or object (JSOM), just like in the [Access data from the host web](access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md#SP15Accessdatafromremoteapp_Hostweb) section. Here is a reminder of the REST endpoint: /_api/SP.AppContextSite(@target)/web/title?@target='weburl', and an example on how to instantiate the object in JSOM: `appContextSite = new SP.AppContextSite(context, weburl);`.
  
 
  
@@ -462,11 +462,11 @@ To download a code sample that shows how to access data across site collections,
 ### Issuing calls across different security zones
 <a name="SP15Accessdatafromremoteapp_IEZones"> </a>
 
-The cross-domain library uses a proxy page that is hosted in an  **IFrame** on the add-in page to enable communication. When the add-in page and SharePoint website are in different security zones, authorization cookies can't be sent. If there are no authorization cookies, and the IFrame tries to load the proxy page, it will be redirected to the SharePoint sign-in page. The SharePoint sign-in page can't be contained in an IFrame for security reasons. In these scenarios, the library cannot load the proxy page, and communication with SharePoint is not possible.
+The cross-domain library uses a proxy page that is hosted in an **IFrame** on the add-in page to enable communication. When the add-in page and SharePoint website are in different security zones, authorization cookies can't be sent. If there are no authorization cookies, and the IFrame tries to load the proxy page, it will be redirected to the SharePoint sign-in page. The SharePoint sign-in page can't be contained in an IFrame for security reasons. In these scenarios, the library cannot load the proxy page, and communication with SharePoint is not possible.
  
 
  
-However, there is a solution for these scenarios. The solution is the  **apphost pattern**, which consists in wrapping the add-in pages in a page hosted in the add-in web. It's a good idea to use the apphost pattern in add-ins that use the cross-domain library, even if there are no evident security boundaries. For more information, see [Work with the cross-domain library across different Internet Explorer security zones in SharePoint Add-ins](work-with-the-cross-domain-library-across-different-internet-explorer-security-z.md).
+However, there is a solution for these scenarios. The solution is the **apphost pattern**, which consists in wrapping the add-in pages in a page hosted in the add-in web. It's a good idea to use the apphost pattern in add-ins that use the cross-domain library, even if there are no evident security boundaries. For more information, see [Work with the cross-domain library across different Internet Explorer security zones in SharePoint Add-ins](work-with-the-cross-domain-library-across-different-internet-explorer-security-z.md).
  
 
  
@@ -474,7 +474,7 @@ However, there is a solution for these scenarios. The solution is the  **apphost
 ### Access data from an additional remote host in a SharePoint-hosted add-in
 <a name="SP15Accessdatafromremoteapp_SPhosted"> </a>
 
-By default, a SharePoint-hosted add-in is allowed to issue cross-domain calls to the host web, provided that it has proper permissions. However, a SharePoint-hosted add-in can also specify a remote host in the  **AllowedRemoteHostUrl** attribute of its **AppPrincipal**. This effectively lets you issue cross-domain calls from the add-in web and from another host elsewhere.
+By default, a SharePoint-hosted add-in is allowed to issue cross-domain calls to the host web, provided that it has proper permissions. However, a SharePoint-hosted add-in can also specify a remote host in the **AllowedRemoteHostUrl** attribute of its **AppPrincipal**. This effectively lets you issue cross-domain calls from the add-in web and from another host elsewhere.
  
 
  

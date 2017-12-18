@@ -353,53 +353,9 @@ Follow these steps to create a custom action in the host web document libraries:
 |Visual Studio does not open the browser after you press the F5 key.|Set the SharePoint Add-in project as the startup project.|
 |The tokens in the URL are not resolved after you press the F5 key in Visual Studio.|Go to the  **Site Contents** page in the host web, and click the icon for your add-in.|
 
-## Next steps
-<a name="SP15Createcustomactionsapps_Nextsteps"> </a>
-
-This article demonstrated how to create a custom action in a SharePoint Add-in. As a next step, you can learn about other UX components that are available for SharePoint Add-ins. To learn more, see the following:
- 
-
- 
-
--  [Code sample: Open a remote add-in webpage using an ECB custom action](http://code.msdn.microsoft.com/SharePoint-Open-e0ca1826)
-    
- 
--  [SharePoint-Add-in-Localization](https://github.com/OfficeDev/SharePoint-Add-in-Localization)
-    
- 
--  [Code sample: Use custom actions and the cross-domain library to order books](http://code.msdn.microsoft.com/SharePoint-Open-a-36d1598d)
-    
- 
--  [Use a SharePoint website's style sheet in SharePoint Add-ins](use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins.md)
-    
- 
--  [Use the client chrome control in SharePoint Add-ins](use-the-client-chrome-control-in-sharepoint-add-ins.md)
-    
- 
--  [Create add-in parts to install with your SharePoint Add-in](create-add-in-parts-to-install-with-your-sharepoint-add-in.md)
-    
- 
-
 ## See also
 <a name="SP15Createcustomactionsapps_AddResources"> </a>
 
-
--  [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md)
-    
- 
--  [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md)
-    
- 
--  [SharePoint Add-ins UX design guidelines](sharepoint-add-ins-ux-design-guidelines.md)
-    
- 
--  [Create UX components in SharePoint](create-ux-components-in-sharepoint.md)
-    
- 
--  [Three ways to think about design options for SharePoint Add-ins](three-ways-to-think-about-design-options-for-sharepoint-add-ins.md)
-    
- 
--  [Important aspects of the SharePoint Add-in architecture and development landscape](important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md)
-    
- 
-
+- [Code sample: Open a remote add-in webpage using an ECB custom action](https://code.msdn.microsoft.com/office/SharePoint-2013-Open-a-36d1598d)    
+- [SharePoint-Add-in-Localization](https://github.com/OfficeDev/SharePoint-Add-in-Localization)
+- [Create UX components in SharePoint](create-ux-components-in-sharepoint.md)

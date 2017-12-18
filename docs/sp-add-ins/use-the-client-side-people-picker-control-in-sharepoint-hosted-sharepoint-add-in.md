@@ -246,13 +246,8 @@ function onFail(sender, args) {
 ## See also
 <a name="bk_addresources"> </a>
 
-
 -  [Create UX components in SharePoint](create-ux-components-in-sharepoint.md)
-    
- 
 -  [People Picker and claims providers overview (SharePoint)](http://technet.microsoft.com/library/gg602078.aspx)
-    
- 
 -  [Configure People Picker in SharePoint](http://technet.microsoft.com/library/gg602075.aspx)
     
  

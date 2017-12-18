@@ -1024,6 +1024,8 @@
     href: general-development/choose-the-right-api-set-in-sharepoint.md
   - name: Use the site collection app catalog
     href: general-development/site-collection-app-catalog.md
+  - name: Maintenance mode for client-side web parts
+    href: general-development/modern-pages-maintenance-mode.md
   - name: Set up and configure SharePoint Workflow Manager
     href: general-development/set-up-and-configure-sharepoint-workflow-manager.md
   - name: SharePoint Server Application Lifecycle Management

@@ -397,14 +397,9 @@ callout.set({positionAlgorithm: tryDownAndRightThenGoDefault});
 ## See also
 <a name="bk_addresources"> </a>
 
-
--  [SharePoint: Use list views, callouts, and dialogs in SharePoint-hosted add-ins](http://code.msdn.microsoft.com/officeapps/SharePoint-Use-list-cb3e4e14)
-    
- 
+-  [Create UX components in SharePoint](create-ux-components-in-sharepoint.md)
+-  [Code sample: Use list views, callouts, and dialogs in SharePoint-hosted add-ins](https://code.msdn.microsoft.com/office/SharePoint-2013-Use-list-cb3e4e14)
 -  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md)
-    
- 
--  [UX design for SharePoint Add-ins](ux-design-for-sharepoint-add-ins.md)
     
  
 
