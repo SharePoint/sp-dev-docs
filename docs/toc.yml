@@ -265,6 +265,8 @@
       href: declarative-customization/get-started-create-site-design.md
     - name: Setting scope
       href: declarative-customization/site-design-scoping.md
+    - name: Customize a default site design
+      href: declarative-customization/customize-default-site-design.md
     - name: JSON schema reference
       href: declarative-customization/site-design-json-schema.md
     - name: PowerShell cmdlets
