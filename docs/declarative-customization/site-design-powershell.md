@@ -67,7 +67,7 @@ Add-SPOSiteDesign
 |[-Description]         | The display description of site design. |
 |[-PreviewImageUrl]     | The URL of a preview image. If none is specified SharePoint will use a generic image. |
 |[-PreviewImageAltText] | The alt text description of the image for accessibility. |
-|[-IsDefault]           | A switch that if provided, applies the site design to the default site template. <!-- For more information see [Applying a site design to a default SharePoint template](site-design-apply-default-template.md) --> |
+|[-IsDefault]           | A switch that if provided, applies the site design to the default site template. For more information see [Customize a default site design](customize-default-site-design.md) |
 
 Here's an example of creating a new site design.
 
@@ -83,7 +83,8 @@ C:\> Add-SPOSiteDesign `
 
 ## **Add-SPOSiteScript**
 
-Uploads a new site script to the gallery for use either directly or in a site design. This cmdlet will support inline script; file
+Uploads a new site script to the gallery for use either directly or in a site design.
+<!-- TBD does it really appear in the gallery? -->
 
 ```powershell
 Add-SPOSiteScript
@@ -134,9 +135,7 @@ Here's an example and sample response of getting site design details.
 
 ```powershell
 PS C:\> Get-SPOSiteDesign 44252d09-62c4-4913-9eb0-a2a8b8d7f863
-```
 
-```
 Id                  : 44252d09-62c4-4913-9eb0-a2a8b8d7f863
 Title               : Contoso - Team Project
 WebTemplate         : 64
@@ -165,12 +164,10 @@ Here's an example of getting the rights for a site design.
 
 ```powershell
 PS C:\> Get-SPOSiteDesignRights 607aed52-6d61-490a-b692-c0f58a6981a1
-```
 
-```
 DisplayName  PrincipalName                                      Rights
 -----------  -------------                                      ------
-Nestor Wilke i:0#.f|membership|nestorw@contoso.sharepoint.com   View
+Nestor Wilke i:0#.f|membership|nestorw@contoso.onmicrosoft.com   View
 ```
 
 ## Get-SPOSiteScript
@@ -188,6 +185,28 @@ Get-SPOSiteScript
 |Parameter     | Description  |
 |--------------|--------------|
 | [-Identity]  | The ID of the site script to get information about. |
+
+Here's an example that shows how to get script information for a specific script ID.
+
+```powershell
+PS C:\scripts> Get-SPOSiteScript 07702c07-0485-426f-b710-4704241caad9
+
+Id          : 07702c07-0485-426f-b710-4704241caad9
+Title       : Contoso theme
+Description :
+Content     : {
+                  "$schema": "schema.json",
+                      "actions": [
+                          {
+                             "verb": "applyTheme",
+                             "themeName": "Custom Cyan"
+                          }
+                      ],
+                          "bindata": { },
+                  "version": 1
+              }
+Version     : 1
+```
 
 ## Grant-SPOSiteDesignRights
 
@@ -214,7 +233,7 @@ Here's an example of how to grant view rights on a site design to Nestor (a user
 ```powershell
 PS C:\> Grant-SPOSiteDesignRights `
          -Identity 44252d09-62c4-4913-9eb0-a2a8b8d7f863 `
-         -Principals "nestorw@contoso.sharepoint.com" `
+         -Principals "nestorw@contoso.onmicrosoft.com" `
          -Rights View
 ```
 
@@ -234,6 +253,12 @@ Removes a site design. It will no longer appear in the UI for creating a new sit
 |--------------|--------------|
 | [-Identity]  | The ID of the site design to remove. |
 
+Here's an example that shows how to remove a site design.
+
+```powershell
+
+```
+
 ## Remove-SPOSiteScript
 
 Removes a site script. <!-- TBD how is dependency problem handled so you don't delete a script that a design depends on. this currently creates an error when running the design.) -->
@@ -249,6 +274,10 @@ Remove-SPOSiteScript
 |Parameter     | Description  |
 |--------------|--------------|
 | [-Identity]  | The ID of the site script to remove. |
+
+```powershell
+C:\> Remove-SPOSiteDesign 21209d88-38de-4844-9823-f1f600a1179a
+```
 
 ## Revoke-SPOSiteDesignRights
 
@@ -268,12 +297,20 @@ Revoke-SPOSiteDesignRights
 | [-Identity]  | The ID of the site design from which to revoke rights. |
 | -Principals  | One or more principals to revoke rights on the specified site design. |
 
+Here's an example that shows how to revoke rights to a site design for Nestor.
+
+```powershell
+PS C:\> Revoke-SPOSiteDesignRights 44252d09-62c4-4913-9eb0-a2a8b8d7f863 `
+   -Principals "nestorw@contoso.onmicrosoft.com"
+```
+
 <!--
 ## Set-SPOSiteDesign (TBD)
 
 ## Set-SPOSiteScript (TBD)
 -->
 
-Developers can also use the SharePoint [REST API](site-design-rest-api.md) to handle theme management tasks.
+## See also
 
-For information about how themes are defined and stored, see the [JSON schema reference](site-design-json-schema.md).
+- [JSON schema reference](site-design-json-schema.md)
+- [REST API](site-design-rest-api.md)Apply a scope to your site design](site-design-scoping.md)
