@@ -1,22 +1,22 @@
 ---
-title: Maintenance mode for modern pages
-ms.date: 12/15/2017
+title: Maintenance mode for client-side web parts
+ms.date: 12/18/2017
 ms.prod: sharepoint
 ms.assetid: 3ebd2a11-8291-4228-add0-9e0cd899dd3c
 ---
 
-# Maintenance mode for modern pages
+# Maintenance mode for client-side web parts
 
 _**Applies to:** Office 365_
 
-When working with modern pages, you can load them in maintenance mode. The maintenance mode can be helpful when trying to debug issues related to web parts placed on the page.
+When working with client-side web parts, you can load them in maintenance mode. The maintenance mode can be helpful when trying to debug issues related to web parts placed on the page.
 
 ## Switch to maintenance mode
 
 > [!NOTE]
-> In order to load a modern page in maintenance mode, you have to have edit permissions for that specific page.
+> In order to load a page in the maintenance mode, you have to have edit permissions for that specific page.
 
-To switch to the maintenance mode, navigate to the modern page and in the URL append `?maintenancemode=true`, for example:
+To switch to the maintenance mode, navigate to the page and in the URL append `?maintenancemode=true`, for example:
 
 ```text
 https://contoso.sharepoint.com/sites/team?maintenancemode=true
@@ -71,8 +71,8 @@ If the web part [integrates its properties with SharePoint](../spfx/web-parts/gu
 
 ## Considerations
 
-- the maintenance mode works only with modern SharePoint pages. See the [Open and use the web part maintenance page](https://support.office.com/en-us/article/Open-and-use-the-web-part-maintenance-page-eff9ce22-d04a-44dd-ae83-ac29a5e396c2#PickTab=2016,_2013) support article, to get more information about opening classic pages in maintenance view
-- to open modern page in maintenance mode, you have to have edit permissions for that page
+- the maintenance mode works for client-side web parts placed on both modern and classic SharePoint pages. See the [Open and use the web part maintenance page](https://support.office.com/en-us/article/Open-and-use-the-web-part-maintenance-page-eff9ce22-d04a-44dd-ae83-ac29a5e396c2#PickTab=2016,_2013) support article, to get more information about opening classic web parts in maintenance view
+- to open page in maintenance mode, you have to have edit permissions for that page
 - when in maintenance mode, web part code is not being executed and you cannot edit web part properties
 - in maintenance mode, you can delete or move web parts on the page
 - the maintenance mode shows only information about web parts. You cannot use it to show information about SharePoint Framework extensions that are executed on the page
