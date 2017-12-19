@@ -57,9 +57,9 @@
       items:
       - name: Migrating existing customizations
         items:
-          name: Client Side Rendering (JSLink)
+        - name: Client Side Rendering (JSLink)
           href: spfx/extensions/guidance/migrate-jslink-to-spfx-extensions.md
-          name: JavaScript embedding (UserCustomAction)
+        - name: JavaScript embedding (UserCustomAction)
           href: spfx/extensions/guidance/migrate-user-customactions-to-spfx-extensions.md
         - name: Edit Control Block (ECB) menu item tutorial
           href: spfx/extensions/guidance/migrate-from-ecb-to-spfx-extensions.md
@@ -1360,7 +1360,7 @@
       href: solution-guidance/modern-experience-customizations-customize-lists-and-libraries.md
     - name: Customizing "modern" site pages
       href: solution-guidance/modern-experience-customizations-customize-pages.md
-      name: SharePoint "modern" sites classification
+    - name: SharePoint "modern" sites classification
       href: solution-guidance/modern-experience-site-classification.md
   - name: SharePoint Multi-Geo tenant guidance
     href: solution-guidance/multigeo-introduction.md
