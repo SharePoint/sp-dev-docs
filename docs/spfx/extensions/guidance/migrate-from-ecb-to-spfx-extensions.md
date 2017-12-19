@@ -1,11 +1,12 @@
+---
+title: Tutorial - Migrating from Edit Control Block (ECB) menu item to SharePoint Framework Extension
+ms.date: 12/19/2017
+ms.prod: sharepoint
+---
+
 # Migrating from Edit Control Block (ECB) menu item to SharePoint Framework Extensions
 
 During the last few years, most of the enterprise solutions built on top of Office 365 and SharePoint Online leveraged the site _CustomAction_ capability of the SharePoint Feature Framework to extend the UI of pages. However nowdays, within the new "modern" UI of SharePoint Online, most of those customizations are no more available. Luckily, with the new SharePoint Framework Extensions you can provide similar functionality in the "modern" UI. In this tutorial you will learn how to migrate from old "classic" customizations to the new model based on SharePoint Framework Extensions.
-
-> [!IMPORTANT]
-> We're not deprecating the "classic" experience - both "classic" and "modern" will coexist.
-
-_**Applies to:** SharePoint Online_
 
 ## Understanding SharePoint Framework Extensions
 <a name="spfxExtensions"> </a>

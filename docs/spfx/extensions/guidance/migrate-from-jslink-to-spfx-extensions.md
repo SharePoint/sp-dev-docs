@@ -1,14 +1,15 @@
+---
+title: Tutorial - Migrating from JSLink to SharePoint Framework Extensions
+ms.date: 12/19/2017
+ms.prod: sharepoint
+---
+
 # Migrating from JSLink to SharePoint Framework Extensions
 
 Since Microsoft SharePoint version 2013, most of the enterprise solutions built on top of Office 365 and SharePoint Online leveraged the _JSLink_ property of fields and list views to customize the rendering of fields. However nowdays, within the new "modern" UI of SharePoint Online, most of those customizations are no more available. Luckily, with the new SharePoint Framework Extensions you can now provide almost the same functionality in the "modern" UI. In this tutorial you will learn how to migrate from old "classic" customizations to the new model based on SharePoint Framework Extensions.
 
-> [!IMPORTANT]
-> We're not deprecating the "classic" experience - both "classic" and "modern" will coexist.
-
-_**Applies to:** SharePoint Online_
-
 ## Understanding SharePoint Framework Extensions
-<a name="spfxExtensions"> </a>
+
 First of all, let's introduce the available options when developing SharePoint Framework Extensions:
 
 * **Application Customizer**: extend the native "modern" UI of SharePoint Online by adding custom HTML elements and client-side code to pre-defined placeholders of "modern" pages. At the time of this writing, the available placeholders are the header and the footer of every "modern" page.
@@ -21,7 +22,7 @@ As you can argue from the above descriptions, the most useful one in our context
 > For further details about how to build SharePoint Framework Extensions you can read the article ["Overview of SharePoint Framework Extensions"](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions).
 
 ## Migrating a JSLink to an SPFx Field Customizer
-<a name="FromJSLinktoFieldCustomizer"> </a>
+
 Assume that you are in SharePoint Online, and you have a custom list with a custom field called "Color", which is of type _Choice_ and which can assume the following values: _Red_, _Green_, _Blue_, _Yellow_. Then, assume that you have custom value for the _JSLink_ property of the list view rendering web part of the custom list. In the following code snippet you can see the JavaScript code referenced by the _JSLink_ property (_customColorRendering.js_).
 
 ```JavaScript
@@ -100,7 +101,7 @@ As you can see "Color" fields render a colored box filled with the color selecte
 In order to migrate the above solution to the SharePoint Framework, you will have to accomplish the following steps.
 
 ### Create a new SharePoint Framework solution
-<a name="CreateFieldCustomizer"> </a>
+
 Once you have prepared you development environment to develop SharePoint Framework solutions, by following the instructions provided in the document ["Set up your SharePoint client-side web part development environment"](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment), you can start creating a SharePoint Framework extension.
 
 1. Open the command line tool of your choice (PowerShell, CMD.EXE, Cmder, etc.), create a new folder for the solution (call it _spfx-custom-field-extension_), and create a new SharePoint Framework solution by running the Yeoman generator with the following command:
@@ -140,7 +141,7 @@ code .
 ```
 
 ### Define the new Field Customizer with JavaScript
-<a name="DefineFieldCustomizerWithJavaScript"> </a>
+
 In order to reproduce the same behavior of the _JSLink_ custom field rendering, you simply need to implement the same logic using client-side code, within the new SharePoint Framework solution. To accomplish this task, complete the following steps.
 
 1. First of all, open the file _CustomColorFieldFieldCustomizer.manifest.json_ under the _src/extensions/customColorField_ folder. Copy the value of the _id_ property and store it in a safe place, because you will need it later.
@@ -237,7 +238,7 @@ In the following figure you can see the resulting output.
 ![The Field Customizer rendered in "modern" list](../../../images/spfx-custom-field-extension-output.png)
 
 ### Test the solution in debug mode
-<a name="DebugFieldCustomizer"> </a>
+
 You are now ready to test your solution in debug mode. 
 
 1. Go back to the console window and run the following command:
@@ -259,7 +260,7 @@ In the above querystring, you will have to replace the GUID with the _id_ value 
 Notice that, when executing the page request, you will be prompted with a warning message box with title "Allow debug scripts?", which asks your consent to run code from localhost, for security reasons. Of course, if you want to locally debug and test the solution, you will have to allow to "Load debug scripts".
 
 ### Define the new Field Customizer with TypeScript
-<a name="DefineFieldCustomizerWithTypeScript"> </a>
+
 You are now ready to replace the JavaScript code with TypeScript, in order to benefit of the fully typed approach of TypeScript.
 
 1. Open the file _CustomColorFieldFieldCustomizer.module.scss_ under the _src/extensions/customColorField_ folder. This file, which is a Sassy CSS, represents the UI style for the field customizer. Replace the content of the SCSS file with the following one.
@@ -341,7 +342,7 @@ Notice that the new method implementation uses a fully typed approach, and assig
 3. Run one more time in debug mode the field customizer and see the result.
 
 ### Package and host the solution
-<a name="PackageAndHostCommandSet"> </a>
+
 If you are happy with the result, you are now ready to package the solution and host it in a real hosting infrastructure.
 Before building the bundle and the package, you need to declare an XML feature framework file to provision the extension.
 
@@ -396,6 +397,7 @@ Now, open the _package-solution.json_ file under the _/config_ folder of the sol
 ```
 
 #### Enable the CDN in your Office 365 tenant
+
 Now you need to host the extension in a hosting environment. Office 365 CDN is the easiest way to host SharePoint Framework solutions directly from your tenant while still taking advantage of the Content Delivery Network (CDN) service for faster load times of your assets.
 
 1. Download the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588) to ensure that you have the latest version.
@@ -445,6 +447,7 @@ Note that your newly added origin is listed as a valid CDN origin. Final configu
 When the origin is listed without the `(configuration pending)` text, it is ready to be used in your tenant. This indicates an on-going configuration between SharePoint Online and the CDN system. 
 
 #### Update the solution settings and publish it on the CDN
+
 Now, you need to update the solution in order to use the just created CDN as the hosting enviroment and you will need to publish the solution bundle to the CDN. To accomplish this task, just follow the upcoming steps.
 
 1. Return to the previously created solution to perform the needed URL updates.
@@ -478,7 +481,7 @@ Now, you need to update the solution in order to use the just created CDN as the
 7. Upload or drag-and-drop the files in the _temp/deploy_ folder to the _CDN/customcolorfield_ folder created earlier.
 
 ### Install and run the solution
-<a name="InstallFieldCustomizer"> </a>
+
 You can now install the solution on any target "modern" site.
 
 1. Open the browser and navigate to any target "modern" site.

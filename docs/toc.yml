@@ -57,11 +57,15 @@
       items:
       - name: Migrating existing customizations
         items:
-        - name: Edit Control Block (ECB) menu item
+          name: Client Side Rendering (JSLink)
+          href: spfx/extensions/guidance/migrate-jslink-to-spfx-extensions.md
+          name: JavaScript embedding (UserCustomAction)
+          href: spfx/extensions/guidance/migrate-user-customactions-to-spfx-extensions.md
+        - name: Edit Control Block (ECB) menu item tutorial
           href: spfx/extensions/guidance/migrate-from-ecb-to-spfx-extensions.md
-        - name: Client Side Rendering (JSLink)
+        - name: Client Side Rendering (JSLink) tutorial
           href: spfx/extensions/guidance/migrate-from-jslink-to-spfx-extensions.md
-        - name: JavaScript embedding (UserCustomAction)
+        - name: JavaScript embedding (UserCustomAction) tutorial
           href: spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions.md          
   - name: Web parts
     href: spfx/web-parts/overview-client-side-web-parts.md
