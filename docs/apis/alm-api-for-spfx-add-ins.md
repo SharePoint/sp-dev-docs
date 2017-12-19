@@ -1,3 +1,10 @@
+---
+title:  Application Lifecycle Management (ALM) APIs 
+ms.date: 12/19/2017
+ms.prod: sharepoint
+ms.assetid: fdf7ecb2-8851-425b-b058-3285fba77b68
+---
+
 # Application Lifecycle Management (ALM) APIs  
 
 ALM APIs are providing simple APIs to manage deployment of your SharePoint Framework solutions and add-ins cross your tenant. ALM APIs support following capabilities.
@@ -14,7 +21,10 @@ ALM APIs can be used to perform exactly the same operations which are available 
 - Install and UnInstall events are being fired for provider hosted add-ins when corresponding operations are occurred
 - ALM APIs supports app-only based operations
 
-ALM APIs are natively provided using REST APIs, but there is also additional CSOM extensions and PowerShell commandlets available through SharePoint Patterns and Practices 
+ALM APIs are natively provided using REST APIs, but there is also additional CSOM extensions and PowerShell commandlets available through SharePoint Patterns and Practices.
+
+> [!NOTE] 
+> ALM APIs are not currently supported for [site collection app catalog](../general-development/site-collection-app-catalog.md). Support will be added early 2018.
 
 ## REST API
 
