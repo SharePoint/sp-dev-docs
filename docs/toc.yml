@@ -1356,6 +1356,8 @@
       href: solution-guidance/modern-experience-customizations-customize-lists-and-libraries.md
     - name: Customizing "modern" site pages
       href: solution-guidance/modern-experience-customizations-customize-pages.md
+      name: SharePoint "modern" sites classification
+      href: solution-guidance/modern-experience-site-classification.md
   - name: SharePoint Multi-Geo tenant guidance
     href: solution-guidance/multigeo-introduction.md
     items:
