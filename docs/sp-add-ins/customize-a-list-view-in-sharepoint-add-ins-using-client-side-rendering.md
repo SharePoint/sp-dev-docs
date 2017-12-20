@@ -20,7 +20,7 @@ To follow the steps in this example, you need the following:
 
 - A SharePoint development environment (add-in isolation required for on-premises scenarios)
 
-For guidance on how to set up a development environment that fits your needs, see [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md).
+For guidance about how to set up a development environment that fits your needs, see [SharePoint Add-ins](sharepoint-add-ins/md).
 
 ### Core concepts to help you understand list view customization with client-side rendering
 
