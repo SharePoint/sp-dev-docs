@@ -109,10 +109,11 @@ The following figure shows a client-side rendered view of an announcements list.
     - Provides event handlers for the **PreRender** and **PostRender** events.
 
     - Provides templates for the Header, Footer, and Item template sets.
-    
+
     - Registers the templates.
 
-    ```
+    ```js
+    
     (function () {
         // Initialize the variable that stores the objects.
         var overrideCtx = {};
