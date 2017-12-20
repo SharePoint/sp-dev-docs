@@ -36,7 +36,7 @@ To follow the steps in this example, you need the following:
 
 - Visual Studio
 - Microsoft Office Developer Tools for Visual Studio
-- A SharePoint development environment. If you need help setting up a development environment, see [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md).
+- A SharePoint development environment. If you need help setting up a development environment, see [Two types of SharePoint Add-ins: SharePoint-hosted and provider-hosted](sharepoint-add-ins.md#two-types-of-sharepoint-add-ins-sharepoint-hosted-and-provider-hosted).
 
 <a name="SP15Createappparts_Codeexample"> </a>
 

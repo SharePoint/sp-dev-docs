@@ -19,7 +19,7 @@ To follow the steps in this example, you need the following:
 - Visual Studio 2015
 - A SharePoint development environment (add-in isolation required for on-premises scenarios)
  
-For guidance about how to set up a development environment that fits your needs, see [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)..
+For guidance about how to set up a development environment that fits your needs, see [Two types of SharePoint Add-ins: SharePoint-hosted and provider-hosted](sharepoint-add-ins.md#two-types-of-sharepoint-add-ins-sharepoint-hosted-and-provider-hosted).
 
 ### Core concepts to know before using the chrome control
 

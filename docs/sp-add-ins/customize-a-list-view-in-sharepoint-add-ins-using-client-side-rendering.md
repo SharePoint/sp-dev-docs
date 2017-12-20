@@ -20,7 +20,7 @@ To follow the steps in this example, you need the following:
 
 - A SharePoint development environment (add-in isolation required for on-premises scenarios)
 
-For guidance about how to set up a development environment that fits your needs, see [SharePoint Add-ins](sharepoint-add-ins/md).
+For guidance about how to set up a development environment that fits your needs, see [Two types of SharePoint Add-ins: SharePoint-hosted and provider-hosted](sharepoint-add-ins.md#two-types-of-sharepoint-add-ins-sharepoint-hosted-and-provider-hosted).
 
 ### Core concepts to help you understand list view customization with client-side rendering
 
@@ -73,6 +73,7 @@ The following figure shows a client-side rendered view of an announcements list.
 2. Copy the following markup and paste it in the **Views** element in the Schema.xml file of your list feature. The markup performs the following tasks:
     
     - Declares a new view named Overridable with a BaseViewID=2.
+
     - Provides a value for the **JSLink** element that points to a JavaScript file that is provisioned with the add-in.
     
     > [!NOTE] 
@@ -106,7 +107,9 @@ The following figure shows a client-side rendered view of an announcements list.
 2. Copy the following code and paste it in the CSRListView.js file. The code performs the following tasks:
     
     - Provides event handlers for the **PreRender** and **PostRender** events.
+
     - Provides templates for the Header, Footer, and Item template sets.
+    
     - Registers the templates.
 
     ```
