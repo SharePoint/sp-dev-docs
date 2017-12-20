@@ -79,7 +79,7 @@ You can use these members to control the display of callout.
 |title|Display a title at the top of the control.|string, **null**, string containing HTML|
 |content|Display HTML inside the control whenever there is no value for the  `contentElement` member.|string containing HTML, **null**, must be null if `contentElement` has a value|
 |contentElement|Display an HTML element inside the control when there is no value for the  `content` member.|Any HTML element, **null**, must be null if `content` has a value|
-|contentWidth|Specify the width in pixels of the callout body container. This container also has a 1-pixel border and 15-pixel padding on each side, so the control is 32 pixels wider than the body width that you specify. The control's CSS  `overflow` property is set to `hidden`, so your content will be clipped if it does not fit inside the width that you specify. If you set this member on an open callout, the change takes effect immediately. This is not true of the other members.|Any number between 240 and 610, **350** (making the control 382 pixels wide by default)|
+|contentWidth|Specify the width in pixels of the callout body container.<br/><br/>This container also has a 1-pixel border and 15-pixel padding on each side, so the control is 32 pixels wider than the body width that you specify.<br/><br/>The control's CSS  `overflow` property is set to `hidden`, so your content is clipped if it does not fit inside the width that you specify.<br/><br/>If you set this member on an open callout, the change takes effect immediately.<br/><br/>This is not true of the other members.|Any number between 240 and 610, **350** (making the control 382 pixels wide by default)|
 |beakOrientation|Specify the orientation of the beak or pointer of the callout control.|**topBottom orientation**<br/><br/>![Where the callout control's beak appears with the topbottom orientation](../images/SP15_CalloutTopBottom.png)<br/><br/>**leftRight orientation**<br/><br/>![Where the callout control's beak appears with the leftright orientation](../images/SP15_CalloutLeftRight.png)|
 
 <a name="Behavior"> </a>
@@ -90,9 +90,9 @@ You can use the following members to control the behavior of the callout. Begin 
 
 |**Use these values for the `openOptions` member**|**Purpose**|
 |:-----|:-----|
-| `{event: "click", closeCalloutOnBlur: true}`|Make the callout control appear when the user selects the `launchPoint` element with a mouse, and close whenever a user moves the mouse away from the `launchPoint` element.<br/>Because the value of `event` is `click`, the value of the `showCloseButton` option is **true** by default and can't be changed.<br/>This is the default combination of values.|
-| `{event: "hover", showCloseButton: true}`|Make the callout control appear when the user hovers over the `launchPoint` element with a mouse, and close whenever the user selects an **X** button in the upper-right corner of the control.<br/>Because the value of `event` is `hover`, the value of `closeCalloutOnBlur` is not applicable and can't be set.|
-| `{event: "click", closeCalloutOnBlur: false}`|Make the callout control appear when the user hovers over the `launchPoint` element with a mouse, and close only whenever the user selects an **X** button in the upper-right corner of the control.<br/>Because the value of `event` is `click`, the value of the `showClosebutton` option is **true** by default and can't be changed.|
+| `{event: "click", closeCalloutOnBlur: true}`|Make the callout control appear when the user selects the `launchPoint` element with a mouse, and close whenever a user moves the mouse away from the `launchPoint` element.<br/><br/>Because the value of `event` is `click`, the value of the `showCloseButton` option is **true** by default and can't be changed.<br/><br/>This is the default combination of values.|
+| `{event: "hover", showCloseButton: true}`|Make the callout control appear when the user hovers over the `launchPoint` element with a mouse, and close whenever the user selects an **X** button in the upper-right corner of the control.<br/><br/>Because the value of `event` is `hover`, the value of `closeCalloutOnBlur` is not applicable and can't be set.|
+| `{event: "click", closeCalloutOnBlur: false}`|Make the callout control appear when the user hovers over the `launchPoint` element with a mouse, and close only whenever the user selects an **X** button in the upper-right corner of the control.<br/><br/>Because the value of `event` is `click`, the value of the `showClosebutton` option is **true** by default and can't be changed.|
 
 <br/>
 
@@ -100,10 +100,10 @@ These are the other members that you can set to control the callout's behavior.
 
 |**Use this member**|**Purpose**|**Valid values (default in bold)**|
 |:-----|:-----|:-----|
-|onOpeningCallback|Perform actions that must happen before the callout control is rendered on the page.<br/>Because the  `Callout` object must be passed as a parameter to the function that you supply, you can use this member to set values for any of the control's properties before the control is rendered.<br/>You can also use this member to begin asynchronous actions that add or change the content of the control.<br/>You can set a value for this member only once.| `function(callout /*=Callout*/) {...}`<br/>**null**|
-|onOpenedCallback|Perform actions that must happen after the callout control is rendered on the page and fully animated.<br/>You might use this member to manipulate the Document Object Model (DOM) of the control.<br/>You can set a value for this member only once.| `function(callout /*=Callout*/) {...}`<br/>**null**|
-|onClosingCallback|Perform actions that must happen while the callout control is closing but before it has fully been removed from the page.<br/>You can set a value for this member only once.| `function(callout /*=Callout*/) {...}` <br/>**null**|
-|onClosedCallback|Perform actions that must happen after the callout control has closed and been removed from the page.<br/>You can set a value for this member only once.| `function(callout /*=Callout*/) {...}`<br/>**null**|
+|onOpeningCallback|Perform actions that must happen before the callout control is rendered on the page.<br/><br/>Because the  `Callout` object must be passed as a parameter to the function that you supply, you can use this member to set values for any of the control's properties before the control is rendered.<br/><br/>You can also use this member to begin asynchronous actions that add or change the content of the control.<br/><br/>You can set a value for this member only once.| `function(callout /*=Callout*/) {...}`<br/><br/>**null**|
+|onOpenedCallback|Perform actions that must happen after the callout control is rendered on the page and fully animated.<br/><br/>You might use this member to manipulate the Document Object Model (DOM) of the control.<br/><br/>You can set a value for this member only once.| `function(callout /*=Callout*/) {...}`<br/><br/>**null**|
+|onClosingCallback|Perform actions that must happen while the callout control is closing but before it has fully been removed from the page.<br/><br/>You can set a value for this member only once.| `function(callout /*=Callout*/) {...}` <br/><br/>**null**|
+|onClosedCallback|Perform actions that must happen after the callout control has closed and been removed from the page.<br/><br/>You can set a value for this member only once.| `function(callout /*=Callout*/) {...}`<br/><br/>**null**|
 
 <a name="CalloutMethods"> </a>
 
@@ -114,13 +114,13 @@ You can use these methods to customize the behavior of the callout control.
 |**Use this method**|**Purpose**|**Valid parameter values**|
 |:-----|:-----|:-----|
 |set({member:value})|Set values for members after you have constructed an instance of the control.|A name/value pair that defines a value for any callout control member.<br/><br/>`var callout = new Callout({openOptions:{event: "click"}});callout.set({openOptions:{event: "hover"}});`|
-|getOrientation()|Return a  `CalloutOrientation` object that indicates which way the callout control is pointing.<br/>This object has four Boolean members: `up`,  `down`,  `left`, and  `right`.<br/>While the control is open, two of these values will be **true** and two will be **false** (`up` and `right`, for example).|No parameters|
-|addEventCallback(string eventName, CalloutCallback callback|Register a callback function that is called whenever the callout control changes to the state specified by the  `eventName` parameter.|The  `eventName` parameter must be one of these values: `opening`,  `open`,  `closing`,  `closed`.<br/>The  `callback` parameter must be a function that takes an instance of the callout control as its first parameter.|
-|open()|Display the control.<br/>If the control is already open or opening, this method returns **false** and does nothing.|No parameters|
-|close(bool useAnimation)|Hide the control.<br/>If the control is closed or already closing, this method returns **false** and does nothing.|A Boolean value that specifies whether the control closes with animation.<br/>Animation is off by default.|
+|getOrientation()|Return a  `CalloutOrientation` object that indicates which way the callout control is pointing.<br/><br/>This object has four Boolean members: `up`,  `down`,  `left`, and  `right`.<br/><br/>While the control is open, two of these values will be **true** and two will be **false** (`up` and `right`, for example).|No parameters|
+|addEventCallback(string eventName, CalloutCallback callback|Register a callback function that is called whenever the callout control changes to the state specified by the  `eventName` parameter.|The  `eventName` parameter must be one of these values: `opening`,  `open`,  `closing`,  `closed`.<br/><br/>The  `callback` parameter must be a function that takes an instance of the callout control as its first parameter.|
+|open()|Display the control.<br/><br/>If the control is already open or opening, this method returns **false** and does nothing.|No parameters|
+|close(bool useAnimation)|Hide the control.<br/><br/>If the control is closed or already closing, this method returns **false** and does nothing.|A Boolean value that specifies whether the control closes with animation.<br/><br/>Animation is off by default.|
 |toggle()|Toggle the control's open/close state.|No parameters|
-|addAction(CallOutAction calloutAction)|Add a new  `CalloutAction` to the callout control's array of `CalloutAction` objects.<br/>These objects define the actions to show in the footer of the control.<br/>The [Add actions to the callout control](#AddActions) section explains how to construct these objects.<br/>You can add actions only after creating an instance of the control.<br/>The control can have no more than three actions, and if you try to add more you'll get an exception.|A `CalloutAction` object.|
-|refreshActions()|Reload all of the actions that have been added to the control.<br/>You can use this method to change, enable, or disable actions while the control is open.|No parameters|
+|addAction(CallOutAction calloutAction)|Add a new  `CalloutAction` to the callout control's array of `CalloutAction` objects.<br/><br/>These objects define the actions to show in the footer of the control.<br/><br/>The [Add actions to the callout control](#AddActions) section explains how to construct these objects.<br/><br/>You can add actions only after creating an instance of the control.<br/><br/>The control can have no more than three actions, and if you try to add more you'll get an exception.|A `CalloutAction` object.|
+|refreshActions()|Reload all of the actions that have been added to the control.<br/><br/>You can use this method to change, enable, or disable actions while the control is open.|No parameters|
 
 <a name="AddActions"> </a>
 
@@ -165,12 +165,12 @@ You can use these members to define the behavior of a callout action.
 |**Use this member**|**Purpose**|**Valid values (default in bold)**|
 |:-----|:-----|:-----|
 |text (required)|Display a text label for the action.|string, **null**|
-|onClickCallback|Define the action that occurs when the user selects the callout action label.| `function(calloutAction /*=CalloutAction*/) {...}`<br/>**null**|
-|isEnabledCallback|Define a callback function that runs before the callout displays, and determines whether the action is enabled.<br/>If this function returns **true**, the callout displays the enabled action.<br/>If it returns **false**, the callout displays the action text, but disables the action. | `function(calloutAction /*=CalloutAction*/) {...}` <br/>**null**|
-|isVisibleCallback|Define a callback function that runs before the callout displays and determines whether the action text displays.<br/>If this function returns **true**, the callout displays the action text.<br/>If it returns **false**, the callout hides the action text.<br/>Additional actions move left to take the place of the hidden action.| `function(calloutAction /*=CalloutAction*/) {...}`<br/>**null**|
+|onClickCallback|Define the action that occurs when the user selects the callout action label.| `function(calloutAction /*=CalloutAction*/) {...}`<br/><br/>**null**|
+|isEnabledCallback|Define a callback function that runs before the callout displays, and determines whether the action is enabled.<br/><br/>If this function returns **true**, the callout displays the enabled action.<br/><br/>If it returns **false**, the callout displays the action text, but disables the action. | `function(calloutAction /*=CalloutAction*/) {...}` <br/><br/>**null**|
+|isVisibleCallback|Define a callback function that runs before the callout displays and determines whether the action text displays.<br/><br/>If this function returns **true**, the callout displays the action text.<br/><br/>If it returns **false**, the callout hides the action text.<br/><br/>Additional actions move left to take the place of the hidden action.| `function(calloutAction /*=CalloutAction*/) {...}`<br/><br/>**null**|
 |tooltip|Display text when the user hovers over the callout action text.|string, **null**|
 |disabledTooltip|Display text when the user hovers over the callout action text and the callout action has been disabled (when the `isEnabledCallback` function returns **false** ).|string, **null**|
-|menuEntries|Define a menu of actions instead of a single action. | `[ CalloutActionMenuEntry, ...]`<br/>**null**|
+|menuEntries|Define a menu of actions instead of a single action. | `[ CalloutActionMenuEntry, ...]`<br/><br/>**null**|
 
 The next section explains how to create a `CalloutActionMenuEntry` and add it to a `CalloutAction` object.
 
@@ -219,12 +219,12 @@ The `CalloutManager` singleton object stores references to every `Callout` objec
 
 |**Use this method**|**Purpose**|**Valid parameter values**|
 |:-----|:-----|:-----|
-|createNew(members)|Create a new `Callout` object.<br/>When you do this, the `CalloutManager` adds an entry for the control in its associative array, with the value of the required member `ID` as the key.|An associative array that assigns values to each member that you want to use.<br/>The  `ID` and `launchPoint` members are required.|
-|createNewIfNecessary (members)|Create a  `Callout` object if the `launchPoint` that you pass as a parameter doesn't have a callout control assigned to it already.|An associative array that assigns values to each member that you want to use.<br/>The  `ID` and `launchPoint` members are required.|
-|getFromLaunchPoint: function (/*@type(HTMLElement)*/launchPoint)|Get the `Callout` object associated with the `launchPoint` provided in the function.<br/>This method throws an exception if the `launchPoint` doesn't have a `Callout` object assigned to it.|No parameters|
-|getFromLaunchPointIfExists: function (/*@type(HTMLElement)*/launchPoint)|Get the `Callout` object associated with the `launchPoint` provided in the function.<br/>This method returns null if the `launchPoint` doesn't have a `Callout` object assigned to it.|No parameters|
-|getFromCalloutDescendant: function (/*@type(HTMLElement)*/descendant)|Get the `Callout` object associated with the HTML element provided in the function given element.<br/>This element can be any descendent of the callout element.<br/>For example, you could pass the value of the `contentElement` member that you assigned when you created the `Callout` object.<br/>This method throws an exception if the descendant doesn't have a `Callout` object associated with it.|No parameters|
-|closeAll()|Closes all open  `Callout` objects.<br/>This method returns true if it closes at least one callout.|No parameters|
+|createNew(members)|Create a new `Callout` object.<br/><br/>When you do this, the `CalloutManager` adds an entry for the control in its associative array, with the value of the required member `ID` as the key.|An associative array that assigns values to each member that you want to use.<br/><br/>The  `ID` and `launchPoint` members are required.|
+|createNewIfNecessary (members)|Create a  `Callout` object if the `launchPoint` that you pass as a parameter doesn't have a callout control assigned to it already.|An associative array that assigns values to each member that you want to use.<br/><br/>The  `ID` and `launchPoint` members are required.|
+|getFromLaunchPoint: function (/*@type(HTMLElement)*/launchPoint)|Get the `Callout` object associated with the `launchPoint` provided in the function.<br/><br/>This method throws an exception if the `launchPoint` doesn't have a `Callout` object assigned to it.|No parameters|
+|getFromLaunchPointIfExists: function (/*@type(HTMLElement)*/launchPoint)|Get the `Callout` object associated with the `launchPoint` provided in the function.<br/><br/>This method returns null if the `launchPoint` doesn't have a `Callout` object assigned to it.|No parameters|
+|getFromCalloutDescendant: function (/*@type(HTMLElement)*/descendant)|Get the `Callout` object associated with the HTML element provided in the function given element.<br/><br/>This element can be any descendent of the callout element.<br/><br/>For example, you could pass the value of the `contentElement` member that you assigned when you created the `Callout` object.<br/><br/>This method throws an exception if the descendant doesn't have a `Callout` object associated with it.|No parameters|
+|closeAll()|Closes all open  `Callout` objects.<br/><br/>This method returns true if it closes at least one callout.|No parameters|
 |isAtLeastOneCalloutOpen()|Check to see if at least one callout is open.|No parameters|
 
 <a name="Positioning"> </a>
@@ -233,8 +233,8 @@ The `CalloutManager` singleton object stores references to every `Callout` objec
 
 |**Use this member**|**Purpose**|**Valid values (default in bold)**|
 |:-----|:-----|:-----|
-|boundingBox|Specify the HTML element that will serve as the equivalent of the  `offsetParent` of the callout control.<br/>By default, the default value for this is the callout control's `offsetParent`, but you can use this member to make sure that the control is positioned correctly.<br/>The callout control attempts to position itself so that it's visible within this box. It changes direction (from top to bottom or from left to right, depending on the beak orientation) to remain visible within it.|Any HTML element, **the offsetParent of the HTML element that contains the callout control**|
-|positionAlgorithm|Override the default positioning algorithm for the callout control. |**CalloutOptions.prototype.defaultPositionAlgorithm**<br/>`function(calloutPositioningProxy) { ... }`|
+|boundingBox|Specify the HTML element that will serve as the equivalent of the  `offsetParent` of the callout control.<br/><br/>By default, the default value for this is the callout control's `offsetParent`, but you can use this member to make sure that the control is positioned correctly.<br/><br/>The callout control attempts to position itself so that it's visible within this box. It changes direction (from top to bottom or from left to right, depending on the beak orientation) to remain visible within it.|Any HTML element, **the offsetParent of the HTML element that contains the callout control**|
+|positionAlgorithm|Override the default positioning algorithm for the callout control. |**CalloutOptions.prototype.defaultPositionAlgorithm**<br/><br/>`function(calloutPositioningProxy) { ... }`|
 
 The following section describes how to use the `calloutPositioningProxy` object to write positioning algorithms for the callout control.
 
@@ -270,22 +270,22 @@ You can use these methods in the  `CalloutPositioningProxy` object to write your
 |isCalloutTooFarRight()|Returns Boolean.|
 |isCalloutTooFarBottom()|Returns Boolean.|
 |isCalloutTooFarLeft()|Returns Boolean.|
-|isCalloutLeftOfHardBoundingBox()|Returns Boolean.<br/>If **true**, the left side of the control sits outside its container element. It's not visible and the user can't scroll to it.|
-|isCalloutRightOfHardBoundingBox()|Returns Boolean.<br/>If **true**, the right side of the control sits outside its container element. It is not visible and the user can't scroll to it.|
-|isCalloutAboveHardBoundingBox()|Returns Boolean.<br/>If **true**, the top of the control sits outside its container element. It's not visible and the user can't scroll to it.|
-|isCalloutBelowHardBoundingBox()|Returns Boolean.<br/>If **true**, the bottom of the control sits outside its container element. It's not visible and the user can't scroll to it.|
+|isCalloutLeftOfHardBoundingBox()|Returns Boolean.<br/><br/>If **true**, the left side of the control sits outside its container element. It's not visible and the user can't scroll to it.|
+|isCalloutRightOfHardBoundingBox()|Returns Boolean.<br/><br/>If **true**, the right side of the control sits outside its container element. It is not visible and the user can't scroll to it.|
+|isCalloutAboveHardBoundingBox()|Returns Boolean.<br/><br/>If **true**, the top of the control sits outside its container element. It's not visible and the user can't scroll to it.|
+|isCalloutBelowHardBoundingBox()|Returns Boolean.<br/><br/>If **true**, the bottom of the control sits outside its container element. It's not visible and the user can't scroll to it.|
 |isOrientedUp()|Returns Boolean.|
 |isOrientedDown()|Returns Boolean.|
 |isOrientedLeft()|Returns Boolean.|
 |isOrientedRight()|Returns Boolean.|
-|moveUpAndRight()|Returns nothing.<br/>Changes the direction of the control.|
-|moveUpAndLeft()|Returns nothing.<br/>Changes the direction of the control.|
-|moveDownAndRight()|Returns nothing.<br/>Changes the direction of the control.|
-|moveDownAndLeft()|Returns nothing.<br/>Changes the direction of the control.|
-|moveTowardsOppositeQuadrant()|Returns nothing.<br/>Changes the direction of the control.|
-|flipHorizontal()|Returns nothing.<br/>Changes the direction of the control.|
-|flipVertical()|Returns nothing.<br/>Changes the direction of the control.|
-|numberOfEdgesCollidingWithBoundingBox()|Returns an integer between 0 and 4 that represents the number of edges where the callout collides with the visible bounding box.<br/>For example, if the top of the control is clipped by the top of the document body after you call the `moveUpAndRight()` method, the `numberOfEdgesCollidingWithBoundingBox()` method returns a number greater than 1.|
+|moveUpAndRight()|Returns nothing.<br/><br/>Changes the direction of the control.|
+|moveUpAndLeft()|Returns nothing.<br/><br/>Changes the direction of the control.|
+|moveDownAndRight()|Returns nothing.<br/><br/>Changes the direction of the control.|
+|moveDownAndLeft()|Returns nothing.<br/><br/>Changes the direction of the control.|
+|moveTowardsOppositeQuadrant()|Returns nothing.<br/><br/>Changes the direction of the control.|
+|flipHorizontal()|Returns nothing.<br/><br/>Changes the direction of the control.|
+|flipVertical()|Returns nothing.<br/><br/>Changes the direction of the control.|
+|numberOfEdgesCollidingWithBoundingBox()|Returns an integer between 0 and 4 that represents the number of edges where the callout collides with the visible bounding box.<br/><br/>For example, if the top of the control is clipped by the top of the document body after you call the `moveUpAndRight()` method, the `numberOfEdgesCollidingWithBoundingBox()` method returns a number greater than 1.|
 
 This positioning algorithm makes the control go above or below the text. The  `isRTL` property of the `CalloutPositioningProxy` tells you whether the text is displaying a right-to-left language. You check for this property to ensure that the control is always positioned correctly in relation to the text on the page.
 
