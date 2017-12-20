@@ -240,11 +240,11 @@ Following are the steps to create a custom action in the host web document libra
     > [!NOTE] 
     > Ribbon custom actions use **SelectedListId** and **SelectedItemId**. **ListId** and **ItemId** work only with menu item custom actions.
 
-### Tp set the add-in start page to the host web home page
+### To set the add-in start page to the host web home page
 
 1. The continuing sample SharePoint Add-in doesn't have any add-in web, and its remote web application exists only to host the form. So the start page of the add-in should be set to the home page of the host web. 
     
-    To begin, select the SharePoint Add-in project (not the web application project) in **Solution Explorer**, and copy the value of the **Site URL** property, including the protocol (for example **https://contoso.sharepoint.com**) into the clipboard. 
+    To begin, select the SharePoint Add-in project (not the web application project) in **Solution Explorer**, and copy the value of the **Site URL** property, including the protocol (for example `https://contoso.sharepoint.com`) into the clipboard. 
     
 2. Open the add-in manifest, and then paste the URL into the **Start Page** box.
     
@@ -273,8 +273,7 @@ Following are the steps to create a custom action in the host web document libra
 
 7. Select **My Custom Menu Action** in the context menu. You should see something like the following on the remote webpage that opens:
     
-   **Remote webpage with parameters from the custom action**
-
+   **Remote webpage with parameters from the custom action**  
    ![Web page with parameters from a custom action](../images/CustomActions_target.png)
 
 8. Select the **Back** button on your browser to return to the library.
@@ -289,6 +288,7 @@ Following are the steps to create a custom action in the host web document libra
 
 11. Select **My Custom Ribbon Button**. You see the same remote web page.
 
+<br/>
 
 **Table 4. Troubleshooting the solution**
 
