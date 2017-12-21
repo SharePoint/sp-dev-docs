@@ -83,8 +83,7 @@ C:\> Add-SPOSiteDesign `
 
 ## **Add-SPOSiteScript**
 
-Uploads a new site script to the gallery for use either directly or in a site design.
-<!-- TBD does it really appear in the gallery? -->
+Uploads a new site script for use either directly or in a site design.
 
 ```powershell
 Add-SPOSiteScript
