@@ -69,8 +69,8 @@ Creates a new site script.
 
 |Parameter     | Description  |
 |--------------|--------------|
-| -Title       | The display name of the site design. |
-| -Content     | JSON value that describes the script. For more information, see [JSON reference](site-design-json-schema.md).|
+| Title       | The display name of the site design. |
+| Content     | JSON value that describes the script. For more information, see [JSON reference](site-design-json-schema.md).|
 
 The following example creates a new site script that applies a custom theme.
 
@@ -153,7 +153,8 @@ Gets information about a specific site script. It also returns the JSON of the s
 | id    | The ID of the site script to get information about. |
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteScriptMetadata", {id:"07702c07-0485-426f-b710-4704241caad9"});
+RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteScriptMetadata",
+{id:"07702c07-0485-426f-b710-4704241caad9"});
 ```
 
 Here is an example of the JSON returned after calling **GetSiteScriptMetadata**.
@@ -200,8 +201,13 @@ var updated_site_script =
 };
 
 
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.UpdateSiteScript", {updateInfo:{Id:"07702c07-0485-426f-b710-4704241caad9", 
-Title:"New Contoso theme", Description:"Updated Contoso site script", Version: 2, Content: JSON.stringify(updated_site_script)}});
+RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.UpdateSiteScript", 
+{updateInfo:{
+  Id:"07702c07-0485-426f-b710-4704241caad9",
+  Title:"New Contoso theme", 
+  Description:"Updated Contoso site script", 
+  Version: 2, 
+  Content: JSON.stringify(updated_site_script)}});
 ```
 
 Here is an example of the JSON returned after calling **UpdateSiteScript**.
@@ -230,7 +236,8 @@ Deletes a site script.
 Here's an example of deleting a site script.
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.DeleteSiteScript", {id:"07702c07-0485-426f-b710-4704241caad9"});
+RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.DeleteSiteScript", 
+{id:"07702c07-0485-426f-b710-4704241caad9"});
 ```
 
 ## CreateSiteDesign
@@ -339,7 +346,8 @@ Gets information about a specific site design.
 Here's an example of getting information about a specific site design by ID.
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteDesignMetadata", {id:"614f9b28-3e85-4ec9-a961-5971ea086cca"});
+RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteDesignMetadata", 
+{id:"614f9b28-3e85-4ec9-a961-5971ea086cca"});
 ```
 
 Here is an example of the JSON returned after calling **GetSiteDesignMetadata**.
@@ -379,7 +387,17 @@ Updates a site design with new values.
 Here's an example that updates every value on an existing site design.
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.UpdateSiteDesign", {updateInfo:{Id:"614f9b28-3e85-4ec9-a961-5971ea086cca", Title:"Contoso customer site", Description:"Creates site with customer theme and list", SiteScriptIds:["6b2b79e4-5da3-4352-8565-42a896fabd57","2b997981-258b-4e1e-81ff-f6fbf7235a1f"], PreviewImageUrl:"https://contoso.sharepoint.com/SiteAssets/customer_site.png",PreviewImageAltText:"Customer site with list and theme", WebTemplate:"68", Version: 7, IsDefault: false}});
+RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.UpdateSiteDesign",
+ {updateInfo:{
+   Id:"614f9b28-3e85-4ec9-a961-5971ea086cca", 
+   Title:"Contoso customer site", 
+   Description:"Creates site with customer theme and list", 
+   SiteScriptIds:["6b2b79e4-5da3-4352-8565-42a896fabd57","2b997981-258b-4e1e-81ff-f6fbf7235a1f"], 
+   PreviewImageUrl:"https://contoso.sharepoint.com/SiteAssets/customer_site.png",
+   PreviewImageAltText:"Customer site with list and theme", 
+   WebTemplate:"68", 
+   Version: 7, 
+   IsDefault: false}});
 ```
 
 Here is an example of the JSON returned after calling **UpdateSiteDesign**.
@@ -411,7 +429,8 @@ Deletes a site design.
 Here's an example of deleting a site design.
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.DeleteSiteDesign", {id:"f9e76746-5076-4bd2-bad3-e611c488fa85"});
+RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.DeleteSiteDesign", 
+{id:"f9e76746-5076-4bd2-bad3-e611c488fa85"});
 ```
 
 ## GetSiteDesignRights
@@ -428,7 +447,8 @@ Gets a list of principals that have access to a site design.
 Here's an example of getting view rights for a specific site design.
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteDesignRights", {id:"dc076f7b-6c15-4d76-8f85-948a17f5dd18"});
+RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GetSiteDesignRights", 
+{id:"dc076f7b-6c15-4d76-8f85-948a17f5dd18"});
 ```
 
 Here is an example of the JSON returned after calling **GetSiteDesignRights**.
@@ -493,5 +513,7 @@ Revokes access from a site design for one or more principals.
 Here's an example of revoking view rights from a site design for Patti (fictional user at Contoso.)
 
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.RevokeSiteDesignRights", {id:"5d4756e9-e1f5-42f7-afa7-5fa5aac170aa", principalNames:["debrab@Contoso.sharepoint.com"] });
+RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.RevokeSiteDesignRights", 
+{id:"5d4756e9-e1f5-42f7-afa7-5fa5aac170aa",
+ principalNames:["debrab@Contoso.sharepoint.com"] });
 ```
