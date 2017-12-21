@@ -25,6 +25,7 @@ First release of the SharePoint Framework contained only support for client-side
 
 - Easy access to Graph API to access user specific information (GraphHttpClient in preview)
 - Site level WebHooks
+- Updated 'store' story with SharePoint Framework support
 
 ## Client-side web parts++ and add-ins
 

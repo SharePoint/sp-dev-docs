@@ -11,10 +11,10 @@ To run the PowerShell cmdlets for theme management, you'll need to do the follow
 1. Download and install the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). If you already have a previous version of the shell installed, uninstall it first and then install the latest version.
 2. Follow the instructions at [Connect to SharePoint Online PowerShell](https://technet.microsoft.com/en-us/library/fp161372.aspx) to connect to your SharePoint tenant.
 
-To verify your setup, try using the **Get-HideDefaultThemes** cmdlet to read the HideDefaultThemes setting. If the cmdlet runs and returns False with no errors, as shown in the following example, you're ready to proceed.
+To verify your setup, try using the **Get-SPOHideDefaultThemes** cmdlet to read the SPOHideDefaultThemes setting. If the cmdlet runs and returns False with no errors, as shown in the following example, you're ready to proceed.
 
 ```powershell
-c:\> Get-HideDefaultThemes
+c:\> Get-SPOHideDefaultThemes
 False
 ```
 ## Site theme cmdlets
@@ -24,8 +24,8 @@ The following cmdlets are available for managing site themes from PowerShell:
 * **Add-SPOTheme** &mdash; Creates a new custom theme, or overwrites an existing theme to modify its settings.
 * **Get-SPOTheme** &mdash; Retrieves settings for an existing theme.
 * **Remove-SPOTheme** &mdash; Removes a theme from the theme gallery.
-* **Set-HideDefaultThemes** &mdash; Specifies whether the default themes should be available.
-* **Get-HideDefaultThemes** &mdash; Queries the current HideDefaultThemes setting.
+* **Set-SPOHideDefaultThemes** &mdash; Specifies whether the default themes should be available.
+* **Get-SPOHideDefaultThemes** &mdash; Queries the current SPOHideDefaultThemes setting.
 
 ## Add-SPOTheme
 
@@ -131,32 +131,34 @@ The **Remove-SPOTheme** cmdlet removes a theme from your tenant store. For examp
 ```powershell
 c:\> Remove-SPOTheme -Name "Custom Cyan"
 ```
-## Set-HideDefaultThemes
+## Set-SPOHideDefaultThemes
 
-_NOTE: this cmdlet will be renamed to ```Set-SPOHideDefaultThemes``` in a future release, for consistency with other SharePoint PowerShell cmdlet._
+> [!NOTE]
+> this cmdlet was named as ```Set-HideDefaultThemes``` until December 2017 release of SPO Management Shell. We recommend that you'd use the latest version of the PowerShell cmdlets.
 
-The **Set-HideDefaultThemes** cmdlet is used to specify whether the default themes that come with SharePoint should be included in the theme picker list. For example, you might want to create custom themes for your sites and then remove the default themes, to ensure that all pages will use your custom themes.
+The **Set-SPOHideDefaultThemes** cmdlet is used to specify whether the default themes that come with SharePoint should be included in the theme picker list. For example, you might want to create custom themes for your sites and then remove the default themes, to ensure that all pages will use your custom themes.
 
 Specify the setting as either _$true_ to hide the default themes, or _$false_ (the default setting) to allow use of the default themes. For example, this cmdlet hides the default themes.
 
 ```powershell
-Set-HideDefaultThemes $true
+Set-SPOHideDefaultThemes $true
 ```
 After creating the "Custom Cyan" theme, hiding the default themes will leave only the one custom theme in the themes list under **Change the look**.
 
 To restore the default themes to the theme picker list, use the following cmdlet.
 ```powershell
-Set-HideDefaultThemes $false
+Set-SPOHideDefaultThemes $false
 ```
 
-## Get-HideDefaultThemes
+## Get-SPOHideDefaultThemes
 
-_NOTE: this cmdlet will be renamed to ```Get-SPOHideDefaultThemes``` in a future release, for consistency with other SharePoint PowerShell cmdlets._
+> [!NOTE]
+> this cmdlet was named as ```Get-HideDefaultThemes``` until December 2017 release of SPO Management Shell. We recommend that you'd use the latest version of the PowerShell cmdlets.
 
-The **Get-HideDefaultThemes** cmdlet retrieves the currrent **Set-HideDefaultThemes** setting. You might want to use this cmdlet in a PowerShell script to read the setting and then take different actions based on whether the default themes are hidden. This cmdlet does not have any parameters.
+The **Get-SPOHideDefaultThemes** cmdlet retrieves the currrent **Set-SPOHideDefaultThemes** setting. You might want to use this cmdlet in a PowerShell script to read the setting and then take different actions based on whether the default themes are hidden. This cmdlet does not have any parameters.
 
 ```powershell
-c:\> Get-HideDefaultThemes
+c:\> Get-SPOHideDefaultThemes
 False
 ```
 
