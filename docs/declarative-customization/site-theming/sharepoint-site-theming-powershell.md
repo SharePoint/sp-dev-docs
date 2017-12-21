@@ -29,22 +29,12 @@ The following cmdlets are available for managing site themes from PowerShell:
 
 ## Add-SPOTheme
 
-The **Add-SPOTheme** cmdlet creates a new theme or updates an existing theme. The color pallette settings are passed as a dictionary.
+The **Add-SPOTheme** cmdlet creates a new theme or updates an existing theme. The color pallette settings can be passed as either a hash table or a dictionary.
 
-In the following example, a new theme named "Custom Cyan" is created, with color pallette settings that are various shades of cyan. Note that this example uses a ```HashToDictionary``` function to convert a hash table created with the ```@{}``` notation into a dictionary, as required by **Add-SPOTheme**.
+In the following example, a new theme named "Custom Cyan" is created, with color pallette settings that are various shades of cyan. Note that the settings are passed as a hash table.
 
 ```powershell
-function HashToDictionary {
-  Param ([Hashtable]$ht)
-  $dictionary = New-Object "System.Collections.Generic.Dictionary``2[System.String,System.String]"
-  foreach ($entry in $ht.GetEnumerator()) {
-    $dictionary.Add($entry.Name, $entry.Value)
-  }
-  return $dictionary
-}
-
-$themepallette = HashToDictionary(
- @{
+$themepallette = @{
   "themePrimary" = "#00ffff";
   "themeLighterAlt" = "#f3fcfc";
   "themeLighter" = "#daffff";
@@ -71,9 +61,26 @@ $themepallette = HashToDictionary(
   "primaryBackground" = "#fff";
   "primaryText" = "#333"
  }
-)
 
 Add-SPOTheme -Name "Custom Cyan" -Palette $themepallette -IsInverted $false
+```
+
+> [!NOTE]
+> Prior to the December 2017 release of SPO Management Shell, the **Add-SPOTheme**
+> cmdlet required that color pallette settings be passed as a dictionary. We recommend
+> that you use the latest version of the SPO Management Shell, however the following
+> ```HashToDictionary``` function can be used to convert a hash table to a
+> dictionary if needed.
+
+```powershell
+function HashToDictionary {
+  Param ([Hashtable]$ht)
+  $dictionary = New-Object "System.Collections.Generic.Dictionary``2[System.String,System.String]"
+  foreach ($entry in $ht.GetEnumerator()) {
+    $dictionary.Add($entry.Name, $entry.Value)
+  }
+  return $dictionary
+}
 ```
 If you want to update an existing theme (to modify some of its color settings, for example), use the same syntax as shown previously but add the *-Overwrite* flag to the **Add-SPOTheme** cmdlet.
 
@@ -84,7 +91,9 @@ Adding a theme does not apply the theme to any sites. It adds the theme to your 
 
 ## Get-SPOTheme
 
-The **Get-SPOTheme** cmdlet returns the settings for an existing theme. For example, here's how to use the **Get-SPOTheme** cmdlet to return the settings for the "Custom Cyan" theme created in the previous example.
+The **Get-SPOTheme** cmdlet returns the settings for a named existing theme, or for all uploaded themes if no name is provided.
+
+Here's how to use the **Get-SPOTheme** cmdlet to return the settings for the "Custom Cyan" theme created in the previous example.
 
 ```powershell
 C:\> Get-SPOTheme -Name "Custom Cyan" | ConvertTo-Json
@@ -124,6 +133,16 @@ C:\> Get-SPOTheme -Name "Custom Cyan" | ConvertTo-Json
 ```
 Note that this example uses the PowerShell _ConvertTo-Json_ filter to display the theme in JSON format.
 
+To return all uploaded themes, use the **Get-SPOTheme** command with no arguments:
+
+```powershell
+C:\> Get-SPOTheme
+```
+
+Here's an example of the output from this command:
+
+![Get-SPOTheme example](../../images/Get-SPOTheme-example.png)
+
 ## Remove-SPOTheme
 
 The **Remove-SPOTheme** cmdlet removes a theme from your tenant store. For example, this cmdlet removes the "Custom Cyan" theme that was used in the previous examples.
@@ -134,7 +153,7 @@ c:\> Remove-SPOTheme -Name "Custom Cyan"
 ## Set-SPOHideDefaultThemes
 
 > [!NOTE]
-> this cmdlet was named as ```Set-HideDefaultThemes``` until December 2017 release of SPO Management Shell. We recommend that you'd use the latest version of the PowerShell cmdlets.
+> This cmdlet was named ```Set-HideDefaultThemes``` until the December 2017 release of SPO Management Shell. We recommend that you use the latest version of the PowerShell cmdlets.
 
 The **Set-SPOHideDefaultThemes** cmdlet is used to specify whether the default themes that come with SharePoint should be included in the theme picker list. For example, you might want to create custom themes for your sites and then remove the default themes, to ensure that all pages will use your custom themes.
 
@@ -153,7 +172,7 @@ Set-SPOHideDefaultThemes $false
 ## Get-SPOHideDefaultThemes
 
 > [!NOTE]
-> this cmdlet was named as ```Get-HideDefaultThemes``` until December 2017 release of SPO Management Shell. We recommend that you'd use the latest version of the PowerShell cmdlets.
+> this cmdlet was named ```Get-HideDefaultThemes``` until the December 2017 release of SPO Management Shell. We recommend that you use the latest version of the PowerShell cmdlets.
 
 The **Get-SPOHideDefaultThemes** cmdlet retrieves the currrent **Set-SPOHideDefaultThemes** setting. You might want to use this cmdlet in a PowerShell script to read the setting and then take different actions based on whether the default themes are hidden. This cmdlet does not have any parameters.
 
