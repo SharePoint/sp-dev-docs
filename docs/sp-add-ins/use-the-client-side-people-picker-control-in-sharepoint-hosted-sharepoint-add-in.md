@@ -52,7 +52,7 @@ If you're not using Napa on a developer site, you need the following:
 - Office Developer Tools for Visual Studio 2013
     
 > [!NOTE] 
-> For guidance about how to set up a development environment that fits your needs, see [SharePoint Add-ins](sharepoint-add-ins/md).
+> For guidance about how to set up a development environment that fits your needs, see [SharePoint Add-ins](sharepoint-add-ins.md#two-types-of-sharepoint-add-ins-sharepoint-hosted-and-provider-hosted).
  
 The following sections describe the high-level steps for adding the picker to your add-in and then getting its user information from another client-side control. For the corresponding code, see [Code example: Using the client-side People Picker](#bk_example).
 
