@@ -17,7 +17,7 @@ You can reference the style sheet of a SharePoint website in your SharePoint Add
 
 ## Prerequisites for using the examples in this article
 
-You need a development environment as explained in [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md).
+You need a development environment as explained in [Two types of SharePoint Add-ins: SharePoint-hosted and provider-hosted](sharepoint-add-ins.md#two-types-of-sharepoint-add-ins-sharepoint-hosted-and-provider-hosted).
 
 ### Core concepts to know before using the SharePoint style sheet in a SharePoint Add-in
 
