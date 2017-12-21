@@ -14,9 +14,13 @@ You can use the Desktop List View widget on any web page, even if the page is no
 
 You can use the List View widget to display the data in a SharePoint list similar to the regular List View widget, but you can use it in your add-ins and websites that are not necessarily hosted in SharePoint.
 
+<br/>
+
 **Desktop List View widget displaying data in a list**
 
 ![Desktop List View experimental control on a page](../images/DesktopListView_basic.png)
+
+<br/>
 
 You can specify the view in the SharePoint list that you want to use to display the data. The List View widget displays the columns and items in the order specified by the view.
 

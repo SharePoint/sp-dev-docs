@@ -14,6 +14,8 @@ You can use the People Picker widget on any web page, even if the page is not ho
 
 You can use the experimental People Picker widget in add-ins to help your users find and select people and groups in a tenant. Users can start typing in the text box and the widget retrieves the people whose name or e-mail matches the text.
 
+<br/>
+
 **People Picker widget solving a query**
 
 ![People Picker experimental control on a page](../images/PeoplePicker_basic.png)
@@ -241,12 +243,16 @@ Depending on your preference, you might want to use JavaScript instead of HTML t
 <div id="PeoplePickerDiv"></div>
 ```
 
+<br/>
+
 Use the following JavaScript code to instantiate the People Picker.
 
 ```js
 new Office.Controls.PeoplePicker(
     document.getElementById("PeoplePickerDiv"), {});
 ```
+
+<br/>
 
 For a code sample that shows how to perform the tasks, see the **JSSimple.html** page in the [Use the People Picker experimental widget in an add-in](https://code.msdn.microsoft.com/office/SharePoint-2013-Use-the-57859f85) code sample.
 
@@ -299,6 +305,8 @@ You can get a reference to the widget using the following syntax.
 var pplPicker = document.getElementById("PeoplePickerDiv")._officeControl;
 ```
 
+<br/>
+
 You can also save a reference when you instantiate the widget.
 
 ```
@@ -306,12 +314,16 @@ var pplPicker = new Office.Controls.PeoplePicker(
                         document.getElementById("PeoplePickerDiv"), {});
 ```
 
+<br/>
+
 The **selectedItems** property is an array of objects that represent people or groups. People or groups in the selectedItems array can be either resolved or unresolved, which you can check in the **isResolved** property. The following example shows how to access the element *i*  in the array and use the name of the person or group.
 
 ```
 var principal = pplPicker.selectedItems[i];
 $("#msg").text(principal.text + " is selected in the control.");
 ```
+
+<br/>
 
 For an example of how to retrieve the selected people or groups from the widget, see the **demo.html** page of the [Office Web Widgets - Experimental Demo](https://code.msdn.microsoft.com/office/SharePoint-2013-Office-Web-6d44aa9e) code sample.
 

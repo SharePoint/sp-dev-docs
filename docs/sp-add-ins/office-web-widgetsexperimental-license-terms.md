@@ -1,12 +1,12 @@
 ---
-title: Office Web Widgets - Experimental License Terms
+title: Office Web Widgets - Experimental license terms
 description: License terms for using the Office Web Widgets - Experimental.
 ms.date: 12/20/2017
 ms.prod: sharepoint
 ---
 
 
-# Office Web Widgets - Experimental License Terms
+# Office Web Widgets - Experimental license terms
 
 Familiarize yourself with the license terms to use the Office Web Widgets - Experimental.
  
@@ -63,11 +63,11 @@ for this software, unless other terms accompany those items. If so, those terms 
     
     2. **Reservation of rights; ownership.** Subject only to the express licenses granted in this Agreement, the Feedback Provider:
     
-        1. Retains all right, title, and interest in and to the Feedback;
+        - Retains all right, title, and interest in and to the Feedback;
     
-        2. Reserves all rights not expressly granted; and
+        - Reserves all rights not expressly granted; and
     
-        3. Limits the licenses granted under this Agreement to licenses under the Feedback Provider's owned or controlled Intellectual Property Rights in the Feedback. These licenses do not extend to any technologies that may also be necessary to make or use any Microsoft Offering, in whole or in part, that incorporates the Feedback, but are not themselves expressly part of the Feedback (e.g., enabling technologies).
+        - Limits the licenses granted under this Agreement to licenses under the Feedback Provider's owned or controlled Intellectual Property Rights in the Feedback. These licenses do not extend to any technologies that may also be necessary to make or use any Microsoft Offering, in whole or in part, that incorporates the Feedback, but are not themselves expressly part of the Feedback (e.g., enabling technologies).
     
     3. **Feedback not Confidential Information.** With respect to Feedback described in this Section 3 of this Agreement or in any other Program Documents:
     

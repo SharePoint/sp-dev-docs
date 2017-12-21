@@ -24,6 +24,8 @@ Widgets must:
 
 - Play nice with existing frameworks. We want to be sure you can still use the tools and technologies that you are used to.
 
+<br/>
+
 **An add-in using Office Web Widgets - Experimental**
 
 ![Office Web Widgets - Experimental demo](../images/OfficeWebWidgetsOverview_demo.png)
@@ -39,6 +41,8 @@ You can also see the widgets in action in the [Office Web Widgets - Experimental
 
 You can use the experimental People Picker widget in add-ins to help your users find and select people and groups in a tenant. Users can start typing in the text box and the widget retrieves the people whose name or e-mail matches the text.
 
+<br/>
+
 **People Picker widget solving a query**
 
 ![People Picker experimental control on a page](../images/PeoplePicker_basic.png)
@@ -50,7 +54,7 @@ You can declare the widget in the HTML markup or programmatically by using JavaS
 |**Property/Event**|**Type**|**Description**|
 |:-----|:-----|:-----|
 |**objectType**|JSON Object (list of strings)| Type of items the widget will resolve. Options: User Group Default to user only.|
-|**allowMultipleSelections**|Boolean|True/False. If False, the widget should allow selecting only one item at a time.  Default=False.|
+|**allowMultipleSelections**|Boolean|True/False. If False, the widget should allow selecting only one item at a time.<br/>Default=False.|
 |**rootGroupName**|String|If provided, the widget limits the selection to items in this group.<br/>If not provided, the widget queries objects from the whole tenancy.|
 |**selectedItems**|JSON array|List of items selected. Each item returns an object representing a user or group.|
 |**onAdded**|Function|Event that fires when a new object is added to the selection.<br/>The handler function received the object added.|
