@@ -21,7 +21,7 @@ SharePoint-hosted SharePoint Add-ins do not support event handling, but you can 
  
 There are two kinds of events: 
 
-- **_Before_ events** are triggered before the SharePoint infrastructure does any of its own handling of the event (including committing changes to the content database). In SharePoint **custom before event handlers always execute synchronously**. Among other purposes, they can be used to cancel the event. For example, if an add-in has a function for deleting a list, a handler for the list deleting event can cancel the deletion if certain conditions are not met. If the event is part of a sequence of events, cancelling it prevents any of the later events from occurring at all. For example, if your handler for the **ItemAdding** event cancels the event, the **ItemAdded** event, which normally comes later, is not triggered.
+- **_Before_ events** are triggered before the SharePoint infrastructure does any of its own handling of the event (including committing changes to the content database). In SharePoint **custom before event handlers always execute synchronously**. Among other purposes, they can be used to cancel the event. For example, if an add-in has a function for deleting a list, a handler for the list deleting event can cancel the deletion if certain conditions are not met. If the event is part of a sequence of events, cancelling it prevents any of the later events from occurring at all. For example, if your handler for the ItemAdding event cancels the event, the ItemAdded event, which normally comes later, is not triggered.
 
 - **_After_ events** are triggered after the SharePoint infrastructure does any of its own handling of the event. In SharePoint, **remote after event handlers, for list and list item events, always execute asynchronously**. (App events are an exception.) Among other purposes, they can be used to log events.
     
@@ -31,7 +31,7 @@ There are two kinds of events:
 
 To handle list and list item events, you create remote event receivers (RERs), which are web services that run externally to the SharePoint farm or SharePoint Online. The URL of the RER service is registered for the events it handles. There are two ways to register a handler:
 
-- Events in the host web are registered programmatically with the CSOM (client-side object model) or the SharePoint REST API. This task is typically done in "first run" logic in the add-in or in a handler for an add-in event. (For an overview of add-in events, see [Handling add-in events](#HandlingAppEvents) later in this article.) For a code sample that programmatically registers a list event, see [SharePoint/PnP/Samples/Core.EventReceivers](https://github.com/SharePoint/PnP/tree/master/Samples/Core.EventReceivers).
+- Events in the host web are registered programmatically with the CSOM (client-side object model) or the SharePoint REST API. This task is typically done in "first run" logic in the add-in or in a handler for an add-in event. (For an overview of add-in events, see [Handle add-in events](#HandlingAppEvents) later in this article.) For a code sample that programmatically registers a list event, see [SharePoint/PnP/Samples/Core.EventReceivers](https://github.com/SharePoint/PnP/tree/master/Samples/Core.EventReceivers).
 
 - Events in the add-in web are usually registered in a feature of the add-in web with some simple XML markup. Details of how to create the markup and the service are in [Create a remote event receiver in SharePoint Add-ins](create-a-remote-event-receiver-in-sharepoint-add-ins.md). It is also possible to register add-in web events programmatically.
     
@@ -61,9 +61,9 @@ Your add-in can handle the following **list item events**.
 |ItemCheckingIn|ItemCheckedIn|
 |ItemUncheckingOut|ItemUncheckedOut|
 |ItemAttachmentAdding|ItemAttachmentAdded|
-|ItemAttachmentDeleting|ItemAtttachmentDeleted|
+|ItemAttachmentDeleting|ItemAttachmentDeleted|
 |ItemFileMoving|ItemFileMoved|
-|ItemVersionDeleting\*|ItemVersonDeleted\*|
+|ItemVersionDeleting\*|ItemVersionDeleted\*|
 ||ItemFileConverted|
 
 > [!NOTE] 
@@ -106,11 +106,11 @@ When you are working in Visual Studio, and you add a RER to a SharePoint Add-in 
 To change the events that the remote event receiver handles, open **Solution Explorer**, open the **Properties** window for the remote event receiver, expand the **SharePoint Events** node, and then set only the events that you want to handle to **True**.
  
 > [!NOTE] 
-> For additional information about RERs, including some troubleshooting information, see [Remote Event Receivers FAQ](#RERFAQ).
+> For additional information about RERs, including some troubleshooting information, see [Remote event receivers FAQ](#RERFAQ).
  
 <a name="HandlingAppEvents"> </a>
 
-## Handling add-in events
+## Handle add-in events
 
 Add-in events are also handled by remote web services, but they are configured differently in the add-in package from list and list item RERs, so they are treated as a separate category of component. For an add-in event, the remote web service is registered in the add-in manifest, not in an add-in web feature. The add-in doesn't even have to have an add-in web. There are three add-in events as described in the next sections.
 
@@ -173,9 +173,9 @@ If SharePoint encounters an error when processing any of the three add-in events
  
 If SharePoint doesn't receive a results message from your handler in 30 seconds, it calls the handler again. It gives up entirely and rolls back the event after three retries (four tries in all). Each time it calls the handler, your code starts again from the beginning. But you generally don't want your handler to redo things it has already done, such as create a list on the host web, and you can't know if your rollback logic was completed, or even triggered, before the handler timed out. For this reason, your handler logic should not take any action without first checking whether the action has already been done, unless it would be harmless to do it again. 
 
-Installation and updating errors can be seen in the SharePoint UI, as shown in the following graphic.
+Installation and updating errors can be seen in the SharePoint UI, as shown in the following figure.
 
-**Getting details for install error.**
+**Getting details for install error**
 
 ![Steps to see add-in installation errors in SharePoint.](../images/1edb644e-b3d4-4a9b-b92e-4ae2c07341c2.png)
 
@@ -238,13 +238,13 @@ For a sample of an add-in event handler that does not use the handler delegation
 > [!TIP] 
 > If the AppInstalled event fails, SharePoint deletes the add-in web if there is one; and if the AppUpated event fails, SharePoint restores the add-in web to its pre-update state. For this reason, your handlers never need to roll back actions they take on the add-in web. If your handler performs actions on both the host web and the add-in web, it should deal with the add-in web first. Doing so makes it safe to use the handler delegation strategy for the host web. Even if the add-in web actions succeed and the host web actions fail, no rollback logic goes unexecuted.
 
-## Remote Event Receivers in add-ins that support multiple security zones
+## Remote event receivers in add-ins that support multiple security zones
 
 Some restrictions on how you design an add-in support multiple security zones and have a remote event receiver. For more information, see Knowledge Base article kb3135876 [You can't add a provider-hosted add-in to a SharePoint 2013 site in non-default zones](https://support.microsoft.com/en-us/help/3135876/you-can-t-add-a-provider-hosted-add-in-to-a-sharepoint-2013-site-in-no).
  
 <a name="RERFAQ"> </a>
 
-## Remote Event Receivers FAQ
+## Remote event receivers FAQ
 
 The following are common questions you may have when using remote event receivers.
 
@@ -254,13 +254,11 @@ The following are common questions you may have when using remote event receiver
 
 In SharePoint 2010, event receivers handle events that occur on SharePoint lists, sites, and other SharePoint objects by running the code on the SharePoint server (either full-trust or in a sandbox). This type of event receiver still exists in SharePoint. However, SharePoint also supports *remote* event receivers in which the code that runs when the event is triggered is hosted by a web service. This means that if you register a remote event receiver, you also need to tell SharePoint which web service to invoke. 
 
-In the following table, the code example on the left (SharePoint solutions) implements functionality by using an event handler. The example on the right (SharePoint Add-ins) implements the same functionality using a remote event receiver.
+In the following code samples, the first example (SharePoint solutions) implements functionality by using an event handler. The second example (SharePoint Add-ins) implements the same functionality by using a remote event receiver.
 
-**Code examples for event receivers in SharePoint 2010 vs. remote event receivers in add-ins**
+#### SharePoint solutions
 
-|SharePoint solutions |SharePoint Add-ins |
-|:-----|:-----|
-|   ```C#
+```C#
     // Trigger an event when an item is added to the SharePoint list.
     Public class OnPlantUpdated : SPItemEventReceiver
     {
@@ -276,20 +274,25 @@ In the following table, the code example on the left (SharePoint solutions) impl
     Properties.AfterProperties.ChangedProperties.Add("Image",CreateLink9properties));
     Properties.Status= SPEventReceiverStatus.Continue;
     }
-    ```|    ```C#
-            /* Trigger an event when an item is added to the SharePoint list*/
-            Public class OnPlantUpdated : IRemoteEventService
-            {
-            public SPRemoteEventResult ProcessEvent (SPRemoteEventProperties properties)
-            {
-            SPRemoteEventResult result =new SPRemoteEventResult();
-            If (properties.EventType == SPRemoteEventType.ItemAdding ||  
-            properties.EventType == SPRemoteEventType.ItemUpdating)
-            {
+```
 
-            // Add code that runs when an item is added or updated.
-            }
-            ```|
+<br/>
+
+#### SharePoint Add-ins   
+    
+```C#
+    /* Trigger an event when an item is added to the SharePoint list*/
+    Public class OnPlantUpdated : IRemoteEventService
+    {
+    public SPRemoteEventResult ProcessEvent (SPRemoteEventProperties properties)
+    {
+    SPRemoteEventResult result =new SPRemoteEventResult();
+    If (properties.EventType == SPRemoteEventType.ItemAdding ||  
+                properties.EventType == SPRemoteEventType.ItemUpdating)
+    {
+    // Add code that runs when an item is added or updated.
+    }
+```
 
 For the complete code sample, see [Add list item properties with a remote event receiver](https://code.msdn.microsoft.com/office/SharePoint-2013-Add-list-2c6e71e0). 
 
