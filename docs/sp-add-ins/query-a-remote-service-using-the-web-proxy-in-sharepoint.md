@@ -357,11 +357,6 @@ The **RemoteEndpoint** element is used to specify the remote domain. The web pro
 |**Problem**|**Solution**|
 |:-----|:-----|
 |Visual Studio does not open the browser after you select the F5 key.|Set the SharePoint Add-in project as the startup project.|
-|The scheme-port combination is not supported.|The call scheme-port combination must fall within the following criteria:<br/><br/>**Scheme** - **Port**
-http - 80<br/>
-https - 443<br/>
-http or https - 7000-10000<br/><br/>
-**Important**: The outbound ports are subject to host firewall availability. In particular, only http-80 and https-443 are available on SharePoint Online.|
 |Unhandled exception **SP is undefined**.|Make sure you can access the SP.RequestExecutor.js file in a browser window.<br/><br/>If you are using your local server as your development environment, you must disable IIS loopback check. <br/><br/>Run the following command from a Windows PowerShell command prompt.`New-ItemProperty HKLM:\System\CurrentControlSet\Control\Lsa -Name "DisableLoopbackCheck" -value "1" -PropertyType dword`<br/><br/>**Caution**:  Disabling the IIS loopback check is not recommended in a production environment. |
 |The size of the response from the remote endpoint exceeds the configured limit.|The response's size of web proxy requests must not be larger than 200 KB.|
 
