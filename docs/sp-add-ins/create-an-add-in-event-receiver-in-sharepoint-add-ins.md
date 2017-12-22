@@ -8,8 +8,6 @@ ms.prod: sharepoint
 
 # Create an add-in event receiver in SharePoint Add-ins
 
-**Prerequisites**
-
 It is helpful if you first have an understanding of provider-hosted SharePoint Add-ins, and for you to have developed a few that go at least a little beyond the "Hello World" level. See [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md).
 
 Also, you should be familiar with [Handle events in SharePoint Add-ins](handle-events-in-sharepoint-add-ins.md). 
