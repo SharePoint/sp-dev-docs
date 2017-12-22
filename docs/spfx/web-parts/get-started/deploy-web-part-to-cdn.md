@@ -122,7 +122,7 @@ code .
 
 ## Configure solution not to use default settings
 
-Open **deploy-azure-storage.json** in the **config** folder.
+Open **package-solution.json** in the **config** folder.
 
 This is where we control the solution packaging.
 
