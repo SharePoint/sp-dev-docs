@@ -33,16 +33,10 @@ This article explains how to convert and migrate an autohosted add-in to a provi
     
  
 
-### Core concepts to know
+### Core concepts to know before you convert an autohosted add-in
 <a name="CoreConcepts"> </a>
 
-Before you convert an autohosted add-in to a provider-hosted add-in, you should have a basic understanding of SharePoint Add-ins and the differences among SharePoint-hosted, provider-hosted, and autohosted SharePoint Add-ins. The articles listed in Table 1 should give you that understanding.
- 
-
- 
-
-**Table 1. Core concepts for converting an autohosted add-in to a provider-hosted add-in**
-
+Before you convert an autohosted add-in to a provider-hosted add-in, you should have a basic understanding of SharePoint Add-ins and the differences among SharePoint-hosted, provider-hosted, and autohosted SharePoint Add-ins. The articles listed in the following table should give you that understanding.
 
 |**Article title**|**Description**|
 |:-----|:-----|

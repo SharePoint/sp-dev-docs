@@ -290,7 +290,7 @@ Following are the steps to create a custom action in the host web document libra
 
 <br/>
 
-**Table 4. Troubleshooting the solution**
+#### Troubleshooting the solution
 
 |**Problem**|**Solution**|
 |:-----|:-----|

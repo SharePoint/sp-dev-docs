@@ -59,13 +59,7 @@ Most classic SharePoint components, such as custom content types, custom list de
 
 ### Core concepts to know for creating an add-in
 
-Before you create your first add-in, you should have a basic understanding of what SharePoint Add-ins are and the differences between SharePoint-hosted and cloud-hosted SharePoint Add-ins. The articles in Table 1 should give you that understanding.
- 
-
- 
-
-**Table 1. Core concepts for creating an add-in**
-
+Before you create your first add-in, you should have a basic understanding of what SharePoint Add-ins are and the differences between SharePoint-hosted and provider-hosted SharePoint Add-ins. The articles in the following table should give you that understanding.
 
 |**Article title**|**Description**|
 |:-----|:-----|

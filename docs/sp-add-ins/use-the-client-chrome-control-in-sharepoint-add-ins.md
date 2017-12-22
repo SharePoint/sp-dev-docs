@@ -360,7 +360,7 @@ The following figure shows a remote webpage with the chrome control.
 
    <br/>
  
-**Troubleshooting the solution**
+#### Troubleshooting the solution
 
 |**Problem**|**Solution**|
 |:-----|:-----|

@@ -34,10 +34,6 @@ There are different ways to retrieve user identity and information, depending on
 ### Core concepts to know for retrieving user identity and properties
 
 The following table lists some useful articles that can help you to understand the concepts involved in creating SharePoint Add-ins.
- 
-
- 
-
 
 |**Article **|**Description**|
 |:-----|:-----|

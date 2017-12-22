@@ -31,8 +31,6 @@ Before you update a SharePoint Add-in, you need:
 
 Review the concepts in the following table before updating your add-in.
 
-**Table 1. Core concepts for updating a SharePoint Add-in**
-
 |**Article title**|**Description**|
 |:-----|:-----|
 | [Choose patterns for developing and hosting your SharePoint Add-in](choose-patterns-for-developing-and-hosting-your-sharepoint-add-in.md)|Learn about the different types of SharePoint Add-ins. The updating process varies depending on the type.|

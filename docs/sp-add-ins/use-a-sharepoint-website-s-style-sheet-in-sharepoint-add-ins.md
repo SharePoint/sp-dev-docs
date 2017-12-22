@@ -206,7 +206,7 @@ In some cases, the user has to be authenticated to SharePoint before your page i
 
 6. You can also go to the host web and change the theme. Reload the add-in webpage to use the new styles.
     
-**Troubleshooting the solution**
+#### Troubleshooting the solution
 
 |**Problem**|**Solution**|
 |:-----|:-----|
