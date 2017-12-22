@@ -164,7 +164,7 @@ For detailed instructions about creating add-in event handlers, see [Create an a
 
 If SharePoint encounters an error when processing any of the three add-in events, it cancels the event and rolls back any changes it has made in connection with the event. Your add-in event handlers have to integrate with this system because if the part of the event that you are implementing fails, you want the whole event to roll back, rather than continue and leave things in a possibly corrupt state. Here's what your handler usually has to do:
 
-- Tell SharePoint that an error has occurred. The SOAP message that your add-in event handling web service returns to SharePoint has a **Status** property that can have the values of **Continue**, **CancelWithError**, or **CancelWithoutError**. Either **Cancel*** status tells SharePoint to roll back the event.
+- Tell SharePoint that an error has occurred. The SOAP message that your add-in event handling web service returns to SharePoint has a **Status** property that can have the values of **Continue**, **CancelWithError**, or **CancelWithoutError**. Either **Cancel** status tells SharePoint to roll back the event.
 
 - Roll back what the handler has already done before the handler encounters the error. SharePoint can't usually do this for you because it doesn't know what your handler did. This isn't a universal rule. For example, if an add-in installation is canceled, SharePoint deletes the entire add-in web, so there's no point in an AppInstalled event handler reverting anything it has done to the add-in web. But it usually should roll back things it did to the host web or to remote components of the add-in. 
     
@@ -276,8 +276,6 @@ In the following code samples, the first example (SharePoint solutions) implemen
     }
 ```
 
-<br/>
-
 #### SharePoint Add-ins   
     
 ```C#
@@ -312,9 +310,9 @@ The following figure shows how remote event receivers work:
 
 - The web service can also talk to the Access Control Service (ACS) to request its own signed token to do a call back to SharePoint. Using this token, you can perform remote actions from within the web service as a result of the earlier operation on the list item or in the backend system.
 
-**How remote event receivers work in SharePoint**
+   **How  emote event receivers work in SharePoint**
 
-![How remote event receivers work in SharePoint](../images/SP15Con_Remote_Event_Receivers_FAQ_fig1.png)
+   ![How remote event receivers work in SharePoint](../images/SP15Con_Remote_Event_Receivers_FAQ_fig1.png)
 
 <a name="RER_DebugRER"> </a>
 
@@ -330,7 +328,7 @@ No, you cannot run client-side (JavaScript) code from remote event receivers.
 
 ### Are there any restrictions on where a remote event receiver can be hosted on its URL?
 
-The remote event receiver can be hosted in the cloud or on an on-premises server that is not also being used as a SharePoint server. The URL of a production receiver cannot specify a particular port. This means that you must use either port 443 for HTTPS, which we recommend, or port 80 for HTTP. If you are using HTTPS and the receiver service is hosted on-premises, but the add-in is on Microsoft SharePoint Online, the hosting server must have a publicly trusted certificate from a certificate authority. (A self-signed certificate works only if the add-in is on an on-premises SharePoint farm.)
+The remote event receiver can be hosted in the cloud or on an on-premises server that is not also being used as a SharePoint server. The URL of a production receiver cannot specify a particular port. This means that you must use either port 443 for HTTPS, which we recommend, or port 80 for HTTP. If you are using HTTPS and the receiver service is hosted on-premises, but the add-in is on SharePoint Online, the hosting server must have a publicly trusted certificate from a certificate authority. (A self-signed certificate works only if the add-in is on an on-premises SharePoint farm.)
  
 <a name="RER_Will2020EventHandlerWillWorkOn2013"> </a>
  
@@ -340,7 +338,10 @@ If a SharePoint 2010 solution package containing an event handler is upgraded to
 
 ## See also
 <a name="SP15handleevents_addlresources"> </a>
- 
+
+- [Create a remote event receiver in SharePoint Add-ins](create-a-remote-event-receiver-in-sharepoint-add-ins.md)
+- [Create an add-in event receiver in SharePoint Add-ins](create-an-add-in-event-receiver-in-sharepoint-add-ins.md)
+- [Debug and troubleshoot a remote event receiver in a SharePoint Add-in](debug-and-troubleshoot-a-remote-event-receiver-in-a-sharepoint-add-in.md) 
 - [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
     
  
