@@ -62,7 +62,7 @@ You can register your add-in in one of three ways, depending on where you are in
 ### To register by using AppRegNew.aspx
 
 
-1.  Navigate to `http://` *<SharePointWebsite>*  `/_layouts/15/AppRegNew.aspx` on the tenancy or farm.
+1.  Navigate to *<site collection url>*  `/_layouts/15/AppRegNew.aspx` using a web browser.
     
     **AppRegNew page form**
 
