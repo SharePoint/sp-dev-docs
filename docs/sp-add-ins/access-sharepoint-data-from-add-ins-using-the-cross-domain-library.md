@@ -290,9 +290,7 @@ Figure 2 shows a webpage that displays the data on the add-in web.
 If you prefer downloadable code samples, you can get this one from code gallery. **Code sample: Get list items by using the cross-domain library** using [SharePoint-Add-in-REST-OData-CrossDomain](https://github.com/OfficeDev/SharePoint-Add-in-REST-OData-CrossDomain) or [SharePoint-Add-in-JSOM-CrossDomain](https://github.com/OfficeDev/SharePoint-Add-in-JSOM-CrossDomain).
  
 
- 
-
-**Table 2. Troubleshooting the solution**
+#### Troubleshooting the solution
 
 
 |**If you see…**|**Then try…**|

@@ -296,12 +296,7 @@ After completing the tasks, your add-in part should look similar to the followin
     
 7. When you end the debugging session, and you won't be using F5 again on this project for a while, it is a good practice to retract the SharePoint Add-in one last time to ensure that the test add-in part is removed from your home page. Right-click the SharePoint Add-in project and select **Retract**.
 
-<a name="SP15Createappparts_Codeexample"> </a>
-
-## Troubleshooting
-
-**Table 3. Troubleshooting the solution**
-
+#### Troubleshooting the solution
 
 |**Problem**|**Solution**|
 |:-----|:-----|
