@@ -200,19 +200,19 @@ The following image shows the localized custom list in English.
     > The word "INVARIANT" has been added to the first of the invariant strings. You would not do this in a production add-in, but while you are testing, it is a useful way of seeing at a glance whether invariant language strings are being used or whether the Resources._LL-CC_.js file for the language that happens to be your invariant language was loaded.
 
 
-    ```js
-        <h2 id="instructionsheading">INVARIANT Instructions</h2>
-            <ol>
-                <li id="step01">Go to any document library in the host web.</li>
-                <li id="step02">Go to the Library tab.</li>
-                <li id="step03">Click "Request a book" in the Settings group.</li>
-                <li id="step04">Click the contextual menu in any document.</li>
-                <li id="step05">Click "Buy this book" in the contextual menu.</li>
-                <li id="step06">Go to any SharePoint page in the host web and add the Bookstore orders add-in part.</li>
-                <li id="step07">Review the localized <a href="../Lists/Orders">Orders</a> and <a href="../Lists/Order status">Order status</a> custom lists.</li>
-            </ol>
+```js
+    <h2 id="instructionsheading">INVARIANT Instructions</h2>
+        <ol>
+            <li id="step01">Go to any document library in the host web.</li>
+            <li id="step02">Go to the Library tab.</li>
+            <li id="step03">Click "Request a book" in the Settings group.</li>
+            <li id="step04">Click the contextual menu in any document.</li>
+            <li id="step05">Click "Buy this book" in the contextual menu.</li>
+            <li id="step06">Go to any SharePoint page in the host web and add the Bookstore orders add-in part.</li>
+            <li id="step07">Review the localized <a href="../Lists/Orders">Orders</a> and <a href="../Lists/Order status">Order status</a> custom lists.</li>
+        </ol>
 
-        <!-- Use the localized strings in the resource JavaScript file -->
+    <!-- Use the localized strings in the resource JavaScript file -->
         <script type="text/javascript">
             window.onload = function () {
                 <!-- Test whether a Resources.LL-CC.js loaded.
@@ -230,9 +230,9 @@ The following image shows the localized custom list in English.
                 }
             }
         </script>
-    ```
+```
 
-    <br/>
+<br/>
 
 The following image gives a preview of how the English version of the page will look when the add-in is completed. 
     
