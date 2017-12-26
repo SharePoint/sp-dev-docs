@@ -200,7 +200,7 @@ The following image shows the localized custom list in English.
     > The word "INVARIANT" has been added to the first of the invariant strings. You would not do this in a production add-in, but while you are testing, it is a useful way of seeing at a glance whether invariant language strings are being used or whether the Resources._LL-CC_.js file for the language that happens to be your invariant language was loaded.
 
 
-    ```HTML
+    ```js
         <h2 id="instructionsheading">INVARIANT Instructions</h2>
             <ol>
                 <li id="step01">Go to any document library in the host web.</li>
