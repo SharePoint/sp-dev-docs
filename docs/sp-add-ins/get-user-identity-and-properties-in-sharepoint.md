@@ -84,7 +84,7 @@ The **Person.LoginName** value gives the sign-in information.
 
 <a name="Profile"> </a> 
 
-## Retrieve user identity and profile properties
+## Retrieve user identity and profile properties by using the OAuth token and social features APIs
 
 If you want to retrieve the user's identity and properties, you can use the OAuth token and the social features APIs. First get the OAuth token, and then set it to the client context. 
 
