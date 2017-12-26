@@ -60,11 +60,11 @@ An add-in web can contain specific kinds of SP components. For more information 
 
 7. Save the file.
 
-8. Add another resource file to the feature as you did before, but select a particular language instead of **Invariant Language (Invariant Country)**. For example, you can choose **Spanish (Spain)**. A Resources.LL-CC.resx file (where  `LL` and `CC` are [Internet Engineering Task Force (IETF)-compliant](https://tools.ietf.org/html/rfc1766) language and culture codes) is added to the Feature's folder in **Solution Explorer**, and the file is opened in the Visual Studio **Resource Editor**. 
+8. Add another resource file to the feature as you did before, but select a particular language instead of **Invariant Language (Invariant Country)**. For example, you can choose **Spanish (Spain)**. A Resources._LL-CC_.resx file (where  `LL` and `CC` are [Internet Engineering Task Force (IETF)-compliant](https://tools.ietf.org/html/rfc1766) language and culture codes) is added to the Feature's folder in **Solution Explorer**, and the file is opened in the Visual Studio **Resource Editor**. 
 
-9. Using the **Resource Editor**, copy all the rows from Resources.resx, and paste them into the new Resources.LL-CC.resx file. (If **Copy** is not enabled on the context menu of the resource editor, use Ctrl+C to copy the rows into the clipboard.)
+9. Using the **Resource Editor**, copy all the rows from Resources.resx, and paste them into the new Resources._LL-CC_.resx file. (If **Copy** is not enabled on the context menu of the resource editor, use Ctrl+C to copy the rows into the clipboard.)
 
-10. In the Resources.LL-CC.resx file, replace the **Value** cells with translated versions of the string values. For URLs and other non-string resources, replace the value with a new value that is appropriate for the language and culture.
+10. In the Resources._LL-CC_.resx file, replace the **Value** cells with translated versions of the string values. For URLs and other non-string resources, replace the value with a new value that is appropriate for the language and culture.
 
 11. Save the new file.
 
@@ -81,7 +81,7 @@ An add-in web can contain specific kinds of SP components. For more information 
     
 2. In the **Title** attribute, enter $Resources:_StringName_, where _StringName_ is the name, not the value, you gave in the previous procedure to the string that names the custom list—for example, $Resources:OrdersListInstance_Title. Note that, unlike in some contexts where .resx files are used, the resource file name is *not* part of what you enter.
 
-3. Use the **Description** attribute to call the string resource of the list description in the same way—for example,$Resources:OrdersListInstance_Description. The following is the markup that uses the localized strings in the Elements.xml file of the instance of a list.
+3. Use the **Description** attribute to call the string resource of the list description in the same way—for example, $Resources:OrdersListInstance_Description. The following is the markup that uses the localized strings in the Elements.xml file of the instance of a list.
         
     ```XML
     <?xml version="1.0" encoding="utf-8"?>
@@ -156,7 +156,7 @@ The following image shows the localized custom list in English.
 
 1. Custom site pages in a SharePoint Add-in use JavaScript string variable files instead of .resx files. 
     
-    To begin, in **Solution Explorer**, add a folder named **Scripts** to the SharePoint add-in project (not the web application project) if there isn't one there already. Right-click the **Scripts** folder and select **Add** > **New Item** > **Web** > **JavaScript File**. Name the file **Resources._LL-CC_.js** (where _LL_ is a language code and _CC_ is a country/region or culture code); for example, **Resources.en-US.js**.
+    To begin, in **Solution Explorer**, add a folder named **Scripts** to the SharePoint add-in project (not the web application project) if there isn't one there already. Right-click the **Scripts** folder and select **Add** > **New Item** > **Web** > **JavaScript File**. Name the file **Resources._LL-CC_.js** (where `LL` is a language code and `CC` is a country/region or culture code); for example, **Resources.en-US.js**.
 
 2. Repeat the preceding step for each foreign language. You should now have blank JavaScript files for every language. Do  *not* create an invariant language file named "Resources.js". The reason is explained in a later procedure.
 
@@ -201,35 +201,35 @@ The following image shows the localized custom list in English.
 
 
     ```HTML
-    <h2 id="instructionsheading">INVARIANT Instructions</h2>
-        <ol>
-            <li id="step01">Go to any document library in the host web.</li>
-            <li id="step02">Go to the Library tab.</li>
-            <li id="step03">Click "Request a book" in the Settings group.</li>
-            <li id="step04">Click the contextual menu in any document.</li>
-            <li id="step05">Click "Buy this book" in the contextual menu.</li>
-            <li id="step06">Go to any SharePoint page in the host web and add the Bookstore orders add-in part.</li>
-            <li id="step07">Review the localized <a href="../Lists/Orders">Orders</a> and <a href="../Lists/Order status">Order status</a> custom lists.</li>
-        </ol>
+        <h2 id="instructionsheading">INVARIANT Instructions</h2>
+            <ol>
+                <li id="step01">Go to any document library in the host web.</li>
+                <li id="step02">Go to the Library tab.</li>
+                <li id="step03">Click "Request a book" in the Settings group.</li>
+                <li id="step04">Click the contextual menu in any document.</li>
+                <li id="step05">Click "Buy this book" in the contextual menu.</li>
+                <li id="step06">Go to any SharePoint page in the host web and add the Bookstore orders add-in part.</li>
+                <li id="step07">Review the localized <a href="../Lists/Orders">Orders</a> and <a href="../Lists/Order status">Order status</a> custom lists.</li>
+            </ol>
 
-    <!-- Use the localized strings in the resource JavaScript file -->
-    <script type="text/javascript">
-        window.onload = function () {
-            <!-- Test whether a Resources.LL-CC.js loaded.
-                If none was, the invariant values remain unchanged. -->
-            if (typeof instructionstitle != 'undefined')  
-            {
-                document.getElementById("instructionsheading").innerText = instructionstitle;
-                document.getElementById("step01").innerText = step01;
-                document.getElementById("step02").innerText = step02;
-                document.getElementById("step03").innerText = step03;
-                document.getElementById("step04").innerText = step04;
-                document.getElementById("step05").innerText = step05;
-                document.getElementById("step06").innerText = step06;
-                document.getElementById("step07").innerHTML = step07;
+        <!-- Use the localized strings in the resource JavaScript file -->
+        <script type="text/javascript">
+            window.onload = function () {
+                <!-- Test whether a Resources.LL-CC.js loaded.
+                    If none was, the invariant values remain unchanged. -->
+                if (typeof instructionstitle != 'undefined')  
+                {
+                    document.getElementById("instructionsheading").innerText = instructionstitle;
+                    document.getElementById("step01").innerText = step01;
+                    document.getElementById("step02").innerText = step02;
+                    document.getElementById("step03").innerText = step03;
+                    document.getElementById("step04").innerText = step04;
+                    document.getElementById("step05").innerText = step05;
+                    document.getElementById("step06").innerText = step06;
+                    document.getElementById("step07").innerHTML = step07;
+                }
             }
-        }
-    </script>
+        </script>
     ```
 
     <br/>
@@ -437,10 +437,6 @@ Test your add-in by deploying it to a SharePoint website that is provisioned in 
 6. In your SharePoint Add-in project, update the **SiteUrl** property with the URL of the new site collection.
 
 7. Select F5 to run the add-in.
-
-<br/>
-
-**Create site collection page**
 
 ![Create site collection page](../images/LocSPApp_TestCreatesite.png)
  
