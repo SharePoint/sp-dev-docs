@@ -36,7 +36,7 @@ Before you convert an autohosted add-in to a provider-hosted add-in, you should 
 
 <a name="Converting"> </a>
 
-## Converting the add-in
+### Converting the add-in
 
 Converting an autohosted SharePoint Add-in to a provider-hosted add-in involves modifying two or three components:
 
@@ -81,7 +81,7 @@ The approach outlined in the following steps uses the data-tier application depl
 
 2. Right-click the database project **CustomerDb**, and then select **Build**. This generates the CustomerDb.dacpac file in the `[..]\bin\[debug | release]` folder.
  
-3. Create a new Azure SQL Database. Sign in to the [Azure Management Portal](https://manage.windowsazure.com), and after the dashboard loads, select the SQL DATABASES link in the margin.
+3. Create a new Azure SQL Database. Sign in to the [Azure Management Portal](https://manage.windowsazure.com), and after the dashboard loads, select the **SQL DATABASES** link in the margin.
 
     ![Azure SQL Database listing](../images/ConvertAuto2ProviderFig3.jpg)
 
