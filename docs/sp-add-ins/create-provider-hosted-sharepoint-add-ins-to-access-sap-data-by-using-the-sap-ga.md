@@ -494,6 +494,7 @@ The following procedure provides some basic guidance about how to do this, but w
 -  [Creating SharePoint Add-ins that use low-trust authorization](creating-sharepoint-add-ins-that-use-low-trust-authorization.md)    
 -  [Context Token OAuth flow for SharePoint Add-ins](context-token-oauth-flow-for-sharepoint-add-ins.md)   
  
+### To add SharePoint access to the ASP.NET application
 
 1. Open the Default.aspx.cs file and uncomment the **Page\_PreInit** method. Also uncomment the code that the Office Developer Tools for Visual Studio added to the **Page\_Load** method.
 
@@ -558,7 +559,7 @@ When you have finished debugging the SharePoint Add-in using F5 in Visual Studio
  
 3. Right-click the AppManifest.xml file in the SharePoint Add-in project, and select **View Code**.    
  
-4. In the **StartPage** value, replace the string `~remoteAppUrl` with the full domain of the Azure Web Site including the protocol; for example `https://my_domain.azurewebsites.net`. The entire **StartPage** value should now be: `https://my_domain.azurewebsites.net/Pages/Default.aspx`. (Usually, the **StartPage** value is exactly the same as the value of the **AppRedirectUrl** key in the web.config file.)
+4. In the **StartPage** value, replace the string `~remoteAppUrl` with the full domain of the Azure Web Site including the protocol; for example `https://my_domain.azurewebsites.net`. The entire **StartPage** value should now be `https://my_domain.azurewebsites.net/Pages/Default.aspx` (usually, the **StartPage** value is exactly the same as the value of the **AppRedirectUrl** key in the web.config file).
     
  
 
@@ -586,7 +587,11 @@ When you have finished debugging the SharePoint Add-in using F5 in Visual Studio
     
 7. Select **SAVE** at the bottom of the screen.
     
-8. Register the add-in with Azure ACS. This must be done even if the add-in does not access SharePoint and will not use tokens from ACS because the same process also registers the add-in with the Add-in Management Service of the Office 365 subscription, which is a requirement. (It is called "Add-in Management Service" because SharePoint Add-ins were originally called "apps for SharePoint".) You perform the registration on the AppRegNew.aspx page of any SharePoint website in the Office 365 subscription. For details, see [Register SharePoint Add-ins](register-sharepoint-add-ins.md). As part of this process, you obtain a new Client ID and Client Secret. Insert these values in the web.config for the **ClientId** (not **ida:ClientID**) and **ClientSecret** keys.
+8. Register the add-in with Azure ACS. This must be done even if the add-in does not access SharePoint and does not use tokens from ACS because the same process also registers the add-in with the Add-in Management Service of the Office 365 subscription, which is a requirement. (It is called "Add-in Management Service" because SharePoint Add-ins were originally called "apps for SharePoint".) 
+
+  You perform the registration on the AppRegNew.aspx page of any SharePoint website in the Office 365 subscription. For details, see [Register SharePoint Add-ins](register-sharepoint-add-ins.md). 
+  
+  As part of this process, you obtain a new Client ID and Client Secret. Insert these values in the web.config for the **ClientId** (not **ida:ClientID**) and **ClientSecret** keys.
     
   > [!WARNING] 
   > If for any reason you select F5 after making this change, the Office Developer Tools for Visual Studio overwrites one or both of these values. For that reason, you should keep a record of the values obtained with AppRegNew.aspx and always verify that the values in the web.config are correct just before you publish the ASP.NET application. 
