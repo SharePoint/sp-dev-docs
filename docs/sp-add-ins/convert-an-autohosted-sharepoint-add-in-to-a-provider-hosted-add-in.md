@@ -67,7 +67,7 @@ Converting a SharePoint autohosted add-in to a provider-hosted add-in involves m
 
 4. Update and deploy the Azure Web Site for the remote web application
 
-5. Update and deploy the SharePoint provider-hosted add-in
+5. Reconfigure the SharePoint Add-in project
 
 ## Deploy the Azure SQL Database
 
@@ -83,15 +83,11 @@ The approach outlined in the following steps uses the data-tier application depl
  
 3. Create a new Azure SQL Database. Sign in to the [Azure Management Portal](https://manage.windowsazure.com), and after the dashboard loads, select the SQL DATABASES link in the margin.
 
-    **Azure SQL Database dashboard in the Azure Management Portal**
-
     ![Azure SQL Database listing](../images/ConvertAuto2ProviderFig3.jpg)
 
     <br/>
  
 4. Select the **SERVERS** link in the top navigation, and then select the **ADD** button in the footer as shown in the following figure.
-
-    **Azure SQL Database dashboard in the Azure Management Portal**
 
     ![Azure SQL Database Add button](../images/ConvertAuto2ProviderFig4.jpg)
 
@@ -99,9 +95,9 @@ The approach outlined in the following steps uses the data-tier application depl
  
 5. In the **CREATE SERVER** dialog that appears, select the Azure **SUBSCRIPTION**, the **LOGIN NAME**, and **PASSWORD** for the user who will have rights to the server, and select the same **REGION** used when creating the Azure Web Site previously. Make a note of the Login name and password because you will need them in a later step.
 
-    **Creating an Azure SQL Database in the Azure Management Portal**
-
     ![Azure SQL New DB dialog](../images/ConvertAuto2ProviderFig5.jpg)
+
+    <br/>
  
 6. After the form is filled out, select the check icon in the lower-right to create the database. While the server is now created, the only resources that can access it are other Azure services. Make a note of the name of the Azure SQL Database because you will need this in a later step.
 
@@ -110,31 +106,31 @@ The approach outlined in the following steps uses the data-tier application depl
 
 1. In order to connect to the Azure SQL Database and deploy the database, a firewall rule must be created that allows traffic from the computer that deploys the database. Otherwise, connections to the Azure SQL Database will be refused with errors similar to the one in the following figure.
 
-    **Error Connecting to an Azure SQL Database**
-
     ![Connect to server error](../images/ConvertAuto2ProviderFig6.jpg)
+
+    <br/>
  
 2. To create a firewall rule, within the **Azure Management Portal**, select the Azure SQL Database previously created and then select the **CONFIGURE** link in the top navigation. 
 
 3. Under the **allowed IP addresses** section, your IP address is currently shown as it appears in the following figure. Select **ADD TO THE ALLOWED IP ADDRESSES** to add a firewall rule. Doing so allows connections to the Azure SQL Database and deployment of the database. Select **Save** in the footer.
 
-    **Creating a firewall rule for an Azure SQL Database in the Azure Management Portal**
-
     ![Azure SQL create firewall rule](../images/ConvertAuto2Providerfig7.jpg)
+
+    <br/>
  
 4. Deploy the database from Visual Studio by using the [Azure SDK for .NET 2.3](https://azure.microsoft.com/en-us/downloads/dotnet-sdk-23/). 
 
 5. Within Visual Studio, open the **SQL Server Object Explorer** tool window, right-click the **SQL Server** node, and then select **Add SQL Server**.
 
-    **Adding an Azure SQL Database in Server Explorer**
-
     ![Connect to Azure SQL Database from Visual Studio](../images/ConvertAuto2Providerfig8.jpg)
+
+    <br/>
  
 6. In the **Connect to Server** dialog, enter the **Server Name**, set the **Authentication** to **SQL Server Authentication**, and enter the same **Login** and **Password** defined when creating the Azure SQL Database. The server name should be the fully qualified name of the server, which is `[server-name].database.windows.net`, as shown in the following figure.
 
-    **Connecting to an Azure SQL Database in Visual Studio**
-
     ![SQL login to server dialog](../images/ConvertAuto2Providerfig9.jpg)
+
+    <br/>
  
 7. After connecting to the Azure SQL Database, expand the node for the newly added server, right-click the **Databases** node, and then select **Publish Data-tier Application** to bring up the publishing wizard.
  
@@ -142,9 +138,9 @@ The approach outlined in the following steps uses the data-tier application depl
 
 9. Select **Publish** to publish the CustomerDb in the Azure SQL Database.
 
-    **Publishing a Data-tier Application to an Azure SQL Database using Visual Studio**
-
     ![Publish DACPAC dialog](../images/ConvertAuto2ProviderFig10.jpg)
+
+    <br/>
  
 10. Refresh the Visual Studio **SQL Server Object Explorer** tool window to see the CustomerDb listed under the **Databases** node.
  
@@ -156,16 +152,12 @@ The approach outlined in the following steps uses the data-tier application depl
 After the Azure SQL Database has been created, make a copy of the connection string used to establish a connection to the database. This can be obtained in two ways. 
 
 - One way is to sign in to the **Azure Management Portal** (https://manage.windowsazure.com) and go to the Azure SQL Database created in the last step: CustomerDb. On the **DASHBOARD** page for the database, select the link **Show Connection Strings** to see a list of connection strings. Make a copy of the **ADO.NET** connection string for later use.
- 
-    **Obtaining Azure SQL Database Connection Strings from the Azure Management Portal**
 
     ![Azure SQL connection strings dialog](../images/ConvertAuto2Providerfig11.jpg)
 
     <br/>
  
 - The other way to get the connection string is from within Visual Studio, provided the Azure SDK v2.3 is installed. Within the **SQL Server Object Explorer** tool window in Visual Studio, select the database **CustomerDb**. After the database is selected, look at the **Properties** tool window to see the connection string. This is the same value found in the **Azure Management Portal**.
-
-    **Obtaining Azure SQL Database connection strings from Visual Studio via the Azure SDK**
 
     ![Obtain SQL connection string in Visual Studio](../images/ConvertAuto2ProviderFig12.jpg)
 
@@ -179,8 +171,6 @@ The next step is to create a new Azure Web Site where the remote web application
 
 1. Sign in to the **Azure Management Portal** (https://manage.windowsazure.com). When the dashboard loads, click the **WEB SITES** navigation link in the left margin, and then select the **NEW** button in the footer as shown in the following figure.
 
-    **Azure Web Site dashboard in the Azure Management Portal**
-
     ![Azure Web Sites dashboard](../images/ConvertAuto2Providerfig13.jpg)
 
     <br/>
@@ -188,8 +178,6 @@ The next step is to create a new Azure Web Site where the remote web application
 2. In the New Web Site Wizard, select **COMPUTE**, **WEB SITE**, and **QUICK CREATE**, and then specify a **URL** and **WEB HOSTING PLAN**. Finally specify the **REGION** where the website should be created. Make sure to remember the region selected because the same region should be used for the Azure SQL Database created later. 
 
 3. If a web hosting plan does not already exist or a new one is desired, select the option **Create new web hosting plan**. The following figure shows an example.
-
-    **Creating an Azure Web Site in the Azure Management Portal**
 
     ![Create Azure Web Site dialog](../images/ConvertAuto2Providerfig14.jpg)
 
@@ -253,15 +241,11 @@ Now the ASP.NET MVC web application files need to be deployed to the Azure Web S
 
 2. In this dialog, select **Windows Azure Web Sites**, and then select **Publish**.
 
-    **Visual Studio's Publish Web Dialog**
-
     ![Publish web site dialog in Visual Studio](../images/ConvertAuto2Providerfig17.jpg)
 
     <br/>
  
 3. Select the name of the Azure Web Site that was created in a previous step as shown in the following figure, select **OK**, and ensure that the URL of the site is HTTPS.
-
-    **Publishing the ASP.NET web application to an existing Azure Web Site**
 
     ![Select existing web site dialog](../images/ConvertAuto2ProviderFig18.png)
 
@@ -298,15 +282,11 @@ The last step is to reconfigure the SharePoint Add-in project. The Visual Studio
  
 3. Remove the reference in the SharePoint Add-in project to the ASP.NET MVC web application by selecting the SharePoint Add-in project in Visual Studio **Solution Explorer**. Within the **Properties** tool window, set the **Web Project** property to **(None)**, as shown in the following figure.
 
-    **Removing the remote web application from the SharePoint add-in package**
-
     ![Web project properties in Visual Studio](../images/ConvertAuto2ProviderFig20.jpg)
 
     <br/>
  
 4. This step requires a manual update to the AppManifest.xml file because some settings are not exposed within the designer. Do this by saving any existing changes to the AppManifest.xml file, and then right-click the same file in **Solution Explorer**, and select **View Code**.
-
-    **Opening the AppManifest.xml file in the code view**
 
     ![App manifest context menu in Visual Studio](../images/ConvertAuto2ProviderFig21.jpg)
 
@@ -320,8 +300,6 @@ The last step is to reconfigure the SharePoint Add-in project. The Visual Studio
     > If the existing ProductId was used, SharePoint returns the error "The provided add-in differs from another add-in with the same version and product ID" when the converted add-in is installed.
  
 7. Find the **<RemoteWebApplication>** element and update the **ClientId** attribute to be the same GUID that was obtained when registering the add-in with SharePoint and that was used in the Azure Web Site's web.config add-in settings.
-
-    **Setting the ClientId for a SharePoint provider-hosted add-in**
 
     ![Client ID attribute in app manifest](../images/ConvertAuto2ProviderFig22.jpg)
 
