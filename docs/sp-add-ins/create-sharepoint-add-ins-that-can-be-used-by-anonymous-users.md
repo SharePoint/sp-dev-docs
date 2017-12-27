@@ -27,7 +27,7 @@ That site definition is not available for on-premises SharePoint installations. 
 
 - A list in the site collection that is configured for anonymous access if your add-in is SharePoint-hosted and accesses a SharePoint list. 
 
-Instructions for these tasks are in the section [Configuring a SharePoint web application and site collection and list for anonymous access](#Configuring).
+Instructions for these tasks are in the section [Configuring a SharePoint web application, site collection, and list for anonymous access](#Configuring).
 
 ## Limitations on the use of SharePoint Add-ins by anonymous users
 
@@ -76,7 +76,7 @@ What's really crucial for making a SharePoint-hosted add-in usable by anonymous 
 
 If you are marketing your add-in through the Office Store, and a significant portion of your potential customers would find the add-in most useful if it is accessible to anonymous users, you should consider mentioning this configuration requirement in your add-in description. Consider also including a version of the procedure [To configure a SharePoint Online site collection for anonymous access](#to-configure-a-sharepoint-online-site-collection-for-anonymous-access) (later in this article) on your add-in's support page.
 
-If your add-in uses SharePoint's JavaScript object model (JSOM), there is one configuration requirement that is very crucial. Only a very small portion of the JSOM APIs are accessible by default to anonymous users. All others require that a user have the **Use Remote Interfaces** permission, and anonymous users do not have this permission. This requirement has to be turned off in the parent site collection or parent SharePoint web application of the website where the add-in is installed, as described in [Configuring a SharePoint web application and site collection and list for anonymous access](#Configuring).
+If your add-in uses SharePoint's JavaScript object model (JSOM), there is one configuration requirement that is very crucial. Only a very small portion of the JSOM APIs are accessible by default to anonymous users. All others require that a user have the **Use Remote Interfaces** permission, and anonymous users do not have this permission. This requirement has to be turned off in the parent site collection or parent SharePoint web application of the website where the add-in is installed, as described in [Configuring a SharePoint web application, site collection, and list for anonymous access](#Configuring).
  
 > [!NOTE] 
 > Turning off the requirement that users have the **Use Remote Interfaces** permission has implications for information privacy. For details, see [What Every Developer Needs to Know About SharePoint Add-ins, CSOM, and Anonymous Publishing Sites](https://blogs.msdn.microsoft.com/kaevans/2013/10/24/what-every-developer-needs-to-know-about-sharepoint-apps-csom-and-anonymous-publishing-sites/).
@@ -94,7 +94,7 @@ We'll be honest with you: there are some significant limitations on SharePoint-h
     
 <a name="Configuring"> </a> 
 
-## Configuring a SharePoint web application and site collection and list for anonymous access
+## Configuring a SharePoint web application, site collection, and list for anonymous access
 
 If your test SharePoint installation is on-premises, you must carry out the first two procedures that follow in order to test whether your SharePoint Add-in can be used by anonymous users. The customers who install your SharePoint Add-in must also carry out these procedures for the parent site collection and web application of any website where your SharePoint Add-in is installed.
  
