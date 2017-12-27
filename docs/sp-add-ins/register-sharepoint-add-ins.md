@@ -241,13 +241,8 @@ To see a list of registered add-in principals, go to:
 ## See also
 <a name="AR"> </a>
 
-
--  [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md)
-    
- 
--  [Three authorization systems for SharePoint Add-ins](three-authorization-systems-for-sharepoint-add-ins.md)
-    
- 
--  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
+- [Three authorization systems for SharePoint Add-ins](three-authorization-systems-for-sharepoint-add-ins.md)
+- [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
+- [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md)
     
  

@@ -460,10 +460,9 @@ Test your add-in by deploying it to a SharePoint website that is provisioned in 
 ## See also
 <a name="SP15Localizeapp_addlresources"> </a>
 
-
--  [Localization for Office Add-ins](https://docs.microsoft.com/en-us/office/dev/add-ins/develop/localization)
--  [ASP.NET Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d.aspx)
--  [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
+- [Localization for Office Add-ins](https://docs.microsoft.com/en-us/office/dev/add-ins/develop/localization)
+- [ASP.NET Globalization and Localization](https://msdn.microsoft.com/library/8ef3838e-9d05-4236-9dd0-ceecff9df80d.aspx)
+- [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md)
     
  
 

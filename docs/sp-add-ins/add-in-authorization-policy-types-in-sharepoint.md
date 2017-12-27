@@ -146,20 +146,10 @@ Since add-in-only calls effectively elevate user privileges, you should be conse
 ## See also
 <a name="AR"> </a>
 
+- [Context Token OAuth flow for SharePoint Add-ins](context-token-oauth-flow-for-sharepoint-add-ins.md)
+- [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
+- [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md)
 
--  [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md)
-    
- 
--  [Add-in permissions in SharePoint](add-in-permissions-in-sharepoint.md)
-    
- 
--  [Context Token OAuth flow for SharePoint Add-ins](context-token-oauth-flow-for-sharepoint-add-ins.md)
-    
- 
--  [SharePoint Add-ins](sharepoint-add-ins.md)
-    
- 
--  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
     
  
 
