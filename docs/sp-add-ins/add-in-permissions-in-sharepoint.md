@@ -285,9 +285,11 @@ SharePoint Add-ins that are installed to SharePoint are granted permissions when
 
 3. Select the **Permissions** link.
  
-4. On the page that opens, select the **here** link in the last sentence. This regrants the add-in its permissions and redirects the browser back to the **Site Contents** page.
+4. On the page that opens, select **here** in the last sentence. This regrants the add-in its permissions and redirects the browser back to the **Site Contents** page.
 
-![Regranting permissions to an app](../images/RegrantPermissionsToAnApp.png)
+  ![Regranting permissions to an app](../images/RegrantPermissionsToAnApp.png)
+
+  <br/>
  
 When you are developing an add-in or troubleshooting an add-in, there may be occasions when you want to change, or regrant, the permissions of an add-in that has already been installed. You can do so with these steps:
 

@@ -103,7 +103,7 @@ In general, a current user is required to be present for a call to be made. In t
 
 <a name="GuidelinesFor"> </a>
 
-### Get guidelines for using the add-in-only policy
+## Guidelines for using the add-in-only policy
 
 Because add-in-only calls effectively elevate user privileges, you should be conservative in creating add-ins that ask for permission to make them. Calls should use the add-in-only policy only if:
 
