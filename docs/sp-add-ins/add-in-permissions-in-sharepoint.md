@@ -25,9 +25,6 @@ When an add-in is removed, all the permissions granted to that add-in at the sco
 
 A SharePoint Add-in uses permission requests to specify the permissions that it needs to function correctly. The permission requests specify both the rights that an add-in needs and the scope at which it needs the rights. These permissions are requested as part of the add-in manifest.
 
-> [!NOTE] 
-> The scopes described in this section apply to list content and library content only. For information about scopes for other features, see the [Types of add-in permissions and permission scopes](#Perm_types) section in this article.
-
 Permission request scopes indicate the location in the SharePoint hierarchy where a permission request applies.
  
 > [!NOTE] 
