@@ -139,6 +139,11 @@ In connection with this point, note the following:
 <a name="DomainRelatedErrors"> </a>
 
 If you are sure you have the correct certificate serial number in the web.config and you can see the certificate in the  **Windows Certificate Store**, then there may be a hidden extra character in the serial number in the web.config. This will happen if the serial number is copy'n'pasted from the **Microsoft Management Console**. Delete the entire serial number value from the web.config and *manually*  retype it.
+
+## See also
+
+- [Creating SharePoint Add-ins that use high-trust authorization](creating-sharepoint-add-ins-that-use-high-trust-authorization.md)
+- [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md)
  
 
  

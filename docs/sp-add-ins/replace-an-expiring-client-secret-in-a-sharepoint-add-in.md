@@ -19,7 +19,7 @@ Ensure the following before you begin:
 
 - [Microsoft Online Services Sign-In Assistant](https://www.microsoft.com/en-us/download/details.aspx?id=39267) is installed on the development computer.
 
-- Microsoft Online Services PowerShell Module ( [32-bit](http://go.microsoft.com/fwlink/p/?linkid=236298);  [64-bit](http://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=59185)) is installed on the development computer.
+- Microsoft Online Services PowerShell Module ([32-bit](http://go.microsoft.com/fwlink/p/?linkid=236298);  [64-bit](http://connect.microsoft.com/site1164/Downloads/DownloadDetails.aspx?DownloadID=59185)) is installed on the development computer.
     
 - You are a tenant administrator for the Office 365 tenant (or a farm administrator on the farm) where the add-in was registered with the AppRegNew.aspx page.
     
@@ -71,14 +71,14 @@ Ensure the following before you begin:
     
   ```powershell
     $bytes = New-Object Byte[] 32
-  $rand = [System.Security.Cryptography.RandomNumberGenerator]::Create()
-  $rand.GetBytes($bytes)
-  $rand.Dispose()
-  $newClientSecret = [System.Convert]::ToBase64String($bytes)
-  New-MsolServicePrincipalCredential -AppPrincipalId $clientId -Type Symmetric -Usage Sign -Value $newClientSecret -StartDate (Get-Date) -EndDate (Get-Date).AddYears(1)
-  New-MsolServicePrincipalCredential -AppPrincipalId $clientId -Type Symmetric -Usage Verify -Value $newClientSecret -StartDate (Get-Date) -EndDate (Get-Date).AddYears(1)
-  New-MsolServicePrincipalCredential -AppPrincipalId $clientId -Type Password -Usage Verify -Value $newClientSecret -StartDate (Get-Date) -EndDate (Get-Date).AddYears(1)
-  $newClientSecret
+    $rand = [System.Security.Cryptography.RandomNumberGenerator]::Create()
+    $rand.GetBytes($bytes)
+    $rand.Dispose()
+    $newClientSecret = [System.Convert]::ToBase64String($bytes)
+    New-MsolServicePrincipalCredential -AppPrincipalId $clientId -Type Symmetric -Usage Sign -Value $newClientSecret -StartDate (Get-Date) -EndDate (Get-Date).AddYears(1)
+    New-MsolServicePrincipalCredential -AppPrincipalId $clientId -Type Symmetric -Usage Verify -Value $newClientSecret -StartDate (Get-Date) -EndDate (Get-Date).AddYears(1)
+    New-MsolServicePrincipalCredential -AppPrincipalId $clientId -Type Password -Usage Verify -Value $newClientSecret -StartDate (Get-Date) -EndDate (Get-Date).AddYears(1)
+    $newClientSecret
   ```
 
 3. The new client secret appears on the Windows PowerShell console. Copy it to a text file. You use it in the next procedure.
