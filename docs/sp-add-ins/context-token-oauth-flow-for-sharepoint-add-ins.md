@@ -1,5 +1,5 @@
 ---
-title: Complete basic operations using SharePoint REST endpoints
+title: Context Token OAuth flow for SharePoint Add-ins
 ms.date: 09/25/2017
 ms.prod: sharepoint
 ---
@@ -126,6 +126,8 @@ These are the steps that correspond to the numbers in the figure:
     
  
 -  [Get started creating SharePoint-hosted SharePoint Add-ins](get-started-creating-sharepoint-hosted-sharepoint-add-ins.md)
+
+- [Creating SharePoint Add-ins that use low-trust authorization](creating-sharepoint-add-ins-that-use-low-trust-authorization.md)
     
  
 

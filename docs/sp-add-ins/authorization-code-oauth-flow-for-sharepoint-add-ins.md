@@ -432,5 +432,9 @@ namespace DynamicAppPermissionRequest
     
  
 -  [Get started creating provider-hosted SharePoint Add-ins](get-started-creating-provider-hosted-sharepoint-add-ins.md)
+
+- [Creating SharePoint Add-ins that use low-trust authorization](creating-sharepoint-add-ins-that-use-low-trust-authorization.md)
+
+
     
  

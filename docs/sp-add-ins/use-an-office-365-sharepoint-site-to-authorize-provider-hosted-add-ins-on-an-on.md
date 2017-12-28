@@ -474,9 +474,8 @@ Follow the steps in  [Get started creating provider-hosted SharePoint Add-ins](g
  
 
 ## See also
-<a name="bk_addresources"> </a>
 
-
--  [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md)
+- [Creating SharePoint Add-ins that use low-trust authorization](creating-sharepoint-add-ins-that-use-low-trust-authorization.md)
+- [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md)
     
  

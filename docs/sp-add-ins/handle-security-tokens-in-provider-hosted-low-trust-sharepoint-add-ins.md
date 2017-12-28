@@ -504,6 +504,8 @@ The free  [Fiddler tool](http://www.telerik.com/fiddler) can be used to capture 
     
  
 - For a code sample that uses REST calls from a PHP add-in:  [SharePoint: Perform operations on SharePoint Document Library from PHP site](https://code.msdn.microsoft.com/SharePoint-Perform-8a78b8ef)
+
+- [Creating SharePoint Add-ins that use low-trust authorization](creating-sharepoint-add-ins-that-use-low-trust-authorization.md)
     
  
 
