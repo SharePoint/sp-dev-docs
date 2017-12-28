@@ -68,9 +68,9 @@ Following are the steps in the Authentication Code flow.
 
 A user browses to the Contoso photo-printing website, where the UI indicates that the user can print photos that are kept on any SharePoint Online site.
 
-In this example, the URL is `https://contoso.com/print/home.aspx`.
+In this example, the URL is `https://contoso.com/print/home.aspx`
 
-The photo-printing add-in asks the user to enter the URL of the photo collection. The user enters a URL pointing to the SharePoint Online site: `https://fabrikam.sharepoint.com/`.
+The photo-printing add-in asks the user to enter the URL of the photo collection. The user enters a URL pointing to the SharePoint Online site: `https://fabrikam.sharepoint.com/`
 
 <a name="FlowStep2"> </a> 
 
@@ -78,7 +78,7 @@ The photo-printing add-in asks the user to enter the URL of the photo collection
 
 ![Oauth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_2.png)
 
-When the user selects the button to get the photos, the Contoso photo-printing add-in redirects the browser to `https://fabrikam.sharepoint.com/`. This redirect is an HTTP 302 Redirect Response.
+When the user selects the button to get the photos, the Contoso photo-printing add-in redirects the browser to `https://fabrikam.sharepoint.com/`; this redirect is an HTTP 302 Redirect Response.
 
 If you're using Microsoft .NET, **Response.Redirect** is one of several ways you can do the redirect from your code. Using the TokenHelper.cs (or .vb) file in your project, your code can call the overloaded **GetAuthorizationUrl** method (using the overload with three arguments). This method constructs the OAuthAuthorize.aspx redirect URL for you. Or, your code can manually construct the URL.
 
@@ -90,7 +90,7 @@ The third parameter must be the same redirect URI that is used when the add-in i
 
 As the example shows, the Contoso photo-printing add-in sends the OAuth client ID and redirect URI to the Fabrikam site as query string parameters. The following is an example of the GET request with sample query string values. Line breaks have been added for clarity. The actual target URL is a single line. `GET /authcode HTTP/1.1`  `Host: fabrikam.sharepoint.com`   `/oauthauthorize.aspx`  `?client_id= c78d058c-7f82-44ca-a077-fba855e14d38`  `&amp;scope=list.read`  `&amp;response_type=code`  `&amp;redirect_uri= https%3A%2F%2Fcontoso%2Ecom%2Fredirectaccept.aspx`
 
-If you want a separate consent pop-up dialog, you can add the query parameter **IsDlg=1** to the URL construct as shown here: `/oauthauthorize.aspx?IsDlg=1&amp;client_id= c78d058c-7f82-44ca-a077-fba855e14d38&amp;scope=list.read&amp;response_type=code&amp;redirect_uri= https%3A%2F%2Fcontoso%2Ecom%2Fredirectaccept.aspx`.
+If you want a separate consent pop-up dialog, you can add the query parameter **IsDlg=1** to the URL construct as shown here: `/oauthauthorize.aspx?IsDlg=1&amp;client_id= c78d058c-7f82-44ca-a077-fba855e14d38&amp;scope=list.read&amp;response_type=code&amp;redirect_uri= https%3A%2F%2Fcontoso%2Ecom%2Fredirectaccept.aspx`
 
 
 #### Step 3: SharePoint displays the consent page so the user can grant the add-in permissions
@@ -121,7 +121,7 @@ Contoso retrieves the authorization code from the query parameter, and then incl
 
 If you are using managed code and the SharePoint CSOM, the TokenHelper.cs (or .vb) file, the method that makes the request to ACS is **GetClientContextWithAuthorizationCode**. In this case the code looks similar to the following (where  `authCode` is a variable to which the authorization code has been assigned): `TokenHelper.GetClientContextWithAuthorizationCode(`  `"https://fabrikam.sharepoint.com/",`  `"00000003-0000-0ff1-ce00-000000000000",`  `authCode,`  `"1ee82b34-7c1b-471b-b27e-ff272accd564",`  `new Uri(Request.Url.GetLeftPart(UriPartial.Path)));`
 
-If you look at the TokenHelper.cs (or .vb) file, the second parameter of the **GetClientContextWithAuthorizationCode** method is the `targetPrincipalName`. This value is always the constant " `00000003-0000-0ff1-ce00-000000000000`" in an add-in that is accessing SharePoint. If you trace the call hierarchy from **GetClientContextWithAuthorizationCode**, it obtains the client ID and secret from the web.config file. 
+If you look at the TokenHelper.cs (or .vb) file, the second parameter of the **GetClientContextWithAuthorizationCode** method is the `targetPrincipalName`. This value is always the constant `00000003-0000-0ff1-ce00-000000000000` in an add-in that is accessing SharePoint. If you trace the call hierarchy from **GetClientContextWithAuthorizationCode**, it obtains the client ID and secret from the web.config file. 
 
 ACS receives Contoso's request and validates the client ID, client secret, redirect URI, and authorization code. If all are valid, the ACS invalidates the authorization code (it can be used only once) and creates a refresh token and an access token, which it returns to Contoso. The Contoso application can cache this access token for reuse on later requests. By default, access tokens are good for about 12 hours.
 
