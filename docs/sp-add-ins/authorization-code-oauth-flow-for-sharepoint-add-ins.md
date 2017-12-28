@@ -55,26 +55,89 @@ The photo-printing application is registered, so it has a client ID, client secr
     </configuration>
 ```
 
+### Authentication Code flow steps
+
 Following are the steps in the Authentication Code flow.
  
 > [!TIP] 
 > These steps refer to methods in the TokenHelper.cs (or .vb) file. This managed code is not compiled, so there are no reference topics for it. However, the file itself is fully commented with descriptions of every class, member parameter, and return value. Consider having a copy of it open to refer to as you read these steps.
 
-<br/>
+#### Step 1: Client opens an application and then directs it to a SharePoint site for data
 
-**Table 1. Authentication Code flow**
+![Oauth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_1.png)
 
-|**Step**||**Description**| 
-|:-----|:-----|:-----|
-|**1**|![Oauth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_1.png)|**Client opens an application and then directs it to a SharePoint site for data.**<br/><br/>A user browses to the Contoso photo-printing website, where the UI indicates that the user can print photos that are kept on any SharePoint Online site.<br/><br/>In this example, the URL is `https://contoso.com/print/home.aspx`.<br/><br/>The photo-printing add-in asks the user to enter the URL of the photo collection. The user enters a URL pointing to the SharePoint Online site: `https://fabrikam.sharepoint.com/`.|
-|**2**|![Oauth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_2.png)|**The add-in redirects to the SharePoint site authorization URL.**<br/><br/>When the user selects the button to get the photos, the Contoso photo-printing add-in redirects the browser to `https://fabrikam.sharepoint.com/`. This redirect is an HTTP 302 Redirect Response.<br/><br/>If you're using Microsoft .NET, **Response.Redirect** is one of several ways you can do the redirect from your code.<br/><br/>Using the TokenHelper.cs (or .vb) file in your project, your code can call the overloaded **GetAuthorizationUrl** method (using the overload with three arguments). This method constructs the OAuthAuthorize.aspx redirect URL for you. Or, your code can manually construct the URL.<br/><br/>For example, if you choose to call the **GetAuthorizationUrl** method to construct the OAuthAuthorize.aspx redirect URL for you, using the TokenHelper.cs (or .vb) in your project, the code is as follows: `Response.Redirect(TokenHelper.GetAuthorizationUrl(`  `sharePointSiteUrl.ToString(), "Web.Read List.Write", "https://contoso.com/RedirectAccept.aspx"));`<br/><br/>If you look at the three-parameter overload of the **GetAuthorizationUrl** method in TokenHelper.cs (or .vb), you see that the second parameter is a permission scope parameter, which is a space-delimited list of permissions the add-in requests in shorthand format. For more information about permission scopes, see [Permission scope aliases and the use of the OAuthAuthorize.aspx page](#Scope).<br/><br/>The third parameter must be the same redirect URI that is used when the add-in is registered. For more information about registration, see [Register SharePoint Add-ins](register-sharepoint-add-ins.md).<br/><br/>The returned string is a URL including query string parameters. If you prefer, you can manually construct the OAuthAuthorize.aspx redirect URL. For example, the URL that the Contoso photo-printing add-in redirects the user to in this case is: `https://fabrikam.sharepoint.com/_layouts/15/OAuthAuthorize.aspx?client_id=client_GUID&amp;scope=app_permissions_list&amp;response_type=code&amp;redirect_uri=redirect_uri`<br/><br/>As the example shows, the Contoso photo-printing add-in sends the OAuth client ID and redirect URI to the Fabrikam site as query string parameters. The following is an example of the GET request with sample query string values. Line breaks have been added for clarity. The actual target URL is a single line. `GET /authcode HTTP/1.1`  `Host: fabrikam.sharepoint.com`   `/oauthauthorize.aspx`  `?client_id= c78d058c-7f82-44ca-a077-fba855e14d38`  `&amp;scope=list.read`  `&amp;response_type=code`  `&amp;redirect_uri= https%3A%2F%2Fcontoso%2Ecom%2Fredirectaccept.aspx`<br/><br/>If you want a separate consent pop-up dialog, you can add the query parameter **IsDlg=1** to the URL construct as shown here: `/oauthauthorize.aspx?IsDlg=1&amp;client_id= c78d058c-7f82-44ca-a077-fba855e14d38&amp;scope=list.read&amp;response_type=code&amp;redirect_uri= https%3A%2F%2Fcontoso%2Ecom%2Fredirectaccept.aspx`|
-|**3**|![Oauth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_3.png)|**SharePoint displays the consent page so the user can grant the add-in permissions.**<br/><br/>If the user is not already signed into the Fabrikam SharePoint Online site, the user is prompted to sign in. When the user is signed in, SharePoint renders an HTML consent page. The consent page prompts the user to grant (or deny) the Contoso photo-printing add-in the permissions that the add-in requests. In this case, the user would be granting the add-in read access to the user's picture library on Fabrikam.|
-|**4**|![Oauth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_4.png)|**SharePoint requests a short-lived authorization code from ACS.**<br/><br/>The Fabrikam SharePoint Online site asks ACS to create a short-lived (approximately 5 minutes) authorization code unique to this combination of user and add-in. ACS sends the authorization code to the Fabrikam site.|
-|**5**|![Oauth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_5.png)|**The SharePoint Online site redirects to the app's registered redirect URI, passing the authorization code to the add-in.**<br/><br/>The Fabrikam SharePoint Online site redirects the browser back to Contoso via HTTP 302 Response. The URL construct for this redirection uses the redirect URI that was specified when the photo-printing add-in was registrated. It also includes the authorization code as a query string.<br/><br/>The redirect URL is structured like the following: `https://contoso.com/RedirectAccept.aspx?code=<authcode>`|
-|**6**|![Oauth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_6.png)|**The add-in uses the authorization code to request an access token from ACS, which validates the request, invalidates the authorization code, and then sends access and refresh tokens to the add-in.**<br/><br/>Contoso retrieves the authorization code from the query parameter, and then includes it, along with the client ID and client secret, in a request to ACS for an access token.<br/><br/>If you are using managed code and the SharePoint CSOM, the TokenHelper.cs (or .vb) file, the method that makes the request to ACS is **GetClientContextWithAuthorizationCode**. In this case the code looks similar to the following (where  `authCode` is a variable to which the authorization code has been assigned): `TokenHelper.GetClientContextWithAuthorizationCode(`  `"https://fabrikam.sharepoint.com/",`  `"00000003-0000-0ff1-ce00-000000000000",`  `authCode,`  `"1ee82b34-7c1b-471b-b27e-ff272accd564",`  `new Uri(Request.Url.GetLeftPart(UriPartial.Path)));`<br/><br/>If you look at the TokenHelper.cs (or .vb) file, the second parameter of the **GetClientContextWithAuthorizationCode** method is the `targetPrincipalName`. This value is always the constant " `00000003-0000-0ff1-ce00-000000000000`" in an add-in that is accessing SharePoint. If you trace the call hierarchy from **GetClientContextWithAuthorizationCode**, it obtains the client ID and secret from the web.config file. <br/><br/>ACS receives Contoso's request and validates the client ID, client secret, redirect URI, and authorization code. If all are valid, the ACS invalidates the authorization code (it can be used only once) and creates a refresh token and an access token, which it returns to Contoso. The Contoso application can cache this access token for reuse on later requests. By default, access tokens are good for about 12 hours.<br/><br/>Each access token is specific to the user account that is specified in the original request for authorization, and grants access only to the services that are specified in that request. Your add-in should store the access token securely. The Contoso application can also cache the refresh token. By default, refresh tokens are good for 6 months. The refresh token can be redeemed for a new access token from ACS whenever the access token expires. For more information about tokens, see [Handle security tokens in provider-hosted low-trust SharePoint Add-ins](handle-security-tokens-in-provider-hosted-low-trust-sharepoint-add-ins.md).|
-|**7**|![Oauth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_7.png)|**The add-in can now use the access token to request data from the SharePoint site, which it can display to the user.**<br/><br/>Contoso includes the access token to make a REST API call or CSOM request to SharePoint, passing the OAuth access token in the HTTP **Authorization** header. SharePoint returns the information that Contoso requested. For more information about how this request is made, see [Handle security tokens in provider-hosted low-trust SharePoint Add-ins](handle-security-tokens-in-provider-hosted-low-trust-sharepoint-add-ins.md).|
+A user browses to the Contoso photo-printing website, where the UI indicates that the user can print photos that are kept on any SharePoint Online site.
 
-<br/>
+In this example, the URL is `https://contoso.com/print/home.aspx`.
+
+The photo-printing add-in asks the user to enter the URL of the photo collection. The user enters a URL pointing to the SharePoint Online site: `https://fabrikam.sharepoint.com/`.
+
+<a name="FlowStep2"> </a> 
+
+#### Step 2: The add-in redirects to the SharePoint site authorization URL
+
+![Oauth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_2.png)
+
+When the user selects the button to get the photos, the Contoso photo-printing add-in redirects the browser to `https://fabrikam.sharepoint.com/`. This redirect is an HTTP 302 Redirect Response.
+
+If you're using Microsoft .NET, **Response.Redirect** is one of several ways you can do the redirect from your code. Using the TokenHelper.cs (or .vb) file in your project, your code can call the overloaded **GetAuthorizationUrl** method (using the overload with three arguments). This method constructs the OAuthAuthorize.aspx redirect URL for you. Or, your code can manually construct the URL.
+
+For example, if you choose to call the **GetAuthorizationUrl** method to construct the OAuthAuthorize.aspx redirect URL for you, using the TokenHelper.cs (or .vb) in your project, the code is as follows: `Response.Redirect(TokenHelper.GetAuthorizationUrl(`  `sharePointSiteUrl.ToString(), "Web.Read List.Write", "https://contoso.com/RedirectAccept.aspx"));`
+
+If you look at the three-parameter overload of the **GetAuthorizationUrl** method in TokenHelper.cs (or .vb), you see that the second parameter is a permission scope parameter, which is a space-delimited list of permissions the add-in requests in shorthand format. For more information about permission scopes, see [Permission scope aliases and the use of the OAuthAuthorize.aspx page](#Scope).
+
+The third parameter must be the same redirect URI that is used when the add-in is registered. For more information about registration, see [Register SharePoint Add-ins](register-sharepoint-add-ins.md). The returned string is a URL including query string parameters. If you prefer, you can manually construct the OAuthAuthorize.aspx redirect URL. For example, the URL that the Contoso photo-printing add-in redirects the user to in this case is: `https://fabrikam.sharepoint.com/_layouts/15/OAuthAuthorize.aspx?client_id=client_GUID&amp;scope=app_permissions_list&amp;response_type=code&amp;redirect_uri=redirect_uri`
+
+As the example shows, the Contoso photo-printing add-in sends the OAuth client ID and redirect URI to the Fabrikam site as query string parameters. The following is an example of the GET request with sample query string values. Line breaks have been added for clarity. The actual target URL is a single line. `GET /authcode HTTP/1.1`  `Host: fabrikam.sharepoint.com`   `/oauthauthorize.aspx`  `?client_id= c78d058c-7f82-44ca-a077-fba855e14d38`  `&amp;scope=list.read`  `&amp;response_type=code`  `&amp;redirect_uri= https%3A%2F%2Fcontoso%2Ecom%2Fredirectaccept.aspx`
+
+If you want a separate consent pop-up dialog, you can add the query parameter **IsDlg=1** to the URL construct as shown here: `/oauthauthorize.aspx?IsDlg=1&amp;client_id= c78d058c-7f82-44ca-a077-fba855e14d38&amp;scope=list.read&amp;response_type=code&amp;redirect_uri= https%3A%2F%2Fcontoso%2Ecom%2Fredirectaccept.aspx`.
+
+
+#### Step 3: SharePoint displays the consent page so the user can grant the add-in permissions
+
+![Oauth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_3.png)
+
+If the user is not already signed into the Fabrikam SharePoint Online site, the user is prompted to sign in. When the user is signed in, SharePoint renders an HTML consent page. The consent page prompts the user to grant (or deny) the Contoso photo-printing add-in the permissions that the add-in requests. In this case, the user would be granting the add-in read access to the user's picture library on Fabrikam.
+
+#### Step 4: SharePoint requests a short-lived authorization code from ACS
+
+![Oauth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_4.png)
+
+The Fabrikam SharePoint Online site asks ACS to create a short-lived (approximately 5 minutes) authorization code unique to this combination of user and add-in. ACS sends the authorization code to the Fabrikam site.
+
+#### Step 5: The SharePoint Online site redirects to the app's registered redirect URI, passing the authorization code to the add-in
+
+![Oauth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_5.png)
+
+The Fabrikam SharePoint Online site redirects the browser back to Contoso via HTTP 302 Response. The URL construct for this redirection uses the redirect URI that was specified when the photo-printing add-in was registrated. It also includes the authorization code as a query string.
+
+The redirect URL is structured like the following: `https://contoso.com/RedirectAccept.aspx?code=<authcode>`
+
+#### Step 6: The add-in uses the authorization code to request an access token from ACS, which validates the request, invalidates the authorization code, and then sends access and refresh tokens to the add-in
+
+![Oauth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_6.png)
+
+Contoso retrieves the authorization code from the query parameter, and then includes it, along with the client ID and client secret, in a request to ACS for an access token.
+
+If you are using managed code and the SharePoint CSOM, the TokenHelper.cs (or .vb) file, the method that makes the request to ACS is **GetClientContextWithAuthorizationCode**. In this case the code looks similar to the following (where  `authCode` is a variable to which the authorization code has been assigned): `TokenHelper.GetClientContextWithAuthorizationCode(`  `"https://fabrikam.sharepoint.com/",`  `"00000003-0000-0ff1-ce00-000000000000",`  `authCode,`  `"1ee82b34-7c1b-471b-b27e-ff272accd564",`  `new Uri(Request.Url.GetLeftPart(UriPartial.Path)));`
+
+If you look at the TokenHelper.cs (or .vb) file, the second parameter of the **GetClientContextWithAuthorizationCode** method is the `targetPrincipalName`. This value is always the constant " `00000003-0000-0ff1-ce00-000000000000`" in an add-in that is accessing SharePoint. If you trace the call hierarchy from **GetClientContextWithAuthorizationCode**, it obtains the client ID and secret from the web.config file. 
+
+ACS receives Contoso's request and validates the client ID, client secret, redirect URI, and authorization code. If all are valid, the ACS invalidates the authorization code (it can be used only once) and creates a refresh token and an access token, which it returns to Contoso. The Contoso application can cache this access token for reuse on later requests. By default, access tokens are good for about 12 hours.
+
+Each access token is specific to the user account that is specified in the original request for authorization, and grants access only to the services that are specified in that request. Your add-in should store the access token securely. The Contoso application can also cache the refresh token. By default, refresh tokens are good for 6 months. The refresh token can be redeemed for a new access token from ACS whenever the access token expires. 
+
+For more information about tokens, see [Handle security tokens in provider-hosted low-trust SharePoint Add-ins](handle-security-tokens-in-provider-hosted-low-trust-sharepoint-add-ins.md).
+
+#### Step 7: The add-in can now use the access token to request data from the SharePoint site, which it can display to the user
+
+![Oauth](../images/SharePoint_appsForSharePoint_3LeggedOauthFlow_7.png)
+
+Contoso includes the access token to make a REST API call or CSOM request to SharePoint, passing the OAuth access token in the HTTP **Authorization** header. SharePoint returns the information that Contoso requested. 
+
+For more information about how this request is made, see [Handle security tokens in provider-hosted low-trust SharePoint Add-ins](handle-security-tokens-in-provider-hosted-low-trust-sharepoint-add-ins.md).
+
+
 
 <a name="Scope"> </a>
 
@@ -84,7 +147,7 @@ This section assumes that you are familiar with the article [Add-in permissions 
 
 The values listed in the **Scope alias** column are shorthand versions of their counterparts in the **Scope URI** column. The aliases can be used only by add-ins that request permission to access SharePoint resources on the fly. (The scope URI values are used in the add-in manifest of add-ins that are launched from SharePoint. These add-ins request permissions during add-in installation.)
 
-The scope aliases are used only in the context of using the OAuthAuthorize.aspx redirect page. As shown in step 2 of the OAuth flow described in the previous section, when the add-in is using managed code, the aliases are used when you call the **GetAuthorizationUrl** method of TokenHelper.cs (or .vb) in your project. The following is another example:
+The scope aliases are used only in the context of using the OAuthAuthorize.aspx redirect page. As shown in [step 2 of the OAuth flow](#FlowStep2) described in the previous section, when the add-in is using managed code, the aliases are used when you call the **GetAuthorizationUrl** method of TokenHelper.cs (or .vb) in your project. The following is another example: 
 
 ```C#
 Response.Redirect(TokenHelper.GetAuthorizationUrl(
@@ -104,7 +167,7 @@ If you are not using managed code, the scope aliases are used in the scope field
  
 <br/>
 
-**Table 2. SharePoint add-in permission request scope URIs and their corresponding aliases**
+**Table 1. SharePoint add-in permission request scope URIs and their corresponding aliases**
 
 |**Scope URI**|**Scope alias**|**Available rights**|
 |:-----|:-----|:-----|
@@ -131,7 +194,7 @@ If you are not using managed code, the scope aliases are used in the scope field
 
 ## Redirect URIs and a sample redirect page
 
-The redirect URI that is used by add-ins that request permission on the fly is the URI that SharePoint redirects the browser to after consent is granted (with the authorization code included as a query parameter). Step 2 of the flow description in Table 1 gives an example where the URI is hardcoded in a call to **GetAuthorizationUrl** method. Alternatively, an ASP.NET add-in can also store the redirect URI in the web.config file as shown in this example:
+The redirect URI that is used by add-ins that request permission on the fly is the URI that SharePoint redirects the browser to after consent is granted (with the authorization code included as a query parameter). [Step 2 of the OAuth flow](#FlowStep2) gives an example where the URI is hardcoded in a call to **GetAuthorizationUrl** method. Alternatively, an ASP.NET add-in can also store the redirect URI in the web.config file as shown in this example:
 
 ```XML
     <configuration>
