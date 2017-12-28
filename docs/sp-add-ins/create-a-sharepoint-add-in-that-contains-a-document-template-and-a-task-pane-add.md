@@ -22,7 +22,7 @@ Install the following components before you get started:
     
     - To develop SharePoint Add-ins that target SharePoint in Office 365, see [Set up a development environment for SharePoint Add-ins on Office 365](set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md).
     
-    - To develop SharePoint Add-ins that target an on-premises installation of SharePoint, see [Set up an on-premises development environment for SharePoint Add-ins](Set up an on-premises development environment for SharePoint Add-ins.md).
+    - To develop SharePoint Add-ins that target an on-premises installation of SharePoint, see [Set up an on-premises development environment for SharePoint Add-ins](set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md).
 
 - [Visual Studio and the Microsoft Office Developer Tools](https://www.visualstudio.com/vs/office-tools/)
     
