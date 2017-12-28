@@ -182,5 +182,5 @@ Uninstall-PnPApp -Identity <app id>
 Getting a list of apps that can be added to the site is possible using:
 
 ```PowerShell
-Get-PnPAvailableApp
+Get-PnPApp
 ```
