@@ -37,7 +37,7 @@ For more information about creating a SharePoint Add-in that uses the cross-doma
 
 - [Creating SharePoint Add-ins that use the cross-domain library](creating-sharepoint-add-ins-that-use-the-cross-domain-library.md)
 
-- [Solving cross-domain problems in SharePoint Add-ins (blog post)](https://blogs.msdn.microsoft.com/officeapps/2012/11/29/solving-cross-domain-problems-in-apps-for-sharepoint/).
+- [Solving cross-domain problems in SharePoint Add-ins (blog post)](https://blogs.msdn.microsoft.com/officeapps/2012/11/29/solving-cross-domain-problems-in-apps-for-sharepoint/)
 
 
 ## Background information about the OAuth 2.0 Framework and the SharePoint implementation of it
