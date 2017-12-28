@@ -115,7 +115,7 @@ $newClientSecret
  
 
 > [!TIP]
-> By default, the add-in secret lasts one year. You can set this to a shorter or longer (up to 3 years maximum) by using the  **-EndDate** parameter on the three calls of the **New-MsolServicePrincipalCredential** cmdlet. The value of the parameter must be a [DateTime](http://msdn2.microsoft.com/EN-US/library/03ybds8y) object set to no longer than 3 years from **DateTime.Now**.
+> By default, the add-in secret lasts one year. You can set this to a shorter or longer (up to 3 years maximum) by using the **-EndDate** parameter on the three calls of the **New-MsolServicePrincipalCredential** cmdlet. The value of the parameter must be a [DateTime](http://msdn2.microsoft.com/EN-US/library/03ybds8y) object set to no longer than 3 years from **DateTime.Now**.
  
 ## Update the remote web application in Visual Studio to use the new secret
 
@@ -125,7 +125,7 @@ $newClientSecret
  
 
 
-1. Open the SharePoint Add-in project in Visual Studio, and open the web.config file for the web application project. In the  **appSettings** section, there are keys for the client ID and client secret. The following is an example:
+1. Open the SharePoint Add-in project in Visual Studio, and open the web.config file for the web application project. In the **appSettings** section, there are keys for the client ID and client secret. The following is an example:
     
 ```XML
   <appSettings>
@@ -136,7 +136,7 @@ $newClientSecret
 
 ```
 
-2. Change the name of the  **ClientSecret** key to "SecondaryClientSecret" as shown in the following example:
+2. Change the name of the **ClientSecret** key to "SecondaryClientSecret" as shown in the following example:
     
 ```XML
   <add key="SecondaryClientSecret" value="your old secret here" />
@@ -145,7 +145,7 @@ $newClientSecret
 > [!NOTE]
 > If you are performing this procedure for the first time there will be no **SecondaryClientSecret** property entry at this point in the configuration file. However if you are performing the procedure for a subsequent client secret expiration (second or third) the property **SecondaryClientSecret** is already present and containing the initial or already longer time ago expired old secret. In this case delete the **SecondaryClientSecret** property first before renaming **ClientSecret**.
 
-3. Add a new  **ClientSecret** key and give it your new client secret. Your markup should now look like the following:
+3. Add a new **ClientSecret** key and give it your new client secret. Your markup should now look like the following:
     
 ```XML
   <appSettings>
@@ -168,7 +168,7 @@ $newClientSecret
 
 ## Create a client secret that is valid for three years
 
-For expired client secrets, first you must delete all of the expired secrets for a given  **clientId**. Then you create a new one with MSO PowerShell, wait at least 24 hours, and test the app with the new **clientId** and **ClientSecret** key.
+For expired client secrets, first you must delete all of the expired secrets for a given **clientId**. Then you create a new one with MSO PowerShell, wait at least 24 hours, and test the app with the new **clientId** and **ClientSecret** key.
  
 
  
@@ -182,7 +182,7 @@ connect-msolservice -credential $msolcred
 
 ```
 
-2. Get  **ServicePrincipals** and keys. Printing **$keys** returns three records. Replace each **KeyId** in *KeyId1*  , *KeyId2*  and *KeyId3*  . You will also see the **EndDate** of each key. Confirm whether your expired key appers there.
+2. Get **ServicePrincipals** and keys. Printing **$keys** returns three records. Replace each **KeyId** in *KeyId1*  , *KeyId2*  and *KeyId3*  . You will also see the **EndDate** of each key. Confirm whether your expired key appers there.
     
     > [!NOTE] 
     > The **clientId** needs to match your expired **clientId**. It's recommended to delete all keys, both expired and unexpired, for this **clientId**.
@@ -196,7 +196,7 @@ Remove-MsolServicePrincipalCredential -KeyIds @("KeyId1"," KeyId2"," KeyId3") -A
 
 ```
 
-3. Generate a new  **ClientSecret** for this **clientID**. It uses the same **clientId** as set in the above step. The new **ClientSecret** is valid for 3 years.
+3. Generate a new **ClientSecret** for this **clientID**. It uses the same **clientId** as set in the above step. The new **ClientSecret** is valid for 3 years.
     
 ```
   $bytes = New-Object Byte[] 32
@@ -213,13 +213,13 @@ $newClientSecret
 
 ```
 
-4. Copy the output of  **$newClientSecret**.
+4. Copy the output of **$newClientSecret**.
     
  
-5. Replace the  **Web.config** with this **ClientId** and **ClientSecret**. You don't need **SecondaryClientSecret** app settings.
+5. Replace the **Web.config** with this **ClientId** and **ClientSecret**. You don't need **SecondaryClientSecret** app settings.
     
  
-6. Wait at least 24 hours to propagate  **ClientSecret** to SharePoint Office (SPO).
+6. Wait at least 24 hours to propagate **ClientSecret** to SharePoint Office (SPO).
     
  
 
@@ -228,3 +228,4 @@ $newClientSecret
 - [Provider Hosted App fails on SPO](http://blogs.technet.com/b/sharepointdevelopersupport/archive/2015/03/11/provider-hosted-app-fails-on-spo.aspx)
 
 - [Creating SharePoint Add-ins that use low-trust authorization](creating-sharepoint-add-ins-that-use-low-trust-authorization.md)
+- [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md)

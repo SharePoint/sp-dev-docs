@@ -477,5 +477,3 @@ Follow the steps in  [Get started creating provider-hosted SharePoint Add-ins](g
 
 - [Creating SharePoint Add-ins that use low-trust authorization](creating-sharepoint-add-ins-that-use-low-trust-authorization.md)
 - [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md)
-    
- 
