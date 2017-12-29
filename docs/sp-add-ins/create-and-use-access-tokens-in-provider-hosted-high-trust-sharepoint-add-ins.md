@@ -274,5 +274,8 @@ The free  [Fiddler tool](http://www.telerik.com/fiddler) can be used to capture 
     
  
 -  [OAuth 2.0](http://oauth.net/2/)
+
+- [Creating SharePoint Add-ins that use high-trust authorization](creating-sharepoint-add-ins-that-use-high-trust-authorization.md)
+- [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md)
     
  
