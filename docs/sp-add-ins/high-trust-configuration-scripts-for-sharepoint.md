@@ -87,7 +87,7 @@ The following table describes the parameters and switches for the script. Custom
 |:-----|:-----|
 |-CertPath (required)|The full path to the shared *.cer file.|
 |-CertName (required)|The name of the shared certificate. To find the name, open IIS on the remote web server that hosts the remote web application. Highlight the _server name_ node and double-click **Certificates**. The certificate is listed by its name.|
-|-TokenIssuerFriendlyName (optional)|A unique friendly name for the token issuer, up to 50 characters. This can be helpful if you are debugging issues with token issuers.<br/><br/>The name must be unique. Including a GUID would ensure that it is, but a GUID uses up 32 of the 50 characters, so consider converting a GUID to a Base 64 string that can be reduced to 22 characters.<br/><br/>If this parameter is not used, the script uses the name `High-Trust Add-ins <base64 version of issuer GUID>`.|
+|-TokenIssuerFriendlyName<br/>(optional)|A unique friendly name for the token issuer, up to 50 characters. This can be helpful if you are debugging issues with token issuers.<br/><br/>The name must be unique. Including a GUID would ensure that it is, but a GUID uses up 32 of the 50 characters, so consider converting a GUID to a Base 64 string that can be reduced to 22 characters.<br/><br/>If this parameter is not used, the script uses the name `High-Trust Add-ins <base64 version of issuer GUID>`.|
 
 The following is an example of running this script.
  
@@ -97,7 +97,9 @@ The following is an example of running this script.
  
 > [!IMPORTANT] 
 > The registration of the certificate as a token issuer is not effective immediately. It may take as long as 24 hours before all the SharePoint servers recognize the new token issuer. Running an iisreset on all the SharePoint servers would cause them to immediately recognize the issuer, if you can do that without disturbing SharePoint users.
- 
+
+<br/>
+
 Start a new file in a text editor, or the PowerShell editor, and copy the following into a text file and save it as **HighTrustConfig-ForSharedCertificate.ps1**. Use ANSI format, not UTF-8.
 
 ```powershell
@@ -174,7 +176,7 @@ The following table describes the parameters and switches for the script. Custom
 |-CertPath (required)|The full path to the shared *.cer file.|
 |-CertName (required)|The name of the shared certificate. To find the name, open IIS on the remote web server that hosts the remote web application. Highlight the _server name_ node and double-click **Certificates**. The certificate is listed by its name.|
 |-SPAppClientID (required)|The client ID (a GUID) that was used when the SharePoint Add-in was registered on appregnew.aspx.<br/>This is used as the issuer ID for the token issuer. The script ensures that it is lowercase, which is a requirement for issuer IDs.|
-|-TokenIssuerFriendlyName (optional)|A unique friendly name for the token issuer, up to 50 characters. This can be helpful if you are debugging issues with token issuers.<br/>The name must be unique. Consider using the name of the SharePoint Add-in. If this parameter is not used, the script uses the value of `-SPAppClientID` as the name.|
+|-TokenIssuerFriendlyName<br/>(optional)|A unique friendly name for the token issuer, up to 50 characters. This can be helpful if you are debugging issues with token issuers.<br/>The name must be unique. Consider using the name of the SharePoint Add-in. If this parameter is not used, the script uses the value of `-SPAppClientID` as the name.|
 
 The following is an example of calling the script:
 
@@ -184,6 +186,8 @@ The following is an example of calling the script:
  
 > [!IMPORTANT] 
 > The registration of the certificate as a token issuer is not effective immediately. It may take as long as 24 hours before all the SharePoint servers recognize the new token issuer. Running an iisreset on all the SharePoint servers would cause them to immediately recognize the issuer, if you can do that without disturbing SharePoint users.
+
+<br/>
 
 Start a new file in a text editor, or the PowerShell editor, and copy the following into a text file and save it as **HighTrustConfig-ForSingleApp.ps1**. Use ANSI format, not UTF-8.
 
@@ -256,6 +260,8 @@ $sc = Get-SPServiceContext -Site $Web.Site
 $realm = Get-SPAuthenticationRealm -ServiceContext $sc
 ```
 
+<br/>
+
 To complete the modification of the script, add an additional required parameter `$WebURL` to the param list at the top of the file, like this:
 
 ```powershell
@@ -265,9 +271,13 @@ param (
 )
 ```
 
+<br/>
+
 Be sure to add a comma after the parameter that precedes the new one. And expand the "Usage" example on the top line to take into account the new parameter with something like this: 
 
 `-WebURL <full URL where SP add-in will be installed>`
+
+<br/>
  
 To make the SharePoint Add-in trusted on every site subscription, get a reference to the farm with the `Get-SPFarm` cmdlet, and then iterate through its **SiteSubscriptions** property. Pass each **SPSiteSubscription** object to the `Get-SPServiceContext` cmdlet as the value of the `-SiteSubscription` parameter. The following is an example.
 
