@@ -38,19 +38,19 @@ Your code needs to:
 
 1. **Create an access token.** The subtasks for creating this token vary depending on whether the remote web application makes add-in-only calls to SharePoint, user+add-in calls, or both. (For more information, see [Add-in authorization policy types in SharePoint](add-in-authorization-policy-types-in-sharepoint.md).) 
     
-- If the add-in makes user+add-in calls, creating the access token includes the following subtasks:
+    - If the add-in makes user+add-in calls, creating the access token includes the following subtasks:
     
-    1. Create an actor token that identifies the SharePoint Add-in and tells SharePoint to delegate user authentication and authorization to your add-in, and encode it in base 64 encoding. Details about the claims and structure of the actor token are in Table 2. Details about encoding and signing the token are in [Encoding and signing tokens](#EncodeTokens).
+        1. Create an actor token that identifies the SharePoint Add-in and tells SharePoint to delegate user authentication and authorization to your add-in, and encode it in base 64 encoding. Details about the claims and structure of the actor token are in Table 2. Details about encoding and signing the token are in [Encoding and signing tokens](#EncodeTokens).
             
-    2. Sign the actor token with credentials from an X.509 certificate that a SharePoint farm administrator has configured SharePoint to trust.
+        2. Sign the actor token with credentials from an X.509 certificate that a SharePoint farm administrator has configured SharePoint to trust.
             
-    3. Include the actor token in the access token.
+        3. Include the actor token in the access token.
             
-    4. Add other required claims to the access token. Details about the claims and structure of the token are in Table 1.
+        4. Add other required claims to the access token. Details about the claims and structure of the token are in Table 1.
         
-- If the add-in makes add-in-only calls, your code only needs to do the first two of these subtasks. The actor token serves as the access token.
+    - If the add-in makes add-in-only calls, your code only needs to do the first two of these subtasks. The actor token serves as the access token.
         
-- If the add-in makes some user+add-in calls and some add-in-only calls, it must create a simple actor token for the add-in-only calls and the larger, nested access token for the user+add-in calls. The same access token cannot be used for both.
+    - If the add-in makes some user+add-in calls and some add-in-only calls, it must create a simple actor token for the add-in-only calls and the larger, nested access token for the user+add-in calls. The same access token cannot be used for both.
      
 2. **Include the access token in every HTTP request to SharePoint.** The token is added as an **Authorization** header to the request. The value of the header is the word "Bearer", followed by a space, followed by the base 64-encoded access token.    
  
