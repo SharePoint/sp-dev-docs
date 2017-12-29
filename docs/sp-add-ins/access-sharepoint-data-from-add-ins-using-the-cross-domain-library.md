@@ -19,7 +19,7 @@ You can access data in the host web—for example, you can access lists that end
 > [!NOTE] 
 > In this topic, **add-in domain** refers to the domain that hosts the add-in pages. This can be the domain of a remote web application in a provider-hosted add-in, but add-in pages can also be on SharePoint in the add-in web and make calls to the host web domain. In the latter scenario, the add-in domain is the domain of the add-in web.
 
-The main example in this article shows how to build an add-in that reads data on the add-in web and displays it on a webpage. The [Next steps](SP15Accessdatafromremoteapp_Next) section shows more scenarios that build on top of the main example.
+The main example in this article shows how to build an add-in that reads data on the add-in web and displays it on a webpage. The [Next steps](#SP15Accessdatafromremoteapp_Next) section shows more scenarios that build on top of the main example.
  
 
 <a name="SP15Accessdatafromremoteapp_Prereq"> </a>
