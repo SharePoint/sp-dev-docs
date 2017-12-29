@@ -89,7 +89,7 @@ For the workflow to function properly, it must be granted full control on the si
 
 6. Paste the client ID in the **App Id** field, and then select **Lookup**, as shown in the previous figure.
 
-7. Paste the following code in the **Permission Request XML** field to grant full control permission *(note: this code block was updated on 12/29/17 to include the "AllowAppOnlyPolicy")*.
+7. Paste the following code in the **Permission Request XML** field to grant full control permission *(note: this code block was updated on 12/29/17 to include the `AllowAppOnlyPolicy`)*.
     
   ```XML 
     <AppPermissionRequests AllowAppOnlyPolicy="true">
@@ -101,7 +101,7 @@ For the workflow to function properly, it must be granted full control on the si
   > [!WARNING] 
   > There are no placeholders in the **Scope** value. It is a literal value. Enter it exactly as it appears here.
 
-  The following figure shows an example of the completed page *(note that the code in the **Permission Request XML** area does not reflect the recent update to the code in Step 7)*. 
+  The following figure shows an example of the completed page _(note that the code in the **Permission Request XML** area does not reflect the recent update to the code in Step 7)_. 
   
   ![Looking up an App Id.](../images/SPD15-WFAppPermissions5.png)
 
