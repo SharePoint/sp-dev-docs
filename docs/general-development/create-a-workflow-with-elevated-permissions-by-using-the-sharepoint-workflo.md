@@ -30,18 +30,18 @@ To solve this, you have to create a workflow with elevated permissions by doing 
 
 ## Allow a workflow to use add-in permissions on a SharePoint site
 
-The first step is to allow the workflow to use add-in permissions. You configure a workflow to use add-in permissions on the **Site Settings** page of the SharePoint site where the workflow runs. The following procedure configures the SharePoint site to allow the workflow to use add-in permissions.
+The first step is to allow the workflow to use add-in permissions. You configure a workflow to use add-in permissions on the **Site settings** page of the SharePoint site where the workflow runs. The following procedure configures the SharePoint site to allow the workflow to use add-in permissions.
   
 > [!IMPORTANT] 
 > The procedure must be completed by a user that has **Site Owner** permissions.
 
 ### To allow workflow to use add-in permissions
 
-1. Select the **Settings** icon as shown in the figure to open the **Site Settings** page.
+1. Select the **Settings** icon as shown in the figure to open the **Site settings** page.
 
   ![Settings menu](../images/SPD15-WFAppPermissions1.png)
 
-2. Go to **Site Settings**.
+2. Go to **Site settings**.
  
 3. In the **Site Actions** section, select **Manage site features**.
 
@@ -55,10 +55,10 @@ The first step is to allow the workflow to use add-in permissions. You configure
 
 ## Grant full control permission to a workflow
 
-For the workflow to function properly, it must be granted full control on the site. The following procedure grants the full control permission to the workflow.
+For the workflow to function properly, it must be granted full control on the site. The following procedure grants full control permission to the workflow.
   
 > [!IMPORTANT] 
-> The procedure assumes the following: The procedure must be completed by a user that has **Site Owner** permissions. The workflow must already be published to the SharePoint site.
+> The procedure must be completed by a user that has **Site Owner** permissions. The workflow must already be published to the SharePoint site.
 
 ### To grant full control permission to a workflow
 
@@ -66,7 +66,7 @@ For the workflow to function properly, it must be granted full control on the si
  
   ![Settings menu](../images/SPD15-WFAppPermissions1.png)
 
-2. Go to **Site Settings**.    
+2. Go to **Site settings**.    
   
 3. In the **Users and Permissions** section, select **Site app permissions**.    
   
@@ -79,9 +79,9 @@ For the workflow to function properly, it must be granted full control on the si
   Example: `http://{hostname}/{the Site Collection}/_layouts/15/appinv.aspx`. 
     
   > [!NOTE]
-  > The 'app' in this step refers to the Workflow add-in in general and not just a specific workflow. Individual workflows cannot be access controlled. When you enable add-in permissions, you are enabling for all workflows within the Site Collection. 
+  > The 'app' in this step refers to the workflow add-in in general and not just a specific workflow. Individual workflows cannot be access controlled. When you enable add-in permissions, you are enabling for all workflows within the Site Collection. 
 
-  For more information about setting up a workflow, see [Blog article from Sympraxis Consulting: Looping Through Content in a SharePoint Site Workflow](http://sympmarc.com/series/looping-through-content-in-a-sharepoint-2013-site-workflow/)
+  For more information about setting up a workflow, see the [Blog article from Sympraxis Consulting: Looping Through Content in a SharePoint Site Workflow](http://sympmarc.com/series/looping-through-content-in-a-sharepoint-2013-site-workflow/)
     
   The following figure shows an example.
  
@@ -89,7 +89,7 @@ For the workflow to function properly, it must be granted full control on the si
 
 6. Paste the client ID in the **App Id** field, and then select **Lookup**, as shown in the previous figure.
 
-7. Paste the following **Permissions Request** XML to grant full control permission (note: this code block was updated on 12/29/17 to include the "AllowAppOnlyPolicy").
+7. Paste the following code in the **Permission Request XML** field to grant full control permission *(note: this code block was updated on 12/29/17 to include the "AllowAppOnlyPolicy")*.
     
   ```XML 
     <AppPermissionRequests AllowAppOnlyPolicy="true">
@@ -101,13 +101,13 @@ For the workflow to function properly, it must be granted full control on the si
   > [!WARNING] 
   > There are no placeholders in the **Scope** value. It is a literal value. Enter it exactly as it appears here.
 
-  The following figure shows an example of the completed page (note that the code in the Permission Request XML area has been updated to that in Step 7, so for now it doesn't match the screenshot).
+  The following figure shows an example of the completed page *(note that the code in the **Permission Request XML** area does not reflect the recent update to the code in Step 7)*. 
   
   ![Looking up an App Id.](../images/SPD15-WFAppPermissions5.png)
 
 8. Select **Create**.
     
-9. You are then asked to trust the Workflow add-in, as shown in the following figure. Select **Trust It**.
+9. You are then asked to trust the workflow add-in, as shown in the following figure. Select **Trust It**.
     
   ![Trust the Workflow app.](../images/SPD15-WFAppPermissions6.png)
   
@@ -124,9 +124,9 @@ Finally, you need to wrap the workflow actions inside an App Step. The following
   
 3. Select **Workflows** in the navigation window.    
   
-4. Create a new List Workflow for the App Demo list, as shown in the figure.
+4. Create a new **List Workflow** for the **App Demo** list, as shown in the figure.
 
-  ![Create a new List workflow.](../images/SPD15-WFAppPermissions7.png)
+  ![Create a new List Workflow.](../images/SPD15-WFAppPermissions7.png)
 
 5. Insert an **App Step**, as shown in the figure.
     
@@ -142,7 +142,7 @@ Finally, you need to wrap the workflow actions inside an App Step. The following
 
   ![Lookup for Person dialog.](../images/SPD15-WFAppPermissions10.png)
   
-9. Enter Email from the App Demo list in the email message body.
+9. Enter **Email** from the **App Demo** list in the email message body.
      
 10. Select **OK** to return to the workflow. The completed workflow is shown in the figure.
 
@@ -159,7 +159,7 @@ Finally, you need to wrap the workflow actions inside an App Step. The following
 
 <a name="section2"> </a>
 
-## Understanding how it works
+## Understand how it works
 
 To understand why elevating permissions for a workflow is required, consider that workflows are fundamentally add-ins for SharePoint, and they follow the same authorization rules of the add-in model. The default configuration for workflow is that the effective permissions of the workflow are an intersection of user permissions and the add-in permissions, as shown in the figure.
     
