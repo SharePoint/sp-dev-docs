@@ -1061,21 +1061,21 @@
   - name: Get started creating SharePoint-hosted add-ins
     href: sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins.md
     items:
-    - name: 1. Deploy and install an add-in
+    - name: 1. Deploy and install add-ins
       href: sp-add-ins/deploy-and-install-a-sharepoint-hosted-sharepoint-add-in.md
-    - name: 2. Add custom columns to an add-in
+    - name: 2. Add custom columns
       href: sp-add-ins/add-custom-columns-to-a-sharepoint-hosted-sharepoint-add-in.md
-    - name: 3. Add a custom content type to an add-in
+    - name: 3. Add a custom content type
       href: sp-add-ins/add-a-custom-content-type-to-a-sharepoint-hosted-sharepoint-add-in.md
-    - name: 4. Add a Web Part to a page in an add-in
+    - name: 4. Add a Web Part to a page
       href: sp-add-ins/add-a-web-part-to-a-page-in-a-sharepoint-hosted-sharepoint-add-in.md
-    - name: 5. Add a workflow to an add-in
+    - name: 5. Add a workflow
       href: sp-add-ins/add-a-workflow-to-a-sharepoint-hosted-sharepoint-add-in.md
-    - name: 6. Add a custom page and style to an add-in
+    - name: 6. Add a custom page and style
       href: sp-add-ins/add-a-custom-page-and-style-to-a-sharepoint-hosted-sharepoint-add-in.md
-    - name: 7. Add custom client-side rendering to an add-in
+    - name: 7. Add custom client-side rendering
       href: sp-add-ins/add-custom-client-side-rendering-to-a-sharepoint-hosted-sharepoint-add-in.md
-    - name: 8. Create a custom ribbon button in the host web of an add-in
+    - name: 8. Create a custom ribbon button in the host web
       href: sp-add-ins/create-a-custom-ribbon-button-in-the-host-web-of-a-sharepoint-add-in.md
     - name: 9. Use the SharePoint JavaScript APIs to work with SharePoint data
       href: sp-add-ins/use-the-sharepoint-javascript-apis-to-work-with-sharepoint-data.md
@@ -1086,21 +1086,21 @@
     items:
     - name: 1. Give your add-in the SharePoint look-and-feel
       href: sp-add-ins/give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md
-    - name: 2. Include a custom button in the add-in
+    - name: 2. Include a custom button
       href: sp-add-ins/include-a-custom-button-in-the-provider-hosted-add-in.md
     - name: 3. Get a quick overview of the SharePoint object model
       href: sp-add-ins/get-a-quick-overview-of-the-sharepoint-object-model.md
-    - name: 4. Add SharePoint write operations to the add-in
+    - name: 4. Add SharePoint write operations
       href: sp-add-ins/add-sharepoint-write-operations-to-the-provider-hosted-add-in.md
-    - name: 5. Include an add-in part in the add-in
+    - name: 5. Include an add-in part
       href: sp-add-ins/include-an-add-in-part-in-the-provider-hosted-add-in.md
-    - name: 6. Handle add-in events in the add-in
+    - name: 6. Handle add-in events
       href: sp-add-ins/handle-add-in-events-in-the-provider-hosted-add-in.md
-    - name: 7. Add first-run logic to the add-in
+    - name: 7. Add first-run logic
       href: sp-add-ins/add-first-run-logic-to-the-provider-hosted-add-in.md
-    - name: 8. Programmatically deploy a custom button in the add-in
+    - name: 8. Programmatically deploy a custom button
       href: sp-add-ins/programmatically-deploy-a-custom-button-in-the-provider-hosted-add-in.md
-    - name: 9. Handle list item events in the add-in
+    - name: 9. Handle list item events
       href: sp-add-ins/handle-list-item-events-in-the-provider-hosted-add-in.md
   - name: Design
     href: sp-add-ins/design-sharepoint-add-ins.md
