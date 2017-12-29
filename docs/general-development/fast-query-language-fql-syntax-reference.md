@@ -1170,11 +1170,11 @@ Use the **RANGE** operator for numeric and date/time managed properties. The ope
 
 #### Examples
 
-The following expression matches a description property starting with the phrase "olympic games" appearing in items with a size of at least 10 000 bytes.
+The following expression matches a description property starting with the phrase "big accomplishments" appearing in items with a size of at least 10 000 bytes.
   
     
     
- `and(size:range(10000, max), description:starts-with("olympic games"))`
+ `and(size:range(10000, max), description:starts-with("big accomplishments"))`
   
     
     
