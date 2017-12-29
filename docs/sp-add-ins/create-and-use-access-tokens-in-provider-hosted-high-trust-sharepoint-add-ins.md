@@ -40,13 +40,13 @@ Your code needs to:
     
     If the add-in makes user+add-in calls, creating the access token includes the following subtasks:
     
-    1. Create an actor token that identifies the SharePoint Add-in and tells SharePoint to delegate user authentication and authorization to your add-in, and encode it in base 64 encoding. Details about the claims and structure of the actor token are in Table 2. Details about encoding and signing the token are in [Encoding and signing tokens](#EncodeTokens).
+      1. Create an actor token that identifies the SharePoint Add-in and tells SharePoint to delegate user authentication and authorization to your add-in, and encode it in base 64 encoding. Details about the claims and structure of the actor token are in Table 2. Details about encoding and signing the token are in [Encoding and signing tokens](#EncodeTokens).
             
-    2. Sign the actor token with credentials from an X.509 certificate that a SharePoint farm administrator has configured SharePoint to trust.
+      2. Sign the actor token with credentials from an X.509 certificate that a SharePoint farm administrator has configured SharePoint to trust.
             
-    3. Include the actor token in the access token.
+      3. Include the actor token in the access token.
             
-    4. Add other required claims to the access token. Details about the claims and structure of the token are in Table 1.
+      4. Add other required claims to the access token. Details about the claims and structure of the token are in Table 1.
         
     If the add-in makes add-in-only calls, your code only needs to do the first two of these subtasks. The actor token serves as the access token.
         
@@ -170,7 +170,7 @@ Table 2 describes the claims your code must include in the body of the token and
 | `iss`|Same meaning as in the parent access token, but the issuer GUID is not the client ID of the web application. It is the GUID of the certificate.<br/><br/>Although code in the application constructs the actor token, the certificate is considered the issuer of the actor token.<br/><br/>Note that the issuer GUID in this example is an easy-to-remember GUID string that the farm administrator used when she registered the X.509 certificate as a trusted token issuer in SharePoint. This is common when the same certificate is used as the actor token issuer for all high-trust SharePoint Add-ins on the farm.<br/><br/>An administrator can also choose to have distinct certificates for each SharePoint Add-in. In that case, she would use different randomly generated GUIDs for the certificates.<br/><br/>*All letters in the issuer GUID must be lowercase.* |`11111111-1111-1111-1111-111111111111@52aa6841-b76b-4ed4-a3d7-a259fce1dfa2`|
 | `nbf`|Same meaning as in the parent access token.|Same value as the parent access token.|
 | `exp`|Same meaning as in the parent access token.|Same value as the parent access token.|
-| `nameid`|A unique identifier for the SharePoint Add-in because it is the "actor" in the high-trust system. The format is _client_ID_@_SharePoint_realm_|`c3ab8885-458f-4864-8804-1608145e2ac4@52aa6841-b76b-4ed4-a3d7-a259fce1dfa2`|
+| `nameid`|A unique identifier for the SharePoint Add-in because it is the "actor" in the high-trust system. The format is _client_ID_@_SharePoint_realm_. |`c3ab8885-458f-4864-8804-1608145e2ac4@52aa6841-b76b-4ed4-a3d7-a259fce1dfa2`|
 | `trustedfordelegation`|A Boolean value that specifies whether SharePoint should trust the SharePoint Add-in to authenticate and authorize the user. This is normally true in the high-trust system. Do not include this claim in an add-in-only call in the high-trust system.|`true`|
 
 
@@ -204,8 +204,8 @@ The free [Fiddler tool](http://www.telerik.com/fiddler) can be used to capture t
 
 ## See also
 
-- Steve Peschka's[Security in SharePoint Add-ins - Part 7](https://samlman.wordpress.com/2015/03/02/security-in-sharepoint-apps-part-7/)
-- Kirk Evan's [High Trust SharePoint Add-ins on Non-Microsoft Platforms](https://blogs.msdn.microsoft.com/kaevans/2014/07/14/high-trust-sharepoint-apps-on-non-microsoft-platforms/)
+- [Steve Peschka's Security in SharePoint Add-ins - Part 7](https://samlman.wordpress.com/2015/03/02/security-in-sharepoint-apps-part-7/)
+- [Kirk Evan's High Trust SharePoint Add-ins on Non-Microsoft Platforms](https://blogs.msdn.microsoft.com/kaevans/2014/07/14/high-trust-sharepoint-apps-on-non-microsoft-platforms/)
 - [OAuth 2.0](http://oauth.net/2/)
 - [Add-in authorization policy types in SharePoint](add-in-authorization-policy-types-in-sharepoint.md)
 - [Creating SharePoint Add-ins that use high-trust authorization](creating-sharepoint-add-ins-that-use-high-trust-authorization.md)
