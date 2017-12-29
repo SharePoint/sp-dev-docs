@@ -75,7 +75,7 @@ You'll create a test .pfx certificate file first, and then a corresponding test 
     
   ![Create Self-Signed Cerificate link](../images/3f0aae5a-e58b-4ec8-b67f-0024abfa2dab.gif)
 
-4. Name the certificate**HighTrustSampleCert**, and then select **OK**.
+4. Name the certificate **HighTrustSampleCert**, and then select **OK**.
      
 5. Right-click the certificate, and then select **Export**.
     
@@ -127,7 +127,7 @@ The Windows PowerShell script that you create in this section is intended to sup
 
 ### To configure SharePoint
 
-1. In a text editor or Windows PowerShell editor, start a new file and add the following lines to it to create a certificate object:
+1. In a text editor or Windows PowerShell editor, start a new file and add the following lines to it to create a certificate object.
     
   ```powershell
     $publicCertPath = "C:\Certs\HighTrustSampleCert.cer"
@@ -332,16 +332,12 @@ When you are debugging in Visual Studio with **F5**, Microsoft Office Developer 
 
 If your add-in will not use Windows Authentication on the production environment, you need to customize the generated code files, TokenHelper and/or SharePointContext, to use a different authentication system. You would also customize these files if your remote web application accesses SharePoint in an identity other than the user who is running the SharePoint Add-in. Finally, if the remote web application is PHP, node.js, Java, or some other non-ASP.NET platform, your code needs to obtain the user's ID from whatever authentication system is being used, and then add that ID into the access token it constructs. 
 
-For more information, see: 
-
-- [Package and publish high-trust SharePoint Add-ins](package-and-publish-high-trust-sharepoint-add-ins.md)
-- [Create and use access tokens in provider-hosted high-trust SharePoint Add-ins](create-and-use-access-tokens-in-provider-hosted-high-trust-sharepoint-add-ins.md)
-- [Using SharePoint Add-ins with SAML and FBA Sites in SharePoint](https://samlman.wordpress.com/2015/03/01/using-sharepoint-apps-with-saml-and-fba-sites-in-sharepoint-2013/).
-
 ## See also
 
 - [Troubleshooting Tips for High Trust Add-ins on SharePoint](https://samlman.wordpress.com/2015/03/01/more-troubleshooting-tips-for-high-trust-apps-on-sharepoint-2013/)
+- [Using SharePoint Add-ins with SAML and FBA Sites in SharePoint](https://samlman.wordpress.com/2015/03/01/using-sharepoint-apps-with-saml-and-fba-sites-in-sharepoint-2013/)
 - [The SharePointContext helper in Add-ins for SharePoint 2013](https://blogs.msdn.microsoft.com/officeapps/2013/11/07/announcing-the-new-sharepointcontext-helper-in-apps-for-sharepoint-2013/)
+- [Create and use access tokens in provider-hosted high-trust SharePoint Add-ins](create-and-use-access-tokens-in-provider-hosted-high-trust-sharepoint-add-ins.md)
 - [Register SharePoint Add-ins](register-sharepoint-add-ins.md)
 - [Creating SharePoint Add-ins that use high-trust authorization](creating-sharepoint-add-ins-that-use-high-trust-authorization.md)
 - [Authorization and authentication of SharePoint Add-ins](authorization-and-authentication-of-sharepoint-add-ins.md)
