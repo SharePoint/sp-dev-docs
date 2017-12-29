@@ -104,7 +104,7 @@ This access token is generated if the add-in is making a call to SharePoint by u
  
 The header has two properties. The "typ" is the type of token. Code in the remote web application should always set this value to "JWT". The "alg" is the algorithm used to sign the token. Because the outer token in a user+add-in call from a high-trust add-in is not signed, set this value to "none". See Table 1 for information about the values in the body part of the high-trust access token.
 
-```js
+```json
 {"typ":"JWT", "alg":"none"} 
 .
 {
@@ -144,7 +144,7 @@ The following shows the decoded **actortoken**. The small JavaScript Object Nota
 
 Table 2 describes the claims your code must include in the body of the token and the values to set for them.
 
-```js
+```json
 {"typ":"JWT","alg":"RS256","x5t":"7MjK99QvkVdwz6UrKldx8AG7ydM"}
 .
 {
