@@ -1088,9 +1088,9 @@
       href: sp-add-ins/give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md
     - name: 2. Include a custom button
       href: sp-add-ins/include-a-custom-button-in-the-provider-hosted-add-in.md
-    - name: 3. Get a quick overview of the SharePoint object model
+    - name: 3. Get an overview of the SharePoint object model
       href: sp-add-ins/get-a-quick-overview-of-the-sharepoint-object-model.md
-    - name: 4. Add SharePoint write operations
+    - name: 4. Add write operations
       href: sp-add-ins/add-sharepoint-write-operations-to-the-provider-hosted-add-in.md
     - name: 5. Include an add-in part
       href: sp-add-ins/include-an-add-in-part-in-the-provider-hosted-add-in.md
