@@ -9,7 +9,9 @@ ms.date: 12/14/2017
 > [!NOTE]
 > Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for use in production environments.
 
-You can create a site design that applies a PnP provisioning template to a site. Site designs offer a great way to standardize the look and feel of your site collections, but you can't use them to do some things, like add a footer to every page. You can use the PnP provisioning engine to create a template that you can use to provision an application customizer to a site. This application customizer then can register a footer on every page. In this article, you will learn how to create a site design that applies a PnP provisioning template to a site. The template will add an application customizer to render a footer.
+You can create a site design that applies a PnP provisioning template to a site. Site designs offer a great way to standardize the look and feel of your site collections, but you can't use them to do some things, like add a footer to every page. You can use the PnP provisioning engine to create a template that you can use to provision an application customizer to a site. This application customizer can then register a footer on every page. 
+
+This article describes how to create a site design that applies a PnP provisioning template to a site. The template will add an application customizer to render a footer.
 
 The steps in this article use the following components:
 
@@ -17,7 +19,7 @@ The steps in this article use the following components:
 1. Microsoft Flow
 1. Azure Queue storage
 1. An Azure Function
-1. A SharePoint Framework (SPFX) solution
+1. A SharePoint Framework (SPFx) solution
 1. A PnP provisioning template
 1. A PnP PowerShell script
 1. An app ID and app secret with administrative rights on your tenant
@@ -26,7 +28,7 @@ You'll use these components to trigger the PnP provisioning code after the site 
 
 ## Set up app-only access to your tenant
 
-To set up app-only access, you need to have two different pages on your tenant, one on the regular site, and the other on your SharePoint administration site.
+To set up app-only access, you need to have two different pages on your tenant - one on the regular site, and the other on your SharePoint administration site.
 
 1. Go to following URL in your tenant: https://[yourtenant].sharepoint.com/_layouts/appregnew.aspx (you can go to any site, but for now pick the root site).
 1. Choose the **Generate** button next to the **Client Id** and **Client Secret** fields.
@@ -34,7 +36,7 @@ To set up app-only access, you need to have two different pages on your tenant, 
 1. In the **App Domain** box, enter **localhost**.
 1. In the **Redirect URI** box, enter **https://localhost**.
 
-    ![Create App](images/pnpprovisioning-createapponly.png)
+    ![Create app page, showing the Client Id, Client Secret, Title, App Domain, and Redirect URI fields](images/pnpprovisioning-createapponly.png)
 
 1. Choose **Create**. 
 1. Copy the values for **Client Id** and **Client Secret** - you will need them later.
@@ -42,8 +44,8 @@ To set up app-only access, you need to have two different pages on your tenant, 
 Next, trust the app, so that it has the appropriate access to your tenant:
 
 1. Go to https://[yourtenant]-admin.sharepoint.com/_layouts/appinv.aspx (notice the -admin in the URL).
-1. In the **App Id** field, paste the **Client Id** that you copied, and choose **Lookup**.
-1. In the **Permission Request XML** field,paste the following XML:
+1. In the **App Id** field, paste the **Client ID** that you copied, and choose **Lookup**.
+1. In the **Permission Request XML** field, paste the following XML:
 
     ```xml
     <AppPermissionRequests AllowAppOnlyPolicy="true" >
@@ -57,27 +59,27 @@ Next, trust the app, so that it has the appropriate access to your tenant:
 
 ## Create the Azure Queue storage
 
-In this section, you will use Azure Queue storage to receive messages from Microsoft Flow. Every time a message shows up in the storage queue, an Azure function is triggered to run a PowerShell script. 
+In this section, you will use Azure Queue storage to receive messages from Microsoft Flow. Every time a message shows up in the Queue storage, an Azure function is triggered to run a PowerShell script. 
 
 To set up the Azure Queue storage:
 
 1. Go to the Azure portal at https://portal.azure.com and sign in.
 1. Choose **+ New**.
 1. From the Azure Marketplace listings, select **Storage**, and in the Featured column, choose **Storage account - blob, file, table, queue**.
-1. Provide values for the required fields as requested. Make sure to select **Pin to dashboard** for easy location later and click **Create**. The storage account is being created. This can take a few minutes.
-1. Open the Storage Account after it has been created and navigate to **Queues** in the navigation
-1. Choose **+ Queue** at the top of the main area of the screen.
-1. Enter **pnpprovisioningqueue** as the name or enter your own following the naming standard that is enforced. Make a note of the queue name as you need this value later when creating the Azure Function.
-1. Navigate to **Access Keys** and make note of the **Storage Account Name** and the **key1 Key value**, you will need those values in the next step where you create the flow.
+1. Provide values for the required fields. Select **Pin to dashboard**, and choose **Create**. It can take a few minutes for the storage account to be created.
+1. Open the storage account and go to **Queues**.
+1. Choose **+ Queue** at the top of the screen.
+1. Enter **pnpprovisioningqueue** for the name, or enter your own value; be sure to follow the naming standard. Make note of the queue name; you will need this value when you create the Azure Function.
+1. Go to **Access Keys** and note the **Storage Account Name** and the **key1 Key value**. You will need these values when you create the flow.
 
 
-## The Flow
+## Create the flow
 
-In order to put a message on the queue we have to create a flow. 
+To put a message in the queue, you need to create a flow. 
 
-1. Navigate to **https://flow.microsoft.com**, log in and create a new flow by clicking **Create from Blank** at the top.
-1. Click **Search hundreds of connectors and triggers** to select your trigger
-1. Search for **Request** and select **Request - When a HTTP Request is received**
+1. Go to **https://flow.microsoft.com**, sign in, and choose **Create from Blank** at the top of the page.
+1. Choose **Search hundreds of connectors and triggers** to select your trigger.
+1. Search for **Request**, and select **Request - When a HTTP Request is received**.
 1. Enter the following JSON as your request body:
 
     ```json
@@ -102,14 +104,14 @@ In order to put a message on the queue we have to create a flow.
     }
     ``` 
 
-1. Select **+ New Step** and select **Add an action**
-1. Search for **Azure Queues** and select **Azure Queues - Put a message on a queue**
-1. Enter a name for the connection, this can be anything descriptive
-1. Enter the storage account name you copied in the previous section
-1. Enter the storage shared key, which is the value of the **Key1 key value** of your storage account.
-1. Click **Create**
-1. Select **pnpprovisioningqueue** as the Queue Name.
-1. In the body specified in step 4 we specified an incoming parameter called webUrl. We will put the value of that parameter on the queue. Click in the **message** field and select **webUrl** from the Dynamic Content picker.
+1. Select **+ New Step** and choose **Add an action**.
+1. Search for **Azure Queues** and select **Azure Queues - Put a message on a queue**.
+1. Enter a descriptive name for the connection.
+1. Enter the storage account name that you copied in the previous section.
+1. Enter the storage shared key, which is the value of the **Key1 key value** field of your storage account.
+1. Choose **Create**.
+1. Select **pnpprovisioningqueue** as the queue name.
+1. In the request body, you specified an incoming parameter called *webUrl*. We will put the value of that parameter on the queue. Click in the **message** field and select **webUrl** from the Dynamic Content picker.
 1. Click **Save Flow**. This will generate the URL we will copy in the next step.
 1. Click on the first step in your flow ('When an HTTP request is received') and copy the URL. We will need that to test and later on in our Site Design.
 1. Save your flow.
@@ -118,7 +120,7 @@ Your flow should look like this:
 
 ![Flow](images/pnpprovisioning-flow-overview.png)
 
-## Testing the flow
+## Test the flow
 
 In order to test your flow you have will have to make a post request. The easiest for that, if you are on a Windows PC, is to use PowerShell:
 
