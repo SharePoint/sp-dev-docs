@@ -236,7 +236,7 @@ Notice that you're using two environment variables: ```SPO_AppId```and ```SPO_Ap
 
 Open PowerShell and make sure that you have the Microsoft Office 365 Management Shell installed.
 
-First, connect to your tenant using **Connect-SPOService**:
+Connect to your tenant using **Connect-SPOService**:
 
 ```powershell
 Connect-SPOService -Url https://[yourtenant]-admin.sharepoint.com
@@ -249,6 +249,7 @@ Get-SPOSiteDesign
 ```
 
 To create a site design, you first need to create a site script. A site design is a container that refers to one or more site scripts.
+
 1. Copy the following JSON code to your clipboard and modify it. Set the **url** property to the value you copied when you created the flow. The URL looks similar to the following:
 
 `https://prod-27.westus.logic.azure.com:443/workflows/ef7434cf0d704dd48ef5fb6...oke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun`
@@ -272,8 +273,8 @@ To create a site design, you first need to create a site script. A site design i
     }
     ```
 
-1. After modifying the JSON by inserting the correct URL to trigger your flow, select it all and copy it again to your clipboard
-1. Open PowerShell and enter the following to copy the script into a variable and create the site script
+1. Select the JSON again and copy it again to your clipboard
+1. Open PowerShell and enter the following to copy the script into a variable and create the site script:
 
     ```powershell
     $script = Get-Clipboard -Raw
@@ -281,15 +282,14 @@ To create a site design, you first need to create a site script. A site design i
     Get-SPOSiteScript
     ```
 
-1. You should be presented with a list of one or more site scripts, including the site script you just created
-1. Select the ID of the Site Script you just created and copy it to the clipboard
-1. Create the Site Design:
+1. You will be see a list of one or more site scripts, including the site script you just created. Select the ID of the site script that you just created and copy it to the clipboard.
+1. Use the following command to create the site design:
 
     ```powershell
     Add-SPOSiteDesign -Title "Site with footer" -SiteScripts [Paste the ID of the Site Script here] -WebTemplate "64"
     ```
 
-The Add-SPOSiteDesign will associate the site design with the Team Site. If you want to associate the design with a Communication Site use "68".
+The **Add-SPOSiteDesign** cmdlet associates the site design with the Team Site. If you want to associate the design with a Communication Site, use the value "68".
 
 ## Conclusion
 
