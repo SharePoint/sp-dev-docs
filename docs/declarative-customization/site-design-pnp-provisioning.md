@@ -63,7 +63,7 @@ In this section, you will use Azure Queue storage to receive messages from Micro
 
 To set up the Azure Queue storage:
 
-1. Go to the Azure portal at https://portal.azure.com and sign in.
+1. Go to the [Azure portal](https://portal.azure.com) and sign in.
 1. Choose **+ New**.
 1. From the Azure Marketplace listings, select **Storage**, and in the Featured column, choose **Storage account - blob, file, table, queue**.
 1. Provide values for the required fields. Select **Pin to dashboard**, and choose **Create**. It can take a few minutes for the storage account to be created.
@@ -77,7 +77,7 @@ To set up the Azure Queue storage:
 
 To put a message in the queue, you need to create a flow. 
 
-1. Go to **https://flow.microsoft.com**, sign in, and choose **Create from Blank** at the top of the page.
+1. Go to the [Microsoft Flow](https://flow.microsoft.com) site, sign in, and choose **Create from Blank** at the top of the page.
 1. Choose **Search hundreds of connectors and triggers** to select your trigger.
 1. Search for **Request**, and select **Request - When a HTTP Request is received**.
 1. Enter the following JSON as your request body:
@@ -110,19 +110,19 @@ To put a message in the queue, you need to create a flow.
 1. Enter the storage account name that you copied in the previous section.
 1. Enter the storage shared key, which is the value of the **Key1 key value** field of your storage account.
 1. Choose **Create**.
-1. Select **pnpprovisioningqueue** as the queue name.
-1. In the request body, you specified an incoming parameter called *webUrl*. We will put the value of that parameter on the queue. Click in the **message** field and select **webUrl** from the Dynamic Content picker.
-1. Click **Save Flow**. This will generate the URL we will copy in the next step.
-1. Click on the first step in your flow ('When an HTTP request is received') and copy the URL. We will need that to test and later on in our Site Design.
+1. Select **pnpprovisioningqueue** for the queue name.
+1. In the request body, you specified an incoming parameter called *webUrl*. To put the value of that field in the queue, click in the **message** field and select **webUrl** from the Dynamic Content picker.
+1. Choose **Save Flow**. This will generate the URL that you will copy in the next step.
+1. Choose the first step in your flow ('When an HTTP request is received') and copy the URL.
 1. Save your flow.
 
 Your flow should look like this:
 
-![Flow](images/pnpprovisioning-flow-overview.png)
+![Screenshot of a flow named 'When an HTTP request is received', showing the URL, Request body, Queue name, and Message fields](images/pnpprovisioning-flow-overview.png)
 
 ## Test the flow
 
-In order to test your flow you have will have to make a post request. The easiest for that, if you are on a Windows PC, is to use PowerShell:
+To test your flow, you have to make a POST request. You can do this via PowerShell, as shown in the following example.
 
 ```powershell
 $uri = "[the URI you copied in step 8 when creating the flow]"
@@ -130,18 +130,16 @@ $body = "{webUrl:'somesiteurl'}
 Invoke-RestMethod -Uri $uri -Method Post -ContentType "application/json" -Body $body
 ```
 
-If you now navigate to the main screen of your flow you will see a run history. If everything went okay it should say 'Succeeded'.
-Now navigate to the queue you just created in Azure and click **Refresh**. There should be an entry showing that you correctly invoked the Flow.
+When you go to the main screen of your flow, you will see a run history. If your flow worked correctly, it will show 'Succeeded'.
+Now go to the queue you just created in Azure and choose **Refresh**. You should see an entry that shows that you correctly invoked the flow.
 
-## Provision the SPFX Solution
+## Provision the SPFx solution
 
-For this walkthrough we are going to use an existing SPFX solution which is available at https://github.com/SharePoint/sp-dev-fx-extensions/tree/master/samples/react-application-regions-footer
+In this section, you'll use an existing SPFx solution, the [Regions Footer Application Customizer](https://github.com/SharePoint/sp-dev-fx-extensions/tree/master/samples/react-application-regions-footer). Follow the steps in the [Readme](https://github.com/SharePoint/sp-dev-fx-extensions/blob/master/samples/react-application-regions-footer/README.md) file in the sample repo to build and provision the solution.
 
-Follow the steps as provided in the README.MD available in that repository to build and provision your solution.
+## Create a PnP provisioning template
 
-# Create a PnP Provisioning Template
-
-Copy the following XML to a new file and save the file as FlowDemoTemplate.xml
+Copy the following provisioning template XML to a new file and save the file as FlowDemoTemplate.xml.
 
 ```xml
 <?xml version="1.0"?>
@@ -159,97 +157,101 @@ Copy the following XML to a new file and save the file as FlowDemoTemplate.xml
 ```
 
 > [!NOTE]
-> The template adds a custom action to the the web it is being applied to. It refers to ClientSideComponentId which is the one coming from the SPFX Solution you provisioned earlier. If you run this demo with your own SPFX Solution you will have to change the ClientSideComponentId and optionally the ClientSideComponentProperties attribute values in the XML.
+> The provisioning template adds a custom action to a solution. The **ClientSideComponentId** is associated with the [Regions Footer Application Customizer](https://github.com/SharePoint/sp-dev-fx-extensions/tree/master/samples/react-application-regions-footer) that you provisioned earlier. If you run this demo with your own SPFx solution, change the **ClientSideComponentId** and optionally the **ClientSideComponentProperties** attribute values in the XML.
 
 ## Create the Azure Function
 
-1. Navigate to the Azure Portal at https://portal.azure.com.
-1. Search for 'Function App' and create a new Function App. In the **Storage** field select **Use existing** and select your previously created storage account. Set the other values as required.
-1. After the function app has been created open it and select **Functions**, then select **New function**.
+1. Go to the [Azure Portal](https://portal.azure.com).
+1. Search for 'Function App' and create a new function app. In the **Storage** field, select **Use existing**, and select the storage account that you created earlier. Set the other values as required.
+1. Open the Function app and select **Functions** > **New function**.
 
-  ![Create a new function](images/pnpprovisioning-create-function.png)
+  ![Screenshot of the Azure portal with the New function option highlighted](images/pnpprovisioning-create-function.png)
 
-1. From the Language drop-down, select **PowerShell**.
+1. From the Language drop-down box, select **PowerShell**.
 1. Select **QueueTrigger - PowerShell**.
-1. Name the function **ApplyPnPProvisioningTemplate** 
-1. Enter the name of your queue you created in the previous steps.
-1. Select **Create**
-1. You will be presented with a Editor where you can enter PowerShell Cmdlets. We will now upload the PnP PowerShell module so we can use it in the Azure function.
+1. Name the function **ApplyPnPProvisioningTemplate**. 
+1. Enter the name of the queue you created earlier.
+1. Choose **Create**.
+1. An editor where you can enter PowerShell cmdlets will open. 
 
-## Uploading PnP PowerShell for your Azure Function
+Next, you'll upload the PnP PowerShell module so that you can use it in the Azure Function.
 
-We first have to download the PnP PowerShell module so you can easy upload it later.
+## Upload the PnP PowerShell module for your Azure Function
 
-1. Create a temporary folder somewhere on your computer
-1. Launch PowerShell and enter
+You'll need to download the PnP PowerShell module so that you can upload it for your Azure Function.
+
+1. Create a temporary folder on your computer.
+1. Launch PowerShell and enter the following:
     ```powershell
     Save-Module -Name SharePointPnPPowerShellOnline -Path [pathtoyourfolder]
     ```
-1. The PowerShell module files will be downloaded to a folder inside the folder you just selected. 
+The PowerShell module files will download to a folder within the folder that you created. 
 
-Now it is time to upload those files so your Azure Function can make use of the module:
+Next, upload the files so that your Azure Function can use the module.
 
-1. Navigate to the main page of your Function App and select **Platform Features**
+1. Go to the main page of your Function App and select **Platform Features**.
 
-    ![Navigate to Platform Features](images/pnpprovisioning-platform-features.png)
+    ![Screenshot of the Function App with Platform features highlighted](images/pnpprovisioning-platform-features.png)
 
-1. Select **Advanced tools (Kudu)**
+1. Select **Advanced tools (Kudu)**.
 
-    ![Select Advanced Tools (Kudu))](images/pnpprovisioning-select-kudu.png)
+    ![Screenshot of Development Tools with Advanced Tools (Kudu) highlighted](images/pnpprovisioning-select-kudu.png)
 
-1. On the main Kudu page, select **Debug Console** and pick either **CMD** or **PowerShell**
-1. In the upper part of the page you see a file explorer. Navigate to **site\wwwroot\\[nameofyourazurefunction]**
-1. Create a new folder and call that folder **modules**
+1. On the main Kudu page, select **Debug Console** and pick either **CMD** or **PowerShell**.
+1. Choose the file explorer on the upper part of the page, and go to **site\wwwroot\\[nameofyourazurefunction]**.
+1. Create a new folder named **modules**.
     
-    ![Create new folder](images/pnpprovisioning-kudu-create-folder.png)
+    ![Screenshot with the new folder option highlighted](images/pnpprovisioning-kudu-create-folder.png)
 
-1. In that folder create another folder called **SharePointPnPPowerShellOnline** and navigate to the folder
-1. In your File Explorer on your computer navigate to the folder where you downloaded all the PnP PowerShell Module files. Open the 
-**SharePointPnPPowerShellOnline\2.20.1711.0** folder (notice that depending on when you follow this walkthrough the version number can be different).
-1. Upload all files in that folder by dragging and dropping all the files from this folder into the folder in Kudu.
+1. In the modules folder, create another folder called **SharePointPnPPowerShellOnline** and go to that folder.
+1. In File Explorer on your computer, go to the folder where you downloaded the PnP PowerShell module files. Open the 
+**SharePointPnPPowerShellOnline\2.20.1711.0** folder (notice that the version number might be different).
+1. Drag and drop all the files from this folder into the folder in Kudu to upload them.
 
-   ![Create new folder](images/pnpprovisioning-module-files-uploaded.png)
+   ![Screenshot of the Kudu folder with 40 files added](images/pnpprovisioning-module-files-uploaded.png)
 
-## Finishing the Azure Function
+## Finish the Azure Function
 
-1. Navigate back to your Azure Function and expand the files tab to the right.
+1. Go back to your Azure Function and expand the files tab to the right.
 
-    ![View Files](images/pnpprovisioning-view-files.png)
+    ![Screenshot of the View files tab](images/pnpprovisioning-view-files.png)
 
-1. Select **Upload** and upload your provisioning template file you created earlier.
-1. Replace the PowerShell script with the following
+1. Select **Upload** and upload the provisioning template file that you created earlier.
+1. Replace the PowerShell script with the following:
 
-```powershell
-$in = Get-Content $triggerInput -Raw
-Write-Output "Incoming request for '$in'"
-Connect-PnPOnline -AppId $env:SPO_AppId -AppSecret $env:SPO_AppSecret -Url $in
-Write-Output "Connected to site"
-Apply-PnPProvisioningTemplate -Path D:\home\site\wwwroot\ApplyPnPProvisioningTemplate\FlowDemoTemplate.xml
-```
+    ```powershell
+    $in = Get-Content $triggerInput -Raw
+    Write-Output "Incoming request for '$in'"
+    Connect-PnPOnline -AppId $env:SPO_AppId -AppSecret $env:SPO_AppSecret -Url $in
+    Write-Output "Connected to site"
+    Apply-PnPProvisioningTemplate -Path D:\home\site\wwwroot\ApplyPnPProvisioningTemplate\FlowDemoTemplate.xml
+    ```
 
-Notice that we are using 2 environment variables, one called ```SPO_AppId```, the other ```SPO_AppSecret```. In order to set those variables navigate to your main Function App page in your Azure Portal, select **Application Settings** and add two new Application Settings:
+Notice that you're using two environment variables: ```SPO_AppId```and ```SPO_AppSecret```. To set those variables, go to the main Function App page in the Azure Portal, select **Application Settings**, and add two new application settings:
 
-1. ```SPO_AppId```: set the value to the Client Id you copied in the first step when creating your app on your tenant.
-2. ```SPO_AppSecret```: set the value to the Client Secret you copied in the first step when creating your app on your tenant.
+1. ```SPO_AppId``` - Set the value to the Client ID you copied in the first step when you created your app on your tenant.
+2. ```SPO_AppSecret``` - Set the value to the Client Secret that you copied in the first step when you created your app on your tenant.
 
-## Creating the Site Design
+## Create the site design
 
-Open PowerShell and make sure you have the Microsoft Office 365 Management Shell installed.
+Open PowerShell and make sure that you have the Microsoft Office 365 Management Shell installed.
 
-First connect to your tenant using Connect-SPOService:
+First, connect to your tenant using **Connect-SPOService**:
 
 ```powershell
 Connect-SPOService -Url https://[yourtenant]-admin.sharepoint.com
 ```
 
-Now you can retrieve the existing Site Designs using 
+Now you can get the existing site designs: 
 
 ```powershell
 Get-SPOSiteDesign
 ```
 
-In order to create a Site Design you first need to create a Site Script. Think of a Site Design as a container which refers to 1 or more Site Scripts.
-1. Copy the following JSON code to your clipboard and modify it. Set the url property to the value you copied when creating the flow. The URL looks alike    `https://prod-27.westus.logic.azure.com:443/workflows/ef7434cf0d704dd48ef5fb6...oke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun`
+To create a site design, you first need to create a site script. A site design is a container that refers to one or more site scripts.
+1. Copy the following JSON code to your clipboard and modify it. Set the **url** property to the value you copied when you created the flow. The URL looks similar to the following:
+
+`https://prod-27.westus.logic.azure.com:443/workflows/ef7434cf0d704dd48ef5fb6...oke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun`
 
     ```json
     {
