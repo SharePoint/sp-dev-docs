@@ -16,7 +16,7 @@ You can use the **get()** method to make a REST call to Microsoft Graph. This ex
   mkdir hellograph-webpart
   ```
 
-2. Go the the project directory.
+2. Go to the project directory.
 
   ```
   cd hellograph-webpart

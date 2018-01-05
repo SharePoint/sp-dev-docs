@@ -57,11 +57,15 @@
       items:
       - name: Migrating existing customizations
         items:
-        - name: Edit Control Block (ECB) menu item
-          href: spfx/extensions/guidance/migrate-from-ecb-to-spfx-extensions.md
         - name: Client Side Rendering (JSLink)
-          href: spfx/extensions/guidance/migrate-from-jslink-to-spfx-extensions.md
+          href: spfx/extensions/guidance/migrate-jslink-to-spfx-extensions.md
         - name: JavaScript embedding (UserCustomAction)
+          href: spfx/extensions/guidance/migrate-user-customactions-to-spfx-extensions.md
+        - name: Edit Control Block (ECB) menu item tutorial
+          href: spfx/extensions/guidance/migrate-from-ecb-to-spfx-extensions.md
+        - name: Client Side Rendering (JSLink) tutorial
+          href: spfx/extensions/guidance/migrate-from-jslink-to-spfx-extensions.md
+        - name: JavaScript embedding (UserCustomAction) tutorial
           href: spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions.md          
   - name: Web parts
     href: spfx/web-parts/overview-client-side-web-parts.md
@@ -265,6 +269,8 @@
       href: declarative-customization/get-started-create-site-design.md
     - name: Setting scope
       href: declarative-customization/site-design-scoping.md
+    - name: Customize a default site design
+      href: declarative-customization/customize-default-site-design.md
     - name: JSON schema reference
       href: declarative-customization/site-design-json-schema.md
     - name: PowerShell cmdlets
@@ -1022,6 +1028,10 @@
     href: general-development/code-samples-for-sharepoint.md
   - name: Choose the right API set in SharePoint
     href: general-development/choose-the-right-api-set-in-sharepoint.md
+  - name: Use the site collection app catalog
+    href: general-development/site-collection-app-catalog.md
+  - name: Maintenance mode for client-side web parts
+    href: general-development/client-side-web-parts-maintenance-mode.md
   - name: Set up and configure SharePoint Workflow Manager
     href: general-development/set-up-and-configure-sharepoint-workflow-manager.md
   - name: SharePoint Server Application Lifecycle Management
@@ -1048,65 +1058,65 @@
 - name: SharePoint Add-ins
   href: sp-add-ins/sharepoint-add-ins.md
   items:
-  - name: Get started creating SharePoint-hosted SharePoint Add-ins
+  - name: Get started creating SharePoint-hosted add-ins
     href: sp-add-ins/get-started-creating-sharepoint-hosted-sharepoint-add-ins.md
     items:
-    - name: 1. Deploy and install a SharePoint-hosted SharePoint Add-in
+    - name: 1. Deploy and install add-ins
       href: sp-add-ins/deploy-and-install-a-sharepoint-hosted-sharepoint-add-in.md
-    - name: 2. Add custom columns to a SharePoint-hosted SharePoint Add-in
+    - name: 2. Add custom columns
       href: sp-add-ins/add-custom-columns-to-a-sharepoint-hosted-sharepoint-add-in.md
-    - name: 3. Add a custom content type to a SharePoint-hosted SharePoint Add-in
+    - name: 3. Add a custom content type
       href: sp-add-ins/add-a-custom-content-type-to-a-sharepoint-hosted-sharepoint-add-in.md
-    - name: 4. Add a Web Part to a page in a SharePoint-hosted SharePoint Add-in
+    - name: 4. Add a Web Part to a page
       href: sp-add-ins/add-a-web-part-to-a-page-in-a-sharepoint-hosted-sharepoint-add-in.md
-    - name: 5. Add a workflow to a SharePoint-hosted SharePoint Add-in
+    - name: 5. Add a workflow
       href: sp-add-ins/add-a-workflow-to-a-sharepoint-hosted-sharepoint-add-in.md
-    - name: 6. Add a custom page and style to a SharePoint-hosted SharePoint Add-in
+    - name: 6. Add a custom page and style
       href: sp-add-ins/add-a-custom-page-and-style-to-a-sharepoint-hosted-sharepoint-add-in.md
-    - name: 7. Add custom client-side rendering to a SharePoint-hosted SharePoint Add-in
+    - name: 7. Add custom client-side rendering
       href: sp-add-ins/add-custom-client-side-rendering-to-a-sharepoint-hosted-sharepoint-add-in.md
-    - name: 8. Create a custom ribbon button in the host web of a SharePoint Add-in
+    - name: 8. Create a custom ribbon button in the host web
       href: sp-add-ins/create-a-custom-ribbon-button-in-the-host-web-of-a-sharepoint-add-in.md
     - name: 9. Use the SharePoint JavaScript APIs to work with SharePoint data
       href: sp-add-ins/use-the-sharepoint-javascript-apis-to-work-with-sharepoint-data.md
     - name: 10. Work with host web data from JavaScript in the add-in web
       href: sp-add-ins/work-with-host-web-data-from-javascript-in-the-add-in-web.md
-  - name: Get started creating provider-hosted SharePoint Add-ins
+  - name: Get started creating provider-hosted add-ins
     href: sp-add-ins/get-started-creating-provider-hosted-sharepoint-add-ins.md
     items:
-    - name: 1. Give your provider-hosted add-in the SharePoint look-and-feel
+    - name: 1. Give your add-in the SharePoint look-and-feel
       href: sp-add-ins/give-your-provider-hosted-add-in-the-sharepoint-look-and-feel.md
-    - name: 2. Include a custom button in the provider-hosted add-in
+    - name: 2. Include a custom button
       href: sp-add-ins/include-a-custom-button-in-the-provider-hosted-add-in.md
-    - name: 3. Get a quick overview of the SharePoint object model
+    - name: 3. Get an overview of the SharePoint object model
       href: sp-add-ins/get-a-quick-overview-of-the-sharepoint-object-model.md
-    - name: 4. Add SharePoint write operations to the provider-hosted add-in
+    - name: 4. Add write operations
       href: sp-add-ins/add-sharepoint-write-operations-to-the-provider-hosted-add-in.md
-    - name: 5. Include an add-in part in the provider-hosted add-in
+    - name: 5. Include an add-in part
       href: sp-add-ins/include-an-add-in-part-in-the-provider-hosted-add-in.md
-    - name: 6. Handle add-in events in the provider-hosted add-in
+    - name: 6. Handle add-in events
       href: sp-add-ins/handle-add-in-events-in-the-provider-hosted-add-in.md
-    - name: 7. Add first-run logic to the provider-hosted add-in
+    - name: 7. Add first-run logic
       href: sp-add-ins/add-first-run-logic-to-the-provider-hosted-add-in.md
-    - name: 8. Programmatically deploy a custom button in the provider-hosted add-in
+    - name: 8. Programmatically deploy a custom button
       href: sp-add-ins/programmatically-deploy-a-custom-button-in-the-provider-hosted-add-in.md
-    - name: 9. Handle list item events in the provider-hosted add-in
+    - name: 9. Handle list item events
       href: sp-add-ins/handle-list-item-events-in-the-provider-hosted-add-in.md
   - name: Design
     href: sp-add-ins/design-sharepoint-add-ins.md
     items:
-    - name: Three ways to think about design options for SharePoint Add-ins
+    - name: Three ways to think about design options for add-ins
       href: sp-add-ins/three-ways-to-think-about-design-options-for-sharepoint-add-ins.md
-    - name: Important aspects of the SharePoint Add-in architecture and development landscape
+    - name: Important aspects of the add-in architecture and development landscape
       href: sp-add-ins/important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md
       items:
-      - name: Choose patterns for developing and hosting your SharePoint Add-in
+      - name: Choose patterns for developing and hosting your add-in
         href: sp-add-ins/choose-patterns-for-developing-and-hosting-your-sharepoint-add-in.md
       - name: Host webs, add-in webs, and SharePoint components
         href: sp-add-ins/host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md
-    - name: Secure data access and client object models for SharePoint Add-ins
+    - name: Secure data access and client object models for add-ins
       href: sp-add-ins/secure-data-access-and-client-object-models-for-sharepoint-add-ins.md
-    - name: UX design for SharePoint Add-ins
+    - name: UX design for add-ins
       href: sp-add-ins/ux-design-for-sharepoint-add-ins.md
       items:
       - name: SharePoint Add-ins UX design guidelines
@@ -1114,10 +1124,10 @@
   - name: Develop
     href: sp-add-ins/develop-sharepoint-add-ins.md
     items:
-    - name: Explore the app manifest structure and the package of a SharePoint Add-in
+    - name: Explore the app manifest structure and the package of an add-in
       href: sp-add-ins/explore-the-app-manifest-structure-and-the-package-of-a-sharepoint-add-in.md
       items:
-      - name: URL strings and tokens in SharePoint Add-ins
+      - name: URL strings and tokens in add-ins
         href: sp-add-ins/url-strings-and-tokens-in-sharepoint-add-ins.md
     - name: SharePoint .NET Server, CSOM, JSOM, and REST API index
       href: sp-add-ins/sharepoint-net-server-csom-jsom-and-rest-api-index.md
@@ -1155,24 +1165,24 @@
         href: sp-add-ins/use-a-sharepoint-website-s-style-sheet-in-sharepoint-add-ins.md
       - name: Use the client chrome control in add-ins
         href: sp-add-ins/use-the-client-chrome-control-in-sharepoint-add-ins.md
-      - name: Create add-in parts to install with your SharePoint Add-in
+      - name: Create add-in parts to install with your add-in
         href: sp-add-ins/create-add-in-parts-to-install-with-your-sharepoint-add-in.md
-      - name: Create custom actions to deploy with SharePoint Add-ins
+      - name: Create custom actions to deploy with add-ins
         href: sp-add-ins/create-custom-actions-to-deploy-with-sharepoint-add-ins.md
-      - name: Customize a list view in SharePoint Add-ins using client-side rendering
+      - name: Customize a list view in add-ins using client-side rendering
         href: sp-add-ins/customize-a-list-view-in-sharepoint-add-ins-using-client-side-rendering.md
-      - name: Use the client-side People Picker control in SharePoint-hosted SharePoint Add-ins
+      - name: Use the client-side People Picker control in SharePoint-hosted add-ins
         href: sp-add-ins/use-the-client-side-people-picker-control-in-sharepoint-hosted-sharepoint-add-in.md
-      - name: Highlight content and enhance the functionality of SharePoint-hosted SharePoint Add-ins with the callout control
+      - name: Highlight content and enhance the functionality of SharePoint-hosted add-ins with the callout control
         href: sp-add-ins/highlight-content-and-enhance-the-functionality-of-sharepoint-hosted-sharepoint.md
       - name: Include a Web Part in a webpage on the add-in web
         href: sp-add-ins/include-a-web-part-in-a-webpage-on-the-add-in-web.md
       - name: Office Web Widgets - Experimental overview
         href: sp-add-ins/office-web-widgetsexperimental-overview.md
         items:
-        - name: Use the experimental People Picker widget in SharePoint Add-ins
+        - name: Use the experimental People Picker widget in add-ins
           href: sp-add-ins/use-the-experimental-people-picker-widget-in-sharepoint-add-ins.md
-        - name: Use the experimental Desktop List View widget in SharePoint Add-ins
+        - name: Use the experimental Desktop List View widget in add-ins
           href: sp-add-ins/use-the-experimental-desktop-list-view-widget-in-sharepoint-add-ins.md
         - name: Office Web Widgets - Experimental License Terms
           href: sp-add-ins/office-web-widgetsexperimental-license-terms.md
@@ -1183,7 +1193,7 @@
         href: sp-add-ins/create-a-custom-proxy-page-for-the-cross-domain-library-in-sharepoint.md
       - name: Query a remote service using the web proxy
         href: sp-add-ins/query-a-remote-service-using-the-web-proxy-in-sharepoint.md
-    - name: Handle events in SharePoint Add-ins
+    - name: Handle events in add-ins
       href: sp-add-ins/handle-events-in-sharepoint-add-ins.md
       items:
       - name: Create a remote event receiver
@@ -1198,93 +1208,93 @@
       href: sp-add-ins/get-user-identity-and-properties-in-sharepoint.md
     - name: Localize SharePoint Add-ins
       href: sp-add-ins/localize-sharepoint-add-ins.md
-    - name: Authorization and authentication of SharePoint Add-ins
+    - name: Authorization and authentication of add-ins
       href: sp-add-ins/authorization-and-authentication-of-sharepoint-add-ins.md
       items:
       - name: Add-in permissions in SharePoint
         href: sp-add-ins/add-in-permissions-in-sharepoint.md
-      - name: Register SharePoint Add-ins
+      - name: Register add-ins
         href: sp-add-ins/register-sharepoint-add-ins.md
       - name: Add-in authorization policy types in SharePoint
         href: sp-add-ins/add-in-authorization-policy-types-in-sharepoint.md
-      - name: Three authorization systems for SharePoint Add-ins
+      - name: Three authorization systems for add-ins
         href: sp-add-ins/three-authorization-systems-for-sharepoint-add-ins.md
         items:
-        - name: Creating SharePoint Add-ins that use low-trust authorization
+        - name: Creating add-ins that use low-trust authorization
           href: sp-add-ins/creating-sharepoint-add-ins-that-use-low-trust-authorization.md
           items:
-          - name: Context Token OAuth flow for SharePoint Add-ins
+          - name: Context Token OAuth flow for add-ins
             href: sp-add-ins/context-token-oauth-flow-for-sharepoint-add-ins.md
-          - name: Authorization Code OAuth flow for SharePoint Add-ins
+          - name: Authorization Code OAuth flow for add-ins
             href: sp-add-ins/authorization-code-oauth-flow-for-sharepoint-add-ins.md
-          - name: Handle security tokens in provider-hosted low-trust SharePoint Add-ins
+          - name: Handle security tokens in provider-hosted low-trust add-ins
             href: sp-add-ins/handle-security-tokens-in-provider-hosted-low-trust-sharepoint-add-ins.md
           - name: Use an Office 365 SharePoint site to authorize provider-hosted add-ins on an on-premises SharePoint site
             href: sp-add-ins/use-an-office-365-sharepoint-site-to-authorize-provider-hosted-add-ins-on-an-on.md
-          - name: Replace an expiring client secret in a SharePoint Add-in
+          - name: Replace an expiring client secret in an add-in
             href: sp-add-ins/replace-an-expiring-client-secret-in-a-sharepoint-add-in.md
-        - name: Creating SharePoint Add-ins that use high-trust authorization
+        - name: Creating add-ins that use high-trust authorization
           href: sp-add-ins/creating-sharepoint-add-ins-that-use-high-trust-authorization.md
           items:
           - name: Create high-trust add-ins
             href: sp-add-ins/create-high-trust-sharepoint-add-ins.md
-          - name: Create and use access tokens in provider-hosted high-trust SharePoint Add-ins
+          - name: Create and use access tokens in provider-hosted high-trust add-ins
             href: sp-add-ins/create-and-use-access-tokens-in-provider-hosted-high-trust-sharepoint-add-ins.md
-          - name: Troubleshooting high-trust SharePoint Add-ins
+          - name: Troubleshooting high-trust add-ins
             href: sp-add-ins/troubleshooting-high-trust-sharepoint-add-ins.md
-          - name: Package and publish high-trust SharePoint Add-ins
+          - name: Package and publish high-trust add-ins
             href: sp-add-ins/package-and-publish-high-trust-sharepoint-add-ins.md
             items:
             - name: High-trust configuration scripts for SharePoint
               href: sp-add-ins/high-trust-configuration-scripts-for-sharepoint.md
-        - name: Creating SharePoint Add-ins that use the cross-domain library
+        - name: Creating add-ins that use the cross-domain library
           href: sp-add-ins/creating-sharepoint-add-ins-that-use-the-cross-domain-library.md
           items:
           - name: Access SharePoint data from add-ins using the cross-domain library
             href: sp-add-ins/access-sharepoint-data-from-add-ins-using-the-cross-domain-library.md
           - name: Work with the cross-domain library across different Internet Explorer security zones in SharePoint Add-ins
             href: sp-add-ins/work-with-the-cross-domain-library-across-different-internet-explorer-security-z.md
-    - name: Create SharePoint Add-ins that can be used by anonymous users
+    - name: Create add-ins that can be used by anonymous users
       href: sp-add-ins/create-sharepoint-add-ins-that-can-be-used-by-anonymous-users.md
-    - name: Convert an autohosted SharePoint Add-in to a provider-hosted add-in
+    - name: Convert an autohosted add-in to a provider-hosted add-in
       href: sp-add-ins/convert-an-autohosted-sharepoint-add-in-to-a-provider-hosted-add-in.md
-    - name: Create SharePoint Add-ins for the SAP Gateway for Microsoft
+    - name: Create add-ins for the SAP Gateway for Microsoft
       href: sp-add-ins/create-provider-hosted-sharepoint-add-ins-to-access-sap-data-by-using-the-sap-ga.md
-    - name: Create a SharePoint Add-in that contains a document template and a task pane add-in
+    - name: Create an add-in that contains a document template and a task pane add-in
       href: sp-add-ins/create-a-sharepoint-add-in-that-contains-a-document-template-and-a-task-pane-add.md
   - name: Publish
     href: sp-add-ins/publish-sharepoint-add-ins.md
     items:
-    - name: 'Deploying and installing SharePoint Add-ins: methods and options'
+    - name: 'Deploying and installing add-ins: methods and options'
       href: sp-add-ins/deploying-and-installing-sharepoint-add-ins-methods-and-options.md
-    - name: Tenancies and deployment scopes for SharePoint Add-ins
+    - name: Tenancies and deployment scopes for add-ins
       href: sp-add-ins/tenancies-and-deployment-scopes-for-sharepoint-add-ins.md
     - name: SharePoint Add-ins update process
       href: sp-add-ins/sharepoint-add-ins-update-process.md
       items:
-      - name: Update SharePoint Add-ins
+      - name: Update add-ins
         href: sp-add-ins/update-sharepoint-add-ins.md
         items:
         - name: Update add-in web components in SharePoint
           href: sp-add-ins/update-add-in-web-components-in-sharepoint.md
         - name: Update host web components in SharePoint
           href: sp-add-ins/update-host-web-components-in-sharepoint.md
-        - name: Update remote components in SharePoint Add-ins
+        - name: Update remote components in add-ins
           href: sp-add-ins/update-remote-components-in-sharepoint-add-ins.md
-        - name: Create a handler for the update event in SharePoint Add-ins
+        - name: Create a handler for the update event in add-ins
           href: sp-add-ins/create-a-handler-for-the-update-event-in-sharepoint-add-ins.md
-    - name: Publish SharePoint Add-ins by using Visual Studio
+    - name: Publish add-ins by using Visual Studio
       href: sp-add-ins/publish-sharepoint-add-ins-by-using-visual-studio.md
   - name: Tools
     href: sp-add-ins/tools-and-environments-for-developing-sharepoint-add-ins.md
     items:
-    - name: Set up a development environment for SharePoint Add-ins on Office 365
+    - name: Set up a development environment for add-ins on Office 365
       href: sp-add-ins/set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md
     - name: Create a developer site on an existing Office 365 subscription
       href: sp-add-ins/create-a-developer-site-on-an-existing-office-365-subscription.md
     - name: Set up an on-premises development environment for add-ins
       href: sp-add-ins/set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md
-    - name: Create SharePoint Add-ins in Visual Studio
+    - name: Create add-ins in Visual Studio
       href: sp-add-ins/create-sharepoint-add-ins-in-visual-studio.md
     - name: What's new in Office Developer Tools for Visual Studio 2013
       href: sp-add-ins/what-s-new-in-office-developer-tools-for-visual-studio.md
@@ -1350,6 +1360,8 @@
       href: solution-guidance/modern-experience-customizations-customize-lists-and-libraries.md
     - name: Customizing "modern" site pages
       href: solution-guidance/modern-experience-customizations-customize-pages.md
+    - name: SharePoint "modern" sites classification
+      href: solution-guidance/modern-experience-site-classification.md
   - name: SharePoint Multi-Geo tenant guidance
     href: solution-guidance/multigeo-introduction.md
     items:

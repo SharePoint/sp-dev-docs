@@ -1,6 +1,6 @@
 ---
 title: Hosting client-side web part from Office 365 CDN
-ms.date: 12/11/2017
+ms.date: 1/2/2018
 ms.prod: sharepoint
 ---
 
@@ -11,6 +11,9 @@ This article describes how to host your client-side web part from Office 365 CDN
 
 > [!NOTE]
 > There are multiple different hosting options for your web part assets. This tutorial concentrates on showing the Office 365 CDN option, but you could also use the [Azure CDN](./deploy-web-part-to-cdn.md) or simply host your assets from SharePoint library from your tenant. In the latter case, you would not benefit from the CDN performance improvements, but that would also work from the functionality perspective. Any location which end users can access using HTTP(S) would be technically suitable for hosting the assets for end users.
+
+> [!IMPORTANT]
+> This article uses `includeClientSideAssets` attribute, which was introduced in the SPFx v1.4. This version is not supported with **SharePoint 2016 Feature Pack 2**. If you are using on-premises setup, you need to decide the CDN hosting location separately. You can also simply host the JavaScript files from centralized library in your on-premises SharePoint which your users have access. Please see additional considerations from the [SharePoint 2016 specific guidance](../../sharepoint-2016-support.md).
 
 ## Prerequisites
 

@@ -1,6 +1,6 @@
 ---
 title: SharePoint Framework development with SharePoint 2016 Feature Pack 2
-ms.date: 09/25/2017
+ms.date: 1/2/2018
 ---
 
 # SharePoint Framework development with SharePoint 2016 Feature Pack 2
@@ -20,6 +20,9 @@ SharePoint 2016 Feature Pack 2 supports SharePoint Framework client-side web par
 If you are planning to use the same client-side web parts in both SharePoint 2016 and in SharePoint Online, you will need to use the SharePoint Framework v1.1.0 as your baseline version to ensure that the web part works in both environments.
 
 Starting from version 1.3, the SharePoint Framework Yeoman generator supports scaffolding solutions both that use the latest version of the SharePoint Framework meant for use with SharePoint Online, and solutions that can be used also with SharePoint on-premises based on the v1.1.0 of the SharePoint Framework. You don't need to install a separate version of the SharePoint Framework Yeoman generator to scaffold solutions meant for use with SharePoint on-premises.
+
+> [!IMPORTANT]
+> Starting from version 1.4, the SharePoint Framework Yeoman generator supports new attribute of `includeClientSideAssets`, which can be used to indicate that assets should be included in the *sppkg* package. This capability is however only currently supported in SharePoint Online. When solution is targeted to  on-premises, this attribute in `package-solution.json` should be updated as `false`.
 
 ## Hosting your SharePoint Framework solution for on-premises deployment
 

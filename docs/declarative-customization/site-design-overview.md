@@ -24,7 +24,7 @@ You create site designs and register them in SharePoint to one of the modern tem
 
 1. Choose **Communication site**.
 
-    The communication site has a **Choose a design** box in which the following three site designs are available out-of-the-box.
+    The communication site has a **Choose a design** box in which comes with the following site designs.
 
     - Topic
     - Showcase
@@ -34,7 +34,7 @@ These are the default site designs. For each site design there is a title, descr
 
 ![Default site design title, description, and image on communication site template](images/site-designs-listed-on-communication-site-template.png)
 
-Had you chosen the team site template, it contains only one default site design named **Team site**. <!-- For additional information on how you can change the default site designs, see [Applying a site design to a default SharePoint template](site-design-apply-default-template.md). -->
+Had you chosen the team site template, it contains only one default site design named **Team site**. For additional information on how you can change the default site designs, see [Customize a default site design](customize-default-site-design.md).
 
 Once a site design is selected, SharePoint creates the new site, and runs site scripts for the site design. The site scripts detail the work such as creating new lists, or applying a theme. When the actions in the scripts are completed, SharePoint displays detailed results of those actions in a progress pane.
 
@@ -230,13 +230,13 @@ By default a site design can be viewed by everyone when it is created. Scopes ar
 ```powershell
 Grant-SPOSiteDesignRights `
   -Identity 44252d09-62c4-4913-9eb0-a2a8b8d7f863 `
-  -Principals "nestorw@contoso.sharepoint.com" `
+  -Principals "nestorw@contoso.onmicrosoft.com" `
   -Rights View
 ```
 
 <!--
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GrantSiteDesignRights", {id:"44252d09-62c4-4913-9eb0-a2a8b8d7f863", principalNames:["nestorw@contoso.sharepoint.com”], grantedRights:1});
+RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GrantSiteDesignRights", {id:"44252d09-62c4-4913-9eb0-a2a8b8d7f863", principalNames:["nestorw@contoso.onmicrosoft.com”], grantedRights:1});
 ```
 -->
 For more information on working with scopes, see [Scoping access to site designs](site-design-scoping.md).
@@ -248,3 +248,4 @@ For more information on working with scopes, see [Scoping access to site designs
 - [Site design JSON schema](site-design-json-schema.md)
 - [PowerShell cmdlets for SharePoint site designs and site scripts](site-design-powershell.md)
 - [Site design and site script REST API](site-design-rest-api.md)
+- [Site design examples](https://github.com/SharePoint/sp-dev-site-scripts)
