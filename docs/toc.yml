@@ -771,7 +771,7 @@
           href: general-development/bcs-rest-api-reference-for-sharepoint.md
         - name: BCS client object model reference
           href: general-development/bcs-client-object-model-reference-for-sharepoint.md
-        - name: Changes in the BDC model schema for SharePoint
+        - name: Changes in the BDC model schema
           href: general-development/changes-in-the-bdc-model-schema-for-sharepoint.md
         - name: BDC model schema reference
           href: general-development/bdc-model-schema-reference-for-sharepoint.md
@@ -897,21 +897,21 @@
         - name: Excel Services REST API
           href: general-development/excel-services-rest-api.md
           items:
-          - name: REST API Overview
+          - name: REST API overview
             href: general-development/excel-services-rest-api-overview.md
           - name: Basic URI structure and path
             href: general-development/basic-uri-structure-and-path.md
-          - name: Discovery in REST API
+          - name: Discovery
             href: general-development/discovery-in-excel-services-rest-api.md
-          - name: Resources URI for REST API
+          - name: Resources URI
             href: general-development/resources-uri-for-excel-services-rest-api.md
-          - name: Getting ranges using Atom Feed and HTML Fragment
+          - name: Getting ranges using Atom feed and HTML fragment
             href: general-development/getting-ranges-using-atom-feed-and-html-fragment.md
-          - name: Sample URI for REST API
+          - name: Sample URI
             href: general-development/sample-uri-for-excel-services-rest-api.md
           - name: Access a schema
             href: general-development/accessing-a-schema.md
-          - name: Unsupported features in REST API
+          - name: Unsupported features
             href: general-development/unsupported-features-in-excel-services-rest-api.md
           - name: Advanced scenarios and additional samples
             href: general-development/advanced-scenarios-and-additional-samples.md
@@ -936,8 +936,8 @@
             href: general-development/how-to-save-to-the-server-to-prepare-for-programmatic-access.md
           - name: Catch exceptions
             href: general-development/how-to-catch-exceptions.md
-        - name: Remove Excel Interactive View from a webpage
-          href: general-development/removing-excel-interactive-view-from-a-webpage.md
+          - name: Remove Excel Interactive View from a webpage
+            href: general-development/removing-excel-interactive-view-from-a-webpage.md
       - name: Machine Translation Service
         href: general-development/machine-translation-services-in-sharepoint.md
       - name: PerformancePoint Services
@@ -974,87 +974,87 @@
     - name: Authentication, authorization, and security
       href: general-development/authentication-authorization-and-security-in-sharepoint.md
       items:
-      - name: Authorization, users, groups, and the object model in SharePoint
+      - name: Authorization, users, groups, and the object model
         href: general-development/authorization-users-groups-and-the-object-model-in-sharepoint.md
-      - name: Role, inheritance, elevation of privilege, and password changes in SharePoint
+      - name: Role, inheritance, elevation of privilege, and password changes
         href: general-development/role-inheritance-elevation-of-privilege-and-password-changes-in-sharepoint.md
-      - name: Claims-based identity in SharePoint
+      - name: Claims-based identity
         href: general-development/claims-based-identity-in-sharepoint.md
         items:
-        - name: 'Incoming claims: Signing into SharePoint'
+        - name: Sign in to SharePoint
           href: general-development/incoming-claims-signing-into-sharepoint.md
-        - name: Claims provider in SharePoint
+        - name: Claims provider overview
           href: general-development/claims-provider-in-sharepoint.md
-        - name: Create a claims provider in SharePoint
+        - name: Create a claims provider
           href: general-development/how-to-create-a-claims-provider-in-sharepoint.md
-        - name: Deploy a claims provider in SharePoint
+        - name: Deploy a claims provider
           href: general-development/how-to-deploy-a-claims-provider-in-sharepoint.md
-      - name: Claims-based identity and concepts in SharePoint
+      - name: Claims-based identity and concepts
         href: general-development/claims-based-identity-and-concepts-in-sharepoint.md
         items:
-        - name: Sample delegation, federation, and authentication scenario in SharePoint
+        - name: Sample delegation, federation, and authentication scenario
           href: general-development/sample-delegation-federation-and-authentication-scenario-in-sharepoint.md
         - name: Claims-based identity term definitions
           href: general-development/claims-based-identity-term-definitions.md
-      - name: Configuration, administration, and resources in SharePoint
+      - name: Configuration, administration, and resources
         href: general-development/configuration-administration-and-resources-in-sharepoint.md
     - name: eDiscovery
       href: general-development/ediscovery-in-sharepoint.md
       items:
-      - name: What's new in SharePoint eDiscovery and compliance
+      - name: What's new in eDiscovery and compliance
         href: general-development/what-s-new-in-sharepoint-ediscovery-and-compliance.md
     - name: CMIS
       href: general-development/content-management-interoperability-services-cmis-in-sharepoint.md
     - name: XLIFF interchange file format
       href: general-development/the-xliff-interchange-file-format-in-sharepoint.md
-  - name: Create SharePoint no-code solutions
+  - name: Create no-code solutions
     href: general-development/create-sharepoint-no-code-solutions.md
     items:
-    - name: SharePoint Composites Handbook
+    - name: SharePoint Composites
       href: general-development/sharepoint-composites-handbook.md
-    - name: Save, download, and upload a SharePoint site as a template
+    - name: Save a site as a template
       href: general-development/save-download-and-upload-a-sharepoint-site-as-a-template.md
   - name: Upgrade site customizations
     href: general-development/upgrade-site-customizations-for-sharepoint.md
     items:
     - name: Upgrade web templates
       href: general-development/upgrade-web-templates-for-sharepoint.md
-    - name: Use Feature upgrade to apply new SharePoint master pages when upgrading from SharePoint 2010
+    - name: Use Feature upgrade to apply new master pages
       href: general-development/use-feature-upgrade-to-apply-new-sharepoint-master-pages-when-upgrading-fro.md
-  - name: Set up a general development environment for SharePoint
+  - name: Set up a development environment for SharePoint
     href: general-development/set-up-a-general-development-environment-for-sharepoint.md
   - name: How-tos for SharePoint
     href: general-development/how-tos-for-sharepoint.md
   - name: Code samples for SharePoint
     href: general-development/code-samples-for-sharepoint.md
-  - name: Choose the right API set in SharePoint
+  - name: Choose the right API set
     href: general-development/choose-the-right-api-set-in-sharepoint.md
   - name: Use the site collection app catalog
     href: general-development/site-collection-app-catalog.md
   - name: Maintenance mode for client-side web parts
     href: general-development/client-side-web-parts-maintenance-mode.md
-  - name: Set up and configure SharePoint Workflow Manager
+  - name: SharePoint Workflow Manager
     href: general-development/set-up-and-configure-sharepoint-workflow-manager.md
   - name: SharePoint Application Lifecycle Management
     href: general-development/sharepoint-server-application-lifecycle-management.md
-  - name: Accessibility in SharePoint
+  - name: Accessibility
     href: general-development/accessibility-in-sharepoint.md
-  - name: Detect the installed SKU of SharePoint
+  - name: Detect the installed SKU
     href: general-development/how-to-detect-the-installed-sku-of-sharepoint.md
   - name: Avoid getting throttled or blocked in SharePoint Online
     href: general-development/how-to-avoid-getting-throttled-or-blocked-in-sharepoint-online.md
-  - name: Overview of SharePoint and the Volume Shadow Copy Service
+  - name: Volume Shadow Copy Service (VSS)
     href: general-development/overview-of-sharepoint-and-the-volume-shadow-copy-service.md
     items:
-    - name: SharePoint VSS Writer
+    - name: VSS Writer
       href: general-development/sharepoint-vss-writer.md
-    - name: VSS requestors and SharePoint
+    - name: VSS requestors
       href: general-development/vss-requestors-and-sharepoint.md
     - name: Create a VSS requestor for use with SharePoint
       href: general-development/how-to-create-a-vss-requestor-for-use-with-sharepoint.md
     - name: Back up and restore SharePoint using a VSS requestor
       href: general-development/how-to-back-up-and-restore-sharepoint-using-a-vss-requestor.md
-    - name: Back up and restore a search service application in SharePoint using VSS
+    - name: Back up and restore a search service application
       href: general-development/how-to-back-up-and-restore-a-search-service-application-in-sharepoint-using.md
 - name: SharePoint Add-ins
   href: sp-add-ins/sharepoint-add-ins.md
