@@ -1339,7 +1339,7 @@
         href: solution-guidance/manage-sharepoint-users-and-groups.md
     - name: Metadata, site navigation, and publishing site features
       href: solution-guidance/sharepoint-metadata-site-navigation-and-publishing-site-features.md
-    - name: UX Components
+    - name: UX components
       href: solution-guidance/ux-components-in-sharepoint-2013-and-sharepoint-online.md
       items:
       - name: Customize the UX
@@ -1366,23 +1366,23 @@
   - name: SharePoint Multi-Geo tenant guidance
     href: solution-guidance/multigeo-introduction.md
     items:
-    - name: Permissions in a tenant
+    - name: Permissions
       href: solution-guidance/multigeo-permissions.md
-    - name: Discover the configuration of your tenant
+    - name: Discover your tenant configuration
       href: solution-guidance/multigeo-discovery.md
-    - name: OneDrive for Business in a tenant
+    - name: OneDrive for Business
       href: solution-guidance/multigeo-onedrive.md
-    - name: Work with sites in a tenant
+    - name: Work with sites
       href: solution-guidance/multigeo-sites.md
-    - name: Manage apps/add-ins in a tenant
+    - name: Manage apps/add-ins
       href: solution-guidance/multigeo-apps.md
-    - name: Work with user profiles in a tenant
+    - name: Work with user profiles
       href: solution-guidance/multigeo-userprofileexperience.md
-    - name: Search in a tenant
+    - name: Search
       href: solution-guidance/multigeo-search.md
-    - name: Managed metadata in a tenant
+    - name: Managed metadata
       href: solution-guidance/multigeo-managedmetadata.md
-    - name: Content type hub in a tenant
+    - name: Content type hub
       href: solution-guidance/multigeo-contenttypehub.md
   - name: Building SharePoint Online portals
     href: solution-guidance/portal-overview.md
@@ -1481,7 +1481,7 @@
     items:
     - name: App-only and elevated privileges
       href: solution-guidance/app-only-elevated-privileges-sharepoint-add-in.md
-    - name: Branding SharePoint sites
+    - name: Branding sites
       href: solution-guidance/branding-sharepoint-sites-sharepoint-add-in.md
     - name: Custom actions
       href: solution-guidance/custom-actions-sharepoint-add-in.md
@@ -1489,7 +1489,7 @@
       href: solution-guidance/custom-field-type-sharepoint-add-in.md
     - name: Custom ribbons
       href: solution-guidance/Add-a-custom-ribbon-to-your-SharePoint-site.md
-    - name: Customize your SharePoint site UI using JavaScript embedding
+    - name: Customize your site UI using JavaScript embedding
       href: solution-guidance/Customize-your-SharePoint-site-UI-by-using-JavaScript.md
     - name: Delegate controls
       href: solution-guidance/delegate-controls-sharepoint-add-in.md
@@ -1551,7 +1551,7 @@
       href: solution-guidance/workflows-actions-events-and-forms-sharepoint-add-in.md
     - name: Yammer integration
       href: solution-guidance/yammer-integration-sharepoint-add-in.md
-  - name: Transform farm solutions to the SharePoint Add-in model
+  - name: Transforming farm solutions to the SharePoint Add-in model
     href: solution-guidance/Transform-farm-solutions-to-the-SharePoint-app-model.md
     items:
     - name: Replace content types and site columns
