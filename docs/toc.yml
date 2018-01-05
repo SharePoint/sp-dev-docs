@@ -1050,9 +1050,9 @@
       href: general-development/sharepoint-vss-writer.md
     - name: VSS requestors
       href: general-development/vss-requestors-and-sharepoint.md
-    - name: Create a VSS requestor for use with SharePoint
+    - name: Create a VSS requestor
       href: general-development/how-to-create-a-vss-requestor-for-use-with-sharepoint.md
-    - name: Back up and restore SharePoint using a VSS requestor
+    - name: Back up and restore SharePoint
       href: general-development/how-to-back-up-and-restore-sharepoint-using-a-vss-requestor.md
     - name: Back up and restore a search service application
       href: general-development/how-to-back-up-and-restore-a-search-service-application-in-sharepoint-using.md
@@ -1106,12 +1106,12 @@
   - name: Design
     href: sp-add-ins/design-sharepoint-add-ins.md
     items:
-    - name: Three ways to think about design options for add-ins
+    - name: Design options for add-ins
       href: sp-add-ins/three-ways-to-think-about-design-options-for-sharepoint-add-ins.md
-    - name: Important aspects of the add-in architecture and development landscape
+    - name: Add-in architecture and development landscape
       href: sp-add-ins/important-aspects-of-the-sharepoint-add-in-architecture-and-development-landscap.md
       items:
-      - name: Choose patterns for developing and hosting your add-in
+      - name: Patterns for developing and hosting an add-in
         href: sp-add-ins/choose-patterns-for-developing-and-hosting-your-sharepoint-add-in.md
       - name: Host webs, add-in webs, and SharePoint components
         href: sp-add-ins/host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md
@@ -1266,7 +1266,7 @@
   - name: Publish
     href: sp-add-ins/publish-sharepoint-add-ins.md
     items:
-    - name: 'Deploying and installing add-ins: methods and options'
+    - name: Deploy and install add-ins
       href: sp-add-ins/deploying-and-installing-sharepoint-add-ins-methods-and-options.md
     - name: Tenancies and deployment scopes for add-ins
       href: sp-add-ins/tenancies-and-deployment-scopes-for-sharepoint-add-ins.md
@@ -1302,7 +1302,7 @@
 - name: Solution guidance
   href: solution-guidance/Office-365-development-patterns-and-practices-solution-guidance.md
   items:
-  - name: Branding and site provisioning
+  - name: Branding and site provisioning solutions
     href: solution-guidance/Branding-and-site-provisioning-solutions-for-SharePoint.md
     items:
     - name: Page model
@@ -1318,7 +1318,7 @@
         href: solution-guidance/Use-remote-provisioning-to-brand-SharePoint-pages.md
       - name: Use CSS to brand pages
         href: solution-guidance/Use-CSS-to-brand-pages.md
-      - name: Customize elements of a SharePoint page
+      - name: Customize elements of a page
         href: solution-guidance/Customize-a-SharePoint-page-by-using-remote-provisioning-and-CSS.md
       - name: Update the branding of existing sites and regions
         href: solution-guidance/update-the-branding-of-existing-sharepoint-sites-and-page-regions.md
@@ -1353,43 +1353,43 @@
   - name: Customizing the "modern" experiences in SharePoint Online
     href: solution-guidance/modern-experience-customizations.md
     items:
-    - name: Provisioning "modern" team sites programmatically
+    - name: Provision "modern" team sites programmatically
       href: solution-guidance/modern-experience-customizations-provisioning-sites.md
-    - name: Customizing "modern" team sites
+    - name: Customize "modern" team sites
       href: solution-guidance/modern-experience-customizations-customize-sites.md
-    - name: Customizing "modern" lists and libraries
+    - name: Customize "modern" lists and libraries
       href: solution-guidance/modern-experience-customizations-customize-lists-and-libraries.md
-    - name: Customizing "modern" site pages
+    - name: Customize "modern" site pages
       href: solution-guidance/modern-experience-customizations-customize-pages.md
     - name: SharePoint "modern" sites classification
       href: solution-guidance/modern-experience-site-classification.md
   - name: SharePoint Multi-Geo tenant guidance
     href: solution-guidance/multigeo-introduction.md
     items:
-    - name: Permissions in a Multi-Geo tenant
+    - name: Permissions in a tenant
       href: solution-guidance/multigeo-permissions.md
-    - name: Discover the Multi-Geo configuration of your SharePoint tenant
+    - name: Discover the configuration of your tenant
       href: solution-guidance/multigeo-discovery.md
-    - name: Onedrive for Business in a Multi-Geo tenant
+    - name: OneDrive for Business in a tenant
       href: solution-guidance/multigeo-onedrive.md
-    - name: Work with SharePoint sites in a Multi-Geo tenant
+    - name: Work with sites in a tenant
       href: solution-guidance/multigeo-sites.md
-    - name: Managing Apps/Add-ins in a Multi-Geo tenant
+    - name: Manage apps/add-ins in a tenant
       href: solution-guidance/multigeo-apps.md
-    - name: Work with user profiles in a Multi-Geo tenant
+    - name: Work with user profiles in a tenant
       href: solution-guidance/multigeo-userprofileexperience.md
-    - name: Search in a Multi-Geo SharePoint tenant
+    - name: Search in a tenant
       href: solution-guidance/multigeo-search.md
-    - name: Managed metadata in a Multi-Geo tenant
+    - name: Managed metadata in a tenant
       href: solution-guidance/multigeo-managedmetadata.md
-    - name: Content type hub in a Multi-Geo tenant
+    - name: Content type hub in a tenant
       href: solution-guidance/multigeo-contenttypehub.md
-  - name: Building well performing SharePoint Online portals
+  - name: Building SharePoint Online portals
     href: solution-guidance/portal-overview.md
     items:
     - name: Performance guidance
       href: solution-guidance/portal-performance.md
-    - name: Information Architecture
+    - name: Information architecture
       href: solution-guidance/portal-information-architecture.md
     - name: Navigation considerations
       href: solution-guidance/portal-navigation.md
@@ -1443,38 +1443,38 @@
     items:
     - name: Search customizations
       href: solution-guidance/search-customizations-for-sharepoint.md
-  - name: Security and Performance
+  - name: Security and performance
     href: solution-guidance/security-and-performance.md
     items:
-    - name: Authorization considerations for tenants hosted in the Germany, China or US Government environments
+    - name: Authorization considerations for tenants hosted in Germany, China, or US
       href: solution-guidance/Extending-SharePoint-Online-for-Germany-China-USGovernment-environments.md
     - name: Handle SharePoint Online throttling
       href: solution-guidance/Handle-SharePoint-Online-throttling-by-using-exponential-back-off.md
-    - name: Setting up App-Only access to SharePoint
+    - name: Set up app-only access to SharePoint
       href: solution-guidance/security-apponly.md
       items:
-      - name: Granting access via Azure AD App-Only
+      - name: Grant access using Azure AD app-only
         href: solution-guidance/security-apponly-azuread.md      
-      - name: Granting access using SharePoint App-Only
+      - name: Grant access using SharePoint app-only
         href: solution-guidance/security-apponly-azureacs.md      
-    - name: Implementing a web app policy alternative
+    - name: Implement a web app policy alternative
       href: solution-guidance/security-webapppolicies.md
-    - name: Migrating from permissive to strict tenant setting
+    - name: Migrate from permissive to strict tenant setting
       href: solution-guidance/security-permissivesetting.md
     - name: Authorize provider-hosted add-in users at run time
       href: solution-guidance/authorize-provider-hosted-add-in-users-at-run-time-by-using-oauth.md
-    - name: Cross-domain images in SharePoint provider-hosted add-ins
+    - name: Cross-domain images in provider-hosted add-ins
       href: solution-guidance/cross-domain-images-in-sharepoint-provider-hosted-add-ins.md
     - name: Elevated privileges in SharePoint Add-ins
       href: solution-guidance/elevated-privileges-in-sharepoint-add-ins.md
-    - name: How to provide add-in app only tenant administrative permissions in SharePoint Online
+    - name: Provide add-in app-only tenant administrative permissions in SharePoint Online
       href: solution-guidance/how-to-provide-add-in-app-only-tenant-administrative-permissions-in-sharepoint-online.md
       items:
-      - name: Developing using Tenant permissions with App-Only
+      - name: Develop using tenant permissions with App-Only
         href: solution-guidance/development-experience-tenant-apponly-permissions-in-sharepoint-online.md
     - name: Set external sharing in Office 365
       href: solution-guidance/Set-external-sharing-on-site-collections-in-Office-365.md
-    - name: JavaScript Patterns and Performance
+    - name: JavaScript patterns and performance
       href: solution-guidance/javascript-patterns-and-performance.md
   - name: SharePoint Add-in recipes
     href: solution-guidance/sharepoint-add-in-recipes.md
