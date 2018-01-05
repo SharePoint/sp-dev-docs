@@ -495,7 +495,7 @@
         href: general-development/modify-sharepoint-components-for-mds.md
       - name: Optimize page performance
         href: general-development/optimize-page-performance-in-sharepoint.md
-      - name: Optimize SharePoint site accessibility
+      - name: Optimize site accessibility
         href: general-development/optimize-sharepoint-site-accessibility.md
   - name: Add SharePoint capabilities
     href: general-development/add-sharepoint-capabilities.md
@@ -509,7 +509,7 @@
         href: general-development/sharepoint-workflow-fundamentals.md
       - name: What's new in workflows
         href: general-development/what-s-new-in-workflows-for-sharepoint.md
-      - name: Prepare to set up and configure a workflow development environment
+      - name: Set up a workflow development environment
         href: general-development/prepare-to-set-up-and-configure-a-sharepoint-workflow-development-environment.md
       - name: Configure MSMQ for workflows
         href: general-development/how-to-configure-msmq-for-sharepoint-workflows.md
@@ -530,11 +530,11 @@
           href: general-development/create-a-sharepoint-workflow-app-using-visual-studio-2012.md
         - name: Create workflows
           href: general-development/how-to-create-sharepoint-workflows-using-visual-studio.md
-        - name: Work with the SharePoint Workflow Services Client Side Object Model
+        - name: SharePoint Workflow Services Client Side Object Model
           href: general-development/working-with-the-sharepoint-workflow-services-client-side-object-model.md
-        - name: Work with Web Services in workflows
+        - name: Web Services in workflows
           href: general-development/working-with-web-services-in-sharepoint-workflows-using-visual-studio-2012.md
-        - name: Work with Tasks in workflows
+        - name: Tasks in workflows
           href: general-development/working-with-tasks-in-sharepoint-workflows-using-visual-studio-2012.md
         - name: Create custom SharePoint workflow forms
           href: general-development/how-to-create-custom-sharepoint-server-workflow-forms-with-visual-studio-20.md
@@ -657,7 +657,7 @@
         href: general-development/how-to-set-the-bing-maps-key-at-the-web-and-farm-level-in-sharepoint.md
       - name: Extend the Geolocation field type by using client-side rendering
         href: general-development/how-to-extend-the-geolocation-field-type-using-client-side-rendering.md
-    - name: Search
+    - name: Search in SharePoint
       href: general-development/search-in-sharepoint.md
       items:
       - name: What's new in SharePoint search for developers
@@ -676,7 +676,7 @@
             href: general-development/how-to-crawl-binary-large-objects-blobs-in-sharepoint.md
           - name: Configure item-level security
             href: general-development/how-to-configure-item-level-security-in-sharepoint.md
-      - name: Configure search in SharePoint
+      - name: Configure search
         href: general-development/configure-search-in-sharepoint.md
         items:
         - name: Custom word breakers in SharePoint Server
@@ -684,11 +684,11 @@
         - name: Custom content processing with the Content Enrichment web service callout
           href: general-development/custom-content-processing-with-the-content-enrichment-web-service-callout.md
           items:
-          - name: Use the Content Enrichment web service callout for SharePoint Server
+          - name: Use the web service callout for SharePoint Server
             href: general-development/how-to-use-the-content-enrichment-web-service-callout-for-sharepoint-server.md
           - name: Trigger expression syntax
             href: general-development/trigger-expressions-syntax-in-sharepoint.md
-      - name: Build search queries in SharePoint
+      - name: Build search queries
         href: general-development/building-search-queries-in-sharepoint.md
         items:
         - name: Keyword Query Language (KQL) syntax reference
@@ -702,11 +702,11 @@
         items:
         - name: Retrieve query suggestions using the Search REST service
           href: general-development/retrieving-query-suggestions-using-the-search-rest-service.md
-      - name: Search add-ins in SharePoint
+      - name: Search add-ins
         href: general-development/search-add-ins-in-sharepoint.md
-      - name: Customize search results in SharePoint
+      - name: Customize search results
         href: general-development/customizing-search-results-in-sharepoint.md
-      - name: Sort search results in SharePoint
+      - name: Sort search results
         href: general-development/sorting-search-results-in-sharepoint.md
       - name: Customize ranking models to improve relevance
         href: general-development/customizing-ranking-models-to-improve-relevance-in-sharepoint.md
