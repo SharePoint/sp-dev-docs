@@ -517,7 +517,7 @@
         href: general-development/workflow-initiation-and-configuration-properties.md
       - name: Workflow development best practices
         href: general-development/sharepoint-workflow-development-best-practices.md
-      - name: Debugging SharePoint Server workflows
+      - name: Debugging workflows
         href: general-development/debugging-sharepoint-server-workflows.md
       - name: Using the pairing cmdlet Register-SPWorkflowService
         href: general-development/using-the-pairing-cmdlet-register-spworkflowservice.md
@@ -679,12 +679,12 @@
       - name: Configure search
         href: general-development/configure-search-in-sharepoint.md
         items:
-        - name: Custom word breakers in SharePoint Server
+        - name: Custom word breakers
           href: general-development/custom-word-breakers-in-sharepoint-server.md
         - name: Custom content processing with the Content Enrichment web service callout
           href: general-development/custom-content-processing-with-the-content-enrichment-web-service-callout.md
           items:
-          - name: Use the web service callout for SharePoint Server
+          - name: Use the web service callout
             href: general-development/how-to-use-the-content-enrichment-web-service-callout-for-sharepoint-server.md
           - name: Trigger expression syntax
             href: general-development/trigger-expressions-syntax-in-sharepoint.md
@@ -697,7 +697,7 @@
           href: general-development/fast-query-language-fql-syntax-reference.md
         - name: Using the SharePoint search Query APIs
           href: general-development/using-the-sharepoint-search-query-apis.md
-      - name: SharePoint Search REST API overview
+      - name: Search REST API
         href: general-development/sharepoint-search-rest-api-overview.md
         items:
         - name: Retrieve query suggestions using the Search REST service
@@ -708,16 +708,16 @@
         href: general-development/customizing-search-results-in-sharepoint.md
       - name: Sort search results
         href: general-development/sorting-search-results-in-sharepoint.md
-      - name: Customize ranking models to improve relevance
+      - name: Customize ranking models
         href: general-development/customizing-ranking-models-to-improve-relevance-in-sharepoint.md
-      - name: Custom security trimming for Search in SharePoint Server
+      - name: Custom security trimming for Search
         href: general-development/custom-security-trimming-for-search-in-sharepoint-server.md
         items:
-        - name: Use a custom security trimmer for SharePoint Server search results
+        - name: Use a custom security trimmer for search results
           href: general-development/how-to-use-a-custom-security-trimmer-for-sharepoint-server-search-results.md
       - name: Export and import search configuration settings programmatically
         href: general-development/exporting-and-importing-search-configuration-settings-in-sharepoint.md
-      - name: Query refinement in SharePoint
+      - name: Refine queries
         href: general-development/query-refinement-in-sharepoint.md
     - name: Business Connectivity Services
       href: general-development/business-connectivity-services-in-sharepoint.md
@@ -1034,7 +1034,7 @@
     href: general-development/client-side-web-parts-maintenance-mode.md
   - name: Set up and configure SharePoint Workflow Manager
     href: general-development/set-up-and-configure-sharepoint-workflow-manager.md
-  - name: SharePoint Server Application Lifecycle Management
+  - name: SharePoint Application Lifecycle Management
     href: general-development/sharepoint-server-application-lifecycle-management.md
   - name: Accessibility in SharePoint
     href: general-development/accessibility-in-sharepoint.md
