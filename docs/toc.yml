@@ -1470,7 +1470,7 @@
     - name: Provide add-in app-only tenant administrative permissions in SharePoint Online
       href: solution-guidance/how-to-provide-add-in-app-only-tenant-administrative-permissions-in-sharepoint-online.md
       items:
-      - name: Develop using tenant permissions with App-Only
+      - name: Develop using tenant permissions with app-only
         href: solution-guidance/development-experience-tenant-apponly-permissions-in-sharepoint-online.md
     - name: Set external sharing in Office 365
       href: solution-guidance/Set-external-sharing-on-site-collections-in-Office-365.md
@@ -1479,37 +1479,37 @@
   - name: SharePoint Add-in recipes
     href: solution-guidance/sharepoint-add-in-recipes.md
     items:
-    - name: App-Only and Elevated privileges
+    - name: App-only and elevated privileges
       href: solution-guidance/app-only-elevated-privileges-sharepoint-add-in.md
-    - name: Branding SharePoint Sites
+    - name: Branding SharePoint sites
       href: solution-guidance/branding-sharepoint-sites-sharepoint-add-in.md
-    - name: Custom Actions
+    - name: Custom actions
       href: solution-guidance/custom-actions-sharepoint-add-in.md
-    - name: Custom Field Type
+    - name: Custom field type
       href: solution-guidance/custom-field-type-sharepoint-add-in.md
-    - name: Custom Ribbons
+    - name: Custom ribbons
       href: solution-guidance/Add-a-custom-ribbon-to-your-SharePoint-site.md
     - name: Customize your SharePoint site UI using JavaScript embedding
       href: solution-guidance/Customize-your-SharePoint-site-UI-by-using-JavaScript.md
-    - name: Delegate Controls
+    - name: Delegate controls
       href: solution-guidance/delegate-controls-sharepoint-add-in.md
-    - name: Document ID Provider
+    - name: Document ID provider
       href: solution-guidance/document-id-provider-sharepoint-add-in.md
-    - name: Event Receivers and List Event Receivers
+    - name: Event receivers and list event receivers
       href: solution-guidance/event-receiver-and-list-event-receiver-sharepoint-add-in.md
-    - name: Feature Stapling
+    - name: Feature stapling
       href: solution-guidance/feature-stapling-sharepoint-add-in.md
-    - name: Information Management Policy
+    - name: Information management policy
       href: solution-guidance/information-management-policy-sharepoint-add-in.md
     - name: JavaScript customizations
       href: solution-guidance/Embedding-JavaScript-into-SharePoint.md
-    - name: List Definition / List Template
+    - name: List definition/list template
       href: solution-guidance/list-definition-template-sharepoint-add-in.md
-    - name: List Instance
+    - name: List instance
       href: solution-guidance/list-instance-sharepoint-add-in.md
     - name: Localization
       href: solution-guidance/localization-sharepoint-add-in.md
-    - name: Master Pages
+    - name: Master pages
       href: solution-guidance/master-pages-sharepoint-add-in.md
     - name: MMS manipulation
       href: solution-guidance/mms-manipulation-sharepoint-add-in.md
@@ -1517,27 +1517,27 @@
       href: solution-guidance/modules-sharepoint-add-in.md
     - name: OneDrive for Business customization
       href: solution-guidance/onedrive-for-business-customization-sharepoint-add-in.md
-    - name: Performance Considerations
+    - name: Performance considerations
       href: solution-guidance/performance-considerations-sharepoint-add-in.md
-    - name: Remote Timer Jobs
+    - name: Remote timer jobs
       href: solution-guidance/remote-timer-jobs-sharepoint-add-in.md
     - name: Remote event receivers
       href: solution-guidance/Use-remote-event-receivers-in-SharePoint.md
-    - name: Search API Usage
+    - name: Search API usage
       href: solution-guidance/search-api-usage-sharepoint-add-in.md
-    - name: Search Configuration
+    - name: Search configuration
       href: solution-guidance/search-configuration-sharepoint-add-in.md
     - name: SharePoint change log
       href: solution-guidance/query-sharepoint-change-log-with-changequery-and-changeToken.md
-    - name: Site Columns and Content Types
+    - name: Site columns and content types
       href: solution-guidance/site-columns-and-content-types-sharepoint-add-in.md
-    - name: Site Provisioning
+    - name: Site provisioning
       href: solution-guidance/site-provisioning-sharepoint-add-in.md
-    - name: Use asynchronous operations in SharePoint Add-ins
+    - name: Asynchronous operations in SharePoint Add-ins
       href: solution-guidance/use-asynchronous-operations-in-sharepoint-add-ins.md
-    - name: User Controls and Web Controls
+    - name: User controls and web controls
       href: solution-guidance/user-controls-and-web-controls-sharepoint-add-in.md
-    - name: User Profile Manipulation
+    - name: User profile manipulation
       href: solution-guidance/user profile manipulation-sharepoint-add-in.md
     - name: Variations
       href: solution-guidance/variations-sharepoint-add-in.md
@@ -1545,13 +1545,13 @@
       href: solution-guidance/web-part-sharepoint-add-in.md
     - name: Upload Web Parts
       href: solution-guidance/upload-web-parts-in-sharepoint.md
-    - name: Connect SharePoint add-in parts
+    - name: Connect SharePoint Add-in parts
       href: solution-guidance/Connect-SharePoint-app-parts-by-using-SignalR.md
-    - name: Workflows, Actions (Activities), Events, and Forms
+    - name: Workflows, actions (activities), events, and forms
       href: solution-guidance/workflows-actions-events-and-forms-sharepoint-add-in.md
-    - name: Yammer Integration
+    - name: Yammer integration
       href: solution-guidance/yammer-integration-sharepoint-add-in.md
-  - name: Transform farm solutions to the SharePoint add-in model
+  - name: Transform farm solutions to the SharePoint Add-in model
     href: solution-guidance/Transform-farm-solutions-to-the-SharePoint-app-model.md
     items:
     - name: Replace content types and site columns
@@ -1562,7 +1562,7 @@
       href: solution-guidance/replace-sharepoint-lists-created-from-list-definitions.md
     - name: Replace Web Parts with add-in parts
       href: solution-guidance/replace-sharepoint-web-parts-with-add-in-parts.md
-  - name: Sandbox Solution Transformation Guidance
+  - name: Sandbox solution transformation guidance
     href: solution-guidance/Sandbox-Solution-Transformation-Guidance.md
     items:
     - name: Web Parts
@@ -1573,7 +1573,7 @@
       href: solution-guidance/Sandbox-Solution-Transformation-Guidance-Feature-Receivers.md
     - name: InfoPath forms with code
       href: solution-guidance/Sandbox-Solution-Transformation-Guidance-InfoPath.md
-  - name: User Profile Solutions
+  - name: User profile solutions
     href: solution-guidance/user-profile-solutions-for-sharepoint.md
     items:
     - name: Read or update user profile properties
@@ -1586,21 +1586,21 @@
       href: solution-guidance/Personalize-search-results-sample-app-for-SharePoint.md
     - name: Upload user profile pictures
       href: solution-guidance/Upload-user-profile-pictures-sample-app-for-SharePoint.md
-  - name: Deploying your SharePoint add-ins
+  - name: Deploying your SharePoint Add-ins
     href: solution-guidance/deploying-your-sharepoint-add-ins.md
     items:
-    - name: Deploy Sites to Microsoft Azure
+    - name: Deploy sites to Azure
       href: solution-guidance/Move-O365Api-Project-from-Dev-To-Prod.md
     - name: Use Azure WebJobs with Office 365
       href: solution-guidance/Use-Microsoft-Azure-WebJobs-with-Office-365.md
-    - name: Configure Provider-Hosted Add-ins for Distribution
+    - name: Configure provider-hosted add-ins for distribution
       href: solution-guidance/Configure-SP-Provider-Hosted-Apps-For-Distribution.md
-    - name: Configure Office 365 Projects for Distribution
+    - name: Configure Office 365 projects for distribution
       href: solution-guidance/Configure-O365Api-Project-For-Distribution.md
   - name: PnP remote provisioning
     href: solution-guidance/pnp-remote-provisioning.md
     items:
-    - name: Introducing the PnP Provisioning Engine
+    - name: Introducing the PnP provisioning engine
       href: solution-guidance/Introducing-the-PnP-Provisioning-Engine.md
     - name: PnP provisioning framework
       href: solution-guidance/pnp-provisioning-framework.md
@@ -1613,11 +1613,11 @@
   - name: PnP remote timer job framework
     href: solution-guidance/pnp-remote-timer-job-framework.md
     items:
-    - name: The Timer Job Framework
+    - name: The timer job framework
       href: solution-guidance/timerjob-framework.md
     - name: Create remote timer jobs in SharePoint
       href: solution-guidance/create-remote-timer-jobs-in-sharepoint.md
-    - name: Getting Started with WebJobs ("timer jobs")
+    - name: Get started with WebJobs ("timer jobs")
       href: solution-guidance/Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites.md
   - name: PnP Sites Core API reference
     href: https://msdn.microsoft.com/en-us/pnp_sites_core/pnp-sites-core-overview
