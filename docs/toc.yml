@@ -151,13 +151,13 @@
       items:
       - name: Add external libraries
         href: spfx/web-parts/basics/add-an-external-library.md
-      - name: Use existing JavaScript libraries
+      - name: JavaScript libraries
         href: spfx/web-parts/guidance/use-existing-javascript-libraries.md
-      - name: Use existing CSS styles
+      - name: CSS styles
         href: spfx/web-parts/guidance/reference-third-party-css-styles.md
-      - name: Use SP PnP JS
+      - name: SP PnP JS
         href: spfx/web-parts/guidance/use-sp-pnp-js-with-spfx-web-parts.md
-      - name: Use AngularJS
+      - name: AngularJS
         href: spfx/web-parts/guidance/build-client-side-web-parts-with-angular-1-x.md
     - name: Connect to APIs
       items:
@@ -170,7 +170,7 @@
       items:
       - name: Optimize builds for production
         href: spfx/toolchain/optimize-builds-for-production.md
-    - name: Setup and Deployment
+    - name: Setup and deployment
       items:
       - name: Package solution
         href: spfx/web-parts/basics/notes-on-solution-packaging.md
@@ -277,7 +277,7 @@
       href: declarative-customization/site-design-powershell.md
     - name: REST API
       href: declarative-customization/site-design-rest-api.md
-    - name: Call the PnP Provisioning Engine
+    - name: PnP Provisioning Engine
       href: declarative-customization/site-design-pnp-provisioning.md
 - name: SharePoint APIs
   items:
@@ -301,7 +301,7 @@
       href: apis/rest/use-odata-query-operations-in-sharepoint-rest-requests.md
     - name: Navigate data structure
       href: apis/rest/navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md
-    - name: Synchronize SharePoint items
+    - name: Synchronize items
       href: apis/rest/synchronize-sharepoint-items-using-the-rest-service.md
     - name: Upload a file
       href: apis/rest/upload-a-file-by-using-the-rest-api-and-jquery.md
@@ -359,25 +359,25 @@
       items:
       - name: Set up an environment for developing mobile apps
         href: general-development/how-to-set-up-an-environment-for-developing-mobile-apps-for-sharepoint.md
-      - name: Windows Phone SharePoint application templates in Visual Studio
+      - name: Application templates in Visual Studio
         href: general-development/overview-of-windows-phone-sharepoint-application-templates-in-visual-studio.md
-      - name: Windows Phone SharePoint List Application template architecture
+      - name: List Application template
         href: general-development/architecture-of-the-windows-phone-sharepoint-list-application-template.md
-      - name: Create a Windows Phone SharePoint list app
+      - name: Create a list app
         href: general-development/how-to-create-a-windows-phone-sharepoint-list-app.md
-      - name: Store and retrieve list items on a Windows Phone
+      - name: Store and retrieve list items
         href: general-development/how-to-store-and-retrieve-sharepoint-list-items-on-a-windows-phone.md
-      - name: Implement business logic and data validation in a Windows Phone app
+      - name: Implement business logic and data validation
         href: general-development/how-to-implement-business-logic-and-data-validation-in-a-windows-phone-app-for-s.md
-      - name: Support and convert field types for Windows Phone apps
+      - name: Support and convert field types
         href: general-development/how-to-support-and-convert-sharepoint-field-types-for-windows-phone-apps.md
-      - name: Customize list item queries and filter data for Windows Phone apps
+      - name: Customize list item queries and filter data
         href: general-development/how-to-customize-list-item-queries-and-filter-data-for-windows-phone-apps.md
-      - name: Customize the user interface of a list app for Windows Phone
+      - name: Customize the user interface of a list app
         href: general-development/how-to-customize-the-user-interface-of-a-sharepoint-list-app-for-windows-ph.md
-      - name: Use multiple lists in a Windows Phone app
+      - name: Use multiple lists
         href: general-development/how-to-use-multiple-sharepoint-lists-in-a-windows-phone-app.md
-      - name: Configure and use push notifications in SharePoint apps for Windows Phone
+      - name: Configure and use push notifications
         href: general-development/how-to-configure-and-use-push-notifications-in-sharepoint-apps-for-windows.md
       - name: Create a mobile app that contains data from an external data source
         href: general-development/how-to-create-a-mobile-app-in-sharepoint-that-contains-data-from-an-externa.md
@@ -391,9 +391,9 @@
         href: general-development/overview-of-the-sharepoint-mobile-client-authentication-object-model.md
       - name: Export the Name field in a Document Library list to a mobile app
         href: general-development/how-to-export-the-name-field-in-a-document-library-list-to-a-mobile-app.md
-      - name: Build localized applications for Windows Phone based on SharePoint templates
+      - name: Build localized applications based on SharePoint templates
         href: general-development/build-localized-applications-for-windows-phone-based-on-the-sharepoint-templates.md
-      - name: Language support for Windows Phone
+      - name: Language support
         href: general-development/language-support-for-windows-phone-in-sharepoint.md
       - name: Build mobile apps for other platforms
         href: general-development/build-mobile-apps-for-other-platforms-using-sharepoint.md
