@@ -710,7 +710,7 @@
         href: general-development/sorting-search-results-in-sharepoint.md
       - name: Customize ranking models
         href: general-development/customizing-ranking-models-to-improve-relevance-in-sharepoint.md
-      - name: Custom security trimming for Search
+      - name: Custom security trimming
         href: general-development/custom-security-trimming-for-search-in-sharepoint-server.md
         items:
         - name: Use a custom security trimmer for search results
@@ -719,15 +719,15 @@
         href: general-development/exporting-and-importing-search-configuration-settings-in-sharepoint.md
       - name: Refine queries
         href: general-development/query-refinement-in-sharepoint.md
-    - name: Business Connectivity Services
+    - name: Business Connectivity Services (BCS)
       href: general-development/business-connectivity-services-in-sharepoint.md
       items:
-      - name: What's new in Business Connectivity Services
+      - name: What's new in BCS
         href: general-development/what-s-new-in-business-connectivity-services-in-sharepoint.md
-      - name: Get started with Business Connectivity Services
+      - name: Get started with BCS
         href: general-development/get-started-with-business-connectivity-services-in-sharepoint.md
         items:
-        - name: Setting up a development environment for BCS
+        - name: Set up a development environment for BCS
           href: general-development/setting-up-a-development-environment-for-bcs-in-sharepoint.md
       - name: External content types
         href: general-development/external-content-types-in-sharepoint.md
@@ -745,14 +745,14 @@
             href: general-development/how-to-convert-an-add-in-scoped-external-content-type-to-tenant-scoped.md
           - name: Access external data by using REST
             href: general-development/how-to-access-external-data-with-rest-in-sharepoint.md
-      - name: Using OData sources with Business Connectivity Services
+      - name: Use OData sources with BCS
         href: general-development/using-odata-sources-with-business-connectivity-services-in-sharepoint.md
         items:
-        - name: Create an external content type from an OData source
+        - name: Create an external content type
           href: general-development/how-to-create-an-external-content-type-from-an-odata-source-in-sharepoint.md
         - name: Create an OData data service for use as a BCS external system
           href: general-development/how-to-create-an-odata-data-service-for-use-as-a-bcs-external-system.md
-        - name: Create an external list using an OData data source
+        - name: Create an external list
           href: general-development/how-to-create-an-external-list-using-an-odata-data-source-in-sharepoint.md
       - name: External events and alerts
         href: general-development/external-events-and-alerts-in-sharepoint.md
@@ -764,7 +764,7 @@
         items:
         - name: Use the client code library to access external data
           href: general-development/how-to-use-the-client-code-library-to-access-external-data-in-sharepoint.md
-      - name: Business Connectivity Services programmers reference
+      - name: BCS programmers reference
         href: general-development/business-connectivity-services-programmers-reference-for-sharepoint.md
         items:
         - name: BCS REST API reference
@@ -777,53 +777,53 @@
           href: general-development/bdc-model-schema-reference-for-sharepoint.md
       - name: Create hybrid connectivity apps for SharePoint
         href: general-development/create-hybrid-connectivity-apps-for-sharepoint.md
-      - name: Developing with Duet Enterprise 2.0
+      - name: Develop with Duet Enterprise 2.0
         href: general-development/developing-with-duet-enterprise-2-0.md
         items:
-        - name: Use SAP workflow with Duet Enterprise 2.0
+        - name: Use SAP workflow
           href: general-development/how-to-use-sap-workflow-with-duet-enterprise-2-0.md
-        - name: Use SAP Reporting with Duet Enterprise 2.0
+        - name: Use SAP reporting
           href: general-development/how-to-use-sap-reporting-with-duet-enterprise-2-0.md
     - name: Office and SharePoint application services
       href: general-development/office-and-sharepoint-application-services.md
       items:
-      - name: Excel Services in SharePoint
+      - name: Excel Services
         href: general-development/excel-services-in-sharepoint.md
         items:
-        - name: Getting Started with Excel Services
+        - name: Getting started
           href: general-development/getting-started-with-excel-services.md
           items:
-          - name: Excel Services Overview
+          - name: Overview
             href: general-development/excel-services-overview.md
-          - name: Excel Services Architecture
+          - name: Architecture
             href: general-development/excel-services-architecture.md
-          - name: Excel Services Development Roadmap
+          - name: Development roadmap
             href: general-development/excel-services-development-roadmap.md
-          - name: Supported and Unsupported Features
+          - name: Features
             href: general-development/supported-and-unsupported-features.md
-          - name: Excel Services Blogs, Forums, and Resources
+          - name: Blogs, forums, and resources
             href: general-development/excel-services-blogs-forums-and-resources.md
         - name: Excel Web Services
           href: general-development/excel-web-services.md
           items:
-          - name: What's New in Excel Web Services
+          - name: What's new
             href: general-development/what-s-new-in-excel-web-services.md
-          - name: Accessing the SOAP API
+          - name: Access the SOAP API
             href: general-development/accessing-the-soap-api.md
-          - name: Loop-Back SOAP Calls and Direct Linking
+          - name: Loop-back SOAP calls and direct linking
             href: general-development/loop-back-soap-calls-and-direct-linking.md
-          - name: 'Walkthrough: Developing a Custom Application Using Excel Web Services'
+          - name: Develop a custom application
             href: general-development/walkthrough-developing-a-custom-application-using-excel-web-services.md
             items:
-            - name: 'Step 1: Creating the Web Service Client Project'
+            - name: Create the web service client project
               href: general-development/step-1-creating-the-web-service-client-project.md
-            - name: 'Step 2: Adding a Web Reference'
+            - name: Add a web reference
               href: general-development/step-2-adding-a-web-reference.md
-            - name: 'Step 3: Accessing the Web Service'
+            - name: Access the web service
               href: general-development/step-3-accessing-the-web-service.md
-            - name: 'Step 4: Building and Testing the Application'
+            - name: Build and test the application
               href: general-development/step-4-building-and-testing-the-application.md
-          - name: Excel Services Error Codes
+          - name: Error codes
             href: general-development/excel-services-error-codes.md
           - name: Get values from ranges
             href: general-development/how-to-get-values-from-ranges.md
@@ -841,23 +841,23 @@
             href: general-development/how-to-refresh-data.md
           - name: Use the SubCode property to capture error codes
             href: general-development/how-to-use-the-subcode-property-to-capture-error-codes.md
-        - name: Excel Services User-Defined Functions
+        - name: User-defined functions (UDFs)
           href: general-development/excel-services-user-defined-functions.md
           items:
-          - name: Understanding Excel Services UDFs
+          - name: Understand UDFs
             href: general-development/understanding-excel-services-udfs.md
-          - name: 'Walkthrough: Developing a Managed-Code UDF'
+          - name: Develop a managed-code UDF
             href: general-development/walkthrough-developing-a-managed-code-udf.md
             items:
-            - name: 'Step 1: Creating a Project and Adding a UDF Reference'
+            - name: Create a project and add a UDF reference
               href: general-development/step-1-creating-a-project-and-adding-a-udf-reference.md
-            - name: 'Step 2: Creating a Managed-Code UDF'
+            - name: Create a managed-code UDF
               href: general-development/step-2-creating-a-managed-code-udf.md
-            - name: 'Step 3: Deploying and Enabling UDFs'
+            - name: Deploy and enable UDFs
               href: general-development/step-3-deploying-and-enabling-udfs.md
-            - name: 'Step 4: Testing and Calling UDFs from Cells'
+            - name: Test and call UDFs from cells
               href: general-development/step-4-testing-and-calling-udfs-from-cells.md
-          - name: Frequently Asked Questions About Excel Services UDFs
+          - name: FAQ about UDFs
             href: general-development/frequently-asked-questions-about-excel-services-udfs.md
           - name: Enable UDFs
             href: general-development/how-to-enable-udfs.md
@@ -872,61 +872,61 @@
         - name: Excel Web Access
           href: general-development/excel-web-access.md
           items:
-          - name: Programmatically add an Excel Web Access Web Part to a page
+          - name: Programmatically add a Web Part to a page
             href: general-development/how-to-programmatically-add-an-excel-web-access-web-part-to-a-page.md
-          - name: Locate and copy Microsoft.Office.Excel.WebUI.dll and Microsoft.Office.Excel.WebUI.Internal.dll
+          - name: Locate and copy required SharePoint DLLs
             href: general-development/how-to-locate-and-copy-microsoft-office-excel-webui-dll-and-microsoft-office-exc.md
-        - name: Excel Services ECMAScript (JavaScript, JScript)
+        - name: ECMAScript
           href: general-development/excel-services-ecmascript-javascript-jscript.md
           items:
-          - name: 'Walkthrough: Developing Using the Content Editor Web Part'
+          - name: Develop using the Content Editor Web Part
             href: general-development/walkthrough-developing-using-the-content-editor-web-part.md
             items:
-            - name: 'Step 1: Creating a ECMAScript Text File'
+            - name: Create an ECMAScript text file
               href: general-development/step-1-creating-a-ecmascript-text-file.md
-            - name: 'Step 2: Adding the Content Editor and Excel Services Web Parts'
+            - name: Add the Content Editor and Excel Services Web Parts
               href: general-development/step-2-adding-the-content-editor-and-excel-services-web-parts.md
-          - name: Excel Services ECMAScript Overview
+          - name: ECMAScript overview
             href: general-development/excel-services-ecmascript-overview.md
-          - name: JavaScript user-defined functions overview
+          - name: JavaScript UDFs overview
             href: general-development/javascript-user-defined-functions-overview.md
-          - name: Working with the Excel Services JavaScript object model
+          - name: JavaScript object model
             href: general-development/working-with-the-excel-services-javascript-object-model.md
           - name: Create a mashup that uses an embedded workbook and Bing Maps
             href: general-development/how-to-create-a-mashup-that-uses-an-embedded-workbook-and-bing-maps.md
         - name: Excel Services REST API
           href: general-development/excel-services-rest-api.md
           items:
-          - name: Excel Services REST API Overview
+          - name: REST API Overview
             href: general-development/excel-services-rest-api-overview.md
-          - name: Basic URI Structure and Path
+          - name: Basic URI structure and path
             href: general-development/basic-uri-structure-and-path.md
-          - name: Discovery in Excel Services REST API
+          - name: Discovery in REST API
             href: general-development/discovery-in-excel-services-rest-api.md
-          - name: Resources URI for Excel Services REST API
+          - name: Resources URI for REST API
             href: general-development/resources-uri-for-excel-services-rest-api.md
-          - name: Getting Ranges Using Atom Feed and HTML Fragment
+          - name: Getting ranges using Atom Feed and HTML Fragment
             href: general-development/getting-ranges-using-atom-feed-and-html-fragment.md
-          - name: Sample URI For Excel Services REST API
+          - name: Sample URI for REST API
             href: general-development/sample-uri-for-excel-services-rest-api.md
-          - name: Accessing a Schema
+          - name: Access a schema
             href: general-development/accessing-a-schema.md
-          - name: Unsupported Features in Excel Services REST API
+          - name: Unsupported features in REST API
             href: general-development/unsupported-features-in-excel-services-rest-api.md
-          - name: Advanced Scenarios and Additional Samples
+          - name: Advanced scenarios and additional samples
             href: general-development/advanced-scenarios-and-additional-samples.md
-          - name: Using OData with Excel Services REST in SharePoint
+          - name: Use OData with REST in SharePoint
             href: general-development/using-odata-with-excel-services-rest-in-sharepoint.md
-          - name: Requesting Excel workbook data from SharePoint Server using OData
+          - name: Request Excel workbook data from SharePoint Server using OData
             href: general-development/requesting-excel-workbook-data-from-sharepoint-server-using-odata.md
-        - name: General Guidelines
+        - name: General guidelines
           href: general-development/general-guidelines.md
           items:
-          - name: Excel Services Alerts
+          - name: Alerts
             href: general-development/excel-services-alerts.md
-          - name: Excel Services Known Issues and Tips
+          - name: Known issues and tips
             href: general-development/excel-services-known-issues-and-tips.md
-          - name: Excel Services Best Practices
+          - name: Best practices
             href: general-development/excel-services-best-practices.md
           - name: Trust a location
             href: general-development/how-to-trust-a-location.md
@@ -936,40 +936,41 @@
             href: general-development/how-to-save-to-the-server-to-prepare-for-programmatic-access.md
           - name: Catch exceptions
             href: general-development/how-to-catch-exceptions.md
-        - name: Removing Excel Interactive View from a webpage
+        - name: Remove Excel Interactive View from a webpage
           href: general-development/removing-excel-interactive-view-from-a-webpage.md
-      - name: Machine Translation Services in SharePoint
+      - name: Machine Translation Service
         href: general-development/machine-translation-services-in-sharepoint.md
-      - name: PerformancePoint Services in SharePoint
+      - name: PerformancePoint Services
         href: general-development/performancepoint-services-in-sharepoint.md
         items:
-        - name: Create report renderers for PerformancePoint Services
+        - name: Create report renderers
           href: general-development/how-to-create-report-renderers-for-performancepoint-services-in-sharepoint.md
-        - name: Create report editors for PerformancePoint Services
+        - name: Create report editors
           href: general-development/how-to-create-report-editors-for-performancepoint-services-in-sharepoint.md
-        - name: Create filter data providers for PerformancePoint Services
+        - name: Create filter data providers
           href: general-development/how-to-create-filter-data-providers-for-performancepoint-services-in-sharepoint.md
-        - name: Create filter editors for PerformancePoint Services
+        - name: Create filter editors
           href: general-development/how-to-create-filter-editors-for-performancepoint-services-in-sharepoint.md
-        - name: Create tabular data source providers for PerformancePoint Services
+        - name: Create tabular data source providers
           href: general-development/how-to-create-tabular-data-source-providers-for-performancepoint-services-in-sha.md
-        - name: Create tabular data source editors for PerformancePoint Services
+        - name: Create tabular data source editors
           href: general-development/how-to-create-tabular-data-source-editors-for-performancepoint-services-in-share.md
-        - name: Create scorecard transforms for PerformancePoint Services
+        - name: Create scorecard transforms
           href: general-development/how-to-create-scorecard-transforms-for-performancepoint-services-in-sharepoint-2.md
-      - name: PowerPoint Automation Services in SharePoint
+      - name: PowerPoint Automation Services
         href: general-development/powerpoint-automation-services-in-sharepoint.md
-      - name: Develop Access web apps
+      - name: Access web apps
         href: general-development/develop-access-web-apps.md
         items:
         - name: What's new in Access
           href: general-development/what-s-new-in-access.md
-      - name: Visio Services in SharePoint
+      - name: Visio Services
         href: general-development/visio-services-in-sharepoint.md
-      - name: What's new in Word Automation Services for developers
+      - name: Word Automation Services
         href: general-development/what-s-new-in-word-automation-services-for-developers.md
-      - name: Extend the fixed-format export feature in Word Automation Services
-        href: general-development/extend-the-fixed-format-export-feature-in-word-automation-services.md
+        items:
+        - name: Extend the fixed-format export feature
+          href: general-development/extend-the-fixed-format-export-feature-in-word-automation-services.md
     - name: Authentication, authorization, and security
       href: general-development/authentication-authorization-and-security-in-sharepoint.md
       items:
