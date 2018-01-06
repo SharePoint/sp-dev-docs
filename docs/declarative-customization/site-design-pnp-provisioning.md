@@ -273,7 +273,7 @@ To create a site design, you first need to create a site script. A site design i
     }
     ```
 
-1. Select the JSON again and copy it again to your clipboard
+1. Select the JSON again and copy it again to your clipboard.
 1. Open PowerShell and enter the following to copy the script into a variable and create the site script:
 
     ```powershell
@@ -282,19 +282,19 @@ To create a site design, you first need to create a site script. A site design i
     Get-SPOSiteScript
     ```
 
-1. You will be see a list of one or more site scripts, including the site script you just created. Select the ID of the site script that you just created and copy it to the clipboard.
+1. You will see a list of one or more site scripts, including the site script you just created. Select the ID of the site script that you created and copy it to the clipboard.
 1. Use the following command to create the site design:
 
     ```powershell
     Add-SPOSiteDesign -Title "Site with footer" -SiteScripts [Paste the ID of the Site Script here] -WebTemplate "64"
     ```
 
-The **Add-SPOSiteDesign** cmdlet associates the site design with the Team Site. If you want to associate the design with a Communication Site, use the value "68".
+The **Add-SPOSiteDesign** cmdlet associates the site design with the team site. If you want to associate the design with a communication site, use the value "68".
 
 ## Conclusion
 
-After you created your Storage Queue, you created the app Id for the app only access, you correctly created the Azure Function, you created the Site Design and triggered the correct Microsoft Flow from the Site Design, you are all good to go. 
+After you created your Azure Queue storage, you created the app ID for app-only access, the Azure Function, and the site design. You then triggered the Microsoft Flow from the site design. 
 
-Try creating a new site by navigating to your SharePoint Tenant. Select **SharePoint**, select **Create Site**, Select **Team Site**. Your newly created Site Design should show up as a possible design option. Create your site and notice the Site Design being applied after the site has been created. If you configured it all correctly you should see your flow being triggered. You can check the Run History of the flow if it was executed correctly. As it can take a bit before the PnP Provisioning Template has been applied, it can be that the footer does not show up immediately. Give it a minute and reload your site to check again.
+To test the results, create a new site. In your SharePoint tenant, select **SharePoint** > **Create Site** > **Team Site**. Your new site design should show up as a design option. Notice the that the site design is applied after the site is created. If you configured it correctly, your flow will be triggered. You can check the run history of the flow to verify that it ran correctly. Note that the footer might not show up immediately; if you don't see it, wait a minute and reload your site to check again.
 
 
