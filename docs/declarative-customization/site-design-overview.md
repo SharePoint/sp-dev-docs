@@ -77,7 +77,7 @@ Site scripts are JSON files that specify an ordered list of actions to run when 
         },
         {
           "verb": "addSPField",
-          "fieldType": "User",
+           "fieldType": "User",
           "displayName": "Contact",
           "addToDefaultView": true,
           "isRequired": true
@@ -102,12 +102,11 @@ Available actions include:
 
 - Creating a new list
 - Applying a theme
-- Creating a page
 - Setting a site logo
 - Adding navigation
 - Triggering a Microsoft flow
 
-Site scripts can be run again on the same site after provisioning. This can only be done programmatically. Site scripts are non-destructive, so when they run again, they ensure that the site matches the configuration in the script. For example, if the site already has a list with the same name that the site script is creating, the site script will only add missing fields to the existing list.
+Site scripts can be run again on the same site after provisioning. This can only be done programmatically. Site scripts are non-destructive, so when they run again, they ensure that the site matches the configuration in the script. For example, if the site already has a list with the same name that the site script is creating, the site script will only add missing fields to the existing list. Also, please note that site scripts are limited to 30 cumulative actions (across one or more scripts that may be called in a site design).
 
 ## Using PowerShell or REST to work with site designs and site scripts
 
@@ -184,7 +183,7 @@ var site_script = {
   "version": 1
 };
 
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteScript(Title=@title)?@title='Contoso theme and list'", site_script);
+RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteScript(Title=@title,Description=@desc)?@title='Contoso theme and list'&@desc='this script creates a list named customer tracking and sets the contoso explorers company theme'", site_script);
 
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteDesign",{
   info:{
