@@ -23,7 +23,7 @@ Each action is specified by the "verb" value in the JSON script. Also, actions c
 1. Follow the instructions at [Connect to SharePoint Online PowerShell](https://technet.microsoft.com/en-us/library/fp161372.aspx) to connect to your SharePoint tenant.
 1. Create and assign the JSON that describes the new script to a variable as shown in the PowerShell code below.
 
-```powershell
+ ```powershell
 $site_script = @'
 {
     "$schema": "schema.json",
@@ -73,7 +73,7 @@ $site_script = @'
 '@
 ```
 
-The previous script will create a new SharePoint list named Customer Tracking. It will set the description, and also add four fields to the list.
+The previous script will create a new SharePoint list named Customer Tracking. It will set the description, and also add four fields to the list. Note that each of these are considered an action. Site scripts are limited to 30 cumulative actions (across one or more scripts that may be called in a site design).
 
 ## Add the site script
 
