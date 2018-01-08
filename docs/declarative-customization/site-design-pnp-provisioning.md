@@ -9,7 +9,7 @@ ms.date: 12/14/2017
 > [!NOTE]
 > Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for use in production environments.
 
-Site designs offer a great way to standardize the look and feel of your site collections, but you can't use them to do some things, like add a footer to every page. You can use the PnP provisioning engine to create a template that you can use to provision an application customizer to a site. This application customizer can then register a footer on every page. 
+Site designs offer a great way to standardize the look and feel of your site collections. There are some things that you can't do with site designs, however, like add a footer to every page. You can use the PnP provisioning engine to create a template that you can use to provision an application customizer to a site. This application customizer can then update your page design, for example to register a footer on every page. 
 
 This article describes how to create a site design that applies a PnP provisioning template to a site. The template will add an application customizer to render a footer.
 
@@ -30,7 +30,7 @@ You'll use these components to trigger the PnP provisioning code after you creat
 
 To set up app-only access, you need to have two different pages on your tenant - one on the regular site, and the other on your SharePoint administration site.
 
-1. Go to following URL in your tenant: https://[yourtenant].sharepoint.com/_layouts/appregnew.aspx (you can go to any site, but for now pick the root site).
+1. Go to following URL in your tenant: `https://[yourtenant].sharepoint.com/_layouts/appregnew.aspx` (you can go to any site, but for now pick the root site).
 1. Choose the **Generate** button next to the **Client Id** and **Client Secret** fields.
 1. Enter a title for your app, such as "Site Provisioning".
 1. In the **App Domain** box, enter **localhost**.
@@ -43,7 +43,7 @@ To set up app-only access, you need to have two different pages on your tenant -
 
 Next, trust the app, so that it has the appropriate access to your tenant:
 
-1. Go to https://[yourtenant]-admin.sharepoint.com/_layouts/appinv.aspx (notice the -admin in the URL).
+1. Go to `https://[yourtenant]-admin.sharepoint.com/_layouts/appinv.aspx` (notice the `-admin` in the URL).
 1. In the **App Id** field, paste the **Client ID** that you copied, and choose **Lookup**.
 1. In the **Permission Request XML** field, paste the following XML:
 
@@ -116,7 +116,7 @@ To put a message in the queue, you need to create a flow.
 1. Choose the first step in your flow ('When an HTTP request is received') and copy the URL.
 1. Save your flow.
 
-Your flow should look like this:
+Your flow should look like the following.
 
 ![Screenshot of a flow named 'When an HTTP request is received', showing the URL, Request body, Queue name, and Message fields](images/pnpprovisioning-flow-overview.png)
 
@@ -130,7 +130,7 @@ $body = "{webUrl:'somesiteurl'}
 Invoke-RestMethod -Uri $uri -Method Post -ContentType "application/json" -Body $body
 ```
 
-When you go to the main screen of your flow, you will see a run history. If your flow worked correctly, it will show 'Succeeded'.
+When you go to the main screen of your flow, you will see a run history. If your flow worked correctly, it will show `Succeeded`.
 Now go to the queue you just created in Azure and choose **Refresh**. You should see an entry that shows that you correctly invoked the flow.
 
 ## Provision the SPFx solution
@@ -162,17 +162,16 @@ Copy the following provisioning template XML to a new file and save the file as 
 ## Create the Azure Function
 
 1. Go to the [Azure Portal](https://portal.azure.com).
-1. Search for 'Function App' and create a new function app. In the **Storage** field, select **Use existing**, and select the storage account that you created earlier. Set the other values as required.
+1. Search for **Function App** and create a new function app. In the **Storage** field, select **Use existing**, and select the storage account that you created earlier. Set the other values as required.
 1. Open the Function app and select **Functions** > **New function**.
 
-  ![Screenshot of the Azure portal with the New function option highlighted](images/pnpprovisioning-create-function.png)
+    ![Screenshot of the Azure portal with the New function option highlighted](images/pnpprovisioning-create-function.png)
 
 1. From the Language drop-down box, select **PowerShell**.
 1. Select **QueueTrigger - PowerShell**.
 1. Name the function **ApplyPnPProvisioningTemplate**. 
 1. Enter the name of the queue you created earlier.
-1. Choose **Create**.
-1. An editor where you can enter PowerShell cmdlets will open. 
+1. Choose **Create**. An editor where you can enter PowerShell cmdlets will open. 
 
 Next, you'll upload the PnP PowerShell module so that you can use it in the Azure Function.
 
@@ -236,13 +235,13 @@ Notice that you're using two environment variables: ```SPO_AppId```and ```SPO_Ap
 
 Open PowerShell and make sure that you have the Microsoft Office 365 Management Shell installed.
 
-Connect to your tenant using **Connect-SPOService**:
+Connect to your tenant using **Connect-SPOService**.
 
 ```powershell
 Connect-SPOService -Url https://[yourtenant]-admin.sharepoint.com
 ```
 
-Now you can get the existing site designs: 
+Now you can get the existing site designs. 
 
 ```powershell
 Get-SPOSiteDesign
@@ -252,26 +251,26 @@ To create a site design, you first need to create a site script. A site design i
 
 1. Copy the following JSON code to your clipboard and modify it. Set the **url** property to the value you copied when you created the flow. The URL looks similar to the following:
 
-`https://prod-27.westus.logic.azure.com:443/workflows/ef7434cf0d704dd48ef5fb6...oke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun`
+    `https://prod-27.westus.logic.azure.com:443/workflows/ef7434cf0d704dd48ef5fb6...oke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun`
 
-    ```json
-    {
-        "$schema": "schema.json",
-        "actions": [
-           {
-                "verb": "triggerFlow",
-                "url": "[paste the workflow trigger URL here]",
-                "name": "Apply Template",
-                "parameters": {
-                    "event":"",
-                    "product":""
-                }
-           }
-        ],
-        "bindata": {},
-        "version": 1
-    }
-    ```
+        ```json
+        {
+            "$schema": "schema.json",
+            "actions": [
+            {
+                    "verb": "triggerFlow",
+                    "url": "[paste the workflow trigger URL here]",
+                    "name": "Apply Template",
+                    "parameters": {
+                        "event":"",
+                        "product":""
+                    }
+            }
+            ],
+            "bindata": {},
+            "version": 1
+        }
+        ```
 
 1. Select the JSON again and copy it again to your clipboard.
 1. Open PowerShell and enter the following to copy the script into a variable and create the site script:
@@ -291,10 +290,10 @@ To create a site design, you first need to create a site script. A site design i
 
 The **Add-SPOSiteDesign** cmdlet associates the site design with the team site. If you want to associate the design with a communication site, use the value "68".
 
-## Conclusion
+## Verify the results
 
 After you created your Azure Queue storage, you created the app ID for app-only access, the Azure Function, and the site design. You then triggered the Microsoft Flow from the site design. 
 
-To test the results, create a new site. In your SharePoint tenant, select **SharePoint** > **Create Site** > **Team Site**. Your new site design should show up as a design option. N            otice the that the site design is applied after the site is created. If you configured it correctly, your flow will be triggered. You can check the run history of the flow to verify that it ran correctly. Note that the footer might not show up immediately; if you don't see it, wait a minute and reload your site to check again.
+To test the results, create a new site. In your SharePoint tenant, select **SharePoint** > **Create Site** > **Team Site**. Your new site design should show up as a design option. Notice that the site design is applied after the site is created. If you configured it correctly, your flow will be triggered. You can check the run history of the flow to verify that it ran correctly. Note that the footer might not show up immediately; if you don't see it, wait a minute and reload your site to check again.
 
 
