@@ -1,7 +1,7 @@
 ---
 title: Deploy your client-side web part to a SharePoint page (Hello World part 3)
 description: Deploy your client-side web part to SharePoint and see it working on a modern SharePoint page. 
-ms.date: 12/05/2017
+ms.date: 01/08/2018
 ms.prod: sharepoint
 ---
 
