@@ -9,22 +9,22 @@ ms.date: 12/14/2017
 > [!NOTE]
 > Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for use in production environments.
 
-You can create a site design that applies a PnP provisioning template to a site. Site designs offer a great way to standardize the look and feel of your site collections, but you can't use them to do some things, like add a footer to every page. You can use the PnP provisioning engine to create a template that you can use to provision an application customizer to a site. This application customizer can then register a footer on every page. 
+Site designs offer a great way to standardize the look and feel of your site collections, but you can't use them to do some things, like add a footer to every page. You can use the PnP provisioning engine to create a template that you can use to provision an application customizer to a site. This application customizer can then register a footer on every page. 
 
 This article describes how to create a site design that applies a PnP provisioning template to a site. The template will add an application customizer to render a footer.
 
 The steps in this article use the following components:
 
-1. A site design and a site script
-1. Microsoft Flow
-1. Azure Queue storage
-1. An Azure Function
-1. A SharePoint Framework (SPFx) solution
-1. A PnP provisioning template
-1. A PnP PowerShell script
-1. An app ID and app secret with administrative rights on your tenant
+- A site design and a site script
+- Microsoft Flow
+- Azure Queue storage
+- An Azure Function
+- A SharePoint Framework (SPFx) solution
+- A PnP provisioning template
+- A PnP PowerShell script
+- An app ID and app secret with administrative rights on your tenant
 
-You'll use these components to trigger the PnP provisioning code after the site is created and the site design is applied.
+You'll use these components to trigger the PnP provisioning code after you create the site and apply the site design.
 
 ## Set up app-only access to your tenant
 
@@ -295,6 +295,6 @@ The **Add-SPOSiteDesign** cmdlet associates the site design with the team site. 
 
 After you created your Azure Queue storage, you created the app ID for app-only access, the Azure Function, and the site design. You then triggered the Microsoft Flow from the site design. 
 
-To test the results, create a new site. In your SharePoint tenant, select **SharePoint** > **Create Site** > **Team Site**. Your new site design should show up as a design option. Notice the that the site design is applied after the site is created. If you configured it correctly, your flow will be triggered. You can check the run history of the flow to verify that it ran correctly. Note that the footer might not show up immediately; if you don't see it, wait a minute and reload your site to check again.
+To test the results, create a new site. In your SharePoint tenant, select **SharePoint** > **Create Site** > **Team Site**. Your new site design should show up as a design option. N            otice the that the site design is applied after the site is created. If you configured it correctly, your flow will be triggered. You can check the run history of the flow to verify that it ran correctly. Note that the footer might not show up immediately; if you don't see it, wait a minute and reload your site to check again.
 
 
