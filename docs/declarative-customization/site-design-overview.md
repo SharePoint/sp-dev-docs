@@ -24,7 +24,7 @@ You create site designs and register them in SharePoint to one of the modern tem
 
 1. Choose **Communication site**.
 
-    The communication site has a **Choose a design** box in which the following three site designs are available out-of-the-box.
+    The communication site has a **Choose a design** box in which comes with the following site designs.
 
     - Topic
     - Showcase
@@ -34,7 +34,7 @@ These are the default site designs. For each site design there is a title, descr
 
 ![Default site design title, description, and image on communication site template](images/site-designs-listed-on-communication-site-template.png)
 
-Had you chosen the team site template, it contains only one default site design named **Team site**. <!-- For additional information on how you can change the default site designs, see [Applying a site design to a default SharePoint template](site-design-apply-default-template.md). -->
+Had you chosen the team site template, it contains only one default site design named **Team site**. For additional information on how you can change the default site designs, see [Customize a default site design](customize-default-site-design.md).
 
 When a site design is selected, SharePoint creates the new site, and runs site scripts for the site design. The site scripts detail the work such as creating new lists, or applying a theme. When the actions in the scripts are completed, SharePoint displays detailed results of those actions in a progress pane.
 
@@ -77,7 +77,7 @@ Site scripts are JSON files that specify an ordered list of actions to run when 
         },
         {
           "verb": "addSPField",
-          "fieldType": "User",
+           "fieldType": "User",
           "displayName": "Contact",
           "addToDefaultView": true,
           "isRequired": true
@@ -102,12 +102,11 @@ Available actions include:
 
 - Creating a new list
 - Applying a theme
-- Creating a page
 - Setting a site logo
 - Adding navigation
 - Triggering a Microsoft flow
 
-Site scripts can be run again on the same site after provisioning. This can only be done programmatically. Site scripts are non-destructive, so when they run again, they ensure that the site matches the configuration in the script. For example, if the site already has a list with the same name that the site script is creating, the site script will only add missing fields to the existing list.
+Site scripts can be run again on the same site after provisioning. This can only be done programmatically. Site scripts are non-destructive, so when they run again, they ensure that the site matches the configuration in the script. For example, if the site already has a list with the same name that the site script is creating, the site script will only add missing fields to the existing list. Also, please note that site scripts are limited to 30 cumulative actions (across one or more scripts that may be called in a site design).
 
 ## Using PowerShell or REST to work with site designs and site scripts
 
@@ -184,7 +183,7 @@ var site_script = {
   "version": 1
 };
 
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteScript(Title=@title)?@title='Contoso theme and list'", site_script);
+RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteScript(Title=@title,Description=@desc)?@title='Contoso theme and list'&@desc='this script creates a list named customer tracking and sets the contoso explorers company theme'", site_script);
 
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.CreateSiteDesign",{
   info:{
@@ -230,13 +229,13 @@ By default a site design can be viewed by everyone when it is created. Scopes ar
 ```powershell
 Grant-SPOSiteDesignRights `
   -Identity 44252d09-62c4-4913-9eb0-a2a8b8d7f863 `
-  -Principals "nestorw@contoso.sharepoint.com" `
+  -Principals "nestorw@contoso.onmicrosoft.com" `
   -Rights View
 ```
 
 <!--
 ```javascript
-RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GrantSiteDesignRights", {id:"44252d09-62c4-4913-9eb0-a2a8b8d7f863", principalNames:["nestorw@contoso.sharepoint.com”], grantedRights:1});
+RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GrantSiteDesignRights", {id:"44252d09-62c4-4913-9eb0-a2a8b8d7f863", principalNames:["nestorw@contoso.onmicrosoft.com”], grantedRights:1});
 ```
 -->
 For more information about working with scopes, see [Scoping access to site designs](site-design-scoping.md).
@@ -248,3 +247,4 @@ For more information about working with scopes, see [Scoping access to site desi
 - [Site design JSON schema](site-design-json-schema.md)
 - [PowerShell cmdlets for SharePoint site designs and site scripts](site-design-powershell.md)
 - [Site design and site script REST API](site-design-rest-api.md)
+- [Site design examples](https://github.com/SharePoint/sp-dev-site-scripts)

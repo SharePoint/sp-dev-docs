@@ -45,7 +45,7 @@ Example:
     "templateType": 100,
     "subactions": [
         {
-            "verb": "SetDescription",
+            "verb": "setDescription",
             "description": "List of Customers and Orders"
          }
     ]
@@ -83,7 +83,7 @@ Example:
 
 ```json
 {
-   "verb": "SetDescription",
+   "verb": "setDescription",
    "description": "List of Customers and Orders"
 }
 ```

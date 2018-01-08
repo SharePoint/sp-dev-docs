@@ -162,6 +162,7 @@ To learn more about using the SharePoint REST service, use the following resourc
 | [Make batch requests with the REST APIs](make-batch-requests-with-the-rest-apis.md)|Combine multiple requests into a single call to the REST service.|
 | [Synchronize SharePoint items using the REST service](synchronize-sharepoint-items-using-the-rest-service.md)|Synchronize items between SharePoint and your add-ins or services by using the **GetListItemChangesSinceToken** resource, part of the SharePoint REST service.|
 | [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md) | Find in-depth articles and resources to help you build advanced capabilities into your SharePoint Add-ins.|
+| [REST API reference and samples](https://msdn.microsoft.com/library) | Comprehensive API reference for working with Microsoft tools, services, and technologies. Whether you're building apps, developing websites, or working with the cloud, you'll find detailed syntax, code snippets, and best practices.|
 
 
 <!-- Removed these because the first one 404'd and the second one went to Working with lists (already in list).

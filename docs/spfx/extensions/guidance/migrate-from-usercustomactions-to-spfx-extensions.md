@@ -1,14 +1,15 @@
+---
+title: Tutorial - Migrating from UserCustomAction to SharePoint Framework Extensions
+ms.date: 12/19/2017
+ms.prod: sharepoint
+---
+
 # Migrating from UserCustomAction to SharePoint Framework Extensions
 
 During the last few years, most of the enterprise solutions built on top of Office 365 and SharePoint Online leveraged the site _CustomAction_ capability of the SharePoint Feature Framework to extend the UI of pages. However nowdays, within the new "modern" UI of SharePoint Online, most of those customizations are no more available. Luckily, with the new SharePoint Framework Extensions you can now provide almost the same functionality in the "modern" UI. In this tutorial you will learn how to migrate from old "classic" customizations to the new model based on SharePoint Framework Extensions.
 
-> [!IMPORTANT]
-> We're not deprecating the "classic" experience - both "classic" and "modern" will coexist.
-
-_**Applies to:** SharePoint Online_
-
 ## Understanding SharePoint Framework Extensions
-<a name="spfxExtensions"> </a>
+
 First of all, let's introduce the available options when developing SharePoint Framework Extensions:
 
 * **Application Customizer**: extend the native "modern" UI of SharePoint Online by adding custom HTML elements and client-side code to pre-defined placeholders of "modern" pages. At the time of this writing, the available placeholders are the header and the footer of every "modern" page.
@@ -21,7 +22,7 @@ As you can argue from the above descriptions, the most useful one in our context
 > For further details about how to build SharePoint Framework Extensions you can read the article ["Overview of SharePoint Framework Extensions"](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions).
 
 ## Migrating a UserCustomAction to an SPFx Application Customizer
-<a name="FromUserCustomActionToApplicationCustomizer"> </a>
+
 Assume that you have a _CustomAction_ in SharePoint Online, in order to have a custom footer in all of the site's pages.
 In the following code snippet you can see the XML code defining that _CustomAction_ using the SharePoint Feature Framework.
 
@@ -141,7 +142,7 @@ In the following figure you can see the output of the previous custom action, wi
 In order to migrate the above solution to the "modern" UI, you will have to accomplish the following steps.
 
 ### Create a new SharePoint Framework solution
-<a name="CreateApplicationCustomizer"> </a>
+
 Once you have prepared you development environment to develop SharePoint Framework solutions, by following the instructions provided in the document ["Set up your SharePoint client-side web part development environment"](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/set-up-your-development-environment), you can start creating a SharePoint Framework extension.
 
 1. Open the command line tool of your choice (PowerShell, CMD.EXE, Cmder, etc.), create a new folder for the solution (call it _spfx-react-custom-footer_), and create a new SharePoint Framework solution by running the Yeoman generator with the following command:
@@ -180,7 +181,7 @@ code .
 ```
 
 ### Define the new UI elements
-<a name="DefineApplicationCustomizerUI"> </a>
+
 The UI elements of the custom footer will be rendered using React and a custom React component. Of course, you can create the UI elements of the sample footer with whatever technology you like. In this tutorial, we use React in order to leverage the Office UI Fabric components for React.
 
 > [!NOTE]
@@ -328,7 +329,7 @@ In the following figure you can see the resulting output.
 ![The custom footer rendered in a "modern" site](../../../images/spfx-react-custom-footer-output.png)
 
 ### Test the solution in debug mode
-<a name="DebugApplicationCustomizer"> </a>
+
 You are now ready to test your solution in debug mode. 
 
 1. Go back to the console window and run the following command:
@@ -348,11 +349,12 @@ The above command will build the solution and run the local Node.js server to ho
 In the above querystring, you will have to replace the GUID with the _id_ value you saved from the _CustomFooterApplicationCustomizer.manifest.json_ file. Notice that, when executing the page request, you will be prompted with a warning message box with title "Allow debug scripts?", which asks your consent to run code from localhost, for security reasons. Of course, if you want to locally debug and test the solution, you will have to allow to "Load debug scripts".
 
 ### Package and host the solution
-<a name="PackageAndHostApplicationCustomizer"> </a>
+
 If you are happy with the result, you are now ready to package the solution and host it in a real hosting infrastructure.
 Before building the bundle and the package, you need to declare an XML feature framework file to provision the extension.
 
 #### Review feature framework elements
+
 Within the code editor, open the _/sharepoint/assets_ sub-folder of the solution folder and edit the _elements.xml_ file.
 In the following code excerpt you can see how the file should look like.
 
@@ -448,6 +450,7 @@ Note that your newly added origin is listed as a valid CDN origin. Final configu
 When the origin is listed without the `(configuration pending)` text, it is ready to be used in your tenant. This indicates an on-going configuration between SharePoint Online and the CDN system. 
 
 #### Update the solution settings and publish it on the CDN
+
 Now, you need to update the solution in order to use the just created CDN as the hosting enviroment and you will need to publish the solution bundle to the CDN. To accomplish this task, just follow the upcoming steps.
 
 1. Return to the previously created solution to perform the needed URL updates.
@@ -481,7 +484,7 @@ Now, you need to update the solution in order to use the just created CDN as the
 7. Upload or drag-and-drop the files in the _temp/deploy_ folder to the _CDN/customfooter_ folder created earlier.
 
 ### Install and run the solution
-<a name="InstallApplicationCustomizer"> </a>
+
 You can now install the solution on any target "modern" site.
 
 1. Open the browser and navigate to any target "modern" site.

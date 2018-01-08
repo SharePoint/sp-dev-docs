@@ -47,7 +47,7 @@ The following example shows how to grant view rights on a site design to Nestor 
 ```powershell
 PS C:\> Grant-SPOSiteDesignRights `
          -Identity 44252d09-62c4-4913-9eb0-a2a8b8d7f863 `
-         -Principals "nestorw@contoso.sharepoint.com" `
+         -Principals "nestorw@contoso.onmicrosoft.com" `
          -Rights View
 ```
 
@@ -62,7 +62,7 @@ PS C:\> Get-SPOSiteDesignRights 607aed52-6d61-490a-b692-c0f58a6981a1
 ```
 DisplayName  PrincipalName                                      Rights
 -----------  -------------                                      ------
-Nestor Wilke i:0#.f|membership|nestorw@contoso.sharepoint.com   View
+Nestor Wilke i:0#.f|membership|nestorw@contoso.onmicrosoft.com   View
 ```
 
 ## Revoking rights from a site design

@@ -1,6 +1,6 @@
 ---
 title: SharePoint Framework roadmap
-ms.date: 09/25/2017
+ms.date: 12/15/2017
 ms.prod: sharepoint
 ---
 
@@ -15,7 +15,7 @@ First release of the SharePoint Framework contained only support for client-side
 - [Tenant properties](./tenant-properties.md)
 - [ALM APIs for SPFx solutions and add-ins](../apis/alm-api-for-spfx-add-ins.md)
 - [Office UI Fabric Core support](https://dev.office.com/blogs/improved-support-for-office-ui-fabric-core)
-- [Asset packaging and site collection app catalog](https://dev.office.com/blogs/sharepoint-framework-1-4-and-new-site-updates-now-available)
+- [Asset packaging and site collection app catalog](../general-development/site-collection-app-catalog.md)
 
 
 > [!NOTE]
@@ -25,6 +25,7 @@ First release of the SharePoint Framework contained only support for client-side
 
 - Easy access to Graph API to access user specific information (GraphHttpClient in preview)
 - Site level WebHooks
+- Updated 'store' story with SharePoint Framework support
 
 ## Client-side web parts++ and add-ins
 
