@@ -69,7 +69,7 @@ Add-SPOSiteDesign
 |[-PreviewImageAltText] | The alt text description of the image for accessibility. |
 |[-IsDefault]           | A switch that if provided, applies the site design to the default site template. For more information see [Customize a default site design](customize-default-site-design.md) |
 
-Here's an example of creating a new site design.
+The following example creates a new site design.
 
 ```powershell
 C:\> Add-SPOSiteDesign `
@@ -101,7 +101,7 @@ Add-SPOSiteScript
 | -Content     | JSON value that describes the script. For more information, see [JSON reference](site-design-json-schema.md).|
 | -Description | A description of the script. |
 
-Here's an example of adding a new site from the following script in a file.
+The following example adds a new site from the following script in a file.
 
 ```json
 {
@@ -130,7 +130,7 @@ Get-SPOSiteDesign
 |--------------|--------------|
 | [-Identity]  | The ID of the site design to retrieve. |
 
-Here's an example and sample response of getting site design details.
+The following example and sample response shows how to get site design details.
 
 ```powershell
 PS C:\> Get-SPOSiteDesign 44252d09-62c4-4913-9eb0-a2a8b8d7f863
@@ -159,7 +159,7 @@ Get-SPOSiteDesignRights
 |--------------|--------------|
 | [-Identity]  | The ID of the site design to get scoping information. |
 
-Here's an example of getting the rights for a site design.
+The following example gets the rights for a site design.
 
 ```powershell
 PS C:\> Get-SPOSiteDesignRights 607aed52-6d61-490a-b692-c0f58a6981a1
@@ -185,7 +185,7 @@ Get-SPOSiteScript
 |--------------|--------------|
 | [-Identity]  | The ID of the site script to get information about. |
 
-Here's an example that shows how to get script information for a specific script ID.
+The following example shows how to get script information for a specific script ID.
 
 ```powershell
 PS C:\scripts> Get-SPOSiteScript 07702c07-0485-426f-b710-4704241caad9
@@ -227,7 +227,7 @@ Grant-SPOSiteDesignRights
 | -Principals  | One or more principles to add permissions for. |
 | -Rights      | Always set to the value **View**. Any user or group with view permissions can view and use the site design. |
 
-Here's an example of how to grant view rights on a site design to Nestor (a user at the fictional Contoso site).
+The following example shows how to grant view rights on a site design to Nestor (a user at the fictional Contoso site).
 
 ```powershell
 PS C:\> Grant-SPOSiteDesignRights `
@@ -252,7 +252,7 @@ Removes a site design. It will no longer appear in the UI for creating a new sit
 |--------------|--------------|
 | [-Identity]  | The ID of the site design to remove. |
 
-Here's an example that shows how to remove a site design.
+The following example shows how to remove a site design.
 
 ```powershell
 
@@ -296,7 +296,7 @@ Revoke-SPOSiteDesignRights
 | [-Identity]  | The ID of the site design from which to revoke rights. |
 | -Principals  | One or more principals to revoke rights on the specified site design. |
 
-Here's an example that shows how to revoke rights to a site design for Nestor.
+The following example shows how to revoke rights to a site design for Nestor.
 
 ```powershell
 PS C:\> Revoke-SPOSiteDesignRights 44252d09-62c4-4913-9eb0-a2a8b8d7f863 `
@@ -312,4 +312,5 @@ PS C:\> Revoke-SPOSiteDesignRights 44252d09-62c4-4913-9eb0-a2a8b8d7f863 `
 ## See also
 
 - [JSON schema reference](site-design-json-schema.md)
-- [REST API](site-design-rest-api.md)Apply a scope to your site design](site-design-scoping.md)
+- [REST API](site-design-rest-api.md)
+- [Apply a scope to your site design](site-design-scoping.md)
