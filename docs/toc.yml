@@ -12,10 +12,6 @@
       href: spfx/set-up-your-developer-tenant.md
     - name: Set up development environment
       href: spfx/set-up-your-development-environment.md
-    - name: Build web parts
-      href: spfx/web-parts/get-started/build-a-hello-world-web-part.md
-    - name: Build extensions
-      href: spfx/extensions/get-started/build-a-hello-world-extension.md
   - name: Basics
     items:
     - name: Debugging
