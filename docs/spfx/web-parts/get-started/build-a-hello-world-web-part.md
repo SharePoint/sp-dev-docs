@@ -111,11 +111,11 @@ SharePoint client-side development tools use [gulp](http://gulpjs.com/) as the t
 
 Visual Studio Code provides built-in support for gulp and other task runners. Select Ctrl+Shift+B on Windows or Cmd+Shift+B on Mac to debug and preview your web part. 
 
-### To use SharePoint Workbench to preview and test your web part
-
 SharePoint Workbench is a developer design surface that enables you to quickly preview and test web parts without deploying them in SharePoint. SharePoint Workbench includes the client-side page and the client-side canvas in which you can add, delete, and test your web parts in development.
 
 ![SharePoint Workbench running locally](../../../images/sp-workbench.png)
+
+### To use SharePoint Workbench to preview and test your web part
 
 1. To add the HelloWorld web part, select the **add** icon. This opens the toolbox where you can see a list of web parts available for you to add. The list includes the **HelloWorld** web part as well other web parts available locally in your development environment.
    
@@ -141,7 +141,7 @@ One of the new capabilities available to the property pane is to configure its u
 
 ## Web part project structure
 
-You can use Visual Studio Code to explore the web part project structure. 
+### To use Visual Studio Code to explore the web part project structure 
 
 1. In the console, break the processing by selecting Ctrl+C (in Windows).
 
@@ -151,7 +151,7 @@ You can use Visual Studio Code to explore the web part project structure.
   code .
   ```
 
-![HelloWorld project structure](../../../images/helloworld-wp-vscode-project-structure.png)
+  ![HelloWorld project structure](../../../images/helloworld-wp-vscode-project-structure.png)
 
 If you get an error, you might need to [install the code command in PATH](https://code.visualstudio.com/docs/editor/setup).
 
@@ -212,9 +212,7 @@ When the properties are defined, you can access them in your web part by using `
 <p class="${styles.description}">${escape(this.properties.description)}</p>
 ```
 
-Notice that we are performing an HTML escape on the property's value to ensure a valid string.
-
-To learn more about how to work with the property pane and property pane field types, see [Make your SharePoint client-side web part configurable](../basics/integrate-with-property-pane.md). 
+Notice that we are performing an HTML escape on the property's value to ensure a valid string. To learn more about how to work with the property pane and property pane field types, see [Make your SharePoint client-side web part configurable](../basics/integrate-with-property-pane.md). 
 
 Let's now add a few more properties to the property pane: a check box, a drop-down list, and a toggle. We first start by importing the respective property pane fields from the framework.
 
@@ -300,8 +298,6 @@ Let's now add a few more properties to the property pane: a check box, a drop-do
     };
   }
   ```
-
-<br/>
 
 6. After you add your properties to the web part properties, you can now access the properties in the same way you accessed the **description** property earlier:
 
