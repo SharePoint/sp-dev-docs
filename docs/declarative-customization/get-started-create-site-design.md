@@ -9,7 +9,7 @@ ms.date: 12/14/2017
 > [!NOTE]
 > Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for use in production environments.
 
-Build site designs to provide reusable lists, themes, layouts, pages, or custom actions so that your users can quickly build new SharePoint sites with the features they need. In this article you'll build a simple site design that adds a SharePoint list for tracking customer orders. Then you'll use the site design to create a new SharePoint site with the custom list.
+You can create site designs to provide reusable lists, themes, layouts, pages, or custom actions so that your users can quickly build new SharePoint sites with the features they need. This article describes how to build a simple site design that adds a SharePoint list for tracking customer orders. You'll use the site design to create a new SharePoint site with the custom list.
 
 This article shows how to use SharePoint PowerShell cmdlets to create site scripts and site designs. You can also use REST APIs to perform the same actions. The corresponding REST calls are shown for reference in each step.
 
@@ -21,7 +21,7 @@ Each action is specified by the "verb" value in the JSON script. Also, actions c
 
 1. Download and install the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). If you already have a previous version of the shell installed, uninstall it first and then install the latest version.
 1. Follow the instructions at [Connect to SharePoint Online PowerShell](https://technet.microsoft.com/en-us/library/fp161372.aspx) to connect to your SharePoint tenant.
-1. Create and assign the JSON that describes the new script to a variable as shown in the PowerShell code below.
+1. Create and assign the JSON that describes the new script to a variable as shown in the following PowerShell code.
 
 ```powershell
 $site_script = @'
