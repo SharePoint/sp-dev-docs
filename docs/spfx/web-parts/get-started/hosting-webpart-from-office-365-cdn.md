@@ -1,12 +1,12 @@
 ---
-title: Hosting client-side web part from Office 365 CDN (Hello World part 4)
+title: Host your client-side web part from Office 365 CDN (Hello World part 4)
 description: An easy solution to host your assets directly from your own Office 365 tenant. Can be used for hosting any static assets that are used in SharePoint Online. 
 ms.date: 01/08/2018
 ms.prod: sharepoint
 ---
 
 
-# Hosting client-side web part from Office 365 CDN (Hello World part 4)
+# Host your client-side web part from Office 365 CDN (Hello World part 4)
 
 Office 365 Content Delivery Network (CDN) provides you an easy solution to host your assets directly from your own Office 365 tenant. It can be used for hosting any static assets that are used in SharePoint Online. 
 

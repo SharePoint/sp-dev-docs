@@ -1,5 +1,5 @@
 ---
-title: Deploy your SharePoint client-side web part to a CDN
+title: Deploy your SharePoint client-side web part to Azure CDN
 ms.date: 12/05/2017
 ms.prod: sharepoint
 ---

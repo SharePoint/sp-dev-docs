@@ -1,11 +1,11 @@
 ---
-title: Provisioning SharePoint assets from your SharePoint client-side web part
+title: Provision SharePoint assets from your SharePoint client-side web part
 ms.date: 12/05/2017
 ms.prod: sharepoint
 ---
 
 
-# Provisioning SharePoint assets from your SharePoint client-side web part
+# Provision SharePoint assets from your SharePoint client-side web part
 
 This article describes how to provision SharePoint assets as part of the SharePoint Framework solution. These assets are deployed to SharePoint sites when the solution is installed on it. Article also covers needed steps for introducing possible updates as part of new versions of the package. This process is exactly the same as for add-in update.
 

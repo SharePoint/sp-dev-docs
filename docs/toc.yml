@@ -22,19 +22,19 @@
       items:
       - name: Build your first web part
         href: spfx/web-parts/get-started/build-a-hello-world-web-part.md
-      - name: Connect to SharePoint
+      - name: Connect your web part to SharePoint
         href: spfx/web-parts/get-started/connect-to-sharepoint.md
       - name: Deploy your web part to a SharePoint page
         href: spfx/web-parts/get-started/serve-your-web-part-in-a-sharepoint-page.md
-      - name: Deploy to Office 365 CDN
+      - name: Host your web part from Office 365 CDN
         href: spfx/web-parts/get-started/hosting-webpart-from-office-365-cdn.md
-      - name: Add jQueryUI Accordion
+      - name: Add jQueryUI Accordion to your web part
         href: spfx/web-parts/get-started/add-jqueryui-accordion-to-web-part.md
-      - name: Use Office UI Fabric React components
+      - name: Use Office UI Fabric React components in your web part
         href: spfx/web-parts/get-started/use-fabric-react-components.md
-      - name: Provision assets from solution
+      - name: Provision assets from your web part
         href: spfx/web-parts/get-started/provision-sp-assets-from-package.md
-      - name: Deploy to an Azure CDN
+      - name: Deploy your web part to an Azure CDN
         href: spfx/web-parts/get-started/deploy-web-part-to-cdn.md
     - name: Basics
       items:
