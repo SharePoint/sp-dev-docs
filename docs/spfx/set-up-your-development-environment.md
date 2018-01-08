@@ -44,7 +44,7 @@ The steps and examples in this documentation use [Visual Studio Code](https://co
 
 ### If you are using Ubuntu
 
-You need to install compiler tools using the following command:
+You need to install compiler tools by using the following command:
 
 ```sh
 sudo apt-get install build-essential
@@ -52,7 +52,7 @@ sudo apt-get install build-essential
 
 ### If you are using fedora
 
-You need to install compiler tools using the following command:
+You need to install compiler tools by using the following command:
 
 ```sh
 sudo yum install make automake gcc gcc-c++ kernel-devel
