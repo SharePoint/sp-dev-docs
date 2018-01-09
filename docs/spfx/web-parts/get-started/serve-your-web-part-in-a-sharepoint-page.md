@@ -156,7 +156,7 @@ You should see the **HelloWorld** web part you built in the previous article tha
 
 ![Hello World web part in modern page](../../../images/sp-wp-modern-page.png)
 
-<img alt="Hello World web part in modern page" src="../../../images/sp-wp-modern-page.png" width="500">
+<img alt="Hello World web part in modern page" src="../../../images/sp-wp-modern-page.png" width="700">
 
 ## Edit web part properties
 

@@ -104,7 +104,7 @@ The developer toolchain uses Webpack, SystemJS, and CommonJS to bundle your web 
   npm install --save @types/jqueryui
   ```
 
-### Unbundle external dependencies from web part bundle
+### To unbundle external dependencies from web part bundle
 
 By default, any dependencies you add are bundled into the web part bundle. In some cases, this is not ideal. You can choose to unbundle these dependencies from the web part bundle.
 
@@ -276,7 +276,7 @@ Open the project folder **jquery-webpart** in Visual Studio Code. Your project s
   * Loads the accordion styles from a CDN asynchronously.
 
 
-### Render Accordion
+### To render Accordion
 
 1. In the `jQueryWebPart.ts`, go to the `render` method.
 
