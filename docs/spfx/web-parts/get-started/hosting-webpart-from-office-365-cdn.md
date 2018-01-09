@@ -16,14 +16,11 @@ Office 365 Content Delivery Network (CDN) provides you an easy solution to host 
 > [!IMPORTANT]
 > This article uses the `includeClientSideAssets` attribute, which was introduced in the SPFx v1.4. This version is not supported with **SharePoint 2016 Feature Pack 2**. If you are using an on-premises setup, you need to decide the CDN hosting location separately. You can also simply host the JavaScript files from a centralized library in your on-premises SharePoint to which your users have access. Please see additional considerations in the [SharePoint 2016 specific guidance](../../sharepoint-2016-support.md).
 
-## Prerequisites
-
 Make sure that you have completed the following tasks before you begin:
 
 * [Build your first client-side web part](./build-a-hello-world-web-part.md)
 * [Connect your client-side web part to SharePoint](./connect-to-sharepoint.md)
 * [Deploy your client-side web part to a SharePoint page](./serve-your-web-part-in-a-sharepoint-page.md)
-
 
 You can also follow these steps by watching this video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=MEZMs8VMVQ0&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq).
 
@@ -35,8 +32,8 @@ You can also follow these steps by watching this video on the [SharePoint PnP Yo
 
 1. Ensure that you have the latest version of the SharePoint Online Management Shell by downloading it from the [Microsoft Download site](https://www.microsoft.com/en-us/download/details.aspx?id=35588).
 
-> [!TIP]
-> If you are using a non-Windows machine, you cannot use the SharePoint Online Management Shell. You can, however, manage these settings by using [Office 365 CLI](https://sharepoint.github.io/office365-cli/).
+  > [!TIP]
+  > If you are using a non-Windows machine, you cannot use the SharePoint Online Management Shell. You can, however, manage these settings by using [Office 365 CLI](https://sharepoint.github.io/office365-cli/).
 
 2. Connect to your SharePoint Online tenant with a PowerShell session.
 
