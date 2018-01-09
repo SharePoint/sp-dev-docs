@@ -12,61 +12,6 @@
       href: spfx/set-up-your-developer-tenant.md
     - name: Set up development environment
       href: spfx/set-up-your-development-environment.md
-    - name: Build web parts
-      href: spfx/web-parts/get-started/build-a-hello-world-web-part.md
-    - name: Build extensions
-      href: spfx/extensions/get-started/build-a-hello-world-extension.md
-  - name: Basics
-    items:
-    - name: Debugging
-      href: spfx/debug-in-vscode.md
-    - name: Connecting to APIs
-      items:
-      - name: Microsoft Graph
-        href: spfx/overview-graphhttpclient.md
-        items:
-        - name: Overview
-          href: spfx/overview-graphhttpclient.md
-        - name: Tutorial
-          href: spfx/call-microsoft-graph-using-graphhttpclient.md
-  - name: Extensions
-    href: spfx/extensions/overview-extensions.md
-    items:
-    - name: Overview
-      href: spfx/extensions/overview-extensions.md
-    - name: Getting started
-      href: spfx/extensions/get-started/build-a-hello-world-extension.md
-      items:
-      - name: Build your first extension
-        href: spfx/extensions/get-started/build-a-hello-world-extension.md
-      - name: Use page placeholders
-        href: spfx/extensions/get-started/using-page-placeholder-with-extensions.md
-      - name: Deploy your extension to SharePoint
-        href: spfx/extensions/get-started/serving-your-extension-from-sharepoint.md
-      - name: Host extension from CDN
-        href: spfx/extensions/get-started/hosting-extension-from-office365-cdn.md
-      - name: Build Field Customizer
-        href: spfx/extensions/get-started/building-simple-field-customizer.md
-      - name: Build ListView Command Set
-        href: spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md
-    - name: Basics
-      items:
-      - name: Configure extension icon
-        href: spfx/extensions/basics/configure-extension-icon.md
-    - name: Concepts
-      items:
-      - name: Migrate existing customizations
-        items:
-        - name: Client Side Rendering (JSLink)
-          href: spfx/extensions/guidance/migrate-jslink-to-spfx-extensions.md
-        - name: JavaScript embedding (UserCustomAction)
-          href: spfx/extensions/guidance/migrate-user-customactions-to-spfx-extensions.md
-        - name: Edit Control Block (ECB) menu item tutorial
-          href: spfx/extensions/guidance/migrate-from-ecb-to-spfx-extensions.md
-        - name: Client Side Rendering (JSLink) tutorial
-          href: spfx/extensions/guidance/migrate-from-jslink-to-spfx-extensions.md
-        - name: JavaScript embedding (UserCustomAction) tutorial
-          href: spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions.md          
   - name: Web parts
     href: spfx/web-parts/overview-client-side-web-parts.md
     items:
@@ -77,19 +22,19 @@
       items:
       - name: Build your first web part
         href: spfx/web-parts/get-started/build-a-hello-world-web-part.md
-      - name: Connect to SharePoint
+      - name: Connect your web part to SharePoint
         href: spfx/web-parts/get-started/connect-to-sharepoint.md
       - name: Deploy your web part to a SharePoint page
         href: spfx/web-parts/get-started/serve-your-web-part-in-a-sharepoint-page.md
-      - name: Deploy to Office 365 CDN
+      - name: Host your web part from Office 365 CDN
         href: spfx/web-parts/get-started/hosting-webpart-from-office-365-cdn.md
-      - name: Add jQueryUI Accordion
+      - name: Add jQueryUI Accordion to your web part
         href: spfx/web-parts/get-started/add-jqueryui-accordion-to-web-part.md
-      - name: Use Office UI Fabric React components
+      - name: Use Office UI Fabric React components in your web part
         href: spfx/web-parts/get-started/use-fabric-react-components.md
-      - name: Provision assets from solution
+      - name: Provision assets from your web part
         href: spfx/web-parts/get-started/provision-sp-assets-from-package.md
-      - name: Deploy to an Azure CDN
+      - name: Deploy your web part to an Azure CDN
         href: spfx/web-parts/get-started/deploy-web-part-to-cdn.md
     - name: Basics
       items:
@@ -137,6 +82,57 @@
           href: spfx/web-parts/guidance/build-custom-property-pane-controls.md
         - name: Use cascading dropdowns
           href: spfx/web-parts/guidance/use-cascading-dropdowns-in-web-part-properties.md
+  - name: Extensions
+    href: spfx/extensions/overview-extensions.md
+    items:
+    - name: Overview
+      href: spfx/extensions/overview-extensions.md
+    - name: Getting started
+      href: spfx/extensions/get-started/build-a-hello-world-extension.md
+      items:
+      - name: Build your first extension
+        href: spfx/extensions/get-started/build-a-hello-world-extension.md
+      - name: Use page placeholders
+        href: spfx/extensions/get-started/using-page-placeholder-with-extensions.md
+      - name: Deploy your extension to SharePoint
+        href: spfx/extensions/get-started/serving-your-extension-from-sharepoint.md
+      - name: Host extension from CDN
+        href: spfx/extensions/get-started/hosting-extension-from-office365-cdn.md
+      - name: Build Field Customizer
+        href: spfx/extensions/get-started/building-simple-field-customizer.md
+      - name: Build ListView Command Set
+        href: spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md
+    - name: Basics
+      items:
+      - name: Configure extension icon
+        href: spfx/extensions/basics/configure-extension-icon.md
+    - name: Concepts
+      items:
+      - name: Migrate existing customizations
+        items:
+        - name: Client Side Rendering (JSLink)
+          href: spfx/extensions/guidance/migrate-jslink-to-spfx-extensions.md
+        - name: JavaScript embedding (UserCustomAction)
+          href: spfx/extensions/guidance/migrate-user-customactions-to-spfx-extensions.md
+        - name: Edit Control Block (ECB) menu item tutorial
+          href: spfx/extensions/guidance/migrate-from-ecb-to-spfx-extensions.md
+        - name: Client Side Rendering (JSLink) tutorial
+          href: spfx/extensions/guidance/migrate-from-jslink-to-spfx-extensions.md
+        - name: JavaScript embedding (UserCustomAction) tutorial
+          href: spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions.md          
+  - name: Basics
+    items:
+    - name: Debugging
+      href: spfx/debug-in-vscode.md
+    - name: Connecting to APIs
+      items:
+      - name: Microsoft Graph
+        href: spfx/overview-graphhttpclient.md
+        items:
+        - name: Overview
+          href: spfx/overview-graphhttpclient.md
+        - name: Tutorial
+          href: spfx/call-microsoft-graph-using-graphhttpclient.md  
   - name: Concepts
     items:
     - name: Guidance
