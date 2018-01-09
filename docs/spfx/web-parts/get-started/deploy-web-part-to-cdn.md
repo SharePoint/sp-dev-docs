@@ -57,15 +57,11 @@ Create a new CDN profile and associate the CDN endpoint with this BLOB container
 
   ![Screenshot of create a new CDN profile](../../../images/deploy-create-cdn-profile.png)
 
-2. Create a CDN endpoint as described in [Step 2: Enable CDN for the storage account](https://docs.microsoft.com/en-us/azure/cdn/cdn-create-a-storage-account-with-cdn#step-2-enable-cdn-for-the-storage-account).
+2. Create a CDN endpoint as described in [Step 2: Enable CDN for the storage account](https://docs.microsoft.com/en-us/azure/cdn/cdn-create-a-storage-account-with-cdn#step-2-enable-cdn-for-the-storage-account). The CDN endpoint is created with the following URL: `http://spfxsamples.azureedge.net`
 
   For example, in the following screenshot, **spfxsamples** is the endpoint name, **Storage** is the origin type, and **spfxsamples.blob.core.windows.net** is the storage account.
 
-  ![Screenshot of create CDN endpoint](../../../images/deploy-create-cdn-endpoint.png)
-
-  <img alt="Screenshot of create CDN endpoint" src="../../../images/deploy-create-cdn-endpoint.png" width="800">
-
-  The CDN endpoint is created with the following URL: `http://spfxsamples.azureedge.net`
+  <img alt="Screenshot of create CDN endpoint" src="../../../images/deploy-create-cdn-endpoint.png" width="700">
 
 Because you associated the CDN endpoint with your storage account, you can also access the BLOB container at the following URL: `http://spfxsamples.azureedge.net/azurehosted-webpart/`
 
