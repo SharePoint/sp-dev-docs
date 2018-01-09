@@ -264,6 +264,8 @@ In this step, you implement validation logic that checks if the list with the na
   gulp serve
   ```
 
+  <br/>
+
   ![The list name property displayed in the web part property pane](../../../images/property-validation-list-name-property.png)
 
 ### Validate the name of the list by using the SharePoint REST API
@@ -313,7 +315,6 @@ In this step, you validate the provided list name and check if it corresponds to
     }
   }
   ```
-
 
   First, the **validateListName** method checks if a list name has been provided. If not, it resolves the promise with a relevant validation error. If the user has provided a list name, the **validateListName** method uses the **SPHttpClient** to call the SharePoint REST API and check if the list with the specified name exists.
 
@@ -372,9 +373,13 @@ In this step, you validate the provided list name and check if it corresponds to
 
   ![Validation error displayed on a required property without a value specified](../../../images/property-validation-empty-list-name-error.png)
 
+  <br/>
+
   If you provide the name of a list that doesn't exist, the web part displays a validation error stating that the list you specified doesn't exist in the current site.
 
   ![Validation error displayed after providing a name of a list that doesn't exist in the current site](../../../images/property-validation-invalid-list-name-error.png)
+
+  <br/>
 
   If you specify the name of an existing list, the validation error disappears.
 

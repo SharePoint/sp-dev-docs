@@ -85,6 +85,8 @@ Valid **ILocalizedString** values:
 }
 ```
 
+<br/>
+
 An **ILocalizedString** value that is not valid because the **default** key is missing:
 
 ```json
@@ -97,7 +99,7 @@ An **ILocalizedString** value that is not valid because the **default** key is m
 
 There are 7 out-of-the-box groups as shown in the following table. Use the group ID in the `groupId` property.
 
-| Group name                      | ID                                     | Description |   
+| Group name                      | ID                                     | Group includes... |   
 |---------------------------------|----------------------------------------|---------------|
 | Text, media, and content        | `cf066440-0614-43d6-98ae-0b31cf14c7c3` | Web parts that display text, multi-media, documents, information from the web, and other rich content. |
 | Discover                        | `1edbd9a8-0bfb-4aa2-9afd-14b8c45dd489` | Web parts that organize, group, and filter content to help users discover information.                 |
@@ -113,7 +115,7 @@ To see how you can use preconfigured entries when building web parts, you will b
 
 ![Web part property pane showing the different properties users need to configure for the web part to work](../../../images/preconfiguredentries-needs-configuration.png)
 
-## Create a new project
+## Create a new web part project
 
 1. Start by creating a new folder for your project.
 
@@ -372,6 +374,8 @@ For users to be able to use the newly defined properties to configure the web pa
     }
   }
   ```
+
+<br/>
 
 In a real-life scenario, you would retrieve the list of lists from the current SharePoint site. For brevity, in this example, you use a fixed list instead.
 
