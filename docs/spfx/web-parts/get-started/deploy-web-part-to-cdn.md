@@ -281,7 +281,7 @@ Because you changed the web part bundle, you need to redeploy the package to the
 
   ![Sources with Azure CDN URL](../../../images/cdn-azure-sources-browser-dev-tools.png)
 
-## Deploying to other CDNs
+## Deploy to other CDNs
 
 To deploy the assets to your favorite CDN provider, you can copy the files from **temp\deploy** folder. To generate assets for distribution, run the following gulp command as we did before with the **--ship** parameter:
 

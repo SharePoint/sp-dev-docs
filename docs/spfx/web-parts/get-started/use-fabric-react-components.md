@@ -21,7 +21,7 @@ You can also follow these steps by watching this video on the [SharePoint PnP Yo
 </a>
 
 
-## Create a new Web Part project
+## Create a new web part project
 
 1. Create a new project directory in your favorite location:
 
