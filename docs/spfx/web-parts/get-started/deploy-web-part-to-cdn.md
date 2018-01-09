@@ -63,13 +63,15 @@ Create a new CDN profile and associate the CDN endpoint with this BLOB container
 
   ![Screenshot of create CDN endpoint](../../../images/deploy-create-cdn-endpoint.png)
 
+  <img alt="Screenshot of create CDN endpoint" src="../../../images/deploy-create-cdn-endpoint.png" width="800">
+
   The CDN endpoint is created with the following URL: `http://spfxsamples.azureedge.net`
 
 Because you associated the CDN endpoint with your storage account, you can also access the BLOB container at the following URL: `http://spfxsamples.azureedge.net/azurehosted-webpart/`
 
 Note, however, that you have not yet deployed the files.
 
-## Create a new Web Part project
+## Create a new web part project
 
 1. Create a new project directory in your preferred location:
 

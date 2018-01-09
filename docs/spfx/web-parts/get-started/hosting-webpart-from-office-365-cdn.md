@@ -80,7 +80,7 @@ You can also follow these steps by watching this video on the [SharePoint PnP Yo
   > When the origin is listed without the *(configuration pending)* text, it is ready to be used in your tenant. This is the indication of an on-going configuration between SharePoint Online and the CDN system. 
 
 
-## Project directory
+## End task in project directory
 
 1. Switch to the console and make sure you are still in the project directory that you used to set up your web part project.
 
