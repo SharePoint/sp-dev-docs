@@ -50,12 +50,12 @@
       items:
       - name: Migrate existing customizations
         items:
+        - name: Script Editor Web Part
+          href: spfx/web-parts/guidance/migrate-script-editor-web-part-customizations.md
         - name: Work with __REQUESTDIGEST
           href: spfx/web-parts/basics/working-with-requestdigest.md
         - name: Use JSOM
           href: spfx/web-parts/guidance/connect-to-sharepoint-using-jsom.md
-        - name: Script Editor Web Part
-          href: spfx/web-parts/guidance/migrate-script-editor-web-part-customizations.md
         - name: jQuery and DataTables
           href: spfx/web-parts/guidance/migrate-jquery-datatables-script-to-spfx.md
         - name: jQuery and FullCalendar

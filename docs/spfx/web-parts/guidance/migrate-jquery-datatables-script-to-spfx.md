@@ -1,13 +1,14 @@
 ---
 title: Migrate jQuery and DataTables solution built using Script Editor Web Part to SharePoint Framework
-ms.date: 09/25/2017
+description: 
+ms.date: 01/09/2018
 ms.prod: sharepoint
 ---
 
 
 # Migrate jQuery and DataTables solution built using Script Editor Web Part to SharePoint Framework
 
-One of the frequently used jQuery plugins is [DataTables](https://datatables.net/). With DataTables you can easily build powerful data overviews of data coming both from SharePoint and external APIs. This article illustrates how you would migrate a SharePoint customization using DataTables built with the Script Editor Web Part to the SharePoint Framework.
+One of the frequently used jQuery plug-ins is [DataTables](https://datatables.net/). With DataTables you can easily build powerful data overviews of data coming both from SharePoint and external APIs. This article illustrates how you would migrate a SharePoint customization using DataTables built with the Script Editor Web Part to the SharePoint Framework.
 
 ## List of IT requests built using the Script Editor Web Part
 
