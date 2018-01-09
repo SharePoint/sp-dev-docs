@@ -36,7 +36,7 @@ These are the default site designs. For each site design there is a title, descr
 
 Had you chosen the team site template, it contains only one default site design named **Team site**. For additional information on how you can change the default site designs, see [Customize a default site design](customize-default-site-design.md).
 
-Once a site design is selected, SharePoint creates the new site, and runs site scripts for the site design. The site scripts detail the work such as creating new lists, or applying a theme. When the actions in the scripts are completed, SharePoint displays detailed results of those actions in a progress pane.
+When a site design is selected, SharePoint creates the new site, and runs site scripts for the site design. The site scripts detail the work such as creating new lists, or applying a theme. When the actions in the scripts are completed, SharePoint displays detailed results of those actions in a progress pane.
 
 ![Progress pane listing completed actions from a site design](images/progress-pane.png)
 
@@ -200,7 +200,7 @@ The **WebTemplate** parameter set to the value 64 indicates to register this sit
 > [!NOTE]
 > A site design can run multiple scripts. The script IDs are passed in an array, and they will run in the order listed.
 
-For step-by-step information on creating a site design, see [Get started creating site designs](get-started-create-site-design.md)
+For step-by-step information on creating a site design, see [Get started creating site designs](get-started-create-site-design.md).
 
 ## PnP Provisioning and customization using Microsoft Flow
 
@@ -217,11 +217,11 @@ The process works as follows:
 1. The message triggers a call to an Azure function that you have configured.
 1. The Azure function runs your custom script, such as the PnP provisioning engine, to apply your custom configurations.
 
-For a step-by-step tutorial on how to configure your own Microsoft flow with PnP provisioning, see [Build a complete site design using the PnP provisioning engine](site-design-pnp-provisioning.md)
+For a step-by-step tutorial on how to configure your own Microsoft flow with PnP provisioning, see [Build a complete site design using the PnP provisioning engine](site-design-pnp-provisioning.md).
 
 ## Scoping
 
-You can configure site designs to only appear for specific groups or people in your organization. This is useful to ensure that people only see the site designs intended for them. For example, you may want the accounting department to only see site designs specifically for them. And the accounting site designs may not make sense to show to anyone else.
+You can configure site designs to only appear for specific groups or people in your organization. This is useful to ensure that people only see the site designs intended for them. For example, you might want the accounting department to only see site designs specifically for them. And the accounting site designs may not make sense to show to anyone else.
 
 By default a site design can be viewed by everyone when it is created. Scopes are applied by using the **Grant-SPOSiteDesignRights** cmdlet, or the **GrantSiteDesignRights** REST API.  You can specify the scope by user, or a mail-enabled security group. The following example shows how to add Nestor (a user at the fictional Contoso site) view rights on a site design.
 
@@ -238,7 +238,7 @@ Grant-SPOSiteDesignRights `
 RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.GrantSiteDesignRights", {id:"44252d09-62c4-4913-9eb0-a2a8b8d7f863", principalNames:["nestorw@contoso.onmicrosoft.com”], grantedRights:1});
 ```
 -->
-For more information on working with scopes, see [Scoping access to site designs](site-design-scoping.md).
+For more information about working with scopes, see [Scoping access to site designs](site-design-scoping.md).
 
 ## See also
 
