@@ -125,7 +125,7 @@ Your flow should look like the following.
 To test your flow, you have to make a POST request. You can do this via PowerShell, as shown in the following example.
 
 ```powershell
-$uri = "[the URI you copied in step 8 when creating the flow]"
+$uri = "[the URI you copied in step 14 when creating the flow]"
 $body = "{webUrl:'somesiteurl'}
 Invoke-RestMethod -Uri $uri -Method Post -ContentType "application/json" -Body $body
 ```
@@ -153,6 +153,7 @@ Copy the following provisioning template XML to a new file and save the file as 
         </pnp:WebCustomActions>
       </pnp:CustomActions>
     </pnp:ProvisioningTemplate>
+  </pnp:Templates>
 </pnp:Provisioning>
 ```
 
