@@ -43,11 +43,14 @@ You can also follow these steps by watching this video on the [SharePoint PnP Yo
 
 3. Get the current status of public CDN settings from the tenant level by executing the following commands one-by-one. 
 
+
   ```powershell
   Get-SPOTenantCdnEnabled -CdnType Public
   Get-SPOTenantCdnOrigins -CdnType Public
   Get-SPOTenantCdnPolicies -CdnType Public
   ```
+
+  SharePoint Framework solutions can automatically benefit from the Office 365 Public CDN as long as it's enabled in your tenant. When CDN is enabled, `*/CLIENTSIDEASSETS` origin is automatically added as a valid origin.
 
 4. Enable public CDN in the tenant.
 
@@ -177,3 +180,4 @@ You can load jQuery and jQuery UI and build a jQuery Accordion web part. To cont
 
 > [!NOTE]
 > If you find an issue in the documentation or in the SharePoint Framework, report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input in advance.
+

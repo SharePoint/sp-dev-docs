@@ -9,15 +9,15 @@ ms.date: 12/14/2017
 > [!NOTE]
 > Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for use in production environments.
 
-Site designs are available to everyone by default. But you can scope site designs so that they are only available to specific users or groups. For example, the accounting apartment may have specific site designs they use, but it may not make sense to share those site designs with everyone. This article will explain how you can control which users and groups can see specific site designs.
+Site designs are available to everyone by default. You can also scope site designs so that they are only available to specific users or groups. For example, the accounting apartment may have specific site designs they use, but it may not make sense to share those site designs with everyone. This article will explain how you can control which users and groups can see specific site designs.
 
 ## Granting rights to a site design
 
-When a site design is first created it is available to everyone. You can grant **View** rights to the site design. Once rights are granted, only the users or groups (principals) specified have access. You can continue granting rights to more principals with subsequent API calls.
+When a site design is first created, it is available to everyone. You can grant **View** rights to the site design. After rights are granted, only the users or groups (principals) specified have access. You can continue granting rights to more principals with subsequent API calls.
 
 ## Granting rights to security groups
 
-Here's an example of how to scope an existing site design so that only the mail-enabled security group **accounting** can view and use the site design.
+The following example shows how to scope an existing site design so that only the mail-enabled security group **accounting** can view and use the site design.
 
 ```powershell
 Grant-SPOSiteDesignRights `
@@ -26,7 +26,7 @@ Grant-SPOSiteDesignRights `
   -Rights View
 ```
 
-You may want to create a new site design and grant rights at the same time as shown in the next example.
+You might want to create a new site design and grant rights at the same time, as shown in the next example.
 
 ```powershell
 Add-SPOSiteDesign `
@@ -42,7 +42,7 @@ Add-SPOSiteDesign `
 
 ## Granting rights to users
 
-Here's an example of how to grant view rights on a site design to Nestor (a user at the fictional Contoso site).
+The following example shows how to grant view rights on a site design to Nestor (a user at the fictional Contoso site).
 
 ```powershell
 PS C:\> Grant-SPOSiteDesignRights `
@@ -67,9 +67,9 @@ Nestor Wilke i:0#.f|membership|nestorw@contoso.onmicrosoft.com   View
 
 ## Revoking rights from a site design
 
-You can revoke rights for any principal. If you revoke view rights for all principles, then the site design will again be available to everyone.
+You can revoke rights for any principal. If you revoke view rights for all principles, the site design will again be available to everyone.
 
-Here's an example of revoking access for the accounting mail-enabled security group and Nestor.
+The following example revokes access for the accounting mail-enabled security group and Nestor.
 
 ```powershell
 Revoke-SPOSiteDesignRights `
