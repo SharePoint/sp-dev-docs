@@ -335,7 +335,7 @@ SharePoint Framework solutions do support the following Feature Framework upgrad
 * AddContentTypeField
 
 > [!TIP]
-> You can read more details around the Feature Framework upgrade action definitions at [SharePoint Add-ins update process](../sp-add-ins/sharepoint-add-ins-update-process.md).
+> You can read more details around the Feature Framework upgrade action definitions at [SharePoint Add-ins update process](../../../sp-add-ins/sharepoint-add-ins-update-process.md).
 
 ### To add a new element.xml file for the new version
 
