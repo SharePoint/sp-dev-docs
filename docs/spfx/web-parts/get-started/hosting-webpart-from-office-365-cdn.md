@@ -59,7 +59,7 @@ Confirm settings by selecting 'Y' and pressing **Enter**
 
 Now public CDN has been enabled in the tenant using the default file type configuration allowed. This means that the following file type extensions are supported: "CSS,EOT,GIF,ICO,JPEG,JPG,JS,MAP,PNG,SVG,TTF,WOFF".
 
-SharePoint Framework solutions can automatically benefit from the Office 365 Public CDN as long as it's enabled in your tenant. When CDN is enabled, `*/CLIENTSIDEASSETS` origin is automatically added as valid a valid origin.
+SharePoint Framework solutions can automatically benefit from the Office 365 Public CDN as long as it's enabled in your tenant. When CDN is enabled, `*/CLIENTSIDEASSETS` origin is automatically added as a valid origin.
 
 > [!NOTE]
 > If you have previously enabled Office 365 CDN, you should re-enable the public CDN, so that you will have the `*/CLIENTSIDEASSETS`entry added as valid CDN origin for public CDN.
