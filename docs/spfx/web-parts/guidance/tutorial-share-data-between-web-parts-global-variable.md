@@ -143,6 +143,8 @@ The Recent Documents web part shows information about the most recently modified
 
 ### Create the IDocumentActivity interface
 
+Use this interface to display the activity information of a particular document on a card.
+
 In the **./src/webparts/recentDocuments** folder, create a new file named **IDocumentActivity.ts**, and paste the following code:
 
 ```ts
@@ -153,9 +155,9 @@ export interface IDocumentActivity {
 }
 ```
 
-Use this interface to display the activity information of a particular document on a card.
-
 ### Create the IDocument interface
+
+This interface represents a document with all the information necessary to display the document as a card.
 
 In the **./src/webparts/recentDocuments** folder, create a new file named **IDocument.ts**, and paste the following code:
 
@@ -170,8 +172,6 @@ export interface IDocument {
     activity: IDocumentActivity;
 }
 ```
-
-This interface represents a document with all the information necessary to display the document as a card.
 
 ### Show recent documents in the RecentDocuments React component
 
@@ -461,6 +461,8 @@ The Recent Document web part displays information about the most recently modifi
 1. In Visual Studio Code, activate the Explorer pane, and from the **./src/webparts/recentDocuments** folder, move the **IDocument.ts** and **IDocumentActivity.ts** files one level up, to the **./src/webparts** folder.
 
   ![Visual Studio Code Explorer pane with the IDocument.ts and IDocumentActivity.ts files highlighted](../../../images/tutorial-sharingdata-interfaces.png)
+
+  <br/>
 
   Having moved the files to another location in your project, you need to update the paths where they're referenced.
 

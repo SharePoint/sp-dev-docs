@@ -3,8 +3,6 @@
 - name: SharePoint Framework
   href: spfx/sharepoint-framework-overview.md
   items:
-  - name: Overview
-    href: spfx/sharepoint-framework-overview.md
   - name: Getting started
     href: spfx/set-up-your-developer-tenant.md
     items:
@@ -15,8 +13,6 @@
   - name: Web parts
     href: spfx/web-parts/overview-client-side-web-parts.md
     items:
-    - name: Overview
-      href: spfx/web-parts/overview-client-side-web-parts.md
     - name: Getting started
       href: spfx/web-parts/get-started/build-a-hello-world-web-part.md
       items:
@@ -62,20 +58,13 @@
           href: spfx/web-parts/basics/working-with-requestdigest.md
         - name: Use JSOM
           href: spfx/web-parts/guidance/connect-to-sharepoint-using-jsom.md          
-      - name: Performance
+      - name: Share data between web parts
+        href: spfx/web-parts/guidance/share-data-between-web-parts.md
         items:
-        - name: Share data between web parts
-          href: spfx/web-parts/guidance/share-data-between-web-parts.md
-          items:
-          - name: Overview
-            href: spfx/web-parts/guidance/share-data-between-web-parts.md
-          - name: Tutorial
-            href: spfx/web-parts/guidance/tutorial-share-data-between-web-parts-global-variable.md
-      - name: SharePoint integration
+        - name: Tutorial
+          href: spfx/web-parts/guidance/tutorial-share-data-between-web-parts-global-variable.md
+      - name: Integrate properties with SharePoint
         href: spfx/web-parts/guidance/integrate-web-part-properties-with-sharepoint.md
-        items:
-        - name: Integrate properties with SharePoint
-          href: spfx/web-parts/guidance/integrate-web-part-properties-with-sharepoint.md
       - name: Extend property pane
         items:
         - name: Build custom controls
