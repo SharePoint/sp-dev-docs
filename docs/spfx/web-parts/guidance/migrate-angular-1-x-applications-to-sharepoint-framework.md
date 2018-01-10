@@ -1005,7 +1005,7 @@ export default class DataService implements IDataService {
 }
 ```
 
-<br/>
+
 
 ### Broadcast properties change event
 
