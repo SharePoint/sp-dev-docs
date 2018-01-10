@@ -103,7 +103,7 @@ One of the goals of the SharePoint Framework is to standardize building client-s
 
 Script Editor Web Parts were frequently used in the past to modify parts of the page, such as adding buttons to the toolbar or changing the heading or branding of the page. Such customizations relied on the existence of specific DOM elements, and whenever SharePoint UI would be updated, there was a chance that such customization would break.
 
-SharePoint Framework encourages a more structured and reliable approach to customizing SharePoint. Rather than using specific DOM elements to customize SharePoint, SharePoint Framework provides developers with a public API that they can use to extend SharePoint. Client-side web parts are the only shape supported by the SharePoint Framework, but other shapes, such as equivalents of JSLink and User Custom Actions, are being [taken into consideration for the future](./roadmap.md) so that developers can implement the most common customization scenarios by using the SharePoint Framework.
+SharePoint Framework encourages a more structured and reliable approach to customizing SharePoint. Rather than using specific DOM elements to customize SharePoint, SharePoint Framework provides developers with a public API that they can use to extend SharePoint. Client-side web parts are the only shape supported by the SharePoint Framework, but other shapes, such as equivalents of JSLink and User Custom Actions, are being [taken into consideration for the future](../../roadmap.md) so that developers can implement the most common customization scenarios by using the SharePoint Framew../ork.
 
 ### Distributed as packages
 
