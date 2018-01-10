@@ -415,3 +415,7 @@ export default class RecentDocumentsWebPart extends BaseClientSideWebPart<IRecen
 Even if there are multiple web parts on the page referencing the same service, its bundle is downloaded only once, and the SharePoint Framework creates only one instance of the service on the page. This offers you a convenient mechanism for centralizing processing and storing data on a page. 
 
 While working with SharePoint Framework services is more complex than the previously described approaches, it offers you the great benefits of isolating the data from other components on the page and better handling of its integrity.
+
+## See also
+
+- [Tutorial: Share data between web parts by using a global variable](./tutorial-share-data-between-web-parts-global-variable.md)
