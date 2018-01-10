@@ -50,7 +50,7 @@ If you can't use the SPHttpClient for communicating with the SharePoint REST API
 
 The benefit of using the DigestCache service over manually obtaining a valid request digest token is that the DigestCache automatically checks if the previously retrieved request digest is still valid. If it's expired, the DigestCache service automatically requests a new request digest token from SharePoint and stores it from subsequent requests. Using the DigestCache simplifies your code and makes your solution more robust.
 
-### To use the DigestCache service in your code:
+### To use the DigestCache service in your code
 
 1. Import the **DigestCache** and **IDigestCache** types from the **@microsoft/sp-http** package:
 

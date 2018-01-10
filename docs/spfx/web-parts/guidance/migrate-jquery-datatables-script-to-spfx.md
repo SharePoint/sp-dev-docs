@@ -16,6 +16,8 @@ To illustrate the process of migrating a SharePoint customization using DataTabl
 
 ![Overview of IT support requests displayed on a SharePoint page](../../../images/datatables-sewp.png)
 
+<br/>
+
 The solution is built by using the standard SharePoint Script Editor Web Part. Following is the code used by the customization.
 
 ```html

@@ -50,7 +50,7 @@ Each of these approaches has advantages and disadvantages, and it's important fo
   - **SharePoint lists** as your web part name.
   - **Shows names of lists in the current site** as your web part description.
 
-  [The SharePoint Framework Yeoman generator with the default choices](../../../images/tutorial-spjsom-yo-sharepoint.png)
+  ![The SharePoint Framework Yeoman generator with the default choices](../../../images/tutorial-spjsom-yo-sharepoint.png)
 
 5. After the scaffolding completes, lock down the version of the project dependencies by running the following command:
 
@@ -602,7 +602,8 @@ SPFx components should load SharePoint JSOM scripts only once. In this example, 
 
   ![SharePoint Framework client-side web part showing titles of SharePoint lists in the current site](../../../images/tutorial-spjsom-web-part-list-titles.png)
 
-  While using the `SPComponentLoader` requires some additional effort, it allows you to use server-relative URLs, which is beneficial in scenarios when you're using different tenants for development, testing, and production.
+  
+While using the `SPComponentLoader` requires some additional effort, it allows you to use server-relative URLs, which is beneficial in scenarios when you're using different tenants for development, testing, and production.
 
 ## Considerations
 

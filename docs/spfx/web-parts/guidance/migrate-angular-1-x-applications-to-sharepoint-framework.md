@@ -10,7 +10,7 @@ ms.prod: sharepoint
 
 Many organizations have been using AngularJS for building SharePoint solutions in the past. This article shows how to migrate an existing AngularJS application styled using [ngOfficeUIFabric](http://ngofficeuifabric.com) - AngularJS directives for Office UI Fabric, to a SharePoint Framework client-side web part. The sample application used for this tutorial manages To Do items stored in a SharePoint list.
 
-![AngularJS application for managing To Do items stored in a SharePoint list](../../../images/ng-migration-original-angular-application.png)
+<img alt="AngularJS application for managing To Do items stored in a SharePoint list" src="../../../images/ng-migration-original-angular-application.png" width="800">
 
 The source of the AngularJS application is available on GitHub at [angular-migration/angular-todo](https://github.com/SharePoint/sp-dev-fx-webparts/tree/dev/samples/angular-migration/angular-todo).
 
@@ -98,6 +98,8 @@ In your SharePoint site, create a new list called **Todo**. In the list, add a n
   In progress
   Completed
 ```
+
+<br/>
 
 ![Todo SharePoint list](../../../images/ng-migration-todo-list.png)
 
@@ -290,6 +292,8 @@ Although the web part is working correctly, it doesn't look the same as the Angu
   // ...
 }
 ```
+
+<br/>
 
 If you refresh the web part in the web browser, you see that it is now correctly styled.
 

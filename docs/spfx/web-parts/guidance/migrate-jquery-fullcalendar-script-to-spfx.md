@@ -1092,8 +1092,8 @@ this.context.spHttpClient.post(`${this.context.pageContext.web.absoluteUrl}\
 
   <br/>
 
-> [!IMPORTANT] 
-> If you're suppressing metadata in the responses of the SharePoint REST API, when using the SharePoint Framework SPHttpClient you have to ensure that you're using `application/json;odata.metadata=none` and not `application/json;odata=nometadata` as the value of the **Accept** header. SPHttpClient uses OData 4.0 and requires the first value. If you use the latter instead, the request fails with a **406 Not Acceptable** response.
+  > [!IMPORTANT] 
+  > If you're suppressing metadata in the responses of the SharePoint REST API, when using the SharePoint Framework SPHttpClient you have to ensure that you're using `application/json;odata.metadata=none` and not `application/json;odata=nometadata` as the value of the **Accept** header. SPHttpClient uses OData 4.0 and requires the first value. If you use the latter instead, the request fails with a **406 Not Acceptable** response.
 
 3. To confirm that everything is working as expected, execute the following in the command line:
 
