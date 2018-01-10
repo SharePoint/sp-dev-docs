@@ -502,6 +502,8 @@ export interface IListInfo {
   import { update, get } from '@microsoft/sp-lodash-subset';
   ```
 
+  <br/>
+
   ![References to the 'PropertyPaneAsyncDropdown' class and the 'IDropdownOption' interface highlighted in Visual Studio Code](../../../images/custom-property-pane-control-web-part-imports.png)
 
 3. Add method to load available lists. In the **ListItemsWebPart** class, add a method to load available lists. In this article you use mock data, but you could also call the SharePoint REST API to retrieve the list of available lists from the current web. To simulate loading options from an external service, the method uses a two second delay.
@@ -606,6 +608,8 @@ When building SharePoint Framework web parts, you might need to implement a conf
   }
   // ...
   ```
+
+  <br/>
 
   ![Web part manifest with the 'item' web part property highlighted](../../../images/custom-property-pane-control-item-property-web-part-manifest.png)
 

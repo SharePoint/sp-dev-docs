@@ -362,6 +362,8 @@ When building web parts, you often need to allow users to choose an option from 
   }
   ```
 
+  <br/>
+
   ![Web part manifest with the itemName web part property highlighted](../../../images/react-cascading-dropdowns-itemname-property-web-part-manifest.png)
 
 2. Change the code in the **src/webparts/listItems/IListItemsWebPartProps.ts** file to:
@@ -682,6 +684,8 @@ Previously, you defined a dropdown control to render the **itemName** property i
 > ```js
 > isDisabled: newProps.isDisabled !== undefined ? newProps.isDisabled : newProps.disabled
 > ```
+
+<br/>
 
 ![Item dropdown in the web part property pane showing available list items for the selected list](../../../images/react-cascading-dropdowns-item-dropdown-list-items.png)
 
