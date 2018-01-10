@@ -8,7 +8,7 @@ Learn about remote provisioning for your Office 365 and SharePoint Online site c
 
 Microsoft SharePoint 2013 and the new Add-in model allow you to use remote provisioning for your Office 365 and SharePoint Online site collections, as well as for SharePoint 2013 and SharePoint 2016. You can easily create a provisioning template, and then apply and reuse the template by using simple Windows PowerShell scripts or C# code.
 
-> [!Video https://www.youtube.com/watch?v=kRbrrGCfUtE]
+> [!Video https://www.youtube.com/embed/kRbrrGCfUtE]
 
 ## PnP remote provisioning resources
 
