@@ -102,7 +102,7 @@
       - name: Client Side Rendering (JSLink) tutorial
         href: spfx/extensions/guidance/migrate-from-jslink-to-spfx-extensions.md
       - name: JavaScript embedding (UserCustomAction) tutorial
-          href: spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions.md          
+        href: spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions.md          
   - name: Debugging
     href: spfx/debug-in-vscode.md
   - name: Concepts
