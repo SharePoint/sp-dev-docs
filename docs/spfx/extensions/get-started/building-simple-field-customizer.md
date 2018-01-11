@@ -1,15 +1,15 @@
 ---
-title: 
-description: 
+title: Build your first Field Customizer extension
+description: Create an extension project, and then code and debug your extension by using SharePoint Framework (SPFx) Extensions.
 ms.date: 01/11/2018
 ms.prod: sharepoint
 ---
 
-# Build your first Field Customizer Extension
+# Build your first Field Customizer extension
 
 Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online, and you can use modern JavaScript tools and libraries to build them.
 
-This article describes how to create your first Field Customizer Extension. You can follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=fijOzUmlXrY&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV). 
+You can follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=fijOzUmlXrY&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV). 
 
 <a href="https://www.youtube.com/watch?v=4wgZy5tm4yo">
 <img src="../../../images/spfx-ext-youtube-tutorialfield.png" alt="Screenshot of the YouTube video player for this tutorial" />
@@ -47,10 +47,10 @@ This article describes how to create your first Field Customizer Extension. You 
 5. The next set of prompts ask for specific information about your extension:
      
     * Accept the default value of **HelloWorld** as your extension name, and then select Enter.
+
     * Accept the default value of **HelloWorld description** as your extension description, and select Enter.
+
     * Accept the default value of **No JavaScript Framework** as the framework selection, and select Enter. 
-    
-    <br/>
     
     ![Yeoman SharePoint generator prompts to create an extension solution](../../../images/ext-field-yeoman-prompts.png)
     
@@ -83,9 +83,9 @@ This article describes how to create your first Field Customizer Extension. You 
 
 8. Open **HelloWorldFieldCustomizer.manifest.json** in the **src\extensions\helloWorld** folder.
 
-    This file defines your extension type and a unique identifier `id` for your extension. You’ll need this unique identifier later when debugging and deploying your extension to SharePoint.
+    This file defines your extension type and a unique identifier `id` for your extension. You need this unique identifier later when debugging and deploying your extension to SharePoint.
 
-    ![Application customizer manifest json content](../../../images/ext-field-vscode-manifest.png)
+    ![Application Customizer manifest json content](../../../images/ext-field-vscode-manifest.png)
 
 ## Code your Field Customizer 
 
@@ -104,7 +104,7 @@ import {
 
 The logic for your Field Customizer is contained in the **OnInit()**, **onRenderCell()**, and **onDisposeCell()** methods.
 
-* **onInit()** is where you should perform any setup needed for your extension. This event occurs after `this.context` and `this.properties` are assigned, but before the page DOM is ready. As with web parts, `onInit()` returns a promise that you can use to perform asynchronous operations; `onRenderCell()` will not be called until your promise has resolved. If you don’t need that, simply return `Promise.resolve<void>();`.
+* **onInit()** is where you should perform any setup needed for your extension. This event occurs after `this.context` and `this.properties` are assigned, but before the page DOM is ready. As with web parts, `onInit()` returns a promise that you can use to perform asynchronous operations; `onRenderCell()` is not called until your promise has resolved. If you don’t need that, simply return `Promise.resolve<void>();`.
 * **onRenderCell()** occurs when each cell is rendered. It provides an `event.domElement` HTML element where your code can write its content.
 * **onDisposeCell()** occurs immediately before the `event.cellDiv` is deleted. It can be used to free any resources that were allocated during field rendering. For example, if `onRenderCell()` mounted a React element, `onDisposeCell()` must be used to free it; otherwise, a resource leak would occur. 
 
@@ -130,8 +130,9 @@ The following are the contents of **onRenderCell()** and **onDisposeCell()** in 
   }
 ```
 
-## Debug your Field Customizer using gulp serve and query string parameters
-You cannot currently use the local workbench to test SharePoint Framework Extensions. You'll need to test and develop them directly against a live SharePoint Online site. You don't have to deploy your customization to the App Catalog to do this, which makes the debugging experience simple and efficient.
+## Debug your Field Customizer
+
+You cannot currently use the local Workbench to test SharePoint Framework Extensions. You need to test and develop them directly against a live SharePoint Online site. You don't have to deploy your customization to the App Catalog to do this, which makes the debugging experience simple and efficient.
 
 1. Compile your code and host the compiled files from the local machine by running this command:
     
@@ -139,9 +140,9 @@ You cannot currently use the local workbench to test SharePoint Framework Extens
     gulp serve --nobrowser
     ```
     
-    You use the `--nobrowser` option because you don't need to launch the local workbench, since you can't debug extensions locally.
+    You use the `--nobrowser` option because you don't need to launch the local Workbench, since you can't debug extensions locally.
 
-    When the code compiles without errors, it will serve the resulting manifest from https://localhost:4321.
+    When the code compiles without errors, it serves the resulting manifest from https://localhost:4321.
 
     ![gulp serve](../../../images/ext-field-gulp-serve.png)
 
@@ -171,7 +172,7 @@ You cannot currently use the local workbench to test SharePoint Framework Extens
 
     Because our Field Customizer is still hosted in localhost and is running, we can use specific debug query parameters to execute the code in the newly created list.
 
-9. Append the following query string parameters to the URL. Notice that you will need to update the ID to match your own extension identifier available from the **HelloWorldFieldCustomizer.manifest.json** file. For more information, see [More details about the URL query parameters](#more-details-about-the-url-query-parameters). 
+9. Append the following query string parameters to the URL. Notice that you need to update the ID to match your own extension identifier available from the **HelloWorldFieldCustomizer.manifest.json** file. For more information, see [More details about the URL query parameters](#more-details-about-the-url-query-parameters). 
 
     ```
     ?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Percent":{"id":"45a1d299-990d-4917-ba62-7cb67158be16","properties":{"sampleText":"Hello!"}}}
@@ -180,8 +181,6 @@ You cannot currently use the local workbench to test SharePoint Framework Extens
     <br/>
 
     The full URL should look similar to the following, depending on your tenant URL and the location of the newly created list:
-    
-    <br/>
     
     ```
     contoso.sharepoint.com/Lists/Orders/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Percent":{"id":"45a1d299-990d-4917-ba62-7cb67158be16","properties":{"sampleText":"Hello!"}}}
@@ -200,7 +199,7 @@ You cannot currently use the local workbench to test SharePoint Framework Extens
 
 - **loadSPFX=true** ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework is not normally loaded unless at least one extension is registered. Because no components are registered yet, we must explicitly load the framework.
 - **debugManifestsFile** specifies that you want to load SPFx components that are locally served. The loader only looks for components in the App Catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
-- **fieldCustomizers** indicates which fields in your list should have their rendering controlled by the Field Customizer. The ID parameter specifies the GUID of the extension that should be used to control the rendering of the field. The properties parameter is an optional text string containing a JSON object that will be deserialized into `this.properties` for your extension.
+- **fieldCustomizers** indicates which fields in your list should have their rendering controlled by the Field Customizer. The ID parameter specifies the GUID of the extension that should be used to control the rendering of the field. The properties parameter is an optional text string containing a JSON object that is deserialized into `this.properties` for your extension.
     - **Key**: Use the internal name of the field as the key.
     - **Id**: The GUID of the Field Customizer extension associated with this field.
     - **Properties**: The property values defined in the extension. In this example, `sampleText` is a property defined by the extension.
@@ -208,6 +207,7 @@ You cannot currently use the local workbench to test SharePoint Framework Extens
 <br/>
 
 ## Enhance the Field Customizer rendering
+
 Now that we have successfully tested the out-of-the-box starting point of the Field Customizer, let's modify the logic slightly to have a more polished rendering of the field value. 
 
 1. Open the **HelloWorld.module.scss** file in the **src\extensions\helloWorld** folder, and update the styling definition as follows.
@@ -255,22 +255,25 @@ Now that we have successfully tested the out-of-the-box starting point of the Fi
 
     ![Accept loading debug scripts](../../../images/ext-field-accept-debug-scripts.png)
 
+    <br/>
+
     Note how we changed the field rendering style completely. The field value is indicated by using a graphical representation of the value.
 
     ![Graphical Representation of Percent](../../../images/ext-field-percent-field-graphic.png)
 
 ## Add the field definition to the solution package for deployment
+
 Now that we have tested our solution properly in debug mode, we can package this to be deployed automatically as part of the solution package deployed to the sites. 
 
 1. Install the solution package to the site where it should be installed, so that the extension manifest is white listed for execution.
 
-2. Associate the Field Customizer to an existing field in the site. You can do this programmatically (CSOM/REST) or by using the feature framework inside of the SharePoint Framework solution package. You'll need to associate the following properties in the `SPField` object at the site or list level.
+2. Associate the Field Customizer to an existing field in the site. You can do this programmatically (CSOM/REST) or by using the feature framework inside of the SharePoint Framework solution package. You need to associate the following properties in the `SPField` object at the site or list level.
     - **ClientSiteComponentId** is the identifier (GUID) of the Field Customizer, which has been installed in the App Catalog.
     - **ClientSideComponentProperties** is an optional parameter, which can be used to provide properties for the Field Customizer instance.
 
     Note that you can control the requirement to add a solution containing your extension to the site by using the `skipFeatureDeployment` setting in **package-solution.json**. Even though you would not require the solution to be installed on the site, you'd need to associate **ClientSideComponentId** to specific objects for the extension to be visible.
 
-    In the following steps, we'll review the default field definition, which was automatically created and will then be used to automatically deploy needed configurations when the solution package is installed on a site.
+    In the following steps, we review the default field definition, which was automatically created and will then be used to automatically deploy needed configurations when the solution package is installed on a site.
 
 3. Return to your solution in Visual Studio Code (or to your preferred editor).
 
@@ -307,7 +310,7 @@ Note the following XML structure in **elements.xml**.  The **ClientSideComponent
 
 ### Ensure that definitions are taken into account within the build pipeline
 
-Open **package-solution.json** from the **config** folder. The **package-solution.json** file defines the package metadata as shown in the following code:
+Open **package-solution.json** from the **config** folder. The **package-solution.json** file defines the package metadata as shown in the following code. To ensure that the **element.xml** file is taken into account while the solution is being packaged, default scaffolding added needed configuration to define a feature framework feature definition for the solution package.
 
 ```json
 {
@@ -334,8 +337,6 @@ Open **package-solution.json** from the **config** folder. The **package-solutio
 }
 
 ```
-
-To ensure that the **element.xml** file is taken into account while the solution is being packaged, default scaffolding added needed configuration to define a feature framework feature definition for the solution package.
 
 
 ## Deploy the field to SharePoint Online and host JavaScript from local host
@@ -364,7 +365,7 @@ Now you are ready to deploy the solution to a SharePoint site and get the field 
 
 4. Upload or drag-and-drop the `field-extension.sppkg` located in the **sharepoint/solution** folder to the App Catalog. SharePoint displays a dialog and asks you to trust the client-side solution.
 
-    Note that we did not update the URLs for hosting the solution for this deployment, so the URL is still pointing to https://localhost:4321. 
+    Note that we did not update the URLs for hosting the solution for this deployment, so the URL is still pointing to `https://localhost:4321`. 
     
 5. Select the **Deploy** button.
 
@@ -378,7 +379,7 @@ Now you are ready to deploy the solution to a SharePoint site and get the field 
 
     ![installing field customizer to site](../../../images/ext-field-install-solution-to-site.png)
 
-9. Select the **field-extension-client-side-solution** app to install the solution on the site. After the installation is complete, refresh the page by selecting **F5**.
+9. Select the **field-extension-client-side-solution** app to install the solution on the site. After the installation is complete, refresh the page by selecting F5.
 
 10. When the solution has been installed, select **New** from the toolbar on the **Site Contents** page, and then select **List**.
 
