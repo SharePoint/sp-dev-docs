@@ -1,7 +1,7 @@
 # Alternative model for web app policies in SharePoint Online
 
 Web app policies are a concept that allows SharePoint administrators to either grant or deny permissions to users and groups for all sites under a web application. These permission grants and denies take preference over the permissions set at the sites in the web application and therefore are a mechanism typically used in scenarios like these:
- - Grant a service account permissions to all the sites because that service account is used to run a background process that needs to manipulate the data in all sites
+ - Grant a service account permissions to all the sites because that service account is used to run a background process that needs to manipulate the data in all sites. The service account can also be used by a workflow to reach back into SharePoint
  - Grant support team read-only access to all sites so the support engineer can walk through the site with the end user
  - Deny users (e.g. after leaving the company) access to all content
 

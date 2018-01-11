@@ -1580,6 +1580,8 @@
     - name: Get started with WebJobs ("timer jobs")
       href: solution-guidance/Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites.md
   - name: PnP Sites Core API reference
-    href: https://msdn.microsoft.com/en-us/pnp_sites_core/pnp-sites-core-overview
+    href: https://docs.microsoft.com/en-us/dotnet/api/?term=Officedevpnp
+  - name: PnP Sites Core API reference - Extension methods
+    href: https://docs.microsoft.com/en-us/dotnet/api/?term=microsoft.sharepoint
   - name: PnP PowerShell reference
-    href: https://msdn.microsoft.com/en-us/pnp_powershell/pnp-powershell-overview
+    href: https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps
