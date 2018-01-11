@@ -3,8 +3,6 @@
 - name: SharePoint Framework
   href: spfx/sharepoint-framework-overview.md
   items:
-  - name: Overview
-    href: spfx/sharepoint-framework-overview.md
   - name: Getting started
     href: spfx/set-up-your-developer-tenant.md
     items:
@@ -15,8 +13,6 @@
   - name: Web parts
     href: spfx/web-parts/overview-client-side-web-parts.md
     items:
-    - name: Overview
-      href: spfx/web-parts/overview-client-side-web-parts.md
     - name: Getting started
       href: spfx/web-parts/get-started/build-a-hello-world-web-part.md
       items:
@@ -62,20 +58,13 @@
           href: spfx/web-parts/basics/working-with-requestdigest.md
         - name: Use JSOM
           href: spfx/web-parts/guidance/connect-to-sharepoint-using-jsom.md          
-      - name: Performance
+      - name: Share data between web parts
+        href: spfx/web-parts/guidance/share-data-between-web-parts.md
         items:
-        - name: Share data between web parts
-          href: spfx/web-parts/guidance/share-data-between-web-parts.md
-          items:
-          - name: Overview
-            href: spfx/web-parts/guidance/share-data-between-web-parts.md
-          - name: Tutorial
-            href: spfx/web-parts/guidance/tutorial-share-data-between-web-parts-global-variable.md
-      - name: SharePoint integration
+        - name: Tutorial
+          href: spfx/web-parts/guidance/tutorial-share-data-between-web-parts-global-variable.md
+      - name: Integrate properties with SharePoint
         href: spfx/web-parts/guidance/integrate-web-part-properties-with-sharepoint.md
-        items:
-        - name: Integrate properties with SharePoint
-          href: spfx/web-parts/guidance/integrate-web-part-properties-with-sharepoint.md
       - name: Extend property pane
         items:
         - name: Build custom controls
@@ -85,8 +74,6 @@
   - name: Extensions
     href: spfx/extensions/overview-extensions.md
     items:
-    - name: Overview
-      href: spfx/extensions/overview-extensions.md
     - name: Getting started
       href: spfx/extensions/get-started/build-a-hello-world-extension.md
       items:
@@ -102,37 +89,20 @@
         href: spfx/extensions/get-started/building-simple-field-customizer.md
       - name: Build ListView Command Set
         href: spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md
-    - name: Basics
+    - name: Configure extension icon
+      href: spfx/extensions/basics/configure-extension-icon.md
+    - name: Migrate existing customizations
       items:
-      - name: Configure extension icon
-        href: spfx/extensions/basics/configure-extension-icon.md
-    - name: Concepts
-      items:
-      - name: Migrate existing customizations
-        items:
-        - name: Client Side Rendering (JSLink)
-          href: spfx/extensions/guidance/migrate-jslink-to-spfx-extensions.md
-        - name: JavaScript embedding (UserCustomAction)
-          href: spfx/extensions/guidance/migrate-user-customactions-to-spfx-extensions.md
-        - name: Edit Control Block (ECB) menu item tutorial
-          href: spfx/extensions/guidance/migrate-from-ecb-to-spfx-extensions.md
-        - name: Client Side Rendering (JSLink) tutorial
-          href: spfx/extensions/guidance/migrate-from-jslink-to-spfx-extensions.md
-        - name: JavaScript embedding (UserCustomAction) tutorial
-          href: spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions.md          
-  - name: Basics
-    items:
-    - name: Debugging
-      href: spfx/debug-in-vscode.md
-    - name: Connecting to APIs
-      items:
-      - name: Microsoft Graph
-        href: spfx/overview-graphhttpclient.md
-        items:
-        - name: Overview
-          href: spfx/overview-graphhttpclient.md
-        - name: Tutorial
-          href: spfx/call-microsoft-graph-using-graphhttpclient.md  
+      - name: Client Side Rendering (JSLink)
+        href: spfx/extensions/guidance/migrate-jslink-to-spfx-extensions.md
+      - name: JavaScript embedding (UserCustomAction)
+        href: spfx/extensions/guidance/migrate-user-customactions-to-spfx-extensions.md
+      - name: Edit Control Block (ECB) menu item tutorial
+        href: spfx/extensions/guidance/migrate-from-ecb-to-spfx-extensions.md
+      - name: Client Side Rendering (JSLink) tutorial
+        href: spfx/extensions/guidance/migrate-from-jslink-to-spfx-extensions.md
+      - name: JavaScript embedding (UserCustomAction) tutorial
+        href: spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions.md          
   - name: Concepts
     items:
     - name: Guidance
@@ -161,11 +131,13 @@
         href: spfx/web-parts/guidance/connect-to-api-secured-with-aad.md
       - name: Call the Microsoft Graph API using OAuth
         href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md
-    - name: Performance
+      - name: Microsoft Graph
+        href: spfx/overview-graphhttpclient.md
+        items:
+        - name: Tutorial
+          href: spfx/call-microsoft-graph-using-graphhttpclient.md          
+    - name: Optimize builds for production
       href: spfx/toolchain/optimize-builds-for-production.md
-      items:
-      - name: Optimize builds for production
-        href: spfx/toolchain/optimize-builds-for-production.md
     - name: Setup and deployment
       items:
       - name: Package solution
@@ -182,35 +154,30 @@
         href: spfx/sharepoint-2016-support.md
       - name: Provision SharePoint assets
         href: spfx/toolchain/provision-sharepoint-assets.md
-    - name: UI
+    - name: Design guidance
       href: design/design-guidance-overview.md
       items:
-      - name: Design guidance
-        href: design/design-guidance-overview.md
+      - name: Authoring pages
+        href: design/authoring-pages.md
+      - name: Design a web part
+        href: design/design-a-web-part.md
         items:
-        - name: Overview
-          href: design/design-guidance-overview.md
-        - name: Authoring pages
-          href: design/authoring-pages.md
-        - name: Design a web part
-          href: design/design-a-web-part.md
-          items:
-          - name: Reactive and nonreactive web parts
-            href: design/reactive-and-nonreactive-web-parts.md
-          - name: Responsive design
-            href: design/grid-and-responsive-design.md
-          - name: Titles and descriptions
-            href: design/web-part-titles-and-descriptions.md
-          - name: UI text
-            href: design/ui-text-for-web-parts.md
-          - name: Themes and colors
-            href: design/themes-colors.md
-          - name: Placeholders and fallbacks
-            href: design/placeholders-and-fallbacks.md
-          - name: Accessibility
-            href: design/accessibility.md
-          - name: Web part showcase
-            href: design/showcase-web-part.md
+        - name: Reactive and nonreactive web parts
+          href: design/reactive-and-nonreactive-web-parts.md
+        - name: Responsive design
+          href: design/grid-and-responsive-design.md
+        - name: Titles and descriptions
+          href: design/web-part-titles-and-descriptions.md
+        - name: UI text
+          href: design/ui-text-for-web-parts.md
+        - name: Themes and colors
+          href: design/themes-colors.md
+        - name: Placeholders and fallbacks
+          href: design/placeholders-and-fallbacks.md
+        - name: Accessibility
+          href: design/accessibility.md
+        - name: Web part showcase
+          href: design/showcase-web-part.md
       - name: Design considerations
         href: spfx/web-parts/basics/design-considerations-for-web-parts.md
       - name: Custom dialogs
@@ -223,21 +190,18 @@
         href: spfx/office-ui-fabric-integration.md
     - name: Localization
       href: spfx/web-parts/guidance/localize-web-parts.md
-    - name: Integrating with SharePoint
-      items:
-      - name: Tenant properties
-        href: spfx/tenant-properties.md
+    - name: Tenant properties
+      href: spfx/tenant-properties.md
   - name: Framework architecture
     items:
     - name: Tools and libraries
       href: spfx/tools-and-libraries.md
     - name: Toolchain
       href: spfx/toolchain/sharepoint-framework-toolchain.md
-      items:
-      - name: Overview
-        href: spfx/toolchain/sharepoint-framework-toolchain.md
-      - name: SharePoint Framework Yeoman generator
-        href: spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md
+    - name: Yeoman generator
+      href: spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md
+  - name: Debugging
+    href: spfx/debug-in-vscode.md
   - name: Roadmap
     href: spfx/roadmap.md
   - name: Known issues and FAQ

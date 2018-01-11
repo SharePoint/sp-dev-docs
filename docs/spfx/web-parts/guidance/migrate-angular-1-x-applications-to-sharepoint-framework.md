@@ -692,7 +692,7 @@ Even though the way the web part works hasn't changed, your code is improved. In
 
 ## Improve integration of the AngularJS application with the SharePoint Framework
 
-At this point the AngularJS application works correctly and is wrapped in a SharePoint Framework client-side web part. While users can add the web part to the page, they cannot however configure how the web part should work. All of the configuration is embedded in the AngularJS application's code. In this section, you will extend the web part to allow configuration of the name of the list where the To Do items are stored and whether the web part should show finished tasks or not.
+At this point the AngularJS application works correctly and is wrapped in a SharePoint Framework client-side web part. While users can add the web part to the page, they cannot configure how the web part should work. All of the configuration is embedded in the AngularJS application's code. In this section, you will extend the web part to allow configuration of the name of the list where the To Do items are stored and whether the web part should show finished tasks or not.
 
 ### Define web part properties
 
@@ -789,13 +789,13 @@ At this point the AngularJS application works correctly and is wrapped in a Shar
 
 ### Pass web part properties values to the AngularJS application
 
-At this moment users can configure how the web part should work, but the AngularJS application isn't using these values. In this section, you will extend the AngularJS application to use the configuration values provided by users through the web part property pane. One way to do that is to broadcast an AngularJS event in the **render** method and subscribe to this event in the controller used in the web part.
+At this moment users can configure how the web part should work, but the AngularJS application isn't using these values. In the following sections, you will extend the AngularJS application to use the configuration values provided by users through the web part property pane. One way to do that is to broadcast an AngularJS event in the **render** method and subscribe to this event in the controller used in the web part.
 
-#### Delete AngularJS configuration file
+### Delete AngularJS configuration file
 
 In your project, delete the **./src/webparts/toDo/app/app.config.ts** file. In the following steps you will update the application to get the configuration values from web part properties.
 
-#### Remove reference to configuration
+### Remove reference to configuration
 
 In the **./src/webparts/toDo/app/app.module.ts** file, remove the reference to the AngularJS configuration by changing its contents to:
 
@@ -816,7 +816,7 @@ todoapp
   .service('DataService', DataService);
 ```
 
-#### Update data service to accept configuration value in method parameters
+### Update data service to accept configuration value in method parameters
 
 Originally the data service retrieved its configuration from the constants defined in the **app.config.ts** file. To use the configuration values configured in the web part properties instead, the specific methods must accept parameters.
 
@@ -1005,9 +1005,9 @@ export default class DataService implements IDataService {
 }
 ```
 
-<br/>
 
-#### Broadcast properties change event
+
+### Broadcast properties change event
 
 1. In the **./src/webparts/toDo/ToDoWebPart.ts** file, to the **ToDoWebPart** class, add a new property called `$injector`:
 
@@ -1087,7 +1087,7 @@ export default class DataService implements IDataService {
   }
   ```
 
-#### Subscribe to the properties changed event
+### Subscribe to the properties changed event
 
 1. In the code editor, open the **./src/webparts/toDo/app/HomeController.ts** file. In the **HomeController** class, add the following properties:
 

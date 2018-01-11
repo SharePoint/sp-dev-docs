@@ -76,7 +76,7 @@ import {
   PropertyPaneSlider,
   PropertyPaneToggle,
   PropertyPaneDropdown
-} from '@microsoft/sp-client-preview';
+} from '@microsoft/sp-webpart-base';
 ```
 
 Every field type method is defined as follows, taking **PropertyPaneTextField** as an example:
