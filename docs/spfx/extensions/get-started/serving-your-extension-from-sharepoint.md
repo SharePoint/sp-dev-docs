@@ -8,7 +8,7 @@ ms.prod: sharepoint
 
 # Deploy your extension to SharePoint (Hello World part 3)
 
-This article describes how to deploy your SharePoint Framework Application Customizer to SharePoint and see it working on modern SharePoint pages. This article continues with the Hello World extension built in the previous article [Use page placeholders from Application Customizer (Hello World part 2)](./using-page-placeholder-with-extensions.md).
+This article describes how to deploy your SharePoint Framework Application Customizer to SharePoint and see it working on modern SharePoint pages. 
 
 Be sure you have completed the procedures in the following articles before you begin:
 
@@ -22,30 +22,33 @@ You can also follow these steps by watching the video on the [SharePoint PnP You
 </a>
 
 ## Package the Hello World Application Customizer
-In the console window, go to the extension project directory created in [Build your first SharePoint Framework Extension (Hello World part 1)](./build-a-hello-world-extension.md).
 
-```
-cd app-extension
-```
-If gulp serve is still running, stop it from running by selecting Ctrl+C.
+1. In the console window, go to the extension project directory created in [Build your first SharePoint Framework Extension (Hello World part 1)](./build-a-hello-world-extension.md).
 
-Unlike in **Debug** mode, to use an extension on modern SharePoint server-side pages, you need to deploy and register the extension with SharePoint in `Site collection`, `Site`, or `List` scope. The scope defines where and how the Application Customizer will be active. In this particular scenario, we'll register the Application Customizer by using the `Site collection` scope. 
+  ```
+  cd app-extension
+  ```
 
-Before we package our solution, we want to include the code needed to automate the extension activation within the site whenever the solution is installed on the site. In this case, we'll use feature framework elements to perform these actions directly in the solution package, but you could also associate the application customizer to a SharePoint site by using REST or CSOM as part of the site provisioning, for example.
+2. If gulp serve is still running, stop it from running by selecting Ctrl+C.
 
-1. Install the solution package to the site where it should be installed so that the extension manifest is being white listed for execution.
+  Unlike in **Debug** mode, to use an extension on modern SharePoint server-side pages, you need to deploy and register the extension with SharePoint in `Site collection`, `Site`, or `List` scope. The scope defines where and how the Application Customizer is active. In this particular scenario, we'll register the Application Customizer by using the `Site collection` scope. 
 
-2. Associate the Application Customizer to the planned scope. This can be performed programmatically (CSOM/REST) or by using the feature framework inside of the SharePoint Framework solution package. You'll need to associate the following properties in the `UserCustomAction` object at the site collection, site, or list level.
-    * **ClientSideComponentId:** This is the identifier (GUID) of the Field Customizer, which has been installed in the app catalog. 
-    * **ClientSideComponentProperties:** This is an optional parameter, which can be used to provide properties for the Field Customizer instance.
+  Before we package our solution, we want to include the code needed to automate the extension activation within the site whenever the solution is installed on the site. In this case, we'll use feature framework elements to perform these actions directly in the solution package, but you could also associate the Application Customizer to a SharePoint site by using REST or CSOM as part of the site provisioning, for example.
+
+3. Install the solution package to the site where it should be installed so that the extension manifest is being white listed for execution.
+
+4. Associate the Application Customizer to the planned scope. This can be performed programmatically (CSOM/REST) or by using the feature framework inside of the SharePoint Framework solution package. You need to associate the following properties in the `UserCustomAction` object at the site collection, site, or list level.
+  
+  * **ClientSideComponentId**. This is the identifier (GUID) of the Field Customizer, which has been installed in the App Catalog. 
+  * **ClientSideComponentProperties**. This is an optional parameter, which can be used to provide properties for the Field Customizer instance.
    
-   Note that you can control the requirement to add a solution containing your extension to the site by using the `skipFeatureDeployment` setting in **package-solution.json**. Even though you would not require the solution to be installed on the site, you'd need to associate **ClientSideComponentId** to specific objects for the extension to be visible. 
+  Note that you can control the requirement to add a solution containing your extension to the site by using the `skipFeatureDeployment` setting in **package-solution.json**. Even though you would not require the solution to be installed on the site, you need to associate **ClientSideComponentId** to specific objects for the extension to be visible. 
    
-In the following steps, we'll review the `CustomAction` definition, which was automatically created for the solution as part of the scaffolding for enabling the solution on a site when it's being installed. 
+  In the following steps, we'll review the `CustomAction` definition, which was automatically created for the solution as part of the scaffolding for enabling the solution on a site when it's being installed. 
    
-1. Return to your solution package in Visual Studio Code (or to your preferred editor).
+5. Return to your solution package in Visual Studio Code (or to your preferred editor).
 
-2. Extend the **sharepoint** folder and **assets** subfolder in the root of the solution to see the existing **elements.xml** file. 
+6. Extend the **sharepoint** folder and **assets** subfolder in the root of the solution to see the existing **elements.xml** file. 
 
    ![assets folder in solution structure](../../../images/ext-app-assets-folder.png)
 
@@ -53,13 +56,13 @@ In the following steps, we'll review the `CustomAction` definition, which was au
 
 ### Review the existing elements.xml file for SharePoint definitions
 
-Review the existing xml structure in the **elements.xml** file. Note that the **ClientSideComponentId** property has been automatically updated based on the unique ID of your Application Customizer available in the **HelloWorldApplicationCustomizer.manifest.json** file in the **src\extensions\helloWorld** folder.
+Review the existing XML structure in the **elements.xml** file. Note that the **ClientSideComponentId** property has been automatically updated based on the unique ID of your Application Customizer available in the **HelloWorldApplicationCustomizer.manifest.json** file in the **src\extensions\helloWorld** folder.
 
 **ClientSideComponentProperties** has also been automatically set with the default structure and JSON properties for this extension instance. Note how the JSON is escaped so that we can set it properly within an XML attribute. 
 
 The configuration uses the specific location of `ClientSideExtension.ApplicationCustomizer` to define that this is an Application Customizer. Because this **elements.xml** is associated to a *Web* scoped feature by default, this `CustomAction` is automatically added to the `Web.UserCustomAction` collection in the site where the solution is being installed.
 
-To ensure that the configuration matches updates performed in the Application Customizer, update the **ClientSideComponentProperties** as in the following xml structure. Note that you should not copy the whole structure because it would cause a mismatch with your **ClientSideComponentId**.
+To ensure that the configuration matches updates performed in the Application Customizer, update the **ClientSideComponentProperties** as in the following XML structure. Note that you should not copy the whole structure because it would cause a mismatch with your **ClientSideComponentId**.
 
 
 ```xml
@@ -81,10 +84,9 @@ To ensure that the configuration matches updates performed in the Application Cu
 
 ### Ensure that definitions are taken into account within the build pipeline
 
-Open **package-solution.json** from the **config** folder. The **package-solution.json** file defines the package metadata as shown in the following code:
+Open **package-solution.json** from the **config** folder. The **package-solution.json** file defines the package metadata as shown in the following code. To ensure that the **element.xml** file is taken into account while the solution is being packaged, default scaffolding adds needed configuration to define a feature framework feature definition for the solution package.
 
 ```json
-
 {
   "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
   "solution": {
@@ -115,8 +117,6 @@ Open **package-solution.json** from the **config** folder. The **package-solutio
 
 <br/>
 
-To ensure that the **element.xml** file is taken into account while the solution is being packaged, default scaffolding adds needed configuration to define a feature framework feature definition for the solution package.
-
 ## Deploy the extension to SharePoint Online and host JavaScript from local host
 
 Now you are ready to deploy the solution to a SharePoint site and have the `CustomAction` automatically associated on the site level.
@@ -133,7 +133,7 @@ Now you are ready to deploy the solution to a SharePoint site and have the `Cust
    gulp package-solution
    ```
 
-   The command will create the package in the **sharepoint/solution** folder:
+   The command creates the package in the **sharepoint/solution** folder:
 
    ```
    app-extension.sppkg
@@ -147,7 +147,7 @@ Now you are ready to deploy the solution to a SharePoint site and have the `Cust
    
 5. Select the **Deploy** button.
 
-   ![Trust operation in app catalog upload](../../../images/ext-app-sppkg-deploy-trust.png)
+   ![Trust operation in App Catalog upload](../../../images/ext-app-sppkg-deploy-trust.png)
 
 6. Move back to your console and ensure that the solution is running. If it's not running, execute the following command in the solution folder:
    
@@ -163,15 +163,17 @@ Now you are ready to deploy the solution to a SharePoint site and have the `Cust
 
    ![installing field customizer to site](../../../images/ext-app-install-solution-to-site.png)
 
-10. Select the **app-extension-client-side-solution** app to install the solution on the site. When the installation is completed, refresh the page by selecting **F5**.
+10. Select the **app-extension-client-side-solution** app to install the solution on the site. When the installation is completed, refresh the page by selecting F5.
 
-When the application has been successfully installed, you can see the header and footer being rendered just like with the debug query parameters.
+  When the application has been successfully installed, you can see the header and footer being rendered just like with the debug query parameters.
 
-![Custom header and footer elements rendered in the page](../../../images/ext-app-header-footer-visible.png)
+  ![Custom header and footer elements rendered in the page](../../../images/ext-app-header-footer-visible.png)
 
 ## Next steps
 
-Congratulations, you have deployed an extension to a modern SharePoint page from the app catalog! You can continue building out your Hello World extension in the next topic, [Host extension from Office 365 CDN (Hello World part 4)](./hosting-extension-from-office365-cdn.md), where you will learn how to deploy and load the extension assets from a CDN instead of from localhost.
+Congratulations, you have deployed an extension to a modern SharePoint page from the App Catalog! 
+
+You can continue building out your Hello World extension in the next topic, [Host extension from Office 365 CDN (Hello World part 4)](./hosting-extension-from-office365-cdn.md), where you learn how to deploy and load the extension assets from a CDN instead of from localhost.
 
 > [!NOTE]
 > If you find an issue in the documentation or in the SharePoint Framework, report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input in advance.

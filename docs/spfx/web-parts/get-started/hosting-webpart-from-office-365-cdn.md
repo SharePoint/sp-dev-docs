@@ -58,7 +58,7 @@ You can also follow these steps by watching this video on the [SharePoint PnP Yo
   Set-SPOTenantCdnEnabled -CdnType Public
   ```
 
-5. Confirm settings by selecting `Y` and then **Enter**.
+5. Confirm settings by selecting `Y` and then Enter.
 
   ![Enable public CDN in tenant](../../../images/cdn-enable-o365-public-cdn.png)
 

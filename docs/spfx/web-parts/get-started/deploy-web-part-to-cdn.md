@@ -89,17 +89,17 @@ Note, however, that you have not yet deployed the files.
     
 4. When prompted:
 
-  * Accept the default **azurehosted-webpart** as your solution name, and select **Enter**.
-  * Select **SharePoint Online only (latest)**, and select **Enter**.
+  * Accept the default **azurehosted-webpart** as your solution name, and select Enter.
+  * Select **SharePoint Online only (latest)**, and select Enter.
   * Select **Use the current folder** for where to place the files.
   * Select **y** to use the tenant-scoped deployment option, which makes the web part available across sites immediately when it's deployed. 
   * Select **WebPart** as the client-side component type to be created. 
 
 5. The next set of prompts ask for specific information about your web part:
 
-  * Use **AzureCDN** for your web part name, and select **Enter**.
-  * Accept the default **AzureCDN description** as your web part description, and select **Enter**.
-  * Accept the default **No javascript web framework** as the framework you would like to use, and select **Enter**.
+  * Use **AzureCDN** for your web part name, and select Enter.
+  * Accept the default **AzureCDN description** as your web part description, and select Enter.
+  * Accept the default **No javascript web framework** as the framework you would like to use, and select Enter.
 
   ![Yeoman generator questions around the newly created web part](../../../images/cdn-azure-create-webpart-yo.png)
 

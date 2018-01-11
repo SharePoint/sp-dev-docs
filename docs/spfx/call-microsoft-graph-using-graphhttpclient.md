@@ -36,7 +36,7 @@ You can use the **get()** method to make a REST call to Microsoft Graph. This ex
   * Select **Web Part** as the type of client-side component to create.
   * Enter **HelloGraph** as your web part name.
   * Enter **Calls the Microsoft Graph Groups API** as the web part description.
-  * Accept the default **No javascript web framework** as the framework, and choose **Enter**.
+  * Accept the default **No javascript web framework** as the framework, and choose Enter.
 
   ![GraphHttpClient values to enter at command line](../images/graphhttpclient-web-part-create.jpg)
 

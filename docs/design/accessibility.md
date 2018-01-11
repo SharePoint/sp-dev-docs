@@ -84,7 +84,7 @@ Use the space bar to select or deselect the item currently in focus in a control
 
 ### Run a control
 
-Select **Enter** or the return key to run a control.
+Select Enter or the return key to run a control.
 
 *Figure 4. Selecting Enter to run a control*
 

@@ -44,17 +44,17 @@ You can also follow these steps by watching this video on the [SharePoint PnP Yo
 
 4. When prompted:
 
-  * Accept the default **asset-deployment-webpart** as your solution name, and then select **Enter**.
-  * Select **SharePoint Online only (latest)**, and then select **Enter**.
+  * Accept the default **asset-deployment-webpart** as your solution name, and then select Enter.
+  * Select **SharePoint Online only (latest)**, and then select Enter.
   * Select **Use the current folder** as the location for the files.
   * Select **N** to require the extension to be installed on each site explicitly when it's being used. 
   * Select **WebPart** as the client-side component type to be created. 
 
 5. The next set of prompts ask for specific information about your web part:
 
-  * Enter **AssetDeployment** for the web part name, and then select **Enter**.
-  * Enter **AssetDeployment Web Part** as the description of the web part, and then select **Enter**. 
-  * Accept the default **No JavaScipt web framework** option for the framework, and then select **Enter** to continue.
+  * Enter **AssetDeployment** for the web part name, and then select Enter.
+  * Enter **AssetDeployment Web Part** as the description of the web part, and then select Enter. 
+  * Accept the default **No JavaScipt web framework** option for the framework, and then select Enter to continue.
 
   ![Yeoman prompts](../../../images/asset-deployment-yeoman.png)
 
@@ -311,7 +311,7 @@ Now you are ready to deploy the solution to SharePoint. Because we are provision
 
 7. Select the gears icon on the top nav bar on the right, and then select **Add an app** to go to your Apps page.
 
-8. In the **Search** box, enter **deployment**, and then select **Enter** to filter your apps.
+8. In the **Search** box, enter **deployment**, and then select Enter to filter your apps.
 
   ![Search for the app in the site](../../../images/tutorial-feature-solution-add-app.png)
 

@@ -103,7 +103,7 @@ Next, you need to deploy the package that was generated to the App Catalog.
 
 2. Select the gears icon on the top nav bar on the right, and then select **Add an app** to go to your Apps page.
 
-3. In the **Search** box, enter **helloworld**, and select **Enter** to filter your apps.
+3. In the **Search** box, enter **helloworld**, and select Enter to filter your apps.
 	
   ![Add app to site](../../../images/install-app-your-site.png)
 	

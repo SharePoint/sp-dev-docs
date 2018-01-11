@@ -43,17 +43,17 @@ You can also follow these steps by watching this video on the [SharePoint PnP Yo
     
 4. When prompted:
 
-  * Accept the default **documentcardexample-webpart** as your solution name, and select **Enter**.
-  * Select **SharePoint Online only (latest)**, and select **Enter**.
+  * Accept the default **documentcardexample-webpart** as your solution name, and select Enter.
+  * Select **SharePoint Online only (latest)**, and select Enter.
   * Select **Use the current folder** for where to place the files.
   * Select **N** to require the extension to be installed on each site explicitly when it's being used. 
   * Select **WebPart** as the client-side component type to be created. 
 
 5. The next set of prompts ask for specific information about your web part:
 
-  * Use **DocumentCardExample** for your web part name, and select **Enter**.
-  * Accept the default **DocumentCardExample description**, and select **Enter**.
-  * Select **React** as the framework, and select **Enter**.
+  * Use **DocumentCardExample** for your web part name, and select Enter.
+  * Accept the default **DocumentCardExample description**, and select Enter.
+  * Select **React** as the framework, and select Enter.
 
   At this point, Yeoman installs the required dependencies and scaffolds the solution files. This might take a few minutes. Yeoman scaffolds the project to include your DocumentCardExample web part as well.
 
