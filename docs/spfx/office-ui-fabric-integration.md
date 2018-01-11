@@ -113,7 +113,8 @@ Since the sp-office-ui-fabric-core package is already installed in your solution
 npm uninstall @microsoft/sp-office-ui-fabric-core --save-dev
 ```
 
-Then you can import the core styles from the SASS declarations available in the Fabric React packge.
+Then you can import the core styles from the SASS declarations available in the Fabric React package
+.
 
 ```css
 @import '~office-ui-fabric-react/dist/sass/References.scss';
