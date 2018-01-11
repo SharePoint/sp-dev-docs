@@ -1,6 +1,6 @@
 ---
 title: Migrating JSLink customizations to SharePoint Framework Field Customizers
-description: 
+description: Benefits of migrating, along with similarities and differences between the platforms.
 ms.date: 01/11/2018
 ms.prod: sharepoint
 ---
@@ -27,7 +27,7 @@ One of the main benefits of migrating old-school JSLink customizations to the Sh
 
 ### Easier access to information in SharePoint and Office 365
 
-Another fundamental topic to consider is that in the old-school JSLink customizations it was not easy to consume SharePoint content and data. The only way of doing that was by using JSOM (the JavaScript client-side object model of SharePoint) or low-level REST APIs. Moreover, it was almost close to impossible to consume the full set of services of Office 365 unless you autonomously leveraged ADAL.JS (Azure Active Directory Authentication Library for JavaScript) and custom JavaScript code.
+Another fundamental topic to consider is that in the old-school JSLink customizations it was not easy to consume SharePoint content and data. The only way of doing that was by using JSOM (the JavaScript client-side object model of SharePoint) or low-level REST APIs. Moreover, it was almost impossible to consume the full set of services of Office 365 unless you autonomously leveraged ADAL.JS (Azure Active Directory Authentication Library for JavaScript) and custom JavaScript code.
 
 Now, with the SharePoint Framework and the SharePoint Framework Extensions, it is easy and straightforward to consume both the SharePoint REST API and Microsoft Graph. You can now create more powerful solutions, which can consume and interact with the full ecosystem of services provided by Microsoft Office 365.
 
@@ -41,7 +41,7 @@ Both SharePoint Framework Extensions and user custom actions or the Edit Control
 
 ### Run as a part of the page
 
-Similarly, to user custom actions and ECB of SharePoint Feature Framework, SharePoint Framework Extensions are a part of the page. This gives these solutions access to the page's DOM and allows them to communicate with other components on the same page. Also, it allows developers to more easily make their solutions responsive to adapt to the different form factors on which a SharePoint page could be displayed, including the SharePoint mobile app.
+Similar to user custom actions and ECB of SharePoint Feature Framework, SharePoint Framework Extensions are a part of the page. This gives these solutions access to the page's DOM and allows them to communicate with other components on the same page. Also, it allows developers to more easily make their solutions responsive to adapt to the different form factors on which a SharePoint page could be displayed, including the SharePoint mobile app.
 
 Because SharePoint Framework Extensions run as part of the page, whatever resources the customization has access to, other elements on the page can access as well. This is important to keep in mind when building solutions that rely on OAuth implicit flow with bearer access tokens or use cookies or browser storage for storing sensitive information. Because SharePoint Framework Extensions run as a part of the page, other elements on that page can access all these resources as well.
 

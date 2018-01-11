@@ -506,3 +506,7 @@ You can now install the solution on any target "modern" site.
 ![The Field Customizer in action](../../../images/spfx-custom-field-extension-final-output.png)
 
 Enjoy your new Field Customizer built using the SharePoint Framework extensions!
+
+## See also
+
+- [Overview of SharePoint Framework Extensions](../overview-extensions.md)
