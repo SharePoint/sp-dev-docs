@@ -117,3 +117,7 @@ Congratulations, you have enabled a public CDN in your Office 365 tenant and tak
 
 > [!NOTE]
 > If you find an issue in the documentation or in the SharePoint Framework, report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input in advance.
+
+## See also
+
+- [Overview of SharePoint Framework Extensions](../overview-extensions.md)

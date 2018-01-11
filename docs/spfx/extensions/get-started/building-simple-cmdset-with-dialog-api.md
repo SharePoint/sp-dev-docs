@@ -383,3 +383,7 @@ Now you are ready to deploy the solution to a SharePoint site and have the `Cust
 
 > [!NOTE]
 > If you find an issue in the documentation or in the SharePoint Framework, report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input in advance.
+
+## See also
+
+- [Overview of SharePoint Framework Extensions](../overview-extensions.md)

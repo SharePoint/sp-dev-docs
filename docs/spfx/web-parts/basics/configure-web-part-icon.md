@@ -167,7 +167,7 @@ A number of services are available online that you can use to base64-encode your
 
 <br/>
 
-Base64 encoding works both for bitmap images such as PNG as well as vector SVG images. The big benefit of using base64-encoded images is that you don't need to deploy the web part icon image separately.
+Base64 encoding works for both bitmap images, such as PNG, as well as vector SVG images. The big benefit of using base64-encoded images is that you don't need to deploy the web part icon image separately.
 
 ![Base64-encoded image displayed as web part icon in the toolbox](../../../images/webparticon_toolbox_base64.png)
 
