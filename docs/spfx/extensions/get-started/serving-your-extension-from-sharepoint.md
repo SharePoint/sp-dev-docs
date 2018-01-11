@@ -1,3 +1,10 @@
+---
+title: 
+description: 
+ms.date: 01/11/2018
+ms.prod: sharepoint
+---
+
 
 # Deploy your extension to SharePoint (Hello World part 3)
 
@@ -167,4 +174,4 @@ When the application has been successfully installed, you can see the header and
 Congratulations, you have deployed an extension to a modern SharePoint page from the app catalog! You can continue building out your Hello World extension in the next topic, [Host extension from Office 365 CDN (Hello World part 4)](./hosting-extension-from-office365-cdn.md), where you will learn how to deploy and load the extension assets from a CDN instead of from localhost.
 
 > [!NOTE]
-> If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering using the [issue list at sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input advance.
+> If you find an issue in the documentation or in the SharePoint Framework, report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input in advance.

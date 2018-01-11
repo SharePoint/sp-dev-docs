@@ -1,6 +1,7 @@
 ---
 title: Migrating JSLink customizations to SharePoint Framework Field Customizers
-ms.date: 12/19/2017
+description: 
+ms.date: 01/11/2018
 ms.prod: sharepoint
 ---
 
