@@ -103,8 +103,6 @@
         href: spfx/extensions/guidance/migrate-from-jslink-to-spfx-extensions.md
       - name: JavaScript embedding (UserCustomAction) tutorial
         href: spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions.md          
-  - name: Debugging
-    href: spfx/debug-in-vscode.md
   - name: Concepts
     items:
     - name: Guidance
@@ -200,8 +198,10 @@
       href: spfx/tools-and-libraries.md
     - name: Toolchain
       href: spfx/toolchain/sharepoint-framework-toolchain.md
-    - name: SharePoint Framework Yeoman generator
+    - name: Yeoman generator
       href: spfx/toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md
+  - name: Debugging
+    href: spfx/debug-in-vscode.md
   - name: Roadmap
     href: spfx/roadmap.md
   - name: Known issues and FAQ
