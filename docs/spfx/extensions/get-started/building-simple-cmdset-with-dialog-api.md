@@ -1,3 +1,10 @@
+---
+title: 
+description: 
+ms.date: 01/11/2018
+ms.prod: sharepoint
+---
+
 # Build your first ListView Command Set Extension
 
 Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online, and you can use modern JavaScript tools and libraries to build them.
@@ -377,4 +384,4 @@ Now you are ready to deploy the solution to a SharePoint site and to have the `C
     ![Additional buttons visible on the toolbar](../../../images/ext-com-dialog-visible-deployment.png)
 
 > [!NOTE]
-> If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering using the [issue list at sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input advance.
+> If you find an issue in the documentation or in the SharePoint Framework, report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input in advance.

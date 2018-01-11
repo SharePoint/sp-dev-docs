@@ -1,3 +1,10 @@
+---
+title: 
+description: 
+ms.date: 01/11/2018
+ms.prod: sharepoint
+---
+
 # Build your first Field Customizer Extension
 
 Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online, and you can use modern JavaScript tools and libraries to build them.
@@ -404,4 +411,4 @@ In this case, we continued to host the JavaScript from the localhost, but you co
 The process for publishing your app is identical among the different extension types. You can use the following publishing steps to update the assets to be hosted from a CDN: [Host extension from Office 365 CDN](./hosting-extension-from-office365-cdn.md).
 
 > [!NOTE]
-> If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering using the [issue list at sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input advance.
+> If you find an issue in the documentation or in the SharePoint Framework, report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input in advance.

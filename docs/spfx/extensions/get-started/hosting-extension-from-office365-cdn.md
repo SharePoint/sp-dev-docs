@@ -1,3 +1,10 @@
+---
+title: 
+description: 
+ms.date: 01/11/2018
+ms.prod: sharepoint
+---
+
 # Host extension from Office 365 CDN (Hello World part 4)
 
 This article describes how to deploy your SharePoint Framework Application Customizer to be hosted from an Office 365 CDN and how to deploy that to SharePoint for end users. This article continues with the Hello World extension built in the previous article [Deploy your extension to SharePoint (Hello World part 3)](./serving-your-extension-from-sharepoint.md), where we were still hosting the customizer from localhost.
@@ -108,4 +115,4 @@ When the origin is listed without the `(configuration pending)` text, it is read
 Congratulations, you have enabled a public CDN in your Office 365 tenant and taken advantage of it from your solution!
 
 > [!NOTE]
-> If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering using the [issue list at sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input advance.
+> If you find an issue in the documentation or in the SharePoint Framework, report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input in advance.

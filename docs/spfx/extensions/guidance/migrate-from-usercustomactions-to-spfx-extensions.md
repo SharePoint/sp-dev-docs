@@ -1,6 +1,7 @@
 ---
 title: Tutorial - Migrating from UserCustomAction to SharePoint Framework Extensions
-ms.date: 12/19/2017
+description: 
+ms.date: 01/11/2018
 ms.prod: sharepoint
 ---
 
