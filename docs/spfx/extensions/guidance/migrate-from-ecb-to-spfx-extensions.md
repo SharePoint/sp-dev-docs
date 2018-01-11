@@ -13,9 +13,9 @@ During the last few years, most of the enterprise solutions built on top of Offi
 <a name="spfxExtensions"> </a>
 First of all, let's introduce the available options when developing SharePoint Framework Extensions:
 
-* **Application Customizer**: extend the native "modern" UI of SharePoint Online by adding custom HTML elements and client-side code to pre-defined placeholders of "modern" pages. At the time of this writing, the available placeholders are the header and the footer of every "modern" page.
-* **Command Set**: allow to add custom ECB menu items or custom buttons to the command bar of a list view for a list or a library. You can associate any JavaScript (TypeScript) action to these commands.
-* **Field Customizer**: customize the rendering of a field in a list view using custom HTML elements and client-side code.
+* **Application Customizer**. Extend the native "modern" UI of SharePoint Online by adding custom HTML elements and client-side code to pre-defined placeholders of "modern" pages. At the time of this writing, the available placeholders are the header and the footer of every "modern" page.
+* **Command Set**. Add custom ECB menu items or custom buttons to the command bar of a list view for a list or a library. You can associate any JavaScript (TypeScript) action to these commands.
+* **Field Customizer**. Customize the rendering of a field in a list view by using custom HTML elements and client-side code.
 
 As you can argue from the above descriptions, the most useful one in our context is the "Command Set" extension.
 

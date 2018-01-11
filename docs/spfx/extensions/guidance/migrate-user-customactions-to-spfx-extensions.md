@@ -1,23 +1,21 @@
 ---
-title: Migrating User CustomAction / ECB menu items to SharePoint Framework Extensions
+title: Migrating user custom actions and ECB menu items to SharePoint Framework Extensions
 description: 
 ms.date: 01/11/2018
 ms.prod: sharepoint
 ---
 
-# Migrating User CustomAction / ECB menu items to SharePoint Framework Extensions
+# Migrating user custom actions and ECB menu items to SharePoint Framework Extensions
 
-SharePoint Framework is a new model for building SharePoint customizations. If you customized SharePoint with user custom actions and custom ECB (Edit Control Block) menu items using the SharePoint Feature Framework, you might be wondering what are the possible advantages of migrating them to the new SharePoint Framework.
+SharePoint Framework is a new model for building SharePoint customizations. If you customized SharePoint with user custom actions and custom Edit Control Block (ECB) menu items by using the SharePoint Feature Framework, you might be wondering what the possible advantages of migrating them to the new SharePoint Framework are.
 
-First of all, let's introduce the available options when developing SharePoint Framework Extensions:
+First, let's introduce the available options when developing SharePoint Framework Extensions:
 
-* **Application Customizer**: extend the native "modern" UI of SharePoint Online by adding custom HTML elements and client-side code to pre-defined placeholders of "modern" pages. At the time of this writing, the available placeholders are the header and the footer of every "modern" page.
-* **Command Set**: allow to add custom ECB menu items or custom buttons to the command bar of a list view for a list or a library. You can associate any JavaScript (TypeScript) action to these commands.
-* **Field Customizer**: customize the rendering of a field in a list view using custom HTML elements and client-side code.
+* **Application Customizer**. Extend the native "modern" UI of SharePoint Online by adding custom HTML elements and client-side code to pre-defined placeholders of "modern" pages. At the time of this writing, the available placeholders are the header and the footer of every "modern" page.
+* **Command Set**. Add custom ECB menu items or custom buttons to the command bar of a list view for a list or a library. You can associate any JavaScript (TypeScript) action to these commands.
+* **Field Customizer**. Customize the rendering of a field in a list view by using custom HTML elements and client-side code.
 
-Depending on what is the target of your customization, you can leverage any of the above flavors.
-For example, the **Application Customizers** are a great replacement for the user custom actions.
-Moreover, the **Command Sets** are an appropriate replacement for the ECB menu items.
+Depending on the target of your customization, you can leverage any of the above flavors. For example, the **Application Customizers** are a great replacement for the user custom actions. Moreover, the **Command Sets** are an appropriate replacement for the ECB menu items.
 
 ## Benefit of migrating existing SharePoint Feature Framework customizations to the SharePoint Framework
 
