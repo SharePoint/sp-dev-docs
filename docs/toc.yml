@@ -154,44 +154,44 @@
         href: spfx/sharepoint-2016-support.md
       - name: Provision SharePoint assets
         href: spfx/toolchain/provision-sharepoint-assets.md
-    - name: Design guidance
-      href: design/design-guidance-overview.md
-      items:
-      - name: Authoring pages
-        href: design/authoring-pages.md
-      - name: Design a web part
-        href: design/design-a-web-part.md
-        items:
-        - name: Reactive and nonreactive web parts
-          href: design/reactive-and-nonreactive-web-parts.md
-        - name: Responsive design
-          href: design/grid-and-responsive-design.md
-        - name: Titles and descriptions
-          href: design/web-part-titles-and-descriptions.md
-        - name: UI text
-          href: design/ui-text-for-web-parts.md
-        - name: Themes and colors
-          href: design/themes-colors.md
-        - name: Placeholders and fallbacks
-          href: design/placeholders-and-fallbacks.md
-        - name: Accessibility
-          href: design/accessibility.md
-        - name: Web part showcase
-          href: design/showcase-web-part.md
-      - name: Design considerations
-        href: spfx/web-parts/basics/design-considerations-for-web-parts.md
-      - name: Custom dialogs
-        href: spfx/extensions/guidance/using-custom-dialogs-with-spfx.md
-      - name: Work with CSS
-        href: spfx/css-recommendations.md
-      - name: Use themes
-        href: spfx/use-theme-colors-in-your-customizations.md
-      - name: Office UI Fabric integration
-        href: spfx/office-ui-fabric-integration.md
     - name: Localization
       href: spfx/web-parts/guidance/localize-web-parts.md
     - name: Tenant properties
-      href: spfx/tenant-properties.md
+      href: spfx/tenant-properties.md        
+  - name: Design
+    href: design/design-guidance-overview.md
+    items:
+    - name: Design a web part
+      href: design/design-a-web-part.md
+      items:
+      - name: Reactive and nonreactive web parts
+        href: design/reactive-and-nonreactive-web-parts.md
+      - name: Responsive design
+        href: design/grid-and-responsive-design.md
+      - name: Titles and descriptions
+        href: design/web-part-titles-and-descriptions.md
+      - name: UI text
+        href: design/ui-text-for-web-parts.md
+      - name: Themes and colors
+        href: design/themes-colors.md
+      - name: Placeholders and fallbacks
+        href: design/placeholders-and-fallbacks.md
+      - name: Accessibility
+        href: design/accessibility.md
+      - name: Web part showcase
+          href: design/showcase-web-part.md
+    - name: Authoring pages
+      href: design/authoring-pages.md          
+    - name: Design considerations
+      href: spfx/web-parts/basics/design-considerations-for-web-parts.md
+    - name: Custom dialogs
+      href: spfx/extensions/guidance/using-custom-dialogs-with-spfx.md
+    - name: Work with CSS
+      href: spfx/css-recommendations.md
+    - name: Use themes
+      href: spfx/use-theme-colors-in-your-customizations.md
+    - name: Office UI Fabric integration
+        href: spfx/office-ui-fabric-integration.md
   - name: Framework architecture
     items:
     - name: Tools and libraries
