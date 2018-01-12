@@ -1,7 +1,7 @@
 ---
 title: Scoping access to SharePoint site designs
 description: Set scope on SharePoint site designs to control who can view and access them.
-ms.date: 12/14/2017
+ms.date: 01/08/2018
 ---
 
 # Scoping access to site designs

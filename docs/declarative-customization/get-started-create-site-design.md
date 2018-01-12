@@ -1,7 +1,7 @@
 ---
 title: Get started creating SharePoint site designs and site scripts
 description: Get started creating SharePoint site designs and site scripts for users to create their own sites from.
-ms.date: 12/14/2017
+ms.date: 01/08/2018
 ---
 
 # Get started creating site designs and site scripts

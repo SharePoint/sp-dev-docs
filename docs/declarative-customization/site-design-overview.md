@@ -1,7 +1,7 @@
 ---
 title: SharePoint site design and site script overview
 description: Use SharePoint site scripts and site designs to automate provisioning new SharePoint sites with custom configurations.
-ms.date: 12/14/2017
+ms.date: 01/08/2018
 ---
 
 # SharePoint site design and site script overview
