@@ -1,15 +1,15 @@
 ---
-title: 
-description: 
+title: Build your first ListView Command Set extension
+description: Create an extension project, and then code and debug your extension by using SharePoint Framework (SPFx) Extensions.
 ms.date: 01/11/2018
 ms.prod: sharepoint
 ---
 
-# Build your first ListView Command Set Extension
+# Build your first ListView Command Set extension
 
 Extensions are client-side components that run inside the context of a SharePoint page. Extensions can be deployed to SharePoint Online, and you can use modern JavaScript tools and libraries to build them.
 
-This article describes how to create your first ListView Command Set Extension. You can follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=iW0LQQqAY0Y&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV). 
+You can follow these steps by watching the video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=iW0LQQqAY0Y&list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV). 
 
 <a href="https://www.youtube.com/watch?v=JBhgdSgWgdM">
 <img src="../../../images/spfx-ext-youtube-tutorialcommand.png" alt="Screenshot of the YouTube video player for this tutorial" />
@@ -59,7 +59,7 @@ This article describes how to create your first ListView Command Set Extension. 
 
     For information about troubleshooting any errors, see [Known issues](../../known-issues-and-common-questions.md).
 
-6. Once the scaffolding completes, lock down the version of the project dependencies by running the following command:
+6. After the scaffolding completes, lock down the version of the project dependencies by running the following command:
 
     ```sh
     npm shrinkwrap
@@ -80,9 +80,9 @@ This article describes how to create your first ListView Command Set Extension. 
 
 8. Open **HelloWorldCommandSet.manifest.json** in the **src\extensions\helloWorld** folder.
 
-    This file defines your extension type and a unique identifier `id` for your extension. You’ll need this unique identifier later when debugging and deploying your extension to SharePoint.
+    This file defines your extension type and a unique identifier `id` for your extension. You need this unique identifier later when debugging and deploying your extension to SharePoint.
 
-    Note the actual command definitions in the manifest file. These are the actual buttons that are exposed based on the registration target. In the default template, you'll find two different buttons: **Command One** and **Command Two**.
+    Note the actual command definitions in the manifest file. These are the actual buttons that are exposed based on the registration target. In the default template, you find two different buttons: **Command One** and **Command Two**.
 
     ![ListView Command Set manifest json content](../../../images/ext-com-vscode-manifest.png)
 
@@ -110,7 +110,7 @@ The behavior for your custom buttons is contained in the **onListViewUpdated()**
 
 The **onListViewUpdated()** event occurs separately for each command (for example, a menu item) whenever a change happens in the ListView, and the UI needs to be re-rendered. The `event` function parameter represents information about the command being rendered. The handler can use this information to customize the title or adjust the visibility, for example, if a command should only be shown when a certain number of items are selected in the list view. This is the default implementation.
 
-When using the method `tryGetCommand`, you’ll get a Command object, which is a representation of the command that shows in the UI. You can modify its values, such as `title`, or `visible`, to modify the UI element. SPFx uses this information when re-rendering the commands. These objects keep the state from the last render, so if a command is set to `visible = false`, it will remain invisible until it is set back to `visible = true`.
+When using the method `tryGetCommand`, you get a Command object, which is a representation of the command that shows in the UI. You can modify its values, such as `title`, or `visible`, to modify the UI element. SPFx uses this information when re-rendering the commands. These objects keep the state from the last render, so if a command is set to `visible = false`, it remains invisible until it is set back to `visible = true`.
 
 ```ts
   @override
@@ -143,9 +143,9 @@ The **OnExecute()** method defines what happens when a command is executed (for 
 ```
 
 
-## Debug your ListView Command Set using gulp serve and query string parameters
+## Debug your ListView Command Set
 
-You cannot currently use the local workbench to test SharePoint Framework Extensions. You'll need to test and develop them directly against a live SharePoint Online site. You don't have to deploy your customization to the App Catalog to do this, which makes the debugging experience simple and efficient. 
+You cannot currently use the local Workbench to test SharePoint Framework Extensions. You'll need to test and develop them directly against a live SharePoint Online site. You don't have to deploy your customization to the App Catalog to do this, which makes the debugging experience simple and efficient. 
 
 1. Compile your code and host the compiled files from the local machine by running this command:
 
@@ -153,15 +153,15 @@ You cannot currently use the local workbench to test SharePoint Framework Extens
     gulp serve --nobrowser
     ```
 
-    You use the `--nobrowser` option because you don't need to launch the local workbench, since you can't debug extensions locally.
+    You use the `--nobrowser` option because you don't need to launch the local Workbench, since you can't debug extensions locally.
 
-    When the code compiles without errors, it will serve the resulting manifest from https://localhost:4321.
+    When the code compiles without errors, it serves the resulting manifest from https://localhost:4321.
 
 2. Go to any SharePoint list in your SharePoint Online site by using the modern experience.
     
     Because our ListView Command Set is hosted from localhost and is running, we can use specific debug query parameters to execute the code in the list view.
     
-3. Append the following query string parameters to the URL. Notice that you will need to update the GUID to match the ID of your ListView Command Set Extension available in the **HelloWorldCommandSet.manifest.json** file. For more information, see [More details about the URL query parameters](#more-details-about-the-url-query-parameters).
+3. Append the following query string parameters to the URL. Notice that you need to update the GUID to match the ID of your ListView Command Set Extension available in the **HelloWorldCommandSet.manifest.json** file. For more information, see [More details about the URL query parameters](#more-details-about-the-url-query-parameters).
     
     ```
     ?loadSpfx=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"a8047e2f-30d5-40fc-b880-b2890c7c16d6":{"location":"ClientSideExtension.ListViewCommandSet.CommandBar","properties":{"sampleTextOne":"One item is selected in the list.","sampleTextTwo":"This command is always visible."}}}
@@ -197,9 +197,9 @@ You cannot currently use the local workbench to test SharePoint Framework Extens
 - **customActions** simulates a custom action. You can set many properties on this `CustomAction` object that affect the look, feel, and location of your button; we’ll cover them all later.
     - **Key**: GUID of the extension.
     - **Location**: Where the commands are displayed. The possible values are:
-        - **ClientSideExtension.ListViewCommandSet.ContextMenu:**  The context menu of the item(s)
-        - **ClientSideExtension.ListViewCommandSet.CommandBar:** The top command set menu in a list or library
-        - **ClientSideExtension.ListViewCommandSet:** Both the context menu and the command bar (Corresponds to SPUserCustomAction.Location="CommandUI.Ribbon")
+        - **ClientSideExtension.ListViewCommandSet.ContextMenu**:  The context menu of the item(s).
+        - **ClientSideExtension.ListViewCommandSet.CommandBar**: The top command set menu in a list or library.
+        - **ClientSideExtension.ListViewCommandSet**: Both the context menu and the command bar (corresponds to SPUserCustomAction.Location="CommandUI.Ribbon").
     - **Properties**: An optional JSON object containing properties that are available via the `this.properties` member.
 
 <br/>
@@ -208,7 +208,7 @@ You cannot currently use the local workbench to test SharePoint Framework Extens
 
 The default solution takes advantage of a new Dialog API, which can be used to show modal dialogs easily from your code. In the following steps, we'll slightly modify the default experience to demonstrate Dialog API use cases.
 
-1. Return to the console and execute the following command to include the Dialog API in our solution.
+1. Return to the console, and execute the following command to include the Dialog API in our solution.
 
 2. Return to Visual Studio Code (or your preferred editor).
 
@@ -246,11 +246,11 @@ The default solution takes advantage of a new Dialog API, which can be used to s
 
 8. Accept the loading of debug manifests by selecting **Load debug scripts** when prompted.
 
-    ![Accept loading debugripts](../../../images/ext-com-accept-debug-scripts.png)
+    ![Accept loading debug scripts](../../../images/ext-com-accept-debug-scripts.png)
 
     We still have the same buttons in the toolbar, but you'll notice they behave differently if you select them one-by-one. Now we are using the new Dialog API, which can be easily used with your solutions, even for complex scenarios. 
 
-    ![Accept loading debugripts](../../../images/ext-com-show-adv-dialog-input.png)
+    ![Accept loading debug scripts OK button](../../../images/ext-com-show-adv-dialog-input.png)
 
 
 ## Add a ListView Command Set to a solution package for deployment
@@ -267,7 +267,7 @@ Open the **elements.xml** file inside the **sharepoint\assets** folder.
 
 Note the following XML structure in **elements.xml**. The **ClientSideComponentId** property has been automatically updated to the unique ID of your ListView Command Set available in the **HelloWorldCommandSet.manifest.json** file in the **src\extensions\helloWorld** folder.
 
-Notice that we use a specific location value of `ClientSideExtension.ListViewCommandSet.CommandBar` to define that this is a ListView Command Set and it should be displayed in the command bar. We also define the `RegistrationId` as **100** and the `RegistrationType` as **List** to associate this custom action automatically with generic lists. `ClientSideComponentProperties` can be used to provide instance specific configurations. In this case we are using default properties called *sampleTextOne* and *sampleTextTwo*.
+Notice that we use a specific location value of `ClientSideExtension.ListViewCommandSet.CommandBar` to define that this is a ListView Command Set and it should be displayed in the command bar. We also define the `RegistrationId` as **100** and the `RegistrationType` as **List** to associate this custom action automatically with generic lists. `ClientSideComponentProperties` can be used to provide instance specific configurations. In this case, we are using default properties called *sampleTextOne* and *sampleTextTwo*.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -294,7 +294,7 @@ Possible location values that can be used with a ListView Command Set:
 
 ### Ensure that definitions are taken into account within the build pipeline
 
-Open **package-solution.json** from the **config** folder. The **package-solution.json** file defines the package metadata as shown in the following code:
+Open **package-solution.json** from the **config** folder. The **package-solution.json** file defines the package metadata as shown in the following code. To ensure that the **element.xml** file is taken into account while the solution is being packaged, default scaffolding added needed configuration to define a feature framework feature definition for the solution package.
 
 ```json
 {
@@ -323,11 +323,9 @@ Open **package-solution.json** from the **config** folder. The **package-solutio
 }
 ```
 
-To ensure that the **element.xml** file is taken into account while the solution is being packaged, default scaffolding added needed configuration to define a feature framework feature definition for the solution package.
+## Deploy the extension to SharePoint Online and host JavaScript from local host
 
-## Deploy the Extension to SharePoint Online and host JavaScript from local host
-
-Now you are ready to deploy the solution to a SharePoint site and to have the `CustomAction` automatically associated on the site level.
+Now you are ready to deploy the solution to a SharePoint site and have the `CustomAction` automatically associated on the site level.
 
 1. In the console window, enter the following command to package your client-side solution that contains the extension so that we get the basic structure ready for packaging:
     
@@ -347,11 +345,11 @@ Now you are ready to deploy the solution to a SharePoint site and to have the `C
     command-extension.sppkg
     ```
     
-3. You now need to deploy the package that was generated to the App Catalog. To do this, go to your tenant's **App Catalog** and open the **Apps for SharePoint** library.
+3. Deploy the package that was generated to the App Catalog. To do this, go to your tenant's **App Catalog** and open the **Apps for SharePoint** library.
 
 4. Upload or drag-and-drop the `command-extension.sppkg` located in the **sharepoint/solution** folder to the App Catalog. SharePoint displays a dialog and asks you to trust the client-side solution.
 
-    Note that we did not update the URLs for hosting the solution for this deployment, so the URL is still pointing to https://localhost:4321. 
+    Note that we did not update the URLs for hosting the solution for this deployment, so the URL is still pointing to `https://localhost:4321`. 
     
 5. Select the **Deploy** button.
 
@@ -371,7 +369,7 @@ Now you are ready to deploy the solution to a SharePoint site and to have the `C
 
     ![installing the listview command set to a site](../../../images/ext-com-install-solution-to-site.png)
 
-10. Select the **command-extension-client-side-solution** app to install the solution on the site. When the installation is complete, refresh the page by selecting **F5**.
+10. Select the **command-extension-client-side-solution** app to install the solution on the site. When the installation is complete, refresh the page by selecting F5.
 
 11. When the application has been successfully installed, select **New** from the toolbar on the **Site Contents** page, and then select **List**.
 
@@ -385,3 +383,8 @@ Now you are ready to deploy the solution to a SharePoint site and to have the `C
 
 > [!NOTE]
 > If you find an issue in the documentation or in the SharePoint Framework, report that to SharePoint engineering by using the [issue list at the sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input in advance.
+
+## See also
+
+- [Build your first Field Customizer extension](./building-simple-field-customizer.md)
+- [Overview of SharePoint Framework Extensions](../overview-extensions.md)

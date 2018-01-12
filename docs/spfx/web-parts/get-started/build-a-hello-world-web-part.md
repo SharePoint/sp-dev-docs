@@ -49,17 +49,17 @@ You can also follow these steps by watching this video on the [SharePoint PnP Yo
     
 4. When prompted:
 
-  - Accept the default **helloworld-webpart** as your solution name, and then select **Enter**.
-  - Select **SharePoint Online only (latest)**, and select **Enter**.
+  - Accept the default **helloworld-webpart** as your solution name, and then select Enter.
+  - Select **SharePoint Online only (latest)**, and select Enter.
   - Select **Use the current folder** for where to place the files.
   - Select **N** to require the extension to be installed on each site explicitly when it's being used. 
   - Select **WebPart** as the client-side component type to be created. 
 
 5. The next set of prompts ask for specific information about your web part:
 
-  - Accept the default **HelloWorld** as your web part name, and then select **Enter**.
-  - Accept the default **HelloWorld description** as your web part description, and then select **Enter**.
-  - Accept the default **No javascript web framework** as the framework you would like to use, and then select **Enter**.
+  - Accept the default **HelloWorld** as your web part name, and then select Enter.
+  - Accept the default **HelloWorld description** as your web part description, and then select Enter.
+  - Accept the default **No javascript web framework** as the framework you would like to use, and then select Enter.
 
   ![Yeoman SharePoint generator prompts to create a web part client-side solution](../../../images/yeoman-sp-prompts.png)
 

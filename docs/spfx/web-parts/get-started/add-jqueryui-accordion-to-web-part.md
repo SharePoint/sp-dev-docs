@@ -54,17 +54,17 @@ The developer toolchain uses Webpack, SystemJS, and CommonJS to bundle your web 
 
 4. When prompted:
 
-  * Accept the default **jquery-webpart** as your solution name. and select **Enter**.
-  * Select **SharePoint Online only (latest)**, and select **Enter**.
+  * Accept the default **jquery-webpart** as your solution name. and select Enter.
+  * Select **SharePoint Online only (latest)**, and select Enter.
   * Select **Use the current folder** for where to place the files.
   * Select **N** to require the extension to be installed on each site explicitly when it's being used. 
   * Select **WebPart** as the client-side component type to be created. 
 
 5. The next set of prompts ask for specific information about your web part:
 
-  * Enter **jQuery** for the web part name, and select **Enter**.
-  * Enter **jQuery Web Part** as the description of the web part, and select **Enter**. 
-  * Accept the default **No JavaScript framework** option for the framework, and select **Enter** to continue.
+  * Enter **jQuery** for the web part name, and select Enter.
+  * Enter **jQuery Web Part** as the description of the web part, and select Enter. 
+  * Accept the default **No JavaScript framework** option for the framework, and select Enter to continue.
 
   At this point, Yeoman installs the required dependencies and scaffolds the solution files. This might take a few minutes. Yeoman scaffolds the project to include your **jQueryWebPart** as well.
 

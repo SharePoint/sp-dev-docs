@@ -44,20 +44,20 @@ Notice that you're requesting a well-known placeholder by using the correspondin
 
 2. Add the `PlaceholderContent` and `PlaceholderName` to the import from `@microsoft/sp-application-base` by updating the import statement as follows:
 
-		```ts
+	```ts
 		import {
 			BaseApplicationCustomizer, 
 			PlaceholderContent,
 			PlaceholderName
 		} from '@microsoft/sp-application-base';
-		```
+	```
 	
 	Also add the following import statements after the `strings` import at the top of the file:
 
-		```ts
+	```ts
 		import styles from './AppCustomizer.module.scss';
 		import { escape } from '@microsoft/sp-lodash-subset'; 
-		```
+	```
 
 	You use `escape` to escape Application Customizer properties. You'll create style definitions for the output in the following steps.  
 
@@ -68,7 +68,7 @@ Notice that you're requesting a well-known placeholder by using the correspondin
 	> [!NOTE] 
 	> These are the styles that are used in the HTML output for the header and footer placeholders.
 
-		```css
+	```css
 			.app {
 				.top {
 					height:60px;
@@ -90,34 +90,35 @@ Notice that you're requesting a well-known placeholder by using the correspondin
 					justify-content: center;
 				}
 			}
-		```
+	```
 
 5. In the **HelloWorldApplicationCustomizer.ts** file, update the **IHelloWorldApplicationCustomizerProperties** interface to add specific properties for Header and Footer, as follows.
 
 	> [!NOTE] 
-	> If your command set uses the ClientSideComponentProperties JSON input, it is deserialized into the `BaseExtension.properties` object. You can define an interface to describe it.
+	> If your Command Set uses the ClientSideComponentProperties JSON input, it is deserialized into the `BaseExtension.properties` object. You can define an interface to describe it.
 
-		```ts
+	```ts
 		export interface IHelloWorldApplicationCustomizerProperties {
 			Top: string;
 			Bottom: string;
 		}
-		```
+	```
 
 6. Add the following private variables inside the **HelloWorldApplicationCustomizer** class. In this scenario, these can just be local variables in an `onRender` method, but if you want to share them with other objects, define them as private variables. 
 
-		```ts
+	```ts
 		export default class HelloWorldApplicationCustomizer
 			extends BaseApplicationCustomizer<IHelloWorldApplicationCustomizerProperties> {
 
 			// These have been added
 			private _topPlaceholder: PlaceholderContent | undefined;
 			private _bottomPlaceholder: PlaceholderContent | undefined;
-  	```
+
+  ```
 
 7. Update the `onInit` method code as follows:
 
-		```ts
+	```ts
 			@override
 			public onInit(): Promise<void> {
 				Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
@@ -129,11 +130,11 @@ Notice that you're requesting a well-known placeholder by using the correspondin
 					this._renderPlaceHolders();
 					return Promise.resolve<void>();
 			}
-		```
+	```
 
 8. Create a new `_renderPlaceHolders` private method with the following code:
 
-	  ```ts
+	```ts
 	    private _renderPlaceHolders(): void {
 
 	      console.log('HelloWorldApplicationCustomizer._renderPlaceHolders()');
@@ -200,22 +201,23 @@ Notice that you're requesting a well-known placeholder by using the correspondin
 		}
 	      }
 	    }
-	  ```
+	```
 
-		Note the following about this code:
+	<br/>
 
-	  * Use `this.context.placeholderProvider.tryCreateContent` to get access to the placeholder.
-	  * Extension code should not assume that the expected placeholder is available.
-	  * The code expects custom properties called `Top` and `Bottom`. If the properties exist, they render inside the placeholders.
-	  * Notice that the code path for both the top and bottom placeholders is almost identical. The only differences are the variables used and the style definitions.
+	Note the following about this code:
+	* Use `this.context.placeholderProvider.tryCreateContent` to get access to the placeholder.
+	* Extension code should not assume that the expected placeholder is available.
+	* The code expects custom properties called `Top` and `Bottom`. If the properties exist, they render inside the placeholders.
+	* Notice that the code path for both the top and bottom placeholders is almost identical. The only differences are the variables used and the style definitions.
 
 9. Add the following method after the `_renderPlaceHolders` method. In this case, you simply output a console message when the extension is removed from the page. 
 
-	  ```ts
+	```ts
 	    private _onDispose(): void {
 	      console.log('[HelloWorldApplicationCustomizer._onDispose] Disposed custom top and bottom placeholders.');
 	    }
-	  ```
+	```
 
 You're now ready to test your code in SharePoint Online.
 
@@ -231,18 +233,18 @@ You're now ready to test your code in SharePoint Online.
 
 2. Go to a modern list in SharePoint Online. This can be a list or a library. To test your extension, append the following query string parameters to the URL:
 
-		```json
+	```json
 		?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"e5625e23-5c5a-4007-a335-e6c2c3afa485":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"Top":"Top area of the page","Bottom":"Bottom area in the page"}}}
-		```
+	```
 
 	* Notice that the GUID used in this query parameter has to match the ID attribute of your Application Customizer. This is available in the **HelloWorldApplicationCustomizer.manifest.json** file.
 	* You use Header and Footer JSON properties to provide parameters or configurations to the Application Customizer. In this case, you simply output these values. You can also adjust the behavior based on the properties used in production. 
 
 	The full URL should look similar to the following:
 
-		```json
+	```json
 		contoso.sharepoint.com/Lists/Contoso/AllItems.aspx?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&customActions={"e5625e23-5c5a-4007-a335-e6c2c3afa485":{"location":"ClientSideExtension.ApplicationCustomizer","properties":{"Top":"Top area of the page","Bottom":"Bottom area in the page"}}}
-		```
+	```
 
 3. Select **Load debug scripts** to continue loading scripts from your local host.
 

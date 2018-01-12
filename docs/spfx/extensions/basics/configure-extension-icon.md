@@ -1,32 +1,38 @@
 ---
-title: Configure extension icon
-ms.date: 11/20/2017
+title: Configure extension icon in SharePoint Framework (SPFx) Extensions
+description: Options for configuring the icon for your commands in SharePoint Framework (SPFx) Extensions.
+ms.date: 01/11/2018
 ms.prod: sharepoint
 ---
 
 # Configure extension icon
 
-Selecting an icon that illustrates the purpose of your custom command, makes it easier for users to find your command among other options visible in the toolbar or in the context menu. This article explains the different options available to you to configure the icon for your commands.
-
-## Extension types that support icons
+Selecting an icon that illustrates the purpose of your custom command in SharePoint Framework makes it easier for users to find your command among other options visible in the toolbar or in the context menu. Specifying an icon for a command is optional. If you don't specify an icon, only the command title is displayed in the command bar.
 
 SharePoint Framework supports building the following types of extensions:
 
-- Application customizer
-- Field customizer
-- Command set
+- Application Customizer
+- Field Customizer
+- Command Set
 
-Command set is the only type of SharePoint Framework extension for which you can configure icons.
+The Command Set is the only type of SharePoint Framework Extension for which you can configure icons.
 
-## Defining Command set locations
+When deploying Command Sets, you can choose whether their commands should be visible on:
 
-When deploying command sets, you can choose whether their commands should be visible on the command bar (`location: ClientSideExtension.ListViewCommandSet.CommandBar`), in the context menu (`location: ClientSideExtension.ListViewCommandSet.ContextMenu`) or both (`location: ClientSideExtension.ListViewCommandSet`). Icons defined for the different commands will be displayed only for commands displayed in the command bar.
+- The command bar (`location: ClientSideExtension.ListViewCommandSet.CommandBar`)
 
-## Configuring command set icons
+- The context menu (`location: ClientSideExtension.ListViewCommandSet.ContextMenu`)
 
-SharePoint Framework offers you two ways to define the icon for your extension.
+- Both (`location: ClientSideExtension.ListViewCommandSet`)
 
-### Using an external icon image
+Icons defined for the different commands are displayed only for commands displayed in the command bar.
+
+SharePoint Framework offers you two ways to define the icon for your extension:
+
+- Use an external icon image
+- Use a base64-encoded image
+
+## Use an external icon image
 
 When building SharePoint Framework command sets, you can specify an icon for each command by providing an absolute URL pointing to the icon image in the extension manifest, in the **iconImageUrl** property.
 
@@ -58,17 +64,21 @@ When building SharePoint Framework command sets, you can specify an icon for eac
 }
 ```
 
-The command icon displayed in the command bar is 16x16px. If your image is bigger, it will be sized proportionally to match these dimensions.
+<br/>
+
+The command icon displayed in the command bar is 16x16 px. If your image is bigger, it is sized proportionally to match these dimensions.
 
 ![Custom image used as the command icon in the command bar](../../../images/extensionicon_commandbar_imagepng.png)
 
-While using custom images gives you flexibility to choose an icon for your command, it requires you to deploy them along with your other extension assets. Additionally, your image might lose quality when displayed in higher DPI or specific accessibility settings. To avoid quality loss, you can use vector-based SVG images which are also supported by the SharePoint Framework.
+<br/>
 
-### Using a base64 encoded image
+While using custom images gives you flexibility to choose an icon for your command, it requires you to deploy them along with your other extension assets. Additionally, your image might lose quality when displayed in higher DPI or specific accessibility settings. To avoid quality loss, you can use vector-based SVG images, which are also supported by the SharePoint Framework.
 
-When using a custom image, rather than specifying an absolute URL to the image file hosted together with other extension assets, you can have your image base64 encoded and use the base64 string instead of the URL.
+## Use a base64-encoded image
 
-> There are a number of services available on the Internet that you can use to base64 encode your image, such as [https://www.base64-image.de](https://www.base64-image.de).
+When using a custom image, rather than specifying an absolute URL to the image file hosted together with other extension assets, you can have your image base64-encoded and use the base64 string instead of the URL.
+
+A number of services are available online that you can use to base64-encode your image, such as [Convert your images to Base64](https://www.base64-image.de).
 
 After encoding the image, copy the base64 string and use it as the value for the **iconImageUrl** property in the web part manifest.
 
@@ -100,10 +110,12 @@ After encoding the image, copy the base64 string and use it as the value for the
 }
 ```
 
+<br/>
+
+Base64 encoding works for both bitmap images, such as PNG, as well as vector SVG images. The big benefit of using base64-encoded images is that you don't need to deploy the web part icon image separately.
+
 ![Base64 encoded image displayed as web part icon in the toolbox](../../../images/extensionicon_commandbar_base64.png)
 
-Base64 encoding works both for bitmap images such as PNG as well as vector SVG images. The big benefit of using base64 encoded images is, that you don't need to deploy the web part icon image separately.
+## See also
 
-## Additional considerations
-
-Specifying an icon for a command is optional. If you don't specify an icon, then only the command title will be displayed in the command bar.
+- [Overview of SharePoint Framework Extensions](../overview-extensions.md)

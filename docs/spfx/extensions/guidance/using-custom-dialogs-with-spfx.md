@@ -39,17 +39,17 @@ yo @microsoft/sharepoint
 
 When prompted:
 
-* Accept the default value of **dialog-cmd** as your solution name and press **Enter**.
-* Choose **SharePoint Online only (latest)**, and press **Enter**.
-* Choose **Use the current folder** and press **Enter**.
+* Accept the default value of **dialog-cmd** as your solution name and press Enter.
+* Choose **SharePoint Online only (latest)**, and press Enter.
+* Choose **Use the current folder** and press Enter.
 * Choose **N** to require extension to be installed on each site explicitly when it's being used.
 * Choose **Extension** as the client-side component type to be created. 
 * Choose **ListView Command Set** as the extension type to be created.
 
 The next set of prompts will ask for specific information about your extension:
 
-* Use the value of **DialogDemo** as your extension name and press **Enter**.
-* Accept the default value of **DialogDemo description** as your extension description and press **Enter**.
+* Use the value of **DialogDemo** as your extension name and press Enter.
+* Accept the default value of **DialogDemo description** as your extension description and press Enter.
 
 ![Yeoman SharePoint generator prompts to create an extension solution](../../../images/ext-com-dialog-yeoman-prompts.png)
 
@@ -285,3 +285,7 @@ Choose a color in the *Color Picker* and choose **OK** to test how the code is r
 
 > [!NOTE]
 > If you find an issue in the documentation or in the SharePoint Framework, please report that to SharePoint engineering using the [issue list at sp-dev-docs repository](https://github.com/SharePoint/sp-dev-docs/issues). Thanks for your input advance.
+
+## See also
+
+- [Overview of SharePoint Framework Extensions](../overview-extensions.md)

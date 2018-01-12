@@ -38,17 +38,17 @@ You can also follow the steps in this article by watching the video on the [Shar
 
 4. When prompted:
 
-    * Accept the default **app-extension** as your solution name, and select **Enter**.
-    * Select **SharePoint Online only (latest)**, and select **Enter**.
-    * Select **Use the current folder**, and select **Enter**.
+    * Accept the default **app-extension** as your solution name, and select Enter.
+    * Select **SharePoint Online only (latest)**, and select Enter.
+    * Select **Use the current folder**, and select Enter.
     * Select **N** to require the extension to be installed on each site explicitly when it's being used. 
     * Select **Extension** as the client-side component type to be created. 
     * Select **Application Customizer** as the extension type to be created.
 
 5. The next set of prompts ask for specific information about your extension. When prompted:
 
-    * Accept the default **HelloWorld** as your extension name, and select **Enter**.
-    * Accept the default **HelloWorld description** as your extension description, and select **Enter**.
+    * Accept the default **HelloWorld** as your extension name, and select Enter.
+    * Accept the default **HelloWorld description** as your extension description, and select Enter.
 
     <br/>
 
