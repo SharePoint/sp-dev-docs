@@ -88,3 +88,4 @@ Please use following resources to stay up to date on the new releases and capabi
 
 * [dev.office.com blog](https://dev.office.com/blogs)
 * [OfficeDev Twitter account](https://twitter.com/officedev)
+- [SharePoint Framework Overview](../sharepoint-framework-overview.md)
