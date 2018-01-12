@@ -192,10 +192,9 @@
       href: spfx/use-theme-colors-in-your-customizations.md
     - name: Office UI Fabric integration
       href: spfx/office-ui-fabric-integration.md
-  - name: Framework architecture
+  - name: Tools and libraries
+    href: spfx/tools-and-libraries.md
     items:
-    - name: Tools and libraries
-      href: spfx/tools-and-libraries.md
     - name: Toolchain
       href: spfx/toolchain/sharepoint-framework-toolchain.md
     - name: Yeoman generator
