@@ -193,4 +193,6 @@ In SHIP mode, the build tasks copy all of the web part assets, including the web
 
 ## See also
 
+- [SharePoint Framework development tools and libraries](../tools-and-libraries.md)
+- [Scaffold projects by using Yeoman SharePoint generator](scaffolding-projects-using-yeoman-sharepoint-generator.md)
 - [SharePoint Framework Overview](../sharepoint-framework-overview.md)

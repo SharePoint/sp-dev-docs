@@ -113,4 +113,6 @@ yo @microsoft/sharepoint
 
 ## See also
 
+- [SharePoint Framework toolchain](sharepoint-framework-toolchain.md)
+- [SharePoint Framework development tools and libraries](../tools-and-libraries.md)
 - [SharePoint Framework Overview](../sharepoint-framework-overview.md)
