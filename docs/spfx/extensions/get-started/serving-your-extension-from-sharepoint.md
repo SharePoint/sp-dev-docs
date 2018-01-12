@@ -161,7 +161,7 @@ Now you are ready to deploy the solution to a SharePoint site and have the `Cust
 
 9. In the **Search** box, enter **app**, and then select Enter to filter your apps.
 
-   ![installing field customizer to site](../../../images/ext-app-install-solution-to-site.png)
+   ![installing Field Customizer to site](../../../images/ext-app-install-solution-to-site.png)
 
 10. Select the **app-extension-client-side-solution** app to install the solution on the site. When the installation is completed, refresh the page by selecting F5.
 

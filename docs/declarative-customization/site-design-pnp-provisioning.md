@@ -9,9 +9,9 @@ ms.date: 12/14/2017
 > [!NOTE]
 > Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for use in production environments.
 
-Site designs offer a great way to standardize the look and feel of your site collections. You can't do some things with site designs, however, like add a footer to every page. You can use the PnP provisioning engine to create a template that you can use to provision an application customizer to a site. This application customizer can then update your page design, for example to register a footer on every page. 
+Site designs offer a great way to standardize the look and feel of your site collections. You can't do some things with site designs, however, like add a footer to every page. You can use the PnP provisioning engine to create a template that you can use to provision an Application Customizer to a site. This Application Customizer can then update your page design, for example to register a footer on every page. 
 
-This article describes how to create a site design that applies a PnP provisioning template to a site. The template will add an application customizer to render a footer.
+This article describes how to create a site design that applies a PnP provisioning template to a site. The template will add an Application Customizer to render a footer.
 
 The steps in this article use the following components:
 

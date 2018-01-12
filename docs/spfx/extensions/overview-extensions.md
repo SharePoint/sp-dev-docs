@@ -14,9 +14,9 @@ You can use SharePoint Framework (SPFx) Extensions to extend the SharePoint user
 
 SharePoint Framework Extensions enable you to extend the SharePoint user experience within modern pages and document libraries, while using the familiar SharePoint Framework tools and libraries for client-side development. Specifically, the SharePoint Framework includes three new extension types:
 
-- **ApplicationCustomizers**. Adds scripts to the page, and accesses well-known HTML element placeholders and extends them with custom renderings.
-- **FieldCustomizers**. Provides modified views to data for fields within a list.
-- **CommandSets**. Extends the SharePoint command surfaces to add new actions, and provides client-side code that you can use to implement behaviors.
+- **Application Customizers**. Adds scripts to the page, and accesses well-known HTML element placeholders and extends them with custom renderings.
+- **Field Customizers**. Provides modified views to data for fields within a list.
+- **Command Sets**. Extends the SharePoint command surfaces to add new actions, and provides client-side code that you can use to implement behaviors.
 
 You can build extensions alongside common scripting frameworks, such as AngularJS and React, in addition to plain JavaScript projects. For example, you can use React along with components from Office UI Fabric React to create experiences based on the same components used in Office 365.
 

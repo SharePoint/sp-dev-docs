@@ -216,7 +216,7 @@ The UI elements of the custom footer are rendered using React and a custom React
 
 4. Within the override of the `onInit` method, invoke a custom function called `renderPlaceHolders`, and define that function.
 
-    In the following code excerpt you can see the implementation of the custom footer application customizer class.
+    In the following code excerpt you can see the implementation of the custom footer Application Customizer class.
 
     ``` TypeScript
     /** A Custom Action which can be run during execution of a Client Side Application */

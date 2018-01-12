@@ -95,7 +95,7 @@ Notice that you're requesting a well-known placeholder by using the correspondin
 5. In the **HelloWorldApplicationCustomizer.ts** file, update the **IHelloWorldApplicationCustomizerProperties** interface to add specific properties for Header and Footer, as follows.
 
 	> [!NOTE] 
-	> If your command set uses the ClientSideComponentProperties JSON input, it is deserialized into the `BaseExtension.properties` object. You can define an interface to describe it.
+	> If your Command Set uses the ClientSideComponentProperties JSON input, it is deserialized into the `BaseExtension.properties` object. You can define an interface to describe it.
 
 	```ts
 		export interface IHelloWorldApplicationCustomizerProperties {
