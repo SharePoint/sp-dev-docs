@@ -43,6 +43,8 @@ You can use the command-line options available with the Yeoman SharePoint genera
 yo @microsoft/generator-sharepoint --help
 ```
 
+<br/>
+
 ![Yeoman SharePoint generator command line options](../../images/yeoman-sp-cmdline-options.png)
 
 <br/>
@@ -73,15 +75,24 @@ skipFeatureDeployment | If specified, allow the tenant admin the choice of being
 <br/>
 
 Following is an example of a command that creates a solution called "hello-world" with:
-- a web part "HelloWorld" 
-- "react" framework targeted only to SharePoint Online 
-- tenant-scoped deployment optional enabled
-
-```
-yo @microsoft/sharepoint --solutionName "hello-world" --framework "react" --componentType "webpart" --componentName "HelloWorld" --componentDescription "HelloWorld web part" --skip-install --environment "spo" skipFeatureDeployment true
-```
+- A web part "HelloWorld" 
+- The "react" framework targeted only to SharePoint Online 
+- Tenant-scoped deployment optional enabled
 
 Notice that some of the options have dependencies between each other. You cannot, for example, create an extension with an on-premises option.
+
+```
+yo @microsoft/sharepoint 
+--solutionName "hello-world" 
+--framework "react" 
+--componentType "webpart" 
+--componentName "HelloWorld" 
+--componentDescription "HelloWorld web part" 
+--skip-install 
+--environment "spo" skipFeatureDeployment true
+```
+
+<br/>
 
 > [!NOTE]
 > Using the `--skip-install` command scaffolds the project and skips installing dependencies. This means that to successfully build the project, you need to install the dependencies later after the project is scaffolded. 

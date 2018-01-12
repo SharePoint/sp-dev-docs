@@ -151,7 +151,7 @@ The toolchain consists of the following gulp tasks defined in the [@microsoft/sp
 * **build** - Builds the client-side solution project.
 * **bundle** - Bundles the client-side solution project entry point and all its dependencies into a single JavaScript file.
 * **serve** - Serves the client-side solution project and assets from the local machine.
-* **clean** - Cleans the client-side solution project's build artifacts from the previous build and from the build target directories (lib and dist)
+* **clean** - Cleans the client-side solution project's build artifacts from the previous build and from the build target directories (lib and dist).
 * **test** - Runs unit tests, if available, for the client-side solution project. 
 * **package-solution** - Packages the client-side solution into a SharePoint package.
 * **deploy-azure-storage** - Deploys client-side solution project assets to Azure Storage. 

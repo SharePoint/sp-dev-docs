@@ -76,12 +76,13 @@ For more information about webpack, see the following:
 
 ## Yeoman generators
 
-[Yeoman](http://yeoman.io/) helps you to kickstart new projects, prescribing best practices and tools to help you stay productive. SharePoint Yeoman generator is available as part of the framework to kickstart new client-side web part projects. 
+[Yeoman](http://yeoman.io/) helps you to kickstart new projects, prescribing best practices and tools to help you stay productive. The Yeoman SharePoint generator is available as part of the framework to kickstart new client-side web part projects. 
 
 For more information about Yeoman, see the following:
 
 * [Scaffold a web app with Yeoman](http://yeoman.io/codelab/index.html)
 * [List of available Yeoman generators](http://yeoman.io/generators/)
+* [Scaffold projects by using Yeoman SharePoint generator](toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md)
 
 The following are some common Yeoman generators that you can try, depending on your choice of framework:
 
