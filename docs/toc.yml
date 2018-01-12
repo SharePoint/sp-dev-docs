@@ -179,7 +179,7 @@
       - name: Accessibility
         href: design/accessibility.md
       - name: Web part showcase
-          href: design/showcase-web-part.md
+        href: design/showcase-web-part.md
     - name: Authoring pages
       href: design/authoring-pages.md          
     - name: Design considerations
@@ -191,7 +191,7 @@
     - name: Use themes
       href: spfx/use-theme-colors-in-your-customizations.md
     - name: Office UI Fabric integration
-        href: spfx/office-ui-fabric-integration.md
+      href: spfx/office-ui-fabric-integration.md
   - name: Framework architecture
     items:
     - name: Tools and libraries
