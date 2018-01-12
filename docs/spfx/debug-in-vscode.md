@@ -36,7 +36,7 @@ The launch.json contains two debug configurations:
 * Local workbench configuration
 * Hosted workbench configuration
 
-## Debug SharePoint Framework solution using local workbench
+## Debug solution using local workbench
 
 When building SharePoint Framework solutions, you can use the local workbench to verify that your web part is working correctly. Using the local workbench is convenient for testing all scenarios that do not require communicating with SharePoint as well as for offline development.
 
@@ -90,7 +90,7 @@ If you now reload the page, your breakpoint in Visual Studio Code is hit, and yo
 
 ![Breakpoint hit in Visual Studio Code](../images/vscode-debugging-breakpoint-hit.png)
 
-## Debug SharePoint Framework solution using hosted workbench
+## Debug solution using hosted workbench
 
 When building SharePoint Framework solutions that communicate with SharePoint, you might want to verify the interaction between your solution in SharePoint. To do this easily, you can use the hosted version of the SharePoint Workbench, which is available on every Office 365 tenant at `https://yourtenant.sharepoint.com/_layouts/workbench.aspx`. 
 
