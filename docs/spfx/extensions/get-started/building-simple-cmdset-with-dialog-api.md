@@ -386,4 +386,5 @@ Now you are ready to deploy the solution to a SharePoint site and have the `Cust
 
 ## See also
 
+- [Build your first Field Customizer extension](./building-simple-field-customizer.md)
 - [Overview of SharePoint Framework Extensions](../overview-extensions.md)

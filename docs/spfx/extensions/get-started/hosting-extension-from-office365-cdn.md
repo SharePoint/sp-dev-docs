@@ -120,4 +120,6 @@ Congratulations, you have enabled a public CDN in your Office 365 tenant and tak
 
 ## See also
 
+- [Build your first ListView Command Set extension](./building-simple-cmdset-with-dialog-api.md)
+- [Build your first Field Customizer extension](./building-simple-field-customizer.md)
 - [Overview of SharePoint Framework Extensions](../overview-extensions.md)

@@ -135,9 +135,13 @@ SPOCustomUI.init(function () {
 });
 ```
 
+<br/>
+
 In the following figure you can see the output of the previous custom action, within the home page of a classic site.
 
 ![The custom footer in a classic page](../../../images/user-custom-action-footer-sample.png)
+
+<br/>
 
 To migrate the previous solution to the "modern" UI, see the following steps.
 

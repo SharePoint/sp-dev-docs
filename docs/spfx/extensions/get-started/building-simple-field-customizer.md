@@ -416,4 +416,5 @@ The process for publishing your app is identical among the different extension t
 
 ## See also
 
+- [Build your first ListView Command Set extension](./building-simple-cmdset-with-dialog-api.md)
 - [Overview of SharePoint Framework Extensions](../overview-extensions.md)
