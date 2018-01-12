@@ -88,4 +88,4 @@ The following sections list older items that have already shipped.
 
 - [dev.office.com blog](https://dev.office.com/blogs)
 - [OfficeDev Twitter account](https://twitter.com/officedev)
-- [SharePoint Framework Overview](../sharepoint-framework-overview.md)
+- [SharePoint Framework Overview](sharepoint-framework-overview.md)

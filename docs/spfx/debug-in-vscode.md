@@ -213,4 +213,4 @@ If you are using an older version of SharePoint Framework Yeoman generator, foll
 - [How to debug your SharePoint Framework web part (Elio Struyf)](https://www.eliostruyf.com/how-to-debug-your-sharepoint-framework-web-part/)
 - [Debug SPFx React webpart with Visual Studio Code (Velin Georgiev)](https://blog.velingeorgiev.com/how-debug-sharepoint-framework-webpart-visual-studio-code)
 - [Scaffold projects by using Yeoman SharePoint generator](toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md)
-- [SharePoint Framework Overview](../sharepoint-framework-overview.md)
+- [SharePoint Framework Overview](sharepoint-framework-overview.md)
