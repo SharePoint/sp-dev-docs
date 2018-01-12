@@ -1,31 +1,30 @@
 ---
 title: Tutorial - Migrating from UserCustomAction to SharePoint Framework Extensions
-description: 
+description: Migrate from old "classic" customizations to the new model based on SharePoint Framework Extensions.
 ms.date: 01/11/2018
 ms.prod: sharepoint
 ---
 
 # Migrating from UserCustomAction to SharePoint Framework Extensions
 
-During the last few years, most of the enterprise solutions built on top of Office 365 and SharePoint Online leveraged the site _CustomAction_ capability of the SharePoint Feature Framework to extend the UI of pages. However nowdays, within the new "modern" UI of SharePoint Online, most of those customizations are no more available. Luckily, with the new SharePoint Framework Extensions you can now provide almost the same functionality in the "modern" UI. In this tutorial you will learn how to migrate from old "classic" customizations to the new model based on SharePoint Framework Extensions.
+During the last few years, most of the enterprise solutions built on top of Office 365 and SharePoint Online leveraged the site _CustomAction_ capability of the SharePoint Feature Framework to extend the UI of pages. However, within the new "modern" UI of SharePoint Online, most of those customizations are no longer available. Fortunately, with the new SharePoint Framework Extensions, you can provide similar functionality in the "modern" UI.
 
-## Understanding SharePoint Framework Extensions
+In this tutorial, you learn how to migrate from the old "classic" customizations to the new model based on SharePoint Framework Extensions.
 
-First of all, let's introduce the available options when developing SharePoint Framework Extensions:
+> [!NOTE]
+> For more information about how to build SharePoint Framework Extensions, see [Overview of SharePoint Framework Extensions](../overview-extensions.md).
+
+First, let's introduce the available options when developing SharePoint Framework Extensions:
 
 * **Application Customizer**. Extend the native "modern" UI of SharePoint Online by adding custom HTML elements and client-side code to pre-defined placeholders of "modern" pages. At the time of this writing, the available placeholders are the header and the footer of every "modern" page.
 * **Command Set**. Add custom ECB menu items or custom buttons to the command bar of a list view for a list or a library. You can associate any JavaScript (TypeScript) action to these commands.
 * **Field Customizer**. Customize the rendering of a field in a list view by using custom HTML elements and client-side code.
 
-As you can argue from the above descriptions, the most useful one in our context is the "Application Customizer" extension.
+The most useful option in our context is the Application Customizer extension.
 
-> [!NOTE]
-> For further details about how to build SharePoint Framework Extensions you can read the article ["Overview of SharePoint Framework Extensions"](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions).
+Assume that you have a _CustomAction_ in SharePoint Online in order to have a custom footer in all of the site's pages.
 
-## Migrating a UserCustomAction to an SPFx Application Customizer
-
-Assume that you have a _CustomAction_ in SharePoint Online, in order to have a custom footer in all of the site's pages.
-In the following code snippet you can see the XML code defining that _CustomAction_ using the SharePoint Feature Framework.
+In the following code snippet, you can see the XML code defining that _CustomAction_ by using the SharePoint Feature Framework.
 
 ```XML
 <?xml version="1.0" encoding="utf-8"?>
@@ -45,7 +44,7 @@ In the following code snippet you can see the XML code defining that _CustomActi
 </Elements>
 ```
 
-As you can see, the feature elements file defines a couple of elements of type _CustomAction_ to include in the pages of the target site both jQuery, loaded through the public CDN, and a custom JavaScript file that renders the custom footer.
+As you can see, the feature elements file defines a few elements of type _CustomAction_ to include in the pages of the target site, both jQuery, loaded through the public CDN, and a custom JavaScript file that renders the custom footer.
 
 Moreover and for the sake of completeness, here you can see the JavaScript code that renders a custom footer, whose menu items are pre-defined in code for the sake of simplicity.
 

@@ -9,7 +9,7 @@ ms.prod: sharepoint
 
 During the last few years, most of the enterprise solutions built on top of Office 365 and SharePoint Online leveraged the site _CustomAction_ capability of the SharePoint Feature Framework to extend the UI of pages. However, within the new "modern" UI of SharePoint Online, most of those customizations are no longer available. Fortunately, with the new SharePoint Framework Extensions, you can provide similar functionality in the "modern" UI. 
 
-In this tutorial, you learn how to migrate from old "classic" customizations to the new model based on SharePoint Framework Extensions.
+In this tutorial, you learn how to migrate from the old "classic" customizations to the new model based on SharePoint Framework Extensions.
 
 > [!NOTE]
 > For more information about how to build SharePoint Framework Extensions, see [Overview of SharePoint Framework Extensions](../overview-extensions.md).
@@ -178,8 +178,6 @@ To reproduce the same behavior of the ECB menu item built by using the SharePoin
 
 ## Test the solution in debug mode
 
-You are now ready to test your solution in debug mode. 
-
 1. Go back to the console window and run the following command to build the solution and run the local Node.js server to host it.
 
   ```
@@ -347,8 +345,6 @@ Next, you need to update the solution to use the just created CDN as the hosting
 <a name="InstallCommandSet"> </a>
 
 ## Install and run the solution
-
-You can now install the solution on any target "modern" site.
 
 1. Open the browser and navigate to any target "modern" site.
 
