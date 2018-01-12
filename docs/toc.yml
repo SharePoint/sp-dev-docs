@@ -136,8 +136,6 @@
         items:
         - name: Tutorial
           href: spfx/call-microsoft-graph-using-graphhttpclient.md          
-    - name: Optimize builds for production
-      href: spfx/toolchain/optimize-builds-for-production.md
     - name: Setup and deployment
       items:
       - name: Package solution
@@ -154,6 +152,8 @@
         href: spfx/sharepoint-2016-support.md
       - name: Provision SharePoint assets
         href: spfx/toolchain/provision-sharepoint-assets.md
+    - name: Optimize builds for production
+      href: spfx/toolchain/optimize-builds-for-production.md        
     - name: Localization
       href: spfx/web-parts/guidance/localize-web-parts.md
     - name: Tenant properties
