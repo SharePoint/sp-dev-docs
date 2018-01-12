@@ -211,7 +211,7 @@ Before building the bundle and the package, you need to declare an XML Feature F
 
 ### Review Feature Framework elements
 
-1. Within the code editor, open the **/sharepoint/assets** sub-folder of the solution folder and edit the **elements.xml** file. In the following code excerpt, you can see how the file should look.
+1. In the code editor, open the **/sharepoint/assets** sub-folder of the solution folder and edit the **elements.xml** file. In the following code excerpt, you can see how the file should look.
 
   ```XML
   <?xml version="1.0" encoding="utf-8"?>
@@ -358,7 +358,7 @@ Next, you need to update the solution to use the just created CDN as the hosting
 
 5. After the application installation is completed, open the **Documents** library of the site and see the custom ECB menu item in action by selecting a single document.
 
-Enjoy your new custom ECB menu item built using the SharePoint Framework Extensions!
+Enjoy your new custom ECB menu item built by using the SharePoint Framework Extensions!
 
 ## See also
 

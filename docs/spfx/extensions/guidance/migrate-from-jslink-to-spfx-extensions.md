@@ -259,7 +259,7 @@ To reproduce the same behavior of the `JSLink` custom field rendering, you need 
     ?loadSPFX=true&debugManifestsFile=https://localhost:4321/temp/manifests.js&fieldCustomizers={"Color":{"id":"c3070978-d85e-4298-8758-70b5b5933076"}}
     ```
 
-    In this query string, you have to replace the GUID with the `id` value you saved from the **CustomColorFieldFieldCustomizer.manifest.json** file, and the **Color** object name refers to the name of the field to customize. If you like, you can also provide a custom configuration object, serialized in JSON format, as an additional parameter for the field customizer construction.
+    In this query string, replace the GUID with the `id` value you saved from the **CustomColorFieldFieldCustomizer.manifest.json** file, and the **Color** object name refers to the name of the field to customize. If you like, you can also provide a custom configuration object, serialized in JSON format, as an additional parameter for the field customizer construction.
 
     Notice that when executing the page request, you are prompted with a warning message box with the title "Allow debug scripts?", which asks your consent to run code from localhost for security reasons. Of course, if you want to locally debug and test the solution, you have to allow it to "Load debug scripts."
 
@@ -352,7 +352,7 @@ Before building the bundle and the package, you need to declare an XML Feature F
 
 ### Review Feature Framework elements
 
-1. Within the code editor, open the **/sharepoint/assets** sub-folder of the solution folder and edit the **elements.xml** file. In the following code excerpt, you can see how the file should look.
+1. In the code editor, open the **/sharepoint/assets** sub-folder of the solution folder and edit the **elements.xml** file. In the following code excerpt, you can see how the file should look.
 
     ```XML
     <?xml version="1.0" encoding="utf-8"?>
@@ -506,7 +506,7 @@ Next, you need to update the solution to use the just created CDN as the hosting
 
     ![The Field Customizer in action](../../../images/spfx-custom-field-extension-final-output.png)
 
-Enjoy your new Field Customizer built using the SharePoint Framework Extensions!
+Enjoy your new Field Customizer built by using the SharePoint Framework Extensions!
 
 ## See also
 
