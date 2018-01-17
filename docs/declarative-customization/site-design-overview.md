@@ -7,7 +7,7 @@ ms.date: 01/08/2018
 # SharePoint site design and site script overview
 
 > [!NOTE]
-> Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for use in production environments.
+> Site designs and site scripts are in preview and are subject to change. They are currently only supported for use in production environments in Targeted Release.
 
 Use site designs and site scripts to automate provisioning new SharePoint sites using your own custom configurations. When people in your organization create new SharePoint sites, you often need to ensure some level of consistency. For example, you may need proper branding and theming applied to each new site. You may also have detailed site provisioning scripts, such as using the PnP provisioning engine, that need to be applied each time a new site is created. This article describes how you can use site designs and site scripts to provide custom configurations to apply when new sites are created.
 
