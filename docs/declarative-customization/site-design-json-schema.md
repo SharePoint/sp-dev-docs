@@ -7,9 +7,9 @@ ms.date: 12/14/2017
 # Site design JSON schema
 
 > [!NOTE]
-> Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for use in production environments.
+> Site designs and site scripts are in preview and are subject to change. They are currently only supported for use in production environments in Targeted Release.
 
-The site design is a list of actions. For more complex actions, such as creating a list, there are also subactions. Each action is specified by a "verb" value. Verb actions are run in the order they appear in the JSON script.
+The site design is a list of actions. For more complex actions, such as creating a list, there are also subactions. Each action is specified by a "verb" value. Verb actions are run in the order they appear in the JSON script. Only the verb actions listed here can be used, otherwise an "unable to handle action" error will be thrown when trying to upload a site script. More actions will be added over time. 
 
 The overall JSON structure is specified as follows:
 
