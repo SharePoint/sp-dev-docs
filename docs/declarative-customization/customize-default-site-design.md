@@ -7,7 +7,7 @@ ms.date: 12/18/2017
 # Customize a default site design
 
 > [!NOTE]
-> Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for use in production environments.
+> Site designs and site scripts are in preview and are subject to change. They are currently only supported for use in production environments in Targeted Release.
 
 SharePoint contains several site designs already available in the SharePoint Online site templates. These are the default site designs. You can modify them using PowerShell or the REST APIs to control the entire site provisioning experience. For example, you can ensure that your company theme is applied to every site that gets created. Or you can make sure a logging mechanism always runs regardless of which site design is chosen.
 
