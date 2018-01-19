@@ -7,7 +7,7 @@ ms.date: 12/14/2017
 # Site design and site script REST API
 
 > [!NOTE]
-> Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for use in production environments.
+> Site designs and site scripts are in preview and are subject to change. They are currently only supported for use in production environments in Targeted Release.
 
 You can use the the SharePoint REST interface to perform basic create, read, update, and delete (CRUD) operations on site designs and site scripts.
 
