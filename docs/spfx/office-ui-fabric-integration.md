@@ -19,7 +19,7 @@ In order to achieve reliability, one of the main problems we need to solve is th
 
 ## Goals
 
-The goal of the SharePoint Framework is to allow both Microsoft and customers build rich, beautiful, and consistent user experiences on top of SharePoint. In accordance with these goals, below are the key design  principles:
+The goal of the SharePoint Framework is to allow both Microsoft and customers to build rich, beautiful, and consistent user experiences on top of SharePoint. In accordance with these goals, below are the key design  principles:
 
 * Customers should be able to smoothly and reliably consume Fabric Core and Fabric React in their solutions.
 * Microsoft will roll out updated experiences that consume updated versions of Fabric Core and Fabric React in SharePoint without conflicting with customer's solutions.
