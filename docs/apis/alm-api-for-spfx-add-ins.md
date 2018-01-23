@@ -128,7 +128,7 @@ Using [PnP PowerShell](https://msdn.microsoft.com/en-us/pnp_powershell/pnp-power
 Adding your app (.sppkg file, .app file) to the tenant app catalog is a per-requisite to later on make your app available for use in your SharePoint sites. Doing so can be done using below simple cmdlet:
 
 ```PowerShell
-Add-PnPApp -Path ./myapp.sppkg"
+Add-PnPApp -Path ./myapp.sppkg
 ```
 
 Once added you'll need to continue with publishing your app, effectively making the app available to be used by the users of your tenant. Below PnP PowerShell cmdlets shows how this can be done:
