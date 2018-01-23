@@ -33,7 +33,7 @@ ALM APIs are natively provided using REST APIs, but there is also additional CSO
 Adding solution to the tenant app catalog. This API is designed to be executed in the context of the tenant app catalog site.
 
 ```
-/_api/web/tenantappcatalog/Add(overwrite=true, url='test.txt');
+url: /_api/web/tenantappcatalog/Add(overwrite=true, url='test.txt')
 method: POST
 binaryStringRequestBody: true
 body: 'byte array of the file'
@@ -44,7 +44,7 @@ body: 'byte array of the file'
 Enable solution to be available to install to specific sites. This API is designed to be executed in the context of the tenant app catalog site.
 
 ```
-/_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Deploy
+url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Deploy
 ```
 
 > [!NOTE]
@@ -55,7 +55,7 @@ Enable solution to be available to install to specific sites. This API is design
 Retract solution to be available from the sites. This API is designed to be executed in the context of the tenant app catalog site.
 
 ```
-/_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Retract
+url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Retract
 ```
 
 > [!NOTE]
@@ -66,7 +66,7 @@ Retract solution to be available from the sites. This API is designed to be exec
 Remove the solution package from the tenant app catalog. This API is designed to be executed in the context of the tenant app catalog site.
 
 ```
-/_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Remove
+url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Remove
 ```
 
 > [!NOTE]
