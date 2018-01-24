@@ -6,7 +6,7 @@ ms.date: 1/23/2018
 
 # Designing great SharePoint experiences
 
-SharePoint is a platform that delivers content to more than 200,000 organizations and 190 million people worldwide. This SharePoint design guidance helps you create compelling SharePoint experiences and effectively communicate your brand and message to your audience. This guidance helps you better take advantage of the powerful tools in SharePoint while creating your own customized and optimized experiences. We welcome your feedback and input so that we can keep making improvements to this guidance.
+SharePoint is a platform that delivers content to more than 200,000 organizations and 190 million people worldwide. This SharePoint design guidance helps you create compelling SharePoint experiences and effectively communicate your brand and message to your audience. In addition, this guidance helps you better take advantage of the powerful tools in SharePoint while creating your own customized and optimized experiences. We welcome your feedback and input so that we can keep making improvements to this guidance.
 
 <!-- Seems like you should tell them how you'd like to receive feedback - i.e. via issues in the repo? -->
 
