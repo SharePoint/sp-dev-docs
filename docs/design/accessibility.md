@@ -1,6 +1,6 @@
 ---
 title: Accessibility in SharePoint web part design
-description: 
+description: Guidelines for adding accessibility to your web part.
 ms.date: 01/23/2018 
 ---
 
@@ -116,8 +116,6 @@ Users who have vision impairments rely on screen readers to navigate the site UI
 
 ![Screen reader navigation of a SharePoint page](https://i.imgur.com/ar23o3X.png)
 
-<br/>
-
 ## Alt text and transcripts
 
 Use alt text to provide descriptions of images that can be consumed by screen readers. This is useful for vision-impaired users who cannot consume information visually. Make sure that your alt text is descriptive, keeping in mind that some readers are relying on a screen reader to access the information conveyed in the image. 
@@ -186,8 +184,7 @@ A minimum level of contrast is essential to help users with vision impairments c
 
 ### Alert colors
 
-<html>
-<body>
+
 <table>
 <tr>
 <td style="color:white; background-color:#952226">themeDark: #952226</td>
@@ -199,8 +196,6 @@ A minimum level of contrast is essential to help users with vision impairments c
 <td style="color:white; background-color:#e55c12">themeSecondary: #e55c12</td>
 </tr>
 </table>
-</body>
-</html>
 
 <br/>
 
