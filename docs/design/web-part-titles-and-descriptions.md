@@ -1,7 +1,7 @@
 ---
 title: Titles and descriptions for SharePoint web parts
 description: Add titles and descriptions to web parts to help users understand their purpose.
-ms.date: 9/25/2017 
+ms.date: 01/23/2018 
 ---
 
 # Titles and descriptions for SharePoint web parts
@@ -12,13 +12,13 @@ One option is to connect the title and description to the configuration properti
  
 For example, if you have a web part that queries a document library based on recently added items, you might want to use "Recent documents" for the default title.
 
-![Web part with title and description highlighted](../images/design-web-part-title-01.png)
+<img alt="Web part with title and description highlighted" src="../images/design-web-part-title-01.png" width="850">
 
 <br/>
 
 For both the title and description, the author of the page can override the default placeholder text and customize them based on what makes the most sense for the page they're creating. 
 
-![Custom text in the web part title and description fields](../images/design-web-part-title-02.png)
+<img alt="Custom text in the web part title and description fields" src="../images/design-web-part-title-02.png" width="850">
 
 ## See also
 
