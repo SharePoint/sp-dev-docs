@@ -181,7 +181,7 @@
       - name: Web part showcase
         href: design/showcase-web-part.md
     - name: Authoring pages
-      href: design/authoring-pages.md      
+      href: design/authoring-pages.md          
     - name: Design considerations
       href: spfx/web-parts/basics/design-considerations-for-web-parts.md
     - name: Custom dialogs
