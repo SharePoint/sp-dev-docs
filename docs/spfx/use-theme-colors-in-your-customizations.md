@@ -43,6 +43,8 @@ To use a theme color instead, replace the fixed color with a theme token:
 }
 ```
 
+<br/>
+
 When your SharePoint Framework customization is loading on the page, the **@microsoft/load-themed-styles** package, which is a part of the SharePoint Framework, looks for theme tokens in CSS files and tries to replace them with the corresponding color from the current theme. If the value for the specified token is not available, SharePoint Framework uses the value specified by using the **default** parameter instead, which is why it's important that you always include it.
 
 The following theme tokens are available for you to use:

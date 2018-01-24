@@ -1,6 +1,6 @@
 ---
 title: Using Office UI Fabric Core and Fabric React in SharePoint Framework
-description: 
+description: Information about the Fabric Core and Fabric React packages, and challenges with using CSS.
 ms.date: 01/24/2018
 ms.prod: sharepoint
 ---
@@ -129,12 +129,12 @@ The following concepts and references provide insights on the challenge with usi
 
 How to avoid Global CSS styles at all costs is a big problem. Today, both Fabric Core and Fabric React have global styles. A lack of any native solutions from the browser to manage the style scoping makes this a very difficult problem.
   
-  - [Scope CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/:scope) is in early stages of discussion. 
+  - [Scope CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/:scope) is in early stages of discussion.
   - iframes are not a good option to isolate styles.
   - [Web Components](https://developer.mozilla.org/en-US/docs/Web/Web_Components) is another standard that talks about scoped styles but is still in the discussion stage.
   - [The React: CSS in JS](https://speakerdeck.com/vjeux/react-css-in-js) discussion explains the problem well. 
   
-  There is plenty of other documentation on the web about the solutions to the global namespace menace.
+There is plenty of other documentation on the web about the solutions to the global namespace menace.
 
 ### CSS specificity
 

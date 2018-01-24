@@ -216,6 +216,8 @@ When building CSS styles for a component, wrap them in a class named after the c
 }
 ```
 
+<br/>
+
 #### TodoList.tsx
 
 ```tsx
@@ -231,6 +233,8 @@ export default class TodoList extends React.Component<ITodoListProps, void> {
   }
 }
 ```
+
+<br/>
 
 After transpilation, the generated CSS file looks similar to:
 
@@ -254,6 +258,8 @@ In case a web part should use the new flex box model defined by the `display: fl
 }
 ```
 
+<br/>
+
 The Sass code of the SharePoint Framework artefact does not need to have vendor prefixes included. After the Sass-to-CSS compilation, those were added automatically, resulting in the following CSS declaration.
 
 ```css
@@ -263,6 +269,8 @@ The Sass code of the SharePoint Framework artefact does not need to have vendor 
   display: flex;
 }
 ```
+
+<br/>
 
 Removing already applied prefixes does not only make the code of the artefact cleaner, it also makes it easier to read and future-ready. This process is also configured to support only SharePoint Framework-supported browsers and makes it more error-safe.
 
