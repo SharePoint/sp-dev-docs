@@ -71,6 +71,8 @@ To create a custom dialog box, you need to follow the steps in [Set up your deve
   code .
   ```
 
+  <br/>
+
   ![Initial Visual Studio Code structure after scaffolding](../../../images/ext-com-dialog-vs-code-initial.png)
 
 ## Modify the extension manifest
@@ -266,7 +268,7 @@ To associate the custom dialog box with your custom ListView Command Set, add th
 
   This starts the bundling of your solution and serves the resulting manifest from the `localhost` address. Due to the configuration in the **serve.json** file, it also opens up a browser in the specific URL and automatically sets the query parameters based on the solution configuration.
 
-4. Accept the loading of Debug Manifests by selecting **Load debug scripts** when prompted.
+4. Accept the loading of debug manifests by selecting **Load debug scripts** when prompted.
 
   ![Allow debug scripts warning](../../../images/ext-com-dialog-debug-scripts.png)
 
