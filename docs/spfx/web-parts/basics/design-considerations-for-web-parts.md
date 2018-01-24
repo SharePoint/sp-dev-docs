@@ -120,11 +120,11 @@ A steps pane is used for grouping properties in multiple steps or pages when you
 
 ## Reactive vs non-reactive web parts
 
-Reactive web parts are designed to be full client-side web parts, which means that each component that is configured in the properties pane reflects the change made within the web part on the page. For the To-Do List web part, unchecking “Completed Tasks” hides this view in the web part.
+**Reactive web parts** are designed to be full client-side web parts, which means that each component that is configured in the properties pane reflects the change made within the web part on the page. For the To-Do List web part, unchecking “Completed Tasks” hides this view in the web part.
 
 ![Reactive web part design](../../../images/design-wp-pp-reactive.png)
 
-Non-reactive web parts are not fully client-side, and generally one or more properties need to make a call to set/pull or store data on a server. In this case, you should enable the Apply and Cancel buttons at the bottom of the properties pane.
+**Non-reactive web parts** are not fully client-side, and generally one or more properties need to make a call to set/pull or store data on a server. In this case, you should enable the Apply and Cancel buttons at the bottom of the properties pane.
 
 ![Non-reactive web part design](../../../images/design-wp-pp-non-reactive.png)
 
@@ -158,4 +158,5 @@ The To-Do List example uses the single pane and is a reactive web part. The foll
 
 ## See also
 
+- [Designing a SharePoint web part](../../../design/design-a-web-part.md)
 - [Designing great SharePoint experiences](../../../design/design-guidance-overview.md)
