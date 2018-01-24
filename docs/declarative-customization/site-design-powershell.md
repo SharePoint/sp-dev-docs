@@ -1,13 +1,13 @@
 ---
 title: PowerShell cmdlets for SharePoint site designs and site scripts
 description: Use PowerShell cmdlets to create, retrieve, and remove site designs and site scripts.
-ms.date: 12/14/2017
+ms.date: 01/08/2018
 ---
 
 # PowerShell cmdlets for SharePoint site designs and site scripts
 
 > [!NOTE]
-> Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for use in production environments.
+> Site designs and site scripts are in preview and are subject to change. They are currently only supported for use in production environments in Targeted Release.
 
 Use PowerShell cmdlets to create, retrieve, and remove site designs and site scripts.
 
@@ -33,7 +33,6 @@ The following cmdlets are available for managing site designs and site scripts f
 - **Remove-SPOSiteDesign**
 - **Remove-SPOSiteScript**
 - **Revoke-SPOSiteDesignRights**
-
 <!--
 - **Set-SPOSiteDesign**
 - **Set-SPOSiteScript**
@@ -305,8 +304,9 @@ PS C:\> Revoke-SPOSiteDesignRights 44252d09-62c4-4913-9eb0-a2a8b8d7f863 `
 
 <!--
 ## Set-SPOSiteDesign (TBD)
-
+Updates a previously uploaded site design.
 ## Set-SPOSiteScript (TBD)
+Updates a previously uploaded site script.
 -->
 
 ## See also

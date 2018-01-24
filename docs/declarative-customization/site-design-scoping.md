@@ -1,13 +1,13 @@
 ---
 title: Scoping access to SharePoint site designs
 description: Set scope on SharePoint site designs to control who can view and access them.
-ms.date: 12/14/2017
+ms.date: 01/08/2018
 ---
 
 # Scoping access to site designs
 
 > [!NOTE]
-> Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for use in production environments.
+> Site designs and site scripts are in preview and are subject to change. They are currently only supported for use in production environments in Targeted Release.
 
 Site designs are available to everyone by default. You can also scope site designs so that they are only available to specific users or groups. For example, the accounting apartment may have specific site designs they use, but it may not make sense to share those site designs with everyone. This article will explain how you can control which users and groups can see specific site designs.
 

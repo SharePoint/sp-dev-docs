@@ -7,6 +7,9 @@ ms.date: 11/03/2017
 ### Summary ###
 OneDrive for Business sites can be customized in Office 365 or with app model in general, based on company requirements. Actual techniques to perform this customization are different than in the on-premises, since only app model techniques can be used. This page contains details on the actual patterns which can be used with app mdoel to customize OneDrive for Business sites. 
 
+> [!IMPORTANT]
+> This **only** applies to *classic* OneDrive for Business experience in the SharePoint Online. If you are using the default "New experience", this is not supported. Modern or new experiences of OneDrive for Business does not support custom branding. Tenant administrators can control the default experience from the SharePoint Online administrative settings.
+
 # Why would you customize OneDrive for Business sites? #
 
 There are numerous different aspects on applying customizations to OneDrive for Business (OD4B) sites. You certainly can customize these sites, since they are SharePoint sites, but at the same time you should always consider the short and long term impact of the customizations. As a rule of a thumb, we would like to give following high level guidelines for customizing OD4B sites. 

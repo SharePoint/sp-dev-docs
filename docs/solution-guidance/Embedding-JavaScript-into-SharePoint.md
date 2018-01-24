@@ -83,5 +83,5 @@ Files attached with JSLink are **not** re-executed on MDS navigation, use the As
 ### Resources:
 
 * [Wictor Wilén - The correct way to execute javascript functions in SharePoint MDS enabled sites](http://www.wictorwilen.se/the-correct-way-to-execute-javascript-functions-in-sharepoint-2013-mds-enabled-sites)
-* [Hugh Wood - SharePoint JavaScript context development - AsyncDeltaManager](https://www.spcaf.com/blog/sharepoint-javascript-context-development-part-4-the-way-of-the-async-delta-manager/)
+* [Hugh Wood - SharePoint JavaScript context development - AsyncDeltaManager](https://rencore.com/blog/sharepoint-javascript-context-development-part-4-the-way-of-the-async-delta-manager/)
 * [Marc Anderson - Execute JavaScript after MDS (re)load](http://blog.symprogress.com/2013/09/sharepoint-2013-execute-javascript-function-after-mds-load/)
