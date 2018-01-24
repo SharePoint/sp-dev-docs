@@ -19,13 +19,13 @@ Always capitalize:
 - The first word of a new sentence.
 - The word following a colon in a title or heading. For example, "Step 1: Begin by entering your account information."
 - Proper nouns, such as the names of people, cities, and so on. 
- 
-![An image web part with sentence-style capitalization highlighted](../images/design-uitext-01.png)
+
+<img alt="An image web part with sentence-style capitalization highlighted" src="../images/design-uitext-01.png" width="800">
 
 <br/>
 
 ![An image web part with sentence-style capitalization highlighted](../images/design-uitext-02.png)
-
+<img alt="Girl in a jacket" src="img_girl.jpg" width="400">
 
 ## Punctuation
 
@@ -35,8 +35,8 @@ Follow the basic rules of punctuation to avoid grammatical errors in your experi
 |-------------|------------------------------------------------|-----------------|          
 |Colons (:)  | Use colons if you are introducing a list in the web part description.<br/>Don't use colons in UI labels.| Choose one of the following: Cats, Dogs, Quokkas    |                        
 |Commas (,)  | Use serial commas (including before the word "and").  |I like cats, birds, and dogs. |
-|Ellipses (…)| Use ellipses to show truncation and for progress indicator strings.<br/>Do not use ellipses to indicate that the user must make further choices.|Truncation: Last modified by John Armstr…<br/>Progress indicator: Uploading… |  
-|Periods (.) | Don't use periods in titles, headings, or labels. Don't use periods for radio button options or check boxes.<br/>Use periods as you normally would for descriptions. | Select the content that you want to highlight and how you want it displayed. Use a filter to narrow your selection. |
+|Ellipses (…)| Use ellipses to show truncation and for progress indicator strings.<br/>Don't use ellipses to indicate that the user must make further choices.|Truncation: Last modified by John Armstr…<br/>Progress indicator: Uploading… |  
+|Periods (.) | Use periods as you normally would for descriptions.<br/>Don't use periods in titles, headings, or labels. Don't use periods for radio button options or check boxes. | Select the content that you want to highlight and how you want it displayed. Use a filter to narrow your selection. |
 
 
 
