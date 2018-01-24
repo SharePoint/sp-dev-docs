@@ -1,11 +1,12 @@
 ---
 title: UI text guidelines for SharePoint web parts
-ms.date: 9/25/2017 
+description: Use simple, understandable, and concise UI text to create effective web parts in SharePoint.
+ms.date: 01/23/2018 
 ---
 
 # UI text guidelines for SharePoint web parts
  
-One aspect of creating effective web parts in SharePoint is to use simple, understandable, and concise UI text. By keeping your message clear and easy to understand, you ensure that customers move through your experiences quickly and can identify the content they are looking for. This article provide guidance for writing UI text for key areas within SharePoint web parts.
+One aspect of creating effective web parts in SharePoint is to use simple, understandable, and concise UI text. By keeping your message clear and easy to understand, you ensure that customers move through your experiences quickly and can identify the content they are looking for. This article provides guidance for writing UI text for key areas within SharePoint web parts.
 
 
 ## Capitalization
@@ -16,29 +17,31 @@ Use sentence casing (first letter of first word is capitalized, the rest all low
 Always capitalize:
 
 - The first word of a new sentence.
-- The word following a colon in a title or heading. For example, "Step 1: Begin by entering your account information".
-- Proper nouns, such as names of people, cities, and so on. 
+- The word following a colon in a title or heading. For example, "Step 1: Begin by entering your account information."
+- Proper nouns, such as the names of people, cities, and so on. 
  
 ![An image web part with sentence-style capitalization highlighted](../images/design-uitext-01.png)
+
+<br/>
+
 ![An image web part with sentence-style capitalization highlighted](../images/design-uitext-02.png)
 
 
 ## Punctuation
 
-Follow the basic rules of punctuation to avoid grammatical errors in your experience. The following table provides guidance and reminders about what punctuation to use to use when, and why.
+Follow the basic rules of punctuation to avoid grammatical errors in your experience. The following table provides guidance and reminders about what punctuation to use when, and why.
 
-| Punctuation  | Guidance                                                                                                                                                       | Example                                                                                                        |
-|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------|
-| Colons (:)   | Use colons if you are introducing a list in the web part description. Don't use colons in UI labels.                                                           | Choose one of the following: Cats, Dogs, Quokkas                                                                 |
-| Commas (,)   | Use serial commas (including before the word "and").                                                                                                           | I like cats, birds, and dogs.                                                                                  |
-| Ellipses (…) | Use ellipses to show truncation and for progress indicator strings. Do not use ellipses to indicate that the user must make further choices.          | Truncation: Last modified by John Armstr…<br/>Progress indicator: Uploading…                                       |
-| Periods (.)  | Don't use periods in titles, headings, or labels. Don't use periods for radio button options or checkboxes. Use periods as you normally would for descriptions. | Select the content you want to highlight and how you want it displayed. Use a filter to narrow your selection. |
+|Punctuation  | Guidance                                        | Example                                  |
+| Colons (:)  | Use colons if you are introducing a list in the web part description.<br/>Don't use colons in UI labels.| Choose one of the following: Cats, Dogs, Quokkas |                                                        |
+| Commas (,)  | Use serial commas (including before the word "and").  |I like cats, birds, and dogs.       |
+| Ellipses (…)| Use ellipses to show truncation and for progress indicator strings.<br/>Do not use ellipses to indicate that the user must make further choices.|Truncation: Last modified by John Armstr…<br/>Progress indicator: Uploading… |  
+| Periods (.) | Don't use periods in titles, headings, or labels. Don't use periods for radio button options or check boxes.<br/>Use periods as you normally would for descriptions. | Select the content that you want to highlight and how you want it displayed. Use a filter to narrow your selection. |
 
 
 
 ## Voice and tone
 
-Crafting the right tone in your product communication is essential to building a strong, lasting relationship with your audience. Try to keep your words crisp and clear, warm and relaxed, and approachable. How you talk to your audience influences how they will engage with your site and content, and how much value they will derive from it.
+Crafting the right tone in your product communication is essential to building a strong, lasting relationship with your audience. Try to keep your words crisp and clear, warm and relaxed, and approachable. How you talk to your audience influences how they engage with your site and content, and how much value they derive from it.
 
 **Do:**
 
@@ -70,6 +73,9 @@ If your design does warrant using pronouns, apply the following guidelines to ma
 - Avoid using "them"; instead, use words like "someone" or "people". For example, "Enter a user name and domain to give someone permission to use this PC."
 
 ![An image showing the correct use of the second person you and the incorrect use of the third person users in the UI.](../images/design-uitext-03.png)
+
+<br/>
+
 ![An image showing the correct use of the UI text Select the page you want people to see first](../images/design-uitext-04.png)
 
 
@@ -94,7 +100,7 @@ The following is an example of an error message that occurs when a user tries to
 
 | You can't edit right now                                                |
 |-------------------------------------------------------------------------|
-| User is currently editing this page. Please try again in a few minutes. |
+| Another user is currently editing this page. Please try again in a few minutes. |
 
 
 ## Links to help articles
@@ -110,7 +116,7 @@ Make an effort to link strategically to help articles. Try to anticipate where t
 
 **Don’t:**
 
-- Put a help article link next to every UI element. This will result in visual noise.
+- Put a help article link next to every UI element. This results in visual noise.
 - Include multiple links that go to the same target in the same UI.
 - Use "click here" for the text for your hyperlink. 
 
@@ -119,11 +125,11 @@ Make an effort to link strategically to help articles. Try to anticipate where t
 
 ## Hint text
 
-Hint text, or ghost text, is the text element you display in a UI element, typically a textbox, to help the user interact with the UI. The hint text gives information about what the user should enter. For example, it might mention field restrictions or show an example.
+Hint text, or ghost text, is the text element you display in a UI element, typically a text box, to help the user interact with the UI. The hint text gives information about what the user should enter. For example, it might mention field restrictions or show an example.
 
 **Do:**
 
-- Use hint text sparingly, and only if it will help the user. Not all UI elements require hint text. For some complex fields, hint text can help provide more context and clarity. For example, if you have a field that requires the user to enter a secured URL, the hint text https://www.example.com might be more helpful than the text **Enter secure URL here.**
+- Use hint text sparingly, and only if it helps the user. Not all UI elements require hint text. For some complex fields, hint text can help provide more context and clarity. For example, if you have a field that requires the user to enter a secured URL, the hint text https://www.example.com might be more helpful than the text **Enter secure URL here.**
 
 **Don't**
 
@@ -132,3 +138,7 @@ Hint text, or ghost text, is the text element you display in a UI element, typic
 The following hint text is for the embed web part. The text field can accept a secure website address or an iframe embed code. The text shows an example of both. 
 
 ![Web part hint text](../images/design-uitext-06.png)
+
+## See also
+
+- [Designing great SharePoint experiences](design-guidance-overview.md)

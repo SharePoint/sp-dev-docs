@@ -330,3 +330,6 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 
 <br/>
 
+## See also
+
+- [Designing great SharePoint experiences](design-guidance-overview.md)

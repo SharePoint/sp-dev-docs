@@ -84,3 +84,7 @@ All SharePoint pages are [responsive](grid-and-responsive-design.md) to allow th
 
 
 ![Mobile view of site](../images/design-authoring-mobile.png)
+
+## See also
+
+- [Designing great SharePoint experiences](design-guidance-overview.md)

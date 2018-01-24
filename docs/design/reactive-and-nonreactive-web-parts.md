@@ -1,6 +1,7 @@
 ---
 title: Reactive and nonreactive SharePoint web parts
-ms.date: 9/25/2017 
+description: Reactive web parts are client-side only; nonreactive web parts have elements that require a server to operate.
+ms.date: 01/23/2018 
 ---
 
 # Reactive and nonreactive SharePoint web parts
@@ -10,7 +11,7 @@ Reactive web parts are client-side only; nonreactive web parts have elements tha
 
 ## Reactive web parts
 
-Reactive web parts are fully client-side web parts. This means that each component configured in the property pane will reflect the change made within the web part on the page. For example, for the To-Do List web part, unchecking “Completed Tasks” will hide this view in the web part.
+Reactive web parts are fully client-side web parts. This means that each component configured in the property pane reflects the change made within the web part on the page. For example, for the To-Do List web part, unchecking “Completed Tasks” hides this view in the web part.
 
 ![A reactive web part](../images/design-reactive-01.png)
 
@@ -22,6 +23,7 @@ You can also customize the **Apply** button to be a more specific action. <!-- I
 
 ![A nonreactive web part with Apply and Cancel buttons](../images/design-reactive-02.png)
 
+<br/>
 
 The following examples show nonreactive web parts in the context of the [three property pane structures](design-a-web-part.md).
 
@@ -29,10 +31,18 @@ The following examples show nonreactive web parts in the context of the [three p
 
 ![A nonreactive web part with a single pane property structure](../images/design-reactive-03.png)
 
+<br/>
+
 **Accordion groups example**
 
 ![A nonreactive web part with an according groups pane property structure](../images/design-reactive-04.png)
 
+<br/>
+
 **Steps pane example**
 
 ![A nonreactive web part with a steps pane property structure](../images/design-reactive-05.png)
+
+## See also
+
+- [Designing great SharePoint experiences](design-guidance-overview.md)
