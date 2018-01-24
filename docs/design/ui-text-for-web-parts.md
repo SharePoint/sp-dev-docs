@@ -24,8 +24,7 @@ Always capitalize:
 
 <br/>
 
-![An image web part with sentence-style capitalization highlighted](../images/design-uitext-02.png)
-<img alt="Girl in a jacket" src="img_girl.jpg" width="400">
+<img alt="An image web part with sentence-style capitalization highlighted" src="../images/design-uitext-02.png" width="800">
 
 ## Punctuation
 
@@ -73,12 +72,11 @@ If your design does warrant using pronouns, apply the following guidelines to ma
 - Use "they" or "their" as a singular possessive modifier to avoid awkward "he/she" or "his/her" constructs. Ideally, rewrite the sentence as plural if possible.
 - Avoid using "them"; instead, use words like "someone" or "people". For example, "Enter a user name and domain to give someone permission to use this PC."
 
-![An image showing the correct use of the second person you and the incorrect use of the third person users in the UI.](../images/design-uitext-03.png)
+<img alt="An image showing the correct use of the second person you and the incorrect use of the third person users in the UI" src="../images/design-uitext-03.png" width="800">
 
 <br/>
 
-![An image showing the correct use of the UI text Select the page you want people to see first](../images/design-uitext-04.png)
-
+<img alt="An image showing the correct use of the UI text Select the page you want people to see first" src="../images/design-uitext-04.png" width="800">
 
 **Don't:**
 
@@ -121,8 +119,7 @@ Make an effort to link strategically to help articles. Try to anticipate where t
 - Include multiple links that go to the same target in the same UI.
 - Use "click here" for the text for your hyperlink. 
 
-![An image of the More information and examples as the help link text](../images/design-uitext-05.png)
-
+<img alt="An image of the More information and examples as the help link text" src="../images/design-uitext-05.png" width="800">
 
 ## Hint text
 
@@ -138,7 +135,7 @@ Hint text, or ghost text, is the text element you display in a UI element, typic
 
 The following hint text is for the embed web part. The text field can accept a secure website address or an iframe embed code. The text shows an example of both. 
 
-![Web part hint text](../images/design-uitext-06.png)
+<img alt="Web part hint text" src="../images/design-uitext-06.png" width="800">
 
 ## See also
 
