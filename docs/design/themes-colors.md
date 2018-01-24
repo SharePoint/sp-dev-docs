@@ -1,6 +1,7 @@
 ---
 title:  SharePoint themes and colors
-ms.date: 09/25/2017 
+description: Design principles that helped form the current SharePoint themes and color palette.
+ms.date: 01/23/2018
 ---
 
 # SharePoint themes and colors
@@ -15,23 +16,13 @@ Like the Microsoft brand palette, the SharePoint themes are designed to build on
 
 The following design principles helped form the current SharePoint themes and color palette.
 
-**Guided**
+**Guided**. Our theming system works at a global level so that updates can be made consistently across each site, allowing users to optimize their websites effortlessly. Our theming system operates in a controlled environment so that successful outcomes can be optimized quickly.
 
-Our theming system works at a global level so that updates can be made consistently across each site, allowing users to optimize their websites effortlessly.
+**Smart and efficient**. Our theming system expedites the site creation process by using smart algorithms to generate options that maximize aesthetic choices.
 
-Our theming system operates in a controlled environment so that successful outcomes can be optimized quickly.
+**Professional**. Our themes embody a professional look and feel that ensures coherency and conveys the brand of our enterprise audiences.
 
-**Smart and efficient**
-
-Our theming system expedites the site creation process by using smart algorithms to generate options that maximize aesthetic choices.
-
-**Professional**
-
-Our themes embody a professional look and feel that ensures coherency and conveys the brand of our enterprise audiences.
-
-**Accessible**
-
-Our built-in accessibility checker ensures universal design at all levels of default themes. For users who decide to customize, we provide helpful guidelines to design for accessibility.
+**Accessible**. Our built-in accessibility checker ensures universal design at all levels of default themes. For users who decide to customize, we provide helpful guidelines to design for accessibility.
 
 ## Colors
 
@@ -330,3 +321,6 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 
 <br/>
 
+## See also
+
+- [Designing great SharePoint experiences](design-guidance-overview.md)

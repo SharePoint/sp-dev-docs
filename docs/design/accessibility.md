@@ -1,9 +1,10 @@
 ---
 title: Accessibility in SharePoint web part design
-ms.date: 11/21/2017 
+description: Guidelines for adding accessibility to your web part.
+ms.date: 01/23/2018 
 ---
 
-<!--Based on how rough this content is in it's current state, i'm going to pull it from this initial release so we can edit and better prepare. -->
+<!--Based on how rough this content is in its current state, i'm going to pull it from this initial release so we can edit and better prepare. -->
 
 # Accessibility in SharePoint web part design
 
@@ -17,7 +18,7 @@ All Microsoft products must meet the requirements listed in the [Microsoft Acces
 
 <!-- Fabric components are not designed to be accessible already? And, shouldn't components that aren't based on Fabric also be accessible? -->
 
-If you're building a dialog box, file picker, or any other [Office UI Fabric](https://dev.office.com/fabric#/components) component, follow the guidance in this article to ensure that your content is accessible. 
+If you're building a dialog box, file picker, or any other [Office UI Fabric](https://developer.microsoft.com/en-us/fabric#/components) component, follow the guidance in this article to ensure that your content is accessible. 
 
 <!-- Not sure why we have that link? It currently goes to the OneNote file. Where is the Common UI Controls content? Is that related to accessibility? [v-licapu] - I agree; we shouldn't be linking to this unless it's live to external audiences; even I can't access it. I moved it to within the comment: 
 [Common UI Controls](https://microsoft.sharepoint.com/teams/STS/_layouts/OneNote.aspx?id=%2Fteams%2FSTS%2FShared%20Documents%2FSP%20Accessibility%2FAccessibility%20Guidance&wd=target%28Accessibility%20101.one%7C0005C142-938C-4411-B543-B9F4199E19B3%2FEverything%20you%20need%20to%20know%20about%20Accessibility%7CE099AFE3-8804-4E1F-BA50-99493AB8A3D0%2F%29 "Link to Common UI Controls") -->
@@ -28,7 +29,7 @@ If you're building a dialog box, file picker, or any other [Office UI Fabric](ht
 
 Test your web part first with [Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started) and Microsoft Edge, and then verify the accessibility experience with [JAWS](http://www.freedomscientific.com/Products/Blindness/JAWS).
 
-Narrator and Microsoft Edge are standards compliant. When you test with that combination, you are more likely to find issues, and you can validate that your site meets accessibility standards. 
+Narrator and Microsoft Edge are standards-compliant. When you test with that combination, you are more likely to find issues, and you can validate that your site meets accessibility standards. 
 
 JAWS is the market leader in screen readers. JAWS includes features that can improve the accessibility of some websites that aren't as accessible in other screen readers. Therefore testing in JAWS might not ensure that your site meets all accessibility requirements. 
  
@@ -60,9 +61,10 @@ The second tab is the command.
 The third tab is the navigation.
 -->
 
-*Figure 1. The tab stops on a SharePoint page*
 
 ![Image that shows the tab stops on a SharePoint page](https://i.imgur.com/Vn3VosN.png)
+
+<br/>
 
 ### Navigation within a control
 
@@ -70,50 +72,47 @@ You can use arrow keys to move to items in a control, such as choices in a menu,
 
 <!-- This image is not very clear. Do you need to have the "blank" list box on the left? -->
 
-*Figure 2. Using arrow keys to navigate within a control*
-
 ![Using arrow keys to navigate within a control](https://i.imgur.com/vF0Nk73.png)
+
+<br/>
 
 ### Selecting the current item
 
 Use the space bar to select or deselect the item currently in focus in a control.
 
-*Figure 3. Using the space bar to select an item in a list*
-
 ![Using the space bar to select an item in a list](https://i.imgur.com/j3fBKPl.png)
+
+<br/>
 
 ### Run a control
 
 Select Enter or the return key to run a control.
 
-*Figure 4. Selecting Enter to run a control*
-
 ![Press enter to run a control](https://i.imgur.com/s0nMPdT.png)
+
+<br/>
 
 ### Leave a control
 
 Select **Escape** to exit a control and return to the container.
 
-*Figure 5. Selecting Escape to leave a control and return to the container*
-
 ![Selecting Escape to leave a control and return to the container](https://i.imgur.com/uD99zIX.png)
+
+<br/>
 
 ### Go to the first or last item
 
 Select **Home** or **End** to go directly to the first or last item in a list, menu, and so on.
 
-*Figure 6. Selecting Home or End to go to the first or last item in a list*
-
 ![Selecting Home or End to go to the first or last item in a list](https://i.imgur.com/gGKsh74.png)
 
+<br/>
 
 ## Screen reader navigation
 
 Users who have vision impairments rely on screen readers to navigate the site UI. 
 
 <!-- Narrator isn't a third-party product. This image needs more text/explanation; please also clarify the alt text. Is this section important, or can it be removed, given the previous mention of testing with Narrator and JAWS? Again, the intent/target audience for this information isn't clear - is it for the user, or the designer? Can you explain why this information is important from the designer's POV? -->
-
-*Figure 7. Screen reader navigation of a SharePoint page*
 
 ![Screen reader navigation of a SharePoint page](https://i.imgur.com/ar23o3X.png)
 
@@ -133,6 +132,8 @@ A minimum level of contrast is essential to help users with vision impairments c
 <!-- ![Neutral, Theme, and Alert colors for minimum readable contrast](https://i.imgur.com/L7pSF1w.png)-->
 
 ![Colors for minimum readable contrast](../images/wcag-2aa-compliance-colors.png)
+
+<br/>
 
 ### Theme colors (Blue) and neutral colors
 
@@ -183,6 +184,7 @@ A minimum level of contrast is essential to help users with vision impairments c
 
 ### Alert colors
 
+
 <table>
 <tr>
 <td style="color:white; background-color:#952226">themeDark: #952226</td>
@@ -212,11 +214,13 @@ Use high contrast colors as a guide for color choices for components and states 
 
 <!-- In the left part of the image, I think the title should be "High Contrast Black". -->
 
-*Figure 8. High contrast black and high contrast white settings*
-
 ![High contrast black and high contrast white settings](https://i.imgur.com/qvTFzd4.png)
 
+<br/>
 
+## See also
+
+- [Designing great SharePoint experiences](design-guidance-overview.md)
 
 
 
