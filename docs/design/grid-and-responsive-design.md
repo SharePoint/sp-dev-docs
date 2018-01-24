@@ -165,7 +165,6 @@ The responsive grid for both team sites and communication sites adjusts when goi
 
 | Window width | Device                  | Breakpoint | Columns | Gutter | Max columns per section |
 |:-------------|:------------------------|:-----------|:-------:|:------:|:-----------------------:|
-|--------------|-------------------------|------------|---------|--------|-------------------------|
 | 320          | iPhone 5/SE,320x568     | Small      | 1       | N/A    | 1                       |
 | 480          | 6" device               | Medium     | 1       | N/A    | 1                       |
 | 640          | 8" device               | Large      | 12      | 16     | 2                       |

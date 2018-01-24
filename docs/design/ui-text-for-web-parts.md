@@ -31,11 +31,12 @@ Always capitalize:
 
 Follow the basic rules of punctuation to avoid grammatical errors in your experience. The following table provides guidance and reminders about what punctuation to use when, and why.
 
-|Punctuation  | Guidance                                        | Example                                  |
-| Colons (:)  | Use colons if you are introducing a list in the web part description.<br/>Don't use colons in UI labels.| Choose one of the following: Cats, Dogs, Quokkas |                                                        |
-| Commas (,)  | Use serial commas (including before the word "and").  |I like cats, birds, and dogs.       |
-| Ellipses (…)| Use ellipses to show truncation and for progress indicator strings.<br/>Do not use ellipses to indicate that the user must make further choices.|Truncation: Last modified by John Armstr…<br/>Progress indicator: Uploading… |  
-| Periods (.) | Don't use periods in titles, headings, or labels. Don't use periods for radio button options or check boxes.<br/>Use periods as you normally would for descriptions. | Select the content that you want to highlight and how you want it displayed. Use a filter to narrow your selection. |
+|Punctuation  |Guidance                                        |Example          |
+|-------------|------------------------------------------------|-----------------|          
+|Colons (:)  | Use colons if you are introducing a list in the web part description.<br/>Don't use colons in UI labels.| Choose one of the following: Cats, Dogs, Quokkas    |                        
+|Commas (,)  | Use serial commas (including before the word "and").  |I like cats, birds, and dogs. |
+|Ellipses (…)| Use ellipses to show truncation and for progress indicator strings.<br/>Do not use ellipses to indicate that the user must make further choices.|Truncation: Last modified by John Armstr…<br/>Progress indicator: Uploading… |  
+|Periods (.) | Don't use periods in titles, headings, or labels. Don't use periods for radio button options or check boxes.<br/>Use periods as you normally would for descriptions. | Select the content that you want to highlight and how you want it displayed. Use a filter to narrow your selection. |
 
 
 
