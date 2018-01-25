@@ -116,4 +116,5 @@ When you scaffold a new SharePoint Framework client-side web part, by default, i
 
 ## See also
 
+- [SharePoint themes and colors](../design/themes-colors.md)
 - [How to use Theme Colors in SPFX Web Parts](https://n8d.at/blog/how-to-use-theme-colors-in-spfx-web-parts/) by Stefan Bauer (Office Development MVP)
