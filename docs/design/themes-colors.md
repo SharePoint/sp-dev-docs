@@ -28,36 +28,25 @@ The following design principles helped form the current SharePoint themes and co
 
 The SharePoint color palette has been optimized for screens and devices, and to provide enough flexibility to ensure continuity with your brand. The SharePoint-provided colors also guarantee accessible and legible experiences.
 
-### Red
-
 ![SharePoint color palette Red D1343](../images/themes-colors-red-theme.png)
 
 <br/>
 
-### Orange
 ![SharePoint color palette Orange CA5010](../images/themes-colors-orange-theme.png)
 
 <br/>
-
-### Green
 
 ![SharePoint color palette Green 10893E](../images/themes-colors-green-theme.png)
 
 <br/>
 
-### Blue
-
 ![SharePoint color palette Blue 0078D7](../images/themes-colors-blue-theme.png)
 
 <br/>
 
-### Purple
-
 ![SharePoint color palette Purple 6B69D6](../images/themes-colors-purple-theme.png)
 
 <br/>
-
-### Gray
 
 ![SharePoint color palette Gray 5D5A5B](../images/themes-colors-gray-theme.png)
 
