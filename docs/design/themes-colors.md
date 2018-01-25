@@ -28,33 +28,11 @@ The following design principles helped form the current SharePoint themes and co
 
 The SharePoint color palette has been optimized for screens and devices, and to provide enough flexibility to ensure continuity with your brand. The SharePoint-provided colors also guarantee accessible and legible experiences.
 
+### Red
+
 ![SharePoint color palette Red D1343](../images/themes-colors-red-theme.png)
 
 <br/>
-
-![SharePoint color palette Orange CA5010](../images/themes-colors-orange-theme.png)
-
-<br/>
-
-![SharePoint color palette Green 10893E](../images/themes-colors-green-theme.png)
-
-<br/>
-
-![SharePoint color palette Blue 0078D7](../images/themes-colors-blue-theme.png)
-
-<br/>
-
-![SharePoint color palette Purple 6B69D6](../images/themes-colors-purple-theme.png)
-
-<br/>
-
-![SharePoint color palette Gray 5D5A5B](../images/themes-colors-gray-theme.png)
-
-<br/>
-
-
-
-### Red
 
 <table>
 <tr>
@@ -103,6 +81,10 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 <br/>
 
 ### Orange
+
+![SharePoint color palette Orange CA5010](../images/themes-colors-orange-theme.png)
+
+<br/>
 
 <table>
 <tr>
@@ -153,6 +135,10 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 
 ### Green
 
+![SharePoint color palette Green 10893E](../images/themes-colors-green-theme.png)
+
+<br/>
+
 <table>
 <tr>
 <td style="color:white; background-color:#094c23">themeDarker: #094c23</td>
@@ -201,6 +187,10 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 <br/>
 
 ### Blue
+
+![SharePoint color palette Blue 0078D7](../images/themes-colors-blue-theme.png)
+
+<br/>
 
 <table>
 <tr>
@@ -251,6 +241,10 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 
 ### Purple
 
+![SharePoint color palette Purple 6B69D6](../images/themes-colors-purple-theme.png)
+
+<br/>
+
 <table>
 <tr>
 <td style="color:white; background-color:#27268a">themeDarker: #27268a</td>
@@ -300,6 +294,10 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 
 ### Gray
 
+![SharePoint color palette Gray 5D5A5B](../images/themes-colors-gray-theme.png)
+
+<br/>
+
 <table>
 <tr>
 <td style="color:white; background-color:#323130">themeDarker: #323130</td>
@@ -348,4 +346,6 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 <br/>
 
 ## See also
+
+- [Accessibility](accessibility.md)
 - [Designing great SharePoint experiences](design-guidance-overview.md)
