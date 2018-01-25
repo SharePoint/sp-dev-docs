@@ -128,16 +128,15 @@ To be fully compliant with accessibility standards, include alt text and a compl
 
 A minimum level of contrast is essential to help users with vision impairments consume the content on the page. It is also important to aid readability in low light and glare situations. 
 
-<!-- Convert this image into a table, for accessibility. ;) -->
-<!-- ![Neutral, Theme, and Alert colors for minimum readable contrast](https://i.imgur.com/L7pSF1w.png)-->
+<!--Original image ![Neutral, Theme, and Alert colors for minimum readable contrast](https://i.imgur.com/L7pSF1w.png)-->
 
 ![Colors for minimum readable contrast](../images/wcag-2aa-compliance-colors.png)
+
+### Theme colors (blue) with neutral colors, followed by alert colors
 
 ![Theme colors (blue) with neutral colors and alert colors](../images/accessibility-blue-theme-and-alert-colors.png)
 
 <br/>
-
-### Theme colors (blue) with neutral colors
 
 <table>
 <tr>
@@ -184,7 +183,7 @@ A minimum level of contrast is essential to help users with vision impairments c
 </tr>
 </table>
 
-### Alert colors
+<br/>
 
 <table>
 <tr>
@@ -222,6 +221,7 @@ Use high contrast colors as a guide for color choices for components and states 
 
 ## See also
 
+- [SharePoint themes and colors](themes-colors.md)
 - [Designing great SharePoint experiences](design-guidance-overview.md)
 
 
