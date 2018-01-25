@@ -133,10 +133,6 @@ A minimum level of contrast is essential to help users with vision impairments c
 
 ![Colors for minimum readable contrast](../images/wcag-2aa-compliance-colors.png)
 
-<br/>
-
-### Theme colors with neutral colors and alert colors
-
 ![Theme colors (blue) with neutral colors and alert colors](../images/accessibility-blue-theme-and-alert-colors.png)
 
 <br/>
