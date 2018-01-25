@@ -137,3 +137,14 @@ On the contrary, you should rely on more modern approaches, like using the Remot
 
 <a name="SiteCollectionVsSite"></a>
 ## Site collections vs. sub sites
+Whenever you need to provision sites, there is a frequently asked question: "Is it better to create a Site Collection or a Sub Site?"
+Actually, very often the answer is "it depends". Nevertheless, here are some information that can help you make a choice:
+
+* Every Site Collection has unique users and permissions, while a sub site can inherit users and permissions from its parent site. Thus, for completely different target users, you should consider creating different Site Collections, rather than different Sub Sites within a unique Site Collection.
+* From a SharePoint Online perspecitve, the Sharing feature can be enabled/disabled at Site Collection level, but not at the Sub Site level.
+* When you define Site Columns, and Content Types at the Site Collection level, those will be inherited in all the Sub Sites, which is a good habit to have a shared Information Architecture across all of the sites of the same Site Collection.
+* Sub Sites of the same Site Collection, can share a common hierarchical navigation structure, which improves the overall User Experience.
+* From an on-premises perspective, every single Site Collection can be associated with a dedicate database file, which is not the case for a Sub Site, which can only stay in its parent Site Collection database. Thus, you can have more granural backup and maintenance policies at the Site Collection level, rather than at the Sub Site level, as long as you don't use third party management tools.
+* From an on-premises perspective, a Site Collection can be easily moved across different database files, while a Sub Site can just follow its parent Site Collection database.
+* Having multiple Sub Sites within a Site Collection allows you to leverage the Content Query Web Part (in the classic UI) to achieve better data aggregation across sites
+
