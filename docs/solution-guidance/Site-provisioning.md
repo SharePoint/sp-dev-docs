@@ -14,7 +14,8 @@ Nowadays there are many techniques to provision sites and their Information Arch
 Here follow some general high-level guidelines and rules that matter whenever you need to provision a site.
 * Try to isolate the Information Architecture from the other elements like branding, custom content, UI elements, etc. so that you can do proper maintenance of the IA, independently from the other elements.
 * Within the Information Architecture define Site Columns and Content Types at the Site Collection level only, and reuse them in any sub Site of the Site Collection, rather than having Site Columns and Content Types defined at the sub Site level. 
-> [!NOTE] For further details about Site Collections vs. Sub Sites, please read the [dedicated section in this document](#SiteCollectionVsSite).
+> [!NOTE]
+> For further details about Site Collections vs. Sub Sites, please read the [dedicated section in this document](#SiteCollectionVsSite).
 * Avoid renaming or changing out-of-the-box artifacts, prefer using custom elements instead. For example, avoid renaming the *Title* field of any content type, because this could lead to unpredictable issues, considering that the existence of the *Title* field is often assumed as a guarantee by developers.
 * Try to use a provisioning technique that is open to versioning of artifacts and life cycle management of the templates, in order to support customers' requests on the go.
 
