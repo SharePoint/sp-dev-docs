@@ -172,7 +172,7 @@ Here is an example of the JSON returned after calling **GetSiteScriptMetadata**.
 
 ## UpdateSiteScript
 
-Updates a site script with new values.
+Updates a site script with new values. In the REST call all parameters are optional except the site script Id.
 
 ### Parameters
 
@@ -369,7 +369,7 @@ Here is an example of the JSON returned after calling **GetSiteDesignMetadata**.
 
 ## UpdateSiteDesign
 
-Updates a site design with new values.
+Updates a site design with new values. In the REST call all parameters are optional except the site script Id. NOTE: if you had previously set the IsDefault parameter to TRUE and wish it to remain true, you must pass in this parameter again (otherwise it will be reset to FALSE). 
 
 ### Parameters
 
