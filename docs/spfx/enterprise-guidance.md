@@ -1,4 +1,4 @@
-﻿---
+---
 title: SharePoint Framework (SPFx) enterprise guidance
 description: The background, benefits, and knowledge that administrators need to successfully manage SharePoint Framework-based components within their SharePoint environments.
 ms.date: 01/25/2018
@@ -7,8 +7,6 @@ ms.prod: sharepoint
 
 
 # SharePoint Framework (SPFx) enterprise guidance
-
-## Introduction
 
 The SharePoint Framework (or SPFx) is a new development model for SharePoint user interface extensibility.  It is used by first and third parties, complementing already existing user interface models such as the SharePoint Add-in model. The SharePoint Framework allows for a structured and supported approach to enrich and extend the user interface of SharePoint, by using client-side frameworks with initial support for client-side web parts. Based on modern web technology standards, it offers a unique set of features to make SharePoint customizations more broadly available for developers and enterprises, but at the same time aligns with previous models and patterns in SharePoint. In this document, we provide administrators with the background, benefits, and knowledge they need to successfully manage SharePoint Framework-based components within their SharePoint environments.
 
