@@ -1,6 +1,7 @@
 ---
 title: Team-based development on the SharePoint Framework
-ms.date: 09/25/2017
+description: Prepare your dev environment, work with internal packages, ensure code consistency and quality, and upgrade projects.
+ms.date: 01/25/2018
 ms.prod: sharepoint
 ---
 
@@ -9,9 +10,9 @@ ms.prod: sharepoint
 
 SharePoint Framework is a new development model for building SharePoint customizations. Unlike other SharePoint development models available to date, the SharePoint Framework focuses on client-side development and is built on top of popular open source tools such as gulp and webpack. One big benefit of this change is that developers on any platform can build SharePoint customizations.
 
-SharePoint Framework is a development model, and despite the differences in the underlying technology, the same concepts apply when using it for building solutions, as to other development models SharePoint developers used in the past. Developers use the SharePoint Framework toolchain to build and test their solutions and once ready, they hand over the solution package to be deployed on the SharePoint tenant for further testing and release.
+SharePoint Framework is a development model, and despite the differences in the underlying technology, the same concepts apply when using it for building solutions as to other development models SharePoint developers used in the past. Developers use the SharePoint Framework toolchain to build and test their solutions and once ready, they hand over the solution package to be deployed on the SharePoint tenant for further testing and release.
 
-SharePoint Framework consists of a few different packages. These packages, each in its own specific version, make up a release of the SharePoint Framework. For example the General Availability release of the SharePoint Framework consists of the following package versions:
+SharePoint Framework consists of a few different packages. These packages, each in its own specific version, make up a release of the SharePoint Framework. For example, the General Availability release of the SharePoint Framework consists of the following package versions:
 
 - @microsoft/sp-client-base v1.0.0
 - @microsoft/sp-core-library v1.0.0
@@ -20,7 +21,7 @@ SharePoint Framework consists of a few different packages. These packages, each 
 - @microsoft/sp-module-interfaces v1.0.0
 - @microsoft/sp-webpart-workbench v1.0.0
 
-For a project to target a specific release of the SharePoint Framework it has to reference all the different packages in the correct versions. When scaffolding new projects, the SharePoint Framework Yeoman generator automatically adds the necessary references to the package from the corresponding release of the SharePoint Framework. But when upgrading the project to a newer version of the SharePoint Framework developers have to pay extra attention to correctly update version numbers of the SharePoint Framework packages.
+For a project to target a specific release of the SharePoint Framework, it has to reference all the different packages in the correct versions. When scaffolding new projects, the SharePoint Framework Yeoman generator automatically adds the necessary references to the package from the corresponding release of the SharePoint Framework. But when upgrading the project to a newer version of the SharePoint Framework, developers have to pay extra attention to correctly update version numbers of the SharePoint Framework packages.
 
 ## Preparing the development environment
 
@@ -36,7 +37,7 @@ Building SharePoint Framework solutions requires developers to use a certain set
 
 SharePoint Framework requires Node.js to be installed on the developer machine. Node.js is used as the runtime for design-time tools used to build and package the project. Node.js is installed globally on the developer machine and there are solutions available to support running multiple versions of Node.js side-by-side if necessary.
 
-> See more information about [installing Node.js and the supported versions](./set-up-your-development-environment.md).
+For more information, see [installing Node.js and the supported versions](./set-up-your-development-environment.md).
 
 #### npm
 
