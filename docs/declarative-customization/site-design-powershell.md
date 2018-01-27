@@ -9,7 +9,7 @@ ms.date: 01/08/2018
 > [!NOTE]
 > Site designs and site scripts are in preview and are subject to change. They are currently only supported for use in production environments in Targeted Release.
 
-Use PowerShell cmdlets to create, retrieve, and remove site designs and site scripts.
+Use PowerShell cmdlets to create, retrieve, update, and remove site designs and site scripts.
 
 ## Getting started
 
@@ -34,10 +34,7 @@ The following cmdlets are available for managing site designs and site scripts f
 - **Remove-SPOSiteScript**
 - **Revoke-SPOSiteDesignRights**
 - **Set-SPOSiteDesign**
-
-<!--
 - **Set-SPOSiteScript**
--->
 
 <!-- TBD document pipe bind parameters -->
 
@@ -349,7 +346,59 @@ C:\> Set-SPOSiteDesign `
   -PreviewImageUrl "https://contoso.sharepoint.com/SiteAssets/site-preview.png" `
   -PreviewImageAltText "site preview - version 2"
 ```
+## Set-SPOSiteScript
 
+Updates a previously uploaded site script.
+
+```powershell
+Set-SPOSiteScript
+  -Title <string>
+  -Content <string>
+  [-Description <string>]
+  [<CommonParameters>]
+```
+
+### Parameters
+
+|Parameter     | Description  |
+|--------------|--------------|
+| -Title       | The display name of the site design. |
+| -Content     | JSON value that describes the script. For more information, see [JSON reference](site-design-json-schema.md).|
+| -Description | A description of the script. |
+
+The following example updates a previously created site script. Any site designs referencing it will executed the updated script. 
+
+```json
+{
+    "$schema": "schema.json",
+        "actions": [
+            {
+                "verb": "addNavLink",
+                "url": "/Custom Library",
+                "displayName": "Custom Library Updated",
+                "isWebRelative": true
+            },
+            {
+                "verb": "addNavLink",
+                "url": "/Lists/Custom List",
+                "displayName": "Custom List Updated",
+                "isWebRelative": true
+            },
+            {
+                "verb": "applyTheme",
+                themeName: "Contoso Explorers"
+            }
+        ],
+            "bindata": { },
+    "version": 2
+}
+```
+Copy to clipboard
+
+```powershell
+C:\> $script = Get-Clipboard -Raw
+C:\> Set-SPOSiteScript -Identity 7647d3d6-1046-41fe-a798-4ff66b099d12 -Content $script -Description "Update site script to change links and apply Contoso Explorers theme"
+```
 
 ## See also
 
