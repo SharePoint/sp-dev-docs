@@ -28,7 +28,7 @@ The most common way of referencing existing JavaScript libraries in SharePoint F
 
 3. Reference Angular in your web part by using the `import` statement:
 
-  ```ts
+  ```typescript
   import { Version } from '@microsoft/sp-core-library';
   import {
     BaseClientSideWebPart,
@@ -139,7 +139,7 @@ The complete **config/config.json** file would then look similar to:
 
 Reference Angular in your web part, just like you did previously:
 
-```ts
+```typescript
   import { Version } from '@microsoft/sp-core-library';
   import {
     BaseClientSideWebPart,
