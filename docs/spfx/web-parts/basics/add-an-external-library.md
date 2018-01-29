@@ -143,6 +143,8 @@ var ContosoJS = {
 };
 ```
 
+<br/>
+
 1. Create typings for the script in a file called **contoso.d.ts** in the web part folder.
 
     ```typescript
@@ -205,8 +207,6 @@ Contoso.EventList = {
 }
 ```
 
-<br/>
-
 **ContosoCore.js**
 
 ```javascript
@@ -216,6 +216,8 @@ var Contoso = {
     }
 };
 ```
+
+<br/>
 
 1. Add or create typings for this class. In this case, you will create `Contoso.d.ts`, which contains typings for both JavaScript files.
 
@@ -270,6 +272,8 @@ Loading SharePoint JSOM is essentially the same scenario as loading non-AMD scri
 
 > [!IMPORTANT] 
 > Note that the following approach causes errors in classic SharePoint pages, where SharePoint JSOM is already loaded. If you require your web part to work with both classic and modern pages, you should first check if SharePoint JSOM is already available, and if it isn't, load it dynamically by using the **SPComponentLoader**.
+
+<br/>
 
 1. Install typings for Microsoft Ajax, which is a dependency for JSOM typings:
 
@@ -334,6 +338,8 @@ In this example, you have a folder **src/strings/**. In this folder are several 
   });
 ```
 
+<br/>
+
 1. Edit the **config.json** file. Add an entry to **localizedResources**. `{locale}` is a placeholder token for the locale name:
 
     ```json
@@ -368,6 +374,7 @@ In this example, you have a folder **src/strings/**. In this folder are several 
     ```typescript
     alert(strings.initialPrompt);
     ```
+
 ## See also
 
 - [SharePoint Framework Overview](../../sharepoint-framework-overview.md)
