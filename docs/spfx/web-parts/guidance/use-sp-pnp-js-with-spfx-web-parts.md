@@ -1,6 +1,6 @@
 ---
 title: Use sp-pnp-js with SharePoint Framework web parts
-description: 
+description: This library provides a fluent API to make building your REST queries intuitive and supports batching and caching. 
 ms.date: 01/29/2018
 ms.prod: sharepoint
 ---
@@ -374,11 +374,11 @@ When you are ready to deploy your solution and want to build by using the `--shi
 
 In this configuration, we use the public CDN, but the URL can be an internal path or any other location you would like to use. Be sure, however, to update the version number in the URL to match the version you are targeting.
 
-## Improve the example - mock data
+## Improve the mock data example
 
 Ideally, the sample should work within both the local Workbench as well as the SharePoint-hosted Workbench. To enable this, we need to mock our ViewModel and make an update to the web part code as outlined in the following sections.
 
-### Mock ViewModel
+### Add mock ViewModel file
 
 Add a new file named **MockSpPnPjsExampleViewModel.ts** alongside the other web part files. Update the content of this file using the following code. This provides the same set of functionality and works in the local environment, but does not rely on SharePoint being available.
 
@@ -505,6 +505,8 @@ environment the web part is running in:
   ```sh
   gulp serve
   ```
+
+  <br/>
 
   ![Project as it appears running in the local workbench with mock data](../../../images/sp-pnp-js-guide-with-mock-data.png)
 
