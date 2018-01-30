@@ -92,7 +92,7 @@ We recommend that you install the latest Office UI Fabric React package and plac
 
 After the Fabric React package is installed, you can import the required components from the Fabric React bundle.
 
-```Javascript
+```js
 //import Button component from Fabric React Button bundle
 import { Button } from 'office-ui-fabric-react/lib/Button';
 
@@ -178,7 +178,7 @@ The rest of the page would contain unscoped Office UI Fabric Core styles. This w
 
 *Overriding* Fabric Core styles would not be supported.  
 
-```Javascript
+```js
 // Sample of how the scoping would work.
 import { SPComponentLoader } from '@microsoft/sp-loader';
 
