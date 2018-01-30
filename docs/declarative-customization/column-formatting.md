@@ -596,7 +596,7 @@ This example relies on two number fields, `Before` and `After`, for which the va
 ## Create a button to launch a Flow
 The following screenshot shows a list with a Flow button added to the Action column:
 
-![screenshot of the sample](../../../../../sp-dev-column-formatting/blob/master/samples/generic-start-flow/screenshot.png)
+![screenshot of the sample](../images/sp-columnformatting-flow.png)
 
 You can use column formatting to create buttons that, when clicked, run Flows on the corresponding list item.  If the Flow is configured to gather data from the end user before running, the Flow Launch Panel will be displayed after clicking the button.  Otherwise, the Flow will just run.
 
