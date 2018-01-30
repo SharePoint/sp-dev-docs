@@ -607,7 +607,7 @@ To use the sample below, you must substitute the ID of the Flow you want to run.
 2. Click on the Flow you want to run
 3. Copy the ID from the end of the URL.  
 
-```
+```JSON
 {
 	"$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json",
 	"elmType": "span",
