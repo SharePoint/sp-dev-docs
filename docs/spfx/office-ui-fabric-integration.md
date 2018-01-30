@@ -16,7 +16,12 @@ The challenge with Global CSS styles is explained in the following presentation 
 
 To achieve reliability, one of the main problems we need to solve is that of **Global CSS styles**. This accounts to not using global class names in the HTML markup and instead using Fabric Core mixins and variables in the Sass declaration file. This involves importing the Fabric Core's Sass declarations in your Sass file and then consuming the variables and mixins appropriately. 
 
-The goal of the SharePoint Framework is to allow both Microsoft and customers to build rich, beautiful, and consistent user experiences on top of SharePoint. In accordance with these goals, following are the key design principles:
+In order to achieve reliability, one of the main problems we need to solve is that of **Global CSS styles**. This accounts to not using global class names in the HTML markup and instead using Fabric Core mixins and variables in the SASS declaration file. This involves importing the Fabric Core's SASS declarations in your SASS file and then consuming the variables and mixins appropriately. 
+
+## Goals
+
+The goal of the SharePoint Framework is to allow both Microsoft and customers to build rich, beautiful, and consistent user experiences on top of SharePoint. 
+In accordance with these goals, following are the key design principles:
 
 * Customers should be able to smoothly and reliably consume Fabric Core and Fabric React in their solutions.
 * Microsoft will roll out updated experiences that consume updated versions of Fabric Core and Fabric React in SharePoint without conflicting with customer's solutions.

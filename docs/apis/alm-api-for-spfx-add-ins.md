@@ -33,7 +33,7 @@ ALM APIs are natively provided using REST APIs, but there is also additional CSO
 Adding solution to the tenant app catalog. This API is designed to be executed in the context of the tenant app catalog site.
 
 ```
-/_api/web/tenantappcatalog/Add(overwrite=true, url='test.txt')";
+url: /_api/web/tenantappcatalog/Add(overwrite=true, url='test.txt')
 method: POST
 binaryStringRequestBody: true
 body: 'byte array of the file'
@@ -44,7 +44,7 @@ body: 'byte array of the file'
 Enable solution to be available to install to specific sites. This API is designed to be executed in the context of the tenant app catalog site.
 
 ```
-/_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Deploy";
+url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Deploy
 ```
 
 > [!NOTE]
@@ -55,7 +55,7 @@ Enable solution to be available to install to specific sites. This API is design
 Retract solution to be available from the sites. This API is designed to be executed in the context of the tenant app catalog site.
 
 ```
-/_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Retract";
+url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Retract
 ```
 
 > [!NOTE]
@@ -66,7 +66,7 @@ Retract solution to be available from the sites. This API is designed to be exec
 Remove the solution package from the tenant app catalog. This API is designed to be executed in the context of the tenant app catalog site.
 
 ```
-/_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Remove";
+url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Remove
 ```
 
 > [!NOTE]
@@ -95,7 +95,7 @@ method: GET
 Install a solution package with specific identifier from tenant app catalog to the site based on URL context. This REST call can be executed in the context of the site where the install operation should happen.
 
 ```
-url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Install";
+url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Install
 method: POST
 ```
 
@@ -104,7 +104,7 @@ method: POST
 Upgrade a solution package from the site to a newer version available in the tenant app catalog. This REST call can be executed in the context of the site where the upgrade operation should happen.
 
 ```
-url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Upgrade";
+url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Upgrade
 method: POST
 ```
 
@@ -113,7 +113,7 @@ method: POST
 Uninstall a solution package from the site. This REST call can be executed in the context of the site where the uninstall operation should happen.
 
 ```
-url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Uninstall";
+url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Uninstall
 method: POST
 ```
 > [!NOTE]
@@ -128,7 +128,7 @@ Using [PnP PowerShell](https://msdn.microsoft.com/en-us/pnp_powershell/pnp-power
 Adding your app (.sppkg file, .app file) to the tenant app catalog is a per-requisite to later on make your app available for use in your SharePoint sites. Doing so can be done using below simple cmdlet:
 
 ```PowerShell
-Add-PnPApp -Path ./myapp.sppkg"
+Add-PnPApp -Path ./myapp.sppkg
 ```
 
 Once added you'll need to continue with publishing your app, effectively making the app available to be used by the users of your tenant. Below PnP PowerShell cmdlets shows how this can be done:

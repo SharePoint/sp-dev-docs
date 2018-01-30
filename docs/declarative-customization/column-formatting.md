@@ -594,6 +594,51 @@ This example relies on two number fields, `Before` and `After`, for which the va
 }
 ```
 
+## Create a button to launch a Flow
+The following screenshot shows a list with a Flow button added to the Action column:
+
+![screenshot of the sample](../images/sp-columnformatting-flow.png)
+
+You can use column formatting to create buttons that, when clicked, run Flows on the corresponding list item.  If the Flow is configured to gather data from the end user before running, the Flow Launch Panel will be displayed after clicking the button.  Otherwise, the Flow will just run.
+
+To use the sample below, you must substitute the ID of the Flow you want to run.  This ID is contained within the `customRowAction` attribute inside the `button` element.  To obtain a Flow's ID:
+
+1. Click Flow > See your flows in the SharePoint list where the Flow is configured.
+2. Click on the Flow you want to run
+3. Copy the ID from the end of the URL.  
+
+```
+{
+	"$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json",
+	"elmType": "span",
+	"style": {
+		"color": "#0078d7"
+	},
+	"children": [
+    {
+		"elmType": "span",
+		"attributes": {
+			"iconName": "Flow"
+		}
+    },
+    {
+		"elmType": "button",
+		"style": {
+			"border": "none",
+			"background-color": "transparent",        
+			"color": "#0078d7",    
+			"cursor": "pointer"
+		},
+		"txtContent": "Send to Manager",
+		"customRowAction": {
+			"action": "executeFlow",
+			"actionParams": "{\"id\": \"183bedd4-6f2b-4264-855c-9dc7617b4dbe\"}"
+		}          
+    }        
+  ]
+}
+```
+
 ## Supported Column Types
 The following column types support column formatting:
 * Single line of text 
@@ -667,6 +712,7 @@ Specifies the type of element to create. Valid elements include:
 - img
 - svg
 - path
+- button
 
 Any other value will result in an error.
 

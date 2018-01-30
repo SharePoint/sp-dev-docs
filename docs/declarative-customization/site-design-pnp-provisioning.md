@@ -185,6 +185,7 @@ You'll need to download the PnP PowerShell module so that you can upload it for 
     ```powershell
     Save-Module -Name SharePointPnPPowerShellOnline -Path [pathtoyourfolder]
     ```
+
 The PowerShell module files will download to a folder within the folder that you created. 
 
 Next, upload the files so that your Azure Function can use the module.
@@ -254,24 +255,24 @@ To create a site design, you first need to create a site script. A site design i
 
     `https://prod-27.westus.logic.azure.com:443/workflows/ef7434cf0d704dd48ef5fb6...oke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun`
 
-        ```json
+    ```json
+    {
+        "$schema": "schema.json",
+        "actions": [
         {
-            "$schema": "schema.json",
-            "actions": [
-            {
-                    "verb": "triggerFlow",
-                    "url": "[paste the workflow trigger URL here]",
-                    "name": "Apply Template",
-                    "parameters": {
-                        "event":"",
-                        "product":""
-                    }
-            }
-            ],
-            "bindata": {},
-            "version": 1
+                "verb": "triggerFlow",
+                "url": "[paste the workflow trigger URL here]",
+                "name": "Apply Template",
+                "parameters": {
+                    "event":"",
+                    "product":""
+                }
         }
-        ```
+        ],
+        "bindata": {},
+        "version": 1
+    }
+    ```
 
 1. Select the JSON again and copy it again to your clipboard.
 1. Open PowerShell and enter the following to copy the script into a variable and create the site script:
