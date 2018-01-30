@@ -205,7 +205,7 @@ Example:
 
 ## Apply a theme
 
-Use the **applyTheme** verb to add a theme to the site. For more information on themes, see [SharePoint site theming](site-theming/sharepoint-site-theming-overview.md).
+Use the **applyTheme** verb to add a custom theme to the site. For more information on how to construct and upload these themes, see [SharePoint site theming](site-theming/sharepoint-site-theming-overview.md). Note that this site action only works for applying custom themes; to apply one of our in-product SharePoint themes, create a copy as a custom one and reference that one.
 
 JSON value:
 

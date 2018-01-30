@@ -1,6 +1,7 @@
 ---
 title:  SharePoint themes and colors
-ms.date: 09/25/2017 
+description: Design principles that helped form the current SharePoint themes and color palette.
+ms.date: 01/24/2018
 ---
 
 # SharePoint themes and colors
@@ -15,29 +16,23 @@ Like the Microsoft brand palette, the SharePoint themes are designed to build on
 
 The following design principles helped form the current SharePoint themes and color palette.
 
-**Guided**
+**Guided**. Our theming system works at a global level so that updates can be made consistently across each site, allowing users to optimize their websites effortlessly. Our theming system operates in a controlled environment so that successful outcomes can be optimized quickly.
 
-Our theming system works at a global level so that updates can be made consistently across each site, allowing users to optimize their websites effortlessly.
+**Smart and efficient**. Our theming system expedites the site creation process by using smart algorithms to generate options that maximize aesthetic choices.
 
-Our theming system operates in a controlled environment so that successful outcomes can be optimized quickly.
+**Professional**. Our themes embody a professional look and feel that ensures coherency and conveys the brand of our enterprise audiences.
 
-**Smart and efficient**
-
-Our theming system expedites the site creation process by using smart algorithms to generate options that maximize aesthetic choices.
-
-**Professional**
-
-Our themes embody a professional look and feel that ensures coherency and conveys the brand of our enterprise audiences.
-
-**Accessible**
-
-Our built-in accessibility checker ensures universal design at all levels of default themes. For users who decide to customize, we provide helpful guidelines to design for accessibility.
+**Accessible**. Our built-in accessibility checker ensures universal design at all levels of default themes. For users who decide to customize, we provide helpful guidelines to design for accessibility.
 
 ## Colors
 
 The SharePoint color palette has been optimized for screens and devices, and to provide enough flexibility to ensure continuity with your brand. The SharePoint-provided colors also guarantee accessible and legible experiences.
 
 ### Red
+
+![SharePoint color palette Red D1343](../images/themes-colors-red-theme.png)
+
+<br/>
 
 <table>
 <tr>
@@ -86,6 +81,10 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 <br/>
 
 ### Orange
+
+![SharePoint color palette Orange CA5010](../images/themes-colors-orange-theme.png)
+
+<br/>
 
 <table>
 <tr>
@@ -136,6 +135,10 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 
 ### Green
 
+![SharePoint color palette Green 10893E](../images/themes-colors-green-theme.png)
+
+<br/>
+
 <table>
 <tr>
 <td style="color:white; background-color:#094c23">themeDarker: #094c23</td>
@@ -184,6 +187,10 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 <br/>
 
 ### Blue
+
+![SharePoint color palette Blue 0078D7](../images/themes-colors-blue-theme.png)
+
+<br/>
 
 <table>
 <tr>
@@ -234,6 +241,10 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 
 ### Purple
 
+![SharePoint color palette Purple 6B69D6](../images/themes-colors-purple-theme.png)
+
+<br/>
+
 <table>
 <tr>
 <td style="color:white; background-color:#27268a">themeDarker: #27268a</td>
@@ -283,6 +294,10 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 
 ### Gray
 
+![SharePoint color palette Gray 5D5A5B](../images/themes-colors-gray-theme.png)
+
+<br/>
+
 <table>
 <tr>
 <td style="color:white; background-color:#323130">themeDarker: #323130</td>
@@ -330,3 +345,7 @@ The SharePoint color palette has been optimized for screens and devices, and to 
 
 <br/>
 
+## See also
+
+- [Accessibility](accessibility.md)
+- [Designing great SharePoint experiences](design-guidance-overview.md)

@@ -1,13 +1,14 @@
 ---
 title: Reference third-party CSS styles in SharePoint Framework web parts
-ms.date: 09/25/2017
+description: Two approaches to including third-party CSS styles in web parts, and how each approach affects the resulting web part bundle.
+ms.date: 01/29/2018
 ms.prod: sharepoint
 ---
 
 
 # Reference third-party CSS styles in SharePoint Framework web parts
 
-There are many third-party libraries that you can leverage to build rich SharePoint Framework client-side web parts. In addition to scripts, these libraries often contain additional assets such as stylesheets. This article shows two different approaches to include third-party CSS styles in web parts and how each approach affects the resulting web part bundle. The example web part discussed in this article uses jQuery and jQuery UI to display an accordion.
+To build rich SharePoint Framework client-side web parts, you can leverage many third-party libraries. In addition to scripts, these libraries often contain additional assets such as stylesheets. This article describes two approaches to including third-party CSS styles in web parts, and how each approach affects the resulting web part bundle. The example web part discussed in this article uses jQuery and jQuery UI to display an accordion.
 
 ![jQuery UI accordion rendered by a SharePoint Framework client-side web part](../../../images/thirdpartycss-accordion-styled.png)
 
@@ -18,49 +19,51 @@ There are many third-party libraries that you can leverage to build rich SharePo
 
 ### Create a new project
 
-Start by creating a new folder for your project.
+1. Create a new folder for your project.
 
-```sh
-md js-thirdpartycss
-```
+  ```sh
+  md js-thirdpartycss
+  ```
 
-Go to the project folder.
+2. Go to the project folder.
 
-```sh
-cd js-thirdpartycss
-```
+  ```sh
+  cd js-thirdpartycss
+  ```
 
-In the project folder run the SharePoint Framework Yeoman generator to scaffold a new SharePoint Framework project.
+3. In the project folder, run the SharePoint Framework Yeoman generator to scaffold a new SharePoint Framework project.
 
-```sh
-yo @microsoft/sharepoint
-```
+  ```sh
+  yo @microsoft/sharepoint
+  ```
 
-When prompted, enter the following values:
+4. When prompted, enter the following values:
 
-- **js-thirdpartycss** as your solution name
-- **Use the current folder** for the location to place the files
-- **no javaScript web framework** as the starting point to build the web part
-- **jQuery accordion** as your web part name
-- **Shows jQuery accordion** as your web part description
+  - **js-thirdpartycss** as your solution name
+  - **Use the current folder** for the location to place the files
+  - **no javaScript web framework** as the starting point to build the web part
+  - **jQuery accordion** as your web part name
+  - **Shows jQuery accordion** as your web part description
 
-![The SharePoint Framework Yeoman generator with the default choices](../../../images/thirdpartycss-yeoman.png)
+  ![The SharePoint Framework Yeoman generator with the default choices](../../../images/thirdpartycss-yeoman.png)
 
-Once the scaffolding completes, lock down the version of the project dependencies by running the following command:
+5. After the scaffolding completes, lock down the version of the project dependencies by running the following command:
 
-```sh
-npm shrinkwrap
-```
+  ```sh
+  npm shrinkwrap
+  ```
 
-Next, open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots but you can use any editor you prefer.
+6. Open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor that you prefer.
 
-![The SharePoint Framework project open in Visual Studio Code](../../../images/thirdpartycss-visual-studio-code.png)
+  ![The SharePoint Framework project open in Visual Studio Code](../../../images/thirdpartycss-visual-studio-code.png)
+
+  <br/>
 
 ### Add test content
 
-In the code editor open the **./src/webparts/jQueryAccordion/JQueryAccordionWebPart.ts** file. Change the **render** method to:
+In the code editor, open the **./src/webparts/jQueryAccordion/JQueryAccordionWebPart.ts** file, and then change the **render** method to:
 
-```ts
+```typescript
 export default class JQueryAccordionWebPart extends BaseClientSideWebPart<IJQueryAccordionWebPartProps> {
   // ...
   public render(): void {
@@ -117,90 +120,94 @@ export default class JQueryAccordionWebPart extends BaseClientSideWebPart<IJQuer
 }
 ```
 
+<br/>
+
 If you build the project now, you get an error stating that **$** is undefined. This is because the project refers to jQuery without loading it first. There are two approaches to loading the libraries. Neither approach impacts how you use the scripts in code.
 
 ## Approach 1: Include third-party libraries in the bundle
 
-The easiest way to reference a third-party library in SharePoint Framework projects is to include it in the generated bundle. The library is installed as a package and referenced in the project. When bundling the project, Webpack will pick up the reference to the library and include it in the generated bundle.
+The easiest way to reference a third-party library in SharePoint Framework projects is to include it in the generated bundle. The library is installed as a package and referenced in the project. When bundling the project, Webpack picks up the reference to the library and includes it in the generated bundle.
 
 ### Install libraries
 
-Install jQuery and jQuery UI by running the following command:
+1. Install jQuery and jQuery UI by running the following command:
 
-```sh
-npm install jquery jquery-ui --save
-```
+  ```sh
+  npm install jquery jquery-ui --save
+  ```
 
-Because you are building your web part in TypeScript you also need TypeScript typings for jQuery that you can install by running the following command:
+2. Because you are building your web part in TypeScript, you also need TypeScript typings for jQuery that you can install by running the following command:
 
-```sh
-npm install @types/jquery --save
-```
+  ```sh
+  npm install @types/jquery --save
+  ```
 
 ### Reference libraries in the web part
 
-After installing libraries, the next step is to reference them in the project. In the code editor open the **./src/webparts/jQueryAccordion/JQueryAccordionWebPart.ts** file. In its top section, just below the last **import** statement, add references to jQuery and jQuery UI.
+After installing libraries, the next step is to reference them in the project. 
 
-```ts
-import * as $ from 'jquery';
-require('../../../node_modules/jquery-ui/ui/widgets/accordion');
-```
+1. In the code editor, open the **./src/webparts/jQueryAccordion/JQueryAccordionWebPart.ts** file. In its top section, just under the last **import** statement, add references to jQuery and jQuery UI.
 
-Because you installed the TypeScript typings for the jQuery package, you can reference it using an **import** statement. However, the jQuery UI package is built differently. Unlike how many modules are structured, there is no main entry point with a reference to all components that you can use. Instead you refer directly to the specific component that you want to use. The entry point of that component contains all references to dependencies that it needs to work correctly.
+  ```typescript
+  import * as $ from 'jquery';
+  require('../../../node_modules/jquery-ui/ui/widgets/accordion');
+  ```
 
-Confirm that the project is building by running the following command:
+  Because you installed the TypeScript typings for the jQuery package, you can reference it by using an **import** statement. However, the jQuery UI package is built differently. Unlike how many modules are structured, there is no main entry point with a reference to all components that you can use. Instead, you refer directly to the specific component that you want to use. The entry point of that component contains all references to dependencies that it needs to work correctly.
 
-```sh
-gulp serve
-```
+2. Confirm that the project is building by running the following command:
 
-After adding the web part to the canvas you should see the accordion working.
+  ```sh
+  gulp serve
+  ```
 
-![jQuery UI accordion without styles rendered by a SharePoint Framework client-side web part](../../../images/thirdpartycss-accordion-not-styled.png)
+3. After adding the web part to the canvas, you should see the accordion working.
 
-At this point you have referenced only the jQuery UI scripts which explains why the accordion is not styled. Next you will add the missing CSS stylesheets to brand the accordion.
+  ![jQuery UI accordion without styles rendered by a SharePoint Framework client-side web part](../../../images/thirdpartycss-accordion-not-styled.png)
+
+At this point, you have referenced only the jQuery UI scripts, which explains why the accordion is not styled. Next, you add the missing CSS stylesheets to brand the accordion.
 
 ### Reference third-party CSS stylesheets in the web part
 
-Adding references to third-party CSS stylesheets that are a part of packages installed in the project is as simple as adding references to the packages themselves. The SharePoint Framework offers standard support for loading CSS files through Webpack.
+Adding references to third-party CSS stylesheets that are a part of the packages installed in the project is as simple as adding references to the packages themselves. The SharePoint Framework offers standard support for loading CSS files through Webpack.
 
-In the code editor open the **./src/webparts/jQueryAccordion/JQueryAccordionWebPart.ts** file. Just below the last **require** statement, add references to jQuery UI accordion CSS files.
+1. In the code editor, open the **./src/webparts/jQueryAccordion/JQueryAccordionWebPart.ts** file. Just under the last **require** statement, add references to jQuery UI accordion CSS files.
 
-```ts
-require('../../../node_modules/jquery-ui/themes/base/core.css');
-require('../../../node_modules/jquery-ui/themes/base/accordion.css');
-require('../../../node_modules/jquery-ui/themes/base/theme.css');
-```
+  ```typescript
+  require('../../../node_modules/jquery-ui/themes/base/core.css');
+  require('../../../node_modules/jquery-ui/themes/base/accordion.css');
+  require('../../../node_modules/jquery-ui/themes/base/theme.css');
+  ```
 
-Referencing CSS files that are part of a package in the project is similar to adding references to JavaScript files. All you need to do is specify the relative path to the CSS file that you want to load including the **.css** extension. When bundling the project, Webpack will process these references and include the files in the generated web part bundle.
+  Referencing CSS files that are part of a package in the project is similar to adding references to JavaScript files. All you need to do is specify the relative path to the CSS file that you want to load, including the **.css** extension. When bundling the project, Webpack processes these references and includes the files in the generated web part bundle.
 
-Confirm that the project is building by running the following command:
+2. Confirm that the project is building by running the following command:
 
-```sh
-gulp serve
-```
+  ```sh
+  gulp serve
+  ```
 
-The accordion should be displayed correctly and branded using the standard jQuery UI theme.
+The accordion should be displayed correctly and branded by using the standard jQuery UI theme.
 
 ![jQuery UI accordion branded using the default jQuery UI theme rendered by a SharePoint Framework client-side web part](../../../images/thirdpartycss-accordion-styled.png)
 
 ### Analyze the contents of the generated web part bundle
 
-The easiest way to use third-party libraries and their resources is by including them in the generated web part bundle. In this approach Webpack will automatically resolve all dependencies between the different libraries and will ensure that all scripts are loaded in the correct order. The downside of this approach is that all referenced resources are loaded separately with every web part. So if you have multiple web parts in your project, all using jQuery UI, each web part will load its own copy of jQuery UI and slow down the page.
+The easiest way to use third-party libraries and their resources is by including them in the generated web part bundle. In this approach Webpack automatically resolves all dependencies between the different libraries and ensures that all scripts are loaded in the correct order. The downside of this approach is that all referenced resources are loaded separately with every web part. So if you have multiple web parts in your project, all using jQuery UI, each web part loads its own copy of jQuery UI and slows down the page.
 
-To see the impact of the libraries on the size of the generated web part bundle, after bundling the project open the **./temp/stats/js-thirdpartycss.stats.html** file in the web browser. Move your mouse over the chart and you will see, for example, that the jQuery UI CSS files referenced by the web part make up over 6% of the total web part bundle size.
+To see the impact of the libraries on the size of the generated web part bundle, after bundling the project, open the **./temp/stats/js-thirdpartycss.stats.html** file in the web browser. Move your mouse over the chart and you will see, for example, that the jQuery UI CSS files referenced by the web part make up over 6% of the total web part bundle size.
 
 ![jQuery UI CSS highlighted in the chart illustrating the size of the different pieces of the generated web part bundle](../../../images/thirdpartycss-jquery-ui-css-size.png)
 
-As mentioned in the disclaimer below the chart, the sizes are indicative and reflect the size of the debug version of the bundle. The release version of the bundle would be significantly smaller. Still it's good to realize which different pieces compose the web part bundle and what's their relative size compared to other elements in the bundle.
+As mentioned in the disclaimer following the chart, the sizes are indicative and reflect the size of the debug version of the bundle. The release version of the bundle is significantly smaller. Still, it's good to realize which different pieces compose the web part bundle and their relative size compared to other elements in the bundle.
 
 ## Approach 2: Load third-party libraries from a URL
 
-Another way to reference third-party libraries in the SharePoint Framework is by referencing them from a URL such as a public CDN or a privately managed location. The biggest benefit is that if you're loading a frequently used library from a public location, there is a chance that users might already have that particular library downloaded on their computer. In that case the SharePoint Framework will reuse the cached library loading your web part faster.
+Another way to reference third-party libraries in the SharePoint Framework is by referencing them from a URL such as a public CDN or a privately managed location. The biggest benefit is that if you're loading a frequently used library from a public location, there is a chance that users might already have that particular library downloaded on their computer. In that case, the SharePoint Framework reuses the cached library, loading your web part faster.
 
-Even if you cannot use a public CDN to load libraries from a central location it is a good practice from the performance point of view. Pointing to a URL allows your users to download the script only once and reuse it across the whole portal, significantly speeding up loading pages and improving the user experience.
+Even if you cannot use a public CDN to load libraries from a central location, it is a good practice from the performance point of view. Pointing to a URL allows your users to download the script only once and reuse it across the whole portal, significantly speeding up loading pages and improving the user experience.
 
-When loading third-party libraries from public URLs keep in mind that there is a risk involved in using those libraries. Since you don't manage the hosting location of any particular script you can't be sure of its contents. Scripts loaded by the SharePoint Framework run under the context of the current user and are allowed to do whatever that user can do. Also, if the hosting location is offline, your web part won't work.
+When loading third-party libraries from public URLs, keep in mind that there is a risk involved in using those libraries. Because you don't manage the hosting location of any particular script, you can't be sure of its contents. Scripts loaded by the SharePoint Framework run under the context of the current user and are allowed to do whatever that user can do. Also, if the hosting location is offline, your web part won't work.
 
 ### Install typings for libraries
 
@@ -214,7 +221,7 @@ npm install @types/jquery --save
 
 ### Specify URLs of libraries
 
-To load third-party libraries from a URL, you have to specify the URL where they are located in the configuration of your project. In the code editor open the **./config/config.json** file. In the **externals** section add the following JSON:
+To load third-party libraries from a URL, you have to specify the URL where they are located in the configuration of your project. In the code editor, open the **./config/config.json** file. In the **externals** section, add the following JSON:
 
 ```json
 {
@@ -231,72 +238,81 @@ To load third-party libraries from a URL, you have to specify the URL where they
 
 ### Reference libraries from the URL in the web part
 
-Having specified the URL that the SharePoint Framework should use to load jQuery and jQuery UI, the next step is to reference them in the project. In the code editor open the **./src/webparts/jQueryAccordion/JQueryAccordionWebPart.ts** file. In its top section, just below the last **import** statement, add the following references to jQuery and jQuery UI:
+Having specified the URL that the SharePoint Framework should use to load jQuery and jQuery UI, the next step is to reference them in the project. 
 
-```ts
-import * as $ from 'jquery';
-require('jquery-ui');
-```
+1. In the code editor, open the **./src/webparts/jQueryAccordion/JQueryAccordionWebPart.ts** file. In its top section, just under the last **import** statement, add the following references to jQuery and jQuery UI:
 
-Compared to how you were referencing both libraries when they were installed as packages in your project, referencing them from the URL is very similar. Because jQuery has its TypeScript typings installed it can be referenced using an **import** statement. For jQuery UI all you want is to load the script on the page.
+  ```typescript
+  import * as $ from 'jquery';
+  require('jquery-ui');
+  ```
 
-Because you registered **jquery** and **jquery-ui** in the project configuration as external resources, when you reference any of these libraries, the SharePoint Framework will use the specified URLs to load them at runtime. When bundling the project, these resources will be marked as externals and will therefore be excluded from the bundle.
+  Compared to how you were referencing both libraries when they were installed as packages in your project, referencing them from the URL is very similar. Because jQuery has its TypeScript typings installed, it can be referenced by using an **import** statement. For jQuery UI all you want is to load the script on the page.
 
-One difference to keep in mind is that previously you specified to load the accordion from the jQuery UI package, but now you're referring to jQuery UI from the CDN which contains all jQuery UI components.
+  Because you registered **jquery** and **jquery-ui** in the project configuration as external resources, when you reference any of these libraries, the SharePoint Framework uses the specified URLs to load them at runtime. When bundling the project, these resources are marked as externals and are therefore excluded from the bundle.
 
-Confirm that the project is building by running the following command:
+  One difference to keep in mind is that previously you specified to load the accordion from the jQuery UI package, but now you're referring to jQuery UI from the CDN that contains all jQuery UI components.
 
-```sh
-gulp serve
-```
+2. Confirm that the project is building by running the following command:
 
-After adding the web part to the canvas you should see the accordion working.
+  ```sh
+  gulp serve
+  ```
 
-![jQuery UI accordion without styles rendered by a SharePoint Framework client-side web part](../../../images/thirdpartycss-accordion-not-styled.png)
+  After adding the web part to the canvas, you should see the accordion working.
 
-In your web browser, open the developer tools, switch to the tab showing the network requests, and reload the page. You should see how both jQuery and jQuery UI are loaded from the CDN.
+  ![jQuery UI accordion without styles rendered by a SharePoint Framework client-side web part](../../../images/thirdpartycss-accordion-not-styled.png)
 
-![jQuery and jQuery UI request highlighted in Microsoft Edge developer tools](../../../images/thirdpartycss-libraries-cdn.png)
+3. In your web browser, open the developer tools, switch to the tab showing the network requests, and reload the page. You should see how both jQuery and jQuery UI are loaded from the CDN.
 
-At this point you have referenced only the jQuery UI scripts which explains why the accordion is not styled. Next you will add the missing CSS stylesheets to brand the accordion.
+  ![jQuery and jQuery UI request highlighted in Microsoft Edge developer tools](../../../images/thirdpartycss-libraries-cdn.png)
+
+At this point you have referenced only the jQuery UI scripts, which explains why the accordion is not styled. Next, you add the missing CSS stylesheets to brand the accordion.
 
 ### Reference third-party CSS stylesheets from URL in the web part
 
-Adding references to third-party CSS stylesheets from a URL is different than referencing resources from project packages. While the project configuration in the **config.json** file allows you to specify external resources, it applies only to scripts. To reference CSS stylesheets from a URL you have to use the **SPComponentLoader** instead.
+Adding references to third-party CSS stylesheets from a URL is different from referencing resources from project packages. While the project configuration in the **config.json** file allows you to specify external resources, it applies only to scripts. To reference CSS stylesheets from a URL, you must use the **SPComponentLoader** instead.
 
 #### Load CSS from the URL using the SPComponentLoader
 
-In the code editor open the **./src/webparts/jQueryAccordion/JQueryAccordionWebPart.ts** file. In the top section of the file, just after the last **import** statement, add the following code:
+1. In the code editor, open the **./src/webparts/jQueryAccordion/JQueryAccordionWebPart.ts** file. In the top section of the file, just after the last **import** statement, add the following code:
 
-```ts
-import { SPComponentLoader } from '@microsoft/sp-loader';
-```
+  ```typescript
+  import { SPComponentLoader } from '@microsoft/sp-loader';
+  ```
 
-In the same file override the onInit() method as follows:
+2. In the same file, override the onInit() method as follows:
 
-```ts
-export default class JQueryAccordionWebPart extends BaseClientSideWebPart<IJQueryAccordionWebPartProps> {
-  protected onInit(): Promise<void> {
-    SPComponentLoader.loadCss('https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css');
-    return super.onInit();
+  ```typescript
+  export default class JQueryAccordionWebPart extends BaseClientSideWebPart<IJQueryAccordionWebPartProps> {
+    protected onInit(): Promise<void> {
+      SPComponentLoader.loadCss('https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.min.css');
+      return super.onInit();
+    }
+
+    // ...
   }
+  ```
 
-  // ...
-}
-```
+  When the web part is instantiated on the page, it loads the jQuery UI CSS from the specified URL. This CSS stylesheet is the combined and optimized version of the jQuery UI CSS that contains the basic styles, theme, and styling for all components.
 
-When the web part is instantiated on the page, it will load the jQuery UI CSS from the specified URL. This CSS stylesheet is the combined and optimized version of the jQuery UI CSS that contains the basic styles, theme, and styling for all components.
+3. Confirm that the project is building by running the following command:
 
-Confirm that the project is building by running the following command:
+  ```sh
+  gulp serve
+  ```
 
-```sh
-gulp serve
-```
-
-The accordion should be displayed correctly and branded using the standard jQuery UI Theme.
+The accordion should be displayed correctly and branded by using the standard jQuery UI Theme.
 
 ![jQuery UI accordion branded using the default jQuery UI theme rendered by a SharePoint Framework client-side web part](../../../images/thirdpartycss-accordion-styled.png)
 
 ### Analyze the contents of the generated web part bundle loading resources from URL
 
-After building the project in the web browser open the **./temp/stats/js-thirdpartycss.stats.html** file. Notice how the overall bundle is significantly smaller (7KB compared to over 300KB when including jQuery and jQuery UI in the bundle) and how jQuery and jQuery UI are not listed in the chart since they are loaded at runtime.
+After building the project in the web browser, open the **./temp/stats/js-thirdpartycss.stats.html** file. 
+
+Notice how the overall bundle is significantly smaller (7 KB compared to over 300 KB when including jQuery and jQuery UI in the bundle), and how jQuery and jQuery UI are not listed in the chart because they are loaded at runtime.
+
+
+## See also
+
+- [SharePoint Framework Overview](../../sharepoint-framework-overview.md)

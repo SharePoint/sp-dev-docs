@@ -13,7 +13,9 @@ SharePoint contains several site designs already available in the SharePoint Onl
 
 ## Apply a site design to the default site designs
 
-To customize the default site designs, apply a new one with the Powershell **Add-SPOSiteDesign** cmdlet, or the **CreateSiteDesign** REST API. Specify the **IsDefault** switch to apply the site design as default.
+To customize the default site designs, apply a new one with the Powershell **Add-SPOSiteDesign** cmdlet, or the **CreateSiteDesign** REST API. Specify the **IsDefault** switch to apply the site design as default. 
+
+The WebTemplate ID for a Group-connected team site is 64; for a communication site it is 68.
 
 The following example shows how to use the **IsDefault** switch to apply the Contoso company theme to the default site designs. The site script referenced by ID contains the JSON script to apply the correct theme.
 
