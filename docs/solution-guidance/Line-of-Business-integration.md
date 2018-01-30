@@ -7,7 +7,7 @@ In order to access and consume LOB data and systems from within SharePoint, you 
 ## High-level guideline/general rules
 Here follow some high-level guidelines and general rules that you should consider whenever you need to integrate SharePoint with any LOB system:
 * Try to consume REST-based APIs, rather than SOAP services or custom APIs, in order to being able to leverage modern development techniques and to use modern security protocols (OAuth 2.0, OpenID Connect, etc.).
-* Use a data cache intermediary, instead of directly consuming any external service, so that you can speed up the consumption process and avoid useless network roundtrips to retrieve data that you already requested to the LOB system.
+* Use a data cache intermediary, instead of directly consuming any external service, so that you can speed up the consumption process and avoid useless network roundtrips to retrieve data that you already requested from the LOB system.
 * Make your best to list data page by page, rather than listing all the data in "one huge shot", to avoid flooding the data cache and to overload the network bandwidth.
 * From an Authentication and Authorization perspective, tend to use services that leverage well-known protocols like OAuth 2.0, OpenID Connect, etc. and which are possibly registered in Azure Active Directory, in order to share a unique security infrastructure.
 
@@ -33,22 +33,6 @@ Whenever you need to consume LOB systems from a client-side solution, like a cli
 * [Calling external APIs securely from SharePoint Framework](https://www.youtube.com/watch?v=SDjKRfHA1nw)
 * [Let's build with SharePoint (Web Parts, Extensions and much more)](https://myignite.microsoft.com/sessions/55180)
 
-### Server-side Connection
-
-_**Applies to:** SharePoint 2013 | SharePoint 2016_
-
-### Articles
-* []()
-
-### Samples
-* []()
-
-### Solutions
-* []()
-
-### Videos
-* []()
-
 ### Business Connectivity Services
 
 _**Applies to:** SharePoint Online | SharePoint 2013 | SharePoint 2016_
@@ -56,7 +40,7 @@ _**Applies to:** SharePoint Online | SharePoint 2013 | SharePoint 2016_
 Business Connectivity Services (BCS) is a service application of Microsoft SharePoint 2013/2016 and SharePoint Online. It provides capabilities to read and write data from external systems, such as line-of-business applications (LOB), web services, databases, or any other external source that offers a suitable connector.
 In SharePoint 2013/2016 on-premises the BCS can connect to a variety of LOB systems either using a DBMS connection-oriented approach, either using a SOAP service, or using a custom .NET library.
 In SharePoint Online the BCS can connect to an OData REST service, to a SOAP service, or to an Azure SQL Database.
-Moreover, in SharePoint Online you don't have functionalities like External Data Search, Profile Pages, custom Actions, and Office client support.
+Moreover, in SharePoint Online, if compared with SharePoint on-premises, you don't have functionalities like External Data Search, Profile Pages, custom Actions, and Office client support.
 
 ### Articles
 * [Business Connectivity Services in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/business-connectivity-services-in-sharepoint)
