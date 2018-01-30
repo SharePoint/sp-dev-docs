@@ -593,6 +593,7 @@ This example relies on two number fields, `Before` and `After`, for which the va
     ]
 }
 ```
+
 ## Create a button to launch a Flow
 The following screenshot shows a list with a Flow button added to the Action column:
 
@@ -605,6 +606,7 @@ To use the sample below, you must substitute the ID of the Flow you want to run.
 1. Click Flow > See your flows in the SharePoint list where the Flow is configured.
 2. Click on the Flow you want to run
 3. Copy the ID from the end of the URL.  
+
 ```
 {
 	"$schema": "http://columnformatting.sharepointpnp.com/columnFormattingSchema.json",
