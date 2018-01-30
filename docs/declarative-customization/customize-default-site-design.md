@@ -1,4 +1,4 @@
- ---
+---
 title: Customize default site designs on SharePoint
 description: Customize the default site designs in either the SharePoint team site or communications site template
 ms.date: 12/18/2017
