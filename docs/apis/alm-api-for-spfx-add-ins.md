@@ -5,7 +5,7 @@ ms.prod: sharepoint
 ms.assetid: fdf7ecb2-8851-425b-b058-3285fba77b68
 ---
 
-# Application Lifecycle Management (ALM) APIs  
+# Application Lifecycle Management (ALM) APIs
 
 ALM APIs are providing simple APIs to manage deployment of your SharePoint Framework solutions and add-ins cross your tenant. ALM APIs support following capabilities.
 
@@ -15,6 +15,7 @@ ALM APIs are providing simple APIs to manage deployment of your SharePoint Frame
 - Install SharePoint Framework solution or SharePoint add-in from tenant app catalog to a site
 - Upgrade SharePoint Framework solution or SharePoint add-in to a site, which has a newer version available in the tenant app catalog
 - Uninstall SharePoint Framework solution or SharePoint add-in from the site
+- List all and get details on SharePoint Framework solutions or SharePoint add-ins in the tenant app catalog
 
 ALM APIs can be used to perform exactly the same operations which are available from UI perspective. When these APIs are used, all typical actions will be performed. Here are some of the characteristics for ALM APIs.
 
@@ -28,7 +29,7 @@ ALM APIs are natively provided using REST APIs, but there is also additional CSO
 
 ## REST API
 
-### Add solution package to tenant app catalog 
+### Add solution package to tenant app catalog
 
 Adding solution to the tenant app catalog. This API is designed to be executed in the context of the tenant app catalog site.
 
