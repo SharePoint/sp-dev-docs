@@ -26,11 +26,13 @@ The request returns ADO **rowset** XML, which includes rows corresponding to any
   'query': { 
     '__metadata': { 'type': 'SP.ChangeLogItemQuery'}, 
     'ViewName': '', 
-    'Query': '<Where>
+    'Query': '
+      <Query>
+      <Where>
       <Contains>
          <FieldRef Name="Title" />
          <Value Type='Text'>Te</Value>
-      </Contains></Where>',
+      </Contains></Where>'</Query>,
     'QueryOptions': '<QueryOptions>
       <IncludeMandatoryColumns>FALSE</IncludeMandatoryColumns>
       <DateInUtc>False</DateInUtc>
