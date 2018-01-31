@@ -184,3 +184,76 @@ Getting a list of apps that can be added to the site is possible using:
 ```PowerShell
 Get-PnPApp
 ```
+
+
+## Office 365 CLI commands to add, deploy and Manage SharePoint Apps Cross-Platform
+
+Using the [Office 365 CLI](https://sharepoint.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) you can automate the deployment, publishing, installing, upgrading and retracting your apps. The Office 365 CLI is a cross-platform command line interface that can be used on any platform, including Windows, MacOS and Linux. Checkout below chapter to learn more about these commands.
+
+### Adding and publishing your app to the app catalog
+Adding your app (.sppkg file, .app file) to the tenant app catalog is a per-requisite to later on make your app available for use in your SharePoint sites. use the [add](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command to do this:
+
+```shell
+spo app add --filePath ./spfx.sppkg
+```
+
+Once added you'll need to continue with publishing your app, effectively making the app available to be used by the users of your tenant. Use the [deploy](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-deploy/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command to do this:
+
+```shell
+spo app deploy --id <app id> --skipFeatureDeployment
+```
+
+
+> [!NOTE]
+> Use the **SkipFeatureDeployment** flag to allow an app that was developed for tenant wide deployment to be actually available as a tenant wide deployed app.
+
+
+
+### Removing the app from the app catalog
+Obviously you might also want to remove an earlier added app and that can be done using the [remove](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-remove/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
+
+```shell
+spo app remove --id <app id>
+```
+
+
+### Using apps on your site
+Once the app was added to the app catalog and published you can continue with installing the app to your site. Install apps using the command [install](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-install/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs)
+
+```shell
+spo app install --id <app id> --siteUrl <url>
+```
+
+
+An added app also needs be upgraded which can be achieved using the [upgrade](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-upgrade/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command
+
+```shell
+spo app upgrade --id <app id> --siteUrl <url>
+```
+
+
+And you off course also uninstall the app again from your site using the [uninstall](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-uninstall/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
+
+```shell
+spo app uninstall --id <app id> --siteUrl <url>
+```
+
+
+> [!NOTE]
+> When you uninstall an app from your site the app is completely deleted, so it will not end up in the site's recycle bin.
+
+
+### Listing and Getting apps in the app catalog
+You can also see what apps have been added to the app catalog using the [list](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-list/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
+
+```shell
+spo app list
+```
+
+
+And you can also get a single app's details using the [get](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-get/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
+
+```shell
+spo app get --id <app id>
+```
+
