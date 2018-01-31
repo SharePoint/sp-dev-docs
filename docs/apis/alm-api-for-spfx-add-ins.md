@@ -22,7 +22,7 @@ ALM APIs can be used to perform exactly the same operations which are available 
 - Install and UnInstall events are being fired for provider hosted add-ins when corresponding operations are occurred
 - ALM APIs supports app-only based operations
 
-ALM APIs are natively provided using REST APIs, but there is also additional CSOM extensions and PowerShell commandlets available through SharePoint Patterns and Practices.
+ALM APIs are natively provided using REST APIs, but there is also additional CSOM extensions, PowerShell cmdlets, and the cross-platform Office 365 CLI available through SharePoint Patterns and Practices.
 
 > [!NOTE] 
 > ALM APIs are not currently supported for [site collection app catalog](../general-development/site-collection-app-catalog.md). Support will be added early 2018.
@@ -36,6 +36,9 @@ Adding solution to the tenant app catalog. This API is designed to be executed i
 ```
 url: /_api/web/tenantappcatalog/Add(overwrite=true, url='test.txt')
 method: POST
+Authorization: Bearer <access token>
+X-RequestDigest: <form digest>
+Accept: 'application/json;odata=nometadata'
 binaryStringRequestBody: true
 body: 'byte array of the file'
 ```
@@ -46,6 +49,11 @@ Enable solution to be available to install to specific sites. This API is design
 
 ```
 url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Deploy
+method: POST
+Authorization: Bearer <access token>
+X-RequestDigest: <form digest>
+Accept: 'application/json;odata=nometadata'
+Content-Type: 'application/json;odata=nometadata;charset=utf-8'
 ```
 
 > [!NOTE]
@@ -57,6 +65,10 @@ Retract solution to be available from the sites. This API is designed to be exec
 
 ```
 url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Retract
+method: POST
+Authorization: Bearer <access token>
+X-RequestDigest: <form digest>
+Accept: 'application/json;odata=nometadata'
 ```
 
 > [!NOTE]
@@ -68,6 +80,9 @@ Remove the solution package from the tenant app catalog. This API is designed to
 
 ```
 url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Remove
+method: POST
+Authorization: Bearer <access token>
+Accept: 'application/json;odata=nometadata'
 ```
 
 > [!NOTE]
@@ -80,6 +95,8 @@ REST API for getting list of available SharePoint Framework solutions or add-ins
 ```
 url: /_api/web/tenantappcatalog/AvailableApps
 method: GET
+Authorization: Bearer <access token>
+Accept: 'application/json;odata=nometadata'
 ```
 
 ### Details on individual solution package from tenant app catalog
@@ -89,6 +106,8 @@ REST API for getting details on individual SharePoint Framework solution or add-
 ```
 url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
 method: GET
+Authorization: Bearer <access token>
+Accept: 'application/json;odata=nometadata'
 ```
 
 ### Install solution package from tenant app catalog to SharePoint site
@@ -98,6 +117,9 @@ Install a solution package with specific identifier from tenant app catalog to t
 ```
 url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Install
 method: POST
+Authorization: Bearer <access token>
+X-RequestDigest: <form digest>
+Accept: 'application/json;odata=nometadata'
 ```
 
 ### Upgrade solution package in SharePoint site
@@ -107,6 +129,9 @@ Upgrade a solution package from the site to a newer version available in the ten
 ```
 url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Upgrade
 method: POST
+Authorization: Bearer <access token>
+X-RequestDigest: <form digest>
+Accept: 'application/json;odata=nometadata'
 ```
 
 ### Uninstall solution package from SharePoint site
@@ -116,6 +141,9 @@ Uninstall a solution package from the site. This REST call can be executed in th
 ```
 url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Uninstall
 method: POST
+Authorization: Bearer <access token>
+X-RequestDigest: <form digest>
+Accept: 'application/json;odata=nometadata'
 ```
 > [!NOTE]
 > When you use the REST API to uninstall solution package from the site, it is not relocated to the recycle bin.
@@ -126,13 +154,13 @@ method: POST
 Using [PnP PowerShell](https://msdn.microsoft.com/en-us/pnp_powershell/pnp-powershell-overview) you can automate the deployment, publishing, installing, upgrading and retracting your apps. Checkout below chapter to learn more about this cmdlets.
 
 ### Adding and publishing your app to the app catalog
-Adding your app (.sppkg file, .app file) to the tenant app catalog is a per-requisite to later on make your app available for use in your SharePoint sites. Doing so can be done using below simple cmdlet:
+Adding your app (.sppkg file, .app file) to the tenant app catalog is a per-requisite to later on make your app available for use in your SharePoint sites. Doing so can be done using the following simple cmdlet:
 
 ```PowerShell
 Add-PnPApp -Path ./myapp.sppkg
 ```
 
-Once added you'll need to continue with publishing your app, effectively making the app available to be used by the users of your tenant. Below PnP PowerShell cmdlets shows how this can be done:
+Once added you'll need to continue with publishing your app, effectively making the app available to be used by the users of your tenant. The following PnP PowerShell cmdlet show how this can be done:
 
 ```PowerShell
 Publish-PnPApp -Identity <app id> -SkipFeatureDeployment
@@ -167,7 +195,7 @@ Update-PnPApp -Identity <app id>
 ```
 
 
-And you off course also uninstall the app again from your site:
+And you of course, also uninstall the app again from your site:
 
 ```PowerShell
 Uninstall-PnPApp -Identity <app id>
