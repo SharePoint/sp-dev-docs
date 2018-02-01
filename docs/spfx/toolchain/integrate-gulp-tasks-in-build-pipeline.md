@@ -177,7 +177,7 @@ You also see this `resize-images` task in the available tasks for your project w
 
 ## See also
 
-- [SharePoint Framework Overview](../../sharepoint-framework-overview.md)
+- [SharePoint Framework Overview](../sharepoint-framework-overview.md)
 
 
 

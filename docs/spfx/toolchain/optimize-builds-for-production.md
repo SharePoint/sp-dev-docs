@@ -115,4 +115,4 @@ Specifically with regards to Lodash, but which could also be the case with other
 
 ## See also
 
-- [SharePoint Framework Overview](../../sharepoint-framework-overview.md)
+- [SharePoint Framework Overview](../sharepoint-framework-overview.md)

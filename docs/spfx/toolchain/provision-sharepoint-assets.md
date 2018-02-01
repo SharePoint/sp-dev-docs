@@ -344,4 +344,4 @@ Specifies a version range to which specified upgrade actions apply.
 
 ## See also
 
-- [SharePoint Framework Overview](../../sharepoint-framework-overview.md)
+- [SharePoint Framework Overview](../sharepoint-framework-overview.md)
