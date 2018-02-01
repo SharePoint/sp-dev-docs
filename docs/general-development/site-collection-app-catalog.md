@@ -51,12 +51,14 @@ At this moment, it's not possible to use the recently released ALM APIs to manag
 You can configure and manage site collection app catalogs using the SharePoint Online Management Shell.
 
 > [!NOTE]
-> Before you can manage site collection app catalogs in your tenant, ensure that you have installed [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588) from November '17 or newer.
+> Before you can manage site collection app catalogs in your tenant, ensure that you have installed [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588) from November 2017 or newer.
+
+Alternatively, you can use the [Office 365 CLI](https://sharepoint.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+the+site+collection+app+catalog) to manage your SharePoint site collection app catalogs. The Office 365 CLI is a cross-platform command line interface that can be used on any platform, including Windows, MacOS and Linux.
 
 ### Create a site collection app catalog
 
 > [!NOTE]
-> Before running the following script, connect to your SharePoint Online tenant using the `Connect-SPOService` cmdlet. Also ensure, that you have a tenant app catalog created in your tenant. If you don't, the cmdlet will fail with the following error:
+> Before running the following script, connect to your SharePoint Online tenant using the `Connect-SPOService` cmdlet when using the SharePoint Online PowerShell. Also ensure, that you have a tenant app catalog created in your tenant. If you don't, the cmdlet will fail with the following error:
 > ```text
 > Cannot invoke method or retrieve property from null object. Object returned by the
 > following call stack is null. "TenantAppCatalog
@@ -65,6 +67,8 @@ You can configure and manage site collection app catalogs using the SharePoint O
 > new Microsoft.Online.SharePoint.TenantAdministration.Tenant()
 > "
 > ```
+>
+> Alternatively, if you are using the Office 365 CLI, you must first connect to your tenant using the `spo connect` command.
 
 To create a site collection app catalog, use the `Add-SPOSiteCollectionAppCatalog` cmdlet passing the site collection where the app catalog should be created as the `-Site` parameter.
 
@@ -77,12 +81,18 @@ $site = Get-SPOSite https://contoso.sharepoint.com/sites/marketing
 Add-SPOSiteCollectionAppCatalog -Site $site
 ```
 
+Alternatively, use the `spo site appcatalog add` command if you are using the Office 365 CLI
+
+```shell
+spo site appcatalog add --url https://contoso.sharepoint.com/sites/marketing
+```
+
 After executing this script, the **Apps for SharePoint** library will be added to your site collection where you will be able to deploy SharePoint add-ins and SharePoint Framework solutions.
 
 ### Disable the site collection app catalog
 
 > [!NOTE]
-> Before running the following script, connect to your SharePoint Online tenant using the `Connect-SPOService` cmdlet.
+> Before running the following script, connect to your SharePoint Online tenant using the `Connect-SPOService` cmdlet for the SharePoint Online Powershell or `spo connect` command for the Office 365 CLI.
 
 To disable the site collection app catalog in your site collection, use the `Remove-SPOSiteCollectionAppCatalog` cmdlet passing the site collection where the app catalog should be disabled as the `-Site` parameter. Alternatively, if you have your site collection's ID, you can use the `Remove-SPOSiteCollectionAppCatalogById` cmdlet instead.
 
@@ -96,6 +106,12 @@ $site = Get-SPOSite https://contoso.sharepoint.com/sites/marketing
 
 # disable the site collection app catalog
 Remove-SPOSiteCollectionAppCatalog -Site $site
+```
+
+Alternatively, use the `spo site appcatalog remove` command if you are using the Office 365 CLI
+
+```shell
+spo site appcatalog remove --url https://contoso.sharepoint.com/sites/marketing
 ```
 
 After executing this script, the **Apps for SharePoint** library will be still visible in your site collection, but you will not be able to deploy or use any solutions deployed in it.
@@ -113,3 +129,4 @@ Before deploying solutions to site collection app catalogs, site collection admi
 ## See also
 
 - [Manage the Site Collection App Catalog](https://support.office.com/en-us/article/Manage-the-Site-Collection-App-Catalog-928b9b61-a9de-4563-a7d1-6231aa9d4d19)
+- [Office 365 CLI](https://sharepoint.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Use+the+site+collection+app+catalog)
