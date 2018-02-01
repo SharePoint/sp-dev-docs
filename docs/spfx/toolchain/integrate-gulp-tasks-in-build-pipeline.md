@@ -1,6 +1,6 @@
 ---
 title: Integrate gulp tasks in SharePoint Framework toolchain
-description: 
+description: Integrate your custom gulp tasks in the build pipeline.
 ms.date: 02/01/2018
 ms.prod: sharepoint
 ---
@@ -15,7 +15,7 @@ SharePoint client-side development tools use [gulp](http://gulpjs.com/) as the b
 * Compile LESS or Sass files to CSS.
 * Compile TypeScript files to JavaScript.
 
-One common task you would want to add to the SharePoint Framework toolchain is to integrate your custom gulp tasks in the build pipeline.
+One common task you can add to the SharePoint Framework toolchain is to integrate your custom gulp tasks in the build pipeline.
 
 ## Gulp tasks
 Normally gulp tasks are defined in the `gulpfile.js` as:
@@ -32,7 +32,7 @@ When working with the SharePoint Framework toolchain, it is necessary to define 
 
 SharePoint Framework uses a [common build toolchain](sharepoint-framework-toolchain.md#common-build-tool-packages) that consists of a set of npm packages that share common build tasks. Hence, the default tasks are defined in the common package as opposed to your client-side project's `gulpfile.js`. To see the available tasks, you can execute the following command in a console within your project directory:
 
-```
+```js
 gulp --tasks
 ```
 

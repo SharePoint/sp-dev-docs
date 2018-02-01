@@ -142,7 +142,7 @@
         href: spfx/web-parts/basics/notes-on-solution-packaging.md
       - name: Custom build tasks
         href: spfx/toolchain/integrate-gulp-tasks-in-build-pipeline.md
-      - name: Bundling
+      - name: Extend Webpack
         href: spfx/toolchain/extending-webpack-in-build-pipeline.md
       - name: Update SharePoint Framework packages
         href: spfx/toolchain/update-latest-packages.md
