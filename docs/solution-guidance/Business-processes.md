@@ -42,6 +42,9 @@ As a developer, you can extend Microsoft Flow, enabling even more powerful solut
 * [Introducing Microsoft Flow integration for SharePoint Document Libraries](https://flow.microsoft.com/en-us/blog/flow-in-spo-document-libraries/)
 * [Choose between Flow, Logic Apps, Functions, and WebJobs](https://docs.microsoft.com/en-us/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs)
 
+### Videos
+* [Slice, dice, and route your SharePoint documents with Microsoft Flow, Azure Logic Apps, and Microsoft PowerApps](https://azure.microsoft.com/en-us/resources/videos/build-2017-slice-dice-and-route-your-sharepoint-documents-with-microsoft-flow-azure-logic-apps-and-microsoft-powerapps/)
+
 ### Workflow Manager of SharePoint 2013/2016
 
 _**Applies to:** SharePoint Online | SharePoint 2013 | SharePoint 2016_
@@ -65,24 +68,4 @@ Both in SharePoint Online and in SharePoint 2013/2016 on-premises you can define
 
 _**Applies to:** Office 365 | SharePoint Online | SharePoint 2013 | SharePoint 2016_
 
-Both in SharePoint Online and in SharePoint 2013/2016 on-premises you can define workflow processes using the Windows Workflow Foundation 3.x engine. However, those are available just for backward compatibility, and you shouldn't create fresh new solutions based on this technology. Nevertheless, using Microsoft SharePoint Designer 2013, you can still create such kind of workflows.
-
-### Articles
-* []()
-* []()
-* []()
-
-### Samples
-* []()
-* []()
-* []()
-
-### Solutions
-* []()
-* []()
-* []()
-
-### Videos
-* []()
-* []()
-* []()
+Both in SharePoint Online and in SharePoint 2013/2016 on-premises you can define workflow processes using the legacy Windows Workflow Foundation 3.x engine. However, those are available just for backward compatibility, and you shouldn't create fresh new solutions based on this technology. Nevertheless, using Microsoft SharePoint Designer 2013, you can still create such kind of workflows.
