@@ -127,3 +127,7 @@ protected get disableReactivePropertyChanges(): boolean {
 ## Custom property pane controls
 
 SharePoint Framework contains a set of standard controls for the property pane. But sometimes you need additional functionality beyond the basic controls. SharePoint Framework allows you to build custom controls to deliver the required functionality. To learn more, read the [Build custom controls for the property pane](../guidance/build-custom-property-pane-controls.md) guide.
+
+## See also
+
+- [SharePoint Framework Overview](../../sharepoint-framework-overview.md)
