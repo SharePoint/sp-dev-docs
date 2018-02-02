@@ -11,9 +11,7 @@ Tenant properties allow tenant administrators to add properties in the App Catal
 
 ## Manage tenant properties
 
-Using the Microsoft SharePoint Online Management Shell, tenant administrators can use PowerShell to add and remove tenant properties. 
-
-[Download the Microsoft SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588).
+Using the [Microsoft SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588), tenant administrators can use PowerShell to add and remove tenant properties. 
 
 The following PowerShell cmdlets are available to manage the tenant properties. Because tenant properties are stored in the tenant App Catalog, you must provide the tenant App Catalog site collection URL in the following cmdlets.
 

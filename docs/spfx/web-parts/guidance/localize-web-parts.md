@@ -37,14 +37,16 @@ You can broaden the appeal of your SharePoint Framework client-side web part by 
 
 4. When prompted, enter the following values:
 
-- **react-localization** as your solution name.
-- **SharePoint Online only (latest)** as the baseline package set.
-- **Use the current folder** for the location to place the files.
-- **y** to allow tenant-wide deployment.
-- **WebPart** as the type of component to develop.
-- **Greeting** as your web part name.
-- **Greets the user** as your web part description.
-- **React** as the starting point to build the web part.
+  - **react-localization** as your solution name.
+  - **SharePoint Online only (latest)** as the baseline package set.
+  - **Use the current folder** for the location to place the files.
+  - **y** to allow tenant-wide deployment.
+  - **WebPart** as the type of component to develop.
+  - **Greeting** as your web part name.
+  - **Greets the user** as your web part description.
+  - **React** as the starting point to build the web part.
+
+  <br/>
 
   ![The SharePoint Framework Yeoman generator with the default choices](../../../images/localization-yo-sharepoint.png)
 
@@ -60,7 +62,7 @@ You can broaden the appeal of your SharePoint Framework client-side web part by 
 
 ### Replace the default code
 
-1. In the code editor, open the **./src/webparts/greeting/GreetingWebPart.ts** file and update the definition of the `IGreetingWebPartProps` interface to the following code:
+1. In the code editor, open the **./src/webparts/greeting/GreetingWebPart.ts** file, and update the definition of the `IGreetingWebPartProps` interface to the following code:
 
   ```typescript
   export interface IGreetingWebPartProps {
