@@ -1,7 +1,7 @@
 ---
 title: Update SharePoint Framework packages
 description: Update the npm packages that you have installed in your project and those you have installed globally. 
-ms.date: 02/01/2018
+ms.date: 02/02/2018
 ms.prod: sharepoint
 ---
 
@@ -15,9 +15,9 @@ When you create a new client-side solution, the Yeoman generator for SharePoint 
 Based on the [release notes](https://aka.ms/spfx-release-notes) for a particular release or the latest package, you may decide to update your SharePoint Framework packages used in your project. SharePoint Framework packages include both the npm packages you have installed in your project, for example: [@microsoft/sp-core-library](https://www.npmjs.com/package/@microsoft/sp-core-library), and npm packages installed globally, for example: [@microsoft/generator-sharepoint](https://www.npmjs.com/package/@microsoft/generator-sharepoint). 
 
 > [!TIP]
-> While it may not be required, we recommend that you update the SharePoint Framework packages every so often so that you can get the latest changes and fixes that have been released.
+> While it may not be required, we recommend that you update the SharePoint Framework packages often so that you can get the latest changes and fixes that have been released.
 
-## Find outdated packages in your project
+## Find outdated packages
 
 To find the outdated packages in your client-side project, including SharePoint Framework and other packages your project depends on, run the following command in a console in the same directory as your project. 
 
@@ -41,11 +41,13 @@ To identify the SharePoint Framework packages, look for the package names that s
 
 Along with the framework packages, you may also need to update `react` and `office-ui-fabric-react` packages. Make sure you read the [release notes](https://aka.ms/spfx-release-notes) for that specific release to infer which packages require updates and plan accordingly.
 
-### Using npm outdated with project targeting SharePoint 2016
+### Using the "npm outdated" command with a project
 
-Starting from Feature Pack 2, SharePoint 2016 supports SharePoint Framework solutions. SharePoint 2016 uses an older version of the SharePoint Framework than the version available in SharePoint Online. When scaffolding new projects, the SharePoint Framework Yeoman generator prompts you to choose if your solution should be using the latest version of the SharePoint Framework and be working only with SharePoint Online, or if it should use an older version of the SharePoint Framework and work with both SharePoint 2016 and SharePoint Online.
+Starting from Feature Pack 2, SharePoint 2016 supports SharePoint Framework solutions. SharePoint 2016 uses an older version of the SharePoint Framework than the version available in SharePoint Online. 
 
-When you run the `npm outdated` command in a project targeting both SharePoint Online and SharePoint 2016, it shows you the latest versions of the SharePoint Framework packages. These versions, however, work only with SharePoint Online. If you update your solution to use these latest packages, it no longer works with SharePoint 2016.
+When scaffolding new projects, the SharePoint Framework Yeoman generator prompts you to choose if your solution should be using the latest version of the SharePoint Framework and be working only with SharePoint Online, or if it should use an older version of the SharePoint Framework and work with both SharePoint 2016 and SharePoint Online.
+
+When you run the `npm outdated` command in a project that targets both SharePoint Online and SharePoint 2016, it shows you the latest versions of the SharePoint Framework packages. These versions, however, work only with SharePoint Online. If you update your solution to use these latest packages, it no longer works with SharePoint 2016.
 
 When working with SharePoint Framework solutions compatible with SharePoint hosted on-premises, you should always verify which patch level the target SharePoint farm has and which version of the SharePoint Framework it supports.
 
@@ -85,7 +87,7 @@ You can always build the project to see if you have any errors and warnings by r
 gulp build
 ```
 
-## Update Yeoman generator for SharePoint
+## Update Yeoman generator
 
 If you have installed the SharePoint Framework Yeoman generator globally, you can find out if it requires updating by running the following command:
 

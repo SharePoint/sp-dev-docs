@@ -1,7 +1,7 @@
 ---
 title: Tenant-scoped solution deployment for SharePoint Framework solutions
 description: Configure your SharePoint Framework components to be immediately available across the tenant when the solution package is installed to the tenant App Catalog.
-ms.date: 02/01/2018
+ms.date: 02/02/2018
 ms.prod: sharepoint
 ---
 
@@ -21,7 +21,7 @@ You can also see the tenant-wide deployment option demonstrated by watching the 
 > [!NOTE] 
 > You have to update to the latest SharePoint Framework Yeoman template version to be able to use this capability. You can update your global installation by executing `npm install -g @microsoft/generator-sharepoint`. 
 
-## Solution specific requirements
+## Solution-specific requirements
 
 When this option is used, any feature framework definitions in the SharePoint Framework solution are ignored. If the solution contains feature framework definitions, for example, for creating a custom list, you should not use this solution-specific option.
 

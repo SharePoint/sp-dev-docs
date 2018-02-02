@@ -1,7 +1,7 @@
 ﻿---
 title: Provision SharePoint assets with your solution package
 description: SharePoint Framework toolchain allows you to package and deploy SharePoint items with your client-side solution package. These items are then provisioned when the client-side solution is installed on a site. 
-ms.date: 02/01/2018
+ms.date: 02/02/2018
 ms.prod: sharepoint
 ---
 
@@ -36,7 +36,7 @@ A field or a site column represents an attribute, or piece of metadata, that the
 
 For example, suppose you define a site column named Customer. Users can add that column to their lists and reference it in their content types. This ensures that the column has the same attributes—at least to start with—wherever it appears.
 
-You can refer to the schema and attributes in the [Field Element](https://msdn.microsoft.com/en-us/library/aa979575(v=office.15).aspx) documentation to define a new field in your solution. 
+You can refer to the schema and attributes in the [Field Element (Field)](https://msdn.microsoft.com/en-us/library/aa979575(v=office.15).aspx) documentation to define a new field in your solution. 
 
 Following is an example of a new DateTime field:
 
@@ -60,7 +60,7 @@ For example, imagine a business situation in which you have three different type
 
 One solution to this business problem is to create four content types. The first content type, Financial Document, could encapsulate data requirements that are common to all financial documents in the organization. The remaining three, Expense Report, Purchase Order, and Invoice, could inherit common elements from Financial Document. In addition, they could define characteristics that are unique to each type, such as a particular set of metadata, a document template to be used in creating a new item, and a specific workflow for processing an item.
 
-You can refer to the schema and attributes in the [Content Type Element](https://msdn.microsoft.com/en-us/library/aa544268.aspx) documentation to define a new content type in your solution. 
+You can refer to the schema and attributes in the [ContentType Element (ContentType)](https://msdn.microsoft.com/en-us/library/aa544268.aspx) documentation to define a new content type in your solution. 
 
 Following is an example of a content type:
 
@@ -82,7 +82,7 @@ Lists are a key, underlying feature of a SharePoint site. They enable teams to g
 
 SharePoint provides several list templates such as contact list, calendar, task list, and more. You can use these templates to create new list instances for your web parts or other components. For example, you can define a list instance Finance Documents based on the Document Library template to store associated documents with your web part. 
 
-You can refer to the schema and attributes in the [ListInstance Element](https://msdn.microsoft.com/en-us/library/office/ms476062.aspx) documentation to define a list instance in your solution.
+You can refer to the schema and attributes in the [ListInstance Element (List Instance)](https://msdn.microsoft.com/en-us/library/office/ms476062.aspx) documentation to define a list instance in your solution.
 
 Following is an example of a list instance definition:
 
@@ -98,7 +98,7 @@ Following is an example of a list instance definition:
 
 ### List instances with custom schema
 
-You can use a custom list schema definition to define your fields, content types and views used in your list instance. You use the `customschema` attribute in the [list instance element](https://msdn.microsoft.com/en-us/library/office/ms476062.aspx#sectionSection0) to reference a custom schema for the list instance. 
+You can use a custom list schema definition to define your fields, content types, and views used in your list instance. You use the [CustomSchema](https://msdn.microsoft.com/en-us/library/office/ms476062.aspx#sectionSection0) attribute in the ListInstance element to reference a custom schema for the list instance. 
 
 For example, you can define a list instance **Finance Documents** with a content type **Financial Document** that could encapsulate data requirements that are common to all financial documents in the organization. 
 
@@ -163,7 +163,7 @@ A feature is primarily constructed by using the following XML files.
 
 ### Element manifest file
 
-The element manifest file contains the SharePoint item definitions and is executed when the feature is activated. For example, the XML definitions to create a new field or content type or list instance is in the element manifest. 
+The element manifest file contains the SharePoint item definitions and is executed when the feature is activated. For example, the XML definitions to create a new field, content type, or list instance is in the element manifest. 
 
 Following is an example of an element manifest file that defines a new DateTime field.
 
@@ -184,7 +184,7 @@ Following is an example of an element manifest file that defines a new DateTime 
 
 ### Element file
 
-Any supported files that accompany the element manifest are element files. For example, the list instance schema is an element manifest that is associated with a list instance that is defined in an element manifest. 
+Any supported files that accompany the element manifest are element files. For example, the list instance schema is an element file that is associated with a list instance that is defined in an element manifest. 
 
 Following is an example of a custom list instance schema:
 
@@ -201,7 +201,7 @@ Following is an example of a custom list instance schema:
 
 ### Upgrade actions file
 
-As its name suggests, this is the file that includes any upgrade actions when the solution is updated on the site. As part of the upgrade actions, the action could specify to include one or more element manifests as well. For example, if the upgrade requires a new field to be added, the field definition is available as an element manifest and associated in the upgrade actions file. 
+As its name suggests, this is the file that includes any upgrade actions when the solution is updated on the site. As part of the upgrade actions, the action could specify to include one or more element manifests as well. For example, if the upgrade requires a new field to be added, the field definition is available as an element manifest and is associated in the upgrade actions file. 
 
 Following is an example of an upgrade actions file that applies an element manifest file during the upgrade:
 
@@ -282,7 +282,7 @@ This command packages one or more client-side component manifests, such as web p
 
 ## Upgrade SharePoint items
 
-You may include new SharePoint items or update existing SharePoint items when you upgrade your client-side solution. Because provisioning SharePoint items uses features, you are using the [feature upgrade actions](https://msdn.microsoft.com/en-us/library/office/ee537575(v=office.14).aspx) XML file to define a list of upgrade actions.
+You may include new SharePoint items or update existing SharePoint items when you upgrade your client-side solution. Because provisioning SharePoint items uses features, you are using the feature [UpgradeActions](https://msdn.microsoft.com/en-us/library/office/ee537575(v=office.14).aspx) XML file to define a list of upgrade actions.
 
 The `upgradeActions` JSON object array in the `package-solution.json` references the feature XML file(s) associated with the upgrade actions for your feature. At the least, an upgrade action file defines the element manifest XML file that is executed when upgrading the feature. 
 
@@ -298,7 +298,7 @@ Following is an example of an upgrade action file that applies an element manife
 
 <br/>
 
-This is the corresponding `element-v2.xml` that defines a new Currency Field to be provisioned during the upgrade:
+This is the corresponding `element-v2.xml` that defines a new Currency field to be provisioned during the upgrade:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -316,9 +316,11 @@ This is the corresponding `element-v2.xml` that defines a new Currency Field to 
 
 <br/>
 
+### Sub-elements
+
 Upgrade actions in client-side solutions support the following sub-elements.
 
-### AddContentTypeField
+#### AddContentTypeField
 
 Adds a new field to an existing provisioned content type. Propagates the change from the site content type to all child lists and content types within the site. For example:
 
@@ -329,22 +331,16 @@ Adds a new field to an existing provisioned content type. Propagates the change 
      PushDown="TRUE" />
 ```
 
-### ApplyElementManifests
+#### ApplyElementManifests
 
 Adds a new element to an existing feature. When a feature is upgraded, provisions all non-declarative elements that are referenced in the specified element manifests.
 
-### VersionRange
+#### VersionRange
 
 Specifies a version range to which specified upgrade actions apply.
 
 
 ## See also
-
-- [SharePoint PnP Webcast - Provisioning SharePoint assets for your SPFx solution](https://www.youtube.com/watch?v=r-UdJhhHlEQ&list=PLR9nK3mnD-OUnJytlXlO84fQnYt50iTmS)  
+ 
 - [Tutorial - Provisioning SharePoint assets from your SharePoint client-side web part](../web-parts/get-started/provision-sp-assets-from-package.md)
-- [SharePoint Building Block: Features](https://msdn.microsoft.com/en-us/library/ee537350.aspx)
-- [Feature Framework - UpgradeActions element usage](https://msdn.microsoft.com/en-us/library/office/ee537575.aspx)
-- [Feature Framework - Field Element](https://msdn.microsoft.com/en-us/library/aa979575.aspx)
-- [Feature Framework - ContentType Element](https://msdn.microsoft.com/en-us/library/aa544268.aspx)
-- [Feature Framework - ListInstance Element](https://msdn.microsoft.com/en-us/library/office/ms476062.aspx)
 - [SharePoint Framework Overview](../sharepoint-framework-overview.md)

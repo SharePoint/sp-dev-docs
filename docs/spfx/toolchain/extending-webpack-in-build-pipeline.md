@@ -1,7 +1,7 @@
 ---
 title: Extending Webpack in the SharePoint Framework toolchain
 description: Extend the Webpack configuration with custom loaders and plug-ins. Webpack is a JavaScript module bundler.
-ms.date: 02/01/2018
+ms.date: 02/02/2018
 ms.prod: sharepoint
 ---
 
@@ -36,7 +36,7 @@ You can download the completed sample at [samples/js-extend-webpack](https://aka
 
 ### Step 1 - Install the package
 
-Let's reference markdown-loader in our project.
+Reference markdown-loader in our project:
 
 ```
 npm i --save markdown-loader
@@ -120,48 +120,50 @@ Let's walk through what this code snippet is doing:
 
 Now that we have configured the loader, let's update our code and add a few files to test the scenario.
 
-Create a file `my-markdown.md` in the `src` directory of your project folder with some markdown text in it.
+1. Create a file `my-markdown.md` in the `src` directory of your project folder with some markdown text in it.
 
-```md
-#Hello Markdown
+  ```md
+  #Hello Markdown
 
-*Markdown* is a simple markup format to write content.
+  *Markdown* is a simple markup format to write content.
 
-You can also format text as **bold** or *italics* or ***bold italics***
-```
+  You can also format text as **bold** or *italics* or ***bold italics***
+  ```
 
-When you build the project, the Webpack markdown-loader converts this markdown text to an HTML string. To use this HTML string in any of your source `*.ts` files, add the following `require()` line at the top of the file after your imports, for example:
+  When you build the project, the Webpack markdown-loader converts this markdown text to an HTML string. 
+
+2. To use this HTML string in any of your source `*.ts` files, add the following `require()` line at the top of the file after your imports, for example:
 
 
-```TypeScript
-const markdownString: string = require<string>('./../../../../src/readme.md');
-```
+  ```TypeScript
+  const markdownString: string = require<string>('./../../../../src/readme.md');
+  ```
 
-Webpack by default looks in the `lib` folder for the file, but by default `.md` files don't get copied to the `lib` folder, meaning that we need to create a rather lengthy relative path. We can control this setting by defining a config file to tell the toolchain to copy `md` files to the lib folder.
+  Webpack by default looks in the `lib` folder for the file, but by default `.md` files don't get copied to the `lib` folder, meaning that we need to create a rather lengthy relative path. We can control this setting by defining a config file to tell the toolchain to copy `md` files to the lib folder.
 
-Create a file `copy-static-assets.json` in the `config` directory to tell the build system to copy some additional files from `src` to `lib`. By default, this build task copies files with extensions that the default toolchain Webpack configuration understands (like `png` and `json`), so we just need to tell it to also copy `md` files.
+3. Create a file `copy-static-assets.json` in the `config` directory to tell the build system to copy some additional files from `src` to `lib`. By default, this build task copies files with extensions that the default toolchain Webpack configuration understands (like `png` and `json`), so we just need to tell it to also copy `md` files.
 
-```JSON
-{
-  "includeExtensions": [
-    "md"
-  ]
-}
-```
+  ```JSON
+  {
+    "includeExtensions": [
+      "md"
+    ]
+  }
+  ```
 
-Now instead of using the relative path, you can use the file path in your `require` statement, for example:
+4. Now instead of using the relative path, you can use the file path in your `require` statement, for example:
 
-```TypeScript
-const markdownString: string = require<string>('./../../readme.md');
-```
+  ```TypeScript
+  const markdownString: string = require<string>('./../../readme.md');
+  ```
 
-You can then reference this string in your code, for example:
+5. You can then reference this string in your code, for example:
 
-``` TypeScript
-public render(): void {
-  this.domElement.innerHTML = markdownString;
-}
-```
+  ``` TypeScript
+  public render(): void {
+    this.domElement.innerHTML = markdownString;
+  }
+  ```
 
 ### Step 4 - Build and test your code
 

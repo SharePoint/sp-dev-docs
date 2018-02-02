@@ -144,7 +144,7 @@
         href: spfx/toolchain/integrate-gulp-tasks-in-build-pipeline.md
       - name: Extend Webpack
         href: spfx/toolchain/extending-webpack-in-build-pipeline.md
-      - name: Update SharePoint Framework packages
+      - name: Update packages
         href: spfx/toolchain/update-latest-packages.md
       - name: Tenant-scoped deployment
         href: spfx/tenant-scoped-deployment.md

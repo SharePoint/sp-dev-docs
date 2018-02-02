@@ -1,7 +1,7 @@
 ---
 title: Solution packaging
 description: The package-solution gulp task looks at /config/package-solution.json for various configuration details in SharePoint Framework.
-ms.date: 02/01/2018
+ms.date: 02/02/2018
 ms.prod: sharepoint
 ---
 
@@ -29,7 +29,7 @@ interface IPackageSolutionTaskConfig {
 
 Each package configuration file has some optional settings to override the places where the task looks for various source files and manifests, as well as defining the location to write the package. Additionally, it has a required solution definition, which instructs the packager on the relationships of various components.
 
-## Solution definition (_ISolution_)
+## Solution definition (ISolution)
 
 ```typescript
 interface ISolution {
@@ -51,7 +51,7 @@ The solution definition also optionally contains a list of SharePoint Feature de
 > [!NOTE] 
 > If this is omitted or empty, the task creates a single Feature for every component (a 1:1 mapping).
 
-## Feature definition (_IFeature_)
+## Feature definition (IFeature)
 
 ```typescript
 interface IFeature {
