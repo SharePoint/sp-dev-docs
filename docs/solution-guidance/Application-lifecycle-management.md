@@ -39,3 +39,4 @@ The new development model of SharePoint Framework (SPFx) introduces new tools an
 
 ### Videos
 * [PnP Webcast - ALM APIs for SharePoint Framework solutions and add-ins](https://www.youtube.com/watch?v=MUmd85-E5SI&index=1&list=PLR9nK3mnD-OUnJytlXlO84fQnYt50iTmS)
+* [PnP Webcast - VSTS Build and Release Pipelines for SharePoint Framework Solutions](https://www.youtube.com/watch?v=0LysOXWbC2A)
