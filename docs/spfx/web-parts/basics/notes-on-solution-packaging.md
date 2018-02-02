@@ -1,12 +1,12 @@
 ---
-title: Solution packaging
-description: The package-solution gulp task looks at /config/package-solution.json for various configuration details in SharePoint Framework.
+title: SharePoint solution packaging
+description: The package-solution gulp task looks at /config/package-solution.json for various configuration details in SharePoint Framework, including ISolution and IFeature definitions.
 ms.date: 02/02/2018
 ms.prod: sharepoint
 ---
 
 
-# Solution packaging
+# SharePoint solution packaging
 
 The **package-solution** gulp task looks at **/config/package-solution.json** for various configuration details, including some generic filepaths, as well as defining the relationship between components (_WebParts_ and _Applications_) in a package.
 

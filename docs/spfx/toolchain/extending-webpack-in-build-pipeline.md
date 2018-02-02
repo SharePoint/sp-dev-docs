@@ -134,7 +134,6 @@ Now that we have configured the loader, let's update our code and add a few file
 
 2. To use this HTML string in any of your source `*.ts` files, add the following `require()` line at the top of the file after your imports, for example:
 
-
   ```TypeScript
   const markdownString: string = require<string>('./../../../../src/readme.md');
   ```
