@@ -203,7 +203,7 @@ Following is an example of a custom list instance schema:
 
 As its name suggests, this is the file that includes any upgrade actions when the solution is updated on the site. As part of the upgrade actions, the action could specify to include one or more element manifests as well. For example, if the upgrade requires a new field to be added, the field definition is available as an element manifest and associated in the upgrade actions file. 
 
-Following is an example of an upgrade action file that applies an element manifest file during the upgrade:
+Following is an example of an upgrade actions file that applies an element manifest file during the upgrade:
 
 ```xml
 <ApplyElementManifests>
@@ -316,7 +316,7 @@ This is the corresponding `element-v2.xml` that defines a new Currency Field to 
 
 <br/>
 
-Upgrade actions in client-side solutions support the following sub-elements:
+Upgrade actions in client-side solutions support the following sub-elements.
 
 ### AddContentTypeField
 
@@ -328,8 +328,6 @@ Adds a new field to an existing provisioned content type. Propagates the change 
      FieldId="{B250DCFD-9310-4e2d-85F2-BE2DA37A57D2}" 
      PushDown="TRUE" />
 ```
-
-<br/>
 
 ### ApplyElementManifests
 
