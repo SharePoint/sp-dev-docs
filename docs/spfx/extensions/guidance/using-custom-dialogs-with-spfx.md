@@ -7,7 +7,7 @@ ms.prod: sharepoint
 
 # Use custom dialog boxes with SharePoint Framework Extensions
 
-You can use custom dialog boxes, available from the **@microsoft/sp-dialog** package, within the context of SharePoint Framework Extensions or client-side web parts. 
+You can use custom dialog boxes, available from the **[@microsoft/sp-dialog](https://www.npmjs.com/package/@microsoft/sp-dialog)** package, within the context of SharePoint Framework Extensions or client-side web parts. 
 
 This article describes how to create a custom dialog box and use it within the context of a ListView Command Set extension.
 
