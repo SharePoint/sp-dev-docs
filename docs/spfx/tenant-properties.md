@@ -1,38 +1,44 @@
-# SharePoint Online Tenant Properties
+---
+title: SharePoint Online tenant properties
+description: Manage and read tenant properties, which allow tenant administrators to add properties in the App Catalog that can be read by various SharePoint Framework components.
+ms.date: 02/02/2018
+ms.prod: sharepoint
+---
 
-Tenant Properties allow tenant administrators to add properties in the app catalog that can be read by various SharePoint Framework components. The Tenant Properties are managed by tenant administrators using the [Microsoft SharePoint Online Management Shell](https://technet.microsoft.com/en-us/library/fp161372.aspx) which is a PowerShell module to manage your SharePoint Online subscription in the Office 365.
+# SharePoint Online tenant properties
+
+Tenant properties allow tenant administrators to add properties in the App Catalog that can be read by various SharePoint Framework components. The tenant properties are managed by tenant administrators by using the [Microsoft SharePoint Online Management Shell](https://technet.microsoft.com/en-us/library/fp161372.aspx), which is a PowerShell module to manage your SharePoint Online subscription in Office 365.
 
 ## Manage tenant properties
 
-Using the Microsoft SharePoint Online Management Shell, tenant administrators can add and remove tenant properties using PowerShell. 
+Using the Microsoft SharePoint Online Management Shell, tenant administrators can use PowerShell to add and remove tenant properties. 
 
-> Download the Microsoft SharePoint Online Management Shell [here](https://www.microsoft.com/en-us/download/details.aspx?id=35588)
+[Download the Microsoft SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588).
 
-The following PowerShell cmdlets are available to manage the tenant properties:
-
-Since tenant properties are stored in the tenant app catalog, you will need to provide the tenant app catalog site collection URL in the cmdlets below.
+The following PowerShell cmdlets are available to manage the tenant properties. Because tenant properties are stored in the tenant App Catalog, you must provide the tenant App Catalog site collection URL in the following cmdlets.
 
 ### Get-SPOStorageEntity
-Applies to: Office 365, SharePoint Online
 
-Syntax
-Get-SPOStorageEntity [-Site] <AppCatalogSiteURL> [-Key] <String>
+- **Applies to** Office 365, SharePoint Online
+
+- **Syntax** Get-SPOStorageEntity [-Site] <AppCatalogSiteURL> [-Key] <String>
 
 ### Set-SPOStorageEntity
-Applies to: Office 365, SharePoint Online
 
-Syntax
-Set-SPOStorageEntity [-Site] <AppCatalogSiteURL> [-Key] <String> [-Value] <String> [-Description] <String> [-Comments] <String>
+- **Applies to** Office 365, SharePoint Online
+
+- **Syntax** Set-SPOStorageEntity [-Site] <AppCatalogSiteURL> [-Key] <String> [-Value] <String> [-Description] <String> [-Comments] <String>
 
 ### Remove-SPOStorageEntity
-Applies to: Office 365, SharePoint Online
 
-Syntax
-Remove-SPOStorageEntity [-Site] <AppCatalogSiteURL> [-Key] <String>
+- **Applies to** Office 365, SharePoint Online
 
-## Reading tenant properties
+- **Syntax** Remove-SPOStorageEntity [-Site] <AppCatalogSiteURL> [-Key] <String>
 
-Developers can read tenant properties using the SharePoint REST APIs and use them in SharePoint Framework components such as web parts and extensions.
+
+## Read tenant properties
+
+Developers can read tenant properties by using the SharePoint REST APIs and use them in SharePoint Framework components such as web parts and extensions.
 
 ## HTTP request
 
@@ -65,3 +71,7 @@ Content-Type: application/json
     "Value":"Tenant property key value"
 }
 ```
+
+## See also
+
+- [Overview of the SharePoint Framework](sharepoint-framework-overview.md)

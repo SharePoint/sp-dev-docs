@@ -44,6 +44,8 @@ First, install the **webpack-bundle-analyzer** package in your project by execut
 npm install webpack-bundle-analyzer --save-dev
 ```
 
+<br/>
+
 Next, change the contents of the **gulpfile.js** file in your project to:
 
 ```js
@@ -77,6 +79,8 @@ build.initialize(gulp);
 <br/>
 
 The next time you bundle your project by using the `gulp bundle` task, you'll see the bundle stats files generated in the **temp/stats** folder in your project. One of the generated stats files is a treemap showing the different scripts included in the generated bundle. You can find this visualization in the **./temp/stats/[solution-name].stats.html** file.
+
+<br/>
 
 <img alt="Webpack bundle analyzer treemap illustrating the contents of a sample SharePoint Framework bundle" src="../../images/guidance-productionbuilds-webpack-bundlestats-chart-angular.png" width="800">
 
