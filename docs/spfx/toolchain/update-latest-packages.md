@@ -123,6 +123,6 @@ npm ls @microsoft/generator-sharepoint -g --depth=0
 
 ## See also
 
-- [Upgrading SharePoint Framework projects (Team-based development guidance)](../../team-based-development-on-sharepoint-framework.md#upgrading-sharepoint-framework-projects)
+- [Upgrading SharePoint Framework projects (Team-based development guidance)](../team-based-development-on-sharepoint-framework.md#upgrading-sharepoint-framework-projects)
 - [Upgrade SharePoint items (Provisioning SharePoint assets)](provision-sharepoint-assets.md#upgrade-sharepoint-items)
 - [SharePoint Framework Overview](../sharepoint-framework-overview.md)

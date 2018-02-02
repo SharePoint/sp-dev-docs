@@ -343,7 +343,7 @@ Specifies a version range to which specified upgrade actions apply.
 ## See also
 
 - [SharePoint PnP Webcast - Provisioning SharePoint assets for your SPFx solution](https://www.youtube.com/watch?v=r-UdJhhHlEQ&list=PLR9nK3mnD-OUnJytlXlO84fQnYt50iTmS)  
-- [Tutorial - Provisioning SharePoint assets from your SharePoint client-side web part](../../web-parts/get-started/provision-sp-assets-from-package.md)
+- [Tutorial - Provisioning SharePoint assets from your SharePoint client-side web part](../web-parts/get-started/provision-sp-assets-from-package.md)
 - [SharePoint Building Block: Features](https://msdn.microsoft.com/en-us/library/ee537350.aspx)
 - [Feature Framework - UpgradeActions element usage](https://msdn.microsoft.com/en-us/library/office/ee537575.aspx)
 - [Feature Framework - Field Element](https://msdn.microsoft.com/en-us/library/aa979575.aspx)

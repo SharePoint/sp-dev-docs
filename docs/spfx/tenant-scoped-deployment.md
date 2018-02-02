@@ -25,7 +25,7 @@ You can also see the tenant-wide deployment option demonstrated by watching the 
 
 When this option is used, any feature framework definitions in the SharePoint Framework solution are ignored. If the solution contains feature framework definitions, for example, for creating a custom list, you should not use this solution-specific option.
 
-For more information, see [Provision SharePoint assets with your solution package](../../toolchain/provision-sharepoint-assets.md).
+For more information, see [Provision SharePoint assets with your solution package](../toolchain/provision-sharepoint-assets.md).
 
 > [!NOTE] 
 > Solutions that are configured to be automatically deployed across tenants are not visible in the add-an-app capability at the site level. 
@@ -71,7 +71,7 @@ Web parts included in solutions that have been centrally deployed are immediatel
 
 ## Impact of skipFeatureDeployment setting with Extensions
 
-[SharePoint Framework Extensions](../../extensions/overview-extensions.md) are immediately available to be used on SharePoint sites. This means that they can be associated with **ClientSideComponentId** properties in the specific SharePoint elements, such as **fields** and **user custom actions**. 
+[SharePoint Framework Extensions](../extensions/overview-extensions.md) are immediately available to be used on SharePoint sites. This means that they can be associated with **ClientSideComponentId** properties in the specific SharePoint elements, such as **fields** and **user custom actions**. 
 
 ## See also
 
