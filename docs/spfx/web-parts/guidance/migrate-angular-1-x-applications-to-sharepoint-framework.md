@@ -118,14 +118,14 @@ In your SharePoint site, create a new list called **Todo**. In the list, add a n
 
 1. In the code editor, open the **./src/webparts/toDo/ToDoWebPart.ts** file. After the last `import` statement, add the following code:
 
-  ```ts
+  ```typescript
   import * as angular from 'angular';
   import 'ng-office-ui-fabric';
   ```
 
 2. Change the contents of the **render** method to:
 
-  ```ts
+  ```typescript
   export default class ToDoWebPart extends BaseClientSideWebPart<IToDoWebPartProps> {
     // ...
     public render(): void {
@@ -248,7 +248,7 @@ Although the web part is working correctly, it doesn't look the same as the Angu
 
 2. In the **./src/webparts/toDo/ToDoWebPart.ts** file, in the **render** method, change the application rendering template to use new Office UI Fabric icons.
 
-  ```ts
+  ```typescript
   export default class ToDoWebPart extends BaseClientSideWebPart<IToDoWebPartProps> {
     // ...
     public render(): void {
@@ -307,7 +307,7 @@ The original AngularJS application is written in plain JavaScript, which makes m
 
 In your project, rename the **./src/webparts/toDo/app/app.config.js** file to `app.config.ts`. Change its contents to:
 
-```ts
+```typescript
 import * as angular from 'angular';
 
 export default function() {
@@ -322,7 +322,7 @@ export default function() {
 
 In your project, rename the **./src/webparts/toDo/app/data.service.js** file to `DataService.ts`. Change its contents to:
 
-```ts
+```typescript
 import * as angular from 'angular';
 
 export interface ITodo {
@@ -513,7 +513,7 @@ export default class DataService implements IDataService {
 
 In your project, rename the **./src/webparts/toDo/app/home.controller.js** file to `HomeController.ts`. Change its contents to:
 
-```ts
+```typescript
 import * as angular from 'angular';
 import { IDataService, ITodo } from './DataService';
 
@@ -610,7 +610,7 @@ export default class HomeController {
 
 In your project, rename the **./src/webparts/toDo/app/app.module.js** file to `app.module.ts`. Change its contents to:
 
-```ts
+```typescript
 import * as angular from 'angular';
 import config from './app.config';
 import HomeController from './HomeController';
@@ -636,7 +636,7 @@ Now that the AngularJS application is built using TypeScript, and its different 
 
 1. In the code editor, open the **./src/webparts/toDo/ToDoWebPart.ts** file. Change the **render** method to:
 
-  ```ts
+  ```typescript
   export default class ToDoWebPart extends BaseClientSideWebPart<IToDoWebPartProps> {
     // ...
     public render(): void {
@@ -707,7 +707,7 @@ At this point the AngularJS application works correctly and is wrapped in a Shar
 
 2. In the **./src/webparts/toDo/ToDoWebPart.ts** file, change the definition of the `IToDoWebPartProps` interface to:
 
-  ```ts
+  ```typescript
   export interface IToDoWebPartProps {
     todoListName: string;
     hideFinishedTasks: boolean;
@@ -716,7 +716,7 @@ At this point the AngularJS application works correctly and is wrapped in a Shar
 
 3. In the **./src/webparts/toDo/ToDoWebPart.ts** file, change the first import statement to:
 
-  ```ts
+  ```typescript
   import {
     BaseClientSideWebPart,
     IPropertyPaneSettings,
@@ -727,7 +727,7 @@ At this point the AngularJS application works correctly and is wrapped in a Shar
 
 4. In the same file, change the **getPropertyPaneConfiguration** method to:
 
-  ```ts
+  ```typescript
   export default class ToDoWebPart extends BaseClientSideWebPart<IToDoWebPartProps> {
     // ...
     protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
@@ -760,7 +760,7 @@ At this point the AngularJS application works correctly and is wrapped in a Shar
 
 5. Add the missing resource strings by changing the **./src/webparts/toDo/loc/mystrings.d.ts** file contents to:
 
-  ```ts
+  ```typescript
   declare interface IToDoWebPartStrings {
     PropertyPaneDescription: string;
     BasicGroupName: string;
@@ -799,7 +799,7 @@ In your project, delete the **./src/webparts/toDo/app/app.config.ts** file. In t
 
 In the **./src/webparts/toDo/app/app.module.ts** file, remove the reference to the AngularJS configuration by changing its contents to:
 
-```ts
+```typescript
 import * as angular from 'angular';
 import HomeController from './HomeController';
 import DataService from './DataService';
@@ -822,7 +822,7 @@ Originally the data service retrieved its configuration from the constants defin
 
 In the code editor, open the **./src/webparts/toDo/app/DataService.ts** file, and change its contents to:
 
-```ts
+```typescript
 import * as angular from 'angular';
 
 export interface ITodo {
@@ -1011,7 +1011,7 @@ export default class DataService implements IDataService {
 
 1. In the **./src/webparts/toDo/ToDoWebPart.ts** file, to the **ToDoWebPart** class, add a new property called `$injector`:
 
-  ```ts
+  ```typescript
   export default class ToDoWebPart extends BaseClientSideWebPart<IToDoWebPartProps> {
     private $injector: angular.auto.IInjectorService;
     // ...
@@ -1020,7 +1020,7 @@ export default class DataService implements IDataService {
 
 2. In the same file, update the **render** method to:
 
-  ```ts
+  ```typescript
   export default class ToDoWebPart extends BaseClientSideWebPart<IToDoWebPartProps> {
     // ...
     public render(): void {
@@ -1091,7 +1091,7 @@ export default class DataService implements IDataService {
 
 1. In the code editor, open the **./src/webparts/toDo/app/HomeController.ts** file. In the **HomeController** class, add the following properties:
 
-  ```ts
+  ```typescript
   export default class HomeController {
     // ...
     private sharePointApi: string = undefined;
@@ -1104,7 +1104,7 @@ export default class DataService implements IDataService {
 
 2. Extend the constructor of the **HomeController** class with injecting the root scope service, and change its contents to:
 
-  ```ts
+  ```typescript
   export default class HomeController {
     // ...
     public static $inject: string[] = ['DataService', '$window', '$rootScope'];
@@ -1132,7 +1132,7 @@ export default class DataService implements IDataService {
 
 3. To the **HomeController** class, add the **init** method:
 
-  ```ts
+  ```typescript
   export default class HomeController {
     // ...
     private init(sharePointApi: string, todoListName: string, hideFinishedTasks?: boolean): void {
@@ -1154,7 +1154,7 @@ export default class DataService implements IDataService {
 
 4. Update all remaining methods in the **HomeController** class to use the configuration values from the class properties:
 
-  ```ts
+  ```typescript
   export default class HomeController {
     // ...
     private loadTodos(): void {
