@@ -185,7 +185,7 @@ module.exports = {
 
 Then, in the web part class, you can refer to the script and call the **greeting** function:
 
-```ts
+```typescript
 public render(): void {  
   this.domElement.innerHTML = `
     <input type="button" value="Click me"/>`;
@@ -201,7 +201,7 @@ Many client-side customizations use jQuery for executing AJAX requests for its s
 
 SharePoint Framework offers you two types of HTTP client: the [SPHttpClient](https://docs.microsoft.com/en-us/javascript/api/sp-application-base), meant for executing requests to the SharePoint REST API, and the [HttpClient](https://docs.microsoft.com/en-us/javascript/api/sp-application-base) designed for issuing web requests to other REST APIs. Here is how you would execute a call by using the SPHttpClient to get the title of the current SharePoint site:
 
-```ts
+```typescript
 this.context.spHttpClient.get(`${this.context.pageContext.web.absoluteUrl}/_api/web?$select=Title`,
 SPHttpClient.configurations.v1,
 {

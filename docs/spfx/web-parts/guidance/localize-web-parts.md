@@ -799,7 +799,7 @@ Now that you can retrieve the information about the languages enabled on the cur
 
 6. Update the resource files accordingly to provide values for the **GreetingGroupName** string.
 
-  **./src/webparts/greeting/loc/en-us.js**:
+  **./src/webparts/greeting/loc/en-us.js**
 
   ```js
   define([], function() {
@@ -811,7 +811,7 @@ Now that you can retrieve the information about the languages enabled on the cur
   });
   ```
 
-  **./src/webparts/greeting/loc/nl-nl.js**:
+  **./src/webparts/greeting/loc/nl-nl.js**
 
   ```js
   define([], function() {
@@ -823,7 +823,7 @@ Now that you can retrieve the information about the languages enabled on the cur
   });
   ```
 
-  **./src/webparts/greeting/loc/qps-ploc.js**:
+  **./src/webparts/greeting/loc/qps-ploc.js**
 
   ```js
   define([], function() {

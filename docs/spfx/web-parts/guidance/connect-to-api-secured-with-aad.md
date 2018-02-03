@@ -329,7 +329,7 @@ Azure Functions are hosted in Azure App Service, which allows you to configure i
 
     ![The CORS option highlighted on the Azure Function Platform features blade](../../../images/api-aad-function-cors.png)
 
-3. On the CORS settings blade, delete all entries so that the CORS configuration is empty.
+3. On the **CORS settings** blade, delete all entries so that the CORS configuration is empty.
 
     ![The Delete option highlighted on the first CORS entry](../../../images/api-aad-function-cors-delete.png)
 
@@ -357,7 +357,7 @@ Azure Functions are hosted in Azure App Service, which allows you to configure i
 
     ![Azure Active Directory highlighted in the list of authentication providers](../../../images/api-aad-function-authentication-aad.png)
 
-6. On the Active Directory Authentication blade, set the **Management mode** to **Express**, and create a new Azure AD app.
+6. On the **Active Directory Authentication** blade, set the **Management mode** to **Express**, and create a new Azure AD app.
 
     > [!IMPORTANT] 
     > When using the Express configuration mode, the Azure Portal creates a new Azure AD application from the same directory where the Function App is located. If the Function App is hosted in a different Azure subscription with a different directory, you should use the advanced mode instead, and specify the ID of the directory and application that should be used to secure access to the API.
@@ -386,7 +386,7 @@ Another way to implement the API is by using the ASP.NET Web API. Compared to us
 
 Following are steps to build an API using the ASP.NET Web API, deploy it to Azure App Service, and secure it by using Azure App Service Authentication. Later, you will extend the API to perform the authentication by itself so that it can be deployed to other platforms as well.
 
-#### Create new ASP.NET WebAPI project
+#### Create a new ASP.NET Web API project
 
 1. In Visual Studio, on the **File** menu, select the **New / Project** option. 
 
@@ -707,7 +707,7 @@ In the following steps, you extend the web application so that it redirects user
 
 To secure an API with Azure AD, you need to register an Azure AD application. This application is then referenced in the web application project and used by the OWIN middleware to secure the access to your API with Azure AD.
 
-1. If you don't have an existing Azure AD application yet, you can create one in the Azure Portal, by navigating to the Azure Active Directory blade.
+1. If you don't have an existing Azure AD application yet, you can create one in the Azure Portal, by navigating to the **Azure Active Directory** blade.
 
     > [!IMPORTANT] 
     > The Azure AD application used to secure the API should be created in the same Azure Active Directory that is used by your organization to access Office 365.

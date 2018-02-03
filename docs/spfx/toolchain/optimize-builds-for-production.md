@@ -104,7 +104,7 @@ To illustrate this, take the [Lodash](https://lodash.com) library as an example.
 
 However, if you referenced the whole library by using the following code, it adds 527 KB to your unoptimized bundle:
 
-```ts
+```typescript
 import * as _ from 'lodash';
 ```
 
@@ -116,7 +116,7 @@ import * as _ from 'lodash';
 
 Instead, if you referenced only the specific Lodash method by using the following code, it adds 45 KB to your unoptimized bundle:
 
-```ts
+```typescript
 const at: any = require('lodash/at');
 ```
 

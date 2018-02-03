@@ -24,7 +24,7 @@ The following figure shows an example of a property pane in SharePoint.
 
 The following code example initializes and configures the property pane in your web part. You override the **getPropertyPaneConfiguration** method and return a collection of property pane page(s).
 
-```ts
+```typescript
 protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
   return {
     pages: [
@@ -67,7 +67,7 @@ The following field types are supported:
 
 The field types are available as modules in **sp-client-platform**. They require an import before you can use them in your code:
 
-```ts
+```typescript
 import {
   PropertyPaneTextField,
   PropertyPaneCheckbox,
@@ -81,7 +81,7 @@ import {
 
 Every field type method is defined as follows, taking **PropertyPaneTextField** as an example:
 
-```ts
+```typescript
 PropertyPaneTextField('targetProperty',{
   //field properties are defined here
 })
@@ -91,7 +91,7 @@ The **targetProperty** defines the associated object for that field type and is 
 
 To assign types to these properties, define an interface in your web part class that includes one or more target properties.
 
-```ts
+```typescript
 export interface IHelloWorldWebPartProps {
     targetProperty: string
 }
@@ -99,7 +99,7 @@ export interface IHelloWorldWebPartProps {
 
 This is then available in your web part by using **this.properties.targetProperty**.
 
-```ts
+```typescript
 <p class="ms-font-l ms-fontColor-white">${this.properties.description}</p>
 ```
 
@@ -118,7 +118,7 @@ While reactive mode is sufficient for many scenarios, at times you need non-reac
 
 To turn on the non-reactive mode, add the following code in your web part:
 
-```ts 
+```typescript 
 protected get disableReactivePropertyChanges(): boolean { 
   return true; 
 }

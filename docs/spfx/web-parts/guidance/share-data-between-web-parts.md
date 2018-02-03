@@ -20,7 +20,7 @@ Often, when building web parts, a number of them are used together on one page. 
 
 A sample service responsible for loading the data could look like the following:
 
-```ts
+```typescript
 import { IDocument } from './IDocument';
 
 export class DocumentsService {
@@ -44,7 +44,7 @@ export class DocumentsService {
 
 SharePoint Framework client-side web parts would consume this service by using the following code:
 
-```ts
+```typescript
 import { DocumentsService, IDocument } from '../../services';
 
 export default class RecentDocumentsWebPart extends BaseClientSideWebPart<IRecentDocumentsWebPartProps> {
@@ -83,7 +83,7 @@ Web parts built using the SharePoint Framework are isolated into separate module
 
 Using the data access service shown earlier, it could be changed as follows:
 
-```ts
+```typescript
 import { IDocument } from './IDocument';
 
 export class DocumentsService {
@@ -159,7 +159,7 @@ Another approach to exchange data across different web parts is by storing the d
 
 The implementation that uses cookies is very similar to how you store data in a globally-scoped variable. The only difference is that the actual data would be stored in a cookie.
 
-```ts
+```typescript
 import { IDocument } from './IDocument';
 import * as Cookies from 'js-cookie';
 
@@ -252,7 +252,7 @@ If you want data to be stored only during the current session, you should use se
 
 The previously used implementation of the data access service based on cookies can easily be adapted to use local storage instead.
 
-```ts
+```typescript
 import { IDocument } from './IDocument';
 
 export class DocumentsService {
@@ -321,7 +321,7 @@ The existing service, demonstrated in previous examples, with just a few modific
 
 First, it needs to implement an interface that represents the operations and properties it supports:
 
-```ts
+```typescript
 export interface IDocumentsService {
     getRecentDocument(): Promise<IDocument>;
     getRecentDocuments(startFrom: number): Promise<IDocument[]>;
@@ -336,7 +336,7 @@ export class DocumentsService implements IDocumentsService {
 
 Next, it needs to specify a [service key](https://docs.microsoft.com/en-us/javascript/api/sp-core-library/servicekey) used to register the service with the SharePoint Framework and consume it from within web parts:
 
-```ts
+```typescript
 import { ServiceScope, ServiceKey } from '@microsoft/sp-core-library';
 
 export class DocumentsService implements IDocumentsService {
@@ -372,7 +372,7 @@ SharePoint Framework services can be built using the same project build system a
 
 When ready, you can consume the SharePoint Framework service from a web part by referencing its package and retrieving the service using its key.
 
-```ts
+```typescript
 // ...
 import { DocumentsService, IDocumentsService, IDocument } from 'react-recentdocuments-service';
 import { ServiceScope } from '@microsoft/sp-core-library';

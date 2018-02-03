@@ -188,7 +188,7 @@ In the web part manifest, add web part properties so that users can configure th
   
 3. In the code editor, open the **./src/webparts/gallery/IGalleryWebPartProps.ts** file. Change its code to:
 
-  ```ts
+  ```typescript
   export interface IGalleryWebPartProps {
     listName: string;
     order: string;
@@ -201,7 +201,7 @@ In the web part manifest, add web part properties so that users can configure th
   
 4. In the code editor, open the **./src/webparts/gallery/GalleryWebPart.ts** file. Change the web part **render** method to:
 
-  ```ts
+  ```typescript
   export default class GalleryWebPart extends BaseClientSideWebPart<IGalleryWebPartProps> {
     // ...
     public render(): void {
@@ -220,7 +220,7 @@ In the web part manifest, add web part properties so that users can configure th
 
 5. Update the main React component to display the values of the properties. If the web part hasn't been configured, show the standard web part placeholder. In the code editor, open the **./src/webparts/gallery/components/Gallery.tsx** file, and change its code to:
 
-  ```ts
+  ```typescript
   import * as React from 'react';
   import styles from './Gallery.module.scss';
   import { IGalleryProps } from './IGalleryProps';
@@ -287,7 +287,7 @@ In the web part manifest, add web part properties so that users can configure th
 
 6. Update the main React component interface to match the web part property interface, because we are bypassing all the web part properties to this component. In the code editor, open the **./src/webparts/gallery/components/IGalleryProps.ts** file, and change its code to:
 
-  ```ts
+  ```typescript
   import { IGalleryWebPartProps } from '../IGalleryWebPartProps';
 
   export interface IGalleryProps extends IGalleryWebPartProps {
@@ -300,7 +300,7 @@ For users to be able to use the newly defined properties to configure the web pa
 
 1. In the code editor, open the **./src/webparts/gallery/GalleryWebPart.ts** file. In the top section of the file, change the **@microsoft/sp-webpart-base** import statement to:
 
-  ```ts
+  ```typescript
   import {
     BaseClientSideWebPart,
     IPropertyPaneConfiguration,
@@ -312,7 +312,7 @@ For users to be able to use the newly defined properties to configure the web pa
 
 2. Change the **propertyPaneSettings** to:
 
-  ```ts
+  ```typescript
   export default class GalleryWebPart extends BaseClientSideWebPart<IGalleryWebPartProps> {
     // ...
     protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
@@ -383,7 +383,7 @@ In a real-life scenario, you would retrieve the list of lists from the current S
 
 1. In the code editor, open the **./src/webparts/gallery/loc/mystrings.d.ts** file. Change its code to:
 
-  ```ts
+  ```typescript
   declare interface IGalleryStrings {
     PropertyPaneDescription: string;
     BasicGroupName: string;

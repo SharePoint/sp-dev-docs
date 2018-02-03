@@ -93,7 +93,7 @@ Open the **HelloWorldFieldCustomizer.ts** file in the **src\extensions\helloWorl
 
 Notice that the base class for the Field Customizer is imported from the **sp-listview-extensibility** package, which contains SharePoint Framework code required by the Field Customizer.
 
-```ts
+```typescript
 import { Log } from '@microsoft/sp-core-library';
 import { override } from '@microsoft/decorators';
 import {
@@ -110,7 +110,7 @@ The logic for your Field Customizer is contained in the **OnInit()**, **onRender
 
 The following are the contents of **onRenderCell()** and **onDisposeCell()** in the default solution:
 
-```ts
+```typescript
 @override
   public onRenderCell(event: IFieldCustomizerCellEventParameters): void {
     // Use this method to perform your custom cell rendering.
@@ -227,7 +227,7 @@ Now that we have successfully tested the out-of-the-box starting point of the Fi
     
 2. Open the **HelloWorldFieldCustomizer.ts** file in the **src\extensions\helloWorld** folder, and update the **onRednerCell** method as follows.
 
-    ```ts
+    ```typescript
         @override
         public onRenderCell(event: IFieldCustomizerCellEventParameters): void {
 

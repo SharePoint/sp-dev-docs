@@ -79,7 +79,7 @@ This statement imports the `AuthenticationContext` class that exposes the ADAL J
 
 The current ADAL JS functionality is unsuitable for use in web parts. Use the following patch to make ADAL JS work in your web part.
 
-**WebPartAuthenticationContext.js:**
+**WebPartAuthenticationContext.js**
 
 ```js
 const AuthenticationContext = require('adal-angular');

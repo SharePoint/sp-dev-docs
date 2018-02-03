@@ -20,7 +20,7 @@ When you issue a GET or a POST request, **GraphHttpClient** verifies that it has
 
 The following example shows a request to Microsoft Graph that uses the **GraphHttpClient** class.
 
-```ts
+```typescript
 // ...
 import { GraphHttpClient, GraphHttpClientResponse } from '@microsoft/sp-http';
 

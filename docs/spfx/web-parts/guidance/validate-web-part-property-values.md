@@ -71,7 +71,7 @@ In this step you verify that the description web part property is specified and 
 
 1. In the code editor, open the **./src/webparts/listInfo/ListInfoWebPart.ts** file. In the **ListInfoWebPart** class, add the **validateDescription** method with the following code:
 
-  ```ts
+  ```typescript
   export default class ListInfoWebPart extends BaseClientSideWebPart<IListInfoWebPartProps> {
     // ...
 
@@ -94,7 +94,7 @@ In this step you verify that the description web part property is specified and 
 
 2. Associate the **validateDescription** method with the **description** web part property. In the **ListInfoWebPart** class, change the implementation of the **getPropertyPaneConfiguration** method to:
 
-  ```ts
+  ```typescript
   export default class ListInfoWebPart extends BaseClientSideWebPart<IListInfoWebPartProps> {
     // ...
 
@@ -186,7 +186,7 @@ In this step, you implement validation logic that checks if the list with the na
 
 2. In the code editor, open the **./src/webparts/listInfo/IListInfoWebPartProps.ts** file, and extend the interface definition with the **listName** property of type string.
 
-  ```ts
+  ```typescript
   export interface IListInfoWebPartProps {
     description: string;
     listName: string;
@@ -195,7 +195,7 @@ In this step, you implement validation logic that checks if the list with the na
 
 3. Finish adding the new web part property by opening the **./src/webparts/listInfo/ListInfoWebPart.ts** file in the code editor, and changing the implementation of the **getPropertyPaneConfiguration** method to:
 
-  ```ts
+  ```typescript
   export default class ListInfoWebPart extends BaseClientSideWebPart<IListInfoWebPartProps> {
     // ...
 
@@ -231,7 +231,7 @@ In this step, you implement validation logic that checks if the list with the na
 
 4. Add the missing **ListNameFieldLabel** resource string by changing the code of the **./src/webparts/listInfo/loc/mystrings.d.ts** file to:
 
-  ```ts
+  ```typescript
   declare interface IListInfoStrings {
     PropertyPaneDescription: string;
     BasicGroupName: string;
@@ -274,14 +274,14 @@ In this step, you validate the provided list name and check if it corresponds to
 
 1. In the code editor, open the **./src/webparts/listInfo/ListInfoWebPart.ts** file, and add the following references:
 
-  ```ts
+  ```typescript
   import { SPHttpClient, SPHttpClientResponse } from '@microsoft/sp-http';
   import { escape } from '@microsoft/sp-lodash-subset';
   ```
 
 2. In the **ListInfoWebPart** class, add the **validateListName** method with the following code:
 
-  ```ts
+  ```typescript
   export default class ListInfoWebPart extends BaseClientSideWebPart<IListInfoWebPartProps> {
     // ...
 
@@ -326,7 +326,7 @@ In this step, you validate the provided list name and check if it corresponds to
   
 3. In the **ListInfoWebPart** class, replace the code of the **getPropertyPaneConfiguration** method with:
 
-  ```ts
+  ```typescript
   export default class ListInfoWebPart extends BaseClientSideWebPart<IListInfoWebPartProps> {
     // ...
 
@@ -397,7 +397,7 @@ You can configure the validation delay for each property separately, depending o
 
 1. In the code editor, open the **./src/webparts/listInfo/ListInfoWebPart.ts** file. Change the code of the **getPropertyPaneConfiguration** method to:
 
-  ```ts
+  ```typescript
   export default class ListInfoWebPart extends BaseClientSideWebPart<IListInfoWebPartProps> {
     // ...
 

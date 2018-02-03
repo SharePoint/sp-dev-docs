@@ -241,7 +241,7 @@ Open the project folder **jquery-webpart** in Visual Studio Code. Your project s
 
 2. At the top of the file, where you can find other imports, add the following import:
 
-  ```ts
+  ```typescript
   import MyAccordionTemplate from './MyAccordionTemplate';
   ```
 
@@ -249,20 +249,20 @@ Open the project folder **jquery-webpart** in Visual Studio Code. Your project s
 
 1. You can import jQuery to your web part in the same way that you imported MyAccordionTemplate. At the top of the file, where you can find other imports, add the following imports:
 
-  ```ts
+  ```typescript
   import * as jQuery from 'jquery';
   import 'jqueryui';
   ```
 
 2. Load some external CSS files by using the module loader. Add the following import:
 
-  ```ts
+  ```typescript
   import { SPComponentLoader } from '@microsoft/sp-loader';
   ```
 
 3. Load the jQueryUI styles in the `JQueryWebPart` web part class by adding a constructor and using the newly imported SPComponentLoader. Add the following constructor to your web part: 
 
-  ```ts
+  ```typescript
     public constructor() {
       super();
 
@@ -282,13 +282,13 @@ Open the project folder **jquery-webpart** in Visual Studio Code. Your project s
 
 2. Set the web part's inner HTML to render the accordion HTML:
 
-  ```ts
+  ```typescript
   this.domElement.innerHTML = MyAccordionTemplate.templateHtml;
   ```
 
 3. jQueryUI Accordion has a few options that you can set to customize the accordion. Define a few options for your accordion just under `this.domElement.innerHTML = MyAccordionTemplate.templateHtml;`:
 
-  ```ts
+  ```typescript
   const accordionOptions: JQueryUI.AccordionOptions = {
     animate: true,
     collapsible: false,
@@ -305,7 +305,7 @@ Open the project folder **jquery-webpart** in Visual Studio Code. Your project s
 
 4. Finally, initialize the accordion:
 
-  ```ts
+  ```typescript
   jQuery('.accordion', this.domElement).accordion(accordionOptions);
   ```
 
@@ -313,7 +313,7 @@ Open the project folder **jquery-webpart** in Visual Studio Code. Your project s
 
   The complete `render` method looks like this:
 
-  ```ts
+  ```typescript
   public render(): void {
     this.domElement.innerHTML = MyAccordionTemplate.templateHtml;
 
