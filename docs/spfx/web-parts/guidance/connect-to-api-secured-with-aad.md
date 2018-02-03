@@ -623,7 +623,7 @@ At this point, the API is code complete and can be published to the Azure Web Ap
 
 5. Configure Azure Active Directory authentication from the list of authentication providers by selecting **Azure Active Directory**.
 
-    ![Azure Active Directory highlighted in the list of authentication providers](../../../images/api-aad-webapi-authentication-Azure AD.png)
+    ![Azure Active Directory highlighted in the list of authentication providers](../../../images/api-aad-webapi-authentication-aad.png)
 
 6. On the **Active Directory Authentication** blade, set the **Management mode** to **Express** and create a new Azure AD app.
 
