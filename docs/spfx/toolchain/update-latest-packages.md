@@ -1,6 +1,7 @@
 ---
-title: Update SharePoint Framework packages 
-ms.date: 11/29/2017
+title: Update SharePoint Framework packages
+description: Update the npm packages that you have installed in your project and those you have installed globally. 
+ms.date: 02/02/2018
 ms.prod: sharepoint
 ---
 
@@ -9,12 +10,14 @@ ms.prod: sharepoint
 
 SharePoint client-side development tools use the [npm](https://www.npmjs.com/) package manager to manage dependencies and other required JavaScript helpers. npm is typically included as part of Node.js setup.
 
-When you create a new client-side solution, the yeoman generator for SharePoint fetches the latest SharePoint Framework packages required for your client-side project. As you build your project, your existing packages could be outdated as there could be new versions of one or more packages available. Based on the [release notes](https://aka.ms/spfx-release-notes) for a particular release or the latest package, you may decide to update your SharePoint Framework packages used in your project. SharePoint Framework packages include both the npm packages you have installed in your project, for example: [@microsoft/sp-core-library](https://www.npmjs.com/package/@microsoft/sp-core-library), and npm packages installed globally, for example: [@microsoft/generator-sharepoint](https://www.npmjs.com/package/@microsoft/generator-sharepoint). 
+When you create a new client-side solution, the Yeoman generator for SharePoint fetches the latest SharePoint Framework packages required for your client-side project. As you build your project, your existing packages could be outdated because there could be new versions of one or more packages available. 
+
+Based on the [release notes](https://aka.ms/spfx-release-notes) for a particular release or the latest package, you may decide to update your SharePoint Framework packages used in your project. SharePoint Framework packages include both the npm packages you have installed in your project, for example: [@microsoft/sp-core-library](https://www.npmjs.com/package/@microsoft/sp-core-library), and npm packages installed globally, for example: [@microsoft/generator-sharepoint](https://www.npmjs.com/package/@microsoft/generator-sharepoint). 
 
 > [!TIP]
-> While it may not be required, it is recommended you update the SharePoint Framework packages every so often so that you can get the latest changes and fixes that have been released.
+> While it may not be required, we recommend that you update the SharePoint Framework packages often so that you can get the latest changes and fixes that have been released.
 
-## Find outdated packages in your project
+## Find outdated packages
 
 To find the outdated packages in your client-side project, including SharePoint Framework and other packages your project depends on, run the following command in a console in the same directory as your project. 
 
@@ -22,7 +25,7 @@ To find the outdated packages in your client-side project, including SharePoint 
 npm outdated
 ```
 
-The command will list the following information about the packages your project depends on. This information is looked up from the `package.json` file located in the root of your project directory and npm registry.
+The command lists the following information about the packages your project depends on. This information is looked up from the `package.json` file located in the root of your project directory and npm registry.
 
 * Current version installed in your project
 * Version requested by your project (available in `package.json`)
@@ -38,19 +41,21 @@ To identify the SharePoint Framework packages, look for the package names that s
 
 Along with the framework packages, you may also need to update `react` and `office-ui-fabric-react` packages. Make sure you read the [release notes](https://aka.ms/spfx-release-notes) for that specific release to infer which packages require updates and plan accordingly.
 
-### Using npm outdated with project targeting SharePoint 2016
+### Using the "npm outdated" command with a project
 
-Starting from Feature Pack 2, SharePoint 2016 supports SharePoint Framework solutions. SharePoint 2016 uses an older version of the SharePoint Framework, than the version available in SharePoint Online. When scaffolding new projects, the SharePoint Framework Yeoman generator prompts you to choose if your solution should be using the latest version of the SharePoint Framework and be working only with SharePoint Online or if it should use an older version of the SharePoint Framework and work with both SharePoint 2016 and SharePoint Online.
+Starting from Feature Pack 2, SharePoint 2016 supports SharePoint Framework solutions. SharePoint 2016 uses an older version of the SharePoint Framework than the version available in SharePoint Online. 
 
-When you run the `npm outdated` command in a project targeting both SharePoint Online and SharePoint 2016, it will show you the latest versions of the SharePoint Framework packages. These versions however work only with SharePoint Online. If you would update your solution to use these latest packages, it would not work with SharePoint 2016 anymore.
+When scaffolding new projects, the SharePoint Framework Yeoman generator prompts you to choose if your solution should be using the latest version of the SharePoint Framework and be working only with SharePoint Online, or if it should use an older version of the SharePoint Framework and work with both SharePoint 2016 and SharePoint Online.
+
+When you run the `npm outdated` command in a project that targets both SharePoint Online and SharePoint 2016, it shows you the latest versions of the SharePoint Framework packages. These versions, however, work only with SharePoint Online. If you update your solution to use these latest packages, it no longer works with SharePoint 2016.
 
 When working with SharePoint Framework solutions compatible with SharePoint hosted on-premises, you should always verify which patch level the target SharePoint farm has and which version of the SharePoint Framework it supports.
 
-### Update packages
+## Update packages
 
 When updating packages to newer versions, you should always use your package manager (npm or Yarn). You should not edit the `package.json` file manually. If you follow the recommended practice of using a lock file, your changes to the `package.json` file would be ignored.
 
-Start with identifying which packages need updating and which newer version you want to use. Please note, that it might not always be possible for you to use the latest version of the given package as it might be incompatible with other SharePoint Framework dependencies, such as TypeScript.
+Start with identifying which packages need updating and which newer version you want to use. Note that it might not always be possible for you to use the latest version of the given package because it might be incompatible with other SharePoint Framework dependencies, such as TypeScript.
 
 For each package that you want to update, run the following command:
 
@@ -64,17 +69,17 @@ For example, if you were using AngularJS version v1.5.9 and wanted to update to 
 npm install angular@1.6.5 --save
 ```
 
-Updating the package using npm will install the specified version of the package in your project, update the version number in the package.json file dependencies and the lock file used in your project.
+Updating the package by using npm installs the specified version of the package in your project and updates the version number in the package.json file dependencies and the lock file used in your project.
 
-Once the packages are installed, execute the following command to clean up any old build artifacts:
+After the packages are installed, execute the following command to clean up any old build artifacts:
 
 ```sh
 gulp clean
 ```
 
-### Update your code
+## Update your code
 
-Depending on breaking API changes, you may have to update your existing project code and config files. For each release, the [release notes](https://aka.ms/spfx-release-notes) will highlight any such breaking changes and the modifications required to your existing code. You will need to make sure you update your code with those fixes.
+Depending on breaking API changes, you may have to update your existing project code and config files. For each release, the [release notes](https://aka.ms/spfx-release-notes) highlight any such breaking changes and the modifications required to your existing code. You must make sure you update your code with those fixes.
 
 You can always build the project to see if you have any errors and warnings by running the command in a console in your project directory:
 
@@ -82,7 +87,7 @@ You can always build the project to see if you have any errors and warnings by r
 gulp build
 ```
 
-## Update yeoman generator for SharePoint
+## Update Yeoman generator
 
 If you have installed the SharePoint Framework Yeoman generator globally, you can find out if it requires updating by running the following command:
 
@@ -90,9 +95,9 @@ If you have installed the SharePoint Framework Yeoman generator globally, you ca
 npm outdated -g
 ```
 
-The command will list the following information about the packages installed globally in your machine. This information is looked up from the versions installed in your machine and the npm registry.
+The command lists the following information about the packages installed globally on your machine. This information is looked up from the versions installed on your machine and the npm registry.
 
-* Current version installed globally in your machine
+* Current version installed globally on your machine
 * Version requested by you when you installed
 * Latest version available
 
@@ -112,7 +117,7 @@ Open your favorite console and execute the following command to update the gener
 npm install @microsoft/generator-sharepoint@latest -g
 ```
 
-The command will update the yeoman generator for SharePoint to the latest published version along with its dependencies. You can validate this by executing the following command in the console:
+The command updates the Yeoman generator for SharePoint to the latest published version along with its dependencies. You can validate this by executing the following command in the console:
 
 ```sh
 npm ls @microsoft/generator-sharepoint -g --depth=0
@@ -120,5 +125,6 @@ npm ls @microsoft/generator-sharepoint -g --depth=0
 
 ## See also
 
-* [Upgrading SharePoint Framework projects (Team-based development guidance)](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/team-based-development-on-sharepoint-framework#upgrading-sharepoint-framework-projects)
-* [Upgrade SharePoint items (Provisioning SharePoint assets)](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/toolchain/provision-sharepoint-assets#upgrade-sharepoint-items)
+- [Upgrading SharePoint Framework projects (Team-based development guidance)](../team-based-development-on-sharepoint-framework.md#upgrading-sharepoint-framework-projects)
+- [Upgrade SharePoint items (Provisioning SharePoint assets)](provision-sharepoint-assets.md#upgrade-sharepoint-items)
+- [SharePoint Framework Overview](../sharepoint-framework-overview.md)

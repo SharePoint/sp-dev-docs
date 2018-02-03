@@ -23,7 +23,7 @@ You can also follow these steps by watching the video on the [SharePoint PnP You
 
 Application Customizer extensions are supported with `Site`, `Web`, and `List` scopes. You can control the scope by deciding where or how the Application Customizer is registered in your SharePoint tenant. When the Application Customizer exists in the scope and is being rendered, you can use the following method to get access to the placeholder. 
 
-```ts
+```typescript
     // Handling the Bottom placeholder
     if (!this._bottomPlaceholder) {
       this._bottomPlaceholder =
@@ -44,7 +44,7 @@ Notice that you're requesting a well-known placeholder by using the correspondin
 
 2. Add the `PlaceholderContent` and `PlaceholderName` to the import from `@microsoft/sp-application-base` by updating the import statement as follows:
 
-	```ts
+	```typescript
 		import {
 			BaseApplicationCustomizer, 
 			PlaceholderContent,
@@ -54,7 +54,7 @@ Notice that you're requesting a well-known placeholder by using the correspondin
 	
 	Also add the following import statements after the `strings` import at the top of the file:
 
-	```ts
+	```typescript
 		import styles from './AppCustomizer.module.scss';
 		import { escape } from '@microsoft/sp-lodash-subset'; 
 	```
@@ -97,7 +97,7 @@ Notice that you're requesting a well-known placeholder by using the correspondin
 	> [!NOTE] 
 	> If your Command Set uses the ClientSideComponentProperties JSON input, it is deserialized into the `BaseExtension.properties` object. You can define an interface to describe it.
 
-	```ts
+	```typescript
 		export interface IHelloWorldApplicationCustomizerProperties {
 			Top: string;
 			Bottom: string;
@@ -106,7 +106,7 @@ Notice that you're requesting a well-known placeholder by using the correspondin
 
 6. Add the following private variables inside the **HelloWorldApplicationCustomizer** class. In this scenario, these can just be local variables in an `onRender` method, but if you want to share them with other objects, define them as private variables. 
 
-	```ts
+	```typescript
 		export default class HelloWorldApplicationCustomizer
 			extends BaseApplicationCustomizer<IHelloWorldApplicationCustomizerProperties> {
 
@@ -118,7 +118,7 @@ Notice that you're requesting a well-known placeholder by using the correspondin
 
 7. Update the `onInit` method code as follows:
 
-	```ts
+	```typescript
 			@override
 			public onInit(): Promise<void> {
 				Log.info(LOG_SOURCE, `Initialized ${strings.Title}`);
@@ -134,7 +134,7 @@ Notice that you're requesting a well-known placeholder by using the correspondin
 
 8. Create a new `_renderPlaceHolders` private method with the following code:
 
-	```ts
+	```typescript
 	    private _renderPlaceHolders(): void {
 
 	      console.log('HelloWorldApplicationCustomizer._renderPlaceHolders()');
@@ -213,7 +213,7 @@ Notice that you're requesting a well-known placeholder by using the correspondin
 
 9. Add the following method after the `_renderPlaceHolders` method. In this case, you simply output a console message when the extension is removed from the page. 
 
-	```ts
+	```typescript
 	    private _onDispose(): void {
 	      console.log('[HelloWorldApplicationCustomizer._onDispose] Disposed custom top and bottom placeholders.');
 	    }

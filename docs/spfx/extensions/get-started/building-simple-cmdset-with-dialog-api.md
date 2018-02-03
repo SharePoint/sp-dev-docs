@@ -94,7 +94,7 @@ Open the **HelloWorldCommandSet.ts** file in the **src\extensions\helloWorld** f
 
 Notice that the base class for the ListView Command Set is imported from the **sp-listview-extensibility** package, which contains SharePoint Framework code required by the ListView Command Set.
 
-```ts
+```typescript
 import { override } from '@microsoft/decorators';
 import { Log } from '@microsoft/sp-core-library';
 import {
@@ -112,7 +112,7 @@ The **onListViewUpdated()** event occurs separately for each command (for exampl
 
 When using the method `tryGetCommand`, you get a Command object, which is a representation of the command that shows in the UI. You can modify its values, such as `title`, or `visible`, to modify the UI element. SPFx uses this information when re-rendering the commands. These objects keep the state from the last render, so if a command is set to `visible = false`, it remains invisible until it is set back to `visible = true`.
 
-```ts
+```typescript
   @override
   public onListViewUpdated(event: IListViewCommandSetListViewUpdatedParameters): void {
     const compareOneCommand: Command = this.tryGetCommand('COMMAND_1');
@@ -126,7 +126,7 @@ When using the method `tryGetCommand`, you get a Command object, which is a repr
 The **OnExecute()** method defines what happens when a command is executed (for example, the menu item is selected). In the default implementation, different messages are shown based on which button was selected. 
 
 
-```ts
+```typescript
   @override
   public onExecute(event: IListViewCommandSetExecuteEventParameters): void {
     switch (event.itemId) {
@@ -218,7 +218,7 @@ The default solution takes advantage of a new Dialog API, which can be used to s
 
 5. Update the **onExecute** method as follows:
     
-    ```ts
+    ```typescript
       @override
       public onExecute(event: IListViewCommandSetExecuteEventParameters): void {
         switch (event.commandId) {
