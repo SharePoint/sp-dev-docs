@@ -1,13 +1,15 @@
 # Enterprise Content Management
 
 ## Summary
-SharePoint has been heavily used for Enterprise Content Management (ECM), since its very first release. Nowadays with SharePoint Online and SharePoint 2013/2016 on-premises there a lot of services, capabilities, and options to manage ECM and content in SharePoint. This article is about all the available options and techniques.
+SharePoint has been heavily used for Enterprise Content Management (ECM), since its very first release. Nowadays with SharePoint Online and SharePoint 2013/2016 on-premises there are a lot of services, capabilities, and options to manage ECM and content in SharePoint. This article is about all the available options and techniques.
 
 ## High-level guideline/general rules
->
->
->
->
+Here follow some useful guidelines and general rules for ECM solutions:
+* Avoid declaring Site Columns and Content Types in sub-sites, rather use the root site of a site collection to store all the Site Columns and Content Types of a hierarchy
+* Rely on metadata, rather than on folders, to define a hierarchy of content
+* Avoid renaming native fields like the *Title* field of items, rather use a custom column with a custom name as a suitable alternative
+* Prefer a remote provisioning approach while provisioning the Information Architecture (IA), rather than using services like the Content Type Hub or other IA replication services
+* If your IA is in SharePoint Online, prefer using Microsoft Flow to design business processes, instead of using the Workflow engine of SharePoint 2010, or the Workflow Manager engine of SharePoint 2013/2016
 
 ## Available options
 
@@ -40,7 +42,7 @@ The Managed Metadata service (MMS) and the Managed Metadata fields allow to add 
 * [MVC Taxonomy picker for sharepoint add-in](https://github.com/SharePoint/PnP/tree/master/Samples/ECM.MVCTaxonomyPicker)
 * [Cascaded Taxonomy Picker](https://github.com/SharePoint/PnP/tree/master/Samples/Core.TaxonomyPicker)
 * [Office PnP: Taxonomy Operations](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMS)
-* [This sample demonstrates how to Synchronize Terms across multiple term stores](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMSSync)
+* [Synchronize Terms across multiple term stores](https://github.com/SharePoint/PnP/tree/master/Samples/Core.MMSSync)
 
 ### Document Sets
 
@@ -103,7 +105,7 @@ Site classification allows managing clusters of sites based on their classificat
 * [Implement a SharePoint site classification solution](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/implement-a-sharepoint-site-classification-solution)
 
 ### Samples
-* [Site classification](https://github.com/SharePoint/PnP/tree/master/Samples/Core.SiteClassification)
+* [Site Classification](https://github.com/SharePoint/PnP/tree/master/Samples/Core.SiteClassification)
 * [Information Management](https://github.com/SharePoint/PnP/tree/master/Samples/Core.InformationManagement)
 * [Core.SiteInformation](https://github.com/SharePoint/PnP/tree/master/Samples/Core.SiteInformation)
 
