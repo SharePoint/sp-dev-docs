@@ -10,6 +10,7 @@ Here follow some useful guidelines and general rules for ECM solutions:
 * Avoid renaming native fields like the *Title* field of items, rather use a custom column with a custom name as a suitable alternative
 * Prefer a remote provisioning approach while provisioning the Information Architecture (IA), rather than using services like the Content Type Hub or other IA replication services
 * If your IA is in SharePoint Online, prefer using Microsoft Flow to design business processes, instead of using the Workflow engine of SharePoint 2010, or the Workflow Manager engine of SharePoint 2013/2016
+* Avoid using the Publishing features on top of a Team Site, rather create a "modern" Communication Site
 
 ## Available options
 
