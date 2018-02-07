@@ -30,7 +30,7 @@ Install [NodeJS version 6.x](https://nodejs.org/download/release/latest-v6.x/).
 - If you are using a Mac, we recommend that you use [homebrew](http://brew.sh/) to install and manage NodeJS. 
 
 > [!NOTE] 
-> The SharePoint Framework build pipeline doesn't currently support the LTS version of Node.js. Instead, download [Node.js version 6.11.5](https://nodejs.org/download/release/latest-v6.x/). This installs npm 3.10.10. Note that if you have a v5.x version of npm, you need to downgrade to an older npm version by using the following command: `npm install -g npm@3`.
+> The SharePoint Framework build pipeline doesn't currently support the LTS version of Node.js. Instead, download [Node.js version 6.11.5](https://nodejs.org/download/release/v6.11.5/). This installs npm 3.10.10. Note that if you have a v5.x version of npm, you need to downgrade to an older npm version by using the following command: `npm install -g npm@3`.
 
 ### Install a code editor
 
