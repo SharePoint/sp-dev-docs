@@ -202,7 +202,7 @@
   - name: Roadmap
     href: spfx/roadmap.md
   - name: Known issues and FAQ
-    href: spfx/known-issues-and-common-questions.md
+    href: spfx/known-issues-and-common-questions.md 
 - name: Declarative customization
   items:
   - name: Site theming
