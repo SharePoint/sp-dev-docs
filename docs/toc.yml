@@ -101,61 +101,59 @@
         href: spfx/extensions/guidance/migrate-from-jslink-to-spfx-extensions.md
       - name: JavaScript embedding (UserCustomAction) tutorial
         href: spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions.md          
-  - name: Concepts
+  - name: Guidance
     items:
-    - name: Guidance
+    - name: Enterprise guidance
+      href: spfx/enterprise-guidance.md
+    - name: Team-based development
+      href: spfx/team-based-development-on-sharepoint-framework.md
+    - name: Governance considerations
+      href: spfx/web-parts/guidance/governance-considerations.md
+  - name: External libraries
+    items:
+    - name: Add external libraries
+      href: spfx/web-parts/basics/add-an-external-library.md
+    - name: JavaScript libraries
+      href: spfx/web-parts/guidance/use-existing-javascript-libraries.md
+    - name: CSS styles
+      href: spfx/web-parts/guidance/reference-third-party-css-styles.md
+    - name: SP PnP JS
+      href: spfx/web-parts/guidance/use-sp-pnp-js-with-spfx-web-parts.md
+    - name: AngularJS
+      href: spfx/web-parts/guidance/build-client-side-web-parts-with-angular-1-x.md
+  - name: Connect to APIs
+    items:
+    - name: Connect to APIs secured with Azure AD
+      href: spfx/web-parts/guidance/connect-to-api-secured-with-aad.md
+    - name: Call the Microsoft Graph API using OAuth
+      href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md
+    - name: Microsoft Graph
+      href: spfx/overview-graphhttpclient.md
       items:
-      - name: Enterprise guidance
-        href: spfx/enterprise-guidance.md
-      - name: Team-based development
-        href: spfx/team-based-development-on-sharepoint-framework.md
-      - name: Governance considerations
-        href: spfx/web-parts/guidance/governance-considerations.md
-    - name: External libraries
-      items:
-      - name: Add external libraries
-        href: spfx/web-parts/basics/add-an-external-library.md
-      - name: JavaScript libraries
-        href: spfx/web-parts/guidance/use-existing-javascript-libraries.md
-      - name: CSS styles
-        href: spfx/web-parts/guidance/reference-third-party-css-styles.md
-      - name: SP PnP JS
-        href: spfx/web-parts/guidance/use-sp-pnp-js-with-spfx-web-parts.md
-      - name: AngularJS
-        href: spfx/web-parts/guidance/build-client-side-web-parts-with-angular-1-x.md
-    - name: Connect to APIs
-      items:
-      - name: Connect to APIs secured with Azure AD
-        href: spfx/web-parts/guidance/connect-to-api-secured-with-aad.md
-      - name: Call the Microsoft Graph API using OAuth
-        href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md
-      - name: Microsoft Graph
-        href: spfx/overview-graphhttpclient.md
-        items:
-        - name: Tutorial
-          href: spfx/call-microsoft-graph-using-graphhttpclient.md          
-    - name: Setup and deployment
-      items:
-      - name: Package solution
-        href: spfx/web-parts/basics/notes-on-solution-packaging.md
-      - name: Custom build tasks
-        href: spfx/toolchain/integrate-gulp-tasks-in-build-pipeline.md
-      - name: Extend Webpack
-        href: spfx/toolchain/extending-webpack-in-build-pipeline.md
-      - name: Update packages
-        href: spfx/toolchain/update-latest-packages.md
-      - name: Tenant-scoped deployment
-        href: spfx/tenant-scoped-deployment.md
-      - name: SharePoint 2016 support
-        href: spfx/sharepoint-2016-support.md
-      - name: Provision SharePoint assets
-        href: spfx/toolchain/provision-sharepoint-assets.md
+      - name: Tutorial
+        href: spfx/call-microsoft-graph-using-graphhttpclient.md          
+  - name: Setup and deployment
+    items:
+    - name: Package solution
+      href: spfx/web-parts/basics/notes-on-solution-packaging.md
+    - name: Custom build tasks
+      href: spfx/toolchain/integrate-gulp-tasks-in-build-pipeline.md
+    - name: Extend Webpack
+      href: spfx/toolchain/extending-webpack-in-build-pipeline.md
+    - name: Update packages
+      href: spfx/toolchain/update-latest-packages.md
+    - name: Tenant-scoped solution deployment
+      href: spfx/tenant-scoped-deployment.md
+    - name: Tenant properties
+      href: spfx/tenant-properties.md         
+    - name: Provision SharePoint assets
+      href: spfx/toolchain/provision-sharepoint-assets.md
     - name: Optimize builds for production
       href: spfx/toolchain/optimize-builds-for-production.md        
-    - name: Localization
-      href: spfx/web-parts/guidance/localize-web-parts.md
-    - name: Tenant properties
-      href: spfx/tenant-properties.md        
+    - name: Localize web parts
+      href: spfx/web-parts/guidance/localize-web-parts.md 
+    - name: SharePoint 2016 support
+      href: spfx/sharepoint-2016-support.md        
   - name: Design
     href: design/design-guidance-overview.md
     items:
