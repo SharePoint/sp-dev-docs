@@ -170,9 +170,9 @@ Following are some additional insights on the other approaches that were conside
 
 The web part developer would not be required to do anything explicitly to get the scoping to work. We planned to solve this problem through CSS specificity and descendant selectors. The Fabric Core team would ship multiple copies of Fabric Core css (for example, `fabric-6.css`, `fabric-6-scoped.css`, `fabric-6.0.0.css`, `fabric-6.0.0-scoped.css`).
 
-All the styles in the scoped CSS files would be inside a descendant selector, for example `"ms-Fabric-core--v6 ms-Icon--List"`. At compile time, the tooling would collect the version of the Office UI Fabric Core that the web part was built with. This version could be the one that comes with SharePoint Framework. Alternatively, web part developers could specify an explicit dependency on a specific version of Office UI Fabric Core in their **package.json** file.
+All the styles in the scoped CSS files would be inside a descendant selector, for example `.ms-Fabric--v6-0-0 .ms-Icon--List`. At compile time, the tooling would collect the version of the Office UI Fabric Core that the web part was built with. This version could be the one that comes with SharePoint Framework. Alternatively, web part developers could specify an explicit dependency on a specific version of Office UI Fabric Core in their **package.json** file.
 
-The web part div would be assigned this scope, that is `<div data-sp-webpart class="ms-Fabric-core--v6">`. The Framework would load the specific major version of the Fabric Core-scoped CSS file. If the web part was built with version 6.0.0 of the Fabric Core CSS, the Framework would download `fabric-6-scoped.css` when the web part was loaded.
+The web part div would be assigned this scope, that is `<div data-sp-webpart class="ms-Fabric--v6-0-0">`. The Framework would load the specific major version of the Fabric Core-scoped CSS file. If the web part was built with version 6.0.0 of the Fabric Core CSS, the Framework would download `fabric-6-scoped.css` when the web part was loaded.
 
 The rest of the page would contain unscoped Office UI Fabric Core styles. This way, as per CSS specificity rules, the scoped CSS would take precedence within the web part div. The web part and its contents would align to the specific version of the Office UI Fabric Core that the developer had chosen.
 
@@ -191,7 +191,7 @@ export default class MyWebPart {
 }
 
 protected render(): void {
-  <div className={css('ms-Fabric-core--v6')}>
+  <div className="ms-Fabric--v6-0-0">
     { // Rest of the web part UI }
   </div>
 }
@@ -207,13 +207,13 @@ This approach only works if the Microsoft user experience (that is, page and fir
 
 The reason being that the specificity of the scoped CSS applied on the web part overrides the unscoped CSS on the page. Keep in mind, as explained earlier, that if CSS specificity of the two classes is the same, their loading order plays a role in how the CSS classes are applied. The class that loads later takes precedence. Hence, the higher specificity of the scoped CSS is important in getting a consistent experience.
 
-Furthermore, multiple extensions, one contained in the other, cannot use different Fabric Core versions. In the following example, only `ms-Fabric-core--v6` would get applied:
+Furthermore, multiple extensions, one contained in the other, cannot use different Fabric Core versions. In the following example, only `ms-Fabric--v6-0-0` would get applied:
 
 ```HTML
-<div className={css('ms-Fabric-core--v6')}>
+<div className="ms-Fabric--v6-0-0">
   { // Rest of the web part UI }
     { // inside of this SPExtension trying to use different Fabric core version does not work }
-    <div className={css('ms-Fabric-core--v8')}>
+    <div className="ms-Fabric--v8-0-0">
     </div>
 </div>
 ```
