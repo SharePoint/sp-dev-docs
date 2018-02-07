@@ -34,6 +34,8 @@
         href: spfx/web-parts/get-started/deploy-web-part-to-cdn.md
     - name: Basics
       items:
+      - name: Integrate properties with SharePoint
+        href: spfx/web-parts/guidance/integrate-web-part-properties-with-sharepoint.md      
       - name: Configure custom properties
         href: spfx/web-parts/basics/integrate-with-property-pane.md
       - name: Configure web part icon
@@ -42,35 +44,31 @@
         href: spfx/web-parts/guidance/simplify-adding-web-parts-with-preconfigured-entries.md
       - name: Validate properties
         href: spfx/web-parts/guidance/validate-web-part-property-values.md
-    - name: Concepts
-      items:
-      - name: Migrate existing customizations
-        items:
-        - name: Script Editor Web Part
-          href: spfx/web-parts/guidance/migrate-script-editor-web-part-customizations.md
-        - name: jQuery and DataTables
-          href: spfx/web-parts/guidance/migrate-jquery-datatables-script-to-spfx.md
-        - name: jQuery and FullCalendar
-          href: spfx/web-parts/guidance/migrate-jquery-fullcalendar-script-to-spfx.md
-        - name: AngularJS applications
-          href: spfx/web-parts/guidance/migrate-angular-1-x-applications-to-sharepoint-framework.md
-        - name: Work with __REQUESTDIGEST
-          href: spfx/web-parts/basics/working-with-requestdigest.md
-        - name: Use JSOM
-          href: spfx/web-parts/guidance/connect-to-sharepoint-using-jsom.md          
       - name: Share data between web parts
         href: spfx/web-parts/guidance/share-data-between-web-parts.md
         items:
         - name: Tutorial
           href: spfx/web-parts/guidance/tutorial-share-data-between-web-parts-global-variable.md
-      - name: Integrate properties with SharePoint
-        href: spfx/web-parts/guidance/integrate-web-part-properties-with-sharepoint.md
       - name: Extend property pane
         items:
         - name: Build custom controls
           href: spfx/web-parts/guidance/build-custom-property-pane-controls.md
         - name: Use cascading dropdowns
-          href: spfx/web-parts/guidance/use-cascading-dropdowns-in-web-part-properties.md
+          href: spfx/web-parts/guidance/use-cascading-dropdowns-in-web-part-properties.md        
+    - name: Migrate existing customizations
+      items:
+      - name: Script Editor Web Part
+        href: spfx/web-parts/guidance/migrate-script-editor-web-part-customizations.md
+      - name: jQuery and DataTables
+        href: spfx/web-parts/guidance/migrate-jquery-datatables-script-to-spfx.md
+      - name: jQuery and FullCalendar
+        href: spfx/web-parts/guidance/migrate-jquery-fullcalendar-script-to-spfx.md
+      - name: AngularJS applications
+        href: spfx/web-parts/guidance/migrate-angular-1-x-applications-to-sharepoint-framework.md
+      - name: Work with __REQUESTDIGEST
+        href: spfx/web-parts/basics/working-with-requestdigest.md
+      - name: Use JSOM
+        href: spfx/web-parts/guidance/connect-to-sharepoint-using-jsom.md          
   - name: Extensions
     href: spfx/extensions/overview-extensions.md
     items:
@@ -85,12 +83,12 @@
         href: spfx/extensions/get-started/serving-your-extension-from-sharepoint.md
       - name: Host extension from CDN
         href: spfx/extensions/get-started/hosting-extension-from-office365-cdn.md
+      - name: Configure extension icon
+        href: spfx/extensions/basics/configure-extension-icon.md        
       - name: Build Field Customizer
         href: spfx/extensions/get-started/building-simple-field-customizer.md
       - name: Build ListView Command Set
         href: spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md
-    - name: Configure extension icon
-      href: spfx/extensions/basics/configure-extension-icon.md
     - name: Migrate existing customizations
       items:
       - name: Client Side Rendering (JSLink)
