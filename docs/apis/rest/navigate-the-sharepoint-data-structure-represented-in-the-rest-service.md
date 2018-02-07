@@ -8,4 +8,4 @@ redirect_url: /sp-add-ins/navigate-the-sharepoint-data-structure-represented-in-
 
 # Navigate the SharePoint data structure represented in the REST service
 
-This content has been redirected to [Navigate the SharePoint data structure represented in the REST service](sp-add-ins/navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md).
+This content has been redirected to [Navigate the SharePoint data structure represented in the REST service](../../sp-add-ins/navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md).

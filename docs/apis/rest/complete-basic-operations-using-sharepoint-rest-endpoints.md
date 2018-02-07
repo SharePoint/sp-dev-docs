@@ -8,4 +8,4 @@ redirect_url: /sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoi
 
 # Complete basic operations using SharePoint REST endpoints
 
-This content has been redirected to [Complete basic operations using SharePoint REST endpoints](sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md).
+This content has been redirected to [Complete basic operations using SharePoint REST endpoints](../../sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md).

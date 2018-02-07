@@ -8,4 +8,4 @@ redirect_url: /sp-add-ins/working-with-folders-and-files-with-rest
 
 # Working with folders and files with REST
 
-This content has been redirected to [Working with folders and files with REST](sp-add-ins/working-with-folders-and-files-with-rest.md).
+This content has been redirected to [Working with folders and files with REST](../../sp-add-ins/working-with-folders-and-files-with-rest.md).

@@ -8,4 +8,4 @@ redirect_url: /sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-int
 
 # Set custom permissions on a list by using the REST interface
 
-This content has been redirected to [Set custom permissions on a list by using the REST interface](sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-interface.md).
+This content has been redirected to [Set custom permissions on a list by using the REST interface](../../sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-interface.md).
