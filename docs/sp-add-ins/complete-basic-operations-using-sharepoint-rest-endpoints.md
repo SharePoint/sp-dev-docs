@@ -232,7 +232,8 @@ jQuery.ajax({
     error: doError
 });
 ```
-
+> [!NOTE] 
+> Setting **WebTemplate** to 'sts' will create a modern homepage. To create a classic homepage, set **WebTemplate** to 'sts#0'. 
 <br/>
 
 <a name="bk_HowRequestsDiffer"> </a>
