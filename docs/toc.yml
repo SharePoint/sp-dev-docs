@@ -250,17 +250,17 @@
       href: sp-add-ins/working-with-lists-and-list-items-with-rest.md
     - name: Work with folders and files
       href: sp-add-ins/working-with-folders-and-files-with-rest.md
-    - name: Determine REST endpoint URIs
+    - name: Determine endpoint URIs
       href: sp-add-ins/determine-sharepoint-rest-service-endpoint-uris.md
     - name: Use OData query operations
       href: sp-add-ins/use-odata-query-operations-in-sharepoint-rest-requests.md
     - name: Navigate the data structure
       href: sp-add-ins/navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md
-    - name: Synchronize SharePoint items
+    - name: Synchronize items
       href: sp-add-ins/synchronize-sharepoint-items-using-the-rest-service.md
     - name: Upload a file
       href: sp-add-ins/upload-a-file-by-using-the-rest-api-and-jquery.md
-    - name: Set custom permissions on a list
+    - name: Set custom permissions
       href: sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-interface.md
     - name: Make batch requests
       href: sp-add-ins/make-batch-requests-with-the-rest-apis.md
@@ -1095,27 +1095,6 @@
       href: sp-add-ins/complete-basic-operations-using-javascript-library-code-in-sharepoint.md
     - name: Get to know the SharePoint REST service
       href: sp-add-ins/get-to-know-the-sharepoint-rest-service.md
-      items:
-      - name: Complete basic operations
-        href: sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md
-      - name: Work with lists and list items
-        href: sp-add-ins/working-with-lists-and-list-items-with-rest.md
-      - name: Work with folders and files
-        href: sp-add-ins/working-with-folders-and-files-with-rest.md
-      - name: Determine REST endpoint URIs
-        href: sp-add-ins/determine-sharepoint-rest-service-endpoint-uris.md
-      - name: Use OData query operations
-        href: sp-add-ins/use-odata-query-operations-in-sharepoint-rest-requests.md
-      - name: Navigate the data structure
-        href: sp-add-ins/navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md
-      - name: Synchronize SharePoint items
-        href: sp-add-ins/synchronize-sharepoint-items-using-the-rest-service.md
-      - name: Upload a file
-        href: sp-add-ins/upload-a-file-by-using-the-rest-api-and-jquery.md
-      - name: Set custom permissions on a list
-        href: sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-interface.md
-      - name: Make batch requests
-        href: sp-add-ins/make-batch-requests-with-the-rest-apis.md
     - name: Create UX components in SharePoint
       href: sp-add-ins/create-ux-components-in-sharepoint.md
       items:
