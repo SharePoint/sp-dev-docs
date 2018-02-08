@@ -236,31 +236,29 @@
       href: declarative-customization/site-design-pnp-provisioning.md
 - name: SharePoint APIs
   items:
-  - name: Create Communication sites
+  - name: Create Communication site
     href: apis/communication-site-creation-rest.md
   - name: Application Lifecycle Management (ALM) APIs
     href: apis/alm-api-for-spfx-add-ins.md    
   - name: Webhooks
+    href: apis/webhooks/overview-sharepoint-webhooks.md
     items:
-    - name: Overview
-      href: apis/webhooks/overview-sharepoint-webhooks.md
     - name: Get started
       href: apis/webhooks/get-started-webhooks.md
     - name: Reference implementation
       href: apis/webhooks/webhooks-reference-implementation.md
-    - name: Azure Functions and SharePoint webhooks
+    - name: Use Azure Functions
       href: apis/webhooks/sharepoint-webhooks-using-azure-functions.md
-    - name: SharePoint lists
+    - name: List webhooks
+      href: apis/webhooks/lists/overview-sharepoint-list-webhooks.md
       items:
-      - name: Overview
-        href: apis/webhooks/lists/overview-sharepoint-list-webhooks.md
-      - name: Create a subscription
+      - name: Create subscription
         href: apis/webhooks/lists/create-subscription.md
-      - name: Update a subscription
+      - name: Update subscription
         href: apis/webhooks/lists/update-subscription.md
-      - name: Delete a subscription
+      - name: Delete subscription
         href: apis/webhooks/lists/delete-subscription.md
-      - name: Get subscriptions
+      - name: Get subscription
         href: apis/webhooks/lists/get-subscription.md
 - name: SharePoint development overview
   href: general-development/sharepoint-development-overview.md

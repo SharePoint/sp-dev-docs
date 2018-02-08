@@ -10,7 +10,7 @@ ms.prod: sharepoint
 This topic assumes that you are already familiar with the following topics:
 
 - [Get to know the SharePoint REST service](../sp-add-ins/get-to-know-the-sharepoint-rest-service.md)
-- [Complete basic operations using SharePoint REST endpoints](../sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md). 
+- [Complete basic operations using SharePoint REST endpoints](../sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md)
 
 This topic does not provide code snippets.
 
@@ -113,3 +113,7 @@ If the site does not exist, the response returns a site status of 0 with no URL.
   }
 }
 ```
+
+## See also
+
+- [Get to know the SharePoint REST service](../sp-add-ins/get-to-know-the-sharepoint-rest-service.md)

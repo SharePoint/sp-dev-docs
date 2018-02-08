@@ -29,7 +29,7 @@ ALM APIs are natively provided by using REST APIs, but there are also additional
 
 ## REST API
 
-### Add solution package to tenant App Catalog 
+### Add solution packages to the tenant App Catalog 
 
 This API is designed to be executed in the context of the tenant App Catalog site.
 
@@ -40,7 +40,7 @@ binaryStringRequestBody: true
 body: 'byte array of the file'
 ```
 
-### Deploy solution package in tenant App Catalog
+### Deploy solution packages in the tenant App Catalog
 
 This enables the solution to be available to install to specific sites. This API is designed to be executed in the context of the tenant App Catalog site.
 
@@ -49,9 +49,9 @@ url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-x
 ```
 
 > [!NOTE]
-> This operation is required to be completed after Add, and before you can install packages to specific sites. 
+> This operation is required to be completed after Add before you can install packages to specific sites. 
 
-### Retract solution package in the tenant App Catalog
+### Retract solution packages in the tenant App Catalog
 
 This retracts the solution to be available from the sites. This API is designed to be executed in the context of the tenant App Catalog site.
 
@@ -62,7 +62,7 @@ url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-x
 > [!NOTE]
 > If you run this operation after you have installed solutions to the site, they will stop working because the solution is disabled from the tenant level.
 
-### Remove solution package from tenant App Catalog
+### Remove solution packages from the tenant App Catalog
 
 This API is designed to be executed in the context of the tenant App Catalog site.
 
@@ -73,7 +73,7 @@ url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-x
 > [!NOTE]
 > If the Retract operation is not performed before the Remove operation, the solution is automatically retracted.
 
-### List available packages from tenant App Catalog
+### List available packages from the tenant App Catalog
 
 Use this REST API for getting a list of available SharePoint Framework solutions or add-ins in the tenant App Catalog.
 
@@ -82,7 +82,7 @@ url: /_api/web/tenantappcatalog/AvailableApps
 method: GET
 ```
 
-### Details about individual solution package from tenant App Catalog
+### Details about individual solution packages in the tenant App Catalog
 
 Use this REST API for getting details about individual SharePoint Framework solutions or add-ins available in the tenant App Catalog.
 
@@ -91,16 +91,16 @@ url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-x
 method: GET
 ```
 
-### Install solution package from tenant App Catalog to SharePoint site
+### Install solution package from the tenant App Catalog to a SharePoint site
 
-Install a solution package with specific identifier from tenant App Catalog to the site based on URL context. This REST call can be executed in the context of the site where the install operation should happen.
+Install a solution package with a specific identifier from the tenant App Catalog to the site based on URL context. This REST call can be executed in the context of the site where the install operation should happen.
 
 ```
 url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Install
 method: POST
 ```
 
-### Upgrade solution package in SharePoint site
+### Upgrade solution packages on the SharePoint site
 
 Upgrade a solution package from the site to a newer version available in the tenant App Catalog. This REST call can be executed in the context of the site where the upgrade operation should happen.
 
@@ -109,7 +109,7 @@ url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-x
 method: POST
 ```
 
-### Uninstall solution package from SharePoint site
+### Uninstall solution packages from the SharePoint site
 
 This REST call can be executed in the context of the site where the uninstall operation should happen.
 
@@ -125,7 +125,8 @@ method: POST
 
 By using [PnP PowerShell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps), you can automate deploying, publishing, installing, upgrading, and retracting your apps. 
 
-### Adding and publishing your app to the App Catalog
+### Add and publish your app to the App Catalog
+
 Adding your app (.sppkg file, .app file) to the tenant App Catalog is a prerequisite to making your app available for use on your SharePoint sites. You can do so by using the following cmdlet:
 
 ```PowerShell
@@ -144,7 +145,7 @@ Publish-PnPApp -Identity <app id> -SkipFeatureDeployment
 
 
 
-### Removing the app from the App Catalog
+### Remove the app from the App Catalog
 
 To remove an app added earlier, use the following cmdlet:
 
@@ -153,16 +154,16 @@ Remove-PnPApp -Identity <app id>
 ```
 
 
-### Using apps on your site
+### Use apps on your site
 
-After the app is added to the App Catalog and published, you can continue with installing the app to your site.
+After the app is added to the App Catalog and published, you can install the app to your site:
 
 ```PowerShell
 Install-PnPApp -Identity <app id>
 ```
 
 
-An added app also needs to be upgraded:
+To upgrade the app:
 
 ```PowerShell
 Update-PnPApp -Identity <app id>
@@ -181,10 +182,14 @@ Uninstall-PnPApp -Identity <app id>
 
 
 
-### Knowing which apps are there for you to use
+### Know which apps are there for you to use
 
 You can get a list of apps that can be added to the site by using:
 
 ```PowerShell
 Get-PnPApp
 ```
+
+## See also
+
+- [Get to know the SharePoint REST service](../sp-add-ins/get-to-know-the-sharepoint-rest-service.md)
