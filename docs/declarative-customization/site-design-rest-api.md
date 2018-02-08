@@ -15,8 +15,8 @@ The SharePoint Online (and SharePoint 2016 and later on-premises) REST service s
 
 ## Prerequisites
 Before you get started, make sure that you're familiar with the following:
-- [Get to know the SharePoint REST service](https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/get-to-know-the-sharepoint-rest-service) 
-- [Complete basic operations using SharePoint REST endpoints](https://docs.microsoft.com/en-us/sharepoint/dev/apis/rest/complete-basic-operations-using-sharepoint-rest-endpoints)
+- [Get to know the SharePoint REST service](sp-add-ins/get-to-know-the-sharepoint-rest-service.md) 
+- [Complete basic operations using SharePoint REST endpoints](sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md)
 
 ## REST commands
 
