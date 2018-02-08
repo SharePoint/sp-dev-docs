@@ -240,30 +240,6 @@
     href: apis/communication-site-creation-rest.md
   - name: Application Lifecycle Management (ALM) APIs
     href: apis/alm-api-for-spfx-add-ins.md    
-  - name: REST
-    items:
-    - name: SharePoint REST service
-      href: apis/rest/get-to-know-the-sharepoint-rest-service.md
-    - name: Basic operations
-      href: apis/rest/complete-basic-operations-using-sharepoint-rest-endpoints.md
-    - name: Lists and list items
-      href: apis/rest/working-with-lists-and-list-items-with-rest.md
-    - name: Folders and files
-      href: apis/rest/working-with-folders-and-files-with-rest.md
-    - name: REST endpoint URIs
-      href: apis/rest/determine-sharepoint-rest-service-endpoint-uris.md
-    - name: OData query operations
-      href: apis/rest/use-odata-query-operations-in-sharepoint-rest-requests.md
-    - name: Navigate data structure
-      href: apis/rest/navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md
-    - name: Synchronize items
-      href: apis/rest/synchronize-sharepoint-items-using-the-rest-service.md
-    - name: Upload a file
-      href: apis/rest/upload-a-file-by-using-the-rest-api-and-jquery.md
-    - name: Manage permissions
-      href: apis/rest/set-custom-permissions-on-a-list-by-using-the-rest-interface.md
-    - name: Batch requests
-      href: apis/rest/make-batch-requests-with-the-rest-apis.md
   - name: Webhooks
     items:
     - name: Overview
@@ -1096,26 +1072,26 @@
     - name: Get to know the SharePoint REST service
       href: sp-add-ins/get-to-know-the-sharepoint-rest-service.md
       items:
-      - name: Complete basic operations using SharePoint REST endpoints
+      - name: Complete basic operations
         href: sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md
-      - name: Working with lists and list items with REST
+      - name: Work with lists and list items
         href: sp-add-ins/working-with-lists-and-list-items-with-rest.md
-      - name: Working with folders and files with REST
+      - name: Work with folders and files
         href: sp-add-ins/working-with-folders-and-files-with-rest.md
-      - name: Determine SharePoint REST service endpoint URIs
+      - name: Determine endpoint URIs
         href: sp-add-ins/determine-sharepoint-rest-service-endpoint-uris.md
-      - name: Use OData query operations in SharePoint REST requests
+      - name: Use OData query operations
         href: sp-add-ins/use-odata-query-operations-in-sharepoint-rest-requests.md
-      - name: Navigate the SharePoint data structure represented in the REST service
+      - name: Navigate the data structure
         href: sp-add-ins/navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md
-      - name: Synchronize SharePoint items using the REST service
+      - name: Synchronize items
         href: sp-add-ins/synchronize-sharepoint-items-using-the-rest-service.md
-      - name: Upload a file by using the REST API and jQuery
+      - name: Upload a file
         href: sp-add-ins/upload-a-file-by-using-the-rest-api-and-jquery.md
-      - name: Set custom permissions on a list by using the REST interface
+      - name: Set custom permissions
         href: sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-interface.md
-      - name: Make batch requests with the REST APIs
-        href: sp-add-ins/make-batch-requests-with-the-rest-apis.md
+      - name: Make batch requests
+        href: sp-add-ins/make-batch-requests-with-the-rest-apis.md  
     - name: Create UX components in SharePoint
       href: sp-add-ins/create-ux-components-in-sharepoint.md
       items:
@@ -1254,8 +1230,6 @@
       href: sp-add-ins/set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md
     - name: Create add-ins in Visual Studio
       href: sp-add-ins/create-sharepoint-add-ins-in-visual-studio.md
-    - name: What's new in Office Developer Tools for Visual Studio 2013
-      href: sp-add-ins/what-s-new-in-office-developer-tools-for-visual-studio.md
 - name: Solution guidance
   href: solution-guidance/Office-365-development-patterns-and-practices-solution-guidance.md
   items:
