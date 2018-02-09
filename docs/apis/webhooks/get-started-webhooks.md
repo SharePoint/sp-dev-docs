@@ -24,25 +24,25 @@ To complete the step-by-step instructions in this article, download and install 
 
 In order for the Postman client to communicate with SharePoint, you need to register a Microsoft Azure Active Directory (Azure AD) app in your Azure AD tenant associated with your Office 365 tenant. 
 
-Ensure that you register the application as a "Web Application".
+1. Ensure that you register the application as a **Web Application**.
 
-To access SharePoint Online, it's important to grant the Azure AD app permissions to the **Office 365 SharePoint Online** application and select the **read and write items and lists in all site collections** permission.
+2. To access SharePoint Online, it's important to grant the Azure AD app permissions to the **Office 365 SharePoint Online** application and select the **read and write items and lists in all site collections** permission.
 
-> [!NOTE] 
-> For more information about adding an Azure AD application and granting permissions to applications, see [Adding an application](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-integrating-applications#adding-an-application). 
+	> [!NOTE] 
+	> For more information about adding an Azure AD application and granting permissions to applications, see [Adding an application](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-integrating-applications#adding-an-application). 
 
-Enter the following endpoint as the Reply (Redirect) URL for the app. This is the endpoint to which Azure AD will send the authentication response, including the access token, if authentication was successful.
+3. Enter the following endpoint as the Reply (Redirect) URL for the app. This is the endpoint to which Azure AD will send the authentication response, including the access token, if authentication was successful.
 
-```html
-https://www.getpostman.com/oauth2/callback
-```
+	```html
+	https://www.getpostman.com/oauth2/callback
+	```
 
-Also generate a "Key", which will be the client secret.
+4. Generate a **Key**, which will be the client secret.
 
-The following properties are required in later steps, so copy them to a safe place:
+5. The following properties are required in later steps, so copy them to a safe place:
 
-* Client Id
-* Client Secret 
+	* Client Id
+	* Client Secret 
 
 ## Step 2: Build a webhook receiver
 
@@ -331,7 +331,7 @@ Postman makes it really simple to work with APIs. The first step is to configure
     * **Auth URL**: 
        * `https://login.microsoftonline.com/common/oauth2/authorize?resource=https%3A%2F%2F<_your-sharepoint-tenant-url-without-https_>`
        * Replace `your-sharepoint-tenant-url-without-https` with your tenant url without the **https** prefix.
-    * **Access Token URL: `https://login.microsoftonline.com/common/oauth2/token`
+    * **Access Token URL**: `https://login.microsoftonline.com/common/oauth2/token`
     * **Client Id**: Client Id of the app you registered previously in Step one.
     * **Client Secret**: Client Secret of the app you registered previously in Step one.
     * **Token name**: sp_webhooks_token

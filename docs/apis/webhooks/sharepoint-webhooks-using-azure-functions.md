@@ -185,7 +185,7 @@ We'll need to let SharePoint know what webhook URL we're using. To do so, let's 
 
 <br/>
 
-To avoid unathorized usage of your Azure Function, the caller needs to specify a code when calling your function. This code can be retreived via the **Manage** screen.
+To avoid unathorized usage of your Azure Function, the caller needs to specify a code when calling your function. This code can be retrieved via the **Manage** screen.
 
 ![Azure Function webhook URL](../../images/webhook-azure-function7.png)
 
