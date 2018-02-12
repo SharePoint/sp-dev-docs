@@ -52,8 +52,7 @@ The following theme tokens are available for you to use:
 Token|Default value on a modern team site using the red palette|Remarks
 -----|--------------------------------|-----------
 `backgroundImageUri`|`none`|
-`themeAccent`|`#ee0410`|
-`themeAccentTranslucent10`|`rgba(238, 4, 16, 0.10)`|
+`accent`|`#ee0410`|
 `themeDark`|`#b3030c`|Used for action icons in the command bar and as a hover color.
 `themeDarkAlt`|`#b3030c`|
 `themeDarker`|`#770208`|
@@ -61,10 +60,9 @@ Token|Default value on a modern team site using the red palette|Remarks
 `themeLightAlt`|`#fd969b`|
 `themeLighter`|`#fecacd`|
 `themeLighterAlt`|`#fecacd`|
-`themePrimary`|`#ee0410`|Primary theme color. Used for icons and default buttons.
+`themePrimary`|`#ee0410`st|Primary theme color. Used for icons and default buttons.
 `themeSecondary`|`#fc6169`|
 `themeTertiary`|`#fd969b`|
-`themeTertiaryAlt`|`#fd969b`|
 
 > [!NOTE] 
 > There are more tokens registered with the SharePoint Framework. While all of them have values specified on classic sites, only the subset mentioned earlier has values on modern SharePoint sites. For the complete list of available tokens, see the value of the `window.__themeState__.theme` property by using the console in your web browser's developer tools.
