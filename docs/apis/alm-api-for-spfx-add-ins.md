@@ -46,6 +46,7 @@ This enables the solution to be available to install to specific sites. This API
 
 ```
 url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Deploy
+method: POST
 ```
 
 > [!NOTE]
@@ -57,6 +58,7 @@ This retracts the solution to be available from the sites. This API is designed 
 
 ```
 url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Retract
+method: POST
 ```
 
 > [!NOTE]
@@ -68,6 +70,7 @@ This API is designed to be executed in the context of the tenant App Catalog sit
 
 ```
 url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Remove
+method: POST
 ```
 
 > [!NOTE]
