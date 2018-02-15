@@ -1,4 +1,4 @@
-﻿---
+---
 title: Navigate the SharePoint data structure represented in the REST service
 ms.date: 02/07/2018
 ms.prod: sharepoint
