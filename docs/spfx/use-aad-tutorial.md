@@ -16,7 +16,7 @@ By using SharePoint Framework v.1.4.1 or later, you can leverage a set of out of
 Reading this tutorial you will learn - through a step by step approach - how to create a SharePoint Framework solution that consumes the Microsoft Graph, with a custom set of permission scopes.
 
 > [!NOTE]
-> To better undestand the overall architecture of this capability, you can read the article [Connect to AAD-secured APIs in SharePoint Framework solutions](./use-aadhttpclient.md).
+> To better undestand the overall architecture of this capability, you can read the article [Connect to AAD-secured APIs in SharePoint Framework solutions](use-aadhttpclient.md).
 
 ## <a name="SolutionOverview"></a>Overview of the solution
 Before digging into the detailed steps of developing the solution, let's have a quick overview of what you are going to build.
@@ -444,7 +444,7 @@ The *resource* can be the name or the ObjectId (in AAD) of the resource for whic
 The *scope* can be the name of the permission scope, or the unique ID of that permission scope. The former can be retrieved reading the documentation of the target API, while the latter can be retrieved reading the manifest file of the target API.
 
 > [!NOTE]
-> For the Microsoft Graph you can find all the available permission scopes in the [Microsoft Graph permissions reference](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference) document. By default, the service principal has no explicit permissions granted to access the Microsoft Graph. If you would however request an access token for the Microsoft Graph, you would get a token with the `user_impersonation` permission scope, that can be used for reading information about the users (i.e. `User.Read.All`). Additional permission scopes can be requested by developers and granted by tenant administrators. For more information see the guidance [article on using the AadHttpClient](./use-aadhttpclient.md).
+> For the Microsoft Graph you can find all the available permission scopes in the [Microsoft Graph permissions reference](https://developer.microsoft.com/en-us/graph/docs/concepts/permissions_reference) document. By default, the service principal has no explicit permissions granted to access the Microsoft Graph. If you would however request an access token for the Microsoft Graph, you would get a token with the `user_impersonation` permission scope, that can be used for reading information about the users (i.e. `User.Read.All`). Additional permission scopes can be requested by developers and granted by tenant administrators. For more information see the guidance [article on using the AadHttpClient](use-aadhttpclient.md).
 
 
 In order to search for users and to retrieve their *displayName*, *mail*, and *userPrincipalName* the *User.ReadBasic.All* permission will suffice.
@@ -648,6 +648,8 @@ The first request you will make, you will see a pop-up window popping out and th
 
 And that's it! Enjoy this capability building real-life enterprise-level solutions that levarage AAD-secured REST API.
 
-## <a name="SeeAlso"></a>See also
-* [Connect to AAD-secured APIs in SharePoint Framework solutions](./use-aadhttpclient)
-* [Use the MSGraphClient to connect to Microsoft Graph](./use-msgraph)
+<a name="SeeAlso"></a>
+
+## See also
+* [Connect to Azure AD-secured APIs in SharePoint Framework solutions](use-aadhttpclient.md)
+* [Use the MSGraphClient to connect to Microsoft Graph](use-msgraph.md)
