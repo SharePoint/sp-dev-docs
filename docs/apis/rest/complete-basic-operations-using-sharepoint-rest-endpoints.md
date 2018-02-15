@@ -2,7 +2,7 @@
 title: Complete basic operations using SharePoint REST endpoints
 ms.date: 02/07/2018
 ms.prod: sharepoint
-redirect_url: https://docs.microsoft.com/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints
+redirect_url: https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints/
 ---
 
 

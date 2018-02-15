@@ -2,7 +2,7 @@
 title: Synchronize SharePoint items using the REST service
 ms.date: 02/07/2018
 ms.prod: sharepoint
-redirect_url: https://docs.microsoft.com/sharepoint/dev/sp-add-ins/synchronize-sharepoint-items-using-the-rest-service
+redirect_url: https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/synchronize-sharepoint-items-using-the-rest-service/
 ---
 
 
