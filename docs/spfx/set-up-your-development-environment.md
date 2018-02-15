@@ -15,7 +15,7 @@ You can use Visual Studio or your own custom development environment to build Sh
 
 You can also follow these steps by watching this video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=WX9FL0BjE0I&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq).
 
-<a href="https://www.youtube.com/watch?v=WX9FL0BjE0I&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
+<a href="https://www.youtube.com/watch?v=-tXf8gxjmOI&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
     <img src="../images/spfx-youtube-tutorial0.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
