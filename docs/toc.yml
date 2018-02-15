@@ -1087,7 +1087,7 @@
         href: sp-add-ins/determine-sharepoint-rest-service-endpoint-uris.md
       - name: Use OData query operations
         href: sp-add-ins/use-odata-query-operations-in-sharepoint-rest-requests.md
-      - name: Navigate the data structure
+      - name: Navigate data structure
         href: sp-add-ins/navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md
       - name: Synchronize items
         href: sp-add-ins/synchronize-sharepoint-items-using-the-rest-service.md
