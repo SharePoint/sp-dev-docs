@@ -1,13 +1,13 @@
 ---
-title: Connect to AAD-secured APIs in SharePoint Framework solutions
+title: Connect to Azure AD secured APIs in SharePoint Framework solutions
 description: Use the AadHttpClient class to connect to AAD-secured APIs in SharePoint Framework solutions.
 ms.date: 02/15/2018
 ms.prod: sharepoint
 ---
 
-# Connect to AAD-secured APIs in SharePoint Framework solutions
+# Connect to Azure AD secured APIs in SharePoint Framework solutions
 
-When building SharePoint Framework solutions, you might need to connect to an API secured with Azure Active Directory. SharePoint Framework allows you to specify which Azure AD applications and permissions your solution requires, and tenant administrator can grant the necessary permissions if they haven't yet been granted. Using the **AadHttpClient** you can easily connect to APIs secured with AAD without having to implement the OAuth flow yourself.
+When building SharePoint Framework solutions, you might need to connect to an API secured with Azure Active Directory. SharePoint Framework allows you to specify which Azure AD applications and permissions your solution requires, and tenant administrator can grant the necessary permissions if they haven't yet been granted. Using the **AadHttpClient** you can easily connect to APIs secured with Azure AD without having to implement the OAuth flow yourself.
 
 ## Web API permissions - concept overview
 
@@ -16,19 +16,19 @@ Azure Active Directory secures a number of resources: from Office 365 itself, to
 Developers building client-side solutions are responsible for implementing authorization using the OAuth implicit flow in their application. In SharePoint Framework solutions that's already done as a part of the framework through the **MSGraphClient** and **AadHttpClient** both introduced in SharePoint Framework v1.4.1.
 
 > [!NOTE]
-> If you build solutions on a version of the SharePoint Framework older than v1.4.1 you can still connect to resources secured with AAD. In that case you need to implement the OAuth implicit flow using [ADAL JS](https://github.com/AzureAD/azure-activedirectory-library-for-js) yourself. For more information see the [Connect to API secured with Azure Active Directory](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/guidance/connect-to-api-secured-with-aad) article.
+> If you build solutions on a version of the SharePoint Framework older than v1.4.1 you can still connect to resources secured with Azure AD. In that case you need to implement the OAuth implicit flow using [ADAL JS](https://github.com/AzureAD/azure-activedirectory-library-for-js) yourself. For more information see the [Connect to API secured with Azure Active Directory](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/guidance/connect-to-api-secured-with-aad) article.
 
 As a part of the SharePoint Framework, there is a specific process defined for how developers can request- and tenant administrators can manage permissions to resources secured with Azure AD. The following schema illustrates this process.
 
 ![Schema illustrating the flow of requesting, granting and using permissions to Azure AD applications](../images/webapipermissions-logical.png)
 
-Developers building a SharePoint Framework solution, that requires access to specific resources secured with AAD, list these resources along with the required permission scopes in the solution manifest (1). When deploying the solution package to the app catalog, SharePoint will create permission requests and will prompt the administrator to manage the requested permissions (2). For each requested permission, tenant administrators can decide whether they want to grant or deny the specific permission (3).
+Developers building a SharePoint Framework solution, that requires access to specific resources secured with Azure AD, list these resources along with the required permission scopes in the solution manifest (1). When deploying the solution package to the app catalog, SharePoint will create permission requests and will prompt the administrator to manage the requested permissions (2). For each requested permission, tenant administrators can decide whether they want to grant or deny the specific permission (3).
 
 All permissions are granted to the whole tenant and not to a specific application that has requested them. When tenant administrator grants a specific permission, it is added to the **SharePoint Online Client Extensibility** Azure AD application, which is provisioned by Microsoft in every Azure Active Directory and which is used by the SharePoint Framework in the OAuth flow to provide solutions with valid access tokens.
 
 ## Discover available applications and permissions
 
-For which applications you can request permissions in your solution, depends on the target Azure Active Directory which secures your Office 365 tenant. The list of available application might depend on the Office 365 license the organization is using and which line of business applications they registered in their AAD. Assuming you have sufficient permissions, there are a number of ways in which you can see which applications and permission scopes are available in your tenant.
+For which applications you can request permissions in your solution, depends on the target Azure Active Directory which secures your Office 365 tenant. The list of available application might depend on the Office 365 license the organization is using and which line of business applications they registered in their Azure AD. Assuming you have sufficient permissions, there are a number of ways in which you can see which applications and permission scopes are available in your tenant.
 
 ### Azure Portal
 
@@ -46,7 +46,7 @@ To quicker find the application to which you want to connect, you can filter the
 
 Assuming you wanted to request additional permissions to the Microsoft Graph, in the search box you would search for `graph`.
 
-![Searching for 'graph' in the list of available AAD applications in the Azure AD portal](../images/webapipermissions-aadportal-searchgraph.png)
+![Searching for 'graph' in the list of available Azure AD applications in the Azure AD portal](../images/webapipermissions-aadportal-searchgraph.png)
 
 Once you find the application, click on it, to get its additional information. Once on the application blade, from the **Manage** group, click the **Properties** link, to open application's properties.
 
@@ -128,7 +128,7 @@ If your SharePoint Framework solution requires permissions to specific resources
 ```
 
 > [!NOTE]
-> As the value of the **resource** property you can specify either the **displayName** or the **objectId** of the application to which you want to request permissions. Using the displayName is not only more readable but it also allows you to build your solution once and reuse it across multiple tenants. Where the **objectId** of an AAD application is different on each tenant, the **displayName** stays the same.
+> As the value of the **resource** property you can specify either the **displayName** or the **objectId** of the application to which you want to request permissions. Using the displayName is not only more readable but it also allows you to build your solution once and reuse it across multiple tenants. Where the **objectId** of an Azure AD application is different on each tenant, the **displayName** stays the same.
 
 If you want to request multiple permission scopes for the given resource, specify each scope in a separate entry, for example:
 
@@ -326,7 +326,7 @@ If you need to revoke a previously granted permission, you can do that using the
 
 ## Connect to Azure AD applications using the AadHttpClient
 
-Starting from version 1.4.1, SharePoint Framework simplifies connecting to APIs secured with AAD. Using the new **AadHttpClient** you can easily connect to APIs secured with AAD, without having to implement authentication and authorization yourself. Internally, the **AadHttpClient** implements the Azure AD OAuth flow using ADAL JS using the **SharePoint Online Client Extensibility** service principal to obtain a valid access token. The **SharePoint Online Client Extensibility** service principal is provisioned by Microsoft and available in the Azure Active Directory of all Office 365 tenants.
+Starting from version 1.4.1, SharePoint Framework simplifies connecting to APIs secured with Azure AD. Using the new **AadHttpClient** you can easily connect to APIs secured with Azure AD, without having to implement authentication and authorization yourself. Internally, the **AadHttpClient** implements the Azure AD OAuth flow using ADAL JS using the **SharePoint Online Client Extensibility** service principal to obtain a valid access token. The **SharePoint Online Client Extensibility** service principal is provisioned by Microsoft and available in the Azure Active Directory of all Office 365 tenants.
 
 To use the **AadHttpClient** in your SharePoint Framework solution, add the following `import` clause in your main web part file:
 
