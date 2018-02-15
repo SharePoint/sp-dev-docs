@@ -595,10 +595,10 @@ gulp package-solution
 ```
 
 To bundle and package the solution.
-Now, browse to the App Catalog of your target tenant and upload the solution package in there. You can find the solution package under the *sharepoint/solution* folder of your solution. It is the .sppkg file.
-Once you upload the solution package, the App Catalog will prompt you with a dialog like the following one.
+Now, browse to the app catalog of your target tenant and upload the solution package in there. You can find the solution package under the *sharepoint/solution* folder of your solution. It is the .sppkg file.
+Once you upload the solution package, the app catalog will prompt you with a dialog like the following one.
 
-![The UI of the App Catalog while uploading the package solution](../images/graphconsumer-tutorial-appcatalog-prompt.png)
+![The UI of the app catalog while uploading the package solution](../images/graphconsumer-tutorial-appcatalog-prompt.png)
 
 As you can see, there is a message in the lower area of the screen that informs you that the solution package requires permissions approval. That's because of the webApiPermissionRequests property in the *package-solution.json* file.
 

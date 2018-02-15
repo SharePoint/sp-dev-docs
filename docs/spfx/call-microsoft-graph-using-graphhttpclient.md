@@ -179,8 +179,8 @@ The code needs to call the **GraphHttpClient** application that runs on SharePoi
   ```
 
 2. Deploy the solution to your SharePoint tenant:
-  * Go to your site's App Catalog.
-  * Upload or drag and drop the **hellograph-webpart.sppkg** to the App Catalog.
+  * Go to your site's app catalog.
+  * Upload or drag and drop the **hellograph-webpart.sppkg** to the app catalog.
   * When prompted, if you trust the **hellograph-webpart-client-side-solution**, select **Make this solution available to all sites in the organization**, and select **Deploy**.
 
 3. Use gulp serve to host the web part.
@@ -282,8 +282,8 @@ Again, you need to modify the HTML to add a button that creates a new group.
   ```
 
 2. Deploy the solution to your SharePoint tenant:
-  * Go to your site's App Catalog.
-  * Upload or drag and drop the **hellograph-webpart.sppkg** to the App Catalog.
+  * Go to your site's app catalog.
+  * Upload or drag and drop the **hellograph-webpart.sppkg** to the app catalog.
   * Because your solution is already registered, you are prompted as to whether you want to replace it. Select **Replace it**.
   * When prompted as to whether you trust the solution, select **Deploy**.
 

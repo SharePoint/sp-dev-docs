@@ -1,19 +1,19 @@
 ---
 title: SharePoint Online tenant properties
-description: Manage and read tenant properties, which allow tenant administrators to add properties in the App Catalog that can be read by various SharePoint Framework components.
+description: Manage and read tenant properties, which allow tenant administrators to add properties in the app catalog that can be read by various SharePoint Framework components.
 ms.date: 02/02/2018
 ms.prod: sharepoint
 ---
 
 # SharePoint Online tenant properties
 
-Tenant properties allow tenant administrators to add properties in the App Catalog that can be read by various SharePoint Framework components. The tenant properties are managed by tenant administrators by using the [Microsoft SharePoint Online Management Shell](https://technet.microsoft.com/en-us/library/fp161372.aspx), which is a PowerShell module to manage your SharePoint Online subscription in Office 365.
+Tenant properties allow tenant administrators to add properties in the app catalog that can be read by various SharePoint Framework components. The tenant properties are managed by tenant administrators by using the [Microsoft SharePoint Online Management Shell](https://technet.microsoft.com/en-us/library/fp161372.aspx), which is a PowerShell module to manage your SharePoint Online subscription in Office 365.
 
 ## Manage tenant properties
 
 Using the [Microsoft SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588), tenant administrators can use PowerShell to add and remove tenant properties. 
 
-The following PowerShell cmdlets are available to manage the tenant properties. Because tenant properties are stored in the tenant App Catalog, you must provide the tenant App Catalog site collection URL in the following cmdlets.
+The following PowerShell cmdlets are available to manage the tenant properties. Because tenant properties are stored in the tenant app catalog, you must provide the tenant app catalog site collection URL in the following cmdlets.
 
 ### Get-SPOStorageEntity
 

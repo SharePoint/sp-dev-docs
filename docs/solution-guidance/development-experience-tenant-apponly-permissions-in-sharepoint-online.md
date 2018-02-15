@@ -45,7 +45,7 @@ Supply the **Client ID** and **Client Secret **created in Step 1.
 Since you want to debug the add-in, ensure that you supply https://localhost.com including the port as depicted below.
 ![](http://i.imgur.com/nQmSbPC.png)
 
-Now deploy the add-in in the App Catalog site.
+Now deploy the add-in in the app catalog site.
 
 ### Step 5: Install your add-in in your developer site collection
 
@@ -55,7 +55,7 @@ Navigate to the developer site and add the app. Click on **App Details**.
 If you clicked on the app tile, you will have to click on "**Find out why**" and request your app
 ![](http://i.imgur.com/DwWUkG0.png)
 
-Once the request has been submitted the status will be in a pending state until the SharePoint Administrator or the App Catalog Administrator approves the request. To approve the request, navigate to the app catalog, App Requests and approve the request.
+Once the request has been submitted the status will be in a pending state until the SharePoint Administrator or the app catalog Administrator approves the request. To approve the request, navigate to the app catalog, App Requests and approve the request.
 
 ![](http://i.imgur.com/yZ8vNEc.png)
 

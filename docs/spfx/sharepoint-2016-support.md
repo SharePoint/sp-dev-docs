@@ -31,7 +31,7 @@ Starting from version 1.3, the SharePoint Framework Yeoman generator supports sc
 
 Getting SharePoint Framework client-side web parts deployed to on-premises requires two distinct actions:
 
-- Deployment of the solution package to the SharePoint App Catalog
+- Deployment of the solution package to the SharePoint app catalog
 - Hosting the JavaScript files in a centralized location
 
 You can host the JavaScript files in the location that best fits your environment. For example, these files can be hosted in any of the following locations:

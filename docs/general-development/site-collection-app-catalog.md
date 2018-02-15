@@ -112,4 +112,4 @@ Before deploying solutions to site collection app catalogs, site collection admi
 
 ## See also
 
-- [Manage the Site Collection App Catalog](https://support.office.com/en-us/article/Manage-the-Site-Collection-App-Catalog-928b9b61-a9de-4563-a7d1-6231aa9d4d19)
+- [Manage the Site Collection app catalog](https://support.office.com/en-us/article/Manage-the-Site-Collection-App-Catalog-928b9b61-a9de-4563-a7d1-6231aa9d4d19)
