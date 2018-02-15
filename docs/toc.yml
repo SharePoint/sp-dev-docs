@@ -127,10 +127,17 @@
       href: spfx/web-parts/guidance/connect-to-api-secured-with-aad.md
     - name: Call the Microsoft Graph API using OAuth
       href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md
-    - name: Microsoft Graph
-      href: spfx/overview-graphhttpclient.md
+      name: Connect to AAD-secured APIs
+      href: spfx/use-aadhttpclient.md    
+      name: Microsoft Graph 
+      href: spfx/use-msgraph.md
       items:
       - name: Tutorial
+        href: spfx/use-aad-tutorial.md        
+    - name: Microsoft GraphHttpClient (Deprecated)
+      href: spfx/overview-graphhttpclient.md
+      items:
+      - name: Tutorial (Deprecated)
         href: spfx/call-microsoft-graph-using-graphhttpclient.md          
   - name: Setup and deployment
     items:

@@ -8,7 +8,7 @@ ms.prod: sharepoint
 # Use GraphHttpClient to call Microsoft Graph
 
 > [!IMPORTANT]
-> The **GraphHttpClient** is currently in preview and is subject to change. It is not currently supported for use in production environments.
+> The **GraphHttpClient** has been **deprecated** and should no longer be used. It has been replaced with [MSGraphClient](use-msgraph.md)
 
 Use the **GraphHttpClient** class to make calls to the Microsoft Graph REST API. You can make GET, POST, and PATCH requests by using the **get()**, **post()**, and **fetch()** methods. This article shows how to build a web part that uses **GraphHttpClient**, but you can use **GraphHttpClient** in any SharePoint Framework client code.
 

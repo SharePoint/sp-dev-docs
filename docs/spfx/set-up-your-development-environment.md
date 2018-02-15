@@ -23,14 +23,14 @@ You can also follow these steps by watching this video on the [SharePoint PnP Yo
 
 ### Install NodeJS
 
-Install [NodeJS version 6.x](https://nodejs.org/download/release/latest-v6.x/). 
+Install [NodeJS LTS version](https://nodejs.org). 
 
 - If you are in Windows, you can use the msi installers in this link for the easiest way to set up NodeJS.
 - If you have NodeJS already installed, check that you have the latest version by using `node -v`. It should return the current [LTS version](https://nodejs.org/en/download/). 
 - If you are using a Mac, we recommend that you use [homebrew](http://brew.sh/) to install and manage NodeJS. 
 
 > [!NOTE] 
-> The SharePoint Framework build pipeline doesn't currently support the LTS version of Node.js. Instead, download [Node.js version 6.11.5](https://nodejs.org/download/release/latest-v6.x/). This installs npm 3.10.10. Note that if you have a v5.x version of npm, you need to downgrade to an older npm version by using the following command: `npm install -g npm@3`.
+> Current LTS version of NodeJS is 8.9.4. Notice that 9.x versions are currently not supported with SharePoint Framework development.
 
 ### Install a code editor
 
