@@ -27,7 +27,7 @@ In the following screenshot, you can see the UI of a client-side web part that a
 As you can see, the client-side web part allows to search users based on their name, and provides all the matching users through a **DetailsList** component of Office UI Fabric. Moreover, the web part has a configurable option, available in the property pane, to select how to access the Microsoft Graph. In fact, starting from SharePoint Framework v.1.4.1 you can access the Microsoft Graph either using the native graph client (**MSGraphClient**), or the low level type to access any Azure AD secured REST API (**AadHttpClient**).
 
 > [!NOTE]
-> You can find the full source code of the sample solution in the following GitHub repository [spfx-api-scopes-tutorial](#).
+> You can find the full source code of the sample solution in the following GitHub repository [spfx-api-scopes-tutorial](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/tutorials/spfx-api-scopes-tutorial).
 
 ## <a name="CreatingTheSolution"></a>Creating the solution
 In the following sections you will be able to build the solution with a step by step approach. Here are the main sections of the process:
