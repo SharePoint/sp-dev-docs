@@ -53,6 +53,7 @@ Then, you need to create a new SharePoint Framework solution, going through the 
 
 * Create a folder in your file system, where you will store the source code of the solution and move the current path into that folder
 * Execute the Yeoman generator to scaffold a new solution
+
 ```sh
 yo @microsoft/sharepoint
 ```
@@ -69,6 +70,7 @@ yo @microsoft/sharepoint
 ![The UI of the Yeoman Generator while scaffolding the SPFx solution](../images/graphconsumer-yeoman-generator.png)
 
 * Start Visual Studio Code (or whatever else is your favorite code editor) within the context of the current folder
+
 ```sh
 code .
 ```
