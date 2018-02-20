@@ -11,6 +11,9 @@ A very common business scenario for enterprise-level and real-life solutions is 
 By using SharePoint Framework v.1.4.1 or later, you can leverage a set of out of the box capabilities to easily satisfy that business requirement, being able to consume either the Microsoft Graph, with a custom set of permission scopes, or any other REST API like a custom service registered in Azure AD.
 
 > [!IMPORTANT]
+> Usage of `AadHttpClient` and `MSGraphClient` is currently in preview status and subject to change. You should not use these capabilities in production environment. Notice also that usage of `webApiPermissionRequests` properties in `package-solution.json` is not supported in normal tenants.
+
+> [!IMPORTANT]
 > You can consume the Microsoft Graph with versions of SharePoint Framework older than v1.4.1, either using the native **graphHttpClient** member of the SharePoint Framework context, or with a manually implemented implicit flow of OAuth by using [ADAL JS](https://github.com/AzureAD/azure-activedirectory-library-for-js). However, the former approach is bound to a pre-defined set of permissions scopes, which allow you to do nothing more that what have been defined by Microsoft, and the latter is a bit complex from a development perspective. Nevertheless, for more information about the latter scenario, you can see the [Connect to API secured with Azure Active Directory](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/guidance/connect-to-api-secured-with-aad) article.
 
 Reading this tutorial you will learn - through a step by step approach - how to create a SharePoint Framework solution that consumes the Microsoft Graph, with a custom set of permission scopes.

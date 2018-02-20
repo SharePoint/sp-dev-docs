@@ -9,6 +9,10 @@ ms.prod: sharepoint
 
 When building SharePoint Framework solutions, you might need to connect to an API secured with Azure Active Directory. SharePoint Framework allows you to specify which Azure AD applications and permissions your solution requires, and tenant administrator can grant the necessary permissions if they haven't yet been granted. Using the **AadHttpClient** you can easily connect to APIs secured with Azure AD without having to implement the OAuth flow yourself.
 
+> [!IMPORTANT]
+> Usage of `AadHttpClient` and `MSGraphClient` is currently in preview status and subject to change. You should not use these capabilities in production environment. Notice also that usage of `webApiPermissionRequests` properties in `package-solution.json` is not supported in normal tenants.
+
+
 ## Web API permissions - concept overview
 
 Azure Active Directory secures a number of resources: from Office 365 itself, to custom line of business applications built by the organization. In order to connect to these resources, applications must obtain a valid access token granting them access to the particular resource. Applications can obtain an access token as a part of the [OAuth authorization flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-protocols-oauth-code). Client-side applications, such as SharePoint Framework solutions, which are incapable of storing a secret, use a specific type of OAuth flow, named [OAuth implicit flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/active-directory-dev-understanding-oauth2-implicit-grant).
