@@ -23,20 +23,19 @@ In this article, you'll learn how to create a SharePoint Framework solution that
 > [!NOTE]
 > For a conceptual overview of this technology, see [Connect to Azure AD secured APIs in SharePoint Framework solutions](use-aadhttpclient.md).
 
-## <a name="SolutionOverview"></a>Overview of the solution
+## <a name="SolutionOverview"></a>Solution overview
 
-Before digging into the detailed steps of developing the solution, let's have a quick overview of what you are going to build.
-In the following screenshot, you can see the UI of a client-side web part that allows to search for users in the current tenant. The search is based on the Microsoft Graph and requires at least the *User.ReadBasic.All* permission.
+The steps in this article show you how to build a client-side web part that enables searching for users in the current tenant, as shown in the following screenshot. The search is based on Microsoft Graph and requires at least the User.ReadBasic.All permission.
 
-![The UI of the sample application](../images/use-aad-tutorial-video.gif)
+![A client-side web part that has a text box and search button for searching for users within a tenant](../images/use-aad-tutorial-video.gif)
 
-As you can see, the client-side web part allows to search users based on their name, and provides all the matching users through a **DetailsList** component of Office UI Fabric. Moreover, the web part has a configurable option, available in the property pane, to select how to access the Microsoft Graph. In fact, starting from SharePoint Framework v.1.4.1 you can access the Microsoft Graph either using the native graph client (**MSGraphClient**), or the low level type to access any Azure AD secured REST API (**AadHttpClient**).
+The client-side web part enables searching for users based on their name, and provides all the matching users through a **DetailsList** Office UI Fabric component. The web part has an option in the property pane to select how to access Microsoft Graph. In versions of the SharePoint Framework starting with v.1.4.1, you can access Microsoft Graph by using either the native graph client (**MSGraphClient**), or the low-level type used to access any Azure AD secured REST API (**AadHttpClient**).
 
 > [!NOTE]
-> You can find the full source code of the sample solution in the following GitHub repository [spfx-api-scopes-tutorial](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/tutorials/spfx-api-scopes-tutorial).
+> To get the source code for this solution, see the [spfx-api-scopes-tutorial](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/tutorials/spfx-api-scopes-tutorial) GitHub repo.
 
-## <a name="CreatingTheSolution"></a>Creating the solution
-In the following sections you will be able to build the solution with a step by step approach. Here are the main sections of the process:
+## <a name="CreatingTheSolution"></a>Building the solution
+Building the solution involves the following steps:
 
 * [Creating the initial solution](#CreatingInitialSolution)
 * [Configuring the base web part elements](#ConfiguringBaseElements)
