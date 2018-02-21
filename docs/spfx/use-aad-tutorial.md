@@ -1,27 +1,30 @@
 ---
-title: Tutorial - Consuming APIs secured with Azure Active Directory within SharePoint Framework
+title: Consuming APIs secured with Azure AD within SharePoint Framework
 description: Tutorial on using the AadHttpClient or MSGraphClient class to connect to Azure AD secured APIs in SharePoint Framework solutions.
 ms.date: 02/15/2018
 ms.prod: sharepoint
 ---
 
-# Tutorial: Consuming APIs secured with Azure Active Directory within SharePoint Framework
-
-A very common business scenario for enterprise-level and real-life solutions is to consume REST API secured with Azure Active Directory (Azure AD) and Open Authorization (OAuth 2.0) from within a SharePoint Framework solution, whether it is a client-side web part or an extension.
-By using SharePoint Framework v.1.4.1 or later, you can leverage a set of out of the box capabilities to easily satisfy that business requirement, being able to consume either the Microsoft Graph, with a custom set of permission scopes, or any other REST API like a custom service registered in Azure AD.
+# Consuming APIs secured with Azure AD within SharePoint Framework
 
 > [!IMPORTANT]
-> Usage of `AadHttpClient` and `MSGraphClient` is currently in preview status and subject to change. You should not use these capabilities in production environment. Notice also that usage of `webApiPermissionRequests` properties in `package-solution.json` is not supported in normal tenants.
+> `AadHttpClient` and `MSGraphClient` are currently in preview and are subject to change. Do not use them in a production environment. Also note that the `webApiPermissionRequests` properties in `package-solution.json` are not supported in production tenants.
+
+Consuming REST APIs secured with Azure Active Directory (Azure AD) and Open Authorization (OAuth 2.0) from within a SharePoint Framework client-side web part or extension is a common enterprise-level business scenario.
+
+You can use the SharePoint Framework v.1.4.1 to consume Microsoft Graph REST APIs with a custom set of permissions, or any other REST API that's registered in Azure AD. 
+
+In this article, you'll learn how to create a SharePoint Framework solution that uses the Microsoft Graph API with a custom set of permissions.
 
 > [!IMPORTANT]
-> You can consume the Microsoft Graph with versions of SharePoint Framework older than v1.4.1, either using the native **graphHttpClient** member of the SharePoint Framework context, or with a manually implemented implicit flow of OAuth by using [ADAL JS](https://github.com/AzureAD/azure-activedirectory-library-for-js). However, the former approach is bound to a pre-defined set of permissions scopes, which allow you to do nothing more that what have been defined by Microsoft, and the latter is a bit complex from a development perspective. Nevertheless, for more information about the latter scenario, you can see the [Connect to API secured with Azure Active Directory](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/guidance/connect-to-api-secured-with-aad) article.
+> You can consume the Microsoft Graph API with versions of SharePoint Framework earler than v.1.4.1, either via the native **graphHttpClient**, or via a manual [ADAL JS](https://github.com/AzureAD/azure-activedirectory-library-for-js) implicit OAuth flow. However, the former approach is bound to a predefined set of permissions, which presenets some limitations, and the latter is complex from a development perspective. For details about how to implement an implicity OAuth flow, see [Connect to APIs secured with Azure Active Directory](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/guidance/connect-to-api-secured-with-aad).
 
-Reading this tutorial you will learn - through a step by step approach - how to create a SharePoint Framework solution that consumes the Microsoft Graph, with a custom set of permission scopes.
 
 > [!NOTE]
-> To better undestand the overall architecture of this capability, you can read the article [Connect to Azure AD secured APIs in SharePoint Framework solutions](use-aadhttpclient.md).
+> For a conceptual overview of this technology, see [Connect to Azure AD secured APIs in SharePoint Framework solutions](use-aadhttpclient.md).
 
 ## <a name="SolutionOverview"></a>Overview of the solution
+
 Before digging into the detailed steps of developing the solution, let's have a quick overview of what you are going to build.
 In the following screenshot, you can see the UI of a client-side web part that allows to search for users in the current tenant. The search is based on the Microsoft Graph and requires at least the *User.ReadBasic.All* permission.
 
