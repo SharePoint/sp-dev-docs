@@ -1,11 +1,11 @@
 ---
-title: Consuming APIs secured with Azure AD within SharePoint Framework
+title: Consuming APIs secured with Azure AD within the SharePoint Framework
 description: Tutorial on using the AadHttpClient or MSGraphClient class to connect to Azure AD secured APIs in SharePoint Framework solutions.
 ms.date: 02/15/2018
 ms.prod: sharepoint
 ---
 
-# Consuming APIs secured with Azure AD within SharePoint Framework
+# Consuming APIs secured with Azure AD within the SharePoint Framework
 
 > [!IMPORTANT]
 > `AadHttpClient` and `MSGraphClient` are currently in preview and are subject to change. Do not use them in a production environment. Also note that the `webApiPermissionRequests` properties in `package-solution.json` are not supported in production tenants.
@@ -34,20 +34,10 @@ The client-side web part enables searching for users based on their name, and pr
 > [!NOTE]
 > To get the source code for this solution, see the [spfx-api-scopes-tutorial](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/tutorials/spfx-api-scopes-tutorial) GitHub repo.
 
-## <a name="CreatingTheSolution"></a>Building the solution
-Building the solution involves the following steps:
+If you're already familiar with how to create SharePoint Framework solutions, you can proceed to [Configure the API permissions requests](#ConfiguringApiPermissions).
 
-* [Creating the initial solution](#CreatingInitialSolution)
-* [Configuring the base web part elements](#ConfiguringBaseElements)
-* [Configuring the API permissions requests](#ConfiguringApiPermissions)
-* [Consuming the Microsoft Graph](#ConsumingTheGraph)
-* [Solution deployment and permissions grant](#DeploymentAndPermissionsGrant)
-* [Testing the solution](#SolutionTesting)
-
-If you are already confident creating SharePoint Framework solutions, you can skip the introductory sections and go straight to [Configuring the API permissions requests](#ConfiguringApiPermissions).
-
-### <a name="CreatingInitialSolution"></a>Creating the initial solution
-First of all, if you have an old version of the SharePoint Framework generator, you need to update it to version 1.4.1 or newer. In order to do that, you can simply execute the following command:
+## <a name="CreatingInitialSolution"></a>Create the initial solution
+If you have an old version of the SharePoint Framework generator, you need to update it to version 1.4.1 or newer. In order to do that, you can simply execute the following command:
 
 ```sh
 npm install -g @microsoft/generator-sharepoint
@@ -80,10 +70,10 @@ yo @microsoft/sharepoint
 code .
 ```
 
-### <a name="ConfiguringBaseElements"></a>Configuring the base web part elements
+## <a name="ConfiguringBaseElements"></a>Configure the base web part elements
 It's now time to configure the initial elements of the client-side web part.
 
-#### <a name="ConfigureCustomProperties"></a>Configure the custom properties
+### <a name="ConfigureCustomProperties"></a>Configure the custom properties
 Create a new source code file under the *src/webparts/graphConsumer/components* folder of the solution.
 Call the new file *ClientMode.ts* and use it to declare a TypeScript *enum* with the available options for the "Client Mode" property of the web part.
 
@@ -169,7 +159,7 @@ import { ClientMode } from './components/ClientMode';
 
 Notice the import for the **PropertyPaneChoiceGroup** control, as well as the import of the **ClientMode** enum.
 
-#### <a name="UpdateResourceStrings"></a>Update the resource strings
+### <a name="UpdateResourceStrings"></a>Update the resource strings
 In order to compile the solution, you will need to update the *mystrings.d.ts* file under the *src/webparts/graphConsumer/loc* folder of the solution. You will need to rewrite the interface defining the resources string with the following code excerpt:
 
 ```TS
@@ -196,7 +186,7 @@ define([], function() {
 });
 ```
 
-#### <a name="UpdateStyles"></a>Update the style for the client-side web part
+### <a name="UpdateStyles"></a>Update the style for the client-side web part
 As like as you did with the resource strings, you need to slightly update the SCSS style file, too. Thus, open the *GraphConsumer.module.scss* under the *src/webparts/graphConsumer/components* folder of the solution. Add the following style classes, right after the *.title* class:
 
 ```SCSS
@@ -210,7 +200,7 @@ As like as you did with the resource strings, you need to slightly update the SC
   }
 ```
 
-#### <a name="UpdateReactComponent"></a>Update the React component rendering the web part
+### <a name="UpdateReactComponent"></a>Update the React component rendering the web part
 Now you can update the **GraphConsumer** React component under the *src/webparts/graphConsumer/components* folder of the solution.
 First of all, you need to update the *IGraphConsumerProps.ts* file in order to accept the custom properties required by the web part implementation. Here you can see the updated content of the *IGraphConsumerProps.ts* file.
 
@@ -418,7 +408,7 @@ The **PrimaryButton** fires a *_search()* function, which determines what client
 
 Lastly, as you can see, the **DetailsList** component instance is rendered in the *render()* method just in case there are items in the *users* property of the component's state.
 
-### <a name="ConfiguringApiPermissions"></a>Configuring the API permissions requests
+## <a name="ConfiguringApiPermissions"></a>Configure the API permissions requests
 
 In order to being able to consume the Microsoft Graph, as well as any other third party REST API, you will need to explicitly declare in the manifest of your solution what are the permission requirements from an OAuth perspective.
 
@@ -458,7 +448,7 @@ In order to search for users and to retrieve their *displayName*, *mail*, and *u
 
 Later you will package and deploy the solution, and you (or an admin) will have to grant the requested permissions to your solution, as you will learn in the section [Solution deployment and permissions grant](#DeploymentAndPermissionsGrant)
 
-### <a name="ConsumingTheGraph"></a>Consuming the Microsoft Graph
+## <a name="ConsumingTheGraph"></a>Consume Microsoft Graph
 You can now implement the methods to consume the Microsoft Graph. As you saw reading the [Overview of the solution](#SolutionOverview) you have two options to consume the Microsoft Graph:
 * Using the **AadHttpClient** client object
 * Using the **MSGraphClient** client object
@@ -466,7 +456,7 @@ You can now implement the methods to consume the Microsoft Graph. As you saw rea
 The former is a client object useful to consume whatever REST API. Thus you can use it to consume the Microsoft Graph, as well as any other third party (or first party) REST API.
 The latter is a client object that can consume the Microsoft Graph only. Internally it uses the **AadHttpClient** client object and supports the fluent syntax of the Microsoft Graph SDK.
 
-#### <a name="AadHttpClient"></a>Using AadHttpClient
+### <a name="AadHttpClient"></a>Using AadHttpClient
 In order to consume any REST API using the **AadHttpClient** client object, you simply need to create a new instance of the **AadHttpClient** type, providing the *serviceScope* of the current context, and the URI of the target service.
 The object created will provide you methods to make the following:
 * *get*: makes an HTTP GET request
@@ -530,7 +520,7 @@ Here you can see a code excerpt of the *_searchWithAad()* method of the current 
 
 As you can see, the *get()* method gets the URL of the OData request as the input argument, and in case of successful request will return a JSON object with the response.
 
-#### <a name="MSGraphClient"></a>Using MSGraphClient
+### <a name="MSGraphClient"></a>Using MSGraphClient
 If you are targeting the Microsoft Graph, you can use the **MSGraphClient** client object, which provides you a more fluent syntax.
 In the following code excerpt you can see the actual implementation of the *_searchWithGraph()* method of the current sample solution.
 
@@ -586,7 +576,7 @@ The result will still be a JSON response that you will have to decode and map to
 > [!NOTE]
 > You can even use a fully typed approach leveraging the [Microsoft Graph TypeScript types](https://github.com/microsoftgraph/msgraph-typescript-typings).
 
-### <a name="DeploymentAndPermissionsGrant"></a>Solution deployment and permissions grant
+## <a name="DeploymentAndPermissionsGrant"></a>Deply the solution and grant permissions
 You are now ready to build, bundle, package, and deploy the solution.
 Run the gulp commands to accomplish this tasks.
 
@@ -635,7 +625,7 @@ You can also select thhe pending approval permission item, and click on the "App
 
 And you are now ready to go!
 
-### <a name="SolutionTesting"></a>Testing the solution
+## <a name="SolutionTesting"></a>Test the solution
 Run your solution by using the following gulp command:
 
 ```sh
