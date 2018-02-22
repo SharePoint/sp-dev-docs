@@ -37,41 +37,40 @@ The client-side web part enables searching for users based on their name, and pr
 If you're already familiar with how to create SharePoint Framework solutions, you can proceed to [Configure the API permissions requests](#ConfiguringApiPermissions).
 
 ## <a name="CreatingInitialSolution"></a>Create the initial solution
-If you have an old version of the SharePoint Framework generator, you need to update it to version 1.4.1 or newer. In order to do that, you can simply execute the following command:
+If you have an old version of the SharePoint Framework generator, you need to update it to version 1.4.1 or later. To do that, run the following command to globally install the latest version of the package.
 
 ```sh
 npm install -g @microsoft/generator-sharepoint
 ```
 
-to globally install the most updated version of the package.
-Then, you need to create a new SharePoint Framework solution, going through the following steps:
+Next, create a new SharePoint Framework solution:
 
-* Create a folder in your file system, where you will store the source code of the solution and move the current path into that folder
-* Execute the Yeoman generator to scaffold a new solution
+* Create a folder in your file system. You will store the solution source code and move the current path into this folder.
+* Run the Yeoman generator to scaffold a new solution:
 
-```sh
-yo @microsoft/sharepoint
-```
-* Select the following options
-    * Provide a name for the solution (for example *spfx-api-scopes-tutorial*)
-    * Target the solution for: *SharePoint Online only (latest)*
-    * Use the current folder
-    * It is up to you whether you want to globally deploy the solution onto the target tenant or not
-    * Select to create a WebPart
-    * Call the web part *GraphConsumer*
-    * Provide a description
-    * Select to use React as the development framework
+   ```sh
+   yo @microsoft/sharepoint
+   ```
+* In your solution, do the following:
+    * Provide a name for the solution (for example *spfx-api-scopes-tutorial*).
+    * Target the solution for: *SharePoint Online only (latest)*.
+    * Use the current folder.
+    * Decide whether you want to globally deploy the solution to the target tenant.
+    * Choose to create a WebPart.
+    * Call the web part *GraphConsumer*.
+    * Provide a description.
+    * Choose to use React as the development framework.
 
 ![The UI of the Yeoman Generator while scaffolding the SPFx solution](../images/graphconsumer-yeoman-generator.png)
 
-* Start Visual Studio Code (or whatever else is your favorite code editor) within the context of the current folder
+* Start Visual Studio Code (or your favorite code editor) within the context of the current folder.
 
 ```sh
 code .
 ```
 
 ## <a name="ConfiguringBaseElements"></a>Configure the base web part elements
-It's now time to configure the initial elements of the client-side web part.
+Next, configure the initial elements of the client-side web part.
 
 ### <a name="ConfigureCustomProperties"></a>Configure the custom properties
 Create a new source code file under the *src/webparts/graphConsumer/components* folder of the solution.
@@ -93,7 +92,7 @@ export interface IGraphConsumerWebPartProps {
 }
 ```
 
-Now update the **getPropertyPaneConfiguration()** method of the client-side web part, in order to support the choice selection in the property pane. Here follows the new implementation of the method.
+Now update the **getPropertyPaneConfiguration()** method of the client-side web part, in order to support the choice selection in the property pane. The following example shows the new implementation of the method.
 
 ```TS
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
@@ -123,7 +122,7 @@ Now update the **getPropertyPaneConfiguration()** method of the client-side web 
   }
 ```
 
-Furthermore, you need to update the *render* method of the client-side web part, in order to create a properly configured instance of the React component for rendering. Here follows the update method definition.
+In addition, you need to update the **render** method of the client-side web part, in order to create a properly configured instance of the React component for rendering. The following code shows the update method definition.
 
 ```TS
   public render(): void {
@@ -139,7 +138,7 @@ Furthermore, you need to update the *render* method of the client-side web part,
   }
 ```
 
-Last but not least, in order to make the above code to work, you will need to add some *import* statements at the very beggining of the *GraphConsumerWebPart.ts* file. Here follows the update section of imports for that file.
+For this code to work, you need to add some *import* statements at the very beggining of the *GraphConsumerWebPart.ts* file. Here follows the update section of imports for that file.
 
 ```TS
 import * as React from 'react';
