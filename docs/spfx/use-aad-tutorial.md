@@ -578,7 +578,7 @@ The result will be a JSON response that you will have to decode and map to the t
 > [!NOTE]
 > You can use a fully typed approach by using the [Microsoft Graph TypeScript types](https://github.com/microsoftgraph/msgraph-typescript-typings).
 
-## <a name="DeploymentAndPermissionsGrant"></a>Deply the solution and grant permissions
+## <a name="DeploymentAndPermissionsGrant"></a>Deploy the solution and grant permissions
 You're now ready to build, bundle, package, and deploy the solution. Run the gulp commands to verify that the solution builds correctly.
 
 ```sh
@@ -592,38 +592,38 @@ gulp bundle
 gulp package-solution
 ```
 
-Now, browse to the app catalog of your target tenant and upload the solution package in there. You can find the solution package under the *sharepoint/solution* folder of your solution. It is the .sppkg file.
-Once you upload the solution package, the app catalog will prompt you with a dialog like the following one.
+Next, browse to the app catalog of your target tenant and upload the solution package. You can find the solution package under the *sharepoint/solution* folder of your solution. It is the .sppkg file.
+After you upload the solution package, the app catalog will prompt you with a dialog box, similar to the one shown in the following image.
 
-![The UI of the app catalog while uploading the package solution](../images/graphconsumer-tutorial-appcatalog-prompt.png)
+![Screenshot of the app catalog UI when uploading the package solution](../images/graphconsumer-tutorial-appcatalog-prompt.png)
 
-As you can see, there is a message in the lower area of the screen that informs you that the solution package requires permissions approval. That's because of the webApiPermissionRequests property in the *package-solution.json* file.
+A message in the lower part of the screen tells you that the solution package requires permissions approval. This is because of the **webApiPermissionRequests** property in the *package-solution.json* file.
 
-Open the SharePoint Admin Center of your tenant, and select to "Try the new SharePoint admin center", in the upper right corner of the screen.
+Open the SharePoint Admin Center of your tenant, and in the upper right corner of the screen, choose **Try the new SharePoint admin center**.
 
-![The link to "Try the new SharePoint admin center"](../images/graphconsumer-open-new-admin-center.png)
+![Screenshot of the Try the new SharePoint admin center link](../images/graphconsumer-open-new-admin-center.png)
 
-In the new Admin Center select the *WebApiPermission management" menu item, in the left quick launch menu. You will see a page like the following one.
+In the new Admin Center, in the left quick launch menu, choose the **WebApiPermission management** menu item. You will see a page similar to the following.
 
-![The WebApiPermission management page](../images/graphconsumer-webapipermission-management.png)
-
-> [!NOTE]
-> The asterisks in the UI of the new Admin Center imply that the functionalities are still under preview.
-
-Using this page you (or any other admin of your SPO tenant) can Approve or Deny any pending permission request. Notice that here you don't see which solution package is requesting which permission, because the permissions are defined at tenant level and for a unique application. 
+![Screenshot of the WebApiPermission management page](../images/graphconsumer-webapipermission-management.png)
 
 > [!NOTE]
-> For further details about how the tenant-level permission scopes work internally, you can read the articles highlighted in the [See also](#SeeAlso) section.
+> Asterisks in the UI of the new Admin Center indicate that the features are in preview.
 
-Select the permission that you requested in the *package-solution.json* file of your solution, click on "Approve or reject access" and click "Approve", through the right-side panel that you see in the following screenshot.
+Using this page you (or any other admin of your SharePoint Online tenant) can Approve or Deny any pending permission request. Note that you don't see which solution package is requesting which permission, because the permissions are defined at the tenant level and for a unique application. 
 
-![The WebApiPermission management page during the approval process](../images/graphconsumer-webapipermission-approval.png)
+> [!NOTE]
+> For more information about how the tenant-level permission scopes work internally, see the articles in the [See also](#SeeAlso) section.
 
-You can also select thhe pending approval permission item, and click on the "Approve or reject" button in the toolbar.
+Choose the permission that you requested in the *package-solution.json* file of your solution, choose **Approve or reject access**, and choose **Approve**. The following screenshot shows the panel in the Admin UI.
 
-![The WebApiPermission management page during the approval process](../images/graphconsumer-webapipermission-approval-approve.png)
+![Screenshot of the WebApiPermission management page during the approval process](../images/graphconsumer-webapipermission-approval.png)
 
-And you are now ready to go!
+You can also select the pending approval permission item, and choose **Approve or reject** in the toolbar.
+
+![Screenshot of the WebApiPermission management page during the approval process](../images/graphconsumer-webapipermission-approval-approve.png)
+
+And you're now ready to go!
 
 ## <a name="SolutionTesting"></a>Test the solution
 Run your solution by using the following gulp command:
@@ -632,18 +632,18 @@ Run your solution by using the following gulp command:
 gulp serve --nobrowser
 ```
 
-Open the browser and browse to the SharePoint Framework Workbench page, which can be found at the following URL:
+Open the browser and go to the SharePoint Framework Workbench page, which can be found at the following URL:
 
 ```TXT
 https://<your-tenant>.sharepoint.com/_layouts/15/Workbench.aspx
 ```
 
-Add the *GraphConsumer* client-side web part, configure the *Client Mode* and search for users.
-The first request you will make, you will see a pop-up window popping out and then disappearing. That's the logon window used by ADAL JS, which is internally used by the SharePoint Framework to retrieve the Access Token from Azure AD using and OAuth implicit flow.
+Add the *GraphConsumer* client-side web part, configure the *Client Mode*, and search for users.
+When you make your first request, you will see a pop-up window appear and disappear. That's the logon window used by ADAL JS, which is used internally by the SharePoint Framework to get the access token from Azure AD using and OAuth implicit flow.
 
-![The UI of the sample application](../images/use-aad-tutorial-video.gif)
+![Screenshot of the UI of the sample application](../images/use-aad-tutorial-video.gif)
 
-And that's it! Enjoy this capability building real-life enterprise-level solutions that leverage Azure AD-secured REST API.
+And that's it! Now you can build enterprise-level solutions that use Azure AD-secured REST APIs.
 
 <a name="SeeAlso"></a>
 
