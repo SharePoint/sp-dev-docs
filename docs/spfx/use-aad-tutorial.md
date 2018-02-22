@@ -12,16 +12,12 @@ ms.prod: sharepoint
 
 Consuming REST APIs secured with Azure Active Directory (Azure AD) and Open Authorization (OAuth 2.0) from within a SharePoint Framework client-side web part or extension is a common enterprise-level business scenario.
 
-You can use the SharePoint Framework v.1.4.1 to consume Microsoft Graph REST APIs with a custom set of permissions, or any other REST API that's registered in Azure AD. 
+You can use the SharePoint Framework v.1.4.1 to consume Microsoft Graph REST APIs, or any other REST API that's registered in Azure AD. 
 
-In this article, you'll learn how to create a SharePoint Framework solution that uses the Microsoft Graph API with a custom set of permissions.
+In this article, you'll learn how to create a SharePoint Framework solution that uses the Microsoft Graph API with a custom set of permissions. For a conceptual overview of this technology, see [Connect to Azure AD secured APIs in SharePoint Framework solutions](use-aadhttpclient.md).
 
 > [!IMPORTANT]
-> You can consume the Microsoft Graph API with versions of SharePoint Framework earler than v.1.4.1, either via the native **graphHttpClient**, or via a manual [ADAL JS](https://github.com/AzureAD/azure-activedirectory-library-for-js) implicit OAuth flow. However, the former approach is bound to a predefined set of permissions, which presenets some limitations, and the latter is complex from a development perspective. For details about how to implement an implicity OAuth flow, see [Connect to APIs secured with Azure Active Directory](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/guidance/connect-to-api-secured-with-aad).
-
-
-> [!NOTE]
-> For a conceptual overview of this technology, see [Connect to Azure AD secured APIs in SharePoint Framework solutions](use-aadhttpclient.md).
+> You can consume the Microsoft Graph API with versions of SharePoint Framework earler than v.1.4.1, either via the native **graphHttpClient**, or via a manual [ADAL JS](https://github.com/AzureAD/azure-activedirectory-library-for-js) implicit OAuth flow. However, he former approach is bound to a predefined set of permissions, which presents some limitations, and the latter is complex from a development perspective. For details about how to implement an implicit OAuth flow, see [Connect to APIs secured with Azure Active Directory](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/web-parts/guidance/connect-to-api-secured-with-aad).
 
 ## <a name="SolutionOverview"></a>Solution overview
 
@@ -29,7 +25,7 @@ The steps in this article show you how to build a client-side web part that enab
 
 ![A client-side web part that has a text box and search button for searching for users within a tenant](../images/use-aad-tutorial-video.gif)
 
-The client-side web part enables searching for users based on their name, and provides all the matching users through a **DetailsList** Office UI Fabric component. The web part has an option in the property pane to select how to access Microsoft Graph. In versions of the SharePoint Framework starting with v.1.4.1, you can access Microsoft Graph by using either the native graph client (**MSGraphClient**), or the low-level type used to access any Azure AD secured REST API (**AadHttpClient**).
+The client-side web part enables searching for users based on their name, and provides all the matching users through a **DetailsList** Office UI Fabric component. The web part has an option in the property pane to choose how to access Microsoft Graph. In versions of the SharePoint Framework starting with v.1.4.1, you can access Microsoft Graph by using either the native graph client (**MSGraphClient**), or the low-level type used to access any Azure AD secured REST API (**AadHttpClient**).
 
 > [!NOTE]
 > To get the source code for this solution, see the [spfx-api-scopes-tutorial](https://github.com/SharePoint/sp-dev-fx-webparts/tree/master/tutorials/spfx-api-scopes-tutorial) GitHub repo.
@@ -46,7 +42,7 @@ npm install -g @microsoft/generator-sharepoint
 Next, create a new SharePoint Framework solution:
 
 * Create a folder in your file system. You will store the solution source code and move the current path into this folder.
-* Run the Yeoman generator to scaffold a new solution:
+* Run the Yeoman generator to scaffold a new solution.
 
    ```sh
    yo @microsoft/sharepoint
@@ -74,7 +70,7 @@ Next, configure the initial elements of the client-side web part.
 
 ### <a name="ConfigureCustomProperties"></a>Configure the custom properties
 Create a new source code file under the *src/webparts/graphConsumer/components* folder of the solution.
-Call the new file *ClientMode.ts* and use it to declare a TypeScript *enum* with the available options for the "Client Mode" property of the web part.
+Call the new file *ClientMode.ts* and use it to declare a TypeScript *enum* with the available options for the **ClientMode** property of the web part.
 
 ```TS
 export enum ClientMode {
@@ -159,7 +155,7 @@ import { ClientMode } from './components/ClientMode';
 Note the import for the **PropertyPaneChoiceGroup** control, as well as the import of the **ClientMode** enum.
 
 ### <a name="UpdateResourceStrings"></a>Update the resource strings
-To compile the solution, you need to update the *mystrings.d.ts* file under the *src/webparts/graphConsumer/loc* folder of the solution. Rewrite the interface that defines the resources string with the following code:
+To compile the solution, you need to update the *mystrings.d.ts* file under the *src/webparts/graphConsumer/loc* folder of the solution. Rewrite the interface that defines the resources string with the following code.
 
 ```TS
 declare interface IGraphConsumerWebPartStrings {
@@ -235,9 +231,9 @@ export interface IUserItem {
   }
 ```
 
-The interface will be used to define the outline of the users retrieved from the current tenant and bound to the DetailsList in the UI.
+The interface will be used to define the outline of the users retrieved from the current tenant and bound to the **DetailsList** in the UI.
 
-Next, update the *GraphConsumer.tsx* file. First, add some import statements to imports the types you defined early.
+Next, update the *GraphConsumer.tsx* file. First, add some import statements to import the types you defined earlier.
 
 ```TS
 import * as React from 'react';
@@ -347,7 +343,7 @@ This array will be used in the settings of the **DetailsList** component, as you
   }
 ```
 
-Update the React component type declaration and add a constructor, as shown in the following code example.
+Update the React component type declaration and add a constructor, as shown in the following example.
 
 ```TS
 export default class GraphConsumer extends React.Component<IGraphConsumerProps, IGraphConsumerState> {
@@ -364,7 +360,7 @@ export default class GraphConsumer extends React.Component<IGraphConsumerProps, 
 
 ```
 
-There are some validation rules and handling events for the **TextField** component to collect the search criteria. The following are the methods implementations.
+There are some validation rules and handling events for the **TextField** component to collect the search criteria. The following are the method implementations.
 
 ```TS
   @autobind
@@ -445,7 +441,7 @@ The *scope* can be the name of the permission, or the unique ID of that permissi
 
 The User.ReadBasic.All permission is sufficient for searching for users and getting their **displayName**, **mail**, and **userPrincipalName**.
 
-When you package and deploy your solution, you (or an admin) will have to grant the requested permissions to your solution. For details, see [Deploy the solution and grant permissions](#DeploymentAndPermissionsGrant)
+When you package and deploy your solution, you (or an admin) will have to grant the requested permissions to your solution. For details, see [Deploy the solution and grant permissions](#DeploymentAndPermissionsGrant).
 
 ## <a name="ConsumingTheGraph"></a>Consume Microsoft Graph
 You can now implement the methods to consume the Microsoft Graph. You have two options:
@@ -454,7 +450,7 @@ You can now implement the methods to consume the Microsoft Graph. You have two o
 
 The **AadHttpClient** client object is useful for consuming any REST API. You can use it to consume Microsoft Graph or any other third-party (or first-party) REST API.
 
-**MSGraphClient** client object can consume the Microsoft Graph only. Internally it uses the **AadHttpClient** client object and supports the fluent syntax of the Microsoft Graph SDK.
+The **MSGraphClient** client object can consume the Microsoft Graph only. Internally it uses the **AadHttpClient** client object and supports the fluent syntax of the Microsoft Graph SDK.
 
 ### <a name="AadHttpClient"></a>Using AadHttpClient
 To consume any REST API using the **AadHttpClient** client object, create a new instance of the **AadHttpClient** type, and provide the *serviceScope* of the current context and the URI of the target service.
@@ -520,7 +516,7 @@ The following example shows the **_searchWithAad()** method of the sample soluti
   }
 ```
 
-GTe **get()** method gets the URL of the OData request as the input argument. A successful request returns a JSON object with the response.
+The **get()** method gets the URL of the OData request as the input argument. A successful request returns a JSON object with the response.
 
 ### <a name="MSGraphClient"></a>Using MSGraphClient
 If you are targeting Microsoft Graph, you can use the **MSGraphClient** client object, which provides a more fluent syntax.
@@ -593,7 +589,7 @@ gulp package-solution
 ```
 
 Next, browse to the app catalog of your target tenant and upload the solution package. You can find the solution package under the *sharepoint/solution* folder of your solution. It is the .sppkg file.
-After you upload the solution package, the app catalog will prompt you with a dialog box, similar to the one shown in the following image.
+After you upload the solution package, the app catalog will prompt you with a dialog box, similar to the one shown in the following screenshot.
 
 ![Screenshot of the app catalog UI when uploading the package solution](../images/graphconsumer-tutorial-appcatalog-prompt.png)
 
@@ -610,7 +606,7 @@ In the new Admin Center, in the left quick launch menu, choose the **WebApiPermi
 > [!NOTE]
 > Asterisks in the UI of the new Admin Center indicate that the features are in preview.
 
-Using this page you (or any other admin of your SharePoint Online tenant) can Approve or Deny any pending permission request. Note that you don't see which solution package is requesting which permission, because the permissions are defined at the tenant level and for a unique application. 
+Using this page you (or any other admin of your SharePoint Online tenant) can approve or deny any pending permission request. Note that you don't see which solution package is requesting which permission, because the permissions are defined at the tenant level and for a unique application. 
 
 > [!NOTE]
 > For more information about how the tenant-level permission scopes work internally, see the articles in the [See also](#SeeAlso) section.
@@ -623,16 +619,16 @@ You can also select the pending approval permission item, and choose **Approve o
 
 ![Screenshot of the WebApiPermission management page during the approval process](../images/graphconsumer-webapipermission-approval-approve.png)
 
-And you're now ready to go!
+And you're now ready to go.
 
 ## <a name="SolutionTesting"></a>Test the solution
-Run your solution by using the following gulp command:
+Run your solution by using the following gulp command.
 
 ```sh
 gulp serve --nobrowser
 ```
 
-Open the browser and go to the SharePoint Framework Workbench page, which can be found at the following URL:
+Open the browser and go to the following URL to go to the SharePoint Framework Workbench page:
 
 ```TXT
 https://<your-tenant>.sharepoint.com/_layouts/15/Workbench.aspx
