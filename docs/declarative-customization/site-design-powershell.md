@@ -7,9 +7,9 @@ ms.date: 01/08/2018
 # PowerShell cmdlets for SharePoint site designs and site scripts
 
 > [!NOTE]
-> Site designs and site scripts are in preview and are subject to change. They are currently only supported for use in production environments in Targeted Release.
+> Site designs and site scripts have been released to production and are available for general use. 
 
-Use PowerShell cmdlets to create, retrieve, update, and remove site designs and site scripts.
+Use PowerShell cmdlets to create, retrieve, update, and remove site designs and site scripts to new and existing modern site collections.
 
 ## Getting started
 
@@ -30,6 +30,7 @@ The following cmdlets are available for managing site designs and site scripts f
 - **Get-SPOSiteDesignRights**
 - **Get-SPOSiteScript**
 - **Grant-SPOSiteDesignRights**
+- **Invoke-SPOSiteDesign**
 - **Remove-SPOSiteDesign**
 - **Remove-SPOSiteScript**
 - **Revoke-SPOSiteDesignRights**
@@ -98,7 +99,7 @@ Add-SPOSiteScript
 | -Content     | JSON value that describes the script. For more information, see [JSON reference](site-design-json-schema.md).|
 | -Description | A description of the script. |
 
-The following example adds a new site from the following script in a file.
+The following example adds a new site logo from the following script in a file.
 
 ```json
 {
@@ -231,6 +232,45 @@ PS C:\> Grant-SPOSiteDesignRights `
          -Identity 44252d09-62c4-4913-9eb0-a2a8b8d7f863 `
          -Principals "nestorw@contoso.onmicrosoft.com" `
          -Rights View
+```
+
+## Invoke-SPOSiteDesign
+
+Applies a published site design to a specified site collection target. This allows a site design to be applied to an existing site collection.
+
+```powershell
+Invoke-SPOSiteDesign
+  [-Identity]
+  -WebUrl <string>
+  [<CommonParameters>]
+```
+
+### Parameters
+
+|Parameter     | Description  |
+|--------------|--------------|
+| -Identity       | The ID of the site design to apply. |
+| -WebUrl    | The Url of the site collection where the site design will be applied.|
+
+The following example applies a site design whose script creates two lists, formats several of the columns, adds the lists to the site navigation, and then joins the site to an existing hub site.
+
+```powershell
+C:\> Invoke-SPOSiteDesign -Identity 501z8c32-4147-44d4-8607-26c2f67cae82 -WebUrl "https://contoso.sharepoint.com/sites/projectgo”
+
+Title                                             Outcome
+----------------------------------------------    -------
+Create or update list Project Activities          Success
+Update list description                           Success
+Create column Project Status                      Success
+Create column Effort (days)                       Success
+Set custom formatter for field Project Status     Success
+Set custom formatter for field Effort (days)      Success
+Create or update list Project Collateral          Success
+Create column Due Date                            Success
+Set custom formatter for field Due Date           Success
+Add Project Activities to left nav                Success
+Add Project Collateral to left nav                Success
+Add to Hub Site                                   Success
 ```
 
 ## Remove-SPOSiteDesign
