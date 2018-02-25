@@ -5,10 +5,10 @@ ms.date: 2/26/2018
 ---
 
 # Automate SharePoint site hubs
-[grant-spohubsiterights](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/grant-spohubsiterights?view=sharepoint-ps)
+
 SharePoint hub sites connect and organize sites based on organizational attributes such as project, department, division, or region. Use PowerShell cmdlets, or the SharePoint REST API to automate tasks such as creating, removing, or controlling permissions for site hubs.
 
-For more information on SharePoint site hubs, see **What is a SharePoint hub site**. <!-- TBD: Need link to this article>
+For more information on SharePoint site hubs, see **What is a SharePoint hub site**.
 
 ## PowerShell cmdlets
 
@@ -28,6 +28,4 @@ You can use the following cmdlets to automate SharePoint site hubs. Each cmdlet 
 ## REST APIs
 
 You can use the following REST APIs to automate SharePoint site hubs.
-
-<!--TBD: Need info on REST APIs>
 
