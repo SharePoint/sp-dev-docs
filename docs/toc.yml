@@ -132,7 +132,7 @@
     - name: Microsoft Graph 
       href: spfx/use-msgraph.md
       items:
-      - name: Tutorial
+      - name: Consuming APIs secured with Azure AD
         href: spfx/use-aad-tutorial.md        
     - name: Microsoft GraphHttpClient (Deprecated)
       href: spfx/overview-graphhttpclient.md
