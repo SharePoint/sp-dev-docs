@@ -119,10 +119,10 @@ You can also follow these steps by watching this video on the [SharePoint PnP Yo
 
 The default value for the **includeClientSideAssets** is `true`, which means that static assets are packaged automatically inside of the *.sppkg* files, and you do not need to separately host your assets from an external system. 
 
-If *Office 365 CDN* is enabled, it is used automatically with default settings. If *Office 365 CDN* is not enabled, assets are served from the App Catalog site collection. 
+If *Office 365 CDN* is enabled, it is used automatically with default settings. If *Office 365 CDN* is not enabled, assets are served from the app catalog site collection. 
 
 > [!NOTE]
-> Starting from the SharePoint Framework v1.4, static assets are by default packaged inside of the sppkg package. When a package is deployed in the App Catalog, they are automatically hosted either from Office 365 CDN (if enabled) or from an App Catalog URL. You can control this behavior with the `includeClientSideAssets` setting in the `package-solution.json` file.
+> Starting from the SharePoint Framework v1.4, static assets are by default packaged inside of the sppkg package. When a package is deployed in the app catalog, they are automatically hosted either from Office 365 CDN (if enabled) or from an app catalog URL. You can control this behavior with the `includeClientSideAssets` setting in the `package-solution.json` file.
 
 ## Prepare web part assets to deploy
 
@@ -141,13 +141,13 @@ If *Office 365 CDN* is enabled, it is used automatically with default settings. 
   > [!NOTE]
   > If you are interested in what actually got packaged inside of the sppkg file, you can look in the content of the **sharepoint/solution/debug** folder.
 
-3. Upload or drag and drop the newly created client-side solution package to the App Catalog in your tenant. 
+3. Upload or drag and drop the newly created client-side solution package to the app catalog in your tenant. 
 
 4. Because you already deployed the package, you are prompted as to whether to replace the existing package. Select **Replace It**.
 
   ![Override existing solution](../../../images/cdn-override-helloworld-webpart-package.png)
 
-5. Notice how the **domain** list in the prompt says *SharePoint Online*. This is because the content is either served from the Office 365 CDN or from the App Catalog, depending on the tenant settings. Select **Deploy**.
+5. Notice how the **domain** list in the prompt says *SharePoint Online*. This is because the content is either served from the Office 365 CDN or from the app catalog, depending on the tenant settings. Select **Deploy**.
 
   ![Installation popup from app catalog for the SPFx solution](../../../images/cnd-trust-helloworld-webpart-solution.png)
 
@@ -165,12 +165,12 @@ If *Office 365 CDN* is enabled, it is used automatically with default settings. 
 
 10. Select **F12** to open up developer tools.
 
-11. Extend **publiccdn.sharepointonline.com** under the source and notice how the **hello-world-web-part** file is loaded from the Public CDN URL pointing dynamically to a library located under the App Catalog site collection.
+11. Extend **publiccdn.sharepointonline.com** under the source and notice how the **hello-world-web-part** file is loaded from the Public CDN URL pointing dynamically to a library located under the app catalog site collection.
 
   ![HelloWorld web part bundle coming from public CDN URL in the sources tab of Chrome developer tools](../../../images/cdn-web-part-f12-source.png)
 
 > [!NOTE]
-> If you would not have CDN enabled in your tenant, and the `includeClientSideAssets` setting would be `true`in the **package-solution.json**, the loading URL for the assets would be dynamically updated and pointing directly to the ClientSideAssets folder located in the App Catalog site collection. In this example case, the URL would be `https://sppnp.microsoft.com/sites/apps/ClientSideAssets/`.
+> If you would not have CDN enabled in your tenant, and the `includeClientSideAssets` setting would be `true`in the **package-solution.json**, the loading URL for the assets would be dynamically updated and pointing directly to the ClientSideAssets folder located in the app catalog site collection. In this example case, the URL would be `https://sppnp.microsoft.com/sites/apps/ClientSideAssets/`.
 
 Now you have deployed your custom web part to SharePoint Online and it's being hosted automatically from the Office 365 CDN.
 

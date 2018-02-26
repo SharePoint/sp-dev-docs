@@ -127,10 +127,17 @@
       href: spfx/web-parts/guidance/connect-to-api-secured-with-aad.md
     - name: Call the Microsoft Graph API using OAuth
       href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md
-    - name: Microsoft Graph
+    - name: Connect to Azure AD-secured APIs
+      href: spfx/use-aadhttpclient.md    
+    - name: Microsoft Graph 
+      href: spfx/use-msgraph.md
+      items:
+      - name: Consuming APIs secured with Azure AD
+        href: spfx/use-aad-tutorial.md        
+    - name: Microsoft GraphHttpClient (Deprecated)
       href: spfx/overview-graphhttpclient.md
       items:
-      - name: Tutorial
+      - name: Tutorial (Deprecated)
         href: spfx/call-microsoft-graph-using-graphhttpclient.md          
   - name: Setup and deployment
     items:
@@ -1080,7 +1087,7 @@
         href: sp-add-ins/determine-sharepoint-rest-service-endpoint-uris.md
       - name: Use OData query operations
         href: sp-add-ins/use-odata-query-operations-in-sharepoint-rest-requests.md
-      - name: Navigate the data structure
+      - name: Navigate data structure
         href: sp-add-ins/navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md
       - name: Synchronize items
         href: sp-add-ins/synchronize-sharepoint-items-using-the-rest-service.md
@@ -1548,9 +1555,11 @@
       href: solution-guidance/create-remote-timer-jobs-in-sharepoint.md
     - name: Get started with WebJobs ("timer jobs")
       href: solution-guidance/Getting-Started-with-building-Azure-WebJobs-for-your-Office365-sites.md
+  - name: PnP Office 365 CLI
+    href: https://sharepoint.github.io/office365-cli/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs
+  - name: PnP PowerShell reference
+    href: https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps
   - name: PnP Sites Core API reference
     href: https://docs.microsoft.com/en-us/dotnet/api/?term=Officedevpnp
   - name: PnP Sites Core API reference - Extension methods
     href: https://docs.microsoft.com/en-us/dotnet/api/?term=microsoft.sharepoint
-  - name: PnP PowerShell reference
-    href: https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps

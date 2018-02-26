@@ -46,7 +46,7 @@ There are three ways to get an Office 365 plan:
 
 - Buy an [Office 365 developer subscription](https://portal.microsoftonline.com/Signup/MainSignUp.aspx?OfferId=C69E7747-2566-4897-8CBA-B998ED3BAB88&amp;DL=DEVELOPERPACK). 
 
-- Sign up for a free, one-year Office 365 developer account through the Office 365 Developer Program. [Get more information](http://dev.office.com/devprogram), or go straight to [the sign-up form](https://profile.microsoft.com/RegSysProfileCenter/wizardnp.aspx?wizid=14b845d0-938c-45af-b061-f798fbb4d170). You'll get an email after you sign up for the developer program with a link to sign up for the developer account. Use the following instructions.
+- Sign up for a one-year Office 365 developer account through the Office 365 Developer Program. [Get more information](http://dev.office.com/devprogram), or go straight to [the sign-up form](https://profile.microsoft.com/RegSysProfileCenter/wizardnp.aspx?wizid=14b845d0-938c-45af-b061-f798fbb4d170). You'll get an email after you sign up for the developer program with a link to sign up for the developer account. Use the following instructions.
 
 > [!TIP]
 > Open these links in another window or tab to keep the following instructions handy.

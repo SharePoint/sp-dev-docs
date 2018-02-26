@@ -1,6 +1,6 @@
 ---
 title: Tenant-scoped solution deployment for SharePoint Framework solutions
-description: Configure your SharePoint Framework components to be immediately available across the tenant when the solution package is installed to the tenant App Catalog.
+description: Configure your SharePoint Framework components to be immediately available across the tenant when the solution package is installed to the tenant app catalog.
 ms.date: 02/02/2018
 ms.prod: sharepoint
 ---
@@ -8,9 +8,9 @@ ms.prod: sharepoint
 
 # Tenant-scoped solution deployment for SharePoint Framework solutions
 
-You can configure your SharePoint Framework components to be immediately available across the tenant when the solution package is installed to the tenant App Catalog. This can be configured by using the **skipFeatureDeployment** attribute in the **package-solution.json** file.
+You can configure your SharePoint Framework components to be immediately available across the tenant when the solution package is installed to the tenant app catalog. This can be configured by using the **skipFeatureDeployment** attribute in the **package-solution.json** file.
 
-When the solution has this attribute enabled, the tenant administrator is provided the option to enable the solution to be available automatically across all site collections and sites in the tenant when the solution package is installed to the tenant App Catalog. 
+When the solution has this attribute enabled, the tenant administrator is provided the option to enable the solution to be available automatically across all site collections and sites in the tenant when the solution package is installed to the tenant app catalog. 
 
 You can also see the tenant-wide deployment option demonstrated by watching the following video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=pemHOZCSwZI).
 
@@ -55,15 +55,15 @@ In following example configuration, **skipFeatureDeployment** is set to true, wh
 
 ```
 
-### Approving tenant-wide deployment in App Catalog
+### Approving tenant-wide deployment in app catalog
 
-When the solution with the **skipFeatureDeployment** attribute set to **true** is deployed to the tenant App Catalog, the administrator is given an option to configure the solution to be deployed centrally across the tenant.
+When the solution with the **skipFeatureDeployment** attribute set to **true** is deployed to the tenant app catalog, the administrator is given an option to configure the solution to be deployed centrally across the tenant.
 
 By default, the **Make this solution available to all sites in the organization** check box is not selected. If the check box is selected by the administrator, components in the solutions are automatically visible and available across the tenant. 
 
 ![The "Make this solution available to all sites in the organization" setting is visible when solution is deployed to app catalog](../images/tenant-deploy-app-catalog.png)
 
-Notice that because the solution and site-specific upgrade actions are only available when you use the feature framework, there's no specific upgrade option for the centrally deployed solutions. These solutions can be updated by updating the solution-specific assets in the CDN and by updating the package in the App Catalog. This automatically updates all existing component instances across the tenant to use the latest component assets, such as JavaScript files and updated CSS files.
+Notice that because the solution and site-specific upgrade actions are only available when you use the feature framework, there's no specific upgrade option for the centrally deployed solutions. These solutions can be updated by updating the solution-specific assets in the CDN and by updating the package in the app catalog. This automatically updates all existing component instances across the tenant to use the latest component assets, such as JavaScript files and updated CSS files.
 
 ## Client-side web part visibility on SharePoint sites
 

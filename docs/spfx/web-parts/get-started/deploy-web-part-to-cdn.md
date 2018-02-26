@@ -142,7 +142,7 @@ Note, however, that you have not yet deployed the files.
   ```
 
   > [!NOTE]
-  > The `skipFeatureDeployment` setting is here **true** because the answer for the tenant-scope deployment option was said to be 'y' in the Yeoman flow. This means that you do NOT need to explicitly install the solution to the site before the web part is available. Deploying and approving the solution package in the tenant App Catalog is sufficient to make the web part available across all the sites in the given tenant.
+  > The `skipFeatureDeployment` setting is here **true** because the answer for the tenant-scope deployment option was said to be 'y' in the Yeoman flow. This means that you do NOT need to explicitly install the solution to the site before the web part is available. Deploying and approving the solution package in the tenant app catalog is sufficient to make the web part available across all the sites in the given tenant.
 
 
 ## Configure Azure Storage account details
@@ -243,7 +243,7 @@ Before uploading the assets to CDN, you need to build them.
 
 ### To package the solution
 
-Because you changed the web part bundle, you need to redeploy the package to the App Catalog. You used **--ship** to generate minified assets for distribution.
+Because you changed the web part bundle, you need to redeploy the package to the app catalog. You used **--ship** to generate minified assets for distribution.
 
 1. Switch to the console of the **azurehosted-webpart** project directory.
 
@@ -255,9 +255,9 @@ Because you changed the web part bundle, you need to redeploy the package to the
 
   This creates the updated client-side solution package in the **sharepoint\solution** folder.
 
-### To upload to your App Catalog
+### To upload to your app catalog
 
-1. Upload or drag and drop the client-side solution package to the App Catalog. Notice how the URL is pointing to the Azure CDN URL configured in the previous steps. 
+1. Upload or drag and drop the client-side solution package to the app catalog. Notice how the URL is pointing to the Azure CDN URL configured in the previous steps. 
 
 2. Select the check box to indicate that the solution can be deployed automatically across all sites in the organization.
 
@@ -265,7 +265,7 @@ Because you changed the web part bundle, you need to redeploy the package to the
 
 3. Select **Deploy**.
 
-  The App Catalog now has the client-side solution package where the web part bundle is loaded from the CDN.
+  The app catalog now has the client-side solution package where the web part bundle is loaded from the CDN.
 
 ## Test the HelloWorld web part
 

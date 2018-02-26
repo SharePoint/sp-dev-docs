@@ -2,7 +2,7 @@
 title: Make batch requests with the REST APIs
 ms.date: 02/07/2018
 ms.prod: sharepoint
-redirect_url: /sp-add-ins/make-batch-requests-with-the-rest-apis
+redirect_url: https://docs.microsoft.com/en-us/sharepoint/dev/sp-add-ins/make-batch-requests-with-the-rest-apis/
 ---
 
 

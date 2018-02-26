@@ -145,7 +145,7 @@ The **OnExecute()** method defines what happens when a command is executed (for 
 
 ## Debug your ListView Command Set
 
-You cannot currently use the local Workbench to test SharePoint Framework Extensions. You'll need to test and develop them directly against a live SharePoint Online site. You don't have to deploy your customization to the App Catalog to do this, which makes the debugging experience simple and efficient. 
+You cannot currently use the local Workbench to test SharePoint Framework Extensions. You'll need to test and develop them directly against a live SharePoint Online site. You don't have to deploy your customization to the app catalog to do this, which makes the debugging experience simple and efficient. 
 
 1. Compile your code and host the compiled files from the local machine by running this command:
 
@@ -193,7 +193,7 @@ You cannot currently use the local Workbench to test SharePoint Framework Extens
 ### More details about the URL query parameters
 
 - **loadSPFX=true** ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework is not normally loaded unless at least one extension is registered. Because no components are registered yet, we must explicitly load the framework.
-- **debugManifestsFile** specifies that we want to load SPFx components that are being locally served. The loader only looks for components in the App Catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
+- **debugManifestsFile** specifies that we want to load SPFx components that are being locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
 - **customActions** simulates a custom action. You can set many properties on this `CustomAction` object that affect the look, feel, and location of your button; we’ll cover them all later.
     - **Key**: GUID of the extension.
     - **Location**: Where the commands are displayed. The possible values are:
@@ -221,7 +221,7 @@ The default solution takes advantage of a new Dialog API, which can be used to s
     ```typescript
       @override
       public onExecute(event: IListViewCommandSetExecuteEventParameters): void {
-        switch (event.commandId) {
+        switch (event.itemId) {
           case 'COMMAND_1':
             Dialog.alert(`Clicked ${strings.Command1}`);
             break;
@@ -345,9 +345,9 @@ Now you are ready to deploy the solution to a SharePoint site and have the `Cust
     command-extension.sppkg
     ```
     
-3. Deploy the package that was generated to the App Catalog. To do this, go to your tenant's **App Catalog** and open the **Apps for SharePoint** library.
+3. Deploy the package that was generated to the app catalog. To do this, go to your tenant's **app catalog** and open the **Apps for SharePoint** library.
 
-4. Upload or drag-and-drop the `command-extension.sppkg` located in the **sharepoint/solution** folder to the App Catalog. SharePoint displays a dialog and asks you to trust the client-side solution.
+4. Upload or drag-and-drop the `command-extension.sppkg` located in the **sharepoint/solution** folder to the app catalog. SharePoint displays a dialog and asks you to trust the client-side solution.
 
     Note that we did not update the URLs for hosting the solution for this deployment, so the URL is still pointing to `https://localhost:4321`. 
     

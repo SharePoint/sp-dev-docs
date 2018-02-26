@@ -298,14 +298,14 @@ Now you are ready to deploy the solution to SharePoint. Because we are provision
 
   ![Screenshot showing debug folder under sharepoint folder in the solution structure](../../../images/tutorial-feature-solution-debug-folder.png)
 
-4. Deploy the package that was generated to the App Catalog. Go to your tenant's App Catalog.
+4. Deploy the package that was generated to the app catalog. Go to your tenant's app catalog.
 
-5. Upload or drag and drop the asset-deployment-webpart.sppkg located in the `sharepoint/solution` folder to the App Catalog. SharePoint displays a dialog and asks you to trust the client-side solution to deploy.
+5. Upload or drag and drop the asset-deployment-webpart.sppkg located in the `sharepoint/solution` folder to the app catalog. SharePoint displays a dialog and asks you to trust the client-side solution to deploy.
 
   ![Trust dialog for the solution package deployment](../../../images/tutorial-feature-solution-trust-app-catalog.png)
 
   > [!NOTE]
-  > SharePoint validates the published package when it's deployed and you only see the trust dialog if the package is valid for deployment. You can also see the status around this validation from the 'Valid App Package' column in the App Catalog.
+  > SharePoint validates the published package when it's deployed and you only see the trust dialog if the package is valid for deployment. You can also see the status around this validation from the 'Valid App Package' column in the app catalog.
 
 6. Go to the site where you want to test the SharePoint asset provisioning. This could be any site collection in the tenant where you deployed this solution package.
 
@@ -433,13 +433,13 @@ Next we need to update both the solution version and the feature version respons
 
   The command creates a new version of the solution package in the `sharepoint/solution` folder. Notice that you can easily confirm from the `sharepoint/solution/debug` folder that the updated XML files are included in the solution package.
 
-5. Next you need to deploy the new version that was generated to the App Catalog. Go to your tenant's App Catalog.
+5. Next you need to deploy the new version that was generated to the app catalog. Go to your tenant's app catalog.
 
-6. Upload or drag and drop the asset-deployment-webpart.sppkg located in the `sharepoint/solution` folder to the App Catalog. SharePoint requests that you confirm overriding the existing version.
+6. Upload or drag and drop the asset-deployment-webpart.sppkg located in the `sharepoint/solution` folder to the app catalog. SharePoint requests that you confirm overriding the existing version.
 
   ![Replace question from the app catalog](../../../images/tutorial-feature-solution-override-sppkg.png)
 
-7. Select **Replace It** to update the latest version to the App Catalog.
+7. Select **Replace It** to update the latest version to the app catalog.
 
 8. Select **Deploy** to *trust* the latest version.
 
@@ -449,7 +449,7 @@ Next we need to update both the solution version and the feature version respons
 
 ### To update an existing instance in the site
 
-Now that the package has been updated in the App Catalog, we can move to the actual SharePoint content site and perform the upgrade for the existing instance.
+Now that the package has been updated in the app catalog, we can move to the actual SharePoint content site and perform the upgrade for the existing instance.
 
 1. Go to the site where you deployed the first version of the SharePoint Framework solution.
 

@@ -8,7 +8,7 @@ ms.prod: sharepoint
 # Use GraphHttpClient to call Microsoft Graph
 
 > [!IMPORTANT]
-> The **GraphHttpClient** is currently in preview and is subject to change. It is not currently supported for use in production environments.
+> The **GraphHttpClient** has been **deprecated** and should no longer be used. It has been replaced with [MSGraphClient](use-msgraph.md)
 
 Use the **GraphHttpClient** class to make calls to the Microsoft Graph REST API. You can make GET, POST, and PATCH requests by using the **get()**, **post()**, and **fetch()** methods. This article shows how to build a web part that uses **GraphHttpClient**, but you can use **GraphHttpClient** in any SharePoint Framework client code.
 
@@ -179,8 +179,8 @@ The code needs to call the **GraphHttpClient** application that runs on SharePoi
   ```
 
 2. Deploy the solution to your SharePoint tenant:
-  * Go to your site's App Catalog.
-  * Upload or drag and drop the **hellograph-webpart.sppkg** to the App Catalog.
+  * Go to your site's app catalog.
+  * Upload or drag and drop the **hellograph-webpart.sppkg** to the app catalog.
   * When prompted, if you trust the **hellograph-webpart-client-side-solution**, select **Make this solution available to all sites in the organization**, and select **Deploy**.
 
 3. Use gulp serve to host the web part.
@@ -282,8 +282,8 @@ Again, you need to modify the HTML to add a button that creates a new group.
   ```
 
 2. Deploy the solution to your SharePoint tenant:
-  * Go to your site's App Catalog.
-  * Upload or drag and drop the **hellograph-webpart.sppkg** to the App Catalog.
+  * Go to your site's app catalog.
+  * Upload or drag and drop the **hellograph-webpart.sppkg** to the app catalog.
   * Because your solution is already registered, you are prompted as to whether you want to replace it. Select **Replace it**.
   * When prompted as to whether you trust the solution, select **Deploy**.
 

@@ -6,9 +6,6 @@ ms.date: 12/14/2017
 
 # Site design and site script REST API
 
-> [!NOTE]
-> Site designs and site scripts are in preview and are subject to change. They are currently only supported for use in production environments in Targeted Release.
-
 You can use the SharePoint REST interface to perform basic create, read, update, and delete (CRUD) operations on site designs and site scripts.
 
 The SharePoint Online (and SharePoint 2016 and later on-premises) REST service supports combining multiple requests into a single call to the service by using the OData $batch query option. For details and links to code samples, see [Make batch requests with the REST APIs](../sp-add-ins/make-batch-requests-with-the-rest-apis.md).
@@ -28,6 +25,7 @@ The following REST commands are available for working with site designs and site
 - **UpdateSiteScript** &mdash; Updates a site script with new values.
 - **DeleteSiteScript** &mdash; Deletes a site script.
 - **CreateSiteDesign** &mdash; Creates a site design.
+- **ApplySiteDesign** &mdash; Applies a site design to an existing site collection.
 - **GetSiteDesigns** &mdash; Gets a list of information on existing site designs.
 - **GetSiteDesignMetadata** &mdash; Gets information about a sepcific site design.
 - **UpdateSiteDesign** &mdash; Updates a site design with new values.
@@ -248,6 +246,7 @@ Creates a new site design available to users when they create a new site from th
 
 |Parameter  | Description  |
 |-----------|--------------|
+| id         | The ID of the site design to apply. |
 |Title                 | The display name of the site design. |
 |WebTemplate           | Identifies which base template to add the design to. Use the value **64** for the Team site template, and the value **68** for the Communication site template. |
 |SiteScripts           | An array of one or more site scripts. Each is identified by an ID. The scripts will run in the order listed. |
@@ -285,6 +284,23 @@ Here is an example of the JSON returned after calling **CreateSiteDesign**. It c
   "Id": "614f9b28-3e85-4ec9-a961-5971ea086cca",
   "Version": 1
 }
+```
+
+## ApplySiteDesign
+
+Applies a site design to an existing site collection.
+
+### Parameters
+
+|Parameter   | Description  |
+|------------|--------------|
+| id         | The ID of the site design to apply. |
+| webUrl         | The Url of the site collection where you want to apply the site design. |
+
+Here's an example of applying a site design to the ProjectGo site collection.
+
+```javascript
+RestRequest("/_api/Microsoft.Sharepoint.Utilities.WebTemplateExtensions.SiteScriptUtility.ApplySiteDesign", {siteDesignId: "614f9b28-3e85-4ec9-a961-5971ea086cca", "webUrl":"https://contoso.microsoft.com/sites/projectgo"});
 ```
 
 ## GetSiteDesigns

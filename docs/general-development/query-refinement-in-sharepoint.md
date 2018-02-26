@@ -284,7 +284,7 @@ query.Refiners);
 
     if (refinementOptionArray.Length > 0)
     {                         
-        var firstRefinementOption = refinementOptionArray[6];x
+        var firstRefinementOption = refinementOptionArray[6];
         // Construct the refinement filter by concatenation
         var refinementFilter = firstRefinementOption["RefinerName"] + ":" +
             firstRefinementOption["RefinementToken"];

@@ -77,16 +77,16 @@ The contents are then packaged into an **.sppkg** file. The package format is ve
 The JavaScript files, CSS, and other assets are packaged inside of the package when the `--ship` option is used. In this case, however, we will first test deployment and capabilities by hosting JavaScript files from localhost. This deployment option is explained in the next tutorial. 
 
 > [!NOTE]
-> Starting from the SharePoint Framework v1.4, static assets are by default packaged inside of the sppkg package. When a package is deployed in the App Catalog, the assets are automatically hosted either from Office 365 CDN (if enabled) or from an App Catalog URL. You can control this behavior with the `includeClientSideAssets` setting in the `package-solution.json` file.
+> Starting from the SharePoint Framework v1.4, static assets are by default packaged inside of the sppkg package. When a package is deployed in the app catalog, the assets are automatically hosted either from Office 365 CDN (if enabled) or from an app catalog URL. You can control this behavior with the `includeClientSideAssets` setting in the `package-solution.json` file.
 
 
-## Deploy the HelloWorld package to App Catalog
+## Deploy the HelloWorld package to app catalog
 
-Next, you need to deploy the package that was generated to the App Catalog.
+Next, you need to deploy the package that was generated to the app catalog.
 
-1. Go to your site's App Catalog.
+1. Go to your site's app catalog.
 
-2. Upload or drag and drop the **helloworld-webpart.sppkg** to the App Catalog.
+2. Upload or drag and drop the **helloworld-webpart.sppkg** to the app catalog.
 
   ![Upload solution to app catalog](../../../images/upload-solution-app-catalog.png) 
 

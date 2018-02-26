@@ -43,7 +43,7 @@ SharePoint Framework client-side web parts offer a standard way for configuring 
 
 To help organizations govern their customizations, Microsoft released the no-script capability in SharePoint Online. When the tenant or a particular site collection has the no-script flag enabled, customizations relying on script injection and embedding are disabled.
 
-Because SharePoint Framework client-side web parts are deployed through the App Catalog with a prior approval, they are allowed to run in no-script sites. By default, modern team sites have the no-script setting enabled and it's not possible to embed scripts in these sites. This makes using the SharePoint Framework the only supported way to build client-side customizations in modern team sites.
+Because SharePoint Framework client-side web parts are deployed through the app catalog with a prior approval, they are allowed to run in no-script sites. By default, modern team sites have the no-script setting enabled and it's not possible to embed scripts in these sites. This makes using the SharePoint Framework the only supported way to build client-side customizations in modern team sites.
 
 ## Similarities between SharePoint Framework solutions and Script Editor Web Part customizations
 
@@ -71,7 +71,7 @@ Both SharePoint Framework and Script Editor Web Part solutions run in the browse
 
 One of the benefits of building SharePoint customizations using Script Editor Web Parts was the fact that their code could be hosted in a regular SharePoint document library. Compared to SharePoint Add-ins, it required less infrastructure and simplified hosting the solution. Additionally, organizations could use SharePoint permissions to control access to the solution files.
 
-While hosting SharePoint Framework solutions on a CDN offers a number of advantages, it is not required, and you could choose to host their code in a regular SharePoint document library. SharePoint Framework packages (.sppkg files) deployed to the App Catalog specify the URL at which SharePoint Framework can find the solution's code. There are no restrictions with regards to what that URL must be, as long as the user browsing the page with the web part on it can download the script from the specified location.
+While hosting SharePoint Framework solutions on a CDN offers a number of advantages, it is not required, and you could choose to host their code in a regular SharePoint document library. SharePoint Framework packages (.sppkg files) deployed to the app catalog specify the URL at which SharePoint Framework can find the solution's code. There are no restrictions with regards to what that URL must be, as long as the user browsing the page with the web part on it can download the script from the specified location.
 
 [Office 365 offers the public CDN capability](https://dev.office.com/blogs/office-365-public-cdn-developer-preview-release) that allows you to publish files from a specific SharePoint document library to a CDN. Office 365 public CDN strikes a nice balance between the benefits of using a CDN and the simplicity of hosting code files in a SharePoint document library. If your organization doesn't mind their code files being publicly available, using the Office 365 public CDN is an option worth considering.
 
@@ -83,7 +83,7 @@ SharePoint customizations built using the SharePoint Framework and Script Editor
 
 When building client-side customizations using the Script Editor Web Part, you had to take into account whether the site where the customization would be used was a no-script site or not. If the site was a no-script site, you either had to request the admin to disable the no-script setting or build your solution differently, for example, by using the add-in model.
 
-Because SharePoint Framework solutions are deployed through the App Catalog with a prior approval, they are not subject to the no-script restrictions and work on all sites.
+Because SharePoint Framework solutions are deployed through the app catalog with a prior approval, they are not subject to the no-script restrictions and work on all sites.
 
 ### Deployed and updated through IT
 
@@ -91,13 +91,13 @@ Script Editor Web Parts are used to build SharePoint customizations primarily by
 
 Script Editor Web Part solutions make it hard for IT organizations to keep track of what customizations are being used and where they are being used. Additionally, organizations can't tell which external scripts are being used in their intranet and have access to their data.
 
-SharePoint Framework gives the control back to the IT. Because SharePoint Framework solutions are deployed and managed centrally in the App Catalog, organizations have the opportunity to review the solution before deploying it. Additionally, any updates are deployed via the App Catalog as well, allowing organizations to verify and approve them before deployment.
+SharePoint Framework gives the control back to the IT. Because SharePoint Framework solutions are deployed and managed centrally in the app catalog, organizations have the opportunity to review the solution before deploying it. Additionally, any updates are deployed via the app catalog as well, allowing organizations to verify and approve them before deployment.
 
 ### Focus more on uniform user experience
 
 When building customizations using the Script Editor Web Part, citizen developers owned the complete DOM of their customization. There were no guidelines related to the user experience and how such customization should work. As a result, different developers built customizations in different ways, which led to an inconsistent user experience for end users.
 
-One of the goals of the SharePoint Framework is to standardize building client-side customizations so that they are uniform from the deployment, maintenance, and user experience point of view. Using [Office UI Fabric](http://dev.office.com/fabric), developers can more easily make their custom solutions look and behave like they are an integral part of SharePoint, simplifying user adoption. SharePoint Framework toolchain generates package files for the solutions that are deployed to the App Catalog, and script bundles that are deployed to the hosting location of your choice. Every solution is structured and managed in the same way.
+One of the goals of the SharePoint Framework is to standardize building client-side customizations so that they are uniform from the deployment, maintenance, and user experience point of view. Using [Office UI Fabric](http://dev.office.com/fabric), developers can more easily make their custom solutions look and behave like they are an integral part of SharePoint, simplifying user adoption. SharePoint Framework toolchain generates package files for the solutions that are deployed to the app catalog, and script bundles that are deployed to the hosting location of your choice. Every solution is structured and managed in the same way.
 
 ### Don't modify DOM outside of the customization
 
