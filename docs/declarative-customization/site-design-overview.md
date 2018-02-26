@@ -7,13 +7,13 @@ ms.date: 01/08/2018
 # SharePoint site design and site script overview
 
 > [!NOTE]
-> Site designs and site scripts are in preview and are subject to change. They are currently only supported for use in production environments in Targeted Release.
+> Site designs and site scripts have been released to production and are available for general use.
 
-Use site designs and site scripts to automate provisioning new SharePoint sites using your own custom configurations. When people in your organization create new SharePoint sites, you often need to ensure some level of consistency. For example, you may need proper branding and theming applied to each new site. You may also have detailed site provisioning scripts, such as using the PnP provisioning engine, that need to be applied each time a new site is created. This article describes how you can use site designs and site scripts to provide custom configurations to apply when new sites are created.
+Use site designs and site scripts to automate provisioning new or existing modern SharePoint sites using your own custom configurations. When people in your organization create new SharePoint sites, you often need to ensure some level of consistency. For example, you may need proper branding and theming applied to each new site. You may also have detailed site provisioning scripts, such as using the PnP provisioning engine, that need to be applied each time a new site is created. This article describes how you can use site designs and site scripts to provide custom configurations to apply when new sites are created.
 
 ## How site designs work
 
-Site designs are like a template. They can be used each time a new site is created to apply a consistent set of actions. Most actions typically affect the site itself, such as setting the theme, or creating lists. But a site design can also include other actions, such as recording the new site URL to a log, or sending a tweet.
+Site designs are like a template. They can be used each time a new site is created to apply a consistent set of actions. They can also be applied to existing modern sites (Group-connected Team and communication). Most actions typically affect the site itself, such as setting the theme, or creating lists. But a site design can also include other actions, such as recording the new site URL to a log, or sending a tweet.
 
 You create site designs and register them in SharePoint to one of the modern template sites: the team site, or communication site. You can see how this works in the following steps.
 
@@ -39,6 +39,9 @@ Had you chosen the team site template, it contains only one default site design 
 When a site design is selected, SharePoint creates the new site, and runs site scripts for the site design. The site scripts detail the work such as creating new lists, or applying a theme. When the actions in the scripts are completed, SharePoint displays detailed results of those actions in a progress pane.
 
 ![Progress pane listing completed actions from a site design](images/progress-pane.png)
+
+> [!NOTE]
+> Site designs can now be applied to previously created modern site collections. See the REST and PowerShell articles for more details.
 
 ## Anatomy of a site script
 

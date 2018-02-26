@@ -35,7 +35,7 @@ When building web parts, SharePoint Framework allows you to specify what kind of
 
 To specify the configuration for your web part properties, in the web part class, override the **propertiesMetadata** getter:
 
-```ts
+```typescript
 import {
   BaseClientSideWebPart,
   IPropertyPaneConfiguration,

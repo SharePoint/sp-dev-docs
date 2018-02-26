@@ -12,7 +12,7 @@ To build and deploy client-side web parts using the SharePoint Framework, you ne
 
 If you already have an Office 365 tenant, see [create app catalog site](#create-app-catalog-site).
 
-If you don't have one, you can create a trial tenant or sign up for the [Microsoft Office 365 Developer Program](https://dev.office.com/devprogram).  
+If you don't have one, you can create a subscription or sign up for the [Microsoft Office 365 Developer Program](https://dev.office.com/devprogram).  
 
 > [!NOTE] 
 > Make sure that you are signed out of any existing Office 365 tenants before you sign up.
@@ -29,13 +29,13 @@ You need an app catalog to upload and deploy web parts. If you've already set up
     https://yourtenantprefix-admin.sharepoint.com
     ```
 	
-2. In the left sidebar, select the **apps** menu item, and then select **App Catalog**.
+2. In the left sidebar, select the **apps** menu item, and then select **app catalog**.
 
 3. Select **OK** to create a new app catalog site.
 
 4. On the next page, enter the following details:
 
-    - **Title**: Enter **App Catalog**.
+    - **Title**: Enter **app catalog**.
     - **Web Site Address _suffix_**: Enter your preferred suffix for the app catalog; for example: **apps**.
     - **Administrator**: Enter your username, and then select the **resolve** button to resolve the username.
 

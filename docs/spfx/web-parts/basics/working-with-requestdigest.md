@@ -54,7 +54,7 @@ The benefit of using the DigestCache service over manually obtaining a valid req
 
 1. Import the **DigestCache** and **IDigestCache** types from the **@microsoft/sp-http** package:
 
-  ```ts
+  ```typescript
   // ...
   import { IDigestCache, DigestCache } from '@microsoft/sp-http';
 
@@ -65,7 +65,7 @@ The benefit of using the DigestCache service over manually obtaining a valid req
 
 2. Whenever you need a valid request digest token, retrieve a reference to the DigestCache service, and call its **fetchDigest** method:
 
-  ```ts
+  ```typescript
   // ...
   import { IDigestCache, DigestCache } from '@microsoft/sp-http';
 
@@ -83,3 +83,7 @@ The benefit of using the DigestCache service over manually obtaining a valid req
     // ...
   }
   ```
+
+  ## See also
+
+- [SharePoint Framework Overview](../../sharepoint-framework-overview.md)

@@ -1,7 +1,7 @@
 ---
 title: Get to know the SharePoint REST service
 description: Basics of using the SharePoint REST service to access and update SharePoint data, using the REST and OData web protocol standards.
-ms.date: 12/13/2017
+ms.date: 02/07/2018
 ms.prod: sharepoint
 ---
 
@@ -144,7 +144,7 @@ The SharePoint Online (and on-premises SharePoint 2016 or later) REST service su
 
 <a name="bk_learnmore"> </a>
 
-## See also
+## SharePoint REST service topics
 
 To learn more about using the SharePoint REST service, use the following resources.
 
@@ -156,11 +156,13 @@ To learn more about using the SharePoint REST service, use the following resourc
 | [Navigate the SharePoint data structure represented in the REST service](navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md)|Start from a REST endpoint for a given SharePoint item, and navigate to and access related items, such as parent sites or the library structure where that item resides.|
 | [Determine SharePoint REST service endpoint URIs](determine-sharepoint-rest-service-endpoint-uris.md)|General guidelines for determining SharePoint REST endpoint URIs from the signature of the corresponding client object model APIs.|
 | [Use OData query operations in SharePoint REST requests](use-odata-query-operations-in-sharepoint-rest-requests.md)|Use a wide range of OData query string operators to select, filter, and order the data you request from the SharePoint REST service.|
+| [Make batch requests with the REST APIs](make-batch-requests-with-the-rest-apis.md)|Combine multiple requests into a single call to the REST service.|
+| [Synchronize SharePoint items using the REST service](synchronize-sharepoint-items-using-the-rest-service.md)|Synchronize items between SharePoint and your add-ins or services by using the **GetListItemChangesSinceToken** resource, part of the SharePoint REST service.|
+| [Upload a file by using the REST API and jQuery](upload-a-file-by-using-the-rest-api-and-jquery.md) |The code examples in this article use the REST interface and jQuery AJAX requests to add a local file to the Documents library, and then change properties of the list item that represents the uploaded file.|
+| [Set custom permissions on a list by using the REST interface](set-custom-permissions-on-a-list-by-using-the-rest-interface.md) |SharePoint sites, lists, and list items are types of SecurableObject, which inherits the permissions of its parent. To set custom permissions for an object, you need to break its inheritance so that it stops inheriting permissions from its parent, and then define new permissions by adding or removing role assignments.|
 | [SharePoint workflow fundamentals](../general-development/sharepoint-workflow-fundamentals.md)|Add search functionality to client and mobile applications using the Search REST service in SharePoint Server 2013 and any technology that supports REST web requests.|
 | [Social feed REST API reference for SharePoint](../general-development/social-feed-rest-api-reference-for-sharepoint.md)|SharePoint REST endpoints for feed-related tasks.|
 | [Following people and content REST API reference for SharePoint](../general-development/following-people-and-content-rest-api-reference-for-sharepoint.md)|SharePoint REST endpoints for following people and content.|
-| [Make batch requests with the REST APIs](make-batch-requests-with-the-rest-apis.md)|Combine multiple requests into a single call to the REST service.|
-| [Synchronize SharePoint items using the REST service](synchronize-sharepoint-items-using-the-rest-service.md)|Synchronize items between SharePoint and your add-ins or services by using the **GetListItemChangesSinceToken** resource, part of the SharePoint REST service.|
 | [Develop SharePoint Add-ins](develop-sharepoint-add-ins.md) | Find in-depth articles and resources to help you build advanced capabilities into your SharePoint Add-ins.|
 | [REST API reference and samples](https://msdn.microsoft.com/library) | Comprehensive API reference for working with Microsoft tools, services, and technologies. Whether you're building apps, developing websites, or working with the cloud, you'll find detailed syntax, code snippets, and best practices.|
 

@@ -68,7 +68,7 @@ The Recent Documents web part shows information about the most recently modified
 
 1. Remove the standard `description` property from the `IRecentDocumentsWebPartProps` interface. In the code editor, open the **./src/webparts/recentDocuments/IRecentDocumentsWebPartProps.ts** file, and paste the following code:
 
-  ```ts
+  ```typescript
   export interface IRecentDocumentsWebPartProps {
   }
   ```
@@ -99,7 +99,7 @@ The Recent Documents web part shows information about the most recently modified
 
 3. Remove the standard `description` property from the web part. In the code editor, open the **./src/webparts/recentDocuments/RecentDocumentsWebPart.ts** file, and replace its `render` method with the following code:
 
-  ```ts
+  ```typescript
   export default class RecentDocumentsWebPart extends BaseClientSideWebPart<IRecentDocumentsWebPartProps> {
     // ...
     public render(): void {
@@ -117,7 +117,7 @@ The Recent Documents web part shows information about the most recently modified
 
 4. Replace its `getPropertyPaneConfiguration` method with the following code:
 
-  ```ts
+  ```typescript
   export default class RecentDocumentsWebPart extends BaseClientSideWebPart<IRecentDocumentsWebPartProps> {
     // ...
 
@@ -147,7 +147,7 @@ Use this interface to display the activity information of a particular document 
 
 In the **./src/webparts/recentDocuments** folder, create a new file named **IDocumentActivity.ts**, and paste the following code:
 
-```ts
+```typescript
 export interface IDocumentActivity {
     title: string;
     actorName: string;
@@ -161,7 +161,7 @@ This interface represents a document with all the information necessary to displ
 
 In the **./src/webparts/recentDocuments** folder, create a new file named **IDocument.ts**, and paste the following code:
 
-```ts
+```typescript
 import { IDocumentActivity } from './IDocumentActivity';
 
 export interface IDocument {
@@ -177,7 +177,7 @@ export interface IDocument {
 
 1. Add the **documents** property to the **IRecentDocumentsProps** interface. In the code editor, open the **./src/webparts/recentDocuments/components/IRecentDocumentsProps.ts** file, and paste the following code:
 
-  ```ts
+  ```typescript
   import { IDocument } from '../IDocument';
 
   export interface IRecentDocumentsProps {
@@ -247,13 +247,13 @@ In this example, the information about the recently modified documents is loaded
 
 1. In the code editor, open the **./src/webparts/recentDocuments/RecentDocumentsWebPart.ts** file. Add an import statement for the `IDocument` interface under the other import statements at the top of the file by using the following code:
 
-  ```ts
+  ```typescript
   import { IDocument } from './IDocument';
   ```
 
 2. In the `RecentDocumentsWebPart` class, add a new private variable named `documents` by using the following code:
 
-  ```ts
+  ```typescript
   export default class RecentDocumentsWebPart extends BaseClientSideWebPart<IRecentDocumentsWebPartProps> {
       private static documents: IDocument[] = [
           {
@@ -321,7 +321,7 @@ In this example, the information about the recently modified documents is loaded
 
 3. Change the `render` method to load and render the information about the recently modified documents:
 
-  ```ts
+  ```typescript
   export default class RecentDocumentsWebPart extends BaseClientSideWebPart<IRecentDocumentsWebPartProps> {
     // ...
     public render(): void {
@@ -381,7 +381,7 @@ To illustrate sharing data between web parts, add a second web part to the proje
 
 1. Remove the `description` property from the `IRecentDocumentWebPartProps` interface. In the code editor, open the **./src/webparts/recentDocument/IRecentDocumentWebPartProps.ts** file, and paste the following code:
 
-  ```ts
+  ```typescript
   export interface IRecentDocumentWebPartProps {
   }
   ```
@@ -412,7 +412,7 @@ To illustrate sharing data between web parts, add a second web part to the proje
 
 3. Remove the standard `description` property from the web part property pane. In the code editor, open the **./src/webparts/recentDocument/RecentDocumentWebPart.ts** file, and replace its `render` method with the following code:
 
-  ```ts
+  ```typescript
   export default class RecentDocumentWebPart extends BaseClientSideWebPart<IRecentDocumentWebPartProps> {
     // ...
     public render(): void {
@@ -430,7 +430,7 @@ To illustrate sharing data between web parts, add a second web part to the proje
 
 4. Replace its `getPropertyPaneConfiguration` method with the following code:
 
-  ```ts
+  ```typescript
   export default class RecentDocumentWebPart extends BaseClientSideWebPart<IRecentDocumentWebPartProps> {
     // ...
 
@@ -468,7 +468,7 @@ The Recent Document web part displays information about the most recently modifi
 
 2. In the code editor, open the **./src/webparts/recentDocuments/components/IRecentDocumentsProps.ts** file, and change its code to:
 
-  ```ts
+  ```typescript
   import { IDocument } from '../../IDocument';
 
   export interface IRecentDocumentsProps {
@@ -478,13 +478,13 @@ The Recent Document web part displays information about the most recently modifi
 
 3. Open the **./src/webparts/recentDocuments/components/RecentDocuments.tsx** file, and update the `import` statement of the `IDocument` interface to:
 
-  ```ts
+  ```typescript
   import { IDocument } from '../../IDocument';
   ```
 
 4. Open the **./src/webparts/recentDocuments/RecentDocumentsWebPart.ts** file, and update the `import` statement of the `IDocument` interface to:
 
-  ```ts
+  ```typescript
   import { IDocument } from '../IDocument';
   ```
 
@@ -492,7 +492,7 @@ The Recent Document web part displays information about the most recently modifi
 
 1. Add the `document` property to the `IRecentDocumentProps` interface. In the code editor, open the **./src/webparts/recentDocument/components/IRecentDocumentProps.ts** file, and paste the following code:
 
-  ```ts
+  ```typescript
   import { IDocument } from '../../IDocument';
 
   export interface IRecentDocumentProps {
@@ -502,7 +502,7 @@ The Recent Document web part displays information about the most recently modifi
 
 2. In the code editor, open the **./src/webparts/recentDocument/components/RecentDocument.tsx** file, and paste the following code:
 
-  ```tsx
+  ```typescriptx
   import * as React from 'react';
   import {
     DocumentCard,
@@ -560,13 +560,13 @@ In this example, the information about the most recently modified document is lo
 
 1. In the code editor, open the **./src/webparts/recentDocument/RecentDocumentWebPart.ts** file. Add an import statement for the `IDocument` interface under the other import statements at the top of the file by using the following code:
 
-  ```ts
+  ```typescript
   import { IDocument } from '../IDocument';
   ```
 
 2. In the `RecentDocumentWebPart` class, add a new private variable named `document` by using the following code:
 
-  ```ts
+  ```typescript
   export default class RecentDocumentWebPart extends BaseClientSideWebPart<IRecentDocumentWebPartProps> {
       private static document: IDocument = {
           title: 'Proposal for Jacksonville Expansion Ad Campaign',
@@ -586,7 +586,7 @@ In this example, the information about the most recently modified document is lo
 
 3. Change the `render` method to load and render the information about the most recently modified document:
 
-  ```ts
+  ```typescript
   export default class RecentDocumentsWebPart extends BaseClientSideWebPart<IRecentDocumentsWebPartProps> {
     // ...
     public render(): void {
@@ -641,7 +641,7 @@ To centralize loading the information about recently modified documents, build a
 
 In the **./src/services/documentsService** folder, create a new file named **DocumentsService.ts**, and paste the following code:
 
-```ts
+```typescript
 import { IDocument } from './IDocument';
 
 export class DocumentsService {
@@ -731,7 +731,7 @@ A barrel is a container that combines a number of exported objects. By using bar
 
 In the **./src/services/documentsService** folder, create a new file named **index.ts**, and paste the following code:
 
-```ts
+```typescript
 export { IDocument } from './IDocument';
 export { IDocumentActivity } from './IDocumentActivity';
 export { DocumentsService } from './DocumentsService';
@@ -739,13 +739,13 @@ export { DocumentsService } from './DocumentsService';
 
 With this barrel defined, other elements in the project can reference any of the exported types by using the relative path to the **./src/services/documentsService** folder instead of the exact path to the individual files. For example, the `IDocument` interface can be referenced like this:
 
-```ts
+```typescript
 import { IDocument } from '../services/documentsService';
 ```
 
 instead of:
 
-```ts
+```typescript
 import { IDocument } from '../services/documentsService/IDocument.ts';
 ```
 
@@ -760,7 +760,7 @@ Because you have moved the **IDocument.ts** and **IDocumentActivity.ts** files t
 
 1. In the code editor, open the **./src/webparts/recentDocuments/components/IRecentDocumentsProps.ts** file, and change its code to:
 
-  ```ts
+  ```typescript
   import { IDocument } from '../../../services/documentsService';
 
   export interface IRecentDocumentsProps {
@@ -770,13 +770,13 @@ Because you have moved the **IDocument.ts** and **IDocumentActivity.ts** files t
 
 2. Open the **./src/webparts/recentDocuments/components/RecentDocuments.tsx** file, and change the `import` statement of the `IDocument` interface to:
 
-  ```ts
+  ```typescript
   import { IDocument } from '../../../services/documentsService';
   ```
 
 3. Open the **./src/webparts/recentDocuments/RecentDocumentsWebPart.ts** file, and change the `import` statement of the `IDocument` interface to:
 
-  ```ts
+  ```typescript
   import { IDocument } from '../../services/documentsService';
   ```
 
@@ -784,7 +784,7 @@ Because you have moved the **IDocument.ts** and **IDocumentActivity.ts** files t
 
 1. In the code editor, open the **./src/webparts/recentDocument/components/IRecentDocumentProps.ts** file, and change its code to:
 
-  ```ts
+  ```typescript
   import { IDocument } from '../../../services/documentsService';
 
   export interface IRecentDocumentProps {
@@ -794,13 +794,13 @@ Because you have moved the **IDocument.ts** and **IDocumentActivity.ts** files t
 
 2. Open the **./src/webparts/recentDocument/components/RecentDocument.tsx** file, and change the `import` statement of the `IDocument` interface to:
 
-  ```ts
+  ```typescript
   import { IDocument } from '../../../services/documentsService';
   ```
 
 3. Open the **./src/webparts/recentDocument/RecentDocumentWebPart.ts** file, and change the `import` statement of the `IDocument` interface to:
 
-  ```ts
+  ```typescript
   import { IDocument } from '../../services/documentsService';
   ```
 
@@ -822,13 +822,13 @@ With the data service ready, the next step is to refactor both web parts to use 
 
 1. In the code editor, open the **./src/webparts/recentDocuments/RecentDocumentsWebPart.ts** file. Expand the `import` statement referencing the `IDocument` interface to:
 
-  ```ts
+  ```typescript
   import { IDocument, DocumentsService } from '../../services/documentsService';
   ```
 
 2. Update the `render` method by using the following code:
 
-  ```ts
+  ```typescript
   export default class RecentDocumentsWebPart extends BaseClientSideWebPart<IRecentDocumentsWebPartProps> {
     // ...
     public render(): void {
@@ -855,13 +855,13 @@ With the data service ready, the next step is to refactor both web parts to use 
 
 1. In the code editor, open the **./src/webparts/recentDocument/RecentDocumentWebPart.ts** file. Expand the `import` statement referencing the `IDocument` interface to:
 
-  ```ts
+  ```typescript
   import { IDocument, DocumentsService } from '../../services/documentsService';
   ```
 
 2. Update the `render` method by using the following code:
 
-  ```ts
+  ```typescript
   export default class RecentDocumentWebPart extends BaseClientSideWebPart<IRecentDocumentWebPartProps> {
     // ...
     public render(): void {
@@ -900,7 +900,7 @@ Now that both web parts use the data service to load their data, the next step i
 
 1. In the code editor, open the **./src/services/documentsService/DocumentsService.ts** file, and paste the following code:
 
-  ```ts
+  ```typescript
   import { IDocument } from './IDocument';
 
   export class DocumentsService {

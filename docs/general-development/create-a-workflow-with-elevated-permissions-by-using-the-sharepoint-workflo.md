@@ -118,7 +118,7 @@ Finally, you need to wrap the workflow actions inside an App Step. The following
 
 ### To wrap actions inside an App Step
 
-1. Open the App Catalog site in SharePoint Designer.    
+1. Open the app catalog site in SharePoint Designer.    
   
 2. Create a new Custom List on which to run the workflow. In this example, the list name is **App Demo**.    
   

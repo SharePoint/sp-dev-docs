@@ -249,7 +249,7 @@ SharePoint Framework package is structured like a Node.js package. Its dependenc
 
 #### Increase solution package version in package-solution.json
 
-SharePoint Framework solutions are deployed using an **.sppkg** file installed in the App Catalog on a SharePoint tenant. An **.sppkg** file is similar to a SharePoint add-in package and follows the same versioning conventions. The current version of the **.sppkg** package is defined using a four-part (MAJOR.MINOR.REVISION.BUILD) number stored in the **config/package-solution.json** file. For clarity, developers should keep this number in sync with the version number in the **package.json** file as both number refer to the version of the project as a whole.
+SharePoint Framework solutions are deployed using an **.sppkg** file installed in the app catalog on a SharePoint tenant. An **.sppkg** file is similar to a SharePoint add-in package and follows the same versioning conventions. The current version of the **.sppkg** package is defined using a four-part (MAJOR.MINOR.REVISION.BUILD) number stored in the **config/package-solution.json** file. For clarity, developers should keep this number in sync with the version number in the **package.json** file as both number refer to the version of the project as a whole.
 
 > [!NOTE] 
 > Increasing the version number in the package-solution.json file between releases is required in order for the new version of the package to be correctly deployed in SharePoint.

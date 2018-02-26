@@ -152,7 +152,7 @@ To load the SharePoint JSOM scripts in your SPFx component, you have to referenc
 
 In the code editor, open the **./src/webparts/sharePointLists/components/SharePointLists.tsx** file. After the last `import` statement, add the following code:
 
-```ts
+```typescript
   require('sp-init');
   require('microsoft-ajax');
   require('sp-runtime');
@@ -169,7 +169,7 @@ To connect to SharePoint, the React component must know the URL of the current s
 
 1. In the code editor, open the **./src/webparts/sharePointLists/components/ISharePointListsProps.ts** file, and  add the `siteUrl` property to the `ISharePointListsProps` interface:
 
-  ```ts
+  ```typescript
   export interface ISharePointListsProps {
     description: string;
     siteUrl: string;
@@ -178,7 +178,7 @@ To connect to SharePoint, the React component must know the URL of the current s
 
 2. To pass the URL of the current site into the component, open the **./src/webparts/sharePointLists/SharePointListsWebPart.ts** file in the code editor, and change the `render` method to:
 
-  ```ts
+  ```typescript
   export default class SharePointListsWebPart extends BaseClientSideWebPart<ISharePointListsWebPartProps> {
     public render(): void {
       const element: React.ReactElement<ISharePointListsProps > = React.createElement(
@@ -202,7 +202,7 @@ The React component loads data from SharePoint and renders it to the user. The c
 
 In the code editor, in the **./src/webparts/sharePointLists/components** folder, create a new file named **ISharePointListsState.ts** and paste in the following contents:
 
-```ts
+```typescript
 export interface ISharePointListsState {
     listTitles: string[];
     loadingLists: boolean;
@@ -216,13 +216,13 @@ Having defined the interface describing the shape of the component's state, the 
 
 1. In the code editor, open the **./src/webparts/sharePointLists/components/SharePointLists.tsx** file. Under the existing `import` statements, add:
 
-  ```ts
+  ```typescript
   import { ISharePointListsState } from './ISharePointListsState';
   ```
 
 2. Change the signature of the `SharePointLists` class to:
 
-  ```ts
+  ```typescript
   export default class SharePointLists extends React.Component<ISharePointListsProps, ISharePointListsState> {
     // ...
   }
@@ -230,7 +230,7 @@ Having defined the interface describing the shape of the component's state, the 
 
 3. In the `SharePointLists` class, add a constructor with the default state value:
 
-  ```ts
+  ```typescript
   export default class SharePointLists extends React.Component<ISharePointListsProps, ISharePointListsState> {
     constructor(props?: ISharePointListsProps, context?: any) {
       super();
@@ -254,7 +254,7 @@ The sample client-side web part used in this article loads information about Sha
 
 1. In the code editor, open the **./src/webparts/sharePointLists/components/SharePointLists.tsx** file. In the `SharePointLists` class, add a new method named `getListsTitles`:
 
-  ```ts
+  ```typescript
   export default class SharePointLists extends React.Component<ISharePointListsProps, ISharePointListsState> {
     constructor(props?: ISharePointListsProps, context?: any) {
       super();
@@ -277,7 +277,7 @@ The sample client-side web part used in this article loads information about Sha
 
 2. To ensure the correct scoping of the method, we bind it to the web part in the constructor. In the `getListsTitles` method, use SharePoint JSOM to load the titles of SharePoint lists in the current site:
 
-  ```ts
+  ```typescript
   export default class SharePointLists extends React.Component<ISharePointListsProps, ISharePointListsState> {
     // ...
     private getListsTitles(): void {
@@ -421,7 +421,7 @@ To support this, extend the React component's state with an additional property 
 
 1. In the code editor, open the **./src/webparts/sharePointLists/components/ISharePointListsState.ts** file, and paste the following code:
 
-  ```ts
+  ```typescript
   export interface ISharePointListsState {
       listTitles: string[];
       loadingLists: boolean;
@@ -432,7 +432,7 @@ To support this, extend the React component's state with an additional property 
 
 2. Add the newly added property to the state definitions in the React component. In the code editor, open the **./src/webparts/sharePointLists/components/SharePointLists.tsx** file. Update the constructor to the following code:
 
-  ```ts
+  ```typescript
   export default class SharePointLists extends React.Component<ISharePointListsProps, ISharePointListsState> {
     constructor(props?: ISharePointListsProps, context?: any) {
       super();
@@ -452,7 +452,7 @@ To support this, extend the React component's state with an additional property 
 
 3. In the same file, update the `getListsTitles` method to the following code:
 
-  ```ts
+  ```typescript
   export default class SharePointLists extends React.Component<ISharePointListsProps, ISharePointListsState> {
     // ...
     private getListsTitles(): void {
@@ -555,7 +555,7 @@ SPFx components should load SharePoint JSOM scripts only once. In this example, 
 
 1. In the code editor, open the **./src/webparts/sharePointLists/components/SharePointLists.tsx** file. In the top section of the file, add an `import` statement referencing the `SPComponentLoader`. In the `SharePointLists` class, add the `componentDidMount` method:
 
-  ```ts
+  ```typescript
   import { SPComponentLoader } from '@microsoft/sp-loader';
 
   export default class SharePointLists extends React.Component<ISharePointListsProps, ISharePointListsState> {

@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use Visual Studio or your own custom development environment to build SharePoint Framework solutions. You can use a Mac, PC, or Linux.
-ms.date: 01/08/2018
+ms.date: 02/15/2018
 ms.prod: sharepoint
 ---
 
@@ -15,7 +15,7 @@ You can use Visual Studio or your own custom development environment to build Sh
 
 You can also follow these steps by watching this video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=WX9FL0BjE0I&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq).
 
-<a href="https://www.youtube.com/watch?v=WX9FL0BjE0I&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
+<a href="https://www.youtube.com/watch?v=-tXf8gxjmOI&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq">
     <img src="../images/spfx-youtube-tutorial0.png" alt="Screenshot of the YouTube video player for this tutorial" />
 </a>
 
@@ -23,14 +23,14 @@ You can also follow these steps by watching this video on the [SharePoint PnP Yo
 
 ### Install NodeJS
 
-Install [NodeJS version 6.x](https://nodejs.org/download/release/latest-v6.x/). 
+Install [NodeJS LTS version](https://nodejs.org). 
 
 - If you are in Windows, you can use the msi installers in this link for the easiest way to set up NodeJS.
 - If you have NodeJS already installed, check that you have the latest version by using `node -v`. It should return the current [LTS version](https://nodejs.org/en/download/). 
 - If you are using a Mac, we recommend that you use [homebrew](http://brew.sh/) to install and manage NodeJS. 
 
 > [!NOTE] 
-> The SharePoint Framework build pipeline doesn't currently support the LTS version of Node.js. Instead, download [Node.js version 6.11.5](https://nodejs.org/download/release/latest-v6.x/). This installs npm 3.10.10. Note that if you have a v5.x version of npm, you need to downgrade to an older npm version by using the following command: `npm install -g npm@3`.
+> Current LTS version of NodeJS is 8.9.4. Notice that 9.x versions are currently not supported with SharePoint Framework development.
 
 ### Install a code editor
 

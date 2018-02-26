@@ -41,7 +41,7 @@ However, when the Workbench is hosted in SharePoint, you get access to the page 
 
 1. Use the following variable in your web part class:
 
-  ```ts
+  ```typescript
   this.context.pageContext
   ```
 
@@ -102,7 +102,7 @@ You need a list model to start working with SharePoint list data. To retrieve th
 
 2. Define the following `interface` models just above the **HelloWorldWebPart** class:
 
-  ```ts
+  ```typescript
   export interface ISPLists {
     value: ISPList[];
   }
@@ -125,7 +125,7 @@ To test in the local Workbench, you need a mock store that returns mock data.
 
 2. Copy the following code into **MockHttpClient.ts**:
 
-  ```ts
+  ```typescript
   import { ISPList } from './HelloWorldWebPart';
 
   export default class MockHttpClient  {
@@ -159,13 +159,13 @@ You can now use the **MockHttpClient** class in the **HelloWorldWebPart** class.
 
 2. Copy and paste the following code just under `import * as strings from 'HelloWorldWebPartStrings';`.
 
-  ```ts
+  ```typescript
   import MockHttpClient from './MockHttpClient';
   ```
  
 3. Add the following private method that mocks the list retrieval inside the **HelloWorldWebPart** class.
 
-  ```ts
+  ```typescript
     private _getMockListData(): Promise<ISPLists> {
       return MockHttpClient.get()
         .then((data: ISPList[]) => {
@@ -189,7 +189,7 @@ SharePoint Framework includes a helper class **spHttpClient** to execute REST AP
 
 2. Copy and paste the following code just under `import MockHttpClient from './MockHttpClient';`:
 
-  ```ts
+  ```typescript
   import {
     SPHttpClient,
     SPHttpClientResponse   
@@ -198,7 +198,7 @@ SharePoint Framework includes a helper class **spHttpClient** to execute REST AP
 
 3. Add the following private method to retrieve lists from SharePoint inside the **HelloWorldWebPart** class.
 
-  ```ts
+  ```typescript
   private _getListData(): Promise<ISPLists> {
     return this.context.spHttpClient.get(this.context.pageContext.web.absoluteUrl + `/_api/web/lists?$filter=Hidden eq false`, SPHttpClient.configurations.v1)
       .then((response: SPHttpClientResponse) => {
@@ -275,7 +275,7 @@ SharePoint Workbench gives you the flexibility to test web parts in your local e
 
 1. Import the **Environment** and the **EnvironmentType** modules from the **@microsoft/sp-core-library** bundle. Add it to the **import** section at the top as shown in the following code:
 
-  ```ts
+  ```typescript
   import {
     Environment,
     EnvironmentType
@@ -284,7 +284,7 @@ SharePoint Workbench gives you the flexibility to test web parts in your local e
 
 2. Add the following private method inside the **HelloWorldWebPart** class to call the respective methods to retrieve list data:
 
-  ```ts
+  ```typescript
     private _renderListAsync(): void {
       // Local environment
       if (Environment.type === EnvironmentType.Local) {
@@ -313,7 +313,7 @@ SharePoint Workbench gives you the flexibility to test web parts in your local e
 
 4. Add the following private method inside the **HelloWorldWebPart** class:
 
-  ```ts
+  ```typescript
     private _renderList(items: ISPList[]): void {
       let html: string = '';
       items.forEach((item: ISPList) => {
@@ -339,7 +339,7 @@ SharePoint Workbench gives you the flexibility to test web parts in your local e
 
 1. Navigate to the **render** method, and replace the code inside the method with the following code:
 
-  ```ts
+  ```typescript
       this.domElement.innerHTML = `
         <div class="${ styles.helloWorld }">
           <div class="${ styles.container }">

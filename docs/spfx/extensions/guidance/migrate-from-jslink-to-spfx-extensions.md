@@ -478,9 +478,9 @@ Next, you need to update the solution to use the just created CDN as the hosting
     gulp package-solution --ship
     ```
     
-6. Upload or drag-and-drop the newly created client-side solution package to the App Catalog in your tenant, and then select the **Deploy** button.
+6. Upload or drag-and-drop the newly created client-side solution package to the app catalog in your tenant, and then select the **Deploy** button.
 
-    ![App Catalog Trust Dialog with path to CDN endpoint](../../../images/spfx-custom-field-extension-address.png)
+    ![app catalog Trust Dialog with path to CDN endpoint](../../../images/spfx-custom-field-extension-address.png)
 
 7. Upload or drag-and-drop the files in the **temp/deploy** folder to the **CDN/customcolorfield** folder created earlier.
 
@@ -490,7 +490,7 @@ Next, you need to update the solution to use the just created CDN as the hosting
 
 2. Go to the **Site Contents** page and select to add a new **App**.
 
-3. Select to install a new app **From Your Organization** to browse the solutions available in the App Catalog.
+3. Select to install a new app **From Your Organization** to browse the solutions available in the app catalog.
 
 4. Select the solution called **spfx-custom-field-extension-client-side-solution** and install it on the target site.
 

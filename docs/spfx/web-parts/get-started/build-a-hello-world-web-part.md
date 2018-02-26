@@ -169,7 +169,7 @@ Notice that the web part class is defined to accept a property type **IHelloWorl
 
 The property type is defined as an interface before the **HelloWorldWebPart** class in the **HelloWorldWebPart.ts** file.
 
-```ts
+```typescript
 export interface IHelloWorldWebPartProps {
     description: string;
 }
@@ -180,7 +180,7 @@ This property definition is used to define custom property types for your web pa
 #### Web part render method
 The DOM element where the web part should be rendered is available in the **render** method. This method is used to render the web part inside that DOM element. In the **HelloWorld** web part, the DOM element is set to a DIV. The method parameters include the display mode (either Read or Edit) and the configured web part properties if any: 
 
-```ts
+```typescript
   public render(): void {
     this.domElement.innerHTML = `
       <div class="${ styles.helloWorld }">
@@ -208,7 +208,7 @@ The property pane is defined in the **HelloWorldWebPart** class. The **propertyP
 
 When the properties are defined, you can access them in your web part by using `this.properties.<property-value>`, as shown in the **render** method:
 
-```ts
+```typescript
 <p class="${styles.description}">${escape(this.properties.description)}</p>
 ```
 
@@ -218,7 +218,7 @@ Let's now add a few more properties to the property pane: a check box, a drop-do
 
 1. Scroll to the top of the file and add the following to the import section from `@microsoft/sp-webpart-base`:
 
-  ```ts
+  ```typescript
   PropertyPaneCheckbox,
   PropertyPaneDropdown,
   PropertyPaneToggle
@@ -226,7 +226,7 @@ Let's now add a few more properties to the property pane: a check box, a drop-do
 
   The complete import section looks like the following:
 
-  ```ts
+  ```typescript
   import {
     BaseClientSideWebPart,
     IPropertyPaneConfiguration,
@@ -241,7 +241,7 @@ Let's now add a few more properties to the property pane: a check box, a drop-do
 
 3. Replace the **IHelloWorldWebPartProps** interface with the following code.
 
-  ```ts
+  ```typescript
   export interface IHelloWorldWebPartProps {
       description: string;
       test: string;
@@ -255,7 +255,7 @@ Let's now add a few more properties to the property pane: a check box, a drop-do
 
 5. Replace the **getPropertyPaneConfiguration** method with the following code, which adds the new property pane fields and maps them to their respective typed objects.
 
-  ```ts
+  ```typescript
   protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
     return {
       pages: [
@@ -301,7 +301,7 @@ Let's now add a few more properties to the property pane: a check box, a drop-do
 
 6. After you add your properties to the web part properties, you can now access the properties in the same way you accessed the **description** property earlier:
 
-  ```ts
+  ```typescript
   <p class="${ styles.description }">${escape(this.properties.test)}</p>
   ```
 
@@ -309,7 +309,7 @@ Let's now add a few more properties to the property pane: a check box, a drop-do
 
 7. Open `HelloWorldWebPart.manifest.json` and modify the `properties` to:
 
-  ```ts
+  ```typescript
   "properties": {
     "description": "HelloWorld",
     "test": "Multi-line text field",

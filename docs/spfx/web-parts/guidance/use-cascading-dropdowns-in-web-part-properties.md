@@ -67,7 +67,7 @@ You will build a web part that displays list items from a selected SharePoint li
 
 2. Open the **src/webparts/listItems/IListItemsWebPartProps.ts** file, and replace its contents with:
 
-  ```ts
+  ```typescript
   export interface IListItemsWebPartProps {
     listName: string;
   }
@@ -75,7 +75,7 @@ You will build a web part that displays list items from a selected SharePoint li
 
 3. In the **src/webparts/listItems/ListItemsWebPart.ts** file, change the **render** method to:
 
-  ```ts
+  ```typescript
   export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
     // ...
     public render(): void {
@@ -91,7 +91,7 @@ You will build a web part that displays list items from a selected SharePoint li
 
 4. Update **propertyPaneSettings** to:
 
-  ```ts
+  ```typescript
   export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
     // ...
     protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
@@ -121,7 +121,7 @@ You will build a web part that displays list items from a selected SharePoint li
 
 5. In the **src/webparts/listItems/loc/mystrings.d.ts** file, change the **IListItemsStrings** interface to:
 
-  ```ts
+  ```typescript
   declare interface IListItemsStrings {
     PropertyPaneDescription: string;
     BasicGroupName: string;
@@ -168,7 +168,7 @@ You will build a web part that displays list items from a selected SharePoint li
 
 8. In the **src/webparts/listItems/components/IListItemsProps.ts** file, change the **IListItemsProps** interface to:
 
-  ```ts
+  ```typescript
   export interface IListItemsProps {
     listName: string;
   }
@@ -194,7 +194,7 @@ At this point, a user specifies which list the web part should use by manually e
 
 1. In the **ListItemsWebPart** class, add a reference to the **PropertyPaneDropdown** class in the top section of the web part. Replace the import clause that loads the **PropertyPaneTextField** class with:
 
-  ```ts
+  ```typescript
   import {
     BaseClientSideWebPart,
     IPropertyPaneConfiguration,
@@ -206,7 +206,7 @@ At this point, a user specifies which list the web part should use by manually e
 
 2. In the **ListItemsWebPart** class, add a new variable named **lists** to store information about all available lists in the current site:
 
-  ```ts
+  ```typescript
   export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
     private lists: IPropertyPaneDropdownOption[];
     // ...
@@ -215,7 +215,7 @@ At this point, a user specifies which list the web part should use by manually e
 
 3. Add a new class variable named **listsDropdownDisabled**. This variable determines whether the list dropdown is enabled or not. Until the web part retrieves the information about the lists available in the current site, the dropdown should be disabled.
 
-  ```ts
+  ```typescript
   export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
     // ...
     private listsDropdownDisabled: boolean = true;
@@ -225,7 +225,7 @@ At this point, a user specifies which list the web part should use by manually e
 
 4. Change the **propertyPaneSettings** getter to use the dropdown control to render the **listName** property:
 
-  ```ts
+  ```typescript
   export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
     // ...
     protected get propertyPaneSettings(): IPropertyPaneSettings {
@@ -269,7 +269,7 @@ Previously, you associated the dropdown control of the **listName** property wit
 
 1. In the **ListItemsWebPart** class, add a method to load available lists. You will use mock data, but you could also call the SharePoint REST API to retrieve the list of available lists from the current web. To simulate loading options from an external service, the method uses a two-second delay.
 
-  ```ts
+  ```typescript
   export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
     // ...
     private loadLists(): Promise<IPropertyPaneDropdownOption[]> {
@@ -291,7 +291,7 @@ Previously, you associated the dropdown control of the **listName** property wit
 
 2. Load information about available lists into the list dropdown. In the **ListItemsWebPart** class, override the **onPropertyPaneConfigurationStart** method by using the following code:
 
-  ```ts
+  ```typescript
   export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
     // ...
     protected onPropertyPaneConfigurationStart(): void {
@@ -368,7 +368,7 @@ When building web parts, you often need to allow users to choose an option from 
 
 2. Change the code in the **src/webparts/listItems/IListItemsWebPartProps.ts** file to:
 
-  ```ts
+  ```typescript
   export interface IListItemsWebPartProps {
     listName: string;
     itemName: string;
@@ -377,7 +377,7 @@ When building web parts, you often need to allow users to choose an option from 
 
 3. Change the code in the **src/webparts/listItems/components/IListItemsProps.ts** file to:
 
-  ```ts
+  ```typescript
   export interface IListItemsProps {
     listName: string;
     itemName: string;
@@ -386,7 +386,7 @@ When building web parts, you often need to allow users to choose an option from 
 
 4. In the **src/webparts/listItems/ListItemsWebPart.ts** file, change the code of the **render** method to:
 
-  ```ts
+  ```typescript
   export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
     // ...
     public render(): void {
@@ -403,7 +403,7 @@ When building web parts, you often need to allow users to choose an option from 
 
 5. In the **src/webparts/listItems/loc/mystrings.d.ts** file, change the **IListItemsStrings** interface to:
 
-  ```ts
+  ```typescript
   declare interface IListItemsStrings {
     PropertyPaneDescription: string;
     BasicGroupName: string;
@@ -459,7 +459,7 @@ Similar to how users can select a list by using a dropdown, they should be able 
 
 1. In the **ListItemsWebPart** class, add a new variable named **items**, which you use to store information about all available items in the currently selected list.
 
-  ```ts
+  ```typescript
   export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
     // ...
     private items: IPropertyPaneDropdownOption[];
@@ -469,7 +469,7 @@ Similar to how users can select a list by using a dropdown, they should be able 
 
 2. Add a new class variable named **itemsDropdownDisabled**. This variable determines whether the items dropdown should be enabled or not. Users should be able to select an item only after they selected a list.
 
-  ```ts
+  ```typescript
   export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
     // ...
     private itemsDropdownDisabled: boolean = true;
@@ -479,7 +479,7 @@ Similar to how users can select a list by using a dropdown, they should be able 
 
 3. Change the **propertyPaneSettings** getter to use the dropdown control to render the **itemName** property.
 
-  ```ts
+  ```typescript
   export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
     // ...
     protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
@@ -529,7 +529,7 @@ Previously, you defined a dropdown control to render the **itemName** property i
 
 1. Add method to load list items. In the **src/webparts/listItems/ListItemsWebPart.ts** file, in the **ListItemsWebPart** class, add a new method to load available list items from the selected list. (Like the method for loading available lists, you use mock data.)
 
-  ```ts
+  ```typescript
   export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
     // ...
     private loadItems(): Promise<IPropertyPaneDropdownOption[]> {
@@ -575,7 +575,7 @@ Previously, you defined a dropdown control to render the **itemName** property i
 
 2. Load information about available items into the item dropdown. In the **ListItemsWebPart** class, extend the **onPropertyPaneConfigurationStart** method to load items for the selected list:
 
-  ```ts
+  ```typescript
   export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
     // ...
     protected onPropertyPaneConfigurationStart(): void {
@@ -625,7 +625,7 @@ Previously, you defined a dropdown control to render the **itemName** property i
 
   In the **ListItemsWebPart.ts** file, in the **ListItemsWebPart** class, override the **onPropertyPaneFieldChanged** method with the following code:
 
-  ```ts
+  ```typescript
   export default class ListItemsWebPart extends BaseClientSideWebPart<IListItemsWebPartProps> {
     // ...
     protected onPropertyPaneFieldChanged(propertyPath: string, oldValue: any, newValue: any): void {

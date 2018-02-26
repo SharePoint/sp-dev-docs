@@ -46,7 +46,7 @@ To avoid issues, you should always assume that there are multiple instances of y
 
 #### Bad practice
 
-```ts
+```typescript
 // ...
 
 export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
@@ -66,7 +66,7 @@ export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorld
 
 #### Good practice
 
-```ts
+```typescript
 // ...
 
 export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {
@@ -175,7 +175,7 @@ exports.default = styles;
 
 To use the generated class names in your code, you first import the styles of your component, and then use the property pointing to the particular class:
 
-```ts
+```typescript
 import styles from './todoList.module.scss';
 // ...
 

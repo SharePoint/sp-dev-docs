@@ -6,14 +6,14 @@ ms.date: 01/08/2018
 
 # Scoping access to site designs
 
-> [!NOTE]
-> Site designs and site scripts are in preview and are subject to change. They are currently only supported for use in production environments in Targeted Release.
-
 Site designs are available to everyone by default. You can also scope site designs so that they are only available to specific users or groups. For example, the accounting apartment may have specific site designs they use, but it may not make sense to share those site designs with everyone. This article will explain how you can control which users and groups can see specific site designs.
 
 ## Granting rights to a site design
 
 When a site design is first created, it is available to everyone. You can grant **View** rights to the site design. After rights are granted, only the users or groups (principals) specified have access. You can continue granting rights to more principals with subsequent API calls.
+
+> [!NOTE]
+> Scoping is currently only available for mail-enabled security groups and users. We are planning to provide support for Office 365 Groups in the future.
 
 ## Granting rights to security groups
 

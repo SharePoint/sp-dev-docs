@@ -6,9 +6,6 @@ ms.date: 12/14/2017
 
 # Site design JSON schema
 
-> [!NOTE]
-> Site designs and site scripts are in preview and are subject to change. They are currently only supported for use in production environments in Targeted Release.
-
 The site design is a list of actions. For more complex actions, such as creating a list, there are also subactions. Each action is specified by a "verb" value. Verb actions are run in the order they appear in the JSON script. Only the verb actions listed here can be used, otherwise an "unable to handle action" error will be thrown when trying to upload a site script. More actions will be added over time. 
 
 The overall JSON structure is specified as follows:
@@ -130,7 +127,7 @@ Example:
 
 ### addContentType
 
-Adds a content type to the list.
+Adds a content type to the list. Currently these are limited to only the default content types included in the site template.
 
 JSON value:
 
@@ -171,20 +168,60 @@ JSON values:
 - **fieldDisplayName** - The display name of the field to operate on.
 - **formatterJSON** - A JSON object to use as the field CustomFormatter.
 
-Example:
+Example: In this example we are formatting a number column as a data bar
 
 ```json
-{
-   "verb": "setSPFieldCustomFormatter",
-   "fieldDisplayName": "name",
-   "formatterJSON": "json" 
-}
+                {
+                    "verb": "setSPFieldCustomFormatter",
+                    "fieldDisplayName": "Effort (days)",
+                    "formatterJSON":
+                    {
+                        "debugMode": true,
+                        "elmType": "div",
+                        "txtContent": "@currentField",
+                        "attributes": {
+                            "class": "sp-field-dataBars"
+                        },
+                        "style": {
+                            "width": {
+                                "operator": "?",
+                                "operands": [
+                                    {
+                                        "operator": ">",
+                                        "operands": [
+                                            "@currentField",
+                                            "20"
+                                        ]
+                                    },
+                                    "100%",
+                                    {
+                                        "operator": "+",
+                                        "operands": [
+                                            {
+                                                "operator": "toString()",
+                                                "operands": [
+                                                    {
+                                                        "operator": "*",
+                                                        "operands": [
+                                                            "@currentField",
+                                                            5
+                                                        ]
+                                                    }
+                                                ]
+                                            },
+                                            "%"
+                                        ]
+                                    }
+                                ]
+                            }
+                        }
+                    }
+                }
 ```
-<!-- TBD provide an example for formatterJSON in previous example -->
 
 ## Add a navigation link
 
-Use the **addNavLink** verb to add a new navigation link to the site.
+Use the **addNavLink** verb to add a new navigation link to the site. 
 
 JSON values:
 
@@ -194,13 +231,23 @@ JSON values:
 
 Example:
 
+> [!NOTE]
+> If you add a link to a nested site item - like a list - be sure to add the path reference from the root. 
+
+
 ```json
 {
    "verb": "addNavLink",
    "url": "/Customer Event Collateral",
    "displayName": "Event Collateral",
    "isWebRelative": true
-}
+},
+{
+   "verb": "addNavLink",
+   "url": "/Lists/Project Activities",
+   "displayName": "Project Activities",
+   "isWebRelative": true
+ }
 ```
 
 ## Apply a theme
@@ -274,13 +321,18 @@ Example:
 
 ## Join a hub site
 
-Use the **joinHubSite** verb to join the site to a hub. <!-- TBD provide link to more information on hubs and how to get the id -->
+Use the **joinHubSite** verb to join the site to a designated hub site. 
 
 JSON value:
 
 - **hubSiteId** - The ID of the hub site to join.
 
 Example:
+
+<!-- TBD: add link to Dave's hub site documentation -->
+
+> [!NOTE]
+> Hub sites are a new feature that are just rolling out to customers in Targeted Release in March 2018. 
 
 ```json
 {
@@ -311,5 +363,23 @@ Example:
         "event": "Microsoft Event",
         "product": "SharePoint"
     }
+}
+```
+## setSiteExternalSharingCapability
+
+Use the **setSiteExternalSharingCapability** to manage guest access. For details on these settings refer to: https://support.office.com/en-us/article/Manage-external-sharing-for-your-SharePoint-Online-environment-C8A462EB-0723-4B0B-8D0A-70FEAFE4BE85
+
+<!-- update this table matrix -->
+
+JSON values:
+
+- **capability** - A required parameter to specify the sharing option for the site collection. The four options are: Disabled, ExistingExternalUserSharingOnly, ExternalUserSharingOnly, ExternalUserAndGuestSharing
+
+Example:
+
+```json
+{
+   "verb": "setSiteExternalSharingCapability",
+   "capability": "Disabled"
 }
 ```

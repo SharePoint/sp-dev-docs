@@ -39,7 +39,7 @@ You can also follow these steps by watching the video on the [SharePoint PnP You
 
 4. Associate the Application Customizer to the planned scope. This can be performed programmatically (CSOM/REST) or by using the feature framework inside of the SharePoint Framework solution package. You need to associate the following properties in the `UserCustomAction` object at the site collection, site, or list level.
   
-  * **ClientSideComponentId**. This is the identifier (GUID) of the Field Customizer, which has been installed in the App Catalog. 
+  * **ClientSideComponentId**. This is the identifier (GUID) of the Field Customizer, which has been installed in the app catalog. 
   * **ClientSideComponentProperties**. This is an optional parameter, which can be used to provide properties for the Field Customizer instance.
    
   Note that you can control the requirement to add a solution containing your extension to the site by using the `skipFeatureDeployment` setting in **package-solution.json**. Even though you would not require the solution to be installed on the site, you need to associate **ClientSideComponentId** to specific objects for the extension to be visible. 
@@ -139,15 +139,15 @@ Now you are ready to deploy the solution to a SharePoint site and have the `Cust
    app-extension.sppkg
    ```
 
-3. You now need to deploy the package that was generated to the App Catalog. To do this, go to your tenant's **App Catalog** and open the **Apps for SharePoint** library.
+3. You now need to deploy the package that was generated to the app catalog. To do this, go to your tenant's **app catalog** and open the **Apps for SharePoint** library.
 
-4. Upload or drag and drop the `app-extension.sppkg` located in the **sharepoint/solution** folder to the App Catalog. SharePoint displays a dialog and asks you to trust the client-side solution.
+4. Upload or drag and drop the `app-extension.sppkg` located in the **sharepoint/solution** folder to the app catalog. SharePoint displays a dialog and asks you to trust the client-side solution.
 
    Note that we did not update the URLs for hosting the solution for this deployment, so the URL is still pointing to `https://localhost:4321`. 
    
 5. Select the **Deploy** button.
 
-   ![Trust operation in App Catalog upload](../../../images/ext-app-sppkg-deploy-trust.png)
+   ![Trust operation in app catalog upload](../../../images/ext-app-sppkg-deploy-trust.png)
 
 6. Move back to your console and ensure that the solution is running. If it's not running, execute the following command in the solution folder:
    
@@ -171,7 +171,7 @@ Now you are ready to deploy the solution to a SharePoint site and have the `Cust
 
 ## Next steps
 
-Congratulations, you have deployed an extension to a modern SharePoint page from the App Catalog! 
+Congratulations, you have deployed an extension to a modern SharePoint page from the app catalog! 
 
 You can continue building out your Hello World extension in the next topic, [Host extension from Office 365 CDN (Hello World part 4)](./hosting-extension-from-office365-cdn.md), where you learn how to deploy and load the extension assets from a CDN instead of from localhost.
 

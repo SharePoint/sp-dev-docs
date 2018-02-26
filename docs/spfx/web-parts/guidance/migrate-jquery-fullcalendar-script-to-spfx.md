@@ -234,7 +234,7 @@ Similar to the original solution built by using the Script Editor Web Part, you 
 
 2. Open the **./src/webparts/tasksCalendar/TasksCalendarWebPart.ts** file, and after the last **import** statement, add:
 
-  ```ts
+  ```typescript
   import 'jquery';
   import 'moment';
   import 'fullcalendar';
@@ -246,7 +246,7 @@ Just as in the original solution, the next step is to define the location where 
 
 In the code editor, open the **./src/webparts/tasksCalendar/TasksCalendarWebPart.ts** file, and change the **render** method to:
 
-```ts
+```typescript
   export default class ItRequestsWebPart extends BaseClientSideWebPart<IItRequestsWebPartProps> {
     public render(): void {
       this.domElement.innerHTML = `
@@ -398,7 +398,7 @@ The last step is to include the code that initiates the FullCalendar jQuery plug
 
 2. To reference this file in the web part, in the code editor, open the **./src/webparts/tasksCalendar/TasksCalendarWebPart.ts** file, and change the **render** method to:
 
-  ```ts
+  ```typescript
   export default class ItRequestsWebPart extends BaseClientSideWebPart<IItRequestsWebPartProps> {
     public render(): void {
       this.domElement.innerHTML = `
@@ -440,7 +440,7 @@ The following steps illustrate how to extend the existing solution to allow user
 
 2. Update the web part properties interface to reflect the changes in the manifest. In the code editor, open the **./src/webparts/tasksCalendar/ITasksCalendarWebPartProps.ts** file, and change its contents to:
 
-  ```ts
+  ```typescript
   export interface ITasksCalendarWebPartProps {
     listName: string;
   }
@@ -448,7 +448,7 @@ The following steps illustrate how to extend the existing solution to allow user
 
 3. Update the display labels for the **listName** property. Open the **./src/webparts/tasksCalendar/loc/mystrings.d.ts** file, and change its contents to:
 
-  ```ts
+  ```typescript
   declare interface ITasksCalendarStrings {
     PropertyPaneDescription: string;
     BasicGroupName: string;
@@ -475,7 +475,7 @@ The following steps illustrate how to extend the existing solution to allow user
 
 5. Update the web part to use the newly defined property. In the code editor, open the **./src/webparts/tasksCalendar/TasksCalendarWebPart.ts** file, and change the **getPropertyPaneConfiguration** method to:
 
-  ```ts
+  ```typescript
   export default class TasksCalendarWebPart extends BaseClientSideWebPart<ITasksCalendarWebPartProps> {
     // ...
     protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
@@ -516,7 +516,7 @@ Initially, the name of the list from which the data should be loaded was embedde
 
 2. Change the import statement to load the required libraries to:
 
-  ```ts
+  ```typescript
   var $: any = require('jquery');
   var moment: any = require('moment');
 
@@ -531,7 +531,7 @@ Initially, the name of the list from which the data should be loaded was embedde
 
 3. Copy the **displayTasks** and **updateTask** functions from the **script.js** file, and paste them as follows inside the **TasksCalendarWebPart** class:
 
-  ```ts
+  ```typescript
   export default class TasksCalendarWebPart extends BaseClientSideWebPart<ITasksCalendarWebPartProps> {
     // ...
 
@@ -663,7 +663,7 @@ Initially, the name of the list from which the data should be loaded was embedde
 
 4. As the last step, change the **render** method to call the newly added **displayTasks** method:
 
-  ```ts
+  ```typescript
   export default class TasksCalendarWebPart extends BaseClientSideWebPart<ITasksCalendarWebPartProps> {
     public render(): void {
       this.domElement.innerHTML = `
@@ -718,7 +718,7 @@ To use types from the installed type definitions, you have to change how you ref
 
 In the code editor, open the **./src/webparts/tasksCalendar/TasksCalendarWebPart.ts** file, and change the import statements to:
 
-```ts
+```typescript
 import * as $ from 'jquery';
 import 'fullcalendar';
 import * as moment from 'moment';
@@ -730,7 +730,7 @@ Now that you have type definitions for all libraries installed in the project, y
 
 1. Define an interface for a task that you retrieve from the SharePoint list. In the code editor, open the **./src/webparts/tasksCalendar/TasksCalendarWebPart.ts** file, and just above the web part class, add the following code snippet:
 
-  ```ts
+  ```typescript
   interface ITask {
     ID: number;
     Title: string;
@@ -742,7 +742,7 @@ Now that you have type definitions for all libraries installed in the project, y
 
 2. In the web part class, change the **displayTasks** and **updateTask** methods to:
 
-  ```ts
+  ```typescript
   export default class TasksCalendarWebPart extends BaseClientSideWebPart<ITasksCalendarWebPartProps> {
     private readonly colors: string[] = ['#466365', '#B49A67', '#93B7BE', '#E07A5F', '#849483', '#084C61', '#DB3A34'];
 
@@ -888,7 +888,7 @@ Now that you have type definitions for all libraries installed in the project, y
 
   to:
 
-  ```ts
+  ```typescript
   const restQuery: string = `/_api/Web/Lists/GetByTitle('${escape(this.properties.listName)}')/items?$select=ID,Title,\
   Status,StartDate,DueDate,AssignedTo/Title&$expand=AssignedTo&\
   $filter=((DueDate ge '${startDate}' and DueDate le '${endDate}')or(StartDate ge '${startDate}' and StartDate le '${endDate}'))`;
@@ -908,7 +908,7 @@ Now that you have type definitions for all libraries installed in the project, y
 
 At this moment, the solution uses jQuery AJAX calls to communicate with the SharePoint REST API. For regular GET requests, the jQuery AJAX API is just as convenient as using the SharePoint Framework SPHttpClient. The real difference is when performing POST requests such as the one for updating the event:
 
-```ts
+```typescript
 $.ajax({
   url: this.context.pageContext.web.absoluteUrl + '/_api/contextinfo',
   type: 'POST',
@@ -944,7 +944,7 @@ Because you want to update a list item, you need to provide SharePoint with a va
 
 SharePoint Framework SPHttpClient simplifies communicating with SharePoint because it automatically detects if the request is a POST request and needs a valid request digest. If it does, the SPHttpClient automatically retrieves it from SharePoint and adds it to the request. By comparison, the same request issued using the SPHttpClient would look like this:
 
-```ts
+```typescript
 this.context.spHttpClient.post(`${this.context.pageContext.web.absoluteUrl}\
 /_api/Web/Lists/getByTitle('${escape(this.properties.listName)}')/Items(${id})`, SPHttpClient.configurations.v1, {
   body: JSON.stringify({
@@ -967,13 +967,13 @@ this.context.spHttpClient.post(`${this.context.pageContext.web.absoluteUrl}\
 
 1. To replace the original jQuery AJAX calls with the SharePoint Framework SPHttpClient API, in the code editor open the **./src/webparts/tasksCalendar/TasksCalendarWebPart.ts** file. To the list of imports add:
 
-  ```ts
+  ```typescript
   import { SPHttpClient, SPHttpClientResponse } from '@microsoft/sp-http';
   ```
 
 2. In the **TasksCalendarWebPart** class, replace the **displayTasks** and **updateTask** methods with the following code:
 
-  ```ts
+  ```typescript
   export default class TasksCalendarWebPart extends BaseClientSideWebPart<ITasksCalendarWebPartProps> {
     // ...
 

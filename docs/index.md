@@ -16,9 +16,9 @@ The SharePoint Framework (SPFx) is a page and web part model that provides full 
 
 ## SharePoint REST service
 
-Interact with SharePoint data by using any technology that supports REST web requests. Perform Create,  Read,  Update, and  Delete (CRUD) operations from your SharePoint Add-ins, solutions, and client applications, using REST web technologies and standard Open Data Protocol (OData) syntax.
+Interact with SharePoint data by using any technology that supports REST web requests. Perform Create,  Read,  Update, and  Delete (CRUD) operations from your SharePoint Add-ins, solutions, and client applications by using REST web technologies and standard Open Data Protocol (OData) syntax.
 
-[Get to know the SharePoint REST service](apis/rest/get-to-know-the-sharepoint-rest-service.md)
+[Get to know the SharePoint REST service](sp-add-ins/get-to-know-the-sharepoint-rest-service.md)
 
 ## SharePoint webhooks
 

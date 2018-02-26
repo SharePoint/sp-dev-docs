@@ -65,7 +65,7 @@ Both SharePoint Framework Extensions and JSLink customizations run in the browse
 
 Both SharePoint Framework Extensions and JavaScript files for JSLink customizations can be hosted on SharePoint Online, and eventually in the Office 365 CDN service, avoiding any need for external services or hosting environments.
 
-While hosting SharePoint Framework solutions on a CDN offers many advantages, it is not required, and you could choose to host the code in a SharePoint document library. SharePoint Framework packages (.sppkg files) deployed to the App Catalog specify the URL at which SharePoint Framework can find the solution's code. If the user browsing the page with the extension can download the script from the specified location, there are no restrictions with regards to what that URL must be.
+While hosting SharePoint Framework solutions on a CDN offers many advantages, it is not required, and you could choose to host the code in a SharePoint document library. SharePoint Framework packages (.sppkg files) deployed to the app catalog specify the URL at which SharePoint Framework can find the solution's code. If the user browsing the page with the extension can download the script from the specified location, there are no restrictions with regards to what that URL must be.
 
 Office 365 offers the public CDN capability that allows you to publish files from a specific SharePoint document library to a CDN. Office 365 public CDN strikes a nice balance between the benefits of using a CDN and the simplicity of hosting code files in a SharePoint document library. If your organization doesn't mind their code files being publicly available, using the Office 365 public CDN is an option worth considering.
 
@@ -75,7 +75,7 @@ However, between the two development models there are also some significant diff
 
 ### Run in no-script sites and in "modern" lists and libraries
 
-Because SharePoint Framework solutions, including Extensions, are deployed through the App Catalog with a prior approval, they are not subject to the no-script restrictions and work on all "modern" sites. Moreover, as we already saw previously, the Field Customizers of SharePoint Framework work in "modern" lists and libraries, while the old-school JSLink doesn't.
+Because SharePoint Framework solutions, including Extensions, are deployed through the app catalog with a prior approval, they are not subject to the no-script restrictions and work on all "modern" sites. Moreover, as we already saw previously, the Field Customizers of SharePoint Framework work in "modern" lists and libraries, while the old-school JSLink doesn't.
 
 ### Field Customizers support view only scenarios
 

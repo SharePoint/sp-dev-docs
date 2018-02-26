@@ -199,7 +199,7 @@ Similar to the original solution built using the Script Editor Web Part, first y
 
 2. Open the **./src/webparts/itRequests/ItRequestsWebPart.ts** file, and after the last **import** statement add:
 
-    ```ts
+    ```typescript
     import 'jquery';
     import 'datatables.net';
     import 'moment';
@@ -211,7 +211,7 @@ Just as in the original solution, the next step is to define the structure of th
 
 In the code editor, open the **./src/webparts/itRequests/ItRequestsWebPart.ts** file, and change the **render** method to:
 
-```ts
+```typescript
     export default class ItRequestsWebPart extends BaseClientSideWebPart<IItRequestsWebPartProps> {
     public render(): void {
         this.domElement.innerHTML = `
@@ -298,7 +298,7 @@ The next step is to define the Moment.js plug-in for DataTables so that dates in
 
 2. For the web part to load the plug-in, it has to reference the newly created **moment-plugin.js** file. In the code editor, open the **./src/webparts/itRequests/ItRequestsWebPart.ts** file, and after the last **import** statement add:
 
-    ```ts
+    ```typescript
     import './moment-plugin';
     ```
 
@@ -340,7 +340,7 @@ The last step is to include the code that initiates the data table and loads the
 
 2. To reference this file in the web part, in the code editor, open the **./src/webparts/itRequests/ItRequestsWebPart.ts** file, and change the **render** method to:
 
-    ```ts
+    ```typescript
     export default class ItRequestsWebPart extends BaseClientSideWebPart<IItRequestsWebPartProps> {
     public render(): void {
         this.domElement.innerHTML = `
@@ -388,7 +388,7 @@ The following steps illustrate how to extend the existing solution to allow user
 
 2. Update the web part properties interface to reflect the changes in the manifest. In the code editor, open the **./src/webparts/itRequests/IItRequestsWebPartProps.ts** file, and change its contents to:
 
-    ```ts
+    ```typescript
     export interface IItRequestsWebPartProps {
     listName: string;
     }
@@ -396,7 +396,7 @@ The following steps illustrate how to extend the existing solution to allow user
 
 3. Update the display labels for the **listName** property. Open the **./src/webparts/itRequests/loc/mystrings.d.ts** file, and change its contents to:
 
-    ```ts
+    ```typescript
     declare interface IItRequestsStrings {
     PropertyPaneDescription: string;
     BasicGroupName: string;
@@ -423,7 +423,7 @@ The following steps illustrate how to extend the existing solution to allow user
 
 5. Update the web part to use the newly defined property. In the code editor, open the **./src/webparts/itRequests/ItRequestsWebPart.ts** file, and change the **getPropertyPaneConfiguration** method to:
 
-    ```ts
+    ```typescript
     export default class ItRequestsWebPart extends BaseClientSideWebPart<IItRequestsWebPartProps> {
     // ...
     protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
@@ -462,7 +462,7 @@ Initially, the name of the list from which the data should be loaded was embedde
 
 1. In the code editor, open the **./src/webparts/itRequests/ItRequestsWebPart.ts** file, and change the **render** method to:
 
-    ```ts
+    ```typescript
     var $: any = (window as any).$;
 
     export default class ItRequestsWebPart extends BaseClientSideWebPart<IItRequestsWebPartProps> {
@@ -558,13 +558,13 @@ To use types from the installed type definitions, you have to change how you ref
 
 1. In the code editor, open the **./src/webparts/itRequests/ItRequestsWebPart.ts** file, and change the `import 'jquery';` statement to:
 
-    ```ts
+    ```typescript
     import * as $ from 'jquery';
     ```
 
 2. Having defined **$** as jQuery, you can now remove the local definition of **$** that you added previously:
 
-    ```ts
+    ```typescript
     var $: any = (window as any).$;
     ```
 
@@ -595,7 +595,7 @@ Now that you have type definitions for all libraries installed in the project, y
 
 1. Define an interface for the IT request information that you retrieve from the SharePoint list. In the code editor, open the **./src/webparts/itRequests/ItRequestsWebPart.ts** file, and just above the web part class, add the following code snippet:
 
-    ```ts
+    ```typescript
     interface IRequestItem {
     ID: number;
     BusinessUnit: string;
@@ -608,7 +608,7 @@ Now that you have type definitions for all libraries installed in the project, y
 
 2. Next, in the web part class, change the **render** method to:
 
-    ```ts
+    ```typescript
     export default class ItRequestsWebPart extends BaseClientSideWebPart<IItRequestsWebPartProps> {
     public render(): void {
         this.domElement.innerHTML = `
@@ -666,7 +666,7 @@ The last piece of the solution that needs to be transformed to TypeScript is the
 
 2. Open the **moment-plugin.ts** file in the code editor, and replace its contents with:
 
-    ```ts
+    ```typescript
     import * as $ from 'jquery';
     import * as moment from 'moment';
 

@@ -7,7 +7,7 @@ ms.prod: sharepoint
 
 # Use custom dialog boxes with SharePoint Framework Extensions
 
-You can use custom dialog boxes, available from the **@microsoft/sp-dialog** package, within the context of SharePoint Framework Extensions or client-side web parts. 
+You can use custom dialog boxes, available from the **[@microsoft/sp-dialog](https://www.npmjs.com/package/@microsoft/sp-dialog)** package, within the context of SharePoint Framework Extensions or client-side web parts. 
 
 This article describes how to create a custom dialog box and use it within the context of a ListView Command Set extension.
 
@@ -98,7 +98,7 @@ In the extension manifest, configure the extension to have only one button. In t
 
 2. Add the following import statements at the top of the newly created file. You're creating your custom dialog box by using the [Office UI Fabric React components](https://developer.microsoft.com/en-us/fabric#/components), so the implementation is in React. 
 
-  ```ts
+  ```typescript
   import * as React from 'react';
   import * as ReactDOM from 'react-dom';
   import { BaseDialog, IDialogConfiguration } from '@microsoft/sp-dialog';
@@ -115,7 +115,7 @@ In the extension manifest, configure the extension to have only one button. In t
 
 3. Add the following interface definition just under the import statements. This is used to pass information and functions between your ListView Command Set extension and your custom dialog box.
 
-  ```ts
+  ```typescript
   interface IColorPickerDialogContentProps {
     message: string;
     close: () => void;
@@ -126,7 +126,7 @@ In the extension manifest, configure the extension to have only one button. In t
 
 4. Add the following class just under the interface definition. This React class is responsible for rendering the UI experiences inside the custom dialog box. Notice that you use the Office UI Fabric React components for actual rendering and just pass the needed properties.  
 
-  ```ts
+  ```typescript
   class ColorPickerDialogContent extends React.Component<IColorPickerDialogContentProps, {}> {
     private _pickedColor: string;
 
@@ -160,7 +160,7 @@ In the extension manifest, configure the extension to have only one button. In t
 
 5. Add the following class definition for your custom dialog box under the `ColorPickerDialogContent` class that you just added. This is the actual custom dialog box that is called from the ListView Command Set button click and is inherited from the `BaseDialog`.
 
-  ```ts
+  ```typescript
   export default class ColorPickerDialog extends BaseDialog {
     public message: string;
     public colorCode: string;
@@ -196,13 +196,13 @@ To associate the custom dialog box with your custom ListView Command Set, add th
 
 2. Add the following import statements under the existing **strings** import. These are for using the custom dialog box in the context of your ListView Command Set. 
 
-  ```ts
+  ```typescript
   import ColorPickerDialog from './ColorPickerDialog';
   ```
 
 3. Add the following `_colorCode` variable definition above the `onInit` function in the `DialogDemoCommandSet` class. This is used to store the color picker dialog box result.
 
-  ```ts
+  ```typescript
     private _colorCode: string;
   ```
 
@@ -215,7 +215,7 @@ To associate the custom dialog box with your custom ListView Command Set, add th
   * Receives and stores the return value from the dialog box.
   * Shows the received value in a default dialog box by using the `Dialog.alert()` function.
 
-  ```ts
+  ```typescript
     @override
     public onExecute(event: IListViewCommandSetExecuteEventParameters): void {
       switch (event.itemId) {
