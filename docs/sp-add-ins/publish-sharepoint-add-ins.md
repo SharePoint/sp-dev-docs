@@ -34,7 +34,8 @@ If you're creating SharePoint Add-ins for your own company's use or a specific c
 
 Uploading a SharePoint Add-in to a corporate add-in catalog is as easy as uploading any file to a SharePoint document library. You fill out a pop-up form in which you supply the local URL of the add-in package and other information, such as the name of the add-in. When you upload the add-in to an add-in catalog, there are similar checks, and add-ins that do not pass are marked as invalid or disabled in the catalog.
 
-(deciding-where-to-publish)
+<a name="deciding-where-to-publish"> </a>
+
 ## Deciding where to publish your SharePoint Add-in
 
 The following table offers a comparison of publishing to AppSource or to an add-in catalog, and lists issues to consider when deciding where to publish your add-in. We recommend you decide where you plan to publish your add-in before you design and develop it; in some cases, such as licensing, where you publish your add-in will affect the design and development of your add-in.
@@ -59,4 +60,4 @@ The following table offers a comparison of publishing to AppSource or to an add-
 -  [Deploying and installing SharePoint Add-ins: methods and options](deploying-and-installing-sharepoint-add-ins-methods-and-options.md)
 -  [Tenancies and deployment scopes for SharePoint Add-ins](tenancies-and-deployment-scopes-for-sharepoint-add-ins.md)
 -  [Publish SharePoint Add-ins by using Visual Studio](publish-sharepoint-add-ins-by-using-visual-studio.md)
--  [Sbumit your solutions to AppSource](https://docs.microsoft.com/en-us/office/dev/store/submit-to-the-office-store)
+-  [Submit your solutions to AppSource](https://docs.microsoft.com/en-us/office/dev/store/submit-to-the-office-store)
