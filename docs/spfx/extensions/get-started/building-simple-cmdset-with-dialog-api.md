@@ -221,7 +221,7 @@ The default solution takes advantage of a new Dialog API, which can be used to s
     ```typescript
       @override
       public onExecute(event: IListViewCommandSetExecuteEventParameters): void {
-        switch (event.commandId) {
+        switch (event.itemId) {
           case 'COMMAND_1':
             Dialog.alert(`Clicked ${strings.Command1}`);
             break;
