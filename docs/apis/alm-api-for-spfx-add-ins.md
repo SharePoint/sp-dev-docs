@@ -249,21 +249,21 @@ spo app remove --id <app id>
 
 
 ### Use apps on your site
-After the app is added to the app catalog and published, you can continue with installing the app to your site. You can do this by using the [install](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-install/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
+After the app is added to the app catalog and published, you can install the app to your site by using the [install](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-install/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
 
 ```shell
 spo app install --id <app id> --siteUrl <url>
 ```
 
 
-An added app needs be upgraded, which can be achieved by using the [upgrade](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-upgrade/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
+To upgrade the app, use the [upgrade](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-upgrade/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
 
 ```shell
 spo app upgrade --id <app id> --siteUrl <url>
 ```
 
 
-You can uninstall the app from your site by using the [uninstall](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-uninstall/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
+To uninstall the app from your site, use the [uninstall](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-uninstall/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
 
 ```shell
 spo app uninstall --id <app id> --siteUrl <url>
