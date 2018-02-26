@@ -111,7 +111,7 @@ If your Application Customizer uses the **ClientSideComponentProperties** JSON i
 
 ## Debug your Application Customizer
 
-You cannot currently use the local Workbench to test SharePoint Framework Extensions. You need to test them against a live SharePoint Online site. You don't have to deploy your customization to the App Catalog to do this, which makes the debugging experience simple and efficient. 
+You cannot currently use the local Workbench to test SharePoint Framework Extensions. You need to test them against a live SharePoint Online site. You don't have to deploy your customization to the app catalog to do this, which makes the debugging experience simple and efficient. 
 
 1. Compile your code and host the compiled files from your local computer by running the following command:
 
@@ -138,7 +138,7 @@ You cannot currently use the local Workbench to test SharePoint Framework Extens
 
     * **loadSPFX=true**. Ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework does not load unless at least one extension is registered. Because no components are registered, you must explicitly load the framework.
 
-    * **debugManifestsFile**. Specifies that you want to load SPFx components that are locally served. The loader only looks for components in the App Catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
+    * **debugManifestsFile**. Specifies that you want to load SPFx components that are locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
 
     * **customActions**. Simulates a custom action. When you deploy and register this component in a site, you'll create this **CustomAction** object and describe all the different properties you can set on it. 
         * **Key**. Use the GUID of the extension as the key to associate with the custom action. This has to match the ID value of your extension, which is available in the extension manifest.json file.

@@ -15,7 +15,7 @@ The first release of the SharePoint Framework contained only support for client-
 - [Tenant properties](./tenant-properties.md)
 - [Application Lifecycle Management (ALM) APIs for SPFx solutions and add-ins](../apis/alm-api-for-spfx-add-ins.md)
 - [Office UI Fabric Core support](https://dev.office.com/blogs/improved-support-for-office-ui-fabric-core)
-- [Asset packaging and site collection App Catalog](../general-development/site-collection-app-catalog.md)
+- [Asset packaging and site collection app catalog](../general-development/site-collection-app-catalog.md)
 
 
 > [!NOTE]
@@ -66,7 +66,7 @@ The following sections list older items that have already shipped.
 ### ALM REST APIs
 
 - ALM REST APIs. Deploy, activate, delete, and upgrade apps and add-ins.
-- ALM REST APIs targeted to support *everything* in the App Catalog, including add-ins.
+- ALM REST APIs targeted to support *everything* in the app catalog, including add-ins.
 - CSOM and PowerShell cmdlets released as an open source community initiative.
 
 ### JavaScript embedding support (JSLink, User Custom Actions) 
@@ -74,7 +74,7 @@ The following sections list older items that have already shipped.
 - The same toolchain and deployment model as client-side web parts.
 - Derive from a strongly typed base class wherever possible, rather than manipulating the page DOM directly.
 - Enable modern extension usage with modern experiences similar to Custom Actions and JSLink in classic experience.
-- Work with NoScript via tenant App Catalog.
+- Work with NoScript via tenant app catalog.
 
 ### On-premises support - Sharepoint 2016 Feature Pack 2
 

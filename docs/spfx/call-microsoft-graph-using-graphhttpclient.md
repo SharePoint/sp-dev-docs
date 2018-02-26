@@ -1,8 +1,16 @@
-# Use GraphHttpClient to call Microsoft Graph
-> [!IMPORTANT]
->The **GraphHttpClient** is currently in preview and is subject to change. It is not currently supported for use in production environments.
+---
+title: Tutorial - Use GraphHttpClient to call Microsoft Graph
+description: Use the GraphHttpClient class to make calls to the Microsoft Graph REST API by using the get(), post(), and fetch() methods.
+ms.date: 02/02/2018
+ms.prod: sharepoint
+---
 
-Use the **GraphHttpClient** class to make calls to the Microsoft Graph REST API. You can make GET, POST, and PATCH requests using the **get()**, **post()**, and **fetch()** methods. This article shows how to build a web part that uses **GraphHttpClient**, but you can use **GraphHttpClient** in any SharePoint Framework client code.
+# Use GraphHttpClient to call Microsoft Graph
+
+> [!IMPORTANT]
+> The **GraphHttpClient** has been **deprecated** and should no longer be used. It has been replaced with [MSGraphClient](use-msgraph.md)
+
+Use the **GraphHttpClient** class to make calls to the Microsoft Graph REST API. You can make GET, POST, and PATCH requests by using the **get()**, **post()**, and **fetch()** methods. This article shows how to build a web part that uses **GraphHttpClient**, but you can use **GraphHttpClient** in any SharePoint Framework client code.
 
 ## Retrieve Office 365 groups using a GET call
 
@@ -36,11 +44,11 @@ You can use the **get()** method to make a REST call to Microsoft Graph. This ex
   * Select **Web Part** as the type of client-side component to create.
   * Enter **HelloGraph** as your web part name.
   * Enter **Calls the Microsoft Graph Groups API** as the web part description.
-  * Accept the default **No javascript web framework** as the framework, and choose Enter.
+  * Accept the default **No javascript web framework** as the framework, and select Enter.
 
   ![GraphHttpClient values to enter at command line](../images/graphhttpclient-web-part-create.jpg)
 
-5. The Yeoman generator will build the web part. When the scaffolding is finished, open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor that you prefer.
+5. The Yeoman generator builds the web part. When the scaffolding is finished, open your project folder in your code editor. This article uses Visual Studio Code in the steps and screenshots, but you can use any editor that you prefer.
 
 6. Run the gulp serve command and confirm that it runs in the local workbench correctly.
 
@@ -49,13 +57,14 @@ You can use the **get()** method to make a REST call to Microsoft Graph. This ex
   ```
 
 ### Add a button and placeholder for results
+
 Next, you'll modify the HTML to provide a button to retrieve Office 365 groups. The HTML also needs a placeholder to display the groups.
 
 1. In your code editor, open the **/src/webparts/helloGraph/HelloGraphWebPart.ts** file.
 
-2. Modify the **render()** method so that it contains a button and a **div** where the code will list the Office 365 groups after they are retrieved.
+2. Modify the **render()** method so that it contains a button and a **div** where the code lists the Office 365 groups after they are retrieved.
 
-  Your code should look like the following TypeScript.
+  Your code should look like the following TypeScript:
 
   ```typescript
     public render(): void {
@@ -96,6 +105,7 @@ Next, you'll modify the HTML to provide a button to retrieve Office 365 groups. 
   ```
 
 ### Use the GraphHttpClient.get method to retrieve Office 365 groups
+
 Next, you'll call the **GraphHttpClient.get()** method to make a REST call to Microsoft Graph to retrieve a list of Office 365 groups.
 
 1. Import the **GraphHttpClient** class and related types by adding the following import statement near the top of the **HelloGraphWebPart.ts** file.
@@ -122,13 +132,13 @@ Next, you'll call the **GraphHttpClient.get()** method to make a REST call to Mi
   }
   ```
 
-  In the previous code, the context property has the GraphHttpClient instance. When you call the **get()** method, a REST call is made to Microsoft Graph that passes the specified URL. In this case, the URL is **v1.0/groups?orderby=displayName**. This issues a GET request and Microsoft Graph will return all Office 365 groups in the tenant in order by display name.
+  In the previous code, the context property has the GraphHttpClient instance. When you call the **get()** method, a REST call is made to Microsoft Graph that passes the specified URL. In this case, the URL is **v1.0/groups?orderby=displayName**. This issues a GET request, and Microsoft Graph returns all Office 365 groups in the tenant in order by display name.
 
-  You can issue any GET request by using this technique and entering the correct URL values. To find the URL values, see the [Microsoft Graph documentation](https://developer.microsoft.com/en-us/graph/docs/concepts/overview). For example, you can use URL specified in the [Groups GET request](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/api/group_get) topic to get groups. 
+  You can issue any GET request by using this technique and entering the correct URL values. To find the URL values, see the [Microsoft Graph documentation](https://developer.microsoft.com/en-us/graph/docs/concepts/overview). For example, you can use the URL specified in the [Groups GET request](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/api/group_get) topic to get groups. 
 
-  The **get()** method returns an **HttpClientResponse**, which you can use to determine whether the call was successful. The returned JSON is in the **result.value**. Because you expect multiple groups to be returned, you will pass the value to a **_renderTable()** method, which will build a table of rows for each group.
+  The **get()** method returns an **HttpClientResponse**, which you can use to determine whether the call was successful. The returned JSON is in the **result.value**. Because you expect multiple groups to be returned, you pass the value to a **_renderTable()** method, which builds a table of rows for each group.
 
-3. Create a **_renderTable()** method to render the returned groups in a table where each row represent a group. Add the following method to the **HelloGraphWebPart** class.
+3. Create a **_renderTable()** method to render the returned groups in a table where each row represents a group. Add the following method to the **HelloGraphWebPart** class.
 
   ```typescript
   protected _renderTable(items: IOffice365Group[]): void {
@@ -159,6 +169,7 @@ Next, you'll call the **GraphHttpClient.get()** method to make a REST call to Mi
   ```
 
 ### Run the web part to call Microsoft Graph
+
 The code needs to call the **GraphHttpClient** application that runs on SharePoint, so you can't run it on the local workbench. You have to package and deploy it to SharePoint.
 
 1. Use gulp to package your solution.
@@ -168,9 +179,9 @@ The code needs to call the **GraphHttpClient** application that runs on SharePoi
   ```
 
 2. Deploy the solution to your SharePoint tenant:
-  * Go to your site's App Catalog.
-  * Upload or drag and drop the **hellograph-webpart.sppkg** to the App Catalog.
-  * When prompted, if you trust the **hellograph-webpart-client-side-solution**, select **Make this solution available to all sites in the organization**, and choose **Deploy**.
+  * Go to your site's app catalog.
+  * Upload or drag and drop the **hellograph-webpart.sppkg** to the app catalog.
+  * When prompted, if you trust the **hellograph-webpart-client-side-solution**, select **Make this solution available to all sites in the organization**, and select **Deploy**.
 
 3. Use gulp serve to host the web part.
 
@@ -178,12 +189,13 @@ The code needs to call the **GraphHttpClient** application that runs on SharePoi
   gulp serve --nobrowser
   ```
 
-4. Add the web part to a web page, or use the SharePoint workbench.
+4. Add the web part to a web page, or use the SharePoint Workbench.
 
   You should see the following on your page.
+
   ![GraphHttpClient web part showing read groups button and one group listed in a table](../images/graphhttpclient-read-groups-display.jpg)
 
-  When you choose **Read Groups**, you will see a list of all the Office 365 groups on your tenant. If no groups are listed, you'll just see a message that indicates that there were no groups. You will create a new group next.
+  When you select **Read Groups**, you see a list of all the Office 365 groups on your tenant. If no groups are listed, you'll just see a message that indicates that there were no groups. You will create a new group next.
 
 ## Create a new Office 365 group using a POST call
 
@@ -191,13 +203,14 @@ You can issue POST calls to the Microsoft Graph API by using the **GraphHttpClie
 
 
 ### Add a button and placeholder for results
-Again, you need to modify the HTML to add a button that will create a new group.
+
+Again, you need to modify the HTML to add a button that creates a new group.
 
 1. In your code editor, open the **/src/webparts/helloGraph/HelloGraphWebPart.ts** file.
 
-2. Modify the **render()** method so that it contains a button and a **div** that will indicate whether the creation was successful.
+2. Modify the **render()** method so that it contains a button and a **div** that indicates whether the creation was successful.
 
-  Your code should look like the following TypeScript.
+  Your code should look like the following TypeScript:
 
   ```typescript
     public render(): void {
@@ -254,7 +267,7 @@ Again, you need to modify the HTML to add a button that will create a new group.
     }
   ```
 
-  The previous code creates a simple group using the code example from the Microsoft Graph [Create group](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/api/group_post_groups) article.
+  The previous code creates a simple group by using the code example from the Microsoft Graph [Create group](https://developer.microsoft.com/en-us/graph/docs/api-reference/v1.0/api/group_post_groups) article.
 
   The **post()** issues a POST REST API call to the **v1.0/groups** URL. The third parameter is an **IGraphHttpClientOptions** value in which the JSON body is specified to describe the new group. The **HttpClientResponse** is used to determine whether the call was successful, and to display an appropriate result.
 
@@ -269,10 +282,10 @@ Again, you need to modify the HTML to add a button that will create a new group.
   ```
 
 2. Deploy the solution to your SharePoint tenant:
-  * Go to your site's App Catalog.
-  * Upload or drag and drop the **hellograph-webpart.sppkg** to the App Catalog.
-  * Because your solution is already registered, you'll be prompted as to whether you want to replace it. Choose **Replace it**.
-  * When prompted as to whether you trust the solution, choose **Deploy**.
+  * Go to your site's app catalog.
+  * Upload or drag and drop the **hellograph-webpart.sppkg** to the app catalog.
+  * Because your solution is already registered, you are prompted as to whether you want to replace it. Select **Replace it**.
+  * When prompted as to whether you trust the solution, select **Deploy**.
 
 3. Use gulp serve to host the web part.
 
@@ -280,15 +293,16 @@ Again, you need to modify the HTML to add a button that will create a new group.
   gulp serve --nobrowser
   ```
 
-4. Add the web part to a web page, or use the SharePoint workbench.
+4. Add the web part to a web page, or use the SharePoint Workbench.
 
   You should see the following on your page.
+
   ![GraphHttpClient web part with create group button indicating group was created successfully](../images/graphhttpclient-group-created.jpg)
 
-5. When you choose **Create New Group**, the code will create a new Office 365 group. 
+5. When you select **Create New Group**, the code creates a new Office 365 group. 
 
   > [!NOTE] 
-  >If you try to create the same group again, the code will return an error because the group already exists. The error is logged to the console, which you can view in the browser's developer mode.
+  > If you try to create the same group again, the code returns an error because the group already exists. The error is logged to the console, which you can view in the browser's developer mode.
 
 ## Update a group using a PATCH call
 
@@ -316,3 +330,7 @@ The following code shows how to call the **fetch()** method to update an existin
 ```
 
 The ID of the group is specified in the URL. Get the ID by using a GET call first. The **method** parameter is set to **PATCH**. The body specifies which group properties to modify.
+
+## See also
+
+- [Overview of the GraphHttpClient class](overview-graphhttpclient.md)

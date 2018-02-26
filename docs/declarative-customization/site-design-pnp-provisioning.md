@@ -6,9 +6,6 @@ ms.date: 01/08/2018
 
 # Calling the PnP provisioning engine from a site script
 
-> [!NOTE]
-> Site designs and site scripts are currently in preview and are subject to change. They are not currently supported for use in production environments.
-
 Site designs offer a great way to standardize the look and feel of your site collections. You can't do some things with site designs, however, like add a footer to every page. You can use the PnP provisioning engine to create a template that you can use to provision an Application Customizer to a site. This Application Customizer can then update your page design, for example to register a footer on every page. 
 
 This article describes how to create a site design that applies a PnP provisioning template to a site. The template will add an Application Customizer to render a footer.
@@ -126,7 +123,7 @@ To test your flow, you have to make a POST request. You can do this via PowerShe
 
 ```powershell
 $uri = "[the URI you copied in step 14 when creating the flow]"
-$body = "{webUrl:'somesiteurl'}
+$body = "{webUrl:'somesiteurl'}"
 Invoke-RestMethod -Uri $uri -Method Post -ContentType "application/json" -Body $body
 ```
 

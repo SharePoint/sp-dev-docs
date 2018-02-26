@@ -93,7 +93,7 @@ Open the **HelloWorldFieldCustomizer.ts** file in the **src\extensions\helloWorl
 
 Notice that the base class for the Field Customizer is imported from the **sp-listview-extensibility** package, which contains SharePoint Framework code required by the Field Customizer.
 
-```ts
+```typescript
 import { Log } from '@microsoft/sp-core-library';
 import { override } from '@microsoft/decorators';
 import {
@@ -110,7 +110,7 @@ The logic for your Field Customizer is contained in the **OnInit()**, **onRender
 
 The following are the contents of **onRenderCell()** and **onDisposeCell()** in the default solution:
 
-```ts
+```typescript
 @override
   public onRenderCell(event: IFieldCustomizerCellEventParameters): void {
     // Use this method to perform your custom cell rendering.
@@ -132,7 +132,7 @@ The following are the contents of **onRenderCell()** and **onDisposeCell()** in 
 
 ## Debug your Field Customizer
 
-You cannot currently use the local Workbench to test SharePoint Framework Extensions. You need to test and develop them directly against a live SharePoint Online site. You don't have to deploy your customization to the App Catalog to do this, which makes the debugging experience simple and efficient.
+You cannot currently use the local Workbench to test SharePoint Framework Extensions. You need to test and develop them directly against a live SharePoint Online site. You don't have to deploy your customization to the app catalog to do this, which makes the debugging experience simple and efficient.
 
 1. Compile your code and host the compiled files from the local machine by running this command:
     
@@ -198,7 +198,7 @@ You cannot currently use the local Workbench to test SharePoint Framework Extens
 ### More details about the URL query parameters
 
 - **loadSPFX=true** ensures that the SharePoint Framework is loaded on the page. For performance reasons, the framework is not normally loaded unless at least one extension is registered. Because no components are registered yet, we must explicitly load the framework.
-- **debugManifestsFile** specifies that you want to load SPFx components that are locally served. The loader only looks for components in the App Catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
+- **debugManifestsFile** specifies that you want to load SPFx components that are locally served. The loader only looks for components in the app catalog (for your deployed solution) and the SharePoint manifest server (for the system libraries).
 - **fieldCustomizers** indicates which fields in your list should have their rendering controlled by the Field Customizer. The ID parameter specifies the GUID of the extension that should be used to control the rendering of the field. The properties parameter is an optional text string containing a JSON object that is deserialized into `this.properties` for your extension.
     - **Key**: Use the internal name of the field as the key.
     - **Id**: The GUID of the Field Customizer extension associated with this field.
@@ -227,7 +227,7 @@ Now that we have successfully tested the out-of-the-box starting point of the Fi
     
 2. Open the **HelloWorldFieldCustomizer.ts** file in the **src\extensions\helloWorld** folder, and update the **onRednerCell** method as follows.
 
-    ```ts
+    ```typescript
         @override
         public onRenderCell(event: IFieldCustomizerCellEventParameters): void {
 
@@ -268,7 +268,7 @@ Now that we have tested our solution properly in debug mode, we can package this
 1. Install the solution package to the site where it should be installed, so that the extension manifest is white listed for execution.
 
 2. Associate the Field Customizer to an existing field in the site. You can do this programmatically (CSOM/REST) or by using the feature framework inside of the SharePoint Framework solution package. You need to associate the following properties in the `SPField` object at the site or list level.
-    - **ClientSiteComponentId** is the identifier (GUID) of the Field Customizer, which has been installed in the App Catalog.
+    - **ClientSiteComponentId** is the identifier (GUID) of the Field Customizer, which has been installed in the app catalog.
     - **ClientSideComponentProperties** is an optional parameter, which can be used to provide properties for the Field Customizer instance.
 
     Note that you can control the requirement to add a solution containing your extension to the site by using the `skipFeatureDeployment` setting in **package-solution.json**. Even though you would not require the solution to be installed on the site, you'd need to associate **ClientSideComponentId** to specific objects for the extension to be visible.
@@ -361,9 +361,9 @@ Now you are ready to deploy the solution to a SharePoint site and get the field 
     field-extension.sppkg
     ```
 
-3. You now need to deploy the package that was generated to the App Catalog. To do this, go to your tenant's **App Catalog** and open the **Apps for SharePoint** library.
+3. You now need to deploy the package that was generated to the app catalog. To do this, go to your tenant's **app catalog** and open the **Apps for SharePoint** library.
 
-4. Upload or drag-and-drop the `field-extension.sppkg` located in the **sharepoint/solution** folder to the App Catalog. SharePoint displays a dialog and asks you to trust the client-side solution.
+4. Upload or drag-and-drop the `field-extension.sppkg` located in the **sharepoint/solution** folder to the app catalog. SharePoint displays a dialog and asks you to trust the client-side solution.
 
     Note that we did not update the URLs for hosting the solution for this deployment, so the URL is still pointing to `https://localhost:4321`. 
     

@@ -76,7 +76,7 @@ Conceptually, the hierarchy of SharePoint objects is expressed in terms of conta
 ## add-ins for SharePoint
 <a name="sectionSection3"> </a>
 
-add-ins for SharePoint are lightweight solutions that don't install on the SharePoint host server, which means they don't make excessive API calls to the host server. You can build add-ins for SharePoint by using the Cloud Add-in Model. Users can discover and download add-ins from the Office Store or from the enterprise's App Catalog. For more information, see  [Overview of add-ins for SharePoint](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70.aspx). 
+add-ins for SharePoint are lightweight solutions that don't install on the SharePoint host server, which means they don't make excessive API calls to the host server. You can build add-ins for SharePoint by using the Cloud Add-in Model. Users can discover and download add-ins from the Office Store or from the enterprise's app catalog. For more information, see  [Overview of add-ins for SharePoint](http://msdn.microsoft.com/library/cd1eda9e-8e54-4223-93a9-a6ea0d18df70.aspx). 
 
 ## File system and content databases, and how they work together
 <a name="sectionSection4"> </a>

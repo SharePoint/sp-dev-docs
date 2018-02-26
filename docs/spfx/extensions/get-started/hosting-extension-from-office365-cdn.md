@@ -101,9 +101,9 @@ Office 365 CDN is the easiest way to host SharePoint Framework solutions directl
     gulp package-solution --ship
     ```
     
-6. Upload or drag-and-drop the newly created client-side solution package to the App Catalog in your tenant, and then select the **Deploy** button.
+6. Upload or drag-and-drop the newly created client-side solution package to the app catalog in your tenant, and then select the **Deploy** button.
 
-    ![App Catalog Trust Dialog with path to CDN endpoint](../../../images/ext-app-approve-cdn-address.png)
+    ![app catalog Trust Dialog with path to CDN endpoint](../../../images/ext-app-approve-cdn-address.png)
 
 7. Upload or drag-and-drop the files in the **temp/deploy** folder to the **CDN/helloworld** folder created earlier.
 

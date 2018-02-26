@@ -75,7 +75,7 @@ You can also follow these steps by watching this video on the [SharePoint PnP Yo
 
   As you can see, the `render` method creates a react element and renders it in the web part DOM.
 
-  ```ts
+  ```typescript
     public render(): void {
       const element: React.ReactElement<IDocumentCardExampleProps > = React.createElement(
         DocumentCardExample,
@@ -128,7 +128,7 @@ Because we chose React as our framework when creating the solution, the generato
 
 2. Add the following `import` statement to the top of the file to import Fabric React components that we want to use.
 
-  ```ts
+  ```typescript
   import {
     DocumentCard,
     DocumentCardPreview,
@@ -140,7 +140,7 @@ Because we chose React as our framework when creating the solution, the generato
 
 3. Delete the current `render` method, and add the following updated `render` method:
 
-  ```ts
+  ```typescript
     public render(): JSX.Element {
       const previewProps: IDocumentCardPreviewProps = {
         previewImages: [

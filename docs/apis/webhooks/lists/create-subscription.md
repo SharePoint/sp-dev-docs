@@ -1,6 +1,7 @@
 ---
-title: Create a new subscription 
-ms.date: 09/25/2017
+title: Create a new subscription
+description: Creates a new webhook subscription on a SharePoint list.
+ms.date: 02/08/2018
 ms.prod: sharepoint
 ---
 
@@ -13,7 +14,7 @@ Creates a new webhook subscription on a SharePoint list.
 
 The application must have at least edit permissions to the SharePoint list where the subscription will be created.
 
-**If your application is a Microsoft Azure Active Directory (AD) application:**
+### If your application is a Microsoft Azure Active Directory (Azure AD) application
 
 You must grant the Azure AD app the permissions specified in the following table:
 
@@ -21,11 +22,11 @@ Application | Permission
 ------------|------------
 Office 365 SharePoint Online|Read and write items and lists in all site collections.
 
-**If your application is a SharePoint add-in:**
+### If your application is a SharePoint Add-in
 
-You must grant the SharePoint add-in the following permission(s) or higher:
+You must grant the SharePoint Add-in the following permission(s) or higher:
 
-Scope | Permission Rights 
+Scope | Permission rights 
 ------|------------
 List|Manage
 
@@ -44,7 +45,7 @@ Name | Type | Description
 resource|string|The URL of the list to receive notifications from.
 notificationUrl|string|The service URL to send notifications to.
 expirationDateTime|date|The date the notification will expire and be deleted.
-client-clientState|string|Optional. Opaque string passed back to the client on all notifications. You can use this for validating notifications, or tagging different subscriptions.
+client-clientState|string|Optional. Opaque string passed back to the client on all notifications.<br/>You can use this for validating notifications or tagging different subscriptions.
 
 
 ### Example
@@ -63,8 +64,7 @@ Content-Type: application/json
 
 ## Response
 
-If the subscription is added, then a `201 Created` response is returned that
-includes the newly created subscription object.
+If the subscription is added, a `201 Created` response is returned that includes the newly created subscription object.
 
 ### Example
 
@@ -82,6 +82,11 @@ Content-Type: application/json
 
 ## URL validation
 
-Before a new subscription is created, SharePoint will send a request with a validation token in the body of the request to the service URL provided. Your service must respond to this request by returning the validation token.
+Before a new subscription is created, SharePoint sends a request with a validation token in the body of the request to the service URL provided. Your service must respond to this request by returning the validation token.
 
-If your service fails to validate the request in this way, the subscription will not be created. See [Overview of SharePoint webhooks](../overview-sharepoint-webhooks.md) for more information.
+If your service fails to validate the request in this way, the subscription is not created.
+
+## See also
+
+- [SharePoint list webhooks](overview-sharepoint-list-webhooks.md)
+- [Overview of SharePoint webhooks](../overview-sharepoint-webhooks.md)

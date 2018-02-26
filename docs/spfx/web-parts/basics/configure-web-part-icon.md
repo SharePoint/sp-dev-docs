@@ -176,3 +176,7 @@ Base64 encoding works for both bitmap images, such as PNG, as well as vector SVG
 Each web part must have an icon. If you specify the web part icon by using both the **officeFabricIconFontName** and the **iconImageUrl** properties, the icon specified in the **officeFabricIconFontName** is used. 
 
 If you choose not to use an Office UI Fabric icon, you have to specify a URL in the **iconImageUrl** property.
+
+## See also
+
+- [SharePoint Framework Overview](../../sharepoint-framework-overview.md)

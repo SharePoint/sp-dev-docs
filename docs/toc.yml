@@ -34,6 +34,8 @@
         href: spfx/web-parts/get-started/deploy-web-part-to-cdn.md
     - name: Basics
       items:
+      - name: Integrate properties with SharePoint
+        href: spfx/web-parts/guidance/integrate-web-part-properties-with-sharepoint.md      
       - name: Configure custom properties
         href: spfx/web-parts/basics/integrate-with-property-pane.md
       - name: Configure web part icon
@@ -42,35 +44,31 @@
         href: spfx/web-parts/guidance/simplify-adding-web-parts-with-preconfigured-entries.md
       - name: Validate properties
         href: spfx/web-parts/guidance/validate-web-part-property-values.md
-    - name: Concepts
-      items:
-      - name: Migrate existing customizations
-        items:
-        - name: Script Editor Web Part
-          href: spfx/web-parts/guidance/migrate-script-editor-web-part-customizations.md
-        - name: jQuery and DataTables
-          href: spfx/web-parts/guidance/migrate-jquery-datatables-script-to-spfx.md
-        - name: jQuery and FullCalendar
-          href: spfx/web-parts/guidance/migrate-jquery-fullcalendar-script-to-spfx.md
-        - name: AngularJS applications
-          href: spfx/web-parts/guidance/migrate-angular-1-x-applications-to-sharepoint-framework.md
-        - name: Work with __REQUESTDIGEST
-          href: spfx/web-parts/basics/working-with-requestdigest.md
-        - name: Use JSOM
-          href: spfx/web-parts/guidance/connect-to-sharepoint-using-jsom.md          
       - name: Share data between web parts
         href: spfx/web-parts/guidance/share-data-between-web-parts.md
         items:
         - name: Tutorial
           href: spfx/web-parts/guidance/tutorial-share-data-between-web-parts-global-variable.md
-      - name: Integrate properties with SharePoint
-        href: spfx/web-parts/guidance/integrate-web-part-properties-with-sharepoint.md
       - name: Extend property pane
         items:
         - name: Build custom controls
           href: spfx/web-parts/guidance/build-custom-property-pane-controls.md
         - name: Use cascading dropdowns
-          href: spfx/web-parts/guidance/use-cascading-dropdowns-in-web-part-properties.md
+          href: spfx/web-parts/guidance/use-cascading-dropdowns-in-web-part-properties.md        
+    - name: Migrate existing customizations
+      items:
+      - name: Script Editor Web Part
+        href: spfx/web-parts/guidance/migrate-script-editor-web-part-customizations.md
+      - name: jQuery and DataTables
+        href: spfx/web-parts/guidance/migrate-jquery-datatables-script-to-spfx.md
+      - name: jQuery and FullCalendar
+        href: spfx/web-parts/guidance/migrate-jquery-fullcalendar-script-to-spfx.md
+      - name: AngularJS applications
+        href: spfx/web-parts/guidance/migrate-angular-1-x-applications-to-sharepoint-framework.md
+      - name: Work with __REQUESTDIGEST
+        href: spfx/web-parts/basics/working-with-requestdigest.md
+      - name: Use JSOM
+        href: spfx/web-parts/guidance/connect-to-sharepoint-using-jsom.md          
   - name: Extensions
     href: spfx/extensions/overview-extensions.md
     items:
@@ -85,12 +83,12 @@
         href: spfx/extensions/get-started/serving-your-extension-from-sharepoint.md
       - name: Host extension from CDN
         href: spfx/extensions/get-started/hosting-extension-from-office365-cdn.md
+      - name: Configure extension icon
+        href: spfx/extensions/basics/configure-extension-icon.md        
       - name: Build Field Customizer
         href: spfx/extensions/get-started/building-simple-field-customizer.md
       - name: Build ListView Command Set
         href: spfx/extensions/get-started/building-simple-cmdset-with-dialog-api.md
-    - name: Configure extension icon
-      href: spfx/extensions/basics/configure-extension-icon.md
     - name: Migrate existing customizations
       items:
       - name: Client Side Rendering (JSLink)
@@ -103,61 +101,66 @@
         href: spfx/extensions/guidance/migrate-from-jslink-to-spfx-extensions.md
       - name: JavaScript embedding (UserCustomAction) tutorial
         href: spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions.md          
-  - name: Concepts
+  - name: Guidance
     items:
-    - name: Guidance
+    - name: Enterprise guidance
+      href: spfx/enterprise-guidance.md
+    - name: Team-based development
+      href: spfx/team-based-development-on-sharepoint-framework.md
+    - name: Governance considerations
+      href: spfx/web-parts/guidance/governance-considerations.md
+  - name: External libraries
+    items:
+    - name: Add external libraries
+      href: spfx/web-parts/basics/add-an-external-library.md
+    - name: JavaScript libraries
+      href: spfx/web-parts/guidance/use-existing-javascript-libraries.md
+    - name: CSS styles
+      href: spfx/web-parts/guidance/reference-third-party-css-styles.md
+    - name: SP PnP JS
+      href: spfx/web-parts/guidance/use-sp-pnp-js-with-spfx-web-parts.md
+    - name: AngularJS
+      href: spfx/web-parts/guidance/build-client-side-web-parts-with-angular-1-x.md
+  - name: Connect to APIs
+    items:
+    - name: Connect to APIs secured with Azure AD
+      href: spfx/web-parts/guidance/connect-to-api-secured-with-aad.md
+    - name: Call the Microsoft Graph API using OAuth
+      href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md
+    - name: Connect to Azure AD-secured APIs
+      href: spfx/use-aadhttpclient.md    
+    - name: Microsoft Graph 
+      href: spfx/use-msgraph.md
       items:
-      - name: Enterprise guidance
-        href: spfx/enterprise-guidance.md
-      - name: Team-based development
-        href: spfx/team-based-development-on-sharepoint-framework.md
-      - name: Governance considerations
-        href: spfx/web-parts/guidance/governance-considerations.md
-    - name: External libraries
+      - name: Consuming APIs secured with Azure AD
+        href: spfx/use-aad-tutorial.md        
+    - name: Microsoft GraphHttpClient (Deprecated)
+      href: spfx/overview-graphhttpclient.md
       items:
-      - name: Add external libraries
-        href: spfx/web-parts/basics/add-an-external-library.md
-      - name: JavaScript libraries
-        href: spfx/web-parts/guidance/use-existing-javascript-libraries.md
-      - name: CSS styles
-        href: spfx/web-parts/guidance/reference-third-party-css-styles.md
-      - name: SP PnP JS
-        href: spfx/web-parts/guidance/use-sp-pnp-js-with-spfx-web-parts.md
-      - name: AngularJS
-        href: spfx/web-parts/guidance/build-client-side-web-parts-with-angular-1-x.md
-    - name: Connect to APIs
-      items:
-      - name: Connect to APIs secured with Azure AD
-        href: spfx/web-parts/guidance/connect-to-api-secured-with-aad.md
-      - name: Call the Microsoft Graph API using OAuth
-        href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md
-      - name: Microsoft Graph
-        href: spfx/overview-graphhttpclient.md
-        items:
-        - name: Tutorial
-          href: spfx/call-microsoft-graph-using-graphhttpclient.md          
-    - name: Setup and deployment
-      items:
-      - name: Package solution
-        href: spfx/web-parts/basics/notes-on-solution-packaging.md
-      - name: Custom build tasks
-        href: spfx/toolchain/integrate-gulp-tasks-in-build-pipeline.md
-      - name: Bundling
-        href: spfx/toolchain/extending-webpack-in-build-pipeline.md
-      - name: Update SharePoint Framework packages
-        href: spfx/toolchain/update-latest-packages.md
-      - name: Tenant-scoped deployment
-        href: spfx/tenant-scoped-deployment.md
-      - name: SharePoint 2016 support
-        href: spfx/sharepoint-2016-support.md
-      - name: Provision SharePoint assets
-        href: spfx/toolchain/provision-sharepoint-assets.md
+      - name: Tutorial (Deprecated)
+        href: spfx/call-microsoft-graph-using-graphhttpclient.md          
+  - name: Setup and deployment
+    items:
+    - name: Package solution
+      href: spfx/web-parts/basics/notes-on-solution-packaging.md
+    - name: Custom build tasks
+      href: spfx/toolchain/integrate-gulp-tasks-in-build-pipeline.md
+    - name: Extend Webpack
+      href: spfx/toolchain/extending-webpack-in-build-pipeline.md
+    - name: Update packages
+      href: spfx/toolchain/update-latest-packages.md
+    - name: Tenant-scoped solution deployment
+      href: spfx/tenant-scoped-deployment.md
+    - name: Tenant properties
+      href: spfx/tenant-properties.md         
+    - name: Provision SharePoint assets
+      href: spfx/toolchain/provision-sharepoint-assets.md
     - name: Optimize builds for production
       href: spfx/toolchain/optimize-builds-for-production.md        
-    - name: Localization
-      href: spfx/web-parts/guidance/localize-web-parts.md
-    - name: Tenant properties
-      href: spfx/tenant-properties.md        
+    - name: Localize web parts
+      href: spfx/web-parts/guidance/localize-web-parts.md 
+    - name: SharePoint 2016 support
+      href: spfx/sharepoint-2016-support.md        
   - name: Design
     href: design/design-guidance-overview.md
     items:
@@ -204,7 +207,7 @@
   - name: Roadmap
     href: spfx/roadmap.md
   - name: Known issues and FAQ
-    href: spfx/known-issues-and-common-questions.md
+    href: spfx/known-issues-and-common-questions.md 
 - name: Declarative customization
   items:
   - name: Site theming
@@ -240,55 +243,29 @@
       href: declarative-customization/site-design-pnp-provisioning.md
 - name: SharePoint APIs
   items:
-  - name: Create Communication sites
+  - name: Create Communication site
     href: apis/communication-site-creation-rest.md
   - name: Application Lifecycle Management (ALM) APIs
     href: apis/alm-api-for-spfx-add-ins.md    
-  - name: REST
-    items:
-    - name: SharePoint REST service
-      href: apis/rest/get-to-know-the-sharepoint-rest-service.md
-    - name: Basic operations
-      href: apis/rest/complete-basic-operations-using-sharepoint-rest-endpoints.md
-    - name: Lists and list items
-      href: apis/rest/working-with-lists-and-list-items-with-rest.md
-    - name: Folders and files
-      href: apis/rest/working-with-folders-and-files-with-rest.md
-    - name: REST endpoint URIs
-      href: apis/rest/determine-sharepoint-rest-service-endpoint-uris.md
-    - name: OData query operations
-      href: apis/rest/use-odata-query-operations-in-sharepoint-rest-requests.md
-    - name: Navigate data structure
-      href: apis/rest/navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md
-    - name: Synchronize items
-      href: apis/rest/synchronize-sharepoint-items-using-the-rest-service.md
-    - name: Upload a file
-      href: apis/rest/upload-a-file-by-using-the-rest-api-and-jquery.md
-    - name: Manage permissions
-      href: apis/rest/set-custom-permissions-on-a-list-by-using-the-rest-interface.md
-    - name: Batch requests
-      href: apis/rest/make-batch-requests-with-the-rest-apis.md
   - name: Webhooks
+    href: apis/webhooks/overview-sharepoint-webhooks.md
     items:
-    - name: Overview
-      href: apis/webhooks/overview-sharepoint-webhooks.md
     - name: Get started
       href: apis/webhooks/get-started-webhooks.md
     - name: Reference implementation
       href: apis/webhooks/webhooks-reference-implementation.md
-    - name: Azure Functions and SharePoint webhooks
+    - name: Use Azure Functions
       href: apis/webhooks/sharepoint-webhooks-using-azure-functions.md
-    - name: SharePoint lists
+    - name: List webhooks
+      href: apis/webhooks/lists/overview-sharepoint-list-webhooks.md
       items:
-      - name: Overview
-        href: apis/webhooks/lists/overview-sharepoint-list-webhooks.md
-      - name: Create a subscription
+      - name: Create subscription
         href: apis/webhooks/lists/create-subscription.md
-      - name: Update a subscription
+      - name: Update subscription
         href: apis/webhooks/lists/update-subscription.md
-      - name: Delete a subscription
+      - name: Delete subscription
         href: apis/webhooks/lists/delete-subscription.md
-      - name: Get subscriptions
+      - name: Get subscription
         href: apis/webhooks/lists/get-subscription.md
 - name: SharePoint development overview
   href: general-development/sharepoint-development-overview.md
@@ -1100,26 +1077,26 @@
     - name: Get to know the SharePoint REST service
       href: sp-add-ins/get-to-know-the-sharepoint-rest-service.md
       items:
-      - name: Complete basic operations using SharePoint REST endpoints
+      - name: Complete basic operations
         href: sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md
-      - name: Working with lists and list items with REST
+      - name: Work with lists and list items
         href: sp-add-ins/working-with-lists-and-list-items-with-rest.md
-      - name: Working with folders and files with REST
+      - name: Work with folders and files
         href: sp-add-ins/working-with-folders-and-files-with-rest.md
-      - name: Determine SharePoint REST service endpoint URIs
+      - name: Determine endpoint URIs
         href: sp-add-ins/determine-sharepoint-rest-service-endpoint-uris.md
-      - name: Use OData query operations in SharePoint REST requests
+      - name: Use OData query operations
         href: sp-add-ins/use-odata-query-operations-in-sharepoint-rest-requests.md
-      - name: Navigate the SharePoint data structure represented in the REST service
+      - name: Navigate data structure
         href: sp-add-ins/navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md
-      - name: Synchronize SharePoint items using the REST service
+      - name: Synchronize items
         href: sp-add-ins/synchronize-sharepoint-items-using-the-rest-service.md
-      - name: Upload a file by using the REST API and jQuery
+      - name: Upload a file
         href: sp-add-ins/upload-a-file-by-using-the-rest-api-and-jquery.md
-      - name: Set custom permissions on a list by using the REST interface
+      - name: Set custom permissions
         href: sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-interface.md
-      - name: Make batch requests with the REST APIs
-        href: sp-add-ins/make-batch-requests-with-the-rest-apis.md
+      - name: Make batch requests
+        href: sp-add-ins/make-batch-requests-with-the-rest-apis.md  
     - name: Create UX components in SharePoint
       href: sp-add-ins/create-ux-components-in-sharepoint.md
       items:
@@ -1258,8 +1235,6 @@
       href: sp-add-ins/set-up-an-on-premises-development-environment-for-sharepoint-add-ins.md
     - name: Create add-ins in Visual Studio
       href: sp-add-ins/create-sharepoint-add-ins-in-visual-studio.md
-    - name: What's new in Office Developer Tools for Visual Studio 2013
-      href: sp-add-ins/what-s-new-in-office-developer-tools-for-visual-studio.md
 - name: Solution guidance
   href: solution-guidance/Office-365-development-patterns-and-practices-solution-guidance.md
   items:
