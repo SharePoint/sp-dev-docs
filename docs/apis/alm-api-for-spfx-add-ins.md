@@ -6,36 +6,40 @@ ms.prod: sharepoint
 ms.assetid: fdf7ecb2-8851-425b-b058-3285fba77b68
 ---
 
-# Application Lifecycle Management (ALM) APIs  
+# Application Lifecycle Management (ALM) APIs
 
 ALM APIs provide simple APIs to manage deployment of your SharePoint Framework solutions and add-ins across your tenant. ALM APIs support the following capabilities:
 
-- Add SharePoint Framework solution or SharePoint Add-in to tenant app catalog.
-- Enable SharePoint Framework solution or SharePoint Add-in to be available for installation in tenant app catalog.
-- Disable SharePoint Framework solution or SharePoint Add-in not to be available for installation in tenant app catalog.
-- Install SharePoint Framework solution or SharePoint Add-in from tenant app catalog to a site.
-- Upgrade SharePoint Framework solution or SharePoint Add-in to a site, which has a newer version available in the tenant app catalog.
-- Uninstall SharePoint Framework solution or SharePoint Add-in from the site.
+- Add SharePoint Framework solution or SharePoint add-in to tenant app catalog
+- Enable SharePoint Framework solution or SharePoint add-in to be available for installation in tenant app catalog
+- Disable SharePoint Framework solution or SharePoint add-in not to be available for installation in tenant app catalog
+- Install SharePoint Framework solution or SharePoint add-in from tenant app catalog to a site
+- Upgrade SharePoint Framework solution or SharePoint add-in to a site, which has a newer version available in the tenant app catalog
+- Uninstall SharePoint Framework solution or SharePoint add-in from the site
+- List all and get details on SharePoint Framework solutions or SharePoint add-ins in the tenant app catalog
 
 ALM APIs can be used to perform exactly the same operations that are available from a UI perspective. When these APIs are used, all typical actions are performed. Following are some of the characteristics of ALM APIs:
 
 - `Install` and `UnInstall` events are being fired for provider-hosted add-ins when corresponding operations occur.
 - ALM APIs support app-only-based operations.
 
-ALM APIs are natively provided by using REST APIs, but there are also additional CSOM extensions and PowerShell cmdlets available through SharePoint Patterns and Practices.
+ALM APIs are natively provided using REST APIs, but there is also additional CSOM extensions, PowerShell cmdlets, and the cross-platform Office 365 CLI available through SharePoint Patterns and Practices.
 
 > [!NOTE] 
 > ALM APIs are not currently supported for the [site collection app catalog](../general-development/site-collection-app-catalog.md). Support will be added in early 2018.
 
 ## REST API
 
-### Add solution packages to the tenant app catalog 
+### Add solution package to tenant app catalog
 
 This API is designed to be executed in the context of the tenant app catalog site.
 
 ```
 url: /_api/web/tenantappcatalog/Add(overwrite=true, url='test.txt')
 method: POST
+Authorization: Bearer <access token>
+X-RequestDigest: <form digest>
+Accept: 'application/json;odata=nometadata'
 binaryStringRequestBody: true
 body: 'byte array of the file'
 ```
@@ -46,6 +50,11 @@ This enables the solution to be available to install to specific sites. This API
 
 ```
 url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Deploy
+method: POST
+Authorization: Bearer <access token>
+X-RequestDigest: <form digest>
+Accept: 'application/json;odata=nometadata'
+Content-Type: 'application/json;odata=nometadata;charset=utf-8'
 ```
 
 > [!NOTE]
@@ -57,6 +66,10 @@ This retracts the solution to be available from the sites. This API is designed 
 
 ```
 url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Retract
+method: POST
+Authorization: Bearer <access token>
+X-RequestDigest: <form digest>
+Accept: 'application/json;odata=nometadata'
 ```
 
 > [!NOTE]
@@ -68,6 +81,9 @@ This API is designed to be executed in the context of the tenant app catalog sit
 
 ```
 url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Remove
+method: POST
+Authorization: Bearer <access token>
+Accept: 'application/json;odata=nometadata'
 ```
 
 > [!NOTE]
@@ -80,6 +96,8 @@ Use this REST API for getting a list of available SharePoint Framework solutions
 ```
 url: /_api/web/tenantappcatalog/AvailableApps
 method: GET
+Authorization: Bearer <access token>
+Accept: 'application/json;odata=nometadata'
 ```
 
 ### Details about individual solution packages in the tenant app catalog
@@ -89,6 +107,8 @@ Use this REST API for getting details about individual SharePoint Framework solu
 ```
 url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')
 method: GET
+Authorization: Bearer <access token>
+Accept: 'application/json;odata=nometadata'
 ```
 
 ### Install solution package from the tenant app catalog to a SharePoint site
@@ -98,6 +118,9 @@ Install a solution package with a specific identifier from the tenant app catalo
 ```
 url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Install
 method: POST
+Authorization: Bearer <access token>
+X-RequestDigest: <form digest>
+Accept: 'application/json;odata=nometadata'
 ```
 
 ### Upgrade solution packages on the SharePoint site
@@ -107,6 +130,9 @@ Upgrade a solution package from the site to a newer version available in the ten
 ```
 url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Upgrade
 method: POST
+Authorization: Bearer <access token>
+X-RequestDigest: <form digest>
+Accept: 'application/json;odata=nometadata'
 ```
 
 ### Uninstall solution packages from the SharePoint site
@@ -116,6 +142,9 @@ This REST call can be executed in the context of the site where the uninstall op
 ```
 url: /_api/web/tenantappcatalog/AvailableApps/GetById('xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxx')/Uninstall
 method: POST
+Authorization: Bearer <access token>
+X-RequestDigest: <form digest>
+Accept: 'application/json;odata=nometadata'
 ```
 > [!NOTE]
 > When you use the REST API to uninstall a solution package from the site, it is not relocated to the recycle bin.
@@ -125,15 +154,14 @@ method: POST
 
 By using [PnP PowerShell](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps), you can automate deploying, publishing, installing, upgrading, and retracting your apps. 
 
-### Add and publish your app to the app catalog
-
-Adding your app (.sppkg file, .app file) to the tenant app catalog is a prerequisite to making your app available for use on your SharePoint sites. You can do so by using the following cmdlet:
+### Adding and publishing your app to the app catalog
+Adding your app (.sppkg file, .app file) to the tenant app catalog is a per-requisite to later on make your app available for use in your SharePoint sites. Doing so can be done using the following simple cmdlet:
 
 ```PowerShell
 Add-PnPApp -Path ./myapp.sppkg
 ```
 
-After you add it, you need to continue with publishing your app, effectively making the app available to the users of your tenant. The following PnP PowerShell cmdlet shows how this can be done:
+Once added you'll need to continue with publishing your app, effectively making the app available to be used by the users of your tenant. The following PnP PowerShell cmdlet show how this can be done:
 
 ```PowerShell
 Publish-PnPApp -Identity <app id> -SkipFeatureDeployment
@@ -169,7 +197,6 @@ To upgrade the app:
 Update-PnPApp -Identity <app id>
 ```
 
-
 To uninstall the app from your site:
 
 ```PowerShell
@@ -190,6 +217,78 @@ You can get a list of apps that can be added to the site by using:
 Get-PnPApp
 ```
 
+## Office 365 CLI commands to add, deploy and Manage SharePoint Apps Cross-Platform
+
+Using the [Office 365 CLI](https://sharepoint.github.io/office365-cli?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) you can automate the deployment, publishing, installing, upgrading and retracting your apps. The Office 365 CLI is a cross-platform command line interface that can be used on any platform, including Windows, MacOS and Linux. Checkout below chapter to learn more about these commands.
+
+### Adding and publishing your app to the app catalog
+Adding your app (.sppkg file, .app file) to the tenant app catalog is a per-requisite to later on make your app available for use in your SharePoint sites. use the [add](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-add/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command to do this:
+
+```shell
+spo app add --filePath ./spfx.sppkg
+```
+
+Once added you'll need to continue with publishing your app, effectively making the app available to be used by the users of your tenant. Use the [deploy](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-deploy/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command to do this:
+
+```shell
+spo app deploy --id <app id> --skipFeatureDeployment
+```
+
+
+> [!NOTE]
+> Use the **SkipFeatureDeployment** flag to allow an app that was developed for tenant wide deployment to be actually available as a tenant wide deployed app.
+
+
+
+### Removing the app from the app catalog
+Obviously you might also want to remove an earlier added app and that can be done using the [remove](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-remove/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
+
+```shell
+spo app remove --id <app id>
+```
+
+
+### Using apps on your site
+Once the app was added to the app catalog and published you can continue with installing the app to your site. Install apps using the command [install](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-install/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs)
+
+```shell
+spo app install --id <app id> --siteUrl <url>
+```
+
+
+An added app also needs be upgraded which can be achieved using the [upgrade](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-upgrade/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command
+
+```shell
+spo app upgrade --id <app id> --siteUrl <url>
+```
+
+
+And you off course also uninstall the app again from your site using the [uninstall](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-uninstall/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
+
+```shell
+spo app uninstall --id <app id> --siteUrl <url>
+```
+
+
+> [!NOTE]
+> When you uninstall an app from your site the app is completely deleted, so it will not end up in the site's recycle bin.
+
+
+### Listing and Getting apps in the app catalog
+You can also see what apps have been added to the app catalog using the [list](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-list/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
+
+```shell
+spo app list
+```
+
+
+And you can also get a single app's details using the [get](https://sharepoint.github.io/office365-cli/cmd/spo/app/app-get/?utm_source=msft_docs&utm_medium=page&utm_campaign=Application+Lifecycle+Management+ALM+APIs) command:
+
+```shell
+spo app get --id <app id>
+```
+
+=======
 ## See also
 
 - [Get to know the SharePoint REST service](../sp-add-ins/get-to-know-the-sharepoint-rest-service.md)
