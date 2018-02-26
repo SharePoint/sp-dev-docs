@@ -6,7 +6,7 @@ ms.date: 12/14/2017
 
 # Site design and site script REST API
 
-You can use the the SharePoint REST interface to perform basic create, read, update, and delete (CRUD) operations on site designs and site scripts.
+You can use the SharePoint REST interface to perform basic create, read, update, and delete (CRUD) operations on site designs and site scripts.
 
 The SharePoint Online (and SharePoint 2016 and later on-premises) REST service supports combining multiple requests into a single call to the service by using the OData $batch query option. For details and links to code samples, see [Make batch requests with the REST APIs](../sp-add-ins/make-batch-requests-with-the-rest-apis.md).
 
