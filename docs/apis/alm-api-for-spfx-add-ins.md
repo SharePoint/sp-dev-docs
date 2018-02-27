@@ -11,6 +11,7 @@ ms.assetid: fdf7ecb2-8851-425b-b058-3285fba77b68
 ALM APIs provide simple APIs to manage deployment of your SharePoint Framework solutions and add-ins across your tenant. ALM APIs support the following capabilities:
 
 - Add SharePoint Framework solution or SharePoint Add-in to tenant app catalog.
+- Remove SharePoint Framework solution or SharePoint Add-in from tenant app catalog.
 - Enable SharePoint Framework solution or SharePoint Add-in to be available for installation in tenant app catalog.
 - Disable SharePoint Framework solution or SharePoint Add-in not to be available for installation in tenant app catalog.
 - Install SharePoint Framework solution or SharePoint Add-in from tenant app catalog to a site.
