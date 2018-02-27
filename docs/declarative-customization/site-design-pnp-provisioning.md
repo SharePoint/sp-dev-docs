@@ -6,7 +6,7 @@ ms.date: 01/08/2018
 
 # Calling the PnP provisioning engine from a site script
 
-Site designs offer a great way to standardize the look and feel of your site collections. You can't do some things with site designs, however, like add a footer to every page. You can use the PnP provisioning engine to create a template that you can use to provision an Application Customizer to a site. This Application Customizer can then update your page design, for example to register a footer on every page. 
+Site designs offer a great way to standardize the look and feel of your site collections. However, you can't do some things with site designs, like add a footer to every page. You can use the PnP provisioning engine to create a template that you can use to provision an Application Customizer to a site. This Application Customizer can then update your page design, for example to register a footer on every page. 
 
 This article describes how to create a site design that applies a PnP provisioning template to a site. The template will add an Application Customizer to render a footer.
 
@@ -232,7 +232,7 @@ Notice that you're using two environment variables: ```SPO_AppId```and ```SPO_Ap
 
 ## Create the site design
 
-Open PowerShell and make sure that you have the Microsoft Office 365 Management Shell installed.
+Open PowerShell and make sure that you have the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588) installed.
 
 Connect to your tenant using **Connect-SPOService**.
 
