@@ -241,8 +241,8 @@
       href: declarative-customization/site-design-rest-api.md
     - name: PnP Provisioning Engine
       href: declarative-customization/site-design-pnp-provisioning.md
-  - name: Site hubs
-    href: declarative-customization/site-hub-overview.md
+  - name: Hub sites
+    href: declarative-customization/hub-site-overview.md
 - name: SharePoint APIs
   items:
   - name: Create Communication site
