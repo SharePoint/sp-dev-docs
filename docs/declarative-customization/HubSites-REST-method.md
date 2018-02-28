@@ -1,3 +1,9 @@
+---
+title: HubSites REST method
+description: HubSites REST method
+ms.date: 2/26/2018
+---
+
 # HubSites
 
 Gets information about all hub sites which the current user can access.
@@ -27,7 +33,7 @@ Do not supply a request body for this method.
 
 | Name   | Type  | Description|
 |--------|-------|------------|
-|200 OK||SPHubSiteCollection |OK|
+|200 OK|SPHubSiteCollection |OK|
 
 
 ## Examples
