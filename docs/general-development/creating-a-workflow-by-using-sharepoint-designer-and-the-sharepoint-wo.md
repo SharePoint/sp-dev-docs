@@ -69,7 +69,7 @@ SharePoint Designer 2013 installs as an Office 2013 application. To open SharePo
   
     
     
-
+2013
 ### To open SharePoint Designer 2013 and connect to a SharePoint site
 
 
@@ -109,10 +109,10 @@ SharePoint Designer 2013 can be used for many important tasks. The navigational 
 3. Select the list that you want to associate with the new workflow.
     
   
-4. On the **Create List Workflow** dialog box, enter a name and description for the workflow and then make sure that the **Platform Type** is set to **SharePoint Workflow**, as shown in the figure.
+4. On the **Create List Workflow** dialog box, enter a name and description for the workflow and then make sure that the **Platform Type** is set to **SharePoint 2013 Workflow**, as shown in the figure.
     
     > [!NOTE]
-    > If you do not see SharePoint Workflow as an available platform type then Workflow Manager is not configured to work with the SharePoint farm. 
+    > If you do not see SharePoint Workflow as an available platform type then Workflow Manager is not configured to work with the SharePoint farm. See [Configure Workflow Manager to work with the SharePoint Server 2013 Farm](https://technet.microsoft.com/library/jj658588.aspx#section5). 
 
 5. Click **OK** to create the workflow.
     
