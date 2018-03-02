@@ -621,6 +621,9 @@ You can also select the pending approval permission item, and choose **Approve o
 
 And you're now ready to go.
 
+> [!WARNING]
+> If you are getting an unexpected exception when trying to approve the permission (`[HTTP]:400 -  [CorrelationId]`), please update the `resource` attribute in your **package-solution.json** to use value '*Microsoft.Azure.AgregatorService*' rather then '*Microsoft Graph*' which was instructed earlier in this tutorial. Reject existing request and update solution package in app catalog with the update value.
+
 ## <a name="SolutionTesting"></a>Test the solution
 Run your solution by using the following gulp command.
 
