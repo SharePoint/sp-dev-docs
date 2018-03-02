@@ -13,7 +13,7 @@ When building SharePoint Framework solutions, you might need to connect to your 
 This article discusses the different approaches and describes the step-by-step process of building and connecting to an API secured with Azure AD.
 
 > [!IMPORTANT]
-> When connecting ot Azure AD secured APIs, it's recommended to use **GraphHttpClient** or **AadHttpClient** classes. These are new capabilities which are currently in preview and planned to be generally released during spring 2018. You can read more information on recommended models from following [article](../../use-msgraph.md)
+> When connecting to Azure AD-secured APIs, we recommend that you use the **GraphHttpClient** or **AadHttpClient** classes. These are new capabilities that are currently in preview and planned to be generally released during spring 2018. For more information about recommended models, see [Use the MSGraphClient to connect to Microsoft Graph](../../use-msgraph.md).
 
 ## Secure an API with Azure AD
 
