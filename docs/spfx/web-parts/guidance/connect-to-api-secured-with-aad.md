@@ -12,6 +12,9 @@ When building SharePoint Framework solutions, you might need to connect to your 
 
 This article discusses the different approaches and describes the step-by-step process of building and connecting to an API secured with Azure AD.
 
+> [!IMPORTANT]
+> When connecting ot Azure AD secured APIs, it's recommended to use **GraphHttpClient** or **AadHttpClient** classes. These are new capabilities which are currently in preview and planned to be generally released during spring 2018. You can read more information on recommended models from following [article](../../use-msgraph.md)
+
 ## Secure an API with Azure AD
 
 If you're using Office 365, securing custom APIs using Azure AD is an architectural option that you should definitely consider. First and foremost, it allows you to secure the access to the API using existing organizational credentials that are already managed through Office 365 and Azure AD. Users with an active account can seamlessly work with applications that leverage APIs secured with Azure AD. Azure AD administrators can centrally manage access to the API, the same way they manage access to all other applications registered with Azure AD.
