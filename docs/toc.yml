@@ -247,13 +247,13 @@
     - name: Create a hub site
       href: declarative-customization/create-a-hub-site.md
     - name: Create a hub site with PowerShell
-      href: declarative-customization/create-a-hub-site-with-powershell.md
+      href: declarative-customization/create-hub-site-with-powershell.md
     - name: PowerShell
       href: declarative-customization/hub-site-powershell.md
     - name: GetById Rest method
-      href: declarative-customization/GetById-REST-method.md
+      href: declarative-customization/getbyid-REST-method.md
     - name: HubSites-REST-method
-      href: declarative-customization/hub-sites-REST-method.md
+      href: declarative-customization/hubsites-REST-method.md
 - name: SharePoint APIs
   items:
   - name: Create Communication site
