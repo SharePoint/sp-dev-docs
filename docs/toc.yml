@@ -243,6 +243,17 @@
       href: declarative-customization/site-design-pnp-provisioning.md
   - name: Hub sites
     href: declarative-customization/hub-site-overview.md
+    items:
+    - name: Create a hub site
+      href: declarative-customization/create-a-hub-site.md
+    - name: Create a hub site with PowerShell
+      href: declarative-customization/create-a-hub-site-with-powershell.md
+    - name: PowerShell
+      href: declarative-customization/hub-site-powershell.md
+    - name: GetById Rest method
+      href: declarative-customization/GetById-REST-method.md
+    - name: HubSites-REST-method
+      href: declarative-customization/hub-sites-REST-method.md
 - name: SharePoint APIs
   items:
   - name: Create Communication site

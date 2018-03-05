@@ -6,6 +6,9 @@ ms.date: 2/26/2018
 
 # Create a SharePoint hub site
 
+> [!IMPORTANT]
+> The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments.
+
 If you're a global or SharePoint admin in Office 365, you can convert any existing site to a hub site using Microsoft PowerShell.
 
 1. Download and install the latest [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). If you already have a previous version installed, uninstall it first and then install the latest version.

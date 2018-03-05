@@ -6,6 +6,9 @@ ms.date: 2/26/2018
 
 # Creating a SharePoint hub site using PowerShell
 
+> [!IMPORTANT]
+> The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments.
+
 In this example, learn how to create a SharePoint hub site, and associate another site with it. The scenario is that you are setting up sites for the Contoso marketing department. You will create a hub site that all other marketing sites are associated with. Then you will create a second site to associate with the hub site. You will also specify settings and permissions for the hub site.
 
 To work with this example in SharePoint online, we recommend using a developer tenant and not your production tenant. All of the steps use a fictional tenant named "Contoso" which you can replace with your own tenant name.
