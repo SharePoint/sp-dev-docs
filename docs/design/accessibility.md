@@ -13,8 +13,7 @@ Developing an equal experience that meets all users' unique visual, hearing, dex
 ## Accessibility guidelines
 
 <!-- Make sure that this is an external resource that folks can access. Original link was to a OneNote file. -->
-All Microsoft products must meet the requirements listed in the [Microsoft Accessibility Standards](https://microsoft.sharepoint.com/teams/msenable/Pages/MASDetails.aspx
-"Link to Microsoft Accesssibility Standards").  
+All Microsoft products must meet the requirements listed in the [Microsoft Accessibility Standards](https://docs.microsoft.com/en-us/windows/uwp/design/accessibility/accessibility-checklist).  
 
 <!-- Fabric components are not designed to be accessible already? And, shouldn't components that aren't based on Fabric also be accessible? -->
 
