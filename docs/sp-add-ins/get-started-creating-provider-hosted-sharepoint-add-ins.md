@@ -49,16 +49,16 @@ To get an Office 365 plan:
 - [Sign up for an Office 365 developer subscription through the Office 365 Developer Program](https://aka.ms/o365devprogram).
 - See the [Office 365 Developer Program documentation](https://aka.ms/o365devprogramdocs) for step-by-step instructions about how to join the Office 365 Developer Program and sign up and configure your subscription.
 
-### Open your developer subscription 
+### Open your developer site 
  
-Select the **Build Add-ins** link in the upper-left corner of the page to open your developer subscription. You should see a site that looks like the one in the following figure. The **Add-ins in Testing** list on the page confirms that the website was made with the SharePoint Developer Site template. If you see a regular team site instead, wait a few minutes and then restart your site.
+Select the **Build Add-ins** link in the upper-left corner of the page to open your developer site. You should see a site that looks like the one in the following figure. The **Add-ins in Testing** list on the page confirms that the website was made with the SharePoint Developer Site template. If you see a regular team site instead, wait a few minutes and then restart your site.
     
 > [!NOTE]
 > Make a note of the site's URL; it's used when you create SharePoint Add-in projects in Visual Studio.
     
-**Your Developer Site home page with the Add-ins in Testing list**
+**Your developer site home page with the Add-ins in Testing list**
 
-![Screenshot that shows the Developer site homepage.](../images/SP15_DeveloperSiteHome_border.png)
+![Screenshot that shows the developer site homepage.](../images/SP15_DeveloperSiteHome_border.png)
  
 <a name="Create"> </a>
 
@@ -74,7 +74,7 @@ Select the **Build Add-ins** link in the upper-left corner of the page to open y
    
 5. In the **Specify the SharePoint Add-in Settings** dialog box, do the following:
     
-   - Provide the full URL of the SharePoint site that you want to use to debug your add-in. This is the URL of the Developer Site. Use HTTPS, not HTTP in the URL. At some point during this procedure, or shortly after it completes, you will be prompted to sign in to this site. The timing of the prompt varies. Use the administrator credentials (in the \*.onmicrosoft.com domain) that you created when you signed up for your Developer Site; for example MyName@contoso.onmicrosoft.com.    
+   - Provide the full URL of the SharePoint site that you want to use to debug your add-in. This is the URL of the developer site. Use HTTPS, not HTTP in the URL. At some point during this procedure, or shortly after it completes, you will be prompted to sign in to this site. The timing of the prompt varies. Use the administrator credentials (in the \*.onmicrosoft.com domain) that you created when you signed up for your developer site; for example MyName@contoso.onmicrosoft.com.    
 
    - Under **How do you want to host your SharePoint Add-in**, select **Provider-hosted**.
 
@@ -395,8 +395,6 @@ Select the **Build Add-ins** link in the upper-left corner of the page to open y
 9. Use the F5 key to deploy and run your add-in. If you see a **Security Alert** window that asks you to trust the self-signed Localhost certificate, select **Yes**.
     
 10. Select **Trust It** on the consent page to grant permissions to the add-in. Visual Studio will install the web application to IIS Express and then install the add-in to your test SharePoint site and launch it. You'll see a page that has the table shown in the following screen shot. To see summary information about your SharePoint site, select **Populate Data**.
-
-   *Figure 4. Launch page of the basic provider-hosted add-in sample*
 
    ![Basic self-hosted app launch page](../images/SP15_basicself-hostedapp.gif)
  
