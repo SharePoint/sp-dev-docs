@@ -44,13 +44,9 @@ Reference [earlier versions of Visual Studio](http://msdn.microsoft.com/library/
 > - **Are you a Visual Studio (MSDN) subscriber?** Visual Studio Ultimate and Visual Studio Premium with MSDN subscribers receive an Office 365 developer subscription as a benefit. [Redeem your benefit today](https://msdn.microsoft.com/subscriptions/manage/default.aspx). 
 > - **Do you have one of the following Office 365 subscription plans?** If so, see [Create a developer site on an existing Office 365 subscription](create-a-developer-site-on-an-existing-office-365-subscription.md). 
 
-There are three ways to get an Office 365 plan: 
+To get an Office 365 plan: 
 
-- Start with a [free 30-day trial](https://portal.microsoftonline.com/Signup/MainSignUp.aspx?OfferId=6881A1CB-F4EB-4db3-9F18-388898DAF510&amp;DL=DEVELOPERPACK) with one user license.
-
-- Buy an [Office 365 developer subscription](https://portal.microsoftonline.com/Signup/MainSignUp.aspx?OfferId=C69E7747-2566-4897-8CBA-B998ED3BAB88&amp;DL=DEVELOPERPACK). 
-
-- [Sign up for a nine-month Office 365 developer subscription through the Office 365 Developer Program](https://aka.ms/o365devprogram). For step-by-step instructions about how to join the Office 365 Developer Program and sign up and configure your subscription, see the [Office 365 Developer Program](https://aka.ms/o365devprogramdocs) documentation.
+- [Sign up for an Office 365 developer subscription through the Office 365 Developer Program](https://aka.ms/o365devprogram). - See the [Office 365 Developer Program documentation](https://aka.ms/o365devprogramdocs) for step-by-step instructions about how to join the Office 365 Developer Program and sign up and configure your subscription.
 
 ### Open your developer subscription 
  
