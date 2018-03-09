@@ -36,8 +36,8 @@ Office 365 offers you two types of CDNs: Public and Private. Both options provid
 - Assets exposed in a public origin are accessible by everyone anonymously.
 - If you remove an asset from a public origin, the asset may continue to be available for up to 30 days from the cache; however, we will invalidate links to the asset in the CDN within 15 minutes.
 - When you host style sheets (CSS files) in a public origin, you can use relative paths and URIs within the code. This means that you can reference the location of background images and other objects relative to the location of the asset that's calling it.
-- While you can hard code a public origin's URL, doing so is not recommended. The reason for this is that if access to the CDN becomes unavailable, the URL will not automatically resolve to your organization in SharePoint Online and might result in broken links and other errors. The recommendation is therefore to use SharePoint URLs and have SharePoint automatically rewrite the URL to the public CDN URL when it's enabled.
-- The default file types that are included for public origins are .css, .eot, .gif, .ico, .jpeg, .jpg, .js, .map, .png, .svg, .ttf, and .woff. You can specify additional file types by changing the CDN's configuration.
+- While you can hard code a public origin's URL, doing so is not recommended. The reason for this is that if access to the CDN becomes unavailable, the URL will not automatically resolve to your organization in SharePoint Online and might result in broken links and other errors. Therefore, the recommendation is to use SharePoint URLs and have SharePoint automatically rewrite the URL to the public CDN URL when it's enabled.
+- The default file types that are included for public origins are .css, .eot, .gif, .ico, .jpeg, .jpg, .js, .map, .png, .svg, .ttf, and .woff. You can specify additional file types by changing the [CDN's configuration](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/set-spotenantcdnpolicy?view=sharepoint-ps).
 - If you want, you can configure a policy to exclude assets that have been identified by site classifications that you specify. For example, you can choose to exclude all assets that are marked as "confidential" or "restricted" even if they are an allowed file type and are located in a public origin.
 
 ### Office 365 Private CDN
@@ -54,24 +54,24 @@ Office 365 offers you two types of CDNs: Public and Private. Both options provid
 
 - Users can only access the assets from a private origin if they are authorized to do so. Anonymous access to these assets is prevented.
 - If you remove an asset from the private origin, the asset may continue to be available for up to an hour from the cache; however, we will invalidate links to the asset in the CDN within 15 minutes.
-- The default file types that are included for private origins are .gif, .ico, .jpeg, .jpg, .js, and .png. You can specify additional file types by changing CDN's configuration.
-- Just like public origins, you can configure a policy to exclude assets that have been identified by site classifications that you specify even if you use wildcards to include all assets within a folder or Site Library.
+- The default file types that are included for private origins are .gif, .ico, .jpeg, .jpg, .js, and .png. You can specify additional file types by changing the [CDN's configuration](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/set-spotenantcdnpolicy?view=sharepoint-ps).
+- Just like public origins, you can configure a policy to exclude assets that have been identified by site classifications that you specify even if you use wildcards to include all assets within a folder or site library.
 
-### Publishing Feature Auto-Rewriting to CDN URLs
+### Publishing feature auto-rewriting to CDN URLs
 
 To help organizations take advantage of the Office 365 CDN capabilities without having to update their existing portals, the SharePoint Publishing feature has been updated to automatically rewrite URLs of assets stored in CDN origins to their CDN equivalents so that assets are served from the CDN service instead of SharePoint.
 
-Following is an overview of which links are automatically rewritten by the SharePoint Publishing feature:
+The following is an overview of which links are automatically rewritten by the SharePoint Publishing feature:
 
-- IMG/LINK/CSS URLs in classic publishing page HTML response
-  - This includes images added by authors in the HTML content of a page
+- IMG/LINK/CSS URLs in classic publishing page HTML responses
+  - This includes images added by authors within the HTML content of a page
   - When extending pages, you can temporarily disable auto-rewriting URLs on a page by:
     - checking out the page
     - providing the query string parameter `?NoAutoReWrites=true`
 - Content By Search WebPart assets
-  - Display Templates JavaScript files
-  - Images in Query Results - URLs in the following standard Managed Properties are automatically replaced: _PictureUrl_, _PictureThumbnailUrl_, _PublishingImage_
-- Picture Library SlideShow web part image URLs
+  - Display template JavaScript files
+  - Images in query results - URLs in the following standard Managed Properties are automatically replaced: _PictureUrl_, _PictureThumbnailUrl_, _PublishingImage_
+- Picture Library SlideShow webpart image URLs
 - Image fields in SPList REST API (RenderListDataAsStream) results
   - Use the new property ImageFieldsToTryRewriteToCdnUrls to provide a comma separated list of Fields.
   - Supports Hyperlink Fields (Picture or Link) and PublishingImage Fields.
@@ -84,7 +84,7 @@ You can set up and configure the Office 365 CDN in your tenant using the SharePo
 ### Set up and configure the Office 365 CDN using the SharePoint Online Management Shell
 
 > [!NOTE]
-> Before you can manage site collection app catalogs in your tenant, ensure that you have installed [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). Next, connect to your SharePoint Online tenant using the `Connect-SPOService` cmdlet.
+> Before you can manage site collection app catalogs in your tenant, ensure that you have installed the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). Next, connect to your SharePoint Online tenant using the `Connect-SPOService` cmdlet.
 
 #### Enable Office 365 CDN
 
@@ -158,7 +158,7 @@ Add-SPOTenantCdnOrigin -CdnType Private -OriginUrl sites/site1/siteassets
 ```
 
 > [!NOTE]
-> After adding a CDN origin, it might take up to 15 minutes for you to be able to retrieve files via the CDN service. You can verify, if the particular origin has already been enabled using the [Get-SPOTenantCdnOrigins](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/get-spotenantcdnorigins?view=sharepoint-ps) cmdlet.
+> After adding a CDN origin, it might take up to 15 minutes for you to be able to retrieve files via the CDN service. You can verify if the particular origin has already been enabled using the [Get-SPOTenantCdnOrigins](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/get-spotenantcdnorigins?view=sharepoint-ps) cmdlet.
 
 #### Remove Office 365 CDN origin
 
@@ -171,7 +171,7 @@ Remove-SPOTenantCdnOrigin -CdnType Public -OriginUrl */masterpage
 ```
 
 > [!NOTE]
-> Removing a CDN origin doesn't affect the files stored in any Document library matching that origin. If these assets have been referenced using their SharePoint URL, SharePoint will automatically switch back to the original URL pointing to the Document library. If however, assets have been referenced using the Public CDN URL, then these links will be now broken and will need to be manually changed.
+> Removing a CDN origin doesn't affect the files stored in any Document library matching that origin. If these assets have been referenced using their SharePoint URL, SharePoint will automatically switch back to the original URL pointing to the Document library. If, however, assets have been referenced using the Public CDN URL, then these links will now be broken and will need to be manually changed.
 
 #### Modify Office 365 CDN origin
 
@@ -182,7 +182,7 @@ It's not possible to modify an existing CDN origin. Instead, you should remove t
 By default, the following file types are included in the Public CDN: _.css, .eot, .gif, .ico, .jpeg, .jpg, .js, .map, .png, .svg, .ttf, and .woff_. If you need to include additional file types in the CDN, you can change the CDN configuration using the [Set-SPOTenantCdnPolicy](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/set-spotenantcdnpolicy?view=sharepoint-ps) cmdlet.
 
 > [!NOTE]
-> When changing the list of file types, you overwrite the currently defined list. If you want to include additional file types, use the [Get-SPOTenantCdnPolicies](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/get-spotenantcdnpolicies?view=sharepoint-ps) cmdlet, to find out which file types are currently configured.
+> When changing the list of file types, you overwrite the currently defined list. If you want to include additional file types, first use the [Get-SPOTenantCdnPolicies](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/get-spotenantcdnpolicies?view=sharepoint-ps) cmdlet to find out which file types are currently configured.
 
 To add the _JSON_ file type to the default list of file types included in the Public CDN, execute:
 
@@ -195,7 +195,7 @@ Set-SPOTenantCdnPolicy -CdnType Public -PolicyType IncludeFileExtensions -Policy
 Use the [Set-SPOTenantCdnPolicy](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/set-spotenantcdnpolicy?view=sharepoint-ps) cmdlet to exclude site classifications that you do not want to make available over the CDN. By default, no site classifications are excluded.
 
 > [!NOTE]
-> When changing the list of excluded site classifications, you overwrite the currently defined list. If you want to exclude additional classifications, use the [Get-SPOTenantCdnPolicies](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/get-spotenantcdnpolicies?view=sharepoint-ps) cmdlet, to find out which classifications are currently configured.
+> When changing the list of excluded site classifications, you overwrite the currently defined list. If you want to exclude additional classifications, first use the [Get-SPOTenantCdnPolicies](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/get-spotenantcdnpolicies?view=sharepoint-ps) cmdlet to find out which classifications are currently configured.
 
 To exclude sites classified as _HBI_ from the Public CDN, execute
 
@@ -214,7 +214,7 @@ Set-SPOTenantCdnEnabled -CdnType Public -Enable $false
 ### Set up and configure the Office 365 CDN using the Office 365 CLI
 
 > [!NOTE]
-> Before you can manage site collection app catalogs in your tenant, ensure that you have installed [Office 365 CLI](https://aka.ms/o365cli). Next, connect to your SharePoint Online tenant using the [spo connect](https://sharepoint.github.io/office365-cli/cmd/spo/connect/) command.
+> Before you can manage site collection app catalogs in your tenant, ensure that you have installed the [Office 365 CLI](https://aka.ms/o365cli). Next, connect to your SharePoint Online tenant using the [spo connect](https://sharepoint.github.io/office365-cli/cmd/spo/connect/) command.
 
 #### Enable Office 365 CDN
 
@@ -276,7 +276,7 @@ spo cdn origin add --type Private --origin sites/site1/siteassets
 ```
 
 > [!NOTE]
-> After adding a CDN origin, it might take up to 15 minutes for you to be able to retrieve files via the CDN service. You can verify, if the particular origin has already been enabled using the [spo cdn origin list](https://sharepoint.github.io/office365-cli/cmd/spo/cdn/cdn-origin-list/) command.
+> After adding a CDN origin, it might take up to 15 minutes for you to be able to retrieve files via the CDN service. You can verify if the particular origin has already been enabled using the [spo cdn origin list](https://sharepoint.github.io/office365-cli/cmd/spo/cdn/cdn-origin-list/) command.
 
 #### Remove Office 365 CDN origin
 
@@ -289,7 +289,7 @@ spo cdn origin remove --type Public --origin */masterpage
 ```
 
 > [!NOTE]
-> Removing a CDN origin doesn't affect the files stored in any Document library matching that origin. If these assets have been referenced using their SharePoint URL, SharePoint will automatically switch back to the original URL pointing to the Document library. If however, assets have been referenced using the Public CDN URL, then these links will be now broken and will need to be manually changed.
+> Removing a CDN origin doesn't affect the files stored in any Document library matching that origin. If these assets have been referenced using their SharePoint URL, SharePoint will automatically switch back to the original URL pointing to the Document library. If, however, assets have been referenced using the Public CDN URL, then these links will now be broken and will need to be manually changed.
 
 #### Modify Office 365 CDN origin
 
@@ -300,7 +300,7 @@ It's not possible to modify an existing CDN origin. Instead, you should remove t
 By default, the following file types are included in the CDN: _.css, .eot, .gif, .ico, .jpeg, .jpg, .js, .map, .png, .svg, .ttf, and .woff_. If you need to include additional file types in the CDN, you can change the CDN configuration using the [spo cdn policy set](https://sharepoint.github.io/office365-cli/cmd/spo/cdn/cdn-policy-set/) command.
 
 > [!NOTE]
-> When changing the list of file types, you overwrite the currently defined list. If you want to include additional file types, use the [spo cdn policy list](https://sharepoint.github.io/office365-cli/cmd/spo/cdn/cdn-origin-list/) command, to find out which file types are currently configured.
+> When changing the list of file types, you overwrite the currently defined list. If you want to include additional file types, first use the [spo cdn policy list](https://sharepoint.github.io/office365-cli/cmd/spo/cdn/cdn-origin-list/) command to find out which file types are currently configured.
 
 To add the _JSON_ file type to the default list of file types included in the Public CDN, execute:
 
@@ -313,7 +313,7 @@ spo cdn policy set --type Public --policy IncludeFileExtensions --value "CSS,EOT
 Use the [spo cdn policy set](https://sharepoint.github.io/office365-cli/cmd/spo/cdn/cdn-policy-set/) command to exclude site classifications that you do not want to make available over the CDN. By default, no site classifications are excluded.
 
 > [!NOTE]
-> When changing the list of excluded site classifications, you overwrite the currently defined list. If you want to exclude additional classifications, use the [spo cdn policy list](https://sharepoint.github.io/office365-cli/cmd/spo/cdn/cdn-policy-list/) command, to find out which classifications are currently configured.
+> When changing the list of excluded site classifications, you overwrite the currently defined list. If you want to exclude additional classifications, first use the [spo cdn policy list](https://sharepoint.github.io/office365-cli/cmd/spo/cdn/cdn-policy-list/) command to find out which classifications are currently configured.
 
 To exclude sites classified as _HBI_ from the Public CDN, execute
 
