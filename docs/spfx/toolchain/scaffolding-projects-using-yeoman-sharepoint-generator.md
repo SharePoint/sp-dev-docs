@@ -115,4 +115,5 @@ yo @microsoft/sharepoint
 
 - [SharePoint Framework toolchain](sharepoint-framework-toolchain.md)
 - [SharePoint Framework development tools and libraries](../tools-and-libraries.md)
+- [Set up your SharePoint Framework development environment](../set-up-your-development-environment.md)
 - [SharePoint Framework Overview](../sharepoint-framework-overview.md)

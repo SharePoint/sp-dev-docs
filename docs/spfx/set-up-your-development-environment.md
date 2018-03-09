@@ -11,7 +11,7 @@ ms.prod: sharepoint
 You can use Visual Studio or your own custom development environment to build SharePoint Framework solutions. You can use a Mac, PC, or Linux.
 
 > [!NOTE] 
-> Before following the steps in this article, be sure to [Set up your Office 365 developer subscription](./set-up-your-developer-tenant.md).
+> Before following the steps in this article, be sure to [Set up your Office 365 tenant](./set-up-your-developer-tenant.md).
 
 You can also follow these steps by watching this video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=WX9FL0BjE0I&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq).
 
@@ -83,6 +83,8 @@ If you need to switch between the different projects created by using different 
 ```sh
 npm install @microsoft/generator-sharepoint --save-dev
 ```
+
+For more information about the Yeoman SharePoint generator, see [Scaffold projects by using Yeoman SharePoint generator](toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md).
 
 ## Optional tools
 
