@@ -1,21 +1,21 @@
 ---
-title: Set up your Office 365 tenant
-description: Build and deploy client-side web parts using the SharePoint Framework by setting up an Office 365 tenant.
-ms.date: 01/08/2018
+title: Set up your Office 365 developer subscription
+description: Build and deploy client-side web parts using the SharePoint Framework by setting up an Office 365 developer subscription.
+ms.date: 03/09/2018
 ms.prod: sharepoint
 ---
 
 
-# Set up your Office 365 tenant
+# Set up your Office 365 developer subscription
 
-To build and deploy client-side web parts using the SharePoint Framework, you need an Office 365 tenant. 
+To build and deploy client-side web parts using the SharePoint Framework, you need an Office 365 developer subscription. 
 
-If you already have an Office 365 tenant, see [create app catalog site](#create-app-catalog-site).
+If you already have an Office 365 developer subscription, see [Create app catalog site](#create-app-catalog-site).
 
-If you don't have one, you can create a subscription or sign up for the [Microsoft Office 365 Developer Program](https://dev.office.com/devprogram).  
+If you don't have one, you can get an Office 365 developer subscription when you join the [Office 365 Developer Program](https://aka.ms/o365devprogram). See the [Office 365 Developer Program documentation](https://aka.ms/o365devprogramdocs) for step-by-step instructions about how to join the Office 365 Developer Program and sign up and configure your subscription.  
 
 > [!NOTE] 
-> Make sure that you are signed out of any existing Office 365 tenants before you sign up.
+> Make sure that you are signed out of any existing Office 365 developer subscriptions before you sign up.
 
 ## Create app catalog site
 
@@ -23,7 +23,7 @@ You need an app catalog to upload and deploy web parts. If you've already set up
 
 ### To create an app catalog site
 
-1. Go to the **SharePoint Admin Center** by entering the following URL in your browser. Replace **yourtenantprefix** with your Office 365 Developer Tenant prefix.
+1. Go to the **SharePoint Admin Center** by entering the following URL in your browser. Replace **yourtenantprefix** with your Office 365 developer subscription prefix.
 	
     ```
     https://yourtenantprefix-admin.sharepoint.com
@@ -49,7 +49,7 @@ You also need a site collection and a site for your testing. You can create a ne
 
 ### To create a new developer site collection
 
-1. Go to the **SharePoint Admin Center** by entering the following URL in your browser. Replace **yourtenantprefix** with your Office 365 Developer Tenant prefix.
+1. Go to the **SharePoint Admin Center** by entering the following URL in your browser. Replace **yourtenantprefix** with your Office 365 developer subscription prefix.
 	
     ```
     https://yourtenantprefix-admin.sharepoint.com
@@ -78,4 +78,4 @@ https://your-sharepoint-site/_layouts/workbench.aspx
 
 ## Next steps
 
-Now that you have configured your SharePoint tenant, [set up your development environment](./set-up-your-development-environment.md) to build client-side web parts.
+Now that you have configured your SharePoint subscription, [set up your development environment](./set-up-your-development-environment.md) to build client-side web parts.

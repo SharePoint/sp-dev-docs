@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use Visual Studio or your own custom development environment to build SharePoint Framework solutions. You can use a Mac, PC, or Linux.
-ms.date: 02/15/2018
+ms.date: 03/09/2018
 ms.prod: sharepoint
 ---
 
@@ -11,7 +11,7 @@ ms.prod: sharepoint
 You can use Visual Studio or your own custom development environment to build SharePoint Framework solutions. You can use a Mac, PC, or Linux.
 
 > [!NOTE] 
-> Before following the steps in this article, be sure to [Set up your Office 365 tenant](./set-up-your-developer-tenant.md).
+> Before following the steps in this article, be sure to [Set up your Office 365 developer subscription](./set-up-your-developer-tenant.md).
 
 You can also follow these steps by watching this video on the [SharePoint PnP YouTube Channel](https://www.youtube.com/watch?v=WX9FL0BjE0I&list=PLR9nK3mnD-OXvSWvS2zglCzz4iplhVrKq).
 

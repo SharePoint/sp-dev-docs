@@ -45,6 +45,7 @@ Reference [earlier versions of Visual Studio](http://msdn.microsoft.com/library/
 To get an Office 365 plan: 
 
 - [Sign up for an Office 365 developer subscription through the Office 365 Developer Program](https://aka.ms/o365devprogram).
+
 - See the [Office 365 Developer Program documentation](https://aka.ms/o365devprogramdocs) for step-by-step instructions about how to join the Office 365 Developer Program and sign up and configure your subscription.
 
 ### Open your developer site 
