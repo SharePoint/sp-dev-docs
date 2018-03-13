@@ -27,8 +27,9 @@ GET /_api/HubSites
 
 | Header | Value |
 |--------|-------|
-|Authorization|TBD|
-|Content-Type|application/json|
+|Accept|application/json;odata=verbose|
+|Content-Type|application/json;odata=verbose;charset=utf-8|
+|x-requestdigest|The appropriate digest for current site|
 
 ## Request body
 
