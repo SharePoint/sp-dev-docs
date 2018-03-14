@@ -35,5 +35,5 @@ If you're a global or SharePoint admin in Office 365, you can convert any existi
 
 ## Resources
 
-- [PowerShell cmdlets for SharePoint hub sites](declarative-customization/hub-site-powershell.md)
+- [PowerShell cmdlets for SharePoint hub sites](hub-site-powershell.md)
 - TBD Link: Set up your SharePoint hub site

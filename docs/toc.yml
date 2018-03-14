@@ -263,7 +263,7 @@
       - name: JoinHubSite
         href: declarative-customization/REST-joinhubsite-method.md
       - name: RegisterHubSite
-        href: declarative-customization/REST-registerhubsite-method.md
+        href: declarative-customization/REST-registerhubsite.method.md
       - name: SyncHubSiteTheme
         href: declarative-customization/REST-synchubsitetheme-method.md
       - name: UnRegisterHubSite
