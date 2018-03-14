@@ -9,7 +9,7 @@ ms.date: 2/26/2018
 > [!IMPORTANT]
 > The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments.
 
-Associates a site with an existing hub site.
+Associates a site with an existing hub site. You can also use this method to disassociate a site from a hub site (see example below.)
 
 ## HTTP request
 
@@ -39,40 +39,34 @@ Do not supply a request body for this method.
 
 | Name   | Type  | Description|
 |--------|-------|------------|
-|200 OK|SPHubSiteData |OK|
+|204 OK| |Success|
 
 ## Examples
 
-### Get hub site data for marketing web
+### Join the advertising site to the marketing hub site
+
+In this sample, the id of the marketing hub site is "27c5fcba-abfd-4c34-823d-0b4a48f7ffe6".
 
 #### Sample Request
 
 ```HTTP
 POST
-https://contoso.sharepoint.com/sites/marketing/_api/web/HubSiteData(true)
+https://contoso.sharepoint.com/sites/advertising/_api/site/JoinHubSite('27c5fcba-abfd-4c34-823d-0b4a48f7ffe6')
 ```
 
 #### Sample Response
-**Status code:** 200
+**Status code:** 204
 
-```JSON
-{
-	"themeKey": null,
-	"name": "marketing",
-	"url": "https://contoso.sharepoint.com/sites/marketing",
-	"logoUrl": "https://contoso.sharepoint.com/sites/marketing/SiteAssets/__hubLogo.jpg",
-	"usesMetadataNavigation": false,
-	"navigation": [
-		{
-			"Id": 2006,
-			"Title": "online team",
-			"Url": "https://spdfcontosodemo2.sharepoint.com/sites/online-advertising",
-			"IsDocLib": false,
-			"IsExternal": false,
-			"ParentId": 1002,
-			"ListTemplateType": 0,
-			"Children": []
-		}
-	]
-}
+### Remove the advertising site from the marketing hub site
+
+To remove, or disassociate a site from a hub site, call JoinHubSite with the value "00000000-0000-0000-0000-000000000000".
+
+#### Sample Request
+
+```HTTP
+POST
+https://contoso.sharepoint.com/sites/advertising/_api/site/JoinHubSite('00000000-0000-0000-0000-000000000000')
 ```
+
+#### Sample Response
+**Status code:** 204

@@ -250,10 +250,28 @@
       href: declarative-customization/create-hub-site-with-powershell.md
     - name: PowerShell
       href: declarative-customization/hub-site-powershell.md
-    - name: GetById Rest method
-      href: declarative-customization/getbyid-REST-method.md
-    - name: HubSites-REST-method
-      href: declarative-customization/hubsites-REST-method.md
+    - name: REST API
+      items:
+      - name: SP.HubSites.CanCreate
+        href: declarative-customization/REST-cancreate-method.md
+      - name: GetById
+        href: declarative-customization/REST-getbyid-method.md
+      - name: HubSiteData
+        href: declarative-customization/REST-hubsitedata-method.md
+      - name: HubSites
+        href: declarative-customization/REST-hubsites-method.md
+      - name: JoinHubSite
+        href: declarative-customization/REST-joinhubsite-method.md
+      - name: RegisterHubSite
+        href: declarative-customization/REST-registerhubsite-method.md
+      - name: SyncHubSiteTheme
+        href: declarative-customization/REST-synchubsitetheme-method.md
+      - name: UnRegisterHubSite
+        href: declarative-customization/REST-unregisterhubsite-method.md
+      - name: SPHubSite type
+        href: declarative-customization/REST-sphubsite-type.md
+      - name: SPHubSiteData type
+        href: declarative-customization/REST-sphubsitedata-type.md
 - name: SharePoint APIs
   items:
   - name: Create Communication site

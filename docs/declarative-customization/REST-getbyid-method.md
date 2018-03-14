@@ -4,7 +4,7 @@ description: GetById REST method
 ms.date: 2/26/2018
 ---
 
-# HubSites
+# GetById
 
 > [!IMPORTANT]
 > The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments.
@@ -14,7 +14,8 @@ Gets information about a hub site.
 ## HTTP request
 
 ```
-GET /_api/HubSites
+GET /_api/GetById
+POST /_api/GetById
 ```
 
 ## URI Parameters
@@ -33,7 +34,8 @@ GET /_api/HubSites
 
 ## Request body
 
-Do not supply a request body for this method.
+For GET, no request body is needed. When using POST to update a hub site with new information, use the following body.
+
 
 ## Responses
 
