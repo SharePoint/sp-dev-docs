@@ -41,7 +41,7 @@ Before you run this add-in, do the following:
     
 	3. Verify that  **Scope** is set to **Web**, and  **Permission** is set to **Manage**.
     
-3. To run this code sample, you need an Azure subscription. To sign up for a trial, see  [Free one-month trial](http://azure.microsoft.com/en-us/pricing/free-trial/).
+3. To run this code sample, you need an Azure subscription. To sign up for a trial, see [Free one-month trial](http://azure.microsoft.com/en-us/pricing/free-trial/).
     
 4. Create an Azure Service Bus Namespace with ACS Support.
     
