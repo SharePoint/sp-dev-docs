@@ -35,9 +35,7 @@ If you’re unable to migrate to Microsoft Graph, you can use the following work
 1.	Determine the base URL. This is now the hostname of the link.
 2.	Construct the API request by concatenating the base URL, `SP.RemoteWeb`, and a specific API method, as shown.
 
-```
-{hostname}/_api/SP.RemoteWeb(@a)/web/{specific_api_here}?@a='{url_encoded_link}'
-```
+`{hostname}/_api/SP.RemoteWeb(@a)/web/{specific_api_here}?@a='{url_encoded_link}'`
 
 For example, for the following input URL:
 
