@@ -165,7 +165,7 @@ Change the definition of the **IGraphConsumerWebPartProps** interface to accept 
   import { ClientMode } from './components/ClientMode';
   ```
 
-Note the import for the **PropertyPaneChoiceGroup** control, as well as the import of the **ClientMode** enum.
+  Note the import for the **PropertyPaneChoiceGroup** control, as well as the import of the **ClientMode** enum.
 
 <a name="UpdateResourceStrings"></a>
 
@@ -647,8 +647,6 @@ You're now ready to build, bundle, package, and deploy the solution.
 
   ![Screenshot of the app catalog UI when uploading the package solution](../images/graphconsumer-tutorial-appcatalog-prompt.png)
 
-  <br/>
-
   A message in the lower part of the screen tells you that the solution package requires permissions approval. This is because of the **webApiPermissionRequests** property in the *package-solution.json* file.
 
 4. Open the SharePoint Admin Center of your tenant, and in the upper-right corner of the screen, choose **Try the new SharePoint admin center**.
@@ -670,6 +668,8 @@ You're now ready to build, bundle, package, and deploy the solution.
 6. Choose the permission that you requested in the *package-solution.json* file of your solution, choose **Approve or reject access**, and then choose **Approve**. The following screenshot shows the panel in the Admin UI.
 
   ![Screenshot of the WebApiPermission management page during the approval process](../images/graphconsumer-webapipermission-approval.png)
+
+  <br/>
 
 7. You can also select the pending approval permission item, and choose **Approve or reject** in the toolbar.
 
