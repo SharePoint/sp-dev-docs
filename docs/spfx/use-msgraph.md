@@ -21,7 +21,7 @@ While you could use the Microsoft Graph JavaScript Client Library in your soluti
 ## Use the MSGraphClient in your solution
 
 > [!NOTE]
-> The **MSGraphClient** is available only in projects built using SharePoint Framework v1.4.1 and later. While using the **MSGraphClient** is explained by using a client-side web part, you can use it just as well in SharePoint Framework extensions.
+> The **MSGraphClient** is available only in projects built using SharePoint Framework v1.4.1 and later. While the **MSGraphClient** is explained in this article by using a client-side web part, you can also use it in SharePoint Framework Extensions.
 
 1. To use the **MSGraphClient** in your SharePoint Framework solution, add the following `import` clause in your main web part file:
 
@@ -98,8 +98,6 @@ When working with the Microsoft Graph and TypeScript, you can use the [Microsoft
     // ...
   }
   ```
-
-For more information, see [Microsoft Graph JavaScript Client Library](https://www.npmjs.com/package/@microsoft/microsoft-graph-client).
 
 ## Available permission scopes
 

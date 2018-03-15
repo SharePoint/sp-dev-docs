@@ -147,7 +147,7 @@ Change the definition of the **IGraphConsumerWebPartProps** interface to accept 
     }
   ```
 
-5. For this code to work, you need to add some import statements at the beginning of the *GraphConsumerWebPart.ts* file, as shown in the following example.
+5. For this code to work, you need to add some import statements at the beginning of the *GraphConsumerWebPart.ts* file, as shown in the following example. Note the import for the **PropertyPaneChoiceGroup** control, as well as the import of the **ClientMode** enum.
 
   ```typescript
   import * as React from 'react';
@@ -164,8 +164,6 @@ Change the definition of the **IGraphConsumerWebPartProps** interface to accept 
   import { IGraphConsumerProps } from './components/IGraphConsumerProps';
   import { ClientMode } from './components/ClientMode';
   ```
-
-  Note the import for the **PropertyPaneChoiceGroup** control, as well as the import of the **ClientMode** enum.
 
 <a name="UpdateResourceStrings"></a>
 
@@ -224,7 +222,7 @@ Open the *GraphConsumer.module.scss* under the *src/webparts/graphConsumer/compo
 
 Now you can update the **GraphConsumer** React component under the *src/webparts/graphConsumer/components* folder of the solution.
 
-1. Update the *IGraphConsumerProps.ts* file to accept the custom properties required by the web part implementation. The following example shows the updated content of the *IGraphConsumerProps.ts* file.
+1. Update the *IGraphConsumerProps.ts* file to accept the custom properties required by the web part implementation. The following example shows the updated content of the *IGraphConsumerProps.ts* file. Notice the import of the **ClientMode** enum definition, as well as the import of the **WebPartContext** type. You will use that later.
 
   ```typescript
   import { WebPartContext } from '@microsoft/sp-webpart-base';
@@ -236,9 +234,7 @@ Now you can update the **GraphConsumer** React component under the *src/webparts
   }
   ```
 
-  Notice the import of the **ClientMode** enum definition, as well as the import of the **WebPartContext** type. You will use that later.
-
-2. Create a new interface to hold the React component state. Create a new file in the *src/webparts/graphConsumer/components* folder and call it *IGraphConsumerState.ts*. The following is the interface definition.
+2. Create a new interface to hold the React component state. Create a new file in the *src/webparts/graphConsumer/components* folder, and call it *IGraphConsumerState.ts*. The following is the interface definition.
 
   ```typescript
   import { IUserItem } from './IUserItem';
@@ -249,7 +245,7 @@ Now you can update the **GraphConsumer** React component under the *src/webparts
     }
   ```
 
-3. Define the **IUserItem** interface (within a file called *IUserItem.ts* stored in the *src/webparts/graphConsumer/components* folder). That interface is imported in the state file.
+3. Define the **IUserItem** interface (within a file called *IUserItem.ts* stored in the *src/webparts/graphConsumer/components* folder). That interface is imported in the state file. The interface is used to define the outline of the users retrieved from the current tenant and bound to the **DetailsList** in the UI.
 
   ```typescript
   export interface IUserItem {
@@ -259,9 +255,7 @@ Now you can update the **GraphConsumer** React component under the *src/webparts
     }
   ```
 
-  The interface is used to define the outline of the users retrieved from the current tenant and bound to the **DetailsList** in the UI.
-
-4. Update the *GraphConsumer.tsx* file. First, add some import statements to import the types you defined earlier.
+4. Update the *GraphConsumer.tsx* file. First, add some import statements to import the types you defined earlier. Notice the import for **IGraphConsumerProps**, **IGraphConsumerState**, **ClientMode**, **IUserItem**. There are also some imports for the Office UI Fabric components used to render the UI of the React component.
 
   ```typescript
   import * as React from 'react';
@@ -288,9 +282,7 @@ Now you can update the **GraphConsumer** React component under the *src/webparts
   import { MSGraphClient } from "@microsoft/sp-client-preview";
   ```
 
-  Notice the import for **IGraphConsumerProps**, **IGraphConsumerState**, **ClientMode**, **IUserItem**. There are also some imports for the Office UI Fabric components used to render the UI of the React component.
-
-5. After the imports, define the outline of the columns for the **DetailsList** component of Office UI Fabric.
+5. After the imports, define the outline of the columns for the **DetailsList** component of Office UI Fabric. 
 
   ```typescript
   // Configure the columns for the DetailsList component
@@ -322,7 +314,7 @@ Now you can update the **GraphConsumer** React component under the *src/webparts
   ];
   ```
 
-  This array will be used in the settings of the **DetailsList** component, as you can see in the **render()** method of the React component. 
+  This array is used in the settings of the **DetailsList** component, as you can see in the **render()** method of the React component. 
   
 6. Replace this component with the following code.
 
