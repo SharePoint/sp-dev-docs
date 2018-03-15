@@ -41,21 +41,15 @@ If you’re unable to migrate to Microsoft Graph, you can use the following work
 
 For example, for the following input URL:
 
-```
-https://contoso-my.sharepoint.com/personal/john_contoso_com/_layouts/15/guestaccess.aspx?share=ERGZUIZ8E0pAuC1oJtwz4dQB23IabPgbMtiVe0OLPtMybw
-```
+`https://contoso-my.sharepoint.com/personal/john_contoso_com/_layouts/15/guestaccess.aspx?share=ERGZUIZ8E0pAuC1oJtwz4dQB23IabPgbMtiVe0OLPtMybw`
 
 This is the original API request:
 
-```
-https://contoso-my.sharepoint.com/personal/john_contoso_com/_api/web/GetFileByUrl(@url)?@url='https%3A%2F%2Fcontoso-my.sharepoint.com%2Fpersonal%2Fjohn_contoso_com%2F_layouts%2F15%2Fguestaccess.aspx%3Fshare%3DERGZUIZ8E0pAuC1oJtwz4dQB23IabPgbMtiVe0OLPtMybw
-```
+`https://contoso-my.sharepoint.com/personal/john_contoso_com/_api/web/GetFileByUrl(@url)?@url='https%3A%2F%2Fcontoso-my.sharepoint.com%2Fpersonal%2Fjohn_contoso_com%2F_layouts%2F15%2Fguestaccess.aspx%3Fshare%3DERGZUIZ8E0pAuC1oJtwz4dQB23IabPgbMtiVe0OLPtMybw`
 
 This is the new API request:
 
-```
-https://contoso-my.sharepoint.com/_api/SP.RemoteWeb(@url)/web/GetFileByUrl(@url)?@url='https%3A%2F%2Fcontoso-my.sharepoint.com%2Fpersonal%2Fjohn_contoso_com%2F_layouts%2F15%2Fguestaccess.aspx%3Fshare%3DERGZUIZ8E0pAuC1oJtwz4dQB23IabPgbMtiVe0OLPtMybw
-```
+`https://contoso-my.sharepoint.com/_api/SP.RemoteWeb(@url)/web/GetFileByUrl(@url)?@url='https%3A%2F%2Fcontoso-my.sharepoint.com%2Fpersonal%2Fjohn_contoso_com%2F_layouts%2F15%2Fguestaccess.aspx%3Fshare%3DERGZUIZ8E0pAuC1oJtwz4dQB23IabPgbMtiVe0OLPtMybw`
 
 To determine the specific type of link, inspect the `IsSharingLink` and `IsAnonymous` fields in the response for the GetSHaringLinkData API (replace **GetFileByUrl** with **GetSharingLinkData** in the examples). Use this method instead of parsing URLs for tokens like `guestaccess.aspx`.
 
