@@ -201,7 +201,11 @@ Office 365 tenant administrators can manage permission grants and requests throu
 
   ![The 'Try the new SharePoint admin center' link highlighted in the SharePoint admin center](./../images/webapipermissions-o365portal-modernspadminlink.png)
 
-5. To **view pending permission requests**, in the modern SharePoint admin center, in the left pane, choose **WebApiPermission management** (**API management** in the screenshot).
+<br/>
+
+Following are some ways that Office 365 tenant administrators can manage permission grants and requests through the web UI from the modern SharePoint admin center.
+
+- To **view pending permission requests**, in the modern SharePoint admin center, in the left pane, choose **WebApiPermission management** (**API management** in the screenshot).
 
   ![The 'WebApiPermission management' link highlighted in the modern SharePoint admin center](./../images/webapipermissions-o365portal-webapipermissionslink.png)
 
@@ -209,7 +213,7 @@ Office 365 tenant administrators can manage permission grants and requests throu
 
   ![Pending permission request highlighted in the list of web API permissions](./../images/webapipermissions-o365portal-pendingpermissions.png)
 
-6. To **approve a pending permission request**, select the request in the list of permissions, and on the toolbar, choose **Approve or reject**. In the **Approve or reject access** pane, choose **Approve**.
+- To **approve a pending permission request**, select the request in the list of permissions, and on the toolbar, choose **Approve or reject**. In the **Approve or reject access** pane, choose **Approve**.
 
   ![The 'Approve or reject access' pane visible for the selected web API permission request](./../images/webapipermissions-o365portal-approve.png)
 
@@ -218,7 +222,7 @@ Office 365 tenant administrators can manage permission grants and requests throu
   > [!NOTE]
   > If you try to approve a permission request for a resource that already has some permissions granted (for example, granting additional permissions to the Microsoft Graph), the requested scopes are added to the previously granted permissions.
 
-7. To **reject a pending permission request**, select the request in the list of permissions, and on the toolbar, choose **Approve or reject**. In the **Approve or reject access** pane, choose **Reject**.
+- To **reject a pending permission request**, select the request in the list of permissions, and on the toolbar, choose **Approve or reject**. In the **Approve or reject access** pane, choose **Reject**.
 
   ![The 'Approve or reject access' panel visible for the selected web API permission request](./../images/webapipermissions-o365portal-deny.png)
 
@@ -227,7 +231,7 @@ Office 365 tenant administrators can manage permission grants and requests throu
   > [!NOTE]
   > Rejecting a permission request issued by a solution deployed in the app catalog doesn't affect that solution, and it remains deployed in the app catalog. Because the requested permissions have been denied, the solution won't be working as expected and you should remove it from the app catalog immediately after rejecting the permission request.
 
-8. To **revoke a previously granted set of permissions**, select the grant in the list of permissions, and on the toolbar, choose **Remove access**. In the **Remove access** pane, choose **Remove**.
+- To **revoke a previously granted set of permissions**, select the grant in the list of permissions, and on the toolbar, choose **Remove access**. In the **Remove access** pane, choose **Remove**.
 
   ![The 'Remove access' pane visible for the selected web API permission grant](./../images/webapipermissions-o365portal-remove.png)
 
@@ -238,7 +242,7 @@ Office 365 tenant administrators can manage permission grants and requests throu
   >
   > Revoking granted permissions doesn't invalidate previously issued access tokens. Instead, they remain valid until they expire.
 
-9. To **view all previously granted permissions**, in the modern SharePoint admin center, in the left pane, choose **API management**. All granted permissions are displayed in the **Approved** section.
+- To **view all previously granted permissions**, in the modern SharePoint admin center, in the left pane, choose **API management**. All granted permissions are displayed in the **Approved** section.
 
   ![Granted permissions displayed on the WebApiPermission management page](./../images/webapipermissions-o365portal-grantedpermissions.png)
 
