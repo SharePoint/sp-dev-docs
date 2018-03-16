@@ -1,7 +1,7 @@
 ---
 title: Connect to Azure AD-secured APIs in SharePoint Framework solutions
 description: Use the AadHttpClient class to connect to Azure AD-secured APIs in SharePoint Framework solutions.
-ms.date: 02/15/2018
+ms.date: 03/16/2018
 ms.prod: sharepoint
 ---
 
@@ -33,7 +33,7 @@ All permissions are granted to the whole tenant and not to a specific applicatio
 
 ## Discover available applications and permissions
 
-The target Azure AD that secures your Office 365 tenant determines which applications you can request permissions for in your solution. The list of available applications might depend on the Office 365 license that the organization is using and which line-of-business applications they registered in their Azure AD. If you have sufficient permissions, there are several ways that you can see which applications and permission scopes are available in your tenant.
+The target Azure AD that secures your Office 365 tenant determines which applications you can request permissions for in your solution. The list of available applications might depend on the Office 365 license that the organization is using and which line-of-business applications they registered in Azure AD. If you have sufficient permissions, there are several ways that you can see which applications and permission scopes are available in your tenant.
 
 ### Use Azure Portal or Azure AD admin center
 
@@ -139,7 +139,7 @@ If your SharePoint Framework solution requires permissions to specific resources
   ```
 
   > [!NOTE]
-  > For the value of the **resource** property, you can specify either the **displayName** or the **objectId** of the application to which you want to request permissions. Using the **displayName** not only is more readable but also allows you to build your solution once and reuse it across multiple tenants. While the **objectId** of an Azure AD application is different on each tenant, the **displayName** stays the same.
+  > For the value of the **resource** property, you can specify either the **displayName** or the **objectId** of the application to which you want to request permissions. Using the displayName not only is more readable but also allows you to build your solution once and reuse it across multiple tenants. While the objectId of an Azure AD application is different on each tenant, the displayName stays the same.
 
 3. If you want to request multiple permission scopes for the given resource, specify each scope in a separate entry, for example:
 
@@ -201,7 +201,7 @@ Office 365 tenant administrators can manage permission grants and requests throu
 
   ![The 'Try the new SharePoint admin center' link highlighted in the SharePoint admin center](./../images/webapipermissions-o365portal-modernspadminlink.png)
 
-5. To **view pending permission requests**, in the modern SharePoint admin center, in the left pane, choose **WebApiPermission management** (**API Management** in the screenshot).
+5. To **view pending permission requests**, in the modern SharePoint admin center, in the left pane, choose **WebApiPermission management** (**API management** in the screenshot).
 
   ![The 'WebApiPermission management' link highlighted in the modern SharePoint admin center](./../images/webapipermissions-o365portal-webapipermissionslink.png)
 
@@ -270,7 +270,7 @@ SharePoint tenant administrators can use the SharePoint Online Management Shell 
   - **ResourceId**: The objectId of the resource service principal to which access has been granted.
   - **Scope**: The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.
 
-- To **revoke a previously granted permission**, use the `Revoke-SPOTenantServicePrincipalPermission -ObjectId <String>` cmdlet. In the `ObjectId` parameter, you should specify the ObjectId of the grant that you want to revoke, which you can obtain by using the `Get-SPOTenantServicePrincipalPermissionGrants` cmdlet.
+- To **revoke a previously granted permission**, use the `Revoke-SPOTenantServicePrincipalPermission -ObjectId <String>` cmdlet. In the `ObjectId` parameter, you should specify the objectId of the grant that you want to revoke, which you can obtain by using the `Get-SPOTenantServicePrincipalPermissionGrants` cmdlet.
 
   > [!NOTE]
   > Revoking a permission doesn't trigger any changes to the app catalog or any of the deployed applications. The only consequence of revoking a permission is that any application used in the tenant will not be able to connect to the resources for which the permission has been revoked.
@@ -301,7 +301,7 @@ SharePoint tenant administrators can use the [Office 365 CLI](https://aka.ms/o36
   - **ResourceId**: The objectId of the resource service principal to which access has been granted.
   - **Scope**: The value of the scope claim that the resource application should expect in the OAuth 2.0 access token.
 
-- To **revoke a previously granted permission**, use the [spo serviceprincipal grant revoke](https://sharepoint.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-grant-revoke/) command. In the `grantId` parameter, specify the ObjectId of the grant that you want to revoke, which you can obtain by using the `spo serviceprincipal grant list` command.
+- To **revoke a previously granted permission**, use the [spo serviceprincipal grant revoke](https://sharepoint.github.io/office365-cli/cmd/spo/serviceprincipal/serviceprincipal-grant-revoke/) command. In the `grantId` parameter, specify the objectId of the grant that you want to revoke, which you can obtain by using the `spo serviceprincipal grant list` command.
 
   > [!NOTE]
   > Revoking a permission doesn't trigger any changes to the app catalog or any of the deployed applications. The only consequence of revoking a permission is that any application used in the tenant will not be able to connect to the resources for which the permission has been revoked.
@@ -310,7 +310,7 @@ SharePoint tenant administrators can use the [Office 365 CLI](https://aka.ms/o36
 
 Starting from version 1.4.1, SharePoint Framework simplifies connecting to APIs secured with Azure AD. Using the new **AadHttpClient**, you can easily connect to APIs secured with Azure AD without having to implement authentication and authorization yourself. 
 
-Internally, the **AadHttpClient** implements the Azure AD OAuth flow using ADAL JS by using the **SharePoint Online Client Extensibility** service principal to obtain a valid access token. The **SharePoint Online Client Extensibility** service principal is provisioned by Microsoft and available in the Azure AD of all Office 365 tenants.
+Internally, the **AadHttpClient** implements the Azure AD OAuth flow using ADAL JS by using the **SharePoint Online Client Extensibility** service principal to obtain a valid access token. The **SharePoint Online Client Extensibility** service principal is provisioned by Microsoft and is available in the Azure AD of all Office 365 tenants.
 
 1. To use the **AadHttpClient** in your SharePoint Framework solution, add the following `import` clause in your main web part file:
 
@@ -333,7 +333,7 @@ Internally, the **AadHttpClient** implements the Azure AD OAuth flow using ADAL 
   ```
 
   > [!NOTE]
-  > Each instance of the **AadHttpClient** is linked to the specific resource, which is why you need to create a new instance of the client for each resource you want to connect to.
+  > Each instance of the **AadHttpClient** is linked to the specific resource, which is why you need to create a new instance of the client for each resource that you want to connect to.
 
 3. After you instantiate the **AadHttpClient** for your resource, you can issue a web request to communicate with your API; in this example, the API returns a list of orders represented by the custom **Order** interface defined elsewhere in the project:
 

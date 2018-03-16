@@ -1,7 +1,7 @@
 ---
 title: Use the MSGraphClient to connect to Microsoft Graph
 description: Use the MSGraphClient class to make calls to the Microsoft Graph REST API.
-ms.date: 02/15/2018
+ms.date: 03/16/2018
 ms.prod: sharepoint
 ---
 
@@ -79,7 +79,7 @@ When working with the Microsoft Graph and TypeScript, you can use the [Microsoft
   import * as MicrosoftGraph from '@microsoft/microsoft-graph-types';
   ```
 
-3. Type the objects retrieved from the Microsoft Graph, for example:
+3. Enter the objects retrieved from the Microsoft Graph, for example:
 
   ```typescript
   export default class HelloWorldWebPart extends BaseClientSideWebPart<IHelloWorldWebPartProps> {

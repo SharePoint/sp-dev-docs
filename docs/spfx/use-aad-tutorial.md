@@ -1,7 +1,7 @@
 ---
 title: Consuming APIs secured with Azure AD within the SharePoint Framework
 description: Tutorial on using the AadHttpClient or MSGraphClient class to connect to Azure AD-secured APIs in SharePoint Framework solutions.
-ms.date: 02/15/2018
+ms.date: 03/16/2018
 ms.prod: sharepoint
 ---
 
@@ -55,12 +55,12 @@ Next, create a new SharePoint Framework solution:
    ```
 
 3. In your solution, do the following:
-  * Provide a name for the solution (for example *spfx-api-scopes-tutorial*).
-  * Target the solution for: *SharePoint Online only (latest)*.
+  * Provide a name for the solution (for example **spfx-api-scopes-tutorial**).
+  * Target the solution for **SharePoint Online only (latest)**.
   * Use the current folder.
   * Decide whether you want to globally deploy the solution to the target tenant.
   * Choose to create a web part.
-  * Call the web part *GraphConsumer*.
+  * Call the web part **GraphConsumer**.
   * Provide a description.
   * Choose to use React as the development framework.
 
@@ -83,7 +83,7 @@ Next, configure the initial elements of the client-side web part.
 ### Configure the custom properties
 
 1. Create a new source code file under the *src/webparts/graphConsumer/components* folder of the solution.
-Call the new file *ClientMode.ts* and use it to declare a TypeScript *enum* with the available options for the **ClientMode** property of the web part.
+Call the new file **ClientMode.ts** and use it to declare a TypeScript `enum` with the available options for the **ClientMode** property of the web part.
 
   ```typescript
   export enum ClientMode {
@@ -101,7 +101,7 @@ Change the definition of the **IGraphConsumerWebPartProps** interface to accept 
   }
   ```
 
-3. Update the **getPropertyPaneConfiguration()** method of the client-side web part, in order to support the choice selection in the property pane. The following example shows the new implementation of the method.
+3. Update the **getPropertyPaneConfiguration()** method of the client-side web part to support the choice selection in the property pane. The following example shows the new implementation of the method.
 
   ```typescript
     protected getPropertyPaneConfiguration(): IPropertyPaneConfiguration {
@@ -131,7 +131,7 @@ Change the definition of the **IGraphConsumerWebPartProps** interface to accept 
     }
   ```
 
-4. In addition, you need to update the **render** method of the client-side web part to create a properly configured instance of the React component for rendering. The following code shows the update method definition.
+4. In addition, you need to update the **render** method of the client-side web part to create a properly configured instance of the React component for rendering. The following code shows the updated method definition.
 
   ```typescript
     public render(): void {
@@ -255,7 +255,7 @@ Now you can update the **GraphConsumer** React component under the *src/webparts
     }
   ```
 
-4. Update the *GraphConsumer.tsx* file. First, add some import statements to import the types you defined earlier. Notice the import for **IGraphConsumerProps**, **IGraphConsumerState**, **ClientMode**, **IUserItem**. There are also some imports for the Office UI Fabric components used to render the UI of the React component.
+4. Update the *GraphConsumer.tsx* file. First, add some import statements to import the types you defined earlier. Notice the import for **IGraphConsumerProps**, **IGraphConsumerState**, **ClientMode**, and **IUserItem**. There are also some imports for the Office UI Fabric components used to render the UI of the React component.
 
   ```typescript
   import * as React from 'react';
@@ -382,6 +382,8 @@ Now you can update the **GraphConsumer** React component under the *src/webparts
 
   ```
 
+<br/>
+
 There are some validation rules and handling events for the **TextField** component to collect the search criteria. The following are the method implementations.
 
 ```typescript
@@ -401,6 +403,8 @@ There are some validation rules and handling events for the **TextField** compon
         : `${strings.SearchForValidationErrorMessage}`;
     }
 ```
+
+<br/>
 
 The **PrimaryButton** fires a **_search()** function, which determines what client technology to use to consume Microsoft Graph.
 
@@ -645,7 +649,7 @@ You're now ready to build, bundle, package, and deploy the solution.
 
   ![Screenshot of the Try the new SharePoint admin center link](../images/graphconsumer-open-new-admin-center.png)
 
-5. In the new Admin Center, in the left quick launch menu, choose the **WebApiPermission management** menu item. You will see a page similar to the following.
+5. In the new Admin Center, in the left quick launch menu, choose the **WebApiPermission management** menu item (**API management**). You will see a page similar to the following.
 
   ![Screenshot of the WebApiPermission management page](../images/graphconsumer-webapipermission-management.png)
 
@@ -663,7 +667,7 @@ You're now ready to build, bundle, package, and deploy the solution.
 
   <br/>
 
-7. You can also select the pending approval permission item, and choose **Approve or reject** in the toolbar.
+7. You can also select the pending approval permission item, and choose **Approve or reject** on the toolbar.
 
   ![Screenshot of the WebApiPermission management page during the approval process](../images/graphconsumer-webapipermission-approval-approve.png)
 
@@ -672,7 +676,7 @@ You're now ready to build, bundle, package, and deploy the solution.
 And you're now ready to go.
 
 > [!WARNING]
-> If you are getting an unexpected exception when trying to approve the permission (`[HTTP]:400 -  [CorrelationId]`), please update the `resource` attribute in your **package-solution.json** to use value '*Microsoft.Azure.AgregatorService*' rather then '*Microsoft Graph*' which was instructed earlier in this tutorial. Reject the existing request and update the solution package in the app catalog with the update value.
+> If you are getting an unexpected exception when trying to approve the permission (`[HTTP]:400 -  [CorrelationId]`), update the `resource` attribute in your *package-solution.json* to use the value `Microsoft.Azure.AgregatorService` rather than `Microsoft Graph`, which was instructed earlier in this tutorial. Reject the existing request and update the solution package in the app catalog with the update value.
 
 <a name="SolutionTesting"></a>
 
@@ -692,7 +696,7 @@ And you're now ready to go.
 
 3. Add the *GraphConsumer* client-side web part, configure the *Client Mode*, and search for users. 
 
-  When you make your first request, you will see a pop-up window appear and disappear. That's the sign-in window used by ADAL JS, which is used internally by the SharePoint Framework to get the access token from Azure AD using an OAuth implicit flow.
+  When you make your first request, you will see a pop-up window appear and disappear. That's the sign-in window used by ADAL JS, which is used internally by the SharePoint Framework to get the access token from Azure AD by using an OAuth implicit flow.
 
   ![Screenshot of the UI of the sample application](../images/use-aad-tutorial-video.gif)
 
