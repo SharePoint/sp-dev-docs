@@ -210,6 +210,37 @@
     href: spfx/known-issues-and-common-questions.md 
 - name: Features
   items:
+  - name: Introduction to SharePoint APIs
+    items:
+    - name: SharePoint .NET Server, CSOM, JSOM, and REST API index
+      href: sp-add-ins/sharepoint-net-server-csom-jsom-and-rest-api-index.md
+    - name: Complete basic operations using SharePoint client library code
+      href: sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code.md
+    - name: Complete basic operations using JavaScript library code in SharePoint
+      href: sp-add-ins/complete-basic-operations-using-javascript-library-code-in-sharepoint.md
+    - name: Get to know the SharePoint REST service
+      href: sp-add-ins/get-to-know-the-sharepoint-rest-service.md
+      items:
+      - name: Complete basic operations
+        href: sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md
+      - name: Work with lists and list items
+        href: sp-add-ins/working-with-lists-and-list-items-with-rest.md
+      - name: Work with folders and files
+        href: sp-add-ins/working-with-folders-and-files-with-rest.md
+      - name: Determine endpoint URIs
+        href: sp-add-ins/determine-sharepoint-rest-service-endpoint-uris.md
+      - name: Use OData query operations
+        href: sp-add-ins/use-odata-query-operations-in-sharepoint-rest-requests.md
+      - name: Navigate data structure
+        href: sp-add-ins/navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md
+      - name: Synchronize items
+        href: sp-add-ins/synchronize-sharepoint-items-using-the-rest-service.md
+      - name: Upload a file
+        href: sp-add-ins/upload-a-file-by-using-the-rest-api-and-jquery.md
+      - name: Set custom permissions
+        href: sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-interface.md
+      - name: Make batch requests
+        href: sp-add-ins/make-batch-requests-with-the-rest-apis.md 
   - name: Site theming
     items:
     - name: Overview
@@ -224,6 +255,10 @@
       href: declarative-customization/site-theming/sharepoint-site-theming-csom.md  
   - name: Column formatting
     href: declarative-customization/column-formatting.md   
+  - name: Communication Site
+    href: apis/communication-site-creation-rest.md
+  - name: Application Lifecycle Management (ALM) APIs
+    href: apis/alm-api-for-spfx-add-ins.md      
   - name: Site design
     href: declarative-customization/site-design-overview.md
     items:
@@ -241,12 +276,6 @@
       href: declarative-customization/site-design-rest-api.md
     - name: PnP Provisioning Engine
       href: declarative-customization/site-design-pnp-provisioning.md
-- name: SharePoint APIs
-  items:
-  - name: Create Communication site
-    href: apis/communication-site-creation-rest.md
-  - name: Application Lifecycle Management (ALM) APIs
-    href: apis/alm-api-for-spfx-add-ins.md    
   - name: Webhooks
     href: apis/webhooks/overview-sharepoint-webhooks.md
     items:
@@ -266,12 +295,10 @@
       - name: Delete subscription
         href: apis/webhooks/lists/delete-subscription.md
       - name: Get subscription
-        href: apis/webhooks/lists/get-subscription.md
+        href: apis/webhooks/lists/get-subscription.md        
 - name: SharePoint development overview
   href: general-development/sharepoint-development-overview.md
   items:
-  - name: What's new for developers
-    href: general-development/what-s-new-for-developers-in-sharepoint.md
   - name: Protocol handler error in SharePoint 2016
     href: general-development/protocol-handler-error-due-to-deprecated-interface-in-sharepoint-2016.md
   - name: Programming models
@@ -1068,35 +1095,6 @@
       items:
       - name: URL strings and tokens in add-ins
         href: sp-add-ins/url-strings-and-tokens-in-sharepoint-add-ins.md
-    - name: SharePoint .NET Server, CSOM, JSOM, and REST API index
-      href: sp-add-ins/sharepoint-net-server-csom-jsom-and-rest-api-index.md
-    - name: Complete basic operations using SharePoint client library code
-      href: sp-add-ins/complete-basic-operations-using-sharepoint-client-library-code.md
-    - name: Complete basic operations using JavaScript library code in SharePoint
-      href: sp-add-ins/complete-basic-operations-using-javascript-library-code-in-sharepoint.md
-    - name: Get to know the SharePoint REST service
-      href: sp-add-ins/get-to-know-the-sharepoint-rest-service.md
-      items:
-      - name: Complete basic operations
-        href: sp-add-ins/complete-basic-operations-using-sharepoint-rest-endpoints.md
-      - name: Work with lists and list items
-        href: sp-add-ins/working-with-lists-and-list-items-with-rest.md
-      - name: Work with folders and files
-        href: sp-add-ins/working-with-folders-and-files-with-rest.md
-      - name: Determine endpoint URIs
-        href: sp-add-ins/determine-sharepoint-rest-service-endpoint-uris.md
-      - name: Use OData query operations
-        href: sp-add-ins/use-odata-query-operations-in-sharepoint-rest-requests.md
-      - name: Navigate data structure
-        href: sp-add-ins/navigate-the-sharepoint-data-structure-represented-in-the-rest-service.md
-      - name: Synchronize items
-        href: sp-add-ins/synchronize-sharepoint-items-using-the-rest-service.md
-      - name: Upload a file
-        href: sp-add-ins/upload-a-file-by-using-the-rest-api-and-jquery.md
-      - name: Set custom permissions
-        href: sp-add-ins/set-custom-permissions-on-a-list-by-using-the-rest-interface.md
-      - name: Make batch requests
-        href: sp-add-ins/make-batch-requests-with-the-rest-apis.md  
     - name: Create UX components in SharePoint
       href: sp-add-ins/create-ux-components-in-sharepoint.md
       items:
