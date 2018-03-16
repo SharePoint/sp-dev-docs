@@ -176,6 +176,8 @@ Headers:
 
 ## Working with list items by using REST
 
+### Retrieve all list items
+
 The following example shows how to **retrieve** all of a list's items.
  
 > [!NOTE] 
@@ -190,7 +192,7 @@ headers:
 
 ```
 
-<br/>
+### Retrieve specific list item
 
 The following example shows how to **retrieve** a specific list item.
 
@@ -226,7 +228,7 @@ The following XML shows an example of the list item properties that are returned
 </content>
 ```
 
-<br/>
+### Create list item
 
 The following example shows how to **create** a list item.
  
@@ -245,7 +247,82 @@ headers:
     content-length:length of post body
 ```
 
-<br/>
+### Create list item in a folder
+
+Create list item in a folder.
+
+```text
+POST /_api/web/lists/GetByTitle('Test')/AddValidateUpdateItemUsingPath
+```
+
+#### URI Parameters
+
+None
+
+#### Request headers
+
+| Header | Value |
+|--------|-------|
+|Accept|application/json;odata=nometadata|
+|Content-Type|application/json;odata=nometadata|
+|x-requestdigest|The appropriate digest for current site|
+
+#### Request body
+
+```json
+{
+    "listItemCreateInfo": {
+        "FolderPath":  { "DecodedUrl": "https://contoso.sharepoint.com/lists/Test/Folder/SubFolder" },
+        "UnderlyingObjectType": 0
+    },
+    "formValues": [
+        {
+            "FieldName": "Title",
+            "FieldValue": "Item"
+        }
+    ],
+    "bNewDocumentUpdate": false
+}
+```
+
+| Property | Description |
+|----------|-------|
+|listItemCreateInfo|Information about the list and folder where the item should be created|
+|listItemCreateInfo.FolderPath.DecodedUrl|Absolute URL of the folder where the item should be created|
+|listItemCreateInfo.UnderlyingObjectType|Type of item to create. For more information see [https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.filesystemobjecttype(v=office.14).aspx](https://msdn.microsoft.com/en-us/library/microsoft.sharepoint.client.filesystemobjecttype(v=office.14).aspx)|
+|formValues|Array of field names and values to set on the newly created item|
+|bNewDocumentUpdate|Set to `false` to create a list item|
+
+#### Responses
+
+| Name   | Type    |Description|
+|--------|---------|-----------|
+|200 OK  | Boolean |Success    |
+
+```json
+{
+  "value": [
+    {
+      "ErrorMessage": null,
+      "FieldName": "Title",
+      "FieldValue": "Item",
+      "HasException": false,
+      "ItemId": 0
+    },
+    {
+      "ErrorMessage": null,
+      "FieldName": "Id",
+      "FieldValue": "1",
+      "HasException": false,
+      "ItemId": 0
+    }
+  ]
+}
+```
+
+The `value` property contains the list of properties that have been set when creating the list item.
+
+### Update list item
 
 The following example shows how to **update** a list item.
  
@@ -266,7 +343,7 @@ headers:
     content-length:length of post body
 ```
 
-<br/>
+### Delete list item
 
 The following example shows how to **delete** a list item.
 
