@@ -128,7 +128,7 @@ Figure 2 shows how developers can use Office 365 as a development environment an
   
     
     
-Developers with MSDN subscriptions can obtain a development tenant that contains aSharePointDeveloper Site. The SharePointDeveloper Site is preconfigured for developing applications. Users can use not only Visual Studio 2012 in developing applications, but with Office 365 developer sites, Napa can be used within the site to construct applications. For more information about getting started with anOffice 365 Developer Site, see  [Set up a development environment for SharePoint Add-ins on Office 365](http://msdn.microsoft.com/library/b22ce52a-ae9e-4831-9b68-c9210af6dc54%28Office.15%29.aspx).
+Developers with MSDN subscriptions can obtain a development tenant that contains a SharePoint developer site. The SharePointDeveloper Site is preconfigured for developing applications. Users can use not only Visual Studio 2012 in developing applications, but with Office 365 developer sites, Napa can be used within the site to construct applications. For more information about getting started with an Office 365 developer site, see [Set up a development environment for SharePoint Add-ins on Office 365](../sp-add-ins/set-up-a-development-environment-for-sharepoint-add-ins-on-office-365.md).
   
     
     

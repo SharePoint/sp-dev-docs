@@ -1,7 +1,7 @@
 ---
 title: Get started with SharePoint webhooks
 description: Build an application that adds and handles SharePoint webhook requests.
-ms.date: 02/08/2018
+ms.date: 03/14/2018
 ms.prod: sharepoint
 ---
 
@@ -10,7 +10,7 @@ ms.prod: sharepoint
 
 This article describes how to build an application that adds and handles SharePoint webhook requests. You will learn how to use [Postman client](https://www.getpostman.com/) to construct and execute SharePoint webhook requests quickly while interacting with a simple ASP.NET Web API as the webhook receiver.
 
-You will use plain HTTP requests, which is useful for helping you to understand how webhooks work.  
+You will use plain HTTP requests, which is useful for helping you understand how webhooks work.  
 
 To complete the step-by-step instructions in this article, download and install the following tools:
 
@@ -18,7 +18,7 @@ To complete the step-by-step instructions in this article, download and install 
 * [Postman](https://www.getpostman.com/)
 * [Visual Studio Community Edition](https://go.microsoft.com/fwlink/?LinkId=691978&clcid=0x409)
 * [ngrok](https://ngrok.com/) (to install ngrok, see [Download and Installation](https://ngrok.com/download))
-* An Office 365 subscription with SharePoint Online. If you are new to Office 365, you can also [sign up for an Office 365 developer account](http://dev.office.com/devprogram).
+* An Office 365 developer subscription with SharePoint Online. If you are new to Office 365, you can also [sign up for an Office 365 developer subscription through the Office 365 Developer Program](https://developer.microsoft.com/en-us/office/dev-program). See the [Office 365 Developer Program documentation](https://docs.microsoft.com/en-us/office/developer-program/office-365-developer-program) for step-by-step instructions about how to join the Office 365 Developer Program and sign up and configure your subscription.
 
 ## Step 1: Register an Azure AD application for Postman client
 

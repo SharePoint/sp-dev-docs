@@ -28,7 +28,7 @@ Depending on your specific requirements and budget, you can choose from the foll
 - Use Microsoft Hyper-V and install SharePoint on a virtual machine running a Windows Server 2008 R2 Service Pack 1 x64 or a Windows Server 2012 guest operating system. For guidance on setting up a Microsoft Hyper-V virtual machine for SharePoint, see [Use best practice configurations for the SharePoint virtual machines and Hyper-V environment](http://technet.microsoft.com/en-US/library/ff621103%28v=office.15%29.aspx). 
     
 > [!NOTE]
-> Installation of SharePoint is supported only on Windows Server 2008 R2 Service Pack 1 x64 or Windows Server 2012. If you want to develop SharePoint Add-ins for SharePoint on Windows 7 or Windows 8, you can sign up for an Office 365 Developer Site and develop add-ins remotely. 
+> Installation of SharePoint is supported only on Windows Server 2008 R2 Service Pack 1 x64 or Windows Server 2012. If you want to develop SharePoint Add-ins for SharePoint on Windows 7 or Windows 8, you can sign up for an Office 365 developer site and develop add-ins remotely. 
 
 <a name="bk_prereqsOS"> </a>
 ## Install the prerequisites for the operating system and SharePoint
@@ -57,7 +57,7 @@ Depending on your specific requirements and budget, you can choose from the foll
    > [!NOTE]
    > The SharePoint Products and Technologies Configuration Wizard may fail if you're using a computer that is joined to a domain but that is not connected to a domain controller. If you see this failure, connect to a domain controller either directly or through a Virtual Private Network (VPN) connection, or sign in with a local account that has administrative privileges on the computer.
 
-7. After the configuration wizard is complete, you see the **Template Selection** page of the new SharePoint site. On this page, select the **Developer Site** template. You can only deploy SharePoint Add-ins from Visual Studio to a Developer Site.
+7. After the configuration wizard is complete, you see the **Template Selection** page of the new SharePoint site. On this page, select the **Developer Site** template. You can only deploy SharePoint Add-ins from Visual Studio to a developer site.
     
    *Figure 2. Select the site template page*
 

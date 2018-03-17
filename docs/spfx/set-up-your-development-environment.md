@@ -1,7 +1,7 @@
 ---
 title: Set up your SharePoint Framework development environment
 description: Use Visual Studio or your own custom development environment to build SharePoint Framework solutions. You can use a Mac, PC, or Linux.
-ms.date: 02/15/2018
+ms.date: 03/09/2018
 ms.prod: sharepoint
 ---
 
@@ -83,6 +83,8 @@ If you need to switch between the different projects created by using different 
 ```sh
 npm install @microsoft/generator-sharepoint --save-dev
 ```
+
+For more information about the Yeoman SharePoint generator, see [Scaffold projects by using Yeoman SharePoint generator](toolchain/scaffolding-projects-using-yeoman-sharepoint-generator.md).
 
 ## Optional tools
 
