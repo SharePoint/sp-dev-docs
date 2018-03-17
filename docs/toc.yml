@@ -267,6 +267,8 @@
         href: apis/webhooks/lists/delete-subscription.md
       - name: Get subscription
         href: apis/webhooks/lists/get-subscription.md
+  - name: Shorter share links
+    href: docs/spfx/shorter-share-link-format.md
 - name: SharePoint development overview
   href: general-development/sharepoint-development-overview.md
   items:
