@@ -18,7 +18,7 @@ To run the PowerShell cmdlets, you'll need to do the following:
 1. Download and install the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). If you already have a previous version of the shell installed, uninstall it first and then install the latest version.
 2. Follow the instructions at [Connect to SharePoint Online PowerShell](https://technet.microsoft.com/en-us/library/fp161372.aspx) to connect to your SharePoint tenant.
 
-To verify your setup, try using the **Get-SPOSiteScript** cmdlet to read the current list of site scripts. If the cmdlet runs and returns with no errors, you're ready to proceed.
+To verify your setup, try using the [Get-SPOSiteScript](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Get-SPOSiteScript?view=sharepoint-ps) cmdlet to read the current list of site scripts. If the cmdlet runs and returns with no errors, you're ready to proceed.
 
 ## Site design cmdlets
 
