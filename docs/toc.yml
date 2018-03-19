@@ -242,36 +242,36 @@
     - name: PnP Provisioning Engine
       href: declarative-customization/site-design-pnp-provisioning.md
   - name: Hub sites
-    href: declarative-customization/hub-site-overview.md
+    href: features/hub-site-overview.md
     items:
     - name: Create a hub site
-      href: declarative-customization/create-a-hub-site.md
+      href: features/create-a-hub-site.md
     - name: Create a hub site with PowerShell
-      href: declarative-customization/create-hub-site-with-powershell.md
+      href: features/create-hub-site-with-powershell.md
     - name: PowerShell
-      href: declarative-customization/hub-site-powershell.md
+      href: features/hub-site-powershell.md
     - name: REST API
       items:
       - name: SP.HubSites.CanCreate
-        href: declarative-customization/REST-cancreate-method.md
+        href: features/REST-cancreate-method.md
       - name: GetById
-        href: declarative-customization/REST-getbyid-method.md
+        href: features/REST-getbyid-method.md
       - name: HubSiteData
-        href: declarative-customization/REST-hubsitedata-method.md
+        href: features/REST-hubsitedata-method.md
       - name: HubSites
-        href: declarative-customization/REST-hubsites-method.md
+        href: features/REST-hubsites-method.md
       - name: JoinHubSite
-        href: declarative-customization/REST-joinhubsite-method.md
+        href: features/REST-joinhubsite-method.md
       - name: RegisterHubSite
-        href: declarative-customization/REST-registerhubsite.method.md
+        href: features/REST-registerhubsite.method.md
       - name: SyncHubSiteTheme
-        href: declarative-customization/REST-synchubsitetheme-method.md
+        href: features/REST-synchubsitetheme-method.md
       - name: UnRegisterHubSite
-        href: declarative-customization/REST-unregisterhubsite-method.md
+        href: features/REST-unregisterhubsite-method.md
       - name: SPHubSite type
-        href: declarative-customization/REST-sphubsite-type.md
+        href: features/REST-sphubsite-type.md
       - name: SPHubSiteData type
-        href: declarative-customization/REST-sphubsitedata-type.md
+        href: features/REST-sphubsitedata-type.md
 - name: SharePoint APIs
   items:
   - name: Create Communication site
