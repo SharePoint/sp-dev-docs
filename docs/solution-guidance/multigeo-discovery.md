@@ -24,6 +24,19 @@ Depending on your scenario, you can use one or a combination of the following AP
 
 ## Get Multi-Geo tenant configuration information
 
+### Using the CSOM API
+
+Obtaining the geo location of your tenant can be done via CSOM by using the `Tenant` class and the `GetTenantInstances` method as shown in below snippet:
+
+```C#
+Tenant tenant = new Tenant(clientContext);
+var tenantInstances = tenant.GetTenantInstances();
+clientContext.Load(tenantInstances);
+clientContext.ExecuteQuery();
+```
+
+### Using the Microsoft Graph API
+
 You can get the geo location information for a tenant by using Microsoft Graph. The following example returns a collection with one object per geo location.
 
 ```

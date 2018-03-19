@@ -38,7 +38,10 @@
       "ms.author": "spdevdocs",
       "author": "spdevdocs",
       "ms.topic": "conceptual",
-      "ms.prod": "sharepoint"
+      "ms.prod": "sharepoint",
+      "feedback_system": "GitHub",
+      "feedback_github_repo": "SharePoint/sp-dev-docs",
+      "feedback_product_url": "https://aka.ms/spdev-uservoice"
     },
     "fileMetadata": {
       "ms.technology":{

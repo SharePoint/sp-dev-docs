@@ -34,7 +34,7 @@ There are two parts of the Office UI Fabric that are available for use by develo
 
 ## Office UI Fabric Core package
 
-The SharePoint Framework Fabric Core npm package (sp-office-ui-fabric-core) contains a subset of supported Fabric Core styles that can be safely consumed within a SharePoint Framework component. 
+The SharePoint Framework Fabric Core npm package **([@microsoft/sp-office-ui-fabric-core](https://www.npmjs.com/package/@microsoft/sp-office-ui-fabric-core))** contains a subset of supported Fabric Core styles that can be safely consumed within a SharePoint Framework component. 
 
 The following core styles are supported in the package:
 - Typography
@@ -47,7 +47,7 @@ The following are not yet supported in the package:
 - Animations
 - Icons
 
-Starting with the SharePoint Framework Yeoman generator version 1.3.4, the default project (web parts and extensions) templates come setup with the new sp-office-ui-fabric-core package and consume core styles from the package instead of using global CSS styles. 
+Starting with the SharePoint Framework Yeoman generator version 1.3.4, the default project (web parts and extensions) templates come setup with the new **@microsoft/sp-office-ui-fabric-core** package and consume core styles from the package instead of using global CSS styles. 
 
 ### Update existing projects
 
@@ -61,10 +61,10 @@ After it's installed, you can then import the Fabric Core Sass declarations in y
 
 ### Use Fabric Core styles
 
-To use the Fabric Core styles, you need to import the SPFabricCore declarations into your Sass file.
+To use the Fabric Core styles, you need to import the `SPFabricCore` declarations into your Sass file.
 
 > [!NOTE] 
-> Make sure you have the sp-office-ui-fabric-core npm package installed.
+> Make sure you have the **@microsoft/sp-office-ui-fabric-core** npm package installed.
 
 ```css
 @import '~@microsoft/sp-office-ui-fabric-core/dist/sass/SPFabricCore.scss';
@@ -106,9 +106,9 @@ render() {
 }
 ```
 
-The Fabric React package includes the supported Fabric Core styles used in the Fabric React components. We recommend that you import the Fabric Core styles from the Fabric React package instead of from the sp-office-ui-fabric-core package to ensure that the right styles are used in your component. 
+The Fabric React package includes the supported Fabric Core styles used in the Fabric React components. We recommend that you import the Fabric Core styles from the Fabric React package instead of from the **@microsoft/sp-office-ui-fabric-core** package to ensure that the right styles are used in your component.
 
-Because the sp-office-ui-fabric-core package is already installed in your solution by the Yeoman generator, we recommend that you uninstall that package if you decide to use Fabric components and reduce your component bundle size.
+Because the **@microsoft/sp-office-ui-fabric-core** package is already installed in your solution by the Yeoman generator, we recommend that you uninstall that package if you decide to use Fabric components and reduce your component bundle size.
 
 ```
 npm uninstall @microsoft/sp-office-ui-fabric-core --save-dev
@@ -117,7 +117,7 @@ npm uninstall @microsoft/sp-office-ui-fabric-core --save-dev
 You can then import the core styles from the Sass declarations available in the Fabric React package.
 
 ```css
-@import '~office-ui-fabric-react/dist/sass/References.scss';
+@import '~office-ui-fabric-react/dist/sass/_References.scss';
 ```
 
 ### Understanding this approach and its shortcomings
@@ -170,9 +170,9 @@ Following are some additional insights on the other approaches that were conside
 
 The web part developer would not be required to do anything explicitly to get the scoping to work. We planned to solve this problem through CSS specificity and descendant selectors. The Fabric Core team would ship multiple copies of Fabric Core css (for example, `fabric-6.css`, `fabric-6-scoped.css`, `fabric-6.0.0.css`, `fabric-6.0.0-scoped.css`).
 
-All the styles in the scoped CSS files would be inside a descendant selector, for example `"ms-Fabric-core--v6 ms-Icon--List"`. At compile time, the tooling would collect the version of the Office UI Fabric Core that the web part was built with. This version could be the one that comes with SharePoint Framework. Alternatively, web part developers could specify an explicit dependency on a specific version of Office UI Fabric Core in their **package.json** file.
+All the styles in the scoped CSS files would be inside a descendant selector, for example `.ms-Fabric--v6-0-0 .ms-Icon--List`. At compile time, the tooling would collect the version of the Office UI Fabric Core that the web part was built with. This version could be the one that comes with SharePoint Framework. Alternatively, web part developers could specify an explicit dependency on a specific version of Office UI Fabric Core in their **package.json** file.
 
-The web part div would be assigned this scope, that is `<div data-sp-webpart class="ms-Fabric-core--v6">`. The Framework would load the specific major version of the Fabric Core-scoped CSS file. If the web part was built with version 6.0.0 of the Fabric Core CSS, the Framework would download `fabric-6-scoped.css` when the web part was loaded.
+The web part div would be assigned this scope, that is `<div data-sp-webpart class="ms-Fabric--v6-0-0">`. The Framework would load the specific major version of the Fabric Core-scoped CSS file. If the web part was built with version 6.0.0 of the Fabric Core CSS, the Framework would download `fabric-6-scoped.css` when the web part was loaded.
 
 The rest of the page would contain unscoped Office UI Fabric Core styles. This way, as per CSS specificity rules, the scoped CSS would take precedence within the web part div. The web part and its contents would align to the specific version of the Office UI Fabric Core that the developer had chosen.
 
@@ -191,7 +191,7 @@ export default class MyWebPart {
 }
 
 protected render(): void {
-  <div className={css('ms-Fabric-core--v6')}>
+  <div className="ms-Fabric--v6-0-0">
     { // Rest of the web part UI }
   </div>
 }
@@ -207,13 +207,13 @@ This approach only works if the Microsoft user experience (that is, page and fir
 
 The reason being that the specificity of the scoped CSS applied on the web part overrides the unscoped CSS on the page. Keep in mind, as explained earlier, that if CSS specificity of the two classes is the same, their loading order plays a role in how the CSS classes are applied. The class that loads later takes precedence. Hence, the higher specificity of the scoped CSS is important in getting a consistent experience.
 
-Furthermore, multiple extensions, one contained in the other, cannot use different Fabric Core versions. In the following example, only `ms-Fabric-core--v6` would get applied:
+Furthermore, multiple extensions, one contained in the other, cannot use different Fabric Core versions. In the following example, only `ms-Fabric--v6-0-0` would get applied:
 
 ```HTML
-<div className={css('ms-Fabric-core--v6')}>
+<div className="ms-Fabric--v6-0-0">
   { // Rest of the web part UI }
     { // inside of this SPExtension trying to use different Fabric core version does not work }
-    <div className={css('ms-Fabric-core--v8')}>
+    <div className="ms-Fabric--v8-0-0">
     </div>
 </div>
 ```

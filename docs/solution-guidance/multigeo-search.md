@@ -25,14 +25,14 @@ In the scenario shown in the following image, a Multi-Geo tenant has three geo l
 
 From an end user point of view, search is scoped to the current geo location. When users perform searches from a site hosted in North America, they will only see results from the North America geo location. Searches from a site hosted in Europe will return results from sites in the Europe geo location.
 
-> [!NOTE] 
-> In the future, search will be Multi-Geo aware. A search query run from any location within the tenant will search all geo locations within the tenant and return combined results.
+> [!NOTE]
+> In the future, search will be Multi-Geo aware. Each geo location has its own search index and Search Center. When a user searches, the query is fanned out to all the indexes, and the returned results are merged. For example, a user in one geo location can search for content stored in another geo location, or for content on a SharePoint site that’s restricted to a different geo location. If the user has access to this content, search will show the result. Checkout [https://aka.ms/multigeo-developer-search](https://aka.ms/multigeo-developer-search) to learn more.
 
 ## Working with search programmatically in a Multi-Geo tenant
+
 Working with search programmatically is similar to the end user search experience. If you perform a search query, you'll only get results for the geo location in which you run the query. Your applications can, however, perform Multi-Geo tenant searches. To do this, iterate over the geo locations in your tenant, issue the same search query in each geo location, and then concatenate the results.
 
 This approach might be sufficient for in some scenarios (for example, searches for sites of a given type). However, in some cases, you want the search results to be ranked according to relevancy. You can't do this when you have multiple result sets. If your scenario requires search ranking, you will need to wait until a Multi-Geo search experience is available.
-
 
 ## See also
 
