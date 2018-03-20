@@ -53,6 +53,7 @@ When an image rendition is created, SharePoint creates a unique ID that identifi
     
     > [!NOTE]
     > The Image Renditions page can also be opened from the default home page of the publishing site. In the **I'm the Visual Designer** section, choose **Configure image renditions**. 
+     
 
 4. On the **Image Renditions** page, choose **Add new item**.
     
@@ -90,8 +91,9 @@ When an image rendition is edited, the new dimensions take effect the next time 
     
   
 5. On the **Edit Image Rendition** page, modify the name, width, or height of the image rendition.
-    
-  
+
+     > [!NOTE]
+  > To use the same image rendition on all webs within the same site collection, go to the image file directly and edit renditions from there. 
 
 ## Add an image rendition
 <a name="Add"> </a>
