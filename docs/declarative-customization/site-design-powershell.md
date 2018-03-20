@@ -35,7 +35,9 @@ The following cmdlets are available for managing site designs and site scripts f
 - [Remove-SPOSiteScript](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Remove-SPOSiteScript?view=sharepoint-ps)
 - [Revoke-SPOSiteDesignRights](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Revoke-SPOSiteDesignRights?view=sharepoint-ps)
 - [Set-SPOSiteDesign](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Set-SPOSiteDesign?view=sharepoint-ps)
-- [Set-SPOSiteScript](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Set-SPOSiteScript?view=sharepoint-ps)
+
+<!-- This particular page is not publishing for some reason; saving the link to turn on when it finally behaves :-( 
+- [Set-SPOSiteScript](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Set-SPOSiteScript?view=sharepoint-ps)-->
 
 
 
