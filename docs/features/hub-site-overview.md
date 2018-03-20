@@ -17,7 +17,7 @@ For more information on creating hub sites, see [Creating a SharePoint hub site 
 
 ## Additional Hub site details
 
-- We recommend selecting a communication site, or a team site that uses the new template. If you use a classic team site, the hub navigation will need to use modern pages, including document libraries, lists, and site contents, and hub site settings will only appear on modern pages.
+- We recommend selecting a communication site, or a team site that uses the new template. If you use a classic team site, the hub navigation will need to use modern pages, including document libraries, lists, and site contents. Hub site settings will only appear on modern pages.
 - You can create up to 50 hub sites for an organization.
 - If you set up SharePoint Multi-Geo for your organization, only sites within the same geo location can be associated with a hub site.
 - When users associated their sites with a hub, it doesn't impact the permissions of either the hub site or the associated sites. It's important to make sure all users you allow to associate sites to the hub have permission to the hub.
