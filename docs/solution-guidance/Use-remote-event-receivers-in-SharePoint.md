@@ -43,44 +43,21 @@ Before you run this add-in, do the following:
     
 3. To run this code sample, you need an Azure subscription. To sign up for a trial, see [Free one-month trial](http://azure.microsoft.com/en-us/pricing/free-trial/).
     
-4. Create an Azure Service Bus Namespace with ACS Support.
+4. Create an Azure Service Bus Namespace.
     
-	1. Install Azure PowerShell. For more information, see  [How to: Install Azure PowerShell](http://azure.microsoft.com/en-us/documentation/articles/powershell-install-configure/#Install).
-    
-	2. Start  **Azure PowerShell**.
+	1. Carry out the instructions in [Create a Service Bus namespace](https://docs.microsoft.com/en-us/azure/service-bus-messaging/service-bus-create-namespace-portal).
+
+    2. Copy **Primary Connection String** from the just created Service Bus Namespace
 	
-	3. Enter  **Add-AzureAccount**.
+	3. Return to Visual Studio.
 	
-	4. Enter your email address in the  **Sign in to Windows Azure** dialog, and then choose **Continue**.
+	4. Right-click Core.EventReceivers >  **Properties** > **SharePoint**.
 	
-	5. Enter your password, and then choose  **Sign in**.
+	5. Select  **Enable debugging via Microsoft Azure Service Bus**.
 	
-	6. Create a new service bus namespace using the following PowerShell cmdlet.
+	6. In  **Microsoft Azure Service Bus connection string**, paste the Connection String.
 	
-		```powershell
-		New-AzureSBNamespace NamespaceNameRegion -CreateACSNamespace $true -NamespaceType Messaging
-		
-		```
-	
-       Where:
-	
-       -  _NamespaceName_ is the name of your Azure Service Bus namespace.
-	
-       -  _Region_ is the region closest to you. For example, you may enter **"West US"**. You must include the region name in double quotes.
-	
-	7. Return to your Azure Management Portal. Choose  **SERVICE BUS**, and then choose the namespace name you entered.
-	
-	8. Choose  **Manage Connection Strings**, and then in  **ACS CONNECTION STRING**, choose the copy button.
-	
-	9. Return to Visual Studio.
-	
-	10. Right-click Core.EventReceivers >  **Properties** > **SharePoint**.
-	
-	11. Select  **Enable debugging via Microsoft Azure Service Bus**.
-	
-	12. In  **Microsoft Azure Service Bus connection string**, paste the ACS Connection String.
-	
-	13. Choose  **Save**.
+	7. Choose  **Save**.
     
 5. Run the code sample, and perform the following additional steps:
     

@@ -30,6 +30,7 @@ This article concentrates on the available extensibility options within "modern"
 
 "Modern" sites have a different level of customization options compared to "classic" team sites. Over time we'll introduce additional customization options, mainly focusing on extensibility and branding. The following list gives a quick overview of the supported capabilities for "modern" team sites. You can:
 
+- Use [SharePoint Framework](http://aka.ms/spfx) to modify user experience in the sites by providing client-side web parts or including other user interface elements with SharePoint Framework Extensions.
 - Apply a custom theme or change the logo.
 - Apply an out-of-the-box theme.
 - Create custom site columns (fields) and content types.
