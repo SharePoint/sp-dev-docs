@@ -31,6 +31,6 @@ The following cmdlets are available for managing hub sites from PowerShell:
 |[Get-SPOHubSite](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/get-spohubsite)|Lists hub sites or hub site information.|
 |[Grant-SPOHubSiteRights](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/grant-spohubsiterights)|Grants rights to users or security groups to access the hub site.|
 |[Register-SPOHubSite](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/register-spohubsite)|Enables the hub site feature on a site to make it a hub site.|
-|[Revoke-SPOHubSiteRights](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/revoke-spohubsiterights)|Revokes rights for specified principals to a hub.|
+|[Revoke-SPOHubSiteRights](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/revoke-spohubsiterights)|Revokes rights for specified principals to a hub site.|
 |[Set-SPOHubSite](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/set-spohubsite)|Sets the hub site information such as name, logo, and description.|
 |[Unregister-SPOHubSite](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/unregister-spohubsite)|Disables the hub site feature on a site.|
