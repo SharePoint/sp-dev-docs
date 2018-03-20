@@ -244,8 +244,6 @@
   - name: Hub sites
     href: features/hub-site-overview.md
     items:
-    - name: Create a hub site
-      href: features/create-a-hub-site.md
     - name: Create a hub site with PowerShell
       href: features/create-hub-site-with-powershell.md
     - name: PowerShell

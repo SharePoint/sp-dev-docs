@@ -1,30 +1,19 @@
 ---
-title: Create a SharePoint hub site using PowerShell
-description: Create a SharePoint hub site using PowerShell
+title: Overview of programming SharePoint hub sites
+description: Overview of programming SharePoint hub sites
 ms.date: 2/26/2018
 ---
 
-# Create a SharePoint hub site
+# Overview of programming SharePoint hub sites
 
 > [!IMPORTANT]
 > The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments.
 
-If you're a global or SharePoint admin in Office 365, you can convert any existing site to a hub site using Microsoft PowerShell.
+SharePoint hub sites connect and organize sites based on organizational attributes such as project, department, division, or region. Use PowerShell cmdlets, or the SharePoint REST API to automate tasks such as creating, removing, or controlling permissions for hub site.
 
-1. Download and install the latest [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). If you already have a previous version installed, uninstall it first and then install the latest version.
-2. Connect the SharePoint Online Management Shell to SharePoint Online for your organization. For info, see [Connect the SharePoint Online PowerShell](https://go.microsoft.com/fwlink/?linkid=869066).
-3. Run the following command:
-    ```PowerShell
-    Register-SPOHubSites URL
-    ```
-    (Where *URL* is the URL of the site.) This will convert the site to a hub site and enable the hub site features.
-4. If you want only selected users to be able to associate their sites to the hub, create a mail-enabled security group and add the users. By default, all site owners will be able to associate their sites to the hub. For info about creating groups in the Office 365 admin center, see Compare groups. Then run the following command to give the group permission to associate their sites to the hub.
-    ```PowerShell
-    Grant-SPOHubSiteRights -Identity
-    -Principals GroupEmail  
-    -Rights Join
-    ```
-    (Where *Identity* is the URL of the site and *GroupEmail* is the email address of the mail-enabled security group.)
+For more information on SharePoint site hubs, see [What is a SharePoint hub site](https://go.microsoft.com/fwlink/?linkid=869149).
+
+For more information on creating hub sites, see [Creating a SharePoint hub site using PowerShell](create-hub-site-with-powershell.md).
 
 ## Additional Hub site details
 
@@ -35,5 +24,6 @@ If you're a global or SharePoint admin in Office 365, you can convert any existi
 
 ## Resources
 
+- [What is a SharePoint hub site](https://go.microsoft.com/fwlink/?linkid=869149)
+- [Creating a SharePoint hub site using PowerShell](create-hub-site-with-powershell.md)
 - [PowerShell cmdlets for SharePoint hub sites](hub-site-powershell.md)
-- TBD Link: Set up your SharePoint hub site
