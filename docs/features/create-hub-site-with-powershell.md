@@ -28,7 +28,7 @@ In the remainder of this exercise, "contoso" will be used as the tenant name. Co
 
 ## Create a new hub site
 
-Create the Marketing site. The marketing site will also be a hub site that other sites can associate with. The intent is that any sites that are marketing oriented can be part of the hub. Then team members can search across all the sites in the hub, apply common navigation and branding, and take advantage of other hub features.
+Create the Marketing site. The marketing site will also be a hub site that other sites can associate with. The intent is that any sites that are marketing oriented can be part of the hub site. Then team members can search across all the sites associated with the single hub site, apply common navigation and branding, and take advantage of other hub site features.
 
 1. Create the site using the [New-PnPSite](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/new-pnpsite) cmdlet.
 
@@ -36,7 +36,7 @@ Create the Marketing site. The marketing site will also be a hub site that other
 New-PnPSite -Type TeamSite -title "Contoso marketing division" -alias "marketing" -Description "Main site for collaboration for marketing teams at Contoso"
 ```
 
-The cmdlet will return the name of the new site:
+The cmdlet will return the URL of the new site:
 
 ```
 https://contoso.sharepoint.com/sites/marketing
@@ -62,13 +62,13 @@ Permissions :
 
 ## Set properties and permissions on the hub site
 
-The hub site doesn't have a logo, or description yet. Also we want to constrain it so that only one person can make changes to the hub site. 
+The hub site doesn't have a logo or description yet. Also we want to constrain it so that only one person can make changes to the hub site. 
 
 1. Upload a logo image to use. Go to https://contoso.sharepoint.com/sites/marketing/SiteAssets and upload any image you like. Make a note of the image file name.
 2. Use the [Set-SPOHubSite](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/set-spohubsite) cmdlet to set the logo and description. In place of "mylogo.jpg" specify the name of the image you uploaded.
 
 ```PowerShell
-Set-SPOHubSite https://contoso.sharepoint.com/sites/marketing -LogoUrl https://contoso.sharepoint.com/marketing/SiteAssets/mylogo.jpg -Description "Main hub site for shared collaboration on marketing activities across Contoso"
+Set-SPOHubSite https://contoso.sharepoint.com/sites/marketing -LogoUrl https://contoso.sharepoint.com/marketing/SiteAssets/mylogo.jpg -Description "Main hub site for collaboration on marketing activities across Contoso"
 ```
 
 You will see output similar to the following:
@@ -79,18 +79,19 @@ Title       : Contoso marketing division
 SiteId      : bf0245ee-6bff-48a5-968f-0f155e2b7bbc
 SiteUrl     : https://contoso.sharepoint.com/sites/marketing
 LogoUrl     : https://contoso.sharepoint.com/sites/marketing/SiteAssets/mylogo.jpg
-Description : Main hub site for shared collaboration on marketing activities across Contoso
+Description : Main hub site for collaboration on marketing activities across Contoso
 Permissions :
 ```
 
 ## Set permissions
 
-Now will restrict access so that only the user nestorw@contoso can make changes to the hub site associations.
+Now we will restrict access so that only the user nestorw@contoso can make changes to the hub site associations.
 
-- Run the [Grant-SPOHubSiteRights]((https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/grant-spohubsiterights) cmdlet to grant a user rights to the marketing hub site. We'll use nestorw@contoso but you can use any valid user on your tenant for this example.
+- Run the [Grant-SPOHubSiteRights](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/grant-spohubsiterights) cmdlet to grant a user rights to the marketing hub site. We'll use nestorw@contoso but you can use any valid user on your tenant for this example.
 
-
+```PowerShell
 Grant-SPOHubSiteRights https://contoso.sharepoint.com/sites/marketing -Principals "nestorw@contoso" -Rights Join
+```
 
 You will see output similar to the following:
 
@@ -100,7 +101,7 @@ Title       : Contoso marketing division
 SiteId      : bf0245ee-6bff-48a5-968f-0f155e2b7bbc
 SiteUrl     : https://contoso.sharepoint.com/sites/marketing
 LogoUrl     : https://contoso.sharepoint.com/sites/marketing/SiteAssets/mylogo.jpg
-Description : Main hub site for shared collaboration on marketing activities across Contoso
+Description : Main hub site for collaboration on marketing activities across Contoso
 Permissions : {0#.f|membership|nestorw@contoso.onmicrosoft.com}
 ```
 
@@ -109,22 +110,23 @@ Permissions : {0#.f|membership|nestorw@contoso.onmicrosoft.com}
 The final step is to create the site we want to associate with the hub. You can repeat these steps for as many sites as you want to join to the hub.
 
 1. Provision the site using the [New-PnPSite](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/new-pnpsite) cmdlet.
-
-```PowerShell
-New-PnPSite -Type TeamSite -title "Online advertising team" -alias "online-advertising" -Description "For collaboration on online advertising resources"
-```
-
-The cmdlet will return the name of the new site:
-
-```
-https://contoso.sharepoint.com/sites/online-advertising
-```
-
+    
+    ```PowerShell
+    New-PnPSite -Type TeamSite -title "Online advertising team" -alias "online-advertising" -Description "For collaboration on online advertising resources"
+    ```
+    
+    The cmdlet will return the URL of the new site:
+    
+    ```
+    https://contoso.sharepoint.com/sites/online-advertising
+    ```
+    
 2. Associate this site with the hub site using the [Add-SPOHubSiteAssociation](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/add-spohubsiteassociation) cmdlet
-
-Add-SPOHubSiteAssociation https://contoso.sharepoint.com/sites/marketing -HubSite https://contoso.sharepoint.com/sites/online-advertising
+    
+    ```PowerShell
+    Add-SPOHubSiteAssociation https://contoso.sharepoint.com/sites/marketing -HubSite https://contoso.sharepoint.com/sites/online-advertising
+    ```
 
 ## Confirm the hub site is working
 
-You can run the [Get-SPOHubSite](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/get-spohubsite) cmdlet to confirm, or you can log in to SharePoint online and view the hub site direct at https://contoso.sharepoint.com/sites/marketing. The hub will appear at the top of the site. If you go to the https://contoso.sharepoint.com/sites/online-advertising site, it will also show the same hub at the top.
-
+You can run the [Get-SPOHubSite](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/get-spohubsite) cmdlet to confirm, or you can log in to SharePoint Online and view the hub site directly at https://contoso.sharepoint.com/sites/marketing. The hub site nav will appear at the top of the site. If you go to the https://contoso.sharepoint.com/sites/online-advertising site, it will also show the same hub site nav at the top.

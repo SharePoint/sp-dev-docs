@@ -21,7 +21,7 @@ POST /_api/site/JoinHubSite(hubSiteId)
 
 |Name |In |Required|Type|Description|
 |-----|---|--------|----|-----------|
-|hubSiteId|query|True|GUID|Id of the hub site to join.|
+|hubSiteId|query|True|GUID|ID of the hub site to join.|
 
 ## Request headers
 
@@ -45,7 +45,7 @@ Do not supply a request body for this method.
 
 ### Join the advertising site to the marketing hub site
 
-In this sample, the id of the marketing hub site is "27c5fcba-abfd-4c34-823d-0b4a48f7ffe6".
+In this sample, the ID of the marketing hub site is "27c5fcba-abfd-4c34-823d-0b4a48f7ffe6".
 
 #### Sample Request
 
