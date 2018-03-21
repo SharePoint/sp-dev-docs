@@ -47,7 +47,7 @@ Do not supply a request body for this method.
 
 ```HTTP
 GET
-https://contoso.sharepoint.com/sites/advertising/collections/_api/SP.HubSites.CanCreate
+https://contoso.sharepoint.com/sites/advertising/collections/_api/web/SyncHubSiteTheme
 ```
 
 #### Sample Response
