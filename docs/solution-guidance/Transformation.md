@@ -6,9 +6,14 @@ ms.date: 01/26/2018
 
 ## Summary
 
+Office 365 and SharePoint evolve continuously. As new capabilities are added, it might be necessary to update the existing configuration and customizations. Transforming your solutions can help you get more benefit out of using SharePoint and Office 365.
 
 ## High-level guideline/general rules
 
+- Get a clear understanding of the model you are migrating to. It is possible, that transforming existing scenarios to new capabilities would yield bigger benefits than mapping existing artifacts to their new equivalents.
+- Carefully examine your existing requirements. It is possible, that implementing them in the new model will turn out to be more costly than the benefits they offer.
+- Before starting transformation, thoroughly assess your existing environment and solution and decide if everything is still relevant.
+- Don't forget to include end-user adoption as a part of the transformation process. Users are used to working in a certain way and might need to be re-educated to work just as efficiently with the new solution.
 
 ## Transformation from
 
