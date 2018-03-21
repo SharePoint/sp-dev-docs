@@ -128,11 +128,16 @@
     - name: Call the Microsoft Graph API using OAuth
       href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md
     - name: Connect to Azure AD-secured APIs
-      href: spfx/use-aadhttpclient.md    
+      href: spfx/use-aadhttpclient.md
+      items:
+      - name: Consume enterprise APIs (tutorial)
+        href: spfx/use-aadhttpclient-enterpriseapi.md
+      - name: Consume multi-tenant enterprise APIs (tutorial)
+        href: spfx/use-aadhttpclient-enterpriseapi-multitenant.md
     - name: Microsoft Graph 
       href: spfx/use-msgraph.md
       items:
-      - name: Consuming APIs secured with Azure AD
+      - name: Consume Microsoft Graph (tutorial)
         href: spfx/use-aad-tutorial.md        
     - name: Microsoft GraphHttpClient (Deprecated)
       href: spfx/overview-graphhttpclient.md
