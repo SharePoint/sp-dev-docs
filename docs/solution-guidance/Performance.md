@@ -6,10 +6,14 @@ ms.date: 02/01/2018
 
 ## Summary
 
+Implementing customizations in SharePoint places an even greater emphasis on effective design and development for web applications in general, and client-side web applications in particular, especially when it comes to the concept of application performance. Performance is one of the important factors that influence user-experience and how efficient users can work with the portal.
 
 ## High-level guideline/general rules
 
-
+- When testing performance, take into account both server-side performance of your code, as well as the performance of your code running in end-users' browsers.
+- Whenever possible cache data to minimize the number of requests to SharePoint.
+- When referencing scripts and other assets, allow users to cache them for as long as possible to minimize the number of requests to the server and the amount of data to load.
+- Avoid excessive DOM manipulation that would trigger re-rendering of the page and delay its loading.
 
 ## Available options
 
