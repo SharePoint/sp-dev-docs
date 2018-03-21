@@ -16,14 +16,14 @@ The first release of the SharePoint Framework contained only support for client-
 - [Application Lifecycle Management (ALM) APIs for SPFx solutions and add-ins](../apis/alm-api-for-spfx-add-ins.md)
 - [Office UI Fabric Core support](https://dev.office.com/blogs/improved-support-for-office-ui-fabric-core)
 - [Asset packaging and site collection app catalog](../general-development/site-collection-app-catalog.md)
-
+- [Improved MS Graph integration with additional scopes](./use-msgraph.md)
+- [Call securely Azure AD secured applications from SharePoint Framework](./use-aadhttpclient.md)
 
 > [!NOTE]
 > This is a list of areas that SharePoint engineering has in the backlog and is looking into. This does **NOT** mean that all of them will be delivered, but we are looking into getting items and topics from this list gradually released with the future releases of SharePoint Framework.
 
 ## General improvements
 
-- Easy access to Graph API to access user specific information (GraphHttpClient in preview)
 - Site level WebHooks
 - Updated 'store' story with SharePoint Framework support
 - 'Store' story for SharePoint Framework solutions with easy distribution channel for ISVs 
@@ -58,6 +58,11 @@ The first release of the SharePoint Framework contained only support for client-
 ## Already shipped capabilities
 
 The following sections list older items that have already shipped.
+
+### Improved Microsoft Graph and Azure AD secured API access
+
+- Use any tenant administrator approved Microsoft Graph scope in your SharePoint Framework solutions
+- Call securely APIs secured with Azure Active Directory - Like custom WebAPIs or Azure Functions
 
 ### Asset packaging
 
