@@ -37,7 +37,7 @@ Do not supply a request body for this method.
 
 | Name   | Type    |Description|
 |--------|---------|-----------|
-|200 OK  | Boolean |Success    |
+|200 OK  | [SPHubSiteCanCreate](#sphubsitecancreate) |Success    |
 
 ## Examples
 
@@ -59,3 +59,13 @@ https://contoso.sharepoint.com/sites/marketing/_api/SP.HubSites.CanCreate
 	"value": true
 }
 ```
+
+## Definitions
+| [SPHubSiteCanCreate](#sphubsitecancreate) | Indicates if you have permissions to create a hub site.|
+
+### SPHubSiteCanCreate
+Indicates if you have permissions to create a hub site.
+
+|Name  |Type    |Description  |
+|------|--------|-------------|
+|value |Boolean | **true** if you have permissions to create a hub site; otherwise, **false**.        |

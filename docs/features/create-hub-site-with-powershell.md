@@ -15,7 +15,7 @@ To work with this example in SharePoint online, we recommend using a developer t
 
 ## Connect to SPO
 
-First you need to get connected to SharePoint online using PowerShell. All of the commands are in the context of using the SharePoint PnP PowerShell Online module. You can download and install it from here: **TBD**
+First you need to get connected to SharePoint online using PowerShell. All of the commands are in the context of using the [SharePoint PnP PowerShell Online module](https://www.microsoft.com/en-us/download/details.aspx?id=35588)
 
 1. Start PowerShell
 2. Run the [Connect-SPOService](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/connect-sposervice) cmdlet to connect to SharePoint online. Log in with your global admin credentials.

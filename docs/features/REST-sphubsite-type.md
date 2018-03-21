@@ -19,6 +19,6 @@ Contains data describing a SharePoint Hub site.
 |SiteId  |GUID   |ID of the hub's parent site. |
 |TenantInstanceId |GUID |The tenant instance ID in which the site hub is located. Use empty GUID for the default tenant instance. |
 |SiteUrl |string |URL of the hub parent site.
-|LogoUrl |string |The URL of a logo to use in the hub navigation. |
+|LogoUrl |string |The URL of a logo to use in the hub site navigation. |
 |Description |string |A description of the hub site. |
 |Targets |string |List of security groups with access to join the hub site. Null if everyone has permission. |
