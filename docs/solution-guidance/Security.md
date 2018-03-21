@@ -10,8 +10,6 @@ SharePoint supports security for user access at the website, list, list or libra
 
 Authorization refers to the process by which SharePoint provides security for websites, lists, folders, or items by determining which users can perform specific actions on a given object. The authorization process assumes that the user has already been authenticated, which refers to the process by which SharePoint identifies the current user. SharePoint does not implement its own system for authentication or identity management, but instead relies on external systems, whether Windows authentication or non-Windows authentication.
 
-## High-level guideline/general rules
-
 ## Available options
 
 ### General recommendations
