@@ -1,6 +1,6 @@
 ---
 title: Long-running and scheduled operations
-ms.date: 01/18/2018
+ms.date: 03/21/2018
 ---
 # Long-running and scheduled operations
 
@@ -16,11 +16,30 @@ Use timer jobs in SharePoint to perform background tasks to manage or govern you
 
 ## Available options
 
+### Azure Functions
+
+_**Applies to:** Office 365_
+
+In this pattern, the long-running or scheduled operation is implemented in an Azure Function.
+
+- Does not require additional hardware to run the Azure Function (scheduling and implementation code).
+- Advantageous because it uses the Azure Function for scheduling as well as the implementation code, which makes it easy to manage in one location.
+
+#### Related resources
+
+##### Samples
+
+- [Provisioning.Cloud.Modern.Async (O365 PnP Sample)](https://github.com/SharePoint/PnP/tree/master/Samples/Provisioning.Cloud.Modern.Async)
+
+##### Videos
+
+- [PnP Webcast - Asynchronous Pattern for Creating Modern SharePoint Sites](https://www.youtube.com/watch?v=si290aecC8s)
+
 ### Azure WebJobs
 
 _**Applies to:** Office 365_
 
-In this pattern, the Azure WebJob handles the scheduling aspects associated with a timer job and includes the implementation code.+
+In this pattern, the Azure WebJob handles the scheduling aspects associated with a timer job and includes the implementation code.
 
 - Does not require additional hardware to run the Azure WebJob (scheduling and implementation code).
 - Advantageous because it uses the Azure WebJob for scheduling as well as the implementation code, which makes it easy to manage in one location.
