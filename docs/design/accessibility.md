@@ -1,48 +1,40 @@
 ---
 title: Accessibility in SharePoint web part design
 description: Guidelines for adding accessibility to your web part.
-ms.date: 01/23/2018 
+ms.date: 03/23/2018 
 ---
-
-<!--Based on how rough this content is in its current state, i'm going to pull it from this initial release so we can edit and better prepare. -->
 
 # Accessibility in SharePoint web part design
 
-Developing an equal experience that meets all users' unique visual, hearing, dexterity, cognitive, and speech needs is an important component of SharePoint web part design. Accessible design applies not only to people with disabilities, but also to potential situational impairments. Accessible design is good design.
+Developing an experience that meets all users' unique visual, hearing, dexterity, cognitive, and speech needs is an important component of SharePoint web part design. Accessible design applies not only to people with disabilities, but also to potential situational impairments. Accessible design is good design.
 
 ## Accessibility guidelines
 
-<!-- Make sure that this is an external resource that folks can access. Original link was to a OneNote file. -->
-All Microsoft products must meet the requirements listed in the [Microsoft Accessibility Standards](https://docs.microsoft.com/en-us/windows/uwp/design/accessibility/accessibility-checklist).  
+All Microsoft products must meet the requirements listed in the [Microsoft Accessibility Standards](https://www.microsoft.com/en-us/accessibility).
 
-<!-- Fabric components are not designed to be accessible already? And, shouldn't components that aren't based on Fabric also be accessible? -->
+## Making web parts accessible
 
-If you're building a dialog box, file picker, or any other [Office UI Fabric](https://developer.microsoft.com/en-us/fabric#/components) component, follow the guidance in this article to ensure that your content is accessible. 
+The SharePoint Framework provides a structure to help make all web parts accessible. The web part container provides keyboard navigation defaults for the web part toolbar to edit, move, and delete the web part, a method to select the web part, and a keyboard short cut (Ctrl+P) to open the property pane. However, you still need to specify additional keyboard and screen reader navigation for the other aspects of the UI in the web part and in the property pane. 
 
-<!-- Not sure why we have that link? It currently goes to the OneNote file. Where is the Common UI Controls content? Is that related to accessibility? [v-licapu] - I agree; we shouldn't be linking to this unless it's live to external audiences; even I can't access it. I moved it to within the comment: 
-[Common UI Controls](https://microsoft.sharepoint.com/teams/STS/_layouts/OneNote.aspx?id=%2Fteams%2FSTS%2FShared%20Documents%2FSP%20Accessibility%2FAccessibility%20Guidance&wd=target%28Accessibility%20101.one%7C0005C142-938C-4411-B543-B9F4199E19B3%2FEverything%20you%20need%20to%20know%20about%20Accessibility%7CE099AFE3-8804-4E1F-BA50-99493AB8A3D0%2F%29 "Link to Common UI Controls") -->
+In addition, many [Office UI Fabric components](https://developer.microsoft.com/en-us/fabric#/components) have built-in support for accessibility options, to make it quick to configure keyboard and screen reader navigation when you use the components in a web part.
+
+The following image shows keyboard  navigation on a web part.
+
+![Image that shows keyboard navigation on a web part](../images/accessibility-illustration-01.png)
 
 ## Accessibility testing
 
-<!-- FYI, I added links. Can we assume that our target audience uses the Edge browser? -->
-
 Test your web part first with [Narrator](https://support.microsoft.com/en-us/help/22798/windows-10-narrator-get-started) and Microsoft Edge, and then verify the accessibility experience with [JAWS](http://www.freedomscientific.com/Products/Blindness/JAWS).
 
-Narrator and Microsoft Edge are standards-compliant. When you test with that combination, you are more likely to find issues, and you can validate that your site meets accessibility standards. 
+Narrator and Microsoft Edge are standards compliant. When you test with that combination, you are more likely to find issues, and you can validate that your site meets accessibility standards. 
 
-JAWS is the market leader in screen readers. JAWS includes features that can improve the accessibility of some websites that aren't as accessible in other screen readers. Therefore testing in JAWS might not ensure that your site meets all accessibility requirements. 
+JAWS is the market leader in screen readers. JAWS includes features that can improve the accessibility of some websites that aren't as accessible in other screen readers. Therefore, testing in JAWS might not ensure that your site meets all accessibility requirements. 
  
 You might also want to test for whatever combination of browser and screen reader has the greatest market share for your website.
 
-<!-- Delete? This doesn't seem like text that should be in externally published docs? 
-When suppliers test with JAWS, we ask them to repro identified bugs with Narrator and Edge. In the case a bug does not repro with Narrator/Edge it is sent to Mary Smith who works with VFO for a Jaws specific fix. 
--->
-
 ## Keyboard navigation
 
-<!-- Is this section telling people how to navigate via a keyboard, or how to design to optimize for keyboard navigation? If the former, . -->
-
-For some users, navigating a site via keyboard is more accessible. Power users also often rely on keyboard navigation. Use keyboard shortcuts such as tabs to go controls on the page, and use arrow keys to navigate inside controls.
+For some users, navigating a site via keyboard is more accessible. Power users also often rely on keyboard navigation. Make sure to design keyboard shortcuts such as tabs to go to controls on the page, and use arrow keys to navigate inside controls.
 
 ### Navigation between controls
 
@@ -59,61 +51,45 @@ The first tab is the list item.
 The second tab is the command.
 The third tab is the navigation.
 -->
-
-
-![Image that shows the tab stops on a SharePoint page](https://i.imgur.com/Vn3VosN.png)
-
-<br/>
+![Image that shows the tab stops on a SharePoint page](../images/accessibility-illustration-04.png)
 
 ### Navigation within a control
 
 You can use arrow keys to move to items in a control, such as choices in a menu, commands in a command bar, or items in a list.
 
-<!-- This image is not very clear. Do you need to have the "blank" list box on the left? -->
+<!-- This image is not very clear. Do you need to have the "blank" list box on the left? Add a down arrow on the left example? -->
 
-![Using arrow keys to navigate within a control](https://i.imgur.com/vF0Nk73.png)
-
-<br/>
+![Using arrow keys to navigate within a control](../images/accessibility-illustration-05.png)
 
 ### Selecting the current item
 
 Use the space bar to select or deselect the item currently in focus in a control.
 
-![Using the space bar to select an item in a list](https://i.imgur.com/j3fBKPl.png)
-
-<br/>
+![Using the space bar to select an item in a list](../images/accessibility-illustration-06.png)
 
 ### Run a control
 
-Select Enter or the return key to run a control.
+Press **Enter** or the return key to run a control.
 
-![Press enter to run a control](https://i.imgur.com/s0nMPdT.png)
-
-<br/>
+![Press enter to run a control](../images/accessibility-illustration-07.png)
 
 ### Leave a control
 
-Select **Escape** to exit a control and return to the container.
+Press **Escape** to exit a control and return to the container.
 
-![Selecting Escape to leave a control and return to the container](https://i.imgur.com/uD99zIX.png)
-
-<br/>
+![Pressing Escape to leave a control and return to the container](../images/accessibility-illustration-08.png)
 
 ### Go to the first or last item
 
-Select **Home** or **End** to go directly to the first or last item in a list, menu, and so on.
+Press **Home** or **End** to go directly to the first or last item in a list, menu, and so on.
 
-![Selecting Home or End to go to the first or last item in a list](https://i.imgur.com/gGKsh74.png)
-
-<br/>
+![Pressing Home or End to go to the first or last item in a list](../images/accessibility-illustration-09.png)
 
 ## Screen reader navigation
 
-Users who have vision impairments rely on screen readers to navigate the site UI. 
+Users who have vision impairments rely on screen readers to navigate the site UI. When designing a web part, follow this example when thinking about keyboard navigation and how the screen reader conveys important actions or information to the user.
 
-<!-- Narrator isn't a third-party product. This image needs more text/explanation; please also clarify the alt text. Is this section important, or can it be removed, given the previous mention of testing with Narrator and JAWS? Again, the intent/target audience for this information isn't clear - is it for the user, or the designer? Can you explain why this information is important from the designer's POV? -->
-
-![Screen reader navigation of a SharePoint page](https://i.imgur.com/ar23o3X.png)
+![Screen reader navigation of a SharePoint page](../images/accessibility-illustration-10.png)
 
 ## Alt text and transcripts
 
@@ -127,11 +103,17 @@ To be fully compliant with accessibility standards, include alt text and a compl
 
 A minimum level of contrast is essential to help users with vision impairments consume the content on the page. It is also important to aid readability in low light and glare situations. 
 
-<!--Original image ![Neutral, Theme, and Alert colors for minimum readable contrast](https://i.imgur.com/L7pSF1w.png)-->
+<!-- Convert this image into a table, for accessibility. ;) -->
 
-![Colors for minimum readable contrast](../images/wcag-2aa-compliance-colors.png)
+![Neutral and Theme colors for minimum readable contrast](../images/accessibility-illustration-12.png)
 
-### Theme colors (blue) with neutral colors, followed by alert colors
+## High contrast
+
+Use high contrast colors as a guide for color choices for components and states on the web. Windows computers only have the ability to detect whether a PC is running high contrast or high contrast white. For this reason, use the default high contrast black setting for any high contrast, non-white theme.
+
+![High contrast black and high contrast white settings](../images/accessibility-illustration-14.png)
+
+<!--### Theme colors (blue) with neutral colors, followed by alert colors
 
 ![Theme colors (blue) with neutral colors and alert colors](../images/accessibility-blue-theme-and-alert-colors.png)
 
@@ -205,18 +187,8 @@ A minimum level of contrast is essential to help users with vision impairments c
 <tr>
 <td style="color:black; background-color:#bff7d5">themeLight: #bff7d5</td>
 </tr>
-</table>
+</table>-->
 
-
-## High contrast
-
-Use high contrast colors as a guide for color choices for components and states on the web. Windows computers only have the ability to detect whether a PC is running high contrast, or high contrast white. For this reason, use the default high contrast black setting for any high contrast, non-white theme.
-
-<!-- In the left part of the image, I think the title should be "High Contrast Black". -->
-
-![High contrast black and high contrast white settings](https://i.imgur.com/qvTFzd4.png)
-
-<br/>
 
 ## See also
 
