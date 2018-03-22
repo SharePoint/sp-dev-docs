@@ -9,15 +9,15 @@ ms.date: 2/26/2018
 > [!IMPORTANT]
 > The hub sites feature is currently in preview and is subject to change. It is not currently supported for use in production environments.
 
-If you're a global or SharePoint admin in Office 365, you can convert any existing site to a hub site using Microsoft PowerShell. In this example, learn how to create a SharePoint hub site, and associate another site with it. The scenario is that you are setting up sites for the Contoso marketing department. You will create a hub site that all other marketing sites are associated with. Then you will create a second site to associate with the hub site. You will also specify settings and permissions for the hub site.
+If you're a global or SharePoint admin in Office 365, you can convert any existing site to a hub site using Windows PowerShell. In this example, learn how to create a SharePoint hub site, and associate another site with it. The scenario is that you are setting up sites for the Contoso marketing department. You will create a hub site that all other marketing sites are associated with. Then you will create a second site to associate with the hub site. You will also specify settings and permissions for the hub site.
 
 To work with this example in SharePoint online, we recommend using a developer tenant and not your production tenant. All of the steps use a fictional tenant named "Contoso" which you can replace with your own tenant name.
 
 ## Connect to SPO
 
-First you need to get connected to SharePoint online using PowerShell. All of the commands are in the context of using the [SharePoint PnP PowerShell Online module](https://www.microsoft.com/en-us/download/details.aspx?id=35588)
+First you need to get connected to SharePoint Online using Windows PowerShell. The command use both the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588) (-SPO) and [SharePoint PnP PowerShell Online module](https://www.powershellgallery.com/packages/SharePointPnPPowerShellOnline) (-PnP)
 
-1. Start PowerShell
+1. Start Windows PowerShell
 2. Run the [Connect-SPOService](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/connect-sposervice) cmdlet to connect to SharePoint online. Log in with your global admin credentials.
 
 ```PowerShell
@@ -33,6 +33,7 @@ Create the Marketing site. The marketing site will also be a hub site that other
 1. Create the site using the [New-PnPSite](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/new-pnpsite) cmdlet.
 
 ```PowerShell
+Connect-PnPOnline -SPOManagementShell # this reuses the credentials you logged in with Connect-SPOService
 New-PnPSite -Type TeamSite -title "Contoso marketing division" -alias "marketing" -Description "Main site for collaboration for marketing teams at Contoso"
 ```
 
