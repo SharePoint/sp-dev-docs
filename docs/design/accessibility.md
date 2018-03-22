@@ -57,8 +57,6 @@ The third tab is the navigation.
 
 You can use arrow keys to move to items in a control, such as choices in a menu, commands in a command bar, or items in a list.
 
-<!-- This image is not very clear. Do you need to have the "blank" list box on the left? Add a down arrow on the left example? -->
-
 ![Using arrow keys to navigate within a control](../images/accessibility-illustration-05.png)
 
 ### Selecting the current item
@@ -103,23 +101,19 @@ To be fully compliant with accessibility standards, include alt text and a compl
 
 A minimum level of contrast is essential to help users with vision impairments consume the content on the page. It is also important to aid readability in low light and glare situations. 
 
-<!-- Convert this image into a table, for accessibility. ;) -->
+The following image shows theme colors on the left and neutral colors on the right. 
 
-![Neutral and Theme colors for minimum readable contrast](../images/accessibility-illustration-12.png)
+![Neutral and Theme colors for minimum readable contrast](../images/themes-colors-blue-neutral-theme.png)
 
-## High contrast
-
-Use high contrast colors as a guide for color choices for components and states on the web. Windows computers only have the ability to detect whether a PC is running high contrast or high contrast white. For this reason, use the default high contrast black setting for any high contrast, non-white theme.
-
-![High contrast black and high contrast white settings](../images/accessibility-illustration-14.png)
-
-<!--### Theme colors (blue) with neutral colors, followed by alert colors
-
-![Theme colors (blue) with neutral colors and alert colors](../images/accessibility-blue-theme-and-alert-colors.png)
+<!--![Neutral and Theme colors for minimum readable contrast](../images/accessibility-illustration-12.png)-->
 
 <br/>
 
 <table>
+<tr>
+    <th>Theme colors</th>
+    <th>Neutral colors</th> 
+  </tr>
 <tr>
 <td style="color:white; background-color:#004578">themeDarker: #004578</td>
 <td style="color:white; background-color:#000000">black: #000000</td>
@@ -166,28 +160,12 @@ Use high contrast colors as a guide for color choices for components and states 
 
 <br/>
 
-<table>
-<tr>
-<td style="color:white; background-color:#952226">themeDark: #952226</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#f6d6d8">themeLight: #f6d6d8</td>
-</tr>
-<tr>
-<td style="color:white; background-color:#e55c12">themeSecondary: #e55c12</td>
-</tr>
-</table>
 
-<br/>
+## High contrast
 
-<table>
-<tr>
-<td style="color:white; background-color:#0f7c39">themeDarkAlt: #0f7c39</td>
-</tr>
-<tr>
-<td style="color:black; background-color:#bff7d5">themeLight: #bff7d5</td>
-</tr>
-</table>-->
+Use high contrast colors as a guide for color choices for components and states on the web. Windows computers only have the ability to detect whether a PC is running high contrast or high contrast white. For this reason, use the default high contrast black setting for any high contrast, non-white theme.
+
+![High contrast black and high contrast white settings](../images/accessibility-illustration-14.png)
 
 
 ## See also
