@@ -105,7 +105,8 @@ The following image shows theme colors on the left and neutral colors on the rig
 
 ![Neutral and Theme colors for minimum readable contrast](../images/themes-colors-blue-neutral-theme-2.png)
 
-<!--![Neutral and Theme colors for minimum readable contrast](../images/accessibility-illustration-12.png)-->
+<!--I replaced this image because it doesn't even make sense; the text to the right of each box does not match what's in the box, and none are labeled "theme." 
+![Neutral and Theme colors for minimum readable contrast](../images/accessibility-illustration-12.png)-->
 
 <br/>
 
