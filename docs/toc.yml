@@ -1267,6 +1267,22 @@
 - name: Solution guidance
   href: solution-guidance/Office-365-development-patterns-and-practices-solution-guidance.md
   items:
+  - name: Modernizing your classic SharePoint sites
+    href: transform/modernize-classic-sites.md
+    items:
+    - name: Modernize the user interface
+      href: transform/modernize-userinterface.md
+       items:
+      - name: Maximize your use of the modern list and library user interface
+        href: transform/modernize-userinterface-lists-and-libraries.md      
+      - name: Transforming classic pages to modern client side pages
+        href: transform/modernize-userinterface-site-pages.md 
+    - name: Modernize the customizations
+      href: transform/modernize-customizations.md
+    - name: Connect to an Office 365 Groups
+      href: transform/modernize-connect-to-office365-group.md
+    - name: Modernize the site branding
+      href: transform/modernize-branding
   - name: Branding and site provisioning solutions
     href: solution-guidance/Branding-and-site-provisioning-solutions-for-SharePoint.md
     items:
