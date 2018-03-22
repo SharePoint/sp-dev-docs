@@ -1,12 +1,18 @@
 ---
 title: Custom configurations
-ms.date: 02/12/2018
+ms.date: 03/22/2018
 ---
-# Security
+# Custom configurations
 
 ## Summary
 
+Allowing the different aspects of a SharePoint solution to be configurable makes them more versatile. Using its configuration, you can control how the solution is working, without having to change its code and redeploy it to your tenant. SharePoint offers you a number of different way to store and handle solution configuration properties. You can choose the location where to store your configuration settings, depending on who is supposed to manage them.
+
 ## High-level guideline/general rules
+
+- Don't store secrets, such as credentials, in SharePoint as different users might be able to access them.
+- Don't assume the integrity of the configuration values as they could be modified by users and other applications.
+- Choose the storage for your configuration settings, based on the target audience who will be managing them.
 
 ## Available options
 
