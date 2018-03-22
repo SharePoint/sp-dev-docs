@@ -103,7 +103,7 @@ A minimum level of contrast is essential to help users with vision impairments c
 
 The following image shows theme colors on the left and neutral colors on the right. 
 
-![Neutral and Theme colors for minimum readable contrast](../images/themes-colors-blue-neutral-theme.png)
+![Neutral and Theme colors for minimum readable contrast](../images/themes-colors-blue-neutral-theme-2.png)
 
 <!--![Neutral and Theme colors for minimum readable contrast](../images/accessibility-illustration-12.png)-->
 
