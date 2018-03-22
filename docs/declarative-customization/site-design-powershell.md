@@ -1,10 +1,10 @@
 ---
-title: PowerShell cmdlets for SharePoint site designs and site scripts
+title: SharePoint site design - PowerShell cmdlets
 description: Use PowerShell cmdlets to create, retrieve, and remove site designs and site scripts.
-ms.date: 03/19/2018
+ms.date: 03/22/2018
 ---
 
-# PowerShell cmdlets for SharePoint site designs and site scripts
+# SharePoint site design: PowerShell cmdlets
 
 > [!NOTE]
 > Site designs and site scripts have been released to production and are available for general use. 
@@ -16,6 +16,7 @@ Use PowerShell cmdlets to create, retrieve, update, and remove site designs and 
 To run the PowerShell cmdlets, you'll need to do the following:
 
 1. Download and install the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588). If you already have a previous version of the shell installed, uninstall it first and then install the latest version.
+
 2. Follow the instructions at [Connect to SharePoint Online PowerShell](https://technet.microsoft.com/en-us/library/fp161372.aspx) to connect to your SharePoint tenant.
 
 To verify your setup, try using the [Get-SPOSiteScript](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Get-SPOSiteScript?view=sharepoint-ps) cmdlet to read the current list of site scripts. If the cmdlet runs and returns with no errors, you're ready to proceed.
@@ -35,9 +36,7 @@ The following cmdlets are available for managing site designs and site scripts f
 - [Remove-SPOSiteScript](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Remove-SPOSiteScript?view=sharepoint-ps)
 - [Revoke-SPOSiteDesignRights](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Revoke-SPOSiteDesignRights?view=sharepoint-ps)
 - [Set-SPOSiteDesign](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Set-SPOSiteDesign?view=sharepoint-ps)
-
-<!-- This particular page is not publishing for some reason; saving the link to turn on when it finally behaves :-( 
-- [Set-SPOSiteScript](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Set-SPOSiteScript?view=sharepoint-ps)-->
+- [Set-SPOSiteScript](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/Set-SPOSiteScript?view=sharepoint-ps)
 
 
 
