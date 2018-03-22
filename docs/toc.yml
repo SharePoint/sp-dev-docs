@@ -1272,7 +1272,7 @@
     items:
     - name: Modernize the user interface
       href: transform/modernize-userinterface.md
-       items:
+      items:
       - name: Maximize your use of the modern list and library user interface
         href: transform/modernize-userinterface-lists-and-libraries.md      
       - name: Transforming classic pages to modern client side pages
