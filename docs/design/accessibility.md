@@ -1,7 +1,7 @@
 ---
 title: Accessibility in SharePoint web part design
 description: Guidelines for adding accessibility to your web part.
-ms.date: 03/23/2018 
+ms.date: 03/22/2018 
 ---
 
 # Accessibility in SharePoint web part design
