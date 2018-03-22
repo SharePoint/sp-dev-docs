@@ -1282,7 +1282,7 @@
     - name: Connect to an Office 365 Groups
       href: transform/modernize-connect-to-office365-group.md
     - name: Modernize the site branding
-      href: transform/modernize-branding
+      href: transform/modernize-branding.md
   - name: Branding and site provisioning solutions
     href: solution-guidance/Branding-and-site-provisioning-solutions-for-SharePoint.md
     items:
