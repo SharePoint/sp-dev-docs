@@ -15,10 +15,10 @@ A very common model to control how a field is represented in the SharePoint user
 You can use column formatting to customize how fields in SharePoint lists and libraries are displayed. To do this, you construct a JSON object that describes the elements that are displayed when a field is included in a list view, and the styles to be applied to those elements. The column formatting does not change the data in the list item or file; it only changes how it’s displayed to users who browse the list. Anyone who can create and manage views in a list can use column formatting to configure how view fields are displayed.
 
 For example, a list with the fields Title, Effort, Assigned To, and Status with no customizations applied might look like this:
-![Before column formatter](/media/modernize/sp-columnformatting-none.png)
+![Before column formatter](media/modernize/sp-columnformatting-none.png)
 
 A list with the appearance of the Effort, Assigned To, and Status fields customized via column formatting might look like this:
-![After column formatter](/media/modernize/sp-columnformatting-all.png)
+![After column formatter](media/modernize/sp-columnformatting-all.png)
 
 To learn more about column formatting check out these resources:
 
@@ -29,7 +29,7 @@ To learn more about column formatting check out these resources:
 
 SharePoint Framework Extensions enable you to extend the SharePoint user experience within modern pages and document libraries, while using the familiar SharePoint Framework tools and libraries for client-side development. Specifically Field Customizers allow you fully control how field data is presented in your list or library views. Below you'll see an example of a percent column.
 
-![Field customizer](/media/modernize/spfx-field-customizer-percent-field-graphic.png)
+![Field customizer](media/modernize/spfx-field-customizer-percent-field-graphic.png)
 
 To learn more about SharePoint Framework (field customizer) extensions check out these resources:
 
@@ -44,7 +44,7 @@ To learn more about SharePoint Framework (field customizer) extensions check out
 
 Using a list user custom action that adds custom menu options or embeds JavaScript is next to JSLink a very common customization pattern which does not work anymore for the modern list and library experience. Luckily using SharePoint Framework Extensions you can realize similar customizations, more in particular via command set extension which allows you to add custom ECB menu items or custom buttons to the command bar of a list view for a list or a library. You can associate any JavaScript (TypeScript) action to these commands.
 
-![List view command set](/media/modernize/spfx-listview-commandset-doc-select.png)
+![List view command set](media/modernize/spfx-listview-commandset-doc-select.png)
 
 To learn more about SharePoint Framework (list view command set) extensions check out these resources:
 
@@ -64,7 +64,7 @@ SharePoint has multiple flavors of classic site pages, there's wiki pages, web p
 
 SharePoint has many out-of-the-box web parts that do work on classic pages...but are not compatible with modern pages. There's also a nice set of modern, 1st party, client side web parts available that offer similar functionality for some of the classic web parts...however, there's no feature parity. If you need the functionality of a classic web part as a modern client side equivalent you'll need to either roll your own version based on the SharePoint Framework or alternatively consume a web part from the large list of open source SharePoint Framework web parts which you can find in the [sp-dev-fx-webparts](https://github.com/SharePoint/sp-dev-fx-webparts) GitHub repository.
 
-![SPFX Web Part sample](/media/modernize/spfx-react-image-magnifier.gif)
+![SPFX Web Part sample](media/modernize/spfx-react-image-magnifier.gif)
 
 To learn more about SharePoint Framework client side web parts check out these resources:
 
@@ -77,7 +77,7 @@ To learn more about SharePoint Framework client side web parts check out these r
 
 In the introduction we mentioned the common pattern of adding a site banner by embedding JavaScript via a site/web scoped user custom action. As this pattern is not compatible with the modern user interface you'll need to rework this type of customization based upon the SharePoint Framework Application Customizer extensions. Using application customizers you can insert custom script that can be used to embed HTML into the SharePoint modern user interface at predefined extension points at the top/bottom of the page.
 
-![SPFX Application Customizer sample](/media/modernize/spfx-application-customizer-sample.png)
+![SPFX Application Customizer sample](media/modernize/spfx-application-customizer-sample.png)
 
 To learn more about SharePoint Framework (application customizer) extensions check out these resources:
 

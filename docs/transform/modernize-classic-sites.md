@@ -20,7 +20,7 @@ If you scan over your site you'll however notice that following pages are still 
 - Home page and all other site pages
 - List and library pages for certain lists and libraries
 
-If you want to maximize the use of the modern user interface for your site pages plus list and library pages then checkout the [Modernize your user interface](modernize-userinterface.md) article.
+If you want to maximize the use of the modern user interface for your site pages plus list and library pages then checkout the [Modernize your user interface](modernize-userinterface.md) article. During this user interface you'll modernization you will also have to handle the modernization of your customizations as explained in [Modernize your customizations](modernize-customizations.md).
 
 ### Connect your sites to Office 365 Groups
 

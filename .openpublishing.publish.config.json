@@ -38,6 +38,12 @@
       "url": "https://github.com/Microsoft/templates.docs.msft",
       "branch": "master",
       "branch_mapping": {}
+    },
+    {
+      "path_to_root": "PnP-Tools",
+      "url": "https://github.com/SharePoint/PnP-Tools.git",
+      "branch": "master",
+      "branch_mapping": {}
     }
   ],
   "branch_target_mapping": {},

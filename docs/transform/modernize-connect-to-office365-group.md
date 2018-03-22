@@ -23,7 +23,7 @@ A first approach to connect an Office 365 to your site is to use the option avai
 
 Site Actions | Wizard
 ---------|---------
- ![Site Actions](/media/modernize/groupifyusingui_1.png) | ![Wizard](/media/modernize/groupifyusingui_3.png)
+ ![Site Actions](media/modernize/groupifyusingui_1.png) | ![Wizard](media/modernize/groupifyusingui_3.png)
 
 ## Programmatically connecting an Office 365 group
 
@@ -112,8 +112,7 @@ To help you verify this file before using it you can use below PowerShell script
 - **[ERROR] _siteUrl_ : Alias [_siteAlias_] was already marked as approved alias for another site in this file**: The proposed site alias was already defined for another site in earlier input lines of the bulk "groupify" CSV file
 - **[ERROR] _siteUrl_ : Site does not exist or is not available (status = _site.Status_)**: The provided site URL does not represent a reachable site collection
 
-```PowerShell
-```
+[!code-powershell[validategroupifyinput](../../PnP-Tools/Solutions/SharePoint.Modernization/Scripts/Groupify/ValidateInput.ps1 "Validate groupify input file")]
 
 During script execution a log file will be generated combined with an error file which contains a subset of the log file (only the errors).
 
@@ -135,7 +134,6 @@ Now that we've an input file that's defining the sites that need to be "groupifi
 
 Running the below PowerShell script requires you to update the tenant admin center URL and at run time provide credentials and the CSV input file.
 
-```PowerShell
-```
+[!code-powershell[bulkgroupify](../../PnP-Tools/Solutions/SharePoint.Modernization/Scripts/Groupify/GroupifySite.ps1 "Bulk groupify sites")]
 
 During script execution a log file will be generated combined with an error file which contains a subset of the log file (only the errors).
