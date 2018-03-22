@@ -39,7 +39,7 @@ Learn more via the [Modernize your site branding](modernize-branding.md) article
 
 ## What process to follow
 
-There's on one size fits all process for site modernization: the previous chapter introduced the possible steps in a site modernization but whether you run all steps and in which order you run them is up to you to decide. Although there's no one size fits all process there's a recommended approach for site modernization:
+There's **no one size fits all process** for site modernization: the previous chapter introduced the possible steps in a site modernization but whether you run all steps and in which order you run them is up to you to decide. Although there's no one size fits all process there's a recommended approach for site modernization:
 
 ### Step 1: Enable the out-of-the-box modern user interface for lists and libraries
 

@@ -97,7 +97,7 @@ Here's a small sample:
 ```Text
 Url,Alias,IsPublic,Classification
 https://contoso.sharepoint.com/sites/hrteam,hrteam,false,Medium Impact
-https://contoso.sharepoint.com/sites/engineering,engineeringteam,true,High Impact
+https://contoso.sharepoint.com/sites/engineering,engineeringteam,true,Low Impact
 ```
 
 To help you verify this file before using it you can use below PowerShell script. This script will check for valid site URL's and aliases. Update this script with your tenant admin center URL and run it. The script will ask for the CSV file name and generates a report for you. During the validation script execution the following errors can popup:
@@ -133,6 +133,9 @@ Now that we've an input file that's defining the sites that need to be "groupifi
 - Remove added tenant admin from the Office 365 group
 
 Running the below PowerShell script requires you to update the tenant admin center URL and at run time provide credentials and the CSV input file.
+
+> [!NOTE]
+> This is a sample script that you need to address to your needs by updating/dropping the **optional** parts or by adding additional modernization tasks (like setting a SharePoint site theme)
 
 [!code-powershell[bulkgroupify](../../PnP-Tools/Solutions/SharePoint.Modernization/Scripts/Groupify/GroupifySite.ps1 "Bulk groupify sites")]
 

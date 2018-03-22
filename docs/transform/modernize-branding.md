@@ -76,7 +76,7 @@ $themepalette = @{
 Add-PnPTenantTheme -Identity "CustomCompanyTheme" -Palette $themepalette -IsInverted:$false
 ```
 
-To use the this company SharePoint theme you can use the below script:
+To use your company SharePoint theme you can use the below script:
 
 ```PowerShell
 $minimumVersion = New-Object System.Version("2.24.1803.0")
