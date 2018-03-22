@@ -193,6 +193,7 @@ Use high contrast colors as a guide for color choices for components and states 
 ## See also
 
 - [SharePoint themes and colors](themes-colors.md)
+- [Design a web part](design-a-web-part.md)
 - [Designing great SharePoint experiences](design-guidance-overview.md)
 
 
