@@ -12,6 +12,7 @@ _**Applies to:** Office 365 | SharePoint 2016 | SharePoint 2013 | SharePoint Onl
 
 |**Read this content**|**If you want to...**|
 |:-----|:-----|
+|[Modernizing your classic SharePoint sites](../transform/modernize-classic-sites.md)|Transform your classic SharePoint sites into modern group connected sites.|
 |[Branding and site provisioning](Branding-and-site-provisioning-solutions-for-SharePoint.md)|Use SharePoint Add-ins to provision and manage SharePoint site branding.|
 |[Customizing the "modern" experiences in SharePoint Online](modern-experience-customizations.md)|Customization options with SharePoint Online "modern" experiences.|
 |[Introduction to OneDrive and SharePoint Online Multi-Geo scenarios](multigeo-introduction.md)|The OneDrive and SharePoint Online (ODSP) Multi-Geo Preview allows multinational corporations (MNCs) that are part of the preview and have one or more geographical locations to expand their Office 365 ODSP tenancy to satisfy data residency requirements.|

@@ -1279,7 +1279,7 @@
         href: transform/modernize-userinterface-site-pages.md 
     - name: Modernize the customizations
       href: transform/modernize-customizations.md
-    - name: Connect to an Office 365 Groups
+    - name: Connect to an Office 365 Group
       href: transform/modernize-connect-to-office365-group.md
     - name: Modernize the site branding
       href: transform/modernize-branding.md
