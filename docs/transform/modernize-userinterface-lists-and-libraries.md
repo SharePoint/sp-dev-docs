@@ -1,6 +1,6 @@
 # Maximize your use of the modern list and library user interface
 
-Getting the maximum amount of lists and libraries present themselves using the modern user interface is the topic of this article. You might wonder "why not all lists and libraries?"...there's certain types of lists and libraries which are not (yet) built by the SharePoint team to show up in a modern user interface. Samples are a Task list, Events list,...For these you'll have to wait for the SharePoint team to implement a modern version or switch over to equivalent options like use Microsoft Planner instead of a classic task list or use the calendar of your Office 365 group instead of a classic SharePoint calendar. That being said there's also a category of lists and libraries that can be shown in modern but are blocked due to an incompatible configuration or customization.
+Getting the maximum amount of lists and libraries present themselves using the modern user interface is the topic of this article. You might wonder "why not all lists and libraries?"...there's certain types of lists and libraries which are not (yet) built by the SharePoint team to show up in a modern user interface. Samples are a Task list, Events list,...For these you'll have to wait for the SharePoint team to implement a modern version or switch over to equivalent options like using Microsoft Planner instead of a classic task list or using the calendar of your Office 365 group instead of a classic SharePoint events list calendar. That being said there's also a category of lists and libraries that can be shown in modern but are blocked due to an incompatible configuration or customization...and you can take action here.
 
 ## Detecting lists and libraries that will not use the modern user interface
 
@@ -21,12 +21,12 @@ To fix these blockers you can either remove the customization (in case it's not 
 
 ## Fields of type BCS external data, Geolocation, OutcomeChoice, Image, Html, or SummaryLinks
 
-Certain field types (BCS external data, Geolocation, OutcomeChoice in edit mode, Image, Html and SummaryLinks) are not (yet) built to work in a modern user interface. To remediate these you can follow these approaches:
+Certain field types (BCS external data, Geolocation, OutcomeChoice in edit mode, Image, Html and SummaryLinks) are not (yet) built to work in a modern user interface. To remediate these you can apply below approaches:
 
-- Remove the field from the views: the field is still there in edit mode (so you get a classic edit experience)
+- Remove the field from the views: the field is still there, so you get a classic edit experience but at least the views are modern
 - Migrate the fields data into a new field which is compatible with modern
 - Completely drop the field if it's not being used
 
-## Having customized list view pages containing more than the list XSLTListViewWebPart
+## Having customized list view pages containing more than just the list XSLTListViewWebPart
 
 Classic list view and edit pages are editable by users, so you could for example add additional web parts on a list view page. If you've done that then the list will not show anymore in modern. To remediate this the only approach you can follow is to drop the added web parts from the list pages.

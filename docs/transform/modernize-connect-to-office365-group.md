@@ -112,6 +112,9 @@ To help you verify this file before using it you can use below PowerShell script
 - **[ERROR] _siteUrl_ : Alias [_siteAlias_] was already marked as approved alias for another site in this file**: The proposed site alias was already defined for another site in earlier input lines of the bulk "groupify" CSV file
 - **[ERROR] _siteUrl_ : Site does not exist or is not available (status = _site.Status_)**: The provided site URL does not represent a reachable site collection
 
+> [!NOTE]
+> Please update the `$tenantAdminUrl` variable in the script to contain your tenant admin center URL (e.g. https://contoso-admin.sharepoint.com).
+
 [!code-powershell[validategroupifyinput](../../PnP-Tools/Solutions/SharePoint.Modernization/Scripts/Groupify/ValidateInput.ps1 "Validate groupify input file")]
 
 During script execution a log file will be generated combined with an error file which contains a subset of the log file (only the errors).
@@ -135,7 +138,8 @@ Now that we've an input file that's defining the sites that need to be "groupifi
 Running the below PowerShell script requires you to update the tenant admin center URL and at run time provide credentials and the CSV input file.
 
 > [!NOTE]
-> This is a sample script that you need to address to your needs by updating/dropping the **optional** parts or by adding additional modernization tasks (like setting a SharePoint site theme)
+> This is a sample script that you need to address to your needs by updating/dropping the **optional** parts or by adding additional modernization tasks (like setting a SharePoint site theme). Please update the `$tenantAdminUrl` variable in the script to contain your tenant admin center URL (e.g. https://contoso-admin.sharepoint.com).
+
 
 [!code-powershell[bulkgroupify](../../PnP-Tools/Solutions/SharePoint.Modernization/Scripts/Groupify/GroupifySite.ps1 "Bulk groupify sites")]
 
