@@ -15,13 +15,13 @@ To work with this example in SharePoint online, we recommend using a developer t
 
 ## Connect to SPO
 
-First you need to get connected to SharePoint Online using Windows PowerShell. The command use both the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588) (-SPO) and [SharePoint PnP PowerShell Online module](https://www.powershellgallery.com/packages/SharePointPnPPowerShellOnline) (-PnP)
+First you need to get connected to SharePoint Online using Windows PowerShell. The commands use both the [SharePoint Online Management Shell](https://www.microsoft.com/en-us/download/details.aspx?id=35588) (-SPO) and [SharePoint PnP PowerShell Online module](https://www.powershellgallery.com/packages/SharePointPnPPowerShellOnline) (-PnP).
 
 1. Start Windows PowerShell
 2. Run the [Connect-SPOService](https://docs.microsoft.com/en-us/powershell/module/sharepoint-pnp/connect-sposervice) cmdlet to connect to SharePoint online. Log in with your global admin credentials.
 
 ```PowerShell
-Connect-SPOService "https://<your tenant name>-admin.sharepoint.com"
+Connect-SPOService -Url "https://<your tenant name>-admin.sharepoint.com"
 ```
 
 In the remainder of this exercise, "contoso" will be used as the tenant name. Continue to use your own tenant name in place of "contoso".
@@ -46,7 +46,7 @@ https://contoso.sharepoint.com/sites/marketing
 2. Register this marketing site as a hub site using the [Register-SPOHubSite](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/register-spohubsite.md) cmdlet.
 
 ```PowerShell
-Register-SPOHubSite https://contoso.sharepoint.com/sites/marketing
+Register-SPOHubSite -Site https://contoso.sharepoint.com/sites/marketing
 ```
 
 You will see output similar to the following:
@@ -69,7 +69,7 @@ The hub site doesn't have a logo or description yet. Also we want to constrain i
 2. Use the [Set-SPOHubSite](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/set-spohubsite) cmdlet to set the logo and description. In place of "mylogo.jpg" specify the name of the image you uploaded.
 
 ```PowerShell
-Set-SPOHubSite https://contoso.sharepoint.com/sites/marketing -LogoUrl https://contoso.sharepoint.com/marketing/SiteAssets/mylogo.jpg -Description "Main hub site for collaboration on marketing activities across Contoso"
+Set-SPOHubSite -Identity https://contoso.sharepoint.com/sites/marketing -LogoUrl https://contoso.sharepoint.com/marketing/SiteAssets/mylogo.jpg -Description "Main hub site for collaboration on marketing activities across Contoso"
 ```
 
 You will see output similar to the following:
@@ -91,7 +91,7 @@ Now we will restrict access so that only the user nestorw@contoso can make chang
 - Run the [Grant-SPOHubSiteRights](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/grant-spohubsiterights) cmdlet to grant a user rights to the marketing hub site. We'll use nestorw@contoso but you can use any valid user on your tenant for this example.
 
 ```PowerShell
-Grant-SPOHubSiteRights https://contoso.sharepoint.com/sites/marketing -Principals "nestorw@contoso" -Rights Join
+Grant-SPOHubSiteRights -Identity https://contoso.sharepoint.com/sites/marketing -Principals "nestorw@contoso" -Rights Join
 ```
 
 You will see output similar to the following:
@@ -125,7 +125,7 @@ The final step is to create the site we want to associate with the hub. You can 
 2. Associate this site with the hub site using the [Add-SPOHubSiteAssociation](https://docs.microsoft.com/en-us/powershell/module/sharepoint-online/add-spohubsiteassociation) cmdlet
     
     ```PowerShell
-    Add-SPOHubSiteAssociation https://contoso.sharepoint.com/sites/marketing -HubSite https://contoso.sharepoint.com/sites/online-advertising
+    Add-SPOHubSiteAssociation -Site https://contoso.sharepoint.com/sites/online-advertising -HubSite https://contoso.sharepoint.com/sites/marketing 
     ```
 
 ## Confirm the hub site is working
