@@ -128,6 +128,9 @@ What are the recommendation?
 > [!NOTE]
 > Format of the  user agent string is expected to follow [RFC2616](http://www.ietf.org/rfc/rfc2616.txt), so please follow up on the above guidance on the right separators. It is also fine to append existing user agent string with the requested information.
 
+> [!NOTE]
+> If you are developing front end components executing in the browser, most of modern browsers don't allow overwritting the user agent string and you don't need to implement this.
+
 ### Example of decorating traffic with User agent when using Client Side Object Model (CSOM)
 
 ```cs
