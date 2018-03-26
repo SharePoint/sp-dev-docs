@@ -238,7 +238,7 @@ currentItem.Update();
 -  [How to: Create a master page preview file in SharePoint](how-to-create-a-master-page-preview-file-in-sharepoint.md)
     
   
--  [SharePoint Team Blog: Show off your style with SharePoint theming](http://blogs.office.com/b/sharepoint/archive/2012/10/29/show-off-your-style-with-sharepoint-theming.aspx)
+-  [SharePoint Team Blog: Show off your style with SharePoint theming](https://blogs.office.com/en-us/2012/10/29/show-off-your-style-with-sharepoint-theming/)
     
   
 
