@@ -2773,6 +2773,13 @@
         href: schema/property-element-property-bag.md
     - name: Site Definition (Onet.xml) Files
       href: schema/site-definition-onet-xml-files.md
+    - name: Web Template XML
+      href: schema/web-template-xml.md
+      items:
+      - name: WebTemplate Element (Web Template)
+        href: schema/webtemplate-element-web-template.md
+      - name: Elements (Web Template)
+        href: schema/elements-web-template.md    
     - name: Workflow Definitions
       href: schema/workflow-definitions.md
       items:
@@ -2800,13 +2807,6 @@
         href: schema/statuspageurl-element-workflow.md
       - name: Workflow Element (Elements)
         href: schema/workflow-element-elements.md
-    - name: Web Template XML
-      href: schema/web-template-xml.md
-      items:
-      - name: WebTemplate Element (Web Template)
-        href: schema/webtemplate-element-web-template.md
-      - name: Elements (Web Template)
-        href: schema/elements-web-template.md
   - name: Content migration schemas
     href: schema/content-migration-schemas.md
     items:

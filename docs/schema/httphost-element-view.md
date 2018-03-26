@@ -59,7 +59,7 @@ JavaScript
 
 **Last modified:** March 09, 2015
 
-***Applies to:** SharePoint 2016 | SharePoint Foundation 2013 |
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013*
 
 Renders the URL to the Web application containing the current SharePoint

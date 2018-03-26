@@ -59,7 +59,7 @@ JavaScript
 
 **Last modified:** March 09, 2015
 
-***Applies to:** SharePoint 2016 | SharePoint Foundation 2013 |
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013*
 
 Used within a view to render the list for the browser by iterating over

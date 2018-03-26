@@ -55,7 +55,7 @@ JavaScript
 
 **Last modified:** March 09, 2015
 
-***Applies to:** SharePoint 2016 | SharePoint Foundation 2013 |
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013*
 
 Defines a custom property of a Container or an Office External Part.

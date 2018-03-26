@@ -61,7 +61,7 @@ JavaScript
 
 **Last modified:** July 15, 2011
 
-***Applies to:** SharePoint 2016 | SharePoint Foundation 2013 |
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013*
 
 The Site Deletion Confirmation schema specifies the text that is sent in

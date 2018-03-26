@@ -57,7 +57,7 @@ Specifies the hash table from which the evaluation value is retrieved.
 
 **Last modified:** March 09, 2015
 
-***Applies to:** SharePoint Server 2013*
+**Applies to**: SharePoint Server 2013*
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

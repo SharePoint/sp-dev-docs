@@ -59,7 +59,7 @@ JavaScript
 
 **Last modified:** March 09, 2015
 
-***Applies to:** SharePoint 2016 | SharePoint Foundation 2013 |
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013*
 
 Contains the definition of a Group By header section in a view of a

@@ -60,7 +60,7 @@ type [coercionParameterType](coercionparameterstype-complextype-action4.htm).
 
 **Last modified:** March 09, 2015
 
-***Applies to:** SharePoint Server 2013*
+**Applies to**: SharePoint Server 2013*
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

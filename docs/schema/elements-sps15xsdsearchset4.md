@@ -58,7 +58,7 @@ nameDOCS-GREATERTHANDOCS-GREATERTHAN XML schema.
 
 **Last modified:** October 02, 2013
 
-***Applies to:** SharePoint Server 2013*
+**Applies to**: SharePoint Server 2013*
 
 -   [BoundVariableOrigin
     element](boundvariableorigin-element-sps15xsdsearchset4.htm)

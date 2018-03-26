@@ -58,7 +58,7 @@ nameDOCS-GREATERTHANDOCS-GREATERTHAN XML schema.
 
 **Last modified:** September 16, 2015
 
-***Applies to:** apps for SharePoint | SharePoint Foundation 2013 |
+**Applies to**: apps for SharePoint | SharePoint Foundation 2013 |
 SharePoint Server 2013*
 
 <table>

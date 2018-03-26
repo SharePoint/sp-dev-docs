@@ -59,7 +59,7 @@ nameDOCS-GREATERTHANDOCS-GREATERTHAN</span>.
 
 **Last modified:** January 09, 2014
 
-***Applies to:** SharePoint Server 2013*
+**Applies to**: SharePoint Server 2013*
 
 <span codelanguage="xmlLang"></span>
 XML 

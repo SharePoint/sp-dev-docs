@@ -55,7 +55,7 @@ JavaScript
 
 **Last modified:** December 07, 2015
 
-***Applies to:** SharePoint 2016 | SharePoint Foundation 2013 |
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013*
 
 Modules are defined in an element manifest similarly to how they are

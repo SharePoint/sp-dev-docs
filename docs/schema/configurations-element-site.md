@@ -61,7 +61,7 @@ JavaScript
 
 **Last modified:** March 09, 2015
 
-***Applies to:** SharePoint 2016 | SharePoint Foundation 2013 |
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013*
 
 Contains the configurations of lists and modules that make up a site

@@ -57,7 +57,7 @@ The top level node of an app part configuration file.
 
 **Last modified:** September 16, 2015
 
-***Applies to:** apps for SharePoint | SharePoint Foundation 2013 |
+**Applies to**: apps for SharePoint | SharePoint Foundation 2013 |
 SharePoint Server 2013*
 
 <table>

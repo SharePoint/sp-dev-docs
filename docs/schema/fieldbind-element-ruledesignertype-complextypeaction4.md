@@ -67,7 +67,7 @@ is not supported when creating workflows using SharePoint Designer.
 
 **Last modified:** March 09, 2015
 
-***Applies to:** SharePoint Server 2013*
+**Applies to**: SharePoint Server 2013*
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

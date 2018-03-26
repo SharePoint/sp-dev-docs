@@ -57,7 +57,7 @@ Specifies the locales that the add-in supports.
 
 **Last modified:** September 17, 2015
 
-***Applies to:** apps for SharePoint | SharePoint Foundation 2013 |
+**Applies to**: apps for SharePoint | SharePoint Foundation 2013 |
 SharePoint Server 2013*
 
 <table>

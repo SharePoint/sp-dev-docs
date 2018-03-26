@@ -58,7 +58,7 @@ class="keyword">schema\_Microsoft.Office.Server.Search.Query.Rules</span>.
 
 **Last modified:** January 13, 2014
 
-***Applies to:** SharePoint Server 2013*
+**Applies to**: SharePoint Server 2013*
 
 <span codelanguage="xmlLang"></span>
 XML 

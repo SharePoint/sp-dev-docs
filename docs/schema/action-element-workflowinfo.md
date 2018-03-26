@@ -64,7 +64,7 @@ By default, SharePoint Foundation 2010 provides 23 built-in workflow actions. Th
 </tr>
 <tr class="even">
 <td align="left"><p>**ClassName**</p></td>
-<td align="left"><p>Required **text**. Fully qualified name of the class that implements the workflow action; for example, <span sdata="cer" target="T:Microsoft.SharePoint.WorkflowActions.EmailActivity"><span class="nolink">Microsoft.SharePoint.WorkflowActions.EmailActivity****.</p></td>
+<td align="left"><p>Required **text**. Fully qualified name of the class that implements the workflow action; for example, **Microsoft.SharePoint.WorkflowActions.EmailActivity**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Assembly**</p></td>

@@ -58,7 +58,7 @@ nameDOCS-GREATERTHANDOCS-GREATERTHAN XML schema.
 
 **Last modified:** January 09, 2014
 
-***Applies to:** SharePoint Server 2013*
+**Applies to**: SharePoint Server 2013*
 
 -   [appliesToTypes
     simpleType](appliestotypes-simpletype-action4.htm)
