@@ -52,7 +52,7 @@
     }
   ],
   "branch_target_mapping": {
-    "master": [
+    "live": [
       "Publish",
       "Pdf"
     ]
