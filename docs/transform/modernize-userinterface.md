@@ -10,7 +10,7 @@ ms.prod: sharepoint
 One of the immediately visible elements of a modern site, like a modern team site or communication site, is it's modern user interface. These sites do have a home page which is using a modern site page and when you navigate to the lists and libraries you'll notice that they're shown using a modern user interface as well. But what if your site today still shows lists and libraries using the classic user interface or your site still has classic site pages in the form of wiki pages or web part pages? There are options to modernize your site's user interface, which is the main topic of this article series.
 
 When it comes to switching to a modern user interface there are two areas you need to work on:
-
+ 
 - Making your lists and libraries use the modern user interface (also referred to as the modern list and library experience)
 - Transforming your site pages from classic wiki and web part pages into modern client side pages
 
