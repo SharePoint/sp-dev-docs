@@ -132,7 +132,8 @@ The implementation requires two managed properties for each item received via th
     
 The **IContentProcessingEnrichmentService** implementation writes the raw binary data to a temporary location on disk, with **Filename** as the name of the file. Then, a new name is added to the list of authors and returned to the content processing component.
   
-    
+    > [!NOTE]
+    > If the data source for the crawl is an external data source, the ItemRawData property will not have a data stream, but will be null. The string representation of the raw data will be returned in the Item.Body property. This is a limitation of the BCS data source crawler. 
     
 
 ### To create the class file for the content enrichment service
