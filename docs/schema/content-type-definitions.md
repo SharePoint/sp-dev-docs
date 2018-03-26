@@ -58,7 +58,7 @@ JavaScript
 **Last modified:** July 15, 2011
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 The Content Type Definition Schema defines the structure of the XML that
 creates a content type in the element manifest file of a Feature.

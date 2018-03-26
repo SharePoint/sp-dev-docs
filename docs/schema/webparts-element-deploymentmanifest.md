@@ -56,7 +56,7 @@ JavaScript
 **Last modified:** March 09, 2015
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 Represents a collection of SharePoint Foundation Web Part (<span
 class="keyword">SPWebPart</span>) object instances.

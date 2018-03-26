@@ -56,7 +56,7 @@ JavaScript
 **Last modified:** March 09, 2015
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 See <span sdata="link">[Methods Element in Entity (BDCMetadata
 Schema)](methods-element-in-entity-bdcmetadata-schema.htm)</span> for more

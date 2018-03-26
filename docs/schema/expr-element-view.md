@@ -60,7 +60,7 @@ JavaScript
 **Last modified:** March 09, 2015
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 Contains a CAML expression that is evaluated to determine the course of
 action for a [Switch](switch-element-view.htm) or

@@ -60,7 +60,7 @@ JavaScript
 **Last modified:** March 09, 2015
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 Specifies that a list should be included in code generation and modifies
 which content types in the list are included in code generation.

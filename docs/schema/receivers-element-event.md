@@ -56,7 +56,7 @@ JavaScript
 **Last modified:** March 09, 2015
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 Contains the description of an event receiver for handling item events
 in lists created through the specified list template.

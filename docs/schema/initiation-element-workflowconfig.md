@@ -58,7 +58,7 @@ JavaScript
 **Last modified:** March 09, 2015
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 Contains workflow initiation information, such as the workflow
 initiation form, and the data fields on the initiation form.

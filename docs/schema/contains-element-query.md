@@ -60,7 +60,7 @@ JavaScript
 **Last modified:** March 09, 2015
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 Searches for a string anywhere within a column that holds <span
 class="keyword">Text</span> or **Note** field

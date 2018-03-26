@@ -58,7 +58,7 @@ custom actions in SharePoint 2013 workflow Visual Designer.
 
 **Last modified:** June 24, 2013
 
-**Applies to**: SharePoint Server 2013*
+**Applies to**: SharePoint Server 2013
 
 The SharePoint workflow actions schema (Action4.xsd) lets you create
 custom actions that will appear in the workflow Visual Designer toolbox.

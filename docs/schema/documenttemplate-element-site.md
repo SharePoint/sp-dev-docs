@@ -60,7 +60,7 @@ JavaScript
 **Last modified:** March 09, 2015
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 Defines a document library template for the New Document Library page in
 a Web site based on Microsoft SharePoint Foundation.

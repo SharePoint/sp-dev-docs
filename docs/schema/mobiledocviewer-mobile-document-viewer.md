@@ -58,7 +58,7 @@ JavaScript
 **Last modified:** March 09, 2015
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 Specifies how a request for a document for a specific type is redirected
 to a page that hosts a viewer that can open documents of that type.

@@ -60,7 +60,7 @@ JavaScript
 **Last modified:** July 15, 2011
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 A solution manifest file defines the constituent parts of a solution,
 including its files, assemblies, code access security, Web Parts,

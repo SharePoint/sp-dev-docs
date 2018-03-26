@@ -56,7 +56,7 @@ JavaScript
 **Last modified:** March 09, 2015
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 Collaborative Application Markup Language (CAML) has two major kinds of
 elements: those for page rendering, and those for field rendering and

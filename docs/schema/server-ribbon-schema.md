@@ -60,7 +60,7 @@ JavaScript
 **Last modified:** July 15, 2011
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 The Server ribbon schema defines the structure of XML documents that
 customize the Server ribbon.

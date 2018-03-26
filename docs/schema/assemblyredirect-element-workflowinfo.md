@@ -58,7 +58,7 @@ JavaScript
 **Last modified:** March 09, 2015
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 Specifies a transformation from one binary file to another binary file
 in a versioned binary file system so that the client has sufficient

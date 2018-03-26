@@ -56,7 +56,7 @@ JavaScript
 **Last modified:** March 09, 2015
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 Nearly all of the 108 elements in the DeploymentManifest Schema
 incorporate the schema's type definitions in the documentation for the

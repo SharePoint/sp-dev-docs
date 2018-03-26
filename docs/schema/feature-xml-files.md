@@ -56,7 +56,7 @@ JavaScript
 **Last modified:** July 15, 2011
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 In a <span class="code">Feature.xml</span> file, the
 [Feature](feature-element-feature.htm) element defines a

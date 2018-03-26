@@ -58,7 +58,7 @@ JavaScript
 **Last modified:** July 20, 2011
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 This section contains the documentation for the BDC Model Schema
 ([BDCMetadata.xsd](http://schemas.microsoft.com/windows/2007/BusinessDataCatalog)).

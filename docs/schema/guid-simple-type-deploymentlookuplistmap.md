@@ -56,7 +56,7 @@ JavaScript
 **Last modified:** July 15, 2011
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 Supports the use of a globally unique identifier (GUID) as a <span
 class="keyword">Guid</span> attribute field value in the <span

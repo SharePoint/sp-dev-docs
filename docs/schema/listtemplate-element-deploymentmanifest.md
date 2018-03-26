@@ -56,7 +56,7 @@ JavaScript
 **Last modified:** March 09, 2015
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 Represents a list definition or instance of a list template (<span
 sdata="cer" target="T:Microsoft.SharePoint.SPListTemplate"><span

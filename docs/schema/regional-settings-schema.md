@@ -62,7 +62,7 @@ JavaScript
 **Last modified:** July 15, 2011
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 The Regional Settings schema is used to define the time zones, locales,
 languages, and currencies implemented within a SharePoint Foundation

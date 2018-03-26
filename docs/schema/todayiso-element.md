@@ -56,7 +56,7 @@ JavaScript
 **Last modified:** March 09, 2015
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 Renders the current date and time in International Organization for
 Standardization (ISO) format: YYYY-MM-DDTHH:MM:SSZ (for example,

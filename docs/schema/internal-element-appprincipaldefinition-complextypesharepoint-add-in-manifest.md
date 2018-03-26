@@ -59,7 +59,7 @@ rather than provider-hosted.
 **Last modified:** January 25, 2016
 
 **Applies to**: apps for SharePoint | SharePoint Foundation 2013 |
-SharePoint Server 2013*
+SharePoint Server 2013
 
 <table>
 <colgroup>

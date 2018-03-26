@@ -61,7 +61,7 @@ JavaScript
 **Last modified:** December 07, 2015
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 The list schema of [Collaborative Application Markup Language
 (CAML)](introduction-to-collaborative-application-markup-language-caml.htm) is used to define the

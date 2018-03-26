@@ -58,7 +58,7 @@ JavaScript
 **Last modified:** July 15, 2011
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 Each element manifest file that specifies a content type binding must
 adhere to the Content Type Binding Definition Schema.

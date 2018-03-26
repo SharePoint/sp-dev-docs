@@ -55,7 +55,7 @@ JavaScript
 
 **Last modified:** February 19, 2014
 
-**Applies to**: SharePoint Server 2013*
+**Applies to**: SharePoint Server 2013
 
 The **SPS15XSDSearchSet4** schema specifies XML
 that represents enumerations used in other schemas. You can include the

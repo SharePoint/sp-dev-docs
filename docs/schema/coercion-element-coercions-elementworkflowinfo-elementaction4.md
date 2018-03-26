@@ -57,7 +57,7 @@ Specifies a coercion for converting data from one form to another.
 
 **Last modified:** March 09, 2015
 
-**Applies to**: SharePoint Server 2013*
+**Applies to**: SharePoint Server 2013
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

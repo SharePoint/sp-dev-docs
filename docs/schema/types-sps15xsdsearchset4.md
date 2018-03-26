@@ -59,7 +59,7 @@ XML schema.
 
 **Last modified:** February 19, 2014
 
-**Applies to**: SharePoint Server 2013*
+**Applies to**: SharePoint Server 2013
 
 -   [BoundVariableOrigin
     simpleType](boundvariableorigin-simpletype-sps15xsdsearchset4.htm)

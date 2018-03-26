@@ -56,7 +56,7 @@ JavaScript
 **Last modified:** July 20, 2011
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 This section contains documentation for the BDC Metadata Resource schema
 ([BDCMetadataResource.xsd](http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources)).

@@ -58,7 +58,7 @@ the parent action or composite step, or from a hash table.
 
 **Last modified:** March 09, 2015
 
-**Applies to**: SharePoint Server 2013*
+**Applies to**: SharePoint Server 2013
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

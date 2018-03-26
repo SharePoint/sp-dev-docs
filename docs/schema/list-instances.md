@@ -56,7 +56,7 @@ JavaScript
 **Last modified:** July 15, 2011
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 The [ListInstance](listinstance-element-list-instance.htm) element
 specifies default data with which to provision the given list type. This

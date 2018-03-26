@@ -55,7 +55,7 @@ JavaScript
 
 **Last modified:** March 09, 2015
 
-**Applies to**: SharePoint Server 2013*
+**Applies to**: SharePoint Server 2013
 
 Represents a Condition statement, which is part of a rule sentence that
 can be displayed in a declarative, rules-based, code-free workflow

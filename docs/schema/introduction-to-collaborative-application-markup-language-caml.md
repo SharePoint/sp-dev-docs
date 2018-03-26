@@ -58,7 +58,7 @@ JavaScript
 **Last modified:** July 15, 2011
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 Collaborative Application Markup Language (CAML) is an XML-based
 language that is used in Microsoft SharePoint Foundation to define the

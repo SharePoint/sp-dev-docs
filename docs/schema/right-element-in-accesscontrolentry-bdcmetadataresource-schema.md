@@ -56,7 +56,7 @@ JavaScript
 **Last modified:** March 09, 2015
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 See <span sdata="link">[Right Element in AccessControlEntry (BDCMetadata
 Schema)](right-element-in-accesscontrolentry-bdcmetadata-schema.htm)</span> for details.

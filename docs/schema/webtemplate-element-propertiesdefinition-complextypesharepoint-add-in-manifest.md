@@ -58,7 +58,7 @@ The web template to use when creating an add-in web.
 **Last modified:** September 17, 2015
 
 **Applies to**: apps for SharePoint | SharePoint Foundation 2013 |
-SharePoint Server 2013*
+SharePoint Server 2013
 
 <table>
 <colgroup>

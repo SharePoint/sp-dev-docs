@@ -58,7 +58,7 @@ JavaScript
 **Last modified:** July 15, 2011
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 The workflow configuration file contains the information necessary to
 create a workflow template in SharePoint Foundation from the specified

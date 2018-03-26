@@ -59,7 +59,7 @@ schema.
 
 **Last modified:** February 19, 2014
 
-**Applies to**: SharePoint Server 2013*
+**Applies to**: SharePoint Server 2013
 
 -   [LocStringId element](locstringid-element-sps15xsdsearchset6.htm)
 

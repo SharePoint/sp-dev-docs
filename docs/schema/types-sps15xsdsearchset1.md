@@ -59,7 +59,7 @@ XML schema.
 
 **Last modified:** February 19, 2014
 
-**Applies to**: SharePoint Server 2013*
+**Applies to**: SharePoint Server 2013
 
 -   [ArrayOfSource
     complexType](arrayofsource-complextype-sps15xsdsearchset1.htm)

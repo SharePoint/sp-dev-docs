@@ -56,7 +56,7 @@ JavaScript
 **Last modified:** March 09, 2015
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 Represents the definition of a Group By header parameter (<span
 sdata="cer" target="P:Microsoft.SharePoint.SPView.GroupByHeader"><span

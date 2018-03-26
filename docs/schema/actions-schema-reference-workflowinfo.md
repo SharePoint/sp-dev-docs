@@ -58,7 +58,7 @@ JavaScript
 **Last modified:** July 15, 2011
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 The Actions schema that is used to validate custom .ACTIONS files does
 not actually exist in the form of an .xsd file on the server file

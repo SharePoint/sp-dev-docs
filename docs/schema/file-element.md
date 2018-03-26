@@ -59,7 +59,7 @@ JavaScript
 **Last modified:** March 09, 2015
 
 **Applies to**: Lync 2013 | Lync Server 2013 | SharePoint 2016 |
-SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013*
+SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
 Specifies a file to include within a module in a site definition
 configuration or Web template configuration.

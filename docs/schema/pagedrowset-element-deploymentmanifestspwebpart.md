@@ -56,7 +56,7 @@ JavaScript
 **Last modified:** March 09, 2015
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 Represents a paged rowset on an instance of a SharePoint Web Part (<span
 sdata="cer" target="T:Microsoft.SharePoint.WebPartPages.WebPart"><span

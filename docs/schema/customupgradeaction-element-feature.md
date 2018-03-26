@@ -58,7 +58,7 @@ Specifies custom Feature upgrade actions.
 **Last modified:** March 09, 2015
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013*
+SharePoint Online | SharePoint Server 2013
 
 This element references custom code that calls SharePoint's server
 object model. For that reason it cannot be used when the Feature that is
