@@ -1,0 +1,86 @@
+---
+manager: soliver
+ms.date: 3/9/2015
+ms.audience: Developer
+ms.topic: reference
+ms.prod: office-online-server
+localization_priority: Normal
+ms.assetid: c1031b46-28be-51f5-43bb-8d684cc52ee2
+---
+
+# Action Element in Actions 
+
+(BDCMetadataResource Schema)
+
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
+
+Specifies localized display names and properties, in any combination, for an [Action Element in Actions (BDCMetadata Schema)](action-element-in-actions-bdcmetadata-schema.htm).
+
+**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
+
+**Schema**: BDCMetadataResource
+
+```XML
+<Action Name = "String"> </Action>
+```
+
+<br/>
+
+The following sections describe attributes, child elements, and parent elements.
+
+#### Attributes
+
+None.
+
+<br/>
+
+#### Child elements
+
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><p>Element</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.htm">LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
+</tr>
+<tr class="even">
+<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadataresource-schema.htm">Properties Element in MetadataObject (BDCMetadataResource Schema)</a></span></p></td>
+</tr>
+<tr class="odd">
+<td align="left"><p><span sdata="link"><a href="actionparameters-element-in-action-bdcmetadataresource-schema.htm">ActionParameters Element in Action (BDCMetadataResource Schema)</a></span></p></td>
+</tr>
+</tbody>
+</table>
+
+<br/>
+
+#### Parent elements
+
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th align="left"><p>Description</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left"><p><span sdata="link"><a href="actions-element-in-entity-bdcmetadataresource-schema.htm">Actions Element in Entity (BDCMetadataResource Schema)</a></span></p></td>
+</tr>
+</tbody>
+</table>
+
+
+
+
+
+
+

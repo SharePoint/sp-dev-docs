@@ -1,0 +1,941 @@
+---
+
+
+manager: laurawi
+ms.date: 11/16/2014
+ms.audience: Developer
+ms.topic: reference
+ms.prod: office-online-server
+localization_priority: Normal
+ms.assetid: d7e60875-b06d-9475-d823-08079b376ef3
+---
+
+![Collapse
+section](../icons/collapse_all.gif "Collapse section")![Expand
+section](../icons/expand_all.gif "Expand section")![](../icons/collapse_all.gif)![](../icons/expand_all.gif)![](../icons/dropdown.gif)![](../icons/dropdownHover.gif)![Copy
+code](../icons/copycode.gif "Copy code")![Copy code
+hover](../icons/copycodeHighlight.gif "Copy code hover")
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+Visual Basic  
+C\#  
+C++  
+JavaScript  
+
+<table>
+<tbody>
+<tr class="odd">
+<td align="left"><span id="runningHeaderText"></span></td>
+</tr>
+<tr class="even">
+<td align="left"># Schema map (Workflow actions)</td>
+</tr>
+<tr class="odd">
+<td align="left"><span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
+</tr>
+</tbody>
+</table>
+
+<table>
+<colgroup>
+<col width="100%" />
+</colgroup>
+<tbody>
+<tr class="odd">
+<td align="left"></td>
+</tr>
+</tbody>
+</table>
+
+This topic shows the schema definition for <span
+class="keyword">DOCS-LESSTHANDOCS-LESSTHANSchema file
+nameDOCS-GREATERTHANDOCS-GREATERTHAN</span>.
+
+**Last modified:** January 09, 2014
+
+***Applies to:** SharePoint Server 2013*
+
+<span codelanguage="xmlLang"></span>
+XML 
+<span class="copyCode" onclick="CopyCode(this)"
+onkeypress="CopyCode_CheckKey(this, event)"
+onmouseover="ChangeCopyCodeIcon(this)"
+onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
+code](../icons/copycode.gif "Copy code")Copy code</span>
+                            <?xml version="1.0" encoding="utf-8"?>
+                            <xs:schema
+                            elementFormDefault
+                              =" qualified"
+                                  
+                            s
+                              =" http://www.w3.org/2001/XMLSchema"
+                                  
+                            core
+                              =" http://schemas.microsoft.com/sharepoint/soap/"
+                                  >
+        <xs:element name="WorkflowInfo"
+        >
+              <xs:complexType>
+              <xs:all>
+        <xs:element name="Conditions"
+         minOccurs="0"
+        maxOccurs="1"
+       >
+              <xs:complexType>
+              <xs:sequence>
+        <xs:element name="Default"
+         minOccurs="0"
+        maxOccurs="1"
+       >
+              <xs:complexType>
+              <xs:sequence>
+        <xs:element name="RuleDesigner"
+         type="ruleDesignerType">
+     </xs:element>
+     
+          </xs:sequence>
+        <xs:attribute name="ItemKeyType"
+      type="s:string"
+        />
+          </xs:complexType>
+     </xs:element>
+     
+        <xs:element name="Condition"
+         minOccurs="0"
+        maxOccurs="unbounded"
+       >
+              <xs:complexType>
+              <xs:all>
+        <xs:element name="RuleDesigner"
+         type="ruleDesignerType" minOccurs="1"
+        maxOccurs="1"
+       >
+     </xs:element>
+     
+        <xs:element name="Parameters"
+         type="parametersType" minOccurs="1"
+        maxOccurs="1"
+       >
+     </xs:element>
+     
+          </xs:all>
+        <xs:attribute name="Type"
+      type="s:string"
+        />
+        <xs:attribute name="Name"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="AppliesTo"
+      type="appliesToTypes"
+         use="required"
+        />
+        <xs:attribute name="UsesCurrentItem"
+      type="s:boolean"
+        />
+        <xs:attribute name="ItemKeyType"
+      type="s:string"
+        />
+        <xs:attribute name="FunctionName"
+      type="s:string"
+        />
+        <xs:attribute name="Assembly"
+      type="s:string"
+        />
+        <xs:attribute name="ClassName"
+      type="s:string"
+        />
+        <xs:attribute name="ShapeImageUrl"
+      type="s:string"
+        />
+          </xs:complexType>
+     </xs:element>
+     
+          </xs:sequence>
+        <xs:attribute name="And"
+      type="s:string"
+        />
+        <xs:attribute name="Or"
+      type="s:string"
+        />
+        <xs:attribute name="When"
+      type="s:string"
+        />
+        <xs:attribute name="Else"
+      type="s:string"
+        />
+        <xs:attribute name="Not"
+      type="s:string"
+        />
+          </xs:complexType>
+     </xs:element>
+     
+        <xs:element name="Actions"
+         minOccurs="0"
+        maxOccurs="1"
+       >
+              <xs:complexType>
+              <xs:sequence>
+        <xs:element name="Default"
+         type="defaultElementType" minOccurs="0"
+        maxOccurs="1"
+       >
+     </xs:element>
+     
+        <xs:element name="Action"
+         minOccurs="0"
+        maxOccurs="unbounded"
+       >
+              <xs:complexType>
+              <xs:all>
+        <xs:element name="Parameters"
+         type="parametersType" minOccurs="0"
+        maxOccurs="1"
+       >
+     </xs:element>
+     
+        <xs:element name="RuleDesigner"
+         type="ruleDesignerType" minOccurs="1"
+        maxOccurs="1"
+       >
+     </xs:element>
+     
+        <xs:element name="DataSources"
+         type="dataSourcesType" minOccurs="0"
+        maxOccurs="1"
+       >
+     </xs:element>
+     
+        <xs:element name="Modifications"
+         minOccurs="0"
+        maxOccurs="1"
+       >
+              <xs:complexType>
+              <xs:sequence>
+        <xs:element name="Modification"
+         minOccurs="1"
+        maxOccurs="unbounded"
+       >
+        <xs:attribute name="TypeId"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="NameFormat"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="FormURN"
+      type="s:string"
+         use="required"
+        />
+     </xs:element>
+     
+          </xs:sequence>
+          </xs:complexType>
+     </xs:element>
+     
+        <xs:element name="ActionVariables"
+         minOccurs="0"
+        maxOccurs="1"
+       >
+              <xs:complexType>
+              <xs:sequence>
+        <xs:element name="ActionVariables"
+        >
+     </xs:element>
+     
+          </xs:sequence>
+          </xs:complexType>
+     </xs:element>
+     
+        <xs:element name="ActionBody"
+         minOccurs="0"
+        maxOccurs="1"
+       >
+              <xs:complexType>
+              <xs:sequence>
+        <xs:element name="ActionBody"
+        >
+     </xs:element>
+     
+          </xs:sequence>
+          </xs:complexType>
+     </xs:element>
+     
+        <xs:element name="ActionConditions"
+         minOccurs="0"
+        maxOccurs="1"
+       >
+              <xs:complexType>
+              <xs:sequence>
+        <xs:element name="ActionConditions"
+        >
+     </xs:element>
+     
+          </xs:sequence>
+          </xs:complexType>
+     </xs:element>
+     
+          </xs:all>
+        <xs:attribute name="Name"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="ClassName"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="Assembly"
+      type="s:string"
+        />
+        <xs:attribute name="FunctionName"
+      type="s:string"
+        />
+        <xs:attribute name="Category"
+      type="s:string"
+        />
+        <xs:attribute name="CreatesTask"
+      type="s:boolean"
+        />
+        <xs:attribute name="CreatesInList"
+      type="s:string"
+        />
+        <xs:attribute name="AppliesTo"
+      type="appliesToTypes"
+         use="required"
+        />
+        <xs:attribute name="IsError"
+      type="s:boolean"
+        />
+        <xs:attribute name="ListModeration"
+      type="s:boolean"
+        />
+        <xs:attribute name="UsesCurrentItem"
+      type="s:boolean"
+        />
+        <xs:attribute name="CreatedTaskFormType"
+      type="s:string"
+        />
+        <xs:attribute name="__SolutionId"
+      type="s:string"
+        />
+        <xs:attribute name="SandboxedFunction"
+      type="s:boolean"
+        />
+        <xs:attribute name="ShapeImageUrl"
+      type="s:string"
+        />
+          </xs:complexType>
+     </xs:element>
+     
+          </xs:sequence>
+        <xs:attribute name="Sequential"
+      type="s:string"
+        />
+        <xs:attribute name="Parallel"
+      type="s:string"
+        />
+          </xs:complexType>
+     </xs:element>
+     
+        <xs:element name="CompositeSteps"
+         minOccurs="0"
+        maxOccurs="1"
+       >
+              <xs:complexType>
+              <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="CompositeStep"
+        >
+              <xs:complexType>
+              <xs:sequence>
+        <xs:element name="DataSources"
+         type="dataSourcesType" minOccurs="0"
+        maxOccurs="1"
+       >
+     </xs:element>
+     
+          </xs:sequence>
+        <xs:attribute name="Name"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="ClassName"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="Assembly"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="AppliesTo"
+      type="appliesToTypes"
+         use="required"
+        />
+        <xs:attribute name="Order"
+      type="s:nonNegativeInteger"
+        />
+        <xs:attribute name="Description"
+      type="s:string"
+        />
+          </xs:complexType>
+     </xs:element>
+     
+          </xs:sequence>
+          </xs:complexType>
+     </xs:element>
+     
+        <xs:element name="VariableTypes"
+         minOccurs="0"
+        maxOccurs="1"
+       >
+              <xs:complexType>
+              <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="VariableType"
+        >
+        <xs:attribute name="Type"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="DisplayName"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="Assembly"
+      type="s:string"
+        />
+        <xs:attribute name="Default"
+      type="s:boolean"
+        />
+        <xs:attribute name="ItemIdType"
+      type="s:boolean"
+        />
+        <xs:attribute name="Hidden"
+      type="s:boolean"
+        />
+     </xs:element>
+     
+          </xs:sequence>
+          </xs:complexType>
+     </xs:element>
+     
+        <xs:element name="AssemblyRedirects"
+         minOccurs="0"
+        maxOccurs="1"
+       >
+              <xs:complexType>
+              <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="AssemblyRedirect"
+        >
+        <xs:attribute name="From"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="To"
+      type="s:string"
+         use="required"
+        />
+     </xs:element>
+     
+          </xs:sequence>
+          </xs:complexType>
+     </xs:element>
+     
+        <xs:element name="Coercions"
+         minOccurs="0"
+        maxOccurs="1"
+       >
+              <xs:complexType>
+              <xs:sequence minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="Coercion"
+         minOccurs="0"
+        maxOccurs="unbounded"
+       >
+              <xs:complexType>
+              <xs:all>
+        <xs:element name="Parameters"
+         type="coercionParametersType" minOccurs="0"
+        maxOccurs="1"
+       >
+     </xs:element>
+     
+          </xs:all>
+        <xs:attribute name="Name"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="Assembly"
+      type="s:string"
+        />
+        <xs:attribute name="DisplayName"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="CatchAll"
+      type="s:boolean"
+         use="required"
+        />
+        <xs:attribute name="RankDefault"
+      type="s:integer"
+         use="required"
+        />
+        <xs:attribute name="SourceType"
+      type="s:string"
+        />
+        <xs:attribute name="SourceFieldType"
+      type="s:string"
+        />
+        <xs:attribute name="DestinationType"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="DestinationFieldType"
+      type="s:string"
+        />
+        <xs:attribute name="ClassName"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="Id"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="SourceProperty"
+      type="s:string"
+         use="required"
+        />
+          </xs:complexType>
+     </xs:element>
+     
+          </xs:sequence>
+          </xs:complexType>
+     </xs:element>
+     
+        <xs:element name="Events"
+         minOccurs="0"
+        maxOccurs="1"
+       >
+              <xs:complexType>
+              <xs:sequence>
+        <xs:element name="Event"
+         minOccurs="0"
+        maxOccurs="unbounded"
+       >
+        <xs:attribute name="Name"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="DisplayName"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="EventGroup"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="Category"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="RankDefault"
+      type="s:string"
+         use="required"
+        />
+     </xs:element>
+     
+          </xs:sequence>
+          </xs:complexType>
+     </xs:element>
+     
+        <xs:element name="Flows"
+         minOccurs="0"
+        maxOccurs="1"
+       >
+              <xs:complexType>
+              <xs:sequence>
+        <xs:element name="Flow"
+         minOccurs="0"
+        maxOccurs="unbounded"
+       >
+              <xs:complexType>
+              <xs:sequence>
+        <xs:element name="RuleDesigner"
+         type="ruleDesignerType" minOccurs="1"
+        maxOccurs="1"
+       >
+     </xs:element>
+     
+        <xs:element name="Parameters"
+         type="parametersType" minOccurs="1"
+        maxOccurs="1"
+       >
+     </xs:element>
+     
+          </xs:sequence>
+        <xs:attribute name="Name"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="Category"
+      type="s:string"
+         use="required"
+        />
+          </xs:complexType>
+     </xs:element>
+     
+          </xs:sequence>
+          </xs:complexType>
+     </xs:element>
+     
+        <xs:element name="Blocks"
+         minOccurs="0"
+        maxOccurs="1"
+       >
+              <xs:complexType>
+              <xs:sequence>
+        <xs:element name="Block"
+         type="propertiesType" minOccurs="0"
+        maxOccurs="unbounded"
+       >
+     </xs:element>
+     
+          </xs:sequence>
+          </xs:complexType>
+     </xs:element>
+     
+          </xs:all>
+        <xs:attribute name="Language"
+      type="s:string"
+        />
+          </xs:complexType>
+     </xs:element>
+     
+              <xs:complexType name="ruleDesignerType">
+              <xs:sequence>
+        <xs:element name="FieldBind"
+         minOccurs="0"
+        maxOccurs="unbounded"
+       >
+              <xs:complexType>
+              <xs:choice>
+        <xs:element name="Option"
+         minOccurs="0"
+        maxOccurs="unbounded"
+       >
+        <xs:attribute name="Name"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="Value"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="TypeFilter"
+      type="s:string"
+        />
+        <xs:attribute name="UnaryHides"
+      type="s:string"
+        />
+     </xs:element>
+     
+        <xs:element name="DataSourceRef"
+         minOccurs="1"
+        maxOccurs="unbounded"
+       >
+        <xs:attribute name="Ref"
+      type="s:string"
+        />
+     </xs:element>
+     
+          </xs:choice>
+        <xs:attribute name="Field"
+      type="s:string"
+        />
+        <xs:attribute name="Text"
+      type="s:string"
+        />
+        <xs:attribute name="Id"
+      type="s:positiveInteger"
+         use="required"
+        />
+        <xs:attribute name="DesignerType"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="OperatorTypeFrom"
+      type="s:string"
+        />
+        <xs:attribute name="TypeFrom"
+      type="s:string"
+        />
+        <xs:attribute name="Function"
+      type="s:boolean"
+        />
+        <xs:attribute name="Value"
+      type="s:string"
+        />
+        <xs:attribute name="EventCategory"
+      type="s:string"
+        />
+        <xs:attribute name="DisplayName"
+      type="s:string"
+        />
+          </xs:complexType>
+     </xs:element>
+     
+          </xs:sequence>
+        <xs:attribute name="Sentence"
+      type="s:string"
+        />
+          </xs:complexType>
+              <xs:complexType name="defaultElementType">
+              <xs:sequence>
+        <xs:element name="RuleDesigner"
+         type="ruleDesignerType">
+     </xs:element>
+     
+          </xs:sequence>
+          </xs:complexType>
+              <xs:complexType name="parametersType">
+              <xs:sequence>
+        <xs:element name="Parameter"
+         minOccurs="0"
+        maxOccurs="unbounded"
+       >
+        <xs:attribute name="Name"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="Type"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="Direction"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="Description"
+      type="s:string"
+        />
+        <xs:attribute name="DesignerType"
+      type="s:string"
+        />
+        <xs:attribute name="ShowLookupForDropdown"
+      type="s:boolean"
+        />
+        <xs:attribute name="DisplayName"
+      type="s:string"
+        />
+        <xs:attribute name="InitialValue"
+      type="s:string"
+        />
+        <xs:attribute name="InitialBinding"
+      type="s:string"
+        />
+        <xs:attribute name="EventCategory"
+      type="s:string"
+        />
+     </xs:element>
+     
+          </xs:sequence>
+          </xs:complexType>
+              <xs:complexType name="propertiesType">
+              <xs:sequence>
+        <xs:element name="Property"
+         minOccurs="0"
+        maxOccurs="unbounded"
+       >
+        <xs:attribute name="Name"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="DesignerType"
+      type="s:string"
+        />
+        <xs:attribute name="DisplayName"
+      type="s:string"
+        />
+        <xs:attribute name="Description"
+      type="s:string"
+        />
+        <xs:attribute name="TypeFrom"
+      type="s:string"
+        />
+     </xs:element>
+     
+          </xs:sequence>
+        <xs:attribute name="Name"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="DisplayName"
+      type="s:string"
+         use="required"
+        />
+          </xs:complexType>
+              <xs:complexType name="dataSourcesType">
+              <xs:sequence>
+        <xs:element name="DataSource"
+         type="dataSourceType" minOccurs="0"
+        maxOccurs="unbounded"
+       >
+     </xs:element>
+     
+          </xs:sequence>
+          </xs:complexType>
+              <xs:complexType name="dataSourceType">
+              <xs:sequence>
+        <xs:element name="SchemaSource"
+        >
+              <xs:complexType>
+              <xs:choice>
+        <xs:element name="Fields"
+         minOccurs="0"
+        maxOccurs="1"
+       >
+              <xs:complexType>
+              <xs:sequence>
+        <xs:element name="Field"
+         minOccurs="1"
+        maxOccurs="unbounded"
+       >
+        <xs:attribute name="Name"
+      type="s:string"
+        />
+        <xs:attribute name="DisplayName"
+      type="s:string"
+        />
+        <xs:attribute name="Type"
+      type="s:string"
+        />
+     </xs:element>
+     
+          </xs:sequence>
+          </xs:complexType>
+     </xs:element>
+     
+        <xs:element name="ContentType"
+         minOccurs="0"
+        maxOccurs="1"
+       >
+        <xs:attribute name="IDFrom"
+      type="s:string"
+        />
+     </xs:element>
+     
+        <xs:element name="Dictionary"
+         minOccurs="0"
+        maxOccurs="1"
+       >
+        <xs:attribute name="ValueFrom"
+      type="s:string"
+        />
+     </xs:element>
+     
+        <xs:element name="NestedInitiationFieldNodes"
+         minOccurs="0"
+        maxOccurs="1"
+       >
+     </xs:element>
+     
+          </xs:choice>
+          </xs:complexType>
+     </xs:element>
+     
+        <xs:element name="Evaluation"
+        >
+              <xs:complexType>
+              <xs:choice>
+        <xs:element name="ActivitySource"
+        >
+     </xs:element>
+     
+        <xs:element name="HashtableSource"
+        >
+        <xs:attribute name="HashtableFrom"
+      type="s:string"
+        />
+     </xs:element>
+     
+          </xs:choice>
+          </xs:complexType>
+     </xs:element>
+     
+          </xs:sequence>
+        <xs:attribute name="InternalName"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="Name"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="NameProperty"
+      type="s:string"
+         use="required"
+        />
+          </xs:complexType>
+        <xs:simpleType name="appliesToTypes">
+          <xs:restriction base="s:string">
+          <xs:enumeration value="none"/>
+          <xs:enumeration value="list"/>
+          <xs:enumeration value="doclib"/>
+          <xs:enumeration value="all"/>
+          <xs:enumeration value="displayonly"/>
+          </xs:restriction>
+
+        </xs:simpleType>
+              <xs:complexType name="coercionParametersType">
+              <xs:sequence>
+        <xs:element name="Parameter"
+         minOccurs="0"
+        maxOccurs="unbounded"
+       >
+              <xs:complexType>
+              <xs:all>
+        <xs:element name="ActivityBody"
+         minOccurs="1"
+        maxOccurs="1"
+       >
+              <xs:complexType>
+              <xs:sequence>
+        <xs:element name="ActivityBody"
+        >
+     </xs:element>
+     
+          </xs:sequence>
+          </xs:complexType>
+     </xs:element>
+     
+          </xs:all>
+        <xs:attribute name="Name"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="Type"
+      type="s:string"
+         use="required"
+        />
+        <xs:attribute name="Value"
+      type="s:string"
+        />
+          </xs:complexType>
+     </xs:element>
+     
+          </xs:sequence>
+          </xs:complexType>
+                            </xs:schema>
+                        
+
+
+
+
+
+
+
+
