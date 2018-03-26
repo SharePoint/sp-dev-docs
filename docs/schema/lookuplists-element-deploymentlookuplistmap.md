@@ -150,8 +150,8 @@ therefore has no parent element.
 
 #### Concepts
 
-<span sdata="link">[DeploymentLookupListMap
-Schema](deploymentlookuplistmap-schema.htm)</span>
+[DeploymentLookupListMap
+Schema](deploymentlookuplistmap-schema.md)</span>
 
 
 

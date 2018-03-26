@@ -176,8 +176,8 @@ upon which CustomAction you are trying to hide.
 
 #### Concepts
 
-<span sdata="link">[Default Custom Action Locations and
-IDs](default-custom-action-locations-and-ids.htm)</span>
+[Default Custom Action Locations and
+IDs](default-custom-action-locations-and-ids.md)</span>
 
 
 

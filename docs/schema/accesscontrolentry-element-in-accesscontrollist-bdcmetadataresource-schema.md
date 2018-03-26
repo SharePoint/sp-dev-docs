@@ -14,7 +14,7 @@ ms.assetid: caff772b-9029-5fe0-5d93-fca836c1fcb2
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-For detailed information about this element, see [AccessControlEntry Element in AccessControlList (BDCMetadata Schema)](accesscontrolentry-element-in-accesscontrollist-bdcmetadata-schema.htm).
+For detailed information about this element, see [AccessControlEntry Element in AccessControlList (BDCMetadata Schema)](accesscontrolentry-element-in-accesscontrollist-bdcmetadata-schema.md).
 
 **Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
 

@@ -65,10 +65,10 @@ SharePoint Online | SharePoint Server 2013
 Specifies that SPMetal generates code only for lists that are explicitly
 represented by List elements.
 
-<span sdata="link">[Web
-(SPMetal)](web-spmetal.htm)</span>  
-  <span sdata="link">[ExcludeOtherLists
-(SPMetal)](excludeotherlists-spmetal.htm)</span>  
+[Web
+(SPMetal)](web-spmetal.md)</span>  
+  [ExcludeOtherLists
+(SPMetal)](excludeotherlists-spmetal.md)</span>  
 <span codelanguage="xmlLang"></span>
 <table>
 <colgroup>

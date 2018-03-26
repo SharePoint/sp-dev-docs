@@ -66,9 +66,9 @@ Specifies the fields to display in the alert message. Use <span
 class="code">\<GetVar Name="OldValue\#{Field}" /\></span> or <span
 class="code">\<GetVar Name="NewValue\#{Field}" /\></span> to specify the
 fields. To exclude fields, use the
-[DigestNotificationExcludedFields](digestnotificationexcludedfields-element-alerttemplates.htm)
+[DigestNotificationExcludedFields](digestnotificationexcludedfields-element-alerttemplates.md)
 and
-[ImmediateNotificationExcludedFields](immediatenotificationexcludedfields-element-alerttemplates.htm)
+[ImmediateNotificationExcludedFields](immediatenotificationexcludedfields-element-alerttemplates.md)
 elements.
 
 <span codelanguage="VisualBasic"></span>

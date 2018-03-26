@@ -112,7 +112,7 @@ None
 
 For an example of how this element is used, see <span
 sdata="link">[FilterDefinition Element
-(AlertTemplates)](filterdefinition-element-alerttemplates.htm)</span>.
+(AlertTemplates)](filterdefinition-element-alerttemplates.md)</span>.
 
 
 

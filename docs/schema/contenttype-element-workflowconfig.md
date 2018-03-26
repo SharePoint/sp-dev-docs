@@ -134,9 +134,9 @@ Defines a content type for a workflow task type used in the workflow.
 Each content type defined in the workflow configuration file must be
 added to the task list specified for the workflow.
 
-Use the TaskListId attribute of the <span sdata="link">[Association
+Use the TaskListId attribute of the [Association
 Element
-(WorkflowConfig)](association-element-workflowconfig.htm)</span>
+(WorkflowConfig)](association-element-workflowconfig.md)</span>
 element to specify the task list the workflow should use.
 
 For more information about content type IDs, see [Content Type
@@ -174,8 +174,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Concepts
 
-<span sdata="link">[Workflow configuration schema
-reference](workflow-configuration-schema-reference.htm)</span>
+[Workflow configuration schema
+reference](workflow-configuration-schema-reference.md)</span>
 
 #### Other resources
 

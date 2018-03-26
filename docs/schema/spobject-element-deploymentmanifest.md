@@ -265,8 +265,8 @@ target="T:System.Object">[Object](http://msdn2.microsoft.com/EN-US/library/e5kfa
 
 #### Concepts
 
-<span sdata="link">[DeploymentManifest
-Schema](deploymentmanifest-schema.htm)</span>
+[DeploymentManifest
+Schema](deploymentmanifest-schema.md)</span>
 
 
 

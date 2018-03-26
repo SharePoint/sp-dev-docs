@@ -430,12 +430,12 @@ rendering and generates a SQL query for the fields, sorts, and filters
 that are applied in a particular view. The <span
 class="keyword">View</span> element iterates through the data set
 returned by the query and executes the
-[ViewBody](viewbody-element-list.htm) element for each
+[ViewBody](viewbody-element-list.md) element for each
 row that is returned. Within the **ViewBody**
-element, a [Fields](fields-element-view.htm) element
+element, a [Fields](fields-element-view.md) element
 enumeration can be used to handle each field, or each field can be
 referred to individually by name within a
-[Field](field-element-list.htm) element.
+[Field](field-element-list.md) element.
 
 Each view has an internal name that is typically represented by a GUID.
 The view can be rendered on a page by using the
@@ -481,11 +481,11 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
         </ViewFooter>
 
 Notice that in the previous section the fields enumeration is used
-within a [ViewHeader](viewheader-element-list.htm) section
+within a [ViewHeader](viewheader-element-list.md) section
 to create column headers for the view.
 
 In the following section of the example a
-[ViewFields](viewfields-element-list.htm) section is
+[ViewFields](viewfields-element-list.md) section is
 included within the **View** element in order
 to specify which fields will be enumerated in the view.
 
@@ -518,7 +518,7 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 </table>
 
 In the last section of the example the
-[Query](query-element-list.htm) element is used to
+[Query](query-element-list.md) element is used to
 specify a result set that meets certain criteria, as in the following
 example, which returns a list of all the documents in a library that are
 written by Mary or John.

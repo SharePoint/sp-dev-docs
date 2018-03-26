@@ -163,8 +163,8 @@ Renders the absolute URL of the list's home directory.
 
 #### Other resources
 
-<span sdata="link">[ListTemplate Element
-(Site)](listtemplate-element-site.htm)</span>
+[ListTemplate Element
+(Site)](listtemplate-element-site.md)</span>
 
 
 

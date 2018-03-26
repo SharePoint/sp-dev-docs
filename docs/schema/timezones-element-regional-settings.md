@@ -149,8 +149,8 @@ extensions\\15\\TEMPLATE\\1033\\XML).
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-See <span sdata="link">[RegionalSettings Element (Regional
-Settings)](regionalsettings-element-regional-settings.htm)</span> for an
+See [RegionalSettings Element (Regional
+Settings)](regionalsettings-element-regional-settings.md)</span> for an
 example that uses the **TimeZones** element.
 
 

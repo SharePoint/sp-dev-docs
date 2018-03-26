@@ -98,61 +98,61 @@ class="code">subedit.aspx</span> pages)
 For a listing of the predefined alert templates, see [Predefined Alert
 Templates](http://msdn.microsoft.com/library/6a5296b2-c158-40e4-897f-bbf008b6bbaf(Office.15).aspx).
 
-[AlertTemplates](alerttemplates-element-alerttemplates.htm)
+[AlertTemplates](alerttemplates-element-alerttemplates.md)
 
-  [AlertTemplate](alerttemplate-element-alerttemplates.htm)
+  [AlertTemplate](alerttemplate-element-alerttemplates.md)
 
-    [EventTypes](eventtypes-element-alerttemplates.htm)
+    [EventTypes](eventtypes-element-alerttemplates.md)
 
-    [Format](format-element-alerttemplates.htm)
+    [Format](format-element-alerttemplates.md)
 
-      [Digest](digest-element-alerttemplates.htm)
+      [Digest](digest-element-alerttemplates.md)
 
-      [Header](header-element-alerttemplates.htm)
+      [Header](header-element-alerttemplates.md)
 
-      [HeaderFields](headerfields-element-alerttemplates.htm)
+      [HeaderFields](headerfields-element-alerttemplates.md)
 
-      [Subject](subject-element-alerttemplates.htm)
+      [Subject](subject-element-alerttemplates.md)
 
-      [HeaderFieldsHeader](headerfieldsheader-element-alerttempaltes.htm)
+      [HeaderFieldsHeader](headerfieldsheader-element-alerttempaltes.md)
 
-      [HeaderFieldsFooter](headerfieldsfooter-element-alerttempaltes.htm)
+      [HeaderFieldsFooter](headerfieldsfooter-element-alerttempaltes.md)
 
-      [RowHeader](rowheader-element-alerttemplates.htm)
+      [RowHeader](rowheader-element-alerttemplates.md)
 
-      [RowFields](rowfields-element-alerttemplates.htm)
+      [RowFields](rowfields-element-alerttemplates.md)
 
-      [RowFooter](rowfooter-element-alerttemplates.htm)
+      [RowFooter](rowfooter-element-alerttemplates.md)
 
-      [Footer](footer-element-alerttemplates.htm)
+      [Footer](footer-element-alerttemplates.md)
 
-      [Immedate](immediate-element-alerttemplates.htm)
+      [Immedate](immediate-element-alerttemplates.md)
 
-      [Fields](fields-element-alerttemplates.htm)
+      [Fields](fields-element-alerttemplates.md)
 
-    [Properties](properties-element-alerttemplates.htm)
+    [Properties](properties-element-alerttemplates.md)
 
-      [DigestNotificationExcludedFields](digestnotificationexcludedfields-element-alerttemplates.htm)
+      [DigestNotificationExcludedFields](digestnotificationexcludedfields-element-alerttemplates.md)
 
-      [ImmediateNotificationExcludedFields](immediatenotificationexcludedfields-element-alerttemplates.htm)
+      [ImmediateNotificationExcludedFields](immediatenotificationexcludedfields-element-alerttemplates.md)
 
-      [NotificationHandlerAssembly](notificationhandlerassembly-element-alert-templates.htm)
+      [NotificationHandlerAssembly](notificationhandlerassembly-element-alert-templates.md)
 
-      [NotificationHandlerClassName](notificationhandlerclassname-element-alerttemplates.htm)
+      [NotificationHandlerClassName](notificationhandlerclassname-element-alerttemplates.md)
 
-      [UpdateHandlerAssembly](updatehandlerassembly-element-alerttemplates.htm)
+      [UpdateHandlerAssembly](updatehandlerassembly-element-alerttemplates.md)
 
-      [UpdateHandlerClassName](updatehandlerclassname-element-alerttemplates.htm)
+      [UpdateHandlerClassName](updatehandlerclassname-element-alerttemplates.md)
 
-    [Filters](filters-element-alerttemplates.htm)
+    [Filters](filters-element-alerttemplates.md)
 
-      [FilterDefinition](filterdefinition-element-alerttemplates.htm)
+      [FilterDefinition](filterdefinition-element-alerttemplates.md)
 
-        [FriendlyName](friendlyname-element-alerttemplates.htm)
+        [FriendlyName](friendlyname-element-alerttemplates.md)
 
-        [ShortName](shortname-element-alerttemplates.htm)
+        [ShortName](shortname-element-alerttemplates.md)
 
-        [Query](query-element-alerttemplates.htm)
+        [Query](query-element-alerttemplates.md)
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -194,8 +194,8 @@ class="nolink">IAlertNotifyHandler</span></span>
 
 #### Concepts
 
-<span sdata="link">[Query
-Schema](query-schema.htm)</span>
+[Query
+Schema](query-schema.md)</span>
 
 #### Other resources
 

@@ -62,193 +62,193 @@ SharePoint Online | SharePoint Server 2013
 
 The WorkflowInfo schema contains the following elements:
 
-\<<span sdata="link">[WorkflowInfo Element
-(WorkflowInfo)](workflowinfo-element-workflowinfo.htm)</span>\>
+\<[WorkflowInfo Element
+(WorkflowInfo)](workflowinfo-element-workflowinfo.md)</span>\>
 
-   \<<span sdata="link">[Conditions Element
-(WorkflowInfo)](conditions-element-workflowinfo.htm)</span>\>
+   \<[Conditions Element
+(WorkflowInfo)](conditions-element-workflowinfo.md)</span>\>
 
-      \<<span sdata="link">[Default Element
-(WorkflowInfo)](default-element-workflowinfo.htm)</span>\>
+      \<[Default Element
+(WorkflowInfo)](default-element-workflowinfo.md)</span>\>
 
-         \<<span sdata="link">[RuleDesigner Element
-(WorkflowInfo)](ruledesigner-element-workflowinfo.htm)</span>\>
+         \<[RuleDesigner Element
+(WorkflowInfo)](ruledesigner-element-workflowinfo.md)</span>\>
 
-            \<<span sdata="link">[FieldBind Element
-(WorkflowInfo)](fieldbind-element-workflowinfo.htm)</span>\>
+            \<[FieldBind Element
+(WorkflowInfo)](fieldbind-element-workflowinfo.md)</span>\>
 
-               \<<span sdata="link">[Option Element
-(WorkflowInfo)](option-element-workflowinfo.htm)</span>\>
+               \<[Option Element
+(WorkflowInfo)](option-element-workflowinfo.md)</span>\>
 
-               \<<span sdata="link">[DataSourceRef Element
-(WorkflowInfo)](datasourceref-element-workflowinfo.htm)</span>\>
+               \<[DataSourceRef Element
+(WorkflowInfo)](datasourceref-element-workflowinfo.md)</span>\>
 
-      \<<span sdata="link">[Condition Element
-(WorkflowInfo)](condition-element-workflowinfo.htm)</span>\>
+      \<[Condition Element
+(WorkflowInfo)](condition-element-workflowinfo.md)</span>\>
 
-         \<<span sdata="link">[RuleDesigner Element
-(WorkflowInfo)](ruledesigner-element-workflowinfo.htm)</span>\>
+         \<[RuleDesigner Element
+(WorkflowInfo)](ruledesigner-element-workflowinfo.md)</span>\>
 
-            \<<span sdata="link">[FieldBind Element
-(WorkflowInfo)](fieldbind-element-workflowinfo.htm)</span>\>
+            \<[FieldBind Element
+(WorkflowInfo)](fieldbind-element-workflowinfo.md)</span>\>
 
-               \<<span sdata="link">[Option Element
-(WorkflowInfo)](option-element-workflowinfo.htm)</span>\>
+               \<[Option Element
+(WorkflowInfo)](option-element-workflowinfo.md)</span>\>
 
-               \<<span sdata="link">[DataSourceRef Element
-(WorkflowInfo)](datasourceref-element-workflowinfo.htm)</span>\>
+               \<[DataSourceRef Element
+(WorkflowInfo)](datasourceref-element-workflowinfo.md)</span>\>
 
-         \<<span sdata="link">[Parameters Element
-(WorkflowInfo)](parameters-element-workflowinfo.htm)</span>\>
+         \<[Parameters Element
+(WorkflowInfo)](parameters-element-workflowinfo.md)</span>\>
 
-            \<<span sdata="link">[Parameter Element
-(WorkflowInfo)](parameter-element-workflowinfo.htm)</span>\>
+            \<[Parameter Element
+(WorkflowInfo)](parameter-element-workflowinfo.md)</span>\>
 
-   \<<span sdata="link">[Actions Element
-(WorkflowInfo)](actions-element-workflowinfo.htm)</span>\>
+   \<[Actions Element
+(WorkflowInfo)](actions-element-workflowinfo.md)</span>\>
 
-      \<<span sdata="link">[Default Element
-(WorkflowInfo)](default-element-workflowinfo.htm)</span>\>
+      \<[Default Element
+(WorkflowInfo)](default-element-workflowinfo.md)</span>\>
 
-         \<<span sdata="link">[RuleDesigner Element
-(WorkflowInfo)](ruledesigner-element-workflowinfo.htm)</span>\>
+         \<[RuleDesigner Element
+(WorkflowInfo)](ruledesigner-element-workflowinfo.md)</span>\>
 
-            \<<span sdata="link">[FieldBind Element
-(WorkflowInfo)](fieldbind-element-workflowinfo.htm)</span>\>
+            \<[FieldBind Element
+(WorkflowInfo)](fieldbind-element-workflowinfo.md)</span>\>
 
-               \<<span sdata="link">[Option Element
-(WorkflowInfo)](option-element-workflowinfo.htm)</span>\>
+               \<[Option Element
+(WorkflowInfo)](option-element-workflowinfo.md)</span>\>
 
-               \<<span sdata="link">[DataSourceRef Element
-(WorkflowInfo)](datasourceref-element-workflowinfo.htm)</span>\>
+               \<[DataSourceRef Element
+(WorkflowInfo)](datasourceref-element-workflowinfo.md)</span>\>
 
-      \<<span sdata="link">[Action Element
-(WorkflowInfo)](action-element-workflowinfo.htm)</span>\>
+      \<[Action Element
+(WorkflowInfo)](action-element-workflowinfo.md)</span>\>
 
-         \<<span sdata="link">[Parameters Element
-(WorkflowInfo)](parameters-element-workflowinfo.htm)</span>\>
+         \<[Parameters Element
+(WorkflowInfo)](parameters-element-workflowinfo.md)</span>\>
 
-            \<<span sdata="link">[Parameter Element
-(WorkflowInfo)](parameter-element-workflowinfo.htm)</span>\>
+            \<[Parameter Element
+(WorkflowInfo)](parameter-element-workflowinfo.md)</span>\>
 
-         \<<span sdata="link">[RuleDesigner Element
-(WorkflowInfo)](ruledesigner-element-workflowinfo.htm)</span>\>
+         \<[RuleDesigner Element
+(WorkflowInfo)](ruledesigner-element-workflowinfo.md)</span>\>
 
-            \<<span sdata="link">[FieldBind Element
-(WorkflowInfo)](fieldbind-element-workflowinfo.htm)</span>\>
+            \<[FieldBind Element
+(WorkflowInfo)](fieldbind-element-workflowinfo.md)</span>\>
 
-               \<<span sdata="link">[Option Element
-(WorkflowInfo)](option-element-workflowinfo.htm)</span>\>
+               \<[Option Element
+(WorkflowInfo)](option-element-workflowinfo.md)</span>\>
 
-               \<<span sdata="link">[DataSourceRef Element
-(WorkflowInfo)](datasourceref-element-workflowinfo.htm)</span>\>
+               \<[DataSourceRef Element
+(WorkflowInfo)](datasourceref-element-workflowinfo.md)</span>\>
 
-         \<<span sdata="link">[DataSources Element
-(WorkflowInfo)](datasources-element-workflowinfo.htm)</span>\>
+         \<[DataSources Element
+(WorkflowInfo)](datasources-element-workflowinfo.md)</span>\>
 
-            \<<span sdata="link">[DataSource Element
-(WorkflowInfo)](datasource-element-workflowinfo.htm)</span>\>
+            \<[DataSource Element
+(WorkflowInfo)](datasource-element-workflowinfo.md)</span>\>
 
-               \<<span sdata="link">[SchemaSource Element
-(WorkflowInfo)](schemasource-element-workflowinfo.htm)</span>\>
+               \<[SchemaSource Element
+(WorkflowInfo)](schemasource-element-workflowinfo.md)</span>\>
 
-                  \<<span sdata="link">[Fields Element
-(WorkflowInfo)](fields-element-workflowinfo.htm)</span>\>
+                  \<[Fields Element
+(WorkflowInfo)](fields-element-workflowinfo.md)</span>\>
 
-                     \<<span sdata="link">[Field Element
-(WorkflowInfo)](field-element-workflowinfo.htm)</span>\>
+                     \<[Field Element
+(WorkflowInfo)](field-element-workflowinfo.md)</span>\>
 
-                  \<<span sdata="link">[ContentType Element
-(WorkflowInfo)](contenttype-element-workflowinfo.htm)</span>\>
+                  \<[ContentType Element
+(WorkflowInfo)](contenttype-element-workflowinfo.md)</span>\>
 
-                  \<<span sdata="link">[Dictionary Element
-(WorkflowInfo)](dictionary-element-workflowinfo.htm)</span>\>
+                  \<[Dictionary Element
+(WorkflowInfo)](dictionary-element-workflowinfo.md)</span>\>
 
-                  \<<span sdata="link">[NestedInitiationFieldNodes
+                  \<[NestedInitiationFieldNodes
 Element
-(WorkflowInfo)](nestedinitiationfieldnodes-element-workflowinfo.htm)</span>\>
+(WorkflowInfo)](nestedinitiationfieldnodes-element-workflowinfo.md)</span>\>
 
-               \<<span sdata="link">[Evaluation Element
-(WorkflowInfo)](evaluation-element-workflowinfo.htm)</span>\>
+               \<[Evaluation Element
+(WorkflowInfo)](evaluation-element-workflowinfo.md)</span>\>
 
-                  \<<span sdata="link">[ActivitySource Element
-(WorkflowInfo)](activitysource-element-workflowinfo.htm)</span>\>
+                  \<[ActivitySource Element
+(WorkflowInfo)](activitysource-element-workflowinfo.md)</span>\>
 
-                  \<<span sdata="link">[HashtableSource Element
-(WorkflowInfo)](hashtablesource-element-workflowinfo.htm)</span>\>
+                  \<[HashtableSource Element
+(WorkflowInfo)](hashtablesource-element-workflowinfo.md)</span>\>
 
-         \<<span sdata="link">[Modifications Element
-(WorkflowInfo)](modifications-element-workflowinfo.htm)</span>\>
+         \<[Modifications Element
+(WorkflowInfo)](modifications-element-workflowinfo.md)</span>\>
 
-            \<<span sdata="link">[Modification Element
-(WorkflowInfo)](modification-element-workflowinfo.htm)</span>\>
+            \<[Modification Element
+(WorkflowInfo)](modification-element-workflowinfo.md)</span>\>
 
-         \<<span sdata="link">[ActionVariables Element
-(WorkflowInfo)](actionvariables-element-workflowinfo.htm)</span>\>
+         \<[ActionVariables Element
+(WorkflowInfo)](actionvariables-element-workflowinfo.md)</span>\>
 
-         \<<span sdata="link">[ActionBody Element
-(WorkflowInfo)](actionbody-element-workflowinfo.htm)</span>\>
+         \<[ActionBody Element
+(WorkflowInfo)](actionbody-element-workflowinfo.md)</span>\>
 
-         \<<span sdata="link">[ActionConditions Element
-(WorkflowInfo)](actionconditions-element-workflowinfo.htm)</span>\>
+         \<[ActionConditions Element
+(WorkflowInfo)](actionconditions-element-workflowinfo.md)</span>\>
 
-   \<<span sdata="link">[CompositeSteps Element
-(WorkflowInfo)](compositesteps-element-workflowinfo.htm)</span>\>
+   \<[CompositeSteps Element
+(WorkflowInfo)](compositesteps-element-workflowinfo.md)</span>\>
 
-      \<<span sdata="link">[CompositeStep Element
-(WorkflowInfo)](compositestep-element-workflowinfo.htm)</span>\>
+      \<[CompositeStep Element
+(WorkflowInfo)](compositestep-element-workflowinfo.md)</span>\>
 
-         \<<span sdata="link">[DataSources Element
-(WorkflowInfo)](datasources-element-workflowinfo.htm)</span>\>
+         \<[DataSources Element
+(WorkflowInfo)](datasources-element-workflowinfo.md)</span>\>
 
-            \<<span sdata="link">[DataSource Element
-(WorkflowInfo)](datasource-element-workflowinfo.htm)</span>\>
+            \<[DataSource Element
+(WorkflowInfo)](datasource-element-workflowinfo.md)</span>\>
 
-               \<<span sdata="link">[SchemaSource Element
-(WorkflowInfo)](schemasource-element-workflowinfo.htm)</span>\>
+               \<[SchemaSource Element
+(WorkflowInfo)](schemasource-element-workflowinfo.md)</span>\>
 
-                  \<<span sdata="link">[Fields Element
-(WorkflowInfo)](fields-element-workflowinfo.htm)</span>\>
+                  \<[Fields Element
+(WorkflowInfo)](fields-element-workflowinfo.md)</span>\>
 
-                     \<<span sdata="link">[Field Element
-(WorkflowInfo)](field-element-workflowinfo.htm)</span>\>
+                     \<[Field Element
+(WorkflowInfo)](field-element-workflowinfo.md)</span>\>
 
-                  \<<span sdata="link">[ContentType Element
-(WorkflowInfo)](contenttype-element-workflowinfo.htm)</span>\>
+                  \<[ContentType Element
+(WorkflowInfo)](contenttype-element-workflowinfo.md)</span>\>
 
-                  \<<span sdata="link">[Dictionary Element
-(WorkflowInfo)](dictionary-element-workflowinfo.htm)</span>\>
+                  \<[Dictionary Element
+(WorkflowInfo)](dictionary-element-workflowinfo.md)</span>\>
 
-                  \<<span sdata="link">[NestedInitiationFieldNodes
+                  \<[NestedInitiationFieldNodes
 Element
-(WorkflowInfo)](nestedinitiationfieldnodes-element-workflowinfo.htm)</span>\>
+(WorkflowInfo)](nestedinitiationfieldnodes-element-workflowinfo.md)</span>\>
 
-               \<<span sdata="link">[Evaluation Element
-(WorkflowInfo)](evaluation-element-workflowinfo.htm)</span>\>
+               \<[Evaluation Element
+(WorkflowInfo)](evaluation-element-workflowinfo.md)</span>\>
 
-                  \<<span sdata="link">[ActivitySource Element
-(WorkflowInfo)](activitysource-element-workflowinfo.htm)</span>\>
+                  \<[ActivitySource Element
+(WorkflowInfo)](activitysource-element-workflowinfo.md)</span>\>
 
-                  \<<span sdata="link">[HashtableSource Element
-(WorkflowInfo)](hashtablesource-element-workflowinfo.htm)</span>\>
+                  \<[HashtableSource Element
+(WorkflowInfo)](hashtablesource-element-workflowinfo.md)</span>\>
 
-   \<<span sdata="link">[VariableTypes Element
-(WorkflowInfo)](variabletypes-element-workflowinfo.htm)</span>\>
+   \<[VariableTypes Element
+(WorkflowInfo)](variabletypes-element-workflowinfo.md)</span>\>
 
-      \<<span sdata="link">[VariableType Element
-(WorkflowInfo)](variabletype-element-workflowinfo.htm)</span>\>
+      \<[VariableType Element
+(WorkflowInfo)](variabletype-element-workflowinfo.md)</span>\>
 
-   \<<span sdata="link">[AssemblyRedirects Element
-(WorkflowInfo)](assemblyredirects-element-workflowinfo.htm)</span>\>
+   \<[AssemblyRedirects Element
+(WorkflowInfo)](assemblyredirects-element-workflowinfo.md)</span>\>
 
-      \<<span sdata="link">[AssemblyRedirect Element
-(WorkflowInfo)](assemblyredirect-element-workflowinfo.htm)</span>\>
+      \<[AssemblyRedirect Element
+(WorkflowInfo)](assemblyredirect-element-workflowinfo.md)</span>\>
 
-   \<<span sdata="link">[Coercions Element
-(WorkflowInfo)](coercions-element-workflowinfo.htm)</span>\>
+   \<[Coercions Element
+(WorkflowInfo)](coercions-element-workflowinfo.md)</span>\>
 
-      \<<span sdata="link">[Coercion Element
-(WorkflowInfo)](coercion-element-workflowinfo.htm)</span>\>
+      \<[Coercion Element
+(WorkflowInfo)](coercion-element-workflowinfo.md)</span>\>
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

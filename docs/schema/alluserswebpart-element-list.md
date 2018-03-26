@@ -154,7 +154,7 @@ Contains a Web Part in a form definition for list.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 For an example of how to use this element, see
-[Form](form-element-list.htm).
+[Form](form-element-list.md).
 
 
 

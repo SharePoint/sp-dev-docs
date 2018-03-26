@@ -59,8 +59,8 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Specifies localized display names and properties, in any combination,
-for an <span sdata="link">[Identifier Element in Identifiers
-(BDCMetadata Schema)](identifier-element-in-identifiers-bdcmetadata-schema.htm)</span>.
+for an [Identifier Element in Identifiers
+(BDCMetadata Schema)](identifier-element-in-identifiers-bdcmetadata-schema.md)</span>.
 
 **Namespace:**
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources

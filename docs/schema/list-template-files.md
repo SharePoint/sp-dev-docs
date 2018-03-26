@@ -58,7 +58,7 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-A [ListTemplate](listtemplate-element-list-template.htm) element
+A [ListTemplate](listtemplate-element-list-template.md) element
 points to a list definition contained in the
 [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56(Office.15).aspx)
 file of a particular list type. You can use a list template to create a
@@ -85,9 +85,9 @@ directory for a <span class="code">List\_Template\\Schema.xml</span>
 file, but you can specify a <span class="parameter"
 sdata="paramReference">Path</span> parameter for another directory.
 
-[Elements](elements-element-list-template.htm)
+[Elements](elements-element-list-template.md)
 
-  [ListTemplate](listtemplate-element-list-template.htm)
+  [ListTemplate](listtemplate-element-list-template.md)
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

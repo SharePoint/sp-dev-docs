@@ -130,15 +130,15 @@ element declarations.
 
 For an example of how this element is used, see <span
 sdata="link">[Field
-Definitions](field-definitions.htm)</span>.
+Definitions](field-definitions.md)</span>.
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #### Concepts
 
-<span sdata="link">[Field
-Definitions](field-definitions.htm)</span>
+[Field
+Definitions](field-definitions.md)</span>
 
 #### Other resources
 

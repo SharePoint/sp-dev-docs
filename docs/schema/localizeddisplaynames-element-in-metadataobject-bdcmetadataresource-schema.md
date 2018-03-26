@@ -58,8 +58,8 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-See <span sdata="link">[LocalizedDisplayNames Element in MetadataObject
-(BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.htm)</span>
+See [LocalizedDisplayNames Element in MetadataObject
+(BDCMetadata Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md)</span>
 for more details.
 
 Namespace:

@@ -66,7 +66,7 @@ Specifies a query for the alert template filter. Define the query
 element inside the filter by using Collaborative Application Markup
 Language (CAML). For more information about CAML query schema, see <span
 sdata="link">[Query
-Schema](query-schema.htm)</span>. The <span
+Schema](query-schema.md)</span>. The <span
 class="keyword">Query</span> element in the Alerts schema contains no
 **Where** element.
 
@@ -130,7 +130,7 @@ None
 
 For an example of how this element is used, see <span
 sdata="link">[FilterDefinition Element
-(AlertTemplates)](filterdefinition-element-alerttemplates.htm)</span>.
+(AlertTemplates)](filterdefinition-element-alerttemplates.md)</span>.
 
 
 

@@ -144,13 +144,13 @@ USAGE
 
 #### Concepts
 
-<span sdata="link">[DeploymentManifest
-Schema](deploymentmanifest-schema.htm)</span>
+[DeploymentManifest
+Schema](deploymentmanifest-schema.md)</span>
 
 #### Other resources
 
-<span sdata="link">[DeletedField Element
-(DeploymentManifest)](deletedfield-element-deploymentmanifest.htm)</span>
+[DeletedField Element
+(DeploymentManifest)](deletedfield-element-deploymentmanifest.md)</span>
 
 
 

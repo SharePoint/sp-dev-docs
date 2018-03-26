@@ -197,7 +197,7 @@ Specifies a property of a field.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The following example uses a
-[Switch](switch-element-view.htm) statement to evaluate
+[Switch](switch-element-view.md) statement to evaluate
 whether the body of a field has rich text formatting. If rich text is
 applied, then hyperlinks are automatically generated without encoding;
 otherwise, hyperlinks are encoded.

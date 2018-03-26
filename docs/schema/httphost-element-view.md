@@ -180,13 +180,13 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Reference
 
-<span sdata="link">[HTMLBase
-Element](htmlbase-element.htm)</span>
+[HTMLBase
+Element](htmlbase-element.md)</span>
 
 #### Other resources
 
-<span sdata="link">[HttpVDir Element
-(View)](httpvdir-element-view.htm)</span>
+[HttpVDir Element
+(View)](httpvdir-element-view.md)</span>
 
 
 

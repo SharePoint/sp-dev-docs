@@ -63,54 +63,54 @@ defined in an
 [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx)
 file to specify files with which to provision SharePoint sites.
 
-Zero or more [File](file-element-module.htm) elements
+Zero or more [File](file-element-module.md) elements
 are allowed as a child of the
-[Module](module-element-module.htm) element. Use the
-[AllUsersWebPart](alluserswebpart-element-module.htm) element to
+[Module](module-element-module.md) element. Use the
+[AllUsersWebPart](alluserswebpart-element-module.md) element to
 specify a Web Part instance inside a given page except for a list view
-Web Part. The [View](view-element-module.htm) element
+Web Part. The [View](view-element-module.md) element
 specifies list view Web Parts to use on site pages. The
-[NavBarPage](navbarpage-element-module.htm) element declares
+[NavBarPage](navbarpage-element-module.md) element declares
 that the page containing this element should participate in the
 navigation bar structure. The
-[Property](property-element-module.htm) element allows you
+[Property](property-element-module.md) element allows you
 to specify custom properties for a Feature.
 
 An element manifest uses the following schema:
 
-[Elements](elements-element-module.htm)
+[Elements](elements-element-module.md)
 
-  [Module](module-element-module.htm)
+  [Module](module-element-module.md)
 
-    [File](file-element-module.htm)
+    [File](file-element-module.md)
 
-      [View](view-element-module.htm)
+      [View](view-element-module.md)
 
-      [AllUsersWebPart](alluserswebpart-element-module.htm)
+      [AllUsersWebPart](alluserswebpart-element-module.md)
 
-      [NavBarPage](navbarpage-element-module.htm)
+      [NavBarPage](navbarpage-element-module.md)
 
-      [Property](property-element-module.htm)
+      [Property](property-element-module.md)
 
 The following schema is used within an
 [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx)
 file:
 
-[Configuration](configuration-element-site.htm)
+[Configuration](configuration-element-site.md)
 
-  [Modules](modules-element-site.htm)
+  [Modules](modules-element-site.md)
 
-    [Module](module-element-site.htm)
+    [Module](module-element-site.md)
 
-      [File](file-element.htm)
+      [File](file-element.md)
 
-        [View](view-element-module.htm)
+        [View](view-element-module.md)
 
-        [AllUsersWebPart](alluserswebpart-element-site.htm)
+        [AllUsersWebPart](alluserswebpart-element-site.md)
 
-        [NavBarPage](navbarpage-element-sitemodule.htm)
+        [NavBarPage](navbarpage-element-sitemodule.md)
 
-        [Property](property-element-sitemodule.htm)
+        [Property](property-element-sitemodule.md)
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -58,8 +58,8 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-See <span sdata="link">[AssociationGroups Element in Entity (BDCMetadata
-Schema)](associationgroups-element-in-entity-bdcmetadata-schema.htm)</span> for more
+See [AssociationGroups Element in Entity (BDCMetadata
+Schema)](associationgroups-element-in-entity-bdcmetadata-schema.md)</span> for more
 details.
 
 Namespace:

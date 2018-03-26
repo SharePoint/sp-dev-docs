@@ -70,13 +70,13 @@ document directly.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[MobileDocViewers](mobiledocviewers-mobile-document-viewer.htm)
+[MobileDocViewers](mobiledocviewers-mobile-document-viewer.md)
 
-   [MobileDocViewer](mobiledocviewer-mobile-document-viewer.htm)
+   [MobileDocViewer](mobiledocviewer-mobile-document-viewer.md)
 
-     [BrowserCondition](browsercondition-mobile-document-viewer.htm)
+     [BrowserCondition](browsercondition-mobile-document-viewer.md)
 
-     [Override](override-mobile-document-viewer.htm)
+     [Override](override-mobile-document-viewer.md)
 
 
 

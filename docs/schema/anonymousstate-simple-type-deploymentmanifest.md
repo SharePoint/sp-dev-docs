@@ -60,9 +60,9 @@ SharePoint Online | SharePoint Server 2013
 
 Specifies a value representing the current state of the <span
 class="keyword">AnonymousState</span> attribute on the <span
-class="keyword">SPWeb</span> object type - <span sdata="link">[Web
+class="keyword">SPWeb</span> object type - [Web
 Element
-(DeploymentManifest)](web-element-deploymentmanifest.htm)</span>.
+(DeploymentManifest)](web-element-deploymentmanifest.md)</span>.
 
 <span codelanguage="other"></span>
 <table>
@@ -123,8 +123,8 @@ class="nolink">SPWeb.WebAnonymousState</span></span>
 
 #### Concepts
 
-<span sdata="link">[DeploymentManifest
-Schema](deploymentmanifest-schema.htm)</span>
+[DeploymentManifest
+Schema](deploymentmanifest-schema.md)</span>
 
 
 

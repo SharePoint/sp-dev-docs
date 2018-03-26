@@ -72,8 +72,8 @@ element or attribute is not present, see [SPMetal Default Code
 Generation
 Rules](http://msdn.microsoft.com/library/873ac65e-425e-40f3-9ef6-753d3cda1436(Office.15).aspx).
 
-<span sdata="link">[Web
-(SPMetal)](web-spmetal.htm)</span>  
+[Web
+(SPMetal)](web-spmetal.md)</span>  
 <span codelanguage="xmlLang"></span>
 <table>
 <colgroup>

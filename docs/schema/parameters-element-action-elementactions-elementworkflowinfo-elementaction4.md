@@ -56,7 +56,7 @@ JavaScript
 Container for **Parameter** elements that
 includes descriptions of the parameters in <span
 class="keyword">Action</span> method signatures. This element is of type
-[parametersType](parameterstype-complextype-action4.htm).
+[parametersType](parameterstype-complextype-action4.md).
 
 **Last modified:** March 09, 2015
 

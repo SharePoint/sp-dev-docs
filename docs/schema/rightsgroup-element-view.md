@@ -63,8 +63,8 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Specifies a permission that the current user must have to permit the
-contents of the [Then](then-element-view.htm) clause
-within an [IfHasRight](ifhasrights-element-view.htm) element
+contents of the [Then](then-element-view.md) clause
+within an [IfHasRight](ifhasrights-element-view.md) element
 to be displayed.
 
 <span codelanguage="other"></span>

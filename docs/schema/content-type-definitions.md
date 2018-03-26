@@ -77,32 +77,32 @@ Shared\\web server extensions\\15\\TEMPLATE\\XML.
 The following list maps the relationships between elements in the schema
 definition.
 
-\<<span sdata="link">[Elements Element
-(ContentType)](elements-element-contenttype.htm)</span>\>
+\<[Elements Element
+(ContentType)](elements-element-contenttype.md)</span>\>
 
-   \<<span sdata="link">[ContentType Element
-(ContentType)](contenttype-element-contenttype.htm)</span>\>
+   \<[ContentType Element
+(ContentType)](contenttype-element-contenttype.md)</span>\>
 
-      \<<span sdata="link">[Folder Element
-(ContentType)](folder-element-contenttype.htm)</span>\>
+      \<[Folder Element
+(ContentType)](folder-element-contenttype.md)</span>\>
 
-      \<<span sdata="link">[FieldRefs Element
-(ContentType)](fieldrefs-element-contenttype.htm)</span>\>
+      \<[FieldRefs Element
+(ContentType)](fieldrefs-element-contenttype.md)</span>\>
 
-         \<<span sdata="link">[FieldRef Element
-(ContentType)](fieldref-element-contenttype.htm)</span>\>
+         \<[FieldRef Element
+(ContentType)](fieldref-element-contenttype.md)</span>\>
 
-         \<<span sdata="link">[RemoveFieldRef Element
-(ContentType)](removefieldref-element-contenttype.htm)</span>\>
+         \<[RemoveFieldRef Element
+(ContentType)](removefieldref-element-contenttype.md)</span>\>
 
-      \<<span sdata="link">[XmlDocuments Element
-(ContentType)](xmldocuments-element-contenttype.htm)</span>\>
+      \<[XmlDocuments Element
+(ContentType)](xmldocuments-element-contenttype.md)</span>\>
 
-         \<<span sdata="link">[XmlDocument Element
-(ContentType)](xmldocument-element-contenttype.htm)</span>\>
+         \<[XmlDocument Element
+(ContentType)](xmldocument-element-contenttype.md)</span>\>
 
-      \<<span sdata="link">[DocumentTemplate Element
-(ContentType)](documenttemplate-element-contenttype.htm)</span>\>
+      \<[DocumentTemplate Element
+(ContentType)](documenttemplate-element-contenttype.md)</span>\>
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -387,8 +387,8 @@ lists on the <span class="ui">Create</span> page.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-For an example of how this element is used, see <span sdata="link">[List
-Template Files](list-template-files.htm)</span>.
+For an example of how this element is used, see [List
+Template Files](list-template-files.md)</span>.
 
 
 

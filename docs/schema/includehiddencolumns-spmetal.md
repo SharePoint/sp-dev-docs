@@ -64,12 +64,12 @@ SharePoint Online | SharePoint Server 2013
 
 Specifies that hidden columns are included in code generation.
 
-<span sdata="link">[Web
-(SPMetal)](web-spmetal.htm)</span>  
-  <span sdata="link">[ContentType
-(SPMetal)](contenttype-spmetal.htm)</span>  
-    <span sdata="link">[IncludeHiddenColumns
-(SPMetal)](includehiddencolumns-spmetal.htm)</span>  
+[Web
+(SPMetal)](web-spmetal.md)</span>  
+  [ContentType
+(SPMetal)](contenttype-spmetal.md)</span>  
+    [IncludeHiddenColumns
+(SPMetal)](includehiddencolumns-spmetal.md)</span>  
 <span codelanguage="xmlLang"></span>
 <table>
 <colgroup>

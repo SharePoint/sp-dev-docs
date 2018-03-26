@@ -62,7 +62,7 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-Contains [Join elements](join-element-view.htm)
+Contains [Join elements](join-element-view.md)
 needed for a query.
 
 <span codelanguage="other"></span>
@@ -165,9 +165,9 @@ The following is an example of a **Joins**
 element with two left outer joins. CustomerName is a lookup field on an
 Orders list. It looks up to the ID field of a Customers list. The
 Customer list, in turn, has a CityName field that is a lookup field to a
-Cities list. The first [Join](join-element-view.htm)
+Cities list. The first [Join](join-element-view.md)
 element assigns 'customers' as an alias for the Customers list. The
-[Eq](eq-element-query.htm) element child defines the
+[Eq](eq-element-query.md) element child defines the
 join using the same source and target fields that constitute the lookup
 relation. The second Join element assigns 'customerCities' as an alias
 to the Cities list. It defines the join in parallel to the existing

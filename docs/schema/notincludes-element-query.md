@@ -63,9 +63,9 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 If the specified field is a Lookup field that allows multiple values,
-specifies that the [Value](values-element-query.htm)
+specifies that the [Value](values-element-query.md)
 element is excluded from the list item for the field that is specified
-by the [FieldRef](fieldref-element-query.htm) element.
+by the [FieldRef](fieldref-element-query.md) element.
 
 <span codelanguage="other"></span>
 <table>

@@ -151,8 +151,8 @@ When implementing a user control, use the <span
 class="keyword">ControlSrc</span> attribute. When implementing a server
 control, use both the **ControlAssembly** and
 **ControlClass** attributes. For an example of
-how this element is used, see <span sdata="link">[Delegate
-Controls](delegate-controls.htm)</span>.
+how this element is used, see [Delegate
+Controls](delegate-controls.md)</span>.
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

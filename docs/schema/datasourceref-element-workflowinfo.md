@@ -61,9 +61,9 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Specifies the possible values from
-[DataSource](datasource-element-workflowinfo.htm) elements
-associated with the [Action](action-element-workflowinfo.htm)
-or [Condition](condition-element-workflowinfo.htm) element that is
+[DataSource](datasource-element-workflowinfo.md) elements
+associated with the [Action](action-element-workflowinfo.md)
+or [Condition](condition-element-workflowinfo.md) element that is
 the parent of the **RuleDesigner**. This
 enables dynamic population of the list of possible values by nesting an
 **Action** or <span
@@ -135,13 +135,13 @@ None
 
 #### Tasks
 
-[.ACTIONS File Example](actions-file-example-workflowinfo.htm)
+[.ACTIONS File Example](actions-file-example-workflowinfo.md)
 
 #### Concepts
 
-[Default Workflow Actions](default-workflow-actions-workflowinfo.htm)
+[Default Workflow Actions](default-workflow-actions-workflowinfo.md)
 
-[Default Workflow Conditions](default-workflow-conditions-workflowinfo.htm)
+[Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
 
 #### Other resources
 

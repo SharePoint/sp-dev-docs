@@ -64,10 +64,10 @@ SharePoint Online | SharePoint Server 2013
 
 Specifies that SPMetal generates classes for hidden content types.
 
-<span sdata="link">[Web
-(SPMetal)](web-spmetal.htm)</span>  
-  <span sdata="link">[IncludeHiddenContentTypes
-(SPMetal)](includehiddencontenttypes-spmetal.htm)</span>  
+[Web
+(SPMetal)](web-spmetal.md)</span>  
+  [IncludeHiddenContentTypes
+(SPMetal)](includehiddencontenttypes-spmetal.md)</span>  
 <span codelanguage="VisualBasic"></span>
 <table>
 <colgroup>

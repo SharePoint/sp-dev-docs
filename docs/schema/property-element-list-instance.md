@@ -142,9 +142,9 @@ None
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-See the Remarks section of the topic <span sdata="link">[DataSource
+See the Remarks section of the topic [DataSource
 Element (List
-Instance)](datasource-element-list-instance.htm)</span> for
+Instance)](datasource-element-list-instance.md)</span> for
 information about the use of this element.
 
 

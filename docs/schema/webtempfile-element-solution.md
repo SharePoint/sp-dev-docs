@@ -134,7 +134,7 @@ manifest.
 
 For an example of how this element is used, see <span
 sdata="link">[Solution
-schema](solution-schema.htm)</span>.
+schema](solution-schema.md)</span>.
 
 
 

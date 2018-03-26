@@ -62,63 +62,63 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-[List](list-element-list.htm)
+[List](list-element-list.md)
 
-[ListFormBody](listformbody-element-list.htm)
+[ListFormBody](listformbody-element-list.md)
 
-[ListFormButtons](listformbuttons-element-list.htm)
+[ListFormButtons](listformbuttons-element-list.md)
 
-[ListFormClosing](listformclosing-element-list.htm)
+[ListFormClosing](listformclosing-element-list.md)
 
-[ListFormOpening](listformopening-element-list.htm)
+[ListFormOpening](listformopening-element-list.md)
 
-[MAPPING](mapping-element-list.htm)
+[MAPPING](mapping-element-list.md)
 
-[MAPPINGS](mappings-element-list.htm)
+[MAPPINGS](mappings-element-list.md)
 
-[MetaData](metadata-element-list.htm)
+[MetaData](metadata-element-list.md)
 
-[Method](method-element-list.htm)
+[Method](method-element-list.md)
 
-[PagedClientCallbackRowset](pagedclientcallbackrowset-element-list.htm)
+[PagedClientCallbackRowset](pagedclientcallbackrowset-element-list.md)
 
-[PagedRecurrenceRowset](pagedrecurrencerowset-element-list.htm)
+[PagedRecurrenceRowset](pagedrecurrencerowset-element-list.md)
 
-[PagedRowset](pagedrowset-element-list.htm)
+[PagedRowset](pagedrowset-element-list.md)
 
-[ParameterBinding](parameterbinding-element-list.htm)
+[ParameterBinding](parameterbinding-element-list.md)
 
-[ParameterBindings](parameterbindings-element-list.htm)
+[ParameterBindings](parameterbindings-element-list.md)
 
-[Property](property-element-list.htm)
+[Property](property-element-list.md)
 
-[Toolbar](toolbar-element-list.htm)
+[Toolbar](toolbar-element-list.md)
 
-[Validation](validation-element-list.htm)
+[Validation](validation-element-list.md)
 
-[View](view-element-list.htm)
+[View](view-element-list.md)
 
-[ViewBidiHeader](viewbidiheader-element-list.htm)
+[ViewBidiHeader](viewbidiheader-element-list.md)
 
-[ViewBody](viewbody-element-list.htm)
+[ViewBody](viewbody-element-list.md)
 
-[ViewData](viewdata-element-list.htm)
+[ViewData](viewdata-element-list.md)
 
-[ViewEmpty](viewempty-element-list.htm)
+[ViewEmpty](viewempty-element-list.md)
 
-[ViewFields](viewfields-element-list.htm)
+[ViewFields](viewfields-element-list.md)
 
-[ViewFooter](viewfooter-element-list.htm)
+[ViewFooter](viewfooter-element-list.md)
 
-[ViewHeader](viewheader-element-list.htm)
+[ViewHeader](viewheader-element-list.md)
 
-[Views](views-element-list.htm)
+[Views](views-element-list.md)
 
-[ViewStyle](viewstyle-element-list.htm)
+[ViewStyle](viewstyle-element-list.md)
 
-[WebParts](webparts-element-list.htm)
+[WebParts](webparts-element-list.md)
 
-[XslLink](xsllink-element-list.htm)
+[XslLink](xsllink-element-list.md)
 
 
 

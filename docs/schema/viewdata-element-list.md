@@ -152,11 +152,11 @@ Specifies data for use within a view.
 [List
 Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17(Office.15).aspx)
 
-<span sdata="link">[ViewBody Element
-(List)](viewbody-element-list.htm)</span>
+[ViewBody Element
+(List)](viewbody-element-list.md)</span>
 
-<span sdata="link">[ViewFields Element
-(List)](viewfields-element-list.htm)</span>
+[ViewFields Element
+(List)](viewfields-element-list.md)</span>
 
 
 

@@ -168,11 +168,11 @@ target="T:Microsoft.SharePoint.SPList"><span
 class="nolink">Microsoft.SharePoint.SPList</span></span> type.
 
 For attributes of the **SPDocumentLibrary**
-type, see <span sdata="link">[DocumentLibrary Element
-(DeploymentManifest)](documentlibrary-element-deploymentmanifest.htm)</span>.
+type, see [DocumentLibrary Element
+(DeploymentManifest)](documentlibrary-element-deploymentmanifest.md)</span>.
 For attributes of the **SPList** type, see
-<span sdata="link">[List Element
-(DeploymentManifest)](list-element-deploymentmanifest.htm)</span>.
+[List Element
+(DeploymentManifest)](list-element-deploymentmanifest.md)</span>.
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -191,8 +191,8 @@ class="nolink">SPList</span></span>
 
 #### Concepts
 
-<span sdata="link">[DeploymentManifest
-Schema](deploymentmanifest-schema.htm)</span>
+[DeploymentManifest
+Schema](deploymentmanifest-schema.md)</span>
 
 
 

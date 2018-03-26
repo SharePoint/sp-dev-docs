@@ -58,8 +58,8 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-See <span sdata="link">[Identifiers Element in Entity (BDCMetadata
-Schema)](identifiers-element-in-entity-bdcmetadata-schema.htm)</span> for more
+See [Identifiers Element in Entity (BDCMetadata
+Schema)](identifiers-element-in-entity-bdcmetadata-schema.md)</span> for more
 details.
 
 Namespace:

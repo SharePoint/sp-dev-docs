@@ -58,53 +58,53 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-[IfOld](ifold-element.htm)
+[IfOld](ifold-element.md)
 
-[ImagesPath](imagespath-element.htm)
+[ImagesPath](imagespath-element.md)
 
-[InForm](inform-element.htm)
+[InForm](inform-element.md)
 
-[IsPrivilegedUser](isprivilegeduser-element.htm)
+[IsPrivilegedUser](isprivilegeduser-element.md)
 
-[ListForm](listform-element.htm)
+[ListForm](listform-element.md)
 
-[LocaleInfo](localeinfo-element.htm)
+[LocaleInfo](localeinfo-element.md)
 
-[Mapping](mapping-element.htm)
+[Mapping](mapping-element.md)
 
-[MapToText](maptotext-element.htm)
+[MapToText](maptotext-element.md)
 
-[Now](now-element-query.htm)
+[Now](now-element-query.md)
 
-[OkToVote](oktovote-element.htm)
+[OkToVote](oktovote-element.md)
 
-[PresenceEnabled](presenceenabled-element.htm)
+[PresenceEnabled](presenceenabled-element.md)
 
-[QuotedXML](quotedxml-element.htm)
+[QuotedXML](quotedxml-element.md)
 
-[ReadSecurity](readsecurity-element.htm)
+[ReadSecurity](readsecurity-element.md)
 
-[Recurrence](recurrence-element.htm)
+[Recurrence](recurrence-element.md)
 
-[SchemaSecurity](schemasecurity-element.htm)
+[SchemaSecurity](schemasecurity-element.md)
 
-[Script](script-element.htm)
+[Script](script-element.md)
 
-[Security](security-element.htm)
+[Security](security-element.md)
 
-[Site](site-element.htm)
+[Site](site-element.md)
 
-[Today](today-element-query.htm)
+[Today](today-element-query.md)
 
-[TodayISO](todayiso-element.htm)
+[TodayISO](todayiso-element.md)
 
-[UserEmail](useremail-element.htm)
+[UserEmail](useremail-element.md)
 
-[ViewStyles](viewstyles-element.htm)
+[ViewStyles](viewstyles-element.md)
 
-[Week](week-element.htm)
+[Week](week-element.md)
 
-[WriteSecurity](writesecurity-element.htm)
+[WriteSecurity](writesecurity-element.md)
 
 
 

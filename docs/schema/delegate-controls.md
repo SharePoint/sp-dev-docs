@@ -62,11 +62,11 @@ Delegate controls provide a means to specify candidate controls for a
 particular functionality and to choose a functionality provider for
 those controls.
 
-[Elements](elements-element-delegate-control.htm)
+[Elements](elements-element-delegate-control.md)
 
-  [Control](control-element-delegate-control.htm)
+  [Control](control-element-delegate-control.md)
 
-    [Property](property-element-delegate-control.htm)
+    [Property](property-element-delegate-control.md)
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -67,25 +67,25 @@ SharePoint Online | SharePoint Server 2013
 The following elements and attributes are implemented within a site
 upgrade definition file.
 
-[Config](config-element-upgrade.htm)
+[Config](config-element-upgrade.md)
 
-    [WebTemplate](webtemplate-element-upgrade.htm)
+    [WebTemplate](webtemplate-element-upgrade.md)
 
-        [Lists](lists-element-upgrade.htm)
+        [Lists](lists-element-upgrade.md)
 
-            [List](list-element-upgrade.htm)
+            [List](list-element-upgrade.md)
 
         [Files](http://msdn.microsoft.com/library/e0c9a22c-5e87-41ff-9e2d-6a0261d5ccd2(Office.15).aspx)
 
-            [File](file-element-upgrade.htm)
+            [File](file-element-upgrade.md)
 
-        [AppliedSiteFeatures](appliedsitefeatures-element-upgrade.htm)
+        [AppliedSiteFeatures](appliedsitefeatures-element-upgrade.md)
 
-            [Feature](feature-element-upgrade.htm)
+            [Feature](feature-element-upgrade.md)
 
-        [AppliedWebFeatures](feature-element-upgrade.htm)
+        [AppliedWebFeatures](feature-element-upgrade.md)
 
-            [Feature](feature-element-upgrade.htm)
+            [Feature](feature-element-upgrade.md)
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

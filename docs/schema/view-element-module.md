@@ -304,7 +304,7 @@ XML 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 For an example of how this element is used, see <span
-sdata="link">[Modules](modules.htm)</span>.
+sdata="link">[Modules](modules.md)</span>.
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -312,7 +312,7 @@ sdata="link">[Modules](modules.htm)</span>.
 #### Concepts
 
 <span
-sdata="link">[Modules](modules.htm)</span>
+sdata="link">[Modules](modules.md)</span>
 
 #### Other resources
 

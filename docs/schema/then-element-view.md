@@ -63,11 +63,11 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Contains what is rendered in an
-[IfEqual](ifequal-element-view.htm) or
-[IfNew](ifnew-element-view.htm) element, based on
+[IfEqual](ifequal-element-view.md) or
+[IfNew](ifnew-element-view.md) element, based on
 whether the contents of the
-[Expr1](expr1-element-view.htm) and
-[Expr2](expr2-element-view.htm) elements are equal or
+[Expr1](expr1-element-view.md) and
+[Expr2](expr2-element-view.md) elements are equal or
 new, respectively.
 
 <span codelanguage="other"></span>
@@ -153,11 +153,11 @@ new, respectively.
 
 The following example uses the **IfEqual**
 element to render either the
-[Then](then-element-view.htm) element or the
-[Else](else-element-view.htm) element, based on
+[Then](then-element-view.md) element or the
+[Else](else-element-view.md) element, based on
 whether the contents of the
-[Expr1](expr1-element-view.htm) and
-[Expr2](expr2-element-view.htm) elements are equal.
+[Expr1](expr1-element-view.md) and
+[Expr2](expr2-element-view.md) elements are equal.
 
 <span codelanguage="xmlLang"></span>
 XML 
@@ -178,14 +178,14 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-<span sdata="link">[Else Element
-(View)](else-element-view.htm)</span>
+[Else Element
+(View)](else-element-view.md)</span>
 
-<span sdata="link">[Expr1 Element
-(View)](expr1-element-view.htm)</span>
+[Expr1 Element
+(View)](expr1-element-view.md)</span>
 
-<span sdata="link">[Expr2 Element
-(View)](expr2-element-view.htm)</span>
+[Expr2 Element
+(View)](expr2-element-view.md)</span>
 
 
 

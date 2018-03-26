@@ -61,16 +61,16 @@ SharePoint Online | SharePoint Server 2013
 A list template Feature includes a
 [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56(Office.15).aspx)
 file that serves as the base file for a list definition. The
-[List](list-element-list.htm) element is the root
+[List](list-element-list.md) element is the root
 element of a Schema.xml file, which contains default view definitions,
 definitions for special fields used in the list, the toolbar definition
 for list views, content type declarations, and other metadata for the
 list.
 
 A list definition includes a
-[Feature.xml](feature-xml-files.htm) file, an element
-manifest file (see <span sdata="link">[List Template
-Files](list-template-files.htm)</span>), and a
+[Feature.xml](feature-xml-files.md) file, an element
+manifest file (see [List Template
+Files](list-template-files.md)</span>), and a
 [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56(Office.15).aspx)
 file within a Feature folder (%ProgramFiles%\\Common Files\\Microsoft
 Shared\\web server extensions\\15\\TEMPLATE\\FEATURES). For an example
@@ -83,8 +83,8 @@ Definition](http://msdn.microsoft.com/library/6f0aed4a-d80a-4e42-8f12-c6b83c8cc2
 
 #### Concepts
 
-<span sdata="link">[List
-Schema](list-schema.htm)</span>
+[List
+Schema](list-schema.md)</span>
 
 
 

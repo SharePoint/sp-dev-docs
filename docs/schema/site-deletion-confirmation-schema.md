@@ -73,19 +73,19 @@ extensions\\15\\TEMPLATE\\1033\\XML)).
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[Email](email-element-site-deletion.htm)
+[Email](email-element-site-deletion.md)
 
-  [Confirmation](confirmation-element-site-deletion.htm)
+  [Confirmation](confirmation-element-site-deletion.md)
 
-    [ConfirmationSubject](confirmationsubject-element-site-deletion.htm)
+    [ConfirmationSubject](confirmationsubject-element-site-deletion.md)
 
-    [ConfirmationBody](confirmationbody-element-site-deletion.htm)
+    [ConfirmationBody](confirmationbody-element-site-deletion.md)
 
-  [AutoDeleteWarning](autodeletewarning-element-site-deletion.htm)
+  [AutoDeleteWarning](autodeletewarning-element-site-deletion.md)
 
-    [AutoDeleteSubject](autodeletesubject-element-site-deletion.htm)
+    [AutoDeleteSubject](autodeletesubject-element-site-deletion.md)
 
-    [AutoDeleteBody](autodeletebody-element-site-deletion.htm)
+    [AutoDeleteBody](autodeletebody-element-site-deletion.md)
 
 
 

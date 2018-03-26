@@ -65,10 +65,10 @@ SharePoint Online | SharePoint Server 2013
 Specifies that a list should be included in code generation and modifies
 which content types in the list are included in code generation.
 
-<span sdata="link">[Web
-(SPMetal)](web-spmetal.htm)</span>  
-  <span sdata="link">[List
-(SPMetal)](list-spmetal.htm)</span>  
+[Web
+(SPMetal)](web-spmetal.md)</span>  
+  [List
+(SPMetal)](list-spmetal.md)</span>  
 <span codelanguage="xmlLang"></span>
 <table>
 <colgroup>

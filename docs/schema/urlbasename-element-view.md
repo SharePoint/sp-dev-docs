@@ -194,9 +194,9 @@ class="code">http://Server\_Name/Subsite\_Name/Library\_Name/\_t/File\_Base\_Nam
 
 #### Other resources
 
-[URL](url-element-view.htm)
+[URL](url-element-view.md)
 
-[UrlDirName](urldirname-element-view.htm)
+[UrlDirName](urldirname-element-view.md)
 
 
 

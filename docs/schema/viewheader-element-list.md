@@ -165,7 +165,7 @@ Defines how the headers, or prefixes, of view fields are rendered.
 This element often contains an HTML fragment with <span
 class="keyword">ExpandXML</span> set to <span
 class="keyword">TRUE</span> to render embedded
-[Field](field-element-list.htm) elements.
+[Field](field-element-list.md) elements.
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -218,14 +218,14 @@ Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17(Of
 [XMLDefinition and CAML View
 Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922(Office.15).aspx)
 
-<span sdata="link">[ViewBidiHeader Element
-(List)](viewbidiheader-element-list.htm)</span>
+[ViewBidiHeader Element
+(List)](viewbidiheader-element-list.md)</span>
 
-<span sdata="link">[ViewBody Element
-(List)](viewbody-element-list.htm)</span>
+[ViewBody Element
+(List)](viewbody-element-list.md)</span>
 
-<span sdata="link">[ViewFooter Element
-(List)](viewfooter-element-list.htm)</span>
+[ViewFooter Element
+(List)](viewfooter-element-list.md)</span>
 
 
 

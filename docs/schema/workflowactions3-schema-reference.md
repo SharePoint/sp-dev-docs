@@ -62,93 +62,93 @@ SharePoint Online | SharePoint Server 2013
 
 The WorkflowActions schema contains the following elements:
 
-\<<span sdata="link">[WorkflowActions Element
-(WorkflowActions)](workflowactions-element-workflowactions.htm)</span>\>
+\<[WorkflowActions Element
+(WorkflowActions)](workflowactions-element-workflowactions.md)</span>\>
 
-      \<<span sdata="link">[Default Element
-(WorkflowActions)](default-element-workflowactions.htm)</span>\>
+      \<[Default Element
+(WorkflowActions)](default-element-workflowactions.md)</span>\>
 
-         \<<span sdata="link">[RuleDesigner Element
-(WorkflowActions)](ruledesigner-element-workflowactions.htm)</span>\>
+         \<[RuleDesigner Element
+(WorkflowActions)](ruledesigner-element-workflowactions.md)</span>\>
 
-            \<<span sdata="link">[FieldBind Element
-(WorkflowActions)](fieldbind-element-workflowactions.htm)</span>\>
+            \<[FieldBind Element
+(WorkflowActions)](fieldbind-element-workflowactions.md)</span>\>
 
-               \<<span sdata="link">[Option Element
-(WorkflowActions)](option-element-workflowactions.htm)</span>\>
+               \<[Option Element
+(WorkflowActions)](option-element-workflowactions.md)</span>\>
 
-               \<<span sdata="link">[DataSourceRef Element
-(WorkflowActions)](datasourceref-element-workflowactions.htm)</span>\>
+               \<[DataSourceRef Element
+(WorkflowActions)](datasourceref-element-workflowactions.md)</span>\>
 
-      \<<span sdata="link">[Action Element
-(WorkflowActions)](action-element-workflowactions.htm)</span>\>
+      \<[Action Element
+(WorkflowActions)](action-element-workflowactions.md)</span>\>
 
-         \<<span sdata="link">[Parameters Element
-(WorkflowActions)](parameters-element-workflowactions.htm)</span>\>
+         \<[Parameters Element
+(WorkflowActions)](parameters-element-workflowactions.md)</span>\>
 
-            \<<span sdata="link">[Parameter Element
-(WorkflowActions)](parameter-element-workflowactions.htm)</span>\>
+            \<[Parameter Element
+(WorkflowActions)](parameter-element-workflowactions.md)</span>\>
 
-         \<<span sdata="link">[RuleDesigner Element
-(WorkflowActions)](ruledesigner-element-workflowactions.htm)</span>\>
+         \<[RuleDesigner Element
+(WorkflowActions)](ruledesigner-element-workflowactions.md)</span>\>
 
-            \<<span sdata="link">[FieldBind Element
-(WorkflowActions)](fieldbind-element-workflowactions.htm)</span>\>
+            \<[FieldBind Element
+(WorkflowActions)](fieldbind-element-workflowactions.md)</span>\>
 
-               \<<span sdata="link">[Option Element
-(WorkflowActions)](option-element-workflowactions.htm)</span>\>
+               \<[Option Element
+(WorkflowActions)](option-element-workflowactions.md)</span>\>
 
-               \<<span sdata="link">[DataSourceRef Element
-(WorkflowActions)](datasourceref-element-workflowactions.htm)</span>\>
+               \<[DataSourceRef Element
+(WorkflowActions)](datasourceref-element-workflowactions.md)</span>\>
 
-         \<<span sdata="link">[DataSources Element
-(WorkflowActions)](datasources-element-workflowactions.htm)</span>\>
+         \<[DataSources Element
+(WorkflowActions)](datasources-element-workflowactions.md)</span>\>
 
-            \<<span sdata="link">[DataSource Element
-(WorkflowActions)](datasource-element-workflowactions.htm)</span>\>
+            \<[DataSource Element
+(WorkflowActions)](datasource-element-workflowactions.md)</span>\>
 
-               \<<span sdata="link">[SchemaSource Element
-(WorkflowActions)](schemasource-element-workflowactions.htm)</span>\>
+               \<[SchemaSource Element
+(WorkflowActions)](schemasource-element-workflowactions.md)</span>\>
 
-                  \<<span sdata="link">[Fields Element
-(WorkflowActions)](fields-element-workflowactions.htm)</span>\>
+                  \<[Fields Element
+(WorkflowActions)](fields-element-workflowactions.md)</span>\>
 
-                     \<<span sdata="link">[Field Element
-(WorkflowActions)](field-element-workflowactions.htm)</span>\>
+                     \<[Field Element
+(WorkflowActions)](field-element-workflowactions.md)</span>\>
 
-                  \<<span sdata="link">[ContentType Element
-(WorkflowActions)](contenttype-element-workflowactions.htm)</span>\>
+                  \<[ContentType Element
+(WorkflowActions)](contenttype-element-workflowactions.md)</span>\>
 
-                  \<<span sdata="link">[Dictionary Element
-(WorkflowActions)](dictionary-element-workflowactions.htm)</span>\>
+                  \<[Dictionary Element
+(WorkflowActions)](dictionary-element-workflowactions.md)</span>\>
 
-                  \<<span sdata="link">[NestedInitiationFieldNodes
+                  \<[NestedInitiationFieldNodes
 Element
-(WorkflowActions)](nestedinitiationfieldnodes-element-workflowactions.htm)</span>\>
+(WorkflowActions)](nestedinitiationfieldnodes-element-workflowactions.md)</span>\>
 
-               \<<span sdata="link">[Evaluation Element
-(WorkflowActions)](evaluation-element-workflowactions.htm)</span>\>
+               \<[Evaluation Element
+(WorkflowActions)](evaluation-element-workflowactions.md)</span>\>
 
-                  \<<span sdata="link">[ActivitySource Element
-(WorkflowActions)](activitysource-element-workflowactions.htm)</span>\>
+                  \<[ActivitySource Element
+(WorkflowActions)](activitysource-element-workflowactions.md)</span>\>
 
-                  \<<span sdata="link">[HashtableSource Element
-(WorkflowActions)](hashtablesource-element-workflowactions.htm)</span>\>
+                  \<[HashtableSource Element
+(WorkflowActions)](hashtablesource-element-workflowactions.md)</span>\>
 
-         \<<span sdata="link">[Modifications Element
-(WorkflowActions)](modifications-element-workflowactions.htm)</span>\>
+         \<[Modifications Element
+(WorkflowActions)](modifications-element-workflowactions.md)</span>\>
 
-            \<<span sdata="link">[Modification Element
-(WorkflowActions)](modification-element-workflowactions.htm)</span>\>
+            \<[Modification Element
+(WorkflowActions)](modification-element-workflowactions.md)</span>\>
 
-         \<<span sdata="link">[ActionVariables Element
-(WorkflowActions)](actionvariables-element-workflowactions.htm)</span>\>
+         \<[ActionVariables Element
+(WorkflowActions)](actionvariables-element-workflowactions.md)</span>\>
 
-         \<<span sdata="link">[ActionBody Element
-(WorkflowActions)](actionbody-element-workflowactions.htm)</span>\>
+         \<[ActionBody Element
+(WorkflowActions)](actionbody-element-workflowactions.md)</span>\>
 
-         \<<span sdata="link">[ActionConditions Element
-(WorkflowActions)](actionconditions-element-workflowactions.htm)</span>\>
+         \<[ActionConditions Element
+(WorkflowActions)](actionconditions-element-workflowactions.md)</span>\>
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

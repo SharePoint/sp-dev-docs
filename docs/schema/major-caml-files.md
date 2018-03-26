@@ -62,7 +62,7 @@ SharePoint Online | SharePoint Server 2013
 
 Many critical files in Microsoft SharePoint Foundation use <span
 sdata="link">[Collaborative Application Markup Language (CAML)
-schemas](collaborative-application-markup-language-caml-schemas.htm)</span> to define how
+schemas](collaborative-application-markup-language-caml-schemas.md)</span> to define how
 data is displayed and how HTML is rendered.
 
 
@@ -70,7 +70,7 @@ data is displayed and how HTML is rendered.
 
 The following table describes the major schema files that use <span
 sdata="link">[Collaborative Application Markup Language (CAML)
-schemas](collaborative-application-markup-language-caml-schemas.htm)</span> for data
+schemas](collaborative-application-markup-language-caml-schemas.md)</span> for data
 definition or HTML rendering, and specifies their locations under
 %ProgramFiles%\\Common Files\\Microsoft Shared\\web server
 extensions\\15\\.

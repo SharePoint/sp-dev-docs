@@ -59,9 +59,9 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Specifies localized display names and properties, in any combination,
-for an <span sdata="link">[LobSystemInstance Element in
+for an [LobSystemInstance Element in
 LobSystemInstances (BDCMetadata
-Schema)](lobsysteminstance-element-in-lobsysteminstances-bdcmetadata-schema.htm)</span>.
+Schema)](lobsysteminstance-element-in-lobsysteminstances-bdcmetadata-schema.md)</span>.
 
 Namespace:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources

@@ -153,16 +153,16 @@ particular list item.
 The **DisplayPattern** element is used in
 [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56(Office.15).aspx),
 [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx)
-and [Base.xml](major-caml-files.htm) files.
+and [Base.xml](major-caml-files.md) files.
 
 The built-in data types (such as **Integer**,
 **Text**, etc.) also have display patterns,
 which are defined in the
 [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6(Office.15).aspx)
-file. The [Field](field-element-list.htm) element can
+file. The [Field](field-element-list.md) element can
 contain display patterns and, for this reason, can be used to apply rich
 formatting to values (unlike the
-[Column](column-element-view.htm) element, which simply
+[Column](column-element-view.md) element, which simply
 returns raw data).
 
 

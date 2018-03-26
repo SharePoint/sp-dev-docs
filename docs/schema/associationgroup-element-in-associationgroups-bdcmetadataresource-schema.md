@@ -59,8 +59,8 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Specifies localized display names and properties, in any combination,
-for an <span sdata="link">[AssociationGroup Element in AssociationGroups
-(BDCMetadata Schema)](associationgroup-element-in-associationgroups-bdcmetadata-schema.htm)</span>.
+for an [AssociationGroup Element in AssociationGroups
+(BDCMetadata Schema)](associationgroup-element-in-associationgroups-bdcmetadata-schema.md)</span>.
 
 Namespace:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources

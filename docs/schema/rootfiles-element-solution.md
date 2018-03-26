@@ -136,7 +136,7 @@ Specifies the root paths to which solution files are copied.
 
 For an example of how this element is used, see <span
 sdata="link">[RootFile Element
-(Solution)](rootfile-element-solution.htm)</span>.
+(Solution)](rootfile-element-solution.md)</span>.
 
 
 

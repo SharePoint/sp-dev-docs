@@ -65,7 +65,7 @@ SharePoint Online | SharePoint Server 2013
 Defines an alert template filter. To modify existing filters or create
 additional filters, modify the <span
 class="keyword">FilterDefinition</span> element of the appropriate
-template. Define the [Query](query-element-alerttemplates.htm)
+template. Define the [Query](query-element-alerttemplates.md)
 element inside the filter by using Collaborative Application Markup
 Language (CAML).
 

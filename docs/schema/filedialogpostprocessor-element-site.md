@@ -153,8 +153,8 @@ target="T:Microsoft.SharePoint.IFileDialogPostProcessor"><span
 class="nolink">Microsoft.SharePoint.IFileDialogPostProcessor</span></span>
 interface.
 
-See <span sdata="link">[Components Element
-(Site)](components-element-site.htm)</span> for an example
+See [Components Element
+(Site)](components-element-site.md)</span> for an example
 that uses the **FileDialogPostProcessor**
 element.
 

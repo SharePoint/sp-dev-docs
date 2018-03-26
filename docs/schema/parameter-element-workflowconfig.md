@@ -133,30 +133,30 @@ Represents a single parameter for the workflow initiation form.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-For each <span sdata="link">[Field Element
-(Field)](field-element-field.htm)</span> element
-contained in the <span sdata="link">[Fields Element
-(WorkflowConfig)](fields-element-workflowconfig.htm)</span>
-element, there must be a corresponding <span sdata="link">[Parameter
+For each [Field Element
+(Field)](field-element-field.md)</span> element
+contained in the [Fields Element
+(WorkflowConfig)](fields-element-workflowconfig.md)</span>
+element, there must be a corresponding [Parameter
 Element
-(WorkflowConfig)](parameter-element-workflowconfig.htm)</span>
-element, in the <span sdata="link">[Parameters Element
-(WorkflowConfig)](parameters-element-workflowconfig.htm)</span>
+(WorkflowConfig)](parameter-element-workflowconfig.md)</span>
+element, in the [Parameters Element
+(WorkflowConfig)](parameters-element-workflowconfig.md)</span>
 element, with a matching Name attribute. The <span
 sdata="link">[Parameter Element
-(WorkflowConfig)](parameter-element-workflowconfig.htm)</span>
+(WorkflowConfig)](parameter-element-workflowconfig.md)</span>
 element specifies the System data type of the field.
 
-The <span sdata="link">[Fields Element
-(WorkflowConfig)](fields-element-workflowconfig.htm)</span>
-element contains a collection of <span sdata="link">[Field Element
-(Field)](field-element-field.htm)</span> elements. Each
-<span sdata="link">[Field Element
-(Field)](field-element-field.htm)</span> element
+The [Fields Element
+(WorkflowConfig)](fields-element-workflowconfig.md)</span>
+element contains a collection of [Field Element
+(Field)](field-element-field.md)</span> elements. Each
+[Field Element
+(Field)](field-element-field.md)</span> element
 represents a data field on the workflow initiation form.
 
-The <span sdata="link">[Parameter Element
-(WorkflowConfig)](parameter-element-workflowconfig.htm)</span>
+The [Parameter Element
+(WorkflowConfig)](parameter-element-workflowconfig.md)</span>
 element also represents a workflow variable of the same name. When the
 user submits the workflow initiation form, SharePoint Foundation passes
 the value specified for each parameter to the workflow instance as part
@@ -164,8 +164,8 @@ of the <span sdata="cer"
 target="P:Microsoft.SharePoint.Workflow.SPWorkflowActivationProperties.InitiationData"><span
 class="nolink">InitiationData</span></span> property.
 
-Use the URL attribute of the <span sdata="link">[Initiation Element
-(WorkflowConfig)](initiation-element-workflowconfig.htm)</span>
+Use the URL attribute of the [Initiation Element
+(WorkflowConfig)](initiation-element-workflowconfig.md)</span>
 element to specify the path to the workflow initiation form for the
 workflow.
 
@@ -213,8 +213,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Concepts
 
-<span sdata="link">[Workflow configuration schema
-reference](workflow-configuration-schema-reference.htm)</span>
+[Workflow configuration schema
+reference](workflow-configuration-schema-reference.md)</span>
 
 #### Other resources
 

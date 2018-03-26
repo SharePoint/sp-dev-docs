@@ -148,7 +148,7 @@ worksheet saved as HTML, etc.).
 
 This element can be used within a view only if the <span
 class="keyword">HackLockWeb</span> attribute of the
-[View](view-element-list.htm) element is set to <span
+[View](view-element-list.md) element is set to <span
 class="keyword">TRUE</span>.
 
 

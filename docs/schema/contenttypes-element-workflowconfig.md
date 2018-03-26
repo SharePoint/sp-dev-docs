@@ -124,9 +124,9 @@ in the workflow.
 The workflow task content types defined for workflows should ultimately
 inherit from the WorkflowTask content type.
 
-Use the TaskListId attribute of the <span sdata="link">[Association
+Use the TaskListId attribute of the [Association
 Element
-(WorkflowConfig)](association-element-workflowconfig.htm)</span>
+(WorkflowConfig)](association-element-workflowconfig.md)</span>
 element to specify the task list the workflow should use.
 
 For more information about the base content types included with
@@ -166,8 +166,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Concepts
 
-<span sdata="link">[Workflow configuration schema
-reference](workflow-configuration-schema-reference.htm)</span>
+[Workflow configuration schema
+reference](workflow-configuration-schema-reference.md)</span>
 
 #### Other resources
 

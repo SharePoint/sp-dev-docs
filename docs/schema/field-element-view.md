@@ -183,30 +183,30 @@ Returns the formatted value of a field for use within a view definition.
 
 Use the **Field (View)** element to return a
 formatted field value for display within a view, and use the
-[Column](column-element-view.htm) element to return the
+[Column](column-element-view.md) element to return the
 raw data value of the field. The **Field**
 element does not specify attributes when it is used within
-[UrlBaseName](urlbasename-element-view.htm), and only <span
+[UrlBaseName](urlbasename-element-view.md), and only <span
 class="keyword">Name</span> is specified when it is used within
-[Expr1](expr1-element-view.htm),
-[Expr2](expr2-element-view.htm), or
-[Row](row-element-site.htm).
+[Expr1](expr1-element-view.md),
+[Expr2](expr2-element-view.md), or
+[Row](row-element-site.md).
 
 To create a custom field definition as a pluggable Feature that is based
 on a default SharePoint Foundation field type and that can be reused
 across sites and lists, use the [Field
-(Field)](field-element-field.htm) element to define a
+(Field)](field-element-field.md) element to define a
 custom [site
 column](http://msdn.microsoft.com/library/0402b3a7-3665-43df-9769-85e3aa1b2432(Office.15).aspx).
 To create a custom field definition for a list definition based on a
 default field type, use the [Field (List -
-Definition)](field-element-list.htm) element within a
+Definition)](field-element-list.md) element within a
 [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56(Office.15).aspx)
 file. To create a [custom field
 type](http://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13(Office.15).aspx)
 that implements a custom class for special data validation and field
 rendering, use the [Field (Field
-Types)](field-element-field-types.htm) element.
+Types)](field-element-field-types.md) element.
 
 
 

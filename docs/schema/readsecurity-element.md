@@ -150,8 +150,8 @@ following values:
 -   **2** — Users have Read access only to
     items that they create.
 
-See <span sdata="link">[Security
-Element](security-element.htm)</span> for an example
+See [Security
+Element](security-element.md)</span> for an example
 that shows how to use the **ReadSecurity**
 element.
 
@@ -160,11 +160,11 @@ element.
 
 #### Reference
 
-<span sdata="link">[SchemaSecurity
-Element](schemasecurity-element.htm)</span>
+[SchemaSecurity
+Element](schemasecurity-element.md)</span>
 
-<span sdata="link">[WriteSecurity
-Element](writesecurity-element.htm)</span>
+[WriteSecurity
+Element](writesecurity-element.md)</span>
 
 
 

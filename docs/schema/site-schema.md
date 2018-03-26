@@ -65,7 +65,7 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 The Site schema of [Collaborative Application Markup Language
-(CAML)](introduction-to-collaborative-application-markup-language-caml.htm) is used to define
+(CAML)](introduction-to-collaborative-application-markup-language-caml.md) is used to define
 metadata for creating Web sites, including the root site of site
 collections. A site definition specifies the navigation bars, list
 templates, document templates, list base types, configurations, modules,
@@ -101,134 +101,134 @@ class="nolink">Meetings</span></span>).
 
 **Onet.xml**
 
-[DOCS-LESSTHANProjectDOCS-GREATERTHAN](project-element-site.htm)
+[DOCS-LESSTHANProjectDOCS-GREATERTHAN](project-element-site.md)
 
-  [DOCS-LESSTHANNavBarsDOCS-GREATERTHAN](navbars-element-site.htm)
+  [DOCS-LESSTHANNavBarsDOCS-GREATERTHAN](navbars-element-site.md)
 
-    [DOCS-LESSTHANNavBarDOCS-GREATERTHAN](navbar-element-site.htm)
+    [DOCS-LESSTHANNavBarDOCS-GREATERTHAN](navbar-element-site.md)
 
-      [DOCS-LESSTHANNavBarLinkDOCS-GREATERTHAN](navbarlink-element-site.htm)
+      [DOCS-LESSTHANNavBarLinkDOCS-GREATERTHAN](navbarlink-element-site.md)
 
-      [DOCS-LESSTHANNavBarPageDOCS-GREATERTHAN](navbarpage-element-sitemodule.htm)
+      [DOCS-LESSTHANNavBarPageDOCS-GREATERTHAN](navbarpage-element-sitemodule.md)
 
-  [DOCS-LESSTHANListTemplatesDOCS-GREATERTHAN](listtemplates-element-site.htm)
+  [DOCS-LESSTHANListTemplatesDOCS-GREATERTHAN](listtemplates-element-site.md)
 
-    [DOCS-LESSTHANListTemplateDOCS-GREATERTHAN](listtemplate-element-site.htm)
+    [DOCS-LESSTHANListTemplateDOCS-GREATERTHAN](listtemplate-element-site.md)
 
-  [DOCS-LESSTHANDocumentTemplatesDOCS-GREATERTHAN](documenttemplates-element-site.htm)
+  [DOCS-LESSTHANDocumentTemplatesDOCS-GREATERTHAN](documenttemplates-element-site.md)
 
-    [DOCS-LESSTHANDocumentTemplateDOCS-GREATERTHAN](documenttemplate-element-site.htm)
+    [DOCS-LESSTHANDocumentTemplateDOCS-GREATERTHAN](documenttemplate-element-site.md)
 
-      [DOCS-LESSTHANDocumentTemplateFilesDOCS-GREATERTHAN](documenttemplatefiles-element-site.htm)
+      [DOCS-LESSTHANDocumentTemplateFilesDOCS-GREATERTHAN](documenttemplatefiles-element-site.md)
 
-        [DOCS-LESSTHANDocumentTemplateFileDOCS-GREATERTHAN](documenttemplatefile-element-site.htm)
+        [DOCS-LESSTHANDocumentTemplateFileDOCS-GREATERTHAN](documenttemplatefile-element-site.md)
 
-  [DOCS-LESSTHANBaseTypesDOCS-GREATERTHAN](basetypes-element-site.htm)
+  [DOCS-LESSTHANBaseTypesDOCS-GREATERTHAN](basetypes-element-site.md)
 
-    [DOCS-LESSTHANBaseTypeDOCS-GREATERTHAN](basetype-element-site.htm)
+    [DOCS-LESSTHANBaseTypeDOCS-GREATERTHAN](basetype-element-site.md)
 
-      [DOCS-LESSTHANMetaDataDOCS-GREATERTHAN](metadata-element-site.htm)
+      [DOCS-LESSTHANMetaDataDOCS-GREATERTHAN](metadata-element-site.md)
 
-  [DOCS-LESSTHANConfigurationsDOCS-GREATERTHAN](configurations-element-site.htm)
+  [DOCS-LESSTHANConfigurationsDOCS-GREATERTHAN](configurations-element-site.md)
 
-    [DOCS-LESSTHANConfigurationDOCS-GREATERTHAN](configuration-element-site.htm)
+    [DOCS-LESSTHANConfigurationDOCS-GREATERTHAN](configuration-element-site.md)
 
-      [DOCS-LESSTHANExecuteUrlDOCS-GREATERTHAN](executeurl-element-site.htm)
+      [DOCS-LESSTHANExecuteUrlDOCS-GREATERTHAN](executeurl-element-site.md)
 
-      [DOCS-LESSTHANListsDOCS-GREATERTHAN](lists-element-site.htm)
+      [DOCS-LESSTHANListsDOCS-GREATERTHAN](lists-element-site.md)
 
-        [DOCS-LESSTHANListDOCS-GREATERTHAN](list-element-site.htm)
+        [DOCS-LESSTHANListDOCS-GREATERTHAN](list-element-site.md)
 
-          [DOCS-LESSTHANDataDOCS-GREATERTHAN](data-element-site.htm)
+          [DOCS-LESSTHANDataDOCS-GREATERTHAN](data-element-site.md)
 
-            [DOCS-LESSTHANRowsDOCS-GREATERTHAN](rows-element-site.htm)
+            [DOCS-LESSTHANRowsDOCS-GREATERTHAN](rows-element-site.md)
 
-              [DOCS-LESSTHANRowDOCS-GREATERTHAN](row-element-site.htm)
+              [DOCS-LESSTHANRowDOCS-GREATERTHAN](row-element-site.md)
 
-                [DOCS-LESSTHANFieldDOCS-GREATERTHAN](field-element-site.htm)
+                [DOCS-LESSTHANFieldDOCS-GREATERTHAN](field-element-site.md)
 
-      [DOCS-LESSTHANModulesDOCS-GREATERTHAN](modules-element-site.htm)
+      [DOCS-LESSTHANModulesDOCS-GREATERTHAN](modules-element-site.md)
 
        [See Module Schema] 
 
-      [DOCS-LESSTHANWebFeaturesDOCS-GREATERTHAN](webfeatures-element-site.htm)
+      [DOCS-LESSTHANWebFeaturesDOCS-GREATERTHAN](webfeatures-element-site.md)
 
-        [DOCS-LESSTHANFeatureDOCS-GREATERTHAN](feature-element-site.htm)
+        [DOCS-LESSTHANFeatureDOCS-GREATERTHAN](feature-element-site.md)
 
-          [DOCS-LESSTHANPropertiesDOCS-GREATERTHAN](properties-element-site.htm)
+          [DOCS-LESSTHANPropertiesDOCS-GREATERTHAN](properties-element-site.md)
 
-            [DOCS-LESSTHANPropertyDOCS-GREATERTHAN](property-element-sitefeature.htm)
+            [DOCS-LESSTHANPropertyDOCS-GREATERTHAN](property-element-sitefeature.md)
 
-      [DOCS-LESSTHANSiteFeaturesDOCS-GREATERTHAN](sitefeatures-element-site.htm)
+      [DOCS-LESSTHANSiteFeaturesDOCS-GREATERTHAN](sitefeatures-element-site.md)
 
-        [DOCS-LESSTHANFeatureDOCS-GREATERTHAN](feature-element-site.htm)
+        [DOCS-LESSTHANFeatureDOCS-GREATERTHAN](feature-element-site.md)
 
-          [DOCS-LESSTHANPropertiesDOCS-GREATERTHAN](properties-element-site.htm)
+          [DOCS-LESSTHANPropertiesDOCS-GREATERTHAN](properties-element-site.md)
 
-            [DOCS-LESSTHANPropertyDOCS-GREATERTHAN](property-element-sitefeature.htm)
+            [DOCS-LESSTHANPropertyDOCS-GREATERTHAN](property-element-sitefeature.md)
 
-  [DOCS-LESSTHANModulesDOCS-GREATERTHAN](modules-element-site.htm)
+  [DOCS-LESSTHANModulesDOCS-GREATERTHAN](modules-element-site.md)
 
    [See Module Schema]
 
-  [DOCS-LESSTHANComponentsDOCS-GREATERTHAN](components-element-site.htm)
+  [DOCS-LESSTHANComponentsDOCS-GREATERTHAN](components-element-site.md)
 
-    [DOCS-LESSTHANExternalSecurityProviderDOCS-GREATERTHAN](externalsecurityprovider-element-site.htm)
+    [DOCS-LESSTHANExternalSecurityProviderDOCS-GREATERTHAN](externalsecurityprovider-element-site.md)
 
-    [DOCS-LESSTHANFileDialogPostProcessorDOCS-GREATERTHAN](filedialogpostprocessor-element-site.htm)
+    [DOCS-LESSTHANFileDialogPostProcessorDOCS-GREATERTHAN](filedialogpostprocessor-element-site.md)
 
-  [DOCS-LESSTHANServerEmailFooterDOCS-GREATERTHAN](serveremailfooter-element-site.htm)
+  [DOCS-LESSTHANServerEmailFooterDOCS-GREATERTHAN](serveremailfooter-element-site.md)
 
 **Module Schema**
 
-    [DOCS-LESSTHANModuleDOCS-GREATERTHAN](module-element-site.htm)
+    [DOCS-LESSTHANModuleDOCS-GREATERTHAN](module-element-site.md)
 
-      [DOCS-LESSTHANFileDOCS-GREATERTHAN](file-element.htm)
+      [DOCS-LESSTHANFileDOCS-GREATERTHAN](file-element.md)
 
-        [DOCS-LESSTHANAllUsersWebPartDOCS-GREATERTHAN](alluserswebpart-element-site.htm)
+        [DOCS-LESSTHANAllUsersWebPartDOCS-GREATERTHAN](alluserswebpart-element-site.md)
 
-        [DOCS-LESSTHANBinarySerializedWebPartDOCS-GREATERTHAN](binaryserializedwebpart-element-site.htm)
+        [DOCS-LESSTHANBinarySerializedWebPartDOCS-GREATERTHAN](binaryserializedwebpart-element-site.md)
 
           
-[DOCS-LESSTHANGUIDMapDOCS-GREATERTHAN](guidmap-element-site.htm)
+[DOCS-LESSTHANGUIDMapDOCS-GREATERTHAN](guidmap-element-site.md)
 
         
-    [DOCS-LESSTHANGUIDDOCS-GREATERTHAN](guid-element-site.htm)
+    [DOCS-LESSTHANGUIDDOCS-GREATERTHAN](guid-element-site.md)
 
        
-   [DOCS-LESSTHANWebPartDOCS-GREATERTHAN](webpart-element-site.htm)
+   [DOCS-LESSTHANWebPartDOCS-GREATERTHAN](webpart-element-site.md)
 
-        [DOCS-LESSTHANNavBarPageDOCS-GREATERTHAN](navbarpage-element-sitemodule.htm)
+        [DOCS-LESSTHANNavBarPageDOCS-GREATERTHAN](navbarpage-element-sitemodule.md)
 
-        [DOCS-LESSTHANPropertyDOCS-GREATERTHAN](property-element-sitemodule.htm)
+        [DOCS-LESSTHANPropertyDOCS-GREATERTHAN](property-element-sitemodule.md)
 
-        [DOCS-LESSTHANViewDOCS-GREATERTHAN](view-element-site.htm)
+        [DOCS-LESSTHANViewDOCS-GREATERTHAN](view-element-site.md)
 
        
-  [DOCS-LESSTHANBinarySerializedWebPartDOCS-GREATERTHAN](binaryserializedwebpart-element-site.htm)
+  [DOCS-LESSTHANBinarySerializedWebPartDOCS-GREATERTHAN](binaryserializedwebpart-element-site.md)
 
         
-    [DOCS-LESSTHANGUIDMapDOCS-GREATERTHAN](guidmap-element-site.htm)
+    [DOCS-LESSTHANGUIDMapDOCS-GREATERTHAN](guidmap-element-site.md)
 
              
-  [DOCS-LESSTHANGUIDDOCS-GREATERTHAN](guid-element-site.htm)
+  [DOCS-LESSTHANGUIDDOCS-GREATERTHAN](guid-element-site.md)
 
         
-    [DOCS-LESSTHANWebPartDOCS-GREATERTHAN](webpart-element-site.htm)
+    [DOCS-LESSTHANWebPartDOCS-GREATERTHAN](webpart-element-site.md)
 
         
-[DOCS-LESSTHANWebPartConnectionDOCS-GREATERTHAN](webpartconnection-element-site.htm)
+[DOCS-LESSTHANWebPartConnectionDOCS-GREATERTHAN](webpartconnection-element-site.md)
 
        
-   [DOCS-LESSTHANWebPartTransformerDOCS-GREATERTHAN](webparttransformer-element-site.htm)
+   [DOCS-LESSTHANWebPartTransformerDOCS-GREATERTHAN](webparttransformer-element-site.md)
 
 **WebTempDOCS-ASTERISK.xml**
 
-[DOCS-LESSTHANTemplatesDOCS-GREATERTHAN](templates-element-site.htm)
+[DOCS-LESSTHANTemplatesDOCS-GREATERTHAN](templates-element-site.md)
 
-  [DOCS-LESSTHANTemplateDOCS-GREATERTHAN](template-element-site.htm)
+  [DOCS-LESSTHANTemplateDOCS-GREATERTHAN](template-element-site.md)
 
-    [DOCS-LESSTHANConfigurationDOCS-GREATERTHAN](configuration-element-site.htm)
+    [DOCS-LESSTHANConfigurationDOCS-GREATERTHAN](configuration-element-site.md)
 
 
 

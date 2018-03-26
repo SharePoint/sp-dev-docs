@@ -63,7 +63,7 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Provides an enumeration of the fields in a view through a listing of the
-[FieldRef](fieldref-element-list.htm) elements.
+[FieldRef](fieldref-element-list.md) elements.
 
 <span codelanguage="other"></span>
 <table>
@@ -146,8 +146,8 @@ Provides an enumeration of the fields in a view through a listing of the
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-For a [FieldRef](fieldref-element-list.htm) element to be
-used within a [ViewBody](viewbody-element-list.htm)
+For a [FieldRef](fieldref-element-list.md) element to be
+used within a [ViewBody](viewbody-element-list.md)
 element, it must also be included in the <span
 class="keyword">ViewFields</span> element to ensure that the field is
 available in the database result set.
@@ -157,7 +157,7 @@ class="keyword">FieldRef</span> listings.
 
 **ViewFields** can include references to fields
 in a foreign list, if there is a join defined by a
-[Join](join-element-view.htm) element.
+[Join](join-element-view.md) element.
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -189,8 +189,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 [List
 Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17(Office.15).aspx)
 
-<span sdata="link">[ViewBody Element
-(List)](viewbody-element-list.htm)</span>
+[ViewBody Element
+(List)](viewbody-element-list.md)</span>
 
 
 

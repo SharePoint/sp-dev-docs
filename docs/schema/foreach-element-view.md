@@ -155,7 +155,7 @@ the different schema files:
     this case, the **ForEach** element must be
     nested inside another **ForEach** element
     that enumerates Fields/Field (in other words, inside a
-    [Fields](fields-element-view.htm) element). The
+    [Fields](fields-element-view.md) element). The
     current point in the **Fields** enumeration
     must be a **Choice** field.
 
@@ -175,7 +175,7 @@ the different schema files:
 
 The body of the **ForEach** element is rendered
 once for each view or field in the collection. The
-[Property](property-element-view.htm) element can be used
+[Property](property-element-view.md) element can be used
 to extract individual properties of the view or field.
 
 The **ForEach** element can also be used to

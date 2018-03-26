@@ -151,7 +151,7 @@ cannot have any activation dependencies.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-If included within a [Feature](feature-element-feature.htm)
+If included within a [Feature](feature-element-feature.md)
 element, the following code example prevents the current Feature from
 being activated unless the Feature with the specified ID is activated.
 
@@ -169,7 +169,7 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 For another example of how this element is used, see <span
 sdata="link">[Feature.xml
-Files](feature-xml-files.htm)</span>.
+Files](feature-xml-files.md)</span>.
 
 
 

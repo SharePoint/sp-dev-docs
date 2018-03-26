@@ -75,129 +75,129 @@ nameDOCS-GREATERTHANDOCS-GREATERTHAN XML schema.
 </table>
 
 -   [ActivationDependencies
-    element](activationdependencies-element-featuredefinition-complextypeapphostwebfeatures.htm)
+    element](activationdependencies-element-featuredefinition-complextypeapphostwebfeatures.md)
 
 -   [ActivationDependency
-    element](activationdependency-element-featureactivationdependencydefinitions-complextypea.htm)
+    element](activationdependency-element-featureactivationdependencydefinitions-complextypea.md)
 
 -   [ApplyElementManifests
-    element](applyelementmanifests-element-upgradeactionsgroup-groupapphostwebfeatures.htm)
+    element](applyelementmanifests-element-upgradeactionsgroup-groupapphostwebfeatures.md)
 
--   [Button element](button-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [Button element](button-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [CheckBox element](checkbox-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [CheckBox element](checkbox-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [ClientWebPart element](clientwebpart-element-elementdefinitioncollection-complextypeapphostwebfeatures.htm)
+-   [ClientWebPart element](clientwebpart-element-elementdefinitioncollection-complextypeapphostwebfeatures.md)
 
--   [ColorPicker element](colorpicker-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [ColorPicker element](colorpicker-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [ComboBox element](combobox-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [ComboBox element](combobox-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
 -   [CommandUIDefinition
-    element](commanduidefinition-element-commanduidefinitionstype-complextypeapphostwebfeatur.htm)
+    element](commanduidefinition-element-commanduidefinitionstype-complextypeapphostwebfeatur.md)
 
 -   [CommandUIDefinitions
-    element](commanduidefinitions-element-commanduiextensiontype-complextypeapphostwebfeature.htm)
+    element](commanduidefinitions-element-commanduiextensiontype-complextypeapphostwebfeature.md)
 
 -   [CommandUIExtension
-    element](commanduiextension-element-customactiondefinition-complextypeapphostwebfeatures.htm)
+    element](commanduiextension-element-customactiondefinition-complextypeapphostwebfeatures.md)
 
--   [CommandUIHandler element](commanduihandler-element-commanduihandlerstype-complextypeapphostwebfeatures.htm)
+-   [CommandUIHandler element](commanduihandler-element-commanduihandlerstype-complextypeapphostwebfeatures.md)
 
 -   [CommandUIHandlers
-    element](commanduihandlers-element-commanduiextensiontype-complextypeapphostwebfeatures.htm)
+    element](commanduihandlers-element-commanduiextensiontype-complextypeapphostwebfeatures.md)
 
--   [Content element](content-element-clientwebpartdefinition-complextypeapphostwebfeatures.htm)
+-   [Content element](content-element-clientwebpartdefinition-complextypeapphostwebfeatures.md)
 
--   [ContextualGroup element](contextualgroup-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [ContextualGroup element](contextualgroup-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [ContextualTabs element](contextualtabs-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [ContextualTabs element](contextualtabs-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [Controls element](controls-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [Controls element](controls-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [CustomAction element](customaction-element-elementdefinitioncollection-complextypeapphostwebfeatures.htm)
+-   [CustomAction element](customaction-element-elementdefinitioncollection-complextypeapphostwebfeatures.md)
 
--   [CustomAction element](customaction-element-customactiondefinitions-complextypeapphostwebfeatures.htm)
+-   [CustomAction element](customaction-element-customactiondefinitions-complextypeapphostwebfeatures.md)
 
--   [DropDown element](dropdown-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [DropDown element](dropdown-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [ElementFile element](elementfile-element-elementmanifestreferences-complextypeapphostwebfeatures.htm)
+-   [ElementFile element](elementfile-element-elementmanifestreferences-complextypeapphostwebfeatures.md)
 
--   [ElementManifest element](elementmanifest-element-elementmanifestreferences-complextypeapphostwebfeatures.htm)
+-   [ElementManifest element](elementmanifest-element-elementmanifestreferences-complextypeapphostwebfeatures.md)
 
--   [ElementManifests element](elementmanifests-element-featuredefinition-complextypeapphostwebfeatures.htm)
+-   [ElementManifests element](elementmanifests-element-featuredefinition-complextypeapphostwebfeatures.md)
 
--   [Elements element](elements-element-apphostwebfeatures.htm)
+-   [Elements element](elements-element-apphostwebfeatures.md)
 
--   [EnumItem element](enumitem-element-clientwebpartenumitems-complextypeapphostwebfeatures.htm)
+-   [EnumItem element](enumitem-element-clientwebpartenumitems-complextypeapphostwebfeatures.md)
 
--   [EnumItems element](enumitems-element-clientwebpartproperty-complextypeapphostwebfeatures.htm)
+-   [EnumItems element](enumitems-element-clientwebpartproperty-complextypeapphostwebfeatures.md)
 
--   [Feature element](feature-element-featuretemplatereferences-complextypeapphostwebfeatures.htm)
+-   [Feature element](feature-element-featuretemplatereferences-complextypeapphostwebfeatures.md)
 
--   [Feature element](feature-element-apphostwebfeatures.htm)
+-   [Feature element](feature-element-apphostwebfeatures.md)
 
--   [FlyoutAnchor element](flyoutanchor-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [FlyoutAnchor element](flyoutanchor-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [Gallery element](gallery-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [Gallery element](gallery-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [GalleryButton element](gallerybutton-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [GalleryButton element](gallerybutton-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [Group element](group-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [Group element](group-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [Groups element](groups-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [Groups element](groups-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [GroupTemplate element](grouptemplate-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [GroupTemplate element](grouptemplate-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [InsertTable element](inserttable-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [InsertTable element](inserttable-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [Label element](label-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [Label element](label-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [MaxSize element](maxsize-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [MaxSize element](maxsize-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [Menu element](menu-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [Menu element](menu-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [MenuSection element](menusection-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [MenuSection element](menusection-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [MRUSplitButton element](mrusplitbutton-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [MRUSplitButton element](mrusplitbutton-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [Properties element](properties-element-clientwebpartdefinition-complextypeapphostwebfeatures.htm)
+-   [Properties element](properties-element-clientwebpartdefinition-complextypeapphostwebfeatures.md)
 
--   [Properties element](properties-element-featuretemplatereference-complextypeapphostwebfeatures.htm)
+-   [Properties element](properties-element-featuretemplatereference-complextypeapphostwebfeatures.md)
 
--   [Properties element](properties-element-featuredefinition-complextypeapphostwebfeatures.htm)
+-   [Properties element](properties-element-featuredefinition-complextypeapphostwebfeatures.md)
 
--   [Property element](property-element-featurepropertydefinitions-complextypeapphostwebfeatures.htm)
+-   [Property element](property-element-featurepropertydefinitions-complextypeapphostwebfeatures.md)
 
--   [Property element](property-element-clientwebpartproperties-complextypeapphostwebfeatures.htm)
+-   [Property element](property-element-clientwebpartproperties-complextypeapphostwebfeatures.md)
 
--   [Property element](property-element-propertybagdefinition-complextypeapphostwebfeatures.htm)
+-   [Property element](property-element-propertybagdefinition-complextypeapphostwebfeatures.md)
 
--   [QAT element](qat-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [QAT element](qat-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [Ribbon element](ribbon-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [Ribbon element](ribbon-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [Scale element](scale-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [Scale element](scale-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [Scaling element](scaling-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [Scaling element](scaling-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [Spinner element](spinner-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [Spinner element](spinner-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [SplitButton element](splitbutton-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [SplitButton element](splitbutton-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [Tab element](tab-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [Tab element](tab-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [Tabs element](tabs-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [Tabs element](tabs-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [TextBox element](textbox-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [TextBox element](textbox-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [ToggleButton element](togglebutton-element-commanduidefinitiontype-complextypeapphostwebfeatures.htm)
+-   [ToggleButton element](togglebutton-element-commanduidefinitiontype-complextypeapphostwebfeatures.md)
 
--   [UpgradeActions element](upgradeactions-element-featuredefinition-complextypeapphostwebfeatures.htm)
+-   [UpgradeActions element](upgradeactions-element-featuredefinition-complextypeapphostwebfeatures.md)
 
--   [UrlAction element](urlaction-element-customactiondefinition-complextypeapphostwebfeatures.htm)
+-   [UrlAction element](urlaction-element-customactiondefinition-complextypeapphostwebfeatures.md)
 
--   [VersionRange element](versionrange-element-upgradeactionsdefinition-complextypeapphostwebfeatures.htm)
+-   [VersionRange element](versionrange-element-upgradeactionsdefinition-complextypeapphostwebfeatures.md)
 
 
 

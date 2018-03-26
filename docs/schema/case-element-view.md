@@ -62,8 +62,8 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-Used inside a [Switch](switch-element-view.htm)
-statement or [FieldSwitch](fieldswitch-element-view.htm)
+Used inside a [Switch](switch-element-view.md)
+statement or [FieldSwitch](fieldswitch-element-view.md)
 statement to perform a comparison.
 
 <span codelanguage="other"></span>
@@ -148,9 +148,9 @@ statement to perform a comparison.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-Within a [Switch](switch-element-view.htm) statement,
+Within a [Switch](switch-element-view.md) statement,
 the **Case** element is often used in
-conjunction with the [Default](default-element-view.htm)
+conjunction with the [Default](default-element-view.md)
 element. If the criteria set by the **Case**
 value proves false, then the default value is implemented.
 

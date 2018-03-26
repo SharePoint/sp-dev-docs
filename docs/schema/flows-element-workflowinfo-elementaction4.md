@@ -53,9 +53,9 @@ JavaScript
 </tbody>
 </table>
 
-Container element for individual <span sdata="link">[Flow element (Flows
+Container element for individual [Flow element (Flows
 element) (WorkflowInfo element)
-(Action4)](flow-element-flows-elementworkflowinfo-elementaction4.htm)</span> elements.
+(Action4)](flow-element-flows-elementworkflowinfo-elementaction4.md)</span> elements.
 
 **Last modified:** March 09, 2015
 

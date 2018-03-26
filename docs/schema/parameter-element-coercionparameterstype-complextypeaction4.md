@@ -57,7 +57,7 @@ Used to describe hidden input parameters for an activity that is used as
 the coercion. Also defines additional input values to be always added
 internally when an activity used as a coercion is inserted into the
 workflow. The Parameter element is of type
-[coercionParametersType](coercionparameterstype-complextype-action4.htm).
+[coercionParametersType](coercionparameterstype-complextype-action4.md).
 
 **Last modified:** March 09, 2015
 

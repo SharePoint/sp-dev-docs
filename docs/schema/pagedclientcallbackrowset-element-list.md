@@ -64,7 +64,7 @@ SharePoint Online | SharePoint Server 2013
 
 Defines user interface elements to display for accessing subsequent
 pages when the number of rows returned in a view surpasses the limit set
-by the [RowLimit](rowlimit-element-list.htm) element.
+by the [RowLimit](rowlimit-element-list.md) element.
 
 <table>
 <colgroup>

@@ -173,16 +173,16 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Reference
 
-<span sdata="link">[TodayISO
-Element](todayiso-element.htm)</span>
+[TodayISO
+Element](todayiso-element.md)</span>
 
 #### Other resources
 
-<span sdata="link">[Month Element (Regional
-Settings)](month-element-regional-settings.htm)</span>
+[Month Element (Regional
+Settings)](month-element-regional-settings.md)</span>
 
-<span sdata="link">[Today Element
-(Query)](today-element-query.htm)</span>
+[Today Element
+(Query)](today-element-query.md)</span>
 
 
 

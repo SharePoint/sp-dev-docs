@@ -158,8 +158,8 @@ class="keyword">Schema</span> and therefore has no parent element.
 
 #### Concepts
 
-<span sdata="link">[DeploymentUserGroupMap
-Schema](deploymentusergroupmap-schema.htm)</span>
+[DeploymentUserGroupMap
+Schema](deploymentusergroupmap-schema.md)</span>
 
 
 

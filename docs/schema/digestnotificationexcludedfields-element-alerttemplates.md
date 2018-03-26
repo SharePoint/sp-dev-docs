@@ -107,7 +107,7 @@ None
 
 For an example of how this element is used, see <span
 sdata="link">[Properties Element
-(AlertTemplates)](properties-element-alerttemplates.htm)</span>.
+(AlertTemplates)](properties-element-alerttemplates.md)</span>.
 
 
 

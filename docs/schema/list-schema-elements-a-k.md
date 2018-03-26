@@ -62,57 +62,57 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-[Aggregations](aggregations-element-list.htm)
+[Aggregations](aggregations-element-list.md)
 
-[AllUsersWebPart](alluserswebpart-element-list.htm)
+[AllUsersWebPart](alluserswebpart-element-list.md)
 
-[ArrayOfProperty](arrayofproperty-element-list.htm)
+[ArrayOfProperty](arrayofproperty-element-list.md)
 
-[CHOICE](choice-element-list.htm)
+[CHOICE](choice-element-list.md)
 
-[CHOICES](choices-element-list.htm)
+[CHOICES](choices-element-list.md)
 
-[ContentTypeRef](contenttyperef-element-list.htm)
+[ContentTypeRef](contenttyperef-element-list.md)
 
-[ContentTypes](contenttypes-element-list.htm)
+[ContentTypes](contenttypes-element-list.md)
 
-[Customization](customization-element-list.htm)
+[Customization](customization-element-list.md)
 
-[Default (Field)](default-element-listfield.htm)
+[Default (Field)](default-element-listfield.md)
 
-[Default (Form)](default-element-listform.htm)
+[Default (Form)](default-element-listform.md)
 
-[DefaultDescription](defaultdescription-element-list.htm)
+[DefaultDescription](defaultdescription-element-list.md)
 
-[DefaultFormula](defaultformula-element-list.htm)
+[DefaultFormula](defaultformula-element-list.md)
 
-[DefaultFormulaValue](defaultformulavalue-element-list.htm)
+[DefaultFormulaValue](defaultformulavalue-element-list.md)
 
-[DisplayBidiPattern](displaybidipattern-element-list.htm)
+[DisplayBidiPattern](displaybidipattern-element-list.md)
 
-[DisplayPattern](displaypattern-element-list.htm)
+[DisplayPattern](displaypattern-element-list.md)
 
-[DocumentLibraryTemplate](documentlibrarytemplate-element-list.htm)
+[DocumentLibraryTemplate](documentlibrarytemplate-element-list.md)
 
-[Field](field-element-list.htm)
+[Field](field-element-list.md)
 
 [FieldRef](http://msdn.microsoft.com/library/1fec6304-0e3a-455a-a94d-df3232bb77a7(Office.15).aspx)
 
-[FieldRefs](fieldrefs-element-list.htm)
+[FieldRefs](fieldrefs-element-list.md)
 
-[Fields](fields-element-list.htm)
+[Fields](fields-element-list.md)
 
-[Filter](filter-element-list.htm)
+[Filter](filter-element-list.md)
 
-[Folder](folder-element-list.htm)
+[Folder](folder-element-list.md)
 
-[Form](form-element-list.htm)
+[Form](form-element-list.md)
 
-[Forms](forms-element-list.htm)
+[Forms](forms-element-list.md)
 
-[Formula](formula-element-list.htm)
+[Formula](formula-element-list.md)
 
-[FormulaDisplayNames](formuladisplaynames-element-list.htm)
+[FormulaDisplayNames](formuladisplaynames-element-list.md)
 
 
 

@@ -76,35 +76,35 @@ instantiate and run the workflow, such as the following:
 
 The structure of the workflow definition schema is as follows:
 
-\<<span sdata="link">[Elements Element
-(Workflow)](elements-element-workflow.htm)</span>\>
+\<[Elements Element
+(Workflow)](elements-element-workflow.md)</span>\>
 
-   \<<span sdata="link">[Workflow Element
-(Elements)](workflow-element-elements.htm)</span>\>
+   \<[Workflow Element
+(Elements)](workflow-element-elements.md)</span>\>
 
-      \<<span sdata="link">[Categories Element
-(Workflow)](categories-element-workflow.htm)</span>\>
+      \<[Categories Element
+(Workflow)](categories-element-workflow.md)</span>\>
 
-      \<<span sdata="link">[AssociationData Element
-(Workflow)](associationdata-element-workflow.htm)</span>\>
+      \<[AssociationData Element
+(Workflow)](associationdata-element-workflow.md)</span>\>
 
-      \<<span sdata="link">[MetaData Element
-(Workflow)](metadata-element-workflow.htm)</span>\>
+      \<[MetaData Element
+(Workflow)](metadata-element-workflow.md)</span>\>
 
-         \<<span sdata="link">[InitiationType Element
-(Workflow)](initiationtype-element-workflow.htm)</span>\>
+         \<[InitiationType Element
+(Workflow)](initiationtype-element-workflow.md)</span>\>
 
-         \<<span sdata="link">[Modification\_GUID\_Name Element
-(Workflow)](modification_guid_name-element-workflow.htm)</span>\>
+         \<[Modification\_GUID\_Name Element
+(Workflow)](modification_guid_name-element-workflow.md)</span>\>
 
-         \<<span sdata="link">[StatusPageUrl Element
-(Workflow)](statuspageurl-element-workflow.htm)</span>\>
+         \<[StatusPageUrl Element
+(Workflow)](statuspageurl-element-workflow.md)</span>\>
 
-         \<<span sdata="link">[ExtendedStatusColumnValues Element
-(Workflow)](extendedstatuscolumnvalues-element-workflow.htm)</span>\>
+         \<[ExtendedStatusColumnValues Element
+(Workflow)](extendedstatuscolumnvalues-element-workflow.md)</span>\>
 
-            \<<span sdata="link">[StatusColumnValue Element
-(Workflow)](statuscolumnvalue-element-workflow.htm)</span>\>
+            \<[StatusColumnValue Element
+(Workflow)](statuscolumnvalue-element-workflow.md)</span>\>
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -59,7 +59,7 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Provides values for the **Type** attribute on
-the [Requirement Element](requirement-element-deploymentrequirements.htm). The
+the [Requirement Element](requirement-element-deploymentrequirements.md). The
 value specifies the object type of the specified deployment requirement.
 
 <span codelanguage="other"></span>
@@ -120,13 +120,13 @@ value specifies the object type of the specified deployment requirement.
 
 #### Concepts
 
-<span sdata="link">[DeploymentRequirements
-Schema](deploymentrequirements-schema.htm)</span>
+[DeploymentRequirements
+Schema](deploymentrequirements-schema.md)</span>
 
 #### Other resources
 
-<span sdata="link">[Requirement Element
-(DeploymentRequirements)](requirement-element-deploymentrequirements.htm)</span>
+[Requirement Element
+(DeploymentRequirements)](requirement-element-deploymentrequirements.md)</span>
 
 
 

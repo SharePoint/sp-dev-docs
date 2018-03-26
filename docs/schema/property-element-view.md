@@ -63,7 +63,7 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Returns the property from the context of the current
-[ForEach](foreach-element-view.htm) loop. When a view or
+[ForEach](foreach-element-view.md) loop. When a view or
 field is selected, the **Property** element can
 be used to retrieve a specific attribute value from it.
 
@@ -239,11 +239,11 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-<span sdata="link">[ListProperty Element
-(View)](listproperty-element-view.htm)</span>
+[ListProperty Element
+(View)](listproperty-element-view.md)</span>
 
-<span sdata="link">[ProjectProperty Element
-(View)](projectproperty-element-view.htm)</span>
+[ProjectProperty Element
+(View)](projectproperty-element-view.md)</span>
 
 
 

@@ -65,10 +65,10 @@ SharePoint Online | SharePoint Server 2013
 Specifies that classes are generated only for content types that are
 explicitly represented by ContentType elements.
 
-<span sdata="link">[Web
-(SPMetal)](web-spmetal.htm)</span>  
-  <span sdata="link">[ExcludeOtherContentTypes
-(SPMetal)](excludeothercontenttypes-spmetal.htm)</span>  
+[Web
+(SPMetal)](web-spmetal.md)</span>  
+  [ExcludeOtherContentTypes
+(SPMetal)](excludeothercontenttypes-spmetal.md)</span>  
 <span codelanguage="VisualBasic"></span>
 <table>
 <colgroup>

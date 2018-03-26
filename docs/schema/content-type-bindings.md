@@ -70,11 +70,11 @@ cannot be modified directly.
 Following is a list of the elements in the Content Type Binding
 Definition Schema.
 
-\<<span sdata="link">[Elements Element
-(ContentTypeBinding)](elements-element-contenttypebinding.htm)</span>\>
+\<[Elements Element
+(ContentTypeBinding)](elements-element-contenttypebinding.md)</span>\>
 
-   \<<span sdata="link">[ContentTypeBinding Element
-(ContentTypeBinding)](contenttypebinding-element-contenttypebinding.htm)</span>\>
+   \<[ContentTypeBinding Element
+(ContentTypeBinding)](contenttypebinding-element-contenttypebinding.md)</span>\>
 
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -101,16 +101,16 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Concepts
 
-<span sdata="link">[Content Type
-Definitions](content-type-definitions.htm)</span>
+[Content Type
+Definitions](content-type-definitions.md)</span>
 
 #### Other resources
 
-<span sdata="link">[Elements Element
-(ContentTypeBinding)](elements-element-contenttypebinding.htm)</span>
+[Elements Element
+(ContentTypeBinding)](elements-element-contenttypebinding.md)</span>
 
-<span sdata="link">[ContentTypeBinding Element
-(ContentTypeBinding)](contenttypebinding-element-contenttypebinding.htm)</span>
+[ContentTypeBinding Element
+(ContentTypeBinding)](contenttypebinding-element-contenttypebinding.md)</span>
 
 
 

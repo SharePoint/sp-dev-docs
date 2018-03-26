@@ -170,7 +170,7 @@ Provides batch processing of commands within HTTP protocol.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The **Batch** element must contain at least one
-[Method](method-element-view.htm) element. The <span
+[Method](method-element-view.md) element. The <span
 class="keyword">Batch</span> element allows the client application to
 post more than one command to the server at a time.
 

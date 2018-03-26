@@ -62,57 +62,57 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-[MapToAll](maptoall-element-view.htm)
+[MapToAll](maptoall-element-view.md)
 
-[MapToControl](maptocontrol-element-view.htm)
+[MapToControl](maptocontrol-element-view.md)
 
-[MapToIcon](maptoicon-element-view.htm)
+[MapToIcon](maptoicon-element-view.md)
 
-[MeetingProperty](meetingproperty-element-view.htm)
+[MeetingProperty](meetingproperty-element-view.md)
 
-[Method](method-element-view.htm)
+[Method](method-element-view.md)
 
-[More](more-element-view.htm)
+[More](more-element-view.md)
 
-[PageUrl](pageurl-element-view.htm)
+[PageUrl](pageurl-element-view.md)
 
-[ProjectProperty](projectproperty-element-view.htm)
+[ProjectProperty](projectproperty-element-view.md)
 
-[ProjectedFields](projectedfields-element-view.htm)
+[ProjectedFields](projectedfields-element-view.md)
 
-[Property](property-element-view.htm)
+[Property](property-element-view.md)
 
-[RightsChoices](rightschoices-element-view.htm)
+[RightsChoices](rightschoices-element-view.md)
 
-[RightsGroup](rightsgroup-element-view.htm)
+[RightsGroup](rightsgroup-element-view.md)
 
-[ScriptQuote](scriptquote-element-view.htm)
+[ScriptQuote](scriptquote-element-view.md)
 
-[SelectionOptions](selectionoptions-element-view.htm)
+[SelectionOptions](selectionoptions-element-view.md)
 
-[ServerProperty](serverproperty-element-view.htm)
+[ServerProperty](serverproperty-element-view.md)
 
-[SetList](setlist-element-view.htm)
+[SetList](setlist-element-view.md)
 
-[SetVar](setvar-element-view.htm)
+[SetVar](setvar-element-view.md)
 
-[Switch](switch-element-view.htm)
+[Switch](switch-element-view.md)
 
-[Text](text-element-view.htm)
+[Text](text-element-view.md)
 
-[Then](then-element-view.htm)
+[Then](then-element-view.md)
 
-[ThreadStamp](threadstamp-element-view.htm)
+[ThreadStamp](threadstamp-element-view.md)
 
-[URL](url-element-view.htm)
+[URL](url-element-view.md)
 
-[UrlBaseName](urlbasename-element-view.htm)
+[UrlBaseName](urlbasename-element-view.md)
 
-[UrlDirName](urldirname-element-view.htm)
+[UrlDirName](urldirname-element-view.md)
 
-[UserID](userid-element-view.htm)
+[UserID](userid-element-view.md)
 
-[WebQueryInfo](webqueryinfo-element-view.htm)
+[WebQueryInfo](webqueryinfo-element-view.md)
 
 
 

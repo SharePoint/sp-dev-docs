@@ -62,7 +62,7 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-Contains a collection of [Row](row-element-site.htm)
+Contains a collection of [Row](row-element-site.md)
 elements specifying default data for lists.
 
 <span codelanguage="other"></span>
@@ -150,7 +150,7 @@ elements specifying default data for lists.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The **Rows** element is used within the
-[Data](data-element-site.htm) element of a list
+[Data](data-element-site.md) element of a list
 definition to provide a set of default data when a list is instantiated
 during site provisioning.
 

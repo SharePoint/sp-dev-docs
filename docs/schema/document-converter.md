@@ -67,11 +67,11 @@ Following is a list of the elements in the Document Converter Definition
 Schema. Click the element name for detailed information about that
 element.
 
-\<<span sdata="link">[Elements Element (Document
-Converter)](elements-element-document-converter.htm)</span>\>
+\<[Elements Element (Document
+Converter)](elements-element-document-converter.md)</span>\>
 
-   \<<span sdata="link">[DocumentConverter Element (Document
-Converter)](documentconverter-element-document-converter.htm)</span>\>
+   \<[DocumentConverter Element (Document
+Converter)](documentconverter-element-document-converter.md)</span>\>
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -108,11 +108,11 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 [Working with
 Features](http://msdn.microsoft.com/library/ce5f5ce5-1429-439e-9261-2c4ba9788cc1(Office.15).aspx)
 
-<span sdata="link">[Elements Element (Document
-Converter)](elements-element-document-converter.htm)</span>
+[Elements Element (Document
+Converter)](elements-element-document-converter.md)</span>
 
-<span sdata="link">[DocumentConverter Element (Document
-Converter)](documentconverter-element-document-converter.htm)</span>
+[DocumentConverter Element (Document
+Converter)](documentconverter-element-document-converter.md)</span>
 
 
 

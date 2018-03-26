@@ -888,15 +888,15 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Concepts
 
-<span sdata="link">[Field
-Definitions](field-definitions.htm)</span>
+[Field
+Definitions](field-definitions.md)</span>
 
 #### Other resources
 
 [Columns](http://msdn.microsoft.com/library/0402b3a7-3665-43df-9769-85e3aa1b2432(Office.15).aspx)
 
-<span sdata="link">[Field Element
-(List)](field-element-list.htm)</span>
+[Field Element
+(List)](field-element-list.md)</span>
 
 
 

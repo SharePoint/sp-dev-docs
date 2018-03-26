@@ -77,61 +77,61 @@ SharePoint Server 2013
 </tbody>
 </table>
 
--   [App element](app-element-sharepoint-add-in-manifest.htm)
+-   [App element](app-element-sharepoint-add-in-manifest.md)
 
 -   [AppPermissionRequest
-    element](apppermissionrequest-element-apppermissionrequestsdefinition-complextypesharepoi.htm)
+    element](apppermissionrequest-element-apppermissionrequestsdefinition-complextypesharepoi.md)
 
 -   [AppPermissionRequests
-    element](apppermissionrequests-element-appdefinition-complextypesharepoint-add-in-manifes.htm)
+    element](apppermissionrequests-element-appdefinition-complextypesharepoint-add-in-manifes.md)
 
--   [AppPrerequisite element](appprerequisite-element-appprerequisitecollection-complextypesharepoint-add-in-m.htm)
+-   [AppPrerequisite element](appprerequisite-element-appprerequisitecollection-complextypesharepoint-add-in-m.md)
 
--   [AppPrerequisites element](appprerequisites-element-appdefinition-complextypesharepoint-add-in-manifest.htm)
+-   [AppPrerequisites element](appprerequisites-element-appdefinition-complextypesharepoint-add-in-manifest.md)
 
--   [AppPrincipal element](appprincipal-element-appdefinition-complextypesharepoint-add-in-manifest.htm)
+-   [AppPrincipal element](appprincipal-element-appdefinition-complextypesharepoint-add-in-manifest.md)
 
 -   [AutoDeployedWebApplication
-    element](autodeployedwebapplication-element-appprincipaldefinition-complextypesharepoint.htm)
+    element](autodeployedwebapplication-element-appprincipaldefinition-complextypesharepoint.md)
 
--   [DebugInfo element](debuginfo-element-autodeployedwebapplication-elementappprincipaldefinition-compl.htm)
+-   [DebugInfo element](debuginfo-element-autodeployedwebapplication-elementappprincipaldefinition-compl.md)
 
 -   [InstalledEventEndpoint
-    element](installedeventendpoint-element-propertiesdefinition-complextypesharepoint-add-in.htm)
+    element](installedeventendpoint-element-propertiesdefinition-complextypesharepoint-add-in.md)
 
--   [Internal element](internal-element-appprincipaldefinition-complextypesharepoint-add-in-manifest.htm)
+-   [Internal element](internal-element-appprincipaldefinition-complextypesharepoint-add-in-manifest.md)
 
--   [Properties element](properties-element-appdefinition-complextypesharepoint-add-in-manifest.htm)
+-   [Properties element](properties-element-appdefinition-complextypesharepoint-add-in-manifest.md)
 
--   [Property element](property-element-apppermissionrequestdefinition-complextypesharepoint-add-in-man.htm)
+-   [Property element](property-element-apppermissionrequestdefinition-complextypesharepoint-add-in-man.md)
 
--   [RemoteEndpoint element](remoteendpoint-element-remoteendpointsdefinition-complextypesharepoint-add-in-ma.htm)
+-   [RemoteEndpoint element](remoteendpoint-element-remoteendpointsdefinition-complextypesharepoint-add-in-ma.md)
 
--   [RemoteEndpoints element](remoteendpoints-element-appdefinition-complextypesharepoint-add-in-manifest.htm)
+-   [RemoteEndpoints element](remoteendpoints-element-appdefinition-complextypesharepoint-add-in-manifest.md)
 
 -   [RemoteWebApplication
-    element](remotewebapplication-element-appprincipaldefinition-complextypesharepoint-add-in.htm)
+    element](remotewebapplication-element-appprincipaldefinition-complextypesharepoint-add-in.md)
 
--   [SettingsPage element](settingspage-element-propertiesdefinition-complextypesharepoint-add-in-manifest.htm)
+-   [SettingsPage element](settingspage-element-propertiesdefinition-complextypesharepoint-add-in-manifest.md)
 
--   [StartPage element](startpage-element-propertiesdefinition-complextypesharepoint-add-in-manifest.htm)
+-   [StartPage element](startpage-element-propertiesdefinition-complextypesharepoint-add-in-manifest.md)
 
 -   [SupportedLanguages
-    element](supportedlanguages-element-propertiesdefinition-complextypesharepoint-add-in-man.htm)
+    element](supportedlanguages-element-propertiesdefinition-complextypesharepoint-add-in-man.md)
 
--   [SupportedLocale element](supportedlocale-element-supportedlocalesdefinition-complextypesharepoint-add-in.htm)
+-   [SupportedLocale element](supportedlocale-element-supportedlocalesdefinition-complextypesharepoint-add-in.md)
 
--   [SupportedLocales element](supportedlocales-element-propertiesdefinition-complextypesharepoint-add-in-manif.htm)
+-   [SupportedLocales element](supportedlocales-element-propertiesdefinition-complextypesharepoint-add-in-manif.md)
 
--   [Title element](title-element-propertiesdefinition-complextypesharepoint-add-in-manifest.htm)
+-   [Title element](title-element-propertiesdefinition-complextypesharepoint-add-in-manifest.md)
 
 -   [UninstallingEventEndpoint
-    element](uninstallingeventendpoint-element-propertiesdefinition-complextypesharepoint-add.htm)
+    element](uninstallingeventendpoint-element-propertiesdefinition-complextypesharepoint-add.md)
 
 -   [UpgradedEventEndpoint
-    element](upgradedeventendpoint-element-propertiesdefinition-complextypesharepoint-add-in.htm)
+    element](upgradedeventendpoint-element-propertiesdefinition-complextypesharepoint-add-in.md)
 
--   [WebTemplate element](webtemplate-element-propertiesdefinition-complextypesharepoint-add-in-manifest.htm)
+-   [WebTemplate element](webtemplate-element-propertiesdefinition-complextypesharepoint-add-in-manifest.md)
 
 
 

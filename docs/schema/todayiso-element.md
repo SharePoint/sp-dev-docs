@@ -182,11 +182,11 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-[Month](month-element-regional-settings.htm)
+[Month](month-element-regional-settings.md)
 
-[Now](now-element-query.htm)
+[Now](now-element-query.md)
 
-[Today](today-element-query.htm)
+[Today](today-element-query.md)
 
 
 

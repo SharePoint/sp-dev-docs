@@ -130,7 +130,7 @@ element declarations.
 
 For an example of how this element is used, see <span
 sdata="link">[Delegate
-Controls](delegate-controls.htm)</span>.
+Controls](delegate-controls.md)</span>.
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

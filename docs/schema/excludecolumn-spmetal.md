@@ -64,12 +64,12 @@ SharePoint Online | SharePoint Server 2013
 
 Specifies that a column is not included in SPMetal code generation.
 
-<span sdata="link">[Web
-(SPMetal)](web-spmetal.htm)</span>  
-  <span sdata="link">[ContentType
-(SPMetal)](contenttype-spmetal.htm)</span>  
-    <span sdata="link">[ExcludeColumn
-(SPMetal)](excludecolumn-spmetal.htm)</span>  
+[Web
+(SPMetal)](web-spmetal.md)</span>  
+  [ContentType
+(SPMetal)](contenttype-spmetal.md)</span>  
+    [ExcludeColumn
+(SPMetal)](excludecolumn-spmetal.md)</span>  
 <span codelanguage="xmlLang"></span>
 <table>
 <colgroup>

@@ -53,9 +53,9 @@ JavaScript
 </tbody>
 </table>
 
-A property of the parent <span sdata="link">[Block element (Blocks
+A property of the parent [Block element (Blocks
 element) (WorkflowInfo element)
-(Action4)](block-element-blocks-elementworkflowinfo-elementaction4.htm)</span> element as
+(Action4)](block-element-blocks-elementworkflowinfo-elementaction4.md)</span> element as
 rendered in the workflow visual designer user interface.
 
 **Last modified:** March 09, 2015

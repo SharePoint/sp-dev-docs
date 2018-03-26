@@ -58,8 +58,8 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-See <span sdata="link">[FilterDescriptors Element in Method (BDCMetadata
-Schema)](filterdescriptors-element-in-method-bdcmetadata-schema.htm)</span> for more
+See [FilterDescriptors Element in Method (BDCMetadata
+Schema)](filterdescriptors-element-in-method-bdcmetadata-schema.md)</span> for more
 details.
 
 Namespace:

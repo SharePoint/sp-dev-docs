@@ -64,10 +64,10 @@ SharePoint Online | SharePoint Server 2013
 
 Specifies that no class is generated for a content type.
 
-<span sdata="link">[Web
-(SPMetal)](web-spmetal.htm)</span>  
-  <span sdata="link">[ExcludeContentType
-(SPMetal)](excludecontenttype-spmetal.htm)</span>  
+[Web
+(SPMetal)](web-spmetal.md)</span>  
+  [ExcludeContentType
+(SPMetal)](excludecontenttype-spmetal.md)</span>  
 <span codelanguage="xmlLang"></span>
 <table>
 <colgroup>

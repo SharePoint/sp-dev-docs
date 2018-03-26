@@ -198,7 +198,7 @@ Returns the value of a specified column in the List of Lists table.
 
 The following example defines the link to display when the number of
 items exceeds the limit set for the page through the
-[RowLimit](rowlimit-element-list.htm) element. The
+[RowLimit](rowlimit-element-list.md) element. The
 example uses the **ListProperty** element to
 return the URL for the default view.
 
@@ -226,11 +226,11 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-<span sdata="link">[Property Element
-(View)](property-element-view.htm)</span>
+[Property Element
+(View)](property-element-view.md)</span>
 
-<span sdata="link">[SetList Element
-(View)](setlist-element-view.htm)</span>
+[SetList Element
+(View)](setlist-element-view.md)</span>
 
 
 

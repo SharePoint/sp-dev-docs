@@ -75,119 +75,119 @@ nameDOCS-GREATERTHANDOCS-GREATERTHAN XML schema.
 </table>
 
 -   [ClientWebPartDefinition
-    complexType](clientwebpartdefinition-complextype-apphostwebfeatures.htm)
+    complexType](clientwebpartdefinition-complextype-apphostwebfeatures.md)
 
 -   [ClientWebPartDefinitionContent
-    complexType](clientwebpartdefinitioncontent-complextype-apphostwebfeatures.htm)
+    complexType](clientwebpartdefinitioncontent-complextype-apphostwebfeatures.md)
 
 -   [ClientWebPartDefinitionContentType
-    simpleType](clientwebpartdefinitioncontenttype-simpletype-apphostwebfeatures.htm)
+    simpleType](clientwebpartdefinitioncontenttype-simpletype-apphostwebfeatures.md)
 
 -   [ClientWebPartEnumItem
-    complexType](clientwebpartenumitem-complextype-apphostwebfeatures.htm)
+    complexType](clientwebpartenumitem-complextype-apphostwebfeatures.md)
 
 -   [ClientWebPartEnumItems
-    complexType](clientwebpartenumitems-complextype-apphostwebfeatures.htm)
+    complexType](clientwebpartenumitems-complextype-apphostwebfeatures.md)
 
 -   [ClientWebPartProperties
-    complexType](clientwebpartproperties-complextype-apphostwebfeatures.htm)
+    complexType](clientwebpartproperties-complextype-apphostwebfeatures.md)
 
 -   [ClientWebPartProperty
-    complexType](clientwebpartproperty-complextype-apphostwebfeatures.htm)
+    complexType](clientwebpartproperty-complextype-apphostwebfeatures.md)
 
 -   [ClientWebPartPropertyType
-    simpleType](clientwebpartpropertytype-simpletype-apphostwebfeatures.htm)
+    simpleType](clientwebpartpropertytype-simpletype-apphostwebfeatures.md)
 
 -   [CommandUIDefinitionsType
-    complexType](commanduidefinitionstype-complextype-apphostwebfeatures.htm)
+    complexType](commanduidefinitionstype-complextype-apphostwebfeatures.md)
 
 -   [CommandUIDefinitionType
-    complexType](commanduidefinitiontype-complextype-apphostwebfeatures.htm)
+    complexType](commanduidefinitiontype-complextype-apphostwebfeatures.md)
 
 -   [CommandUIExtensionType
-    complexType](commanduiextensiontype-complextype-apphostwebfeatures.htm)
+    complexType](commanduiextensiontype-complextype-apphostwebfeatures.md)
 
 -   [CommandUIHandlersType
-    complexType](commanduihandlerstype-complextype-apphostwebfeatures.htm)
+    complexType](commanduihandlerstype-complextype-apphostwebfeatures.md)
 
 -   [CommandUIHandlerType
-    complexType](commanduihandlertype-complextype-apphostwebfeatures.htm)
+    complexType](commanduihandlertype-complextype-apphostwebfeatures.md)
 
 -   [CustomActionDefinition
-    complexType](customactiondefinition-complextype-apphostwebfeatures.htm)
+    complexType](customactiondefinition-complextype-apphostwebfeatures.md)
 
 -   [CustomActionDefinitions
-    complexType](customactiondefinitions-complextype-apphostwebfeatures.htm)
+    complexType](customactiondefinitions-complextype-apphostwebfeatures.md)
 
 -   [CustomActionLocations
-    simpleType](customactionlocations-simpletype-apphostwebfeatures.htm)
+    simpleType](customactionlocations-simpletype-apphostwebfeatures.md)
 
 -   [CustomActionRegistrationType
-    simpleType](customactionregistrationtype-simpletype-apphostwebfeatures.htm)
+    simpleType](customactionregistrationtype-simpletype-apphostwebfeatures.md)
 
 -   [ElementDefinitionCollection
-    complexType](elementdefinitioncollection-complextype-apphostwebfeatures.htm)
+    complexType](elementdefinitioncollection-complextype-apphostwebfeatures.md)
 
 -   [ElementManifestReference
-    complexType](elementmanifestreference-complextype-apphostwebfeatures.htm)
+    complexType](elementmanifestreference-complextype-apphostwebfeatures.md)
 
 -   [ElementManifestReferences
-    complexType](elementmanifestreferences-complextype-apphostwebfeatures.htm)
+    complexType](elementmanifestreferences-complextype-apphostwebfeatures.md)
 
 -   [FeatureActivationDependencyDefinition
-    complexType](featureactivationdependencydefinition-complextype-apphostwebfeatures.htm)
+    complexType](featureactivationdependencydefinition-complextype-apphostwebfeatures.md)
 
 -   [FeatureActivationDependencyDefinitions
-    complexType](featureactivationdependencydefinitions-complextype-apphostwebfeatures.htm)
+    complexType](featureactivationdependencydefinitions-complextype-apphostwebfeatures.md)
 
 -   [FeatureDefinition
-    complexType](featuredefinition-complextype-apphostwebfeatures.htm)
+    complexType](featuredefinition-complextype-apphostwebfeatures.md)
 
 -   [FeaturePropertyDefinition
-    complexType](featurepropertydefinition-complextype-apphostwebfeatures.htm)
+    complexType](featurepropertydefinition-complextype-apphostwebfeatures.md)
 
 -   [FeaturePropertyDefinitions
-    complexType](featurepropertydefinitions-complextype-apphostwebfeatures.htm)
+    complexType](featurepropertydefinitions-complextype-apphostwebfeatures.md)
 
--   [FeatureScope simpleType](featurescope-simpletype-apphostwebfeatures.htm)
+-   [FeatureScope simpleType](featurescope-simpletype-apphostwebfeatures.md)
 
 -   [FeatureTemplateReference
-    complexType](featuretemplatereference-complextype-apphostwebfeatures.htm)
+    complexType](featuretemplatereference-complextype-apphostwebfeatures.md)
 
 -   [FeatureTemplateReferences
-    complexType](featuretemplatereferences-complextype-apphostwebfeatures.htm)
+    complexType](featuretemplatereferences-complextype-apphostwebfeatures.md)
 
 -   [FeatureVersion
-    simpleType](featureversion-simpletype-apphostwebfeatures.htm)
+    simpleType](featureversion-simpletype-apphostwebfeatures.md)
 
 -   [PropertyBagDefinition
-    complexType](propertybagdefinition-complextype-apphostwebfeatures.htm)
+    complexType](propertybagdefinition-complextype-apphostwebfeatures.md)
 
 -   [PropertyBagParentTypeDefinition
-    simpleType](propertybagparenttypedefinition-simpletype-apphostwebfeatures.htm)
+    simpleType](propertybagparenttypedefinition-simpletype-apphostwebfeatures.md)
 
 -   [PropertyBagType
-    simpleType](propertybagtype-simpletype-apphostwebfeatures.htm)
+    simpleType](propertybagtype-simpletype-apphostwebfeatures.md)
 
 -   [PropertyValueAttributeDefinition
-    complexType](propertyvalueattributedefinition-complextype-apphostwebfeatures.htm)
+    complexType](propertyvalueattributedefinition-complextype-apphostwebfeatures.md)
 
 -   [SimplePropertyDefinition
-    complexType](simplepropertydefinition-complextype-apphostwebfeatures.htm)
+    complexType](simplepropertydefinition-complextype-apphostwebfeatures.md)
 
--   [UIVersion simpleType](uiversion-simpletype-apphostwebfeatures.htm)
+-   [UIVersion simpleType](uiversion-simpletype-apphostwebfeatures.md)
 
 -   [UpgradeActionsDefinition
-    complexType](upgradeactionsdefinition-complextype-apphostwebfeatures.htm)
+    complexType](upgradeactionsdefinition-complextype-apphostwebfeatures.md)
 
 -   [UrlActionDefinition
-    complexType](urlactiondefinition-complextype-apphostwebfeatures.htm)
+    complexType](urlactiondefinition-complextype-apphostwebfeatures.md)
 
 -   [VersionRangeDefinition
-    complexType](versionrangedefinition-complextype-apphostwebfeatures.htm)
+    complexType](versionrangedefinition-complextype-apphostwebfeatures.md)
 
 -   [WebPartPersonalizationScope
-    simpleType](webpartpersonalizationscope-simpletype-apphostwebfeatures.htm)
+    simpleType](webpartpersonalizationscope-simpletype-apphostwebfeatures.md)
 
 
 

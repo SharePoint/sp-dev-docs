@@ -63,8 +63,8 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Contains a CAML expression that is evaluated to determine the course of
-action for a [Switch](switch-element-view.htm) or
-[FieldSwitch](fieldswitch-element-view.htm) statement. The
+action for a [Switch](switch-element-view.md) or
+[FieldSwitch](fieldswitch-element-view.md) statement. The
 expressions can be any set of CAML elements that render text, or they
 can be other conditionals.
 
@@ -171,11 +171,11 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-<span sdata="link">[Expr1 Element
-(View)](expr1-element-view.htm)</span>
+[Expr1 Element
+(View)](expr1-element-view.md)</span>
 
-<span sdata="link">[Expr2 Element
-(View)](expr2-element-view.htm)</span>
+[Expr2 Element
+(View)](expr2-element-view.md)</span>
 
 
 

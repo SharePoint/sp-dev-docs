@@ -144,7 +144,7 @@ Specifies a file that contains a definition for a feature element.
 
 For an example of how this element is used, see <span
 sdata="link">[Feature.xml
-Files](feature-xml-files.htm)</span>.
+Files](feature-xml-files.md)</span>.
 
 
 

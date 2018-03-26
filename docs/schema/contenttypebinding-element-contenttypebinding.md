@@ -165,8 +165,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Concepts
 
-<span sdata="link">[Content Type
-Bindings](content-type-bindings.htm)</span>
+[Content Type
+Bindings](content-type-bindings.md)</span>
 
 
 

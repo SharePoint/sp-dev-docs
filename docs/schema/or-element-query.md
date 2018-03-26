@@ -62,7 +62,7 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-Used within the [Where](where-element-query.htm)
+Used within the [Where](where-element-query.md)
 element to group filters in a query.
 
 <span codelanguage="other"></span>
@@ -147,7 +147,7 @@ element to group filters in a query.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 This element can be nested inside other **Or**
-and [And](and-element-query.htm) elements. The server
+and [And](and-element-query.md) elements. The server
 supports unlimited complicated queries. However, any given <span
 class="keyword">Or</span> element can have only two disjuncts; that is,
 only two child elements. If you need to disjoin three or more

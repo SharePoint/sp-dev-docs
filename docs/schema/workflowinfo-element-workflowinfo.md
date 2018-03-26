@@ -144,7 +144,7 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Concepts
 
-[Actions Schema Reference](actions-schema-reference-workflowinfo.htm)
+[Actions Schema Reference](actions-schema-reference-workflowinfo.md)
 
 #### Other resources
 

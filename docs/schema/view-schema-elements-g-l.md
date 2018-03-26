@@ -62,53 +62,53 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-[GetFileExtension](getfileextension-element-view.htm)
+[GetFileExtension](getfileextension-element-view.md)
 
-[GetVar](getvar-element-view.htm)
+[GetVar](getvar-element-view.md)
 
-[GroupByFooter](groupbyfooter-element-list.htm)
+[GroupByFooter](groupbyfooter-element-list.md)
 
-[GroupByHeader](groupbyheader-element-list.htm)
+[GroupByHeader](groupbyheader-element-list.md)
 
-[HTML](html-element-view.htm)
+[HTML](html-element-view.md)
 
-[HttpHost](httphost-element-view.htm)
+[HttpHost](httphost-element-view.md)
 
-[HttpPath](httppath-element-view.htm)
+[HttpPath](httppath-element-view.md)
 
-[HttpVDir](httpvdir-element-view.htm)
+[HttpVDir](httpvdir-element-view.md)
 
-[ID](id-element-view.htm)
+[ID](id-element-view.md)
 
-[Identity](identity-element-view.htm)
+[Identity](identity-element-view.md)
 
-[IfEqual](ifequal-element-view.htm)
+[IfEqual](ifequal-element-view.md)
 
-[IfHasRights](ifhasrights-element-view.htm)
+[IfHasRights](ifhasrights-element-view.md)
 
-[IfNeg](ifneg-element-view.htm)
+[IfNeg](ifneg-element-view.md)
 
-[IfNew](ifnew-element-view.htm)
+[IfNew](ifnew-element-view.md)
 
-[IfSubString](ifsubstring-element-view.htm)
+[IfSubString](ifsubstring-element-view.md)
 
-[Join](join-element-view.htm)
+[Join](join-element-view.md)
 
-[Joins](joins-element-view.htm)
+[Joins](joins-element-view.md)
 
-[Length](length-element-view.htm)
+[Length](length-element-view.md)
 
-[Limit](limit-element-view.htm)
+[Limit](limit-element-view.md)
 
-[List](list-element-view.htm)
+[List](list-element-view.md)
 
-[ListProperty](listproperty-element-view.htm)
+[ListProperty](listproperty-element-view.md)
 
-[ListUrl](listurl-element-view.htm)
+[ListUrl](listurl-element-view.md)
 
-[ListUrlDir](listurldir-element-view.htm)
+[ListUrlDir](listurldir-element-view.md)
 
-[LookupColumn](lookupcolumn-element-view.htm)
+[LookupColumn](lookupcolumn-element-view.md)
 
 
 

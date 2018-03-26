@@ -110,8 +110,8 @@ schema file.
 
 #### Concepts
 
-<span sdata="link">[Content migration
-schemas](content-migration-schemas.htm)</span>
+[Content migration
+schemas](content-migration-schemas.md)</span>
 
 
 

@@ -155,11 +155,11 @@ New forms for a list.
 
 #### Other resources
 
-[ListFormBody](listformbody-element-list.htm)
+[ListFormBody](listformbody-element-list.md)
 
-[ListFormButtons](listformbuttons-element-list.htm)
+[ListFormButtons](listformbuttons-element-list.md)
 
-[ListFormClosing](listformclosing-element-list.htm)
+[ListFormClosing](listformclosing-element-list.md)
 
 
 

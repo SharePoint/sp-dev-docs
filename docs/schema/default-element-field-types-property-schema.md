@@ -136,8 +136,8 @@ Represents the default value of a property of a custom field type.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-See <span sdata="link">[PropertySchema Element (Field
-Types)](propertyschema-element-field-types.htm)</span> for a
+See [PropertySchema Element (Field
+Types)](propertyschema-element-field-types.md)</span> for a
 description of this element in context.
 
 

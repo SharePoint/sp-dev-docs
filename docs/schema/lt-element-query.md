@@ -64,8 +64,8 @@ SharePoint Online | SharePoint Server 2013
 
 Arithmetic operator that means "less than" and is used in queries in
 views. This element is used similarly to the
-[Eq](eq-element-query.htm) and
-[Gt](gt-element-query.htm) elements.
+[Eq](eq-element-query.md) and
+[Gt](gt-element-query.md) elements.
 
 <span codelanguage="other"></span>
 <table>
@@ -192,17 +192,17 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-<span sdata="link">[Eq Element
-(Query)](eq-element-query.htm)</span>
+[Eq Element
+(Query)](eq-element-query.md)</span>
 
-<span sdata="link">[Geq Element
-(Query)](geq-element-query.htm)</span>
+[Geq Element
+(Query)](geq-element-query.md)</span>
 
-<span sdata="link">[Gt Element
-(Query)](gt-element-query.htm)</span>
+[Gt Element
+(Query)](gt-element-query.md)</span>
 
-<span sdata="link">[Neq Element
-(Query)](neq-element-query.htm)</span>
+[Neq Element
+(Query)](neq-element-query.md)</span>
 
 
 

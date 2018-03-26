@@ -153,7 +153,7 @@ property.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The **FieldSwitch** element and the
-[Switch](switch-element-view.htm) element use identical
+[Switch](switch-element-view.md) element use identical
 syntax, but a **FieldSwitch** element is
 evaluated only once per request for each view in which it applies to a
 view body or for each field in which it applies to a display pattern.
@@ -164,9 +164,9 @@ property (for example, whether rich text formatting is enabled) whose
 value does not change during the rendering process.
 
 A **FieldSwitch** element contains an
-[Expr](expr-element-view.htm) element, any number of
-[Case](case-element-view.htm) elements, and a
-[Default](default-element-view.htm) element. The value
+[Expr](expr-element-view.md) element, any number of
+[Case](case-element-view.md) elements, and a
+[Default](default-element-view.md) element. The value
 of the **Expr** element is compared against the
 **Value** attribute of each <span
 class="keyword">Case</span> element. When a match is found, the <span
@@ -218,8 +218,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-<span sdata="link">[Switch Element
-(View)](switch-element-view.htm)</span>
+[Switch Element
+(View)](switch-element-view.md)</span>
 
 
 

@@ -159,8 +159,8 @@ USAGE
 The **SPDocumentLibrary** type extends the
 <span sdata="cer" target="T:Microsoft.SharePoint.SPList"><span
 class="nolink">SPList</span></span> type. For more information, see
-<span sdata="link">[List Element
-(DeploymentManifest)](list-element-deploymentmanifest.htm)</span>.
+[List Element
+(DeploymentManifest)](list-element-deploymentmanifest.md)</span>.
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -176,13 +176,13 @@ class="nolink">SPDocumentLibrary</span></span>
 
 #### Concepts
 
-<span sdata="link">[DeploymentManifest
-Schema](deploymentmanifest-schema.htm)</span>
+[DeploymentManifest
+Schema](deploymentmanifest-schema.md)</span>
 
 #### Other resources
 
-<span sdata="link">[List Element
-(DeploymentManifest)](list-element-deploymentmanifest.htm)</span>
+[List Element
+(DeploymentManifest)](list-element-deploymentmanifest.md)</span>
 
 
 

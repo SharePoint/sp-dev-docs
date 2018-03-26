@@ -115,20 +115,20 @@ Objects of type **Unknown** are typically Web
 object types. This enumeration provides values for the <span
 class="keyword">DocType</span> attribute on the <span
 sdata="link">[ListItem Element (DeploymentManifest -
-SPGenericObject)](listitem-element-deploymentmanifestspgenericobject.htm)</span>.
+SPGenericObject)](listitem-element-deploymentmanifestspgenericobject.md)</span>.
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #### Concepts
 
-<span sdata="link">[DeploymentManifest
-Schema](deploymentmanifest-schema.htm)</span>
+[DeploymentManifest
+Schema](deploymentmanifest-schema.md)</span>
 
 #### Other resources
 
-<span sdata="link">[ListItem Element (DeploymentManifest -
-SPGenericObject)](listitem-element-deploymentmanifestspgenericobject.htm)</span>
+[ListItem Element (DeploymentManifest -
+SPGenericObject)](listitem-element-deploymentmanifestspgenericobject.md)</span>
 
 
 

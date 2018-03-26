@@ -79,8 +79,8 @@ SharePoint Server 2013
 </table>
 
 When the child element of the
-[AppPrincipal](appprincipal-element-appdefinition-complextypesharepoint-add-in-manifest.htm) element is not
-[Internal](internal-element-appprincipaldefinition-complextypesharepoint-add-in-manifest.htm), the page specified
+[AppPrincipal](appprincipal-element-appdefinition-complextypesharepoint-add-in-manifest.md) element is not
+[Internal](internal-element-appprincipaldefinition-complextypesharepoint-add-in-manifest.md), the page specified
 in the **StartPage** element must be of a file
 type that supports the POST verb (in addition to GET) so that the OAuth
 context token can be sent on the body of the request. Common file types

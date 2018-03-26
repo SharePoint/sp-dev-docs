@@ -149,8 +149,8 @@ element.
 
 #### Concepts
 
-<span sdata="link">[DeploymentRootObjectMap
-Schema](deploymentrootobjectmap-schema.htm)</span>
+[DeploymentRootObjectMap
+Schema](deploymentrootobjectmap-schema.md)</span>
 
 
 

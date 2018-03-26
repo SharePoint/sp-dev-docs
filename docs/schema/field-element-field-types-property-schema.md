@@ -166,8 +166,8 @@ column based on the field type is created.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-See <span sdata="link">[PropertySchema Element (Field
-Types)](propertyschema-element-field-types.htm)</span> for a detailed
+See [PropertySchema Element (Field
+Types)](propertyschema-element-field-types.md)</span> for a detailed
 description and example of this element in context.
 
 

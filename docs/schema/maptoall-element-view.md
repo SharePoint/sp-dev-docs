@@ -63,9 +63,9 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Combines the functionality of the
-[MapToIcon](maptoicon-element-view.htm),
-[MapToText](maptotext-element.htm), and
-[MapToControl](maptocontrol-element-view.htm) elements.
+[MapToIcon](maptoicon-element-view.md),
+[MapToText](maptotext-element.md), and
+[MapToControl](maptocontrol-element-view.md) elements.
 
 <span codelanguage="other"></span>
 <table>

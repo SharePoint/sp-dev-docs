@@ -62,9 +62,9 @@ XML schema.
 **Applies to**: SharePoint Server 2013
 
 -   [ArrayOfSource
-    complexType](arrayofsource-complextype-sps15xsdsearchset1.htm)
+    complexType](arrayofsource-complextype-sps15xsdsearchset1.md)
 
--   [Source complexType](source-complextype-sps15xsdsearchset1.htm)
+-   [Source complexType](source-complextype-sps15xsdsearchset1.md)
 
 
 

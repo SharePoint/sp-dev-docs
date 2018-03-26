@@ -167,8 +167,8 @@ USAGE
 
 #### Concepts
 
-<span sdata="link">[DeploymentRequirements
-Schema](deploymentrequirements-schema.htm)</span>
+[DeploymentRequirements
+Schema](deploymentrequirements-schema.md)</span>
 
 
 

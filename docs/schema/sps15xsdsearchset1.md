@@ -65,14 +65,14 @@ or validate search configurations.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
--   <span sdata="link">[Schema map
-    (SPS15XSDSearchSet1)](schema-map-sps15xsdsearchset1.htm)</span>
+-   [Schema map
+    (SPS15XSDSearchSet1)](schema-map-sps15xsdsearchset1.md)</span>
 
--   <span sdata="link">[Elements
-    (SPS15XSDSearchSet1)](elements-sps15xsdsearchset1.htm)</span>
+-   [Elements
+    (SPS15XSDSearchSet1)](elements-sps15xsdsearchset1.md)</span>
 
--   <span sdata="link">[Types
-    (SPS15XSDSearchSet1)](types-sps15xsdsearchset1.htm)</span>
+-   [Types
+    (SPS15XSDSearchSet1)](types-sps15xsdsearchset1.md)</span>
 
 
 

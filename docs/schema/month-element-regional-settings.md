@@ -152,8 +152,8 @@ it returns the current month.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-See <span sdata="link">[StandardTime Element (Regional
-Settings)](standardtime-element-regional-settings.htm)</span> for an
+See [StandardTime Element (Regional
+Settings)](standardtime-element-regional-settings.md)</span> for an
 example that shows how to use the **Month**
 element.
 
@@ -162,14 +162,14 @@ element.
 
 #### Other resources
 
-<span sdata="link">[Date Element (Regional
-Settings)](date-element-regional-settings.htm)</span>
+[Date Element (Regional
+Settings)](date-element-regional-settings.md)</span>
 
-<span sdata="link">[Day Element (Regional
-Settings)](day-element-regional-settings.htm)</span>
+[Day Element (Regional
+Settings)](day-element-regional-settings.md)</span>
 
-<span sdata="link">[Hour Element (Regional
-Settings)](hour-element-regional-settings.htm)</span>
+[Hour Element (Regional
+Settings)](hour-element-regional-settings.md)</span>
 
 
 

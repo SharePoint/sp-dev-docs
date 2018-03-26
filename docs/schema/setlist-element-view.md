@@ -165,7 +165,7 @@ class="code">\<SetList\>Announcements\</SetList\></span> would be the
 same as <span class="code">\<SetList Name="Announcements"/\></span>.
 
 The **SetList** element is often a child to a
-[Method](method-element-view.htm) element used in batch
+[Method](method-element-view.md) element used in batch
 processing of requests.
 
 
@@ -208,8 +208,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-<span sdata="link">[List Element
-(List)](list-element-list.htm)</span>
+[List Element
+(List)](list-element-list.md)</span>
 
 
 

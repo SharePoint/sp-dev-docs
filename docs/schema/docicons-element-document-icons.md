@@ -150,7 +150,7 @@ document library icons.
 
 In general, there are two ways that mapping can be performed: by
 extension (for example, the
-[ByExtension](byextension-element-document-icons.htm) element can be
+[ByExtension](byextension-element-document-icons.md) element can be
 used to map .xls to the appropriate icon for a Microsoft Excel file) and
 by ProgID.
 

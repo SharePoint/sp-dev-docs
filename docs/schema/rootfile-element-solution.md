@@ -152,8 +152,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 For more information about using shared localization resources, see the
 description of the **DefaultResourceFile**
-attribute in <span sdata="link">[Feature Element
-(Feature)](feature-element-feature.htm)</span>.
+attribute in [Feature Element
+(Feature)](feature-element-feature.md)</span>.
 
 Localization resources used by extensions to the Central Administration
 user interface are located in the %ProgramFiles%\\Common

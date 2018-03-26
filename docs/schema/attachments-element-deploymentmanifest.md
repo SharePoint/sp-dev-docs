@@ -150,13 +150,13 @@ class="nolink">SPAttachmentCollection</span></span>
 
 #### Concepts
 
-<span sdata="link">[DeploymentManifest
-Schema](deploymentmanifest-schema.htm)</span>
+[DeploymentManifest
+Schema](deploymentmanifest-schema.md)</span>
 
 #### Other resources
 
-<span sdata="link">[Attachment Element
-(DeploymentManifest)](attachment-element-deploymentmanifest.htm)</span>
+[Attachment Element
+(DeploymentManifest)](attachment-element-deploymentmanifest.md)</span>
 
 
 

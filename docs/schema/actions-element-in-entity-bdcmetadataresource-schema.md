@@ -58,8 +58,8 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-See <span sdata="link">[Actions Element in Entity (BDCMetadata
-Schema)](actions-element-in-entity-bdcmetadata-schema.htm)</span> for more
+See [Actions Element in Entity (BDCMetadata
+Schema)](actions-element-in-entity-bdcmetadata-schema.md)</span> for more
 details.
 
 Namespace:

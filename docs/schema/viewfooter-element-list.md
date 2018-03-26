@@ -197,11 +197,11 @@ Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17(Of
 [XMLDefinition and CAML View
 Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922(Office.15).aspx)
 
-<span sdata="link">[ViewBody Element
-(List)](viewbody-element-list.htm)</span>
+[ViewBody Element
+(List)](viewbody-element-list.md)</span>
 
-<span sdata="link">[ViewHeader Element
-(List)](viewheader-element-list.htm)</span>
+[ViewHeader Element
+(List)](viewheader-element-list.md)</span>
 
 
 

@@ -139,8 +139,8 @@ USAGE SYNTAX
 
 #### Other resources
 
-<span sdata="link">[Aggregations Element (DeploymentManifest -
-SPWebPart)](aggregations-element-deploymentmanifestspwebpart.htm)</span>
+[Aggregations Element (DeploymentManifest -
+SPWebPart)](aggregations-element-deploymentmanifestspwebpart.md)</span>
 
 
 

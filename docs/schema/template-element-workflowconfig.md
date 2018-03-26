@@ -210,8 +210,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Concepts
 
-<span sdata="link">[Workflow configuration schema
-reference](workflow-configuration-schema-reference.htm)</span>
+[Workflow configuration schema
+reference](workflow-configuration-schema-reference.md)</span>
 
 #### Other resources
 

@@ -61,38 +61,38 @@ class="keyword">SPS15XSDSearchSet5</span> XML schema.
 **Applies to**: SharePoint Server 2013
 
 -   [AlertChangeType
-    simpleType](alertchangetype-simpletype-sps15xsdsearchset5.htm)
+    simpleType](alertchangetype-simpletype-sps15xsdsearchset5.md)
 
 -   [ArrayOfReorderingRule
-    complexType](arrayofreorderingrule-complextype-sps15xsdsearchset5.htm)
+    complexType](arrayofreorderingrule-complextype-sps15xsdsearchset5.md)
 
 -   [KeywordInclusion
-    simpleType](keywordinclusion-simpletype-sps15xsdsearchset5.htm)
+    simpleType](keywordinclusion-simpletype-sps15xsdsearchset5.md)
 
 -   [QueryAuthenticationType
-    simpleType](queryauthenticationtype-simpletype-sps15xsdsearchset5.htm)
+    simpleType](queryauthenticationtype-simpletype-sps15xsdsearchset5.md)
 
--   [QueryHint simpleType](queryhint-simpletype-sps15xsdsearchset5.htm)
+-   [QueryHint simpleType](queryhint-simpletype-sps15xsdsearchset5.md)
 
 -   [ReorderingRule
-    complexType](reorderingrule-complextype-sps15xsdsearchset5.htm)
+    complexType](reorderingrule-complextype-sps15xsdsearchset5.md)
 
 -   [ReorderingRuleMatchType
-    simpleType](reorderingrulematchtype-simpletype-sps15xsdsearchset5.htm)
+    simpleType](reorderingrulematchtype-simpletype-sps15xsdsearchset5.md)
 
--   [ResubmitFlag simpleType](resubmitflag-simpletype-sps15xsdsearchset5.htm)
+-   [ResubmitFlag simpleType](resubmitflag-simpletype-sps15xsdsearchset5.md)
 
--   [ResultType simpleType](resulttype-simpletype-sps15xsdsearchset5.htm)
+-   [ResultType simpleType](resulttype-simpletype-sps15xsdsearchset5.md)
 
 -   [SearchProvider
-    simpleType](searchprovider-simpletype-sps15xsdsearchset5.htm)
+    simpleType](searchprovider-simpletype-sps15xsdsearchset5.md)
 
--   [SimilarType simpleType](similartype-simpletype-sps15xsdsearchset5.htm)
+-   [SimilarType simpleType](similartype-simpletype-sps15xsdsearchset5.md)
 
--   [SortDirection simpleType](sortdirection-simpletype-sps15xsdsearchset5.htm)
+-   [SortDirection simpleType](sortdirection-simpletype-sps15xsdsearchset5.md)
 
 -   [SpellcheckMode
-    simpleType](spellcheckmode-simpletype-sps15xsdsearchset5.htm)
+    simpleType](spellcheckmode-simpletype-sps15xsdsearchset5.md)
 
 
 

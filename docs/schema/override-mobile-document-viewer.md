@@ -64,14 +64,14 @@ Specifies an alternative URL to which a mobile device is redirected when
 it can use an alternative viewer to open the files of the specified
 type.
 
-<span sdata="link">[MobileDocViewers (Mobile Document
-Viewer)](mobiledocviewers-mobile-document-viewer.htm)</span>  
-  <span sdata="link">[MobileDocViewer (Mobile Document
-Viewer)](mobiledocviewer-mobile-document-viewer.htm)</span>  
-    <span sdata="link">[BrowserCondition (Mobile Document
-Viewer)](browsercondition-mobile-document-viewer.htm)</span>  
-      <span sdata="link">[Override (Mobile Document
-Viewer)](override-mobile-document-viewer.htm)</span>  
+[MobileDocViewers (Mobile Document
+Viewer)](mobiledocviewers-mobile-document-viewer.md)</span>  
+  [MobileDocViewer (Mobile Document
+Viewer)](mobiledocviewer-mobile-document-viewer.md)</span>  
+    [BrowserCondition (Mobile Document
+Viewer)](browsercondition-mobile-document-viewer.md)</span>  
+      [Override (Mobile Document
+Viewer)](override-mobile-document-viewer.md)</span>  
 <span codelanguage="other"></span>
 <table>
 <colgroup>

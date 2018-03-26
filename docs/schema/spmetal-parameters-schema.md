@@ -76,35 +76,35 @@ and
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[Web](web-spmetal.htm)
+[Web](web-spmetal.md)
 
-   [ContentType](contenttype-spmetal.htm)
+   [ContentType](contenttype-spmetal.md)
 
-     [Column](column-spmetal.htm)
+     [Column](column-spmetal.md)
 
-     [ExcludeColumn](excludecolumn-spmetal.htm)
+     [ExcludeColumn](excludecolumn-spmetal.md)
 
-     [ExcludeOtherColumns](excludeothercolumns-spmetal.htm)
+     [ExcludeOtherColumns](excludeothercolumns-spmetal.md)
 
-     [IncludeHiddenColumns](includehiddencolumns-spmetal.htm)
+     [IncludeHiddenColumns](includehiddencolumns-spmetal.md)
 
-   [ExcludeContentType](excludecontenttype-spmetal.htm)
+   [ExcludeContentType](excludecontenttype-spmetal.md)
 
-   [ExcludeOtherContentTypes](excludeothercontenttypes-spmetal.htm)
+   [ExcludeOtherContentTypes](excludeothercontenttypes-spmetal.md)
 
-   [IncludeHiddenContentTypes](includehiddencontenttypes-spmetal.htm)
+   [IncludeHiddenContentTypes](includehiddencontenttypes-spmetal.md)
 
-   [List](list-spmetal.htm)
+   [List](list-spmetal.md)
 
-     [ContentType](contenttype-spmetal.htm)
+     [ContentType](contenttype-spmetal.md)
 
-     [ExcludeContentType](excludecontenttype-spmetal.htm)
+     [ExcludeContentType](excludecontenttype-spmetal.md)
 
-   [ExcludeList](excludelist-spmetal.htm)
+   [ExcludeList](excludelist-spmetal.md)
 
-   [ExcludeOtherLists](excludeotherlists-spmetal.htm)
+   [ExcludeOtherLists](excludeotherlists-spmetal.md)
 
-   [IncludeHiddenLists](includehiddenlists-spmetal.htm)
+   [IncludeHiddenLists](includehiddenlists-spmetal.md)
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

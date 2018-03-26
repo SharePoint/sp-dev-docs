@@ -278,10 +278,10 @@ definition. It is used in
 files to define a configuration of lists, modules, and features that are
 used to create a site from the site definition configuration. In a <span
 class="code">WebTemp\*.xml</span> file, this element is contained within
-a [Template](template-element-site.htm) element that
+a [Template](template-element-site.md) element that
 specifies the site definition. In <span class="code">Onet.xml</span>,
 this element is contained within a
-[Configurations](configurations-element-site.htm) element that
+[Configurations](configurations-element-site.md) element that
 specifies the configurations whose lists are defined within the <span
 class="code">Onet.xml</span>.
 
@@ -300,7 +300,7 @@ template](http://msdn.microsoft.com/library/de422674-5cc4-4880-b08e-b1e955419d30
 as distinct from a [site definition
 configuration](http://msdn.microsoft.com/library/0d76bceb-7ffa-444a-98cf-0fa1d60a1aa3(Office.15).aspx),
 is defined with a
-[WebTemplate](webtemplate-element-web-template.htm) element in a
+[WebTemplate](webtemplate-element-web-template.md) element in a
 <span class="code">elements.xml</span> file inside a .wsp file that is
 stored in the SharePoint database. Also in the .wsp file is an <span
 class="code">Onet.xml</span> file with a single <span

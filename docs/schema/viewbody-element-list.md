@@ -165,7 +165,7 @@ Defines how the rows of data in a view are rendered.
 A fields enumeration works differently in the <span
 class="keyword">ViewBody</span> element for a view than it does
 elsewhere in CAML. In a view body, the enumeration loops through the
-fields in the [ViewFields](viewfields-element-list.htm)
+fields in the [ViewFields](viewfields-element-list.md)
 collection, instead of through all the fields in the list.
 
 
@@ -214,14 +214,14 @@ Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17(Of
 [XMLDefinition and CAML View
 Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922(Office.15).aspx)
 
-<span sdata="link">[ViewEmpty Element
-(List)](viewempty-element-list.htm)</span>
+[ViewEmpty Element
+(List)](viewempty-element-list.md)</span>
 
-<span sdata="link">[ViewFooter Element
-(List)](viewfooter-element-list.htm)</span>
+[ViewFooter Element
+(List)](viewfooter-element-list.md)</span>
 
-<span sdata="link">[ViewHeader Element
-(List)](viewheader-element-list.htm)</span>
+[ViewHeader Element
+(List)](viewheader-element-list.md)</span>
 
 
 

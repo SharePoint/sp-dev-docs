@@ -78,15 +78,15 @@ Definition](http://msdn.microsoft.com/library/09503b28-df8c-4e22-b4f8-7272fd1dac
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[DocIcons](docicons-element-document-icons.htm)
+[DocIcons](docicons-element-document-icons.md)
 
-  [ByProgID](byprogid-element-document-icons.htm)
+  [ByProgID](byprogid-element-document-icons.md)
 
-    [Mapping](mapping-element-document-icons.htm)
+    [Mapping](mapping-element-document-icons.md)
 
-  [ByExtension](byextension-element-document-icons.htm)
+  [ByExtension](byextension-element-document-icons.md)
 
-    [Mapping](mapping-element-document-icons.htm)
+    [Mapping](mapping-element-document-icons.md)
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

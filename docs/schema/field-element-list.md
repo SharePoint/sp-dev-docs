@@ -819,20 +819,20 @@ class="keyword">Field (List - Definition)</span> element within a
 file. To create a custom field definition as a pluggable Feature that is
 based on a default field type and that can be reused across Web sites
 and lists within a site collection, use the [Field
-(Field)](field-element-field.htm) element to define a
+(Field)](field-element-field.md) element to define a
 custom [site
 column](http://msdn.microsoft.com/library/0402b3a7-3665-43df-9769-85e3aa1b2432(Office.15).aspx).
 To create a [custom field
 type](http://msdn.microsoft.com/library/1345b345-226d-443a-918f-af123a3c7b13(Office.15).aspx)
 that implements a custom class for special data validation and field
 rendering, use the [Field (Field
-Types)](field-element-field-types.htm) element.
+Types)](field-element-field-types.md) element.
 
 Fields can be referenced from View definitions as well as from
 expressions in computed field rendering elements. Use the [Field
-(View)](field-element-view.htm) element to return a
+(View)](field-element-view.md) element to return a
 formatted field value for display within a view, and use the [Column
-(View)](column-element-view.htm) element to return the
+(View)](column-element-view.md) element to return the
 raw data value of the field. The syntax for referencing a field is as
 follows:
 
@@ -969,37 +969,37 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Reference
 
-<span sdata="link">[Field Element
-(Field)](field-element-field.htm)</span>
+[Field Element
+(Field)](field-element-field.md)</span>
 
 #### Other resources
 
-<span sdata="link">[Column Element
-(View)](column-element-view.htm)</span>
+[Column Element
+(View)](column-element-view.md)</span>
 
-<span sdata="link">[Column2 Element
-(View)](column2-element-view.htm)</span>
+[Column2 Element
+(View)](column2-element-view.md)</span>
 
-<span sdata="link">[Field Element (Field
-Types)](field-element-field-types.htm)</span>
+[Field Element (Field
+Types)](field-element-field-types.md)</span>
 
-<span sdata="link">[Field Element (Field Types Property
-Schema)](field-element-field-types-property-schema.htm)</span>
+[Field Element (Field Types Property
+Schema)](field-element-field-types-property-schema.md)</span>
 
-<span sdata="link">[Field Element (DeploymentManifest -
-DeploymentFieldTemplate)](field-element-deploymentmanifestdeploymentfieldtemplate.htm)</span>
+[Field Element (DeploymentManifest -
+DeploymentFieldTemplate)](field-element-deploymentmanifestdeploymentfieldtemplate.md)</span>
 
-<span sdata="link">[Field Element (DeploymentManifest -
-FieldDataCollection)](field-element-deploymentmanifestfielddatacollection.htm)</span>
+[Field Element (DeploymentManifest -
+FieldDataCollection)](field-element-deploymentmanifestfielddatacollection.md)</span>
 
-<span sdata="link">[Field Element (DeploymentManifest -
-SPFieldCollection)](field-element-deploymentmanifestspfieldcollection.htm)</span>
+[Field Element (DeploymentManifest -
+SPFieldCollection)](field-element-deploymentmanifestspfieldcollection.md)</span>
 
-<span sdata="link">[Field Element
-(View)](field-element-view.htm)</span>
+[Field Element
+(View)](field-element-view.md)</span>
 
-<span sdata="link">[Field Element
-(Site)](field-element-site.htm)</span>
+[Field Element
+(Site)](field-element-site.md)</span>
 
 
 

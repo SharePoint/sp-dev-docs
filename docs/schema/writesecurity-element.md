@@ -150,8 +150,8 @@ following values:
 
 4 — Write no items (read-only list).
 
-See <span sdata="link">[Security
-Element](security-element.htm)</span> for an example
+See [Security
+Element](security-element.md)</span> for an example
 that shows how to use the **WriteSecurity**
 element.
 
@@ -160,11 +160,11 @@ element.
 
 #### Reference
 
-<span sdata="link">[ReadSecurity
-Element](readsecurity-element.htm)</span>
+[ReadSecurity
+Element](readsecurity-element.md)</span>
 
-<span sdata="link">[SchemaSecurity
-Element](schemasecurity-element.htm)</span>
+[SchemaSecurity
+Element](schemasecurity-element.md)</span>
 
 
 

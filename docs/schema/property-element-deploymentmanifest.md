@@ -182,8 +182,8 @@ target="T:System.Collections.DictionaryEntry">[DictionaryEntry](http://msdn2.mic
 
 #### Concepts
 
-<span sdata="link">[DeploymentManifest
-Schema](deploymentmanifest-schema.htm)</span>
+[DeploymentManifest
+Schema](deploymentmanifest-schema.md)</span>
 
 
 

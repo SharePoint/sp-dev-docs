@@ -144,8 +144,8 @@ Contains a property value for a delegate control.
 
 When the control is instantiated, the properties specified in this
 element are applied to the control. For an example of how this element
-is used, see <span sdata="link">[Delegate
-Controls](delegate-controls.htm)</span>.
+is used, see [Delegate
+Controls](delegate-controls.md)</span>.
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

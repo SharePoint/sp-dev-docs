@@ -67,10 +67,10 @@ that are created from it. This element is in an <span
 class="code">elements.xml</span> file that is inside the .wsp file that
 packages a web template.
 
-<span sdata="link">[Elements (Web
-Template)](elements-web-template.htm)</span>  
-  <span sdata="link">[WebTemplate Element (Web
-Template)](webtemplate-element-web-template.htm)</span>  
+[Elements (Web
+Template)](elements-web-template.md)</span>  
+  [WebTemplate Element (Web
+Template)](webtemplate-element-web-template.md)</span>  
 <span codelanguage="other"></span>
 <table>
 <colgroup>
@@ -266,8 +266,8 @@ None
 
 #### Parent elements
 
-<span sdata="link">[Elements (Web
-Template)](elements-web-template.htm)</span>
+[Elements (Web
+Template)](elements-web-template.md)</span>
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

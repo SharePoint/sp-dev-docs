@@ -79,61 +79,61 @@ server extensions\\15\\TEMPLATE\\XML.
 The following list maps relationships between elements in the Server
 ribbon schema definition.
 
-\<[CommandUI](commandui-element.htm)\>
+\<[CommandUI](commandui-element.md)\>
 
-    \<[Ribbon](ribbon-element.htm)\>
+    \<[Ribbon](ribbon-element.md)\>
 
-        \<[Tabs](tabs-element.htm)\>
+        \<[Tabs](tabs-element.md)\>
 
-            \<[Tab](tab-element.htm)\>
+            \<[Tab](tab-element.md)\>
 
-                \<[Groups](groups-element.htm)\>
+                \<[Groups](groups-element.md)\>
 
-                    \<[Group](group-element-ribbon.htm)\>
+                    \<[Group](group-element-ribbon.md)\>
 
-                        \<[Controls](controls-element-group.htm)\>
+                        \<[Controls](controls-element-group.md)\>
 
-                            \<[Button](button-element.htm)/\>
+                            \<[Button](button-element.md)/\>
 
-                            \<[CheckBox](checkbox-element.htm)/\>
+                            \<[CheckBox](checkbox-element.md)/\>
 
-                            \<[ComboBox](combobox-element.htm)\>
+                            \<[ComboBox](combobox-element.md)\>
 
-                                \<[Menu](menu-element.htm)\>
+                                \<[Menu](menu-element.md)\>
 
-                                    \<[MenuSection](menusection-element.htm)\>
+                                    \<[MenuSection](menusection-element.md)\>
 
-                                        \<[Controls](controls-element-menusection.htm)\>
+                                        \<[Controls](controls-element-menusection.md)\>
 
-                                            \<[Button](button-element.htm)/\>
+                                            \<[Button](button-element.md)/\>
 
-                                            \<[ColorPicker](colorpicker-element.htm)\>
+                                            \<[ColorPicker](colorpicker-element.md)\>
 
-                                                \<[Colors](colors-element.htm)\>
+                                                \<[Colors](colors-element.md)\>
 
-                                                    \<[Color](color-element.htm)/\>
+                                                    \<[Color](color-element.md)/\>
 
                                                 DOCS-LESSTHANColors/DOCS-GREATERTHAN
 
                                             DOCS-LESSTHAN/ColorPickerDOCS-GREATERTHAN
 
-                                            \<[FlyoutAnchor](flyoutanchor-element.htm)\>
+                                            \<[FlyoutAnchor](flyoutanchor-element.md)\>
 
-                                                \<[Menu](menu-element.htm)\>
+                                                \<[Menu](menu-element.md)\>
 
                                                 DOCS-LESSTHAN/MenuDOCS-GREATERTHAN
 
                                             DOCS-LESSTHAN/FlyoutAnchorDOCS-GREATERTHAN
 
-                                            \<[InsertTable](inserttable-element.htm)/\>
+                                            \<[InsertTable](inserttable-element.md)/\>
 
-                                            \<[ToggleButton](togglebutton-element.htm)/\>
+                                            \<[ToggleButton](togglebutton-element.md)/\>
 
                                         DOCS-LESSTHAN/ControlsDOCS-GREATERTHAN
 
-                                        \<[Gallery](gallery-element.htm)\>
+                                        \<[Gallery](gallery-element.md)\>
 
-                                            \<[GalleryButton](gallerybutton-element-group.htm)/\>
+                                            \<[GalleryButton](gallerybutton-element-group.md)/\>
 
                                         DOCS-LESSTHAN/GalleryDOCS-GREATERTHAN
 
@@ -143,53 +143,53 @@ ribbon schema definition.
 
                             DOCS-LESSTHAN/ComboBoxDOCS-GREATERTHAN
 
-                            \<[DropDown](dropdown-element.htm)\>
+                            \<[DropDown](dropdown-element.md)\>
 
-                                \<[Menu](menu-element.htm)\>
+                                \<[Menu](menu-element.md)\>
 
                                 DOCS-LESSTHAN/MenuDOCS-GREATERTHAN
 
                             DOCS-LESSTHAN/DropDownDOCS-GREATERTHAN
 
-                            \<[FlyoutAnchor](flyoutanchor-element.htm)\>
+                            \<[FlyoutAnchor](flyoutanchor-element.md)\>
 
-                                \<[Menu](menu-element.htm)\>
+                                \<[Menu](menu-element.md)\>
 
                                 DOCS-LESSTHAN/MenuDOCS-GREATERTHAN
 
                             DOCS-LESSTHAN/FlyoutAnchorDOCS-GREATERTHAN
 
-                            \<[GalleryButton](gallerybutton-element-group.htm)/\>
+                            \<[GalleryButton](gallerybutton-element-group.md)/\>
 
-                            \<[Label](label-element.htm)/\>
+                            \<[Label](label-element.md)/\>
 
-                            \<[MRUSplitButton](mrusplitbutton-element.htm)\>
+                            \<[MRUSplitButton](mrusplitbutton-element.md)\>
 
-                                \<[Menu](menu-element.htm)\>
+                                \<[Menu](menu-element.md)\>
 
                                 DOCS-LESSTHAN/MenuDOCS-GREATERTHAN
 
-                            \<[Spinner](spinner-element.htm)\>
+                            \<[Spinner](spinner-element.md)\>
 
-                                \<[Unit](unit-element-spinner.htm)\>
+                                \<[Unit](unit-element-spinner.md)\>
 
-                                    \<[UnitAbbreviation](unitabbreviation-element.htm)/\>
+                                    \<[UnitAbbreviation](unitabbreviation-element.md)/\>
 
                                 DOCS-LESSTHAN/UnitDOCS-GREATERTHAN
 
                             DOCS-LESSTHAN/SpinnerDOCS-GREATERTHAN
 
-                            \<[SplitButton](splitbutton-element.htm)\>
+                            \<[SplitButton](splitbutton-element.md)\>
 
-                                \<[Menu](menu-element.htm)\>
+                                \<[Menu](menu-element.md)\>
 
                                 DOCS-LESSTHAN/MenuDOCS-GREATERTHAN
 
                             DOCS-LESSTHAN/SplitButtonDOCS-GREATERTHAN
 
-                            \<[TextBox](textbox-element.htm)/\>
+                            \<[TextBox](textbox-element.md)/\>
 
-                            \<[ToggleButton](togglebutton-element.htm)/\>
+                            \<[ToggleButton](togglebutton-element.md)/\>
 
                         DOCS-LESSTHAN/ControlsDOCS-GREATERTHAN
 
@@ -197,11 +197,11 @@ ribbon schema definition.
 
                 DOCS-LESSTHAN/GroupsDOCS-GREATERTHAN
 
-                \<[Scaling](scaling-element.htm)\>
+                \<[Scaling](scaling-element.md)\>
 
-                    \<[MaxSize](maxsize-element.htm)/\>
+                    \<[MaxSize](maxsize-element.md)/\>
 
-                    \<[Scale](scale-element.htm)/\>
+                    \<[Scale](scale-element.md)/\>
 
                 DOCS-LESSTHAN/ScalingDOCS-GREATERTHAN
 
@@ -209,11 +209,11 @@ ribbon schema definition.
 
         DOCS-LESSTHAN/TabsDOCS-GREATERTHAN
 
-        \<[ContextualTabs](contextualtabs-element.htm)\>
+        \<[ContextualTabs](contextualtabs-element.md)\>
 
-            \<[ContextualGroup](contextualgroup-element.htm)\>
+            \<[ContextualGroup](contextualgroup-element.md)\>
 
-                \<[Tab](tab-element.htm)\>
+                \<[Tab](tab-element.md)\>
 
                 DOCS-LESSTHAN/TabDOCS-GREATERTHAN
 
@@ -223,33 +223,33 @@ ribbon schema definition.
 
     DOCS-LESSTHAN/RibbonDOCS-GREATERTHAN
 
-    \<[Templates](templates-element.htm)\>
+    \<[Templates](templates-element.md)\>
 
-        \<[RibbonTemplates](ribbontemplates.htm)\>
+        \<[RibbonTemplates](ribbontemplates.md)\>
 
-            \<[GroupTemplate](grouptemplate-element.htm)\>
+            \<[GroupTemplate](grouptemplate-element.md)\>
 
-                \<[Layout](layout-element.htm)\>
+                \<[Layout](layout-element.md)\>
 
-                    \<[Section](section-element.htm)\>
+                    \<[Section](section-element.md)\>
 
-                        \<[Row](row-element.htm)\>
+                        \<[Row](row-element.md)\>
 
-                            \<[ControlRef](controlref-element.htm)/\>
+                            \<[ControlRef](controlref-element.md)/\>
 
-                            \<[Strip](strip-element.htm)\>
+                            \<[Strip](strip-element.md)\>
 
-                                \<[ControlRef](controlref-element.htm)/\>
+                                \<[ControlRef](controlref-element.md)/\>
 
                             DOCS-LESSTHAN/StripDOCS-GREATERTHAN
 
-                            \<[OverflowArea](overflowarea-element.htm)/\>
+                            \<[OverflowArea](overflowarea-element.md)/\>
 
                         DOCS-LESSTHAN/RowDOCS-GREATERTHAN
 
                     DOCS-LESSTHAN/SectionDOCS-GREATERTHAN
 
-                    \<[OverflowSection](overflowsection-element.htm)/\>
+                    \<[OverflowSection](overflowsection-element.md)/\>
 
                 DOCS-LESSTHAN/LayoutDOCS-GREATERTHAN
 
@@ -259,17 +259,17 @@ ribbon schema definition.
 
     DOCS-LESSTHAN/TemplatesDOCS-GREATERTHAN
 
-    \<[QAT](qat-element.htm)\>
+    \<[QAT](qat-element.md)\>
 
-        \<[Controls](controls-element-group.htm)\>
+        \<[Controls](controls-element-group.md)\>
 
         DOCS-LESSTHAN/ControlsDOCS-GREATERTHAN
 
     DOCS-LESSTHAN/QATDOCS-GREATERTHAN
 
-    \<[Jewel](jewel-element.htm)\>
+    \<[Jewel](jewel-element.md)\>
 
-        \<[Menu](menu-element.htm)\>
+        \<[Menu](menu-element.md)\>
 
         DOCS-LESSTHAN/MenuDOCS-GREATERTHAN
 
@@ -282,8 +282,8 @@ DOCS-LESSTHAN/CommandUIDOCS-GREATERTHAN
 
 #### Reference
 
-<span sdata="link">[CommandUIDefinition
-Element](commanduidefinition-element.htm)</span>
+[CommandUIDefinition
+Element](commanduidefinition-element.md)</span>
 
 #### Other resources
 

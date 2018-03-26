@@ -59,8 +59,8 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Specifies localized display names and properties, in any combination,
-for a <span sdata="link">[Parameter Element in Parameters (BDCMetadata
-Schema)](parameter-element-in-parameters-bdcmetadata-schema.htm)</span>.
+for a [Parameter Element in Parameters (BDCMetadata
+Schema)](parameter-element-in-parameters-bdcmetadata-schema.md)</span>.
 
 Namespace:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
@@ -117,8 +117,8 @@ None.
 
 Element
 
-<span sdata="link">[Parameters Element in Method (BDCMetadataResource
-Schema)](parameters-element-in-method-bdcmetadataresource-schema.htm)</span>
+[Parameters Element in Method (BDCMetadataResource
+Schema)](parameters-element-in-method-bdcmetadataresource-schema.md)</span>
 
 
 

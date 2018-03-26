@@ -63,7 +63,7 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Used in batch processing to specify commands within the
-[Batch](batch-element-view.htm) element.
+[Batch](batch-element-view.md) element.
 
 <span codelanguage="other"></span>
 <table>
@@ -163,7 +163,7 @@ HTTP protocol and allows the client application to post more than one
 command at a time to the server.
 
 In operations where the
-[SetVar](setvar-element-view.htm) element is used
+[SetVar](setvar-element-view.md) element is used
 within the **Method** element to post commands,
 the **Cmd** attribute can contain methods in
 the [Windows SharePoint Services RPC
@@ -176,7 +176,7 @@ class="nolink">UpdateListItems</span></span> method of the <span
 sdata="cer" target="T:WebSvcLists.Lists"><span
 class="nolink">Lists</span></span> Web service, each <span
 class="keyword">Method</span> element contains
-[Field](field-element-list.htm) elements that specify
+[Field](field-element-list.md) elements that specify
 the column values for each item being updated.
 
 

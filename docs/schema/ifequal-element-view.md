@@ -171,8 +171,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-<span sdata="link">[IfNew Element
-(View)](ifnew-element-view.htm)</span>
+[IfNew Element
+(View)](ifnew-element-view.md)</span>
 
 
 

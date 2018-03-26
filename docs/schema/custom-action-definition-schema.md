@@ -72,31 +72,31 @@ server extensions\\15\\TEMPLATE\\XML.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[Elements](elements-element-custom-action.htm)
+[Elements](elements-element-custom-action.md)
 
-  [CustomActionGroup](customactiongroup-element-custom-action.htm)
+  [CustomActionGroup](customactiongroup-element-custom-action.md)
 
-  [CustomAction](customaction-element.htm)
+  [CustomAction](customaction-element.md)
 
-  [HideCustomAction](hidecustomaction-element.htm)
+  [HideCustomAction](hidecustomaction-element.md)
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-The [CustomActionGroup](customactiongroup-element-custom-action.htm)
+The [CustomActionGroup](customactiongroup-element-custom-action.md)
 element contains the core definition for a grouping of custom actions.
 
-The [UrlAction](urlaction-element.htm) element must
+The [UrlAction](urlaction-element.md) element must
 be used to specify the URL for a custom action. If no action is
 specified (an error condition), the link is displayed but it is not
 linked to anything.
 
-Use the [HideCustomAction](hidecustomaction-element.htm)
+Use the [HideCustomAction](hidecustomaction-element.md)
 element to hide an existing action that is implemented by default within
 the infrastructure of Microsoft SharePoint Foundation Features, or
 within another custom action. For a list of the default custom action
-IDs, see <span sdata="link">[Default Custom Action Locations and
-IDs](default-custom-action-locations-and-ids.htm)</span>.
+IDs, see [Default Custom Action Locations and
+IDs](default-custom-action-locations-and-ids.md)</span>.
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -163,8 +163,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Concepts
 
-<span sdata="link">[Default Custom Action Locations and
-IDs](default-custom-action-locations-and-ids.htm)</span>
+[Default Custom Action Locations and
+IDs](default-custom-action-locations-and-ids.md)</span>
 
 #### Other resources
 

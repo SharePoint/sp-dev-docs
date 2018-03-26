@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -10,184 +8,79 @@ localization_priority: Normal
 ms.assetid: fad74037-ed09-81cc-60f2-df2297b38bd7
 ---
 
-![Collapse
-section](../icons/collapse_all.gif "Collapse section")![Expand
-section](../icons/expand_all.gif "Expand section")![](../icons/collapse_all.gif)![](../icons/expand_all.gif)![](../icons/dropdown.gif)![](../icons/dropdownHover.gif)![Copy
-code](../icons/copycode.gif "Copy code")![Copy code
-hover](../icons/copycodeHighlight.gif "Copy code hover")
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# BDCMetadataResource Schema
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># BDCMetadataResource Schema</td>
-</tr>
-<tr class="odd">
-<td align="left"><span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
+This section contains documentation for the [BDC Metadata Resource schema (BDCMetadataResource.xsd)](http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources). Explore the topics in this section to learn about each element in this schema.
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+- [AccessControlEntry Element in AccessControlList (BDCMetadataResource Schema)](accesscontrolentry-element-in-accesscontrollist-bdcmetadataresource-schema.md)
 
-**Last modified:** July 20, 2011
+- [AccessControlList Element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)](accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md)
 
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
+- [Action Element in Actions (BDCMetadataResource Schema)](action-element-in-actions-bdcmetadataresource-schema.md)
 
-This section contains documentation for the BDC Metadata Resource schema
-([BDCMetadataResource.xsd](http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources)).
-Explore the topics in this section to learn about each element in this
-schema.
+- [ActionParameter Element in ActionParameters (BDCMetadataResource Schema)](actionparameter-element-in-actionparameters-bdcmetadataresource-schema.md)
 
+- [ActionParameters Element in Action (BDCMetadataResource Schema)](actionparameters-element-in-action-bdcmetadataresource-schema.md)
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- [Actions Element in Entity (BDCMetadataResource Schema)](actions-element-in-entity-bdcmetadataresource-schema.md)
 
-<span sdata="link">[AccessControlEntry Element in AccessControlList
-(BDCMetadataResource
-Schema)](accesscontrolentry-element-in-accesscontrollist-bdcmetadataresource-schema.htm)</span>
+- [Association Element in MethodInstances (BDCMetadataResource Schema)](association-element-in-methodinstances-bdcmetadataresource-schema.md)
 
-<span sdata="link">[AccessControlList Element in
-IndividuallySecurableMetadataObject (BDCMetadataResource
-Schema)](accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.htm)</span>
+- [AssociationGroup Element in AssociationGroups (BDCMetadataResource Schema)](associationgroup-element-in-associationgroups-bdcmetadataresource-schema.md)
 
-<span sdata="link">[Action Element in Actions (BDCMetadataResource
-Schema)](action-element-in-actions-bdcmetadataresource-schema.htm)</span>
+- [AssociationGroups Element in Entity (BDCMetadataResource Schema)](associationgroups-element-in-entity-bdcmetadataresource-schema.md)
 
-<span sdata="link">[ActionParameter Element in ActionParameters
-(BDCMetadataResource
-Schema)](actionparameter-element-in-actionparameters-bdcmetadataresource-schema.htm)</span>
+- [Entities Element in LobSystem (BDCMetadataResource Schema)](entities-element-in-lobsystem-bdcmetadataresource-schema.md)
 
-<span sdata="link">[ActionParameters Element in Action
-(BDCMetadataResource
-Schema)](actionparameters-element-in-action-bdcmetadataresource-schema.htm)</span>
+- [Entity Element in Entities (BDCMetadataResource Schema)](entity-element-in-entities-bdcmetadataresource-schema.md)
 
-<span sdata="link">[Actions Element in Entity (BDCMetadataResource
-Schema)](actions-element-in-entity-bdcmetadataresource-schema.htm)</span>
+- [FilterDescriptor Element in FilterDescriptors (BDCMetadataResource Schema)](filterdescriptor-element-in-filterdescriptors-bdcmetadataresource-schema.md)
 
-<span sdata="link">[Association Element in MethodInstances
-(BDCMetadataResource
-Schema)](association-element-in-methodinstances-bdcmetadataresource-schema.htm)</span>
+- [FilterDescriptors Element in Method (BDCMetadataResource Schema)](filterdescriptors-element-in-method-bdcmetadataresource-schema.md)
 
-<span sdata="link">[AssociationGroup Element in AssociationGroups
-(BDCMetadataResource
-Schema)](associationgroup-element-in-associationgroups-bdcmetadataresource-schema.htm)</span>
+- [Identifier Element in Identifiers (BDCMetadataResource Schema)](identifier-element-in-identifiers-bdcmetadataresource-schema.md)
 
-<span sdata="link">[AssociationGroups Element in Entity
-(BDCMetadataResource
-Schema)](associationgroups-element-in-entity-bdcmetadataresource-schema.htm)</span>
+- [Identifiers Element in Entity (BDCMetadataResource Schema)](identifiers-element-in-entity-bdcmetadataresource-schema.md)
 
-<span sdata="link">[Entities Element in LobSystem (BDCMetadataResource
-Schema)](entities-element-in-lobsystem-bdcmetadataresource-schema.htm)</span>
+- [LobSystem Element in LobSystems (BDCMetadataResource Schema)](lobsystem-element-in-lobsystems-bdcmetadataresource-schema.md)
 
-<span sdata="link">[Entity Element in Entities (BDCMetadataResource
-Schema)](entity-element-in-entities-bdcmetadataresource-schema.htm)</span>
+- [LobSystemInstance Element in LobSystemInstances (BDCMetadataResource Schema)](lobsysteminstance-element-in-lobsysteminstances-bdcmetadataresource-schema.md)
 
-<span sdata="link">[FilterDescriptor Element in FilterDescriptors
-(BDCMetadataResource
-Schema)](filterdescriptor-element-in-filterdescriptors-bdcmetadataresource-schema.htm)</span>
+- [LobSystemInstances Element in LobSystem (BDCMetadataResource Schema)](lobsysteminstances-element-in-lobsystem-bdcmetadataresource-schema.md)
 
-<span sdata="link">[FilterDescriptors Element in Method
-(BDCMetadataResource
-Schema)](filterdescriptors-element-in-method-bdcmetadataresource-schema.htm)</span>
+- [LobSystems Element in Model (BDCMetadataResource Schema)](lobsystems-element-in-model-bdcmetadataresource-schema.md)
 
-<span sdata="link">[Identifier Element in Identifiers
-(BDCMetadataResource
-Schema)](identifier-element-in-identifiers-bdcmetadataresource-schema.htm)</span>
+- [LocalizedDisplayName Element in LocalizedDisplayNames (BDCMetadataResource Schema)](localizeddisplayname-element-in-localizeddisplaynames-bdcmetadataresource-schema.md)
 
-<span sdata="link">[Identifiers Element in Entity (BDCMetadataResource
-Schema)](identifiers-element-in-entity-bdcmetadataresource-schema.htm)</span>
+- [LocalizedDisplayNames Element in MetadataObject (BDCMetadataResource Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.md)
 
-<span sdata="link">[LobSystem Element in LobSystems (BDCMetadataResource
-Schema)](lobsystem-element-in-lobsystems-bdcmetadataresource-schema.htm)</span>
+- [Method Element in Methods (BDCMetadataResource Schema)](method-element-in-methods-bdcmetadataresource-schema.md)
 
-<span sdata="link">[LobSystemInstance Element in LobSystemInstances
-(BDCMetadataResource
-Schema)](lobsysteminstance-element-in-lobsysteminstances-bdcmetadataresource-schema.htm)</span>
+- [MethodInstance Element in MethodInstances (BDCMetadataResource Schema)](methodinstance-element-in-methodinstances-bdcmetadataresource-schema.md)
 
-<span sdata="link">[LobSystemInstances Element in LobSystem
-(BDCMetadataResource
-Schema)](lobsysteminstances-element-in-lobsystem-bdcmetadataresource-schema.htm)</span>
+- [MethodInstances Element in Method (BDCMetadataResource Schema)](methodinstances-element-in-method-bdcmetadataresource-schema.md)
 
-<span sdata="link">[LobSystems Element in Model (BDCMetadataResource
-Schema)](lobsystems-element-in-model-bdcmetadataresource-schema.htm)</span>
+- [Methods Element in Entity (BDCMetadataResource Schema)](methods-element-in-entity-bdcmetadataresource-schema.md)
 
-<span sdata="link">[LocalizedDisplayName Element in
-LocalizedDisplayNames (BDCMetadataResource
-Schema)](localizeddisplayname-element-in-localizeddisplaynames-bdcmetadataresource-schema.htm)</span>
+- [Model Element (BDCMetadataResource Schema)](model-element-bdcmetadataresource-schema.md)
 
-<span sdata="link">[LocalizedDisplayNames Element in MetadataObject
-(BDCMetadataResource
-Schema)](localizeddisplaynames-element-in-metadataobject-bdcmetadataresource-schema.htm)</span>
+- [Parameter Element in Parameters (BDCMetadataResource Schema)](parameter-element-in-parameters-bdcmetadataresource-schema.md)
 
-<span sdata="link">[Method Element in Methods (BDCMetadataResource
-Schema)](method-element-in-methods-bdcmetadataresource-schema.htm)</span>
+- [Parameters Element in Method (BDCMetadataResource Schema)](parameters-element-in-method-bdcmetadataresource-schema.md)
 
-<span sdata="link">[MethodInstance Element in MethodInstances
-(BDCMetadataResource
-Schema)](methodinstance-element-in-methodinstances-bdcmetadataresource-schema.htm)</span>
+- [Properties Element in MetadataObject (BDCMetadataResource Schema)](properties-element-in-metadataobject-bdcmetadataresource-schema.md)
 
-<span sdata="link">[MethodInstances Element in Method
-(BDCMetadataResource
-Schema)](methodinstances-element-in-method-bdcmetadataresource-schema.htm)</span>
+- [Property Element in Properties (BDCMetadataResource Schema)](property-element-in-properties-bdcmetadataresource-schema.md)
 
-<span sdata="link">[Methods Element in Entity (BDCMetadataResource
-Schema)](methods-element-in-entity-bdcmetadataresource-schema.htm)</span>
+- [Right Element in AccessControlEntry (BDCMetadataResource Schema)](right-element-in-accesscontrolentry-bdcmetadataresource-schema.md)
 
-<span sdata="link">[Model Element (BDCMetadataResource
-Schema)](model-element-bdcmetadataresource-schema.htm)</span>
+- [TypeDescriptor Element in Parameter (BDCMetadataResource Schema)](typedescriptor-element-in-parameter-bdcmetadataresource-schema.md)
 
-<span sdata="link">[Parameter Element in Parameters (BDCMetadataResource
-Schema)](parameter-element-in-parameters-bdcmetadataresource-schema.htm)</span>
+- [TypeDescriptor Element in TypeDescriptors (BDCMetadataResource Schema)](typedescriptor-element-in-typedescriptors-bdcmetadataresource-schema.md)
 
-<span sdata="link">[Parameters Element in Method (BDCMetadataResource
-Schema)](parameters-element-in-method-bdcmetadataresource-schema.htm)</span>
-
-<span sdata="link">[Properties Element in MetadataObject
-(BDCMetadataResource
-Schema)](properties-element-in-metadataobject-bdcmetadataresource-schema.htm)</span>
-
-<span sdata="link">[Property Element in Properties (BDCMetadataResource
-Schema)](property-element-in-properties-bdcmetadataresource-schema.htm)</span>
-
-<span sdata="link">[Right Element in AccessControlEntry
-(BDCMetadataResource
-Schema)](right-element-in-accesscontrolentry-bdcmetadataresource-schema.htm)</span>
-
-<span sdata="link">[TypeDescriptor Element in Parameter
-(BDCMetadataResource
-Schema)](typedescriptor-element-in-parameter-bdcmetadataresource-schema.htm)</span>
-
-<span sdata="link">[TypeDescriptor Element in TypeDescriptors
-(BDCMetadataResource
-Schema)](typedescriptor-element-in-typedescriptors-bdcmetadataresource-schema.htm)</span>
-
-<span sdata="link">[TypeDescriptors Element in TypeDescriptor
-(BDCMetadataResource
-Schema)](typedescriptors-element-in-typedescriptor-bdcmetadataresource-schema.htm)</span>
+- [TypeDescriptors Element in TypeDescriptor (BDCMetadataResource Schema)](typedescriptors-element-in-typedescriptor-bdcmetadataresource-schema.md)
 
 
 

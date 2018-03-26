@@ -142,7 +142,7 @@ Describes an event receiver for handling list item events.
 
 For an example of how this element is used, see <span
 sdata="link">[Event
-Registrations](event-registrations.htm)</span>.
+Registrations](event-registrations.md)</span>.
 
 
 

@@ -104,32 +104,32 @@ Editors](http://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(
 
 The workflow configuration schema contains the following elements:
 
-\<<span sdata="link">[WorkflowConfig
-Element](workflowconfig-element.htm)</span>\>
+\<[WorkflowConfig
+Element](workflowconfig-element.md)</span>\>
 
-   \<<span sdata="link">[Template Element
-(WorkflowConfig)](template-element-workflowconfig.htm)</span>\>
+   \<[Template Element
+(WorkflowConfig)](template-element-workflowconfig.md)</span>\>
 
-   \<<span sdata="link">[Association Element
-(WorkflowConfig)](association-element-workflowconfig.htm)</span>\>
+   \<[Association Element
+(WorkflowConfig)](association-element-workflowconfig.md)</span>\>
 
-   \<<span sdata="link">[ContentTypes Element
-(WorkflowConfig)](contenttypes-element-workflowconfig.htm)</span>\>
+   \<[ContentTypes Element
+(WorkflowConfig)](contenttypes-element-workflowconfig.md)</span>\>
 
-      \<<span sdata="link">[ContentType Element
-(WorkflowConfig)](contenttype-element-workflowconfig.htm)</span>\>
+      \<[ContentType Element
+(WorkflowConfig)](contenttype-element-workflowconfig.md)</span>\>
 
-   \<<span sdata="link">[Initiation Element
-(WorkflowConfig)](initiation-element-workflowconfig.htm)</span>\>
+   \<[Initiation Element
+(WorkflowConfig)](initiation-element-workflowconfig.md)</span>\>
 
-      \<<span sdata="link">[Fields Element
-(WorkflowConfig)](fields-element-workflowconfig.htm)</span>\>
+      \<[Fields Element
+(WorkflowConfig)](fields-element-workflowconfig.md)</span>\>
 
-      \<<span sdata="link">[Parameters Element
-(WorkflowConfig)](parameters-element-workflowconfig.htm)</span>\>
+      \<[Parameters Element
+(WorkflowConfig)](parameters-element-workflowconfig.md)</span>\>
 
-         \<<span sdata="link">[Parameter Element
-(WorkflowConfig)](parameter-element-workflowconfig.htm)</span>\>
+         \<[Parameter Element
+(WorkflowConfig)](parameter-element-workflowconfig.md)</span>\>
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

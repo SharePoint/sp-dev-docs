@@ -148,8 +148,8 @@ following values:
 
 2 — Only the list owner can modify the schema.
 
-See <span sdata="link">[Security
-Element](security-element.htm)</span> for an example
+See [Security
+Element](security-element.md)</span> for an example
 that shows how to use the **SchemaSecurity**
 element.
 
@@ -158,11 +158,11 @@ element.
 
 #### Reference
 
-<span sdata="link">[ReadSecurity
-Element](readsecurity-element.htm)</span>
+[ReadSecurity
+Element](readsecurity-element.md)</span>
 
-<span sdata="link">[WriteSecurity
-Element](writesecurity-element.htm)</span>
+[WriteSecurity
+Element](writesecurity-element.md)</span>
 
 
 

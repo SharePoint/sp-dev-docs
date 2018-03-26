@@ -166,12 +166,12 @@ a view of a document library.
 
 For example, <span class="code">\<MapToIcon\>|xls\</MapToIcon\></span>
 renders the Microsoft Excel .gif file defined within the
-[ByExtension](byextension-element-document-icons.htm) element of the
+[ByExtension](byextension-element-document-icons.md) element of the
 [DocIcon.xml](http://msdn.microsoft.com/library/ef6acad0-0a1a-457c-bc9b-ff1e368e59fb(Office.15).aspx)
 file, and using <span
 class="code">\<MapToIcon\>Excel.Sheet|htm\</MapToIcon\></span> renders
 the Excel .gif file defined in the
-[ByProgID](byprogid-element-document-icons.htm) element of
+[ByProgID](byprogid-element-document-icons.md) element of
 DocIcon.xml, but <span
 class="code">\<MapToIcon\>CustomApp.Baz|htm\</MapToIcon\></span> would
 render the generic HTML icon because the <span

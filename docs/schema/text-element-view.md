@@ -62,9 +62,9 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-Used within the [Limit](limit-element-view.htm)
+Used within the [Limit](limit-element-view.md)
 element to demarcate the text that is truncated when the
-[More](more-element-view.htm) element is also
+[More](more-element-view.md) element is also
 specified.
 
 <span codelanguage="other"></span>

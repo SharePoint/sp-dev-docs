@@ -140,10 +140,10 @@ Specifies the application resource files to include in the solution.
 Use this element to deploy binary resources to an Internet Information
 Services (IIS) Web site used by a SharePoint Foundation Web Application.
 Files specified by
-[ApplicationResourceFile](applicationresourcefile-element-solution.htm)
+[ApplicationResourceFile](applicationresourcefile-element-solution.md)
 child elements are deployed to a virtual directory named <span
 class="code">wpresources</span>. Files specified by
-[App\_GlobalResourceFile](app_globalresourcefile-element-solution.htm)
+[App\_GlobalResourceFile](app_globalresourcefile-element-solution.md)
 child elements are deployed to a virtual directory named <span
 class="code">App\_GlobalResources</span>.
 
@@ -152,11 +152,11 @@ class="code">App\_GlobalResources</span>.
 
 #### Other resources
 
-<span sdata="link">[ApplicationResourceFile Element
-(Solution)](applicationresourcefile-element-solution.htm)</span>
+[ApplicationResourceFile Element
+(Solution)](applicationresourcefile-element-solution.md)</span>
 
-<span sdata="link">[App\_GlobalResourceFile Element
-(Solution)](app_globalresourcefile-element-solution.htm)</span>
+[App\_GlobalResourceFile Element
+(Solution)](app_globalresourcefile-element-solution.md)</span>
 
 
 

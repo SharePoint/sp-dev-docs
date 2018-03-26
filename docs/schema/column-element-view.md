@@ -64,11 +64,11 @@ SharePoint Online | SharePoint Server 2013
 
 Returns the raw data value for a particular field, as opposed to the
 formatted version provided by the
-[Field](field-element-view.htm) element. In the case
+[Field](field-element-view.md) element. In the case
 of a **Lookup** field, <span
 class="keyword">Column</span> returns the local value (an ID number in
 the list that references another list), while the
-[LookupColumn](lookupcolumn-element-view.htm) element returns
+[LookupColumn](lookupcolumn-element-view.md) element returns
 the data from the foreign table.
 
 <span codelanguage="other"></span>
@@ -234,14 +234,14 @@ to the locale-specific rules of the server.
 
 #### Other resources
 
-<span sdata="link">[Column2 Element
-(View)](column2-element-view.htm)</span>
+[Column2 Element
+(View)](column2-element-view.md)</span>
 
-<span sdata="link">[Field Element
-(View)](field-element-view.htm)</span>
+[Field Element
+(View)](field-element-view.md)</span>
 
-<span sdata="link">[LookupColumn Element
-(View)](lookupcolumn-element-view.htm)</span>
+[LookupColumn Element
+(View)](lookupcolumn-element-view.md)</span>
 
 
 

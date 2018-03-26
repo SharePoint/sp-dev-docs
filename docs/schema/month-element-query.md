@@ -63,7 +63,7 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Used in the
-[DateRangesOverlap](daterangesoverlap-element-query.htm) element to
+[DateRangesOverlap](daterangesoverlap-element-query.md) element to
 retrieve from a calendar all instances of a recurring event that occur
 within a month.
 
@@ -149,11 +149,11 @@ within a month.
 
 #### Other resources
 
-<span sdata="link">[Now Element
-(Query)](now-element-query.htm)</span>
+[Now Element
+(Query)](now-element-query.md)</span>
 
-<span sdata="link">[Today Element
-(Query)](today-element-query.htm)</span>
+[Today Element
+(Query)](today-element-query.md)</span>
 
 
 

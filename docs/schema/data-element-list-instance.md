@@ -127,8 +127,8 @@ definition.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-For an example of how this element is used, see <span sdata="link">[List
-Instances](list-instances.htm)</span>.
+For an example of how this element is used, see [List
+Instances](list-instances.md)</span>.
 
 
 

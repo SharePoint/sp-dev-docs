@@ -67,9 +67,9 @@ type definition is incorporated into documentation of the <span
 class="keyword">Field</span> element.
 
 However, in a few cases no element maps to a specified
-DeploymentManifest type. For example, the <span sdata="link">[Guid
+DeploymentManifest type. For example, the [Guid
 Simple Type
-(DeploymentManifest)](guid-simple-type-deploymentmanifest.htm)</span>
+(DeploymentManifest)](guid-simple-type-deploymentmanifest.md)</span>
 type is used only as an attribute type, so there is no related element
 in which this simple type is documented.
 
@@ -144,8 +144,8 @@ Following is a table that lists the selected simple types.
 
 #### Concepts
 
-<span sdata="link">[DeploymentManifest
-Schema](deploymentmanifest-schema.htm)</span>
+[DeploymentManifest
+Schema](deploymentmanifest-schema.md)</span>
 
 
 

@@ -61,42 +61,42 @@ SharePoint Online | SharePoint Server 2013
 Register event handlers at the site or site collection level that you
 will use to implement filtering to respond to events.
 
-The [Receivers](receivers-element-event.htm) element
+The [Receivers](receivers-element-event.md) element
 specifies an event handler for list item events.
 
-[Elements](elements-element-event.htm)
+[Elements](elements-element-event.md)
 
-  [Receivers](receivers-element-event.htm)
+  [Receivers](receivers-element-event.md)
 
-    [Receiver](receiver-element-event.htm)
+    [Receiver](receiver-element-event.md)
 
-      [Assembly](assembly-element-event.htm)
+      [Assembly](assembly-element-event.md)
 
-      [Class](class-element-event.htm)
+      [Class](class-element-event.md)
 
-      [Data](data-element-event.htm)
+      [Data](data-element-event.md)
 
-      <span sdata="link">[Filter Element
-(Event)](filter-element-event.htm)</span>
+      [Filter Element
+(Event)](filter-element-event.md)</span>
 
-      [Name](name-element-event.htm)
+      [Name](name-element-event.md)
 
-      [SequenceNumber](sequencenumber-element-event.htm)
+      [SequenceNumber](sequencenumber-element-event.md)
 
-      <span sdata="link">[SolutionId Element
-(Event)](solutionid-element-event.htm)</span>
+      [SolutionId Element
+(Event)](solutionid-element-event.md)</span>
 
-      <span sdata="link">[Synchronization Element
-(Event)](synchronization-element-event.htm)</span>
+      [Synchronization Element
+(Event)](synchronization-element-event.md)</span>
 
-      [Type](type-element-event.htm)
+      [Type](type-element-event.md)
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 To register an event handler for list events, create a folder in <span
 class="code">\\Template\\Features</span> to contain a
-[Feature.xml](feature-xml-files.htm) file that
+[Feature.xml](feature-xml-files.md) file that
 specifies the scope and ID of the Feature, and an elements manifest file
 that the former file references.
 

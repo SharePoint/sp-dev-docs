@@ -55,8 +55,8 @@ JavaScript
 
 Base type definition for **DataSources**
 elements; applies to
-[DataSources(Action)](datasources-element-action-elementactions-elementworkflowinfo-elementaction4.htm) and
-[DataSources(CompositeStep)](datasources-element-compositestep-elementcompositesteps-elementworkflowinfo-elem.htm).
+[DataSources(Action)](datasources-element-action-elementactions-elementworkflowinfo-elementaction4.md) and
+[DataSources(CompositeStep)](datasources-element-compositestep-elementcompositesteps-elementworkflowinfo-elem.md).
 
 **Last modified:** March 09, 2015
 

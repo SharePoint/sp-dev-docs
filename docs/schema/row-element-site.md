@@ -62,7 +62,7 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-Used within the [Data](data-element-site.htm) element
+Used within the [Data](data-element-site.md) element
 in a list definition to provide a set of default data when a list is
 instantiated during site provisioning.
 

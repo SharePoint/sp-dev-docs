@@ -153,17 +153,17 @@ USAGE
 This element is one of four **EventReceivers**
 elements; each derives from a different element hierarchy, as follows:
 
--   <span sdata="link">[EventReceivers Element (DeploymentManifest -
-    SPFile)](eventreceivers-element-deploymentmanifestspfile.htm)</span>
+-   [EventReceivers Element (DeploymentManifest -
+    SPFile)](eventreceivers-element-deploymentmanifestspfile.md)</span>
 
--   <span sdata="link">[EventReceivers Element (DeploymentManifest -
-    SPList)](eventreceivers-element-deploymentmanifestsplist.htm)</span>
+-   [EventReceivers Element (DeploymentManifest -
+    SPList)](eventreceivers-element-deploymentmanifestsplist.md)</span>
 
--   <span sdata="link">[EventReceivers Element (DeploymentManifest -
-    SPListItem)](eventreceivers-element-deploymentmanifestsplistitem.htm)</span>
+-   [EventReceivers Element (DeploymentManifest -
+    SPListItem)](eventreceivers-element-deploymentmanifestsplistitem.md)</span>
 
--   <span sdata="link">[EventReceivers Element (DeploymentManifest -
-    SPWeb)](eventreceivers-element-deploymentmanifestspweb.htm)</span>
+-   [EventReceivers Element (DeploymentManifest -
+    SPWeb)](eventreceivers-element-deploymentmanifestspweb.md)</span>
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -176,8 +176,8 @@ class="nolink">SPEventReceiverDefinitionCollection</span></span>
 
 #### Concepts
 
-<span sdata="link">[DeploymentManifest
-Schema](deploymentmanifest-schema.htm)</span>
+[DeploymentManifest
+Schema](deploymentmanifest-schema.md)</span>
 
 
 

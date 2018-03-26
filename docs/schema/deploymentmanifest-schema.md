@@ -84,7 +84,7 @@ element).
 
 For documentation of types that are not exposed as elements, see <span
 sdata="link">[Selected Type
-Definitions](selected-type-definitions.htm)</span>.
+Definitions](selected-type-definitions.md)</span>.
 
 <table>
 <colgroup>
@@ -626,8 +626,8 @@ class="nolink">Microsoft.SharePoint.Deployment</span></span>
 
 #### Concepts
 
-<span sdata="link">[Selected Type
-Definitions](selected-type-definitions.htm)</span>
+[Selected Type
+Definitions](selected-type-definitions.md)</span>
 
 
 

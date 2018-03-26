@@ -87,8 +87,8 @@ target="T:System.Guid">[Guid](http://msdn2.microsoft.com/EN-US/library/cey1zx63)
 
 #### Concepts
 
-<span sdata="link">[DeploymentManifest
-Schema](deploymentmanifest-schema.htm)</span>
+[DeploymentManifest
+Schema](deploymentmanifest-schema.md)</span>
 
 
 

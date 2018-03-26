@@ -77,9 +77,9 @@ SharePoint Server 2013
 </tbody>
 </table>
 
--   [AppPartConfig element](apppartconfig-element-apppartconfigdefinition.htm)
+-   [AppPartConfig element](apppartconfig-element-apppartconfigdefinition.md)
 
--   [Id element](id-element-apppartconfigdefinition-complextypeapppartconfigdefinition.htm)
+-   [Id element](id-element-apppartconfigdefinition-complextypeapppartconfigdefinition.md)
 
 
 

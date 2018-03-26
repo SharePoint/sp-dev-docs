@@ -208,16 +208,16 @@ Specifies default data with which to provision the given list type.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The **ListInstance** Feature element maps to
-the [List](list-element-list.htm) element as used in
+the [List](list-element-list.md) element as used in
 SharePoint Foundation within the
-[Configuration](configuration-element-site.htm) element in
+[Configuration](configuration-element-site.md) element in
 Onet.xml.
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-For an example of how this element is used, see <span sdata="link">[List
-Instances](list-instances.htm)</span>.
+For an example of how this element is used, see [List
+Instances](list-instances.md)</span>.
 
 
 

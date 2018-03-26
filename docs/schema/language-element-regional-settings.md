@@ -160,8 +160,8 @@ display pattern to render a language name.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The **Language** element contains no
-[Column](column-element-view.htm) subelement when used
-within the [Languages](languages-element-regional-settings.htm)
+[Column](column-element-view.md) subelement when used
+within the [Languages](languages-element-regional-settings.md)
 collection of the RGNLSTNG.XML file.
 
 

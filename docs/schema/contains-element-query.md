@@ -187,8 +187,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-<span sdata="link">[BeginsWith Element
-(Query)](beginswith-element-query.htm)</span>
+[BeginsWith Element
+(Query)](beginswith-element-query.md)</span>
 
 
 

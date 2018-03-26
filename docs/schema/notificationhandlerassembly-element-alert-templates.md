@@ -125,7 +125,7 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-[UpdateHandlerAssembly](updatehandlerassembly-element-alerttemplates.htm)
+[UpdateHandlerAssembly](updatehandlerassembly-element-alerttemplates.md)
 
 
 

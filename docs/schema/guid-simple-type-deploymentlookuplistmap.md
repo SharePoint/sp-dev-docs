@@ -61,7 +61,7 @@ SharePoint Online | SharePoint Server 2013
 Supports the use of a globally unique identifier (GUID) as a <span
 class="keyword">Guid</span> attribute field value in the <span
 sdata="link">[LookupItem Element
-(DeploymentLookupListMap)](lookupitem-element-deploymentlookuplistmap.htm)</span>
+(DeploymentLookupListMap)](lookupitem-element-deploymentlookuplistmap.md)</span>
 and other elements of the DeploymentLookupListMap Schema.
 
 <span codelanguage="other"></span>
@@ -83,13 +83,13 @@ and other elements of the DeploymentLookupListMap Schema.
 
 #### Concepts
 
-<span sdata="link">[DeploymentLookupListMap
-Schema](deploymentlookuplistmap-schema.htm)</span>
+[DeploymentLookupListMap
+Schema](deploymentlookuplistmap-schema.md)</span>
 
 #### Other resources
 
-<span sdata="link">[LookupItem Element
-(DeploymentLookupListMap)](lookupitem-element-deploymentlookuplistmap.htm)</span>
+[LookupItem Element
+(DeploymentLookupListMap)](lookupitem-element-deploymentlookuplistmap.md)</span>
 
 
 

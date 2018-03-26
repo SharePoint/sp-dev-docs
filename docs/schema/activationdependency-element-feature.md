@@ -187,7 +187,7 @@ on a hidden Feature.
 
 For an example of how this element is used, see <span
 sdata="link">[Feature.xml
-Files](feature-xml-files.htm)</span>.
+Files](feature-xml-files.md)</span>.
 
 
 

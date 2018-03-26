@@ -59,8 +59,8 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Specifies localized display names, properties, and permissions, in any
-combination, for an <span sdata="link">[Entity Element in Entities
-(BDCMetadata Schema)](entity-element-in-entities-bdcmetadata-schema.htm)</span>.
+combination, for an [Entity Element in Entities
+(BDCMetadata Schema)](entity-element-in-entities-bdcmetadata-schema.md)</span>.
 
 Namespace:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources

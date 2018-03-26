@@ -61,7 +61,7 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Contains a collection of
-[XmlDocument](xmldocument-element-contenttype.htm) elements.
+[XmlDocument](xmldocument-element-contenttype.md) elements.
 
 <span codelanguage="other"></span>
 <table>
@@ -197,8 +197,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Concepts
 
-<span sdata="link">[Content Type
-Definitions](content-type-definitions.htm)</span>
+[Content Type
+Definitions](content-type-definitions.md)</span>
 
 #### Other resources
 

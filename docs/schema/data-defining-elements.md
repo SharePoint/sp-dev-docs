@@ -91,7 +91,7 @@ To simplify the implementation of the various field types, and to allow
 for a higher degree of flexibility in rendering the various fields,
 [FldTypes.xml](http://msdn.microsoft.com/library/8f8db866-03f8-4001-aae3-4c4102a7aed6(Office.15).aspx)
 contains information about the rendering and behavior of each field
-type. The [Field](field-element-list.htm) element
+type. The [Field](field-element-list.md) element
 renders different HTML depending on the data type of the field in
 question, and FldTypes.xml defines the data types and rendering patterns
 for each kind of field. The following table presents the schema used in
@@ -288,8 +288,8 @@ field being rendered.
 
 #### Reference
 
-<span sdata="link">[HTML-Rendering
-Elements](html-rendering-elements.htm)</span>
+[HTML-Rendering
+Elements](html-rendering-elements.md)</span>
 
 
 

@@ -62,53 +62,53 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-[AllUsersWebPart](alluserswebpart-element-site.htm)
+[AllUsersWebPart](alluserswebpart-element-site.md)
 
-[BaseType](basetype-element-site.htm)
+[BaseType](basetype-element-site.md)
 
-[BaseTypes](basetypes-element-site.htm)
+[BaseTypes](basetypes-element-site.md)
 
-[BinarySerializedWebPart](binaryserializedwebpart-element-site.htm)
+[BinarySerializedWebPart](binaryserializedwebpart-element-site.md)
 
-[Components](components-element-site.htm)
+[Components](components-element-site.md)
 
-[Configuration](configuration-element-site.htm)
+[Configuration](configuration-element-site.md)
 
-[Configurations](configurations-element-site.htm)
+[Configurations](configurations-element-site.md)
 
-[Data](data-element-site.htm)
+[Data](data-element-site.md)
 
-[DocumentTemplate](documenttemplate-element-site.htm)
+[DocumentTemplate](documenttemplate-element-site.md)
 
-[DocumentTemplateFile](documenttemplatefile-element-site.htm)
+[DocumentTemplateFile](documenttemplatefile-element-site.md)
 
-[DocumentTemplateFiles](documenttemplatefiles-element-site.htm)
+[DocumentTemplateFiles](documenttemplatefiles-element-site.md)
 
-[DocumentTemplates](documenttemplates-element-site.htm)
+[DocumentTemplates](documenttemplates-element-site.md)
 
-[ExecuteUrl](executeurl-element-site.htm)
+[ExecuteUrl](executeurl-element-site.md)
 
-[ExternalSecurityProvider](externalsecurityprovider-element-site.htm)
+[ExternalSecurityProvider](externalsecurityprovider-element-site.md)
 
-[Feature](feature-element-site.htm)
+[Feature](feature-element-site.md)
 
-[Field](field-element-site.htm)
+[Field](field-element-site.md)
 
-[File](file-element.htm)
+[File](file-element.md)
 
-[FileDialogPostProcessor](filedialogpostprocessor-element-site.htm)
+[FileDialogPostProcessor](filedialogpostprocessor-element-site.md)
 
-[GUID](guid-element-site.htm)
+[GUID](guid-element-site.md)
 
-[GUIDMap](guidmap-element-site.htm)
+[GUIDMap](guidmap-element-site.md)
 
-[List](list-element-site.htm)
+[List](list-element-site.md)
 
-[Lists](lists-element-site.htm)
+[Lists](lists-element-site.md)
 
-[ListTemplate](listtemplate-element-site.htm)
+[ListTemplate](listtemplate-element-site.md)
 
-[ListTemplates](listtemplates-element-site.htm)
+[ListTemplates](listtemplates-element-site.md)
 
 
 

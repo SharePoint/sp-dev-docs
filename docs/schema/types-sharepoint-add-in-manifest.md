@@ -78,94 +78,94 @@ SharePoint Server 2013
 </table>
 
 -   [AppDefinition
-    complexType](appdefinition-complextype-sharepoint-add-in-manifest.htm)
+    complexType](appdefinition-complextype-sharepoint-add-in-manifest.md)
 
 -   [AppPermissionAppPrincipalDefinition
-    simpleType](apppermissionappprincipaldefinition-simpletype-sharepoint-add-in-manifest.htm)
+    simpleType](apppermissionappprincipaldefinition-simpletype-sharepoint-add-in-manifest.md)
 
 -   [AppPermissionPropertyDefinition
-    complexType](apppermissionpropertydefinition-complextype-sharepoint-add-in-manifest.htm)
+    complexType](apppermissionpropertydefinition-complextype-sharepoint-add-in-manifest.md)
 
 -   [AppPermissionRequestDefinition
-    complexType](apppermissionrequestdefinition-complextype-sharepoint-add-in-manifest.htm)
+    complexType](apppermissionrequestdefinition-complextype-sharepoint-add-in-manifest.md)
 
 -   [AppPermissionRequestsDefinition
-    complexType](apppermissionrequestsdefinition-complextype-sharepoint-add-in-manifest.htm)
+    complexType](apppermissionrequestsdefinition-complextype-sharepoint-add-in-manifest.md)
 
 -   [AppPermissionRightDefinition
-    simpleType](apppermissionrightdefinition-simpletype-sharepoint-add-in-manifest.htm)
+    simpleType](apppermissionrightdefinition-simpletype-sharepoint-add-in-manifest.md)
 
 -   [AppPrerequisite
-    complexType](appprerequisite-complextype-sharepoint-add-in-manifest.htm)
+    complexType](appprerequisite-complextype-sharepoint-add-in-manifest.md)
 
 -   [AppPrerequisiteCollection
-    complexType](appprerequisitecollection-complextype-sharepoint-add-in-manifest.htm)
+    complexType](appprerequisitecollection-complextype-sharepoint-add-in-manifest.md)
 
 -   [AppPrerequisiteTypeDefinition
-    simpleType](appprerequisitetypedefinition-simpletype-sharepoint-add-in-manifest.htm)
+    simpleType](appprerequisitetypedefinition-simpletype-sharepoint-add-in-manifest.md)
 
 -   [AppPrincipalDefinition
-    complexType](appprincipaldefinition-complextype-sharepoint-add-in-manifest.htm)
+    complexType](appprincipaldefinition-complextype-sharepoint-add-in-manifest.md)
 
 -   [AppPrincipalTypeDefinition
-    simpleType](appprincipaltypedefinition-simpletype-sharepoint-add-in-manifest.htm)
+    simpleType](appprincipaltypedefinition-simpletype-sharepoint-add-in-manifest.md)
 
 -   [AutoDeployedWebApplicationDebugInfoAppUrlDefinition
-    simpleType](autodeployedwebapplicationdebuginfoappurldefinition-simpletype-sharepoint-add-in.htm)
+    simpleType](autodeployedwebapplicationdebuginfoappurldefinition-simpletype-sharepoint-add-in.md)
 
 -   [AutoDeployedWebApplicationDebugInfoDefinition
-    complexType](autodeployedwebapplicationdebuginfodefinition-complextype-sharepoint-add-in-mani.htm)
+    complexType](autodeployedwebapplicationdebuginfodefinition-complextype-sharepoint-add-in-mani.md)
 
 -   [CultureNameDefinition
-    simpleType](culturenamedefinition-simpletype-sharepoint-add-in-manifest.htm)
+    simpleType](culturenamedefinition-simpletype-sharepoint-add-in-manifest.md)
 
 -   [DescriptionDefinition
-    simpleType](descriptiondefinition-simpletype-sharepoint-add-in-manifest.htm)
+    simpleType](descriptiondefinition-simpletype-sharepoint-add-in-manifest.md)
 
--   [GUID simpleType](guid-simpletype-sharepoint-add-in-manifest.htm)
+-   [GUID simpleType](guid-simpletype-sharepoint-add-in-manifest.md)
 
--   [ManifestUri simpleType](manifesturi-simpletype-sharepoint-add-in-manifest.htm)
+-   [ManifestUri simpleType](manifesturi-simpletype-sharepoint-add-in-manifest.md)
 
 -   [NameDefinition
-    simpleType](namedefinition-simpletype-sharepoint-add-in-manifest.htm)
+    simpleType](namedefinition-simpletype-sharepoint-add-in-manifest.md)
 
 -   [PropertiesDefinition
-    complexType](propertiesdefinition-complextype-sharepoint-add-in-manifest.htm)
+    complexType](propertiesdefinition-complextype-sharepoint-add-in-manifest.md)
 
 -   [RemoteEndpointDefinition
-    complexType](remoteendpointdefinition-complextype-sharepoint-add-in-manifest.htm)
+    complexType](remoteendpointdefinition-complextype-sharepoint-add-in-manifest.md)
 
 -   [RemoteEndpointsDefinition
-    complexType](remoteendpointsdefinition-complextype-sharepoint-add-in-manifest.htm)
+    complexType](remoteendpointsdefinition-complextype-sharepoint-add-in-manifest.md)
 
--   [RestrictedInt simpleType](restrictedint-simpletype-sharepoint-add-in-manifest.htm)
+-   [RestrictedInt simpleType](restrictedint-simpletype-sharepoint-add-in-manifest.md)
 
 -   [SupportedLanguagesDefinition
-    simpleType](supportedlanguagesdefinition-simpletype-sharepoint-add-in-manifest.htm)
+    simpleType](supportedlanguagesdefinition-simpletype-sharepoint-add-in-manifest.md)
 
 -   [SupportedLocaleDefinition
-    complexType](supportedlocaledefinition-complextype-sharepoint-add-in-manifest.htm)
+    complexType](supportedlocaledefinition-complextype-sharepoint-add-in-manifest.md)
 
 -   [SupportedLocalesDefinition
-    complexType](supportedlocalesdefinition-complextype-sharepoint-add-in-manifest.htm)
+    complexType](supportedlocalesdefinition-complextype-sharepoint-add-in-manifest.md)
 
 -   [TitleDefinition
-    simpleType](titledefinition-simpletype-sharepoint-add-in-manifest.htm)
+    simpleType](titledefinition-simpletype-sharepoint-add-in-manifest.md)
 
 -   [TypeDefinition
-    simpleType](typedefinition-simpletype-sharepoint-add-in-manifest.htm)
+    simpleType](typedefinition-simpletype-sharepoint-add-in-manifest.md)
 
 -   [UrlElementDefinition
-    complexType](urlelementdefinition-complextype-sharepoint-add-in-manifest.htm)
+    complexType](urlelementdefinition-complextype-sharepoint-add-in-manifest.md)
 
 -   [VersionDefinition
-    simpleType](versiondefinition-simpletype-sharepoint-add-in-manifest.htm)
+    simpleType](versiondefinition-simpletype-sharepoint-add-in-manifest.md)
 
 -   [WebTemplateDefinition
-    complexType](webtemplatedefinition-complextype-sharepoint-add-in-manifest.htm)
+    complexType](webtemplatedefinition-complextype-sharepoint-add-in-manifest.md)
 
 -   [WebTemplateIdDefinition
-    simpleType](webtemplateiddefinition-simpletype-sharepoint-add-in-manifest.htm)
+    simpleType](webtemplateiddefinition-simpletype-sharepoint-add-in-manifest.md)
 
 
 

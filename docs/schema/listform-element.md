@@ -59,7 +59,7 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Renders a form for the particular list that is specified by a previous
-[SetList](setlist-element-view.htm) element.
+[SetList](setlist-element-view.md) element.
 
 <span codelanguage="other"></span>
 <table>
@@ -149,8 +149,8 @@ Renders a form for the particular list that is specified by a previous
 
 #### Other resources
 
-<span sdata="link">[SetList Element
-(View)](setlist-element-view.htm)</span>
+[SetList Element
+(View)](setlist-element-view.md)</span>
 
 
 

@@ -150,8 +150,8 @@ Contains column and row formatting used in a Datasheet view.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-See <span sdata="link">[Format
-Element](format-element.htm)</span> for an example
+See [Format
+Element](format-element.md)</span> for an example
 that uses the **Formats** element.
 
 

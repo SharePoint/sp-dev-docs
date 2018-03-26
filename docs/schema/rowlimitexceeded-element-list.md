@@ -64,7 +64,7 @@ SharePoint Online | SharePoint Server 2013
 
 Specifies alternate rendering when a row limit is exceeded. It executes
 if the **Paged** attribute of the
-[Row](row-element-site.htm) element is not set to
+[Row](row-element-site.md) element is not set to
 **TRUE**.
 
 <table>
@@ -198,11 +198,11 @@ Views](http://msdn.microsoft.com/library/43e6ba7e-eddb-418a-a570-c0815016fc17(Of
 [XMLDefinition and CAML View
 Schema](http://msdn.microsoft.com/library/1845d203-4699-4b0e-a182-2d9998439922(Office.15).aspx)
 
-<span sdata="link">[RowLimit Element
-(List)](rowlimit-element-list.htm)</span>
+[RowLimit Element
+(List)](rowlimit-element-list.md)</span>
 
-<span sdata="link">[Rows Element
-(Site)](rows-element-site.htm)</span>
+[Rows Element
+(Site)](rows-element-site.md)</span>
 
 
 

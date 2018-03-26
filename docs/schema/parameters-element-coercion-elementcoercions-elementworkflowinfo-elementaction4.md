@@ -56,7 +56,7 @@ JavaScript
 Container for **Parameter** elements that
 includes descriptions of the parameters in <span
 class="keyword">coercion</span> method signatures. This element is of
-type [coercionParameterType](coercionparameterstype-complextype-action4.htm).
+type [coercionParameterType](coercionparameterstype-complextype-action4.md).
 
 **Last modified:** March 09, 2015
 

@@ -165,7 +165,7 @@ None
 
 If a field from a joined list is not represented in <span
 class="keyword">ProjectedFields</span>, it cannot be included in the
-[ViewFields](viewfields-element-list.htm) element.
+[ViewFields](viewfields-element-list.md) element.
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -173,19 +173,19 @@ class="keyword">ProjectedFields</span>, it cannot be included in the
 The following example shows how to add another field to the results that
 are returned by the query. The value of the <span
 class="keyword">List</span> attribute is an alias to the foreign list.
-The alias is defined in a <span sdata="link">[Join Element
-(View)](join-element-view.htm)</span>. The <span
+The alias is defined in a [Join Element
+(View)](join-element-view.md)</span>. The <span
 class="keyword">ShowField</span> attribute must be set to the internal
 name of the foreign field.
 
 The **Type** attribute does not indicate the
 data type of the field as it usually does in a
-[Field](field-element-list.htm) element. When a
-[Field](field-element-list.htm) element is a child of
+[Field](field-element-list.md) element. When a
+[Field](field-element-list.md) element is a child of
 a **ProjectedFields** element, <span
 class="keyword">Type</span> simply indicates whether the
-[Join](join-element-view.htm) element (in the
-[Joins](joins-element-view.htm) element on which the
+[Join](join-element-view.md) element (in the
+[Joins](joins-element-view.md) element on which the
 **ProjectedFields** element depends) is based
 on an existing lookup relation between the lists. As of SharePoint
 Foundation 2010, all joins must be based on an existing lookup relation,

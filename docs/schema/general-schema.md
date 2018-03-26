@@ -62,17 +62,17 @@ SharePoint Online | SharePoint Server 2013
 
 The General Schema section of the Microsoft SharePoint Foundation
 Software Development Kit (SDK) describes [Collaborative Application
-Markup Language (CAML)](introduction-to-collaborative-application-markup-language-caml.htm)
+Markup Language (CAML)](introduction-to-collaborative-application-markup-language-caml.md)
 elements that do not belong to major schemas that are described in this
 reference.
 
 **Elements**
 
-<span sdata="link">[General Schema Elements
-A-H](general-schema-elements-a-h.htm)</span>
+[General Schema Elements
+A-H](general-schema-elements-a-h.md)</span>
 
-<span sdata="link">[General Schema Elements
-I-Z](general-schema-elements-i-z.htm)</span>
+[General Schema Elements
+I-Z](general-schema-elements-i-z.md)</span>
 
 
 

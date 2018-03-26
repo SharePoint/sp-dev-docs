@@ -21,7 +21,7 @@ Document schemas that support SharePoint Add-ins, including the App Manifest sch
 - [AppPartConfigDefinition schema reference](apppartconfigdefinition-schema-reference.md)
 
 > [!NOTE] 
-> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint". To ensure backward compatibility, the schemas have not been changed.
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
 
 

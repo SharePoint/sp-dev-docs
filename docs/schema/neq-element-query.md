@@ -183,17 +183,17 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-<span sdata="link">[Eq Element
-(Query)](eq-element-query.htm)</span>
+[Eq Element
+(Query)](eq-element-query.md)</span>
 
-<span sdata="link">[Geq Element
-(Query)](geq-element-query.htm)</span>
+[Geq Element
+(Query)](geq-element-query.md)</span>
 
-<span sdata="link">[Gt Element
-(Query)](gt-element-query.htm)</span>
+[Gt Element
+(Query)](gt-element-query.md)</span>
 
-<span sdata="link">[Lt Element
-(Query)](lt-element-query.htm)</span>
+[Lt Element
+(Query)](lt-element-query.md)</span>
 
 
 

@@ -66,14 +66,14 @@ custom actions that will appear in the workflow Visual Designer toolbox.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
--   <span sdata="link">[Schema map (Workflow
-    actions)](schema-map-workflow-actions.htm)</span>
+-   [Schema map (Workflow
+    actions)](schema-map-workflow-actions.md)</span>
 
--   <span sdata="link">[Elements (Workflow
-    actions)](elements-workflow-actions.htm)</span>
+-   [Elements (Workflow
+    actions)](elements-workflow-actions.md)</span>
 
--   <span sdata="link">[Types (Workflow
-    actions)](types-workflow-actions.htm)</span>
+-   [Types (Workflow
+    actions)](types-workflow-actions.md)</span>
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

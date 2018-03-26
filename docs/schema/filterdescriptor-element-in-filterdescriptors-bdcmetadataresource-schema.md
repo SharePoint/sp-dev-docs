@@ -59,8 +59,8 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Specifies localized display names and properties, in any combination,
-for a <span sdata="link">[FilterDescriptor Element in FilterDescriptors
-(BDCMetadata Schema)](filterdescriptor-element-in-filterdescriptors-bdcmetadata-schema.htm)</span>.
+for a [FilterDescriptor Element in FilterDescriptors
+(BDCMetadata Schema)](filterdescriptor-element-in-filterdescriptors-bdcmetadata-schema.md)</span>.
 
 Namespace:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources

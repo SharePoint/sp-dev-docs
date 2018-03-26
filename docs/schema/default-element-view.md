@@ -62,10 +62,10 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-Within a [Switch](switch-element-view.htm) or
-[FieldSwitch](fieldswitch-element-view.htm) statement, the
+Within a [Switch](switch-element-view.md) or
+[FieldSwitch](fieldswitch-element-view.md) statement, the
 content of the **Default** element runs if none
-of the [Case](case-element-view.htm) elements return
+of the [Case](case-element-view.md) elements return
 **TRUE**.
 
 <span codelanguage="other"></span>

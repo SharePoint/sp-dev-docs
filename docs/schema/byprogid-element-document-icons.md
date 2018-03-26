@@ -169,8 +169,8 @@ their corresponding document library icons.
 For example, an HTML document that contains <span class="code">\<META
 Name="ProgId" Content="Word.Document"\></span> would map to the icon
 that is specified for the ProgId "Word.Document" by a
-[Mapping](mapping-element-document-icons.htm) element inside the
-[ByProgID](byprogid-element-document-icons.htm) element.
+[Mapping](mapping-element-document-icons.md) element inside the
+[ByProgID](byprogid-element-document-icons.md) element.
 
 <span codelanguage="other"></span>
  
@@ -183,8 +183,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
         <Mapping Key="Word.Document" Value="ichtmdoc.gif"/>
     </ByProgID>
 
-See <span sdata="link">[DocIcons Element (Document
-Icons)](docicons-element-document-icons.htm)</span> for an extended
+See [DocIcons Element (Document
+Icons)](docicons-element-document-icons.md)</span> for an extended
 example that shows how to use the **ByProgID**
 element.
 

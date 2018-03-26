@@ -149,13 +149,13 @@ user group, role, or role assignment.
 
 #### Concepts
 
-<span sdata="link">[DeploymentManifest
-Schema](deploymentmanifest-schema.htm)</span>
+[DeploymentManifest
+Schema](deploymentmanifest-schema.md)</span>
 
 #### Other resources
 
-<span sdata="link">[GroupX Element
-(DeploymentManifest)](groupx-element-deploymentmanifest.htm)</span>
+[GroupX Element
+(DeploymentManifest)](groupx-element-deploymentmanifest.md)</span>
 
 
 

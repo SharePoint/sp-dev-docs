@@ -63,7 +63,7 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Used within as part of a comparison with the value contained in an
-[Expr2](expr2-element-view.htm) element. The <span
+[Expr2](expr2-element-view.md) element. The <span
 class="keyword">Expr1</span> element contains the CAML expression that
 is evaluated to determine the course of action. The expressions can be
 any set of CAML elements that render text, or they can be other
@@ -173,11 +173,11 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-<span sdata="link">[Expr Element
-(View)](expr-element-view.htm)</span>
+[Expr Element
+(View)](expr-element-view.md)</span>
 
-<span sdata="link">[Expr2 Element
-(View)](expr2-element-view.htm)</span>
+[Expr2 Element
+(View)](expr2-element-view.md)</span>
 
 
 

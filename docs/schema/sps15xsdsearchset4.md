@@ -65,14 +65,14 @@ solutions to create or validate search configurations.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
--   <span sdata="link">[Schema map
-    (SPS15XSDSearchSet4)](schema-map-sps15xsdsearchset4.htm)</span>
+-   [Schema map
+    (SPS15XSDSearchSet4)](schema-map-sps15xsdsearchset4.md)</span>
 
--   <span sdata="link">[Elements
-    (SPS15XSDSearchSet4)](elements-sps15xsdsearchset4.htm)</span>
+-   [Elements
+    (SPS15XSDSearchSet4)](elements-sps15xsdsearchset4.md)</span>
 
--   <span sdata="link">[Types
-    (SPS15XSDSearchSet4)](types-sps15xsdsearchset4.htm)</span>
+-   [Types
+    (SPS15XSDSearchSet4)](types-sps15xsdsearchset4.md)</span>
 
 
 

@@ -99,7 +99,7 @@ site inherits its schema from a base type.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Image**</p></td>
-<td align="left"><p>Optional **Text**. Sets the image used by a list base type in the Lists page (_layouts/viewlsts.htm). However, all SharePoint list definitions (such as for Announcements, Events, etc.) provide their own images so that, in practice, this attribute is never used.</p></td>
+<td align="left"><p>Optional **Text**. Sets the image used by a list base type in the Lists page (_layouts/viewlsts.md). However, all SharePoint list definitions (such as for Announcements, Events, etc.) provide their own images so that, in practice, this attribute is never used.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Title**</p></td>

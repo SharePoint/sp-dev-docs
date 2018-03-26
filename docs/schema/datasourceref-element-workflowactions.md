@@ -61,8 +61,8 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Specifies the possible values from
-[DataSource](datasource-element-workflowactions.htm) elements
-associated with the [Action](action-element-workflowactions.htm)
+[DataSource](datasource-element-workflowactions.md) elements
+associated with the [Action](action-element-workflowactions.md)
 element that is the parent of the <span
 class="keyword">RuleDesigner</span>. This enables dynamic population of
 the list of possible values by nesting an <span

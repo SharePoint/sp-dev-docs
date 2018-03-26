@@ -154,8 +154,8 @@ parent element.
 
 #### Concepts
 
-<span sdata="link">[DeploymentViewFormsList
-Schema](deploymentviewformslist-schema.htm)</span>
+[DeploymentViewFormsList
+Schema](deploymentviewformslist-schema.md)</span>
 
 
 

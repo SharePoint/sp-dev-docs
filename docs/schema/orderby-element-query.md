@@ -64,7 +64,7 @@ SharePoint Online | SharePoint Server 2013
 
 Determines the sort order for a query. The <span
 class="keyword">OrderBy</span> element contains a group of
-[FieldRef](fieldref-element-query.htm) elements.
+[FieldRef](fieldref-element-query.md) elements.
 
 <span codelanguage="other"></span>
 <table>
@@ -157,7 +157,7 @@ class="keyword">OrderBy</span> element contains a group of
 
 The order in which the fields appear is the order in which the fields
 are sorted. The value of the **Ascending**
-attribute in the [FieldRef](fieldref-element-list.htm)
+attribute in the [FieldRef](fieldref-element-list.md)
 element determines whether to sort in ascending order.
 
 

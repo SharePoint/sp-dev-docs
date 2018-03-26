@@ -64,10 +64,10 @@ SharePoint Online | SharePoint Server 2013
 
 Specifies that code is generated for all hidden lists.
 
-<span sdata="link">[Web
-(SPMetal)](web-spmetal.htm)</span>  
-  <span sdata="link">[IncludeHiddenLists
-(SPMetal)](includehiddenlists-spmetal.htm)</span>  
+[Web
+(SPMetal)](web-spmetal.md)</span>  
+  [IncludeHiddenLists
+(SPMetal)](includehiddenlists-spmetal.md)</span>  
 <span codelanguage="xmlLang"></span>
 <table>
 <colgroup>

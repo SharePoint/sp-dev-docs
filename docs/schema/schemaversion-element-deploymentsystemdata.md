@@ -166,8 +166,8 @@ USAGE
 
 #### Concepts
 
-<span sdata="link">[DeploymentSystemData
-Schema](deploymentsystemdata-schema.htm)</span>
+[DeploymentSystemData
+Schema](deploymentsystemdata-schema.md)</span>
 
 
 

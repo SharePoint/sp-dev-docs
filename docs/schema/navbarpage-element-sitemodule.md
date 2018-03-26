@@ -196,7 +196,7 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-[Module](module-element-site.htm)
+[Module](module-element-site.md)
 
 
 

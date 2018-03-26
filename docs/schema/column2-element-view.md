@@ -203,10 +203,10 @@ hyperlink.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-The following [Switch](switch-element-view.htm)
+The following [Switch](switch-element-view.md)
 statement evaluates the **Column2** value and,
 if it is empty, sets the HTML encoding of the
-[Column](column-element-view.htm) element value (in
+[Column](column-element-view.md) element value (in
 other words, of the URL) to **TRUE**.
 Otherwise, it sets the HTML encoding of the URL's descriptive text to
 **TRUE**.
@@ -235,8 +235,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-<span sdata="link">[Column Element
-(View)](column-element-view.htm)</span>
+[Column Element
+(View)](column-element-view.md)</span>
 
 
 

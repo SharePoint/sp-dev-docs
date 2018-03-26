@@ -61,7 +61,7 @@ schema.
 
 **Applies to**: SharePoint Server 2013
 
--   [LocStringId element](locstringid-element-sps15xsdsearchset6.htm)
+-   [LocStringId element](locstringid-element-sps15xsdsearchset6.md)
 
 
 

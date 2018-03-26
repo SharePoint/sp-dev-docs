@@ -58,8 +58,8 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-See <span sdata="link">[LobSystemInstances Element in LobSystem
-(BDCMetadata Schema)](lobsysteminstances-element-in-lobsystem-bdcmetadata-schema.htm)</span>
+See [LobSystemInstances Element in LobSystem
+(BDCMetadata Schema)](lobsysteminstances-element-in-lobsystem-bdcmetadata-schema.md)</span>
 for more information.
 
 Namespace:

@@ -81,13 +81,13 @@ class="placeholder">hyphenated\_GUID</span><span
 class="code">}\#</span><span
 class="placeholder">web\_template\_name</span>. The <span
 class="placeholder">hyphenated\_GUID</span> is the GUID of the add-in
-web Feature that contains the <span sdata="link">[WebTemplate Element
-(Web Template)](webtemplate-element-web-template.htm)</span> that
+web Feature that contains the [WebTemplate Element
+(Web Template)](webtemplate-element-web-template.md)</span> that
 defines the site type of the add-in web. (The <span
 class="placeholder">web\_template\_name</span> is the value of the <span
 class="keyword">Name</span> attribute of that <span
 sdata="link">[WebTemplate Element (Web
-Template)](webtemplate-element-web-template.htm)</span>. Note that
+Template)](webtemplate-element-web-template.md)</span>. Note that
 the braces "{}" and the "\#" are mandatory.) The following is an
 example:
 

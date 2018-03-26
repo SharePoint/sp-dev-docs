@@ -63,7 +63,7 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 The instructions within this element are executed if the expressions
-contained in the [IfEqual](ifequal-element-view.htm)
+contained in the [IfEqual](ifequal-element-view.md)
 element are not **TRUE**.
 
 <span codelanguage="other"></span>
@@ -170,17 +170,17 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-<span sdata="link">[Expr Element
-(View)](expr-element-view.htm)</span>
+[Expr Element
+(View)](expr-element-view.md)</span>
 
-<span sdata="link">[Expr1 Element
-(View)](expr1-element-view.htm)</span>
+[Expr1 Element
+(View)](expr1-element-view.md)</span>
 
-<span sdata="link">[Expr2 Element
-(View)](expr2-element-view.htm)</span>
+[Expr2 Element
+(View)](expr2-element-view.md)</span>
 
-<span sdata="link">[Then Element
-(View)](then-element-view.htm)</span>
+[Then Element
+(View)](then-element-view.md)</span>
 
 
 

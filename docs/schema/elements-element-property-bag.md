@@ -123,8 +123,8 @@ None
 
 #### Concepts
 
-<span sdata="link">[Property Bag
-Schema](property-bag-schema.htm)</span>
+[Property Bag
+Schema](property-bag-schema.md)</span>
 
 
 

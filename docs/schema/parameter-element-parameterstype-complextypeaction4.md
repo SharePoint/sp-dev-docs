@@ -56,7 +56,7 @@ JavaScript
 Used to describe the input and output parameters for a method call to a
 custom **Action** or <span
 class="keyword">Condition</span>. The Parameter element is of type
-[parametersType](parameterstype-complextype-action4.htm).
+[parametersType](parameterstype-complextype-action4.md).
 
 **Last modified:** March 09, 2015
 

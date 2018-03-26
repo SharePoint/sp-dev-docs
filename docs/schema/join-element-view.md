@@ -157,7 +157,7 @@ Used to join two lists for queries.
 The **Join** element translates into the SQL
 **JOIN** statement. The <span
 class="keyword">Join</span> element refactors the
-[Eq](eq-element-query.htm) element to specify the
+[Eq](eq-element-query.md) element to specify the
 primary and foreign fields on which to make the join. The primary field
 must be defined as a Lookup field to the foreign field.
 
@@ -170,7 +170,7 @@ an Orders list. It looks up to the ID field of a Customers list. The
 Customer list, in turn, has a CityName field that is a lookup field to a
 Cities list. The first **Join** element assigns
 'customers' as an alias for the Customers list. The
-[Eq](eq-element-query.htm) element child defines the
+[Eq](eq-element-query.md) element child defines the
 join using the same source and target fields that constitute the lookup
 relation. The second **Join** element assigns
 'customerCities' as an alias to the Cities list. It defines the join in

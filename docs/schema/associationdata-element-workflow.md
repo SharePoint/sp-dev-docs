@@ -147,8 +147,8 @@ parse the data.
 
 #### Concepts
 
-<span sdata="link">[Workflow
-Definitions](workflow-definitions.htm)</span>
+[Workflow
+Definitions](workflow-definitions.md)</span>
 
 #### Other resources
 

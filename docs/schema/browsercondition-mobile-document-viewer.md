@@ -65,12 +65,12 @@ hosts a viewer for a specified type of document is overridden because
 the device can use an alternative viewer for the specified type of file,
 possibly a viewer that is installed on the device.
 
-<span sdata="link">[MobileDocViewers (Mobile Document
-Viewer)](mobiledocviewers-mobile-document-viewer.htm)</span>  
-  <span sdata="link">[MobileDocViewer (Mobile Document
-Viewer)](mobiledocviewer-mobile-document-viewer.htm)</span>  
-    <span sdata="link">[BrowserCondition (Mobile Document
-Viewer)](browsercondition-mobile-document-viewer.htm)</span>  
+[MobileDocViewers (Mobile Document
+Viewer)](mobiledocviewers-mobile-document-viewer.md)</span>  
+  [MobileDocViewer (Mobile Document
+Viewer)](mobiledocviewer-mobile-document-viewer.md)</span>  
+    [BrowserCondition (Mobile Document
+Viewer)](browsercondition-mobile-document-viewer.md)</span>  
 <span codelanguage="other"></span>
 <table>
 <colgroup>

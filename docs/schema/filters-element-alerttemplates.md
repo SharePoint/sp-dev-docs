@@ -65,11 +65,11 @@ SharePoint Online | SharePoint Server 2013
 Filters enable you to create new triggers for an event such as "the
 priority of a task has changed". To modify existing filters or create
 additional filters, modify the [Filter
-Definition](filterdefinition-element-alerttemplates.htm) element of the
+Definition](filterdefinition-element-alerttemplates.md) element of the
 appropriate template. Define the
-[Query](query-element-alerttemplates.htm) element inside the
+[Query](query-element-alerttemplates.md) element inside the
 filter by using [Collaborative Application Markup Language
-(CAML)](collaborative-application-markup-language-caml-schemas.htm).
+(CAML)](collaborative-application-markup-language-caml-schemas.md).
 
 <span codelanguage="other"></span>
 <table>
@@ -144,7 +144,7 @@ filter by using [Collaborative Application Markup Language
 
 For an example of how this element is used, see <span
 sdata="link">[FilterDefinition Element
-(AlertTemplates)](filterdefinition-element-alerttemplates.htm)</span>.
+(AlertTemplates)](filterdefinition-element-alerttemplates.md)</span>.
 
 
 

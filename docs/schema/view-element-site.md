@@ -303,8 +303,8 @@ module.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-See <span sdata="link">[Module Element
-(Site)](module-element-site.htm)</span> for an example
+See [Module Element
+(Site)](module-element-site.md)</span> for an example
 that uses the **View** element.
 
 

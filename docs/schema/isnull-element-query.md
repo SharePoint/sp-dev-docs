@@ -191,11 +191,11 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-<span sdata="link">[IsNotNull Element
-(Query)](isnotnull-element-query.htm)</span>
+[IsNotNull Element
+(Query)](isnotnull-element-query.md)</span>
 
-<span sdata="link">[Where Element
-(Query)](where-element-query.htm)</span>
+[Where Element
+(Query)](where-element-query.md)</span>
 
 
 

@@ -162,7 +162,7 @@ class="code">http://myserver/myweb/</span>.
 The following example defines the <span class="keyword">More
 Items</span> link to display when the number of items in the list
 exceeds the limit set with the
-[RowLimit](rowlimit-element-list.htm) element for number
+[RowLimit](rowlimit-element-list.md) element for number
 of items to display on a page. The example uses the <span
 class="keyword">HttpVDir</span> element to construct the full path for
 an image file.
@@ -194,13 +194,13 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Reference
 
-<span sdata="link">[HTMLBase
-Element](htmlbase-element.htm)</span>
+[HTMLBase
+Element](htmlbase-element.md)</span>
 
 #### Other resources
 
-<span sdata="link">[HttpPath Element
-(View)](httppath-element-view.htm)</span>
+[HttpPath Element
+(View)](httppath-element-view.md)</span>
 
 
 

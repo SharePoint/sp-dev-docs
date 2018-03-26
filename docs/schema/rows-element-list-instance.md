@@ -58,7 +58,7 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-Contains a collection of [Row](row-element-site.htm)
+Contains a collection of [Row](row-element-site.md)
 elements.
 
 <span codelanguage="other"></span>
@@ -148,15 +148,15 @@ elements.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The **Rows** element is used within the
-[Data](data-element-site.htm) element of a list
+[Data](data-element-site.md) element of a list
 instance definition to provide a set of default data when a list is
 instantiated during site provisioning.
 
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-For an example of how this element is used, see <span sdata="link">[List
-Instances](list-instances.htm)</span>.
+For an example of how this element is used, see [List
+Instances](list-instances.md)</span>.
 
 
 

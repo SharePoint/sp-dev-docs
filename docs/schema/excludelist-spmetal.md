@@ -64,10 +64,10 @@ SharePoint Online | SharePoint Server 2013
 
 Specifies that a list should be excluded from code generation.
 
-<span sdata="link">[Web
-(SPMetal)](web-spmetal.htm)</span>  
-  <span sdata="link">[ExcludeList
-(SPMetal)](excludelist-spmetal.htm)</span>  
+[Web
+(SPMetal)](web-spmetal.md)</span>  
+  [ExcludeList
+(SPMetal)](excludelist-spmetal.md)</span>  
 <span codelanguage="xmlLang"></span>
 <table>
 <colgroup>

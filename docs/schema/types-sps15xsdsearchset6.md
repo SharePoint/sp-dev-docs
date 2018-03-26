@@ -61,7 +61,7 @@ schema.
 
 **Applies to**: SharePoint Server 2013
 
--   [LocStringId simpleType](locstringid-simpletype-sps15xsdsearchset6.htm)
+-   [LocStringId simpleType](locstringid-simpletype-sps15xsdsearchset6.md)
 
 
 

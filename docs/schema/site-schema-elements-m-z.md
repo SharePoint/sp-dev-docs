@@ -62,51 +62,51 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-[MetaData](metadata-element-site.htm)
+[MetaData](metadata-element-site.md)
 
-[Module](module-element-site.htm)
+[Module](module-element-site.md)
 
-[Modules](modules-element-site.htm)
+[Modules](modules-element-site.md)
 
-[NavBar](navbar-element-site.htm)
+[NavBar](navbar-element-site.md)
 
-[NavBarLink](navbarlink-element-site.htm)
+[NavBarLink](navbarlink-element-site.md)
 
-[NavBarPage (Site - Module)](navbarpage-element-sitemodule.htm)
+[NavBarPage (Site - Module)](navbarpage-element-sitemodule.md)
 
-[NavBarPage (Site - NavBar)](navbarpage-element-sitenavbar.htm)
+[NavBarPage (Site - NavBar)](navbarpage-element-sitenavbar.md)
 
-[NavBars](navbars-element-site.htm)
+[NavBars](navbars-element-site.md)
 
-[Project](project-element-site.htm)
+[Project](project-element-site.md)
 
-[Properties](properties-element-site.htm)
+[Properties](properties-element-site.md)
 
-[Property (Site - Feature)](property-element-sitefeature.htm)
+[Property (Site - Feature)](property-element-sitefeature.md)
 
-[Property (Site - Module)](property-element-sitemodule.htm)
+[Property (Site - Module)](property-element-sitemodule.md)
 
-[Row](row-element-site.htm)
+[Row](row-element-site.md)
 
-[Rows](rows-element-site.htm)
+[Rows](rows-element-site.md)
 
-[ServerEmailFooter](serveremailfooter-element-site.htm)
+[ServerEmailFooter](serveremailfooter-element-site.md)
 
-[SiteFeatures](sitefeatures-element-site.htm)
+[SiteFeatures](sitefeatures-element-site.md)
 
-[Template](template-element-site.htm)
+[Template](template-element-site.md)
 
-[Templates](templates-element-site.htm)
+[Templates](templates-element-site.md)
 
-[View](view-element-site.htm)
+[View](view-element-site.md)
 
-[WebFeatures](webfeatures-element-site.htm)
+[WebFeatures](webfeatures-element-site.md)
 
-[WebPart](webpart-element-site.htm)
+[WebPart](webpart-element-site.md)
 
-[WebPartConnection](webpartconnection-element-site.htm)
+[WebPartConnection](webpartconnection-element-site.md)
 
-[WebPartTransformer](webparttransformer-element-site.htm)
+[WebPartTransformer](webparttransformer-element-site.md)
 
 
 

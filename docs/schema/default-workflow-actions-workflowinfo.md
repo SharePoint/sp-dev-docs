@@ -77,7 +77,7 @@ an XML file that lists all default conditions and actions that are
 available to the workflow editor. (For information about the default
 workflow conditions that are included in the WSS.ACTIONS file, see
 [Default Workflow
-Conditions](default-workflow-conditions-workflowinfo.htm).) By default, the
+Conditions](default-workflow-conditions-workflowinfo.md).) By default, the
 WSS.ACTIONS file is installed in the following location in SharePoint
 Foundation 2010:
 
@@ -313,11 +313,11 @@ sentence.
 
 #### Tasks
 
-[.ACTIONS File Example](actions-file-example-workflowinfo.htm)
+[.ACTIONS File Example](actions-file-example-workflowinfo.md)
 
 #### Concepts
 
-[Default Workflow Conditions](default-workflow-conditions-workflowinfo.htm)
+[Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
 
 #### Other resources
 

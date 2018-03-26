@@ -163,8 +163,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Reference
 
-<span sdata="link">[XML
-Element](xml-element.htm)</span>
+[XML
+Element](xml-element.md)</span>
 
 
 

@@ -63,7 +63,7 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Functions similarly to the
-[Column](column-element-view.htm) element but only
+[Column](column-element-view.md) element but only
 valid when referring to a **Lookup** field. The
 only distinction between the **Column** and
 **LookupColumn** elements for <span
@@ -191,7 +191,7 @@ class="code">\<Column Name="LookupTitle"/\></span> would render "1".
 Consequently, in most situations involving <span
 class="keyword">Lookup</span> fields, use the <span
 class="keyword">LookupColumn</span> element instead of the
-[Column](column-element-view.htm) element. The only
+[Column](column-element-view.md) element. The only
 time to use the **Column** element is when you
 need a raw reference to the ID of the item in the target list, perhaps
 for constructing your own link to the target item.
@@ -220,8 +220,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-<span sdata="link">[Column Element
-(View)](column-element-view.htm)</span>
+[Column Element
+(View)](column-element-view.md)</span>
 
 
 

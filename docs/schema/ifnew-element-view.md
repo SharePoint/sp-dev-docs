@@ -183,8 +183,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-<span sdata="link">[DisplayPattern Element
-(List)](displaypattern-element-list.htm)</span>
+[DisplayPattern Element
+(List)](displaypattern-element-list.md)</span>
 
 
 

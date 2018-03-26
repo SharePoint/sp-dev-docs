@@ -63,11 +63,11 @@ Feature as part of a [site definition
 configuration](http://msdn.microsoft.com/library/0d76bceb-7ffa-444a-98cf-0fa1d60a1aa3(Office.15).aspx)
 when you provision sites through the definition.
 
-[Elements](elements-element-featuresitetemplateassociation.htm)
+[Elements](elements-element-featuresitetemplateassociation.md)
 
-  [FeatureSiteTemplateAssociation](featuresitetemplateassociation-element-featuresitetemplateassociation.htm)
+  [FeatureSiteTemplateAssociation](featuresitetemplateassociation-element-featuresitetemplateassociation.md)
 
-    [Property](property-element-featuresitetemplateassociation.htm)
+    [Property](property-element-featuresitetemplateassociation.md)
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

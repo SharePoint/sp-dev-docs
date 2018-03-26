@@ -156,7 +156,7 @@ Fields referenced in a **Where** element do not
 have to be fields of the primary list that is being queried. If a
 foreign list is being joined, then fields from the foreign list can be
 itemized in a
-[ProjectedFields](projectedfields-element-view.htm) element and
+[ProjectedFields](projectedfields-element-view.md) element and
 can then be referenced in the **Where**
 element.
 
@@ -164,7 +164,7 @@ element.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 In the following example, the **Where** element
-uses the [Geq](geq-element-query.htm) element as the
+uses the [Geq](geq-element-query.md) element as the
 filter in the query, returning cases where the date and time value in
 the **Expires** field is greater than today's
 date and time.

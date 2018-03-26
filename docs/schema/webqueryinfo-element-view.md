@@ -162,7 +162,7 @@ required to perform a "screenscrape" for the data.
 
 In the following example, the **WebQueryInfo**
 element is used in a
-[ViewHeader](viewheader-element-list.htm) element to
+[ViewHeader](viewheader-element-list.md) element to
 provide an ID for a table that contains a view.
 
 <span codelanguage="xmlLang"></span>

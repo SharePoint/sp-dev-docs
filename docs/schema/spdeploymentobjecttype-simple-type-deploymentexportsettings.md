@@ -59,8 +59,8 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Provides values for the **Type** attribute on
-the <span sdata="link">[DeploymentObject Element
-(DeploymentExportSettings)](deploymentobject-element-deploymentexportsettings.htm)</span>.
+the [DeploymentObject Element
+(DeploymentExportSettings)](deploymentobject-element-deploymentexportsettings.md)</span>.
 
 <span codelanguage="other"></span>
 <table>
@@ -143,13 +143,13 @@ class="nolink">SPDeploymentObjectType</span></span>
 
 #### Concepts
 
-<span sdata="link">[DeploymentExportSettings
-Schema](deploymentexportsettings-schema.htm)</span>
+[DeploymentExportSettings
+Schema](deploymentexportsettings-schema.md)</span>
 
 #### Other resources
 
-<span sdata="link">[DeploymentObject Element
-(DeploymentExportSettings)](deploymentobject-element-deploymentexportsettings.htm)</span>
+[DeploymentObject Element
+(DeploymentExportSettings)](deploymentobject-element-deploymentexportsettings.md)</span>
 
 
 

@@ -66,67 +66,67 @@ A solution manifest file defines the constituent parts of a solution,
 including its files, assemblies, code access security, Web Parts,
 Features, site definitions, and other resources.
 
-[Solution](solution-element-solution.htm)
+[Solution](solution-element-solution.md)
 
-  <span sdata="link">[ActivationDependencies Element
-(Solution)](activationdependencies-element-solution.htm)</span>
+  [ActivationDependencies Element
+(Solution)](activationdependencies-element-solution.md)</span>
 
-    <span sdata="link">[ActivationDependency Element
-(Solution)](activationdependency-element-solution.htm)</span>
+    [ActivationDependency Element
+(Solution)](activationdependency-element-solution.md)</span>
 
-  [ApplicationResourceFiles](applicationresourcefiles-element-solution.htm)
+  [ApplicationResourceFiles](applicationresourcefiles-element-solution.md)
 
-    [ApplicationResourceFile](applicationresourcefile-element-solution.htm)
+    [ApplicationResourceFile](applicationresourcefile-element-solution.md)
 
-  [Assemblies](assemblies-element-solutionassemblies.htm)
+  [Assemblies](assemblies-element-solutionassemblies.md)
 
-    [Assembly](assembly-element-solutionassemblies.htm)
+    [Assembly](assembly-element-solutionassemblies.md)
 
-      [SafeControls](safecontrols-element-solution.htm)
+      [SafeControls](safecontrols-element-solution.md)
 
-        [SafeControl](safecontrol-element-solution.htm)
+        [SafeControl](safecontrol-element-solution.md)
 
-      [ClassResources](classresources-element-solution.htm)
+      [ClassResources](classresources-element-solution.md)
 
-        [ClassResource](classresource-element-solution.htm)
+        [ClassResource](classresource-element-solution.md)
 
-  [CodeAccessSecurity](codeaccesssecurity-element-solution.htm)
+  [CodeAccessSecurity](codeaccesssecurity-element-solution.md)
 
-    [PolicyItem](policyitem-element-solution.htm)
+    [PolicyItem](policyitem-element-solution.md)
 
-      [PermissionSet](permissionset-element-solution.htm)
+      [PermissionSet](permissionset-element-solution.md)
 
-        [IPermission](ipermission-element-solution.htm)
+        [IPermission](ipermission-element-solution.md)
 
-      [Assemblies](assemblies-element-solutioncodeaccesssecurity.htm)
+      [Assemblies](assemblies-element-solutioncodeaccesssecurity.md)
 
-        [Assembly](assembly-element-solutioncodeaccesssecurity.htm)
+        [Assembly](assembly-element-solutioncodeaccesssecurity.md)
 
-  [DwpFiles](dwpfiles-element-solution.htm)
+  [DwpFiles](dwpfiles-element-solution.md)
 
-    [DwpFile](dwpfile-element-solution.htm)
+    [DwpFile](dwpfile-element-solution.md)
 
-  [FeatureManifests](featuremanifests-element-solution.htm)
+  [FeatureManifests](featuremanifests-element-solution.md)
 
-    [FeatureManifest](featuremanifest-element-solution.htm)
+    [FeatureManifest](featuremanifest-element-solution.md)
 
-  [Resources](resources-element-solution.htm)
+  [Resources](resources-element-solution.md)
 
-    [Resource](resource-element-solution.htm)
+    [Resource](resource-element-solution.md)
 
-  [RootFiles](rootfiles-element-solution.htm)
+  [RootFiles](rootfiles-element-solution.md)
 
-    [RootFile](rootfile-element-solution.htm)
+    [RootFile](rootfile-element-solution.md)
 
-  [SiteDefinitionManifests](sitedefinitionmanifests-element-solution.htm)
+  [SiteDefinitionManifests](sitedefinitionmanifests-element-solution.md)
 
-    [SiteDefinitionManifest](sitedefinitionmanifest-element-solution.htm)
+    [SiteDefinitionManifest](sitedefinitionmanifest-element-solution.md)
 
-      [WebTempFile](webtempfile-element-solution.htm)
+      [WebTempFile](webtempfile-element-solution.md)
 
-  [TemplateFiles](templatefiles-element-solution.htm)
+  [TemplateFiles](templatefiles-element-solution.md)
 
-    [TemplateFile](templatefile-element-solution.htm)
+    [TemplateFile](templatefile-element-solution.md)
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

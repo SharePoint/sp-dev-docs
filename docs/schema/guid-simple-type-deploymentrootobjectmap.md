@@ -60,7 +60,7 @@ SharePoint Online | SharePoint Server 2013
 
 Supports the use of a unique identifier (GUID) as a <span
 class="keyword">Guid</span> attribute field value in the [RootObject
-element](rootobject-element-deploymentrootobjectmap.htm) of the
+element](rootobject-element-deploymentrootobjectmap.md) of the
 DeploymentLRootObjectMap Schema.
 
 <span codelanguage="other"></span>
@@ -82,13 +82,13 @@ DeploymentLRootObjectMap Schema.
 
 #### Concepts
 
-<span sdata="link">[DeploymentRootObjectMap
-Schema](deploymentrootobjectmap-schema.htm)</span>
+[DeploymentRootObjectMap
+Schema](deploymentrootobjectmap-schema.md)</span>
 
 #### Other resources
 
-<span sdata="link">[RootObject Element
-(DeploymentRootObjectMap)](rootobject-element-deploymentrootobjectmap.htm)</span>
+[RootObject Element
+(DeploymentRootObjectMap)](rootobject-element-deploymentrootobjectmap.md)</span>
 
 
 

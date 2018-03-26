@@ -65,12 +65,12 @@ SharePoint Online | SharePoint Server 2013
 Specifies that SPMetal should generate code only for columns that are
 explicitly represented by Column elements.
 
-<span sdata="link">[Web
-(SPMetal)](web-spmetal.htm)</span>  
-  <span sdata="link">[ContentType
-(SPMetal)](contenttype-spmetal.htm)</span>  
-    <span sdata="link">[ExcludeOtherColumns
-(SPMetal)](excludeothercolumns-spmetal.htm)</span>  
+[Web
+(SPMetal)](web-spmetal.md)</span>  
+  [ContentType
+(SPMetal)](contenttype-spmetal.md)</span>  
+    [ExcludeOtherColumns
+(SPMetal)](excludeothercolumns-spmetal.md)</span>  
 <span codelanguage="VisualBasic"></span>
 <table>
 <colgroup>

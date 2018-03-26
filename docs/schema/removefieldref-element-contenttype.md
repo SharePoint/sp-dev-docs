@@ -208,16 +208,16 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Concepts
 
-<span sdata="link">[Content Type
-Definitions](content-type-definitions.htm)</span>
+[Content Type
+Definitions](content-type-definitions.md)</span>
 
 #### Other resources
 
 [Fields and Field
 References](http://msdn.microsoft.com/library/6b536c1a-719c-4203-8006-c162de199bfc(Office.15).aspx)
 
-<span sdata="link">[FieldRef Element
-(ContentType)](fieldref-element-contenttype.htm)</span>
+[FieldRef Element
+(ContentType)](fieldref-element-contenttype.md)</span>
 
 
 

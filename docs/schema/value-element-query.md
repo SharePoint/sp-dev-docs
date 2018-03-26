@@ -63,7 +63,7 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Contains the value against which the value returned by the
-[FieldRef](fieldref-element-query.htm) element is
+[FieldRef](fieldref-element-query.md) element is
 compared.
 
 <span codelanguage="other"></span>

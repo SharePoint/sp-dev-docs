@@ -53,9 +53,9 @@ JavaScript
 </tbody>
 </table>
 
-Base type for defining a <span sdata="link">[Property element
+Base type for defining a [Property element
 (propertiesType complexType)
-(Action4)](property-element-propertiestype-complextypeaction4.htm)</span>.
+(Action4)](property-element-propertiestype-complextypeaction4.md)</span>.
 
 **Last modified:** March 09, 2015
 

@@ -68,11 +68,11 @@ settings for a web template.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-<span sdata="link">[Elements (Web
-Template)](elements-web-template.htm)</span>
+[Elements (Web
+Template)](elements-web-template.md)</span>
 
-   <span sdata="link">[WebTemplate Element (Web
-Template)](webtemplate-element-web-template.htm)</span>
+   [WebTemplate Element (Web
+Template)](webtemplate-element-web-template.md)</span>
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -149,7 +149,7 @@ file) to separate list metadata from data.
 
 The following sample illustrates the skeletal structure of a list with
 **MetaData** and
-[Data](data-element-site.htm) elements.
+[Data](data-element-site.md) elements.
 
 <span codelanguage="xmlLang"></span>
 XML 
@@ -183,7 +183,7 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-[Data](data-element-site.htm)
+[Data](data-element-site.md)
 
 
 

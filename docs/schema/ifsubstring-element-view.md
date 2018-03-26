@@ -63,8 +63,8 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Allows for conditional rendering based on whether a first expression
-([Expr1](expr1-element-view.htm)) is contained within
-a second expression ([Expr2](expr2-element-view.htm)).
+([Expr1](expr1-element-view.md)) is contained within
+a second expression ([Expr2](expr2-element-view.md)).
 
 <span codelanguage="other"></span>
 <table>

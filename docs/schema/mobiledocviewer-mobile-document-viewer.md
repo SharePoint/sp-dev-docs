@@ -63,10 +63,10 @@ SharePoint Online | SharePoint Server 2013
 Specifies how a request for a document for a specific type is redirected
 to a page that hosts a viewer that can open documents of that type.
 
-<span sdata="link">[MobileDocViewers (Mobile Document
-Viewer)](mobiledocviewers-mobile-document-viewer.htm)</span>  
-  <span sdata="link">[MobileDocViewer (Mobile Document
-Viewer)](mobiledocviewer-mobile-document-viewer.htm)</span>  
+[MobileDocViewers (Mobile Document
+Viewer)](mobiledocviewers-mobile-document-viewer.md)</span>  
+  [MobileDocViewer (Mobile Document
+Viewer)](mobiledocviewer-mobile-document-viewer.md)</span>  
 <span codelanguage="other"></span>
 <table>
 <colgroup>

@@ -105,10 +105,10 @@ including the following:
 CAML is used for two types of rendering in SharePoint Foundation: to
 define the type of data that is contained within a field, and to
 construct HTML that is displayed in the browser. For information on the
-two major uses of CAML, see <span sdata="link">[Data-Defining
-Elements](data-defining-elements.htm)</span> and <span
+two major uses of CAML, see [Data-Defining
+Elements](data-defining-elements.md)</span> and <span
 sdata="link">[HTML-Rendering
-Elements](html-rendering-elements.htm)</span>.
+Elements](html-rendering-elements.md)</span>.
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------

@@ -62,21 +62,21 @@ XML schema.
 **Applies to**: SharePoint Server 2013
 
 -   [BoundVariableOrigin
-    simpleType](boundvariableorigin-simpletype-sps15xsdsearchset4.htm)
+    simpleType](boundvariableorigin-simpletype-sps15xsdsearchset4.md)
 
 -   [GroupProcessingDirective
-    simpleType](groupprocessingdirective-simpletype-sps15xsdsearchset4.htm)
+    simpleType](groupprocessingdirective-simpletype-sps15xsdsearchset4.md)
 
--   [LicenseType simpleType](licensetype-simpletype-sps15xsdsearchset4.htm)
+-   [LicenseType simpleType](licensetype-simpletype-sps15xsdsearchset4.md)
 
 -   [MatchingOptions
-    simpleType](matchingoptions-simpletype-sps15xsdsearchset4.htm)
+    simpleType](matchingoptions-simpletype-sps15xsdsearchset4.md)
 
 -   [QueryActionEnableOnClickThroughOptions
-    simpleType](queryactionenableonclickthroughoptions-simpletype-sps15xsdsearchset4.htm)
+    simpleType](queryactionenableonclickthroughoptions-simpletype-sps15xsdsearchset4.md)
 
 -   [QueryTransformParentType
-    simpleType](querytransformparenttype-simpletype-sps15xsdsearchset4.htm)
+    simpleType](querytransformparenttype-simpletype-sps15xsdsearchset4.md)
 
 
 

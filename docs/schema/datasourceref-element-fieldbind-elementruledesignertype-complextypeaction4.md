@@ -53,9 +53,9 @@ JavaScript
 </tbody>
 </table>
 
-Specifies the possible values from the <span sdata="link">[DataSource
+Specifies the possible values from the [DataSource
 element (dataSourcesType complexType)
-(Action4)](datasource-element-datasourcestype-complextypeaction4.htm)</span> that are
+(Action4)](datasource-element-datasourcestype-complextypeaction4.md)</span> that are
 associated with the **Action** or <span
 class="keyword">Condition</span> element that is the parent of the <span
 class="keyword">RuleDesigner</span>. This enables dynamic population of

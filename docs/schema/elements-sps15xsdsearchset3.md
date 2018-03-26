@@ -59,71 +59,71 @@ XML schema.
 
 **Last modified:** February 19, 2014
 
--   [Aliases element](aliases-element-searchschemaconfigurationsettings-complextypesps15xsdsearchset3.htm)
+-   [Aliases element](aliases-element-searchschemaconfigurationsettings-complextypesps15xsdsearchset3.md)
 
 -   [ArrayOfSearchQueryConfigurationSettings
-    element](arrayofsearchqueryconfigurationsettings-element-sps15xsdsearchset3.htm)
+    element](arrayofsearchqueryconfigurationsettings-element-sps15xsdsearchset3.md)
 
--   [BestBets element](bestbets-element-searchqueryconfigurationsettings-complextypesps15xsdsearchset3.htm)
+-   [BestBets element](bestbets-element-searchqueryconfigurationsettings-complextypesps15xsdsearchset3.md)
 
 -   [CategoriesAndCrawledProperties
-    element](categoriesandcrawledproperties-element-searchschemaconfigurationsettings-complex.htm)
+    element](categoriesandcrawledproperties-element-searchschemaconfigurationsettings-complex.md)
 
 -   [CrawledProperties
-    element](crawledproperties-element-searchschemaconfigurationsettings-complextypesps15xsds.htm)
+    element](crawledproperties-element-searchschemaconfigurationsettings-complextypesps15xsds.md)
 
--   [DefaultSourceId element](defaultsourceid-element-searchqueryconfigurationsettings-complextypesps15xsdsear.htm)
+-   [DefaultSourceId element](defaultsourceid-element-searchqueryconfigurationsettings-complextypesps15xsdsear.md)
 
 -   [DefaultSourceIdSet
-    element](defaultsourceidset-element-searchqueryconfigurationsettings-complextypesps15xsds.htm)
+    element](defaultsourceidset-element-searchqueryconfigurationsettings-complextypesps15xsds.md)
 
--   [DeployToParent element](deploytoparent-element-searchqueryconfigurationsettings-complextypesps15xsdsearc.htm)
+-   [DeployToParent element](deploytoparent-element-searchqueryconfigurationsettings-complextypesps15xsdsearc.md)
 
 -   [DisableInheritanceOnImport
-    element](disableinheritanceonimport-element-searchqueryconfigurationsettings-complextypes.htm)
+    element](disableinheritanceonimport-element-searchqueryconfigurationsettings-complextypes.md)
 
 -   [ManagedProperties
-    element](managedproperties-element-searchschemaconfigurationsettings-complextypesps15xsds.htm)
+    element](managedproperties-element-searchschemaconfigurationsettings-complextypesps15xsds.md)
 
--   [Mappings element](mappings-element-searchschemaconfigurationsettings-complextypesps15xsdsearchset3.htm)
+-   [Mappings element](mappings-element-searchschemaconfigurationsettings-complextypesps15xsdsearchset3.md)
 
--   [Overrides element](overrides-element-searchschemaconfigurationsettings-complextypesps15xsdsearchset.htm)
+-   [Overrides element](overrides-element-searchschemaconfigurationsettings-complextypesps15xsdsearchset.md)
 
--   [QueryRuleGroups element](queryrulegroups-element-searchqueryconfigurationsettings-complextypesps15xsdsear.htm)
+-   [QueryRuleGroups element](queryrulegroups-element-searchqueryconfigurationsettings-complextypesps15xsdsear.md)
 
--   [QueryRules element](queryrules-element-searchqueryconfigurationsettings-complextypesps15xsdsearchset.htm)
+-   [QueryRules element](queryrules-element-searchqueryconfigurationsettings-complextypesps15xsdsearchset.md)
 
--   [RankingModels element](rankingmodels-element-searchrankingmodelconfigurationsettings-complextypesps15xs.htm)
+-   [RankingModels element](rankingmodels-element-searchrankingmodelconfigurationsettings-complextypesps15xs.md)
 
--   [ResultTypes element](resulttypes-element-searchqueryconfigurationsettings-complextypesps15xsdsearchse.htm)
+-   [ResultTypes element](resulttypes-element-searchqueryconfigurationsettings-complextypesps15xsdsearchse.md)
 
 -   [SearchConfigurationSettings
-    element](searchconfigurationsettings-element-sps15xsdsearchset3.htm)
+    element](searchconfigurationsettings-element-sps15xsdsearchset3.md)
 
 -   [SearchQueryConfigurationSettings
-    element](searchqueryconfigurationsettings-element-searchconfigurationsettings-complextype.htm)
+    element](searchqueryconfigurationsettings-element-searchconfigurationsettings-complextype.md)
 
 -   [SearchQueryConfigurationSettings
-    element](searchqueryconfigurationsettings-element-arrayofsearchqueryconfigurationsettings.htm)
+    element](searchqueryconfigurationsettings-element-arrayofsearchqueryconfigurationsettings.md)
 
 -   [SearchQueryConfigurationSettings
-    element](searchqueryconfigurationsettings-element-sps15xsdsearchset3.htm)
+    element](searchqueryconfigurationsettings-element-sps15xsdsearchset3.md)
 
 -   [SearchRankingModelConfigurationSettings
-    element](searchrankingmodelconfigurationsettings-element-sps15xsdsearchset3.htm)
+    element](searchrankingmodelconfigurationsettings-element-sps15xsdsearchset3.md)
 
 -   [SearchRankingModelConfigurationSettings
-    element](searchrankingmodelconfigurationsettings-element-searchconfigurationsettings-comp.htm)
+    element](searchrankingmodelconfigurationsettings-element-searchconfigurationsettings-comp.md)
 
 -   [SearchSchemaConfigurationSettings
-    element](searchschemaconfigurationsettings-element-searchconfigurationsettings-complextyp.htm)
+    element](searchschemaconfigurationsettings-element-searchconfigurationsettings-complextyp.md)
 
 -   [SearchSchemaConfigurationSettings
-    element](searchschemaconfigurationsettings-element-sps15xsdsearchset3.htm)
+    element](searchschemaconfigurationsettings-element-sps15xsdsearchset3.md)
 
--   [Sources element](sources-element-searchqueryconfigurationsettings-complextypesps15xsdsearchset3.htm)
+-   [Sources element](sources-element-searchqueryconfigurationsettings-complextypesps15xsdsearchset3.md)
 
--   [UserSegments element](usersegments-element-searchqueryconfigurationsettings-complextypesps15xsdsearchs.htm)
+-   [UserSegments element](usersegments-element-searchqueryconfigurationsettings-complextypesps15xsdsearchs.md)
 
 
 

@@ -183,8 +183,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-<span sdata="link">[Contains Element
-(Query)](contains-element-query.htm)</span>
+[Contains Element
+(Query)](contains-element-query.md)</span>
 
 
 

@@ -153,7 +153,7 @@ PublicKeyToken=10b23036c9b36d6d</span>
 
 For an example of how this element is used, see <span
 sdata="link">[Event
-Registrations](event-registrations.htm)</span>.
+Registrations](event-registrations.md)</span>.
 
 
 

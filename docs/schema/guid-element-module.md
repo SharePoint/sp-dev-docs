@@ -157,7 +157,7 @@ Specifies the GUID of the GUIDMap.
 #### Concepts
 
 <span
-sdata="link">[Modules](modules.htm)</span>
+sdata="link">[Modules](modules.md)</span>
 
 #### Other resources
 

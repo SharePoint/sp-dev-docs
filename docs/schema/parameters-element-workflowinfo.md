@@ -185,13 +185,13 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Tasks
 
-[.ACTIONS File Example](actions-file-example-workflowinfo.htm)
+[.ACTIONS File Example](actions-file-example-workflowinfo.md)
 
 #### Concepts
 
-[Default Workflow Actions](default-workflow-actions-workflowinfo.htm)
+[Default Workflow Actions](default-workflow-actions-workflowinfo.md)
 
-[Default Workflow Conditions](default-workflow-conditions-workflowinfo.htm)
+[Default Workflow Conditions](default-workflow-conditions-workflowinfo.md)
 
 #### Other resources
 

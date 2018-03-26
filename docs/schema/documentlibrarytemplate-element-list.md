@@ -172,11 +172,11 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-<span sdata="link">[DocumentTemplate Element
-(Site)](documenttemplate-element-site.htm)</span>
+[DocumentTemplate Element
+(Site)](documenttemplate-element-site.md)</span>
 
-<span sdata="link">[DocumentTemplates Element
-(Site)](documenttemplates-element-site.htm)</span>
+[DocumentTemplates Element
+(Site)](documenttemplates-element-site.md)</span>
 
 
 

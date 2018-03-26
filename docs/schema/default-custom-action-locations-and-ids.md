@@ -62,25 +62,25 @@ SharePoint Online | SharePoint Server 2013
 
 The following table shows the locations, custom action group IDs, and
 custom action IDs that are used in the
-[CustomAction](customaction-element.htm) element and the
-[CustomActionGroup](customactiongroup-element-custom-action.htm) element of
+[CustomAction](customaction-element.md) element and the
+[CustomActionGroup](customactiongroup-element-custom-action.md) element of
 custom actions that are installed by default in Microsoft SharePoint
 Foundation.
 
 In the table, each location value corresponds to the <span
 class="keyword">Location</span> attribute of the
-[CustomAction](customaction-element.htm) element. Each
+[CustomAction](customaction-element.md) element. Each
 group ID corresponds to the **GroupId**
 attribute of the
-[CustomAction](customaction-element.htm) element or to
+[CustomAction](customaction-element.md) element or to
 the **Id** attribute of the
-[CustomActionGroup](customactiongroup-element-custom-action.htm) element.
+[CustomActionGroup](customactiongroup-element-custom-action.md) element.
 Each custom action ID corresponds to the **Id**
 attribute of the
-[CustomAction](customaction-element.htm) element.
+[CustomAction](customaction-element.md) element.
 
 You can create a Feature that implements the
-[HideCustomAction](hidecustomaction-element.htm) element to
+[HideCustomAction](hidecustomaction-element.md) element to
 hide any default custom action that is identified in the table.
 
 
@@ -542,16 +542,16 @@ hide any default custom action that is identified in the table.
 
 #### Concepts
 
-<span sdata="link">[Custom Action Definition
-Schema](custom-action-definition-schema.htm)</span>
+[Custom Action Definition
+Schema](custom-action-definition-schema.md)</span>
 
 #### Other resources
 
 [How to: Add Actions to the User
 Interface](http://msdn.microsoft.com/library/b2403912-161d-408f-90ae-6b95c014d054(Office.15).aspx)
 
-<span sdata="link">[Schema reference for SharePoint
-2013](schema-reference-for-sharepoint-2013.htm)</span>
+[Schema reference for SharePoint
+2013](schema-reference-for-sharepoint-2013.md)</span>
 
 
 

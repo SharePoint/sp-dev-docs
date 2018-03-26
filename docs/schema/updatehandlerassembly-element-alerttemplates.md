@@ -106,7 +106,7 @@ None
 
 #### Other resources
 
-[NotificationHandlerAssembly](notificationhandlerassembly-element-alert-templates.htm)
+[NotificationHandlerAssembly](notificationhandlerassembly-element-alert-templates.md)
 
 
 

@@ -132,8 +132,8 @@ element declarations.
 
 #### Concepts
 
-<span sdata="link">[Content Type
-Bindings](content-type-bindings.htm)</span>
+[Content Type
+Bindings](content-type-bindings.md)</span>
 
 
 

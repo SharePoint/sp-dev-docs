@@ -179,13 +179,13 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Reference
 
-<span sdata="link">[FieldFilterImageURL
-Element](fieldfilterimageurl-element.htm)</span>
+[FieldFilterImageURL
+Element](fieldfilterimageurl-element.md)</span>
 
 #### Other resources
 
-<span sdata="link">[FieldSortParams Element
-(View)](fieldsortparams-element-view.htm)</span>
+[FieldSortParams Element
+(View)](fieldsortparams-element-view.md)</span>
 
 
 

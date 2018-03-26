@@ -132,8 +132,8 @@ element declarations.
 
 #### Concepts
 
-<span sdata="link">[Document
-Converter](document-converter.htm)</span>
+[Document
+Converter](document-converter.md)</span>
 
 
 

@@ -59,7 +59,7 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Provides values for the **Type** attribute on
-the [SystemObject element](systemobject-element-deploymentsystemdata.htm).
+the [SystemObject element](systemobject-element-deploymentsystemdata.md).
 The value specifies the system object type.
 
 <span codelanguage="other"></span>
@@ -130,13 +130,13 @@ The value specifies the system object type.
 
 #### Concepts
 
-<span sdata="link">[DeploymentSystemData
-Schema](deploymentsystemdata-schema.htm)</span>
+[DeploymentSystemData
+Schema](deploymentsystemdata-schema.md)</span>
 
 #### Other resources
 
-<span sdata="link">[SystemObject Element
-(DeploymentSystemData)](systemobject-element-deploymentsystemdata.htm)</span>
+[SystemObject Element
+(DeploymentSystemData)](systemobject-element-deploymentsystemdata.md)</span>
 
 
 

@@ -187,8 +187,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Concepts
 
-<span sdata="link">[Query
-Schema](query-schema.htm)</span>
+[Query
+Schema](query-schema.md)</span>
 
 #### Other resources
 

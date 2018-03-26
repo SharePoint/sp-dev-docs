@@ -209,11 +209,11 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-<span sdata="link">[ListProperty Element
-(View)](listproperty-element-view.htm)</span>
+[ListProperty Element
+(View)](listproperty-element-view.md)</span>
 
-<span sdata="link">[Property Element
-(View)](property-element-view.htm)</span>
+[Property Element
+(View)](property-element-view.md)</span>
 
 
 

@@ -63,9 +63,9 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Specifies whether the value of a list item for the field specified by
-the [FieldRef](fieldref-element-query.htm) element is
+the [FieldRef](fieldref-element-query.md) element is
 equal to one of the values specified by the
-[Values](values-element-query.htm) element.
+[Values](values-element-query.md) element.
 
 <span codelanguage="other"></span>
 <table>
@@ -153,8 +153,8 @@ equal to one of the values specified by the
 
 The **In** element does not support the use of
 negation operators such as
-[Neq](neq-element-query.htm) or
-[NotIncludes](notincludes-element-query.htm).
+[Neq](neq-element-query.md) or
+[NotIncludes](notincludes-element-query.md).
 
 
 

@@ -143,7 +143,7 @@ Foundation 2010.
 
 For an example of how this element is used, see <span
 sdata="link">[Upgrade Definition
-schema](upgrade-definition-schema.htm)</span>.
+schema](upgrade-definition-schema.md)</span>.
 
 
 

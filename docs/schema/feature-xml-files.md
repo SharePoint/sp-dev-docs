@@ -59,67 +59,67 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 In a <span class="code">Feature.xml</span> file, the
-[Feature](feature-element-feature.htm) element defines a
+[Feature](feature-element-feature.md) element defines a
 Feature and specifies the location of assemblies, files, dependencies,
 or properties that support the Feature.
 
-[Feature](feature-element-feature.htm)
+[Feature](feature-element-feature.md)
 
-  [ActivationDependencies](activationdependencies-element-feature.htm)
+  [ActivationDependencies](activationdependencies-element-feature.md)
 
-    [ActivationDependency](activationdependency-element-feature.htm)
+    [ActivationDependency](activationdependency-element-feature.md)
 
-  [ElementManifests](elementmanifests-element-feature.htm)
+  [ElementManifests](elementmanifests-element-feature.md)
 
-    [ElementFile](elementfile-element-feature.htm)
+    [ElementFile](elementfile-element-feature.md)
 
-    [ElementManifest](elementmanifest-element-feature.htm)
+    [ElementManifest](elementmanifest-element-feature.md)
 
-  [Properties](properties-element-feature.htm)
+  [Properties](properties-element-feature.md)
 
-    [Property](property-element-feature.htm)
+    [Property](property-element-feature.md)
 
-  <span sdata="link">[UpgradeActions Element
-(Feature)](upgradeactions-element-feature.htm)</span>
+  [UpgradeActions Element
+(Feature)](upgradeactions-element-feature.md)</span>
 
-    <span sdata="link">[AddContentTypeField Element
-(Feature)](addcontenttypefield-element-feature.htm)</span>
+    [AddContentTypeField Element
+(Feature)](addcontenttypefield-element-feature.md)</span>
 
-    <span sdata="link">[ApplyElementManifests Element
-(Feature)](applyelementmanifests-element-feature.htm)</span>
+    [ApplyElementManifests Element
+(Feature)](applyelementmanifests-element-feature.md)</span>
 
-      <span sdata="link">[ElementFile Element
-(Feature)](elementfile-element-feature.htm)</span>
+      [ElementFile Element
+(Feature)](elementfile-element-feature.md)</span>
 
-      <span sdata="link">[ElementManifest Element
-(Feature)](elementmanifest-element-feature.htm)</span>
+      [ElementManifest Element
+(Feature)](elementmanifest-element-feature.md)</span>
 
-    <span sdata="link">[CustomUpgradeAction Element
-(Feature)](customupgradeaction-element-feature.htm)</span>
+    [CustomUpgradeAction Element
+(Feature)](customupgradeaction-element-feature.md)</span>
 
-      <span sdata="link">[Parameters Element
-(Feature)](parameters-element-feature.htm)</span>
+      [Parameters Element
+(Feature)](parameters-element-feature.md)</span>
 
-        <span sdata="link">[Parameter Element
-(Feature)](parameter-element-feature.htm)</span>
+        [Parameter Element
+(Feature)](parameter-element-feature.md)</span>
 
-    <span sdata="link">[MapFile Element
-(Feature)](mapfile-element-feature.htm)</span>
+    [MapFile Element
+(Feature)](mapfile-element-feature.md)</span>
 
-    <span sdata="link">[VersionRange Element
-(Feature)](versionrange-element-feature.htm)</span>
+    [VersionRange Element
+(Feature)](versionrange-element-feature.md)</span>
 
-      <span sdata="link">[AddContentTypeField Element
-(Feature)](addcontenttypefield-element-feature.htm)</span>
+      [AddContentTypeField Element
+(Feature)](addcontenttypefield-element-feature.md)</span>
 
-      <span sdata="link">[ApplyElementManifests Element
-(Feature)](applyelementmanifests-element-feature.htm)</span>
+      [ApplyElementManifests Element
+(Feature)](applyelementmanifests-element-feature.md)</span>
 
-      <span sdata="link">[CustomUpgradeAction Element
-(Feature)](customupgradeaction-element-feature.htm)</span>
+      [CustomUpgradeAction Element
+(Feature)](customupgradeaction-element-feature.md)</span>
 
-      <span sdata="link">[MapFile Element
-(Feature)](mapfile-element-feature.htm)</span>
+      [MapFile Element
+(Feature)](mapfile-element-feature.md)</span>
 
 For information about where to create and how to implement <span
 class="code">Feature.xml</span> files, see [Working with

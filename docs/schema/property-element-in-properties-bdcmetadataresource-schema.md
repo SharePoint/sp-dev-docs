@@ -58,8 +58,8 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-See <span sdata="link">[Property Element in Properties (BDCMetadata
-Schema)](property-element-in-properties-bdcmetadata-schema.htm)</span> for more
+See [Property Element in Properties (BDCMetadata
+Schema)](property-element-in-properties-bdcmetadata-schema.md)</span> for more
 details.
 
 Namespace:

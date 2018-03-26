@@ -123,7 +123,7 @@ None
 
 For an example of how this element is used, see <span
 sdata="link">[AlertTemplates Element
-(AlertTemplates)](alerttemplates-element-alerttemplates.htm)</span>.
+(AlertTemplates)](alerttemplates-element-alerttemplates.md)</span>.
 
 
 

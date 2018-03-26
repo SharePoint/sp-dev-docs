@@ -61,28 +61,28 @@ nameDOCS-GREATERTHANDOCS-GREATERTHAN XML schema.
 **Applies to**: SharePoint Server 2013
 
 -   [appliesToTypes
-    simpleType](appliestotypes-simpletype-action4.htm)
+    simpleType](appliestotypes-simpletype-action4.md)
 
 -   [coercionParametersType
-    complexType](coercionparameterstype-complextype-action4.htm)
+    complexType](coercionparameterstype-complextype-action4.md)
 
 -   [dataSourcesType
-    complexType](datasourcestype-complextype-action4.htm)
+    complexType](datasourcestype-complextype-action4.md)
 
 -   [dataSourceType
-    complexType](datasourcetype-complextype-action4.htm)
+    complexType](datasourcetype-complextype-action4.md)
 
 -   [defaultElementType
-    complexType](defaultelementtype-complextype-action4.htm)
+    complexType](defaultelementtype-complextype-action4.md)
 
 -   [parametersType
-    complexType](parameterstype-complextype-action4.htm)
+    complexType](parameterstype-complextype-action4.md)
 
 -   [propertiesType
-    complexType](propertiestype-complextype-action4.htm)
+    complexType](propertiestype-complextype-action4.md)
 
 -   [ruleDesignerType
-    complexType](ruledesignertype-complextype-action4.htm)
+    complexType](ruledesignertype-complextype-action4.md)
 
 
 

@@ -66,10 +66,10 @@ Specifies that a content type should be included in code generation and
 modifies which columns in the content type are included in code
 generation.
 
-<span sdata="link">[Web
-(SPMetal)](web-spmetal.htm)</span>  
-  <span sdata="link">[ContentType
-(SPMetal)](contenttype-spmetal.htm)</span>  
+[Web
+(SPMetal)](web-spmetal.md)</span>  
+  [ContentType
+(SPMetal)](contenttype-spmetal.md)</span>  
 <span codelanguage="xmlLang"></span>
 <table>
 <colgroup>

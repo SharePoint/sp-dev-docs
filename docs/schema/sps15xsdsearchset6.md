@@ -68,14 +68,14 @@ configurations.
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
--   <span sdata="link">[Schema map
-    (SPS15XSDSearchSet6)](schema-map-sps15xsdsearchset6.htm)</span>
+-   [Schema map
+    (SPS15XSDSearchSet6)](schema-map-sps15xsdsearchset6.md)</span>
 
--   <span sdata="link">[Elements
-    (SPS15XSDSearchSet6)](elements-sps15xsdsearchset6.htm)</span>
+-   [Elements
+    (SPS15XSDSearchSet6)](elements-sps15xsdsearchset6.md)</span>
 
--   <span sdata="link">[Types
-    (SPS15XSDSearchSet6)](types-sps15xsdsearchset6.htm)</span>
+-   [Types
+    (SPS15XSDSearchSet6)](types-sps15xsdsearchset6.md)</span>
 
 
 

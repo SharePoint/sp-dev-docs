@@ -144,8 +144,8 @@ class="nolink">SPContentTypeCollection</span></span>
 
 The collections represented by the <span
 class="keyword">ContentTypes</span> element are of object instances
-represented by the <span sdata="link">[ContentType Element
-(DeploymentManifest)](contenttype-element-deploymentmanifest.htm)</span>
+represented by the [ContentType Element
+(DeploymentManifest)](contenttype-element-deploymentmanifest.md)</span>
 element.
 
 
@@ -162,13 +162,13 @@ class="nolink">SPContentTypeCollection</span></span>
 
 #### Concepts
 
-<span sdata="link">[DeploymentManifest
-Schema](deploymentmanifest-schema.htm)</span>
+[DeploymentManifest
+Schema](deploymentmanifest-schema.md)</span>
 
 #### Other resources
 
-<span sdata="link">[ContentType Element
-(DeploymentManifest)](contenttype-element-deploymentmanifest.htm)</span>
+[ContentType Element
+(DeploymentManifest)](contenttype-element-deploymentmanifest.md)</span>
 
 
 

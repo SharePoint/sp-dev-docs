@@ -149,7 +149,7 @@ limited to 255 characters.
 
 For an example of how this element is used, see <span
 sdata="link">[Event
-Registrations](event-registrations.htm)</span>.
+Registrations](event-registrations.md)</span>.
 
 
 

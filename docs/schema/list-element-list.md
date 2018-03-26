@@ -370,7 +370,7 @@ In a site definition
 the **List** element does not contain a
 [MetaData](http://msdn.microsoft.com/library/649bbdbd-7de2-4921-bbce-13bdd7509205(Office.15).aspx)
 section, but it can contain a
-[Data](data-element-site.htm) section through which
+[Data](data-element-site.md) section through which
 to specify default column values for the given list type.
 
 

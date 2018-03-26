@@ -199,12 +199,12 @@ page.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The **GetVar** element is often used within an
-[Expr](expr-element-view.htm) element in a
-[Switch](switch-element-view.htm) or
-[IfEqual](ifequal-element-view.htm) element.
+[Expr](expr-element-view.md) element in a
+[Switch](switch-element-view.md) or
+[IfEqual](ifequal-element-view.md) element.
 
 If **Scope="Request"** is specified in the
-[SetVar](setvar-element-view.htm) element, a variable
+[SetVar](setvar-element-view.md) element, a variable
 assignment will take effect anywhere on the current page. Otherwise, the
 assignment affects only children of the <span
 class="keyword">SetVar</span> element.
@@ -258,8 +258,8 @@ Filter."
 
 #### Other resources
 
-<span sdata="link">[SetVar Element
-(View)](setvar-element-view.htm)</span>
+[SetVar Element
+(View)](setvar-element-view.md)</span>
 
 
 

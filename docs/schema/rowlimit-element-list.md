@@ -148,13 +148,13 @@ Sets the row limit for the number of items to display in a view.
 
 When **Paged** is set to <span
 class="keyword">TRUE</span>, a
-[PagedRowset](pagedrowset-element-list.htm) element must be
+[PagedRowset](pagedrowset-element-list.md) element must be
 implemented. Otherwise, the server provides a generic implementation of
 a paged rowset that is defined in the STDVIEW.XML file.
 
 If **Paged** is not <span
 class="keyword">TRUE</span> and the row limit is exceeded, the server
-renders a [RowLimitExceeded](rowlimitexceeded-element-list.htm)
+renders a [RowLimitExceeded](rowlimitexceeded-element-list.md)
 element in the view if this element is specified. Otherwise, the default
 behavior is to give no indication to the user that the row limit has
 been exceeded.

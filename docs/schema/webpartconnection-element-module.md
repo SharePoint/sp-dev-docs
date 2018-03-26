@@ -187,7 +187,7 @@ Specifies the Web Part connections for a module.
 #### Concepts
 
 <span
-sdata="link">[Modules](modules.htm)</span>
+sdata="link">[Modules](modules.md)</span>
 
 #### Other resources
 

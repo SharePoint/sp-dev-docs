@@ -173,7 +173,7 @@ The following example uses the **PagedRowset**
 element to display the string "(Items 1 to <span
 class="placeholder">N</span>)" where <span class="placeholder">N</span>
 represents the current setting for the
-[RowLimit](rowlimit-element-list.htm) element. The
+[RowLimit](rowlimit-element-list.md) element. The
 example also displays "Next" and an icon representing "Next," which are
 both hyperlinks to the current view page with information necessary to
 display the next 100 items.

@@ -64,7 +64,7 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 The View schema of [Collaborative Application Markup Language
-(CAML)](introduction-to-collaborative-application-markup-language-caml.htm) is used to define how
+(CAML)](introduction-to-collaborative-application-markup-language-caml.md) is used to define how
 the contents of a list view are rendered in Microsoft SharePoint
 Foundation.
 
@@ -85,11 +85,11 @@ Foundation.
 </table>
 
 A list view includes a query that returns the data that is displayed in
-the view. For the list of query elements, see <span sdata="link">[Query
-Schema](query-schema.htm)</span>. For the
+the view. For the list of query elements, see [Query
+Schema](query-schema.md)</span>. For the
 top-level elements that are used to organize a view, see <span
 sdata="link">[List
-Schema](list-schema.htm)</span>.
+Schema](list-schema.md)</span>.
 
 In SharePoint Foundation 2010 .aspx pages, the view is conveyed through
 a <span sdata="cer"
@@ -117,91 +117,91 @@ Specialized rendering elements are used within a view to define the
 logic for constructing HTML. These elements can contain numerous
 standard rendering elements.
 
-[ContentTypes](contenttypes-element-view.htm)
+[ContentTypes](contenttypes-element-view.md)
 
-[Fields](fields-element-view.htm)
+[Fields](fields-element-view.md)
 
-[FieldSwitch](fieldswitch-element-view.htm)
+[FieldSwitch](fieldswitch-element-view.md)
 
-  [Expr](expr-element-view.htm)
+  [Expr](expr-element-view.md)
 
-  [Case](case-element-view.htm)
+  [Case](case-element-view.md)
 
-  [Default](default-element-view.htm)
+  [Default](default-element-view.md)
 
-[ForEach](foreach-element-view.htm)
+[ForEach](foreach-element-view.md)
 
-[IfEqual](ifequal-element-view.htm)
+[IfEqual](ifequal-element-view.md)
 
-  [Expr1](expr1-element-view.htm)
+  [Expr1](expr1-element-view.md)
 
-  [Expr2](expr2-element-view.htm)
+  [Expr2](expr2-element-view.md)
 
-  [Else](else-element-view.htm)
+  [Else](else-element-view.md)
 
-  [Then](then-element-view.htm)
+  [Then](then-element-view.md)
 
-[IfHasRights](ifhasrights-element-view.htm)
+[IfHasRights](ifhasrights-element-view.md)
 
-  [RightsChoices](rightschoices-element-view.htm)
+  [RightsChoices](rightschoices-element-view.md)
 
-    [RightsGroup](rightsgroup-element-view.htm)
+    [RightsGroup](rightsgroup-element-view.md)
 
-  [Else](else-element-view.htm)
+  [Else](else-element-view.md)
 
-  [Then](then-element-view.htm)
+  [Then](then-element-view.md)
 
-[IfNeg](ifneg-element-view.htm)
+[IfNeg](ifneg-element-view.md)
 
-  [Expr1](expr1-element-view.htm)
+  [Expr1](expr1-element-view.md)
 
-  [Expr2](expr2-element-view.htm)
+  [Expr2](expr2-element-view.md)
 
-[IfNew](ifnew-element-view.htm)
+[IfNew](ifnew-element-view.md)
 
-[IfSubString](ifsubstring-element-view.htm)
+[IfSubString](ifsubstring-element-view.md)
 
-  [Expr1](expr1-element-view.htm)
+  [Expr1](expr1-element-view.md)
 
-  [Expr2](expr2-element-view.htm)
+  [Expr2](expr2-element-view.md)
 
-  [Else](else-element-view.htm)
+  [Else](else-element-view.md)
 
-  [Then](then-element-view.htm)
+  [Then](then-element-view.md)
 
-[Limit](limit-element-view.htm)
+[Limit](limit-element-view.md)
 
-  [Column](column-element-view.htm)
+  [Column](column-element-view.md)
 
-  [More](more-element-view.htm)
+  [More](more-element-view.md)
 
-  [Text](text-element-view.htm)
+  [Text](text-element-view.md)
 
-[Length](length-element-view.htm)
+[Length](length-element-view.md)
 
-[MapToAll](maptoall-element-view.htm)
+[MapToAll](maptoall-element-view.md)
 
-[MapToContentType](maptocontenttype-element-view.htm)
+[MapToContentType](maptocontenttype-element-view.md)
 
-[MapToControl](maptocontrol-element-view.htm)
+[MapToControl](maptocontrol-element-view.md)
 
-[MapToIcon](maptoicon-element-view.htm)
+[MapToIcon](maptoicon-element-view.md)
 
-[Method](method-element-view.htm)
+[Method](method-element-view.md)
 
-  [SetList](setlist-element-view.htm)
+  [SetList](setlist-element-view.md)
 
-  [SetVar](setvar-element-view.htm)
+  [SetVar](setvar-element-view.md)
 
-[SelectionOptions](selectionoptions-element-view.htm)
+[SelectionOptions](selectionoptions-element-view.md)
 
-[Switch](switch-element-view.htm)
+[Switch](switch-element-view.md)
 
-  [Expr](expr-element-view.htm)
+  [Expr](expr-element-view.md)
 
-  [Case](case-element-view.htm)
+  [Case](case-element-view.md)
 
-  [Default](default-element-view.htm)
+  [Default](default-element-view.md)
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -210,88 +210,88 @@ The following standard rendering elements are used to render HTML within
 the various sections of the previously listed structural or specialized
 rendering elements.
 
-[Column](column-element-view.htm)
+[Column](column-element-view.md)
 
-[Column2](column2-element-view.htm)
+[Column2](column2-element-view.md)
 
-[Counter](counter-element-view.htm)
+[Counter](counter-element-view.md)
 
-[CurrentRights](currentrights-element-view.htm)
+[CurrentRights](currentrights-element-view.md)
 
-[Field](field-element-view.htm)
+[Field](field-element-view.md)
 
-[FieldPrefix](fieldprefix-element-view.htm)
+[FieldPrefix](fieldprefix-element-view.md)
 
-[FieldProperty](fieldproperty-element-view.htm)
+[FieldProperty](fieldproperty-element-view.md)
 
-[FieldSortParams](fieldsortparams-element-view.htm)
+[FieldSortParams](fieldsortparams-element-view.md)
 
-[FilterLink](filterlink-element-view.htm)
+[FilterLink](filterlink-element-view.md)
 
-[GetFileExtension](getfileextension-element-view.htm)
+[GetFileExtension](getfileextension-element-view.md)
 
-[GetVar](getvar-element-view.htm)
+[GetVar](getvar-element-view.md)
 
-[HTML](html-element-view.htm)
+[HTML](html-element-view.md)
 
-[HttpHost](httphost-element-view.htm)
+[HttpHost](httphost-element-view.md)
 
-[HttpPath](httppath-element-view.htm)
+[HttpPath](httppath-element-view.md)
 
-[HttpVDir](httpvdir-element-view.htm)
+[HttpVDir](httpvdir-element-view.md)
 
-[ID](id-element-view.htm)
+[ID](id-element-view.md)
 
-[Identity](identity-element-view.htm)
+[Identity](identity-element-view.md)
 
-[List](list-element-view.htm)
+[List](list-element-view.md)
 
-[ListProperty](listproperty-element-view.htm)
+[ListProperty](listproperty-element-view.md)
 
-[ListUrl](listurl-element-view.htm)
+[ListUrl](listurl-element-view.md)
 
-[ListUrlDir](listurldir-element-view.htm)
+[ListUrlDir](listurldir-element-view.md)
 
-[LookupColumn](lookupcolumn-element-view.htm)
+[LookupColumn](lookupcolumn-element-view.md)
 
-[MeetingProperty](meetingproperty-element-view.htm)
+[MeetingProperty](meetingproperty-element-view.md)
 
-[PageUrl](pageurl-element-view.htm)
+[PageUrl](pageurl-element-view.md)
 
-[ProjectProperty](projectproperty-element-view.htm)
+[ProjectProperty](projectproperty-element-view.md)
 
-[Property](property-element-view.htm)
+[Property](property-element-view.md)
 
-[ScriptQuote](scriptquote-element-view.htm)
+[ScriptQuote](scriptquote-element-view.md)
 
-[ServerProperty](serverproperty-element-view.htm)
+[ServerProperty](serverproperty-element-view.md)
 
-[SetList](setlist-element-view.htm)
+[SetList](setlist-element-view.md)
 
-[SetVar](setvar-element-view.htm)
+[SetVar](setvar-element-view.md)
 
-[ThreadStamp](threadstamp-element-view.htm)
+[ThreadStamp](threadstamp-element-view.md)
 
-[URL](url-element-view.htm)
+[URL](url-element-view.md)
 
-[UrlBaseName](urlbasename-element-view.htm)
+[UrlBaseName](urlbasename-element-view.md)
 
-[UrlDirName](urldirname-element-view.htm)
+[UrlDirName](urldirname-element-view.md)
 
-[UserID](userid-element-view.htm)
+[UserID](userid-element-view.md)
 
-[WebQueryInfo](webqueryinfo-element-view.htm)
+[WebQueryInfo](webqueryinfo-element-view.md)
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #### Concepts
 
-<span sdata="link">[Query
-Schema](query-schema.htm)</span>
+[Query
+Schema](query-schema.md)</span>
 
-<span sdata="link">[List
-Schema](list-schema.htm)</span>
+[List
+Schema](list-schema.md)</span>
 
 #### Other resources
 

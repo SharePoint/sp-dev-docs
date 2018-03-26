@@ -223,13 +223,13 @@ class="nolink">SPRole</span></span>
 
 #### Concepts
 
-<span sdata="link">[DeploymentManifest
-Schema](deploymentmanifest-schema.htm)</span>
+[DeploymentManifest
+Schema](deploymentmanifest-schema.md)</span>
 
 #### Other resources
 
-<span sdata="link">[Role Element
-(DeploymentManifest)](role-element-deploymentmanifest.htm)</span>
+[Role Element
+(DeploymentManifest)](role-element-deploymentmanifest.md)</span>
 
 
 

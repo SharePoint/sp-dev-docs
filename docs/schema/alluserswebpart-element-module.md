@@ -163,7 +163,7 @@ Contains a Web Part in a module of a site definition.
 #### Concepts
 
 <span
-sdata="link">[Modules](modules.htm)</span>
+sdata="link">[Modules](modules.md)</span>
 
 #### Other resources
 

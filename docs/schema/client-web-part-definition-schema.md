@@ -72,14 +72,14 @@ server extensions\\15\\TEMPLATE\\XML.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-[Elements](elements-element-custom-action.htm)
+[Elements](elements-element-custom-action.md)
 
-  [ClientWebPart](customactiongroup-element-custom-action.htm)
+  [ClientWebPart](customactiongroup-element-custom-action.md)
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-The [ClientWebPart](customactiongroup-element-custom-action.htm) element
+The [ClientWebPart](customactiongroup-element-custom-action.md) element
 contains the core definition for a Client Web Part. A Client Web Part is
 an UI extensibility mechanism that lets apps show information in the
 host web. You can render the HTML contents of a page in an **IFrame**

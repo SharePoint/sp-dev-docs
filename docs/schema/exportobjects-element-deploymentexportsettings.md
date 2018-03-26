@@ -155,8 +155,8 @@ class="nolink">SPExportObjectCollection</span></span>
 
 #### Concepts
 
-<span sdata="link">[DeploymentExportSettings
-Schema](deploymentexportsettings-schema.htm)</span>
+[DeploymentExportSettings
+Schema](deploymentexportsettings-schema.md)</span>
 
 
 

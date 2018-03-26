@@ -173,7 +173,7 @@ effect anywhere in the current page. Otherwise, the assignment affects
 only children of the **SetVar** element.
 
 The **SetVar** element is often a child to a
-[Method](method-element-view.htm) element used in batch
+[Method](method-element-view.md) element used in batch
 processing of requests.
 
 The **SetVar** element is frequently used to
@@ -291,8 +291,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-<span sdata="link">[GetVar Element
-(View)](getvar-element-view.htm)</span>
+[GetVar Element
+(View)](getvar-element-view.md)</span>
 
 
 

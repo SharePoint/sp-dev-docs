@@ -61,20 +61,20 @@ nameDOCS-GREATERTHANDOCS-GREATERTHAN XML schema.
 **Applies to**: SharePoint Server 2013
 
 -   [BoundVariableOrigin
-    element](boundvariableorigin-element-sps15xsdsearchset4.htm)
+    element](boundvariableorigin-element-sps15xsdsearchset4.md)
 
 -   [GroupProcessingDirective
-    element](groupprocessingdirective-element-sps15xsdsearchset4.htm)
+    element](groupprocessingdirective-element-sps15xsdsearchset4.md)
 
--   [LicenseType element](licensetype-element-sps15xsdsearchset4.htm)
+-   [LicenseType element](licensetype-element-sps15xsdsearchset4.md)
 
--   [MatchingOptions element](matchingoptions-element-sps15xsdsearchset4.htm)
+-   [MatchingOptions element](matchingoptions-element-sps15xsdsearchset4.md)
 
 -   [QueryActionEnableOnClickThroughOptions
-    element](queryactionenableonclickthroughoptions-element-sps15xsdsearchset4.htm)
+    element](queryactionenableonclickthroughoptions-element-sps15xsdsearchset4.md)
 
 -   [QueryTransformParentType
-    element](querytransformparenttype-element-sps15xsdsearchset4.htm)
+    element](querytransformparenttype-element-sps15xsdsearchset4.md)
 
 
 

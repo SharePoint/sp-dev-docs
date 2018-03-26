@@ -185,8 +185,8 @@ class="code">/\_vti\_bin/owssvr.dll</span>.
 
 #### Reference
 
-<span sdata="link">[HTMLBase
-Element](htmlbase-element.htm)</span>
+[HTMLBase
+Element](htmlbase-element.md)</span>
 
 
 

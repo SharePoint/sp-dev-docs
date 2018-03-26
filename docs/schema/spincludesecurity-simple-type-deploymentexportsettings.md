@@ -59,8 +59,8 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Provides values for the **IncludeSecurity**
-attribute on the <span sdata="link">[ExportSettings Element
-(DeploymentExportSettings)](exportsettings-element-deploymentexportsettings.htm)</span>.
+attribute on the [ExportSettings Element
+(DeploymentExportSettings)](exportsettings-element-deploymentexportsettings.md)</span>.
 
 <span codelanguage="other"></span>
 <table>
@@ -127,13 +127,13 @@ class="nolink">SPIncludeSecurity</span></span>
 
 #### Concepts
 
-<span sdata="link">[DeploymentExportSettings
-Schema](deploymentexportsettings-schema.htm)</span>
+[DeploymentExportSettings
+Schema](deploymentexportsettings-schema.md)</span>
 
 #### Other resources
 
-<span sdata="link">[ExportSettings Element
-(DeploymentExportSettings)](exportsettings-element-deploymentexportsettings.htm)</span>
+[ExportSettings Element
+(DeploymentExportSettings)](exportsettings-element-deploymentexportsettings.md)</span>
 
 
 

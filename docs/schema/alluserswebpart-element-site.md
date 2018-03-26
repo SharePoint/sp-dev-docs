@@ -163,8 +163,8 @@ Contains a Web Part in a module of a site definition.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-See <span sdata="link">[Module Element
-(Site)](module-element-site.htm)</span> for an example
+See [Module Element
+(Site)](module-element-site.md)</span> for an example
 that uses the **AllUsersWebPart** element.
 
 
@@ -172,8 +172,8 @@ that uses the **AllUsersWebPart** element.
 
 #### Other resources
 
-<span sdata="link">[Module Element
-(Site)](module-element-site.htm)</span>
+[Module Element
+(Site)](module-element-site.md)</span>
 
 
 

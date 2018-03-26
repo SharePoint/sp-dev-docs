@@ -139,13 +139,13 @@ USAGE SYNTAX
 
 #### Concepts
 
-<span sdata="link">[DeploymentManifest
-Schema](deploymentmanifest-schema.htm)</span>
+[DeploymentManifest
+Schema](deploymentmanifest-schema.md)</span>
 
 #### Other resources
 
-<span sdata="link">[Aggregations Element (Deployment Manifest -
-SPView)](aggregations-element-deployment-manifestspview.htm)</span>
+[Aggregations Element (Deployment Manifest -
+SPView)](aggregations-element-deployment-manifestspview.md)</span>
 
 
 

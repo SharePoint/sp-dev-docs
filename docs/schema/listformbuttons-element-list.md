@@ -155,9 +155,9 @@ New forms for a list.
 
 #### Other resources
 
-[ListFormBody](listformbody-element-list.htm)
+[ListFormBody](listformbody-element-list.md)
 
-[ListFormClosing](listformclosing-element-list.htm)
+[ListFormClosing](listformclosing-element-list.md)
 
 [ListFormOpening](http://msdn.microsoft.com/library/15f6cc48-7dd9-4d5d-baf5-e54e1fb7945bfb7945b(Office.15).aspx)
 

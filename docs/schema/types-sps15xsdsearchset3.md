@@ -60,19 +60,19 @@ XML schema.
 **Last modified:** February 19, 2014
 
 -   [ArrayOfSearchQueryConfigurationSettings
-    complexType](arrayofsearchqueryconfigurationsettings-complextype-sps15xsdsearchset3.htm)
+    complexType](arrayofsearchqueryconfigurationsettings-complextype-sps15xsdsearchset3.md)
 
 -   [SearchConfigurationSettings
-    complexType](searchconfigurationsettings-complextype-sps15xsdsearchset3.htm)
+    complexType](searchconfigurationsettings-complextype-sps15xsdsearchset3.md)
 
 -   [SearchQueryConfigurationSettings
-    complexType](searchqueryconfigurationsettings-complextype-sps15xsdsearchset3.htm)
+    complexType](searchqueryconfigurationsettings-complextype-sps15xsdsearchset3.md)
 
 -   [SearchRankingModelConfigurationSettings
-    complexType](searchrankingmodelconfigurationsettings-complextype-sps15xsdsearchset3.htm)
+    complexType](searchrankingmodelconfigurationsettings-complextype-sps15xsdsearchset3.md)
 
 -   [SearchSchemaConfigurationSettings
-    complexType](searchschemaconfigurationsettings-complextype-sps15xsdsearchset3.htm)
+    complexType](searchschemaconfigurationsettings-complextype-sps15xsdsearchset3.md)
 
 
 

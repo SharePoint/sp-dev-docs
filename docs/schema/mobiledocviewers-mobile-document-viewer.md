@@ -62,8 +62,8 @@ SharePoint Online | SharePoint Server 2013
 
 Specifies the document-viewing page for one or more types of documents.
 
-<span sdata="link">[MobileDocViewers (Mobile Document
-Viewer)](mobiledocviewers-mobile-document-viewer.htm)</span>  
+[MobileDocViewers (Mobile Document
+Viewer)](mobiledocviewers-mobile-document-viewer.md)</span>  
 <span codelanguage="other"></span>
 <table>
 <colgroup>

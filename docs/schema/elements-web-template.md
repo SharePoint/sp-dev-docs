@@ -66,10 +66,10 @@ Provides a parent for the **WebTemplate**
 element in an <span class="code">elements.xml</span> file in a web
 template WSP file.
 
-<span sdata="link">[Elements (Web
-Template)](elements-web-template.htm)</span>  
-  <span sdata="link">[WebTemplate Element (Web
-Template)](webtemplate-element-web-template.htm)</span>  
+[Elements (Web
+Template)](elements-web-template.md)</span>  
+  [WebTemplate Element (Web
+Template)](webtemplate-element-web-template.md)</span>  
 <span codelanguage="other"></span>
 <table>
 <colgroup>

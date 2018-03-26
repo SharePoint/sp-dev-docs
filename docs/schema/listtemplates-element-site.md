@@ -150,8 +150,8 @@ file for lists that can be created on a site.
 In Microsoft SharePoint Foundation the list template for a standard
 SharePoint list is usually defined within the element manifest file of
 the Feature that contains the list definition. For more information
-about list template Features, see <span sdata="link">[List Template
-Files](list-template-files.htm)</span>.
+about list template Features, see [List Template
+Files](list-template-files.md)</span>.
 
 
 

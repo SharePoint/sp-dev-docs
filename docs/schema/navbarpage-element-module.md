@@ -161,7 +161,7 @@ module so that other pages can be linked to the page.
 #### Concepts
 
 <span
-sdata="link">[Modules](modules.htm)</span>
+sdata="link">[Modules](modules.md)</span>
 
 #### Other resources
 

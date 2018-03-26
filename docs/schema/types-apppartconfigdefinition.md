@@ -78,9 +78,9 @@ SharePoint Server 2013
 </table>
 
 -   [AppPartConfigDefinition
-    complexType](apppartconfigdefinition-complextype-apppartconfigdefinition.htm)
+    complexType](apppartconfigdefinition-complextype-apppartconfigdefinition.md)
 
--   [GUID simpleType](guid-simpletype-apppartconfigdefinition.htm)
+-   [GUID simpleType](guid-simpletype-apppartconfigdefinition.md)
 
 
 

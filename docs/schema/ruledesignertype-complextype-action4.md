@@ -53,9 +53,9 @@ JavaScript
 </tbody>
 </table>
 
-Base type for creating a <span sdata="link">[RuleDesigner element
+Base type for creating a [RuleDesigner element
 (defaultElementType complexType)
-(Action4)](ruledesigner-element-defaultelementtype-complextypeaction4.htm)</span>.
+(Action4)](ruledesigner-element-defaultelementtype-complextypeaction4.md)</span>.
 
 **Last modified:** March 09, 2015
 

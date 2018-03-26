@@ -154,8 +154,8 @@ Renders the URL of a particular form for a specified list.
 Because links returned by this element are absolute URLs and already
 encoded, there is no need to use the <span
 class="keyword">URLEncodeAsURL</span> attribute to encode the URL (see
-<span sdata="link">[Global Attributes for HTML-Rendering
-Elements](global-attributes-for-html-rendering-elements.htm)</span>).
+[Global Attributes for HTML-Rendering
+Elements](global-attributes-for-html-rendering-elements.md)</span>).
 
 The following examples show the URLs returned by using the <span
 class="keyword">URL </span>element on an Announcements list:
@@ -187,11 +187,11 @@ class="keyword">URL </span>element on an Announcements list:
 
 #### Other resources
 
-<span sdata="link">[UrlBaseName Element
-(View)](urlbasename-element-view.htm)</span>
+[UrlBaseName Element
+(View)](urlbasename-element-view.md)</span>
 
-<span sdata="link">[UrlDirName Element
-(View)](urldirname-element-view.htm)</span>
+[UrlDirName Element
+(View)](urldirname-element-view.md)</span>
 
 
 

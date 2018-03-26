@@ -175,13 +175,13 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Reference
 
-[TodayISO](todayiso-element.htm)
+[TodayISO](todayiso-element.md)
 
 #### Other resources
 
-[Month](month-element-regional-settings.htm)
+[Month](month-element-regional-settings.md)
 
-[Now](now-element-query.htm)
+[Now](now-element-query.md)
 
 
 

@@ -63,7 +63,7 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Represents a placeholder for a control in a
-[GroupTemplate](grouptemplate-element.htm) element.
+[GroupTemplate](grouptemplate-element.md) element.
 
 <span codelanguage="other"></span>
 <table>
@@ -322,11 +322,11 @@ table lists the modes that are supported by each type of control.
 
 The following example is an XML fragment that shows the relationship
 between the **TemplateAlias** attribute for
-controls in a [Group](group-element-ribbon.htm) element
+controls in a [Group](group-element-ribbon.md) element
 and the same attribute for **ControlRef**
-elements in a [GroupTemplate](grouptemplate-element.htm)
+elements in a [GroupTemplate](grouptemplate-element.md)
 element. Notice that the **Group** element
-contains three [Button](button-element.htm)
+contains three [Button](button-element.md)
 elements, each with a **TemplateAlias**
 attribute set to a value of "row1", "row2", or "row3". The <span
 class="keyword">GroupTemplate</span> element also contains three <span

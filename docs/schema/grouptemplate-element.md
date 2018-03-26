@@ -63,7 +63,7 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Defines the scaling behavior for controls in a
-[Group](group-element-ribbon.htm) element.
+[Group](group-element-ribbon.md) element.
 
 <span codelanguage="other"></span>
 <table>

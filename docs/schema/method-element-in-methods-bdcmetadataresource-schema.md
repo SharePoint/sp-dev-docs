@@ -59,8 +59,8 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Specifies localized display names, properties, and permissions, in any
-combination, for a <span sdata="link">[Method Element in Methods
-(BDCMetadata Schema)](method-element-in-methods-bdcmetadata-schema.htm)</span>.
+combination, for a [Method Element in Methods
+(BDCMetadata Schema)](method-element-in-methods-bdcmetadata-schema.md)</span>.
 
 Namespace:
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources

@@ -170,7 +170,7 @@ folder, or website.
 
 For an example of how this element is used, see <span
 sdata="link">[Property Bag
-Schema](property-bag-schema.htm)</span>.
+Schema](property-bag-schema.md)</span>.
 
 
 

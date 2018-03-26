@@ -156,7 +156,7 @@ included.
 
 For an example of how this element is used, see <span
 sdata="link">[Feature/Site Template
-Associations](feature-site-template-associations.htm)</span>.
+Associations](feature-site-template-associations.md)</span>.
 
 
 

@@ -131,9 +131,9 @@ initiation form, and the data fields on the initiation form.
 
 The initiation form specified should contain a data field for each <span
 sdata="link">[Field Element
-(Field)](field-element-field.htm)</span> element
-defined in the <span sdata="link">[Fields Element
-(WorkflowConfig)](fields-element-workflowconfig.htm)</span>
+(Field)](field-element-field.md)</span> element
+defined in the [Fields Element
+(WorkflowConfig)](fields-element-workflowconfig.md)</span>
 section of the workflow configuration file. If a data field is not
 present, the default value is used when the workflow starts.
 
@@ -206,8 +206,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Concepts
 
-<span sdata="link">[Workflow configuration schema
-reference](workflow-configuration-schema-reference.htm)</span>
+[Workflow configuration schema
+reference](workflow-configuration-schema-reference.md)</span>
 
 #### Other resources
 

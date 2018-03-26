@@ -245,11 +245,11 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Reference
 
-<span sdata="link">[FieldFilterImageURL
-Element](fieldfilterimageurl-element.htm)</span>
+[FieldFilterImageURL
+Element](fieldfilterimageurl-element.md)</span>
 
-<span sdata="link">[FieldSortImageURL
-Element](fieldsortimageurl-element.htm)</span>
+[FieldSortImageURL
+Element](fieldsortimageurl-element.md)</span>
 
 
 

@@ -148,8 +148,8 @@ USAGE
 
 #### Concepts
 
-<span sdata="link">[DeploymentUserGroupMap
-Schema](deploymentusergroupmap-schema.htm)</span>
+[DeploymentUserGroupMap
+Schema](deploymentusergroupmap-schema.md)</span>
 
 
 

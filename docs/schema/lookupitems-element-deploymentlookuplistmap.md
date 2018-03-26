@@ -146,16 +146,16 @@ USAGE
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-For more information, see <span sdata="link">[LookupItem Element
-(DeploymentLookupListMap)](lookupitem-element-deploymentlookuplistmap.htm)</span>
+For more information, see [LookupItem Element
+(DeploymentLookupListMap)](lookupitem-element-deploymentlookuplistmap.md)</span>
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 #### Concepts
 
-<span sdata="link">[DeploymentLookupListMap
-Schema](deploymentlookuplistmap-schema.htm)</span>
+[DeploymentLookupListMap
+Schema](deploymentlookuplistmap-schema.md)</span>
 
 
 

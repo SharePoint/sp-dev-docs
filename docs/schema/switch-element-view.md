@@ -153,9 +153,9 @@ Application Markup Language (CAML) expression.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 A **Switch** element contains an
-[Expr](expr-element-view.htm) element, any number of
-[Case](case-element-view.htm) elements, and a
-[Default](default-element-view.htm) element. The value
+[Expr](expr-element-view.md) element, any number of
+[Case](case-element-view.md) elements, and a
+[Default](default-element-view.md) element. The value
 of the **Expr** element is compared against the
 **Value** attribute of each <span
 class="keyword">Case</span> element. When a match is found, the <span
@@ -196,8 +196,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Other resources
 
-<span sdata="link">[FieldSwitch Element
-(View)](fieldswitch-element-view.htm)</span>
+[FieldSwitch Element
+(View)](fieldswitch-element-view.md)</span>
 
 
 

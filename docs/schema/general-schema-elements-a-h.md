@@ -58,39 +58,39 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-[Attachments](attachments-element.htm)
+[Attachments](attachments-element.md)
 
-[CategoryBot](categorybot-element.htm)
+[CategoryBot](categorybot-element.md)
 
-[CrossProjectLink](crossprojectlink-element.htm)
+[CrossProjectLink](crossprojectlink-element.md)
 
-[DataFormatLCID](dataformatlcid-element.htm)
+[DataFormatLCID](dataformatlcid-element.md)
 
-[Discussions](discussions-element.htm)
+[Discussions](discussions-element.md)
 
-[Escape](escape-element.htm)
+[Escape](escape-element.md)
 
-[FieldFilterImageURL](fieldfilterimageurl-element.htm)
+[FieldFilterImageURL](fieldfilterimageurl-element.md)
 
-[FieldFilterOptions](fieldfilteroptions-element.htm)
+[FieldFilterOptions](fieldfilteroptions-element.md)
 
-[FieldSortImageURL](fieldsortimageurl-element.htm)
+[FieldSortImageURL](fieldsortimageurl-element.md)
 
-[Format](format-element.htm)
+[Format](format-element.md)
 
-[FormatDef](formatdef-element.htm)
+[FormatDef](formatdef-element.md)
 
-[Formats](formats-element.htm)
+[Formats](formats-element.md)
 
-[GetProgID](getprogid-element.htm)
+[GetProgID](getprogid-element.md)
 
-[GlobalLists](globallists-element.htm)
+[GlobalLists](globallists-element.md)
 
-[GUID](guid-element.htm)
+[GUID](guid-element.md)
 
-[HTMLBase](htmlbase-element.htm)
+[HTMLBase](htmlbase-element.md)
 
-[HtmlTrInfo](htmltrinfo-element.htm)
+[HtmlTrInfo](htmltrinfo-element.md)
 
 
 

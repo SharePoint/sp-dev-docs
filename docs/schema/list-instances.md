@@ -58,11 +58,11 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-The [ListInstance](listinstance-element-list-instance.htm) element
+The [ListInstance](listinstance-element-list-instance.md) element
 specifies default data with which to provision the given list type. This
 element maps to the **List** element previously
 located within the
-[Configuration](configuration-element-site.htm) element in
+[Configuration](configuration-element-site.md) element in
 [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx).
 
 <table>
@@ -81,23 +81,23 @@ located within the
 </tbody>
 </table>
 
-[Elements](elements-element-list-instance.htm)
+[Elements](elements-element-list-instance.md)
 
-  [ListInstance](listinstance-element-list-instance.htm)
+  [ListInstance](listinstance-element-list-instance.md)
 
-    [Data](data-element-list-instance.htm)
+    [Data](data-element-list-instance.md)
 
-      [Rows](rows-element-list-instance.htm)
+      [Rows](rows-element-list-instance.md)
 
-        [Row](row-element-list-instance.htm)
+        [Row](row-element-list-instance.md)
 
-          [Field](field-element-list-instance.htm)
+          [Field](field-element-list-instance.md)
 
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The following example shows the contents of an XML file in which the
-[ListInstance](listinstance-element-list-instance.htm) element is used
+[ListInstance](listinstance-element-list-instance.md) element is used
 to specify default data for a list instance.
 
 <span codelanguage="xmlLang"></span>

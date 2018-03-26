@@ -53,7 +53,7 @@ To be able to make add-in-only calls to SharePoint, your add-in must request per
 ```
 
 > [!NOTE] 
-> SharePoint Add-ins used to be called "apps for SharePoint". To maintain backward compatibility, the app manifest schema was not changed, so the string "app" appears in many element and attribute names.
+> SharePoint Add-ins used to be called "apps for SharePoint." To maintain backward compatibility, the app manifest schema was not changed, so the string "app" appears in many element and attribute names.
  
 
 A user installing the add-in is prompted to approve this request. If the add-in asks for tenant-scoped permissions, only a tenant administrator can grant use of the add-in-only policy, so only a tenant administrator can install the add-in. 

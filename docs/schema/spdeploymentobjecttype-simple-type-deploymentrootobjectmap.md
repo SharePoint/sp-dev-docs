@@ -59,8 +59,8 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Provides values for the **Type** attribute on
-the <span sdata="link">[RootObject Element
-(DeploymentRootObjectMap)](rootobject-element-deploymentrootobjectmap.htm)</span>.
+the [RootObject Element
+(DeploymentRootObjectMap)](rootobject-element-deploymentrootobjectmap.md)</span>.
 
 <span codelanguage="other"></span>
 <table>
@@ -137,13 +137,13 @@ object map.
 
 #### Concepts
 
-<span sdata="link">[DeploymentRootObjectMap
-Schema](deploymentrootobjectmap-schema.htm)</span>
+[DeploymentRootObjectMap
+Schema](deploymentrootobjectmap-schema.md)</span>
 
 #### Other resources
 
-<span sdata="link">[RootObject Element
-(DeploymentRootObjectMap)](rootobject-element-deploymentrootobjectmap.htm)</span>
+[RootObject Element
+(DeploymentRootObjectMap)](rootobject-element-deploymentrootobjectmap.md)</span>
 
 
 

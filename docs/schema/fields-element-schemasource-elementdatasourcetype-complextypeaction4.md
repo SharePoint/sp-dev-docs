@@ -54,7 +54,7 @@ JavaScript
 </table>
 
 Container for instances of the [Field element
-(Action4)](field-element-fields-elementschemasource-elementdatasourcetype-complextypeaction.htm), which specify the
+(Action4)](field-element-fields-elementschemasource-elementdatasourcetype-complextypeaction.md), which specify the
 fields for displaying data from a parent data source.
 
 **Last modified:** March 09, 2015

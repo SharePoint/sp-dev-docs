@@ -153,7 +153,7 @@ type.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The **FieldRefs** element contains a collection
-of [FieldRef](fieldref-element-contenttype.htm) elements. The
+of [FieldRef](fieldref-element-contenttype.md) elements. The
 **FieldRef** element is a reference to a column
 defined elsewhere, either at the site or list level. In the field
 reference, you can override a subset of the column properties, such as
@@ -188,9 +188,9 @@ reference.
 The
 [DocumentTemplate](http://msdn.microsoft.com/library/a4ae965b-6ac7-41f6-9a11-47f3d2b06cd0(Office.15).aspx)
 child element is obsolete. Instead use the
-[DocumentTemplate](documenttemplate-element-contenttype.htm) element
+[DocumentTemplate](documenttemplate-element-contenttype.md) element
 that is a child of the
-[ContentType](contenttype-element-contenttype.htm) element.
+[ContentType](contenttype-element-contenttype.md) element.
 
 For more information about field references, see [Fields and Field
 References](http://msdn.microsoft.com/library/6b536c1a-719c-4203-8006-c162de199bfc(Office.15).aspx).
@@ -245,8 +245,8 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 
 #### Concepts
 
-<span sdata="link">[Content Type
-Definitions](content-type-definitions.htm)</span>
+[Content Type
+Definitions](content-type-definitions.md)</span>
 
 #### Other resources
 

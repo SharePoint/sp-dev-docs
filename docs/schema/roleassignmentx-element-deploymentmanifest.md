@@ -223,13 +223,13 @@ class="nolink">SPRoleAssignment</span></span>
 
 #### Concepts
 
-<span sdata="link">[DeploymentManifest
-Schema](deploymentmanifest-schema.htm)</span>
+[DeploymentManifest
+Schema](deploymentmanifest-schema.md)</span>
 
 #### Other resources
 
-<span sdata="link">[RoleAssignment Element
-(DeploymentManifest)](roleassignment-element-deploymentmanifest.htm)</span>
+[RoleAssignment Element
+(DeploymentManifest)](roleassignment-element-deploymentmanifest.md)</span>
 
 
 

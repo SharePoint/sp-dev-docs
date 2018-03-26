@@ -156,7 +156,7 @@ the
 [Onet.xml](http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx)
 file to specify configurations of site types that belong to a particular
 site definition. See the
-[Configuration](configuration-element-site.htm) element for
+[Configuration](configuration-element-site.md) element for
 more information.
 
 

@@ -62,49 +62,49 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-[Aggregations](aggregations-element-list.htm)
+[Aggregations](aggregations-element-list.md)
 
-[Batch](batch-element-view.htm)
+[Batch](batch-element-view.md)
 
-[Case](case-element-view.htm)
+[Case](case-element-view.md)
 
-[Column](column-element-view.htm)
+[Column](column-element-view.md)
 
-[Column2](column2-element-view.htm)
+[Column2](column2-element-view.md)
 
-[ContentTypes](contenttypes-element-view.htm)
+[ContentTypes](contenttypes-element-view.md)
 
-[Counter](counter-element-view.htm)
+[Counter](counter-element-view.md)
 
-[CurrentRights](currentrights-element-view.htm)
+[CurrentRights](currentrights-element-view.md)
 
-[Default](default-element-view.htm)
+[Default](default-element-view.md)
 
-[Else](else-element-view.htm)
+[Else](else-element-view.md)
 
-[Expr](expr-element-view.htm)
+[Expr](expr-element-view.md)
 
-[Expr1](expr1-element-view.htm)
+[Expr1](expr1-element-view.md)
 
-[Expr2](expr2-element-view.htm)
+[Expr2](expr2-element-view.md)
 
-[Field](field-element-view.htm)
+[Field](field-element-view.md)
 
-[FieldPrefix](fieldprefix-element-view.htm)
+[FieldPrefix](fieldprefix-element-view.md)
 
-[FieldProperty](fieldproperty-element-view.htm)
+[FieldProperty](fieldproperty-element-view.md)
 
-[FieldRef](fieldref-element-list.htm)
+[FieldRef](fieldref-element-list.md)
 
-[Fields](fields-element-view.htm)
+[Fields](fields-element-view.md)
 
-[FieldSortParams](fieldsortparams-element-view.htm)
+[FieldSortParams](fieldsortparams-element-view.md)
 
-[FieldSwitch](fieldswitch-element-view.htm)
+[FieldSwitch](fieldswitch-element-view.md)
 
-[FilterLink](filterlink-element-view.htm)
+[FilterLink](filterlink-element-view.md)
 
-[ForEach](foreach-element-view.htm)
+[ForEach](foreach-element-view.md)
 
 
 

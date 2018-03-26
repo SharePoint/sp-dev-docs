@@ -155,7 +155,7 @@ Specifies a Web Part that has been serialized into binary data.
 #### Concepts
 
 <span
-sdata="link">[Modules](modules.htm)</span>
+sdata="link">[Modules](modules.md)</span>
 
 #### Other resources
 

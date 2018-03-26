@@ -148,8 +148,8 @@ time begins for a time zone.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-See <span sdata="link">[StandardTime Element (Regional
-Settings)](standardtime-element-regional-settings.htm)</span> for an
+See [StandardTime Element (Regional
+Settings)](standardtime-element-regional-settings.md)</span> for an
 example that shows how to use the **DayOfWeek**
 element.
 

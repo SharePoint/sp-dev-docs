@@ -204,13 +204,13 @@ class="nolink">SPContentType</span></span>
 
 #### Concepts
 
-<span sdata="link">[DeploymentManifest
-Schema](deploymentmanifest-schema.htm)</span>
+[DeploymentManifest
+Schema](deploymentmanifest-schema.md)</span>
 
 #### Other resources
 
-<span sdata="link">[ContentTypes Element
-(DeploymentManifest)](contenttypes-element-deploymentmanifest.htm)</span>
+[ContentTypes Element
+(DeploymentManifest)](contenttypes-element-deploymentmanifest.md)</span>
 
 
 

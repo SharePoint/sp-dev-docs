@@ -64,8 +64,8 @@ SharePoint Online | SharePoint Server 2013
 
 Contains specification of the permissions that current users must have
 in order for the contents of the
-[Then](then-element-view.htm) clause within an
-[IfHasRight](ifhasrights-element-view.htm) element to be
+[Then](then-element-view.md) clause within an
+[IfHasRight](ifhasrights-element-view.md) element to be
 displayed.
 
 <span codelanguage="other"></span>

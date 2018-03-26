@@ -64,7 +64,7 @@ SharePoint Online | SharePoint Server 2013
 
 Contains the definition of the page to display for a recurring item in
 an events list when the number of items in the recurrence surpasses the
-limit set by the [RowLimit](rowlimit-element-list.htm)
+limit set by the [RowLimit](rowlimit-element-list.md)
 element.
 
 Most standard Microsoft SharePoint Foundation 2010 list views ignore
@@ -156,7 +156,7 @@ The following example from the
 [Schema.xml](http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56(Office.15).aspx)
 file for announcements lists defines how to display items when the
 number of items exceeds the value specified by the
-[RowLimit](rowlimit-element-list.htm) element.
+[RowLimit](rowlimit-element-list.md) element.
 
 <span codelanguage="xmlLang"></span>
 XML 

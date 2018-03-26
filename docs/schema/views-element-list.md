@@ -146,10 +146,10 @@ Contains an enumeration of the views that are used in a list.
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 The following example illustrates a collection of
-[View](view-element-list.htm) elements contained by a
+[View](view-element-list.md) elements contained by a
 **Views** element. The first view, "Summary,"
 displays a sequence of paragraphs. The
-[Query](query-element-list.htm) element specifies not
+[Query](query-element-list.md) element specifies not
 only a sort order (in order of modification date), but also a filter
 (only show items whose **Expires** property is
 greater than or equal to today's date).

@@ -63,7 +63,7 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Contains a collection of
-[FieldRef](fieldref-element-query.htm) elements that
+[FieldRef](fieldref-element-query.md) elements that
 specifiy field references for a field.
 
 <span codelanguage="other"></span>

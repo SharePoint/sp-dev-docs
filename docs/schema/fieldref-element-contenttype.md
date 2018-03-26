@@ -383,8 +383,8 @@ class="nolink">SPFieldLink</span></span>
 
 #### Concepts
 
-<span sdata="link">[Content Type
-Definitions](content-type-definitions.htm)</span>
+[Content Type
+Definitions](content-type-definitions.md)</span>
 
 #### Other resources
 

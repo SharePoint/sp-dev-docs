@@ -59,9 +59,9 @@ JavaScript
 SharePoint Online | SharePoint Server 2013
 
 Specifies localized display names, properties, and permissions in any
-combination, for an <span sdata="link">[Association Element in
+combination, for an [Association Element in
 MethodInstances (BDCMetadata
-Schema)](association-element-in-methodinstances-bdcmetadata-schema.htm)</span>.
+Schema)](association-element-in-methodinstances-bdcmetadata-schema.md)</span>.
 
 **Namespace:**
 http://schemas.microsoft.com/windows/2007/BusinessDataCatalog/Resources
@@ -137,9 +137,9 @@ elements.
 
 Description
 
-<span sdata="link">[MethodInstances Element in Method
+[MethodInstances Element in Method
 (BDCMetadataResource
-Schema)](methodinstances-element-in-method-bdcmetadataresource-schema.htm)</span>
+Schema)](methodinstances-element-in-method-bdcmetadataresource-schema.md)</span>
 
 
 
