@@ -1,4 +1,11 @@
-# Introduction
+---
+title: Modernize the site branding
+description: Guidance on moving to modern customization experiences within SharePoint
+ms.date: 03/23/2018
+ms.prod: sharepoint
+---
+
+# Modernize the site branding
 
 The SharePoint modern user interface does handle branding differently than classic SharePoint, more in particular it simply ignores custom master page or alternate CSS configurations. You can opt to leave these configurations in place in your modernized site so it still applies to a page being shown in a classic user interface, but it's cleaner to switch back the OOB master pages and remove the alternate CSS configuration. Next to these master pages and alternate CSS settings you could have used a classic custom theme. These classic custom themes do work on both classic as modern pages, but the more future proof model is the new tenant controlled SharePoint theme which obviously also applies to both classic as modern pages.
 

@@ -1,9 +1,18 @@
-# Introduction
+---
+title: Connect to an Office 365 Group
+description: Connect SharePoint team sites to an Office 365 Group
+ms.date: 03/23/2018
+ms.prod: sharepoint
+---
 
-Being able to connect an Office 365 group to an existing SharePoint site is important if you want to modernize that site. Once connected to an Office 365 group your site can benefit from all other group connected services like Microsoft Teams, Planner etc. This also brings your "classic" site a step closer to being a like the current modern team site, which by default is connected to an Office 365 group. The process to connect an existing site to a new Office 365 group is called "groupify". You can "groupify" your site from the user interface, site per site which might be good for smaller environments. However (larger) customers often want to offer a consist experience to their users and therefore want to perform a bulk "groupify" of their sites. In the article you'll learn how to prepare for such a bulk "groupify" and how actually make it happen.
+# Connect to an Office 365 Group
 
-> [!NOTE]
-> The option to connect an Office 365 group to an existing site is currently in preview.
+Being able to connect an Office 365 group to an existing SharePoint site is important if you want to modernize that site. Once connected to an Office 365 group your site can benefit from all other group connected services like Microsoft Teams, Planner etc. This also brings your "classic" site a step closer to being a like the current modern team site, which by default is connected to an Office 365 group. 
+
+The process to connect an existing site to a new Office 365 group is called "groupify". You can "groupify" your site from the user interface, site per site which might be good for smaller environments. However (larger) customers often want to offer a consist experience to their users and therefore want to perform a bulk "groupify" of their sites. In the article you'll learn how to prepare for such a bulk "groupify" and how actually make it happen.
+
+> [!IMPORTANT]
+> The option to connect an Office 365 group to an existing site is **not** yet available and will be released during Q2 of calendar year 2018.
 
 ## What does "groupify" do to your site
 
@@ -21,9 +30,13 @@ Once connected to an Office 365 group the site behaves like a modern group conne
 
 A first approach to connect an Office 365 to your site is to use the option available in the user interface. By clicking on the **gear** icon in the navigation bar you can select the **Connect to new Office 365 Group** option which will launch a wizard walking you through the "groupify" process as shown in below screenshots.
 
-Site Actions | Wizard
----------|---------
- ![Site Actions](media/modernize/groupifyusingui_1.png) | ![Wizard](media/modernize/groupifyusingui_3.png)
+**Site Actions** 
+
+![Site Actions](media/modernize/groupifyusingui_1.png)
+
+**Wizard**
+
+![Wizard](media/modernize/groupifyusingui_3.png)
 
 ## Programmatically connecting an Office 365 group
 
@@ -39,7 +52,9 @@ Getting familiar with what "groupify" will do to your site is important and ther
 
 ### Step 2: Analyze
 
-The user interface option shown in previous chapter is not suitable if you want to "groupify" hundreds of site collections...at that point using an API to programmatically do this makes a lot of sense. But before doing that it's best to verify which sites are ready to be "groupified" as not all sites are suitable to be "groupified". To help you understand which sites are ready to be "groupified" you can use the [SharePoint Modernization Scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization) to analyze your environment. The mentioned link contains all the details needed to use the scanner and information about what get's outputted by the scanner, below you'll find the key things to verify before you "groupify" a site:
+The user interface option shown in previous chapter is not suitable if you want to "groupify" hundreds of site collections...at that point using an API to programmatically do this makes a lot of sense. But before doing that it's best to verify which sites are ready to be "groupified" as not all sites are suitable to be "groupified". 
+
+To help you understand which sites are ready to be "groupified" you can use the [SharePoint Modernization Scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.Modernization) to analyze your environment. The mentioned link contains all the details needed to use the scanner and information about what get's outputted by the scanner, below you'll find the key things to verify before you "groupify" a site:
 
 #### Check for "groupify" blockers
 
@@ -85,7 +100,7 @@ The actual bulk "groupify" process consists out of 2 steps:
 
 #### Create an input file for bulk "groupify" and validate it
 
-After running the scanner and processing the results you have identified which sites are good to "groupify"...next step is preparing a CSV file to drive the bulk "groupify" process. The CSV file format is simple:
+After running the scanner and processing the results you have identified which sites are good to "groupify". Next step is preparing a CSV file to drive the bulk "groupify" process. The CSV file format is simple:
 
 - **URL** column contains the URL to the site collection to "groupify"
 - **Alias** contains the Office 365 group alias that you want to use. Note that this alias cannot contain spaces and it should not have been used before

@@ -1274,9 +1274,7 @@
       href: transform/modernize-userinterface.md
       items:
       - name: Maximize your use of the modern list and library user interface
-        href: transform/modernize-userinterface-lists-and-libraries.md      
-      - name: Transforming classic pages to modern client side pages
-        href: transform/modernize-userinterface-site-pages.md 
+        href: transform/modernize-userinterface-lists-and-libraries.md
     - name: Modernize the customizations
       href: transform/modernize-customizations.md
     - name: Connect to an Office 365 Group

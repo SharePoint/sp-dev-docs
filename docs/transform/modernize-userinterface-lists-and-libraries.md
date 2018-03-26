@@ -1,6 +1,13 @@
+---
+title: Maximize your use of the modern list and library user interface
+description: Maximize your use of the modern list and library user interface
+ms.date: 03/23/2018
+ms.prod: sharepoint
+---
+
 # Maximize your use of the modern list and library user interface
 
-Getting the maximum amount of lists and libraries present themselves using the modern user interface is the topic of this article. You might wonder "why not all lists and libraries?"...there's certain types of lists and libraries which are not (yet) built by the SharePoint team to show up in a modern user interface. Samples are a Task list, Events list,...For these you'll have to wait for the SharePoint team to implement a modern version or switch over to equivalent options like using Microsoft Planner instead of a classic task list or using the calendar of your Office 365 group instead of a classic SharePoint events list calendar. That being said there's also a category of lists and libraries that can be shown in modern but are blocked due to an incompatible configuration or customization...and you can take action here.
+Getting the maximum amount of lists and libraries present themselves using the modern user interface is the topic of this article. You might wonder "why not all lists and libraries?"...there's certain types of lists and libraries which are not (yet) built by the SharePoint team to show up in a modern user interface. Samples are a Task list, Events list... For these you'll have to wait for the SharePoint team to implement a modern version or switch over to equivalent options like using Microsoft Planner instead of a classic task list or using the calendar of your Office 365 group instead of a classic SharePoint events list calendar. That being said there's also a category of lists and libraries that can be shown in modern but are blocked due to an incompatible configuration or customization...and you can take action here.
 
 ## Detecting lists and libraries that will not use the modern user interface
 

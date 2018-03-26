@@ -1,14 +1,25 @@
+---
+title: Modernize the customizations
+description: Modernize the customizations using SharePoint Framework and other modern options
+ms.date: 03/23/2018
+ms.prod: sharepoint
+---
+
 # Introduction
 
-An important aspect of a site modernization is understanding the customizations that are used on that site as not all existing customizations continue to work after the site modernization. A classic example we see coming back a lot is a site banner showing some company information (e.g. a legal notice). This typically is realized via user custom action that embeds JavaScript on the page which on it's turn is responsible for showing the banner. This banner is visible on all classic pages, but will not be visible on modern pages. To workaround this problem you can implement the banner as a SharePoint Framework Application customizer extension and deploy that one to the tenant/site. In this article you'll get an overview of the customizations which are not compatible with the modern user interface and guidelines on how to remediate.
+An important aspect of a site modernization is understanding the customizations that are used on that site as not all existing customizations continue to work after the site modernization. A classic example we see coming back a lot is a site banner showing some company information (e.g. a legal notice). 
+
+This typically is realized via user custom action that embeds JavaScript on the page which on it's turn is responsible for showing the banner. This banner is visible on all classic pages, but will not be visible on modern pages. To workaround this problem you can implement the banner as a SharePoint Framework Application customizer extension and deploy that one to the tenant/site. In this article you'll get an overview of the customizations which are not compatible with the modern user interface and guidelines on how to remediate.
 
 ## Customizations being used in list and libraries
 
-This chapter focusses on customizations that you might have implemented on your lists and libraries. SharePoint will automatically fallback to the classic list and library user interface when it detects an incompatible customization, hence it's important to address these if you want to get a 100% modern experience. The [SharePoint "Modern" user interface experience scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UIExperience.Scanner) will help you get a deep understanding on the modern user interface compatibility of your lists and libraries.
+This chapter focusses on customizations that you might have implemented on your lists and libraries. SharePoint will automatically fallback to the classic list and library user interface when it detects an incompatible customization, hence it's important to address these if you want to get a 100% modern experience. The [SharePoint "Modern" user interface experience scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UIExperience.Scanner) will help you get an understanding on the modern user interface compatibility of your lists and libraries.
 
 ### The use of JSLink
 
-A very common model to control how a field is represented in the SharePoint user interface is using JSLink. Essentially JSLink allows you to plugin JavaScript that then takes over the rendering of the field. In the modern user interface similar customization capabilities are available for the list view pages, although customizing the list edit pane currently is not possible. If you're replacing JSLink then there's two alternative approaches that you can consider, which one works best depends on the complexity of the existing solution. If it's merely about how to display the data then using column formatting often is the best choice, if more 'behavior' is needed then a SharePoint Framework Field Customizer extension probably is the best.
+A very common model to control how a field is represented in the SharePoint user interface is using JSLink. Essentially JSLink allows you to plugin JavaScript that then takes over the rendering of the field. In the modern user interface similar customization capabilities are available for the list view pages, although customizing the list edit pane currently is not possible. 
+
+If you're replacing JSLink then there's two alternative approaches that you can consider, which one works best depends on the complexity of the existing solution. If it's merely about how to display the data then using column formatting often is the best choice, if more 'behavior' is needed then a SharePoint Framework Field Customizer extension probably is the best.
 
 #### Use column formatting to customize SharePoint
 

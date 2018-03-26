@@ -40,14 +40,29 @@
       "branch_mapping": {}
     },
     {
+      "path_to_root": "_themes.pdf",
+      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
+      "branch": "master"
+    },
+    {
       "path_to_root": "PnP-Tools",
       "url": "https://github.com/SharePoint/PnP-Tools.git",
       "branch": "master",
       "branch_mapping": {}
     }
   ],
-  "branch_target_mapping": {},
-  "need_generate_pdf_url_template": false,
+  "branch_target_mapping": {
+    "master": [
+      "Publish",
+      "Pdf"
+    ]
+  },
+  "Targets": {  
+    "Pdf": {  
+    "template_folder": "_themes.pdf"  
+    }  
+   }, 
+  "need_generate_pdf_url_template": true,
   "JoinTOCPlugin": [
     {
       "ConceptualTOC": "/docs/toc.yml",

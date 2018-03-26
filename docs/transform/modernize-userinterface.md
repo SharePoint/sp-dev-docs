@@ -1,4 +1,11 @@
-# Introduction
+---
+title: Modernize the user interface
+description: Modernize the user interface
+ms.date: 03/23/2018
+ms.prod: sharepoint
+---
+
+# Modernize the user interface
 
 One of the immediately visible elements of a modern site, like a modern team site or communication site, is it's modern user interface. These sites do have a home page which is using a modern site page and when you navigate to the lists and libraries you'll notice that they're shown using a modern user interface as well. But what if your site today still shows lists and libraries using the classic user interface or your site still has classic site pages in the form of wiki pages or web part pages? There are options to modernize your site's user interface, which is the main topic of this article series.
 
@@ -14,7 +21,7 @@ Both areas will be discussed in more detail in this article series.
 
 ## User interface modernization process
 
-Where do you start when you want to modernize the user interface of your sites? What sites can I modernize first? These are all very relevant questions which will be addressed in this chapter via a step by step approach.
+Where do you start when you want to modernize the user interface of your sites? What sites can be modernized first? These are all very relevant questions which will be addressed in this chapter via a step by step approach.
 
 ### Step 1: Learn
 
