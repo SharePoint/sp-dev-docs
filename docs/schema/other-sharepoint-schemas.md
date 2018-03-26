@@ -30,8 +30,7 @@ This section provides schema reference documentation for additional SharePoint X
 
 - [dsQueryResponse schema](dsqueryresponse-schema.md)
 
-
-
+ 
 
 
 

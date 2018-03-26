@@ -28,8 +28,7 @@ This section provides reference documentation for the Microsoft Business Connect
 
 <!-- [BDCSchemaAnnotations Schema](http://msdn.microsoft.com/library/e4d88dcb-07c2-dffb-a219-e0b224522e33.aspx)-->
 
-
-
+ 
 
 
 

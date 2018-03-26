@@ -96,4 +96,3 @@ The SharePoint Foundation provides eight schema (.xsd) files to support content 
 
 
 
-
