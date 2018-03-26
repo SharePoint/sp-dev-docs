@@ -5,7 +5,7 @@ ms.date: 03/23/2018
 ms.prod: sharepoint
 ---
 
-# Introduction
+# Modernize your classic SharePoint sites
 
 SharePoint Online is continuously evolving and improving, which is a great thing for you as consumer of the service. One of the key improvements is the availability of modern sites, being modern Office 365 Group connected team sites or communication sites, combined with more and more functionality that can be consumed from a beautiful modern user interface. All of this is great...but you might ask yourself the question: "I've lots of classic (team) sites...how do I bring those into the modern SharePoint world?". There's no magic switch that automatically transforms your classic sites into modern sites, but it is possible to transform a classic site into a modern site following the guidance described in this article series.
 
