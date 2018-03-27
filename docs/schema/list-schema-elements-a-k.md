@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -14,105 +12,61 @@ api_type:
 ms.assetid: aac6a892-7123-42ae-8551-de071d807c94
 ---
 
-![Collapse
-section](../icons/collapse_all.gif "Collapse section")![Expand
-section](../icons/expand_all.gif "Expand section")![](../icons/collapse_all.gif)![](../icons/expand_all.gif)![](../icons/dropdown.gif)![](../icons/dropdownHover.gif)![Copy
-code](../icons/copycode.gif "Copy code")![Copy code
-hover](../icons/copycodeHighlight.gif "Copy code hover")
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# List Schema Elements A-K
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># List Schema Elements A-K</td>
-</tr>
-<tr class="odd">
-<td align="left"><span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
+- [Aggregations](aggregations-element-list.md)
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+- [AllUsersWebPart](alluserswebpart-element-list.md)
 
-**Last modified:** July 15, 2011
+- [ArrayOfProperty](arrayofproperty-element-list.md)
 
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
+- [CHOICE](choice-element-list.md)
 
-[Aggregations](aggregations-element-list.md)
+- [CHOICES](choices-element-list.md)
 
-[AllUsersWebPart](alluserswebpart-element-list.md)
+- [ContentTypeRef](contenttyperef-element-list.md)
 
-[ArrayOfProperty](arrayofproperty-element-list.md)
+- [ContentTypes](contenttypes-element-list.md)
 
-[CHOICE](choice-element-list.md)
+- [Customization](customization-element-list.md)
 
-[CHOICES](choices-element-list.md)
+- [Default (Field)](default-element-listfield.md)
 
-[ContentTypeRef](contenttyperef-element-list.md)
+- [Default (Form)](default-element-listform.md)
 
-[ContentTypes](contenttypes-element-list.md)
+- [DefaultDescription](defaultdescription-element-list.md)
 
-[Customization](customization-element-list.md)
+- [DefaultFormula](defaultformula-element-list.md)
 
-[Default (Field)](default-element-listfield.md)
+- [DefaultFormulaValue](defaultformulavalue-element-list.md)
 
-[Default (Form)](default-element-listform.md)
+- [DisplayBidiPattern](displaybidipattern-element-list.md)
 
-[DefaultDescription](defaultdescription-element-list.md)
+- [DisplayPattern](displaypattern-element-list.md)
 
-[DefaultFormula](defaultformula-element-list.md)
+- [DocumentLibraryTemplate](documentlibrarytemplate-element-list.md)
 
-[DefaultFormulaValue](defaultformulavalue-element-list.md)
+- [Field](field-element-list.md)
 
-[DisplayBidiPattern](displaybidipattern-element-list.md)
+- [FieldRef](https://msdn.microsoft.com/library/1fec6304-0e3a-455a-a94d-df3232bb77a7(Office.15).aspx)
 
-[DisplayPattern](displaypattern-element-list.md)
+- [FieldRefs](fieldrefs-element-list.md)
 
-[DocumentLibraryTemplate](documentlibrarytemplate-element-list.md)
+- [Fields](fields-element-list.md)
 
-[Field](field-element-list.md)
+- [Filter](filter-element-list.md)
 
-[FieldRef](http://msdn.microsoft.com/library/1fec6304-0e3a-455a-a94d-df3232bb77a7(Office.15).aspx)
+- [Folder](folder-element-list.md)
 
-[FieldRefs](fieldrefs-element-list.md)
+- [Form](form-element-list.md)
 
-[Fields](fields-element-list.md)
+- [Forms](forms-element-list.md)
 
-[Filter](filter-element-list.md)
+- [Formula](formula-element-list.md)
 
-[Folder](folder-element-list.md)
-
-[Form](form-element-list.md)
-
-[Forms](forms-element-list.md)
-
-[Formula](formula-element-list.md)
-
-[FormulaDisplayNames](formuladisplaynames-element-list.md)
+- [FormulaDisplayNames](formuladisplaynames-element-list.md)
 
 
 
