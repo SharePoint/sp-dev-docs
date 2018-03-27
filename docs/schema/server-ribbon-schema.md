@@ -144,7 +144,7 @@ The following list maps relationships between elements in the Server ribbon sche
 - [CommandUIDefinition Element](commanduidefinition-element.md)
 - [Building Block: Server Ribbon](https://msdn.microsoft.com/library/035cdaf8-29f3-45ca-b5de-461bb65797e8(Office.15).aspx)
 
-
+ 
 
 
 

@@ -129,7 +129,7 @@ The following example shows a manifest for a solution that includes two Features
 
 
 
-
+ 
 
 
 
