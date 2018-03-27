@@ -3,12 +3,12 @@ manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-keywords:
-- upgrading - [sharepoint 2010], definition schema
 ms.prod: office-online-server
 localization_priority: Normal
-api_name: - Upgrade schema
-api_type: - schema
+api_name: 
+- Upgrade schema
+api_type: 
+- schema
 ms.assetid: 96d5e067-bea5-4a8e-8b21-db14eab60281
 ---
 

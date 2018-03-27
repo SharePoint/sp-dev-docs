@@ -25,7 +25,7 @@ The Add-in Manifest schema specifies the XML that can be used in an appmanifest.
 
 ## See also
 
-[Explore the app manifest structure and the package of a SharePoint Add-in](./sp-add-ins/explore-the-app-manifest-structure-and-the-package-of-a-sharepoint-add-in.md)
+- [Explore the app manifest structure and the package of a SharePoint Add-in](./sp-add-ins/explore-the-app-manifest-structure-and-the-package-of-a-sharepoint-add-in.md)
 
 
 

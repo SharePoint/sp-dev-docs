@@ -3,7 +3,6 @@ manager: laurawi
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-f1_keywords: - SharePoint workflows
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: 63824239-6eb2-4cf1-ba84-44eace4d3781
@@ -27,11 +26,11 @@ The workflow configuration file contains the information necessary to create a w
 
 The workflow configuration file is specified as a parameter for the following methods of the **websvcWebPartPages** Web Service. These methods enable Microsoft SharePoint Designer 2010 to create declarative workflow templates and associate those workflow templates with SharePoint Foundation 2010 lists.
 
-- ValidateWorkflowMarkupAndCreateSupportObjects(String, String, String, String)
+- **ValidateWorkflowMarkupAndCreateSupportObjects(String, String, String, String)**
 
   Use this method to validate the workflow markup of a declarative workflow, and optionally, to create the support objects necessary for that workflow to run.
 
-- AssociateWorkflowMarkup(String, String)**
+- **AssociateWorkflowMarkup(String, String)**
 
   Use this method to create a workflow template, and associate that workflow template with the specified SharePoint list.
 

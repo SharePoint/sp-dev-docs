@@ -3,11 +3,10 @@ manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
-keywords:
-- solution schema - [sharepoint 2010],XML schema - [SharePoint 2010]
 ms.prod: office-online-server
 localization_priority: Normal
-api_type: - schema
+api_type: 
+- schema
 ms.assetid: 48efc045-5b54-4332-abed-6813d011c803
 ---
 

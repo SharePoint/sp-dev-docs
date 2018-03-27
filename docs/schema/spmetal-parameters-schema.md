@@ -5,7 +5,8 @@ ms.audience: Developer
 ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
-api_type: - schema
+api_type: 
+- schema
 ms.assetid: 221ba799-9d7b-4e3a-8859-41d86176e1c8
 ---
 

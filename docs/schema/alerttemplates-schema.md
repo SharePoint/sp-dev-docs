@@ -5,8 +5,10 @@ ms.audience: Developer
 ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
-api_name: - AlertTemplates schema
-api_type: - schema
+api_name: 
+- AlertTemplates schema
+api_type: 
+- schema
 ms.assetid: e326075f-59b5-4616-a355-fe892a150d92
 ---
 
@@ -14,14 +16,16 @@ ms.assetid: e326075f-59b5-4616-a355-fe892a150d92
 
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-Microsoft SharePoint Foundation includes a set of predefined alert templates. These alert templates are stored in the Alerttemplates.xml file, which is located in the `%ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\TEMPLATE\\XML` folder. Alerttemplates.xml defines the format, contents, filters, event types and properties used to create alert messages from each list type. A developer can customize alerts by modifying a copy of the Alerttemplates.xml file and then loading the customized alert templates by using the command `stsadm -o updatealerttemplates`.
+Microsoft SharePoint Foundation includes a set of predefined alert templates. These alert templates are stored in the Alerttemplates.xml file, which is located in the `%ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\TEMPLATE\\XML` folder. 
+
+Alerttemplates.xml defines the format, contents, filters, event types and properties used to create alert messages from each list type. A developer can customize alerts by modifying a copy of the Alerttemplates.xml file and then loading the customized alert templates by using the command `stsadm -o updatealerttemplates`.
 
 Alert templates also define which filters and event types appear on the new alert and edit alert pages (the subnew.aspx and  subedit.aspx pages).
 
-> - [!WARNING] 
+> [!WARNING] 
 > Do not modify the Alerttemplates.xml file. Doing so may result in loss of functionality when upgrading or installing service packs.
 
-For a listing of the predefined alert templates, see - [Predefined Alert Templates](https://msdn.microsoft.com/library/6a5296b2-c158-40e4-897f-bbf008b6bbaf(Office.15).aspx).
+For a listing of the predefined alert templates, see [Predefined Alert Templates](https://msdn.microsoft.com/library/6a5296b2-c158-40e4-897f-bbf008b6bbaf(Office.15).aspx).
 
 - [AlertTemplates](alerttemplates-element-alerttemplates.md)
 
@@ -51,7 +55,7 @@ For a listing of the predefined alert templates, see - [Predefined Alert Templat
 
 - [Footer](footer-element-alerttemplates.md)
 
-- [Immedate](immediate-element-alerttemplates.md)
+- [Immediate](immediate-element-alerttemplates.md)
 
 - [Fields](fields-element-alerttemplates.md)
 
