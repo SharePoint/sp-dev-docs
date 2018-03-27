@@ -1,17 +1,21 @@
 ---
-title: Branding
-ms.date: 01/18/2018
+title: Scenario Guidance - Branding
+description: Scenario guidance on branding options with SharePoint.
+ms.date: 03/26/2018
 ---
+
 # Branding
 
 ## Summary
 
-There are many different reasons why you would apply custom branding to a SharePoint site. These reasons can include corporate identity, usability, marketing, etc. Office 365 SharePoint sites support customized branding. Resources in this section will help you consider the short and long-term impact of customization from an operational and a maintenance perspective. This is not really specific for SharePoint; but is rather a rule of thumb for any IT solution built with any platform.
+There are many different reasons why you would apply custom branding to a SharePoint site. These reasons can include corporate identity, usability, marketing, etc. SharePoint Online sites support customized branding, but options are slightly different than with SharePoint on-premises deployments. 
+
+Resources in this article will help you consider the short and long-term impact of customization from an operational and a maintenance perspective. Guidance around the long term impact analyzes is not really specific for SharePoint; but is rather a rule of thumb for any IT solution built with any platform.
 
 ## High-level guideline/general rules
 
 - Office 365 is being updated frequently. To be able to benefit of the latest capabilities, use only the recommended approaches to brand SharePoint Online
-- When customizing SharePoint user experience through DOM manipulation, custom CSS or custom master pages and page layouts, after applying each SharePoint patch, verify that your customizations are still working as expected and don't collide with any of the changes introduced in the patch
+- When customizing SharePoint user experience through DOM manipulation, custom CSS or custom master pages and page layouts, after applying each SharePoint update, verify that your customizations are still working as expected and don't collide with any of the changes introduced withing the installed updates.
 
 ## Available options
 
@@ -36,17 +40,23 @@ In 2016, the SharePoint Online team released "modern" collaboration sites. These
 - Create custom site columns (fields) and content types.
 - Create lists and libraries.
 - Configure site settings, such as regional settings, languages, and auditing settings.
+- Use SharePoint Framework extensions to provide user interface components and controls.
+- Use Hub Sites capability to provide cross site collection navigation capability.
 
 #### Related resources
 
 ##### Articles
 
 - [Customizing the "modern" experiences in SharePoint Online](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/modern-experience-customizations)
+- [SharePoint Site Theming (modern)](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview)
+- [Overview of programming SharePoint hub sites](https://docs.microsoft.com/en-us/sharepoint/dev/features/hub-site/hub-site-overview)
 - [New site theming options for SharePoint sites in Office 365](https://techcommunity.microsoft.com/t5/SharePoint-Blog/New-site-theming-options-for-SharePoint-sites-in-Office-365/ba-p/94001)
 - [Change the look of your SharePoint site](https://support.office.com/en-us/article/Change-the-look-of-your-SharePoint-site-06bbadc3-6b04-4a60-9d14-894f6a170818)
+- [Overview of SharePoint Framework Extensions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions)
 
 ##### Solutions
 
+- [SharePoint Framework Extension samples](https://github.com/SharePoint/sp-dev-fx-extensions)
 - [SharePoint "Modern" user interface experience scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UIExperience.Scanner)
 
 ##### Videos
@@ -123,7 +133,7 @@ Composed looks are out-of-the-box themes that are included in SharePoint 2013 an
 
 _**Applies to:** Classic sites_
 
-Design Manager is a feature in SharePoint that makes it easier to create a fully customized, pixel-perfect design while using the web-design tools that you're already familiar with. Design Manager is a publishing feature that is available in publishing sites in both SharePoint and Office 365.
+Design Manager is a feature in SharePoint that makes it easier to create a fully customized, pixel-perfect design while using the web-design tools that you're already familiar with. Design Manager is a publishing feature that is available in classic publishing sites in both SharePoint and Office 365.
 
 With Design Manager, you can create a visual design for your website by using whatever web design tool or HTML editor you prefer, using only HTML and CSS, and then upload that design into SharePoint. Design Manager is the central hub and interface where you manage all aspects of a custom design.
 
@@ -199,6 +209,7 @@ Cascading style sheet (CSS) plays a large role in SharePoint branding. To succes
 
 - [SharePoint 2013/2016/Online Responsive UI](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UI.Responsive)
 - [Activate the PnP Responsive UI Add-on using PnP PowerShell](https://msdn.microsoft.com/en-us/pnp_powershell/enablepnpresponsiveui)
+- [CSS Injection Pattern sample](https://github.com/SharePoint/PnP/tree/master/Samples/Branding.CustomCSS)
 - [SharePoint "Modern" user interface experience scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UIExperience.Scanner)
 - [Transformation tool](https://github.com/SharePoint/PnP-Transformation/tree/master/Transformation%20Tool%20-%20CSOM#introduction)
 
@@ -208,9 +219,11 @@ Cascading style sheet (CSS) plays a large role in SharePoint branding. To succes
 - [AlternateCssUrl & SiteLogoUrl properties in web object](https://dev.office.com/patterns-and-practices-detail/1849)
 - [Making out of the box Seattle master responsive](https://dev.office.com/patterns-and-practices-detail/5823)
 
-### Script injection and DOM manipulation
+### Script Embedding and DOM manipulation
 
 _**Applies to:** Classic sites_
+
+Script Embedding means a pattern where custom JavaScript is added on the page which then modifies the end user experiences by modifying the html DOM structure. Typical approaches for this model is to use either *User Custom Actions*, *JSLink*, *Content Editor Web Part* or *Script Editor Web Part*. Challenge of the DOM manipulation related model is dependency on the actual page structure. These kind of customizations are fragile and can easily break as new capabilities are released in SharePoint Online.
 
 #### Related resources
 

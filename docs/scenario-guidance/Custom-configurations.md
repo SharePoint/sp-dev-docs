@@ -1,7 +1,9 @@
 ---
-title: Custom configurations
-ms.date: 03/22/2018
+title: Scenario Guidance - Custom configurations
+description: Scenario guidance on where and how to store configuration values.
+ms.date: 03/26/2018
 ---
+
 # Custom configurations
 
 ## Summary
@@ -15,8 +17,6 @@ Allowing the different aspects of a SharePoint solution to be configurable makes
 - Choose the storage for your configuration settings, based on the target audience who will be managing them.
 
 ## Available options
-
-### General recommendations
 
 ### Tenant properties
 
@@ -37,6 +37,16 @@ Tenant properties allow tenant administrators to add properties in the App Catal
 ### Property bags
 
 _**Applies to:** Office 365 | SharePoint Server_
+
+Description. Can't edit if no script enabled.
+
+#### Related resources
+
+##### Articles
+
+##### Videos
+
+##### Samples
 
 ### SharePoint Framework
 
@@ -72,6 +82,27 @@ _**Applies to:** Office 365 | SharePoint Server_
 
 _**Applies to:** Office 365 | SharePoint Server_
 
+Description. 
+
+#### Related resources
+
+##### Articles
+
+##### Videos
+
+##### Samples
+
+
 ### Farm solutions
 
 _**Applies to:** Office 365 | SharePoint Server_
+
+Description. Can't edit if no script enabled.
+
+#### Related resources
+
+##### Articles
+
+##### Videos
+
+##### Samples
