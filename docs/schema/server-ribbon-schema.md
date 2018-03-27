@@ -1,294 +1,148 @@
 ---
-
-
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
 ms.topic: reference
 ms.prod: office-online-server
 localization_priority: Normal
-api_name:
-- Server Ribbon schema
-api_type:
-- schema
+api_name: - Server Ribbon schema
+api_type: - schema
 ms.assetid: 357e26f4-f6ab-4044-9869-054f65f276cc
 ---
 
-![Collapse
-section](../icons/collapse_all.gif "Collapse section")![Expand
-section](../icons/expand_all.gif "Expand section")![](../icons/collapse_all.gif)![](../icons/expand_all.gif)![](../icons/dropdown.gif)![](../icons/dropdownHover.gif)![Copy
-code](../icons/copycode.gif "Copy code")![Copy code
-hover](../icons/copycodeHighlight.gif "Copy code hover")
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# Server Ribbon schema
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># Server Ribbon schema</td>
-</tr>
-<tr class="odd">
-<td align="left"><a href="#seeAlsoToggle">See also</a>  <span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
+The Server ribbon schema defines the structure of XML documents that customize the Server ribbon.
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+An XML document that customizes the Server ribbon must validate with the schema that is defined in the cui.xsd file. This file is located in the following directory: `%ProgramFiles%\\Common Files\\Microsoft Shared\\web server extensions\\15\\TEMPLATE\\XML`.
 
-**Last modified:** July 15, 2011
+The following list maps relationships between elements in the Server ribbon schema definition.
 
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
+- [CommandUI](commandui-element.md)
 
-The Server ribbon schema defines the structure of XML documents that
-customize the Server ribbon.
+- [Ribbon](ribbon-element.md)
 
+- [Tabs](tabs-element.md)
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- [Tab](tab-element.md)
 
-An XML document that customizes the Server ribbon must validate with the
-schema that is defined in the cui.xsd file. This file is located in the
-following directory: %ProgramFiles%\\Common Files\\Microsoft Shared\\web
-server extensions\\15\\TEMPLATE\\XML.
+- [Groups](groups-element.md)
 
+- [Group](group-element-ribbon.md)
 
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+- [Controls](controls-element-group.md)
 
-The following list maps relationships between elements in the Server
-ribbon schema definition.
+- [Button](button-element.md)/
 
-\<[CommandUI](commandui-element.md)\>
+- [CheckBox](checkbox-element.md)/
 
-    \<[Ribbon](ribbon-element.md)\>
+- [ComboBox](combobox-element.md)
 
-        \<[Tabs](tabs-element.md)\>
+- [Menu](menu-element.md)
 
-            \<[Tab](tab-element.md)\>
+- [MenuSection](menusection-element.md)
 
-                \<[Groups](groups-element.md)\>
+- [Controls](controls-element-menusection.md)
 
-                    \<[Group](group-element-ribbon.md)\>
+- [Button](button-element.md)/
 
-                        \<[Controls](controls-element-group.md)\>
+- [ColorPicker](colorpicker-element.md)
 
-                            \<[Button](button-element.md)/\>
+- [Colors](colors-element.md)
 
-                            \<[CheckBox](checkbox-element.md)/\>
+- [Color](color-element.md)/
 
-                            \<[ComboBox](combobox-element.md)\>
+- [FlyoutAnchor](flyoutanchor-element.md)
 
-                                \<[Menu](menu-element.md)\>
+- [Menu](menu-element.md)
 
-                                    \<[MenuSection](menusection-element.md)\>
+- [InsertTable](inserttable-element.md)/
 
-                                        \<[Controls](controls-element-menusection.md)\>
+- [ToggleButton](togglebutton-element.md)/
 
-                                            \<[Button](button-element.md)/\>
+- [Gallery](gallery-element.md)
 
-                                            \<[ColorPicker](colorpicker-element.md)\>
+- [GalleryButton](gallerybutton-element-group.md)/
 
-                                                \<[Colors](colors-element.md)\>
+- [DropDown](dropdown-element.md)
 
-                                                    \<[Color](color-element.md)/\>
+- [Menu](menu-element.md)
 
-                                                DOCS-LESSTHANColors/DOCS-GREATERTHAN
+- [FlyoutAnchor](flyoutanchor-element.md)
 
-                                            DOCS-LESSTHAN/ColorPickerDOCS-GREATERTHAN
+- [Menu](menu-element.md)
 
-                                            \<[FlyoutAnchor](flyoutanchor-element.md)\>
+- [GalleryButton](gallerybutton-element-group.md)/
 
-                                                \<[Menu](menu-element.md)\>
+- [Label](label-element.md)/
 
-                                                DOCS-LESSTHAN/MenuDOCS-GREATERTHAN
+- [MRUSplitButton](mrusplitbutton-element.md)
 
-                                            DOCS-LESSTHAN/FlyoutAnchorDOCS-GREATERTHAN
+- [Menu](menu-element.md)
 
-                                            \<[InsertTable](inserttable-element.md)/\>
+- [Spinner](spinner-element.md)
 
-                                            \<[ToggleButton](togglebutton-element.md)/\>
+- [Unit](unit-element-spinner.md)
 
-                                        DOCS-LESSTHAN/ControlsDOCS-GREATERTHAN
+- [UnitAbbreviation](unitabbreviation-element.md)/
 
-                                        \<[Gallery](gallery-element.md)\>
+- [SplitButton](splitbutton-element.md)
 
-                                            \<[GalleryButton](gallerybutton-element-group.md)/\>
+- [Menu](menu-element.md)
 
-                                        DOCS-LESSTHAN/GalleryDOCS-GREATERTHAN
+- [TextBox](textbox-element.md)/
 
-                                    DOCS-LESSTHAN/MenuSectionDOCS-GREATERTHAN
+- [ToggleButton](togglebutton-element.md)/
 
-                                DOCS-LESSTHAN/MenuDOCS-GREATERTHAN
+- [Scaling](scaling-element.md)
 
-                            DOCS-LESSTHAN/ComboBoxDOCS-GREATERTHAN
+- [MaxSize](maxsize-element.md)/
 
-                            \<[DropDown](dropdown-element.md)\>
+- [Scale](scale-element.md)/
 
-                                \<[Menu](menu-element.md)\>
+- [ContextualTabs](contextualtabs-element.md)
 
-                                DOCS-LESSTHAN/MenuDOCS-GREATERTHAN
+- [ContextualGroup](contextualgroup-element.md)
 
-                            DOCS-LESSTHAN/DropDownDOCS-GREATERTHAN
+- [Tab](tab-element.md)
 
-                            \<[FlyoutAnchor](flyoutanchor-element.md)\>
+- [Templates](templates-element.md)
 
-                                \<[Menu](menu-element.md)\>
+- [RibbonTemplates](ribbontemplates.md)
 
-                                DOCS-LESSTHAN/MenuDOCS-GREATERTHAN
+- [GroupTemplate](grouptemplate-element.md)
 
-                            DOCS-LESSTHAN/FlyoutAnchorDOCS-GREATERTHAN
+- [Layout](layout-element.md)
 
-                            \<[GalleryButton](gallerybutton-element-group.md)/\>
+- [Section](section-element.md)
 
-                            \<[Label](label-element.md)/\>
+- [Row](row-element.md)
 
-                            \<[MRUSplitButton](mrusplitbutton-element.md)\>
+- [ControlRef](controlref-element.md)/
 
-                                \<[Menu](menu-element.md)\>
+- [Strip](strip-element.md)
 
-                                DOCS-LESSTHAN/MenuDOCS-GREATERTHAN
+- [ControlRef](controlref-element.md)/
 
-                            \<[Spinner](spinner-element.md)\>
+- [OverflowArea](overflowarea-element.md)/
 
-                                \<[Unit](unit-element-spinner.md)\>
+- [OverflowSection](overflowsection-element.md)/
 
-                                    \<[UnitAbbreviation](unitabbreviation-element.md)/\>
+- [QAT](qat-element.md)
 
-                                DOCS-LESSTHAN/UnitDOCS-GREATERTHAN
+- [Controls](controls-element-group.md)
 
-                            DOCS-LESSTHAN/SpinnerDOCS-GREATERTHAN
+- [Jewel](jewel-element.md)
 
-                            \<[SplitButton](splitbutton-element.md)\>
+- [Menu](menu-element.md)
 
-                                \<[Menu](menu-element.md)\>
 
-                                DOCS-LESSTHAN/MenuDOCS-GREATERTHAN
+## See also
 
-                            DOCS-LESSTHAN/SplitButtonDOCS-GREATERTHAN
-
-                            \<[TextBox](textbox-element.md)/\>
-
-                            \<[ToggleButton](togglebutton-element.md)/\>
-
-                        DOCS-LESSTHAN/ControlsDOCS-GREATERTHAN
-
-                    DOCS-LESSTHAN/GroupDOCS-GREATERTHAN
-
-                DOCS-LESSTHAN/GroupsDOCS-GREATERTHAN
-
-                \<[Scaling](scaling-element.md)\>
-
-                    \<[MaxSize](maxsize-element.md)/\>
-
-                    \<[Scale](scale-element.md)/\>
-
-                DOCS-LESSTHAN/ScalingDOCS-GREATERTHAN
-
-            DOCS-LESSTHAN/TabDOCS-GREATERTHAN
-
-        DOCS-LESSTHAN/TabsDOCS-GREATERTHAN
-
-        \<[ContextualTabs](contextualtabs-element.md)\>
-
-            \<[ContextualGroup](contextualgroup-element.md)\>
-
-                \<[Tab](tab-element.md)\>
-
-                DOCS-LESSTHAN/TabDOCS-GREATERTHAN
-
-            DOCS-LESSTHAN/ContextualGroupDOCS-GREATERTHAN
-
-        DOCS-LESSTHAN/ContextualTabsDOCS-GREATERTHAN
-
-    DOCS-LESSTHAN/RibbonDOCS-GREATERTHAN
-
-    \<[Templates](templates-element.md)\>
-
-        \<[RibbonTemplates](ribbontemplates.md)\>
-
-            \<[GroupTemplate](grouptemplate-element.md)\>
-
-                \<[Layout](layout-element.md)\>
-
-                    \<[Section](section-element.md)\>
-
-                        \<[Row](row-element.md)\>
-
-                            \<[ControlRef](controlref-element.md)/\>
-
-                            \<[Strip](strip-element.md)\>
-
-                                \<[ControlRef](controlref-element.md)/\>
-
-                            DOCS-LESSTHAN/StripDOCS-GREATERTHAN
-
-                            \<[OverflowArea](overflowarea-element.md)/\>
-
-                        DOCS-LESSTHAN/RowDOCS-GREATERTHAN
-
-                    DOCS-LESSTHAN/SectionDOCS-GREATERTHAN
-
-                    \<[OverflowSection](overflowsection-element.md)/\>
-
-                DOCS-LESSTHAN/LayoutDOCS-GREATERTHAN
-
-            DOCS-LESSTHAN/GroupTemplateDOCS-GREATERTHAN
-
-        DOCS-LESSTHAN/RibbonTemplatesDOCS-GREATERTHAN
-
-    DOCS-LESSTHAN/TemplatesDOCS-GREATERTHAN
-
-    \<[QAT](qat-element.md)\>
-
-        \<[Controls](controls-element-group.md)\>
-
-        DOCS-LESSTHAN/ControlsDOCS-GREATERTHAN
-
-    DOCS-LESSTHAN/QATDOCS-GREATERTHAN
-
-    \<[Jewel](jewel-element.md)\>
-
-        \<[Menu](menu-element.md)\>
-
-        DOCS-LESSTHAN/MenuDOCS-GREATERTHAN
-
-    DOCS-LESSTHAN/JewelDOCS-GREATERTHAN
-
-DOCS-LESSTHAN/CommandUIDOCS-GREATERTHAN
-
-
--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-#### Reference
-
-[CommandUIDefinition
-Element](commanduidefinition-element.md)</span>
-
-#### Other resources
-
-[Building Block: Server
-Ribbon](http://msdn.microsoft.com/library/035cdaf8-29f3-45ca-b5de-461bb65797e8(Office.15).aspx)
+- [CommandUIDefinition Element](commanduidefinition-element.md)
+- [Building Block: Server Ribbon](https://msdn.microsoft.com/library/035cdaf8-29f3-45ca-b5de-461bb65797e8(Office.15).aspx)
 
 
 
