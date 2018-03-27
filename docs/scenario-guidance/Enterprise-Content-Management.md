@@ -15,8 +15,6 @@ Here follow some useful guidelines and general rules for ECM solutions:
 * If your deployment is in SharePoint Online, prefer using Microsoft Flow to design business processes, instead of using the Workflow engine of SharePoint 2010, or the Workflow Manager engine of SharePoint 2013/2016
 * Avoid using the Publishing features on top of a Team Site, rather create a "modern" Communication Site
 
-## Available options
-
 ## Content Type Hub
 
 _**Applies to:** SharePoint Online | SharePoint 2013 | SharePoint 2016_

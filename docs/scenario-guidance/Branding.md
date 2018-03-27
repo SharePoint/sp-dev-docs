@@ -17,9 +17,7 @@ Resources in this article will help you consider the short and long-term impact 
 - Office 365 is being updated frequently. To be able to benefit of the latest capabilities, use only the recommended approaches to brand SharePoint Online
 - When customizing SharePoint user experience through DOM manipulation, custom CSS or custom master pages and page layouts, after applying each SharePoint update, verify that your customizations are still working as expected and don't collide with any of the changes introduced withing the installed updates.
 
-## Available options
-
-### Modern experiences
+## Modern experiences
 
 _**Applies to:** Office 365_
 
@@ -43,9 +41,7 @@ In 2016, the SharePoint Online team released "modern" collaboration sites. These
 - Use SharePoint Framework extensions to provide user interface components and controls.
 - Use Hub Sites capability to provide cross site collection navigation capability.
 
-#### Related resources
-
-##### Articles
+### Articles
 
 - [Customizing the "modern" experiences in SharePoint Online](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/modern-experience-customizations)
 - [SharePoint Site Theming (modern)](https://docs.microsoft.com/en-us/sharepoint/dev/declarative-customization/site-theming/sharepoint-site-theming-overview)
@@ -54,12 +50,12 @@ In 2016, the SharePoint Online team released "modern" collaboration sites. These
 - [Change the look of your SharePoint site](https://support.office.com/en-us/article/Change-the-look-of-your-SharePoint-site-06bbadc3-6b04-4a60-9d14-894f6a170818)
 - [Overview of SharePoint Framework Extensions](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/overview-extensions)
 
-##### Solutions
+### Solutions
 
 - [SharePoint Framework Extension samples](https://github.com/SharePoint/sp-dev-fx-extensions)
 - [SharePoint "Modern" user interface experience scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UIExperience.Scanner)
 
-##### Videos
+### Videos
 
 - [PnP Webcast - Customizations options with SharePoint Online “modern” experiences](https://www.youtube.com/watch?v=724Spxu3hF4)
 - [PnP Webcast - Managing modern experiences in SharePoint Online](https://www.youtube.com/watch?v=T-enocLYxcY)
@@ -68,31 +64,30 @@ In 2016, the SharePoint Online team released "modern" collaboration sites. These
 - [What’s new and what's coming for branding and organizing your SharePoint sites - BRK2393 - Ignite '17](https://www.youtube.com/watch?v=YBGYl35oU0k)
 - [New web experiences in Office 365 that empower your users - BRK1050 - Ignite '17](https://www.youtube.com/watch?v=IMV97BwS5Xk)
 
-### Classic experiences
+## Classic experiences
 
 _**Applies to:** Office 365 | SharePoint Server 2016 | SharePoint Server 2013_
 
 The classic SharePoint user experience is based on ASP.NET master pages and page layouts. While it gives you more control and flexibility with regards to branding, it requires more effort to keep operational. Master pages and page layouts in SharePoint contain references to SharePoint resources. Every time you patch your SharePoint Farm or SharePoint Online is updated, you will have to ensure that your custom master pages contain all the necessary references for you to be able to fully use the latest SharePoint features.
 
-#### Related resources
 
-##### Articles
+### Articles
 
 - [Branding and site provisioning solutions for SharePoint Server 2013, SharePoint Server 2016 and SharePoint Online](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/branding-and-site-provisioning-solutions-for-sharepoint)
 - [Master pages, the Master Page Gallery, and page layouts in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/master-pages-the-master-page-gallery-and-page-layouts-in-sharepoint)
 - [Customize OneDrive for Business site branding](https://msdn.microsoft.com/en-us/library/office/mt168839.aspx)
 
-##### Solutions
+### Solutions
 
 - [SharePoint 2013/2016/Online Responsive UI](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UI.Responsive)
 - [SharePoint "Modern" user interface experience scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UIExperience.Scanner)
 - [PnP Starter Intranet for SharePoint 2013/2016 and SharePoint Online](https://dev.office.com/patterns-and-practices-detail/11128)
 
-##### Videos
+### Videos
 
 - [Learn best practices for customizing and branding SharePoint Team Sites](https://www.youtube.com/watch?v=2AxN-G56-d4)
 
-### Modern themes
+## Modern themes
 
 _**Applies to:** Modern sites_
 
@@ -106,22 +101,18 @@ SharePoint site owners have new options for applying custom styles and colors to
 
 These capabilities are available to administrators via [PowerShell cmdlets](../declarative-customization/site-theming/sharepoint-site-theming-powershell.md), and to developers via the SharePoint [Client Side Object Model (CSOM)](../declarative-customization/site-theming/sharepoint-site-theming-csom.md) or the SharePoint [REST API](../declarative-customization/site-theming/sharepoint-site-theming-rest-api.md).
 
-#### Related resources
-
-##### Articles
+### Articles
 
 - [SharePoint site theming](../declarative-customization/site-theming/sharepoint-site-theming-overview.md)
 - [SharePoint themes and colors](https://docs.microsoft.com/en-us/sharepoint/dev/design/themes-colors)
 
-### Composed looks (classic SharePoint themes)
+## Composed looks (classic SharePoint themes)
 
 _**Applies to:** Classic sites_
 
 Composed looks are out-of-the-box themes that are included in SharePoint 2013 and SharePoint Online. To apply a composed look to a SharePoint site, select **Site Settings** > **Look and Feel** > **Change the look**. You can then use the Change the look wizard to customize the colors, fonts, master page, and background image of a composed look. The Change the look wizard copies, transforms, and stores CSS in SharePoint's content database. It also recolors images and stores them in the content database.
 
-#### Related resources
-
-##### Articles
+### Articles
 
 - [Themes overview for SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/themes-overview-for-sharepoint)
 - [Use composed looks to brand SharePoint sites](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/use-composed-looks-to-brand-sharepoint-sites)
@@ -129,7 +120,7 @@ Composed looks are out-of-the-box themes that are included in SharePoint 2013 an
 - [SharePoint site branding and page customization solutions](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/sharepoint-site-branding-and-page-customization-solutions)
 - [Proven Practices for SharePoint Online portal branding](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/portal-branding)
 
-### Design Manager and Design packages
+## Design Manager and Design packages
 
 _**Applies to:** Classic sites_
 
@@ -137,16 +128,14 @@ Design Manager is a feature in SharePoint that makes it easier to create a fully
 
 With Design Manager, you can create a visual design for your website by using whatever web design tool or HTML editor you prefer, using only HTML and CSS, and then upload that design into SharePoint. Design Manager is the central hub and interface where you manage all aspects of a custom design.
 
-#### Related resources
-
-##### Articles
+### Articles
 
 - [Overview of Design Manager in SharePoint](../general-development/overview-of-design-manager-in-sharepoint.md)
 - [SharePoint Design Manager display templates](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/sharepoint-design-manager-display-templates)
 - [SharePoint Design Manager branding and design capabilities](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/sharepoint-design-manager-branding-and-design-capabilities)
 - [SharePoint development and design tools and practices](https://msdn.microsoft.com/en-us/library/office/dn985873.aspx)
 
-### Custom master pages and page layouts
+## Custom master pages and page layouts
 
 _**Applies to:** Classic sites_
 
@@ -154,9 +143,7 @@ Master pages provide the look and feel and standard behavior that you want for a
 
 Because Microsoft SharePoint is built on top of Microsoft ASP.NET, it supports master pages for defining elements that are common to all pages. You can specify all of the shared elements of your site in the master page or pages, and add page-specific elements to content pages.
 
-#### Related resources
-
-##### Articles
+### Articles
 
 - [Overview of the SharePoint page model](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/overview-of-the-sharepoint-page-model)
 - [Master pages, the Master Page Gallery, and page layouts in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/master-pages-the-master-page-gallery-and-page-layouts-in-sharepoint)
@@ -166,27 +153,25 @@ Because Microsoft SharePoint is built on top of Microsoft ASP.NET, it supports m
 - [Transformation guidance from farm solutions to add-in model - Replacement of files deployed via Modules (lab)](https://github.com/OfficeDev/TrainingContent/blob/master/O3658/10%20Transformation%20guidance%20from%20farm%20solutions%20to%20add-in%20model/10-1%20Replacement%20of%20files%20deployed%20via%20Modules/Lab.md)
 - [Branding SharePoint sites in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/branding-sharepoint-sites-sharepoint-add-in)
 
-##### Videos
+### Videos
 
 - [PnP Webcast - Customizations options with SharePoint Online “modern” experiences](https://www.youtube.com/watch?v=724Spxu3hF4)
 - [Learn best practices for customizing and branding SharePoint Team Sites](https://www.youtube.com/watch?v=2AxN-G56-d4)
 - [Office Dev PnP Web Cast – Branding SharePoint using add-in model techniques](https://dev.office.com/blogs/branding-sharepoint-using-add-in-model-techniques)
 
-##### Solutions
+### Solutions
 
 - [SharePoint "Modern" user interface experience scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UIExperience.Scanner)
 - [PnP PowerShell branding cmdlets](https://docs.microsoft.com/en-us/powershell/sharepoint/sharepoint-pnp/sharepoint-pnp-cmdlets?view=sharepoint-ps#branding)
 - [Transformation tool](https://github.com/SharePoint/PnP-Transformation/tree/master/Transformation%20Tool%20-%20CSOM#introduction)
 
-### Custom CSS
+## Custom CSS
 
 _**Applies to:** Classic sites_
 
 Cascading style sheet (CSS) plays a large role in SharePoint branding. To successfully customize the site design in SharePoint 2013 and SharePoint Online, it's useful to be familiar with how SharePoint uses CSS.
 
-#### Related resources
-
-##### Articles
+### Articles
 
 - [Use CSS to brand SharePoint pages](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/use-css-to-brand-pages)
 - [Make custom CSS files themable in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/how-to-make-custom-css-files-themable-in-sharepoint)
@@ -200,12 +185,12 @@ Cascading style sheet (CSS) plays a large role in SharePoint branding. To succes
 - [Proven Practices for SharePoint Online Portals - Performance](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/portal-performance)
 - [Controlling branding in SharePoint using add-in model](https://github.com/OfficeDev/TrainingContent/tree/master/O3658/03%20Branding%20with%20add-in%20model%20techniques)
 
-##### Videos
+### Videos
 
 - [PnP Add-In Transformation Training module 3: Branding with add-in model](https://channel9.msdn.com/blogs/OfficeDevPnP/PnP-Add-In-Transformation-Training-module-3-Branding-with-add-in-model)
 - [Learn best practices for customizing and branding SharePoint Team Sites](https://www.youtube.com/watch?v=2AxN-G56-d4)
 
-##### Solutions
+### Solutions
 
 - [SharePoint 2013/2016/Online Responsive UI](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UI.Responsive)
 - [Activate the PnP Responsive UI Add-on using PnP PowerShell](https://msdn.microsoft.com/en-us/pnp_powershell/enablepnpresponsiveui)
@@ -213,21 +198,19 @@ Cascading style sheet (CSS) plays a large role in SharePoint branding. To succes
 - [SharePoint "Modern" user interface experience scanner](https://github.com/SharePoint/PnP-Tools/tree/master/Solutions/SharePoint.UIExperience.Scanner)
 - [Transformation tool](https://github.com/SharePoint/PnP-Transformation/tree/master/Transformation%20Tool%20-%20CSOM#introduction)
 
-##### Samples
+### Samples
 
 - [CSS injection pattern](https://dev.office.com/patterns-and-practices-detail/1852)
 - [AlternateCssUrl & SiteLogoUrl properties in web object](https://dev.office.com/patterns-and-practices-detail/1849)
 - [Making out of the box Seattle master responsive](https://dev.office.com/patterns-and-practices-detail/5823)
 
-### Script Embedding and DOM manipulation
+## Script Embedding and DOM manipulation
 
 _**Applies to:** Classic sites_
 
 Script Embedding means a pattern where custom JavaScript is added on the page which then modifies the end user experiences by modifying the html DOM structure. Typical approaches for this model is to use either *User Custom Actions*, *JSLink*, *Content Editor Web Part* or *Script Editor Web Part*. Challenge of the DOM manipulation related model is dependency on the actual page structure. These kind of customizations are fragile and can easily break as new capabilities are released in SharePoint Online.
 
-#### Related resources
-
-##### Articles
+### Articles
 
 - [Branding SharePoint sites in the SharePoint add-in model](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/branding-sharepoint-sites-sharepoint-add-in)
 - [Proven Practices for SharePoint Online Portals - Performance](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/portal-performance)
@@ -236,13 +219,13 @@ Script Embedding means a pattern where custom JavaScript is added on the page wh
 - [Migrating from UserCustomAction to SharePoint Framework Extensions (tutorial)](https://docs.microsoft.com/en-us/sharepoint/dev/spfx/extensions/guidance/migrate-from-usercustomactions-to-spfx-extensions)
 - [JavaScript Patterns and Performance](https://docs.microsoft.com/en-us/sharepoint/dev/solution-guidance/javascript-patterns-and-performance)
 
-##### Videos
+### Videos
 
 - [JavaScript injection in SharePoint Online - Office 365 Developer Patterns and Practices](http://channel9.msdn.com/Blogs/Office-365-Dev/JavaScript-injection-in-SharePoint-Online-Office-365-Developer-Patterns-and-Practices)
 - [How to update your SharePoint pages via the embedding of JavaScript](https://channel9.msdn.com/blogs/OfficeDevPnP/JavaScript-embedding-demo)
 - [Office Dev PnP Web Cast – JavaScript development patterns with SharePoint](https://dev.office.com/blogs/javascript-development-patterns-with-sharepoint)
 
-##### Samples
+### Samples
 
 - [Branding.ClientSideRendering - Shows usage of the client side rendering with JSLink property and how to automate this configuration from add-in](https://github.com/OfficeDev/PnP/tree/master/Samples/Branding.ClientSideRendering)
 - [Branding.JSLink - Shows how to setup JSLink property with no-code sandbox solution deployment](https://github.com/OfficeDev/PnP/tree/master/Samples/Branding.JSLink)
