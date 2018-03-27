@@ -40,7 +40,7 @@ With Logic Apps you can build, schedule, and automate processes as workflows so 
 * [Slice, dice, and route your SharePoint documents with Microsoft Flow, Azure Logic Apps, and Microsoft PowerApps](https://azure.microsoft.com/en-us/resources/videos/build-2017-slice-dice-and-route-your-sharepoint-documents-with-microsoft-flow-azure-logic-apps-and-microsoft-powerapps/)
 * [Microsoft Azure and Office 365 together: The modern business development platform](https://azure.microsoft.com/en-us/resources/videos/microsoft-ignite-2017-microsoft-azure-and-office-365-together-the-modern-business-development-platform/)
 
-### Microsoft Flow
+## Microsoft Flow
 
 _**Applies to:** Office 365 | SharePoint Online | SharePoint 2013 | SharePoint 2016_
 
@@ -59,7 +59,7 @@ As a developer, you can extend Microsoft Flow, enabling even more powerful solut
 
 * [Slice, dice, and route your SharePoint documents with Microsoft Flow, Azure Logic Apps, and Microsoft PowerApps](https://azure.microsoft.com/en-us/resources/videos/build-2017-slice-dice-and-route-your-sharepoint-documents-with-microsoft-flow-azure-logic-apps-and-microsoft-powerapps/)
 
-### Workflow Manager of SharePoint 2013/2016
+## Workflow Manager of SharePoint 2013/2016
 
 _**Applies to:** SharePoint Online | SharePoint 2013 | SharePoint 2016_
 
@@ -82,7 +82,7 @@ Both in SharePoint Online and in SharePoint 2013/2016 on-premises you can define
 * [Handle custom events in a workflow](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.CustomEvents)
 * [Workflow with custom forms (initiation and task)](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.CustomTasks)
 
-### Windows Workflow Foundation 3.x of SharePoint 2010
+## Windows Workflow Foundation 3.x of SharePoint 2010
 
 _**Applies to:** Office 365 | SharePoint Online | SharePoint 2013 | SharePoint 2016_
 

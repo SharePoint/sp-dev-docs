@@ -4,9 +4,7 @@
 
 Developing solutions for Microsoft SharePoint Online and/or on-premises can rely on multiple development models. Based on what is your target platform, and what is your target scenario, you can select one or more of the models that are illustrated in this article.
 
-## Available options
-
-### SharePoint Framework
+## SharePoint Framework
 
 <a name="SharePointFramework"></a>
 
@@ -34,7 +32,7 @@ The SharePoint Framework (SPFx) is a page and web part model that provides full 
 * [SharePoint Framework Extensions - Tutorials](https://www.youtube.com/playlist?list=PLR9nK3mnD-OXtWO5AIIr7nCR3sWutACpV)
 * [Reusable controls for your SharePoint Framework solutions](https://www.youtube.com/watch?v=D0ZOgoSpy28)
 
-### SharePoint Add-Ins
+## SharePoint Add-Ins
 
 _**Applies to:** SharePoint 2013 | SharePoint 2016 | SharePoint Online_
 
@@ -66,7 +64,7 @@ Moreover, a SharePoint Add-in can include classic SharePoint components such as 
 
 * [PnP Add-In Transformation Training](https://channel9.msdn.com/blogs/OfficeDevPnP/PnP-Add-In-Transformation-Training-module-1-Introduction)
 
-### Sandbox Solutions
+## Sandbox Solutions
 
 _**Applies to:** SharePoint Online | SharePoint 2013 | SharePoint 2016_
 
@@ -89,7 +87,7 @@ Code-based sandbox solutions were deprecated back in 2014 and in SharePoint Onli
 
 * [SharePoint Sandbox Solution Scanner](https://www.youtube.com/watch?v=pK4p2mGYXpU)
 
-### Farm Solutions
+## Farm Solutions
 
 _**Applies to:** SharePoint 2013 | SharePoint 2016_
 
@@ -102,7 +100,7 @@ Farm Solutions are distributed as SharePoint solution packages that farm adminis
 * [Build farm solutions in SharePoint](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/build-farm-solutions-in-sharepoint)
 * [SharePoint Add-ins compared with SharePoint solutions](https://docs.microsoft.com/en-us/sharepoint/dev/general-development/sharepoint-add-ins-compared-with-sharepoint-solutions)
 
-### Script Editor or Content Editor Web Part
+## Script Editor or Content Editor Web Part
 
 _**Applies to:** SharePoint Online | SharePoint 2013 | SharePoint 2016_
 
