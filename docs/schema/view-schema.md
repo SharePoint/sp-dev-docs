@@ -33,91 +33,91 @@ For more information, see [Windows SharePoint Services RPC Methods](https://msdn
 
 Specialized rendering elements are used within a view to define the logic for constructing HTML. These elements can contain numerous standard rendering elements.
 
-[ContentTypes](contenttypes-element-view.md)
+- [ContentTypes](contenttypes-element-view.md)
 
-[Fields](fields-element-view.md)
+- [Fields](fields-element-view.md)
 
-[FieldSwitch](fieldswitch-element-view.md)
+- [FieldSwitch](fieldswitch-element-view.md)
 
-- [Expr](expr-element-view.md)
+    - [Expr](expr-element-view.md)
 
-- [Case](case-element-view.md)
+    - [Case](case-element-view.md)
 
-- [Default](default-element-view.md)
+    - [Default](default-element-view.md)
 
-[ForEach](foreach-element-view.md)
+- [ForEach](foreach-element-view.md)
 
-[IfEqual](ifequal-element-view.md)
+- [IfEqual](ifequal-element-view.md)
 
-- [Expr1](expr1-element-view.md)
+    - [Expr1](expr1-element-view.md)
 
-- [Expr2](expr2-element-view.md)
+    - [Expr2](expr2-element-view.md)
 
-- [Else](else-element-view.md)
+    - [Else](else-element-view.md)
 
-- [Then](then-element-view.md)
+    - [Then](then-element-view.md)
 
-[IfHasRights](ifhasrights-element-view.md)
+- [IfHasRights](ifhasrights-element-view.md)
 
-- [RightsChoices](rightschoices-element-view.md)
+    - [RightsChoices](rightschoices-element-view.md)
 
-- [RightsGroup](rightsgroup-element-view.md)
+    - [RightsGroup](rightsgroup-element-view.md)
 
-- [Else](else-element-view.md)
+    - [Else](else-element-view.md)
 
-- [Then](then-element-view.md)
+    - [Then](then-element-view.md)
 
-[IfNeg](ifneg-element-view.md)
+- [IfNeg](ifneg-element-view.md)
 
-- [Expr1](expr1-element-view.md)
+    - [Expr1](expr1-element-view.md)
 
-- [Expr2](expr2-element-view.md)
+    - [Expr2](expr2-element-view.md)
 
-[IfNew](ifnew-element-view.md)
+- [IfNew](ifnew-element-view.md)
 
-[IfSubString](ifsubstring-element-view.md)
+- [IfSubString](ifsubstring-element-view.md)
 
-- [Expr1](expr1-element-view.md)
+    - [Expr1](expr1-element-view.md)
 
-- [Expr2](expr2-element-view.md)
+    - [Expr2](expr2-element-view.md)
 
-- [Else](else-element-view.md)
+    - [Else](else-element-view.md)
 
-- [Then](then-element-view.md)
+    - [Then](then-element-view.md)
 
-[Limit](limit-element-view.md)
+- [Limit](limit-element-view.md)
 
-- [Column](column-element-view.md)
+    - [Column](column-element-view.md)
 
-- [More](more-element-view.md)
+    - [More](more-element-view.md)
 
-- [Text](text-element-view.md)
+    - [Text](text-element-view.md)
 
-[Length](length-element-view.md)
+- [Length](length-element-view.md)
 
-[MapToAll](maptoall-element-view.md)
+- [MapToAll](maptoall-element-view.md)
 
-[MapToContentType](maptocontenttype-element-view.md)
+- [MapToContentType](maptocontenttype-element-view.md)
 
-[MapToControl](maptocontrol-element-view.md)
+- [MapToControl](maptocontrol-element-view.md)
 
-[MapToIcon](maptoicon-element-view.md)
+- [MapToIcon](maptoicon-element-view.md)
 
-[Method](method-element-view.md)
+- [Method](method-element-view.md)
 
-- [SetList](setlist-element-view.md)
+    - [SetList](setlist-element-view.md)
 
-- [SetVar](setvar-element-view.md)
+    - [SetVar](setvar-element-view.md)
 
-[SelectionOptions](selectionoptions-element-view.md)
+- [SelectionOptions](selectionoptions-element-view.md)
 
-[Switch](switch-element-view.md)
+- [Switch](switch-element-view.md)
 
-- [Expr](expr-element-view.md)
+    - [Expr](expr-element-view.md)
 
-- [Case](case-element-view.md)
+    - [Case](case-element-view.md)
 
-- [Default](default-element-view.md)
+    - [Default](default-element-view.md)
 
 <br/>
 

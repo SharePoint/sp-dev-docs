@@ -16,11 +16,11 @@ An elements manifest can define a property bag for a file, folder, list item, or
 
 The following is a list of the elements in the Property Bag schema.
 
--[Elements](elements-element-property-bag.md)
+- [Elements](elements-element-property-bag.md)
 
--[PropertyBag](propertybag-element-property-bag.md)
+- [PropertyBag](propertybag-element-property-bag.md)
 
--[Property](property-element-property-bag.md)
+- [Property](property-element-property-bag.md)
 
 <br/>
 

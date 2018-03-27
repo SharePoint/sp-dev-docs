@@ -3,8 +3,6 @@ manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
 ms.topic: reference
-keywords:
-- schemas [sharepoint 2010], deploymentmanifest,content migration [SharePoint 2010],content migration schema
 ms.prod: office-online-server
 localization_priority: Normal
 ms.assetid: adbf1d38-f80f-45b0-b3c9-ceabcc1a75bd
@@ -485,7 +483,7 @@ This table describes simple types that do not have a one-to-one mapping with a d
 
 <table>
 <colgroup>
-<col width="100%" />
+<col width="50%" />
 </colgroup>
 <thead>
 <tr class="header">

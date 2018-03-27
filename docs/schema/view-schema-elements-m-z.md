@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -14,105 +12,61 @@ api_type:
 ms.assetid: 0e4c0a69-bd93-4a50-87cc-5cca3d696af9
 ---
 
-![Collapse
-section](../icons/collapse_all.gif "Collapse section")![Expand
-section](../icons/expand_all.gif "Expand section")![](../icons/collapse_all.gif)![](../icons/expand_all.gif)![](../icons/dropdown.gif)![](../icons/dropdownHover.gif)![Copy
-code](../icons/copycode.gif "Copy code")![Copy code
-hover](../icons/copycodeHighlight.gif "Copy code hover")
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# View Schema Elements M-Z
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># View Schema Elements M-Z</td>
-</tr>
-<tr class="odd">
-<td align="left"><span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
+- [MapToAll](maptoall-element-view.md)
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+- [MapToControl](maptocontrol-element-view.md)
 
-**Last modified:** July 15, 2011
+- [MapToIcon](maptoicon-element-view.md)
 
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
+- [MeetingProperty](meetingproperty-element-view.md)
 
-[MapToAll](maptoall-element-view.md)
+- [Method](method-element-view.md)
 
-[MapToControl](maptocontrol-element-view.md)
+- [More](more-element-view.md)
 
-[MapToIcon](maptoicon-element-view.md)
+- [PageUrl](pageurl-element-view.md)
 
-[MeetingProperty](meetingproperty-element-view.md)
+- [ProjectProperty](projectproperty-element-view.md)
 
-[Method](method-element-view.md)
+- [ProjectedFields](projectedfields-element-view.md)
 
-[More](more-element-view.md)
+- [Property](property-element-view.md)
 
-[PageUrl](pageurl-element-view.md)
+- [RightsChoices](rightschoices-element-view.md)
 
-[ProjectProperty](projectproperty-element-view.md)
+- [RightsGroup](rightsgroup-element-view.md)
 
-[ProjectedFields](projectedfields-element-view.md)
+- [ScriptQuote](scriptquote-element-view.md)
 
-[Property](property-element-view.md)
+- [SelectionOptions](selectionoptions-element-view.md)
 
-[RightsChoices](rightschoices-element-view.md)
+- [ServerProperty](serverproperty-element-view.md)
 
-[RightsGroup](rightsgroup-element-view.md)
+- [SetList](setlist-element-view.md)
 
-[ScriptQuote](scriptquote-element-view.md)
+- [SetVar](setvar-element-view.md)
 
-[SelectionOptions](selectionoptions-element-view.md)
+- [Switch](switch-element-view.md)
 
-[ServerProperty](serverproperty-element-view.md)
+- [Text](text-element-view.md)
 
-[SetList](setlist-element-view.md)
+- [Then](then-element-view.md)
 
-[SetVar](setvar-element-view.md)
+- [ThreadStamp](threadstamp-element-view.md)
 
-[Switch](switch-element-view.md)
+- [URL](url-element-view.md)
 
-[Text](text-element-view.md)
+- [UrlBaseName](urlbasename-element-view.md)
 
-[Then](then-element-view.md)
+- [UrlDirName](urldirname-element-view.md)
 
-[ThreadStamp](threadstamp-element-view.md)
+- [UserID](userid-element-view.md)
 
-[URL](url-element-view.md)
-
-[UrlBaseName](urlbasename-element-view.md)
-
-[UrlDirName](urldirname-element-view.md)
-
-[UserID](userid-element-view.md)
-
-[WebQueryInfo](webqueryinfo-element-view.md)
+- [WebQueryInfo](webqueryinfo-element-view.md)
 
 
 

@@ -28,7 +28,7 @@ The following example associates one Feature with two different site definition 
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
       <FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="PROFILES#0" /> 
       <FeatureSiteTemplateAssociation Id="99FE402E-89A0-45aa-9163-85342E865DC8" TemplateName="CMSPUBLISHING#0" /> 
-    - <FeatureSiteTemplateAssociation Id="541F5F57-C847-4e16-B59A-B31E90E6F9EA" TemplateName="SRCHCENTERLITE#1">
+      <FeatureSiteTemplateAssociation Id="541F5F57-C847-4e16-B59A-B31E90E6F9EA" TemplateName="SRCHCENTERLITE#1">
         <Property Key="IncludeInGlobalNavigation" Value="false" /> 
         <Property Key="IncludeInCurrentNavigation" Value="false" /> 
         <Property Key="InheritCurrentNavigation" Value="true" /> 
