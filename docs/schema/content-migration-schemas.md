@@ -20,6 +20,8 @@ The SharePoint Foundation content migration architecture provides a public schem
 
 The SharePoint Foundation provides eight schema (.xsd) files to support content migration, as described in the following table.
 
+<br/>
+
 <table>
 <colgroup>
 <col width="35%" />
