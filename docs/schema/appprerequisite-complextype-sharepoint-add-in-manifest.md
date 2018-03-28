@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 9/17/2015
 ms.audience: Developer
@@ -10,80 +8,18 @@ localization_priority: Normal
 ms.assetid: 68a1f994-354b-3b93-b34a-cbc523474212
 ---
 
-![Collapse
-section](../icons/collapse_all.gif "Collapse section")![Expand
-section](../icons/expand_all.gif "Expand section")![](../icons/collapse_all.gif)![](../icons/expand_all.gif)![](../icons/dropdown.gif)![](../icons/dropdownHover.gif)![Copy
-code](../icons/copycode.gif "Copy code")![Copy code
-hover](../icons/copycodeHighlight.gif "Copy code hover")
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# AppPrerequisite complexType 
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
+(SharePoint Add-in Manifest)
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># AppPrerequisite complexType (SharePoint Add-in Manifest)</td>
-</tr>
-<tr class="odd">
-<td align="left"><span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
+**Applies to**: SharePoint Add-ins | SharePoint Foundation 2013 | SharePoint Server 2013
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+Identifies a SharePoint Feature or capability that the add-in depends on, or an autohosted component that is included in the app. The SharePoint Add-ins installation infrastructure checks to see if the Feature or capability is present and activated. If it is not, installation of the app is blocked. If the element identifies an autohosted component, the infrastructure deploys the component.
 
-Identifies a SharePoint Feature or capability that the add-in depends
-on, or an autohosted component that is included in the app.
+> [!NOTE] 
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
-**Last modified:** September 17, 2015
-
-**Applies to**: apps for SharePoint | SharePoint Foundation 2013 |
-SharePoint Server 2013
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><img src="../icons/alert_note.gif" title="Note" alt="Note" /><strong>Note</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>The string &quot;app&quot; appears as part, or all, of some element, attribute, and file names because SharePoint Add-ins were originally called &quot;apps for SharePoint&quot;. To ensure backward compatibility, the schemas have not been changed.</p></td>
-</tr>
-</tbody>
-</table>
-
-The SharePoint Add-ins installation infrastructure checks to see if the
-Feature or capability is present and activated. If it is not,
-installation of the app is blocked. If the element identifies an
-autohosted component, the infrastructure deploys the component.
-
-
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<br/>
 
 <table>
 <colgroup>
@@ -103,62 +39,42 @@ autohosted component, the infrastructure deploys the component.
 <td align="left"><p><span class="label">Extension base</span></p></td>
 <td align="left"><p>None</p></td>
 </tr>
-<tr class="even">
-<td align="left"><p><span class="label">Schema file</span></p></td>
-<td align="left"><p>appmanifest.xsd</p></td>
-</tr>
-<tr class="odd">
-<td align="left"><p><span class="label">Namespace</span></p></td>
-<td align="left"><p>http://schemas.microsoft.com/sharepoint/2012/app/manifest</p></td>
-</tr>
-<tr class="even">
-<td align="left"><p><span class="label">Extension base</span></p></td>
-<td align="left"><p>None</p></td>
-</tr>
 </tbody>
 </table>
 
+<br/>
 
------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-<span codelanguage="xmlLang"></span>
-XML 
-<span class="copyCode" onclick="CopyCode(this)"
-onkeypress="CopyCode_CheckKey(this, event)"
-onmouseover="ChangeCopyCodeIcon(this)"
-onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code](../icons/copycode.gif "Copy code")Copy code</span>
+```XML
     <xs:complexType name="AppPrerequisite">
       <xs:attribute name="Type" type="AppPrerequisiteTypeDefinition" use="required"  />
       <xs:attribute name="ID" type="xs:string" use="required" />
       <xs:attribute name="MinimumVersion" type="VersionDefinition" use="optional" />
     </xs:complexType>       
+```
 
-
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<br/>
 
 If the schema defines specific requirements, such as **sequence**, **minOccurs**, **maxOccurs**, and **choice**, see the definition section.
-class="keyword">sequence</span>, **minOccurs**,
-**maxOccurs**, and <span
-class="keyword">choice</span>, see the definition section.
+
+<br/>
 
 ### Child elements
 
 None.
 
-None.
-
-None.
+<br/>
 
 ### Attributes
 
+<br/>
+
 <table>
 <colgroup>
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
+<col width="15%" />
+<col width="15%" />
+<col width="15%" />
+<col width="25%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -176,8 +92,8 @@ None.
 <td align="left"><p>required</p></td>
 <td align="left"><p>The ID that identifies a Feature or capability that the SharePoint Add-in depends on, or a type of autohosted component included in the add-in.</p></td>
 <td align="left"><p>Varies depending on the value of the **Type** attribute.</p>
-<p>If **Type</span> is <span class="code">Feature</span>, the <span class="keyword">ID</span> is the bracketed, hyphenated GUID of the Feature; for example <span class="code">{151D22D9-95A8-4904-A0A3-22E4DB85D1E0}**.</p>
-<p>If **Type</span> is <span class="code">Capability</span>, the <span class="keyword">ID** is one of the GUIDs in the following table. The hyphens are required.</p>
+<p>If **Type** is **Feature**, the **ID** is the bracketed, hyphenated GUID of the Feature; for example {151D22D9-95A8-4904-A0A3-22E4DB85D1E0}.</p>
+<p>If **Type** is **Capability**, the **ID** is one of the GUIDs in the following table. The hyphens are required.</p>
 <div class="tableSection">
 <table>
 <colgroup>
@@ -246,7 +162,7 @@ None.
 </tbody>
 </table>
 </div>
-<p>If **Type</span> is <span class="code">AutoProvisioning</span>, the possible <span class="keyword">ID** values are:</p>
+<p>If **Type** is **AutoProvisioning**, the possible **ID** values are:</p>
 <ul>
 <li><p><span class="code">RemoteWebHost</span></p></li>
 <li><p><span class="code">Database</span></p></li>
@@ -254,14 +170,14 @@ None.
 </tr>
 <tr class="even">
 <td align="left"><p>MinimumVersion</p></td>
-<td align="left"><p><a href="versiondefinition-simpletype-sharepoint-add-in-manifest.htm">VersionDefinition</a></p></td>
+<td align="left"><p><a href="versiondefinition-simpletype-sharepoint-add-in-manifest.md">VersionDefinition</a></p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>The minimum version of the feature or capability the SharePoint Add-in depends on; for example <span class="code">15.0.0.0</span>.</p></td>
 <td align="left"><p>Values of the VersionDefinition type.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Type</p></td>
-<td align="left"><p><a href="appprerequisitetypedefinition-simpletype-sharepoint-add-in-manifest.htm">AppPrerequisiteTypeDefinition</a></p></td>
+<td align="left"><p><a href="appprerequisitetypedefinition-simpletype-sharepoint-add-in-manifest.md">AppPrerequisiteTypeDefinition</a></p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>The type of the add-in prerequisite.</p></td>
 <td align="left"><p>Values of the AppPrerequisiteTypeDefinition type; either <span class="code">Feature</span>, <span class="code">Autoprovisioning</span>, or <span class="code">Capability</span>.</p></td>
@@ -275,14 +191,14 @@ None.
 </tr>
 <tr class="odd">
 <td align="left"><p>MinimumVersion</p></td>
-<td align="left"><p><a href="versiondefinition-simpletype-sharepoint-add-in-manifest.htm">VersionDefinition</a></p></td>
+<td align="left"><p><a href="versiondefinition-simpletype-sharepoint-add-in-manifest.md">VersionDefinition</a></p></td>
 <td align="left"><p>optional</p></td>
 <td align="left"><p>The minimum version of the feature or service the SharePoint Add-in depends on.</p></td>
 <td align="left"><p>Values of the VersionDefinition type.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Type</p></td>
-<td align="left"><p><a href="appprerequisitetypedefinition-simpletype-sharepoint-add-in-manifest.htm">AppPrerequisiteTypeDefinition</a></p></td>
+<td align="left"><p><a href="appprerequisitetypedefinition-simpletype-sharepoint-add-in-manifest.md">AppPrerequisiteTypeDefinition</a></p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>The type of the add-in prerequisite.</p></td>
 <td align="left"><p>Values of the AppPrerequisiteTypeDefinition type.</p></td>
