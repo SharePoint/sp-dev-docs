@@ -60,9 +60,9 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 
 <table>
 <colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
+<col width="25%" />
+<col width="25%" />
+<col width="50%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -88,9 +88,9 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 
 <table>
 <colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
+<col width="25%" />
+<col width="25%" />
+<col width="50%" />
 </colgroup>
 <thead>
 <tr class="header">

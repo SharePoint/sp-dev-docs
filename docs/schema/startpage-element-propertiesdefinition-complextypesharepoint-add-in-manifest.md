@@ -19,8 +19,6 @@ Typically, the URL of the page visited when the SharePoint Add-in is launched. H
 > [!NOTE] 
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
-<br/>
-
 When the child element of the [AppPrincipal](appprincipal-element-appdefinition-complextypesharepoint-add-in-manifest.md) element is not
 [Internal](internal-element-appprincipaldefinition-complextypesharepoint-add-in-manifest.md), the page specified
 in the **StartPage** element must be of a file type that supports the POST verb (in addition to GET) so that the OAuth context token can be sent on the body of the request. 
