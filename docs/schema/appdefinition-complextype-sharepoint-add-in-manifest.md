@@ -44,7 +44,7 @@ ms.assetid: 5f68d1c4-1943-c600-9c89-371e4e692747
 
 ```XML
     <xs:complexType name="AppDefinition">     
-              <xs:all>
+      <xs:all>
         <xs:element name="AppPrincipal"  type="AppPrincipalDefinition"
          minOccurs="1"
          maxOccurs="1"
@@ -73,9 +73,9 @@ ms.assetid: 5f68d1c4-1943-c600-9c89-371e4e692747
          minOccurs="0"
          maxOccurs="1"
         >
-        </xs:element>
-        
-          </xs:all>
+        </xs:element>   
+      </xs:all>
+
         <xs:attribute name="ProductID"
          type="GUID"
          use="required"

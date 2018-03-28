@@ -52,6 +52,7 @@ The type of a prerequisite for a SharePoint Add-in.
            <xs:enumeration value="Capability"/>
         </xs:restriction>
     </xs:simpleType>
+```
 
 <br/>
 

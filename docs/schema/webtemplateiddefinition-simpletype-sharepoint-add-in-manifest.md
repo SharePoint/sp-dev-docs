@@ -19,8 +19,6 @@ Defines the ID of a web template in an add-in web Feature.
 > [!NOTE] 
 > The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
 
-<br/>
-
 This type is a string of the form `{hyphenated_GUID}#web_template_name`. The `hyphenated_GUID` is the GUID of the add-in web Feature that contains the [WebTemplate Element (Web Template)](webtemplate-element-web-template.md) that defines the site type of the add-in web. (The `web_template_name` is the value of the **Name** attribute of that [WebTemplate Element (Web Template)](webtemplate-element-web-template.md). Note that the braces `"{}"` and the `"#"` are mandatory.) 
 
 The following is an example:
