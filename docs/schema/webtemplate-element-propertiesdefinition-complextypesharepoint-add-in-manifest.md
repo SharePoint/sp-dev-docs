@@ -61,9 +61,9 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 
 <table>
 <colgroup>
-<col width="33%" />
-<col width="33%" />
-<col width="33%" />
+<col width="30%" />
+<col width="30%" />
+<col width="40%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -95,11 +95,11 @@ None.
 
 <table>
 <colgroup>
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
-<col width="20%" />
+<col width="15%" />
+<col width="15%" />
+<col width="15%" />
+<col width="25%" />
+<col width="30%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -123,7 +123,7 @@ None.
 <td align="left"><p><a href="webtemplateiddefinition-simpletype-sharepoint-add-in-manifest.md">WebTemplateIdDefinition</a></p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>The Id of the WebTemplate that should be used when creating the add-in web.</p></td>
-<td align="left"><p>This type is a string of the form `{hyphenated_GUID}#web_template_name`. The hyphenated_GUID is the GUID of the add-in web Feature that contains the <span sdata="link"><a href="webtemplate-element-web-template.md">WebTemplate Element (Web Template)</a></span> that defines the site type of the add-in web.<br/>(The web_template_name is the value of the **Name** attribute of that <span sdata="link"><a href="webtemplate-element-web-template.md">WebTemplate Element (Web Template)</a>. Note that the braces `{}` and the `#` are mandatory.)<br/>The following is an example:
+<td align="left"><p>This type is a string of the form `{hyphenated_GUID}#web_template_name`.<br/><br/>The hyphenated_GUID is the GUID of the add-in web Feature that contains the <span sdata="link"><a href="webtemplate-element-web-template.md">WebTemplate Element (Web Template)</a></span> that defines the site type of the add-in web.<br/><br/>The web_template_name is the value of the **Name** attribute of that <span sdata="link"><a href="webtemplate-element-web-template.md">WebTemplate Element (Web Template)</a>. Note that the braces `{}` and the `#` are mandatory.<br/><br/>The following is an example:
 `<WebTemplate Id="{81dd4ae5-873b-4759-9838-4ad9c3dd2952}#MyNewSiteType" />`</p>
 </td>
 </tr>
