@@ -16,27 +16,27 @@ ms.assetid: 362dbafb-a064-45b2-9b9f-9c32af929e27
 
 Specifies conditional logic for the action.
 
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>&lt;Actions&gt;
-    &lt;Action&gt;
-        &lt;ActionVariables&gt;
-        &lt;/ActionVariables&gt;
-        &lt;ActionBody&gt;
-        &lt;/ActionBody&gt;
-        &lt;ActionConditions&gt;
-        &lt;/ActionConditions&gt;
-    &lt;/Action&gt;
-&lt;/Actions&gt;</code></pre></td>
-</tr>
-</tbody>
-</table>
-
+```
+    <table>
+    <colgroup>
+    <col width="100%" />
+    </colgroup>
+    <tbody>
+    <tr class="odd">
+    <td align="left"><pre><code>&lt;Actions&gt;
+        &lt;Action&gt;
+            &lt;ActionVariables&gt;
+            &lt;/ActionVariables&gt;
+            &lt;ActionBody&gt;
+            &lt;/ActionBody&gt;
+            &lt;ActionConditions&gt;
+            &lt;/ActionConditions&gt;
+        &lt;/Action&gt;
+    &lt;/Actions&gt;</code></pre></td>
+    </tr>
+    </tbody>
+    </table>
+```
 
 None
 

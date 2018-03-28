@@ -45,14 +45,12 @@ The type for add-in URLs of an auto-deployed web application. If the add-in has 
 <br/>
 
 ```XML
-        <xs:simpleType  name="AutoDeployedWebApplicationDebugInfoAppUrlDefinition">
-          
-          <xs:restriction base="xs:string">
-          <xs:minLength value="1"/>
-          <xs:maxLength value="2048"/>
-          </xs:restriction>
-
-        </xs:simpleType>
+    <xs:simpleType  name="AutoDeployedWebApplicationDebugInfoAppUrlDefinition">
+      <xs:restriction base="xs:string">
+        <xs:minLength value="1"/>
+        <xs:maxLength value="2048"/>
+      </xs:restriction>
+    </xs:simpleType>
 ```
 
 <br/>
