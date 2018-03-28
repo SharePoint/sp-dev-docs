@@ -68,12 +68,12 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="_username-element-accountauthcredentials-complextypesps15xsdsearchset2.htm">_UserName</a></p></td>
+<td align="left"><p><a href="_username-element-accountauthcredentials-complextypesps15xsdsearchset2.md">_UserName</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="password-element-accountauthcredentials-complextypesps15xsdsearchset2.htm">Password</a></p></td>
+<td align="left"><p><a href="password-element-accountauthcredentials-complextypesps15xsdsearchset2.md">Password</a></p></td>
 <td align="left"><p>xs:string</p></td>
 <td align="left"><p></p></td>
 </tr>

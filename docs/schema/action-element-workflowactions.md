@@ -122,13 +122,13 @@ Contains the information that is needed for the workflow engine to process a wor
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="parameters-element-workflowinfo.htm">Parameters</a></p>
-<p><a href="ruledesigner-element-workflowinfo.htm">RuleDesigner</a></p>
-<p><a href="datasources-element-workflowinfo.htm">DataSources</a></p>
-<p><a href="modifications-element-workflowinfo.htm">Modifications</a></p>
-<p><a href="actionvariables-element-workflowinfo.htm">ActionVariables</a></p>
-<p><a href="actionbody-element-workflowinfo.htm">ActionBody</a></p>
-<p><a href="actionconditions-element-workflowinfo.htm">ActionConditions</a></p></td>
+<td align="left"><p><a href="parameters-element-workflowinfo.md">Parameters</a></p>
+<p><a href="ruledesigner-element-workflowinfo.md">RuleDesigner</a></p>
+<p><a href="datasources-element-workflowinfo.md">DataSources</a></p>
+<p><a href="modifications-element-workflowinfo.md">Modifications</a></p>
+<p><a href="actionvariables-element-workflowinfo.md">ActionVariables</a></p>
+<p><a href="actionbody-element-workflowinfo.md">ActionBody</a></p>
+<p><a href="actionconditions-element-workflowinfo.md">ActionConditions</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -142,7 +142,7 @@ Contains the information that is needed for the workflow engine to process a wor
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="workflowactions-element-workflowactions.htm">WorkflowActions</a></p></td>
+<td align="left"><p><a href="workflowactions-element-workflowactions.md">WorkflowActions</a></p></td>
 </tr>
 </tbody>
 </table>

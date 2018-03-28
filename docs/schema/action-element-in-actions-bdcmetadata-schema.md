@@ -114,15 +114,15 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.htm">LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="localizeddisplaynames-element-in-metadataobject-bdcmetadata-schema.md">LocalizedDisplayNames Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The localized names of the action.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.htm">Properties Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The properties of the action.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actionparameters-element-in-action-bdcmetadata-schema.htm">ActionParameters Element in Action (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="actionparameters-element-in-action-bdcmetadata-schema.md">ActionParameters Element in Action (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The parameters of the action.</p></td>
 </tr>
 </tbody>
@@ -145,7 +145,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="actions-element-in-entity-bdcmetadata-schema.htm">Actions Element in Entity (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="actions-element-in-entity-bdcmetadata-schema.md">Actions Element in Entity (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The list of actions of an external content type.</p></td>
 </tr>
 </tbody>

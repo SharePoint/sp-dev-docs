@@ -137,7 +137,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="actions-element-workflowinfo-elementaction4.htm">Actions</a></p></td>
+<td align="left"><p><a href="actions-element-workflowinfo-elementaction4.md">Actions</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
@@ -163,38 +163,38 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="actionbody-element-action-elementactions-elementworkflowinfo-elementaction4.htm">ActionBody</a></p></td>
+<td align="left"><p><a href="actionbody-element-action-elementactions-elementworkflowinfo-elementaction4.md">ActionBody</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="actionconditions-element-action-elementactions-elementworkflowinfo-elementaction.htm">ActionConditions</a></p></td>
+<td align="left"><p><a href="actionconditions-element-action-elementactions-elementworkflowinfo-elementaction.md">ActionConditions</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="actionvariables-element-action-elementactions-elementworkflowinfo-elementaction4.htm">ActionVariables</a></p></td>
+<td align="left"><p><a href="actionvariables-element-action-elementactions-elementworkflowinfo-elementaction4.md">ActionVariables</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="datasources-element-action-elementactions-elementworkflowinfo-elementaction4.htm">DataSources</a></p></td>
-<td align="left"><p><a href="datasourcestype-complextype-action4.htm">dataSourcesType</a></p></td>
+<td align="left"><p><a href="datasources-element-action-elementactions-elementworkflowinfo-elementaction4.md">DataSources</a></p></td>
+<td align="left"><p><a href="datasourcestype-complextype-action4.md">dataSourcesType</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="modifications-element-action-elementactions-elementworkflowinfo-elementaction4.htm">Modifications</a></p></td>
+<td align="left"><p><a href="modifications-element-action-elementactions-elementworkflowinfo-elementaction4.md">Modifications</a></p></td>
 <td align="left"><p></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><a href="parameters-element-action-elementactions-elementworkflowinfo-elementaction4.htm">Parameters</a></p></td>
-<td align="left"><p><a href="parameterstype-complextype-action4.htm">parametersType</a></p></td>
+<td align="left"><p><a href="parameters-element-action-elementactions-elementworkflowinfo-elementaction4.md">Parameters</a></p></td>
+<td align="left"><p><a href="parameterstype-complextype-action4.md">parametersType</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><a href="ruledesigner-element-action-elementactions-elementworkflowinfo-elementaction4.htm">RuleDesigner</a></p></td>
-<td align="left"><p><a href="ruledesignertype-complextype-action4.htm">ruleDesignerType</a></p></td>
+<td align="left"><p><a href="ruledesigner-element-action-elementactions-elementworkflowinfo-elementaction4.md">RuleDesigner</a></p></td>
+<td align="left"><p><a href="ruledesignertype-complextype-action4.md">ruleDesignerType</a></p></td>
 <td align="left"><p></p></td>
 </tr>
 </tbody>
@@ -231,7 +231,7 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 </tr>
 <tr class="even">
 <td align="left"><p>AppliesTo</p></td>
-<td align="left"><p><a href="appliestotypes-simpletype-action4.htm">appliesToTypes</a></p></td>
+<td align="left"><p><a href="appliestotypes-simpletype-action4.md">appliesToTypes</a></p></td>
 <td align="left"><p>required</p></td>
 <td align="left"><p>Indicates what this workflow action should be. Valid values include <strong>site</strong>, <strong>list</strong>, <strong>doclib</strong>, and <strong>all</strong>. The value <strong>all</strong> means that the action is available under any scope and will always show up in the <span class="ui">Actions</span> list.</p></td>
 <td align="left"><p>Values of the appliesToTypes type.</p></td>

@@ -53,7 +53,7 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrolentry-element-in-accesscontrollist-bdcmetadata-schema.htm">AccessControlEntry Element in AccessControlList (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="accesscontrolentry-element-in-accesscontrollist-bdcmetadata-schema.md">AccessControlEntry Element in AccessControlList (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>An access control entry (ACE).</p></td>
 </tr>
 </tbody>
@@ -76,27 +76,27 @@ None.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="model-element-bdcmetadata-schema.htm">Model Element (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="model-element-bdcmetadata-schema.md">Model Element (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>A model containing external content types in a business application.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="lobsystem-element-in-lobsystems-bdcmetadata-schema.htm">LobSystem Element in LobSystems (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="lobsystem-element-in-lobsystems-bdcmetadata-schema.md">LobSystem Element in LobSystems (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The LobSystems contained inside the model.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-bdcmetadata-schema.htm">Entity Element in Entities (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="entity-element-in-entities-bdcmetadata-schema.md">Entity Element in Entities (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>An external content type.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="method-element-in-methods-bdcmetadata-schema.htm">Method Element in Methods (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="method-element-in-methods-bdcmetadata-schema.md">Method Element in Methods (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>A method of an external content type.</p></td>
 </tr>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="association-element-in-methodinstances-bdcmetadata-schema.htm">Association Element in MethodInstances (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="association-element-in-methodinstances-bdcmetadata-schema.md">Association Element in MethodInstances (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>An association.</p></td>
 </tr>
 <tr class="even">
-<td align="left"><p><span sdata="link"><a href="methodinstance-element-in-methodinstances-bdcmetadata-schema.htm">MethodInstance Element in MethodInstances (BDCMetadata Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="methodinstance-element-in-methodinstances-bdcmetadata-schema.md">MethodInstance Element in MethodInstances (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>A method instance of an external content type.</p></td>
 </tr>
 </tbody>

@@ -67,7 +67,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="right-element-in-accesscontrolentry-bdcmetadataresource-schema.htm">Right Element in AccessControlEntry (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="right-element-in-accesscontrolentry-bdcmetadataresource-schema.md">Right Element in AccessControlEntry (BDCMetadataResource Schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 </tbody>
@@ -90,7 +90,7 @@ The following sections describe attributes, child elements, and parent elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.htm">AccessControlList Element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)</a></span></p></td>
+<td align="left"><p><span sdata="link"><a href="accesscontrollist-element-in-individuallysecurablemetadataobject-bdcmetadatareso.md">AccessControlList Element in IndividuallySecurableMetadataObject (BDCMetadataResource Schema)</a></span></p></td>
 <td align="left"></td>
 </tr>
 </tbody>
