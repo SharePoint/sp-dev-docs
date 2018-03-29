@@ -111,7 +111,7 @@ Represents a reference to a field within a query.
 </tr>
 <tr class="even">
 <td align="left"><p>**Ascending**</p></td>
-<td align="left"><p>Optional **Boolean</span>. This specifies the sort order on a <span class="keyword">FieldRef</span> element that is defined in a view. The default value is <span class="keyword">TRUE**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. This specifies the sort order on a **FieldRef</span> element that is defined in a view. The default value is **TRUE**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**CreateURL**</p></td>
@@ -123,7 +123,7 @@ Represents a reference to a field within a query.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Explicit**</p></td>
-<td align="left"><p>Optional **Boolean</span>. This attribute is only supported within the <span class="keyword">ViewFields</span> element. <span class="keyword">TRUE</span> if the field is explicitly declared in the view definition and is not returned in a <span class="keyword">Fields** enumeration inside a view.</p></td>
+<td align="left"><p>Optional **Boolean</span>. This attribute is only supported within the **ViewFields</span> element. **TRUE</span> if the field is explicitly declared in the view definition and is not returned in a **Fields** enumeration inside a view.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Format**</p></td>
@@ -135,11 +135,11 @@ Represents a reference to a field within a query.
 </tr>
 <tr class="even">
 <td align="left"><p>**Key**</p></td>
-<td align="left"><p>Optional **Text</span>. If set to <span class="keyword">Primary**, specifies that the field is the primary key for its table and thus uniquely identifies each record in the table.</p></td>
+<td align="left"><p>Optional **Text</span>. If set to **Primary**, specifies that the field is the primary key for its table and thus uniquely identifies each record in the table.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**List**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the parent foreign list when the <span class="keyword">FieldRef</span> element is a child of an <a href="eq-element-query.md">Eq</a> element in <a href="join-element-view.md">Join</a> element. The value is an alias for the list that is defined by the <span class="keyword">ListAlias** attribute of the <a href="join-element-view.md">Join</a> element.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the parent foreign list when the **FieldRef</span> element is a child of an <a href="eq-element-query.md">Eq</a> element in <a href="join-element-view.md">Join</a> element. The value is an alias for the list that is defined by the **ListAlias** attribute of the <a href="join-element-view.md">Join</a> element.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**LookupId**</p></td>
@@ -155,8 +155,8 @@ Represents a reference to a field within a query.
 </tr>
 <tr class="odd">
 <td align="left"><p>**ShowField**</p></td>
-<td align="left"><p>Optional **Text</span>. The <span class="keyword">ShowField</span> attribute can be set to the field name to display. By default, a hyperlinked text from the Title field of the record in the external list is displayed. But the <span class="keyword">ShowField** attribute can be used to override that and display another field from the external list.</p>
-<p>The following data types are allowed as targets of a **ShowField</span> attribute: <span class="keyword">Text</span>, <span class="keyword">Choice</span>, and <span class="keyword">Counter**.</p></td>
+<td align="left"><p>Optional **Text</span>. The **ShowField</span> attribute can be set to the field name to display. By default, a hyperlinked text from the Title field of the record in the external list is displayed. But the **ShowField** attribute can be used to override that and display another field from the external list.</p>
+<p>The following data types are allowed as targets of a **ShowField</span> attribute: **Text</span>, **Choice</span>, and **Counter**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**TextOnly**</p></td>
@@ -166,13 +166,13 @@ Represents a reference to a field within a query.
 <td align="left"><p>**Type**</p></td>
 <td align="left"><p>Optional **Text**. Specifies the function that is applied to a totals column or a calculated column. Possible values include the following:</p>
 <ul>
-<li><p>**AVG</span>   Average value. Applies to <span class="keyword">DateTime</span><span class="keyword">Number</span>, <span class="keyword">Integer</span>, and <span class="keyword">Currency** field types.</p></li>
+<li><p>**AVG</span>   Average value. Applies to **DateTime</span>**Number</span>, **Integer</span>, and **Currency** field types.</p></li>
 <li><p>**COUNT**   Number of items. Applies to all field types that allow aggregation.</p></li>
-<li><p>**MAX</span>   Maximum value. Applies to <span class="keyword">DateTime</span><span class="keyword">Number</span>, <span class="keyword">Integer</span>, and <span class="keyword">Currency** field types.</p></li>
-<li><p>**MIN</span>   Minimum value. Applies to <span class="keyword">DateTime</span><span class="keyword">Number</span>, <span class="keyword">Integer</span>, and <span class="keyword">Currency** field types.</p></li>
-<li><p>**SUM</span>   Sum of values. Applies to <span class="keyword">Number</span>, <span class="keyword">Integer</span>, and <span class="keyword">Currency** field types.</p></li>
-<li><p>**STDEV</span>   Standard deviation. Applies to <span class="keyword">Number</span>, <span class="keyword">Integer</span>, and <span class="keyword">Currency** field types.</p></li>
-<li><p>**VAR</span>   Variance. Applies to <span class="keyword">Number</span>, <span class="keyword">Integer</span>, and <span class="keyword">Currency** field types.</p></li>
+<li><p>**MAX</span>   Maximum value. Applies to **DateTime</span>**Number</span>, **Integer</span>, and **Currency** field types.</p></li>
+<li><p>**MIN</span>   Minimum value. Applies to **DateTime</span>**Number</span>, **Integer</span>, and **Currency** field types.</p></li>
+<li><p>**SUM</span>   Sum of values. Applies to **Number</span>, **Integer</span>, and **Currency** field types.</p></li>
+<li><p>**STDEV</span>   Standard deviation. Applies to **Number</span>, **Integer</span>, and **Currency** field types.</p></li>
+<li><p>**VAR</span>   Variance. Applies to **Number</span>, **Integer</span>, and **Currency** field types.</p></li>
 </ul>
 <p>The values for the **Type** attribute are not case-sensitive.</p></td>
 </tr>

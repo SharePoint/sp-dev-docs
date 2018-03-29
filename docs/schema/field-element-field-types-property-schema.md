@@ -114,7 +114,7 @@ column based on the field type is created.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Name**</p></td>
-<td align="left"><p>Required **Text</span>. The name of the property of the field type that the <span class="keyword">Field** element represents.</p></td>
+<td align="left"><p>Required **Text</span>. The name of the property of the field type that the **Field** element represents.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**DisplayName**</p></td>

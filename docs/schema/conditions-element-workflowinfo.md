@@ -151,7 +151,7 @@ element for all **Condition** elements.
 </tr>
 <tr class="odd">
 <td align="left"><p>**When**</p></td>
-<td align="left"><p>Required **text</span>. The text that is defined in this attribute is displayed in the rule designer sentence when a conditional branch is added that requires the values or conditions that follow it to return <span class="keyword">true** for the workflow actions to execute. The value is not case-sensitive.</p>
+<td align="left"><p>Required **text</span>. The text that is defined in this attribute is displayed in the rule designer sentence when a conditional branch is added that requires the values or conditions that follow it to return **true** for the workflow actions to execute. The value is not case-sensitive.</p>
 <p>The default value is **If** (applies only to the English language version of SharePoint Foundation 2010).</p>
 <p>**Example:**</p>
 <p>DOCS-LESSTHANConditions When=&quot;If&quot;DOCS-GREATERTHAN</p></td>

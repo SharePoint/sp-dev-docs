@@ -100,7 +100,7 @@ Specifies a property for a list instance.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Type**</p></td>
-<td align="left"><p>Optional **choice</span>. Specifies the type of the property. Acceptable values are <span class="keyword">int</span>, <span class="keyword">string</span>, or <span class="keyword">DateTime**.</p></td>
+<td align="left"><p>Optional **choice</span>. Specifies the type of the property. Acceptable values are **int</span>, **string</span>, or **DateTime**.</p></td>
 </tr>
 </tbody>
 </table>

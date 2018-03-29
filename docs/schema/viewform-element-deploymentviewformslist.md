@@ -119,7 +119,7 @@ USAGE
 <tr class="even">
 <td align="left"><p>**Type**</p></td>
 <td align="left"><p>xs:string</p></td>
-<td align="left"><p>Specifies whether the Web Part is a view or a form. Allowable values are **View</span>, <span class="keyword">Form</span>, and <span class="keyword">File</span>. However, the <span class="keyword">File** value is not functional and is reserved for future use.</p></td>
+<td align="left"><p>Specifies whether the Web Part is a view or a form. Allowable values are **View</span>, **Form</span>, and **File</span>. However, the **File** value is not functional and is reserved for future use.</p></td>
 </tr>
 </tbody>
 </table>

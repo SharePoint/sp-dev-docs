@@ -137,7 +137,7 @@ class="keyword">choice</span>, see the definition section.
 <tr class="odd">
 <td align="left"><p><a href="parameter-element-parameterstype-complextypeaction4.md">Parameter</a></p></td>
 <td align="left"><p>parameterType</p></td>
-<td align="left"><p>Used to describe the input and output parameters for a method call to a custom **Action</span> or <span class="keyword">Condition**. The Parameter element is of type <a href="parameterstype-complextype-action4.md">parametersType</a>.</p></td>
+<td align="left"><p>Used to describe the input and output parameters for a method call to a custom **Action</span> or **Condition**. The Parameter element is of type <a href="parameterstype-complextype-action4.md">parametersType</a>.</p></td>
 </tr>
 </tbody>
 </table>

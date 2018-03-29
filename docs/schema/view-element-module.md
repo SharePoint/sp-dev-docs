@@ -116,7 +116,7 @@ Describes a view within a module for a site definition.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**AggregateView**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to specify that the view is a Merge Forms view used in an XML Form library. By default, an XML Form library is provisioned with a Merge Forms view that is initially hidden. When an XML editor is used to publish an XML Form Properties (XFP) file to the Forms directory of the library along with a template used by the editor, the <span class="keyword">AggregateView** attribute identifies the Merge Forms view, which can be made visible or hidden depending on whether the list template or definition for the library supports data merging.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify that the view is a Merge Forms view used in an XML Form library. By default, an XML Form library is provisioned with a Merge Forms view that is initially hidden. When an XML editor is used to publish an XML Form Properties (XFP) file to the Forms directory of the library along with a template used by the editor, the **AggregateView** attribute identifies the Merge Forms view, which can be made visible or hidden depending on whether the list template or definition for the library supports data merging.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**BaseViewID**</p></td>
@@ -128,7 +128,7 @@ Describes a view within a module for a site definition.
 </tr>
 <tr class="even">
 <td align="left"><p>**DefaultView**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to specify that the view is the default view.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the view is the default view.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**DisplayName**</p></td>
@@ -136,23 +136,23 @@ Describes a view within a module for a site definition.
 </tr>
 <tr class="even">
 <td align="left"><p>**FailIfEmpty**</p></td>
-<td align="left"><p>Optional **Boolean</span>. If the view returns no items, <span class="keyword">TRUE</span> to return a blank page and an HTTP error code instead of rendering the <span class="keyword">ViewEmpty** element. Used for programmatic manipulation of views from a client application, preventing the client application from having to parse a document to discover whether the view is empty.</p></td>
+<td align="left"><p>Optional **Boolean</span>. If the view returns no items, **TRUE</span> to return a blank page and an HTTP error code instead of rendering the **ViewEmpty** element. Used for programmatic manipulation of views from a client application, preventing the client application from having to parse a document to discover whether the view is empty.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**FileDialog**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to specify that the view is displayed in file dialog boxes for applications used within the context of Windows SharePoint Services, which parse the output HTML to determine the contents of the list.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the view is displayed in file dialog boxes for applications used within the context of Windows SharePoint Services, which parse the output HTML to determine the contents of the list.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**FPModified**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** if the view has been altered through editing in a Web page editor, and the view is no longer customizable by the Microsoft Windows SharePoint Services UI.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** if the view has been altered through editing in a Web page editor, and the view is no longer customizable by the Microsoft Windows SharePoint Services UI.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**FreeForm**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to specify alternate field formatting for certain field types in field rendering. In particular, this affects the alignment of number columns, which is particularly useful in custom nontabular view types.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify alternate field formatting for certain field types in field rendering. In particular, this affects the alignment of number columns, which is particularly useful in custom nontabular view types.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Hidden**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to hide the view.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to hide the view.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ID**</p></td>
@@ -160,15 +160,15 @@ Describes a view within a module for a site definition.
 </tr>
 <tr class="even">
 <td align="left"><p>**List**</p></td>
-<td align="left"><p>Optional **Integer</span> or <span class="keyword">Text</span>. Specifies the type of list. This value can be either the ID of the template for a list (an integer), or the URL to a list provisioned in the site (a string). Best practice is to use <span class="keyword">Text</span>, because <span class="keyword">Integer</span> might not be specific enough (e.g., if there are two announcements lists in the site and you specify <span class="keyword">List=104**).</p></td>
+<td align="left"><p>Optional **Integer</span> or **Text</span>. Specifies the type of list. This value can be either the ID of the template for a list (an integer), or the URL to a list provisioned in the site (a string). Best practice is to use **Text</span>, because **Integer</span> might not be specific enough (e.g., if there are two announcements lists in the site and you specify **List=104**).</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Name**</p></td>
-<td align="left"><p>Optional **Text</span>. The name given to the view (used to select a different named view in the UI as well as to refer to a named view in specifying a filter for a <span class="keyword">Lookup** field).</p></td>
+<td align="left"><p>Optional **Text</span>. The name given to the view (used to select a different named view in the UI as well as to refer to a named view in specifying a filter for a **Lookup** field).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**OrderedView**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to specify that the view is ordered.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the view is ordered.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**PageType**</p></td>
@@ -195,17 +195,17 @@ Describes a view within a module for a site definition.
 </tr>
 <tr class="odd">
 <td align="left"><p>**ReadOnly**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to make the view read-only.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to make the view read-only.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**RecurrenceRowset**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to expand recurring events in the view and display each instance of each recurring event. The default value is <span class="keyword">FALSE**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to expand recurring events in the view and display each instance of each recurring event. The default value is **FALSE**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**RowLimit**</p></td>
 <td align="left"><p>Optional **Integer**. Applies to the HTML view type only. Specifies the maximum number of rows to render on any one page. When the row limit is exceeded, the next and previous buttons on the page allow for viewing other parts of the returned recordset.</p>
 <p>If **RowLimit** is not specified, the default number of Rows returned is 50. If &quot;None&quot; is specified for the view type, all the rows of the recordset are returned in one view.</p>
-<p>When a view is rendered, the render variables **ViewHasNext</span> and <span class="keyword">ViewHasPrev</span> are set to <span class="keyword">TRUE</span> or <span class="keyword">FALSE</span>, based on whether the current view has reached the row limit from the dataset. These variables can be used in successive page definitions to render <span class="keyword">Next</span> and <span class="keyword">Previous** buttons on the page, as in the following example:</p>
+<p>When a view is rendered, the render variables **ViewHasNext</span> and **ViewHasPrev</span> are set to **TRUE</span> or **FALSE</span>, based on whether the current view has reached the row limit from the dataset. These variables can be used in successive page definitions to render **Next</span> and **Previous** buttons on the page, as in the following example:</p>
 <div class="code">
 <span codelanguage="xmlLang"></span>
 XML 
@@ -217,7 +217,7 @@ XML 
   &lt;/Case&gt;
 &lt;/Switch&gt;</code></pre>
 </div>
-<p>The variables **NextPageURL</span> and <span class="keyword">PrevPageURL</span> are also set to nonblank values when there is forward or backward paging content from the current display. These variables can be used by constructing the <span class="keyword">Next</span> and <span class="keyword">Previous** buttons to have the correct URL for accessing the next page of content.</p></td>
+<p>The variables **NextPageURL</span> and **PrevPageURL</span> are also set to nonblank values when there is forward or backward paging content from the current display. These variables can be used by constructing the **Next</span> and **Previous** buttons to have the correct URL for accessing the next page of content.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Scope**</p></td>
@@ -231,16 +231,16 @@ XML 
 </tr>
 <tr class="odd">
 <td align="left"><p>**ShowHeaderUI**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">FALSE</span> to render all <span class="keyword">FieldRef</span> elements used in the header display mode without decorating the UI with HTML. In other words, when this mode is set, the UI does not provide sorting and filtering as hyperlinks in the column header. The default value is <span class="keyword">TRUE**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **FALSE</span> to render all **FieldRef</span> elements used in the header display mode without decorating the UI with HTML. In other words, when this mode is set, the UI does not provide sorting and filtering as hyperlinks in the column header. The default value is **TRUE**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Threaded**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to apply inner grouping in the view. A threaded view is constructed based on the built-in threading column (assumed to exist for the list). The view is sorted on this field as the secondary sort. If other columns in the view are specified as sorted or grouped, those are applied before the threading column sort order. As a result, all discussions grouped by a topic can be collected together, and the message threading can be displayed beneath the collection.</p>
-<p>When **TRUE</span>, the <a href="rowlimit-element-list.md">RowLimit</a> element has a different meaning when used on a threaded discussion board list view. Instead of specifying the number of items to return, it specifies the number of discussion threads to return, where a thread could consist of one or more items. In addition to having the <span class="keyword">Threaded</span> attribute set to <span class="keyword">TRUE**, a threaded view must be sorted by the thread ID; otherwise, this row limit behavior does not take effect.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to apply inner grouping in the view. A threaded view is constructed based on the built-in threading column (assumed to exist for the list). The view is sorted on this field as the secondary sort. If other columns in the view are specified as sorted or grouped, those are applied before the threading column sort order. As a result, all discussions grouped by a topic can be collected together, and the message threading can be displayed beneath the collection.</p>
+<p>When **TRUE</span>, the <a href="rowlimit-element-list.md">RowLimit</a> element has a different meaning when used on a threaded discussion board list view. Instead of specifying the number of items to return, it specifies the number of discussion threads to return, where a thread could consist of one or more items. In addition to having the **Threaded</span> attribute set to **TRUE**, a threaded view must be sorted by the thread ID; otherwise, this row limit behavior does not take effect.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Type**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the rendering type of the view. The type is the common enumerated HTML view and can be set to <span class="keyword">HTML</span>, <span class="keyword">Chart</span>, or <span class="keyword">Pivot**.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the rendering type of the view. The type is the common enumerated HTML view and can be set to **HTML</span>, **Chart</span>, or **Pivot**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Url**</p></td>

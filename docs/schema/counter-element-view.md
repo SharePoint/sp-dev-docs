@@ -96,7 +96,7 @@ appears within a field or view definition.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Type**</p></td>
-<td align="left"><p>Optional **Text</span>. If <span class="keyword">Type=&quot;View&quot;** is specified, the counter returns a number that increases each time a view is created for the list. This counter can be used, for example, to give unique names to elements on a page, depending on the view definition.</p></td>
+<td align="left"><p>Optional **Text</span>. If **Type=&quot;View&quot;** is specified, the counter returns a number that increases each time a view is created for the list. This counter can be used, for example, to give unique names to elements on a page, depending on the view definition.</p></td>
 </tr>
 </tbody>
 </table>

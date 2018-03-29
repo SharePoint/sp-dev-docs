@@ -97,11 +97,11 @@ is rendered above the view header.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Position**</p></td>
-<td align="left"><p>Optional **Text</span>. If <span class="keyword">Position = &quot;After&quot;** is specified, the toolbar will appear below the view body. If not specified, the toolbar will appear above the view body.</p></td>
+<td align="left"><p>Optional **Text</span>. If **Position = &quot;After&quot;** is specified, the toolbar will appear below the view body. If not specified, the toolbar will appear above the view body.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Type**</p></td>
-<td align="left"><p>Required **Text</span>. Specifies the kind of toolbar; this can be set to either <span class="keyword">Standard</span> or <span class="keyword">FreeForm**.</p></td>
+<td align="left"><p>Required **Text</span>. Specifies the kind of toolbar; this can be set to either **Standard</span> or **FreeForm**.</p></td>
 </tr>
 </tbody>
 </table>

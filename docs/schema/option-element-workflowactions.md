@@ -104,12 +104,12 @@ about their Microsoft .NET data types.
 </tr>
 <tr class="even">
 <td align="left"><p>**TypeFilter**</p></td>
-<td align="left"><p>**String</span>. Used only if the parent <span class="keyword">FieldBind</span> <span class="keyword">DesignerType</span> is <span class="keyword">Operator</span>. The <span class="keyword">TypeFilter** attribute enables options to be hidden or displayed in the workflow editor, based on the data type of the parent element.</p>
+<td align="left"><p>**String</span>. Used only if the parent **FieldBind</span> **DesignerType</span> is **Operator</span>. The **TypeFilter** attribute enables options to be hidden or displayed in the workflow editor, based on the data type of the parent element.</p>
 <p>You can define multiple types for the **TypeFilter** attribute, but they must be separated by commas.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**UnaryHides**</p></td>
-<td align="left"><p>**String</span>. Used only if the parent <span class="keyword">FieldBind</span> <span class="keyword">RuleDesigner</span> type is <span class="keyword">Operator</span>. The value that is specified in this attribute should be synchronized with the <span class="keyword">Field</span> attribute of a <span class="keyword">FieldBind </span>element. If this option is selected, the <span class="keyword">FieldBind** specified here is hidden from the workflow editor.</p></td>
+<td align="left"><p>**String</span>. Used only if the parent **FieldBind</span> **RuleDesigner</span> type is **Operator</span>. The value that is specified in this attribute should be synchronized with the **Field</span> attribute of a **FieldBind </span>element. If this option is selected, the **FieldBind** specified here is hidden from the workflow editor.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Value**</p></td>

@@ -105,19 +105,19 @@ folder, or website.
 </tr>
 <tr class="even">
 <td align="left"><p>**ItemIndex**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the ID of the list item. This attribute is used only when <span class="keyword">ParentType** is &quot;ListItem&quot;.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the ID of the list item. This attribute is used only when **ParentType** is &quot;ListItem&quot;.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ParentType**</p></td>
-<td align="left"><p>Required **PropertyBagParentTypeDefinition</span> enumeration. Must be one of <span class="keyword">File</span>, <span class="keyword">Folder</span>, <span class="keyword">ListItem</span>, or <span class="keyword">Web**. Specifies the kind of object to which the property bag belongs.</p></td>
+<td align="left"><p>Required **PropertyBagParentTypeDefinition</span> enumeration. Must be one of **File</span>, **Folder</span>, **ListItem</span>, or **Web**. Specifies the kind of object to which the property bag belongs.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**RootWebOnly**</p></td>
-<td align="left"><p>Optional **TRUE/FALSE</span>. Indicates whether the parent object must be the site collection's top-level site when the <span class="keyword">ParentType</span> attribute is &quot;Web&quot;. This attribute is not used with any other <span class="keyword">ParentType** value.</p></td>
+<td align="left"><p>Optional **TRUE/FALSE</span>. Indicates whether the parent object must be the site collection's top-level site when the **ParentType</span> attribute is &quot;Web&quot;. This attribute is not used with any other **ParentType** value.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Url**</p></td>
-<td align="left"><p>Optional **Text</span>. The site-relative URL of the parent object to which the property bag belongs, except when <span class="keyword">ParentType** is &quot;ListItem&quot;. In that case, this attribute specifies the site-relative URL of the list, not the list item.</p></td>
+<td align="left"><p>Optional **Text</span>. The site-relative URL of the parent object to which the property bag belongs, except when **ParentType** is &quot;ListItem&quot;. In that case, this attribute specifies the site-relative URL of the list, not the list item.</p></td>
 </tr>
 </tbody>
 </table>

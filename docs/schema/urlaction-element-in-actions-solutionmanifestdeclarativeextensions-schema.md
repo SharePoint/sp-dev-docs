@@ -101,7 +101,7 @@ elements.
 <tbody>
 <tr class="odd">
 <td align="left"><p>Url</p></td>
-<td align="left"><p>The full URL of the page that the user browses to when he or she clicks the action. A command can include parameters that will be populated with the contents of one or more fields in the external content type. In the URL that you type in this field, you can include placeholders for each parameter to use. Placeholders should be numbered with integers starting at zero (0, 1, 2, and so on) and should be of the form {number}. For example, the following sample URL provides two parameters, **p0</span> and <span class="keyword">p1**:</p>
+<td align="left"><p>The full URL of the page that the user browses to when he or she clicks the action. A command can include parameters that will be populated with the contents of one or more fields in the external content type. In the URL that you type in this field, you can include placeholders for each parameter to use. Placeholders should be numbered with integers starting at zero (0, 1, 2, and so on) and should be of the form {number}. For example, the following sample URL provides two parameters, **p0</span> and **p1**:</p>
 <p><span class="code">http://www.adventure-works.com/sample.aspx?p0={0}&amp;p1={1}</span></p>
 <p>Required.</p>
 <p>Attribute type: String</p></td>
@@ -126,7 +126,7 @@ elements.
 </tr>
 <tr class="odd">
 <td align="left"><p>DisplayLocations</p></td>
-<td align="left"><p>The locations in the Outlook user interface where this action should be displayed. This attribute can be a combination of the following bit flags: **0</span> (none, action is not displayed anywhere), <span class="keyword">1</span> (action is displayed on the external data parts menu), <span class="keyword">2</span> (action is displayed on the item context menu), <span class="keyword">4** (action is displayed on the ribbon).</p>
+<td align="left"><p>The locations in the Outlook user interface where this action should be displayed. This attribute can be a combination of the following bit flags: **0</span> (none, action is not displayed anywhere), **1</span> (action is displayed on the external data parts menu), **2</span> (action is displayed on the item context menu), **4** (action is displayed on the ribbon).</p>
 <p>Optional.</p>
 <p>Attribute type: String</p></td>
 </tr>

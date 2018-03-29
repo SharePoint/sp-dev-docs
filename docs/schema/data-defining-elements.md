@@ -114,7 +114,7 @@ this file.
 <tr class="odd">
 <td align="left"><p>**Column2Suffix**</p></td>
 <td align="left"><p>**Text**</p></td>
-<td align="left"><p>Contains text to append to base column name to derive **ColumnName2</span> from <span class="keyword">ColumnName</span> (for two-column fields such as <span class="keyword">URL**).</p></td>
+<td align="left"><p>Contains text to append to base column name to derive **ColumnName2</span> from **ColumnName</span> (for two-column fields such as **URL**).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**DisplayPattern**</p></td>
@@ -134,12 +134,12 @@ this file.
 <tr class="odd">
 <td align="left"><p>**InternalType**</p></td>
 <td align="left"><p>**Text**</p></td>
-<td align="left"><p>Determines both the behavior of the **Column</span> element in rendering data from the SharePoint Foundation database and how data is posted back to the database. Can be one of the following values: <span class="keyword">Text</span>, <span class="keyword">Note</span>, <span class="keyword">Number</span>, <span class="keyword">Currency</span>, <span class="keyword">Integer</span>, <span class="keyword">Boolean</span>, <span class="keyword">DateTime</span>, <span class="keyword">Threading</span>, <span class="keyword">Lookup</span>, <span class="keyword">Choice</span>, <span class="keyword">URL</span>, <span class="keyword">Counter</span>, or <span class="keyword">DisplayOnly</span>. Note that a <span class="keyword">DisplayOnly** field type has no storage of its own.</p></td>
+<td align="left"><p>Determines both the behavior of the **Column</span> element in rendering data from the SharePoint Foundation database and how data is posted back to the database. Can be one of the following values: **Text</span>, **Note</span>, **Number</span>, **Currency</span>, **Integer</span>, **Boolean</span>, **DateTime</span>, **Threading</span>, **Lookup</span>, **Choice</span>, **URL</span>, **Counter</span>, or **DisplayOnly</span>. Note that a **DisplayOnly** field type has no storage of its own.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Name**</p></td>
 <td align="left"><p>**Text**</p></td>
-<td align="left"><p>Contains the name of the internal data type as referenced in a Type attribute of the Field element: <span class="code">&lt;Field Type=&quot;Name&quot;/&gt;</span>. Examples are **Text</span>, <span class="keyword">Note</span>, <span class="keyword">Number**, etc.</p></td>
+<td align="left"><p>Contains the name of the internal data type as referenced in a Type attribute of the Field element: <span class="code">&lt;Field Type=&quot;Name&quot;/&gt;</span>. Examples are **Text</span>, **Note</span>, **Number**, etc.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**NewPattern**</p></td>
@@ -164,7 +164,7 @@ this file.
 <tr class="odd">
 <td align="left"><p>**Sortable**</p></td>
 <td align="left"><p>**Text**</p></td>
-<td align="left"><p>Specifies whether a field can be sorted. Can be **TRUE</span> or <span class="keyword">FALSE**.</p></td>
+<td align="left"><p>Specifies whether a field can be sorted. Can be **TRUE</span> or **FALSE**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**TypeName**</p></td>
@@ -242,7 +242,7 @@ field being rendered.
 </tr>
 <tr class="even">
 <td align="left"><p><a href="fieldsortparams-element-view.md">FieldSortParams</a></p></td>
-<td align="left"><p>Returns the sort direction on a list, rendering **Asc</span> or <span class="keyword">Desc** based on whether the field has been sorted, and the current default sort direction for the field.</p></td>
+<td align="left"><p>Returns the sort direction on a list, rendering **Asc</span> or **Desc** based on whether the field has been sorted, and the current default sort direction for the field.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="ifequal-element-view.md">IfEqual</a></p></td>

@@ -108,13 +108,13 @@ elements.
 <tr class="odd">
 <td align="left"><p>EntityNamespace</p></td>
 <td align="left"><p>Optional.</p>
-<p>The namespace of the external content type where the **Association</span> is defined. If <span class="keyword">EntityName</span> is specified, <span class="keyword">EntityNamespace** is required.</p>
+<p>The namespace of the external content type where the **Association</span> is defined. If **EntityName</span> is specified, **EntityNamespace** is required.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>EntityName</p></td>
 <td align="left"><p>Optional.</p>
-<p>The name of the external content type where the **Association</span> is defined. If <span class="keyword">EntityNamespace</span> is specified, <span class="keyword">EntityName** is required.</p>
+<p>The name of the external content type where the **Association</span> is defined. If **EntityNamespace</span> is specified, **EntityName** is required.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
@@ -126,7 +126,7 @@ elements.
 <tr class="even">
 <td align="left"><p>Reverse</p></td>
 <td align="left"><p>Optional.</p>
-<p>Specifies that the referenced **Association</span> has its source and destination reversed. This would indicate the <span class="keyword">Association</span> is working in the opposite direction compared to other associations in the same <span class="keyword">AssociationGroup</span>. For example, if the <span class="keyword">AssociationGroup</span> references an <span class="keyword">Association</span> &quot;GetOrdersForCustomer&quot;, returning Order items for the given Customer item, then the <span class="keyword">AssociationGroup</span> is in the direction of Customer to Order. The other <span class="keyword">AssociationReference**, referencing another association &quot;GetCustomerForOrder&quot;, must be marked as reverse, because this association is in the direction of Order to Customer.</p>
+<p>Specifies that the referenced **Association</span> has its source and destination reversed. This would indicate the **Association</span> is working in the opposite direction compared to other associations in the same **AssociationGroup</span>. For example, if the **AssociationGroup</span> references an **Association</span> &quot;GetOrdersForCustomer&quot;, returning Order items for the given Customer item, then the **AssociationGroup</span> is in the direction of Customer to Order. The other **AssociationReference**, referencing another association &quot;GetCustomerForOrder&quot;, must be marked as reverse, because this association is in the direction of Order to Customer.</p>
 <p>Default value: **false**</p>
 <p>Attribute type: **Boolean**</p></td>
 </tr>
@@ -153,7 +153,7 @@ None.
 <tbody>
 <tr class="odd">
 <td align="left"><p><span sdata="link"><a href="associationgroup-element-in-associationgroups-bdcmetadata-schema.md">AssociationGroup Element in AssociationGroups (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The **AssociationGroup</span> that this <span class="keyword">AssociationReference** belongs to.</p></td>
+<td align="left"><p>The **AssociationGroup</span> that this **AssociationReference** belongs to.</p></td>
 </tr>
 </tbody>
 </table>

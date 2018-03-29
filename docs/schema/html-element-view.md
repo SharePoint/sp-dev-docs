@@ -95,7 +95,7 @@ Language (CAML) parser does not parse the tags.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**ID**</p></td>
-<td align="left"><p>Optional **Text</span>. Provides an identifier for the contents of the <span class="keyword">HTML** element.</p></td>
+<td align="left"><p>Optional **Text</span>. Provides an identifier for the contents of the **HTML** element.</p></td>
 </tr>
 </tbody>
 </table>

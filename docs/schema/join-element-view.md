@@ -99,7 +99,7 @@ Used to join two lists for queries.
 <td align="left"><p>ListAlias</p></td>
 <td align="left"><p>Optional. Specifies an alternate name for the foreign list. This can be useful when there are two joins to the same list. Different aliases are needed to differentiate the joins.</p>
 <p>There is no need to explicitly map the alias onto the real name of the foreign list because joins are only allowed through a lookup field relation and the foreign list is specified in the Lookup field definition.</p>
-<p>After this value is defined in a **Join</span> element, it is used as the value of a <span class="keyword">List** attribute in two places:</p>
+<p>After this value is defined in a **Join</span> element, it is used as the value of a **List** attribute in two places:</p>
 <ul>
 <li><p>In a <a href="fieldref-element-query.md">FieldRef</a> element that is a child to the <a href="eq-element-query.md">Eq</a> element of the **Join** element.</p></li>
 <li><p>In a <a href="field-element-list.md">Field</a> element that is a child of a <a href="projectedfields-element-view.md">ProjectedFields</a> element.</p></li>

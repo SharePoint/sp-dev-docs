@@ -206,7 +206,7 @@ class="nolink">SPList</span></span>
 <tr class="even">
 <td align="left"><p>**Direction**</p></td>
 <td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Specifies the direction of the reading order for the list. The string value &quot;**ltr</span>&quot; specifies left-to-right; the string &quot;<span class="keyword">rtl**&quot; specifies either right-to-left, or that no reading order is specified.</p></td>
+<td align="left"><p>Optional. Specifies the direction of the reading order for the list. The string value &quot;**ltr</span>&quot; specifies left-to-right; the string &quot;**rtl**&quot; specifies either right-to-left, or that no reading order is specified.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**DocumentTemplateId**</p></td>
@@ -231,7 +231,7 @@ class="nolink">SPList</span></span>
 <tr class="odd">
 <td align="left"><p>**EnableAttachments**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether attachments can be added to items in the list; **true</span> if attachments can be added, otherwise <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional. Specifies whether attachments can be added to items in the list; **true</span> if attachments can be added, otherwise **false**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**EnableContentTypes**</p></td>
@@ -241,12 +241,12 @@ class="nolink">SPList</span></span>
 <tr class="odd">
 <td align="left"><p>**EnableDeployWithDependentList**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether the list can be deployed with a dependent list; **true</span> if the list can be deployed with a dependent list, otherwise <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional. Specifies whether the list can be deployed with a dependent list; **true</span> if the list can be deployed with a dependent list, otherwise **false**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**EnableFolderCreation**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether folders can be created in the list; **true</span> if folders can be created, otherwise <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional. Specifies whether folders can be created in the list; **true</span> if folders can be created, otherwise **false**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**EnableMinorVersions**</p></td>
@@ -256,7 +256,7 @@ class="nolink">SPList</span></span>
 <tr class="even">
 <td align="left"><p>**EnableModeration**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether the Content Approval feature is enabled for the list; **true</span> if approval feature is enabled, otherwise <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional. Specifies whether the Content Approval feature is enabled for the list; **true</span> if approval feature is enabled, otherwise **false**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**EnableSyndication**</p></td>
@@ -266,7 +266,7 @@ class="nolink">SPList</span></span>
 <tr class="even">
 <td align="left"><p>**EnableVersioning**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether versioning is enabled for the document library; **true</span> if versioning is enabled, otherwise <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional. Specifies whether versioning is enabled for the document library; **true</span> if versioning is enabled, otherwise **false**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**EventSinkAssembly**</p></td>
@@ -286,17 +286,17 @@ class="nolink">SPList</span></span>
 <tr class="even">
 <td align="left"><p>**ExcludeFromTemplate**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether the content of the list is included when the list is saved as a list template or when the site to which the list belongs is saved as a site template. The value is **true</span> if the content is excluded, otherwise <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional. Specifies whether the content of the list is included when the list is saved as a list template or when the site to which the list belongs is saved as a site template. The value is **true</span> if the content is excluded, otherwise **false**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ForceCheckout**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether Forced Checkout is enabled for the document library; **true</span> if forced checkout is enabled, otherwise <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional. Specifies whether Forced Checkout is enabled for the document library; **true</span> if forced checkout is enabled, otherwise **false**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Hidden**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether the list is hidden; **true</span> if the list is hidden, otherwise <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional. Specifies whether the list is hidden; **true</span> if the list is hidden, otherwise **false**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
@@ -326,12 +326,12 @@ class="nolink">SPList</span></span>
 <tr class="even">
 <td align="left"><p>**OnQuickLaunch**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether the list provides Quick Launch on the home page; **true</span> if Quick Launch is enabled, otherwise <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional. Specifies whether the list provides Quick Launch on the home page; **true</span> if Quick Launch is enabled, otherwise **false**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Ordered**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether the option to allow users to reorder items in the list is available on the Edit View page for the list; **true</span> if ordering is enabled, otherwise <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional. Specifies whether the option to allow users to reorder items in the list is available on the Edit View page for the list; **true</span> if ordering is enabled, otherwise **false**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ParentWebId**</p></td>
@@ -351,7 +351,7 @@ class="nolink">SPList</span></span>
 <tr class="odd">
 <td align="left"><p>**RequestAccessEnabled**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether the option to allow users to request access to the list is available; **true</span> if requesting access is enabled, otherwise <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional. Specifies whether the option to allow users to request access to the list is available; **true</span> if requesting access is enabled, otherwise **false**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**RootFolderId**</p></td>
@@ -376,7 +376,7 @@ class="nolink">SPList</span></span>
 <tr class="even">
 <td align="left"><p>**ShowUser**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether user names are shown in the results of a survey; **true</span> if user names are shown, otherwise <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional. Specifies whether user names are shown in the results of a survey; **true</span> if user names are shown, otherwise **false**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**TemplateFeatureId**</p></td>

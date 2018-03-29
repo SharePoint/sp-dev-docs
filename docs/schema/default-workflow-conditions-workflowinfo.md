@@ -118,7 +118,7 @@ rule sentence for each condition, and the fields and values that apply.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>**Compare</span><span class="placeholder">DOCS-LESSTHANlist or document library name</span>DOCS-GREATERTHAN <span class="keyword">field**</p></td>
+<td align="left"><p>**Compare</span><span class="placeholder">DOCS-LESSTHANlist or document library name</span>DOCS-GREATERTHAN **field**</p></td>
 <td align="left"><p>Instructs the workflow designer to compare a field in the current list or document library to a specified value.</p>
 <p>**Rule Sentence**:</p>
 <p>If fieldequalsvalue</p>

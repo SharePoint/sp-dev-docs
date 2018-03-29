@@ -133,7 +133,7 @@ class="nolink">SPExportSettings</span></span>
 <tr class="even">
 <td align="left"><p>**ExportPublicSchema**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether to use the public schema format when exporting a list field; **true</span> if the export operation uses the public schema. The default value is <span class="keyword">true**.</p></td>
+<td align="left"><p>Optional. Specifies whether to use the public schema format when exporting a list field; **true</span> if the export operation uses the public schema. The default value is **true**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**FileLocation**</p></td>

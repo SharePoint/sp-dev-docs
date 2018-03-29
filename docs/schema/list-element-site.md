@@ -120,11 +120,11 @@ definition configuration or Web template configuration.
 </tr>
 <tr class="even">
 <td align="left"><p>**EnableContentTypes**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to enable management of content types in lists created through the list definition.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to enable management of content types in lists created through the list definition.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**EnableMinorVersions**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to enable minor versions for items in the list.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to enable minor versions for items in the list.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**FeatureId**</p></td>
@@ -132,7 +132,7 @@ definition configuration or Web template configuration.
 </tr>
 <tr class="odd">
 <td align="left"><p>**ForceCheckout**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to require that documents be checked out from the document library in order to be edited.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to require that documents be checked out from the document library in order to be edited.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**HyperlinkBaseUrl**</p></td>
@@ -144,7 +144,7 @@ definition configuration or Web template configuration.
 </tr>
 <tr class="even">
 <td align="left"><p>**RootWebOnly**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to specify that the list created from the definition exists only in the root Web site of a site collection.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the list created from the definition exists only in the root Web site of a site collection.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Title**</p></td>
@@ -202,7 +202,7 @@ definition configuration or Web template configuration.
 </tr>
 <tr class="even">
 <td align="left"><p>**VersioningEnabled**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to specify within a <a href="http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56(Office.15).aspx">Schema.xml</a> file that versioning is enabled by default for document libraries that are created through the list definition. Setting this attribute has no effect on existing document libraries. If <span class="keyword">TRUE**, versioning can still be disabled for a document library on the New Document Library page when the library is being created.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify within a <a href="http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56(Office.15).aspx">Schema.xml</a> file that versioning is enabled by default for document libraries that are created through the list definition. Setting this attribute has no effect on existing document libraries. If **TRUE**, versioning can still be disabled for a document library on the New Document Library page when the library is being created.</p></td>
 </tr>
 </tbody>
 </table>

@@ -155,11 +155,11 @@ elements in both site definitions and Web templates.
 </tr>
 <tr class="even">
 <td align="left"><p>**DisplayCategory**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the category in which the site definition configuration will appear in the UI of SharePoint Foundation, for example, <span class="keyword">Collaboration</span>, <span class="keyword">Meetings**, or some custom name.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the category in which the site definition configuration will appear in the UI of SharePoint Foundation, for example, **Collaboration</span>, **Meetings**, or some custom name.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**FilterCategories**</p></td>
-<td align="left"><p>Optional **Text</span>. This attribute is not used by SharePoint Foundation. It is available for enhanced portal or content management solutions built on SharePoint Foundation, such as Microsoft SharePoint Server, to use as means of categorizing site configurations in ways that do not map precisely onto the categorizations that appear in the UI. (See also the <span class="keyword">DisplayCategory** attribute.)</p></td>
+<td align="left"><p>Optional **Text</span>. This attribute is not used by SharePoint Foundation. It is available for enhanced portal or content management solutions built on SharePoint Foundation, such as Microsoft SharePoint Server, to use as means of categorizing site configurations in ways that do not map precisely onto the categorizations that appear in the UI. (See also the **DisplayCategory** attribute.)</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Hidden**</p></td>
@@ -198,15 +198,15 @@ elements in both site definitions and Web templates.
 </tr>
 <tr class="even">
 <td align="left"><p>**RootWebOnly**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to specify that the site created from the configuration exists only as the root Web site in a site collection. This attribute is not enforced in <a href="http://msdn.microsoft.com/library/de422674-5cc4-4880-b08e-b1e955419d30(Office.15).aspx">Web templates</a>, which are stored in Solution (<span class="code">.wsp** files).</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify that the site created from the configuration exists only as the root Web site in a site collection. This attribute is not enforced in <a href="http://msdn.microsoft.com/library/de422674-5cc4-4880-b08e-b1e955419d30(Office.15).aspx">Web templates</a>, which are stored in Solution (<span class="code">.wsp** files).</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**SubWebOnly**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to specify that the site created from the configuration exists only as a subsite within a site collection. This attribute is not enforced in <a href="http://msdn.microsoft.com/library/de422674-5cc4-4880-b08e-b1e955419d30(Office.15).aspx">Web templates</a>, which are stored in Solution (<span class="code">.wsp** files).</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify that the site created from the configuration exists only as a subsite within a site collection. This attribute is not enforced in <a href="http://msdn.microsoft.com/library/de422674-5cc4-4880-b08e-b1e955419d30(Office.15).aspx">Web templates</a>, which are stored in Solution (<span class="code">.wsp** files).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**SupportsMultilingualUI**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> (the default) to specify that administrators can enable alternate languages for sites created from the configuration. <span class="keyword">FALSE** prevents administrators from enabling this functionality.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> (the default) to specify that administrators can enable alternate languages for sites created from the configuration. **FALSE** prevents administrators from enabling this functionality.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Title**</p></td>

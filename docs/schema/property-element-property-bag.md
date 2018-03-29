@@ -103,7 +103,7 @@ item, file, folder, or website.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Type**</p></td>
-<td align="left"><p>Optional **PropertyBagType</span> enumeration. Must be one of &quot;<span class="keyword">int</span>&quot;, &quot;<span class="keyword">string</span>&quot;, or &quot;<span class="keyword">DateTime**&quot;. Specifies the type of property.</p></td>
+<td align="left"><p>Optional **PropertyBagType</span> enumeration. Must be one of &quot;**int</span>&quot;, &quot;**string</span>&quot;, or &quot;**DateTime**&quot;. Specifies the type of property.</p></td>
 </tr>
 </tbody>
 </table>

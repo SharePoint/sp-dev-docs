@@ -109,7 +109,7 @@ Represents a placeholder for a control in a
 </tr>
 <tr class="even">
 <td align="left"><p>**TemplateAlias**</p></td>
-<td align="left"><p>Optional. A string that a control can reference in its own **TemplateAlias</span> attribute. The <span class="keyword">TemplateAlias</span> attribute is used to size and position controls in a group when a template is applied to the group. No two elements that are contained by the same <a href="grouptemplate-element.md">GroupTemplate</a> element should have the same <span class="keyword">TemplateAlias** value.</p></td>
+<td align="left"><p>Optional. A string that a control can reference in its own **TemplateAlias</span> attribute. The **TemplateAlias</span> attribute is used to size and position controls in a group when a template is applied to the group. No two elements that are contained by the same <a href="grouptemplate-element.md">GroupTemplate</a> element should have the same **TemplateAlias** value.</p></td>
 </tr>
 </tbody>
 </table>

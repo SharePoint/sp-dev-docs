@@ -124,11 +124,11 @@ Defines a group of controls.
 </tr>
 <tr class="even">
 <td align="left"><p>**Image32by32PopupLeft**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **Image32by32Popup</span> attribute points to an image file that contains images for many icons. The value of the <span class="keyword">Image32by32PopupLeft</span> attribute is used to set the CSS <span class="keyword">left</span> attribute for the inline style of an HTML <span class="keyword">img** tag.</p></td>
+<td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **Image32by32Popup</span> attribute points to an image file that contains images for many icons. The value of the **Image32by32PopupLeft</span> attribute is used to set the CSS **left</span> attribute for the inline style of an HTML **img** tag.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Image32by32PopupTop**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **Image32by32Popup</span> attribute points to an image file that contains images for many icons. The value of the <span class="keyword">Image32by32PopupTop</span> attribute is used to set the CSS <span class="keyword">top</span> attribute for the inline style of an HTML <span class="keyword">img** tag.</p></td>
+<td align="left"><p>Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **Image32by32Popup</span> attribute points to an image file that contains images for many icons. The value of the **Image32by32PopupTop</span> attribute is used to set the CSS **top</span> attribute for the inline style of an HTML **img** tag.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Sequence**</p></td>

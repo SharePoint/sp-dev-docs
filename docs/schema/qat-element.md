@@ -119,11 +119,11 @@ Defines a quick-access toolbar.
 </tr>
 <tr class="even">
 <td align="left"><p>**ImageDownArrowLeft**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **ImageDownArrow</span> attribute points to an image file that contains the images for many icons. The value of the <span class="keyword">ImageDownArrowLeft</span> attribute is used to set the CSS <span class="keyword">left</span> attribute for the inline style of an HTML <span class="keyword">img** tag when the page is created.</p></td>
+<td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **ImageDownArrow</span> attribute points to an image file that contains the images for many icons. The value of the **ImageDownArrowLeft</span> attribute is used to set the CSS **left</span> attribute for the inline style of an HTML **img** tag when the page is created.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ImageDownArrowTop**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **ImageDownArrow</span> attribute points to an image file that contains the images for many icons. The value of the <span class="keyword">ImageDownArrowTop</span> attribute is used to set the CSS <span class="keyword">top</span> attribute for the inline style of an HTML <span class="keyword">img** tag when the page is created.</p></td>
+<td align="left"><p>Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **ImageDownArrow</span> attribute points to an image file that contains the images for many icons. The value of the **ImageDownArrowTop</span> attribute is used to set the CSS **top</span> attribute for the inline style of an HTML **img** tag when the page is created.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ImageSideArrow**</p></td>
@@ -135,11 +135,11 @@ Defines a quick-access toolbar.
 </tr>
 <tr class="even">
 <td align="left"><p>**ImageSideArrowLeft**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **ImageSideArrow</span> attribute points to an image file that contains the images for many icons. The value of the <span class="keyword">ImageSideArrowLeft</span> attribute is used to set the CSS <span class="keyword">left</span> attribute for the inline style of an HTML <span class="keyword">img** tag when the page is created.</p></td>
+<td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **ImageSideArrow</span> attribute points to an image file that contains the images for many icons. The value of the **ImageSideArrowLeft</span> attribute is used to set the CSS **left</span> attribute for the inline style of an HTML **img** tag when the page is created.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ImageSideArrowTop**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **ImageSideArrow</span> attribute points to an image file that contains the images for many icons. The value of the <span class="keyword">ImageSideArrowTop</span> attribute is used to set the CSS <span class="keyword">top</span> attribute for the inline style of an HTML <span class="keyword">img** tag when the page is created.</p></td>
+<td align="left"><p>Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **ImageSideArrow</span> attribute points to an image file that contains the images for many icons. The value of the **ImageSideArrowTop</span> attribute is used to set the CSS **top</span> attribute for the inline style of an HTML **img** tag when the page is created.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ImageUpArrow**</p></td>
@@ -151,11 +151,11 @@ Defines a quick-access toolbar.
 </tr>
 <tr class="even">
 <td align="left"><p>**ImageUpArrowLeft**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **ImageUpArrow</span> attribute points to an image file that contains the images for many icons. The value of the <span class="keyword">ImageUpArrowLeft</span> attribute is used to set the CSS <span class="keyword">left</span> attribute for the inline style of an HTML <span class="keyword">img** tag when the page is created.</p></td>
+<td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **ImageUpArrow</span> attribute points to an image file that contains the images for many icons. The value of the **ImageUpArrowLeft</span> attribute is used to set the CSS **left</span> attribute for the inline style of an HTML **img** tag when the page is created.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ImageUpArrowTop**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **ImageUpArrow</span> attribute points to an image file that contains the images for many icons. The value of the <span class="keyword">ImageUpArrowTop</span> attribute is used to set the CSS <span class="keyword">top</span> attribute for the inline style of an HTML <span class="keyword">img** tag when the page is created.</p></td>
+<td align="left"><p>Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **ImageUpArrow</span> attribute points to an image file that contains the images for many icons. The value of the **ImageUpArrowTop</span> attribute is used to set the CSS **top</span> attribute for the inline style of an HTML **img** tag when the page is created.</p></td>
 </tr>
 </tbody>
 </table>

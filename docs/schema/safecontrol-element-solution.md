@@ -108,11 +108,11 @@ solution.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Safe**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to add the control to the safe controls list; <span class="keyword">FALSE** to remove it.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to add the control to the safe controls list; **FALSE** to remove it.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**SafeAgainstScript**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to allow property editing by a Contributor; <span class="keyword">FALSE** to disable property editing for Contributors.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to allow property editing by a Contributor; **FALSE** to disable property editing for Contributors.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**TypeName**</p></td>

@@ -108,7 +108,7 @@ None.
 <tbody>
 <tr class="odd">
 <td align="left"><p><span sdata="link"><a href="identity-element-in-identities-subscription-schema.md">Identity Element in Identities (Subscription Schema)</a></span></p></td>
-<td align="left"><p>The serialized value of an identity of an external item. You can get the serialized value of an identity by calling the **Serialize</span> method on the <span class="keyword">Identity** object.</p></td>
+<td align="left"><p>The serialized value of an identity of an external item. You can get the serialized value of an identity by calling the **Serialize</span> method on the **Identity** object.</p></td>
 </tr>
 </tbody>
 </table>

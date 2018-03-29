@@ -106,7 +106,7 @@ elements.
 <tbody>
 <tr class="odd">
 <td align="left"><p>ContentType</p></td>
-<td align="left"><p>The type name of this context in Outlook 2010. Can be different from the name of the external content type in the model. The value that you specify here affects the name of the Outlook item type as it appears in the Outlook object model. In Outlook, the name is appended to the Outlook item type; the full name of an external content type is <span class="ui">Outlook.DOCS-LESSTHANOutlookItemTypeDOCS-GREATERTHAN.DOCS-LESSTHANContentTypeDOCS-GREATERTHAN</span>. For example, a **Customer</span> external type could be <span class="keyword">Outlook.Contact.Customer</span> if it is visualized as an Outlook Contact. If the external content type is visualized in a taskpane in Outlook, the full name is <span class="keyword">EntityView.DOCS-LESSTHANContentTypeDOCS-GREATERTHAN</span>. For example, <span class="keyword">EntityView.Customer** indicates how a customer would be visualized in the taskpane. If you use the object model to work on Outlook items, this is the naming scheme that you use to identify your Outlook items.</p>
+<td align="left"><p>The type name of this context in Outlook 2010. Can be different from the name of the external content type in the model. The value that you specify here affects the name of the Outlook item type as it appears in the Outlook object model. In Outlook, the name is appended to the Outlook item type; the full name of an external content type is <span class="ui">Outlook.DOCS-LESSTHANOutlookItemTypeDOCS-GREATERTHAN.DOCS-LESSTHANContentTypeDOCS-GREATERTHAN</span>. For example, a **Customer</span> external type could be **Outlook.Contact.Customer</span> if it is visualized as an Outlook Contact. If the external content type is visualized in a taskpane in Outlook, the full name is **EntityView.DOCS-LESSTHANContentTypeDOCS-GREATERTHAN</span>. For example, **EntityView.Customer** indicates how a customer would be visualized in the taskpane. If you use the object model to work on Outlook items, this is the naming scheme that you use to identify your Outlook items.</p>
 <p>Required.</p>
 <p>Attribute type: String</p></td>
 </tr>
@@ -135,7 +135,7 @@ elements.
 <tbody>
 <tr class="odd">
 <td align="left"><p><a href="http://msdn.microsoft.com/library/a36a61aa-3ea9-031a-88d3-706b494af5f0.aspx">Entities</a></p></td>
-<td align="left"><p>The **DOCS-LESSTHANEntitiesDOCS-GREATERTHAN</span> element defines the external content type that this context definition is associated with. Note that in the current release of the product, a context definition can be associated with only one external type, even though the schema supports associating a context definition with more than one <span class="keyword">DOCS-LESSTHANEntityDOCS-GREATERTHAN** element.</p></td>
+<td align="left"><p>The **DOCS-LESSTHANEntitiesDOCS-GREATERTHAN</span> element defines the external content type that this context definition is associated with. Note that in the current release of the product, a context definition can be associated with only one external type, even though the schema supports associating a context definition with more than one **DOCS-LESSTHANEntityDOCS-GREATERTHAN** element.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><a href="http://msdn.microsoft.com/library/476e961f-9c21-b096-2dbb-cfb87a2740f6.aspx">OfficeItemCustomizations</a></p></td>

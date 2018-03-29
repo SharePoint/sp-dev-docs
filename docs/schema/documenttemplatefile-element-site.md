@@ -97,7 +97,7 @@ Contains a reference to a file that is used within a document template.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Default**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to specify that the template file is the default file.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the template file is the default file.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Name**</p></td>

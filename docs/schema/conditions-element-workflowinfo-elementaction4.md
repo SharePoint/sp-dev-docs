@@ -287,7 +287,7 @@ class="keyword">choice</span>, see the definition section.
 <td align="left"><p>**When**</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
-<td align="left"><p>The text that is defined in this attribute is displayed in the rule designer sentence when a conditional branch is added that requires the values or conditions that follow it to return **true</span> for the workflow actions to execute. The value is not case-sensitive. The default value is <span class="keyword">If**.</p>
+<td align="left"><p>The text that is defined in this attribute is displayed in the rule designer sentence when a conditional branch is added that requires the values or conditions that follow it to return **true</span> for the workflow actions to execute. The value is not case-sensitive. The default value is **If**.</p>
 <p><span class="label">Example:</span><span class="code">&lt;Conditions When=&quot;If&quot;&gt;</span></p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>

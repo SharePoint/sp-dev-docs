@@ -131,7 +131,7 @@ class="nolink">Microsoft.SharePoint.SPLink</span></span>
 <tr class="odd">
 <td align="left"><p>**IsDirty**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Required. Specifies whether the link value has been changed; **true</span> if the link has changed, otherwise <span class="keyword">false**.</p></td>
+<td align="left"><p>Required. Specifies whether the link value has been changed; **true</span> if the link has changed, otherwise **false**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**WebPartId**</p></td>
@@ -161,7 +161,7 @@ class="nolink">Microsoft.SharePoint.SPLink</span></span>
 <tr class="odd">
 <td align="left"><p>**ServerRel**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether the link is a server-relative URL; **true</span> if the link is server-relative, otherwise <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional. Specifies whether the link is a server-relative URL; **true</span> if the link is server-relative, otherwise **false**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Level**</p></td>

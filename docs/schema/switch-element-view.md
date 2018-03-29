@@ -101,7 +101,7 @@ Application Markup Language (CAML) expression.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**StripWS**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to remove white space from the beginning and end of the value returned by the element.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to remove white space from the beginning and end of the value returned by the element.</p></td>
 </tr>
 </tbody>
 </table>

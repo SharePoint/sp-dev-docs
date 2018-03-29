@@ -162,7 +162,7 @@ elements.
 </tr>
 <tr class="odd">
 <td align="left"><p><span sdata="link"><a href="associationreference-element-in-associationgroup-bdcmetadata-schema.md">AssociationReference Element in AssociationGroup (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>An **AssociationReference</span> of an <span class="keyword">AssociationGroup**.</p></td>
+<td align="left"><p>An **AssociationReference</span> of an **AssociationGroup**.</p></td>
 </tr>
 </tbody>
 </table>
@@ -183,7 +183,7 @@ elements.
 <tbody>
 <tr class="odd">
 <td align="left"><p><span sdata="link"><a href="associationgroups-element-in-entity-bdcmetadata-schema.md">AssociationGroups Element in Entity (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The **AssociationGroups</span> element that contains this <span class="keyword">AssociationGroup**.</p></td>
+<td align="left"><p>The **AssociationGroups</span> element that contains this **AssociationGroup**.</p></td>
 </tr>
 </tbody>
 </table>

@@ -62,7 +62,7 @@ JavaScript
 **Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
 SharePoint Online | SharePoint Server 2013
 
-Used to define a choice within a <span class="keyword">Choice
+Used to define a choice within a **Choice
 </span>field.
 
 <span codelanguage="other"></span>
@@ -164,7 +164,7 @@ within its body.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-The following example defines a <span class="keyword">Choice
+The following example defines a **Choice
 </span>field with three choices.
 
 <span codelanguage="xmlLang"></span>

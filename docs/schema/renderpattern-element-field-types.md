@@ -74,7 +74,7 @@ SharePoint Online | SharePoint Server 2013
 <tbody>
 <tr class="odd">
 <td align="left"><p>This topic describes markup that was used in a now obsolete method of rendering custom fields types on list views and on the Display, Edit, and New forms. It is provided solely to assist persons who are debugging a custom field type that was originally developed against an earlier version of SharePoint Foundation. For information about the recommended methods, see <a href="http://msdn.microsoft.com/library/812772eb-03d0-4a78-b212-0ba2875857df(Office.15).aspx">Field Rendering Templates</a> and <a href="http://msdn.microsoft.com/library/aacdc6d1-86c8-4a6b-953d-22ecac209d0f(Office.15).aspx">Patterns of Custom Field Rendering</a>.</p>
-<p>Custom fields whose rendering is defined with **RenderPattern</span> markup still render properly on forms. However, SharePoint Foundation, by default, uses XSLT stylesheets to render fields on list views, even for legacy custom fields whose list view rendering is defined with a <span class="keyword">RenderPattern</span>. To enable the rendering of such a field, a <span class="code">&lt;Field Name=&quot;CAMLRendering&quot;&gt;TRUE&lt;/Field&gt;</span> element must be added to the containing <span class="keyword">FieldTypes</span> element in the field type definition file (<span class="code">fldtype*.xml**).</p></td>
+<p>Custom fields whose rendering is defined with **RenderPattern</span> markup still render properly on forms. However, SharePoint Foundation, by default, uses XSLT stylesheets to render fields on list views, even for legacy custom fields whose list view rendering is defined with a **RenderPattern</span>. To enable the rendering of such a field, a <span class="code">&lt;Field Name=&quot;CAMLRendering&quot;&gt;TRUE&lt;/Field&gt;</span> element must be added to the containing **FieldTypes</span> element in the field type definition file (<span class="code">fldtype*.xml**).</p></td>
 </tr>
 </tbody>
 </table>
@@ -118,8 +118,8 @@ selected field type.
 <td align="left"><p>Required <strong>String</strong>. Represents the name of the render pattern you are defining in this **RenderPattern** element.</p>
 <p>Valid values are</p>
 <ul>
-<li><p>**HeaderPattern</span>. Defines rendering for the column header on list view pages when CAML rendering is turned on (by including <span class="code">&lt;Field Name=&quot;CAMLRendering&quot;&gt;TRUE&lt;/Field&gt;</span> in the containing <span class="keyword">FieldTypes</span> element of the <span class="code">fldtypes*.xml** file).</p></li>
-<li><p>**DisplayPattern</span>. Defines rendering of the field for the Display (list item) form. When CAML rendering is turned on (by including <span class="code">&lt;Field Name=&quot;CAMLRendering&quot;&gt;TRUE&lt;/Field&gt;</span> in the containing <span class="keyword">FieldTypes</span> element of the <span class="code">fldtypes*.xml</span> file), then the <span class="keyword">DisplayPattern** also defines rendering of the field on list view pages.</p></li>
+<li><p>**HeaderPattern</span>. Defines rendering for the column header on list view pages when CAML rendering is turned on (by including <span class="code">&lt;Field Name=&quot;CAMLRendering&quot;&gt;TRUE&lt;/Field&gt;</span> in the containing **FieldTypes</span> element of the <span class="code">fldtypes*.xml** file).</p></li>
+<li><p>**DisplayPattern</span>. Defines rendering of the field for the Display (list item) form. When CAML rendering is turned on (by including <span class="code">&lt;Field Name=&quot;CAMLRendering&quot;&gt;TRUE&lt;/Field&gt;</span> in the containing **FieldTypes</span> element of the <span class="code">fldtypes*.xml</span> file), then the **DisplayPattern** also defines rendering of the field on list view pages.</p></li>
 <li><p>**EditPattern**. Defines rendering of the field for the Edit (list item) form.</p></li>
 <li><p>**NewPattern**. Defines rendering of the field for the New (list item) form.</p></li>
 <li><p>**PreviewDisplayPattern**. Defines, for use in a WYSIWYG (&quot;what you see is what you get&quot;) site designer such as SharePoint Designer, a preview of how the field will look in Display mode using fictitious data.</p></li>
@@ -230,7 +230,7 @@ render the field on list views.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>Two legacy field types that ship with SharePoint Foundation do not have a **DisplayPattern</span> type of <span class="keyword">RenderPattern</span> in FLDTYPES.XML: (1) <em>ContentTypeId</em> fields are never visible. (2) <em>Computed</em> fields are rendered on list views and in Display mode by a <span class="keyword">DisplayPattern</span> element in their <span class="keyword">Field** elements within the schema.xml of each list on which they appear.</p></td>
+<td align="left"><p>Two legacy field types that ship with SharePoint Foundation do not have a **DisplayPattern</span> type of **RenderPattern</span> in FLDTYPES.XML: (1) <em>ContentTypeId</em> fields are never visible. (2) <em>Computed</em> fields are rendered on list views and in Display mode by a **DisplayPattern</span> element in their **Field** elements within the schema.xml of each list on which they appear.</p></td>
 </tr>
 </tbody>
 </table>

@@ -120,7 +120,7 @@ of controls.
 </tr>
 <tr class="even">
 <td align="left"><p>**TemplateAlias**</p></td>
-<td align="left"><p>Optional. A string that a control can reference in its own **TemplateAlias</span> attribute. The <span class="keyword">TemplateAlias** attribute is used to size and position controls within a group when a template is applied to the group.</p></td>
+<td align="left"><p>Optional. A string that a control can reference in its own **TemplateAlias</span> attribute. The **TemplateAlias** attribute is used to size and position controls within a group when a template is applied to the group.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Type**</p></td>

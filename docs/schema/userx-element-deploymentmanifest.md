@@ -133,12 +133,12 @@ class="nolink">SPUser</span></span>)
 <tr class="even">
 <td align="left"><p>**IsDomainGroup**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether the user is a domain group; **true</span> if the user is a domain group, otherwise <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional. Specifies whether the user is a domain group; **true</span> if the user is a domain group, otherwise **false**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**IsSiteAdmin**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether the user is a site collection administrator; **true</span> if the user is a site collection administrator, otherwise <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional. Specifies whether the user is a site collection administrator; **true</span> if the user is a site collection administrator, otherwise **false**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Login**</p></td>

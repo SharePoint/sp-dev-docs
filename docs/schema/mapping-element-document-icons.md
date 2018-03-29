@@ -100,7 +100,7 @@ file to map particular document types to their respective icons.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Key**</p></td>
-<td align="left"><p>Required **Text</span>. Specifies either a <span class="keyword">ProgID** or a file name extension.</p></td>
+<td align="left"><p>Required **Text</span>. Specifies either a **ProgID** or a file name extension.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Value **</p></td>

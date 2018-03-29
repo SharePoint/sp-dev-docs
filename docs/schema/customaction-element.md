@@ -143,7 +143,7 @@ toolbar or a link on a site settings page.
 </tr>
 <tr class="odd">
 <td align="left"><p>**GroupId**</p></td>
-<td align="left"><p>Optional **Text</span>. Identifies an action group that contains the action, for example, <span class="code">&quot;SiteManagement&quot;</span>. If it is contained within a custom action group, the value of the <span class="keyword">GroupId** attribute must equal the group ID of the <a href="customactiongroup-element-custom-action.md">CustomActionGroup</a> element.</p>
+<td align="left"><p>Optional **Text</span>. Identifies an action group that contains the action, for example, <span class="code">&quot;SiteManagement&quot;</span>. If it is contained within a custom action group, the value of the **GroupId** attribute must equal the group ID of the <a href="customactiongroup-element-custom-action.md">CustomActionGroup</a> element.</p>
 <p>For a list of the default custom action group IDs that are used in Microsoft SharePoint Foundation, see <span sdata="link"><a href="default-custom-action-locations-and-ids.md">Default Custom Action Locations and IDs</a></span>.</p></td>
 </tr>
 <tr class="even">
@@ -157,14 +157,14 @@ toolbar or a link on a site settings page.
 <tr class="even">
 <td align="left"><p>**Location**</p></td>
 <td align="left"><p>Optional **Text</span>. Specifies the location of this custom action, for example, <span class="code">&quot;Microsoft.SharePoint.SiteSettings&quot;**.</p>
-<p>If the **CustomAction</span> element contains a <span class="keyword">CommandUIExtension</span> child element, the <span class="keyword">Location** must start with &quot;CommandUI.Ribbon&quot;. For a list of default locations that are used with the Server ribbon, see <a href="http://msdn.microsoft.com/library/9ca6e4cc-9c51-4579-8f57-cf5aa59de5fd(Office.15).aspx">Default Server Ribbon Customization Locations</a>.</p>
-<p>If the custom action is a menu item or toolbar button, the possible options include **EditControlBlock</span>, <span class="keyword">NewFormToolbar</span>, <span class="keyword">DisplayFormToolbar</span>, and <span class="keyword">EditFormToolbar**.</p>
+<p>If the **CustomAction</span> element contains a **CommandUIExtension</span> child element, the **Location** must start with &quot;CommandUI.Ribbon&quot;. For a list of default locations that are used with the Server ribbon, see <a href="http://msdn.microsoft.com/library/9ca6e4cc-9c51-4579-8f57-cf5aa59de5fd(Office.15).aspx">Default Server Ribbon Customization Locations</a>.</p>
+<p>If the custom action is a menu item or toolbar button, the possible options include **EditControlBlock</span>, **NewFormToolbar</span>, **DisplayFormToolbar</span>, and **EditFormToolbar**.</p>
 <p>If it is contained within a custom action group, the value of the **Location** attribute must equal the location of the <a href="customactiongroup-element-custom-action.md">CustomActionGroup</a> element.</p>
 <p>For a list of the default custom action locations that are used in SharePoint Foundation, see <span sdata="link"><a href="default-custom-action-locations-and-ids.md">Default Custom Action Locations and IDs</a></span>.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**RegistrationId**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the identifier of the list or item content type that this action is associated with, or the file type or programmatic identifier (<span class="keyword">ProgID**).</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the identifier of the list or item content type that this action is associated with, or the file type or programmatic identifier (**ProgID**).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**RegistrationType**</p></td>
@@ -179,23 +179,23 @@ toolbar or a link on a site settings page.
 </tr>
 <tr class="odd">
 <td align="left"><p>**RequireSiteAdministrator**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to specify that the item be displayed only if the user is a site administrator; otherwise, <span class="keyword">FALSE</span>. Using the <span class="keyword">RequireSiteAdministrator** attribute for the drop-down menu of SharePoint Foundation commands that are associated with list items is not supported.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify that the item be displayed only if the user is a site administrator; otherwise, **FALSE</span>. Using the **RequireSiteAdministrator** attribute for the drop-down menu of SharePoint Foundation commands that are associated with list items is not supported.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Rights**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies a set of rights that the user must have for the link to be visible, for example, <span class="code">&quot;ViewListItems,ManageAlerts&quot;</span>. If it is not specified, the action always appears in the list of actions. To specify multiple rights, separate the values by using commas. The set of rights are grouped logically according to <span class="keyword">AND</span> logic, which means that a user must have all the specified rights to see an action. For a list of possible values, see <span sdata="cer" target="T:Microsoft.SharePoint.SPBasePermissions"><span class="nolink">Microsoft.SharePoint.SPBasePermissions</span>**.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies a set of rights that the user must have for the link to be visible, for example, <span class="code">&quot;ViewListItems,ManageAlerts&quot;</span>. If it is not specified, the action always appears in the list of actions. To specify multiple rights, separate the values by using commas. The set of rights are grouped logically according to **AND</span> logic, which means that a user must have all the specified rights to see an action. For a list of possible values, see <span sdata="cer" target="T:Microsoft.SharePoint.SPBasePermissions"><span class="nolink">Microsoft.SharePoint.SPBasePermissions</span>**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**RootWebOnly**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to deploy the custom action only on root websites. This attribute applies to custom actions in a sandboxed solution.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to deploy the custom action only on root websites. This attribute applies to custom actions in a sandboxed solution.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ScriptSrc**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies a file that contains script to be executed. This attribute is only applicable when the <span class="keyword">Location</span> attribute is set to <span class="keyword">ScriptLink**.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies a file that contains script to be executed. This attribute is only applicable when the **Location</span> attribute is set to **ScriptLink**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ScriptBlock**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies a block of script to be executed. This attribute is only applicable when the <span class="keyword">Location</span> attribute is set to <span class="keyword">ScriptLink**.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies a block of script to be executed. This attribute is only applicable when the **Location</span> attribute is set to **ScriptLink**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Sequence**</p></td>
@@ -204,15 +204,15 @@ toolbar or a link on a site settings page.
 <tr class="odd">
 <td align="left"><p>**ShowInLists**</p></td>
 <td align="left"><p>This attribute is deprecated and should not be used.</p>
-<p>Optional **Boolean</span>. <span class="keyword">TRUE</span> if the custom action is only displayed for lists on the page for managing content types. The default value is <span class="keyword">FALSE**.</p></td>
+<p>Optional **Boolean</span>. **TRUE</span> if the custom action is only displayed for lists on the page for managing content types. The default value is **FALSE**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ShowInReadOnlyContentTypes**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> if the custom action is only displayed for read-only content types on the page for managing content types. The default value is <span class="keyword">FALSE**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> if the custom action is only displayed for read-only content types on the page for managing content types. The default value is **FALSE**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ShowInSealedContentTypes**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> if the custom action is only displayed for sealed content types on the page for managing content types. The default value is <span class="keyword">FALSE**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> if the custom action is only displayed for sealed content types on the page for managing content types. The default value is **FALSE**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Title**</p></td>

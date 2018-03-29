@@ -102,7 +102,7 @@ compared.
 </tr>
 <tr class="even">
 <td align="left"><p>**IncludeTimeValue**</p></td>
-<td align="left"><p>Optional **Boolean</span>. Specifies to build <span class="keyword">DateTime** queries based on time as well as date. If you do not set this attribute, the time portion of queries that involve date and time are ignored.</p></td>
+<td align="left"><p>Optional **Boolean</span>. Specifies to build **DateTime** queries based on time as well as date. If you do not set this attribute, the time portion of queries that involve date and time are ignored.</p></td>
 </tr>
 </tbody>
 </table>

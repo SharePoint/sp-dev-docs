@@ -108,11 +108,11 @@ in lists created through the specified list template.
 </tr>
 <tr class="even">
 <td align="left"><p>**RootWebOnly**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">True</span> if the event receiver applies only to the root Web; otherwise, <span class="keyword">False**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **True</span> if the event receiver applies only to the root Web; otherwise, **False**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Scope**</p></td>
-<td align="left"><p>Optional **enumeration</span>. The scope of the event receiver. This can be <span class="keyword">Site</span> or <span class="keyword">Web</span>. When the <span class="keyword">Scope</span> attribute is set to <span class="code">Site</span>, event receivers that are defined inside of a Feature that is scoped to the site collection are registered at the site collection level. When the <span class="keyword">Scope** attribute is set to Web, event receivers that are defined inside of a Feature that is scoped to a Web are registered on the Web.</p></td>
+<td align="left"><p>Optional **enumeration</span>. The scope of the event receiver. This can be **Site</span> or **Web</span>. When the **Scope</span> attribute is set to <span class="code">Site</span>, event receivers that are defined inside of a Feature that is scoped to the site collection are registered at the site collection level. When the **Scope** attribute is set to Web, event receivers that are defined inside of a Feature that is scoped to a Web are registered on the Web.</p></td>
 </tr>
 </tbody>
 </table>

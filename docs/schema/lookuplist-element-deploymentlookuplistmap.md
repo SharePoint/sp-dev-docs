@@ -124,7 +124,7 @@ USAGE
 <tr class="odd">
 <td align="left"><p>**Included**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether the list item is included with the export package; **true</span> if the list item is included, otherwise <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional. Specifies whether the list item is included with the export package; **true</span> if the list item is included, otherwise **false**.</p></td>
 </tr>
 </tbody>
 </table>

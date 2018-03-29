@@ -122,7 +122,7 @@ attributes that present the field's value in a different format.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Attachments**</p></td>
-<td align="left"><p>Required. **1</span> if the list item has one or more attachments; otherwise, <span class="keyword">0**.</p></td>
+<td align="left"><p>Required. **1</span> if the list item has one or more attachments; otherwise, **0**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ContentTypeId**</p></td>
@@ -134,7 +134,7 @@ attributes that present the field's value in a different format.
 </tr>
 <tr class="even">
 <td align="left"><p>**FileLeafRef**</p></td>
-<td align="left"><p>Required, but ignored if the list is not a document library. The server-relative URL of the document. This is the folder name, followed by &quot;_.&quot;, followed by the file name. An example is QuarterlySummaries_.Quarter1.docx. This attribute value is the concatenation of the values of the **FileLeafRef.Name</span> attribute and the <span class="keyword">FileLeafRef.Suffix** attribute with a &quot;.&quot; separator character.</p></td>
+<td align="left"><p>Required, but ignored if the list is not a document library. The server-relative URL of the document. This is the folder name, followed by &quot;_.&quot;, followed by the file name. An example is QuarterlySummaries_.Quarter1.docx. This attribute value is the concatenation of the values of the **FileLeafRef.Name</span> attribute and the **FileLeafRef.Suffix** attribute with a &quot;.&quot; separator character.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**FileLeafRef.Name**</p></td>
@@ -146,7 +146,7 @@ attributes that present the field's value in a different format.
 </tr>
 <tr class="odd">
 <td align="left"><p>**FSObjType**</p></td>
-<td align="left"><p>Required. **1</span> if the list item is a folder; otherwise, <span class="keyword">0**.</p></td>
+<td align="left"><p>Required. **1</span> if the list item is a folder; otherwise, **0**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**HTML_x0020_File_x0020_Type.File_x0020_Type.mapall**</p></td>
@@ -178,11 +178,11 @@ attributes that present the field's value in a different format.
 </tr>
 <tr class="odd">
 <td align="left"><p><span class="placeholder">some_booleanField</span>**.Value**</p></td>
-<td align="left"><p>Optional. Every **Boolean</span> attribute in the list item is followed by another attribute that has the same name, to which &quot;.Value&quot; is appended. This attribute gives the raw unlocalized form of the field value (1 or 0), whereas the main attribute for the <span class="keyword">Boolean** field gives the value relativized to the website's locale.</p></td>
+<td align="left"><p>Optional. Every **Boolean</span> attribute in the list item is followed by another attribute that has the same name, to which &quot;.Value&quot; is appended. This attribute gives the raw unlocalized form of the field value (1 or 0), whereas the main attribute for the **Boolean** field gives the value relativized to the website's locale.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p><span class="placeholder">some_date_time_field</span>**.ifnew**</p></td>
-<td align="left"><p>Optional. **1</span> if the date time value is recent enough to define the list item as new; otherwise, <span class="keyword">0</span>. This attribute appears only if the <span class="placeholder">some_date_time_field** is &quot;Created_x0020_Date&quot;.</p></td>
+<td align="left"><p>Optional. **1</span> if the date time value is recent enough to define the list item as new; otherwise, **0</span>. This attribute appears only if the <span class="placeholder">some_date_time_field** is &quot;Created_x0020_Date&quot;.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><span class="placeholder">some_date_time_field</span>.</p></td>
@@ -214,7 +214,7 @@ attributes that present the field's value in a different format.
 </tr>
 <tr class="even">
 <td align="left"><p><span class="placeholder">some_user_field</span>**.title**</p></td>
-<td align="left"><p>Optional. If any attribute represents a User type field, there is another attribute that has the same name, to which &quot;.title&quot; is appended. This is the name of the user, for example &quot;Michiyo Sato&quot;. Note that the value of the main attribute, <span class="placeholder">some_user_field</span>, is the HTML **span</span> markup for the user, including, for example, presence information. The following is an example. This markup is used to render the field when the <span sdata="cer" target="F:Microsoft.SharePoint.SPViewFlags.FreeForm"><span class="nolink">FreeForm</span></span> flag of the <span sdata="cer" target="P:Microsoft.SharePoint.WebPartPages.ListViewWebPart.ViewFlags"><span class="nolink">ListViewWebPart.ViewFlags</span></span> property is not set; otherwise the value of the <span class="placeholder">some_user_field</span><span class="keyword">.span** attribute is used.</p>
+<td align="left"><p>Optional. If any attribute represents a User type field, there is another attribute that has the same name, to which &quot;.title&quot; is appended. This is the name of the user, for example &quot;Michiyo Sato&quot;. Note that the value of the main attribute, <span class="placeholder">some_user_field</span>, is the HTML **span</span> markup for the user, including, for example, presence information. The following is an example. This markup is used to render the field when the <span sdata="cer" target="F:Microsoft.SharePoint.SPViewFlags.FreeForm"><span class="nolink">FreeForm</span></span> flag of the <span sdata="cer" target="P:Microsoft.SharePoint.WebPartPages.ListViewWebPart.ViewFlags"><span class="nolink">ListViewWebPart.ViewFlags</span></span> property is not set; otherwise the value of the <span class="placeholder">some_user_field</span>**.span** attribute is used.</p>
 <div class="code">
 <span codelanguage="xmlLang"></span>
 XML 
@@ -298,7 +298,7 @@ None
 <tbody>
 <tr class="odd">
 <td align="left"><p>Minimum: 0</p>
-<p>Maximum: the value of the **RowLimit</span> attribute of the parent <span class="keyword">dsQueryResponse** element.</p></td>
+<p>Maximum: the value of the **RowLimit</span> attribute of the parent **dsQueryResponse** element.</p></td>
 </tr>
 </tbody>
 </table>

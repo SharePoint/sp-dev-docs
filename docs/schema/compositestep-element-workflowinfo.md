@@ -105,7 +105,7 @@ Specifies a step in a composite workflow activity.
 </tr>
 <tr class="even">
 <td align="left"><p>**AppliesTo**</p></td>
-<td align="left"><p>Required **appliesToTypes</span>. Indicates whether this step should be available for lists, document libraries, or both. Valid values include <span class="keyword">list</span>, <span class="keyword">doclib</span>, and <span class="keyword">all**.</p></td>
+<td align="left"><p>Required **appliesToTypes</span>. Indicates whether this step should be available for lists, document libraries, or both. Valid values include **list</span>, **doclib</span>, and **all**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Order**</p></td>

@@ -139,7 +139,7 @@ configuration or Web template configuration.
 </tr>
 <tr class="even">
 <td align="left"><p>**NavBarHome**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> if the file is the destination URL for the <span class="keyword">Home** link in the top navigation bar used throughout the site.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> if the file is the destination URL for the **Home** link in the top navigation bar used throughout the site.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Path**</p></td>
@@ -154,12 +154,12 @@ configuration or Web template configuration.
 </tr>
 <tr class="even">
 <td align="left"><p>**Type**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies that the file be cached in memory on the front-end server. Possible values include <span class="keyword">Ghostable</span> and <span class="keyword">GhostableInLibrary</span>. Both values specify that the file will be cached, but <span class="keyword">GhostableInLibrary</span> specifies that the file will be cached as part of a list whose base type is <span class="keyword">Document</span><span class="keyword">Library**.</p>
+<td align="left"><p>Optional **Text</span>. Specifies that the file be cached in memory on the front-end server. Possible values include **Ghostable</span> and **GhostableInLibrary</span>. Both values specify that the file will be cached, but **GhostableInLibrary</span> specifies that the file will be cached as part of a list whose base type is **Document</span>**Library**.</p>
 <p>For example, when changes are made to a home page through the user interface (UI), only the differences between the original page definition and the new page are stored in the database. The default.aspx is cached in memory, in addition to the schema files. The HTML page that is displayed in the browser is constructed through the combined page definition that results from the original page definition that is cached in memory and from changes that are stored in the database.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Url**</p></td>
-<td align="left"><p>Required **Text</span>. Specifies the virtual path for the file. If the <span class="keyword">Name</span> attribute is specified, its value is used for the virtual path. If <span class="keyword">Path</span> is not specified, the value of <span class="keyword">Url** is used for the physical path. Cannot contain the following characters:</p>
+<td align="left"><p>Required **Text</span>. Specifies the virtual path for the file. If the **Name</span> attribute is specified, its value is used for the virtual path. If **Path</span> is not specified, the value of **Url** is used for the physical path. Cannot contain the following characters:</p>
 <ul>
 <li><p>\&quot;</p></li>
 <li><p>#</p></li>

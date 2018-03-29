@@ -101,7 +101,7 @@ Describes the forms in a base list type.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Default**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies whether the form is the default form to use for the specified <span class="keyword">Type</span>. For example, one can define multiple forms for which <span class="keyword">Type</span> equals <span class="keyword">DisplayForm</span>. If this is the case, then a default display form must be established so that a list can determine which display form to use. If multiple forms are defined that have the same <span class="keyword">Type</span>, and a default form is not established by specifying <span class="keyword">Default=&quot;TRUE&quot;</span>, then a default form will be chosen programmatically. If there is only one form that is defined for a specified <span class="keyword">Type</span>, then <span class="keyword">Default=&quot;TRUE&quot;** is enforced programmatically.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies whether the form is the default form to use for the specified **Type</span>. For example, one can define multiple forms for which **Type</span> equals **DisplayForm</span>. If this is the case, then a default display form must be established so that a list can determine which display form to use. If multiple forms are defined that have the same **Type</span>, and a default form is not established by specifying **Default=&quot;TRUE&quot;</span>, then a default form will be chosen programmatically. If there is only one form that is defined for a specified **Type</span>, then **Default=&quot;TRUE&quot;** is enforced programmatically.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**MobileUrl**</p></td>
@@ -121,7 +121,7 @@ Describes the forms in a base list type.
 </tr>
 <tr class="even">
 <td align="left"><p>**Type**</p></td>
-<td align="left"><p>Required **Text</span>. Indicates the type of form being described and can be one of the following values: <span class="keyword">DisplayForm</span>, <span class="keyword">EditForm</span>, or <span class="keyword">NewForm**.</p></td>
+<td align="left"><p>Required **Text</span>. Indicates the type of form being described and can be one of the following values: **DisplayForm</span>, **EditForm</span>, or **NewForm**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Url**</p></td>
@@ -129,7 +129,7 @@ Describes the forms in a base list type.
 </tr>
 <tr class="even">
 <td align="left"><p>**UseDefaultListFormWebPart**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies whether a ListFormWebPart should be created when the form is provisioned. By default, a <span sdata="cer" target="T:Microsoft.SharePoint.WebPartPages.ListFormWebPart"><span class="nolink">ListFormWebPart</span></span> object is created unless this attribute is set to <span class="keyword">FALSE</span>. If this attribute equals <span class="keyword">FALSE**, use the <a href="webparts-element-list.md">WebParts</a> child element to define your customized list form Web Part.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies whether a ListFormWebPart should be created when the form is provisioned. By default, a <span sdata="cer" target="T:Microsoft.SharePoint.WebPartPages.ListFormWebPart"><span class="nolink">ListFormWebPart</span></span> object is created unless this attribute is set to **FALSE</span>. If this attribute equals **FALSE**, use the <a href="webparts-element-list.md">WebParts</a> child element to define your customized list form Web Part.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**UseLegacyForm**</p></td>

@@ -95,7 +95,7 @@ Sets the row limit for the number of items to display in a view.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Paged**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to specify that the list supports displaying more items page by page. If <span class="keyword">FALSE** or unspecified, the row limit is absolute and there is no link to see more items.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify that the list supports displaying more items page by page. If **FALSE** or unspecified, the row limit is absolute and there is no link to see more items.</p></td>
 </tr>
 </tbody>
 </table>

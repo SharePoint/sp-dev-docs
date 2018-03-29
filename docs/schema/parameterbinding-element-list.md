@@ -103,7 +103,7 @@ the XSL that renders the view.
 </tr>
 <tr class="even">
 <td align="left"><p>**Location**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the location of the resource. SharePoint Foundation uses a <span class="keyword">Resource</span> function to define the value of <span class="keyword">Location</span> in the format <span class="code">Location = &quot;Resource(ResourceFile, ResourceName)&quot;</span>, where <span class="parameter" sdata="paramReference">ResourceFile</span> specifies the base name of a resource file minus the file extension, and <span class="parameter" sdata="paramReference">ResourceName** specifies the name of the resource string.</p>
+<td align="left"><p>Optional **Text</span>. Specifies the location of the resource. SharePoint Foundation uses a **Resource</span> function to define the value of **Location</span> in the format <span class="code">Location = &quot;Resource(ResourceFile, ResourceName)&quot;</span>, where <span class="parameter" sdata="paramReference">ResourceFile</span> specifies the base name of a resource file minus the file extension, and <span class="parameter" sdata="paramReference">ResourceName** specifies the name of the resource string.</p>
 <p>In addition to specifying a localized resource in a .resx file, the **Location** attribute can be used to specify values indicated in the following table.</p>
 <div class="tableSection">
 <table>

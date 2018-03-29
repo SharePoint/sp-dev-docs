@@ -97,15 +97,15 @@ Specifies options for a drop-down list.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**BlankPattern**</p></td>
-<td align="left"><p>Required **Text</span>. The <span class="keyword">BlankPattern** attribute is used to generate a localized text pattern for displaying text values for lookup fields that are blank (empty string). In the United States, this is localized as &quot;(Item ^1)&quot;. ^1 is replaced with the item ID of the item being referenced.</p></td>
+<td align="left"><p>Required **Text</span>. The **BlankPattern** attribute is used to generate a localized text pattern for displaying text values for lookup fields that are blank (empty string). In the United States, this is localized as &quot;(Item ^1)&quot;. ^1 is replaced with the item ID of the item being referenced.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Len**</p></td>
-<td align="left"><p>Required **Integer</span>. The <span class="keyword">Len</span> attribute causes the members of the drop-down list to be truncated to the specified number of Unicode characters if they exceed the value of <span class="parameter" sdata="paramReference">Len**. This prevents the drop-down menu from being excessively wide.</p></td>
+<td align="left"><p>Required **Integer</span>. The **Len</span> attribute causes the members of the drop-down list to be truncated to the specified number of Unicode characters if they exceed the value of <span class="parameter" sdata="paramReference">Len**. This prevents the drop-down menu from being excessively wide.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**MoreText**</p></td>
-<td align="left"><p>Required **Text</span>. The <span class="keyword">MoreText** attribute specifies what is displayed in order to indicate that the string has been truncated (typically an ellipsis, &quot;...&quot;).</p></td>
+<td align="left"><p>Required **Text</span>. The **MoreText** attribute specifies what is displayed in order to indicate that the string has been truncated (typically an ellipsis, &quot;...&quot;).</p></td>
 </tr>
 </tbody>
 </table>

@@ -96,7 +96,7 @@ render text from the server that must be interpreted as a quoted string.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**NotAddingQuote**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to eliminate quotation marks for enclosing a string. The default value is <span class="keyword">FALSE**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to eliminate quotation marks for enclosing a string. The default value is **FALSE**.</p></td>
 </tr>
 </tbody>
 </table>

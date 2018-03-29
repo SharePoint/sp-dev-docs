@@ -200,7 +200,7 @@ class="nolink">WebPart</span></span>
 <tr class="even">
 <td align="left"><p>**Hidden**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional flag. Specifies whether the Web Part control is displayed on a Web page.The value is **true</span> if the control is hidden; the default is <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional flag. Specifies whether the Web Part control is displayed on a Web page.The value is **true</span> if the control is hidden; the default is **false**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**IsIncluded**</p></td>
@@ -250,7 +250,7 @@ class="nolink">WebPart</span></span>
 <tr class="even">
 <td align="left"><p>**ReadOnly**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional flag. Specifies whether contents of the Web Part are read only; **true</span> if read only, otherwise <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional flag. Specifies whether contents of the Web Part are read only; **true</span> if read only, otherwise **false**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**RecurrenceRowset**</p></td>

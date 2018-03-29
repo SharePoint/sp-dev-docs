@@ -89,7 +89,7 @@ Defines a workflow.
 </tr>
 <tr class="odd">
 <td align="left"><p>**AssociationUrl**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the URL of the association form for this workflow. Set the value of the <span class="keyword">AssociationURL** attribute to the custom form page you want to use for workflow association. For example:</p>
+<td align="left"><p>Optional **Text</span>. Specifies the URL of the association form for this workflow. Set the value of the **AssociationURL** attribute to the custom form page you want to use for workflow association. For example:</p>
 <div class="code">
 <span codelanguage="other"></span>
  

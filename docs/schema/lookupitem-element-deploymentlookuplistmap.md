@@ -130,7 +130,7 @@ USAGE
 <tr class="even">
 <td align="left"><p>**Included**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Specifies whether the list item is included with the export package; **true</span> if the item is included, otherwise, <span class="keyword">false**.</p></td>
+<td align="left"><p>Specifies whether the list item is included with the export package; **true</span> if the item is included, otherwise, **false**.</p></td>
 </tr>
 </tbody>
 </table>

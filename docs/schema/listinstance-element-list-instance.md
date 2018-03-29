@@ -116,7 +116,7 @@ Specifies default data with which to provision the given list type.
 </tr>
 <tr class="even">
 <td align="left"><p>**FeatureId**</p></td>
-<td align="left"><p>Required **Text</span>. Specifies the GUID of the Feature. If you do not specify a Feature GUID, Microsoft SharePoint Foundation uses the ID of the default Feature, in other words, the one containing the <span class="keyword">ListInstance</span> element. If the list template for the list instance is contained within a different Feature, you must specify the ID of that Feature through the <span class="keyword">FeatureId** attribute.</p></td>
+<td align="left"><p>Required **Text</span>. Specifies the GUID of the Feature. If you do not specify a Feature GUID, Microsoft SharePoint Foundation uses the ID of the default Feature, in other words, the one containing the **ListInstance</span> element. If the list template for the list instance is contained within a different Feature, you must specify the ID of that Feature through the **FeatureId** attribute.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Hidden**</p></td>
@@ -132,7 +132,7 @@ Specifies default data with which to provision the given list type.
 </tr>
 <tr class="even">
 <td align="left"><p>**OnQuickLaunch**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to display lists created from the list definition on the Quick Launch bar.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to display lists created from the list definition on the Quick Launch bar.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**QuickLaunchUrl**</p></td>
@@ -140,7 +140,7 @@ Specifies default data with which to provision the given list type.
 </tr>
 <tr class="even">
 <td align="left"><p>**RootWebOnly**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to specify that the list created from the definition exists only in the root Web site of a site collection.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the list created from the definition exists only in the root Web site of a site collection.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**TemplateType**</p></td>

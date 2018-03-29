@@ -194,7 +194,7 @@ elements.
 <td align="left"><p>Expanded</p></td>
 <td align="left"><p>Optional.</p>
 <p>Determines whether the Office External Part is expanded when it is displayed for the first time in a Stack container.</p>
-<p>Attribute type: **Boolean</span>. <span class="keyword">true</span> if the External Data Part is expanded when it is displayed for the first time in a Stack container; otherwise, <span class="keyword">false**.</p></td>
+<p>Attribute type: **Boolean</span>. **true</span> if the External Data Part is expanded when it is displayed for the first time in a Stack container; otherwise, **false**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>FillParent</p></td>

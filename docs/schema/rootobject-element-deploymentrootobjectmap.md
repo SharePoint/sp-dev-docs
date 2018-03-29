@@ -119,7 +119,7 @@ USAGE
 <tr class="even">
 <td align="left"><p>Type</p></td>
 <td align="left"><p><span sdata="link"><a href="spdeploymentobjecttype-simple-type-deploymentrootobjectmap.md">SPDeploymentObjectType Simple Type (DeploymentRootObjectMap)</a></span></p></td>
-<td align="left"><p>Optional. Specifies the object type of the root object: **Site</span>, <span class="keyword">Web</span>, <span class="keyword">Folder</span>, <span class="keyword">List</span>, <span class="keyword">ListItem</span>, or <span class="keyword">File**.</p></td>
+<td align="left"><p>Optional. Specifies the object type of the root object: **Site</span>, **Web</span>, **Folder</span>, **List</span>, **ListItem</span>, or **File**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>ParentId</p></td>
@@ -139,7 +139,7 @@ USAGE
 <tr class="even">
 <td align="left"><p>IsDependency</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether the object is a dependent object. The value is **true</span> if the object is dependent; otherwise, <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional. Specifies whether the object is a dependent object. The value is **true</span> if the object is dependent; otherwise, **false**.</p></td>
 </tr>
 </tbody>
 </table>

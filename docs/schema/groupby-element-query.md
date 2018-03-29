@@ -97,7 +97,7 @@ query in a list view.
 <tbody>
 <tr class="odd">
 <td align="left"><p>Collapse</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** for the Group By section in the list view to be collapsed by default.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** for the Group By section in the list view to be collapsed by default.</p></td>
 </tr>
 </tbody>
 </table>

@@ -164,7 +164,7 @@ elements.
 </tr>
 <tr class="odd">
 <td align="left"><p>Comparison</p></td>
-<td align="left"><p>Used while querying an external system. An external system can compare a **ComparisonFilter</span> value with the value of a particular field of a set of <span class="keyword">EntityInstances</span> and only those <span class="keyword">EntityInstances** where the field values pass the comparison test can be returned.</p></td>
+<td align="left"><p>Used while querying an external system. An external system can compare a **ComparisonFilter</span> value with the value of a particular field of a set of **EntityInstances</span> and only those **EntityInstances** where the field values pass the comparison test can be returned.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Timestamp</p></td>
@@ -176,11 +176,11 @@ elements.
 </tr>
 <tr class="even">
 <td align="left"><p>Output</p></td>
-<td align="left"><p>Used while calling an operation in an external system. Additional results of an operation that cannot be captured by **ReturnTypeDescriptor</span> can be retrieved as a value of the <span class="keyword">InputOutputFilter**.</p></td>
+<td align="left"><p>Used while calling an operation in an external system. Additional results of an operation that cannot be captured by **ReturnTypeDescriptor</span> can be retrieved as a value of the **InputOutputFilter**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>InputOutput</p></td>
-<td align="left"><p>Used while calling an operation in an external system. An external system can use the value of an **InputOutputFilter</span> as additional arguments for the operation, and additional results of an operation that cannot be captured by <span class="keyword">ReturnTypeDescriptor</span> can be retrieved as a value of the <span class="keyword">InputOutputFilter**.</p></td>
+<td align="left"><p>Used while calling an operation in an external system. An external system can use the value of an **InputOutputFilter</span> as additional arguments for the operation, and additional results of an operation that cannot be captured by **ReturnTypeDescriptor</span> can be retrieved as a value of the **InputOutputFilter**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Batching</p></td>
@@ -192,7 +192,7 @@ elements.
 </tr>
 <tr class="even">
 <td align="left"><p>ActivityId</p></td>
-<td align="left"><p>**ActivityId</span> is used when calling an operation on the external system. Its value is set to a GUID that represents the current operation context. If no such value is available, this filter generates a random GUID. On SharePoint Foundation 2010, this filter uses the <span class="keyword">CorrelationID**.</p></td>
+<td align="left"><p>**ActivityId</span> is used when calling an operation on the external system. Its value is set to a GUID that represents the current operation context. If no such value is available, this filter generates a random GUID. On SharePoint Foundation 2010, this filter uses the **CorrelationID**.</p></td>
 </tr>
 </tbody>
 </table>

@@ -101,7 +101,7 @@ extensions\\15\\TEMPLATE directories.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**FromPath**</p></td>
-<td align="left"><p>Required **String</span>. Specifies the setup path of the file to be upgraded relative to the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE directory. Use the token <span class="keyword">{LocaleId}** to specify a locale identifier as part of the path. Example:</p>
+<td align="left"><p>Required **String</span>. Specifies the setup path of the file to be upgraded relative to the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE directory. Use the token **{LocaleId}** to specify a locale identifier as part of the path. Example:</p>
 <p><span class="code">FromPath=&quot;{LocaleId}\STS\Lists\announce\EditForm.aspx&quot;</span></p></td>
 </tr>
 <tr class="even">

@@ -155,7 +155,7 @@ been edited for clarity.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>The **RenderPattern</span> and <span class="keyword">PropertySchema** elements are obsolete. They are shown here solely to assist in the debugging of custom fields that were originally developed against earlier versions of SharePoint Foundation.</p></td>
+<td align="left"><p>The **RenderPattern</span> and **PropertySchema** elements are obsolete. They are shown here solely to assist in the debugging of custom fields that were originally developed against earlier versions of SharePoint Foundation.</p></td>
 </tr>
 </tbody>
 </table>

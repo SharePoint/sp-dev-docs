@@ -102,35 +102,35 @@ Returns the formatted value of a field for use within a view definition.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**AutoHyperLink**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to surround text with &lt;A&gt; tags if the text appears to be a hyperlink (for example, www.microsoft.com).</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to surround text with &lt;A&gt; tags if the text appears to be a hyperlink (for example, www.microsoft.com).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**AutoHyperLinkNoEncoding**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to surround text with &lt;A&gt; tags if the text appears to be a hyperlink (for example, www.microsoft.com) but without HTML encoding.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to surround text with &lt;A&gt; tags if the text appears to be a hyperlink (for example, www.microsoft.com) but without HTML encoding.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**AutoNewLine**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to insert &lt;BR&gt; tags into the text stream and to replace multiple spaces with a nonbreaking space (&amp;nbsp;).</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to insert &lt;BR&gt; tags into the text stream and to replace multiple spaces with a nonbreaking space (&amp;nbsp;).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**HTMLEncode**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to convert embedded characters so that they are displayed as text in the browser. In other words, characters that could be confused with HTML tags are converted to entities.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to convert embedded characters so that they are displayed as text in the browser. In other words, characters that could be confused with HTML tags are converted to entities.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Name**</p></td>
-<td align="left"><p>Optional **Text</span>. Allows the <span class="keyword">Field</span> element to be used outside the field rendering context by supplying an ID (for example, <span class="code">&lt;Field Name=&quot;</span><span class="placeholder">ID</span><span class="code">&quot;/&gt;**).</p></td>
+<td align="left"><p>Optional **Text</span>. Allows the **Field</span> element to be used outside the field rendering context by supplying an ID (for example, <span class="code">&lt;Field Name=&quot;</span><span class="placeholder">ID</span><span class="code">&quot;/&gt;**).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**StripWS**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to remove white space from the beginning and end of the value returned by the element.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to remove white space from the beginning and end of the value returned by the element.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**URLEncode**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, %c3%ab for character ë).</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, %c3%ab for character ë).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**URLEncodeAsURL**</p></td>
-<td align="left"><p>Optional **Boolean</span>. Like <span class="keyword">URLEncode</span>, but <span class="keyword">TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (&quot;/&quot;) are not encoded.</p></td>
+<td align="left"><p>Optional **Boolean</span>. Like **URLEncode</span>, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (&quot;/&quot;) are not encoded.</p></td>
 </tr>
 </tbody>
 </table>

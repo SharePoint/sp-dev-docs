@@ -196,7 +196,7 @@ that a user can add to a list.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Aggregation**</p></td>
-<td align="left"><p>Optional **Text</span>. Used in an aggregate field on an XML form to specify the function to apply to a collection of values or elements returned by an XPath expression. If you use the <span class="keyword">Node</span> attribute to specify an XPath expression that returns a collection of values, you can also include an <span class="keyword">Aggregation** attribute that specifies the action to take on the value set that is returned. This action can be either an aggregation function or an indication of the particular element within the collection.</p>
+<td align="left"><p>Optional **Text</span>. Used in an aggregate field on an XML form to specify the function to apply to a collection of values or elements returned by an XPath expression. If you use the **Node</span> attribute to specify an XPath expression that returns a collection of values, you can also include an **Aggregation** attribute that specifies the action to take on the value set that is returned. This action can be either an aggregation function or an indication of the particular element within the collection.</p>
 <p>Possible values include the following:</p>
 <ul>
 <li><p>**sum**   Add the values.</p></li>
@@ -209,31 +209,31 @@ that a user can add to a list.
 <li><p>**first**   Apply property promotion and demotion to the first element in the collection.</p></li>
 <li><p>**last**   Apply property promotion and demotion to the last element in the collection.</p></li>
 </ul>
-<p>For more information about how the **Node</span>, <span class="keyword">PIAttribute</span>, <span class="keyword">PITarget</span>, <span class="keyword">Primary</span><span class="keyword">PIAttribute</span>, and <span class="keyword">PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
+<p>For more information about how the **Node</span>, **PIAttribute</span>, **PITarget</span>, **Primary</span>**PIAttribute</span>, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**AllowDeletion**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** if the field can be deleted.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** if the field can be deleted.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**AllowHyperlink**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** if hyperlinks can be used in the field.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** if hyperlinks can be used in the field.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**AllowMultiVote**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** if multiple responses are allowed in a survey.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** if multiple responses are allowed in a survey.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**AppendOnly**</p></td>
-<td align="left"><p>Optional **Boolean</span>. When versioning is enabled in the list, <span class="keyword">TRUE</span> if text can only be appended to existing text in the <span class="keyword">Note** field.</p></td>
+<td align="left"><p>Optional **Boolean</span>. When versioning is enabled in the list, **TRUE</span> if text can only be appended to existing text in the **Note** field.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**AuthoringInfo**</p></td>
-<td align="left"><p>Optional **Text</span>. A descriptive string that is displayed in the field editing pages to identify the field and its purpose; for example, the <span class="keyword">LinkTitle** field has the authoring info &quot;(link to item)&quot;. This attribute is usually used if a field of the same name exists for another purpose.</p></td>
+<td align="left"><p>Optional **Text</span>. A descriptive string that is displayed in the field editing pages to identify the field and its purpose; for example, the **LinkTitle** field has the authoring info &quot;(link to item)&quot;. This attribute is usually used if a field of the same name exists for another purpose.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**BaseType**</p></td>
-<td align="left"><p>Optional. The **BaseType</span> attribute can be set to <span class="keyword">Integer</span>, which stores values as integers, or to <span class="keyword">Text** (default), which stores values as text. You cannot create integer base-type choice fields.</p></td>
+<td align="left"><p>Optional. The **BaseType</span> attribute can be set to **Integer</span>, which stores values as integers, or to **Text** (default), which stores values as text. You cannot create integer base-type choice fields.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**CalType**</p></td>
@@ -258,11 +258,11 @@ that a user can add to a list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**CanToggleHidden**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** if the field can be hidden through the user interface.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** if the field can be hidden through the user interface.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ClassInfo**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies a cascading style sheet (CSS) class to use for the field in the standard table view. If set, the specified class is used instead of the standard <span class="keyword">ms-vb2** class.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies a cascading style sheet (CSS) class to use for the field in the standard table view. If set, the specified class is used instead of the standard **ms-vb2** class.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ColName**</p></td>
@@ -274,7 +274,7 @@ that a user can add to a list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Commas**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** if commas are used to separate thousands.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** if commas are used to separate thousands.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Customization**</p></td>
@@ -290,7 +290,7 @@ that a user can add to a list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Dir**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the direction of text for a field that supports bidirectional reading order. The possible values are <span class="keyword">LTR</span> (left-to-right), <span class="keyword">RTL</span> (right-to-left), and <span class="keyword">none**.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the direction of text for a field that supports bidirectional reading order. The possible values are **LTR</span> (left-to-right), **RTL</span> (right-to-left), and **none**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Direction**</p></td>
@@ -298,7 +298,7 @@ that a user can add to a list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**DisplaceOnUpgrade**</p></td>
-<td align="left"><p>Optional **Boolean</span>. If a field definition already exists for the field, <span class="keyword">TRUE** to force updates to field properties with the values that are specified in this field definition.</p></td>
+<td align="left"><p>Optional **Boolean</span>. If a field definition already exists for the field, **TRUE** to force updates to field properties with the values that are specified in this field definition.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**DisplayImage**</p></td>
@@ -306,7 +306,7 @@ that a user can add to a list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**DisplayName**</p></td>
-<td align="left"><p>Optional **Text</span>. The displayed name for a field. There is no restriction on text size or use of spaces. The display name can be edited by the user and can change after initial field creation. This name is used as a column heading when the field is displayed in a table view and as a form label when the field is displayed in a form. The &lt;FieldName/&gt; tag returns the display name if given; otherwise, it defaults to the <span class="keyword">Name** attribute.</p></td>
+<td align="left"><p>Optional **Text</span>. The displayed name for a field. There is no restriction on text size or use of spaces. The display name can be edited by the user and can change after initial field creation. This name is used as a column heading when the field is displayed in a table view and as a form label when the field is displayed in a form. The &lt;FieldName/&gt; tag returns the display name if given; otherwise, it defaults to the **Name** attribute.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**DisplayNameSrcField**</p></td>
@@ -318,11 +318,11 @@ that a user can add to a list.
 </tr>
 <tr class="even">
 <td align="left"><p>**Div**</p></td>
-<td align="left"><p>Optional **Number</span>. A scale factor used in division before displaying a number. The display number is N * Mult / Div (rounded up to the number specified by <span class="keyword">Decimals**).</p></td>
+<td align="left"><p>Optional **Number</span>. A scale factor used in division before displaying a number. The display number is N * Mult / Div (rounded up to the number specified by **Decimals**).</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**EnableLookup**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to enable lookup values in the field.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to enable lookup values in the field.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**EnforceUniqueValues**</p></td>
@@ -330,7 +330,7 @@ that a user can add to a list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**ExceptionImage**</p></td>
-<td align="left"><p>Optional **Text</span>. Used in a <span class="keyword">Recurrence** field type to specify the name of the image file to use for exceptions.</p></td>
+<td align="left"><p>Optional **Text</span>. Used in a **Recurrence** field type to specify the name of the image file to use for exceptions.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**FieldRef**</p></td>
@@ -338,15 +338,15 @@ that a user can add to a list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**FillInChoice**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** if the field allows users to fill in values for the column.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** if the field allows users to fill in values for the column.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Filterable**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** if the field can be filtered.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** if the field can be filtered.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**FilterableNoRecurrence**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> if a filter can be created on the field in a view that does not expand recurring events. If <span class="keyword">Filterable</span> contains <span class="keyword">TRUE</span>, the field can be filtered in all views regardless of how <span class="keyword">FilterableNoRecurrence** is set.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> if a filter can be created on the field in a view that does not expand recurring events. If **Filterable</span> contains **TRUE</span>, the field can be filtered in all views regardless of how **FilterableNoRecurrence** is set.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ForcedDisplay**</p></td>
@@ -363,15 +363,15 @@ that a user can add to a list.
 <ul>
 <li><p>**DateOnly**   Display (and allow edits to) only the date portion (the time portion is set to 12:00 A.M. for all edited values).</p></li>
 <li><p>**DateTime**   Display and edit both date and time of day (default).</p></li>
-<li><p>**ISO8601</span>   Display date and time in ISO8601 time format converted to Coordinated Universal Time (UTC) format: YYYY-MM-DDTHH:MM:SSZ. This is the format used for document properties in 2007 Microsoft Office system as well as for the standard interchange format used in SharePoint Foundation between <span class="keyword">New</span> and <span class="keyword">Edit** forms and the server.</p></li>
+<li><p>**ISO8601</span>   Display date and time in ISO8601 time format converted to Coordinated Universal Time (UTC) format: YYYY-MM-DDTHH:MM:SSZ. This is the format used for document properties in 2007 Microsoft Office system as well as for the standard interchange format used in SharePoint Foundation between **New</span> and **Edit** forms and the server.</p></li>
 <li><p>**ISO8601Basic**   Use the abbreviated form of 8601 date/time formats: YYYYMMDDTHHMMSSZ. This is the format used for vCard/iCal.</p></li>
 </ul>
-<p>For Choice fields, this attribute can be set to **Dropdown</span> (default), which provides editing options through a drop-down selection, or to <span class="keyword">RadioButtons**, which provides options through a group of radio buttons.</p>
-<p>For URL fields, this attribute can be set to **Hyperlink</span> (default), which displays the URL as a normal &lt;A&gt; tag, or to <span class="keyword">Image</span>, which displays the URL as <span class="code">&lt;IMG SRC=&quot;URL&quot; ALT=&quot;Description&quot;&gt;**.</p></td>
+<p>For Choice fields, this attribute can be set to **Dropdown</span> (default), which provides editing options through a drop-down selection, or to **RadioButtons**, which provides options through a group of radio buttons.</p>
+<p>For URL fields, this attribute can be set to **Hyperlink</span> (default), which displays the URL as a normal &lt;A&gt; tag, or to **Image</span>, which displays the URL as <span class="code">&lt;IMG SRC=&quot;URL&quot; ALT=&quot;Description&quot;&gt;**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**FromBaseType**</p></td>
-<td align="left"><p>Optional **Boolean</span>. This attribute is deprecated in favor of the <span class="keyword">Sealed** attribute.</p></td>
+<td align="left"><p>Optional **Boolean</span>. This attribute is deprecated in favor of the **Sealed** attribute.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Group**</p></td>
@@ -387,15 +387,15 @@ that a user can add to a list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Hidden**</p></td>
-<td align="left"><p>Optional **Boolean</span>. If <span class="keyword">TRUE</span>, the field is completely hidden from the user interface. Setting <span class="keyword">ReadOnly</span> to <span class="keyword">TRUE** means the field is not displayed in New or Edit forms but can still be included in views.</p></td>
+<td align="left"><p>Optional **Boolean</span>. If **TRUE</span>, the field is completely hidden from the user interface. Setting **ReadOnly</span> to **TRUE** means the field is not displayed in New or Edit forms but can still be included in views.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**HTMLEncode**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to convert embedded characters so that they are displayed as text in the browser; characters that could be confused with HTML tags are converted to entities.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to convert embedded characters so that they are displayed as text in the browser; characters that could be confused with HTML tags are converted to entities.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ID**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the GUID of the field contained within braces (<span class="keyword">{}**).</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the GUID of the field contained within braces (**{}**).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Id**</p></td>
@@ -406,26 +406,26 @@ that a user can add to a list.
 <td align="left"><p>Optional **Text**. Specifies the Input Method Editor (IME) mode bias to use for the field. The IME allows for conversion of keystrokes between languages when one writing system has more characters than can be encoded for the given keyboard.</p>
 <p>Possible values include the following:</p>
 <ul>
-<li><p>**auto</span>   Not used. To specify this IME mode, set the <span class="keyword">IMEMode** property value to an empty string (&quot;&quot;).</p></li>
+<li><p>**auto</span>   Not used. To specify this IME mode, set the **IMEMode** property value to an empty string (&quot;&quot;).</p></li>
 <li><p>**active**   All characters are typed through the IME, but users can still deactivate the IME.</p></li>
 <li><p>**inactive**   Characters are typed without the IME, although users can still activate the IME.</p></li>
 </ul></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Indexed**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** if the column is indexed for use in view filters.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** if the column is indexed for use in view filters.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**IsolateStyles**</p></td>
-<td align="left"><p>Optional **Boolean</span>. For a <span class="keyword">Text</span> field whose <span class="keyword">RichText</span> attribute is <span class="keyword">TRUE</span> and whose <span class="keyword">RichTextMode</span> attribute is <span class="keyword">FullHtml**, this attribute specifies that a server will rewrite the HTML of the field to ensure that it will not interfere with the rendering of the surrounding page.</p></td>
+<td align="left"><p>Optional **Boolean</span>. For a **Text</span> field whose **RichText</span> attribute is **TRUE</span> and whose **RichTextMode</span> attribute is **FullHtml**, this attribute specifies that a server will rewrite the HTML of the field to ensure that it will not interfere with the rendering of the surrounding page.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**IsRelationship**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** if the field is discoverable from the list to which it looks for its value.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** if the field is discoverable from the list to which it looks for its value.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**JoinColName**</p></td>
-<td align="left"><p>Optional **Text</span>. This attribute is defined only for Lookup fields. It is very similar to <span class="keyword">ColName**, except it denotes the name of the column that is used in the SQL JOIN between the local and external lists. Ordinarily, this value should not be customized. It is currently used only in the Field schema of certain built-in and base type fields to denote lookups into the URLs (DocMd) table, which is joined on the UrlID column.</p></td>
+<td align="left"><p>Optional **Text</span>. This attribute is defined only for Lookup fields. It is very similar to **ColName**, except it denotes the name of the column that is used in the SQL JOIN between the local and external lists. Ordinarily, this value should not be customized. It is currently used only in the Field schema of certain built-in and base type fields to denote lookups into the URLs (DocMd) table, which is joined on the UrlID column.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**JoinRowOrdinal**</p></td>
@@ -433,11 +433,11 @@ that a user can add to a list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**JoinType**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the type of JOIN used on the field. Possible values include <span class="keyword">INNER</span>, <span class="keyword">LEFT</span><span class="keyword">OUTER</span>, and <span class="keyword">RIGHT</span><span class="keyword">OUTER**.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the type of JOIN used on the field. Possible values include **INNER</span>, **LEFT</span>**OUTER</span>, and **RIGHT</span>**OUTER**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**LCID**</p></td>
-<td align="left"><p>Optional **Integer</span>. The <span class="keyword">LCID** attribute can be used to specify the country/region whose currency format is being used, for example, 1033 for the United States.</p>
+<td align="left"><p>Optional **Integer</span>. The **LCID** attribute can be used to specify the country/region whose currency format is being used, for example, 1033 for the United States.</p>
 <p>Two special cases involve the euro symbol format. If LCID = -1 (0xFFFFFFF), the euro symbol is added as a prefix to the number. If LCID = -2 (0xFFFFFFE), the euro symbol is added as a suffix to the number. The number of decimal digits is 2, although this can be overridden by the **Decimals** attribute of the field. The euro currency symbol is equal to 0x20AC in UCS-2.</p></td>
 </tr>
 <tr class="odd">
@@ -466,7 +466,7 @@ that a user can add to a list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**MaxLength**</p></td>
-<td align="left"><p>Optional **Integer</span>. Specifies the maximum number of characters allowed in a field value. Edit forms are adjusted to enforce this value, which is validated on the client. If the user attempts to enter more than the number of characters set by <span class="keyword">MaxLength**, an error message appears.</p></td>
+<td align="left"><p>Optional **Integer</span>. Specifies the maximum number of characters allowed in a field value. Edit forms are adjusted to enforce this value, which is validated on the client. If the user attempts to enter more than the number of characters set by **MaxLength**, an error message appears.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Min**</p></td>
@@ -494,7 +494,7 @@ that a user can add to a list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**NoEditFormBreak**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to prevent a line break from being added between fields in the new item form or edit item form. Some field types, such as a rich-text field, provide spacing by default, and this attribute allows control over the extra spacing that results.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to prevent a line break from being added between fields in the new item form or edit item form. Some field types, such as a rich-text field, provide spacing by default, and this attribute allows control over the extra spacing that results.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**NumLines**</p></td>
@@ -502,63 +502,63 @@ that a user can add to a list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Percentage**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** if the value is displayed as a percentage; that is, a number multiplied by 100 with a percent sign (%) appended.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** if the value is displayed as a percentage; that is, a number multiplied by 100 with a percent sign (%) appended.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**PIAttribute**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the attribute in the document processing instruction (specified by the <span class="keyword">PITarget</span> attribute) to use as the column value. Used for property promotion and demotion in XML documents. If you specify the <span class="keyword">PIAttribute</span> attribute, you must also specify the <span class="keyword">PITarget** attribute.</p>
-<p>For more information about how the **Node</span>, <span class="keyword">PIAttribute</span>, <span class="keyword">PITarget</span>, <span class="keyword">Primary PIAttribute</span>, and <span class="keyword">PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the attribute in the document processing instruction (specified by the **PITarget</span> attribute) to use as the column value. Used for property promotion and demotion in XML documents. If you specify the **PIAttribute</span> attribute, you must also specify the **PITarget** attribute.</p>
+<p>For more information about how the **Node</span>, **PIAttribute</span>, **PITarget</span>, **Primary PIAttribute</span>, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**PITarget**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the document processing instruction in which the column value is stored in documents of this content type. Used for property promotion and demotion in XML documents. If you specify the <span class="keyword">PIAttribute</span> attribute, you must also specify the <span class="keyword">PITarget** attribute.</p>
-<p>For more information about how the **Node</span>, <span class="keyword">PIAttribute</span>, <span class="keyword">PITarget</span>, <span class="keyword">Primary PIAttribute</span>, and <span class="keyword">PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the document processing instruction in which the column value is stored in documents of this content type. Used for property promotion and demotion in XML documents. If you specify the **PIAttribute</span> attribute, you must also specify the **PITarget** attribute.</p>
+<p>For more information about how the **Node</span>, **PIAttribute</span>, **PITarget</span>, **Primary PIAttribute</span>, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**PrependId**</p></td>
-<td align="left"><p>Optional **Boolean</span>. Used in Issue Tracking lists, <span class="keyword">TRUE** to display the collection IDs of related issue items in Edit and New item forms.</p></td>
+<td align="left"><p>Optional **Boolean</span>. Used in Issue Tracking lists, **TRUE** to display the collection IDs of related issue items in Edit and New item forms.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Presence**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** if user information is present for the field.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** if user information is present for the field.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**PrimaryKey**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** if the field is the primary key in the relationship between the list and another list.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** if the field is the primary key in the relationship between the list and another list.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**PrimaryPIAttribute**</p></td>
-<td align="left"><p>Optional **Text</span>. Used for property promotion and demotion in XML documents. Specifies an alternate attribute in the document processing instruction, specified by the <span class="keyword">PrimaryPITarget</span>, to use as the column value. If you specify the <span class="keyword">PrimaryPIAttribute</span> attribute, you must also specify the <span class="keyword">PrimaryPITarget</span> attribute. If specified, SharePoint Foundation uses these values before those specified in the <span class="keyword">PITarget</span> and <span class="keyword">PIAttribute** attributes.</p>
-<p>For more information about how the **Node</span>, <span class="keyword">PIAttribute</span>, <span class="keyword">PITarget</span>, <span class="keyword">Primary PIAttribute</span>, and <span class="keyword">PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
+<td align="left"><p>Optional **Text</span>. Used for property promotion and demotion in XML documents. Specifies an alternate attribute in the document processing instruction, specified by the **PrimaryPITarget</span>, to use as the column value. If you specify the **PrimaryPIAttribute</span> attribute, you must also specify the **PrimaryPITarget</span> attribute. If specified, SharePoint Foundation uses these values before those specified in the **PITarget</span> and **PIAttribute** attributes.</p>
+<p>For more information about how the **Node</span>, **PIAttribute</span>, **PITarget</span>, **Primary PIAttribute</span>, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**PrimaryPITarget**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies an alternative document processing instruction in which the column value is stored for documents of this content type. If you specify the <span class="keyword">PrimaryPIAttribute</span> attribute, you must also specify the <span class="keyword">PrimaryPITarget</span> attribute. If specified, SharePoint Foundation uses these values before those specified in the <span class="keyword">PITarget</span> and <span class="keyword">PIAttribute** attributes.</p>
-<p>For more information about how the **Node</span>, <span class="keyword">PIAttribute</span>, <span class="keyword">PITarget</span>, <span class="keyword">Primary PIAttribute</span>, and <span class="keyword">PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies an alternative document processing instruction in which the column value is stored for documents of this content type. If you specify the **PrimaryPIAttribute</span> attribute, you must also specify the **PrimaryPITarget</span> attribute. If specified, SharePoint Foundation uses these values before those specified in the **PITarget</span> and **PIAttribute** attributes.</p>
+<p>For more information about how the **Node</span>, **PIAttribute</span>, **PITarget</span>, **Primary PIAttribute</span>, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ReadOnly**</p></td>
-<td align="left"><p>Optional **Boolean</span>. If <span class="keyword">TRUE</span>, the field is not displayed in New or Edit forms but can be included in views. In addition, setting <span class="keyword">ReadOnly</span> to <span class="keyword">TRUE</span> hides the field from Site Settings pages for managing site columns and content types. Setting the <span class="keyword">Hidden</span> attribute to <span class="keyword">TRUE</span> completely hides the field from the UI. If you do not include this attribute, SharePoint Foundation treats the column as if this attribute is set to <span class="keyword">False**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. If **TRUE</span>, the field is not displayed in New or Edit forms but can be included in views. In addition, setting **ReadOnly</span> to **TRUE</span> hides the field from Site Settings pages for managing site columns and content types. Setting the **Hidden</span> attribute to **TRUE</span> completely hides the field from the UI. If you do not include this attribute, SharePoint Foundation treats the column as if this attribute is set to **False**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ReadOnlyEnforced**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to specify that the user cannot change the field by any means and that it can only be changed by the system.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the user cannot change the field by any means and that it can only be changed by the system.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**RelationshipDeleteBehavior**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the delete behavior of the field. Possible values include <span class="keyword">Cascade</span>, <span class="keyword">Restrict</span> and <span class="keyword">None**.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the delete behavior of the field. Possible values include **Cascade</span>, **Restrict</span> and **None**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**RenderXMLUsingPattern**</p></td>
-<td align="left"><p>Optional **Boolean</span>. Used for computed fields to determine the display format. If <span class="keyword">TRUE</span>, values are rendered based on the display pattern of the computed field, rather than on the column value of the first noncomputed field reference upon which the computed field is based. For example, in a picture library, the Picture Size column is represented by <span class="placeholder">width</span> x <span class="placeholder">height</span>, but if this attribute is not set to <span class="keyword">TRUE</span>, only the first field reference, <span class="placeholder">width</span>, is displayed. If it is set to <span class="keyword">TRUE</span>, the format of <span class="placeholder">width</span> x <span class="placeholder">height** is displayed.</p></td>
+<td align="left"><p>Optional **Boolean</span>. Used for computed fields to determine the display format. If **TRUE</span>, values are rendered based on the display pattern of the computed field, rather than on the column value of the first noncomputed field reference upon which the computed field is based. For example, in a picture library, the Picture Size column is represented by <span class="placeholder">width</span> x <span class="placeholder">height</span>, but if this attribute is not set to **TRUE</span>, only the first field reference, <span class="placeholder">width</span>, is displayed. If it is set to **TRUE</span>, the format of <span class="placeholder">width</span> x <span class="placeholder">height** is displayed.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Required**</p></td>
-<td align="left"><p>Optional **Boolean</span>. If <span class="keyword">TRUE</span>, the field must not have an empty value assigned to it. If a nonempty field value is not given in a form post, either the standard required-field text or an explicitly specified message (that is, via &lt;ErrorText&gt; tags) is displayed in the error form. This validation is handled only by the client (the database always allows <span class="keyword">NULL** for all user-defined fields).</p></td>
+<td align="left"><p>Optional **Boolean</span>. If **TRUE</span>, the field must not have an empty value assigned to it. If a nonempty field value is not given in a form post, either the standard required-field text or an explicitly specified message (that is, via &lt;ErrorText&gt; tags) is displayed in the error form. This validation is handled only by the client (the database always allows **NULL** for all user-defined fields).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**RestrictedMode**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to not allow the <span class="keyword">Note** field to contain enhanced rich text formatting, such as pictures, tables, or hyperlinks, nor to allow pasting formatted text into the field.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to not allow the **Note** field to contain enhanced rich text formatting, such as pictures, tables, or hyperlinks, nor to allow pasting formatted text into the field.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ResultType**</p></td>
@@ -566,7 +566,7 @@ that a user can add to a list.
 </tr>
 <tr class="even">
 <td align="left"><p>**RichText**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** if the field displays rich text formatting.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** if the field displays rich text formatting.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**RowOrdinal**</p></td>
@@ -574,7 +574,7 @@ that a user can add to a list.
 </tr>
 <tr class="even">
 <td align="left"><p>**Sealed**</p></td>
-<td align="left"><p>Optional **Boolean</span>. Setting this attribute to <span class="keyword">TRUE** for a field in the <a href="http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56(Office.15).aspx">Schema.xml</a> file for a list marks the field as irremovable in the Change Column page.</p></td>
+<td align="left"><p>Optional **Boolean</span>. Setting this attribute to **TRUE** for a field in the <a href="http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56(Office.15).aspx">Schema.xml</a> file for a list marks the field as irremovable in the Change Column page.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**SeparateLine**</p></td>
@@ -594,39 +594,39 @@ that a user can add to a list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**ShowField**</p></td>
-<td align="left"><p>Optional. The **ShowField</span> attribute can be set to the field name to be displayed. By default, a hyperlinked text from the Title field of the record in the external list is displayed. But the <span class="keyword">ShowField</span> attribute can be used to override that and display another field from the external list. The following data types are allowed as targets of a <span class="keyword">ShowField</span> attribute: <span class="keyword">Text</span>, <span class="keyword">Choice</span>, and <span class="keyword">Counter</span>. For a <span class="keyword">Lookup** field, this parameter must be set to the internal field name; setting it to the display name does not raise an error, but breaks the field.</p></td>
+<td align="left"><p>Optional. The **ShowField</span> attribute can be set to the field name to be displayed. By default, a hyperlinked text from the Title field of the record in the external list is displayed. But the **ShowField</span> attribute can be used to override that and display another field from the external list. The following data types are allowed as targets of a **ShowField</span> attribute: **Text</span>, **Choice</span>, and **Counter</span>. For a **Lookup** field, this parameter must be set to the internal field name; setting it to the display name does not raise an error, but breaks the field.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ShowInDisplayForm**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to display the field in the form for viewing the item.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to display the field in the form for viewing the item.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ShowInEditForm**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to display the field in the form for editing the item.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to display the field in the form for editing the item.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ShowInFileDlg**</p></td>
-<td align="left"><p>Optional **Boolean</span>. This attribute is valid only for fields within document library schemas. If <span class="keyword">FALSE**, the field does not show up in the property dialog box for saving forms that appears when saving from client applications. For example, the Title field has this attribute because this is set directly in the document being saved to the document library.</p></td>
+<td align="left"><p>Optional **Boolean</span>. This attribute is valid only for fields within document library schemas. If **FALSE**, the field does not show up in the property dialog box for saving forms that appears when saving from client applications. For example, the Title field has this attribute because this is set directly in the document being saved to the document library.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ShowInListSettings**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to display the column on the page for customizing list settings.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to display the column on the page for customizing list settings.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ShowInNewForm**</p></td>
-<td align="left"><p>Optional **Boolean</span>. If <span class="keyword">FALSE</span>, the field does not show up in a <span class="keyword">Fields</span> enumeration when the display mode is set to <span class="keyword">New**. Fields with this setting do not show up in the default New Item page for a given list. In particular, this is used to hide fields on the page for uploading documents to the document library.</p></td>
+<td align="left"><p>Optional **Boolean</span>. If **FALSE</span>, the field does not show up in a **Fields</span> enumeration when the display mode is set to **New**. Fields with this setting do not show up in the default New Item page for a given list. In particular, this is used to hide fields on the page for uploading documents to the document library.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ShowInVersionHistory**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to display the column on the page for viewing list item versions.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to display the column on the page for viewing list item versions.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ShowInViewForms**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to specify that the field is displayed in pages that are used to view list data.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the field is displayed in pages that are used to view list data.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Sortable**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** if values in the field can be sorted.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** if values in the field can be sorted.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**SourceID**</p></td>
@@ -638,19 +638,19 @@ that a user can add to a list.
 </tr>
 <tr class="even">
 <td align="left"><p>**StorageTZ**</p></td>
-<td align="left"><p>Specifies how date/time values are stored. When **StorageTZ</span> is set to <span class="keyword">UTC</span>, the date/time is handled as Coordinated Universal Time (UTC). To denote that a date/time value refers to &quot;abstract&quot; time, meaning that the date/time is stored in the database as entered by the user without conversion or storage of the local time zone, omit the <span class="keyword">StorageTZ** attribute.</p></td>
+<td align="left"><p>Specifies how date/time values are stored. When **StorageTZ</span> is set to **UTC</span>, the date/time is handled as Coordinated Universal Time (UTC). To denote that a date/time value refers to &quot;abstract&quot; time, meaning that the date/time is stored in the database as entered by the user without conversion or storage of the local time zone, omit the **StorageTZ** attribute.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**StripWS**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** if white space is removed from the beginning and end of field values.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** if white space is removed from the beginning and end of field values.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**SuppressNameDisplay**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to not display the name of the user in a <span class="keyword">User** field.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to not display the name of the user in a **User** field.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**TextOnly**</p></td>
-<td align="left"><p>Optional **Boolean</span>. If <span class="keyword">TRUE</span>, the field can contain only <span class="keyword">Text** values.</p></td>
+<td align="left"><p>Optional **Boolean</span>. If **TRUE</span>, the field can contain only **Text** values.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Title**</p></td>
@@ -658,7 +658,7 @@ that a user can add to a list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Type**</p></td>
-<td align="left"><p>Required **Text</span>. The data type of the field (unless the <span class="keyword">Field** element is a child of <a href="projectedfields-element-view.md">ProjectedFields</a>).</p>
+<td align="left"><p>Required **Text</span>. The data type of the field (unless the **Field** element is a child of <a href="projectedfields-element-view.md">ProjectedFields</a>).</p>
 <div class="alert">
 <table>
 <colgroup>
@@ -671,46 +671,46 @@ that a user can add to a list.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>In the Technology Preview release of Microsoft SharePoint Foundation 2010, the **Type</span> attribute has a different meaning and only one possible value (&quot;Lookup&quot;) when it is a child of <a href="projectedfields-element-view.md">ProjectedFields</a>. See <span sdata="link"><a href="projectedfields-element-view.md">ProjectedFields Element (View)</a></span> for more information about this use of <span class="keyword">Type**.</p></td>
+<td align="left"><p>In the Technology Preview release of Microsoft SharePoint Foundation 2010, the **Type</span> attribute has a different meaning and only one possible value (&quot;Lookup&quot;) when it is a child of <a href="projectedfields-element-view.md">ProjectedFields</a>. See <span sdata="link"><a href="projectedfields-element-view.md">ProjectedFields Element (View)</a></span> for more information about this use of **Type**.</p></td>
 </tr>
 </tbody>
 </table>
 </div>
 <p>SharePoint Foundation includes the following data types by default:</p>
 <ul>
-<li><p>**AllDayEvent</span>   Specifies an all day event. Corresponds to the <span class="keyword">bit** SQL data type.</p></li>
-<li><p>**Attachments</span>   Stores the URLs for attachments. Corresponds to the <span class="keyword">bit** SQL data type.</p></li>
-<li><p>**Boolean</span>   Used to store a <span class="keyword">TRUE</span>/<span class="keyword">FALSE</span> value (stored in the database as 0 or 1). This field is sortable and groupable. Corresponds to the <span class="keyword">bit</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldBoolean"><span class="nolink">SPFieldBoolean</span>** class.</p></li>
-<li><p>**Calculated</span>   Specifies a field whose value is calculated based on other columns. Corresponds to the <span class="keyword">sql_variant</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldCalculated"><span class="nolink">SPFieldCalculated</span>** class.</p></li>
-<li><p>**Choice</span>   Allows the user to specify a predetermined set of values that can be used to enter data into the field. The <span class="keyword">Choice</span> and <span class="keyword">Lookup</span> types are the most important fields for sorting and grouping. The <span class="keyword">BaseType</span> and <span class="keyword">Format</span> attributes can be used for choice fields. This field is sortable and groupable. When a value is given for a choice option, then that value is used as the submitted value for the field selection. When no value is given, that choice is submitted as the text value of the choice. In all cases, the text value of the choice is what is displayed in the UI (drop-down list or radio button text). The order in which choices appear in the editing UI is always the order that items are specified within the <span class="keyword">CHOICES</span> element. Use the <span class="keyword">MultiChoice</span> type to specify a <span class="keyword">Choice</span> field that implements check boxes and allows the user to select multiple values. Corresponds to the <span class="keyword">nvarchar</span> SQL data type and represented the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldChoice"><span class="nolink">SPFieldChoice</span>** class.</p></li>
-<li><p>**Computed</span>   Specifies a field that depends on another field for its contents. For example, a <span class="keyword">LinkTitleNoMenu</span> field amounts to surrounding a Title field value with a hyperlink. Represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldComputed"><span class="nolink">SPFieldComputed</span>** class.</p></li>
-<li><p>**ContentTypeId</span>   Contains a content type ID. For information about the format of content type IDs, see <a href="http://msdn.microsoft.com/library/81fa8d81-c4f5-4750-8f70-811620fdffcf(Office.15).aspx">Content Type IDs</a>. Corresponds to the <span class="keyword">varbinary** SQL data type.</p></li>
-<li><p>**Counter</span>   Generally used only for the internal ID field. Its integer value is set automatically to be unique with respect to every other item in the current list. The <span class="keyword">Counter</span> type is always read-only and cannot be set through a form post. This field is sortable but not groupable. Corresponds to the <span class="keyword">int** SQL data type.</p></li>
-<li><p>**CrossProjectLink</span>   Used to connect an event in a SharePoint list with a Meeting Workspace site; refers specifically to the field type of the checkbox used in New and Edit Item forms to create a Meeting Workspace site for the item. Corresponds to the <span class="keyword">bit</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldCrossProjectLink"><span class="nolink">SPFieldCrossProjectLink</span>** class.</p></li>
-<li><p>**Currency</span>   Allows for a currency value to be entered. Each currency field is tied to a specific locale's currency. In all other respects, it is treated like the <span class="keyword">Number</span> field type. Use the <span class="keyword">LCID</span> attribute to indicate a currency of a specific locale. The <span class="keyword">Decimals</span>, <span class="keyword">Max</span>, and <span class="keyword">Min</span> attributes can be used for currency types. This field is sortable and groupable. Corresponds to the <span class="keyword">float</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldCurrency"><span class="nolink">SPFieldCurrency</span>** class.</p></li>
-<li><p>**DateTime</span>   Allows for storage of a fully qualified date or time of day. Use the <span class="keyword">Format</span> attribute to specify date formatting, and use the <span class="keyword">StorageTZ</span> attribute to determine how date/time values are stored. This field is sortable and groupable. For Display mode, the order of date formatting derives from the regional settings (&quot;M/D/Y&quot; or &quot;D/M/Y&quot;). In Edit mode (or in New mode for <span class="keyword">Default</span> element value), date/times are rendered in universal format: M/D/Y hh:mm am/pm. Corresponds to the <span class="keyword">datetime</span> SQL data type and represented the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldDateTime"><span class="nolink">SPFieldDateTime</span>** class.</p></li>
-<li><p>**File</span>   Contains a file. Corresponds to the <span class="keyword">uniqueidentifier** SQL data type.</p></li>
-<li><p>**GridChoice</span>   Contains a rating scale for surveys. Corresponds to the <span class="keyword">ntext</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldRatingScale"><span class="nolink">SPFieldRatingScale</span>** class.</p></li>
-<li><p>**Guid</span>   Allows for globally unique identifiers (GUIDs). Corresponds to the <span class="keyword">uniqueidentifier** SQL data type.</p></li>
-<li><p>**Integer</span>   Allows for positive or negative integer values. The <span class="keyword">Commas</span> and <span class="keyword">NegativeFormat</span> attributes are used to specify integer formatting. Corresponds to the <span class="keyword">int** SQL data type.</p></li>
-<li><p>**Lookup</span>   Behaves very similarly to a <span class="keyword">Choice</span> field, except that the available options come from another list rather than being a hard-coded selection of values. The <span class="keyword">List</span> and <span class="keyword">ShowField</span> attributes can be used for Lookup fields. This field is sortable and groupable. For sorting and grouping, use the <span class="keyword">DisplayField</span> value (Title, by default) rather than the foreign key stored in the list. Corresponds to the <span class="keyword">int</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldLookup"><span class="nolink">SPFieldLookup</span>** class.</p></li>
-<li><p>**LookupMulti</span>   A <span class="keyword">Lookup</span> field that can contain more than one value. Parent type: <span class="keyword">Lookup**.</p></li>
-<li><p>**ModStat</span>   Contains content approval status. Possible values include <span class="keyword">Approved</span> (default), <span class="keyword">Rejected</span>, and <span class="keyword">Pending</span> (stored in the database as 0, 1, or 2, respectively). Corresponds to the <span class="keyword">int** SQL data type.</p></li>
-<li><p>**MultiChoice</span>   Specifies a <span class="keyword">Choice</span> field that implements check boxes and allows the user to select multiple values. Corresponds to the <span class="keyword">ntext</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldMultiChoice"><span class="nolink">SPFieldMultiChoice</span>** class.</p></li>
-<li><p>**MultiColumn</span>   A <span class="keyword">Note</span> field that emulates a field containing multiple values. For an example of a multicolumn field type, see <a href="http://msdn.microsoft.com/library/b3315997-671f-4c29-9518-48cc4592f205(Office.15).aspx">Custom Field Type Definition</a>. For information on multicolumn fields, see <a href="http://msdn.microsoft.com/library/62818d63-6473-42d0-b12f-251865887b33(Office.15).aspx">Custom Multicolumn Field Classes</a>. Parent type: <span class="keyword">Note**.</p></li>
-<li><p>**Note</span>   Allows users to enter multiple lines of text. This field is not sortable or groupable. All text is defined to be straight ASCII characters without HTML markup. Anything that looks like HTML markup or a URL is simply quoted (for example, Server.HTMLEncode) to look like straight text. The control for editing this format is a simple TEXTAREA block. Use the <span class="keyword">NumLines</span> attribute to specify the number of lines to display. Corresponds to the <span class="keyword">ntext</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldMultiLineText"><span class="nolink">SPFieldMultiLineText</span>** class.</p></li>
-<li><p>**Number</span>   Allows for a floating point number to be entered. This field is sortable and groupable. Numbers entered are parsed according to the current locale settings for decimal points and thousand separators. Negative numbers can be indicated by wrapping them in parentheses or by using a negative symbol. The following attributes can be used in conjunction with the <span class="keyword">Number</span> attribute to specify number formatting: <span class="keyword">Decimals</span>, <span class="keyword">Div</span>, <span class="keyword">Max</span>, <span class="keyword">Min</span>, <span class="keyword">Mult</span>, and <span class="keyword">Percentage**.</p>
+<li><p>**AllDayEvent</span>   Specifies an all day event. Corresponds to the **bit** SQL data type.</p></li>
+<li><p>**Attachments</span>   Stores the URLs for attachments. Corresponds to the **bit** SQL data type.</p></li>
+<li><p>**Boolean</span>   Used to store a **TRUE</span>/**FALSE</span> value (stored in the database as 0 or 1). This field is sortable and groupable. Corresponds to the **bit</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldBoolean"><span class="nolink">SPFieldBoolean</span>** class.</p></li>
+<li><p>**Calculated</span>   Specifies a field whose value is calculated based on other columns. Corresponds to the **sql_variant</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldCalculated"><span class="nolink">SPFieldCalculated</span>** class.</p></li>
+<li><p>**Choice</span>   Allows the user to specify a predetermined set of values that can be used to enter data into the field. The **Choice</span> and **Lookup</span> types are the most important fields for sorting and grouping. The **BaseType</span> and **Format</span> attributes can be used for choice fields. This field is sortable and groupable. When a value is given for a choice option, then that value is used as the submitted value for the field selection. When no value is given, that choice is submitted as the text value of the choice. In all cases, the text value of the choice is what is displayed in the UI (drop-down list or radio button text). The order in which choices appear in the editing UI is always the order that items are specified within the **CHOICES</span> element. Use the **MultiChoice</span> type to specify a **Choice</span> field that implements check boxes and allows the user to select multiple values. Corresponds to the **nvarchar</span> SQL data type and represented the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldChoice"><span class="nolink">SPFieldChoice</span>** class.</p></li>
+<li><p>**Computed</span>   Specifies a field that depends on another field for its contents. For example, a **LinkTitleNoMenu</span> field amounts to surrounding a Title field value with a hyperlink. Represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldComputed"><span class="nolink">SPFieldComputed</span>** class.</p></li>
+<li><p>**ContentTypeId</span>   Contains a content type ID. For information about the format of content type IDs, see <a href="http://msdn.microsoft.com/library/81fa8d81-c4f5-4750-8f70-811620fdffcf(Office.15).aspx">Content Type IDs</a>. Corresponds to the **varbinary** SQL data type.</p></li>
+<li><p>**Counter</span>   Generally used only for the internal ID field. Its integer value is set automatically to be unique with respect to every other item in the current list. The **Counter</span> type is always read-only and cannot be set through a form post. This field is sortable but not groupable. Corresponds to the **int** SQL data type.</p></li>
+<li><p>**CrossProjectLink</span>   Used to connect an event in a SharePoint list with a Meeting Workspace site; refers specifically to the field type of the checkbox used in New and Edit Item forms to create a Meeting Workspace site for the item. Corresponds to the **bit</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldCrossProjectLink"><span class="nolink">SPFieldCrossProjectLink</span>** class.</p></li>
+<li><p>**Currency</span>   Allows for a currency value to be entered. Each currency field is tied to a specific locale's currency. In all other respects, it is treated like the **Number</span> field type. Use the **LCID</span> attribute to indicate a currency of a specific locale. The **Decimals</span>, **Max</span>, and **Min</span> attributes can be used for currency types. This field is sortable and groupable. Corresponds to the **float</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldCurrency"><span class="nolink">SPFieldCurrency</span>** class.</p></li>
+<li><p>**DateTime</span>   Allows for storage of a fully qualified date or time of day. Use the **Format</span> attribute to specify date formatting, and use the **StorageTZ</span> attribute to determine how date/time values are stored. This field is sortable and groupable. For Display mode, the order of date formatting derives from the regional settings (&quot;M/D/Y&quot; or &quot;D/M/Y&quot;). In Edit mode (or in New mode for **Default</span> element value), date/times are rendered in universal format: M/D/Y hh:mm am/pm. Corresponds to the **datetime</span> SQL data type and represented the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldDateTime"><span class="nolink">SPFieldDateTime</span>** class.</p></li>
+<li><p>**File</span>   Contains a file. Corresponds to the **uniqueidentifier** SQL data type.</p></li>
+<li><p>**GridChoice</span>   Contains a rating scale for surveys. Corresponds to the **ntext</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldRatingScale"><span class="nolink">SPFieldRatingScale</span>** class.</p></li>
+<li><p>**Guid</span>   Allows for globally unique identifiers (GUIDs). Corresponds to the **uniqueidentifier** SQL data type.</p></li>
+<li><p>**Integer</span>   Allows for positive or negative integer values. The **Commas</span> and **NegativeFormat</span> attributes are used to specify integer formatting. Corresponds to the **int** SQL data type.</p></li>
+<li><p>**Lookup</span>   Behaves very similarly to a **Choice</span> field, except that the available options come from another list rather than being a hard-coded selection of values. The **List</span> and **ShowField</span> attributes can be used for Lookup fields. This field is sortable and groupable. For sorting and grouping, use the **DisplayField</span> value (Title, by default) rather than the foreign key stored in the list. Corresponds to the **int</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldLookup"><span class="nolink">SPFieldLookup</span>** class.</p></li>
+<li><p>**LookupMulti</span>   A **Lookup</span> field that can contain more than one value. Parent type: **Lookup**.</p></li>
+<li><p>**ModStat</span>   Contains content approval status. Possible values include **Approved</span> (default), **Rejected</span>, and **Pending</span> (stored in the database as 0, 1, or 2, respectively). Corresponds to the **int** SQL data type.</p></li>
+<li><p>**MultiChoice</span>   Specifies a **Choice</span> field that implements check boxes and allows the user to select multiple values. Corresponds to the **ntext</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldMultiChoice"><span class="nolink">SPFieldMultiChoice</span>** class.</p></li>
+<li><p>**MultiColumn</span>   A **Note</span> field that emulates a field containing multiple values. For an example of a multicolumn field type, see <a href="http://msdn.microsoft.com/library/b3315997-671f-4c29-9518-48cc4592f205(Office.15).aspx">Custom Field Type Definition</a>. For information on multicolumn fields, see <a href="http://msdn.microsoft.com/library/62818d63-6473-42d0-b12f-251865887b33(Office.15).aspx">Custom Multicolumn Field Classes</a>. Parent type: **Note**.</p></li>
+<li><p>**Note</span>   Allows users to enter multiple lines of text. This field is not sortable or groupable. All text is defined to be straight ASCII characters without HTML markup. Anything that looks like HTML markup or a URL is simply quoted (for example, Server.HTMLEncode) to look like straight text. The control for editing this format is a simple TEXTAREA block. Use the **NumLines</span> attribute to specify the number of lines to display. Corresponds to the **ntext</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldMultiLineText"><span class="nolink">SPFieldMultiLineText</span>** class.</p></li>
+<li><p>**Number</span>   Allows for a floating point number to be entered. This field is sortable and groupable. Numbers entered are parsed according to the current locale settings for decimal points and thousand separators. Negative numbers can be indicated by wrapping them in parentheses or by using a negative symbol. The following attributes can be used in conjunction with the **Number</span> attribute to specify number formatting: **Decimals</span>, **Div</span>, **Max</span>, **Min</span>, **Mult</span>, and **Percentage**.</p>
 <p>Corresponds to the **float</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldNumber"><span class="nolink">SPFieldNumber</span>** class.</p></li>
 <li><p>**PageSeparator</span>   Inserts a page break in a survey list. Represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldPageSeparator"><span class="nolink">SPFieldPageSeparator</span>** class.</p></li>
-<li><p>**Recurrence</span>   Used to edit and define the recurrence pattern for an item in an events list. Corresponds to the <span class="keyword">bit** SQL data type.</p></li>
-<li><p>**Text</span>   A single line of text entered in an edit box. This field is sortable and groupable. Use the <span class="keyword">MaxLength</span> attribute to set a maximum number of characters allowed. Corresponds to the <span class="keyword">nvarchar</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldText"><span class="nolink">SPFieldText</span>** class.</p></li>
-<li><p>**ThreadIndex</span>   Contains the ID that indicates the relative position of a message within a conversation thread. Corresponds to the <span class="keyword">varbinary** SQL data type.</p></li>
-<li><p>**Threading</span>   The <span class="keyword">Threading</span> field type is used in the creation and display of threaded discussion-like views. Any list can contain a threading column, but a special UI is generated when it is used. (It is never displayed as a standard editable field in a form nor as a normal column in a view.) If a sort is performed on a threading field, a pre-order traversal of all the records in a parent-child relationship is returned. This is accomplished by saving the concatenation of the creation date and ID number of all the parent records of a particular record. Corresponds to the <span class="keyword">varchar** SQL data type.</p></li>
-<li><p>**URL</span>   Used to create a freeform hyperlink. A URL field is displayed as <span class="code">&lt;A HREF=&quot;URL&quot;&gt;</span><span class="placeholder">Description</span><span class="code">&lt;/A&gt;</span>. If no description is given, it is displayed as <span class="code">&lt;A HREF=&quot;</span><span class="placeholder">URL</span><span class="code">&quot;&gt;</span><span class="placeholder">URL</span><span class="code">&lt;/A&gt;</span>. The URL text is itself stored in the URLs (DocMd) table, which stores all the URLs in SharePoint databases on the server. This is done so that any URLs that are local on the server can be updated through link fixup when their destination moves. When a record with a URL field contained within it is deleted, the corresponding referenced record from the URL table is also deleted. This field is sortable and groupable. (The sort is defined according to the textual description rather than the contents of the URL; if no description is given, it sorts the same as blank.) When <span class="keyword">Type</span> is <span class="keyword">URL</span>, the <span class="keyword">LinkType</span> attribute can be used to specify the type of link. Corresponds to the <span class="keyword">nvarchar</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldUrl"><span class="nolink">SPFieldUrl</span>** class.</p></li>
-<li><p>**User</span>   A <span class="keyword">Lookup</span> field that references the UserInfo database table. Corresponds to the <span class="keyword">int</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldUser"><span class="nolink">SPFieldUser</span>** class.</p></li>
-<li><p>**UserMulti</span>   A <span class="keyword">User</span> field that can contain more than one value. Parent type: <span class="keyword">LookupMulti**.</p></li>
-<li><p>**WorkflowEventType</span>   Specifies a workflow event type as represented by the <span sdata="cer" target="T:Microsoft.SharePoint.Workflow.SPWorkflowHistoryEventType"><span class="nolink">SPWorkflowHistoryEventType</span></span> enumeration. Parent type: <span class="keyword">Integer**.</p></li>
-<li><p>**WorkflowStatus</span>   Specifies workflow status as represented by the <span sdata="cer" target="T:Microsoft.SharePoint.Workflow.SPWorkflowStatus"><span class="nolink">SPWorkflowStatus</span></span> enumeration. Corresponds to the <span class="keyword">nvarchar** SQL data type.</p></li>
+<li><p>**Recurrence</span>   Used to edit and define the recurrence pattern for an item in an events list. Corresponds to the **bit** SQL data type.</p></li>
+<li><p>**Text</span>   A single line of text entered in an edit box. This field is sortable and groupable. Use the **MaxLength</span> attribute to set a maximum number of characters allowed. Corresponds to the **nvarchar</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldText"><span class="nolink">SPFieldText</span>** class.</p></li>
+<li><p>**ThreadIndex</span>   Contains the ID that indicates the relative position of a message within a conversation thread. Corresponds to the **varbinary** SQL data type.</p></li>
+<li><p>**Threading</span>   The **Threading</span> field type is used in the creation and display of threaded discussion-like views. Any list can contain a threading column, but a special UI is generated when it is used. (It is never displayed as a standard editable field in a form nor as a normal column in a view.) If a sort is performed on a threading field, a pre-order traversal of all the records in a parent-child relationship is returned. This is accomplished by saving the concatenation of the creation date and ID number of all the parent records of a particular record. Corresponds to the **varchar** SQL data type.</p></li>
+<li><p>**URL</span>   Used to create a freeform hyperlink. A URL field is displayed as <span class="code">&lt;A HREF=&quot;URL&quot;&gt;</span><span class="placeholder">Description</span><span class="code">&lt;/A&gt;</span>. If no description is given, it is displayed as <span class="code">&lt;A HREF=&quot;</span><span class="placeholder">URL</span><span class="code">&quot;&gt;</span><span class="placeholder">URL</span><span class="code">&lt;/A&gt;</span>. The URL text is itself stored in the URLs (DocMd) table, which stores all the URLs in SharePoint databases on the server. This is done so that any URLs that are local on the server can be updated through link fixup when their destination moves. When a record with a URL field contained within it is deleted, the corresponding referenced record from the URL table is also deleted. This field is sortable and groupable. (The sort is defined according to the textual description rather than the contents of the URL; if no description is given, it sorts the same as blank.) When **Type</span> is **URL</span>, the **LinkType</span> attribute can be used to specify the type of link. Corresponds to the **nvarchar</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldUrl"><span class="nolink">SPFieldUrl</span>** class.</p></li>
+<li><p>**User</span>   A **Lookup</span> field that references the UserInfo database table. Corresponds to the **int</span> SQL data type and represented by the <span sdata="cer" target="T:Microsoft.SharePoint.SPFieldUser"><span class="nolink">SPFieldUser</span>** class.</p></li>
+<li><p>**UserMulti</span>   A **User</span> field that can contain more than one value. Parent type: **LookupMulti**.</p></li>
+<li><p>**WorkflowEventType</span>   Specifies a workflow event type as represented by the <span sdata="cer" target="T:Microsoft.SharePoint.Workflow.SPWorkflowHistoryEventType"><span class="nolink">SPWorkflowHistoryEventType</span></span> enumeration. Parent type: **Integer**.</p></li>
+<li><p>**WorkflowStatus</span>   Specifies workflow status as represented by the <span sdata="cer" target="T:Microsoft.SharePoint.Workflow.SPWorkflowStatus"><span class="nolink">SPWorkflowStatus</span></span> enumeration. Corresponds to the **nvarchar** SQL data type.</p></li>
 </ul></td>
 </tr>
 <tr class="even">
@@ -719,15 +719,15 @@ that a user can add to a list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**UnlimitedLengthInDocumentLibrary**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to allow unlimited field length in document libraries.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to allow unlimited field length in document libraries.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**URLEncode**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to convert special characters, such as spaces, to quoted UTF-8 format, for example, %c3%ab for character ë.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format, for example, %c3%ab for character ë.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**URLEncodeAsURL**</p></td>
-<td align="left"><p>Optional **Boolean</span>. Like <span class="keyword">URLEncode</span>, but <span class="keyword">TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (&quot;/&quot;) are not encoded.</p></td>
+<td align="left"><p>Optional **Boolean</span>. Like **URLEncode</span>, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (&quot;/&quot;) are not encoded.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**UserSelectionMode**</p></td>
@@ -745,7 +745,7 @@ that a user can add to a list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Viewable**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to specify that the field is added to the default view. The default value is <span class="keyword">TRUE**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify that the field is added to the default view. The default value is **TRUE**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**WebId**</p></td>
@@ -757,7 +757,7 @@ that a user can add to a list.
 </tr>
 <tr class="even">
 <td align="left"><p>**WikiLinking**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to specify that wiki links, which appear in the form of double brackets (<span class="keyword">[[…]]</span>), become translated into HTML links, which use the <span class="keyword">DOCS-LESSTHANaDOCS-GREATERTHAN** tag.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify that wiki links, which appear in the form of double brackets (**[[…]]</span>), become translated into HTML links, which use the **DOCS-LESSTHANaDOCS-GREATERTHAN** tag.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**XName**</p></td>
@@ -897,11 +897,11 @@ used with the **Field** element.
 </tr>
 <tr class="even">
 <td align="left"><p>**ID**</p></td>
-<td align="left"><p>A **Counter</span> field type that is associated with every item in every list. The ID uniquely identifies the list item in URLs and in POST forms when editing. Specifying <span class="keyword">New</span> as the value of the <span class="keyword">ID</span> attribute in the <span class="keyword">Cmd=Save** command creates an item rather than edits a current item.</p></td>
+<td align="left"><p>A **Counter</span> field type that is associated with every item in every list. The ID uniquely identifies the list item in URLs and in POST forms when editing. Specifying **New</span> as the value of the **ID</span> attribute in the **Cmd=Save** command creates an item rather than edits a current item.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Modified**</p></td>
-<td align="left"><p>A field that contains a **DateTime</span> value specifying the time that the item was last modified (in UTC). The <span class="keyword">Modified</span> time is used as a sort of <span class="keyword">Version** field as well. The last modification date of an item is always posted when an existing item is being edited. If it does not match the current modification date, the server fails the edit and returns an error to the user, providing a link to the current data on the server (which opens in a new window), so that posted values can be copied from the old form into the new one.</p></td>
+<td align="left"><p>A field that contains a **DateTime</span> value specifying the time that the item was last modified (in UTC). The **Modified</span> time is used as a sort of **Version** field as well. The last modification date of an item is always posted when an existing item is being edited. If it does not match the current modification date, the server fails the edit and returns an error to the user, providing a link to the current data on the server (which opens in a new window), so that posted values can be copied from the old form into the new one.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ModifiedBy**</p></td>
@@ -909,7 +909,7 @@ used with the **Field** element.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Title**</p></td>
-<td align="left"><p>The generic display name of every item. It may have a different display name in different lists but the same internal field name of **Title</span>. The title is the default text to display for <span class="keyword">Lookup** fields to lists.</p></td>
+<td align="left"><p>The generic display name of every item. It may have a different display name in different lists but the same internal field name of **Title</span>. The title is the default text to display for **Lookup** fields to lists.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**LinkTitle**</p></td>
@@ -929,7 +929,7 @@ used with the **Field** element.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>The fields returned in a **Fields</span> enumeration are affected by the display mode. Fields that are marked with the <span class="keyword">Hidden</span> attribute are never returned. Fields that are marked with the <span class="keyword">ReadOnly</span> attribute are not returned if a form is being rendered (if <span class="keyword">Fields</span> is called from within a <span class="keyword">ListForm</span> element). Fields that are marked with the <span class="keyword">ShowInNewForm</span> attribute are not returned in the NEW or PREVIEWNEW display modes. Fields marked with the <span class="keyword">ShowInFileDlg</span> attribute are not returned when rendering the <span class="keyword">NewForm** dialog form.</p></td>
+<td align="left"><p>The fields returned in a **Fields</span> enumeration are affected by the display mode. Fields that are marked with the **Hidden</span> attribute are never returned. Fields that are marked with the **ReadOnly</span> attribute are not returned if a form is being rendered (if **Fields</span> is called from within a **ListForm</span> element). Fields that are marked with the **ShowInNewForm</span> attribute are not returned in the NEW or PREVIEWNEW display modes. Fields marked with the **ShowInFileDlg</span> attribute are not returned when rendering the **NewForm** dialog form.</p></td>
 </tr>
 </tbody>
 </table>

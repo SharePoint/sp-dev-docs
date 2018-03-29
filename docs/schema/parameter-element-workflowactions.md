@@ -104,11 +104,11 @@ class="keyword">WorkflowActions</span> method call.
 </tr>
 <tr class="even">
 <td align="left"><p>**Direction**</p></td>
-<td align="left"><p>Optional **text</span>. Specifies an input or output parameter. Valid values are <span class="keyword">In</span>, <span class="keyword">Out</span>, and <span class="keyword">Optional**. Values are not case-sensitive.</p></td>
+<td align="left"><p>Optional **text</span>. Specifies an input or output parameter. Valid values are **In</span>, **Out</span>, and **Optional**. Values are not case-sensitive.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Name**</p></td>
-<td align="left"><p>Required **text</span>. Used to associate the <span class="keyword">FieldBind** element with the parameter. Values are not case-sensitive.</p></td>
+<td align="left"><p>Required **text</span>. Used to associate the **FieldBind** element with the parameter. Values are not case-sensitive.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**InitialValue**</p></td>

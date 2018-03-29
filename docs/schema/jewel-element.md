@@ -160,7 +160,7 @@ Defines the Microsoft Office button.
 </tr>
 <tr class="even">
 <td align="left"><p>**CacheMenuVersions**</p></td>
-<td align="left"><p>Optional. **TRUE</span> to store previously constructed versions of a dynamic menu. The default is <span class="keyword">FALSE**.</p></td>
+<td align="left"><p>Optional. **TRUE</span> to store previously constructed versions of a dynamic menu. The default is **FALSE**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Command**</p></td>
@@ -192,11 +192,11 @@ Defines the Microsoft Office button.
 </tr>
 <tr class="even">
 <td align="left"><p>**ImageDownArrowLeft**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **ImageDownArrow</span> attribute points to an image file that contains the images for many icons. The value of the <span class="keyword">ImageDownArrowLeft</span> attribute is used to set the CSS <span class="keyword">left</span> attribute for the inline style of an HTML <span class="keyword">img** tag when the page is created.</p></td>
+<td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **ImageDownArrow</span> attribute points to an image file that contains the images for many icons. The value of the **ImageDownArrowLeft</span> attribute is used to set the CSS **left</span> attribute for the inline style of an HTML **img** tag when the page is created.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ImageDownArrowTop**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **ImageDownArrow</span> attribute points to an image file that contains the images for many icons. The value of the <span class="keyword">ImageDownArrowTop</span> attribute is used to set the CSS <span class="keyword">top</span> attribute for the inline style of an HTML <span class="keyword">img** tag when the page is created.</p></td>
+<td align="left"><p>Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **ImageDownArrow</span> attribute points to an image file that contains the images for many icons. The value of the **ImageDownArrowTop</span> attribute is used to set the CSS **top</span> attribute for the inline style of an HTML **img** tag when the page is created.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ImageSideArrow**</p></td>
@@ -392,7 +392,7 @@ Defines the Microsoft Office button.
 </tr>
 <tr class="even">
 <td align="left"><p>**PopulateDynamically**</p></td>
-<td align="left"><p>Optional. **TRUE</span> to create the menu dynamically. The default is <span class="keyword">FALSE**.</p></td>
+<td align="left"><p>Optional. **TRUE</span> to create the menu dynamically. The default is **FALSE**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**PopulateOnlyOnce**</p></td>

@@ -109,15 +109,15 @@ Specifies a type that can be used for local variables in the workflow.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Default**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">true</span> to use this type as the default variable type; otherwise, <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **true</span> to use this type as the default variable type; otherwise, **false**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ItemIdType**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">true</span> to use this type as the type for identifying list items in lists; otherwise, <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **true</span> to use this type as the type for identifying list items in lists; otherwise, **false**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Hidden**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">true</span> to hide the display of the type name; otherwise, <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **true</span> to hide the display of the type name; otherwise, **false**.</p></td>
 </tr>
 </tbody>
 </table>

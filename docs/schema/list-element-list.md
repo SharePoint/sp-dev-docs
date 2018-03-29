@@ -122,15 +122,15 @@ Top-level element that contains the definition of a list.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**BaseType**</p></td>
-<td align="left"><p>Optional **Text</span>. The <span class="keyword">BaseType</span> attribute can be set to <span class="keyword">Integer</span>, which stores values as integers, or to <span class="keyword">Text** (default), which stores values as text. Note that it is not possible to create integer base-type choice fields.</p></td>
+<td align="left"><p>Optional **Text</span>. The **BaseType</span> attribute can be set to **Integer</span>, which stores values as integers, or to **Text** (default), which stores values as text. Note that it is not possible to create integer base-type choice fields.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Default**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to specify that the list referenced in the <a href="http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx">Onet.xml</a> file be created whenever a site is created. Otherwise, the list will not be created during site creation but will be available for later instantiation.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the list referenced in the <a href="http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx">Onet.xml</a> file be created whenever a site is created. Otherwise, the list will not be created during site creation but will be available for later instantiation.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**DefaultItemOpen**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">1</span> to specify that applications which generate server transformations of items in the list open the items in a browser rather than in a separate client-side application; otherwise, <span class="keyword">0**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **1</span> to specify that applications which generate server transformations of items in the list open the items in a browser rather than in a separate client-side application; otherwise, **0**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Description**</p></td>
@@ -138,11 +138,11 @@ Top-level element that contains the definition of a list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Direction**</p></td>
-<td align="left"><p>Required **Text</span>. Specifies the direction of the reading order for the list. Possible values include <span class="keyword">RTL</span> (right-to-left), <span class="keyword">LTR</span> (left-to-right), or <span class="keyword">none**.</p></td>
+<td align="left"><p>Required **Text</span>. Specifies the direction of the reading order for the list. Possible values include **RTL</span> (right-to-left), **LTR</span> (left-to-right), or **none**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**DisableAttachments**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to disable attachments in the list.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to disable attachments in the list.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**DraftVersionVisibility**</p></td>
@@ -155,7 +155,7 @@ Top-level element that contains the definition of a list.
 </tr>
 <tr class="even">
 <td align="left"><p>**EnableContentTypes**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to enable management of content types in lists created through the list definition.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to enable management of content types in lists created through the list definition.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**EnableMinorVersions**</p></td>
@@ -163,7 +163,7 @@ Top-level element that contains the definition of a list.
 </tr>
 <tr class="even">
 <td align="left"><p>**EnableThumbnails**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to specify that document parsers in this list generate thumbnail files that correspond to documents that are saved to this list. This attribute only applies to document libraries.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that document parsers in this list generate thumbnail files that correspond to documents that are saved to this list. This attribute only applies to document libraries.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**EventSinkAssembly**</p></td>
@@ -179,7 +179,7 @@ Top-level element that contains the definition of a list.
 </tr>
 <tr class="even">
 <td align="left"><p>**FolderCreation**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to display the <span class="ui">New Folder</span> command on the <span class="ui">New** menu.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to display the <span class="ui">New Folder</span> command on the <span class="ui">New** menu.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Id**</p></td>
@@ -187,11 +187,11 @@ Top-level element that contains the definition of a list.
 </tr>
 <tr class="even">
 <td align="left"><p>**ModeratedList**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to require content approval for submitted items.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to require content approval for submitted items.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ModerationType**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to specify that the list has moderation enabled, requiring an approval process when content is created or modified.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the list has moderation enabled, requiring an approval process when content is created or modified.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Name**</p></td>
@@ -199,11 +199,11 @@ Top-level element that contains the definition of a list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**OrderedList**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to specify that the option to allow users to reorder items in the list is available on the Edit View page for the list.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the option to allow users to reorder items in the list is available on the Edit View page for the list.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**PrivateList**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to specify that the list is private.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the list is private.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**QuickLaunchUrl**</p></td>
@@ -211,7 +211,7 @@ Top-level element that contains the definition of a list.
 </tr>
 <tr class="even">
 <td align="left"><p>**RootWebOnly**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to specify that the list created from the definition exists only in the root Web site of a site collection.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the list created from the definition exists only in the root Web site of a site collection.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ThumbnailSize**</p></td>
@@ -273,11 +273,11 @@ Top-level element that contains the definition of a list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**URLEncode**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to convert special characters, such as spaces, to quoted UTF-8 format, for example, %c3%ab for character ë.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format, for example, %c3%ab for character ë.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**VersioningEnabled**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to specify within a <a href="http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56(Office.15).aspx">Schema.xml</a> file that versioning be enabled by default for document libraries created through the list definition. Setting this attribute has no effect on existing document libraries. If <span class="keyword">TRUE**, versioning can still be disabled for a document library on the New Document Library page when the library is being created.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify within a <a href="http://msdn.microsoft.com/library/c2f01064-80d8-47ee-b602-ecf4c480ac56(Office.15).aspx">Schema.xml</a> file that versioning be enabled by default for document libraries created through the list definition. Setting this attribute has no effect on existing document libraries. If **TRUE**, versioning can still be disabled for a document library on the New Document Library page when the library is being created.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**WebImageHeight**</p></td>

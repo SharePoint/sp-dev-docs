@@ -96,7 +96,7 @@ site, as defined in the UserInfo table of the content database.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**AllowAnonymous**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to allow anonymous requests without displaying a dialog box to ask for the user's password.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to allow anonymous requests without displaying a dialog box to ask for the user's password.</p></td>
 </tr>
 </tbody>
 </table>

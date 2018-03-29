@@ -96,11 +96,11 @@ Renders the URL of a particular form for a specified list.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Cmd**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the display mode appropriate for the form. Can be one of the following values for <span class="keyword">DisplayMode</span>: <span class="keyword">Display</span>, <span class="keyword">DisplayHead</span>, <span class="keyword">Edit</span>, <span class="keyword">New</span>, <span class="keyword">PreviewDisplay</span>, <span class="keyword">PreviewEdit</span>, <span class="keyword">PreviewNew</span>. This attribute can also be set to <span class="keyword">LookUp**, which is used during field rendering to return the display form in the foreign list for a lookup field.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the display mode appropriate for the form. Can be one of the following values for **DisplayMode</span>: **Display</span>, **DisplayHead</span>, **Edit</span>, **New</span>, **PreviewDisplay</span>, **PreviewEdit</span>, **PreviewNew</span>. This attribute can also be set to **LookUp**, which is used during field rendering to return the display form in the foreign list for a lookup field.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**NoID**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to return the URL of the item form without including the item ID as part of the URL.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to return the URL of the item form without including the item ID as part of the URL.</p></td>
 </tr>
 </tbody>
 </table>

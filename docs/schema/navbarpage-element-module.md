@@ -102,7 +102,7 @@ module so that other pages can be linked to the page.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Position**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the position of the UI element represented by the <span class="keyword">NavBarPage** element with respect to the top navigational area on a page. Possible values include the following:</p>
+<td align="left"><p>Optional **Text</span>. Specifies the position of the UI element represented by the **NavBarPage** element with respect to the top navigational area on a page. Possible values include the following:</p>
 <ul>
 <li><p>**Start** — add the node at the start (left/top in English) of the top navigational area.</p></li>
 <li><p>**End** — add the node to the end (right/bottom in English) of the top navigational area. Default.</p></li>

@@ -92,7 +92,7 @@ Represents a single parameter for the workflow initiation form.
 </tr>
 <tr class="even">
 <td align="left"><p>**Name**</p></td>
-<td align="left"><p>Required **Text</span>. Specifies the name of the parameter. The Name attribute value must be the same as the Name attribute of the corresponding <span class="keyword">Field** element.</p>
+<td align="left"><p>Required **Text</span>. Specifies the name of the parameter. The Name attribute value must be the same as the Name attribute of the corresponding **Field** element.</p>
 <p>The Name attribute value is also the same as the name of the workflow variable that represents the parameter.</p></td>
 </tr>
 <tr class="odd">

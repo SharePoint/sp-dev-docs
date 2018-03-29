@@ -107,7 +107,7 @@ elements.
 <tr class="odd">
 <td align="left"><p>IsStatic</p></td>
 <td align="left"><p>Optional.</p>
-<p>Specifies whether the execution of this method requires an external item (**EntityInstance</span>) to serve as a context for execution. If set to <span class="keyword">true</span>, the method represents a static method and does not require a specific <span class="keyword">EntityInstance</span> to provide context for execution. If set to <span class="keyword">false</span>, the method represents an instance method and requires an <span class="keyword">EntityInstance** to provide the context for execution.</p>
+<p>Specifies whether the execution of this method requires an external item (**EntityInstance</span>) to serve as a context for execution. If set to **true</span>, the method represents a static method and does not require a specific **EntityInstance</span> to provide context for execution. If set to **false</span>, the method represents an instance method and requires an **EntityInstance** to provide the context for execution.</p>
 <p>Default value: **true**</p>
 <p>Attribute type: **Boolean**</p></td>
 </tr>

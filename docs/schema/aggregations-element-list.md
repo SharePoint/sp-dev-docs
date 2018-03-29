@@ -98,7 +98,7 @@ other words, for fields to which a function is applied.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Value**</p></td>
-<td align="left"><p>Optional **Text</span>. Set <span class="keyword">On** to specify that total rows are enabled for the datasheet view; otherwise, do not specify this attribute.</p></td>
+<td align="left"><p>Optional **Text</span>. Set **On** to specify that total rows are enabled for the datasheet view; otherwise, do not specify this attribute.</p></td>
 </tr>
 </tbody>
 </table>

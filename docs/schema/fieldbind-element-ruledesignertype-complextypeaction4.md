@@ -251,7 +251,7 @@ class="keyword">choice</span>, see the definition section.
 <td align="left"><p>DesignerType</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>required</p></td>
-<td align="left"><p>Specifies the type of control or user input that is presented in the workflow editor user interface. If you do not specify a **DesignerType</span> attribute, the default is used. The default <span class="keyword">DesignerType** is a text box followed by an ellipsis button (...) and a lookup button.</p></td>
+<td align="left"><p>Specifies the type of control or user input that is presented in the workflow editor user interface. If you do not specify a **DesignerType</span> attribute, the default is used. The default **DesignerType** is a text box followed by an ellipsis button (...) and a lookup button.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
@@ -265,14 +265,14 @@ class="keyword">choice</span>, see the definition section.
 <td align="left"><p>EventCategory</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
-<td align="left"><p>The category associated with the event; for example, **ListItemEvent</span> or <span class="keyword">ProjectEvent**.</p></td>
+<td align="left"><p>The category associated with the event; for example, **ListItemEvent</span> or **ProjectEvent**.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Field</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
-<td align="left"><p>Represents a **Parameter</span> element that is used to build a workflow. The <span class="keyword">Field</span> attribute maps directly to one or more <span class="keyword">Parameter** elements when a parameter type and direction are defined.</p>
+<td align="left"><p>Represents a **Parameter</span> element that is used to build a workflow. The **Field</span> attribute maps directly to one or more **Parameter** elements when a parameter type and direction are defined.</p>
 <p>If you use more than one parameter for a given **Field</span> attribute, separate the parameter by using commas (for example, <span class="code">Field=&quot;Variable,ValueType&quot;**).</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
@@ -280,21 +280,21 @@ class="keyword">choice</span>, see the definition section.
 <td align="left"><p>Function</p></td>
 <td align="left"><p>s:boolean</p></td>
 <td align="left"><p>optional</p></td>
-<td align="left"><p>When set to **true</span>, this attribute inserts the name of the associate <span class="keyword">Action** method into the sentence.</p></td>
+<td align="left"><p>When set to **true</span>, this attribute inserts the name of the associate **Action** method into the sentence.</p></td>
 <td align="left"><p>Values of the s:boolean type.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Id</p></td>
 <td align="left"><p>s:positiveInteger</p></td>
 <td align="left"><p>required</p></td>
-<td align="left"><p>An integer that serves as a relational key to associate a **FieldBind</span> element with the <span class="keyword">Sentence</span> property of the parent <span class="keyword">RuleDesigner** element.</p></td>
+<td align="left"><p>An integer that serves as a relational key to associate a **FieldBind</span> element with the **Sentence</span> property of the parent **RuleDesigner** element.</p></td>
 <td align="left"><p>Values of the s:positiveInteger type.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>OperatorTypeFrom</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
-<td align="left"><p>Specifies the types of operators that are available to the user, based on the Microsoft .NET data type listed in the corresponding **Parameter</span> element. The parameter that is specified for the <span class="keyword">OperatorTypeFrom</span> attribute can be different from the parameter that is listed in the <span class="keyword">Field** attribute.</p>
+<td align="left"><p>Specifies the types of operators that are available to the user, based on the Microsoft .NET data type listed in the corresponding **Parameter</span> element. The parameter that is specified for the **OperatorTypeFrom</span> attribute can be different from the parameter that is listed in the **Field** attribute.</p>
 <div class="alert">
 <table>
 <colgroup>
@@ -307,7 +307,7 @@ class="keyword">choice</span>, see the definition section.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>This attribute is used only when the **DesignerType</span> attribute is set to <span class="keyword">Operator**.</p></td>
+<td align="left"><p>This attribute is used only when the **DesignerType</span> attribute is set to **Operator**.</p></td>
 </tr>
 </tbody>
 </table>
@@ -325,7 +325,7 @@ class="keyword">choice</span>, see the definition section.
 <td align="left"><p>TypeFrom</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
-<td align="left"><p>Specifies the .NET data types that are valid for use with an instance of the **FieldBind</span> element. This attribute is associated with the <span class="keyword">Parameter** element that contains the type definition.</p></td>
+<td align="left"><p>Specifies the .NET data types that are valid for use with an instance of the **FieldBind</span> element. This attribute is associated with the **Parameter** element that contains the type definition.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">

@@ -178,7 +178,7 @@ None.
 <td align="left"><p>Default</p></td>
 <td align="left"><p>s:boolean</p></td>
 <td align="left"><p>optional</p></td>
-<td align="left"><p>Set to **true</span> to use this type as the default variable type; otherwise, <span class="keyword">false**.</p></td>
+<td align="left"><p>Set to **true</span> to use this type as the default variable type; otherwise, **false**.</p></td>
 <td align="left"><p>Values of the s:boolean type.</p></td>
 </tr>
 <tr class="odd">
@@ -192,14 +192,14 @@ None.
 <td align="left"><p>Hidden</p></td>
 <td align="left"><p>s:boolean</p></td>
 <td align="left"><p>optional</p></td>
-<td align="left"><p>Set to **true</span> to hide the <span class="keyword">Display Name</span> of the type; otherwise, <span class="keyword">false**.</p></td>
+<td align="left"><p>Set to **true</span> to hide the **Display Name</span> of the type; otherwise, **false**.</p></td>
 <td align="left"><p>Values of the s:boolean type.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>ItemIdType</p></td>
 <td align="left"><p>s:boolean</p></td>
 <td align="left"><p>optional</p></td>
-<td align="left"><p>Set to **true</span> to use this type as the type for identifying list items; otherwise, <span class="keyword">false**.</p></td>
+<td align="left"><p>Set to **true</span> to use this type as the type for identifying list items; otherwise, **false**.</p></td>
 <td align="left"><p>Values of the s:boolean type.</p></td>
 </tr>
 <tr class="even">

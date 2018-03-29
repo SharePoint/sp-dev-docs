@@ -140,7 +140,7 @@ elements.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Name**</p></td>
-<td align="left"><p>The name of the **OfficeItemProperty</span> from the <span class="keyword">Entities** section in the solution manifest for this field.</p>
+<td align="left"><p>The name of the **OfficeItemProperty</span> from the **Entities** section in the solution manifest for this field.</p>
 <p>Required.</p>
 <p>Attribute type: **String**</p></td>
 </tr>

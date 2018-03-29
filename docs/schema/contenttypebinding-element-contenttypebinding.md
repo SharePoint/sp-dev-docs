@@ -102,7 +102,7 @@ schema.
 </tr>
 <tr class="odd">
 <td align="left"><p>**RootWebOnly**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to associate this binding only on the root Web site in a site collection.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to associate this binding only on the root Web site in a site collection.</p></td>
 </tr>
 </tbody>
 </table>

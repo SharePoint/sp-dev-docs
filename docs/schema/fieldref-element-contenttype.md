@@ -121,7 +121,7 @@ Specifies a column to reference in this content type.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Aggregation**</p></td>
-<td align="left"><p>If you use the **Node</span> attribute to specify an XPath expression that returns a collection of values, you can also include an <span class="keyword">Aggregation** attribute that specifies the action to take on the value set that is returned.</p>
+<td align="left"><p>If you use the **Node</span> attribute to specify an XPath expression that returns a collection of values, you can also include an **Aggregation** attribute that specifies the action to take on the value set that is returned.</p>
 <p>This action can be either an aggregation function or an indication of the particular element within the collection.</p>
 <p>Possible values include the following:</p>
 <ul>
@@ -135,7 +135,7 @@ Specifies a column to reference in this content type.
 <li><p>first   Applies property promotion and demotion to the first element in the collection.</p></li>
 <li><p>last   Applies property promotion and demotion to the last element in the collection.</p></li>
 </ul>
-<p>For more information about how the **Node</span>, <span class="keyword">PIAttribute</span>, <span class="keyword">PITarget</span>, <span class="keyword">Primary</span><span class="keyword">PIAttribute</span>, and <span class="keyword">PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
+<p>For more information about how the **Node</span>, **PIAttribute</span>, **PITarget</span>, **Primary</span>**PIAttribute</span>, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Customization**</p></td>
@@ -166,29 +166,29 @@ Specifies a column to reference in this content type.
 <li><p>ISO8601Basic   Use the abbreviated form of 8601 date/time formats: YYYYMMDDTHHMMSSZ.</p>
 <p>This is the format used for vCard/iCal.</p></li>
 </ul>
-<p>For **Choice</span> fields, this attribute can be set to <span class="keyword">Dropdown</span> (default), which provides editing options through a drop-down selection, or to <span class="keyword">RadioButtons**, which provides options through a group of radio buttons.</p>
-<p>For URL fields, this attribute can be set to **Hyperlink</span> (default), which displays the URL as a normal &lt;A&gt; tag, or to <span class="keyword">Image**, which displays the URL as &lt;IMG SRC=&quot;URL&quot; ALT=&quot;Description&quot;&gt;.</p></td>
+<p>For **Choice</span> fields, this attribute can be set to **Dropdown</span> (default), which provides editing options through a drop-down selection, or to **RadioButtons**, which provides options through a group of radio buttons.</p>
+<p>For URL fields, this attribute can be set to **Hyperlink</span> (default), which displays the URL as a normal &lt;A&gt; tag, or to **Image**, which displays the URL as &lt;IMG SRC=&quot;URL&quot; ALT=&quot;Description&quot;&gt;.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Filterable**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to define the column as filterable.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to define the column as filterable.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**FilterableNoRecurrence**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to define the column as filterable with no recurring values.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to define the column as filterable with no recurring values.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**FromBaseType**</p></td>
-<td align="left"><p>Optional **Boolean</span>. This attribute has been deprecated in favor of the <span class="keyword">Sealed** attribute.</p></td>
+<td align="left"><p>Optional **Boolean</span>. This attribute has been deprecated in favor of the **Sealed** attribute.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Hidden**</p></td>
-<td align="left"><p>Optional **Boolean</span>. If <span class="keyword">TRUE</span>, the field is completely hidden from the user interface. Setting <span class="keyword">ReadOnly</span> to <span class="keyword">TRUE</span> means the field is not displayed in <span class="keyword">New</span> or <span class="keyword">Edit** forms but can still be included in views.</p>
+<td align="left"><p>Optional **Boolean</span>. If **TRUE</span>, the field is completely hidden from the user interface. Setting **ReadOnly</span> to **TRUE</span> means the field is not displayed in **New</span> or **Edit** forms but can still be included in views.</p>
 <p>If you do not include this attribute, SharePoint Foundation treats the column as if the attribute was set to **FALSE**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ID**</p></td>
-<td align="left"><p>Required **Text</span>. Specifies the field ID of the column that this <span class="keyword">FieldRef** element references. The field ID is the string representation of a GUID, including braces. The value is case sensitive.</p>
+<td align="left"><p>Required **Text</span>. Specifies the field ID of the column that this **FieldRef** element references. The field ID is the string representation of a GUID, including braces. The value is case sensitive.</p>
 <p>You can find the IDs for built-in fields in the file <span class="code">fieldswss.xml</span> located on the following path: %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\FEATURES\fields.</p></td>
 </tr>
 <tr class="even">
@@ -202,7 +202,7 @@ Specifies a column to reference in this content type.
 <tr class="even">
 <td align="left"><p>**Node**</p></td>
 <td align="left"><p>Optional **Text**. Specifies the XML node in the document which contains the column value. Used for property promotion and demotion in XML documents.</p>
-<p>For more information about how the **Node</span>, <span class="keyword">PIAttribute</span>, <span class="keyword">PITarget</span>, <span class="keyword">Primary PIAttribute</span>, and <span class="keyword">PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
+<p>For more information about how the **Node</span>, **PIAttribute</span>, **PITarget</span>, **Primary PIAttribute</span>, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**NumLines**</p></td>
@@ -210,66 +210,66 @@ Specifies a column to reference in this content type.
 </tr>
 <tr class="even">
 <td align="left"><p>**PIAttribute**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the attribute in the document processing instruction (specified by the <span class="keyword">PITarget** attribute) to use as the column value. Used for property promotion and demotion in XML documents.</p>
-<p>If you specify the **PIAttribute</span> attribute, you must also specify the <span class="keyword">PITarget** attribute.</p>
-<p>For more information about how the **Node</span>, <span class="keyword">PIAttribute</span>, <span class="keyword">PITarget</span>, <span class="keyword">Primary PIAttribute</span>, and <span class="keyword">PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the attribute in the document processing instruction (specified by the **PITarget** attribute) to use as the column value. Used for property promotion and demotion in XML documents.</p>
+<p>If you specify the **PIAttribute</span> attribute, you must also specify the **PITarget** attribute.</p>
+<p>For more information about how the **Node</span>, **PIAttribute</span>, **PITarget</span>, **Primary PIAttribute</span>, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**PITarget**</p></td>
 <td align="left"><p>Optional **Text**. Specifies the document processing instruction in which the column value is stored in documents of this content type. Used for property promotion and demotion in XML documents.</p>
-<p>If you specify the **PIAttribute</span> attribute, you must also specify the <span class="keyword">PITarget** attribute.</p>
-<p>For more information about how the **Node</span>, <span class="keyword">PIAttribute</span>, <span class="keyword">PITarget</span>, <span class="keyword">Primary PIAttribute</span>, and <span class="keyword">PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
+<p>If you specify the **PIAttribute</span> attribute, you must also specify the **PITarget** attribute.</p>
+<p>For more information about how the **Node</span>, **PIAttribute</span>, **PITarget</span>, **Primary PIAttribute</span>, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**PrimaryPIAttribute**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies an alternate attribute in the document processing instruction, specified by the <span class="keyword">PrimaryPITarget**, to use as the column value.</p>
-<p>If you specify the **PrimaryPIAttribute</span> attribute, you must also specify the <span class="keyword">PrimaryPITarget</span> attribute. If specified, SharePoint Foundation uses these values before those specified in the <span class="keyword">PITarget</span> and <span class="keyword">PIAttribute** attributes.</p>
+<td align="left"><p>Optional **Text</span>. Specifies an alternate attribute in the document processing instruction, specified by the **PrimaryPITarget**, to use as the column value.</p>
+<p>If you specify the **PrimaryPIAttribute</span> attribute, you must also specify the **PrimaryPITarget</span> attribute. If specified, SharePoint Foundation uses these values before those specified in the **PITarget</span> and **PIAttribute** attributes.</p>
 <p>Used for property promotion and demotion in XML documents.</p>
-<p>For more information about how the **Node</span>, <span class="keyword">PIAttribute</span>, <span class="keyword">PITarget</span>, <span class="keyword">Primary PIAttribute</span>, and <span class="keyword">PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
+<p>For more information about how the **Node</span>, **PIAttribute</span>, **PITarget</span>, **Primary PIAttribute</span>, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**PrimaryPITarget**</p></td>
 <td align="left"><p>Optional **Text**. Specifies an alternative document processing instruction in which the column value is stored for documents of this content type.</p>
-<p>If you specify the **PrimaryPIAttribute</span> attribute, you must also specify the <span class="keyword">PrimaryPITarget</span> attribute. If specified, SharePoint Foundation uses these values before those specified in the <span class="keyword">PITarget</span> and <span class="keyword">PIAttribute** attributes.</p>
-<p>For more information about how the **Node</span>, <span class="keyword">PIAttribute</span>, <span class="keyword">PITarget</span>, <span class="keyword">Primary PIAttribute</span>, and <span class="keyword">PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
+<p>If you specify the **PrimaryPIAttribute</span> attribute, you must also specify the **PrimaryPITarget</span> attribute. If specified, SharePoint Foundation uses these values before those specified in the **PITarget</span> and **PIAttribute** attributes.</p>
+<p>For more information about how the **Node</span>, **PIAttribute</span>, **PITarget</span>, **Primary PIAttribute</span>, and **PrimaryPITarget** attributes are used for property promotion and demotion in XML documents, see <a href="http://msdn.microsoft.com/library/4b41b9a1-7545-44f7-ad2e-34694d3df829(Office.15).aspx">Using Content Types to Specify XML Document Properties</a>.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ReadOnly**</p></td>
-<td align="left"><p>Optional **Boolean</span>. If <span class="keyword">TRUE</span>, the field is not displayed in <span class="keyword">New</span> or <span class="keyword">Edit</span> forms but can be included in views. Setting the <span class="keyword">Hidden</span> attribute to <span class="keyword">TRUE** completely hides the field from the UI.</p>
+<td align="left"><p>Optional **Boolean</span>. If **TRUE</span>, the field is not displayed in **New</span> or **Edit</span> forms but can be included in views. Setting the **Hidden</span> attribute to **TRUE** completely hides the field from the UI.</p>
 <p>If you do not include this attribute, SharePoint Foundation treats the column as if the attribute was set to **FALSE**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Required**</p></td>
-<td align="left"><p>Required **Boolean</span>. If <span class="keyword">TRUE**, the field must have value assigned to it before an item that is created using this content type can be saved. If an empty field value is given in a form post, either the standard required-field text or an explicitly specified message (that is, via &lt;ErrorText&gt; tags) is displayed in the error form. This validation is handled by the client only (the database always allows NULL for all user-defined fields).</p></td>
+<td align="left"><p>Required **Boolean</span>. If **TRUE**, the field must have value assigned to it before an item that is created using this content type can be saved. If an empty field value is given in a form post, either the standard required-field text or an explicitly specified message (that is, via &lt;ErrorText&gt; tags) is displayed in the error form. This validation is handled by the client only (the database always allows NULL for all user-defined fields).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Sealed**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to define the column as sealed. You cannot edit sealed columns through the SharePoint Foundation user interface or object model.</p>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to define the column as sealed. You cannot edit sealed columns through the SharePoint Foundation user interface or object model.</p>
 <p>If you do not include this attribute, SharePoint Foundation treats the column as if the attribute was set to **FALSE**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ShowInDisplayForm**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to display the column on the Display form for items of this content type.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to display the column on the Display form for items of this content type.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ShowInEditForm**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to display the field on the Edit Item page.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to display the field on the Edit Item page.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ShowinFileDlg**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to display the column in the file dialog box for items of this content type.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to display the column in the file dialog box for items of this content type.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ShowInListSettings**</p></td>
-<td align="left"><p>Optional **Boolean</span>. If <span class="keyword">FALSE</span>, the field does not show up in a <span class="keyword">Fields</span> enumeration when the display mode is set to <span class="keyword">New**. Fields with this setting do not show up in the default New Item page for a given list.</p></td>
+<td align="left"><p>Optional **Boolean</span>. If **FALSE</span>, the field does not show up in a **Fields</span> enumeration when the display mode is set to **New**. Fields with this setting do not show up in the default New Item page for a given list.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ShowInNewForm**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to display the column on the New form for items of this content type.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to display the column on the New form for items of this content type.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Sortable**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** if values in the field can be sorted.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** if values in the field can be sorted.</p></td>
 </tr>
 </tbody>
 </table>
@@ -348,7 +348,7 @@ reference.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>The **ID</span>, <span class="keyword">Name</span>, <span class="keyword">DisplayName</span>, and <span class="keyword">Required</span> attributes are always required, even when the <span class="keyword">FieldRef** element references a field that is defined in the same element manifest.</p></td>
+<td align="left"><p>The **ID</span>, **Name</span>, **DisplayName</span>, and **Required</span> attributes are always required, even when the **FieldRef** element references a field that is defined in the same element manifest.</p></td>
 </tr>
 </tbody>
 </table>

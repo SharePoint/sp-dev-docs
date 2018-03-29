@@ -175,7 +175,7 @@ None.
 <td align="left"><p>Category</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>required</p></td>
-<td align="left"><p>The category associated with the event; for example, **ListItemEvent</span> or <span class="keyword">ProjectEvent**.</p></td>
+<td align="left"><p>The category associated with the event; for example, **ListItemEvent</span> or **ProjectEvent**.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">
@@ -196,7 +196,7 @@ None.
 <td align="left"><p>Name</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>required</p></td>
-<td align="left"><p>The programmatic name of the event; for example, **ItemAdded</span>, <span class="keyword">ItemUpdated**. This value originates in the list of events supported by SharePoint Foundation and Project Server 2013.</p></td>
+<td align="left"><p>The programmatic name of the event; for example, **ItemAdded</span>, **ItemUpdated**. This value originates in the list of events supported by SharePoint Foundation and Project Server 2013.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="odd">

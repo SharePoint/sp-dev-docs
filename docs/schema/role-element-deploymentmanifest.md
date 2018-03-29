@@ -134,7 +134,7 @@ class="nolink">SPRole</span></span>)
 <tr class="odd">
 <td align="left"><p>**Hidden**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Required. Specifies whether the role is hidden; **true</span> if the role is hidden, otherwise, <span class="keyword">false**.</p></td>
+<td align="left"><p>Required. Specifies whether the role is hidden; **true</span> if the role is hidden, otherwise, **false**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**RoleOrder**</p></td>

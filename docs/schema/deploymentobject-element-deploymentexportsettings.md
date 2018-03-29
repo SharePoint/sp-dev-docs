@@ -140,7 +140,7 @@ class="nolink">SPExportObject</span></span>
 <tr class="odd">
 <td align="left"><p>**ExcludeChildren**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether to exclude child objects (descendants). The value is **true</span> if children are excluded. The default is <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional. Specifies whether to exclude child objects (descendants). The value is **true</span> if children are excluded. The default is **false**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**IncludeDescendants**</p></td>

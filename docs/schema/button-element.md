@@ -123,11 +123,11 @@ Defines a push button control.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Image16by16Left**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **Image16by16</span> attribute points to an image file that contains images for many icons. The value of the <span class="keyword">Image16by16Left</span> attribute is used to set the CSS <span class="keyword">left</span> attribute for the inline style of an HTML <span class="keyword">img** tag.</p></td>
+<td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **Image16by16</span> attribute points to an image file that contains images for many icons. The value of the **Image16by16Left</span> attribute is used to set the CSS **left</span> attribute for the inline style of an HTML **img** tag.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Image16by16Top**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **Image16by16</span> attribute points to an image file that contains images for many icons. The value of the <span class="keyword">Image16by16Top</span> attribute is used to set the CSS <span class="keyword">top</span> attribute for the inline style of an HTML <span class="keyword">img** tag.</p></td>
+<td align="left"><p>Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **Image16by16</span> attribute points to an image file that contains images for many icons. The value of the **Image16by16Top</span> attribute is used to set the CSS **top</span> attribute for the inline style of an HTML **img** tag.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**LabelCss**</p></td>

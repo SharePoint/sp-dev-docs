@@ -103,12 +103,12 @@ included in the default list.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Parallel**</p></td>
-<td align="left"><p>Required **text</span>. If the user who is creating the workflow indicates that all workflow actions should be executed in parallel, the string that is defined in this attribute is used to join the <span class="keyword">Actions</span> elements in the <span class="keyword">RuleDesigner** sentence.</p>
+<td align="left"><p>Required **text</span>. If the user who is creating the workflow indicates that all workflow actions should be executed in parallel, the string that is defined in this attribute is used to join the **Actions</span> elements in the **RuleDesigner** sentence.</p>
 <p>The default value for this attribute is **and** (which is defined in the WSS.ACTIONS file) and applies only to the English language version of SharePoint Foundation 2010. This value cannot be overridden in a custom .ACTIONS file.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Sequential**</p></td>
-<td align="left"><p>Required **text</span>. If the user who is creating the workflow indicates that all workflow actions should be executed in sequence, the string that is defined in this attribute is used to join the <span class="keyword">Actions</span> elements in the <span class="keyword">RuleDesigner** sentence.</p>
+<td align="left"><p>Required **text</span>. If the user who is creating the workflow indicates that all workflow actions should be executed in sequence, the string that is defined in this attribute is used to join the **Actions</span> elements in the **RuleDesigner** sentence.</p>
 <p>The default value is **then** (which is defined in the WSS.ACTIONS file) and applies only to the English language version of SharePoint Foundation 2010. This value cannot be overridden in a custom .ACTIONS file.</p></td>
 </tr>
 </tbody>

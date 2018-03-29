@@ -158,7 +158,7 @@ Defines a section of a menu.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>A **MenuSection</span> element must contain either a <span class="keyword">Controls</span> element or a <span class="keyword">Gallery** element.</p></td>
+<td align="left"><p>A **MenuSection</span> element must contain either a **Controls</span> element or a **Gallery** element.</p></td>
 </tr>
 </tbody>
 </table>

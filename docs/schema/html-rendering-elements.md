@@ -94,7 +94,7 @@ elements.
 </tr>
 <tr class="even">
 <td align="left"><p><a href="case-element-view.md">Case</a></p></td>
-<td align="left"><p>Used inside a **Switch</span> or <span class="keyword">FieldSwitch** statement to perform a comparison.</p></td>
+<td align="left"><p>Used inside a **Switch</span> or **FieldSwitch** statement to perform a comparison.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="default-element-view.md">Default</a></p></td>
@@ -102,7 +102,7 @@ elements.
 </tr>
 <tr class="even">
 <td align="left"><p><a href="expr-element-view.md">Expr</a></p></td>
-<td align="left"><p>Contains a CAML expression that is evaluated to determine the course of action for a **Switch</span> or <span class="keyword">FieldSwitch** statement.</p></td>
+<td align="left"><p>Contains a CAML expression that is evaluated to determine the course of action for a **Switch</span> or **FieldSwitch** statement.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><a href="fieldswitch-element-view.md">FieldSwitch</a></p></td>

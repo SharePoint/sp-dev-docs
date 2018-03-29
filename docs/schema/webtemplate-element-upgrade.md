@@ -123,15 +123,15 @@ Contains the site template upgrade definition.
 </tr>
 <tr class="even">
 <td align="left"><p>**ID**</p></td>
-<td align="left"><p>Required **Integer</span>. Specifies the identifier (ID) of the site definition to be upgraded. This value corresponds to the <span class="keyword">ID** attribute of the <a href="template-element-site.md">Template</a> element.</p></td>
+<td align="left"><p>Required **Integer</span>. Specifies the identifier (ID) of the site definition to be upgraded. This value corresponds to the **ID** attribute of the <a href="template-element-site.md">Template</a> element.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**LocaleId**</p></td>
-<td align="left"><p>Optional **Integer</span>. Specifies the locales to which the site upgrade definition applies. Set to <span class="keyword">DOCS-ASTERISK</span> to imply that the definition applies to all site definition upgrades. Microsoft SharePoint Foundation implements only one upgrade definition per locale. If <span class="keyword">DOCS-ASTERISK** is specified and a locale-specific upgrade definition exists, SharePoint Foundation uses the locale-specific upgrade definition. If the locale-specific definition does not exist, SharePoint Foundation falls back to the * upgrade definition.</p></td>
+<td align="left"><p>Optional **Integer</span>. Specifies the locales to which the site upgrade definition applies. Set to **DOCS-ASTERISK</span> to imply that the definition applies to all site definition upgrades. Microsoft SharePoint Foundation implements only one upgrade definition per locale. If **DOCS-ASTERISK** is specified and a locale-specific upgrade definition exists, SharePoint Foundation uses the locale-specific upgrade definition. If the locale-specific definition does not exist, SharePoint Foundation falls back to the * upgrade definition.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**RemoveSiteExternalSecurityProvider**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">true</span> to exclude any external security provider from the upgrade; otherwise, <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **true</span> to exclude any external security provider from the upgrade; otherwise, **false**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ToSchemaVersion**</p></td>

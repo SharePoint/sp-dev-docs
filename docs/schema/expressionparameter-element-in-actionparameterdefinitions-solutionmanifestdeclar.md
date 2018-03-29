@@ -109,7 +109,7 @@ elements.
 <tr class="even">
 <td align="left"><p>Expression</p></td>
 <td align="left"><p>Required.</p>
-<p>The field name in the view in dot notation. For example, **Customer.Name</span> or <span class="keyword">Customer.Address.Zip**.</p>
+<p>The field name in the view in dot notation. For example, **Customer.Name</span> or **Customer.Address.Zip**.</p>
 <p>Attribute type: String</p></td>
 </tr>
 <tr class="odd">

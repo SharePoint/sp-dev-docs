@@ -113,7 +113,7 @@ Top-level element for a solution manifest file.
 </tr>
 <tr class="odd">
 <td align="left"><p>**ResetWebServer**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to specify that the Web server will be reset.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the Web server will be reset.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ResetWebServerModeOnUpgrade**</p></td>

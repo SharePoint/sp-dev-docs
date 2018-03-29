@@ -101,7 +101,7 @@ Designates which list is current.
 </tr>
 <tr class="even">
 <td align="left"><p>**PreserveContext**</p></td>
-<td align="left"><p>Optional **Boolean</span>. If <span class="keyword">FALSE</span>, implementing the <span class="keyword">SetList</span> element reruns the database query that is necessary to fetch the data for a form that displays a single list item. This functionality is useful when a view and a form are on the same page. The default value is <span class="keyword">TRUE**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. If **FALSE</span>, implementing the **SetList</span> element reruns the database query that is necessary to fetch the data for a form that displays a single list item. This functionality is useful when a view and a form are on the same page. The default value is **TRUE**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Scope**</p></td>

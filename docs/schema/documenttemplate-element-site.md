@@ -101,7 +101,7 @@ a Web site based on Microsoft SharePoint Foundation.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Default**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> if the template is the default choice in the <span class="ui">Template</span><span class="ui">Type** drop-down list box of the New Document Library page.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> if the template is the default choice in the <span class="ui">Template</span><span class="ui">Type** drop-down list box of the New Document Library page.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Description**</p></td>
@@ -125,7 +125,7 @@ a Web site based on Microsoft SharePoint Foundation.
 </tr>
 <tr class="odd">
 <td align="left"><p>**XMLForm**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** if the document template applies to a form library.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** if the document template applies to a form library.</p></td>
 </tr>
 </tbody>
 </table>

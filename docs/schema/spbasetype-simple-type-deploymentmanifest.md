@@ -115,7 +115,7 @@ Specifies the base type for a SharePoint list item.
 </tr>
 <tr class="odd">
 <td align="left"><p>**DiscussionBoard**</p></td>
-<td align="left"><p>Indicates the type is provided for backward compatibility with lists derived from the **DiscussionBoard</span> base type, but is no longer supported. The current version of SharePoint Foundation uses the <span class="keyword">GenericList** base type to support a discussion board template.</p></td>
+<td align="left"><p>Indicates the type is provided for backward compatibility with lists derived from the **DiscussionBoard</span> base type, but is no longer supported. The current version of SharePoint Foundation uses the **GenericList** base type to support a discussion board template.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Survey**</p></td>

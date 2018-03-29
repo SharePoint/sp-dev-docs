@@ -142,7 +142,7 @@ class="keyword">choice</span>, see the definition section.
 <tr class="odd">
 <td align="left"><p><a href="parameters-element-coercion-elementcoercions-elementworkflowinfo-elementaction4.md">Parameters</a></p></td>
 <td align="left"><p><a href="coercionparameterstype-complextype-action4.md">coercionParametersType</a></p></td>
-<td align="left"><p>Container for **Parameter</span> elements that includes descriptions of the parameters in <span class="keyword">coercion** method signatures.</p></td>
+<td align="left"><p>Container for **Parameter</span> elements that includes descriptions of the parameters in **coercion** method signatures.</p></td>
 </tr>
 </tbody>
 </table>

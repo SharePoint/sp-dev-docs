@@ -136,63 +136,63 @@ elements.
 <tbody>
 <tr class="odd">
 <td align="left"><p>Finder</p></td>
-<td align="left"><p>A type of **MethodInstance</span> that can be called to return a collection of zero or more <span class="keyword">EntityInstances</span> of a particular <span class="keyword">Entity</span>. <span class="keyword">Finder</span> input is defined by the <span class="keyword">FilterDescriptors</span> that are contained in the <span class="keyword">Method</span> that contains the <span class="keyword">Finder**.</p></td>
+<td align="left"><p>A type of **MethodInstance</span> that can be called to return a collection of zero or more **EntityInstances</span> of a particular **Entity</span>. **Finder</span> input is defined by the **FilterDescriptors</span> that are contained in the **Method</span> that contains the **Finder**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>SpecificFinder</p></td>
-<td align="left"><p>A type of **MethodInstance</span> that can be called to return a specific <span class="keyword">EntityInstance</span> of a specific <span class="keyword">Entity</span> given its <span class="keyword">EntityInstanceId</span>. <span class="keyword">SpecificFinder</span> input is defined and ordered by the <span class="keyword">Identifiers</span> that are associated with the <span class="keyword">Entity**.</p></td>
+<td align="left"><p>A type of **MethodInstance</span> that can be called to return a specific **EntityInstance</span> of a specific **Entity</span> given its **EntityInstanceId</span>. **SpecificFinder</span> input is defined and ordered by the **Identifiers</span> that are associated with the **Entity**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>GenericInvoker</p></td>
-<td align="left"><p>A type of **MethodInstance</span> that can be called to perform a specific task in an external system. <span class="keyword">GenericInvoker</span> input and output is specific to the <span class="keyword">Method**.</p></td>
+<td align="left"><p>A type of **MethodInstance</span> that can be called to perform a specific task in an external system. **GenericInvoker</span> input and output is specific to the **Method**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>IdEnumerator</p></td>
-<td align="left"><p>A type of **MethodInstance</span> that can be called to return the <span class="keyword">Field</span> values that represent the identity of <span class="keyword">EntityInstances</span> of a specific <span class="keyword">Entity</span>. The <span class="keyword">IdEnumerator</span> input is defined by the <span class="keyword">FilterDescriptors</span> that are contained in the method that contains the <span class="keyword">IdEnumerator** to get the list of IDs, which are the unique keys for each entity that should be searchable. This method instance enables external data search in Microsoft SharePoint Server 2010.</p></td>
+<td align="left"><p>A type of **MethodInstance</span> that can be called to return the **Field</span> values that represent the identity of **EntityInstances</span> of a specific **Entity</span>. The **IdEnumerator</span> input is defined by the **FilterDescriptors</span> that are contained in the method that contains the **IdEnumerator** to get the list of IDs, which are the unique keys for each entity that should be searchable. This method instance enables external data search in Microsoft SharePoint Server 2010.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>ChangedIdEnumerator</p></td>
-<td align="left"><p>A type of **MethodInstance</span> that can be called to retrieve <span class="keyword">EntityInstanceIds</span> of <span class="keyword">EntityInstances** that were modified in an external system after a specified time.</p></td>
+<td align="left"><p>A type of **MethodInstance</span> that can be called to retrieve **EntityInstanceIds</span> of **EntityInstances** that were modified in an external system after a specified time.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>DeletedIdEnumerator</p></td>
-<td align="left"><p>A type of **MethodInstance</span> that can be called to retrieve <span class="keyword">EntityInstanceIds</span> of <span class="keyword">EntityInstances** that were deleted from an external system after the specified time.</p></td>
+<td align="left"><p>A type of **MethodInstance</span> that can be called to retrieve **EntityInstanceIds</span> of **EntityInstances** that were deleted from an external system after the specified time.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Scalar</p></td>
-<td align="left"><p>A **MethodInstance</span> that returns a single value that you can invoke in the external system. For example, you can use a scalar method instance to get the total sales made to date from the external system. <span class="keyword">Entities** have zero or more scalar method instances.</p></td>
+<td align="left"><p>A **MethodInstance</span> that returns a single value that you can invoke in the external system. For example, you can use a scalar method instance to get the total sales made to date from the external system. **Entities** have zero or more scalar method instances.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>AccessChecker</p></td>
-<td align="left"><p>A type of **MethodInstance</span> that can be called to retrieve the permissions that the calling security principal has for each of a collection of <span class="keyword">EntityInstances</span> that are identified by the specified <span class="keyword">EntityInstanceIds**.</p></td>
+<td align="left"><p>A type of **MethodInstance</span> that can be called to retrieve the permissions that the calling security principal has for each of a collection of **EntityInstances</span> that are identified by the specified **EntityInstanceIds**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Creator</p></td>
-<td align="left"><p>A type of **MethodInstance</span> that can be called to create an <span class="keyword">EntityInstance</span>. The set of fields that are required to create the <span class="keyword">EntityInstance** is referred to as the Creator View.</p></td>
+<td align="left"><p>A type of **MethodInstance</span> that can be called to create an **EntityInstance</span>. The set of fields that are required to create the **EntityInstance** is referred to as the Creator View.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Deleter</p></td>
-<td align="left"><p>A type of **MethodInstance</span> that can be called to delete an <span class="keyword">EntityInstance</span> with a specified <span class="keyword">EntityInstanceId**.</p></td>
+<td align="left"><p>A type of **MethodInstance</span> that can be called to delete an **EntityInstance</span> with a specified **EntityInstanceId**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Updater</p></td>
-<td align="left"><p>A type of **MethodInstance</span> that can be called to update an <span class="keyword">EntityInstance</span> identified by a specified <span class="keyword">EntityInstanceId</span>. The set of fields that is required to update the <span class="keyword">EntityInstance** is known as the Updater View. The set of fields whose values should be passed before they are changed is known as the PreUpdater View.</p></td>
+<td align="left"><p>A type of **MethodInstance</span> that can be called to update an **EntityInstance</span> identified by a specified **EntityInstanceId</span>. The set of fields that is required to update the **EntityInstance** is known as the Updater View. The set of fields whose values should be passed before they are changed is known as the PreUpdater View.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>StreamAccessor</p></td>
-<td align="left"><p>A type of **MethodInstance</span> that can be called to retrieve a field of an <span class="keyword">EntityInstance** in the form of a data stream of bytes.</p></td>
+<td align="left"><p>A type of **MethodInstance</span> that can be called to retrieve a field of an **EntityInstance** in the form of a data stream of bytes.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>BinarySecurityDescriptorAccessor</p></td>
-<td align="left"><p>A type of **MethodInstance</span> that can be called to retrieve a sequence of bytes from an external system. The system-specific byte sequence describes a set of security principals and the associated permissions that each security principal has for the <span class="keyword">EntityInstance</span> identified by a specified <span class="keyword">EntityInstanceId**.</p></td>
+<td align="left"><p>A type of **MethodInstance</span> that can be called to retrieve a sequence of bytes from an external system. The system-specific byte sequence describes a set of security principals and the associated permissions that each security principal has for the **EntityInstance</span> identified by a specified **EntityInstanceId**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>BulkSpecificFinder</p></td>
-<td align="left"><p>A type of **MethodInstance</span> that can be called to return a set of specific <span class="keyword">EntityInstances</span> of an <span class="keyword">Entity</span>, given a set of corresponding <span class="keyword">EntityInstanceIds**.</p></td>
+<td align="left"><p>A type of **MethodInstance</span> that can be called to return a set of specific **EntityInstances</span> of an **Entity</span>, given a set of corresponding **EntityInstanceIds**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>BulkIdEnumerator</p></td>
-<td align="left"><p>A type of **MethodInstance</span> that can be called to retrieve minimal information about the external items corresponding to the given identities. This method instance can be used to optimize synchronization of cached data. This method should return only the identities and version information of the external items that correspond to given <span class="keyword">Identities**, which the calling application can compare with the local version to identify if anything has changed, and if so, request the changed external items to update the cached data.</p></td>
+<td align="left"><p>A type of **MethodInstance</span> that can be called to retrieve minimal information about the external items corresponding to the given identities. This method instance can be used to optimize synchronization of cached data. This method should return only the identities and version information of the external items that correspond to given **Identities**, which the calling application can compare with the local version to identify if anything has changed, and if so, request the changed external items to update the cached data.</p></td>
 </tr>
 </tbody>
 </table>
@@ -201,15 +201,15 @@ elements.
 <tr class="even">
 <td align="left"><p>Default</p></td>
 <td align="left"><p>Optional.</p>
-<p>Specifies whether the **MethodInstance</span> is the default among all <span class="keyword">MethodInstances</span> that share its type within the containing external content type (<span class="keyword">Entity**).</p>
+<p>Specifies whether the **MethodInstance</span> is the default among all **MethodInstances</span> that share its type within the containing external content type (**Entity**).</p>
 <p>Default value: **false**</p>
 <p>Attribute type: **Boolean**</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>ReturnParameterName</p></td>
 <td align="left"><p>Optional.</p>
-<p>The name of the **Parameter</span> that contains the <span class="keyword">ReturnTypeDescriptor</span> of the <span class="keyword">MethodInstance</span>. The <span class="keyword">Direction</span> attribute of the <span class="keyword">Parameter</span> must be a <span class="keyword">ParameterDirection</span> attribute with a value of <span class="keyword">Out</span>, <span class="keyword">InOut</span>, or <span class="keyword">Return**.</p>
-<p>This attribute must be specified for all types of **MethodInstances</span> except <span class="keyword">GenericInvoker</span>, <span class="keyword">Creator</span>, <span class="keyword">Deleter</span>, and <span class="keyword">Updater**.</p>
+<p>The name of the **Parameter</span> that contains the **ReturnTypeDescriptor</span> of the **MethodInstance</span>. The **Direction</span> attribute of the **Parameter</span> must be a **ParameterDirection</span> attribute with a value of **Out</span>, **InOut</span>, or **Return**.</p>
+<p>This attribute must be specified for all types of **MethodInstances</span> except **GenericInvoker</span>, **Creator</span>, **Deleter</span>, and **Updater**.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
@@ -291,7 +291,7 @@ elements.
 <tbody>
 <tr class="odd">
 <td align="left"><p><span sdata="link"><a href="methodinstances-element-in-method-bdcmetadata-schema.md">MethodInstances Element in Method (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The **MethodInstances</span> element that contains this <span class="keyword">MethodInstance**.</p></td>
+<td align="left"><p>The **MethodInstances</span> element that contains this **MethodInstance**.</p></td>
 </tr>
 </tbody>
 </table>

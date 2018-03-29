@@ -125,17 +125,17 @@ elements.
 <tr class="even">
 <td align="left"><p>**BaseTemplateID**</p></td>
 <td align="left"><p>**int**</p></td>
-<td align="left"><p>Required. The ID of the site definition on which the web template ultimately derives. This is the value of the **ID</span> attribute of the <span class="keyword">Template</span> element in a <span class="code">WebTemp*.xml** file.</p></td>
+<td align="left"><p>Required. The ID of the site definition on which the web template ultimately derives. This is the value of the **ID</span> attribute of the **Template</span> element in a <span class="code">WebTemp*.xml** file.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**BaseTemplateName**</p></td>
 <td align="left"><p>**string**</p></td>
-<td align="left"><p>Required. The internal name of the site definition on which the web template ultimately derives. This is the value of the **Name</span> attribute of the <span class="keyword">Template</span> element in a <span class="code">WebTemp*.xml** file.</p></td>
+<td align="left"><p>Required. The internal name of the site definition on which the web template ultimately derives. This is the value of the **Name</span> attribute of the **Template</span> element in a <span class="code">WebTemp*.xml** file.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**BaseConfigurationID**</p></td>
 <td align="left"><p>**int**</p></td>
-<td align="left"><p>Required. The ID of the site definition configuration on which the web template ultimately derives. This is the value of the **ID</span> attribute of a <span class="keyword">Configuration</span> element in a <span class="code">WebTemp*.xml** file.</p></td>
+<td align="left"><p>Required. The ID of the site definition configuration on which the web template ultimately derives. This is the value of the **ID</span> attribute of a **Configuration</span> element in a <span class="code">WebTemp*.xml** file.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**CalendarType**</p></td>

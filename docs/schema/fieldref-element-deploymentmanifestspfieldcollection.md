@@ -166,12 +166,12 @@ class="nolink">SPField</span></span>
 <tr class="odd">
 <td align="left"><p>**Hidden**</p></td>
 <td align="left"><p><span sdata="link"><a href="truefalse-simple-type-deploymentmanifest.md">TRUEFALSE Simple Type (DeploymentManifest)</a></span></p></td>
-<td align="left"><p>Optional. Specifies whether the field value is hidden in the user interface. **TRUE</span> if the value is hidden. The default is <span class="keyword">FALSE**.</p></td>
+<td align="left"><p>Optional. Specifies whether the field value is hidden in the user interface. **TRUE</span> if the value is hidden. The default is **FALSE**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Required**</p></td>
 <td align="left"><p><span sdata="link"><a href="truefalse-simple-type-deploymentmanifest.md">TRUEFALSE Simple Type (DeploymentManifest)</a></span></p></td>
-<td align="left"><p>Optional. Specifies whether the field requires a value (cannot be **null</span>). <span class="keyword">TRUE</span> if the field value is required. The default is <span class="keyword">FALSE**.</p></td>
+<td align="left"><p>Optional. Specifies whether the field requires a value (cannot be **null</span>). **TRUE</span> if the field value is required. The default is **FALSE**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Explicit**</p></td>

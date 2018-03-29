@@ -100,7 +100,7 @@ Contains the definition of a view style for a list.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**BaseType**</p></td>
-<td align="left"><p>Optional. Specifies the base type of the list. The **BaseType</span> attribute can be set to <span class="keyword">Integer</span>, which stores values as integers, or to <span class="keyword">Text** (default), which stores values as text.</p></td>
+<td align="left"><p>Optional. Specifies the base type of the list. The **BaseType</span> attribute can be set to **Integer</span>, which stores values as integers, or to **Text** (default), which stores values as text.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Description**</p></td>

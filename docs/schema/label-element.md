@@ -125,11 +125,11 @@ Defines a label control.
 </tr>
 <tr class="even">
 <td align="left"><p>**Image16by16Left**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **Image16by16</span> attribute points to an image file that contains images for many icons. The value of the <span class="keyword">Image16by16Left</span> attribute is used to set the CSS <span class="keyword">left</span> attribute for the inline style of an HTML <span class="keyword">img** tag.</p></td>
+<td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **Image16by16</span> attribute points to an image file that contains images for many icons. The value of the **Image16by16Left</span> attribute is used to set the CSS **left</span> attribute for the inline style of an HTML **img** tag.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Image16by16Top**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **Image16by16</span> attribute points to an image file that contains images for many icons. The value of the <span class="keyword">Image16by16Top</span> attribute is used to set the CSS <span class="keyword">top</span> attribute for the inline style of an HTML <span class="keyword">img** tag.</p></td>
+<td align="left"><p>Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **Image16by16</span> attribute points to an image file that contains images for many icons. The value of the **Image16by16Top</span> attribute is used to set the CSS **top</span> attribute for the inline style of an HTML **img** tag.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Sequence**</p></td>
@@ -137,7 +137,7 @@ Defines a label control.
 </tr>
 <tr class="odd">
 <td align="left"><p>**TemplateAlias**</p></td>
-<td align="left"><p>Optional. A string that matches the value of the **TemplateAlias</span> attribute for a <a href="controlref-element.md">ControlRef</a> element, an <a href="overflowarea-element.md">OverflowArea</a> element, or an <a href="overflowsection-element.md">OverflowSection</a> element in a <a href="grouptemplate-element.md">GroupTemplate</a> element. The <span class="keyword">TemplateAlias** attribute is used to size and position controls within a group when a template is applied to the group.</p></td>
+<td align="left"><p>Optional. A string that matches the value of the **TemplateAlias</span> attribute for a <a href="controlref-element.md">ControlRef</a> element, an <a href="overflowarea-element.md">OverflowArea</a> element, or an <a href="overflowsection-element.md">OverflowSection</a> element in a <a href="grouptemplate-element.md">GroupTemplate</a> element. The **TemplateAlias** attribute is used to size and position controls within a group when a template is applied to the group.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**QueryCommand**</p></td>

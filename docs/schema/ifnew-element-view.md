@@ -99,7 +99,7 @@ registry setting for which the default value is 1.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Name**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the name of a field. The default value is <span class="keyword">Created**.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the name of a field. The default value is **Created**.</p></td>
 </tr>
 </tbody>
 </table>

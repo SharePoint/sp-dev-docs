@@ -131,7 +131,7 @@ elements.
 </tr>
 <tr class="even">
 <td align="left"><p>Local</p></td>
-<td align="left"><p>The value received from the external system is **Local</span>. If the value received from the external system is <span class="keyword">Local</span>, then it will be converted to UTC. BDC sends <span class="keyword">Local** to the external system.</p></td>
+<td align="left"><p>The value received from the external system is **Local</span>. If the value received from the external system is **Local</span>, then it will be converted to UTC. BDC sends **Local** to the external system.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Unspecified</p></td>
@@ -164,7 +164,7 @@ None.
 <tbody>
 <tr class="odd">
 <td align="left"><p><span sdata="link"><a href="interpretation-element-in-typedescriptor-bdcmetadata-schema.md">Interpretation Element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>An **Interpretation</span> element that specifies the rules to apply to the data that is stored in the data structures represented by a <span class="keyword">TypeDescriptor**.</p></td>
+<td align="left"><p>An **Interpretation</span> element that specifies the rules to apply to the data that is stored in the data structures represented by a **TypeDescriptor**.</p></td>
 </tr>
 </tbody>
 </table>

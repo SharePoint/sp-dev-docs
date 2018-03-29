@@ -108,16 +108,16 @@ Defines a Feature to activate or deactivate at a specified scope.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**ActivateOnDefault**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> if the Feature is activated by default during installation or when a Web application is created; <span class="keyword">FALSE</span> if the Feature is not activated. This attribute equals <span class="keyword">TRUE</span> by default. The <span class="keyword">ActivateOnDefault</span> attribute does not apply to site collection (<span class="keyword">Site</span>) or Web site (<span class="keyword">Web**) scoped Features.</p>
-<p>In general, **Farm</span>-scoped Features become activated during installation, and when a new Web application is created, all installed <span class="keyword">Web application**-scoped Features in it become activated.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> if the Feature is activated by default during installation or when a Web application is created; **FALSE</span> if the Feature is not activated. This attribute equals **TRUE</span> by default. The **ActivateOnDefault</span> attribute does not apply to site collection (**Site</span>) or Web site (**Web**) scoped Features.</p>
+<p>In general, **Farm</span>-scoped Features become activated during installation, and when a new Web application is created, all installed **Web application**-scoped Features in it become activated.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**AlwaysForceInstall**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> if the Feature is installed by force during installation even if the Feature is already installed. For example, if set to <span class="keyword">TRUE</span>, <a href="http://msdn.microsoft.com/library/8d61e0ce-9f47-4320-aa19-7043e5dccedb(Office.15).aspx">Feature deployment event handlers</a> will always fire anytime a user tries to install the Feature (even if it is already installed) by using either the <span class="keyword">scanforfeatures</span> or <span class="keyword">installfeature</span> command-line operation. This attribute equals <span class="keyword">FALSE</span> by default. The <span class="keyword">AlwaysForceInstall** attribute affects Features of all scopes.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> if the Feature is installed by force during installation even if the Feature is already installed. For example, if set to **TRUE</span>, <a href="http://msdn.microsoft.com/library/8d61e0ce-9f47-4320-aa19-7043e5dccedb(Office.15).aspx">Feature deployment event handlers</a> will always fire anytime a user tries to install the Feature (even if it is already installed) by using either the **scanforfeatures</span> or **installfeature</span> command-line operation. This attribute equals **FALSE</span> by default. The **AlwaysForceInstall** attribute affects Features of all scopes.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**AutoActivateInCentralAdmin**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> if the Feature is activated by default in the Administrative Web site, site collection, or Web application. This attribute equals <span class="keyword">FALSE</span> by default. The <span class="keyword">AutoActivateInCentralAdmin</span> attribute does not apply to <span class="keyword">Farm**-scoped Features.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> if the Feature is activated by default in the Administrative Web site, site collection, or Web application. This attribute equals **FALSE</span> by default. The **AutoActivateInCentralAdmin</span> attribute does not apply to **Farm**-scoped Features.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Creator**</p></td>
@@ -125,7 +125,7 @@ Defines a Feature to activate or deactivate at a specified scope.
 </tr>
 <tr class="odd">
 <td align="left"><p>**DefaultResourceFile**</p></td>
-<td align="left"><p>Optional** Text</span>. Indicates a common resource file for retrieving Feature XML resources. If you do not specify a resource in the file, SharePoint Foundation looks by default in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATES\FEATURES\<span class="placeholder">FeatureName</span>\Resources\Resources. <span class="placeholder">Culture</span>.resx. However, if you want to provide a shared core resource file for all the Features in your application, you can specify an alternate file through which to access resources by using <span class="keyword">DefaultResourceFile</span>. For example, if you set <span class="keyword">DefaultResourceFile=&quot;</span><span class="placeholder">MyFile</span><span class="keyword">&quot;</span>, SharePoint Foundation looks in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\Resources\<span class="placeholder">MyFile</span>. <span class="placeholder">Culture**.resx to retrieve localized resources for your Feature.</p></td>
+<td align="left"><p>Optional** Text</span>. Indicates a common resource file for retrieving Feature XML resources. If you do not specify a resource in the file, SharePoint Foundation looks by default in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATES\FEATURES\<span class="placeholder">FeatureName</span>\Resources\Resources. <span class="placeholder">Culture</span>.resx. However, if you want to provide a shared core resource file for all the Features in your application, you can specify an alternate file through which to access resources by using **DefaultResourceFile</span>. For example, if you set **DefaultResourceFile=&quot;</span><span class="placeholder">MyFile</span>**&quot;</span>, SharePoint Foundation looks in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\Resources\<span class="placeholder">MyFile</span>. <span class="placeholder">Culture**.resx to retrieve localized resources for your Feature.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Description**</p></td>
@@ -133,7 +133,7 @@ Defines a Feature to activate or deactivate at a specified scope.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Hidden**</p></td>
-<td align="left"><p>Optional **Boolean</span>. This attribute equals <span class="keyword">FALSE** by default.</p></td>
+<td align="left"><p>Optional **Boolean</span>. This attribute equals **FALSE** by default.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Id**</p></td>
@@ -149,15 +149,15 @@ Defines a Feature to activate or deactivate at a specified scope.
 </tr>
 <tr class="odd">
 <td align="left"><p>**ReceiverAssembly**</p></td>
-<td align="left"><p>Optional** Text</span>. If set along with <span class="keyword">ReceiverClass**, specifies the strong name of the signed assembly located in the global assembly cache from which to load a receiver to handle Feature events.</p></td>
+<td align="left"><p>Optional** Text</span>. If set along with **ReceiverClass**, specifies the strong name of the signed assembly located in the global assembly cache from which to load a receiver to handle Feature events.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ReceiverClass**</p></td>
-<td align="left"><p>Optional** Text</span>. If set along with <span class="keyword">ReceiverAssembly**, specifies the class that implements the Feature event processor.</p></td>
+<td align="left"><p>Optional** Text</span>. If set along with **ReceiverAssembly**, specifies the class that implements the Feature event processor.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**RequireResources**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to specify that SharePoint Foundation check whether resources exist for the Feature by verifying that the standard &quot;sentinel&quot; resource for the Feature is present for a particular culture.</p>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that SharePoint Foundation check whether resources exist for the Feature by verifying that the standard &quot;sentinel&quot; resource for the Feature is present for a particular culture.</p>
 <p>The resource file is named according to the format <span class="placeholder">DOCS-LESSTHANFeature DirectoryDOCS-GREATERTHAN</span>\Resources\Resources. <span class="placeholder">DOCS-LESSTHANCulture NameDOCS-GREATERTHAN</span>.resx, where <span class="placeholder">DOCS-LESSTHANCulture NameDOCS-GREATERTHAN</span> is the name that identifies the culture. SharePoint Foundation supports the following formats for culture names:</p>
 <p><span class="placeholder">ll-CC</span></p>
 <p><span class="placeholder">ll-Ssss-CC</span></p>
@@ -198,13 +198,13 @@ Defines a Feature to activate or deactivate at a specified scope.
 <p>Keep in mind that the **RequireResources** attribute is enforced in the user interface only. A Feature without resources for a particular language can still be activated for a Web site through command line operations with stsadm.exe or through the object model.</p>
 <p>SharePoint Foundation does not enforce **RequireResources** for Features that are part of a larger site definition. If you supply, for example, a Thai version of a site definition by putting a webtempThai.xml in %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\1054\XML, you must verify that each Feature contained in the folder has the appropriate resources.</p></li>
 <li><p>In general, SharePoint Foundation ensures that user interface extension components of the Feature do not show up in Web sites that do not have resources, but there are exceptions. Even if you do a careful job of setting **RequireResources** and not deploying site definitions unless all Features have resources in them, Features can still show up in sites where resources are not available.</p>
-<p>As an example scenario, assume that you have a custom Feature with resources for two languages that provides custom toolbar buttons and site settings links, and that you have provisioned a new site collection with a root Web site in one of the languages. Then, after downloading and installing the language pack for a third language, you provision a new subsite in this third language under the original root Web site. If **RequireResources</span> is not set to <span class="keyword">TRUE</span>, the custom Feature will attempt to fall back and use fallback resources (in other words, those defined as <span class="code">Resources\Resources.resx</span>, with no culture.)  If there are no fallback resources, SharePoint Foundation will render empty strings. However, if <span class="keyword">RequireResources</span> is set to <span class="keyword">TRUE**, user interface extension components of the Feature (for example, those defined through a <a href="customaction-element.md">CustomAction</a>, <a href="listtemplate-element-list-template.md">ListTemplate</a>, or <a href="featuresitetemplateassociation-element-featuresitetemplateassociation.md">FeatureSiteTemplateAssociation</a> element) will not show up in subsites if no resources are available, so that the custom links and site settings will be automatically hidden.</p></li>
+<p>As an example scenario, assume that you have a custom Feature with resources for two languages that provides custom toolbar buttons and site settings links, and that you have provisioned a new site collection with a root Web site in one of the languages. Then, after downloading and installing the language pack for a third language, you provision a new subsite in this third language under the original root Web site. If **RequireResources</span> is not set to **TRUE</span>, the custom Feature will attempt to fall back and use fallback resources (in other words, those defined as <span class="code">Resources\Resources.resx</span>, with no culture.)  If there are no fallback resources, SharePoint Foundation will render empty strings. However, if **RequireResources</span> is set to **TRUE**, user interface extension components of the Feature (for example, those defined through a <a href="customaction-element.md">CustomAction</a>, <a href="listtemplate-element-list-template.md">ListTemplate</a>, or <a href="featuresitetemplateassociation-element-featuresitetemplateassociation.md">FeatureSiteTemplateAssociation</a> element) will not show up in subsites if no resources are available, so that the custom links and site settings will be automatically hidden.</p></li>
 </ul>
 <p>Setting this attribute only applies to activating Features through the user interface, and not through STSADM.EXE command-line operations or the object model.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Scope**</p></td>
-<td align="left"><p>Required** Text</span>. Specifies the scope in which the Feature can be activated and contains one of the following values: <span class="keyword">Farm</span> (farm), <span class="keyword">WebApplication</span> (Web application), <span class="keyword">Site </span>(site collection), <span class="keyword">Web** (Web site). For information about scope, see <a href="http://msdn.microsoft.com/library/d7f65b00-9a6f-4614-bca7-b1dbb43e3d16(Office.15).aspx">Element Scope</a>.</p></td>
+<td align="left"><p>Required** Text</span>. Specifies the scope in which the Feature can be activated and contains one of the following values: **Farm</span> (farm), **WebApplication</span> (Web application), **Site </span>(site collection), **Web** (Web site). For information about scope, see <a href="http://msdn.microsoft.com/library/d7f65b00-9a6f-4614-bca7-b1dbb43e3d16(Office.15).aspx">Element Scope</a>.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**SolutionId**</p></td>
@@ -228,7 +228,7 @@ Defines a Feature to activate or deactivate at a specified scope.
 </tr>
 <tr class="even">
 <td align="left"><p>**Version**</p></td>
-<td align="left"><p>Optional** Text</span>. Specifies a <span class="keyword">System.Version**-compliant representation of the version of a Feature. This can be up to four numbers delimited by decimals that represent a version.</p></td>
+<td align="left"><p>Optional** Text</span>. Specifies a **System.Version**-compliant representation of the version of a Feature. This can be up to four numbers delimited by decimals that represent a version.</p></td>
 </tr>
 </tbody>
 </table>

@@ -106,7 +106,7 @@ Represents a property that applies to a Web application.
 </tr>
 <tr class="even">
 <td align="left"><p>**HTMLEncode**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to convert embedded characters so that they are displayed as text in the browser. In other words, characters that could be confused with HTML tags are converted to entities.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to convert embedded characters so that they are displayed as text in the browser. In other words, characters that could be confused with HTML tags are converted to entities.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Name**</p></td>
@@ -118,20 +118,20 @@ Represents a property that applies to a Web application.
 </tr>
 <tr class="odd">
 <td align="left"><p>**ShowField**</p></td>
-<td align="left"><p>Optional **Text</span>. The <span class="keyword">ShowField</span> attribute can be set to the field name to display. By default, a hyperlinked text from the Title field of the record in the external list is displayed. But the <span class="keyword">ShowField** attribute can be used to override that and display another field from the external list.</p>
-<p>The following data types are allowed as targets of a **ShowField</span> attribute: <span class="keyword">Text</span>, <span class="keyword">Choice</span>, and <span class="keyword">Counter**.</p></td>
+<td align="left"><p>Optional **Text</span>. The **ShowField</span> attribute can be set to the field name to display. By default, a hyperlinked text from the Title field of the record in the external list is displayed. But the **ShowField** attribute can be used to override that and display another field from the external list.</p>
+<p>The following data types are allowed as targets of a **ShowField</span> attribute: **Text</span>, **Choice</span>, and **Counter**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**StripWS**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to remove white space from the beginning and end of the value returned by the element.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to remove white space from the beginning and end of the value returned by the element.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**URLEncode**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, %c3%ab for character ë).</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, %c3%ab for character ë).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**URLEncodeAsURL**</p></td>
-<td align="left"><p>Optional **Boolean</span>. Like <span class="keyword">URLEncode</span>, but <span class="keyword">TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (&quot;/&quot;) are not encoded.</p></td>
+<td align="left"><p>Optional **Boolean</span>. Like **URLEncode</span>, but **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (&quot;/&quot;) are not encoded.</p></td>
 </tr>
 </tbody>
 </table>

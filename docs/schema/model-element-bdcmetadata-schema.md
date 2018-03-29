@@ -120,7 +120,7 @@ elements.
 </tr>
 <tr class="odd">
 <td align="left"><p>IsCached</p></td>
-<td align="left"><p>Specifies whether the **Model</span> is used frequently. If this is set to <span class="keyword">true</span>, then the <span class="keyword">Model** is cached by the Business Data Connectivity (BDC) service.</p>
+<td align="left"><p>Specifies whether the **Model</span> is used frequently. If this is set to **true</span>, then the **Model** is cached by the Business Data Connectivity (BDC) service.</p>
 <p>Optional.</p>
 <p>Default value: **true**</p>
 <p>Attribute type: **Boolean**</p></td>
@@ -156,7 +156,7 @@ elements.
 </tr>
 <tr class="even">
 <td align="left"><p><span sdata="link"><a href="lobsystems-element-in-model-bdcmetadata-schema.md">LobSystems Element in Model (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The **LobSystems</span> contained inside this <span class="keyword">Model**.</p></td>
+<td align="left"><p>The **LobSystems</span> contained inside this **Model**.</p></td>
 </tr>
 </tbody>
 </table>

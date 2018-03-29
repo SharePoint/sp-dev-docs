@@ -139,7 +139,7 @@ target="T:System.Collections.DictionaryEntry">[DictionaryEntry](http://msdn2.mic
 <tr class="even">
 <td align="left"><p>**Access**</p></td>
 <td align="left"><p><span sdata="link"><a href="spdictionaryentryaccess-simple-type-deploymentmanifest.md">SPDictionaryEntryAccess Simple Type (DeploymentManifest)</a></span></p></td>
-<td align="left"><p>Optional. Specifies the allowable access modes for the field value. Must be a value defined in the **SPDictionaryEntryAccess</span> simple type: <span class="keyword">ReadOnly</span> or <span class="keyword">ReadWrite**.</p></td>
+<td align="left"><p>Optional. Specifies the allowable access modes for the field value. Must be a value defined in the **SPDictionaryEntryAccess</span> simple type: **ReadOnly</span> or **ReadWrite**.</p></td>
 </tr>
 </tbody>
 </table>

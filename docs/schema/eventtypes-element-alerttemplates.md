@@ -94,7 +94,7 @@ visible in the new alert page.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**IsVisible**</p></td>
-<td align="left"><p>**True</span> if event types are visible; otherwise, <span class="keyword">False**.</p></td>
+<td align="left"><p>**True</span> if event types are visible; otherwise, **False**.</p></td>
 </tr>
 </tbody>
 </table>

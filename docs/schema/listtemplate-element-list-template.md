@@ -132,15 +132,15 @@ lists on the <span class="ui">Create</span> page.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**AllowDeletion**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to specify that lists created through the template cannot be deleted; otherwise, <span class="keyword">FALSE**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify that lists created through the template cannot be deleted; otherwise, **FALSE**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**AllowEveryoneViewItems**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to allow any user to view items in the library. The <span class="keyword">AllowEveryoneViewItems** attribute is used, for example, in the Master Page gallery to give all users access to master pages.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to allow any user to view items in the library. The **AllowEveryoneViewItems** attribute is used, for example, in the Master Page gallery to give all users access to master pages.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**AlwaysIncludeContent**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to specify that list content be included by default when lists created through the template are saved as list templates in the user interface; otherwise, <span class="keyword">FALSE**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify that list content be included by default when lists created through the template are saved as list templates in the user interface; otherwise, **FALSE**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**BaseType**</p></td>
@@ -155,11 +155,11 @@ lists on the <span class="ui">Create</span> page.
 </tr>
 <tr class="odd">
 <td align="left"><p>**CacheSchema**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to enable schema caching of the list when provisioning a site. The <span class="keyword">CacheSchema** attribute is used, for example, in the global <a href="http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx">Onet.xml</a> file to enable caching of the user list for the current site collection.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to enable schema caching of the list when provisioning a site. The **CacheSchema** attribute is used, for example, in the global <a href="http://msdn.microsoft.com/library/b99d6657-d9ae-4135-a43c-c58cdfcdc6c1(Office.15).aspx">Onet.xml</a> file to enable caching of the user list for the current site collection.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Catalog**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to specify that the list definition is for a site gallery, a list gallery, or a Web Part gallery.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the list definition is for a site gallery, a list gallery, or a Web Part gallery.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Category**</p></td>
@@ -173,7 +173,7 @@ lists on the <span class="ui">Create</span> page.
 </tr>
 <tr class="even">
 <td align="left"><p>**Default**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to specify that new SharePoint sites will include this list.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that new SharePoint sites will include this list.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Description**</p></td>
@@ -181,11 +181,11 @@ lists on the <span class="ui">Create</span> page.
 </tr>
 <tr class="even">
 <td align="left"><p>**DisableAttachments**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to specify that users can attach files to items in lists created through the template; otherwise, <span class="keyword">FALSE**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify that users can attach files to items in lists created through the template; otherwise, **FALSE**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**DisallowContentTypes**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to specify that content types cannot be managed on lists created through the template; otherwise, <span class="keyword">FALSE**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify that content types cannot be managed on lists created through the template; otherwise, **FALSE**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**DisplayName**</p></td>
@@ -197,11 +197,11 @@ lists on the <span class="ui">Create</span> page.
 </tr>
 <tr class="even">
 <td align="left"><p>**DocumentTemplate**</p></td>
-<td align="left"><p>Optional **Integer</span>. Currently unused. This is valid only in a <span class="keyword">ListTemplate</span> element whose <span class="keyword">BaseType</span> is set to 1 (document libraries). For future compatibility, this should either be blank or correspond to the <span class="keyword">Type</span> attribute of a <span class="keyword">DocumentTemplate</span> element in the <span class="keyword">DocumentTemplates** enumeration. [Same as previous version, but deprecated.]</p></td>
+<td align="left"><p>Optional **Integer</span>. Currently unused. This is valid only in a **ListTemplate</span> element whose **BaseType</span> is set to 1 (document libraries). For future compatibility, this should either be blank or correspond to the **Type</span> attribute of a **DocumentTemplate</span> element in the **DocumentTemplates** enumeration. [Same as previous version, but deprecated.]</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**DontSaveInTemplate**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to exclude the content of the list when the list is saved as a custom list template or when the site to which the list belongs is saved as a custom site template through the user interface.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to exclude the content of the list when the list is saved as a custom list template or when the site to which the list belongs is saved as a custom site template through the user interface.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**EditPage**</p></td>
@@ -209,7 +209,7 @@ lists on the <span class="ui">Create</span> page.
 </tr>
 <tr class="odd">
 <td align="left"><p>**EnableModeration**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to specify that content approval is enabled by default in lists created through the template; otherwise, <span class="keyword">FALSE**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify that content approval is enabled by default in lists created through the template; otherwise, **FALSE**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**EnablePeopleSelector**</p></td>
@@ -225,15 +225,15 @@ lists on the <span class="ui">Create</span> page.
 </tr>
 <tr class="odd">
 <td align="left"><p>**FolderCreation**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to enable folder creation within the list and to specify that the <span class="ui">New Folder</span> command appears on the <span class="ui">New</span> menu in list views; otherwise, <span class="keyword">FALSE**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to enable folder creation within the list and to specify that the <span class="ui">New Folder</span> command appears on the <span class="ui">New</span> menu in list views; otherwise, **FALSE**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Hidden**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to specify that the list definition is not available on the <span class="ui">Create** page for creating lists.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify that the list definition is not available on the <span class="ui">Create** page for creating lists.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**HiddenList**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to specify that a list created from the list definition is hidden.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that a list created from the list definition is hidden.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Image**</p></td>
@@ -249,7 +249,7 @@ lists on the <span class="ui">Create</span> page.
 </tr>
 <tr class="odd">
 <td align="left"><p>**MustSaveRootFiles**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to save the pages contained within a special document library that is used internally for a Meeting Workspace site when the list template is saved without content. This attribute is not intended for public use.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to save the pages contained within a special document library that is used internally for a Meeting Workspace site when the list template is saved without content. This attribute is not intended for public use.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Name**</p></td>
@@ -261,23 +261,23 @@ lists on the <span class="ui">Create</span> page.
 </tr>
 <tr class="even">
 <td align="left"><p>**NoCrawl**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to specify that the list not be visible in search results; otherwise, <span class="keyword">FALSE**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify that the list not be visible in search results; otherwise, **FALSE**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**OnQuickLaunch**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to display lists created from the list definition on the <span class="ui">Quick</span><span class="ui">Launch** bar.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to display lists created from the list definition on the <span class="ui">Quick</span><span class="ui">Launch** bar.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Path**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the name of the site definition that contains the list definition; for example, <span class="keyword">STS**. This path is assumed to be relative to the 12\TEMPLATE directory. The path can be directed at a Features schema; for example, Features\Announcements. [Same as previous version, but deprecated.]</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the name of the site definition that contains the list definition; for example, **STS**. This path is assumed to be relative to the 12\TEMPLATE directory. The path can be directed at a Features schema; for example, Features\Announcements. [Same as previous version, but deprecated.]</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**RootWebOnly**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to specify that the list created from the definition exists only in the root Web site of a site collection. [Same as previous version, but deprecated.]</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the list created from the definition exists only in the root Web site of a site collection. [Same as previous version, but deprecated.]</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**SecurityBits**</p></td>
-<td align="left"><p>Optional **Text</span>. Defines the item-level permissions in the list for users with sufficient permission to read or edit list items. The <span class="keyword">SecurityBits** attribute contains a 2-digit string. The first digit in the string controls the read access; the second digit in the string controls the edit access. For read access, the following are valid digits:</p>
+<td align="left"><p>Optional **Text</span>. Defines the item-level permissions in the list for users with sufficient permission to read or edit list items. The **SecurityBits** attribute contains a 2-digit string. The first digit in the string controls the read access; the second digit in the string controls the edit access. For read access, the following are valid digits:</p>
 <ul>
 <li><p>**1**   Users can read all items.</p></li>
 <li><p>**2**   Users can read only their own items.</p></li>
@@ -309,7 +309,7 @@ lists on the <span class="ui">Create</span> page.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Sequence**</p></td>
-<td align="left"><p>Optional **Integer</span>. Specifies the ordering priority to use for the list template on the <span class="ui">Create</span> page. If <span class="keyword">Sequence</span> is not set, the template appears last in arbitrary order with any other templates that also lack a <span class="keyword">Sequence** value. Two templates that specify the same sequence are sorted together in an arbitrary order.</p></td>
+<td align="left"><p>Optional **Integer</span>. Specifies the ordering priority to use for the list template on the <span class="ui">Create</span> page. If **Sequence</span> is not set, the template appears last in arbitrary order with any other templates that also lack a **Sequence** value. Two templates that specify the same sequence are sorted together in an arbitrary order.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**SetupPath**</p></td>
@@ -317,7 +317,7 @@ lists on the <span class="ui">Create</span> page.
 </tr>
 <tr class="odd">
 <td align="left"><p>**SyncType**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to override the default client list type associated with a SharePoint Foundation base template.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to override the default client list type associated with a SharePoint Foundation base template.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Type**</p></td>
@@ -326,11 +326,11 @@ lists on the <span class="ui">Create</span> page.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Unique**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to specify that the list definition or list template can be used to create a list only during site creation and cannot be used to create a list through the object model or user interface after the site template or definition is applied. Setting this attribute to <span class="keyword">TRUE</span> has the effect of making the list hidden so that it does not appear as an option on the <span class="ui">Create</span> page or on the <span class="ui">Documents and Lists** page.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify that the list definition or list template can be used to create a list only during site creation and cannot be used to create a list through the object model or user interface after the site template or definition is applied. Setting this attribute to **TRUE</span> has the effect of making the list hidden so that it does not appear as an option on the <span class="ui">Create</span> page or on the <span class="ui">Documents and Lists** page.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**UseRootFolderForNavigation**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to specify that a link to the list that is displayed in <span class="ui">Quick Launch** points to the root folder so that users go to a custom welcome page, instead of to the default list view page.</p>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify that a link to the list that is displayed in <span class="ui">Quick Launch** points to the root folder so that users go to a custom welcome page, instead of to the default list view page.</p>
 <div class="alert">
 <table>
 <colgroup>
@@ -351,7 +351,7 @@ lists on the <span class="ui">Create</span> page.
 </tr>
 <tr class="odd">
 <td align="left"><p>**VersioningEnabled**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to specify that versioning is enabled by default in lists created through the template; otherwise, <span class="keyword">FALSE**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to specify that versioning is enabled by default in lists created through the template; otherwise, **FALSE**.</p></td>
 </tr>
 </tbody>
 </table>

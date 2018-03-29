@@ -96,7 +96,7 @@ collections created in Microsoft SharePoint Foundation 2010.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Force**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">true</span> if the Feature is installed by force during upgrade, even if the Feature is already installed; otherwise, <span class="keyword">false**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **true</span> if the Feature is installed by force during upgrade, even if the Feature is already installed; otherwise, **false**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ID**</p></td>

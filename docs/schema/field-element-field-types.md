@@ -93,7 +93,7 @@ Represents a characteristic of the field type.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**Name**</p></td>
-<td align="left"><p>Required **Text</span>. A string that represents the name of the specific aspect of the field type that the <span class="keyword">Field** element represents. The value must be one of the strings listed in the table below.</p></td>
+<td align="left"><p>Required **Text</span>. A string that represents the name of the specific aspect of the field type that the **Field** element represents. The value must be one of the strings listed in the table below.</p></td>
 </tr>
 </tbody>
 </table>
@@ -161,15 +161,15 @@ property names match the value of the corresponding Name attribute.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**AllowBaseTypeRendering**</p></td>
-<td align="left"><p>Optional **Boolean</span>. The default is <span class="keyword">FALSE</span>. Specifies whether a client application renders the field as its base type (also called the <span class="keyword">ParentType</span>), if the client application cannot determine how to properly render the custom field type. If set to <span class="keyword">TRUE**, and the client application cannot properly render the custom field type, the client application renders the field as the default SharePoint Foundation parent field type from which it inherits.</p></td>
+<td align="left"><p>Optional **Boolean</span>. The default is **FALSE</span>. Specifies whether a client application renders the field as its base type (also called the **ParentType</span>), if the client application cannot determine how to properly render the custom field type. If set to **TRUE**, and the client application cannot properly render the custom field type, the client application renders the field as the default SharePoint Foundation parent field type from which it inherits.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**CAMLRendering**</p></td>
-<td align="left"><p>Optional **Boolean</span>. The default is <span class="keyword">FALSE</span>. Specifies whether the field is rendered on list views using the CAML markup in a <span class="keyword">RenderPattern</span> element elsewhere within the parent <span class="keyword">FieldType</span> element. The default <span class="keyword">FALSE</span> means that the field is rendered on list views by an XSL transform in a fldtypes*.xsl file, which is the standard system for field rendering on list views. (However, this element has no effect on field rendering on Display, New, and Edit forms. A <span class="keyword">RenderPattern** would still be the standard way of rendering the field on a Display form.)</p></td>
+<td align="left"><p>Optional **Boolean</span>. The default is **FALSE</span>. Specifies whether the field is rendered on list views using the CAML markup in a **RenderPattern</span> element elsewhere within the parent **FieldType</span> element. The default **FALSE</span> means that the field is rendered on list views by an XSL transform in a fldtypes*.xsl file, which is the standard system for field rendering on list views. (However, this element has no effect on field rendering on Display, New, and Edit forms. A **RenderPattern** would still be the standard way of rendering the field on a Display form.)</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**FieldTypeClass**</p></td>
-<td align="left"><p>Optional **String</span>, <em>but required for all your custom field types</em>. Represents the strong name of the field type class library. <span class="keyword">&quot;</span><span class="label">FieldTypeClass</span><span class="keyword">&quot;</span> includes the class name and assembly name with <span class="keyword">Version</span>, <span class="keyword">Culture</span>, and <span class="keyword">PublicKeyToken**, for example, &lt;Field Name=&quot;FieldTypeClass&quot;&gt;CustomFieldTypes.RegularExpression.RegularExpressionField, CustomFieldTypes.RegularExpression, Version=1.0.0.0, Culture=neutral, PublicKeyToken=57e55365ec0ce80a&lt;/Field&gt; (Only the fully qualified class name is included for field types built into SharePoint Foundation.)</p></td>
+<td align="left"><p>Optional **String</span>, <em>but required for all your custom field types</em>. Represents the strong name of the field type class library. **&quot;</span><span class="label">FieldTypeClass</span>**&quot;</span> includes the class name and assembly name with **Version</span>, **Culture</span>, and **PublicKeyToken**, for example, &lt;Field Name=&quot;FieldTypeClass&quot;&gt;CustomFieldTypes.RegularExpression.RegularExpressionField, CustomFieldTypes.RegularExpression, Version=1.0.0.0, Culture=neutral, PublicKeyToken=57e55365ec0ce80a&lt;/Field&gt; (Only the fully qualified class name is included for field types built into SharePoint Foundation.)</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**FieldEditorUserControl**</p></td>
@@ -178,7 +178,7 @@ property names match the value of the corresponding Name attribute.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Filterable**</p></td>
-<td align="left"><p>Required **Boolean</span>. Represents whether a list with a column that is based on this field type can be filtered according to the value of the column that uses this type. If set to <span class="keyword">TRUE**, the header of the column is a control that users can use to filter the list.</p></td>
+<td align="left"><p>Required **Boolean</span>. Represents whether a list with a column that is based on this field type can be filtered according to the value of the column that uses this type. If set to **TRUE**, the header of the column is a control that users can use to filter the list.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**InternalType**</p></td>
@@ -186,28 +186,28 @@ property names match the value of the corresponding Name attribute.
 </tr>
 <tr class="odd">
 <td align="left"><p>**ParentType**</p></td>
-<td align="left"><p>Required **String</span> (but can be an empty string). Represents the name of the type from which the field class is derived. The possible values are exactly the same as the possible values for the <span class="keyword">Type </span>attribute of the <span sdata="link"><a href="field-element-list.md">Field Element (List)</a>** element. If the field type is not derived from another type, then the value is an empty string:</p>
+<td align="left"><p>Required **String</span> (but can be an empty string). Represents the name of the type from which the field class is derived. The possible values are exactly the same as the possible values for the **Type </span>attribute of the <span sdata="link"><a href="field-element-list.md">Field Element (List)</a>** element. If the field type is not derived from another type, then the value is an empty string:</p>
 <p>DOCS-LESSTHANField Name=&quot;ParentType&quot;DOCS-GREATERTHANDOCS-LESSTHAN/FieldDOCS-GREATERTHAN. <em>It must never be empty in your custom field types. All custom types inherit from another type.</em></p>
 <p>In the SharePoint Foundation object model **ParentType</span> is called <span sdata="cer" target="P:Microsoft.SharePoint.SPFieldTypeDefinition.BaseRenderingTypeName"><span class="nolink">BaseRenderingTypeName</span>**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ShowOnListAuthoringPages**</p></td>
-<td align="left"><p>Optional **Boolean</span>. The default is <span class="keyword">TRUE</span>. Represents whether this field type is displayed for inclusion on lists. If set to <span class="keyword">TRUE**, SharePoint Foundation displays this field type on list authoring pages so that users can include the field type on their lists.</p>
+<td align="left"><p>Optional **Boolean</span>. The default is **TRUE</span>. Represents whether this field type is displayed for inclusion on lists. If set to **TRUE**, SharePoint Foundation displays this field type on list authoring pages so that users can include the field type on their lists.</p>
 <p>In the SharePoint Foundation object model **ShowOnListAuthoringPages</span> is called <span sdata="cer" target="P:Microsoft.SharePoint.SPFieldTypeDefinition.ShowOnListCreate"><span class="nolink">ShowOnListCreate</span>**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ShowOnDocumentLibraryAuthoringPages**</p></td>
-<td align="left"><p>Optional **Boolean</span>. The default is <span class="keyword">TRUE</span>. Represents whether this field type is displayed for inclusion in document libraries. If set to <span class="keyword">TRUE**, SharePoint Foundation displays this field type on document library authoring pages so that users can include the field type in their document libraries.</p>
+<td align="left"><p>Optional **Boolean</span>. The default is **TRUE</span>. Represents whether this field type is displayed for inclusion in document libraries. If set to **TRUE**, SharePoint Foundation displays this field type on document library authoring pages so that users can include the field type in their document libraries.</p>
 <p>In the SharePoint Foundation object model **ShowOnDocumentLibraryAuthoringPages</span> is called <span sdata="cer" target="P:Microsoft.SharePoint.SPFieldTypeDefinition.ShowOnDocumentLibraryCreate"><span class="nolink">ShowOnDocumentLibraryCreate</span>**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ShowOnSurveyAuthoringPages**</p></td>
-<td align="left"><p>Optional **Boolean</span>. The default is <span class="keyword">TRUE</span>. Represents whether this field type is displayed for inclusion on surveys. If set to <span class="keyword">TRUE**, SharePoint Foundation displays this field type on survey authoring pages so that users can include the field type in their surveys.</p>
+<td align="left"><p>Optional **Boolean</span>. The default is **TRUE</span>. Represents whether this field type is displayed for inclusion on surveys. If set to **TRUE**, SharePoint Foundation displays this field type on survey authoring pages so that users can include the field type in their surveys.</p>
 <p>In the SharePoint Foundation object model **ShowOnSurveyAuthoringPages</span> is called <span sdata="cer" target="P:Microsoft.SharePoint.SPFieldTypeDefinition.ShowOnSurveyCreate"><span class="nolink">ShowOnSurveyCreate</span>**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ShowOnColumnTemplateAuthoringPages**</p></td>
-<td align="left"><p>Optional **Boolean</span>. The default is <span class="keyword">TRUE</span>. Represents whether this field type should be displayed as a column template field type. If set to <span class="keyword">TRUE**, SharePoint Foundation displays this field type on column template authoring pages so that users can select to create a column template of this field type.</p>
+<td align="left"><p>Optional **Boolean</span>. The default is **TRUE</span>. Represents whether this field type should be displayed as a column template field type. If set to **TRUE**, SharePoint Foundation displays this field type on column template authoring pages so that users can select to create a column template of this field type.</p>
 <p>In the SharePoint Foundation object model **ShowOnColumnTemplateAuthoringPages</span> is called <span sdata="cer" target="P:Microsoft.SharePoint.SPFieldTypeDefinition.ShowOnColumnTemplateCreate"><span class="nolink">ShowOnColumnTemplateCreate</span>**.</p></td>
 </tr>
 <tr class="even">
@@ -216,12 +216,12 @@ property names match the value of the corresponding Name attribute.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Sortable**</p></td>
-<td align="left"><p>Required **Boolean</span>. Represents whether a list with a column that is based on this field type can be sorted on the column that uses this type. If set to <span class="keyword">TRUE**, the header of the column is a control that users can use to sort the list.</p></td>
+<td align="left"><p>Required **Boolean</span>. Represents whether a list with a column that is based on this field type can be sorted on the column that uses this type. If set to **TRUE**, the header of the column is a control that users can use to sort the list.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**TypeDisplayName**</p></td>
-<td align="left"><p>Required **String</span>. Represents the display name of the field type in the user interface (UI). In SharePoint Foundation, it appears in the <span class="ui">Type</span> column on the <span class="ui">Customize</span> [list] page (listedit.aspx). It is also used in place of <span class="keyword">&quot;</span><span class="label">TypeShortDescription</span><span class="keyword">&quot;** if the latter is not present.</p>
-<p>**&quot;</span><span class="label">TypeDisplayName</span><span class="keyword">&quot;** should be a localizable string.</p></td>
+<td align="left"><p>Required **String</span>. Represents the display name of the field type in the user interface (UI). In SharePoint Foundation, it appears in the <span class="ui">Type</span> column on the <span class="ui">Customize</span> [list] page (listedit.aspx). It is also used in place of **&quot;</span><span class="label">TypeShortDescription</span>**&quot;** if the latter is not present.</p>
+<p>**&quot;</span><span class="label">TypeDisplayName</span>**&quot;** should be a localizable string.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**TypeName**</p></td>
@@ -230,12 +230,12 @@ property names match the value of the corresponding Name attribute.
 </tr>
 <tr class="even">
 <td align="left"><p>**TypeShortDescription**</p></td>
-<td align="left"><p>Optional **String</span>. Represents the short description of the field type that is displayed in the UI. In SharePoint Foundation it appears with a radio button in the <span class="ui">Name and Type </span>section of the <span class="ui">New Site Column</span> and <span class="ui">Create Column</span> pages and in the <span class="ui">Type</span> column of the <span class="ui">Site Column Gallery</span>. If there is no &lt;Field Name=&quot;TypeShortDescription&quot;&gt; element, then <span class="keyword">&quot;TypeDisplayName&quot;** is used.</p>
-<p>**&quot;</span><span class="label">TypeShortDescription</span><span class="keyword">&quot;** should be a localizable string.</p></td>
+<td align="left"><p>Optional **String</span>. Represents the short description of the field type that is displayed in the UI. In SharePoint Foundation it appears with a radio button in the <span class="ui">Name and Type </span>section of the <span class="ui">New Site Column</span> and <span class="ui">Create Column</span> pages and in the <span class="ui">Type</span> column of the <span class="ui">Site Column Gallery</span>. If there is no &lt;Field Name=&quot;TypeShortDescription&quot;&gt; element, then **&quot;TypeDisplayName&quot;** is used.</p>
+<p>**&quot;</span><span class="label">TypeShortDescription</span>**&quot;** should be a localizable string.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**UserCreatable**</p></td>
-<td align="left"><p>Optional **Boolean</span>. The default is <span class="keyword">TRUE</span> which enables users to add fields of this field type to lists. Setting the value to <span class="keyword">FALSE</span> allows use of the field type in list schemas, but hides the field type from users on the <span class="ui">Name and Type </span>section of the <span class="ui">New Site Column</span> and <span class="ui">Create Column** pages.</p></td>
+<td align="left"><p>Optional **Boolean</span>. The default is **TRUE</span> which enables users to add fields of this field type to lists. Setting the value to **FALSE</span> allows use of the field type in list schemas, but hides the field type from users on the <span class="ui">Name and Type </span>section of the <span class="ui">New Site Column</span> and <span class="ui">Create Column** pages.</p></td>
 </tr>
 </tbody>
 </table>

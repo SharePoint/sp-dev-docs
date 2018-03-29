@@ -108,7 +108,7 @@ retrieves the raw value of the column in the local list.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**HTMLEncode**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to convert embedded characters so that they are displayed as text in the browser. In other words, characters that could be confused with HTML tags are converted to entities.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to convert embedded characters so that they are displayed as text in the browser. In other words, characters that could be confused with HTML tags are converted to entities.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**IncludeVersions**</p></td>
@@ -116,23 +116,23 @@ retrieves the raw value of the column in the local list.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Name**</p></td>
-<td align="left"><p>Required **Text</span>. Specifies the name of the lookup column. Allows the <span class="keyword">LookupColumn** element to be used outside the field rendering context by supplying an ID.</p></td>
+<td align="left"><p>Required **Text</span>. Specifies the name of the lookup column. Allows the **LookupColumn** element to be used outside the field rendering context by supplying an ID.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ShowField**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the field to be displayed in the list that is referenced through the <span class="keyword">Lookup</span> field. If this attribute is not specified, the default is to display the value contained in the <span class="keyword">Title** field.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the field to be displayed in the list that is referenced through the **Lookup</span> field. If this attribute is not specified, the default is to display the value contained in the **Title** field.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**StripWS**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to remove white space from the beginning and end of the value returned by the element.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to remove white space from the beginning and end of the value returned by the element.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**URLEncode**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to convert special characters, such as spaces, to quoted UTF-8 format, for example, %c3%ab for character ë.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format, for example, %c3%ab for character ë.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**URLEncodeAsURL**</p></td>
-<td align="left"><p>Optional **Boolean</span>. Like <span class="keyword">URLEncode</span>, but <span class="keyword">TRUE** to specify that the string to encode is a path component of a URL and not to encode the forward slash (&quot;/&quot;).</p></td>
+<td align="left"><p>Optional **Boolean</span>. Like **URLEncode</span>, but **TRUE** to specify that the string to encode is a path component of a URL and not to encode the forward slash (&quot;/&quot;).</p></td>
 </tr>
 </tbody>
 </table>

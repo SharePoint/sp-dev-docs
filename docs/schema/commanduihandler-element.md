@@ -131,8 +131,8 @@ Defines the handler for a command.
 </tbody>
 </table>
 </div>
-<p>A script statement that is executed to determine whether the command is enabled or disabled. The script expression should return a **Boolean</span> value, <span class="keyword">true</span> if the command is enabled and <span class="keyword">false** if not. If the ribbon is disabled, commands are grayed out and are not clickable.</p>
-<p>As with the **CommandAction</span> attribute, the <span class="keyword">eval</span> method is called with the value of this attribute as an argument. The <span class="keyword">EnabledScript</span> attribute does not support the substitution tokens that are described for the <span class="keyword">CommandAction** attribute.</p></td>
+<p>A script statement that is executed to determine whether the command is enabled or disabled. The script expression should return a **Boolean</span> value, **true</span> if the command is enabled and **false** if not. If the ribbon is disabled, commands are grayed out and are not clickable.</p>
+<p>As with the **CommandAction</span> attribute, the **eval</span> method is called with the value of this attribute as an argument. The **EnabledScript</span> attribute does not support the substitution tokens that are described for the **CommandAction** attribute.</p></td>
 </tr>
 </tbody>
 </table>

@@ -66,7 +66,7 @@ Outlook Contact, Task, Post, or Calendar. For example, in the manifest
 file, a solution developer would be able to indicate that for an Outlook
 Item Type of Contact, a certain UI should be used (example, an Office
 External Part) and a specific method from the external system (for
-example, <span class="keyword">UpdateCustomerInstance(ID,
+example, **UpdateCustomerInstance(ID,
 NewInstanceValues)</span>) should be called when the data in the item
 changes. There will always be at least one namespace declaration on the
 **SolutionDefinition** element, typically:

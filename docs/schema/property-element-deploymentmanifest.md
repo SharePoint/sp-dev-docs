@@ -138,7 +138,7 @@ target="T:System.Collections.DictionaryEntry">[DictionaryEntry](http://msdn2.mic
 <tr class="even">
 <td align="left"><p>Access</p></td>
 <td align="left"><p><span sdata="link"><a href="spdictionaryentryaccess-simple-type-deploymentmanifest.md">SPDictionaryEntryAccess Simple Type (DeploymentManifest)</a></span></p></td>
-<td align="left"><p>Optional. An enumeration of two available access modes settings: **ReadOnly</span> and <span class="keyword">ReadWrite**.</p>
+<td align="left"><p>Optional. An enumeration of two available access modes settings: **ReadOnly</span> and **ReadWrite**.</p>
 <p>The default access mode is **ReadWrite**.</p></td>
 </tr>
 </tbody>

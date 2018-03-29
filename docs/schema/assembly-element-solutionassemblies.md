@@ -105,7 +105,7 @@ Specifies an assembly to include in the solution.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**DeploymentTarget**</p></td>
-<td align="left"><p>Optional **Text</span>. The preferred target of deployment of the assembly. The assembly is copied to the target specified by the <span class="keyword">DeploymentTarget** attribute (for a Web application) or the global assembly cache (for a server farm).</p>
+<td align="left"><p>Optional **Text</span>. The preferred target of deployment of the assembly. The assembly is copied to the target specified by the **DeploymentTarget** attribute (for a Web application) or the global assembly cache (for a server farm).</p>
 <p>Possible values:</p>
 <ul>
 <li><p>**GlobalAssemblyCache**   If the assembly is a farm feature, it is copied to the global assembly cache.</p></li>

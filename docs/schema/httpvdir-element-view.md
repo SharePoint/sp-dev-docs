@@ -104,11 +104,11 @@ class="code">http://myserver/myweb/</span>.
 </tr>
 <tr class="even">
 <td align="left"><p>**URLEncode**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, %c3%ab for character ë).</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format (for example, %c3%ab for character ë).</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**URLEncodeAsURL**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (&quot;/&quot;) are not encoded.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to specify that the string to encode is a path component of a URL so that forward slashes (&quot;/&quot;) are not encoded.</p></td>
 </tr>
 </tbody>
 </table>
@@ -159,7 +159,7 @@ class="code">http://myserver/myweb/</span>.
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-The following example defines the <span class="keyword">More
+The following example defines the **More
 Items</span> link to display when the number of items in the list
 exceeds the limit set with the
 [RowLimit](rowlimit-element-list.md) element for number

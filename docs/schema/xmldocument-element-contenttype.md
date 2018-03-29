@@ -93,7 +93,7 @@ Defines a single XML document that is included in the content type.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**NamespaceURI**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the URI to the schema namespace for the contents of this <span class="keyword">XmlDocument** element.</p></td>
+<td align="left"><p>Optional **Text</span>. Specifies the URI to the schema namespace for the contents of this **XmlDocument** element.</p></td>
 </tr>
 </tbody>
 </table>

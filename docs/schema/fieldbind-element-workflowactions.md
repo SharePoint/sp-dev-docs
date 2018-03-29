@@ -134,7 +134,7 @@ then passed to Microsoft SharePoint Foundation 2010.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>If you do not specify a **DesignerType</span> attribute, the default <span class="keyword">DesignerType</span> attribute is used. The default <span class="keyword">DesignerType** is a text box followed by an ellipsis button (...) and a lookup button.</p></td>
+<td align="left"><p>If you do not specify a **DesignerType</span> attribute, the default **DesignerType</span> attribute is used. The default **DesignerType** is a text box followed by an ellipsis button (...) and a lookup button.</p></td>
 </tr>
 </tbody>
 </table>
@@ -159,7 +159,7 @@ then passed to Microsoft SharePoint Foundation 2010.
 </tr>
 <tr class="even">
 <td align="left"><p>**Field**</p></td>
-<td align="left"><p>Required **text</span>. Represents a <span class="keyword">Parameter</span> element that is used to build workflows. The <span class="keyword">Field</span> attribute maps directly to one or more <span class="keyword">Parameter** elements when a parameter type and direction are defined.</p>
+<td align="left"><p>Required **text</span>. Represents a **Parameter</span> element that is used to build workflows. The **Field</span> attribute maps directly to one or more **Parameter** elements when a parameter type and direction are defined.</p>
 <div class="alert">
 <table>
 <colgroup>
@@ -172,7 +172,7 @@ then passed to Microsoft SharePoint Foundation 2010.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>If you use more than one parameter for a **Field</span> attribute, the parameter names should be separated by commas (for example, <span class="keyword">Field</span>=&quot;<span class="keyword">Variable</span>,<span class="keyword">ValueType**&quot;).</p></td>
+<td align="left"><p>If you use more than one parameter for a **Field</span> attribute, the parameter names should be separated by commas (for example, **Field</span>=&quot;**Variable</span>,**ValueType**&quot;).</p></td>
 </tr>
 </tbody>
 </table>
@@ -180,15 +180,15 @@ then passed to Microsoft SharePoint Foundation 2010.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Function**</p></td>
-<td align="left"><p>Optional **Boolean</span>. When set to <span class="keyword">true</span>, this attribute inserts the name of the <span class="keyword">Action** method into the sentence.</p></td>
+<td align="left"><p>Optional **Boolean</span>. When set to **true</span>, this attribute inserts the name of the **Action** method into the sentence.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Id**</p></td>
-<td align="left"><p>Required **Integer</span> (non-negative). <span class="keyword">Id</span> is used as the relational key between a <span class="keyword">FieldBind</span> element and the <span class="keyword">Sentence</span> property of the parent <span class="keyword">RuleDesigner** element, much like a primary key is used in a database.</p></td>
+<td align="left"><p>Required **Integer</span> (non-negative). **Id</span> is used as the relational key between a **FieldBind</span> element and the **Sentence</span> property of the parent **RuleDesigner** element, much like a primary key is used in a database.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**OperatorTypeFrom**</p></td>
-<td align="left"><p>Required **text</span>. Used only when the <span class="keyword">DesignerType</span> attribute is set to <span class="keyword">Operator</span>. This attribute determines the types of operators that are available to the user, based on the Microsoft .NET data type listed in the corresponding <span class="keyword">Parameter</span> element. The parameter that is specified for the <span class="keyword">OperatorTypeFrom</span> attribute can be different from the parameter that is listed in the <span class="keyword">Field** attribute.</p></td>
+<td align="left"><p>Required **text</span>. Used only when the **DesignerType</span> attribute is set to **Operator</span>. This attribute determines the types of operators that are available to the user, based on the Microsoft .NET data type listed in the corresponding **Parameter</span> element. The parameter that is specified for the **OperatorTypeFrom</span> attribute can be different from the parameter that is listed in the **Field** attribute.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Text**</p></td>
@@ -196,7 +196,7 @@ then passed to Microsoft SharePoint Foundation 2010.
 </tr>
 <tr class="odd">
 <td align="left"><p>**TypeFrom**</p></td>
-<td align="left"><p>Optional **text</span>. Specifies the .NET data types that are valid for use with an instance of the <span class="keyword">FieldBind</span> element. The <span class="keyword">TypeFrom</span> attribute is associated with a <span class="keyword">Parameter** element that contains the type definition.</p></td>
+<td align="left"><p>Optional **text</span>. Specifies the .NET data types that are valid for use with an instance of the **FieldBind</span> element. The **TypeFrom</span> attribute is associated with a **Parameter** element that contains the type definition.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Value**</p></td>

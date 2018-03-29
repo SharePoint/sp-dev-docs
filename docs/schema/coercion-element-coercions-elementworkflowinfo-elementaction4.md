@@ -215,7 +215,7 @@ class="keyword">choice</span>, see the definition section.
 <td align="left"><p>CatchAll</p></td>
 <td align="left"><p>s:boolean</p></td>
 <td align="left"><p>required</p></td>
-<td align="left"><p>Set to **true</span> to show the coercion in scenarios in which either the <span class="parameter" sdata="paramReference">DestinationType</span> or the <span class="parameter" sdata="paramReference">DestinationFieldType</span> allows it, regardless of <span class="parameter" sdata="paramReference">SourceType</span> or <span class="parameter" sdata="paramReference">SourceFieldType</span> values. Set to <span class="keyword">false</span> to show the coercion only in scenarios in which <span class="parameter" sdata="paramReference">SourceType</span> or <span class="parameter" sdata="paramReference">SourceFieldType** specifies that it should be shown.</p></td>
+<td align="left"><p>Set to **true</span> to show the coercion in scenarios in which either the <span class="parameter" sdata="paramReference">DestinationType</span> or the <span class="parameter" sdata="paramReference">DestinationFieldType</span> allows it, regardless of <span class="parameter" sdata="paramReference">SourceType</span> or <span class="parameter" sdata="paramReference">SourceFieldType</span> values. Set to **false</span> to show the coercion only in scenarios in which <span class="parameter" sdata="paramReference">SourceType</span> or <span class="parameter" sdata="paramReference">SourceFieldType** specifies that it should be shown.</p></td>
 <td align="left"><p>Values of the s:boolean type.</p></td>
 </tr>
 <tr class="odd">

@@ -108,7 +108,7 @@ None.
 <tbody>
 <tr class="odd">
 <td align="left"><p><span sdata="link"><a href="query-element-in-queries-subscription-schema.md">Query Element in Queries (Subscription Schema)</a></span></p></td>
-<td align="left"><p>A query (**Finder</span> or <span class="keyword">IDEnumerator** method instance) that returns the external items to populate in the cache.</p></td>
+<td align="left"><p>A query (**Finder</span> or **IDEnumerator** method instance) that returns the external items to populate in the cache.</p></td>
 </tr>
 </tbody>
 </table>

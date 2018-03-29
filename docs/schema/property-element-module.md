@@ -100,7 +100,7 @@ Specifies a custom property value to implement within the file.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Type**</p></td>
-<td align="left"><p>Optional **integer</span>, <span class="keyword">string</span>, or <span class="keyword">DateTime**. Specifies the type of property.</p></td>
+<td align="left"><p>Optional **integer</span>, **string</span>, or **DateTime**. Specifies the type of property.</p></td>
 </tr>
 </tbody>
 </table>

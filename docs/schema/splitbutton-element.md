@@ -130,11 +130,11 @@ Defines a control that combines a button and a drop-down menu.
 </tr>
 <tr class="even">
 <td align="left"><p>**CacheMenuVersions**</p></td>
-<td align="left"><p>Optional. **TRUE</span> to store previously constructed versions of a dynamic menu. The default is <span class="keyword">FALSE**.</p></td>
+<td align="left"><p>Optional. **TRUE</span> to store previously constructed versions of a dynamic menu. The default is **FALSE**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Command**</p></td>
-<td align="left"><p>Optional. The name of the command to execute when the control is clicked. If the control is in a <a href="commanduidefinition-element.md">CommandUIDefinition</a> element, the value of the **Command</span> attribute of the control should be the same as the value of the <span class="keyword">Command** attribute of a corresponding <a href="commanduihandler-element.md">CommandUIHandler</a> element.</p></td>
+<td align="left"><p>Optional. The name of the command to execute when the control is clicked. If the control is in a <a href="commanduidefinition-element.md">CommandUIDefinition</a> element, the value of the **Command</span> attribute of the control should be the same as the value of the **Command** attribute of a corresponding <a href="commanduihandler-element.md">CommandUIHandler</a> element.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**CommandMenuOpen**</p></td>
@@ -168,7 +168,7 @@ Defines a control that combines a button and a drop-down menu.
 <tr class="even">
 <td align="left"><p>**Image32by32Left**</p></td>
 <td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **Image32by32** attribute points to an image file that contains images for many icons.</p>
-<p>The value of the **Image32by32Left</span> attribute is used to set the CSS <span class="keyword">left</span> attribute for the inline style of an HTML <span class="keyword">img</span> tag. For example, setting the <span class="keyword">Image32by32Left</span> attribute to &quot;<span class="input">-160</span>&quot; and the <span class="keyword">Image32by32Top</span> attribute to &quot;<span class="input">-448**&quot; results in an inline style that is similar to the one in the following HTML markup:</p>
+<p>The value of the **Image32by32Left</span> attribute is used to set the CSS **left</span> attribute for the inline style of an HTML **img</span> tag. For example, setting the **Image32by32Left</span> attribute to &quot;<span class="input">-160</span>&quot; and the **Image32by32Top</span> attribute to &quot;<span class="input">-448**&quot; results in an inline style that is similar to the one in the following HTML markup:</p>
 <div class="code">
 <span codelanguage="html"></span>
 HTML 
@@ -178,7 +178,7 @@ HTML 
 </tr>
 <tr class="odd">
 <td align="left"><p>**Image32by32Top**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **Image32by32</span> attribute points to an image file that contains the images for many icons. The value of the <span class="keyword">Image32by32Top</span> attribute is used to set the CSS <span class="keyword">top</span> attribute for the inline style of an HTML <span class="keyword">img** tag.</p></td>
+<td align="left"><p>Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **Image32by32</span> attribute points to an image file that contains the images for many icons. The value of the **Image32by32Top</span> attribute is used to set the CSS **top</span> attribute for the inline style of an HTML **img** tag.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Image16by16**</p></td>
@@ -190,11 +190,11 @@ HTML 
 </tr>
 <tr class="even">
 <td align="left"><p>**Image16by16Left**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **Image16by16</span> attribute points to an image file that contains images for many icons. The value of the <span class="keyword">Image16by16Left</span> attribute is used to set the CSS <span class="keyword">left</span> attribute for the inline style of an HTML <span class="keyword">img** tag.</p></td>
+<td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **Image16by16</span> attribute points to an image file that contains images for many icons. The value of the **Image16by16Left</span> attribute is used to set the CSS **left</span> attribute for the inline style of an HTML **img** tag.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Image16by16Top**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **Image16by16</span> attribute points to an image file that contains images for many icons. The value of the <span class="keyword">Image16by16Top</span> attribute is used to set the CSS <span class="keyword">top</span> attribute for the inline style of an HTML <span class="keyword">img** tag.</p></td>
+<td align="left"><p>Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **Image16by16</span> attribute points to an image file that contains images for many icons. The value of the **Image16by16Top</span> attribute is used to set the CSS **top</span> attribute for the inline style of an HTML **img** tag.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**LabelText**</p></td>
@@ -210,7 +210,7 @@ HTML 
 </tr>
 <tr class="odd">
 <td align="left"><p>**PopulateDynamically**</p></td>
-<td align="left"><p>Optional. **TRUE</span> to create the menu dynamically. The default is <span class="keyword">FALSE**.</p></td>
+<td align="left"><p>Optional. **TRUE</span> to create the menu dynamically. The default is **FALSE**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**PopulateQueryCommand**</p></td>
@@ -226,7 +226,7 @@ HTML 
 </tr>
 <tr class="odd">
 <td align="left"><p>**TemplateAlias**</p></td>
-<td align="left"><p>Optional. A string that matches the value of the **TemplateAlias</span> attribute for a <a href="controlref-element.md">ControlRef</a> element, an <a href="overflowarea-element.md">OverflowArea</a> element, or an <a href="overflowsection-element.md">OverflowSection</a> element in a <a href="grouptemplate-element.md">GroupTemplate</a> element. The <span class="keyword">TemplateAlias** attribute is used to size and position controls in a group when a template is applied to the group.</p></td>
+<td align="left"><p>Optional. A string that matches the value of the **TemplateAlias</span> attribute for a <a href="controlref-element.md">ControlRef</a> element, an <a href="overflowarea-element.md">OverflowArea</a> element, or an <a href="overflowsection-element.md">OverflowSection</a> element in a <a href="grouptemplate-element.md">GroupTemplate</a> element. The **TemplateAlias** attribute is used to size and position controls in a group when a template is applied to the group.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ToolTipImage32by32**</p></td>
@@ -238,11 +238,11 @@ HTML 
 </tr>
 <tr class="even">
 <td align="left"><p>**ToolTipImage32by32Left**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **ToolTipImage32by32</span> attribute points to an image file that contains the images for many icons. The value of the <span class="keyword">ToolTipImage32by32Left</span> attribute is used to set the CSS <span class="keyword">left</span> attribute for the inline style of an HTML <span class="keyword">img** tag when the page is created.</p></td>
+<td align="left"><p>Optional. A negative integer that represents an offset for the left edge of the image. Use this attribute when the **ToolTipImage32by32</span> attribute points to an image file that contains the images for many icons. The value of the **ToolTipImage32by32Left</span> attribute is used to set the CSS **left</span> attribute for the inline style of an HTML **img** tag when the page is created.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ToolTipImage32by32Top**</p></td>
-<td align="left"><p>Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **ToolTipImage32by32</span> attribute points to an image file that contains the images for many icons. The value of the <span class="keyword">ToolTipImage32by32Top</span> attribute is used to set the CSS <span class="keyword">top</span> attribute for the inline style of an HTML <span class="keyword">img** tag when the page is created.</p></td>
+<td align="left"><p>Optional. A negative integer that represents an offset for the top edge of the image. Use this attribute when the **ToolTipImage32by32</span> attribute points to an image file that contains the images for many icons. The value of the **ToolTipImage32by32Top</span> attribute is used to set the CSS **top</span> attribute for the inline style of an HTML **img** tag when the page is created.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ToolTipTitle**</p></td>

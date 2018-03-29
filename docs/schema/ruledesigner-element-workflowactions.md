@@ -98,7 +98,7 @@ SharePoint Designer 2010.
 <tr class="odd">
 <td align="left"><p>**Sentence**</p></td>
 <td align="left"><p>Required **text**. Text that is displayed in the workflow editor that represents the workflow rule. The rule sentence can contain static text and also text that is dynamically generated at run time.</p>
-<p>Variables can be embedded into the sentence using the notation %1, %2, and so on. Each variable maps to a **FieldBind</span> element <span class="keyword">Id</span>. Then, during workflow design, the text that is displayed for these variables is the <span class="keyword">Text</span> attribute of the <span class="keyword">FieldBind** element.</p></td>
+<p>Variables can be embedded into the sentence using the notation %1, %2, and so on. Each variable maps to a **FieldBind</span> element **Id</span>. Then, during workflow design, the text that is displayed for these variables is the **Text</span> attribute of the **FieldBind** element.</p></td>
 </tr>
 </tbody>
 </table>

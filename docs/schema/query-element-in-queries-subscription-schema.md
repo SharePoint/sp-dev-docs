@@ -113,7 +113,7 @@ elements.
 <tr class="even">
 <td align="left"><p>**MethodInstanceName**</p></td>
 <td align="left"><p>Required.</p>
-<p>The name of the **Finder</span> or <span class="keyword">IDEnumerator** method instance defined in the model.</p>
+<p>The name of the **Finder</span> or **IDEnumerator** method instance defined in the model.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
@@ -167,7 +167,7 @@ elements.
 </tr>
 <tr class="odd">
 <td align="left"><p><span sdata="link"><a href="filtervalues-element-in-query-subscription-schema.md">FilterValues Element in Query (Subscription Schema)</a></span></p></td>
-<td align="left"><p>A list of filter values for the **Finder</span> or the <span class="keyword">IDEnumerator** method instance.</p></td>
+<td align="left"><p>A list of filter values for the **Finder</span> or the **IDEnumerator** method instance.</p></td>
 </tr>
 </tbody>
 </table>

@@ -81,7 +81,7 @@ Schema](view-schema.md)</span>.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>The presence of any one of these attributes implies that it is **TRUE </span>(for example, <span class="keyword">HTMLEncode</span> cannot be set to <span class="keyword">FALSE**).</p></td>
+<td align="left"><p>The presence of any one of these attributes implies that it is **TRUE </span>(for example, **HTMLEncode</span> cannot be set to **FALSE**).</p></td>
 </tr>
 </tbody>
 </table>

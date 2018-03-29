@@ -104,7 +104,7 @@ Contains the core definition for a grouping of custom actions.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Location**</p></td>
-<td align="left"><p>Required **Text</span>. Specifies a value for where the action lives. This string is a name that is declared on the <span class="keyword">LinkSectionTable</span> control within a page. See <span sdata="link"><a href="default-custom-action-locations-and-ids.md">Default Custom Action Locations and IDs</a>** for a list of the default custom action group locations that are used in SharePoint Foundation.</p></td>
+<td align="left"><p>Required **Text</span>. Specifies a value for where the action lives. This string is a name that is declared on the **LinkSectionTable</span> control within a page. See <span sdata="link"><a href="default-custom-action-locations-and-ids.md">Default Custom Action Locations and IDs</a>** for a list of the default custom action group locations that are used in SharePoint Foundation.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Sequence**</p></td>

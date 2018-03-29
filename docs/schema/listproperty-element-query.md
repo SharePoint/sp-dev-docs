@@ -104,27 +104,27 @@ Returns the value of a specified column in the List of Lists table.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**AutoHyperLink**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to surround text with <span class="keyword">DOCS-LESSTHANADOCS-GREATERTHAN** tags if the text appears like a hyperlink, for example, www.microsoft.com.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to surround text with **DOCS-LESSTHANADOCS-GREATERTHAN** tags if the text appears like a hyperlink, for example, www.microsoft.com.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**AutoHyperLinkNoEncoding**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to surround text with &lt;A&gt; tags if the text appears like a hyperlink (for example, www.microsoft.com) but without HTML encoding.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to surround text with &lt;A&gt; tags if the text appears like a hyperlink (for example, www.microsoft.com) but without HTML encoding.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**AutoNewLine**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to insert <span class="keyword">DOCS-LESSTHANBRDOCS-GREATERTHAN** tags into the text stream and to replace multiple spaces with a nonbreaking space (&amp;nbsp;).</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to insert **DOCS-LESSTHANBRDOCS-GREATERTHAN** tags into the text stream and to replace multiple spaces with a nonbreaking space (&amp;nbsp;).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Default**</p></td>
-<td align="left"><p>Optional **Text</span>. Sets the default <span class="keyword">ProgID** for the application that created the list.</p></td>
+<td align="left"><p>Optional **Text</span>. Sets the default **ProgID** for the application that created the list.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**ExpandXML**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to re-pass the rendered content through the Collaborative Application Markup Language (CAML) interpreter, which allows CAML to render CAML.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to re-pass the rendered content through the Collaborative Application Markup Language (CAML) interpreter, which allows CAML to render CAML.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**HTMLEncode**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to convert embedded characters so that they are displayed as text in the browser. In other words, characters that could be confused with HTML tags are converted to entities.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to convert embedded characters so that they are displayed as text in the browser. In other words, characters that could be confused with HTML tags are converted to entities.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Select**</p></td>
@@ -132,15 +132,15 @@ Returns the value of a specified column in the List of Lists table.
 </tr>
 <tr class="even">
 <td align="left"><p>**StripWS**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to remove white space from the beginning and end of the value returned by the element.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to remove white space from the beginning and end of the value returned by the element.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**URLEncode**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to convert special characters, such as spaces, to quoted UTF-8 format, for example, %c3%ab for character ë.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to convert special characters, such as spaces, to quoted UTF-8 format, for example, %c3%ab for character ë.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**URLEncodeAsURL**</p></td>
-<td align="left"><p>Optional **Boolean</span>. Like <span class="keyword">URLEncode</span>, but <span class="keyword">TRUE</span> to specify that the string to encode is a path component of a URL and not to encode the forward slash (<span class="keyword">/**).</p></td>
+<td align="left"><p>Optional **Boolean</span>. Like **URLEncode</span>, but **TRUE</span> to specify that the string to encode is a path component of a URL and not to encode the forward slash (**/**).</p></td>
 </tr>
 </tbody>
 </table>

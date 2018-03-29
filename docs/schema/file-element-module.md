@@ -105,7 +105,7 @@ Specifies a file to include within a module in a site definition.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**IgnoreIfAlreadyExists**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to provision the view even if the file already exists at the specified URL; otherwise, <span class="keyword">FALSE**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to provision the view even if the file already exists at the specified URL; otherwise, **FALSE**.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Name**</p></td>
@@ -130,7 +130,7 @@ Specifies a file to include within a module in a site definition.
 </tr>
 <tr class="odd">
 <td align="left"><p>**NavBarHome**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> if the file is the destination URL for the <span class="keyword">Home** link in the top navigation bar used throughout the site.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> if the file is the destination URL for the **Home** link in the top navigation bar used throughout the site.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**Path**</p></td>
@@ -145,16 +145,16 @@ Specifies a file to include within a module in a site definition.
 </tr>
 <tr class="odd">
 <td align="left"><p>**Type**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies that the file be cached in memory on the front-end Web server. Possible values include <span class="keyword">Ghostable</span> and <span class="keyword">GhostableInLibrary</span>. Both values specify that the file be cached, but <span class="keyword">GhostableInLibrary</span> specifies that the file be cached as part of a list whose base type is <span class="keyword">Document</span><span class="keyword">Library**.</p>
+<td align="left"><p>Optional **Text</span>. Specifies that the file be cached in memory on the front-end Web server. Possible values include **Ghostable</span> and **GhostableInLibrary</span>. Both values specify that the file be cached, but **GhostableInLibrary</span> specifies that the file be cached as part of a list whose base type is **Document</span>**Library**.</p>
 <p>When changes are made, for example, to the home page through the UI, only the differences from the original page definition are stored in the database, while default.aspx is cached in memory along with the schema files. The HTML page that is displayed in the browser is constructed through the combined definition resulting from the original definition cached in memory and from changes stored in the database.</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>**ReplaceContent**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE</span> to overwrite the previously installed version of the file with a new version when the element manifest is being applied as part of an upgrade of the parent Feature; otherwise <span class="keyword">FALSE**.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE</span> to overwrite the previously installed version of the file with a new version when the element manifest is being applied as part of an upgrade of the parent Feature; otherwise **FALSE**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**Url**</p></td>
-<td align="left"><p>Required **Text</span>. Specifies the virtual path for the file. If the <span class="keyword">Name</span> attribute is specified, its value is used for the virtual path. If <span class="keyword">Path</span> is not specified, the value of <span class="keyword">Url** is used for the physical path. Cannot contain the following characters:</p>
+<td align="left"><p>Required **Text</span>. Specifies the virtual path for the file. If the **Name</span> attribute is specified, its value is used for the virtual path. If **Path</span> is not specified, the value of **Url** is used for the physical path. Cannot contain the following characters:</p>
 <ul>
 <li><p>\&quot;</p></li>
 <li><p>#</p></li>

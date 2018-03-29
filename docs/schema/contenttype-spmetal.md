@@ -140,11 +140,11 @@ elements.
 <tbody>
 <tr class="odd">
 <td align="left"><p>Internal</p></td>
-<td align="left"><p>The class will be **internal</span> (<span class="keyword">Friend** in Visual Basic).</p></td>
+<td align="left"><p>The class will be **internal</span> (**Friend** in Visual Basic).</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>Public</p></td>
-<td align="left"><p>DEFAULT: The class will be **public</span> (<span class="keyword">Public** in Visual Basic).</p></td>
+<td align="left"><p>DEFAULT: The class will be **public</span> (**Public** in Visual Basic).</p></td>
 </tr>
 </tbody>
 </table>

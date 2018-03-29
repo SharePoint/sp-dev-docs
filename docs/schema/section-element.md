@@ -99,9 +99,9 @@ Defines a section of a layout.
 <td align="left"><p>Optional. An enumeration value that specifies the type of section.</p>
 <ul>
 <li><p>**Divider**. The section cannot contain child <a href="row-element.md">Row</a> elements.</p></li>
-<li><p>**OneRow</span>. The section can contain one child <span class="keyword">Row** element.</p></li>
-<li><p>**TwoRow</span>. The section can contain two child <span class="keyword">Row** elements.</p></li>
-<li><p>**ThreeRow</span>. The section can contain three child <span class="keyword">Row** elements.</p></li>
+<li><p>**OneRow</span>. The section can contain one child **Row** element.</p></li>
+<li><p>**TwoRow</span>. The section can contain two child **Row** elements.</p></li>
+<li><p>**ThreeRow</span>. The section can contain three child **Row** elements.</p></li>
 </ul></td>
 </tr>
 <tr class="even">

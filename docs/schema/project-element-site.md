@@ -109,7 +109,7 @@ configuration for a new Web site.
 </tr>
 <tr class="even">
 <td align="left"><p>**AlternateHeader**</p></td>
-<td align="left"><p>Optional **Text</span>. Used to specify the name of an ASPX page located in the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\LAYOUTS directory that defines an alternate header for the top area in site pages. This attribute provides a means to replace the header region of a page with the output of an ASPX page that defines a different header. For example, add <span class="code">AlternateHeader=&quot;myHeader.aspx&quot;</span> to the <span class="keyword">Project</span> element to specify <span class="code">myHeader.aspx** as the name of the file that provides an alternate header.</p></td>
+<td align="left"><p>Optional **Text</span>. Used to specify the name of an ASPX page located in the %ProgramFiles%\Common Files\Microsoft Shared\web server extensions\15\TEMPLATE\LAYOUTS directory that defines an alternate header for the top area in site pages. This attribute provides a means to replace the header region of a page with the output of an ASPX page that defines a different header. For example, add <span class="code">AlternateHeader=&quot;myHeader.aspx&quot;</span> to the **Project</span> element to specify <span class="code">myHeader.aspx** as the name of the file that provides an alternate header.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**AlternateUrl**</p></td>

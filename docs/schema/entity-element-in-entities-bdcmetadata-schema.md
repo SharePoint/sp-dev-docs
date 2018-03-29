@@ -143,7 +143,7 @@ elements.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>When the BDC model changes, you must increase the version number of the external content type. If the structure of an external content type changes, you should increase the major number. Examples of structural changes include adding a field to a **SpecificFinder</span> or changing an identifier field. If the change does not affect the structure of the external content type, for example, when adding a creator method, changing connection information, or when changing names of <span class="keyword">LobSystems** and type descriptors, you should change the build number and revision number.</p></td>
+<td align="left"><p>When the BDC model changes, you must increase the version number of the external content type. If the structure of an external content type changes, you should increase the major number. Examples of structural changes include adding a field to a **SpecificFinder</span> or changing an identifier field. If the change does not affect the structure of the external content type, for example, when adding a creator method, changing connection information, or when changing names of **LobSystems** and type descriptors, you should change the build number and revision number.</p></td>
 </tr>
 </tbody>
 </table>

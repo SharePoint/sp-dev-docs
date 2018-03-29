@@ -200,7 +200,7 @@ elements.
 </tr>
 <tr class="odd">
 <td align="left"><p>DisplayLocations</p></td>
-<td align="left"><p>The locations in the Outlook user interface where this action should be displayed. This attribute can be a combination of the following bit flags: **0</span> (none, action is not displayed anywhere), <span class="keyword">1</span> (action is displayed on the external data parts menu), <span class="keyword">2** (action is displayed on the item context menu), 4 (action is displayed on the ribbon).</p>
+<td align="left"><p>The locations in the Outlook user interface where this action should be displayed. This attribute can be a combination of the following bit flags: **0</span> (none, action is not displayed anywhere), **1</span> (action is displayed on the external data parts menu), **2** (action is displayed on the item context menu), 4 (action is displayed on the ribbon).</p>
 <p>Optional.</p>
 <p>Attribute type: String</p></td>
 </tr>

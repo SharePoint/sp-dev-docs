@@ -94,7 +94,7 @@ upgrade actions should apply.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>The **BeginVersion</span> and <span class="keyword">EndVersion</span> attributes set the range of previous versions of the Feature to which the child upgrade elements are applied. The <span class="keyword">BeginVersion</span> value is <em>inclusive</em>, but the <span class="keyword">EndVersion** attribute is <em>exclusive</em>.</p></td>
+<td align="left"><p>The **BeginVersion</span> and **EndVersion</span> attributes set the range of previous versions of the Feature to which the child upgrade elements are applied. The **BeginVersion</span> value is <em>inclusive</em>, but the **EndVersion** attribute is <em>exclusive</em>.</p></td>
 </tr>
 </tbody>
 </table>

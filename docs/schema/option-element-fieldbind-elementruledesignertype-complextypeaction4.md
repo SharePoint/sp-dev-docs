@@ -188,14 +188,14 @@ None.
 <td align="left"><p>TypeFilter</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
-<td align="left"><p>Used only if the parent <span class="ui">FieldBind DesignerType</span> is **Operator</span>. The <span class="keyword">TypeFilter</span> attribute enables options to be hidden or displayed in the workflow editor, based on the data type of the parent element. You can define multiple types for the <span class="keyword">TypeFilter** attribute; separate the type/value pairs using commas.</p></td>
+<td align="left"><p>Used only if the parent <span class="ui">FieldBind DesignerType</span> is **Operator</span>. The **TypeFilter</span> attribute enables options to be hidden or displayed in the workflow editor, based on the data type of the parent element. You can define multiple types for the **TypeFilter** attribute; separate the type/value pairs using commas.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>UnaryHides</p></td>
 <td align="left"><p>s:string</p></td>
 <td align="left"><p>optional</p></td>
-<td align="left"><p>Used only if the parent <span class="ui">FieldBind RuleDesigner</span> type is **Operator</span>. The value that is specified in this attribute should be synchronized with the <span class="keyword">Field</span> attribute of a <span class="keyword">FieldBind</span> element. If this option is selected, the <span class="keyword">FieldBind** specified here is hidden in the workflow editor.</p></td>
+<td align="left"><p>Used only if the parent <span class="ui">FieldBind RuleDesigner</span> type is **Operator</span>. The value that is specified in this attribute should be synchronized with the **Field</span> attribute of a **FieldBind</span> element. If this option is selected, the **FieldBind** specified here is hidden in the workflow editor.</p></td>
 <td align="left"><p>Values of the s:string type.</p></td>
 </tr>
 <tr class="even">

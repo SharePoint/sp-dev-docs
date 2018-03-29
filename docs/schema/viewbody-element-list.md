@@ -111,7 +111,7 @@ Defines how the rows of data in a view are rendered.
 <tbody>
 <tr class="odd">
 <td align="left"><p>**ExpandXML**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** to re-pass the rendered content through the Collaborative Application Markup Language (CAML) interpreter, which allows CAML to render CAML.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** to re-pass the rendered content through the Collaborative Application Markup Language (CAML) interpreter, which allows CAML to render CAML.</p></td>
 </tr>
 </tbody>
 </table>

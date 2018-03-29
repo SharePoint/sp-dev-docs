@@ -133,7 +133,7 @@ class="nolink">SPWebTemplate</span></span> object.
 <tr class="even">
 <td align="left"><p>**IsCustomTemplate**</p></td>
 <td align="left"><p>xs:boolean</p></td>
-<td align="left"><p>Optional. Specifies whether the **SPWebTemplate</span> object is a site template; that is, a template contained within a .wsp file. The value is <span class="keyword">true</span> if the <span class="keyword">SPWebTemplate** object is a custom template.</p></td>
+<td align="left"><p>Optional. Specifies whether the **SPWebTemplate</span> object is a site template; that is, a template contained within a .wsp file. The value is **true</span> if the **SPWebTemplate** object is a custom template.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**IsHidden**</p></td>

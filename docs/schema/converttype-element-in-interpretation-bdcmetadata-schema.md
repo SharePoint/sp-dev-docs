@@ -91,7 +91,7 @@ the date that is compatible with the external system.
 </thead>
 <tbody>
 <tr class="odd">
-<td align="left"><p>**ConvertType</span> does not support non-Gregorian calendars for conversions between <span class="keyword">System.String</span> and <span class="keyword">System.DateTime**.</p></td>
+<td align="left"><p>**ConvertType</span> does not support non-Gregorian calendars for conversions between **System.String</span> and **System.DateTime**.</p></td>
 </tr>
 </tbody>
 </table>

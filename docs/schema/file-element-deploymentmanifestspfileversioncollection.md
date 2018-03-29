@@ -171,7 +171,7 @@ class="nolink">SPFile</span></span>
 <tr class="even">
 <td align="left"><p>**ListId**</p></td>
 <td align="left"><p><span sdata="link"><a href="guid-simple-type-deploymentmanifest.md">Guid Simple Type (DeploymentManifest)</a></span></p></td>
-<td align="left"><p>Optional. Unique identifier of the list in which the file exists. **ListId</span> values must match values for the <span class="keyword">Versions** attribute.</p></td>
+<td align="left"><p>Optional. Unique identifier of the list in which the file exists. **ListId</span> values must match values for the **Versions** attribute.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**FileValue**</p></td>
@@ -221,7 +221,7 @@ class="nolink">SPFile</span></span>
 <tr class="even">
 <td align="left"><p>**SetupPath**</p></td>
 <td align="left"><p>xs:string</p></td>
-<td align="left"><p>Optional. Path to the front-end file location in cases where the **IsGhosted</span> attribute is <span class="keyword">true**.</p></td>
+<td align="left"><p>Optional. Path to the front-end file location in cases where the **IsGhosted</span> attribute is **true**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**SetupPathUser**</p></td>
@@ -231,7 +231,7 @@ class="nolink">SPFile</span></span>
 <tr class="even">
 <td align="left"><p>**SetupPathVersion**</p></td>
 <td align="left"><p>xs:byte</p></td>
-<td align="left"><p>Optional. Specifies Microsoft SharePoint Foundation version. The value **2</span> specifies Windows SharePoint Services 2.0; the value <span class="keyword">3** specifies Windows SharePoint Services 3.0.</p></td>
+<td align="left"><p>Optional. Specifies Microsoft SharePoint Foundation version. The value **2</span> specifies Windows SharePoint Services 2.0; the value **3** specifies Windows SharePoint Services 3.0.</p></td>
 </tr>
 </tbody>
 </table>

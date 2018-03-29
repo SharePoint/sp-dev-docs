@@ -137,7 +137,7 @@ site.
 </tr>
 <tr class="even">
 <td align="left"><p>**RootWebOnly**</p></td>
-<td align="left"><p>Optional **Boolean</span>. <span class="keyword">TRUE** if the files specified in the module are installed only in the top-level Web site of the site collection.</p></td>
+<td align="left"><p>Optional **Boolean</span>. **TRUE** if the files specified in the module are installed only in the top-level Web site of the site collection.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>**SetupPath**</p></td>
@@ -152,7 +152,7 @@ site.
 </tr>
 <tr class="even">
 <td align="left"><p>**Url**</p></td>
-<td align="left"><p>Optional **Text</span>. Specifies the virtual path of the folder in which to place the files when a site is instantiated. If <span class="keyword">Path</span> is not specified, the value of <span class="keyword">Url</span> is used for the physical path. Use the <span class="keyword">Url** attribute to provision a folder through the site definition.</p>
+<td align="left"><p>Optional **Text</span>. Specifies the virtual path of the folder in which to place the files when a site is instantiated. If **Path</span> is not specified, the value of **Url</span> is used for the physical path. Use the **Url** attribute to provision a folder through the site definition.</p>
 <p>The **Url** attribute cannot contain the following characters:</p>
 <ul>
 <li><p>\&quot;</p></li>

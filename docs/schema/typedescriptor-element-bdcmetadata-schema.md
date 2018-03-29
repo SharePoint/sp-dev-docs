@@ -113,49 +113,49 @@ elements.
 <tr class="even">
 <td align="left"><p>LobName</p></td>
 <td align="left"><p>Optional.</p>
-<p>The data structure that is represented by the **TypeDescriptor</span>. The default value of this attribute is the name of the <span class="keyword">TypeDescriptor</span>. For example, a line-of-business (LOB) system data structure named &quot;CN1A&quot; can be represented by a <span class="keyword">TypeDescriptor</span> with <span class="keyword">Name</span> attribute equal to &quot;Customer Name&quot;, if the <span class="keyword">LobName</span> attribute of this <span class="keyword">TypeDescriptor** is equal to &quot;CN1A&quot;.</p>
+<p>The data structure that is represented by the **TypeDescriptor</span>. The default value of this attribute is the name of the **TypeDescriptor</span>. For example, a line-of-business (LOB) system data structure named &quot;CN1A&quot; can be represented by a **TypeDescriptor</span> with **Name</span> attribute equal to &quot;Customer Name&quot;, if the **LobName</span> attribute of this **TypeDescriptor** is equal to &quot;CN1A&quot;.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>IdentifierEntityNamespace</p></td>
 <td align="left"><p>Optional.</p>
-<p>The namespace of the external content type that contains the identifier that the **TypeDescriptor</span> references. If the <span class="keyword">TypeDescriptor</span> does not reference an <span class="keyword">Identifier</span>, this attribute must not be present. When this attribute is present, the <span class="keyword">IdentifierEntityName</span> and <span class="keyword">IdentifierName</span> attributes must also be present. The default value of this attribute is the namespace of the external content type that contains the method containing the parameter that contains the <span class="keyword">TypeDescriptor**.</p>
+<p>The namespace of the external content type that contains the identifier that the **TypeDescriptor</span> references. If the **TypeDescriptor</span> does not reference an **Identifier</span>, this attribute must not be present. When this attribute is present, the **IdentifierEntityName</span> and **IdentifierName</span> attributes must also be present. The default value of this attribute is the namespace of the external content type that contains the method containing the parameter that contains the **TypeDescriptor**.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>IdentifierEntityName</p></td>
 <td align="left"><p>Optional.</p>
-<p>The name of the **Entity</span> that contains the <span class="keyword">Identifier</span> that the c<span class="keyword">TypeDescriptor</span> references. If the <span class="keyword">TypeDescriptor</span> does not reference an <span class="keyword">Identifier</span>, this attribute must not be present. When this attribute is present, the <span class="keyword">IdentifierEntityNamespace</span> and <span class="keyword">IdentifierName</span> attributes must also be present. The default value of this attribute is the name of the <span class="keyword">Entity</span> that contains the <span class="keyword">Method</span> containing the <span class="keyword">Parameter</span> that contains the <span class="keyword">TypeDescriptor**.</p>
+<p>The name of the **Entity</span> that contains the **Identifier</span> that the c**TypeDescriptor</span> references. If the **TypeDescriptor</span> does not reference an **Identifier</span>, this attribute must not be present. When this attribute is present, the **IdentifierEntityNamespace</span> and **IdentifierName</span> attributes must also be present. The default value of this attribute is the name of the **Entity</span> that contains the **Method</span> containing the **Parameter</span> that contains the **TypeDescriptor**.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>IdentifierName</p></td>
 <td align="left"><p>Optional.</p>
-<p>The name of the **Identifier</span> referenced by the <span class="keyword">TypeDescriptor</span>. If the <span class="keyword">TypeDescriptor</span> does not reference an <span class="keyword">Identifier**, this attribute must not be present.</p>
+<p>The name of the **Identifier</span> referenced by the **TypeDescriptor</span>. If the **TypeDescriptor</span> does not reference an **Identifier**, this attribute must not be present.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>ForeignIdentifierAssociationName</p></td>
 <td align="left"><p>Optional.</p>
-<p>The name of the **Association</span> referenced by the <span class="keyword">TypeDescriptor</span>. If the <span class="keyword">TypeDescriptor</span> does not reference an <span class="keyword">Association</span>, this attribute must not be present. When this attribute is present, the <span class="keyword">IdentifierName</span> attribute must also be present. The <span class="keyword">ForeignIdentifierAssociationName</span> attribute must be specified when the <span class="keyword">Identifier</span> referenced by this <span class="keyword">TypeDescriptor</span> is related to an <span class="keyword">Association</span>, and the <span class="keyword">Identifier</span> is contained by a source <span class="keyword">Entity</span> of the <span class="keyword">Association**.</p>
+<p>The name of the **Association</span> referenced by the **TypeDescriptor</span>. If the **TypeDescriptor</span> does not reference an **Association</span>, this attribute must not be present. When this attribute is present, the **IdentifierName</span> attribute must also be present. The **ForeignIdentifierAssociationName</span> attribute must be specified when the **Identifier</span> referenced by this **TypeDescriptor</span> is related to an **Association</span>, and the **Identifier</span> is contained by a source **Entity</span> of the **Association**.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>ForeignIdentifierAssociationEntityName</p></td>
 <td align="left"><p>Optional.</p>
-<p>The name of the **Entity</span> that contains the <span class="keyword">Association</span> referenced by the <span class="keyword">TypeDescriptor</span>. If the <span class="keyword">TypeDescriptor</span> does not reference an <span class="keyword">Association</span>, this attribute must not be present. When this attribute is present, the <span class="keyword">ForeignIdentifierAssociationEntityNamespace</span> and <span class="keyword">ForeignIdentifierAssociationName</span> attributes must also be present. The default value of this attribute is the name of the <span class="keyword">Entity</span> that contains the <span class="keyword">Method</span> containing the <span class="keyword">Parameter</span> that contains the <span class="keyword">TypeDescriptor**.</p>
+<p>The name of the **Entity</span> that contains the **Association</span> referenced by the **TypeDescriptor</span>. If the **TypeDescriptor</span> does not reference an **Association</span>, this attribute must not be present. When this attribute is present, the **ForeignIdentifierAssociationEntityNamespace</span> and **ForeignIdentifierAssociationName</span> attributes must also be present. The default value of this attribute is the name of the **Entity</span> that contains the **Method</span> containing the **Parameter</span> that contains the **TypeDescriptor**.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>ForeignIdentifierAssociationEntityNamespace</p></td>
 <td align="left"><p>Optional.</p>
-<p>The namespace of the **Entity</span> that contains the <span class="keyword">Association</span> referenced by the <span class="keyword">TypeDescriptor</span>. If the <span class="keyword">TypeDescriptor</span> does not reference an <span class="keyword">Association</span>, this attribute must not be present. When this attribute is present, the <span class="keyword">ForeignIdentifierAssociationEntityName</span> and <span class="keyword">ForeignIdentifierAssociationName</span> attributes must also be present. The default value of this attribute is the namespace of the <span class="keyword">Entity</span> that contains the <span class="keyword">Method</span> containing the <span class="keyword">Parameter</span> that contains the <span class="keyword">TypeDescriptor**.</p>
+<p>The namespace of the **Entity</span> that contains the **Association</span> referenced by the **TypeDescriptor</span>. If the **TypeDescriptor</span> does not reference an **Association</span>, this attribute must not be present. When this attribute is present, the **ForeignIdentifierAssociationEntityName</span> and **ForeignIdentifierAssociationName</span> attributes must also be present. The default value of this attribute is the namespace of the **Entity</span> that contains the **Method</span> containing the **Parameter</span> that contains the **TypeDescriptor**.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>AssociatedFilter</p></td>
 <td align="left"><p>Optional.</p>
-<p>The name of a **FilterDescriptor</span> that is associated with the <span class="keyword">TypeDescriptor</span>. If the <span class="keyword">TypeDescriptor</span> is not associated with a <span class="keyword">FilterDescriptor** this attribute must not be present.</p>
+<p>The name of a **FilterDescriptor</span> that is associated with the **TypeDescriptor</span>. If the **TypeDescriptor</span> is not associated with a **FilterDescriptor** this attribute must not be present.</p>
 <p>Attribute type: **String**</p></td>
 </tr>
 <tr class="even">
@@ -168,35 +168,35 @@ elements.
 <tr class="odd">
 <td align="left"><p>ReadOnly</p></td>
 <td align="left"><p>Optional.</p>
-<p>Specifies whether the data stored by the data structure represented by the **TypeDescriptor</span> can be modified. This attribute must not be specified if the value of the <span class="keyword">Direction</span> attribute of the <span class="keyword">Parameter</span> that contains the <span class="keyword">TypeDescriptor** is &quot;In&quot;.</p>
+<p>Specifies whether the data stored by the data structure represented by the **TypeDescriptor</span> can be modified. This attribute must not be specified if the value of the **Direction</span> attribute of the **Parameter</span> that contains the **TypeDescriptor** is &quot;In&quot;.</p>
 <p>Default value: **false**</p>
 <p>Attribute type: **Boolean**</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>CreatorField</p></td>
 <td align="left"><p>Optional.</p>
-<p>Specifies whether the **TypeDescriptor</span> represents a field for <span class="keyword">MethodInstances</span> of type <span class="keyword">Creator</span> that are contained by the <span class="keyword">Method</span> that contains the <span class="keyword">Parameter</span> containing the <span class="keyword">TypeDescriptor**.</p>
+<p>Specifies whether the **TypeDescriptor</span> represents a field for **MethodInstances</span> of type **Creator</span> that are contained by the **Method</span> that contains the **Parameter</span> containing the **TypeDescriptor**.</p>
 <p>Default value: **false**</p>
 <p>Attribute type: **Boolean**</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>UpdaterField</p></td>
 <td align="left"><p>Optional.</p>
-<p>Specifies whether the **TypeDescriptor</span> represents a field for <span class="keyword">MethodInstances</span> of type <span class="keyword">Updater</span> that are contained by the <span class="keyword">Method</span> that contains the <span class="keyword">Parameter</span> containing the <span class="keyword">TypeDescriptor</span>. When this attribute is specified, a <span class="keyword">PreUpdaterField** attribute must not be specified.</p>
+<p>Specifies whether the **TypeDescriptor</span> represents a field for **MethodInstances</span> of type **Updater</span> that are contained by the **Method</span> that contains the **Parameter</span> containing the **TypeDescriptor</span>. When this attribute is specified, a **PreUpdaterField** attribute must not be specified.</p>
 <p>Default value: **false**</p>
 <p>Attribute type: **Boolean**</p></td>
 </tr>
 <tr class="even">
 <td align="left"><p>PreUpdaterField</p></td>
 <td align="left"><p>Optional.</p>
-<p>Specifies whether data structure represented by the **TypeDescriptor</span> stores the latest data value received from the external system of a field for <span class="keyword">MethodInstances</span> of type <span class="keyword">Updater</span>. When this attribute is specified, a <span class="keyword">UpdaterField** attribute must not be specified.</p>
+<p>Specifies whether data structure represented by the **TypeDescriptor</span> stores the latest data value received from the external system of a field for **MethodInstances</span> of type **Updater</span>. When this attribute is specified, a **UpdaterField** attribute must not be specified.</p>
 <p>Default value: **false**</p>
 <p>Attribute type: **Boolean**</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p>Significant</p></td>
 <td align="left"><p>Optional.</p>
-<p>Specifies whether values stored by the data structure represented by this **TypeDescriptor</span> are included in calculating a hash code or comparing values stored in the data structures. For example, a <span class="keyword">TypeDescriptor</span> representing a customer's last name is taken into account when determining whether a record has been modified, and so it is significant, whereas the <span class="keyword">TypeDescriptor** representing the date on which the customer record is last modified typically is not taken into account to determine whether a record has been modified, and so it is not significant.</p>
+<p>Specifies whether values stored by the data structure represented by this **TypeDescriptor</span> are included in calculating a hash code or comparing values stored in the data structures. For example, a **TypeDescriptor</span> representing a customer's last name is taken into account when determining whether a record has been modified, and so it is significant, whereas the **TypeDescriptor** representing the date on which the customer record is last modified typically is not taken into account to determine whether a record has been modified, and so it is not significant.</p>
 <p>Default value: **true**</p>
 <p>Attribute type: Boolean</p></td>
 </tr>
@@ -260,7 +260,7 @@ elements.
 <tr class="even">
 <td align="left"><p><span sdata="link"><a href="properties-element-in-metadataobject-bdcmetadata-schema.md">Properties Element in MetadataObject (BDCMetadata Schema)</a></span></p></td>
 <td align="left"><p>The properties of the **TypeDescriptor**.</p>
-<p>When the TypeDescriptor is of type **System.String</span>, the <span class="keyword">Properties</span> element can contain a <span class="keyword">Property</span> of type <span class="keyword">System.Int32</span> with the <span class="keyword">Name</span> attribute set to <span class="keyword">Size</span>. The value of the <span class="keyword">Property</span> specifies the expected maximum string length of the value of the data structure described by this <span class="keyword">TypeDescriptor**.</p></td>
+<p>When the TypeDescriptor is of type **System.String</span>, the **Properties</span> element can contain a **Property</span> of type **System.Int32</span> with the **Name</span> attribute set to **Size</span>. The value of the **Property</span> specifies the expected maximum string length of the value of the data structure described by this **TypeDescriptor**.</p></td>
 </tr>
 <tr class="odd">
 <td align="left"><p><span sdata="link"><a href="interpretation-element-in-typedescriptor-bdcmetadata-schema.md">Interpretation Element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
@@ -272,7 +272,7 @@ elements.
 </tr>
 <tr class="odd">
 <td align="left"><p><span sdata="link"><a href="typedescriptors-element-in-typedescriptor-bdcmetadata-schema.md">TypeDescriptors Element in TypeDescriptor (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The child **TypeDescriptors</span> of the <span class="keyword">TypeDescriptor**.</p></td>
+<td align="left"><p>The child **TypeDescriptors</span> of the **TypeDescriptor**.</p></td>
 </tr>
 </tbody>
 </table>
