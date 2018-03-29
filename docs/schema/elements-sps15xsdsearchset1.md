@@ -1,6 +1,4 @@
 ---
-
-
 manager: arnek
 ms.date: 11/16/2014
 ms.audience: Developer
@@ -10,98 +8,49 @@ localization_priority: Normal
 ms.assetid: 20bc0905-610c-8a8b-a07f-fa1f9f7c7518
 ---
 
-![Collapse
-section](../icons/collapse_all.gif "Collapse section")![Expand
-section](../icons/expand_all.gif "Expand section")![](../icons/collapse_all.gif)![](../icons/expand_all.gif)![](../icons/dropdown.gif)![](../icons/dropdownHover.gif)![Copy
-code](../icons/copycode.gif "Copy code")![Copy code
-hover](../icons/copycodeHighlight.gif "Copy code hover")
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-Visual Basic  
-C\#  
-C++  
-JavaScript  
-
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># Elements (SPS15XSDSearchSet1)</td>
-</tr>
-<tr class="odd">
-<td align="left"><span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
-
-This topic lists the elements in the <span
-class="keyword">schema\_Microsoft.Office.Server.Search.Administration.Query</span>
-XML schema.
-
-**Last modified:** February 19, 2014
+# Elements (SPS15XSDSearchSet1)
 
 **Applies to**: SharePoint Server 2013
 
--   [Active element](active-element-source-complextypesps15xsdsearchset1.md)
+This topic lists the elements in the **schema\_Microsoft.Office.Server.Search.Administration.Query** XML schema.
 
--   [ArrayOfSource element](arrayofsource-element-sps15xsdsearchset1.md)
+- [Active element](active-element-source-complextypesps15xsdsearchset1.md)
 
--   [AuthInfo element](authinfo-element-source-complextypesps15xsdsearchset1.md)
+- [ArrayOfSource element](arrayofsource-element-sps15xsdsearchset1.md)
 
--   [BuiltIn element](builtin-element-source-complextypesps15xsdsearchset1.md)
+- [AuthInfo element](authinfo-element-source-complextypesps15xsdsearchset1.md)
 
--   [ConnectionTimeout
-    element](connectiontimeout-element-source-complextypesps15xsdsearchset1.md)
+- [BuiltIn element](builtin-element-source-complextypesps15xsdsearchset1.md)
 
--   [ConnectionUrlTemplate
-    element](connectionurltemplate-element-source-complextypesps15xsdsearchset1.md)
+- [ConnectionTimeout element](connectiontimeout-element-source-complextypesps15xsdsearchset1.md)
 
--   [CreatedDate element](createddate-element-source-complextypesps15xsdsearchset1.md)
+- [ConnectionUrlTemplate element](connectionurltemplate-element-source-complextypesps15xsdsearchset1.md)
 
--   [Description element](description-element-source-complextypesps15xsdsearchset1.md)
+- [CreatedDate element](createddate-element-source-complextypesps15xsdsearchset1.md)
 
--   [HasPermissionToReadAuthInfo
-    element](haspermissiontoreadauthinfo-element-source-complextypesps15xsdsearchset1.md)
+- [Description element](description-element-source-complextypesps15xsdsearchset1.md)
 
--   [Id element](id-element-source-complextypesps15xsdsearchset1.md)
+- [HasPermissionToReadAuthInfo element](haspermissiontoreadauthinfo-element-source-complextypesps15xsdsearchset1.md)
 
--   [IndexOffset element](indexoffset-element-source-complextypesps15xsdsearchset1.md)
+- [Id element](id-element-source-complextypesps15xsdsearchset1.md)
 
--   [LastModifiedDate element](lastmodifieddate-element-source-complextypesps15xsdsearchset1.md)
+- [IndexOffset element](indexoffset-element-source-complextypesps15xsdsearchset1.md)
 
--   [MaximumResponseLength
-    element](maximumresponselength-element-source-complextypesps15xsdsearchset1.md)
+- [LastModifiedDate element](lastmodifieddate-element-source-complextypesps15xsdsearchset1.md)
 
--   [Name element](name-element-source-complextypesps15xsdsearchset1.md)
+- [MaximumResponseLength element](maximumresponselength-element-source-complextypesps15xsdsearchset1.md)
 
--   [Owner element](owner-element-source-complextypesps15xsdsearchset1.md)
+- [Name element](name-element-source-complextypesps15xsdsearchset1.md)
 
--   [ProviderId element](providerid-element-source-complextypesps15xsdsearchset1.md)
+- [Owner element](owner-element-source-complextypesps15xsdsearchset1.md)
 
--   [QueryTransform element](querytransform-element-source-complextypesps15xsdsearchset1.md)
+- [ProviderId element](providerid-element-source-complextypesps15xsdsearchset1.md)
 
--   [Source element](source-element-sps15xsdsearchset1.md)
+- [QueryTransform element](querytransform-element-source-complextypesps15xsdsearchset1.md)
 
--   [Source element](source-element-arrayofsource-complextypesps15xsdsearchset1.md)
+- [Source element](source-element-sps15xsdsearchset1.md)
+
+- [Source element](source-element-arrayofsource-complextypesps15xsdsearchset1.md)
 
 
 
