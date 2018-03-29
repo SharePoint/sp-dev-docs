@@ -67,7 +67,7 @@ You can also follow these steps by watching this video on the [SharePoint PnP Yo
   SharePoint Framework solutions can automatically benefit from the Office 365 Public CDN as long as it's enabled in your tenant. When CDN is enabled, the `*/CLIENTSIDEASSETS` origin is automatically added as a valid origin.
 
   > [!NOTE]
-  > If you have previously enabled Office 365 CDN, you should re-enable the public CDN so that you have the `*/CLIENTSIDEASSETS`entry added as a valid CDN origin for public CDN.
+  > If you have previously enabled Office 365 CDN, you should re-enable the public CDN so that you have the `*/CLIENTSIDEASSETS`entry added as a valid CDN origin for public CDN. If this entry is not present and the public CDN is enabled in your tenant, bundle requests will contain the token hostname `spclientsideassetlibrary` in their URL, causing the requests to fail.
 
 6. You can double-check the current setup of your end-points. Execute the following command to get the list of CDN origins from your tenant:
 
