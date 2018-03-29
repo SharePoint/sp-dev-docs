@@ -26,11 +26,11 @@ The SharePoint workflow actions schema (Action4.xsd) lets you create custom acti
 
 ## See also
 
-- [Workflow activity classes in SharePoint](./general-development/workflow-activity-classes-in-sharepoint.md)
-- [Workflow actions quick reference (SharePoint Workflow platform)](./general-development/workflow-actions-quick-reference-sharepoint-workflow-platform.md)
-- [Workflow actions available using the workflow interop bridge](./general-development/workflow-actions-available-using-the-workflow-interop-bridge.md)
-- [Workflows in SharePoint](./general-development/workflows-in-sharepoint.md)
-- [Workflow development in SharePoint Designer and Visio](./general-development/workflow-development-in-sharepoint-designer-and-visio.md)
+- [Workflow activity classes in SharePoint](../general-development/workflow-activity-classes-in-sharepoint.md)
+- [Workflow actions quick reference (SharePoint Workflow platform)](../general-development/workflow-actions-quick-reference-sharepoint-workflow-platform.md)
+- [Workflow actions available using the workflow interop bridge](../general-development/workflow-actions-available-using-the-workflow-interop-bridge.md)
+- [Workflows in SharePoint](../general-development/workflows-in-sharepoint.md)
+- [Workflow development in SharePoint Designer and Visio](../general-development/workflow-development-in-sharepoint-designer-and-visio.md)
 - Microsoft.SharePoint.WorkflowServices
 - Microsoft.SharePoint.WorkflowServices.Activities
 - [A Developer's Introduction to Windows Workflow Foundation (WF) in .NET 4](https://msdn.microsoft.com/en-us/library/ee342461.aspx)

@@ -37,6 +37,8 @@ A **Condition** element contains information about the Microsoft .NET assembly w
 
 <br/>
 
+### Attributes
+
 <table>
 <colgroup>
 <col width="20%" />
@@ -139,7 +141,7 @@ A **Condition** element contains information about the Microsoft .NET assembly w
 </colgroup>
 <tbody>
 <tr class="odd">
-<td align="left"><p><a href="930e0d1c-a01a-4557-a58b-209621f1632e.md">Conditions</a></p></td>
+<td align="left"><p><a href="conditions-element-workflowinfo.md">Conditions</a></p></td>
 </tr>
 </tbody>
 </table>
@@ -171,10 +173,9 @@ The following example shows how to expose a **Condition** element to the code-fr
 
 ## See also
 
-- [Conditions Element](http://msdn.microsoft.com/library/e930e0d1c-a01a-4557-a58b-209621f1632e(Office.15).aspx)
-- [Workflow Actions Schema Overview](http://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
-- [Creating Declarative, No-Code Workflow Editors](http://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
-- [Workflow Actions Schema Overview](http://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
+- [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
+- [Creating Declarative, No-Code Workflow Editors](https://msdn.microsoft.com/library/60dfda8d-e724-4d7d-9578-aa239c362dcf(Office.15).aspx)
+- [Workflow Actions Schema Overview](https://msdn.microsoft.com/library/25da07cb-b228-43f2-9cdf-c8c71c3eabbb(Office.15).aspx)
 
 
 

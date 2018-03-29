@@ -41,7 +41,7 @@ If the remote web server binds the remote component to a port other than 80 when
 
 <br/>
 
-The value of this element can contain certain tokens to represent information that is not known at development time. The "{StandardTokens}" above is an example. For more information, see [URL strings and tokens in SharePoint Add-ins](./sp-add-ins/url-strings-and-tokens-in-sharepoint-add-ins.md). 
+The value of this element can contain certain tokens to represent information that is not known at development time. The "{StandardTokens}" above is an example. For more information, see [URL strings and tokens in SharePoint Add-ins](../sp-add-ins/url-strings-and-tokens-in-sharepoint-add-ins.md). 
 
 When you are debugging in Visual Studio, the Microsoft Office Developer Tools for Visual Studio use the token `~remoteWebUrl`</span>` in place of the protocol and domain, as in the following example.
 
@@ -53,7 +53,7 @@ When you are debugging in Visual Studio, the Microsoft Office Developer Tools fo
 
 The token is automatically replaced by the actual protocol and domain (and port, if needed) by the Office Developer Tools for Visual Studio when the add-in is packaged by using the **Publish** option on the context menu for the SharePoint Add-in project in Visual Studio. If you don't use the Publish Wizard (or you do, but the remote component is being deployed to Azure), you have to manually replace the token before you package the SharePoint Add-in.
 
-If the add-in uses OAuth, the domain part of the StartPage value must exactly match the **Add-in Domain** specified when the SharePoint Add-in was registered with Microsoft Azure Access Control Service (ACS). For more information see [Register SharePoint Add-ins](./sp-add-ins/register-sharepoint-add-ins.md).
+If the add-in uses OAuth, the domain part of the StartPage value must exactly match the **Add-in Domain** specified when the SharePoint Add-in was registered with Microsoft Azure Access Control Service (ACS). For more information see [Register SharePoint Add-ins](../sp-add-ins/register-sharepoint-add-ins.md).
 
 <br/>
 
