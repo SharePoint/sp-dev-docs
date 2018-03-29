@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -12,102 +10,31 @@ localization_priority: Normal
 ms.assetid: 1f5fa96a-1bff-f007-984d-a644cbbb2648
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# ActionParameter Element in ActionParameters 
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
+(BDCMetadata Schema)
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># ActionParameter Element in ActionParameters (BDCMetadata Schema)</td>
-</tr>
-<tr class="odd">
-<td align="left"><span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+Specifies the parameters of a URL-based action. Defines how to parameterize the URL of an action with EntityInstance-specific data.
 
-**Last modified:** March 09, 2015
-
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
-
-Specifies the parameters of a URL-based action. It defines how to
-parameterize the URL of an action with <span
-class="keyword">EntityInstance</span>-specific data.
-
-**Namespace:**
-http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+**Namespace:** http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 
 **Schema:** BDCMetadata
 
-The URL attribute of a URL-based action can receive parameters by using
-the ActionParameter element.
+The URL attribute of a URL-based action can receive parameters by using the ActionParameter element.
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><img src=".." title="Important note" alt="Important note" /><strong>Important</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>**ActionParameters</span> can either represent identifier values, or values that correspond to <span class="keyword">TypeDescriptors</span> in a <span class="keyword">SpecificFinder</span> of the <span class="keyword">Entity</span>. The <span class="keyword">ActionParameter</span> represents an identifier value when the <span class="keyword">IdOrdinal</span> property is present. The value of the property specifies the index of the identifier whose value this <span class="keyword">ActionParameter</span> represents. If the <span class="keyword">IdOrdinal</span> property is not specified, the <span class="keyword">ActionParameter</span> represents a <span class="keyword">TypeDescriptor</span>, and the <span class="keyword">Name</span> attribute specifies which type descriptor is being represented. The <span class="keyword">Name</span> attribute is specified as a <span class="keyword">Dotted Path**.</p></td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT] 
+> **ActionParameters** can either represent identifier values, or values that correspond to **TypeDescriptors** in a **SpecificFinder** of the **Entity**. 
+> 
+> The **ActionParameter** represents an identifier value when the **IdOrdinal** property is present. The value of the property specifies the index of the identifier whose value this **ActionParameter** represents. If the **IdOrdinal** property is not specified, the **ActionParameter** represents a **TypeDescriptor**, and the **Name** attribute specifies which type descriptor is being represented. The **Name** attribute is specified as a **Dotted Path**.
 
-The **ActionParameter** element accepts the
-following property.
+The **ActionParameter** element accepts the following property.
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><img src=".." title="Important note" alt="Important note" /><strong>Important</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Properties are case-sensitive.</p></td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT] 
+> Properties are case-sensitive.
 
-Properties
+### Properties
 
 <table>
 <colgroup>
@@ -123,7 +50,7 @@ Properties
 <th align="left"><p>Property</p></th>
 <th align="left"><p>Type</p></th>
 <th align="left"><p>Description</p></th>
-<th align="left"><p>Required.</p></th>
+<th align="left"><p>Required</p></th>
 <th align="left"><p>Default Value</p></th>
 <th align="left"><p>Limits/Accepted Values</p></th>
 </tr>
@@ -140,30 +67,17 @@ Properties
 </tbody>
 </table>
 
-<span codelanguage="xmlLang"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left">XML</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>&lt;ActionParameter Index = &quot;Integer&quot; Name = &quot;String&quot; DefaultDisplayName = &quot;String&quot; IsCached = &quot;Boolean&quot;&gt; &lt;/ActionParameter&gt;</code></pre></td>
-</tr>
-</tbody>
-</table>
+<br/>
 
+```XML
+<ActionParameter Index = "Integer" Name = "String" DefaultDisplayName = "String" IsCached = "Boolean"> </ActionParameter>
+```
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+<br/>
 
-The following sections describe attributes, child elements, and parent
-elements.
+The following sections describe attributes, child elements, and parent elements.
 
-#### Attributes
+### Attributes
 
 <table>
 <colgroup>
@@ -180,7 +94,7 @@ elements.
 <tr class="odd">
 <td align="left"><p>**Index**</p></td>
 <td align="left"><p>Required.</p>
-<p>An ordinal attribute that specifies the position of this **ActionParameter</span> among other <span class="keyword">ActionParameters** in the URL.</p>
+<p>An ordinal attribute that specifies the position of this **ActionParameter** among other **ActionParameters** in the URL.</p>
 <p>Attribute type: **Integer**</p></td>
 </tr>
 <tr class="even">
@@ -198,14 +112,16 @@ elements.
 <tr class="even">
 <td align="left"><p>**IsCached**</p></td>
 <td align="left"><p>Optional.</p>
-<p>Specifies whether this **ActionParameter</span> is used frequently. This attribute is used by the BDC client runtime to cache this <span class="keyword">Action**.</p>
+<p>Specifies whether this **ActionParameter** is used frequently. This attribute is used by the BDC client runtime to cache this **Action**.</p>
 <p>Default value: **true**</p>
 <p>Attribute type: **Boolean**</p></td>
 </tr>
 </tbody>
 </table>
 
-#### Child elements
+<br/>
+
+### Child elements
 
 <table>
 <colgroup>
@@ -230,7 +146,9 @@ elements.
 </tbody>
 </table>
 
-#### Parent elements
+<br/>
+
+### Parent elements
 
 <table>
 <colgroup>
@@ -246,7 +164,7 @@ elements.
 <tbody>
 <tr class="odd">
 <td align="left"><p><span sdata="link"><a href="actionparameters-element-in-action-bdcmetadata-schema.md">ActionParameters Element in Action (BDCMetadata Schema)</a></span></p></td>
-<td align="left"><p>The **ActionParameters</span> element that contains this <span class="keyword">ActionParameter**.</p></td>
+<td align="left"><p>The **ActionParameters** element that contains this **ActionParameter**.</p></td>
 </tr>
 </tbody>
 </table>

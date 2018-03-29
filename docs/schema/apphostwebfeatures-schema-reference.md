@@ -24,7 +24,7 @@ The AppHostWebFeatures schema specifies the XML that can be used in features dep
 
 ## See also
 
-- [Host webs, add-in webs, and SharePoint components in SharePoint](./sp-add-ins/host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md)
+- [Host webs, add-in webs, and SharePoint components in SharePoint](../sp-add-ins/host-webs-add-in-webs-and-sharepoint-components-in-sharepoint.md)
 
 
 

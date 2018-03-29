@@ -1,6 +1,4 @@
 ---
-
-
 manager: soliver
 ms.date: 3/9/2015
 ms.audience: Developer
@@ -12,150 +10,40 @@ localization_priority: Normal
 ms.assetid: 9659a1f5-1b12-03ef-f9e3-5c9904cc5dd0
 ---
 
-![Collapse
-section]![Expand
-section] "Expand section")![]()![])![]![]()![Copy
-code] "Copy code")![Copy code
-hover]
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+# Association Element in MethodInstances 
 
-Visual Basic  
-C\#  
-C++  
-JavaScript  
+(BDCMetadata Schema)
 
-<table>
-<tbody>
-<tr class="odd">
-<td align="left"><span id="runningHeaderText"></span></td>
-</tr>
-<tr class="even">
-<td align="left"># Association Element in MethodInstances (BDCMetadata Schema)</td>
-</tr>
-<tr class="odd">
-<td align="left"><span id="headfeedbackarea" class="feedbackhead"><a href="javascript:SubmitFeedback(&#39;docthis@Microsoft.com&#39;,&#39;&#39;,&#39;&#39;,&#39;&#39;,&#39;1.0.18082.1225&#39;,&#39;%0\dThank%20you%20for%20your%20feedback.%20The%20developer%20writing%20teams%20use%20your%20feedback%20to%20improve%20documentation.%20While%20we%20are%20reviewing%20your%20feedback,%20we%20may%20send%20you%20e-mail%20to%20ask%20for%20clarification%20or%20feedback%20on%20a%20solution.%20We%20do%20not%20use%20your%20e-mail%20address%20for%20any%20other%20purpose%20and%20we%20delete%20it%20after%20we%20finish%20our%20review.%0\AFor%20further%20information%20about%20the%20privacy%20policies%20of%20Microsoft,%20please%20see%20http://privacy.microsoft.com/en-us/default.aspx.%0\A%0\d&#39;,&#39;Customer%20feedback&#39;);">Send feedback</a></span></td>
-</tr>
-</tbody>
-</table>
+**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 | SharePoint Online | SharePoint Server 2013
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"></td>
-</tr>
-</tbody>
-</table>
+**Namespace**: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
 
-**Last modified:** March 09, 2015
+**Schema**: BDCMetadata
 
-**Applies to**: SharePoint 2016 | SharePoint Foundation 2013 |
-SharePoint Online | SharePoint Server 2013
+The Association element links related external content types within a system. For example, a customer is associated with a sales order in the AdventureWorks system: a customer makes sales orders. An Association holds pointers to the source and destination external content types and a pointer to the business logic (a MethodInstance object) that allows a client to get the destination external content type from the source external content type. The traversal of an Association is a method call on the external system.
 
-Namespace: http://schemas.microsoft.com/windows/2007/BusinessDataCatalog
+In the BDC Model, the Association logic (MethodInstance) can be on any external content type, either source or destination or an unrelated external content type, provided the destination external content type belongs to the LobSystem that contains the Association method instance.
 
-Schema: BDCMetadata
+> [!WARNING] 
+> Note that when using SharePoint Designer 2010, you must create the Association operation on the destination external content type. This is a requirement of SharePoint Designer, and modeling it the other way (on the source or another external content type) will not work.
 
-The Association element links related external content types within a
-system. For example, a customer is associated with a sales order in the
-AdventureWorks system: a customer makes sales orders. An Association
-holds pointers to the source and destination external content types and
-a pointer to the business logic (a MethodInstance object) that allows a
-client to get the destination external content type from the source
-external content type. The traversal of an Association is a method call
-on the external system.
+BDC also supports multiple source external content type scenarios and one destination external content type scenario.
 
-In the BDC Model, the Association logic (MethodInstance) can be on any
-external content type, either source or destination or an unrelated
-external content type, provided the destination external content type
-belongs to the LobSystem that contains the Association method instance.
+An Association method instance contains slots for the identifier values of the SourceEntity instance, and a slot for the identifier values of the DestinationEntity instances. Therefore, you must tag enough input TypeDescriptor objects with identifiers corresponding to each identifier of each external content type that is a source in the Association in the Association method. 
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><img src=".." title="Caution note" alt="Caution note" /><strong>Caution</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Note that when using SharePoint Designer 2010, you must create the Association operation on the destination external content type. This is a requirement of SharePoint Designer and modeling it the other way (on the source or another external content type) will not work.</p></td>
-</tr>
-</tbody>
-</table>
+The IdentifierName attribute on an input TypeDescriptor object signals BDC to insert the identifier value of the EntityInstance of relevance before executing the method. For example, in an AssociationMethodInstance, the user has probably provided the identifier values for the source EntityInstance that he or she wants to retrieve. BDC will insert that value into this slot after fully instantiating this parameter by using all the default values.
 
-BDC also supports multiple source external content type scenarios and
-one destination external content type scenario.
+BDC also supports Foreign Key pseudo-associations. Foreign Key pseudo-associations are not first-class associations. Consider a Web method that returns Customer, and that one of the fields of a Customer is the Key to the Address of the Customer. Also consider another web method that returns Address given its key. A metadata modeller may use this method as a Customer-Address Association method (possibly along with a Specific Finder of Address). Foreign key pseudo associations see that the target of this method is an Address, fetch the key of Address from the Returned Customer, and then call this association Method to return the Address automatically.
 
-An Association method instance contains slots for the identifier values
-of the SourceEntity instance, and a slot for the identifier values of
-the DestinationEntity instances. Therefore, you must tag enough input
-TypeDescriptor objects with identifiers corresponding to each identifier
-of each external content type that is a source in the Association in the
-Association method. The IdentifierName attribute on an input
-TypeDescriptor object signals BDC to insert the identifier value of the
-EntityInstance of relevance before executing the method. For example, in
-an AssociationMethodInstance, the user has probably provided the
-identifier values for the source EntityInstance that he or she wants to
-retrieve. BDC will insert that value into this slot after fully
-instantiating this parameter by using all the default values.
-
-BDC also supports Foreign Key pseudo-associations. Foreign Key
-pseudo-associations are not first-class associations. Consider a Web
-method that returns Customer, and that one of the fields of a Customer
-is the Key to the Address of the Customer. Also consider another web
-method that returns Address given its key. A metadata modeller may use
-this method as a Customer-Address Association method (possibly along
-with a Specific Finder of Address). Foreign key pseudo associations see
-that the target of this method is an Address, fetch the key of Address
-from the Returned Customer and then call this association Method to
-return the Address automatically.
-
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><img src=".." title="Caution note" alt="Caution note" /><strong>Caution</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Note that although BDC Model supports foreign key pseudo-associations, SharePoint Designer 2010 does not. Therefore, you cannot model foreign key pseudo-associations using SharePoint Designer.</p></td>
-</tr>
-</tbody>
-</table>
+> [!WARNING] 
+> Note that although the BDC Model supports foreign key pseudo-associations, SharePoint Designer 2010 does not. Therefore, you cannot model foreign key pseudo-associations using SharePoint Designer.
 
 The Association element accepts the following property.
 
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<thead>
-<tr class="header">
-<th align="left"><img src=".." title="Important note" alt="Important note" /><strong>Important</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td align="left"><p>Properties are case-sensitive.</p></td>
-</tr>
-</tbody>
-</table>
+> [!IMPORTANT] 
+> Properties are case-sensitive.
 
-Properties
+### Properties
 
 <table>
 <colgroup>
@@ -188,30 +76,20 @@ Properties
 </tbody>
 </table>
 
-<span codelanguage="other"></span>
-<table>
-<colgroup>
-<col width="100%" />
-</colgroup>
-<tbody>
-<tr class="odd">
-<td align="left"><pre><code>&lt;Association Type = &quot;String&quot; Default = &quot;Boolean&quot; ReturnParameterName = &quot;String&quot; ReturnTypeDescriptorName = &quot;String&quot; ReturnTypeDescriptorLevel = &quot;Integer&quot; Name = &quot;String&quot; DefaultDisplayName = &quot;String&quot; IsCached = &quot;Boolean&quot;&gt; &lt;/Association&gt;</code></pre></td>
-</tr>
-</tbody>
-</table>
+<br/>
 
+```
+<Association Type = "String" Default = "Boolean" ReturnParameterName = "String" ReturnTypeDescriptorName = "String" ReturnTypeDescriptorLevel = "Integer" Name = "String" DefaultDisplayName = "String" IsCached = "Boolean"> </Association>
+```
 
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+The following sections describe attributes, child elements, and parent elements.
 
-The following sections describe attributes, child elements, and parent
-elements.
-
-#### Attributes
+### Attributes
 
 <table>
 <colgroup>
-<col width="50%" />
-<col width="50%" />
+<col width="20%" />
+<col width="80%" />
 </colgroup>
 <thead>
 <tr class="header">
@@ -272,7 +150,7 @@ elements.
 <tr class="odd">
 <td align="left"><p>ReturnParameterName</p></td>
 <td align="left"><p>Optional.</p>
-<p>The name of the parameter that contains the ReturnTypeDescriptor of the Association. The Direction attribute of the parameter must contain a value of either &quot;Out&quot;, &quot;InOut, or &quot;Return&quot;.</p>
+<p>The name of the parameter that contains the ReturnTypeDescriptor of the Association. The Direction attribute of the parameter must contain a value of either "Out", "InOut", or "Return".</p>
 <p>Attribute type: String</p></td>
 </tr>
 <tr class="even">
@@ -315,7 +193,9 @@ elements.
 </tbody>
 </table>
 
-#### Child elements
+<br/>
+
+### Child elements
 
 <table>
 <colgroup>
@@ -352,7 +232,9 @@ elements.
 </tbody>
 </table>
 
-#### Parent elements
+<br/>
+
+### Parent elements
 
 <table>
 <colgroup>
