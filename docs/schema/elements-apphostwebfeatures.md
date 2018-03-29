@@ -13,7 +13,7 @@ ms.assetid: 90375774-33ca-2b50-1578-9631f3e86d1a
 This topic lists the elements in the **DOCS-LESSTHANDOCS-LESSTHANschema nameDOCS-GREATERTHANDOCS-GREATERTHAN** XML schema.
 
 > [!NOTE] 
-> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed.
+> The string `app` appears as part of or all of some element, attribute, and file names because SharePoint Add-ins were originally called "apps for SharePoint." To ensure backward compatibility, the schemas have not been changed. 
 
 - [ActivationDependencies element](activationdependencies-element-featuredefinition-complextypeapphostwebfeatures.md)
 
