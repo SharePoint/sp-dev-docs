@@ -14,7 +14,7 @@ ms.assetid: e5fe8d3f-5010-41ad-a75e-dc40240dc870
 section]![Expand
 section] "Expand section")![]()![])![]![]()![Copy
 code] "Copy code")![Copy code
-hover]( "Copy code hover")
+hover]
 <table>
 <tbody>
 <tr class="odd">
