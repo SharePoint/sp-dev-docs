@@ -11,10 +11,10 @@ ms.assetid: 16b5dcb6-d4cb-5b74-28d6-a58732b7d2b6
 ---
 
 ![Collapse
-section](../icons/collapse_all.gif "Collapse section")![Expand
-section](../icons/expand_all.gif "Expand section")![](../icons/collapse_all.gif)![](../icons/expand_all.gif)![](../icons/dropdown.gif)![](../icons/dropdownHover.gif)![Copy
-code](../icons/copycode.gif "Copy code")![Copy code
-hover](../icons/copycodeHighlight.gif "Copy code hover")
+section]![Expand
+section] "Expand section")![]()![])![]![]()![Copy
+code] "Copy code")![Copy code
+hover]( "Copy code hover")
 <table>
 <tbody>
 <tr class="odd">
@@ -90,7 +90,7 @@ XML 
 onkeypress="CopyCode_CheckKey(this, event)"
 onmouseover="ChangeCopyCodeIcon(this)"
 onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code](../icons/copycode.gif "Copy code")Copy code</span>
+code] "Copy code")Copy code</span>
     <xs:simpleType name="LocStringId">
         <xs:restriction base="xs:string">
             <xs:enumeration value="Type_Discussion" />

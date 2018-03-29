@@ -15,10 +15,10 @@ ms.assetid: 4840227e-3207-4e29-8698-c65a9fa192ce
 ---
 
 ![Collapse
-section](../icons/collapse_all.gif "Collapse section")![Expand
-section](../icons/expand_all.gif "Expand section")![](../icons/collapse_all.gif)![](../icons/expand_all.gif)![](../icons/dropdown.gif)![](../icons/dropdownHover.gif)![Copy
-code](../icons/copycode.gif "Copy code")![Copy code
-hover](../icons/copycodeHighlight.gif "Copy code hover")
+section]![Expand
+section] "Expand section")![]()![])![]![]()![Copy
+code] "Copy code")![Copy code
+hover]( "Copy code hover")
 <table>
 <tbody>
 <tr class="odd">
@@ -201,7 +201,7 @@ like the following:
 onkeypress="CopyCode_CheckKey(this, event)"
 onmouseover="ChangeCopyCodeIcon(this)"
 onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code](../icons/copycode.gif "Copy code")Copy code</span>
+code] "Copy code")Copy code</span>
     http://Site_Name/Lists/Events/AllItems.aspx?Filter=1&View=%7b4A760E71%2dEBF2%2d4A88%2d9B2E%2dCFDE10E1825A%7d
 
 
@@ -217,7 +217,7 @@ XML 
 onkeypress="CopyCode_CheckKey(this, event)"
 onmouseover="ChangeCopyCodeIcon(this)"
 onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code](../icons/copycode.gif "Copy code")Copy code</span>
+code] "Copy code")Copy code</span>
     <HTML><![CDATA[ <a tabindex=2 ID=diidFilterButton class="ms-toolbar" 
        title=]]></HTML>
     <HTML>"Filter"</HTML>

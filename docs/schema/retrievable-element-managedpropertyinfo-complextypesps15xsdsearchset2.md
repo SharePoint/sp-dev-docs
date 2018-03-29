@@ -11,10 +11,10 @@ ms.assetid: 16c2408d-d5a3-65f0-cab0-639975056adb
 ---
 
 ![Collapse
-section](../icons/collapse_all.gif "Collapse section")![Expand
-section](../icons/expand_all.gif "Expand section")![](../icons/collapse_all.gif)![](../icons/expand_all.gif)![](../icons/dropdown.gif)![](../icons/dropdownHover.gif)![Copy
-code](../icons/copycode.gif "Copy code")![Copy code
-hover](../icons/copycodeHighlight.gif "Copy code hover")
+section]![Expand
+section] "Expand section")![]()![])![]![]()![Copy
+code] "Copy code")![Copy code
+hover]( "Copy code hover")
 <table>
 <tbody>
 <tr class="odd">
@@ -88,7 +88,7 @@ XML 
 onkeypress="CopyCode_CheckKey(this, event)"
 onmouseover="ChangeCopyCodeIcon(this)"
 onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code](../icons/copycode.gif "Copy code")Copy code</span>
+code] "Copy code")Copy code</span>
     <xs:element name="Retrievable" type="xs:boolean" minOccurs="0"></xs:element>
 
 

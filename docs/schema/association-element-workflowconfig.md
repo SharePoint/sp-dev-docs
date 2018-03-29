@@ -13,10 +13,10 @@ ms.assetid: 7f3e7e9f-256f-4570-ba3f-745bbdfbc5b8
 ---
 
 ![Collapse
-section](../icons/collapse_all.gif "Collapse section")![Expand
-section](../icons/expand_all.gif "Expand section")![](../icons/collapse_all.gif)![](../icons/expand_all.gif)![](../icons/dropdown.gif)![](../icons/dropdownHover.gif)![Copy
-code](../icons/copycode.gif "Copy code")![Copy code
-hover](../icons/copycodeHighlight.gif "Copy code hover")
+section]![Expand
+section] "Expand section")![]()![])![]![]()![Copy
+code] "Copy code")![Copy code
+hover]( "Copy code hover")
 <table>
 <tbody>
 <tr class="odd">
@@ -216,7 +216,7 @@ XML 
 onkeypress="CopyCode_CheckKey(this, event)"
 onmouseover="ChangeCopyCodeIcon(this)"
 onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code](../icons/copycode.gif "Copy code")Copy code</span>
+code] "Copy code")Copy code</span>
     <Association
         ListID="{B8C6FEEA-8066-462E-958D-1B4E90FE1C34}"
         TaskListID="{C64BA541-9D5B-42F3-A989-96F56FD51155}"

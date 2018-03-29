@@ -11,10 +11,10 @@ ms.assetid: 02d78e54-b260-d2ca-757c-6a3ebb7ae120
 ---
 
 ![Collapse
-section](../icons/collapse_all.gif "Collapse section")![Expand
-section](../icons/expand_all.gif "Expand section")![](../icons/collapse_all.gif)![](../icons/expand_all.gif)![](../icons/dropdown.gif)![](../icons/dropdownHover.gif)![Copy
-code](../icons/copycode.gif "Copy code")![Copy code
-hover](../icons/copycodeHighlight.gif "Copy code hover")
+section]![Expand
+section] "Expand section")![]()![])![]![]()![Copy
+code] "Copy code")![Copy code
+hover]( "Copy code hover")
 <table>
 <tbody>
 <tr class="odd">
@@ -88,7 +88,7 @@ XML 
 onkeypress="CopyCode_CheckKey(this, event)"
 onmouseover="ChangeCopyCodeIcon(this)"
 onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code](../icons/copycode.gif "Copy code")Copy code</span>
+code] "Copy code")Copy code</span>
     <xs:complexType name="ArrayOfSearchQueryConfigurationSettings">
         <xs:sequence>
             <xs:element name="SearchQueryConfigurationSettings" type="tns:SearchQueryConfigurationSettings" minOccurs="0" maxOccurs="unbounded"></xs:element>

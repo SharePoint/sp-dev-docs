@@ -13,10 +13,10 @@ ms.assetid: e749c019-9420-468c-a2fe-48bf8a8319df
 ---
 
 ![Collapse
-section](../icons/collapse_all.gif "Collapse section")![Expand
-section](../icons/expand_all.gif "Expand section")![](../icons/collapse_all.gif)![](../icons/expand_all.gif)![](../icons/dropdown.gif)![](../icons/dropdownHover.gif)![Copy
-code](../icons/copycode.gif "Copy code")![Copy code
-hover](../icons/copycodeHighlight.gif "Copy code hover")
+section]![Expand
+section] "Expand section")![]()![])![]![]()![Copy
+code] "Copy code")![Copy code
+hover]( "Copy code hover")
 <table>
 <tbody>
 <tr class="odd">
@@ -77,7 +77,7 @@ then passed to Microsoft SharePoint Foundation 2010.
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><img src="../icons/alert_note.gif" title="Note" alt="Note" /><strong>Note</strong></th>
+<th align="left"><img src="" title="Note" alt="Note" /><strong>Note</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -128,7 +128,7 @@ then passed to Microsoft SharePoint Foundation 2010.
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><img src="../icons/alert_note.gif" title="Note" alt="Note" /><strong>Note</strong></th>
+<th align="left"><img src="" title="Note" alt="Note" /><strong>Note</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -145,7 +145,7 @@ then passed to Microsoft SharePoint Foundation 2010.
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><img src="../icons/alert_note.gif" title="Note" alt="Note" /><strong>Note</strong></th>
+<th align="left"><img src="" title="Note" alt="Note" /><strong>Note</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -166,7 +166,7 @@ then passed to Microsoft SharePoint Foundation 2010.
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><img src="../icons/alert_note.gif" title="Note" alt="Note" /><strong>Note</strong></th>
+<th align="left"><img src="" title="Note" alt="Note" /><strong>Note</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -426,7 +426,7 @@ XML 
 onkeypress="CopyCode_CheckKey(this, event)"
 onmouseover="ChangeCopyCodeIcon(this)"
 onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code](../icons/copycode.gif "Copy code")Copy code</span>
+code] "Copy code")Copy code</span>
     <RuleDesigner Sentence="%1">
        <FieldBind Field="MyParameter1" 
                   Text="text" Id="1"       

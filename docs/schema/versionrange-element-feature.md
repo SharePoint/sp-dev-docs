@@ -11,10 +11,10 @@ ms.assetid: cd715e38-6ec3-43b2-8007-6d0ed8865d91
 ---
 
 ![Collapse
-section](../icons/collapse_all.gif "Collapse section")![Expand
-section](../icons/expand_all.gif "Expand section")![](../icons/collapse_all.gif)![](../icons/expand_all.gif)![](../icons/dropdown.gif)![](../icons/dropdownHover.gif)![Copy
-code](../icons/copycode.gif "Copy code")![Copy code
-hover](../icons/copycodeHighlight.gif "Copy code hover")
+section]![Expand
+section] "Expand section")![]()![])![]![]()![Copy
+code] "Copy code")![Copy code
+hover]( "Copy code hover")
 <table>
 <tbody>
 <tr class="odd">
@@ -89,7 +89,7 @@ upgrade actions should apply.
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><img src="../icons/alert_note.gif" title="Tip" alt="Tip" /><strong>Tip</strong></th>
+<th align="left"><img src="" title="Tip" alt="Tip" /><strong>Tip</strong></th>
 </tr>
 </thead>
 <tbody>

@@ -17,10 +17,10 @@ ms.assetid: db6728d9-4615-44b0-b651-cdab95706494
 ---
 
 ![Collapse
-section](../icons/collapse_all.gif "Collapse section")![Expand
-section](../icons/expand_all.gif "Expand section")![](../icons/collapse_all.gif)![](../icons/expand_all.gif)![](../icons/dropdown.gif)![](../icons/dropdownHover.gif)![Copy
-code](../icons/copycode.gif "Copy code")![Copy code
-hover](../icons/copycodeHighlight.gif "Copy code hover")
+section]![Expand
+section] "Expand section")![]()![])![]![]()![Copy
+code] "Copy code")![Copy code
+hover]( "Copy code hover")
 <table>
 <tbody>
 <tr class="odd">
@@ -137,7 +137,7 @@ elements in both site definitions and Web templates.
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><img src="../icons/alert_note.gif" title="Note" alt="Note" /><strong>Note</strong></th>
+<th align="left"><img src="" title="Note" alt="Note" /><strong>Note</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -321,7 +321,7 @@ XML 
 onkeypress="CopyCode_CheckKey(this, event)"
 onmouseover="ChangeCopyCodeIcon(this)"
 onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code](../icons/copycode.gif "Copy code")Copy code</span>
+code] "Copy code")Copy code</span>
     <Template Name="STS" ID="1">
         <Configuration ID="0" Title="Team Site" Hidden="FALSE" ImageUrl="/_layouts/images/stts.png" Description="A site for teams to quickly organize, author, and share information. It provides a document library, and lists for managing announcements, calendar items, tasks, and discussions." DisplayCategory="Collaboration" >    </Configuration>
         <Configuration ID="1" Title="Blank Site" Hidden="FALSE" ImageUrl="/_layouts/images/stbs.png" Description="A blank site for you to customize based on your requirements." DisplayCategory="Collaboration" AllowGlobalFeatureAssociations="False" >    </Configuration>

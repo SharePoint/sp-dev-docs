@@ -15,10 +15,10 @@ ms.assetid: f3c0c837-6d70-40e9-8d8a-e2064c5dad83
 ---
 
 ![Collapse
-section](../icons/collapse_all.gif "Collapse section")![Expand
-section](../icons/expand_all.gif "Expand section")![](../icons/collapse_all.gif)![](../icons/expand_all.gif)![](../icons/dropdown.gif)![](../icons/dropdownHover.gif)![Copy
-code](../icons/copycode.gif "Copy code")![Copy code
-hover](../icons/copycodeHighlight.gif "Copy code hover")
+section]![Expand
+section] "Expand section")![]()![])![]![]()![Copy
+code] "Copy code")![Copy code
+hover]( "Copy code hover")
 <table>
 <tbody>
 <tr class="odd">
@@ -160,7 +160,7 @@ XML 
 onkeypress="CopyCode_CheckKey(this, event)"
 onmouseover="ChangeCopyCodeIcon(this)"
 onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code](../icons/copycode.gif "Copy code")Copy code</span>
+code] "Copy code")Copy code</span>
     <DocumentTemplates>
         <DocumentTemplate Path="STS" Name="" DisplayName="$Resources:core,doctemp_None;" Type="100" Default="FALSE" Description="$Resources:core,doctemp_None_Desc;" />
         <DocumentTemplate Path="STS" DisplayName="$Resources:core,doctemp_Word97;" Type="101" Description="$Resources:core,doctemp_Word97_Desc;">

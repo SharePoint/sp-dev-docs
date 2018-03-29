@@ -120,7 +120,7 @@ XML 
 onkeypress="CopyCode_CheckKey(this, event)"
 onmouseover="ChangeCopyCodeIcon(this)"
 onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code](../icons/copycode.gif "Copy code")Copy code</span>
+code] "Copy code")Copy code</span>
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">
       <WebTemplate 
         AdjustHijriDays="0" 

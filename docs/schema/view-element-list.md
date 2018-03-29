@@ -15,10 +15,10 @@ ms.assetid: 2fb39435-2943-40c7-8f08-fda3bc99de5d
 ---
 
 ![Collapse
-section](../icons/collapse_all.gif "Collapse section")![Expand
-section](../icons/expand_all.gif "Expand section")![](../icons/collapse_all.gif)![](../icons/expand_all.gif)![](../icons/dropdown.gif)![](../icons/dropdownHover.gif)![Copy
-code](../icons/copycode.gif "Copy code")![Copy code
-hover](../icons/copycodeHighlight.gif "Copy code hover")
+section]![Expand
+section] "Expand section")![]()![])![]![]()![Copy
+code] "Copy code")![Copy code
+hover]( "Copy code hover")
 <table>
 <tbody>
 <tr class="odd">
@@ -73,7 +73,7 @@ Foundation, where each list can contain a number of views.
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><img src="../icons/alert_note.gif" title="Note" alt="Note" /><strong>Note</strong></th>
+<th align="left"><img src="" title="Note" alt="Note" /><strong>Note</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -454,7 +454,7 @@ XML 
 onkeypress="CopyCode_CheckKey(this, event)"
 onmouseover="ChangeCopyCodeIcon(this)"
 onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code](../icons/copycode.gif "Copy code")Copy code</span>
+code] "Copy code")Copy code</span>
     <View Name="MyCustomView">
         <ViewHeader>
           <HTML><![CDATA[<TABLE><TR>]]></HTML>
@@ -495,7 +495,7 @@ XML 
 onkeypress="CopyCode_CheckKey(this, event)"
 onmouseover="ChangeCopyCodeIcon(this)"
 onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code](../icons/copycode.gif "Copy code")Copy code</span>
+code] "Copy code")Copy code</span>
         <ViewFields>
           <FieldRef Name="Created_x0020_By"/>
           <FieldRef Name="Last_x0020_Modified"/>
@@ -507,7 +507,7 @@ code](../icons/copycode.gif "Copy code")Copy code</span>
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><img src="../icons/alert_note.gif" title="Note" alt="Note" /><strong>Note</strong></th>
+<th align="left"><img src="" title="Note" alt="Note" /><strong>Note</strong></th>
 </tr>
 </thead>
 <tbody>
@@ -529,7 +529,7 @@ XML 
 onkeypress="CopyCode_CheckKey(this, event)"
 onmouseover="ChangeCopyCodeIcon(this)"
 onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code](../icons/copycode.gif "Copy code")Copy code</span>
+code] "Copy code")Copy code</span>
         <Query>
           <Where>
             <Or>
@@ -565,7 +565,7 @@ XML 
 onkeypress="CopyCode_CheckKey(this, event)"
 onmouseover="ChangeCopyCodeIcon(this)"
 onmouseout="ChangeCopyCodeIcon(this)" tabindex="0">![Copy
-code](../icons/copycode.gif "Copy code")Copy code</span>
+code] "Copy code")Copy code</span>
     <View Type="HTML" Name="Summary">
       <ViewBody ExpandXML="TRUE">
         <![CDATA[ <p><SPAN class=DocTitle><ows:Field Name="Title"/></SPAN>

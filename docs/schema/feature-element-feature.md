@@ -11,10 +11,10 @@ ms.assetid: 265cd648-1a7e-410f-a1d7-0da8c64b4006
 ---
 
 ![Collapse
-section](../icons/collapse_all.gif "Collapse section")![Expand
-section](../icons/expand_all.gif "Expand section")![](../icons/collapse_all.gif)![](../icons/expand_all.gif)![](../icons/dropdown.gif)![](../icons/dropdownHover.gif)![Copy
-code](../icons/copycode.gif "Copy code")![Copy code
-hover](../icons/copycodeHighlight.gif "Copy code hover")
+section]![Expand
+section] "Expand section")![]()![])![]![]()![Copy
+code] "Copy code")![Copy code
+hover]( "Copy code hover")
 <table>
 <tbody>
 <tr class="odd">
@@ -182,7 +182,7 @@ Defines a Feature to activate or deactivate at a specified scope.
 </colgroup>
 <thead>
 <tr class="header">
-<th align="left"><img src="../icons/alert_note.gif" title="Note" alt="Note" /><strong>Note</strong></th>
+<th align="left"><img src="" title="Note" alt="Note" /><strong>Note</strong></th>
 </tr>
 </thead>
 <tbody>
