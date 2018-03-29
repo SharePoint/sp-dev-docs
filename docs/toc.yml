@@ -128,11 +128,16 @@
     - name: Call the Microsoft Graph API using OAuth
       href: spfx/web-parts/guidance/call-microsoft-graph-from-your-web-part.md
     - name: Connect to Azure AD-secured APIs
-      href: spfx/use-aadhttpclient.md    
+      href: spfx/use-aadhttpclient.md
+      items:
+      - name: Consume enterprise APIs (tutorial)
+        href: spfx/use-aadhttpclient-enterpriseapi.md
+      - name: Consume multi-tenant enterprise APIs (tutorial)
+        href: spfx/use-aadhttpclient-enterpriseapi-multitenant.md
     - name: Microsoft Graph 
       href: spfx/use-msgraph.md
       items:
-      - name: Consuming APIs secured with Azure AD
+      - name: Consume Microsoft Graph (tutorial)
         href: spfx/use-aad-tutorial.md        
     - name: Microsoft GraphHttpClient (Deprecated)
       href: spfx/overview-graphhttpclient.md
@@ -1606,3 +1611,22 @@
     href: https://docs.microsoft.com/en-us/dotnet/api/?term=Officedevpnp
   - name: PnP Sites Core API reference - Extension methods
     href: https://docs.microsoft.com/en-us/dotnet/api/?term=microsoft.sharepoint
+- name: Community
+  href: community/community.md
+  items:
+  - name: How to contribute?
+    href: community/contribute.md
+  - name: Open source projects
+    href: community/open-source-projects.md
+  - name: GitHub repositories
+    href: community/repositories.md
+  - name: Issues
+    href: https://aka.ms/spdev-issues
+  - name: Feature Requests
+    href: http://aka.ms/spdev-uservoice
+  - name: SharePoint Dev at YouTube
+    href: http://aka.ms/spdev-videos
+  - name: OfficeDev Twitter
+    href: https://twitter.com/officedev
+  - name: Deveveloper Forum
+    href: http://aka.ms/spdev-community  
