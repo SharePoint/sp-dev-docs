@@ -1606,3 +1606,22 @@
     href: https://docs.microsoft.com/en-us/dotnet/api/?term=Officedevpnp
   - name: PnP Sites Core API reference - Extension methods
     href: https://docs.microsoft.com/en-us/dotnet/api/?term=microsoft.sharepoint
+- name: Community
+  href: community/community.md
+  items:
+  - name: How to contribute?
+    href: community/contribute.md
+  - name: Open source projects
+    href: communtiy/open-source-projects.md
+  - name: GitHub repositories
+    href: community/repositories.md
+  - name: Issues
+    href: https://aka.ms/spdev-issues
+  - name: Feature Requests
+    href: http://aka.ms/spdev-uservoice
+  - name: SharePoint Dev at YouTube
+    href: http://aka.ms/spdev-videos
+  - name: OfficeDev Twitter
+    href: https://twitter.com/officedev
+  - name: Deveveloper Forum
+    href: http://aka.ms/spdev-community  

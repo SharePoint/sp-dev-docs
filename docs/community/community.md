@@ -1,7 +1,7 @@
 ---
 title:  SharePoint Dev Community resources
 description: Assets and references around SharePoint Dev community
-ms.date: 03.28.2018
+ms.date: 03.29.2018
 ms.prod: sharepoint
 ---
 
