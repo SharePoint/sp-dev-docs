@@ -52,8 +52,6 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 
 ### Parent elements
 
-<br/>
-
 <table>
 <colgroup>
 <col width="33%" />
@@ -79,8 +77,6 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <br/>
 
 ### Child elements
-
-<br/>
 
 <table>
 <colgroup>
@@ -112,8 +108,6 @@ If the schema defines specific requirements, such as **sequence**, **minOccurs**
 <br/>
 
 ### Attributes
-
-<br/>
 
 <table>
 <colgroup>
