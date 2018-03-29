@@ -35,7 +35,7 @@ There are numerous community calls around the SharePoint development and you can
 | Community Call | When | Description |
 |--------|--------|--------|
 | [Monthly Community Call](https://aka.ms/sppnp-call) | 2nd Tuesday of each month at 8 AM PT / 4 PM GMT | Monthly community call covering latest changes in the SharePoint Developer topics within last month, including news, UserVoice update and community contributions |
-| [Special Interest Group Call for SharePoint Framework](https://aka.ms/spdev-samples) | Bi-weekly on Thursdays at 7 AM PT / 3 PM GMT | SharePoint Engineering update, SharePoint Framework, PnPJs, Office 365 CLI, reusable SPFx controls, etc. |
+| [Special Interest Group Call for SharePoint Framework](https://aka.ms/spdev-spfx-call) | Bi-weekly on Thursdays at 7 AM PT / 3 PM GMT | SharePoint Engineering update, SharePoint Framework, PnPJs, Office 365 CLI, reusable SPFx controls, etc. |
 | [Special Interest Group call for General SharePoint Dev](https://aka.ms/spdev-sig-call) | Bi-weekly on Thursdays at 7 AM PT / 3 PM GMT | SharePoint Engineering update, end-to-end solution designs, provisioning, PnP CSOM, PnP PowerShell etc. |
 
 
